@@ -61,11 +61,11 @@ function navigation () {
 	LI('ul_rules', 'book.html', "怪物圖鑑", "MM");
 	LI('ul_rules', 'book.html', "玩家手冊", "PHB");
 	LIDivider('ul_rules');
-	LI('ul_rules', 'book.html', "Guildmasters' Guide to Ravnica", "GGR");
-	LI('ul_rules', 'book.html', "Mordenkainen's Tome of Foes", "MTF");
-	LI('ul_rules', 'book.html', "Sword Coast Adventurer's Guide", "SCAG");
-	LI('ul_rules', 'book.html', "Volo's Guide to Monsters", "VGM");
-	LI('ul_rules', 'book.html', "Xanathar's Guide to Everything", "XGE");
+	LI('ul_rules', 'book.html', "拉尼卡的公會長指南", "GGR");
+	LI('ul_rules', 'book.html', "魔鄧肯的眾敵卷冊", "MTF");
+	LI('ul_rules', 'book.html', "劍灣冒險指南", "SCAG");
+	LI('ul_rules', 'book.html', "瓦羅的怪物指南", "VGM");
+	LI('ul_rules', 'book.html', "姍納薩的萬事指南", "XGE");
 	LIDivider('ul_rules');
 	LI('ul_rules', 'book.html', "冒險者聯盟", "AL");
 	LIDivider('ul_rules');
@@ -85,10 +85,10 @@ function navigation () {
 	LIDropdown('navbar', 'dms', 'dropdown');
 	A('dms', 'dmOption', 'dropdown-toggle', 'dropdown', '#', 'button', 'true', 'false', "DM工具 <span class='caret'></span>");
 	UL('dms', 'ul_dms', 'dropdown-menu');
-	LI('ul_dms', 'adventures.html', '冒險');
+	LI('ul_dms', 'adventures.html', '冒險模組');
 	LI('ul_dms', 'crcalculator.html', 'CR計算機');
-	LI('ul_dms', 'cultsboons.html', '邪教&惡魔恩賜');
-	LI('ul_dms', 'dmscreen.html', 'DM屏風');
+	LI('ul_dms', 'cultsboons.html', '邪教&惡魔恩惠');
+	LI('ul_dms', 'dmscreen.html', 'DM屏幕');
 	LI('ul_dms', 'encountergen.html', '遭遇生成器');
 	LI('ul_dms', 'lootgen.html', '戰利品生成器');
 	LI('ul_dms', 'objects.html', '物件');
@@ -109,18 +109,18 @@ function navigation () {
 	LI('navbar', 'statgen.html', '屬性生成器');
 
 	LIDropdown('navbar', 'utils', 'dropdown');
-	A('utils', 'utils', 'dropdown-toggle', 'dropdown', '#', 'button', 'true', 'false', "功能 <span class='caret'></span>");
+	A('utils', 'utils', 'dropdown-toggle', 'dropdown', '#', 'button', 'true', 'false', "其他功能 <span class='caret'></span>");
 	UL('utils', 'ul_utils', 'dropdown-menu');
-	LI('ul_utils', 'blacklist.html', 'Content Blacklist');
-	LI('ul_utils', 'managebrew.html', 'Manage All Homebrew');
+	LI('ul_utils', 'blacklist.html', '內容黑名單');
+	LI('ul_utils', 'managebrew.html', '管理所有房規');
 	LIDivider('ul_utils');
-	LI('ul_utils', 'demo.html', 'Renderer Demo');
-	LI('ul_utils', 'converter.html', 'Text Converter');
+	LI('ul_utils', 'demo.html', '渲染器 Demo');
+	LI('ul_utils', 'converter.html', '文字轉換器');
 	LIDivider('ul_utils');
-	LI('ul_utils', 'roll20.html', 'Roll20 Script Help');
+	LI('ul_utils', 'roll20.html', 'Roll20 腳本小幫手');
 	LI('ul_utils', 'makeshaped.html', 'Roll20 Shaped Sheet JS Builder');
 	LIDivider('ul_utils');
-	LI('ul_utils', 'donate.html', 'Donate');
+	LI('ul_utils', 'donate.html', '捐獻');
 
 	LISwitcher('navbar', 'daynightMode', 'nightModeToggle', '#', 'styleSwitcher.toggleActiveStyleSheet(); return false;');
 
