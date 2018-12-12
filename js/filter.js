@@ -117,13 +117,13 @@ class FilterBox {
 
 		const $outer = $(`<div class="dropdown-menu ${FilterBox.CLS_DROPDOWN_MENU_FILTER} homebrew-window">
 			<h4 class="title">
-				<span>Filters</span>
+				<span>篩選</span>
 				<div>
 					<div class="btn-group">
-						<button id="fltr-show-all" class="btn btn-xs btn-default">Show All</button>
-						<button id="fltr-hide-all" class="btn btn-xs btn-default">Hide All</button>
+						<button id="fltr-show-all" class="btn btn-xs btn-default">顯示全部</button>
+						<button id="fltr-hide-all" class="btn btn-xs btn-default">隱藏全部</button>
 					</div>
-					<button id="fltr-reset" class="btn btn-xs btn-default">Reset</button>
+					<button id="fltr-reset" class="btn btn-xs btn-default">重置</button>
 				</div>
 			</h4>
 			<hr style="margin-top: 0; margin-bottom: 7px;">
@@ -132,13 +132,13 @@ class FilterBox {
 		this._showAll = () => {
 			const $btns = $outer.find(`.show-hide-button`);
 			$btns.each((i, e) => {
-				if ($(e).text() === "Show") $(e).click();
+				if ($(e).text() === "顯示") $(e).click();
 			});
 		};
 		this._hideAll = () => {
 			const $btns = $outer.find(`.show-hide-button`);
 			$btns.each((i, e) => {
-				if ($(e).text() === "Hide") $(e).click();
+				if ($(e).text() === "隱藏") $(e).click();
 			});
 		};
 		$outer.find(`#fltr-show-all`).click(() => this.showAll());
@@ -177,7 +177,7 @@ class FilterBox {
 		const addResetHandler = () => {
 			if (this.resetButton !== null && this.resetButton !== undefined) {
 				const $btnReset = $(this.resetButton);
-				$btnReset.attr("title", "Reset filters. SHIFT to reset Show/Hide.");
+				$btnReset.attr("title", "重置篩選器。按SHIFT以重置 顯示/隱藏。");
 				this.resetButton.addEventListener("click", (evt) => this.reset(evt.shiftKey));
 			}
 		};
@@ -191,7 +191,7 @@ class FilterBox {
 			const $buttonWrapper = $(`<div id="filter-toggle-btn"/>`);
 			$buttonWrapper.addClass(FilterBox.CLS_INPUT_GROUP_BUTTON);
 
-			const $filterButton = $(`<button class="btn btn-default btn-filter">Filter<span/></button>`);
+			const $filterButton = $(`<button class="btn btn-default btn-filter">篩選<span/></button>`);
 			$buttonWrapper.append($filterButton);
 			return $buttonWrapper;
 		}
@@ -232,21 +232,21 @@ class FilterBox {
 					$groupSummaryVal.text(numFiltering);
 					numFiltering ? $groupSummary.show() : $groupSummary.hide();
 				};
-				$(`<button class="btn btn-default btn-xs multi-compact-visible btn-meta" style="border-radius: 3px;">Reset</button>`)
+				$(`<button class="btn btn-default btn-xs multi-compact-visible btn-meta" style="border-radius: 3px;">重置</button>`)
 					.appendTo($wrpButtons)
 					.click(() => {
 						filter.eles.forEach($e => $e.data("resetValues")());
 					});
-				const $btnShowHideGroup = $(`<button class="btn btn-default btn-xs show-hide-button multi-compact-visible btn-meta" style="margin-left: 5px;">Hide</button>`)
+				const $btnShowHideGroup = $(`<button class="btn btn-default btn-xs show-hide-button multi-compact-visible btn-meta" style="margin-left: 5px;">隱藏</button>`)
 					.appendTo($wrpButtons)
 					.click(function () {
 						const $this = $(this);
-						if ($this.text() === "Hide") {
+						if ($this.text() === "隱藏") {
 							filter.eles.forEach($e => $e.data("hideFilter")());
-							$this.text("Show");
+							$this.text("顯示");
 						} else {
 							filter.eles.forEach($e => $e.data("showFilter")());
-							$this.text("Hide");
+							$this.text("隱藏");
 						}
 						updateSummary();
 					});
@@ -263,7 +263,7 @@ class FilterBox {
 						return self.storedVisible[it] === false;
 					}
 				}).length;
-				if (numHidden) $btnShowHideGroup.text("Show");
+				if (numHidden) $btnShowHideGroup.text("顯示");
 				updateSummary();
 
 				$parent.data(
@@ -369,10 +369,10 @@ class FilterBox {
 				};
 
 				const $quickBtns = $(`<span class="btn-group quick-btns" style="margin-left: auto;"/>`).appendTo($line);
-				const $all = $(`<button class="btn btn-default btn-xs btn-meta ${minimalClass}">All</button>`).appendTo($quickBtns);
-				const $clear = $(`<button class="btn btn-default btn-xs btn-meta ${minimalClass}">Clear</button>`).appendTo($quickBtns);
-				const $none = $(`<button class="btn btn-default btn-xs btn-meta ${minimalClass}">None</button>`).appendTo($quickBtns);
-				const $default = $(`<button class="btn btn-default btn-xs btn-meta ${minimalClass}">Default</button>`).appendTo($quickBtns);
+				const $all = $(`<button class="btn btn-default btn-xs btn-meta ${minimalClass}">全選</button>`).appendTo($quickBtns);
+				const $clear = $(`<button class="btn btn-default btn-xs btn-meta ${minimalClass}">清除</button>`).appendTo($quickBtns);
+				const $none = $(`<button class="btn btn-default btn-xs btn-meta ${minimalClass}">無</button>`).appendTo($quickBtns);
+				const $default = $(`<button class="btn btn-default btn-xs btn-meta ${minimalClass}">預設</button>`).appendTo($quickBtns);
 
 				const $summary = $(`<span class="summary"/>`).appendTo($line);
 				const $summaryInclude = $(`<span class="filter__summary_item filter__summary_item--include" title="Hidden includes"/>`).appendTo($summary);
@@ -382,17 +382,17 @@ class FilterBox {
 
 				const $logicBtns = $(`<span class="btn-group andor-btns" style="margin-left: 5px;"/>`).append($btnAndOrBlue).append($btnAndOrRed).appendTo($line);
 
-				const $showHide = $(`<button class="btn btn-default btn-xs btn-meta show-hide-button ${minimalClass}" style="margin-left: 5px;">Hide</button>`).appendTo($line);
+				const $showHide = $(`<button class="btn btn-default btn-xs btn-meta show-hide-button ${minimalClass}" style="margin-left: 5px;">隱藏</button>`).appendTo($line);
 
 				const doShow = () => {
-					$showHide.text("Hide");
+					$showHide.text("隱藏");
 					$grid.show();
 					$quickBtns.show();
 					$logicBtns.css("margin-left", "5px");
 					$summary.hide();
 				};
 				const doHide = () => {
-					$showHide.text("Show");
+					$showHide.text("顯示");
 					$grid.hide();
 					$quickBtns.hide();
 					updateSummary();
@@ -811,7 +811,7 @@ class FilterBox {
 				_addGroupLabel(idx, $line);
 
 				const $quickBtns = $(`<span class="btn-group quick-btns" style="margin-left: auto;"/>`).appendTo($line);
-				$(`<button class="btn btn-default btn-xs multi-compact-hidden btn-meta" style="border-radius: 3px;">Reset</button>`)
+				$(`<button class="btn btn-default btn-xs multi-compact-hidden btn-meta" style="border-radius: 3px;">重置</button>`)
 					.appendTo($quickBtns)
 					.click(() => {
 						$wrpSlide.data("resetValues")();
@@ -821,17 +821,17 @@ class FilterBox {
 				const $summaryRange = $(`<span class="filter__summary_item filter__summary_item--include multi-compact-hidden" title="Selected range"/>`).appendTo($summary);
 				$summary.hide();
 
-				const $showHide = $(`<button class="btn btn-default btn-xs show-hide-button multi-compact-hidden btn-meta" style="margin-left: 5px;">Hide</button>`).appendTo($line);
+				const $showHide = $(`<button class="btn btn-default btn-xs show-hide-button multi-compact-hidden btn-meta" style="margin-left: 5px;">隱藏</button>`).appendTo($line);
 
 				const doHide = () => {
-					$showHide.text("Show");
+					$showHide.text("顯示");
 					$wrpSlide.hide();
 					$quickBtns.hide();
 					updateSummary();
 					$summary.show();
 				};
 				const doShow = () => {
-					$showHide.text("Hide");
+					$showHide.text("隱藏");
 					$wrpSlide.show();
 					$quickBtns.show();
 					$summary.hide();
