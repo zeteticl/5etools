@@ -48,10 +48,10 @@ function currentPage () {
 }
 
 function navigation () {
-	LI('navbar', '5etools.html', 'Home');
+	LI('navbar', '5etools.html', '首頁');
 
 	LIDropdown('navbar', 'rules', 'dropdown');
-	A('rules', 'ruleOption', 'dropdown-toggle', 'dropdown', '#', 'button', 'true', 'false', "Rules <span class='caret'></span>");
+	A('rules', 'ruleOption', 'dropdown-toggle', 'dropdown', '#', 'button', 'true', 'false', "規則 <span class='caret'></span>");
 	UL('rules', 'ul_rules', 'dropdown-menu');
 	LI('ul_rules', 'quickreference.html', 'Quick Reference');
 	LI('ul_rules', 'variantrules.html', 'Variant & Optional Rules');
@@ -72,18 +72,18 @@ function navigation () {
 	LI('ul_rules', 'books.html', "View All/Homebrew");
 
 	LIDropdown('navbar', 'players', 'dropdown');
-	A('players', 'playerOption', 'dropdown-toggle', 'dropdown', '#', 'button', 'true', 'false', "Player Options <span class='caret'></span>");
+	A('players', 'playerOption', 'dropdown-toggle', 'dropdown', '#', 'button', 'true', 'false', "玩家選項 <span class='caret'></span>");
 	UL('players', 'ul_players', 'dropdown-menu');
-	LI('ul_players', 'classes.html', 'Classes');
-	LI('ul_players', 'optionalfeatures.html', 'Class Feature Options');
-	LI('ul_players', 'backgrounds.html', 'Backgrounds');
-	LI('ul_players', 'feats.html', 'Feats');
-	LI('ul_players', 'races.html', 'Races');
-	LI('ul_players', 'lifegen.html', 'This Is Your Life');
-	LI('ul_players', 'names.html', 'Names');
+	LI('ul_players', 'classes.html', '職業');
+	LI('ul_players', 'optionalfeatures.html', '職業能力選項');
+	LI('ul_players', 'backgrounds.html', '背景');
+	LI('ul_players', 'feats.html', '專長');
+	LI('ul_players', 'races.html', '種族');
+//	LI('ul_players', 'lifegen.html', 'This Is Your Life');
+//	LI('ul_players', 'names.html', 'Names');
 
 	LIDropdown('navbar', 'dms', 'dropdown');
-	A('dms', 'dmOption', 'dropdown-toggle', 'dropdown', '#', 'button', 'true', 'false', "DM Tools <span class='caret'></span>");
+	A('dms', 'dmOption', 'dropdown-toggle', 'dropdown', '#', 'button', 'true', 'false', "DM工具 <span class='caret'></span>");
 	UL('dms', 'ul_dms', 'dropdown-menu');
 	LI('ul_dms', 'adventures.html', 'Adventures');
 	LI('ul_dms', 'crcalculator.html', 'CR Calculator');
@@ -96,15 +96,15 @@ function navigation () {
 	LI('ul_dms', 'trapshazards.html', 'Traps & Hazards');
 
 	LIDropdown('navbar', 'references', 'dropdown');
-	A('references', 'references', 'dropdown-toggle', 'dropdown', '#', 'button', 'true', 'false', "References <span class='caret'></span>");
+	A('references', 'references', 'dropdown-toggle', 'dropdown', '#', 'button', 'true', 'false', "參照資料 <span class='caret'></span>");
 	UL('references', 'ul_references', 'dropdown-menu');
-	LI('ul_references', 'bestiary.html', 'Bestiary');
-	LI('ul_references', 'conditionsdiseases.html', 'Conditions & Diseases');
-	LI('ul_references', 'deities.html', 'Deities');
-	LI('ul_references', 'items.html', 'Items');
-	LI('ul_references', 'rewards.html', 'Other Rewards');
-	LI('ul_references', 'psionics.html', 'Psionics');
-	LI('ul_references', 'spells.html', 'Spells');
+	LI('ul_references', 'bestiary.html', '怪物圖鑑');
+	LI('ul_references', 'conditionsdiseases.html', '狀態 & 疾病');
+	LI('ul_references', 'deities.html', '神祇');
+	LI('ul_references', 'items.html', '物品');
+	LI('ul_references', 'rewards.html', '其他獎賞');
+	LI('ul_references', 'psionics.html', '靈能');
+	LI('ul_references', 'spells.html', '法術');
 
 	LI('navbar', 'statgen.html', 'Statgen');
 
