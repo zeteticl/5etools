@@ -53,13 +53,13 @@ function navigation () {
 	LIDropdown('navbar', 'rules', 'dropdown');
 	A('rules', 'ruleOption', 'dropdown-toggle', 'dropdown', '#', 'button', 'true', 'false', "規則 <span class='caret'></span>");
 	UL('rules', 'ul_rules', 'dropdown-menu');
-	LI('ul_rules', 'quickreference.html', 'Quick Reference');
-	LI('ul_rules', 'variantrules.html', 'Variant & Optional Rules');
-	LI('ul_rules', 'tables.html', 'Tables');
+	LI('ul_rules', 'quickreference.html', '快速參照');
+	LI('ul_rules', 'variantrules.html', '變體&選用規則');
+	LI('ul_rules', 'tables.html', '表格');
 	LIDivider('ul_rules');
-	LI('ul_rules', 'book.html', "Dungeon Master's Guide", "DMG");
-	LI('ul_rules', 'book.html', "Monster Manual", "MM");
-	LI('ul_rules', 'book.html', "Player's Handbook", "PHB");
+	LI('ul_rules', 'book.html', "地下城主指南", "DMG");
+	LI('ul_rules', 'book.html', "怪物圖鑑", "MM");
+	LI('ul_rules', 'book.html', "玩家手冊", "PHB");
 	LIDivider('ul_rules');
 	LI('ul_rules', 'book.html', "Guildmasters' Guide to Ravnica", "GGR");
 	LI('ul_rules', 'book.html', "Mordenkainen's Tome of Foes", "MTF");
@@ -67,9 +67,9 @@ function navigation () {
 	LI('ul_rules', 'book.html', "Volo's Guide to Monsters", "VGM");
 	LI('ul_rules', 'book.html', "Xanathar's Guide to Everything", "XGE");
 	LIDivider('ul_rules');
-	LI('ul_rules', 'book.html', "Adventurers League", "AL");
+	LI('ul_rules', 'book.html', "冒險者聯盟", "AL");
 	LIDivider('ul_rules');
-	LI('ul_rules', 'books.html', "View All/Homebrew");
+	LI('ul_rules', 'books.html', "查看所有/房規");
 
 	LIDropdown('navbar', 'players', 'dropdown');
 	A('players', 'playerOption', 'dropdown-toggle', 'dropdown', '#', 'button', 'true', 'false', "玩家選項 <span class='caret'></span>");
@@ -79,21 +79,21 @@ function navigation () {
 	LI('ul_players', 'backgrounds.html', '背景');
 	LI('ul_players', 'feats.html', '專長');
 	LI('ul_players', 'races.html', '種族');
-//	LI('ul_players', 'lifegen.html', 'This Is Your Life');
-//	LI('ul_players', 'names.html', 'Names');
+	LI('ul_players', 'lifegen.html', '這是你的人生');
+	LI('ul_players', 'names.html', '名稱');
 
 	LIDropdown('navbar', 'dms', 'dropdown');
 	A('dms', 'dmOption', 'dropdown-toggle', 'dropdown', '#', 'button', 'true', 'false', "DM工具 <span class='caret'></span>");
 	UL('dms', 'ul_dms', 'dropdown-menu');
-	LI('ul_dms', 'adventures.html', 'Adventures');
-	LI('ul_dms', 'crcalculator.html', 'CR Calculator');
-	LI('ul_dms', 'cultsboons.html', 'Cults & Demonic Boons');
-	LI('ul_dms', 'dmscreen.html', 'DM Screen');
-	LI('ul_dms', 'encountergen.html', 'Encounter Generator');
-	LI('ul_dms', 'lootgen.html', 'Loot Generator');
-	LI('ul_dms', 'objects.html', 'Objects');
-	LI('ul_dms', 'ships.html', 'Ships');
-	LI('ul_dms', 'trapshazards.html', 'Traps & Hazards');
+	LI('ul_dms', 'adventures.html', '冒險');
+	LI('ul_dms', 'crcalculator.html', 'CR計算機');
+	LI('ul_dms', 'cultsboons.html', '邪教&惡魔恩賜');
+	LI('ul_dms', 'dmscreen.html', 'DM屏風');
+	LI('ul_dms', 'encountergen.html', '遭遇生成器');
+	LI('ul_dms', 'lootgen.html', '戰利品生成器');
+	LI('ul_dms', 'objects.html', '物件');
+	LI('ul_dms', 'ships.html', '船隻');
+	LI('ul_dms', 'trapshazards.html', '陷阱&危險');
 
 	LIDropdown('navbar', 'references', 'dropdown');
 	A('references', 'references', 'dropdown-toggle', 'dropdown', '#', 'button', 'true', 'false', "參照資料 <span class='caret'></span>");
@@ -106,10 +106,10 @@ function navigation () {
 	LI('ul_references', 'psionics.html', '靈能');
 	LI('ul_references', 'spells.html', '法術');
 
-	LI('navbar', 'statgen.html', 'Statgen');
+	LI('navbar', 'statgen.html', '屬性生成器');
 
 	LIDropdown('navbar', 'utils', 'dropdown');
-	A('utils', 'utils', 'dropdown-toggle', 'dropdown', '#', 'button', 'true', 'false', "Utilities <span class='caret'></span>");
+	A('utils', 'utils', 'dropdown-toggle', 'dropdown', '#', 'button', 'true', 'false', "功能 <span class='caret'></span>");
 	UL('utils', 'ul_utils', 'dropdown-menu');
 	LI('ul_utils', 'blacklist.html', 'Content Blacklist');
 	LI('ul_utils', 'managebrew.html', 'Manage All Homebrew');
@@ -215,7 +215,7 @@ function navigation () {
 		a.href = a_href;
 		a.className = a_class;
 		a.setAttribute('onclick', a_onclick);
-		a.innerHTML = styleSwitcher.getActiveStyleSheet() === StyleSwitcher.STYLE_DAY ? "Night Mode" : "Day Mode";
+		a.innerHTML = styleSwitcher.getActiveStyleSheet() === StyleSwitcher.STYLE_DAY ? "夜晚模式" : "白晝模式";
 
 		const li = document.createElement('li');
 		li.id = li_id;
