@@ -97,13 +97,13 @@ RNG_TOUCH = "touch";
 UNT_FEET = "feet";
 UNT_MILES = "miles";
 
-ABIL_STR = "Strength";
-ABIL_DEX = "Dexterity";
-ABIL_CON = "Constitution";
-ABIL_INT = "Intelligence";
-ABIL_WIS = "Wisdom";
-ABIL_CHA = "Charisma";
-ABIL_CH_ANY = "Choose Any";
+ABIL_STR = "力量";
+ABIL_DEX = "敏捷";
+ABIL_CON = "體質";
+ABIL_INT = "智力";
+ABIL_WIS = "睿知";
+ABIL_CHA = "魅力";
+ABIL_CH_ANY = "選擇任意";
 
 HOMEBREW_STORAGE = "HOMEBREW_STORAGE";
 HOMEBREW_META_STORAGE = "HOMEBREW_META_STORAGE";
