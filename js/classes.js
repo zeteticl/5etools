@@ -256,15 +256,15 @@ class HashLoad {
 		// hit dice and HP
 		const hdEntry = {toRoll: `${ClassDisplay.curClass.hd.number}d${ClassDisplay.curClass.hd.faces}`, rollable: true};
 		$("td#hp div#hitdice span").html(EntryRenderer.getEntryDice(hdEntry, "Hit die"));
-		$("td#hp div#hp1stlevel span").html(ClassDisplay.curClass.hd.faces + " + your Constitution modifier");
-		$("td#hp div#hphigherlevels span").html(`${EntryRenderer.getEntryDice(hdEntry, "Hit die")} (or ${
-			(ClassDisplay.curClass.hd.faces / 2 + 1)}) + your Constitution modifier per ${ClassDisplay.curClass.name} level after 1st`);
+		$("td#hp div#hp1stlevel span").html(ClassDisplay.curClass.hd.faces + " + 你的體質調整值");
+		$("td#hp div#hphigherlevels span").html(`一級之後每${ClassDisplay.curClass.name}等級 ${EntryRenderer.getEntryDice(hdEntry, "Hit die")} (or ${
+			(ClassDisplay.curClass.hd.faces / 2 + 1)}) + 你的體質調整值`);
 
 		// save proficiency
 		$("td#prof div#saves span").html(ClassDisplay.curClass.proficiency.map(p => Parser.attAbvToFull(p)).join(", "));
 
 		// starting proficiencies
-		const renderArmorProfs = (armorProfs) => armorProfs.map(a => a === "light" || a === "medium" || a === "heavy" ? a + " armor" : a).join(", ");
+		const renderArmorProfs = (armorProfs) => armorProfs.map(a => a === "輕" || a === "中" || a === "重" ? a + "甲" : a).join(", ");
 		const renderWeaponsProfs = (weaponProfs) => weaponProfs.map(w => w === "simple" || w === "martial" ? w + " weapons" : w).join(", ");
 		const renderToolsProfs = (toolProfs) => toolProfs.join(", ");
 		const renderSkillsProfs = (skillProfs) => getSkillProfString(skillProfs);

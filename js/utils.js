@@ -1477,8 +1477,8 @@ Parser.TRAP_INIT_TO_FULL[2] = "initiative count 20";
 Parser.TRAP_INIT_TO_FULL[3] = "initiative count 20 and initiative count 10";
 
 Parser.ATK_TYPE_TO_FULL = {};
-Parser.ATK_TYPE_TO_FULL["MW"] = "Melee Weapon Attack";
-Parser.ATK_TYPE_TO_FULL["RW"] = "Ranged Weapon Attack";
+Parser.ATK_TYPE_TO_FULL["MW"] = "近戰武器攻擊";
+Parser.ATK_TYPE_TO_FULL["RW"] = "遠程武器攻擊";
 
 Parser.bookOrdinalToAbv = (ordinal, preNoSuff) => {
 	if (ordinal === undefined) return "";
@@ -1535,12 +1535,12 @@ Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_CON] = "Conj.";
 Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_PSI] = "Psi.";
 
 Parser.ATB_ABV_TO_FULL = {
-	"str": "Strength",
-	"dex": "Dexterity",
-	"con": "Constitution",
-	"int": "Intelligence",
-	"wis": "Wisdom",
-	"cha": "Charisma"
+	"str": "力量",
+	"dex": "敏捷",
+	"con": "體質",
+	"int": "智力",
+	"wis": "睿知",
+	"cha": "魅力"
 };
 
 TP_ABERRATION = "aberration";
