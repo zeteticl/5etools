@@ -88,7 +88,7 @@ function navigation () {
 	LI('ul_dms', 'adventures.html', '冒險模組');
 	LI('ul_dms', 'crcalculator.html', 'CR計算機');
 	LI('ul_dms', 'cultsboons.html', '邪教&惡魔恩惠');
-	LI('ul_dms', 'dmscreen.html', 'DM屏風');
+	LI('ul_dms', 'dmscreen.html', 'DM屏幕');
 	LI('ul_dms', 'encountergen.html', '遭遇生成器');
 	LI('ul_dms', 'lootgen.html', '戰利品生成器');
 	LI('ul_dms', 'objects.html', '物件');
