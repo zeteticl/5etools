@@ -9,7 +9,7 @@ window.onload = function load () {
 };
 
 function conditionDiseaseTypeToFull (type) {
-	return type === "c" ? "Condition" : "Disease";
+	return type === "c" ? "狀態" : "疾病";
 }
 
 const sourceFilter = getSourceFilter();
@@ -22,7 +22,7 @@ async function onJsonLoad (data) {
 	});
 
 	const typeFilter = new Filter({
-		header: "Type",
+		header: "類型",
 		items: ["c", "d"],
 		displayFn: conditionDiseaseTypeToFull,
 		deselFn: (it) => it === "d"
