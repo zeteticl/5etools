@@ -105,7 +105,7 @@ class ClassList {
 			const curClass = newClasses[i];
 			if (ExcludeUtil.isExcluded(curClass.name, "class", curClass.source)) continue;
 
-			curClass._fSource = BrewUtil.hasSourceJson(curClass.source) ? "Homebrew" : SourceUtil.isNonstandardSource(curClass.source) ? "Others" : "Core";
+			curClass._fSource = BrewUtil.hasSourceJson(curClass.source) ? "房規" : SourceUtil.isNonstandardSource(curClass.source) ? "其他" : "核心";
 			sourceFilter.addIfAbsent(curClass._fSource);
 			const id = i + previousClassAmount;
 			tempString += ClassList._renderClass(curClass, id);
@@ -614,7 +614,7 @@ class HashLoad {
 	}
 
 	static makeToggleSourcesPill () {
-		$(`<span title="Toggle Sources" class="sc_pill sc_pill__source"><span class="glyphicon glyphicon-book"></span></span>`)
+		$(`<span title="顯示資源" class="sc_pill sc_pill__source"><span class="glyphicon glyphicon-book"></span></span>`)
 			.appendTo(HashLoad.subclassPillWrapper)
 			.click(function () {
 				const [link, ...sub] = History._getHashParts();
@@ -1297,8 +1297,8 @@ const renderer = EntryRenderer.getDefaultRenderer();
 const sourceFilter = new Filter({
 	header: FilterBox.SOURCE_HEADER,
 	minimalUI: true,
-	items: ["Core", "Others"],
-	selFn: (it) => it === "Core" || it === "Homebrew"
+	items: ["核心", "其他"],
+	selFn: (it) => it === "核心" || it === "房規"
 });
 
 let tableDefault = $("#pagecontent").html();
