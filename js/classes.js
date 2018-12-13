@@ -59,7 +59,7 @@ class ClassDisplay {
 }
 ClassDisplay.curClass = null;
 
-Table {
+class FeatureTable {
 	/**
 	 * Get the value used to identify this subclass in the feature table
 	 *
