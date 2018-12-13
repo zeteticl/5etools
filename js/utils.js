@@ -75,27 +75,27 @@ ATB_DATA_PART_SEP = "::";
 ATB_DATA_SC = "data-subclass";
 ATB_DATA_SRC = "data-source";
 
-STR_CANTRIP = "Cantrip";
-STR_NONE = "None";
-STR_ANY = "Any";
-STR_SPECIAL = "Special";
+STR_CANTRIP = "戲法";
+STR_NONE = "無";
+STR_ANY = "任意";
+STR_SPECIAL = "特殊";
 
-RNG_SPECIAL = "special";
-RNG_POINT = "point";
-RNG_LINE = "line";
-RNG_CUBE = "cube";
-RNG_CONE = "cone";
-RNG_RADIUS = "radius";
-RNG_SPHERE = "sphere";
-RNG_HEMISPHERE = "hemisphere";
-RNG_SELF = "self";
-RNG_SIGHT = "sight";
+RNG_SPECIAL = "特殊";
+RNG_POINT = "點";
+RNG_LINE = "直線";
+RNG_CUBE = "立方";
+RNG_CONE = "錐形";
+RNG_RADIUS = "半徑";
+RNG_SPHERE = "球體";
+RNG_HEMISPHERE = "半球體";
+RNG_SELF = "自身";
+RNG_SIGHT = "視線";
 RNG_UNLIMITED = "unlimited";
 RNG_UNLIMITED_SAME_PLANE = "plane";
-RNG_TOUCH = "touch";
+RNG_TOUCH = "觸摸";
 
-UNT_FEET = "feet";
-UNT_MILES = "miles";
+UNT_FEET = "英尺";
+UNT_MILES = "英里";
 
 ABIL_STR = "力量";
 ABIL_DEX = "敏捷";
@@ -470,34 +470,34 @@ Parser.numberToText = function (number) {
 	function getAsText (num) {
 		const abs = Math.abs(num);
 		switch (abs) {
-			case 0: return "zero";
-			case 1: return "one";
-			case 2: return "two";
-			case 3: return "three";
-			case 4: return "four";
-			case 5: return "five";
-			case 6: return "six";
-			case 7: return "seven";
-			case 8: return "eight";
-			case 9: return "nine";
-			case 10: return "ten";
-			case 11: return "eleven";
-			case 12: return "twelve";
-			case 13: return "thirteen";
-			case 14: return "fourteen";
-			case 15: return "fifteen";
-			case 16: return "sixteen";
-			case 17: return "seventeen";
-			case 18: return "eighteen";
-			case 19: return "nineteen";
-			case 20: return "twenty";
-			case 30: return "thirty";
-			case 40: return "forty";
-			case 50: return "fiddy"; // :^)
-			case 60: return "sixty";
-			case 70: return "seventy";
-			case 80: return "eighty";
-			case 90: return "ninety";
+			case 0: return "零";
+			case 1: return "一";
+			case 2: return "二";
+			case 3: return "三";
+			case 4: return "四";
+			case 5: return "五";
+			case 6: return "六";
+			case 7: return "七";
+			case 8: return "八";
+			case 9: return "九";
+			case 10: return "十";
+			case 11: return "十一";
+			case 12: return "十二";
+			case 13: return "十三";
+			case 14: return "十四";
+			case 15: return "十五";
+			case 16: return "十六";
+			case 17: return "十七";
+			case 18: return "十八";
+			case 19: return "十九";
+			case 20: return "二十";
+			case 30: return "三十";
+			case 40: return "四十";
+			case 50: return "五十"; // :^)
+			case 60: return "六十";
+			case 70: return "七十";
+			case 80: return "八十";
+			case 90: return "九十";
 			default: {
 				const str = String(abs);
 				return `${getAsText(Number(`${str[0]}0`))}-${getAsText(Number(str[1]))}`;
@@ -532,10 +532,10 @@ Parser.getAbilityModifier = function (abilityScore) {
 Parser.getSpeedString = (it) => {
 	function procSpeed (propName) {
 		function addSpeed (s) {
-			stack.push(`${propName === "walk" ? "" : `${propName} `}${getVal(s)}ft.${getCond(s)}`);
+			stack.push(`${propName === "步行" ? "" : `${propName} `}${getVal(s)}ft.${getCond(s)}`);
 		}
 
-		if (it.speed[propName] || propName === "walk") addSpeed(it.speed[propName] || 0);
+		if (it.speed[propName] || propName === "步行") addSpeed(it.speed[propName] || 0);
 		if (it.speed.alternate && it.speed.alternate[propName]) it.speed.alternate[propName].forEach(addSpeed);
 	}
 
@@ -550,18 +550,18 @@ Parser.getSpeedString = (it) => {
 	const stack = [];
 	if (typeof it.speed === "object") {
 		let joiner = ", ";
-		procSpeed("walk");
-		procSpeed("burrow");
-		procSpeed("climb");
-		procSpeed("fly");
-		procSpeed("swim");
+		procSpeed("步行");
+		procSpeed("掘地");
+		procSpeed("攀爬");
+		procSpeed("飛行");
+		procSpeed("游泳");
 		if (it.speed.choose) {
 			joiner = "; ";
-			stack.push(`${it.speed.choose.from.sort().joinConjunct(", ", " or ")} ${it.speed.choose.amount} ft.${it.speed.choose.note ? ` ${it.speed.choose.note}` : ""}`);
+			stack.push(`${it.speed.choose.from.sort().joinConjunct(", ", " or ")} ${it.speed.choose.amount}呎. ${it.speed.choose.note ? ` ${it.speed.choose.note}` : ""}`);
 		}
 		return stack.join(joiner);
 	} else {
-		return it.speed + (it.speed === "Varies" ? "" : " ft. ");
+		return it.speed + (it.speed === "Varies" ? "" : "呎. ");
 	}
 };
 
@@ -898,7 +898,7 @@ Parser.getTimeToFull = function (time) {
 Parser.spRangeToFull = function (range) {
 	switch (range.type) {
 		case RNG_SPECIAL:
-			return "Special";
+			return "特殊";
 		case RNG_POINT:
 			return renderPoint();
 		case RNG_LINE:
@@ -914,15 +914,15 @@ Parser.spRangeToFull = function (range) {
 		const dist = range.distance;
 		switch (dist.type) {
 			case RNG_SELF:
-				return "Self";
+				return "自身";
 			case RNG_SIGHT:
-				return "Sight";
+				return "視線";
 			case RNG_UNLIMITED:
 				return "Unlimited";
 			case RNG_UNLIMITED_SAME_PLANE:
 				return "Unlimited on the same plane";
 			case RNG_TOUCH:
-				return "Touch";
+				return "觸摸";
 			case UNT_FEET:
 			case UNT_MILES:
 			default:
@@ -937,9 +937,9 @@ Parser.spRangeToFull = function (range) {
 		function getAreaStyleStr () {
 			switch (range.type) {
 				case RNG_SPHERE:
-					return " radius";
+					return " 半徑";
 				case RNG_HEMISPHERE:
-					return `-radius ${range.type}`;
+					return `-半徑 ${range.type}`;
 				default:
 					return ` ${range.type}`;
 			}
@@ -950,9 +950,9 @@ Parser.spRangeToFull = function (range) {
 Parser.getSingletonUnit = function (unit) {
 	switch (unit) {
 		case UNT_FEET:
-			return "foot";
+			return "英呎";
 		case UNT_MILES:
-			return "mile";
+			return "英里";
 		default: {
 			const fromBrew = MiscUtil.getProperty(BrewUtil.homebrewMeta, "spellDistanceUnits", unit, "singular");
 			if (fromBrew) return fromBrew;
@@ -1020,9 +1020,9 @@ Parser._spSubclassItem = function (fromSubclass, textOnly) {
 };
 
 Parser.SPELL_ATTACK_TYPE_TO_FULL = {};
-Parser.SPELL_ATTACK_TYPE_TO_FULL["M"] = "Melee";
-Parser.SPELL_ATTACK_TYPE_TO_FULL["R"] = "Ranged";
-Parser.SPELL_ATTACK_TYPE_TO_FULL["O"] = "Other/Unknown";
+Parser.SPELL_ATTACK_TYPE_TO_FULL["M"] = "近戰";
+Parser.SPELL_ATTACK_TYPE_TO_FULL["R"] = "遠程";
+Parser.SPELL_ATTACK_TYPE_TO_FULL["O"] = "其他/不明";
 
 Parser.spAttackTypeToFull = function (type) {
 	return Parser._parse_aToB(Parser.SPELL_ATTACK_TYPE_TO_FULL, type);
@@ -1218,24 +1218,24 @@ Parser.alignmentAbvToFull = function (alignment) {
 		alignment = alignment.toUpperCase();
 		switch (alignment) {
 			case "L":
-				return "Lawful";
+				return "守序";
 			case "N":
-				return "Neutral";
+				return "絕對中立";
 			case "NX":
-				return "Neutral (Law/Chaos axis)";
+				return "中立 (守序/混亂軸)";
 			case "NY":
-				return "Neutral (Good/Evil axis)";
+				return "中壢 (善良/邪惡軸)";
 			case "C":
-				return "Chaotic";
+				return "混亂";
 			case "G":
-				return "Good";
+				return "善良";
 			case "E":
-				return "Evil";
+				return "邪惡";
 			// "special" values
 			case "U":
-				return "Unaligned";
+				return "無陣營";
 			case "A":
-				return "Any alignment";
+				return "任意陣營";
 		}
 		return alignment;
 	}
@@ -1948,17 +1948,17 @@ Parser.ITEM_TYPE_JSON_TO_ABV = {
 	"EM": "Eldritch Machine",
 	"EXP": "Explosive",
 	"G": "Adventuring Gear",
-	"GS": "Gaming Set",
+	"GS": "遊戲套組",
 	"HA": "重甲",
 	"INS": "樂器",
 	"LA": "輕甲",
 	"M": "近戰武器",
 	"MA": "中甲",
-	"MNT": "Mount",
+	"MNT": "坐騎",
 	"GV": "Generic Variant",
-	"P": "Potion",
+	"P": "藥水",
 	"R": "遠程武器",
-	"RD": "Rod",
+	"RD": "權杖",
 	"RG": "戒指",
 	"S": "盾牌",
 	"SC": "卷軸",
