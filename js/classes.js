@@ -21,7 +21,7 @@ const ID_CLASS_FEATURES_TOGGLE = "cf-toggle";
 const ID_FLUFF_TOGGLE = "fluff-toggle";
 const ID_OTHER_SOURCES_TOGGLE = "os-toggle";
 
-const STR_PROF_NONE = "none";
+const STR_PROF_NONE = "無";
 const STR_SOURCES_OFFICIAL = "0";
 const STR_SOURCES_MIXED = "1";
 const STR_SOURCES_ALL = "2";
