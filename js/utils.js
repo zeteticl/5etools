@@ -2622,7 +2622,7 @@ ListUtil = {
 		if (ListUtil._first) {
 			ListUtil._first = false;
 			const $headDesc = $(`header div p`);
-			$headDesc.html(`${$headDesc.html()} Press J/K to navigate rows.`);
+			$headDesc.html(`${$headDesc.html()} 按下J/K以巡覽列。`);
 
 			const scrollTo = () => {
 				const toShow = History.getSelectedListElementWithIndex();
