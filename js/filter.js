@@ -162,7 +162,6 @@ class FilterBox {
 		$hdrLineInner.append(this.$txtCount);
 		if (!this.filterList[0].minimalUI) $outer.append($hdrLine).append(makeDivider());
 		for (let i = 0; i < this.filterList.length; ++i) {
-			console.log(this.filterList[i]);
 			$outer.append(makeOuterItem(this, i, this.filterList[i], this.$miniView));
 			if (i < this.filterList.length - 1) $outer.append(makeDivider());
 		}
@@ -333,7 +332,6 @@ class FilterBox {
 				$(`
 					<div class="multi-compact-hidden">${namePrefix ? `<span class="text-muted">${namePrefix} <span class="group-comb-toggle">(group ${parent.mode.toUpperCase()})</span>: </span>` : ""}<span>${filter.header}</span></div>
 				`).appendTo($line);
-				console.log(filter.header);
 				$line.find(`.group-comb-toggle`).click(function () {
 					const $this = $(this);
 					if ($this.text() === "(group AND)") {

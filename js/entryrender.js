@@ -674,7 +674,7 @@ function EntryRenderer () {
 			function getDataString () {
 				let dataString = "";
 				if (entry.type === "optfeature" || entry.type === "patron") {
-					const titleString = entry.source ? `title="Source: ${Parser.sourceJsonToFull(entry.source)}"` : "";
+					const titleString = entry.source ? `title="資源：${Parser.sourceJsonToFull(entry.source)}"` : "";
 					if (entry.subclass !== undefined) dataString = `${ATB_DATA_SC}="${entry.subclass.name}" ${ATB_DATA_SRC}="${Parser._getSourceStringFromSource(entry.subclass.source)}" ${titleString}`;
 					else dataString = `${ATB_DATA_SC}="${EntryRenderer.DATA_NONE}" ${ATB_DATA_SRC}="${EntryRenderer.DATA_NONE}" ${titleString}`;
 				}
@@ -1380,7 +1380,7 @@ EntryRenderer.utils = {
 			} else return "";
 		}
 		const sourceSub = EntryRenderer.utils.getSourceSubText(it);
-		const baseText = it.page ? `<b>Source: </b> <i title="${Parser.sourceJsonToFull(it.source)}${sourceSub}">${Parser.sourceJsonToAbv(it.source)}${sourceSub}</i>, page ${it.page}` : "";
+		const baseText = it.page ? `<b>資源：</b> <i title="${Parser.sourceJsonToFull(it.source)}${sourceSub}">${Parser.sourceJsonToAbv(it.source)}${sourceSub}</i>，第${it.page}頁` : "";
 		const addSourceText = getAltSourceText("additionalSources", "Additional information from");
 		const otherSourceText = getAltSourceText("otherSources", "Also found in");
 		const externalSourceText = getAltSourceText("externalSources", "External sources:");
@@ -1458,9 +1458,9 @@ EntryRenderer.feat = {
 			const pre = prereqList[i];
 			if (pre.level) {
 				if (isShorthand) {
-					outStack.push(`Lvl ${pre.level}`);
+					outStack.push(`Lv${pre.level}`);
 				} else {
-					outStack.push(`${Parser.spLevelToFull(pre.level)} level`);
+					outStack.push(`等級${pre.level}`);
 				}
 			}
 			if (pre.race !== undefined) {
@@ -1473,10 +1473,10 @@ EntryRenderer.feat = {
 							raceName.push(raceNameParts[k].uppercaseFirst());
 						}
 						raceName = raceName.join(DASH);
-						outStack.push(raceName + (pre.race[j].subrace !== undefined ? " (" + pre.race[j].subrace + ")" : ""))
+						outStack.push(Parser.RaceToDisplay(raceName) + (pre.race[j].subrace !== undefined ? " (" + Parser.SubraceToDisplay(pre.race[j].subrace) + ")" : ""))
 					} else {
 						const raceName = j === 0 ? pre.race[j].name.uppercaseFirst() : pre.race[j].name;
-						outStack.push(raceName + (pre.race[j].subrace !== undefined ? " (" + pre.race[j].subrace + ")" : ""))
+						outStack.push(Parser.RaceToDisplay(raceName) + (pre.race[j].subrace !== undefined ? " (" + Parser.SubraceToDisplay(pre.race[j].subrace) + ")" : ""))
 					}
 				}
 			}
@@ -1487,9 +1487,9 @@ EntryRenderer.feat = {
 					for (const att in pre.ability[j]) {
 						if (!pre.ability[j].hasOwnProperty(att)) continue;
 						if (isShorthand) {
-							outStack.push(att.uppercaseFirst() + (attCount === pre.ability.length - 1 ? " 13+" : ""));
+							outStack.push(Parser.AtrAbvToDisplay(att.uppercaseFirst()) + (attCount === pre.ability.length - 1 ? "13+" : ""));
 						} else {
-							outStack.push(Parser.attAbvToFull(att) + (attCount === pre.ability.length - 1 ? " 13 or higher" : ""));
+							outStack.push(Parser.attAbvToFull(att) + (attCount === pre.ability.length - 1 ? " 13或更高" : ""));
 						}
 						attCount++;
 					}
@@ -1502,9 +1502,9 @@ EntryRenderer.feat = {
 						if (!pre.proficiency[j].hasOwnProperty(type)) continue;
 						if (type === "armor") {
 							if (isShorthand) {
-								outStack.push("prof " + Parser.armorFullToAbv(pre.proficiency[j][type]) + " armor");
+								outStack.push("熟練" + Parser.ArmorToDisplay(pre.proficiency[j][type]) + "甲");
 							} else {
-								outStack.push("Proficiency with " + pre.proficiency[j][type] + " armor");
+								outStack.push("熟練" + Parser.ArmorToDisplay(pre.proficiency[j][type]) + "甲");
 							}
 						}
 					}
@@ -1512,13 +1512,13 @@ EntryRenderer.feat = {
 			}
 			if (pre.spellcasting) {
 				if (isShorthand) {
-					outStack.push("Spellcasting");
+					outStack.push("施法能力");
 				} else {
-					outStack.push("The ability to cast at least one spell");
+					outStack.push("具有施展至少一種法術的能力。");
 				}
 			}
 			if (pre.special) {
-				if (isShorthand) outStack.push("Special");
+				if (isShorthand) outStack.push("特殊");
 				else {
 					const renderer = EntryRenderer.getDefaultRenderer();
 					outStack.push(renderer.renderEntry(pre.special));
@@ -1532,7 +1532,7 @@ EntryRenderer.feat = {
 			if (isShorthand) return andStack.map(it => it.join("/")).join("; ");
 			else {
 				const anyLong = andStack.filter(it => it.length > 1).length && andStack.length > 1;
-				return andStack.map(it => it.joinConjunct(", ", " or ")).joinConjunct(anyLong ? "; " : ", ", anyLong ? " and " : ", ");
+				return andStack.map(it => it.joinConjunct(", ", " 或 ")).joinConjunct(anyLong ? "; " : ", ", anyLong ? " 和 " : ", ");
 			}
 		}
 	},
@@ -1553,18 +1553,18 @@ EntryRenderer.feat = {
 		}
 
 		function abilityObjToListItem () {
-			const TO_MAX_OF_TWENTY = ", to a maximum of 20.";
+			const TO_MAX_OF_TWENTY = "，上限為20。";
 			const abbArr = [];
 			if (!abilityObj.choose) {
-				Object.keys(abilityObj).forEach(ab => abbArr.push(`Increase your ${Parser.attAbvToFull(ab)} score by ${abilityObj[ab]}${TO_MAX_OF_TWENTY}`));
+				Object.keys(abilityObj).forEach(ab => abbArr.push(`你的 ${Parser.attAbvToFull(ab)} 增加${abilityObj[ab]}點${TO_MAX_OF_TWENTY}`));
 			} else {
 				const choose = abilityObj.choose;
 				for (let i = 0; i < choose.length; ++i) {
 					if (choose[i].from.length === 6) {
 						if (choose[i].textreference) { // only used in "Resilient"
-							abbArr.push(`Increase the chosen ability score by ${choose[i].amount}${TO_MAX_OF_TWENTY}`);
+							abbArr.push(`所選的屬性值增加${choose[i].amount}點${TO_MAX_OF_TWENTY}`);
 						} else {
-							abbArr.push(`Increase one ability score of your choice by ${choose[i].amount}${TO_MAX_OF_TWENTY}`);
+							abbArr.push(`你所選擇的一個屬性值增加${choose[i].amount}點${TO_MAX_OF_TWENTY}`);
 						}
 					} else {
 						const from = choose[i].from;
@@ -1573,8 +1573,8 @@ EntryRenderer.feat = {
 						for (let j = 0; j < from.length; ++j) {
 							abbChoices.push(Parser.attAbvToFull(from[j]));
 						}
-						const abbChoicesText = abbChoices.joinConjunct(", ", " or ");
-						abbArr.push(`Increase your ${abbChoicesText} by ${amount}${TO_MAX_OF_TWENTY}`);
+						const abbChoicesText = abbChoices.joinConjunct(", ", " 或 ");
+						abbArr.push(`你的 ${abbChoicesText} 增加${amount}點${TO_MAX_OF_TWENTY}`);
 					}
 				}
 			}
@@ -1686,7 +1686,7 @@ EntryRenderer.spell = {
 		}
 
 		if (spell.races) {
-			renderStack.push(`<tr class="text"><td class="classes" colspan="6"><span class="bold">Races: </span>${spell.races.map(r => renderer.renderEntry(`{@race ${r.name}|${r.source}}`)).join(", ")}</td></tr>`);
+			renderStack.push(`<tr class="text"><td class="classes" colspan="6"><span class="bold">種族：</span>${spell.races.map(r => renderer.renderEntry(`{@race ${r.name}|${r.source}}`)).join(", ")}</td></tr>`);
 		}
 
 		if (spell._scrollNote) {

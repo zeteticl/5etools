@@ -337,8 +337,8 @@ function utils_getAbilityData (abObj) {
 	function handleAbility (parent, ab, optToConvertToTextStorage) {
 		if (parent[ab.toLowerCase()] !== undefined) {
 			const isNegMod = parent[ab.toLowerCase()] < 0;
-			const toAdd = `${ab} ${(isNegMod ? "" : "+")}${parent[ab.toLowerCase()]}`;
-
+			const toAdd = `${Parser.AtrAbvToDisplay(ab)} ${(isNegMod ? "" : "+")}${parent[ab.toLowerCase()]}`;
+			
 			if (optToConvertToTextStorage) {
 				optToConvertToTextStorage.push(toAdd);
 			} else {
@@ -361,7 +361,7 @@ function utils_getAbilityData (abObj) {
 					for (let j = 0; j < item.predefined.length; ++j) {
 						const subAbs = [];
 						handleAllAbilities(item.predefined[j], subAbs);
-						outStack += subAbs.join(", ") + (j === item.predefined.length - 1 ? "" : " or ");
+						outStack += subAbs.join(", ") + (j === item.predefined.length - 1 ? "" : " 或 ");
 					}
 				} else if (item.weighted) {
 					const w = item.weighted;
@@ -376,7 +376,7 @@ function utils_getAbilityData (abObj) {
 						return `one ability to decrease by ${it}`;
 					});
 					const froms = w.from.map(it => it.uppercaseFirst());
-					toConvertToText.push(`From ${froms.joinConjunct(", ", " and ")} choose ${areIncrease.concat(areReduce).joinConjunct(", ", " and ")}`);
+					toConvertToText.push(`From ${froms.joinConjunct(", ", " 和 ")} choose ${areIncrease.concat(areReduce).joinConjunct(", ", " 和 ")}`);
 					toConvertToShortText.push(`${areIncreaseShort.concat(areReduceShort).join("/")} from ${froms.join("/")}`);
 					continue;
 				} else {
@@ -385,9 +385,9 @@ function utils_getAbilityData (abObj) {
 					let amount = item.amount === undefined ? 1 : item.amount;
 					amount = (amount < 0 ? "" : "+") + amount;
 					if (allAbilities) {
-						outStack += "any ";
+						outStack += "任意";
 					} else if (allAbilitiesWithParent) {
-						outStack += "any other ";
+						outStack += "任意其他";
 					}
 					if (item.count !== undefined && item.count > 1) {
 						outStack += Parser.numberToText(item.count) + " ";
@@ -399,7 +399,7 @@ function utils_getAbilityData (abObj) {
 							let suffix = "";
 							if (item.from.length > 1) {
 								if (j === item.from.length - 2) {
-									suffix = " or ";
+									suffix = " 或 ";
 								} else if (j < item.from.length - 2) {
 									suffix = ", ";
 								}
@@ -410,11 +410,11 @@ function utils_getAbilityData (abObj) {
 									thsAmount = "";
 								}
 							}
-							outStack += item.from[j].uppercaseFirst() + thsAmount + suffix;
+							outStack += Parser.AtrAbvToDisplay(item.from[j].uppercaseFirst()) + thsAmount + suffix;
 						}
 					}
 				}
-				toConvertToText.push("Choose " + outStack);
+				toConvertToText.push("選擇 " + outStack);
 				toConvertToShortText.push(outStack.uppercaseFirst());
 			}
 		}
@@ -1269,6 +1269,61 @@ Parser.alignmentListToFull = function (alignList) {
 	throw new Error(`Unmapped alignment: ${JSON.stringify(alignList)}`);
 };
 
+//==================
+// Haz code
+Parser.AtrAbvToDisplay = function(atr_abv){
+	atr_abv = atr_abv.toLowerCase();
+	switch(atr_abv){
+		case "str": return "力量";
+		case "dex": return "敏捷";
+		case "con": return "體質";
+		case "int": return "智力";
+		case "wis": return "睿知";
+		case "cha": return "魅力";
+		default: 	return atr_abv;
+	}
+}
+Parser.ArmorToDisplay = function(armor){
+	switch(armor){
+		case "light": 	return "輕";
+		case "medium": 	return "中";
+		case "heavy": 	return "重";
+		default: 		return armor;
+	}
+}
+Parser.RaceToDisplay = function(race){
+	race = race.toLowerCase();
+	switch(race){
+		case "dragonborn": 	return "龍裔";
+		case "dwarf": 		return "矮人";
+		case "elf": 		return "精靈";
+		case "gnome": 		return "地侏";
+		case "half-elf": 	return "半精靈";
+		case "half-orc": 	return "半獸人";
+		case "halfling": 	return "半身人";
+		case "human": 		return "人類";
+		case "tiefling": 	return "提夫林";
+		case "vampire (ixalan)": 	return "吸血鬼(依夏蘭)";
+		case "small race": 	return "小體型種族";
+		default: 		return race;
+	}
+}
+Parser.SubraceToDisplay = function(race){
+	switch(race){
+		case "forest": 	return "林";	//Gnome
+		case "rock": 	return "岩";
+		case "deep": 	return "地底";
+		case "wood": 	return "木";	//Elf
+		case "drow": 	return "卓爾";
+		case "high": 	return "高等";
+		default: 		return race;
+	}
+}
+
+
+// Haz code
+//==================
+
 Parser.CAT_ID_CREATURE = 1;
 Parser.CAT_ID_SPELL = 2;
 Parser.CAT_ID_BACKGROUND = 3;
@@ -1639,7 +1694,6 @@ Parser.ARMOR_ABV_TO_FULL = {
 	"m.": "medium",
 	"h.": "heavy"
 };
-
 
 SRC_CoS = "CoS";
 SRC_DMG = "DMG";
