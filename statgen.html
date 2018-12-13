@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cn">
 
 <head>
 	<!--5ETOOLS_VERSION-->
@@ -8,7 +8,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Statgen - 5etools</title>
+	<title>屬性生成器 - 5etools</title>
 
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/jquery-ui.css">
@@ -124,8 +124,8 @@
 <body>
 <header class="hidden-xs hidden-sm">
 	<div class="container">
-		<h1>Statgen</h1>
-		<p>Change method on the left, refer to method that appears on the right.</p>
+		<h1>屬性生成器</h1>
+		<p>於左側變更生成方式，參照之生成方式將顯示於右側。</p>
 	</div>
 </header>
 <nav class="container" id="navigation">
@@ -138,9 +138,9 @@
 		<div class="col-sm-3">
 			<nav>
 				<ul class="nav" id="rolltabs">
-					<li role="presentation"><a href="#rolled">Rolling</a></li>
-					<li role="presentation"><a href="#array">Array</a></li>
-					<li role="presentation"><a href="#pointbuy">Point Buy</a></li>
+					<li role="presentation"><a href="#rolled">擲骰制</a></li>
+					<li role="presentation"><a href="#array">陣列</a></li>
+					<li role="presentation"><a href="#pointbuy">購點制</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -148,48 +148,48 @@
 			<h3>Rolled Stats</h3>
 			<div class="input-group">
 				<span class="input-group-addon" id="roller-mode"></span>
-				<input class="form-control" placeholder="Enter dice formula" value="4d6dl1" id="stats-formula">
+				<input class="form-control" placeholder="輸入擲骰公式" value="4d6dl1" id="stats-formula">
 				<span class="input-group-btn">
-					<button id="rollbutton" class="btn btn-default">Roll Stats</button>
+					<button id="rollbutton" class="btn btn-default">擲骰決定屬性</button>
 				</span>
 			</div>
 			<h3 id="rolls"></h3>
 		</div>
 		<div class="col-sm-9 statmethod" id="array" style="display: none">
-			<h3>Standard Array</h3>
+			<h3>標準陣列</h3>
 			<h4>15, 14, 13, 12, 10, 8</h4>
-			<p>Assign these numbers to your abilities as desired.</p>
+			<p>將這些數字分配到你想要的屬性值。</p>
 		</div>
 		<div class="col-sm-9 statmethod" id="pointbuy" style="display: none">
-			<h3>Point Buy</h3>
+			<h3>購點制</h3>
 			<div class="pbuy__split">
 				<div class="pbuy__split_item">
 
 					<div style="display: flex; align-items: flex-end;">
 						<label class="split-column split-column--inline">
-							<span class="text-align-center">Budget</span>
+							<span class="text-align-center">預算</span>
 							<input class="form-control" id="budget" type="number" min="1" value="27" readonly>
 						</label>
 						<label class="split-column split-column--inline">
-							<span class="text-align-center">Remaining</span>
+							<span class="text-align-center">剩餘</span>
 							<input class="form-control" id="remaining" type="number" min="10" value="27" readonly>
 						</label>
-						<button id="reset" class="btn btn-default" style="margin: auto auto 7px 2px;">Reset</button>
+						<button id="reset" class="btn btn-default" style="margin: auto auto 7px 2px;">重置</button>
 					</div>
 
 					<table>
 						<tr>
 							<td></td>
-							<td class="text-align-center">Base</td>
-							<td class="text-align-center">Racial</td>
+							<td class="text-align-center">基本</td>
+							<td class="text-align-center">種族</td>
 							<td class="choose choose_head"></td>
-							<td title="Input any additional/custom bonuses here" class="text-align-center help">User</td>
+							<td title="在這裡輸入所有額外／客制化的加值" class="text-align-center help">使用者</td>
 
-							<td class="text-align-center">Total</td>
-							<td class="text-align-center">Mod</td>
+							<td class="text-align-center">總和</td>
+							<td class="text-align-center">調整值</td>
 						</tr>
 						<tr id="str">
-							<td><b>STR</b></td>
+							<td><b>力量</b></td>
 							<td><input type="number" value="8" class="base"></td>
 							<td><input type="number" class="racial" readonly></td>
 							<td class="choose"><input type="checkbox" class="choose pbuy__cb_choose"></td>
@@ -199,7 +199,7 @@
 							<td><input type="number" readonly class="bold"></td>
 						</tr>
 						<tr id="dex">
-							<td><b>DEX</b></td>
+							<td><b>敏捷</b></td>
 							<td><input type="number" value="8" class="base"></td>
 							<td><input type="number" class="racial" readonly></td>
 							<td class="choose"><input type="checkbox" class="choose pbuy__cb_choose"></td>
@@ -209,7 +209,7 @@
 							<td><input type="number" readonly class="bold"></td>
 						</tr>
 						<tr id="con">
-							<td><b>CON</b></td>
+							<td><b>體質</b></td>
 							<td><input type="number" value="8" class="base"></td>
 							<td><input type="number" class="racial" readonly></td>
 							<td class="choose"><input type="checkbox" class="choose pbuy__cb_choose"></td>
@@ -219,7 +219,7 @@
 							<td><input type="number" readonly class="bold"></td>
 						</tr>
 						<tr id="int">
-							<td><b>INT</b></td>
+							<td><b>智力</b></td>
 							<td><input type="number" value="8" class="base"></td>
 							<td><input type="number" class="racial" readonly></td>
 							<td class="choose"><input type="checkbox" class="choose pbuy__cb_choose"></td>
@@ -229,7 +229,7 @@
 							<td><input type="number" readonly class="bold"></td>
 						</tr>
 						<tr id="wis">
-							<td><b>WIS</b></td>
+							<td><b>睿知</b></td>
 							<td><input type="number" value="8" class="base"></td>
 							<td><input type="number" class="racial" readonly></td>
 							<td class="choose"><input type="checkbox" class="choose pbuy__cb_choose"></td>
@@ -239,7 +239,7 @@
 							<td><input type="number" readonly class="bold"></td>
 						</tr>
 						<tr id="cha">
-							<td><b>CHA</b></td>
+							<td><b>魅力</b></td>
 							<td><input type="number" value="8" class="base"></td>
 							<td><input type="number" class="racial" readonly></td>
 							<td class="choose"><input type="checkbox" class="choose pbuy__cb_choose"></td>
@@ -250,27 +250,27 @@
 						</tr>
 					</table>
 
-					<h5>Select Race</h5>
+					<h5>選擇種族</h5>
 					<select id="race" class="form-control"></select>
 
 					<table id="custom" style="display: none;">
-						<tr><td>Custom race <b>STR</b> bonus:</td><td><input name="str" class="custom" type="number" value="0" step="1"></td></tr>
-						<tr><td>Custom race <b>DEX</b> bonus:</td><td><input name="dex" class="custom" type="number" value="0" step="1"></td></tr>
-						<tr><td>Custom race <b>CON</b> bonus:</td><td><input name="con" class="custom" type="number" value="0" step="1"></td></tr>
-						<tr><td>Custom race <b>INT</b> bonus:</td><td><input name="int" class="custom" type="number" value="0" step="1"></td></tr>
-						<tr><td>Custom race <b>WIS</b> bonus:</td><td><input name="wis" class="custom" type="number" value="0" step="1"></td></tr>
-						<tr><td>Custom race <b>CHA</b> bonus:</td><td><input name="cha" class="custom" type="number" value="0" step="1"></td></tr>
+						<tr><td>客製種族 <b>力量</b> 加值:</td><td><input name="str" class="custom" type="number" value="0" step="1"></td></tr>
+						<tr><td>客製種族 <b>敏捷</b> 加值:</td><td><input name="dex" class="custom" type="number" value="0" step="1"></td></tr>
+						<tr><td>客製種族 <b>體質</b> 加值:</td><td><input name="con" class="custom" type="number" value="0" step="1"></td></tr>
+						<tr><td>客製種族 <b>智力</b> 加值:</td><td><input name="int" class="custom" type="number" value="0" step="1"></td></tr>
+						<tr><td>客製種族 <b>睿知</b> 加值:</td><td><input name="wis" class="custom" type="number" value="0" step="1"></td></tr>
+						<tr><td>客製種族 <b>魅力</b> 加值:</td><td><input name="cha" class="custom" type="number" value="0" step="1"></td></tr>
 					</table>
 				</div>
 
 				<div class="pbuy__split_item">
-					<label><input id="advanced" type="checkbox">Custom Rules</label>
+					<label><input id="advanced" type="checkbox">客製化規則</label>
 					<table id="costs" class="pbuy__tbl_cost"></table>
 
 					<div class="pbuy__save_wrp">
-						<button id="pbuy__save_file" class="btn btn-xs btn-primary" style="margin-right: 7px;">Save to File</button>
-						<button id="pbuy__load_file" class="btn btn-xs btn-primary" style="margin-right: 14px;">Load from File</button>
-						<button id="pbuy__save_url" class="btn btn-xs btn-primary">Save to URL</button>
+						<button id="pbuy__save_file" class="btn btn-xs btn-primary" style="margin-right: 7px;">儲存檔案</button>
+						<button id="pbuy__load_file" class="btn btn-xs btn-primary" style="margin-right: 14px;">讀取檔案</button>
+						<button id="pbuy__save_url" class="btn btn-xs btn-primary">儲存至URL</button>
 					</div>
 				</div>
 			</div>
