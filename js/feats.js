@@ -19,7 +19,7 @@ async function onJsonLoad (data) {
 	const asiFilter = getAsiFilter();
 	const prereqFilter = new Filter({
 		header: "Prerequisite",
-		items: ["Ability", "Race", "Proficiency", "Spellcasting"]
+		items: ["屬性值", "種族", "熟練", "施法"]
 	});
 	filterBox = await pInitFilterBox(
 		sourceFilter,
@@ -174,7 +174,7 @@ function loadhash (id) {
 	$content.append(`
 		${EntryRenderer.utils.getBorderTr()}
 		${EntryRenderer.utils.getNameTr(feat)}
-		${prerequisite ? `<tr><td colspan="6"><span class="prerequisite">Prerequisite: ${prerequisite}</span></td></tr>` : ""}
+		${prerequisite ? `<tr><td colspan="6"><span class="prerequisite">先決條件：${prerequisite}</span></td></tr>` : ""}
 		<tr><td class="divider" colspan="6"><div></div></td></tr>
 		<tr class='text'><td colspan='6'>${renderStack.join("")}</td></tr>
 		${EntryRenderer.utils.getPageTr(feat)}
