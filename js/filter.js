@@ -371,7 +371,7 @@ class FilterBox {
 				const $quickBtns = $(`<span class="btn-group quick-btns" style="margin-left: auto;"/>`).appendTo($line);
 				const $all = $(`<button class="btn btn-default btn-xs btn-meta ${minimalClass}">全選</button>`).appendTo($quickBtns);
 				const $clear = $(`<button class="btn btn-default btn-xs btn-meta ${minimalClass}">清除</button>`).appendTo($quickBtns);
-				const $none = $(`<button class="btn btn-default btn-xs btn-meta ${minimalClass}">無</button>`).appendTo($quickBtns);
+				const $none = $(`<button class="btn btn-default btn-xs btn-meta ${minimalClass}">全無</button>`).appendTo($quickBtns);
 				const $default = $(`<button class="btn btn-default btn-xs btn-meta ${minimalClass}">預設</button>`).appendTo($quickBtns);
 
 				const $summary = $(`<span class="summary"/>`).appendTo($line);
