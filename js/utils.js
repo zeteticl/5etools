@@ -821,12 +821,12 @@ Parser.senseToExplanation = function (senseType) {
 };
 
 Parser.numberToString = function (num) {
-	if (num === 0) return "zero";
+	if (num === 0) return "零";
 	else return parse_hundreds(num);
 
 	function parse_hundreds (num) {
 		if (num > 99) {
-			return Parser.NUMBERS_ONES[Math.floor(num / 100)] + " hundred " + parse_tens(num % 100);
+			return Parser.NUMBERS_ONES[Math.floor(num / 100)] + "百" + parse_tens(num % 100);
 		} else {
 			return parse_tens(num);
 		}
@@ -836,7 +836,7 @@ Parser.numberToString = function (num) {
 		if (num < 10) return Parser.NUMBERS_ONES[num];
 		else if (num >= 10 && num < 20) return Parser.NUMBERS_TEENS[num - 10];
 		else {
-			return Parser.NUMBERS_TENS[Math.floor(num / 10)] + " " + Parser.NUMBERS_ONES[num % 10];
+			return Parser.NUMBERS_TENS[Math.floor(num / 10)] + "" + Parser.NUMBERS_ONES[num % 10];
 		}
 	}
 };
@@ -1949,22 +1949,22 @@ Parser.ITEM_TYPE_JSON_TO_ABV = {
 	"EXP": "Explosive",
 	"G": "Adventuring Gear",
 	"GS": "Gaming Set",
-	"HA": "Heavy Armor",
-	"INS": "Instrument",
-	"LA": "Light Armor",
-	"M": "Melee Weapon",
-	"MA": "Medium Armor",
+	"HA": "重甲",
+	"INS": "樂器",
+	"LA": "輕甲",
+	"M": "近戰武器",
+	"MA": "中甲",
 	"MNT": "Mount",
 	"GV": "Generic Variant",
 	"P": "Potion",
-	"R": "Ranged Weapon",
+	"R": "遠程武器",
 	"RD": "Rod",
-	"RG": "Ring",
-	"S": "Shield",
-	"SC": "Scroll",
-	"SCF": "Spellcasting Focus",
-	"OTH": "Other",
-	"T": "Tool",
+	"RG": "戒指",
+	"S": "盾牌",
+	"SC": "卷軸",
+	"SCF": "法器",
+	"OTH": "其他",
+	"T": "工具",
 	"TAH": "Tack and Harness",
 	"TG": "Trade Good",
 	"VEH": "Vehicle",
@@ -1973,11 +1973,11 @@ Parser.ITEM_TYPE_JSON_TO_ABV = {
 };
 
 Parser.DMGTYPE_JSON_TO_FULL = {
-	"B": "bludgeoning",
-	"N": "necrotic",
-	"P": "piercing",
-	"R": "radiant",
-	"S": "slashing"
+	"B": "鈍擊",
+	"N": "黯蝕",
+	"P": "穿刺",
+	"R": "光耀",
+	"S": "劈砍"
 };
 
 Parser.SKILL_JSON_TO_FULL = {
@@ -2098,9 +2098,9 @@ Parser.SENSE_JSON_TO_FULL = {
 	]
 };
 
-Parser.NUMBERS_ONES = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
-Parser.NUMBERS_TENS = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
-Parser.NUMBERS_TEENS = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+Parser.NUMBERS_ONES = ['', '一', '二', '三', '四', '五', '六', '七', '八', '九'];
+Parser.NUMBERS_TENS = ['', '', '二十', '三十', '四十', '五十', '六十', '七十', '八十', '九十'];
+Parser.NUMBERS_TEENS = ['十', '十一', '十二', '十三', '十四', '十五', '十六', '十七', '十八', '十九'];
 
 // SOURCES =============================================================================================================
 SourceUtil = {
