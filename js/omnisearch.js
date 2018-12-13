@@ -1,5 +1,5 @@
 const Omnisearch = {
-	_PLACEHOLDER_TEXT: "Search everywhere...",
+	_PLACEHOLDER_TEXT: "全域搜尋...",
 	_searchIndex: null,
 	_onFirstLoad: null,
 	_loadingSearch: false,
@@ -10,7 +10,7 @@ const Omnisearch = {
 		const $nav = $(`#navbar`);
 		$nav.append(`
 			<div class="input-group" id="wrp-omnisearch-input">
-				<input id="omnisearch-input" class="form-control" placeholder="${Omnisearch._PLACEHOLDER_TEXT}" title="Disclaimer: unlikely to search everywhere. Use with caution.">
+				<input id="omnisearch-input" class="form-control" placeholder="${Omnisearch._PLACEHOLDER_TEXT}" title="免責聲明：不一定真的達到全域搜尋，請謹慎使用。">
 				<div class="input-group-btn">
 					<button class="btn btn-default" id="omnisearch-submit" tabindex="-1"><span class="glyphicon glyphicon-search"></span></button>
 				</div>
