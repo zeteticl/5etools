@@ -265,7 +265,7 @@ class HashLoad {
 
 		// starting proficiencies
 		const renderArmorProfs = (armorProfs) => armorProfs.map(a => a === "輕" || a === "中" || a === "重" ? a + "甲" : a).join(", ");
-		const renderWeaponsProfs = (weaponProfs) => weaponProfs.map(w => w === "simple" || w === "martial" ? w + " weapons" : w).join(", ");
+		const renderWeaponsProfs = (weaponProfs) => weaponProfs.map(w => w === "簡易" || w === "軍用" ? w + "武器" : w).join(", ");
 		const renderToolsProfs = (toolProfs) => toolProfs.join(", ");
 		const renderSkillsProfs = (skillProfs) => getSkillProfString(skillProfs);
 
@@ -283,9 +283,9 @@ class HashLoad {
 
 		// starting equipment
 		const sEquip = ClassDisplay.curClass.startingEquipment;
-		const fromBackground = sEquip.additionalFromBackground ? "<p>You start with the following items, plus anything provided by your background.</p>" : "";
+		const fromBackground = sEquip.additionalFromBackground ? "<p>你起始攜帶下列物品，以及任何你背景所提供的東西</p>" : "";
 		const defList = sEquip.default.length === 0 ? "" : `<ul><li>${sEquip.default.map(it => EntryRenderer.getDefaultRenderer().renderEntry(it)).join("</li><li>")}</ul>`;
-		const goldAlt = sEquip.goldAlternative === undefined ? "" : `<p>Alternatively, you may start with ${EntryRenderer.getDefaultRenderer().renderEntry(sEquip.goldAlternative)} gp to buy your own equipment.</p>`;
+		const goldAlt = sEquip.goldAlternative === undefined ? "" : `<p>或者，你可以選擇起始擁有 ${EntryRenderer.getDefaultRenderer().renderEntry(sEquip.goldAlternative)} 金幣以自行購買裝備。</p>`;
 		$("#equipment").find("div").html(`${fromBackground}${defList}${goldAlt}`);
 
 		// multiclassing requirements and proficiencies
@@ -297,11 +297,11 @@ class HashLoad {
 				const orPart = mc.requirements.or ? mc.requirements.or.map(obj => renderPart(obj, " or ")).join("; ") : "";
 				const basePart = renderPart(mc.requirements);
 				$div
-					.append(`<div>To qualify for a new class, you must meet the ability score prerequisites for both your current class and your new one.</div>`)
-					.append(`<strong>Ability Score Minimum:</strong> <span>${[orPart, basePart].filter(Boolean).join("; ")}</span>`);
+					.append(`<div>獲得新職業前，你必須同時滿足現有職業和新職業的屬性值需求。</div>`)
+					.append(`<strong>最低屬性值:</strong> <span>${[orPart, basePart].filter(Boolean).join("; ")}</span>`);
 			}
 			if (mc.proficienciesGained) {
-				$(`#multiclassing_profs`).html(`<div ${mc.requirements ? `style="margin-top: 1.7em;"` : ""}>When you gain a level in a class other than your first, you gain only some of that class's starting proficiencies.</div>`)
+				$(`#multiclassing_profs`).html(`<div ${mc.requirements ? `style="margin-top: 1.7em;"` : ""}>當你不是在等級一時獲得新職業的等級，你只會獲得該職業一部分的起始熟練項目。</div>`)
 				const $mcProfArmor = $(`#multiclassing_profs_armor`).toggle(mc.proficienciesGained.armor != null).find("span").html(mc.proficienciesGained.armor ? renderArmorProfs(mc.proficienciesGained.armor) : "");
 				const $mcProfWeapons = $(`#multiclassing_profs_weapons`).toggle(mc.proficienciesGained.weapons != null).find("span").html(mc.proficienciesGained.weapons ? renderWeaponsProfs(mc.proficienciesGained.weapons) : "");
 				const $mcProfTools = $(`#multiclassing_profs_tools`).toggle(mc.proficienciesGained.tools != null).find("span").html(mc.proficienciesGained.tools ? renderToolsProfs(mc.proficienciesGained.tools) : "");
