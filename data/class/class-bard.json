@@ -14,8 +14,8 @@
 			"classTableGroups": [
 				{
 					"colLabels": [
-						"{@filter Cantrips Known|spells|level=0|class=bard}",
-						"{@filter Spells Known|spells|class=bard}"
+						"{@filter 已知戲法|spells|level=0|class=bard}",
+						"{@filter 已知法術|spells|class=bard}"
 					],
 					"rows": [
 						[
@@ -424,7 +424,7 @@
 			"classFeatures": [
 				[
 					{
-						"name": "吟遊激勵(Bardic Inspiration)",
+						"name": "吟遊激勵",
 						"entries": [
 							"You can inspire others through stirring words or music. To do so, you use a bonus action on your turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Bardic Inspiration die, a {@dice d6}.",
 							"Once within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. The creature can wait until after it rolls the {@dice d20} before deciding to use the Bardic Inspiration die, but must decide before the DM says whether the roll succeeds or fails. Once the Bardic Inspiration die is rolled, it is lost. A creature can have only one Bardic Inspiration die at a time.",
@@ -546,7 +546,7 @@
 						]
 					},
 					{
-						"name": "靈感回充",
+						"name": "激勵湧泉",
 						"entries": [
 							"Beginning when you reach 5th level, you regain all of your expended uses of Bardic Inspiration when you finish a short or long rest."
 						]
@@ -707,7 +707,7 @@
 									"The college's members gather in libraries and sometimes in actual colleges, complete with classrooms and dormitories, to share their lore with one another. They also meet at festivals or affairs of state, where they can expose corruption, unravel lies, and poke fun at self-important figures of authority.",
 									{
 										"type": "entries",
-										"name": "熟練加成",
+										"name": "額外熟練",
 										"entries": [
 											"When you join the College of Lore at 3rd level, you gain proficiency with three skills of your choice."
 										]
@@ -727,7 +727,7 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Additional Magical Secrets",
+										"name": "追加魔法秘密",
 										"entries": [
 											"At 6th level, you learn two spells of your choice from any class. A spell you choose must be of a level you can cast, as shown on the Bard table, or a cantrip. The chosen spells count as bard spells for you but don't count against the number of bard spells you know."
 										]
@@ -740,7 +740,7 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Peerless Skill",
+										"name": "絕代技能",
 										"entries": [
 											"Starting at 14th level, when you make an ability check, you can expend one use of Bardic Inspiration. Roll a Bardic Inspiration die and add the number rolled to your ability check. You can choose to do so after you roll the die for the ability check, but before the DM tells you whether you succeed or fail."
 										]
@@ -750,26 +750,26 @@
 						]
 					],
 					"source": "PHB",
-					"shortName": "Lore"
+					"shortName": "知識"
 				},
 				{
-					"name": "College of Valor",
+					"name": "勇氣學院",
 					"subclassFeatures": [
 						[
 							{
-								"name": "College of Valor",
+								"name": "勇氣學院",
 								"entries": [
 									"Bards of the College of Valor are daring skalds whose tales keep alive the memory of the great heroes of the past, and thereby inspire a new generation of heroes. These bards gather in mead halls or around great bonfires to sing the deeds of the mighty, both past and present. They travel the land to witness great events firsthand and to ensure that the memory of those events doesn't pass from the world. With their songs, they inspire others to reach the same heights of accomplishment as the heroes of old.",
 									{
 										"type": "entries",
-										"name": "Bonus Proficiencies",
+										"name": "額外熟練",
 										"entries": [
 											"When you join the College of Valor at 3rd level, you gain proficiency with medium armor, shields, and martial weapons."
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Combat Inspiration",
+										"name": "戰鬥激勵",
 										"entries": [
 											"Also at 3rd level, you learn to inspire others in battle. A creature that has a Bardic Inspiration die from you can roll that die and add the number rolled to a weapon damage roll it just made. Alternatively, when an attack roll is made against the creature, it can use its reaction to roll the Bardic Inspiration die and add the number rolled to its AC against that attack, after seeing the roll but before knowing whether it hits or misses."
 										]
@@ -782,7 +782,7 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Extra Attack",
+										"name": "額外攻擊",
 										"entries": [
 											"Starting at 6th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
 										]
@@ -795,7 +795,7 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Battle Magic",
+										"name": "戰鬥魔法",
 										"entries": [
 											"At 14th level, you have mastered the art of weaving spellcasting and weapon use into a single harmonious act. When you use your action to cast a bard spell, you can make one weapon attack as a bonus action."
 										]
@@ -805,14 +805,14 @@
 						]
 					],
 					"source": "PHB",
-					"shortName": "Valor"
+					"shortName": "勇氣"
 				},
 				{
-					"name": "College of Glamour (UA)",
+					"name": "迷惑學院(UA)",
 					"subclassFeatures": [
 						[
 							{
-								"name": "College of Glamour",
+								"name": "迷惑學院",
 								"entries": [
 									"The College of Glamour is open to those bards who mastered their craft in the vibrant, deadly realm of the Feywild. Tutored by satyrs, eladrin, and other fey, these bards learn to use their magic to delight and captivate others.",
 									"The bards of this college are regarded with a mixture of awe and fear. Their performances are the stuff of legend. The bards of this college are so eloquent that a speech or song that one of them performs can cause captors to release the bard unharmed and can lull a furious dragon into complacency. The same magic that allows them to quell beasts can also bend minds. Villainous bards of this college can leech off a community for weeks, abusing their magic to turn their hosts into thralls.",
@@ -870,14 +870,14 @@
 						]
 					],
 					"source": "UABardBardColleges",
-					"shortName": "Glamour (UA)"
+					"shortName": "迷惑學院(UA)"
 				},
 				{
-					"name": "College of Whispers (UA)",
+					"name": "低語學院(UA)",
 					"subclassFeatures": [
 						[
 							{
-								"name": "College of Whispers",
+								"name": "低語學院",
 								"entries": [
 									"Most folk are happy to welcome a bard into their midst. Bards of the College of Whispers use this to their advantage. They appear to be like any other bard, sharing news, singing songs, and telling tales to the audiences they gather. In truth, the College of Whispers teaches its students that they are wolves among sheep. These bards use their knowledge and magic to uncover secrets and turn them against others through extortion and threats.",
 									"Many other bards hate the College of Whispers, viewing it as a parasite that uses the bards' reputation to acquire wealth and power. For this reason, these bards rarely reveal their true nature unless they must. They typically claim to follow some other college, or keep their true nature secret in order to better infiltrate and exploit royal courts and other settings of power.",
@@ -939,14 +939,14 @@
 						]
 					],
 					"source": "UABardBardColleges",
-					"shortName": "Whispers (UA)"
+					"shortName": "低語(UA)"
 				},
 				{
-					"name": "College of Swords (UA)",
+					"name": "劍舞學院(UA)",
 					"subclassFeatures": [
 						[
 							{
-								"name": "College of Swords",
+								"name": "劍舞學院",
 								"entries": [
 									"Bards of the College of Swords are called blades, and they entertain through daring feats of weapon prowess. Blades perform stunts such as sword swallowing, knife throwing and juggling, and mock combats. But though they use their weapons to entertain, they are also highly trained and skilled warriors in their own right.",
 									"Their talent with weapons inspires many blades to lead double lives. One blade might use a circus troupe as cover for nefarious deeds such as assassination, robbery, and blackmail. Other blades strike at the wicked, bringing justice to bear against the cruel and powerful. Most troupes are happy to accept a blade's talent for the excitement it adds to a performance, but few entertainers fully trust them.",
@@ -1052,14 +1052,14 @@
 						]
 					],
 					"source": "UAKitsOfOld",
-					"shortName": "Swords (UA)"
+					"shortName": "劍舞(UA)"
 				},
 				{
-					"name": "College of Swords v2 (UA)",
+					"name": "劍舞學院v2(UA)",
 					"subclassFeatures": [
 						[
 							{
-								"name": "College of Swords v2",
+								"name": "劍舞學院v2",
 								"entries": [
 									"Bards of the College of Swords are called blades, and they entertain through daring feats of weapon prowess. Blades perform stunts such as sword swallowing, knife throwing and juggling, and mock combats. But though they use their weapons to entertain, they are also highly trained and skilled warriors in their own right.",
 									"Their talent with weapons inspires many blades to lead double lives. One blade might use a circus troupe as cover for nefarious deeds such as assassination, robbery, and blackmail. Other blades strike at the wicked, bringing justice to bear against the cruel and powerful. Most troupes are happy to accept a blade's talent for the excitement it adds to a performance, but few entertainers fully trust them.",
@@ -1176,10 +1176,10 @@
 						]
 					],
 					"source": "UARevisedSubclasses",
-					"shortName": "Swords v2 (UA)"
+					"shortName": "劍舞v2(UA)"
 				},
 				{
-					"name": "College of Satire (UA)",
+					"name": "College of Satire(UA)",
 					"subclassFeatures": [
 						[
 							{
@@ -1249,11 +1249,11 @@
 					"shortName": "Satire (UA)"
 				},
 				{
-					"name": "College of Glamour",
+					"name": "迷惑學院",
 					"subclassFeatures": [
 						[
 							{
-								"name": "College of Glamour",
+								"name": "迷惑學院",
 								"entries": [
 									"The College of Glamour is the home of bards who mastered their craft in the vibrant realm of the Feywild or under the tutelage of someone who dwelled there. Tutored by satyrs, eladrin, and other fey, these bards learn to use their magic to delight and captivate others.",
 									"The bards of this college are regarded with a mixture of awe and fear. Their performances are the stuff of legend. These bards are so eloquent that a speech or song that one of them performs can cause captors to release the bard unharmed and can lull a furious dragon into complacency. The same magic that allows them to quell beasts can also bend minds. Villainous bards of this college can leech off a community for weeks, misusing their magic to turn their hosts into thralls. Heroic bards of this college instead use this power to gladden the downtrodden and undermine oppressors.",
@@ -1311,14 +1311,14 @@
 						]
 					],
 					"source": "XGE",
-					"shortName": "Glamour"
+					"shortName": "迷惑"
 				},
 				{
-					"name": "College of Swords",
+					"name": "劍舞學院",
 					"subclassFeatures": [
 						[
 							{
-								"name": "College of Swords",
+								"name": "劍舞學院",
 								"entries": [
 									"Bards of the College of Swords are called blades, and they entertain through daring feats of weapon prowess. Blades perform stunts such as sword swallowing, knife throwing and juggling, and mock combats. Though they use their weapons to entertain, they are also highly trained and skilled warriors in their own right.",
 									"Their talent with weapons inspires many blades to lead double lives. One blade might use a circus troupe as cover for nefarious deeds such as assassination, robbery, and blackmail. Other blades strike at the wicked, bringing justice to bear against the cruel and powerful. Most troupes are happy to accept a blade's talent for the excitement it adds to a performance, but few entertainers fully trust a blade in their ranks.",
@@ -1422,14 +1422,14 @@
 						]
 					],
 					"source": "XGE",
-					"shortName": "Swords"
+					"shortName": "劍舞"
 				},
 				{
-					"name": "College of Whispers",
+					"name": "低語學院",
 					"subclassFeatures": [
 						[
 							{
-								"name": "College of Whispers",
+								"name": "低語學院",
 								"entries": [
 									"Most folk are happy to welcome a bard into their midst. Bards of the College of Whispers use this to their advantage. They appear to be like other bards, sharing news, singing songs, and telling tales to the audiences they gather. In truth, the College of Whispers teaches its students that they are wolves among sheep. These bards use their knowledge and magic to uncover secrets and turn them against others through extortion and threats.",
 									"Many other bards hate the College of Whispers, viewing it as a parasite that uses a bard's reputation to acquire wealth and power. For this reason, members of this college rarely reveal their true nature. They typically claim to follow some other college, or they keep their actual calling secret in order to infiltrate and exploit royal courts and other settings of power.",
@@ -1492,7 +1492,7 @@
 						]
 					],
 					"source": "XGE",
-					"shortName": "Whispers"
+					"shortName": "低語"
 				}
 			],
 			"fluff": [
