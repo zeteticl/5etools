@@ -157,11 +157,12 @@ class FilterBox {
 					$btnAndOr.text(nxt);
 					$btnAndOr.data("andor", nxt);
 				});
-			$hdrLineInner.append(`Combine filters as... `).append(`<div style="display: inline-block; width: 10px;"/>`).append($btnAndOr);
+			$hdrLineInner.append(`結合篩選器為... `).append(`<div style="display: inline-block; width: 10px;"/>`).append($btnAndOr);
 		}
 		$hdrLineInner.append(this.$txtCount);
 		if (!this.filterList[0].minimalUI) $outer.append($hdrLine).append(makeDivider());
 		for (let i = 0; i < this.filterList.length; ++i) {
+			console.log(this.filterList[i]);
 			$outer.append(makeOuterItem(this, i, this.filterList[i], this.$miniView));
 			if (i < this.filterList.length - 1) $outer.append(makeDivider());
 		}
@@ -332,7 +333,7 @@ class FilterBox {
 				$(`
 					<div class="multi-compact-hidden">${namePrefix ? `<span class="text-muted">${namePrefix} <span class="group-comb-toggle">(group ${parent.mode.toUpperCase()})</span>: </span>` : ""}<span>${filter.header}</span></div>
 				`).appendTo($line);
-
+				console.log(filter.header);
 				$line.find(`.group-comb-toggle`).click(function () {
 					const $this = $(this);
 					if ($this.text() === "(group AND)") {
@@ -1254,7 +1255,7 @@ class FilterBox {
 	 * @param maxCount total items
 	 */
 	setCount (count, maxCount) {
-		this.$txtCount.html(`Showing ${count}/${maxCount}`);
+		this.$txtCount.html(`顯示 ${count}/${maxCount}`);
 	}
 
 	/**
@@ -1306,7 +1307,7 @@ class FilterBox {
 FilterBox.CLS_INPUT_GROUP_BUTTON = "input-group-btn";
 FilterBox.CLS_DROPDOWN_MENU_FILTER = "dropdown-menu-filter";
 FilterBox.EVNT_VALCHANGE = "valchange";
-FilterBox.SOURCE_HEADER = "Source";
+FilterBox.SOURCE_HEADER = "資源";
 FilterBox._PILL_STATES = ["ignore", "yes", "no"];
 FilterBox._STORAGE_NAME = "filterState";
 FilterBox._STORAGE_NAME_VISIBLE = "filterStateVisible";

@@ -38,31 +38,31 @@ function getLevelFilterNestedItem (prereqLevel) {
 let list;
 const sourceFilter = getSourceFilter();
 const typeFilter = new Filter({
-	header: "Feature Type",
+	header: "能力類型",
 	items: ["EI", "MM", "MV:B", "OTH", "FS:F", "FS:B", "FS:P", "FS:R"],
 	displayFn: Parser.optFeatureTypeToFull
 });
 const pactFilter = new Filter({
-	header: "Pact Boon",
+	header: "契約之賜",
 	items: ["Blade", "Chain", "Tome"],
 	displayFn: Parser.prereqPactToFull
 });
 const patronFilter = new Filter({
-	header: "Otherworldly Patron",
+	header: "異界宗主",
 	items: ["The Archfey", "The Fiend", "The Great Old One", "The Hexblade", "The Kraken", "The Raven Queen", "The Seeker"],
 	displayFn: Parser.prereqPatronToShort
 });
 const spellFilter = new Filter({
-	header: "Spell",
+	header: "法術",
 	items: ["eldritch blast", "hex/curse"],
 	displayFn: StrUtil.toTitleCase
 });
 const featureFilter = new Filter({
-	header: "Feature",
+	header: "能力",
 	displayFn: StrUtil.toTitleCase
 });
 const levelFilter = new Filter({
-	header: "Level"
+	header: "等級"
 });
 const prerequisiteFilter = new MultiFilter({name: "Prerequisite"}, pactFilter, patronFilter, spellFilter, levelFilter, featureFilter);
 let filterBox;

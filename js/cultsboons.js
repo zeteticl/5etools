@@ -23,7 +23,7 @@ async function onJsonLoad (data) {
 	});
 
 	const typeFilter = new Filter({
-		header: "Type",
+		header: "類型",
 		items: ["b", "c"],
 		displayFn: cultBoonTypeToFull
 	});

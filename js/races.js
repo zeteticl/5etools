@@ -62,10 +62,10 @@ function getSpeedRating (speed) {
 
 let list;
 const sourceFilter = getSourceFilter();
-const sizeFilter = new Filter({header: "Size", displayFn: Parser.sizeAbvToFull});
+const sizeFilter = new Filter({header: "體型", displayFn: Parser.sizeAbvToFull});
 const asiFilter = new Filter({
-	header: "Ability Bonus (Including Subrace)",
-	items: [
+	header: "屬性加值 (包括亞種)",
+/*	items: [
 		"Strength +2",
 		"Strength +1",
 		"Dexterity +2",
@@ -78,7 +78,7 @@ const asiFilter = new Filter({
 		"Wisdom +1",
 		"Charisma +2",
 		"Charisma +1"
-	]
+	]*/
 });
 let filterBox;
 async function onJsonLoad (data) {
@@ -88,9 +88,9 @@ async function onJsonLoad (data) {
 	});
 
 	const jsonRaces = EntryRenderer.race.mergeSubraces(data.race);
-	const speedFilter = new Filter({header: "Speed", items: ["Climb", "Fly", "Swim", "Walk (Fast)", "Walk", "Walk (Slow)"]});
+	const speedFilter = new Filter({header: "速度", items: ["Climb", "Fly", "Swim", "Walk (Fast)", "Walk", "Walk (Slow)"]});
 	const traitFilter = new Filter({
-		header: "Traits",
+		header: "特性",
 		items: [
 			"Amphibious",
 			"Armor Proficiency",
@@ -113,7 +113,7 @@ async function onJsonLoad (data) {
 		}
 	});
 	const languageFilter = new Filter({
-		header: "Languages",
+		header: "語言",
 		items: [
 			"Abyssal",
 			"Aquan",

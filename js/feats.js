@@ -18,8 +18,17 @@ async function onJsonLoad (data) {
 
 	const asiFilter = getAsiFilter();
 	const prereqFilter = new Filter({
-		header: "Prerequisite",
-		items: ["屬性值", "種族", "熟練", "施法"]
+		displayFn: function(tag){
+			switch(tag){
+				case "Ability": 	return "屬性值";
+				case "Race": 		return "種族";
+				case "Proficiency": return "熟練";
+				case "Spellcasting":return "施法";
+				default: return tag;
+			}
+		},
+		header: "先決條件",
+		items: ["Ability", "Race", "Proficiency", "Spellcasting"]
 	});
 	filterBox = await pInitFilterBox(
 		sourceFilter,

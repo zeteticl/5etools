@@ -1224,7 +1224,7 @@ Parser.alignmentAbvToFull = function (alignment) {
 			case "NX":
 				return "中立 (守序/混亂軸)";
 			case "NY":
-				return "中壢 (善良/邪惡軸)";
+				return "中立 (善良/邪惡軸)";
 			case "C":
 				return "混亂";
 			case "G":
@@ -1639,6 +1639,7 @@ Parser.ARMOR_ABV_TO_FULL = {
 	"m.": "medium",
 	"h.": "heavy"
 };
+
 
 SRC_CoS = "CoS";
 SRC_DMG = "DMG";
@@ -3467,7 +3468,7 @@ function defaultSourceSelFn (val) {
 
 function getAsiFilter (options) {
 	const baseOptions = {
-		header: "Ability Bonus",
+		header: "屬性加值",
 		items: [
 			"str",
 			"dex",
