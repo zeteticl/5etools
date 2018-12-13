@@ -301,7 +301,7 @@ class HashLoad {
 					.append(`<strong>最低屬性值:</strong> <span>${[orPart, basePart].filter(Boolean).join("; ")}</span>`);
 			}
 			if (mc.proficienciesGained) {
-				$(`#multiclassing_profs`).html(`<div ${mc.requirements ? `style="margin-top: 1.7em;"` : ""}>當你不是在等級一時獲得新職業的等級，你只會獲得該職業一部分的起始熟練項目。</div>`)
+				$(`#multiclassing_profs`).html(`<div ${mc.requirements ? `style="margin-top: 1.7em;"` : ""}>當你不是以起始等級獲得新職業的等級，你只會獲得該職業一部分的起始熟練項目。</div>`)
 				const $mcProfArmor = $(`#multiclassing_profs_armor`).toggle(mc.proficienciesGained.armor != null).find("span").html(mc.proficienciesGained.armor ? renderArmorProfs(mc.proficienciesGained.armor) : "");
 				const $mcProfWeapons = $(`#multiclassing_profs_weapons`).toggle(mc.proficienciesGained.weapons != null).find("span").html(mc.proficienciesGained.weapons ? renderWeaponsProfs(mc.proficienciesGained.weapons) : "");
 				const $mcProfTools = $(`#multiclassing_profs_tools`).toggle(mc.proficienciesGained.tools != null).find("span").html(mc.proficienciesGained.tools ? renderToolsProfs(mc.proficienciesGained.tools) : "");
