@@ -1,13 +1,13 @@
 {
 	"background": [
 		{
-			"name": "Acolyte",
+			"name": "侍僧",
 			"source": "PHB",
 			"page": 127,
 			"skillProficiencies": [
 				{
-					"insight": true,
-					"religion": true
+					"察言觀色": true,
+					"宗教": true
 				}
 			],
 			"entries": [
@@ -17,23 +17,23 @@
 					"items": [
 						{
 							"type": "item",
-							"name": "Skill Proficiencies",
+							"name": "技能熟練",
 							"entry": "{@skill Insight}, {@skill Religion}"
 						},
 						{
 							"type": "item",
-							"name": "Languages",
-							"entry": "Two of your choice"
+							"name": "語言",
+							"entry": "自選兩種"
 						},
 						{
 							"type": "item",
-							"name": "Equipment",
-							"entry": "A {@item holy symbol|phb} (a gift to you when you entered the priesthood), a prayer book or prayer wheel, 5 sticks of incense, vestments, a set of {@item common clothes|phb}, and a belt common {@item pouch|phb} containing 15 gp"
+							"name": "裝備",
+							"entry": "一個{@item holy symbol|phb}（一份當你成為教士時獲得的禮物）、一本禱經或轉經輪、5支焚香、祭祀服、一套{@item common clothes|phb}、和一個裝有15金幣的尋常{@item pouch|phb}"
 						}
 					]
 				},
 				{
-					"name": "Feature: Shelter of the Faithful",
+					"name": "特性：信徒之家",
 					"type": "entries",
 					"entries": [
 						"As an acolyte, you command the respect of those who share your faith, and you can perform the religious ceremonies of your deity. You and your adventuring companions can expect to receive free healing and care at a temple, shrine, or other established presence of your faith, though you must provide any material components needed for spells. Those who share your religion will support you (but only you) at a modest lifestyle.",
@@ -44,7 +44,7 @@
 					}
 				},
 				{
-					"name": "Suggested Characteristics",
+					"name": "建議特質",
 					"type": "entries",
 					"entries": [
 						"Acolytes are shaped by their experience in temples or other religious communities. Their study of the history and tenets of their faith and their relationships to temples, shrines, or hierarchies affect their mannerisms and ideals. Their flaws might be some hidden hypocrisy or heretical idea, or an ideal or bond taken to an extreme.",
@@ -52,7 +52,7 @@
 							"type": "table",
 							"colLabels": [
 								"d8",
-								"Personality Trait"
+								"個性"
 							],
 							"colStyles": [
 								"col-1 text-align-center",
@@ -97,7 +97,7 @@
 							"type": "table",
 							"colLabels": [
 								"d6",
-								"Ideal"
+								"理念"
 							],
 							"colStyles": [
 								"col-1 text-align-center",
@@ -134,7 +134,7 @@
 							"type": "table",
 							"colLabels": [
 								"d6",
-								"Bond"
+								"羈絆"
 							],
 							"colStyles": [
 								"col-1 text-align-center",
@@ -171,7 +171,7 @@
 							"type": "table",
 							"colLabels": [
 								"d6",
-								"Flaw"
+								"缺點"
 							],
 							"colStyles": [
 								"col-1 text-align-center",
@@ -180,27 +180,27 @@
 							"rows": [
 								[
 									"1",
-									"I judge others harshly, and myself even more severely."
+									"我會嚴厲批判他人，並更嚴格地律己。"
 								],
 								[
 									"2",
-									"I put too much trust in those who wield power within my temple's hierarchy."
+									"我過分地信任我教的掌權者。"
 								],
 								[
 									"3",
-									"My piety sometimes leads me to blindly trust those that profess faith in my god."
+									"我的虔誠心有時會讓我盲目地信任那些聲稱歸信我教的人。"
 								],
 								[
 									"4",
-									"I am inflexible in my thinking."
+									"我固執己見。"
 								],
 								[
 									"5",
-									"I am suspicious of strangers and expect the worst of them."
+									"我提防及懷疑陌生人，並預期最糟糕的情況。"
 								],
 								[
 									"6",
-									"Once I pick a goal, I become obsessed with it to the detriment of everything else in my life."
+									"一旦我選定了目標，我就會深陷其中，並拋棄我生命中的其他一切。"
 								]
 							]
 						}
