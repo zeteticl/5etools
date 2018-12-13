@@ -25,7 +25,7 @@ const STR_PROF_NONE = "none";
 const STR_SOURCES_OFFICIAL = "0";
 const STR_SOURCES_MIXED = "1";
 const STR_SOURCES_ALL = "2";
-const STRS_SOURCE_STATES = ["Official Sources", "Most Recent", "All Sources"];
+const STRS_SOURCE_STATES = ["官方資源", "最近使用", "所有資源"];
 
 const ATB_DATA_FEATURE_LINK = "data-flink";
 const ATB_DATA_FEATURE_ID = "data-flink-id";
@@ -59,7 +59,7 @@ class ClassDisplay {
 }
 ClassDisplay.curClass = null;
 
-class FeatureTable {
+Table {
 	/**
 	 * Get the value used to identify this subclass in the feature table
 	 *
@@ -493,8 +493,8 @@ class HashLoad {
 		HashLoad.subclassPillWrapper.find("span").remove();
 
 		// show/hide class features pill
-		HashLoad.makeGenericTogglePill("Class Features", CLSS_CLASS_FEATURES_ACTIVE, ID_CLASS_FEATURES_TOGGLE, HASH_HIDE_FEATURES, true, "Toggle class features");
-		if (ClassDisplay.curClass.fluff) HashLoad.makeGenericTogglePill("Info", CLSS_FLUFF_ACTIVE, ID_FLUFF_TOGGLE, HASH_SHOW_FLUFF, false, "Toggle class detail information");
+		HashLoad.makeGenericTogglePill("職業能力", CLSS_CLASS_FEATURES_ACTIVE, ID_CLASS_FEATURES_TOGGLE, HASH_HIDE_FEATURES, true, "開關職業能力");
+		if (ClassDisplay.curClass.fluff) HashLoad.makeGenericTogglePill("情報", CLSS_FLUFF_ACTIVE, ID_FLUFF_TOGGLE, HASH_SHOW_FLUFF, false, "開關職業詳細情報");
 
 		// show/hide UA/other sources
 		HashLoad.makeSourceCyclePill();
@@ -539,7 +539,7 @@ class HashLoad {
 	}
 
 	static makeSourceCyclePill () {
-		const $pill = $(`<span title="Cycle through source types" id="${ID_OTHER_SOURCES_TOGGLE}" data-state="0" style="min-width: 8em;" class="sc_pill"><span>${
+		const $pill = $(`<span title="切換資源類型" id="${ID_OTHER_SOURCES_TOGGLE}" data-state="0" style="min-width: 8em;" class="sc_pill"><span>${
 			STRS_SOURCE_STATES[0]}</span></span>`);
 		HashLoad.subclassPillWrapper.append($pill);
 		$pill.click(() => {
