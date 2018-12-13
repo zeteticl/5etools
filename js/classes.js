@@ -278,7 +278,7 @@ class HashLoad {
 
 		function getSkillProfString (skills) {
 			const numString = Parser.numberToString(skills.choose);
-			return skills.from.length === 18 ? `Choose any ${numString}.` : `Choose ${numString} from ${skills.from.map(it => EntryRenderer.getDefaultRenderer().renderEntry(`{@skill ${it}}`)).joinConjunct(", ", " and ")}.`
+			return skills.from.length === 18 ? `選擇任意${numString}個技能。` : `從 ${skills.from.map(it => EntryRenderer.getDefaultRenderer().renderEntry(`{@skill ${it}}`)).joinConjunct(", ", " and ")} 中選擇${numString}個。`
 		}
 
 		// starting equipment
