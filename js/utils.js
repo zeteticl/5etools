@@ -532,7 +532,7 @@ Parser.getAbilityModifier = function (abilityScore) {
 Parser.getSpeedString = (it) => {
 	function procSpeed (propName) {
 		function addSpeed (s) {
-			stack.push(`${propName === "walk" ? "" : `${propName} `}${getVal(s)}ft.${getCond(s)}`);
+			stack.push(`${propName === "walk" ? "" : `${Parser.translateKeyToDisplay(propName)} `}${getVal(s)}呎${getCond(s)}`);
 		}
 
 		if (it.speed[propName] || propName === "walk") addSpeed(it.speed[propName] || 0);
@@ -1320,6 +1320,7 @@ Parser.keyToDisplay["drow"]  = "卓爾";
 Parser.keyToDisplay["high"]  = "高等";
 //Speed
 Parser.keyToDisplay["climb"]  		= "攀爬";
+Parser.keyToDisplay["burrow"]  		= "掘地";
 Parser.keyToDisplay["fly"]   		= "飛行";
 Parser.keyToDisplay["swim"]  		= "游泳";
 Parser.keyToDisplay["walk"]  		= "步行";
