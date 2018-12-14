@@ -265,7 +265,7 @@ class HashLoad {
 
 		// starting proficiencies
 		const renderArmorProfs = (armorProfs) => armorProfs.map(a => a === "light" || a === "medium" || a === "heavy" ? Parser.translateKeyToDisplay(a) + "甲" : Parser.translateKeyToDisplay(a)).join(", ");
-		const renderWeaponsProfs = (weaponProfs) => weaponProfs.map(w => w === "簡易" || w === "軍用" ? w + "武器" : w).join(", ");
+		const renderWeaponsProfs = (weaponProfs) => weaponProfs.map(w => w === "simple" || w === "martial" ? Parser.translateKeyToDisplay(w) + "武器" : Parser.translateKeyToDisplay(w)).join(", ");
 		const renderToolsProfs = (toolProfs) => toolProfs.join(", ");
 		const renderSkillsProfs = (skillProfs) => getSkillProfString(skillProfs);
 
