@@ -2779,7 +2779,7 @@ EntryRenderer.item = {
 	getTypeRarityAndAttunementText (item) {
 		return [
 			item.typeText === "Other" ? "" : item.typeText.trim(),
-			[item.tier, (item.rarity && EntryRenderer.item.doRenderRarity(item.rarity) ? item.rarity : "")].map(it => (it || "").trim()).filter(it => it).join(", "),
+			[item.tier, (item.rarity && EntryRenderer.item.doRenderRarity(item.rarity) ? Parser.translateItemKeyToDisplay(item.rarity) : "")].map(it => (it || "").trim()).filter(it => it).join(", "),
 			(item.reqAttune || "").trim()
 		];
 	},
@@ -2795,7 +2795,7 @@ EntryRenderer.item = {
 		renderStack.push(`<tr><td class="typerarityattunement" colspan="6">${typeRarityAttunement}</td>`);
 
 		const [damage, damageType, propertiesTxt] = EntryRenderer.item.getDamageAndPropertiesText(item);
-		renderStack.push(`<tr><td colspan="2">${item.value ? item.value + (item.weight ? ", " : "") : ""}${Parser.itemWeightToFull(item)}</td><td class="damageproperties" colspan="4">${damage} ${damageType} ${propertiesTxt}</tr>`);
+		renderStack.push(`<tr><td colspan="2">${item.value ? Parser.itemValueToDisplay(item.value) + (item.weight ? ", " : "") : ""}${Parser.itemWeightToFull(item)}</td><td class="damageproperties" colspan="4">${damage} ${damageType} ${propertiesTxt}</tr>`);
 
 		if (item.entries && item.entries.length) {
 			renderStack.push(EntryRenderer.utils.getDividerTr());
@@ -3036,24 +3036,24 @@ EntryRenderer.item = {
 		const typeListText = [];
 		let showingBase = false;
 		if (item.wondrous) {
-			type.push("Wondrous Item");
-			filterType.push("Wondrous Item");
-			typeListText.push("Wondrous Item");
+			type.push("奇物");
+			filterType.push("奇物");
+			typeListText.push("奇物");
 		}
 		if (item.technology) {
-			type.push(item.technology);
-			filterType.push(item.technology);
-			typeListText.push(item.technology);
+			type.push(Parser.translateItemKeyToDisplay(item.technology));
+			filterType.push(Parser.translateItemKeyToDisplay(item.technology));
+			typeListText.push(Parser.translateItemKeyToDisplay(item.technology));
 		}
 		if (item.age) {
-			type.push(item.age);
-			filterType.push(item.age);
-			typeListText.push(item.age);
+			type.push(Parser.translateItemKeyToDisplay(item.age));
+			filterType.push(Parser.translateItemKeyToDisplay(item.age));
+			typeListText.push(Parser.translateItemKeyToDisplay(item.age));
 		}
 		if (item.weaponCategory) {
-			type.push(`${item.weaponCategory} Weapon${item.baseItem ? ` (${EntryRenderer.getDefaultRenderer().renderEntry(`{@item ${item.baseItem}`)})` : ""}`);
-			filterType.push(`${item.weaponCategory} Weapon`);
-			typeListText.push(`${item.weaponCategory} Weapon`);
+			type.push(`${Parser.translateKeyToDisplay(item.weaponCategory)}武器${item.baseItem ? ` (${EntryRenderer.getDefaultRenderer().renderEntry(`{@item ${item.baseItem}`)})` : ""}`);
+			filterType.push(`${Parser.translateKeyToDisplay(item.weaponCategory)}武器`);
+			typeListText.push(`${Parser.translateKeyToDisplay(item.weaponCategory)}武器`);
 			showingBase = true;
 		}
 		if (item.type) {
@@ -3065,9 +3065,9 @@ EntryRenderer.item = {
 			typeListText.push(abv);
 		}
 		if (item.poison) {
-			type.push("Poison");
-			filterType.push("Poison");
-			typeListText.push("Poison");
+			type.push("毒藥");
+			filterType.push("毒藥");
+			typeListText.push("毒藥");
 		}
 		item.procType = filterType;
 		item.typeText = type.join(", ");

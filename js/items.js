@@ -48,24 +48,39 @@ let mundanelist;
 let magiclist;
 const sourceFilter = getSourceFilter();
 const DEFAULT_HIDDEN_TYPES = new Set(["$", "Futuristic", "Modern", "Renaissance"]);
-const typeFilter = new Filter({header: "Type", deselFn: (it) => DEFAULT_HIDDEN_TYPES.has(it)});
+const typeFilter = new Filter({header: "類型", deselFn: (it) => DEFAULT_HIDDEN_TYPES.has(it)});
 const tierFilter = new Filter({header: "Tier", items: ["None", "Minor", "Major"]});
-const propertyFilter = new Filter({header: "Property", displayFn: StrUtil.uppercaseFirst});
-const costFilter = new RangeFilter({header: "Cost", min: 0, max: 100, allowGreater: true, suffix: "gp"});
-const attachedSpellsFilter = new Filter({header: "Attached Spells", displayFn: (it) => it.split("|")[0].toTitleCase()});
+const propertyFilter = new Filter({header: "物品屬性", displayFn: StrUtil.uppercaseFirst});
+const costFilter = new RangeFilter({header: "價值", min: 0, max: 100, allowGreater: true, suffix: "金幣"});
+const attachedSpellsFilter = new Filter({header: "附加法術", displayFn: (it) => it.split("|")[0].toTitleCase()});
 let filterBox;
 async function populateTablesAndFilters (data) {
 	const rarityFilter = new Filter({
-		header: "Rarity",
-		items: ["None", "Common", "Uncommon", "Rare", "Very Rare", "Legendary", "Artifact", "Unknown", "Other"]
+		header: "稀有度",
+		items: ["None", "Common", "Uncommon", "Rare", "Very Rare", "Legendary", "Artifact", "Unknown", "Other"],
+		displayFn: Parser.translateItemKeyToDisplay
 	});
-	const attunementFilter = new Filter({header: "Attunement", items: ["Yes", "By...", "Optional", "No"]});
+	const attunementFilter = new Filter({header: "同調", items: ["Yes", "By...", "Optional", "No"], displayFn: function(str){
+			switch(str){
+			case "Yes": return "需要";
+			case "By...": return "限定...";
+			case "Optional": return "可選";
+			case "No": return "不須";
+			default: return str;
+		};}});
 	const categoryFilter = new Filter({
 		header: "Category",
 		items: ["Basic", "Generic Variant", "Specific Variant", "Other"],
 		deselFn: (it) => it === "Specific Variant"
 	});
-	const miscFilter = new Filter({header: "Miscellaneous", items: ["Charges", "Cursed", "Magic", "Mundane", "Sentient"]});
+	const miscFilter = new Filter({header: "雜項", items: ["Charges", "Cursed", "Magic", "Mundane", "Sentient"], displayFn:function(str){switch(str){
+		case "Magic": return "魔法物品";
+		case "Mundane": return "尋常物品";
+		case "Cursed": return "詛咒";
+		case "Charges": return "充能";
+		case "Sentient": return "智能";
+		default: return str;
+		}}});
 
 	filterBox = await pInitFilterBox(sourceFilter, typeFilter, tierFilter, rarityFilter, propertyFilter, attunementFilter, categoryFilter, costFilter, miscFilter, attachedSpellsFilter);
 
@@ -87,11 +102,11 @@ async function populateTablesAndFilters (data) {
 	const mundaneWrapper = $(`.ele-mundane`);
 	const magicWrapper = $(`.ele-magic`);
 	$(`.side-label--mundane`).click(() => {
-		filterBox.setFromValues({"Miscellaneous": ["mundane"]});
+		filterBox.setFromValues({"雜項": ["mundane"]});
 		handleFilterChange();
 	});
 	$(`.side-label--magic`).click(() => {
-		filterBox.setFromValues({"Miscellaneous": ["magic"]});
+		filterBox.setFromValues({"雜項": ["magic"]});
 		handleFilterChange();
 	});
 	mundanelist.__listVisible = true;
@@ -230,14 +245,13 @@ function addItems (data) {
 		curitem._fMisc.push(isMundane ? "Mundane" : "Magic");
 		if (curitem.charges) curitem._fMisc.push("Charges");
 		curitem._fCost = Parser.coinValueToNumber(curitem.value);
-
 		if (isMundane) {
 			liList["mundane"] += `
 			<li class="row" ${FLTR_ID}=${itI} onclick="ListUtil.toggleSelected(event, this)" oncontextmenu="ListUtil.openContextMenu(event, this)">
 				<a id="${itI}" href="#${UrlUtil.autoEncodeHash(curitem)}" title="${name}">
 					<span class="name col-3">${name}</span>
 					<span class="type col-4-3">${curitem.typeListText}</span>
-					<span class="col-1-5 text-align-center">${curitem.value ? curitem.value.replace(/ +/g, "\u00A0") : "\u2014"}</span>
+					<span class="col-1-5 text-align-center">${curitem.value ? Parser.itemValueToDisplay(curitem.value.replace(/ +/g, "")) : "\u2014"}</span>
 					<span class="col-1-5 text-align-center">${Parser.itemWeightToFull(curitem) || "\u2014"}</span>
 					<span class="source col-1-7 ${Parser.sourceJsonToColor(curitem.source)}" title="${sourceFull}">${sourceAbv}</span>
 					<span class="cost hidden">${curitem._fCost}</span>
@@ -253,7 +267,7 @@ function addItems (data) {
 					<span class="name col-3-5">${name}</span>
 					<span class="type col-3-3">${curitem.typeListText}</span>
 					<span class="col-1-5 text-align-center">${Parser.itemWeightToFull(curitem) || "\u2014"}</span>
-					<span class="rarity col-2">${rarity}</span>
+					<span class="rarity col-2">${Parser.translateItemKeyToDisplay(rarity)}</span>
 					<span class="source col-1-7 ${Parser.sourceJsonToColor(curitem.source)}" title="${sourceFull}">${sourceAbv}</span>
 					<span class="weight hidden">${Parser.weightValueToNumber(curitem.weight)}</span>
 					
@@ -274,8 +288,8 @@ function addItems (data) {
 	$("ul.list.mundane").append(liList.mundane);
 	$("ul.list.magic").append(liList.magic);
 	// populate table labels
-	$(`h3.ele-mundane span.side-label`).text("Mundane");
-	$(`h3.ele-magic span.side-label`).text("Magic");
+	$(`h3.ele-mundane span.side-label`).text("尋常物品");
+	$(`h3.ele-magic span.side-label`).text("魔法物品");
 	// sort filters
 	sourceFilter.items.sort(SortUtil.ascSort);
 	typeFilter.items.sort(SortUtil.ascSort);
@@ -339,8 +353,8 @@ function onSublistChange () {
 		if (item.weight) weight += Number(item.weight) * count;
 		if (item.value) value += Parser.coinValueToNumber(item.value) * count;
 	});
-	totalWeight.text(`${weight.toLocaleString()} lb${weight > 1 ? "s" : ""}.`);
-	totalValue.text(`${value.toLocaleString()}gp`)
+	totalWeight.text(`${weight.toLocaleString()} 磅${weight > 1 ? "" : ""}`);
+	totalValue.text(`${value.toLocaleString()} 金幣`)
 }
 
 function getSublistItem (item, pinId, addCount) {
@@ -348,8 +362,8 @@ function getSublistItem (item, pinId, addCount) {
 		<li class="row" ${FLTR_ID}="${pinId}" oncontextmenu="ListUtil.openSubContextMenu(event, this)">
 			<a href="#${UrlUtil.autoEncodeHash(item)}" title="${item.name}">
 				<span class="name col-6">${item.name}</span>
-				<span class="weight text-align-center col-2">${item.weight ? `${item.weight} lb${item.weight > 1 ? "s" : ""}.` : "\u2014"}</span>
-				<span class="price text-align-center col-2">${item.value ? item.value.replace(/ +/g, "\u00A0") : "\u2014"}</span>
+				<span class="weight text-align-center col-2">${item.weight ? `${item.weight}磅${item.weight > 1 ? "" : ""}` : "\u2014"}</span>
+				<span class="price text-align-center col-2">${item.value ? Parser.itemValueToDisplay(item.value) : "\u2014"}</span>
 				<span class="count text-align-center col-2">${addCount || 1}</span>
 				<span class="cost hidden">${item._fCost}</span>
 				<span class="id hidden">${pinId}</span>
@@ -396,8 +410,8 @@ function loadhash (id) {
 	const addSourceText = item.additionalSources ? `. Additional information from ${item.additionalSources.map(as => `<i>${Parser.sourceJsonToFull(as.source)}</i>, page ${as.page}`).join("; ")}.` : null;
 	$content.find("td#source span").html(`<i>${sourceFull}</i>${item.page ? `, page ${item.page}${addSourceText || ""}` : ""}`);
 
-	$content.find("td span#value").html(item.value ? item.value + (item.weight ? ", " : "") : "");
-	$content.find("td span#weight").html(item.weight ? item.weight + (Number(item.weight) === 1 ? " lb." : " lbs.") + (item.weightNote ? ` ${item.weightNote}` : "") : "");
+	$content.find("td span#value").html(item.value ? Parser.itemValueToDisplay(item.value) + (item.weight ? ", " : "") : "");
+	$content.find("td span#weight").html(item.weight ? item.weight + (Number(item.weight) === 1 ? "磅" : "磅") + (item.weightNote ? ` ${item.weightNote}` : "") : "");
 
 	const [damage, damageType, propertiesTxt] = EntryRenderer.item.getDamageAndPropertiesText(item);
 	$content.find("span#damage").html(damage);

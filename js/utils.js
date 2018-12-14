@@ -762,7 +762,7 @@ Parser.itemTypeToAbv = function (type) {
 };
 
 Parser.itemWeightToFull = function (item) {
-	return item.weight ? item.weight + (Number(item.weight) === 1 ? " lb." : " lbs.") + (item.weightNote ? ` ${item.weightNote}` : "") : "";
+	return item.weight ? item.weight + (Number(item.weight) === 1 ? "磅" : "磅") + (item.weightNote ? ` ${item.weightNote}` : "") : "";
 };
 
 Parser._coinValueToNumberMultipliers = {
@@ -1273,6 +1273,7 @@ Parser.alignmentListToFull = function (alignList) {
 // Haz code
 Parser.keyToDisplay = {};
 Parser.languageKeyToDisplay = {};
+Parser.itemKeyToDisplay = {};
 
 Parser.translateKeyInMapToDisplay = function(map, key){
 	if(typeof key === "string" || key instanceof String){
@@ -1286,6 +1287,9 @@ Parser.translateKeyToDisplay = function(common_key){
 }
 Parser.translateLangKeyToDisplay = function(lang_key){
 	return Parser.translateKeyInMapToDisplay(Parser.languageKeyToDisplay, lang_key);
+}
+Parser.translateItemKeyToDisplay = function(item_key){
+	return Parser.translateKeyInMapToDisplay(Parser.itemKeyToDisplay, item_key);
 }
 
 // Attribute
@@ -1349,6 +1353,46 @@ Parser.keyToDisplay["shields"]  = "盾牌";
 //Weapon
 Parser.keyToDisplay["simple"]  = "簡易";
 Parser.keyToDisplay["martial"] = "軍用";
+//Tools
+Parser.keyToDisplay["alchemist's supplies"] 	= "煉金術士設備";
+Parser.keyToDisplay["artisan's tools"]  		= "工匠工具";
+Parser.keyToDisplay["brewer's supplies"]  		= "釀酒設備";
+Parser.keyToDisplay["calligrapher's supplies"]  = "書寫設備";
+Parser.keyToDisplay["cartographer's tools"]  	= "制圖工具";
+Parser.keyToDisplay["cook's utensils"]  = "廚師器具";
+Parser.keyToDisplay["disguise kit"]  	= "偽裝工具組";
+Parser.keyToDisplay["forgery kit"]  	= "文書偽造工具組";
+Parser.keyToDisplay["gaming set"]  		= "賭博套組";
+Parser.keyToDisplay["herbalism kit"]  	= "草藥工具組";
+Parser.keyToDisplay["musical instrument"] = "樂器";
+Parser.keyToDisplay["navigator's tools"]  = "領航工具";
+Parser.keyToDisplay["poisoner's kit"]  = "製毒工具組";
+Parser.keyToDisplay["thieves' tools"]  = "盜賊工具";
+Parser.keyToDisplay["tinker's tools"]  = "修補工具";
+Parser.keyToDisplay["vehicles (air)"]  = "載具(空中)";
+Parser.keyToDisplay["vehicles (land)"] = "載具(陸上)";
+Parser.keyToDisplay["vehicles (sea)"]  = "載具(海洋)";
+Parser.keyToDisplay["vehicles (water)"]= "載具(水上)";
+
+//Item
+Parser.itemKeyToDisplay["none"] 	= "無";
+Parser.itemKeyToDisplay["common"] 	= "常見";
+Parser.itemKeyToDisplay["uncommon"] = "非常見";
+Parser.itemKeyToDisplay["rare"] 	= "珍稀";
+Parser.itemKeyToDisplay["very rare"]= "非常珍稀";
+Parser.itemKeyToDisplay["legendary"]= "傳說";
+Parser.itemKeyToDisplay["artifact"] = "神器";
+Parser.itemKeyToDisplay["unknown"] 	= "不明";
+Parser.itemKeyToDisplay["other"] 	= "其他";
+Parser.itemKeyToDisplay["varies"] 	= "可變";
+//Technology
+Parser.itemKeyToDisplay["staff"] 	= "法杖";
+Parser.itemKeyToDisplay["firearm"] 	= "槍械";
+//Age
+Parser.itemKeyToDisplay["renaissance"]= "文藝復興";
+Parser.itemKeyToDisplay["modern"] 	  = "現代";
+Parser.itemKeyToDisplay["futuristic"] = "未來";
+
 //Language
 Parser.languageKeyToDisplay["any"] 		= "任意";
 Parser.languageKeyToDisplay["abyssal"] 	= "下界語";
@@ -1389,6 +1433,13 @@ Parser.SubraceToDisplay = function(sub_race){
 Parser.SpeedToDisplay = function(speed){
 	return Parser.translateKeyToDisplay(speed);
 }
+
+Parser.itemValueToDisplay = function(value){
+	if(!value) return value;
+	if(value=="Varies") return "不定";
+	return value.replace(/ *([pgesc])p/g, '$1幣').replace(/p(幣)/g, '鉑金$1').replace(/g(幣)/g, '金$1').replace(/e(幣)/g, '淡金$1').replace(/s(幣)/g, '銀$1').replace(/c(幣)/g, '銅$1');
+}
+
 
 // Haz code
 //==================
@@ -2066,12 +2117,12 @@ Parser.SOURCE_JSON_TO_ABV[SRC_STREAM] = "Stream";
 Parser.SOURCE_JSON_TO_ABV[SRC_TWITTER] = "Twitter";
 
 Parser.ITEM_TYPE_JSON_TO_ABV = {
-	"A": "Ammunition",
-	"AF": "Ammunition",
-	"AT": "Artisan Tool",
+	"A": "彈藥",
+	"AF": "彈藥",
+	"AT": "工匠工具",
 	"EM": "Eldritch Machine",
-	"EXP": "Explosive",
-	"G": "Adventuring Gear",
+	"EXP": "爆裂物",
+	"G": "冒險裝備",
 	"GS": "遊戲套組",
 	"HA": "重甲",
 	"INS": "樂器",
@@ -2079,7 +2130,7 @@ Parser.ITEM_TYPE_JSON_TO_ABV = {
 	"M": "近戰武器",
 	"MA": "中甲",
 	"MNT": "坐騎",
-	"GV": "Generic Variant",
+	"GV": "通用變體",
 	"P": "藥水",
 	"R": "遠程武器",
 	"RD": "權杖",
@@ -2089,11 +2140,11 @@ Parser.ITEM_TYPE_JSON_TO_ABV = {
 	"SCF": "法器",
 	"OTH": "其他",
 	"T": "工具",
-	"TAH": "Tack and Harness",
-	"TG": "Trade Good",
-	"VEH": "Vehicle",
-	"SHP": "Vehicle",
-	"WD": "Wand"
+	"TAH": "鞍轡和馬具",
+	"TG": "貿易商品",
+	"VEH": "載具",
+	"SHP": "載具",
+	"WD": "魔杖"
 };
 
 Parser.DMGTYPE_JSON_TO_FULL = {
@@ -3005,7 +3056,7 @@ ListUtil = {
 				if (!ListUtil.isSublisted(History.lastLoadedId)) ListUtil.pDoSublistAdd(History.lastLoadedId, true);
 				else ListUtil.pDoSublistRemove(History.lastLoadedId);
 			})
-			.attr("title", "Pin (Toggle)");
+			.attr("title", "釘選(開/關)");
 	},
 
 	_genericAddButtonHandler (evt, options = {}) {
@@ -3310,8 +3361,8 @@ ListUtil = {
 	},
 
 	initGenericPinnable: () => {
-		ListUtil.initContextMenu(ListUtil.handleGenericContextMenuClick, "Popout", "Pin");
-		ListUtil.initSubContextMenu(ListUtil.handleGenericSubContextMenuClick, "Popout", "Unpin", "Clear Pins", null, "Feeling Lucky?", null, "Download JSON");
+		ListUtil.initContextMenu(ListUtil.handleGenericContextMenuClick, "彈出視窗", "釘選");
+		ListUtil.initSubContextMenu(ListUtil.handleGenericSubContextMenuClick, "彈出視窗", "解除釘選", "清除釘選", null, "試試手氣？", null, "Download JSON");
 	},
 
 	handleGenericContextMenuClick: (evt, ele, $invokedOn, $selectedMenu) => {
@@ -4128,13 +4179,13 @@ DataUtil = {
 function addListShowHide () {
 	const toInjectShow = `
 		<div class="col-12" id="showsearch">
-			<button class="btn btn-block btn-default btn-xs" type="button">Show Search</button>
+			<button class="btn btn-block btn-default btn-xs" type="button">顯示搜尋視窗</button>
 			<br>
 		</div>
 	`;
 
 	const toInjectHide = `
-		<button class="btn btn-default" id="hidesearch">Hide</button>
+		<button class="btn btn-default" id="hidesearch">隱藏</button>
 	`;
 
 	$(`#filter-search-input-group`).find(`#reset`).before(toInjectHide);
@@ -4214,7 +4265,7 @@ RollerUtil = {
 	addListRollButton: () => {
 		const listWrapper = $("#listcontainer");
 
-		const $btnRoll = $(`<button class="btn btn-default" id="feelinglucky" title="Feeling Lucky?"><span class="glyphicon glyphicon-random"></span></button>`);
+		const $btnRoll = $(`<button class="btn btn-default" id="feelinglucky" title="試試手氣？"><span class="glyphicon glyphicon-random"></span></button>`);
 		$btnRoll.on("click", () => {
 			if (listWrapper.data("lists")) {
 				const allLists = listWrapper.data("lists").filter(l => l.visibleItems.length);

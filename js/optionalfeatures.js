@@ -255,7 +255,7 @@ function loadhash (jsonIndex) {
 			if (i > 0) $wrpOptFeatType.append("/");
 			$(`<span class="roller">${Parser.optFeatureTypeToFull(ft).substring(commonPrefix.length)}</span>`)
 				.click(() => {
-					filterBox.setFromValues({"Feature Type": [ft.toLowerCase()]});
+					filterBox.setFromValues({"能力類型": [ft.toLowerCase()]});
 					handleFilterChange();
 				})
 				.appendTo($wrpOptFeatType);
@@ -263,7 +263,7 @@ function loadhash (jsonIndex) {
 	} else {
 		$(`<span class="roller">${Parser.optFeatureTypeToFull(it.featureType)}</span>`)
 			.click(() => {
-				filterBox.setFromValues({"Feature Type": [it.featureType.toLowerCase()]});
+				filterBox.setFromValues({"能力類型": [it.featureType.toLowerCase()]});
 				handleFilterChange();
 			})
 			.appendTo($wrpOptFeatType);

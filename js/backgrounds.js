@@ -175,13 +175,13 @@ function loadhash (id) {
 	}
 
 	const traitTab = EntryRenderer.utils.tabButton(
-		"Traits",
+		"特性",
 		() => {},
 		buildStatsTab
 	);
 
 	const infoTab = EntryRenderer.utils.tabButton(
-		"Info",
+		"情報",
 		() => {},
 		() => {
 			function get$Tr () {
