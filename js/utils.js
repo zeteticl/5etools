@@ -1271,55 +1271,65 @@ Parser.alignmentListToFull = function (alignList) {
 
 //==================
 // Haz code
+Parser.keyToDisplay = {};
+Parser.translateKeyToDisplay = function(input_str){
+	let lower_input_str = input_str.toLowerCase();
+	if(Parser.keyToDisplay[lower_input_str]!=null)	return Parser.keyToDisplay[lower_input_str];
+	else											return input_str;
+}
+// Attribute
+Parser.keyToDisplay["str"] = "力量";
+Parser.keyToDisplay["dex"] = "敏捷";
+Parser.keyToDisplay["con"] = "體質";
+Parser.keyToDisplay["int"] = "智力";
+Parser.keyToDisplay["wis"] = "睿知";
+Parser.keyToDisplay["cha"] = "魅力";
+//Armor
+Parser.keyToDisplay["light"]  = "輕";
+Parser.keyToDisplay["medium"] = "中";
+Parser.keyToDisplay["heavy"]  = "重";
+//Race
+Parser.keyToDisplay["dragonborn"]  	= "龍裔";
+Parser.keyToDisplay["dwarf"]  		= "矮人";
+Parser.keyToDisplay["elf"]  		= "精靈";
+Parser.keyToDisplay["gnome"]  		= "地侏";
+Parser.keyToDisplay["half-elf"]  	= "半精靈";
+Parser.keyToDisplay["half-orc"]  	= "半獸人";
+Parser.keyToDisplay["halfling"]  	= "半身人";
+Parser.keyToDisplay["human"]  		= "人類";
+Parser.keyToDisplay["tiefling"]  	= "提夫林";
+Parser.keyToDisplay["vampire (ixalan)"]  = "吸血鬼(依夏蘭)";
+Parser.keyToDisplay["small race"]  	= "小體型種族";
+//Subrace
+Parser.keyToDisplay["forest"]  = "林";
+Parser.keyToDisplay["rock"]  = "岩";
+Parser.keyToDisplay["deep"]  = "地底";
+Parser.keyToDisplay["wood"]  = "木";
+Parser.keyToDisplay["drow"]  = "卓爾";
+Parser.keyToDisplay["high"]  = "高等";
+//Speed
+Parser.keyToDisplay["climb"]  		= "攀爬";
+Parser.keyToDisplay["fly"]   		= "飛行";
+Parser.keyToDisplay["swim"]  		= "游泳";
+Parser.keyToDisplay["walk"]  		= "步行";
+Parser.keyToDisplay["walk (fast)"] 	= "步行(快)";
+Parser.keyToDisplay["walk (slow)"]  = "步行(慢)";
+
 Parser.AtrAbvToDisplay = function(atr_abv){
-	atr_abv = atr_abv.toLowerCase();
-	switch(atr_abv){
-		case "str": return "力量";
-		case "dex": return "敏捷";
-		case "con": return "體質";
-		case "int": return "智力";
-		case "wis": return "睿知";
-		case "cha": return "魅力";
-		default: 	return atr_abv;
-	}
+	return Parser.translateKeyToDisplay(atr_abv);
 }
 Parser.ArmorToDisplay = function(armor){
-	switch(armor){
-		case "light": 	return "輕";
-		case "medium": 	return "中";
-		case "heavy": 	return "重";
-		default: 		return armor;
-	}
+	return Parser.translateKeyToDisplay(armor);
 }
 Parser.RaceToDisplay = function(race){
-	race = race.toLowerCase();
-	switch(race){
-		case "dragonborn": 	return "龍裔";
-		case "dwarf": 		return "矮人";
-		case "elf": 		return "精靈";
-		case "gnome": 		return "地侏";
-		case "half-elf": 	return "半精靈";
-		case "half-orc": 	return "半獸人";
-		case "halfling": 	return "半身人";
-		case "human": 		return "人類";
-		case "tiefling": 	return "提夫林";
-		case "vampire (ixalan)": 	return "吸血鬼(依夏蘭)";
-		case "small race": 	return "小體型種族";
-		default: 		return race;
-	}
+	return Parser.translateKeyToDisplay(race);
 }
-Parser.SubraceToDisplay = function(race){
-	switch(race){
-		case "forest": 	return "林";	//Gnome
-		case "rock": 	return "岩";
-		case "deep": 	return "地底";
-		case "wood": 	return "木";	//Elf
-		case "drow": 	return "卓爾";
-		case "high": 	return "高等";
-		default: 		return race;
-	}
+Parser.SubraceToDisplay = function(sub_race){
+	return Parser.translateKeyToDisplay(sub_race);
 }
-
+Parser.SpeedToDisplay = function(speed){
+	return Parser.translateKeyToDisplay(speed);
+}
 
 // Haz code
 //==================
