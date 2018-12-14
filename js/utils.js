@@ -80,22 +80,22 @@ STR_NONE = "無";
 STR_ANY = "任意";
 STR_SPECIAL = "特殊";
 
-RNG_SPECIAL = "特殊";
-RNG_POINT = "點";
-RNG_LINE = "直線";
-RNG_CUBE = "立方";
-RNG_CONE = "錐形";
-RNG_RADIUS = "半徑";
-RNG_SPHERE = "球體";
-RNG_HEMISPHERE = "半球體";
-RNG_SELF = "自身";
-RNG_SIGHT = "視線";
+RNG_SPECIAL = "special";
+RNG_POINT = "point";
+RNG_LINE = "line";
+RNG_CUBE = "cube";
+RNG_CONE = "cone";
+RNG_RADIUS = "radius";
+RNG_SPHERE = "sphere";
+RNG_HEMISPHERE = "hemisphere";
+RNG_SELF = "self";
+RNG_SIGHT = "sight";
 RNG_UNLIMITED = "unlimited";
 RNG_UNLIMITED_SAME_PLANE = "plane";
-RNG_TOUCH = "觸摸";
+RNG_TOUCH = "touch";
 
-UNT_FEET = "英尺";
-UNT_MILES = "英里";
+UNT_FEET = "feet";
+UNT_MILES = "miles";
 
 ABIL_STR = "力量";
 ABIL_DEX = "敏捷";
@@ -918,7 +918,7 @@ Parser.spRangeToFull = function (range) {
 			case RNG_SIGHT:
 				return "視線";
 			case RNG_UNLIMITED:
-				return "Unlimited";
+				return "無限";
 			case RNG_UNLIMITED_SAME_PLANE:
 				return "Unlimited on the same plane";
 			case RNG_TOUCH:
@@ -926,22 +926,22 @@ Parser.spRangeToFull = function (range) {
 			case UNT_FEET:
 			case UNT_MILES:
 			default:
-				return `${dist.amount} ${dist.amount === 1 ? Parser.getSingletonUnit(dist.type) : dist.type}`;
+				return `${dist.amount}${dist.amount === 1 ? Parser.getSingletonUnit(dist.type) : Parser.getSingletonUnit(dist.type)}`;
 		}
 	}
 
 	function renderArea () {
 		const size = range.distance;
-		return `Self (${size.amount}-${Parser.getSingletonUnit(size.type)}${getAreaStyleStr()})`;
+		return `自身(${size.amount}${Parser.getSingletonUnit(size.type)}${getAreaStyleStr()})`;
 
 		function getAreaStyleStr () {
 			switch (range.type) {
 				case RNG_SPHERE:
-					return " 半徑";
+					return "半徑";
 				case RNG_HEMISPHERE:
-					return `-半徑 ${range.type}`;
+					return "半徑半球";
 				default:
-					return ` ${range.type}`;
+					return `${Parser.translateKeyToDisplay(range.type)}`;
 			}
 		}
 	}
@@ -1373,6 +1373,12 @@ Parser.keyToDisplay["vehicles (air)"]  = "載具(空中)";
 Parser.keyToDisplay["vehicles (land)"] = "載具(陸上)";
 Parser.keyToDisplay["vehicles (sea)"]  = "載具(海洋)";
 Parser.keyToDisplay["vehicles (water)"]= "載具(水上)";
+//Spell
+Parser.keyToDisplay["line"]= "直線";
+Parser.keyToDisplay["cube"]= "立方";
+Parser.keyToDisplay["cone"]= "錐形";
+Parser.keyToDisplay["cylinder"]= "圓柱";
+Parser.keyToDisplay["radius"]= "半徑";
 
 //Item
 Parser.itemKeyToDisplay["none"] 	= "無";
