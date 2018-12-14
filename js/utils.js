@@ -404,7 +404,7 @@ function utils_getAbilityData (abObj) {
 									suffix = ", ";
 								}
 							}
-							let thsAmount = " " + amount;
+							let thsAmount = "" + amount;
 							if (item.from.length > 1) {
 								if (j !== item.from.length - 1) {
 									thsAmount = "";
