@@ -108,6 +108,23 @@ async function onJsonLoad (data) {
 			"Unarmed Strike",
 			"Weapon Proficiency"
 		],
+		displayFn: function(t){
+			switch(t){
+				case "NPC Race": 		return "NPC種族";
+				case "Monstrous Race":	return "怪物種族";
+				case "Armor Proficiency": 	return "護甲熟練";
+				case "Skill Proficiency": 	return "技能熟練";
+				case "Tool Proficiency": 	return "工具熟練";
+				case "Weapon Proficiency": 	return "武器熟練";
+				case "Darkvision": 			return "黑暗視覺";
+				case "Superior Darkvision": return "高等黑暗視覺";
+				case "Natural Armor": 		return "天生護甲";
+				case "Damage Resistance": 	return "傷害抗力";
+				case "Spellcasting": 		return "施法";
+				case "Unarmed Strike": 		return "徒手打擊";
+				default: return t;
+			}
+		},
 		deselFn: (it) => {
 			return it === "NPC Race";
 		}
