@@ -136,6 +136,7 @@ async function onJsonLoad (data) {
 			"Terran",
 			"Undercommon"
 		],
+		displayFn: Parser.translateLangKeyToDisplay,
 		umbrellaItem: "Choose"
 	});
 
