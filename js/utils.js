@@ -337,7 +337,7 @@ function utils_getAbilityData (abObj) {
 	function handleAbility (parent, ab, optToConvertToTextStorage) {
 		if (parent[ab.toLowerCase()] !== undefined) {
 			const isNegMod = parent[ab.toLowerCase()] < 0;
-			const toAdd = `${Parser.AtrAbvToDisplay(ab)} ${(isNegMod ? "" : "+")}${parent[ab.toLowerCase()]}`;
+			const toAdd = `${Parser.AtrAbvToDisplay(ab)}${(isNegMod ? "" : "+")}${parent[ab.toLowerCase()]}`;
 			
 			if (optToConvertToTextStorage) {
 				optToConvertToTextStorage.push(toAdd);
