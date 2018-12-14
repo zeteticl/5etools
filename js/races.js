@@ -357,9 +357,9 @@ function loadhash (id) {
 		${race.soundClip ? getPronunciationButton() : ""}
 		<span class="stats-source ${Parser.sourceJsonToColor(race.source)}" title="${Parser.sourceJsonToFull(race.source)}">${Parser.sourceJsonToAbv(race.source)}</span>
 		</th></tr>
-		<tr><td colspan="6"><b>Ability Scores:</b> ${(race.ability ? utils_getAbilityData(race.ability) : {asText: "無"}).asText}</td></tr>
-		<tr><td colspan="6"><b>Size:</b> ${Parser.sizeAbvToFull(race.size)}</td></tr>
-		<tr><td colspan="6"><b>Speed:</b> ${Parser.getSpeedString(race)}</td></tr>
+		<tr><td colspan="6"><b>屬性值：</b> ${(race.ability ? utils_getAbilityData(race.ability) : {asText: "無"}).asText}</td></tr>
+		<tr><td colspan="6"><b>體型：</b> ${Parser.sizeAbvToFull(race.size)}</td></tr>
+		<tr><td colspan="6"><b>速度：</b> ${Parser.getSpeedString(race)}</td></tr>
 		<tr id="traits"><td class="divider" colspan="6"><div></div></td></tr>
 		${EntryRenderer.utils.getBorderTr()}
 		</tbody>
@@ -382,12 +382,12 @@ function loadhash (id) {
 	}
 
 	const traitTab = EntryRenderer.utils.tabButton(
-		"Traits",
+		"特性",
 		() => {},
 		buildStatsTab
 	);
 	const infoTab = EntryRenderer.utils.tabButton(
-		"Info",
+		"情報",
 		() => {},
 		() => {
 			function get$Tr () {
