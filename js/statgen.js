@@ -174,8 +174,8 @@ class StatGen {
 		const races = this.raceData.map(x => ({name: x.name, source: x.source})).sort((a, b) => SortUtil.ascSort(a.name, b.name) || SortUtil.ascSort(a.source, b.source));
 		const options = races.map(it => `<option value="${it.name}_${it.source}">${it.name} ${it.source !== SRC_PHB ? `[${Parser.sourceJsonToAbv(it.source)}]` : ""}</option>`).join("");
 		$("#race")
-			.append(`<option value="">None</option>`)
-			.append(`<option value="_CUSTOM">Custom</option>`)
+			.append(`<option value="">無</option>`)
+			.append(`<option value="_CUSTOM">客製化</option>`)
 			.append(options)
 			.change(() => this.changeRace())
 			.change();
