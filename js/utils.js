@@ -1272,10 +1272,13 @@ Parser.alignmentListToFull = function (alignList) {
 //==================
 // Haz code
 Parser.keyToDisplay = {};
-Parser.translateKeyToDisplay = function(input_str){
-	let lower_input_str = input_str.toLowerCase();
-	if(Parser.keyToDisplay[lower_input_str]!=null)	return Parser.keyToDisplay[lower_input_str];
-	else											return input_str;
+Parser.translateKeyToDisplay = function(input_item){
+	if(typeof input_item === "string" || input_item instanceof String){
+		let lower_input_str = input_item.toLowerCase();
+		if(Parser.keyToDisplay[lower_input_str]!=null)
+			return Parser.keyToDisplay[lower_input_str];
+	}
+	return input_item;
 }
 // Attribute
 Parser.keyToDisplay["str"] = "力量";
