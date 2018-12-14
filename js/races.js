@@ -122,6 +122,10 @@ async function onJsonLoad (data) {
 				case "Damage Resistance": 	return "傷害抗力";
 				case "Spellcasting": 		return "施法";
 				case "Unarmed Strike": 		return "徒手打擊";
+				case "Amphibious": 			return "兩棲";
+				case "Powerful Build": 		return "強健體格";
+				case "Dragonmark": 			return "龍紋";
+				case "Improved Resting": 	return "修整強化";
 				default: return t;
 			}
 		},
