@@ -390,7 +390,7 @@ function utils_getAbilityData (abObj) {
 						outStack += "任意其他";
 					}
 					if (item.count !== undefined && item.count > 1) {
-						outStack += Parser.numberToText(item.count) + " ";
+						outStack += Parser.numberToText(item.count) + "項";
 					}
 					if (allAbilities || allAbilitiesWithParent) {
 						outStack += amount;
