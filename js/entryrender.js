@@ -1756,6 +1756,7 @@ EntryRenderer.background = {
 		if (!profGroupArr) return "";
 
 		function getEntry (s) {
+			s = Parser.translateKeyToDisplay(Parser.translateLangKeyToDisplay(s));
 			return short ? s.toTitleCase() : hoverTag ? `{@${hoverTag} ${s.toTitleCase()}}` : s.toTitleCase();
 		}
 
