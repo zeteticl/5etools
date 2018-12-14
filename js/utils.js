@@ -550,11 +550,11 @@ Parser.getSpeedString = (it) => {
 	const stack = [];
 	if (typeof it.speed === "object") {
 		let joiner = ", ";
-		procSpeed("步行");
-		procSpeed("掘地");
-		procSpeed("攀爬");
-		procSpeed("飛行");
-		procSpeed("游泳");
+		procSpeed("walk");
+		procSpeed("burrow");
+		procSpeed("climb");
+		procSpeed("fly");
+		procSpeed("swim");
 		if (it.speed.choose) {
 			joiner = "; ";
 			stack.push(`${it.speed.choose.from.sort().joinConjunct(", ", " or ")} ${it.speed.choose.amount}呎. ${it.speed.choose.note ? ` ${it.speed.choose.note}` : ""}`);
