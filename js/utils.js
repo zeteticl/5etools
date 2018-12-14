@@ -1272,14 +1272,22 @@ Parser.alignmentListToFull = function (alignList) {
 //==================
 // Haz code
 Parser.keyToDisplay = {};
-Parser.translateKeyToDisplay = function(input_item){
-	if(typeof input_item === "string" || input_item instanceof String){
-		let lower_input_str = input_item.toLowerCase();
-		if(Parser.keyToDisplay[lower_input_str]!=null)
-			return Parser.keyToDisplay[lower_input_str];
+Parser.languageKeyToDisplay = {};
+
+Parser.translateKeyInMapToDisplay = function(map, key){
+	if(typeof key === "string" || key instanceof String){
+		let lowercase_key = key.toLowerCase();
+		if(map[lowercase_key]!=null)	return map[lowercase_key];
 	}
-	return input_item;
+	return key;
 }
+Parser.translateKeyToDisplay = function(common_key){
+	return Parser.translateKeyInMapToDisplay(Parser.keyToDisplay, common_key);
+}
+Parser.translateLangKeyToDisplay = function(lang_key){
+	return Parser.translateKeyInMapToDisplay(Parser.languageKeyToDispla, lang_key);
+}
+
 // Attribute
 Parser.keyToDisplay["str"] = "力量";
 Parser.keyToDisplay["dex"] = "敏捷";
@@ -1304,7 +1312,7 @@ Parser.keyToDisplay["tiefling"]  	= "提夫林";
 Parser.keyToDisplay["vampire (ixalan)"]  = "吸血鬼(依夏蘭)";
 Parser.keyToDisplay["small race"]  	= "小體型種族";
 //Subrace
-Parser.keyToDisplay["forest"]  = "林";
+Parser.keyToDisplay["forest"]= "林";
 Parser.keyToDisplay["rock"]  = "岩";
 Parser.keyToDisplay["deep"]  = "地底";
 Parser.keyToDisplay["wood"]  = "木";
@@ -1317,6 +1325,28 @@ Parser.keyToDisplay["swim"]  		= "游泳";
 Parser.keyToDisplay["walk"]  		= "步行";
 Parser.keyToDisplay["walk (fast)"] 	= "步行(快)";
 Parser.keyToDisplay["walk (slow)"]  = "步行(慢)";
+//Language
+Parser.languageKeyToDisplay["abyssal"] 	= "下界語";
+Parser.languageKeyToDisplay["aquan"] 	= "流水語";
+Parser.languageKeyToDisplay["auran"] 	= "大氣語";
+Parser.languageKeyToDisplay["celestial"]= "天界語";
+Parser.languageKeyToDisplay["choose"] 	= "自選";
+Parser.languageKeyToDisplay["common"] 	= "通用語";
+Parser.languageKeyToDisplay["draconic"] = "龍語";
+Parser.languageKeyToDisplay["dwarvish"] = "矮人語";
+Parser.languageKeyToDisplay["elvish"] 	= "精靈語";
+Parser.languageKeyToDisplay["giant"] 	= "巨人語";
+Parser.languageKeyToDisplay["gnomish"] 	= "地侏語";
+Parser.languageKeyToDisplay["goblin"] 	= "哥布林語";
+Parser.languageKeyToDisplay["halfling"] = "半身人語";
+Parser.languageKeyToDisplay["infernal"] = "煉獄語";
+Parser.languageKeyToDisplay["orc"] 		= "獸人語";
+Parser.languageKeyToDisplay["other"] 	= "其他";
+Parser.languageKeyToDisplay["primordial"] = "盤古語";
+Parser.languageKeyToDisplay["sylvan"] 	= "妖精語";
+Parser.languageKeyToDisplay["terran"] 	= "大地語";
+Parser.languageKeyToDisplay["undercommon"]= "地底通用語";
+
 
 Parser.AtrAbvToDisplay = function(atr_abv){
 	return Parser.translateKeyToDisplay(atr_abv);
