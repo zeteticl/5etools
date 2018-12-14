@@ -1299,6 +1299,7 @@ Parser.keyToDisplay["cha"] = "魅力";
 Parser.keyToDisplay["light"]  = "輕";
 Parser.keyToDisplay["medium"] = "中";
 Parser.keyToDisplay["heavy"]  = "重";
+Parser.keyToDisplay["shields"]  = "盾牌";
 //Race
 Parser.keyToDisplay["dragonborn"]  	= "龍裔";
 Parser.keyToDisplay["dwarf"]  		= "矮人";
