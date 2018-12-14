@@ -1295,11 +1295,6 @@ Parser.keyToDisplay["con"] = "體質";
 Parser.keyToDisplay["int"] = "智力";
 Parser.keyToDisplay["wis"] = "睿知";
 Parser.keyToDisplay["cha"] = "魅力";
-//Armor
-Parser.keyToDisplay["light"]  = "輕";
-Parser.keyToDisplay["medium"] = "中";
-Parser.keyToDisplay["heavy"]  = "重";
-Parser.keyToDisplay["shields"]  = "盾牌";
 //Race
 Parser.keyToDisplay["dragonborn"]  	= "龍裔";
 Parser.keyToDisplay["dwarf"]  		= "矮人";
@@ -1346,6 +1341,14 @@ Parser.keyToDisplay["swim"]  		= "游泳";
 Parser.keyToDisplay["walk"]  		= "步行";
 Parser.keyToDisplay["walk (fast)"] 	= "步行(快)";
 Parser.keyToDisplay["walk (slow)"]  = "步行(慢)";
+//Armor
+Parser.keyToDisplay["light"]  = "輕";
+Parser.keyToDisplay["medium"] = "中";
+Parser.keyToDisplay["heavy"]  = "重";
+Parser.keyToDisplay["shields"]  = "盾牌";
+//Weapon
+Parser.keyToDisplay["simple"]  = "簡易";
+Parser.keyToDisplay["martial"] = "軍用";
 //Language
 Parser.languageKeyToDisplay["any"] 		= "任意";
 Parser.languageKeyToDisplay["abyssal"] 	= "下界語";
