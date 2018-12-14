@@ -1616,10 +1616,10 @@ EntryRenderer.spell = {
 			<tr><td colspan="6">
 				<table class="summary striped-even">
 					<tr>
-						<th colspan="1">Level</th>
-						<th colspan="1">School</th>
-						<th colspan="2">Casting Time</th>
-						<th colspan="2">Range</th>
+						<th colspan="1">環位</th>
+						<th colspan="1">學派</th>
+						<th colspan="2">施法時間</th>
+						<th colspan="2">射程</th>
 					</tr>	
 					<tr>
 						<td colspan="1">${Parser.spLevelToFull(spell.level)}${Parser.spMetaToFull(spell.meta)}</td>
@@ -1628,8 +1628,8 @@ EntryRenderer.spell = {
 						<td colspan="2">${Parser.spRangeToFull(spell.range)}</td>
 					</tr>
 					<tr>
-						<th colspan="4">Components</th>
-						<th colspan="2">Duration</th>
+						<th colspan="4">構材</th>
+						<th colspan="2">持續時間</th>
 					</tr>	
 					<tr>
 						<td colspan="4">${Parser.spComponentsToFull(spell.components)}</td>
@@ -1646,7 +1646,7 @@ EntryRenderer.spell = {
 			const higherLevelsEntryList = {type: "entries", entries: spell.entriesHigherLevel};
 			renderer.recursiveEntryRender(higherLevelsEntryList, renderStack, 2);
 		}
-		renderStack.push(`<div><span class="bold">Classes: </span>${Parser.spMainClassesToFull(spell.classes)}</div>`);
+		renderStack.push(`<div><span class="bold">職業: </span>${Parser.spMainClassesToFull(spell.classes)}</div>`);
 		renderStack.push(`</td></tr>`);
 
 		return renderStack.join("");
@@ -1659,10 +1659,10 @@ EntryRenderer.spell = {
 			${EntryRenderer.utils.getBorderTr()}
 			${EntryRenderer.utils.getNameTr(spell)}
 			<tr><td class="levelschoolritual" colspan="6"><span>${Parser.spLevelSchoolMetaToFull(spell.level, spell.school, spell.meta)}</span></td></tr>
-			<tr><td class="castingtime" colspan="6"><span class="bold">Casting Time: </span>${Parser.spTimeListToFull(spell.time)}</td></tr>
-			<tr><td class="range" colspan="6"><span class="bold">Range: </span>${Parser.spRangeToFull(spell.range)}</td></tr>
-			<tr><td class="components" colspan="6"><span class="bold">Components: </span>${Parser.spComponentsToFull(spell.components)}</td></tr>
-			<tr><td class="range" colspan="6"><span class="bold">Duration: </span>${Parser.spDurationToFull(spell.duration)}</td></tr>
+			<tr><td class="castingtime" colspan="6"><span class="bold">施法時間: </span>${Parser.spTimeListToFull(spell.time)}</td></tr>
+			<tr><td class="range" colspan="6"><span class="bold">射程: </span>${Parser.spRangeToFull(spell.range)}</td></tr>
+			<tr><td class="components" colspan="6"><span class="bold">構材: </span>${Parser.spComponentsToFull(spell.components)}</td></tr>
+			<tr><td class="range" colspan="6"><span class="bold">持續時間: </span>${Parser.spDurationToFull(spell.duration)}</td></tr>
 			${EntryRenderer.utils.getDividerTr()}
 		`);
 
@@ -1675,11 +1675,11 @@ EntryRenderer.spell = {
 		}
 		renderStack.push(`</td></tr>`);
 
-		renderStack.push(`<tr class="text"><td class="classes" colspan="6"><span class="bold">Classes: </span>${Parser.spMainClassesToFull(spell.classes)}</td></tr>`);
+		renderStack.push(`<tr class="text"><td class="classes" colspan="6"><span class="bold">職業: </span>${Parser.spMainClassesToFull(spell.classes)}</td></tr>`);
 
 		if (spell.classes.fromSubclass) {
 			const currentAndLegacy = Parser.spSubclassesToCurrentAndLegacyFull(spell.classes);
-			renderStack.push(`<tr class="text"><td colspan="6"><span class="bold">Subclasses: </span>${currentAndLegacy[0]}</td></tr>`);
+			renderStack.push(`<tr class="text"><td colspan="6"><span class="bold">子職業: </span>${currentAndLegacy[0]}</td></tr>`);
 			if (currentAndLegacy[1]) {
 				renderStack.push(`<tr class="text"><td colspan="6"><section class="text-muted"><span class="bold">Subclasses (legacy): </span>${currentAndLegacy[1]}</section></td></tr>`);
 			}
@@ -1732,7 +1732,7 @@ EntryRenderer.background = {
 			<tr class="text"><td colspan="6">
 		`);
 		if (bg.skillProficiencies) {
-			renderer.recursiveEntryRender({name: "Skill Proficiencies", entries: [EntryRenderer.background.getSkillSummary(bg.skillProficiencies)]}, renderStack, 2);
+			renderer.recursiveEntryRender({name: "技能熟練", entries: [EntryRenderer.background.getSkillSummary(bg.skillProficiencies)]}, renderStack, 2);
 		}
 		renderer.recursiveEntryRender({entries: bg.entries.filter(it => it.data && it.data.isFeature)}, renderStack, 1);
 		renderStack.push(`</td></tr>`);
@@ -1821,7 +1821,7 @@ EntryRenderer.optionalfeature = {
 			}
 		});
 
-		return listMode ? outList.join(", ") : `Prerequisites: ${outList.join(", ")}`;
+		return listMode ? outList.join(", ") : `先決條件：${outList.join(", ")}`;
 	},
 
 	getPreviouslyPrintedText (it) {
@@ -1872,9 +1872,9 @@ EntryRenderer.race = {
 			<tr><td colspan="6">
 				<table class="summary striped-even">
 					<tr>
-						<th class="col-4 text-align-center">Ability Scores</th>
-						<th class="col-4 text-align-center">Size</th>
-						<th class="col-4 text-align-center">Speed</th>
+						<th class="col-4 text-align-center">屬性值</th>
+						<th class="col-4 text-align-center">體型</th>
+						<th class="col-4 text-align-center">速度</th>
 					</tr>
 					<tr>
 						<td class="text-align-center">${ability.asText}</td>
