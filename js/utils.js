@@ -532,10 +532,10 @@ Parser.getAbilityModifier = function (abilityScore) {
 Parser.getSpeedString = (it) => {
 	function procSpeed (propName) {
 		function addSpeed (s) {
-			stack.push(`${propName === "步行" ? "" : `${propName} `}${getVal(s)}ft.${getCond(s)}`);
+			stack.push(`${propName === "walk" ? "" : `${propName} `}${getVal(s)}ft.${getCond(s)}`);
 		}
 
-		if (it.speed[propName] || propName === "步行") addSpeed(it.speed[propName] || 0);
+		if (it.speed[propName] || propName === "walk") addSpeed(it.speed[propName] || 0);
 		if (it.speed.alternate && it.speed.alternate[propName]) it.speed.alternate[propName].forEach(addSpeed);
 	}
 
