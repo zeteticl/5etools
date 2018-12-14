@@ -217,7 +217,7 @@ function addRaces (data) {
 		const race = raceList[rcI];
 		if (ExcludeUtil.isExcluded(race.name, "race", race.source)) continue;
 
-		const ability = race.ability ? utils_getAbilityData(race.ability) : {asTextShort: "None"};
+		const ability = race.ability ? utils_getAbilityData(race.ability) : {asTextShort: "無"};
 		race._fAbility = race.ability ? getAbilityObjs(race.ability).map(a => mapAbilityObjToFull(a)) : []; // used for filtering
 		race._fSpeed = race.speed.walk ? [race.speed.climb ? "Climb" : null, race.speed.fly ? "Fly" : null, race.speed.swim ? "Swim" : null, getSpeedRating(race.speed.walk)].filter(it => it) : getSpeedRating(race.speed);
 		race._fMisc = [
@@ -357,7 +357,7 @@ function loadhash (id) {
 		${race.soundClip ? getPronunciationButton() : ""}
 		<span class="stats-source ${Parser.sourceJsonToColor(race.source)}" title="${Parser.sourceJsonToFull(race.source)}">${Parser.sourceJsonToAbv(race.source)}</span>
 		</th></tr>
-		<tr><td colspan="6"><b>Ability Scores:</b> ${(race.ability ? utils_getAbilityData(race.ability) : {asText: "None"}).asText}</td></tr>
+		<tr><td colspan="6"><b>Ability Scores:</b> ${(race.ability ? utils_getAbilityData(race.ability) : {asText: "無"}).asText}</td></tr>
 		<tr><td colspan="6"><b>Size:</b> ${Parser.sizeAbvToFull(race.size)}</td></tr>
 		<tr><td colspan="6"><b>Speed:</b> ${Parser.getSpeedString(race)}</td></tr>
 		<tr id="traits"><td class="divider" colspan="6"><div></div></td></tr>
