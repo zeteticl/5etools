@@ -593,7 +593,7 @@ class FilterBox {
 				for (const item of filter.items) {
 					const iText = item instanceof FilterItem ? item.item : item;
 					const iChangeFn = item instanceof FilterItem ? item.changeFn : null;
-					const display = filter.displayFn ? filter.displayFn(item) : iText;
+					const display = filter.displayFn ? filter.displayFn(item) : Parser.translateKeyToDisplay(iText);
 
 					const $pill = $(`<div class="filter-pill">${display}</div>`).data("value", iText).attr("state", FilterBox._PILL_STATES[0]);
 					const $miniPill = $(`<div class="mini-pill">${display}</div>`).attr("state", FilterBox._PILL_STATES[0]);
