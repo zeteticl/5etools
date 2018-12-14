@@ -264,7 +264,7 @@ class HashLoad {
 		$("td#prof div#saves span").html(ClassDisplay.curClass.proficiency.map(p => Parser.attAbvToFull(p)).join(", "));
 
 		// starting proficiencies
-		const renderArmorProfs = (armorProfs) => armorProfs.map(a => a === "輕" || a === "中" || a === "重" ? a + "甲" : a).join(", ");
+		const renderArmorProfs = (armorProfs) => armorProfs.map(a => a === "light" || a === "medium" || a === "heavy" ? Parser.translateKeyToDisplay(a) + "甲" : Parser.translateKeyToDisplay(a)).join(", ");
 		const renderWeaponsProfs = (weaponProfs) => weaponProfs.map(w => w === "簡易" || w === "軍用" ? w + "武器" : w).join(", ");
 		const renderToolsProfs = (toolProfs) => toolProfs.join(", ");
 		const renderSkillsProfs = (skillProfs) => getSkillProfString(skillProfs);
