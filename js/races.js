@@ -53,7 +53,7 @@ function getAbilityObjs (abils) {
 }
 
 function mapAbilityObjToFull (abilObj) {
-	return `${Parser.attAbvToFull(abilObj.asi)} ${abilObj.amount < 0 ? "" : "+"}${abilObj.amount}`;
+	return `${Parser.attAbvToFull(abilObj.asi)}${abilObj.amount < 0 ? "" : "+"}${abilObj.amount}`;
 }
 
 function getSpeedRating (speed) {
