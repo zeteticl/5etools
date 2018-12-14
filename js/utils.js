@@ -1285,7 +1285,7 @@ Parser.translateKeyToDisplay = function(common_key){
 	return Parser.translateKeyInMapToDisplay(Parser.keyToDisplay, common_key);
 }
 Parser.translateLangKeyToDisplay = function(lang_key){
-	return Parser.translateKeyInMapToDisplay(Parser.languageKeyToDispla, lang_key);
+	return Parser.translateKeyInMapToDisplay(Parser.languageKeyToDisplay, lang_key);
 }
 
 // Attribute
