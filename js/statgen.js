@@ -158,8 +158,8 @@ class StatGen {
 		$("#rollbutton").click(() => this.rollStats());
 
 		const isCrypto = RollerUtil.isCrypto();
-		const titleStr = isCrypto ? "Numbers will be generated using Crypto.getRandomValues()" : "Numbers will be generated using Math.random()";
-		$(`#roller-mode`).html(`Cryptographically strong random generation: <span title="${titleStr}" class="crypto-${isCrypto}">${isCrypto ? `<span class="glyphicon glyphicon-lock"></span> enabled` : `<span class="glyphicon glyphicon-ban-circle"></span> not available`}</span>`);
+		const titleStr = isCrypto ? "數字將透過Crypto.getRandomValues()產生" : "數字將透過Math.random()產生";
+		$(`#roller-mode`).html(`密碼學安全強亂數生成器：<span title="${titleStr}" class="crypto-${isCrypto}">${isCrypto ? `<span class="glyphicon glyphicon-lock"></span> 啟用` : `<span class="glyphicon glyphicon-ban-circle"></span> 無法使用`}</span>`);
 
 		$("#reset").click(() => {
 			$(".base").val(this.statMin);
@@ -186,7 +186,7 @@ class StatGen {
 		const $table = $(`#costs`);
 		$table.empty().append(`
 			<thead>
-				<tr><th>Score</th><th>Modifier</th><th>Point Cost</th><th class="pbuy__adv--visible"></th></tr>
+				<tr><th>屬性值</th><th>調整值</th><th>每點數花費</th><th class="pbuy__adv--visible"></th></tr>
 			</thead>
 		`);
 		const $tbody = $(`<tbody/>`).appendTo($table);
