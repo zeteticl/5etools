@@ -13,9 +13,20 @@ const META_ADD_M_CONSUMED = "Material is Consumed";
 const META_ADD_MB_PERMANENT = "Permanent Effects";
 const META_ADD_MB_SCALING = "Scaling Effects";
 const META_ADD_MB_HEAL = "Healing";
-// real meta tags
 const META_RITUAL = "Ritual";
 const META_TECHNOMAGIC = "Technomagic";
+const META_ADD_TO_FULL = {};
+META_ADD_TO_FULL[META_ADD_CONC] = "專注";
+META_ADD_TO_FULL[META_ADD_V] 	= "聲音";
+META_ADD_TO_FULL[META_ADD_S] 	= "姿勢";
+META_ADD_TO_FULL[META_ADD_M] 	= "材料";
+META_ADD_TO_FULL[META_ADD_M_COST] = "價值材料";
+META_ADD_TO_FULL[META_ADD_M_CONSUMED] = "消耗材料";
+META_ADD_TO_FULL[META_ADD_MB_PERMANENT] = "永久效果";
+META_ADD_TO_FULL[META_ADD_MB_SCALING] = "升級效果";
+META_ADD_TO_FULL[META_ADD_MB_HEAL] = "治療";
+META_ADD_TO_FULL[META_RITUAL] = "儀式";
+META_ADD_TO_FULL[META_TECHNOMAGIC] = "科技魔法";
 
 const STR_WIZARD = "Wizard";
 const STR_FIGHTER = "Fighter";
@@ -36,23 +47,29 @@ const TM_MINS = "minute";
 const TM_HRS = "hour";
 const TO_HIDE_SINGLETON_TIMES = [TM_ACTION, TM_B_ACTION, TM_REACTION, TM_ROUND];
 const TIME_UNITS_TO_FULL = {};
-TIME_UNITS_TO_FULL[TM_ACTION] = "Action";
-TIME_UNITS_TO_FULL[TM_B_ACTION] = "Bonus Action";
-TIME_UNITS_TO_FULL[TM_REACTION] = "Reaction";
-TIME_UNITS_TO_FULL[TM_ROUND] = "Rounds";
-TIME_UNITS_TO_FULL[TM_MINS] = "Minutes";
-TIME_UNITS_TO_FULL[TM_HRS] = "Hours";
+TIME_UNITS_TO_FULL[TM_ACTION] = "動作";
+TIME_UNITS_TO_FULL[TM_B_ACTION] = "附贈動作";
+TIME_UNITS_TO_FULL[TM_REACTION] = "反應";
+TIME_UNITS_TO_FULL[TM_ROUND] = "輪";
+TIME_UNITS_TO_FULL[TM_MINS] = "分鐘";
+TIME_UNITS_TO_FULL[TM_HRS] = "小時";
 
 const F_RNG_POINT = "Point";
 const F_RNG_SELF_AREA = "Self (Area)";
 const F_RNG_SELF = "Self";
 const F_RNG_TOUCH = "Touch";
 const F_RNG_SPECIAL = "Special";
+const F_RNG_TO_FULL = {};
+F_RNG_TO_FULL[F_RNG_POINT] 		= "點";
+F_RNG_TO_FULL[F_RNG_SELF_AREA] 	= "自身(區域)";
+F_RNG_TO_FULL[F_RNG_SELF] 		= "自身";
+F_RNG_TO_FULL[F_RNG_TOUCH] 		= "觸摸";
+F_RNG_TO_FULL[F_RNG_SPECIAL] 	= "特殊";
 
 let tableDefault;
 
 function getFltrSpellLevelStr (level) {
-	return level === 0 ? Parser.spLevelToFull(level) : Parser.spLevelToFull(level) + " level";
+	return level === 0 ? Parser.spLevelToFull(level) : (level) + "環";
 }
 
 function getNormalisedTime (time) {
@@ -193,8 +210,8 @@ function getRangeType (range) {
 
 function getTblTimeStr (time) {
 	return (time.number === 1 && TO_HIDE_SINGLETON_TIMES.includes(time.unit))
-		? `${time.unit.uppercaseFirst()}${time.unit === TM_B_ACTION ? " acn." : ""}`
-		: `${time.number} ${time.unit === TM_B_ACTION ? "Bonus acn." : time.unit}${time.number > 1 ? "s" : ""}`.uppercaseFirst();
+		? `${TIME_UNITS_TO_FULL[time.unit]}`
+		: `${time.number}${time.unit === TM_B_ACTION ? "附贈動作" : TIME_UNITS_TO_FULL[time.unit]}`;
 }
 
 function getTimeDisplay (timeUnit) {
@@ -226,11 +243,11 @@ function getMetaFilterObj (s) {
 }
 
 function getFilterAbilitySave (ability) {
-	return `${ability.uppercaseFirst().substring(0, 3)}. Save`;
+	return `${Parser.translateKeyToDisplay(ability.uppercaseFirst().substring(0, 3))}豁免`;
 }
 
 function getFilterAbilityCheck (ability) {
-	return `${ability.uppercaseFirst().substring(0, 3)}. Check`;
+	return `${Parser.translateKeyToDisplay(ability.uppercaseFirst().substring(0, 3))}檢定`;
 }
 
 function handleBrew (homebrew) {
@@ -305,26 +322,29 @@ let spellBookView;
 let brewSpellClasses;
 const sourceFilter = getSourceFilter();
 const levelFilter = new Filter({
-	header: "Level",
+	header: "環位",
 	items: [
 		0, 1, 2, 3, 4, 5, 6, 7, 8, 9
 	],
 	displayFn: getFltrSpellLevelStr
 });
-const classFilter = new Filter({header: "Class"});
+const classFilter = new Filter({header: "職業", displayFn:Parser.translateKeyToDisplay});
 const subclassFilter = new GroupedFilter({
-	header: "Subclass",
+	header: "子職業",
 	numGroups: 2,
 	displayFn: (item) => `${item.nest}: ${item.item}`
 });
 const classAndSubclassFilter = new MultiFilter({name: "Classes"}, classFilter, subclassFilter);
-const raceFilter = new Filter({header: "Race"});
+const raceFilter = new Filter({header: "種族"});
 const metaFilter = new Filter({
-	header: "Components & Miscellaneous",
-	items: [META_ADD_CONC, META_ADD_V, META_ADD_S, META_ADD_M, META_ADD_M_COST, META_ADD_M_CONSUMED, META_ADD_MB_HEAL, META_ADD_MB_PERMANENT, META_ADD_MB_SCALING, META_RITUAL, META_TECHNOMAGIC]
+	header: "構材＆雜項",
+	items: [META_ADD_CONC, META_ADD_V, META_ADD_S, META_ADD_M, META_ADD_M_COST, META_ADD_M_CONSUMED, META_ADD_MB_HEAL, META_ADD_MB_PERMANENT, META_ADD_MB_SCALING, META_RITUAL, META_TECHNOMAGIC],
+	displayFn: function(misc){
+		return (META_ADD_TO_FULL[misc])? META_ADD_TO_FULL[misc]: misc;
+	}
 });
 const schoolFilter = new Filter({
-	header: "School",
+	header: "學派",
 	items: [
 		SKL_ABV_ABJ,
 		SKL_ABV_CON,
@@ -338,34 +358,34 @@ const schoolFilter = new Filter({
 	displayFn: Parser.spSchoolAbvToFull}
 );
 const damageFilter = new Filter({
-	header: "Damage Type",
+	header: "傷害類型",
 	items: [
 		"acid", "bludgeoning", "cold", "fire", "force", "lightning", "necrotic", "piercing", "poison", "psychic", "radiant", "slashing", "thunder"
 	],
-	displayFn: StrUtil.uppercaseFirst
+	displayFn: Parser.translateKeyToDisplay
 });
 const conditionFilter = new Filter({
-	header: "Conditions Inflicted",
+	header: "造成狀態",
 	items: ["blinded", "charmed", "deafened", "exhaustion", "frightened", "grappled", "incapacitated", "invisible", "paralyzed", "petrified", "poisoned", "prone", "restrained", "stunned", "unconscious"],
-	displayFn: StrUtil.uppercaseFirst
+	displayFn: Parser.translateKeyToDisplay
 });
 const spellAttackFilter = new Filter({
-	header: "Spell Attack",
+	header: "法術攻擊",
 	items: ["M", "R", "O"],
 	displayFn: Parser.spAttackTypeToFull
 });
 const saveFilter = new Filter({
-	header: "Saving Throw",
+	header: "豁免",
 	items: ["strength", "constitution", "dexterity", "intelligence", "wisdom", "charisma"],
 	displayFn: getFilterAbilitySave
 });
 const checkFilter = new Filter({
-	header: "Opposed Ability Check",
+	header: "能力檢定對抗",
 	items: ["strength", "constitution", "dexterity", "intelligence", "wisdom", "charisma"],
 	displayFn: getFilterAbilityCheck
 });
 const timeFilter = new Filter({
-	header: "Cast Time",
+	header: "施法時間",
 	items: [
 		TM_ACTION,
 		TM_B_ACTION,
@@ -377,24 +397,33 @@ const timeFilter = new Filter({
 	displayFn: getTimeDisplay
 });
 const durationFilter = new Filter({
-	header: "Duration",
+	header: "持續時間",
 	items: [
 		"instant",
 		"timed",
 		"permanent",
 		"special"
 	],
-	displayFn: StrUtil.uppercaseFirst
+	displayFn: function(r){switch(r){
+		case "instant":  return "即效";
+		case "timed": 	 return "定時";
+		case "permanent":return "永久";
+		case "special":  return "特殊";
+		default: return r;
+	}}
 });
 const rangeFilter = new Filter({
-	header: "Range",
+	header: "射程",
 	items: [
 		F_RNG_SELF,
 		F_RNG_TOUCH,
 		F_RNG_POINT,
 		F_RNG_SELF_AREA,
 		F_RNG_SPECIAL
-	]
+	],
+	displayFn: function(r){
+		return (F_RNG_TO_FULL[r])? F_RNG_TO_FULL[r]: r;
+	}
 });
 let filterBox;
 
@@ -449,7 +478,7 @@ function pPageInit (loadedSources) {
 			for (let i = 0; i < 10; ++i) {
 				const atLvl = toShow.filter(sp => sp.level === i);
 				if (atLvl.length) {
-					const levelText = i === 0 ? `${Parser.spLevelToFull(i)}s` : `${Parser.spLevelToFull(i)}-level Spells`;
+					const levelText = i === 0 ? `${Parser.spLevelToFull(i)}` : `${Parser.spLevelToFull(i)}法術`;
 					stack.push(EntryRenderer.utils.getBorderTr(`<span class="spacer-name">${levelText}</span>`));
 
 					stack.push(`<tr class="spellbook-level"><td>`);
@@ -573,8 +602,8 @@ function addSpells (data) {
 		if (ExcludeUtil.isExcluded(spell.name, "spell", spell.source)) continue;
 
 		let levelText = Parser.spLevelToFull(spell.level);
-		if (spell.meta && spell.meta.ritual) levelText += " (rit.)";
-		if (spell.meta && spell.meta.technomagic) levelText += " (tec.)";
+		if (spell.meta && spell.meta.ritual) levelText += " (儀.)";
+		if (spell.meta && spell.meta.technomagic) levelText += " (科.)";
 
 		// add eldritch knight and arcane trickster
 		if (spell.classes.fromClassList.filter(c => c.name === STR_WIZARD && c.source === SRC_PHB).length) {

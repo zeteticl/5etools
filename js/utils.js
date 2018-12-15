@@ -859,10 +859,10 @@ Parser.spSchoolAbvToShort = function (school) {
 Parser.spLevelToFull = function (level) {
 	switch (level) {
 		case 0: return STR_CANTRIP;
-		case 1: return `${level}st`;
-		case 2: return `${level}nd`;
-		case 3: return `${level}rd`;
-		default: return `${level}th`;
+		case 1: return `${level}環`;
+		case 2: return `${level}環`;
+		case 3: return `${level}環`;
+		default: return `${level}環`;
 	}
 };
 
@@ -876,23 +876,24 @@ Parser.spLevelToFullLevelText = function (level, dash) {
 
 Parser.spMetaToFull = function (meta) {
 	// these tags are (so far) mutually independent, so we don't need to combine the text
-	if (meta && meta.ritual) return " (ritual)";
-	if (meta && meta.technomagic) return " (technomagic)";
+	if (meta && meta.ritual) return " (儀式)";
+	if (meta && meta.technomagic) return " (科技魔法)";
 	return "";
 };
 
 Parser.spLevelSchoolMetaToFull = function (level, school, meta) {
-	const levelPart = level === 0 ? Parser.spLevelToFull(level).toLowerCase() : Parser.spLevelToFull(level) + "-level";
+	const levelPart = level === 0 ? Parser.spLevelToFull(level).toLowerCase() : level + "環";
 	let levelSchoolStr = level === 0 ? `${Parser.spSchoolAbvToFull(school)} ${levelPart}` : `${levelPart} ${Parser.spSchoolAbvToFull(school).toLowerCase()}`;
 	return levelSchoolStr + Parser.spMetaToFull(meta);
 };
 
 Parser.spTimeListToFull = function (times) {
-	return times.map(t => `${Parser.getTimeToFull(t)}${t.condition ? `, ${EntryRenderer.getDefaultRenderer().renderEntry(t.condition)}` : ""}`).join(" or ");
+	return times.map(t => `${Parser.getTimeToFull(t)}${t.condition ? `，${EntryRenderer.getDefaultRenderer().renderEntry(t.condition)}` : ""}`).join(" 或 ");
 };
 
 Parser.getTimeToFull = function (time) {
-	return `${time.number} ${time.unit === "bonus" ? "bonus action" : time.unit}${time.number > 1 ? "s" : ""}`;
+	let unit = (time.unit=="action"||time.unit=="bonus"||time.unit=="reaction")? "個" : "";
+	return `${time.number}${unit}${time.unit === "bonus" ? "附贈動作" : Parser.translateKeyToDisplay(time.unit)}${time.number > 1 ? "" : ""}`;
 };
 
 Parser.spRangeToFull = function (range) {
@@ -963,28 +964,28 @@ Parser.getSingletonUnit = function (unit) {
 };
 
 Parser.spComponentsToFull = function (comp) {
-	if (!comp) return "None";
+	if (!comp) return "無";
 	const out = [];
-	if (comp.v) out.push("V");
-	if (comp.s) out.push("S");
-	if (comp.m) out.push("M" + (comp.m !== true ? ` (${comp.m.text || comp.m})` : ""));
-	return out.join(", ");
+	if (comp.v) out.push("聲音");
+	if (comp.s) out.push("姿勢");
+	if (comp.m) out.push("材料" + (comp.m !== true ? `（${comp.m.text || comp.m}）` : ""));
+	return out.join("、");
 };
 
 Parser.spDurationToFull = function (dur) {
 	return dur.map(d => {
 		switch (d.type) {
 			case "special":
-				return "Special";
+				return "特殊";
 			case "instant":
 				return `Instantaneous${d.condition ? ` (${d.condition})` : ""}`;
 			case "timed":
-				return `${d.concentration ? "Concentration, " : ""}${d.concentration ? "u" : d.duration.upTo ? "U" : ""}${d.concentration || d.duration.upTo ? "p to " : ""}${d.duration.amount} ${d.duration.amount === 1 ? d.duration.type : `${d.duration.type}s`}`;
+				return `${d.concentration ? "專注，" : ""}${d.concentration ? "" : d.duration.upTo ? "" : ""}${d.concentration || d.duration.upTo ? "至多" : ""}${d.duration.amount}${d.duration.amount === 1 ? Parser.translateKeyToDisplay(d.duration.type) : `${Parser.translateKeyToDisplay(d.duration.type)}`}`;
 			case "permanent":
 				if (d.ends) {
 					return `Until ${d.ends.map(m => m === "dispel" ? "dispelled" : m === "trigger" ? "triggered" : m === "discharge" ? "discharged" : undefined).join(" or ")}`;
 				} else {
-					return "Permanent";
+					return "永久";
 				}
 		}
 	}).join(" or ") + (dur.length > 1 ? " (see below)" : "");
@@ -1300,17 +1301,24 @@ Parser.keyToDisplay["int"] = "智力";
 Parser.keyToDisplay["wis"] = "睿知";
 Parser.keyToDisplay["cha"] = "魅力";
 //Race
+Parser.keyToDisplay["aasimar"]  	= "阿斯莫";
 Parser.keyToDisplay["dragonborn"]  	= "龍裔";
 Parser.keyToDisplay["dwarf"]  		= "矮人";
 Parser.keyToDisplay["elf"]  		= "精靈";
 Parser.keyToDisplay["gnome"]  		= "地侏";
+Parser.keyToDisplay["genasi"]  		= "元素裔";
+Parser.keyToDisplay["triton"]  		= "梭螺魚人";
+Parser.keyToDisplay["firbolg"]  	= "費爾伯格";
+Parser.keyToDisplay["siren"]  		= "賽壬";
 Parser.keyToDisplay["half-elf"]  	= "半精靈";
 Parser.keyToDisplay["half-orc"]  	= "半獸人";
 Parser.keyToDisplay["halfling"]  	= "半身人";
 Parser.keyToDisplay["human"]  		= "人類";
 Parser.keyToDisplay["tiefling"]  	= "提夫林";
-Parser.keyToDisplay["vampire (ixalan)"]  = "吸血鬼(依夏蘭)";
 Parser.keyToDisplay["small race"]  	= "小體型種族";
+Parser.keyToDisplay["yuan-ti pureblood"]= "純血蛇人";
+Parser.keyToDisplay["vampire (ixalan)"] = "吸血鬼(依夏蘭)";
+Parser.keyToDisplay["elf (zendikar)"]	= "精靈(贊迪卡)";
 //Subrace
 Parser.keyToDisplay["forest"]= "林";
 Parser.keyToDisplay["rock"]  = "岩";
@@ -1318,6 +1326,16 @@ Parser.keyToDisplay["deep"]  = "地底";
 Parser.keyToDisplay["wood"]  = "木";
 Parser.keyToDisplay["drow"]  = "卓爾";
 Parser.keyToDisplay["high"]  = "高等";
+//classes
+Parser.keyToDisplay["wizard"]   = "法師";
+Parser.keyToDisplay["sorcerer"] = "術士";
+Parser.keyToDisplay["warlock"]  = "契術師";
+Parser.keyToDisplay["ranger"]   = "遊俠";
+Parser.keyToDisplay["paladin"]  = "聖騎士";
+Parser.keyToDisplay["druid"]    = "德魯伊";
+Parser.keyToDisplay["cleric"]   = "牧師";
+Parser.keyToDisplay["bard"]     = "吟遊詩人";
+
 //Skill
 Parser.keyToDisplay["athletics"]  		= "運動";
 Parser.keyToDisplay["acrobatics"]  		= "特技";
@@ -1379,6 +1397,45 @@ Parser.keyToDisplay["cube"]= "立方";
 Parser.keyToDisplay["cone"]= "錐形";
 Parser.keyToDisplay["cylinder"]= "圓柱";
 Parser.keyToDisplay["radius"]= "半徑";
+//Damage Type
+Parser.keyToDisplay["acid"]			= "強酸";
+Parser.keyToDisplay["bludgeoning"]	= "鈍擊";
+Parser.keyToDisplay["cold"]			= "寒冷";
+Parser.keyToDisplay["fire"]			= "火焰";
+Parser.keyToDisplay["force"]		= "力場";
+Parser.keyToDisplay["lightning"]	= "閃電";
+Parser.keyToDisplay["necrotic"]		= "黯蝕";
+Parser.keyToDisplay["piercing"]		= "穿刺";
+Parser.keyToDisplay["poison"]		= "毒素";
+Parser.keyToDisplay["psychic"]		= "精神";
+Parser.keyToDisplay["radiant"]		= "光耀";
+Parser.keyToDisplay["slashing"]		= "劈砍";
+Parser.keyToDisplay["thunder"]		= "雷鳴";
+//Condotions
+Parser.keyToDisplay["blinded"]		= "目盲";
+Parser.keyToDisplay["charmed"]		= "魅惑";
+Parser.keyToDisplay["deafened"]		= "耳聾";
+Parser.keyToDisplay["exhaustion"]	= "力竭";
+Parser.keyToDisplay["frightened"]	= "恐懼";
+Parser.keyToDisplay["grappled"]		= "被擒";
+Parser.keyToDisplay["incapacitated"]= "無力";
+Parser.keyToDisplay["invisible"]	= "隱形";
+Parser.keyToDisplay["paralyzed"]	= "麻痺";
+Parser.keyToDisplay["petrified"]	= "石化";
+Parser.keyToDisplay["poisoned"]		= "中毒";
+Parser.keyToDisplay["prone"]		= "伏地";
+Parser.keyToDisplay["restrained"]	= "束縛";
+Parser.keyToDisplay["stunned"]		= "震懾";
+Parser.keyToDisplay["unconscious"]	= "昏迷";
+
+//Spell
+Parser.keyToDisplay["action"] = "動作";
+Parser.keyToDisplay["bonus"] = "附贈";
+Parser.keyToDisplay["reaction"] = "反應";
+Parser.keyToDisplay["round"] = "輪";
+Parser.keyToDisplay["minute"] = "分鐘";
+Parser.keyToDisplay["hour"] = "小時";
+
 
 //Item
 Parser.itemKeyToDisplay["none"] 	= "無";
@@ -1683,15 +1740,15 @@ SKL_ABV_TRA = "T";
 SKL_ABV_CON = "C";
 SKL_ABV_PSI = "P";
 
-SKL_ABJ = "Abjuration";
-SKL_EVO = "Evocation";
-SKL_ENC = "Enchantment";
-SKL_ILL = "Illusion";
-SKL_DIV = "Divination";
-SKL_NEC = "Necromancy";
-SKL_TRA = "Transmutation";
-SKL_CON = "Conjuration";
-SKL_PSI = "Psionic";
+SKL_ABJ = "防護";
+SKL_EVO = "塑能";
+SKL_ENC = "惑控";
+SKL_ILL = "幻術";
+SKL_DIV = "預言";
+SKL_NEC = "死靈";
+SKL_TRA = "變化";
+SKL_CON = "咒法";
+SKL_PSI = "靈能";
 
 Parser.SP_SCHOOL_ABV_TO_FULL = {};
 Parser.SP_SCHOOL_ABV_TO_FULL[SKL_ABV_ABJ] = SKL_ABJ;
@@ -1705,15 +1762,15 @@ Parser.SP_SCHOOL_ABV_TO_FULL[SKL_ABV_CON] = SKL_CON;
 Parser.SP_SCHOOL_ABV_TO_FULL[SKL_ABV_PSI] = SKL_PSI;
 
 Parser.SP_SCHOOL_ABV_TO_SHORT = {};
-Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_ABJ] = "Abj.";
-Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_EVO] = "Evoc.";
-Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_ENC] = "Ench.";
-Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_ILL] = "Illu.";
-Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_DIV] = "Divin.";
-Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_NEC] = "Necro.";
-Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_TRA] = "Trans.";
-Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_CON] = "Conj.";
-Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_PSI] = "Psi.";
+Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_ABJ] = "防護";
+Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_EVO] = "塑能";
+Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_ENC] = "惑控";
+Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_ILL] = "幻術";
+Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_DIV] = "預言";
+Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_NEC] = "死靈";
+Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_TRA] = "變化";
+Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_CON] = "咒法";
+Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_PSI] = "靈能";
 
 Parser.ATB_ABV_TO_FULL = {
 	"str": "力量",
@@ -1924,7 +1981,7 @@ SRC_3PP_SUFFIX = " 3pp";
 SRC_STREAM = "Stream";
 SRC_TWITTER = "Twitter";
 
-AL_PREFIX = "Adventurers League: ";
+AL_PREFIX = "冒險者聯盟：";
 AL_PREFIX_SHORT = "AL: ";
 PS_PREFIX = "Plane Shift: ";
 PS_PREFIX_SHORT = "PS: ";
@@ -1933,24 +1990,24 @@ UA_PREFIX_SHORT = "UA: ";
 TftYP_NAME = "Tales from the Yawning Portal";
 
 Parser.SOURCE_JSON_TO_FULL = {};
-Parser.SOURCE_JSON_TO_FULL[SRC_CoS] = "Curse of Strahd";
+Parser.SOURCE_JSON_TO_FULL[SRC_CoS] = "斯特拉德的詛咒";
 Parser.SOURCE_JSON_TO_FULL[SRC_DMG] = "地下城主指南";
-Parser.SOURCE_JSON_TO_FULL[SRC_EEPC] = "Elemental Evil Player's Companion";
-Parser.SOURCE_JSON_TO_FULL[SRC_EET] = "Elemental Evil: Trinkets";
-Parser.SOURCE_JSON_TO_FULL[SRC_HotDQ] = "Hoard of the Dragon Queen";
-Parser.SOURCE_JSON_TO_FULL[SRC_LMoP] = "Lost Mine of Phandelver";
+Parser.SOURCE_JSON_TO_FULL[SRC_EEPC] = "邪惡元素玩家指南";
+Parser.SOURCE_JSON_TO_FULL[SRC_EET] = "邪惡元素：飾品";
+Parser.SOURCE_JSON_TO_FULL[SRC_HotDQ] = "龍后的寶藏";
+Parser.SOURCE_JSON_TO_FULL[SRC_LMoP] = "凡戴爾的失落礦坑";
 Parser.SOURCE_JSON_TO_FULL[SRC_Mag] = "Dragon Magazine";
 Parser.SOURCE_JSON_TO_FULL[SRC_MM] = "怪物圖鑑";
 Parser.SOURCE_JSON_TO_FULL[SRC_OotA] = "Out of the Abyss";
 Parser.SOURCE_JSON_TO_FULL[SRC_PHB] = "玩家手冊";
 Parser.SOURCE_JSON_TO_FULL[SRC_PotA] = "Princes of the Apocalypse";
-Parser.SOURCE_JSON_TO_FULL[SRC_RoT] = "The Rise of Tiamat";
-Parser.SOURCE_JSON_TO_FULL[SRC_RoTOS] = "The Rise of Tiamat Online Supplement";
+Parser.SOURCE_JSON_TO_FULL[SRC_RoT] = "提亞瑪特的崛起";
+Parser.SOURCE_JSON_TO_FULL[SRC_RoTOS] = "提亞瑪特的崛起 線上增刊";
 Parser.SOURCE_JSON_TO_FULL[SRC_SCAG] = "劍灣冒險指南";
-Parser.SOURCE_JSON_TO_FULL[SRC_SKT] = "Storm King's Thunder";
-Parser.SOURCE_JSON_TO_FULL[SRC_ToA] = "Tomb of Annihilation";
-Parser.SOURCE_JSON_TO_FULL[SRC_ToD] = "Tyranny of Dragons";
-Parser.SOURCE_JSON_TO_FULL[SRC_TTP] = "The Tortle Package";
+Parser.SOURCE_JSON_TO_FULL[SRC_SKT] = "風暴王之雷霆";
+Parser.SOURCE_JSON_TO_FULL[SRC_ToA] = "湮滅之墓";
+Parser.SOURCE_JSON_TO_FULL[SRC_ToD] = "龍族暴政";
+Parser.SOURCE_JSON_TO_FULL[SRC_TTP] = "龜人擴充包";
 Parser.SOURCE_JSON_TO_FULL[SRC_TYP] = TftYP_NAME;
 Parser.SOURCE_JSON_TO_FULL[SRC_TYP_AtG] = TftYP_NAME;
 Parser.SOURCE_JSON_TO_FULL[SRC_TYP_DiT] = TftYP_NAME;
@@ -1963,15 +2020,15 @@ Parser.SOURCE_JSON_TO_FULL[SRC_VGM] = "瓦羅的怪物指南";
 Parser.SOURCE_JSON_TO_FULL[SRC_XGE] = "姍納薩的萬事指南";
 Parser.SOURCE_JSON_TO_FULL[SRC_OGA] = "One Grung Above";
 Parser.SOURCE_JSON_TO_FULL[SRC_MTF] = "魔鄧肯的眾敵卷冊";
-Parser.SOURCE_JSON_TO_FULL[SRC_WDH] = "Waterdeep: Dragon Heist";
-Parser.SOURCE_JSON_TO_FULL[SRC_WDMM] = "Waterdeep: Dungeon of the Mad Mage";
+Parser.SOURCE_JSON_TO_FULL[SRC_WDH] = "深水城：龍幣飛劫";
+Parser.SOURCE_JSON_TO_FULL[SRC_WDMM] = "深水城：Dungeon of the Mad Mage";
 Parser.SOURCE_JSON_TO_FULL[SRC_GGR] = "拉尼卡的公會長指南";
 Parser.SOURCE_JSON_TO_FULL[SRC_KKW] = "Krenko's Way";
 Parser.SOURCE_JSON_TO_FULL[SRC_LLK] = "Lost Laboratory of Kwalish";
 Parser.SOURCE_JSON_TO_FULL[SRC_AL] = "冒險者聯盟";
-Parser.SOURCE_JSON_TO_FULL[SRC_SCREEN] = "Dungeon Master's Screen";
-Parser.SOURCE_JSON_TO_FULL[SRC_ALCoS] = AL_PREFIX + "Curse of Strahd";
-Parser.SOURCE_JSON_TO_FULL[SRC_ALEE] = AL_PREFIX + "Elemental Evil";
+Parser.SOURCE_JSON_TO_FULL[SRC_SCREEN] = "地下城主屏幕";
+Parser.SOURCE_JSON_TO_FULL[SRC_ALCoS] = AL_PREFIX + "斯特拉德的詛咒";
+Parser.SOURCE_JSON_TO_FULL[SRC_ALEE] = AL_PREFIX + "邪惡元素";
 Parser.SOURCE_JSON_TO_FULL[SRC_ALRoD] = AL_PREFIX + "Rage of Demons";
 Parser.SOURCE_JSON_TO_FULL[SRC_PSA] = PS_PREFIX + "Amonkhet";
 Parser.SOURCE_JSON_TO_FULL[SRC_PSI] = PS_PREFIX + "Innistrad";
