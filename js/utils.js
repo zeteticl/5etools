@@ -883,7 +883,7 @@ Parser.spMetaToFull = function (meta) {
 
 Parser.spLevelSchoolMetaToFull = function (level, school, meta) {
 	const levelPart = level === 0 ? Parser.spLevelToFull(level).toLowerCase() : level + "環";
-	let levelSchoolStr = level === 0 ? `${Parser.spSchoolAbvToFull(school)} ${levelPart}` : `${levelPart} ${Parser.spSchoolAbvToFull(school).toLowerCase()}`;
+	let levelSchoolStr = level === 0 ? `${Parser.spSchoolAbvToFull(school)}系 ${levelPart}` : `${levelPart} ${Parser.spSchoolAbvToFull(school).toLowerCase()}系`;
 	return levelSchoolStr + Parser.spMetaToFull(meta);
 };
 
@@ -978,7 +978,7 @@ Parser.spDurationToFull = function (dur) {
 			case "special":
 				return "特殊";
 			case "instant":
-				return `Instantaneous${d.condition ? ` (${d.condition})` : ""}`;
+				return `即效${d.condition ? ` (${d.condition})` : ""}`;
 			case "timed":
 				return `${d.concentration ? "專注，" : ""}${d.concentration ? "" : d.duration.upTo ? "" : ""}${d.concentration || d.duration.upTo ? "至多" : ""}${d.duration.amount}${d.duration.amount === 1 ? Parser.translateKeyToDisplay(d.duration.type) : `${Parser.translateKeyToDisplay(d.duration.type)}`}`;
 			case "permanent":
@@ -993,14 +993,14 @@ Parser.spDurationToFull = function (dur) {
 
 Parser.spClassesToFull = function (classes, textOnly) {
 	const fromSubclasses = Parser.spSubclassesToFull(classes, textOnly);
-	return Parser.spMainClassesToFull(classes, textOnly) + (fromSubclasses ? ", " + fromSubclasses : "");
+	return Parser.spMainClassesToFull(classes, textOnly) + (fromSubclasses ? "、" + fromSubclasses : "");
 };
 
 Parser.spMainClassesToFull = function (classes, textOnly) {
 	return classes.fromClassList
 		.sort((a, b) => SortUtil.ascSort(a.name, b.name))
-		.map(c => textOnly ? c.name : `<span title="Source: ${Parser.sourceJsonToFull(c.source)}">${c.name}</span>`)
-		.join(", ");
+		.map(c => textOnly ? Parser.translateKeyToDisplay(c.name) : `<span title="資源：${Parser.sourceJsonToFull(c.source)}">${Parser.translateKeyToDisplay(c.name)}</span>`)
+		.join("、");
 };
 
 Parser.spSubclassesToFull = function (classes, textOnly) {
@@ -1011,13 +1011,13 @@ Parser.spSubclassesToFull = function (classes, textOnly) {
 			return byName || SortUtil.ascSort(a.subclass.name, b.subclass.name);
 		})
 		.map(c => Parser._spSubclassItem(c, textOnly))
-		.join(", ");
+		.join("、");
 };
 
 Parser._spSubclassItem = function (fromSubclass, textOnly) {
 	const text = `${fromSubclass.subclass.name}${fromSubclass.subclass.subSubclass ? ` (${fromSubclass.subclass.subSubclass})` : ""}`;
-	if (textOnly) return text;
-	return `<span class="italic" title="Source: ${Parser.sourceJsonToFull(fromSubclass.subclass.source)}">${text}</span> <span title="Source: ${Parser.sourceJsonToFull(fromSubclass.class.source)}">${fromSubclass.class.name}</span>`;
+	if (textOnly) return Parser.translateKeyToDisplay(text);
+	return `<span class="italic" title="資源：${Parser.sourceJsonToFull(fromSubclass.subclass.source)}">${Parser.translateKeyToDisplay(text)}</span>-<span title="資源：${Parser.sourceJsonToFull(fromSubclass.class.source)}">${Parser.translateKeyToDisplay(fromSubclass.class.name)}</span>`;
 };
 
 Parser.SPELL_ATTACK_TYPE_TO_FULL = {};
@@ -1335,6 +1335,11 @@ Parser.keyToDisplay["paladin"]  = "聖騎士";
 Parser.keyToDisplay["druid"]    = "德魯伊";
 Parser.keyToDisplay["cleric"]   = "牧師";
 Parser.keyToDisplay["bard"]     = "吟遊詩人";
+Parser.keyToDisplay["fighter"]  = "戰士";
+Parser.keyToDisplay["rogue"]    = "遊蕩者";
+
+Parser.keyToDisplay["arcane trickster"]    = "詭術師";
+Parser.keyToDisplay["eldritch knight"]     = "魔能騎士";
 
 //Skill
 Parser.keyToDisplay["athletics"]  		= "運動";
