@@ -1398,13 +1398,13 @@ Parser.keyToDisplay["cone"]= "錐形";
 Parser.keyToDisplay["cylinder"]= "圓柱";
 Parser.keyToDisplay["radius"]= "半徑";
 //Damage Type
-Parser.keyToDisplay["acid"]			= "強酸";
+Parser.keyToDisplay["acid"]			= "酸蝕";
 Parser.keyToDisplay["bludgeoning"]	= "鈍擊";
 Parser.keyToDisplay["cold"]			= "寒冷";
 Parser.keyToDisplay["fire"]			= "火焰";
 Parser.keyToDisplay["force"]		= "力場";
 Parser.keyToDisplay["lightning"]	= "閃電";
-Parser.keyToDisplay["necrotic"]		= "黯蝕";
+Parser.keyToDisplay["necrotic"]		= "死靈";
 Parser.keyToDisplay["piercing"]		= "穿刺";
 Parser.keyToDisplay["poison"]		= "毒素";
 Parser.keyToDisplay["psychic"]		= "精神";
@@ -2212,7 +2212,7 @@ Parser.ITEM_TYPE_JSON_TO_ABV = {
 
 Parser.DMGTYPE_JSON_TO_FULL = {
 	"B": "鈍擊",
-	"N": "黯蝕",
+	"N": "死靈",
 	"P": "穿刺",
 	"R": "光耀",
 	"S": "劈砍"
