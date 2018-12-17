@@ -1495,6 +1495,7 @@ Parser.ArmorToDisplay = function(armor){
 Parser.RaceToDisplay = function(race){
 	race = Parser.translateKeyToDisplay(race);
 	let r_match = race.match(/([^()]*)(\((.*)\))?/g);
+	console.log(r_match);
 	if(r_match && r_match[2]){
 		return Parser.translateKeyToDisplay(r_match[0])+"("+Parser.translateKeyToDisplay(r_match[2])+")";
 	}
