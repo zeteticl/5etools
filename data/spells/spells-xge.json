@@ -246,7 +246,7 @@
 				]
 			},
 			"entries": [
-				"You establish a telepathic link with one beast you touch that is friendly to you or {@condition charmed} by you. The spell fails if the beast's Intelligence score is 4 or higher. Until the spell ends, the link is active while you and the beast are within line of sight of each other. Through the link, the beast can understand your telepathic messages to it, and it can telepathically communicate simple emotions and concepts back to you. While the link is active, the beast gains advantage on attack rolls against any creature within 5 feet of you that you can see."
+				"你和一個你所觸摸，對你友好或被你{@condition ${Parser.translateKeyToDisplay(charmed)}}的野獸建立起一道心靈連結。若該野獸的智力為4或更高，則此法術失敗。直到法術效果結束之前，只要你和該野獸相互處於彼此的視線之內，此連結便處於有效狀態。透過此連結，該野獸可以理解你對牠以心靈感應傳遞的信息，且牠也會以心靈感應向你傳遞基本的情緒和想法。只要此連結仍然有效，則該野獸在對位於你周圍5呎，你所能看見的任何生物所進行的攻擊檢定中獲得優勢。."
 			],
 			"page": 150,
 			"otherSources": [
@@ -296,15 +296,15 @@
 			},
 			"entries": [
 				"You cause up to six pillars of stone to burst from places on the ground that you can see within range. Each pillar is a cylinder that has a diameter of 5 feet and a height of up to 30 feet. The ground where a pillar appears must be wide enough for its diameter, and you can target the ground under a creature if that creature is Medium or smaller. Each pillar has AC 5 and 30 hit points. When reduced to 0 hit points, a pillar crumbles into rubble, which creates an area of difficult terrain with a 10-foot radius that lasts until the rubble is cleared. Each 5-foot-diameter portion of the area requires at least 1 minute to clear by hand.",
-				"If a pillar is created under a creature, that creature must succeed on a Dexterity saving throw or be lifted by the pillar. A creature can choose to fail the save.",
+				"若石柱從一個生物正下方升起，則該生物必須成功通過一次敏捷豁免檢定，否則會被石柱頂起。生物可以選擇在此豁免中失敗。",
 				"If a pillar is prevented from reaching its full height because of a ceiling or other obstacle, a creature on the pillar takes {@dice 6d6} bludgeoning damage and is {@condition restrained}, pinched between the pillar and the obstacle. The {@condition restrained} creature can use an action to make a Strength or Dexterity check (the creature's choice) against the spell's save DC. On a success, the creature is no longer {@condition restrained} and must either move off the pillar or fall off it."
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 7th level or higher, you can create two additional pillars for each slot level above 6th."
+						"當你使用7環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，你就能再額外創造出兩根石柱。"
 					]
 				}
 			],
@@ -373,9 +373,9 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, the maximum weight of objects that you can target with this spell increases by 5 pounds, and the damage increases by {@scaledice 3d8|1-9|1d8}, for each slot level above 1st."
+						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，你可以指定的物體的最大重量便增加5磅，且傷害再增加{@scaledice 3d8|1-9|1d8}。"
 					]
 				}
 			],
@@ -446,9 +446,9 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, you can target one additional willing creature for each slot level above 3rd."
+						"當你使用4環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，you can target one additional willing creature"
 					]
 				}
 			],
@@ -506,9 +506,9 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st. The creatures must be within 30 feet of each other when you target them."
+						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，you can target one additional creature. The creatures must be within 30 feet of each other when you target them."
 					]
 				}
 			],
@@ -742,7 +742,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 2nd level or higher, each target takes {@scaledice 2d8+1d6|1-9|1d6} extra damage of the type rolled for each slot level above 1st."
 					]
@@ -841,7 +841,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 5th level or higher, you can target one additional creature for each slot level above 4th. The creatures must be within 30 feet of each other when you target them."
 					]
@@ -1183,7 +1183,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 8th level or higher, the number of motes created increases by two for each slot level above 7th."
 					]
@@ -1249,7 +1249,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 6th level or higher, you animate up to two additional corpses for each slot level above 5th."
 					]
@@ -1368,7 +1368,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 3rd level or higher, the damage increases by {@scaledice 3d6|2-9|1d6} for each slot level above 2nd."
 					]
@@ -1523,7 +1523,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 3rd level or higher, the damage increases by {@scaledice 1d8|2-9|1d8} for each slot level above 2nd."
 					]
@@ -1596,7 +1596,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@scaledice 1d6|1-9|1d6} for each slot level above 1st."
 					]
@@ -1738,7 +1738,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 5th level or higher, you can target one additional creature for each slot level above 4th. The creatures must be within 30 feet of each other when you target them."
 					]
@@ -1890,7 +1890,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 6th level or higher, the damage increases by {@scaledice 4d8;2d8|5-9|1d8} for each slot level above 5th."
 					]
@@ -1955,7 +1955,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@scaledice 3d12|3-9|1d12} for each slot level above 3rd."
 					]
@@ -2128,7 +2128,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 4th level or higher, the number of pieces of ammunition you can affect with this spell increases by two for each slot level above 3rd."
 					]
@@ -2417,7 +2417,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 3rd level or higher, the healing increases by {@scaledice 1d6|2-9|1d6} for each slot level above 2nd."
 					]
@@ -2533,7 +2533,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 2nd level or higher, the cold damage increases by {@scaledice 2d6|1-9|1d6} for each slot level above 1st."
 					]
@@ -2741,7 +2741,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 6th level or higher, the challenge rating increases by 1 for each slot level above 5th."
 					]
@@ -3227,7 +3227,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@scaledice 4d8|3-9|1d8} for each slot level above 3rd."
 					]
@@ -3595,7 +3595,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 4th level or higher, the number of meteors created increases by two for each slot level above 3rd."
 					]
@@ -3785,7 +3785,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 3rd level or higher, the damage increases by {@scaledice 3d8|2-9|1d8} for each slot level above 2nd."
 					]
@@ -4317,7 +4317,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
 						"When you cast this spell using a 3rd- or 4th-level spell slot, the damage increases to {@scaledice 2d8|2-9|3d8}. When you cast it using a 5th- or 6th-level spell slot, the damage increases to {@scaledice 2d8|2-9|4d8}. When you cast it using a spell slot of 7th level or higher, the damage increases to {@scaledice 2d8|2-9|5d8}."
 					]
@@ -4752,7 +4752,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 3rd level or higher, the damage increases by {@scaledice 3d6|2-9|1d6} for each slot level above 2nd."
 					]
@@ -4958,7 +4958,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 5th level or higher, the damage for each of its effects increases by {@scaledice 2d6;4d6|4-9|1d6} for each slot level above 4th."
 					]
@@ -5036,7 +5036,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 5th level or higher, the challenge rating increases by 1 for each slot level above 4th."
 					]
@@ -5144,7 +5144,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 6th or 7th level, you summon twice as many demons. If you cast it using a spell slot of 8th or 9th level, you summon three times as many demons."
 					]
@@ -5387,7 +5387,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@scaledice 3d10|3-9|1d10} for each slot level above 3rd."
 					]
@@ -5580,7 +5580,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 4th level or higher, you can animate two additional objects for each slot level above 3rd."
 					]
@@ -5777,7 +5777,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 5th level or higher, the initial damage increases by {@scaledice 10d4|4-9|2d4} for each slot level above 4th."
 					]
@@ -5855,7 +5855,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升環效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 6th level or higher, the damage increases by {@scaledice 4d8|5-9|1d8} for each slot level above 5th."
 					]
