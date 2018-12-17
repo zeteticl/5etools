@@ -1370,7 +1370,7 @@ EntryRenderer.utils = {
 	_getPageTrText: (it) => {
 		function getAltSourceText (prop, introText) {
 			if (it[prop] && it[prop].length) {
-				return `${introText} ${it[prop].map(as => {
+				return `${introText}${it[prop].map(as => {
 					if (as.entry) {
 						return EntryRenderer.getDefaultRenderer().renderEntry(as.entry);
 					} else {
