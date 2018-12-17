@@ -204,21 +204,21 @@ class FilterBox {
 				const getChildren = () => filter.filters.map(it => self.headers[it.header]);
 
 				const $hdrCompact = $(`<div class="multi-compact-visible-f split">
-						<div>${filter.categoryName} <span class="group-comb-toggle text-muted">(group ${filter.mode.toUpperCase()})</span></div>
+						<div>${filter.categoryName} <span class="group-comb-toggle text-muted">(群組 ${filter.mode.toUpperCase()})</span></div>
 					</div>`).appendTo($parent);
 				const $btnToggleComb = $hdrCompact.find(`.group-comb-toggle`);
 				const setCombineAnd = () => {
 					filter.setModeAnd();
-					$btnToggleComb.text("(group AND)");
+					$btnToggleComb.text("(群組 AND)");
 					getChildren().forEach(ch => ch.ele.data("handleUpdateCombiner")(filter.mode));
 				};
 				const setCombineOr = () => {
 					filter.setModeOr();
-					$btnToggleComb.text("(group OR)");
+					$btnToggleComb.text("(群組 OR)");
 					getChildren().forEach(ch => ch.ele.data("handleUpdateCombiner")(filter.mode));
 				};
 				$hdrCompact.find(`.group-comb-toggle`).click(() => {
-					if ($btnToggleComb.text() === "(group AND)") setCombineOr();
+					if ($btnToggleComb.text() === "(群組 AND)") setCombineOr();
 					else setCombineAnd();
 				});
 
@@ -330,11 +330,11 @@ class FilterBox {
 
 			function _addGroupLabel (idx, $line) {
 				$(`
-					<div class="multi-compact-hidden">${namePrefix ? `<span class="text-muted">${namePrefix} <span class="group-comb-toggle">(group ${parent.mode.toUpperCase()})</span>: </span>` : ""}<span>${filter.header}</span></div>
+					<div class="multi-compact-hidden">${namePrefix ? `<span class="text-muted">${namePrefix} <span class="group-comb-toggle">(群組 ${parent.mode.toUpperCase()})</span>: </span>` : ""}<span>${filter.header}</span></div>
 				`).appendTo($line);
 				$line.find(`.group-comb-toggle`).click(function () {
 					const $this = $(this);
-					if ($this.text() === "(group AND)") {
+					if ($this.text() === "(群組 AND)") {
 						parent.$ele.data("setCombiner")("or");
 					} else {
 						parent.$ele.data("setCombiner")("and");
@@ -509,7 +509,7 @@ class FilterBox {
 					nested.forEach(nestObj => {
 						const nest = nestObj.nest
 						if (!nests[nest]) {
-							const $nest = $(`<div class="filter__btn_nest">${nest} [${nestObj.nestHidden ? "\u2212" : "+"}]</div>`).click(() => {
+							const $nest = $(`<div class="filter__btn_nest">${filter.displayNestFn(nest)} [${nestObj.nestHidden ? "\u2212" : "+"}]</div>`).click(() => {
 								$nest.html($nest.html().replace(/\[[\u2212+]]$/, (it) => it === "[+]" ? "[\u2212]" : "[+]"))
 								const self = nests[nest];
 								self.$children.forEach($e => $e.toggle());
@@ -1347,6 +1347,7 @@ class Filter {
 		this.header = options.header;
 		this.items = options.items ? options.items : [];
 		this.displayFn = options.displayFn;
+		this.displayNestFn = options.displayNestFn? options.displayNestFn: function(a){return a;};
 		this.selFn = options.selFn;
 		this.deselFn = options.deselFn;
 		this.attrName = options.attrName;
@@ -1634,7 +1635,6 @@ class MultiFilter {
 				results.push(this.filters[i].toDisplay(valObj, toChecks[i]))
 			} else {
 				const totals = valObj[f.header]._totals;
-
 				if (totals.yes === 0 && totals.no === 0) results.push(null);
 				else {
 					results.push(this.filters[i].toDisplay(valObj, toChecks[i]));

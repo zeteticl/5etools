@@ -332,9 +332,10 @@ const classFilter = new Filter({header: "職業", displayFn:Parser.translateKeyT
 const subclassFilter = new GroupedFilter({
 	header: "子職業",
 	numGroups: 2,
-	displayFn: (item) => `${item.nest}: ${item.item}`
+	displayNestFn: Parser.translateKeyToDisplay,
+	displayFn: (item) => `${Parser.translateKeyToDisplay(item.nest)}：${Parser.translateKeyToDisplay(item.item)}`
 });
-const classAndSubclassFilter = new MultiFilter({name: "Classes"}, classFilter, subclassFilter);
+const classAndSubclassFilter = new MultiFilter({name: "職業"}, classFilter, subclassFilter);
 const raceFilter = new Filter({header: "種族"});
 const metaFilter = new Filter({
 	header: "構材＆雜項",

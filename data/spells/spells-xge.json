@@ -221,7 +221,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a bit of fur wrapped in a cloth"
+				"m": "一小塊被布包裹的毛皮"
 			},
 			"duration": [
 				{
@@ -330,7 +330,7 @@
 			]
 		},
 		{
-			"name": "Catapult",
+			"name": "彈射術",
 			"source": "XGE",
 			"level": 1,
 			"school": "T",
@@ -368,7 +368,7 @@
 				]
 			},
 			"entries": [
-				"Choose one object weighing 1 to 5 pounds within range that isn't being worn or carried. The object flies in a straight line up to 90 feet in a direction you choose before falling to the ground, stopping early if it impacts against a solid surface. If the object would strike a creature, that creature must make a Dexterity saving throw. On a failed save, the object strikes the target and stops moving. When the object strikes something, the object and what it strikes each take {@dice 3d8} bludgeoning damage."
+				"選擇射程內一個未被穿戴或持握，重量為1到5磅的物體。此物體向一個你選定的方向以直線軌跡飛去，在落地前可以至多行進90呎，若在途中撞到固體表面則會提前停止運動。若該物體將撞上一個生物，則該生物必須進行一次敏捷豁免檢定。若檢定失敗，該物體擊中目標並不再移動。當物體擊中某物，物體和任何被其擊中的東西都將各自受到{@dice 3d8}鈍擊傷害。"
 			],
 			"entriesHigherLevel": [
 				{
@@ -394,7 +394,7 @@
 			]
 		},
 		{
-			"name": "Catnap",
+			"name": "休憩術",
 			"source": "XGE",
 			"level": 3,
 			"school": "E",
@@ -413,7 +413,7 @@
 			},
 			"components": {
 				"s": true,
-				"m": "a pinch of sand"
+				"m": "一撮沙子"
 			},
 			"duration": [
 				{
@@ -441,14 +441,14 @@
 				]
 			},
 			"entries": [
-				"You make a calming gesture, and up to three willing creatures of your choice that you can see within range fall {@condition unconscious} for the spell's duration. The spell ends on a target early if it takes damage or someone uses an action to shake or slap it awake. If a target remains {@condition unconscious} for the full duration, that target gains the benefit of a short rest, and it can't be affected by this spell again until it finishes a long rest."
+				"你做出一個使人平靜的手勢，且射程內你能看見的，最多三名由你選擇的自願生物將在法術持續時間中陷入{@condition 昏迷}。如果目標受到傷害或某人使用動作將他搖醒或拍醒，則作用於該目標的法術將提前結束。如果目標在整個持續期間中都維持{@condition 昏迷}狀態，目標獲得一次短休的好處，且直到完成一次長休之前都不能再受到這個法術的影響。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"當你使用4環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，you can target one additional willing creature"
+						"當你使用4環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，你就可以再額外選擇一名自願生物作為目標。"
 					]
 				}
 			],
@@ -458,7 +458,7 @@
 			]
 		},
 		{
-			"name": "Cause Fear",
+			"name": "造成恐懼",
 			"source": "XGE",
 			"level": 1,
 			"school": "N",
@@ -501,14 +501,14 @@
 				]
 			},
 			"entries": [
-				"You awaken the sense of mortality in one creature you can see within range. A construct or an undead is immune to this effect. The target must succeed on a Wisdom saving throw or become {@condition frightened} of you until the spell ends. The {@condition frightened} target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+				"你喚醒了射程內你能看見的一個生物對死亡的意識。構裝生物或不死生物免疫這個效果。目標必須成功通過一次感知豁免檢定，否則將在法術結束前{@condition 恐懼}於你。{@condition 恐懼}的目標可以在它的每個回合結束時重復進行這個豁免檢定，若成功將結束這個法術對它自己的效果。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，you can target one additional creature. The creatures must be within 30 feet of each other when you target them."
+						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，你就可以再額外選擇一名生物作為目標。當你選擇這些生物時，它們彼此之間的距離必須在30呎內。"
 					]
 				}
 			],
@@ -905,17 +905,17 @@
 				]
 			},
 			"entries": [
-				"You choose nonmagical flame that you can see within range and that fits within a 5-foot cube. You affect it in one of the following ways:",
+				"你選擇射程內你能看見，5立方呎空間內的非魔法火焰。你以下述其中一個方式影響此火焰：",
 				{
 					"type": "list",
 					"items": [
-						"You instantaneously expand the flame 5 feet in one direction, provided that wood or other fuel is present in the new location.",
-						"You instantaneously extinguish the flames within the cube.",
-						"You double or halve the area of bright light and dim light cast by the flame, change its color, or both. The change lasts for 1 hour.",
-						"You cause simple shapes\u2014such as the vague form of a creature, an inanimate object, or a location\u2014to appear within the flames and animate as you like. The shapes last for 1 hour."
+						"只要新的位置處有提供木頭或其他燃料，你立刻使火焰在一個方向上蔓延5呎。",
+						"你立刻熄滅該空間內的火焰。",
+						"你使火焰產生的明亮和微亮區域的範圍加倍或減半、改變其顏色、或使兩者同時發生。這個變化將持續1個小時。",
+						"你在火焰內產生簡單的形象\u2014像是一個生物的模糊影像、一個無生命的物體、或一個地點\u2014並使其如你所想的活動。這個形象將持續1個小時。"
 					]
 				},
-				"If you cast this spell multiple times, you can have up to three non-instantaneous effects created by it active at a time, and you can dismiss such an effect as an action."
+				"如果你多次施放這個法術，你可以讓至多3個非即效的效果同時生效，且你可以以一個動作解除這些效果。"
 			],
 			"page": 152,
 			"otherSources": [

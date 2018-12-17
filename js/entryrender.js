@@ -1374,13 +1374,13 @@ EntryRenderer.utils = {
 					if (as.entry) {
 						return EntryRenderer.getDefaultRenderer().renderEntry(as.entry);
 					} else {
-						return `<i title="${Parser.sourceJsonToFull(as.source)}">${Parser.sourceJsonToAbv(as.source)}</i>${as.page ? `, 第${as.page}頁` : ""}`;
+						return `<i title="${Parser.sourceJsonToFull(as.source)}">${Parser.sourceJsonToAbv(as.source)}</i>${as.page ? `-第${as.page}頁` : ""}`;
 					}
 				}).join("; ")}`
 			} else return "";
 		}
 		const sourceSub = EntryRenderer.utils.getSourceSubText(it);
-		const baseText = it.page ? `<b>資源：</b> <i title="${Parser.sourceJsonToFull(it.source)}${sourceSub}">${Parser.sourceJsonToAbv(it.source)}${sourceSub}</i>, 第${it.page}頁` : "";
+		const baseText = it.page ? `<b>資源：</b> <i title="${Parser.sourceJsonToFull(it.source)}${sourceSub}">${Parser.sourceJsonToAbv(it.source)}${sourceSub}</i>-第${it.page}頁` : "";
 		const addSourceText = getAltSourceText("additionalSources", "額外情報記載於");
 		const otherSourceText = getAltSourceText("otherSources", "同時記載於");
 		const externalSourceText = getAltSourceText("externalSources", "External sources:");
@@ -4215,7 +4215,7 @@ EntryRenderer.hover = {
 	bindPopoutButton (toList, handlerGenerator) {
 		const $btnPop = ListUtil.getOrTabRightButton(`btn-popout`, `new-window`)
 			.off("click")
-			.attr("title", "Popout Window (SHIFT for Source Data)");
+			.attr("title", "彈出視窗（按住SHIFT以檢視源代碼）");
 
 		const popoutCodeId = EntryRenderer.hover.__initOnMouseHoverEntry({});
 

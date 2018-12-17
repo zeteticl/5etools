@@ -951,9 +951,9 @@ Parser.spRangeToFull = function (range) {
 Parser.getSingletonUnit = function (unit) {
 	switch (unit) {
 		case UNT_FEET:
-			return "英呎";
+			return "呎";
 		case UNT_MILES:
-			return "英里";
+			return "里";
 		default: {
 			const fromBrew = MiscUtil.getProperty(BrewUtil.homebrewMeta, "spellDistanceUnits", unit, "singular");
 			if (fromBrew) return fromBrew;
@@ -983,12 +983,12 @@ Parser.spDurationToFull = function (dur) {
 				return `${d.concentration ? "專注，" : ""}${d.concentration ? "" : d.duration.upTo ? "" : ""}${d.concentration || d.duration.upTo ? "至多" : ""}${d.duration.amount}${d.duration.amount === 1 ? Parser.translateKeyToDisplay(d.duration.type) : `${Parser.translateKeyToDisplay(d.duration.type)}`}`;
 			case "permanent":
 				if (d.ends) {
-					return `Until ${d.ends.map(m => m === "dispel" ? "dispelled" : m === "trigger" ? "triggered" : m === "discharge" ? "discharged" : undefined).join(" or ")}`;
+					return `Until ${d.ends.map(m => m === "dispel" ? "dispelled" : m === "trigger" ? "triggered" : m === "discharge" ? "discharged" : undefined).join(" 或 ")}`;
 				} else {
 					return "永久";
 				}
 		}
-	}).join(" or ") + (dur.length > 1 ? " (see below)" : "");
+	}).join(" 或 ") + (dur.length > 1 ? "（見下文）" : "");
 };
 
 Parser.spClassesToFull = function (classes, textOnly) {
@@ -1335,8 +1335,10 @@ Parser.keyToDisplay["paladin"]  = "聖騎士";
 Parser.keyToDisplay["druid"]    = "德魯伊";
 Parser.keyToDisplay["cleric"]   = "牧師";
 Parser.keyToDisplay["bard"]     = "吟遊詩人";
+Parser.keyToDisplay["barbarian"]= "野蠻人";
 Parser.keyToDisplay["fighter"]  = "戰士";
 Parser.keyToDisplay["rogue"]    = "遊蕩者";
+Parser.keyToDisplay["ranger (revised)"]   = "遊俠(修訂)";
 
 Parser.keyToDisplay["arcane trickster"]    = "詭術師";
 Parser.keyToDisplay["eldritch knight"]     = "魔能騎士";
@@ -2036,7 +2038,7 @@ Parser.SOURCE_JSON_TO_FULL[SRC_WDH] = "深水城：龍幣飛劫";
 Parser.SOURCE_JSON_TO_FULL[SRC_WDMM] = "深水城：Dungeon of the Mad Mage";
 Parser.SOURCE_JSON_TO_FULL[SRC_GGR] = "拉尼卡的公會長指南";
 Parser.SOURCE_JSON_TO_FULL[SRC_KKW] = "Krenko's Way";
-Parser.SOURCE_JSON_TO_FULL[SRC_LLK] = "Lost Laboratory of Kwalish";
+Parser.SOURCE_JSON_TO_FULL[SRC_LLK] = "夸力許的失落實驗室";
 Parser.SOURCE_JSON_TO_FULL[SRC_AL] = "冒險者聯盟";
 Parser.SOURCE_JSON_TO_FULL[SRC_SCREEN] = "地下城主屏幕";
 Parser.SOURCE_JSON_TO_FULL[SRC_ALCoS] = AL_PREFIX + "斯特拉德的詛咒";
@@ -3169,7 +3171,7 @@ ListUtil = {
 					DataUtil.userDownload(ListUtil._getDownloadName(), JSON.stringify(ListUtil._getExportableSublist(), null, "\t"));
 				}
 			})
-			.attr("title", "Download List (SHIFT for Link)");
+			.attr("title", "下載列表（SHIFT for Link）");
 	},
 
 	doJsonLoad (json, additive, funcPreload) {
@@ -3205,7 +3207,7 @@ ListUtil = {
 				}).appendTo($(`body`));
 				$iptAdd.click();
 			})
-			.attr("title", "Upload List (SHIFT for Add Only)");
+			.attr("title", "上傳列表(SHIFT for Add Only)");
 	},
 
 	setFromSubHashes: (subHashes, funcPreload) => {
@@ -3517,8 +3519,8 @@ ListUtil = {
 	},
 
 	initGenericAddable: () => {
-		ListUtil.initContextMenu(ListUtil.handleGenericMultiContextMenuClick, "Popout", "Add");
-		ListUtil.initSubContextMenu(ListUtil.handleGenericMultiSubContextMenuClick, "Popout", "Remove", "Clear List", null, "Feeling Lucky?", null, "Download JSON");
+		ListUtil.initContextMenu(ListUtil.handleGenericMultiContextMenuClick, "彈出視窗", "加入");
+		ListUtil.initSubContextMenu(ListUtil.handleGenericMultiSubContextMenuClick, "彈出視窗", "移除", "清除列表", null, "試試手氣？", null, "下載JSON");
 	},
 
 	handleGenericMultiContextMenuClick: (evt, ele, $invokedOn, $selectedMenu) => {
@@ -3837,7 +3839,7 @@ UrlUtil = {
 				copyText(parts.join(HASH_PART_SEP));
 				JqueryUtil.showCopiedEffect($btn);
 			})
-			.attr("title", "Get Link to Filters (SHIFT adds List)")
+			.attr("title", "複製篩選器連結（SHIFT以加入列表）")
 	}
 };
 
@@ -4838,7 +4840,7 @@ BrewUtil = {
 		$btnWrp
 			.append($btnGet)
 			.append(" ")
-			.append($(`<label role="button" class="btn btn-default btn-sm btn-file">Upload File</label>`).append($iptAdd))
+			.append($(`<label role="button" class="btn btn-default btn-sm btn-file">上傳檔案</label>`).append($iptAdd))
 			.append(" ")
 			.append($btnLoadFromUrl)
 			.append(" ")
