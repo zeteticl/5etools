@@ -271,16 +271,16 @@ function pPostLoad () {
 					"Spells",
 					spellList,
 					{
-						name: {name: "Name", transform: true},
-						source: {name: "Source", transform: (it) => `<span class="${Parser.sourceJsonToColor(it)}" title="${Parser.sourceJsonToFull(it)}">${Parser.sourceJsonToAbv(it)}</span>`},
-						level: {name: "Level", transform: (it) => Parser.spLevelToFull(it)},
-						time: {name: "Casting Time", transform: (it) => getTblTimeStr(it[0])},
-						school: {name: "School", transform: (it) => `<span class="school_${it}">${Parser.spSchoolAbvToFull(it)}</span>`},
-						range: {name: "Range", transform: (it) => Parser.spRangeToFull(it)},
-						components: {name: "Components", transform: (it) => Parser.spComponentsToFull(it)},
-						classes: {name: "Classes", transform: (it) => Parser.spMainClassesToFull(it)},
-						entries: {name: "Text", transform: (it) => EntryRenderer.getDefaultRenderer().renderEntry({type: "entries", entries: it}, 1), flex: 3},
-						entriesHigherLevel: {name: "At Higher Levels", transform: (it) => EntryRenderer.getDefaultRenderer().renderEntry({type: "entries", entries: (it || [])}, 1), flex: 2}
+						name: {name: "名稱", transform: true},
+						source: {name: "資源", transform: (it) => `<span class="${Parser.sourceJsonToColor(it)}" title="${Parser.sourceJsonToFull(it)}">${Parser.sourceJsonToAbv(it)}</span>`},
+						level: {name: "環位", transform: (it) => Parser.spLevelToFull(it)},
+						time: {name: "施法時間", transform: (it) => getTblTimeStr(it[0])},
+						school: {name: "學派", transform: (it) => `<span class="school_${it}">${Parser.spSchoolAbvToFull(it)}</span>`},
+						range: {name: "射程", transform: (it) => Parser.spRangeToFull(it)},
+						components: {name: "構材", transform: (it) => Parser.spComponentsToFull(it)},
+						classes: {name: "職業", transform: (it) => Parser.spMainClassesToFull(it)},
+						entries: {name: "文字", transform: (it) => EntryRenderer.getDefaultRenderer().renderEntry({type: "entries", entries: it}, 1), flex: 3},
+						entriesHigherLevel: {name: "更高環位施放", transform: (it) => EntryRenderer.getDefaultRenderer().renderEntry({type: "entries", entries: (it || [])}, 1), flex: 2}
 					},
 					{generator: ListUtil.basicFilterGenerator},
 					(a, b) => SortUtil.ascSort(a.name, b.name) || SortUtil.ascSort(a.source, b.source)
@@ -463,7 +463,7 @@ function pPageInit (loadedSources) {
 	});
 	ListUtil.initGenericPinnable();
 
-	spellBookView = new BookModeView("bookview", $(`#btn-spellbook`), "If you wish to view multiple spells, please first make a list",
+	spellBookView = new BookModeView("bookview", $(`#btn-spellbook`), "如果你想要一次檢視多個法術，請先創造一份清單",
 		($tbl) => {
 			const toShow = ListUtil.getSublistedIds().map(id => spellList[id]);
 			let numShown = 0;
