@@ -1496,7 +1496,7 @@ Parser.RaceToDisplay = function(race){
 	race = Parser.translateKeyToDisplay(race);
 	let r_match = race.match(/([^()]*)( ?\((.*)\))?/);
 	if(r_match && r_match[2]){
-		return Parser.translateKeyToDisplay(r_match[1])+"("+Parser.translateKeyToDisplay(r_match[3])+")";
+		return Parser.translateKeyToDisplay(r_match[1].replace(/ *$/,""))+"("+Parser.translateKeyToDisplay(r_match[3])+")";
 	}
 	return race;
 }
