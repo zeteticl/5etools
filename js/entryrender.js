@@ -1686,8 +1686,7 @@ EntryRenderer.spell = {
 		}
 
 		if (spell.races) {
-			console.log(spell.races);
-			renderStack.push(`<tr class="text"><td class="classes" colspan="6"><span class="bold">種族：</span>${spell.races.map(r => renderer.renderEntry(`{@race ${Parser.translateKeyToDisplay(r.name)}|${r.source}}`)).join(", ")}</td></tr>`);
+			renderStack.push(`<tr class="text"><td class="classes" colspan="6"><span class="bold">種族：</span>${spell.races.map(r => renderer.renderEntry(`{@race ${Parser.RaceToDisplay(r.name)}|${r.source}}`)).join(", ")}</td></tr>`);
 		}
 
 		if (spell._scrollNote) {
