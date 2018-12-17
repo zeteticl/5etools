@@ -1493,7 +1493,12 @@ Parser.ArmorToDisplay = function(armor){
 	return Parser.translateKeyToDisplay(armor);
 }
 Parser.RaceToDisplay = function(race){
-	return Parser.translateKeyToDisplay(race);
+	race = Parser.translateKeyToDisplay(race);
+	let r_match = race.match(/([^()]*)(\((.*)\))?/g);
+	if(r_match && r_match[2]){
+		return Parser.translateKeyToDisplay(r_match[0])+"("+Parser.translateKeyToDisplay(r_match[2])+")";
+	}
+	return race;
 }
 Parser.SubraceToDisplay = function(sub_race){
 	return Parser.translateKeyToDisplay(sub_race);
@@ -1501,6 +1506,8 @@ Parser.SubraceToDisplay = function(sub_race){
 Parser.SpeedToDisplay = function(speed){
 	return Parser.translateKeyToDisplay(speed);
 }
+
+
 
 Parser.itemValueToDisplay = function(value){
 	if(!value) return value;
