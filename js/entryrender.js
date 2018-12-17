@@ -1381,8 +1381,8 @@ EntryRenderer.utils = {
 		}
 		const sourceSub = EntryRenderer.utils.getSourceSubText(it);
 		const baseText = it.page ? `<b>資源：</b> <i title="${Parser.sourceJsonToFull(it.source)}${sourceSub}">${Parser.sourceJsonToAbv(it.source)}${sourceSub}</i>，第${it.page}頁` : "";
-		const addSourceText = getAltSourceText("additionalSources", "Additional information from");
-		const otherSourceText = getAltSourceText("otherSources", "Also found in");
+		const addSourceText = getAltSourceText("additionalSources", "額外情報記載於");
+		const otherSourceText = getAltSourceText("otherSources", "同時記載於");
 		const externalSourceText = getAltSourceText("externalSources", "External sources:");
 
 		return `${[baseText, addSourceText, otherSourceText, externalSourceText].filter(it => it).join(". ")}${baseText && (addSourceText || otherSourceText || externalSourceText) ? "." : ""}`;
