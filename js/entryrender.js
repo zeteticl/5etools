@@ -1374,18 +1374,18 @@ EntryRenderer.utils = {
 					if (as.entry) {
 						return EntryRenderer.getDefaultRenderer().renderEntry(as.entry);
 					} else {
-						return `<i title="${Parser.sourceJsonToFull(as.source)}">${Parser.sourceJsonToAbv(as.source)}</i>${as.page ? `, page ${as.page}` : ""}`;
+						return `<i title="${Parser.sourceJsonToFull(as.source)}">${Parser.sourceJsonToAbv(as.source)}</i>${as.page ? `, 第${as.page}頁` : ""}`;
 					}
 				}).join("; ")}`
 			} else return "";
 		}
 		const sourceSub = EntryRenderer.utils.getSourceSubText(it);
-		const baseText = it.page ? `<b>資源：</b> <i title="${Parser.sourceJsonToFull(it.source)}${sourceSub}">${Parser.sourceJsonToAbv(it.source)}${sourceSub}</i>，第${it.page}頁` : "";
+		const baseText = it.page ? `<b>資源：</b> <i title="${Parser.sourceJsonToFull(it.source)}${sourceSub}">${Parser.sourceJsonToAbv(it.source)}${sourceSub}</i>, 第${it.page}頁` : "";
 		const addSourceText = getAltSourceText("additionalSources", "額外情報記載於");
 		const otherSourceText = getAltSourceText("otherSources", "同時記載於");
 		const externalSourceText = getAltSourceText("externalSources", "External sources:");
 
-		return `${[baseText, addSourceText, otherSourceText, externalSourceText].filter(it => it).join(". ")}${baseText && (addSourceText || otherSourceText || externalSourceText) ? "." : ""}`;
+		return `${[baseText, addSourceText, otherSourceText, externalSourceText].filter(it => it).join("。")}${baseText && (addSourceText || otherSourceText || externalSourceText) ? "。" : ""}`;
 	},
 
 	getAbilityRoller (statblock, ability) {
