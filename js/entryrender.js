@@ -1867,7 +1867,6 @@ EntryRenderer.race = {
 		const renderer = EntryRenderer.getDefaultRenderer();
 		const renderStack = [];
 		const ability = utils_getAbilityData(race.ability);
-		console.log(ability);
 		renderStack.push(`
 			${EntryRenderer.utils.getNameTr(race, true)}
 			<tr><td colspan="6">
