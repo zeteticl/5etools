@@ -280,7 +280,7 @@ function pPostLoad () {
 						components: {name: "構材", transform: (it) => Parser.spComponentsToFull(it)},
 						classes: {name: "職業", transform: (it) => Parser.spMainClassesToFull(it)},
 						entries: {name: "文字", transform: (it) => EntryRenderer.getDefaultRenderer().renderEntry({type: "entries", entries: it}, 1), flex: 3},
-						entriesHigherLevel: {name: "更高環位施放", transform: (it) => EntryRenderer.getDefaultRenderer().renderEntry({type: "entries", entries: (it || [])}, 1), flex: 2}
+						entriesHigherLevel: {name: "升環效果", transform: (it) => EntryRenderer.getDefaultRenderer().renderEntry({type: "entries", entries: (it || [])}, 1), flex: 2}
 					},
 					{generator: ListUtil.basicFilterGenerator},
 					(a, b) => SortUtil.ascSort(a.name, b.name) || SortUtil.ascSort(a.source, b.source)
