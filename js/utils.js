@@ -1494,8 +1494,8 @@ Parser.ArmorToDisplay = function(armor){
 }
 Parser.RaceToDisplay = function(race){
 	race = Parser.translateKeyToDisplay(race);
-	let r_match = race.match(/([^()]*)(\((.*)\))?/g);
-	console.log(r_match);
+	let r_match = race.match(/([^()]*)(\((.*)\))?/);
+	console.log(race, r_match);
 	if(r_match && r_match[2]){
 		return Parser.translateKeyToDisplay(r_match[0])+"("+Parser.translateKeyToDisplay(r_match[2])+")";
 	}
@@ -1513,7 +1513,7 @@ Parser.SpeedToDisplay = function(speed){
 Parser.itemValueToDisplay = function(value){
 	if(!value) return value;
 	if(value=="Varies") return "不定";
-	return value.replace(/ *([pgesc])p/g, '$1幣').replace(/p(幣)/g, '鉑金$1').replace(/g(幣)/g, '金$1').replace(/e(幣)/g, '淡金$1').replace(/s(幣)/g, '銀$1').replace(/c(幣)/g, '銅$1');
+	return value.replace(/ *([pgesc])p/g, '$1幣').replace(/p(幣)/g, '鉑金$1').replace(/g(幣)/g, '金$1').replace(/e(幣)/g, '銀金$1').replace(/s(幣)/g, '銀$1').replace(/c(幣)/g, '銅$1');
 }
 
 
