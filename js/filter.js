@@ -330,7 +330,7 @@ class FilterBox {
 
 			function _addGroupLabel (idx, $line) {
 				$(`
-					<div class="multi-compact-hidden">${namePrefix ? `<span class="text-muted">${namePrefix} <span class="group-comb-toggle">(群組 ${parent.mode.toUpperCase()})</span>: </span>` : ""}<span>${filter.header}</span></div>
+					<div class="multi-compact-hidden">${namePrefix ? `<span class="text-muted">${namePrefix} <span class="group-comb-toggle">(群組 ${parent.mode.toUpperCase()})</span>: </span>` : ""}<span>${filter.headerName? filter.headerName: filter.header}</span></div>
 				`).appendTo($line);
 				$line.find(`.group-comb-toggle`).click(function () {
 					const $this = $(this);
