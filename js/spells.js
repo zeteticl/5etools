@@ -63,7 +63,7 @@ const F_RNG_TO_FULL = {};
 F_RNG_TO_FULL[F_RNG_POINT] 		= "點";
 F_RNG_TO_FULL[F_RNG_SELF_AREA] 	= "自身(區域)";
 F_RNG_TO_FULL[F_RNG_SELF] 		= "自身";
-F_RNG_TO_FULL[F_RNG_TOUCH] 		= "觸摸";
+F_RNG_TO_FULL[F_RNG_TOUCH] 		= "觸碰";
 F_RNG_TO_FULL[F_RNG_SPECIAL] 	= "特殊";
 
 let tableDefault;
