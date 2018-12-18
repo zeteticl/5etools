@@ -323,20 +323,22 @@ let brewSpellClasses;
 const sourceFilter = getSourceFilter();
 const levelFilter = new Filter({
 	header: "Level",
+	headerName: "環位",
 	items: [
 		0, 1, 2, 3, 4, 5, 6, 7, 8, 9
 	],
 	displayFn: getFltrSpellLevelStr
 });
-const classFilter = new Filter({header: "Class", displayFn:Parser.translateKeyToDisplay});
+const classFilter = new Filter({header: "Class", headerName: "職業",displayFn:Parser.translateKeyToDisplay});
 const subclassFilter = new GroupedFilter({
 	header: "Subclass",
+	headerName: "子職業",
 	numGroups: 2,
 	displayNestFn: Parser.translateKeyToDisplay,
 	displayFn: (item) => `${Parser.translateKeyToDisplay(item.nest)}：${Parser.translateKeyToDisplay(item.item)}`
 });
 const classAndSubclassFilter = new MultiFilter({name: "Classes"}, classFilter, subclassFilter);
-const raceFilter = new Filter({header: "Race"});
+const raceFilter = new Filter({header: "Race",headerName: "種族"});
 const metaFilter = new Filter({
 	header: "Components & Miscellaneous",
 	items: [META_ADD_CONC, META_ADD_V, META_ADD_S, META_ADD_M, META_ADD_M_COST, META_ADD_M_CONSUMED, META_ADD_MB_HEAL, META_ADD_MB_PERMANENT, META_ADD_MB_SCALING, META_RITUAL, META_TECHNOMAGIC],
@@ -346,6 +348,7 @@ const metaFilter = new Filter({
 });
 const schoolFilter = new Filter({
 	header: "School",
+	headerName: "學派",
 	items: [
 		SKL_ABV_ABJ,
 		SKL_ABV_CON,
@@ -359,34 +362,34 @@ const schoolFilter = new Filter({
 	displayFn: Parser.spSchoolAbvToFull}
 );
 const damageFilter = new Filter({
-	header: "Damage Type",
+	header: "Damage Type",headerName: "傷害類型",
 	items: [
 		"acid", "bludgeoning", "cold", "fire", "force", "lightning", "necrotic", "piercing", "poison", "psychic", "radiant", "slashing", "thunder"
 	],
 	displayFn: Parser.translateKeyToDisplay
 });
 const conditionFilter = new Filter({
-	header: "Conditions Inflicted",
+	header: "Conditions Inflicted",headerName: "造成狀態",
 	items: ["blinded", "charmed", "deafened", "exhaustion", "frightened", "grappled", "incapacitated", "invisible", "paralyzed", "petrified", "poisoned", "prone", "restrained", "stunned", "unconscious"],
 	displayFn: Parser.translateKeyToDisplay
 });
 const spellAttackFilter = new Filter({
-	header: "Spell Attack",
+	header: "Spell Attack",headerName: "法術攻擊",
 	items: ["M", "R", "O"],
 	displayFn: Parser.spAttackTypeToFull
 });
 const saveFilter = new Filter({
-	header: "豁免",
+	header: "豁免",headerName: "豁免",
 	items: ["strength", "constitution", "dexterity", "intelligence", "wisdom", "charisma"],
 	displayFn: getFilterAbilitySave
 });
 const checkFilter = new Filter({
-	header: "能力檢定對抗",
+	header: "能力檢定對抗",headerName: "能力檢定對抗",
 	items: ["strength", "constitution", "dexterity", "intelligence", "wisdom", "charisma"],
 	displayFn: getFilterAbilityCheck
 });
 const timeFilter = new Filter({
-	header: "施法時間",
+	header: "施法時間",headerName: "施法時間",
 	items: [
 		TM_ACTION,
 		TM_B_ACTION,
