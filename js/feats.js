@@ -27,7 +27,8 @@ async function onJsonLoad (data) {
 				default: return tag;
 			}
 		},
-		header: "先決條件",
+		header: "Prerequisite",
+		headerName: "先決條件",
 		items: ["Ability", "Race", "Proficiency", "Spellcasting"]
 	});
 	filterBox = await pInitFilterBox(

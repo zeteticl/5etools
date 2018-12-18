@@ -19,7 +19,7 @@ async function onJsonLoad (data) {
 	});
 
 	const typeFilter = new Filter({
-		header: "類型",
+		header: "Type", headerName: "類型",
 		items: [
 			"MECH",
 			"MAG",

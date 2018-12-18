@@ -5,9 +5,9 @@ const renderer = EntryRenderer.getDefaultRenderer();
 
 let list;
 const sourceFilter = getSourceFilter();
-const skillFilter = new Filter({header: "技能熟練", displayFn: Parser.translateKeyToDisplay});
-const toolFilter = new Filter({header: "工具熟練", displayFn: Parser.translateKeyToDisplay});
-const languageFilter = new Filter({header: "語言熟練", displayFn: Parser.translateLangKeyToDisplay});
+const skillFilter = new Filter({header: "Skill Proficiencies", headerName: "技能熟練", displayFn: Parser.translateKeyToDisplay});
+const toolFilter = new Filter({header: "Tool Proficiencies", headerName: "工具熟練", displayFn: Parser.translateKeyToDisplay});
+const languageFilter = new Filter({header: "Language Proficiencies", headerName: "語言熟練", displayFn: Parser.translateLangKeyToDisplay});
 let filterBox;
 
 window.onload = async function load () {

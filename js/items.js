@@ -48,19 +48,19 @@ let mundanelist;
 let magiclist;
 const sourceFilter = getSourceFilter();
 const DEFAULT_HIDDEN_TYPES = new Set(["$", "Futuristic", "Modern", "Renaissance"]);
-const typeFilter = new Filter({header: "類型", deselFn: (it) => DEFAULT_HIDDEN_TYPES.has(it)});
-const tierFilter = new Filter({header: "Tier", items: ["None", "Minor", "Major"]});
-const propertyFilter = new Filter({header: "物品屬性", displayFn: StrUtil.uppercaseFirst});
-const costFilter = new RangeFilter({header: "價值", min: 0, max: 100, allowGreater: true, suffix: "金幣"});
-const attachedSpellsFilter = new Filter({header: "附加法術", displayFn: (it) => it.split("|")[0].toTitleCase()});
+const typeFilter = new Filter({header: "Type", headerName: "類型", deselFn: (it) => DEFAULT_HIDDEN_TYPES.has(it)});
+const tierFilter = new Filter({header: "Tier", headerName: "階級", items: ["None", "Minor", "Major"]});
+const propertyFilter = new Filter({header: "Property", headerName: "物品屬性", displayFn: StrUtil.uppercaseFirst});
+const costFilter = new RangeFilter({header: "Cost", headerName: "價值", min: 0, max: 100, allowGreater: true, suffix: "金幣"});
+const attachedSpellsFilter = new Filter({header: "Attached Spells", headerName: "附加法術", displayFn: (it) => it.split("|")[0].toTitleCase()});
 let filterBox;
 async function populateTablesAndFilters (data) {
 	const rarityFilter = new Filter({
-		header: "稀有度",
+		header: "Rarity", headerName: "稀有度",
 		items: ["None", "Common", "Uncommon", "Rare", "Very Rare", "Legendary", "Artifact", "Unknown", "Other"],
 		displayFn: Parser.translateItemKeyToDisplay
 	});
-	const attunementFilter = new Filter({header: "同調", items: ["Yes", "By...", "Optional", "No"], displayFn: function(str){
+	const attunementFilter = new Filter({header: "Attunement", headerName: "同調", items: ["Yes", "By...", "Optional", "No"], displayFn: function(str){
 			switch(str){
 			case "Yes": return "需要";
 			case "By...": return "限定...";
@@ -69,11 +69,11 @@ async function populateTablesAndFilters (data) {
 			default: return str;
 		};}});
 	const categoryFilter = new Filter({
-		header: "Category",
+		header: "Category", headerName: "分類",
 		items: ["Basic", "Generic Variant", "Specific Variant", "Other"],
 		deselFn: (it) => it === "Specific Variant"
 	});
-	const miscFilter = new Filter({header: "雜項", items: ["Charges", "Cursed", "Magic", "Mundane", "Sentient"], displayFn:function(str){switch(str){
+	const miscFilter = new Filter({header: "Miscellaneous", headerName: "雜項", items: ["Charges", "Cursed", "Magic", "Mundane", "Sentient"], displayFn:function(str){switch(str){
 		case "Magic": return "魔法物品";
 		case "Mundane": return "尋常物品";
 		case "Cursed": return "詛咒";

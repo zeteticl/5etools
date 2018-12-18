@@ -336,7 +336,7 @@ const subclassFilter = new GroupedFilter({
 	displayNestFn: Parser.translateKeyToDisplay,
 	displayFn: (item) => `${Parser.translateKeyToDisplay(item.nest)}：${Parser.translateKeyToDisplay(item.item)}`
 });
-const classAndSubclassFilter = new MultiFilter({name: "Classes"}, classFilter, subclassFilter);
+const classAndSubclassFilter = new MultiFilter({name: "職業"}, classFilter, subclassFilter);
 const raceFilter = new Filter({header: "Race", headerName: "種族"});
 const metaFilter = new Filter({
 	header: "Components & Miscellaneous", headerName: "構材＆雜項",
