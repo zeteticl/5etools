@@ -1305,7 +1305,8 @@ class FilterBox {
 FilterBox.CLS_INPUT_GROUP_BUTTON = "input-group-btn";
 FilterBox.CLS_DROPDOWN_MENU_FILTER = "dropdown-menu-filter";
 FilterBox.EVNT_VALCHANGE = "valchange";
-FilterBox.SOURCE_HEADER = "資源";
+FilterBox.SOURCE_HEADER = "Source";
+FilterBox.SOURCE_HEADER_NAME = "資源";
 FilterBox._PILL_STATES = ["ignore", "yes", "no"];
 FilterBox._STORAGE_NAME = "filterState";
 FilterBox._STORAGE_NAME_VISIBLE = "filterStateVisible";
