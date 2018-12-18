@@ -1408,7 +1408,7 @@ Parser.keyToDisplay["radius"]= "半徑";
 //Damage Type
 Parser.keyToDisplay["acid"]			= "酸蝕";
 Parser.keyToDisplay["bludgeoning"]	= "鈍擊";
-Parser.keyToDisplay["cold"]			= "寒冷";
+Parser.keyToDisplay["cold"]			= "寒冰";
 Parser.keyToDisplay["fire"]			= "火焰";
 Parser.keyToDisplay["force"]		= "力場";
 Parser.keyToDisplay["lightning"]	= "閃電";
