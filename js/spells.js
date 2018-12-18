@@ -322,30 +322,30 @@ let spellBookView;
 let brewSpellClasses;
 const sourceFilter = getSourceFilter();
 const levelFilter = new Filter({
-	header: "環位",
+	header: "Level",
 	items: [
 		0, 1, 2, 3, 4, 5, 6, 7, 8, 9
 	],
 	displayFn: getFltrSpellLevelStr
 });
-const classFilter = new Filter({header: "職業", displayFn:Parser.translateKeyToDisplay});
+const classFilter = new Filter({header: "Class", displayFn:Parser.translateKeyToDisplay});
 const subclassFilter = new GroupedFilter({
-	header: "子職業",
+	header: "Subclass",
 	numGroups: 2,
 	displayNestFn: Parser.translateKeyToDisplay,
 	displayFn: (item) => `${Parser.translateKeyToDisplay(item.nest)}：${Parser.translateKeyToDisplay(item.item)}`
 });
-const classAndSubclassFilter = new MultiFilter({name: "職業"}, classFilter, subclassFilter);
-const raceFilter = new Filter({header: "種族"});
+const classAndSubclassFilter = new MultiFilter({name: "Classes"}, classFilter, subclassFilter);
+const raceFilter = new Filter({header: "Race"});
 const metaFilter = new Filter({
-	header: "構材＆雜項",
+	header: "Components & Miscellaneous",
 	items: [META_ADD_CONC, META_ADD_V, META_ADD_S, META_ADD_M, META_ADD_M_COST, META_ADD_M_CONSUMED, META_ADD_MB_HEAL, META_ADD_MB_PERMANENT, META_ADD_MB_SCALING, META_RITUAL, META_TECHNOMAGIC],
 	displayFn: function(misc){
 		return (META_ADD_TO_FULL[misc])? META_ADD_TO_FULL[misc]: misc;
 	}
 });
 const schoolFilter = new Filter({
-	header: "學派",
+	header: "School",
 	items: [
 		SKL_ABV_ABJ,
 		SKL_ABV_CON,
@@ -359,19 +359,19 @@ const schoolFilter = new Filter({
 	displayFn: Parser.spSchoolAbvToFull}
 );
 const damageFilter = new Filter({
-	header: "傷害類型",
+	header: "Damage Type",
 	items: [
 		"acid", "bludgeoning", "cold", "fire", "force", "lightning", "necrotic", "piercing", "poison", "psychic", "radiant", "slashing", "thunder"
 	],
 	displayFn: Parser.translateKeyToDisplay
 });
 const conditionFilter = new Filter({
-	header: "造成狀態",
+	header: "Conditions Inflicted",
 	items: ["blinded", "charmed", "deafened", "exhaustion", "frightened", "grappled", "incapacitated", "invisible", "paralyzed", "petrified", "poisoned", "prone", "restrained", "stunned", "unconscious"],
 	displayFn: Parser.translateKeyToDisplay
 });
 const spellAttackFilter = new Filter({
-	header: "法術攻擊",
+	header: "Spell Attack",
 	items: ["M", "R", "O"],
 	displayFn: Parser.spAttackTypeToFull
 });
