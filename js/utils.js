@@ -923,7 +923,7 @@ Parser.spRangeToFull = function (range) {
 			case RNG_UNLIMITED_SAME_PLANE:
 				return "Unlimited on the same plane";
 			case RNG_TOUCH:
-				return "觸摸";
+				return "觸碰";
 			case UNT_FEET:
 			case UNT_MILES:
 			default:
