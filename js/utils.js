@@ -3702,6 +3702,7 @@ ListUtil = {
 function getSourceFilter (options = {}) {
 	const baseOptions = {
 		header: FilterBox.SOURCE_HEADER,
+		headerName: FilterBox.SOURCE_HEADER_NAME,
 		displayFn: (item) => Parser.sourceJsonToFullCompactPrefix(item.item || item),
 		selFn: defaultSourceSelFn,
 		groupFn: SourceUtil.getFilterGroup
