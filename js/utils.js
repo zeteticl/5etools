@@ -1338,6 +1338,7 @@ Parser.keyToDisplay["bard"]     = "吟遊詩人";
 Parser.keyToDisplay["barbarian"]= "野蠻人";
 Parser.keyToDisplay["fighter"]  = "戰士";
 Parser.keyToDisplay["rogue"]    = "遊蕩者";
+Parser.keyToDisplay["artificer"]= "神器師";
 Parser.keyToDisplay["ranger (revised)"]   = "遊俠(修訂)";
 
 Parser.keyToDisplay["arcane trickster"]    = "詭術師";
