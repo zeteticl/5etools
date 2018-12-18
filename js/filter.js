@@ -1345,6 +1345,7 @@ class Filter {
 	 */
 	constructor (options) {
 		this.header = options.header;
+		this.headerName = options.headerName;
 		this.items = options.items ? options.items : [];
 		this.displayFn = options.displayFn;
 		this.displayNestFn = options.displayNestFn? options.displayNestFn: function(a){return a;};
