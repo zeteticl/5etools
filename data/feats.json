@@ -2343,7 +2343,7 @@
 			]
 		},
 		{
-			"name": "Svirfneblin Magic",
+			"name": "斯奈布力魔法",
 			"source": "MTF",
 			"page": 0,
 			"prerequisite": [
@@ -2357,8 +2357,8 @@
 				}
 			],
 			"entries": [
-				"You have inherited the innate spellcasting ability of your ancestors. This ability allows you to cast {@spell nondetection} on yourself at will, without needing a material component. You can also cast each of the following spells once with this ability: {@spell blindness/deafness}, {@spell blur}, and {@spell disguise self}. You regain the ability to cast these spells when you finish a long rest.",
-				"Intelligence is your spellcasting ability for these spells, and you cast them at their lowest possible levels."
+				"你繼承了來自你先祖的天生施法能力。此能力允許你隨意施放{@spell nondetection}，且無須材料構材。你也可以透過此能力各自施放下列法術一次：{@spell blindness/deafness}、{@spell blur}、和{@spell disguise self}。當你完成一次長休，你將重新獲得施放這些法術的能力。",
+				"這些法術的施法屬性是智力，你只能以它們的最低環位施放它們。"
 			],
 			"additionalSources": [
 				{
@@ -2368,17 +2368,17 @@
 			]
 		},
 		{
-			"name": "Tavern Brawler",
+			"name": "酒館拳王",
 			"source": "PHB",
 			"page": 170,
 			"entries": [
-				"Accustomed to rough-and-tumble fighting using whatever weapons happen to be at hand, you gain the following benefits:",
+				"習慣於抄起任何剛好在手邊的武器加入混戰亂鬥，你獲得下列好處：",
 				{
 					"type": "list",
 					"items": [
-						"You are proficient with improvised weapons.",
-						"Your unarmed strike uses a d4 for damage.",
-						"When you hit a creature with an unarmed strike or an improvised weapon on your turn, you can use a bonus action to attempt to grapple the target."
+						"你熟練於臨時武器。",
+						"你的徒手打擊使用d4作為傷害骰。",
+						"當你在你的回合使用徒手打擊或臨時武器命中一個生物，你可以使用附贈動作以嘗試擒抱該目標。"
 					]
 				}
 			],
@@ -2523,13 +2523,13 @@
 			"source": "XGE",
 			"page": 73,
 			"entries": [
-				"Your people have extraordinary luck, which you have learned to mystically lend to your companions when you see them falter. You're not sure how you do it; you just wish it, and it happens. Surely a sign of fortune's favor!",
-				"When an ally you can see within 30 feet of you rolls a 1 on the d20 for an attack roll, an ability check, or a saving throw, you can use your reaction to let the ally reroll the die. The ally must use the new roll",
-				"When you use this ability, you can't use your Lucky racial trait before the end of your next turn."
+				"你的族人們有著非同尋常的好運氣，而你也學習過如何在看到同伴陷入困境時神秘地把好運借給他們。你也不確定你是怎麽做到的；你只是想想，它就實現了。這無疑是你受到命運眷顧的象徵！",
+				"當一個與你距離30呎內，你能看見的隊友在攻擊檢定、能力檢定、或豁免檢定的d20中骰出了1，你可以使用你的反應來讓該隊友重新擲骰。該隊友必須使用新的擲骰結果。",
+				"當你使用這個能力，直到你的下個回合結束之前，你都不能使用你的幸運種族特性。"
 			]
 		},
 		{
-			"name": "Dragon Fear",
+			"name": "龍族恐怖",
 			"prerequisite": [
 				{
 					"race": [
@@ -2542,11 +2542,11 @@
 			"source": "XGE",
 			"page": 74,
 			"entries": [
-				"When angered, you radiate menace. You gain the following benefits:",
+				"在感到憤怒時，你散發出威懾的氣息。你獲得下列好處：",
 				{
 					"type": "list",
 					"items": [
-						"Instead of exhaling destructive energy, you can expend a use of your Breath Weapon trait to roar, forcing each creature of your choice within 30 feet of you to make a Wisdom saving throw (DC 8 + your proficiency bonus + your Charisma modifier). A target automatically succeeds on the save if it can't hear or see you. On a failed save, a target becomes {@condition frightened} of you for 1 minute. If the {@condition frightened} target takes any damage, it can repeat the saving throw, ending the effect on itself on a success."
+						"你可以花費一次你噴吐武器特性的使用額度，並非噴吐出毀滅性的能量，而是發出咆嘯以強迫距離你30呎內每個你所選擇的生物進行一次感知豁免檢定（DC8+你的熟練加值+你的魅力調整值）。如果目標不能聽見或看見你，則目標將自動通過豁免。若豁免失敗，則目標將對你感到{@condition 恐懼}持續1分鐘。如果因此陷入{@condition 恐懼}的目標受到任何傷害，它可以重複進行這個豁免檢定，並在豁免成功時終止此能力對自己的效果。"
 					]
 				}
 			],
@@ -2564,7 +2564,7 @@
 			}
 		},
 		{
-			"name": "Dragon Hide",
+			"name": "龍族皮革",
 			"prerequisite": [
 				{
 					"race": [
@@ -2577,12 +2577,12 @@
 			"source": "XGE",
 			"page": 74,
 			"entries": [
-				"You manifest scales and claws reminiscent of your draconic ancestors. You gain the following benefits:",
+				"你顯而易見的鱗片和利爪讓人想起了你的龍族先祖。你獲得下列好處：",
 				{
 					"type": "list",
 					"items": [
-						"Your scales harden. While you aren't wearing armor, you can calculate your AC as 13 + your Dexterity modifier. You can use a shield and still gain this benefit.",
-						"You grow retractable claws from the tips of your fingers. Extending or retracting the claws requires no action. The claws are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to {@dice 1d4} + your Strength modifier, instead of the normal bludgeoning damage for an unarmed strike."
+						"你的鱗片變的堅硬。當你未穿著護甲，你可以使用13+你的敏捷調整值來算出你的AC。你可以在使用盾牌時而仍獲得這個好處。",
+						"你的指尖長出可伸縮的爪子。這對爪子是你可以用來進行徒手打擊的天生武器。如果你用它們命中目標，你造成等同於{@dice 1d4}+你的力量調整值的劈砍傷害，而非原本徒手打擊的鈍擊傷害。"
 					]
 				}
 			],
@@ -2954,7 +2954,7 @@
 			}
 		},
 		{
-			"name": "Wood Elf Magic",
+			"name": "木精靈魔法",
 			"prerequisite": [
 				{
 					"race": [
@@ -2968,7 +2968,7 @@
 			"source": "XGE",
 			"page": 75,
 			"entries": [
-				"You learn the magic of the primeval woods, which are revered and protected by your people. You learn one druid cantrip of your choice. You also learn the {@spell longstrider} and {@spell pass without trace} spells, each of which you can cast once without expending a spell slot. You regain the ability to cast these two spells in this way when you finish a long rest. Wisdom is your spellcasting ability for all three spells."
+				"你學會來自你族人們守護和尊崇的原初森林的魔法。你學會一個自選的德魯伊戲法。你也學會{@spell longstrider}和{@spell pass without trace}法術，你可以各施放它們一次而無須消耗法術位。當你完成一次長休，你將重新獲得透過這個方式施放這兩個法術的能力。這三個法術的施法屬性是睿知。"
 			]
 		},
 		{
