@@ -1216,8 +1216,8 @@
 				{
 					"type": "list",
 					"items": [
-						"當你{@condition 伏地}時，起身只需要花費5呎移動力。",
-						"攀爬不會消耗額外的移動力。",
+						"當你{@condition 伏地}時，起身只需要花費5呎移動速度。",
+						"攀爬不會消耗額外的移動速度。",
 						"你只需要徒步移動5呎就可以進行跳高和跳遠，而非原本的10呎。"
 					]
 				}
@@ -1254,7 +1254,7 @@
 					"items": [
 						"你忽略你所熟練的弩上的裝填屬性。",
 						"處於敵對生物5呎距離內並不會讓你的遠程攻擊獲得劣勢。",
-						"當你使用攻擊動作並且以單手武器攻擊，你可以使用附贈動作以一把你持握的{@item 手弩|phb}進行攻擊。"
+						"當你採取攻擊動作並且以單手武器攻擊，你可以使用附贈動作以一把你持握的{@item 手弩|phb}進行攻擊。"
 					]
 				}
 			]
@@ -2083,7 +2083,7 @@
 					"type": "list",
 					"items": [
 						"你的移動速度增加10呎。",
-						"當你使用疾走動作時，該回合內的困難地形不會消耗你額外的移動力。",
+						"當你採取疾走動作時，該回合內的困難地形不會消耗你額外的移動速度。",
 						"當你對一個生物進行近戰攻擊後，無論你命中與否，你在該回合都不會再引發該生物的藉機攻擊。"
 					]
 				}
@@ -2128,7 +2128,7 @@
 			"source": "PHB",
 			"page": 168,
 			"entries": [
-				"騎乘中的你是個危險的敵手。當你在騎乘時且未{@condition 無力}，你獲得下列好處：",
+				"騎乘中的你是個危險的敵手。當你在騎乘時且不處於{@condition 無力}，你獲得下列好處：",
 				{
 					"type": "list",
 					"items": [
@@ -2140,16 +2140,16 @@
 			]
 		},
 		{
-			"name": "Observant",
+			"name": "敏銳觀察",
 			"source": "PHB",
 			"page": 168,
 			"entries": [
-				"Quick to notice details of your environment, you gain the following benefits:",
+				"你能夠迅速注意周遭環境的細節，你獲得下列好處：",
 				{
 					"type": "list",
 					"items": [
-						"If you can see a creature's mouth while it is speaking a language you understand, you can interpret what it's saying by reading its lips.",
-						"You have a +5 bonus to your passive Wisdom ({@skill Perception}) and passive Intelligence ({@skill Investigation}) scores."
+						"若你可以在一個生物正以你理解的語言說話時看見它的嘴巴，你就可以透過讀唇語來理解目標正在說什麼。",
+						"你的被動睿知（{@skill 感知}）和被動智力（{@skill 調查}）獲得+5加值。"
 					]
 				}
 			],
@@ -2166,30 +2166,30 @@
 			}
 		},
 		{
-			"name": "Polearm Master",
+			"name": "長武大師",
 			"source": "PHB",
 			"page": 168,
 			"entries": [
-				"You can keep your enemies at bay with reach weapons. You gain the following benefits:",
+				"你可以使用觸及武器以牽制你的敵人。你獲得下列好處：",
 				{
 					"type": "list",
 					"items": [
-						"When you take the Attack action and attack with only a {@item glaive|phb}, {@item halberd|phb}, {@item quarterstaff|phb}, or {@item spear|phb}, you can use a bonus action to make a melee attack with the opposite end of the weapon; this attack uses the same ability modifier as the primary attack. The weapon's damage die for this attack is a d4, and the attack deals bludgeoning damage.",
-						"While you are wielding a {@item glaive|phb}, {@item halberd|phb}, {@item pike|phb}, {@item quarterstaff|phb}, or {@item spear|phb}, other creatures provoke an opportunity attack from you when they enter your reach."
+						"當你採取攻擊動作且只使用{@item glaive|phb}、{@item halberd|phb}、{@item quarterstaff|phb}、或{@item spear|phb}進行攻擊時，你可以使用附贈動作以利用該武器的另一端進行一次近戰攻擊；這個攻擊使用和主要攻擊相同的屬性調整值。這個攻擊所使用的武器傷害骰為d4，且該攻擊造成鈍擊傷害。",
+						"當你持握{@item glaive|phb}、{@item halberd|phb}、{@item pike|phb}、{@item quarterstaff|phb}、或{@item spear|phb}時，其他生物將在進入你的觸及範圍時觸發你的藉機攻擊。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Resilient",
+			"name": "適應力",
 			"source": "PHB",
 			"page": 168,
 			"entries": [
-				"Choose one ability score. You gain the following benefits:",
+				"選擇一個屬性值。你獲得下列好處：",
 				{
 					"type": "list",
 					"items": [
-						"You gain proficiency in saving throws using the chosen ability."
+						"你獲得使用所選屬性進行的豁免檢定的熟練。"
 					]
 				}
 			],
@@ -2211,7 +2211,7 @@
 			}
 		},
 		{
-			"name": "Ritual Caster",
+			"name": "儀式施法者",
 			"source": "PHB",
 			"page": 169,
 			"prerequisite": [
@@ -2227,63 +2227,63 @@
 				}
 			],
 			"entries": [
-				"You have learned a number of spells that you can cast as rituals. These spells are written in a ritual book, which you must have in hand while casting one of them.",
-				"When you choose this feat, you acquire a ritual book holding two 1st-level spells of your choice. Choose one of the following classes: {@filter bard|spells|level=1|class=bard|components & miscellaneous=ritual}, {@filter cleric|spells|level=1|class=cleric|components & miscellaneous=ritual}, {@filter druid|spells|level=1|class=druid|components & miscellaneous=ritual}, {@filter sorcerer|spells|level=1|class=sorcerer|components & miscellaneous=ritual}, {@filter warlock|spells|level=1|class=warlock|components & miscellaneous=ritual}, or {@filter wizard|spells|level=1|class=wizard|components & miscellaneous=ritual}. You must choose your spells from that class's spell list, and the spells you choose must have the ritual tag. The class you choose also determines your spellcasting ability for these spells: Charisma for bard, sorcerer, or warlock; Wisdom for cleric or druid; or Intelligence for wizard.",
-				"If you come across a spell in written form, such as a magical spell scroll or a wizard's spellbook, you might be able to add it to your ritual book. The spell must be on the spell list for the class you chose, the spell's level can be no higher than half your level (rounded up), and it must have the ritual tag. The process of copying the spell into your ritual book takes 2 hours per level of the spell, and costs 50 gp per level. The cost represents material components you expend as you experiment with the spell to master it, as well as the fine inks you need to record it."
+				"你已學會一些能夠以儀式施放的法術。這些法術被寫在一本儀式書中，當你施展其中一個法術時你必須將儀式書拿在手中。",
+				"當你選擇此專長時，你獲得一本記載著兩個自選1環法術的儀式書。從以下職業中選擇一個：{@filter 吟遊詩人|spells|level=1|class=bard|components & miscellaneous=ritual}、{@filter 牧師|spells|level=1|class=cleric|components & miscellaneous=ritual}、{@filter 德魯伊|spells|level=1|class=druid|components & miscellaneous=ritual}、{@filter 術士|spells|level=1|class=sorcerer|components & miscellaneous=ritual}、{@filter 契術師|spells|level=1|class=warlock|components & miscellaneous=ritual}、或{@filter 法師|spells|level=1|class=wizard|components & miscellaneous=ritual}。你必須從該職業的法術列表中選擇你的法術，且你所選的法術必須要具有儀式標籤。你所選的職業同時會決定你在使用這些法術時的施法屬性：吟遊詩人、術士、契術師使用魅力；牧師、德魯伊使用睿知；法師則使用智力。",
+				"若你遇到某個以書寫形式存在的法術，像是魔法法術卷軸或法師的法術書，你就有可能可以將它加到你的儀式書中。該法術必須要在你所選職業的法術列表上，該法術的環位不能超過你等級的一半（小數點進位），且它必須要具有儀式標籤。將法術抄寫到你的儀式書的過程需要耗費每環2小時的時間、以及每環50金幣的代價。這個代價代表了你在研究如何掌握該法術時所消耗的材料構材、以及你在抄寫時所需要的優質墨水。"
 			]
 		},
 		{
-			"name": "Savage Attacker",
+			"name": "野蠻攻擊者",
 			"source": "PHB",
 			"page": 169,
 			"entries": [
-				"Once per turn when you roll damage for a melee weapon attack, you can reroll the weapon's damage dice and use either total."
+				"每回合一次，當你為一次近戰武器攻擊骰傷害時，你可以重骰該武器傷害骰，並任選其中一個結果使用"
 			]
 		},
 		{
-			"name": "Sentinel",
+			"name": "哨兵",
 			"source": "PHB",
 			"page": 169,
 			"entries": [
-				"You have mastered techniques to take advantage of every drop in any enemy's guard, gaining the following benefits:",
+				"你精通在敵人防禦時占盡優勢的技巧，獲得下列好處：",
 				{
 					"type": "list",
 					"items": [
-						"When you hit a creature with an opportunity attack, the creature's speed becomes 0 for the rest of the turn.",
-						"Creatures provoke opportunity attacks from you even if they take the Disengage action before leaving your reach.",
-						"When a creature within 5 feet of you makes an attack against a target other than you (and that target doesn't have this feat), you can use your reaction to make a melee weapon attack against the attacking creature."
+						"當你以藉機攻擊命中一個生物時，該生物在該回合剩下時間的移動速度變為0。",
+						"離開你觸及範圍的生物即使採取了撤離動作，仍然會觸發你的藉機攻擊。",
+						"當一個與你距離5呎內的生物對你以外的目標進行了一次攻擊（且該目標不具有此專長），你可以使用你的反應對該攻擊者進行一次近戰武器攻擊。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Sharpshooter",
+			"name": "神射手",
 			"source": "PHB",
 			"page": 170,
 			"entries": [
-				"You have mastered ranged weapons and can make shots that others find impossible. You gain the following benefits:",
+				"你精通於遠程武器，且能夠做出他人眼中不可能的射擊。你獲得下列好處：",
 				{
 					"type": "list",
 					"items": [
-						"Attacking at long range doesn't impose disadvantage on your ranged weapon attack rolls.",
-						"Your ranged weapon attacks ignore half cover and three-quarters cover.",
-						"Before you make an attack with a ranged weapon that you are proficient with, you can choose to take a -5 penalty to the attack roll. If the attack hits, you add +10 to the attack's damage."
+						"在長射程範圍中攻擊並不會讓你的遠程武器攻擊檢定獲得劣勢。",
+						"你的遠程武器攻擊忽略半掩護和四分之三掩護。",
+						"在你以所熟練的遠程武器進行攻擊之前，你可以選擇讓該次攻擊檢定承受-5的減值。若該次攻擊命中，該次攻擊的傷害+10。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Shield Master",
+			"name": "盾牌大師",
 			"source": "PHB",
 			"page": 170,
 			"entries": [
-				"You use shields not just for protection but also for offense. You gain the following benefits while you are wielding a {@item shield|phb}:",
+				"你的盾牌不僅僅是為了防禦、更能被用來進攻。當你持握{@item 盾牌|phb}時，你獲得下列好處：",
 				{
 					"type": "list",
 					"items": [
-						"If you take the Attack action on your turn, you can use a bonus action to try to shove a creature within 5 feet of you with your shield.",
-						"If you aren't {@condition incapacitated}, you can add your shield's AC bonus to any Dexterity saving throw you make against a spell or other harmful effect that targets only you.",
-						"If you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you can use your reaction to take no damage if you succeed on the saving throw, interposing your shield between yourself and the source of the effect."
+						"如果你在你的回合採取攻擊動作，你可以使用附贈動作利用你的盾牌嘗試推撞一個與你距離5呎內的生物。",
+						"如果你不處於{@condition 無力}，你可以將你盾牌的AC加值加到用以對抗只以你為目標的法術或其他有害效果的敏捷豁免檢定上。",
+						"如果你受到了某個效果允許你進行敏捷豁免檢定以減半傷害，你可以使用你的反應以在你成功通過豁免檢定時，將你的盾牌插入你和效果源頭之間，好讓你不受傷害。"
 					]
 				}
 			]
@@ -2293,11 +2293,11 @@
 			"source": "PHB",
 			"page": 170,
 			"entries": [
-				"你獲得總共3種的自選{@book 技能s|phb|7|skills}或{@filter 工具|items|type=tool;artisan tool}的熟練。"
+				"你獲得總共3種的自選{@book 技能|phb|7|skills}或{@filter 工具|items|type=tool;artisan tool}的熟練。"
 			]
 		},
 		{
-			"name": "Skulker",
+			"name": "潛行者",
 			"source": "PHB",
 			"page": 170,
 			"prerequisite": [
@@ -2310,19 +2310,19 @@
 				}
 			],
 			"entries": [
-				"You are expert at slinking through shadows. You gain the following benefits:",
+				"你是潛行於陰影中的專家。你獲得下列好處：",
 				{
 					"type": "list",
 					"items": [
-						"You can try to hide when you are lightly obscured from the creature from which you are hiding.",
-						"When you are hidden from a creature and miss it with a ranged weapon attack, making the attack doesn't reveal your position.",
-						"Dim light doesn't impose disadvantage on your Wisdom ({@skill Perception}) checks relying on sight."
+						"當你對於你想躲避的生物而言處於輕度遮蔽時，你可以嘗試躲藏。",
+						"當你對某個生物而言躲藏狀態，且你對它進行的遠程武器攻擊失手，則進行該攻擊並不會因此暴露你的位置。",
+						"微光不會對你依賴於視覺的睿知（{@skill 感知}）檢定造成劣勢。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Spell Sniper",
+			"name": "法術射手",
 			"source": "PHB",
 			"page": 170,
 			"prerequisite": [
@@ -2331,13 +2331,13 @@
 				}
 			],
 			"entries": [
-				"You have learned techniques to enhance your attacks with certain kinds of spells, gaining the following benefits:",
+				"你熟習於利用特定法術強化你攻擊的技巧，獲得下列好處：",
 				{
 					"type": "list",
 					"items": [
-						"When you cast a spell that requires you to make an attack roll, the spell's range is doubled.",
-						"Your ranged spell attacks ignore half cover and three-quarters cover.",
-						"You learn one cantrip that requires an attack roll. Choose the cantrip from the {@filter bard|spells|level=0|class=bard|spell attack=m;r;o}, {@filter cleric|spells|level=0|class=cleric|spell attack=m;r;o}, {@filter druid|spells|level=0|class=druid|spell attack=m;r;o}, {@filter sorcerer|spells|level=0|class=sorcerer|spell attack=m;r;o}, {@filter warlock|spells|level=0|class=warlock|spell attack=m;r;o}, or {@filter wizard|spells|level=0|class=wizard|spell attack=m;r;o} spell list. Your spellcasting ability for this cantrip depends on the spell list you chose from: Charisma for bard, sorcerer, or warlock; Wisdom for cleric or druid; or Intelligence for wizard."
+						"當你施放一個需要你進行一次攻擊檢定的法術時，該法術的射程加倍。",
+						"你的遠程法術攻擊忽略半掩護和四分之三掩護。",
+						"你學會一個需要一次攻擊檢定的戲法。從{@filter 吟遊詩人|spells|level=0|class=bard|spell attack=m;r;o}、{@filter 牧師c|spells|level=0|class=cleric|spell attack=m;r;o}、{@filter 德魯伊|spells|level=0|class=druid|spell attack=m;r;o}、{@filter 術士|spells|level=0|class=sorcerer|spell attack=m;r;o}、{@filter 契術師|spells|level=0|class=warlock|spell attack=m;r;o}、或{@filter 法師|spells|level=0|class=wizard|spell attack=m;r;o}法術列表中選擇該戲法。該戲法的施法屬性取決於你所選的法術列表：吟遊詩人、術士、契術師使用魅力；牧師、德魯伊使用睿知；法師則使用智力。"
 					]
 				}
 			]
@@ -2403,7 +2403,7 @@
 			]
 		},
 		{
-			"name": "War Caster",
+			"name": "戰鬥施法者",
 			"source": "PHB",
 			"page": 170,
 			"prerequisite": [
@@ -2412,13 +2412,13 @@
 				}
 			],
 			"entries": [
-				"You have practiced casting spells in the midst of combat, learning techniques that grant you the following benefits:",
+				"你受訓於混亂戰場的中心施展法術，學習這項技巧讓你獲得下列好處：",
 				{
 					"type": "list",
 					"items": [
-						"You have advantage on Constitution saving throws that you make to maintain your concentration on a spell when you take damage.",
-						"You can perform the somatic components of spells even when you have weapons or a {@item shield|phb} in one or both hands.",
-						"When a hostile creature's movement provokes an opportunity attack from you, you can use your reaction to cast a spell at the creature, rather than making an opportunity attack. The spell must have a casting time of 1 action and must target only that creature."
+						"當你受到傷害時，你在為維持法術專注而進行的體質豁免檢定上有優勢。",
+						"即使你單手或雙手持有武器或{@item 盾牌|phb}，你也可以做出法術所要求的姿勢構材。",
+						"當一個敵意生物的移動觸發了你的藉機攻擊，你可以使用你的反應以對該生物施展法術，而非進行一次藉機攻擊。該法術的施法時間必須為1個動作，且只能以該生物為目標。"
 					]
 				}
 			]
@@ -2428,7 +2428,7 @@
 			"source": "PHB",
 			"page": 170,
 			"entries": [
-				"你曾受過大量使用各種武器的訓練，獲得下列好處：",
+				"你已受過大量使用各種武器的訓練，獲得下列好處：",
 				{
 					"type": "list",
 					"items": [
