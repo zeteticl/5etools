@@ -102,11 +102,11 @@ async function populateTablesAndFilters (data) {
 	const mundaneWrapper = $(`.ele-mundane`);
 	const magicWrapper = $(`.ele-magic`);
 	$(`.side-label--mundane`).click(() => {
-		filterBox.setFromValues({"雜項": ["mundane"]});
+		filterBox.setFromValues({"Miscellaneous": ["mundane"]});
 		handleFilterChange();
 	});
 	$(`.side-label--magic`).click(() => {
-		filterBox.setFromValues({"雜項": ["magic"]});
+		filterBox.setFromValues({"Miscellaneous": ["magic"]});
 		handleFilterChange();
 	});
 	mundanelist.__listVisible = true;
