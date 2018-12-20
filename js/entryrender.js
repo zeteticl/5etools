@@ -305,7 +305,7 @@ function EntryRenderer () {
 					textStack[0] += (entry.value < 0 ? "" : "+") + entry.value;
 					break;
 				case "bonusSpeed":
-					textStack[0] += (entry.value < 0 ? "" : "+") + entry.value + " ft.";
+					textStack[0] += (entry.value < 0 ? "" : "+") + entry.value + "呎";
 					break;
 				case "dice":
 					textStack[0] += EntryRenderer.getEntryDice(entry, entry.name);
@@ -2766,9 +2766,9 @@ EntryRenderer.item = {
 				const prop = properties[i];
 				let a = item._allPropertiesPtr[prop].name;
 				if (prop === "V") a = `${a} (${EntryRenderer.getDefaultRenderer().renderEntry(item.dmg2)})`;
-				if (prop === "T" || prop === "A" || prop === "AF") a = `${a} (${item.range}ft.)`;
+				if (prop === "T" || prop === "A" || prop === "AF") a = `${a} (${item.range}呎)`;
 				if (prop === "RLD") a = `${a} (${item.reload} shots)`;
-				a = (i > 0 ? ", " : item.dmg1 ? "- " : "") + a;
+				a = (i > 0 ? "、" : item.dmg1 ? "- " : "") + a;
 				propertiesTxt += a;
 			}
 		}
