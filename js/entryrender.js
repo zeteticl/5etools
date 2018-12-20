@@ -2738,17 +2738,17 @@ EntryRenderer.item = {
 			if (item.dmg1) damage = EntryRenderer.getDefaultRenderer().renderEntry(item.dmg1);
 			if (item.dmgType) damageType = Parser.dmgTypeToFull(item.dmgType);
 		} else if (type === "LA" || type === "MA" || type === "HA") {
-			damage = "AC " + item.ac + (type === "LA" ? " + Dex" : type === "MA" ? " + Dex (max 2)" : "");
+			damage = "AC " + item.ac + (type === "LA" ? " +敏捷調整" : type === "MA" ? " +敏捷調整(最高2)" : "");
 		} else if (type === "S") {
 			damage = "AC +" + item.ac;
 		} else if (type === "MNT" || type === "VEH" || type === "SHP") {
 			const speed = item.speed;
 			const capacity = item.carryingcapacity;
-			if (speed) damage += "Speed: " + speed;
+			if (speed) damage += "速度： " + speed;
 			if (speed && capacity) damage += type === "MNT" ? ", " : "<br>";
 			if (capacity) {
 				damage += "Carrying Capacity: " + capacity;
-				if (capacity.indexOf("ton") === -1 && capacity.indexOf("passenger") === -1) damage += Number(capacity) === 1 ? " lb." : " lbs.";
+				if (capacity.indexOf("ton") === -1 && capacity.indexOf("passenger") === -1) damage += Number(capacity) === 1 ? "磅" : "磅";
 			}
 			if (type === "SHP") {
 				damage += `<br>Crew ${item.crew}, AC ${item.vehAc}, HP ${item.vehHp}${item.vehDmgThresh ? `, Damage Threshold ${item.vehDmgThresh}` : ""}`;
