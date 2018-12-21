@@ -999,7 +999,7 @@ Parser.spClassesToFull = function (classes, textOnly) {
 Parser.spMainClassesToFull = function (classes, textOnly) {
 	return classes.fromClassList
 		.sort((a, b) => SortUtil.ascSort(a.name, b.name))
-		.map(c => textOnly ? Parser.translateKeyToDisplay(c.name) : `<span title="資源：${Parser.sourceJsonToFull(c.source)}">${Parser.translateKeyToDisplay(c.name)}</span>`)
+		.map(c => textOnly ? Parser.ClassToDisplay(c.name) : `<span title="資源：${Parser.sourceJsonToFull(c.source)}">${Parser.ClassToDisplay(c.name)}</span>`)
 		.join("、");
 };
 
@@ -1016,8 +1016,8 @@ Parser.spSubclassesToFull = function (classes, textOnly) {
 
 Parser._spSubclassItem = function (fromSubclass, textOnly) {
 	const text = `${fromSubclass.subclass.name}${fromSubclass.subclass.subSubclass ? ` (${fromSubclass.subclass.subSubclass})` : ""}`;
-	if (textOnly) return Parser.translateKeyToDisplay(text);
-	return `<span class="italic" title="資源：${Parser.sourceJsonToFull(fromSubclass.subclass.source)}">${Parser.translateKeyToDisplay(text)}</span>-<span title="資源：${Parser.sourceJsonToFull(fromSubclass.class.source)}">${Parser.translateKeyToDisplay(fromSubclass.class.name)}</span>`;
+	if (textOnly) return Parser.SubclassToDisplay(text);
+	return `<span class="italic" title="資源：${Parser.sourceJsonToFull(fromSubclass.subclass.source)}">${Parser.ClassToDisplay(text)}</span>-<span title="資源：${Parser.sourceJsonToFull(fromSubclass.class.source)}">${Parser.SubclassToDisplay(fromSubclass.class.name)}</span>`;
 };
 
 Parser.SPELL_ATTACK_TYPE_TO_FULL = {};
