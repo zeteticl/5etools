@@ -1330,7 +1330,7 @@ Parser.subraceKeyToDisplay["drow"]  = "卓爾";
 Parser.subraceKeyToDisplay["high"]  = "高等";
 Parser.RaceToDisplay = function(race){
 	race = Parser.translateKeyInMapToDisplay(Parser.raceKeyToDisplay, race);
-	let r_match = race.match(/([^()]*)( ?\((.*)\))?/);
+	let r_match = race.match(/([^( )]*)( ?\((.*)\))?/);
 	if(r_match && r_match[2]){
 		let main_race = Parser.translateKeyInMapToDisplay(Parser.raceKeyToDisplay, r_match[1].replace(/ *$/,""));
 		let sub_race  = Parser.translateKeyInMapToDisplay(Parser.subraceKeyToDisplay, r_match[3]);
@@ -1376,8 +1376,12 @@ Parser.subclassKeyToDisplay["arcana"]    = "奧秘";
 Parser.subclassKeyToDisplay["forge"]     = "鍛造";
 Parser.subclassKeyToDisplay["grave"]     = "墳墓";
 
-
 Parser.SubclassToDisplay = function(sc){
+	let sc_match = sc.match(/([^( )]*)( ?\((.*)\))?/);
+	if(sc_match && sc_match[2]){
+		let sc_name = Parser.translateKeyInMapToDisplay(Parser.subclassKeyToDisplay, sc_match[1]);
+		return sc_name + sc_match[2];
+	}
 	return Parser.translateKeyInMapToDisplay(Parser.subclassKeyToDisplay, sc);
 }
 
