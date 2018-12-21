@@ -1692,7 +1692,7 @@ EntryRenderer.spell = {
 		if (spell._scrollNote) {
 			renderStack.push(`<tr class="text"><td colspan="6"><section class="text-muted">`);
 			renderer.recursiveEntryRender(
-				`{@italic 注意：{@class ${Parser.translateKeyToDisplay(STR_FIGHTER)} (${Parser.translateKeyToDisplay(STR_ELD_KNIGHT)})}和{@class ${Parser.translateKeyToDisplay(STR_ROGUE)} (${Parser.translateKeyToDisplay(STR_ARC_TCKER)})}的法術列表中都包含所有{@class ${Parser.translateKeyToDisplay(STR_WIZARD)}}的法術。因此五環或更高的法術可以透過法術卷軸或其他類似的效果被施展。}`
+				`{@italic 注意：{@class ${Parser.ClassToDisplay(STR_FIGHTER)} (${Parser.SubclassToDisplay(STR_ELD_KNIGHT)})}和{@class ${Parser.ClassToDisplay(STR_ROGUE)} (${Parser.SubclassToDisplay(STR_ARC_TCKER)})}的法術列表中都包含所有{@class ${Parser.ClassToDisplay(STR_WIZARD)}}的法術。因此五環或更高的法術可以透過法術卷軸或其他類似的效果被施展。}`
 				, renderStack, 2);
 			renderStack.push(`</section></td></tr>`);
 		}
