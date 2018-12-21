@@ -329,12 +329,12 @@ const levelFilter = new Filter({
 	],
 	displayFn: getFltrSpellLevelStr
 });
-const classFilter = new Filter({header: "Class", headerName: "職業",displayFn:Parser.translateKeyToDisplay});
+const classFilter = new Filter({header: "Class", headerName: "職業",displayFn:Parser.ClassToDisplay});
 const subclassFilter = new GroupedFilter({
 	header: "Subclass", headerName: "子職業",
 	numGroups: 2,
-	displayNestFn: Parser.translateKeyToDisplay,
-	displayFn: (item) => `${Parser.translateKeyToDisplay(item.nest)}：${Parser.translateKeyToDisplay(item.item)}`
+	displayNestFn: Parser.ClassToDisplay,
+	displayFn: (item) => `${Parser.ClassToDisplay(item.nest)}：${Parser.SubclassToDisplay(item.item)}`
 });
 const classAndSubclassFilter = new MultiFilter({name: "職業"}, classFilter, subclassFilter);
 const raceFilter = new Filter({header: "Race", headerName: "種族"});
