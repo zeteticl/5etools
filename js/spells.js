@@ -337,7 +337,7 @@ const subclassFilter = new GroupedFilter({
 	displayFn: (item) => `${Parser.ClassToDisplay(item.nest)}：${Parser.SubclassToDisplay(item.item)}`
 });
 const classAndSubclassFilter = new MultiFilter({name: "職業"}, classFilter, subclassFilter);
-const raceFilter = new Filter({header: "Race", headerName: "種族"});
+const raceFilter = new Filter({header: "Race", headerName: "種族", displayFn: Parser.RaceToDisplay});
 const metaFilter = new Filter({
 	header: "Components & Miscellaneous", headerName: "構材＆雜項",
 	items: [META_ADD_CONC, META_ADD_V, META_ADD_S, META_ADD_M, META_ADD_M_COST, META_ADD_M_CONSUMED, META_ADD_MB_HEAL, META_ADD_MB_PERMANENT, META_ADD_MB_SCALING, META_RITUAL, META_TECHNOMAGIC],
