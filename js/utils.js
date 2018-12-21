@@ -1301,48 +1301,71 @@ Parser.keyToDisplay["int"] = "智力";
 Parser.keyToDisplay["wis"] = "睿知";
 Parser.keyToDisplay["cha"] = "魅力";
 //Race
-Parser.keyToDisplay["aasimar"]  	= "阿斯莫";
-Parser.keyToDisplay["dragonborn"]  	= "龍裔";
-Parser.keyToDisplay["dwarf"]  		= "矮人";
-Parser.keyToDisplay["elf"]  		= "精靈";
-Parser.keyToDisplay["gnome"]  		= "地侏";
-Parser.keyToDisplay["genasi"]  		= "元素裔";
-Parser.keyToDisplay["triton"]  		= "梭螺魚人";
-Parser.keyToDisplay["firbolg"]  	= "費爾伯格";
-Parser.keyToDisplay["siren"]  		= "賽壬";
-Parser.keyToDisplay["half-elf"]  	= "半精靈";
-Parser.keyToDisplay["half-orc"]  	= "半獸人";
-Parser.keyToDisplay["halfling"]  	= "半身人";
-Parser.keyToDisplay["human"]  		= "人類";
-Parser.keyToDisplay["tiefling"]  	= "提夫林";
-Parser.keyToDisplay["small race"]  	= "小體型種族";
-Parser.keyToDisplay["yuan-ti pureblood"]= "純血蛇人";
-Parser.keyToDisplay["vampire (ixalan)"] = "吸血鬼(依夏蘭)";
-Parser.keyToDisplay["elf (zendikar)"]	= "精靈(贊迪卡)";
+Parser.raceKeyToDisplay = {};
+Parser.raceKeyToDisplay["aasimar"]  	= "阿斯莫";
+Parser.raceKeyToDisplay["dragonborn"]  	= "龍裔";
+Parser.raceKeyToDisplay["dwarf"]  		= "矮人";
+Parser.raceKeyToDisplay["elf"]  		= "精靈";
+Parser.raceKeyToDisplay["gnome"]  		= "地侏";
+Parser.raceKeyToDisplay["genasi"]  		= "元素裔";
+Parser.raceKeyToDisplay["triton"]  		= "梭螺魚人";
+Parser.raceKeyToDisplay["firbolg"]  	= "費爾伯格";
+Parser.raceKeyToDisplay["siren"]  		= "賽壬";
+Parser.raceKeyToDisplay["half-elf"]  	= "半精靈";
+Parser.raceKeyToDisplay["half-orc"]  	= "半獸人";
+Parser.raceKeyToDisplay["halfling"]  	= "半身人";
+Parser.raceKeyToDisplay["human"]  		= "人類";
+Parser.raceKeyToDisplay["tiefling"]  	= "提夫林";
+Parser.raceKeyToDisplay["small race"]  	= "小體型種族";
+Parser.raceKeyToDisplay["yuan-ti pureblood"]= "純血蛇人";
+Parser.raceKeyToDisplay["vampire (ixalan)"] = "吸血鬼(依夏蘭)";
+Parser.raceKeyToDisplay["elf (zendikar)"]	= "精靈(贊迪卡)";
 //Subrace
-Parser.keyToDisplay["forest"]= "林";
-Parser.keyToDisplay["rock"]  = "岩";
-Parser.keyToDisplay["deep"]  = "地底";
-Parser.keyToDisplay["wood"]  = "木";
-Parser.keyToDisplay["drow"]  = "卓爾";
-Parser.keyToDisplay["high"]  = "高等";
+Parser.subraceKeyToDisplay = {};
+Parser.subraceKeyToDisplay["forest"]= "林";
+Parser.subraceKeyToDisplay["rock"]  = "岩";
+Parser.subraceKeyToDisplay["deep"]  = "地底";
+Parser.subraceKeyToDisplay["wood"]  = "木";
+Parser.subraceKeyToDisplay["drow"]  = "卓爾";
+Parser.subraceKeyToDisplay["high"]  = "高等";
+Parser.RaceToDisplay = function(race){
+	race = Parser.translateKeyInMapToDisplay(Parser.raceKeyToDisplay, race);
+	let r_match = race.match(/([^()]*)( ?\((.*)\))?/);
+	if(r_match && r_match[2]){
+		let main_race = Parser.translateKeyInMapToDisplay(Parser.raceKeyToDisplay, r_match[1].replace(/ *$/,""));
+		let sub_race  = Parser.translateKeyInMapToDisplay(Parser.subraceKeyToDisplay, r_match[3]);
+		return main_race + " (" + sub_race + ")";
+	}
+	return race;
+}
+Parser.SubraceToDisplay = function(sub_race){
+	return Parser.translateKeyInMapToDisplay(Parser.subraceKeyToDisplay, sub_race);
+}
 //classes
-Parser.keyToDisplay["wizard"]   = "法師";
-Parser.keyToDisplay["sorcerer"] = "術士";
-Parser.keyToDisplay["warlock"]  = "契術師";
-Parser.keyToDisplay["ranger"]   = "遊俠";
-Parser.keyToDisplay["paladin"]  = "聖騎士";
-Parser.keyToDisplay["druid"]    = "德魯伊";
-Parser.keyToDisplay["cleric"]   = "牧師";
-Parser.keyToDisplay["bard"]     = "吟遊詩人";
-Parser.keyToDisplay["barbarian"]= "野蠻人";
-Parser.keyToDisplay["fighter"]  = "戰士";
-Parser.keyToDisplay["rogue"]    = "遊蕩者";
-Parser.keyToDisplay["artificer"]= "機關術士";
-Parser.keyToDisplay["ranger (revised)"]   = "遊俠(修訂)";
-
-Parser.keyToDisplay["arcane trickster"]    = "詭術師";
-Parser.keyToDisplay["eldritch knight"]     = "魔能騎士";
+Parser.classKeyToDisplay = {};
+Parser.classKeyToDisplay["wizard"]   = "法師";
+Parser.classKeyToDisplay["sorcerer"] = "術士";
+Parser.classKeyToDisplay["warlock"]  = "契術師";
+Parser.classKeyToDisplay["ranger"]   = "遊俠";
+Parser.classKeyToDisplay["paladin"]  = "聖騎士";
+Parser.classKeyToDisplay["druid"]    = "德魯伊";
+Parser.classKeyToDisplay["cleric"]   = "牧師";
+Parser.classKeyToDisplay["bard"]     = "吟遊詩人";
+Parser.classKeyToDisplay["barbarian"]= "野蠻人";
+Parser.classKeyToDisplay["fighter"]  = "戰士";
+Parser.classKeyToDisplay["rogue"]    = "遊蕩者";
+Parser.classKeyToDisplay["artificer"]= "機關術士";
+Parser.classKeyToDisplay["ranger (revised)"]   = "遊俠(修訂)";
+Parser.ClassToDisplay = function(c){
+	return Parser.translateKeyInMapToDisplay(Parser.classKeyToDisplay, c);
+}
+//subclass
+Parser.subclassKeyToDisplay = {};
+Parser.subclassKeyToDisplay["arcane trickster"]    = "詭術師";
+Parser.subclassKeyToDisplay["eldritch knight"]     = "魔能騎士";
+Parser.SubclassToDisplay = function(sc){
+	return Parser.translateKeyInMapToDisplay(Parser.subclassKeyToDisplay, sc);
+}
 
 //Skill
 Parser.keyToDisplay["athletics"]  		= "運動";
@@ -1495,27 +1518,17 @@ Parser.AtrAbvToDisplay = function(atr_abv){
 Parser.ArmorToDisplay = function(armor){
 	return Parser.translateKeyToDisplay(armor);
 }
-Parser.RaceToDisplay = function(race){
-	race = Parser.translateKeyToDisplay(race);
-	let r_match = race.match(/([^()]*)( ?\((.*)\))?/);
-	if(r_match && r_match[2]){
-		return Parser.translateKeyToDisplay(r_match[1].replace(/ *$/,""))+" ("+Parser.translateKeyToDisplay(r_match[3])+")";
-	}
-	return race;
-}
-Parser.SubraceToDisplay = function(sub_race){
-	return Parser.translateKeyToDisplay(sub_race);
-}
+
+
 Parser.SpeedToDisplay = function(speed){
 	return Parser.translateKeyToDisplay(speed);
 }
 
 
-
 Parser.itemValueToDisplay = function(value){
 	if(!value) return value;
 	if(value=="Varies") return "不定";
-	return value.replace(/ *([pgesc])p/g, '$1幣').replace(/p(幣)/g, '鉑金$1').replace(/g(幣)/g, '金$1').replace(/e(幣)/g, '銀金$1').replace(/s(幣)/g, '銀$1').replace(/c(幣)/g, '銅$1');
+	return value.replace(/ *([pgesc])p/g, '$1幣').replace(/p(幣)/g, '鉑金$1').replace(/g(幣)/g, '金$1').replace(/e(幣)/g, '珀金$1').replace(/s(幣)/g, '銀$1').replace(/c(幣)/g, '銅$1');
 }
 
 
