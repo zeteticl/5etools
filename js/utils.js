@@ -1361,8 +1361,22 @@ Parser.ClassToDisplay = function(c){
 }
 //subclass
 Parser.subclassKeyToDisplay = {};
-Parser.subclassKeyToDisplay["arcane trickster"]    = "詭術師";
-Parser.subclassKeyToDisplay["eldritch knight"]     = "魔能騎士";
+Parser.subclassKeyToDisplay["arcane trickster"]  = "詭術師";
+Parser.subclassKeyToDisplay["totem warrior"]     = "圖騰勇士";
+Parser.subclassKeyToDisplay["eldritch knight"]   = "魔能騎士";
+Parser.subclassKeyToDisplay["arcane archer"]     = "魔射手";
+Parser.subclassKeyToDisplay["knowledge"] = "知識";
+Parser.subclassKeyToDisplay["life"]      = "生命";
+Parser.subclassKeyToDisplay["light"]     = "光明";
+Parser.subclassKeyToDisplay["nature"]    = "自然";
+Parser.subclassKeyToDisplay["tempest"]   = "暴風";
+Parser.subclassKeyToDisplay["trickery"]  = "詭術";
+Parser.subclassKeyToDisplay["war"]       = "戰爭";
+Parser.subclassKeyToDisplay["arcana"]    = "奧秘";
+Parser.subclassKeyToDisplay["forge"]     = "鍛造";
+Parser.subclassKeyToDisplay["grave"]     = "墳墓";
+
+
 Parser.SubclassToDisplay = function(sc){
 	return Parser.translateKeyInMapToDisplay(Parser.subclassKeyToDisplay, sc);
 }
