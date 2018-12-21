@@ -1017,7 +1017,7 @@ Parser.spSubclassesToFull = function (classes, textOnly) {
 Parser._spSubclassItem = function (fromSubclass, textOnly) {
 	const text = `${fromSubclass.subclass.name}${fromSubclass.subclass.subSubclass ? ` (${fromSubclass.subclass.subSubclass})` : ""}`;
 	if (textOnly) return Parser.SubclassToDisplay(text);
-	return `<span class="italic" title="資源：${Parser.sourceJsonToFull(fromSubclass.subclass.source)}">${Parser.ClassToDisplay(text)}</span>-<span title="資源：${Parser.sourceJsonToFull(fromSubclass.class.source)}">${Parser.SubclassToDisplay(fromSubclass.class.name)}</span>`;
+	return `<span class="italic" title="資源：${Parser.sourceJsonToFull(fromSubclass.subclass.source)}">${Parser.SubclassToDisplay(text)}</span>-<span title="資源：${Parser.sourceJsonToFull(fromSubclass.class.source)}">${Parser.ClassToDisplay(fromSubclass.class.name)}</span>`;
 };
 
 Parser.SPELL_ATTACK_TYPE_TO_FULL = {};
