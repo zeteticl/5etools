@@ -1358,10 +1358,10 @@ Parser.classKeyToDisplay["artificer"]= "機關術士";
 Parser.classKeyToDisplay["ranger (revised)"]   = "遊俠(修訂)";
 Parser.ClassToDisplay = function(c){
 	let c_match = c.match(/([^()]*)( ?\((.*)\))?/);
-	console.log(c_match);
 	if(c_match && c_match[2]){
-		let c_name = Parser.translateKeyInMapToDisplay(Parser.subclassKeyToDisplay, c_match[1].replace(/ *$/,""));
-		return c_name + " " + c_match[2];
+		let c_name = Parser.translateKeyInMapToDisplay(Parser.classKeyToDisplay, c_match[1].replace(/ *$/,""));
+		let source = c_match[3]=='Revised'? '(修訂)': c_match[2];
+		return c_name + " " + source;
 	}
 	return Parser.translateKeyInMapToDisplay(Parser.classKeyToDisplay, c);
 }
