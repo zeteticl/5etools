@@ -24,7 +24,7 @@ window.onload = async function load () {
 
 function onJsonLoad (data) {
 	list = ListUtil.search({
-		valueNames: ["name", "source", "skills", "uniqueid"],
+		valueNames: ["name", "source", "skills", "uniqueid", "eng_name"],
 		listClass: "backgrounds"
 	});
 
@@ -91,6 +91,7 @@ function addBackgrounds (data) {
 					<span class="source col-2 text-align-center ${Parser.sourceJsonToColor(bg.source)}" title="${Parser.sourceJsonToFull(bg.source)}">${Parser.sourceJsonToAbv(bg.source)}</span>
 					
 					<span class="uniqueid hidden">${bg.uniqueId ? bg.uniqueId : bgI}</span>
+					<span class="eng_name hidden">${bg.ENG_name ? bg.ENG_name : bg.name}</span>
 				</a>
 			</li>`;
 

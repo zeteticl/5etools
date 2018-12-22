@@ -323,7 +323,7 @@ function pPageInit (loadedSources) {
 	sourceFilter.items.sort(SortUtil.ascSort);
 
 	list = ListUtil.search({
-		valueNames: ["name", "source", "type", "cr", "group", "alias", "uniqueid"],
+		valueNames: ["name", "source", "type", "cr", "group", "alias", "uniqueid", "eng_name"],
 		listClass: "monsters",
 		sortFunction: sortMonsters
 	});
@@ -611,6 +611,7 @@ function addMonsters (data) {
 					<span class="alias hidden">${(mon.alias || []).map(it => `"${it}"`).join(",")}</span>
 					
 					<span class="uniqueid hidden">${mon.uniqueId ? mon.uniqueId : mI}</span>
+					<span class="eng_name hidden">${mon.ENG_name ? mon.ENG_name : mon.name}</span>
 				</a>
 			</li>`;
 

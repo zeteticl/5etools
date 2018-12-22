@@ -12,7 +12,7 @@ const sourceFilter = getSourceFilter();
 let filterBox;
 async function onJsonLoad (data) {
 	list = ListUtil.search({
-		valueNames: ['name', 'source', 'ability', 'prerequisite', "uniqueid"],
+		valueNames: ['name', 'source', 'ability', 'prerequisite', "uniqueid", "eng_name"],
 		listClass: "feats"
 	});
 
@@ -110,6 +110,7 @@ function addFeats (data) {
 					<span class="prerequisite col-3 ${(prereqText === STR_NONE ? "list-entry-none " : "")}">${prereqText}</span>
 					
 					<span class="uniqueid hidden">${feat.uniqueId ? feat.uniqueId : ftI}</span>
+					<span class="eng_name hidden">${feat.ENG_name ? feat.ENG_name : feat.name}</span>
 				</a>
 			</li>`;
 

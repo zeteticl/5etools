@@ -85,14 +85,14 @@ async function populateTablesAndFilters (data) {
 	filterBox = await pInitFilterBox(sourceFilter, typeFilter, tierFilter, rarityFilter, propertyFilter, attunementFilter, categoryFilter, costFilter, miscFilter, attachedSpellsFilter);
 
 	const mundaneOptions = {
-		valueNames: ["name", "type", "cost", "weight", "source", "uniqueid"],
+		valueNames: ["name", "type", "cost", "weight", "source", "uniqueid", "eng_name"],
 		listClass: "mundane",
 		sortClass: "none",
 		sortFunction: sortItems
 	};
 	mundanelist = ListUtil.search(mundaneOptions);
 	const magicOptions = {
-		valueNames: ["name", "type", "weight", "rarity", "source", "uniqueid"],
+		valueNames: ["name", "type", "weight", "rarity", "source", "uniqueid", "eng_name"],
 		listClass: "magic",
 		sortClass: "none",
 		sortFunction: sortItems
@@ -253,6 +253,7 @@ function addItems (data) {
 					<span class="weight hidden">${Parser.weightValueToNumber(curitem.weight)}</span>
 					
 					<span class="uniqueid hidden">${curitem.uniqueId ? curitem.uniqueId : itI}</span>
+					<span class="eng_name hidden">${curitem.ENG_name ? curitem.ENG_name : curitem.name}</span>
 				</a>
 			</li>`;
 		} else {
@@ -267,6 +268,7 @@ function addItems (data) {
 					<span class="weight hidden">${Parser.weightValueToNumber(curitem.weight)}</span>
 					
 					<span class="uniqueid hidden">${curitem.uniqueId ? curitem.uniqueId : itI}</span>
+					<span class="eng_name hidden">${curitem.ENG_name ? curitem.ENG_name : curitem.name}</span>
 				</a>
 			</li>`;
 		}

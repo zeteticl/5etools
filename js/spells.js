@@ -436,7 +436,7 @@ function pPageInit (loadedSources) {
 	sourceFilter.items.sort(SortUtil.ascSort);
 
 	list = ListUtil.search({
-		valueNames: ["name", "source", "level", "time", "school", "range", "concentration", "classes", "uniqueid"],
+		valueNames: ["name", "source", "level", "time", "school", "range", "concentration", "classes", "uniqueid", "eng_name"],
 		listClass: "spells",
 		sortFunction: sortSpells
 	});
@@ -698,6 +698,7 @@ function addSpells (data) {
 
 					<span class="classes" style="display: none">${Parser.spClassesToFull(spell.classes, true)}</span>
 					<span class="uniqueid hidden">${spell.uniqueId ? spell.uniqueId : spI}</span>
+					<span class="eng_name hidden">${spell.ENG_name ? spell.ENG_name : spell.name}</span>
 				</a>
 			</li>`;
 
