@@ -3094,7 +3094,7 @@ EntryRenderer.item = {
 		// add some pre-text for item groups
 		if (item._isItemGroup && item.entries) {
 			const ixList = item.entries.findIndex(it => it.type === "list");
-			if (~ixList) item.entries.splice(ixList, 0, "Multiple variants of this item exist, as listed below:");
+			if (~ixList) item.entries.splice(ixList, 0, "這個物品存在許多個變體，見下表：");
 		}
 
 		// format price nicely
