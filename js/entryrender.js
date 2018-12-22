@@ -3008,19 +3008,19 @@ EntryRenderer.item = {
 		}
 		// The following could be encoded in JSON, but they depend on more than one JSON property; maybe fix if really bored later
 		if (item.armor) {
-			if (item.resist) item.entries.push("You have resistance to " + item.resist + " damage while you wear this armor.");
-			if (item.armor && item.stealth) item.entries.push("The wearer has disadvantage on Stealth (Dexterity) checks.");
-			if (item.type === "HA" && item.strength) item.entries.push("If the wearer has a Strength score lower than " + item.strength + ", their speed is reduced by 10 feet.");
+			if (item.resist) item.entries.push("你在穿著此護甲時具有對" + item.resist + "傷害的抗力。");
+			if (item.armor && item.stealth) item.entries.push("穿戴者在敏捷（隱匿）檢定上有劣勢。");
+			if (item.type === "HA" && item.strength) item.entries.push("如果穿戴者的力量屬性不到 " + item.strength + "，他們的移動速度減少10呎。");
 		} else if (item.resist) {
-			if (item.type === "P") item.entries.push("When you drink this potion, you gain resistance to " + item.resist + " damage for 1 hour.");
-			if (item.type === "RG") item.entries.push("You have resistance to " + item.resist + " damage while wearing this ring.");
+			if (item.type === "P") item.entries.push("當你飲下這瓶藥水，你獲得對" + item.resist + "傷害的抗力持續1小時。");
+			if (item.type === "RG") item.entries.push("你在穿戴此戒指時具有對" + item.resist + "傷害的抗力。");
 		}
 		if (item.type === "SCF") {
-			if (item.scfType === "arcane") item.entries.push("An arcane focus is a special item designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus, using it in place of any material component which does not list a cost.");
-			if (item.scfType === "druid") item.entries.push("A druid can use such a druidic focus as a spellcasting focus, using it in place of any material component that does not have a cost.");
+			if (item.scfType === "arcane") item.entries.push("奧術法器是一種被設計成能用以引導奧秘法術能量的特殊物品。術士、契術師、或法師可以將這類物品作為法器使用，用它來取代任何沒有列出價值的材料構材。");
+			if (item.scfType === "druid") item.entries.push("德魯伊可以將這類德魯伊法器作為法器使用，用它來取代任何沒有列出價值的材料構材。");
 			if (item.scfType === "holy") {
-				item.entries.push("A holy symbol is a representation of a god or pantheon.");
-				item.entries.push("A cleric or paladin can use a holy symbol as a spellcasting focus, using it in place of any material components which do not list a cost. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield.");
+				item.entries.push("聖徽是代表著一尊神明或諸神的圖像雕紋。");
+				item.entries.push("牧師或聖騎士可以將聖徽作為法器使用，用它來取代任何沒有列出價值的材料構材。若要用這個方式使用聖徽，施法者必須將它持握在手中、顯眼地穿戴它、或將它佩帶在盾牌上。");
 			}
 		}
 
