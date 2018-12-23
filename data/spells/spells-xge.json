@@ -1,7 +1,7 @@
 {
 	"spell": [
 		{
-			"name": "亞比達奇凋死術",
+			"name": "亞比達奇凋死術", "ENG_name": "Abi-Dalzim's Horrid Wilting",
 			"source": "XGE",
 			"level": 8,
 			"school": "N",
@@ -59,7 +59,7 @@
 			]
 		},
 		{
-			"name": "吸收元素",
+			"name": "吸收元素", "ENG_name": "Absorb Elements",
 			"source": "XGE",
 			"level": 1,
 			"school": "A",
@@ -136,7 +136,7 @@
 			]
 		},
 		{
-			"name": "阿迦納薩噴火術",
+			"name": "阿迦納薩噴火術", "ENG_name": "Aganazzar's Scorcher",
 			"source": "XGE",
 			"level": 2,
 			"school": "V",
@@ -202,7 +202,7 @@
 			]
 		},
 		{
-			"name": "野獸聯結",
+			"name": "野獸聯結", "ENG_name": "Beast Bond",
 			"source": "XGE",
 			"level": 1,
 			"school": "D",
@@ -260,7 +260,7 @@
 			]
 		},
 		{
-			"name": "大地之骨",
+			"name": "大地之骨", "ENG_name": "Bones of the Earth",
 			"source": "XGE",
 			"level": 6,
 			"school": "T",
@@ -330,7 +330,7 @@
 			]
 		},
 		{
-			"name": "彈射術",
+			"name": "彈射術", "ENG_name": "Catapult",
 			"source": "XGE",
 			"level": 1,
 			"school": "T",
@@ -394,7 +394,7 @@
 			]
 		},
 		{
-			"name": "休憩術",
+			"name": "休憩術", "ENG_name": "Catnap",
 			"source": "XGE",
 			"level": 3,
 			"school": "E",
@@ -458,7 +458,7 @@
 			]
 		},
 		{
-			"name": "造成恐懼",
+			"name": "造成恐懼", "ENG_name": "Cause Fear",
 			"source": "XGE",
 			"level": 1,
 			"school": "N",
@@ -521,7 +521,7 @@
 			]
 		},
 		{
-			"name": "Ceremony",
+			"name": "典禮術", "ENG_name": "Ceremony",
 			"source": "XGE",
 			"level": 1,
 			"school": "A",
@@ -541,7 +541,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "25 gp worth of powdered silver, which the spell consumes",
+					"text": "價值25金幣的銀粉，施法時消耗",
 					"cost": 25,
 					"consume": true
 				}
@@ -567,47 +567,47 @@
 				"ritual": true
 			},
 			"entries": [
-				"You perform a special religious ceremony that is infused with magic. When you cast the spell, choose one of the following rites, the target of which must be within 10 feet of you throughout the casting.",
+				"你施展一種注入魔法的特別宗教典禮。當你施放此法術，從以下典禮中選擇一個，該典禮的目標必須在你施放期間處於你10呎範圍內。",
 				{
 					"type": "entries",
-					"name": "Atonement",
+					"name": "贖罪禮",
 					"entries": [
-						"You touch one willing creature whose alignment has changed, and you make a DC 20 Wisdom (Insight) check. On a successful check, you restore the target to its original alignment."
+						"你觸碰一個改變了陣營的自願生物，且你進行一次DC20的睿知（察言觀色）檢定。若檢定成功，你讓目標回復其原本的陣營。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Bless Water",
+					"name": "祝聖水",
 					"entries": [
-						"You touch one vial of water and cause it to become holy water."
+						"你觸碰一瓶水並將它變成聖水。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Coming of Age",
+					"name": "成年禮",
 					"entries": [
-						"You touch one humanoid who is a young adult. For the next 24 hours, whenever the target makes an ability check, it can roll a {@dice d4} and add the number rolled to the ability check. A creature can benefit from this rite only once."
+						"你觸碰一個類人生物的青少年。在接下來的24小時中，每當該目標進行一個屬性檢定，它都可以擲一顆{@dice d4}，並將骰出來的數字加到該屬性檢定中。一個生物只能受益於此典禮一次。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Dedication",
+					"name": "獻身禮",
 					"entries": [
-						"You touch one humanoid who wishes to be dedicated to your god's service. For the next 24 hours, whenever the target makes a saving throw, it can roll a {@dice d4} and add the number rolled to the save. A creature can benefit from this rite only once."
+						"你觸碰一個希望投身服侍於你所信仰神明的類人生物。在接下來的24小時中，每當該目標進行一個豁免檢定，它都可以擲一顆{@dice d4}，並將骰出來的數字加到該豁免檢定中。一個生物只能受益於此典禮一次。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Funeral Rite",
+					"name": "葬禮",
 					"entries": [
-						"You touch one corpse, and for the next 7 days, the target can't become undead by any means short of a wish spell."
+						"你觸碰一具屍體，且在接下來的7天中，該目標不會因為任何弱於祈願術的效果變成不死生物"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Wedding",
+					"name": "婚禮",
 					"entries": [
-						"You touch adult humanoids willing to be bonded together in marriage. For the next 7 days, each target gains a +2 bonus to AC while they are within 30 feet of each other. A creature can benefit from this rite again only if widowed."
+						"你觸碰願意因婚姻而共結連理的成年類人生物。在接下來的7天中，每個目標會在他們距離彼此30呎內時獲得一個對AC的+2加值。一個生物只有在喪偶後才能再次受益於此典禮。"
 					]
 				}
 			],
@@ -856,7 +856,7 @@
 			]
 		},
 		{
-			"name": "控火",
+			"name": "控火", "ENG_name": "Control Flames",
 			"source": "XGE",
 			"level": 0,
 			"school": "T",
@@ -1012,7 +1012,7 @@
 			]
 		},
 		{
-			"name": "Create Bonfire",
+			"name": "創造篝火", "ENG_name": "Create Bonfire",
 			"source": "XGE",
 			"level": 0,
 			"school": "C",
@@ -1064,9 +1064,9 @@
 				]
 			},
 			"entries": [
-				"You create a bonfire on ground that you can see within range. Until the spell ends, the magic bonfire fills a 5-foot cube. Any creature in the bonfire's space when you cast the spell must succeed on a Dexterity saving throw or take {@dice 1d8} fire damage. A creature must also make the saving throw when it moves into the bonfire's space for the first time on a turn or ends its turn there.",
-				"The bonfire ignites flammable objects in its area that aren't being worn or carried.",
-				"The spell's damage increases by {@dice 1d8} when you reach 5th level ({@dice 2d8}), 11th level ({@dice 3d8}), and 17th level ({@dice 4d8})."
+				"你在射程內你所能看見的地面上創造出一團篝火。直到此法術結束，該魔法篝火會佔據一個5呎邊長的立方體空間。當你施放此法術時，任何處於篝火所在空間的生物必須成功通過一次敏捷豁免，否則受到{@dice 1d8}火焰傷害。當一個生物在某回合第一次進入篝火所在的空間、或在該處結束它的回合，它也必須進行該豁免檢定。",
+				"這團篝火將會點燃區域內未被穿戴或攜帶的易燃物體。",
+				"此法術的傷害將在你的等級升至5級時增加至{@dice 2d8}，11級時{@dice 3d8}，17級時{@dice 4d8}。"
 			],
 			"page": 152,
 			"damageInflict": [
@@ -2146,7 +2146,7 @@
 			]
 		},
 		{
-			"name": "Frostbite",
+			"name": "霜噬", "ENG_name": "Frostbite",
 			"source": "XGE",
 			"level": 0,
 			"school": "V",
@@ -2193,8 +2193,8 @@
 				]
 			},
 			"entries": [
-				"You cause numbing frost to form on one creature that you can see within range. The target must make a Constitution saving throw. On a failed save, the target takes {@dice 1d6} cold damage, and it has disadvantage on the next weapon attack roll it makes before the end of its next turn.",
-				"The spell's damage increases by {@dice 1d6} when you reach 5th level ({@dice 2d6}), 11th level ({@dice 3d6}), and 17th level ({@dice 4d6})."
+				"你讓足以令人失去感覺的冰霜形成於在射程內你所能看見的一個生物身上。目標必須進行一次體質豁免。若豁免失敗，目標將受到{@dice 1d6}寒冰傷害，且在它的下個回合結束前，它所進行的下一次武器攻擊檢定具有劣勢。",
+				"此法術的傷害將在你的等級升至5級時增加至{@dice 2d6}，11級時{@dice 3d6}，17級時{@dice 4d6}。"
 			],
 			"page": 156,
 			"damageInflict": [
@@ -2297,7 +2297,7 @@
 			]
 		},
 		{
-			"name": "Gust",
+			"name": "舞風", "ENG_name": "Gust",
 			"source": "XGE",
 			"level": 0,
 			"school": "T",
@@ -2340,13 +2340,13 @@
 				]
 			},
 			"entries": [
-				"You seize the air and compel it to create one of the following effects at a point you can see within range:",
+				"你攫起空氣並迫使它在射程內你所能看見的一點創造出下列其中一個效果：",
 				{
 					"type": "list",
 					"items": [
-						"One Medium or smaller creature that you choose must succeed on a Strength saving throw or be pushed up to 5 feet away from you.",
-						"You create a small blast of air capable of moving one object that is neither held nor carried and that weighs no more than 5 pounds. The object is pushed up to 10 feet away from you. It isn't pushed with enough force to cause damage.",
-						"You create a harmless sensory effect using air, such as causing leaves to rustle, wind to slam shutters closed, or your clothing to ripple in a breeze."
+						"一個你所選擇體型為中型或更小的生物必須成功通過一次力量豁免，否則被推離你最多5呎。",
+						"你創造出一陣小型狂風，力量足以推動一個未被持有或攜帶，且重量不超過5磅的物體。這個物體被推離你最多10呎。但物體被推動的力量並不足以造成傷害。",
+						"你使用空氣創造出一個無害的感官效果，像是讓樹葉沙沙作響、吹闔窗板、或讓你的衣物在微風中擺動。"
 					]
 				}
 			],
@@ -2799,7 +2799,7 @@
 			},
 			"entries": [
 				"You cause a cloud of mites, fleas, and other parasites to appear momentarily on one creature you can see within range. The target must succeed on a Constitution saving throw, or it takes {@dice 1d6} poison damage and moves 5 feet in a random direction if it can move and its speed is at least 5 feet. Roll a {@dice d4} for the direction: 1, north; 2, south; 3, east; or 4, west. This movement doesn't provoke opportunity attacks, and if the direction rolled is blocked, the target doesn't move.",
-				"The spell's damage increases by {@dice 1d6} when you reach 5th level ({@dice 2d6}), 11th level ({@dice 3d6}), and 17th level ({@dice 4d6})."
+				"此法術的傷害將在你的等級升至5級時增加至{@dice 2d6}，11級時{@dice 3d6}，17級時{@dice 4d6}。"
 			],
 			"page": 158,
 			"damageInflict": [
@@ -4006,7 +4006,7 @@
 			},
 			"entries": [
 				"You channel primal magic to cause your teeth or fingernails to sharpen, ready to deliver a corrosive attack. Make a melee spell attack against one creature within 5 feet of you. On a hit, the target takes {@dice 1d10} acid damage. After you make the attack, your teeth or fingernails return to normal.",
-				"The spell's damage increases by {@dice 1d10} when you reach 5th level ({@dice 2d10}), 11th level ({@dice 3d10}), and 17th level ({@dice 4d10})."
+				"此法術的傷害將在你的等級升至5級時增加至{@dice 2d10}，11級時{@dice 3d10}，17級時{@dice 4d10}。"
 			],
 			"page": 163,
 			"damageInflict": [
@@ -5453,7 +5453,7 @@
 			},
 			"entries": [
 				"You create a burst of thunderous sound that can be heard up to 100 feet away. Each creature within range, other than you, must make a Constitution saving throw or take {@dice 1d6} thunder damage.",
-				"The spell's damage increases by {@dice 1d6} when you reach 5th level ({@dice 2d6}), 11th level ({@dice 3d6}), and 17th level ({@dice 4d6})."
+				"此法術的傷害將在你的等級升至5級時增加至{@dice 2d6}，11級時{@dice 3d6}，17級時{@dice 4d6}。"
 			],
 			"page": 168,
 			"damageInflict": [
@@ -5633,7 +5633,7 @@
 			},
 			"entries": [
 				"You point at one creature you can see within range, and the sound of a dolorous bell fills the air around it for a moment. The target must succeed on a Wisdom saving throw or take {@dice 1d8} necrotic damage. If the target is missing any of its hit points, it instead takes {@dice 1d12} necrotic damage.",
-				"The spell's damage increases by one die when you reach 5th level ({@dice 2d8} or {@dice 2d12}), 11th level ({@dice 3d8} or {@dice 3d12}), and 17th level ({@dice 4d8} or {@dice 4d12})."
+				"此法術的傷害將在你的等級升至5級時增加至{@dice 2d8}或{@dice 2d12}，11級時{@dice 3d8}或{@dice 3d12}，17級時{@dice 4d8}或{@dice 4d12}。"
 			],
 			"page": 169,
 			"damageInflict": [
@@ -6256,7 +6256,7 @@
 			},
 			"entries": [
 				"You utter a divine word, and burning radiance erupts from you. Each creature of your choice that you can see within range must succeed on a Constitution saving throw or take {@dice 1d6} radiant damage.",
-				"The spell's damage increases by {@dice 1d6} when you reach 5th level ({@dice 2d6}), 11th level ({@dice 3d6}), and 17th level ({@dice 4d6})."
+				"此法術的傷害將在你的等級升至5級時增加至{@dice 2d6}，11級時{@dice 3d6}，17級時{@dice 4d6}。"
 			],
 			"page": 171,
 			"damageInflict": [
