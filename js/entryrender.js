@@ -1405,7 +1405,7 @@ EntryRenderer.utils = {
 		return `<tr>
 					<th class="rnd-name name" colspan="6">
 						<div class="name-inner">
-							<span class="stats-name copyable" onmousedown="event.preventDefault()" onclick="EntryRenderer.utils._handleNameClick(this, '${it.source.escapeQuotes()}')">${prefix || ""}${it._displayName || it.name}${suffix || ""}</span>
+							<span><b class="stats-name copyable" onmousedown="event.preventDefault()" onclick="EntryRenderer.utils._handleNameClick(this, '${it.source.escapeQuotes()}')">${prefix || ""}${it._displayName || it.name}${suffix || ""}</b>${it.ENG_name? "("+it.ENG_name+")": ""}</span>
 							<span class="stats-source source${it.source}" title="${Parser.sourceJsonToFull(it.source)}${EntryRenderer.utils.getSourceSubText(it)}">
 								${Parser.sourceJsonToAbv(it.source)}${addPageNum && it.page ? ` p${it.page}` : ""}
 							</span>
