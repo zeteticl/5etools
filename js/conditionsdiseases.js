@@ -17,7 +17,7 @@ let filterBox;
 let list;
 async function onJsonLoad (data) {
 	list = ListUtil.search({
-		valueNames: ["name", "source", "type", "uniqueid"],
+		valueNames: ["name", "source", "type", "uniqueid", "eng_name"],
 		listClass: "conditions"
 	});
 
@@ -93,6 +93,7 @@ function addConditions (data) {
 					<span class='source col-2 text-align-center ${Parser.sourceJsonToColor(it.source)}' title="${Parser.sourceJsonToFull(it.source)}">${Parser.sourceJsonToAbv(it.source)}</span>
 					
 					<span class="uniqueid hidden">${it.uniqueId ? it.uniqueId : cdI}</span>
+					<span class="eng_name hidden">${it.ENG_name ? it.ENG_name : it.name}</span>
 				</a>
 			</li>`;
 
