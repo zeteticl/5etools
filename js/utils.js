@@ -1357,6 +1357,10 @@ Parser.raceKeyToDisplay["vampire (ixalan)"] = "吸血鬼(依夏蘭)";
 Parser.raceKeyToDisplay["elf (zendikar)"]	= "精靈(贊迪卡)";
 //Subrace
 Parser.subraceKeyToDisplay = {};
+Parser.subraceKeyToDisplay["earth"] = "土";
+Parser.subraceKeyToDisplay["air"]   = "氣";
+Parser.subraceKeyToDisplay["water"] = "水";
+Parser.subraceKeyToDisplay["fire"]  = "火";
 Parser.subraceKeyToDisplay["forest"]= "林";
 Parser.subraceKeyToDisplay["rock"]  = "岩";
 Parser.subraceKeyToDisplay["deep"]  = "地底";
