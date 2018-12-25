@@ -257,16 +257,16 @@
 	],
 	"disease": [
 		{
-			"name": "狂笑症", "ENG_name": "Cackle Fever",
+			"name": "狂笑熱", "ENG_name": "Cackle Fever",
 			"entries": [
-				"This disease targets humanoids, although gnomes are strangely immune. While in the grips of this disease, victims frequently succumb to fits of mad laughter, giving the disease its common name and its morbid nickname: \"the shrieks.\"",
-				"Symptoms manifest {@dice 1d4} hours after infection and include fever and disorientation. The infected creature gains one level of {@condition exhaustion} that can't be removed until the disease is cured.",
-				"Any event that causes the infected creature great stress-including entering combat, taking damage, experiencing fear, or having a nightmare-forces the creature to make a DC 13 Constitution saving throw.",
-				"On a failed save, the creature takes 5 ({@dice 1d10}) psychic damage and becomes {@condition incapacitated} with mad laughter for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the mad laughter and the {@condition incapacitated} condition on a success. Any humanoid creature that starts its turn within 10 feet of an infected creature in the throes of mad laughter must succeed on a DC 10 Constitution saving throw or also become infected with the disease. Once a creature succeeds on this save, it is immune to the mad laughter of that particular infected creature for 24 hours.",
+				"這個疾病以類人生物為感染對象，然而奇怪的是地侏免疫這個疾病。在這個疾病的影響下，患者會經常地陷入瘋狂的大笑中，這也讓這個疾病得到了它通俗且病態的名稱：\"鬼嚎症\"。",
+				"這個疾病的症狀會在受感染後{@dice 1d4}小時後發作，包括了發燒與方向感錯亂。受感染的生物獲得一級{@condition 力竭}，且在疾病被治癒前不能被移除。",
+				"任何將導致被感染的生物陷入極大壓力的事件，包括進入戰鬥、受到傷害、經歷恐懼、或做惡夢等，都會迫使該生物進行一次DC13的體質豁免。",
+				"若豁免失敗，該生物受到5({@dice 1d10})精神傷害，且在瘋狂大笑中陷入{@condition 無力}狀態長達1分鐘。該生物可以在它的每個回合結束時重複這個豁免檢定，若成功則停止瘋狂大笑並解除{@condition 無力}狀態。任何在受感染生物的痛苦瘋笑10呎之內開始它回合的類人生物，都必須成功通過一次DC10的體質豁免否則也將被這個疾病感染。一旦一個生物成功通過這個豁免，它在24小時以內將免疫來自特定感染生物的瘋笑的影響。",
 				{
 					"type": "inline",
 					"entries": [
-						"At the end of each long rest, an infected creature can make a DC 13 Constitution saving throw. On a successful save, the DC for this save and for the save to avoid an attack of mad laughter drops by {@dice 1d6}. When the saving throw DC drops to 0, the creature recovers from the disease. A creature that fails three of these saving throws gains a randomly determined form of ",
+						"在每次長休結束時，受感染的生物可以進行一次DC13的體質豁免。若豁免成功，則這個豁免以及避免陷入狂笑的豁免的DC將會降低{@dice 1d6}。當這個豁免的DC降至0，該生物將從這個疾病中痊癒。一個在這個豁免中失敗三次的生物將會從。",
 						{
 							"type": "link",
 							"href": {
@@ -275,9 +275,9 @@
 								"hash": "madness_dmg",
 								"hashPreEncoded": true
 							},
-							"text": "indefinite madness"
+							"text": "永久瘋狂"
 						},
-						"."
+						"中隨機獲得一個怪癖。"
 					]
 				}
 			],
@@ -299,9 +299,9 @@
 		{
 			"name": "視力腐化", "ENG_name": "Sight Rot",
 			"entries": [
-				"This painful infection causes bleeding from the eyes and eventually blinds the victim.",
-				"A beast or humanoid that drinks water tainted by sight rot must succeed on a DC 15 Constitution saving throw or become infected. One day after infection, the creature's vision starts to become blurry. The creature takes a -1 penalty to attack rolls and ability checks that rely on sight. At the end of each long rest after the symptoms appear, the penalty worsens by 1. When it reaches -5, the victim is {@condition blinded} until its sight is restored by magic such as {@spell lesser restoration} or {@spell heal}.",
-				"Sight rot can be cured using a rare flower called Eyebright, which grows in some swamps. Given an hour, a character who has proficiency with an {@item herbalism kit|phb} can turn the flower into one dose of ointment. Applied to the eyes before a long rest, one dose of it prevents the disease from worsening after that rest. After three doses, the ointment cures the disease entirely."
+				"這個痛苦的傳染病會使血液從眼睛流出，並最終導致患者失明。",
+				"飲用被這個疾病汙染的水的野獸或類人生物必須成功通過一次DC15的體質豁免，否則被感染。在被感染後經過一天，該生物的視力將開始變得模糊。該生物在依賴視覺的攻擊檢定和屬性檢定承受-1減值。在症狀浮現後的每個長休結束，這個減值都會惡化1點。當減值達到-5時，患者陷入{@condition 目盲}直到他的視力被魔法回復，像是{@spell lesser restoration}或{@spell heal}。",
+				"視力腐化可以透過一種生長在沼澤，名為小米草(Eyebright)的罕見花朵給治癒。一個熟練於{@item Herbalism Kit|phb}的角色可以用一個小時將花朵製作成一劑軟膏。在長休前塗抹一劑於眼睛上可以防止疾病的惡化，塗抹三劑之後，軟膏將完全治癒疾病。"
 			],
 			"source": "DMG",
 			"page": 257
