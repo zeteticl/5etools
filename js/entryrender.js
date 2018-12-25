@@ -2025,6 +2025,10 @@ EntryRenderer.race = {
 					cpy.name = `${cpy.name} (${s.name})`;
 					delete s.name;
 				}
+				if (s.ENG_name) {
+					cpy.ENG_name = `${cpy.ENG_name?cpy.ENG_name:cpy.name} (${s.ENG_name})`;
+					delete s.ENG_name;
+				}
 				if (s.ability) {
 					if (s.ability.overwrite || !cpy.ability) cpy.ability = {};
 					cpy.ability = Object.assign(cpy.ability, s.ability);

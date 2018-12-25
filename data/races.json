@@ -1,7 +1,7 @@
 {
 	"race": [
 		{
-			"name": "阿蘭寇拉鷹人Aarakocra",
+			"name": "阿蘭寇拉鷹人", "ENG_name": "Aarakocra", 
 			"source": "EEPC",
 			"page": 5,
 			"size": "M",
@@ -15,44 +15,44 @@
 			},
 			"entries": [
 				{
-					"name": "年齡Age",
+					"name": "年齡",
 					"type": "entries",
 					"entries": [
-						"Aarakocra reach maturity by age 3. Compared to humans, aarakocra don't usually live longer than 30 years."
+						"阿蘭寇拉鷹人3歲時成年。相較於人類，阿蘭寇拉鷹人通常活不過30歲。"
 					]
 				},
 				{
-					"name": "陣營Alignment",
+					"name": "陣營",
 					"type": "entries",
 					"entries": [
-						"Most aarakocra are good and rarely choose sides when it comes to law and chaos. Tribal leaders and warriors might be lawful, while explorers and adventurers might tend toward chaotic"
+						"阿蘭寇拉鷹人大多善良，且鮮少在守序或混亂中選擇立場。部族中的領袖與武者可能屬於守序，而探險者與冒險者則可能傾向混亂。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "體型Size",
+					"name": "體型",
 					"entries": [
-						"Aarakocra are about 5 feet tall. They have thin, lightweight bodies that weigh between 80 and 100 pounds. Your size is Medium."
+						"阿蘭寇拉鷹人大約5呎高。他們有著體重介於80到100磅之間，纖細而輕盈的身體。你的體型為中型。"
 					]
 				},
 				{
-					"name": "飛行Flight",
+					"name": "飛行",
 					"entries": [
-						"You have a flying speed of 50 feet. To use this speed, you can't be wearing medium or heavy armor."
+						"你擁有50呎的飛行速度。要使用此移動速度，你不能穿著中甲或重甲。"
 					],
 					"type": "entries"
 				},
 				{
-					"name": "鳥爪Talons",
+					"name": "禽爪",
 					"entries": [
-						"You are proficient with your unarmed strikes, which deal 1d4 slashing damage on a hit."
+						"你熟練於你的徒手打擊，並在命中時造成1d4劈砍傷害。"
 					],
 					"type": "entries"
 				},
 				{
-					"name": "語言Language",
+					"name": "語言",
 					"entries": [
-						"You can speak, read, and write Common, Aarakocra, and Auran."
+						"你可以說、讀、寫通用語、阿蘭寇拉語、和風族語。"
 					],
 					"type": "entries"
 				}
@@ -68,7 +68,7 @@
 			]
 		},
 		{
-			"name": "Genasi",
+			"name": "元素裔", "ENG_name": "Genasi", 
 			"source": "EEPC",
 			"page": 9,
 			"size": "M",
@@ -78,52 +78,52 @@
 			},
 			"entries": [
 				{
-					"name": "Age",
+					"name": "年齡",
 					"type": "entries",
 					"entries": [
-						"Genasi mature at about the same rate as humans and reach adulthood in their late teens. They live somewhat longer than humans do, up to 120 years."
+						"元素裔以和人類差不多的速度成熟，並在十多歲左右成人。他們活得比人類更久一點，最多到120歲。"
 					]
 				},
 				{
-					"name": "Alignment",
+					"name": "陣營",
 					"type": "entries",
 					"entries": [
-						"Independent and self-reliant, genasi tend toward a neutral alignment."
+						"獨立而自信，元素裔傾向中立陣營。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Size",
+					"name": "體型",
 					"entries": [
-						"Genasi are as varied as their mortal parents but are generally built like humans, standing anywhere from 5 feet to over 6 feet tall. Your size is Medium."
+						"元素裔的體型和他們的凡人父母一樣各有不同，但其體格通常與人類相似，直立身高從5呎到6呎以上。你的體型為中型。"
 					]
 				},
 				{
-					"name": "Languages",
+					"name": "語言",
 					"entries": [
-						"You can speak, read, and write Common and Primordial. Primordial is a guttural language, filled with harsh syllables and hard consonants."
+						"你可以說、讀、寫通用語以及原初語。原初語是一種喉音語言，充滿短促的音節和生硬的輔音。"
 					],
 					"type": "entries"
 				}
 			],
 			"subraces": [
 				{
-					"name": "Air",
+					"name": "氣", "ENG_name": "Air",
 					"ability": {
 						"dex": 1
 					},
 					"entries": [
 						{
-							"name": "Unending Breath",
+							"name": "無盡氣息",
 							"entries": [
-								"You can hold your breath indefinitely while you're not {@condition incapacitated}."
+								"當你並未{@condition 無力}，你就可以無限期的屏住呼吸。"
 							],
 							"type": "entries"
 						},
 						{
-							"name": "Mingle with the Wind",
+							"name": "與風相混",
 							"entries": [
-								"You can cast the {@spell levitate} spell once with this trait, requiring no material components, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for this spell."
+								"你可以使用此特性施放一次{@spell levitate}，無需任何材料構材，且當你完成一次長休，你將重新獲得施放該法術的能力。你施展該法術的施法屬性為體質。"
 							],
 							"type": "entries"
 						}
@@ -133,22 +133,22 @@
 					]
 				},
 				{
-					"name": "Earth",
+					"name": "土", "ENG_name": "Earth",
 					"ability": {
 						"str": 1
 					},
 					"entries": [
 						{
-							"name": "Earth Walk",
+							"name": "大地步行",
 							"entries": [
-								"You can move across difficult terrain made of earth or stone without expending extra movement."
+								"你可以移動穿越由土或石構成的困難地形而不會消耗額外的移動速度。"
 							],
 							"type": "entries"
 						},
 						{
-							"name": "Merge with Stone",
+							"name": "與石交融",
 							"entries": [
-								"You can cast the {@spell pass without trace} spell once with this trait, requiring no material components, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for this spell."
+								"你可以使用此特性施放一次{@spell pass without trace}，無需任何材料構材，且當你完成一次長休，你將重新獲得施放該法術的能力。你施展該法術的施法屬性為體質。"
 							],
 							"type": "entries"
 						}
@@ -158,30 +158,30 @@
 					]
 				},
 				{
-					"name": "Fire",
+					"name": "火", "ENG_name": "Fire",
 					"ability": {
 						"int": 1
 					},
 					"darkvision": 60,
 					"entries": [
 						{
-							"name": "Darkvision",
+							"name": "黑暗視覺",
 							"entries": [
-								"You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. Your ties to the Elemental Plane of Fire make your darkvision unusual: everything you see in darkness is in a shade of red."
+								"你在看距離你60呎範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你與火元素位面的聯系使你的黑暗視覺與眾不同：任何你在黑暗中所看到的事物都有著紅色的輪廓。"
 							],
 							"type": "entries"
 						},
 						{
-							"name": "Fire Resistance",
+							"name": "火焰抗性",
 							"entries": [
-								"You have resistance to fire damage."
+								"你具有對火焰傷害的抗性。"
 							],
 							"type": "entries"
 						},
 						{
-							"name": "Reach to the Blaze",
+							"name": "觸及烈焰",
 							"entries": [
-								"You know the {@spell produce flame} cantrip. Once you reach 3rd level, you can cast the {@spell burning hands} spell once with this trait as a 1st-level spell, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for these spells."
+								"你知曉{@spell 燃火術}戲法。當你升至3級，你可以使用此特性以一環法術施放一次{@spell 燃燒之手}，無需任何材料構材，且當你完成一次長休，你將重新獲得施放該法術的能力。你施展該法術的施法屬性為體質。"
 							],
 							"type": "entries"
 						}
@@ -192,7 +192,7 @@
 					]
 				},
 				{
-					"name": "Water",
+					"name": "水", "ENG_name": "Water",
 					"speed": {
 						"walk": 30,
 						"swim": 30
@@ -202,30 +202,30 @@
 					},
 					"entries": [
 						{
-							"name": "Acid Resistance",
+							"name": "酸蝕抗性",
 							"entries": [
-								"You have resistance to acid damage."
+								"你具有對酸蝕傷害的抗性。"
 							],
 							"type": "entries"
 						},
 						{
-							"name": "Amphibious",
+							"name": "兩棲",
 							"entries": [
-								"You can breathe air and water."
+								"你可以在空氣和水中呼吸。"
 							],
 							"type": "entries"
 						},
 						{
-							"name": "Swim",
+							"name": "游泳",
 							"entries": [
-								"You have a swimming speed of 30 feet."
+								"你擁有30呎的游泳速度。"
 							],
 							"type": "entries"
 						},
 						{
-							"name": "Call to the Wave",
+							"name": "呼喚波濤",
 							"entries": [
-								"You know the {@spell shape water|xge} cantrip. When you reach 3rd level, you can cast the {@spell create or destroy water} spell as a 2nd-level spell once with this trait, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for these spells."
+								"你知曉{@spell 塑水|xge}戲法。當你升至3級，你可以使用此特性以二環法術施放一次{@spell create or destroy water}，且當你完成一次長休，你將重新獲得施放該法術的能力。你施展該法術的施法屬性為體質。"
 							],
 							"type": "entries"
 						}

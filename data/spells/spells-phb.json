@@ -3740,7 +3740,7 @@
 			]
 		},
 		{
-			"name": "Charm Person",
+			"name": "魅惑人類", "ENG_name": "Charm Person",
 			"level": 1,
 			"school": "E",
 			"time": [
@@ -3827,14 +3827,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You attempt to charm a humanoid you can see within range. It must make a Wisdom saving throw, and does so with advantage if you or your companions are fighting it. If it fails the saving throw, it is {@condition charmed} by you until the spell ends or until you or your companions do anything harmful to it. The {@condition charmed} creature regards you as a friendly acquaintance. When the spell ends, the creature knows it was {@condition charmed} by you."
+				"你嘗試魅惑一個射程內你所能看見的生物。它必須進行一次睿知豁免，且若你或你的同伴正在與它戰鬥，則它在該豁免檢定中具有優勢。若它豁免失敗，它將被你{@condition 魅惑}直到法術結束或值到你或你的同伴做出任何危害它的行動。被魅惑的生物將把你視作一名親近的熟人。當此法術結束，該生物將會知道它曾被你{@condition 魅惑}。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st. The creatures must be within 30 feet of each other when you target them."
+						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，你就可以再額外選擇一個生物作為目標。當你選擇這些生物時，它們彼此之間的距離必須在30呎內。"
 					]
 				}
 			],
@@ -3954,7 +3954,7 @@
 			]
 		},
 		{
-			"name": "Chromatic Orb",
+			"name": "幻色法球", "ENG_name": "Chromatic Orb",
 			"level": 1,
 			"school": "V",
 			"time": [
@@ -3974,7 +3974,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a diamond worth at least 50 gp",
+					"text": "一顆價值至少50金幣的鑽石",
 					"cost": 50
 				}
 			},
@@ -3997,14 +3997,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You hurl a 4-inch-diameter sphere of energy at a creature that you can see within range. You choose acid, cold, fire, lightning, poison, or thunder for the type of orb you create, and then make a ranged spell attack against the target. If the attack hits, the creature takes {@dice 3d8} damage of the type you chose."
+				"你向射程內你所能看見的一個生物投出一顆4吋直徑的能量球體。你為你所創造的法球從酸蝕、寒冰、火焰、閃電、毒素、或雷鳴中選擇一種類型，並對目標進行一次遠程法術攻擊。若該攻擊命中，目標受到{@dice 3d8}你所選類型的傷害。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@scaledice 3d8|1-9|1d8} for each slot level above 1st."
+						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會增加{@scaledice 3d8|1-9|1d8}。"
 					]
 				}
 			],
@@ -4485,7 +4485,7 @@
 			]
 		},
 		{
-			"name": "Color Spray",
+			"name": "七彩噴射", "ENG_name": "Color Spray",
 			"level": 1,
 			"school": "I",
 			"time": [
@@ -4504,7 +4504,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a pinch of powder or sand that is colored red, yellow, and blue"
+				"m": "一撮染成紅色、黃色和藍色的粉末或沙子"
 			},
 			"duration": [
 				{
@@ -4529,15 +4529,15 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A dazzling array of flashing, colored light springs from your hand. Roll {@dice 6d10}; the total is how many hit points of creatures this spell can effect. Creatures in a 15-foot cone originating from you are affected in ascending order of their current hit points (ignoring {@condition unconscious} creatures and creatures that can't see).",
-				"Starting with the creature that has the lowest current hit points, each creature affected by this spell is {@condition blinded} until the end of your next turn. Subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected."
+				"大量耀眼的七彩閃光從你的手中噴湧而出。骰{@dice 6d10}；其總和決定了此法術所能影響生物的總生命值。在以你為源點的15呎錐形內的所有生物將按其當前生命值由小到大受到影響（忽略{@condition 昏迷}和無法看見的生物）。",
+				"從有著最低當前生命值的生物開始，每個受到此法術影響的生物將{@condition 目盲}直到你的下個回合結束。在處理下一個有著最低生命值的生物之前，從擲骰總和中減去前一個生物的生命值。生物的生命值必須少於或等於剩餘總和才會受到影響。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, roll an additional {@scaledice 6d10|1-9|2d10} for each slot level above 1st."
+						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，就可以再額外骰{@scaledice 6d10|1-9|2d10}。"
 					]
 				}
 			],
@@ -4547,7 +4547,7 @@
 			]
 		},
 		{
-			"name": "Command",
+			"name": "命令術", "ENG_name": "Command",
 			"level": 1,
 			"school": "E",
 			"time": [
@@ -4671,41 +4671,41 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You speak a one-word command to a creature you can see within range. The target must succeed on a Wisdom saving throw or follow the command on its next turn. The spell has no effect if the target is undead, if it doesn't understand your language, or if your command is directly harmful to it.",
-				"Some typical commands and their effects follow. You might issue a command other than one described here. If you do so, the DM determines how the target behaves. If the target can't follow your command, the spell ends.",
+				"你對射程內你所能看見的一個生物說出一個單詞命令。目標必須成功通過一次睿知豁免，否則將在它的下個回合遵循該命令。若目標為不死生物、目標無法理解你的語言、或你的命令對它有直接危害，則此法術不會有任何效果。",
+				"以下是一些典型的命令和他們的效果。你也可以提出以外的其他命令。若你這麼做，則由DM決定目標將會如何行動。如果目標無法遵循你的命令，則法術結束。",
 				{
 					"type": "entries",
-					"name": "Approach",
+					"name": "靠近",
 					"entries": [
-						"The target moves toward you by the shortest and most direct route, ending its turn if it moves within 5 feet of you."
+						"目標以最短最直接的路徑向著你移動，且若移動到你5呎距離內時將會結束它的回合。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Drop",
+					"name": "丟下",
 					"entries": [
-						"The target drops whatever it is holding and then ends its turn."
+						"目標丟下任何它所持握的東西，然後結束它的回合。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Flee",
+					"name": "逃走",
 					"entries": [
-						"The target spends its turn moving away from you by the fastest available means."
+						"目標花費它的回合以最快的速度遠離你。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Grovel",
+					"name": "趴下",
 					"entries": [
-						"The target falls {@condition prone} and then ends its turn."
+						"目標陷入{@condition 伏地}狀態，然後結束它的回合。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Halt",
+					"name": "暫停",
 					"entries": [
-						"The target doesn't move and takes no actions. A flying creature stays aloft, provided that it is able to do so. If it must move to stay aloft, it flies the minimum distance needed to remain in the air."
+						"目標不移動且不採取任何動作。若飛行生物能夠維持浮空，則它將會這麼做。如果它必須要移動才能維持在空中，則它會飛行最短所需距離以維持於空中。"
 					]
 				}
 			],
@@ -4714,7 +4714,7 @@
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional creature for each slot level above 1st. The creatures must be within 30 feet of each other when you target them."
+						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，你就可以再額外影響一個生物。當你選擇這些生物時，它們彼此之間的距離必須在30呎內。"
 					]
 				}
 			],
@@ -4910,7 +4910,7 @@
 			"page": 224
 		},
 		{
-			"name": "Compelled Duel",
+			"name": "強行決鬥", "ENG_name": "Compelled Duel",
 			"level": 1,
 			"school": "E",
 			"time": [
@@ -4981,8 +4981,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You attempt to compel a creature into a duel. One creature that you can see within range must make a Wisdom saving throw. On a failed save, the creature is drawn to you, compelled by your divine demand. For the duration, it has disadvantage on attack rolls against creatures other than you, and must make a Wisdom saving throw each time it attempts to move to a space that is more than 30 feet away from you; if it succeeds on this saving throw, this spell doesn't restrict the target's movement for that turn.",
-				"The spell ends if you attack any other creature, if you cast a spell that targets a hostile creature other than the target, if a creature friendly to you damages the target or casts a harmful spell on it, or if you end your turn more than 30 feet away from the target."
+				"你嘗試強迫一個生物與你決鬥。一個射程內你所能看見的生物必須進行一次睿知豁免，若豁免失敗，該生物將被拖向你，被你神聖的要求給強迫。在持續時間內，它在對你以外的其他生物進行的攻擊檢定中具有劣勢，且每次它嘗試離開你30呎距離外時都必須進行一次睿知豁免；若成功通過該豁免檢定，則此法術在該回合將不會再限制目標的移動。",
+				"若你攻擊任何其他生物、其他敵意生物為目標施放一個法術、對你友好的生物傷害了目標或對其施放危害性的法術、或你在距離目標30呎以外的位置結束你的回合，則此法術結束。"
 			],
 			"page": 224,
 			"savingThrow": [

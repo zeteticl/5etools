@@ -91,7 +91,7 @@ const asiFilter = new Filter({
 let filterBox;
 async function onJsonLoad (data) {
 	list = ListUtil.search({
-		valueNames: ['name', 'ability', 'size', 'source', 'clean-name', "uniqueid"],
+		valueNames: ['name', 'ability', 'size', 'source', 'clean-name', "uniqueid", "eng_name"],
 		listClass: "races"
 	});
 
@@ -259,6 +259,7 @@ function addRaces (data) {
 					${bracketMatch ? `<span class="clean-name hidden">${bracketMatch[2]} ${bracketMatch[1]}</span>` : ""}
 					
 					<span class="uniqueid hidden">${race.uniqueId ? race.uniqueId : rcI}</span>
+					<span class="eng_name hidden">${race.ENG_name ? race.ENG_name : race.name}</span>
 				</a>
 			</li>`;
 
@@ -381,7 +382,7 @@ function loadhash (id) {
 		<tbody>
 		${EntryRenderer.utils.getBorderTr()}
 		<tr><th class="name" colspan="6">
-		<span class="stats-name copyable" onclick="EntryRenderer.utils._handleNameClick(this, '${race.source.escapeQuotes()}')">${race.name}</span>
+		<span><b class="stats-name copyable" onclick="EntryRenderer.utils._handleNameClick(this, '${race.source.escapeQuotes()}')">${race.name}</b>${race.ENG_name? (" "+race.ENG_name):""}</span>
 		${race.soundClip ? getPronunciationButton() : ""}
 		<span class="stats-source ${Parser.sourceJsonToColor(race.source)}" title="${Parser.sourceJsonToFull(race.source)}">${Parser.sourceJsonToAbv(race.source)}</span>
 		</th></tr>
