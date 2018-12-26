@@ -678,42 +678,42 @@
 					]
 				},
 				{
-					"name": "Eladrin",
+					"name": "雅靈", "ENG_name": "Eladrin",
 					"source": "MTF",
 					"page": 61,
 					"ability": {
 						"cha": 1
 					},
 					"entries": [
-						"{@i Choose your eladrin's season: autumn, winter, spring, or summer. When finishing a long rest, any eladrin can change their season. See the \"Info\" tab for more information.}",
+						"{@i 選擇你的雅靈季節：春、夏、秋或冬。當完成一次長休，一個雅靈將可以改變他的季節。參見\"情報\"頁以獲得更多資訊。}",
 						{
-							"name": "Fey Step",
+							"name": "妖精步",
 							"entries": [
-								"As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can't do so again until you finish a short or long rest.",
-								"When you reach 3rd level, your Fey Step gains an additional effect based on your season; if the effect requires a saving throw, the DC equals 8 + your proficiency bonus + your Charisma modifier:",
+								"以一個附贈動作，你可以魔法性的傳送最多30呎距離到一處未被佔據的可見空間。一旦你使用此特性，直到你完成一次短休或長休之前都無法再使用它。",
+								"當你升至3級，你的妖精步將根據你的季節獲得一個額外效果；若該效果需要豁免，則DC等同8+你的熟練加值+你的魅力調整值：",
 								{
 									"type": "list",
 									"style": "list-hang-notitle",
 									"items": [
 										{
 											"type": "item",
-											"name": "Autumn",
-											"entry": "Immediately after you use your Fey Step, up to two creatures of your choice that you can see within 10 feet of you must succeed on a Wisdom saving throw or be charmed by you for 1 minute, or until you or your companions deal any damage to it."
+											"name": "春",
+											"entry": "當你使用妖精步時，你可以觸碰一個距離你5呎內的自願生物。該生物將代替你被傳送，並出現在距離你30呎內的一處未被佔據的可見空間。"
 										},
 										{
 											"type": "item",
-											"name": "Winter",
-											"entry": "When you use your Fey Step, one creature of your choice that you can see within 5 feet of you before you teleport must succeed on a Wisdom saving throw or be frightened of you until the end of your next turn."
+											"name": "夏",
+											"entry": "緊接在你使用妖精步後，距離你5呎內每個你所選擇的生物將受到等同於你魅力調整值的火焰傷害（最少1點）。"
 										},
 										{
 											"type": "item",
-											"name": "Spring",
-											"entry": "When you use your Fey Step, you can touch one willing creature within 5 feet of you. That creature then teleports instead of you, appearing in an unoccupied space of your choice that you can see within 30 feet of you."
+											"name": "秋",
+											"entry": "緊接在你使用妖精步後，距離你10呎內最多二個你所選擇的生物必須成功通過一次睿知豁免，否則被你{@condition 魅惑}1分鐘，或直到你或你的同伴對它造成傷害。"
 										},
 										{
 											"type": "item",
-											"name": "Summer",
-											"entry": "Immediately after you use your Fey Step, each creature of your choice that you can see within 5 feet of you takes fire damage equal to your Charisma modifier (minimum of 1 damage)."
+											"name": "冬",
+											"entry": "當你使用妖精步時，一個你所選擇在你傳送前距離你5呎內的可見生物必須成功通過一次睿知豁免，否則對你感到{@condition 恐懼}直到你的下個回合結束。"
 										}
 									]
 								}
@@ -723,7 +723,7 @@
 					]
 				},
 				{
-					"name": "Sea",
+					"name": "海", "ENG_name": "Sea",
 					"source": "MTF",
 					"page": 62,
 					"speed": {
@@ -735,30 +735,30 @@
 					},
 					"entries": [
 						{
-							"name": "Sea Elf Training",
+							"name": "海精靈武器訓練",
 							"entries": [
-								"You have proficiency with the {@item spear|phb}, {@item trident|phb}, {@item light crossbow|phb}, and {@item net|phb}."
+								"你熟練於{@item 矛|phb}、{@item 三叉戟|phb}、{@item 輕弩|phb}、和{@item 捕網|phb}。"
 							],
 							"type": "entries"
 						},
 						{
-							"name": "Child of the Sea",
+							"name": "海洋之子",
 							"entries": [
-								"You have a swimming speed of 30 feet, and you can breathe air and water."
+								"你擁有30呎的游泳速度，且你可以在空氣與水中呼吸。"
 							],
 							"type": "entries"
 						},
 						{
-							"name": "Friend of the Sea",
+							"name": "海洋之友",
 							"entries": [
-								"Using gestures and sounds, you can communicate simple ideas with any beast that has an innate swimming speed."
+								"利用手勢與聲音，你可以和任何擁有天生游泳速度的野獸溝通簡單的想法。"
 							],
 							"type": "entries"
 						},
 						{
-							"name": "Extra Language",
+							"name": "額外語言",
 							"entries": [
-								"You can speak, read, and write Aquan."
+								"你能夠說、讀、寫水族語。"
 							],
 							"type": "entries"
 						}
@@ -772,7 +772,7 @@
 					]
 				},
 				{
-					"name": "Shadar-kai",
+					"name": "影靈", "ENG_name": "Shadar-kai",
 					"source": "MTF",
 					"page": 62,
 					"ability": {
@@ -781,16 +781,16 @@
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Necrotic Resistance",
+							"name": "死靈抗性",
 							"entries": [
-								"You have resistance to necrotic damage."
+								"你具有對死靈傷害的抗性。"
 							]
 						},
 						{
-							"name": "Blessing of the Raven Queen",
+							"name": "鴉后的祝福",
 							"entries": [
-								"As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can't do so again until you finish a long rest.",
-								"Starting at 3rd level, you also gain resistance to all damage when you teleport using this trait. The resistance lasts until the start of your next turn. During that time, you appear ghostly and translucent."
+								"以一個附贈動作，你可以魔法性的傳送最多30呎距離到一處未被佔據的可見空間。一旦你使用此特性，直到你完成一次長休之前都無法再使用它。",
+								"從3級開始，當你使用此特性傳送時，你也獲得對所有傷害的抗性。這個抗性持續到你的下個回合開始。在這段期間，你變得朦朧且半透明。"
 							],
 							"type": "entries"
 						}
