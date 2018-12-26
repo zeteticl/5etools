@@ -453,7 +453,7 @@
 					]
 				},
 				{
-					"name": "Eladrin",
+					"name": "雅靈", "ENG_name": "Eladrin",
 					"source": "UAEladrinAndGith",
 					"page": 1,
 					"ability": {
@@ -469,23 +469,23 @@
 					},
 					"entries": [
 						{
-							"name": "Fey Step",
+							"name": "妖精步",
 							"entries": [
-								"As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. Once you use this trait, you can't do so again until you finish a short or long rest."
+								"以一個附贈動作，你可以魔法性的傳送最多30呎距離到一處未被佔據的可見空間。一旦你使用此特性，直到你完成一次短休或長休之前都無法再使用它。"
 							],
 							"type": "entries"
 						},
 						{
-							"name": "Shifting Seasons",
+							"name": "轉變季節",
 							"entries": [
-								"At the end of each short or long rest, you can align yourself with the magic of one season, regardless of the season that is dominating your personality. Doing so allows you to cast a certain cantrip, as shown in the Shifting Seasons Cantrips table. When you align yourself with a season's magic, you lose the cantrip associated with the previous season and gain the cantrip associated with the new season.",
-								"Your spellcasting ability for these cantrips is Intelligence or Charisma, whichever is higher.",
+								"在每次短休或長休結束時，你可以使自己協律於一個季節的魔法，而跟正主宰你個性的季節無關。這麼做讓你得以施展一個特定戲法，如下列的轉變季節戲法表所示。當你使自己協律於一個季節的魔法，你將失去關聯於上一個季節的戲法，並獲得關聯於新季節的戲法。",
+								"你施展這些戲法的施法屬性為智力或魅力，看哪個較高。",
 								{
 									"type": "table",
-									"caption": "Shifting Seasons Cantrips",
+									"caption": "轉變季節戲法表",
 									"colLabels": [
-										"Season",
-										"Cantrip"
+										"季節",
+										"戲法"
 									],
 									"colStyles": [
 										"col-6 text-align-center",
@@ -493,20 +493,20 @@
 									],
 									"rows": [
 										[
-											"Autumn",
-											"{@spell Friends}"
+											"春",
+											"{@spell 次級幻象}"
 										],
 										[
-											"Winter",
-											"{@spell Chill touch}"
+											"夏",
+											"{@spell 火焰箭}"
 										],
 										[
-											"Spring",
-											"{@spell Minor illusion}"
+											"秋",
+											"{@spell 交友術}"
 										],
 										[
-											"Summer",
-											"{@spell Fire bolt}"
+											"冬",
+											"{@spell 寒顫之觸}"
 										]
 									]
 								}
@@ -519,7 +519,7 @@
 					]
 				},
 				{
-					"name": "Avariel",
+					"name": "翼精靈", "ENG_name": "Avariel",
 					"source": "UAElfSubraces",
 					"speed": {
 						"walk": 30,
@@ -527,16 +527,16 @@
 					},
 					"entries": [
 						{
-							"name": "Extra Language",
+							"name": "額外語言",
 							"entries": [
-								"You can speak, read, and write Auran."
+								"你能夠說、讀、寫水族語。"
 							],
 							"type": "entries"
 						},
 						{
-							"name": "Flight",
+							"name": "飛行",
 							"entries": [
-								"You have a flying speed of 30 feet. To use this speed, you can't be wearing medium or heavy armor."
+								"你擁有30呎的飛行速度。要使用此移動速度，你不能穿著中甲或重甲。"
 							],
 							"type": "entries"
 						}
@@ -546,33 +546,33 @@
 					]
 				},
 				{
-					"name": "Grugach",
+					"name": "棕精靈", "ENG_name": "Grugach",
 					"source": "UAElfSubraces",
 					"ability": {
 						"str": 1
 					},
 					"entries": [
 						{
-							"name": "Languages",
+							"name": "語言",
 							"entries": [
-								"You can speak, read, and write Sylvan, Elvish, and one extra language of your choice. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires."
+								"你能夠說、讀、寫木族語、精靈語、和一個額外自選語言。精靈語如流體般流暢，有著精妙的語調變化和複雜的語法結構。精靈文學豐富而多元，他們的詩歌在其他種族之間也很受歡迎。許多吟遊詩人都會學習精靈語，並將其韻律運用在他們自己的詩作中。"
 							],
 							"data": {
-								"overwrite": "Languages"
+								"overwrite": "語言"
 							},
 							"type": "entries"
 						},
 						{
-							"name": "Grugach Weapon Training",
+							"name": "棕精靈武器訓練",
 							"entries": [
-								"You have proficiency with the spear, shortbow, longbow, and net."
+								"你熟練於{@item 矛|phb}、{@item 短弓|phb}、{@item 長弓|phb}、和{@item 捕網|phb}。"
 							],
 							"type": "entries"
 						},
 						{
-							"name": "Cantrip",
+							"name": "戲法",
 							"entries": [
-								"You know one cantrip of your choice from the druid spell list. Wisdom is your spellcasting ability for it."
+								"你知曉一個{@filter 從德魯伊法術列表中自選的戲法|spells|level=0|class=Druid}。你施展該法術的施法屬性為睿知。"
 							],
 							"type": "entries"
 						}
@@ -588,7 +588,7 @@
 					]
 				},
 				{
-					"name": "Sea",
+					"name": "海", "ENG_name": "Sea",
 					"source": "UAElfSubraces",
 					"speed": {
 						"walk": 30,
@@ -599,30 +599,30 @@
 					},
 					"entries": [
 						{
-							"name": "Extra Language",
+							"name": "額外語言",
 							"entries": [
-								"You can speak, read, and write Aquan."
+								"你能夠說、讀、寫水族語。"
 							],
 							"type": "entries"
 						},
 						{
-							"name": "Sea Elf Weapon Training",
+							"name": "海精靈武器訓練",
 							"entries": [
-								"You have proficiency with the {@item spear|phb}, {@item trident|phb}, {@item light crossbow|phb}, and {@item net|phb}."
+								"你熟練於{@item 矛|phb}、{@item 三叉戟|phb}、{@item 輕弩|phb}、和{@item 捕網|phb}。"
 							],
 							"type": "entries"
 						},
 						{
-							"name": "Child of the Sea",
+							"name": "海洋之子",
 							"entries": [
-								"You have a swimming speed of 30 feet, and you can breathe air and water."
+								"你擁有30呎的游泳速度，且你可以在空氣與水中呼吸。"
 							],
 							"type": "entries"
 						},
 						{
-							"name": "Friend of the Sea",
+							"name": "海洋之友",
 							"entries": [
-								"Using gestures and sounds, you can communicate simple ideas with Small or smaller beasts that have an inborn swimming speed."
+								"利用手勢與聲音，你可以和任何擁有天生游泳速度，體型為小型或更小的野獸溝通簡單的想法。"
 							],
 							"type": "entries"
 						}
@@ -636,33 +636,33 @@
 					]
 				},
 				{
-					"name": "Shadar-kai",
+					"name": "影靈", "ENG_name": "Shadar-kai",
 					"source": "UAElfSubraces",
 					"ability": {
 						"cha": 1
 					},
 					"entries": [
 						{
-							"name": "Languages",
+							"name": "語言",
 							"entries": [
-								"You can speak, read, and write Common, Elvish, and one extra language of your choice. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires."
+								"你能夠說、讀、寫通用語、精靈語、和一個額外自選語言。精靈語如流體般流暢，有著精妙的語調變化和複雜的語法結構。精靈文學豐富而多元，他們的詩歌在其他種族之間也很受歡迎。許多吟遊詩人都會學習精靈語，並將其韻律運用在他們自己的詩作中。"
 							],
 							"data": {
-								"overwrite": "Languages"
+								"overwrite": "語言"
 							},
 							"type": "entries"
 						},
 						{
-							"name": "Cantrip",
+							"name": "戲法",
 							"entries": [
-								"You know one of the following cantrips of your choice: {@spell chill touch}, {@spell spare the dying}, or {@spell thaumaturgy}. Charisma is your spellcasting ability for it."
+								"你知曉下列其中一個戲法：{@spell 寒顫之觸}、{@spell 拯救瀕死}、或{@spell 奇術}。你施展該法術的施法屬性為魅力。"
 							],
 							"type": "entries"
 						},
 						{
-							"name": "Blessing of the Raven Queen",
+							"name": "鴉后的祝福",
 							"entries": [
-								"As a bonus action, you can magically teleport up to 15 feet to an unoccupied space you can see, and you gain resistance to all damage until the start of your next turn. During that time, you appear ghostly and translucent. Once you use this ability, you can't use it again until you finish a short or long rest."
+								"以一個附贈動作，你可以魔法性的傳送最多15呎距離到一處未被佔據的可見空間，且直到你的下個回合開始，你獲得對所有傷害的抗性。在這段期間，你變得朦朧且半透明。一旦你使用這個能力，直到你完成一次短休或長休之前都無法再使用它。"
 							],
 							"type": "entries"
 						}
