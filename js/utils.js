@@ -1371,7 +1371,7 @@ Parser.subraceKeyToDisplay["sea"]       = "海";
 Parser.subraceKeyToDisplay["shadar-kai"]= "影靈";
 Parser.subraceKeyToDisplay["aereni"]    = "艾瑞尼";
 Parser.subraceKeyToDisplay["Valenar"]   = "維歐諾爾";
-Parser.subraceKeyToDisplay["mark of shadow"]= "影紋";
+Parser.subraceKeyToDisplay["mark of shadow"]= "影龍紋";
 
 Parser.subraceKeyToDisplay["forest"]= "林";
 Parser.subraceKeyToDisplay["rock"]  = "岩";
