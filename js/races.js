@@ -235,7 +235,7 @@ function addRaces (data) {
 			race._fAbility = abils.map(a => mapAbilityObjToFull(a));
 			const increases = {};
 			abils.filter(it => it.amount > 0).forEach(it => increases[it.asi] = true);
-			Object.keys(increases).forEach(it => race._fAbility.push(`Any ${Parser.attAbvToFull(it)} Increase`));
+			Object.keys(increases).forEach(it => race._fAbility.push(`任意${Parser.attAbvToFull(it)}增加`));
 		} else race._fAbility = [];
 		race._fSpeed = race.speed.walk ? [race.speed.climb ? "Climb" : null, race.speed.fly ? "Fly" : null, race.speed.swim ? "Swim" : null, getSpeedRating(race.speed.walk)].filter(it => it) : getSpeedRating(race.speed);
 		race._fMisc = [
@@ -292,13 +292,13 @@ function addRaces (data) {
 	}
 
 	function ascSortAsi (a, b) {
-		if (a.startsWith("Any") && b.startsWith("Any")) {
-			const aAbil = a.replace("Any", "").replace("Increase", "").trim();
-			const bAbil = b.replace("Any", "").replace("Increase", "").trim();
+		if (a.startsWith("任意") && b.startsWith("任意")) {
+			const aAbil = a.replace("任意", "").replace("增加", "").trim();
+			const bAbil = b.replace("任意", "").replace("增加", "").trim();
 			return ASI_SORT_POS[aAbil] - ASI_SORT_POS[bAbil];
-		} else if (a.startsWith("Any")) {
+		} else if (a.startsWith("任意")) {
 			return -1;
-		} else if (b.startsWith("Any")) {
+		} else if (b.startsWith("任意")) {
 			return 1;
 		} else {
 			const [aAbil, aScore] = a.split(" ");
