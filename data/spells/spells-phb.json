@@ -4990,7 +4990,7 @@
 			]
 		},
 		{
-			"name": "Comprehend Languages",
+			"name": "通曉語言", "ENG_name": "Comprehend Languages",
 			"level": 1,
 			"school": "D",
 			"time": [
@@ -5008,7 +5008,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a pinch of soot and salt"
+				"m": "一撮煤灰和鹽"
 			},
 			"duration": [
 				{
@@ -5056,8 +5056,8 @@
 				"ritual": true
 			},
 			"entries": [
-				"For the duration, you understand the literal meaning of any spoken language that you hear. You also understand any written language that you see, but you must be touching the surface on which the words are written. It takes about 1 minute to read one page of text.",
-				"This spell doesn't decode secret messages in a text or a glyph, such as an arcane sigil, that isn't part of a written language."
+				"在法術持續期間，你能理解任何你所聽到的口說語言的字面意義。你同時理解任何你看到的書寫語言，但你必須要觸碰到寫有文字的表面。閱讀一整頁的文字需要耗費大約1分鐘。",
+				"此法術無法解碼隱藏在文字或符號中的秘密訊息，例如魔法符文。這些密碼並不屬於書寫語言的一部分。"
 			],
 			"page": 224
 		},
@@ -6762,7 +6762,7 @@
 			"permanentEffects": true
 		},
 		{
-			"name": "Create or Destroy Water",
+			"name": "造水/枯水術", "ENG_name": "Create or Destroy Water",
 			"level": 1,
 			"school": "T",
 			"time": [
@@ -6781,7 +6781,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a drop of water if creating water or a few grains of sand if destroying it"
+				"m": "若要造水則一滴水，若要枯水則幾粒沙子"
 			},
 			"duration": [
 				{
@@ -6814,19 +6814,19 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You either create or destroy water.",
+				"你可以創造水或使水枯竭。",
 				{
 					"type": "entries",
-					"name": "Create Water",
+					"name": "造水",
 					"entries": [
-						"You create up to 10 gallons of clean water within range in an open container. Alternatively, the water falls as rain in a 30-foot cube within range, extinguishing exposed flames in the area."
+						"你在射程內一處敞開容器中創造出最多10加侖乾淨的水。或者，水將在射程內一處30呎邊長立方體空間內如雨般降下，熄滅該區域中暴露的火焰。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Destroy Water",
+					"name": "枯水",
 					"entries": [
-						"You destroy up to 10 gallons of water in an open container within range. Alternatively, you destroy fog in a 30-foot cube within range."
+						"你使射程內一處敞開容器中最多10加侖的水枯竭消失。或者，你消滅射程內一處30呎邊長立方體空間內的霧水。"
 					]
 				}
 			],
@@ -6835,7 +6835,7 @@
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, you create or destroy 10 additional gallons of water, or the size of the cube increases by 5 feet, for each slot level above 1st."
+						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，你就可以再多創造或消滅10加侖的水，或者增加立方體空間的邊長5呎。"
 					]
 				}
 			],
@@ -7123,7 +7123,7 @@
 			]
 		},
 		{
-			"name": "Cure Wounds",
+			"name": "治療傷勢", "ENG_name": "Cure Wounds",
 			"level": 1,
 			"school": "V",
 			"time": [
@@ -7219,14 +7219,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A creature you touch regains a number of hit points equal to {@dice 1d8} + your spellcasting ability modifier. This spell has no effect on undead or constructs."
+				"你碰觸的一個生物回復等同於{@dice 1d8}+你的施法屬性調整值的生命值。此法術對不死生物或構裝體沒有任何效果。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, the healing increases by {@scaledice 1d8|1-9|1d8} for each slot level above 1st."
+						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，治療量便會增加{@scaledice 1d8|1-9|1d8}。"
 					]
 				}
 			],
@@ -7998,7 +7998,7 @@
 			]
 		},
 		{
-			"name": "Detect Evil and Good",
+			"name": "偵測善惡", "ENG_name": "Detect Evil and Good",
 			"level": 1,
 			"school": "D",
 			"time": [
@@ -8041,13 +8041,13 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"For the duration, you know if there is an aberration, celestial, elemental, fey, fiend, or undead within 30 feet of you, as well as where the creature is located. Similarly, you know if there is a place or object within 30 feet of you that has been magically consecrated or desecrated.",
-				"The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt."
+				"在法術持續期間，你得知距離你30呎範圍內是否有異怪、天界生物、元素、精類、邪魔或不死生物存在，你也能得知該生物的位置。同樣的，你得知距離你30呎範圍內是否有聖潔或被褻瀆的地方或物體存在。",
+				"此法術可以穿透大部分的障礙物，但會被1呎厚的石頭、1吋厚的尋常金屬、一層薄薄的鉛、或3呎的木頭或泥土給阻擋。"
 			],
 			"page": 231
 		},
 		{
-			"name": "Detect Magic",
+			"name": "偵測魔法", "ENG_name": "Detect Magic",
 			"level": 1,
 			"school": "D",
 			"time": [
@@ -8125,8 +8125,8 @@
 				"ritual": true
 			},
 			"entries": [
-				"For the duration, you sense the presence of magic within 30 feet of you. If you sense magic in this way, you can use your action to see a faint aura around any visible creature or object in the area that bears magic, and you learn its school of magic, if any.",
-				"The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt."
+				"在法術持續期間，你能察覺距離你30呎範圍內所有魔法的存在。如果你以這個方式偵查魔法，你可以使用你的動作去查看該區域內，任何環繞在含有魔法的可見生物或物體周遭的淡淡魔法靈氣，且你將得知該魔法的學派。",
+				"此法術可以穿透大部分的障礙物，但會被1呎厚的石頭、1吋厚的尋常金屬、一層薄薄的鉛、或3呎的木頭或泥土給阻擋。"
 			],
 			"page": 231,
 			"races": [
@@ -8137,7 +8137,7 @@
 			]
 		},
 		{
-			"name": "Detect Poison and Disease",
+			"name": "偵測毒素或疾病", "ENG_name": "Detect Poison and Disease",
 			"level": 1,
 			"school": "D",
 			"time": [
@@ -8192,8 +8192,8 @@
 				"ritual": true
 			},
 			"entries": [
-				"For the duration, you can sense the presence and location of poisons, poisonous creatures, and diseases within 30 feet of you. You also identify the kind of poison, poisonous creature, or disease in each case.",
-				"The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt."
+				"在法術持續期間，你可以察覺距離你30呎範圍內任何毒素、有毒生物、疾病的存在和位置。你同時能夠辨識出各毒素、有毒生物、或疾病的種類。",
+				"此法術可以穿透大部分的障礙物，但會被1呎厚的石頭、1吋厚的尋常金屬、一層薄薄的鉛、或3呎的木頭或泥土給阻擋。"
 			],
 			"page": 231
 		},
@@ -8391,7 +8391,7 @@
 			]
 		},
 		{
-			"name": "Disguise Self",
+			"name": "易容術", "ENG_name": "Disguise Self",
 			"level": 1,
 			"school": "I",
 			"time": [
@@ -8503,9 +8503,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You make yourself\u2014including your clothing, armor, weapons, and other belongings on your person\u2014look different until the spell ends or until you use your action to dismiss it. You can seem 1 foot shorter or taller and can appear thin, fat, or in between. You can't change your body type, so you must adopt a form that has the same basic arrangement of limbs. Otherwise, the extent of the illusion is up to you.",
-				"The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing or would feel your head and hair. If you use this spell to appear thinner than you are, the hand of someone who reaches out to touch you would bump into you while it was seemingly still in midair.",
-				"To discern that you are disguised, a creature can use its action to inspect your appearance and must succeed on an Intelligence (Investigation) check against your spell save DC."
+				"你使你自己\u2014包括你的服裝、護甲、武器、以及其他屬於你個人的物品\u2014看起來不一樣，直到法術結束或你使用你的動作解消它。你可以讓自己看起來比原本更矮或更高1呎，或表現得更瘦、更胖、或在兩者之間。你無法改變你的身體型態，因此你必須採用有著相同基本肢體架構的外型。除此之外，該幻術的表現程度由你決定。",
+				"此法術帶來的改變經不起物理的檢驗。舉例來說，若你使用此法術為自己添了一頂帽子，其他物體會穿過這頂帽子，且任何碰觸帽子的人會什麼都摸不到或直接摸到你的頭和頭髮。若你使用此法術讓自己看起來比原本更瘦，則某人向著你伸出的手將在途中撞到你，儘管它看起來像是還在半空中。",
+				"要辨別出你的偽裝，一個生物必須使用它的動作去檢驗你的外表，並必須成功通過一次智力（{@skill 調查}）檢定，難度等同於你的法術豁免DC。"
 			],
 			"page": 233,
 			"opposedCheck": [
@@ -8785,7 +8785,7 @@
 			"page": 234
 		},
 		{
-			"name": "Dissonant Whispers",
+			"name": "噪音暗語", "ENG_name": "Dissonant Whispers",
 			"level": 1,
 			"school": "E",
 			"time": [
@@ -8831,14 +8831,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You whisper a discordant melody that only one creature of your choice within range can hear, wracking it with terrible pain. The target must make a Wisdom saving throw. On a failed save, it takes {@dice 3d6} psychic damage and must immediately use its reaction, if available, to move as far as its speed allows away from you. The creature doesn't move into obviously dangerous ground, such as a fire or a pit. On a successful save, the target takes half as much damage and doesn't have to move away. A {@condition deafened} creature automatically succeeds on the save."
+				"你向射程內能聽見你的一個生物低語一段只有它聽得到的不協調旋律，以可怕的痛苦折磨它。目標必須進行一次睿知豁免。若豁免失敗，則它受到{@dice 3d6}精神傷害，且可以的話必須立刻使用它的反應，向著遠離你的方向移動等同它移動速度的距離。該生物不會移動到有著明顯危險的地方，像是火焰或坑洞。若豁免成功，則目標只受到一半的傷害，且不需要遠離。一個{@condition 耳聾}的生物自動成功於該豁免。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@scaledice 3d6|1-9|1d6} for each slot level above 1st."
+						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會增加{@scaledice 3d6|1-9|1d6}。"
 					]
 				}
 			],
@@ -8924,7 +8924,7 @@
 			"page": 234
 		},
 		{
-			"name": "Divine Favor",
+			"name": "神恩術", "ENG_name": "Divine Favor",
 			"level": 1,
 			"school": "V",
 			"time": [
@@ -8985,7 +8985,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Your prayer empowers you with divine radiance. Until the spell ends, your weapon attacks deal an extra {@dice 1d4} radiant damage on a hit."
+				"你的祈禱使你充滿神聖的光芒。直到法術結束前，你的武器攻擊將在命中時造成額外{@dice 1d4}光耀傷害。"
 			],
 			"page": 234,
 			"damageInflict": [
@@ -17801,7 +17801,7 @@
 			"page": 256
 		},
 		{
-			"name": "Longstrider",
+			"name": "大步奔行", "ENG_name": "Longstrider",
 			"level": 1,
 			"school": "T",
 			"time": [
@@ -17819,7 +17819,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a pinch of dirt"
+				"m": "一撮泥土"
 			},
 			"duration": [
 				{
@@ -17856,14 +17856,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You touch a creature. The target's speed increases by 10 feet until the spell ends."
+				"你觸碰一個生物。直到法術結束前，目標的移動速度增加10呎。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st."
+						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，你就可以再額外選擇一個生物作為目標。"
 					]
 				}
 			],
@@ -19294,7 +19294,7 @@
 				"你在射程內創造一段聲音或一個物體的影像，持續到法術的持續時間結束。這個幻象也會在你以一個動作解消它或再次施放此法術時消失。",
 				"如果你創造一段聲音，它的音量可以小至低語，大致尖叫。它可以是你的聲音、其他人的聲音、獅子的吼叫聲、擊鼓聲、或任何其他你所選擇的聲音。這個聲音在持續時間內持續而不衰弱，或者你也可以在法術結束前於不同時機發出不相關的聲音。",
 				"如果你創造出一個物體的影像\u2014像是一張椅子、泥濘腳印、或一個小箱子\u2014它必須不大於5呎邊長的立方體。這個影像無法創造出聲音、光照、氣味、或其他感官效果。由於東西會穿過幻象，與影像的任何物理性互動都將暴露它是幻象的事實。",
-				"如果一個生物使用它的動作去檢視該聲音或影像，它可以透過一個成功的智力（調查）檢定辨識出它是幻象，難度等同於你的法術豁免DC。如果一個生物辨識出這是幻象，幻象對該生物而言將變得模糊黯淡。"
+				"如果一個生物使用它的動作去檢視該聲音或影像，它可以透過一個成功的智力（{@skill 調查}）檢定辨識出它是幻象，難度等同於你的法術豁免DC。如果一個生物辨識出這是幻象，幻象對該生物而言將變得模糊黯淡。"
 			],
 			"page": 260,
 			"opposedCheck": [
