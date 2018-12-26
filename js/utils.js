@@ -1361,12 +1361,22 @@ Parser.subraceKeyToDisplay["earth"] = "土";
 Parser.subraceKeyToDisplay["air"]   = "氣";
 Parser.subraceKeyToDisplay["water"] = "水";
 Parser.subraceKeyToDisplay["fire"]  = "火";
+Parser.subraceKeyToDisplay["drow"]  = "卓爾";
+Parser.subraceKeyToDisplay["eladrin"]= "雅靈";
+Parser.subraceKeyToDisplay["high"]  = "高等";
+Parser.subraceKeyToDisplay["wood"]  = "木";
+Parser.subraceKeyToDisplay["avariel"]   = "翼精靈";
+Parser.subraceKeyToDisplay["grugach"]   = "棕精靈";
+Parser.subraceKeyToDisplay["sea"]       = "海";
+Parser.subraceKeyToDisplay["shadar-kai"]= "影靈";
+Parser.subraceKeyToDisplay["aereni"]    = "艾瑞尼";
+Parser.subraceKeyToDisplay["Valenar"]   = "維歐諾爾";
+Parser.subraceKeyToDisplay["mark of shadow"]= "陰影龍紋";
+
 Parser.subraceKeyToDisplay["forest"]= "林";
 Parser.subraceKeyToDisplay["rock"]  = "岩";
 Parser.subraceKeyToDisplay["deep"]  = "地底";
-Parser.subraceKeyToDisplay["wood"]  = "木";
-Parser.subraceKeyToDisplay["drow"]  = "卓爾";
-Parser.subraceKeyToDisplay["high"]  = "高等";
+
 Parser.RaceToDisplay = function(race){
 	race = Parser.translateKeyInMapToDisplay(Parser.raceKeyToDisplay, race);
 	let r_match = race.match(/([^()]*)( ?\((.*)\))?/);
