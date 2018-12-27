@@ -719,7 +719,7 @@ function addSpells (data) {
 
 	list.reIndex();
 	if (lastSearch) list.search(lastSearch);
-	list.sort("name");
+	list.sort("level");
 	filterBox.render();
 	handleFilterChange();
 
