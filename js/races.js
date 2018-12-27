@@ -66,26 +66,24 @@ const sizeFilter = new Filter({header: "Size", headerName: "體型", displayFn: 
 const asiFilter = new Filter({
 	header: "Ability Bonus (Including Subrace)", headerName: "屬性加值 (包括亞種)",
 	items: [
-		/*
-		"Any Strength Increase",
-		"Any Dexterity Increase",
-		"Any Constitution Increase",
-		"Any Intelligence Increase",
-		"Any Wisdom Increase",
-		"Any Charisma Increase",
-		"Strength +2",
-		"Strength +1",
-		"Dexterity +2",
-		"Dexterity +1",
-		"Constitution +2",
-		"Constitution +1",
-		"Intelligence +2",
-		"Intelligence +1",
-		"Wisdom +2",
-		"Wisdom +1",
-		"Charisma +2",
-		"Charisma +1"
-		*/
+		"任意力量增加",
+		"任意敏捷增加",
+		"任意體質增加",
+		"任意智力增加",
+		"任意睿知增加",
+		"任意魅力增加",
+		"力量+2",
+		"力量+1",
+		"敏捷+2",
+		"敏捷+1",
+		"體質+2",
+		"體質+1",
+		"智力+2",
+		"智力+1",
+		"睿知+2",
+		"睿知+1",
+		"魅力+2",
+		"魅力+1"
 	]
 });
 let filterBox;
