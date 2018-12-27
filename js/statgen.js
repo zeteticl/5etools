@@ -232,7 +232,7 @@ class StatGen {
 
 			const $wrpBtnsTop = $(`<div class="pbuy__add_row_btn_wrap"/>`).insertBefore($table);
 
-			const $btnAddLow = $(`<button class="btn btn-xs btn-primary" style="margin-right: 7px;">Add Lower</button>`)
+			const $btnAddLow = $(`<button class="btn btn-xs btn-primary" style="margin-right: 7px;">加入更低</button>`)
 				.click(() => {
 					const lowest = Object.keys(this.savedState).map(Number).sort(SortUtil.ascSort)[0];
 					if (lowest === 0) return alert("Can't go any lower!");
@@ -243,7 +243,7 @@ class StatGen {
 					this.renderCostsTable();
 				}).appendTo($wrpBtnsTop);
 
-			const $btnAddHigh = $(`<button class="btn btn-xs btn-primary" style="margin-right: 14px;">Add Higher</button>`)
+			const $btnAddHigh = $(`<button class="btn btn-xs btn-primary" style="margin-right: 14px;">加入更高</button>`)
 				.click(() => {
 					const highest = Object.keys(this.savedState).map(Number).sort(SortUtil.ascSort).reverse()[0];
 
@@ -253,7 +253,7 @@ class StatGen {
 					this.renderCostsTable();
 				}).appendTo($wrpBtnsTop);
 
-			const $btnReset = $(`<button class="btn btn-xs btn-default">Reset</button>`)
+			const $btnReset = $(`<button class="btn btn-xs btn-default">重置</button>`)
 				.click(() => {
 					this.savedState = MiscUtil.copy(StatGen.DEFAULT_COSTS);
 					this.budget = StatGen.DEFAULT_POINTS;
@@ -353,7 +353,7 @@ class StatGen {
 			this.raceChoiceAmount = stats.choose[0].amount || 1;
 			this.raceChoiceCount = stats.choose[0].count;
 
-			$chooseHead.text(`Choose ${this.raceChoiceCount}`).show();
+			$chooseHead.text(`選擇${this.raceChoiceCount}項`).show();
 			Parser.ABIL_ABVS.forEach(abi => $(`#${abi} .${from.includes(abi) ? "choose" : "pbuy__choose_dummy"}`).show());
 		};
 
