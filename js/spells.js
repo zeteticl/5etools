@@ -283,7 +283,7 @@ function pPostLoad () {
 						entriesHigherLevel: {name: "升環效果", transform: (it) => EntryRenderer.getDefaultRenderer().renderEntry({type: "entries", entries: (it || [])}, 1), flex: 2}
 					},
 					{generator: ListUtil.basicFilterGenerator},
-					(a, b) => SortUtil.ascSort(a.level, b.level) || SortUtil.ascSort(a.source, b.source)
+					(a, b) => SortUtil.ascSort(a.level, b.level) || SortUtil.ascSort(a.name, b.name) || SortUtil.ascSort(a.source, b.source)
 				);
 
 				resolve();
