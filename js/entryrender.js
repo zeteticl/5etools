@@ -650,7 +650,7 @@ function EntryRenderer () {
 			const headerSpan = entry.name ? `
 				<span class="entry-title" data-title-index="${self._headerIndex++}" ${self._getEnumeratedTitleRel(entry.name)}>
 				<span class="entry-title-inner">
-					${self.renderEntry({type: "inline", entries: [entry.name]})}${inlineTitle ? "." : ""}
+					${self.renderEntry({type: "inline", entries: [entry.name]})}${inlineTitle ? ":" : ""}
 				</span>${pagePart}</span> ` : "";
 
 			if (depth === -1) {
