@@ -8831,7 +8831,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"你向射程內能聽見你的一個生物低語一段只有它聽得到的不協調旋律，以可怕的痛苦折磨它。目標必須進行一次睿知豁免。若豁免失敗，則它受到{@dice 3d6}精神傷害，且可以的話必須立刻使用它的反應，向著遠離你的方向移動等同它移動速度的距離。該生物不會移動到有著明顯危險的地方，像是火焰或坑洞。若豁免成功，則目標只受到一半的傷害，且不需要遠離。一個{@condition 耳聾}的生物自動成功於該豁免。"
+				"你向射程內你所選且能聽見你的一個生物低語一段只有它聽得到的不協調旋律，以可怕的痛苦折磨它。目標必須進行一次睿知豁免。若豁免失敗，則它受到{@dice 3d6}精神傷害，且可以的話必須立刻使用它的反應，向著遠離你的方向移動等同它移動速度的距離。該生物不會移動到有著明顯危險的地方，像是火焰或坑洞。若豁免成功，則目標只受到一半的傷害，且不需要遠離。一個{@condition 耳聾}的生物自動成功於該豁免。"
 			],
 			"entriesHigherLevel": [
 				{
@@ -14848,7 +14848,7 @@
 			"isHeal": true
 		},
 		{
-			"name": "Healing Word",
+			"name": "治癒真言", "ENG_name": "Healing Word",
 			"level": 1,
 			"school": "V",
 			"time": [
@@ -14890,14 +14890,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A creature of your choice that you can see within range regains hit points equal to {@dice 1d4} + your spellcasting ability modifier. This spell has no effect on undead or constructs."
+				"射程內你所選且你能看見的生物回復等同於{@dice 1d4}+你的施法屬性調整值的生命值。此法術對不死生物或構裝體沒有任何效果。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, the healing increases by {@scaledice 1d4|1-9|1d4} for each slot level above 1st."
+						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，治療量便會增加{@scaledice 1d4|1-9|1d4}。"
 					]
 				}
 			],
@@ -15003,14 +15003,14 @@
 			]
 		},
 		{
-			"name": "Hellish Rebuke",
+			"name": "煉獄叱喝", "ENG_name": "Hellish Rebuke",
 			"level": 1,
 			"school": "V",
 			"time": [
 				{
 					"number": 1,
 					"unit": "reaction",
-					"condition": "which you take in response to being damaged by a creature within 60 feet of you that you can see"
+					"condition": "在你被一個距離你60呎內你所能看見的生物傷害時進行。"
 				}
 			],
 			"range": {
@@ -15051,14 +15051,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You point your finger, and the creature that damaged you is momentarily surrounded by hellish flames. The creature must make a Dexterity saving throw. It takes {@dice 2d10} fire damage on a failed save, or half as much damage on a successful one."
+				"你伸指一點，傷害你的生物立刻被一團地獄烈火環繞。該生物必須進行一次敏捷豁免。豁免失敗將受到{@dice 2d10}火焰傷害，豁免成功則只受到一半的傷害。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@scaledice 2d10|1-9|1d10} for each slot level above 1st."
+						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 2d10|1-9|1d10}。"
 					]
 				}
 			],
@@ -16333,7 +16333,7 @@
 			]
 		},
 		{
-			"name": "Inflict Wounds",
+			"name": "造成傷勢", "ENG_name": "Inflict Wounds",
 			"level": 1,
 			"school": "N",
 			"time": [
@@ -16399,14 +16399,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Make a melee spell attack against a creature you can reach. On a hit, the target takes {@dice 3d10} necrotic damage."
+				"對你可以觸及的一個生物進行一次近戰法術攻擊。若命中，目標受到{@dice 3d10}死靈傷害。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@scaledice 3d10|1-9|1d10} for each slot level above 1st."
+						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 3d10|1-9|1d10}。"
 					]
 				}
 			],
@@ -17261,7 +17261,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"射程內你所能看見的一個生物或未被束縛的物體將垂直升起最多20呎，且在持續時間內維持漂浮的狀態。此法術可以浮起一個重量最多500磅的目標。一個成功通過體質豁免的非自願生物將不受影響。",
+				"射程內你所選且你能看見的一個生物或未被束縛的物體將垂直升起最多20呎，且在持續時間內維持漂浮的狀態。此法術可以浮起一個重量最多500磅的目標。一個成功通過體質豁免的非自願生物將不受影響。",
 				"目標只能藉由推拉觸及範圍內固定的物體或表面來移動（像是牆壁或天花板），這讓它能如同攀爬一樣移動。你可以在你的回合改變目標的上下高度最多20呎。如果你自己就是目標，則你可以把上下移動當作你正常移動的一部分。除此之外，你可以使用你的動作去移動目標，而目標也必須待在法術的射程內。",
 				"當法術結束時，若目標仍在半空中，它將會緩緩的飄落到地面上。"
 			],
@@ -18267,7 +18267,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"你創造出三支發著光的魔法力場箭矢。每支箭矢各自命中你所選射程內你所能看見的一個生物。一支箭矢會對它的目標造成{@dice 1d4 + 1}力場傷害。所有箭矢都將同時擊中，且你可以決定它們要命中同一個或複數個生物。"
+				"你創造出三支發著光的魔法力場箭矢。每支箭矢各自命中射程內你所選且你能看見的一個生物。一支箭矢會對它的目標造成{@dice 1d4 + 1}力場傷害。所有箭矢都將同時擊中，且你可以決定它們要命中同一個或複數個生物。"
 			],
 			"entriesHigherLevel": [
 				{
@@ -24723,7 +24723,7 @@
 			]
 		},
 		{
-			"name": "Shield of Faith",
+			"name": "虔誠護盾", "ENG_name": "Shield of Faith",
 			"level": 1,
 			"school": "A",
 			"time": [
@@ -24742,7 +24742,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a small parchment with a bit of holy text written on it"
+				"m": "一小張寫有一些神聖文字的羊皮紙"
 			},
 			"duration": [
 				{
@@ -24794,7 +24794,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A shimmering field appears and surrounds a creature of your choice within range, granting it a +2 bonus to AC for the duration."
+				"一道閃爍著微光的力場出現並環繞在射程內你所選擇的一個生物身邊，使它在法術持續時間內的AC獲得+2加值。"
 			],
 			"page": 275
 		},
@@ -29722,7 +29722,7 @@
 			"isHeal": true
 		},
 		{
-			"name": "Witch Bolt",
+			"name": "巫術箭", "ENG_name": "Witch Bolt",
 			"level": 1,
 			"school": "V",
 			"time": [
@@ -29741,7 +29741,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a twig from a tree that has been struck by lightning"
+				"m": "一枝來自被閃電擊中的樹的細枝"
 			},
 			"duration": [
 				{
@@ -29771,14 +29771,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A beam of crackling, blue energy lances out toward a creature within range, forming a sustained arc of lightning between you and the target. Make a ranged spell attack against that creature. On a hit, the target takes {@dice 1d12} lightning damage, and on each of your turns for the duration, you can use your action to deal {@dice 1d12} lightning damage to the target automatically. The spell ends if you use your action to do anything else. The spell also ends if the target is ever outside the spell's range or if it has total cover from you."
+				"一束劈啪作響的青色能量束向著射程內一個生物疾刺而去，在你和目標之間形成一道持續著的電弧。對該目標進行一次遠程法術攻擊。若命中，目標將受到{@dice 1d12}閃電傷害，且在法術持續期間內每個你的回合，你都可以使用你的動作對該目標自動造成{@dice 1d12}閃電傷害。若你使用你的動作去做其他事，則此法術結束。此法術也會在目標一度離開法術的射程、或它對你來說有著全掩護時結束。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, the initial damage increases by {@scaledice 1d12|1-9|1d12} for each slot level above 1st."
+						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，初始傷害便會再增加{@scaledice 1d12|1-9|1d12}。"
 					]
 				}
 			],
@@ -29831,7 +29831,7 @@
 			"page": 289
 		},
 		{
-			"name": "Wrathful Smite",
+			"name": "激憤斬", "ENG_name": "Wrathful Smite",
 			"level": 1,
 			"school": "V",
 			"time": [
@@ -29911,7 +29911,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"The next time you hit with a melee weapon attack during this spell's duration, your attack deals an extra {@dice 1d6} psychic damage. Additionally, if the target is a creature, it must make a Wisdom saving throw or be {@condition frightened} of you until the spell ends. As an action, the creature can make a Wisdom check against your spell save DC to steel its resolve and end this spell."
+				"在法術持續期間，下一次你以近戰武器攻擊攻擊命中時，你的攻擊造成額外{@dice 1d6}精神傷害。此外，若該目標為生物，則它必須進行一次睿知豁免，否則直到法術結束前對你感到{@condition 恐懼}。以一個動作，該生物可以進行一次對抗你法術豁免DC的睿知檢定以取回它的決心並結束此法術。"
 			],
 			"page": 289,
 			"damageInflict": [
