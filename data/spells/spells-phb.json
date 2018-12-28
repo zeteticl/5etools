@@ -3462,7 +3462,7 @@
 			"source": "PHB",
 			"entries": [
 				"隨著你雙手拇指交觸，手指張開，一片稀薄的火焰將從你伸展的指尖向前射出。每個處於15呎錐形內的生物都必須進行一次敏捷豁免。豁免失敗的生物將受到{@dice 3d6}火焰傷害，豁免成功則只受到一半的傷害。",
-				"這片火焰將會點燃範圍內所有未被穿戴或攜帶的易燃物體。"
+				"這片火焰將會點燃範圍內所有未被穿戴或攜帶的可燃物體。"
 			],
 			"entriesHigherLevel": [
 				{
@@ -11665,7 +11665,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"你向著射程內的一個生物或物體投出一團火焰。對目標進行一次遠程法術攻擊。若命中，目標將受到{@dice 1d10}火焰傷害。被此法術命中的易燃物體若未被穿戴或攜帶將被點燃。",
+				"你向著射程內的一個生物或物體投出一團火焰。對目標進行一次遠程法術攻擊。若命中，目標將受到{@dice 1d10}火焰傷害。被此法術命中的可燃物體若未被穿戴或攜帶將被點燃。",
 				"此法術的傷害將在你的等級升至5級時增加至{@dice 2d10}，11級時{@dice 3d10}，17級時{@dice 4d10}。"
 			],
 			"page": 242,
@@ -11827,7 +11827,7 @@
 			]
 		},
 		{
-			"name": "Fireball",
+			"name": "火球術", "ENG_name": "Fireball",
 			"level": 3,
 			"school": "V",
 			"time": [
@@ -11846,7 +11846,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a tiny ball of bat guano and sulfur"
+				"m": "一小球的蝙蝠糞便和硫磺"
 			},
 			"duration": [
 				{
@@ -11909,15 +11909,15 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A target takes {@dice 8d6} fire damage on a failed save, or half as much damage on a successful one.",
-				"The fire spreads around corners. It ignites flammable objects in the area that aren't being worn or carried."
+				"一道耀眼的閃光從你伸出的手指掠至射程內你所選的一點，並接著炸開成一陣伴隨著轟隆低鳴聲的爆炸烈焰。位於以該點為中心20呎半徑球體內的每個生物都必須進行一次敏捷豁免。一個豁免失敗的目標將受到{@dice 8d6}火焰傷害，豁免成功則只受到一半的傷害。",
+				"這團火焰會繞過轉角。且會點燃範圍內所有未被穿戴或攜帶的可燃物體。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@scaledice 8d6|3-9|1d6} for each slot level above 3rd."
+						"當你使用4環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 8d6|3-9|1d6}。"
 					]
 				}
 			],
@@ -16025,7 +16025,7 @@
 			]
 		},
 		{
-			"name": "Identify",
+			"name": "鑑定術", "ENG_name": "Identify", 
 			"level": 1,
 			"school": "D",
 			"time": [
@@ -16044,7 +16044,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a pearl worth at least 100 gp and an owl feather",
+					"text": "一顆價值至少100金幣的珍珠和一根貓頭鷹的羽毛",
 					"cost": 100
 				}
 			},
@@ -16102,13 +16102,13 @@
 				"ritual": true
 			},
 			"entries": [
-				"You choose one object that you must touch throughout the casting of the spell. If it is a magic item or some other magic-imbued object, you learn its properties and how to use them, whether it requires attunement to use, and how many charges it has, if any. You learn whether any spells are affecting the item and what they are. If the item was created by a spell, you learn which spell created it.",
-				"If you instead touch a creature throughout the casting, you learn what spells, if any, are currently affecting it."
+				"你選擇一個你必須在施放此法術時始終觸碰著的物體。如果它是一件魔法物品或含有魔法的物品，你將得知它的特性、該如何使用它們、它是否需要同調才能使用、以及它還剩下幾次充能（若有）。你得知是否有任何法術正在作用這個物品，若有則你也以知道那是什麼法術。如果該物品是被某個法術所創造的，你也得知是什麼法術創造了它。",
+				"如果你在施法時觸碰的是一個生物而非物體，則你得知現在有什麼法術正在影響它（若有）。"
 			],
 			"page": 252
 		},
 		{
-			"name": "Illusory Script",
+			"name": "迷幻手稿", "ENG_name": "Illusory Script",
 			"level": 1,
 			"school": "I",
 			"time": [
@@ -16126,7 +16126,7 @@
 			"components": {
 				"s": true,
 				"m": {
-					"text": "a lead-based ink worth at least 10 gp, which the spell consumes",
+					"text": "一份價值至少10金幣的含鉛墨水，在施法時消耗",
 					"cost": 10,
 					"consume": true
 				}
@@ -16161,10 +16161,10 @@
 				"ritual": true
 			},
 			"entries": [
-				"You write on parchment, paper, or some other suitable writing material and imbue it with a potent illusion that lasts for the duration.",
-				"To you and any creatures you designate when you cast the spell, the writing appears normal, written in your hand, and conveys whatever meaning you intended when you wrote the text. To all others, the writing appears as if it were written in an unknown or magical script that is unintelligible. Alternatively, you can cause the writing to appear to be an entirely different message, written in a different hand and language, though the language must be one you know.",
-				"Should the spell be dispelled, the original script and the illusion both disappear.",
-				"A creature with truesight can read the hidden message."
+				"你在羊皮紙、紙、或其他適合的書寫材料上書寫文字，並對其注入一個強力的幻象，持續直到法術結束。",
+				"對於你和任何你在施放此法術時指定的生物而言，這份文件看起來完全正常，有你的筆跡，且忠實呈現任何你在書寫文字時想傳達的意義。但對其他所有人而言，這份文件看起來就如同它是以無法理解的未知或魔法字母書寫而成。或者，你也可以讓這份文件呈現完全不同的訊息、或以不同的筆跡和語言書寫，但該語言必須是你知曉的語言。",
+				"一旦此法術被解除，原始手稿和幻象將一起消失。",
+				"一個擁有真實視覺的生物可以讀出被隱藏的訊息。"
 			],
 			"page": 252
 		},
@@ -19293,7 +19293,7 @@
 			"entries": [
 				"你在射程內創造一段聲音或一個物體的影像，持續到法術的持續時間結束。這個幻象也會在你以一個動作解消它或再次施放此法術時消失。",
 				"如果你創造一段聲音，它的音量可以小至低語，大致尖叫。它可以是你的聲音、其他人的聲音、獅子的吼叫聲、擊鼓聲、或任何其他你所選擇的聲音。這個聲音在持續時間內持續而不衰弱，或者你也可以在法術結束前於不同時機發出不相關的聲音。",
-				"如果你創造出一個物體的影像\u2014像是一張椅子、泥濘腳印、或一個小箱子\u2014它必須不大於5呎邊長的立方體。這個影像無法創造出聲音、光照、氣味、或其他感官效果。由於東西會穿過幻象，與影像的任何物理性互動都將暴露它是幻象的事實。",
+				"如果你創造出一個物體的影像\u2014像是一張椅子、泥濘腳印、或一個小箱子\u2014它必須不大於一個5呎邊長的立方體。這個影像無法創造出聲音、光照、氣味、或其他感官效果。由於東西會穿過幻象，與影像的任何物理性互動都將暴露它是幻象的事實。",
 				"如果一個生物使用它的動作去檢視該聲音或影像，它可以透過一個成功的智力（{@skill 調查}）檢定辨識出它是幻象，難度等同於你的法術豁免DC。如果一個生物辨識出這是幻象，幻象對該生物而言將變得模糊黯淡。"
 			],
 			"page": 260,
@@ -23702,7 +23702,7 @@
 			"scalingEffects": true
 		},
 		{
-			"name": "Sanctuary",
+			"name": "聖域術", "ENG_name": "Sanctuary",
 			"level": 1,
 			"school": "A",
 			"time": [
@@ -23721,7 +23721,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a small silver mirror"
+				"m": "一面小銀鏡"
 			},
 			"duration": [
 				{
@@ -23778,8 +23778,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You ward a creature within range against attack. Until the spell ends, any creature who targets the warded creature with an attack or a harmful spell must first make a Wisdom saving throw. On a failed save, the creature must choose a new target or lose the attack or spell. This spell doesn't protect the warded creature from area effects, such as the explosion of a {@spell fireball}.",
-				"If the warded creature makes an attack, casts a spell that affects an enemy, or deals damage to another creature, this spell ends."
+				"你守護射程內一個生物不受攻擊。直到法術結束前，以被守護生物為目標進行攻擊或施放危害法術的任何生物都必須先進行一次睿知豁免。若豁免失敗，該生物必須選擇另一個目標，否則該次攻擊或法術失敗。此法術並不會從範圍效果中保護被守護的生物，像是{@spell 火球術}。",
+				"若被守護的生物進行一次攻擊、施放一個會影響敵人的法術、或對另一個生物造成傷害，則此法術結束。"
 			],
 			"page": 272,
 			"savingThrow": [
@@ -24619,14 +24619,14 @@
 			]
 		},
 		{
-			"name": "Shield",
+			"name": "護盾術", "ENG_name": "Shield",
 			"level": 1,
 			"school": "A",
 			"time": [
 				{
 					"number": 1,
 					"unit": "reaction",
-					"condition": "which you take when you are hit by an attack or targeted by the {@spell magic missile} spell"
+					"condition": "在你被一次攻擊命中或成為{@spell 魔法飛彈}法術的目標時進行"
 				}
 			],
 			"range": {
@@ -24704,7 +24704,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"An invisible barrier of magical force appears and protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from magic missile."
+				"一道不可見的魔法力場屏障出現並保護你。直到你的下個回合開始之前，包括觸發此法術的攻擊在內，你的AC獲得+5加值，且你不會受到來自魔法飛彈的傷害。"
 			],
 			"page": 275,
 			"races": [
@@ -25012,7 +25012,7 @@
 			]
 		},
 		{
-			"name": "Silent Image",
+			"name": "無聲幻影", "ENG_name": "Silent Image",
 			"level": 1,
 			"school": "I",
 			"time": [
@@ -25031,7 +25031,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a bit of fleece"
+				"m": "少許羊毛"
 			},
 			"duration": [
 				{
@@ -25061,9 +25061,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 15-foot cube. The image appears at a spot within range and lasts for the duration. The image is purely visual; it isn't accompanied by sound, smell, or other sensory effects.",
-				"You can use your action to cause the image to move to any spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking.",
-				"Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image."
+				"你創造出一個物體、生物、或其他可見現象的幻影，它必須不大於一個5呎邊長的立方體。這個幻影會出現在射程內一處，且持續到法術的持續時間結束。這個幻影純粹只有視覺效果；它並不包含聲音、氣味、或其他感官效果。",
+				"你可以使用你的動作來使幻影移動到射程內的任意一處。隨著幻影改變它的位置，你可以修改它的外觀以讓幻影的移動顯得比較自然。舉例來說，如果你創造出一個生物的幻影並移動它，你可以修改該幻影以讓它看起來像是在走路。",
+				"由於東西會穿過幻影，與幻影的任何物理性互動都將暴露它是幻象的事實。一個使用它的動作去檢視幻影的生物，可以透過一個成功的智力（{@skill 調查}）檢定辨識出它是幻象，其難度等同於你的法術豁免DC。如果一個生物辨識出這是幻象，該生物的視線將可以穿透該影像。"
 			],
 			"page": 276,
 			"opposedCheck": [
@@ -25121,7 +25121,7 @@
 			"page": 276
 		},
 		{
-			"name": "Sleep",
+			"name": "睡眠術", "ENG_name": "Sleep",
 			"level": 1,
 			"school": "E",
 			"time": [
@@ -25140,7 +25140,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a pinch of fine sand, rose petals, or a cricket"
+				"m": "一撮細沙、玫瑰花瓣、或一隻蟋蟀"
 			},
 			"duration": [
 				{
@@ -25201,16 +25201,16 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"This spell sends creatures into a magical slumber. Roll {@dice 5d8}; the total is how many hit points of creatures this spell can affect. Creatures within 20 feet of a point you choose within range are affected in ascending order of their current hit points (ignoring {@condition unconscious} creatures).",
-				"Starting with the creature that has the lowest current hit points, each creature affected by this spell falls {@condition unconscious} until the spell ends, the sleeper takes damage, or someone uses an action to shake or slap the sleeper awake. Subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected.",
-				"Undead and creatures immune to being {@condition charmed} aren't affected by this spell."
+				"此法術將讓生物們陷入一陣魔法性的睡眠中。骰{@dice 5d8}；其總和決定了此法術所能影響生物的總生命值。在射程內你所選一點周圍20呎內的所有生物將按其當前生命值由小到大受到影響（忽略{@condition 昏迷}的生物）。",
+				"從有著最低當前生命值的生物開始，每個受到此法術影響的生物將{@condition 昏迷}直到此法術結束、睡眠者受到傷害、或有人使用它的動作把睡眠者搖醒或拍醒。在處理下一個有著最低生命值的生物之前，從擲骰總和中減去前一個生物的生命值。生物的生命值必須少於或等於剩餘總和才會受到影響。",
+				"不死生物和免疫{@condition 魅惑}的生物不會受到此法術的影響。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, roll an additional {@scaledice 5d8|1-9|2d8} for each slot level above 1st."
+						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，就可以再額外骰{@scaledice 5d8|1-9|2d8}。"
 					]
 				}
 			],
