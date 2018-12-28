@@ -123,7 +123,7 @@ async function onJsonLoad (data) {
 				case "Tool Proficiency": 	return "工具熟練";
 				case "Weapon Proficiency": 	return "武器熟練";
 				case "Darkvision": 			return "黑暗視覺";
-				case "Superior Darkvision": return "高等黑暗視覺";
+				case "Superior Darkvision": return "高級黑暗視覺";
 				case "Natural Armor": 		return "天生護甲";
 				case "Damage Resistance": 	return "傷害抗性";
 				case "Spellcasting": 		return "施法";
