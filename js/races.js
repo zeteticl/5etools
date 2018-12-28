@@ -125,7 +125,7 @@ async function onJsonLoad (data) {
 				case "Darkvision": 			return "黑暗視覺";
 				case "Superior Darkvision": return "高等黑暗視覺";
 				case "Natural Armor": 		return "天生護甲";
-				case "Damage Resistance": 	return "傷害抗力";
+				case "Damage Resistance": 	return "傷害抗性";
 				case "Spellcasting": 		return "施法";
 				case "Unarmed Strike": 		return "徒手打擊";
 				case "Amphibious": 			return "兩棲";
