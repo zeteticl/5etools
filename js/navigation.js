@@ -192,7 +192,7 @@ class NavBar {
 			a.href = "#";
 			a.className = "nightModeToggle";
 			a.onclick = function (event) { event.preventDefault(); styleSwitcher.toggleActiveStyleSheet(); };
-			a.innerHTML = styleSwitcher.getActiveStyleSheet() === StyleSwitcher.STYLE_DAY ? "Night Mode" : "Day Mode";
+			a.innerHTML = styleSwitcher.getActiveStyleSheet() === StyleSwitcher.STYLE_DAY ? "夜晚模式" : "白晝模式";
 
 			li.appendChild(a);
 			appendTo.appendChild(li);
