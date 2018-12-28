@@ -1385,7 +1385,7 @@
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會增加{@scaledice 2d6|1-9|1d6}。"
+						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 2d6|1-9|1d6}。"
 					]
 				}
 			],
@@ -3469,7 +3469,7 @@
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會增加{@scaledice 3d6|1-9|1d6}。"
+						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 3d6|1-9|1d6}。"
 					]
 				}
 			],
@@ -4004,7 +4004,7 @@
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會增加{@scaledice 3d8|1-9|1d8}。"
+						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 3d8|1-9|1d8}。"
 					]
 				}
 			],
@@ -8838,7 +8838,7 @@
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會增加{@scaledice 3d6|1-9|1d6}。"
+						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 3d6|1-9|1d6}。"
 					]
 				}
 			],
@@ -10150,7 +10150,7 @@
 			]
 		},
 		{
-			"name": "Ensnaring Strike",
+			"name": "誘捕打擊", "ENG_name": "Ensnaring Strike",
 			"level": 1,
 			"school": "C",
 			"time": [
@@ -10200,15 +10200,15 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"The next time you hit a creature with a weapon attack before this spell ends, a writhing mass of thorny vines appears at the point of impact, and the target must succeed on a Strength saving throw or be {@condition restrained} by the magical vines until the spell ends. A Large or larger creature has advantage on this saving throw. If the target succeeds on the save, the vines shrivel away.",
-				"While {@condition restrained} by this spell, the target takes {@dice 1d6} piercing damage at the start of each of its turns. A creature {@condition restrained} by the vines or one that can touch the creature can use its action to make a Strength check against your spell save DC. On a success, the target is freed."
+				"在法術結束前，下一次你以武器攻擊命中一個生物時，一大團扭曲的荊棘藤蔓將從攻擊點蔓延而出，且目標必須成功通過一次力量豁免，否則將被魔法藤蔓給{@condition 束縛}直到法術結束。體型為大型或更大的生物在此豁免上具有優勢。若該目標豁免成功，藤蔓將枯萎而去。",
+				"當被此法術{@condition 束縛}時，目標將在每次它回合開始的時候受到{@dice 1d6}穿刺傷害。一個被藤蔓{@condition 束縛}的生物、或任何可以碰觸到該生物的角色都可以使用它的動作進行一次對抗你法術豁免DC的力量檢定。若檢定成功，則該目標被釋放。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"If you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@scaledice 1d6|1-9|1d6} for each slot level above 1st."
+						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 1d6|1-9|1d6}。"
 					]
 				}
 			],
@@ -10227,7 +10227,7 @@
 			]
 		},
 		{
-			"name": "Entangle",
+			"name": "糾纏術", "ENG_name": "Entangle",
 			"level": 1,
 			"school": "C",
 			"time": [
@@ -10300,9 +10300,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Grasping weeds and vines sprout from the ground in a 20-foot square starting from a point within range. For the duration, these plants turn the ground in the area into difficult terrain.",
-				"A creature in the area when you cast the spell must succeed on a Strength saving throw or be {@condition restrained} by the entangling plants until the spell ends. A creature {@condition restrained} by the plants can use its action to make a Strength check against your spell save DC. On a success, it frees itself.",
-				"When the spell ends, the conjured plants wilt away."
+				"糾纏緊繞的野草和藤蔓從射程內一點周遭20呎邊長立方體空間的地表蔓生而出。在法術持續期間，這些植物將使這片區域的地面變成困難地形。",
+				"當你施放此法術時，處於該區域內的生物必須成功通過一次力量豁免，否則直到法術結束前都將被緊緊纏繞的植物給{@condition 束縛}。一個被這些植物給{@condition 束縛}的生物可以使用它的動作進行一次對抗你法術豁免DC的力量檢定。若檢定成功，則它成功使自己被釋放。",
+				"當此法術結束，這些被喚出的植物將枯萎而去。"
 			],
 			"page": 238,
 			"savingThrow": [
@@ -10556,7 +10556,7 @@
 			]
 		},
 		{
-			"name": "Expeditious Retreat",
+			"name": "腳底抹油", "ENG_name": "Expeditious Retreat",
 			"level": 1,
 			"school": "T",
 			"time": [
@@ -10619,7 +10619,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"This spell allows you to move at an incredible pace. When you cast this spell, and then as a bonus action on each of your turns until the spell ends, you can take the Dash action."
+				"此法術讓你能以驚人的速度移動。當你施放此法術時，你接著直到法術結束前的每個回合都能夠以一個附贈動作採取{@action 疾走}動作。"
 			],
 			"page": 238
 		},
@@ -11144,7 +11144,7 @@
 			},
 			"components": {
 				"v": true,
-				"m": "一小根羽毛或一片羽絨"
+				"m": "一小根羽毛或羽絨"
 			},
 			"duration": [
 				{
@@ -13502,7 +13502,7 @@
 			]
 		},
 		{
-			"name": "Goodberry",
+			"name": "神莓術", "ENG_name": "Goodberry",
 			"level": 1,
 			"school": "T",
 			"time": [
@@ -13520,7 +13520,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a sprig of mistletoe"
+				"m": "一枝槲寄生"
 			},
 			"duration": [
 				{
@@ -13541,8 +13541,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Up to ten berries appear in your hand and are infused with magic for the duration. A creature can use its action to eat one berry. Eating a berry restores 1 hit point, and the berry provides enough nourishment to sustain a creature for one day.",
-				"The berries lose their potency if they have not been consumed within 24 hours of the casting of this spell."
+				"最多十顆漿果出現在你手中，並在法術持續期間被魔法充盈。一個生物可以使用它的動作以食用一顆漿果。食用一顆漿果會回復1點生命值，且漿果將提供足夠一個生物維持一天所需的營養。",
+				"這些漿果若在施放此法術後24小時內沒有被消耗，則會失去它們的效力。"
 			],
 			"page": 246,
 			"isHeal": true
@@ -13613,7 +13613,7 @@
 			]
 		},
 		{
-			"name": "Grease",
+			"name": "油膩術", "ENG_name": "Grease",
 			"level": 1,
 			"school": "C",
 			"time": [
@@ -13632,7 +13632,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a bit of pork rind or butter"
+				"m": "一小塊豬油或奶油"
 			},
 			"duration": [
 				{
@@ -13653,8 +13653,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Slick grease covers the ground in a 10-foot square centered on a point within range and turns it into difficult terrain for the duration.",
-				"When the grease appears, each creature standing in its area must succeed on a Dexterity saving throw or fall {@condition prone}. A creature that enters the area or ends its turn there must also succeed on a Dexterity saving throw or fall {@condition prone}."
+				"滑溜溜的油脂覆蓋在以射程內一點為中心10呎半徑的地表，並使它在法術持續期間變為困難地形。",
+				"當油脂出現時，每個站在該區域內的生物都必須成功通過一次敏捷豁免，否則將摔倒{@condition 伏地}。一個進入該區域或在該區域內結束它回合的生物也必須成功通過一次敏捷豁免，否則同樣會摔倒{@condition 伏地}。"
 			],
 			"page": 246,
 			"savingThrow": [
@@ -14150,7 +14150,7 @@
 			"page": 248
 		},
 		{
-			"name": "Guiding Bolt",
+			"name": "光導箭", "ENG_name": "Guiding Bolt",
 			"level": 1,
 			"school": "V",
 			"time": [
@@ -14211,14 +14211,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A flash of light streaks toward a creature of your choice within range. Make a ranged spell attack against the target. On a hit, the target takes {@dice 4d6} radiant damage, and the next attack roll made against this target before the end of your next turn has advantage, thanks to the mystical dim light glittering on the target until then."
+				"一道閃耀光束擊向射程內你所選擇的一個生物。對該目標進行一次遠程法術攻擊。若命中，目標將受到{@dice 4d6}光耀傷害，且直到你的下個回合結束前，多虧於目標身上閃爍的微光，下一次對該目標進行的攻擊檢定具有優勢。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@scaledice 4d6|1-9|1d6} for each slot level above 1st."
+						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 4d6|1-9|1d6}。"
 					]
 				}
 			],
@@ -22851,7 +22851,7 @@
 			]
 		},
 		{
-			"name": "Ray of Sickness",
+			"name": "致病射線", "ENG_name": "Ray of Sickness",
 			"level": 1,
 			"school": "N",
 			"time": [
@@ -22912,14 +22912,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A ray of sickening greenish energy lashes out toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes {@dice 2d8} poison damage and must make a Constitution saving throw. On a failed save, it is also {@condition poisoned} until the end of your next turn."
+				"一道令人作嘔的綠色能量衝向射程內的一個生物。對目標進行一次遠程法術攻擊。若命中，目標將受到{@dice 2d8}毒素傷害，且必須進行一次體質豁免。若豁免失敗，則它直到你的下個回合結束前將陷入{@condition 中毒}狀態。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@scaledice 2d8|1-9|1d8} for each slot level above 1st."
+						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 2d8|1-9|1d8}。"
 					]
 				}
 			],
