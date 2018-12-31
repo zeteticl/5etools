@@ -53,7 +53,7 @@
 			"scalingEffects": true
 		},
 		{
-			"name": "Aid",
+			"name": "援助術", "ENG_name": "Aid",
 			"level": 2,
 			"school": "A",
 			"time": [
@@ -72,7 +72,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a tiny strip of white cloth"
+				"m": "一小條白布"
 			},
 			"duration": [
 				{
@@ -123,14 +123,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Your spell bolsters your allies with toughness and resolve. Choose up to three creatures within range. Each target's hit point maximum and current hit points increase by 5 for the duration."
+				"你的法術增強了你隊友的堅強和決意。選擇射程內最多三個生物。在法術持續期間，每個目標的最大和當前生命值都各增加5點。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 3rd level or higher, a target's hit points increase by an additional 5 for each slot level above 2nd."
+						"當你使用3環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，目標的生命值就可以額外再增加5點。"
 					]
 				}
 			],
@@ -2131,7 +2131,7 @@
 			]
 		},
 		{
-			"name": "Barkskin",
+			"name": "樹膚術", "ENG_name": "Barkskin",
 			"level": 2,
 			"school": "T",
 			"time": [
@@ -2149,7 +2149,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a handful of oak bark"
+				"m": "一把橡樹樹皮"
 			},
 			"duration": [
 				{
@@ -2198,7 +2198,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You touch a willing creature. Until the spell ends, the target's skin has a rough, bark-like appearance, and the target's AC can't be less than 16, regardless of what kind of armor it is wearing."
+				"你碰觸一個自願生物。直到法術結束前，目標的肌膚將呈現粗糙、樹皮狀的外表，且無論目標穿著什麼樣的護甲，它的AC都不會低於16。"
 			],
 			"page": 217
 		},
@@ -2291,7 +2291,7 @@
 			"isHeal": true
 		},
 		{
-			"name": "Beast Sense",
+			"name": "野獸知覺", "ENG_name": "Beast Sense",
 			"level": 2,
 			"school": "D",
 			"time": [
@@ -2348,7 +2348,7 @@
 				"ritual": true
 			},
 			"entries": [
-				"You touch a willing beast. For the duration of the spell, you can use your action to see through the beast's eyes and hear what it hears, and continue to do so until you use your action to return to your normal senses. While perceiving through the beast's senses, you gain the benefits of any special senses possessed by that creature, though you are blinded and deafened to your own surroundings."
+				"你觸碰一個自願野獸。在此法術的持續期間，你可以使用你的動作以透過該野獸的眼睛視物並聽到它所聽見的聲音，且持續直到你使用你的動作以返回你原本的知覺。當透過野獸的知覺感知時，你獲得任何該生物所擁有的特殊感知的好處，儘管你對你自己的感官而言視作{@condition 耳聾}和{@condition 目盲}。"
 			],
 			"page": 217
 		},
@@ -2987,7 +2987,7 @@
 			]
 		},
 		{
-			"name": "Blindness/Deafness",
+			"name": "目盲/耳聾術", "ENG_name": "Blindness/Deafness",
 			"level": 2,
 			"school": "N",
 			"time": [
@@ -3079,14 +3079,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You can blind or deafen a foe. Choose one creature that you can see within range to make a Constitution saving throw. If it fails, the target is either {@condition blinded} or {@condition deafened} (your choice) for the duration. At the end of each of its turns, the target can make a Constitution saving throw. On a success, the spell ends."
+				"你可以使一個敵人目盲或耳聾。選擇射程內你所能看見的一個生物以讓它進行一次體質豁免。若它失敗，則目標將在法術持續期間{@condition 目盲}或{@condition 耳聾}（由你選擇）。在它的每個回合結束時，目標可以進行一次體質豁免，若豁免成功，則此法術結束。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd."
+						"當你使用3環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，你就可以再額外選擇一個生物作為目標。"
 					]
 				}
 			],
@@ -3194,7 +3194,7 @@
 			"page": 219
 		},
 		{
-			"name": "Blur",
+			"name": "朦朧術", "ENG_name": "Blur",
 			"level": 2,
 			"school": "I",
 			"time": [
@@ -3263,12 +3263,12 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Your body becomes blurred, shifting and wavering to all who can see you. For the duration, any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn't rely on sight, as with blindsight, or can see through illusions, as with truesight."
+				"你的身體輪廓對所有能看見你的人來說變得模糊、變幻、搖曳在法術持續期間，任何生物在對你進行攻擊檢定中具有劣勢。一個不依賴視覺的攻擊者（例如透過盲視）、或者能看透幻象的攻擊者（例如透過真實視覺），將免疫此效果。"
 			],
 			"page": 219
 		},
 		{
-			"name": "Branding Smite",
+			"name": "烙印斬", "ENG_name": "Branding Smite",
 			"level": 2,
 			"school": "V",
 			"time": [
@@ -3338,14 +3338,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"The next time you hit a creature with a weapon attack before this spell ends, the weapon gleams with astral radiance as you strike. The attack deals an extra {@dice 2d6} radiant damage to the target, which becomes visible if it's {@condition invisible}, and the target sheds dim light in a 5-foot radius and can't become {@condition invisible} until the spell ends."
+				"在法術持續期間，下一次你以近戰武器攻擊命中時，武器將會在你擊中時閃爍著星輝光芒。該攻擊對目標造成額外{@dice 2d6}光耀傷害，使{@condition 隱形}的目標變得可見，且直到法術結束前，目標將散發5呎半徑的微光光照並因此無法{@condition 隱形}。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 3rd level or higher, the extra damage increases by {@scaledice 2d6|2-9|1d6} for each slot level above 2nd."
+						"當你使用3環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，額外傷害便會再增加{@scaledice 2d6|2-9|1d6}。"
 					]
 				}
 			],
@@ -3827,7 +3827,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"你嘗試魅惑一個射程內你所能看見的生物。它必須進行一次睿知豁免，且若你或你的同伴正在與它戰鬥，則它在該豁免檢定中具有優勢。若它豁免失敗，它將被你{@condition 魅惑}直到法術結束或值到你或你的同伴做出任何危害它的行動。被魅惑的生物將把你視作一名親近的熟人。當此法術結束，該生物將會知道它曾被你{@condition 魅惑}。"
+				"你嘗試魅惑一個射程內你所能看見的類人生物。它必須進行一次睿知豁免，且若你或你的同伴正在與它戰鬥，則它在該豁免檢定中具有優勢。若它豁免失敗，它將被你{@condition 魅惑}直到法術結束或值到你或你的同伴做出任何危害它的行動。被魅惑的生物將把你視作一名親近的熟人。當此法術結束，該生物將會知道它曾被你{@condition 魅惑}。"
 			],
 			"entriesHigherLevel": [
 				{
@@ -4286,7 +4286,7 @@
 			"permanentEffects": true
 		},
 		{
-			"name": "Cloud of Daggers",
+			"name": "匕首之雲", "ENG_name": "Cloud of Daggers",
 			"level": 2,
 			"school": "C",
 			"time": [
@@ -4305,7 +4305,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a sliver of glass"
+				"m": "一塊玻璃裂片"
 			},
 			"duration": [
 				{
@@ -4339,14 +4339,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You fill the air with spinning daggers in a cube 5 feet on each side, centered on a point you choose within range. A creature takes {@dice 4d4} slashing damage when it enters the spell's area for the first time on a turn or starts its turn there."
+				"你讓射程中你所選擇的一點為中心的5呎邊長立方體的空間內充滿著旋轉飛舞的匕首。一個在此法術區域中開始它的回合、或在一個回合中第一次進入該區域的生物將會受到{@dice 4d4}劈砍傷害。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 3rd level or higher, the damage increases by {@scaledice 4d4|2-9|2d4} for each slot level above 2nd."
+						"當你使用3環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 4d4|2-9|2d4}。"
 					]
 				}
 			],
@@ -7317,7 +7317,7 @@
 			]
 		},
 		{
-			"name": "Darkness",
+			"name": "黑暗術", "ENG_name": "Darkness",
 			"level": 2,
 			"school": "V",
 			"time": [
@@ -7335,7 +7335,7 @@
 			},
 			"components": {
 				"v": true,
-				"m": "bat fur and a drop of pitch or piece of coal"
+				"m": "蝙蝠毛皮和一滴瀝青或一塊煤炭"
 			},
 			"duration": [
 				{
@@ -7408,9 +7408,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Magical darkness spreads from a point you choose within range to fill a 15-foot-radius sphere for the duration. The darkness spreads around corners. A creature with darkvision can't see through this darkness, and nonmagical light can't illuminate it.",
-				"If the point you choose is on an object you are holding or one that isn't being worn or carried, the darkness emanates from the object and moves with it. Completely covering the source of the darkness with an opaque object, such as a bowl or a helm, blocks the darkness.",
-				"If any of this spell's area overlaps with an area of light created by a spell of 2nd level or lower, the spell that created the light is dispelled."
+				"魔法性的黑暗將從射程內你所選擇的一處擴散，在法術持續時間內佔據15呎半徑球體的空間。這片黑暗會繞過轉角。擁有黑暗視覺的生物無法看透這片黑暗，且非魔法光源也無法照亮它。",
+				"如果你所選擇的一處是一個你正持握、或一個未被穿戴或攜帶的物品，則黑暗將從該物體散發而出並會隨之移動。用不透光的東西完全覆蓋該黑暗的源頭，像是碗或頭盔，將會擋住黑暗。",
+				"若此法術有任何一個區域與其他2環或更低的法術所創造的光照重疊，則創造該光照的法術將被解消。"
 			],
 			"page": 230,
 			"races": [
@@ -7483,7 +7483,7 @@
 			]
 		},
 		{
-			"name": "Darkvision",
+			"name": "黑暗視覺", "ENG_name": "Darkvision",
 			"level": 2,
 			"school": "T",
 			"time": [
@@ -7501,7 +7501,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "either a pinch of dried carrot or an agate"
+				"m": "一撮胡蘿蔔乾或一個瑪瑙"
 			},
 			"duration": [
 				{
@@ -7538,7 +7538,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You touch a willing creature to grant it the ability to see in the dark. For the duration, that creature has darkvision out to a range of 60 feet."
+				"你觸碰一個自願生物以賦予它能在黑暗中視物的能力。在法術持續期間，該生物獲得60呎黑暗視覺。"
 			],
 			"page": 230
 		},
@@ -9886,7 +9886,7 @@
 			]
 		},
 		{
-			"name": "Enhance Ability",
+			"name": "強化屬性", "ENG_name": "Enhance Ability",
 			"level": 2,
 			"school": "T",
 			"time": [
@@ -9904,7 +9904,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "fur or a feather from a beast"
+				"m": "野獸的毛皮或羽毛"
 			},
 			"duration": [
 				{
@@ -9984,47 +9984,47 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You touch a creature and bestow upon it a magical enhancement. Choose one of the following effects; the target gains that effect until the spell ends.",
+				"你觸碰一個生物並贈予它一個魔法強化。選擇以下其中一個效果；該目標在法術結束前獲得該效果。",
 				{
 					"type": "entries",
-					"name": "Bear's Endurance",
+					"name": "熊之堅韌",
 					"entries": [
-						"The target has advantage on Constitution checks. It also gains {@dice 2d6} temporary hit points, which are lost when the spell ends."
+						"目標在體質檢定上具有優勢。它同時獲得{@dice 2d6}點臨時生命值，在法術結束時失去。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Bull's Strength",
+					"name": "牛之力量",
 					"entries": [
-						"The target has advantage on Strength checks, and his or her carrying capacity doubles."
+						"目標在力量檢定上具有優勢，且他或她的負重加倍。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Cat's Grace",
+					"name": "貓之優雅",
 					"entries": [
-						"The target has advantage on Dexterity checks. It also doesn't take damage from falling 20 feet or less if it isn't {@condition incapacitated}."
+						"目標在敏捷檢定上具有優勢。且若它並未陷入{@condition 無力}，則它在從20呎以內高度墜落時不會受到傷害。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Eagle's Splendor",
+					"name": "鷹之威儀",
 					"entries": [
-						"The target has advantage on Charisma checks."
+						"目標在魅力檢定上具有優勢。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Fox's Cunning",
+					"name": "狐之狡黠",
 					"entries": [
-						"The target has advantage on Intelligence checks."
+						"目標在智力檢定上具有優勢。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Owl's Wisdom",
+					"name": "梟之睿智",
 					"entries": [
-						"The target has advantage on Wisdom checks."
+						"目標在睿知檢定上具有優勢。"
 					]
 				}
 			],
@@ -10033,7 +10033,7 @@
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd."
+						"當你使用3環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，你就可以再額外選擇一個生物作為目標。"
 					]
 				}
 			],
@@ -14905,7 +14905,7 @@
 			"isHeal": true
 		},
 		{
-			"name": "Heat Metal",
+			"name": "灼熱金屬", "ENG_name": "Heat Metal",
 			"level": 2,
 			"school": "T",
 			"time": [
@@ -14924,7 +14924,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a piece of iron and a flame"
+				"m": "一塊鐵和一團火焰"
 			},
 			"duration": [
 				{
@@ -14982,15 +14982,15 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Choose a manufactured metal object, such as a metal weapon or a suit of heavy or medium metal armor, that you can see within range. You cause the object to glow red-hot. Any creature in physical contact with the object takes {@dice 2d8} fire damage when you cast the spell. Until the spell ends, you can use a bonus action on each of your subsequent turns to cause this damage again.",
-				"If a creature is holding or wearing the object and takes the damage from it, the creature must succeed on a Constitution saving throw or drop the object if it can. If it doesn't drop the object, it has disadvantage on attack rolls and ability checks until the start of your next turn."
+				"選擇射程內你所能看見的一個加工過的金屬物體，像是金屬武器或一件中或重型金屬護甲。你使該物體變得通紅熾熱。當你施放此法術時，任何與該物體有著物理性接觸的生物將受到{@dice 2d8}火焰傷害。直到法術結束前，你可以在你後續的每個回合中使用一個附贈動作以再造成這個傷害。",
+				"如果一個生物正持握或穿戴該物體並因此受到傷害，則該生物必須成功通過一次體質豁免，否則只要它能夠丟下該物體，它就會這麼做。若它沒有丟下該物體，則直到你的下個回合開始前，它的攻擊檢定和屬性檢定都具有劣勢。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 3rd level or higher, the damage increases by {@scaledice 2d8|2-9|1d8} for each slot level above 2nd."
+						"當你使用3環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 2d8|2-9|1d8}。"
 					]
 				}
 			],
@@ -15455,7 +15455,7 @@
 			]
 		},
 		{
-			"name": "Hold Person",
+			"name": "人類定身術", "ENG_name": "Hold Person",
 			"level": 2,
 			"school": "E",
 			"time": [
@@ -15474,7 +15474,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a small, straight piece of iron"
+				"m": "一小塊筆直的鐵條"
 			},
 			"duration": [
 				{
@@ -15610,14 +15610,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Choose a humanoid that you can see within range. The target must succeed on a Wisdom saving throw or be {@condition paralyzed} for the duration. At the end of each of its turns, the target can make another Wisdom saving throw. On a success, the spell ends on the target."
+				"選擇射程內你所能看見的一個類人生物。目標必須成功通過一次睿知豁免，否則將在法術持續時間內被{@condition 麻痺}。在它的每個回合結束時，目標可以再進行一次睿知豁免。若豁免成功，則結束這個法術對目標的效果。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 3rd level or higher, you can target one additional humanoid for each slot level above 2nd. The humanoids must be within 30 feet of each other when you target them."
+						"當你使用3環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，你就可以再額外選擇一個類人生物作為目標。當你選擇這些類人生物時，它們彼此之間的距離必須在30呎內。"
 					]
 				}
 			],
@@ -16595,7 +16595,7 @@
 			]
 		},
 		{
-			"name": "Invisibility",
+			"name": "隱形術", "ENG_name": "Invisibility",
 			"level": 2,
 			"school": "I",
 			"time": [
@@ -16613,7 +16613,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "an eyelash encased in gum arabic"
+				"m": "一根被封入阿拉伯膠的眼睫毛"
 			},
 			"duration": [
 				{
@@ -16685,14 +16685,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A creature you touch becomes {@condition invisible} until the spell ends. Anything the target is wearing or carrying is {@condition invisible} as long as it is on the target's person. The spell ends for a target that attacks or casts a spell."
+				"一個你觸碰的生物變得{@condition 隱形}直到法術結束。只要目標所穿戴或攜帶的東西還在目標身上，它們也都將保持{@condition 隱形}。此法術將在目標攻擊或施放法術時結束。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd."
+						"當你使用3環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，你就可以再額外選擇一個生物作為目標。"
 					]
 				}
 			],
@@ -16836,7 +16836,7 @@
 			]
 		},
 		{
-			"name": "Knock",
+			"name": "敲擊術", "ENG_name": "Knock",
 			"level": 2,
 			"school": "T",
 			"time": [
@@ -16878,10 +16878,10 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Choose an object that you can see within range. The object can be a door, a box, a chest, a set of manacles, a padlock, or another object that contains a mundane or magical means that prevents access.",
-				"A target that is held shut by a mundane lock or that is stuck or barred becomes unlocked, unstuck, or unbarred. If the object has multiple locks, only one of them is unlocked.",
-				"If you choose a target that is held shut with arcane lock, that spell is suppressed for 10 minutes, during which time the target can be opened and shut normally.",
-				"When you cast the spell, a loud knock, audible from as far away as 300 feet, emanates from the target object."
+				"選擇一個射程內你所能看見的一個物體。這個物品可以是一扇門、一個盒子、一個寶箱、一副鐐銬、一個掛鎖、或其他包含著以尋常或魔法方式阻止他人使用的物體。",
+				"一個被尋常鎖關住、釘住、或閂住的物體將被解鎖、解封、或被解閂。如果該物體被複數道鎖給鎖上，則只有其中一個會被解鎖。",
+				"若你選擇一個被祕法鎖給關住的目標，則該法術將被壓制10分鐘，在這段時間內目標將可以被正常地打開或關上。",
+				"當你施放此法術時，一個距離300呎內都能被聽見的響亮敲擊聲將從目標物體上發出。"
 			],
 			"page": 254
 		},
@@ -18355,7 +18355,7 @@
 			"page": 257
 		},
 		{
-			"name": "Magic Weapon",
+			"name": "魔化武器", "ENG_name": "Magic Weapon",
 			"level": 2,
 			"school": "T",
 			"time": [
@@ -18474,14 +18474,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You touch a nonmagical weapon. Until the spell ends, that weapon becomes a magic weapon with a +1 bonus to attack rolls and damage rolls."
+				"你觸碰一把非魔法武器。直到此法術結束前，該武器變成魔法武器，在攻擊檢定和傷害骰上具有+1加值。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, the bonus increases to +2. When you use a spell slot of 6th level or higher, the bonus increases to +3."
+						"當你使用4環或更高的法術位施放此法術時，加值增加至+2。當你使用6環或更高的法術位施放此法術時，加值增加至+3。"
 					]
 				}
 			],
@@ -20205,7 +20205,7 @@
 			"page": 263
 		},
 		{
-			"name": "Nystul's Magic Aura",
+			"name": "涅斯圖魔法靈光", "ENG_name": "Nystul's Magic Aura",
 			"level": 2,
 			"school": "I",
 			"time": [
@@ -20223,7 +20223,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a small square of silk"
+				"m": "一小塊方形絲綢"
 			},
 			"duration": [
 				{
@@ -20256,20 +20256,20 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You place an illusion on a creature or an object you touch so that divination spells reveal false information about it. The target can be a willing creature or an object that isn't being carried or worn by another creature.",
-				"When you cast the spell, choose one or both of the following effects. The effect lasts for the duration. If you cast this spell on the same creature or object every day for 30 days, placing the same effect on it each time, the illusion lasts until it is dispelled.",
+				"你在一個你觸碰的生物或物體上放置一個幻象，使預言系法術揭示出關於它錯誤的情報。目標可以是一個自願生物或一個未被另一個生物穿戴或攜帶的物體。",
+				"當你施放此法術時，選擇以下一個或兩個效果。這個效果將在法術持續期間內持續存在。如果你每天對相同的生物或物體施放此法術持續30天，且每次都選擇相同的效果，則此幻象將持續直到它被解消。",
 				{
 					"type": "entries",
-					"name": "False Aura",
+					"name": "虛假靈光",
 					"entries": [
-						"You change the way the target appears to spells and magical effects, such as detect magic, that detect magical auras. You can make a nonmagical object appear magical, a magical object appear nonmagical, or change the object's magical aura so that it appears to belong to a specific school of magic that you choose. When you use this effect on an object, you can make the false magic apparent to any creature that handles the item."
+						"你改變目標在那些偵測魔法靈光的法術和魔法效果下的表現方式，例如{@spell 偵測魔法}。你可以使非魔法物體看起來像是魔法物體，使魔法物體看起來像是非魔法，或改變該物體的魔法靈光好讓其看起來像是屬於另一個你所選的特定魔法學派。當你對一個物體使用這個效果，你可以使這個虛假的魔法向任何使用此物品的生物顯現出來。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Mask",
+					"name": "偽裝",
 					"entries": [
-						"You change the way the target appears to spells and magical effects that detect creature types, such as a paladin's Divine Sense or the trigger of a symbol spell. You choose a creature type and other spells and magical effects treat the target as if it were a creature of that type or of that alignment."
+						"你改變目標在那些偵測生物類型的法術和魔法效果下的表現方式，例如聖騎士的神聖感知或{@spell symbol}的觸發條件。你選擇一種生物類型，且其它法術和魔法效果將視目標如同它是該類型或該陣營。"
 					]
 				}
 			],
@@ -21502,7 +21502,7 @@
 			]
 		},
 		{
-			"name": "Prayer of Healing",
+			"name": "治癒祈禱", "ENG_name": "Prayer of Healing",
 			"level": 2,
 			"school": "V",
 			"time": [
@@ -21536,14 +21536,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Up to six creatures of your choice that you can see within range each regain hit points equal to {@dice 2d8} + your spellcasting ability modifier. This spell has no effect on undead or constructs."
+				"最多六個射程內你所選擇且你能看見的生物回復等同於{@dice 2d8}+你的施法屬性調整值的生命值。此法術對不死生物或構裝體沒有任何效果。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 3rd level or higher, the healing increases by {@scaledice 2d8|2-9|1d8} for each slot level above 2nd."
+						"當你使用3環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，治療量便會增加{@scaledice 2d8|2-9|1d8}。"
 					]
 				}
 			],
@@ -29132,7 +29132,7 @@
 			]
 		},
 		{
-			"name": "Warding Bond",
+			"name": "守護聯結", "ENG_name": "Warding Bond",
 			"level": 2,
 			"school": "A",
 			"time": [
@@ -29151,7 +29151,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a pair of platinum rings worth at least 50 gp each, which you and the target must wear for the duration",
+					"text": "一對各自價值至少50金幣的白金指環，你和目標必須在法術持續期間穿戴",
 					"cost": 50
 				}
 			},
@@ -29196,8 +29196,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"This spell wards a willing creature you touch and creates a mystic connection between you and the target until the spell ends. While the target is within 60 feet of you, it gains a +1 bonus to AC and saving throws, and it has resistance to all damage. Also, each time it takes damage, you take the same amount of damage.",
-				"The spell ends if you drop to 0 hit points or if you and the target become separated by more than 60 feet. It also ends if the spell is cast again on either of the connected creatures. You can also dismiss the spell as an action."
+				"此法術守護著你觸碰的一個自願生物，且在你和目標之間創造一道神祕的連結直到法術結束。當目標處於你60呎範圍內，它的AC和豁免檢定將獲得+1加值，且它獲得對所有傷害的抗性。同時，每當它受到傷害，你也將承受等量的傷害。",
+				"此法術將在你的生命值歸零、或你與目標分開距離超過60呎時結束。它也會在此法術被重複施放於任一個被連結生物時結束。你也可以以一個動作解消此法術。"
 			],
 			"page": 287
 		},
@@ -29378,7 +29378,7 @@
 			"page": 287
 		},
 		{
-			"name": "Web",
+			"name": "蛛網術", "ENG_name": "Web",
 			"level": 2,
 			"school": "C",
 			"time": [
@@ -29397,7 +29397,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a bit of spiderweb"
+				"m": "少許蜘蛛網"
 			},
 			"duration": [
 				{
@@ -29446,11 +29446,11 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You conjure a mass of thick, sticky webbing at a point of your choice within range. The webs fill a 20-foot cube from that point for the duration. The webs are difficult terrain and lightly obscure their area.",
-				"If the webs aren't anchored between two solid masses (such as walls or trees) or layered across a floor, wall, or ceiling, the conjured web collapses on itself, and the spell ends at the start of your next turn. Webs layered over a flat surface have a depth of 5 feet.",
-				"Each creature that starts its turn in the webs or that enters them during its turn must make a Dexterity saving throw. On a failed save, the creature is {@condition restrained} as long as it remains in the webs or until it breaks free.",
-				"A creature {@condition restrained} by the webs can use its action to make a Strength check against your spell save DC. If it succeeds, it is no longer {@condition restrained}.",
-				"The webs are flammable. Any 5-foot cube of webs exposed to fire burns away in 1 round, dealing {@dice 2d4} fire damage to any creature that starts its turn in the fire."
+				"你在射程內一點召喚出一大片又厚又黏的蛛網。蛛網將在法術持續期間佔據以該點為中心的20呎邊長立方體空間。蛛網為困難地形，且輕度遮蔽該區域。",
+				"若蛛網並未固定在兩個固體之間（像是牆或樹）、或沒有被疊在地板或天花板上，則被召喚的蛛網將自己塌陷，且此法樹將在你的下個回合開始時結束。疊在平坦表面上的蛛網有著5呎的厚度。",
+				"每個在蛛網中開始他回合、或在他回合進入蛛網的生物都必須進行一次敏捷豁免。若豁免失敗，則只要該生物還在網中，它就被{@condition 束縛}直到它被從中釋放。",
+				"一個被蛛網{@condition 束縛}的生物可以使用它的動作以進行一次對抗你法術豁免DC的力量檢定。若檢定成功，則它不再被{@condition 束縛}。",
+				"這個蛛網是可燃的。任何暴露在火焰之下的5呎邊長立方體的蛛網將會在1輪內被燒盡，並對任何在火焰中開始它們回合的生物造成{@dice 2d4}火焰傷害。"
 			],
 			"page": 287,
 			"damageInflict": [
