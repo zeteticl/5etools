@@ -1016,7 +1016,7 @@ Parser.spDurationToFull = function (dur) {
 				return `${d.concentration ? "專注，" : ""}${d.concentration ? "" : d.duration.upTo ? "" : ""}${d.concentration || d.duration.upTo ? "至多" : ""}${d.duration.amount}${d.duration.amount === 1 ? Parser.translateKeyToDisplay(d.duration.type) : `${Parser.translateKeyToDisplay(d.duration.type)}`}`;
 			case "permanent":
 				if (d.ends) {
-					return `Until ${d.ends.map(m => m === "dispel" ? "dispelled" : m === "trigger" ? "triggered" : m === "discharge" ? "discharged" : undefined).join(" 或 ")}`;
+					return `直到${d.ends.map(m => m === "dispel" ? "被解消" : m === "trigger" ? "被觸發" : m === "discharge" ? "discharged" : undefined).join(" 或 ")}`;
 				} else {
 					return "永久";
 				}
