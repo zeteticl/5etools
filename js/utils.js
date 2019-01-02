@@ -1585,7 +1585,7 @@ Parser.languageKeyToDisplay["infernal"] = "煉獄語";
 Parser.languageKeyToDisplay["orc"] 		= "獸人語";
 Parser.languageKeyToDisplay["other"] 	= "其他";
 Parser.languageKeyToDisplay["primordial"] = "盤古語";
-Parser.languageKeyToDisplay["sylvan"] 	= "妖精語";
+Parser.languageKeyToDisplay["sylvan"] 	= "木族語";
 Parser.languageKeyToDisplay["terran"] 	= "大地語";
 Parser.languageKeyToDisplay["undercommon"]= "地底通用語";
 
