@@ -1769,10 +1769,10 @@ EntryRenderer.spell = {
 			${EntryRenderer.utils.getBorderTr()}
 			${EntryRenderer.utils.getNameTr(spell)}
 			<tr><td class="levelschoolritual" colspan="6"><span>${Parser.spLevelSchoolMetaToFull(spell.level, spell.school, spell.meta)}</span></td></tr>
-			<tr><td class="castingtime" colspan="6"><span class="bold">施法時間: </span>${Parser.spTimeListToFull(spell.time)}</td></tr>
-			<tr><td class="range" colspan="6"><span class="bold">射程: </span>${Parser.spRangeToFull(spell.range)}</td></tr>
-			<tr><td class="components" colspan="6"><span class="bold">構材: </span>${Parser.spComponentsToFull(spell.components)}</td></tr>
-			<tr><td class="range" colspan="6"><span class="bold">持續時間: </span>${Parser.spDurationToFull(spell.duration)}</td></tr>
+			<tr><td class="castingtime" colspan="6"><span class="bold">施法時間：</span>${Parser.spTimeListToFull(spell.time)}</td></tr>
+			<tr><td class="range" colspan="6"><span class="bold">射程：</span>${Parser.spRangeToFull(spell.range)}</td></tr>
+			<tr><td class="components" colspan="6"><span class="bold">構材：</span>${Parser.spComponentsToFull(spell.components)}</td></tr>
+			<tr><td class="range" colspan="6"><span class="bold">持續時間：</span>${Parser.spDurationToFull(spell.duration)}</td></tr>
 			${EntryRenderer.utils.getDividerTr()}
 		`);
 
@@ -1785,13 +1785,13 @@ EntryRenderer.spell = {
 		}
 		renderStack.push(`</td></tr>`);
 
-		renderStack.push(`<tr class="text"><td class="classes" colspan="6"><span class="bold">職業: </span>${Parser.spMainClassesToFull(spell.classes)}</td></tr>`);
+		renderStack.push(`<tr class="text"><td class="classes" colspan="6"><span class="bold">職業：</span>${Parser.spMainClassesToFull(spell.classes)}</td></tr>`);
 
 		if (spell.classes.fromSubclass) {
 			const currentAndLegacy = Parser.spSubclassesToCurrentAndLegacyFull(spell.classes);
-			renderStack.push(`<tr class="text"><td colspan="6"><span class="bold">子職業: </span>${currentAndLegacy[0]}</td></tr>`);
+			renderStack.push(`<tr class="text"><td colspan="6"><span class="bold">子職業：</span>${currentAndLegacy[0]}</td></tr>`);
 			if (currentAndLegacy[1]) {
-				renderStack.push(`<tr class="text"><td colspan="6"><section class="text-muted"><span class="bold">Subclasses (legacy): </span>${currentAndLegacy[1]}</section></td></tr>`);
+				renderStack.push(`<tr class="text"><td colspan="6"><section class="text-muted"><span class="bold">子職業(舊版)：</span>${currentAndLegacy[1]}</section></td></tr>`);
 			}
 		}
 
