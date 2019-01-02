@@ -195,7 +195,7 @@
 			"page": 211
 		},
 		{
-			"name": "Alter Self",
+			"name": "自我變身", "ENG_name": "Alter Self",
 			"level": 2,
 			"school": "T",
 			"time": [
@@ -264,26 +264,26 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You assume a different form. When you cast the spell, choose one of the following options, the effects of which last for the duration of the spell. While the spell lasts, you can end one option as an action to gain the benefits of a different one.",
+				"你變換成一個不同的型態。當你施放此法術時，選擇以下其中一個選項，該效果將在法術持續期間持續存在。在此法術持續期間內，你可以使用一個動作結束該選項的效果，並得到另一個選項的好處。",
 				{
 					"type": "entries",
-					"name": "Aquatic Adaptation",
+					"name": "水中適應",
 					"entries": [
-						"You adapt your body to an aquatic environment, sprouting gills and growing webbing between your fingers. You can breathe underwater and gain a swimming speed equal to your walking speed."
+						"你使你的身體適應水中環境，長出鰓以及手指間的蹼。你可以在水下呼吸，且獲得等同於你步行速度的游泳速度。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Change Appearance",
+					"name": "改變外貌",
 					"entries": [
-						"You transform your appearance. You decide what you look like, including your height, weight, facial features, sound of your voice, hair length, coloration, and distinguishing characteristics, if any. You can make yourself appear as a member of another race, though none of your statistics change. You also can't appear as a creature of a different size than you, and your basic shape stays the same; if you're bipedal, you can't use this spell to become quadrupedal, for instance. At any time for the duration of the spell, you can use your action to change your appearance in this way again."
+						"你改變了自己的外貌。你決定自己的外觀，包括你的身高、體重、面容細節、聲音、髮長、膚色、以及（可能有的）顯著特徵。你可以讓自己看起來像是其他種族的一員，但你的角色數值並不會因此改變。你也不能變成與你有著不同體型大小讀生物，且你的基本身體輪廓保持原樣；舉例來說，如果你是兩足生物，則你不能使用此法術變為四足生物。在法術持續期間內的任何時候，你可以使用一個動作以這個方法再次改變外貌。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Natural Weapons",
+					"name": "天生武器",
 					"entries": [
-						"You grow claws, fangs, spines, horns, or a different natural weapon of your choice. Your unarmed strikes deal {@dice 1d6} bludgeoning, piercing, or slashing damage, as appropriate to the natural weapon you chose, and you are proficient with your unarmed strikes. Finally, the natural weapon is magic and you have a +1 bonus to the attack and damage rolls you make using it."
+						"你長出利爪、獠牙、棘刺、角、或其他你所選擇的一種天生武器。你的徒手打擊將根據你所選的天生武器造成{@dice 1d6}鈍擊、穿刺、或劈砍傷害，且你熟練於你的徒手打擊。最後，該天生武器為魔法武器，且你在使用它進行攻擊時的攻擊檢定和傷害骰上具有+1加值。"
 					]
 				}
 			],
@@ -389,7 +389,7 @@
 			]
 		},
 		{
-			"name": "Animal Messenger",
+			"name": "動物信使", "ENG_name": "Animal Messenger",
 			"level": 2,
 			"school": "E",
 			"time": [
@@ -408,7 +408,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a morsel of food"
+				"m": "少量食物"
 			},
 			"duration": [
 				{
@@ -440,15 +440,15 @@
 				"ritual": true
 			},
 			"entries": [
-				"By means of this spell, you use an animal to deliver a message. Choose a Tiny beast you can see within range, such as a squirrel, a blue jay, or a bat. You specify a location, which you must have visited, and a recipient who matches a general description, such as \"a man or woman dressed in the uniform of the town guard\" or \"a red-haired dwarf wearing a pointed hat.\" You also speak a message of up to twenty-five words. The target beast travels for the duration of the spell toward the specified location, covering about 50 miles per 24 hours for a flying messenger, or 25 miles for other animals.",
-				"When the messenger arrives, it delivers your message to the creature that you described, replicating the sound of your voice. The messenger speaks only to a creature matching the description you gave. If the messenger doesn't reach its destination before the spell ends, the message is lost, and the beast makes its way back to where you cast this spell."
+				"透過此法術，你用一隻動物來為你傳遞訊息。選擇一個射程內你所能看見的微型野獸，像是松鼠、藍松鴉、或蝙蝠。你指定一個曾造訪過的地點以及一個符合籠統描述的接收者，像是「一個穿著城鎮守衛制服的男人或女人」或「一個帶著斑點帽的紅髮矮人」。你同時說出一句最多二十五個字的訊息。目標野獸將在法術持續期間前往指定的地點，會飛的信使將以每24小時50哩的速度前進、其他動物則為25哩。",
+				"當信使抵達目的地，它將模仿你的聲音，把訊息傳遞給你所描述的生物。該信使只會對符合你所給描述的生物開口。若該信使在法術結束之前尚未抵達牠的目的地，則訊息將會遺失，且該野獸會回到你施放此法術的位置。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"If you cast this spell using a spell slot of 3rd level or higher, the duration of the spell increases by 48 hours for each slot level above 2nd."
+						"當你使用3環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，法術的持續時間就再增加48小時。"
 					]
 				}
 			],
@@ -1152,7 +1152,7 @@
 			"page": 214
 		},
 		{
-			"name": "Arcane Lock",
+			"name": "祕法鎖", "ENG_name": "Arcane Lock",
 			"level": 2,
 			"school": "A",
 			"time": [
@@ -1171,7 +1171,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "gold dust worth at least 25 gp, which the spell consumes",
+					"text": "價值至少25金幣的金粉，在施法時消耗",
 					"cost": 25,
 					"consume": true
 				}
@@ -1198,8 +1198,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You touch a closed door, window, gate, chest, or other entryway, and it becomes locked for the duration. You and the creatures you designate when you cast this spell can open the object normally. You can also set a password that, when spoken within 5 feet of the object, suppresses this spell for 1 minute. Otherwise, it is impassable until it is broken or the spell is dispelled or suppressed. Casting knock on the object suppresses arcane lock for 10 minutes.",
-				"While affected by this spell, the object is more difficult to break or force open; the DC to break it or pick any locks on it increases by 10."
+				"你觸碰一個關上的門、窗戶、閘門、箱子，或其他通道，它將在法術持續期間被鎖住。你和你在施放此法術時所選的生物可以如常地開啟它。你也可以設定一個密碼，當在距離該物體5呎內說出密碼，法術就會被壓制1 分鐘。除此之外，直到該物體被破壞、或者此法術被解消或壓制之前，它都無法被打開。對該物體施放{@spell 敲擊術}將會壓制祕法鎖長達10分鐘。",
+				"當受到此法術影響，該物體將會比原本更難以被破壞或強開；破壞它或撬開它上面的鎖的DC增加10。"
 			],
 			"page": 215,
 			"races": [
@@ -1459,7 +1459,7 @@
 			]
 		},
 		{
-			"name": "Augury",
+			"name": "卜筮", "ENG_name": "Augury",
 			"level": 2,
 			"school": "D",
 			"time": [
@@ -1478,7 +1478,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "specially marked sticks, bones, or similar tokens worth at least 25 gp",
+					"text": "價值至少25金幣，有著特殊記號的細棍、骨頭、或類似的標記物",
 					"cost": 25
 				}
 			},
@@ -1532,18 +1532,18 @@
 				"ritual": true
 			},
 			"entries": [
-				"By casting gem-inlaid sticks, rolling dragon bones, laying out ornate cards, or employing some other divining tool, you receive an omen from an otherworldly entity about the results of a specific course of action that you plan to take within the next 30 minutes. The DM chooses from the following possible omens:",
+				"藉由倒出嵌有寶石的細棍、晃搖龍骨、鋪開華麗的卡牌、或利用其他占卜工具，你從另一個世界的存在接受到一個預兆，揭露關於你在接下來30分鐘內預計去做的一件具體行動的結果。DM將從以下可能的預兆中選擇：",
 				{
 					"type": "list",
 					"items": [
-						"Weal, for good results",
-						"Woe, for bad results",
-						"Weal and woe, for both good and bad results",
-						"Nothing, for results that aren't especially good or bad"
+						"福，代表好結果",
+						"禍，代表壞結果",
+						"禍福相依，代表有好有壞的結果",
+						"什麼也沒有，代表不特別好或壞的結果"
 					]
 				},
-				"The spell doesn't take into account any possible circumstances that might change the outcome, such as the casting of additional spells or the loss or gain of a companion.",
-				"If you cast the spell two or more times before completing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get a random reading. The DM makes this roll in secret."
+				"此法術並不會將任何可能改變結果的潛在環境因素納入考量，像是施展額外的法術或者同伴的加入或離去。",
+				"若你在完成下一次長休之前施放此法術兩次或以上，則第一次之後的每次施放都會有累積25%的機率導致隨機的結果。DM將暗自擲骰決定。"
 			],
 			"page": 215
 		},
@@ -11930,7 +11930,7 @@
 			]
 		},
 		{
-			"name": "Flame Blade",
+			"name": "火焰刀", "ENG_name": "Flame Blade",
 			"level": 2,
 			"school": "V",
 			"time": [
@@ -11970,16 +11970,16 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You evoke a fiery blade in your free hand. The blade is similar in size and shape to a scimitar, and it lasts for the duration. If you let go of the blade, it disappears, but you can evoke the blade again as a bonus action.",
-				"You can use your action to make a melee spell attack with the fiery blade. On a hit, the target takes {@dice 3d6} fire damage.",
-				"The flaming blade sheds bright light in a 10-foot radius and dim light for an additional 10 feet."
+				"你在你空著的手中喚出一把火焰刀。這把刀有著與{@item 彎刀}相似的尺寸和形狀，且它在法術持續期間持續存在。如果你放開這把刀，它將憑空消失，但你可以使用一個附贈動作將它重新喚出。",
+				"你可以使用你的動作以這把火焰刀進行一次近戰法術攻擊。若命中，則目標受到{@dice 3d6}火焰傷害。",
+				"這把火焰刀散發著10呎半徑的明亮光照和再延伸10呎的微光光照。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@scaledice 3d6|2,4,6,8|1d6} for every two slot levels above 2nd."
+						"當你使用3環或更高的法術位施放此法術時，你使用的法術位每比原本高二環，傷害便會再增加{@scaledice 3d6|2,4,6,8|1d6}。"
 					]
 				}
 			],
@@ -13120,7 +13120,7 @@
 			]
 		},
 		{
-			"name": "Gentle Repose",
+			"name": "遺體防腐", "ENG_name": "Gentle Repose",
 			"level": 2,
 			"school": "N",
 			"time": [
@@ -13138,7 +13138,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a pinch of salt and one copper piece placed on each of the corpse's eyes, which must remain there for the duration"
+				"m": "一撮鹽和在屍體每個眼睛上各放置一枚的銅幣，在法術持續期間必須維持在位置上"
 			},
 			"duration": [
 				{
@@ -13188,8 +13188,8 @@
 				"ritual": true
 			},
 			"entries": [
-				"You touch a corpse or other remains. For the duration, the target is protected from decay and can't become undead.",
-				"The spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don't count against the time limit of spells such as raise dead."
+				"你觸碰一具屍體或其他遺骸。在法術持續期間，目標將免於腐爛且不能被變成不死生物。",
+				"此法術也能有效的延長將復活目標的時間限制，因為在此法術影響下度過的時間將不會計入如{@spell 死者復活}等法術的時間限制中。"
 			],
 			"page": 245
 		},
@@ -16880,7 +16880,7 @@
 			"entries": [
 				"選擇一個射程內你所能看見的一個物體。這個物品可以是一扇門、一個盒子、一個寶箱、一副鐐銬、一個掛鎖、或其他包含著以尋常或魔法方式阻止他人使用的物體。",
 				"一個被尋常鎖關住、釘住、或閂住的物體將被解鎖、解封、或被解閂。如果該物體被複數道鎖給鎖上，則只有其中一個會被解鎖。",
-				"若你選擇一個被祕法鎖給關住的目標，則該法術將被壓制10分鐘，在這段時間內目標將可以被正常地打開或關上。",
+				"若你選擇一個被{@spell 祕法鎖}給關住的目標，則該法術將被壓制10分鐘，在這段時間內目標將可以被正常地打開或關上。",
 				"當你施放此法術時，一個距離300呎內都能被聽見的響亮敲擊聲將從目標物體上發出。"
 			],
 			"page": 254
@@ -17097,7 +17097,7 @@
 			"page": 255
 		},
 		{
-			"name": "Lesser Restoration",
+			"name": "次級復原術", "ENG_name": "Lesser Restoration",
 			"level": 2,
 			"school": "A",
 			"time": [
@@ -17193,7 +17193,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You touch a creature and can end either one disease or one condition afflicting it. The condition can be {@condition blinded}, {@condition deafened}, {@condition paralyzed}, or {@condition poisoned}."
+				"你觸碰一個生物，並結束影響著它的任一個疾病或狀態。這些狀態可以是{@condition 目盲}、{@condition 耳聾}、{@condition 麻痺}、或{@condition 中毒}。"
 			],
 			"page": 255,
 			"races": [
@@ -17551,7 +17551,7 @@
 			]
 		},
 		{
-			"name": "Locate Animals or Plants",
+			"name": "動植物定位術", "ENG_name": "Locate Animals or Plants",
 			"level": 2,
 			"school": "D",
 			"time": [
@@ -17569,7 +17569,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a bit of fur from a bloodhound"
+				"m": "少許尋血獵犬的毛"
 			},
 			"duration": [
 				{
@@ -17597,7 +17597,7 @@
 				"ritual": true
 			},
 			"entries": [
-				"Describe or name a specific kind of beast or plant. Concentrating on the voice of nature in your surroundings, you learn the direction and distance to the closest creature or plant of that kind within 5 miles, if any are present."
+				"描述或指名一種特定的野獸或植物。專注於你周遭環境的自然之語，若5哩以內存在該類生物或植物，則你得知距離你最近的該生物或植物所在的方向與距離。"
 			],
 			"page": 256
 		},
@@ -17722,7 +17722,7 @@
 			"page": 256
 		},
 		{
-			"name": "Locate Object",
+			"name": "物品定位術", "ENG_name": "Locate Object",
 			"level": 2,
 			"school": "D",
 			"time": [
@@ -17740,7 +17740,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a forked twig"
+				"m": "一根分岔的樹枝"
 			},
 			"duration": [
 				{
@@ -17794,9 +17794,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Describe or name an object that is familiar to you. You sense the direction to the object's location, as long as that object is within 1,000 feet of you. If the object is in motion, you know the direction of its movement.",
-				"The spell can locate a specific object known to you, as long as you have seen it up close\u2014within 30 feet\u2014at least once. Alternatively, the spell can locate the nearest object of a particular kind, such as a certain kind of apparel, jewelry, furniture, tool, or weapon.",
-				"This spell can't locate an object if any thickness of lead, even a thin sheet, blocks a direct path between you and the object."
+				"描述或指名一個你所熟悉的物體。只要該物體距離你1,000呎以內，你就可以感知到該物體所在位置的方向。若該物體正在移動，你也能知道它移動的方向。",
+				"此法術可以定位一個你已知的特定物體，只要你曾至少在近距離\u201430呎距離內\u2014看過它一次。或者，此法術可以定位特定種類中離你最近的一個物體，像是某一種服裝、珠寶、家具、工具、或武器。",
+				"若有任意厚度的鉛擋在你和物體之間的直線通路上，即使只是薄薄一層，則此法術將無法定位該物體。"
 			],
 			"page": 256
 		},
@@ -22527,7 +22527,7 @@
 			"page": 270
 		},
 		{
-			"name": "Raise Dead",
+			"name": "死者復活", "ENG_name": "Raise Dead",
 			"level": 5,
 			"school": "N",
 			"time": [
@@ -22546,7 +22546,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a diamond worth at least 500 gp, which the spell consumes",
+					"text": "一顆價值至少500金幣的鑽石，在施法時消耗",
 					"cost": 500,
 					"consume": true
 				}
@@ -22606,10 +22606,10 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You return a dead creature you touch to life, provided that it has been dead no longer than 10 days. If the creature's soul is both willing and at liberty to rejoin the body, the creature returns to life with 1 hit point.",
-				"This spell also neutralizes any poisons and cures nonmagical diseases that affected the creature at the time it died. This spell doesn't, however, remove magical diseases, curses, or similar effects; if these aren't first removed prior to casting the spell, they take effect when the creature returns to life. The spell can't return an undead creature to life.",
-				"This spell closes all mortal wounds, but it doesn't restore missing body parts. If the creature is lacking body parts or organs integral for its survival\u2014its head, for instance\u2014the spell automatically fails.",
-				"Coming back from the dead is an ordeal. The target takes a \u22124 penalty to all attack rolls, saving throws, and ability checks. Every time the target finishes a long rest, the penalty is reduced by 1 until it disappears."
+				"你觸碰的一個已死的生物，只要它死亡時間不超過10天，你就可以讓它復活。如果該生物的靈魂願意且能自由地回到身體上，則該生物將以1點生命值的形式復活。",
+				"此法術也會中和並治療任何在該生物死亡時影響著它的毒素和疾病。然而，此法術並不能移除魔法疾病、詛咒、或其他類似效果；若這些效果沒有在施放此法術前被移除，則它們將在該生物復活之後繼續發揮效果。此法術無法復活不死生物。",
+				"此法術會癒合所有肉體傷口，但並不會恢復失去的身體部位。若該生物失去任何維生所必須的身體部位或器官\u2014比如說它的頭\u2014則此法術將自動失敗。",
+				"從死裡復活的過程是相當艱苦的。目標將在它所有的攻擊檢定、豁免檢定、和屬性檢定上承受\u22124的減值。每當目標完成一次長休，這個減值便會減輕1點，直到它完全消失。"
 			],
 			"page": 270,
 			"isHeal": true
@@ -24169,7 +24169,7 @@
 			]
 		},
 		{
-			"name": "See Invisibility",
+			"name": "識破隱形", "ENG_name": "See Invisibility",
 			"level": 2,
 			"school": "D",
 			"time": [
@@ -24187,7 +24187,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a pinch of Talc and a small sprinkling of powdered silver"
+				"m": "一撮滑石粉和一小把銀粉"
 			},
 			"duration": [
 				{
@@ -24216,7 +24216,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"For the duration, you see {@condition invisible} creatures and objects as if they were visible, and you can see into the Ethereal Plane. Ethereal creatures and objects appear ghostly and translucent."
+				"在法術持續期間，你可以看見{@condition 隱形}生物和物體，就如同它們是正常可見的。且你可以看見乙太位面。乙太位面的生物和物體在你眼中將呈現幽靈般的半透明。"
 			],
 			"page": 274
 		},
