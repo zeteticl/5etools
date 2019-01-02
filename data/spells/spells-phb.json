@@ -3827,7 +3827,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"你嘗試魅惑一個射程內你所能看見的類人生物。它必須進行一次睿知豁免，且若你或你的同伴正在與它戰鬥，則它在該豁免檢定中具有優勢。若它豁免失敗，它將被你{@condition 魅惑}直到法術結束或值到你或你的同伴做出任何危害它的行動。被魅惑的生物將把你視作一名親近的熟人。當此法術結束，該生物將會知道它曾被你{@condition 魅惑}。"
+				"你嘗試魅惑一個射程內你所能看見的類人生物。它必須進行一次睿知豁免，且若你或你的同伴正在與它戰鬥，則它在該豁免檢定中具有優勢。若它豁免失敗，它將被你{@condition 魅惑}直到法術結束或直到你或你的同伴做出任何危害它的行動。被魅惑的生物將把你視作一名親近的熟人。當此法術結束，該生物將會知道它曾被你{@condition 魅惑}。"
 			],
 			"entriesHigherLevel": [
 				{
@@ -4672,7 +4672,7 @@
 			"source": "PHB",
 			"entries": [
 				"你對射程內你所能看見的一個生物說出一個單詞命令。目標必須成功通過一次睿知豁免，否則將在它的下個回合遵循該命令。若目標為不死生物、目標無法理解你的語言、或你的命令對它有直接危害，則此法術不會有任何效果。",
-				"以下是一些典型的命令和他們的效果。你也可以提出以外的其他命令。若你這麼做，則由DM決定目標將會如何行動。如果目標無法遵循你的命令，則法術結束。",
+				"以下是一些典型的命令和他們的效果。你也可以提出以外的其他命令。若你這麼做，則由DM決定目標將會如何行動。如果目標無法遵循你的命令，則此法術結束。",
 				{
 					"type": "entries",
 					"name": "靠近",
@@ -6963,7 +6963,7 @@
 			"page": 229
 		},
 		{
-			"name": "Crown of Madness",
+			"name": "瘋狂冠冕", "ENG_name": "Crown of Madness",
 			"level": 2,
 			"school": "E",
 			"time": [
@@ -7027,9 +7027,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"One humanoid of your choice that you can see within range must succeed on a Wisdom saving throw or become {@condition charmed} by you for the duration. While the target is {@condition charmed} in this way, a twisted crown of jagged iron appears on its head, and a madness glows in its eyes.",
-				"The {@condition charmed} target must use its action before moving on each of its turns to make a melee attack against a creature other than itself that you mentally choose. The target can act normally on its turn if you choose no creature or if none are within its reach.",
-				"On your subsequent turns, you must use your action to maintain control over the target, or the spell ends. Also, the target can make a Wisdom saving throw at the end of each of its turns. On a success, the spell ends."
+				"一個射程內你所選擇且你能看見的類人生物必須成功通過一次睿知檢定，否則在法術持續期間被你{@condition 魅惑}。當目標因為這個方式被{@condition 魅惑}，一個扭曲的鋸齒冠冕出現在它的頭上，且它的眼神閃爍著瘋狂。",
+				"被{@condition 魅惑}的目標每次在它的回合移動之前，必須使用它的動作對它自己以外，你用心靈指定的一個生物進行一次近戰攻擊。如果你沒有選擇任何生物、或者他們都不在它的觸及範圍內，則目標可以在它的回合如常行動。",
+				"在你的後續回合，你必須使用你的動作以維持對目標的控制，否則此法術結束。此外，目標可以在它每個回合結束時進行一次睿知豁免。若豁免成功，則此法術結束。"
 			],
 			"page": 229,
 			"savingThrow": [
@@ -10040,7 +10040,7 @@
 			"page": 237
 		},
 		{
-			"name": "Enlarge/Reduce",
+			"name": "變巨/縮小術", "ENG_name": "Enlarge/Reduce",
 			"level": 2,
 			"school": "T",
 			"time": [
@@ -10059,7 +10059,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a pinch of powdered iron"
+				"m": "一撮鐵粉"
 			},
 			"duration": [
 				{
@@ -10112,20 +10112,20 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You cause a creature or an object you can see within range to grow larger or smaller for the duration. Choose either a creature or an object that is neither worn nor carried. If the target is unwilling, it can make a Constitution saving throw. On a success, the spell has no effect.",
-				"If the target is a creature, everything it is wearing and carrying changes size with it. Any item dropped by an affected creature returns to normal size at once.",
+				"你使射程內你所能看見的一個生物或物體在法術持續期間變大或變小。選擇一個生物或一個未被穿戴或攜帶的物體。若目標非自願，則它可以進行一次體質豁免。若豁免成功，則此法術無效。",
+				"若目標是一個生物，則所有它所穿戴或攜帶的東西都會跟著它一起改變大小。任何道具一旦從受影響生物身上掉落，就會恢復成原本的大小。",
 				{
-					"name": "Enlarge",
+					"name": "變巨",
 					"type": "entries",
 					"entries": [
-						"The target's size doubles in all dimensions, and its weight is multiplied by eight. This growth increases its size by one category\u2014from Medium to Large, for example. If there isn't enough room for the target to double its size, the creature or object attains the maximum possible size in the space available. Until the spell ends, the target also has advantage on Strength checks and Strength saving throws. The target's weapons also grow to match its new size. While these weapons are enlarged, the target's attacks with them deal {@dice 1d4} extra damage."
+						"目標的各邊尺寸變為兩倍，且它的重量變為八倍。這個變化會讓它的體型增長一級\u2014例如從中型變大型。若空間不足以讓目標尺寸增長到兩倍，則該生物或物體將會長到該空間可容納的最大尺寸。直到法術結束前，目標在力量檢定和力量豁免上具有優勢。目標的武器也會成長到符合它的新體型。當這些武器被變巨時，目標使用他們進行的攻擊將造成{@dice 1d4}的額外傷害。"
 					]
 				},
 				{
-					"name": "Reduce",
+					"name": "縮小",
 					"type": "entries",
 					"entries": [
-						"The target's size is halved in all dimensions, and its weight is reduced to one-eighth of normal. This reduction decreases its size by one category\u2014from Medium to Small, for example. Until the spell ends, the target also has disadvantage on Strength checks and Strength saving throws. The target's weapons also shrink to match its new size. While these weapons are reduced, the target's attacks with them deal {@dice 1d4} less damage (this can't reduce the damage below 1)."
+						"目標的各邊尺寸變為一半，且它的重量變為原本的八分之一。這個變化會讓它的體型縮減一級\u2014例如從中型變小型。直到法術結束前，目標在力量檢定和力量豁免上具有劣勢。目標的武器也會縮小到符合它的新體型。當這些武器被縮小時，目標使用他們進行的攻擊將減少{@dice 1d4}的傷害（這不會使傷害減至低於1）。"
 					]
 				}
 			],
@@ -10316,7 +10316,7 @@
 			]
 		},
 		{
-			"name": "Enthrall",
+			"name": "注目術", "ENG_name": "Enthrall",
 			"level": 2,
 			"school": "E",
 			"time": [
@@ -10371,7 +10371,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You weave a distracting string of words, causing creatures of your choice that you can see within range and that can hear you to make a Wisdom saving throw. Any creature that can't be {@condition charmed} succeeds on this saving throw automatically, and if you or your companions are fighting a creature, it has advantage on the save. On a failed save, the target has disadvantage on Wisdom (Perception) checks made to perceive any creature other than you until the spell ends or until the target can no longer hear you. The spell ends if you are {@condition incapacitated} or can no longer speak."
+				"你編織一段令人分神的文字，使射程內你所選，你能看見，且能聽見你的所有生物進行一次睿知豁免。任何不會被{@condition 魅惑}的生物自動成功於此豁免檢定，且若你或你的同伴正在與該生物戰鬥，則它在此豁免檢定中具有優勢。若豁免失敗，則目標將在用以察覺任何除了你以外的生物的睿知（觀察）檢定中具有劣勢，直到此法術結束或直到目標不再能聽見你為止。此法術將在你陷入{@condition 無力}或不再能說話時結束。"
 			],
 			"page": 238,
 			"savingThrow": [
@@ -14231,7 +14231,7 @@
 			]
 		},
 		{
-			"name": "Gust of Wind",
+			"name": "造風術", "ENG_name": "Gust of Wind",
 			"level": 2,
 			"school": "V",
 			"time": [
@@ -14313,10 +14313,10 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A line of strong wind 60 feet long and 10 feet wide blasts from you in a direction you choose for the spell's duration. Each creature that starts its turn in the line must succeed on a Strength saving throw or be pushed 15 feet away from you in a direction following the line.",
-				"Any creature in the line must spend 2 feet of movement for every 1 foot it moves when moving closer to you.",
-				"The gust disperses gas or vapor, and it extinguishes candles, torches, and similar unprotected flames in the area. It causes protected flames, such as those of lanterns, to dance wildly and has a 50 percent chance to extinguish them.",
-				"As a bonus action on each of your turns before the spell ends, you can change the direction in which the line blasts from you."
+				"在法術持續期間，一陣60呎長、10呎寬的直線強風從你向著你所選擇的任一個方向吹出。每個在這個直線內開始他們回合的生物都必須成功通過一次力量豁免，否則將沿著風向被推離你15呎距離。",
+				"任何在直線內的生物在移向你的時候，都必須花費2呎的移動力才能夠移動1呎的距離。",
+				"這陣強風會吹散氣體和水氣，且它會熄滅蠟燭、火炬、和區域內其他類似的未受保護的火焰。它會使受保護的火焰，例如提燈，劇烈地搖晃，並有著50%的機率將它們熄滅。",
+				"在法術結束前，你可以在你的每個回合以一個附贈動作改變從你身上吹出的風向。"
 			],
 			"page": 248,
 			"savingThrow": [
@@ -18934,7 +18934,7 @@
 			]
 		},
 		{
-			"name": "Melf's Acid Arrow",
+			"name": "馬友夫強酸箭", "ENG_name": "Melf's Acid Arrow",
 			"level": 2,
 			"school": "V",
 			"time": [
@@ -18953,7 +18953,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "powdered rhubarb leaf and an adder's stomach"
+				"m": "大黃葉的粉末以及蝰蛇的胃袋"
 			},
 			"duration": [
 				{
@@ -18983,14 +18983,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A shimmering green arrow streaks toward a target within range and bursts in a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes {@dice 4d4} acid damage immediately and {@dice 2d4} acid damage at the end of its next turn. On a miss, the arrow splashes the target with acid for half as much of the initial damage and no damage at the end of its next turn."
+				"一道閃爍的綠色箭矢襲向射程內的一個目標並爆散成酸霧。對目標進行一次遠程法術攻擊。若命中，目標將立刻受到{@dice 4d4}酸蝕傷害，並在它的下個回合結束時再受到{@dice 2d4}酸蝕傷害。若沒有命中，則酸液箭矢將濺射到目標身上，造成初始傷害一半的傷害，且不會在它的下個回合結束時造成傷害。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 3rd level or higher, the damage (both initial and later) increases by {@scaledice 4d4;2d4|2-9|1d4} for each slot level above 2nd."
+						"當你使用3環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，初始傷害和後續傷害都會再增加{@scaledice 4d4;2d4|2-9|1d4}。"
 					]
 				}
 			],
@@ -22391,7 +22391,7 @@
 			"page": 270
 		},
 		{
-			"name": "Protection from Poison",
+			"name": "防護毒素", "ENG_name": "Protection from Poison",
 			"level": 2,
 			"school": "A",
 			"time": [
@@ -22467,8 +22467,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You touch a creature. If it is {@condition poisoned}, you neutralize the poison. If more than one poison afflicts the target, you neutralize one poison that you know is present, or you neutralize one at random.",
-				"For the duration, the target has advantage on saving throws against being {@condition poisoned}, and it has resistance to poison damage."
+				"你觸碰一個生物。如果它處於{@condition 中毒}狀態，則你中和該毒素。如果有多於一種毒素正影響著目標，則你中和一種你知道的毒素、或者你中和隨機一種毒素。",
+				"在法術持續期間，目標在對抗{@condition 中毒}的豁免檢定中具有優勢，且它獲得對毒素傷害的抗性。"
 			],
 			"page": 270,
 			"damageResist": [
@@ -22664,7 +22664,7 @@
 			"page": 270
 		},
 		{
-			"name": "Ray of Enfeeblement",
+			"name": "衰弱射線", "ENG_name": "Ray of Enfeeblement",
 			"level": 2,
 			"school": "N",
 			"time": [
@@ -22760,8 +22760,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A black beam of enervating energy springs from your finger toward a creature within range. Make a ranged spell attack against the target. On a hit, the target deals only half damage with weapon attacks that use Strength until the spell ends.",
-				"At the end of each of the target's turns, it can make a Constitution saving throw against the spell. On a success, the spell ends."
+				"一道帶著衰弱能量的漆黑光束從你的手指躍向射程內的一個生物。對目標進行一次遠程法術攻擊。若命中，直到法術結束前，目標進行使用力量的武器攻擊時將只造成一半的傷害。",
+				"在目標的每個回合結束時，它可以對此法術進行一次體質豁免。若豁免成功，則此法術結束。"
 			],
 			"page": 271,
 			"savingThrow": [
@@ -23787,7 +23787,7 @@
 			]
 		},
 		{
-			"name": "Scorching Ray",
+			"name": "灼熱射線", "ENG_name": "Scorching Ray",
 			"level": 2,
 			"school": "V",
 			"time": [
@@ -23848,15 +23848,15 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You create three rays of fire and hurl them at targets within range. You can hurl them at one target or several.",
-				"Make a ranged spell attack for each ray. On a hit, the target takes {@dice 2d6} fire damage."
+				"你創造三條火焰射線，並將它們射向射程內的目標。你可以把它們射向同一個或複數個目標。",
+				"為每一道射線進行各自的遠程法術攻擊檢定。若命中，目標將受到{@dice 2d6}火焰傷害。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 3rd level or higher, you create one additional ray for each slot level above 2nd."
+						"當你使用3環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，你就能再額外創造一條射線。"
 					]
 				}
 			],
@@ -24135,7 +24135,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"在法術持續期間，下一次你以近戰武器攻擊命中一個生物時，你的武器閃耀著強烈白熱光芒，該攻擊對目標造成額外{@dice 1d6}火焰傷害，並使目標起火燃燒。直到法術結束前，在它的每個回合開始時，目標都必須進行一次體質豁免。若豁免失敗，它將受到{@dice 1d6}火焰傷害。若豁免成功，則法術結束。如果該目標或一個距離它5呎以內的生物使用一個動作去撲滅火焰、或有其他效果熄滅了火焰（像是目標被水給淹沒），則法術結束。"
+				"在法術持續期間，下一次你以近戰武器攻擊命中一個生物時，你的武器閃耀著強烈白熱光芒，該攻擊對目標造成額外{@dice 1d6}火焰傷害，並使目標起火燃燒。直到法術結束前，在它的每個回合開始時，目標都必須進行一次體質豁免。若豁免失敗，它將受到{@dice 1d6}火焰傷害。若豁免成功，則此法術結束。如果該目標或一個距離它5呎以內的生物使用一個動作去撲滅火焰、或有其他效果熄滅了火焰（像是目標被水給淹沒），則此法術結束。"
 			],
 			"entriesHigherLevel": [
 				{
@@ -24920,7 +24920,7 @@
 			"scalingEffects": true
 		},
 		{
-			"name": "Silence",
+			"name": "沉默術", "ENG_name": "Silence",
 			"level": 2,
 			"school": "I",
 			"time": [
@@ -25004,7 +25004,7 @@
 				"ritual": true
 			},
 			"entries": [
-				"For the duration, no sound can be created within or pass through a 20-foot-radius sphere centered on a point you choose within range. Any creature or object entirely inside the sphere is immune to thunder damage, and creatures are {@condition deafened} while entirely inside it. Casting a spell that includes a verbal component is impossible there."
+				"在法術持續期間，任何聲音都無法在射程內你所選擇一點為中心的20呎半徑球體內被製造或傳入其中。任何完全處於球體範圍內的生物或物體將免疫於雷鳴傷害，且當完全處於其中，生物將視作{@condition 耳聾}。在裡面不可能施放需要聲音構材的法術。"
 			],
 			"page": 275,
 			"conditionInflict": [
@@ -25693,7 +25693,7 @@
 			"page": 277
 		},
 		{
-			"name": "Spider Climb",
+			"name": "蛛行術", "ENG_name": "Spider Climb",
 			"level": 2,
 			"school": "T",
 			"time": [
@@ -25711,7 +25711,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a drop of bitumen and a spider"
+				"m": "一滴瀝青和一隻蜘蛛"
 			},
 			"duration": [
 				{
@@ -25780,7 +25780,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Until the spell ends, one willing creature you touch gains the ability to move up, down, and across vertical surfaces and upside down along ceilings, while leaving its hands free. The target also gains a climbing speed equal to its walking speed."
+				"直到法術結束前，一個你觸碰的自願生物獲得在垂直表面上下移動、或甚至在天花板上下顛倒的移動的能力，而無須使用它的雙手。目標同時獲得等同於它步行速度的攀爬速度。"
 			],
 			"page": 277,
 			"races": [
@@ -25793,7 +25793,7 @@
 			]
 		},
 		{
-			"name": "Spike Growth",
+			"name": "荊棘叢生", "ENG_name": "Spike Growth",
 			"level": 2,
 			"school": "T",
 			"time": [
@@ -25812,7 +25812,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "seven sharp thorns or seven small twigs, each sharpened to a point"
+				"m": "七根銳利棘刺或七根小樹枝，每根的一端都被削尖"
 			},
 			"duration": [
 				{
@@ -25883,8 +25883,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"The ground in a 20-foot radius centered on a point within range twists and sprouts hard spikes and thorns. The area becomes difficult terrain for the duration. When a creature moves into or within the area, it takes {@dice 2d4} piercing damage for every 5 feet it travels.",
-				"The transformation of the ground is camouflaged to look natural. Any creature that can't see the area at the time the spell is cast must make a Wisdom (Perception) check against your spell save DC to recognize the terrain as hazardous before entering it."
+				"以射程內一點為中心20呎半徑的地表扭曲變形，並長出堅硬的棘刺。在法術持續期間，這個區域變為困難地形。當一個生物移進或在該區域內移動，則它每移動5呎變會受到{@dice 2d4}穿刺傷害。",
+				"地表的這個變化被偽裝且看起來相當自然。任何在此法術被施放時沒有看見該區域的生物必須成功通過一次對抗你法術豁免DC的睿知（@skill 感知）檢定，才能在進入前發現該地形的危險。"
 			],
 			"page": 277,
 			"damageInflict": [
@@ -29447,7 +29447,7 @@
 			"source": "PHB",
 			"entries": [
 				"你在射程內一點召喚出一大片又厚又黏的蛛網。蛛網將在法術持續期間佔據以該點為中心的20呎邊長立方體空間。蛛網為困難地形，且輕度遮蔽該區域。",
-				"若蛛網並未固定在兩個固體之間（像是牆或樹）、或沒有被疊在地板或天花板上，則被召喚的蛛網將自己塌陷，且此法樹將在你的下個回合開始時結束。疊在平坦表面上的蛛網有著5呎的厚度。",
+				"若蛛網並未固定在兩個固體之間（像是牆或樹）、或沒有被疊在地板或天花板上，則被召喚的蛛網將自己塌陷，且此法術將在你的下個回合開始時結束。疊在平坦表面上的蛛網有著5呎的厚度。",
 				"每個在蛛網中開始他回合、或在他回合進入蛛網的生物都必須進行一次敏捷豁免。若豁免失敗，則只要該生物還在網中，它就被{@condition 束縛}直到它被從中釋放。",
 				"一個被蛛網{@condition 束縛}的生物可以使用它的動作以進行一次對抗你法術豁免DC的力量檢定。若檢定成功，則它不再被{@condition 束縛}。",
 				"這個蛛網是可燃的。任何暴露在火焰之下的5呎邊長立方體的蛛網將會在1輪內被燒盡，並對任何在火焰中開始它們回合的生物造成{@dice 2d4}火焰傷害。"
@@ -29928,7 +29928,7 @@
 			]
 		},
 		{
-			"name": "Zone of Truth",
+			"name": "誠實之域", "ENG_name": "Zone of Truth",
 			"level": 2,
 			"school": "E",
 			"time": [
@@ -30037,8 +30037,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You create a magical zone that guards against deception in a 15-foot-radius sphere centered on a point of your choice within range. Until the spell ends, a creature that enters the spell's area for the first time on a turn or starts its turn there must make a Charisma saving throw. On a failed save, a creature can't speak a deliberate lie while in the radius. You know whether each creature succeeds or fails on its saving throw.",
-				"An affected creature is aware of the spell and can thus avoid answering questions to which it would normally respond with a lie. Such creatures can be evasive in its answers as long as it remains within the boundaries of the truth."
+				"你在射程內以你所選擇的一點為中心創造出一個15呎半徑球體範圍，能夠抵禦謊言的魔法領域。直到法術結束前，一個在此法術區域中開始它的回合、或在一個回合中第一次進入該區域的生物必須進行一次魅力豁免。若豁免失敗，則當該生物仍在效果半徑內，它就不能故意說謊。你會知道每個生物的豁免檢定是成功還是失敗。",
+				"一個受影響的生物會意識到這個法術，並可以因此避免回答那些它們通常會以謊言答覆的問題。這些生物可以在回答時含糊其辭，只要它的回答還在誠實的範圍內就沒問題。"
 			],
 			"page": 289,
 			"savingThrow": [
