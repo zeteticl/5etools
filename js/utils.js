@@ -1256,7 +1256,7 @@ Parser.alignmentAbvToFull = function (alignment) {
 			case "L":
 				return "守序";
 			case "N":
-				return "絕對中立";
+				return "中立";
 			case "NX":
 				return "中立 (守序/混亂軸)";
 			case "NY":
