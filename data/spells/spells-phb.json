@@ -11397,9 +11397,9 @@
 			"entries": [
 				"你獲得一只為你效勞的魔寵，一只有著你從下列選項中選擇動物外型的精魂：{@creature bat}、{@creature cat}、{@creature crab}、{@creature frog}(蟾蜍)、{@creature hawk}、{@creature lizard}、{@creature octopus}、{@creature owl}、{@creature poisonous snake}、魚({@creature quipper})、{@creature rat}、{@creature raven}、{@creature sea horse}、{@creature spider}、或{@creature weasel}。它將出現在射程內一處未被占據的空間。魔寵使用所選型態的數據資料，然而它的類型為天界生物、精類、或邪魔（由你選擇），而非野獸。",
 				"你的魔寵與你獨立行動，但它永遠會服從你的命令。在戰鬥中，它會骰自己的先攻，並在它自己的回合中行動。魔寵不能攻擊，但它可以如常採取其他動作。",
-				"當魔寵的生命值歸0，它將消失，不會殘留任何物理型態。它會在你再次施放此法術時重新出現。",
+				"當魔寵的生命值歸零，它將憑空消失，不會留下它的物質型態。它會在你再次施放此法術時重新出現。",
 				"當你的魔寵位於你100呎範圍內，你就可以與它藉由心靈感應溝通。此外，以一個動作，直到你的下個回合開始，你可以透過你魔寵的眼睛視物並聽到它所聽見的聲音，獲得該魔寵所具有的任何特殊感知的好處。在這段期間，對你自己的感官而言，你視作耳聾和目盲。",
-				"以一個動作，你可以暫時地解消你的魔寵。它將消失並進入一個小型位面以等待你的召喚。或者，你也可以永久的解消它。當它被暫時的解消，你可以以一個動作讓它重新出現在距離你30呎內一處未被占據的空間。",
+				"以一個動作，你可以暫時地解消你的魔寵。它將消失並進入一個小型位面以等待你的召喚。或者，你也可以永久的解消它。當它被暫時的解消，你能夠以一個動作讓它重新出現在距離你30呎內一處未被占據的空間。",
 				"你不能同時擁有超過一隻的魔寵。如果你在已經有魔寵的情況下施放這個法術，你使它過繼成新的形態。從上述列表中選擇一個型態，你的魔寵將轉變成所選的生物。",
 				"最後，當你施放一個射程為觸碰的法術時，你的魔寵可以傳遞該法術就彷彿它施放了該法術一樣。你的魔寵必須位於你100呎範圍內，且它必須在你施放時使用它的反應以傳遞法術。如果該法術要求一次攻擊檢定，則你在該檢定中使用你的攻擊調整值。"
 			],
@@ -11407,7 +11407,7 @@
 			"permanentEffects": true
 		},
 		{
-			"name": "Find Steed",
+			"name": "尋獲坐騎", "ENG_name": "Find Steed",
 			"level": 2,
 			"school": "C",
 			"time": [
@@ -11442,16 +11442,16 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You summon a spirit that assumes the form of an unusually intelligent, strong, and loyal steed, creating a long-lasting bond with it. Appearing in an unoccupied space within range, the steed takes on a form that you choose: a {@creature warhorse}, a {@creature pony}, a {@creature camel}, an {@creature elk}, or a {@creature mastiff}. (Your DM might allow other animals to be summoned as steeds.) The steed has the statistics of the chosen form, though it is a celestial, fey, or fiend (your choice) instead of its normal type. Additionally, if your steed has an Intelligence of 5 or less, its Intelligence becomes 6, and it gains the ability to understand one language of your choice that you speak.",
-				"Your steed serves you as a mount, both in combat and out, and you have an instinctive bond with it that allows you to fight as a seamless unit. While mounted on your steed, you can make any spell you cast that targets only you also target your steed.",
-				"When the steed drops to 0 hit points, it disappears, leaving behind no physical form. You can also dismiss your steed at any time as an action, causing it to disappear. In either case, casting this spell again summons the same steed, restored to its hit point maximum.",
-				"While your steed is within 1 mile of you, you can communicate with each other telepathically.",
-				"You can't have more than one steed bonded by this spell at a time. As an action, you can release the steed from its bond at any time, causing it to disappear."
+				"你召喚出一只呈現異常聰明、強壯、且忠實坐騎型態的精魂，並與它建立一道長久持續的連結。坐騎將出現在射程內一處未被占據的空間，並呈現你所選擇的外型：一匹{@creature warhorse}、{@creature pony}、{@creature camel}、{@creature elk}、或{@creature mastiff}（你的DM可能會允許其他動物被做為坐騎召喚）。坐騎使用所選型態的數據資料，然而它的類型為天界生物、精類、或邪魔（由你選擇），而非原本的類型。此外，若你坐騎的智力為5或更低，則它的智力將變為6，且獲得理解一種你所說語言的能力。",
+				"你的坐騎將以騎乘物的身分在戰鬥內外協助你，且你與它之間的本能連結讓你們得以做為一個單位戰鬥。當騎乘於你的坐騎時，你可以讓你施放的任何只以你為目標的法術同時也以你的坐騎為目標。",
+				"當坐騎的生命值歸零，它將憑空消失，不會留下它的物質型態。你也可以在任何時候以一個動作解消你的坐騎，使它消失。無論是哪個情況，重新施放此法術都會召喚出同一只坐騎，將它的生命值回復到最大值。",
+				"當你的坐騎距離你1哩內，你可以與它藉由心靈感應溝通。",
+				"你不能同時擁有超過一隻以此法術召喚的坐騎。以一個動作，你可以在任何時候將該坐騎從它與你的連結中釋放，使它憑空消失。"
 			],
 			"page": 240
 		},
 		{
-			"name": "Find Traps",
+			"name": "尋找陷阱", "ENG_name": "Find Traps",
 			"level": 2,
 			"school": "D",
 			"time": [
@@ -11494,8 +11494,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You sense the presence of any trap within range that is within line of sight. A trap, for the purpose of this spell, includes anything that would inflict a sudden or unexpected effect you consider harmful or undesirable, which was specifically intended as such by its creator. Thus, the spell would sense an area affected by the alarm spell, a glyph of warding, or a mechanical pit trap, but it would not reveal a natural weakness in the floor, an unstable ceiling, or a hidden sinkhole.",
-				"This spell merely reveals that a trap is present. You don't learn the location of each trap, but you do learn the general nature of the danger posed by a trap you sense."
+				"你察覺到位於射程內處於視線之中任何陷阱的存在。對此法術而言，陷阱包含了任何會造成突發或出乎預期效果的東西，且這個效果是其創造者有意造成，且對你來說有害或不受歡迎。因此，這個法術會偵測到一片被{@spell 警報術}影響的區域、{@spell 守衛銘文}、或是機械式落穴陷阱，但它無法揭露出地板的天然薄弱處、搖搖欲墜的天花板、或是隱藏的排水坑。",
+				"這個法術只會揭露陷阱的存在。你不會得知每個陷阱的位置，但你仍會得知你所察覺的陷阱所呈現的大致性質。"
 			],
 			"page": 241
 		},
@@ -12139,7 +12139,7 @@
 			]
 		},
 		{
-			"name": "Flaming Sphere",
+			"name": "熾焰法球", "ENG_name": "Flaming Sphere",
 			"level": 2,
 			"school": "C",
 			"time": [
@@ -12158,7 +12158,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a bit of tallow, a pinch of brimstone, and a dusting of powdered iron"
+				"m": "一點獸脂、一撮硫磺、和一塵鐵粉"
 			},
 			"duration": [
 				{
@@ -12237,16 +12237,16 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A 5-foot-diameter sphere of fire appears in an unoccupied space of your choice within range and lasts for the duration. Any creature that ends its turn within 5 feet of the sphere must make a Dexterity saving throw. The creature takes {@dice 2d6} fire damage on a failed save, or half as much damage on a successful one.",
-				"As a bonus action, you can move the sphere up to 30 feet. If you ram the sphere into a creature, that creature must make the saving throw against the sphere's damage, and the sphere stops moving this turn.",
-				"When you move the sphere, you can direct it over barriers up to 5 feet tall and jump it across pits up to 10 feet wide. The sphere ignites flammable objects not being worn or carried, and it sheds bright light in a 20-foot radius and dim light for an additional 20 feet."
+				"一團5呎直徑的火球出現在射程內你所選擇一處未被占據的空間，並在法術持續期間內持續存在。任何在距離球體5呎內結束它回合的生物都必須進行一次敏捷豁免。豁免失敗的生物將受到{@dice 2d6}火焰傷害，豁免成功則只受到一半的傷害。",
+				"以一個附贈動作，你可以移動該球體最多30呎。如果你讓球體撞上一個生物，則該生物必須進行對球體傷害的豁免檢定，且球體在該回合將停止移動。",
+				"當你移動該球體，你可以控制它翻過最多5呎高的障礙物、或讓它跳過最多10呎寬的坑。這個球體會點燃未被穿戴或攜帶的可燃物體，且散發出20呎半徑的明亮光照和再延伸20呎的微光光照。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 3rd level or higher, the damage increases by {@scaledice 2d6|2-9|1d6} for each slot level above 2nd."
+						"當你使用3環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 2d6|2-9|1d6}。"
 					]
 				}
 			],
@@ -13380,7 +13380,7 @@
 			"page": 245
 		},
 		{
-			"name": "Glyph of Warding",
+			"name": "守衛銘文", "ENG_name": "Glyph of Warding",
 			"level": 3,
 			"school": "A",
 			"time": [
@@ -13399,7 +13399,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "incense and powdered diamond worth at least 200 gp, which the spell consumes",
+					"text": "薰香以及價值至少200金幣的鑽石粉，在施法時消耗",
 					"cost": 200,
 					"consume": true
 				}
@@ -13457,23 +13457,23 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"When you cast this spell, you inscribe a glyph that later unleashes a magical effect. You inscribe it either on a surface (such as a table or a section of floor or wall) or within an object that can be closed (such as a book, a scroll, or a treasure chest) to conceal the glyph. The glyph can cover an area no larger than 10 feet in diameter. If the surface or object is moved more than 10 feet from where you cast this spell, the glyph is broken, and the spell ends without being triggered.",
-				"The glyph is nearly invisible and requires a successful Intelligence (Investigation) check against your spell save DC to be found.",
-				"You decide what triggers the glyph when you cast the spell. For glyphs inscribed on a surface, the most typical triggers include touching or standing on the glyph, removing another object covering the glyph, approaching within a certain distance of the glyph, or manipulating the object on which the glyph is inscribed. For glyphs inscribed within an object, the most common triggers include opening that object, approaching within a certain distance of the object, or seeing or reading the glyph. Once a glyph is triggered, this spell ends.",
-				"You can further refine the trigger so the spell activates only under certain circumstances or according to physical characteristics (such as height or weight), creature kind (for example, the ward could be set to affect aberrations or drow), or alignment. You can also set conditions for creatures that don't trigger the glyph, such as those who say a certain password.",
-				"When you inscribe the glyph, choose explosive runes or a spell glyph.",
+				"當你施放此法術時，你刻寫一個會在稍後釋放魔法效果的銘文。你可以刻寫在一個表面（像是桌面、一區地面或牆面）或者一個能被關上以隱蔽銘文的物體中（像是一本書、一張卷軸、或一個寶箱）。這個銘文可以覆蓋一片不超過10呎直徑的區域。若該表面或物體被移離你施放此法術的位置超過10呎，該銘文將被破壞，且此法術在不被觸發的情況下結束。",
+				"銘文幾乎是隱形的，且需要成功通過一次對抗你法術豁免DC的智力({@skill 調查})檢定才能被發現。",
+				"當施放此法術時，你決定什麼東西將會觸發銘文。對於刻寫於表面的銘文而言，最典型的觸發方式包括觸碰或站在銘文上、移開蓋住銘文的其他物體、接近到符文的一定範圍內、或是操作刻有銘文的物體等等。對於刻寫在物體內部的銘文而言，最常見的觸發方式包括打開該物體、接近到該物體的一定範圍內、或看見或閱讀符文。一旦符文被觸發，則此法術結束。",
+				"你可以進一步定義觸發條件，好讓此法術只會在特定情況、或根據物理特徵（像是高度或重量）、生物類型（例如可以被設置成只對異怪或卓爾產生影響）、或陣營而被啟動。你也可以設定讓生物不會觸發銘文的條件，例如說出特定的密語。",
+				"當你刻寫銘文時，選擇爆炸符文或一個法術銘文。",
 				{
 					"type": "entries",
-					"name": "Explosive Runes",
+					"name": "爆炸符文",
 					"entries": [
-						"When triggered, the glyph erupts with magical energy in a 20-foot-radius sphere centered on the glyph. The sphere spreads around corners. Each creature in the area must make a Dexterity saving throw. A creature takes {@dice 5d8} acid, cold, fire, lightning, or thunder damage on a failed saving throw (your choice when you create the glyph), or half as much damage on a successful one."
+						"當被觸發時，這道銘文將會迸發出以該銘文為中心20呎半徑球體的魔法能量。這個球體會繞過轉角。每個在該區域內的生物都必須進行一次敏捷豁免。豁免失敗的生物將受到{@dice 5d8}酸蝕、寒冰、火焰、閃電、或雷鳴傷害（由你在創造銘文時決定），豁免成功則只受到一半的傷害。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Spell Glyph",
+					"name": "法術銘文",
 					"entries": [
-						"You can store a prepared spell of 3rd level or lower in the glyph by casting it as part of creating the glyph. The spell must target a single creature or an area. The spell being stored has no immediate effect when cast in this way. When the glyph is triggered, the stored spell is cast. If the spell has a target, it targets the creature that triggered the glyph. If the spell affects an area, the area is centered on that creature. If the spell summons hostile creatures or creates harmful objects or traps, they appear as close as possible to the intruder and attack it. If the spell requires concentration, it lasts until the end of its full duration."
+						"作為創造銘文的一部份，你可以藉由施放一個已準備的3環或更低的法術以將其儲存到該銘文中。這個法術必須以單一生物或一個區域為目標。這個被儲存的法術在以這個方式被施放時不會有任何立即性的效果。當此銘文被觸發時，儲存的法術將被施放。若該法術需要一個目標，則它會以觸發此銘文的生物作為目標。若該法術影響一個區域，則該區域將以該生物做為中心。若該法術會召喚出敵意生物或創造出有害物體或陷阱，則它們會盡可能地出現在靠近入侵者的位置並攻擊它。若此法術需要專注，則它將持續直到它的完整持續時間結束。"
 					]
 				}
 			],
@@ -13482,7 +13482,7 @@
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, the damage of an explosive runes glyph increases by {@scaledice 5d8|3-9|1d8} for each slot level above 3rd. If you create a spell glyph, you can store any spell of up to the same level as the slot you use for the glyph of warding."
+						"當你使用4環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，爆炸符文的傷害便會再增加{@scaledice 5d8|3-9|1d8}。如果你選擇創造法術銘文，你可以儲存任何環位最高等同於你用於施放守衛銘文的法術環位的法術。"
 					]
 				}
 			],
@@ -19753,7 +19753,7 @@
 			]
 		},
 		{
-			"name": "Moonbeam",
+			"name": "月華之光", "ENG_name": "Moonbeam",
 			"level": 2,
 			"school": "V",
 			"time": [
@@ -19772,7 +19772,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "several seeds of any moonseed plant and a piece of opalescent feldspar"
+				"m": "數粒月籽藤的種子和一塊乳白色長石"
 			},
 			"duration": [
 				{
@@ -19806,17 +19806,17 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A silvery beam of pale light shines down in a 5-foot-radius, 40-foot-high cylinder centered on a point within range. Until the spell ends, dim light fills the cylinder.",
-				"When a creature enters the spell's area for the first time on a turn or starts its turn there, it is engulfed in ghostly flames that cause searing pain, and it must make a Constitution saving throw. It takes {@dice 2d10} radiant damage on a failed save, or half as much damage on a successful one.",
-				"A shapechanger makes its saving throw with disadvantage. If it fails, it also instantly reverts to its original form and can't assume a different form until it leaves the spell's light.",
-				"On each of your turns after you cast this spell, you can use an action to move the beam up to 60 feet in any direction."
+				"一道閃爍著蒼白光芒的銀光在以射程內一點為中心的5呎半徑、40呎高的圓柱空間內照下。直到法術結束前，微光光照充滿該圓柱。",
+				"當一個生物在此法術區域中開始它的回合、或在一個回合中第一次進入該區域，則它將被幽靈般的火舌吞沒並造成燒灼般的劇痛，且它必須進行一次體質豁免。若豁免失敗，則它將受到{@dice 2d10}光耀傷害，豁免成功則只受到一半的傷害。",
+				"變形者(shapechanger)在進行此豁免檢定時具有劣勢。若它豁免失敗，則它將立刻變回它原本的型態、且直到離開此法術的光照前都無法變換成不同的形態。",
+				"在你施放此法術之後的每個你的回合，你可以使用一個動作以移動這束光朝任意方向移動最多60呎。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 3rd level or higher, the damage increases by {@scaledice 2d10|2-9|1d10} for each slot level above 2nd."
+						"當你使用3環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 2d10|2-9|1d10}。"
 					]
 				}
 			],
@@ -23539,7 +23539,7 @@
 			"isHeal": true
 		},
 		{
-			"name": "Rope Trick",
+			"name": "Rope Trick", "ENG_name": "Rope Trick",
 			"level": 2,
 			"school": "T",
 			"time": [
