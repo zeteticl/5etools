@@ -185,6 +185,7 @@ const acFilter = new RangeFilter({header: "Armor Class"});
 const averageHpFilter = new RangeFilter({header: "Average Hit Points"});
 const typeFilter = new Filter({
 	header: "Type",
+	headerName: "生物類型",
 	items: [
 		"aberration",
 		"beast",
@@ -201,16 +202,18 @@ const typeFilter = new Filter({
 		"plant",
 		"undead"
 	],
-	displayFn: StrUtil.uppercaseFirst
+	displayFn: Parser.monTypeToPlural
 });
 const tagFilter = new Filter({header: "Tag", displayFn: StrUtil.uppercaseFirst});
 const alignmentFilter = new Filter({
 	header: "Alignment",
+	headerName: "陣營",
 	items: ["L", "NX", "C", "G", "NY", "E", "N", "U", "A"],
 	displayFn: Parser.alignmentAbvToFull
 });
 const languageFilter = new Filter({
 	header: "Languages",
+	headerName: "語言",
 	displayFn: (k) => languages[k],
 	umbrellaItems: ["X", "XX"],
 	umbrellaExcludes: ["CS"]
@@ -222,6 +225,7 @@ const senseFilter = new Filter({
 });
 const skillFilter = new Filter({
 	header: "Skills",
+	headerName: "技能",
 	displayFn: (it) => it.toTitleCase(),
 	items: ["acrobatics", "animal handling", "arcana", "athletics", "deception", "history", "insight", "intimidation", "investigation", "medicine", "nature", "perception", "performance", "persuasion", "religion", "sleight of hand", "stealth", "survival"]
 });
