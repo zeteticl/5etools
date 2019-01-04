@@ -1335,6 +1335,9 @@ Parser.keyToDisplay["con"] = "體質";
 Parser.keyToDisplay["int"] = "智力";
 Parser.keyToDisplay["wis"] = "睿知";
 Parser.keyToDisplay["cha"] = "魅力";
+Parser.AtrAbvToDisplay = function(atr_abv){
+	return Parser.translateKeyToDisplay(atr_abv);
+}
 //Race
 Parser.raceKeyToDisplay = {};
 Parser.raceKeyToDisplay["aasimar"]  	= "阿斯莫";
@@ -1529,6 +1532,10 @@ Parser.keyToDisplay["light"]  = "輕";
 Parser.keyToDisplay["medium"] = "中";
 Parser.keyToDisplay["heavy"]  = "重";
 Parser.keyToDisplay["shields"]  = "盾牌";
+Parser.ArmorToDisplay = function(armor){
+	return Parser.translateKeyToDisplay(armor);
+}
+
 //Weapon
 Parser.keyToDisplay["simple"]  = "簡易";
 Parser.keyToDisplay["martial"] = "軍用";
@@ -1613,19 +1620,6 @@ Parser.languageKeyToDisplay["primordial"] = "盤古語";
 Parser.languageKeyToDisplay["sylvan"] 	= "木族語";
 Parser.languageKeyToDisplay["terran"] 	= "大地語";
 Parser.languageKeyToDisplay["undercommon"]= "地底通用語";
-
-
-Parser.AtrAbvToDisplay = function(atr_abv){
-	return Parser.translateKeyToDisplay(atr_abv);
-}
-Parser.ArmorToDisplay = function(armor){
-	return Parser.translateKeyToDisplay(armor);
-}
-
-
-Parser.SpeedToDisplay = function(speed){
-	return Parser.translateKeyToDisplay(speed);
-}
 
 
 Parser.itemValueToDisplay = function(value){
