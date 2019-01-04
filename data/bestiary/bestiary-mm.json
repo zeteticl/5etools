@@ -6025,7 +6025,7 @@
 			]
 		},
 		{
-			"name": "Bat",
+			"name": "蝙蝠", "ENG_name": "Bat",
 			"size": "T",
 			"type": "beast",
 			"source": "MM",
@@ -6049,28 +6049,28 @@
 			"int": 2,
 			"wis": 12,
 			"cha": 4,
-			"senses": "blindsight 60 ft.",
+			"senses": "盲視60呎",
 			"passive": 11,
 			"cr": "0",
 			"trait": [
 				{
-					"name": "Echolocation",
+					"name": "回聲定位",
 					"entries": [
-						"The bat can't use its blindsight while {@condition deafened}."
+						"蝙蝠在{@condition 耳聾}時無法使用牠的盲視。"
 					]
 				},
 				{
-					"name": "Keen Hearing",
+					"name": "敏銳聽覺",
 					"entries": [
-						"The bat has advantage on Wisdom ({@skill Perception}) checks that rely on hearing."
+						"蝙蝠在依賴聽覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
 					"entries": [
-						"{@atk mw} {@hit 0} to hit, reach 5 ft., one creature. {@h}1 piercing damage."
+						"{@atk mw} 命中{@hit 0}，觸及5呎，單一生物。{@h}1 穿刺傷害。"
 					]
 				}
 			],
@@ -8434,7 +8434,7 @@
 			]
 		},
 		{
-			"name": "Cat",
+			"name": "貓", "ENG_name": "Cat",
 			"size": "T",
 			"type": "beast",
 			"source": "MM",
@@ -8466,17 +8466,17 @@
 			"cr": "0",
 			"trait": [
 				{
-					"name": "Keen Smell",
+					"name": "敏銳嗅覺",
 					"entries": [
-						"The cat has advantage on Wisdom ({@skill Perception}) checks that rely on smell."
+						"貓在依賴嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Claws",
+					"name": "爪抓",
 					"entries": [
-						"{@atk mw} {@hit 0} to hit, reach 5 ft., one target. {@h}1 slashing damage."
+						"{@atk mw} 命中{@hit 0}，觸及5呎，單一目標。{@h}1 劈砍傷害。"
 					]
 				}
 			],
@@ -9844,7 +9844,7 @@
 			]
 		},
 		{
-			"name": "Crab",
+			"name": "蟹", "ENG_name": "Crab",
 			"size": "T",
 			"type": "beast",
 			"source": "MM",
@@ -9876,22 +9876,22 @@
 			"skill": {
 				"stealth": "+2"
 			},
-			"senses": "blindsight 30 ft.",
+			"senses": "盲視30呎",
 			"passive": 9,
 			"cr": "0",
 			"trait": [
 				{
-					"name": "Amphibious",
+					"name": "兩棲",
 					"entries": [
-						"The crab can breathe air and water."
+						"蟹可以在空氣和水中呼吸。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Claw",
+					"name": "鉗擊",
 					"entries": [
-						"{@atk mw} {@hit 0} to hit, reach 5 ft., one target. {@h}1 bludgeoning damage."
+						"{@atk mw} 命中{@hit 0}，觸及5呎，單一目標。{@h}1 鈍擊傷害。"
 					]
 				}
 			],
@@ -15943,7 +15943,7 @@
 			]
 		},
 		{
-			"name": "Frog",
+			"name": "青蛙", "ENG_name": "Frog",
 			"size": "T",
 			"type": "beast",
 			"source": "MM",
@@ -15971,20 +15971,20 @@
 				"perception": "+1",
 				"stealth": "+3"
 			},
-			"senses": "darkvision 30 ft.",
+			"senses": "黑暗視覺30呎",
 			"passive": 11,
 			"cr": "0",
 			"trait": [
 				{
-					"name": "Amphibious",
+					"name": "兩棲",
 					"entries": [
-						"The frog can breathe air and water"
+						"青蛙可以在空氣和水中呼吸。"
 					]
 				},
 				{
-					"name": "Standing Leap",
+					"name": "立定跳躍",
 					"entries": [
-						"The frog's long jump is up to 10 ft. and its high jump is up to 5 ft., with or without a running start."
+						"青蛙的跳遠距離最多10呎、且跳高距離最多5呎，無論有沒有助跑都一樣。"
 					]
 				}
 			],
@@ -21985,7 +21985,7 @@
 			]
 		},
 		{
-			"name": "Hawk",
+			"name": "獵鷹", "ENG_name": "Hawk",
 			"size": "T",
 			"type": "beast",
 			"source": "MM",
@@ -22016,17 +22016,17 @@
 			"cr": "0",
 			"trait": [
 				{
-					"name": "Keen Sight",
+					"name": "敏銳視覺",
 					"entries": [
-						"The hawk has advantage on Wisdom ({@skill Perception}) checks that rely on sight."
+						"獵鷹在依賴視覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Talons",
+					"name": "禽爪",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}1 slashing damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}1 劈砍傷害。"
 					]
 				}
 			],
@@ -25910,7 +25910,7 @@
 			]
 		},
 		{
-			"name": "Lizard",
+			"name": "蜥蜴", "ENG_name": "Lizard",
 			"size": "T",
 			"type": "beast",
 			"source": "MM",
@@ -25934,14 +25934,14 @@
 			"int": 1,
 			"wis": 8,
 			"cha": 3,
-			"senses": "darkvision 30 ft.",
+			"senses": "黑暗視覺30呎",
 			"passive": 9,
 			"cr": "0",
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
 					"entries": [
-						"{@atk mw} {@hit 0} to hit, reach 5 ft., one target. {@h}1 piercing damage."
+						"{@atk mw} 命中{@hit 0}，觸及5呎，單一目標。{@h}1 穿刺傷害。"
 					]
 				}
 			],
@@ -29958,7 +29958,7 @@
 			]
 		},
 		{
-			"name": "Octopus",
+			"name": "章魚", "ENG_name": "Octopus",
 			"size": "S",
 			"type": "beast",
 			"source": "MM",
@@ -29986,40 +29986,40 @@
 				"perception": "+2",
 				"stealth": "+4"
 			},
-			"senses": "darkvision 30 ft.",
+			"senses": "黑暗視覺30呎",
 			"passive": 12,
 			"cr": "0",
 			"trait": [
 				{
-					"name": "Hold Breath",
+					"name": "屏息",
 					"entries": [
-						"While out of water, the octopus can hold its breath for 30 minutes."
+						"在離水時，章魚可以屏住牠的呼吸長達30分鐘。"
 					]
 				},
 				{
-					"name": "Underwater Camouflage",
+					"name": "水下偽裝",
 					"entries": [
-						"The octopus has advantage on Dexterity ({@skill Stealth}) checks made while underwater."
+						"章魚在處於水中時進行的敏捷（{@skill 隱匿}）檢定具有優勢。"
 					]
 				},
 				{
-					"name": "Water Breathing",
+					"name": "水下呼吸",
 					"entries": [
-						"The octopus can breathe only underwater."
+						"章魚只能在水下呼吸。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Tentacles",
+					"name": "觸手",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}1 bludgeoning damage, and the target is {@condition grappled} (escape DC 10). Until this grapple ends, the octopus can't use its tentacles on another target."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}1 鈍擊傷害，且目標{@condition 被擒}(逃脫DC 10)。直到擒抱結束前，章魚都不能對另一個目標使用牠的觸手。"
 					]
 				},
 				{
-					"name": "Ink Cloud (Recharges after a Short or Long Rest)",
+					"name": "墨雲（在短休或長休之後充能）",
 					"entries": [
-						"A 5-foot-radius cloud of ink extends all around the octopus if it is underwater. The area is heavily obscured for 1 minute, although a significant current can disperse the ink. After releasing the ink, the octopus can use the Dash action as a bonus action."
+						"若章魚在水中，一團5呎半徑的墨汁雲環繞在章魚周遭。這片區域變為重度遮蔽持續1分鐘，但一道水流即可將墨汁吹散。在釋放墨汁後，章魚能夠以一個附贈動作採取{@action 疾走}動作。"
 					]
 				}
 			],
@@ -30802,7 +30802,7 @@
 			]
 		},
 		{
-			"name": "Owl",
+			"name": "貓頭鷹", "ENG_name": "Owl",
 			"size": "T",
 			"type": "beast",
 			"source": "MM",
@@ -30830,28 +30830,28 @@
 				"perception": "+3",
 				"stealth": "+3"
 			},
-			"senses": "darkvision 120 ft.",
+			"senses": "黑暗視覺120呎",
 			"passive": 13,
 			"cr": "0",
 			"trait": [
 				{
-					"name": "Flyby",
+					"name": "飛掠",
 					"entries": [
-						"The owl doesn't provoke opportunity attacks when it flies out of an enemy's reach."
+						"貓頭鷹在飛出敵人的觸及範圍時不會觸發藉機攻擊。"
 					]
 				},
 				{
-					"name": "Keen Hearing and Sight",
+					"name": "敏銳聽覺和視覺",
 					"entries": [
-						"The owl has advantage on Wisdom ({@skill Perception}) checks that rely on hearing or sight."
+						"貓頭鷹在依賴聽覺或視覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Talons",
+					"name": "禽爪",
 					"entries": [
-						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}1 slashing damage."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}1 劈砍傷害。"
 					]
 				}
 			],
@@ -31877,7 +31877,7 @@
 			]
 		},
 		{
-			"name": "Poisonous Snake",
+			"name": "毒蛇", "ENG_name": "Poisonous Snake",
 			"size": "T",
 			"type": "beast",
 			"source": "MM",
@@ -31901,14 +31901,14 @@
 			"int": 1,
 			"wis": 10,
 			"cha": 3,
-			"senses": "blindsight 10 ft.",
+			"senses": "盲視10呎",
 			"passive": 10,
 			"cr": "1/8",
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}1 piercing damage, and the target must make a DC 10 Constitution saving throw, taking 5 ({@damage 2d4}) poison damage on a failed save, or half as much damage on a successful one."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}1 穿刺傷害，且目標必須進行一次DC 10的體質豁免，若豁免失敗則受到5({@damage 2d4})毒素傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
@@ -32995,7 +32995,7 @@
 			]
 		},
 		{
-			"name": "Quipper",
+			"name": "食人魚", "ENG_name": "Quipper",
 			"size": "T",
 			"type": "beast",
 			"source": "MM",
@@ -33018,28 +33018,28 @@
 			"int": 1,
 			"wis": 7,
 			"cha": 2,
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 8,
 			"cr": "0",
 			"trait": [
 				{
-					"name": "Blood Frenzy",
+					"name": "鮮血狂熱",
 					"entries": [
-						"The quipper has advantage on melee attack rolls against any creature that doesn't have all its hit points."
+						"食人魚在對任何生命值沒有全滿的生物所進行的近戰攻擊檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Water Breathing",
+					"name": "水下呼吸",
 					"entries": [
-						"The quipper can breathe only underwater."
+						"食人魚只能在水下呼吸。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}1 piercing damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}1 穿刺傷害。"
 					]
 				}
 			],
@@ -33181,7 +33181,7 @@
 			]
 		},
 		{
-			"name": "Rat",
+			"name": "老鼠", "ENG_name": "Rat",
 			"size": "T",
 			"type": "beast",
 			"source": "MM",
@@ -33204,22 +33204,22 @@
 			"int": 2,
 			"wis": 10,
 			"cha": 4,
-			"senses": "darkvision 30 ft.",
+			"senses": "黑暗視覺30呎",
 			"passive": 10,
 			"cr": "0",
 			"trait": [
 				{
-					"name": "Keen Smell",
+					"name": "敏銳嗅覺",
 					"entries": [
-						"The rat has advantage on Wisdom ({@skill Perception}) checks that rely on smell."
+						"老鼠在依賴嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
 					"entries": [
-						"{@atk mw} {@hit 0} to hit, reach 5 ft., one target. {@h}1 piercing damage."
+						"{@atk mw} 命中{@hit 0}，觸及5呎，單一目標。{@h}1 穿刺傷害。"
 					]
 				}
 			],
@@ -33238,7 +33238,7 @@
 			]
 		},
 		{
-			"name": "Raven",
+			"name": "渡鴉", "ENG_name": "Raven",
 			"size": "T",
 			"type": "beast",
 			"source": "MM",
@@ -33269,17 +33269,17 @@
 			"cr": "0",
 			"trait": [
 				{
-					"name": "Mimicry",
+					"name": "擬聲",
 					"entries": [
-						"The raven can mimic simple sounds it has heard, such as a person whispering, a baby crying, or an animal chittering. A creature that hears the sounds can tell they are imitations with a successful DC 10 Wisdom (Insight) check."
+						"渡鴉可以模仿牠曾聽過的簡單聲音，像是人的低語聲、嬰兒的哭聲、或動物的窸窣聲等。一個聽到該聲音的生物可以進行一次DC 10的睿知（{@skill 察言觀色}）檢定，若成功則辨識出它是被模仿出來的聲音。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Beak",
+					"name": "喙啄",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}1 piercing damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}1 穿刺傷害。"
 					]
 				}
 			],
@@ -35211,7 +35211,7 @@
 			]
 		},
 		{
-			"name": "Sea Horse",
+			"name": "海馬", "ENG_name": "Sea Horse",
 			"size": "T",
 			"type": "beast",
 			"source": "MM",
@@ -35238,9 +35238,9 @@
 			"cr": "0",
 			"trait": [
 				{
-					"name": "Water Breathing",
+					"name": "水下呼吸",
 					"entries": [
-						"The sea horse can breathe only underwater."
+						"海馬只能在水下呼吸。"
 					]
 				}
 			],
@@ -36426,7 +36426,7 @@
 			]
 		},
 		{
-			"name": "Spider",
+			"name": "蜘蛛", "ENG_name": "Spider",
 			"size": "T",
 			"type": "beast",
 			"source": "MM",
@@ -36453,34 +36453,34 @@
 			"skill": {
 				"stealth": "+4"
 			},
-			"senses": "darkvision 30 ft.",
+			"senses": "黑暗視覺30呎",
 			"passive": 12,
 			"cr": "0",
 			"trait": [
 				{
-					"name": "Spider Climb",
+					"name": "蛛行",
 					"entries": [
-						"The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+						"蜘蛛可以爬越困難表面，包括倒吊在天花板上，且無須進行屬性檢定。"
 					]
 				},
 				{
-					"name": "Web Sense",
+					"name": "蛛網感知",
 					"entries": [
-						"While in contact with a web, the spider knows the exact location of any other creature in contact with the same web."
+						"當與蛛網保持接觸時，蜘蛛可以知道任何其他與同一張蛛網接觸生物的確切位置。"
 					]
 				},
 				{
-					"name": "Web Walker",
+					"name": "蛛網行者",
 					"entries": [
-						"The spider ignores movement restrictions caused by webbing."
+						"蜘蛛無視蛛網所造成的移動限制。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one creature. {@h}1 piercing damage, and the target must succeed on a DC 9 Constitution saving throw or take 2 ({@damage 1d4}) poison damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一生物。{@h}1 穿刺傷害，且目標必須成功通過一次DC 9的體質豁免，否則受到2({@damage 1d4})毒素傷害。"
 					]
 				}
 			],
@@ -41569,7 +41569,7 @@
 			]
 		},
 		{
-			"name": "Weasel",
+			"name": "鼬鼠", "ENG_name": "Weasel",
 			"size": "T",
 			"type": "beast",
 			"source": "MM",
@@ -41600,17 +41600,17 @@
 			"cr": "0",
 			"trait": [
 				{
-					"name": "Keen Hearing and Smell",
+					"name": "敏銳聽覺和嗅覺",
 					"entries": [
-						"The weasel has advantage on Wisdom ({@skill Perception}) checks that rely on hearing or smell."
+						"鼬鼠在依賴聽覺或嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one creature. {@h}1 piercing damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}1 穿刺傷害。"
 					]
 				}
 			],

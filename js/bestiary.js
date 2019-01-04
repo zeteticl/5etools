@@ -233,7 +233,7 @@ const saveFilter = new Filter({
 const environmentFilter = new Filter({
 	header: "Environment", headerName: "環境",
 	items: ["arctic", "coastal", "desert", "forest", "grassland", "hill", "mountain", "swamp", "underdark", "underwater", "urban"],
-	displayFn: StrUtil.uppercaseFirst
+	displayFn: Parser.EnvironmentToDisplay
 });
 const DMG_TYPES = [
 	"acid",
@@ -720,7 +720,7 @@ function pGetSublistItem (mon, pinId, addCount, data = {}) {
 		pMon.then(mon => {
 			const subHash = data.scaled ? `${HASH_PART_SEP}${MON_HASH_SCALED}${HASH_SUB_KV_SEP}${data.scaled}` : "";
 			_initParsed(mon);
-			console.log(mon);
+
 			resolve(`
 				<li class="row" ${FLTR_ID}="${pinId}" oncontextmenu="ListUtil.openSubContextMenu(event, this)">
 					<a href="#${UrlUtil.autoEncodeHash(mon)}${subHash}" title="${mon._displayName || mon.name}" draggable="false">
@@ -798,11 +798,11 @@ function renderStatblock (mon, isScaled) {
 		<tr><th class="name mon__name--token" colspan="6">Name <span class="source" title="Source book">SRC</span></th></tr>
 		<tr><td id="sizetypealignment" colspan="6"><span id="size">${Parser.sizeAbvToFull(mon.size)}</span> <span id="type">type</span>, <span id="alignment">alignment</span></td></tr>
 		<tr><td class="divider" colspan="6"><div></div></td></tr>
-		<tr><td colspan="6"><strong>Armor Class</strong> <span id="ac">## (source)</span></td></tr>
-		<tr><td colspan="6"><div class="mon__wrp_hp"><strong>Hit Points</strong> <span id="hp">hp</span></div></td></tr>
-		<tr><td colspan="6"><strong>Speed</strong> <span id="speed">30 ft.</span></td></tr>
+		<tr><td colspan="6"><strong>護甲等級</strong> <span id="ac">## (source)</span></td></tr>
+		<tr><td colspan="6"><div class="mon__wrp_hp"><strong>生命值</strong> <span id="hp">hp</span></div></td></tr>
+		<tr><td colspan="6"><strong>速度</strong> <span id="speed">30 ft.</span></td></tr>
 		<tr><td class="divider" colspan="6"><div></div></td></tr>
-		<tr id="abilitynames"><th>STR</th><th>DEX</th><th>CON</th><th>INT</th><th>WIS</th><th>CHA</th></tr>
+		<tr id="abilitynames"><th>力量</th><th>敏捷</th><th>體質</th><th>智力</th><th>睿知</th><th>魅力</th></tr>
 		<tr id="abilityscores">
 			<td id="str">${EntryRenderer.getDefaultRenderer().renderEntry(`{@d20 ${Parser.getAbilityModifier(mon.str)}|${mon.str} (${Parser.getAbilityModifier(mon.str)})|Strength}`)}</td>
 			<td id="dex">${EntryRenderer.getDefaultRenderer().renderEntry(`{@d20 ${Parser.getAbilityModifier(mon.dex)}|${mon.dex} (${Parser.getAbilityModifier(mon.dex)})|Dexterity}`)}</td>
@@ -812,15 +812,15 @@ function renderStatblock (mon, isScaled) {
 			<td id="cha">${EntryRenderer.getDefaultRenderer().renderEntry(`{@d20 ${Parser.getAbilityModifier(mon.cha)}|${mon.cha} (${Parser.getAbilityModifier(mon.cha)})|Charisma}`)}</td>
 		</tr>
 		<tr><td class="divider" colspan="6"><div></div></td></tr>
-		<tr><td colspan="6"><strong>Saving Throws</strong> <span id="saves">Str +0</span></td></tr>
-		<tr><td colspan="6"><strong>Skills</strong> <span id="skills">Perception +0</span></td></tr>
-		<tr><td colspan="6"><strong>Damage Vulnerabilities</strong> <span id="dmgvuln">fire</span></td></tr>
-		<tr><td colspan="6"><strong>Damage Resistances</strong> <span id="dmgres">cold</span></td></tr>
-		<tr><td colspan="6"><strong>Damage Immunities</strong> <span id="dmgimm">lightning</span></td></tr>
-		<tr><td colspan="6"><strong>Condition Immunities</strong> <span id="conimm">exhaustion</span></td></tr>
-		<tr><td colspan="6"><strong>Senses</strong> <span id="senses">darkvision 30 ft.</span> passive Perception <span id="pp">10</span></td></tr>
-		<tr><td colspan="6"><strong>Languages</strong> <span id="languages">Common</span></td></tr>
-		<tr><td colspan="6" style="position: relative;"><strong>Challenge</strong>
+		<tr><td colspan="6"><strong>豁免</strong> <span id="saves">Str +0</span></td></tr>
+		<tr><td colspan="6"><strong>技能</strong> <span id="skills">Perception +0</span></td></tr>
+		<tr><td colspan="6"><strong>傷害易傷</strong> <span id="dmgvuln">fire</span></td></tr>
+		<tr><td colspan="6"><strong>傷害抗性</strong> <span id="dmgres">cold</span></td></tr>
+		<tr><td colspan="6"><strong>傷害免疫</strong> <span id="dmgimm">lightning</span></td></tr>
+		<tr><td colspan="6"><strong>狀態免疫</strong> <span id="conimm">exhaustion</span></td></tr>
+		<tr><td colspan="6"><strong>感官</strong> <span id="senses">darkvision 30 ft.</span> 被動感知 <span id="pp">10</span></td></tr>
+		<tr><td colspan="6"><strong>語言</strong> <span id="languages">Common</span></td></tr>
+		<tr><td colspan="6" style="position: relative;"><strong>挑戰等級</strong>
 			<span id="cr">1 (450 XP)</span>
 			<button id="btn-scale-cr" title="Scale Creature By CR (Highly Experimental)" class="mon__btn-scale-cr btn btn-xs btn-default">
 				<span class="glyphicon glyphicon-signal"></span>
@@ -831,15 +831,15 @@ function renderStatblock (mon, isScaled) {
 		</td></tr>
 		<tr id="traits"><td class="divider" colspan="6"><div></div></td></tr>
 		<tr class="trait"><td colspan="6"><span class="name">Trait.</span> <span class="content">Content.</span></td></tr>
-		<tr id="actions"><td colspan="6"><span>Actions</span></td></tr>
+		<tr id="actions"><td colspan="6"><span>動作</span></td></tr>
 		<tr class="action"><td colspan="6"><span class="name">Action.</span> <span class="content">Content.</span></td></tr>
-		<tr id="reactions"><td colspan="6"><span>Reactions</span></td></tr>
+		<tr id="reactions"><td colspan="6"><span>反應</span></td></tr>
 		<tr class="reaction"><td colspan="6"><span class="name">Reaction.</span> <span class="content">Content.</span></td></tr>
-		<tr id="legendaries"><td colspan="6"><span>Legendary Actions</span></td></tr>
+		<tr id="legendaries"><td colspan="6"><span>傳奇動作</span></td></tr>
 		<tr class="legendary"><td colspan="6"><span class="name">Action.</span> <span class="content">Content.</span></td></tr>
-		<tr id="lairactions"><td colspan="6"><span>Lair Actions</span></td></tr>
+		<tr id="lairactions"><td colspan="6"><span>巢穴動作</span></td></tr>
 		<tr class="lairaction"><td colspan="6"><span class="name">Action.</span> <span class="content">Content.</span></td></tr>
-		<tr id="regionaleffects"><td colspan="6"><span>Regional Effects</span></td></tr>
+		<tr id="regionaleffects"><td colspan="6"><span>區域效應</span></td></tr>
 		<tr class="regionaleffect"><td colspan="6"><span class="name">Effect.</span> <span class="content">Content.</span></td></tr>
 		<tr id="variants"></tr>
 		<tr id="source"></tr>
@@ -873,7 +873,7 @@ function renderStatblock (mon, isScaled) {
 		} else imgError();
 
 		$content.find(".mon__name--token").html(
-			`<span class="stats-name copyable" onclick="EntryRenderer.utils._handleNameClick(this, '${mon.source.escapeQuotes()}')">${displayName}</span>
+			`<span><b class="stats-name copyable" onclick="EntryRenderer.utils._handleNameClick(this, '${mon.source.escapeQuotes()}')">${displayName}</b>${mon.ENG_name? "("+mon.ENG_name+")": ""}</span>
 			${mon.soundClip ? getPronunciationButton() : ""}
 			<span class="stats-source ${Parser.sourceJsonToColor(mon.source)}" title="${sourceFull}${EntryRenderer.utils.getSourceSubText(mon)}">${source}</span>`
 		);
@@ -1026,7 +1026,7 @@ function renderStatblock (mon, isScaled) {
 		$trSource.append($tdSource);
 		if (mon.environment && mon.environment.length) {
 			$tdSource.attr("colspan", 4);
-			$trSource.append(`<td colspan="2" class="text-align-right mr-2"><i>Environment: ${mon.environment.sort(SortUtil.ascSortLower).map(it => it.toTitleCase()).join(", ")}</i></td>`)
+			$trSource.append(`<td colspan="2" class="text-align-right mr-2"><i>環境：${mon.environment.sort(SortUtil.ascSortLower).map(it => Parser.EnvironmentToDisplay(it)).join(", ")}</i></td>`)
 		}
 
 		const legendary = mon.legendary;
@@ -1761,7 +1761,7 @@ class EncounterBuilder {
 				if (scaledTo == null || scaledTo === baseCrNum) return it.uid == null && it.h === toFindHash;
 				else return it.uid === toFindUid;
 			});
-			if (!~ixCurrItem) throw new Error(`Could not find previously sublisted item! 🐛`);
+			if (!~ixCurrItem) throw new Error(`Could not find previously sublisted item!`);
 
 			const toFindNxtUid = baseCrNum !== targetCrNum ? getUid(mon.name, mon.source, targetCrNum) : null;
 			const nextItem = state.items.find(it => {

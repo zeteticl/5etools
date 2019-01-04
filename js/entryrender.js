@@ -750,7 +750,7 @@ function EntryRenderer () {
 								textStack[0] += `<i>${EntryRenderer.attackTagToFull(text)}</i>`;
 								break;
 							case "@h":
-								textStack[0] += `<i>Hit:</i> `;
+								textStack[0] += `<i>若命中:</i> `;
 								break;
 						}
 					} else if (tag === "@dice" || tag === "@damage" || tag === "@hit" || tag === "@d20" || tag === "@chance" || tag === "@recharge") {
@@ -1273,10 +1273,10 @@ EntryRenderer.applyProperties._leadingAn = new Set(["a", "e", "i", "o", "u"]);
 
 EntryRenderer.attackTagToFull = function (tagStr) {
 	function renderTag (tags) {
-		return `${tags.includes("m") ? "Melee " : tags.includes("r") ? "Ranged " : tags.includes("a") ? "Area " : ""}${tags.includes("w") ? "Weapon " : tags.includes("s") ? "Spell " : ""}`;
+		return `${tags.includes("m") ? "近戰" : tags.includes("r") ? "遠程" : tags.includes("a") ? "區域" : ""}${tags.includes("w") ? "武器" : tags.includes("s") ? "法術" : ""}`;
 	}
 
-	const tagGroups = tagStr.toLowerCase().split(",").map(it => it.trim()).filter(it => it).map(it => it.split(""));
+	const tagGroups = tagStr.toLowerCase().split("，").map(it => it.trim()).filter(it => it).map(it => it.split(""));
 	if (tagGroups.length > 1) {
 		const seen = new Set(tagGroups.last());
 		for (let i = tagGroups.length - 2; i >= 0; --i) {
@@ -1287,7 +1287,7 @@ EntryRenderer.attackTagToFull = function (tagStr) {
 			});
 		}
 	}
-	return `${tagGroups.map(it => renderTag(it)).join(" or ")}Attack:`;
+	return `${tagGroups.map(it => renderTag(it)).join(" 或 ")}攻擊：`;
 };
 
 EntryRenderer.HOVER_TAG_TO_PAGE = {
@@ -2552,10 +2552,10 @@ EntryRenderer.monster = {
 			<tr><td colspan="6">
 				<table class="summary-noback" style="position: relative;">
 					<tr>
-						<th>Armor Class</th>
-						<th>Hit Points</th>
-						<th>Speed</th>
-						<th>Challenge Rating</th>
+						<th>護甲等級</th>
+						<th>生命值</th>
+						<th>速度</th>
+						<th>挑戰等級</th>
 					</tr>
 					<tr>
 						<td>${Parser.acToFull(mon.ac)}</td>					
@@ -2581,12 +2581,12 @@ EntryRenderer.monster = {
 			<tr><td colspan="6">
 				<table class="summary striped-even">
 					<tr>
-						<th class="col-2 text-align-center">STR</th>
-						<th class="col-2 text-align-center">DEX</th>
-						<th class="col-2 text-align-center">CON</th>
-						<th class="col-2 text-align-center">INT</th>
-						<th class="col-2 text-align-center">WIS</th>
-						<th class="col-2 text-align-center">CHA</th>
+						<th class="col-2 text-align-center">力量</th>
+						<th class="col-2 text-align-center">敏捷</th>
+						<th class="col-2 text-align-center">體質</th>
+						<th class="col-2 text-align-center">智力</th>
+						<th class="col-2 text-align-center">睿知</th>
+						<th class="col-2 text-align-center">魅力</th>
 					</tr>	
 					<tr>
 						<td class="text-align-center">${EntryRenderer.utils.getAbilityRoller(mon, "str")}</td>
@@ -2601,14 +2601,14 @@ EntryRenderer.monster = {
 			<tr><td colspan="6"><div class="border"></div></td></tr>
 			<tr><td colspan="6">
 				<div class="summary-flexer">
-					${mon.save ? `<p><b>Saving Throws:</b> ${Object.keys(mon.save).map(s => EntryRenderer.monster.getSave(renderer, s, mon.save[s])).join(", ")}</p>` : ""}
-					${mon.skill ? `<p><b>Skills:</b> ${EntryRenderer.monster.getSkillsString(renderer, mon)}</p>` : ""}
-					<p><b>Senses:</b> ${mon.senses ? `${mon.senses}, ` : ""}passive Perception ${mon.passive}</p>
-					<p><b>Languages:</b> ${mon.languages ? mon.languages : `\u2014`}</p>
-					${mon.vulnerable ? `<p><b>Damage Vuln.:</b> ${Parser.monImmResToFull(mon.vulnerable)}</p>` : ""}
-					${mon.resist ? `<p><b>Damage Res.:</b> ${Parser.monImmResToFull(mon.resist)}</p>` : ""}
-					${mon.immune ? `<p><b>Damage Imm.:</b> ${Parser.monImmResToFull(mon.immune)}</p>` : ""}
-					${mon.conditionImmune ? `<p><b>Condition Imm.:</b> ${Parser.monCondImmToFull(mon.conditionImmune)}</p>` : ""}
+					${mon.save ? `<p><b>豁免：</b> ${Object.keys(mon.save).map(s => EntryRenderer.monster.getSave(renderer, s, mon.save[s])).join(", ")}</p>` : ""}
+					${mon.skill ? `<p><b>技能：</b> ${EntryRenderer.monster.getSkillsString(renderer, mon)}</p>` : ""}
+					<p><b>感官：</b> ${mon.senses ? `${mon.senses}, ` : ""}被動感知 ${mon.passive}</p>
+					<p><b>語言：</b> ${mon.languages ? mon.languages : `\u2014`}</p>
+					${mon.vulnerable ? `<p><b>傷害易傷：</b> ${Parser.monImmResToFull(mon.vulnerable)}</p>` : ""}
+					${mon.resist ? `<p><b>傷害抗性：</b> ${Parser.monImmResToFull(mon.resist)}</p>` : ""}
+					${mon.immune ? `<p><b>傷害免疫：</b> ${Parser.monImmResToFull(mon.immune)}</p>` : ""}
+					${mon.conditionImmune ? `<p><b>狀態免疫：</b> ${Parser.monCondImmToFull(mon.conditionImmune)}</p>` : ""}
 				</div>
 			</td></tr>
 			${mon.trait || mon.spellcasting ? `<tr><td colspan="6"><div class="border"></div></td></tr>
@@ -2728,8 +2728,8 @@ EntryRenderer.monster = {
 		}
 
 		function doSortMapJoinSkillKeys (obj, keys, joinWithOr) {
-			const toJoin = keys.sort(SortUtil.ascSort).map(s => `<span data-mon-skill="${s.toTitleCase()}|${obj[s]}">${renderer.renderEntry(`{@skill ${s.toTitleCase()}}`)} ${makeSkillRoller(s.toTitleCase(), obj[s])}</span>`);
-			return joinWithOr ? toJoin.joinConjunct(", ", " or ") : toJoin.join(", ")
+			const toJoin = keys.sort(SortUtil.ascSort).map(s => `<span data-mon-skill="${s.toTitleCase()}|${obj[s]}">${renderer.renderEntry(`{@skill ${Parser.SkillToDisplay(s)}}`)}${makeSkillRoller(Parser.SkillToDisplay(s), obj[s])}</span>`);
+			return joinWithOr ? toJoin.joinConjunct(", ", " 或 ") : toJoin.join(", ")
 		}
 
 		const skills = doSortMapJoinSkillKeys(mon.skill, Object.keys(mon.skill).filter(k => k !== "other"));
@@ -2745,7 +2745,9 @@ EntryRenderer.monster = {
 	},
 
 	getTokenUrl (mon) {
-		return mon.tokenURL || UrlUtil.link(`img/${Parser.sourceJsonToAbv(mon.source)}/${mon.name.replace(/"/g, "")}.png`);
+		if(mon.tokenURL) return mon.tokenURL;
+		if(mon.ENG_name) return UrlUtil.link(`img/${Parser.sourceJsonToAbv(mon.source)}/${mon.ENG_name.replace(/"/g, "")}.png`);
+		return UrlUtil.link(`img/${Parser.sourceJsonToAbv(mon.source)}/${mon.name.replace(/"/g, "")}.png`);
 	},
 
 	getFluff (mon, legendaryMeta, fluffJson) {
@@ -5506,7 +5508,7 @@ EntryRenderer.stripTags = function (str) {
 					case "@strike":
 						return text.replace(/^{@(i|italic|b|bold|s|strike) (.*?)}$/, "$1");
 
-					case "@h": return "Hit: ";
+					case "@h": return "若命中:";
 
 					case "@atk": return EntryRenderer.attackTagToFull(text);
 

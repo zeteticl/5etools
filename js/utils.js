@@ -579,7 +579,7 @@ Parser._addCommas = function (intNum) {
 
 Parser.crToXp = function (cr) {
 	if (cr === "Unknown" || cr === undefined) return "Unknown";
-	if (cr === "0") return "0 or 10";
+	if (cr === "0") return "0 或 10";
 	if (cr === "1/8") return "25";
 	if (cr === "1/4") return "50";
 	if (cr === "1/2") return "100";
@@ -1108,7 +1108,7 @@ Parser.monCrToFull = function (cr) {
 		const stack = [Parser.monCrToFull(cr.cr)];
 		if (cr.lair) stack.push(`${Parser.monCrToFull(cr.lair)} when encountered in lair`);
 		if (cr.coven) stack.push(`${Parser.monCrToFull(cr.coven)} when part of a coven`);
-		return stack.join(" or ");
+		return stack.join(" 或 ");
 	}
 };
 
@@ -1482,8 +1482,8 @@ Parser.SpeedToDisplay = function(sp){
 	let sp_match = sp.match(/([^()]*)(\((.*)\))?/);
 	if(sp_match && sp_match[2]){
 		let main_sp = Parser.translateKeyInMapToDisplay(Parser.speedKeyToDisplay, sp_match[1].replace(/ *$/,""));
-		r_match[3]  = r_match[3].toLowerCase();
-		let deco    = r_match[3]=="fast"? "快": r_match[3]=="slow"? "慢": r_match[3];
+		sp_match[3] = sp_match[3].toLowerCase();
+		let deco    = sp_match[3]=="fast"? "快": sp_match[3]=="slow"? "慢": sp_match[3];
 		return main_sp + "(" + deco + ")";
 	}
 	return Parser.translateKeyInMapToDisplay(Parser.speedKeyToDisplay, sp);
@@ -1620,6 +1620,23 @@ Parser.languageKeyToDisplay["primordial"] = "盤古語";
 Parser.languageKeyToDisplay["sylvan"] 	= "木族語";
 Parser.languageKeyToDisplay["terran"] 	= "大地語";
 Parser.languageKeyToDisplay["undercommon"]= "地底通用語";
+
+//Environment
+Parser.environmentKeyToDisplay = {};
+Parser.environmentKeyToDisplay["arctic"]    = "極地";
+Parser.environmentKeyToDisplay["coastal"]   = "海岸";
+Parser.environmentKeyToDisplay["desert"]    = "沙漠";
+Parser.environmentKeyToDisplay["forest"]    = "森林";
+Parser.environmentKeyToDisplay["grassland"] = "草地";
+Parser.environmentKeyToDisplay["hill"]      = "丘陵";
+Parser.environmentKeyToDisplay["mountain"]  = "高山";
+Parser.environmentKeyToDisplay["swamp"]     = "沼澤";
+Parser.environmentKeyToDisplay["underdark"] = "幽暗地域";
+Parser.environmentKeyToDisplay["underwater"]= "水下";
+Parser.environmentKeyToDisplay["urban"]     = "城鎮";
+Parser.EnvironmentToDisplay = function(e){
+	return Parser.translateKeyInMapToDisplay(Parser.environmentKeyToDisplay, e);
+}
 
 
 Parser.itemValueToDisplay = function(value){
