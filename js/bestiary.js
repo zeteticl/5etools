@@ -222,7 +222,7 @@ const senseFilter = new Filter({
 });
 const skillFilter = new Filter({
 	header: "Skills", headerName: "技能",
-	displayFn: (it) => it.toTitleCase(),
+	displayFn: Parser.SkillToDisplay,
 	items: ["acrobatics", "animal handling", "arcana", "athletics", "deception", "history", "insight", "intimidation", "investigation", "medicine", "nature", "perception", "performance", "persuasion", "religion", "sleight of hand", "stealth", "survival"]
 });
 const saveFilter = new Filter({
