@@ -1069,7 +1069,7 @@ Parser.monTypeToFullObj = function (type) {
 	if (typeof type === "string") {
 		// handles e.g. "fey"
 		out.type = type;
-		out.asText = type;
+		out.asText = Parser.monTypeToPlural(type);
 		return out;
 	}
 
@@ -1092,7 +1092,7 @@ Parser.monTypeToFullObj = function (type) {
 		out.tags.push("swarm");
 		out.asText = `swarm of ${Parser.sizeAbvToFull(type.swarmSize).toLowerCase()} ${Parser.monTypeToPlural(type.type)}`;
 	} else {
-		out.asText = `${type.type}`;
+		out.asText = `${Parser.monTypeToPlural(type.type)}`;
 	}
 	if (tempTags.length) out.asText += ` (${tempTags.join(", ")})`;
 	return out;
