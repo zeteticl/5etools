@@ -1444,6 +1444,7 @@ Parser.SubclassToDisplay = function(sc){
 }
 
 //Skill
+Parser.skillKeyToDisplay = {};
 Parser.skillKeyToDisplay["athletics"]  	   = "運動";
 Parser.skillKeyToDisplay["acrobatics"]     = "特技";
 Parser.skillKeyToDisplay["sleight of hand"]= "手上把戲";
@@ -1466,6 +1467,7 @@ Parser.SkillToDisplay = function(sk){
 	return Parser.translateKeyInMapToDisplay(Parser.skillKeyToDisplay, sk);
 }
 //Speed
+Parser.speedKeyToDisplay = {};
 Parser.speedKeyToDisplay["climb"] = "攀爬";
 Parser.speedKeyToDisplay["burrow"]= "掘地";
 Parser.speedKeyToDisplay["fly"]   = "飛行";
@@ -1477,6 +1479,7 @@ Parser.SpeedToDisplay = function(sp){
 	return Parser.translateKeyInMapToDisplay(Parser.speedKeyToDisplay, sp);
 }
 //Damage Type
+Parser.damageKeyToDisplay = {};
 Parser.damageKeyToDisplay["acid"]		= "酸蝕";
 Parser.damageKeyToDisplay["bludgeoning"]= "鈍擊";
 Parser.damageKeyToDisplay["cold"]		= "寒冰";
@@ -1494,6 +1497,7 @@ Parser.DamageToDisplay = function(d){
 	return Parser.translateKeyInMapToDisplay(Parser.damageKeyToDisplay, d);
 }
 //Condotions
+Parser.condKeyToDisplay = {};
 Parser.condKeyToDisplay["blinded"]		= "目盲";
 Parser.condKeyToDisplay["charmed"]		= "魅惑";
 Parser.condKeyToDisplay["deafened"]		= "耳聾";
