@@ -1434,8 +1434,6 @@ Parser.subclassKeyToDisplay["grave"]      = "墳墓";
 Parser.subclassKeyToDisplay["beauty"]     = "美麗";
 Parser.subclassKeyToDisplay["darkness"]   = "黑暗";
 Parser.subclassKeyToDisplay["destruction"]= "毀滅";
-
-
 Parser.SubclassToDisplay = function(sc){
 	let sc_match = sc.match(/([^()]*)( ?\((.*)\))?/);
 	if(sc_match && sc_match[2]){
@@ -1446,32 +1444,75 @@ Parser.SubclassToDisplay = function(sc){
 }
 
 //Skill
-Parser.keyToDisplay["athletics"]  		= "運動";
-Parser.keyToDisplay["acrobatics"]  		= "特技";
-Parser.keyToDisplay["sleight of hand"] 	= "手上把戲";
-Parser.keyToDisplay["stealth"]  		= "隱匿";
-Parser.keyToDisplay["arcana"]  			= "奧秘";
-Parser.keyToDisplay["history"]  		= "歷史";
-Parser.keyToDisplay["investigation"]  	= "調查";
-Parser.keyToDisplay["nature"]  			= "自然";
-Parser.keyToDisplay["religion"]  		= "宗教";
-Parser.keyToDisplay["animal handling"]  = "動物馴養";
-Parser.keyToDisplay["insight"]  		= "察言觀色";
-Parser.keyToDisplay["medicine"]  		= "醫藥";
-Parser.keyToDisplay["perception"]  		= "感知";
-Parser.keyToDisplay["survival"]  		= "求生";
-Parser.keyToDisplay["deception"]  		= "欺瞞";
-Parser.keyToDisplay["intimidation"]  	= "威嚇";
-Parser.keyToDisplay["performance"]  	= "表演";
-Parser.keyToDisplay["persuasion"]  		= "說服";
+Parser.skillKeyToDisplay["athletics"]  	   = "運動";
+Parser.skillKeyToDisplay["acrobatics"]     = "特技";
+Parser.skillKeyToDisplay["sleight of hand"]= "手上把戲";
+Parser.skillKeyToDisplay["stealth"]  	   = "隱匿";
+Parser.skillKeyToDisplay["arcana"]  	   = "奧秘";
+Parser.skillKeyToDisplay["history"]  	   = "歷史";
+Parser.skillKeyToDisplay["investigation"]  = "調查";
+Parser.skillKeyToDisplay["nature"]  	   = "自然";
+Parser.skillKeyToDisplay["religion"]  	   = "宗教";
+Parser.skillKeyToDisplay["animal handling"]= "動物馴養";
+Parser.skillKeyToDisplay["insight"]  	   = "察言觀色";
+Parser.skillKeyToDisplay["medicine"]  	   = "醫藥";
+Parser.skillKeyToDisplay["perception"]     = "感知";
+Parser.skillKeyToDisplay["survival"]  	   = "求生";
+Parser.skillKeyToDisplay["deception"]  	   = "欺瞞";
+Parser.skillKeyToDisplay["intimidation"]   = "威嚇";
+Parser.skillKeyToDisplay["performance"]    = "表演";
+Parser.skillKeyToDisplay["persuasion"]     = "說服";
+Parser.SkillToDisplay = function(sk){
+	return Parser.translateKeyInMapToDisplay(Parser.skillKeyToDisplay, sk);
+}
 //Speed
-Parser.keyToDisplay["climb"]  		= "攀爬";
-Parser.keyToDisplay["burrow"]  		= "掘地";
-Parser.keyToDisplay["fly"]   		= "飛行";
-Parser.keyToDisplay["swim"]  		= "游泳";
-Parser.keyToDisplay["walk"]  		= "步行";
-Parser.keyToDisplay["walk (fast)"] 	= "步行(快)";
-Parser.keyToDisplay["walk (slow)"]  = "步行(慢)";
+Parser.speedKeyToDisplay["climb"] = "攀爬";
+Parser.speedKeyToDisplay["burrow"]= "掘地";
+Parser.speedKeyToDisplay["fly"]   = "飛行";
+Parser.speedKeyToDisplay["swim"]  = "游泳";
+Parser.speedKeyToDisplay["walk"]  = "步行";
+Parser.speedKeyToDisplay["walk (fast)"]= "步行(快)";
+Parser.speedKeyToDisplay["walk (slow)"]= "步行(慢)";
+Parser.SpeedToDisplay = function(sp){
+	return Parser.translateKeyInMapToDisplay(Parser.speedKeyToDisplay, sp);
+}
+//Damage Type
+Parser.damageKeyToDisplay["acid"]		= "酸蝕";
+Parser.damageKeyToDisplay["bludgeoning"]= "鈍擊";
+Parser.damageKeyToDisplay["cold"]		= "寒冰";
+Parser.damageKeyToDisplay["fire"]		= "火焰";
+Parser.damageKeyToDisplay["force"]		= "力場";
+Parser.damageKeyToDisplay["lightning"]	= "閃電";
+Parser.damageKeyToDisplay["necrotic"]	= "死靈";
+Parser.damageKeyToDisplay["piercing"]	= "穿刺";
+Parser.damageKeyToDisplay["poison"]		= "毒素";
+Parser.damageKeyToDisplay["psychic"]	= "精神";
+Parser.damageKeyToDisplay["radiant"]	= "光耀";
+Parser.damageKeyToDisplay["slashing"]	= "劈砍";
+Parser.damageKeyToDisplay["thunder"]	= "雷鳴";
+Parser.DamageToDisplay = function(d){
+	return Parser.translateKeyInMapToDisplay(Parser.damageKeyToDisplay, d);
+}
+//Condotions
+Parser.condKeyToDisplay["blinded"]		= "目盲";
+Parser.condKeyToDisplay["charmed"]		= "魅惑";
+Parser.condKeyToDisplay["deafened"]		= "耳聾";
+Parser.condKeyToDisplay["exhaustion"]	= "力竭";
+Parser.condKeyToDisplay["frightened"]	= "恐懼";
+Parser.condKeyToDisplay["grappled"]		= "被擒";
+Parser.condKeyToDisplay["incapacitated"]= "無力";
+Parser.condKeyToDisplay["invisible"]	= "隱形";
+Parser.condKeyToDisplay["paralyzed"]	= "麻痺";
+Parser.condKeyToDisplay["petrified"]	= "石化";
+Parser.condKeyToDisplay["poisoned"]		= "中毒";
+Parser.condKeyToDisplay["prone"]		= "伏地";
+Parser.condKeyToDisplay["restrained"]	= "束縛";
+Parser.condKeyToDisplay["stunned"]		= "震懾";
+Parser.condKeyToDisplay["unconscious"]	= "昏迷";
+Parser.ConditionToDisplay = function(c){
+	return Parser.translateKeyInMapToDisplay(Parser.condKeyToDisplay, c);
+}
+
 //Armor
 Parser.keyToDisplay["light"]  = "輕";
 Parser.keyToDisplay["medium"] = "中";
@@ -1506,36 +1547,9 @@ Parser.keyToDisplay["cube"]= "立方";
 Parser.keyToDisplay["cone"]= "錐形";
 Parser.keyToDisplay["cylinder"]= "圓柱";
 Parser.keyToDisplay["radius"]= "半徑";
-//Damage Type
-Parser.keyToDisplay["acid"]			= "酸蝕";
-Parser.keyToDisplay["bludgeoning"]	= "鈍擊";
-Parser.keyToDisplay["cold"]			= "寒冰";
-Parser.keyToDisplay["fire"]			= "火焰";
-Parser.keyToDisplay["force"]		= "力場";
-Parser.keyToDisplay["lightning"]	= "閃電";
-Parser.keyToDisplay["necrotic"]		= "死靈";
-Parser.keyToDisplay["piercing"]		= "穿刺";
-Parser.keyToDisplay["poison"]		= "毒素";
-Parser.keyToDisplay["psychic"]		= "精神";
-Parser.keyToDisplay["radiant"]		= "光耀";
-Parser.keyToDisplay["slashing"]		= "劈砍";
-Parser.keyToDisplay["thunder"]		= "雷鳴";
-//Condotions
-Parser.keyToDisplay["blinded"]		= "目盲";
-Parser.keyToDisplay["charmed"]		= "魅惑";
-Parser.keyToDisplay["deafened"]		= "耳聾";
-Parser.keyToDisplay["exhaustion"]	= "力竭";
-Parser.keyToDisplay["frightened"]	= "恐懼";
-Parser.keyToDisplay["grappled"]		= "被擒";
-Parser.keyToDisplay["incapacitated"]= "無力";
-Parser.keyToDisplay["invisible"]	= "隱形";
-Parser.keyToDisplay["paralyzed"]	= "麻痺";
-Parser.keyToDisplay["petrified"]	= "石化";
-Parser.keyToDisplay["poisoned"]		= "中毒";
-Parser.keyToDisplay["prone"]		= "伏地";
-Parser.keyToDisplay["restrained"]	= "束縛";
-Parser.keyToDisplay["stunned"]		= "震懾";
-Parser.keyToDisplay["unconscious"]	= "昏迷";
+
+
+
 
 //Spell
 Parser.keyToDisplay["action"] = "動作";
