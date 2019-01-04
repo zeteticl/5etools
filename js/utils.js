@@ -540,7 +540,7 @@ Parser.getAbilityModifier = function (abilityScore) {
 Parser.getSpeedString = (it) => {
 	function procSpeed (propName) {
 		function addSpeed (s) {
-			stack.push(`${propName === "walk" ? "" : `${Parser.translateKeyToDisplay(propName)}`}${getVal(s)}呎${getCond(s)}`);
+			stack.push(`${propName === "walk" ? "" : `${Parser.SpeedToDisplay(propName)}`}${getVal(s)}呎${getCond(s)}`);
 		}
 
 		if (it.speed[propName] || propName === "walk") addSpeed(it.speed[propName] || 0);
@@ -1479,6 +1479,7 @@ Parser.SpeedToDisplay = function(sp){
 	let sp_match = sp.match(/([^()]*)(\((.*)\))?/);
 	if(sp_match && sp_match[2]){
 		let main_sp = Parser.translateKeyInMapToDisplay(Parser.speedKeyToDisplay, sp_match[1].replace(/ *$/,""));
+		r_match[3]  = r_match[3].toLowerCase();
 		let deco    = r_match[3]=="fast"? "快": r_match[3]=="slow"? "慢": r_match[3];
 		return main_sp + "(" + deco + ")";
 	}
