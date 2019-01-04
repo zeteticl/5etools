@@ -362,7 +362,7 @@ const schoolFilter = new Filter({
 const damageFilter = new Filter({
 	header: "Damage Type", headerName: "傷害類型",
 	items: [
-		"acid", "bludgeoning", "cold", "fire", "force", "lightning", "necrotic", "piercing", "poison", "psychic", "radiant", "slashing", "thunder"
+		"bludgeoning", "piercing", "slashing", "acid", "cold", "fire", "lightning", "thunder", "poison", "radiant", "necrotic", "force", "psychic"
 	],
 	displayFn: Parser.DamageToDisplay
 });
