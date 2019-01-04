@@ -364,12 +364,12 @@ const damageFilter = new Filter({
 	items: [
 		"acid", "bludgeoning", "cold", "fire", "force", "lightning", "necrotic", "piercing", "poison", "psychic", "radiant", "slashing", "thunder"
 	],
-	displayFn: Parser.translateKeyToDisplay
+	displayFn: Parser.DamageToDisplay
 });
 const conditionFilter = new Filter({
 	header: "Conditions Inflicted", headerName: "造成狀態",
 	items: ["blinded", "charmed", "deafened", "exhaustion", "frightened", "grappled", "incapacitated", "invisible", "paralyzed", "petrified", "poisoned", "prone", "restrained", "stunned", "unconscious"],
-	displayFn: Parser.translateKeyToDisplay
+	displayFn: Parser.ConditionToDisplay
 });
 const spellAttackFilter = new Filter({
 	header: "Spell Attack", headerName: "法術攻擊",
