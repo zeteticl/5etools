@@ -1476,6 +1476,12 @@ Parser.speedKeyToDisplay["walk"]  = "步行";
 Parser.speedKeyToDisplay["walk (fast)"]= "步行(快)";
 Parser.speedKeyToDisplay["walk (slow)"]= "步行(慢)";
 Parser.SpeedToDisplay = function(sp){
+	let sp_match = sp.match(/([^()]*)(\((.*)\))?/);
+	if(sp_match && sp_match[2]){
+		let main_sp = Parser.translateKeyInMapToDisplay(Parser.speedKeyToDisplay, sp_match[1].replace(/ *$/,""));
+		let deco    = r_match[3]=="fast"? "快": r_match[3]=="slow"? "慢": r_match[3];
+		return main_sp + "(" + deco + ")";
+	}
 	return Parser.translateKeyInMapToDisplay(Parser.speedKeyToDisplay, sp);
 }
 //Damage Type
