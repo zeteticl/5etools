@@ -184,8 +184,7 @@ const abilityScoreFilter = new MultiFilter({name: "Ability Scores", compact: tru
 const acFilter = new RangeFilter({header: "Armor Class"});
 const averageHpFilter = new RangeFilter({header: "Average Hit Points"});
 const typeFilter = new Filter({
-	header: "Type",
-	headerName: "生物類型",
+	header: "Type", headerName: "生物類型",
 	items: [
 		"aberration",
 		"beast",
@@ -206,36 +205,33 @@ const typeFilter = new Filter({
 });
 const tagFilter = new Filter({header: "Tag", displayFn: StrUtil.uppercaseFirst});
 const alignmentFilter = new Filter({
-	header: "Alignment",
-	headerName: "陣營",
+	header: "Alignment", headerName: "陣營",
 	items: ["L", "NX", "C", "G", "NY", "E", "N", "U", "A"],
 	displayFn: Parser.alignmentAbvToFull
 });
 const languageFilter = new Filter({
-	header: "Languages",
-	headerName: "語言",
+	header: "Languages", headerName: "語言",
 	displayFn: (k) => languages[k],
 	umbrellaItems: ["X", "XX"],
 	umbrellaExcludes: ["CS"]
 });
 const senseFilter = new Filter({
-	header: "Senses",
+	header: "Senses", headerName: "感官能力",
 	displayFn: (it) => Parser.monSenseTagToFull(it).toTitleCase(),
 	items: ["B", "D", "SD", "T", "U"]
 });
 const skillFilter = new Filter({
-	header: "Skills",
-	headerName: "技能",
+	header: "Skills", headerName: "技能",
 	displayFn: (it) => it.toTitleCase(),
 	items: ["acrobatics", "animal handling", "arcana", "athletics", "deception", "history", "insight", "intimidation", "investigation", "medicine", "nature", "perception", "performance", "persuasion", "religion", "sleight of hand", "stealth", "survival"]
 });
 const saveFilter = new Filter({
-	header: "Saves",
+	header: "Saves", headerName: "豁免",
 	displayFn: Parser.attAbvToFull,
 	items: [...Parser.ABIL_ABVS]
 });
 const environmentFilter = new Filter({
-	header: "Environment",
+	header: "Environment", headerName: "環境",
 	items: ["arctic", "coastal", "desert", "forest", "grassland", "hill", "mountain", "swamp", "underdark", "underwater", "urban"],
 	displayFn: StrUtil.uppercaseFirst
 });
@@ -274,49 +270,49 @@ const CONDS = [
 	"disease"
 ];
 function dispVulnFilter (item) {
-	return `${StrUtil.uppercaseFirst(item)} Vuln`;
+	return `${StrUtil.uppercaseFirst(item)}弱`;
 }
 const vulnerableFilter = new Filter({
-	header: "Vulnerabilities",
+	header: "Vulnerabilities", headerName: "弱點",
 	items: DMG_TYPES,
 	displayFn: dispVulnFilter
 });
 function dispResFilter (item) {
-	return `${StrUtil.uppercaseFirst(item)} Res`;
+	return `${StrUtil.uppercaseFirst(item)}抗`;
 }
 const resistFilter = new Filter({
-	header: "Resistance",
+	header: "Resistance", headerName: "抗性",
 	items: DMG_TYPES,
 	displayFn: dispResFilter
 });
 function dispImmFilter (item) {
-	return `${StrUtil.uppercaseFirst(item)} Imm`;
+	return `${StrUtil.uppercaseFirst(item)}免`;
 }
 const immuneFilter = new Filter({
-	header: "Immunity",
+	header: "Immunity", headerName: "免疫",
 	items: DMG_TYPES,
 	displayFn: dispImmFilter
 });
 const defenceFilter = new MultiFilter({name: "Damage", mode: "and"}, vulnerableFilter, resistFilter, immuneFilter);
 const conditionImmuneFilter = new Filter({
-	header: "Condition Immunity",
+	header: "Condition Immunity", headerName: "狀態免疫",
 	items: CONDS,
 	displayFn: StrUtil.uppercaseFirst
 });
 const traitFilter = new Filter({
-	header: "Traits",
+	header: "Traits", headerName: "特性",
 	items: [
 		"Aggressive", "Ambusher", "Amorphous", "Amphibious", "Antimagic Susceptibility", "Brute", "Charge", "Damage Absorption", "Death Burst", "Devil's Sight", "False Appearance", "Fey Ancestry", "Flyby", "Hold Breath", "Illumination", "Immutable Form", "Incorporeal Movement", "Keen Senses", "Legendary Resistances", "Light Sensitivity", "Magic Resistance", "Magic Weapons", "Pack Tactics", "Pounce", "Rampage", "Reckless", "Regeneration", "Rejuvenation", "Shapechanger", "Siege Monster", "Sneak Attack", "Spider Climb", "Sunlight Sensitivity", "Turn Immunity", "Turn Resistance", "Undead Fortitude", "Water Breathing", "Web Sense", "Web Walker"
 	]
 });
 const actionReactionFilter = new Filter({
-	header: "Actions & Reactions",
+	header: "Actions & Reactions", headerName: "動作&反應",
 	items: [
 		"Frightful Presence", "Multiattack", "Parry", "Swallow", "Teleport", "Tentacles"
 	]
 });
 const miscFilter = new Filter({
-	header: "Miscellaneous",
+	header: "Miscellaneous", headerName: "雜項",
 	items: ["Familiar", "Lair Actions", "Legendary", "Named NPC", "Spellcaster", "Regional Effects", "Swarm"],
 	displayFn: StrUtil.uppercaseFirst,
 	deselFn: (it) => it === "Named NPC"
@@ -724,7 +720,7 @@ function pGetSublistItem (mon, pinId, addCount, data = {}) {
 		pMon.then(mon => {
 			const subHash = data.scaled ? `${HASH_PART_SEP}${MON_HASH_SCALED}${HASH_SUB_KV_SEP}${data.scaled}` : "";
 			_initParsed(mon);
-
+			console.log(mon);
 			resolve(`
 				<li class="row" ${FLTR_ID}="${pinId}" oncontextmenu="ListUtil.openSubContextMenu(event, this)">
 					<a href="#${UrlUtil.autoEncodeHash(mon)}${subHash}" title="${mon._displayName || mon.name}" draggable="false">
