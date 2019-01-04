@@ -6206,7 +6206,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"一朵有著等同於火把亮度的火焰，從你所觸碰的一個物體湧出。這個效果看起來就如同尋常火焰，但它並不會創造熱能，也不會消耗氧氣。不滅明焰可以被掩蓋或隱藏，但不會被悶熄或撲滅。"
+				"一朵有著等同於{@item 火炬}亮度的火焰，從你所觸碰的一個物體湧出。這個效果看起來就如同尋常火焰，但它並不會創造熱能，也不會消耗氧氣。不滅明焰可以被掩蓋或隱藏，但不會被悶熄或撲滅。"
 			],
 			"page": 227
 		},
@@ -18298,7 +18298,7 @@
 			]
 		},
 		{
-			"name": "Magic Mouth",
+			"name": "魔嘴術", "ENG_name": "Magic Mouth",
 			"level": 2,
 			"school": "I",
 			"time": [
@@ -18318,7 +18318,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a small bit of honeycomb and jade dust worth at least 10 gp, which the spell consumes",
+					"text": "一小塊蜂巢和價值至少10金幣的翡翠塵，在施法時消耗",
 					"cost": 10,
 					"consume": true
 				}
@@ -18348,9 +18348,9 @@
 				"ritual": true
 			},
 			"entries": [
-				"You implant a message within an object in range, a message that is uttered when a trigger condition is met. Choose an object that you can see and that isn't being worn or carried by another creature. Then speak the message, which must be 25 words or less, though it can be delivered over as long as 10 minutes. Finally, determine the circumstance that will trigger the spell to deliver your message.",
-				"When that circumstance occurs, a magical mouth appears on the object and recites the message in your voice and at the same volume you spoke. If the object you chose has a mouth or something that looks like a mouth (for example, the mouth of a statue), the magical mouth appears there so that the words appear to come from the object's mouth. When you cast this spell, you can have the spell end after it delivers its message, or it can remain and repeat its message whenever the trigger occurs.",
-				"The triggering circumstance can be as general or as detailed as you like, though it must be based on visual or audible conditions that occur within 30 feet of the object. For example, you could instruct the mouth to speak when any creature moves within 30 feet of the object or when a silver bell rings within 30 feet of it."
+				"你在射程內的一個物體注入一段訊息，這段訊息將在觸發條件被滿足時被說出。選擇一個你所能看見且未被其他生物穿戴或攜帶的物體。接著說出一段訊息，這段信息的長度必須不超過25個字，但可以用最多10分鐘的時間被傳達。最後，決定一個將會觸發此法術以傳達你訊息的情境。",
+				"當該情境發生，一個魔法嘴將出現在物體上，並以你的聲音和你述說時相同的音量復述該訊息。若你所選擇的物體有一張嘴或看起來像嘴巴的東西（例如雕像的嘴），則魔法嘴會出現在該處，讓其看起來像是從該物體的嘴巴說出話語。當你施放此法術時，你可以讓此法術在傳達該訊息後結束、或是讓它繼續存在並在每次被觸發時都再一次重述這段訊息。",
+				"觸發的情境可以很籠統也可以很具體，由你決定。但它必須要基於距離該物體30呎內所發生的視覺或聲音狀況。舉例來說，你可以指示魔嘴在有任何生物移進該物體30呎範圍內時、或當30呎內有銀製鈴鐺響起時，讓其說出訊息。"
 			],
 			"page": 257
 		},
@@ -19382,7 +19382,7 @@
 			"page": 260
 		},
 		{
-			"name": "Mirror Image",
+			"name": "鏡影術", "ENG_name": "Mirror Image",
 			"level": 2,
 			"school": "I",
 			"time": [
@@ -19471,11 +19471,11 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Three illusory duplicates of yourself appear in your space. Until the spell ends, the duplicates move with you and mimic your actions, shifting position so it's impossible to track which image is real. You can use your action to dismiss the illusory duplicates.",
-				"Each time a creature targets you with an attack during the spell's duration, roll a {@dice d20} to determine whether the attack instead targets one of your duplicates.",
-				"If you have three duplicates, you must roll a 6 or higher to change the attack's target to a duplicate. With two duplicates, you must roll an 8 or higher. With one duplicate, you must roll an 11 or higher.",
-				"A duplicate's AC equals 10 + your Dexterity modifier. If an attack hits a duplicate, the duplicate is destroyed. A duplicate can be destroyed only by an attack that hits it. It ignores all other damage and effects. The spell ends when all three duplicates are destroyed.",
-				"A creature is unaffected by this spell if it can't see, if it relies on senses other than sight, such as blindsight, or if it can perceive illusions as false, as with truesight."
+				"三個你自己的幻影複製體出現在你的位置。直到法術結束前，複製體會跟著你移動、模仿你的動作、並變換位置，因此不可能追蹤判斷哪一個影像才是真身。你可以使用你的動作解消這些幻影複製體。",
+				"在法術持續期間，每當有一個生物以你為攻擊的目標，骰一顆{@dice d20}以決定該攻擊是否以你的其中一個複製體為目標。",
+				"若你有三個複製體，你必須骰出6或以上才能使該攻擊改為以複製體為目標。當有二個複製體，你必須骰出8或以上。當有一個複製體，則你必須骰出11以上。",
+				"一個複製體的AC等同於10+你的敏捷調整值。若攻擊命中一個複製體，則該複製體被摧毀。一個複製體只會被一次命中它的攻擊摧毀，而無視所有其他傷害和效果。此法術會在所有複製體被摧毀時結束。",
+				"若一個生物無法視物，或依賴視覺以外的感知，像是盲視、或它可以察覺幻影的真偽，例如透過真實目光，則該生物將不會受此法術影響。"
 			],
 			"page": 260,
 			"races": [
@@ -20652,7 +20652,7 @@
 			"page": 264
 		},
 		{
-			"name": "Phantasmal Force",
+			"name": "魅影之力", "ENG_name": "Phantasmal Force",
 			"level": 2,
 			"school": "I",
 			"time": [
@@ -20671,7 +20671,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a bit of fleece"
+				"m": "少許羊毛"
 			},
 			"duration": [
 				{
@@ -20723,11 +20723,11 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You craft an illusion that takes root in the mind of a creature that you can see within range. The target must make an Intelligence saving throw. On a failed save, you create a phantasmal object, creature, or other visible phenomenon of your choice that is no larger than a 10-foot cube and that is perceivable only to the target for the duration. This spell has no effect on undead or constructs.",
-				"The phantasm includes sound, temperature, and other stimuli, also evident only to the creature.",
-				"The target can use its action to examine the phantasm with an Intelligence (Investigation) check against your spell save DC. If the check succeeds, the target realizes that the phantasm is an illusion, and the spell ends.",
-				"While a target is affected by the spell, the target treats the phantasm as if it were real. The target rationalizes any illogical outcomes from interacting with the phantasm. For example, a target attempting to walk across a phantasmal bridge that spans a chasm falls once it steps onto the bridge. If the target survives the fall, it still believes that the bridge exists and comes up with some other explanation for its fall\u2014it was pushed, it slipped, or a strong wind might have knocked it off.",
-				"An affected target is so convinced of the phantasm's reality that it can even take damage from the illusion. A phantasm created to appear as a creature can attack the target. Similarly, a phantasm created to appear as fire, a pool of acid, or lava can burn the target. Each round on your turn, the phantasm can deal {@dice 1d6} psychic damage to the target if it is in the phantasm's area or within 5 feet of the phantasm, provided that the illusion is of a creature or hazard that could logically deal damage, such as by attacking. The target perceives the damage as a type appropriate to the illusion."
+				"你創造出一個深植在射程內你所能看見的一個生物心中的幻象。目標必須進行一次智力豁免。若豁免失敗，你在法術持續期間創造出一個幻象物體、生物、或其他可視現象，這個幻象的大小不能超過10呎邊長立方體空間，且只會被目標感知。此法術對不死生物或構裝體沒有任何效果。",
+				"這個幻象包括了聲音、溫度、和其他感官刺激，同樣只有該生物能察覺。",
+				"目標可以使用它的動作以一次對抗你法術豁免DC的智力({@skill 調查})檢定去細查這個幻象。若檢定成功，目標將理解到這個幻象是虛假的，且此法術結束。",
+				"當一個生物被此法術影響，目標將視幻象為真實存在的。目標會合理化任何與幻象互動所產生的不合理結果。舉例來說，一個嘗試走過橫跨峽谷的幻象橋的生物將會在它踏出腳步的時候墜落。若目標從這次墜落中倖存，它仍會相信那座橋是存在的，並會為它的墜落想出一些其他解釋\u2014也許它被推了一把、它失足滑落、或也許是一陣強風將它吹了下來。",
+				"一個受影響的目標對幻象的真實性是如此的深信不疑，甚至會讓它從幻象中受到傷害。一個被創造成生物的幻象可以攻擊目標。同樣的，一個被創造成火焰、一池酸液、或岩漿的幻象也可以燒灼目標。在你的每個回合，若目標距離幻象5呎以內，且只要幻象呈現為可以合理造成傷害（例如藉由攻擊）的生物或危險，則幻象將可以對目標造成{@dice 1d6}精神傷害。目標會認為它受到與幻象相符的傷害類型。"
 			],
 			"page": 264,
 			"damageInflict": [
@@ -23539,7 +23539,7 @@
 			"isHeal": true
 		},
 		{
-			"name": "Rope Trick", "ENG_name": "Rope Trick",
+			"name": "通天繩", "ENG_name": "Rope Trick",
 			"level": 2,
 			"school": "T",
 			"time": [
@@ -23557,7 +23557,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "powdered corn extract and a twisted loop of parchment"
+				"m": "玉米粉和一卷扭曲成環形的羊皮紙"
 			},
 			"duration": [
 				{
@@ -23624,10 +23624,10 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You touch a length of rope that is up to 60 feet long. One end of the rope then rises into the air until the whole rope hangs perpendicular to the ground. At the upper end of the rope, an invisible entrance opens to an extradimensional space that lasts until the spell ends.",
-				"The extradimensional space can be reached by climbing to the top of the rope. The space can hold as many as eight Medium or smaller creatures. The rope can be pulled into the space, making the rope disappear from view outside the space.",
-				"Attacks and spells can't cross through the entrance into or out of the extradimensional space, but those inside can see out of it as if through a 3-foot-by-5-foot window centered on the rope.",
-				"Anything inside the extradimensional space drops out when the spell ends."
+				"你觸碰一個最多60呎長的繩子。繩子的一端將抬升至空中，直到整條繩子與地面垂直懸掛。在繩子的上端，一道隱形的入口將通往一個異位面空間，持續直到法術結束。",
+				"這個異位面空間可以在攀爬到繩子的頂端時進入。這個空間可以容納最多八個中型或小型生物。這條繩子可以被拉入該空間，使繩子從空間外看起來就像是憑空消失一樣。",
+				"攻擊和法術無法穿出或穿入異位面的入口，但在異位面內的人可以透過入口看到外面的景象，就彷彿以繩子為中心的位置有著一扇3呎x5呎大小的窗戶一樣。",
+				"當此法術結束時，任何在異位面內的東西都會掉出來。"
 			],
 			"page": 272
 		},
