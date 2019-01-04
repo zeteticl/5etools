@@ -270,15 +270,15 @@ const CONDS = [
 	"disease"
 ];
 function dispVulnFilter (item) {
-	return `${StrUtil.uppercaseFirst(item)}弱`;
+	return `${Parser.DamageToDisplay(item)}易傷`;
 }
 const vulnerableFilter = new Filter({
-	header: "Vulnerabilities", headerName: "弱點",
+	header: "Vulnerabilities", headerName: "易傷",
 	items: DMG_TYPES,
 	displayFn: dispVulnFilter
 });
 function dispResFilter (item) {
-	return `${StrUtil.uppercaseFirst(item)}抗`;
+	return `${Parser.DamageToDisplay(item)}抗性`;
 }
 const resistFilter = new Filter({
 	header: "Resistance", headerName: "抗性",
@@ -286,7 +286,7 @@ const resistFilter = new Filter({
 	displayFn: dispResFilter
 });
 function dispImmFilter (item) {
-	return `${StrUtil.uppercaseFirst(item)}免`;
+	return `${Parser.DamageToDisplay(item)}免疫`;
 }
 const immuneFilter = new Filter({
 	header: "Immunity", headerName: "免疫",
@@ -297,7 +297,7 @@ const defenceFilter = new MultiFilter({name: "Damage", mode: "and"}, vulnerableF
 const conditionImmuneFilter = new Filter({
 	header: "Condition Immunity", headerName: "狀態免疫",
 	items: CONDS,
-	displayFn: StrUtil.uppercaseFirst
+	displayFn: Parser.ConditionToDisplay
 });
 const traitFilter = new Filter({
 	header: "Traits", headerName: "特性",
