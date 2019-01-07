@@ -470,17 +470,17 @@ function loadhash (id) {
 	}
 
 	const statTab = EntryRenderer.utils.tabButton(
-		"Item",
+		"物品",
 		() => {},
 		buildStatsTab
 	);
 	const infoTab = EntryRenderer.utils.tabButton(
-		"Info",
+		"情報",
 		() => {},
 		buildFluffTab
 	);
 	const picTab = EntryRenderer.utils.tabButton(
-		"Images",
+		"圖片",
 		() => {},
 		() => buildFluffTab(true)
 	);
