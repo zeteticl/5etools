@@ -380,7 +380,7 @@ function loadhash (id) {
 		<tbody>
 		${EntryRenderer.utils.getBorderTr()}
 		<tr><th class="name" colspan="6">
-		<span><b class="stats-name copyable" onclick="EntryRenderer.utils._handleNameClick(this, '${race.source.escapeQuotes()}')">${race.name}</b>${race.ENG_name? ("("+race.ENG_name):")"}</span>
+		<span><b class="stats-name copyable" onclick="EntryRenderer.utils._handleNameClick(this, '${race.source.escapeQuotes()}')">${race.name}</b>${race.ENG_name? ("("+race.ENG_name+")"):""}</span>
 		${race.soundClip ? getPronunciationButton() : ""}
 		<span class="stats-source ${Parser.sourceJsonToColor(race.source)}" title="${Parser.sourceJsonToFull(race.source)}">${Parser.sourceJsonToAbv(race.source)}</span>
 		</th></tr>
