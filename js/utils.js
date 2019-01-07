@@ -1576,7 +1576,7 @@ Parser.keyToDisplay["reaction"] = "反應";
 Parser.keyToDisplay["round"] = "輪";
 Parser.keyToDisplay["minute"] = "分鐘";
 Parser.keyToDisplay["hour"] = "小時";
-
+Parser.keyToDisplay["day"] = "天";
 
 //Item
 Parser.itemKeyToDisplay["none"] 	= "無";
