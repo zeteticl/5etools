@@ -3166,14 +3166,14 @@ EntryRenderer.item = {
 			typeListText.push("奇物");
 		}
 		if (item.technology) {
-			type.push(item.technology);
+			type.push(Parser.ItemTypeToDisplay(item.technology));
 			filterType.push(item.technology);
-			typeListText.push(item.technology);
+			typeListText.push(Parser.ItemTypeToDisplay(item.technology));
 		}
 		if (item.age) {
-			type.push(item.age);
+			type.push(Parser.ItemTypeToDisplay(item.age));
 			filterType.push(item.age);
-			typeListText.push(item.age);
+			typeListText.push(Parser.ItemTypeToDisplay(item.age));
 		}
 		if (item.weaponCategory) {
 			type.push(`${Parser.translateKeyToDisplay(item.weaponCategory)}武器${item.baseItem ? ` (${EntryRenderer.getDefaultRenderer().renderEntry(`{@item ${item.baseItem}`)})` : ""}`);
@@ -3185,9 +3185,9 @@ EntryRenderer.item = {
 			const abv = Parser.itemTypeToAbv(item.type);
 			if (!showingBase && !!item.baseItem) {
 				type.push(`${abv} (${EntryRenderer.getDefaultRenderer().renderEntry(`{@item ${item.baseItem}`)})`);
-			} else type.push(abv);
+			} else type.push(Parser.ItemTypeToDisplay(abv));
 			filterType.push(abv);
-			typeListText.push(abv);
+			typeListText.push(Parser.ItemTypeToDisplay(abv));
 		}
 		if (item.poison) {
 			type.push("毒藥");
