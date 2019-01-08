@@ -1623,7 +1623,7 @@ Parser.itemTypeKeyToDisplay["tack and harness"] = "鞍轡和馬具";
 Parser.itemTypeKeyToDisplay["trade good"] = "貿易商品";
 Parser.itemTypeKeyToDisplay["generic variant"] = "通用變體";
 Parser.itemTypeKeyToDisplay["other"] = "其他";
-Parser.itemTypeKeyToDisplay["毒藥"] = "好毒藥";
+Parser.itemTypeKeyToDisplay["poison"] = "毒藥";
 Parser.ItemTypeToDisplay = function(i){
 	return Parser.translateKeyInMapToDisplay(Parser.ItemTypeToDisplay, i);
 }
