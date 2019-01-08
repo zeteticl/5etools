@@ -49,7 +49,7 @@ let magiclist;
 const sourceFilter = getSourceFilter();
 const DEFAULT_HIDDEN_TYPES = new Set(["$", "Futuristic", "Modern", "Renaissance"]);
 const typeFilter = new Filter({header: "Type", headerName: "類型", deselFn: (it) => DEFAULT_HIDDEN_TYPES.has(it), 
-	items:["Aventuring gear","Light Armor","Medium Armor","Heavy Armor","Shield"], displayFn: Parser.ItemTypeToDisplay});
+	items:["Adventuring Gear","Light Armor","Medium Armor","Heavy Armor","Shield","Simple Weapon","Martial Weapon"], displayFn: Parser.ItemTypeToDisplay});
 const tierFilter = new Filter({header: "Tier", headerName: "階級", items: ["None", "Minor", "Major"]});
 const propertyFilter = new Filter({header: "Property", headerName: "物品屬性", displayFn: StrUtil.uppercaseFirst});
 const costFilter = new RangeFilter({header: "Cost", headerName: "價值", min: 0, max: 100, allowGreater: true, suffix: "金幣"});
@@ -290,7 +290,7 @@ function addItems (data) {
 	$(`h3.ele-magic span.side-label`).text("魔法物品");
 	// sort filters
 	sourceFilter.items.sort(SortUtil.ascSort);
-	typeFilter.items.sort(SortUtil.ascSort);
+	//typeFilter.items.sort(SortUtil.ascSort);
 	attachedSpellsFilter.items.sort(SortUtil.ascSortLower);
 
 	mundanelist.reIndex();
