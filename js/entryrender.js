@@ -3161,9 +3161,9 @@ EntryRenderer.item = {
 		const typeListText = [];
 		let showingBase = false;
 		if (item.wondrous) {
-			type.push("Wondrous Item");
+			type.push("奇物");
 			filterType.push("Wondrous Item");
-			typeListText.push("Wondrous Item");
+			typeListText.push("奇物");
 		}
 		if (item.technology) {
 			type.push(item.technology);
@@ -3177,7 +3177,7 @@ EntryRenderer.item = {
 		}
 		if (item.weaponCategory) {
 			type.push(`${Parser.translateKeyToDisplay(item.weaponCategory)}武器${item.baseItem ? ` (${EntryRenderer.getDefaultRenderer().renderEntry(`{@item ${item.baseItem}`)})` : ""}`);
-			filterType.push(`${Parser.translateKeyToDisplay(item.weaponCategory)}武器`);
+			filterType.push(`${item.weaponCategory} Weapon`);
 			typeListText.push(`${Parser.translateKeyToDisplay(item.weaponCategory)}武器`);
 			showingBase = true;
 		}
@@ -3190,9 +3190,9 @@ EntryRenderer.item = {
 			typeListText.push(abv);
 		}
 		if (item.poison) {
-			type.push("毒藥1");
-			filterType.push("毒藥2");
-			typeListText.push("毒藥3");
+			type.push("毒藥");
+			filterType.push("Poison");
+			typeListText.push("毒藥");
 		}
 		item.procType = filterType;
 		item.typeText = type.join(", ");
