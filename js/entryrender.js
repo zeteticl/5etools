@@ -3161,19 +3161,19 @@ EntryRenderer.item = {
 		const typeListText = [];
 		let showingBase = false;
 		if (item.wondrous) {
-			type.push("奇物");
-			filterType.push("奇物");
-			typeListText.push("奇物");
+			type.push("Wondrous Item");
+			filterType.push("Wondrous Item");
+			typeListText.push("Wondrous Item");
 		}
 		if (item.technology) {
-			type.push(Parser.translateItemKeyToDisplay(item.technology));
-			filterType.push(Parser.translateItemKeyToDisplay(item.technology));
-			typeListText.push(Parser.translateItemKeyToDisplay(item.technology));
+			type.push(item.technology);
+			filterType.push(item.technology);
+			typeListText.push(item.technology);
 		}
 		if (item.age) {
-			type.push(Parser.translateItemKeyToDisplay(item.age));
-			filterType.push(Parser.translateItemKeyToDisplay(item.age));
-			typeListText.push(Parser.translateItemKeyToDisplay(item.age));
+			type.push(item.age);
+			filterType.push(item.age);
+			typeListText.push(item.age);
 		}
 		if (item.weaponCategory) {
 			type.push(`${Parser.translateKeyToDisplay(item.weaponCategory)}武器${item.baseItem ? ` (${EntryRenderer.getDefaultRenderer().renderEntry(`{@item ${item.baseItem}`)})` : ""}`);
