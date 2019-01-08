@@ -1596,6 +1596,33 @@ Parser.itemKeyToDisplay["firearm"] 	= "槍械";
 Parser.itemKeyToDisplay["renaissance"]= "文藝復興";
 Parser.itemKeyToDisplay["modern"] 	  = "現代";
 Parser.itemKeyToDisplay["futuristic"] = "未來";
+//Item Type
+Parser.itemTypeKeyToDisplay = {};
+Parser.itemTypeKeyToDisplay["adventuring gear"] = "冒險裝備";
+Parser.itemTypeKeyToDisplay["tool"] = "工具";
+Parser.itemTypeKeyToDisplay["artisan tool"] = "工匠工具";
+Parser.itemTypeKeyToDisplay["gaming set"] = "遊戲套組";
+Parser.itemTypeKeyToDisplay["instrument"] = "樂器";
+Parser.itemTypeKeyToDisplay["heavy armor"] = "重甲";
+Parser.itemTypeKeyToDisplay["medium armor"]= "中甲";
+Parser.itemTypeKeyToDisplay["light armor"] = "輕甲";
+Parser.itemTypeKeyToDisplay["melee weapon"] = "近戰武器";
+Parser.itemTypeKeyToDisplay["ranged weapon"] = "遠程武器";
+Parser.itemTypeKeyToDisplay["ammunition"]   = "彈藥";
+Parser.itemTypeKeyToDisplay["explosive"]    = "爆裂物";
+Parser.itemTypeKeyToDisplay["shield"] = "盾牌";
+Parser.itemTypeKeyToDisplay["mount"] = "坐騎";
+Parser.itemTypeKeyToDisplay["spellcasting focus"] = "法器";
+Parser.itemTypeKeyToDisplay["rod"] = "權杖";
+Parser.itemTypeKeyToDisplay["wand"] = "魔杖";
+Parser.itemTypeKeyToDisplay["ring"] = "戒指";
+Parser.itemTypeKeyToDisplay["scroll"] = "卷軸";
+Parser.itemTypeKeyToDisplay["potion"] = "藥水";
+Parser.itemTypeKeyToDisplay["vehicle"] = "載具";
+Parser.itemTypeKeyToDisplay["tack and harness"] = "鞍轡和馬具";
+Parser.itemTypeKeyToDisplay["trade good"] = "貿易商品";
+Parser.itemTypeKeyToDisplay["generic variant"] = "通用變體";
+Parser.itemTypeKeyToDisplay["other"] = "其他";
 
 //Language
 Parser.languageKeyToDisplay["any"] 		= "任意";
@@ -2327,34 +2354,34 @@ Parser.SOURCE_JSON_TO_ABV[SRC_STREAM] = "Stream";
 Parser.SOURCE_JSON_TO_ABV[SRC_TWITTER] = "Twitter";
 
 Parser.ITEM_TYPE_JSON_TO_ABV = {
-	"A": "彈藥",
-	"AF": "彈藥",
-	"AT": "工匠工具",
+	"A": "Ammunition",
+	"AF": "Ammunition",
+	"AT": "Artisan Tool",
 	"EM": "Eldritch Machine",
-	"EXP": "爆裂物",
-	"G": "冒險裝備",
-	"GS": "遊戲套組",
-	"HA": "重甲",
-	"INS": "樂器",
-	"LA": "輕甲",
-	"M": "近戰武器",
-	"MA": "中甲",
-	"MNT": "坐騎",
-	"GV": "通用變體",
-	"P": "藥水",
-	"R": "遠程武器",
-	"RD": "權杖",
-	"RG": "戒指",
-	"S": "盾牌",
-	"SC": "卷軸",
-	"SCF": "法器",
-	"OTH": "其他",
-	"T": "工具",
-	"TAH": "鞍轡和馬具",
-	"TG": "貿易商品",
-	"VEH": "載具",
-	"SHP": "載具",
-	"WD": "魔杖"
+	"EXP": "Explosive",
+	"G": "Adventuring Gear",
+	"GS": "Gaming Set",
+	"HA": "Heavy Armor",
+	"INS": "Instrument",
+	"LA": "Light Armor",
+	"M": "Melee Weapon",
+	"MA": "Medium Armor",
+	"MNT": "Mount",
+	"GV": "Generic Variant",
+	"P": "Potion",
+	"R": "Ranged Weapon",
+	"RD": "Rod",
+	"RG": "Ring",
+	"S": "Shield",
+	"SC": "Scroll",
+	"SCF": "Spellcasting Focus",
+	"OTH": "Other",
+	"T": "Tool",
+	"TAH": "Tack and Harness",
+	"TG": "Trade Good",
+	"VEH": "Vehicle",
+	"SHP": "Vehicle",
+	"WD": "Wand"
 };
 
 Parser.DMGTYPE_JSON_TO_FULL = {
