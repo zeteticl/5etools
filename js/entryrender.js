@@ -3190,9 +3190,9 @@ EntryRenderer.item = {
 			typeListText.push(abv);
 		}
 		if (item.poison) {
-			type.push("毒藥");
-			filterType.push("毒藥");
-			typeListText.push("毒藥");
+			type.push("毒藥1");
+			filterType.push("毒藥2");
+			typeListText.push("毒藥3");
 		}
 		item.procType = filterType;
 		item.typeText = type.join(", ");
