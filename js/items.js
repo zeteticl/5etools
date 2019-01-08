@@ -276,7 +276,7 @@ function addItems (data) {
 
 		// populate filters
 		sourceFilter.addIfAbsent(source);
-		curitem.procType.forEach(t => console.log(t, typeFilter.addIfAbsent(t)));
+		curitem.procType.forEach(t => typeFilter.addIfAbsent(t));
 		tierTags.forEach(tt => tierFilter.addIfAbsent(tt));
 		curitem._fProperties.forEach(p => propertyFilter.addIfAbsent(p));
 		attachedSpellsFilter.addIfAbsent(curitem.attachedSpells);
@@ -299,7 +299,7 @@ function addItems (data) {
 		mundanelist.search(lastSearch);
 		magiclist.search(lastSearch);
 	}
-	mundanelist.sort("name", {order: "desc"});
+	mundanelist.sort("type", {order: "desc"});
 	magiclist.sort("name", {order: "desc"});
 	filterBox.render();
 	handleFilterChange();
