@@ -1625,7 +1625,7 @@ Parser.itemTypeKeyToDisplay["generic variant"] = "通用變體";
 Parser.itemTypeKeyToDisplay["other"] = "其他";
 Parser.itemTypeKeyToDisplay["poison"] = "毒藥";
 Parser.ItemTypeToDisplay = function(i){
-	return Parser.translateKeyInMapToDisplay(Parser.ItemTypeToDisplay, i);
+	return Parser.translateKeyInMapToDisplay(Parser.itemTypeKeyToDisplay, i);
 }
 
 //Language
