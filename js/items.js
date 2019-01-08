@@ -49,7 +49,7 @@ let magiclist;
 const sourceFilter = getSourceFilter();
 const DEFAULT_HIDDEN_TYPES = new Set(["$", "Futuristic", "Modern", "Renaissance"]);
 const typeFilter = new Filter({header: "Type", headerName: "類型", deselFn: (it) => DEFAULT_HIDDEN_TYPES.has(it), 
-	items:["$","Trade Good","Adventuring Gear","Light Armor","Medium Armor","Heavy Armor","Shield","Simple Weapon","Martial Weapon","Melee Weapon","Ranged Weapon","Firearm","Ammunition","Tool","Artisan Tool","Instrument","Rod","Staff","Wand","Scroll","Wondrous Item"], displayFn: Parser.ItemTypeToDisplay});
+	items:["$","Trade Good","Adventuring Gear","Light Armor","Medium Armor","Heavy Armor","Shield","Simple Weapon","Martial Weapon","Melee Weapon","Ranged Weapon","Firearm","Ammunition","Explosive","Tool","Artisan Tool","Instrument","Gaming Set","Rod","Staff","Wand","Scroll","Ring","Wondrous Item","Potion","Poison","Mount","Vehicle","Tack and Harness","Renaissance","Modern","Futuristic"], displayFn: Parser.ItemTypeToDisplay});
 const tierFilter = new Filter({header: "Tier", headerName: "階級", items: ["None", "Minor", "Major"]});
 const propertyFilter = new Filter({header: "Property", headerName: "物品屬性", displayFn: StrUtil.uppercaseFirst});
 const costFilter = new RangeFilter({header: "Cost", headerName: "價值", min: 0, max: 100, allowGreater: true, suffix: "金幣"});
