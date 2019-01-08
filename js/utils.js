@@ -1589,13 +1589,7 @@ Parser.itemKeyToDisplay["artifact"] = "神器";
 Parser.itemKeyToDisplay["unknown"] 	= "不明";
 Parser.itemKeyToDisplay["other"] 	= "其他";
 Parser.itemKeyToDisplay["varies"] 	= "可變";
-//Technology
-Parser.itemKeyToDisplay["staff"] 	= "法杖";
-Parser.itemKeyToDisplay["firearm"] 	= "槍械";
-//Age
-Parser.itemKeyToDisplay["renaissance"]= "文藝復興";
-Parser.itemKeyToDisplay["modern"] 	  = "現代";
-Parser.itemKeyToDisplay["futuristic"] = "未來";
+
 //Item Type
 Parser.itemTypeKeyToDisplay = {};
 Parser.itemTypeKeyToDisplay["adventuring gear"] = "冒險裝備";
@@ -1624,6 +1618,13 @@ Parser.itemTypeKeyToDisplay["trade good"] = "貿易商品";
 Parser.itemTypeKeyToDisplay["generic variant"] = "通用變體";
 Parser.itemTypeKeyToDisplay["other"] = "其他";
 Parser.itemTypeKeyToDisplay["poison"] = "毒藥";
+//Age
+Parser.itemTypeKeyToDisplay["renaissance"]= "文藝復興";
+Parser.itemTypeKeyToDisplay["modern"] 	  = "現代";
+Parser.itemTypeKeyToDisplay["futuristic"] = "未來";
+//Technology
+Parser.itemTypeKeyToDisplay["staff"] 	= "法杖";
+Parser.itemTypeKeyToDisplay["firearm"] 	= "槍械";
 Parser.ItemTypeToDisplay = function(i){
 	return Parser.translateKeyInMapToDisplay(Parser.itemTypeKeyToDisplay, i);
 }
