@@ -462,13 +462,13 @@ Parser._parse_bToA = function (abMap, b) {
 };
 
 Parser.attrChooseToFull = function (attList) {
-	if (attList.length === 1) return `${Parser.attAbvToFull(attList[0])} modifier`;
+	if (attList.length === 1) return `${Parser.attAbvToFull(attList[0])}調整值`;
 	else {
 		const attsTemp = [];
 		for (let i = 0; i < attList.length; ++i) {
 			attsTemp.push(Parser.attAbvToFull(attList[i]));
 		}
-		return `${attsTemp.join(" or ")} modifier (your choice)`;
+		return `${attsTemp.join(" 或 ")}調整值（由你決定）`;
 	}
 };
 
