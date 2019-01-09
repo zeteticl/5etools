@@ -1,7 +1,7 @@
 {
 	"class": [
 		{
-			"name": "Artificer",
+			"name": "機關術士",
 			"source": "UAArtificer",
 			"hd": {
 				"number": 1,
@@ -14,7 +14,7 @@
 			"classTableGroups": [
 				{
 					"colLabels": [
-						"{@filter Spells Known|spells|class=artificer (uaa)}"
+						"{@filter 已知法術|spells|class=artificer (uaa)}"
 					],
 					"rows": [
 						[
@@ -80,7 +80,7 @@
 					]
 				},
 				{
-					"title": "Spell Slots per Spell Level",
+					"title": "法術位/每法術環",
 					"colLabels": [
 						"{@filter 1st|spells|level=1|class=Artificer (UAA)}",
 						"{@filter 2nd|spells|level=2|class=Artificer (UAA)}",
@@ -220,8 +220,8 @@
 					"simple"
 				],
 				"tools": [
-					"Thieves' tools",
-					"two other tools of your choice"
+					"{@item 盜賊工具|phb}",
+					"二種其他你所選擇的工具"
 				],
 				"skills": {
 					"choose": 3,
@@ -240,10 +240,10 @@
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
-					"(a) a {@item handaxe|phb} and a {@item light hammer|phb} or (b) any two {@filter simple weapons|items|source=phb|category=basic|type=simple weapon}",
-					"a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts}",
-					"(a) {@item scale mail|phb} or (b) {@item studded leather armor|phb}",
-					"{@item thieves' tools|phb} and a {@item dungeoneer's pack|phb}"
+					"(a)一把{@item 手斧|phb}和一把{@item 輕錘|phb} 或 (b)任意兩把{@filter 簡易武器|items|source=phb|category=basic|type=simple weapon}",
+					"一把{@item 輕弩|phb}和{@item 弩矢(20)|phb|20支弩矢}",
+					"(a)一件{@item 鱗甲|phb} 或 (b)一件{@item 鑲釘皮甲|phb}",
+					"一組{@item 盜賊工具|phb}以及一套{@item 地城探險家套裝|phb}"
 				]
 			},
 			"classFeatures": [
