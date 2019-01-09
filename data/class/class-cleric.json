@@ -14,7 +14,7 @@
 			"classTableGroups": [
 				{
 					"colLabels": [
-						"{@filter Cantrips Known|spells|level=0|class=Cleric}"
+						"{@filter 已知戲法|spells|level=0|class=Cleric}"
 					],
 					"rows": [
 						[
@@ -80,7 +80,7 @@
 					]
 				},
 				{
-					"title": "Spell Slots per Spell Level",
+					"title": "法術位/每法術環",
 					"colLabels": [
 						"{@filter 1st|spells|level=1|class=Cleric}",
 						"{@filter 2nd|spells|level=2|class=Cleric}",
@@ -339,11 +339,11 @@
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
-					"(a) a {@item mace|phb} or (b) a {@item warhammer|phb} (if proficient)",
-					"(a) {@item scale mail|phb}, (b) {@item leather armor|phb}, or (c) {@item chain mail|phb} (if proficient)",
-					"(a) a {@item light crossbow|phb} and {@item Crossbow Bolts (20)|phb|20 bolts} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
-					"(a) a {@item priest's pack|phb} or (b) an {@item explorer's pack|phb}",
-					"A {@item shield|phb} and a {@item holy symbol|phb}"
+					"(a)一把{@item 硬頭錘|phb} 或 (b)一把{@item 戰錘|phb}(若熟練)",
+					"(a)一件{@item 鱗甲|phb}, (b)一件{@item 皮甲|phb}, 或 (c)一件{@item 鎖子甲|phb}(若熟練)",
+					"(a)一把{@item 輕弩|phb}和{@item 弩矢(20)|phb|20支弩矢} 或 (b)任意一把{@filter 簡易武器|items|source=phb|category=basic|type=simple weapon}",
+					"(a)一套{@item 祭司套裝|phb} 或 (b)一套{@item 探索者套裝|phb}",
+					"一面{@item 盾牌|phb}和一個{@item 聖徽|phb}"
 				],
 				"goldAlternative": "{@dice 5d4×10|5d4 × 10|Starting Gold}"
 			},
