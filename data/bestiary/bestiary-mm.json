@@ -17223,7 +17223,7 @@
 			]
 		},
 		{
-			"name": "Giant Eagle",
+			"name": "巨鷹", "ENG_name": "Giant Eagle",
 			"size": "L",
 			"type": "beast",
 			"source": "MM",
@@ -17252,13 +17252,13 @@
 				"perception": "+4"
 			},
 			"passive": 14,
-			"languages": "Giant Eagle, understands Common and Auran but can't speak",
+			"languages": "巨鷹可以理解通用語和大氣語，但不會說",
 			"cr": "1",
 			"trait": [
 				{
 					"name": "敏銳視覺",
 					"entries": [
-						"The eagle在依賴視覺的睿知（{@skill 感知}）檢定中具有優勢。"
+						"鷹在依賴視覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				}
 			],
@@ -17266,17 +17266,17 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The eagle makes two attacks: one with its beak and one with its talons."
+						"鷹進行兩次攻擊：一次喙啄，一次禽爪。"
 					]
 				},
 				{
-					"name": "Beak",
+					"name": "喙啄",
 					"entries": [
 						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Talons",
+					"name": "禽爪",
 					"entries": [
 						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}10 ({@damage 2d6 + 3})劈砍傷害。"
 					]
@@ -17305,7 +17305,7 @@
 			]
 		},
 		{
-			"name": "Giant Elk",
+			"name": "巨麋鹿", "ENG_name": "Giant Elk",
 			"size": "H",
 			"type": "beast",
 			"source": "MM",
@@ -17337,27 +17337,27 @@
 				"perception": "+4"
 			},
 			"passive": 14,
-			"languages": "Giant Elk, understands Common, Elvish, and Sylvan but can't speak",
+			"languages": "巨麋鹿理解通用語、精靈語、和木族語，但不會說",
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Charge",
+					"name": "衝鋒",
 					"entries": [
-						"If the elk moves at least 20 ft. straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 7 ({@dice 2d6}) damage.若目標為一個生物，則它必須成功通過一次DC 14的力量豁免，否則被擊倒{@condition 伏地}。"
+						"若麋鹿向著一個目標直線移動至少20呎並接著在同回合以一次衝撞攻擊命中它，則目標將受到額外的7 (2d6)傷害。若目標為一個生物，則它必須成功通過一次DC 14的力量豁免，否則被擊倒{@condition 伏地}。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Ram",
+					"name": "衝撞",
 					"entries": [
 						"{@atk mw} 命中{@hit 6}，觸及10呎，單一目標。{@h}11 ({@damage 2d6 + 4})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Hooves",
+					"name": "蹄擊",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one {@condition prone} creature. {@h}22 ({@damage 4d8 + 4})鈍擊傷害。"
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一{@condition 伏地}生物。{@h}22 ({@damage 4d8 + 4})鈍擊傷害。"
 					]
 				}
 			],
@@ -17382,7 +17382,7 @@
 			]
 		},
 		{
-			"name": "Giant Fire Beetle",
+			"name": "巨火甲蟲", "ENG_name": "Giant Fire Beetle",
 			"size": "S",
 			"type": "beast",
 			"source": "MM",
@@ -17415,15 +17415,15 @@
 			"cr": "0",
 			"trait": [
 				{
-					"name": "Illumination",
+					"name": "照明",
 					"entries": [
-						"The beetle sheds bright light in a 10-foot radius and dim light for an additional 10 ft.."
+						"甲蟲會散發出10呎半徑的明亮光照和再延伸10呎的微光光照。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
 					"entries": [
 						"{@atk mw} 命中{@hit 1}，觸及5呎，單一目標。{@h}2 ({@damage 1d6 - 1})劈砍傷害。"
 					]
@@ -17442,7 +17442,7 @@
 			]
 		},
 		{
-			"name": "Giant Frog",
+			"name": "巨蛙", "ENG_name": "Giant Frog",
 			"size": "M",
 			"type": "beast",
 			"source": "MM",
@@ -17477,27 +17477,27 @@
 				{
 					"name": "兩棲",
 					"entries": [
-						"The frog可以在空氣和水中呼吸。"
+						"青蛙可以在空氣和水中呼吸。"
 					]
 				},
 				{
-					"name": "Standing Leap",
+					"name": "立定跳躍",
 					"entries": [
-						"The frog's long jump is up to 20 ft. and its high jump is up to 10 ft., with or without a running start."
+						"青蛙的跳遠最多20呎距離、且跳高最多10呎距離，無論有沒有助跑都一樣。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}4 ({@damage 1d6 + 1}) piercing damage, and the target is {@condition grappled} (escape DC 11). Until this grapple ends, the target is {@condition restrained}, and the frog can't bite another target."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}4 ({@damage 1d6 + 1})穿刺傷害，且目標{@condition 被擒}(逃脫DC 11)。直到擒抱結束前，該生物被{@condition 束縛}，且青蛙不能啃咬另一個目標。"
 					]
 				},
 				{
-					"name": "Swallow",
+					"name": "吞嚥",
 					"entries": [
-						"The frog makes one bite attack against a Small or smaller target it is grappling. If the attack hits, the target is swallowed, and the grapple ends. The swallowed target is {@condition blinded} and {@condition restrained}, it has total cover against attacks and other effects outside the frog, and it takes 5 ({@damage 2d4}) acid damage at the start of each of the frog's turns. The frog can have only one target swallowed at a time. If the frog dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse using 5 ft. of movement, exiting {@condition prone}."
+						"青蛙對一個它正擒抱的體型為小型或更小的目標進行一次啃咬攻擊。若該攻擊命中，則目標被吞嚥，且擒抱結束。被吞嚥的目標陷入{@condition 目盲}和{@condition 束縛}，它對青蛙外的攻擊和其他效果有全掩護，且在每次青蛙的回合開始時受到5 ({@damage 2d4})酸蝕傷害。青蛙同時只能讓一個目標被吞嚥。若青蛙死亡，被吞嚥的生物將不再被它{@condition 束縛}，且可以花費5呎的移動速度從屍體中逃脫，以{@condition 伏地}狀態離開。"
 					]
 				}
 			],
@@ -17518,7 +17518,7 @@
 			]
 		},
 		{
-			"name": "Giant Goat",
+			"name": "巨山羊", "ENG_name": "Giant Goat",
 			"size": "L",
 			"type": "beast",
 			"source": "MM",
@@ -17550,21 +17550,21 @@
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Charge",
+					"name": "衝鋒",
 					"entries": [
-						"If the goat moves at least 20 ft. straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 5 ({@damage 2d4})鈍擊傷害。若目標為一個生物，則它必須成功通過一次DC 13的力量豁免，否則被擊倒{@condition 伏地}。"
+						"若山羊向著一個目標直線移動至少20呎並接著在同回合以一次衝撞攻擊命中它，則目標將受到額外的5 ({@damage 2d4})鈍擊傷害。若目標為一個生物，則它必須成功通過一次DC 13的力量豁免，否則被擊倒{@condition 伏地}。"
 					]
 				},
 				{
-					"name": "Sure-Footed",
+					"name": "穩妥步伐",
 					"entries": [
-						"The goat has advantage on Strength and Dexterity saving throws made against effects that would knock it {@condition prone}."
+						"山羊在用於對抗不被擊倒{@condition 伏地}的力量或敏捷豁免檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Ram",
+					"name": "衝撞",
 					"entries": [
 						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}8 ({@damage 2d4 + 3})鈍擊傷害。"
 					]
@@ -17582,7 +17582,7 @@
 			]
 		},
 		{
-			"name": "Giant Hyena",
+			"name": "巨鬣狗", "ENG_name": "Giant Hyena",
 			"size": "L",
 			"type": "beast",
 			"source": "MM",
@@ -17612,15 +17612,15 @@
 			"cr": "1",
 			"trait": [
 				{
-					"name": "Rampage",
+					"name": "橫衝直撞",
 					"entries": [
-						"When the hyena reduces a creature to 0 hit points with a melee attack on its turn, the hyena can take a bonus action to move up to half its speed and make a bite attack."
+						"當鬣狗在它的回合以一次近戰攻擊將一個生物的生命值歸零，鬣狗可以採取一次附贈動作以移動最多它速度一半的距離，並進行一次啃咬攻擊。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
 					"entries": [
 						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}10 ({@damage 2d6 + 3})穿刺傷害。"
 					]
@@ -17639,7 +17639,7 @@
 			]
 		},
 		{
-			"name": "Giant Lizard",
+			"name": "巨蜥蜴", "ENG_name": "Giant Lizard",
 			"size": "L",
 			"type": "beast",
 			"source": "MM",
@@ -17673,7 +17673,7 @@
 			"cr": "1/4",
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}6 ({@damage 1d8 + 2})穿刺傷害。"
 					]
@@ -17683,21 +17683,21 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Giant Lizard Traits",
+					"name": "巨蜥蜴特性",
 					"entries": [
-						"Some giant lizards have one or both of the following traits:",
+						"有些巨蜥蜴會擁有以下一個或兩個特性：",
 						{
 							"type": "entries",
 							"name": "屏息",
 							"entries": [
-								"The lizard可以屏住牠的呼吸長達15分鐘。 (A lizard that has this trait also has a swimming speed of 30 feet.)"
+								"蜥蜴可以屏住牠的呼吸長達15分鐘。(擁有這個特性的蜥蜴同時擁有30呎的游泳速度。)"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Spider Climb",
+							"name": "蛛行",
 							"entries": [
-								"The lizard can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+								"蜥蜴可以爬越困難表面，包括倒吊在天花板上，且無須進行屬性檢定。"
 							]
 						}
 					]
@@ -17716,7 +17716,7 @@
 			]
 		},
 		{
-			"name": "Giant Octopus",
+			"name": "巨章魚", "ENG_name": "Giant Octopus",
 			"size": "L",
 			"type": "beast",
 			"source": "MM",
@@ -17751,33 +17751,33 @@
 				{
 					"name": "屏息",
 					"entries": [
-						"While out of water, the octopus可以屏住牠的呼吸長達1小時。"
+						"在離水時，章魚可以屏住牠的呼吸長達1小時。"
 					]
 				},
 				{
-					"name": "Underwater Camouflage",
+					"name": "水下偽裝",
 					"entries": [
-						"The octopus has advantage on Dexterity ({@skill Stealth}) checks made while underwater."
+						"章魚在處於水中時進行的敏捷（{@skill 隱匿}）檢定具有優勢。"
 					]
 				},
 				{
 					"name": "水下呼吸",
 					"entries": [
-						"octopus只能在水下呼吸。"
+						"章魚只能在水下呼吸。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Tentacles",
+					"name": "觸手",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及15呎，單一目標。{@h}10 ({@damage 2d6 + 3})鈍擊傷害。 If the target is a creature, it is {@condition grappled} (escape DC 16). Until this grapple ends, the target is {@condition restrained}, and the octopus can't use its tentacles on another target."
+						"{@atk mw} 命中{@hit 5}，觸及15呎，單一目標。{@h}10 ({@damage 2d6 + 3})鈍擊傷害。若目標為一個生物，則它{@condition 被擒}(逃脫DC 16)。直到擒抱結束前，目標被{@condition 束縛}，且章魚不能對另一個目標使用牠的觸手。"
 					]
 				},
 				{
-					"name": "Ink Cloud (Recharges after a Short or Long Rest)",
+					"name": "墨雲（短休或長休之後充能）",
 					"entries": [
-						"A 20-foot-radius cloud of ink extends all around the octopus if it is underwater. The area is heavily obscured for 1 minute, although a significant current can disperse the ink. After releasing the ink, the octopus can use the Dash action as a bonus action."
+						"若章魚在水中，一團20呎半徑的墨汁雲環繞在章魚周遭。這片區域變為重度遮蔽持續1分鐘，但一道水流即可將墨汁吹散。在釋放墨汁後，章魚能夠以一個附贈動作採取疾走動作。"
 					]
 				}
 			],
@@ -17798,7 +17798,7 @@
 			]
 		},
 		{
-			"name": "Giant Owl",
+			"name": "巨貓頭鷹", "ENG_name": "Giant Owl",
 			"size": "L",
 			"type": "beast",
 			"source": "MM",
@@ -17828,25 +17828,25 @@
 			},
 			"senses": "黑暗視覺120呎",
 			"passive": 15,
-			"languages": "Giant Owl, understands Common, Elvish, and Sylvan but can't speak",
+			"languages": "巨貓頭鷹理解通用語、精靈語、和木族語，但不會說",
 			"cr": "1/4",
 			"trait": [
 				{
 					"name": "飛掠",
 					"entries": [
-						"The owl 在飛出敵人的觸及範圍時不會觸發藉機攻擊。"
+						"貓頭鷹在飛出敵人的觸及範圍時不會觸發藉機攻擊。"
 					]
 				},
 				{
 					"name": "敏銳聽覺和視覺",
 					"entries": [
-						"The owl 在依賴聽覺和視覺的睿知（{@skill 感知}）檢定中具有優勢。"
+						"貓頭鷹在依賴聽覺和視覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Talons",
+					"name": "禽爪",
 					"entries": [
 						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}8 ({@damage 2d6 + 1})劈砍傷害。"
 					]
@@ -17876,7 +17876,7 @@
 			]
 		},
 		{
-			"name": "Giant Poisonous Snake",
+			"name": "巨毒蛇", "ENG_name": "Giant Poisonous Snake",
 			"size": "M",
 			"type": "beast",
 			"source": "MM",
@@ -17908,9 +17908,9 @@
 			"cr": "1/4",
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及10呎，單一目標。{@h}6 ({@damage 1d4 + 4}) piercing damage, and the target must make a DC 11 Constitution saving throw, taking 10 ({@damage 3d6}) poison damage on a failed save, or half as much damage on a successful one."
+						"{@atk mw} 命中{@hit 6}，觸及10呎，單一目標。{@h}6 ({@damage 1d4 + 4})穿刺傷害，且目標必須進行一次DC 11的體質豁免，若豁免失敗則受到10 ({@damage 3d6})毒素傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
@@ -17929,7 +17929,7 @@
 			]
 		},
 		{
-			"name": "Giant Rat",
+			"name": "巨鼠", "ENG_name": "Giant Rat",
 			"size": "S",
 			"type": "beast",
 			"source": "MM",
@@ -17959,19 +17959,19 @@
 				{
 					"name": "敏銳嗅覺",
 					"entries": [
-						"The rat在依賴嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
+						"老鼠在依賴嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				},
 				{
 					"name": "群體戰術",
 					"entries": [
-						"若rat有至少一個隊友距離目標生物5呎內且該隊友並未{@condition 無力}，則rat在對該生物進行的攻擊檢定中具有優勢。"
+						"若老鼠有至少一個隊友距離目標生物5呎內且該隊友並未{@condition 無力}，則老鼠在對該生物進行的攻擊檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}4 ({@damage 1d4 + 2})穿刺傷害。"
 					]
@@ -17994,7 +17994,7 @@
 			]
 		},
 		{
-			"name": "Giant Rat (Diseased)",
+			"name": "巨鼠(帶病)", "ENG_name": "Giant Rat (Diseased)",
 			"size": "S",
 			"type": "beast",
 			"source": "MM",
@@ -18022,9 +18022,9 @@
 			"cr": "1/8",
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}4 ({@damage 1d4 + 2})穿刺傷害。 If the target is a creature, it must succeed on a DC 10 Constitution saving throw or contract a disease. Until the disease is cured, the target can't regain hit points except by magical means, and the target's hit point maximum decreases by 3 ({@dice 1d6}) every 24 hours. If the target's hit point maximum drops to 0 as a result of this disease, the target dies."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}4 ({@damage 1d4 + 2})穿刺傷害。若目標為一個生物，則它必須成功通過一次DC 10的體質豁免，否則感染一種疾病。直到該疾病被治癒，目標無法透過魔法以外的手段回復生命值，且每經過24小時目標的生命值最大值將減少3 ({@dice 1d6})點。若目標的生命值最大值因為這個疾病而歸零，則目標死亡。"
 					]
 				}
 			],
@@ -18040,7 +18040,7 @@
 			]
 		},
 		{
-			"name": "Giant Scorpion",
+			"name": "巨蠍", "ENG_name": "Giant Scorpion",
 			"size": "L",
 			"type": "beast",
 			"source": "MM",
@@ -18075,19 +18075,19 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The scorpion makes three attacks: two with its claws and one with its sting."
+						"蠍子進行三次攻擊：二次鉗擊，一次螫刺。"
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "鉗擊",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}6 ({@damage 1d8 + 2}) bludgeoning damage, and the target is {@condition grappled} (escape DC 12). The scorpion has two claws, each of which can grapple only one target."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}6 ({@damage 1d8 + 2})鈍擊傷害，且目標{@condition 被擒}(逃脫DC 12)。蠍子擁有兩隻蠍鉗，各自只能擒抱一個目標。"
 					]
 				},
 				{
-					"name": "Sting",
+					"name": "螫刺",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一生物。 {@h}7 ({@damage 1d10 + 2}) piercing damage, and the target must make a DC 12 Constitution saving throw, taking 22 ({@damage 4d10}) poison damage on a failed save, or half as much damage on a successful one."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一生物。{@h}7 ({@damage 1d10 + 2})穿刺傷害，且目標必須進行一次DC 12的體質豁免，若豁免失敗則受到22 ({@damage 4d10})毒素傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
@@ -18104,7 +18104,7 @@
 			]
 		},
 		{
-			"name": "Giant Sea Horse",
+			"name": "巨海馬", "ENG_name": "Giant Sea Horse",
 			"size": "L",
 			"type": "beast",
 			"source": "MM",
@@ -18137,21 +18137,21 @@
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Charge",
+					"name": "衝鋒",
 					"entries": [
-						"If the sea horse moves at least 20 ft. straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 7 ({@damage 2d6})鈍擊傷害。若目標為一個生物，則它必須成功通過一次DC 11的力量豁免，否則被擊倒{@condition 伏地}。"
+						"若海馬向著一個目標直線移動至少20呎並接著在同回合以一次衝撞攻擊命中它，則目標將受到額外的7 ({@damage 2d6})鈍擊傷害。若目標為一個生物，則它必須成功通過一次DC 11的力量豁免，否則被擊倒{@condition 伏地}。"
 					]
 				},
 				{
 					"name": "水下呼吸",
 					"entries": [
-						"The sea horse can breathe only underwater."
+						"海馬只能在水下呼吸。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Ram",
+					"name": "衝撞",
 					"entries": [
 						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}4 ({@damage 1d6 + 1})鈍擊傷害。"
 					]
@@ -18168,7 +18168,7 @@
 			]
 		},
 		{
-			"name": "Giant Shark",
+			"name": "巨鯊", "ENG_name": "Giant Shark",
 			"size": "H",
 			"type": "beast",
 			"source": "MM",
@@ -18206,19 +18206,19 @@
 				{
 					"name": "鮮血狂熱",
 					"entries": [
-						"shark在對任何生命值沒有全滿的生物所進行的近戰攻擊檢定中具有優勢。"
+						"鯊魚在對任何生命值沒有全滿的生物所進行的近戰攻擊檢定中具有優勢。"
 					]
 				},
 				{
 					"name": "水下呼吸",
 					"entries": [
-						"shark只能在水下呼吸。"
+						"鯊魚只能在水下呼吸。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
 					"entries": [
 						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}22 ({@damage 3d10 + 6})穿刺傷害。"
 					]
@@ -18237,7 +18237,7 @@
 			]
 		},
 		{
-			"name": "Giant Spider",
+			"name": "巨蜘蛛", "ENG_name": "Giant Spider",
 			"size": "L",
 			"type": "beast",
 			"source": "MM",
@@ -18274,35 +18274,35 @@
 			"cr": "1",
 			"trait": [
 				{
-					"name": "Spider Climb",
+					"name": "蛛行",
 					"entries": [
-						"The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+						"蜘蛛可以爬越困難表面，包括倒吊在天花板上，且無須進行屬性檢定。"
 					]
 				},
 				{
-					"name": "Web Sense",
+					"name": "蛛網感知",
 					"entries": [
-						"While in contact with a web, the spider knows the exact location of any other creature in contact with the same web."
+						"當與蛛網保持接觸時，蜘蛛可以知道任何其他與同一張蛛網接觸生物的確切位置。"
 					]
 				},
 				{
-					"name": "Web Walker",
+					"name": "蛛網行者",
 					"entries": [
-						"The spider ignores movement restrictions caused by webbing."
+						"蜘蛛無視蛛網所造成的移動限制。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。 {@h}7 ({@damage 1d8 + 3}) piercing damage, and the target must make a DC 11 Constitution saving throw, taking 9 ({@damage 2d8}) poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but {@condition poisoned} for 1 hour, even after regaining hit points, and is {@condition paralyzed} while {@condition poisoned} in this way."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}7 ({@damage 1d8 + 3})穿刺傷害，且目標必須進行一次DC 11的體質豁免，若豁免失敗則受到9 ({@damage 2d8})毒素傷害，豁免成功則只受到一半的傷害。若此毒素傷害將目標的生命值歸零，則目標的傷勢穩定，但陷入 {@condition 中毒}狀態長達1小時，這個狀態即使在目標回復生命值之後仍會持續。且目標若因此而{@condition 中毒}，則將連帶陷入{@condition 麻痺}狀態。"
 					]
 				},
 				{
-					"name": "Web {@recharge 5}",
+					"name": "蛛網{@recharge 5}",
 					"entries": [
-						"{@atk rw} {@hit 5} to hit, range 30/60 ft., one creature. {@h}The target is {@condition restrained} by webbing. As an action, the {@condition restrained} target can make a DC 12 Strength check, bursting the webbing on a success. The webbing can also be attacked and destroyed (AC 10; hp 5; vulnerability to fire damage; immunity to bludgeoning, poison, and psychic damage)."
+						"{@atk rw} 命中{@hit 5}，射程30/60呎，單一生物。{@h}目標被蛛網給{@condition 束縛}。以一個動作，被{@condition 束縛}的目標可以進行一次DC 12的力量檢定，若檢定成功則掙脫蛛網。蛛網可以被攻擊且被破壞（AC 10; 5點生命值; 對火焰傷害易傷; 免疫鈍擊、毒素、和精神傷害）。"
 					]
 				}
 			],
@@ -18326,7 +18326,7 @@
 			]
 		},
 		{
-			"name": "Giant Toad",
+			"name": "巨蟾蜍", "ENG_name": "Giant Toad",
 			"size": "L",
 			"type": "beast",
 			"source": "MM",
@@ -18357,13 +18357,13 @@
 				{
 					"name": "兩棲",
 					"entries": [
-						"The toad可以在空氣和水中呼吸。"
+						"蟾蜍可以在空氣和水中呼吸。"
 					]
 				},
 				{
-					"name": "Standing Leap",
+					"name": "立定跳躍",
 					"entries": [
-						"The toad's long jump is up to 20 ft. and its high jump is up to 10 ft., with or without a running start."
+						"蟾蜍的跳遠最多20呎距離、且跳高最多10呎距離，無論有沒有助跑都一樣。"
 					]
 				}
 			],
@@ -18371,14 +18371,14 @@
 				{
 					"name": "Bite",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}7 ({@damage 1d10 + 2}) piercing damage plus 5 ({@damage 1d10}) poison damage, and the target is {@condition grappled} (escape DC 13). Until this grapple ends, the target is {@condition restrained}, and the toad can't bite another target."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}7 ({@damage 1d10 + 2})穿刺傷害加5 ({@damage 1d10})毒素傷害，且目標{@condition 被擒}(逃脫DC 13)。直到擒抱結束前，目標被{@condition 束縛}，且蟾蜍不能啃咬另一個目標。"
 					]
 				},
 				{
-					"name": "Swallow",
+					"name": "吞嚥",
 					"entries": [
-						"The toad makes one bite attack against a Medium or smaller target it is grappling. If the attack hits, the target is swallowed, and the grapple ends. The swallowed target is {@condition blinded} and {@condition restrained}, it has total cover against attacks and other effects outside the toad, and it takes 10 ({@damage 3d6}) acid damage at the start of each of the toad's turns. The toad can have only one target swallowed at a time.",
-						"If the toad dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse using 5 feet of movement, exiting {@condition prone}."
+						"蟾蜍對一個它正擒抱的體型為中型或更小的目標進行一次啃咬攻擊。若該攻擊命中，則目標被吞嚥，且擒抱結束。被吞嚥的目標陷入{@condition 目盲}和{@condition 束縛}，它對蟾蜍外的攻擊和其他效果有全掩護，且在每次蟾蜍的回合開始時受到10 ({@damage 3d6})酸蝕傷害。蟾蜍同時只能讓一個目標被吞嚥。",
+						"若蟾蜍死亡，被吞嚥的生物將不再被它{@condition 束縛}，且可以花費5呎的移動速度從屍體中逃脫，以{@condition 伏地}狀態離開。"
 					]
 				}
 			],
@@ -18402,7 +18402,7 @@
 			]
 		},
 		{
-			"name": "Giant Vulture",
+			"name": "巨禿鷲", "ENG_name": "Giant Vulture",
 			"size": "L",
 			"type": "beast",
 			"source": "MM",
@@ -18431,19 +18431,19 @@
 				"perception": "+3"
 			},
 			"passive": 13,
-			"languages": "understands Common but can't speak",
+			"languages": "理解通用語，但不會說",
 			"cr": "1",
 			"trait": [
 				{
 					"name": "敏銳視覺和嗅覺",
 					"entries": [
-						"The vulture在依賴視覺和嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
+						"禿鷲在依賴視覺和嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				},
 				{
 					"name": "群體戰術",
 					"entries": [
-						"若vulture有至少一個隊友距離目標生物5呎內且該隊友並未{@condition 無力}，則vulture在對該生物進行的攻擊檢定中具有優勢。"
+						"若禿鷲有至少一個隊友距離目標生物5呎內且該隊友並未{@condition 無力}，則禿鷲在對該生物進行的攻擊檢定中具有優勢。"
 					]
 				}
 			],
@@ -18451,17 +18451,17 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The vulture makes two attacks: one with its beak and one with its talons."
+						"禿鷲進行二次攻擊：一次喙啄，一次禽爪。"
 					]
 				},
 				{
-					"name": "Beak",
+					"name": "喙啄",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}7 ({@damage 2d4 + 2})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Talons",
+					"name": "禽爪",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}9 ({@damage 2d6 + 2})劈砍傷害。"
 					]
@@ -18486,7 +18486,7 @@
 			]
 		},
 		{
-			"name": "Giant Wasp",
+			"name": "巨黃蜂", "ENG_name": "Giant Wasp",
 			"size": "M",
 			"type": "beast",
 			"source": "MM",
@@ -18514,9 +18514,9 @@
 			"cr": "1/2",
 			"action": [
 				{
-					"name": "Sting",
+					"name": "螫刺",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一生物。 {@h}5 ({@damage 1d6 + 2}) piercing damage, and the target must make a DC 11 Constitution saving throw, taking 10 ({@damage 3d6}) poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but {@condition poisoned} for 1 hour, even after regaining hit points, and is {@condition paralyzed} while {@condition poisoned} in this way."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一生物。{@h}5 ({@damage 1d6 + 2})穿刺傷害，且目標必須進行一次DC 11的體質豁免，若豁免失敗則受到10 ({@damage 3d6})毒素傷害，豁免成功則只受到一半的傷害。若此毒素傷害將目標的生命值歸零，則目標的傷勢穩定，但陷入{@condition 中毒}狀態長達1小時，這個狀態即使在目標回復生命值之後仍會持續。且目標若因此而{@condition 中毒}，則將連帶陷入{@condition 麻痺}狀態。"
 					]
 				}
 			],
@@ -18529,7 +18529,7 @@
 			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/215/giant-wasp.mp3"
 		},
 		{
-			"name": "Giant Weasel",
+			"name": "巨鼬鼠", "ENG_name": "Giant Weasel",
 			"size": "M",
 			"type": "beast",
 			"source": "MM",
@@ -18563,13 +18563,13 @@
 				{
 					"name": "敏銳聽覺和嗅覺",
 					"entries": [
-						"The weasel在依賴聽覺和嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
+						"鼬鼠在依賴聽覺和嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
 					"entries": [
 						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}5 ({@damage 1d4 + 3})穿刺傷害。"
 					]
@@ -18590,7 +18590,7 @@
 			]
 		},
 		{
-			"name": "Giant Wolf Spider",
+			"name": "巨狼蛛", "ENG_name": "Giant Wolf Spider",
 			"size": "M",
 			"type": "beast",
 			"source": "MM",
@@ -18623,29 +18623,29 @@
 			"cr": "1/4",
 			"trait": [
 				{
-					"name": "Spider Climb",
+					"name": "蛛行",
 					"entries": [
-						"The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+						"蜘蛛可以爬越困難表面，包括倒吊在天花板上，且無須進行屬性檢定。"
 					]
 				},
 				{
-					"name": "Web Sense",
+					"name": "蛛網感知",
 					"entries": [
-						"While in contact with a web, the spider knows the exact location of any other creature in contact with the same web."
+						"當與蛛網保持接觸時，蜘蛛可以知道任何其他與同一張蛛網接觸生物的確切位置。"
 					]
 				},
 				{
-					"name": "Web Walker",
+					"name": "蛛網行者",
 					"entries": [
-						"The spider ignores movement restrictions caused by webbing."
+						"蜘蛛無視蛛網所造成的移動限制。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 3}，觸及5呎，單一生物。 {@h}4 ({@damage 1d6 + 1}) piercing damage, and the target must make a DC 11 Constitution saving throw, taking 7 ({@damage 2d6}) poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but {@condition poisoned} for 1 hour, even after regaining hit points, and is {@condition paralyzed} while {@condition poisoned} in this way."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一生物。{@h}4 ({@damage 1d6 + 1})穿刺傷害，且目標必須進行一次DC 11的體質豁免，若豁免失敗則受到7 ({@damage 2d6})毒素傷害，豁免成功則只受到一半的傷害。若此毒素傷害將目標的生命值歸零，則目標的傷勢穩定，但陷入 {@condition 中毒}狀態長達1小時，這個狀態即使在目標回復生命值之後仍會持續。且目標若因此而{@condition 中毒}，則將連帶陷入{@condition 麻痺}狀態。"
 					]
 				}
 			],
@@ -19668,7 +19668,7 @@
 				{
 					"name": "穩妥步伐",
 					"entries": [
-						"山羊在用於對抗被擊倒{@condition 伏地}的力量或敏捷豁免檢定中具有優勢。"
+						"山羊在用於對抗不被擊倒{@condition 伏地}的力量或敏捷豁免檢定中具有優勢。"
 					]
 				}
 			],
@@ -28445,7 +28445,7 @@
 				{
 					"name": "穩妥步伐",
 					"entries": [
-						"騾子在用於對抗被擊倒{@condition 伏地}的力量或敏捷豁免檢定中具有優勢。"
+						"騾子在用於對抗不被擊倒{@condition 伏地}的力量或敏捷豁免檢定中具有優勢。"
 					]
 				}
 			],
@@ -37016,7 +37016,7 @@
 			]
 		},
 		{
-			"name": "Stirge",
+			"name": "蚊蝠", "ENG_name": "Stirge",
 			"size": "T",
 			"type": "beast",
 			"source": "MM",
@@ -37050,10 +37050,10 @@
 			"cr": "1/8",
 			"action": [
 				{
-					"name": "Blood Drain",
+					"name": "血液吸取",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。 {@h}5 ({@damage 1d4 + 3}) piercing damage, and the stirge attaches to the target. While attached, the stirge doesn't attack. Instead, at the start of each of the stirge's turns, the target loses 5 ({@dice 1d4 + 3}) hit points due to blood loss.",
-						"The stirge can detach itself by spending 5 feet of its movement. It does so after it drains 10 hit points of blood from the target or the target dies. A creature, including the target, can use its action to detach the stirge."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}5 ({@damage 1d4 + 3})穿刺傷害，且蚊蝠將附著在目標上。當附著於目標時，蚊蝠不會攻擊，但會在每次牠的回合開始時，使目標因喪失血液而失去5 ({@dice 1d4 + 3})點生命值。",
+						"蚊蝠可以藉由消耗牠的5呎移動速度來解除附著狀態。牠會在吸取10點生命值或目標死亡後這麼做。包括目標在內的一個生物可以使用一個動作以使蚊蝠解除附著。"
 					]
 				}
 			],
@@ -37568,7 +37568,7 @@
 			]
 		},
 		{
-			"name": "Swarm of Bats",
+			"name": "蝙蝠群", "ENG_name": "Swarm of Bats",
 			"size": "M",
 			"type": {
 				"type": "beast",
@@ -37617,27 +37617,27 @@
 				{
 					"name": "回聲定位",
 					"entries": [
-						"The swarm在{@condition 耳聾}時無法使用牠的盲視。"
+						"集群在{@condition 耳聾}時無法使用牠的盲視。"
 					]
 				},
 				{
 					"name": "敏銳聽覺",
 					"entries": [
-						"The swarm 在依賴聽覺的睿知（{@skill 感知}）檢定中具有優勢。"
+						"集群在依賴聽覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Swarm",
+					"name": "集群",
 					"entries": [
-						"The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny bat. The swarm can't regain hit points or gain temporary hit points."
+						"集群可以佔據另一個生物所在的空間，反之亦然。且集群可以穿過任何足以讓一隻微型蝙蝠通過的開口。集群無法回復生命值或獲得臨時生命值。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bites",
+					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及0呎，單一生物。in the swarm's space. {@h}5 ({@damage 2d4}) piercing damage, or 2 ({@damage 1d4}) piercing damage if the swarm has half of its hit points or fewer."
+						"{@atk mw} 命中{@hit 4}，觸及0呎，單一處於集群所在位置的生物。{@h}5 ({@damage 2d4})穿刺傷害，或若集群的生命值等於或低於一半時則造成2 ({@damage 1d4})穿刺傷害。"
 					]
 				}
 			],
@@ -37657,7 +37657,7 @@
 			]
 		},
 		{
-			"name": "Swarm of Beetles",
+			"name": "甲蟲群", "ENG_name": "Swarm of Beetles",
 			"size": "M",
 			"type": {
 				"type": "beast",
@@ -37710,17 +37710,17 @@
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Swarm",
+					"name": "集群",
 					"entries": [
-						"The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gain temporary hit points."
+						"集群可以佔據另一個生物所在的空間，反之亦然。且集群可以穿過任何足以讓一隻微型昆蟲通過的開口。集群無法回復生命值或獲得臨時生命值。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bites",
+					"name": "啃咬",
 					"entries": [
-						"{@atk mw} {@hit 3} to hit, reach 0 ft., one target in the swarm's space. {@h}10 ({@damage 4d4}) piercing damage, or 5 ({@damage 2d4}) piercing damage if the swarm has half of its hit points or fewer."
+						"{@atk mw} 命中{@hit 3}，觸及0呎，單一處於集群所在位置的生物。{@h}10 ({@damage 4d4})穿刺傷害，或若集群的生命值等於或低於一半時則造成5 ({@damage 2d4})穿刺傷害。"
 					]
 				}
 			],
@@ -37739,7 +37739,7 @@
 			]
 		},
 		{
-			"name": "Swarm of Centipedes",
+			"name": "蜈蚣群", "ENG_name": "Swarm of Centipedes",
 			"size": "M",
 			"type": {
 				"type": "beast",
@@ -37791,18 +37791,18 @@
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Swarm",
+					"name": "集群",
 					"entries": [
-						"The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gain temporary hit points."
+						"集群可以佔據另一個生物所在的空間，反之亦然。且集群可以穿過任何足以讓一隻微型昆蟲通過的開口。集群無法回復生命值或獲得臨時生命值。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bites",
+					"name": "螫咬",
 					"entries": [
-						"{@atk mw} {@hit 3} to hit, reach 0 ft., one target in the swarm's space. {@h}10 ({@damage 4d4}) piercing damage, or 5 ({@damage 2d4}) piercing damage if the swarm has half of its hit points or fewer.",
-						"A creature reduced to 0 hit points by a swarm of centipedes is stable but {@condition poisoned} for 1 hour, even after regaining hit points, and {@condition paralyzed} while {@condition poisoned} in this way."
+						"{@atk mw} 命中{@hit 3}，觸及0呎，單一處於集群所在位置的生物。{@h}10 ({@damage 4d4})穿刺傷害，或若集群的生命值等於或低於一半時則造成5 ({@damage 2d4})穿刺傷害。",
+						"一個被蜈蚣群使生命值歸零的目標將穩定傷勢，但陷入{@condition 中毒}狀態長達1小時，這個狀態即使在目標回復生命值之後仍會持續。且目標若因此而{@condition 中毒}，則將連帶陷入{@condition 麻痺}狀態。"
 					]
 				}
 			],
@@ -37821,7 +37821,7 @@
 			]
 		},
 		{
-			"name": "Swarm of Insects",
+			"name": "昆蟲群", "ENG_name": "Swarm of Insects",
 			"size": "M",
 			"type": {
 				"type": "beast",
@@ -37873,17 +37873,17 @@
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Swarm",
+					"name": "集群",
 					"entries": [
-						"The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gain temporary hit points."
+						"集群可以佔據另一個生物所在的空間，反之亦然。且集群可以穿過任何足以讓一隻微型昆蟲通過的開口。集群無法回復生命值或獲得臨時生命值。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bites",
+					"name": "螫咬",
 					"entries": [
-						"{@atk mw} {@hit 3} to hit, reach 0 ft., one target in the swarm's space. {@h}10 ({@damage 4d4}) piercing damage, or 5 ({@damage 2d4}) piercing damage if the swarm has half of its hit points or fewer."
+						"{@atk mw} 命中{@hit 3}，觸及0呎，單一處於集群所在位置的生物。{@h}10 ({@damage 4d4})穿刺傷害，或若集群的生命值等於或低於一半時則造成5 ({@damage 2d4})穿刺傷害。"
 					]
 				}
 			],
@@ -37903,7 +37903,7 @@
 			]
 		},
 		{
-			"name": "Swarm of Poisonous Snakes",
+			"name": "毒蛇群", "ENG_name": "Swarm of Poisonous Snakes",
 			"size": "M",
 			"type": {
 				"type": "beast",
@@ -37950,17 +37950,17 @@
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Swarm",
+					"name": "集群",
 					"entries": [
-						"The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny snake. The swarm can't regain hit points or gain temporary hit points."
+						"集群可以佔據另一個生物所在的空間，反之亦然。且集群可以穿過任何足以讓一隻微型蛇通過的開口。集群無法回復生命值或獲得臨時生命值。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bites",
+					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及0呎，單一生物。in the swarm's space. {@h}7 ({@damage 2d6}) piercing damage, or 3 ({@damage 1d6}) piercing damage if the swarm has half of its hit points or fewer. The target must make a DC 10 Constitution saving throw, taking 14 ({@damage 4d6}) poison damage on a failed save, or half as much damage on a successful one."
+						"{@atk mw} 命中{@hit 6}，觸及0呎，單一處於集群所在位置的生物。{@h}7 ({@damage 2d6})穿刺傷害，或若集群的生命值等於或低於一半時則造成3 ({@damage 1d6})穿刺傷害。目標必須進行一次DC 10的體質豁免，若豁免失敗則受到14 ({@damage 4d6})毒素傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
@@ -37975,7 +37975,7 @@
 			]
 		},
 		{
-			"name": "Swarm of Quippers",
+			"name": "食人魚群", "ENG_name": "Swarm of Quippers",
 			"size": "M",
 			"type": {
 				"type": "beast",
@@ -38024,27 +38024,27 @@
 				{
 					"name": "鮮血狂熱",
 					"entries": [
-						"The swarm在對任何生命值沒有全滿的生物所進行的近戰攻擊檢定中具有優勢。"
+						"集群在對任何生命值沒有全滿的生物所進行的近戰攻擊檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Swarm",
+					"name": "集群",
 					"entries": [
-						"The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny quipper. The swarm can't regain hit points or gain temporary hit points."
+						"集群可以佔據另一個生物所在的空間，反之亦然。且集群可以穿過任何足以讓一隻微型食人魚通過的開口。集群無法回復生命值或獲得臨時生命值。"
 					]
 				},
 				{
 					"name": "水下呼吸",
 					"entries": [
-						"swarm只能在水下呼吸。"
+						"集群只能在水下呼吸。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bites",
+					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及0呎，單一生物。in the swarm's space. {@h}14 ({@damage 4d6}) piercing damage, or 7 ({@damage 2d6}) piercing damage if the swarm has half of its hit points or fewer."
+						"{@atk mw} 命中{@hit 5}，觸及0呎，單一處於集群所在位置的生物。{@h}14 ({@damage 4d6})穿刺傷害，或若集群的生命值等於或低於一半時則造成7 ({@damage 2d6})穿刺傷害。"
 					]
 				}
 			],
@@ -38061,7 +38061,7 @@
 			]
 		},
 		{
-			"name": "Swarm of Rats",
+			"name": "老鼠群", "ENG_name": "Swarm of Rats",
 			"size": "M",
 			"type": {
 				"type": "beast",
@@ -38109,21 +38109,21 @@
 				{
 					"name": "敏銳嗅覺",
 					"entries": [
-						"The swarm在依賴嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
+						"集群在依賴嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Swarm",
+					"name": "集群",
 					"entries": [
-						"The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny rat. The swarm can't regain hit points or gain temporary hit points."
+						"集群可以佔據另一個生物所在的空間，反之亦然。且集群可以穿過任何足以讓一隻微型老鼠通過的開口。集群無法回復生命值或獲得臨時生命值。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bites",
+					"name": "啃咬",
 					"entries": [
-						"{@atk mw} {@hit 2} to hit, reach 0 ft., one target in the swarm's space. {@h}7 ({@damage 2d6}) piercing damage, or 3 ({@damage 1d6}) piercing damage if the swarm has half of its hit points or fewer."
+						"{@atk mw} 命中{@hit 2}，觸及0呎，單一處於集群所在位置的生物。{@h}7 ({@damage 2d6})穿刺傷害，或若集群的生命值等於或低於一半時則造成3 ({@damage 1d6})穿刺傷害。"
 					]
 				}
 			],
@@ -38141,7 +38141,7 @@
 			]
 		},
 		{
-			"name": "Swarm of Ravens",
+			"name": "渡鴉群", "ENG_name": "Swarm of Ravens",
 			"size": "M",
 			"type": {
 				"type": "beast",
@@ -38187,17 +38187,17 @@
 			"cr": "1/4",
 			"trait": [
 				{
-					"name": "Swarm",
+					"name": "集群",
 					"entries": [
-						"The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny raven. The swarm can't regain hit points or gain temporary hit points."
+						"集群可以佔據另一個生物所在的空間，反之亦然。且集群可以穿過任何足以讓一隻微型渡鴉通過的開口。集群無法回復生命值或獲得臨時生命值。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Beaks",
+					"name": "喙啄",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target in the swarm's space. {@h}7 ({@damage 2d6}) piercing damage, or 3 ({@damage 1d6}) piercing damage if the swarm has half of its hit points or fewer."
+						"{@atk mw} 命中{@hit 4}，觸及0呎，單一處於集群所在位置的生物。{@h}7 ({@damage 2d6})穿刺傷害，或若集群的生命值等於或低於一半時則造成3 ({@damage 1d6})穿刺傷害。"
 					]
 				}
 			],
@@ -38211,7 +38211,7 @@
 			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/479/swarm-of-ravens.mp3"
 		},
 		{
-			"name": "Swarm of Spiders",
+			"name": "蜘蛛群", "ENG_name": "Swarm of Spiders",
 			"size": "M",
 			"type": {
 				"type": "beast",
@@ -38263,35 +38263,35 @@
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Swarm",
+					"name": "集群",
 					"entries": [
-						"The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gain temporary hit points."
+						"集群可以佔據另一個生物所在的空間，反之亦然。且集群可以穿過任何足以讓一隻微型昆蟲通過的開口。集群無法回復生命值或獲得臨時生命值。"
 					]
 				},
 				{
-					"name": "Spider Climb",
+					"name": "蛛行",
 					"entries": [
-						"The swarm can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+						"蜘蛛可以爬越困難表面，包括倒吊在天花板上，且無須進行屬性檢定。"
 					]
 				},
 				{
-					"name": "Web Sense",
+					"name": "蛛網感知",
 					"entries": [
-						"While in contact with a web, the swarm knows the exact location of any other creature in contact with the same web."
+						"當與蛛網保持接觸時，蜘蛛可以知道任何其他與同一張蛛網接觸生物的確切位置。"
 					]
 				},
 				{
-					"name": "Web Walker",
+					"name": "蛛網行者",
 					"entries": [
-						"The swarm ignores movement restrictions caused by webbing."
+						"蜘蛛無視蛛網所造成的移動限制。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bites",
+					"name": "螫咬",
 					"entries": [
-						"{@atk mw} {@hit 3} to hit, reach 0 ft., one target in the swarm's space. {@h}10 ({@damage 4d4}) piercing damage, or 5 ({@damage 2d4}) piercing damage if the swarm has half of its hit points or fewer."
+						"{@atk mw} 命中{@hit 3}，觸及0呎，單一處於集群所在位置的生物。{@h}10 ({@damage 4d4})穿刺傷害，或若集群的生命值等於或低於一半時則造成5 ({@damage 2d4})穿刺傷害。"
 					]
 				}
 			],
@@ -38315,7 +38315,7 @@
 			]
 		},
 		{
-			"name": "Swarm of Wasps",
+			"name": "黃蜂群", "ENG_name": "Swarm of Wasps",
 			"size": "M",
 			"type": {
 				"type": "beast",
@@ -38367,17 +38367,17 @@
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Swarm",
+					"name": "集群",
 					"entries": [
-						"The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gain temporary hit points."
+						"集群可以佔據另一個生物所在的空間，反之亦然。且集群可以穿過任何足以讓一隻微型昆蟲通過的開口。集群無法回復生命值或獲得臨時生命值。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bites",
+					"name": "螫咬",
 					"entries": [
-						"{@atk mw} {@hit 3} to hit, reach 0 ft., one target in the swarm's space. {@h}10 ({@damage 4d4}) piercing damage, or 5 ({@damage 2d4}) piercing damage if the swarm has half of its hit points or fewer."
+						"{@atk mw} 命中{@hit 3}，觸及0呎，單一處於集群所在位置的生物。{@h}10 ({@damage 4d4})穿刺傷害，或若集群的生命值等於或低於一半時則造成5 ({@damage 2d4})穿刺傷害。"
 					]
 				}
 			],

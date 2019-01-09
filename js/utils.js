@@ -1090,7 +1090,7 @@ Parser.monTypeToFullObj = function (type) {
 	out.type = type.type;
 	if (type.swarmSize) {
 		out.tags.push("swarm");
-		out.asText = `swarm of ${Parser.sizeAbvToFull(type.swarmSize).toLowerCase()} ${Parser.monTypeToPlural(type.type)}`;
+		out.asText = `${Parser.sizeAbvToFull(type.swarmSize).toLowerCase()}${Parser.monTypeToPlural(type.type)}集群`;
 	} else {
 		out.asText = `${Parser.monTypeToPlural(type.type)}`;
 	}
@@ -1151,12 +1151,12 @@ Parser.monImmResToFull = function (toParse) {
 		return out;
 	}
 
-	return serialJoin(toParse.map(it => toString(it)));
+	return serialJoin(toParse.map(it => Parser.DamageToDisplay(it)));
 };
 
 Parser.monCondImmToFull = function (condImm) {
 	function render (condition) {
-		return EntryRenderer.getDefaultRenderer().renderEntry(`{@condition ${condition}}`);
+		return EntryRenderer.getDefaultRenderer().renderEntry(`{@condition ${Parser.ConditionToDisplay(condition)}}`);
 	}
 	return condImm.map(it => {
 		if (it.special) return it.special;
