@@ -271,12 +271,12 @@ function EntryRenderer () {
 				// block
 				case "abilityDc":
 					renderPrefix();
-					textStack[0] += `<span class='ability-block'><span>${entry.name} save DC</span> = 8 + your proficiency bonus + your ${Parser.attrChooseToFull(entry.attributes)}</span>`;
+					textStack[0] += `<span class='ability-block'><span>${entry.name}豁免 DC</span> = 8 + 你的熟練加值 + 你的${Parser.attrChooseToFull(entry.attributes)}</span>`;
 					renderSuffix();
 					break;
 				case "abilityAttackMod":
 					renderPrefix();
-					textStack[0] += `<span class='ability-block'><span>${entry.name} attack modifier</span> = your proficiency bonus + your ${Parser.attrChooseToFull(entry.attributes)}</span>`;
+					textStack[0] += `<span class='ability-block'><span>${entry.name}攻擊調整值</span> = 你的熟練加值 + 你的${Parser.attrChooseToFull(entry.attributes)}</span>`;
 					renderSuffix();
 					break;
 				case "abilityGeneric":
