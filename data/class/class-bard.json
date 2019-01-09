@@ -1,4 +1,4 @@
-﻿{
+{
 	"class": [
 		{
 			"name": "吟遊詩人",
@@ -435,46 +435,46 @@
 					{
 						"name": "施法",
 						"entries": [
-							"你習得用音樂和意志來解構、分析、再構造現實的力量。你的法術是你龐大的樂章的一部份，可以因應不同情況調整。更多的法術規則請看{@book 第十章|PHB|10}跟第十一章的{@filter 吟遊詩人法術列表|spells|class=bard}。",
+							"你習得用音樂和意志來解構並重塑現實的力量。你的法術是你龐大的樂章的一部份，也是你可以因應不同情況調律的魔法。請參閱{@book 第十章|PHB|10}以了解關於施法的規則，以及第十一章以查閱{@filter 吟遊詩人法術列表|spells|class=bard}。",
 							{
 								"type": "entries",
 								"name": "戲法",
 								"entries": [
-									"你知曉兩個從{@filter 吟遊詩人法術列表|spells|class=bard}自選的戲法。你在更高的吟遊詩人等級會學會新的戲法，4等的時候學會第3個戲法、10等的時候學會第4個戲法。"
+									"你知曉兩個從{@filter 吟遊詩人法術列表|spells|class=bard}自選的戲法。你將在升至更高的吟遊詩人等級時學會額外的吟遊詩人戲法：在4級的時候學會第3個戲法，在10級的時候學會第4個。"
 								]
 							},
 							{
 								"type": "entries",
 								"name": "法術位",
 								"entries": [
-									"吟遊詩人表裡寫了你在1等和更高的等級時，有多少個法術環位可以拿來施放你的{@filter 吟遊詩人法術列表|class=bard}。你必須消耗一個在該法術環數以上的法術環位來施放該法術。你在長休之後恢復所有消耗掉的法術環位。",
-									"例如：如果你知曉一個一環的法術{@spell 治療傷勢}而且你有一環跟二環的法術環位，你可以用以上兩者來施放 {@spell 治療傷勢}。"
+									"吟遊詩人表中顯示了你在1級和更高的等級時，有多少個法術位可以用來施放你的{@filter 吟遊詩人法術|spells|class=bard}。要施放其中一個法術，你必須消耗一個與該法術環位相同或更高的法術位。你在完成一次長休後恢復所有你花費掉的法術位。",
+									"舉例來說，如果你知曉一個1環的{@spell 治療傷勢}法術，且你擁有一個1環和一個2環的法術位，則你可以使用其中任意一個法術位來施放{@spell 治療傷勢}。"
 								]
 							},
 							{
 								"type": "entries",
 								"name": "一環或更高環的已知法術",
 								"entries": [
-									"你從詩人法術列表裏選擇４個法術作為自己的已知法術。",
-									"你在每次提升吟遊詩人等級時都會習得一個新的吟遊詩人法術，除了12、16、19和20等時。新習得的法術環數必須符合你現有的法術環位。例如：在你的吟遊詩人等級達到3等時，你可以學習一個一環或是二環的法術。",
-									"另外，當你提升這個職業的等級時，你可以從吟遊詩人的法術列表中挑選一個法術來取代一個你目前已知的法術，新的法術的環位必須是你擁有的。"
+									"你知曉四個從吟遊詩人法術列表中自選的1環法術。",
+									"你提升至在每個除了第12,16,19,20級的吟遊詩人等級時，都會習得一個新的吟遊詩人法術。每個這些法術的環位都必須符合你現有法術位的環位。舉例來說，當你在此職業升至3級時，你可以學習一個新的1環或2環法術。",
+									"此外，當你提升這個職業的等級時，你可以從吟遊詩人的法術列表中挑選一個法術來取代一個你目前已知的法術，而它的環位也必須符合你現有法術位的環位。"
 								]
 							},
 							{
 								"type": "entries",
 								"name": "施法屬性",
 								"entries": [
-									"魅力是吟遊詩人的施法屬性。你的魔法源自你傾注於音樂與演說表演的心靈與靈魂。當一個吟遊詩人提到施法屬性時，你使用你的魅力做為你的施法屬性。並且你使用你的魅力調整值加在吟遊詩人法術的法術豁免DC與攻擊檢定上。",
+									"魅力是你施展吟遊詩人法術的施法屬性。你的魔法源自你傾注於音樂與演說表演的心神與靈魂。每當法術提及你的施法屬性時，你將使用你的魅力。此外，當決定你吟遊詩人法術的豁免DC、以及使用吟遊詩人法術進行攻擊檢定時，你也使用你的魅力調整值。",
 									{
 										"type": "abilityDc",
-										"name": "Spell",
+										"name": "法術",
 										"attributes": [
 											"cha"
 										]
 									},
 									{
 										"type": "abilityAttackMod",
-										"name": "Spell",
+										"name": "法術",
 										"attributes": [
 											"cha"
 										]
@@ -517,15 +517,15 @@
 					{
 						"name": "吟遊學院",
 						"entries": [
-							"在3等時，你可以選擇進入一個吟遊詩人學院來深入你的技巧。這個選擇會在3、6和14等的時候賦予你新的能力。"
+							"在3級時，你從可用的學院列表中選擇一個吟遊詩人學院來深入你的技巧。這個選擇會在3、6、和14級的時候賦予你新的能力。"
 						],
 						"gainSubclassFeature": true
 					},
 					{
 						"name": "專精",
 						"entries": [
-							"在3等時，選擇兩個已熟練的技能，它們在進行任何的能力檢定時熟練加值變為兩倍。",
-							"在10等時，你可以選另外兩個已熟練的技能來獲得這個效果。"
+							"在3級時，選擇兩個你的技能熟練，你的熟練加值在使用所選熟練項所進行的任何屬性檢定中變為兩倍。",
+							"在10級時，你可以再選擇另外兩個技能熟練以獲得這個好處。"
 						]
 					}
 				],
@@ -533,8 +533,8 @@
 					{
 						"name": "屬性值提升",
 						"entries": [
-							"當你的吟遊詩人等級到達4等時，你可以將一項屬性值提升2點，或著你可以選擇兩項屬性各提升1點。你至多能使用這個能力將屬性值提升至20。",
-							"如果你的DM允許使用專長的話，你可以改為獲得一個{@5etools 專長|feats.html}。"
+							"當你在此職業升至4級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					}
 				],
@@ -542,13 +542,13 @@
 					{
 						"name": "吟遊激勵(d8)",
 						"entries": [
-							"在5等時，你的吟遊詩人激勵骰改為{@dice d8}。"
+							"在5級時，你的吟遊激勵骰變更為{@dice d8}。"
 						]
 					},
 					{
 						"name": "激勵湧泉",
 						"entries": [
-							"從你到達5等開始，你經過短休或長休後都能回復使用過的吟遊詩人激勵骰。"
+							"從你升至5級開始，你在完成一次短休或長休後都會恢復所有你在吟遊激勵骰花費掉的次數。"
 						]
 					}
 				],
@@ -556,13 +556,13 @@
 					{
 						"name": "反制迷惑",
 						"entries": [
-							"在6等時，你可以使用音樂或詩詞的力量來干擾會影響心靈的效果。使用一個動作，你可以開始表演直到你的下一個回合，在這段期間內，你和其他在你30呎內與你友善的生物在進行{@condition 恐慌}或{@condition 魅惑}的豁免時有優勢。只有能聽得到你聲音的生物才能獲得此效果。如果你陷入{＠condition 乏力}或是禁言或是如果你自願停止（不需要動作）則效果提早結束。"
+							"在6級時，你獲得使用音樂或言語的力量來干擾會影響心靈效果的能力。以一個動作，你可以開始一段持續到你下個回合結束的表演。在這段期間，你和任何與你距離30呎內的友善生物在對抗{@condition 恐懼}或{@condition 魅惑}的豁免檢定中獲得優勢。只有能聽見你的生物可以獲得此效果。這段表演將在你陷入{@condition 無力}、被沉默、或是你自願停止（不需要動作）時提早結束。"
 						]
 					},
 					{
 						"name": "吟遊學院能力",
 						"entries": [
-							"At 6th level, you gain a feature from your Bard College."
+							"在6級時，你獲得一個來自你吟遊詩人學院的能力。"
 						],
 						"gainSubclassFeature": true
 					}
@@ -572,8 +572,8 @@
 					{
 						"name": "屬性值提升",
 						"entries": [
-							"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+							"當你在此職業升至8級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					}
 				],
@@ -589,13 +589,13 @@
 					{
 						"name": "吟遊激勵(d10)",
 						"entries": [
-							"At 10th level, your Bardic Inspiration die changes to a {@dice d10}."
+							"在10級時，你的吟遊激勵骰變更為{@dice d10}。"
 						]
 					},
 					{
 						"name": "專精",
 						"entries": [
-							"At 10th level, you can choose another two skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies."
+							"在10級時，你可以選擇另外兩個技能熟練。你的熟練加值在使用所選熟練項所進行的任何屬性檢定中變為兩倍。"
 						]
 					},
 					{
@@ -612,8 +612,8 @@
 					{
 						"name": "屬性值提升",
 						"entries": [
-							"When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+							"當你在此職業升至12級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					}
 				],
@@ -629,14 +629,14 @@
 					{
 						"name": "魔法秘密",
 						"entries": [
-							"At 14th level, choose two additional spells from any classes, including this one. A spell you choose must be of a level you can cast, as shown on the Bard table, or a cantrip.",
-							"The chosen spells count as bard spells for you and are included in the number in the Spells Known column of the Bard table."
+							"在14級時，從任何職業中（包括本職業）選擇兩個額外的法術。你所選擇的法術必須要是你所能施放的環位（見吟遊詩人表），或者是戲法。",
+							"對你而言，所選的法術將被視為吟遊詩人法術，且會被算在吟遊詩人表中的已知法術數量中。"
 						]
 					},
 					{
 						"name": "吟遊學院能力",
 						"entries": [
-							"At 14th level, you gain a feature from your Bard College."
+							"在14級時，你獲得一個來自你吟遊詩人學院的能力。"
 						],
 						"gainSubclassFeature": true
 					}
@@ -645,7 +645,7 @@
 					{
 						"name": "吟遊激勵(d12)",
 						"entries": [
-							"At 15th level, your Bardic Inspiration die changes to a {@dice d12}."
+							"在15級時，你的吟遊激勵骰變更為{@dice d12}。"
 						]
 					}
 				],
@@ -653,8 +653,8 @@
 					{
 						"name": "屬性值提升",
 						"entries": [
-							"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+							"當你在此職業升至16級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					}
 				],
@@ -670,8 +670,8 @@
 					{
 						"name": "魔法秘密",
 						"entries": [
-							"At 18th level, choose two additional spells from any class, including this one. A spell you choose must be of a level you can cast, as shown on the Bard table, or a cantrip.",
-							"The chosen spells count as bard spells for you and are included in the number in the Spells Known column of the Bard table."
+							"在18級時，從任何職業中（包括本職業）選擇兩個額外的法術。你所選擇的法術必須要是你所能施放的環位（見吟遊詩人表），或者是戲法。",
+							"對你而言，所選的法術將被視為吟遊詩人法術，且會被算在吟遊詩人表中的已知法術數量中。"
 						]
 					}
 				],
@@ -679,8 +679,8 @@
 					{
 						"name": "屬性值提升",
 						"entries": [
-							"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+							"當你在此職業升至19級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					}
 				],
@@ -688,7 +688,7 @@
 					{
 						"name": "激勵專精",
 						"entries": [
-							"At 20th level, when you roll initiative and have no uses of Bardic Inspiration left, you regain one use."
+							"在20級時，當你骰先攻時且吟遊激勵骰已經沒有剩下的使用次數，則你獲得一次使用次數。"
 						]
 					}
 				]
