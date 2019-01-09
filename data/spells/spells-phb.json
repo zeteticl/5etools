@@ -1665,7 +1665,7 @@
 			]
 		},
 		{
-			"name": "Aura of Vitality",
+			"name": "活力靈光", "ENG_name": "Aura of Vitality",
 			"level": 3,
 			"school": "V",
 			"time": [
@@ -1716,7 +1716,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Healing energy radiates from you in an aura with a 30-foot radius. Until the spell ends, the aura moves with you, centered on you. You can use a bonus action to cause one creature in the aura (including you) to regain {@dice 2d6} hit points."
+				"治癒能量從你身上散發而出並充斥在30呎半徑的區域中。直到此法術結束前，該區域將會跟隨你移動，並以你為中心。你可以使用一個附贈動作以使區域內的一個生物（包括你）回復{@dice 2d6}點生命值。"
 			],
 			"page": 216,
 			"isHeal": true
@@ -2922,7 +2922,7 @@
 			]
 		},
 		{
-			"name": "Blinding Smite",
+			"name": "致盲斬", "ENG_name": "Blinding Smite",
 			"level": 3,
 			"school": "V",
 			"time": [
@@ -2972,8 +2972,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"The next time you hit a creature with a melee weapon attack during this spell's duration, your weapon flares with bright light, and the attack deals an extra {@dice 3d8} radiant damage to the target. Additionally, the target must succeed on a Constitution saving throw or be {@condition blinded} until the spell ends.",
-				"A creature {@condition blinded} by this spell makes another Constitution saving throw at the end of each of its turns. On a successful save, it is no longer {@condition blinded}."
+				"在法術持續期間，下一次你以近戰武器攻擊命中時，你的武器將會閃耀出明亮的光芒，且該攻擊將對目標造成額外{@dice 3d8}光耀傷害。此外，目標必須成功通過一次體質豁免，否則直到法術結束前陷入{@condition 目盲}。",
+				"一個被此法術{@condition 目盲}的生物可以在它的每個回合結束時進行一次體質豁免。若豁免成功，則它將不再{@condition 目盲}。"
 			],
 			"page": 219,
 			"damageInflict": [
@@ -5404,7 +5404,7 @@
 			]
 		},
 		{
-			"name": "Conjure Animals",
+			"name": "召喚動物", "ENG_name": "Conjure Animals",
 			"level": 3,
 			"school": "C",
 			"time": [
@@ -5470,26 +5470,26 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You summon fey spirits that take the form of beasts and appear in unoccupied spaces that you can see within range. Choose one of the following options for what appears:",
+				"你召喚出呈現野獸外型的精類精魂，並使其出現在射程內一處未被占據的可見空間。選擇以下其中一個選項以決定出現什麼：",
 				{
 					"type": "list",
 					"items": [
-						"One {@filter beast of challenge rating 2 or lower|bestiary|cr=2|type=beast|miscellaneous=!swarm}",
-						"Two {@filter beasts of challenge rating 1 or lower|bestiary|cr=1|type=beast|miscellaneous=!swarm}",
-						"Four {@filter beasts of challenge rating 1/2 or lower|bestiary|cr=1/2|type=beast|miscellaneous=!swarm}",
-						"Eight {@filter beasts of challenge rating 1/4 or lower|bestiary|cr=0;1/8;1/4|type=beast|miscellaneous=!swarm}"
+						"一隻{@filter 挑戰等級2或以下的野獸|bestiary|cr=2|type=beast|miscellaneous=!swarm}",
+						"二隻{@filter 挑戰等級1或以下的野獸|bestiary|cr=1|type=beast|miscellaneous=!swarm}",
+						"四隻{@filter 挑戰等級1/2或以下的野獸|bestiary|cr=1/2|type=beast|miscellaneous=!swarm}",
+						"八隻{@filter 挑戰等級1/4或以下的野獸|bestiary|cr=0;1/8;1/4|type=beast|miscellaneous=!swarm}"
 					]
 				},
-				"Each beast is also considered fey, and it disappears when it drops to 0 hit points or when the spell ends.",
-				"The summoned creatures are friendly to you and your companions. Roll initiative for the summoned creatures as a group, which has its own turns. They obey any verbal commands that you issue to them (no action required by you). If you don't issue any commands to them, they defend themselves from hostile creatures, but otherwise take no actions.",
-				"The DM has the creatures' statistics."
+				"每隻野獸同時也被視作精類生物，且它會在生命值歸零或此法術結束時消失。",
+				"被召喚的生物對你和你的同伴友善。這些召喚生物在骰先攻時作為一組擲骰，但有著各自的回合。它們服從任何你交代他們的口頭指令（你不需要花費行動）。若你不對它們交代任何指令，則它們將在面對敵意生物時自我防衛，除此之外不採取其他動作。",
+				"這些生物的數據資料由DM掌控。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using certain higher-level spell slots, you choose one of the summoning options above, and more creatures appear: twice as many with a 5th-level slot, three times as many with a 7th-level slot, and four times as many with a 9th-level slot."
+						"當你使用特定更高環位的法術位施放此法術時，你從上述召喚選項中選擇一項，並讓更多生物出現：使用5環法術位時出現兩倍、7環法術位時出現三倍、使用9環法術位時出現四倍。"
 					]
 				}
 			],
@@ -6641,7 +6641,7 @@
 			"page": 228
 		},
 		{
-			"name": "Create Food and Water",
+			"name": "創造飲食", "ENG_name": "Create Food and Water",
 			"level": 3,
 			"school": "C",
 			"time": [
@@ -6693,7 +6693,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You create 45 pounds of food and 30 gallons of water on the ground or in containers within range, enough to sustain up to fifteen humanoids or five steeds for 24 hours. The food is bland but nourishing, and spoils if uneaten after 24 hours. The water is clean and doesn't go bad."
+				"你在射程內的地面或容器內創造出45磅的食物和30加侖的水，足以供養最多15個類人生物或5匹坐騎長達24小時。這些食物淡而無味但營養充足，且若24小時後仍未食用則會腐壞。這些水則是乾淨的且不會變質。"
 			],
 			"page": 229
 		},
@@ -7054,7 +7054,7 @@
 			]
 		},
 		{
-			"name": "Crusader's Mantle",
+			"name": "十字軍斗篷", "ENG_name": "Crusader's Mantle",
 			"level": 3,
 			"school": "V",
 			"time": [
@@ -7115,7 +7115,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Holy power radiates from you in an aura with a 30-foot radius, awakening boldness in friendly creatures. Until the spell ends, the aura moves with you, centered on you. While in the aura, each nonhostile creature in the aura (including you) deals an extra {@dice 1d4} radiant damage when it hits with a weapon attack."
+				"神聖力量從你身上散發而出並充斥在30呎半徑的區域中，喚醒友善生物體內的勇氣。直到此法術結束前，該區域將會跟隨你移動，並以你為中心。當處於區域內，每一個區域內的非敵意生物（包括你）在它以一次武器攻擊命中時，將造成額外的{@dice 1d4}光耀傷害。"
 			],
 			"page": 230,
 			"damageInflict": [
@@ -7543,7 +7543,7 @@
 			"page": 230
 		},
 		{
-			"name": "Daylight",
+			"name": "晝明術", "ENG_name": "Daylight",
 			"level": 3,
 			"school": "V",
 			"time": [
@@ -7651,9 +7651,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A 60-foot-radius sphere of light spreads out from a point you choose within range. The sphere is bright light and sheds dim light for an additional 60 feet.",
-				"If you chose a point on an object you are holding or one that isn't being worn or carried, the light shines from the object and moves with it. Completely covering the affected object with an opaque object, such as a bowl or a helm, blocks the light.",
-				"If any of this spell's area overlaps with an area of darkness created by a spell of 3rd level or lower, the spell that created the darkness is dispelled."
+				"一道60呎半徑的球狀光源從射程內你所選擇的一處擴散。在這個球體空間內為明亮光照，且會再散發出延伸60呎的微光光照。",
+				"如果你所選擇的一處是一個你正持握、或一個未被穿戴或攜帶的物品，則光線將從該物體散發而出並會隨之移動。用不透光的東西完全覆蓋被影響的物體，像是碗或頭盔，將會擋住光線。",
+				"若此法術有任何一個區域與其他3環或更低的法術所創造的黑暗重疊，則創造該黑暗的法術將被解消。"
 			],
 			"page": 230,
 			"races": [
@@ -8680,7 +8680,7 @@
 			]
 		},
 		{
-			"name": "Dispel Magic",
+			"name": "解除魔法", "ENG_name": "Dispel Magic",
 			"level": 3,
 			"school": "A",
 			"time": [
@@ -8771,14 +8771,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Choose one creature, object, or magical effect within range. Any spell of 3rd level or lower on the target ends. For each spell of 4th level or higher on the target, make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a successful check, the spell ends."
+				"選擇射程內的一個生物、物體、或魔法效果。任何目標上3環或以下的法術將立刻結束。至於每個目標上4環或更高的法術，則使用你的施法屬性進行一次屬性檢定。DC等同於10+該法術的環位。若檢定成功，則結束該法術。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, you automatically end the effects of a spell on the target if the spell's level is equal to or less than the level of the spell slot you used."
+						"當你使用4環或更高的法術位施放此法術時，如果作用於目標上的法術的環位等於或低於你所使用的法術位，則你將自動結束該法術的效果。"
 					]
 				}
 			],
@@ -9764,7 +9764,7 @@
 			"scalingEffects": true
 		},
 		{
-			"name": "Elemental Weapon",
+			"name": "元素武器", "ENG_name": "Elemental Weapon",
 			"level": 3,
 			"school": "T",
 			"time": [
@@ -9865,14 +9865,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A nonmagical weapon you touch becomes a magic weapon. Choose one of the following damage types: acid, cold, fire, lightning, or thunder. For the duration, the weapon has a +1 bonus to attack rolls and deals an extra {@dice 1d4} damage of the chosen type when it hits."
+				"一把你觸碰的非魔法武器變為魔法武器。選擇以下其中一種傷害類型：酸蝕、寒冰、火焰、閃電、或雷鳴。在法術持續期間，武器在攻擊檢定上具有+1加值，且在它命中時造成額外{@dice 1d4}所選類型的傷害。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 5th or 6th level, the bonus to attack rolls increases to +2 and the extra damage increases to {@scaledice 1d4|3-9|2d4}. When you use a spell slot of 7th level or higher, the bonus increases to +3 and the extra damage increases to {@scaledice 1d4|3-9|3d4}."
+						"當你使用5環或6環法術位施放此法術時，加值增加至+2且額外傷害增加至{@scaledice 1d4|3-9|2d4}。當你使用7環或更高的法術位施放此法術時，加值增加至+3且額外傷害增加至{@scaledice 1d4|3-9|3d4}。"
 					]
 				}
 			],
@@ -12319,7 +12319,7 @@
 			]
 		},
 		{
-			"name": "Fly",
+			"name": "飛行術", "ENG_name": "Fly",
 			"level": 3,
 			"school": "T",
 			"time": [
@@ -12337,7 +12337,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a wing feather from any bird"
+				"m": "一根來自任何鳥類的翼羽"
 			},
 			"duration": [
 				{
@@ -12371,14 +12371,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You touch a willing creature. The target gains a flying speed of 60 feet for the duration. When the spell ends, the target falls if it is still aloft, unless it can stop the fall."
+				"你觸碰一個自願生物。在法術持續期間，目標獲得60呎的飛行速度。當此法術結束，若目標仍在半空中，除非它能夠防止自己墜落，否則它將墜落。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, you can target one additional creature for each slot level above 3rd."
+						"當你使用4環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，你就可以再額外選擇一個生物作為目標。"
 					]
 				}
 			],
@@ -13189,7 +13189,7 @@
 			},
 			"entries": [
 				"你觸碰一具屍體或其他遺骸。在法術持續期間，目標將免於腐爛且不能被變成不死生物。",
-				"此法術也能有效的延長將復活目標的時間限制，因為在此法術影響下度過的時間將不會計入如{@spell 死者復活}等法術的時間限制中。"
+				"此法術也能有效的延長將復活目標的時間限制，因為在此法術影響下度過的時間將不會計入如{@spell 喚醒死者}等法術的時間限制中。"
 			],
 			"page": 245
 		},
@@ -20127,7 +20127,7 @@
 			"page": 263
 		},
 		{
-			"name": "Nondetection",
+			"name": "迴避偵測", "ENG_name": "Nondetection",
 			"level": 3,
 			"school": "A",
 			"time": [
@@ -20146,7 +20146,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a pinch of diamond dust worth 25 gp sprinkled over the target, which the spell consumes",
+					"text": "一撮價值25金幣的鑽石塵撒在目標身上，在施法時消耗",
 					"cost": 25,
 					"consume": true
 				}
@@ -20200,7 +20200,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"For the duration, you hide a target that you touch from divination magic. The target can be a willing creature or a place or an object no larger than 10 feet in any dimension. The target can't be targeted by any divination magic or perceived through magical scrying sensors."
+				"在法術持續期間，你隱藏你所觸碰的目標不受預言系法術偵測。目標可以是一個自願生物、一個地方、或一個各邊不超過10呎的物體。目標將無法成為任何預言系法術的目標，也無法透過魔法占卜偵測等手段被察覺。"
 			],
 			"page": 263
 		},
@@ -22527,7 +22527,7 @@
 			"page": 270
 		},
 		{
-			"name": "死者復活", "ENG_name": "Raise Dead",
+			"name": "喚醒死者", "ENG_name": "Raise Dead",
 			"level": 5,
 			"school": "N",
 			"time": [
@@ -23434,7 +23434,7 @@
 			]
 		},
 		{
-			"name": "Revivify",
+			"name": "回生術", "ENG_name": "Revivify",
 			"level": 3,
 			"school": "N",
 			"time": [
@@ -23453,7 +23453,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "diamonds worth 300 gp, which the spell consumes",
+					"text": "價值300金幣的鑽石，在施法時消耗",
 					"cost": 300,
 					"consume": true
 				}
@@ -23533,7 +23533,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You touch a creature that has died within the last minute. That creature returns to life with 1 hit point. This spell can't return to life a creature that has died of old age, nor can it restore any missing body parts."
+				"你觸碰一個在過去一分鐘內死去的生物。該生物將以1點生命值的形式復活。此法術無法復活因年老而死去的生物，也無法恢復它任何失去的身體部位。"
 			],
 			"page": 272,
 			"isHeal": true
@@ -29202,7 +29202,7 @@
 			"page": 287
 		},
 		{
-			"name": "Water Breathing",
+			"name": "水下呼吸", "ENG_name": "Water Breathing",
 			"level": 3,
 			"school": "T",
 			"time": [
@@ -29221,7 +29221,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a short reed or piece of straw"
+				"m": "一截短蘆葦或一根麥稈"
 			},
 			"duration": [
 				{
@@ -29284,7 +29284,7 @@
 				"ritual": true
 			},
 			"entries": [
-				"This spell grants up to ten willing creatures you can see within range the ability to breathe underwater until the spell ends. Affected creatures also retain their normal mode of respiration."
+				"直到此法術結束前，此法術能賦予射程內最多十個你所能看見的自願生物在水下呼吸的能力。受影響的生物同時也保留它們正常的呼吸模式。"
 			],
 			"page": 287
 		},
