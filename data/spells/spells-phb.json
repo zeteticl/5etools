@@ -15684,7 +15684,7 @@
 			]
 		},
 		{
-			"name": "Hunger of Hadar",
+			"name": "哈達之欲", "ENG_name": "Hunger of Hadar",
 			"level": 3,
 			"school": "C",
 			"time": [
@@ -15703,7 +15703,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a pickled octopus tentacle"
+				"m": "一根醃漬過的章魚觸手"
 			},
 			"duration": [
 				{
@@ -15725,8 +15725,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You open a gateway to the dark between the stars, a region infested with unknown horrors. A 20-foot-radius sphere of blackness and bitter cold appears, centered on a point within range and lasting for the duration. This void is filled with a cacophony of soft whispers and slurping noises that can be heard up to 30 feet away. No light, magical or otherwise, can illuminate the area, and creatures fully within the area are {@condition blinded}.",
-				"The void creates a warp in the fabric of space, and the area is difficult terrain. Any creature that starts its turn in the area takes {@dice 2d6} cold damage. Any creature that ends its turn in the area must succeed on a Dexterity saving throw or take {@dice 2d6} acid damage as milky, otherworldly tentacles rub against it."
+				"你打開一道大門通往群星間、一處孕育著未知恐懼的黑暗地帶。一個黑暗與刺骨寒冷的20呎半徑球體以射程內一點為中心憑空出現，並在法術持續期間持續存在。這片虛空孔洞內充斥著距離30呎內都能被聽見的不和諧低語和啜食噪音。任何光源，無論是魔法或其他，都無法照亮這片區域，且完全處於這片區域的生物陷入{@condition 目盲}狀態。",
+				"這片虛空會使空間的維度扭曲，且該區域視作困難地形。任何在該區域開始它回合的生物會受到{@dice 2d6}寒冰傷害。任何在該區域結束它回合的生物則必須成功通過一次敏捷豁免，否則將因為遭到乳狀、異界觸手擦撞而受到{@dice 2d6}酸蝕傷害。"
 			],
 			"page": 251,
 			"damageInflict": [
@@ -18026,7 +18026,7 @@
 			]
 		},
 		{
-			"name": "Magic Circle",
+			"name": "防護法陣", "ENG_name": "Magic Circle",
 			"level": 3,
 			"school": "A",
 			"time": [
@@ -18046,7 +18046,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "holy water or powdered silver and iron worth at least 100 gp, which the spell consumes",
+					"text": "價值至少100金幣的聖水或鐵和銀粉，在施法時消耗",
 					"cost": 100,
 					"consume": true
 				}
@@ -18134,24 +18134,24 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You create a 10-foot-radius, 20-foot-tall cylinder of magical energy centered on a point on the ground that you can see within range. Glowing runes appear wherever the cylinder intersects with the floor or other surface.",
-				"Choose one or more of the following types of creatures: celestials, elementals, fey, fiends, or undead. The circle affects a creature of the chosen type in the following ways:",
+				"你以射程內你所能看見地面上的一處為中心，創造出一個10呎半徑、20呎高的魔法能量圓柱。閃爍的符文將出現在圓柱與地面或其他表面交界處的位置。",
+				"選擇以下一個或多個生物類型：天界生物、元素、精類、邪魔、或不死生物。這個法陣將對所選類型的生物產生以下影響：",
 				{
 					"type": "list",
 					"items": [
-						"The creature can't willingly enter the cylinder by nonmagical means. If the creature tries to use teleportation or interplanar travel to do so, it must first succeed on a Charisma saving throw.",
-						"The creature has disadvantage on attack rolls against targets within the cylinder.",
-						"Targets within the cylinder can't be {@condition charmed}, {@condition frightened}, or possessed by the creature."
+						"該生物無法自願地以非魔法手段進入圓柱區域。若該生物嘗試使用傳送或跨位面旅行這麼做，則它必須先成功通過一次魅力豁免。",
+						"該生物對圓柱內的目標所進行的攻擊檢定具有劣勢。",
+						"圓柱內的目標不會被該生物{@condition 魅惑}、{@condition 恐懼}、或附身。"
 					]
 				},
-				"When you cast this spell, you can elect to cause its magic to operate in the reverse direction, preventing a creature of the specified type from leaving the cylinder and protecting targets outside it."
+				"當你施放此法術時，你可以選擇讓這個魔法以相反的方向運作，避免指定類型的一個生物離開圓柱區域，並保護位於圓柱外面的目標。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, the duration increases by 1 hour for each slot level above 3rd."
+						"當你使用4環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，法術的持續時間就會再增加1小時。"
 					]
 				}
 			],
