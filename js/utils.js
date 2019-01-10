@@ -1151,7 +1151,7 @@ Parser.monImmResToFull = function (toParse) {
 		return out;
 	}
 
-	return serialJoin(toParse.map(it => Parser.DamageToDisplay(it)));
+	return serialJoin(toParse.map(it => toString(Parser.DamageToDisplay(it))));
 };
 
 Parser.monCondImmToFull = function (condImm) {
