@@ -2203,7 +2203,7 @@
 			"page": 217
 		},
 		{
-			"name": "Beacon of Hope",
+			"name": "希望信標", "ENG_name": "Beacon of Hope",
 			"level": 3,
 			"school": "A",
 			"time": [
@@ -2285,7 +2285,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"This spell bestows hope and vitality. Choose any number of creatures within range. For the duration, each target has advantage on Wisdom saving throws and death saving throws, and regains the maximum number of hit points possible from any healing."
+				"此法術將賦予希望和活力。選擇射程內任意數量的生物。在法術持續期間，每個目標在睿知豁免和死亡豁免中具有優勢，且在受到任何治療時會回復最大可能數值的生命值。"
 			],
 			"page": 217,
 			"isHeal": true
@@ -2353,7 +2353,7 @@
 			"page": 217
 		},
 		{
-			"name": "Bestow Curse",
+			"name": "降咒", "ENG_name": "Bestow Curse",
 			"level": 3,
 			"school": "N",
 			"time": [
@@ -2452,24 +2452,24 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You touch a creature, and that creature must succeed on a Wisdom saving throw or become cursed for the duration of the spell. When you cast this spell, choose the nature of the curse from the following options:",
+				"你觸碰一個生物，且該生物必須成功通過一次睿知豁免，否則在此法術持續期間受到詛咒。當你施放此法術時，從以下選項中選擇一個詛咒的性質：",
 				{
 					"type": "list",
 					"items": [
-						"Choose one ability score. While cursed, the target has disadvantage on ability checks and saving throws made with that ability score.",
-						"While cursed, the target has disadvantage on attack rolls against you.",
-						"While cursed, the target must make a Wisdom saving throw at the start of each of its turns. If it fails, it wastes its action that turn doing nothing.",
-						"While the target is cursed, your attacks and spells deal an extra {@dice 1d8} necrotic damage to the target."
+						"選擇一個屬性。當受到詛咒時，目標在以該屬性進行的屬性檢定和豁免檢定中具有劣勢。",
+						"當受到詛咒時，目標在對你進行的攻擊檢定中具有劣勢。",
+						"當受到詛咒時，目標必須在每次它的回合開始時進行一次睿知豁免。若豁免失敗，則它將浪費它這回合的動作什麼事都不做。",
+						"當目標受到詛咒時，你對該目標進行攻擊和法術將造成額外的{@dice 1d8}死靈傷害。"
 					]
 				},
-				"A remove curse spell ends this effect. At the DM's option, you may choose an alternative curse effect, but it should be no more powerful than those described above. The DM has final say on such a curse's effect."
+				"一個{@spell 移除詛咒}將會結束這個效果。根據DM的決定，你可能可以選擇一個其他的詛咒效果，但它不能比上述的效果更強大。DM擁有這類詛咒效果的最終決定權。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"If you cast this spell using a spell slot of 4th level or higher, the duration is concentration, up to 10 minutes. If you use a spell slot of 5th level or higher, the duration is 8 hours. If you use a spell slot of 7th level or higher, the duration is 24 hours. If you use a 9th level spell slot, the spell lasts until it is dispelled. Using a spell slot of 5th level or higher grants a duration that doesn't require concentration."
+						"當你使用4環或更高的法術位施放此法術時，你可以維持你在此法術的專注最多10分鐘。當你使用5環或更高的法術位施放此法術時，持續時間為8小時。當你使用7環或更高的法術位施放此法術時，持續時間為24小時。當你使用9環法術位施放此法術時，此法術將持續直到被解消。使用5環或更高的法術位施放此法術將會讓它的持續時間不再需要專注。"
 					]
 				}
 			],
@@ -6562,14 +6562,14 @@
 			]
 		},
 		{
-			"name": "Counterspell",
+			"name": "反制法術", "ENG_name": "Counterspell",
 			"level": 3,
 			"school": "A",
 			"time": [
 				{
 					"number": 1,
 					"unit": "reaction",
-					"condition": "which you take when you see a creature within 60 feet of you casting a spell"
+					"condition": "在你看見一個距離你60呎以內的生物施放法術時進行"
 				}
 			],
 			"range": {
@@ -6627,14 +6627,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You attempt to interrupt a creature in the process of casting a spell. If the creature is casting a spell of 3rd level or lower, its spell fails and has no effect. If it is casting a spell of 4th level or higher, make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a success, the creature's spell fails and has no effect."
+				"你嘗試中斷一個生物施展法術的過程。若該生物所施放的法術的環位為3環或以下，則該法術將失敗且不會產生任何效果。若它施放的法術的環位為4環或更高，則使用你的施法屬性進行一次屬性檢定。DC等同於10+該法術的環位。若檢定成功，該生物的法術失敗且不會產生任何效果。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, the interrupted spell has no effect if its level is less than or equal to the level of the spell slot you used."
+						"當你使用4環或更高的法術位施放此法術時，如果被中斷法術的環位等於或低於你所使用的法術位，則該法術不會產生任何效果。"
 					]
 				}
 			],
@@ -18681,7 +18681,7 @@
 			"isHeal": true
 		},
 		{
-			"name": "Mass Healing Word",
+			"name": "群體治癒真言", "ENG_name": "Mass Healing Word",
 			"level": 3,
 			"school": "V",
 			"time": [
@@ -18727,14 +18727,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"As you call out words of restoration, up to six creatures of your choice that you can see within range regain hit points equal to {@dice 1d4} + your spellcasting ability modifier. This spell has no effect on undead or constructs."
+				"隨著你喊出回復真言，射程內你所選最多六個且你能看見的生物回復等同於{@dice 1d4}+你的施法屬性調整值的生命值。此法術對不死生物或構裝體沒有任何效果。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, the healing increases by {@scaledice 1d4|3-9|1d4} for each slot level above 3rd."
+						"當你使用4環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，治療量便會增加{@scaledice 1d4|3-9|1d4}。"
 					]
 				}
 			],
@@ -22054,7 +22054,7 @@
 			]
 		},
 		{
-			"name": "Protection from Energy",
+			"name": "防護能量", "ENG_name": "Protection from Energy",
 			"level": 3,
 			"school": "A",
 			"time": [
@@ -22206,7 +22206,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"For the duration, the willing creature you touch has resistance to one damage type of your choice: acid, cold, fire, lightning, or thunder."
+				"在法術持續期間，你所觸碰的自願生物對一個你所選擇的傷害類型擁有抗性：酸蝕、寒冰、火焰、閃電、雷鳴。"
 			],
 			"page": 270,
 			"damageResist": [
@@ -27960,7 +27960,7 @@
 			"page": 283
 		},
 		{
-			"name": "Tongues",
+			"name": "巧舌術", "ENG_name": "Tongues",
 			"level": 3,
 			"school": "D",
 			"time": [
@@ -27977,7 +27977,7 @@
 			},
 			"components": {
 				"v": true,
-				"m": "a small clay model of a ziggurat"
+				"m": "一個金字形神塔的小型陶製模型"
 			},
 			"duration": [
 				{
@@ -28014,7 +28014,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"This spell grants the creature you touch the ability to understand any spoken language it hears. Moreover, when the target speaks, any creature that knows at least one language and can hear the target understands what it says."
+				"此法術將賦予你所觸碰的生物理解任何它所聽到的語言的能力。除此之外，當目標說話時，任何能聽見目標且知曉至少一種語言的生物也能理解它的話語。"
 			],
 			"page": 283
 		},
@@ -28521,7 +28521,7 @@
 			"page": 284
 		},
 		{
-			"name": "Vampiric Touch",
+			"name": "吸血鬼之觸", "ENG_name": "Vampiric Touch",
 			"level": 3,
 			"school": "N",
 			"time": [
@@ -28626,14 +28626,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"The touch of your shadow-wreathed hand can siphon life force from others to heal your wounds. Make a melee spell attack against a creature within your reach. On a hit, the target takes {@dice 3d6} necrotic damage, and you regain hit points equal to half the amount of necrotic damage dealt. Until the spell ends, you can make the attack again on each of your turns as an action."
+				"你纏繞著陰影之手的觸碰可以吸取他人的生命力來醫治自己的傷勢。對一個在你觸及範圍內的生物進行一次近戰法術攻擊。若命中，則目標將受到{@dice 3d6}死靈傷害，且你回復等同於造成死靈傷害一半數值的生命值。直到法術結束前，你可以在每個你的回合以一個動作再進行此攻擊。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@scaledice 3d6|3-9|1d6} for each slot level above 3rd."
+						"當你使用4環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 3d6|3-9|1d6}。"
 					]
 				}
 			],
@@ -29289,7 +29289,7 @@
 			"page": 287
 		},
 		{
-			"name": "Water Walk",
+			"name": "水面行走", "ENG_name": "Water Walk",
 			"level": 3,
 			"school": "T",
 			"time": [
@@ -29308,7 +29308,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a piece of cork"
+				"m": "一塊軟木塞"
 			},
 			"duration": [
 				{
@@ -29372,8 +29372,8 @@
 				"ritual": true
 			},
 			"entries": [
-				"This spell grants the ability to move across any liquid surface\u2014such as water, acid, mud, snow, quicksand, or lava\u2014as if it were harmless solid ground (creatures crossing molten lava can still take damage from the heat). Up to ten willing creatures you can see within range gain this ability for the duration.",
-				"If you target a creature submerged in a liquid, the spell carries the target to the surface of the liquid at a rate of 60 feet per round."
+				"此法術將給予在任何液體表面上行走的能力\u2014像是水、酸液、泥漿、雪、流沙、或岩漿\u2014就如同它們是無害的固體表面一樣（走過熔岩的生物仍可能會因為高溫而受到傷害）。射程內最多十個你所能看見的生物將在法術持續期間獲得這個能力。",
+				"若你以一個被液體淹沒的生物為目標，此法術將以每輪60呎的速率將目標帶到液體表面。"
 			],
 			"page": 287
 		},
