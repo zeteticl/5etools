@@ -5496,7 +5496,7 @@
 			"page": 225
 		},
 		{
-			"name": "Conjure Barrage",
+			"name": "召喚彈幕", "ENG_name": "Conjure Barrage",
 			"level": 3,
 			"school": "C",
 			"time": [
@@ -5515,7 +5515,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "one piece of ammunition or a thrown weapon"
+				"m": "一發彈藥或一把投擲武器"
 			},
 			"duration": [
 				{
@@ -5532,7 +5532,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You throw a nonmagical weapon or fire a piece of nonmagical ammunition into the air to create a cone of identical weapons that shoot forward and then disappear. Each creature in a 60-foot cone must succeed on a Dexterity saving throw. A creature takes {@dice 3d8} damage on a failed save, or half as much damage on a successful one. The damage type is the same as that of the weapon or ammunition used as a component."
+				"你向空中投擲一把非魔法武器或射出一發非魔法彈藥以創造出無數同樣的武器，以錐形向著前方散射並接著消失無蹤。每個在60呎錐形範圍內的生物必須進行一次敏捷豁免。一個豁免失敗的目標將受到{@dice 3d8}傷害，豁免成功則只受到一半的傷害。傷害類型與做為構材的武器或彈藥相同。"
 			],
 			"page": 225,
 			"savingThrow": [
@@ -10988,7 +10988,7 @@
 			"page": 239
 		},
 		{
-			"name": "Fear",
+			"name": "恐懼術", "ENG_name": "Fear",
 			"level": 3,
 			"school": "I",
 			"time": [
@@ -11007,7 +11007,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a white feather or the heart of a hen"
+				"m": "一根白羽毛或母雞的心臟"
 			},
 			"duration": [
 				{
@@ -11113,8 +11113,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You project a phantasmal image of a creature's worst fears. Each creature in a 30-foot cone must succeed on a Wisdom saving throw or drop whatever it is holding and become {@condition frightened} for the duration.",
-				"While {@condition frightened} by this spell, a creature must take the Dash action and move away from you by the safest available route on each of its turns, unless there is nowhere to move. If the creature ends its turn in a location where it doesn't have line of sight to you, the creature can make a Wisdom saving throw. On a successful save, the spell ends for that creature."
+				"你投射出生物心中最大恐懼的幻象魅影。每個30呎圓錐範圍內的生物必須成功通過一次睿知豁免，否則將丟下任何它所持握的東西，並在法術持續期間內陷入{@condition 恐懼}。",
+				"當因此法術而陷入{@condition 恐懼}時，除非它無路可逃，否則該生物必須在每個它的回合採取{@action 疾行}動作並以最安全的途徑遠離你。若該生物在無法看見你的地方結束它的回合，則它可以進行一次睿知豁免。若豁免成功，則結束此法術對該生物的效果。"
 			],
 			"page": 239,
 			"savingThrow": [
@@ -11252,7 +11252,7 @@
 			]
 		},
 		{
-			"name": "Feign Death",
+			"name": "假死術", "ENG_name": "Feign Death",
 			"level": 3,
 			"school": "N",
 			"time": [
@@ -11270,7 +11270,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a pinch of graveyard dirt"
+				"m": "一撮墓地泥土"
 			},
 			"duration": [
 				{
@@ -11328,8 +11328,8 @@
 				"ritual": true
 			},
 			"entries": [
-				"You touch a willing creature and put it into a cataleptic state that is indistinguishable from death.",
-				"For the spell's duration, or until you use an action to touch the target and dismiss the spell, the target appears dead to all outward inspection and to spells used to determine the target's status. The target is {@condition blinded} and {@condition incapacitated}, and its speed drops to 0. The target has resistance to all damage except psychic damage. If the target is diseased or {@condition poisoned} when you cast the spell, or becomes diseased or {@condition poisoned} while under the spell's effect, the disease and poison have no effect until the spell ends."
+				"你觸碰一個自願生物，並讓它進入一種難以跟死亡區別的僵硬狀態。",
+				"在此法術持續期間，或直到你使用一個動作觸碰該目標並解消此法術，目標在對所有對其身體的檢驗、以及使用法術確認其狀態的結果上都會呈現已經死亡。目標將陷入{@condition 目盲}和{@condition 無力}狀態，且它的移動速度歸零。目標對除了精神傷害以外的所有傷害具有抗性。若目標在你施放此法術時已經感染疾病或{@condition 中毒}，或在此法術的效果作用時感染疾病或{@condition 中毒}，則該疾病和毒素在此法術結束前都不會有任何效果。"
 			],
 			"page": 240,
 			"damageResist": [
@@ -17396,7 +17396,7 @@
 			]
 		},
 		{
-			"name": "Lightning Arrow",
+			"name": "閃電箭矢", "ENG_name": "Lightning Arrow",
 			"level": 3,
 			"school": "T",
 			"time": [
@@ -17435,16 +17435,16 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"The next time you make a ranged weapon attack during the spell's duration, the weapon's ammunition, or the weapon itself if it's a thrown weapon, transforms into a bolt of lightning. Make the attack roll as normal. The target takes {@dice 4d8} lightning damage on a hit, or half as much damage on a miss, instead of the weapon's normal damage.",
-				"Whether you hit or miss, each creature within 10 feet of the target must make a Dexterity saving throw. Each of these creatures takes {@dice 2d8} lightning damage on a failed save, or half as much damage on a successful one.",
-				"The piece of ammunition or weapon then returns to its normal form."
+				"在法術持續期間，下一次你進行遠程武器攻擊時，該武器的彈藥、或若其為投擲武器的話則該武器本身，將轉化成一束閃電。如常進行一次攻擊檢定。若命中則目標受到{@dice 4d8}閃電傷害，失手的話則只受到一半的傷害。此法術傷害取代原本的武器傷害。",
+				"無論你命中與否，每個距離該目標10呎內的生物都必須進行一次敏捷豁免。每個豁免失敗的生物將受到{@dice 2d8}閃電傷害，豁免成功則只受到一半的傷害。",
+				"該發彈藥或武器將接著回復它原本的型態。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, the damage for both effects of the spell increases by {@scaledice 4d8;2d8|3-9|1d8} for each slot level above 3rd."
+						"當你使用4環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，此法術的兩個傷害都會再增加{@scaledice 4d8;2d8|3-9|1d8}。"
 					]
 				}
 			],
@@ -17457,7 +17457,7 @@
 			]
 		},
 		{
-			"name": "Lightning Bolt",
+			"name": "閃電束", "ENG_name": "Lightning Bolt",
 			"level": 3,
 			"school": "V",
 			"time": [
@@ -17476,7 +17476,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a bit of fur and a rod of amber, crystal, or glass"
+				"m": "一塊毛皮和一桿琥珀、水晶、或玻璃"
 			},
 			"duration": [
 				{
@@ -17530,15 +17530,15 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A stroke of lightning forming a line 100 feet long and 5 feet wide blasts out from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. A creature takes {@dice 8d6} lightning damage on a failed save, or half as much damage on a successful one.",
-				"The lightning ignites flammable objects in the area that aren't being worn or carried."
+				"一道閃電從你向著你所選擇的一個方向轟鳴而出，形成一束100呎長、5呎寬的直線。每個在這個直線內的生物必須進行一次敏捷豁免。豁免失敗的生物將受到{@dice 8d6}閃電傷害，豁免成功則只受到一半的傷害。",
+				"這束閃電會點燃範圍內所有未被穿戴或攜帶的可燃物體。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@scaledice 8d6|3-9|1d6} for each slot level above 3rd."
+						"當你使用4環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 8d6|3-9|1d6}。"
 					]
 				}
 			],
@@ -25449,7 +25449,7 @@
 			]
 		},
 		{
-			"name": "動物交談", "ENG_name": "Speak with Animals",
+			"name": "動物交談術", "ENG_name": "Speak with Animals",
 			"level": 1,
 			"school": "D",
 			"time": [
@@ -25637,7 +25637,7 @@
 			"page": 277
 		},
 		{
-			"name": "Speak with Plants",
+			"name": "植物交談術", "ENG_name": "Speak with Plants",
 			"level": 3,
 			"school": "T",
 			"time": [
@@ -25684,11 +25684,11 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You imbue plants within 30 feet of you with limited sentience and animation, giving them the ability to communicate with you and follow your simple commands. You can question plants about events in the spell's area within the past day, gaining information about creatures that have passed, weather, and other circumstances.",
-				"You can also turn difficult terrain caused by plant growth (such as thickets and undergrowth) into ordinary terrain that lasts for the duration. Or you can turn ordinary terrain where plants are present into difficult terrain that lasts for the duration, causing vines and branches to hinder pursuers, for example.",
-				"Plants might be able to perform other tasks on your behalf, at the DM's discretion. The spell doesn't enable plants to uproot themselves and move about, but they can freely move branches, tendrils, and stalks.",
-				"If a plant creature is in the area, you can communicate with it as if you shared a common language, but you gain no magical ability to influence it.",
-				"This spell can cause the plants created by the entangle spell to release a {@condition restrained} creature."
+				"你賦予距離你30呎內的植物有限的知覺和活力，給予它們與你溝通並遵從你簡單命令的能力。你可以詢問植物關於在此法術範圍的過去幾天內所發生的事件，藉此知曉關於曾經過這裡的生物、天氣、和其它事項的情報。",
+				"你也可以將植物生長而導致的困難地形（像是灌木叢和矮樹叢）在持續期間轉變成普通地形。或你可以使有植物存在的普通地形在持續期間轉變成困難地形，例如讓藤蔓和樹枝阻撓追兵。",
+				"根據DM的判斷，植物也可能可以執行其它你所指示的任務。此法術並不能讓植物拔根而起並四處移動，但它們可以自由的移動它們的枝枒、蔓鬚、和莖桿。",
+				"如果一個植物生物在該區域內，你可以如同你和它之間有著共通語言一般與之交談，但你不會因此獲得影響它的魔法能力。",
+				"此法術可以讓{@spell 糾纏術}創造出的植物釋放一個被{@condition 束縛}的生物。"
 			],
 			"page": 277
 		},
