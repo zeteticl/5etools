@@ -14,7 +14,7 @@
 			"classTableGroups": [
 				{
 					"colLabels": [
-						"{@filter Cantrips Known|spells|level=0|class=Druid}"
+						"{@filter 已知戲法|spells|level=0|class=Druid}"
 					],
 					"rows": [
 						[
@@ -80,7 +80,7 @@
 					]
 				},
 				{
-					"title": "Spell Slots per Spell Level",
+					"title": "法術位/每法術環",
 					"colLabels": [
 						"{@filter 1st|spells|level=1|class=Druid}",
 						"{@filter 2nd|spells|level=2|class=Druid}",
@@ -320,22 +320,22 @@
 				"armor": [
 					"light",
 					"medium",
-					"shields (druids will not wear armor or use shields made of metal)"
+					"盾牌（德魯伊不能穿戴或使用金屬製成的護甲和盾牌）"
 				],
 				"weapons": [
-					"clubs",
-					"daggers",
-					"darts",
-					"javelins",
-					"maces",
-					"quarterstaffs",
-					"scimitars",
-					"sickles",
-					"slings",
-					"spears"
+					"棍棒",
+					"匕首",
+					"飛鏢",
+					"標槍",
+					"硬頭錘",
+					"長棍",
+					"彎刀",
+					"鐮刀",
+					"投石索",
+					"矛"
 				],
 				"tools": [
-					"Herbalism kit"
+					"藥草師工具組"
 				],
 				"skills": {
 					"choose": 2,
@@ -354,9 +354,9 @@
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
-					"(a) a wooden {@item shield|phb} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
-					"(a) a {@item scimitar|phb} or (b) any {@filter simple melee weapon|items|source=phb|category=basic|type=simple weapon;melee weapon}",
-					"{@item Leather armor|phb}, an {@item explorer's pack|phb}, and a {@item druidic focus|phb}"
+					"(a)一個木製{@item 盾牌|phb} 或 (b)任意一把{@filter 簡易武器|items|source=phb|category=basic|type=simple weapon}",
+					"(a)一把{@item 彎刀|phb} 或 (b)任意一把{@filter 簡易近戰武器|items|source=phb|category=basic|type=simple weapon;melee weapon}",
+					"一件{@item 皮甲|phb}、一套{@item 探索者套裝|phb}、和一個{@item 德魯伊法器|phb}"
 				],
 				"goldAlternative": "{@dice 2d4×10|2d4 × 10|Starting Gold}"
 			},
@@ -368,7 +368,7 @@
 					"armor": [
 						"light",
 						"medium",
-						"shields (druids will not wear armor or use shields made of metal)"
+						"盾牌（德魯伊不能穿戴或使用金屬製成的護甲和盾牌）"
 					]
 				}
 			},

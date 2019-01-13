@@ -13,7 +13,7 @@
 			],
 			"classTableGroups": [
 				{
-					"title": "Spell Slots per Spell Level",
+					"title": "法術位/每法術環",
 					"colLabels": [
 						"{@filter 1st|spells|level=1|class=Paladin}",
 						"{@filter 2nd|spells|level=2|class=Paladin}",
@@ -191,10 +191,10 @@
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
-					"(a) a {@filter martial weapon|items|source=phb|category=basic|type=martial weapon} and a {@item shield|phb} or (b) two {@filter martial weapons|items|source=phb|category=basic|type=martial weapon}",
-					"(a) five {@item javelin|phb|javelins} or (b) any {@filter simple melee weapon|items|source=phb|category=basic|type=simple weapon;melee weapon}",
-					"(a) a {@item priest's pack|phb} or (b) an {@item explorer's pack|phb}",
-					"{@item Chain mail|phb} and a {@item holy symbol|phb}"
+					"(a)一把{@filter 軍用武器|items|source=phb|category=basic|type=martial weapon}和一面{@item 盾牌|phb} 或 (b)二把{@filter 軍用武器|items|source=phb|category=basic|type=martial weapon}",
+					"(a)五把{@item 標槍|phb} 或 (b)任意一把{@filter 簡易近戰武器|items|source=phb|category=basic|type=simple weapon;melee weapon}",
+					"(a)一套{@item 祭司套裝|phb} 或 (b)一套{@item 探索者套裝|phb}",
+					"一件{@item 鎖子甲|phb}和一個{@item 聖徽|phb}"
 				],
 				"goldAlternative": "{@dice 5d4×10|5d4 × 10|Starting Gold}"
 			},

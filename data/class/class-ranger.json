@@ -14,7 +14,7 @@
 			"classTableGroups": [
 				{
 					"colLabels": [
-						"{@filter Spells Known|spells|class=ranger}"
+						"{@filter 已知法術|spells|class=ranger}"
 					],
 					"rows": [
 						[
@@ -80,7 +80,7 @@
 					]
 				},
 				{
-					"title": "Spell Slots per Spell Level",
+					"title": "法術位/每法術環",
 					"colLabels": [
 						"{@filter 1st|spells|level=1|class=Ranger}",
 						"{@filter 2nd|spells|level=2|class=Ranger}",
@@ -259,10 +259,10 @@
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
-					"(a) {@item scale mail|phb} or (b) {@item leather armor|phb}",
-					"(a) two {@item shortsword|phb|shortswords} or (b) two {@filter simple melee weapons|items|source=phb|category=basic|type=simple weapon;melee weapon}",
-					"(a) a {@item dungeoneer's pack|phb} or (b) an {@item explorer's pack|phb}",
-					"A {@item longbow|phb} and a {@item quiver|phb} of {@item arrows (20)|phb|20 arrows}"
+					"(a)一件{@item 鱗甲|phb} 或 (b)一件{@item 皮甲|phb}",
+					"(a)二把{@item 短劍|phb} 或 (b)二把{@filter 簡易近戰武器|items|source=phb|category=basic|type=simple weapon;melee weapon}",
+					"(a)一套{@item 地城探險家套裝|phb} 或 (b)一套{@item 探索者套裝|phb}",
+					"一把{@item 長弓|phb}和一個裝有{@item 箭(20)|phb|20支箭}的{@item 箭袋|phb}"
 				],
 				"goldAlternative": "{@dice 5d4×10|5d4 × 10|Starting Gold}"
 			},

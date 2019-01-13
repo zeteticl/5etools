@@ -800,10 +800,10 @@ function EntryRenderer () {
 								const asNum = Number(rollText || 6);
 								fauxEntry.successThresh = 7 - asNum;
 								fauxEntry.successMax = 6;
-								textStack[0] += `(Recharge `;
+								textStack[0] += `（充能 `;
 								fauxEntry.displayText = `${asNum}${asNum < 6 ? `\u20136` : ""}`;
 								self._recursiveEntryRender(fauxEntry, textStack, depth);
-								textStack[0] += `)`;
+								textStack[0] += `）`;
 								break;
 							}
 						}
@@ -3134,12 +3134,12 @@ EntryRenderer.item = {
 		}
 		// The following could be encoded in JSON, but they depend on more than one JSON property; maybe fix if really bored later
 		if (item.armor) {
-			if (item.resist) item.entries.push("你在穿著此護甲時具有對" + item.resist + "傷害的抗力。");
+			if (item.resist) item.entries.push("你在穿著此護甲時具有對" + item.resist + "傷害的抗性。");
 			if (item.armor && item.stealth) item.entries.push("穿戴者在敏捷（隱匿）檢定上有劣勢。");
 			if (item.type === "HA" && item.strength) item.entries.push("如果穿戴者的力量屬性不到 " + item.strength + "，他們的移動速度減少10呎。");
 		} else if (item.resist) {
 			if (item.type === "P") item.entries.push("當你飲下這瓶藥水，你獲得對" + item.resist + "傷害的抗力持續1小時。");
-			if (item.type === "RG") item.entries.push("你在穿戴此戒指時具有對" + item.resist + "傷害的抗力。");
+			if (item.type === "RG") item.entries.push("你在穿戴此戒指時具有對" + item.resist + "傷害的抗性。");
 		}
 		if (item.type === "SCF") {
 			if (item.scfType === "arcane") item.entries.push("奧術法器是一種被設計成能用以引導奧秘法術能量的特殊物品。術士、契術師、或法師可以將這類物品作為法器使用，用它來取代任何沒有列出價值的材料構材。");
@@ -3250,9 +3250,9 @@ EntryRenderer.item = {
 				const entries = item.entries;
 				entries.push({
 					type: "entries",
-					name: "Base items",
+					name: "基礎物品：",
 					entries: [
-						"This item variant can be applied to the following base items:",
+						"這個物品變體可以應用於以下基礎物品：",
 						{
 							type: "list",
 							items: variants.map(({base, specificVariant}) => {
@@ -5539,7 +5539,7 @@ EntryRenderer.stripTags = function (str) {
 								if (isNaN(asNum)) {
 									throw new Error(`Could not parse "${rollText}" as a number!`)
 								}
-								return `(Recharge ${asNum}${asNum < 6 ? `\u20136` : ""})`;
+								return `（充能 ${asNum}${asNum < 6 ? `\u20136` : ""}）`;
 							}
 							case "@chance": {
 								return displayText || `${rollText} percent`;

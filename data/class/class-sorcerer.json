@@ -14,7 +14,7 @@
 			"classTableGroups": [
 				{
 					"colLabels": [
-						"Sorcery Points"
+						"術法點"
 					],
 					"rows": [
 						[
@@ -81,8 +81,8 @@
 				},
 				{
 					"colLabels": [
-						"{@filter Cantrips Known|spells|level=0|class=Sorcerer}",
-						"{@filter Spells Known|spells|class=Sorcerer}"
+						"{@filter 已知戲法|spells|level=0|class=Sorcerer}",
+						"{@filter 已知法術|spells|class=Sorcerer}"
 					],
 					"rows": [
 						[
@@ -168,7 +168,7 @@
 					]
 				},
 				{
-					"title": "Spell Slots per Spell Level",
+					"title": "法術位/每法術環",
 					"colLabels": [
 						"{@filter 1st|spells|level=1|class=Sorcerer}",
 						"{@filter 2nd|spells|level=2|class=Sorcerer}",
@@ -406,11 +406,11 @@
 			],
 			"startingProficiencies": {
 				"weapons": [
-					"daggers",
-					"darts",
-					"slings",
-					"quarterstaffs",
-					"light crossbows"
+					"匕首",
+					"飛鏢",
+					"投石索",
+					"長棍",
+					"輕弩"
 				],
 				"skills": {
 					"choose": 2,
@@ -427,10 +427,10 @@
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
-					"(a) a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
-					"(a) a {@item component pouch|phb} or (b) an {@item arcane focus|phb}",
-					"(a) a {@item dungeoneer's pack|phb} or (b) an {@item explorer's pack|phb}",
-					"Two {@item dagger|phb|daggers}"
+					"(a)一把{@item 輕弩|phb}和{@item 弩矢(20)|phb|20支弩矢} 或 (b)任意一把{@filter 簡易武器|items|source=phb|category=basic|type=simple weapon}",
+					"(a)一個{@item 材料包|phb} 或 (b)一個{@item 奧術法器|phb}",
+					"(a)一套{@item 地城探險家套裝|phb} 或 (b)一套{@item 探索者套裝|phb}",
+					"二把{@item 匕首|phb}"
 				],
 				"goldAlternative": "{@dice 3d4×10|3d4 × 10|Starting Gold}"
 			},

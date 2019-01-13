@@ -49,7 +49,7 @@ let magiclist;
 const sourceFilter = getSourceFilter();
 const DEFAULT_HIDDEN_TYPES = new Set(["$", "Futuristic", "Modern", "Renaissance"]);
 const typeFilter = new Filter({header: "Type", headerName: "類型", deselFn: (it) => DEFAULT_HIDDEN_TYPES.has(it), 
-	items:["$","Trade Good","Adventuring Gear","Light Armor","Medium Armor","Heavy Armor","Shield","Simple Weapon","Martial Weapon","Melee Weapon","Ranged Weapon","Firearm","Ammunition","Explosive","Tool","Artisan Tool","Instrument","Gaming Set","Rod","Staff","Wand","Scroll","Ring","Wondrous Item","Potion","Poison","Mount","Vehicle","Tack and Harness","Renaissance","Modern","Futuristic"], displayFn: Parser.ItemTypeToDisplay});
+	items:["$","Trade Good","Adventuring Gear","Light Armor","Medium Armor","Heavy Armor","Shield","Simple Weapon","Martial Weapon","Melee Weapon","Ranged Weapon","Firearm","Ammunition","Explosive","Tool","Artisan Tool","Instrument","Gaming Set","Spellcasting Focus","Rod","Staff","Wand","Scroll","Ring","Wondrous Item","Potion","Poison","Mount","Vehicle","Tack and Harness","Renaissance","Modern","Futuristic"], displayFn: Parser.ItemTypeToDisplay});
 const tierFilter = new Filter({header: "Tier", headerName: "階級", items: ["None", "Minor", "Major"]});
 const propertyFilter = new Filter({header: "Property", headerName: "物品屬性", displayFn: StrUtil.uppercaseFirst});
 const costFilter = new RangeFilter({header: "Cost", headerName: "價值", min: 0, max: 100, allowGreater: true, suffix: "金幣"});
@@ -429,7 +429,7 @@ function loadhash (id) {
 
 		// tools, artisan tools, instruments, gaming sets
 		if (type === "T" || type === "AT" || type === "INS" || type === "GS") {
-			renderStack.push(`<p class="text-align-center"><i>See the <a href="${renderer.baseUrl}variantrules.html#${UrlUtil.encodeForHash(["Tool Proficiencies", "XGE"])}" target="_blank">Tool Proficiencies</a> entry of the Variant and Optional rules page for more information</i></p>`);
+			renderStack.push(`<p class="text-align-center"><i>參見「變體與可選規則」頁面的 <a href="${renderer.baseUrl}variantrules.html#${UrlUtil.encodeForHash(["Tool Proficiencies", "XGE"])}" target="_blank">工具熟練</a> 條目以瞭解更多情報。</i></p>`);
 			if (type === "INS") {
 				const additionEntriesList = {type: "entries", entries: TOOL_INS_ADDITIONAL_ENTRIES};
 				renderer.recursiveEntryRender(additionEntriesList, renderStack, 1);
@@ -499,88 +499,88 @@ function loadsub (sub) {
 }
 
 const TOOL_INS_ADDITIONAL_ENTRIES = [
-	"Proficiency with a musical instrument indicates you are familiar with the techniques used to play it. You also have knowledge of some songs commonly performed with that instrument.",
+	"熟練於一項樂器代表著你熟悉於使用並演奏它的技巧。你同時也知曉一些常以該樂器演奏的經典曲目。",
 	{
 		"type": "entries",
-		"name": "History",
+		"name": "歷史",
 		"entries": [
-			"Your expertise aids you in recalling lore related to your instrument."
+			"你的專業有助你回想那些與你樂器有關的傳說。"
 		]
 	},
 	{
 		"type": "entries",
-		"name": "Performance",
+		"name": "表演",
 		"entries": [
-			"Your ability to put on a good show is improved when you incorporate an instrument into your act."
+			"當你將樂器融入你的演出時，你上演一齣優秀表演的能力將會因此提升。"
 		]
 	},
 	{
 		"type": "entries",
-		"name": "Compose a Tune",
+		"name": "作曲",
 		"entries": [
-			"As part of a long rest, you can compose a new tune and lyrics for your instrument. You might use this ability to impress a noble or spread scandalous rumors with a catchy tune."
+			"做為一次長休的一部份，你可以為你的樂器譜寫一段新的旋律和歌詞。你可能可以使用這項能力以這段琅琅上口的曲調驚艷一名貴族、或是散佈流言蜚語。"
 		]
 	},
 	{
 		"type": "table",
-		"caption": "Musical Instrument",
+		"caption": "樂器",
 		"colLabels": [
-			"Activity", "DC"
+			"用途", "DC"
 		],
 		"colStyles": [
 			"col-10",
 			"col-2 text-align-center"
 		],
 		"rows": [
-			["Identify a tune", "10"],
-			["Improvise a tune", "20"]
+			["辨識出一段旋律", "10"],
+			["即興演奏一段旋律", "20"]
 		]
 	}
 ];
 
 const TOOL_GS_ADDITIONAL_ENTRIES = [
-	"Proficiency with a gaming set applies to one type of game, such as Three-Dragon Ante or games of chance that use dice.",
+	"熟練於一項遊戲套組代表著精通於一種遊戲類型，像是三龍牌、或是使用骰子的機率遊戲。",
 	{
 		"type": "entries",
-		"name": "Components",
+		"name": "構成元件",
 		"entries": [
-			"A gaming set has all the pieces needed to play a specific game or type of game, such as a complete deck of cards or a board and tokens."
+			"一套遊戲套組內含遊玩某項特定遊戲或遊戲類型所需的所有材料，像是一副完整的牌組、或是一張棋盤和棋子。"
 		]
 	},
 	{
 		"type": "entries",
-		"name": "History",
+		"name": "歷史",
 		"entries": [
-			"Your mastery of a game includes knowledge of its history, as well as of important events it was connected to or prominent historical figures involved with it."
+			"你對這項遊戲的精通也包括了瞭解關於它的歷史、與它有關的重要事件、以及牽涉到它的著名歷史人物。"
 		]
 	},
 	{
 		"type": "entries",
-		"name": "Insight",
+		"name": "察言觀色",
 		"entries": [
-			"Playing games with someone is a good way to gain understanding of their personality, granting you a better ability to discern their lies from their truths and read their mood."
+			"與某人一起玩遊戲是一個理解他們個人特質的好方法，這讓你可以更容易的分辨他們的謊言，並理解他們的情緒。"
 		]
 	},
 	{
 		"type": "entries",
-		"name": "Sleight of Hand",
+		"name": "手上把戲",
 		"entries": [
-			"Sleight of Hand is a useful skill for cheating at a game, as it allows you to swap pieces, palm cards, or alter a die roll. Alternatively, engrossing a target in a game by manipulating the components with dexterous movements is a great distraction for a pickpocketing attempt."
+			"手上把戲在你想要於遊戲中作弊時是一項相當有用的技能，它讓你可以讓棋子換位、在掌中藏牌、或改變擲骰的結果。或者，藉由靈巧的操作遊戲中的元件以使目標全神貫注於遊戲中，也能在嘗試趁機扒竊時起到很好的分心效果。"
 		]
 	},
 	{
 		"type": "table",
-		"caption": "Gaming Set",
+		"caption": "遊戲套組",
 		"colLabels": [
-			"Activity", "DC"
+			"用途", "DC"
 		],
 		"colStyles": [
 			"col-10",
 			"col-2 text-align-center"
 		],
 		"rows": [
-			["Catch a player cheating", "15"],
-			["Gain insight into an opponent's personality", "15"]
+			["逮到玩家的作弊行為", "15"],
+			["了解一名對手的個人特質", "15"]
 		]
 	}
 ];

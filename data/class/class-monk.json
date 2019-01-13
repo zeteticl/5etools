@@ -14,9 +14,9 @@
 			"classTableGroups": [
 				{
 					"colLabels": [
-						"Martial Arts",
-						"Ki Points",
-						"Unarmored Movement"
+						"武藝",
+						"氣",
+						"無甲移動"
 					],
 					"rows": [
 						[
@@ -345,10 +345,10 @@
 			"startingProficiencies": {
 				"weapons": [
 					"simple",
-					"shortswords"
+					"短劍"
 				],
 				"tools": [
-					"any one type of artisan's tools or any one musical instrument of your choice"
+					"一種你所選擇的工匠工具 或 一種你所選擇的樂器"
 				],
 				"skills": {
 					"choose": 2,
@@ -365,9 +365,9 @@
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
-					"(a) a {@item shortsword|phb} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
-					"(a) a {@item dungeoneer's pack|phb} or (b) an {@item explorer's pack|phb}",
-					"10 {@item dart|phb|darts}"
+					"(a)一把{@item 短劍|phb} 或 (b)任意一把{@filter 簡易武器|items|source=phb|category=basic|type=simple weapon}",
+					"(a)一套{@item 地城探險家套裝|phb} 或 (b)一套{@item 探索者套裝|phb}",
+					"10支{@item 飛鏢|phb}"
 				],
 				"goldAlternative": "{@dice 5d4|5d4|Starting Gold}"
 			},
@@ -379,7 +379,7 @@
 				"proficienciesGained": {
 					"weapons": [
 						"simple",
-						"shortswords"
+						"短劍"
 					]
 				}
 			},

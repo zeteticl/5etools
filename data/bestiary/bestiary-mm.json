@@ -2335,7 +2335,7 @@
 			]
 		},
 		{
-			"name": "Allosaurus",
+			"name": "異特龍", "ENG_name": "Allosaurus",
 			"group": "Dinosaurs",
 			"size": "L",
 			"type": "beast",
@@ -2373,19 +2373,19 @@
 				{
 					"name": "猛撲",
 					"entries": [
-						"若allosaurus向著一個生物直線移動至少30呎並接著在同回合以一次爪抓攻擊命中它，則目標必須成功通過一次DC 13的力量豁免，否則被擊倒{@condition 伏地}。若目標{@condition 伏地}，則allosaurus能夠以一次附贈動作對它進行一次啃咬攻擊。"
+						"若異特龍向著一個生物直線移動至少30呎並接著在同回合以一次爪抓攻擊命中它，則目標必須成功通過一次DC 13的力量豁免，否則被擊倒{@condition 伏地}。若目標{@condition 伏地}，則異特龍能夠以一次附贈動作對它進行一次啃咬攻擊。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
 					"entries": [
 						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}15 ({@damage 2d10 + 4})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "爪抓",
 					"entries": [
 						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}8 ({@damage 1d8 + 4})劈砍傷害。"
 					]
@@ -4314,7 +4314,7 @@
 			]
 		},
 		{
-			"name": "Ankylosaurus",
+			"name": "甲龍", "ENG_name": "Ankylosaurus",
 			"group": "Dinosaurs",
 			"size": "H",
 			"type": "beast",
@@ -4347,7 +4347,7 @@
 			"cr": "3",
 			"action": [
 				{
-					"name": "Tail",
+					"name": "尾擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及10呎，單一目標。{@h}18 ({@damage 4d6 + 4})鈍擊傷害。若目標為一個生物，則它必須成功通過一次DC 14的力量豁免，否則被擊倒{@condition 伏地}。"
 					]
@@ -6723,7 +6723,7 @@
 			]
 		},
 		{
-			"name": "Black Pudding",
+			"name": "黑布丁", "ENG_name": "Black Pudding",
 			"size": "L",
 			"type": "ooze",
 			"source": "MM",
@@ -6761,42 +6761,42 @@
 				"frightened",
 				"prone"
 			],
-			"senses": "盲視60呎 (blind beyond this radius)",
+			"senses": "盲視60呎（超過半徑範圍則視作目盲）",
 			"passive": 8,
 			"cr": "4",
 			"trait": [
 				{
-					"name": "Amorphous",
+					"name": "無定形",
 					"entries": [
-						"The pudding can move through a space as narrow as 1 inch wide without squeezing."
+						"黑布丁可以移動穿越最窄1英寸的狹窄空間而不用擠縮身體。"
 					]
 				},
 				{
-					"name": "Corrosive Form",
+					"name": "腐蝕形態",
 					"entries": [
-						"A creature that touches the pudding or hits it with a melee attack while within 5 feet of it takes 4 ({@damage 1d8}) acid damage. Any nonmagical weapon made of metal or wood that hits the pudding corrodes. After dealing damage, the weapon takes a permanent and cumulative \u22121 penalty to damage rolls. If its penalty drops to \u22125, the weapon is destroyed. Nonmagical ammunition made of metal or wood that hits the pudding is destroyed after dealing damage. The pudding can eat through 2-inch-thick, nonmagical wood or metal in 1 round."
+						"一個觸碰黑布丁或在距離它5呎內時以近戰攻擊命中它的生物將受到4 ({@damage 1d8})酸蝕傷害。任何金屬或木質製成的非魔法武器會在命中黑布丁時被腐蝕。在造成傷害之後，該武器的傷害骰將受到一個永久且可累積的\u22121罰值。若該罰值累積至\u22125，則該武器被摧毀。金屬或木質製成的非魔法彈藥會在命中黑布丁時並造成傷害後被摧毀。黑布丁可以在1輪內吃掉2吋厚、非魔法的木質或金屬。"
 					]
 				},
 				{
-					"name": "Spider Climb",
+					"name": "蛛行",
 					"entries": [
-						"The pudding can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+						"黑布丁可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Pseudopod",
+					"name": "偽足",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3}) bludgeoning damage plus 18 ({@damage 4d8}) acid damage. In addition, nonmagical armor worn by the target is partly dissolved and takes a permanent and cumulative \u22121 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})鈍擊傷害加 18 ({@damage 4d8})酸蝕傷害。此外，目標穿著的非魔法護甲將被部分溶解，並它所提供的AC將受到永久且可累積的\u22121罰值。若它的AC被此罰值減至10，則該護甲被摧毀。"
 					]
 				}
 			],
 			"reaction": [
 				{
-					"name": "Split",
+					"name": "分裂",
 					"entries": [
-						"When a pudding that is Medium or larger is subjected to lightning or slashing damage, it splits into two new puddings if it has at least 10 hit points. Each new pudding has hit points equal to half the original pudding's, rounded down. New puddings are one size smaller than the original pudding."
+						"當一個體型為中型或更大的黑布丁受到閃電或劈砍傷害，若它擁有至少10點生命值，則它將分裂成兩個新的黑布丁。每個新的黑布丁具有等同於原本黑布丁一半的生命值，向下取整。新的黑布丁的體型比原本黑布丁的體型小一級。"
 					]
 				}
 			],
@@ -16375,7 +16375,7 @@
 			]
 		},
 		{
-			"name": "Gelatinous Cube",
+			"name": "凝膠方塊", "ENG_name": "Gelatinous Cube",
 			"size": "L",
 			"type": "ooze",
 			"source": "MM",
@@ -16406,40 +16406,40 @@
 				"frightened",
 				"prone"
 			],
-			"senses": "盲視60呎 (blind beyond this radius)",
+			"senses": "盲視60呎（超過半徑範圍則視作目盲）",
 			"passive": 8,
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Ooze Cube",
+					"name": "泥怪方塊",
 					"entries": [
-						"The cube takes up its entire space. Other creatures can enter the space, but a creature that does so is subjected to the cube's Engulf and has disadvantage on the saving throw.",
-						"Creatures inside the cube can be seen but have total cover.",
-						"A creature within 5 feet of the cube can take an action to pull a creature or object out of the cube. Doing so requires a successful DC 12 Strength check, and the creature making the attempt takes 10 ({@damage 3d6}) acid damage.",
-						"The cube can hold only one Large creature or up to four Medium or smaller creatures inside it at a time."
+						"凝膠方塊佔據它所在位置的整個空間。其他生物可以進入該空間，但這麼做的生物將成為凝膠方塊吞沒能力的目標，且在該豁免檢定中具有劣勢。",
+						"在凝膠方塊內的生物可以被看見，但仍視作具有全掩護。",
+						"一個距離凝膠方塊5呎內的生物可以採取一個動作以將一個生物或物體從凝膠方塊內拉出。這麼做需要成功通過一次DC 12的力量檢定，且進行此嘗試的生物將受到10 ({@damage 3d6})酸蝕傷害。",
+						"凝膠方塊體內同時只能容納一個大型生物、或最多四個體型為中型或更小的生物。"
 					]
 				},
 				{
-					"name": "Transparent",
+					"name": "透明",
 					"entries": [
-						"Even when the cube is in plain sight, it takes a successful DC 15 Wisdom (Perception) check to spot a cube that has neither moved nor attacked. A creature that tries to enter the cube's space while unaware of the cube is surprised by the cube."
+						"即使當凝膠方塊處於顯眼的位置，要發現一個未移動且未攻擊的凝膠方塊仍需要成功通過一次DC 15的睿知（{@skill 感知}）檢定。一個沒察覺凝膠方塊的存在而嘗試進入凝膠方塊所在空間的生物視作被該方塊突襲。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Pseudopod",
+					"name": "偽足",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一生物。 {@h}10 ({@damage 3d6}) acid damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一生物。{@h}10 ({@damage 3d6})酸蝕傷害。"
 					]
 				},
 				{
-					"name": "Engulf",
+					"name": "吞沒",
 					"entries": [
-						"The cube moves up to its speed. While doing so, it can enter Large or smaller creatures' spaces. Whenever the cube enters a creature's space, the creature must make a DC 12 Dexterity saving throw.",
-						"On a successful save, the creature can choose to be pushed 5 feet back or to the side of the cube. A creature that chooses not to be pushed suffers the consequences of a failed saving throw.",
-						"On a failed save, the cube enters the creature's space, and the creature takes 10 ({@damage 3d6}) acid damage and is engulfed. The engulfed creature can't breathe, is {@condition restrained}, and takes 21 ({@damage 6d6}) acid damage at the start of each of the cube's turns. When the cube moves, the engulfed creature moves with it.",
-						"An engulfed creature can try to escape by taking an action to make a DC 12 Strength check. On a success, the creature escapes and enters a space of its choice within 5 feet of the cube."
+						"凝膠方塊移動最多等同它的移動速度。當這麼做時，它可以進入一個體型為大型或更小的生物所在的空間。每當凝膠方塊進入一個生物所在的空間，該生物必須進行一次DC 12的敏捷豁免。",
+						"若豁免成功，該生物可以選擇被向後或往凝膠方塊的側面推離5呎。一個選擇不被推離的生物將承受豁免失敗的後果。",
+						"若豁免失敗，凝膠方塊將進入該生物所在的空間，且該生物受到10 ({@damage 3d6})酸蝕傷害並被吞沒。被吞沒的生物無法呼吸，被{@condition 束縛}，且在每次凝膠方塊的回合開始時受到21 ({@damage 6d6})酸蝕傷害。當凝膠方塊移動時，被吞沒的生物也將跟著它移動。",
+						"一個被吞沒的生物可以藉由採取一個動作以進行一次DC 12的力量檢定來嘗試逃脫。若檢定成功，則該生物逃脫並進入一個距離凝膠方塊5呎內的任一處空間。"
 					]
 				}
 			],
@@ -17697,7 +17697,7 @@
 							"type": "entries",
 							"name": "蛛行",
 							"entries": [
-								"蜥蜴可以爬越困難表面，包括倒吊在天花板上，且無須進行屬性檢定。"
+								"蜥蜴可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
 							]
 						}
 					]
@@ -18276,7 +18276,7 @@
 				{
 					"name": "蛛行",
 					"entries": [
-						"蜘蛛可以爬越困難表面，包括倒吊在天花板上，且無須進行屬性檢定。"
+						"蜘蛛可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
 					]
 				},
 				{
@@ -18369,9 +18369,9 @@
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}7 ({@damage 1d10 + 2})穿刺傷害加5 ({@damage 1d10})毒素傷害，且目標{@condition 被擒}(逃脫DC 13)。直到擒抱結束前，目標被{@condition 束縛}，且蟾蜍不能啃咬另一個目標。"
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}7 ({@damage 1d10 + 2})穿刺傷害加 5 ({@damage 1d10})毒素傷害，且目標{@condition 被擒}(逃脫DC 13)。直到擒抱結束前，目標被{@condition 束縛}，且蟾蜍不能啃咬另一個目標。"
 					]
 				},
 				{
@@ -18625,7 +18625,7 @@
 				{
 					"name": "蛛行",
 					"entries": [
-						"蜘蛛可以爬越困難表面，包括倒吊在天花板上，且無須進行屬性檢定。"
+						"蜘蛛可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
 					]
 				},
 				{
@@ -20185,7 +20185,7 @@
 			]
 		},
 		{
-			"name": "Gray Ooze",
+			"name": "灰泥怪", "ENG_name": "Gray Ooze",
 			"size": "M",
 			"type": "ooze",
 			"source": "MM",
@@ -20225,35 +20225,35 @@
 				"frightened",
 				"prone"
 			],
-			"senses": "盲視60呎 (blind beyond this radius)",
+			"senses": "盲視60呎（超過半徑範圍則視作目盲）",
 			"passive": 8,
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Amorphous",
+					"name": "無定形",
 					"entries": [
-						"The ooze can move through a space as narrow as 1 inch wide without squeezing."
+						"泥怪可以移動穿越最窄1英寸的狹窄空間而不用擠縮身體。"
 					]
 				},
 				{
-					"name": "Corrode Metal",
+					"name": "腐蝕金屬",
 					"entries": [
-						"Any nonmagical weapon made of metal that hits the ooze corrodes. After dealing damage, the weapon takes a permanent and cumulative \u22121 penalty to damage rolls. If its penalty drops to \u22125, the weapon is destroyed. Nonmagical ammunition made of metal that hits the ooze is destroyed after dealing damage.",
-						"The ooze can eat through 2-inch-thick, nonmagical metal in 1 round."
+						"任何金屬製成的非魔法武器將在命中泥怪時被腐蝕。在造成傷害之後，該武器的傷害骰將受到一個永久且可累積的\u22121罰值。若該罰值累積至\u22125，則該武器被摧毀。金屬製成的非魔法彈藥會在命中泥怪時並造成傷害後被摧毀。",
+						"泥怪可以在1輪內吃掉2吋厚、非魔法的金屬。"
 					]
 				},
 				{
-					"name": "False Appearance",
+					"name": "擬形",
 					"entries": [
-						"While the ooze remains motionless, it is indistinguishable from an oily pool or wet rock."
+						"當泥怪保持不動，它看起來就跟油滑水塘或潮濕岩石一模一樣。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Pseudopod",
+					"name": "偽足",
 					"entries": [
-						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}4 ({@damage 1d6 + 1}) bludgeoning damage plus 7 ({@damage 2d6}) acid damage, and if the target is wearing nonmagical metal armor, its armor is partly corroded and takes a permanent and cumulative \u22121 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}4 ({@damage 1d6 + 1})鈍擊傷害加 7 ({@damage 2d6})酸蝕傷害，且若目標正穿著非魔法金屬護甲，則它的護甲將被部分腐蝕且其所提供的AC將受到永久且可累積的−1罰值。若護甲的AC被此罰值減至10，則該護甲被摧毀。"
 					]
 				}
 			],
@@ -20271,7 +20271,7 @@
 			]
 		},
 		{
-			"name": "Gray Ooze (Psychic)",
+			"name": "灰泥怪(靈能)", "ENG_name": "Gray Ooze (Psychic)",
 			"size": "M",
 			"type": "ooze",
 			"source": "MM",
@@ -20311,41 +20311,41 @@
 				"frightened",
 				"prone"
 			],
-			"senses": "盲視60呎 (blind beyond this radius)",
+			"senses": "盲視60呎（超過半徑範圍則視作目盲）",
 			"passive": 8,
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Amorphous",
+					"name": "無定形",
 					"entries": [
-						"The ooze can move through a space as narrow as 1 inch wide without squeezing."
+						"泥怪可以移動穿越最窄1英寸的狹窄空間而不用擠縮身體。"
 					]
 				},
 				{
-					"name": "Corrode Metal",
+					"name": "腐蝕金屬",
 					"entries": [
-						"Any nonmagical weapon made of metal that hits the ooze corrodes. After dealing damage, the weapon takes a permanent and cumulative \u22121 penalty to damage rolls. If its penalty drops to \u22125, the weapon is destroyed. Nonmagical ammunition made of metal that hits the ooze is destroyed after dealing damage.",
-						"The ooze can eat through 2-inch-thick, nonmagical metal in 1 round."
+						"任何金屬製成的非魔法武器將在命中泥怪時被腐蝕。在造成傷害之後，該武器的傷害骰將受到一個永久且可累積的\u22121罰值。若該罰值累積至\u22125，則該武器被摧毀。金屬製成的非魔法彈藥會在命中泥怪時並造成傷害後被摧毀。",
+						"泥怪可以在1輪內吃掉2吋厚、非魔法的金屬。"
 					]
 				},
 				{
-					"name": "False Appearance",
+					"name": "擬形",
 					"entries": [
-						"While the ooze remains motionless, it is indistinguishable from an oily pool or wet rock."
+						"當泥怪保持不動，它看起來就跟油滑水塘或潮濕岩石一模一樣。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Pseudopod",
+					"name": "偽足",
 					"entries": [
-						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}4 ({@damage 1d6 + 1}) bludgeoning damage plus 7 ({@damage 2d6}) acid damage, and if the target is wearing nonmagical metal armor, its armor is partly corroded and takes a permanent and cumulative \u22121 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}4 ({@damage 1d6 + 1})鈍擊傷害加 7 ({@damage 2d6})酸蝕傷害，且若目標正穿著非魔法金屬護甲，則它的護甲將被部分腐蝕且其所提供的AC將受到永久且可累積的−1罰值。若護甲的AC被此罰值減至10，則該護甲被摧毀。"
 					]
 				},
 				{
-					"name": "Psychic Crush {@recharge 5}",
+					"name": "精神粉碎{@recharge 5}",
 					"entries": [
-						"The ooze targets one creature that it can sense within 60 feet of it. The target must make a DC 10 Intelligence saving throw, taking 10 ({@damage 3d6}) psychic damage on a failed save, or half as much damage on a successful one."
+						"泥怪以距離它60呎內一個它可以感知到的生物為目標。目標必須進行一次DC 10的智力豁免，若豁免失敗則受到10 ({@damage 3d6})精神傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
@@ -29872,7 +29872,7 @@
 			]
 		},
 		{
-			"name": "Ochre Jelly",
+			"name": "赭凍怪", "ENG_name": "Ochre Jelly",
 			"size": "L",
 			"type": "ooze",
 			"source": "MM",
@@ -29911,36 +29911,36 @@
 				"frightened",
 				"prone"
 			],
-			"senses": "盲視60呎 (blind beyond this radius)",
+			"senses": "盲視60呎（超過半徑範圍則視作目盲）",
 			"passive": 8,
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Amorphous",
+					"name": "無定形",
 					"entries": [
-						"The jelly can move through a space as narrow as 1 inch wide without squeezing."
+						"赭凍怪可以移動穿越最窄1英寸的狹窄空間而不用擠縮身體。"
 					]
 				},
 				{
-					"name": "Spider Climb",
+					"name": "蛛行",
 					"entries": [
-						"The jelly can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+						"赭凍怪可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Pseudopod",
+					"name": "偽足",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}9 ({@damage 2d6 + 2}) bludgeoning damage plus 3 ({@damage 1d6}) acid damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}9 ({@damage 2d6 + 2})鈍擊傷害加 3 ({@damage 1d6})酸蝕傷害。"
 					]
 				}
 			],
 			"reaction": [
 				{
-					"name": "Split",
+					"name": "分裂",
 					"entries": [
-						"When a jelly that is Medium or larger is subjected to lightning or slashing damage, it splits into two new jellies if it has at least 10 hit points. Each new jelly has hit points equal to half the original jelly's, rounded down. New jellies are one size smaller than the original jelly."
+						"當一個體型為中型或更大的赭凍怪受到閃電或劈砍傷害，若它擁有至少10點生命值，則它將分裂成兩個新的赭凍怪。每個新的赭凍怪具有等同於原本赭凍怪一半的生命值，向下取整。新的赭凍怪的體型比原本赭凍怪的體型小一級。"
 					]
 				}
 			],
@@ -31814,7 +31814,7 @@
 			]
 		},
 		{
-			"name": "Plesiosaurus",
+			"name": "蛇頸龍", "ENG_name": "Plesiosaurus",
 			"group": "Dinosaurs",
 			"size": "L",
 			"type": "beast",
@@ -31854,13 +31854,13 @@
 				{
 					"name": "屏息",
 					"entries": [
-						"The plesiosaurus可以屏住牠的呼吸長達1小時。"
+						"蛇頸龍可以屏住牠的呼吸長達1小時。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
 					"entries": [
 						"{@atk mw} 命中{@hit 6}，觸及10呎，單一目標。{@h}14 ({@damage 3d6 + 4})穿刺傷害。"
 					]
@@ -32374,7 +32374,7 @@
 			]
 		},
 		{
-			"name": "Pteranodon",
+			"name": "翼龍", "ENG_name": "Pteranodon",
 			"group": "Dinosaurs",
 			"size": "M",
 			"type": "beast",
@@ -32413,15 +32413,15 @@
 				{
 					"name": "飛掠",
 					"entries": [
-						"The pteranodon 在飛出敵人的觸及範圍時不會觸發藉機攻擊。"
+						"翼龍在飛出敵人的觸及範圍時不會觸發藉機攻擊。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}6 ({@damage 2d4 + 1}) piercing damage"
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}6 ({@damage 2d4 + 1})穿刺傷害"
 					]
 				}
 			],
@@ -35817,7 +35817,7 @@
 			]
 		},
 		{
-			"name": "Skeleton",
+			"name": "骷髏", "ENG_name": "Skeleton",
 			"size": "M",
 			"type": "undead",
 			"source": "MM",
@@ -35829,7 +35829,7 @@
 				{
 					"ac": 13,
 					"from": [
-						"armor scraps"
+						"殘破盔甲"
 					]
 				}
 			],
@@ -35858,19 +35858,19 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 9,
-			"languages": "understands all languages it spoke in life but can't speak",
+			"languages": "理解所有它生前掌握的語言，但不會說",
 			"cr": "1/4",
 			"action": [
 				{
-					"name": "Shortsword",
+					"name": "短劍",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Shortbow",
+					"name": "短弓",
 					"entries": [
-						"{@atk rw} {@hit 4} to hit, range 80/320 ft., one target. {@h}5 ({@damage 1d6 + 2})穿刺傷害。"
+						"{@atk rw} 命中{@hit 4}，射程80/320呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害。"
 					]
 				}
 			],
@@ -36461,7 +36461,7 @@
 				{
 					"name": "蛛行",
 					"entries": [
-						"蜘蛛可以爬越困難表面，包括倒吊在天花板上，且無須進行屬性檢定。"
+						"蜘蛛可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
 					]
 				},
 				{
@@ -38272,7 +38272,7 @@
 				{
 					"name": "蛛行",
 					"entries": [
-						"蜘蛛可以爬越困難表面，包括倒吊在天花板上，且無須進行屬性檢定。"
+						"蜘蛛可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
 					]
 				},
 				{
@@ -39155,7 +39155,7 @@
 			]
 		},
 		{
-			"name": "Triceratops",
+			"name": "三角龍", "ENG_name": "Triceratops",
 			"group": "Dinosaurs",
 			"size": "H",
 			"type": "beast",
@@ -39190,21 +39190,21 @@
 				{
 					"name": "踐踏衝鋒",
 					"entries": [
-						"若triceratops向著一個生物直線移動至少20呎並接著在同回合以一次gore攻擊命中它，則目標必須成功通過一次DC 13的力量豁免，否則被擊倒{@condition 伏地}。若目標{@condition 伏地}，則triceratops能夠以一次附贈動作對它進行一次stomp攻擊。"
+						"若三角龍向著一個生物直線移動至少20呎並接著在同回合以一次角撞攻擊命中它，則目標必須成功通過一次DC 13的力量豁免，否則被擊倒{@condition 伏地}。若目標{@condition 伏地}，則三角龍能夠以一次附贈動作對它進行一次踩踏攻擊。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Gore",
+					"name": "角撞",
 					"entries": [
 						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}24 ({@damage 4d8 + 6})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Stomp",
+					"name": "踩踏",
 					"entries": [
-						"{@atk mw} {@hit 9} to hit, reach 5 ft., one {@condition prone} creature. {@h}22 ({@damage 3d10 + 6}) bludgeoning damage"
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一{@condition 伏地}生物。{@h}22 ({@damage 3d10 + 6})鈍擊傷害。"
 					]
 				}
 			],
@@ -39617,7 +39617,7 @@
 			]
 		},
 		{
-			"name": "Tyrannosaurus Rex",
+			"name": "霸王龍", "ENG_name": "Tyrannosaurus Rex",
 			"group": "Dinosaurs",
 			"size": "H",
 			"type": "beast",
@@ -39655,19 +39655,19 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The tyrannosaurus makes two attacks: one with its bite and one with its tail. It can't make both attacks against the same target."
+						"霸王龍進行兩次攻擊：一次啃咬，一次尾擊。牠不能對同一個目標進行這兩次攻擊。"
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬",
 					"entries": [
-						"{@atk mw} {@hit 10} to hit, reach 10 ft., one target. {@h}33 ({@damage 4d12 + 7})穿刺傷害。 If the target is a Medium or smaller creature, it is {@condition grappled} (escape DC 17). Until this grapple ends, the target is {@condition restrained}, and the tyrannosaurus can't bite another target."
+						"{@atk mw} 命中{@hit 10}，觸及10呎，單一目標。{@h}33 ({@damage 4d12 + 7})穿刺傷害。若目標為一個體型為中型或更小的生物，則它{@condition 被擒}(逃脫DC 17)。直到擒抱結束前，目標被{@condition 束縛}，且霸王龍不能對另一個目標使用啃咬。"
 					]
 				},
 				{
-					"name": "Tail",
+					"name": "尾擊",
 					"entries": [
-						"{@atk mw} {@hit 10} to hit, reach 10 ft., one target. {@h}20 ({@damage 3d8 + 7})鈍擊傷害。"
+						"{@atk mw} 命中{@hit 10}，觸及10呎，單一目標。{@h}20 ({@damage 3d8 + 7})鈍擊傷害。"
 					]
 				}
 			],
@@ -45311,7 +45311,7 @@
 			]
 		},
 		{
-			"name": "Zombie",
+			"name": "殭屍", "ENG_name": "Zombie",
 			"size": "M",
 			"type": "undead",
 			"source": "MM",
@@ -45346,19 +45346,19 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 8,
-			"languages": "understands all languages it spoke in life but can't speak",
+			"languages": "理解所有它生前掌握的語言，但不會說",
 			"cr": "1/4",
 			"trait": [
 				{
-					"name": "Undead Fortitude",
+					"name": "不死韌性",
 					"entries": [
-						"If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5 + the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead."
+						"若殭屍受到傷害而使生命值歸零，則除非該傷害為光耀傷害或來自重擊，則它必須進行一次DC 5+所受傷害值的體質豁免。若豁免成功，則改為將它的生命值減少至1。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Slam",
+					"name": "猛擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}4 ({@damage 1d6 + 1})鈍擊傷害。"
 					]

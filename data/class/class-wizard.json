@@ -14,7 +14,7 @@
 			"classTableGroups": [
 				{
 					"colLabels": [
-						"{@filter Cantrips Known|spells|level=0|class=Wizard}"
+						"{@filter 已知戲法|spells|level=0|class=Wizard}"
 					],
 					"rows": [
 						[
@@ -80,7 +80,7 @@
 					]
 				},
 				{
-					"title": "Spell Slots per Spell Level",
+					"title": "法術位/每法術環",
 					"colLabels": [
 						"{@filter 1st|spells|level=1|class=Wizard}",
 						"{@filter 2nd|spells|level=2|class=Wizard}",
@@ -318,11 +318,11 @@
 			],
 			"startingProficiencies": {
 				"weapons": [
-					"daggers",
-					"darts",
-					"slings",
-					"quarterstaffs",
-					"light crossbows"
+					"匕首",
+					"飛鏢",
+					"投石索",
+					"長棍",
+					"輕弩"
 				],
 				"skills": {
 					"choose": 2,
@@ -339,10 +339,10 @@
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
-					"(a) a {@item quarterstaff|phb} or (b) a {@item dagger|phb}",
-					"(a) a {@item component pouch|phb} or (b) an {@item arcane focus|phb}",
-					"(a) a {@item scholar's pack|phb} or (b) an {@item explorer's pack|phb}",
-					"A {@item spellbook|phb}"
+					"(a)一把{@item 長棍|phb} 或 (b)一把{@item 匕首|phb}",
+					"(a)一個{@item 材料包|phb} 或 (b)一個{@item 奧術法器|phb}",
+					"(a)一套{@item 學者套裝|phb} 或 (b)一套{@item 探索者套裝|phb}",
+					"一本{@item 法術書|phb}"
 				],
 				"goldAlternative": "{@dice 4d4×10|4d4 × 10|Starting Gold}"
 			},
