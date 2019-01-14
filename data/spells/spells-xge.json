@@ -41,7 +41,7 @@
 				]
 			},
 			"entries": [
-				"你吸乾從射程內由你指定的一點為中心、30英尺立方空間內的每個生物體內的水份。在該區域內的每個生物都必須進行一次體質豁免。構裝生物和不死生物不受影響，而植物和水元素在進行此豁免檢定時具有劣勢。若豁免失敗，生物將受到{@dice 12d8}的死靈傷害，豁免成功則只受到一半的傷害。",
+				"你吸乾從射程內由你指定的一點為中心、30呎立方空間內的每個生物體內的水份。在該區域內的每個生物都必須進行一次體質豁免。構裝生物和不死生物不受影響，而植物和水元素在進行此豁免檢定時具有劣勢。若豁免失敗，生物將受到{@dice 12d8}的死靈傷害，豁免成功則只受到一半的傷害。",
 				"在這個區域內的並非生物的非魔法植物，例如樹木和灌木，將會立即凋零並死亡。"
 			],
 			"page": 150,
@@ -176,7 +176,7 @@
 				]
 			},
 			"entries": [
-				"一道長30英尺，寬5英尺線形的翻湧烈火從你向一個你選定的方向蔓延。在該線段中的生物必須進行一次敏捷豁免。若豁免失敗，生物將受到{@dice 3d8}的火焰傷害，豁免成功則只受到一半的傷害。"
+				"一道長30呎，寬5呎線形的翻湧烈火從你向一個你選定的方向蔓延。在該線段中的生物必須進行一次敏捷豁免。若豁免失敗，生物將受到{@dice 3d8}的火焰傷害，豁免成功則只受到一半的傷害。"
 			],
 			"entriesHigherLevel": [
 				{
@@ -295,7 +295,7 @@
 				]
 			},
 			"entries": [
-				"你使射程內你能看見的地表處升起最多六根石柱。每根石柱為直徑5呎，高度至多30呎的圓柱。升起石柱的地表必須具有足以容納其直徑的空間，且你可以瞄準一個體型為中型或更小的生物正下方的地表作為目標。每根石柱擁有AC5以及30點生命值。當其生命值被降為0時，石柱將粉碎成碎石塊，在10呎半徑的區域內形成困難地形，直到碎石堆被清理為止。手動清理區域中每塊5尺直徑的碎石堆需要花費至少1分鐘的時間。",
+				"你使射程內你能看見的地表處升起最多六根石柱。每根石柱為直徑5呎，高度至多30呎的圓柱。升起石柱的地表必須具有足以容納其直徑的空間，且你可以瞄準一個體型為中型或更小的生物正下方的地表作為目標。每根石柱擁有AC5以及30點生命值。當其生命值被降為0時，石柱將粉碎成碎石塊，在10呎半徑的區域內形成困難地形，直到碎石堆被清理為止。手動清理區域中每塊5呎直徑的碎石堆需要花費至少1分鐘的時間。",
 				"若石柱從一個生物正下方升起，則該生物必須成功通過一次敏捷豁免檢定，否則會被石柱頂起。生物可以選擇在此豁免中失敗。",
 				"若石柱因為天花板或其他障礙而未能達到其最大高度，則位於石柱上的生物將受到{@dice 6d6}鈍擊傷害，並被{@condition 束縛}，被夾在石柱與障礙物之間動彈不得。被{@condition 束縛}的生物可以以一個動作來進行一次力量或敏捷檢定（由該生物選擇）對抗此法術的豁免DC。若成功，則該生物不再被{@condition 束縛}，且必須選擇從石柱上離開或摔落下來。"
 			],
@@ -614,7 +614,7 @@
 			"page": 151
 		},
 		{
-			"name": "Chaos Bolt",
+			"name": "混亂箭", "ENG_name": "Chaos Bolt",
 			"source": "XGE",
 			"level": 1,
 			"school": "V",
@@ -649,13 +649,13 @@
 				]
 			},
 			"entries": [
-				"You hurl an undulating, warbling mass of chaotic energy at one creature in range. Make a ranged spell attack against the target. On a hit, the target takes {@dice 2d8 + 1d6} damage. Choose one of the {@dice d8}s. The number rolled on that die determines the attack's damage type, as shown below.",
+				"你向著射程內的一個生物投出一團起伏不定、顫聲尖鳴的混亂能量。對目標進行一次遠程法術攻擊。若命中，目標將受到{@dice 2d8 + 1d6}傷害。選擇傷害骰中的其中一顆{@dice d8}。這顆骰子骰出來的數字將決定此攻擊的傷害類型，見下表。",
 				{
 					"type": "table",
-					"caption": "Chaos Bolt",
+					"caption": "混亂箭",
 					"colLabels": [
 						"{@dice d8}",
-						"Damage Type"
+						"傷害類型"
 					],
 					"colStyles": [
 						"col-1 text-align-center",
@@ -669,7 +669,7 @@
 									"exact": 1
 								}
 							},
-							"Acid"
+							"酸蝕"
 						],
 						[
 							{
@@ -678,7 +678,7 @@
 									"exact": 2
 								}
 							},
-							"Cold"
+							"寒冰"
 						],
 						[
 							{
@@ -687,7 +687,7 @@
 									"exact": 3
 								}
 							},
-							"Fire"
+							"火焰"
 						],
 						[
 							{
@@ -696,7 +696,7 @@
 									"exact": 4
 								}
 							},
-							"Force"
+							"力場"
 						],
 						[
 							{
@@ -705,7 +705,7 @@
 									"exact": 5
 								}
 							},
-							"Lightning"
+							"閃電"
 						],
 						[
 							{
@@ -714,7 +714,7 @@
 									"exact": 6
 								}
 							},
-							"Poison"
+							"毒素"
 						],
 						[
 							{
@@ -723,7 +723,7 @@
 									"exact": 7
 								}
 							},
-							"Psychic"
+							"精神"
 						],
 						[
 							{
@@ -732,19 +732,19 @@
 									"exact": 8
 								}
 							},
-							"Thunder"
+							"雷鳴"
 						]
 					]
 				},
-				"If you roll the same number on both {@dice d8}s, the chaotic energy leaps from the target to a different creature of your choice within 30 feet of it. Make a new attack roll against the new target, and make a new damage roll, which could cause the chaotic energy to leap again.",
-				"A creature can be targeted only once by each casting of this spell."
+				"若你二顆{@dice d8}骰出了相同的數字，則這團混亂的能量將從該目標跳向另一個距離它30呎內，由你選擇的生物上。對新的目標再進行一次攻擊檢定，並骰一次新的傷害，這可能會導致這團能量再次跳向下一個目標。",
+				"每次施放此法術時，一個生物只會成為此法術的目標一次。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, each target takes {@scaledice 2d8+1d6|1-9|1d6} extra damage of the type rolled for each slot level above 1st."
+						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，每個目標便會再受到額外{@scaledice 2d8+1d6|1-9|1d6}傷害。"
 					]
 				}
 			],
@@ -1544,7 +1544,7 @@
 			]
 		},
 		{
-			"name": "Earth Tremor",
+			"name": "大地震顫", "ENG_name": "Earth Tremor",
 			"source": "XGE",
 			"level": 1,
 			"school": "V",
@@ -1591,14 +1591,14 @@
 				]
 			},
 			"entries": [
-				"You cause a tremor in the ground within range. Each creature other than you in that area must make a Dexterity saving throw. On a failed save, a creature takes {@dice 1d6} bludgeoning damage and is knocked {@condition prone}. If the ground in that area is loose earth or stone, it becomes difficult terrain until cleared, with each 5-foot-diameter portion requiring at least 1 minute to clear by hand."
+				"你使射程內的地面產生震動。範圍內每個除你以外的生物都必須進行一次敏捷豁免。若豁免失敗，則該生物將受到{@dice 1d6}鈍擊傷害並被擊倒{@condition 伏地}。若範圍內的地面為鬆散的泥土或石頭，則它將變成困難地形，直到被清理為止。手動清理每塊5呎直徑的區域都需要花費至少1分鐘的時間。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@scaledice 1d6|1-9|1d6} for each slot level above 1st."
+						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 1d6|1-9|1d6}。"
 					]
 				}
 			],
@@ -2485,7 +2485,7 @@
 			]
 		},
 		{
-			"name": "Ice Knife",
+			"name": "冰刃", "ENG_name": "Ice Knife",
 			"source": "XGE",
 			"level": 1,
 			"school": "C",
@@ -2504,7 +2504,7 @@
 			},
 			"components": {
 				"s": true,
-				"m": "a drop of water or piece of ice"
+				"m": "一滴水或一小塊冰"
 			},
 			"duration": [
 				{
@@ -2528,14 +2528,14 @@
 				]
 			},
 			"entries": [
-				"You create a shard of ice and fling it at one creature within range. Make a ranged spell attack against the target. On a hit, the target takes {@dice 1d10} piercing damage. Hit or miss, the shard then explodes. The target and each creature within 5 feet of it must succeed on a Dexterity saving throw or take {@dice 2d6} cold damage."
+				"你創造出一塊寒冰碎片，並將其甩向射程內的一個生物。對目標進行一次遠程法術攻擊。若命中，目標將受到{@dice 1d10}穿刺傷害。無論命中與否，碎片都將爆裂。目標和距離它5呎內的每個生物都必須成功通過一次敏捷豁免，否則受到{@dice 2d6}寒冰傷害。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, the cold damage increases by {@scaledice 2d6|1-9|1d6} for each slot level above 1st."
+						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，寒冰傷害便會再增加{@scaledice 2d6|1-9|1d6}。"
 					]
 				}
 			],
@@ -2798,7 +2798,7 @@
 				]
 			},
 			"entries": [
-				"你使一大群蝨蟎、跳蚤、或其他寄生蟲暫時出現在一個射程內你所能看見的生物身上。目標必須成功通過一次體質豁免，否則受到{@dice 1d6}毒素傷害，且如果它能移動且移動速度至少5呎，它將朝隨機方向移動５呎。擲一顆{@dice d4}決定方向：1北方；2南方；3東方；4西方。這個移動並不會引發藉機攻擊，且如果骰出來的方向被擋住，則目標將不會移動。",
+				"你使一大群蝨蟎、跳蚤、或其他寄生蟲暫時出現在一個射程內你所能看見的生物身上。目標必須成功通過一次體質豁免，否則受到{@dice 1d6}毒素傷害，且如果它能移動且移動速度至少5呎，它將朝隨機方向移動5呎。擲一顆{@dice d4}決定方向：1北方；2南方；3東方；4西方。這個移動並不會引發藉機攻擊，且如果骰出來的方向被擋住，則目標將不會移動。",
 				"此法術的傷害將在你的等級升至5級時增加至{@dice 2d6}，11級時{@dice 3d6}，17級時{@dice 4d6}。"
 			],
 			"page": 158,
@@ -4639,7 +4639,7 @@
 			]
 		},
 		{
-			"name": "Snare",
+			"name": "圈套術", "ENG_name": "Snare",
 			"source": "XGE",
 			"level": 1,
 			"school": "A",
@@ -4659,7 +4659,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "25 feet of rope, which the spell consumes",
+					"text": "25呎的繩索，在施法時消耗",
 					"consume": true
 				}
 			},
@@ -4689,11 +4689,11 @@
 				]
 			},
 			"entries": [
-				"As you cast this spell, you use the rope to create a circle with a 5-foot radius on the ground or the floor. When you finish casting, the rope disappears and the circle becomes a magic trap.",
-				"This trap is nearly invisible, requiring a successful Intelligence (Investigation) check against your spell save DC to be discerned.",
-				"The trap triggers when a Small, Medium, or Large creature moves onto the ground or the floor in the spell's radius. That creature must succeed on a Dexterity saving throw or be magically hoisted into the air, leaving it hanging upside down 3 feet above the ground or the floor. The creature is {@condition restrained} there until the spell ends.",
-				"A {@condition restrained} creature can make a Dexterity saving throw at the end of each of its turns, ending the effect on itself on a success. Alternatively, the creature or someone else who can reach it can use an action to make an Intelligence (Arcana) check against your spell save DC. On a success, the {@condition restrained} effect ends.",
-				"After the trap is triggered, the spell ends when no creature is {@condition restrained} by it."
+				"當你施展此法術時，你使用繩索在地面或地板上創造一個5呎直徑的圓圈。當你完成施法時，繩索將會消失，且該圓圈化作一個魔法陷阱。",
+				"這個陷阱幾乎是隱形的，且需要成功通過一次對抗你法術豁免DC的智力（{@skill 調查}）檢定才能發現它。",
+				"這個陷阱會在一個小型、中型、或大型生物移動到此法術範圍內的地板或地面上時被觸發。該生物必須成功通過一次敏捷豁免，否則將被魔法吊在半空中，上下顛倒的懸掛在離地3呎的位置。該生物被{@condition 束縛}直到此法術結束。",
+				"一個被{@condition 束縛}的生物可以在每次它的回合結束時進行一次敏捷豁免，若豁免成功則結束它身上的這個效果。或者，該生物或其他可以觸及它的角色可以使用一個動作以進行一次對抗你法術豁免DC的智力（{@skill 奧秘}）檢定。若檢定成功，則結束{@condition 束縛}的效果。",
+				"在這個陷阱被觸發之後，此法術會在沒有生物被它{@condition 束縛}時結束。"
 			],
 			"page": 165,
 			"savingThrow": [
@@ -6239,7 +6239,7 @@
 			},
 			"components": {
 				"v": true,
-				"m": "a holy symbol"
+				"m": "一個聖徽"
 			},
 			"duration": [
 				{
@@ -6363,7 +6363,7 @@
 			]
 		},
 		{
-			"name": "Zephyr Strike",
+			"name": "西風打擊", "ENG_name": "Zephyr Strike",
 			"source": "XGE",
 			"level": 1,
 			"school": "T",
@@ -6401,8 +6401,8 @@
 				]
 			},
 			"entries": [
-				"You move like the wind. Until the spell ends, your movement doesn't provoke opportunity attacks.",
-				"Once before the spell ends, you can give yourself advantage on one weapon attack roll on your turn. That attack deals an extra {@dice 1d8} force damage on a hit. Whether you hit or miss, your walking speed increases by 30 feet until the end of that turn."
+				"你移動如風。直到此法術結束前，你的移動不會引發藉機攻擊。",
+				"在此法術結束前一次，你可以在你的回合使你自己的一次武器攻擊檢定具有優勢。若命中，則該攻擊將造成額外{@dice 1d8}力場傷害。無論你命中與否，你在該回合結束前的行走速度增加30呎。"
 			],
 			"page": 171,
 			"damageInflict": [
