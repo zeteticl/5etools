@@ -1633,9 +1633,9 @@ Parser.ItemTypeToDisplay = function(i){
 }
 //Item Tier
 Parser.itemTierKeyToDisplay = {};
-Parser.itemTierKeyToDisplay["None"] = "無";
-Parser.itemTierKeyToDisplay["Minor"] = "弱效";
-Parser.itemTierKeyToDisplay["Major"] = "強效";
+Parser.itemTierKeyToDisplay["none"] = "無";
+Parser.itemTierKeyToDisplay["minor"] = "弱效";
+Parser.itemTierKeyToDisplay["major"] = "強效";
 Parser.ItemTierToDisplay = function(t){
 	return Parser.translateKeyInMapToDisplay(Parser.itemTierKeyToDisplay, t);
 }
