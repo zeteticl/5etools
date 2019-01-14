@@ -2894,7 +2894,7 @@ EntryRenderer.item = {
 	getTypeRarityAndAttunementText (item) {
 		return [
 			item.typeText === "Other" ? "" : item.typeText.trim(),
-			[item.tier, (item.rarity && EntryRenderer.item.doRenderRarity(item.rarity) ? Parser.translateItemKeyToDisplay(item.rarity) : "")].map(it => (it || "").trim()).filter(it => it).join(", "),
+			[Parser.ItemTierToDisplay(item.tier), (item.rarity && EntryRenderer.item.doRenderRarity(item.rarity) ? Parser.translateItemKeyToDisplay(item.rarity) : "")].map(it => (it || "").trim()).filter(it => it).join(", "),
 			(item.reqAttune || "").trim()
 		];
 	},
