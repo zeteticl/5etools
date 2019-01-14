@@ -1632,14 +1632,12 @@ Parser.ItemTypeToDisplay = function(i){
 	return Parser.translateKeyInMapToDisplay(Parser.itemTypeKeyToDisplay, i);
 }
 //Item Tier
-Parser.ItemTierToDisplay = function(str){
-	let lowercase_key = str.toLowerCase();
-	switch(str){
-		case "None": return "無";
-		case "Minor": return "弱效";
-		case "Major": return "強效";
-		default: return str;
-	};
+Parser.itemTierKeyToDisplay = {};
+Parser.itemTierKeyToDisplay["None"] = "無";
+Parser.itemTierKeyToDisplay["Minor"] = "弱效";
+Parser.itemTierKeyToDisplay["Major"] = "強效";
+Parser.ItemTierToDisplay = function(t){
+	return Parser.translateKeyInMapToDisplay(Parser.itemTierKeyToDisplay, t);
 }
 
 //Language
