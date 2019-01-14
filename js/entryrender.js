@@ -3037,6 +3037,8 @@ EntryRenderer.item = {
 				switch (inheritedProperty) {
 					case "namePrefix": specificVariant.name = `${inherits.namePrefix}${specificVariant.name}`; break;
 					case "nameSuffix": specificVariant.name = `${specificVariant.name}${inherits.nameSuffix}`; break;
+					case "ENG_namePrefix": specificVariant.ENG_name = `${inherits.ENG_namePrefix}${specificVariant.ENG_name}`; break;
+					case "ENG_nameSuffix": specificVariant.ENG_name = `${specificVariant.ENG_name}${inherits.ENG_nameSuffix}`; break;
 					case "entries": {
 						inherits.entries.forEach((ent, i) => {
 							if (typeof ent === "string") {
@@ -3134,12 +3136,12 @@ EntryRenderer.item = {
 		}
 		// The following could be encoded in JSON, but they depend on more than one JSON property; maybe fix if really bored later
 		if (item.armor) {
-			if (item.resist) item.entries.push("你在穿著此護甲時具有對" + item.resist + "傷害的抗性。");
+			if (item.resist) item.entries.push("你在穿著此護甲時具有對" + Parser.DamageToDisplay(item.resist) + "傷害的抗性。");
 			if (item.armor && item.stealth) item.entries.push("穿戴者在敏捷（隱匿）檢定上有劣勢。");
 			if (item.type === "HA" && item.strength) item.entries.push("如果穿戴者的力量屬性不到 " + item.strength + "，他們的移動速度減少10呎。");
 		} else if (item.resist) {
-			if (item.type === "P") item.entries.push("當你飲下這瓶藥水，你獲得對" + item.resist + "傷害的抗力持續1小時。");
-			if (item.type === "RG") item.entries.push("你在穿戴此戒指時具有對" + item.resist + "傷害的抗性。");
+			if (item.type === "P") item.entries.push("當你飲下這瓶藥水，你獲得對" + Parser.DamageToDisplay(item.resist) + "傷害的抗力持續1小時。");
+			if (item.type === "RG") item.entries.push("你在穿戴此戒指時具有對" + Parser.DamageToDisplay(item.resist) + "傷害的抗性。");
 		}
 		if (item.type === "SCF") {
 			if (item.scfType === "arcane") item.entries.push("奧術法器是一種被設計成能用以引導奧秘法術能量的特殊物品。術士、契術師、或法師可以將這類物品作為法器使用，用它來取代任何沒有列出價值的材料構材。");
@@ -3203,16 +3205,16 @@ EntryRenderer.item = {
 		if (item.reqAttune !== undefined) {
 			if (item.reqAttune === true) {
 				attunement = "Yes";
-				item.reqAttune = "(Requires Attunement)"
+				item.reqAttune = "(需同調)"
 			} else if (item.reqAttune === "OPTIONAL") {
 				attunement = "Optional";
-				item.reqAttune = "(Attunement Optional)"
+				item.reqAttune = "(可同調)"
 			} else if (item.reqAttune.toLowerCase().startsWith("by")) {
 				attunement = "By...";
-				item.reqAttune = "(Requires Attunement " + item.reqAttune + ")";
+				item.reqAttune = "(需" + item.reqAttune + "同調)";
 			} else {
 				attunement = "Yes"; // throw any weird ones in the "Yes" category (e.g. "outdoors at night")
-				item.reqAttune = "(Requires Attunement " + item.reqAttune + ")";
+				item.reqAttune = "(需" + item.reqAttune + "同調)";
 			}
 		}
 		item.attunementCategory = attunement;
