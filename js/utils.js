@@ -1631,6 +1631,16 @@ Parser.itemTypeKeyToDisplay["firearm"] 	= "槍械";
 Parser.ItemTypeToDisplay = function(i){
 	return Parser.translateKeyInMapToDisplay(Parser.itemTypeKeyToDisplay, i);
 }
+//Item Tier
+Parser.ItemTierToDisplay = function(str){
+	let lowercase_key = str.toLowerCase();
+	switch(str){
+		case "None": return "無";
+		case "Minor": return "弱效";
+		case "Major": return "強效";
+		default: return str;
+	};
+}
 
 //Language
 Parser.languageKeyToDisplay["any"] 		= "任意";
