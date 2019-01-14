@@ -159,9 +159,9 @@ window.onload = async function load () {
 let list;
 let printBookView;
 const sourceFilter = getSourceFilter();
-const crFilter = new RangeFilter({header: "CR", labels: true});
+const crFilter = new RangeFilter({header: "CR", headerName:"挑戰等級", labels: true});
 const sizeFilter = new Filter({
-	header: "Size",
+	header: "Size", headerName:"體型",
 	items: [
 		SZ_TINY,
 		SZ_SMALL,
@@ -173,16 +173,16 @@ const sizeFilter = new Filter({
 	],
 	displayFn: Parser.sizeAbvToFull
 });
-const speedFilter = new Filter({header: "Speed", items: ["walk", "burrow", "climb", "fly", "hover", "swim"], displayFn: StrUtil.uppercaseFirst});
-const strengthFilter = new RangeFilter({header: "Strength", min: 1, max: 30});
-const dexterityFilter = new RangeFilter({header: "Dexterity", min: 1, max: 30});
-const constitutionFilter = new RangeFilter({header: "Constitution", min: 1, max: 30});
-const intelligenceFilter = new RangeFilter({header: "Intelligence", min: 1, max: 30});
-const wisdomFilter = new RangeFilter({header: "Wisdom", min: 1, max: 30});
-const charismaFilter = new RangeFilter({header: "Charisma", min: 1, max: 30});
-const abilityScoreFilter = new MultiFilter({name: "Ability Scores", compact: true, mode: "and"}, strengthFilter, dexterityFilter, constitutionFilter, intelligenceFilter, wisdomFilter, charismaFilter);
-const acFilter = new RangeFilter({header: "Armor Class"});
-const averageHpFilter = new RangeFilter({header: "Average Hit Points"});
+const speedFilter = new Filter({header: "Speed", headerName:"速度", items: ["walk", "burrow", "climb", "fly", "hover", "swim"], displayFn: StrUtil.uppercaseFirst});
+const strengthFilter = new RangeFilter({header: "Strength",headerName:"力量", min: 1, max: 30});
+const dexterityFilter = new RangeFilter({header: "Dexterity",headerName:"敏捷", min: 1, max: 30});
+const constitutionFilter = new RangeFilter({header: "Constitution",headerName:"體質", min: 1, max: 30});
+const intelligenceFilter = new RangeFilter({header: "Intelligence",headerName:"智力", min: 1, max: 30});
+const wisdomFilter = new RangeFilter({header: "Wisdom",headerName:"睿知", min: 1, max: 30});
+const charismaFilter = new RangeFilter({header: "Charisma",headerName:"魅力", min: 1, max: 30});
+const abilityScoreFilter = new MultiFilter({name: "Ability Scores",headerName:"屬性值", compact: true, mode: "and"}, strengthFilter, dexterityFilter, constitutionFilter, intelligenceFilter, wisdomFilter, charismaFilter);
+const acFilter = new RangeFilter({header: "Armor Class",headerName:"護甲等級"});
+const averageHpFilter = new RangeFilter({header: "Average Hit Points",headerName:"平均生命值"});
 const typeFilter = new Filter({
 	header: "Type", headerName: "生物類型",
 	items: [
@@ -211,7 +211,7 @@ const alignmentFilter = new Filter({
 });
 const languageFilter = new Filter({
 	header: "Languages", headerName: "語言",
-	displayFn: (k) => languages[k],
+	displayFn: (k) => Parser.LanguageToDisplay(languages[k]),
 	umbrellaItems: ["X", "XX"],
 	umbrellaExcludes: ["CS"]
 });
@@ -660,7 +660,7 @@ function addMonsters (data) {
 
 	list.reIndex();
 	if (lastSearch) list.search(lastSearch);
-	list.sort("name");
+	list.sort("type");
 	filterBox.render();
 	handleFilterChange();
 

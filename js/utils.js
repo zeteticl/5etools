@@ -1122,7 +1122,7 @@ Parser.monImmResToFull = function (toParse) {
 	function toString (it, depth = 0) {
 		maxDepth = Math.max(maxDepth, depth);
 		if (typeof it === "string") {
-			return it;
+			return Parser.DamageToDisplay(it);
 		} else if (it.special) {
 			return it.special;
 		} else {
@@ -1130,7 +1130,7 @@ Parser.monImmResToFull = function (toParse) {
 			const prop = it.immune ? "immune" : it.resist ? "resist" : it.vulnerable ? "vulnerable" : null;
 			if (prop) {
 				const toJoin = it[prop].map(nxt => toString(nxt, depth + 1));
-				stack += depth ? toJoin.join(maxDepth ? "; " : ", ") : toJoin.joinConjunct(", ", " and ");
+				stack += depth ? toJoin.join(maxDepth ? "；" : ", ") : toJoin.joinConjunct(", ", " 和 ");
 			}
 			if (it.note) stack += ` ${it.note}`;
 			return stack;
@@ -1145,13 +1145,13 @@ Parser.monImmResToFull = function (toParse) {
 			const it = arr[i];
 			const nxt = arr[i + 1]
 			out += it;
-			out += (it.includes(",") || nxt.includes(",")) ? "; " : ", ";
+			out += (it.includes(",") || nxt.includes(",")) ? "；" : ", ";
 		}
 		out += arr.last();
 		return out;
 	}
 
-	return serialJoin(toParse.map(it => toString(Parser.DamageToDisplay(it))));
+	return serialJoin(toParse.map(it => toString(it)));
 };
 
 Parser.monCondImmToFull = function (condImm) {
@@ -1248,7 +1248,7 @@ Parser.alignmentAbvToFull = function (alignment) {
 			return alignment.special;
 		} else {
 			// e.g. `{alignment: ["N", "G"], chance: 50}` or `{alignment: ["N", "G"]}`
-			return `${alignment.alignment.map(a => Parser.alignmentAbvToFull(a)).join(" ")}${alignment.chance ? ` (${alignment.chance}%)` : ""}`;
+			return `${alignment.alignment.map(a => Parser.alignmentAbvToFull(a)).join("")}${alignment.chance ? ` (${alignment.chance}%)` : ""}`;
 		}
 	} else {
 		alignment = alignment.toUpperCase();
@@ -1258,9 +1258,9 @@ Parser.alignmentAbvToFull = function (alignment) {
 			case "N":
 				return "中立";
 			case "NX":
-				return "中立 (守序/混亂軸)";
+				return "中立(守序/混亂軸)";
 			case "NY":
-				return "中立 (善良/邪惡軸)";
+				return "中立(善良/邪惡軸)";
 			case "C":
 				return "混亂";
 			case "G":
@@ -1284,7 +1284,7 @@ Parser.alignmentListToFull = function (alignList) {
 	// 1. "[object] or [object]"
 	// 2. a pair of abv's, e.g. "L" "G"
 	if (alignList.length === 2) {
-		if (typeof alignList[0] === "object" && typeof alignList[1] === "object") return `${Parser.alignmentAbvToFull(alignList[0])} or ${Parser.alignmentAbvToFull(alignList[1]).toLowerCase()}`;
+		if (typeof alignList[0] === "object" && typeof alignList[1] === "object") return `${Parser.alignmentAbvToFull(alignList[0])} 或 ${Parser.alignmentAbvToFull(alignList[1]).toLowerCase()}`;
 		else if (typeof alignList[0] === "string" && typeof alignList[1] === "string") return alignList.map(a => Parser.alignmentAbvToFull(a)).join(" ");
 		else throw new Error(`Malformed alignment pair: ${JSON.stringify(alignList)}`);
 	}
@@ -1320,9 +1320,6 @@ Parser.translateKeyInMapToDisplay = function(map, key){
 }
 Parser.translateKeyToDisplay = function(common_key){
 	return Parser.translateKeyInMapToDisplay(Parser.keyToDisplay, common_key);
-}
-Parser.translateLangKeyToDisplay = function(lang_key){
-	return Parser.translateKeyInMapToDisplay(Parser.languageKeyToDisplay, lang_key);
 }
 Parser.translateItemKeyToDisplay = function(item_key){
 	return Parser.translateKeyInMapToDisplay(Parser.itemKeyToDisplay, item_key);
@@ -1663,6 +1660,9 @@ Parser.languageKeyToDisplay["primordial"] = "盤古語";
 Parser.languageKeyToDisplay["sylvan"] 	= "木族語";
 Parser.languageKeyToDisplay["terran"] 	= "大地語";
 Parser.languageKeyToDisplay["undercommon"]= "地底通用語";
+Parser.LanguageToDisplay = function(lang_key){
+	return Parser.translateKeyInMapToDisplay(Parser.languageKeyToDisplay, lang_key);
+}
 
 //Environment
 Parser.environmentKeyToDisplay = {};
@@ -1730,7 +1730,7 @@ Parser.CAT_ID_TO_FULL[Parser.CAT_ID_SPELL] = "Spell";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_BACKGROUND] = "Background";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ITEM] = "Item";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_CLASS] = "Class";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_CONDITION] = "Condition";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_CONDITION] = "狀態";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_FEAT] = "Feat";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ELDRITCH_INVOCATION] = "Eldritch Invocation";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_PSIONIC] = "Psionic";

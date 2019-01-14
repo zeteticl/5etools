@@ -142,12 +142,12 @@ async function onJsonLoad (data) {
 	const languageFilter = new Filter({
 		header: "Languages", headerName: "語言",
 		items: [
+			"Choose",
+			"Common",
 			"Abyssal",
 			"Aquan",
 			"Auran",
 			"Celestial",
-			"Choose",
-			"Common",
 			"Draconic",
 			"Dwarvish",
 			"Elvish",
@@ -157,13 +157,13 @@ async function onJsonLoad (data) {
 			"Halfling",
 			"Infernal",
 			"Orc",
-			"Other",
 			"Primordial",
 			"Sylvan",
 			"Terran",
-			"Undercommon"
+			"Undercommon",
+			"Other"
 		],
-		displayFn: Parser.translateLangKeyToDisplay,
+		displayFn: Parser.LanguageToDisplay,
 		umbrellaItems: ["Choose"]
 	});
 

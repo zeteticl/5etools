@@ -7,7 +7,7 @@ let list;
 const sourceFilter = getSourceFilter();
 const skillFilter = new Filter({header: "Skill Proficiencies", headerName: "技能熟練", displayFn: Parser.SkillToDisplay});
 const toolFilter = new Filter({header: "Tool Proficiencies", headerName: "工具熟練", displayFn: Parser.translateKeyToDisplay});
-const languageFilter = new Filter({header: "Language Proficiencies", headerName: "語言熟練", displayFn: Parser.translateLangKeyToDisplay});
+const languageFilter = new Filter({header: "Language Proficiencies", headerName: "語言熟練", displayFn: Parser.LanguageToDisplay});
 let filterBox;
 
 window.onload = async function load () {

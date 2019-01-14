@@ -1866,7 +1866,7 @@ EntryRenderer.background = {
 		if (!profGroupArr) return "";
 
 		function getEntry (s) {
-			s = Parser.translateKeyToDisplay(Parser.translateLangKeyToDisplay(s));
+			s = Parser.translateKeyToDisplay(s);
 			return short ? s.toTitleCase() : hoverTag ? `{@${hoverTag} ${s.toTitleCase()}}` : s.toTitleCase();
 		}
 
@@ -2412,7 +2412,7 @@ EntryRenderer.monster = {
 
 	getSave (renderer, attr, mod) {
 		if (attr === "special") return renderer.renderEntry(mod);
-		else return renderer.renderEntry(`<span data-mon-save="${attr.uppercaseFirst()}|${mod}">${attr.uppercaseFirst()} {@d20 ${mod}|${mod}|${Parser.attAbvToFull([attr])} save}</span>`);
+		else return renderer.renderEntry(`<span data-mon-save="${attr.uppercaseFirst()}|${mod}">${Parser.AtrAbvToDisplay(attr)}{@d20 ${mod}|${mod}|${Parser.attAbvToFull([attr])} save}</span>`);
 	},
 
 	getDragonCasterVariant (renderer, dragon) {
@@ -2659,7 +2659,7 @@ EntryRenderer.monster = {
 			if (spellList.constant || spellList.will || spellList.rest || spellList.daily || spellList.weekly) {
 				const tempList = {type: "list", "style": "list-hang-notitle", items: []};
 				if (spellList.constant && !hidden.has("constant")) tempList.items.push({type: "itemSpell", name: `Constant:`, entry: spellList.constant.join(", ")});
-				if (spellList.will && !hidden.has("will")) tempList.items.push({type: "itemSpell", name: `At will:`, entry: spellList.will.join(", ")});
+				if (spellList.will && !hidden.has("will")) tempList.items.push({type: "itemSpell", name: `隨意:`, entry: spellList.will.join(", ")});
 				if (spellList.rest && !hidden.has("rest")) {
 					for (let j = 9; j > 0; j--) {
 						let rest = spellList.rest;
@@ -2671,17 +2671,17 @@ EntryRenderer.monster = {
 				if (spellList.daily && !hidden.has("daily")) {
 					for (let j = 9; j > 0; j--) {
 						let daily = spellList.daily;
-						if (daily[j]) tempList.items.push({type: "itemSpell", name: `${j}/day:`, entry: daily[j].join(", ")});
+						if (daily[j]) tempList.items.push({type: "itemSpell", name: `${j}/每日:`, entry: daily[j].join(", ")});
 						const jEach = `${j}e`;
-						if (daily[jEach]) tempList.items.push({type: "itemSpell", name: `${j}/day each:`, entry: daily[jEach].join(", ")});
+						if (daily[jEach]) tempList.items.push({type: "itemSpell", name: `各項${j}/每日:`, entry: daily[jEach].join(", ")});
 					}
 				}
 				if (spellList.weekly && !hidden.has("weekly")) {
 					for (let j = 9; j > 0; j--) {
 						let weekly = spellList.weekly;
-						if (weekly[j]) tempList.items.push({type: "itemSpell", name: `${j}/week:`, entry: weekly[j].join(", ")});
+						if (weekly[j]) tempList.items.push({type: "itemSpell", name: `${j}/每週:`, entry: weekly[j].join(", ")});
 						const jEach = `${j}e`;
-						if (weekly[jEach]) tempList.items.push({type: "itemSpell", name: `${j}/week each:`, entry: weekly[jEach].join(", ")});
+						if (weekly[jEach]) tempList.items.push({type: "itemSpell", name: `各項${j}/每週:`, entry: weekly[jEach].join(", ")});
 					}
 				}
 				if (tempList.items.length) toRender[0].entries.push(tempList);
@@ -3140,7 +3140,7 @@ EntryRenderer.item = {
 			if (item.armor && item.stealth) item.entries.push("穿戴者在敏捷（隱匿）檢定上有劣勢。");
 			if (item.type === "HA" && item.strength) item.entries.push("如果穿戴者的力量屬性不到 " + item.strength + "，他們的移動速度減少10呎。");
 		} else if (item.resist) {
-			if (item.type === "P") item.entries.push("當你飲下這瓶藥水，你獲得對" + Parser.DamageToDisplay(item.resist) + "傷害的抗力持續1小時。");
+			if (item.type === "P") item.entries.push("當你飲下這瓶藥水，你獲得對" + Parser.DamageToDisplay(item.resist) + "傷害的抗性持續1小時。");
 			if (item.type === "RG") item.entries.push("你在穿戴此戒指時具有對" + Parser.DamageToDisplay(item.resist) + "傷害的抗性。");
 		}
 		if (item.type === "SCF") {
@@ -3637,7 +3637,6 @@ EntryRenderer.hover = {
 		page = page.toLowerCase();
 		source = source.toLowerCase();
 		hash = hash.toLowerCase();
-
 		((EntryRenderer.hover.linkCache[page] =
 			EntryRenderer.hover.linkCache[page] || [])[source] =
 			EntryRenderer.hover.linkCache[page][source] || [])[hash] = item;
