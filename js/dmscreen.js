@@ -463,14 +463,14 @@ class SideMenu {
 	render () {
 		const renderDivider = () => this.$mnu.append(`<hr class="sidemenu__row__divider">`);
 
-		const $wrpResizeW = $(`<div class="sidemenu__row"><div class="sidemenu__row__label">Width</div></div>`).appendTo(this.$mnu);
+		const $wrpResizeW = $(`<div class="sidemenu__row"><div class="sidemenu__row__label">寬度</div></div>`).appendTo(this.$mnu);
 		const $iptWidth = $(`<input class="form-control" type="number" value="${this.board.width}">`).appendTo($wrpResizeW);
 		this.$iptWidth = $iptWidth;
-		const $wrpResizeH = $(`<div class="sidemenu__row"><div class="sidemenu__row__label">Height</div></div>`).appendTo(this.$mnu);
+		const $wrpResizeH = $(`<div class="sidemenu__row"><div class="sidemenu__row__label">高度</div></div>`).appendTo(this.$mnu);
 		const $iptHeight = $(`<input class="form-control" type="number" value="${this.board.height}">`).appendTo($wrpResizeH);
 		this.$iptHeight = $iptHeight;
 		const $wrpSetDim = $(`<div class="sidemenu__row"/>`).appendTo(this.$mnu);
-		const $btnSetDim = $(`<button class="btn btn-primary" style="width: 100%;">Set Dimensions</div>`).appendTo($wrpSetDim);
+		const $btnSetDim = $(`<button class="btn btn-primary" style="width: 100%;">設定分層</div>`).appendTo($wrpSetDim);
 		$btnSetDim.on("click", () => {
 			const w = Number($iptWidth.val());
 			const h = Number($iptHeight.val());
@@ -480,7 +480,7 @@ class SideMenu {
 		renderDivider();
 
 		const $wrpFullscreen = $(`<div class="sidemenu__row--alt"></div>`).appendTo(this.$mnu);
-		const $btnFullscreen = $(`<button class="btn btn-primary">Toggle Fullscreen</button>`).appendTo($wrpFullscreen);
+		const $btnFullscreen = $(`<button class="btn btn-primary">開關全螢幕</button>`).appendTo($wrpFullscreen);
 		this.board.$btnFullscreen = $btnFullscreen;
 		$btnFullscreen.on("click", () => {
 			this.board.isFullscreen = !this.board.isFullscreen;
@@ -490,7 +490,7 @@ class SideMenu {
 			this.board.doSaveStateDebounced();
 			this.board.reactor.fire("panelResize")
 		});
-		const $btnLockPanels = $(`<button class="btn btn-danger" title="Lock Panels"><span class="glyphicon glyphicon-lock"/></button>`).appendTo($wrpFullscreen);
+		const $btnLockPanels = $(`<button class="btn btn-danger" title="鎖定面板"><span class="glyphicon glyphicon-lock"/></button>`).appendTo($wrpFullscreen);
 		this.board.$btnLockPanels = $btnLockPanels;
 		$btnLockPanels.on("click", () => {
 			this.board.isLocked = !this.board.isLocked;
@@ -508,11 +508,11 @@ class SideMenu {
 
 		const $wrpSaveLoad = $(`<div class="sidemenu__row--vert"/>`).appendTo(this.$mnu);
 		const $wrpSaveLoadFile = $(`<div class="sidemenu__row--alt"/>`).appendTo($wrpSaveLoad);
-		const $btnSaveFile = $(`<button class="btn btn-primary">Save to File</button>`).appendTo($wrpSaveLoadFile);
+		const $btnSaveFile = $(`<button class="btn btn-primary">儲存檔案</button>`).appendTo($wrpSaveLoadFile);
 		$btnSaveFile.on("click", () => {
 			DataUtil.userDownload(`dm-screen`, this.board.getSaveableState());
 		});
-		const $btnLoadFile = $(`<button class="btn btn-primary">Load from File</button>`).appendTo($wrpSaveLoadFile);
+		const $btnLoadFile = $(`<button class="btn btn-primary">讀取檔案</button>`).appendTo($wrpSaveLoadFile);
 		$btnLoadFile.on("click", () => {
 			DataUtil.userUpload((json) => {
 				this.board.doReset();
@@ -520,7 +520,7 @@ class SideMenu {
 			});
 		});
 		const $wrpSaveLoadUrl = $(`<div class="sidemenu__row--alt"/>`).appendTo($wrpSaveLoad);
-		const $btnSaveLink = $(`<button class="btn btn-primary">Save to URL</button>`).appendTo($wrpSaveLoadUrl);
+		const $btnSaveLink = $(`<button class="btn btn-primary">儲存至URL</button>`).appendTo($wrpSaveLoadUrl);
 		$btnSaveLink.on("click", () => {
 			const encoded = `${window.location.href.split("#")[0]}#${encodeURIComponent(JSON.stringify(this.board.getSaveableState()))}`;
 			copyText(encoded);
@@ -533,7 +533,7 @@ class SideMenu {
 		renderDivider();
 
 		const $wrpReset = $(`<div class="sidemenu__row"/>`).appendTo(this.$mnu);
-		const $btnReset = $(`<button class="btn btn-danger" style="width: 100%;">Reset Screen</button>`).appendTo($wrpReset);
+		const $btnReset = $(`<button class="btn btn-danger" style="width: 100%;">重置DM屏幕</button>`).appendTo($wrpReset);
 		$btnReset.on("click", () => {
 			if (window.confirm("Are you sure?")) {
 				this.board.doReset();
@@ -553,8 +553,8 @@ class SideMenu {
 		this.board.exiledPanels.forEach(p => p.get$ContentWrapper().detach());
 		this.$wrpHistory.children().remove();
 		if (this.board.exiledPanels.length) {
-			const $wrpHistHeader = $(`<div class="sidemenu__row"><span style="font-variant: small-caps;">Recently Removed</span></div>`).appendTo(this.$wrpHistory);
-			const $btnHistClear = $(`<button class="btn btn-danger">Clear</button>`).appendTo($wrpHistHeader);
+			const $wrpHistHeader = $(`<div class="sidemenu__row"><span style="font-variant: small-caps;">最近移除</span></div>`).appendTo(this.$wrpHistory);
+			const $btnHistClear = $(`<button class="btn btn-danger">清除</button>`).appendTo($wrpHistHeader);
 			$btnHistClear.on("click", () => {
 				this.board.exiledPanels = [];
 				this.doUpdateHistory();
@@ -2378,7 +2378,7 @@ class AddMenuSpecialTab extends AddMenuTab {
 			$(`<hr class="tab-body-row-sep"/>`).appendTo($tab);
 
 			const $wrpText = $(`<div class="tab-body-row"><span>基礎文字方塊<i class="text-muted">(for a feature-rich editor, embed a Google Doc or similar)</i></span></div>`).appendTo($tab);
-			const $btnText = $(`<button class="btn btn-primary">Add</button>`).appendTo($wrpText);
+			const $btnText = $(`<button class="btn btn-primary">加入</button>`).appendTo($wrpText);
 			$btnText.on("click", () => {
 				this.menu.pnl.doPopulate_TextBox();
 				this.menu.doClose();
