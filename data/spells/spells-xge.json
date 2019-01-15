@@ -116,7 +116,7 @@
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，額外傷害便會增加{@scaledice 1d6|1-9|1d6}。"
+						"當你使用2環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，額外傷害便會再增加{@scaledice 1d6|1-9|1d6}。"
 					]
 				}
 			],
@@ -183,7 +183,7 @@
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"當你使用3環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會增加{@scaledice 3d8|2-9|1d8}。"
+						"當你使用3環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 3d8|2-9|1d8}。"
 					]
 				}
 			],
@@ -1516,9 +1516,9 @@
 				]
 			},
 			"entries": [
-				"選擇一處射程內你所能看見，未被佔據的5呎立方空間。一陣聚集成塵捲風的元素之力將出現在該空間，且持續到法術的持續時間結束。",
+				"選擇射程內一處未被佔據，且你所能看見的5呎邊長立方體空間。一陣聚集成塵捲風的元素之力將出現在該空間，且持續到法術的持續時間結束。",
 				"任何在距離塵捲風5呎內結束它回合的生物都必須進行一次力量豁免。若豁免失敗，則該生物將受到{@dice 1d8}鈍擊傷害並被推離塵捲風10呎。若豁免成功，該生物只受到一半的傷害，且不會被推離。",
-				"以一個附贈動作，你可以使塵捲風向任何方向移動最多30呎。若塵捲風移經沙子、灰塵、鬆土、或小碎石，則它將吸起這些物質並在它周遭形成一個10呎半徑的瓦礫雲，持續直到你的下個回合開始。這個瓦礫雲籠罩的範圍為重度遮蔽。"
+				"以一個附贈動作，你可以使塵捲風向任何方向移動最多30呎。若塵捲風移經沙子、灰塵、鬆土、或小碎石，則它將吸起這些物質並在它周遭形成一個10呎半徑的瓦礫雲，持續直到你的下個回合開始。這個瓦礫雲籠罩的區域被重度遮蔽。"
 			],
 			"entriesHigherLevel": [
 				{
@@ -2366,7 +2366,7 @@
 			]
 		},
 		{
-			"name": "Healing Spirit",
+			"name": "治癒精魂", "ENG_name": "Healing Spirit",
 			"source": "XGE",
 			"level": 2,
 			"school": "C",
@@ -2410,16 +2410,16 @@
 				]
 			},
 			"entries": [
-				"You call forth a nature spirit to soothe the wounded. The intangible spirit appears in a space that is a 5-foot cube you can see within range. The spirit looks like a transparent beast or fey (your choice).",
-				"Until the spell ends, whenever you or a creature you can see moves into the spirit's space for the first time on a turn or starts its turn there, you can cause the spirit to restore {@dice 1d6} hit points to that creature (no action required). The spirit can't heal constructs or undead.",
-				"As a bonus action on your turn, you can move the spirit up to 30 feet to a space you can see."
+				"你呼喚出一隻自然精魂以撫慰傷員。這隻無形的精魂將會出現在射程內一處未被佔據且你能看見的的5呎邊長立方體空間。這個精魂看起來像是透明的野獸或精類（由你決定）。",
+				"直到此法術結束前，每當你或一個你所能看見的生物在一個回合中第一次移動進入精魂所在的空間，或在該處開始它的回合，則你使精魂回復該生物{@dice 1d6}點生命值（不需要動作）。這個精魂無法治療構裝體或不死生物。",
+				"在你的回合以一個附贈動作，你可以移動這個精魂最多30呎到另一個你所能看見的空間。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 3rd level or higher, the healing increases by {@scaledice 1d6|2-9|1d6} for each slot level above 2nd."
+						"當你使用3環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，治療量便會增加{@scaledice 1d6|2-9|1d6}。"
 					]
 				}
 			],
@@ -3733,7 +3733,7 @@
 			"permanentEffects": true
 		},
 		{
-			"name": "Mind Spike",
+			"name": "心靈探針", "ENG_name": "Mind Spike",
 			"source": "XGE",
 			"level": 2,
 			"school": "D",
@@ -3780,14 +3780,14 @@
 				]
 			},
 			"entries": [
-				"You reach into the mind of one creature you can see within range. The target must make a Wisdom saving throw, taking {@dice 3d8} psychic damage on a failed save, or half as much damage on a successful one. On a failed save, you also always know the target's location until the spell ends, but only while the two of you are on the same plane of existence. While you have this knowledge, the target can't become hidden from you, and if it's {@condition invisible}, it gains no benefit from that condition against you."
+				"你深入一個射程內你所能看見的生物的心靈。目標必須進行一次睿知豁免，若豁免失敗將受到{@dice 3d8}精神傷害，豁免成功則只受到一半的傷害。在豁免失敗的情況，直到法術結束前，只要你們兩個還處於同一個位面，你將能永遠知曉目標的所在位置。當你擁有這項認知時，目標無法對你躲藏，且若它處於{@condition 隱形}狀態，則它將無法在面對你時獲得來自該狀態的好處。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 3rd level or higher, the damage increases by {@scaledice 3d8|2-9|1d8} for each slot level above 2nd."
+						"當你使用3環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 3d8|2-9|1d8}。"
 					]
 				}
 			],
@@ -4140,7 +4140,7 @@
 			]
 		},
 		{
-			"name": "Pyrotechnics",
+			"name": "煙火表演", "ENG_name": "Pyrotechnics",
 			"source": "XGE",
 			"level": 2,
 			"school": "T",
@@ -4183,19 +4183,19 @@
 				]
 			},
 			"entries": [
-				"Choose an area of nonmagical flame that you can see and that fits within a 5-foot cube within range. You can extinguish the fire in that area, and you create either fireworks or smoke when you do so.",
+				"選擇射程內你所能看見，可容納於5呎邊長立方體空間內的一處非魔法火焰。你可以熄滅該區域內的火焰，且你在這麼做的時候創造出煙火或濃煙。",
 				{
 					"type": "entries",
-					"name": "Fireworks",
+					"name": "煙火",
 					"entries": [
-						"The target explodes with a dazzling display of colors. Each creature within 10 feet of the target must succeed on a Constitution saving throw or become {@condition blinded} until the end of your next turn."
+						"目標在炫目七彩光芒中炸開。每個距離目標10呎內的生物必須成功通過一次體質豁免，否則{@condition 目盲}直到你的下個回合結束。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Smoke",
+					"name": "濃煙",
 					"entries": [
-						"Thick black smoke spreads out from the target in a 20-foot radius, moving around corners. The area of the smoke is heavily obscured. The smoke persists for 1 minute or until a strong wind disperses it."
+						"從目標蔓延出20呎半徑的厚重黑煙，繞過轉角散佈。這個濃煙區域被重度遮蔽。這陣濃煙會持續1分鐘或直到一陣強風將它吹散。"
 					]
 				}
 			],
@@ -4578,7 +4578,7 @@
 			"page": 165
 		},
 		{
-			"name": "Skywrite",
+			"name": "天空書寫", "ENG_name": "Skywrite",
 			"source": "XGE",
 			"level": 2,
 			"school": "T",
@@ -4628,7 +4628,7 @@
 				"ritual": true
 			},
 			"entries": [
-				"You cause up to ten words to form in a part of the sky you can see. The words appear to be made of cloud and remain in place for the spell's duration. The words dissipate when the spell ends. A strong wind can disperse the clouds and end the spell early."
+				"你使最多十個文字成形在一部分你所能看見的天空中。這些文字看起來像是由雲朵構成，且會在法術持續期間維持在該處。這些文字會在法術結束時消散。一陣強風可以驅散這些雲朵並提早結束此法術。"
 			],
 			"page": 165,
 			"otherSources": [
@@ -4707,7 +4707,7 @@
 			]
 		},
 		{
-			"name": "Snilloc's Snowball Swarm",
+			"name": "史尼洛雪球群", "ENG_name": "Snilloc's Snowball Swarm",
 			"source": "XGE",
 			"level": 2,
 			"school": "V",
@@ -4727,7 +4727,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a piece of ice or a small white rock chip"
+				"m": "一塊冰或一小片白色石片"
 			},
 			"duration": [
 				{
@@ -4747,14 +4747,14 @@
 				]
 			},
 			"entries": [
-				"A flurry of magic snowballs erupts from a point you choose within range. Each creature in a 5-foot-radius sphere centered on that point must make a Dexterity saving throw. A creature takes {@dice 3d6} cold damage on a failed save, or half as much damage on a successful one."
+				"一波魔法雪球從射程內你所選擇的一點噴湧而出。每個處於以該點為中心5呎半徑球體範圍內的生物都必須進行一次敏捷豁免。一個豁免失敗的目標將受到{@dice 3d6}寒冰傷害，豁免成功則只受到一半的傷害。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 3rd level or higher, the damage increases by {@scaledice 3d6|2-9|1d6} for each slot level above 2nd."
+						"當你使用3環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 3d6|2-9|1d6}。"
 					]
 				}
 			],
@@ -6002,7 +6002,7 @@
 			]
 		},
 		{
-			"name": "Warding Wind",
+			"name": "守護之風", "ENG_name": "Warding Wind",
 			"source": "XGE",
 			"level": 2,
 			"school": "V",
@@ -6052,16 +6052,16 @@
 				]
 			},
 			"entries": [
-				"A strong wind (20 miles per hour) blows around you in a 10-foot radius and moves with you, remaining centered on you. The wind lasts for the spell's duration.",
-				"The wind has the following effects:",
+				"一陣強風（風速每小時20哩）在你周圍10呎半徑呼嘯環繞，並會保持以你為中心隨著你移動。這陣風持續直到法術持續時間結束。",
+				"這陣風具有下列效果：",
 				{
 					"type": "list",
 					"items": [
-						"It deafens you and other creatures in its area.",
-						"It extinguishes unprotected flames in its area that are torch-sized or smaller.",
-						"It hedges out vapor, gas, and fog that can be dispersed by strong wind.",
-						"The area is difficult terrain for creatures other than you.",
-						"The attack rolls of ranged weapon attacks have disadvantage if the attacks pass in or out of the wind."
+						"它使你和此區域內的其它生物{@condition 耳聾}。",
+						"它熄滅此區域內未受保護，火炬大小或更小的火焰。",
+						"它隔開那些會被強風吹散的水氣、毒氣、或霧氣。",
+						"這個區域對於你以外的其它生物視作困難地形。",
+						"若遠程武器攻擊會穿入或穿出強風，則該攻擊檢定將具有劣勢。"
 					]
 				}
 			],
