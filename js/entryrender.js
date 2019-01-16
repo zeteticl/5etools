@@ -1583,10 +1583,10 @@ EntryRenderer.feat = {
 							raceName.push(raceNameParts[k].uppercaseFirst());
 						}
 						raceName = raceName.join(DASH);
-						outStack.push(Parser.RaceToDisplay(raceName) + (pre.race[j].subrace !== undefined ? " (" + Parser.SubraceToDisplay(pre.race[j].subrace) + ")" : ""))
+						outStack.push(Parser.RaceToDisplay(raceName) + (pre.race[j].subrace !== undefined ? "(" + Parser.SubraceToDisplay(pre.race[j].subrace) + ")" : ""))
 					} else {
 						const raceName = j === 0 ? pre.race[j].name.uppercaseFirst() : pre.race[j].name;
-						outStack.push(Parser.RaceToDisplay(raceName) + (pre.race[j].subrace !== undefined ? " (" + Parser.SubraceToDisplay(pre.race[j].subrace) + ")" : ""))
+						outStack.push(Parser.RaceToDisplay(raceName) + (pre.race[j].subrace !== undefined ? "(" + Parser.SubraceToDisplay(pre.race[j].subrace) + ")" : ""))
 					}
 				}
 			}
@@ -2022,7 +2022,7 @@ EntryRenderer.race = {
 
 				// merge names, abilities, entries, tags
 				if (s.name) {
-					cpy.name = `${cpy.name} (${s.name})`;
+					cpy.name = `${cpy.name}(${s.name})`;
 					delete s.name;
 				}
 				if (s.ENG_name) {

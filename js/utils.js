@@ -1383,7 +1383,7 @@ Parser.RaceToDisplay = function(race){
 	if(r_match && r_match[2]){
 		let main_race = Parser.translateKeyInMapToDisplay(Parser.raceKeyToDisplay, r_match[1].replace(/ *$/,""));
 		let sub_race  = Parser.translateKeyInMapToDisplay(Parser.subraceKeyToDisplay, r_match[3]);
-		return main_race + " (" + sub_race + ")";
+		return main_race + "(" + sub_race + ")";
 	}
 	return race;
 }
