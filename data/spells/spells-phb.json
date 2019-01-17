@@ -195,7 +195,7 @@
 			"page": 211
 		},
 		{
-			"name": "自我變身", "ENG_name": "Alter Self",
+			"name": "變造自身", "ENG_name": "Alter Self",
 			"level": 2,
 			"school": "T",
 			"time": [
@@ -455,7 +455,7 @@
 			"page": 212
 		},
 		{
-			"name": "Animal Shapes",
+			"name": "動物形體", "name": "Animal Shapes",
 			"level": 8,
 			"school": "T",
 			"time": [
@@ -5470,7 +5470,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"你召喚出呈現野獸外型的精類精魂，並使其出現在射程內一處未被占據的可見空間。選擇以下其中一個選項以決定出現什麼：",
+				"你召喚出呈現野獸外型的精類精魂，並使其出現在射程內未被占據的可見空間。選擇以下其中一個選項以決定出現什麼：",
 				{
 					"type": "list",
 					"items": [
@@ -5480,7 +5480,7 @@
 						"八隻{@filter 挑戰等級1/4或以下的野獸|bestiary|cr=0;1/8;1/4|type=beast|miscellaneous=!swarm}"
 					]
 				},
-				"每隻野獸同時也被視作精類生物，且它會在生命值歸零或此法術結束時消失。",
+				"每隻野獸同時也被視作精類生物，且它會在它生命值歸零或此法術結束時消失。",
 				"被召喚的生物對你和你的同伴友善。這些召喚生物在骰先攻時作為一組擲骰，但有著各自的回合。它們服從任何你交代他們的口頭指令（你不需要花費行動）。若你不對它們交代任何指令，則它們將在面對敵意生物時自我防衛，除此之外不採取其他動作。",
 				"這些生物的數據資料由DM掌控。"
 			],
@@ -5496,7 +5496,7 @@
 			"page": 225
 		},
 		{
-			"name": "召喚彈幕", "ENG_name": "Conjure Barrage",
+			"name": "召喚箭幕", "ENG_name": "Conjure Barrage",
 			"level": 3,
 			"school": "C",
 			"time": [
@@ -5596,7 +5596,7 @@
 			"page": 225
 		},
 		{
-			"name": "Conjure Elemental",
+			"name": "召喚元素生物", "ENG_name": "Conjure Elemental",
 			"level": 5,
 			"school": "C",
 			"time": [
@@ -5615,7 +5615,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "burning incense for air, soft clay for earth, sulfur and phosphorus for fire, or water and sand for water"
+				"m": "點燃的薰香對應氣元素、軟質黏土對應土元素、硫磺和磷對應火元素、水和沙對應水元素"
 			},
 			"duration": [
 				{
@@ -5654,17 +5654,17 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You call forth an elemental servant. Choose an area of air, earth, fire, or water that fills a 10-foot cube within range. An {@filter elemental of challenge rating 5 or lower|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4;5|type=elemental|miscellaneous=!swarm} appropriate to the area you chose appears in an unoccupied space within 10 feet of it. For example, a {@creature fire elemental} emerges from a bonfire, and an {@creature earth elemental} rises up from the ground. The elemental disappears when it drops to 0 hit points or when the spell ends.",
-				"The elemental is friendly to you and your companions for the duration. Roll initiative for the elemental, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you). If you don't issue any commands to the elemental, it defends itself from hostile creatures but otherwise takes no actions.",
-				"If your concentration is broken, the elemental doesn't disappear. Instead, you lose control of the elemental, it becomes hostile toward you and your companions, and it might attack. An uncontrolled elemental can't be dismissed by you, and it disappears 1 hour after you summoned it.",
-				"The DM has the elemental's statistics."
+				"你呼喚出一個元素僕役。選擇射程內一處在10呎邊長立方體內充滿氣、土、火、或水的區域。一個對應你所選區域的{@filter 挑戰等級5或以下的元素生物|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4;5|type=elemental|miscellaneous=!swarm}將會出現在距離該處10呎內的一處未被佔據空間。舉例來說，一個{@creature 火元素l}會從一團篝火中浮現，而一個{@creature 土元素}會從大地中升起。該元素生物會在它生命值歸零或此法術結束時消失。",
+				"該元素生物對你和你的同伴友善。為該元素生物骰先攻，且它擁有自己的回合。它會服從任何你交代它的口頭指令（你不需要花費行動）。若你不對該生物交代任何指令，則它將在面對敵意生物時自我防衛，除此之外不採取其他動作。",
+				"若你的專注被中斷，該元素生物並不會消失。取而代之，你將失去對該元素生物的控制，它將會對你和你的同伴具有敵意，且可能會展開攻擊。一個失去控制的元素生物無法被你解消，且它會在你召喚它之後1小時後消失。",
+				"這些元素生物的數據資料由DM掌控。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 6th level or higher, the challenge rating increases by 1 for each slot level above 5th."
+						"當你使用6環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，你所能召喚生物的挑戰等級便會再增加1。"
 					]
 				}
 			],
@@ -5732,7 +5732,7 @@
 			"page": 226
 		},
 		{
-			"name": "Conjure Minor Elementals",
+			"name": "召喚次級元素生物", "ENG_name": "Conjure Minor Elementals",
 			"level": 4,
 			"school": "C",
 			"time": [
@@ -5776,26 +5776,26 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You summon elementals that appear in unoccupied spaces that you can see within range. You choose one the following options for what appears:",
+				"你召喚出元素生物並使其出現在射程內未被占據的可見空間。選擇以下其中一個選項以決定出現什麼：",
 				{
 					"type": "list",
 					"items": [
-						"One {@filter elemental of challenge rating 2 or lower|bestiary|cr=2|type=elemental|miscellaneous=!swarm}",
-						"Two {@filter elementals of challenge rating 1 or lower|bestiary|cr=1|type=elemental|miscellaneous=!swarm}",
-						"Four {@filter elementals of challenge rating 1/2 or lower|bestiary|cr=1/2|type=elemental|miscellaneous=!swarm}",
-						"Eight {@filter elementals of challenge rating 1/4 or lower|bestiary|cr=0;1/8;1/4|type=elemental|miscellaneous=!swarm}."
+						"一個{@filter 挑戰等級2或以下的元素生物|bestiary|cr=2|type=elemental|miscellaneous=!swarm}",
+						"二個{@filter 挑戰等級1或以下的元素生物|bestiary|cr=1|type=elemental|miscellaneous=!swarm}",
+						"四個{@filter 挑戰等級1/2或以下的元素生物|bestiary|cr=1/2|type=elemental|miscellaneous=!swarm}",
+						"八個{@filter 挑戰等級1/4或以下的元素生物|bestiary|cr=0;1/8;1/4|type=elemental|miscellaneous=!swarm}."
 					]
 				},
-				"An elemental summoned by this spell disappears when it drops to 0 hit points or when the spell ends.",
-				"The summoned creatures are friendly to you and your companions. Roll initiative for the summoned creatures as a group, which has its own turns. They obey any verbal commands that you issue to them (no action required by you). If you don't issue any commands to them, they defend themselves from hostile creatures, but otherwise take no actions.",
-				"The DM has the creatures' statistics."
+				"一個被此法術召喚的元素生物會在它生命值歸零或此法術結束時消失。",
+				"被召喚的生物對你和你的同伴友善。這些召喚生物在骰先攻時作為一組擲骰，但有著各自的回合。它們服從任何你交代他們的口頭指令（你不需要花費行動）。若你不對它們交代任何指令，則它們將在面對敵意生物時自我防衛，除此之外不採取其他動作。",
+				"這些生物的數據資料由DM掌控。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using certain higher-level spell slots, you choose one of the summoning options above, and more creatures appear: twice as many with a 6th-level slot and three times as many with an 8th-level slot."
+						"當你使用特定更高環位的法術位施放此法術時，你從上述召喚選項中選擇一項，並讓更多生物出現：使用6環法術位時出現兩倍、8環法術位時出現三倍。"
 					]
 				}
 			],
@@ -5846,7 +5846,7 @@
 			]
 		},
 		{
-			"name": "Conjure Woodland Beings",
+			"name": "召喚林地之精", "ENG_name": "Conjure Woodland Beings",
 			"level": 4,
 			"school": "C",
 			"time": [
@@ -5865,7 +5865,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "one holly berry per creature summoned"
+				"m": "每召喚一個生物需要一顆冬青漿果"
 			},
 			"duration": [
 				{
@@ -5891,26 +5891,26 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You summon fey creatures that appear in unoccupied spaces that you can see within range. Choose one of the following options for what appears:",
+				"你召喚出精類生物，並使其出現在射程內未被占據的可見空間。選擇以下其中一個選項以決定出現什麼：",
 				{
 					"type": "list",
 					"items": [
-						"One {@filter fey creature of challenge rating 2 or lower|bestiary|cr=2|type=fey|miscellaneous=!swarm}",
-						"Two {@filter fey creatures of challenge rating 1 or lower|bestiary|cr=1|type=fey|miscellaneous=!swarm}",
-						"Four {@filter fey creatures of challenge rating 1/2 or lower|bestiary|cr=1/2|type=fey|miscellaneous=!swarm}",
-						"Eight {@filter fey creatures of challenge rating 1/4 or lower|bestiary|cr=0;1/8;1/4|type=fey|miscellaneous=!swarm}"
+						"一個{@filter 挑戰等級2或以下的精類生物|bestiary|cr=2|type=fey|miscellaneous=!swarm}",
+						"二個{@filter 挑戰等級1或以下的精類生物|bestiary|cr=1|type=fey|miscellaneous=!swarm}",
+						"四個{@filter 挑戰等級1/2或以下的精類生物|bestiary|cr=1/2|type=fey|miscellaneous=!swarm}",
+						"八個{@filter 挑戰等級1/4或以下的精類生物|bestiary|cr=0;1/8;1/4|type=fey|miscellaneous=!swarm}"
 					]
 				},
-				"A summoned creature disappears when it drops to 0 hit points or when the spell ends.",
-				"The summoned creatures are friendly to you and your companions. Roll initiative for the summoned creatures as a group, which have their own turns. They obey any verbal commands that you issue to them (no action required by you). If you don't issue any commands to them, they defend themselves from hostile creatures, but otherwise take no actions.",
-				"The DM has the creatures' statistics."
+				"一個被召喚的生物會在它生命值歸零或此法術結束時消失。",
+				"被召喚的生物對你和你的同伴友善。這些召喚生物在骰先攻時作為一組擲骰，但有著各自的回合。它們服從任何你交代他們的口頭指令（你不需要花費行動）。若你不對它們交代任何指令，則它們將在面對敵意生物時自我防衛，除此之外不採取其他動作。",
+				"這些生物的數據資料由DM掌控。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using certain higher-level spell slots, you choose one of the summoning options above, and more creatures appear: twice as many with a 6th-level slot and three times as many with an 8th-level slot."
+						"當你使用特定更高環位的法術位施放此法術時，你從上述召喚選項中選擇一項，並讓更多生物出現：使用6環法術位時出現兩倍、8環法術位時出現三倍。"
 					]
 				}
 			],
@@ -12659,7 +12659,7 @@
 			"page": 244
 		},
 		{
-			"name": "Freedom of Movement",
+			"name": "行動自如術", "ENG_name": "Freedom of Movement",
 			"level": 4,
 			"school": "A",
 			"time": [
@@ -12677,7 +12677,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a leather strap, bound around the arm or a similar appendage"
+				"m": "一條皮帶，纏繞在手臂或類似的附肢上"
 			},
 			"duration": [
 				{
@@ -12801,8 +12801,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You touch a willing creature. For the duration, the target's movement is unaffected by difficult terrain, and spells and other magical effects can neither reduce the target's speed nor cause the target to be {@condition paralyzed} or {@condition restrained}.",
-				"The target can also spend 5 feet of movement to automatically escape from nonmagical restraints, such as manacles or a creature that has it {@condition grappled}. Finally, being underwater imposes no penalties on the target's movement or attacks."
+				"你觸碰一個自願生物。在法術持續期間，目標的移動不會受到困難地形的影響，且法術和其他魔法效果無法降低目標的移動速度、也無法使它被{@condition 麻痺}或{@condition 束縛}。",
+				"目標也可以花費5呎移動速度以自動從非魔法束縛中逃脫，像是{@item 鐐銬|phb}或一個使它{@condition 被擒}的生物。最後，處於水下並不會對目標的移動和攻擊產生任何懲罰。"
 			],
 			"page": 244
 		},
@@ -13548,7 +13548,7 @@
 			"isHeal": true
 		},
 		{
-			"name": "Grasping Vine",
+			"name": "抓攫藤蔓", "ENG_name": "Grasping Vine",
 			"level": 4,
 			"school": "C",
 			"time": [
@@ -13604,8 +13604,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You conjure a vine that sprouts from the ground in an unoccupied space of your choice that you can see within range. When you cast this spell, you can direct the vine to lash out at a creature within 30 feet of it that you can see. That creature must succeed on a Dexterity saving throw or be pulled 20 feet directly toward the vine.",
-				"Until the spell ends, you can direct the vine to lash out at the same creature or another one as a bonus action on each of your turns."
+				"你召喚出一株藤蔓，讓它從射程內一處你所選擇且你能看見的未被佔據空間內的地面蔓生而出。當你施放此法術時，你可以指示該藤蔓襲向距離它30呎內一個你所能看見的生物。該生物必須成功通過一次敏捷豁免，否則被拉向藤蔓20呎距離。",
+				"直到此法術結束前，你可以在每個你的回合以一個附贈動作指示該藤蔓襲向同個生物或另一個目標。"
 			],
 			"page": 246,
 			"savingThrow": [
@@ -17602,7 +17602,7 @@
 			"page": 256
 		},
 		{
-			"name": "Locate Creature",
+			"name": "生物定位術", "ENG_name": "Locate Creature",
 			"level": 4,
 			"school": "D",
 			"time": [
@@ -17620,7 +17620,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a bit of fur from a bloodhound"
+				"m": "少許尋血獵犬的毛"
 			},
 			"duration": [
 				{
@@ -17715,9 +17715,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Describe or name a creature that is familiar to you. You sense the direction to the creature's location, as long as that creature is within 1,000 feet of you. If the creature is moving, you know the direction of its movement.",
-				"The spell can locate a specific creature known to you, or the nearest creature of a specific kind (such as a human or a unicorn), so long as you have seen such a creature up close\u2014within 30 feet\u2014at least once. If the creature you described or named is in a different form, such as being under the effects of a polymorph spell, this spell doesn't locate the creature.",
-				"This spell can't locate a creature if running water at least 10 feet wide blocks a direct path between you and the creature."
+				"描述或指名一個你所熟悉的生物。只要該生物距離你1,000呎以內，你就可以感知到該生物所在位置的方向。若該生物正在移動，你也能知道它移動的方向。",
+				"此法術可以定位一個你已知的特定生物，只要你曾在近距離\u201430呎距離內\u2014至少看過它一次。或者，此法術可以定位特定種類中（像是一個人類或一隻獨角獸）離你最近的一個生物。如果你所描述或指名的生物正處於另一種不同的形態，例如處於{@spell 變形術}法術的效果下，則此法術將無法定位該生物。",
+				"若有至少10呎寬的流水阻擋在你和該生物之間的直線通路上，則此法術將無法定位該生物。"
 			],
 			"page": 256
 		},
@@ -17795,7 +17795,7 @@
 			"source": "PHB",
 			"entries": [
 				"描述或指名一個你所熟悉的物體。只要該物體距離你1,000呎以內，你就可以感知到該物體所在位置的方向。若該物體正在移動，你也能知道它移動的方向。",
-				"此法術可以定位一個你已知的特定物體，只要你曾至少在近距離\u201430呎距離內\u2014看過它一次。或者，此法術可以定位特定種類中離你最近的一個物體，像是某一種服裝、珠寶、家具、工具、或武器。",
+				"此法術可以定位一個你已知的特定物體，只要你曾在近距離\u201430呎距離內\u2014至少看過它一次。或者，此法術可以定位特定種類中離你最近的一個物體，像是某一種服裝、珠寶、家具、工具、或武器。",
 				"若有任意厚度的鉛擋在你和物體之間的直線通路上，即使只是薄薄一層，則此法術將無法定位該物體。"
 			],
 			"page": 256
@@ -21276,7 +21276,7 @@
 			]
 		},
 		{
-			"name": "Polymorph",
+			"name": "變形術", "name": "Polymorph",
 			"level": 4,
 			"school": "T",
 			"time": [
@@ -23322,7 +23322,7 @@
 			"page": 272
 		},
 		{
-			"name": "Resurrection",
+			"name": "復活術", "ENG_name": "Resurrection",
 			"level": 7,
 			"school": "N",
 			"time": [
@@ -24461,7 +24461,7 @@
 			]
 		},
 		{
-			"name": "Shapechange",
+			"name": "形體變化", "name": "Shapechange",
 			"level": 9,
 			"school": "T",
 			"time": [
@@ -26363,7 +26363,7 @@
 			"page": 278
 		},
 		{
-			"name": "Stoneskin",
+			"name": "石膚術", "ENG_name": "Stoneskin",
 			"level": 4,
 			"school": "A",
 			"time": [
@@ -26382,7 +26382,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "diamond dust worth 100 gp, which the spell consumes",
+					"text": "價值100金幣的鑽石塵，在施法時消耗",
 					"cost": 100,
 					"consume": true
 				}
@@ -26505,7 +26505,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"This spell turns the flesh of a willing creature you touch as hard as stone. Until the spell ends, the target has resistance to nonmagical bludgeoning, piercing, and slashing damage."
+				"此法術將讓一個你所觸碰的自願生物的肌膚如同石頭一般堅硬。直到法術結束前，目標對非魔法的鈍擊、穿刺、劈砍傷害具有抗性。"
 			],
 			"page": 278,
 			"damageResist": [
@@ -28144,7 +28144,7 @@
 			"page": 283
 		},
 		{
-			"name": "True Polymorph",
+			"name": "完全變形術", "ENG_name": "True Polymorph",
 			"level": 9,
 			"school": "T",
 			"time": [
@@ -28228,7 +28228,7 @@
 			"permanentEffects": true
 		},
 		{
-			"name": "True Resurrection",
+			"name": "完全復活術", "name": "True Resurrection",
 			"level": 9,
 			"school": "N",
 			"time": [

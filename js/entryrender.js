@@ -4398,7 +4398,7 @@ EntryRenderer.hover = {
 
 EntryRenderer.dice = {
 	SYSTEM_USER: {
-		name: "幸運女神" // Avandra, goddess of luck
+		name: "幸運女神 艾梵卓" // Avandra, goddess of luck
 	},
 
 	_$wrpRoll: null,
@@ -4797,7 +4797,7 @@ EntryRenderer.dice = {
 
 		if (com === "/help" || com === "/h") {
 			EntryRenderer.dice._showMessage(
-				`支援　捨棄最高骰面(<span class="out-roll-item-code">2d4dh1</span>) 和 捨棄最低骰面(<span class="out-roll-item-code">4d6dl1</span>)。<br>
+				`支援 捨棄最高骰面(<span class="out-roll-item-code">2d4dh1</span>) 和 捨棄最低骰面(<span class="out-roll-item-code">4d6dl1</span>)。<br>
 				上、下方向鍵 以巡覽歷史輸入。<br>
 				使用 <span class="out-roll-item-code">${PREF_MACRO} list</span> 以列出已儲存的巨集指令。<br>
 				使用 <span class="out-roll-item-code">${PREF_MACRO} add myName 1d2+3</span> 以加入(或更新)一個巨集指令。巨集指令的名稱不能包含空白或＃字號。<br>
