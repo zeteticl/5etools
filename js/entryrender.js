@@ -4398,7 +4398,7 @@ EntryRenderer.hover = {
 
 EntryRenderer.dice = {
 	SYSTEM_USER: {
-		name: "Avandra" // goddess of luck
+		name: "幸運女神" // Avandra, goddess of luck
 	},
 
 	_$wrpRoll: null,
@@ -4487,7 +4487,7 @@ EntryRenderer.dice = {
 			EntryRenderer.dice._showBox();
 			EntryRenderer.dice._$iptRoll.focus();
 		});
-		const $head = $(`<div class="head-roll"><span class="hdr-roll">Dice Roller</span><span class="delete-icon glyphicon glyphicon-remove"></span></div>`)
+		const $head = $(`<div class="head-roll"><span class="hdr-roll">擲骰工具</span><span class="delete-icon glyphicon glyphicon-remove"></span></div>`)
 			.on("click", () => {
 				if (!EntryRenderer.dice._panel) EntryRenderer.dice._hideBox();
 			});
@@ -4497,7 +4497,7 @@ EntryRenderer.dice = {
 				if (e.which === 13) { // return
 					EntryRenderer.dice.roll2($iptRoll.val(), {
 						user: true,
-						name: "Anon"
+						name: "匿名" // Anon
 					});
 					$iptRoll.val("");
 				}
@@ -4651,7 +4651,7 @@ EntryRenderer.dice = {
 				return $roll.data("name");
 			}
 			let name = document.title.replace("- 5etools", "").trim();
-			return name === "DM Screen" ? "Dungeon Master" : name;
+			return name === "DM Screen" ? "地下城主" : name;
 		}
 
 		function getThRoll (total) {
@@ -4766,7 +4766,7 @@ EntryRenderer.dice = {
 
 			return result;
 		} else {
-			$out.append(`<div class="out-roll-item">Invalid input! Try &quot;/help&quot;</div>`);
+			$out.append(`<div class="out-roll-item">無效的指令！試試&quot;/help&quot;</div>`);
 		}
 		EntryRenderer.dice._scrollBottom();
 	},
@@ -4784,7 +4784,7 @@ EntryRenderer.dice = {
 		EntryRenderer.dice._showMessage(`<span class="out-roll-item-code">${com}</span>`, rolledBy); // parrot the user's command back to them
 		const PREF_MACRO = "/macro";
 		function showInvalid () {
-			EntryRenderer.dice._showMessage("Invalid input! Try &quot;/help&quot;", EntryRenderer.dice.SYSTEM_USER);
+			EntryRenderer.dice._showMessage("無效的指令！試試&quot;/help&quot;", EntryRenderer.dice.SYSTEM_USER);
 		}
 
 		function checkLength (arr, desired) {
@@ -4797,13 +4797,13 @@ EntryRenderer.dice = {
 
 		if (com === "/help" || com === "/h") {
 			EntryRenderer.dice._showMessage(
-				`Drop highest (<span class="out-roll-item-code">2d4dh1</span>) and lowest (<span class="out-roll-item-code">4d6dl1</span>) are supported.<br>
-				Up and down arrow keys cycle input history.<br>
-Use <span class="out-roll-item-code">${PREF_MACRO} list</span> to list saved macros.<br>
-				Use <span class="out-roll-item-code">${PREF_MACRO} add myName 1d2+3</span> to add (or update) a macro. Macro names should not contain spaces or hashes.<br>
-				Use <span class="out-roll-item-code">${PREF_MACRO} remove myName</span> to remove a macro.<br>
-				Use <span class="out-roll-item-code">#myName</span> to roll a macro.
-				Use <span class="out-roll-item-code">/clear</span> to clear the roller.`,
+				`支援　捨棄最高骰面(<span class="out-roll-item-code">2d4dh1</span>) 和 捨棄最低骰面(<span class="out-roll-item-code">4d6dl1</span>)。<br>
+				上、下方向鍵 以巡覽歷史輸入。<br>
+				使用 <span class="out-roll-item-code">${PREF_MACRO} list</span> 以列出已儲存的巨集指令。<br>
+				使用 <span class="out-roll-item-code">${PREF_MACRO} add myName 1d2+3</span> 以加入(或更新)一個巨集指令。巨集指令的名稱不能包含空白或＃字號。<br>
+				使用 <span class="out-roll-item-code">${PREF_MACRO} remove myName</span> 以移除一個巨集指令。<br>
+				使用 <span class="out-roll-item-code">#myName</span> 以使用一個巨集擲骰。<br>
+				使用 <span class="out-roll-item-code">/clear</span> 以清除紀錄。`,
 				EntryRenderer.dice.SYSTEM_USER
 			);
 		} else if (com.startsWith(PREF_MACRO)) {
@@ -4828,7 +4828,7 @@ Use <span class="out-roll-item-code">${PREF_MACRO} list</span> to list saved mac
 							else {
 								EntryRenderer.dice.storage[name] = macro;
 								pSave()
-									.then(() => EntryRenderer.dice._showMessage(`Saved macro <span class="out-roll-item-code">#${name}</span>`, EntryRenderer.dice.SYSTEM_USER));
+									.then(() => EntryRenderer.dice._showMessage(`儲存巨集指令 <span class="out-roll-item-code">#${name}</span>`, EntryRenderer.dice.SYSTEM_USER));
 							}
 						} else {
 							showInvalid();
@@ -4840,9 +4840,9 @@ Use <span class="out-roll-item-code">${PREF_MACRO} list</span> to list saved mac
 							if (EntryRenderer.dice.storage[others[0]]) {
 								delete EntryRenderer.dice.storage[others[0]];
 								pSave()
-									.then(() => EntryRenderer.dice._showMessage(`Removed macro <span class="out-roll-item-code">#${others[0]}</span>`, EntryRenderer.dice.SYSTEM_USER));
+									.then(() => EntryRenderer.dice._showMessage(`移除巨集指令<span class="out-roll-item-code">#${others[0]}</span>`, EntryRenderer.dice.SYSTEM_USER));
 							} else {
-								EntryRenderer.dice._showMessage(`Macro <span class="out-roll-item-code">#${others[0]}</span> not found`, EntryRenderer.dice.SYSTEM_USER);
+								EntryRenderer.dice._showMessage(`找不到巨集指令<span class="out-roll-item-code">#${others[0]}</span>`, EntryRenderer.dice.SYSTEM_USER);
 							}
 						} else {
 							showInvalid();
