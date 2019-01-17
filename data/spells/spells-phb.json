@@ -1548,7 +1548,7 @@
 			"page": 215
 		},
 		{
-			"name": "Aura of Life",
+			"name": "生命靈光", "ENG_name": "Aura of Life",
 			"level": 4,
 			"school": "A",
 			"time": [
@@ -1609,7 +1609,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Life-preserving energy radiates from you in an aura with a 30-foot radius. Until the spell ends, the aura moves with you, centered on you. Each nonhostile creature in the aura (including you) has resistance to necrotic damage, and its hit point maximum can't be reduced. In addition, a nonhostile, living creature regains 1 hit point when it starts its turn in the aura with 0 hit points."
+				"維持生命的能量從你身上散發形成一個30呎半徑的靈光。直到此法術結束前，該靈光將會跟隨你移動，並以你為中心。每一個區域內的非敵意生物（包括你）具有對死靈傷害的抗性，且生命值最大值不會被減少。此外，一個生命值為0但仍活著的非敵對生物，會在該靈光內開始它的回合時回復1點生命值。"
 			],
 			"page": 216,
 			"damageResist": [
@@ -1618,7 +1618,7 @@
 			"isHeal": true
 		},
 		{
-			"name": "Aura of Purity",
+			"name": "淨化靈光", "ENG_name": "Aura of Purity",
 			"level": 4,
 			"school": "A",
 			"time": [
@@ -1657,7 +1657,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Purifying energy radiates from you in an aura with a 30-foot radius. Until the spell ends, the aura moves with you, centered on you. Each nonhostile creature in the aura (including you) can't become diseased, has resistance to poison damage, and has advantage on saving throws against effects that cause any of the following conditions: {@condition blinded}, {@condition charmed}, {@condition deafened}, {@condition frightened}, {@condition paralyzed}, {@condition poisoned}, and {@condition stunned}."
+				"淨化能量從你身上散發形成一個30呎半徑的靈光。直到此法術結束前，該靈光將會跟隨你移動，並以你為中心。每一個靈光內的非敵意生物（包括你）將不會感染疾病，具有對毒素傷害的抗性，且在對抗會導致以下狀態的效果的豁免檢定中具有優勢：{@condition 目盲}、{@condition 魅惑}、{@condition 耳聾}、{@condition 恐懼}、{@condition 麻痺}、{@condition 中毒}、和{@condition 震懾}。."
 			],
 			"page": 216,
 			"damageResist": [
@@ -1716,7 +1716,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"治癒能量從你身上散發而出並充斥在30呎半徑的區域中。直到此法術結束前，該區域將會跟隨你移動，並以你為中心。你可以使用一個附贈動作以使區域內的一個生物（包括你）回復{@dice 2d6}點生命值。"
+				"治癒能量從你身上散發形成一個30呎半徑的靈光。直到此法術結束前，該靈光將會跟隨你移動，並以你為中心。你可以使用一個附贈動作以使靈光內的一個生物（包括你）回復{@dice 2d6}點生命值。"
 			],
 			"page": 216,
 			"isHeal": true
@@ -1889,7 +1889,7 @@
 			]
 		},
 		{
-			"name": "Banishing Smite",
+			"name": "放逐斬", "ENG_name": "Banishing Smite",
 			"level": 5,
 			"school": "A",
 			"time": [
@@ -1939,7 +1939,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"The next time you hit a creature with a weapon attack before this spell ends, your weapon crackles with force, and the attack deals an extra {@dice 5d10} force damage to the target. Additionally, if this attack reduces the target to 50 hit points or fewer, you banish it. If the target is native to a different plane of existence than the one you're on, the target disappears, returning to its home plane. If the target is native to the plane you're on, the creature vanishes into a harmless demiplane. While there, the target is {@condition incapacitated}. It remains there until the spell ends, at which point the target reappears in the space it left or in the nearest unoccupied space if that space is occupied."
+				"在此法術結束前，下一次你以近戰武器攻擊命中一個生物時，你的武器將爆發出強大力場，且該攻擊對目標造成額外{@dice 5d10}力場傷害。此外，若這次攻擊將目標的生命值減少至50或以下，則你將它從位面放逐。若目標原生於與你們所處位面不同的另一個存在位面，則目標將消失，並回到它的故鄉位面。若目標原生於你們所處的存在位面，則該生物將會消失至一個無害的位面。當處於該位面，目標陷入{@condition 無力}狀態。它將維持在該處直到此法術結束。在此法術結束時，目標將重新出現在它離開時所在的空間，或若該空間已被佔據則出現在最近一處未被占據空間。"
 			],
 			"page": 216,
 			"damageInflict": [
@@ -1950,7 +1950,7 @@
 			]
 		},
 		{
-			"name": "Banishment",
+			"name": "放逐術", "ENG_name": "Banishment",
 			"level": 4,
 			"school": "A",
 			"time": [
@@ -1969,7 +1969,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "an item distasteful to the target"
+				"m": "一個令目標厭惡的物品"
 			},
 			"duration": [
 				{
@@ -2109,16 +2109,16 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You attempt to send one creature that you can see within range to another plane of existence. The target must succeed on a Charisma saving throw or be banished.",
-				"If the target is native to the plane of existence you're on, you banish the target to a harmless demiplane. While there, the target is {@condition incapacitated}. The target remains there until the spell ends, at which point the target reappears in the space it left or in the nearest unoccupied space if that space is occupied.",
-				"If the target is native to a different plane of existence than the one you're on, the target is banished with a faint popping noise, returning to its home plane. If the spell ends before 1 minute has passed, the target reappears in the space it left or in the nearest unoccupied space if that space is occupied. Otherwise, the target doesn't return."
+				"你嘗試將射程內你所能看見的一個生物送到另一個存在位面。目標必須成功通過一次魅力豁免，否則將被放逐。",
+				"若目標原生於你們所處的存在位面，則你將目標放逐到一個無害的半位面。當處於該位面時，目標陷入{@condition 無力}狀態。目標將維持在該處直到此法術結束。在此法術結束時，目標將重新出現在它離開時所在的空間，或若該空間已被佔據則出現在最近一處未被占據空間。",
+				"若目標原生於與你們所處位面不同的另一個存在位面，則目標伴隨著一陣微弱的爆破聲被放逐，回到它的故鄉位面。若此法術在1分鐘過去之前結束，則目標將重新出現在它離開時所在的空間，或若該空間已被佔據則出現在最近一處未被占據空間。反之，目標不會回到原處。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 5th level or higher, you can target one additional creature for each slot level above 4th."
+						"當你使用5環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，你就可以再額外選擇一個生物作為目標。"
 					]
 				}
 			],
@@ -2972,7 +2972,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"在法術持續期間，下一次你以近戰武器攻擊命中時，你的武器將會閃耀出明亮的光芒，且該攻擊將對目標造成額外{@dice 3d8}光耀傷害。此外，目標必須成功通過一次體質豁免，否則直到法術結束前陷入{@condition 目盲}。",
+				"在法術持續期間，下一次你以近戰武器攻擊命中一個生物時，你的武器將會閃耀出明亮的光芒，且該攻擊將對目標造成額外{@dice 3d8}光耀傷害。此外，目標必須成功通過一次體質豁免，否則直到法術結束前陷入{@condition 目盲}。",
 				"一個被此法術{@condition 目盲}的生物可以在它的每個回合結束時進行一次體質豁免。若豁免成功，則它將不再{@condition 目盲}。"
 			],
 			"page": 219,
@@ -3338,7 +3338,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"在法術持續期間，下一次你以近戰武器攻擊命中時，武器將會在你擊中時閃爍著星輝光芒。該攻擊對目標造成額外{@dice 2d6}光耀傷害，使{@condition 隱形}的目標變得可見，且直到法術結束前，目標將散發5呎半徑的微光光照並因此無法{@condition 隱形}。"
+				"在此法術結束前，下一次你以武器攻擊命中一個生物時，武器將會在你擊中時閃爍著星輝光芒。該攻擊對目標造成額外{@dice 2d6}光耀傷害，使{@condition 隱形}的目標變得可見，且直到法術結束前，目標將散發5呎半徑的微光光照並因此無法{@condition 隱形}。"
 			],
 			"entriesHigherLevel": [
 				{
@@ -7664,7 +7664,7 @@
 			]
 		},
 		{
-			"name": "Death Ward",
+			"name": "防死護咒", "ENG_name": "Death Ward",
 			"level": 4,
 			"school": "A",
 			"time": [
@@ -7772,9 +7772,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You touch a creature and grant it a measure of protection from death.",
-				"The first time the target would drop to 0 hit points as a result of taking damage, the target instead drops to 1 hit point, and the spell ends.",
-				"If the spell is still in effect when the target is subjected to an effect that would kill it instantaneously without dealing damage, that effect is instead negated against the target, and the spell ends."
+				"你觸碰一個生物並賦予它一種防止死亡的手段。",
+				"當目標第一次因為受到傷害而導致生命值歸零時，目標改為使生命值減少至1，且此法術結束。",
+				"若此法術在目標受到不造成傷害而導致它立刻死亡的效果時仍然作用著，則其對目標的即死效果將被抵銷，且此法術結束。"
 			],
 			"page": 230
 		},
@@ -13665,7 +13665,7 @@
 			]
 		},
 		{
-			"name": "Greater Invisibility",
+			"name": "高等隱形術", "ENG_name": "Greater Invisibility",
 			"level": 4,
 			"school": "I",
 			"time": [
@@ -13785,7 +13785,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You or a creature you touch becomes {@condition invisible} until the spell ends. Anything the target is wearing or carrying is {@condition invisible} as long as it is on the target's person."
+				"你或一個你所觸碰的生物變得{@condition 隱形}直到法術結束。只要目標所穿戴或攜帶的東西還在目標身上，它們也都將保持{@condition 隱形}。"
 			],
 			"page": 246,
 			"conditionInflict": [
@@ -13876,7 +13876,7 @@
 			"page": 246
 		},
 		{
-			"name": "Guardian of Faith",
+			"name": "虔誠守衛", "ENG_name": "Guardian of Faith",
 			"level": 4,
 			"school": "C",
 			"time": [
@@ -13996,8 +13996,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A Large spectral guardian appears and hovers for the duration in an unoccupied space of your choice that you can see within range. The guardian occupies that space and is indistinct except for a gleaming sword and shield emblazoned with the symbol of your deity.",
-				"Any creature hostile to you that moves to a space within 10 feet of the guardian for the first time on a turn must succeed on a Dexterity saving throw. The creature takes 20 radiant damage on a failed save, or half as much damage on a successful one. The guardian vanishes when it has dealt a total of 60 damage."
+				"一個體型為大型的靈體守衛出現，並在法術持續期間漂浮於射程內一處你所選擇，且你所能看見的未被佔據空間。這個守衛佔據於該空間，身形模糊不清，持握著一把散發光芒的寶劍和一個飾有你神祇徽印的盾牌。",
+				"任何對你有敵意的生物在一個回合中第一次移進距離這個守衛10呎內的空間時，都必須成功通過一次敏捷豁免。若豁免失敗，則該生物將受到20點光耀傷害，豁免成功則只受到一半的傷害。這個守衛將在造成總共60點傷害時消失。"
 			],
 			"page": 246,
 			"damageInflict": [
@@ -26103,7 +26103,7 @@
 			]
 		},
 		{
-			"name": "Staggering Smite",
+			"name": "驚震斬", "ENG_name": "Staggering Smite",
 			"level": 4,
 			"school": "V",
 			"time": [
@@ -26183,7 +26183,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"The next time you hit a creature with a melee weapon attack during this spell's duration, your weapon pierces both body and mind, and the attack deals an extra {@dice 4d6} psychic damage to the target. The target must make a Wisdom saving throw. On a failed save, it has disadvantage on attack rolls and ability checks, and can't take reactions, until the end of its next turn."
+				"在法術持續期間，下一次你以近戰武器攻擊命中一個生物時，你的武器將同時刺穿它的身體與心靈，且該攻擊將對目標造成額外{@dice 4d6}精神傷害。目標必須進行一次睿知檢定。若豁免失敗，則直到它的下個回合結束前，它的攻擊檢定和屬性檢定將具有劣勢。"
 			],
 			"page": 278,
 			"damageInflict": [
@@ -26287,7 +26287,7 @@
 			]
 		},
 		{
-			"name": "Stone Shape",
+			"name": "塑石術", "ENG_name": "Stone Shape",
 			"level": 4,
 			"school": "T",
 			"time": [
@@ -26305,7 +26305,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "soft clay, which must be worked into roughly the desired shape of the stone object"
+				"m": "軟黏土，必須被捏成你想要使石製物體變成的大致形狀"
 			},
 			"duration": [
 				{
@@ -26358,7 +26358,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You touch a stone object of Medium size or smaller or a section of stone no more than 5 feet in any dimension and form it into any shape that suits your purpose. So, for example, you could shape a large rock into a weapon, idol, or coffer, or make a small passage through a wall, as long as the wall is less than 5 feet thick. You could also shape a stone door or its frame to seal the door shut. The object you create can have up to two hinges and a latch, but finer mechanical detail isn't possible."
+				"你觸碰一個大小為中型或更小的石製物體、或一塊各邊長都不超過5呎的岩石區塊，並將它塑造成任何你想要的形狀。舉例來說，你可以將一塊大石頭塑造成一把武器、雕像、棺材、或只要牆壁的厚度小於5呎，就可以在牆壁上開出一個小型通道。你也可以使一扇石製的門或門框變形以把門封住。你所創造的物體可以有最多兩條鉸鏈和一道門閂，但不可能創造出更精良的機械結構。"
 			],
 			"page": 278
 		},
