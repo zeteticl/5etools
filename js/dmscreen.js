@@ -2533,9 +2533,16 @@ class AddMenuSearchTab extends AddMenuTab {
 
 				const get$Row = (r) => {
 					if (this.subType === "content") {
+						var full_name = "";
+						if(r.doc.c==6) 	full_name += Parser.ConditionToDisplay(r.doc.n);
+						if(r.doc.c==10) full_name += Parser.RaceToDisplay(r.doc.n);
+
+						if(full_name=="") 	full_name=r.doc.n;
+						else 				full_name+=`(${r.doc.n})`;
+						
 						return $(`
 							<div class="panel-tab-results-row">
-								<span>${r.doc.n}</span>
+								<span>${full_name}</span>
 								<span>${r.doc.s ? `<i title="${Parser.sourceJsonToFull(r.doc.s)}">${Parser.sourceJsonToAbv(r.doc.s)}${r.doc.p ? ` p${r.doc.p}` : ""}</i>` : ""}</span>
 							</div>
 						`);
