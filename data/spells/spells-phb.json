@@ -5237,7 +5237,7 @@
 			]
 		},
 		{
-			"name": "Confusion",
+			"name": "困惑術", "ENG_name": "Confusion",
 			"level": 4,
 			"school": "E",
 			"time": [
@@ -5256,7 +5256,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "three nut shells"
+				"m": "三個堅果殼"
 			},
 			"duration": [
 				{
@@ -5332,14 +5332,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"This spell assaults and twists creatures' minds, spawning delusions and provoking uncontrolled action. Each creature in a 10-foot-radius sphere centered on a point you choose within range must succeed on a Wisdom saving throw when you cast this spell or be affected by it.",
-				"An affected target can't take reactions and must roll a {@dice d10} at the start of each of its turns to determine its behavior for that turn.",
+				"此法術將侵襲並扭曲生物的心靈，產生出錯覺，並引發不受控制的動作。在你施放此法術時，每個處於以射程內你所選擇一點為中心的10呎半徑球體範圍內的生物都必須成功通過一次睿知豁免，否則受到法術影響。",
+				"一個受影響的目標不能採取反應，且必須在每次它的回合開始時骰{@dice d10}以決定它這回合的行為。",
 				{
 					"type": "table",
-					"caption": "Confusion Behaviour",
+					"caption": "困惑術行為",
 					"colLabels": [
 						"{@dice d10}",
-						"Behavior"
+						"行為"
 					],
 					"colStyles": [
 						"col-1 text-align-center",
@@ -5353,7 +5353,7 @@
 									"exact": 1
 								}
 							},
-							"The creature uses all its movement to move in a random direction. To determine the direction, roll a {@dice d8} and assign a direction to each die face. The creature doesn't take an action this turn."
+							"該生物使用它所有的移動速度向著一個隨機方向移動。要決定方向，為{@dice d8}的每一個骰面分配一個方向並擲骰決定。該生物在這回合不會採取動作。"
 						],
 						[
 							{
@@ -5363,7 +5363,7 @@
 									"max": 6
 								}
 							},
-							"The creature doesn't move or take actions this turn."
+							"該生物在這回合不會移動，也不會採取動作。"
 						],
 						[
 							{
@@ -5373,7 +5373,7 @@
 									"max": 8
 								}
 							},
-							"The creature uses its action to make a melee attack against a randomly determined creature within its reach. If there is no creature within its reach, the creature does nothing this turn."
+							"該生物使用它的動作以對它觸及範圍內一個隨機決定的生物進行一次近戰攻擊。若在它的觸及範圍內沒有任何生物，則該生物在這回合不會做任何事情。"
 						],
 						[
 							{
@@ -5383,18 +5383,18 @@
 									"max": 10
 								}
 							},
-							"The creature can act and move normally."
+							"該生物可以正常地行動和移動。"
 						]
 					]
 				},
-				"At the end of each of its turns, an affected target can make a Wisdom saving throw. If it succeeds, this effect ends for that target."
+				"在它的每個回合結束時，受影響的目標可以進行一次睿知豁免。若豁免成功，則結束此法術對該目標的效果。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 5th level or higher, the radius of the sphere increases by 5 feet for each slot level above 4th."
+						"當你使用5環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，該球體範圍的半徑就會再增加5呎。"
 					]
 				}
 			],
@@ -6211,7 +6211,7 @@
 			"page": 227
 		},
 		{
-			"name": "操控水相", "name": "Control Water",
+			"name": "操控水體", "ENG_name": "Control Water",
 			"level": 4,
 			"school": "T",
 			"time": [
@@ -6293,37 +6293,37 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"直到此法術結束前，你控制任何在你所選擇的一處各邊長最多100呎的立方體空間內的獨立水體。你在施放此法術時可以從下列效果中選擇任何效果。在你的回合以一個動作，你可以重複該效果或選擇另一個不同的效果。",
+				"直到此法術結束前，你控制任何在你所選擇的一處各邊長最多100呎的立方體空間內的獨立水體。你在施放此法術時可以從下列效果中選擇任意一個效果。在你的回合以一個動作，你可以重複該效果或選擇另一個不同的效果。",
 				{
 					"type": "entries",
-					"name": "Flood",
+					"name": "淹漲",
 					"entries": [
-						"You cause the water level of all standing water in the area to rise by as much as 20 feet. If the area includes a shore, the flooding water spills over onto dry land.",
-						"If you choose an area in a large body of water, you instead create a 20-foot tall wave that travels from one side of the area to the other and then crashes down. Any Huge or smaller vehicles in the wave's path are carried with it to the other side. Any Huge or smaller vehicles struck by the wave have a 25 percent chance of capsizing.",
-						"The water level remains elevated until the spell ends or you choose a different effect. If this effect produced a wave, the wave repeats on the start of your next turn while the flood effect lasts."
+						"你使區域內所有不流動水體的水位提升最多20呎。若該區域內包含了沿岸，則氾濫的水將溢流到旱地上。",
+						"若你選擇了一個有著龐大水體的區域，則你改為創造出一波20呎高的波浪，從區域內一側行進至另一側然後撞下。任何在波浪行進路線上的巨型或更小的載具將會被帶到另一側。任何被波浪撞上的巨型或更小的載具將有25%的機率翻覆。",
+						"水位高度將維持直到此法術結束或你選擇了另一個效果。若這個效果製造了一波波浪，則在淹漲的效果持續期間，該波浪將在你的下個回合開始時重現。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Part Water",
+					"name": "分海",
 					"entries": [
-						"You cause water in the area to move apart and create a trench. The trench extends across the spell's area, and the separated water forms a wall to either side. The trench remains until the spell ends or you choose a different effect. The water then slowly fills in the trench over the course of the next round until the normal water level is restored."
+						"你使區域內的水體分開，並創造出一條壕溝。這條壕溝將橫穿此法術的區域，且被分開的水體將會在兩側形成水牆。這條壕溝將維持直到此法術結束或你選擇了另一個效果，而水體將接著在下一輪進行的過程中緩緩填補壕溝，直到回復平常的水位。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Redirect Flow",
+					"name": "轉向",
 					"entries": [
-						"You cause flowing water in the area to move in a direction you choose, even if the water has to flow over obstacles, up walls, or in other unlikely directions. The water in the area moves as you direct it, but once it moves beyond the spell's area, it resumes its flow based on the terrain conditions. The water continues to move in the direction you chose until the spell ends or you choose a different effect."
+						"你使區域內的流水向你所選擇的一個方向移動，即使這會使水流越障礙物、爬上牆面、或其他不可能的方向。區域內的水會按照你的指示移動，然而一旦它移出此法術的區域，它將繼續依照當下的地形狀況正常流動。水體會持續按照你所選的方向移動，直到此法術結束或你選擇了另一個效果。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Whirlpool",
+					"name": "漩渦",
 					"entries": [
-						"This effect requires a body of water at least 50 feet square and 25 feet deep. You cause a whirlpool to form in the center of the area. The whirlpool forms a vortex that is 5 feet wide at the base, up to 50 feet wide at the top, and 25 feet tall. Any creature or object in the water and within 25 feet of the vortex is pulled 10 feet toward it. A creature can swim away from the vortex by making a Strength (Athletics) check against your spell save DC.",
-						"When a creature enters the vortex for the first time on a turn or starts its turn there, it must make a Strength saving throw. On a failed save, the creature takes {@dice 2d8} bludgeoning damage and is caught in the vortex until the spell ends. On a successful save, the creature takes half damage, and isn't caught in the vortex. A creature caught in the vortex can use its action to try to swim away from the vortex as described above, but has disadvantage on the Strength (Athletics) check to do so.",
-						"The first time each turn that an object enters the vortex, the object takes {@dice 2d8} bludgeoning damage; this damage occurs each round it remains in the vortex."
+						"這個效果需要至少為50平方呎寬和25呎深的水體。你使一道漩渦在該區域的中心成行。這個漩渦將產生一道底部5呎寬，而頂部最多50呎寬的渦流。任何在水中且距離渦流25呎內的生物或物體都將被拉向它10呎距離。一個生物可以藉由進行一次對抗你法術豁免DC的力量（{@skill 運動}）檢定以嘗試游泳遠離渦流。",
+						"當一個生物在一個回合中第一次進入該渦流、或在其中開始它的回合，則它必須進行一次力量豁免。若豁免失敗，該生物將受到{@dice 2d8}鈍擊傷害並被渦流捲入直到此法術結束。若豁免成功，該生物只受到一半的傷害，且不會被渦流捲入。一個被渦流捲入的生物可以使用它的動作以上述的方式嘗試游泳遠離渦流，但它在這麼做的時候將在力量（{@skill 運動}）檢定中承受劣勢。",
+						"當一個物體在每個回合中第一次進入該渦流時，該物體將受到{@dice 2d8}鈍擊傷害；這個傷害也會在它留在渦流中的每一輪發生。"
 					]
 				}
 			],
@@ -8547,7 +8547,7 @@
 			]
 		},
 		{
-			"name": "Disintegrate",
+			"name": "解離術", "name": "Disintegrate",
 			"level": 6,
 			"school": "T",
 			"time": [
@@ -11686,7 +11686,7 @@
 			]
 		},
 		{
-			"name": "Fire Shield",
+			"name": "火焰護盾", "ENG_name": "Fire Shield",
 			"level": 4,
 			"school": "V",
 			"time": [
@@ -11704,7 +11704,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a bit of phosphorus or a firefly"
+				"m": "少許磷或一隻螢火蟲"
 			},
 			"duration": [
 				{
@@ -11757,9 +11757,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Thin and wispy flames wreathe your body for the duration, shedding bright light in a 10-foot radius and dim light for an additional 10 feet. You can end the spell early by using an action to dismiss it.",
-				"The flames provide you with a warm shield or a chill shield, as you choose. The warm shield grants you resistance to cold damage, and the chill shield grants you resistance to fire damage.",
-				"In addition, whenever a creature within 5 feet of you hits you with a melee attack, the shield erupts with flame. The attacker takes {@dice 2d8} fire damage from a warm shield, or {@dice 2d8} cold damage from a cold shield."
+				"輕薄縹緲的火焰在法術持續期間環繞著你的身體，散發出10呎半徑的明亮光照和再延伸10呎的微光光照。你可以藉由使用一個動作解消它以提早結束此法術。",
+				"這層火焰可以提供你溫暖的護盾或寒冷的護盾，由你選擇。溫暖的護盾將賦予你對寒冰傷害的抗性，而寒冷的護盾則會賦予你對火焰傷害的抗性。",
+				"此外，每當一個距離你5呎內的生物以一次近戰攻擊命中你，這個護盾將迸發出火焰。攻擊者將受到來自溫暖護盾的{@dice 2d8}火焰傷害，或來自寒冷護盾的{@dice 2d8}寒冰傷害。"
 			],
 			"page": 242,
 			"damageInflict": [
@@ -14546,7 +14546,7 @@
 			]
 		},
 		{
-			"name": "Hallucinatory Terrain",
+			"name": "幻覺地域", "name": "Hallucinatory Terrain",
 			"level": 4,
 			"school": "I",
 			"time": [
@@ -15906,7 +15906,7 @@
 			]
 		},
 		{
-			"name": "Ice Storm",
+			"name": "冰風暴", "ENG_name": "Ice Storm",
 			"level": 4,
 			"school": "V",
 			"time": [
@@ -15925,7 +15925,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a pinch of dust and a few drops of water"
+				"m": "一撮灰塵和幾滴水"
 			},
 			"duration": [
 				{
@@ -16003,15 +16003,15 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A hail of rock-hard ice pounds to the ground in a 20-foot-radius, 40-foot-high cylinder centered on a point within range. Each creature in the cylinder must make a Dexterity saving throw. A creature takes {@dice 2d8} bludgeoning damage and {@dice 4d6} cold damage on a failed save, or half as much damage on a successful one.",
-				"Hailstones turn the storm's area of effect into difficult terrain until the end of your next turn."
+				"一陣冰雹降下許多石般堅硬的冰塊，在以射程內一點為中心的20呎半徑、40呎高的圓柱體範圍內重擊地表。每個在圓柱體範圍內的生物都必須進行一次敏捷豁免。一個豁免失敗的目標將受到{@dice 2d8}鈍擊傷害以及{@dice 4d6}寒冰傷害，豁免成功則只受到一半的傷害。",
+				"這些冰雹將使風暴效果內的區域變為困難地形，直到你的下個回合結束。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 5th level or higher, the bludgeoning damage increases by {@scaledice 2d8|4-9|1d8} for each slot level above 4th."
+						"當你使用5環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，鈍擊傷害便會再增加{@scaledice 2d8|4-9|1d8}。"
 					]
 				}
 			],
@@ -20338,7 +20338,7 @@
 			]
 		},
 		{
-			"name": "Otiluke's Resilient Sphere",
+			"name": "歐提路克魔封法球", "ENG_name": "Otiluke's Resilient Sphere",
 			"level": 4,
 			"school": "V",
 			"time": [
@@ -20357,7 +20357,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a hemispherical piece of clear crystal and a matching hemispherical piece of gum arabic"
+				"m": "一塊透明的半球體水晶和一塊與之匹配的半球體阿拉伯膠"
 			},
 			"duration": [
 				{
@@ -20415,10 +20415,10 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A sphere of shimmering force encloses a creature or object of Large size or smaller within range. An unwilling creature must make a Dexterity saving throw. On a failed save, the creature is enclosed for the duration.",
-				"Nothing\u2014not physical objects, energy, or other spell effects\u2014can pass through the barrier, in or out, though a creature in the sphere can breathe there. The sphere is immune to all damage, and a creature or object inside can't be damaged by attacks or effects originating from outside, nor can a creature inside the sphere damage anything outside it.",
-				"The sphere is weightless and just large enough to contain the creature or object inside. An enclosed creature can use its action to push against the sphere's walls and thus roll the sphere at up to half the creature's speed. Similarly, the globe can be picked up and moved by other creatures.",
-				"A {@spell disintegrate} spell targeting the globe destroys it without harming anything inside it."
+				"一個微微發光的球體力場將射程內一個體型為大型或更小的生物或物體封入其中。一個非自願的生物可以進行一次敏捷豁免。若豁免失敗，則該生物在法術持續期間被封入球內。",
+				"沒有任何事物\u2014包括物質、能量、或其他法術效果\u2014可以穿過這道屏障，無論進或出都一樣，儘管球體內的生物仍可以呼吸。該球體免疫所有傷害，且在裡面的生物或物體不會被任何源自外面的攻擊或效果傷害，也不能對任何外面的事物造成傷害。",
+				"這個球體沒有重量，且大小剛好足夠容納裡面的生物或物體。一個被封住的生物可以使用它的動作以推動球面，並因此滾動球體移動最多該生物移動速度一半的距離。同樣的，這個球體也可以被其他生物拿起或移動。",
+				"以該球體為目標的{@spell 解離術}將摧毀它，而不會傷害到任何在裡面的事物。"
 			],
 			"page": 264,
 			"damageImmune": [
@@ -20741,7 +20741,7 @@
 			]
 		},
 		{
-			"name": "Phantasmal Killer",
+			"name": "魅影殺手", "ENG_name": "Phantasmal Killer",
 			"level": 4,
 			"school": "I",
 			"time": [
@@ -20803,14 +20803,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You tap into the nightmares of a creature you can see within range and create an illusory manifestation of its deepest fears, visible only to that creature. The target must make a Wisdom saving throw. On a failed save, the target becomes {@condition frightened} for the duration. At the end of each of the target's turns before the spell ends, the target must succeed on a Wisdom saving throw or take {@dice 4d10} psychic damage. On a successful save, the spell ends."
+				"你挖掘出射程內你所能看見的一個生物的惡夢，並創造出一個只能被該生物看見的幻象，表現出它心底最深的恐懼。目標必須進行一次睿知豁免。若豁免失敗，則目標在法術持續期間變得{@condition 恐懼}。在此法術結束前，每次目標的回合結束時，目標必須成功通過一次睿知豁免，否則受到{@dice 4d10}精神傷害。若豁免成功，則此法術結束。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 5th level or higher, the damage increases by {@scaledice 4d10|4-9|1d10} for each slot level above 4th."
+						"當你使用5環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 4d10|4-9|1d10}。"
 					]
 				}
 			],
@@ -25071,7 +25071,7 @@
 			]
 		},
 		{
-			"name": "Simulacrum",
+			"name": "擬真術", "name": "Simulacrum",
 			"level": 7,
 			"school": "I",
 			"time": [
@@ -28702,7 +28702,7 @@
 			]
 		},
 		{
-			"name": "Wall of Fire",
+			"name": "火牆術", "ENG_name": "Wall of Fire",
 			"level": 4,
 			"school": "V",
 			"time": [
@@ -28721,7 +28721,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a small piece of phosphorus"
+				"m": "一小塊磷"
 			},
 			"duration": [
 				{
@@ -28813,16 +28813,16 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You create a wall of fire on a solid surface within range. You can make the wall up to 60 feet long, 20 feet high, and 1 foot thick, or a ringed wall up to 20 feet in diameter, 20 feet high, and 1 foot thick. The wall is opaque and lasts for the duration.",
-				"When the wall appears, each creature within its area must make a Dexterity saving throw. On a failed save, a creature takes {@dice 5d8} fire damage, or half as much damage on a successful save.",
-				"One side of the wall, selected by you when you cast this spell, deals {@dice 5d8} fire damage to each creature that ends its turn within 10 feet of that side or inside the wall. A creature takes the same damage when it enters the wall for the first time on a turn or ends its turn there. The other side of the wall deals no damage."
+				"你在射程內一處固體表面上創造出一道火牆。你可以使這道牆呈現最多60呎長、20呎高、以及1呎厚，或形成一道有著直徑最多20呎、20呎高、以及1呎厚的環型牆。這道牆不透光，且持續直到法術持續時間結束。",
+				"當這道牆出現時，每個處於其區域內的生物都必須進行一次敏捷豁免。若豁免失敗，則該生物將受到{@dice 5d8}火焰傷害，豁免成功則只受到一半的傷害。",
+				"在你施放此法術時選擇這道牆的其中一側，每個在距離該側牆面10呎內或牆壁內部結束它回合的生物將會受到{@dice 5d8}火焰傷害。在一個回合中第一次進入牆壁或在該處結束它回合的生物會受到同樣的傷害。這道牆的另一側則不會造成傷害。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 5th level or higher, the damage increases by {@scaledice 5d8|4-9|1d8} for each slot level above 4th."
+						"當你使用5環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 5d8|4-9|1d8}。"
 					]
 				}
 			],
@@ -29635,8 +29635,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"一道強風之牆從射程內你所選擇的一處地面升起。你可以使這道牆最多50呎長、15呎高、以及1呎厚。你可以自由形塑這道牆的形狀，但它必須沿著地面形成一條連續的路線。這道牆持續直到法術持續時間結束。",
-				"當這道牆出現時，每個處於其範圍的生物都必須進行一次力量豁免。一個豁免失敗的目標將受到{@dice 3d8}鈍擊傷害，豁免成功則只受到一半的傷害。",
+				"一道強風之牆從射程內你所選擇的一處地面升起。你可以使這道牆呈現最多50呎長、15呎高、以及1呎厚。你可以自由形塑這道牆的形狀，但它必須沿著地面形成一條連續的路線。這道牆持續直到法術持續時間結束。",
+				"當這道牆出現時，每個處於其區域內的生物都必須進行一次力量豁免。一個豁免失敗的目標將受到{@dice 3d8}鈍擊傷害，豁免成功則只受到一半的傷害。",
 				"這陣強風會驅離雲霧、濃煙、和其他氣體。體型為小型或更小的飛行生物或物體無法穿過這道牆。被帶進這道牆內的未被固定的輕量物質將會向上吹飛。射向牆後目標的箭、弩矢、和其他尋常的投射物會被向上偏斜，並因此自動失手。（巨人或投石機投出的巨岩、以及其他類似的投射物，則不會受到影響。）處於{@spell 氣化形體}的生物無法穿過這道牆。"
 			],
 			"page": 288,
