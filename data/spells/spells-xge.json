@@ -41,7 +41,7 @@
 				]
 			},
 			"entries": [
-				"你吸乾從射程內由你指定的一點為中心、30呎立方空間內的每個生物體內的水份。在該區域內的每個生物都必須進行一次體質豁免。構裝生物和不死生物不受影響，而植物和水元素在進行此豁免檢定時具有劣勢。若豁免失敗，生物將受到{@dice 12d8}的死靈傷害，豁免成功則只受到一半的傷害。",
+				"你吸乾從射程內由你指定的一點為中心、30呎立方空間內的每個生物體內的水份。在該區域內的每個生物都必須進行一次體質豁免。構裝體和不死生物不受影響，而植物和水元素在進行此豁免檢定時具有劣勢。若豁免失敗，生物將受到{@dice 12d8}的死靈傷害，豁免成功則只受到一半的傷害。",
 				"在這個區域內的並非生物的非魔法植物，例如樹木和灌木，將會立即凋零並死亡。"
 			],
 			"page": 150,
@@ -2072,7 +2072,7 @@
 			"permanentEffects": true
 		},
 		{
-			"name": "Flame Arrows",
+			"name": "火焰箭矢", "ENG_name": "Flame Arrows",
 			"source": "XGE",
 			"level": 3,
 			"school": "T",
@@ -2123,14 +2123,14 @@
 				]
 			},
 			"entries": [
-				"You touch a quiver containing arrows or bolts. When a target is hit by a ranged weapon attack using a piece of ammunition drawn from the quiver, the target takes an extra {@dice 1d6} fire damage. The spell's magic ends on a piece of ammunition when it hits or misses, and the spell ends when twelve pieces of ammunition have been drawn from the quiver."
+				"你觸碰一個裝有箭或弩矢的箭袋。當一個目標被從此箭袋抽出的一發彈藥以一次遠程武器攻擊命中時，目標將受到額外{@dice 1d6}火焰傷害。此法術作用於一發彈藥的魔法將在它命中或失手時結束，而此法術將在十二發彈藥被從箭袋抽出後結束。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, the number of pieces of ammunition you can affect with this spell increases by two for each slot level above 3rd."
+						"當你使用4環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，你可以用此法術影響的彈藥數量便會再增加二發。"
 					]
 				}
 			],
@@ -2212,7 +2212,7 @@
 			]
 		},
 		{
-			"name": "Guardian of Nature",
+			"name": "自然守衛", "ENG_name": "Guardian of Nature",
 			"source": "XGE",
 			"level": 4,
 			"school": "T",
@@ -2254,37 +2254,37 @@
 				]
 			},
 			"entries": [
-				"A nature spirit answers your call and transforms you into a powerful guardian. The transformation lasts until the spell ends. You choose one of the following forms to assume: Primal Beast or Great Tree.",
+				"一個自然精魂回應了你的呼喚，並將你轉變成一個強大的守衛。這個轉變將會持續直到此法術結束。你選擇呈現以下其中一個型態：原初野獸、或偉大巨樹。",
 				{
 					"type": "entries",
-					"name": "Primal Beast",
+					"name": "原初野獸",
 					"entries": [
-						"Bestial fur covers your body, your facial features become feral, and you gain the following benefits:"
+						"野獸毛皮覆蓋著你的身體，你的面部特徵變得野性，且你獲得下列好處："
 					]
 				},
 				{
 					"type": "list",
 					"items": [
-						"Your walking speed increases by 10 feet.",
-						"You gain darkvision with a range of 120 feet.",
-						"You make Strength-based attack rolls with advantage.",
-						"Your melee weapon attacks deal an extra {@dice 1d6} force damage on a hit."
+						"你的行走速度增加10呎。",
+						"你獲得120呎範圍的黑暗視覺。",
+						"你在進行基於力量的攻擊檢定時具有優勢。",
+						"你的近戰武器攻擊在命中時造成額外的{@dice 1d6}力場傷害。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Great Tree",
+					"name": "偉大巨樹",
 					"entries": [
-						"Your skin appears barky, leaves sprout from your hair, and you gain the following benefits:"
+						"你的肌膚變得如同樹皮，樹葉從你的頭髮長出，且你獲得下列好處："
 					]
 				},
 				{
 					"type": "list",
 					"items": [
-						"You gain 10 temporary hit points.",
-						"You make Constitution saving throws with advantage.",
-						"You make Dexterity- and Wisdom-based attack rolls with advantage.",
-						"While you are on the ground, the ground within 15 feet of you is difficult terrain for your enemies."
+						"你獲得10點臨時生命值。",
+						"你在進行體質豁免時具有優勢。",
+						"你在進行基於敏捷和睿知的攻擊檢定時具有優勢。",
+						"當你在地面上時，距離你15呎內的地面對你的敵人而言都視作困難地形。"
 					]
 				}
 			],

@@ -1003,7 +1003,7 @@
 			]
 		},
 		{
-			"name": "Arcane Eye",
+			"name": "祕法眼", "ENG_name": "Arcane Eye",
 			"level": 4,
 			"school": "D",
 			"time": [
@@ -1022,7 +1022,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a bit of bat fur"
+				"m": "少許蝙蝠皮毛"
 			},
 			"duration": [
 				{
@@ -1090,9 +1090,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You create an invisible, magical eye within range that hovers in the air for the duration.",
-				"You mentally receive visual information from the eye, which has normal vision and darkvision out to 30 feet. The eye can look in every direction.",
-				"As an action, you can move the eye up to 30 feet in any direction. There is no limit to how far away from you the eye can move, but it can't enter another plane of existence. A solid barrier blocks the eye's movement, but the eye can pass through an opening as small as 1 inch in diameter."
+				"你在射程內創造出一個隱形的魔法眼睛，在法術持續期間飄浮於空中。",
+				"你透過心靈接收來自這個眼睛的視覺情報，它具有正常視覺和30呎的黑暗視覺。這個眼睛可以看向任何方向。",
+				"以一個動作，你可以使這個眼睛向任何方向移動最多30呎距離。眼睛與你之間的距離沒有限制，但它不能進入另一個存在位面。一道固體屏障可以阻擋眼睛的移動，但這個眼睛可以穿過直徑最少1吋的開口。"
 			],
 			"page": 214
 		},
@@ -2780,7 +2780,7 @@
 			"page": 219
 		},
 		{
-			"name": "Blight",
+			"name": "枯萎術", "ENG_name": "Blight",
 			"level": 4,
 			"school": "N",
 			"time": [
@@ -2900,16 +2900,16 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Necromantic energy washes over a creature of your choice that you can see within range, draining moisture and vitality from it. The target must make a Constitution saving throw. The target takes {@dice 8d8} necrotic damage on a failed save, or half as much damage on a successful one. This spell has no effect on undead or constructs.",
-				"If you target a plant creature or a magical plant, it makes the saving throw with disadvantage, and the spell deals maximum damage to it.",
-				"If you target a nonmagical plant that isn't a creature, such as a tree or shrub, it doesn't make a saving throw, it simply withers and dies."
+				"死靈能量沖向射程內你所選且你能看見的一個生物，吸乾它體內的水分和生命力。目標必須進行一次體質豁免。若豁免失敗，目標將受到{@dice 8d8}的死靈傷害，豁免成功則只受到一半的傷害。此法術對不死生物和構裝體沒有任何效果。",
+				"若你以一個植物生物或魔法植物為目標，則它在進行此豁免檢定時具有劣勢，且此法術會對它造成最大傷害。",
+				"若你選擇一個不是生物的非魔法植物為目標，例如樹木和灌木，將它不進行豁免檢定，而直接凋零並死亡。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 5th level or higher, the damage increases by {@scaledice 8d8|4-9|1d8} for each slot level above 4th."
+						"當你使用5環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 8d8|4-9|1d8}。"
 					]
 				}
 			],
@@ -6211,7 +6211,7 @@
 			"page": 227
 		},
 		{
-			"name": "Control Water",
+			"name": "操控水相", "name": "Control Water",
 			"level": 4,
 			"school": "T",
 			"time": [
@@ -6230,7 +6230,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a drop of water and a pinch of dust"
+				"m": "一滴水和一撮粉塵"
 			},
 			"duration": [
 				{
@@ -6293,7 +6293,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Until the spell ends, you control any freestanding water inside an area you choose that is a cube up to 100 feet on a side. You can choose from any of the following effects when you cast this spell. As an action on your turn, you can repeat the same effect or choose a different one.",
+				"直到此法術結束前，你控制任何在你所選擇的一處各邊長最多100呎的立方體空間內的獨立水體。你在施放此法術時可以從下列效果中選擇任何效果。在你的回合以一個動作，你可以重複該效果或選擇另一個不同的效果。",
 				{
 					"type": "entries",
 					"name": "Flood",
@@ -8851,7 +8851,7 @@
 			]
 		},
 		{
-			"name": "Divination",
+			"name": "預言術", "ENG_name": "Divination",
 			"level": 4,
 			"school": "D",
 			"time": [
@@ -8870,7 +8870,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "incense and a sacrificial offering appropriate to your religion, together worth at least 25 gp, which the spell consumes",
+					"text": "合計價值至少25金幣焚香和一個與你信仰相稱的祭物，在施法時消耗",
 					"cost": 25,
 					"consume": true
 				}
@@ -8917,9 +8917,9 @@
 				"ritual": true
 			},
 			"entries": [
-				"Your magic and an offering put you in contact with a god or a god's servants. You ask a single question concerning a specific goal, event, or activity to occur within 7 days. The DM offers a truthful reply. The reply might be a short phrase, a cryptic rhyme, or an omen.",
-				"The spell doesn't take into account any possible circumstances that might change the outcome, such as the casting of additional spells or the loss or gain of a companion.",
-				"If you cast the spell two or more times before finishing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get a random reading. The DM makes this roll in secret."
+				"你的魔法和祭品讓你得以和一位神明或一個神的使者接觸。你可以詢問一個關於會在7天內發生的特定目標、事件、或活動。DM將會如實回答。這個回答可能是一個短詞、一段詩謎、或一個預兆。",
+				"此法術並不會將任何可能改變結果的潛在環境因素納入考量，像是施展額外的法術或者同伴的加入或離去。",
+				"若你在完成下一次長休之前施放此法術兩次或以上，則第一次之後的每次施放都會有累積25%的機率導致隨機的結果。DM將暗自擲骰決定。"
 			],
 			"page": 234
 		},
@@ -13194,7 +13194,7 @@
 			"page": 245
 		},
 		{
-			"name": "Giant Insect",
+			"name": "巨蟲術", "ENG_name": "Giant Insect",
 			"level": 4,
 			"school": "T",
 			"time": [
@@ -13266,10 +13266,10 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You transform up to ten centipedes, three spiders, five wasps, or one scorpion within range into giant versions of their natural forms for the duration. A centipede becomes a {@creature giant centipede}, a spider becomes a {@creature giant spider}, a wasp becomes a {@creature giant wasp}, and a scorpion becomes a {@creature giant scorpion}.",
-				"Each creature obeys your verbal commands, and in combat, they act on your turn each round. The DM has the statistics for these creatures and resolves their actions and movement.",
-				"A creature remains in its giant size for the duration, until it drops to 0 hit points, or until you use an action to dismiss the effect on it.",
-				"The DM might allow you to choose different targets. For example, if you transform a bee, its giant version might have the same statistics as a {@creature giant wasp}."
+				"你在法術持續期間將射程內最多十隻蜈蚣、三隻蜘蛛、五隻黃蜂、或一隻蠍子轉變成牠們天生型態的巨大版本。蜈蚣將變成{@creature 巨蜈蚣}、蜘蛛將變成{@creature 巨蜘蛛}、黃蜂將變成{@creature 巨黃蜂}、而蠍子將變成{@creature 巨蠍}。",
+				"這些生物都會服從你的口頭指令，且在戰鬥中，牠們會在每一輪你的回合時行動。DM掌控這些生物的數據資料，並處理牠們的動作與移動。",
+				"一個生物會在法術持續期間維持它的巨大體型，直到它生命值歸零，或你使用一個動作解消它身上的效果。",
+				"DM可能會允許你選擇不同的目標。舉例來說，若你轉變一隻蜜蜂，則牠的巨大版本可能會擁有與{@creature 巨黃蜂}相同的數據資料。"
 			],
 			"page": 245
 		},
@@ -22606,7 +22606,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"你觸碰的一個已死的生物，只要它死亡時間不超過10天，你就可以讓它復活。如果該生物的靈魂願意且能自由地回到身體上，則該生物將以1點生命值的形式復活。",
+				"你觸碰的一個已死的生物，只要它死亡時間不超過10天，你就可以讓它復活。如果該生物的靈魂願意且能自由地回到身體上，則該生物將以1點生命值的狀態復活。",
 				"此法術也會中和並治療任何在該生物死亡時影響著它的毒素和疾病。然而，此法術並不能移除魔法疾病、詛咒、或其他類似效果；若這些效果沒有在施放此法術前被移除，則它們將在該生物復活之後繼續發揮效果。此法術無法復活不死生物。",
 				"此法術會癒合所有肉體傷口，但並不會恢復失去的身體部位。若該生物失去任何維生所必須的身體部位或器官\u2014比如說它的頭\u2014則此法術將自動失敗。",
 				"從死裡復活的過程是相當艱苦的。目標將在它所有的攻擊檢定、豁免檢定、和屬性檢定上承受\u22124的減值。每當目標完成一次長休，這個減值便會減輕1點，直到它完全消失。"
@@ -23341,7 +23341,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a diamond worth at least 1,000 gp, which the spell consumes",
+					"text": "一顆價值至少1,000金幣的鑽石，在施法時消耗",
 					"cost": 1000,
 					"consume": true
 				}
@@ -23365,11 +23365,11 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You touch a dead creature that has been dead for no more than a century, that didn't die of old age, and that isn't undead. If its soul is free and willing, the target returns to life with all its hit points.",
-				"This spell neutralizes any poisons and cures normal diseases afflicting the creature when it died. It doesn't, however, remove magical diseases, curses, and the like; if such effects aren't removed prior to casting the spell, they afflict the target on its return to life.",
-				"This spell closes all mortal wounds and restores any missing body parts.",
-				"Coming back from the dead is an ordeal. The target takes a \u22124 penalty to all attack rolls, saving throws, and ability checks. Every time the target finishes a long rest, the penalty is reduced by 1 until it disappears.",
-				"Casting this spell to restore life to a creature that has been dead for one year or longer taxes you greatly. Until you finish a long rest, you can't cast spells again, and you have disadvantage on all attack rolls, ability checks, and saving throws."
+				"你觸碰的一個死亡不超過一個世紀、並非因年老而死去、且非不死生物的生物。如果它的靈魂願意且不受拘束，則目標將以生命值全滿的狀態復活。",
+				"此法術會中和並治療任何在該生物死亡時影響著它的毒素和疾病。然而，此法術並不能移除魔法疾病、詛咒、或其他類似效果；若這些效果沒有在施放此法術前被移除，則它們將在該生物復活之後繼續發揮效果。",
+				"此法術會癒合所有肉體傷口，並會恢復任何失去的身體部位。",
+				"從死裡復活的過程是相當艱苦的。目標將在它所有的攻擊檢定、豁免檢定、和屬性檢定上承受\u22124的減值。每當目標完成一次長休，這個減值便會減輕1點，直到它完全消失。",
+				"施放此法術以復活一個死亡超過一年或更久的生物會對你造成極大的負擔。直到你完成一次長休前，你無法再次施放此法術，且你在所有的攻擊檢定、豁免檢定、和屬性檢定上具有劣勢。"
 			],
 			"page": 272,
 			"isHeal": true
@@ -23533,7 +23533,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"你觸碰一個在過去一分鐘內死去的生物。該生物將以1點生命值的形式復活。此法術無法復活因年老而死去的生物，也無法恢復它任何失去的身體部位。"
+				"你觸碰一個在過去一分鐘內死去的生物。該生物將以1點生命值的狀態復活。此法術無法復活因年老而死去的生物，也無法恢復它任何失去的身體部位。"
 			],
 			"page": 272,
 			"isHeal": true
@@ -28228,7 +28228,7 @@
 			"permanentEffects": true
 		},
 		{
-			"name": "完全復活術", "name": "True Resurrection",
+			"name": "完全復活術", "ENG_name": "True Resurrection",
 			"level": 9,
 			"school": "N",
 			"time": [
@@ -28247,7 +28247,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a sprinkle of holy water and diamonds worth at least 25,000 gp, which the spell consumes",
+					"text": "少量聖水和價值至少25,000金幣的鑽石，在施法時消耗",
 					"cost": 25000,
 					"consume": true
 				}
@@ -28271,9 +28271,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You touch a creature that has been dead for no longer than 200 years and that died for any reason except old age. If the creature's soul is free and willing, the creature is restored to life with all its hit points.",
-				"This spell closes all wounds, neutralizes any poison, cures all diseases, and lifts any curses affecting the creature when it died. The spell replaces damaged or missing organs and limbs. If the creature was undead, it is restored to its non-undead form.",
-				"The spell can even provide a new body if the original no longer exists, in which case you must speak the creature's name. The creature then appears in an unoccupied space you choose within 10 feet of you."
+				"你觸碰的一個死亡不超過200年，且並非因年老而死去的生物。如果它的靈魂願意且不受拘束，則目標將以生命值全滿的狀態復活。",
+				"此法術會癒合所有傷口，中和任何毒素、治癒所有疾病、並解除任何在該生物死亡時影響它的詛咒。此法術會取代受損或遺失的器官和肢體。若該生物為不死生物，則它將被回復成非不死生物的型態。",
+				"若原本的身體已經不復存在，此法術甚至可以提供一具新的身體，但在這個情況下你必須說出該生物的名字。該生物接著將會出現在距離你10呎內一處你所選擇的未被佔據空間。"
 			],
 			"page": 284,
 			"isHeal": true
