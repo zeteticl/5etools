@@ -5062,7 +5062,7 @@
 			"page": 224
 		},
 		{
-			"name": "Compulsion",
+			"name": "強迫術", "ENG_name": "Compulsion",
 			"level": 4,
 			"school": "E",
 			"time": [
@@ -5124,8 +5124,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Creatures of your choice that you can see within range and that can hear you must make a Wisdom saving throw. A target automatically succeeds on this saving throw if it can't be {@condition charmed}. On a failed save, a target is affected by this spell. Until the spell ends, you can use a bonus action on each of your turns to designate a direction that is horizontal to you. Each affected target must use as much of its movement as possible to move in that direction on its next turn. It can take its action before it moves. After moving in this way, it can make another Wisdom saving throw to try to end the effect.",
-				"A target isn't compelled to move into an obviously deadly hazard, such as a fire or pit, but it will provoke opportunity attacks to move in the designated direction."
+				"射程內你所選，你能看見，且能聽見你的生物必須進行一次睿知豁免。不會被{@condition 魅惑}的目標將自動成功通過此豁免檢定。若豁免失敗，目標將受到此法術的影響。直到此法術結束前，你可以在每個你的回合使用一個附贈動作以指定一個與你平行的方向。每個受影響的目標在它的下個回合必須盡可能的使用它的移動速度向該方向移動。它可以在移動前採取它的動作。在透過這個方式移動之後，它可以再進行一次睿知豁免以結束這個效果。",
+				"一個目標不會被強迫移入一個明顯致命的危險中，像是火焰或坑洞，但它會在向著指定方向移動時引發藉機攻擊。"
 			],
 			"page": 224,
 			"savingThrow": [
@@ -5133,7 +5133,7 @@
 			]
 		},
 		{
-			"name": "Cone of Cold",
+			"name": "寒冰錐", "ENG_name": "Cone of Cold",
 			"level": 5,
 			"school": "V",
 			"time": [
@@ -5152,7 +5152,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a small crystal or glass cone"
+				"m": "一小塊水晶或玻璃錐"
 			},
 			"duration": [
 				{
@@ -5216,15 +5216,15 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A blast of cold air erupts from your hands. Each creature in a 60-foot cone must make a Constitution saving throw. A creature takes {@dice 8d8} cold damage on a failed save, or half as much damage on a successful one.",
-				"A creature killed by this spell becomes a frozen statue until it thaws."
+				"一道寒冷的氣浪從你的雙手中迸發而出。每個處於60呎錐形內的生物都必須進行一次體質豁免。豁免失敗的生物將受到{@dice 8d8}寒冰傷害，豁免成功則只受到一半的傷害。",
+				"被此法術殺死的生物會被變成一尊冰凍雕像直到它溶解。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 6th level or higher, the damage increases by {@scaledice 8d8|5-9|1d8} for each slot level above 5th."
+						"當你使用6環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 8d8|5-9|1d8}。"
 					]
 				}
 			],
@@ -8293,7 +8293,7 @@
 			]
 		},
 		{
-			"name": "Dimension Door",
+			"name": "次元門", "ENG_name": "Dimension Door",
 			"level": 4,
 			"school": "C",
 			"time": [
@@ -8381,9 +8381,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You teleport yourself from your current location to any other spot within range. You arrive at exactly the spot desired. It can be a place you can see, one you can visualize, or one you can describe by stating distance and direction, such as \"200 feet straight downward\" or \"upward to the northwest at a 45-degree angle, 300 feet.\"",
-				"You can bring along objects as long as their weight doesn't exceed what you can carry. You can also bring one willing creature of your size or smaller who is carrying gear up to its carrying capacity. The creature must be within 5 feet of you when you cast this spell.",
-				"If you would arrive in a place already occupied by an object or a creature, you and any creature traveling with you each take {@dice 4d6} force damage, and the spell fails to teleport you."
+				"你將自己從目前的位置傳送到射程內任何其他位置。你精確地抵達你所想要去的位置。這個位置可以是你所能看見的地方、一個你可以想像到的地方、或一個藉由陳述距離和方位來指定的位置，像是\"200呎直線向下\"或\"向上往西北方偏45度角，300呎\"。",
+				"你可以帶著物體傳送，只要它們的重量不會超過你所能攜帶的上限。你也可以帶著一個體型和你相同或更小的自願生物傳送，且它所能攜帶的裝備最多為它的負載上限。該生物必須在你施放此法術時距離你5呎內。",
+				"若你將被傳送到一處已被一個物體或生物佔據的空間，則你和任何與你一起被傳送的生物都將各自受到{@dice 4d6}力場傷害，且此法術傳送失敗。"
 			],
 			"page": 233,
 			"damageInflict": [
@@ -10371,7 +10371,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"你編織一段令人分神的文字，使射程內你所選，你能看見，且能聽見你的所有生物進行一次睿知豁免。任何不會被{@condition 魅惑}的生物自動成功於此豁免檢定，且若你或你的同伴正在與該生物戰鬥，則它在此豁免檢定中具有優勢。若豁免失敗，則目標將在用以察覺任何除了你以外的生物的睿知（觀察）檢定中具有劣勢，直到此法術結束或直到目標不再能聽見你為止。此法術將在你陷入{@condition 無力}或不再能說話時結束。"
+				"你編織一段令人分神的文字，使射程內你所選，你能看見，且能聽見你的所有生物進行一次睿知豁免。任何不會被{@condition 魅惑}的生物將自動成功通過此豁免檢定，且若你或你的同伴正在與該生物戰鬥，則它在此豁免檢定中具有優勢。若豁免失敗，則目標將在用以察覺任何除了你以外的生物的睿知（觀察）檢定中具有劣勢，直到此法術結束或直到目標不再能聽見你為止。此法術將在你陷入{@condition 無力}或不再能說話時結束。"
 			],
 			"page": 238,
 			"savingThrow": [
@@ -10463,7 +10463,7 @@
 			]
 		},
 		{
-			"name": "Evard's Black Tentacles",
+			"name": "艾伐黑觸手", "ENG_name": "Evard's Black Tentacles",
 			"level": 4,
 			"school": "C",
 			"time": [
@@ -10482,7 +10482,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a piece of tentacle from a giant octopus or a giant squid"
+				"m": "一根來自巨章魚或巨魷魚的觸手"
 			},
 			"duration": [
 				{
@@ -10536,9 +10536,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Squirming, ebony tentacles fill a 20-foot square on ground that you can see within range. For the duration, these tentacles turn the ground in the area into difficult terrain.",
-				"When a creature enters the affected area for the first time on a turn or starts its turn there, the creature must succeed on a Dexterity saving throw or take {@dice 3d6} bludgeoning damage and be {@condition restrained} by the tentacles until the spell ends. A creature that starts its turn in the area and is already {@condition restrained} by the tentacles takes {@dice 3d6} bludgeoning damage.",
-				"A creature {@condition restrained} by the tentacles can use its action to make a Strength or Dexterity check (its choice) against your spell save DC. On a success, it frees itself."
+				"烏黑蠕動的觸手將充斥在射程內你所能看見的一處20呎邊長的方形地面。在法術持續期間，這些觸手將使區域內的地面變成困難地形。",
+				"當一個生物在一個回合中第一次進入該區域，或在該處開始它的回合，則該生物必須成功通過一次敏捷豁免，否則受到{@dice 3d6}鈍擊傷害並被這些觸手{@condition 束縛}直到此法術結束。一個已經被這些觸手{@condition 束縛}的生物會在該區域開始它回合的時候受到{@dice 3d6}鈍擊傷害。",
+				"一個被這些觸手{@condition 束縛}的生物可以使用它的動作以進行一次對抗你法術豁免DC的力量或敏捷檢定（由它決定）。若檢定成功，則它從觸手中被釋放。"
 			],
 			"page": 238,
 			"damageInflict": [
@@ -10708,7 +10708,7 @@
 			]
 		},
 		{
-			"name": "Fabricate",
+			"name": "鬼斧神工", "ENG_name": "Fabricate",
 			"level": 4,
 			"school": "T",
 			"time": [
@@ -14546,7 +14546,7 @@
 			]
 		},
 		{
-			"name": "幻覺地域", "name": "Hallucinatory Terrain",
+			"name": "幻景", "ENG_name": "Hallucinatory Terrain",
 			"level": 4,
 			"school": "I",
 			"time": [
@@ -14565,7 +14565,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a stone, a twig, and a bit of green plant"
+				"m": "一顆石頭、一根細樹枝、和少許綠色植物"
 			},
 			"duration": [
 				{
@@ -14611,8 +14611,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You make natural terrain in a 150-foot cube in range look, sound, and smell like some other sort of natural terrain. Thus, open fields or a road can be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road. Manufactured structures, equipment, and creatures within the area aren't changed in appearance.",
-				"The tactile characteristics of the terrain are unchanged, so creatures entering the area are likely to see through the illusion. If the difference isn't obvious by touch, a creature carefully examining the illusion can attempt an Intelligence (Investigation) check against your spell save DC to disbelieve it. A creature who discerns the illusion for what it is, sees it as a vague image superimposed on the terrain."
+				"你使射程內一個150呎邊長的立方體範圍的自然地形在視覺、聽覺、和嗅覺上都像是另一種自然地形。因此，一片開闊的平原或道路可以被變得像是一片沼澤、丘陵、裂谷或其他難以通過或者無法通過的地形。一個池塘可以被變得看起來像是一片草原，一段懸崖像是一個緩坡，或者讓一條亂石溪谷變得像是一條寬闊平坦的道路。該區域內的人造建築、裝備、和生物的外觀都不會被改變。",
+				"地形的觸覺特徵並不會被改變，因此進入該區域的生物很可能會直接看穿幻象。若觸覺的差異並不明顯，則一個謹慎檢查幻象的生物可以藉由一次對抗你法術豁免DC的智力（{@skill 調查}）檢定來懷疑它的真偽。一個辨識出幻象真偽的生物，會看見一片模糊的影像疊映在原本的地形上。"
 			],
 			"page": 249,
 			"opposedCheck": [
@@ -19829,7 +19829,7 @@
 			]
 		},
 		{
-			"name": "Mordenkainen's Faithful Hound",
+			"name": "魔鄧肯忠犬", "ENG_name": "Mordenkainen's Faithful Hound",
 			"level": 4,
 			"school": "C",
 			"time": [
@@ -19848,7 +19848,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a tiny silver whistle, a piece of bone, and a thread"
+				"m": "一個銀製小哨、一根骨頭、和一條線"
 			},
 			"duration": [
 				{
@@ -19873,9 +19873,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You conjure a phantom watchdog in an unoccupied space that you can see within range, where it remains for the duration, until you dismiss it as an action, or until you move more than 100 feet away from it.",
-				"The hound is {@condition invisible} to all creatures except you and can't be harmed. When a Small or larger creature comes within 30 feet of it without first speaking the password that you specify when you cast this spell, the hound starts barking loudly. The hound sees {@condition invisible} creatures and can see into the Ethereal Plane. It ignores illusions.",
-				"At the start of each of your turns, the hound attempts to bite one creature within 5 feet of it that is hostile to you. The hound's attack bonus is equal to your spellcasting ability modifier + your proficiency bonus. On a hit, it deals {@dice 4d8} piercing damage."
+				"你在射程內你所能看見的一處未被佔據空間召喚出一隻幻影看門狗，它將在法術持續期間維持存在，直到你以一個動作將它解消、或直到你移動到距離它超過100呎外的地方。",
+				"這隻獵犬對除了你以外的所有生物而言是{@condition 隱形}的，且不會被傷害。當一個體型為小型或更大生物來到距離你30呎內的位置，而沒有先說出你在施放此法術時指定的密語，則獵犬將開始大聲吠叫。這隻獵犬可以看見{@condition 隱形}的生物，且可以看見乙太位面的事物。它無視幻象。",
+				"在每次你的回合開始時，這隻獵犬會嘗試啃咬一個距離你5呎內，對你有敵意的生物。這隻獵犬的攻擊加值等同於你的施法屬性調整值+你的熟練加值。若命中，則它造成{@dice 4d8}穿刺傷害。"
 			],
 			"page": 261,
 			"damageInflict": [
@@ -19937,7 +19937,7 @@
 			"page": 261
 		},
 		{
-			"name": "魔鄧肯私人密室", "name": "Mordenkainen's Private Sanctum",
+			"name": "魔鄧肯私人密室", "ENG_name": "Mordenkainen's Private Sanctum",
 			"level": 4,
 			"school": "A",
 			"time": [
