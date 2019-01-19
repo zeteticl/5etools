@@ -5481,7 +5481,7 @@
 					]
 				},
 				"每隻野獸同時也被視作精類生物，且它會在它生命值歸零或此法術結束時消失。",
-				"被召喚的生物對你和你的同伴友善。這些召喚生物在骰先攻時作為一組擲骰，但有著各自的回合。它們服從任何你交代他們的口頭指令（你不需要花費行動）。若你不對它們交代任何指令，則它們將在面對敵意生物時自我防衛，除此之外不採取其他動作。",
+				"被召喚的生物對你和你的同伴友善。這些召喚生物在骰先攻時作為一組擲骰，但有著各自的回合。它們服從任何你交代他們的口頭指令（你不需要花費動作）。若你不對它們交代任何指令，則它們將在面對敵意生物時自我防衛，除此之外不採取其他動作。",
 				"這些生物的數據資料由DM掌控。"
 			],
 			"entriesHigherLevel": [
@@ -5655,7 +5655,7 @@
 			"source": "PHB",
 			"entries": [
 				"你呼喚出一個元素僕役。選擇射程內一處在10呎邊長立方體內充滿氣、土、火、或水的區域。一個對應你所選區域的{@filter 挑戰等級5或以下的元素生物|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4;5|type=elemental|miscellaneous=!swarm}將會出現在距離該處10呎內的一處未被佔據空間。舉例來說，一個{@creature 火元素}會從一團篝火中浮現，而一個{@creature 土元素}會從大地中升起。該元素生物會在它生命值歸零或此法術結束時消失。",
-				"該元素生物對你和你的同伴友善。為該元素生物骰先攻，且它擁有自己的回合。它會服從任何你交代它的口頭指令（你不需要花費行動）。若你不對該生物交代任何指令，則它將在面對敵意生物時自我防衛，除此之外不採取其他動作。",
+				"該元素生物對你和你的同伴友善。為該元素生物骰先攻，且它擁有自己的回合。它會服從任何你交代它的口頭指令（你不需要花費動作）。若你不對該生物交代任何指令，則它將在面對敵意生物時自我防衛，除此之外不採取其他動作。",
 				"若你的專注被中斷，該元素生物並不會消失。取而代之，你將失去對該元素生物的控制，它將會對你和你的同伴具有敵意，且可能會展開攻擊。一個失去控制的元素生物無法被你解消，且它會在你召喚它之後1小時後消失。",
 				"這些元素生物的數據資料由DM掌控。"
 			],
@@ -5787,7 +5787,7 @@
 					]
 				},
 				"一個被此法術召喚的元素生物會在它生命值歸零或此法術結束時消失。",
-				"被召喚的生物對你和你的同伴友善。這些召喚生物在骰先攻時作為一組擲骰，但有著各自的回合。它們服從任何你交代他們的口頭指令（你不需要花費行動）。若你不對它們交代任何指令，則它們將在面對敵意生物時自我防衛，除此之外不採取其他動作。",
+				"被召喚的生物對你和你的同伴友善。這些召喚生物在骰先攻時作為一組擲骰，但有著各自的回合。它們服從任何你交代他們的口頭指令（你不需要花費動作）。若你不對它們交代任何指令，則它們將在面對敵意生物時自我防衛，除此之外不採取其他動作。",
 				"這些生物的數據資料由DM掌控。"
 			],
 			"entriesHigherLevel": [
@@ -5902,7 +5902,7 @@
 					]
 				},
 				"一個被召喚的生物會在它生命值歸零或此法術結束時消失。",
-				"被召喚的生物對你和你的同伴友善。這些召喚生物在骰先攻時作為一組擲骰，但有著各自的回合。它們服從任何你交代他們的口頭指令（你不需要花費行動）。若你不對它們交代任何指令，則它們將在面對敵意生物時自我防衛，除此之外不採取其他動作。",
+				"被召喚的生物對你和你的同伴友善。這些召喚生物在骰先攻時作為一組擲骰，但有著各自的回合。它們服從任何你交代他們的口頭指令（你不需要花費動作）。若你不對它們交代任何指令，則它們將在面對敵意生物時自我防衛，除此之外不採取其他動作。",
 				"這些生物的數據資料由DM掌控。"
 			],
 			"entriesHigherLevel": [
@@ -9050,7 +9050,7 @@
 			]
 		},
 		{
-			"name": "Dominate Beast",
+			"name": "支配野獸", "ENG_name": "Dominate Beast",
 			"level": 4,
 			"school": "E",
 			"time": [
@@ -9166,17 +9166,17 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You attempt to beguile a beast that you can see within range. It must succeed on a Wisdom saving throw or be {@condition charmed} by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw.",
-				"While the beast is {@condition charmed}, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as \"Attack that creature,\" \"Run over there,\" or \"Fetch that object.\" If the creature completes the order and doesn't receive further direction from you, it defends and preserves itself to the best of its ability.",
-				"You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn't do anything that you don't allow it to do. During this time, you can also cause the creature to use a reaction, but this requires you to use your own reaction as well.",
-				"Each time the target takes damage, it makes a new Wisdom saving throw against the spell. If the saving throw succeeds, the spell ends."
+				"你試圖迷惑一個射程內你所能看見的野獸。它必須成功通過一次睿知豁免，否則在法術持續期間被你{@condition 魅惑}。若你或對你友善的生物正在與它戰鬥，則它在該豁免檢定中具有優勢。",
+				"當該野獸被{@condition 魅惑}，只要你們兩個還在同一個存在未面，則你與它之間將建立起一道心靈連結。你可以在你保有意識的時候使用這道心靈連結以對該生物下達命令（不需要花費動作），而它將盡它的全力服從。你可以指定一個簡單且籠統的行動，像是\"攻擊那個生物\"、\"跑來這裡\"、或\"拿回那個物體\"。若該生物完成了命令且沒有收到來自你進一步的指示，則它將盡它的全力防衛並保護它自己。",
+				"你可以使用你的動作以完全而精準地控制目標。直到你的下個回合結束前，該生物只會採取你所選擇的動作，且不會作出任何你不允許的事。在這段期間，你也可以讓該生物採取一個反應，但這也將需要你使用你自己的反應。",
+				"每次目標受到傷害時，它必須再次進行一個新的睿知豁免以對抗此法術。若豁免成功，則此法術結束。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell with a 5th-level spell slot, the duration is concentration, up to 10 minutes. When you use a 6th-level spell slot, the duration is concentration, up to 1 hour. When you use a spell slot of 7th level or higher, the duration is concentration, up to 8 hours."
+						"當你使用5環法術位施放此法術時，持續時間變為專注,至多10分鐘。當你使用6環法術位施放此法術時，持續時間變為專注,至多1小時。當你使用7環或更高的法術位施放此法術時，持續時間變為專注,至多8小時。"
 					]
 				}
 			],
@@ -9189,7 +9189,7 @@
 			]
 		},
 		{
-			"name": "Dominate Monster",
+			"name": "支配怪物", "name": "Dominate Monster",
 			"level": 8,
 			"school": "E",
 			"time": [
@@ -9264,7 +9264,7 @@
 			]
 		},
 		{
-			"name": "Dominate Person",
+			"name": "支配人類", "name": "Dominate Person",
 			"level": 5,
 			"school": "E",
 			"time": [
@@ -10769,9 +10769,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You convert raw materials into products of the same material. For example, you can fabricate a wooden bridge from a clump of trees, a rope from a patch of hemp, and clothes from flax or wool.",
-				"Choose raw materials that you can see within range. You can fabricate a Large or smaller object (contained within a 10-foot cube, or eight connected 5-foot cubes), given a sufficient quantity of raw material. If you are working with metal, stone, or another mineral substance, however, the fabricated object can be no larger than Medium (contained within a single 5-foot cube). The quality of objects made by the spell is commensurate with the quality of the raw materials.",
-				"Creatures or magic items can't be created or transmuted by this spell. You also can't use it to create items that ordinarily require a high degree of craftsmanship, such as jewelry, weapons, glass, or armor, unless you have proficiency with the type of artisan's tools used to craft such objects."
+				"你將未加工材料轉變成以相同材料製成的成品。例如，你可以將一叢樹木製造成一座木橋、將一把大麻變為繩子、或使亞麻或羊毛變為衣服。",
+				"選擇射程內你所能看見的未加工材料。只要有足夠數量的未加工材料，你就可以製造一個尺寸為大型或更小的物體（可被容納於10呎邊長的立方體，或八個相互連接的5呎邊長立方體空間）。然而，如果你加工的對象是金屬、石頭、或其他礦物材質，則你製造物體的尺寸將不能超過中型（可被容納於一個5呎邊長的立方體空間）。此法術製造出來物體的品質將與未加工材料的品質相稱。",
+				"生物或魔法物品不能被此法術創造或轉變。你也無法使用此法術創造一個通常需要高度技藝以製造的物品，像是珠寶、武器、玻璃、或護甲，除非你熟練於用來製造這些物品的工匠工具。"
 			],
 			"page": 239,
 			"permanentEffects": true
@@ -16981,7 +16981,7 @@
 			"page": 254
 		},
 		{
-			"name": "Leomund's Secret Chest",
+			"name": "李歐蒙秘藏箱", "ENG_name": "Leomund's Secret Chest",
 			"level": 4,
 			"school": "C",
 			"time": [
@@ -17000,7 +17000,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "an exquisite chest, 3 feet by 2 feet by 2 feet, constructed from rare materials worth at least 5,000 gp, and a Tiny replica made from the same materials worth at least 50 gp",
+					"text": "一個大小為3呎x2呎x2呎，由價值至少5,000金幣的稀有材料製成的精美箱子，和一個價值至少50金幣，以相同材料製成的微型箱子複製品",
 					"cost": 5000
 				}
 			},
@@ -17035,9 +17035,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You hide a chest, and all its contents, on the Ethereal Plane. You must touch the chest and the miniature replica that serves as a material component for the spell. The chest can contain up to 12 cubic feet of nonliving material (3 feet by 2 feet by 2 feet).",
-				"While the chest remains on the Ethereal Plane, you can use an action and touch the replica to recall the chest. It appears in an unoccupied space on the ground within 5 feet of you. You can send the chest back to the Ethereal Plane by using an action and touching both the chest and the replica.",
-				"After 60 days, there is a cumulative 5 percent chance per day that the spell's effect ends. This effect ends if you cast this spell again, if the smaller replica chest is destroyed, or if you choose to end the spell as an action. If the spell ends and the larger chest is on the Ethereal Plane, it is irretrievably lost."
+				"你將一個箱子和其內容物藏在乙太位面。你必須觸碰作為此法術材料構材的這個箱子和它的微型複製品。這個箱子可以容納最多12立方呎的非活體物質（3呎x2呎x2呎）。",
+				"當這個箱子存在於乙太位面，你可以使用一個動作並觸碰其複製品以喚回這個箱子。它將出現在一處距離你5呎內的未被佔據空間的地面。你可以藉由使用一個動作並同時觸碰這個箱子和其複製品以將它送回乙太位面。",
+				"在60天後，每一天此法術的效果都會有累積5%的機率就此結束。此法術會在你再次施放此法術時、箱子的小複製品被摧毀時、或是你選擇以一個動作結束此法術時結束。若此法術結束時那個較大的那個箱子仍處在乙太位面，則它將就此遺失，無法挽回。"
 			],
 			"page": 254,
 			"permanentEffects": true
@@ -28144,7 +28144,7 @@
 			"page": 283
 		},
 		{
-			"name": "完全變形術", "ENG_name": "True Polymorph",
+			"name": "完全變形術", "name": "True Polymorph",
 			"level": 9,
 			"school": "T",
 			"time": [
@@ -28279,7 +28279,7 @@
 			"isHeal": true
 		},
 		{
-			"name": "True Seeing",
+			"name": "真知術", "ENG_name": "True Seeing",
 			"level": 6,
 			"school": "D",
 			"time": [
@@ -28298,7 +28298,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "an ointment for the eyes that costs 25 gp; is made from mushroom powder, saffron, and fat; and is consumed by the spell",
+					"text": "一個價值25金幣，由蘑菇粉末、番紅花、和油脂製成的眼藥膏，在施法時消耗",
 					"cost": 25,
 					"consume": true
 				}
@@ -28338,7 +28338,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"This spell gives the willing creature you touch the ability to see things as they actually are. For the duration, the creature has truesight, notices secret doors hidden by magic, and can see into the Ethereal Plane, all out to a range of 120 feet."
+				"此法術將會賦予你所觸碰的自願生物看見事物本質的能力。在法術持續期間，該生物獲得真實視覺，能察覺到被魔法隱藏的暗門、且可以看見乙太位面內的事物，以上這些能力的範圍皆為120呎。"
 			],
 			"page": 284
 		},
