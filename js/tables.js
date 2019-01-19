@@ -159,7 +159,7 @@ function loadhash (id) {
 		<tr><td class="divider" colspan="6"><div></div></td></tr>
 		${EntryRenderer.table.getCompactRenderedString(it)}
 		${it.chapter ? `<tr class="text"><td colspan="6">
-		${EntryRenderer.getDefaultRenderer().renderEntry(`{@note ${it._type === "t" ? `This table` : "These tables"} can be found in ${Parser.sourceJsonToFull(it.source)}${Parser.bookOrdinalToAbv(it.chapter.ordinal, true)}, {@book ${it.chapter.name}|${it.source}|${it.chapter.index}|${it.chapter.name}}.}`)}
+		${EntryRenderer.getDefaultRenderer().renderEntry(`{@note ${it._type === "t" ? `這個表格` : "這些表格"}可以在 ${Parser.sourceJsonToFull(it.source)}${Parser.bookOrdinalToAbv(it.chapter.ordinal, true)}, {@book ${it.chapter.name}|${it.source}|${it.chapter.index}|${it.chapter.name}} 中被找到}`)}
 		</td></tr>` : ""}
 		${EntryRenderer.utils.getPageTr(it)}
 		${EntryRenderer.utils.getBorderTr()}
