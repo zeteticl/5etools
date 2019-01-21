@@ -3546,7 +3546,7 @@
 			]
 		},
 		{
-			"name": "Melf's Minute Meteors",
+			"name": "馬友夫微隕星", "ENG_name": "Melf's Minute Meteors",
 			"source": "XGE",
 			"level": 3,
 			"school": "V",
@@ -3565,7 +3565,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "niter, sulfur, and pine tar formed into a bead"
+				"m": "硝石、硫磺、和松焦油形成的串珠"
 			},
 			"duration": [
 				{
@@ -3590,14 +3590,14 @@
 				]
 			},
 			"entries": [
-				"You create six tiny meteors in your space. They float in the air and orbit you for the spell's duration. When you cast the spell\u2014and as a bonus action on each of your turns thereafter\u2014you can expend one or two of the meteors, sending them streaking toward a point or points you choose within 120 feet of you. Once a meteor reaches its destination or impacts against a solid surface, the meteor explodes. Each creature within 5 feet of the point where the meteor explodes must make a Dexterity saving throw. A creature takes {@dice 2d6} fire damage on a failed save, or half as much damage on a successful one."
+				"你在你的空間中創造出六個微型隕星。它們會漂浮於空中，並在法術持續期間環繞著你。當你施放此法術\u2014以及在這之後你的每個回合以一次附贈動作\u2014，你可以消耗其中一顆或二顆隕星，讓它們襲向距離你120呎內你所選擇的一點。一旦隕星落在它的目的地、或衝擊到固體表面上，則該隕星將會爆炸。每個距離隕星爆炸處5呎內的生物都必須進行一次敏捷豁免。一個豁免失敗的生物將受到{@dice 2d6}火焰傷害，豁免成功則只受到一半的傷害。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, the number of meteors created increases by two for each slot level above 3rd."
+						"當你使用4環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，你就可以再額外創造二顆隕星。"
 					]
 				}
 			],
@@ -5048,7 +5048,7 @@
 			]
 		},
 		{
-			"name": "Summon Lesser Demons",
+			"name": "召喚次級惡魔", "ENG_name": "Summon Lesser Demons",
 			"source": "XGE",
 			"level": 3,
 			"school": "C",
@@ -5068,7 +5068,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a vial of blood from a humanoid killed within the past 24 hours"
+				"m": "一小瓶來自過去24小時內被殺死的類人生物的鮮血"
 			},
 			"duration": [
 				{
@@ -5093,12 +5093,12 @@
 				]
 			},
 			"entries": [
-				"You utter foul words, summoning demons from the chaos of the Abyss. Roll on the following table to determine what appears.",
+				"你說出汙濁的詞語，從無底深淵的混沌中將惡魔召喚而出。擲骰使用以下表格以決定會出現什麽。",
 				{
 					"type": "table",
 					"colLabels": [
 						"{@dice d6}",
-						"Demons Summoned"
+						"被召喚的惡魔"
 					],
 					"colStyles": [
 						"col-1 text-align-center",
@@ -5113,7 +5113,7 @@
 									"max": 2
 								}
 							},
-							"Two {@filter demons of challenge rating 1 or lower|bestiary|cr=0;1/8;1/4;1/2;1|tag=demon|miscellaneous=!swarm}"
+							"二隻{@filter 挑戰等級1或以下的惡魔|bestiary|cr=0;1/8;1/4;1/2;1|tag=demon|miscellaneous=!swarm}"
 						],
 						[
 							{
@@ -5123,7 +5123,7 @@
 									"max": 4
 								}
 							},
-							"Four {@filter demons of challenge rating 1/2 or lower|bestiary|cr=0;1/8;1/4;1/2|tag=demon|miscellaneous=!swarm}"
+							"四隻{@filter 挑戰等級1/2或以下的惡魔|bestiary|cr=0;1/8;1/4;1/2|tag=demon|miscellaneous=!swarm}"
 						],
 						[
 							{
@@ -5133,20 +5133,20 @@
 									"max": 6
 								}
 							},
-							"Eight {@filter demons of challenge rating 1/4 or lower|bestiary|cr=0;1/8;1/4|tag=demon|miscellaneous=!swarm}"
+							"八隻{@filter 挑戰等級1/4或以下的惡魔|bestiary|cr=0;1/8;1/4|tag=demon|miscellaneous=!swarm}"
 						]
 					]
 				},
-				"The DM chooses the demons, such as manes or dretches, and you choose the unoccupied spaces you can see within range where they appear. A summoned demon disappears when it drops to 0 hit points or when the spell ends.",
-				"The demons are hostile to all creatures, including you. Roll initiative for the summoned demons as a group, which has its own turns. The demons pursue and attack the nearest non-demons to the best of their ability.",
-				"As part of casting the spell, you can form a circle on the ground with the blood used as a material component. The circle is large enough to encompass your space. While the spell lasts, the summoned demons can't cross the circle or harm it, and they can't target anyone within it. Using the material component in this manner consumes it when the spell ends."
+				"DM將選擇惡魔的種類，像是{@creature 原魔}或{@creature 怯魔}，然後你選擇讓它們出現在射程內你未被占據的可見空間。一個被召喚惡魔會在它生命值歸零或此法術結束時消失。",
+				"這些惡魔會對所有的生物抱持敵意，包括你。這些惡魔在骰先攻時作為一組擲骰，但有著各自的回合。這些惡魔會盡其所能的追逐並攻擊任何距離它們最近的非惡魔生物。",
+				"做為施放此法術的一部份，你可以使用被用於材料構材的鮮血在地面上繪製一個圓環。這個圓環的大小足夠環繞你所在的空間。在此法術持續期間，被召喚惡魔將無法跨越或傷害這個圓環，且它們將無法以任何在內部的人做為目標。以這個方式使用材料構材會使它在此法術結束時被消耗。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 6th or 7th level, you summon twice as many demons. If you cast it using a spell slot of 8th or 9th level, you summon three times as many demons."
+						"當你使用6環或7環的法術位施放此法術時，你召喚出兩倍數量的惡魔。當你使用8環或9環的法術位施放此法術時，你召喚出三倍數量的惡魔。"
 					]
 				}
 			],
@@ -5339,7 +5339,7 @@
 			]
 		},
 		{
-			"name": "Thunder Step",
+			"name": "雷霆步", "ENG_name": "Thunder Step",
 			"source": "XGE",
 			"level": 3,
 			"school": "C",
@@ -5381,15 +5381,15 @@
 				]
 			},
 			"entries": [
-				"You teleport yourself to an unoccupied space you can see within range. Immediately after you disappear, a thunderous boom sounds, and each creature within 10 feet of the space you left must make a Constitution saving throw, taking {@dice 3d10} thunder damage on a failed save, or half as much damage on a successful one. The thunder can be heard from up to 300 feet away.",
-				"You can bring along objects as long as their weight doesn't exceed what you can carry. You can also teleport one willing creature of your size or smaller who is carrying gear up to its carrying capacity. The creature must be within 5 feet of you when you cast this spell, and there must be an unoccupied space within 5 feet of your destination space for the creature to appear in; otherwise, the creature is left behind."
+				"你將自己傳送到射程內你所能看見的一處未被佔據的空間。緊接在你消失之後，一陣雷鳴般的轟鳴炸響，且每個距離你離開位置10呎內的生物都必須進行一次體質豁免，豁免失敗將受到{@dice 3d10}雷鳴傷害，豁免成功則只受到一半的傷害。這道雷鳴聲可以在最遠300呎的距離外被聽到。",
+				"你可以帶著物體傳送，只要它們的重量不會超過你所能攜帶的上限。你也可以帶著一個體型和你相同或更小的自願生物傳送，且它所攜帶的裝備不能超過它的負載上限。該生物必須在你施放此法術時距離你5呎內，且距離你目的空間5呎內必須要有一處未被佔據的空間好讓該生物出現；否則該生物將被遺留在原地。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@scaledice 3d10|3-9|1d10} for each slot level above 3rd."
+						"當你使用4環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 3d10|3-9|1d10}。"
 					]
 				}
 			],
@@ -5452,7 +5452,7 @@
 				]
 			},
 			"entries": [
-				"你迸發出一道雷鳴聲，可以從最遠100呎的距離被聽到。每個射程內的生物，除了你之外，都必須成功通過一次體質豁免否則受到{@dice 1d6}雷鳴傷害。",
+				"你迸發出一道雷鳴聲，可以在最遠100呎的距離外被聽到。每個射程內的生物，除了你之外，都必須成功通過一次體質豁免否則受到{@dice 1d6}雷鳴傷害。",
 				"此法術的傷害將在你的等級升至5級時增加至{@dice 2d6}，11級時{@dice 3d6}，17級時{@dice 4d6}。"
 			],
 			"page": 168,
@@ -5471,7 +5471,7 @@
 			]
 		},
 		{
-			"name": "Tidal Wave",
+			"name": "潮湧浪", "ENG_name": "Tidal Wave",
 			"source": "XGE",
 			"level": 3,
 			"school": "C",
@@ -5491,7 +5491,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a drop of water"
+				"m": "一滴水"
 			},
 			"duration": [
 				{
@@ -5515,7 +5515,7 @@
 				]
 			},
 			"entries": [
-				"You conjure up a wave of water that crashes down on an area within range. The area can be up to 30 feet long, up to 10 feet wide, and up to 10 feet tall. Each creature in that area must make a Dexterity saving throw. On a failed save, a creature takes {@dice 4d8} bludgeoning damage and is knocked {@condition prone}. On a successful save, a creature takes half as much damage and isn't knocked {@condition prone}. The water then spreads out across the ground in all directions, extinguishing unprotected flames in its area and within 30 feet of it, and then it vanishes."
+				"你召喚出一道水浪沖打射程內的一片區域。這個區域可以有最多30呎長、10呎寬、和10呎高。每個在該區域內的生物必須進行一次敏捷豁免。若豁免失敗，則該生物將受到{@dice 4d8}鈍擊傷害並被擊倒{@condition 伏地}。若豁免成功，該生物只受到一半的傷害，且不會被擊倒{@condition 伏地}。這些水接著將會沿著地面向四面八方蔓延，熄滅位於它所在區域內或距離它5呎內未受保護的火焰，然後消失不見。"
 			],
 			"page": 168,
 			"damageInflict": [
@@ -5535,7 +5535,7 @@
 			]
 		},
 		{
-			"name": "Tiny Servant",
+			"name": "微型僕役", "ENG_name": "Tiny Servant",
 			"source": "XGE",
 			"level": 3,
 			"school": "T",
@@ -5573,16 +5573,16 @@
 				]
 			},
 			"entries": [
-				"You touch one Tiny, nonmagical object that isn't attached to another object or a surface and isn't being carried by another creature. The target animates and sprouts little arms and legs, becoming a creature under your control until the spell ends or the creature drops to 0 hit points. See the {@creature tiny servant|xge|stat block} for its statistics.",
-				"As a bonus action, you can mentally command the creature if it is within 120 feet of you. (If you control multiple creatures with this spell, you can command any or all of them at the same time, issuing the same command to each one.) You decide what action the creature will take and where it will move during its next turn, or you can issue a simple, general command, such as to fetch a key, stand watch, or stack some books. If you issue no commands, the servant does nothing other than defend itself against hostile creatures. Once given an order, the servant continues to follow that order until its task is complete.",
-				"When the creature drops to 0 hit points, it reverts to its original form, and any remaining damage carries over to that form."
+				"你觸碰一個微型，並未附著於其他物體或表面，且並未被其他生物攜帶的非魔法物體。目標被活化並長出小巧的手臂和雙腳，變成一個由你控制的生物直到此法術結束或該生物的生命值歸零。它的數據資料請參見{@creature 微型僕役|xge|資料卡}。",
+				"以一個附贈動作，若該生物距離你120呎內，則你可以用心靈命令它（如果你使用此法術控制了複數生物，你可以同時命令他們部分或全部，對它們下達相同的命令）。你決定該生物在它的下個回合間將採取的動作以及移動的位置，或者你可以下達一個籠統的命令，像是撿起一把鑰匙、原地放哨、或堆疊書本。若你沒有下達命令，則該生物只會在面對敵意生物時採取自我防衛，除此之外不採取其他動作。一旦接獲指令，該生物將會持續遵從該指令直到它的任務被完成。",
+				"當該生物的生命值歸零，它將回復它原本的型態，且剩餘的傷害將被帶到它原本的型態。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, you can animate two additional objects for each slot level above 3rd."
+						"當你使用4環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，你就可以再額外活化二個物體。"
 					]
 				}
 			],
@@ -5876,7 +5876,7 @@
 			]
 		},
 		{
-			"name": "Wall of Sand",
+			"name": "沙牆術", "ENG_name": "Wall of Sand",
 			"source": "XGE",
 			"level": 3,
 			"school": "V",
@@ -5896,7 +5896,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a handful of sand"
+				"m": "一把沙子"
 			},
 			"duration": [
 				{
@@ -5917,7 +5917,7 @@
 				]
 			},
 			"entries": [
-				"You create a wall of swirling sand on the ground at a point you can see within range. You can make the wall up to 30 feet long, 10 feet high, and 10 feet thick, and it vanishes when the spell ends. It blocks line of sight but not movement. A creature is {@condition blinded} while in the wall's space and must spend 3 feet of movement for every 1 foot it moves there."
+				"你在射程內你所能看見地面上的一點創造出一道旋轉的沙牆。你可以使這道牆呈現最多30呎長、10呎高、以及10呎厚，且它會在此法術結束時消失。它將阻擋視線、但不會阻擋移動。處於牆壁區域內的生物處於{@condition 目盲}狀態，且在該處每移動1呎都必須花費3呎的移動速度。"
 			],
 			"page": 170,
 			"otherSources": [
@@ -5931,7 +5931,7 @@
 			]
 		},
 		{
-			"name": "Wall of Water",
+			"name": "水牆術", "ENG_name": "Wall of Water",
 			"source": "XGE",
 			"level": 3,
 			"school": "V",
@@ -5951,7 +5951,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a drop of water"
+				"m": "一滴水"
 			},
 			"duration": [
 				{
@@ -5980,8 +5980,8 @@
 				]
 			},
 			"entries": [
-				"You create a wall of water on the ground at a point you can see within range. You can make the wall up to 30 feet long, 10 feet high, and 1 foot thick, or you can make a ringed wall up to 20 feet in diameter, 20 feet high, and 1 foot thick. The wall vanishes when the spell ends. The wall's space is difficult terrain.",
-				"Any ranged weapon attack that enters the wall's space has disadvantage on the attack roll, and fire damage is halved if the fire effect passes through the wall to reach its target. Spells that deal cold damage that pass through the wall cause the area of the wall they pass through to freeze solid (at least a 5-foot-square section is frozen). Each 5-foot-square frozen section has AC 5 and 15 hit points. Reducing a frozen section to 0 hit points destroys it. When a section is destroyed, the wall's water doesn't fill it."
+				"你在射程內你所能看見地面上的一點創造出一道水牆。你可以使這道牆呈現最多30呎長、10呎高、以及1呎厚，或形成一道有著直徑最多20呎長、20呎高、以及1呎厚的環型牆。這道牆會在此法術結束時消失。這道牆所在的空間為困難地形。",
+				"任何會進入這道牆所在空間的遠程武器攻擊在攻擊檢定中具有劣勢，且若火焰效果會在穿過這道牆後才到達目標，則火焰傷害將減半。能造成寒冰傷害的法術會在穿過這道牆時，使它穿過的水牆區域凍結成固態（至少5呎平方的區塊會被凍結）。每個5呎平方的凍結區塊有著AC 5和15點生命值。當凍結區塊的生命值歸零時將會被摧毀，且水牆的水並不會填補它。"
 			],
 			"page": 170,
 			"otherSources": [

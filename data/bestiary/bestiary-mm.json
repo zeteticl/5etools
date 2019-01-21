@@ -11965,7 +11965,7 @@
 			]
 		},
 		{
-			"name": "Dretch",
+			"name": "怯魔", "ENG_name": "Dretch",
 			"size": "S",
 			"type": {
 				"type": "fiend",
@@ -12012,31 +12012,31 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 9,
-			"languages": "Abyssal, telepathy 60 ft. (works only with creatures that understand Abyssal)",
+			"languages": "下界語、心靈感應60呎（只對理解下界語的生物有效）",
 			"cr": "1/4",
 			"action": [
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The dretch makes two attacks: one with its bite and one with its claws."
+						"怯魔進行兩次攻擊：一次啃咬，一次爪抓。"
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬",
 					"entries": [
 						"{@atk mw} 命中{@hit 2}，觸及5呎，單一目標。{@h}3 ({@damage 1d6})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Claws",
+					"name": "爪抓",
 					"entries": [
 						"{@atk mw} 命中{@hit 2}，觸及5呎，單一目標。{@h}5 ({@damage 2d4})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Fetid Cloud (1/Day)",
+					"name": "汙臭之雲(1/日)",
 					"entries": [
-						"A 10-foot radius of disgusting green gas extends out from the dretch. The gas spreads around corners, and its area is lightly obscured. It lasts for 1 minute or until a strong wind disperses it. Any creature that starts its turn in that area must succeed on a DC 11 Constitution saving throw or be {@condition poisoned} until the start of its next turn. While {@condition poisoned} in this way, the target can take either an action or a bonus action on its turn, not both, and can't take reactions."
+						"一團10呎半徑的噁心綠色毒氣從怯魔蔓延而出。這團毒氣會繞過轉角，且它所在的區域被輕度遮蔽。它會存在持續1分鐘或直到一陣強風將它吹散。任何在這個區域內開始它回合的生物必須成功通過一次DC 11的體質豁免，否則{@condition 中毒}直到它的下個回合開始。當因為這個方式而{@condition 中毒}，目標在它的回合將只能採取一個動作或一個附贈動作，而不能在同一回合使用兩者，且它將無法採取反應。"
 					]
 				}
 			],
@@ -26770,7 +26770,7 @@
 			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/319/mammoth.mp3"
 		},
 		{
-			"name": "Manes",
+			"name": "原魔", "ENG_name": "Manes",
 			"size": "S",
 			"type": {
 				"type": "fiend",
@@ -26819,11 +26819,11 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 9,
-			"languages": "understands Abyssal but can't speak",
+			"languages": "理解下界語，但不會說",
 			"cr": "1/8",
 			"action": [
 				{
-					"name": "Claws",
+					"name": "爪抓",
 					"entries": [
 						"{@atk mw} 命中{@hit 2}，觸及5呎，單一目標。{@h}5 ({@damage 2d4})劈砍傷害。"
 					]

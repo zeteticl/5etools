@@ -2,7 +2,7 @@
 	"monster": [
 		{
 			"source": "XGE",
-			"name": "Tiny Servant",
+			"name": "微型僕役", "ENG_name": "Tiny Servant",
 			"size": "T",
 			"type": "construct",
 			"alignment": [
@@ -12,7 +12,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -46,12 +46,12 @@
 				"petrified",
 				"poisoned"
 			],
-			"senses": "blindsight 60 ft. (blind beyond this radius)",
+			"senses": "盲視60呎（超過半徑範圍則視作目盲）",
 			"action": [
 				{
-					"name": "Slam",
+					"name": "猛擊",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d4 + 3}) bludgeoning damage."
+						"{@atk mw} 命中{@hit 5}，觸及10呎，單一目標。{@h}5 ({@damage 1d4 + 3})鈍擊傷害。"
 					]
 				}
 			],
