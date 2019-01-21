@@ -1763,7 +1763,7 @@
 			]
 		},
 		{
-			"name": "Enemies Abound",
+			"name": "敵群環繞", "ENG_name": "Enemies Abound",
 			"source": "XGE",
 			"level": 3,
 			"school": "E",
@@ -1815,8 +1815,8 @@
 				]
 			},
 			"entries": [
-				"You reach into the mind of one creature you can see and force it to make an Intelligence saving throw. A creature automatically succeeds if it is immune to being {@condition frightened}. On a failed save, the target loses the ability to distinguish friend from foe, regarding all creatures it can see as enemies until the spell ends. Each time the target takes damage, it can repeat the saving throw, ending the effect on itself on a success.",
-				"Whenever the affected creature chooses another creature as a target, it must choose the target at random from among the creatures it can see within range of the attack, spell, or other ability it's using. If an enemy provokes an opportunity attack from the affected creature, the creature must make that attack if it is able to."
+				"你深入一個你所能看見生物的心靈，並迫使它進行一次智力豁免。一個免疫{@condition 恐懼}的生物將自動通過此豁免檢定。若豁免失敗，目標直到此法術結束前將失去辨別敵友的能力，並將所有它所看見的生物當作敵人。每次目標受到傷害時，它可以再進行一次此智力豁免。若豁免成功，則結束此法術對它的效果。",
+				"每當受影響的生物要選擇其他生物做為目標時，它必須從它攻擊、法術、或其他它使用能力的射程中，隨機選擇它所能看見的生物做為目標。若一個受影響生物所認為的敵人引發了一次藉機攻擊，則若該生物可以進行攻擊，它就必須這麼做。"
 			],
 			"page": 155,
 			"savingThrow": [
@@ -1906,7 +1906,7 @@
 			"isHeal": true
 		},
 		{
-			"name": "Erupting Earth",
+			"name": "土石爆發", "ENG_name": "Erupting Earth",
 			"source": "XGE",
 			"level": 3,
 			"school": "T",
@@ -1926,7 +1926,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a piece of obsidian"
+				"m": "一塊黑曜石"
 			},
 			"duration": [
 				{
@@ -1950,14 +1950,14 @@
 				]
 			},
 			"entries": [
-				"Choose a point you can see on the ground within range. A fountain of churned earth and stone erupts in a 20-foot cube centered on that point. Each creature in that area must make a Dexterity saving throw. A creature takes {@dice 3d12} bludgeoning damage on a failed save, or half as much damage on a successful one. Additionally, the ground in that area becomes difficult terrain until cleared. Each 5-foot-square portion of the area requires at least 1 minute to clear by hand."
+				"選擇射程內地面上你所能看見的一點。一陣翻騰泥石流將在以該點為中心的20呎邊長立方體範圍內噴湧而出。每個在範圍內的生物都必須進行一次敏捷豁免。一個豁免失敗的生物將受到{@dice 3d12}鈍擊傷害，豁免成功則只受到一半的傷害。此外，範圍內的地面將變成困難地形，直到被清理為止。手動清理每塊5呎平方的區域都需要花費至少1分鐘的時間。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@scaledice 3d12|3-9|1d12} for each slot level above 3rd."
+						"當你使用4環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 3d12|3-9|1d12}。"
 					]
 				}
 			],
@@ -3183,7 +3183,7 @@
 			"page": 160
 		},
 		{
-			"name": "Life Transference",
+			"name": "生命轉換", "ENG_name": "Life Transference",
 			"source": "XGE",
 			"level": 3,
 			"school": "N",
@@ -3222,14 +3222,14 @@
 				]
 			},
 			"entries": [
-				"You sacrifice some of your health to mend another creature's injuries. You take {@dice 4d8} necrotic damage, and one creature of your choice that you can see within range regains a number of hit points equal to twice the necrotic damage you take."
+				"你犧牲你一部份的健康以修復其他生物的傷口。你受到{@dice 4d8}死靈傷害，且射程內你所選擇且你能看見的一個生物將回復等同於兩倍你所受到死靈傷害的生命值。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@scaledice 4d8|3-9|1d8} for each slot level above 3rd."
+						"當你使用4環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 4d8|3-9|1d8}。"
 					]
 				}
 			],
