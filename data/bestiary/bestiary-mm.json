@@ -12034,7 +12034,7 @@
 					]
 				},
 				{
-					"name": "汙臭之雲(1/日)",
+					"name": "汙臭之雲 (1/日)",
 					"entries": [
 						"一團10呎半徑的噁心綠色毒氣從怯魔蔓延而出。這團毒氣會繞過轉角，且它所在的區域被輕度遮蔽。它會存在持續1分鐘或直到一陣強風將它吹散。任何在這個區域內開始它回合的生物必須成功通過一次DC 11的體質豁免，否則{@condition 中毒}直到它的下個回合開始。當因為這個方式而{@condition 中毒}，目標在它的回合將只能採取一個動作或一個附贈動作，而不能在同一回合使用兩者，且它將無法採取反應。"
 					]
@@ -32329,7 +32329,7 @@
 				{
 					"name": "釘刺",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一生物。 {@h}4 ({@damage 1d4 + 2})穿刺傷害，且目標必須成功通過一次DC 11的體質豁免，否則陷入{@condition 中毒}狀態長達一小時。若此豁免檢定失敗且骰值差了5點或更低，則目標將陷入{@condition 昏迷}狀態長達相同的持續時間，或直到它受到傷害或另一個生物使用一個動作將它搖醒。"
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一生物。 {@h}4 ({@damage 1d4 + 2})穿刺傷害，且目標必須成功通過一次DC 11的體質豁免，否則陷入{@condition 中毒}狀態長達一小時。豁免檢定的結果為5點或更低，則目標將陷入{@condition 昏迷}狀態長達相同的持續時間，或直到它受到傷害或另一個生物使用一個動作將它搖醒。"
 					]
 				}
 			],
@@ -32933,35 +32933,35 @@
 			"cr": "1",
 			"trait": [
 				{
-					"name": "Shapechanger",
+					"name": "變形者",
 					"entries": [
-						"The quasit can use its action to polymorph into a beast form that resembles a bat (speed 10 ft. fly 40 ft.), a centipede (40 ft., climb 40 ft.), or a toad (40 ft., swim 40 ft.), or back into its true form. Its statistics are the same in each form, except for the speed changes noted. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies."
+						"夸塞魔可以使用它的動作以變形成類似於一隻蝙蝠（速度10呎, 飛行40呎）、一隻蜈蚣（40呎, 攀爬20呎）、或一隻蟾蜍（40呎, 游泳40呎）的野獸型態，或者變回它的真實型態。除了註記的速度之外，它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備不會隨著變形發生轉變。它會在死亡時回復它的真實型態。"
 					]
 				},
 				{
-					"name": "Magic Resistance",
+					"name": "魔法抗性",
 					"entries": [
-						"The quasit has advantage on saving throws against spells and other magical effects."
+						"夸塞魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Claw (Bite in Beast Form)",
+					"name": "爪抓（野獸型態則為啃咬）",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d4 + 3}) piercing damage, and the target must succeed on a DC 10 Constitution saving throw or take 5 ({@damage 2d4}) poison damage and become {@condition poisoned} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d4 + 3})穿刺傷害，且目標必須成功通過一次DC 10的體質豁免，否則受到5 ({@damage 2d4})毒素傷害，且陷入{@condition 中毒}狀態長達1分鐘。 目標可以在每次它的回合結束時重複這個豁免檢定，若檢定成功則結束這個效果對它的影響。"
 					]
 				},
 				{
-					"name": "Scare (1/Day)",
+					"name": "驚嚇 (1/日)",
 					"entries": [
-						"One creature of the quasit's choice within 20 feet of it must succeed on a DC 10 Wisdom saving throw or be {@condition frightened} for 1 minute. The target can repeat the saving throw at the end of each of its turns, with disadvantage if the quasit is within line of sight, ending the effect on itself on a success."
+						"一個夸塞魔所選距離它20呎內的生物必須成功通過一次DC 10的睿知豁免，否則被{@condition 恐懼}長達1分鐘。目標可以在每次它的回合結束時重複這個豁免檢定，若夸塞魔在它的視線內則此檢定具有劣勢，若檢定成功則結束這個效果對它的影響。"
 					]
 				},
 				{
-					"name": "Invisibility",
+					"name": "隱形",
 					"entries": [
-						"The quasit magically turns {@condition invisible} until it attacks or uses Scare, or until its concentration ends (as if concentrating on a spell). Any equipment the quasit wears or carries is invisible with it."
+						"夸塞魔用魔法使自己{@condition 隱形}，直到它攻擊、使用驚嚇、或它的專注被打斷（如同專注於法術）。任何夸塞魔穿戴或攜帶的裝備都會隨著它隱形。"
 					]
 				}
 			],
@@ -32970,14 +32970,14 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Quasit Familiar",
+					"name": "夸塞魔魔寵",
 					"entries": [
-						"Mortal spellcasters interested in extraplanar familiars find quasits easy to summon and eager to serve. The quasit plays the part of the obsequious servant. It serves its master well, but it goads the mortal to greater and greater acts of chaos and evil. Such quasits have the following trait.",
+						"對異位面魔寵抱持興趣的凡人施法者發現了夸塞魔易於被召喚，且積極服務的特點。夸塞魔扮演著忠實僕役的角色。它會很好的服侍它的主人，但會唆使凡人的行為越來越趨向混亂與邪惡。這類夸塞魔具有以下特質。",
 						{
-							"name": "Familiar",
+							"name": "魔寵",
 							"type": "entries",
 							"entries": [
-								"The quasit can serve another creature as a familiar, forming a telepathic bond with its willing master. While the two are bonded, the master can sense what the quasit senses as long as they are within 1 mile of each other. While the quasit is within 10 feet of its master, the master shares the quasit's Magic Resistance trait. At any time and for any reason, the quasit can end its service as a familiar, ending the telepathic bond."
+								"夸塞魔可以做為魔寵服侍另一個生物，與它自願的主人建立一道魔法性的心靈連結。當雙方連結時，只要他們距離彼此1哩之內，主人就可以感知偽龍所感知的事物。當夸塞魔距離它主人10呎內，其主人將能享有夸塞魔的魔法抗性特質。夸塞魔可以在任何時候且以任何理由結束它做為魔寵的服務，並終止這道心靈連結。"
 							]
 						}
 					]
@@ -36760,7 +36760,7 @@
 			]
 		},
 		{
-			"name": "Sprite",
+			"name": "小妖精", "ENG_name": "Sprite",
 			"size": "T",
 			"type": "fey",
 			"source": "MM",
@@ -36772,7 +36772,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item leather armor|phb}"
+						"{@item 皮甲|phb}"
 					]
 				}
 			],
@@ -36795,31 +36795,31 @@
 				"stealth": "+8"
 			},
 			"passive": 13,
-			"languages": "Common, Elvish, Sylvan",
+			"languages": "通用語、精靈語、木族語",
 			"cr": "1/4",
 			"action": [
 				{
-					"name": "Longsword",
+					"name": "長劍",
 					"entries": [
-						"{@atk mw} 命中{@hit 2}，觸及5呎，單一目標。{@h}1劈砍傷害。"
+						"{@atk mw} 命中{@hit 2}，觸及5呎，單一目標。{@h}1 劈砍傷害。"
 					]
 				},
 				{
-					"name": "Shortbow",
+					"name": "短弓",
 					"entries": [
-						"{@atk rw} 命中{@hit 6}，射程40/160呎，單一目標。{@h}1 piercing damage, and the target must succeed on a DC 10 Constitution saving throw or become {@condition poisoned} for 1 minute. If its saving throw result is 5 or lower, the {@condition poisoned} target falls {@condition unconscious} for the same duration, or until it takes damage or another creature takes an action to shake it awake."
+						"{@atk rw} 命中{@hit 6}，射程40/160呎，單一目標。{@h}1 穿刺傷害，且目標必須成功通過一次DC 10的體質豁免，否則陷入{@condition 中毒}狀態長達1分鐘。若此豁免檢定的結果為5點或更低，則{@condition 中毒}的目標將陷入{@condition 昏迷}狀態長達相同的持續時間，或直到它受到傷害或另一個生物使用一個動作將它搖醒。"
 					]
 				},
 				{
-					"name": "Heart Sight",
+					"name": "真心視界",
 					"entries": [
-						"The sprite touches a creature and magically knows the creature's current emotional state. If the target fails a DC 10 Charisma saving throw, the sprite also knows the creature's alignment. Celestials, fiends, and undead automatically fail the saving throw."
+						"小妖精觸碰一個生物並以魔法得知該生物當下的情緒狀態。若該目標在一次DC 10的魅力豁免中失敗，則小妖精也將得知該生物的陣營。天界生物、邪魔、和不死生物將在這個豁免檢定中自動失敗。"
 					]
 				},
 				{
-					"name": "Invisibility",
+					"name": "隱形",
 					"entries": [
-						"The sprite magically turns {@condition invisible} until it attacks or casts a spell, or until its concentration ends (as if concentrating on a spell). Any equipment the sprite wears or carries is invisible with it."
+						"小妖精用魔法使自己{@condition 隱形}，直到它攻擊、施放法術、或它的專注被打斷（如同專注於法術）。任何小妖精穿戴或攜帶的裝備都會隨著它隱形。"
 					]
 				}
 			],
