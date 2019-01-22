@@ -23657,12 +23657,13 @@
 			]
 		},
 		{
-			"name": "Imp",
+			"name": "小魔鬼", "ENG_name": "Imp",
 			"size": "T",
 			"type": {
 				"type": "fiend",
 				"tags": [
-					"devil"
+					"devil",
+					"shapechanger"
 				]
 			},
 			"source": "MM",
@@ -23701,7 +23702,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks not made with silvered weapons"
+					"preNote": "非銀製武器進行的非魔法攻擊所造成的",
 				}
 			],
 			"immune": [
@@ -23713,39 +23714,39 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 11,
-			"languages": "Infernal, Common",
+			"languages": "煉獄語、通用語",
 			"cr": "1",
 			"trait": [
 				{
-					"name": "Shapechanger",
+					"name": "變形者",
 					"entries": [
-						"The imp can use its action to polymorph into a beast form that resembles a rat (speed 20 ft.), a raven (20 ft., fly 60 ft.), or a spider (20 ft., climb 20 ft.), or back into its true form. Its statistics are the same in each form, except for the speed changes noted. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies."
+						"小魔鬼可以使用它的動作以變形成類似於一隻老鼠（速度20呎）、一隻渡鴉（20呎, 飛行60呎）、或一隻蜘蛛（20呎, 攀爬20呎）的野獸型態，或者變回它的真實型態。除了註記的速度之外，它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備不會隨著變形發生轉變。它會在死亡時回復它的真實型態。"
 					]
 				},
 				{
-					"name": "Devil's Sight",
+					"name": "魔鬼視界",
 					"entries": [
-						"Magical darkness doesn't impede the imp's darkvision."
+						"魔法黑暗並不會阻礙小魔鬼的黑暗視覺。"
 					]
 				},
 				{
-					"name": "Magic Resistance",
+					"name": "魔法抗性",
 					"entries": [
-						"The imp has advantage on saving throws against spells and other magical effects."
+						"小魔鬼在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Sting (Bite in Beast Form)",
+					"name": "釘刺（野獸型態則為啃咬）",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}5 ({@damage 1d4 + 3}) piercing damage, and the target must make on a DC 11 Constitution saving throw, taking 10 ({@damage 3d6}) poison damage on a failed save, or half as much damage on a successful one."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}5 ({@damage 1d4 + 3})穿刺傷害，且目標必須進行一次DC 11的體質豁免，若豁免失敗則受到10 ({@damage 3d6})毒素傷害，豁免成功則只受到一半的傷害。 "
 					]
 				},
 				{
-					"name": "Invisibility",
+					"name": "隱形",
 					"entries": [
-						"The imp magically turns {@condition invisible} until it attacks, or until its concentration ends (as if concentrating on a spell). Any equipment the imp wears or carries is invisible with it."
+						"小魔鬼用魔法使自己{@condition 隱形}，直到它攻擊、或它的專注被打斷（如同專注於法術）。任何小魔鬼穿戴或攜帶的裝備都會隨著它隱形。"
 					]
 				}
 			],
@@ -23754,14 +23755,14 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Imp Familiar",
+					"name": "小魔鬼魔寵",
 					"entries": [
-						"Imps can be found in the service to mortal spellcasters, acting as advisors, spies, and familiars. An imp urges its master to acts of evil, knowing the mortal's soul is a prize the imp might ultimately claim. Imps display an unusual loyalty to their masters, and an imp can be quite dangerous if its master is threatened. Some such imps have the following trait.",
+						"小魔鬼時常會擔任凡人施法者的僕役，擔任顧問、密探、或是魔寵等角色。一個小魔鬼會敦促它的主人施行邪惡的行為，以期它能在最終將這個凡人的靈魂做為獎勵據為己有。小魔鬼會對它的主人展現出非同尋常的忠誠，且在它主人受到威脅時變的相當危險。某些這類的小魔鬼具有以下特質。",
 						{
-							"name": "Familiar",
+							"name": "魔寵",
 							"type": "entries",
 							"entries": [
-								"The imp can enter into a contract to serve another creature as a familiar, forming a telepathic bond with its willing master. While the two are bonded, the master can sense what the imp senses as long as they are within 1 mile of each other. While the imp is within 10 feet of its master, the master shares the imp's Magic Resistance trait. If its master violates the terms of the contract, the imp can end its service as a familiar, ending the telepathic bond."
+								"小魔鬼可以簽下契約以做為魔寵服侍另一個生物，與它的主人建立一道心靈連結。當雙方連結時，只要他們距離彼此1哩之內，主人就可以感知小魔鬼所感知的事物。當小魔鬼距離它主人10呎內，其主人將能享有小魔鬼的魔法抗性特質。若它的主人違背契約內容時，小魔鬼可以結束它做為魔寵的服務，並終止這道心靈連結。"
 							]
 						}
 					]
@@ -32265,7 +32266,7 @@
 			]
 		},
 		{
-			"name": "Pseudodragon",
+			"name": "偽龍", "ENG_name": "Pseudodragon",
 			"size": "T",
 			"type": "dragon",
 			"source": "MM",
@@ -32296,39 +32297,39 @@
 			},
 			"senses": "盲視10呎, 黑暗視覺60呎",
 			"passive": 13,
-			"languages": "understands Common and Draconic but can't speak",
+			"languages": "理解通用語和龍語，但不會說",
 			"cr": "1/4",
 			"trait": [
 				{
-					"name": "Keen Senses",
+					"name": "敏銳感官",
 					"entries": [
-						"The pseudodragon has advantage on Wisdom ({@skill Perception}) checks that rely on sight, hearing, or smell."
+						"偽龍在依賴視覺、聽覺、或嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Magic Resistance",
+					"name": "魔法抗性",
 					"entries": [
-						"The pseudodragon has advantage on saving throws against spells and other magical effects."
+						"偽龍在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Limited Telepathy",
+					"name": "有限心靈感應",
 					"entries": [
-						"The pseudodragon can magically communicate simple ideas, emotions, and images telepathically with any creature within 100 feet of it that can understand a language."
+						"偽龍可以用魔法和任何距離它100呎內且理解一種語言的生物透過心靈感應交流簡單的想法、情緒、和影像。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}4 ({@damage 1d4 + 2})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Sting",
+					"name": "釘刺",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一生物。 {@h}4 ({@damage 1d4 + 2}) piercing damage, and the target must succeed on a DC 11 Constitution saving throw or become {@condition poisoned} for 1 hour. If the saving throw fails by 5 or more, the target falls {@condition unconscious} for the same duration, or until it takes damage or another creature uses an action to shake it awake."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一生物。 {@h}4 ({@damage 1d4 + 2})穿刺傷害，且目標必須成功通過一次DC 11的體質豁免，否則陷入{@condition 中毒}狀態長達一小時。若此豁免檢定失敗且骰值差了5點或更低，則目標將陷入{@condition 昏迷}狀態長達相同的持續時間，或直到它受到傷害或另一個生物使用一個動作將它搖醒。"
 					]
 				}
 			],
@@ -32337,14 +32338,14 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Pseudodragon Familiar",
+					"name": "偽龍魔寵",
 					"entries": [
-						"Some pseudodragons are willing to serve spellcasters as a familiar. Such pseudodragons have the following trait.",
+						"有些偽龍自願於做為魔寵服侍施法者。這類偽龍具有以下特質：",
 						{
-							"name": "Familiar",
+							"name": "魔寵",
 							"type": "entries",
 							"entries": [
-								"The pseudodragon can serve another creature as a familiar, forming a magic, telepathic bond with that willing companion. While the two are bonded, the companion can sense what the pseudodragon senses as long as they are within 1 mile of each other. While the pseudodragon is within 10 feet of its companion, the companion shares the pseudodragon's Magic Resistance trait. At any time and for any reason, the pseudodragon can end its service as a familiar, ending the telepathic bond."
+								"偽龍可以做為魔寵服侍另一個生物，與它自願的夥伴建立一道魔法性的心靈連結。當雙方連結時，只要他們距離彼此1哩之內，夥伴就可以感知偽龍所感知的事物。當偽龍距離它夥伴10呎內，其夥伴將能享有偽龍的魔法抗性特質。偽龍可以在任何時候且以任何理由結束它做為魔寵的服務，並終止這道心靈連結。"
 							]
 						}
 					]
@@ -32874,12 +32875,13 @@
 			]
 		},
 		{
-			"name": "Quasit",
+			"name": "夸塞魔", "ENG_name": "Quasit",
 			"size": "T",
 			"type": {
 				"type": "fiend",
 				"tags": [
-					"demon"
+					"demon",
+					"shapechanger"
 				]
 			},
 			"source": "MM",
@@ -32916,7 +32918,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -32927,7 +32929,7 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 10,
-			"languages": "Abyssal, Common",
+			"languages": "下界語、通用語",
 			"cr": "1",
 			"trait": [
 				{
