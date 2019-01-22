@@ -203,7 +203,7 @@ const typeFilter = new Filter({
 	],
 	displayFn: Parser.monTypeToPlural
 });
-const tagFilter = new Filter({header: "Tag", displayFn: StrUtil.uppercaseFirst});
+const tagFilter = new Filter({header: "Tag", headerName: "類型附標", items:["any race"], displayFn: Parser.MonsterTagToDisplay});
 const alignmentFilter = new Filter({
 	header: "Alignment", headerName: "陣營",
 	items: ["L", "NX", "C", "G", "NY", "E", "N", "U", "A"],
@@ -303,18 +303,63 @@ const traitFilter = new Filter({
 	header: "Traits", headerName: "特性",
 	items: [
 		"Aggressive", "Ambusher", "Amorphous", "Amphibious", "Antimagic Susceptibility", "Brute", "Charge", "Damage Absorption", "Death Burst", "Devil's Sight", "False Appearance", "Fey Ancestry", "Flyby", "Hold Breath", "Illumination", "Immutable Form", "Incorporeal Movement", "Keen Senses", "Legendary Resistances", "Light Sensitivity", "Magic Resistance", "Magic Weapons", "Pack Tactics", "Pounce", "Rampage", "Reckless", "Regeneration", "Rejuvenation", "Shapechanger", "Siege Monster", "Sneak Attack", "Spider Climb", "Sunlight Sensitivity", "Turn Immunity", "Turn Resistance", "Undead Fortitude", "Water Breathing", "Web Sense", "Web Walker"
-	]
+	],
+	displayFn: function(t){
+		switch(t){
+			case "Amorphous": return "無定形";
+			case "Amphibious": return "兩棲";
+			case "Charge": return "衝鋒";
+			case "Devil's Sight": return "魔鬼視界";
+			case "False Appearance": return "擬形";
+			case "Fey Ancestry": return "精類血統";
+			case "Flyby": return "飛掠";
+			case "Hold Breath": return "屏息";
+			case "Illumination": return "照明";
+			case "Keen Senses": return "敏銳感官";
+			case "Legendary Resistances": return "傳奇抗性";
+			case "Light Sensitivity": return "光線敏感";
+			case "Magic Resistance": return "魔法抗性";
+			case "Magic Weapons": return "魔法武器";
+			case "Pack Tactics": return "群體戰術";
+			case "Pounce": return "猛撲";
+			case "Rampage": return "橫衝直撞";
+			case "Shapechanger": return "變形者";
+			case "Spider Climb": return "蛛行";
+			case "Sunlight Sensitivity": return "陽光敏感";
+			case "Undead Fortitude": return "不死韌性";
+			case "Water Breathing": return "水下呼吸";
+			case "Web Sense": return "蛛網感知";
+			case "Web Walker": return "蛛網行者";
+			default: return t;
+	};},
 });
 const actionReactionFilter = new Filter({
 	header: "Actions & Reactions", headerName: "動作&反應",
 	items: [
 		"Frightful Presence", "Multiattack", "Parry", "Swallow", "Teleport", "Tentacles"
-	]
+	],
+	displayFn: function(a){
+		switch(a){
+			case "Multiattack": return "多重攻擊";
+			case "Swallow": return "吞嚥";
+			case "Tentacles": return "觸手";
+			default: return a;
+	};}
 });
 const miscFilter = new Filter({
 	header: "Miscellaneous", headerName: "雜項",
 	items: ["Familiar", "Lair Actions", "Legendary", "Named NPC", "Spellcaster", "Regional Effects", "Swarm"],
-	displayFn: StrUtil.uppercaseFirst,
+	displayFn: function(m){
+		switch(m){
+			case "Familiar": return "魔寵";
+			case "Lair Actions": return "巢穴動作";
+			case "Legendary": return "傳奇";
+			case "Named NPC": return "具名NPC";
+			case "Spellcaster": return "施法者";
+			case "Regional Effects": return "區域效應";
+			case "Swarm": return "集群";
+			default: return m;
+		};},
 	deselFn: (it) => it === "Named NPC"
 });
 
@@ -634,7 +679,7 @@ function addMonsters (data) {
 			mon._fMisc.push("Spellcaster");
 			mon.spellcasting.forEach(sc => {
 				if (sc.ability) {
-					const scAbility = `${_MISC_FILTER_SPELLCASTER}${Parser.attAbvToFull(sc.ability)}`;
+					const scAbility = `${_MISC_FILTER_SPELLCASTER}${sc.ability}`;
 					mon._fMisc.push(scAbility);
 					miscFilter.addIfAbsent(scAbility);
 				}

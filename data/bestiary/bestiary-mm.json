@@ -12012,7 +12012,7 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 9,
-			"languages": "下界語、心靈感應60呎（只對理解下界語的生物有效）",
+			"languages": "深淵語、心靈感應60呎（只對理解深淵語的生物有效）",
 			"cr": "1/4",
 			"action": [
 				{
@@ -21206,7 +21206,7 @@
 			]
 		},
 		{
-			"name": "Griffon",
+			"name": "獅鷲", "ENG_name": "Griffon",
 			"size": "L",
 			"type": "monstrosity",
 			"source": "MM",
@@ -21240,7 +21240,7 @@
 				{
 					"name": "敏銳視覺",
 					"entries": [
-						"The griffon在依賴視覺的睿知（{@skill 感知}）檢定中具有優勢。"
+						"獅鷲在依賴視覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				}
 			],
@@ -21248,17 +21248,17 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The griffon makes two attacks: one with its beak and one with its claws."
+						"獅鷲進行兩次攻擊：一次喙啄，一次爪抓。"
 					]
 				},
 				{
-					"name": "Beak",
+					"name": "喙啄",
 					"entries": [
 						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}8 ({@damage 1d8 + 4})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Claws",
+					"name": "爪抓",
 					"entries": [
 						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}11 ({@damage 2d6 + 4})劈砍傷害。"
 					]
@@ -26820,7 +26820,7 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 9,
-			"languages": "理解下界語，但不會說",
+			"languages": "理解深淵語，但不會說",
 			"cr": "1/8",
 			"action": [
 				{
@@ -31021,7 +31021,7 @@
 			]
 		},
 		{
-			"name": "Pegasus",
+			"name": "飛馬", "ENG_name": "Pegasus",
 			"size": "L",
 			"type": "celestial",
 			"source": "MM",
@@ -31055,11 +31055,11 @@
 				"perception": "+6"
 			},
 			"passive": 16,
-			"languages": "understands Celestial, Common, Elvish, and Sylvan but can't speak",
+			"languages": "理解天界語、通用語、精靈語、和木族語，但不會說",
 			"cr": "2",
 			"action": [
 				{
-					"name": "Hooves",
+					"name": "蹄擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}11 ({@damage 2d6 + 4})鈍擊傷害。"
 					]
@@ -31175,7 +31175,7 @@
 			]
 		},
 		{
-			"name": "Peryton",
+			"name": "佩利冬", "ENG_name": "Peryton",
 			"size": "M",
 			"type": "monstrosity",
 			"source": "MM",
@@ -31215,29 +31215,29 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"passive": 15,
-			"languages": "understands Common and Elvish but can't speak",
+			"languages": "理解通用語和精靈語，但不會說",
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Dive Attack",
+					"name": "俯衝攻擊",
 					"entries": [
-						"If the peryton is flying and dives at least 30 ft. straight toward a target and then hits it with a melee weapon attack, the attack deals an extra 9 ({@dice 2d8}) damage to the target."
+						"若佩利冬在飛行中向著一個目標直線俯衝至少30呎並接著以一次武器攻擊命中它，則目標將受到額外的9 ({@dice 2d8})傷害。"
 					]
 				},
 				{
 					"name": "飛掠",
 					"entries": [
-						"The peryton doesn't provoke an opportunity attack when it flies out of an enemy's reach."
+						"佩利冬在飛出敵人的觸及範圍時不會觸發藉機攻擊。"
 					]
 				},
 				{
 					"name": "敏銳視覺和嗅覺",
 					"entries": [
-						"The peryton在依賴視覺和嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
+						"佩利冬在依賴視覺和嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				}
 			],
@@ -31245,17 +31245,17 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The peryton makes one gore attack and one talon attack."
+						"佩利冬進行兩次攻擊：一次角撞，一次禽爪。"
 					]
 				},
 				{
-					"name": "Gore",
+					"name": "角撞",
 					"entries": [
 						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Talons",
+					"name": "禽爪",
 					"entries": [
 						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}8 ({@damage 2d4 + 3})穿刺傷害。"
 					]
@@ -32929,7 +32929,7 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 10,
-			"languages": "下界語、通用語",
+			"languages": "深淵語、通用語",
 			"cr": "1",
 			"trait": [
 				{
@@ -36567,7 +36567,7 @@
 				{
 					"name": "飛掠",
 					"entries": [
-						"The devil doesn't provoke an opportunity attack when it flies out of an enemy's reach."
+						"The devil在飛出敵人的觸及範圍時不會觸發藉機攻擊。"
 					]
 				},
 				{

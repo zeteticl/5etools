@@ -769,7 +769,7 @@
 			]
 		},
 		{
-			"name": "Charm Monster",
+			"name": "魅惑怪物", "ENG_name": "Charm Monster",
 			"source": "XGE",
 			"level": 4,
 			"school": "E",
@@ -836,14 +836,14 @@
 				]
 			},
 			"entries": [
-				"You attempt to charm a creature you can see within range. It must make a Wisdom saving throw, and it does so with advantage if you or your companions are fighting it. If it fails the saving throw, it is {@condition charmed} by you until the spell ends or until you or your companions do anything harmful to it. The {@condition charmed} creature is friendly to you. When the spell ends, the creature knows it was {@condition charmed} by you."
+				"你嘗試魅惑一個射程內你所能看見的生物。它必須進行一次睿知豁免，且若你或你的同伴正在與它戰鬥，則它在該豁免檢定中具有優勢。若它豁免失敗，它將被你{@condition 魅惑}直到法術結束或直到你或你的同伴做出任何危害它的行動。被{@condition 魅惑}的生物將對你友善。當此法術結束，該生物將會知道它曾被你{@condition 魅惑}。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 5th level or higher, you can target one additional creature for each slot level above 4th. The creatures must be within 30 feet of each other when you target them."
+						"當你使用5環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，你就可以再額外選擇一個生物作為目標。當你選擇這些生物時，它們彼此之間的距離必須在30呎內。"
 					]
 				}
 			],
@@ -1685,7 +1685,7 @@
 			]
 		},
 		{
-			"name": "Elemental Bane",
+			"name": "元素災禍", "ENG_name": "Elemental Bane",
 			"source": "XGE",
 			"level": 4,
 			"school": "T",
@@ -1733,14 +1733,14 @@
 				]
 			},
 			"entries": [
-				"Choose one creature you can see within range, and choose one of the following damage types: acid, cold, fire, lightning, or thunder. The target must succeed on a Constitution saving throw or be affected by the spell for its duration. The first time each turn the affected target takes damage of the chosen type, the target takes an extra {@dice 2d6} damage of that type. Moreover, the target loses any resistance to that damage type until the spell ends."
+				"選擇射程內你所能看見的一個生物，並從下列傷害類型中選擇一個：酸蝕、寒冰、火焰、閃電、雷鳴。目標必須成功通過一次體質豁免，否則在法術持續期間受其影響。當受影響的目標在每回合第一次受到所選傷害類型的傷害時，目標將受到額外{@dice 2d6}所選類型的傷害。除此之外，直到此法術結束前，目標將失去任何對該傷害類型的抗性。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 5th level or higher, you can target one additional creature for each slot level above 4th. The creatures must be within 30 feet of each other when you target them."
+						"當你使用5環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，你就可以再額外選擇一個生物作為目標。當你選擇這些生物時，它們彼此之間的距離必須在30呎內。"
 					]
 				}
 			],
@@ -4329,7 +4329,7 @@
 			]
 		},
 		{
-			"name": "Shadow of Moil",
+			"name": "騷亂之影", "ENG_name": "Shadow of Moil",
 			"source": "XGE",
 			"level": 4,
 			"school": "N",
@@ -4349,7 +4349,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "an undead eyeball encased in a gem worth at least 150 gp",
+					"text": "一個封入價值至少150金幣的寶石內的不死生物眼球",
 					"cost": 150
 				}
 			},
@@ -4372,8 +4372,8 @@
 				]
 			},
 			"entries": [
-				"Flame-like shadows wreathe your body until the spell ends, causing you to become heavily obscured to others. The shadows turn dim light within 10 feet of you into darkness, and bright light in the same area to dim light.",
-				"Until the spell ends, you have resistance to radiant damage. In addition, whenever a creature within 10 feet of you hits you with an attack, the shadows lash out at that creature, dealing it {@dice 2d8} necrotic damage."
+				"火焰般的暗影覆蓋著你的身體直到此法術結束，使你對其他人而言處於重度遮蔽。這片暗影會使距離你10呎內的微光光照變為黑暗，並使相同區域內的明亮光照變為微光光照。",
+				"直到此法術結束，你具有對光耀傷害的抗性。此外，每當一個距離你10呎內的生物以一次攻擊命中你時，暗影將猛然襲向該生物，對它造成{@dice 2d8}死靈傷害。"
 			],
 			"page": 164,
 			"damageInflict": [
@@ -4462,7 +4462,7 @@
 			]
 		},
 		{
-			"name": "Sickening Radiance",
+			"name": "致病光輝", "ENG_name": "Sickening Radiance",
 			"source": "XGE",
 			"level": 4,
 			"school": "V",
@@ -4510,8 +4510,8 @@
 				]
 			},
 			"entries": [
-				"Dim, greenish light spreads within a 30-foot-radius sphere centered on a point you choose within range. The light spreads around corners, and it lasts until the spell ends.",
-				"When a creature moves into the spell's area for the first time on a turn or starts its turn there, that creature must succeed on a Constitution saving throw or take {@dice 4d10} radiant damage, and it suffers one level of {@condition exhaustion} and emits a dim, greenish light in a 5-foot radius. This light makes it impossible for the creature to benefit from being {@condition invisible}. The light and any levels of {@condition exhaustion} caused by this spell go away when the spell ends."
+				"黯淡、微綠色的光芒將擴散充斥在以射程內你所選擇一點為中心的30呎半徑球體空間內。這些光線會繞過轉角，且它將持續存在直到此法術結束。",
+				"當一個生物在一個回合中第一次移進此法術的範圍，或在該處開始它的回合，則該生物必須成功通過一次體質豁免，否則受到{@dice 4d10}光耀傷害，且它將承受一級{@condition 力竭}並散發出一道5呎半徑的暗綠色微光。這道微光將使該生物無法從{@condition 隱形}狀態受益。這道微光以及任何此法術造成的{@condition 力竭}等級都將在此法術結束時消失。"
 			],
 			"page": 164,
 			"damageInflict": [
@@ -4907,7 +4907,7 @@
 			]
 		},
 		{
-			"name": "Storm Sphere",
+			"name": "暴風法球", "ENG_name": "Storm Sphere",
 			"source": "XGE",
 			"level": 4,
 			"school": "V",
@@ -4951,16 +4951,16 @@
 				]
 			},
 			"entries": [
-				"A 20-foot-radius sphere of whirling air springs into existence, centered on a point you choose within range. The sphere remains for the spell's duration. Each creature in the sphere when it appears or that ends its turn there must succeed on a Strength saving throw or take {@dice 2d6} bludgeoning damage. The sphere's space is difficult terrain.",
-				"Until the spell ends, you can use a bonus action on each of your turns to cause a bolt of lightning to leap from the center of the sphere toward one creature you choose within 60 feet of the center. Make a ranged spell attack. You have advantage on the attack roll if the target is in the sphere. On a hit, the target takes {@dice 4d6} lightning damage.",
-				"Creatures within 30 feet of the sphere have disadvantage on Wisdom (Perception) checks made to listen."
+				"以射程內一個你所選擇的點為中心，一個20呎半徑的呼嘯狂風球體將突然出現。這個球體在法術持續期間內持續存在。每個球體內的生物在球體出現或在該處結束它回合時，都必須成功通過一次力量豁免，否則受到{@dice 2d6}鈍擊傷害。這個球體所在的空間視為困難地形。",
+				"直到此法術結束前，你可以在你的每個回合使用一個附贈動作，使一道閃電從球體中心躍向一個你所選擇距離中心60呎內的生物。進行一次遠程法術攻擊。若該目標處於球體內，則你在該攻擊檢定中具有優勢。若命中，目標將受到{@dice 4d6}閃電傷害。",
+				"距離球體30呎內的生物在進行用以聆聽的睿知（{@skill 感知}）檢定具有劣勢。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 5th level or higher, the damage for each of its effects increases by {@scaledice 2d6;4d6|4-9|1d6} for each slot level above 4th."
+						"當你使用5環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，各個效果的傷害便會再增加{@scaledice 2d6;4d6|4-9|1d6}。"
 					]
 				}
 			],
@@ -5732,7 +5732,7 @@
 			]
 		},
 		{
-			"name": "Vitriolic Sphere",
+			"name": "硫酸法球", "ENG_name": "Vitriolic Sphere",
 			"source": "XGE",
 			"level": 4,
 			"school": "V",
@@ -5752,7 +5752,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a drop of giant slug bile"
+				"m": "一滴巨蛞蝓的膽汁"
 			},
 			"duration": [
 				{
@@ -5772,14 +5772,14 @@
 				]
 			},
 			"entries": [
-				"You point at a location within range, and a glowing 1-foot-diameter ball of emerald acid streaks there and explodes in a 20-foot-radius sphere. Each creature in that area must make a Dexterity saving throw. On a failed save, a creature takes {@dice 10d4} acid damage and another {@dice 5d4} acid damage at the end of its next turn. On a successful save, a creature takes half the initial damage and no damage at the end of its next turn."
+				"你指向射程內的一個地點，一個1呎直徑的發光翠綠色強酸球將襲向該處，並爆炸席捲整個20呎半徑的球體範圍。每個在該區域內的生物都必須進行一次敏捷豁免。若豁免失敗，該生物將受到{@dice 10d4}酸蝕傷害，並在它的下個回合結束時再受到{@dice 5d4}酸蝕傷害。若豁免成功，則該生物只受到一半的初始傷害，且不會在它的下個回合結束時造成傷害。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 5th level or higher, the initial damage increases by {@scaledice 10d4|4-9|2d4} for each slot level above 4th."
+						"當你使用5環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，初始傷害都會再增加{@scaledice 10d4|4-9|2d4}。"
 					]
 				}
 			],
@@ -6074,7 +6074,7 @@
 			]
 		},
 		{
-			"name": "Watery Sphere",
+			"name": "水體法球", "ENG_name": "Watery Sphere",
 			"source": "XGE",
 			"level": 4,
 			"school": "C",
@@ -6094,7 +6094,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a droplet of water"
+				"m": "一小滴水"
 			},
 			"duration": [
 				{
@@ -6123,11 +6123,11 @@
 				]
 			},
 			"entries": [
-				"You conjure up a sphere of water with a 5-foot radius at a point you can see within range. The sphere can hover but no more than 10 feet off the ground. The sphere remains for the spell's duration.",
-				"Any creature in the sphere's space must make a Strength saving throw. On a successful save, a creature is ejected from that space to the nearest unoccupied space of the creature's choice outside the sphere. A Huge or larger creature succeeds on the saving throw automatically, and a Large or smaller creature can choose to fail it. On a failed save, a creature is {@condition restrained} by the sphere and is engulfed by the water. At the end of each of its turns, a {@condition restrained} target can repeat the saving throw, ending the effect on itself on a success.",
-				"The sphere can restrain as many as four Medium or smaller creatures or one Large creature. If the sphere restrains a creature that causes it to exceed this capacity, a random creature that was already {@condition restrained} by the sphere falls out of it and lands {@condition prone} in a space within 5 feet of it.",
-				"As an action, you can move the sphere up to 30 feet in a straight line. If it moves over a pit, a cliff, or other drop-off, it safely descends until it is hovering 10 feet above the ground. Any creature {@condition restrained} by the sphere moves with it. You can ram the sphere into creatures, forcing them to make the saving throw.",
-				"When the spell ends, the sphere falls to the ground and extinguishes all normal flames within 30 feet of it. Any creature {@condition restrained} by the sphere is knocked {@condition prone} in the space where it falls. The water then vanishes."
+				"你在射程內你所能看見的一點召喚出一個5呎半徑的水球體。這個球體可以懸浮在離地不超過10呎的空中。這個球體在法術持續期間內持續存在。",
+				"任何在該球體所在空間的生物都必須進行一次力量豁免。若豁免成功，該生物將被從該空間彈出至球體外，由該生物所選最近的一處未被佔據空間。一個體型為巨型或更大的生物將自動成功通過這個豁免檢定，且一個體型為大型或更小的生物可以選擇在該檢定中失敗。若豁免失敗，該生物將被球體{@condition 束縛}，且被水吞沒。在它的每個回合結束，一個被{@condition 束縛}的生物可以重複這個豁免檢定，若檢定成功則結束這個效果對它的影響。",
+				"這個球體同時只能容納一個大型生物、或最多四個體型為中型或更小的生物。若該球體會在束縛一個生物後導致它超過它的容納上限，則一個已經被該球體{@condition 束縛}的隨機生物將會從中摔出，在距離該球體5呎內的一處空間以{@condition 伏地}狀態著地。",
+				"以一個動作，你可以直線移動該球體最多30呎。若它將越過一個坑洞、懸崖、或其他落差地形，則它將安全地下降直到它懸浮於離地面10呎的空中。任何被該球體{@condition 束縛}的生物將會隨著它移動。你可以讓球體撞上生物，強迫它們進行該豁免檢定。",
+				"當此法術結束時，球體將落至地面並熄滅所有距離它30呎內的普通火焰。任何被該球體{@condition 束縛}的生物將被擊倒{@condition 伏地}於它落至的空間。接著這些水將會消失。"
 			],
 			"page": 170,
 			"savingThrow": [
