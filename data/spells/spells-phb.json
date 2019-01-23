@@ -581,7 +581,7 @@
 			"permanentEffects": true
 		},
 		{
-			"name": "Animate Objects",
+			"name": "活化物體", "ENG_name": "Animate Objects",
 			"level": 5,
 			"school": "T",
 			"time": [
@@ -651,18 +651,18 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Objects come to life at your command. Choose up to ten nonmagical objects within range that are not being worn or carried. Medium targets count as two objects, Large targets count as four objects, Huge targets count as eight objects. You can't animate any object larger than Huge. Each target animates and becomes a creature under your control until the spell ends or until reduced to 0 hit points.",
-				"As a bonus action, you can mentally command any creature you made with this spell if the creature is within 500 feet of you (if you control multiple creatures, you can command any or all of them at the same time, issuing the same command to each one). You decide what action the creature will take and where it will move during its next turn, or you can issue a general command, such as to guard a particular chamber or corridor. If you issue no commands, the creature only defends itself against hostile creatures. Once given an order, the creature continues to follow it until its task is complete.",
+				"物體在你的命令之下活了過來。選擇射程內最多十個未被穿戴或攜帶的非魔法物體。中型的目標視作二個物體，大型的目標視作四個物體，巨型的目標視作八個物體。你不能活化任何體型超過巨型的物體。每個目標將活化並變成一個由你控制的生物，直到此法術結束或該生物的生命值歸零。",
+				"以一個附贈動作，若該生物距離你500呎內，則你可以用心靈命令它（如果你使用此法術控制了複數生物，你可以同時命令他們部分或全部，對它們下達相同的命令）。你決定該生物在它的下個回合間將採取的動作以及移動的位置，或者你可以下達一個籠統的命令，像是守衛一個特定的房間或走廊。若你沒有下達命令，則該生物只會在面對敵意生物時採取自我防衛，除此之外不採取其他動作。一旦接獲指令，該生物將會持續遵從該指令直到它的任務被完成。",
 				{
 					"type": "table",
-					"caption": "Animated Object Statistics",
+					"caption": "活化物體遊戲數據",
 					"colLabels": [
-						"Size",
-						"HP",
+						"體型",
+						"生命值",
 						"AC",
-						"Attack",
-						"Str",
-						"Dex"
+						"攻擊",
+						"力量",
+						"敏捷"
 					],
 					"colStyles": [
 						"col-2",
@@ -674,56 +674,56 @@
 					],
 					"rows": [
 						[
-							"{@creature animated object (tiny)|phb|Tiny}",
+							"{@creature 活化物體(微型)|phb|微型}",
 							"20",
 							"18",
-							"{@hit +8} to hit, {@damage 1d4 + 4} damage",
+							"命中{@hit +8}，{@damage 1d4 + 4}傷害",
 							"{@dice 1d20+4|4}",
 							"{@dice 1d20+18|18}"
 						],
 						[
-							"{@creature animated object (small)|phb|Small}",
+							"{@creature 活化物體(小型)|phb|小型}",
 							"25",
 							"16",
-							"{@hit +6} to hit, {@damage 1d8 + 2} damage",
+							"命中{@hit +6}，{@damage 1d8 + 2}傷害",
 							"{@dice 1d20+6|6}",
 							"{@dice 1d20+14|14}"
 						],
 						[
-							"{@creature animated object (medium)|phb|Medium}",
+							"{@creature 活化物體(中型)|phb|中型}",
 							"40",
 							"13",
-							"{@hit +5} to hit, {@damage 2d6 + 1} damage",
+							"命中{@hit +5}，{@damage 2d6 + 1}傷害",
 							"{@dice 1d20+10|10}",
 							"{@dice 1d20+12|12}"
 						],
 						[
-							"{@creature animated object (large)|phb|Large}",
+							"{@creature 活化物體(大型)|phb|大型}",
 							"50",
 							"10",
-							"{@hit +6} to hit, {@damage 2d10 + 2} damage",
+							"命中{@hit +6}，{@damage 2d10 + 2}傷害",
 							"{@dice 1d20+14|14}",
 							"{@dice 1d20+10|10}"
 						],
 						[
-							"{@creature animated object (huge)|phb|Huge}",
+							"{@creature 活化物體(巨型)|phb|巨型}",
 							"80",
 							"10",
-							"{@hit +8} to hit, {@damage 2d12 + 4} damage",
+							"命中{@hit +8}，{@damage 2d12 + 4}傷害",
 							"{@dice 1d20+18|18}",
 							"{@dice 1d20+6|6}"
 						]
 					]
 				},
-				"An animated object is a construct with AC, hit points, attacks, Strength, and Dexterity determined by its size. Its Constitution is 10 and its Intelligence and Wisdom are 3, and its Charisma is 1. Its speed is 30 feet; if the object lacks legs or other appendages it can use for locomotion, it instead has a flying speed of 30 feet and can hover. If the object is securely attached to a surface or a larger object, such as a chain bolted to a wall, its speed is 0. It has blindsight with a radius of 30 feet and is blind beyond that distance. When the animated object drops to 0 hit points, it reverts to its original object form, and any remaining damage carries over to its original object form.",
-				"If you command an object to attack, it can make a single melee attack against a creature within 5 feet of it. It makes a slam attack with an attack bonus and bludgeoning damage determined by its size. The DM might rule that a specific object inflicts slashing or piercing damage based on its form."
+				"一個活化物體是一個構裝體，且它的AC、生命值、攻擊、力量、和防禦根據它的體型決定。它的體質為10，智力和睿知為3，魅力為1。它的移動速度為30呎；若這個物體沒有腳或其他可用來移動的構造，則它將改為具有30呎的飛行速度並且可以浮空。若這個物體被牢牢固定再某個表面或更大的物體上，例如一條被栓在牆上的鎖鏈，則它的移動速度為0呎。它具有30呎半徑的盲視，且對超過這個範圍的情況視作目盲。當這個活化物體的生命值歸零，它將回復它原本的物體型態，且剩餘的傷害將被帶到它原本的型態。",
+				"若你命令活化物體進行攻擊，則它將對一個距離它5呎內的生物進行一次近戰攻擊。它將進行一次猛擊攻擊，根據它的體型決定它的攻擊加值和鈍擊傷害。根據物體的型態，DM可能會裁定某個特定物體的猛擊攻擊將造成劈砍或穿刺傷害。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"If you cast this spell using a spell slot of 6th level or higher, you can animate two additional objects for each slot level above 5th."
+						"當你使用6環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，你就可以再額外活化二個物體。"
 					]
 				}
 			],
@@ -6339,7 +6339,7 @@
 			]
 		},
 		{
-			"name": "Control Weather",
+			"name": "操控天氣", "ENG_name": "Control Weather",
 			"level": 8,
 			"school": "T",
 			"time": [
@@ -6358,7 +6358,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "burning incense and bits of earth and wood mixed in water"
+				"m": "點燃的熏香和少許混合在水中的泥土和木頭"
 			},
 			"duration": [
 				{
@@ -6388,15 +6388,15 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You take control of the weather within 5 miles of you for the duration. You must be outdoors to cast this spell. Moving to a place where you don't have a clear path to the sky ends the spell early.",
-				"When you cast the spell, you change the current weather conditions, which are determined by the DM based on the climate and season. You can change precipitation, temperature, and wind. It takes {@dice 1d4 × 10} minutes for the new conditions to take effect. Once they do so, you can change the conditions again. When the spell ends, the weather gradually returns to normal.",
-				"When you change the weather conditions, find a current condition on the following tables and change its stage by one, up or down. When changing the wind, you can change its direction.",
+				"你在法術持續期間掌控距離你5哩內的天氣。你必須在戶外以施放此法術。移動到一處你無法直接看到天空的地方將會使此法術提早結束。",
+				"當你施放此法術時，你改變原本由DM基於氣候和季節決定的當下天氣狀況。你可以改變它的降雨量、溫度、和風速。新的天氣狀況需要花費{@dice 1d4 × 10}分鐘以發揮效果。一旦天氣完成改變，你將可以再次改變天氣狀況。當此法術結束，天氣將逐漸回復原狀。",
+				"當你改變天氣狀況時，從以下列表中尋找當下的狀況，並向上或向下改變它的階段一級。當改變風速時，你也可以改變其風向。",
 				{
 					"type": "table",
-					"caption": "Precipitation",
+					"caption": "降雨量",
 					"colLabels": [
-						"Stage",
-						"Condition"
+						"階段",
+						"狀況"
 					],
 					"colStyles": [
 						"col-1 text-align-center",
@@ -6405,32 +6405,32 @@
 					"rows": [
 						[
 							"1",
-							"Clear"
+							"晴天"
 						],
 						[
 							"2",
-							"Light clouds"
+							"薄雲"
 						],
 						[
 							"3",
-							"Overcast or ground fog"
+							"多雲、或低霧"
 						],
 						[
 							"4",
-							"Rain, hail, or snow"
+							"降雨、冰雹、或降雪"
 						],
 						[
 							"5",
-							"Torrential rain, driving hail, or blizzard"
+							"豪雨、劇烈冰雹、或暴雪"
 						]
 					]
 				},
 				{
 					"type": "table",
-					"caption": "Temperature",
+					"caption": "溫度",
 					"colLabels": [
-						"Stage",
-						"Condition"
+						"階段",
+						"狀況"
 					],
 					"colStyles": [
 						"col-1 text-align-center",
@@ -6439,36 +6439,36 @@
 					"rows": [
 						[
 							"1",
-							"Unbearable heat"
+							"酷熱"
 						],
 						[
 							"2",
-							"Hot"
+							"炎熱"
 						],
 						[
 							"3",
-							"Warm"
+							"溫暖"
 						],
 						[
 							"4",
-							"Cool"
+							"涼爽"
 						],
 						[
 							"5",
-							"Cold"
+							"寒冷"
 						],
 						[
 							"6",
-							"Arctic cold"
+							"極寒"
 						]
 					]
 				},
 				{
 					"type": "table",
-					"caption": "Wind",
+					"caption": "風速",
 					"colLabels": [
-						"Stage",
-						"Condition"
+						"階段",
+						"狀況"
 					],
 					"colStyles": [
 						"col-1 text-align-center",
@@ -6477,23 +6477,23 @@
 					"rows": [
 						[
 							"1",
-							"Calm"
+							"無風"
 						],
 						[
 							"2",
-							"Moderate wind"
+							"和風"
 						],
 						[
 							"3",
-							"Strong wind"
+							"強風"
 						],
 						[
 							"4",
-							"Gale"
+							"狂風"
 						],
 						[
 							"5",
-							"Storm"
+							"暴風"
 						]
 					]
 				}
@@ -27099,7 +27099,7 @@
 			]
 		},
 		{
-			"name": "Telekinesis",
+			"name": "心靈遙控", "ENG_name": "Telekinesis",
 			"level": 5,
 			"school": "T",
 			"time": [
@@ -27155,24 +27155,24 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You gain the ability to move or manipulate creatures or objects by thought. When you cast the spell, and as your action each round for the duration, you can exert your will on one creature or object that you can see within range, causing the appropriate effect below. You can affect the same target round after round, or choose a new one at any time. If you switch targets, the prior target is no longer affected by the spell.",
+				"你獲得透過意念移動或操縱生物或物體的能力。當你施放此法術時，且在持續期間內每個你的回合以一個動作，你可以對射程內你所能看見的一個生物或物體運用你的意念，造成以下相應的效果。你可以在每一輪影響相同的目標，或在任何時候選擇一個新的目標。若你切換目標，則前一個目標將不再受到此法術影響。",
 				{
 					"type": "entries",
-					"name": "Creature",
+					"name": "生物",
 					"entries": [
-						"You can try to move a Huge or smaller creature. Make an ability check with your spellcasting ability contested by the creature's Strength check. If you win the contest, you move the creature up to 30 feet in any direction, including upward but not beyond the range of this spell. Until the end of your next turn, the creature is {@condition restrained} in your telekinetic grip. A creature lifted upward is suspended in mid-air."
+						"你可以嘗試移動一個體型為巨型或更小的生物。使用你的施法屬性進行一次屬性檢定以對抗該生物的力量檢定。若你在此對抗中勝出，則你可以將該生物向任意方向（包括向上）移動最多30呎，但不能移動超出此法術的射程範圍。直到你的下個回合結束前，該生物將被你的心靈抓握給{@condition 束縛}。一個被向上抬起的生物將被懸吊在半空中。"
 					]
 				},
-				"On subsequent rounds, you can use your action to attempt to maintain your telekinetic grip on the creature by repeating the contest.",
+				"在隨後的回合中，你可以使用你的動作藉由重複該對抗以嘗試維持你的心靈抓握。",
 				{
 					"type": "entries",
-					"name": "Object",
+					"name": "物體",
 					"entries": [
-						"You can try to move an object that weighs up to 1,000 pounds. If the object isn't being worn or carried, you automatically move it up to 30 feet in any direction, but not beyond the range of this spell."
+						"你可以嘗試移動一個重量最多1,000磅的物體。若該物體沒有被穿戴或攜帶，則你可以自動將它向任意方向移動最多30呎，但不能移動超出此法術的射程範圍。"
 					]
 				},
-				"If the object is worn or carried by a creature, you must make an ability check with your spellcasting ability contested by that creature's Strength check. If you succeed, you pull the object away from that creature and can move it up to 30 feet in any direction but not beyond the range of this spell.",
-				"You can exert fine control on objects with your telekinetic grip, such as manipulating a simple tool, opening a door or a container, stowing or retrieving an item from an open container, or pouring the contents from a vial."
+				"若該物體被某個生物穿戴或攜帶，則你必須使用你的施法屬性進行一次屬性檢定以對抗該生物的力量檢定。若你成功，則你將把該物體從該生物身上拖走，並將它向任意方向移動最多30呎，但不能移動超出此法術的射程範圍。",
+				"你可以運用你的心靈抓握進行精密的操作，像是操作一件簡單的工具、打開一扇門或一個容器、把一個物品放入或拿出一個打開的容器、或倒出小瓶中的內容物。"
 			],
 			"page": 280,
 			"conditionInflict": [

@@ -6814,7 +6814,7 @@
 			]
 		},
 		{
-			"name": "Blink Dog",
+			"name": "閃現犬", "ENG_name": "Blink Dog",
 			"size": "M",
 			"type": "fey",
 			"source": "MM",
@@ -6843,13 +6843,13 @@
 				"stealth": "+5"
 			},
 			"passive": 10,
-			"languages": "Blink Dog, understands Sylvan but can't speak it",
+			"languages": "閃現犬理解木族語，但不會說",
 			"cr": "1/4",
 			"trait": [
 				{
 					"name": "敏銳聽覺和嗅覺",
 					"entries": [
-						"The dog在依賴聽覺和嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
+						"閃現犬在依賴聽覺和嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				}
 			],
@@ -6861,9 +6861,9 @@
 					]
 				},
 				{
-					"name": "Teleport {@recharge 4}",
+					"name": "傳送 {@recharge 4}",
 					"entries": [
-						"The dog magically teleports, along with any equipment it is wearing or carrying, up to 40 ft. to an unoccupied space it can see. Before or after teleporting, the dog can make one bite attack."
+						"閃現犬用魔法將自己連同任何它所穿戴或攜帶的裝備一起傳送到最多40呎外一處它所能看見的未被佔據空間。閃現犬可以在傳送之前或之後進行一次啃咬攻擊。"
 					]
 				}
 			],
@@ -9436,11 +9436,11 @@
 							"{@spell 羽落術}",
 							"{@spell 飛行術}",
 							"{@spell 迷蹤步}",
-							"{@spell telekinesis}"
+							"{@spell 心靈遙控}"
 						],
 						"1e": [
-							"{@spell control weather}",
-							"{@spell gaseous form}"
+							"{@spell 操控天氣}",
+							"{@spell 氣化形體}"
 						]
 					},
 					"ability": "cha"
@@ -31586,7 +31586,7 @@
 			]
 		},
 		{
-			"name": "Pixie",
+			"name": "皮克精", "ENG_name": "Pixie",
 			"size": "T",
 			"type": "fey",
 			"source": "MM",
@@ -31616,46 +31616,46 @@
 				"stealth": "+7"
 			},
 			"passive": 14,
-			"languages": "Sylvan",
+			"languages": "木族語",
 			"cr": "1/4",
 			"trait": [
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The pixie 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"皮克精在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Superior Invisibility",
+					"name": "強效隱形",
 					"entries": [
-						"The pixie magically turns {@condition invisible} until its concentration ends (as if concentrating on a spell). Any equipment the pixie wears or carries is invisible with it."
+						"皮克精用魔法使自己{@condition 隱形}，直到它的專注被打斷（如同專注於法術）。任何皮克精穿戴或攜帶的裝備都會隨著它隱形。"
 					]
 				}
 			],
 			"page": 253,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting",
+					"name": "天生施法",
 					"headerEntries": [
-						"The pixie's innate spellcasting ability is Charisma (spell save DC 12). It can innately cast the following spells, requiring only its pixie dust as a component:"
+						"皮克精的天生施法屬性為魅力（法術豁免DC 12）。它天生就可以施展以下法術，且只需要它的妖精塵做為材料構材："
 					],
 					"will": [
-						"{@spell druidcraft}"
+						"{@spell 德魯伊伎倆}"
 					],
 					"daily": {
 						"1e": [
-							"{@spell confusion}",
-							"{@spell dancing lights}",
-							"{@spell detect evil and good}",
-							"{@spell detect thoughts}",
-							"{@spell dispel magic}",
-							"{@spell entangle}",
-							"{@spell fly}",
-							"{@spell phantasmal force}",
-							"{@spell polymorph}",
-							"{@spell sleep}"
+							"{@spell 困惑術}",
+							"{@spell 舞光術}",
+							"{@spell 偵測善惡}",
+							"{@spell 偵測思想}",
+							"{@spell 解除魔法}",
+							"{@spell 糾纏術}",
+							"{@spell 飛行術}",
+							"{@spell 魅影之力}",
+							"{@spell 變形術}",
+							"{@spell 睡眠術}"
 						]
 					},
 					"ability": "cha"
@@ -31792,7 +31792,7 @@
 						],
 						"1e": [
 							"{@spell commune}",
-							"{@spell control weather}",
+							"{@spell 操控天氣}",
 							"{@spell insect plague}"
 						]
 					},
@@ -36212,7 +36212,7 @@
 						],
 						"1e": [
 							"{@spell commune}",
-							"{@spell control weather}"
+							"{@spell 操控天氣}"
 						]
 					},
 					"ability": "cha"
@@ -37428,7 +37428,7 @@
 					],
 					"daily": {
 						"3e": [
-							"{@spell control weather}",
+							"{@spell 操控天氣}",
 							"{@spell 水下呼吸}"
 						]
 					},
