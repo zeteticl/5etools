@@ -315,6 +315,7 @@ const traitFilter = new Filter({
 			case "Flyby": return "飛掠";
 			case "Hold Breath": return "屏息";
 			case "Illumination": return "照明";
+			case "Incorporeal Movement": return "虛體移動";
 			case "Keen Senses": return "敏銳感官";
 			case "Legendary Resistances": return "傳奇抗性";
 			case "Light Sensitivity": return "光線敏感";
@@ -322,6 +323,7 @@ const traitFilter = new Filter({
 			case "Magic Weapons": return "魔法武器";
 			case "Pack Tactics": return "群體戰術";
 			case "Pounce": return "猛撲";
+			case "Reckless": return "魯莽";
 			case "Rampage": return "橫衝直撞";
 			case "Shapechanger": return "變形者";
 			case "Spider Climb": return "蛛行";

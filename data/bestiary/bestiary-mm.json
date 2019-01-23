@@ -5826,7 +5826,7 @@
 			]
 		},
 		{
-			"name": "Barlgura",
+			"name": "巴古拉魔", "ENG_name": "Barlgura",
 			"size": "L",
 			"type": {
 				"type": "fiend",
@@ -5882,19 +5882,19 @@
 			],
 			"senses": "盲視30呎, 黑暗視覺120呎",
 			"passive": 15,
-			"languages": "Abyssal, telepathy 120 ft.",
+			"languages": "深淵語、心靈感應120呎",
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Reckless",
+					"name": "魯莽",
 					"entries": [
-						"At the start of its turn, the barlgura can gain advantage on all melee weapon attack rolls it makes during that turn, but attack rolls against it have advantage until the start of its next turn."
+						"在它的回合開始時，巴古拉魔可以讓它在該回合間進行的所有近戰武器攻擊具有優勢，但直到它的下個回合開始前，對它進行的所有攻擊檢定也都具有優勢。"
 					]
 				},
 				{
-					"name": "Running Leap",
+					"name": "助跑跳躍",
 					"entries": [
-						"The barlgura's long jump is up to 40 feet and its high jump is up to 20 feet when it has a running start."
+						"巴古拉魔在助跑後可以跳遠最多40呎距離，且跳高最多20呎距離。"
 					]
 				}
 			],
@@ -5902,17 +5902,17 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The barlgura makes three attacks: one with its bite and two with its fists."
+						"巴古拉魔進行三次攻擊：一次啃咬，二次拳擊。"
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}11 ({@damage 2d6 + 4})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Fist",
+					"name": "拳擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}9 ({@damage 1d10 + 4})鈍擊傷害。"
 					]
@@ -5921,18 +5921,18 @@
 			"page": 56,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting",
+					"name": "天生施法",
 					"headerEntries": [
-						"The barlgura's spellcasting ability is Wisdom (spell save DC 13). The barlgura can innately cast the following spells, requiring no material components:"
+						"巴古拉魔的天生施法屬性為睿知（法術豁免DC 13）。巴古拉魔天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"daily": {
 						"1e": [
-							"{@spell entangle}",
-							"{@spell phantasmal force}"
+							"{@spell 糾纏術}",
+							"{@spell 魅影之力}"
 						],
 						"2e": [
-							"{@spell disguise self}",
-							"{@spell invisibility} (self only)"
+							"{@spell 易容術}",
+							"{@spell 隱形術} (限定自身)"
 						]
 					},
 					"ability": "wis"
@@ -5941,11 +5941,11 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Summon Demon (1/Day)",
+					"name": "召喚惡魔 (1/日)",
 					"entries": [
-						"The demon chooses what to summon and attempts a magical summoning.",
-						"A barlgura has a {@chance 30|30 percent|30% summoning chance} chance of summoning one barlgura.",
-						"A summoned demon appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. It remains for 1 minute, until it or its summoner dies, or until its summoner dismisses it as an action."
+						"該惡魔選擇要召喚什麼，並嘗試進行一次魔法召喚。",
+						"一個巴古拉魔有{@chance 30|30％|30％召喚機率}機率召喚出另一個巴古拉魔。",
+						"被召喚的惡魔將出現距離它召喚者60呎內的一處未被佔據空間，做為召喚者的盟友行動，且不能再召喚其它惡魔。它會持續存在1分鐘，直到它或它的召喚者死亡、或直到召喚者以一個動作解消它。"
 					]
 				}
 			],
@@ -9424,7 +9424,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"巨人的天生施法屬性為魅力。它生來就可以施展以下法術，且無需任何材料構材："
+						"巨人的天生施法屬性為魅力。它天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 偵測魔法}",
@@ -35359,7 +35359,7 @@
 			]
 		},
 		{
-			"name": "Shadow Demon",
+			"name": "影魔", "ENG_name": "Shadow Demon",
 			"size": "M",
 			"type": {
 				"type": "fiend",
@@ -35407,7 +35407,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"vulnerable": [
@@ -35429,33 +35429,33 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 11,
-			"languages": "Abyssal, telepathy 120 ft.",
+			"languages": "深淵語、心靈感應120呎",
 			"cr": "4",
 			"trait": [
 				{
-					"name": "Incorporeal Movement",
+					"name": "虛體移動",
 					"entries": [
-						"The demon can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
+						"影魔可以把其它生物和物體視作困難地形移動穿過它們。若它在一個物體內結束它的回合，則它將受到5 ({@damage 1d10})力場傷害。"
 					]
 				},
 				{
-					"name": "Light Sensitivity",
+					"name": "光線敏感",
 					"entries": [
-						"While in bright light, the demon has disadvantage on attack rolls, as well as on Wisdom ({@skill Perception}) checks that rely on sight."
+						"當處於明亮光照環境時，影魔在攻擊檢定、以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
 					]
 				},
 				{
-					"name": "Shadow Stealth",
+					"name": "暗影潛匿",
 					"entries": [
-						"While in dim light or darkness, the demon can take the Hide action as a bonus action."
+						"當處於微光光照或黑暗環境時，影魔能夠以一次附贈動作採取{@action 躲藏}動作。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Claws",
+					"name": "爪抓",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。 {@h}10 ({@damage 2d6 + 3}) psychic damage or, if the demon had advantage on the attack roll, 17 ({@damage 4d6 + 3}) psychic damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。 {@h}10 ({@damage 2d6 + 3})精神傷害，或者，若影魔在此攻擊檢定中具有優勢則為17 ({@damage 4d6 + 3})精神傷害。"
 					]
 				}
 			],
@@ -37418,7 +37418,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"巨人的天生施法屬性為魅力（法術豁免DC 17）。它生來就可以施展以下法術，且無需任何材料構材："
+						"巨人的天生施法屬性為魅力（法術豁免DC 17）。它天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 偵測魔法}",

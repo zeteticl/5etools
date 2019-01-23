@@ -2027,7 +2027,7 @@
 			"page": 155
 		},
 		{
-			"name": "Find Greater Steed",
+			"name": "尋獲高等坐騎", "ENG_name": "Find Greater Steed",
 			"source": "XGE",
 			"level": 4,
 			"school": "C",
@@ -2062,11 +2062,11 @@
 				]
 			},
 			"entries": [
-				"You summon a spirit that assumes the form of a loyal, majestic mount. Appearing in an unoccupied space within range, the spirit takes on a form you choose: a {@creature griffon}, a {@creature pegasus}, a {@creature peryton}, a {@creature dire wolf}, a {@creature rhinoceros}, or a {@creature saber-toothed tiger}. The creature has the statistics provided in the Monster Manual for the chosen form, though it is a celestial, a fey, or a fiend (your choice) instead of its normal creature type. Additionally, if it has an Intelligence score of 5 or lower, its Intelligence becomes 6, and it gains the ability to understand one language of your choice that you speak.",
-				"You control the mount in combat. While the mount is within 1 mile of you, you can communicate with it telepathically. While mounted on it, you can make any spell you cast that targets only you also target the mount.",
-				"The mount disappears temporarily when it drops to 0 hit points or when you dismiss it as an action. Casting this spell again re-summons the bonded mount, with all its hit points restored and any conditions removed.",
-				"You can't have more than one mount bonded by this spell or find steed at the same time. As an action, you can release a mount from its bond, causing it to disappear permanently.",
-				"Whenever the mount disappears, it leaves behind any objects it was wearing or carrying."
+				"你召喚出一只呈現忠誠、雄偉坐騎型態的精魂。精魂將出現在射程內一處未被占據的空間，並呈現你所選擇的外型：一隻{@creature 獅鷲}、{@creature pegasus}、{@creature 佩利冬}、{@creature 恐狼}、{@creature 犀牛}、或{@creature 劍齒虎}。該生物具有所選型態在怪物手冊中記載的數據資料，然而它的類型為天界生物、精類、或邪魔（由你選擇），而非原本的類型。此外，此外，若它的智力為5或更低，則它的智力將變為6，且獲得理解一種你所說語言的能力。",
+				"你在戰鬥中控制此坐騎。當此坐騎距離你1哩內，你可以與它藉由心靈感應溝通。當騎乘於此坐騎時，你可以讓你施放的任何只以你為目標的法術同時也以你的坐騎為目標。",
+				"此坐騎將在它的生命值歸零、或你以一個動作解消它時暫時消失。再次施放此法術會重新召喚出這隻被連結的坐騎，將它的生命值回復到最大值並移除所有狀態。",
+				"你不能同時擁有超過一隻透過此法術或{@spell 尋獲坐騎}法術連結的坐騎。以一個動作，你可以將該坐騎從它與你的連結中釋放，使它永久消失。",
+				"每當坐騎消失，它將留下任何它正穿戴或攜帶的物體。"
 			],
 			"page": 156,
 			"permanentEffects": true
@@ -4983,7 +4983,7 @@
 			]
 		},
 		{
-			"name": "Summon Greater Demon",
+			"name": "召喚高等惡魔", "ENG_name": "Summon Greater Demon",
 			"source": "XGE",
 			"level": 4,
 			"school": "C",
@@ -5003,7 +5003,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a vial of blood from a humanoid killed within the past 24 hours"
+				"m": "一小瓶來自在最近24小時內被殺死的類人生物的鮮血"
 			},
 			"duration": [
 				{
@@ -5028,10 +5028,10 @@
 				]
 			},
 			"entries": [
-				"You utter foul words, summoning one demon from the chaos of the Abyss. You choose the demon's type, which must be {@filter one of challenge rating 5 or lower|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4;5|tag=demon|miscellaneous=!swarm}, such as a {@creature shadow demon} or a {@creature barlgura}. The demon appears in an unoccupied space you can see within range, and the demon disappears when it drops to 0 hit points or when the spell ends.",
-				"Roll initiative for the demon, which has its own turns. When you summon it and on each of your turns thereafter, you can issue a verbal command to it (requiring no action on your part), telling it what it must do on its next turn. If you issue no command, it spends its turn attacking any creature within reach that has attacked it.",
-				"At the end of each of the demon's turns, it makes a Charisma saving throw. The demon has disadvantage on this saving throw if you say its true name. On a failed save, the demon continues to obey you. On a successful save, your control of the demon ends for the rest of the duration, and the demon spends its turns pursuing and attacking the nearest non-demons to the best of its ability. If you stop concentrating on the spell before it reaches its full duration, an uncontrolled demon doesn't disappear for {@dice 1d6} rounds if it still has hit points.",
-				"As part of casting the spell, you can form a circle on the ground with the blood used as a material component. The circle is large enough to encompass your space. While the spell lasts, the summoned demon can't cross the circle or harm it, and it can't target anyone within it. Using the material component in this manner consumes it when the spell ends."
+				"你說出汙濁的詞語，從無底深淵的混沌中將一隻惡魔召喚而出。你選擇一個惡魔的種類，且它必須是一種{@filter 挑戰等級5或以下的惡魔|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4;5|tag=demon|miscellaneous=!swarm}，像是{@creature 影魔}或{@creature 巴古拉魔}。該惡魔會出現在射程內你所能看見的一處未被佔據空間，且該惡魔會在它生命值歸零或此法術結束時消失。",
+				"為該惡魔骰先攻，且它擁有自己的回合。當你召喚它時以及之後每個你的回合，你可以交代它一個口頭指令（你不需要花費動作），告訴它在它的下個回合該做什麼。若你沒有交代任何指令，則它將花費它的回合攻擊任何處於它觸及範圍內，且曾攻擊過它的生物。",
+				"在該惡魔的每個回合結束時，它將進行一次魅力豁免。若你說出它的真名，則該惡魔將在此豁免檢定中具有劣勢。若豁免失敗，該惡魔將繼續服從於你。若豁免成功，則你在法術剩餘的持續時間內失去對該惡魔的控制，且該惡魔會花費它的回合盡其所能的追逐並攻擊距離它們最近的非惡魔生物。若你在此法術到達它的完整持續時間之前中斷對此法術的專注，一個失去控制的惡魔若仍擁有生命值，則它不會在{@dice 1d6}輪內消失。",
+				"做為施放此法術的一部份，你可以使用被用於材料構材的鮮血在地面上繪製一個圓環。這個圓環的大小足夠環繞你所在的空間。在此法術持續期間，被召喚的惡魔將無法跨越或傷害這個圓環，且它將無法以任何在內部的人做為目標。以這個方式使用材料構材會使它在此法術結束時被消耗。"
 			],
 			"entriesHigherLevel": [
 				{
@@ -5068,7 +5068,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "一小瓶來自過去24小時內被殺死的類人生物的鮮血"
+				"m": "一小瓶來自在最近24小時內被殺死的類人生物的鮮血"
 			},
 			"duration": [
 				{
@@ -5137,9 +5137,9 @@
 						]
 					]
 				},
-				"DM將選擇惡魔的種類，像是{@creature 原魔}或{@creature 怯魔}，然後你選擇讓它們出現在射程內你未被占據的可見空間。一個被召喚惡魔會在它生命值歸零或此法術結束時消失。",
+				"DM將選擇惡魔的種類，像是{@creature 原魔}或{@creature 怯魔}，然後你選擇讓它們出現在射程內你所能看見的未被佔據空間。一個被召喚惡魔會在它生命值歸零或此法術結束時消失。",
 				"這些惡魔會對所有的生物抱持敵意，包括你。這些惡魔在骰先攻時作為一組擲骰，但有著各自的回合。這些惡魔會盡其所能的追逐並攻擊任何距離它們最近的非惡魔生物。",
-				"做為施放此法術的一部份，你可以使用被用於材料構材的鮮血在地面上繪製一個圓環。這個圓環的大小足夠環繞你所在的空間。在此法術持續期間，被召喚惡魔將無法跨越或傷害這個圓環，且它們將無法以任何在內部的人做為目標。以這個方式使用材料構材會使它在此法術結束時被消耗。"
+				"做為施放此法術的一部份，你可以使用被用於材料構材的鮮血在地面上繪製一個圓環。這個圓環的大小足夠環繞你所在的空間。在此法術持續期間，被召喚的惡魔將無法跨越或傷害這個圓環，且它們將無法以任何在內部的人做為目標。以這個方式使用材料構材會使它在此法術結束時被消耗。"
 			],
 			"entriesHigherLevel": [
 				{
