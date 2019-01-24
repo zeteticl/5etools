@@ -1722,7 +1722,7 @@
 			"isHeal": true
 		},
 		{
-			"name": "Awaken",
+			"name": "啟蒙術", "ENG_name": "Awaken",
 			"level": 5,
 			"school": "T",
 			"time": [
@@ -1741,7 +1741,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "an agate worth at least 1,000 gp, which the spell consumes",
+					"text": "一個價值至少1,000金幣的瑪瑙，在施法時消耗",
 					"cost": 1000,
 					"consume": true
 				}
@@ -1765,8 +1765,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"After spending the casting time tracing magical pathways within a precious gemstone, you touch a Huge or smaller beast or plant. The target must have either no Intelligence score or an Intelligence of 3 or less. The target gains an Intelligence of 10. The target also gains the ability to speak one language you know. If the target is a plant, it gains the ability to move its limbs, roots, vines, creepers, and so forth, and it gains senses similar to a human's. Your DM chooses statistics appropriate for the awakened plant, such as the statistics for the awakened shrub or the awakened tree.",
-				"The awakened beast or plant is {@condition charmed} by you for 30 days or until you or your companions do anything harmful to it. When the {@condition charmed} condition ends, the awakened creature chooses whether to remain friendly to you, based on how you treated it while it was {@condition charmed}."
+				"在施法過程中花費時間描摹昂貴寶石內部的魔法脈絡之後，你觸碰一個體型為巨型或更小的野獸或植物。目標必須沒有智力屬性，或智力值為3或更低。目標的智力值將變為10。目標也學會說一種你所知曉語言的能力。若目標為一株植物，則它將獲得移動它枝體、根、藤、蔓等部位的能力，並獲得類似於人類的感官。你的DM將為這株啟蒙植物選擇適合的遊戲數據，像是做為{@creature 啟蒙灌木}或{@creature 啟蒙樹木}。",
+				"這個啟蒙野獸或植物將被你{@condition 魅惑}長達30天，或直到你或你的同伴做出任何危害它的行動。當{@condition 魅惑}狀態結束，這個啟蒙生物會根據你在它被{@condition 魅惑}時對待它的方式，決定是否對你保持友善。"
 			],
 			"page": 216,
 			"permanentEffects": true,
@@ -7982,7 +7982,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"你重擊地面，創造出一波從你身上向外迸發的神聖能量。每個距離你30呎內你所選擇的生物都必須成功通過一次體質豁免，否則受到{@dice 5d6}雷鳴傷害，以及{@dice 5d6}光耀或死靈傷害（由你選擇），且被擊倒{@condition 伏地}。豁免成功的生物只受到一半的傷害，且不會被擊倒{@condition 伏地}。"
+				"你重擊地面，創造出一波從你身上向外迸發的神性能量。每個距離你30呎內你所選擇的生物都必須成功通過一次體質豁免，否則受到{@dice 5d6}雷鳴傷害，以及{@dice 5d6}光耀或死靈傷害（由你選擇），且被擊倒{@condition 伏地}。豁免成功的生物只受到一半的傷害，且不會被擊倒{@condition 伏地}。"
 			],
 			"page": 231,
 			"damageInflict": [
@@ -12000,7 +12000,7 @@
 			]
 		},
 		{
-			"name": "Flame Strike",
+			"name": "焰擊術", "ENG_name": "Flame Strike",
 			"level": 5,
 			"school": "V",
 			"time": [
@@ -12019,7 +12019,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "pinch of sulfur"
+				"m": "一撮硫磺"
 			},
 			"duration": [
 				{
@@ -12118,14 +12118,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A vertical column of divine fire roars down from the heavens in a location you specify. Each creature in a 10-foot-radius, 40-foot-high cylinder centered on a point within range must make a Dexterity saving throw. A creature takes {@dice 4d6} fire damage and {@dice 4d6} radiant damage on a failed save, or half as much damage on a successful one."
+				"一道垂直柱狀的神性火焰從天堂呼嘯落至一處你所指定的地點。每個在射程內一點為中心的10呎半徑，40呎高的柱狀範圍內的生物都必須進行一次敏捷豁免。一個豁免失敗的目標將受到{@dice 4d6}火焰傷害和{@dice 4d6}光耀傷害，豁免成功則只受到一半的傷害。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 6th level or higher, the fire damage or the radiant damage (your choice) increases by {@scaledice 4d6|5-9|1d6} for each slot level above 5th."
+						"當你使用6環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，火焰傷害或光耀傷害（由你選擇）便會再增加{@scaledice 4d6|5-9|1d6}。"
 					]
 				}
 			],
@@ -13029,7 +13029,7 @@
 			"page": 244
 		},
 		{
-			"name": "Geas",
+			"name": "指使術", "ENG_name": "Geas",
 			"level": 5,
 			"school": "E",
 			"time": [
@@ -13095,16 +13095,16 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You place a magical command on a creature that you can see within range, forcing it to carry out some service or refrain from some action or course of activity as you decide. If the creature can understand you, it must succeed on a Wisdom saving throw or become {@condition charmed} by you for the duration. While the creature is {@condition charmed} by you, it takes {@dice 5d10} psychic damage each time it acts in a manner directly counter to your instructions, but no more than once each day. A creature that can't understand you is unaffected by the spell.",
-				"You can issue any command you choose, short of an activity that would result in certain death. Should you issue a suicidal command, the spell ends.",
-				"You can end the spell early by using an action to dismiss it. A remove curse, greater restoration, or wish spell also ends it."
+				"你對一個射程內你所能看見的生物下達一個魔法命令，依照你的決定強迫它實行某種服務、或是抑制某種動作或行動。若該生物可以理解你，則它必須成功通過一次睿知豁免，否則在法術持續期間被你{@condition 魅惑}，每當它以直接違背你指令的方式行動時，它將受到{@dice 5d10}精神傷害，但一天不會超過一次。無法理解你的生物不會受到此法術的影響。",
+				"你可以下達任何你選擇的命令，除了無疑會導致死亡的指令。一旦你下達了自殺命令，此法術結束。",
+				"你可以藉由使用一個動作去解消它以提早結束此法術。一個{@spell 移除詛咒}、{@spell 高等復原術}、或{@spell 祈願術}也可以結束此法術。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 7th or 8th level, the duration is 1 year. When you cast this spell using a spell slot of 9th level, the spell lasts until it is ended by one of the spells mentioned above."
+						"當你使用7環或8環法術位施放此法術時，此法術的持續時間為1年。當你使用9環法術位施放此法術時，此法術將持續直到它被上面提及的法術給結束。"
 					]
 				}
 			],
@@ -20573,7 +20573,7 @@
 			]
 		},
 		{
-			"name": "Passwall",
+			"name": "Passwall", "ENG_name": "Passwall",
 			"level": 5,
 			"school": "T",
 			"time": [
@@ -20592,7 +20592,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a pinch of sesame seeds"
+				"m": "一撮芝麻籽"
 			},
 			"duration": [
 				{
@@ -20646,8 +20646,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A passage appears at a point of your choice that you can see on a wooden, plaster, or stone surface (such as a wall, a ceiling, or a floor) within range, and lasts for the duration. You choose the opening's dimensions: up to 5 feet wide, 8 feet tall, and 20 feet deep. The passage creates no instability in a structure surrounding it.",
-				"When the opening disappears, any creatures or objects still in the passage created by the spell are safely ejected to an unoccupied space nearest to the surface on which you cast the spell."
+				"一個通道出現在射程內你所能看見的一道木質、石膏製、或石製表面（像是牆、天花板、或地板）上你所選擇的一點，且在法術持續期間持續存在。你決定這個開口的尺寸：最多5呎寬、8呎高、及20呎深。這個通道不會讓周遭結構因此不穩定。",
+				"當這個開口消失時，任何仍在此法術創造的通道裡的生物或物體將會被安全地排到距離你施法表面最近的一處未被佔據空間。"
 			],
 			"page": 264
 		},
@@ -28835,7 +28835,7 @@
 			]
 		},
 		{
-			"name": "Wall of Force",
+			"name": "力牆術", "ENG_name": "Wall of Force",
 			"level": 5,
 			"school": "V",
 			"time": [
@@ -28854,7 +28854,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a pinch of powder made by crushing a clear gemstone"
+				"m": "一撮碾碎純淨寶石所製成的粉塵"
 			},
 			"duration": [
 				{
@@ -28908,8 +28908,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"An invisible wall of force springs into existence at a point you choose within range. The wall appears in any orientation you choose, as a horizontal or vertical barrier or at an angle. It can be free floating or resting on a solid surface. You can form it into a hemispherical dome or a sphere with a radius of up to 10 feet, or you can shape a flat surface made up of ten 10-foot-by-10-foot panels. Each panel must be contiguous with another panel. In any form, the wall is 1/4 inch thick. It lasts for the duration. If the wall cuts through a creature's space when it appears, the creature is pushed to one side of the wall (your choice which side).",
-				"Nothing can physically pass through the wall. It is immune to all damage and can't be dispelled by {@spell dispel magic}. A {@spell disintegrate} spell destroys the wall instantly, however. The wall also extends into the Ethereal Plane, blocking ethereal travel through the wall."
+				"一道隱形的力場之牆在射程內你所選擇的一點突然出現。這道牆將呈現任何你所選擇的方向，例如做為一道水平或垂直的屏障、或是傾斜一定角度。它可以自由浮於空中、或佇立於固體表面上。你可以將它形塑成最多半徑10呎的半球體或球體，或形塑成一個最多由十個10呎x10呎板塊構成的平坦表面。每個板塊都必須與另一個板塊相連。這道牆在任何型態的厚度皆為1/4吋。它會在法術持續期間持續存在。若這道牆在出現時切穿了一個生物所在的空間，則該生物將被推到牆的其中一側（由你選擇哪一側）。",
+				"沒有任何事物可以物理性的穿過這道牆。它免疫所有傷害，且無法被{@spell 解除魔法}給解除。然而，{@spell 解離術}法術會立即地摧毀這道牆。這道牆會同時延伸至乙太位面，阻止乙太體穿過這道牆。"
 			],
 			"page": 285,
 			"damageImmune": [
@@ -28981,7 +28981,7 @@
 			]
 		},
 		{
-			"name": "Wall of Stone",
+			"name": "石牆術", "ENG_name": "Wall of Stone",
 			"level": 5,
 			"school": "V",
 			"time": [
@@ -29000,7 +29000,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a small block of granite"
+				"m": "一小塊花崗岩"
 			},
 			"duration": [
 				{
@@ -29054,12 +29054,12 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A nonmagical wall of solid stone springs into existence at a point you choose within range. The wall is 6 inches thick and is composed of ten 10-foot-by-10-foot panels. Each panel must be contiguous with at least one other panel. Alternatively, you can create 10-foot-by-20-foot panels that are only 3 inches thick.",
-				"If the wall cuts through a creature's space when it appears, the creature is pushed to one side of the wall (your choice). If a creature would be surrounded on all sides by the wall (or the wall and another solid surface), that creature can make a Dexterity saving throw. On a success, it can use its reaction to move up to its speed so that it is no longer enclosed by the wall.",
-				"The wall can have any shape you desire, though it can't occupy the same space as a creature or object. The wall doesn't need to be vertical or rest on any firm foundation. It must, however, merge with and be solidly supported by existing stone. Thus, you can use this spell to bridge a chasm or create a ramp.",
-				"If you create a span greater than 20 feet in length, you must halve the size of each panel to create supports. You can crudely shape the wall to create crenellations, battlements, and so on.",
-				"The wall is an object made of stone that can be damaged and thus breached. Each panel has AC 15 and 30 hit points per inch of thickness. Reducing a panel to 0 hit points destroys it and might cause connected panels to collapse at the DM's discretion.",
-				"If you maintain your concentration on this spell for its whole duration, the wall becomes permanent and can't be dispelled. Otherwise, the wall disappears when the spell ends."
+				"一道非魔法的堅石之牆在射程內你所選擇的一點突然出現。這道牆有6吋厚，且由十個10呎x10呎的板塊所構成。每個板塊都必須與另一個板塊相連。或者，你可以創造出厚度只有3吋的10呎x20呎的板塊。",
+				"若這道牆在出現時切穿了一個生物所在的空間，則該生物將被推到牆的其中一側（由你選擇哪一側）。若一個生物將會被這道牆（或是被這道牆跟另一個固體表面）全面環繞，則該生物可以進行一次敏捷豁免。若豁免成功，則它可以使用它的反應以移動最多等同它移動速度的距離，好讓它不會被這道牆給包圍。",
+				"這道牆可以是任何你想要的形狀，但它不能佔據其他生物或物體所在的空間。這道牆不需要是垂直的，也不需要立於任何穩固的地基。然而，它必須與既存且能牢固支撐它的石頭融合。因此你可以使用此法術以在峽谷之間造橋、或創造出斜坡。",
+				"若你創造出一道長度超過20呎的橋，則你必須將每個板塊的尺寸減半以製作支撐結構。你可以粗略地在牆上形塑出槍眼、城垛、或類似的構造。",
+				"這道牆是一個石製物體，可以被傷害並因此損壞。每個板塊都具有AC 15，每1吋厚度30點的生命值。將一個板塊的生命值歸零將會摧毀它，並在DM的裁斷下可能會導致相連的板塊隨之崩塌。",
+				"若你在此法術的完成持續時間內都維持著專注，則這道牆將變為永久造物且不會被解除。否則這道牆將在此法術結束時消失。"
 			],
 			"page": 287,
 			"savingThrow": [
@@ -29648,7 +29648,7 @@
 			]
 		},
 		{
-			"name": "Wish",
+			"name": "祈願術", "name": "Wish",
 			"level": 9,
 			"school": "C",
 			"time": [
