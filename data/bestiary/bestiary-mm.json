@@ -472,7 +472,7 @@
 			]
 		},
 		{
-			"name": "Acolyte",
+			"name": "侍僧", "ENG_name": "Acolyte",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -505,38 +505,38 @@
 				"religion": "+2"
 			},
 			"passive": 12,
-			"languages": "any one language (usually Common)",
+			"languages": "任意一種語言（通常為通用語）",
 			"cr": "1/4",
 			"action": [
 				{
-					"name": "Club",
+					"name": "棍棒",
 					"entries": [
 						"{@atk mw} 命中{@hit 2}，觸及5呎，單一目標。{@h}2 ({@damage 1d4})鈍擊傷害。"
 					]
 				}
 			],
-			"description": "Acolytes are junior members of the clergy, usually answerable to a priest. They perform a variety of functions in a temple and are granted minor spellcasting power by their deities.",
+			"description": "侍僧是神職者中的初級成員，通常從屬於一名祭司。他們負責神廟裡的各種工作，並被其侍奉的神祇賦予了微弱的施法能力。",
 			"page": 342,
 			"spellcasting": [
 				{
-					"name": "Spellcasting",
+					"name": "施法",
 					"headerEntries": [
-						"The acolyte is a 1st-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, {@hit 4} to hit with spell attacks). The acolyte has following cleric spells prepared:"
+						"侍僧是1級的施法者。它的施法屬性為睿知（法術豁免DC 12，法術攻擊命中{@hit 4}）。侍僧已準備了以下牧師法術："
 					],
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell light}",
-								"{@spell sacred flame}",
-								"{@spell thaumaturgy}"
+								"{@spell 光亮術}",
+								"{@spell 聖焰}",
+								"{@spell 奇術}"
 							]
 						},
 						"1": {
 							"slots": 3,
 							"spells": [
-								"{@spell bless}",
-								"{@spell cure wounds}",
-								"{@spell sanctuary}"
+								"{@spell 祝福術}",
+								"{@spell 治療傷勢}",
+								"{@spell 聖域術}"
 							]
 						}
 					},
@@ -4819,7 +4819,7 @@
 			]
 		},
 		{
-			"name": "Assassin",
+			"name": "刺客", "ENG_name": "Assassin",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -4839,7 +4839,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item 鑲釘皮甲|phb}"
 					]
 				}
 			],
@@ -4870,25 +4870,25 @@
 				"poison"
 			],
 			"passive": 13,
-			"languages": "Thieves' cant plus any two languages",
+			"languages": "竊賊黑話、和任意兩種語言",
 			"cr": "8",
 			"trait": [
 				{
-					"name": "Assassinate",
+					"name": "刺殺",
 					"entries": [
-						"During its first turn, the assassin has advantage on attack rolls against any creature that hasn't taken a turn. Any hit the assassin scores against a surprised creature is a critical hit."
+						"在它的第一個回合期間，刺客對任何尚未採取過回合的生物所進行的攻擊檢定具有優勢。且刺客任何命中被突襲生物的攻擊都視為暴擊。"
 					]
 				},
 				{
-					"name": "Evasion",
+					"name": "反射閃避",
 					"entries": [
-						"If the assassin is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the assassin instead takes no damage if it succeeds on the saving throw, and only half damage if it fails."
+						"若刺客成為一個允許它進行敏捷豁免以僅承受一半傷害的效果的目標，則刺客可以改為在豁免成功時不受任何傷害，且在豁免失敗時僅承受一半傷害。"
 					]
 				},
 				{
-					"name": "Sneak Attack (1/Turn)",
+					"name": "偷襲 (1/回合)",
 					"entries": [
-						"The assassin deals an extra 14 ({@dice 4d6}) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the assassin that isn't {@condition incapacitated} and the assassin doesn't have disadvantage on the attack roll."
+						"當刺客以武器攻擊命中一個目標時，若該攻擊檢定具有優勢，或者該攻擊檢定沒有劣勢且刺客有一個未{@condition 無力}的隊友距離目標5呎內，則刺客造成額外的14 ({@dice 4d6})傷害。"
 					]
 				}
 			],
@@ -4896,19 +4896,19 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The assassin makes two shortsword attacks."
+						"刺客進行二次短劍攻擊。"
 					]
 				},
 				{
-					"name": "Shortsword",
+					"name": "短劍",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3}) piercing damage, and the target must make a DC 15 Constitution saving throw, taking 24 ({@damage 7d6}) poison damage on a failed save, or half as much damage on a successful one."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})穿刺傷害，且目標必須進行一次DC 15的體質豁免，若豁免失敗則受到24 ({@damage 7d6})毒素傷害，豁免成功則只受到一半的傷害。"
 					]
 				},
 				{
-					"name": "Light Crossbow",
+					"name": "輕弩",
 					"entries": [
-						"{@atk rw} 命中{@hit 6}，射程80/320呎，單一目標。{@h}7 ({@damage 1d8 + 3}) piercing damage, and the target must make a DC 15 Constitution saving throw, taking 24 ({@damage 7d6}) poison damage on a failed save, or half as much damage on a successful one."
+						"{@atk rw} 命中{@hit 6}，射程80/320呎，單一目標。{@h}7 ({@damage 1d8 + 3})穿刺傷害，且目標必須進行一次DC 15的體質豁免，若豁免失敗則受到24 ({@damage 7d6})毒素傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
@@ -5102,7 +5102,7 @@
 					"ac": 17,
 					"from": [
 						"天生護甲",
-						"{@item shield|phb}"
+						"{@item 盾牌|phb}"
 					]
 				}
 			],
@@ -5426,7 +5426,7 @@
 			]
 		},
 		{
-			"name": "Bandit",
+			"name": "強盜", "ENG_name": "Bandit",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -5446,7 +5446,7 @@
 				{
 					"ac": 12,
 					"from": [
-						"{@item leather armor|phb}"
+						"{@item 皮甲phb}"
 					]
 				}
 			],
@@ -5464,17 +5464,17 @@
 			"wis": 10,
 			"cha": 10,
 			"passive": 10,
-			"languages": "any one language (usually Common)",
+			"languages": "任意一種語言（通常為通用語）",
 			"cr": "1/8",
 			"action": [
 				{
-					"name": "Scimitar",
+					"name": "彎刀",
 					"entries": [
 						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}4 ({@damage 1d6 + 1})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Light Crossbow",
+					"name": "輕弩",
 					"entries": [
 						"{@atk rw} 命中{@hit 3}，射程80/320呎，單一目標。{@h}5 ({@damage 1d8 + 1})穿刺傷害。"
 					]
@@ -5488,7 +5488,7 @@
 			]
 		},
 		{
-			"name": "Bandit Captain",
+			"name": "強盜首領", "ENG_name": "Bandit Captain",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -5508,7 +5508,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item 鑲釘皮甲|phb}"
 					]
 				}
 			],
@@ -5535,17 +5535,17 @@
 				"deception": "+4"
 			},
 			"passive": 10,
-			"languages": "any two languages",
+			"languages": "任意兩種語言",
 			"cr": "2",
 			"action": [
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The captain makes three melee attacks: two with its scimitar and one with its dagger. Or the captain makes two ranged attacks with its daggers."
+						"首領進行三次近戰攻擊：二次彎刀、一次匕首。或者首領使用匕首進行兩次遠程攻擊。"
 					]
 				},
 				{
-					"name": "Scimitar",
+					"name": "彎刀",
 					"entries": [
 						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})劈砍傷害。"
 					]
@@ -5553,15 +5553,15 @@
 				{
 					"name": "Dagger",
 					"entries": [
-						"{@atk mw,rw} {@hit 5} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}5 ({@damage 1d4 + 3})穿刺傷害。"
+						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或 射程20/60呎，單一目標。{@h}5 ({@damage 1d4 + 3})穿刺傷害。"
 					]
 				}
 			],
 			"reaction": [
 				{
-					"name": "Parry",
+					"name": "格擋",
 					"entries": [
-						"The captain adds 2 to its AC against one melee attack that would hit it. To do so, the captain must see the attacker and be wielding a melee weapon."
+						"首領在一次近戰攻擊將要命中它時針對該次攻擊使它的AC增加2點。若要這麼做，首領必須要能看見攻擊者且正持用一把近戰武器。"
 					]
 				}
 			],
@@ -5888,7 +5888,7 @@
 				{
 					"name": "魯莽",
 					"entries": [
-						"在它的回合開始時，巴古拉魔可以讓它在該回合間進行的所有近戰武器攻擊具有優勢，但直到它的下個回合開始前，對它進行的所有攻擊檢定也都具有優勢。"
+						"在它的回合開始時，巴古拉魔可以讓它在該回合間進行的所有近戰武器攻擊具有優勢，但直到它的下個回合開始前，所有對它進行的攻擊檢定也都具有優勢。"
 					]
 				},
 				{
@@ -6498,7 +6498,7 @@
 			]
 		},
 		{
-			"name": "Berserker",
+			"name": "狂戰士", "ENG_name": "Berserker",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -6517,7 +6517,7 @@
 				{
 					"ac": 13,
 					"from": [
-						"{@item hide armor|phb}"
+						"{@item 生皮甲|phb}"
 					]
 				}
 			],
@@ -6535,19 +6535,19 @@
 			"wis": 11,
 			"cha": 9,
 			"passive": 10,
-			"languages": "any one language (usually Common)",
+			"languages": "任意一種語言（通常為通用語）",
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Reckless",
+					"name": "魯莽",
 					"entries": [
-						"At the start of its turn, the berserker can gain advantage on all melee weapon attack rolls during that turn, but attack rolls against it have advantage until the start of its next turn."
+						"在它的回合開始時，狂戰士可以讓它在該回合間進行的所有近戰武器攻擊具有優勢，但直到它的下個回合開始前，所有對它進行的攻擊檢定也都具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Greataxe",
+					"name": "巨斧",
 					"entries": [
 						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}9 ({@damage 1d12 + 3})劈砍傷害。"
 					]
@@ -7821,8 +7821,8 @@
 				{
 					"ac": 16,
 					"from": [
-						"{@item hide armor|phb}",
-						"{@item shield|phb}"
+						"{@item 生皮甲|phb}",
+						"{@item 盾牌|phb}"
 					]
 				}
 			],
@@ -7912,7 +7912,7 @@
 					"ac": 17,
 					"from": [
 						"{@item chain shirt|phb}",
-						"{@item shield|phb}"
+						"{@item 盾牌|phb}"
 					]
 				}
 			],
@@ -8087,8 +8087,8 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item hide armor|phb}",
-						"{@item shield|phb}"
+						"{@item 生皮甲|phb}",
+						"{@item 盾牌|phb}"
 					]
 				}
 			],
@@ -9507,7 +9507,7 @@
 			]
 		},
 		{
-			"name": "Commoner",
+			"name": "平民", "ENG_name": "Commoner",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -9536,11 +9536,11 @@
 			"wis": 10,
 			"cha": 10,
 			"passive": 10,
-			"languages": "any one language (usually Common)",
+			"languages": "任意一種語言（通常為通用語）",
 			"cr": "0",
 			"action": [
 				{
-					"name": "Club",
+					"name": "棍棒",
 					"entries": [
 						"{@atk mw} 命中{@hit 2}，觸及5呎，單一目標。{@h}2 ({@damage 1d4})鈍擊傷害。"
 					]
@@ -10054,7 +10054,7 @@
 				{
 					"ac": 13,
 					"from": [
-						"{@item leather armor|phb}"
+						"{@item 皮甲|phb}"
 					]
 				}
 			],
@@ -10165,7 +10165,7 @@
 				{
 					"ac": 12,
 					"from": [
-						"{@item leather armor|phb}"
+						"{@item 皮甲|phb}"
 					]
 				}
 			],
@@ -10199,7 +10199,7 @@
 			],
 			"action": [
 				{
-					"name": "Scimitar",
+					"name": "彎刀",
 					"entries": [
 						"{@atk mw} 命中{@hit 3}，觸及5呎，單一生物。 {@h}4 ({@damage 1d6 + 1})劈砍傷害。"
 					]
@@ -10583,7 +10583,7 @@
 					"ac": 20,
 					"from": [
 						"{@item plate armor|phb}",
-						"{@item shield|phb}"
+						"{@item 盾牌|phb}"
 					]
 				}
 			],
@@ -11653,7 +11653,7 @@
 					]
 				},
 				{
-					"name": "Scimitar",
+					"name": "彎刀",
 					"entries": [
 						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5}) slashing damage plus 3 ({@damage 1d6}) lightning or thunder damage (djinni's choice)."
 					]
@@ -12264,13 +12264,13 @@
 			],
 			"action": [
 				{
-					"name": "Shortsword",
+					"name": "短劍",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Hand Crossbow",
+					"name": "手弩",
 					"entries": [
 						"{@atk rw} 命中{@hit 4}，射程30/120呎，單一目標。{@h}5 ({@damage 1d6 + 2}) piercing damage, and the target must succeed on a DC 13 Constitution saving throw or be {@condition poisoned} for 1 hour. If the saving throw fails by 5 or more, the target is also {@condition unconscious} while {@condition poisoned} in this way. The target wakes up if it takes damage or if another creature takes an action to shake it awake."
 					]
@@ -12344,8 +12344,8 @@
 				{
 					"ac": 18,
 					"from": [
-						"{@item studded leather armor|phb}",
-						"{@item shield|phb}"
+						"{@item 鑲釘皮甲|phb}"
+						"{@item 盾牌|phb}"
 					]
 				}
 			],
@@ -12397,13 +12397,13 @@
 					]
 				},
 				{
-					"name": "Shortsword",
+					"name": "短劍",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}7 ({@damage 1d6 + 4}) piercing damage plus 10 ({@damage 3d6}) poison damage."
 					]
 				},
 				{
-					"name": "Hand Crossbow",
+					"name": "手弩",
 					"entries": [
 						"{@atk rw} 命中{@hit 7}，射程30/120呎，單一目標。{@h}7 ({@damage 1d6 + 4}) piercing damage, and the target must succeed on a DC 13 Constitution saving throw or be {@condition poisoned} for 1 hour. If the saving throw fails by 5 or more, the target is also {@condition unconscious} while {@condition poisoned} in this way. The target wakes up if it takes damage or if another creature takes an action to shake it awake."
 					]
@@ -12979,7 +12979,7 @@
 			],
 			"action": [
 				{
-					"name": "Club",
+					"name": "棍棒",
 					"entries": [
 						"{@atk mw} {@hit 2} to hit ({@hit 6} to hit with shillelagh), reach 5 ft., one target. {@h}2 ({@damage 1d4}) bludgeoning damage, or 8 ({@damage 1d8 + 4}) bludgeoning damage with shillelagh."
 					]
@@ -13051,7 +13051,7 @@
 					"ac": 16,
 					"from": [
 						"{@item scale mail|phb}",
-						"{@item shield|phb}"
+						"{@item 盾牌|phb}"
 					]
 				}
 			],
@@ -13545,7 +13545,7 @@
 					]
 				},
 				{
-					"name": "Scimitar",
+					"name": "彎刀",
 					"entries": [
 						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}13 ({@damage 2d6 + 6}) slashing damage plus 7 ({@damage 2d6}) fire damage."
 					]
@@ -19266,8 +19266,8 @@
 				{
 					"ac": 16,
 					"from": [
-						"{@item studded leather armor|phb}",
-						"{@item shield|phb}"
+						"{@item 鑲釘皮甲|phb}"
+						"{@item 盾牌|phb}"
 					]
 				}
 			],
@@ -19370,8 +19370,8 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item hide armor|phb}",
-						"{@item shield|phb}"
+						"{@item 生皮甲|phb}",
+						"{@item 盾牌|phb}"
 					]
 				}
 			],
@@ -19456,7 +19456,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"{@item hide armor|phb}"
+						"{@item 生皮甲|phb}"
 					]
 				}
 			],
@@ -19710,8 +19710,8 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item leather armor|phb}",
-						"{@item shield|phb}"
+						"{@item 皮甲|phb}",
+						"{@item 盾牌|phb}"
 					]
 				}
 			],
@@ -19745,7 +19745,7 @@
 			],
 			"action": [
 				{
-					"name": "Scimitar",
+					"name": "彎刀",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})劈砍傷害。"
 					]
@@ -19792,7 +19792,7 @@
 					"ac": 17,
 					"from": [
 						"{@item chain shirt|phb}",
-						"{@item shield|phb}"
+						"{@item 盾牌|phb}"
 					]
 				}
 			],
@@ -19832,7 +19832,7 @@
 					]
 				},
 				{
-					"name": "Scimitar",
+					"name": "彎刀",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})劈砍傷害。"
 					]
@@ -21386,7 +21386,7 @@
 					"ac": 16,
 					"from": [
 						"{@item chain shirt|phb}",
-						"{@item shield|phb}"
+						"{@item 盾牌|phb}"
 					]
 				}
 			],
@@ -21767,7 +21767,7 @@
 				{
 					"ac": 12,
 					"from": [
-						"{@item hide armor|phb}"
+						"{@item 生皮甲|phb}"
 					]
 				}
 			],
@@ -21880,7 +21880,7 @@
 					]
 				},
 				{
-					"name": "Shortsword",
+					"name": "短劍",
 					"entries": [
 						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})穿刺傷害。"
 					]
@@ -21955,7 +21955,7 @@
 					]
 				},
 				{
-					"name": "Club",
+					"name": "棍棒",
 					"entries": [
 						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}3 ({@damage 1d4 + 1})鈍擊傷害。"
 					]
@@ -22136,7 +22136,7 @@
 					"ac": 20,
 					"from": [
 						"{@item plate armor|phb}",
-						"{@item shield|phb}"
+						"{@item 盾牌|phb}"
 					]
 				}
 			],
@@ -22530,7 +22530,7 @@
 					"ac": 18,
 					"from": [
 						"{@item chain mail|phb}",
-						"{@item shield|phb}"
+						"{@item 盾牌|phb}"
 					]
 				}
 			],
@@ -22702,7 +22702,7 @@
 					"ac": 20,
 					"from": [
 						"{@item plate armor|phb}",
-						"{@item shield|phb}"
+						"{@item 盾牌|phb}"
 					]
 				}
 			],
@@ -24445,7 +24445,7 @@
 			],
 			"action": [
 				{
-					"name": "Shortsword",
+					"name": "短劍",
 					"entries": [
 						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})穿刺傷害。"
 					]
@@ -24907,7 +24907,7 @@
 					"ac": 13,
 					"from": [
 						"天生護甲",
-						"{@item shield|phb}"
+						"{@item 盾牌|phb}"
 					]
 				}
 			],
@@ -26195,7 +26195,7 @@
 					"ac": 15,
 					"from": [
 						"天生護甲",
-						"{@item shield|phb}"
+						"{@item 盾牌|phb}"
 					]
 				}
 			],
@@ -27338,7 +27338,7 @@
 					]
 				},
 				{
-					"name": "Shortsword",
+					"name": "短劍",
 					"entries": [
 						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害。"
 					]
@@ -28115,9 +28115,9 @@
 					]
 				},
 				{
-					"name": "Reckless",
+					"name": "魯莽",
 					"entries": [
-						"At the start of its turn, the minotaur can gain advantage on all melee weapon attack rolls it makes during that turn, but attack rolls against it have advantage until the start of its next turn."
+						"在它的回合開始時，minotaur可以讓它在該回合間進行的所有近戰武器攻擊具有優勢，但直到它的下個回合開始前，所有對它進行的攻擊檢定也都具有優勢。"
 					]
 				}
 			],
@@ -30051,7 +30051,7 @@
 				{
 					"ac": 11,
 					"from": [
-						"{@item hide armor|phb}"
+						"{@item 生皮甲|phb}"
 					]
 				}
 			],
@@ -30321,7 +30321,7 @@
 				{
 					"ac": 13,
 					"from": [
-						"{@item hide armor|phb}"
+						"{@item 生皮甲|phb}"
 					]
 				}
 			],
@@ -30408,7 +30408,7 @@
 					"ac": 16,
 					"from": [
 						"{@item ring mail|phb}",
-						"{@item shield|phb}"
+						"{@item 盾牌|phb}"
 					]
 				}
 			],
@@ -33631,7 +33631,7 @@
 				{
 					"ac": 13,
 					"from": [
-						"{@item leather armor|phb}"
+						"{@item 皮甲|phb}"
 					]
 				}
 			],
@@ -34717,7 +34717,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"{@item leather armor|phb}"
+						"{@item 皮甲|phb}"
 					]
 				}
 			],
@@ -34758,7 +34758,7 @@
 					]
 				},
 				{
-					"name": "Shortsword",
+					"name": "短劍",
 					"entries": [
 						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})穿刺傷害。"
 					]
@@ -34984,7 +34984,7 @@
 				{
 					"ac": 13,
 					"from": [
-						"{@item leather armor|phb}"
+						"{@item 皮甲|phb}"
 					]
 				}
 			],
@@ -35026,7 +35026,7 @@
 					]
 				},
 				{
-					"name": "Shortsword",
+					"name": "短劍",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害。"
 					]
@@ -36898,13 +36898,13 @@
 					]
 				},
 				{
-					"name": "Shortsword",
+					"name": "短劍",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Hand Crossbow",
+					"name": "手弩",
 					"entries": [
 						"{@atk rw} 命中{@hit 4}，射程30/120呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害。"
 					]
@@ -38858,7 +38858,7 @@
 				{
 					"ac": 11,
 					"from": [
-						"{@item leather armor|phb}"
+						"{@item 皮甲|phb}"
 					]
 				}
 			],
@@ -39111,7 +39111,7 @@
 				{
 					"ac": 12,
 					"from": [
-						"{@item hide armor|phb}"
+						"{@item 生皮甲|phb}"
 					]
 				}
 			],
@@ -40855,7 +40855,7 @@
 					]
 				},
 				{
-					"name": "Shortsword",
+					"name": "短劍",
 					"entries": [
 						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})穿刺傷害。"
 					]
@@ -45259,7 +45259,7 @@
 					]
 				},
 				{
-					"name": "Scimitar",
+					"name": "彎刀",
 					"entries": [
 						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}4 ({@damage 1d6 + 1})劈砍傷害。"
 					]

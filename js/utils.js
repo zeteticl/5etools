@@ -1285,7 +1285,7 @@ Parser.alignmentListToFull = function (alignList) {
 	// 2. a pair of abv's, e.g. "L" "G"
 	if (alignList.length === 2) {
 		if (typeof alignList[0] === "object" && typeof alignList[1] === "object") return `${Parser.alignmentAbvToFull(alignList[0])} 或 ${Parser.alignmentAbvToFull(alignList[1]).toLowerCase()}`;
-		else if (typeof alignList[0] === "string" && typeof alignList[1] === "string") return alignList.map(a => Parser.alignmentAbvToFull(a)).join(" ");
+		else if (typeof alignList[0] === "string" && typeof alignList[1] === "string") return alignList.map(a => Parser.alignmentAbvToFull(a)).join("");
 		else throw new Error(`Malformed alignment pair: ${JSON.stringify(alignList)}`);
 	}
 	// longer arrays should have a custom mapping
@@ -1293,14 +1293,14 @@ Parser.alignmentListToFull = function (alignList) {
 	// "L", "NX", "C" ("NX" = "neutral X" = neutral law/chaos axis)
 	// "G", "NY", "E" ("NY" = "neutral Y" = neutral good/evil axis)
 	if (alignList.length === 5) {
-		if (!alignList.includes("G")) return "any non-good alignment";
-		if (!alignList.includes("L")) return "any non-lawful alignment";
+		if (!alignList.includes("G")) return "任意非善良陣營";
+		if (!alignList.includes("L")) return "任意非守序陣營";
 	}
 	if (alignList.length === 4) {
-		if (!alignList.includes("L") && !alignList.includes("NX")) return "any chaotic alignment";
-		if (!alignList.includes("G") && !alignList.includes("NY")) return "any evil alignment";
-		if (!alignList.includes("C") && !alignList.includes("NX")) return "any lawful alignment";
-		if (!alignList.includes("E") && !alignList.includes("NY")) return "any good alignment";
+		if (!alignList.includes("L") && !alignList.includes("NX")) return "任意混亂陣營";
+		if (!alignList.includes("G") && !alignList.includes("NY")) return "任意邪惡陣營";
+		if (!alignList.includes("C") && !alignList.includes("NX")) return "任意守序陣營";
+		if (!alignList.includes("E") && !alignList.includes("NY")) return "任意善良陣營";
 	}
 	throw new Error(`Unmapped alignment: ${JSON.stringify(alignList)}`);
 };
@@ -6227,6 +6227,7 @@ Parser.languageKeyToDisplay["primordial"] = "盤古語";
 Parser.languageKeyToDisplay["sylvan"] 	= "木族語";
 Parser.languageKeyToDisplay["terran"] 	= "大地語";
 Parser.languageKeyToDisplay["undercommon"]= "地底通用語";
+Parser.languageKeyToDisplay["thieves' cant"]= "竊賊黑話";
 Parser.LanguageToDisplay = function(lang_key){
 	return Parser.translateKeyInMapToDisplay(Parser.languageKeyToDisplay, lang_key);
 }

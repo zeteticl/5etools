@@ -343,6 +343,7 @@ const actionReactionFilter = new Filter({
 	displayFn: function(a){
 		switch(a){
 			case "Multiattack": return "多重攻擊";
+			case "Parry": return "格擋";
 			case "Swallow": return "吞嚥";
 			case "Tentacles": return "觸手";
 			default: return a;
