@@ -5551,7 +5551,7 @@
 					]
 				},
 				{
-					"name": "Dagger",
+					"name": "匕首",
 					"entries": [
 						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或 射程20/60呎，單一目標。{@h}5 ({@damage 1d4 + 3})穿刺傷害。"
 					]
@@ -5561,7 +5561,7 @@
 				{
 					"name": "格擋",
 					"entries": [
-						"首領在一次近戰攻擊將要命中它時針對該次攻擊使它的AC增加2點。若要這麼做，首領必須要能看見攻擊者且正持用一把近戰武器。"
+						"首領在一次近戰攻擊將要命中它時可以針對該次攻擊使它的AC增加2點。若要這麼做，首領必須要能看見攻擊者且正持用一把近戰武器。"
 					]
 				}
 			],
@@ -10034,7 +10034,7 @@
 			]
 		},
 		{
-			"name": "Cult Fanatic",
+			"name": "邪教狂信徒", "ENG_name": "Cult Fanatic",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -10097,7 +10097,7 @@
 				{
 					"name": "匕首",
 					"entries": [
-						"{@atk mw,rw} {@hit 4} to hit, reach 5 ft. or range 20/60 ft., one creature. {@h}4 ({@damage 1d4 + 2})穿刺傷害。"
+						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或 射程20/60呎，單一生物。{@h}4 ({@damage 1d4 + 2})穿刺傷害。"
 					]
 				}
 			],
@@ -10106,29 +10106,29 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"The fanatic is a 4th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 11, {@hit 3} to hit with spell attacks). The fanatic has the following cleric spells prepared:"
+						"狂信徒是4級的施法者。它的施法屬性為睿知（法術豁免DC 11，法術攻擊命中{@hit 3}）。狂信徒已準備了以下牧師法術："
 					],
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell light}",
-								"{@spell sacred flame}",
-								"{@spell thaumaturgy}"
+								"{@spell 光亮術}",
+								"{@spell 聖焰}",
+								"{@spell 奇術}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell command}",
-								"{@spell inflict wounds}",
-								"{@spell shield of faith}"
+								"{@spell 命令術}",
+								"{@spell 造成傷勢}",
+								"{@spell 虔誠護盾}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell hold person}",
-								"{@spell spiritual weapon}"
+								"{@spell 人類定身術}",
+								"{@spell 靈體武器}"
 							]
 						}
 					},
@@ -12830,7 +12830,7 @@
 			]
 		},
 		{
-			"name": "Druid",
+			"name": "德魯伊", "ENG_name": "Druid",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -12846,7 +12846,7 @@
 				11,
 				{
 					"ac": 16,
-					"condition": "with {@spell barkskin}",
+					"condition": "使用{@spell 樹膚術}",
 					"braces": true
 				}
 			],
@@ -12869,45 +12869,45 @@
 				"perception": "+4"
 			},
 			"passive": 14,
-			"languages": "Druidic plus any two languages",
+			"languages": "德魯伊語、和任意兩種語言",
 			"cr": "2",
 			"action": [
 				{
-					"name": "Quarterstaff",
+					"name": "長棍",
 					"entries": [
-						"{@atk mw} {@hit 2} to hit ({@hit 4} to hit with shillelagh), reach 5 ft., one target. {@h}3 ({@damage 1d6}) bludgeoning damage, or 6 ({@damage 1d8 + 2}) bludgeoning damage with shillelagh or if wielded with two hands."
+						"{@atk mw} 命中{@hit 2}({@spell 橡棍術}時命中{@hit 4})，觸及5呎，單一目標。{@h}3 ({@damage 1d6})鈍擊傷害，或若以雙手使用時 4 ({@damage 1d8})鈍擊傷害，或若使用橡棍術時 6 ({@damage 1d8 + 2})鈍擊傷害。"
 					]
 				}
 			],
 			"page": 346,
 			"spellcasting": [
 				{
-					"name": "Spellcasting",
+					"name": "施法",
 					"headerEntries": [
-						"The druid is a 4th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, {@hit 4} to hit with spell attacks). It has the following druid spells prepared:"
+						"德魯伊是4級的施法者。它的施法屬性為睿知（法術豁免DC 12，法術攻擊命中{@hit 4}）。它已準備了以下德魯伊法術："
 					],
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell druidcraft}",
-								"{@spell produce flame}",
-								"{@spell shillelagh}"
+								"{@spell 德魯伊伎倆}",
+								"{@spell 燃火術}",
+								"{@spell 橡棍術}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell entangle}",
-								"{@spell longstrider}",
-								"{@spell speak with animals}",
-								"{@spell thunderwave}"
+								"{@spell 糾纏術}",
+								"{@spell 大步奔行}",
+								"{@spell 動物交談術}",
+								"{@spell 雷鳴波}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell animal messenger}",
-								"{@spell barkskin}"
+								"{@spell 動物信使}",
+								"{@spell 樹膚術}"
 							]
 						}
 					},
@@ -19294,7 +19294,7 @@
 				"intimidation": "+5"
 			},
 			"passive": 11,
-			"languages": "any one language (usually Common)",
+			"languages": "任意一種語言（通常為通用語）",
 			"cr": "5",
 			"trait": [
 				{
@@ -21369,7 +21369,7 @@
 			]
 		},
 		{
-			"name": "Guard",
+			"name": "衛兵", "ENG_name": "Guard",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -21385,7 +21385,7 @@
 				{
 					"ac": 16,
 					"from": [
-						"{@item chain shirt|phb}",
+						"{@item 鏈甲衫|phb}",
 						"{@item 盾牌|phb}"
 					]
 				}
@@ -21407,13 +21407,13 @@
 				"perception": "+2"
 			},
 			"passive": 12,
-			"languages": "any one language (usually Common)",
+			"languages": "任意一種語言（通常為通用語）",
 			"cr": "1/8",
 			"action": [
 				{
-					"name": "Spear",
+					"name": "矛",
 					"entries": [
-						"{@atk mw,rw} {@hit 3} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}4 ({@damage 1d6 + 1}) piercing damage, or 5 ({@damage 1d8 + 1}) piercing damage if used with two hands to make a melee attack."
+						"{@atk mw,rw} 命中{@hit 3}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d6 + 1})穿刺傷害，或若以雙手使用以進行一次近戰攻擊時 5 ({@damage 1d8 + 1})穿刺傷害。"
 					]
 				}
 			],
@@ -24586,7 +24586,7 @@
 				"wis": "+2"
 			},
 			"passive": 10,
-			"languages": "any one language (usually Common)",
+			"languages": "任意一種語言（通常為通用語）",
 			"cr": "3",
 			"trait": [
 				{
@@ -29555,7 +29555,7 @@
 			]
 		},
 		{
-			"name": "Noble",
+			"name": "貴族", "ENG_name": "Noble",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -29571,7 +29571,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item breastplate|phb}"
+						"{@item 護胸甲|phb}"
 					]
 				}
 			],
@@ -29594,11 +29594,11 @@
 				"persuasion": "+5"
 			},
 			"passive": 12,
-			"languages": "any two languages",
+			"languages": "任意兩種語言",
 			"cr": "1/8",
 			"action": [
 				{
-					"name": "Rapier",
+					"name": "刺劍",
 					"entries": [
 						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}5 ({@damage 1d8 + 1})穿刺傷害。"
 					]
@@ -29606,9 +29606,9 @@
 			],
 			"reaction": [
 				{
-					"name": "Parry",
+					"name": "格擋",
 					"entries": [
-						"The noble adds 2 to its AC against one melee attack that would hit it. To do so, the noble must see the attacker and be wielding a melee weapon."
+						"貴族在一次近戰攻擊將要命中它時可以針對該次攻擊使它的AC增加2點。若要這麼做，貴族必須要能看見攻擊者且正持用一把近戰武器。"
 					]
 				}
 			],
@@ -32162,7 +32162,7 @@
 			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/391/pony.mp3"
 		},
 		{
-			"name": "Priest",
+			"name": "祭司", "ENG_name": "Priest",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -32178,7 +32178,7 @@
 				{
 					"ac": 13,
 					"from": [
-						"{@item chain shirt|phb}"
+						"{@item 鏈甲衫|phb}"
 					]
 				}
 			],
@@ -32201,19 +32201,19 @@
 				"religion": "+5"
 			},
 			"passive": 13,
-			"languages": "any two languages",
+			"languages": "任意兩種語言",
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Divine Eminence",
+					"name": "昭彰神性",
 					"entries": [
-						"As a bonus action, the priest can expend a spell slot to cause its melee weapon attacks to magically deal an extra 10 ({@damage 3d6}) radiant damage to a target on a hit. This benefit lasts until the end of the turn. If the priest expends a spell slot of 2nd level or higher, the extra damage increases by {@dice 1d6} for each level above 1st."
+						"以一個附贈動作，祭司可以消耗一個法術位以使它的近戰武器攻擊在命中時對目標造成額外的10 ({@damage 3d6})光耀傷害。這個好處將持續直到該回合結束。若祭司消耗了一個2環或更高的法術位，消耗的法術位每比原本高一環，額外傷害便會再增加{@scaledice 3d6|1-9|1d6}。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Mace",
+					"name": "硬頭錘",
 					"entries": [
 						"{@atk mw} 命中{@hit 2}，觸及5呎，單一目標。{@h}3 ({@damage 1d6})鈍擊傷害。"
 					]
@@ -32222,38 +32222,38 @@
 			"page": 348,
 			"spellcasting": [
 				{
-					"name": "Spellcasting",
+					"name": "施法",
 					"headerEntries": [
-						"The priest is a 5th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 13, {@hit 5} to hit with spell attacks). The priest has the following cleric spells prepared:"
+						"祭司是5級的施法者。它的施法屬性為睿知（法術豁免DC 13，法術攻擊命中{@hit 5}）。祭司已準備了以下牧師法術："
 					],
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell light}",
-								"{@spell sacred flame}",
-								"{@spell thaumaturgy}"
+								"{@spell 光亮術}",
+								"{@spell 聖焰}",
+								"{@spell 奇術}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell cure wounds}",
-								"{@spell guiding bolt}",
-								"{@spell sanctuary}"
+								"{@spell 治療傷勢}",
+								"{@spell 光導箭}",
+								"{@spell 聖域術}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell lesser restoration}",
-								"{@spell spiritual weapon}"
+								"{@spell 次級復原術}",
+								"{@spell 靈體武器}"
 							]
 						},
 						"3": {
 							"slots": 2,
 							"spells": [
-								"{@spell dispel magic}",
-								"{@spell spirit guardians}"
+								"{@spell 解除魔法}",
+								"{@spell 靈體守衛}"
 							]
 						}
 					},
@@ -35008,7 +35008,7 @@
 				"survival": "+5"
 			},
 			"passive": 15,
-			"languages": "any one language (usually Common)",
+			"languages": "任意一種語言（通常為通用語）",
 			"cr": "1/2",
 			"trait": [
 				{
@@ -38838,7 +38838,7 @@
 			]
 		},
 		{
-			"name": "Thug",
+			"name": "暴徒", "ENG_name": "Thug",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -38879,13 +38879,13 @@
 				"intimidation": "+2"
 			},
 			"passive": 10,
-			"languages": "any one language (usually Common)",
+			"languages": "任意一種語言（通常為通用語）",
 			"cr": "1/2",
 			"trait": [
 				{
 					"name": "群體戰術",
 					"entries": [
-						"若thug有至少一個隊友距離目標生物5呎內且該隊友並未{@condition 無力}，則thug在對該生物進行的攻擊檢定中具有優勢。"
+						"若暴徒有至少一個隊友距離目標生物5呎內且該隊友並未{@condition 無力}，則暴徒在對該生物進行的攻擊檢定中具有優勢。"
 					]
 				}
 			],
@@ -38893,17 +38893,17 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The thug makes two melee attacks."
+						"暴徒進行兩次近戰攻擊。"
 					]
 				},
 				{
-					"name": "Mace",
+					"name": "硬頭錘",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一生物。 {@h}5 ({@damage 1d6 + 2})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Heavy Crossbow",
+					"name": "重弩",
 					"entries": [
 						"{@atk rw} 命中{@hit 2}，射程100/400呎，單一目標。{@h}5 ({@damage 1d10})穿刺傷害。"
 					]
@@ -39095,7 +39095,7 @@
 			]
 		},
 		{
-			"name": "Tribal Warrior",
+			"name": "部落勇士", "ENG_name": "Tribal Warrior",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -39129,21 +39129,21 @@
 			"wis": 11,
 			"cha": 8,
 			"passive": 10,
-			"languages": "any one language",
+			"languages": "任意一種語言",
 			"cr": "1/8",
 			"trait": [
 				{
 					"name": "群體戰術",
 					"entries": [
-						"若warrior有至少一個隊友距離目標生物5呎內且該隊友並未{@condition 無力}，則warrior在對該生物進行的攻擊檢定中具有優勢。"
+						"若勇士有至少一個隊友距離目標生物5呎內且該隊友並未{@condition 無力}，則勇士在對該生物進行的攻擊檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Spear",
+					"name": "矛",
 					"entries": [
-						"{@atk mw,rw} {@hit 3} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}4 ({@damage 1d6 + 1}) piercing damage, or 5 ({@damage 1d8 + 1}) piercing damage if used with two hands to make a melee attack."
+						"{@atk mw,rw} 命中{@hit 3}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d6 + 1})穿刺傷害，或若以雙手使用以進行一次近戰攻擊時 5 ({@damage 1d8 + 1})穿刺傷害。"
 					]
 				}
 			],
@@ -40801,7 +40801,7 @@
 			]
 		},
 		{
-			"name": "Veteran",
+			"name": "老兵", "ENG_name": "Veteran",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -40817,7 +40817,7 @@
 				{
 					"ac": 17,
 					"from": [
-						"{@item splint armor|phb}"
+						"{@item 條板甲|phb}"
 					]
 				}
 			],
@@ -40839,19 +40839,19 @@
 				"perception": "+2"
 			},
 			"passive": 12,
-			"languages": "any one language (usually Common)",
+			"languages": "任意一種語言（通常為通用語）",
 			"cr": "3",
 			"action": [
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The veteran makes two longsword attacks. If it has a shortsword drawn, it can also make a shortsword attack."
+						"老兵進行二次長劍攻擊。若它已經抽出一把短劍，則它可以再進行一次短劍攻擊。"
 					]
 				},
 				{
 					"name": "長劍",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3}) slashing damage, or 8 ({@damage 1d10 + 3}) slashing damage if used with two hands."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3})劈砍傷害，或若以雙手使用時 8 ({@damage 1d10 + 3})劈砍傷害"
 					]
 				},
 				{
@@ -40861,7 +40861,7 @@
 					]
 				},
 				{
-					"name": "Heavy Crossbow",
+					"name": "重弩",
 					"entries": [
 						"{@atk rw} 命中{@hit 3}，射程100/400呎，單一目標。{@h}6 ({@damage 1d10 + 1})穿刺傷害。"
 					]

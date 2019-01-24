@@ -6228,6 +6228,7 @@ Parser.languageKeyToDisplay["sylvan"] 	= "木族語";
 Parser.languageKeyToDisplay["terran"] 	= "大地語";
 Parser.languageKeyToDisplay["undercommon"]= "地底通用語";
 Parser.languageKeyToDisplay["thieves' cant"]= "竊賊黑話";
+Parser.languageKeyToDisplay["druidic"]= "德魯伊語";
 Parser.LanguageToDisplay = function(lang_key){
 	return Parser.translateKeyInMapToDisplay(Parser.languageKeyToDisplay, lang_key);
 }
