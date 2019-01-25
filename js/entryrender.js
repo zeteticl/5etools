@@ -2344,7 +2344,7 @@ EntryRenderer.monster = {
 					})
 				}
 			}
-			if(!copy) return {}; //haz add
+
 			Object.keys(copy).forEach(k => {
 				if (mon[k] === null) return delete mon[k];
 				if (mon[k] == null) mon[k] = MiscUtil.copy(copy[k]);
@@ -2382,6 +2382,7 @@ EntryRenderer.monster = {
 		}
 
 		if (mon._copy) {
+			console.log(mon._copy, mon.source); //haz test
 			const hash = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_BESTIARY](mon._copy);
 			if (!EntryRenderer.monster._mergeCache) {
 				EntryRenderer.monster._mergeCache = {};
