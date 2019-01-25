@@ -13320,7 +13320,7 @@
 			"page": 245
 		},
 		{
-			"name": "Globe of Invulnerability",
+			"name": "法術無效結界", "ENG_name": "Globe of Invulnerability",
 			"level": 6,
 			"school": "A",
 			"time": [
@@ -13339,7 +13339,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a glass or crystal bead that shatters when the spell ends"
+				"m": "一顆玻璃或水晶珠，在法術結束時碎裂"
 			},
 			"duration": [
 				{
@@ -13365,15 +13365,15 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"An immobile, faintly shimmering barrier springs into existence in a 10-foot radius around you and remains for the duration.",
-				"Any spell of 5th level or lower cast from outside the barrier can't affect creatures or objects within it, even if the spell is cast using a higher level spell slot. Such a spell can target creatures and objects within the barrier, but the spell has no effect on them. Similarly, the area within the barrier is excluded from the areas affected by such spells."
+				"一個固定、朦朧閃爍的10呎半徑屏障突然出現並環繞在你周圍，並在法術持續期間持續存在。",
+				"任何從屏障外施放的5環或以下的法術無法影響內部的生物或物體，即使該法術是使用更高的法術位來施放也一樣。這些法術能夠以屏障內的生物和物體做為目標，但該法術對它們不會有任何影響。同樣的，屏障內部的區域也會被從這些法術的影響範圍中排除。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 7th level or higher, the barrier blocks spells of one level higher for each slot level above 6th."
+						"當你使用7環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，屏障所能阻擋的法術環位便會再提升一環。"
 					]
 				}
 			],
@@ -19174,7 +19174,7 @@
 			]
 		},
 		{
-			"name": "Mind Blank",
+			"name": "心靈屏障", "ENG_name": "Mind Blank",
 			"level": 8,
 			"school": "A",
 			"time": [
@@ -19216,7 +19216,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Until the spell ends, one willing creature you touch is immune to psychic damage, any effect that would sense its emotions or read its thoughts, divination spells, and the {@condition charmed} condition. The spell even foils wish spells and spells or effects of similar power used to affect the target's mind or to gain information about the target."
+				"直到此法術結束前，一個你碰觸的自願生物將免疫於精神傷害、任何能感知情緒或讀取它思想的效果、預言系法術、以及{@condition 魅惑}狀態。此法術甚至能夠阻擋用於影響目標心靈或獲得關於目標資訊的{@spell 祈願術}法術、以及其他類似效果的法術或力量。"
 			],
 			"page": 259,
 			"damageInflict": [
@@ -23869,7 +23869,7 @@
 			]
 		},
 		{
-			"name": "Scrying",
+			"name": "探知", "ENG_name": "Scrying",
 			"level": 5,
 			"school": "D",
 			"time": [
@@ -23888,7 +23888,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a focus worth at least 1,000 gp, such as a crystal ball, a silver mirror, or a font filled with holy water",
+					"text": "一個價值至少1,000金幣的法器，像是水晶球、銀製鏡子、或一個盛裝聖水的聖水盆",
 					"cost": 1000
 				}
 			},
@@ -23992,13 +23992,13 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You can see and hear a particular creature you choose that is on the same plane of existence as you. The target must make a Wisdom saving throw, which is modified by how well you know the target and the sort of physical connection you have to it. If a target knows you're casting this spell, it can fail the saving throw voluntarily if it wants to be observed.",
+				"你可以看見和聽見一個你所選擇的，與你處於相同存在位面的特定生物。目標必須進行一次睿知豁免，且此豁免檢定會根據你對目標的瞭解程度、以及你與目標之間的物理聯繫程度而受到調整值影響。若目標知道你正在施放此法術且若它願意被你觀察，則它可以自願在此豁免檢定中失敗。",
 				{
 					"type": "table",
-					"caption": "Knowledge of Target",
+					"caption": "對目標的瞭解程度",
 					"colLabels": [
-						"Knowledge",
-						"Save Modifier"
+						"瞭解程度",
+						"豁免調整值"
 					],
 					"colStyles": [
 						"col-11",
@@ -24006,25 +24006,25 @@
 					],
 					"rows": [
 						[
-							"Secondhand (you have heard of the target)",
+							"間接理解（你曾聽說過目標）",
 							"+5"
 						],
 						[
-							"Firsthand (you have met the target)",
+							"親身接觸（你曾見過目標）",
 							"+0"
 						],
 						[
-							"Familiar (you know the target well)",
+							"熟悉（你相當瞭解目標）",
 							"-5"
 						]
 					]
 				},
 				{
 					"type": "table",
-					"caption": "Connection to Target",
+					"caption": "與目標的聯繫程度",
 					"colLabels": [
-						"Connection",
-						"Save Modifier"
+						"聯繫程度",
+						"豁免調整值"
 					],
 					"colStyles": [
 						"col-11",
@@ -24032,22 +24032,22 @@
 					],
 					"rows": [
 						[
-							"Likeness or picture",
+							"肖像或圖像",
 							"-2"
 						],
 						[
-							"Possession or garment",
+							"所有物或衣服",
 							"-4"
 						],
 						[
-							"Body part, lock of hair, bit of nail, or the like",
+							"身體部位、一縷頭髮、一塊指甲、諸如此類",
 							"-10"
 						]
 					]
 				},
-				"On a successful save, the target isn't affected, and you can't use this spell against it again for 24 hours.",
-				"On a failed save, the spell creates an invisible sensor within 10 feet of the target. You can see and hear through the sensor as if you were there. The sensor moves with the target, remaining within 10 feet of it for the duration. A creature that can see {@condition invisible} objects sees the sensor as a luminous orb about the size of your fist.",
-				"Instead of targeting a creature, you can choose a location you have seen before as the target of this spell. When you do, the sensor appears at that location and doesn't move."
+				"若豁免成功，則目標不會受到影響，且你在24小時內無法再對它使用此法術。",
+				"若豁免失敗，此法術將在距離目標10呎內的位置創造出一個隱形的感應器。你可以透過該感應器看見和聽見，就如同你位於該空間一樣。該感應器會隨著目標移動，在法術持續期間維持在距離它10呎內的位置。一個可以看見{@condition 隱形}物體的生物可以看見感應器呈現一個約為你拳頭大小，發著光的無形球體。",
+				"你也可以不以生物為目標，而是選擇一個你過去曾經見過的地方做為此法術的目標。當你這麼做時，感應器將出現在該地方且不會移動。"
 			],
 			"page": 273,
 			"savingThrow": [
@@ -27225,7 +27225,7 @@
 			"page": 281
 		},
 		{
-			"name": "Teleport",
+			"name": "傳送術", "ENG_name": "Teleport",
 			"level": 7,
 			"school": "C",
 			"time": [
@@ -27267,17 +27267,17 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"This spell instantly transports you and up to eight willing creatures of your choice that you can see within range, or a single object that you can see within range, to a destination you select. If you target an object, it must be able to fit entirely inside a 10-foot cube, and it can't be held or carried by an unwilling creature.",
-				"The destination you choose must be known to you, and it must be on the same plane of existence as you. Your familiarity with the destination determines whether you arrive there successfully. The DM rolls {@dice d100} and consults the table.",
+				"這個法術將瞬間把你和最多八個射程內你所選且你能看見的自願生物、或一個射程內你所能看見的物體，傳送到一處你所選擇的目的地。若你以一個物體為目標，則它必須能夠容納於一個10呎邊長立方體內，且它不能被一個非自願生物給持握或攜帶。",
+				"你必須知曉你所選擇的目的地，且它必須要與你處於相同的存在位面。你對目的地的熟悉程度將會決定你是否能成功地抵達該處。DM將骰{@dice d100}並查閱下表。",
 				{
 					"type": "table",
-					"caption": "Teleportation",
+					"caption": "瞬間傳送",
 					"colLabels": [
-						"Familiarity",
-						"Mishap",
-						"Similar Area",
-						"Off Target",
-						"On Target"
+						"熟悉程度",
+						"事故",
+						"類似區域",
+						"偏離目的",
+						"順利抵達"
 					],
 					"colStyles": [
 						"col-8",
@@ -27288,49 +27288,49 @@
 					],
 					"rows": [
 						[
-							"Permanent circle",
+							"永久法陣",
 							"\u2014",
 							"\u2014",
 							"\u2014",
 							"01\u2013100"
 						],
 						[
-							"Associated object",
+							"關聯物體",
 							"\u2014",
 							"\u2014",
 							"\u2014",
 							"01\u2013100"
 						],
 						[
-							"Very familiar",
+							"非常熟悉",
 							"01\u201305",
 							"06\u201313",
 							"14\u201324",
 							"25\u2013100"
 						],
 						[
-							"Seen casually",
+							"偶然見過",
 							"01\u201333",
 							"34\u201343",
 							"44\u201353",
 							"54\u2013100"
 						],
 						[
-							"Viewed once",
+							"見過一次",
 							"01\u201343",
 							"44\u201353",
 							"54\u201373",
 							"74\u2013100"
 						],
 						[
-							"Description",
+							"僅憑描述",
 							"01\u201343",
 							"44\u201353",
 							"54\u201373",
 							"74\u2013100"
 						],
 						[
-							"False destination",
+							"不實目的地",
 							"01\u201350",
 							"51\u2013100",
 							"\u2014",
@@ -27340,39 +27340,39 @@
 				},
 				{
 					"type": "entries",
-					"name": "Familiarity",
+					"name": "熟悉程度",
 					"entries": [
-						"\"Permanent circle\" means a permanent teleportation circle whose sigil sequence you know. \"Associated object\" means that you possess an object taken from the desired destination within the last six months, such as a book from a wizard's library, bed linen from a royal suite, or a chunk of marble from a lich's secret tomb."
+						"「永久法陣」代表一個你知曉其符咒結果的永久性傳送法陣。「關聯物體」代表你擁有一個在過去六個月內從目的地被拿走的物體，像是一本來自法師書庫的書、來自皇家套房的床單、或是一塊來自巫妖秘密陵墓的大理石塊。"
 					]
 				},
-				"\"Very familiar\" is a place you have been very often, a place you have carefully studied, or a place you can see when you cast the spell. \"Seen casually\" is someplace you have seen more than once but with which you aren't very familiar. \"Viewed once\" is a place you have seen once, possibly using magic. \"Description\" is a place whose location and appearance you know through someone else's description, perhaps from a map.",
-				"\"False destination\" is a place that doesn't exist. Perhaps you tried to scry an enemy's sanctum but instead viewed an illusion, or you are attempting to teleport to a familiar location that no longer exists.",
+				"「非常熟悉」代表一處你經常造訪的場所、一處你曾仔細調查過的地方、或是一處你在施法時能夠看見的地方。「偶然見過」代表著你曾見過不只一次，但並不非常熟悉的某地。「見過一次」代表一處你曾見過一次的地方，例如透過魔法見過。「僅憑描述」代表一處你透過其他人的描述才知道其地點和外觀的場所，例如透過地圖知悉。",
+				"「不實目的地」代表一處不存在的場所。或許你在嘗試探知敵人的巢穴時看到了幻象，又或者你嘗試傳送到一處熟悉的地點，但它已不復存在。",
 				{
 					"type": "entries",
-					"name": "On Target",
+					"name": "順利抵達",
 					"entries": [
-						"You and your group (or the target object) appear where you want to."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Off Target",
-					"entries": [
-						"You and your group (or the target object) appear a random distance away from the destination in a random direction. Distance off target is {@dice 1d10 × 1d10} percent of the distance that was to be traveled. For example, if you tried to travel 120 miles, landed off target, and rolled a 5 and 3 on the two {@dice d10}s, then you would be off target by 15 percent, or 18 miles. The DM determines the direction off target randomly by rolling a {@dice d8} and designating 1 as north, 2 as northeast, 3 as east, and so on around the points of the compass. If you were teleporting to a coastal city and wound up 18 miles out at sea, you could be in trouble."
+						"你和你們一群人（或目標物體）出現在你想要去的地方。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Similar Area",
+					"name": "偏離目的",
 					"entries": [
-						"You and your group (or the target object) wind up in a different area that's visually or thematically similar to the target area. If you are heading for your home laboratory, for example, you might wind up in another wizard's laboratory or in an alchemical supply shop that has many of the same tools and implements as your laboratory. Generally, you appear in the closest similar place, but since the spell has no range limit, you could conceivably wind up anywhere on the plane."
+						"你和你們一群人（或目標物體）出現在偏離目的地隨機距離和隨機方位的地方。偏離距離為預期傳送距離的{@dice 1d10 × 1d10}%。舉例來說，若你嘗試傳送120哩，偏離目的，並用兩顆{@dice d10}分別骰出了5和3的結果，則你們將偏離目的地等同總距離15%的距離，也就是18哩。DM會透過骰一顆{@dice d8}以決定偏離的方位，指定1為北方，2為東北方，3為東方，按照羅盤的八個方位以此類推。如果你打算傳送到一個沿岸城市，卻向著海洋的方向偏離了18哩，那你們可能就有麻煩了。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Mishap",
+					"name": "類似區域",
 					"entries": [
-						"The spell's unpredictable magic results in a difficult journey. Each teleporting creature (or the target object) takes {@dice 3d10} force damage, and the DM rerolls on the table to see where you wind up (multiple mishaps can occur, dealing damage each time)."
+						"你和你們一群人（或目標物體）抵達一處與目的區域不同，但在視覺上或主題上與該處相似的區域。舉例來說，若你打算回到你自己的實驗室，你可能會抵達另一個法師的實驗室、或一處擁有許多與你實驗室相同的工具設備的煉金器材店。一般來說，你會出現在一處距離最近的類似場所，但由於此法術沒有距離限制，你仍可能抵達位於該位面的任何地方。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "事故",
+					"entries": [
+						"這個法術的無常魔法導致旅途變得痛苦艱難。每個被傳送的生物（或目標物體）將受到{@dice 3d10}力場傷害，且DM會再重骰一次表以決定你們抵達何處（事故可能會多次發生，每次都會造成傷害）。"
 					]
 				}
 			],
@@ -27917,7 +27917,7 @@
 			]
 		},
 		{
-			"name": "Time Stop",
+			"name": "時間停止", "ENG_name": "Time Stop",
 			"level": 9,
 			"school": "T",
 			"time": [
@@ -27954,8 +27954,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You briefly stop the flow of time for everyone but yourself. No time passes for other creatures, while you take {@dice 1d4 + 1} turns in a row, during which you can use actions and move as normal.",
-				"This spell ends if one of the actions you use during this period, or any effects that you create during this period, affects a creature other than you or an object being worn or carried by someone other than you. In addition, the spell ends if you move to a place more than 1,000 feet from the location where you cast it."
+				"你短暫地停止除了你之外所有人的時間流動。其他生物的時間停止流逝，而你則連續採取{@dice 1d4 + 1}回合，在這段期間你可以正常地使用動作和移動。",
+				"若你在這段期間使用其中一個動作或任何創造出的效果影響了一個除你以外的生物、或一個被你以外的人穿戴或攜帶的物品，則此法術結束。此外，此法術也會在你移動到一處距離你施法地點超過1,000呎的地點時結束。"
 			],
 			"page": 283
 		},

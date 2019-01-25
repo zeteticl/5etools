@@ -308,6 +308,7 @@ const traitFilter = new Filter({
 		switch(t){
 			case "Amorphous": return "無定形";
 			case "Amphibious": return "兩棲";
+			case "Brute": return "殘暴";
 			case "Charge": return "衝鋒";
 			case "Devil's Sight": return "魔鬼視界";
 			case "False Appearance": return "擬形";

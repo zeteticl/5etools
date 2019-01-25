@@ -4103,8 +4103,8 @@
 							"slots": 4,
 							"spells": [
 								"{@spell command}",
-								"{@spell detect evil and good}",
-								"{@spell detect magic}"
+								"{@spell 偵測善惡}",
+								"{@spell 偵測魔法}"
 							]
 						},
 						"2": {
@@ -4117,14 +4117,14 @@
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell dispel magic}",
+								"{@spell 解除魔法}",
 								"{@spell tongues}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell banishment}",
+								"{@spell 放逐術}",
 								"{@spell freedom of movement}"
 							]
 						},
@@ -4547,10 +4547,10 @@
 					],
 					"will": [
 						"{@spell alter self}",
-						"{@spell darkness}",
+						"{@spell 黑暗術}",
 						"{@spell heat metal}",
-						"{@spell invisibility} (self only)",
-						"{@spell magic missile}"
+						"{@spell 隱形術} (self only)",
+						"{@spell 魔法飛彈}"
 					],
 					"ability": "cha"
 				},
@@ -4563,41 +4563,41 @@
 						"0": {
 							"spells": [
 								"{@spell fire bolt}",
-								"{@spell mage hand}",
-								"{@spell minor illusion}",
-								"{@spell prestidigitation}"
+								"{@spell 法師之手}",
+								"{@spell 次級幻象}",
+								"{@spell 魔法技倆}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell detect magic}",
-								"{@spell identify}",
-								"{@spell shield}",
+								"{@spell 偵測魔法}",
+								"{@spell 鑑定術}",
+								"{@spell 護盾術}",
 								"{@spell Tenser's floating disk}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell detect thoughts}",
-								"{@spell mirror image}",
+								"{@spell 偵測思想}",
+								"{@spell 鏡影術}",
 								"{@spell phantasmal force}",
-								"{@spell suggestion}"
+								"{@spell 暗示術}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell counterspell}",
+								"{@spell 反制法術}",
 								"{@spell fear}",
-								"{@spell fireball}"
+								"{@spell 火球術}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell banishment}",
+								"{@spell 放逐術}",
 								"{@spell dimension door}"
 							]
 						},
@@ -4647,7 +4647,7 @@
 			]
 		},
 		{
-			"name": "Archmage",
+			"name": "大法師", "ENG_name": "Archmage",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -4663,7 +4663,7 @@
 				12,
 				{
 					"ac": 15,
-					"condition": "with {@spell mage armor}",
+					"condition": "使用{@spell 法師護甲}時",
 					"braces": true
 				}
 			],
@@ -4690,7 +4690,7 @@
 			},
 			"resist": [
 				{
-					"special": "damage from spells"
+					"special": "法術傷害"
 				},
 				{
 					"resist": [
@@ -4698,24 +4698,24 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "(from stoneskin)",
-					"preNote": "nonmagical"
+					"note": "(使用{@spell 石膚術}時)",
+					"preNote": "非魔法"
 				}
 			],
 			"passive": 12,
-			"languages": "any six languages",
+			"languages": "任意六種語言",
 			"cr": "12",
 			"trait": [
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The archmage 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"大法師在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Dagger",
+					"name": "匕首",
 					"entries": [
 						"{@atk mw,rw} 命中{@hit 6}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d4 + 2})穿刺傷害。"
 					]
@@ -4724,88 +4724,88 @@
 			"page": 342,
 			"spellcasting": [
 				{
-					"name": "Spellcasting",
+					"name": "施法",
 					"headerEntries": [
-						"The archmage is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 17, {@hit 9} to hit with spell attacks). The archmage can cast disguise self and invisibility at will and has the following wizard spells prepared:"
+						"大法師是18級的施法者。它的施法屬性為智力（法術豁免DC 17，法術攻擊命中{@hit 9}）。大法師可以隨意施放{@spell 易容術}和{@spell 隱形術}，且已準備了以下法師法術："
 					],
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell fire bolt}",
-								"{@spell light}",
-								"{@spell mage hand}",
-								"{@spell prestidigitation}",
-								"{@spell shocking grasp}"
+								"{@spell 火焰箭}",
+								"{@spell 光亮術}",
+								"{@spell 法師之手}",
+								"{@spell 魔法技倆}",
+								"{@spell 電爪}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell detect magic}",
-								"{@spell identify}",
-								"{@spell mage armor}*",
-								"{@spell magic missile}"
+								"{@spell 偵測魔法}",
+								"{@spell 鑑定術}",
+								"{@spell 法師護甲}*",
+								"{@spell 魔法飛彈}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell detect thoughts}",
-								"{@spell mirror image}",
-								"{@spell misty step}"
+								"{@spell 偵測思想}",
+								"{@spell 鏡影術}",
+								"{@spell 迷蹤步}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell counterspell}",
-								"{@spell fly}",
-								"{@spell lightning bolt}"
+								"{@spell 反制法術}",
+								"{@spell 飛行術}",
+								"{@spell 閃電束}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell banishment}",
-								"{@spell fire shield}",
-								"{@spell stoneskin}*"
+								"{@spell 放逐術}",
+								"{@spell 火焰護盾}",
+								"{@spell 石膚術}*"
 							]
 						},
 						"5": {
 							"slots": 3,
 							"spells": [
-								"{@spell cone of cold}",
-								"{@spell scrying}",
-								"{@spell wall of force}"
+								"{@spell 寒冰錐}",
+								"{@spell 探知}",
+								"{@spell 力牆術}"
 							]
 						},
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell globe of invulnerability}"
+								"{@spell 法術無效結界}"
 							]
 						},
 						"7": {
 							"slots": 1,
 							"spells": [
-								"{@spell teleport}"
+								"{@spell 傳送術}"
 							]
 						},
 						"8": {
 							"slots": 1,
 							"spells": [
-								"{@spell mind blank}*"
+								"{@spell 心靈屏障}*"
 							]
 						},
 						"9": {
 							"slots": 1,
 							"spells": [
-								"{@spell time stop}"
+								"{@spell 時間停止}"
 							]
 						}
 					},
 					"footerEntries": [
-						"*The archmage casts these spells on itself before combat."
+						"*大法師會在戰鬥之前對自己施放這些法術。"
 					],
 					"ability": "int"
 				}
@@ -7496,9 +7496,9 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell mage hand}",
-								"{@spell minor illusion}",
-								"{@spell ray of frost}"
+								"{@spell 法師之手}",
+								"{@spell 次級幻象}",
+								"{@spell 冷凍射線}"
 							]
 						},
 						"1": {
@@ -7511,14 +7511,14 @@
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell detect thoughts}",
+								"{@spell 偵測思想}",
 								"{@spell hold person}"
 							]
 						},
 						"3": {
 							"slots": 2,
 							"spells": [
-								"{@spell lightning bolt}"
+								"{@spell 閃電束}"
 							]
 						}
 					},
@@ -7849,9 +7849,9 @@
 			"cr": "1",
 			"trait": [
 				{
-					"name": "Brute",
+					"name": "殘暴",
 					"entries": [
-						"A melee weapon deals one extra die of its damage when the bugbear hits with it (included in the attack)."
+						"一把近戰武器會在bugbear用它命中目標時造成一顆額外的傷害骰（已包含在攻擊條目）。"
 					]
 				},
 				{
@@ -7940,9 +7940,9 @@
 			"cr": "3",
 			"trait": [
 				{
-					"name": "Brute",
+					"name": "殘暴",
 					"entries": [
-						"A melee weapon deals one extra die of its damage when the bugbear hits with it (included in the attack)."
+						"一把近戰武器會在bugbear用它命中目標時造成一顆額外的傷害骰（已包含在攻擊條目）。"
 					]
 				},
 				{
@@ -8284,7 +8284,7 @@
 						"3e": [
 							"{@spell alter self}",
 							"{@spell command}",
-							"{@spell detect magic}"
+							"{@spell 偵測魔法}"
 						]
 					},
 					"ability": "cha"
@@ -9802,9 +9802,9 @@
 						"The couatl's spellcasting ability is Charisma (spell save DC 14). It can innately cast the following spells, requiring only verbal components:"
 					],
 					"will": [
-						"{@spell detect evil and good}",
-						"{@spell detect magic}",
-						"{@spell detect thoughts}"
+						"{@spell 偵測善惡}",
+						"{@spell 偵測魔法}",
+						"{@spell 偵測思想}"
 					],
 					"daily": {
 						"3e": [
@@ -9814,12 +9814,12 @@
 							"{@spell lesser restoration}",
 							"{@spell protection from poison}",
 							"{@spell sanctuary}",
-							"{@spell shield}"
+							"{@spell 護盾術}"
 						],
 						"1e": [
 							"{@spell dream}",
 							"{@spell greater restoration}",
-							"{@spell scrying}"
+							"{@spell 探知}"
 						]
 					},
 					"ability": "cha"
@@ -10382,8 +10382,8 @@
 						"The dao's innate spellcasting ability is Charisma (spell save DC 14, {@hit 6} to hit with spell attacks). It can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell detect evil and good}",
-						"{@spell detect magic}",
+						"{@spell 偵測善惡}",
+						"{@spell 偵測魔法}",
 						"{@spell stone shape}"
 					],
 					"daily": {
@@ -10395,7 +10395,7 @@
 						"1e": [
 							"{@spell conjure elemental} (earth elemental only)",
 							"{@spell gaseous form}",
-							"{@spell invisibility}",
+							"{@spell 隱形術}",
 							"{@spell phantasmal killer}",
 							"{@spell plane shift}",
 							"{@spell wall of stone}"
@@ -10582,7 +10582,7 @@
 				{
 					"ac": 20,
 					"from": [
-						"{@item plate armor|phb}",
+						"{@item 全身板甲|phb}",
 						"{@item 盾牌|phb}"
 					]
 				}
@@ -10692,14 +10692,14 @@
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell dispel magic}",
+								"{@spell 解除魔法}",
 								"{@spell elemental weapon}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell banishment}",
+								"{@spell 放逐術}",
 								"{@spell staggering smite}"
 							]
 						},
@@ -10825,7 +10825,7 @@
 					]
 				},
 				{
-					"name": "Greatsword",
+					"name": "巨劍",
 					"entries": [
 						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5}) slashing damage plus 7 ({@damage 2d6}) necrotic damage."
 					]
@@ -10839,17 +10839,17 @@
 						"The slaad's innate spellcasting ability is Charisma (spell save DC 15, {@hit 7} to hit with spell attacks). The slaad can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell detect magic}",
-						"{@spell detect thoughts}",
-						"{@spell invisibility} (self only)",
-						"{@spell mage hand}",
+						"{@spell 偵測魔法}",
+						"{@spell 偵測思想}",
+						"{@spell 隱形術} (self only)",
+						"{@spell 法師之手}",
 						"{@spell major image}"
 					],
 					"daily": {
 						"2e": [
 							"{@spell fear}",
-							"{@spell fireball}",
-							"{@spell fly}",
+							"{@spell 火球術}",
+							"{@spell 飛行術}",
 							"{@spell tongues}"
 						],
 						"1e": [
@@ -11425,7 +11425,7 @@
 						"The deva's spellcasting ability is Charisma (spell save DC 17). The deva can innately cast the following spells, requiring only verbal components:"
 					],
 					"will": [
-						"{@spell detect evil and good}"
+						"{@spell 偵測善惡}"
 					],
 					"daily": {
 						"1e": [
@@ -11674,9 +11674,9 @@
 						"The djinni's innate spellcasting ability is Charisma (spell save DC 17, {@hit 9} to hit with spell attacks). It can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell detect evil and good}",
-						"{@spell detect magic}",
-						"{@spell thunderwave}"
+						"{@spell 偵測善惡}",
+						"{@spell 偵測魔法}",
+						"{@spell 雷鳴波}"
 					],
 					"daily": {
 						"3e": [
@@ -11688,7 +11688,7 @@
 							"{@spell conjure elemental} (air elemental only)",
 							"{@spell creation}",
 							"{@spell gaseous form}",
-							"{@spell invisibility}",
+							"{@spell 隱形術}",
 							"{@spell major image}",
 							"{@spell plane shift}"
 						]
@@ -12156,7 +12156,7 @@
 					],
 					"daily": {
 						"1e": [
-							"{@spell darkness}",
+							"{@spell 黑暗術}",
 							"{@spell faerie fire}"
 						]
 					},
@@ -12175,9 +12175,9 @@
 							"style": "list-hang-notitle",
 							"items": [
 								"Cantrips (at will): {@spell poison spray}, {@spell thaumaturgy}",
-								"1st level (4 slots): {@spell bane}, {@spell detect magic}, {@spell sanctuary}",
+								"1st level (4 slots): {@spell bane}, {@spell 偵測魔法}, {@spell sanctuary}",
 								"2nd level (3 slots): {@spell hold person}, {@spell silence}",
-								"3rd level (3 slots): {@spell clairvoyance}, {@spell dispel magic}",
+								"3rd level (3 slots): {@spell clairvoyance}, {@spell 解除魔法}",
 								"4th level (2 slots): {@spell divination}, {@spell freedom of movement}"
 							]
 						}
@@ -12303,7 +12303,7 @@
 					],
 					"daily": {
 						"1e": [
-							"{@spell darkness}",
+							"{@spell 黑暗術}",
 							"{@spell faerie fire}"
 						]
 					},
@@ -12444,7 +12444,7 @@
 					],
 					"daily": {
 						"1e": [
-							"{@spell darkness}",
+							"{@spell 黑暗術}",
 							"{@spell faerie fire}",
 							"{@spell levitate} (self only)"
 						]
@@ -12490,7 +12490,7 @@
 				12,
 				{
 					"ac": 15,
-					"condition": "with {@spell mage armor}",
+					"condition": "with {@spell 法師護甲}",
 					"braces": true
 				}
 			],
@@ -12557,7 +12557,7 @@
 					],
 					"daily": {
 						"1e": [
-							"{@spell darkness}",
+							"{@spell 黑暗術}",
 							"{@spell faerie fire}",
 							"{@spell levitate} (self only)"
 						]
@@ -12572,18 +12572,18 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell mage hand}",
-								"{@spell minor illusion}",
+								"{@spell 法師之手}",
+								"{@spell 次級幻象}",
 								"{@spell poison spray}",
-								"{@spell ray of frost}"
+								"{@spell 冷凍射線}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell mage armor}",
-								"{@spell magic missile}",
-								"{@spell shield}",
+								"{@spell 法師護甲}",
+								"{@spell 魔法飛彈}",
+								"{@spell 護盾術}",
 								"{@spell witch bolt}"
 							]
 						},
@@ -12591,22 +12591,22 @@
 							"slots": 3,
 							"spells": [
 								"{@spell alter self}",
-								"{@spell misty step}",
+								"{@spell 迷蹤步}",
 								"{@spell web}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell fly}",
-								"{@spell lightning bolt}"
+								"{@spell 飛行術}",
+								"{@spell 閃電束}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
 								"{@spell Evard's black tentacles}",
-								"{@spell greater invisibility}"
+								"{@spell 高等隱形術}"
 							]
 						},
 						"5": {
@@ -12746,7 +12746,7 @@
 					],
 					"daily": {
 						"1e": [
-							"{@spell darkness}",
+							"{@spell 黑暗術}",
 							"{@spell faerie fire}",
 							"{@spell levitate} (self only)"
 						]
@@ -12789,7 +12789,7 @@
 							"slots": 3,
 							"spells": [
 								"{@spell conjure animals} (2 giant spiders)",
-								"{@spell dispel magic}"
+								"{@spell 解除魔法}"
 							]
 						},
 						"4": {
@@ -12846,7 +12846,7 @@
 				11,
 				{
 					"ac": 16,
-					"condition": "使用{@spell 樹膚術}",
+					"condition": "使用{@spell 樹膚術}時",
 					"braces": true
 				}
 			],
@@ -13565,7 +13565,7 @@
 						"The efreeti's innate spellcasting ability is Charisma (spell save DC 15, {@hit 7} to hit with spell attacks). It can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell detect magic}"
+						"{@spell 偵測魔法}"
 					],
 					"daily": {
 						"3e": [
@@ -13575,7 +13575,7 @@
 						"1e": [
 							"{@spell conjure elemental} (fire elemental only)",
 							"{@spell gaseous form}",
-							"{@spell invisibility}",
+							"{@spell 隱形術}",
 							"{@spell major image}",
 							"{@spell plane shift}",
 							"{@spell wall of fire}"
@@ -13911,7 +13911,7 @@
 				{
 					"ac": 18,
 					"from": [
-						"{@item plate armor|phb}"
+						"{@item 全身板甲|phb}"
 					]
 				}
 			],
@@ -14321,11 +14321,11 @@
 						"1e": [
 							"{@spell color spray}",
 							"{@spell dancing lights}",
-							"{@spell mage hand}",
+							"{@spell 法師之手}",
 							"{@spell major image}",
-							"{@spell minor illusion}",
-							"{@spell mirror image}",
-							"{@spell suggestion}"
+							"{@spell 次級幻象}",
+							"{@spell 鏡影術}",
+							"{@spell 暗示術}"
 						]
 					},
 					"ability": "cha"
@@ -14442,10 +14442,10 @@
 						"1e": [
 							"{@spell color spray}",
 							"{@spell dancing lights}",
-							"{@spell mage hand}",
-							"{@spell minor illusion}",
-							"{@spell mirror image}",
-							"{@spell suggestion}"
+							"{@spell 法師之手}",
+							"{@spell 次級幻象}",
+							"{@spell 鏡影術}",
+							"{@spell 暗示術}"
 						]
 					},
 					"ability": "cha"
@@ -14563,11 +14563,11 @@
 							"{@spell color spray}",
 							"{@spell dancing lights}",
 							"{@spell hallucinatory terrain}",
-							"{@spell mage hand}",
+							"{@spell 法師之手}",
 							"{@spell major image}",
-							"{@spell minor illusion}",
-							"{@spell mirror image}",
-							"{@spell suggestion}"
+							"{@spell 次級幻象}",
+							"{@spell 鏡影術}",
+							"{@spell 暗示術}"
 						]
 					},
 					"ability": "cha"
@@ -14684,8 +14684,8 @@
 						"1e": [
 							"{@spell color spray}",
 							"{@spell dancing lights}",
-							"{@spell mage hand}",
-							"{@spell minor illusion}"
+							"{@spell 法師之手}",
+							"{@spell 次級幻象}"
 						]
 					},
 					"ability": "cha"
@@ -14801,8 +14801,8 @@
 					"daily": {
 						"1e": [
 							"{@spell dancing lights}",
-							"{@spell mage hand}",
-							"{@spell minor illusion}"
+							"{@spell 法師之手}",
+							"{@spell 次級幻象}"
 						]
 					},
 					"ability": "cha"
@@ -14920,12 +14920,12 @@
 							"{@spell color spray}",
 							"{@spell dancing lights}",
 							"{@spell hallucinatory terrain}",
-							"{@spell mage hand}",
+							"{@spell 法師之手}",
 							"{@spell major image}",
-							"{@spell minor illusion}",
-							"{@spell mirror image}",
+							"{@spell 次級幻象}",
+							"{@spell 鏡影術}",
 							"{@spell polymorph}",
-							"{@spell suggestion}"
+							"{@spell 暗示術}"
 						]
 					},
 					"ability": "cha"
@@ -15042,9 +15042,9 @@
 						"1e": [
 							"{@spell color spray}",
 							"{@spell dancing lights}",
-							"{@spell mage hand}",
-							"{@spell minor illusion}",
-							"{@spell mirror image}"
+							"{@spell 法師之手}",
+							"{@spell 次級幻象}",
+							"{@spell 鏡影術}"
 						]
 					},
 					"ability": "cha"
@@ -15467,14 +15467,14 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell mage hand}"
+								"{@spell 法師之手}"
 							]
 						},
 						"1": {
 							"slots": 3,
 							"spells": [
-								"{@spell magic missile}",
-								"{@spell shield}"
+								"{@spell 魔法飛彈}",
+								"{@spell 護盾術}"
 							]
 						},
 						"2": {
@@ -15487,7 +15487,7 @@
 						"3": {
 							"slots": 1,
 							"spells": [
-								"{@spell fireball}"
+								"{@spell 火球術}"
 							]
 						}
 					},
@@ -18763,7 +18763,7 @@
 				{
 					"ac": 18,
 					"from": [
-						"{@item plate armor|phb}"
+						"{@item 全身板甲|phb}"
 					]
 				}
 			],
@@ -18810,12 +18810,12 @@
 						"The githyanki's innate spellcasting ability is Intelligence (spell save DC 13, {@hit 5} to hit with spell attacks). It can innately cast the following spells, requiring no components:"
 					],
 					"will": [
-						"{@spell mage hand} (the hand is invisible)"
+						"{@spell 法師之手} (the hand is invisible)"
 					],
 					"daily": {
 						"3e": [
 							"{@spell jump}",
-							"{@spell misty step}",
+							"{@spell 迷蹤步}",
 							"{@spell nondetection} (self only)",
 							"{@spell tongues}"
 						],
@@ -18886,7 +18886,7 @@
 					]
 				},
 				{
-					"name": "Greatsword",
+					"name": "巨劍",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}9 ({@damage 2d6 + 2}) slashing damage plus 7 ({@damage 2d6}) psychic damage."
 					]
@@ -18900,12 +18900,12 @@
 						"The githyanki's innate spellcasting ability is Intelligence. It can innately cast the following spells, requiring no components:"
 					],
 					"will": [
-						"{@spell mage hand} (the hand is invisible)"
+						"{@spell 法師之手} (the hand is invisible)"
 					],
 					"daily": {
 						"3e": [
 							"{@spell jump}",
-							"{@spell misty step}",
+							"{@spell 迷蹤步}",
 							"{@spell nondetection} (self only)"
 						]
 					},
@@ -18993,14 +18993,14 @@
 						"The githzerai's innate spellcasting ability is Wisdom. It can innately cast the following spells, requiring no components:"
 					],
 					"will": [
-						"{@spell mage hand} (the hand is invisible)"
+						"{@spell 法師之手} (the hand is invisible)"
 					],
 					"daily": {
 						"3e": [
 							"{@spell feather fall}",
 							"{@spell jump}",
 							"{@spell see invisibility}",
-							"{@spell shield}"
+							"{@spell 護盾術}"
 						]
 					},
 					"ability": "wis"
@@ -19088,14 +19088,14 @@
 						"The githzerai's innate spellcasting ability is Wisdom. It can innately cast the following spells, requiring no components:"
 					],
 					"will": [
-						"{@spell mage hand} (the hand is invisible)"
+						"{@spell 法師之手} (the hand is invisible)"
 					],
 					"daily": {
 						"3e": [
 							"{@spell feather fall}",
 							"{@spell jump}",
 							"{@spell see invisibility}",
-							"{@spell shield}"
+							"{@spell 護盾術}"
 						]
 					},
 					"ability": "wis"
@@ -19209,14 +19209,14 @@
 						"The glabrezu's spellcasting ability is Intelligence (spell save DC 16). The glabrezu can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell darkness}",
-						"{@spell detect magic}",
-						"{@spell dispel magic}"
+						"{@spell 黑暗術}",
+						"{@spell 偵測魔法}",
+						"{@spell 解除魔法}"
 					],
 					"daily": {
 						"1e": [
 							"{@spell confusion}",
-							"{@spell fly}",
+							"{@spell 飛行術}",
 							"{@spell power word stun}"
 						]
 					},
@@ -19250,7 +19250,7 @@
 			]
 		},
 		{
-			"name": "Gladiator",
+			"name": "角鬥士", "ENG_name": "Gladiator",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -19298,15 +19298,15 @@
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Brave",
+					"name": "勇氣",
 					"entries": [
-						"The gladiator has advantage on saving throws against being {@condition frightened}."
+						"角鬥士在對抗{@condition 恐懼}的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Brute",
+					"name": "殘暴",
 					"entries": [
-						"A melee weapon deals one extra die of its damage when the gladiator hits with it (included in the attack)."
+						"一把近戰武器會在角鬥士用它命中目標時造成一顆額外的傷害骰（已包含在攻擊條目）。"
 					]
 				}
 			],
@@ -19314,27 +19314,27 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The gladiator makes three melee attacks or two ranged attacks."
+						"角鬥士進行三次近戰攻擊或兩次遠程攻擊。"
 					]
 				},
 				{
 					"name": "矛",
 					"entries": [
-						"{@atk mw,rw} {@hit 7} to hit, reach 5 ft. and range 20/60 ft., one target. {@h}11 ({@damage 2d6 + 4}) piercing damage, or 13 ({@damage 2d8 + 4}) piercing damage if used with two hands to make a melee attack."
+						"{@atk mw,rw} 命中{@hit 7}，觸及5呎 或 射程20/60呎，單一目標。{@h}11 ({@damage 2d6 + 4})穿刺傷害，或若雙手使用以進行一次近戰攻擊時 13 ({@damage 2d8 + 4})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Shield Bash",
+					"name": "盾擊",
 					"entries": [
-						"{@atk mw} 命中{@hit 7}，觸及5呎，單一生物。 {@h}9 ({@damage 2d4 + 4})鈍擊傷害。 If the target is a Medium or smaller creature, it must succeed on a DC 15 Strength saving throw or be knocked {@condition prone}."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一生物。{@h}9 ({@damage 2d4 + 4})鈍擊傷害。若目標是一個體型為中型或更小的生物，則它必須成功通過一次DC 15的力量豁免，否則被擊倒{@condition 伏地}。"
 					]
 				}
 			],
 			"reaction": [
 				{
-					"name": "Parry",
+					"name": "格擋",
 					"entries": [
-						"The gladiator adds 3 to its AC against one melee attack that would hit it. To do so, the gladiator must see the attacker and be wielding a melee weapon."
+						"角鬥士在一次近戰攻擊將要命中它時可以針對該次攻擊使它的AC增加3點。若要這麼做，角鬥士必須要能看見攻擊者且正持用一把近戰武器。"
 					]
 				}
 			],
@@ -20458,7 +20458,7 @@
 					]
 				},
 				{
-					"name": "Greatsword",
+					"name": "巨劍",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}10 ({@damage 2d6 + 3})劈砍傷害。"
 					]
@@ -20472,10 +20472,10 @@
 						"The slaad's innate spellcasting ability is Charisma (spell save DC 14). The slaad can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell detect magic}",
-						"{@spell detect thoughts}",
-						"{@spell invisibility} (self only)",
-						"{@spell mage hand}",
+						"{@spell 偵測魔法}",
+						"{@spell 偵測思想}",
+						"{@spell 隱形術} (self only)",
+						"{@spell 法師之手}",
 						"{@spell major image}"
 					],
 					"daily": {
@@ -20484,8 +20484,8 @@
 						],
 						"2e": [
 							"{@spell fear}",
-							"{@spell fly}",
-							"{@spell fireball}",
+							"{@spell 飛行術}",
+							"{@spell 火球術}",
 							"{@spell tongues}"
 						]
 					},
@@ -20664,7 +20664,7 @@
 					],
 					"will": [
 						"{@spell dancing lights}",
-						"{@spell minor illusion}",
+						"{@spell 次級幻象}",
 						"{@spell vicious mockery}"
 					],
 					"ability": "cha"
@@ -20678,7 +20678,7 @@
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell identify}",
+								"{@spell 鑑定術}",
 								"{@spell ray of sickness}"
 							]
 						},
@@ -20686,15 +20686,15 @@
 							"slots": 3,
 							"spells": [
 								"{@spell hold person}",
-								"{@spell locate object}"
+								"{@spell 物品定位術}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
 								"{@spell bestow curse}",
-								"{@spell counterspell}",
-								"{@spell lightning bolt}"
+								"{@spell 反制法術}",
+								"{@spell 閃電束}"
 							]
 						},
 						"4": {
@@ -20708,7 +20708,7 @@
 							"slots": 2,
 							"spells": [
 								"{@spell contact other plane}",
-								"{@spell scrying}"
+								"{@spell 探知}"
 							]
 						},
 						"6": {
@@ -20901,17 +20901,17 @@
 						"The slaad's innate spellcasting ability is Charisma (spell save DC 12). The slaad can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell detect magic}",
-						"{@spell detect thoughts}",
-						"{@spell mage hand}"
+						"{@spell 偵測魔法}",
+						"{@spell 偵測思想}",
+						"{@spell 法師之手}"
 					],
 					"daily": {
 						"1": [
-							"{@spell fireball}"
+							"{@spell 火球術}"
 						],
 						"2e": [
 							"{@spell fear}",
-							"{@spell invisibility} (self only)"
+							"{@spell 隱形術} (self only)"
 						]
 					},
 					"ability": "cha"
@@ -21413,7 +21413,7 @@
 				{
 					"name": "矛",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 3}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d6 + 1})穿刺傷害，或若以雙手使用以進行一次近戰攻擊時 5 ({@damage 1d8 + 1})穿刺傷害。"
+						"{@atk mw,rw} 命中{@hit 3}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d6 + 1})穿刺傷害，或若雙手使用以進行一次近戰攻擊時 5 ({@damage 1d8 + 1})穿刺傷害。"
 					]
 				}
 			],
@@ -21534,7 +21534,7 @@
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell banishment}",
+								"{@spell 放逐術}",
 								"{@spell freedom of movement}"
 							]
 						},
@@ -21688,40 +21688,40 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell mage hand}",
-								"{@spell minor illusion}",
-								"{@spell prestidigitation}"
+								"{@spell 法師之手}",
+								"{@spell 次級幻象}",
+								"{@spell 魔法技倆}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell detect magic}",
-								"{@spell identify}",
-								"{@spell shield}"
+								"{@spell 偵測魔法}",
+								"{@spell 鑑定術}",
+								"{@spell 護盾術}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell darkness}",
-								"{@spell locate object}",
-								"{@spell suggestion}"
+								"{@spell 黑暗術}",
+								"{@spell 物品定位術}",
+								"{@spell 暗示術}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell dispel magic}",
-								"{@spell remove curse}",
+								"{@spell 解除魔法}",
+								"{@spell 移除詛咒}",
 								"{@spell tongues}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell banishment}",
-								"{@spell greater invisibility}"
+								"{@spell 放逐術}",
+								"{@spell 高等隱形術}"
 							]
 						},
 						"5": {
@@ -21838,7 +21838,7 @@
 				{
 					"ac": 18,
 					"from": [
-						"{@item plate armor|phb}"
+						"{@item 全身板甲|phb}"
 					]
 				}
 			],
@@ -21886,7 +21886,7 @@
 					]
 				},
 				{
-					"name": "Heavy Crossbow",
+					"name": "重弩",
 					"entries": [
 						"{@atk rw} 命中{@hit 3}，射程100/400呎，單一目標。{@h}6 ({@damage 1d10 + 1})穿刺傷害。"
 					]
@@ -22135,7 +22135,7 @@
 				{
 					"ac": 20,
 					"from": [
-						"{@item plate armor|phb}",
+						"{@item 全身板甲|phb}",
 						"{@item 盾牌|phb}"
 					]
 				}
@@ -22645,7 +22645,7 @@
 					]
 				},
 				{
-					"name": "Greatsword",
+					"name": "巨劍",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}9 ({@damage 2d6 + 2})劈砍傷害。"
 					]
@@ -22701,7 +22701,7 @@
 				{
 					"ac": 20,
 					"from": [
-						"{@item plate armor|phb}",
+						"{@item 全身板甲|phb}",
 						"{@item 盾牌|phb}"
 					]
 				}
@@ -24548,7 +24548,7 @@
 			]
 		},
 		{
-			"name": "Knight",
+			"name": "騎士", "ENG_name": "Knight",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -24564,7 +24564,7 @@
 				{
 					"ac": 18,
 					"from": [
-						"{@item plate armor|phb}"
+						"{@item 全身板甲|phb}"
 					]
 				}
 			],
@@ -24590,9 +24590,9 @@
 			"cr": "3",
 			"trait": [
 				{
-					"name": "Brave",
+					"name": "勇氣",
 					"entries": [
-						"The knight has advantage on saving throws against being {@condition frightened}."
+						"騎士在對抗{@condition 恐懼}的豁免檢定中具有優勢。"
 					]
 				}
 			],
@@ -24600,33 +24600,33 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The knight makes two melee attacks."
+						"騎士進行兩次近戰攻擊。"
 					]
 				},
 				{
-					"name": "Greatsword",
+					"name": "巨劍",
 					"entries": [
 						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}10 ({@damage 2d6 + 3})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Heavy Crossbow",
+					"name": "重弩",
 					"entries": [
 						"{@atk rw} 命中{@hit 2}，射程100/400呎，單一目標。{@h}5 ({@damage 1d10})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Leadership (Recharges after a Short or Long Rest)",
+					"name": "領導力（短休或長休之後充能）",
 					"entries": [
-						"For 1 minute, the knight can utter a special command or warning whenever a nonhostile creature that it can see within 30 feet of it makes an attack roll or a saving throw. The creature can add a {@dice d4} to its roll provided it can hear and understand the knight. A creature can benefit from only one Leadership die at a time. This effect ends if the knight is {@condition incapacitated}."
+						"在1分鐘內，每當一個距離騎士30呎內，且騎士可以看見的非敵意生物進行一次攻擊檢定或豁免檢定，騎士可以說出一句特殊指令或警告。只要該生物可以聽見並理解騎士，則它可以骰一顆{@dice d4}並加入它的擲骰結果中。一個生物同時只能得益於一顆領導力骰。這個效果會在騎士陷入{@condition 無力}狀態時結束。"
 					]
 				}
 			],
 			"reaction": [
 				{
-					"name": "Parry",
+					"name": "格擋",
 					"entries": [
-						"The knight adds 2 to its AC against one melee attack that would hit it. To do so, the knight must see the attacker and be wielding a melee weapon."
+						"騎士在一次近戰攻擊將要命中它時可以針對該次攻擊使它的AC增加2點。若要這麼做，首領必須要能看見攻擊者且正持用一把近戰武器。"
 					]
 				}
 			],
@@ -25110,7 +25110,7 @@
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell detect magic}",
+								"{@spell 偵測魔法}",
 								"{@spell sanctuary}",
 								"{@spell shield of faith}"
 							]
@@ -25140,7 +25140,7 @@
 							"slots": 2,
 							"spells": [
 								"{@spell mass cure wounds}",
-								"{@spell scrying}"
+								"{@spell 探知}"
 							]
 						}
 					},
@@ -25493,9 +25493,9 @@
 						],
 						"3e": [
 							"{@spell charm person}",
-							"{@spell mirror image}",
-							"{@spell scrying}",
-							"{@spell suggestion}"
+							"{@spell 鏡影術}",
+							"{@spell 探知}",
+							"{@spell 暗示術}"
 						]
 					},
 					"ability": "cha"
@@ -25735,36 +25735,36 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell mage hand}",
-								"{@spell prestidigitation}",
-								"{@spell ray of frost}"
+								"{@spell 法師之手}",
+								"{@spell 魔法技倆}",
+								"{@spell 冷凍射線}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell detect magic}",
-								"{@spell magic missile}",
-								"{@spell shield}",
-								"{@spell thunderwave}"
+								"{@spell 偵測魔法}",
+								"{@spell 魔法飛彈}",
+								"{@spell 護盾術}",
+								"{@spell 雷鳴波}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell detect thoughts}",
-								"{@spell invisibility}",
+								"{@spell 偵測思想}",
+								"{@spell 隱形術}",
 								"{@spell Melf's acid arrow}",
-								"{@spell mirror image}"
+								"{@spell 鏡影術}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell animate dead}",
-								"{@spell counterspell}",
-								"{@spell dispel magic}",
-								"{@spell fireball}"
+								"{@spell 活化死屍}",
+								"{@spell 反制法術}",
+								"{@spell 解除魔法}",
+								"{@spell 火球術}"
 							]
 						},
 						"4": {
@@ -25778,7 +25778,7 @@
 							"slots": 3,
 							"spells": [
 								"{@spell cloudkill}",
-								"{@spell scrying}"
+								"{@spell 探知}"
 							]
 						},
 						"6": {
@@ -26407,7 +26407,7 @@
 			]
 		},
 		{
-			"name": "Mage",
+			"name": "魔法師", "ENG_name": "Mage",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -26423,7 +26423,7 @@
 				12,
 				{
 					"ac": 15,
-					"condition": "with {@spell mage armor}",
+					"condition": "使用{@spell 法師護甲}時",
 					"braces": true
 				}
 			],
@@ -26462,54 +26462,54 @@
 			"page": 347,
 			"spellcasting": [
 				{
-					"name": "Spellcasting",
+					"name": "施法",
 					"headerEntries": [
-						"The mage is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, {@hit 6} to hit with spell attacks). The mage has the following wizard spells prepared:"
+						"魔法師是9級的施法者。它的施法屬性為智力（法術豁免DC 14，法術攻擊命中{@hit 6}）。魔法師已準備了以下法師法術："
 					],
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell fire bolt}",
-								"{@spell light}",
-								"{@spell mage hand}",
-								"{@spell prestidigitation}"
+								"{@spell 火焰箭}",
+								"{@spell 光亮術}",
+								"{@spell 法師之手}",
+								"{@spell 魔法技倆}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell detect magic}",
-								"{@spell mage armor}",
-								"{@spell magic missile}",
-								"{@spell shield}"
+								"{@spell 偵測魔法}",
+								"{@spell 法師護甲}",
+								"{@spell 魔法飛彈}",
+								"{@spell 護盾術}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell misty step}",
-								"{@spell suggestion}"
+								"{@spell 迷蹤步}",
+								"{@spell 暗示術}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell counterspell}",
-								"{@spell fireball}",
-								"{@spell fly}"
+								"{@spell 反制法術}",
+								"{@spell 火球術}",
+								"{@spell 飛行術}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell greater invisibility}",
-								"{@spell ice storm}"
+								"{@spell 高等隱形術}",
+								"{@spell 冰風暴}"
 							]
 						},
 						"5": {
 							"slots": 1,
 							"spells": [
-								"{@spell cone of cold}"
+								"{@spell 寒冰錐}"
 							]
 						}
 					},
@@ -27016,9 +27016,9 @@
 						"The marid's innate spellcasting ability is Charisma (spell save DC 16, {@hit 8} to hit with spell attacks). It can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell create or destroy water}",
-						"{@spell detect evil and good}",
-						"{@spell detect magic}",
+						"{@spell 造水/枯水術}",
+						"{@spell 偵測善惡}",
+						"{@spell 偵測魔法}",
 						"{@spell fog cloud}",
 						"{@spell purify food and drink}"
 					],
@@ -27032,7 +27032,7 @@
 							"{@spell conjure elemental} (water elemental only)",
 							"{@spell control water}",
 							"{@spell gaseous form}",
-							"{@spell invisibility}",
+							"{@spell 隱形術}",
 							"{@spell plane shift}"
 						]
 					},
@@ -27652,8 +27652,8 @@
 							"{@spell cloudkill}"
 						],
 						"2e": [
-							"{@spell darkness}",
-							"{@spell dispel magic}"
+							"{@spell 黑暗術}",
+							"{@spell 解除魔法}"
 						]
 					},
 					"ability": "cha"
@@ -27863,7 +27863,7 @@
 						"The mind flayer's innate spellcasting ability is Intelligence (spell save DC 15). It can innately cast the following spells, requiring no components:"
 					],
 					"will": [
-						"{@spell detect thoughts}",
+						"{@spell 偵測思想}",
 						"{@spell levitate}"
 					],
 					"daily": {
@@ -27977,7 +27977,7 @@
 						"The mind flayer's innate spellcasting ability is Intelligence (spell save DC 15). It can innately cast the following spells, requiring no components:"
 					],
 					"will": [
-						"{@spell detect thoughts}",
+						"{@spell 偵測思想}",
 						"{@spell levitate}"
 					],
 					"daily": {
@@ -27998,16 +27998,16 @@
 							"spells": [
 								"{@spell blade ward}",
 								"{@spell dancing lights}",
-								"{@spell mage hand}",
+								"{@spell 法師之手}",
 								"{@spell shocking grasp}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell detect magic}",
+								"{@spell 偵測魔法}",
 								"{@spell disguise self}",
-								"{@spell shield}",
+								"{@spell 護盾術}",
 								"{@spell sleep}"
 							]
 						},
@@ -28015,7 +28015,7 @@
 							"slots": 3,
 							"spells": [
 								"{@spell blur}",
-								"{@spell invisibility}",
+								"{@spell 隱形術}",
 								"{@spell ray of enfeeblement}"
 							]
 						},
@@ -28023,7 +28023,7 @@
 							"slots": 3,
 							"spells": [
 								"{@spell clairvoyance}",
-								"{@spell lightning bolt}",
+								"{@spell 閃電束}",
 								"{@spell sending}"
 							]
 						},
@@ -28038,7 +28038,7 @@
 							"slots": 2,
 							"spells": [
 								"{@spell telekinesis}",
-								"{@spell wall of force}"
+								"{@spell 力牆術}"
 							]
 						}
 					},
@@ -28728,8 +28728,8 @@
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell animate dead}",
-								"{@spell dispel magic}"
+								"{@spell 活化死屍}",
+								"{@spell 解除魔法}"
 							]
 						},
 						"4": {
@@ -29397,8 +29397,8 @@
 						"The hag's innate spellcasting ability is Charisma (spell save DC 14, {@hit 6} to hit with spell attacks). She can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell detect magic}",
-						"{@spell magic missile}"
+						"{@spell 偵測魔法}",
+						"{@spell 魔法飛彈}"
 					],
 					"daily": {
 						"2e": [
@@ -29418,7 +29418,7 @@
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell identify}",
+								"{@spell 鑑定術}",
 								"{@spell ray of sickness}"
 							]
 						},
@@ -29426,15 +29426,15 @@
 							"slots": 3,
 							"spells": [
 								"{@spell hold person}",
-								"{@spell locate object}"
+								"{@spell 物品定位術}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
 								"{@spell bestow curse}",
-								"{@spell counterspell}",
-								"{@spell lightning bolt}"
+								"{@spell 反制法術}",
+								"{@spell 閃電束}"
 							]
 						},
 						"4": {
@@ -29448,7 +29448,7 @@
 							"slots": 2,
 							"spells": [
 								"{@spell contact other plane}",
-								"{@spell scrying}"
+								"{@spell 探知}"
 							]
 						},
 						"6": {
@@ -29844,11 +29844,11 @@
 						"The nycaloth's innate spellcasting ability is Charisma. The nycaloth can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell darkness}",
-						"{@spell detect magic}",
-						"{@spell dispel magic}",
-						"{@spell invisibility} (self only)",
-						"{@spell mirror image}"
+						"{@spell 黑暗術}",
+						"{@spell 偵測魔法}",
+						"{@spell 解除魔法}",
+						"{@spell 隱形術} (self only)",
+						"{@spell 鏡影術}"
 					],
 					"ability": "cha"
 				}
@@ -30269,13 +30269,13 @@
 						"The oni's innate spellcasting ability is Charisma (spell save DC 13). The oni can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell darkness}",
-						"{@spell invisibility}"
+						"{@spell 黑暗術}",
+						"{@spell 隱形術}"
 					],
 					"daily": {
 						"1e": [
 							"{@spell charm person}",
-							"{@spell cone of cold}",
+							"{@spell 寒冰錐}",
 							"{@spell gaseous form}",
 							"{@spell sleep}"
 						]
@@ -30639,7 +30639,7 @@
 				{
 					"ac": 18,
 					"from": [
-						"{@item plate armor|phb}"
+						"{@item 全身板甲|phb}"
 					]
 				}
 			],
@@ -31557,8 +31557,8 @@
 						"The pit fiend's spellcasting ability is Charisma (spell save DC 21). The pit fiend can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell detect magic}",
-						"{@spell fireball}"
+						"{@spell 偵測魔法}",
+						"{@spell 火球術}"
 					],
 					"daily": {
 						"3e": [
@@ -31760,7 +31760,7 @@
 					]
 				},
 				{
-					"name": "Greatsword",
+					"name": "巨劍",
 					"entries": [
 						"{@atk mw} 命中{@hit 12}，觸及5呎，單一目標。{@h}21 ({@damage 4d6 + 7}) slashing damage plus 22 ({@damage 5d8}) radiant damage."
 					]
@@ -31780,8 +31780,8 @@
 						"The planetar's spellcasting ability is Charisma (spell save DC 20). The planetar can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell detect evil and good}",
-						"{@spell invisibility} (self only)"
+						"{@spell 偵測善惡}",
+						"{@spell 隱形術} (self only)"
 					],
 					"daily": {
 						"3e": [
@@ -32847,14 +32847,14 @@
 					],
 					"will": [
 						"{@spell feather fall}",
-						"{@spell mage hand} (the hand is invisible)"
+						"{@spell 法師之手} (the hand is invisible)"
 					],
 					"daily": {
 						"1e": [
 							"{@spell cure wounds}",
 							"{@spell enlarge/reduce}",
 							"{@spell heat metal}",
-							"{@spell mirror image}"
+							"{@spell 鏡影術}"
 						]
 					},
 					"ability": "wis"
@@ -33144,22 +33144,22 @@
 						"The rakshasa's innate spellcasting ability is Charisma (spell save DC 18, {@hit 10} to hit with spell attacks). The rakshasa can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell detect thoughts}",
+						"{@spell 偵測思想}",
 						"{@spell disguise self}",
-						"{@spell mage hand}",
-						"{@spell minor illusion}"
+						"{@spell 法師之手}",
+						"{@spell 次級幻象}"
 					],
 					"daily": {
 						"3e": [
 							"{@spell charm person}",
-							"{@spell detect magic}",
-							"{@spell invisibility}",
+							"{@spell 偵測魔法}",
+							"{@spell 隱形術}",
 							"{@spell major image}",
-							"{@spell suggestion}"
+							"{@spell 暗示術}"
 						],
 						"1e": [
 							"{@spell dominate person}",
-							"{@spell fly}",
+							"{@spell 飛行術}",
 							"{@spell plane shift}",
 							"{@spell true seeing}"
 						]
@@ -34568,7 +34568,7 @@
 							"slots": 4,
 							"spells": [
 								"{@spell bless}",
-								"{@spell detect magic}",
+								"{@spell 偵測魔法}",
 								"{@spell guiding bolt}"
 							]
 						},
@@ -34968,7 +34968,7 @@
 			]
 		},
 		{
-			"name": "Scout",
+			"name": "斥候", "ENG_name": "Scout",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -35014,7 +35014,7 @@
 				{
 					"name": "敏銳聽覺和視覺",
 					"entries": [
-						"The scout 在依賴聽覺和視覺的睿知（{@skill 感知}）檢定中具有優勢。"
+						"斥候在依賴聽覺和視覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				}
 			],
@@ -35022,7 +35022,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The scout makes two melee attacks or two ranged attacks."
+						"斥候進行兩次近戰攻擊或兩次遠程攻擊。"
 					]
 				},
 				{
@@ -35034,7 +35034,7 @@
 				{
 					"name": "長弓",
 					"entries": [
-						"{@atk rw} {@hit 4} to hit, ranged 150/600 ft., one target. {@h}6 ({@damage 1d8 + 2})穿刺傷害。"
+						"{@atk rw} 命中{@hit 4}，射程150/600呎，單一目標。{@h}6 ({@damage 1d8 + 2})穿刺傷害。"
 					]
 				}
 			],
@@ -35150,7 +35150,7 @@
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell identify}",
+								"{@spell 鑑定術}",
 								"{@spell ray of sickness}"
 							]
 						},
@@ -35158,15 +35158,15 @@
 							"slots": 3,
 							"spells": [
 								"{@spell hold person}",
-								"{@spell locate object}"
+								"{@spell 物品定位術}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
 								"{@spell bestow curse}",
-								"{@spell counterspell}",
-								"{@spell lightning bolt}"
+								"{@spell 反制法術}",
+								"{@spell 閃電束}"
 							]
 						},
 						"4": {
@@ -35180,7 +35180,7 @@
 							"slots": 2,
 							"spells": [
 								"{@spell contact other plane}",
-								"{@spell scrying}"
+								"{@spell 探知}"
 							]
 						},
 						"6": {
@@ -36149,7 +36149,7 @@
 					]
 				},
 				{
-					"name": "Greatsword",
+					"name": "巨劍",
 					"entries": [
 						"{@atk mw} 命中{@hit 15}，觸及5呎，單一目標。{@h}22 ({@damage 4d6 + 8}) slashing damage plus 27 ({@damage 6d8}) radiant damage."
 					]
@@ -36201,8 +36201,8 @@
 						"The solar's spellcasting ability is Charisma (spell save DC 25). It can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell detect evil and good}",
-						"{@spell invisibility} (self only)"
+						"{@spell 偵測善惡}",
+						"{@spell 隱形術} (self only)"
 					],
 					"daily": {
 						"3e": [
@@ -36700,30 +36700,30 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell mage hand}",
-								"{@spell minor illusion}",
-								"{@spell ray of frost}"
+								"{@spell 法師之手}",
+								"{@spell 次級幻象}",
+								"{@spell 冷凍射線}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
 								"{@spell charm person}",
-								"{@spell detect magic}",
+								"{@spell 偵測魔法}",
 								"{@spell sleep}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell detect thoughts}",
+								"{@spell 偵測思想}",
 								"{@spell hold person}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell lightning bolt}",
+								"{@spell 閃電束}",
 								"{@spell water breathing}"
 							]
 						},
@@ -36836,7 +36836,7 @@
 			]
 		},
 		{
-			"name": "Spy",
+			"name": "密探", "ENG_name": "Spy",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -36874,19 +36874,19 @@
 				"stealth": "+4"
 			},
 			"passive": 16,
-			"languages": "any two languages",
+			"languages": "任意兩種語言",
 			"cr": "1",
 			"trait": [
 				{
-					"name": "Cunning Action",
+					"name": "巧妙動作",
 					"entries": [
-						"On each of its turns, the spy can use a bonus action to take the Dash, Disengage, or Hide action."
+						"在它的每個回合，密探可以使用一個附贈動作以採取{@action 疾走}、{@action 撤離}、或{@action 躲藏}動作。"
 					]
 				},
 				{
-					"name": "Sneak Attack (1/Turn)",
+					"name": "偷襲 (1/回合)",
 					"entries": [
-						"The spy deals an extra 7 ({@dice 2d6}) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the spy that isn't {@condition incapacitated} and the spy doesn't have disadvantage on the attack roll."
+						"當密探以武器攻擊命中一個目標時，若該攻擊檢定具有優勢，或者該攻擊檢定沒有劣勢且密探有一個未{@condition 無力}的隊友距離目標5呎內，則密探造成額外的7 ({@dice 2d6})傷害。"
 					]
 				}
 			],
@@ -36894,7 +36894,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The spy makes two melee attacks."
+						"密探進行二次近戰攻擊。"
 					]
 				},
 				{
@@ -38778,11 +38778,11 @@
 						"The thri-kreen's innate spellcasting ability is Wisdom. The thri-kreen can innately cast the following spells, requiring no components:"
 					],
 					"will": [
-						"{@spell mage hand} (the hand is invisible)"
+						"{@spell 法師之手} (the hand is invisible)"
 					],
 					"daily": {
 						"1": [
-							"{@spell invisibility} (self only)"
+							"{@spell 隱形術} (self only)"
 						],
 						"2e": [
 							"{@spell blur}",
@@ -39143,7 +39143,7 @@
 				{
 					"name": "矛",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 3}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d6 + 1})穿刺傷害，或若以雙手使用以進行一次近戰攻擊時 5 ({@damage 1d8 + 1})穿刺傷害。"
+						"{@atk mw,rw} 命中{@hit 3}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d6 + 1})穿刺傷害，或若雙手使用以進行一次近戰攻擊時 5 ({@damage 1d8 + 1})穿刺傷害。"
 					]
 				}
 			],
@@ -39817,12 +39817,12 @@
 					"will": [
 						"{@spell alter self}",
 						"{@spell clairvoyance}",
-						"{@spell darkness}",
-						"{@spell detect magic}",
-						"{@spell detect thoughts}",
-						"{@spell dispel magic}",
-						"{@spell invisibility} (self only)",
-						"{@spell suggestion}"
+						"{@spell 黑暗術}",
+						"{@spell 偵測魔法}",
+						"{@spell 偵測思想}",
+						"{@spell 解除魔法}",
+						"{@spell 隱形術} (self only)",
+						"{@spell 暗示術}"
 					],
 					"daily": {
 						"3e": [
@@ -40061,7 +40061,7 @@
 						"The unicorn's innate spellcasting ability is Charisma (spell save DC 14). The unicorn can innately cast the following spells, requiring no components:"
 					],
 					"will": [
-						"{@spell detect evil and good}",
+						"{@spell 偵測善惡}",
 						"{@spell druidcraft}",
 						"{@spell pass without trace}"
 					],
@@ -40552,9 +40552,9 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell mage hand}",
-								"{@spell prestidigitation}",
-								"{@spell ray of frost}"
+								"{@spell 法師之手}",
+								"{@spell 魔法技倆}",
+								"{@spell 冷凍射線}"
 							]
 						},
 						"1": {
@@ -40568,15 +40568,15 @@
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell detect thoughts}",
+								"{@spell 偵測思想}",
 								"{@spell gust of wind}",
-								"{@spell mirror image}"
+								"{@spell 鏡影術}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell animate dead}",
+								"{@spell 活化死屍}",
 								"{@spell bestow curse}",
 								"{@spell nondetection}"
 							]
@@ -40585,7 +40585,7 @@
 							"slots": 3,
 							"spells": [
 								"{@spell blight}",
-								"{@spell greater invisibility}"
+								"{@spell 高等隱形術}"
 							]
 						},
 						"5": {
@@ -40630,7 +40630,7 @@
 				{
 					"ac": 18,
 					"from": [
-						"{@item plate armor|phb}"
+						"{@item 全身板甲|phb}"
 					]
 				}
 			],
@@ -40736,7 +40736,7 @@
 					]
 				},
 				{
-					"name": "Greatsword",
+					"name": "巨劍",
 					"entries": [
 						"{@atk mw} 命中{@hit 9}，觸及5呎，單一生物。 {@h}11 ({@damage 2d6 + 4})劈砍傷害。"
 					]
@@ -43375,7 +43375,7 @@
 						"The yochlol's spellcasting ability is Charisma (spell save DC 14). The yochlol can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell detect thoughts}",
+						"{@spell 偵測思想}",
 						"{@spell web}"
 					],
 					"daily": {
@@ -44786,7 +44786,7 @@
 							"{@spell fear}"
 						],
 						"3": [
-							"{@spell suggestion}"
+							"{@spell 暗示術}"
 						]
 					},
 					"ability": "cha"
@@ -44917,7 +44917,7 @@
 					],
 					"daily": {
 						"3": [
-							"{@spell suggestion}"
+							"{@spell 暗示術}"
 						]
 					},
 					"ability": "cha"
@@ -45036,7 +45036,7 @@
 					],
 					"daily": {
 						"3": [
-							"{@spell suggestion}"
+							"{@spell 暗示術}"
 						]
 					},
 					"ability": "cha"
@@ -45173,7 +45173,7 @@
 					],
 					"daily": {
 						"3": [
-							"{@spell suggestion}"
+							"{@spell 暗示術}"
 						]
 					},
 					"ability": "cha"
@@ -45284,7 +45284,7 @@
 					"daily": {
 						"3e": [
 							"{@spell poison spray}",
-							"{@spell suggestion}"
+							"{@spell 暗示術}"
 						]
 					},
 					"ability": "cha"
