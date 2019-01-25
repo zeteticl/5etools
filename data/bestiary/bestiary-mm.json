@@ -4207,7 +4207,7 @@
 				"petrified",
 				"poisoned"
 			],
-			"senses": "盲視60呎 (blind beyond this radius)",
+			"senses": "盲視60呎（超過半徑範圍則視作目盲）",
 			"passive": 6,
 			"cr": "1",
 			"trait": [
@@ -8070,7 +8070,7 @@
 			]
 		},
 		{
-			"name": "Bullywug",
+			"name": "狂蛙人", "ENG_name": "Bullywug",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -8110,31 +8110,31 @@
 				"stealth": "+3"
 			},
 			"passive": 10,
-			"languages": "Bullywug",
+			"languages": "狂蛙人語",
 			"cr": "1/4",
 			"trait": [
 				{
 					"name": "兩棲",
 					"entries": [
-						"The bullywug可以在空氣和水中呼吸。"
+						"狂蛙人可以在空氣和水中呼吸。"
 					]
 				},
 				{
-					"name": "Speak with Frogs and Toads",
+					"name": "蛙類交談",
 					"entries": [
-						"The bullywug can communicate simple concepts to frogs and toads when it speaks in Bullywug."
+						"狂蛙人可以使用狂蛙人語對青蛙與蟾蜍進行簡單概念的溝通。"
 					]
 				},
 				{
-					"name": "Swamp Camouflage",
+					"name": "沼澤偽裝",
 					"entries": [
-						"The bullywug has advantage on Dexterity (Stealth) checks made to hide in swampy terrain."
+						"狂蛙人在沼澤地形為躲藏所進行的敏捷（{@skill 隱匿}）檢定具有優勢。"
 					]
 				},
 				{
-					"name": "Standing Leap",
+					"name": "立定跳躍",
 					"entries": [
-						"The bullywug's long jump is up to 20 ft. and its high jump is up to 10 ft., with or without a running start."
+						"狂蛙人的跳遠距離最多20呎、且跳高距離最多10呎，無論有沒有助跑都一樣。"
 					]
 				}
 			],
@@ -8142,7 +8142,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The bullywug makes two melee attacks: one with its bite and one with its spear."
+						"狂蛙人進行兩次近戰攻擊：一次啃咬，一次矛。"
 					]
 				},
 				{
@@ -8154,7 +8154,7 @@
 				{
 					"name": "矛",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 3}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d6 + 1}) piercing damage, or 5 ({@damage 1d8 + 1}) piercing damage if used with two hands to make a melee attack."
+						"{@atk mw,rw} 命中{@hit 3}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d6 + 1})穿刺傷害，或若雙手使用以進行一次近戰攻擊時 5 ({@damage 1d8 + 1})穿刺傷害。"
 					]
 				}
 			],
@@ -8188,7 +8188,7 @@
 				{
 					"ac": 19,
 					"from": [
-						"{@item scale mail|phb}"
+						"{@item 鱗甲|phb}"
 					]
 				}
 			],
@@ -9939,7 +9939,7 @@
 			"conditionImmune": [
 				"poisoned"
 			],
-			"senses": "盲視30呎 (blind beyond this radius)",
+			"senses": "盲視30呎（超過半徑範圍則視作目盲）",
 			"passive": 10,
 			"languages": "understands Common but can't speak",
 			"cr": "0",
@@ -12653,7 +12653,7 @@
 				{
 					"ac": 16,
 					"from": [
-						"{@item scale mail|phb}"
+						"{@item 鱗甲|phb}"
 					]
 				}
 			],
@@ -13050,7 +13050,7 @@
 				{
 					"ac": 16,
 					"from": [
-						"{@item scale mail|phb}",
+						"{@item 鱗甲|phb}",
 						"{@item 盾牌|phb}"
 					]
 				}
@@ -15826,7 +15826,7 @@
 				"petrified",
 				"poisoned"
 			],
-			"senses": "盲視60呎 (blind beyond this radius)",
+			"senses": "盲視60呎（超過半徑範圍則視作目盲）",
 			"passive": 7,
 			"cr": "1/4",
 			"trait": [
@@ -15984,7 +15984,7 @@
 				{
 					"name": "立定跳躍",
 					"entries": [
-						"青蛙的跳遠最多10呎距離、且跳高最多5呎距離，無論有沒有助跑都一樣。"
+						"青蛙的跳遠距離最多10呎、且跳高距離最多5呎，無論有沒有助跑都一樣。"
 					]
 				}
 			],
@@ -16336,7 +16336,7 @@
 				"poisoned",
 				"prone"
 			],
-			"senses": "盲視30呎 (blind beyond this radius)",
+			"senses": "盲視30呎（超過半徑範圍則視作目盲）",
 			"passive": 5,
 			"cr": "1/2",
 			"trait": [
@@ -17483,7 +17483,7 @@
 				{
 					"name": "立定跳躍",
 					"entries": [
-						"青蛙的跳遠最多20呎距離、且跳高最多10呎距離，無論有沒有助跑都一樣。"
+						"青蛙的跳遠距離最多20呎、且跳高距離最多10呎，無論有沒有助跑都一樣。"
 					]
 				}
 			],
@@ -18363,7 +18363,7 @@
 				{
 					"name": "立定跳躍",
 					"entries": [
-						"蟾蜍的跳遠最多20呎距離、且跳高最多10呎距離，無論有沒有助跑都一樣。"
+						"蟾蜍的跳遠距離最多20呎、且跳高距離最多10呎，無論有沒有助跑都一樣。"
 					]
 				}
 			],
@@ -20988,7 +20988,7 @@
 				"blinded",
 				"prone"
 			],
-			"senses": "盲視60呎 (blind beyond this radius)",
+			"senses": "盲視60呎（超過半徑範圍則視作目盲）",
 			"passive": 14,
 			"languages": "Grell",
 			"cr": "3",
@@ -21321,7 +21321,7 @@
 			"conditionImmune": [
 				"blinded"
 			],
-			"senses": "盲視30呎 or 10 ft. while deafened (blind beyond this radius)",
+			"senses": "盲視30呎 或耳聾時盲視10呎（超過半徑範圍則視作目盲）",
 			"passive": 13,
 			"languages": "Undercommon",
 			"cr": "1/4",
@@ -22182,7 +22182,7 @@
 				"poisoned",
 				"stunned"
 			],
-			"senses": "盲視60呎 (blind beyond this radius)",
+			"senses": "盲視60呎（超過半徑範圍則視作目盲）",
 			"passive": 14,
 			"languages": "understands the languages of its creator but can't speak",
 			"cr": "4",
@@ -23944,7 +23944,7 @@
 			"conditionImmune": [
 				"blinded"
 			],
-			"senses": "盲視60呎 (blind beyond this radius)",
+			"senses": "盲視60呎（超過半徑範圍則視作目盲）",
 			"passive": 12,
 			"languages": "understands Deep Speech but can't speak, telepathy 60 ft.",
 			"cr": "2",
@@ -29211,7 +29211,7 @@
 			]
 		},
 		{
-			"name": "Needle Blight",
+			"name": "枯針怪", "ENG_name": "Needle Blight",
 			"size": "M",
 			"type": "plant",
 			"source": "MM",
@@ -29244,9 +29244,9 @@
 				"blinded",
 				"deafened"
 			],
-			"senses": "盲視60呎 (blind beyond this radius)",
+			"senses": "盲視60呎（超過半徑範圍則視作目盲）",
 			"passive": 9,
-			"languages": "understands Common but can't speak",
+			"languages": "理解通用語，但不會說",
 			"cr": "1/4",
 			"action": [
 				{
@@ -29256,7 +29256,7 @@
 					]
 				},
 				{
-					"name": "Needles",
+					"name": "針刺",
 					"entries": [
 						"{@atk rw} 命中{@hit 3}，射程30/60呎，單一目標。{@h}8 ({@damage 2d6 + 1})穿刺傷害。"
 					]
@@ -32738,7 +32738,7 @@
 				"paralyzed",
 				"poisoned"
 			],
-			"senses": "盲視30呎 (blind beyond this radius)",
+			"senses": "盲視30呎（超過半徑範圍則視作目盲）",
 			"passive": 8,
 			"cr": "1",
 			"action": [
@@ -34070,7 +34070,7 @@
 				"petrified",
 				"poisoned"
 			],
-			"senses": "盲視60呎 (blind beyond this radius)",
+			"senses": "盲視60呎（超過半徑範圍則視作目盲）",
 			"passive": 6,
 			"cr": "2",
 			"trait": [
@@ -35518,7 +35518,7 @@
 				"deafened",
 				"exhaustion"
 			],
-			"senses": "盲視60呎 (blind beyond this radius)",
+			"senses": "盲視60呎（超過半徑範圍則視作目盲）",
 			"passive": 10,
 			"cr": "5",
 			"trait": [
@@ -35699,7 +35699,7 @@
 				"deafened",
 				"frightened"
 			],
-			"senses": "盲視30呎 (blind beyond this radius)",
+			"senses": "盲視30呎（超過半徑範圍則視作目盲）",
 			"passive": 6,
 			"cr": "0",
 			"trait": [
@@ -39543,7 +39543,7 @@
 			]
 		},
 		{
-			"name": "Twig Blight",
+			"name": "枯枝怪", "ENG_name": "Twig Blight",
 			"size": "S",
 			"type": "plant",
 			"source": "MM",
@@ -39582,15 +39582,15 @@
 				"blinded",
 				"deafened"
 			],
-			"senses": "盲視60呎 (blind beyond this radius)",
+			"senses": "盲視60呎（超過半徑範圍則視作目盲）",
 			"passive": 9,
-			"languages": "understands Common but can't speak",
+			"languages": "理解通用語，但不會說",
 			"cr": "1/8",
 			"trait": [
 				{
-					"name": "False Appearance",
+					"name": "擬形",
 					"entries": [
-						"While the blight remains motionless, it is indistinguishable from a dead shrub."
+						"當枯枝怪保持不動，它看起來就跟枯死的灌木叢一模一樣。"
 					]
 				}
 			],
@@ -40878,7 +40878,7 @@
 			]
 		},
 		{
-			"name": "Vine Blight",
+			"name": "枯藤怪", "ENG_name": "Vine Blight",
 			"size": "M",
 			"type": "plant",
 			"source": "MM",
@@ -40914,29 +40914,29 @@
 				"blinded",
 				"deafened"
 			],
-			"senses": "盲視60呎 (blind beyond this radius)",
+			"senses": "盲視60呎（超過半徑範圍則視作目盲）",
 			"passive": 10,
-			"languages": "Common",
+			"languages": "通用語",
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "False Appearance",
+					"name": "擬形",
 					"entries": [
-						"While the blight remains motionless, it is indistinguishable from a tangle of vines."
+						"當枯藤怪保持不動，它看起來就跟糾纏成團的藤蔓一模一樣。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Constrict",
+					"name": "絞纏",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及10呎，單一目標。{@h}9 ({@damage 2d6 + 2}) bludgeoning damage, and a Large or smaller target is {@condition grappled} (escape DC 12). Until this grapple ends, the target is {@condition restrained}, and the blight can't constrict another target."
+						"{@atk mw} 命中{@hit 4}，觸及10呎，單一目標。{@h}9 ({@damage 2d6 + 2})鈍擊傷害，且體型為大型或更小的目標{@condition 被擒}(逃脫DC 12)。直到擒抱結束前，該目標被{@condition 束縛}，且枯藤怪不能絞纏另一個目標。"
 					]
 				},
 				{
-					"name": "Entangling Plants {@recharge 5}",
+					"name": "纏身植被 {@recharge 5}",
 					"entries": [
-						"Grasping roots and vines sprout in a 15-foot radius centered on the blight, withering away after 1 minute. For the duration, that area is difficult terrain for nonplant creatures. In addition, each creature of the blight's choice in that area when the plants appear must succeed on a DC 12 Strength saving throw or become {@condition restrained}. A creature can use its action to make a DC 12 Strength check, freeing it self or another entangled creature within reach on a success."
+						"攫抓鬚根和藤蔓在以枯藤怪為中心的15呎半徑範圍內蔓生而出，並在1分鐘後枯萎死去。在持續期間，這個區域對非植物生物而言為困難地形。此外，在植被出現時處於範圍內，每個由枯藤怪所選擇的生物都必須成功通過一次DC 12的力量豁免，否則被{@condition 束縛}。一個生物可以使用它的動作以進行一次DC 12的力量檢定，若成功則將自己或觸及範圍內另一個被糾纏的生物給釋放。"
 					]
 				}
 			],
@@ -40984,7 +40984,7 @@
 				"deafened",
 				"frightened"
 			],
-			"senses": "盲視30呎 (blind beyond this radius)",
+			"senses": "盲視30呎（超過半徑範圍則視作目盲）",
 			"passive": 6,
 			"cr": "1/4",
 			"trait": [

@@ -2344,7 +2344,7 @@ EntryRenderer.monster = {
 					})
 				}
 			}
-
+			if(!copy) return {}; //haz add
 			Object.keys(copy).forEach(k => {
 				if (mon[k] === null) return delete mon[k];
 				if (mon[k] == null) mon[k] = MiscUtil.copy(copy[k]);
