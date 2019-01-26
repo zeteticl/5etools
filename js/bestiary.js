@@ -306,6 +306,7 @@ const traitFilter = new Filter({
 	],
 	displayFn: function(t){
 		switch(t){
+			case "Aggressive": return "侵略性";
 			case "Amorphous": return "無定形";
 			case "Amphibious": return "兩棲";
 			case "Brute": return "殘暴";
@@ -328,7 +329,7 @@ const traitFilter = new Filter({
 			case "Rampage": return "橫衝直撞";
 			case "Shapechanger": return "變形者";
 			case "Spider Climb": return "蛛行";
-			case "Sunlight Sensitivity": return "陽光敏感";
+			case "Sunlight Sensitivity": return "日光敏感";
 			case "Undead Fortitude": return "不死韌性";
 			case "Water Breathing": return "水下呼吸";
 			case "Web Sense": return "蛛網感知";
@@ -1225,7 +1226,7 @@ function renderStatblock (mon, isScaled) {
 
 	// reset tabs
 	const statTab = EntryRenderer.utils.tabButton(
-		"Statblock",
+		"資料卡",
 		() => {
 			$wrpBtnProf.append(profBtn);
 			$(`#float-token`).show();
@@ -1233,7 +1234,7 @@ function renderStatblock (mon, isScaled) {
 		buildStatsTab
 	);
 	const infoTab = EntryRenderer.utils.tabButton(
-		"Info",
+		"情報",
 		() => {
 			profBtn = profBtn || $wrpBtnProf.children().detach();
 			$(`#float-token`).hide();
@@ -1241,7 +1242,7 @@ function renderStatblock (mon, isScaled) {
 		buildFluffTab
 	);
 	const picTab = EntryRenderer.utils.tabButton(
-		"Images",
+		"圖片",
 		() => {
 			profBtn = profBtn || $wrpBtnProf.children().detach();
 			$(`#float-token`).hide();

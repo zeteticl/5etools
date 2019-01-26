@@ -228,7 +228,7 @@ function EntryRenderer () {
 				case "variant":
 					this._handleTrackTitles(entry.name);
 					textStack[0] += `<${this.wrapperTag} class="statsBlockInset">`;
-					textStack[0] += `<span class="entry-title" data-title-index="${this._headerIndex++}" ${this._getEnumeratedTitleRel(entry.name)}><span class="entry-title-inner">Variant: ${entry.name}</span></span>`;
+					textStack[0] += `<span class="entry-title" data-title-index="${this._headerIndex++}" ${this._getEnumeratedTitleRel(entry.name)}><span class="entry-title-inner">變體：${entry.name}</span></span>`;
 					for (let i = 0; i < entry.entries.length; i++) {
 						this._recursiveEntryRender(entry.entries[i], textStack, 2, {prefix: "<p>", suffix: "</p>"});
 					}
@@ -2382,7 +2382,6 @@ EntryRenderer.monster = {
 		}
 
 		if (mon._copy) {
-			console.log(mon._copy, mon.source); //haz test
 			const hash = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_BESTIARY](mon._copy);
 			if (!EntryRenderer.monster._mergeCache) {
 				EntryRenderer.monster._mergeCache = {};
