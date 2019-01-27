@@ -6207,14 +6207,13 @@ Parser.ItemTierToDisplay = function(t){
 }
 
 //Language
-Parser.languageKeyToDisplay["any"] 		= "任意";
-Parser.languageKeyToDisplay["abyssal"] 	= "深淵語";
-Parser.languageKeyToDisplay["aquan"] 	= "水族語";
-Parser.languageKeyToDisplay["auran"] 	= "大氣語";
-Parser.languageKeyToDisplay["celestial"]= "天界語";
-Parser.languageKeyToDisplay["choose"] 	= "自選";
-Parser.languageKeyToDisplay["common"] 	= "通用語";
-Parser.languageKeyToDisplay["deep speech"] = "深幽語";
+Parser.languageKeyToDisplay["any"] 	 = "任意";
+Parser.languageKeyToDisplay["other"] = "其他";
+Parser.languageKeyToDisplay["choose"]= "自選";
+Parser.languageKeyToDisplay["thieves' cant"]= "竊賊黑話";
+Parser.languageKeyToDisplay["druidic"] 		= "德魯伊語";
+Parser.languageKeyToDisplay["common"] 	  = "通用語";
+Parser.languageKeyToDisplay["undercommon"]= "地底通用語";
 Parser.languageKeyToDisplay["draconic"] = "龍語";
 Parser.languageKeyToDisplay["dwarvish"] = "矮人語";
 Parser.languageKeyToDisplay["elvish"] 	= "精靈語";
@@ -6222,15 +6221,18 @@ Parser.languageKeyToDisplay["giant"] 	= "巨人語";
 Parser.languageKeyToDisplay["gnomish"] 	= "地侏語";
 Parser.languageKeyToDisplay["goblin"] 	= "哥布林語";
 Parser.languageKeyToDisplay["halfling"] = "半身人語";
-Parser.languageKeyToDisplay["infernal"] = "煉獄語";
 Parser.languageKeyToDisplay["orc"] 		= "獸人語";
-Parser.languageKeyToDisplay["other"] 	= "其他";
-Parser.languageKeyToDisplay["primordial"] = "盤古語";
-Parser.languageKeyToDisplay["sylvan"] 	= "木族語";
-Parser.languageKeyToDisplay["terran"] 	= "大地語";
-Parser.languageKeyToDisplay["undercommon"]= "地底通用語";
-Parser.languageKeyToDisplay["thieves' cant"]= "竊賊黑話";
-Parser.languageKeyToDisplay["druidic"]= "德魯伊語";
+Parser.languageKeyToDisplay["abyssal"] 	   = "深淵語";
+Parser.languageKeyToDisplay["celestial"]   = "天界語";
+Parser.languageKeyToDisplay["deep speech"] = "深幽語";
+Parser.languageKeyToDisplay["infernal"]    = "煉獄語";
+Parser.languageKeyToDisplay["primordial"]= "原初語";
+Parser.languageKeyToDisplay["ignan"] 	 = "火族語";
+Parser.languageKeyToDisplay["sylvan"] 	 = "木族語";
+Parser.languageKeyToDisplay["terran"] 	 = "土族語";
+Parser.languageKeyToDisplay["aquan"] 	 = "水族語";
+Parser.languageKeyToDisplay["auran"] 	 = "氣族語";
+
 Parser.LanguageToDisplay = function(lang_key){
 	return Parser.translateKeyInMapToDisplay(Parser.languageKeyToDisplay, lang_key);
 }

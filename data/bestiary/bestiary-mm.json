@@ -9908,7 +9908,7 @@
 			]
 		},
 		{
-			"name": "Crawling Claw",
+			"name": "蠕行之爪", "ENG_name": "Crawling Claw",
 			"size": "T",
 			"type": "undead",
 			"source": "MM",
@@ -9941,21 +9941,21 @@
 			],
 			"senses": "盲視30呎（超過半徑範圍則視作目盲）",
 			"passive": 10,
-			"languages": "understands Common but can't speak",
+			"languages": "理解通用語，但不會說",
 			"cr": "0",
 			"trait": [
 				{
-					"name": "Turn Immunity",
+					"name": "免疫驅散",
 					"entries": [
-						"The claw is immune to effects that turn undead."
+						"蠕行之爪免疫於驅散不死的效果。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Claw",
+					"name": "爪抓",
 					"entries": [
-						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}3 ({@damage 1d4 + 1}) bludgeoning or slashing damage (claw's choice)."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}3 ({@damage 1d4 + 1})鈍擊傷害或劈砍傷害（由蠕行之爪決定）。"
 					]
 				}
 			],
@@ -13132,7 +13132,7 @@
 			]
 		},
 		{
-			"name": "Duodrone",
+			"name": "二元冢", "ENG_name": "Duodrone",
 			"group": "Modrons",
 			"size": "M",
 			"type": "construct",
@@ -13164,19 +13164,19 @@
 			"cha": 7,
 			"senses": "真實視覺120呎",
 			"passive": 10,
-			"languages": "Modron",
+			"languages": "魔冢語",
 			"cr": "1/4",
 			"trait": [
 				{
-					"name": "Axiomatic Mind",
+					"name": "公理之念",
 					"entries": [
-						"The duodrone can't be compelled to act in a manner contrary to its nature or its instructions."
+						"二元冢無法被強迫去進行違背其天性或指示的行動。"
 					]
 				},
 				{
-					"name": "Disintegration",
+					"name": "解體",
 					"entries": [
-						"If the duodrone dies, its body disintegrates into dust, leaving behind its weapons and anything else it was carrying."
+						"若二元冢死亡，它的身體將瓦解成塵，留下它的武器和任何它所攜帶的其它東西。"
 					]
 				}
 			],
@@ -13184,11 +13184,11 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The duodrone makes two fist attacks or two javelin attacks."
+						"二元冢進行二次拳擊攻擊或二次標槍攻擊。"
 					]
 				},
 				{
-					"name": "Fist",
+					"name": "拳擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 2}，觸及5呎，單一目標。{@h}2 ({@damage 1d4})鈍擊傷害。"
 					]
@@ -13203,10 +13203,10 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Rogue Modrons",
+					"name": "遊蕩魔冢",
 					"entries": [
-						"A modron unit sometimes becomes defective, either through natural decay or exposure to chaotic forces. Rogue modrons don't act in accordance with Primus's wishes and directives, breaking laws, disobeying orders, and even engaging in violence. Other modrons hunt down such rogues.",
-						"A rogue modron loses the Axiomatic Mind trait and can have any alignment other than lawful neutral. Otherwise, it has the same statistics as a regular modron of its rank."
+						"一個魔冢單元有時候會變得殘缺，無論是因為自然的衰敗、或是因為暴露於混亂力量之下。遊蕩魔冢不會依循奇點的意願或指令行動，它們破壞律法、違背命令、甚至會訴諸於暴力。其他魔冢將會獵殺這類遊盪魔冢。",
+						"一個遊蕩魔冢失去公理之念特質，且屬於任何不是守序中立的陣營。除此之外，它們具有和同階級尋常魔冢相同的數據資料。"
 					]
 				}
 			],
@@ -28234,7 +28234,7 @@
 			]
 		},
 		{
-			"name": "Monodrone",
+			"name": "單元冢", "ENG_name": "Monodrone",
 			"group": "Modrons",
 			"size": "M",
 			"type": "construct",
@@ -28267,19 +28267,19 @@
 			"cha": 5,
 			"senses": "真實視覺120呎",
 			"passive": 10,
-			"languages": "Modron",
+			"languages": "魔冢語",
 			"cr": "1/8",
 			"trait": [
 				{
-					"name": "Axiomatic Mind",
+					"name": "公理之念",
 					"entries": [
-						"The monodrone can't be compelled to act in a manner contrary to its nature or its instructions."
+						"單元冢無法被強迫去進行違背其天性或指示的行動。"
 					]
 				},
 				{
-					"name": "Disintegration",
+					"name": "解體",
 					"entries": [
-						"If the monodrone dies, its body disintegrates into dust, leaving behind its weapons and anything else it was carrying."
+						"若單元冢死亡，它的身體將瓦解成塵，留下它的武器和任何它所攜帶的其它東西。"
 					]
 				}
 			],
@@ -28300,10 +28300,10 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Rogue Modrons",
+					"name": "遊蕩魔冢",
 					"entries": [
-						"A modron unit sometimes becomes defective, either through natural decay or exposure to chaotic forces. Rogue modrons don't act in accordance with Primus's wishes and directives, breaking laws, disobeying orders, and even engaging in violence. Other modrons hunt down such rogues.",
-						"A rogue modron loses the Axiomatic Mind trait and can have any alignment other than lawful neutral. Otherwise, it has the same statistics as a regular modron of its rank."
+						"一個魔冢單元有時候會變得殘缺，無論是因為自然的衰敗、或是因為暴露於混亂力量之下。遊蕩魔冢不會依循奇點的意願或指令行動，它們破壞律法、違背命令、甚至會訴諸於暴力。其他魔冢將會獵殺這類遊盪魔冢。",
+						"一個遊蕩魔冢失去公理之念特質，且屬於任何不是守序中立的陣營。除此之外，它們具有和同階級尋常魔冢相同的數據資料。"
 					]
 				}
 			],
@@ -31081,7 +31081,7 @@
 			]
 		},
 		{
-			"name": "Pentadrone",
+			"name": "五元冢", "ENG_name": "Pentadrone",
 			"group": "Modrons",
 			"size": "L",
 			"type": "construct",
@@ -31116,19 +31116,19 @@
 			},
 			"senses": "真實視覺120呎",
 			"passive": 14,
-			"languages": "Modron",
+			"languages": "魔冢語",
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Axiomatic Mind",
+					"name": "公理之念",
 					"entries": [
-						"The pentadrone can't be compelled to act in a manner contrary to its nature or its instructions."
+						"五元冢無法被強迫去進行違背其天性或指示的行動。"
 					]
 				},
 				{
-					"name": "Disintegration",
+					"name": "解體",
 					"entries": [
-						"If the pentadrone dies, its body disintegrates into dust, leaving behind its weapons and anything else it was carrying."
+						"若五元冢死亡，它的身體將瓦解成塵，留下它的武器和任何它所攜帶的其它東西。"
 					]
 				}
 			],
@@ -31136,29 +31136,29 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The pentadrone makes five arm attacks."
+						"五元冢進行五次臂擊攻擊。"
 					]
 				},
 				{
-					"name": "Arm",
+					"name": "臂擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Paralysis Gas {@recharge 5}",
+					"name": "麻痺毒氣 {@recharge 5}",
 					"entries": [
-						"The pentadrone exhales a 30-foot cone of gas. Each creature in that area must succeed on a DC 11 Constitution saving throw or be {@condition paralyzed} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"五元冢吐出一道30呎錐形的毒氣。每個在範圍內的生物必須成功通過一次DC 11的體質豁免，否則陷入{@condition 麻痺}狀態長達1分鐘。一個生物可以在每次它的回合結束時重複這個豁免檢定，若檢定成功則結束這個效果對它的影響。"
 					]
 				}
 			],
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Rogue Modrons",
+					"name": "遊蕩魔冢",
 					"entries": [
-						"A modron unit sometimes becomes defective, either through natural decay or exposure to chaotic forces. Rogue modrons don't act in accordance with Primus's wishes and directives, breaking laws, disobeying orders, and even engaging in violence. Other modrons hunt down such rogues.",
-						"A rogue modron loses the Axiomatic Mind trait and can have any alignment other than lawful neutral. Otherwise, it has the same statistics as a regular modron of its rank."
+						"一個魔冢單元有時候會變得殘缺，無論是因為自然的衰敗、或是因為暴露於混亂力量之下。遊蕩魔冢不會依循奇點的意願或指令行動，它們破壞律法、違背命令、甚至會訴諸於暴力。其他魔冢將會獵殺這類遊盪魔冢。",
+						"一個遊蕩魔冢失去公理之念特質，且屬於任何不是守序中立的陣營。除此之外，它們具有和同階級尋常魔冢相同的數據資料。"
 					]
 				}
 			],
@@ -32518,7 +32518,7 @@
 			]
 		},
 		{
-			"name": "Quadrone",
+			"name": "四元冢", "ENG_name": "Quadrone",
 			"group": "Modrons",
 			"size": "M",
 			"type": "construct",
@@ -32554,19 +32554,19 @@
 			},
 			"senses": "真實視覺120呎",
 			"passive": 12,
-			"languages": "Modron",
+			"languages": "魔冢語",
 			"cr": "1",
 			"trait": [
 				{
-					"name": "Axiomatic Mind",
+					"name": "公理之念",
 					"entries": [
-						"The quadrone can't be compelled to act in a manner contrary to its nature or its instructions."
+						"四元冢無法被強迫去進行違背其天性或指示的行動。"
 					]
 				},
 				{
-					"name": "Disintegration",
+					"name": "解體",
 					"entries": [
-						"If the quadrone dies, its body disintegrates into dust, leaving behind its weapons and anything else it was carrying."
+						"若四元冢死亡，它的身體將瓦解成塵，留下它的武器和任何它所攜帶的其它東西。"
 					]
 				}
 			],
@@ -32574,11 +32574,11 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The quadrone makes two fist attacks or four shortbow attacks."
+						"四元冢進行二次拳擊攻擊或四次短弓攻擊。"
 					]
 				},
 				{
-					"name": "Fist",
+					"name": "拳擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}3 ({@damage 1d4 + 1})鈍擊傷害。"
 					]
@@ -32593,10 +32593,10 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Rogue Modrons",
+					"name": "遊蕩魔冢",
 					"entries": [
-						"A modron unit sometimes becomes defective, either through natural decay or exposure to chaotic forces. Rogue modrons don't act in accordance with Primus's wishes and directives, breaking laws, disobeying orders, and even engaging in violence. Other modrons hunt down such rogues.",
-						"A rogue modron loses the Axiomatic Mind trait and can have any alignment other than lawful neutral. Otherwise, it has the same statistics as a regular modron of its rank."
+						"一個魔冢單元有時候會變得殘缺，無論是因為自然的衰敗、或是因為暴露於混亂力量之下。遊蕩魔冢不會依循奇點的意願或指令行動，它們破壞律法、違背命令、甚至會訴諸於暴力。其他魔冢將會獵殺這類遊盪魔冢。",
+						"一個遊蕩魔冢失去公理之念特質，且屬於任何不是守序中立的陣營。除此之外，它們具有和同階級尋常魔冢相同的數據資料。"
 					]
 				}
 			],
@@ -35254,7 +35254,7 @@
 			]
 		},
 		{
-			"name": "Shadow",
+			"name": "幽影", "ENG_name": "Shadow",
 			"size": "M",
 			"type": "undead",
 			"source": "MM",
@@ -35293,7 +35293,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"vulnerable": [
@@ -35320,28 +35320,28 @@
 				{
 					"name": "無定形",
 					"entries": [
-						"The shadow 可以移動穿越最窄1英寸的狹窄空間而不用擠縮身體。"
+						"幽影可以移動穿越最窄1英寸的狹窄空間而不用擠縮身體。"
 					]
 				},
 				{
-					"name": "Shadow Stealth",
+					"name": "幽影隱匿",
 					"entries": [
-						"While in dim light or darkness, the shadow can take the Hide action as a bonus action. Its stealth bonus is also improved to +6."
+						"當處於微光光照或黑暗環境時，幽影能夠以一個附贈動作採取躲藏動作。它的隱匿加值同時被增加至+6。"
 					]
 				},
 				{
-					"name": "Sunlight Weakness",
+					"name": "日光弱點",
 					"entries": [
-						"While in sunlight, the shadow has disadvantage on attack rolls, ability checks, and saving throws."
+						"當處於日光照耀下時，幽影在攻擊檢定、屬性檢定、和豁免檢定中具有劣勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Strength Drain",
+					"name": "力量汲取",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一生物。{@h}9 ({@damage 2d6 + 2}) necrotic damage, and the target's Strength score is reduced by {@dice 1d4}. The target dies if this reduces its Strength to 0. Otherwise, the reduction lasts until the target finishes a short or long rest.",
-						"If a non-evil humanoid dies from this attack, a new shadow rises from the corpse {@dice 1d4} hours later."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一生物。{@h}9 ({@damage 2d6 + 2})死靈傷害，且目標的力量值被減少{@dice 1d4}點。若目標的力量值因此歸零，則目標死亡。反之，這個屬性值減損將持續直到目標完成一次短休或長休。",
+						"若一個非邪惡的類人生物因為此攻擊而死亡，一個新的幽影將在{@dice 1d4}小時後從該屍體升起。"
 					]
 				}
 			],
@@ -39217,7 +39217,7 @@
 			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/494/triceratops.mp3"
 		},
 		{
-			"name": "Tridrone",
+			"name": "三元冢", "ENG_name": "Tridrone",
 			"group": "Modrons",
 			"size": "M",
 			"type": "construct",
@@ -39249,19 +39249,19 @@
 			"cha": 9,
 			"senses": "真實視覺120呎",
 			"passive": 10,
-			"languages": "Modron",
+			"languages": "魔冢語",
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Axiomatic Mind",
+					"name": "公理之念",
 					"entries": [
-						"The tridrone can't be compelled to act in a manner contrary to its nature or its instructions."
+						"三元冢無法被強迫去進行違背其天性或指示的行動。"
 					]
 				},
 				{
-					"name": "Disintegration",
+					"name": "解體",
 					"entries": [
-						"If the tridrone dies, its body disintegrates into dust, leaving behind its weapons and anything else it was carrying."
+						"若三元冢死亡，它的身體將瓦解成塵，留下它的武器和任何它所攜帶的其它東西。"
 					]
 				}
 			],
@@ -39269,11 +39269,11 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The tridrone makes three fist attacks or three javelin attacks."
+						"三元冢進行三次拳擊攻擊或三次標槍攻擊。"
 					]
 				},
 				{
-					"name": "Fist",
+					"name": "拳擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}3 ({@damage 1d4 + 1})鈍擊傷害。"
 					]
@@ -39288,10 +39288,10 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Rogue Modrons",
+					"name": "遊蕩魔冢",
 					"entries": [
-						"A modron unit sometimes becomes defective, either through natural decay or exposure to chaotic forces. Rogue modrons don't act in accordance with Primus's wishes and directives, breaking laws, disobeying orders, and even engaging in violence. Other modrons hunt down such rogues.",
-						"A rogue modron loses the Axiomatic Mind trait and can have any alignment other than lawful neutral. Otherwise, it has the same statistics as a regular modron of its rank."
+						"一個魔冢單元有時候會變得殘缺，無論是因為自然的衰敗、或是因為暴露於混亂力量之下。遊蕩魔冢不會依循奇點的意願或指令行動，它們破壞律法、違背命令、甚至會訴諸於暴力。其他魔冢將會獵殺這類遊盪魔冢。",
+						"一個遊蕩魔冢失去公理之念特質，且屬於任何不是守序中立的陣營。除此之外，它們具有和同階級尋常魔冢相同的數據資料。"
 					]
 				}
 			],
@@ -43417,7 +43417,7 @@
 			]
 		},
 		{
-			"name": "Young Black Dragon",
+			"name": "少年黑龍", "ENG_name": "Young Black Dragon",
 			"size": "L",
 			"type": "dragon",
 			"source": "MM",
@@ -43469,7 +43469,7 @@
 				{
 					"name": "兩棲",
 					"entries": [
-						"The dragon可以在空氣和水中呼吸。"
+						"黑龍可以在空氣和水中呼吸。"
 					]
 				}
 			],
@@ -43477,25 +43477,25 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The dragon makes three attacks: one with its bite and two with its claws."
+						"黑龍進行三次攻擊：一次啃咬，二次爪抓。"
 					]
 				},
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 7}，觸及10呎，單一目標。{@h}15 ({@damage 2d10 + 4}) piercing damage plus 4 ({@damage 1d8}) acid damage."
+						"{@atk mw} 命中{@hit 7}，觸及10呎，單一目標。{@h}15 ({@damage 2d10 + 4})穿刺傷害加 4 ({@damage 1d8})酸蝕傷害。"
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "爪抓",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}11 ({@damage 2d6 + 4})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Acid Breath {@recharge 5}",
+					"name": "酸蝕吐息 {@recharge 5}",
 					"entries": [
-						"The dragon exhales acid in a 30-foot line that is 5 feet wide. Each creature in that line must make a DC 14 Dexterity saving throw, taking 49 ({@damage 11d8}) acid damage on a failed save, or half as much damage on a successful one."
+						"黑龍吐出一道30呎長，5呎寬直線型的強酸。每個在直線範圍內的生物都必須進行一次DC 14的敏捷豁免，豁免失敗則受到49 ({@damage 11d8})酸蝕傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
@@ -43521,7 +43521,7 @@
 			]
 		},
 		{
-			"name": "Young Blue Dragon",
+			"name": "少年藍龍", "ENG_name": "Young Blue Dragon",
 			"size": "L",
 			"type": "dragon",
 			"source": "MM",
@@ -43573,25 +43573,25 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The dragon makes three attacks: one with its bite and two with its claws."
+						"藍龍進行三次攻擊：一次啃咬，二次爪抓。"
 					]
 				},
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 9}，觸及10呎，單一目標。{@h}16 ({@damage 2d10 + 5}) piercing damage plus 5 ({@damage 1d10}) lightning damage."
+						"{@atk mw} 命中{@hit 9}，觸及10呎，單一目標。{@h}16 ({@damage 2d10 + 5})穿刺傷害加 5 ({@damage 1d10})閃電傷害。"
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "爪抓",
 					"entries": [
 						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Lightning Breath {@recharge 5}",
+					"name": "閃電吐息 {@recharge 5}",
 					"entries": [
-						"The dragon exhales lightning in a 60-foot line that is 5 feet wide. Each creature in that line must make a DC 16 Dexterity saving throw, taking 55 ({@damage 10d10}) lightning damage on a failed save, or half as much damage on a successful one."
+						"藍龍吐出一道60呎長，5呎寬直線型的閃電。每個在直線範圍內的生物都必須進行一次DC 16的敏捷豁免，豁免失敗則受到55 ({@damage 10d10})閃電傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
@@ -43615,7 +43615,7 @@
 			]
 		},
 		{
-			"name": "Young Brass Dragon",
+			"name": "少年黃銅龍", "ENG_name": "Young Brass Dragon",
 			"size": "L",
 			"type": "dragon",
 			"source": "MM",
@@ -43668,7 +43668,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The dragon makes three attacks: one with its bite and two with its claws."
+						"黃銅龍進行三次攻擊：一次啃咬，二次爪抓。"
 					]
 				},
 				{
@@ -43678,7 +43678,7 @@
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "爪抓",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}11 ({@damage 2d6 + 4})劈砍傷害。"
 					]
@@ -43686,20 +43686,20 @@
 				{
 					"name": "吐息武器 {@recharge 5}",
 					"entries": [
-						"The dragon uses one of the following breath weapons.",
+						"黃銅龍使用以下其中一種吐息武器。",
 						{
 							"type": "list",
 							"style": "list-hang-notitle",
 							"items": [
 								{
 									"type": "item",
-									"name": "Fire Breath.",
-									"entry": "The dragon exhales fire in a 40-foot line that is 5 feet wide. Each creature in that line must make a DC 14 Dexterity saving throw, taking 42 ({@damage 12d6}) fire damage on a failed save, or half as much damage on a successful one."
+									"name": "火焰吐息：",
+									"entry": "黃銅龍吐出一道40呎長，5呎寬直線型的烈焰。每個在直線範圍內的生物都必須進行一次DC 14的敏捷豁免，豁免失敗則受到42 ({@damage 12d6})火焰傷害，豁免成功則只受到一半的傷害。"
 								},
 								{
 									"type": "item",
-									"name": "Sleep Breath.",
-									"entry": "The dragon exhales sleep gas in a 30-foot cone. Each creature in that area must succeed on a DC 14 Constitution saving throw or fall {@condition unconscious} for 5 minutes. This effect ends for a creature if the creature takes damage or someone uses an action to wake it."
+									"name": "催眠吐息：",
+									"entry": "黃銅龍吐出一道30呎錐形的催眠毒氣。每個在吐息範圍內的生物必須成功通過一次DC 14的體質豁免，否則陷入{@condition 昏迷}狀態長達1分鐘。這個效果對一個生物的影響會在該生物受到傷害、或其他人使用一個動作將它叫醒時結束。"
 								}
 							]
 						}
@@ -43725,7 +43725,7 @@
 			]
 		},
 		{
-			"name": "Young Bronze Dragon",
+			"name": "少年青銅龍", "ENG_name": "Young Bronze Dragon",
 			"size": "L",
 			"type": "dragon",
 			"source": "MM",
@@ -43778,7 +43778,7 @@
 				{
 					"name": "兩棲",
 					"entries": [
-						"The dragon可以在空氣和水中呼吸。"
+						"青銅龍可以在空氣和水中呼吸。"
 					]
 				}
 			],
@@ -43786,7 +43786,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The dragon makes three attacks: one with its bite and two with its claws."
+						"青銅龍進行三次攻擊：一次啃咬，二次爪抓。"
 					]
 				},
 				{
@@ -43796,7 +43796,7 @@
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "爪抓",
 					"entries": [
 						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5})劈砍傷害。"
 					]
@@ -43804,20 +43804,20 @@
 				{
 					"name": "吐息武器 {@recharge 5}",
 					"entries": [
-						"The dragon uses one of the following breath weapons.",
+						"青銅龍使用以下其中一種吐息武器。",
 						{
 							"type": "list",
 							"style": "list-hang-notitle",
 							"items": [
 								{
 									"type": "item",
-									"name": "Lightning Breath.",
-									"entry": "The dragon exhales lightning in a 60-foot line that is 5 feet wide. Each creature in that line must make a DC 15 Dexterity saving throw, taking 55 ({@damage 10d10}) lightning damage on a failed save, or half as much damage on a successful one."
+									"name": "閃電吐息：",
+									"entry": "青銅龍吐出一道60呎長，5呎寬直線型的閃電。每個在直線範圍內的生物都必須進行一次DC 15的敏捷豁免，豁免失敗則受到55 ({@damage 10d10})閃電傷害，豁免成功則只受到一半的傷害。"
 								},
 								{
 									"type": "item",
-									"name": "Repulsion Breath.",
-									"entry": "The dragon exhales repulsion energy in a 30-foot cone. Each creature in that area must succeed on a DC 15 Strength saving throw. On a failed save, the creature is pushed 40 feet away from the dragon."
+									"name": "斥力吐息：",
+									"entry": "青銅龍吐出一道30呎錐形的推斥能量。每個在吐息範圍內的生物必須成功通過一次DC 15的力量豁免。若豁免失敗，該生物將被推離青銅龍40呎距離。"
 								}
 							]
 						}
@@ -43846,7 +43846,7 @@
 			]
 		},
 		{
-			"name": "Young Copper Dragon",
+			"name": "少年赤銅龍", "ENG_name": "Young Copper Dragon",
 			"size": "L",
 			"type": "dragon",
 			"source": "MM",
@@ -43899,7 +43899,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The dragon makes three attacks: one with its bite and two with its claws."
+						"赤銅龍進行三次攻擊：一次啃咬，二次爪抓。"
 					]
 				},
 				{
@@ -43909,7 +43909,7 @@
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "爪抓",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}11 ({@damage 2d6 + 4})劈砍傷害。"
 					]
@@ -43917,20 +43917,20 @@
 				{
 					"name": "吐息武器 {@recharge 5}",
 					"entries": [
-						"The dragon uses one of the following breath weapons.",
+						"赤銅龍使用以下其中一種吐息武器。",
 						{
 							"type": "list",
 							"style": "list-hang-notitle",
 							"items": [
 								{
 									"type": "item",
-									"name": "Acid Breath.",
-									"entry": "The dragon exhales acid in a 40-foot line that is 5 feet wide. Each creature in that line must make a DC 14 Dexterity saving throw, taking 40 ({@damage 9d8}) acid damage on a failed save, or half as much damage on a successful one."
+									"name": "酸蝕吐息：",
+									"entry": "赤銅龍吐出一道40呎長，5呎寬直線型的閃電。每個在直線範圍內的生物都必須進行一次DC 14的敏捷豁免，豁免失敗則受到40 ({@damage 9d8})酸蝕傷害，豁免成功則只受到一半的傷害。"
 								},
 								{
 									"type": "item",
-									"name": "Slowing Breath.",
-									"entry": "The dragon exhales gas in a 30-foot cone. Each creature in that area must succeed on a DC 14 Constitution saving throw. On a failed save, the creature can't use reactions, its speed is halved, and it can't make more than one attack on its turn. In addition, the creature can use either an action or a bonus action on its turn, but not both. These effects last for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself with a successful save."
+									"name": "緩速吐息：",
+									"entry": "赤銅龍吐出一道30呎錐形的毒氣。每個在吐息範圍內的生物必須成功通過一次DC 14的體質豁免。若豁免失敗，則該生物將無法採取反應、移動速度減半、且在它的回合不能進行超過一次的攻擊。此外，該生物在它的回合只能使用一個動作或一個附贈動作，而不能在同一回合使用兩者。這個效果持續長達1分鐘。該生物可以在每次它的回合結束時重複這個豁免檢定，若檢定成功則結束這個效果對它的影響。"
 								}
 							]
 						}
@@ -43956,7 +43956,7 @@
 			]
 		},
 		{
-			"name": "Young Gold Dragon",
+			"name": "少年金龍", "ENG_name": "Young Gold Dragon",
 			"size": "L",
 			"type": "dragon",
 			"source": "MM",
@@ -44010,7 +44010,7 @@
 				{
 					"name": "兩棲",
 					"entries": [
-						"The dragon可以在空氣和水中呼吸。"
+						"金龍可以在空氣和水中呼吸。"
 					]
 				}
 			],
@@ -44018,7 +44018,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The dragon makes three attacks: one with its bite and two with its claws."
+						"金龍進行三次攻擊：一次啃咬，二次爪抓。"
 					]
 				},
 				{
@@ -44028,7 +44028,7 @@
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "爪抓",
 					"entries": [
 						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}13 ({@damage 2d6 + 6})劈砍傷害。"
 					]
@@ -44036,20 +44036,20 @@
 				{
 					"name": "吐息武器 {@recharge 5}",
 					"entries": [
-						"The dragon uses one of the following breath weapons.",
+						"金龍使用以下其中一種吐息武器。",
 						{
 							"type": "list",
 							"style": "list-hang-notitle",
 							"items": [
 								{
 									"type": "item",
-									"name": "Fire Breath.",
-									"entry": "The dragon exhales fire in a 30-foot cone. Each creature in that area must make a DC 17 Dexterity saving throw, taking 55 ({@damage 10d10}) fire damage on a failed save, or half as much damage on a successful one."
+									"name": "火焰吐息：",
+									"entry": "金龍吐出一道30呎錐形的烈焰。每個在吐息範圍內的生物都必須進行一次DC 17的敏捷豁免，豁免失敗則受到55 ({@damage 10d10})火焰傷害，豁免成功則只受到一半的傷害。"
 								},
 								{
 									"type": "item",
-									"name": "Weakening Breath.",
-									"entry": "The dragon exhales gas in a 30-foot cone. Each creature in that area must succeed on a DC 17 Strength saving throw or have disadvantage on Strength-based attack rolls, Strength checks, and Strength saving throws for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+									"name": "弱化吐息：",
+									"entry": "金龍吐出一道30呎錐形的毒氣。每個在吐息範圍內的生物必須成功通過一次DC 17的力量豁免，否則在基於力量的攻擊檢定、力量檢定、和力量豁免中承受劣勢長達1分鐘。一個生物可以在每次它的回合結束時重複這個豁免檢定，若檢定成功則結束這個效果對它的影響。"
 								}
 							]
 						}
@@ -44079,7 +44079,7 @@
 			]
 		},
 		{
-			"name": "Young Green Dragon",
+			"name": "少年綠龍", "ENG_name": "Young Green Dragon",
 			"size": "L",
 			"type": "dragon",
 			"source": "MM",
@@ -44135,7 +44135,7 @@
 				{
 					"name": "兩棲",
 					"entries": [
-						"The dragon可以在空氣和水中呼吸。"
+						"綠龍可以在空氣和水中呼吸。"
 					]
 				}
 			],
@@ -44143,25 +44143,25 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The dragon makes three attacks: one with its bite and two with its claws."
+						"綠龍進行三次攻擊：一次啃咬，二次爪抓。"
 					]
 				},
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 7}，觸及10呎，單一目標。{@h}15 ({@damage 2d10 + 4}) piercing damage plus 7 ({@damage 2d6}) poison damage."
+						"{@atk mw} 命中{@hit 7}，觸及10呎，單一目標。{@h}15 ({@damage 2d10 + 4})穿刺傷害加 7 ({@damage 2d6})毒素傷害。"
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "爪抓",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}11 ({@damage 2d6 + 4})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Poison Breath {@recharge 5}",
+					"name": "劇毒吐息 {@recharge 5}",
 					"entries": [
-						"The dragon exhales poisonous gas in a 30-foot cone. Each creature in that area must make a DC 14 Constitution saving throw, taking 42 ({@damage 12d6}) poison damage on a failed save, or half as much damage on a successful one."
+						"綠龍吐出一道30呎錐形的劇毒氣體。每個在吐息範圍內的生物都必須進行一次DC 14的體質豁免，豁免失敗則受到42 ({@damage 12d6})毒素傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
@@ -44187,7 +44187,7 @@
 			]
 		},
 		{
-			"name": "Young Red Dragon",
+			"name": "少年紅龍", "ENG_name": "Young Red Dragon",
 			"size": "L",
 			"type": "dragon",
 			"source": "MM",
@@ -44239,25 +44239,25 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The dragon makes three attacks: one with its bite and two with its claws."
+						"紅龍進行三次攻擊：一次啃咬，二次爪抓。"
 					]
 				},
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 10}，觸及10呎，單一目標。{@h}17 ({@damage 2d10 + 6}) piercing damage plus 3 ({@damage 1d6}) fire damage."
+						"{@atk mw} 命中{@hit 10}，觸及10呎，單一目標。{@h}17 ({@damage 2d10 + 6})穿刺傷害加 3 ({@damage 1d6})火焰傷害。"
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "爪抓",
 					"entries": [
 						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}13 ({@damage 2d6 + 6})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Fire Breath {@recharge 5}",
+					"name": "火焰吐息 {@recharge 5}",
 					"entries": [
-						"The dragon exhales fire in a 30-foot cone. Each creature in that area must make a DC 17 Dexterity saving throw, taking 56 ({@damage 16d6}) fire damage on a failed save, or half as much damage on a successful one."
+						"紅龍吐出一道30呎錐形的烈焰。每個在吐息範圍內的生物都必須進行一次DC 17的敏捷豁免，豁免失敗則受到56 ({@damage 16d6})火焰傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
@@ -44281,7 +44281,7 @@
 			]
 		},
 		{
-			"name": "Young Red Shadow Dragon",
+			"name": "少年幽影紅龍", "ENG_name": "Young Red Shadow Dragon",
 			"size": "L",
 			"type": "dragon",
 			"source": "MM",
@@ -44334,21 +44334,21 @@
 			"cr": "13",
 			"trait": [
 				{
-					"name": "Living Shadow",
+					"name": "活體幽影",
 					"entries": [
-						"While in dim light or darkness, the dragon has resistance to damage that isn't force, psychic, or radiant."
+						"當處於微光光照或黑暗環境時，幽影龍具有對力場、精神、或光耀以外傷害類型的抗性。"
 					]
 				},
 				{
-					"name": "Shadow Stealth",
+					"name": "幽影隱匿",
 					"entries": [
-						"While in dim light or darkness, the dragon can take the Hide action as a bonus action."
+						"當處於微光光照或黑暗環境時，幽影龍能夠以一個附贈動作採取{@action 躲藏}動作。"
 					]
 				},
 				{
 					"name": "日光敏感",
 					"entries": [
-						"當處於日光照耀下時，dragon在攻擊檢定，以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
+						"當處於日光照耀下時，幽影龍在攻擊檢定，以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
 					]
 				}
 			],
@@ -44356,25 +44356,25 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The dragon makes three attacks: one with its bite and two with its claws."
+						"幽影龍進行三次攻擊：一次啃咬，二次爪抓。"
 					]
 				},
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 10}，觸及10呎，單一目標。{@h}17 ({@damage 2d10 + 6}) piercing damage plus 3 ({@damage 1d6}) necrotic damage."
+						"{@atk mw} 命中{@hit 10}，觸及10呎，單一目標。{@h}17 ({@damage 2d10 + 6})穿刺傷害加 3 ({@damage 1d6})死靈傷害。"
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "爪抓",
 					"entries": [
 						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}13 ({@damage 2d6 + 6})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Shadow Breath {@recharge 5}",
+					"name": "幽影吐息 {@recharge 5}",
 					"entries": [
-						"The dragon exhales shadowy fire in a 30-foot cone. Each creature in that area must make a DC 18 Dexterity saving throw, taking 56 ({@damage 16d6}) necrotic damage on a failed save, or half as much damage on a successful one. A humanoid reduced to 0 hit points by this damage dies, and an undead shadow rises from its corpse and acts immediately after the dragon in the initiative count. The shadow is under the dragon's control."
+						"幽影龍吐出一道30呎錐形的幽影烈焰。每個在吐息範圍內的生物都必須進行一次DC 18的敏捷豁免，豁免失敗則受到56 ({@damage 16d6})死靈傷害，豁免成功則只受到一半的傷害。一個生命值被此傷害歸零的類人生物將會死亡，且一個不死{@creature 幽影}將從它的屍體升起，並緊接在幽影龍的先攻順序之後行動。這個陰影處於幽影龍的控制下。"
 					]
 				}
 			],
@@ -44463,7 +44463,7 @@
 			]
 		},
 		{
-			"name": "Young Silver Dragon",
+			"name": "少年銀龍", "ENG_name": "Young Silver Dragon",
 			"size": "L",
 			"type": "dragon",
 			"source": "MM",
@@ -44516,7 +44516,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The dragon makes three attacks: one with its bite and two with its claws."
+						"銀龍進行三次攻擊：一次啃咬，二次爪抓。"
 					]
 				},
 				{
@@ -44526,7 +44526,7 @@
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "爪抓",
 					"entries": [
 						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}13 ({@damage 2d6 + 6})劈砍傷害。"
 					]
@@ -44534,20 +44534,20 @@
 				{
 					"name": "吐息武器 {@recharge 5}",
 					"entries": [
-						"The dragon uses one of the following breath weapons.",
+						"銀龍使用以下其中一種吐息武器。",
 						{
 							"type": "list",
 							"style": "list-hang-notitle",
 							"items": [
 								{
 									"type": "item",
-									"name": "Cold Breath.",
-									"entry": "The dragon exhales an icy blast in a 30-foot cone. Each creature in that area must make a DC 17 Constitution saving throw, taking 54 ({@damage 12d8}) cold damage on a failed save, or half as much damage on a successful one."
+									"name": "寒冰吐息：",
+									"entry": "銀龍吐出一道30呎錐形的冰雪爆風。每個在吐息範圍內的生物都必須進行一次DC 17的體質豁免，豁免失敗則受到54 ({@damage 12d8})寒冰傷害，豁免成功則只受到一半的傷害。"
 								},
 								{
 									"type": "item",
-									"name": "Paralyzing Breath.",
-									"entry": "The dragon exhales paralyzing gas in a 30-foot cone. Each creature in that area must succeed on a DC 17 Constitution saving throw or be {@condition paralyzed} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+									"name": "麻痺吐息：",
+									"entry": "銀龍吐出一道30呎錐形的麻痺毒氣。每個在吐息範圍內的生物必須成功通過一次DC 17的體質豁免，否則陷入{@condition 麻痺}狀態長達1分鐘。一個生物可以在每次它的回合結束時重複這個豁免檢定，若檢定成功則結束這個效果對它的影響。"
 								}
 							]
 						}
@@ -44574,7 +44574,7 @@
 			]
 		},
 		{
-			"name": "Young White Dragon",
+			"name": "少年白龍", "ENG_name": "Young White Dragon",
 			"size": "L",
 			"type": "dragon",
 			"source": "MM",
@@ -44625,9 +44625,9 @@
 			"cr": "6",
 			"trait": [
 				{
-					"name": "Ice Walk",
+					"name": "冰上行走",
 					"entries": [
-						"The dragon can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost it extra moment."
+						"白龍可以移動穿過或攀爬冰面而無須進行屬性檢定。此外，冰或雪構成的困難地形不會使它消耗額外的移動速度。"
 					]
 				}
 			],
@@ -44635,25 +44635,25 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The dragon makes three attacks: one with its bite and two with its claws."
+						"白龍進行三次攻擊：一次啃咬，二次爪抓。"
 					]
 				},
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 7}，觸及10呎，單一目標。{@h}15 ({@damage 2d10 + 4}) piercing damage plus 4 ({@damage 1d8}) cold damage."
+						"{@atk mw} 命中{@hit 7}，觸及10呎，單一目標。{@h}15 ({@damage 2d10 + 4})穿刺傷害加 4 ({@damage 1d8})寒冰傷害。"
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "爪抓",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}11 ({@damage 2d6 + 4})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Cold Breath {@recharge 5}",
+					"name": "寒冰吐息 {@recharge 5}",
 					"entries": [
-						"The dragon exhales an icy blast in a 30-foot cone. Each creature in that area must make a DC 15 Constitution saving throw, taking 45 ({@damage 10d8}) cold damage on a failed save, or half as much damage on a successful one."
+						"白龍吐出一道30呎錐形的冰雪爆風。每個在吐息範圍內的生物都必須進行一次DC 15的體質豁免，豁免失敗則受到45 ({@damage 10d8})寒冰傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],

@@ -330,6 +330,7 @@ const traitFilter = new Filter({
 			case "Shapechanger": return "變形者";
 			case "Spider Climb": return "蛛行";
 			case "Sunlight Sensitivity": return "日光敏感";
+			case "Turn Immunity": return "免疫驅散";
 			case "Undead Fortitude": return "不死韌性";
 			case "Water Breathing": return "水下呼吸";
 			case "Web Sense": return "蛛網感知";
