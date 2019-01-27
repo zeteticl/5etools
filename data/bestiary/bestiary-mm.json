@@ -550,7 +550,7 @@
 			]
 		},
 		{
-			"name": "Adult Black Dragon",
+			"name": "成年黑龍", "ENG_name": "Adult Black Dragon",
 			"size": "H",
 			"type": "dragon",
 			"source": "MM",
@@ -602,13 +602,13 @@
 				{
 					"name": "兩棲",
 					"entries": [
-						"The dragon可以在空氣和水中呼吸。"
+						"黑龍可以在空氣和水中呼吸。"
 					]
 				},
 				{
-					"name": "Legendary Resistance (3/Day)",
+					"name": "傳奇抗性 (3/日)",
 					"entries": [
-						"If the dragon fails a saving throw, it can choose to succeed instead."
+						"若黑龍在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				}
 			],
@@ -616,58 +616,58 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws."
+						"黑龍可以使用它的駭人威儀，然後進行三次攻擊：一次啃咬，二次爪抓。"
 					]
 				},
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 11}，觸及10呎，單一目標。{@h}17 ({@damage 2d10 + 6}) piercing damage plus 4 ({@damage 1d8}) acid damage."
+						"{@atk mw} 命中{@hit 11}，觸及10呎，單一目標。{@h}17 ({@damage 2d10 + 6})穿刺傷害加 4 ({@damage 1d8})酸蝕傷害。"
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "爪抓",
 					"entries": [
 						"{@atk mw} 命中{@hit 11}，觸及5呎，單一目標。{@h}13 ({@damage 2d6 + 6})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Tail",
+					"name": "尾擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 11}，觸及15呎，單一目標。{@h}15 ({@damage 2d8 + 6})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Frightful Presence",
+					"name": "駭人威儀",
 					"entries": [
-						"Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 16 Wisdom saving throw or become {@condition frightened} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours."
+						"每個距離黑龍120呎內，由黑龍所選擇的且意識到其存在的生物都必須成功通過一次DC 16的睿知豁免，否則被{@condition 恐懼}長達1分鐘。一個生物可以在每次它的回合結束時重複這個豁免檢定，若檢定成功則結束這個效果對它的影響。若一個生物成功通過該豁免檢定或結束這個效果對它的影響，則該生物將在接下來的24小時內免疫此黑龍的駭人威儀。"
 					]
 				},
 				{
-					"name": "Acid Breath {@recharge 5}",
+					"name": "酸蝕吐息 {@recharge 5}",
 					"entries": [
-						"The dragon exhales acid in a 60-foot line that is 5 feet wide. Each creature in that line must make a DC 18 Dexterity saving throw, taking 54 ({@damage 12d8}) acid damage on a failed save, or half as much damage on a successful one."
+						"黑龍吐出一道60呎長，5呎寬直線型的強酸。每個在直線範圍內的生物都必須進行一次DC 18的敏捷豁免，豁免失敗則受到54 ({@damage 12d8})酸蝕傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
 			"legendaryGroup": "Black Dragon",
 			"legendary": [
 				{
-					"name": "Detect",
+					"name": "偵查",
 					"entries": [
-						"The dragon makes a Wisdom ({@skill Perception}) check."
+						"黑龍進行一次睿知（{@skill 感知}）檢定。"
 					]
 				},
 				{
-					"name": "Tail Attack",
+					"name": "尾擊攻擊",
 					"entries": [
-						"The dragon makes a tail attack."
+						"黑龍進行一次尾擊攻擊。"
 					]
 				},
 				{
-					"name": "Wing Attack (Costs 2 Actions)",
+					"name": "振翅攻擊 (消耗 2動作)",
 					"entries": [
-						"The dragon beats its wings. Each creature within 10 feet of the dragon must succeed on a DC 19 Dexterity saving throw or take 13 ({@damage 2d6 + 6}) bludgeoning damage and be knocked {@condition prone}. The dragon can then fly up to half its flying speed."
+						"黑龍拍打它的翅膀。每個距離黑龍10呎內的生物都必須成功通過一次DC 19的敏捷豁免，否則受到13 ({@damage 2d6 + 6})鈍擊傷害，並被擊倒{@condition 伏地}。黑龍接著可以飛行最多等同它飛行速度一半的距離。"
 					]
 				}
 			],
@@ -897,7 +897,7 @@
 				{
 					"name": "Legendary Resistance (3/Day)",
 					"entries": [
-						"If the dragon fails a saving throw, it can choose to succeed instead."
+						"若dragon龍在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				}
 			],
@@ -1038,7 +1038,7 @@
 				{
 					"name": "Legendary Resistance (3/Day)",
 					"entries": [
-						"If the dragon fails a saving throw, it can choose to succeed instead."
+						"若dragon龍在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				}
 			],
@@ -1199,7 +1199,7 @@
 				{
 					"name": "Legendary Resistance (3/Day)",
 					"entries": [
-						"If the dragon fails a saving throw, it can choose to succeed instead."
+						"若dragon龍在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				}
 			],
@@ -1362,7 +1362,7 @@
 				{
 					"name": "Legendary Resistance (3/Day)",
 					"entries": [
-						"If the dragon fails a saving throw, it can choose to succeed instead."
+						"若dragon龍在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				}
 			],
@@ -1524,7 +1524,7 @@
 				{
 					"name": "Legendary Resistance (3/Day)",
 					"entries": [
-						"If the dragon fails a saving throw, it can choose to succeed instead."
+						"若dragon龍在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				}
 			],
@@ -1699,7 +1699,7 @@
 				{
 					"name": "Legendary Resistance (3/Day)",
 					"entries": [
-						"If the dragon fails a saving throw, it can choose to succeed instead."
+						"若dragon龍在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				}
 			],
@@ -1838,7 +1838,7 @@
 				{
 					"name": "Legendary Resistance (3/Day)",
 					"entries": [
-						"If the dragon fails a saving throw, it can choose to succeed instead."
+						"若dragon龍在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				}
 			],
@@ -1978,7 +1978,7 @@
 				{
 					"name": "Legendary Resistance (3/Day)",
 					"entries": [
-						"If the dragon fails a saving throw, it can choose to succeed instead."
+						"若dragon龍在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				}
 			],
@@ -2147,7 +2147,7 @@
 				{
 					"name": "Legendary Resistance (3/Day)",
 					"entries": [
-						"If the dragon fails a saving throw, it can choose to succeed instead."
+						"若dragon龍在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				}
 			],
@@ -2401,7 +2401,7 @@
 			]
 		},
 		{
-			"name": "Ancient Black Dragon",
+			"name": "遠古黑龍", "ENG_name": "Ancient Black Dragon",
 			"size": "G",
 			"type": "dragon",
 			"source": "MM",
@@ -2453,13 +2453,13 @@
 				{
 					"name": "兩棲",
 					"entries": [
-						"The dragon可以在空氣和水中呼吸。"
+						"黑龍可以在空氣和水中呼吸。"
 					]
 				},
 				{
-					"name": "Legendary Resistance (3/Day)",
+					"name": "傳奇抗性 (3/日)",
 					"entries": [
-						"If the dragon fails a saving throw, it can choose to succeed instead."
+						"若黑龍在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				}
 			],
@@ -2467,58 +2467,58 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws."
+						"黑龍可以使用它的駭人威儀，然後進行三次攻擊：一次啃咬，二次爪抓。"
 					]
 				},
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 15}，觸及15呎，單一目標。{@h}19 ({@damage 2d10 + 8}) piercing damage plus 9 ({@damage 2d8}) acid damage."
+						"{@atk mw} 命中{@hit 15}，觸及15呎，單一目標。{@h}19 ({@damage 2d10 + 8})穿刺傷害加 9 ({@damage 2d8})酸蝕傷害。"
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "爪抓",
 					"entries": [
 						"{@atk mw} 命中{@hit 15}，觸及10呎，單一目標。{@h}15 ({@damage 2d6 + 8})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Tail",
+					"name": "尾擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 15}，觸及20呎，單一目標。{@h}17 ({@damage 2d8 + 8})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Frightful Presence",
+					"name": "駭人威儀",
 					"entries": [
-						"Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 19 Wisdom saving throw or become {@condition frightened} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours."
+						"每個距離黑龍120呎內，由黑龍所選擇的且意識到其存在的生物都必須成功通過一次DC 19的睿知豁免，否則被{@condition 恐懼}長達1分鐘。一個生物可以在每次它的回合結束時重複這個豁免檢定，若檢定成功則結束這個效果對它的影響。若一個生物成功通過該豁免檢定或結束這個效果對它的影響，則該生物將在接下來的24小時內免疫此黑龍的駭人威儀。"
 					]
 				},
 				{
-					"name": "Acid Breath {@recharge 5}",
+					"name": "酸蝕吐息 {@recharge 5}",
 					"entries": [
-						"The dragon exhales acid in a 90-foot line that is 10 feet wide. Each creature in that line must make a DC 22 Dexterity saving throw, taking 67 ({@damage 15d8}) acid damage on a failed save, or half as much damage on a successful one."
+						"黑龍吐出一道90呎長，10呎寬直線型的強酸。每個在直線範圍內的生物都必須進行一次DC 22的敏捷豁免，豁免失敗則受到67 ({@damage 15d8})酸蝕傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
 			"legendaryGroup": "Black Dragon",
 			"legendary": [
 				{
-					"name": "Detect",
+					"name": "偵查",
 					"entries": [
-						"The dragon makes a Wisdom ({@skill Perception}) check."
+						"黑龍進行一次睿知（{@skill 感知}）檢定。"
 					]
 				},
 				{
-					"name": "Tail Attack",
+					"name": "尾擊攻擊",
 					"entries": [
-						"The dragon makes a tail attack."
+						"黑龍進行一次尾擊攻擊。"
 					]
 				},
 				{
-					"name": "Wing Attack (Costs 2 Actions)",
+					"name": "振翅攻擊 (消耗 2動作)",
 					"entries": [
-						"The dragon beats its wings. Each creature within 15 feet of the dragon must succeed on a DC 23 Dexterity saving throw or take 15 ({@damage 2d6 + 8}) bludgeoning damage and be knocked {@condition prone}. The dragon can then fly up to half its flying speed."
+						"黑龍拍打它的翅膀。每個距離黑龍15呎內的生物都必須成功通過一次DC 23的敏捷豁免，否則受到15 ({@damage 2d6 + 8})鈍擊傷害，並被擊倒{@condition 伏地}。黑龍接著可以飛行最多等同它飛行速度一半的距離。"
 					]
 				}
 			],
@@ -2598,7 +2598,7 @@
 				{
 					"name": "Legendary Resistance (3/Day)",
 					"entries": [
-						"If the dragon fails a saving throw, it can choose to succeed instead."
+						"若dragon龍在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				}
 			],
@@ -2739,7 +2739,7 @@
 				{
 					"name": "Legendary Resistance (3/Day)",
 					"entries": [
-						"If the dragon fails a saving throw, it can choose to succeed instead."
+						"若dragon龍在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				}
 			],
@@ -2907,7 +2907,7 @@
 				{
 					"name": "Legendary Resistance (3/Day)",
 					"entries": [
-						"If the dragon fails a saving throw, it can choose to succeed instead."
+						"若dragon龍在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				}
 			],
@@ -3070,7 +3070,7 @@
 				{
 					"name": "Legendary Resistance (3/Day)",
 					"entries": [
-						"If the dragon fails a saving throw, it can choose to succeed instead."
+						"若dragon龍在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				}
 			],
@@ -3239,7 +3239,7 @@
 				{
 					"name": "Legendary Resistance (3/Day)",
 					"entries": [
-						"If the dragon fails a saving throw, it can choose to succeed instead."
+						"若dragon龍在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				}
 			],
@@ -3414,7 +3414,7 @@
 				{
 					"name": "Legendary Resistance (3/Day)",
 					"entries": [
-						"If the dragon fails a saving throw, it can choose to succeed instead."
+						"若dragon龍在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				}
 			],
@@ -3553,7 +3553,7 @@
 				{
 					"name": "Legendary Resistance (3/Day)",
 					"entries": [
-						"If the dragon fails a saving throw, it can choose to succeed instead."
+						"若dragon龍在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				}
 			],
@@ -3693,7 +3693,7 @@
 				{
 					"name": "Legendary Resistance (3/Day)",
 					"entries": [
-						"If the dragon fails a saving throw, it can choose to succeed instead."
+						"若dragon龍在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				}
 			],
@@ -3862,7 +3862,7 @@
 				{
 					"name": "Legendary Resistance (3/Day)",
 					"entries": [
-						"If the dragon fails a saving throw, it can choose to succeed instead."
+						"若dragon龍在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				}
 			],
@@ -8154,7 +8154,7 @@
 				{
 					"name": "矛",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 3}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d6 + 1})穿刺傷害，或若雙手使用以進行一次近戰攻擊時 5 ({@damage 1d8 + 1})穿刺傷害。"
+						"{@atk mw,rw} 命中{@hit 3}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d6 + 1})穿刺傷害，或若雙手使用以進行一次近戰攻擊時則造成 5 ({@damage 1d8 + 1})穿刺傷害。"
 					]
 				}
 			],
@@ -19320,7 +19320,7 @@
 				{
 					"name": "矛",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 7}，觸及5呎 或 射程20/60呎，單一目標。{@h}11 ({@damage 2d6 + 4})穿刺傷害，或若雙手使用以進行一次近戰攻擊時 13 ({@damage 2d8 + 4})穿刺傷害。"
+						"{@atk mw,rw} 命中{@hit 7}，觸及5呎 或 射程20/60呎，單一目標。{@h}11 ({@damage 2d6 + 4})穿刺傷害，或若雙手使用以進行一次近戰攻擊時則造成 13 ({@damage 2d8 + 4})穿刺傷害。"
 					]
 				},
 				{
@@ -21413,7 +21413,7 @@
 				{
 					"name": "矛",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 3}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d6 + 1})穿刺傷害，或若雙手使用以進行一次近戰攻擊時 5 ({@damage 1d8 + 1})穿刺傷害。"
+						"{@atk mw,rw} 命中{@hit 3}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d6 + 1})穿刺傷害，或若雙手使用以進行一次近戰攻擊時則造成 5 ({@damage 1d8 + 1})穿刺傷害。"
 					]
 				}
 			],
@@ -27793,7 +27793,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item breastplate|phb}"
+						"{@item 護胸甲|phb}"
 					]
 				}
 			],
@@ -27907,7 +27907,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item breastplate|phb}"
+						"{@item 護胸甲|phb}"
 					]
 				}
 			],
@@ -30451,7 +30451,7 @@
 				{
 					"name": "矛",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或 射程20/60呎，單一目標。{@h}11 ({@dice 1d6 + 3} + {@dice 1d8})穿刺傷害，或若雙手使用以進行一次近戰攻擊時造成 12 ({@damage 2d8 + 3})穿刺傷害。"
+						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或 射程20/60呎，單一目標。{@h}11 ({@dice 1d6 + 3} + {@dice 1d8})穿刺傷害，或若雙手使用以進行一次近戰攻擊時則造成 12 ({@damage 2d8 + 3})穿刺傷害。"
 					]
 				}
 			],
@@ -30586,7 +30586,7 @@
 				{
 					"name": "矛",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 6}，觸及5呎 或 射程20/60呎，單一目標。{@h}12 ({@dice 1d6 + 4} + {@dice 1d8})穿刺傷害，或若雙手使用以進行一次近戰攻擊時造成 13 ({@damage 2d8 + 4})穿刺傷害。"
+						"{@atk mw,rw} 命中{@hit 6}，觸及5呎 或 射程20/60呎，單一目標。{@h}12 ({@dice 1d6 + 4} + {@dice 1d8})穿刺傷害，或若雙手使用以進行一次近戰攻擊時則造成 13 ({@damage 2d8 + 4})穿刺傷害。"
 					]
 				},
 				{
@@ -34251,7 +34251,7 @@
 			]
 		},
 		{
-			"name": "Sahuagin",
+			"name": "沙華魚人", "ENG_name": "Sahuagin",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -34291,25 +34291,25 @@
 			},
 			"senses": "黑暗視覺120呎",
 			"passive": 15,
-			"languages": "Sahuagin",
+			"languages": "沙華魚人語",
 			"cr": "1/2",
 			"trait": [
 				{
 					"name": "鮮血狂熱",
 					"entries": [
-						"The sahuagin在對任何生命值沒有全滿的生物所進行的近戰攻擊檢定中具有優勢。"
+						"沙華魚人在對任何生命值沒有全滿的生物所進行的近戰攻擊檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Limited Amphibiousness",
+					"name": "有限兩棲",
 					"entries": [
-						"The sahuagin可以在空氣和水中呼吸。, but it needs to be submerged at least once every 4 hours to avoid suffocating."
+						"沙華魚人可以在空氣和水中呼吸，但它每4小時必須至少回到水中一次以避免窒息。"
 					]
 				},
 				{
-					"name": "Shark Telepathy",
+					"name": "鯊心感應",
 					"entries": [
-						"The sahuagin can magically command any shark within 120 feet of it, using a limited telepathy."
+						"藉由有限的心靈感應，沙華魚人可以用魔法對任何距離它120呎內的鯊魚下達命令。"
 					]
 				}
 			],
@@ -34317,7 +34317,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The sahuagin makes two melee attacks: one with its bite and one with its claws or spear."
+						"沙華魚人進行二次近戰攻擊：一次啃咬，一次爪抓或矛。"
 					]
 				},
 				{
@@ -34335,7 +34335,7 @@
 				{
 					"name": "矛",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 3}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d6 + 1}) piercing damage, or 5 ({@damage 1d8 + 1}) piercing damage if used with two hands to make a melee attack."
+						"{@atk mw,rw} 命中{@hit 3}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d6 + 1})穿刺傷害，或若雙手使用以進行一次近戰攻擊時則造成 5 ({@damage 1d8 + 1})穿刺傷害。"
 					]
 				}
 			],
@@ -34356,7 +34356,7 @@
 			]
 		},
 		{
-			"name": "Sahuagin Baron",
+			"name": "沙華魚人男爵", "ENG_name": "Sahuagin Baron",
 			"size": "L",
 			"type": {
 				"type": "humanoid",
@@ -34373,7 +34373,7 @@
 				{
 					"ac": 16,
 					"from": [
-						"{@item breastplate|phb}"
+						"{@item 護胸甲|phb}"
 					]
 				}
 			],
@@ -34402,25 +34402,25 @@
 			},
 			"senses": "黑暗視覺120呎",
 			"passive": 17,
-			"languages": "Sahuagin",
+			"languages": "沙華魚人語",
 			"cr": "5",
 			"trait": [
 				{
 					"name": "鮮血狂熱",
 					"entries": [
-						"The sahuagin在對任何生命值沒有全滿的生物所進行的近戰攻擊檢定中具有優勢。"
+						"沙華魚人在對任何生命值沒有全滿的生物所進行的近戰攻擊檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Limited Amphibiousness",
+					"name": "有限兩棲",
 					"entries": [
-						"The sahuagin可以在空氣和水中呼吸。, but it needs to be submerged at least once every 4 hours to avoid suffocating."
+						"沙華魚人可以在空氣和水中呼吸，但它每4小時必須至少回到水中一次以避免窒息。"
 					]
 				},
 				{
-					"name": "Shark Telepathy",
+					"name": "鯊心感應",
 					"entries": [
-						"The sahuagin can magically command any shark within 120 feet of it, using a limited telepathy."
+						"藉由有限的心靈感應，沙華魚人可以用魔法對任何距離它120呎內的鯊魚下達命令。"
 					]
 				}
 			],
@@ -34428,7 +34428,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The sahuagin makes three attacks: one with his bite and two with his claws or trident."
+						"沙華魚人進行三次近戰攻擊：一次啃咬，二次爪抓或三叉戟。"
 					]
 				},
 				{
@@ -34444,9 +34444,9 @@
 					]
 				},
 				{
-					"name": "Trident",
+					"name": "三叉戟",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 7}，觸及5呎 或 射程20/60呎，單一目標。{@h}11 ({@damage 2d6 + 4}) piercing damage, or 13 ({@damage 2d8 + 4}) piercing damage if used with two hands to make a melee attack."
+						"{@atk mw,rw} 命中{@hit 7}，觸及5呎 或 射程20/60呎，單一目標。{@h}11 ({@damage 2d6 + 4})穿刺傷害，或若雙手使用以進行一次近戰攻擊時則造成 13 ({@damage 2d8 + 4})穿刺傷害。"
 					]
 				}
 			],
@@ -34467,7 +34467,7 @@
 			]
 		},
 		{
-			"name": "Sahuagin Priestess",
+			"name": "沙華魚人女祭司", "ENG_name": "Sahuagin Priestess",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -34508,25 +34508,25 @@
 			},
 			"senses": "黑暗視覺120呎",
 			"passive": 16,
-			"languages": "Sahuagin",
+			"languages": "沙華魚人語",
 			"cr": "2",
 			"trait": [
 				{
 					"name": "鮮血狂熱",
 					"entries": [
-						"The sahuagin在對任何生命值沒有全滿的生物所進行的近戰攻擊檢定中具有優勢。"
+						"沙華魚人在對任何生命值沒有全滿的生物所進行的近戰攻擊檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Limited Amphibiousness",
+					"name": "有限兩棲",
 					"entries": [
-						"The sahuagin可以在空氣和水中呼吸。, but it needs to be submerged at least once every 4 hours to avoid suffocating."
+						"沙華魚人可以在空氣和水中呼吸，但它每4小時必須至少回到水中一次以避免窒息。"
 					]
 				},
 				{
-					"name": "Shark Telepathy",
+					"name": "鯊心感應",
 					"entries": [
-						"The sahuagin can magically command any shark within 120 feet of it, using a limited telepathy."
+						"藉由有限的心靈感應，沙華魚人可以用魔法對任何距離它120呎內的鯊魚下達命令。"
 					]
 				}
 			],
@@ -34534,7 +34534,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The sahuagin makes two melee attacks: one with her bite and one with her claws."
+						"沙華魚人進行二次近戰攻擊：一次啃咬，一次爪抓。"
 					]
 				},
 				{
@@ -34553,9 +34553,9 @@
 			"page": 264,
 			"spellcasting": [
 				{
-					"name": "Spellcasting",
+					"name": "施法",
 					"headerEntries": [
-						"The sahuagin is a 6th-level spellcaster. Her spellcasting ability is Wisdom (spell save DC 12, {@hit 4} to hit with spell attacks). She has the following cleric spells prepared:"
+						"沙華魚人是6級的施法者。她的施法屬性為睿知（法術豁免DC 12，法術攻擊命中{@hit 4}）。她已準備了以下牧師法術："
 					],
 					"spells": {
 						"0": {
@@ -34576,13 +34576,13 @@
 							"slots": 3,
 							"spells": [
 								"{@spell 人類定身術}",
-								"{@spell 靈體武器} (trident)"
+								"{@spell 靈體武器}（三叉戟）"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell mass healing word}",
+								"{@spell 群體治癒真言}",
 								"{@spell 巧舌術}"
 							]
 						}
@@ -39143,7 +39143,7 @@
 				{
 					"name": "矛",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 3}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d6 + 1})穿刺傷害，或若雙手使用以進行一次近戰攻擊時 5 ({@damage 1d8 + 1})穿刺傷害。"
+						"{@atk mw,rw} 命中{@hit 3}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d6 + 1})穿刺傷害，或若雙手使用以進行一次近戰攻擊時則造成 5 ({@damage 1d8 + 1})穿刺傷害。"
 					]
 				}
 			],

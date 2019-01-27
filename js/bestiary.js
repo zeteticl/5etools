@@ -345,9 +345,11 @@ const actionReactionFilter = new Filter({
 	],
 	displayFn: function(a){
 		switch(a){
+			case "Frightful Presence": return "駭人威儀";
 			case "Multiattack": return "多重攻擊";
 			case "Parry": return "格擋";
 			case "Swallow": return "吞嚥";
+			case "Teleport": return "傳送";
 			case "Tentacles": return "觸手";
 			default: return a;
 	};}
@@ -1106,7 +1108,7 @@ function renderStatblock (mon, isScaled) {
 			if (sectionTrClass === "legendary") {
 				const cpy = MiscUtil.copy(sectionEntries).map(it => {
 					if (it.name && it.entries) {
-						it.name = `${it.name}.`;
+						it.name = `${it.name}:`;
 						it.type = it.type || "item";
 					}
 					return it;

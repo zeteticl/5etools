@@ -2406,7 +2406,7 @@ EntryRenderer.monster = {
 		} else {
 			const legendaryActions = mon.legendaryActions || 3;
 			const legendaryName = getCleanName();
-			return `${mon.isNamedCreature ? "" : "The "}${legendaryName} can take ${legendaryActions} legendary action${legendaryActions > 1 ? "s" : ""}, choosing from the options below. Only one legendary action can be used at a time and only at the end of another creature's turn. ${mon.isNamedCreature ? "" : "The "}${legendaryName} regains spent legendary actions at the start of its turn.`
+			return `${legendaryName}可以採取 ${legendaryActions} 次傳奇動作，從以下選項中選擇。傳奇動作只能在另一個生物的回合結束時使用，且一次只能使用一項。${legendaryName}在它的回合開始時恢復所有已消耗的傳奇動作。`
 		}
 	},
 
@@ -2432,7 +2432,7 @@ EntryRenderer.monster = {
 				3: {
 					U: ["沙牆術|XGE", "雷霆步|XGE", "閃電束", "閃現術", "魔法飛彈", "緩速術"],
 					R: ["火球術", "灼熱射線", "加速術", "土石爆發|XGE", "阿迦納薩噴火術|XGE"],
-					O: ["緩速術", "緩速術", "火球術", "解除魔法", "反制法術", "阿迦納薩噴火術|XGE", "護盾術"],
+					O: ["緩速術", "火球術", "解除魔法", "反制法術", "阿迦納薩噴火術|XGE", "護盾術"],
 					S: ["雪雨暴", "防護能量", "休憩術|XGE", "物品定位術", "鑑定術", "李歐蒙小屋"]
 				},
 				4: {
@@ -2442,26 +2442,26 @@ EntryRenderer.monster = {
 					C: ["變形術", "高等隱形術", "困惑術", "臭雲術", "強效幻影", "魅惑怪物|XGE"]
 				},
 				5: {
-					U: ["telekinesis", "hold monster", "dimension door", "wall of stone", "wall of force"],
-					G: ["cloudkill", "charm monster|XGE", "modify memory", "mislead", "hallucinatory terrain", "dimension door"],
-					Z: ["steel wind strike|XGE", "control weather", "control winds|XGE", "watery sphere|XGE", "storm sphere|XGE", "tidal wave|XGE"],
-					O: ["hold monster", "immolation|XGE", "wall of fire", "greater invisibility", "dimension door"],
-					S: ["cone of cold", "ice storm", "teleportation circle", "skill empowerment|XGE", "creation", "Mordenkainen's private sanctum"]
+					U: ["心靈遙控", "怪物定身術", "次元門", "石牆術", "力牆術"],
+					G: ["死雲術", "charm monster|XGE", "modify memory", "mislead", "幻景", "次元門"],
+					Z: ["鋼風打擊|XGE", "操控天氣", "control winds|XGE", "水體法球|XGE", "暴風法球|XGE", "潮湧浪|XGE"],
+					O: ["怪物定身術", "immolation|XGE", "火牆術", "高等隱形術", "次元門"],
+					S: ["寒冰錐", "冰風暴", "teleportation circle", "skill empowerment|XGE", "creation", "魔鄧肯私人密室"]
 				},
 				6: {
-					W: ["cone of cold", "wall of ice"],
-					A: ["scrying", "Rary's telepathic bond", "Otto's irresistible dance", "legend lore", "hold monster", "dream"]
+					W: ["寒冰錐", "wall of ice"],
+					A: ["探知", "Rary's telepathic bond", "Otto's irresistible dance", "legend lore", "怪物定身術", "dream"]
 				},
 				7: {
-					B: ["power word pain|XGE", "finger of death", "disintegrate", "disintegrate", "hold monster"],
-					U: ["chain lightning", "forcecage", "teleport", "etherealness"],
-					G: ["project image", "mirage arcane", "prismatic spray", "teleport"],
-					Z: ["whirlwind|XGE", "chain lightning", "scatter|XGE", "teleport", "disintegrate", "lightning bolt"],
+					B: ["律令痛苦|XGE", "死亡一指", "解離術", "怪物定身術"],
+					U: ["chain lightning", "forcecage", "傳送術", "etherealness"],
+					G: ["project image", "mirage arcane", "prismatic spray", "傳送術"],
+					Z: ["whirlwind|XGE", "chain lightning", "scatter|XGE", "傳送術", "解離術", "閃電束"],
 					C: ["symbol", "simulacrum", "reverse gravity", "project image", "Bigby's hand", "mental prison|XGE", "seeming"],
 					S: ["Otiluke's freezing sphere", "prismatic spray", "wall of ice", "contingency", "arcane gate"]
 				},
 				8: {
-					O: ["sunburst", "delayed blast fireball", "antimagic field", "teleport", "globe of invulnerability", "maze"]
+					O: ["sunburst", "delayed blast fireball", "antimagic field", "傳送術", "globe of invulnerability", "maze"]
 				}
 			};
 
