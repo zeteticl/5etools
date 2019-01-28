@@ -4549,7 +4549,7 @@
 						"{@spell 變造自身}",
 						"{@spell 黑暗術}",
 						"{@spell 灼熱金屬}",
-						"{@spell 隱形術} (self only)",
+						"{@spell 隱形術}(限定自身)",
 						"{@spell 魔法飛彈}"
 					],
 					"ability": "cha"
@@ -5399,7 +5399,7 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Summon Demon (1/Day)",
+					"name": "召喚惡魔 (1/日)",
 					"entries": [
 						"The demon chooses what to summon and attempts a magical summoning.",
 						"A balor has a {@chance 50|50 percent|50% summoning chance} chance of summoning {@dice 1d8} {@creature vrock|mm|vrocks}, {@dice 1d6} {@creature hezrou|mm|hezrous}, {@dice 1d4} {@creature glabrezu|mm|glabrezus}, {@dice 1d3} {@creature nalfeshnee|mm|nalfeshnees}, {@dice 1d2} {@creature marilith|mm|mariliths}, or one {@creature goristro}.",
@@ -5945,7 +5945,7 @@
 					"entries": [
 						"該惡魔選擇要召喚什麼，並嘗試進行一次魔法召喚。",
 						"一個巴古拉魔有{@chance 30|30％|30％召喚機率}機率召喚出另一個巴古拉魔。",
-						"被召喚的惡魔將出現距離它召喚者60呎內的一處未被佔據空間，做為召喚者的盟友行動，且不能再召喚其它惡魔。它會持續存在1分鐘，直到它或它的召喚者死亡、或直到召喚者以一個動作解消它。"
+						"被召喚的惡魔將出現距離它召喚者60呎內的一處未被佔據空間，做為召喚者的盟友行動，且不能再召喚其它惡魔。它會持續存在長達1分鐘，直到它或它的召喚者死亡、或直到召喚者以一個動作解消它。"
 					]
 				}
 			],
@@ -8128,7 +8128,7 @@
 				{
 					"name": "沼澤偽裝",
 					"entries": [
-						"狂蛙人在沼澤地形為躲藏所進行的敏捷（{@skill 隱匿}）檢定具有優勢。"
+						"狂蛙人在沼澤地形為躲藏所進行的敏捷（{@skill 隱匿}）檢定中具有優勢。"
 					]
 				},
 				{
@@ -8279,7 +8279,7 @@
 					],
 					"daily": {
 						"1": [
-							"{@spell plane shift} (self only)"
+							"{@spell plane shift}(限定自身)"
 						],
 						"3e": [
 							"{@spell 變造自身}",
@@ -8868,7 +8868,7 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Summon Demon (1/Day)",
+					"name": "召喚惡魔 (1/日)",
 					"entries": [
 						"The demon chooses what to summon and attempts a magical summoning.",
 						"A chasme has a {@chance 30|30 percent|30% summoning chance} chance of summoning one chasme.",
@@ -10841,7 +10841,7 @@
 					"will": [
 						"{@spell 偵測魔法}",
 						"{@spell 偵測思想}",
-						"{@spell 隱形術} (self only)",
+						"{@spell 隱形術}(限定自身)",
 						"{@spell 法師之手}",
 						"{@spell 強效幻影}"
 					],
@@ -10853,7 +10853,7 @@
 							"{@spell 巧舌術}"
 						],
 						"1e": [
-							"{@spell cloudkill}",
+							"{@spell 死雲術}",
 							"{@spell plane shift}"
 						]
 					},
@@ -11092,7 +11092,7 @@
 						"gnome's的天生施法屬性為Intelligence（法術豁免DC 11）。它生來就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
-						"{@spell 迴避偵測} (self only)"
+						"{@spell 迴避偵測}(限定自身)"
 					],
 					"daily": {
 						"1e": [
@@ -12090,11 +12090,11 @@
 			},
 			"senses": "黑暗視覺120呎",
 			"passive": 15,
-			"languages": "Elvish, Undercommon",
+			"languages": "精靈語、地底通用語",
 			"cr": "6",
 			"trait": [
 				{
-					"name": "Fey Ancestry",
+					"name": "精類血統",
 					"entries": [
 						"The drider has advantage on saving throws against being {@condition charmed}, and magic can't put the drider to sleep."
 					]
@@ -12157,7 +12157,7 @@
 					"daily": {
 						"1e": [
 							"{@spell 黑暗術}",
-							"{@spell faerie fire}"
+							"{@spell 妖火術}"
 						]
 					},
 					"ability": "wis"
@@ -12206,7 +12206,7 @@
 			]
 		},
 		{
-			"name": "Drow",
+			"name": "卓爾", "ENG_name": "Drow",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -12246,19 +12246,19 @@
 			},
 			"senses": "黑暗視覺120呎",
 			"passive": 12,
-			"languages": "Elvish, Undercommon",
+			"languages": "精靈語、地底通用語",
 			"cr": "1/4",
 			"trait": [
 				{
-					"name": "Fey Ancestry",
+					"name": "精類血統",
 					"entries": [
-						"The drow has advantage on saving throws against being {@condition charmed}, and magic can't put the drow to sleep."
+						"卓爾在對抗{@condition 魅惑}的豁免檢定中具有優勢，且魔法無法使卓爾入睡。"
 					]
 				},
 				{
 					"name": "日光敏感",
 					"entries": [
-						"當處於日光照耀下時，drow在攻擊檢定，以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
+						"當處於日光照耀下時，卓爾在攻擊檢定，以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
 					]
 				}
 			],
@@ -12272,20 +12272,20 @@
 				{
 					"name": "手弩",
 					"entries": [
-						"{@atk rw} 命中{@hit 4}，射程30/120呎，單一目標。{@h}5 ({@damage 1d6 + 2}) piercing damage, and the target must succeed on a DC 13 Constitution saving throw or be {@condition poisoned} for 1 hour. If the saving throw fails by 5 or more, the target is also {@condition unconscious} while {@condition poisoned} in this way. The target wakes up if it takes damage or if another creature takes an action to shake it awake."
+						"{@atk rw} 命中{@hit 4}，射程30/120呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害，且目標必須成功通過一次DC 13的體質豁免，否則陷入{@condition 中毒}狀態長達1小時。若此豁免檢定的結果與目標差距為5點或更多，則目標在中毒的同時也將陷入{@condition 昏迷}狀態。目標將在它受到傷害，或另一個生物使用一個動作將它搖醒時恢復知覺。"
 					]
 				}
 			],
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Drow Magic Armor and Weapons",
+					"name": "卓爾魔法護甲和武器",
 					"entries": [
 						{
 							"type": "entries",
 							"entries": [
-								"Drow often wear magic armor and carry magic weapons that lose their enhancement bonuses permanently if they are exposed to sunlight for 1 hour or longer.",
-								"A {@creature drow} wearing a {@item chain shirt +1|dmg|+1 chain shirt} and carrying a {@item shortsword +1|dmg|+1 shortsword} has AC 16 and a +1 bonus on attack and damage rolls with shortsword attacks."
+								"卓爾經常穿戴魔法護甲並攜帶魔法武器，但其附魔加值會在暴露於日光照耀下超過1小時後永久消失。",
+								"一個{@creature 卓爾}在穿戴{@item 鏈甲衫+1|dmg}並攜帶一把{@item 短劍+1|dmg}時，具有AC 16，並在使用短劍進行的攻擊檢定和傷害骰上具有+1加值。"
 							]
 						}
 					]
@@ -12296,7 +12296,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The drow's spellcasting ability is Charisma (spell save DC 11). It can innately cast the following spells, requiring no material components:"
+						"卓爾的天生施法屬性為魅力（法術豁免DC 11）。它天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 舞光術}"
@@ -12304,7 +12304,7 @@
 					"daily": {
 						"1e": [
 							"{@spell 黑暗術}",
-							"{@spell faerie fire}"
+							"{@spell 妖火術}"
 						]
 					},
 					"ability": "cha"
@@ -12327,7 +12327,7 @@
 			]
 		},
 		{
-			"name": "Drow Elite Warrior",
+			"name": "卓爾菁英戰士", "ENG_name": "Drow Elite Warrior",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -12373,19 +12373,19 @@
 			},
 			"senses": "黑暗視覺120呎",
 			"passive": 14,
-			"languages": "Elvish, Undercommon",
+			"languages": "精靈語、地底通用語",
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Fey Ancestry",
+					"name": "精類血統",
 					"entries": [
-						"The drow has advantage on saving throws against being {@condition charmed}, and magic can't put the drow to sleep."
+						"卓爾在對抗{@condition 魅惑}的豁免檢定中具有優勢，且魔法無法使卓爾入睡。"
 					]
 				},
 				{
 					"name": "日光敏感",
 					"entries": [
-						"當處於日光照耀下時，drow在攻擊檢定，以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
+						"當處於日光照耀下時，卓爾在攻擊檢定，以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
 					]
 				}
 			],
@@ -12393,40 +12393,40 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The drow makes two shortsword attacks."
+						"卓爾進行二次短劍攻擊。"
 					]
 				},
 				{
 					"name": "短劍",
 					"entries": [
-						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}7 ({@damage 1d6 + 4}) piercing damage plus 10 ({@damage 3d6}) poison damage."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}7 ({@damage 1d6 + 4})穿刺傷害加 10 ({@damage 3d6})毒素傷害。"
 					]
 				},
 				{
 					"name": "手弩",
 					"entries": [
-						"{@atk rw} 命中{@hit 7}，射程30/120呎，單一目標。{@h}7 ({@damage 1d6 + 4}) piercing damage, and the target must succeed on a DC 13 Constitution saving throw or be {@condition poisoned} for 1 hour. If the saving throw fails by 5 or more, the target is also {@condition unconscious} while {@condition poisoned} in this way. The target wakes up if it takes damage or if another creature takes an action to shake it awake."
+						"{@atk rw} 命中{@hit 7}，射程30/120呎，單一目標。{@h}7 ({@damage 1d6 + 4})穿刺傷害，且目標必須成功通過一次DC 13的體質豁免，否則陷入{@condition 中毒}狀態長達1小時。若此豁免檢定的結果與目標差距為5點或更多，則目標在中毒的同時也將陷入{@condition 昏迷}狀態。目標將在它受到傷害，或另一個生物使用一個動作將它搖醒時恢復知覺。"
 					]
 				}
 			],
 			"reaction": [
 				{
-					"name": "Parry",
+					"name": "格擋",
 					"entries": [
-						"The drow adds 3 to its AC against one melee attack that would hit it. To do so, the drow must see the attacker and be wielding a melee weapon."
+						"卓爾在一次近戰攻擊將要命中它時可以針對該次攻擊使它的AC增加3點。若要這麼做，卓爾必須要能看見攻擊者且正持用一把近戰武器。"
 					]
 				}
 			],
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Drow Magic Armor and Weapons",
+					"name": "卓爾魔法護甲和武器",
 					"entries": [
 						{
 							"type": "entries",
 							"entries": [
-								"Drow often wear magic armor and carry magic weapons that lose their enhancement bonuses permanently if they are exposed to sunlight for 1 hour or longer.",
-								"A {@creature drow elite warrior} wearing {@item studded leather armor +2|dmg|+2 studded leather} and carrying a {@item shortsword +2|dmg|+2 shortsword} has AC 20 and a +2 bonus on attack and damage rolls with shortsword attacks."
+								"卓爾經常穿戴魔法護甲並攜帶魔法武器，但其附魔加值會在暴露於日光照耀下超過1小時後永久消失。",
+								"一個{@creature 卓爾菁英戰士}在穿戴{@item 鑲釘皮甲+2|dmg}並攜帶一把{@item 短劍+2|dmg}時，具有AC 20，並在使用短劍進行的攻擊檢定和傷害骰上具有+2加值。"
 							]
 						}
 					]
@@ -12437,7 +12437,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The drow's spellcasting ability is Charisma (spell save DC 12). It can innately cast the following spells, requiring no material components:"
+						"卓爾的天生施法屬性為魅力（法術豁免DC 12）。它天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 舞光術}"
@@ -12445,8 +12445,8 @@
 					"daily": {
 						"1e": [
 							"{@spell 黑暗術}",
-							"{@spell faerie fire}",
-							"{@spell levitate} (self only)"
+							"{@spell 妖火術}",
+							"{@spell 浮空術}（限自身）"
 						]
 					},
 					"ability": "cha"
@@ -12473,7 +12473,7 @@
 			]
 		},
 		{
-			"name": "Drow Mage",
+			"name": "卓爾魔法師", "ENG_name": "Drow Mage",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -12490,7 +12490,7 @@
 				12,
 				{
 					"ac": 15,
-					"condition": "with {@spell 法師護甲}",
+					"condition": "使用{@spell 法師護甲}時",
 					"braces": true
 				}
 			],
@@ -12515,33 +12515,33 @@
 			},
 			"senses": "黑暗視覺120呎",
 			"passive": 14,
-			"languages": "Elvish, Undercommon",
+			"languages": "精靈語、地底通用語",
 			"cr": "7",
 			"trait": [
 				{
-					"name": "Fey Ancestry",
+					"name": "精類血統",
 					"entries": [
-						"The drow has advantage on saving throws against being {@condition charmed}, and magic can't put the drow to sleep."
+						"卓爾在對抗{@condition 魅惑}的豁免檢定中具有優勢，且魔法無法使卓爾入睡。"
 					]
 				},
 				{
 					"name": "日光敏感",
 					"entries": [
-						"當處於日光照耀下時，drow在攻擊檢定，以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
+						"當處於日光照耀下時，卓爾在攻擊檢定，以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Staff",
+					"name": "法杖",
 					"entries": [
-						"{@atk mw} 命中{@hit 2}，觸及5呎，單一目標。{@h}2 ({@damage 1d6 - 1}) bludgeoning damage, or 3 ({@damage 1d8 - 1}) bludgeoning damage if used with two hands, plus 3 ({@damage 1d6}) poison damage."
+						"{@atk mw} 命中{@hit 2}，觸及5呎，單一目標。{@h}2 ({@damage 1d6 - 1})鈍擊傷害，或若以雙手使用時 3 ({@damage 1d8 - 1})鈍擊傷害，加上 3 ({@damage 1d6})毒素傷害。"
 					]
 				},
 				{
-					"name": "Summon Demon (1/Day)",
+					"name": "召喚惡魔 (1/日)",
 					"entries": [
-						"The drow magically summons a {@creature quasit}, or attempts to summon a {@creature shadow demon} with a {@chance 50|50 percent|50% summoning chance} chance of success. The summoned demon appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. It remains for 10 minutes, until it or its summoner dies, or until its summoner dismisses it as an action."
+						"卓爾使用魔法召喚一個{@creature 夸塞魔}，或以{@chance 50|50％|50％召喚機率}的成功率嘗試召喚一個{@creature 影魔}。被召喚的惡魔將出現距離它召喚者60呎內的一處未被佔據空間，做為召喚者的盟友行動，且不能再召喚其它惡魔。它會持續存在長達10分鐘，直到它或它的召喚者死亡、或直到召喚者以一個動作解消它。"
 					]
 				}
 			],
@@ -12550,7 +12550,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The drow's spellcasting ability is Charisma (spell save DC 12). It can innately cast the following spells, requiring no material components:"
+						"卓爾的天生施法屬性為魅力（法術豁免DC 12）。它天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 舞光術}"
@@ -12558,16 +12558,16 @@
 					"daily": {
 						"1e": [
 							"{@spell 黑暗術}",
-							"{@spell faerie fire}",
-							"{@spell levitate} (self only)"
+							"{@spell 妖火術}",
+							"{@spell 浮空術}(限定自身)"
 						]
 					},
 					"ability": "cha"
 				},
 				{
-					"name": "Spellcasting",
+					"name": "施法",
 					"headerEntries": [
-						"The drow is a 10th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, {@hit 6} to hit with spell attacks). The drow has the following wizard spells prepared:"
+						"卓爾是10級的施法者。它的施法屬性為智力（法術豁免DC 14，法術攻擊命中{@hit 6}）。卓爾已準備了以下法師法術："
 					],
 					"spells": {
 						"0": {
@@ -12612,7 +12612,7 @@
 						"5": {
 							"slots": 2,
 							"spells": [
-								"{@spell cloudkill}"
+								"{@spell 死雲術}"
 							]
 						}
 					},
@@ -12636,7 +12636,7 @@
 			]
 		},
 		{
-			"name": "Drow Priestess of Lolth",
+			"name": "卓爾．羅絲女祭司", "ENG_name": "Drow Priestess of Lolth",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -12683,19 +12683,19 @@
 			},
 			"senses": "黑暗視覺120呎",
 			"passive": 16,
-			"languages": "Elvish, Undercommon",
+			"languages": "精靈語、地底通用語",
 			"cr": "8",
 			"trait": [
 				{
-					"name": "Fey Ancestry",
+					"name": "精類血統",
 					"entries": [
-						"The drow has advantage on saving throws against being {@condition charmed}, and magic can't put the drow to sleep."
+						"卓爾在對抗{@condition 魅惑}的豁免檢定中具有優勢，且魔法無法使卓爾入睡。"
 					]
 				},
 				{
 					"name": "日光敏感",
 					"entries": [
-						"當處於日光照耀下時，drow在攻擊檢定，以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
+						"當處於日光照耀下時，卓爾在攻擊檢定，以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
 					]
 				}
 			],
@@ -12703,32 +12703,32 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The drow makes two scourge attacks."
+						"卓爾進行二次鞭打攻擊。"
 					]
 				},
 				{
-					"name": "Scourge",
+					"name": "鞭打",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2}) piercing damage plus 17 ({@damage 5d6}) poison damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害加 17 ({@damage 5d6})毒素傷害。"
 					]
 				},
 				{
-					"name": "Summon Demon (1/Day)",
+					"name": "召喚惡魔 (1/日)",
 					"entries": [
-						"The drow attempts to magically summon a {@creature yochlol} with a {@chance 30|30 percent|30% summoning chance} chance of success. If the attempt fails, the drow takes 5 ({@damage 1d10}) psychic damage. Otherwise, the summoned demon appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. It remains for 10 minutes, until it or its summoner dies, or until its summoner dismisses it as an action."
+						"卓爾使用魔法以{@chance 30|30％|30％召喚機率}的成功率嘗試召喚一個{@creature 蠟融妖}。若召喚失敗，則卓爾將受到5 ({@damage 1d10})精神傷害。被召喚的惡魔將出現距離它召喚者60呎內的一處未被佔據空間，做為召喚者的盟友行動，且不能再召喚其它惡魔。它會持續存在長達10分鐘，直到它或它的召喚者死亡、或直到召喚者以一個動作解消它。"
 					]
 				}
 			],
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Drow Magic Armor and Weapons",
+					"name": "卓爾魔法護甲和武器",
 					"entries": [
 						{
 							"type": "entries",
 							"entries": [
-								"Drow often wear magic armor and carry magic weapons that lose their enhancement bonuses permanently if they are exposed to sunlight for 1 hour or longer.",
-								"A {@creature drow priestess of lolth} wearing {@item scale mail +3|dmg|+3 scale mail} has AC 19."
+								"卓爾經常穿戴魔法護甲並攜帶魔法武器，但其附魔加值會在暴露於日光照耀下超過1小時後永久消失。",
+								"一個{@creature 卓爾．羅絲女祭司}在穿戴{@item 鱗甲+3|dmg}時，具有AC 19。"
 							]
 						}
 					]
@@ -12739,7 +12739,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The drow's spellcasting ability is Charisma (spell save DC 15). She can innately cast the following spells, requiring no material components:"
+						"卓爾的天生施法屬性為魅力（法術豁免DC 15）。她天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 舞光術}"
@@ -12747,16 +12747,16 @@
 					"daily": {
 						"1e": [
 							"{@spell 黑暗術}",
-							"{@spell faerie fire}",
-							"{@spell levitate} (self only)"
+							"{@spell 妖火術}",
+							"{@spell 浮空術}(限定自身)"
 						]
 					},
 					"ability": "cha"
 				},
 				{
-					"name": "Spellcasting",
+					"name": "施法",
 					"headerEntries": [
-						"The drow is a 10th-level spellcaster. Her spellcasting ability is Wisdom (save DC 14, {@hit 6} to hit with spell attacks). The drow has the following cleric spells prepared:"
+						"卓爾是10級的施法者。她的施法屬性為睿知（法術豁免DC 14，法術攻擊命中{@hit 6}）。卓爾已準備了以下牧師法術："
 					],
 					"spells": {
 						"0": {
@@ -12788,7 +12788,7 @@
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell 召喚動物} (2 giant spiders)",
+								"{@spell 召喚動物}（2個{@creature 巨蜘蛛}）",
 								"{@spell 解除魔法}"
 							]
 						},
@@ -12802,8 +12802,8 @@
 						"5": {
 							"slots": 2,
 							"spells": [
-								"{@spell insect plague}",
-								"{@spell mass cure wounds}"
+								"{@spell 疫病蟲群}",
+								"{@spell 群體治療傷勢}"
 							]
 						}
 					},
@@ -13874,7 +13874,7 @@
 							"{@spell dispel evil and good}",
 							"{@spell earthquake}",
 							"{@spell fire storm}",
-							"{@spell plane shift} (self only)"
+							"{@spell plane shift}(限定自身)"
 						]
 					},
 					"ability": "cha"
@@ -17612,9 +17612,9 @@
 			"cr": "1",
 			"trait": [
 				{
-					"name": "橫衝直撞",
+					"name": "暴走",
 					"entries": [
-						"當鬣狗在它的回合以一次近戰攻擊將一個生物的生命值歸零，鬣狗可以採取一次附贈動作以移動最多它速度一半的距離，並進行一次啃咬攻擊。"
+						"當鬣狗在它的回合以一次近戰攻擊將一個生物的生命值歸零，鬣狗可以使用一個附贈動作以移動最多等同於它移動速度一半的距離，並進行一次啃咬攻擊。"
 					]
 				}
 			],
@@ -17757,7 +17757,7 @@
 				{
 					"name": "水下偽裝",
 					"entries": [
-						"章魚在處於水中時進行的敏捷（{@skill 隱匿}）檢定具有優勢。"
+						"章魚在處於水中時進行的敏捷（{@skill 隱匿}）檢定中具有優勢。"
 					]
 				},
 				{
@@ -18746,7 +18746,7 @@
 			]
 		},
 		{
-			"name": "Githyanki Knight",
+			"name": "吉斯洋基騎士", "ENG_name": "Githyanki Knight",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -18786,42 +18786,42 @@
 				"wis": "+5"
 			},
 			"passive": 12,
-			"languages": "Gith",
+			"languages": "吉斯人語",
 			"cr": "8",
 			"action": [
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The githyanki makes two silver greatsword attacks."
+						"吉斯洋基人進行二次銀質巨劍攻擊。"
 					]
 				},
 				{
-					"name": "Silver Greatsword",
+					"name": "銀質巨劍",
 					"entries": [
-						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}13 ({@damage 2d6 + 6}) slashing damage plus 10 ({@damage 3d6}) psychic damage. This is a magic weapon attack. On a critical hit against a target in an astral body (as with the {@spell astral projection} spell), the githyanki can cut the silvery cord that tethers the target to its material body, instead of dealing damage."
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}13 ({@damage 2d6 + 6})劈砍傷害加 10 ({@damage 3d6})精神傷害。此攻擊視為魔法武器攻擊。當命中處於星界軀體（如同使用{@spell 星界投射}法術）的目標的攻擊發生暴擊，吉斯洋基人可以砍斷聯繫著目標與它物質軀體的銀色繫線，而非造成傷害。"
 					]
 				}
 			],
 			"page": 160,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting (Psionics)",
+					"name": "天生施法（靈能）",
 					"headerEntries": [
-						"The githyanki's innate spellcasting ability is Intelligence (spell save DC 13, {@hit 5} to hit with spell attacks). It can innately cast the following spells, requiring no components:"
+						"吉斯洋基人的天生施法屬性為智力（法術豁免DC 13，法術攻擊命中{@hit 5}）。它天生就可以施展以下法術，且無需任何構材："
 					],
 					"will": [
-						"{@spell 法師之手} (the hand is invisible)"
+						"{@spell 法師之手}（這隻手為隱形狀態）"
 					],
 					"daily": {
 						"3e": [
 							"{@spell 跳躍術}",
 							"{@spell 迷蹤步}",
-							"{@spell 迴避偵測} (self only)",
+							"{@spell 迴避偵測}(限定自身)",
 							"{@spell 巧舌術}"
 						],
 						"1e": [
-							"{@spell plane shift}",
-							"{@spell telekinesis}"
+							"{@spell 異界傳送}",
+							"{@spell 心靈遙控}"
 						]
 					},
 					"ability": "int"
@@ -18836,7 +18836,7 @@
 			]
 		},
 		{
-			"name": "Githyanki Warrior",
+			"name": "吉斯洋基戰士", "ENG_name": "Githyanki Warrior",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -18876,37 +18876,37 @@
 				"wis": "+3"
 			},
 			"passive": 11,
-			"languages": "Gith",
+			"languages": "吉斯人語",
 			"cr": "3",
 			"action": [
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The githyanki makes two greatsword attacks."
+						"吉斯洋基人進行二次巨劍攻擊。"
 					]
 				},
 				{
 					"name": "巨劍",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}9 ({@damage 2d6 + 2}) slashing damage plus 7 ({@damage 2d6}) psychic damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}9 ({@damage 2d6 + 2})劈砍傷害加 7 ({@damage 2d6})精神傷害。"
 					]
 				}
 			],
 			"page": 160,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting (Psionics)",
+					"name": "天生施法（靈能）",
 					"headerEntries": [
-						"The githyanki's innate spellcasting ability is Intelligence. It can innately cast the following spells, requiring no components:"
+						"吉斯洋基人的天生施法屬性為智力。它天生就可以施展以下法術，且無需任何構材："
 					],
 					"will": [
-						"{@spell 法師之手} (the hand is invisible)"
+						"{@spell 法師之手}（這隻手為隱形狀態）"
 					],
 					"daily": {
 						"3e": [
 							"{@spell 跳躍術}",
 							"{@spell 迷蹤步}",
-							"{@spell 迴避偵測} (self only)"
+							"{@spell 迴避偵測}(限定自身)"
 						]
 					},
 					"ability": "int"
@@ -18921,7 +18921,7 @@
 			]
 		},
 		{
-			"name": "Githzerai Monk",
+			"name": "吉斯澤萊武僧", "ENG_name": "Githzerai Monk",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -18961,13 +18961,13 @@
 				"perception": "+4"
 			},
 			"passive": 14,
-			"languages": "Gith",
+			"languages": "吉斯人語",
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Psychic Defense",
+					"name": "靈能防護",
 					"entries": [
-						"While the githzerai is wearing no armor and wielding no shield, its AC includes its Wisdom modifier."
+						"當吉斯澤萊人未穿戴任何護甲且未持用盾牌時，它的AC將加上它的睿知調整值。"
 					]
 				}
 			],
@@ -18975,25 +18975,25 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The githzerai makes two unarmed strikes."
+						"吉斯澤萊人進行二次徒手打擊。"
 					]
 				},
 				{
-					"name": "Unarmed Strike",
+					"name": "徒手打擊",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}6 ({@damage 1d8 + 2}) bludgeoning damage plus 9 ({@damage 2d8}) psychic damage. This is a magic weapon attack."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}6 ({@damage 1d8 + 2})鈍擊傷害加 9 ({@damage 2d8})精神傷害。此攻擊視為魔法武器攻擊。"
 					]
 				}
 			],
 			"page": 161,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting (Psionics)",
+					"name": "天生施法（靈能）",
 					"headerEntries": [
-						"The githzerai's innate spellcasting ability is Wisdom. It can innately cast the following spells, requiring no components:"
+						"吉斯澤萊人的天生施法屬性為睿知。它天生就可以施展以下法術，且無需任何構材："
 					],
 					"will": [
-						"{@spell 法師之手} (the hand is invisible)"
+						"{@spell 法師之手}（這隻手為隱形狀態）"
 					],
 					"daily": {
 						"3e": [
@@ -19015,7 +19015,7 @@
 			]
 		},
 		{
-			"name": "Githzerai Zerth",
+			"name": "吉斯澤萊澤斯修士", "ENG_name": "Githzerai Zerth",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -19056,13 +19056,13 @@
 				"perception": "+6"
 			},
 			"passive": 16,
-			"languages": "Gith",
+			"languages": "吉斯人語",
 			"cr": "6",
 			"trait": [
 				{
-					"name": "Psychic Defense",
+					"name": "靈能防護",
 					"entries": [
-						"While the githzerai is wearing no armor and wielding no shield, its AC includes its Wisdom modifier."
+						"當吉斯澤萊人未穿戴任何護甲且未持用盾牌時，它的AC將加上它的睿知調整值。"
 					]
 				}
 			],
@@ -19070,25 +19070,25 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The githzerai makes two unarmed strikes."
+						"吉斯澤萊人進行二次徒手打擊。"
 					]
 				},
 				{
-					"name": "Unarmed Strike",
+					"name": "徒手打擊",
 					"entries": [
-						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}11 ({@damage 2d6 + 4}) bludgeoning damage plus 13 ({@damage 3d8}) psychic damage. This is a magic weapon attack."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}11 ({@damage 2d6 + 4})鈍擊傷害加 13 ({@damage 3d8})精神傷害。此攻擊視為魔法武器攻擊。"
 					]
 				}
 			],
 			"page": 161,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting (Psionics)",
+					"name": "天生施法（靈能）",
 					"headerEntries": [
-						"The githzerai's innate spellcasting ability is Wisdom. It can innately cast the following spells, requiring no components:"
+						"吉斯澤萊人的天生施法屬性為睿知。它天生就可以施展以下法術，且無需任何構材："
 					],
 					"will": [
-						"{@spell 法師之手} (the hand is invisible)"
+						"{@spell 法師之手}（這隻手為隱形狀態）"
 					],
 					"daily": {
 						"3e": [
@@ -19096,6 +19096,10 @@
 							"{@spell 跳躍術}",
 							"{@spell 識破隱形}",
 							"{@spell 護盾術}"
+						],
+						"1e": [
+							"{@spell 魅影殺手}",
+							"{@spell 異界傳送}"
 						]
 					},
 					"ability": "wis"
@@ -19226,7 +19230,7 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Summon Demon (1/Day)",
+					"name": "召喚惡魔 (1/日)",
 					"entries": [
 						"The demon chooses what to summon and attempts a magical summoning.",
 						"A glabrezu has a {@chance 30|30 percent|30% summoning chance} chance of summoning {@dice 1d3} {@creature vrock}s, {@dice 1d2} {@creature hezrou}s, or one glabrezu.",
@@ -19353,7 +19357,7 @@
 			]
 		},
 		{
-			"name": "Gnoll",
+			"name": "豺狼人", "ENG_name": "Gnoll",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -19390,13 +19394,13 @@
 			"cha": 7,
 			"senses": "黑暗視覺60呎",
 			"passive": 10,
-			"languages": "Gnoll",
+			"languages": "豺狼人語",
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Rampage",
+					"name": "暴走",
 					"entries": [
-						"When the gnoll reduces a creature to 0 hit points with a melee attack on its turn, the gnoll can take a bonus action to move up to half its speed and make a bite attack."
+						"當豺狼人在它的回合以一次近戰攻擊將一個生物的生命值歸零，豺狼人可以使用一個附贈動作以移動最多等同於它移動速度一半的距離，並進行一次啃咬攻擊。"
 					]
 				}
 			],
@@ -19410,7 +19414,7 @@
 				{
 					"name": "矛",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或 射程20/60呎，單一目標。{@h}5 ({@damage 1d6 + 2}) piercing damage, or 6 ({@damage 1d8 + 2}) piercing damage if used with two hands to make a melee attack."
+						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或 射程20/60呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害，或若雙手使用以進行一次近戰攻擊時則造成 6 ({@damage 1d8 + 2})穿刺傷害。"
 					]
 				},
 				{
@@ -19439,7 +19443,7 @@
 			]
 		},
 		{
-			"name": "Gnoll Fang of Yeenoghu",
+			"name": "豺狼人．耶諾古毒牙", "ENG_name": "Gnoll Fang of Yeenoghu",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -19480,13 +19484,13 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 10,
-			"languages": "Abyssal, Gnoll",
+			"languages": "深淵語、豺狼人語",
 			"cr": "4",
 			"trait": [
 				{
-					"name": "Rampage",
+					"name": "暴走",
 					"entries": [
-						"When the gnoll reduces a creature to 0 hit points with a melee attack on its turn, the gnoll can take a bonus action to move up to half its speed and make a bite attack."
+						"當豺狼人在它的回合以一次近戰攻擊將一個生物的生命值歸零，豺狼人可以使用一個附贈動作以移動最多等同於它移動速度一半的距離，並進行一次啃咬攻擊。"
 					]
 				}
 			],
@@ -19494,17 +19498,17 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The gnoll makes three attacks: one with its bite and two with its claws."
+						"豺狼人進行三次攻擊：一次啃咬，二次爪抓。"
 					]
 				},
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}6 ({@damage 1d6 + 3}) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 7 ({@damage 2d6}) poison damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}6 ({@damage 1d6 + 3})穿刺傷害，且目標必須成功通過一次DC 12的體質豁免，否則受到 7 ({@damage 2d6})毒素傷害。"
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "爪抓",
 					"entries": [
 						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3})劈砍傷害。"
 					]
@@ -19533,7 +19537,7 @@
 			]
 		},
 		{
-			"name": "Gnoll Pack Lord",
+			"name": "豺狼人頭領", "ENG_name": "Gnoll Pack Lord",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -19569,13 +19573,13 @@
 			"cha": 9,
 			"senses": "黑暗視覺60呎",
 			"passive": 10,
-			"languages": "Gnoll",
+			"languages": "豺狼人語",
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Rampage",
+					"name": "暴走",
 					"entries": [
-						"When the gnoll reduces a creature to 0 hit points with a melee attack on its turn, the gnoll can take a bonus action to move up to half its speed and make a bite attack."
+						"當豺狼人在它的回合以一次近戰攻擊將一個生物的生命值歸零，豺狼人可以使用一個附贈動作以移動最多等同於它移動速度一半的距離，並進行一次啃咬攻擊。"
 					]
 				}
 			],
@@ -19583,7 +19587,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The gnoll makes two attacks, either with its glaive or its longbow, and uses its Incite Rampage if it can."
+						"豺狼人進行二次攻擊，使用長柄刀或長弓，且若可以的話則再使用它的煽動暴走。"
 					]
 				},
 				{
@@ -19593,7 +19597,7 @@
 					]
 				},
 				{
-					"name": "Glaive",
+					"name": "長柄刀",
 					"entries": [
 						"{@atk mw} 命中{@hit 5}，觸及10呎，單一目標。{@h}8 ({@damage 1d10 + 3})劈砍傷害。"
 					]
@@ -19605,9 +19609,9 @@
 					]
 				},
 				{
-					"name": "Incite Rampage {@recharge 5}",
+					"name": "煽動暴走 {@recharge 5}",
 					"entries": [
-						"One creature the gnoll can see within 30 feet of it can use its reaction to make a melee attack if it can hear the gnoll and has the Rampage trait."
+						"若一個距離豺狼人30呎內，且豺狼人所能看見的一個具有暴走特質的生物能夠聽見豺狼人的聲音，則它可以使用它的反應以進行一次近戰攻擊。"
 					]
 				}
 			],
@@ -20474,13 +20478,13 @@
 					"will": [
 						"{@spell 偵測魔法}",
 						"{@spell 偵測思想}",
-						"{@spell 隱形術} (self only)",
+						"{@spell 隱形術}(限定自身)",
 						"{@spell 法師之手}",
 						"{@spell 強效幻影}"
 					],
 					"daily": {
 						"1": [
-							"{@spell plane shift} (self only)"
+							"{@spell plane shift}(限定自身)"
 						],
 						"2e": [
 							"{@spell 恐懼術}",
@@ -20881,7 +20885,7 @@
 					]
 				},
 				{
-					"name": "Staff",
+					"name": "法杖",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}11 ({@damage 2d6 + 4})鈍擊傷害。"
 					]
@@ -20911,7 +20915,7 @@
 						],
 						"2e": [
 							"{@spell 恐懼術}",
-							"{@spell 隱形術} (self only)"
+							"{@spell 隱形術}(限定自身)"
 						]
 					},
 					"ability": "cha"
@@ -21284,7 +21288,7 @@
 			]
 		},
 		{
-			"name": "Grimlock",
+			"name": "石盲蠻族", "ENG_name": "Grimlock",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -21327,29 +21331,29 @@
 			"cr": "1/4",
 			"trait": [
 				{
-					"name": "Blind Senses",
+					"name": "盲感",
 					"entries": [
-						"The grimlock can't use its blindsight while {@condition deafened} and unable to smell."
+						"石盲蠻族在它{@condition 耳聾}且無法使用嗅覺時，不能使用它的盲視感官。"
 					]
 				},
 				{
 					"name": "敏銳聽覺和嗅覺",
 					"entries": [
-						"The grimlock 在依賴聽覺和嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
+						"石盲蠻族在依賴聽覺和嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Stone Camouflage",
+					"name": "岩地偽裝",
 					"entries": [
-						"The grimlock has advantage on Dexterity (Stealth) checks made to hide in rocky terrain."
+						"石盲蠻族在岩石地形為躲藏所進行的敏捷（{@skill 隱匿}）檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Spiked Bone Club",
+					"name": "刺骨棍棒",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}5 ({@damage 1d4 + 3}) bludgeoning damage plus 2 ({@damage 1d4})穿刺傷害。"
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}5 ({@damage 1d4 + 3})鈍擊傷害加 2 ({@damage 1d4})穿刺傷害。"
 					]
 				}
 			],
@@ -22328,7 +22332,7 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Summon Demon (1/Day)",
+					"name": "召喚惡魔 (1/日)",
 					"entries": [
 						"The demon chooses what to summon and attempts a magical summoning.",
 						"A hezrou has a {@chance 30|30 percent|30% summoning chance} chance of summoning {@dice 2d6} {@creature dretch}es or one hezrou.",
@@ -25777,7 +25781,7 @@
 						"5": {
 							"slots": 3,
 							"spells": [
-								"{@spell cloudkill}",
+								"{@spell 死雲術}",
 								"{@spell 探知}"
 							]
 						},
@@ -27192,7 +27196,7 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Summon Demon (1/Day)",
+					"name": "召喚惡魔 (1/日)",
 					"entries": [
 						"The demon chooses what to summon and attempts a magical summoning.",
 						"A marilith has a {@chance 50|50 percent|50% summoning chance} chance of summoning {@dice 1d6} {@creature vrock}s, {@dice 1d4} {@creature hezrou}s, {@dice 1d3} {@creature glabrezu}s, {@dice 1d2} {@creature nalfeshnee}s, or one marilith.",
@@ -27432,7 +27436,7 @@
 			]
 		},
 		{
-			"name": "Merrow",
+			"name": "邁羅人魚", "ENG_name": "Merrow",
 			"size": "L",
 			"type": "monstrosity",
 			"source": "MM",
@@ -27464,13 +27468,13 @@
 			"cha": 9,
 			"senses": "黑暗視覺60呎",
 			"passive": 10,
-			"languages": "Abyssal, Aquan",
+			"languages": "深淵語、水族語",
 			"cr": "2",
 			"trait": [
 				{
 					"name": "兩棲",
 					"entries": [
-						"The merrow可以在空氣和水中呼吸。"
+						"邁羅人魚可以在空氣和水中呼吸。"
 					]
 				}
 			],
@@ -27478,7 +27482,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The merrow makes two attacks: one with its bite and one with its claws or harpoon."
+						"邁羅人魚進行二次攻擊：一次啃咬，一次爪抓或魚叉。"
 					]
 				},
 				{
@@ -27494,9 +27498,9 @@
 					]
 				},
 				{
-					"name": "Harpoon",
+					"name": "魚叉",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 6}，觸及5呎 或 射程20/60呎，單一目標。{@h}11 ({@damage 2d6 + 4})穿刺傷害。 If the target is a Huge or smaller creature, it must succeed on a Strength contest against the merrow or be pulled up to 20 feet toward the merrow."
+						"{@atk mw,rw} 命中{@hit 6}，觸及5呎 或 射程20/60呎，單一目標。{@h}11 ({@damage 2d6 + 4})穿刺傷害。若目標為一個體型為巨型或更小的生物，則它必須成功通過一次與邁羅人魚的力量對抗，否則被拉向邁羅人魚最多20呎距離。"
 					]
 				}
 			],
@@ -27649,7 +27653,7 @@
 					],
 					"daily": {
 						"1": [
-							"{@spell cloudkill}"
+							"{@spell 死雲術}"
 						],
 						"2e": [
 							"{@spell 黑暗術}",
@@ -27864,12 +27868,12 @@
 					],
 					"will": [
 						"{@spell 偵測思想}",
-						"{@spell levitate}"
+						"{@spell 浮空術}"
 					],
 					"daily": {
 						"1e": [
 							"{@spell dominate monster}",
-							"{@spell plane shift} (self only)"
+							"{@spell plane shift}(限定自身)"
 						]
 					},
 					"ability": "int"
@@ -27978,12 +27982,12 @@
 					],
 					"will": [
 						"{@spell 偵測思想}",
-						"{@spell levitate}"
+						"{@spell 浮空術}"
 					],
 					"daily": {
 						"1e": [
 							"{@spell dominate monster}",
-							"{@spell plane shift} (self only)"
+							"{@spell plane shift}(限定自身)"
 						]
 					},
 					"ability": "int"
@@ -29186,7 +29190,7 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Summon Demon (1/Day)",
+					"name": "召喚惡魔 (1/日)",
 					"entries": [
 						"The demon chooses what to summon and attempts a magical summoning.",
 						"A nalfeshnee has a {@chance 50|50 percent|50% summoning chance} chance of summoning {@dice 1d4} {@creature vrock}s, {@dice 1d3} {@creature hezrou}s, {@dice 1d2} {@creature glabrezu}s, or one nalfeshnee.",
@@ -29402,7 +29406,7 @@
 					],
 					"daily": {
 						"2e": [
-							"{@spell plane shift} (self only)",
+							"{@spell plane shift}(限定自身)",
 							"{@spell ray of enfeeblement}",
 							"{@spell 睡眠術}"
 						]
@@ -29847,7 +29851,7 @@
 						"{@spell 黑暗術}",
 						"{@spell 偵測魔法}",
 						"{@spell 解除魔法}",
-						"{@spell 隱形術} (self only)",
+						"{@spell 隱形術}(限定自身)",
 						"{@spell 鏡影術}"
 					],
 					"ability": "cha"
@@ -30000,7 +30004,7 @@
 				{
 					"name": "水下偽裝",
 					"entries": [
-						"章魚在處於水中時進行的敏捷（{@skill 隱匿}）檢定具有優勢。"
+						"章魚在處於水中時進行的敏捷（{@skill 隱匿}）檢定中具有優勢。"
 					]
 				},
 				{
@@ -30872,7 +30876,7 @@
 			]
 		},
 		{
-			"name": "Owlbear",
+			"name": "梟熊", "ENG_name": "Owlbear",
 			"size": "L",
 			"type": "monstrosity",
 			"source": "MM",
@@ -30910,7 +30914,7 @@
 				{
 					"name": "敏銳視覺和嗅覺",
 					"entries": [
-						"The owlbear在依賴視覺和嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
+						"梟熊在依賴視覺和嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				}
 			],
@@ -30918,11 +30922,11 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The owlbear makes two attacks: one with its beak and one with its claws."
+						"梟熊進行二次攻擊：一次喙啄，一次爪抓。"
 					]
 				},
 				{
-					"name": "Beak",
+					"name": "喙啄",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一生物。{@h}10 ({@damage 1d10 + 5})穿刺傷害。"
 					]
@@ -31781,7 +31785,7 @@
 					],
 					"will": [
 						"{@spell 偵測善惡}",
-						"{@spell 隱形術} (self only)"
+						"{@spell 隱形術}(限定自身)"
 					],
 					"daily": {
 						"3e": [
@@ -33158,7 +33162,7 @@
 							"{@spell 暗示術}"
 						],
 						"1e": [
-							"{@spell dominate person}",
+							"{@spell 支配人類}",
 							"{@spell 飛行術}",
 							"{@spell plane shift}",
 							"{@spell true seeing}"
@@ -36202,7 +36206,7 @@
 					],
 					"will": [
 						"{@spell 偵測善惡}",
-						"{@spell 隱形術} (self only)"
+						"{@spell 隱形術}(限定自身)"
 					],
 					"daily": {
 						"3e": [
@@ -36737,7 +36741,7 @@
 						"5": {
 							"slots": 2,
 							"spells": [
-								"{@spell dominate person}"
+								"{@spell 支配人類}"
 							]
 						}
 					},
@@ -36807,7 +36811,7 @@
 				{
 					"name": "短弓",
 					"entries": [
-						"{@atk rw} 命中{@hit 6}，射程40/160呎，單一目標。{@h}1 穿刺傷害，且目標必須成功通過一次DC 10的體質豁免，否則陷入{@condition 中毒}狀態長達1分鐘。若此豁免檢定的結果為5點或更低，則{@condition 中毒}的目標將陷入{@condition 昏迷}狀態長達相同的持續時間，或直到它受到傷害或另一個生物使用一個動作將它搖醒。"
+						"{@atk rw} 命中{@hit 6}，射程40/160呎，單一目標。{@h}1 穿刺傷害，且目標必須成功通過一次DC 10的體質豁免，否則陷入{@condition 中毒}狀態長達1分鐘。若此豁免檢定的結果與目標差距為5點或更多，則{@condition 中毒}的目標將陷入{@condition 昏迷}狀態長達相同的持續時間，或直到它受到傷害或另一個生物使用一個動作將它搖醒。"
 					]
 				},
 				{
@@ -37123,7 +37127,7 @@
 				{
 					"name": "岩地偽裝",
 					"entries": [
-						"巨人在岩石地形為躲藏所進行的敏捷（{@skill 隱匿}）檢定具有優勢。"
+						"巨人在岩石地形為躲藏所進行的敏捷（{@skill 隱匿}）檢定中具有優勢。"
 					]
 				}
 			],
@@ -38778,11 +38782,11 @@
 						"The thri-kreen's innate spellcasting ability is Wisdom. The thri-kreen can innately cast the following spells, requiring no components:"
 					],
 					"will": [
-						"{@spell 法師之手} (the hand is invisible)"
+						"{@spell 法師之手}（這隻手為隱形狀態）"
 					],
 					"daily": {
 						"1": [
-							"{@spell 隱形術} (self only)"
+							"{@spell 隱形術}(限定自身)"
 						],
 						"2e": [
 							"{@spell 朦朧術}",
@@ -39821,7 +39825,7 @@
 						"{@spell 偵測魔法}",
 						"{@spell 偵測思想}",
 						"{@spell 解除魔法}",
-						"{@spell 隱形術} (self only)",
+						"{@spell 隱形術}(限定自身)",
 						"{@spell 暗示術}"
 					],
 					"daily": {
@@ -40591,7 +40595,7 @@
 						"5": {
 							"slots": 1,
 							"spells": [
-								"{@spell dominate person}"
+								"{@spell 支配人類}"
 							]
 						}
 					},
@@ -41132,7 +41136,7 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Summon Demon (1/Day)",
+					"name": "召喚惡魔 (1/日)",
 					"entries": [
 						"The demon chooses what to summon and attempts a magical summoning.",
 						"A vrock has a {@chance 30|30 percent|30% summoning chance} chance of summoning {@dice 2d4} {@creature dretch}es or one vrock.",
@@ -42798,7 +42802,7 @@
 			]
 		},
 		{
-			"name": "Worg",
+			"name": "座狼", "ENG_name": "Worg",
 			"size": "L",
 			"type": "monstrosity",
 			"source": "MM",
@@ -42832,13 +42836,13 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 14,
-			"languages": "Goblin, Worg",
+			"languages": "哥布林語、座狼語",
 			"cr": "1/2",
 			"trait": [
 				{
 					"name": "敏銳聽覺和嗅覺",
 					"entries": [
-						"The worg在依賴聽覺和嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
+						"座狼在依賴聽覺和嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				}
 			],
@@ -43250,7 +43254,7 @@
 			]
 		},
 		{
-			"name": "Yochlol",
+			"name": "蠟融妖", "ENG_name": "Yochlol",
 			"size": "M",
 			"type": {
 				"type": "fiend",
@@ -43306,7 +43310,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -43317,31 +43321,31 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 12,
-			"languages": "Abyssal, Elvish, Undercommon",
+			"languages": "深淵語、精靈語、地底通用語",
 			"cr": "10",
 			"trait": [
 				{
-					"name": "Shapechanger",
+					"name": "變形者",
 					"entries": [
-						"The yochlol can use its action to polymorph into a form that resembles a female drow or giant spider, or back into its true form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies."
+						"蠟融妖可以使用它的動作以變形成類似於一個女性卓爾、或一隻巨蜘蛛的型態，或者變回它的真實型態。它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備不會隨著變形發生轉變。它會在死亡時回復它的真實型態。"
 					]
 				},
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The yochlol 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"蠟融妖在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
 					"name": "蛛行",
 					"entries": [
-						"yochlol可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
+						"蠟融妖可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
 					]
 				},
 				{
 					"name": "蛛網行者",
 					"entries": [
-						"The yochlol 無視蛛網所造成的移動限制。"
+						"蠟融妖無視蛛網所造成的移動限制。"
 					]
 				}
 			],
@@ -43349,21 +43353,21 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The yochlol makes two melee attacks."
+						"蠟融妖進行二次近戰攻擊。"
 					]
 				},
 				{
-					"name": "Slam (Bite in Spider Form)",
+					"name": "猛擊（蜘蛛型態則為啃咬）",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft. (10 ft. in demon form), one target. {@h}5 ({@dice 1d6 + 2}) bludgeoning (piercing in spider form) damage plus 21 ({@damage 6d6}) poison damage."
+						"{@atk mw} 命中{@hit 6}，觸及5呎（惡魔型態則為10呎），單一目標。{@h}5 ({@dice 1d6 + 2})鈍擊（蜘蛛型態則為穿刺）傷害加 21 ({@damage 6d6})毒素傷害。"
 					]
 				},
 				{
-					"name": "Mist Form",
+					"name": "迷霧型態",
 					"entries": [
-						"The yochlol transforms into toxic mist or reverts to its true form. Any equipment it is wearing or carrying is also transformed. It reverts to its true form if it dies.",
-						"While in mist form, the yochlol is {@condition incapacitated} and can't speak. It has a flying speed of 30 feet, can hover, and can pass through any space that isn't airtight. It has advantage on Strength, Dexterity, and Constitution saving throws, and it is immune to nonmagical damage.",
-						"While in mist form, the yochlol can enter a creature's space and stop there. Each time that creature starts its turn with the yochlol in its space, the creature must succeed on a DC 14 Constitution saving throw or be {@condition poisoned} until the start of its next turn. While {@condition poisoned} in this way, the target is {@condition incapacitated}."
+						"蠟融妖轉化成一團劇毒迷霧，或變回它的真實型態。任何它所穿戴或攜帶的裝備將隨之轉變。它會在死亡時回復它的真實型態。",
+						"當處於迷霧型態時，蠟融妖處於{@condition 無力}狀態，且無法說話。它具有30呎的飛行速度，可以浮空，且可以穿越任何非密封的空間。它在力量、敏捷、和體質豁免中具有優勢，且免疫於所有非魔法傷害。",
+						"當處於迷霧型態時，蠟融妖可以進入一個生物所在的空間並停在該處。每次該生物在蠟融妖所在的空間開始它的回合時，該生物都必須成功通過一次DC 14的體質豁免，否則陷入{@condition 中毒}狀態直到它的下個回合開始。當目標因此處於{@condition 中毒}狀態時，它將連帶陷入{@condition 無力}狀態。"
 					]
 				}
 			],
@@ -43372,7 +43376,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The yochlol's spellcasting ability is Charisma (spell save DC 14). The yochlol can innately cast the following spells, requiring no material components:"
+						"蠟融妖的天生施法屬性為魅力（法術豁免DC 14）。蠟融妖天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 偵測思想}",
@@ -43380,7 +43384,7 @@
 					],
 					"daily": {
 						"1": [
-							"{@spell dominate person}"
+							"{@spell 支配人類}"
 						]
 					},
 					"ability": "cha"
@@ -43389,11 +43393,11 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Summon Demon (1/Day)",
+					"name": "召喚惡魔 (1/日)",
 					"entries": [
-						"The demon chooses what to summon and attempts a magical summoning.",
-						"A yochlol has a {@chance 50|50 percent|50% summoning chance} chance of summoning one yochlol.",
-						"A summoned demon appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. It remains for 1 minute, until it or its summoner dies, or until its summoner dismisses it as an action."
+						"該惡魔選擇要召喚什麼，並嘗試進行一次魔法召喚。",
+						"一個蠟融妖有{@chance 50|50％|50％召喚機率}機率召喚出另一個蠟融妖。",
+						"被召喚的惡魔將出現距離它召喚者60呎內的一處未被佔據空間，做為召喚者的盟友行動，且不能再召喚其它惡魔。它會持續存在長達1分鐘，直到它或它的召喚者死亡、或直到召喚者以一個動作解消它。"
 					]
 				}
 			],
@@ -45267,7 +45271,7 @@
 				{
 					"name": "短弓",
 					"entries": [
-						"{@atk rw} 命中{@hit 3}，射程80/320呎，單一目標。{@h}4 ({@damage 1d6 + 1})穿刺傷害加上 7 ({@damage 2d6})毒素傷害。"
+						"{@atk rw} 命中{@hit 3}，射程80/320呎，單一目標。{@h}4 ({@damage 1d6 + 1})穿刺傷害加 7 ({@damage 2d6})毒素傷害。"
 					]
 				}
 			],

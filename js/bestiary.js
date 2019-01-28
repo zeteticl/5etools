@@ -173,7 +173,7 @@ const sizeFilter = new Filter({
 	],
 	displayFn: Parser.sizeAbvToFull
 });
-const speedFilter = new Filter({header: "Speed", headerName:"速度", items: ["walk", "burrow", "climb", "fly", "hover", "swim"], displayFn: StrUtil.uppercaseFirst});
+const speedFilter = new Filter({header: "Speed", headerName:"速度", items: ["walk", "burrow", "climb", "fly", "hover", "swim"], displayFn: Parser.SpeedToDisplay});
 const strengthFilter = new RangeFilter({header: "Strength",headerName:"力量", min: 1, max: 30});
 const dexterityFilter = new RangeFilter({header: "Dexterity",headerName:"敏捷", min: 1, max: 30});
 const constitutionFilter = new RangeFilter({header: "Constitution",headerName:"體質", min: 1, max: 30});
@@ -326,7 +326,7 @@ const traitFilter = new Filter({
 			case "Pack Tactics": return "群體戰術";
 			case "Pounce": return "猛撲";
 			case "Reckless": return "魯莽";
-			case "Rampage": return "橫衝直撞";
+			case "Rampage": return "暴走";
 			case "Shapechanger": return "變形者";
 			case "Spider Climb": return "蛛行";
 			case "Sunlight Sensitivity": return "日光敏感";
