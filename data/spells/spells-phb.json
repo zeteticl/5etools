@@ -2537,21 +2537,21 @@
 					"type": "entries",
 					"name": "飛擊掌",
 					"entries": [
-						"這隻手掌嘗試推撞一個距離它5呎內的一個生物到你所選擇的一個方向。使用這隻手掌的力量進行一次檢定以對抗目標的力量（@{skill 運動}）檢定。若目標的體型為中型或更小，則你在該檢定中具有優勢。若你成功，則這隻手掌將把目標推動最多5呎加上等同你施法屬性調整值五倍呎的距離。這隻手掌會跟隨目標移動以維持與它距離5呎內。"
+						"這隻手掌嘗試推撞距離它5呎內的一個生物到你所選擇的一個方向。使用這隻手掌的力量值進行一次檢定以對抗目標的力量（@{skill 運動}）檢定。若目標的體型為中型或更小，則你在該檢定中具有優勢。若你成功，則這隻手掌將把目標推動最多5呎加上等同你施法屬性調整值五倍呎的距離。這隻手掌會跟隨目標移動以維持與它距離5呎內。"
 					]
 				},
 				{
 					"type": "entries",
 					"name": "擒拿掌",
 					"entries": [
-						"The hand attempts to grapple a Huge or smaller creature within 5 feet of it. You use the hand's Strength score to resolve the grapple. If the target is Medium or smaller, you have advantage on the check. While the hand is grappling the target, you can use a bonus action to have the hand crush it. When you do so, the target takes bludgeoning damage equal to {@dice 2d6} + your spellcasting ability modifier."
+						"這隻手掌嘗試擒抱距離它5呎內的一個體型為巨型或更小的生物。你使用這隻手掌的力量值以處理擒抱。若目標的體型為中型或更小，則你在該檢定中具有優勢。當這隻手掌擒抱住目標時，你可以使用一個附贈動作以讓手掌擠壓它。當你這麼做時，目標將受到等同於{@dice 2d6} + 你的施法屬性調整值的鈍擊傷害。"
 					]
 				},
 				{
 					"type": "entries",
 					"name": "護身掌",
 					"entries": [
-						"The hand interposes itself between you and a creature you choose until you give the hand a different command. The hand moves to stay between you and the target, providing you with half cover against the target. The target can't move through the hand's space if its Strength score is less than or equal to the hand's Strength score. If its Strength score is higher than the hand's Strength score, the target can move toward you through the hand's space, but that space is difficult terrain for the target."
+						"這隻手掌阻擋在你和一個你所選擇的生物之間，直到你給這隻手一個不同的命令。這隻手將移動以維持在你和目標之間，使你對目標具有半掩護。若目標的力量值低於或等於這隻手掌的力量值，則它將無法移動穿過這隻手掌所在的空間。若目標的力量值超過這隻手的力量值，則目標可以向著你移動穿過這隻手掌所在的空間，但該空間對目標視作困難地形。"
 					]
 				}
 			],
@@ -3581,7 +3581,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"一團暴風雷雲以10呎高、60呎半徑圓柱體的形狀出現，並以你正上方100呎你所能看見的一點為中心。若你無法看見空中可以讓暴風雷雲成形的位置，則此法術失敗（例如當你處於無法容納雷雲成形的房間內）。",
+				"一團暴風雷雲以10呎高、60呎半徑圓柱體的形狀出現，並以你射程內正上方你所能看見的一點為中心。若你無法看見空中一處可以讓暴風雷雲成形的位置，則此法術失敗（例如當你處於無法容納雷雲成形的房間內）。",
 				"當你施放此法術時，選擇位於雷雲之下你所能看見的一點。一道閃電將從雷雲疾馳擊在該點上。每個距離該點5呎內的生物都必須進行一次敏捷豁免。一個豁免失敗的目標將受到{@dice 3d10}閃電傷害，豁免成功則只受到一半的傷害。直到此法術結束前，在每個你的回合，你都可以使用你的動作再次透過這個方式喚來閃電，擊向與之前相同或其他的位置。",
 				"若你在處於暴風雨天候的室外施放此法術，則此法術將讓你控制既存的暴風雷雲，而非創造一個新的。在這樣的情況下，此法術的傷害將增加{@dice 1d10}。"
 			],
@@ -5917,7 +5917,7 @@
 			"page": 226
 		},
 		{
-			"name": "Contact Other Plane",
+			"name": "異界探知", "ENG_name": "Contact Other Plane",
 			"level": 5,
 			"school": "D",
 			"time": [
@@ -5961,8 +5961,8 @@
 				"ritual": true
 			},
 			"entries": [
-				"You mentally contact a demigod, the spirit of a long-dead sage, or some other mysterious entity from another plane. Contacting this extraplanar intelligence can strain or even break your mind. When you cast this spell, make a DC 15 Intelligence saving throw. On a failure, you take {@dice 6d6} psychic damage and are insane until you finish a long rest. While insane, you can't take actions, can't understand what other creatures say, can't read, and speak only in gibberish. A greater restoration spell cast on you ends this effect.",
-				"On a successful save, you can ask the entity up to five questions. You must ask your questions before the spell ends. The DM answers each question with one word, such as \"yes,\" \"no,\" \"maybe,\" \"never,\" \"irrelevant,\" or \"unclear\" (if the entity doesn't know the answer to the question). If a one-word answer would be misleading, the DM might instead offer a short phrase as an answer."
+				"你透過心靈接觸一個半神、過世已久賢者的靈魂、或其他來自另一個位面的神秘存在。接觸這個跨位面的智能可能會扭曲甚至破壞你的心靈。當你施放此法術時，進行一次DC 15的智力豁免。若豁免失敗，你將受到{@dice 6d6}精神傷害，且陷入瘋狂直到你完成一次長休。當陷入瘋狂時，你無法採取動作，無法理解其他生物在說什麼，無法閱讀，且只能說出無意義的胡言亂語。一個施放在你身上的{@spell 高等復原術}可以結束這個效果。",
+				"若豁免成功，你可以詢問這個存在最多五個問題。你必須在此法術結束前提出你的問題。DM將會用一個字回答每個問題，例如\"是\"、\"否\"、\"可能\"、\"永不\"、\"無關\"、或\"不清楚\"（若該存在不知道這個問題的答案）。若一個單字回答可能會產生誤導，則DMDM可以改為提供一個短語做為回答。"
 			],
 			"page": 226,
 			"damageInflict": [
@@ -5973,7 +5973,7 @@
 			]
 		},
 		{
-			"name": "Contagion",
+			"name": "疫病術", "ENG_name": "Contagion",
 			"level": 5,
 			"school": "N",
 			"time": [
@@ -6047,49 +6047,49 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Your touch inflicts disease. Make a melee spell attack against a creature within your reach. On a hit, the target is {@condition poisoned}.",
-				"At the end of each of the {@condition poisoned} target's turns, the target must make a Constitution saving throw. If the target succeeds on three of these saves, it is no longer {@condition poisoned}, and the spell ends. If the target fails three of these saves, the target is no longer {@condition poisoned}, but choose one of the diseases below. The target is subjected to the chosen disease for the spell's duration.",
-				"Since this spell induces a natural disease in its target, any effect that removes a disease or otherwise ameliorates a disease's effects apply to it.",
+				"你的觸碰將帶來疾病。對你觸及範圍內的一個生物進行一次近戰法術攻擊。若命中，則目標陷入{@condition 中毒}狀態。",
+				"在該{@condition 中毒}目標的每個回合結束時，目標必須進行一次體質豁免。若目標在這些豁免檢定中成功三次，則它將不再處於{@condition 中毒}狀態，且此法術結束。若目標在這些豁免檢定中失敗三次，則目標將不再處於{@condition 中毒}狀態，而是選擇以下其中一個疾病。目標將在此法術的持續期間受到所選疾病的影響。",
+				"由於此法術是在目標體內引發一項自然疾病，任何可以移除疾病或改善疾病效果的效果都可以應用於該疾病。",
 				{
 					"type": "entries",
-					"name": "Blinding Sickness",
+					"name": "失明症",
 					"entries": [
-						"Pain grips the creature's mind, and its eyes turn milky white. The creature has disadvantage on Wisdom checks and Wisdom saving throws and is {@condition blinded}."
+						"痛苦控制著生物的心靈，使它的雙眼變成乳白色。該生物在睿知檢定和睿知豁免中具有劣勢，且陷入{@condition 目盲}狀態。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Filth Fever",
+					"name": "穢熱病",
 					"entries": [
-						"A raging fever sweeps through the creature's body. The creature has disadvantage on Strength checks, Strength saving throws, and attack rolls that use Strength."
+						"一陣狂暴高燒橫掃生物的身體。該生物在力量檢定、力量豁免、和使用力量的攻擊檢定中具有劣勢。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Flesh Rot",
+					"name": "血肉潰爛",
 					"entries": [
-						"The creature's flesh decays. The creature has disadvantage on Charisma checks and vulnerability to all damage."
+						"該生物的血肉開始潰爛。該生物在體質檢定中具有劣勢，且對所有傷害易傷。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Mindfire",
+					"name": "腦熱症",
 					"entries": [
-						"The creature's mind becomes feverish. The creature has disadvantage on Intelligence checks and Intelligence saving throws, and the creature behaves as if under the effects of the {@spell confusion} spell during combat."
+						"該生物的大腦發燒狂躁。該生物在智力檢定和智力豁免中具有劣勢，且該生物在戰鬥期間的行為就如同它處於{@spell 困惑術}的效果下。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Seizure",
+					"name": "癲癇",
 					"entries": [
-						"The creature is overcome with shaking. The creature has disadvantage on Dexterity checks, Dexterity saving throws, and attack rolls that use Dexterity."
+						"該生物無法控制地顫抖。該生物在敏捷檢定、敏捷豁免、和使用敏捷的攻擊檢定中具有劣勢。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Slimy Doom",
+					"name": "黏濘惡疾",
 					"entries": [
-						"The creature begins to bleed uncontrollably. The creature has disadvantage on Constitution checks and Constitution saving throws. In addition, whenever the creature takes damage, it is {@condition stunned} until the end of its next turn."
+						"該生物開始無法控制地流血。該生物在體質檢定和體質豁免中具有劣勢。此外，每當該生物受到傷害，它將被{@condition 震懾}直到它的下個回合結束。"
 					]
 				}
 			],
@@ -6851,7 +6851,7 @@
 			]
 		},
 		{
-			"name": "Creation",
+			"name": "造物術", "ENG_name": "Creation",
 			"level": 5,
 			"school": "I",
 			"time": [
@@ -6870,7 +6870,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a tiny piece of matter of the same type of the item you plan to create"
+				"m": "一小片與你打算創造物體相同種類的材料"
 			},
 			"duration": [
 				{
@@ -6913,14 +6913,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You pull wisps of shadow material from the Shadowfell to create a nonliving object of vegetable matter within range: soft goods, rope, wood, or something similar. You can also use this spell to create mineral objects such as stone, crystal, or metal. The object created must be no larger than a 5-foot cube, and the object must be of a form and material that you have seen before.",
-				"The duration depends on the object's material. If the object is composed of multiple materials, use the shortest duration.",
+				"你從墮影冥界中抽出一縷陰影以在射程內創造出一個植物材料製成的非活物物體：紡織品、繩索、木頭、或其他類似的東西。你也可以使用此法術以創造出礦物物體，像是石頭、水晶、或金屬。被創造出的物體的大小不能超過一個5呎邊長立方體，且該物體的外型和材料必須要是你過去曾經看過的。",
+				"法術的持續時間取決於物體的材料。若該物體是以複數材料所構成，則使用最短的持續時間。",
 				{
 					"type": "table",
-					"caption": "Creation",
+					"caption": "造物表格",
 					"colLabels": [
-						"Material",
-						"Duration"
+						"材料",
+						"持續時間"
 					],
 					"colStyles": [
 						"col-8",
@@ -6928,35 +6928,35 @@
 					],
 					"rows": [
 						[
-							"Vegetable matter",
-							"1 day"
+							"植物材料",
+							"1 日"
 						],
 						[
-							"Stone or crystal",
-							"12 hours"
+							"石頭或水晶",
+							"12 小時"
 						],
 						[
-							"Precious metals",
-							"1 hour"
+							"貴金屬",
+							"1 小時"
 						],
 						[
-							"Gems",
-							"10 minutes"
+							"寶石",
+							"10 分鐘"
 						],
 						[
-							"Adamantine or mithral",
-							"1 minute"
+							"精金或秘銀",
+							"1 分鐘"
 						]
 					]
 				},
-				"Using any material created by this spell as another spell's material component causes that spell to fail."
+				"使用此法術所創造出的材料以做為其他法術的材料構材，會使該法術失敗。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 6th level or higher, the cube increases by 5 feet for each slot level above 5th."
+						"當你使用6環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，你所能創造物體的立方體邊長便會再增加5呎。"
 					]
 				}
 			],
@@ -11398,7 +11398,7 @@
 				"你獲得一只為你效勞的魔寵，一只有著你從下列選項中選擇動物外型的精魂：{@creature 蝙蝠}、{@creature 貓}、{@creature 蟹}、{@creature 青蛙}(蟾蜍)、{@creature 獵鷹}、{@creature 蜥蜴}、{@creature 章魚}、{@creature 貓頭鷹}、{@creature 毒蛇}、魚({@creature 食人魚})、{@creature 老鼠}、{@creature 渡鴉}、{@creature 海馬}、{@creature 蜘蛛}、或{@creature 鼬鼠}。它將出現在射程內一處未被占據的空間。魔寵使用所選型態的數據資料，然而它的類型為天界生物、精類、或邪魔（由你選擇），而非野獸。",
 				"你的魔寵與你獨立行動，但它永遠會服從你的命令。在戰鬥中，它會骰自己的先攻，並在它自己的回合中行動。魔寵不能攻擊，但它可以如常採取其他動作。",
 				"當魔寵的生命值歸零，它將憑空消失，不會留下它的物質型態。它會在你再次施放此法術時重新出現。",
-				"當你的魔寵位於你100呎範圍內，你就可以與它藉由心靈感應溝通。此外，以一個動作，直到你的下個回合開始，你可以透過你魔寵的眼睛視物並聽到它所聽見的聲音，獲得該魔寵所具有的任何特殊感知的好處。在這段期間，對你自己的感官而言，你視作耳聾和目盲。",
+				"當你的魔寵位於你100呎範圍內，你就可以與它藉由心靈感應溝通。此外，以一個動作，直到你的下個回合開始，你可以透過你魔寵的眼睛視物並聽到它所聽見的聲音，獲得該魔寵所具有的任何特殊感知的好處。在這段期間，對你自己的感官而言，你視作{@condition 耳聾}和{@condition 目盲}。",
 				"以一個動作，你可以暫時地解消你的魔寵。它將消失並進入一個小型位面以等待你的召喚。或者，你也可以永久的解消它。當它被暫時的解消，你能夠以一個動作讓它重新出現在距離你30呎內一處未被占據的空間。",
 				"你不能同時擁有超過一隻的魔寵。如果你在已經有魔寵的情況下施放這個法術，你使它過繼成新的形態。從上述列表中選擇一個型態，你的魔寵將轉變成所選的生物。",
 				"最後，當你施放一個射程為觸碰的法術時，你的魔寵可以傳遞該法術就彷彿它施放了該法術一樣。你的魔寵必須位於你100呎範圍內，且它必須在你施放時使用它的反應以傳遞法術。如果該法術要求一次攻擊檢定，則你在該檢定中使用你的攻擊調整值。"
@@ -19488,7 +19488,7 @@
 			]
 		},
 		{
-			"name": "Mislead",
+			"name": "假象術", "ENG_name": "Mislead",
 			"level": 5,
 			"school": "I",
 			"time": [
@@ -19530,9 +19530,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You become {@condition invisible} at the same time that an illusory double of you appears where you are standing. The double lasts for the duration, but the invisibility ends if you attack or cast a spell.",
-				"You can use your action to move your illusory double up to twice your speed and make it gesture, speak, and behave in whatever way you choose.",
-				"You can see through its eyes and hear through its ears as if you were located where it is. On each of your turns as a bonus action, you can switch from using its senses to using your own, or back again. While you are using its senses, you are {@condition blinded} and {@condition deafened} in regard to your own surroundings."
+				"你在變為{@condition 隱形}的同時，一個你的幻象複製體出現在你所在的位置。這個複製體會在法術持續期間內持續存在，但隱形效果會在你攻擊或施放法術時結束。",
+				"你可以使用你的動作移動你的幻象複製體至最多等同你移動速度兩倍的距離，並讓它以你選擇的方式打手勢、說話、並行動。",
+				"你可以透過它的眼睛視物並透過它的耳朵聆聽，就如同你位於它所在的位置。在你的每個回合以一個附贈動作，你可以從在它的感官和你的感官之間切換。當你使用它的感官時，你對你自己的周遭環境視作{@condition 耳聾}和{@condition 目盲}。"
 			],
 			"page": 260,
 			"conditionInflict": [
@@ -19661,7 +19661,7 @@
 			]
 		},
 		{
-			"name": "Modify Memory",
+			"name": "修改記憶", "ENG_name": "Modify Memory",
 			"level": 5,
 			"school": "E",
 			"time": [
@@ -19727,18 +19727,18 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You attempt to reshape another creature's memories. One creature that you can see must make a Wisdom saving throw. If you are fighting the creature, it has advantage on the saving throw. On a failed save, the target becomes {@condition charmed} by you for the duration. The {@condition charmed} target is {@condition incapacitated} and unaware of its surroundings, though it can still hear you. If it takes any damage or is targeted by another spell, this spell ends, and none of the target's memories are modified.",
-				"While this charm lasts, you can affect the target's memory of an event that it experienced within the last 24 hours and that lasted no more than 10 minutes. You can permanently eliminate all memory of the event, allow the target to recall the event with perfect clarity and exacting detail, change its memory of the details of the event, or create a memory of some other event.",
-				"You must speak to the target to describe how its memories are affected, and it must be able to understand your language for the modified memories to take root. Its mind fills in any gaps in the details of your description. If the spell ends before you have finished describing the modified memories, the creature's memory isn't altered. Otherwise, the modified memories take hold when the spell ends.",
-				"A modified memory doesn't necessarily affect how a creature behaves, particularly if the memory contradicts the creature's natural inclinations, alignment, or beliefs. An illogical modified memory, such as implanting a memory of how much the creature enjoyed dousing itself in acid, is dismissed, perhaps as a bad dream. The DM might deem a modified memory too nonsensical to affect a creature in a significant manner.",
-				"A remove curse or greater restoration spell cast on the target restores the creature's true memory."
+				"你嘗試重塑另一個生物的記憶。一個你所能看見的生物必須進行一次睿知豁免。若你正在與該生物戰鬥，則它在該豁免檢定中具有優勢。若豁免失敗，目標將在法術持續期間被你{@condition 魅惑}。被{@condition 魅惑}的生物將陷入{@condition 無力}狀態，且無法意識到它的周遭環境，儘管它仍然能聽見你。如果它受到任何傷害或成為其他法術的目標，則此法術結束，且目標的記憶不會受到任何修改。",
+				"在魅惑效果持續時，你可以影響目標關於它在過去24小時內經歷，且持續不超過10分鐘的一個事件的記憶。你可以永久消除關於這個事件的所有記憶、讓目標能完美清晰地回憶起該事件的所有細節、改變它對該事件細節的記憶、或創造一段關於其他事件的記憶。",
+				"你必須對目標說話以描述它的記憶如何被影響，且它必須要能夠理解你的語言好讓你植入被修改的記憶。它的大腦將自動填補你描述中所有細節的漏洞。若此法術在你描述完被修改的記憶之前結束，該生物的記憶將不會被修改。否則被修改的記憶將在法術結束時根植於目標心中。",
+				"一段被修改的記憶不一定會影響生物的行為，尤其是若這段記憶與該生物的天性、陣營、或信仰相違背。一段不合邏輯的記憶，例如植入一段關於該生物是多麼享受將自己浸泡在強酸中的記憶，可能會被忽視，被當作一場惡夢。DM可能會認定一段被修改的記憶太過荒謬，以至於無法顯著影響該生物的行為。",
+				"一個施放於目標的{@spell 移除詛咒}或{@spell 高等復原術}可以恢復該生物真正的記憶。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"If you cast this spell using a spell slot of 6th level or higher, you can alter the target's memories of an event that took place up to 7 days ago (6th level), 30 days ago (7th level), 1 year ago (8th level), or any time in the creature's past (9th level)."
+						"當你使用6環或更高的法術位施放此法術時，你可以修改目標記憶中最多7天前(6環)、30天前(7環)、1年前(8環)、或在過去任何時候(9環)所發生事件的記憶。"
 					]
 				}
 			],
