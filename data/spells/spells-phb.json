@@ -735,7 +735,7 @@
 			]
 		},
 		{
-			"name": "Antilife Shell",
+			"name": "反活物護罩", "ENG_name": "Antilife Shell",
 			"level": 5,
 			"school": "A",
 			"time": [
@@ -817,9 +817,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A shimmering barrier extends out from you in a 10-foot radius and moves with you, remaining centered on you and hedging out creatures other than undead and constructs. The barrier lasts for the duration.",
-				"The barrier prevents an affected creature from passing or reaching through. An affected creature can cast spells or make attacks with ranged or reach weapons through the barrier.",
-				"If you move so that an affected creature is forced to pass through the barrier, the spell ends."
+				"一道閃爍的屏障延展環繞在你10呎半徑的區域，跟隨你移動並以你為中心，阻絕任何不死生物和構裝體以外的生物。這道屏障在法術持續期間持續存在。",
+				"這道屏障會防止受影響的生物穿越或通過。然而一個受影響的生物所施展的法術、或以遠程或觸及武器進行的攻擊將穿過這道屏障。",
+				"若你因為移動而導致一個受影響生物被強迫穿越這道屏障，則此法術結束。"
 			],
 			"page": 213
 		},
@@ -1939,7 +1939,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"在此法術結束前，下一次你以近戰武器攻擊命中一個生物時，你的武器將爆發出強大力場，且該攻擊對目標造成額外{@dice 5d10}力場傷害。此外，若這次攻擊將目標的生命值減少至50或以下，則你將它從位面放逐。若目標原生於與你們所處位面不同的另一個存在位面，則目標將消失，並回到它的故鄉位面。若目標原生於你們所處的存在位面，則該生物將會消失至一個無害的位面。當處於該位面，目標陷入{@condition 無力}狀態。它將維持在該處直到此法術結束。在此法術結束時，目標將重新出現在它離開時所在的空間，或若該空間已被佔據則出現在最近一處未被占據空間。"
+				"在此法術結束前，下一次你以近戰武器攻擊命中一個生物時，你的武器將爆發出強大力場，且該攻擊對目標造成額外{@dice 5d10}力場傷害。此外，若這次攻擊將目標的生命值減少至50或以下，則你將它從位面放逐。若目標原生於與你們所處位面不同的另一個存在位面，則目標將消失，並回到它的原生位面。若目標原生於你們所處的存在位面，則該生物將會消失至一個無害的位面。當處於該位面，目標陷入{@condition 無力}狀態。它將維持在該處直到此法術結束。在此法術結束時，目標將重新出現在它離開時所在的空間，或若該空間已被佔據則出現在最近一處未被占據空間。"
 			],
 			"page": 216,
 			"damageInflict": [
@@ -2111,7 +2111,7 @@
 			"entries": [
 				"你嘗試將射程內你所能看見的一個生物送到另一個存在位面。目標必須成功通過一次魅力豁免，否則將被放逐。",
 				"若目標原生於你們所處的存在位面，則你將目標放逐到一個無害的半位面。當處於該位面時，目標陷入{@condition 無力}狀態。目標將維持在該處直到此法術結束。在此法術結束時，目標將重新出現在它離開時所在的空間，或若該空間已被佔據則出現在最近一處未被占據空間。",
-				"若目標原生於與你們所處位面不同的另一個存在位面，則目標伴隨著一陣微弱的爆破聲被放逐，回到它的故鄉位面。若此法術在1分鐘過去之前結束，則目標將重新出現在它離開時所在的空間，或若該空間已被佔據則出現在最近一處未被占據空間。反之，目標不會回到原處。"
+				"若目標原生於與你們所處位面不同的另一個存在位面，則目標伴隨著一陣微弱的爆破聲被放逐，回到它的原生位面。若此法術在1分鐘過去之前結束，則目標將重新出現在它離開時所在的空間，或若該空間已被佔據則出現在最近一處未被占據空間。反之，目標不會回到原處。"
 			],
 			"entriesHigherLevel": [
 				{
@@ -2482,7 +2482,7 @@
 			]
 		},
 		{
-			"name": "Bigby's Hand",
+			"name": "畢格比之掌", "name": "Bigby's Hand",
 			"level": 5,
 			"school": "V",
 			"time": [
@@ -2501,7 +2501,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "an eggshell and a snakeskin glove"
+				"m": "一個蛋殼和一隻蛇皮手套"
 			},
 			"duration": [
 				{
@@ -2523,33 +2523,33 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You create a Large hand of shimmering, translucent force in an unoccupied space that you can see within range. The hand lasts for the spell's duration, and it moves at your command, mimicking the movements of your own hand.",
-				"The hand is an object that has AC 20 and hit points equal to your hit point maximum. If it drops to 0 hit points, the spell ends. It has a Strength of 26 (+8) and a Dexterity of 10 (+0). The hand doesn't fill its space.",
-				"When you cast the spell and as a bonus action on your subsequent turns, you can move the hand up to 60 feet and then cause one of the following effects with it.",
+				"你在射程內你所能看見的一處未被佔據空間創造出一個大型，閃爍半透明的力場手掌。這隻手掌將在法術持續期間內持續存在，且會依據你的命令移動，模仿你手掌的動作。.",
+				"這隻手掌是一個具有AC 20，且生命值等同於你生命值最大值的物體。若它的生命值歸零，則此法術結束。它的力量屬性為26 (+8)且敏捷屬性為10 (+0)。這隻手並不會佔據它的所在空間。",
+				"當你施放此法術時，或在你後續的回合以一個附贈動作，你可以移動這隻手掌最多60呎距離，並讓它製造出以下其中一種效果。",
 				{
 					"type": "entries",
-					"name": "Clenched Fist",
+					"name": "金剛拳",
 					"entries": [
-						"The hand strikes one creature or object within 5 feet of it. Make a melee spell attack for the hand using your game statistics. On a hit, the target takes {@dice 4d8} force damage."
+						"這隻手掌襲向距離它5呎內的一個生物或物體。使用你的遊戲數據進行一次近戰法術攻擊。若命中，目標將受到{@dice 4d8}力場傷害。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Forceful Hand",
+					"name": "飛擊掌",
 					"entries": [
-						"The hand attempts to push a creature within 5 feet of it in a direction you choose. Make a check with the hand's Strength contested by the Strength (Athletics) check of the target. If the target is Medium or smaller, you have advantage on the check. If you succeed, the hand pushes the target up to 5 feet plus a number of feet equal to five times your spellcasting ability modifier. The hand moves with the target to remain within 5 feet of it."
+						"這隻手掌嘗試推撞一個距離它5呎內的一個生物到你所選擇的一個方向。使用這隻手掌的力量進行一次檢定以對抗目標的力量（@{skill 運動}）檢定。若目標的體型為中型或更小，則你在該檢定中具有優勢。若你成功，則這隻手掌將把目標推動最多5呎加上等同你施法屬性調整值五倍呎的距離。這隻手掌會跟隨目標移動以維持與它距離5呎內。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Grasping Hand",
+					"name": "擒拿掌",
 					"entries": [
 						"The hand attempts to grapple a Huge or smaller creature within 5 feet of it. You use the hand's Strength score to resolve the grapple. If the target is Medium or smaller, you have advantage on the check. While the hand is grappling the target, you can use a bonus action to have the hand crush it. When you do so, the target takes bludgeoning damage equal to {@dice 2d6} + your spellcasting ability modifier."
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Interposing Hand",
+					"name": "護身掌",
 					"entries": [
 						"The hand interposes itself between you and a creature you choose until you give the hand a different command. The hand moves to stay between you and the target, providing you with half cover against the target. The target can't move through the hand's space if its Strength score is less than or equal to the hand's Strength score. If its Strength score is higher than the hand's Strength score, the target can move toward you through the hand's space, but that space is difficult terrain for the target."
 					]
@@ -2560,7 +2560,7 @@
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 6th level or higher, the damage from the clenched fist option increases by {@scaledice 4d8|5-9|2d8} and the damage from the grasping hand increases by {@scaledice 2d6|5-9|2d6} for each slot level above 5th."
+						"當你使用6環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，金剛拳選項造成的傷害便會再增加{@scaledice 4d8|5-9|2d8}，且擒拿掌所造成的傷害也會再增加{@scaledice 2d6|5-9|2d6}。"
 					]
 				}
 			],
@@ -4089,7 +4089,7 @@
 			]
 		},
 		{
-			"name": "Circle of Power",
+			"name": "威能法環", "ENG_name": "Circle of Power",
 			"level": 5,
 			"school": "A",
 			"time": [
@@ -4150,7 +4150,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Divine energy radiates from you, distorting and diffusing magical energy within 30 feet of you. Until the spell ends, the sphere moves with you, centered on you. For the duration, each friendly creature in the area (including you) has advantage on saving throws against spells and other magical effects. Additionally, when an affected creature succeeds on a saving throw made against a spell or magical effect that allows it to make a saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw."
+				"神性能量自你身上散發而出，扭曲並發散距離你30呎內的魔法能量。直到此法術結束前，這個球體範圍將跟隨你移動，並以你為中心。在法術持續期間，每個範圍內的友善生物（包括你）在對抗法術或其他魔法效果的豁免檢定中具有優勢。此外，當一個受影響生物成功通過一次對抗法術或魔法效果以讓它在豁免成功時減半傷害的豁免檢定時，則當它改為在豁免成功時不受到任何傷害。"
 			],
 			"page": 221
 		},
@@ -4727,7 +4727,7 @@
 			]
 		},
 		{
-			"name": "Commune",
+			"name": "通神術", "ENG_name": "Commune",
 			"level": 5,
 			"school": "D",
 			"time": [
@@ -4745,7 +4745,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "incense and a vial of holy or unholy water"
+				"m": "焚香和一小瓶聖水或邪水"
 			},
 			"duration": [
 				{
@@ -4801,14 +4801,14 @@
 				"ritual": true
 			},
 			"entries": [
-				"You contact your deity or a divine proxy and ask up to three questions that can be answered with a yes or no. You must ask your questions before the spell ends. You receive a correct answer for each question.",
-				"Divine beings aren't necessarily omniscient, so you might receive \"unclear\" as an answer if a question pertains to information that lies beyond the deity's knowledge. In a case where a one-word answer could be misleading or contrary to the deity's interests, the DM might offer a short phrase as an answer instead.",
-				"If you cast the spell two or more times before finishing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get no answer. The DM makes this roll in secret."
+				"你聯絡你的神祇或一個神性代理人以詢問最多三個能藉由是或否回答的問題。你必須在此法術結束前提出你的問題。你將會收到每個問題的正確回答。",
+				"神性生物並不一定是全知的，因此你當一個問題涉及到超出神祇知識的範圍，則你可能會收到\"不清楚\"做為問題的答案。在某些情況下，用一個單字回答可能會違背或誤導該神祇的神意，這時DM可以改為提供一個短語做為回答。",
+				"若你在完成下一次長休之前施放此法術兩次或以上，則第一次之後的每次施放都會有累積25%的機率導致你得不到任何回答。DM將暗自擲骰決定。"
 			],
 			"page": 223
 		},
 		{
-			"name": "Commune with Nature",
+			"name": "問道自然", "ENG_name": "Commune with Nature",
 			"level": 5,
 			"school": "D",
 			"time": [
@@ -4893,19 +4893,19 @@
 				"ritual": true
 			},
 			"entries": [
-				"You briefly become one with nature and gain knowledge of the surrounding territory. In the outdoors, the spell gives you knowledge of the land within 3 miles of you. In caves and other natural underground settings, the radius is limited to 300 feet. The spell doesn't function where nature has been replaced by construction, such as in dungeons and towns.",
-				"You instantly gain knowledge of up to three facts of your choice about any of the following subjects as they relate to the area:",
+				"你短暫地與大自然融為一體，並獲得周圍地域的情報。在野外，此法術將讓你知曉距離你3哩範圍內的土地知識。在洞穴和其他自然地下結構中，範圍半徑被限制在300呎內。此法術在像是地城或城鎮等大自然被建造物給取代的環境中沒有任何作用。",
+				"你將立即獲得關於該區域內從以下主題中選擇的最多三個事實情報：",
 				{
 					"type": "list",
 					"items": [
-						"terrain and bodies of water",
-						"prevalent plants, minerals, animals, or peoples",
-						"powerful celestials, fey, fiends, elementals, or undead",
-						"influence from other planes of existence",
-						"buildings"
+						"地形與水體",
+						"主要植株、礦物、動物、或人種",
+						"強大的天界生物、精類、邪魔、元素、或不死生物",
+						"來自其他存在位面的影響",
+						"建築物"
 					]
 				},
-				"For example, you could determine the location of powerful undead in the area, the location of major sources of safe drinking water, and the location of any nearby towns."
+				"舉例來說，你可以判斷出該區域內強大不死生物的位置、可安全飲用的主水源的位置、以及任何附近城鎮的位置。"
 			],
 			"page": 224
 		},
@@ -8610,7 +8610,7 @@
 			]
 		},
 		{
-			"name": "Dispel Evil and Good",
+			"name": "反制善惡", "ENG_name": "Dispel Evil and Good",
 			"level": 5,
 			"school": "A",
 			"time": [
@@ -8628,7 +8628,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "holy water or powdered silver and iron"
+				"m": "聖水或鐵和銀粉"
 			},
 			"duration": [
 				{
@@ -8654,20 +8654,20 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Shimmering energy surrounds and protects you from fey, undead, and creatures originating from beyond the Material Plane. For the duration, celestials, elementals, fey, fiends, and undead have disadvantage on attack rolls against you.",
-				"You can end the spell early by using either of the following special functions.",
+				"閃爍的能量環繞並保護你不受精類、不死生物、和源自物質位面以外的生物。在法術持續期間，天界生物、元素、精類、邪魔、和不死生物在對你的攻擊檢定中具有劣勢。",
+				"你可以藉由以下的特殊方式以提早結束此法術。",
 				{
 					"type": "entries",
-					"name": "Break Enchantment",
+					"name": "破除惑控",
 					"entries": [
-						"As your action, you touch a creature you can reach that is {@condition charmed}, {@condition frightened}, or possessed by a celestial, an elemental, a fey, a fiend, or an undead. The creature you touch is no longer {@condition charmed}, {@condition frightened}, or possessed by such creatures."
+						"以你的一個動作，你碰觸一個觸及範圍內被{@condition 魅惑}、{@condition 恐懼}、或被天界生物、元素、精類、邪魔、或不死生物附身的生物。你觸碰的該生物將不再被{@condition 魅惑}、{@condition 恐懼}、或被這類生物附身。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Dismissal",
+					"name": "驅逐",
 					"entries": [
-						"As your action, make a melee spell attack against a celestial, an elemental, a fey, a fiend, or an undead you can reach. On a hit, you attempt to drive the creature back to its home plane. The creature must succeed on a Charisma saving throw or be sent back to its home plane (if it isn't there already). If they aren't on their home plane, undead are sent to the Shadowfell, and fey are sent to the Feywild."
+						"以你的一個動作，對一個觸及範圍內的天界生物、元素、精類、邪魔、或不死生物進行一次近戰法術攻擊。若命中，則你嘗試驅使該生物回到它的原生位面。目標必須成功通過一次魅力豁免，否則被送回它的原生位面（若它已經在該位面則無效）。若它們不在它們的原生位面，則不死生物將被送回墮影冥界，而精類則被送回妖精荒野。"
 					]
 				}
 			],
@@ -9167,9 +9167,9 @@
 			"source": "PHB",
 			"entries": [
 				"你試圖迷惑一個射程內你所能看見的野獸。它必須成功通過一次睿知豁免，否則在法術持續期間被你{@condition 魅惑}。若你或對你友善的生物正在與它戰鬥，則它在該豁免檢定中具有優勢。",
-				"當該野獸被{@condition 魅惑}，只要你們兩個還在同一個存在未面，則你與它之間將建立起一道心靈連結。你可以在你保有意識的時候使用這道心靈連結以對該生物下達命令（不需要花費動作），而它將盡它的全力服從。你可以指定一個簡單且籠統的行動，像是\"攻擊那個生物\"、\"跑來這裡\"、或\"拿回那個物體\"。若該生物完成了命令且沒有收到來自你進一步的指示，則它將盡它的全力防衛並保護它自己。",
+				"當該野獸被{@condition 魅惑}，只要你們兩個還在同一個存在位面，則你與它之間將建立起一道心靈連結。你可以在你保有意識的時候使用這道心靈連結以對該生物下達命令（不需要花費動作），而它將盡它的全力服從。你可以指定一個簡單且籠統的行動，像是\"攻擊那個生物\"、\"跑來這裡\"、或\"拿回那個物體\"。若該生物完成了命令且沒有收到來自你進一步的指示，則它將盡它的全力防衛並保護它自己。",
 				"你可以使用你的動作以完全而精準地控制目標。直到你的下個回合結束前，該生物只會採取你所選擇的動作，且不會作出任何你不允許的事。在這段期間，你也可以讓該生物採取一個反應，但這也將需要你使用你自己的反應。",
-				"每次目標受到傷害時，它必須再次進行一個新的睿知豁免以對抗此法術。若豁免成功，則此法術結束。"
+				"每次目標受到傷害時，它必須再進行一次新的睿知豁免以對抗此法術。若豁免成功，則此法術結束。"
 			],
 			"entriesHigherLevel": [
 				{
@@ -9189,7 +9189,7 @@
 			]
 		},
 		{
-			"name": "支配怪物", "name": "Dominate Monster",
+			"name": "支配怪物", "ENG_name": "Dominate Monster",
 			"level": 8,
 			"school": "E",
 			"time": [
@@ -9241,17 +9241,17 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You attempt to beguile a creature that you can see within range. It must succeed on a Wisdom saving throw or be {@condition charmed} by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw.",
-				"While the creature is {@condition charmed}, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as \"Attack that creature,\" \"Run over there,\" or \"Fetch that object.\" If the creature completes the order and doesn't receive further direction from you, it defends and preserves itself to the best of its ability.",
-				"You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn't do anything that you don't allow it to do. During this time, you can also cause the creature to use a reaction, but this requires you to use your own reaction as well.",
-				"Each time the target takes damage, it makes a new Wisdom saving throw against the spell. If the saving throw succeeds, the spell ends."
+				"你試圖迷惑一個射程內你所能看見的生物。它必須成功通過一次睿知豁免，否則在法術持續期間被你{@condition 魅惑}。若你或對你友善的生物正在與它戰鬥，則它在該豁免檢定中具有優勢。",
+				"當該生物被{@condition 魅惑}，只要你們兩個還在同一個存在位面，則你與它之間將建立起一道心靈連結。你可以在你保有意識的時候使用這道心靈連結以對該生物下達命令（不需要花費動作），而它將盡它的全力服從。你可以指定一個簡單且籠統的行動，像是\"攻擊那個生物\"、\"跑來這裡\"、或\"拿回那個物體\"。若該生物完成了命令且沒有收到來自你進一步的指示，則它將盡它的全力防衛並保護它自己。",
+				"你可以使用你的動作以完全而精準地控制目標。直到你的下個回合結束前，該生物只會採取你所選擇的動作，且不會作出任何你不允許的事。在這段期間，你也可以讓該生物採取一個反應，但這也將需要你使用你自己的反應。",
+				"每次目標受到傷害時，它必須再進行一次新的睿知豁免以對抗此法術。若豁免成功，則此法術結束。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell with a 9th-level spell slot, the duration is concentration, up to 8 hours."
+						"當你使用9環法術位施放此法術時，持續時間變為專注,至多8小時。"
 					]
 				}
 			],
@@ -9264,7 +9264,7 @@
 			]
 		},
 		{
-			"name": "支配人類", "name": "Dominate Person",
+			"name": "支配人類", "ENG_name": "Dominate Person",
 			"level": 5,
 			"school": "E",
 			"time": [
@@ -9424,17 +9424,17 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You attempt to beguile a humanoid that you can see within range. It must succeed on a Wisdom saving throw or be {@condition charmed} by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw.",
-				"While the target is {@condition charmed}, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as \"Attack that creature,\" \"Run over there,\" or \"Fetch that object.\" If the creature completes the order and doesn't receive further direction from you, it defends and preserves itself to the best of its ability.",
-				"You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn't do anything that you don't allow it to do. During this time you can also cause the creature to use a reaction, but this requires you to use your own reaction as well.",
-				"Each time the target takes damage, it makes a new Wisdom saving throw against the spell. If the saving throw succeeds, the spell ends."
+				"你試圖迷惑一個射程內你所能看見的類人生物。它必須成功通過一次睿知豁免，否則在法術持續期間被你{@condition 魅惑}。若你或對你友善的生物正在與它戰鬥，則它在該豁免檢定中具有優勢。",
+				"當目標被{@condition 魅惑}，只要你們兩個還在同一個存在位面，則你與它之間將建立起一道心靈連結。你可以在你保有意識的時候使用這道心靈連結以對該生物下達命令（不需要花費動作），而它將盡它的全力服從。你可以指定一個簡單且籠統的行動，像是\"攻擊那個生物\"、\"跑來這裡\"、或\"拿回那個物體\"。若該生物完成了命令且沒有收到來自你進一步的指示，則它將盡它的全力防衛並保護它自己。",
+				"你可以使用你的動作以完全而精準地控制目標。直到你的下個回合結束前，該生物只會採取你所選擇的動作，且不會作出任何你不允許的事。在這段期間，你也可以讓該生物採取一個反應，但這也將需要你使用你自己的反應。",
+				"每次目標受到傷害時，它必須再進行一次新的睿知豁免以對抗此法術。若豁免成功，則此法術結束。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a 6th-level spell slot, the duration is concentration, up to 10 minutes. When you use a 7th-level spell slot, the duration is concentration, up to 1 hour. When you use a spell slot of 8th level or higher, the duration is concentration, up to 8 hours."
+						"當你使用6環法術位施放此法術時，持續時間變為專注,至多10分鐘。當你使用7環法術位施放此法術時，持續時間變為專注,至多1小時。當你使用8環或更高的法術位施放此法術時，持續時間變為專注,至多8小時。"
 					]
 				}
 			],
@@ -15630,7 +15630,7 @@
 			]
 		},
 		{
-			"name": "Holy Aura",
+			"name": "神聖靈光", "ENG_name": "Holy Aura",
 			"level": 8,
 			"school": "A",
 			"time": [
@@ -15649,7 +15649,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a tiny reliquary worth at least 1,000 gp containing a sacred relic, such as a scrap of cloth from a saint's robe or a piece of parchment from a religious text",
+					"text": "一個價值至少1,000金幣，裝有聖物的聖物匣，例如聖人衣袍的一片布、或取自聖典的一張羊皮紙",
 					"cost": 1000
 				}
 			},
@@ -15673,7 +15673,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Divine light washes out from you and coalesces in a soft radiance in a 30-foot radius around you. Creatures of your choice in that radius when you cast this spell shed dim light in a 5-foot radius and have advantage on all saving throws, and other creatures have disadvantage on attack rolls against them until the spell ends. In addition, when a fiend or an undead hits an affected creature with a melee attack, the aura flashes with brilliant light. The attacker must succeed on a Constitution saving throw or be {@condition blinded} until the spell ends."
+				"神性光芒從你身上流出並形成一團環繞著你30呎半徑的柔和光輝。直到此法術結束前，在你施放此法術時位於半徑內你所選擇的的生物將散發著5呎半徑的微光光照，在所有豁免檢定中具有優勢，且其它生物在對它們進行的攻擊檢定中具有劣勢。此外，當一個邪魔或不死生物以近戰攻擊命中一個受影響的生物，這道靈光將閃耀出燦爛的光芒，且攻擊者必須成功通過一次體質豁免，否則被{@condition 目盲}直到此法術結束。"
 			],
 			"page": 251,
 			"savingThrow": [
@@ -20573,7 +20573,7 @@
 			]
 		},
 		{
-			"name": "Passwall", "ENG_name": "Passwall",
+			"name": "穿牆術", "ENG_name": "Passwall",
 			"level": 5,
 			"school": "T",
 			"time": [
@@ -28063,7 +28063,7 @@
 			"page": 283
 		},
 		{
-			"name": "Tree Stride",
+			"name": "融身入林", "ENG_name": "Tree Stride",
 			"level": 5,
 			"school": "C",
 			"time": [
@@ -28138,8 +28138,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You gain the ability to enter a tree and move from inside it to inside another tree of the same kind within 500 feet. Both trees must be living and at least the same size as you. You must use 5 feet of movement to enter a tree. You instantly know the location of all other trees of the same kind within 500 feet and, as part of the move used to enter the tree, can either pass into one of those trees or step out of the tree you're in. You appear in a spot of your choice within 5 feet of the destination tree, using another 5 feet of movement. If you have no movement left, you appear within 5 feet of the tree you entered.",
-				"You can use this transportation ability once per round for the duration. You must end each turn outside a tree."
+				"你獲得進入樹木中，並從樹木內部移動到500呎內另一棵同種樹木內部的能力。這兩棵樹木必須是活著的，且至少要與你的體型相同。你必須使用5呎移動速度以進入一棵樹。你將瞬間知曉距離500呎內所有其他同種樹木的位置，並且，做為你進入這棵樹所使用移動速度的一部份，你可以移動至這些同種樹木的其中一棵，或移出你所在的樹木。藉由使用另外的5呎移動速度，你將出現在距離目的地樹木5呎內你所選擇的一處。若你已經沒有剩下的移動速度，則你將出現在距離你所進入的樹木5呎內的一處。",
+				"在法術持續期間，你每輪可以使用這個傳送能力一次。你必須在樹木外面結束你的回合。"
 			],
 			"page": 283
 		},
