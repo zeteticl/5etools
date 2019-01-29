@@ -14388,7 +14388,7 @@
 			]
 		},
 		{
-			"name": "Hallow",
+			"name": "聖居", "ENG_name": "Hallow",
 			"level": 5,
 			"school": "V",
 			"time": [
@@ -14407,7 +14407,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "herbs, oils, and incense worth at least 1,000 gp, which the spell consumes",
+					"text": "價值至少1,000金幣的香草、油膏、和焚香，在施法時消耗",
 					"cost": 1000,
 					"consume": true
 				}
@@ -14442,77 +14442,77 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You touch a point and infuse an area around it with holy (or unholy) power. The area can have a radius up to 60 feet, and the spell fails if the radius includes an area already under the effect a hallow spell. The affected area is subject to the following effects.",
-				"First, celestials, elementals, fey, fiends, and undead can't enter the area, nor can such creatures charm, frighten, or possess creatures within it. Any creature {@condition charmed}, {@condition frightened}, or possessed by such a creature is no longer {@condition charmed}, {@condition frightened}, or possessed upon entering the area. You can exclude one or more of those types of creatures from this effect.",
-				"Second, you can bind an extra effect to the area. Choose the effect from the following list, or choose an effect offered by the DM. Some of these effects apply to creatures in the area; you can designate whether the effect applies to all creatures, creatures that follow a specific deity or leader, or creatures of a specific sort, such as orcs or trolls. When a creature that would be affected enters the spell's area for the first time on a turn or starts its turn there, it can make a Charisma saving throw. On a success, the creature ignores the extra effect until it leaves the area.",
+				"你觸碰一點，並在周遭區域注入神聖（或邪惡）能量。這個區域可以有最多60呎半徑，且若此半徑範圍會涵蓋已經受到另一個聖居法術影響的區域，則此法術失敗。被影響的區域將會獲得以下效果。",
+				"首先，天界生物、元素、精類、邪魔、和不死生物無法進入此區域，這類生物也無法魅惑、恐懼、或附身位於區域內的生物。任何已經被這類生物{@condition 魅惑}、{@condition 恐懼}、或附身的生物，在進入此區域後便不再被{@condition 魅惑}、{@condition 恐懼}、或附身。你可以指定其中一種或多種生物類型不受此效果影響。",
+				"其次，你可以結合一個額外效果於在此區域。從以下列表中選擇其中一個效果，或從DM提供的效果中選擇一個。這些效果中有些會影響區域內的生物；你可以指定這些效果會影響所有生物、追隨特定神祇或領導的生物、或特定種類的生物，像是獸人或巨魔。當一個會受到影響的生物在一個回合中第一次進入該區域，或在該處開始它的回合，則它可以進行一次魅力豁免。若豁免成功，則該生物無視此額外效果直到它離開此區域。",
 				{
 					"type": "entries",
-					"name": "Courage",
+					"name": "勇氣",
 					"entries": [
-						"Affected creatures can't be {@condition frightened} while in the area."
+						"當處於此區域時，受影響的生物不會被{@condition 恐懼}。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Darkness",
+					"name": "黑暗",
 					"entries": [
-						"Darkness fills the area. Normal light, as well as magical light created by spells of a lower level than the slot you used to cast this spell, can't illuminate the area."
+						"黑暗充斥著這片區域。尋常光源，以及利用環位比你施放此法術所用法術環位更低的法術所創造的魔法光源，無法照亮這個區域。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Daylight",
+					"name": "晝明",
 					"entries": [
-						"Bright light fills the area. Magical darkness created by spells of a lower level than the slot you used to cast this spell can't extinguish the light."
+						"明亮光罩充斥著這片區域。利用環位比你施放此法術所用法術環位更低的法術所創造的魔法黑暗，無法熄滅這片光照。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Energy Protection",
+					"name": "能量防護",
 					"entries": [
-						"Affected creatures in the area have resistance to one damage type of your choice, except for bludgeoning, piercing, or slashing."
+						"區域內受影響的生物對你所選擇的一種除了鈍擊、劈砍、穿刺以外的傷害類型具有抗性。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Energy Vulnerability",
+					"name": "能量弱點",
 					"entries": [
-						"Affected creatures in the area have vulnerability to one damage type of your choice, except for bludgeoning, piercing, or slashing."
+						"區域內受影響的生物對你所選擇的一種除了鈍擊、劈砍、穿刺以外的傷害類型具有易傷。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Everlasting Rest",
+					"name": "永恆安息",
 					"entries": [
-						"Dead bodies interred in the area can't be turned into undead."
+						"埋葬在此區域內的屍體不會被轉化成不死生物。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Extradimensional Interference",
+					"name": "跨次元干涉",
 					"entries": [
-						"Affected creatures can't move or travel using teleportation or by extradimensional or interplanar means."
+						"受影響的生物無法使用傳送、異次元或跨位面途徑進行移動或旅行。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Fear",
+					"name": "恐懼",
 					"entries": [
-						"Affected creatures are {@condition frightened} while in the area."
+						"當處於此區域時，受影響的生物陷入{@condition 恐懼}。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Silence",
+					"name": "沉默",
 					"entries": [
-						"No sound can emanate from within the area, and no sound can reach into it."
+						"任何聲音都無法在此區域內被製造或傳入其中。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Tongues",
+					"name": "巧言",
 					"entries": [
-						"Affected creatures can communicate with any other creature in the area, even if they don't share a common language."
+						"受影響的生物可以跟區域內的任何其他生物溝通，即使它們之間沒有共通語言也一樣。"
 					]
 				}
 			],
@@ -23006,7 +23006,7 @@
 			"isHeal": true
 		},
 		{
-			"name": "Reincarnate",
+			"name": "轉生術", "ENG_name": "Reincarnate",
 			"level": 5,
 			"school": "T",
 			"time": [
@@ -23025,7 +23025,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "rare oils and unguents worth at least 1,000 gp, which the spell consumes",
+					"text": "價值至少1,000金幣的稀有塗油和軟膏，在施法時消耗",
 					"cost": 1000,
 					"consume": true
 				}
@@ -23045,14 +23045,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You touch a dead humanoid or a piece of a dead humanoid. Provided that the creature has been dead no longer than 10 days, the spell forms a new adult body for it and then calls the soul to enter that body. If the target's soul isn't free or willing to do so, the spell fails.",
-				"The magic fashions a new body for the creature to inhabit, which likely causes the creature's race to change. The DM rolls a {@dice d100} and consults the following table to determine what form the creature takes when restored to life, or the DM chooses a form.",
+				"你觸碰一個死去的類人生物或它一部份的遺體。只要該生物死亡不超過10天，此法術就會為它形塑出一具新的成年軀體，並呼喚它的靈魂進入這具軀體。若目標生物的靈魂無法或不願意這麼做，則此法術失敗。",
+				"這個魔法會為該生物製造出一具新的身體，並很可能會導致該生物的種族發生改變。DM將骰{@dice d100}並查閱下列表格以決定當該生物會以什麼型態復活，或者DM從中選擇一個型態。",
 				{
 					"type": "table",
-					"caption": "Reincarnate Races",
+					"caption": "轉生種族",
 					"colLabels": [
 						"{@dice d100}",
-						"Race"
+						"種族"
 					],
 					"colStyles": [
 						"col-1 text-align-center no-wrap",
@@ -23068,7 +23068,7 @@
 									"pad": true
 								}
 							},
-							"{@race Dragonborn}"
+							"{@race 龍裔}"
 						],
 						[
 							{
@@ -23079,7 +23079,7 @@
 									"pad": true
 								}
 							},
-							"{@race dwarf (hill)|phb|Dwarf, hill}"
+							"{@race 矮人(Hill)|phb|Dwarf, hill}"
 						],
 						[
 							{
@@ -23089,7 +23089,7 @@
 									"max": 21
 								}
 							},
-							"{@race dwarf (mountain)|phb|Dwarf, mountain}"
+							"{@race 矮人(Mountain)|phb|Dwarf, mountain}"
 						],
 						[
 							{
@@ -23099,7 +23099,7 @@
 									"max": 25
 								}
 							},
-							"{@race elf (drow)|phb|Elf, dark}"
+							"{@race 精靈(卓爾)|phb|黑暗精靈}"
 						],
 						[
 							{
@@ -23109,7 +23109,7 @@
 									"max": 34
 								}
 							},
-							"{@race elf (high)|phb|Elf, high}"
+							"{@race 精靈(高等)|phb|高等精靈}"
 						],
 						[
 							{
@@ -23119,7 +23119,7 @@
 									"max": 42
 								}
 							},
-							"{@race elf (wood)|phb|Elf, wood}"
+							"{@race 精靈(木)|phb|木精靈}"
 						],
 						[
 							{
@@ -23129,7 +23129,7 @@
 									"max": 46
 								}
 							},
-							"{@race gnome (forest)|phb|Gnome, forest}"
+							"{@race 地侏(forest)|phb|Gnome, forest}"
 						],
 						[
 							{
@@ -23139,7 +23139,7 @@
 									"max": 52
 								}
 							},
-							"{@race gnome (rock)|phb|Gnome, rock}"
+							"{@race 地侏(rock)|phb|Gnome, rock}"
 						],
 						[
 							{
@@ -23149,7 +23149,7 @@
 									"max": 56
 								}
 							},
-							"{@race Half-elf}"
+							"{@race 半精靈}"
 						],
 						[
 							{
@@ -23159,7 +23159,7 @@
 									"max": 60
 								}
 							},
-							"{@race Half-orc}"
+							"{@race 半獸人}"
 						],
 						[
 							{
@@ -23169,7 +23169,7 @@
 									"max": 68
 								}
 							},
-							"{@race halfling (lightfoot)|phb|Halfling, lightfoot}"
+							"{@race 半身人(lightfoot)|phb|Halfling, lightfoot}"
 						],
 						[
 							{
@@ -23179,7 +23179,7 @@
 									"max": 76
 								}
 							},
-							"{@race halfling (stout)|phb|Halfling, stout}"
+							"{@race 半身人(stout)|phb|Halfling, stout}"
 						],
 						[
 							{
@@ -23189,7 +23189,7 @@
 									"max": 96
 								}
 							},
-							"{@race Human}"
+							"{@race 人類}"
 						],
 						[
 							{
@@ -23200,11 +23200,11 @@
 									"pad": true
 								}
 							},
-							"{@race Tiefling}"
+							"{@race 提夫林}"
 						]
 					]
 				},
-				"The reincarnated creature recalls its former life and experiences. It retains the capabilities it had in its original form, except it exchanges its original race for the new one and changes its racial traits accordingly."
+				"轉生後的生物保留它前生的記憶和經驗。它也保留它原本型態擁有的所有能力，除了它把原本的種族換成新的種族，並根據其種族改變它的種族特性。"
 			],
 			"page": 271
 		},
@@ -27380,7 +27380,7 @@
 			"permanentEffects": true
 		},
 		{
-			"name": "Teleportation Circle",
+			"name": "傳送法陣", "ENG_name": "Teleportation Circle",
 			"level": 5,
 			"school": "C",
 			"time": [
@@ -27399,7 +27399,7 @@
 			"components": {
 				"v": true,
 				"m": {
-					"text": "rare chalks and inks infused with precious gems worth 50 gp, which the spell consumes",
+					"text": "價值50金幣，混有珍貴寶石的稀有粉筆和墨水，在施法時消耗",
 					"cost": 50,
 					"consume": true
 				}
@@ -27483,9 +27483,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"As you cast the spell, you draw a 10-foot-diameter circle on the ground inscribed with sigils that link your location to a permanent teleportation circle of your choice whose sigil sequence you know and that is on the same plane of existence as you. A shimmering portal opens within the circle you drew and remains open until the end of your next turn. Any creature that enters the portal instantly appears within 5 feet of the destination circle or in the nearest unoccupied space if that space is occupied.",
-				"Many major temples, guilds, and other important places have permanent teleportation circles inscribed somewhere within their confines. Each such circle includes a unique sigil sequence\u2014a string of magical runes arranged in a particular pattern. When you first gain the ability to cast this spell, you learn the sigil sequences for two destinations on the Material Plane, determined by the DM. You can learn additional sigil sequences during your adventures. You can commit a new sigil sequence to memory after studying it for 1 minute.",
-				"You can create a permanent teleportation circle by casting this spell in the same location every day for one year. You need not use the circle to teleport when you cast the spell in this way."
+				"當你施放此法術時，你在地上畫出一個直徑十呎，刻有符文的圓環。這個法陣將把你所在的位置，連結至一個與你處於相同存在位面，你所選擇且你知曉其符文序列的永久傳送法陣。一道閃爍微光的傳送門將在你所繪製的圓環中開啟，並持續直到你的下個回合結束。任何進入傳送門的生物將立刻出現在距離目標法陣5呎內一處未被佔據空間，或若該空間已被佔據則出現在離該法陣最近的一處未被佔據空間。",
+				"許多大型神殿、公會、和其他重要場所都會在其中某處設有永久傳送法陣。每個這種法陣都包括一串獨特的符文序列\u2014一段以特定形式排列的魔法符文字串。當你首次獲得施放此法術的能力時，你將習得兩個位於物質位面的永久傳送法陣的符文序列，由DM決定。你可以在你的冒險過程中習得額外的符文序列。你可以在花費1分鐘研究後記住新的符文序列。",
+				"你可以透過每天在相同地點施放此法術長達一整年來創造一個永久的傳送法陣。當你如此施放此法術時，你並不需要使用該法陣進行傳送。"
 			],
 			"page": 282,
 			"permanentEffects": true
