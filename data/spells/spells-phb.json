@@ -974,7 +974,7 @@
 					"type": "entries",
 					"name": "Antipathy",
 					"entries": [
-						"The enchantment causes creatures of the kind you designated to feel an intense urge to leave the area and avoid the target. When such a creature can see the target or comes within 60 feet of it, the creature must succeed on a Wisdom saving throw or become {@condition frightened}. The creature remains {@condition frightened} while it can see the target or is within 60 feet of it. While {@condition frightened} by the target, the creature must use its movement to move to the nearest safe spot from which it can't see the target. If the creature moves more than 60 feet from the target and can't see it, the creature is no longer {@condition frightened}, but the creature becomes {@condition frightened} again if it regains sight of the target or moves within 60 feet of it."
+						"The enchantment causes creatures of the kind you designated to feel an intense urge to leave the area and avoid the target. When such a creature can see the target or comes within 60 feet of it, the creature must succeed on a Wisdom saving throw or become {@condition 恐懼}. The creature remains {@condition 恐懼} while it can see the target or is within 60 feet of it. While {@condition 恐懼} by the target, the creature must use its movement to move to the nearest safe spot from which it can't see the target. If the creature moves more than 60 feet from the target and can't see it, the creature is no longer {@condition 恐懼}, but the creature becomes {@condition 恐懼} again if it regains sight of the target or moves within 60 feet of it."
 					]
 				},
 				{
@@ -9033,7 +9033,7 @@
 					"items": [
 						"50 hit points or fewer: {@condition deafened} for 1 minute",
 						"40 hit points or fewer: {@condition deafened} and {@condition blinded} for 10 minutes",
-						"30 hit points or fewer: {@condition blinded}, {@condition deafened}, and {@condition stunned} for 1 hour",
+						"30 hit points or fewer: {@condition blinded}, {@condition deafened}, and {@condition 震懾} for 1 hour",
 						"20 hit points or fewer: killed instantly"
 					]
 				},
@@ -9682,7 +9682,7 @@
 			"entries": [
 				"You create a seismic disturbance at a point on the ground that you can see within range. For the duration, an intense tremor rips through the ground in a 100-foot-radius circle centered on that point and shakes creatures and structures in contact with the ground in that area.",
 				"The ground in the area becomes difficult terrain. Each creature on the ground that is concentrating must make a Constitution saving throw. On a failed save, the creature's concentration is broken.",
-				"When you cast this spell and at the end of each turn you spend concentrating on it, each creature on the ground in the area must make a Dexterity saving throw. On a failed save, the creature is knocked {@condition prone}.",
+				"When you cast this spell and at the end of each turn you spend concentrating on it, each creature on the ground in the area must make a Dexterity saving throw. On a failed save, the creature is knocked {@condition 伏地}.",
 				"This spell can have additional effects depending on the terrain in the area, as determined by the DM.",
 				{
 					"type": "entries",
@@ -9696,7 +9696,7 @@
 					"type": "entries",
 					"name": "Structures",
 					"entries": [
-						"The tremor deals 50 bludgeoning damage to any structure in contact with the ground in the area when you cast the spell and at the start of each of your turns until the spell ends. If a structure drops to 0 hit points, it collapses and potentially damages nearby creatures. A creature within half the distance of a structure's height must make a Dexterity saving throw. On a failed save, the creature takes {@dice 5d6} bludgeoning damage, is knocked {@condition prone}, and is buried in the rubble, requiring a DC 20 Strength (Athletics) check as an action to escape. The DM can adjust the DC higher or lower, depending on the nature of the rubble. On a successful save, the creature takes half as much damage and doesn't fall {@condition prone} or become buried."
+						"The tremor deals 50 bludgeoning damage to any structure in contact with the ground in the area when you cast the spell and at the start of each of your turns until the spell ends. If a structure drops to 0 hit points, it collapses and potentially damages nearby creatures. A creature within half the distance of a structure's height must make a Dexterity saving throw. On a failed save, the creature takes {@dice 5d6} bludgeoning damage, is knocked {@condition 伏地}, and is buried in the rubble, requiring a DC 20 Strength (Athletics) check as an action to escape. The DM can adjust the DC higher or lower, depending on the nature of the rubble. On a successful save, the creature takes half as much damage and doesn't fall {@condition 伏地} or become buried."
 					]
 				}
 			],
@@ -10687,7 +10687,7 @@
 					"type": "entries",
 					"name": "Panicked",
 					"entries": [
-						"The target is {@condition frightened} of you. On each of its turns, the {@condition frightened} creature must take the Dash action and move away from you by the safest and shortest available route, unless there is nowhere to move. If the target moves to a place at least 60 feet away from you where it can no longer see you, this effect ends."
+						"The target is {@condition 恐懼} of you. On each of its turns, the {@condition 恐懼} creature must take the Dash action and move away from you by the safest and shortest available route, unless there is nowhere to move. If the target moves to a place at least 60 feet away from you where it can no longer see you, this effect ends."
 					]
 				},
 				{
@@ -11190,7 +11190,7 @@
 			"page": 239
 		},
 		{
-			"name": "Feeblemind",
+			"name": "弱智術", "ENG_name": "Feeblemind",
 			"level": 8,
 			"school": "E",
 			"time": [
@@ -11209,7 +11209,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a handful of clay, crystal, glass, or mineral spheres"
+				"m": "一把黏土、水晶、玻璃、或礦物球"
 			},
 			"duration": [
 				{
@@ -11238,10 +11238,10 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You blast the mind of a creature that you can see within range, attempting to shatter its intellect and personality. The target takes {@dice 4d6} psychic damage and must make an Intelligence saving throw.",
-				"On a failed save, the creature's Intelligence and Charisma scores become 1. The creature can't cast spells, activate magic items, understand language, or communicate in any intelligible way. The creature can, however, identify its friends, follow them, and even protect them.",
-				"At the end of every 30 days, the creature can repeat its saving throw against this spell. If it succeeds on its saving throw, the spell ends.",
-				"The spell can also be ended by greater restoration, heal, or wish."
+				"你爆破射程內你所能看見的一個生物的心靈，嘗試粉碎它的智力和人格。目標受到{@dice 4d6}精神傷害，且必須進行一次智力豁免。",
+				"若豁免失敗，該生物的智力和魅力數值變為1。該生物無法施放法術、啟動魔法物品、理解語言、或以任何智能方式溝通。然而，該生物可以辨識出它的朋友、跟隨它們、或甚至保護它們。",
+				"在每30天結束時，該生物可以重複它對抗此法術的豁免檢定。若它成功通過此豁免，則此法術結束。",
+				"此法術也可以被{@spell 高等復原術}、{@spell 治癒術}、或{@spell 祈願術}給結束。"
 			],
 			"page": 239,
 			"damageInflict": [
@@ -13274,7 +13274,7 @@
 			"page": 245
 		},
 		{
-			"name": "Glibness",
+			"name": "花言巧語", "ENG_name": "Glibness",
 			"level": 8,
 			"school": "T",
 			"time": [
@@ -13315,7 +13315,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Until the spell ends, when you make a Charisma check, you can replace the number you roll with a 15. Additionally, no matter what you say, magic that would determine if you are telling the truth indicates that you are being truthful."
+				"直到此法術結束前，當你進行魅力檢定時，你可以將你骰出的數值替換成15。此外，無論你說什麼，判斷你是否誠實的魔法將會認為你說的話都是實話。"
 			],
 			"page": 245
 		},
@@ -14794,7 +14794,7 @@
 			"page": 250
 		},
 		{
-			"name": "Heal",
+			"name": "治癒術", "ENG_name": "Heal",
 			"level": 6,
 			"school": "V",
 			"time": [
@@ -14833,14 +14833,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Choose a creature that you can see within range. A surge of positive energy washes through the creature, causing it to regain 70 hit points. This spell also ends blindness, deafness, and any diseases affecting the target. This spell has no effect on constructs or undead."
+				"選擇一個射程內你所能看見的生物。一波正向能量沖洗該生物，使它回復70點生命值。此法術同時會終止{@condition 目盲}、{@condition 耳聾}、和任何影響目標的疾病。此法術對不死生物或構裝體沒有任何效果。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 7th level or higher, the amount of healing increases by 10 for each slot level above 6th."
+						"當你使用7環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，治療量便會再增加10。"
 					]
 				}
 			],
@@ -15142,7 +15142,7 @@
 			"source": "PHB",
 			"entries": [
 				"You bring forth a great feast, including magnificent food and drink. The feast takes 1 hour to consume and disappears at the end of that time, and the beneficial effects don't set in until this hour is over. Up to twelve creatures can partake of the feast.",
-				"A creature that partakes of the feast gains several benefits. The creature is cured of all diseases and poison, becomes immune to poison and being {@condition frightened}, and makes all Wisdom saving throws with advantage. Its hit point maximum also increases by {@dice 2d10}, and it gains the same number of hit points. These benefits last for 24 hours."
+				"A creature that partakes of the feast gains several benefits. The creature is cured of all diseases and poison, becomes immune to poison and being {@condition 恐懼}, and makes all Wisdom saving throws with advantage. Its hit point maximum also increases by {@dice 2d10}, and it gains the same number of hit points. These benefits last for 24 hours."
 			],
 			"page": 250,
 			"damageImmune": [
@@ -18640,7 +18640,7 @@
 			"isHeal": true
 		},
 		{
-			"name": "Mass Heal",
+			"name": "群體治癒術", "ENG_name": "Mass Heal",
 			"level": 9,
 			"school": "V",
 			"time": [
@@ -18675,7 +18675,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A flood of healing energy flows from you into injured creatures around you. You restore up to 700 hit points, divided as you choose among any number of creatures that you can see within range. Creatures healed by this spell are also cured of all diseases and any effect making them {@condition blinded} or {@condition deafened}. This spell has no effect on undead or constructs."
+				"一陣治癒能量洪流從你流至你周圍的重傷生物體內。你回復最多700點生命值，由你決定如何分配給射程內任意數量你所能看見的生物。且此法術所治癒的生物身上所有的疾病、以及任何使它們{@condition 目盲}或{@condition 耳聾}的效果都將被痊癒。此法術對不死生物或構裝體沒有任何效果。"
 			],
 			"page": 258,
 			"isHeal": true
@@ -21353,7 +21353,7 @@
 			]
 		},
 		{
-			"name": "Power Word Heal",
+			"name": "律令治癒", "ENG_name": "Power Word Heal",
 			"level": 9,
 			"school": "V",
 			"time": [
@@ -21387,13 +21387,13 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A wave of healing energy washes over the creature you touch. The target regains all its hit points. If the creature is {@condition charmed}, {@condition frightened}, {@condition paralyzed}, or {@condition stunned}, the condition ends. If the creature is {@condition prone}, it can use its reaction to stand up. This spell has no effect on undead or constructs."
+				"一波治癒能量沖刷你所碰觸的生物。目標回復它所有的生命值。若該生物被{@condition 魅惑}、{@condition 恐懼}、{@condition 麻痺}、或{@condition 震懾}，則該狀態結束。若該生物處於{@condition 伏地}狀態，則它可以使用它的反應起身。此法術對不死生物或構裝體沒有任何效果。"
 			],
 			"page": 266,
 			"isHeal": true
 		},
 		{
-			"name": "Power Word Kill",
+			"name": "律令死亡", "ENG_name": "Power Word Kill",
 			"level": 9,
 			"school": "E",
 			"time": [
@@ -21439,12 +21439,12 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You utter a word of power that can compel one creature you can see within range to die instantly. If the creature you choose has 100 hit points or fewer, it dies. Otherwise, the spell has no effect."
+				"你說出一句律令真言，強迫一個射程內你所能看見的生物立即死亡。若你所選的該生物擁有100點生命值或更少，則它立刻死亡。否則此法術不會產生任何效果。"
 			],
 			"page": 266
 		},
 		{
-			"name": "Power Word Stun",
+			"name": "律令震懾", "ENG_name": "Power Word Stun",
 			"level": 8,
 			"school": "E",
 			"time": [
@@ -21490,8 +21490,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You speak a word of power that can overwhelm the mind of one creature you can see within range, leaving it dumbfounded. If the target has 150 hit points or fewer, it is {@condition stunned}. Otherwise, the spell has no effect.",
-				"The {@condition stunned} target must make a Constitution saving throw at the end of each of its turns. On a successful save, this stunning effect ends."
+				"你說出一句律令真言，壓倒射程內你所能看見的一個生物的心靈，使它驚愕呆愣。若目標擁有150點生命值或更少，則它將陷入{@condition 震懾}狀態。否則此法術不會產生任何效果。",
+				"被{@condition 震懾}的目標必須在每次它的回合結束時進行一次體質豁免。若豁免成功，則此震懾效果結束。"
 			],
 			"page": 267,
 			"savingThrow": [
@@ -26961,7 +26961,7 @@
 					"type": "entries",
 					"name": "Fear",
 					"entries": [
-						"Each target must make a Wisdom saving throw and becomes {@condition frightened} for 1 minute on a failed save. While {@condition frightened}, the target drops whatever it is holding and must move at least 30 feet away from the glyph on each of its turns, if able."
+						"Each target must make a Wisdom saving throw and becomes {@condition 恐懼} for 1 minute on a failed save. While {@condition 恐懼}, the target drops whatever it is holding and must move at least 30 feet away from the glyph on each of its turns, if able."
 					]
 				},
 				{
@@ -26996,7 +26996,7 @@
 					"type": "entries",
 					"name": "Stunning",
 					"entries": [
-						"Each target must make a Wisdom saving throw and becomes {@condition stunned} for 1 minute on a failed save."
+						"Each target must make a Wisdom saving throw and becomes {@condition 震懾} for 1 minute on a failed save."
 					]
 				}
 			],
@@ -29515,7 +29515,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Drawing on the deepest fears of a group of creatures, you create illusory creatures in their minds, visible only to them. Each creature in a 30-foot-radius sphere centered on a point of your choice within range must make a Wisdom saving throw. On a failed save, a creature becomes {@condition frightened} for the duration. The illusion calls on the creature's deepest fears, manifesting its worst nightmares as an implacable threat. At the end of each of the {@condition frightened} creature's turns, it must succeed on a Wisdom saving throw or take {@dice 4d10} psychic damage. On a successful save, the spell ends for that creature."
+				"Drawing on the deepest fears of a group of creatures, you create illusory creatures in their minds, visible only to them. Each creature in a 30-foot-radius sphere centered on a point of your choice within range must make a Wisdom saving throw. On a failed save, a creature becomes {@condition 恐懼} for the duration. The illusion calls on the creature's deepest fears, manifesting its worst nightmares as an implacable threat. At the end of each of the {@condition 恐懼} creature's turns, it must succeed on a Wisdom saving throw or take {@dice 4d10} psychic damage. On a successful save, the spell ends for that creature."
 			],
 			"page": 288,
 			"damageInflict": [
