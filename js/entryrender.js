@@ -2443,25 +2443,25 @@ EntryRenderer.monster = {
 				},
 				5: {
 					U: ["心靈遙控", "怪物定身術", "次元門", "石牆術", "力牆術"],
-					G: ["死雲術", "charm monster|XGE", "modify memory", "mislead", "幻景", "次元門"],
+					G: ["死雲術", "魅惑怪物|XGE", "修改記憶", "假象術", "幻景", "次元門"],
 					Z: ["鋼風打擊|XGE", "操控天氣", "control winds|XGE", "水體法球|XGE", "暴風法球|XGE", "潮湧浪|XGE"],
 					O: ["怪物定身術", "immolation|XGE", "火牆術", "高等隱形術", "次元門"],
-					S: ["寒冰錐", "冰風暴", "teleportation circle", "skill empowerment|XGE", "creation", "魔鄧肯私人密室"]
+					S: ["寒冰錐", "冰風暴", "傳送法陣", "skill empowerment|XGE", "造物術", "魔鄧肯私人密室"]
 				},
 				6: {
 					W: ["寒冰錐", "wall of ice"],
-					A: ["探知", "Rary's telepathic bond", "Otto's irresistible dance", "legend lore", "怪物定身術", "dream"]
+					A: ["探知", "拉瑞心靈聯結", "Otto's irresistible dance", "通曉傳奇", "怪物定身術", "託夢術"]
 				},
 				7: {
 					B: ["律令痛苦|XGE", "死亡一指", "解離術", "怪物定身術"],
 					U: ["chain lightning", "forcecage", "傳送術", "etherealness"],
 					G: ["project image", "mirage arcane", "prismatic spray", "傳送術"],
 					Z: ["whirlwind|XGE", "chain lightning", "scatter|XGE", "傳送術", "解離術", "閃電束"],
-					C: ["symbol", "simulacrum", "reverse gravity", "project image", "Bigby's hand", "mental prison|XGE", "seeming"],
+					C: ["symbol", "simulacrum", "reverse gravity", "project image", "畢格比之掌", "mental prison|XGE", "偽裝術"],
 					S: ["Otiluke's freezing sphere", "prismatic spray", "wall of ice", "contingency", "arcane gate"]
 				},
 				8: {
-					O: ["sunburst", "delayed blast fireball", "antimagic field", "傳送術", "globe of invulnerability", "maze"]
+					O: ["sunburst", "delayed blast fireball", "antimagic field", "傳送術", "法術無效結界", "maze"]
 				}
 			};
 
