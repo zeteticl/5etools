@@ -16,14 +16,19 @@ const typeFilter = new Filter({
 		"Blessing",
 		"Boon",
 		"Charm"
-	]
+	],
+	displayFn: function(item){switch(item){
+		case "Blessing": return "祝福";
+		case "Boon": return "恩惠";
+		case "Charm": return "護咒";
+	};}
 });
 let filterBox;
 async function onJsonLoad (data) {
 	filterBox = await pInitFilterBox(sourceFilter, typeFilter);
 
 	list = ListUtil.search({
-		valueNames: ["name", "source", "uniqueid"],
+		valueNames: ["name", "source", "uniqueid", "eng_name"],
 		listClass: "rewards"
 	});
 	list.on("updated", () => {
@@ -82,6 +87,7 @@ function addRewards (data) {
 					<span class='source col-2 text-align-center ${Parser.sourceJsonToColor(reward.source)}' title="${Parser.sourceJsonToFull(reward.source)}">${Parser.sourceJsonToAbv(reward.source)}</span>
 					
 					<span class="uniqueid hidden">${reward.uniqueId ? reward.uniqueId : rwI}</span>
+					<span class="eng_name hidden">${reward.ENG_name ? reward.ENG_name : reward.name}</span>
 				</a>
 			</li>`;
 
