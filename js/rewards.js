@@ -9,26 +9,30 @@ window.onload = async function load () {
 };
 
 let list;
+const displayRewardType = function(item){
+	switch(item){
+		case "Blessing": return "祝福";
+		case "Boon": return "恩惠";
+		case "Charm": return "護咒";
+		default: return item; 
+	};
+}
 const sourceFilter = getSourceFilter();
 const typeFilter = new Filter({
-	header: "Type",
+	header: "Type", headerName: "類型",
 	items: [
 		"Blessing",
 		"Boon",
 		"Charm"
 	],
-	displayFn: function(item){switch(item){
-		case "Blessing": return "祝福";
-		case "Boon": return "恩惠";
-		case "Charm": return "護咒";
-	};}
+	displayFn: displayRewardType
 });
 let filterBox;
 async function onJsonLoad (data) {
 	filterBox = await pInitFilterBox(sourceFilter, typeFilter);
 
 	list = ListUtil.search({
-		valueNames: ["name", "source", "uniqueid", "eng_name"],
+		valueNames: ["name", "type", "source", "uniqueid", "eng_name"],
 		listClass: "rewards"
 	});
 	list.on("updated", () => {
@@ -83,7 +87,8 @@ function addRewards (data) {
 		tempString += `
 			<li class='row' ${FLTR_ID}='${rwI}' onclick="ListUtil.toggleSelected(event, this)" oncontextmenu="ListUtil.openContextMenu(event, this)">
 				<a id='${rwI}' href="#${UrlUtil.autoEncodeHash(reward)}" title="${reward.name}">
-					<span class='name col-10'>${reward.name}</span>
+					<span class='name col-8'>${reward.name}</span>
+					<span class='type col-2'>${displayRewardType(reward.type)}</span>
 					<span class='source col-2 text-align-center ${Parser.sourceJsonToColor(reward.source)}' title="${Parser.sourceJsonToFull(reward.source)}">${Parser.sourceJsonToAbv(reward.source)}</span>
 					
 					<span class="uniqueid hidden">${reward.uniqueId ? reward.uniqueId : rwI}</span>
@@ -104,7 +109,7 @@ function addRewards (data) {
 
 	list.reIndex();
 	if (lastSearch) list.search(lastSearch);
-	list.sort("name");
+	list.sort("type");
 	filterBox.render();
 	handleFilterChange();
 

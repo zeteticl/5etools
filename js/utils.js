@@ -1170,7 +1170,7 @@ Parser.MON_SENSE_TAG_TO_FULL = {
 	"D": "黑暗視覺",
 	"SD": "高級黑暗視覺",
 	"T": "震顫感知",
-	"U": "真實目光"
+	"U": "真實視覺"
 };
 Parser.monSenseTagToFull = function (tag) {
 	return Parser._parse_aToB(Parser.MON_SENSE_TAG_TO_FULL, tag);
