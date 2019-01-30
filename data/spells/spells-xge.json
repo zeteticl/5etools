@@ -926,7 +926,7 @@
 			]
 		},
 		{
-			"name": "Control Winds",
+			"name": "操控風相", "ENG_name": "Control Winds",
 			"source": "XGE",
 			"level": 5,
 			"school": "T",
@@ -974,26 +974,26 @@
 				]
 			},
 			"entries": [
-				"You take control of the air in a 100-foot cube that you can see within range. Choose one of the following effects when you cast the spell. The effect lasts for the spell's duration, unless you use your action on a later turn to switch to a different effect. You can also use your action to temporarily halt the effect or to restart one you've halted.",
+				"你得以控制射程內你所能看見的一處100呎邊長立方體範圍內的大氣。在你施放此法術時選擇下列其中一個效果。該效果將在法術持續期間內持續存在，除非你在後續的回合使用你的動作切換不同的效果。你也可以使用你的動作以暫時的停止該效果，或重啟一個你暫停的效果。",
 				{
 					"type": "entries",
-					"name": "Gusts",
+					"name": "狂風",
 					"entries": [
-						"A wind picks up within the cube, continually blowing in a horizontal direction you designate. You choose the intensity of the wind: calm, moderate, or strong. If the wind is moderate or strong, ranged weapon attacks that pass through it or that are made against targets within the cube have disadvantage on their attack rolls. If the wind is strong, any creature moving against the wind must spend 1 extra foot of movement for each foot moved."
+						"一陣風在立方體區域內產生，持續的向著一個你所指定的水平方向吹去。你決定這陣風的強度：微風、和風、或強風。若這陣風為和風或強風，則穿過立方體區域、或對立方體區域內目標所進行的遠程武器攻擊將會在它們的攻擊檢定中具有劣勢。若這陣風為強風，則任何逆風移動的生物每移動一呎都必須花費額外的1呎移動速度。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Downdraft",
+					"name": "下沉氣流",
 					"entries": [
-						"You cause a sustained blast of strong wind to blow downward from the top of the cube. Ranged weapon attacks that pass through the cube or that are made against targets within it have disadvantage on their attack rolls. A creature must make a Strength saving throw if it flies into the cube for the first time on a turn or starts its turn there flying. On a failed save, the creature is knocked {@condition prone}."
+						"你使一道持續吹拂的強風從立方體區域的頂端向下吹去。穿過立方體區域、或對立方體區域內目標所進行的遠程武器攻擊將會在它們的攻擊檢定中具有劣勢。一個生物若在一個回合中第一次飛入立方體區域、或在飛行狀態下於該處開始它的回合，則它必須進行一次力量豁免。若豁免失敗，則該生物被擊倒{@condition 伏地}。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Updraft",
+					"name": "上升氣流",
 					"entries": [
-						"You cause a sustained updraft within the cube, rising upward from the cube's bottom side. Creatures that end a fall within the cube take only half damage from the fall. When a creature in the cube makes a vertical jump, the creature can jump up to 10 feet higher than normal."
+						"你在立方體區域內製造一道持續的上升氣流，從立方體底部向上升起。在立方體區域內墜落著地的生物只會受到一半的墜落傷害。當處於立方體區域內的一個生物進行垂直跳躍時，該生物可以跳的比原本高最多10呎距離。"
 					]
 				}
 			],
@@ -1258,7 +1258,7 @@
 			"page": 153
 		},
 		{
-			"name": "Dawn",
+			"name": "拂曉之光", "ENG_name": "Dawn",
 			"source": "XGE",
 			"level": 5,
 			"school": "V",
@@ -1279,7 +1279,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a sunburst pendant worth at least 100 gp",
+					"text": "一件價值至少100金幣的旭日墜飾",
 					"cost": 100
 				}
 			},
@@ -1306,9 +1306,9 @@
 				]
 			},
 			"entries": [
-				"The light of dawn shines down on a location you specify within range. Until the spell ends, a 30-foot-radius, 40-foot-high cylinder of bright light glimmers there. This light is sunlight.",
-				"When the cylinder appears, each creature in it must make a Constitution saving throw, taking {@dice 4d10} radiant damage on a failed save, or half as much damage on a successful one. A creature must also make this saving throw whenever it ends its turn in the cylinder.",
-				"If you're within 60 feet of the cylinder, you can move it up to 60 feet as a bonus action on your turn."
+				"黎明曙光照在射程內你所指定的一處。直到此法術結束前，一道30呎半徑、40呎高圓柱體的明亮光照將在該處閃爍，這道光線視為日光。",
+				"當圓柱體出現時，每個在其中的生物都必須進行一次體質豁免，若豁免失敗則受到{@dice 4d10}光耀傷害，或豁免成功則只受到一半的傷害。一個在圓柱體內結束它回合的生物也必須進行此豁免檢定。",
+				"若你距離圓柱體60呎內，則你可以在你的回合以一個附贈動作移動它最多60呎距離。"
 			],
 			"page": 153,
 			"damageInflict": [
@@ -1976,7 +1976,7 @@
 			]
 		},
 		{
-			"name": "Far Step",
+			"name": "渺遠步", "ENG_name": "Far Step",
 			"source": "XGE",
 			"level": 5,
 			"school": "C",
@@ -2022,7 +2022,7 @@
 				]
 			},
 			"entries": [
-				"You teleport up to 60 feet to an unoccupied space you can see. On each of your turns before the spell ends, you can use a bonus action to teleport in this way again."
+				"你傳送到最多60呎距離的一處你所能看見的未被佔據空間。在此法術結束前你的每個回合，你都可以使用一個附贈動作以再次透過這個方式傳送。"
 			],
 			"page": 155
 		},
@@ -3032,7 +3032,7 @@
 					"type": "list",
 					"items": [
 						"You have resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks.",
-						"You can use your action to create a small earthquake on the ground in a 15-foot radius centered on you. Other creatures on that ground must succeed on a Dexterity saving throw or be knocked {@condition prone}.",
+						"You can use your action to create a small earthquake on the ground in a 15-foot radius centered on you. Other creatures on that ground must succeed on a Dexterity saving throw or be knocked {@condition 伏地}.",
 						"You can move across difficult terrain made of earth or stone without spending extra movement. You can move through solid earth or stone as if it was air and without destabilizing it, but you can't end your movement there. If you do so, you are ejected to the nearest unoccupied space, this spell ends, and you are {@condition stunned} until the end of your next turn."
 					]
 				}
@@ -3296,7 +3296,7 @@
 			]
 		},
 		{
-			"name": "Maelstrom",
+			"name": "大漩渦", "ENG_name": "Maelstrom",
 			"source": "XGE",
 			"level": 5,
 			"school": "V",
@@ -3316,7 +3316,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "paper or leaf in the shape of a funnel"
+				"m": "漏斗形狀的紙張或樹葉"
 			},
 			"duration": [
 				{
@@ -3337,7 +3337,7 @@
 				]
 			},
 			"entries": [
-				"A swirling mass of 5-foot-deep water appears in a 30-foot radius centered on a point you can see within range. The point must be on the ground or in a body of water. Until the spell ends, that area is difficult terrain, and any creature that starts its turn there must succeed on a Strength saving throw or take {@dice 6d6} bludgeoning damage and be pulled 10 feet toward the center."
+				"大量的水出現在射程內你所能看見的一點，形成一團5呎深、30呎半徑的大漩渦。該點必須位於地面或在水體內。直到此法術結束，該區域為困難地形，且任何在該處開始它回合的生物都必須成功通過一次力量豁免，否則受到{@dice 6d6}鈍擊傷害，並被拉向中心10呎距離。"
 			],
 			"page": 160,
 			"damageInflict": [
@@ -3869,7 +3869,7 @@
 			]
 		},
 		{
-			"name": "Negative Energy Flood",
+			"name": "負能量洪流", "ENG_name": "Negative Energy Flood",
 			"source": "XGE",
 			"level": 5,
 			"school": "N",
@@ -3888,7 +3888,7 @@
 			},
 			"components": {
 				"v": true,
-				"m": "a broken bone and a square of black silk"
+				"m": "一根破碎的骨頭和一塊黑色絲綢"
 			},
 			"duration": [
 				{
@@ -3908,8 +3908,8 @@
 				]
 			},
 			"entries": [
-				"You send ribbons of negative energy at one creature you can see within range. Unless the target is undead, it must make a Constitution saving throw, taking {@dice 5d12} necrotic damage on a failed save, or half as much damage on a successful one. A target killed by this damage rises up as a zombie at the start of your next turn. The zombie pursues whatever creature it can see that is closest to it. Statistics for the zombie are in the Monster Manual.",
-				"If you target an undead with this spell, the target doesn't make a saving throw. Instead, roll {@dice 5d12}. The target gains half the total as temporary hit points."
+				"你向射程內你所能看見的一個生物送出一束又一束的負能量。除非目標為不死生物，否則它必須進行一次體質豁免，若豁免失敗則受到{@dice 5d12}死靈傷害，豁免成功則只受到一半的傷害。一個被該傷害殺死的目標將在你的下個回合開始時做為一只{@creature 殭屍}復活。該殭屍將會追逐任何它所能看見且最接近它的生物。{@creature 殭屍}的遊戲數據記載於《怪物圖鑑》。",
+				"若你選擇一個不死生物做為此法術的目標，則目標不進行豁免檢定，而是改為骰{@dice 5d12}。目標將獲得其總和一半的臨時生命值。"
 			],
 			"page": 163,
 			"damageInflict": [
@@ -5798,7 +5798,7 @@
 			]
 		},
 		{
-			"name": "Wall of Light",
+			"name": "光牆術", "ENG_name": "Wall of Light",
 			"source": "XGE",
 			"level": 5,
 			"school": "V",
@@ -5847,17 +5847,17 @@
 				]
 			},
 			"entries": [
-				"A shimmering wall of bright light appears at a point you choose within range. The wall appears in any orientation you choose: horizontally, vertically, or diagonally. It can be free floating, or it can rest on a solid surface. The wall can be up to 60 feet long, 10 feet high, and 5 feet thick. The wall blocks line of sight, but creatures and objects can pass through it. It emits bright light out to 120 feet and dim light for an additional 120 feet.",
-				"When the wall appears, each creature in its area must make a Constitution saving throw. On a failed save, a creature takes {@dice 4d8} radiant damage, and it is {@condition 目盲} for 1 minute. On a successful save, it takes half as much damage and isn't {@condition 目盲}. A {@condition 目盲} creature can make a Constitution saving throw at the end of each of its turns, ending the effect on itself on a success.",
-				"A creature that ends its turn in the wall's area takes {@dice 4d8} radiant damage.",
-				"Until the spell ends, you can use an action to launch a beam of radiance from the wall at one creature you can see within 60 feet of it. Make a ranged spell attack. On a hit, the target takes {@dice 4d8} radiant damage. Whether you hit or miss, reduce the length of the wall by 10 feet. If the wall's length drops to 0 feet, the spell ends."
+				"一道閃爍著的亮光之牆出現在射程內你所選擇的一點。這道牆將呈現任何你所選擇的方向：水平、垂直、或傾斜一定角度。它可以自由浮於空中、或佇立於固體表面上。這道牆可以呈現最多60呎長、10呎高、以及5呎厚。這道牆會隔絕視線，但生物和物體仍能穿過它。它會散發出120呎的明亮光照和再延伸120呎的微光光照。",
+				"當這道牆出現時，每個處於其區域內的生物都必須進行一次體質豁免。若豁免失敗，則該生物將受到{@dice 4d8}光耀傷害，且陷入{@condition 目盲}狀態長達1分鐘。若豁免成功，則它只受到一半的傷害，且不會陷入{@condition 目盲}。一個{@condition 目盲}生物可以在它的每個回合結束時進行一次體質豁免，若成功則結束這個效果對它的影響。",
+				"一個在這道牆所在區域內結束它回合的生物將受到{@dice 4d8}光耀傷害。",
+				"直到此法術結束前，你可以使用一個動作以從這道牆向一個你所能看見且距離這道牆60呎內的一個生物發射一道光束。進行一次遠程法術攻擊。若命中，目標將受到{@dice 4d8}光耀傷害。無論你命中與否，這道牆的長度都會減少10呎。若這道牆的長度減少至0呎，則此法術結束。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 6th level or higher, the damage increases by {@scaledice 4d8|5-9|1d8} for each slot level above 5th."
+						"當你使用6環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 4d8|5-9|1d8}。"
 					]
 				}
 			],

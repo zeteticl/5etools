@@ -6477,7 +6477,7 @@
 					"rows": [
 						[
 							"1",
-							"無風"
+							"微風"
 						],
 						[
 							"2",
@@ -19636,7 +19636,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"短暫的被一陣銀色迷霧環繞，你傳送最多30呎距離到一處未被佔據的可見空間。"
+				"短暫的被一陣銀色迷霧環繞，你傳送到最多30呎距離的一處你所能看見的未被佔據空間。"
 			],
 			"page": 260,
 			"races": [
@@ -28917,7 +28917,7 @@
 			]
 		},
 		{
-			"name": "Wall of Ice",
+			"name": "冰牆術", "ENG_name": "Wall of Ice",
 			"level": 6,
 			"school": "V",
 			"time": [
@@ -28936,7 +28936,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a small piece of quartz"
+				"m": "一小塊石英"
 			},
 			"duration": [
 				{
@@ -28958,16 +28958,16 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You create a wall of ice on a solid surface within range. You can form it into a hemispherical dome or a sphere with a radius of up to 10 feet, or you can shape a flat surface made up of ten 10-foot-square panels. Each panel must be contiguous with another panel. In any form, the wall is 1 foot thick and lasts for the duration.",
-				"If the wall cuts through a creature's space when it appears, the creature within its area is pushed to one side of the wall and must make a Dexterity saving throw. On a failed save, the creature takes {@dice 10d6} cold damage, or half as much damage on a successful save.",
-				"The wall is an object that can be damaged and thus breached. It has AC 12 and 30 hit points per 10-foot section, and it is vulnerable to fire damage. Reducing a 10-foot section of wall to 0 hit points destroys it and leaves behind a sheet of frigid air in the space the wall occupied. A creature moving through the sheet of frigid air for the first time on a turn must make a Constitution saving throw. That creature takes {@dice 5d6} cold damage on a failed save, or half as much damage on a successful one."
+				"你在射程內一處固體表面上創造出一道冰牆。你可以將它形塑成最多半徑10呎的半球體或球體，或形塑成一個最多由十個10呎x10呎板塊構成的平坦表面。每個板塊都必須與另一個板塊相連。這道牆在任何型態的厚度皆為1吋，並會在法術持續期間持續存在。",
+				"若這道牆在出現時切穿了一個生物所在的空間，則在該區域內的生物將被推到牆的其中一側，且必須進行一次敏捷豁免。若豁免失敗，則該生物將受到{@dice 10d6}寒冰傷害，豁免成功則只受到一半的傷害。",
+				"這道牆是一個可以被傷害並因此損壞的物體。它具有AC 12，每1吋厚度30點的生命值，且對火焰傷害的易傷。將一塊10呎區塊牆壁的生命值歸零將會摧毀它，並在這道牆佔據的空間留下一層刺骨寒氣。一個在一個回合第一次移動穿過這層刺骨寒氣的生物必須進行一次體質豁免。該生物若豁免失敗則受到{@dice 5d6}寒冰傷害，豁免成功則只受到一半的傷害。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 7th level or higher, the damage the wall deals when it appears increases by {@scaledice 10d6|6-9|2d6}, and the damage from passing through the sheet of frigid air increases by {@scaledice 5d6|6-9|1d6}, for each slot level above 6th."
+						"當你使用7環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，這道牆出現時所造成的傷害便會再增加{@scaledice 10d6|6-9|2d6}，且穿過刺骨寒氣所受到的傷害也會再增加{@scaledice 5d6|6-9|1d6}。"
 					]
 				}
 			],
@@ -29068,7 +29068,7 @@
 			"permanentEffects": true
 		},
 		{
-			"name": "Wall of Thorns",
+			"name": "棘牆術", "ENG_name": "Wall of Thorns",
 			"level": 6,
 			"school": "C",
 			"time": [
@@ -29087,7 +29087,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a handful of thorns"
+				"m": "一把荊棘"
 			},
 			"duration": [
 				{
@@ -29109,16 +29109,16 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You create a wall of tough, pliable, tangled brush bristling with needle-sharp thorns. The wall appears within range on a solid surface and lasts for the duration. You choose to make the wall up to 60 feet long, 10 feet high, and 5 feet thick or a circle that has a 20-foot diameter and is up to 20 feet high and 5 feet thick. The wall blocks line of sight.",
-				"When the wall appears, each creature within its area must make a Dexterity saving throw. On a failed save, a creature takes {@dice 7d8} piercing damage, or half as much damage on a successful save.",
-				"A creature can move through the wall, albeit slowly and painfully. For every 1 foot a creature moves through the wall, it must spend 4 feet of movement. Furthermore, the first time a creature enters the wall on a turn or ends its turn there, the creature must make a Dexterity saving throw. It takes {@dice 7d8} slashing damage on a failed save, or half as much damage on a successful one."
+				"你創造出一面堅韌柔軟、林立著銳利棘刺的糾纏灌木之牆。這道牆將出現在射程內一處固體表面上，並在法術持續期間內持續存在。你選擇使這道牆呈現最多60呎長、10呎高、以及5呎厚，或形成一道有著直徑最多20呎長、20呎高、以及5呎厚的環型牆。這道牆會隔絕視線。",
+				"當這道牆出現時，每個處於其區域內的生物都必須進行一次敏捷豁免。若豁免失敗，則該生物將受到{@dice 7d8}穿刺傷害，豁免成功則只受到一半的傷害。",
+				"一個生物可以移動穿過這道牆，儘管這個過程會緩慢而痛苦。一個生物每穿過這道牆1呎，它都必須消耗4呎的移動速度。除此之外，當一個生物在一個回合中第一次進入這道牆，或在該處結束它的回合，該生物都必須進行一次敏捷豁免。若豁免失敗，則它受到{@dice 7d8}穿刺傷害，豁免成功則只受到一半的傷害。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 7th level or higher, both types of damage increase by {@scaledice 7d8|6-9|1d8} for each slot level above 6th."
+						"當你使用7環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，兩種傷害都會再增加{@scaledice 7d8|6-9|1d8}。"
 					]
 				}
 			],
