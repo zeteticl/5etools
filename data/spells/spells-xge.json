@@ -2062,7 +2062,7 @@
 				]
 			},
 			"entries": [
-				"你召喚出一只呈現忠誠、雄偉坐騎型態的精魂。精魂將出現在射程內一處未被占據的空間，並呈現你所選擇的外型：一隻{@creature 獅鷲}、{@creature pegasus}、{@creature 佩利冬}、{@creature 恐狼}、{@creature 犀牛}、或{@creature 劍齒虎}。該生物具有所選型態在怪物手冊中記載的數據資料，然而它的類型為天界生物、精類、或邪魔（由你選擇），而非原本的類型。此外，此外，若它的智力為5或更低，則它的智力將變為6，且獲得理解一種你所說語言的能力。",
+				"你召喚出一只呈現忠誠、雄偉坐騎型態的精魂。精魂將出現在射程內一處未被占據的空間，並呈現你所選擇的外型：一隻{@creature 獅鷲}、{@creature 飛馬}、{@creature 佩利冬}、{@creature 恐狼}、{@creature 犀牛}、或{@creature 劍齒虎}。該生物具有所選型態在怪物手冊中記載的數據資料，然而它的類型為天界生物、精類、或邪魔（由你選擇），而非原本的類型。此外，此外，若它的智力為5或更低，則它的智力將變為6，且獲得理解一種你所說語言的能力。",
 				"你在戰鬥中控制此坐騎。當此坐騎距離你1哩內，你可以與它藉由心靈感應溝通。當騎乘於此坐騎時，你可以讓你施放的任何只以你為目標的法術同時也以你的坐騎為目標。",
 				"此坐騎將在它的生命值歸零、或你以一個動作解消它時暫時消失。再次施放此法術會重新召喚出這隻被連結的坐騎，將它的生命值回復到最大值並移除所有狀態。",
 				"你不能同時擁有超過一隻透過此法術或{@spell 尋獲坐騎}法術連結的坐騎。以一個動作，你可以將該坐騎從它與你的連結中釋放，使它永久消失。",
@@ -2427,7 +2427,7 @@
 			"isHeal": true
 		},
 		{
-			"name": "Holy Weapon",
+			"name": "神聖武器", "ENG_name": "Holy Weapon",
 			"source": "XGE",
 			"level": 5,
 			"school": "V",
@@ -2470,8 +2470,8 @@
 				]
 			},
 			"entries": [
-				"You imbue a weapon you touch with holy power. Until the spell ends, the weapon emits bright light in a 30-foot radius and dim light for an additional 30 feet. In addition, weapon attacks made with it deal an extra {@dice 2d8} radiant damage on a hit. If the weapon isn't already a magic weapon, it becomes one for the duration.",
-				"As a bonus action on your turn, you can dismiss this spell and cause the weapon to emit a burst of radiance. Each creature of your choice that you can see within 30 feet of you must make a Constitution saving throw. On a failed save, a creature takes {@dice 4d8} radiant damage, and it is {@condition blinded} for 1 minute. On a successful save, a creature takes half as much damage and isn't {@condition blinded}. At the end of each of its turns, a {@condition blinded} creature can make a Constitution saving throw, ending the effect on itself on a success."
+				"你將神聖能量注入一把你所碰觸的武器。直到此法術結束前，此武器會散發出30呎半徑的明亮光照和再延伸30呎的微光光照。此外，使用此武器進行的武器攻擊將在命中時造成額外的{@dice 2d8}光耀傷害。若此武器原本不是魔法武器，則它將在法術持續期間變成一把魔法武器。",
+				"在你的回合以一個附贈動作，你可以解消此法術以使武器迸發出一道光輝。每個距離你30呎內由你所選擇的生物必須進行一次體質豁免。若豁免失敗，則該生物將受到{@dice 4d8}光耀傷害，且陷入{@condition 目盲}狀態長達1分鐘。若豁免成功，則該生物只受到一半的傷害，且不會被陷入{@condition 目盲}。在它的每個回合結束時，{@condition 目盲}生物可以進行一次體質豁免，若成功則結束這個效果對它的影響。"
 			],
 			"page": 157,
 			"damageInflict": [
@@ -3414,7 +3414,7 @@
 			]
 		},
 		{
-			"name": "Mass Polymorph",
+			"name": "群體變形術", "ENG_name": "Mass Polymorph",
 			"source": "XGE",
 			"level": 9,
 			"school": "T",
@@ -3434,7 +3434,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a caterpillar cocoon"
+				"m": "一個毛蟲繭"
 			},
 			"duration": [
 				{
@@ -3463,11 +3463,11 @@
 				]
 			},
 			"entries": [
-				"You transform up to ten creatures of your choice that you can see within range. An unwilling target must succeed on a Wisdom saving throw to resist the transformation. An unwilling shapechanger automatically succeeds on the save.",
-				"Each target assumes a beast form of your choice, and you can choose the same form or different ones for each target. The new form can be any beast you have seen whose challenge rating is equal to or less than the target's (or half the target's level, if the target doesn't have a challenge rating). The target's game statistics, including mental ability scores, are replaced by the statistics of the chosen beast, but the target retains its hit points, alignment, and personality.",
-				"Each target gains a number of temporary hit points equal to the hit points of its new form. These temporary hit points can't be replaced by temporary hit points from another source. A target reverts to its normal form when it has no more temporary hit points or it dies. If the spell ends before then, the creature loses all its temporary hit points and reverts to its normal form.",
-				"The creature is limited in the actions it can perform by the nature of its new form. It can't speak, cast spells, or do anything else that requires hands or speech.",
-				"The target's gear melds into the new form. The target can't activate, use, wield, or otherwise benefit from any of its equipment."
+				"你轉變射程內最多十個你所能看見的生物。一個非自願的生物必須成功通過一次睿知豁免以抵抗這個轉變。一個非自願的變形者將自動通過此豁免檢定。",
+				"每個目標都將呈現你所選擇的一種野獸型態，且你可以為每個目標各自選擇相同或不同的型態。這個新的型態可以是任何你曾經見過，且挑戰等級等於或低於目標挑戰等級（或若目標沒有挑戰等級，則為目標等級的一半）的野獸。目標的遊戲數據，包括心智屬性值，都會被所選野獸的數據資料給取代。目標保留它的生命值、陣營、和個性。",
+				"每個目標將獲得等同於它新型態生命值的臨時生命值。這些臨時生命值無法被任何其他來源的臨時生命值給取代。當目標不再擁有臨時生命值或死亡時，它將回復它原本的型態。若此法術在這之前結束，則該生物將失去它所有的臨時生命值並回復它原本的型態。",
+				"該生物被限制只能進行它新型態天生所能進行的動作，且它無法說話、施放法術、或採取任何其他需要雙手或語言的動作。",
+				"目標的裝備將被融入新形態之中。目標無法啟動、使用、揮舞、或透過其他方式來從它的裝備獲得好處。"
 			],
 			"page": 160,
 			"savingThrow": [
@@ -5848,7 +5848,7 @@
 			},
 			"entries": [
 				"A shimmering wall of bright light appears at a point you choose within range. The wall appears in any orientation you choose: horizontally, vertically, or diagonally. It can be free floating, or it can rest on a solid surface. The wall can be up to 60 feet long, 10 feet high, and 5 feet thick. The wall blocks line of sight, but creatures and objects can pass through it. It emits bright light out to 120 feet and dim light for an additional 120 feet.",
-				"When the wall appears, each creature in its area must make a Constitution saving throw. On a failed save, a creature takes {@dice 4d8} radiant damage, and it is {@condition blinded} for 1 minute. On a successful save, it takes half as much damage and isn't {@condition blinded}. A {@condition blinded} creature can make a Constitution saving throw at the end of each of its turns, ending the effect on itself on a success.",
+				"When the wall appears, each creature in its area must make a Constitution saving throw. On a failed save, a creature takes {@dice 4d8} radiant damage, and it is {@condition 目盲} for 1 minute. On a successful save, it takes half as much damage and isn't {@condition 目盲}. A {@condition 目盲} creature can make a Constitution saving throw at the end of each of its turns, ending the effect on itself on a success.",
 				"A creature that ends its turn in the wall's area takes {@dice 4d8} radiant damage.",
 				"Until the spell ends, you can use an action to launch a beam of radiance from the wall at one creature you can see within 60 feet of it. Make a ranged spell attack. On a hit, the target takes {@dice 4d8} radiant damage. Whether you hit or miss, reduce the length of the wall by 10 feet. If the wall's length drops to 0 feet, the spell ends."
 			],
@@ -6268,7 +6268,7 @@
 			"scalingEffects": true
 		},
 		{
-			"name": "Wrath of Nature",
+			"name": "自然之怒", "ENG_name": "Wrath of Nature",
 			"source": "XGE",
 			"level": 5,
 			"school": "V",
@@ -6312,33 +6312,33 @@
 				]
 			},
 			"entries": [
-				"You call out to the spirits of nature to rouse them against your enemies. Choose a point you can see within range. The spirits cause trees, rocks, and grasses in a 60-foot cube centered on that point to become animated until the spell ends.",
+				"你呼喚召來自然精魂以對抗你的敵人。選擇射程內你所能看見的一點。該精魂將使以該點為中心的60呎邊長立方體內的樹木、岩石、和草叢活化直到此法術結束。",
 				{
 					"type": "entries",
-					"name": "Grasses and Undergrowth",
+					"name": "草地和矮樹叢",
 					"entries": [
-						"Any area of ground in the cube that is covered by grass or undergrowth is difficult terrain for your enemies."
+						"立方體區域內任何被草地或矮樹叢覆蓋的地表對你的敵人而言視作困難地形。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Trees",
+					"name": "樹木",
 					"entries": [
-						"At the start of each of your turns, each of your enemies within 10 feet of any tree in the cube must succeed on a Dexterity saving throw or take {@dice 4d6} slashing damage from whipping branches."
+						"在你的每個回合開始時，每個距離立方體區域內任何樹木10呎內的敵人都必須成功通過一次敏捷豁免，否則受到來自枝枒鞭打的{@dice 4d6}劈砍傷害。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Roots and Vines",
+					"name": "樹根與藤蔓",
 					"entries": [
-						"At the end of each of your turns, one creature of your choice that is on the ground in the cube must succeed on a Strength saving throw or become {@condition restrained} until the spell ends. A {@condition restrained} creature can use an action to make a Strength (Athletics) check against your spell save DC, ending the effect on itself on a success."
+						"在你的每個回合結束時，一個你所選擇，在立方體區域內地表上的一個生物必須成功通過一次力量豁免，否則被{@condition 束縛}直到此法術結束。一個被{@condition 束縛}的生物可以使用一個動作以進行一次對抗你法術豁免DC的力量（{@skill 運動}）檢定，若檢定成功則結束此效果對它的影響。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Rocks",
+					"name": "岩石",
 					"entries": [
-						"As a bonus action on your turn, you can cause a loose rock in the cube to launch at a creature you can see in the cube. Make a ranged spell attack against the target. On a hit, the target takes {@dice 3d8} nonmagical bludgeoning damage, and it must succeed on a Strength saving throw or fall {@condition prone}."
+						"在你的回合以一個附贈動作，你可以使立方體區域內的一個鬆動岩石投向立方體區域內一個你所能看見的生物。對目標進行一次遠程法術攻擊。若命中，目標將受到{@dice 3d8}非魔法鈍擊傷害，且它必須成功通過一次力量豁免，否則被擊倒{@condition 伏地}。"
 					]
 				}
 			],
