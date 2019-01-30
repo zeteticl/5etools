@@ -5540,7 +5540,7 @@
 			]
 		},
 		{
-			"name": "Conjure Celestial",
+			"name": "召喚天界生物", "ENG_name": "Conjure Celestial",
 			"level": 7,
 			"school": "C",
 			"time": [
@@ -5580,16 +5580,16 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You summon a {@filter celestial of challenge rating 4 or lower|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4|type=celestial|miscellaneous=!swarm}, which appears in an unoccupied space that you can see within range. The celestial disappears when it drops to 0 hit points or when the spell ends.",
-				"The celestial is friendly to you and your companions for the duration. Roll initiative for the celestial, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you), as long as they don't violate its alignment. If you don't issue any commands to the celestial, it defends itself from hostile creatures but otherwise takes no actions.",
-				"The DM has {@creature couatl|mm|the celestial}'s statistics."
+				"你召喚出一個{@filter 挑戰等級4或以下的天界生物|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4|type=celestial|miscellaneous=!swarm}，且它將出現在射程內一處你所能看見的未被佔據空間。該天界生物會在它生命值歸零或此法術結束時消失。",
+				"該天界生物在法術持續期間對你和你的同伴友善。為該天界生物骰先攻，且它擁有自己的回合。它會服從任何你交代它的口頭指令（你不需要花費動作），只要這不會因此違反它的陣營。若你不對該生物交代任何指令，則它將在面對敵意生物時自我防衛，除此之外不採取其他動作。",
+				"這個天界生物的數據資料由DM掌控。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a 9th-level spell slot, you summon a {@filter celestial of challenge rating 5 or lower|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4;5|type=celestial|miscellaneous=!swarm}."
+						"當你使用9環法術位施放此法術時，你可以改為召喚一個{@filter 挑戰等級5或以下的天界生物|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4;5|type=celestial|miscellaneous=!swarm}。"
 					]
 				}
 			],
@@ -5657,7 +5657,7 @@
 				"你呼喚出一個元素僕役。選擇射程內一處在10呎邊長立方體內充滿氣、土、火、或水的區域。一個對應你所選區域的{@filter 挑戰等級5或以下的元素生物|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4;5|type=elemental|miscellaneous=!swarm}將會出現在距離該處10呎內的一處未被佔據空間。舉例來說，一個{@creature 火元素}會從一團篝火中浮現，而一個{@creature 土元素}會從大地中升起。該元素生物會在它生命值歸零或此法術結束時消失。",
 				"該元素生物對你和你的同伴友善。為該元素生物骰先攻，且它擁有自己的回合。它會服從任何你交代它的口頭指令（你不需要花費動作）。若你不對該生物交代任何指令，則它將在面對敵意生物時自我防衛，除此之外不採取其他動作。",
 				"若你的專注被中斷，該元素生物並不會消失。取而代之，你將失去對該元素生物的控制，它將會對你和你的同伴具有敵意，且可能會展開攻擊。一個失去控制的元素生物無法被你解消，且它會在你召喚它之後1小時後消失。",
-				"這些元素生物的數據資料由DM掌控。"
+				"這個元素生物的數據資料由DM掌控。"
 			],
 			"entriesHigherLevel": [
 				{
@@ -5671,7 +5671,7 @@
 			"page": 225
 		},
 		{
-			"name": "Conjure Fey",
+			"name": "召喚精類生物", "ENG_name": "Conjure Fey",
 			"level": 6,
 			"school": "C",
 			"time": [
@@ -5715,17 +5715,17 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You summon a {@filter fey creature of challenge rating 6 or lower|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4;5;6|type=fey|miscellaneous=!swarm}, or a fey spirit that takes the form of a {@filter beast of challenge rating 6 or lower|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4;5;6|type=beast|miscellaneous=!swarm}. It appears in an unoccupied space that you can see within range. The fey creature disappears when it drops to 0 hit points or when the spell ends.",
-				"The fey creature is friendly to you and your companions for the duration. Roll initiative for the creature, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you), as long as they don't violate its alignment. If you don't issue any commands to the fey creature, it defends itself from hostile creatures but otherwise takes no actions.",
-				"If your concentration is broken, the fey creature doesn't disappear. Instead, you lose control of the fey creature, it becomes hostile toward you and your companions, and it might attack. An uncontrolled fey creature can't be dismissed by you, and it disappears 1 hour after you summoned it.",
-				"The DM has the fey creature's statistics."
+				"你召喚出一個{@filter 挑戰等級6或以下的精類生物|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4;5;6|type=fey|miscellaneous=!swarm}、或一個呈現{@filter 挑戰等級6或以下的野獸|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4;5;6|type=beast|miscellaneous=!swarm}型態的精類精魂。它將出現在射程內一處你所能看見的未被佔據空間。該精類生物會在它生命值歸零或此法術結束時消失。",
+				"該精類生物在法術持續期間對你和你的同伴友善。為該精類生物骰先攻，且它擁有自己的回合。它會服從任何你交代它的口頭指令（你不需要花費動作），只要這不會因此違反它的陣營。若你不對該生物交代任何指令，則它將在面對敵意生物時自我防衛，除此之外不採取其他動作。",
+				"若你的專注被中斷，該精類生物並不會消失。取而代之，你將失去對該精類生物的控制，它將會對你和你的同伴具有敵意，且可能會展開攻擊。一個失去控制的精類生物無法被你解消，且它會在你召喚它之後1小時後消失。",
+				"這個精類生物的數據資料由DM掌控。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 7th level or higher, the challenge rating increases by 1 for each slot level above 6th."
+						"當你使用7環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，你所能召喚生物的挑戰等級便會再增加1。"
 					]
 				}
 			],
