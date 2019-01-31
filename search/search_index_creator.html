@@ -1,20 +1,63 @@
 <html lang="cn">
 <head>
 	<title>Search-index-json Creator</title>
-	<script src="./temp_data/spells-phb.js" charset="utf-8"></script>
-	<script src="./temp_data/spells-llk.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../lib/jquery.js"></script>
+	<script type="text/javascript" src="../lib/jquery.panzoom.js"></script>
+	<script type="text/javascript" src="../lib/jquery-ui.js"></script>
+	<script type="text/javascript" src="../lib/jquery-ui-slider-pip.js"></script>
+	<script type="text/javascript" src="../js/utils.js"></script>
+	<script type="text/javascript" src="../js/filter.js"></script>
+	<script type="text/javascript" src="../js/history.js"></script>
+	<script type="text/javascript" src="../js/multisource.js"></script>
 	<script>
-var RAW_DATA = {};
-RAW_DATA["SPELL"] = [];
+var count=0;
+
+var RAW_DATA = [];
 
 // if is local, we cannot load the data from json.... well this is just for testing.
 var is_local = true;
-function loadData(){
-	//SPELL
-	RAW_DATA["SPELL"].push.apply(RAW_DATA["SPELL"], spell_phb_json.spell);
-	RAW_DATA["SPELL"].push.apply(RAW_DATA["SPELL"], spell_llk_json.spell);
+function log(d){
+	return Promise.resolve();
+}
 
-	// ...
+function loadSingleData(url, c_idx, unit){
+	return new Promise(async resolve => {
+		RAW_DATA[c_idx] = [];
+		DataUtil.loadJSON(url).then(function(d){
+			RAW_DATA[c_idx].push.apply(RAW_DATA[c_idx], d[unit]);
+			resolve();
+		});
+	});
+}
+function loadMultiData(path, c_idx, unit){
+	return new Promise(async resolve => {
+		RAW_DATA[c_idx] = [];
+		multisourceLoad(path, unit, function(d){return Promise.resolve();}, function(d){
+			RAW_DATA[c_idx].push.apply(RAW_DATA[c_idx], d);
+			resolve();
+		}, function(){return Promise.resolve();});
+	});
+}
+
+function loadData(){
+	var root = "../data/";
+
+	loadMultiData(root+"bestiary/", 1, "monster")
+	.then(loadMultiData.bind( null, root+"spells/", 2, "spell"))
+	.then(loadSingleData.bind(null, root+"backgrounds.json", 3, "background"))
+	.then(loadSingleData.bind(null, root+"items.json", 4, "item"))
+	.then(loadMultiData.bind( null, root+"class/", 5, "class"))
+	.then(loadSingleData.bind(null, root+"conditionsdiseases.json", 6, "condition"))
+	.then(loadSingleData.bind(null, root+"feats.json", 7, "feat"))
+	.then(loadSingleData.bind(null, root+"invocations.json", 8, "invocation"))
+	.then(loadSingleData.bind(null, root+"races.json", 10, "race"))
+	.then(loadSingleData.bind(null, root+"rewards.json", 11, "reward"))
+	.then(loadSingleData.bind(null, root+"conditionsdiseases.json", 21, "disease"))
+	.then(function(){
+		console.log(RAW_DATA);
+		$("#p_btn").attr('disabled', false);
+		$("#pd_btn").attr('disabled', false);
+	});
 }
 
 // parse js
@@ -22,9 +65,20 @@ function Parse(){
 	clear();
 	printHeader();
 	//Create Dictionary
-	for(idx in RAW_DATA["SPELL"]){
-		printOneEntry("spell", RAW_DATA["SPELL"][idx].ENG_name, RAW_DATA["SPELL"][idx].name);
-	}
+	RAW_DATA.forEach(function(val, c_idx){
+		RAW_DATA[c_idx].forEach(function(val, e_idx){
+			printOneEntry(c_idx, RAW_DATA[c_idx][e_idx].ENG_name, RAW_DATA[c_idx][e_idx].name);
+		});
+	});
+	/*
+	for(k in RAW_DATA){
+		let key = k;
+		console.log(k);
+		for(idx in RAW_DATA[key]){
+			printOneEntry("spell", RAW_DATA[key][idx].ENG_name, RAW_DATA[key][idx].name);
+		}
+	}*/
+	console.log(count);
 }
 function P_and_D(){
 	Parse();
@@ -36,29 +90,29 @@ function P_and_D(){
 }
 
 function printHeader(){
-	var category_arr = ["spell"];
-	print("var $T={};");
-	print("$T.nc=function(nc){return $T.c[nc];};");
-	print("$T.t=function(c,n){c=$T.nc(c);return (!$T[c])?n:(!$T[c][n.toLowerCase()])?n:$T[c][n.toLowerCase()];};");
+	print("var $T=[];");
+	print("$T.t=function(c,n){return (!$T[c])?n:(!$T[c][n.toLowerCase()])?n:$T[c][n.toLowerCase()];};");
 	print("$T.translate_uri=function(c,n){let a=n.match(/(.+)_(\\w+)$/);return $T.t(c,decodeURIComponent(a[1]))+\"_\"+a[2];};");
 	print("$T.translate_name=function(c,n){return $T.t(c,n);};");
-	print("$T.c=[];");
-	print("$T.c[2]=\"spell\";");
-	for(c in category_arr){printCategoryHeader(category_arr[c]);}
+	RAW_DATA.forEach(function(arr, idx){
+		printCategoryHeader(idx);
+	});
 }
 function printCategoryHeader(category){
-	print("$T."+category+"={};");	
+	print("$T["+category+"]={};");	
 }
 function printOneEntry(category, en_name, ch_name){
 	if(!en_name || !ch_name) return ;
 	en_name=en_name.toLowerCase();
-	print("$T."+category+"[\""+en_name+"\"]=\""+ch_name+"\";");
+	print("$T["+category+"][\""+en_name+"\"]=\""+ch_name+"\";");
+	count++;
 } 
 function print(str){
 	document.getElementById("hidden_output").innerHTML += str;
 	document.getElementById("output").innerHTML += str+"<br/>";
 }
 function clear(){
+	count=0;
 	document.getElementById("hidden_output").innerHTML = "";
 	document.getElementById("output").innerHTML = "";
 }
@@ -70,7 +124,8 @@ function clear(){
 <body onload="loadData()">
 We need to create a .js file, that can parse the "english name" into "chinese name".<br/>
 
-<button onclick=Parse()>Parse</button><button onclick=P_and_D()>Parse & Download</button>
+<button id="p_btn" onclick=Parse() disabled>Parse</button> 
+<button id="pd_btn" onclick=P_and_D() disabled>Parse & Download</button>
 <p>
 	<div id="output" style="border:1px black solid"></div>
 	<div id="hidden_output" style="display:none;"></div>
