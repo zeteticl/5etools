@@ -1,0 +1,69 @@
+<html lang="cn">
+<head>
+	<title>Search-index-json Creator</title>
+	<script src="./temp_data/spells-phb.js" charset="utf-8"></script>
+	<script src="./temp_data/spells-llk.js" charset="utf-8"></script>
+	<script>
+var RAW_DATA = {};
+RAW_DATA["SPELL"] = [];
+
+// if is local, we cannot load the data from json.... well this is just for testing.
+var is_local = true;
+function loadData(){
+	//SPELL
+	RAW_DATA["SPELL"].push.apply(RAW_DATA["SPELL"], spell_phb_json.spell);
+	RAW_DATA["SPELL"].push.apply(RAW_DATA["SPELL"], spell_llk_json.spell);
+
+	// ...
+}
+
+// parse js
+function Parse(){
+	printHeader();
+
+	//Create Dictionary
+	for(idx in RAW_DATA["SPELL"]){
+		printOneEntry("spell", RAW_DATA["SPELL"][idx].ENG_name, RAW_DATA["SPELL"][idx].name);
+	}
+
+	//Download
+	var link = document.createElement('a');
+	link.download = "haz_translator.js";
+	link.href = "data:text/plain;charset=UTF-8,"+document.getElementById("hidden_output").innerHTML;
+	link.click();
+}
+
+function printHeader(){
+	var category_arr = ["spell"];
+	print("var $T={};");
+	print("$T.t=function(c,n){return (!$T[c])?n:(!$T[c][n])?n:$T[c][n];};");
+	print("$T.translate_uri=function(c,n){let a=n.match(/(.+)_(\w+)$/);return $T.t(c,decodeURIComponent(a[1]))+\"_\"+a[2];};");
+	print("$T.translate_name=function(c,n){return $T.t(c,n.toLowerCase());};");
+	for(c in category_arr){printCategoryHeader(category_arr[c]);}
+}
+function printCategoryHeader(category){
+	print("$T."+category+"={};");	
+}
+function printOneEntry(category, en_name, ch_name){
+	if(!en_name || !ch_name) return ;
+	en_name=en_name.toLowerCase();
+	print("$T."+category+"[\""+en_name+"\"]=\""+ch_name+"\";");
+} 
+function print(str){
+	document.getElementById("hidden_output").innerHTML += str;
+	document.getElementById("output").innerHTML += str+"<br/>";
+}
+
+	</script>
+</head>
+<body onload="loadData()">
+We need to create a .js file, that can parse the "english name" into "chinese name".<br/>
+
+<button onclick=Parse()>TEST</button>
+<p>
+	<div id="output" style="border:1px black solid"></div>
+	<div id="hidden_output" style="display:none;"></div>
+</p>
+
+</body>
+</html>
