@@ -5695,7 +5695,7 @@
 			]
 		},
 		{
-			"name": "Barbed Devil",
+			"name": "猬魔", "ENG_name": "Barbed Devil",
 			"size": "M",
 			"type": {
 				"type": "fiend",
@@ -5748,7 +5748,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"preNote": "非銀製武器且非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -5760,25 +5760,25 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 18,
-			"languages": "Infernal, telepathy 120 ft.",
+			"languages": "煉獄語、心靈感應120呎",
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Barbed Hide",
+					"name": "刺針猬皮",
 					"entries": [
-						"At the start of each of its turns, the barbed devil deals 5 ({@damage 1d10}) piercing damage to any creature grappling it."
+						"在它的每個回合開始時，猬魔對任何擒抱它的生物造成5 ({@damage 1d10})穿刺傷害。"
 					]
 				},
 				{
 					"name": "魔鬼視界",
 					"entries": [
-						"魔法黑暗並不會阻礙devil的黑暗視覺。"
+						"魔法黑暗並不會阻礙猬魔的黑暗視覺。"
 					]
 				},
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The devil 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"猬魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
@@ -5786,25 +5786,25 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The devil makes three melee attacks: one with its tail and two with its claws. Alternatively, it can use Hurl Flame twice."
+						"猬魔進行三次近戰攻擊：一次尾擊，二次爪抓。或者，它可以使用二次投擲烈焰。"
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "爪抓",
 					"entries": [
 						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Tail",
+					"name": "尾擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}10 ({@damage 2d6 + 3})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Hurl Flame",
+					"name": "投擲烈焰",
 					"entries": [
-						"{@atk rs} {@hit 5} to hit, range 150 ft., one target. {@h}10 ({@damage 3d6}) fire damage. If the target is a flammable object that isn't being worn or carried, it also catches fire."
+						"{@atk rs} 命中{@hit 5}，射程150呎，單一目標。{@h}10 ({@damage 3d6})火焰傷害。若目標為未被穿戴或攜帶的可燃物體，則它將被點燃。"
 					]
 				}
 			],
@@ -6085,7 +6085,7 @@
 			]
 		},
 		{
-			"name": "Bearded Devil",
+			"name": "鬚魔", "ENG_name": "Bearded Devil",
 			"size": "M",
 			"type": {
 				"type": "fiend",
@@ -6132,7 +6132,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"preNote": "非銀製武器且非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -6144,25 +6144,25 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 10,
-			"languages": "Infernal, telepathy 120 ft.",
+			"languages": "煉獄語、心靈感應120呎",
 			"cr": "3",
 			"trait": [
 				{
 					"name": "魔鬼視界",
 					"entries": [
-						"魔法黑暗並不會阻礙devil的黑暗視覺。"
+						"魔法黑暗並不會阻礙鬚魔的黑暗視覺。"
 					]
 				},
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The devil 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"鬚魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Steadfast",
+					"name": "堅定",
 					"entries": [
-						"The devil can't be {@condition frightened} while it can see an allied creature within 30 feet of it."
+						"當鬚魔可以看見距離它30呎內的友方生物時，它不會被{@condition 恐懼}。"
 					]
 				}
 			],
@@ -6170,19 +6170,19 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The devil makes two attacks: one with its beard and one with its glaive."
+						"鬚魔進行二次攻擊：一次蛇鬚，一次長柄刀。"
 					]
 				},
 				{
-					"name": "Beard",
+					"name": "蛇鬚",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}6 ({@damage 1d8 + 2}) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or be {@condition poisoned} for 1 minute. While {@condition poisoned} in this way, the target can't regain hit points. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}6 ({@damage 1d8 + 2})穿刺傷害，且目標必須成功通過一次DC 12的體質豁免，否則陷入{@condition 中毒}狀態長達1分鐘。當因此而{@condition 中毒}時，目標無法回復生命值。目標可以在每次它的回合結束時重複這個豁免檢定，若檢定成功則結束這個效果對它的影響。"
 					]
 				},
 				{
-					"name": "Glaive",
+					"name": "長柄刀",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及10呎，單一目標。{@h}8 ({@damage 1d10 + 3})劈砍傷害。 If the target is a creature other than an undead or a construct, it must succeed on a DC 12 Constitution saving throw or lose 5 ({@dice 1d10}) hit points at the start of each of its turns due to an infernal wound. Each time the devil hits the wounded target with this attack, the damage dealt by the wound increases by 5 ({@dice 1d10}). Any creature can take an action to stanch the wound with a successful DC 12 Wisdom (Medicine) check. The wound also closes if the target receives magical healing."
+						"{@atk mw} 命中{@hit 5}，觸及10呎，單一目標。{@h}8 ({@damage 1d10 + 3})劈砍傷害。若目標為一個不死生物或構裝體以外的生物，則它必須成功通過一次DC 12的體質豁免，否則將在它的每個回合開始時因為煉獄創傷而失去5 ({@dice 1d10})點生命值。每當鬚魔使用此攻擊命中一個帶有該創傷的生物，這個創傷造成的傷害將會增加5 ({@dice 1d10})點。任何生物都可以使用一個動作，透過成功通過一次DC 12的睿知（{@skill 醫藥}）檢定以為創傷止血。這個創傷也會在目標被魔法治療的時候癒合。"
 					]
 				}
 			],
@@ -23706,7 +23706,7 @@
 						"piercing",
 						"slashing"
 					],
-					"preNote": "非銀製武器進行的非魔法攻擊所造成的"
+					"preNote": "非銀製武器且非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -30253,7 +30253,7 @@
 					]
 				},
 				{
-					"name": "Glaive",
+					"name": "長柄刀",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及10呎，單一目標。{@h}15 ({@damage 2d10 + 4}) slashing damage, or 9 ({@damage 1d10 + 4}) slashing damage in Small or Medium form."
 					]
