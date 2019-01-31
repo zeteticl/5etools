@@ -2522,7 +2522,7 @@ class AddMenuSearchTab extends AddMenuTab {
 					if (this.subType === "content") {
 						const page = UrlUtil.categoryToPage(r.doc.c);
 						const source = r.doc.s;
-						const hash = $T.translate_uri(r.doc.u);
+						const hash = $T.translate_uri(r.doc.c,r.doc.u);
 
 						this.menu.pnl.doPopulate_Stats(page, source, hash);
 					} else {
@@ -2535,7 +2535,7 @@ class AddMenuSearchTab extends AddMenuTab {
 					if (this.subType === "content") {
 						var full_name = "";
 
-						if(r.doc.c==2) 	full_name = $T.translate_name(r.doc.n);
+						if(r.doc.c==2) 	full_name = $T.translate_name(r.doc.c,r.doc.n);
 						if(r.doc.c==6) 	full_name = Parser.ConditionToDisplay(r.doc.n);
 						if(r.doc.c==10) full_name = Parser.RaceToDisplay(r.doc.n);
 

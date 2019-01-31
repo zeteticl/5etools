@@ -20,12 +20,13 @@ function loadData(){
 // parse js
 function Parse(){
 	printHeader();
-
 	//Create Dictionary
 	for(idx in RAW_DATA["SPELL"]){
 		printOneEntry("spell", RAW_DATA["SPELL"][idx].ENG_name, RAW_DATA["SPELL"][idx].name);
 	}
-
+}
+function P_and_D(){
+	Parse();
 	//Download
 	var link = document.createElement('a');
 	link.download = "haz_translator.js";
@@ -36,9 +37,12 @@ function Parse(){
 function printHeader(){
 	var category_arr = ["spell"];
 	print("var $T={};");
-	print("$T.t=function(c,n){return (!$T[c])?n:(!$T[c][n])?n:$T[c][n];};");
+	print("$T.nc=function(nc){return $T.c[nc];};");
+	print("$T.t=function(c,n){c=$T.nc(c);return (!$T[c])?n:(!$T[c][n.toLowerCase()])?n:$T[c][n.toLowerCase()];};");
 	print("$T.translate_uri=function(c,n){let a=n.match(/(.+)_(\w+)$/);return $T.t(c,decodeURIComponent(a[1]))+\"_\"+a[2];};");
-	print("$T.translate_name=function(c,n){return $T.t(c,n.toLowerCase());};");
+	print("$T.translate_name=function(c,n){return $T.t(c,n);};");
+	print("$T.c=[];");
+	print("$T.c[2]=\"spell\";");
 	for(c in category_arr){printCategoryHeader(category_arr[c]);}
 }
 function printCategoryHeader(category){
@@ -54,12 +58,27 @@ function print(str){
 	document.getElementById("output").innerHTML += str+"<br/>";
 }
 
+//===================
+// TEST
+var $T={};
+$T.nc=function(nc){return $T.c[nc];};
+$T.t=function(c,n){c=$T.nc(c);return (!$T[c])?n:(!$T[c][n.toLowerCase()])?n:$T[c][n.toLowerCase()];};
+$T.translate_uri=function(c,n){let a=n.match(/(.+)_(w+)$/);return $T.t(c,decodeURIComponent(a[1]))+"_"+a[2];};
+$T.translate_name=function(c,n){return $T.t(c,n);};
+$T.c=[];
+$T.c[2]="spell";
+$T.spell={};
+$T.spell["flock of familiars"]="群聚魔寵";
+$T.spell["galder's speedy courier"]="高德爾快遞術";
+$T.spell["galder's tower"]="高德爾之塔";
+
+console.log($T.translate_name(30,"Flock of Familiars"));
 	</script>
 </head>
 <body onload="loadData()">
 We need to create a .js file, that can parse the "english name" into "chinese name".<br/>
 
-<button onclick=Parse()>TEST</button>
+<button onclick=Parse()>Parse</button><button onclick=P_and_D()>Parse & Download</button>
 <p>
 	<div id="output" style="border:1px black solid"></div>
 	<div id="hidden_output" style="display:none;"></div>
