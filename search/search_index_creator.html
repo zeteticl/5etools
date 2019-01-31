@@ -22,7 +22,7 @@ function log(d){
 
 function loadSingleData(url, c_idx, unit){
 	return new Promise(async resolve => {
-		RAW_DATA[c_idx] = [];
+		if(RAW_DATA[c_idx]==undefined) RAW_DATA[c_idx] = [];
 		DataUtil.loadJSON(url).then(function(d){
 			RAW_DATA[c_idx].push.apply(RAW_DATA[c_idx], d[unit]);
 			resolve();
@@ -31,7 +31,7 @@ function loadSingleData(url, c_idx, unit){
 }
 function loadMultiData(path, c_idx, unit){
 	return new Promise(async resolve => {
-		RAW_DATA[c_idx] = [];
+		if(RAW_DATA[c_idx]==undefined) RAW_DATA[c_idx] = [];
 		multisourceLoad(path, unit, function(d){return Promise.resolve();}, function(d){
 			RAW_DATA[c_idx].push.apply(RAW_DATA[c_idx], d);
 			resolve();
@@ -45,6 +45,7 @@ function loadData(){
 	loadMultiData(root+"bestiary/", 1, "monster")
 	.then(loadMultiData.bind( null, root+"spells/", 2, "spell"))
 	.then(loadSingleData.bind(null, root+"backgrounds.json", 3, "background"))
+	.then(loadSingleData.bind(null, root+"basicitems.json", 4, "basicitem"))
 	.then(loadSingleData.bind(null, root+"items.json", 4, "item"))
 	.then(loadMultiData.bind( null, root+"class/", 5, "class"))
 	.then(loadSingleData.bind(null, root+"conditionsdiseases.json", 6, "condition"))
