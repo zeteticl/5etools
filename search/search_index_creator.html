@@ -39,7 +39,7 @@ function printHeader(){
 	print("var $T={};");
 	print("$T.nc=function(nc){return $T.c[nc];};");
 	print("$T.t=function(c,n){c=$T.nc(c);return (!$T[c])?n:(!$T[c][n.toLowerCase()])?n:$T[c][n.toLowerCase()];};");
-	print("$T.translate_uri=function(c,n){let a=n.match(/(.+)_(\w+)$/);return $T.t(c,decodeURIComponent(a[1]))+\"_\"+a[2];};");
+	print("$T.translate_uri=function(c,n){let a=n.match(/(.+)_(\\w+)$/);return $T.t(c,decodeURIComponent(a[1]))+\"_\"+a[2];};");
 	print("$T.translate_name=function(c,n){return $T.t(c,n);};");
 	print("$T.c=[];");
 	print("$T.c[2]=\"spell\";");
@@ -63,7 +63,7 @@ function print(str){
 var $T={};
 $T.nc=function(nc){return $T.c[nc];};
 $T.t=function(c,n){c=$T.nc(c);return (!$T[c])?n:(!$T[c][n.toLowerCase()])?n:$T[c][n.toLowerCase()];};
-$T.translate_uri=function(c,n){let a=n.match(/(.+)_(w+)$/);return $T.t(c,decodeURIComponent(a[1]))+"_"+a[2];};
+$T.translate_uri=function(c,n){let a=n.match(/(.+)_(\w+)$/);return $T.t(c,decodeURIComponent(a[1]))+"_"+a[2];};
 $T.translate_name=function(c,n){return $T.t(c,n);};
 $T.c=[];
 $T.c[2]="spell";
@@ -72,7 +72,9 @@ $T.spell["flock of familiars"]="群聚魔寵";
 $T.spell["galder's speedy courier"]="高德爾快遞術";
 $T.spell["galder's tower"]="高德爾之塔";
 
-console.log($T.translate_name(30,"Flock of Familiars"));
+console.log($T.translate_name(2,"Flock of Familiars"));
+console.log($T.translate_uri(2,"galder's%20tower_llk"));
+
 	</script>
 </head>
 <body onload="loadData()">

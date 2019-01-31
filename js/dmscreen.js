@@ -2541,7 +2541,8 @@ class AddMenuSearchTab extends AddMenuTab {
 
 						if(full_name=="" || full_name==r.doc.n)
 						 	full_name=r.doc.n;
-						else 				full_name+=`(${r.doc.n})`;
+						else
+							full_name+=`(${r.doc.n})`;
 						
 						return $(`
 							<div class="panel-tab-results-row">
