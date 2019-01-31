@@ -65,9 +65,17 @@ function Parse(){
 	clear();
 	printHeader();
 	//Create Dictionary
-	RAW_DATA.forEach(function(val, c_idx){
-		RAW_DATA[c_idx].forEach(function(val, e_idx){
-			printOneEntry(c_idx, RAW_DATA[c_idx][e_idx].ENG_name, RAW_DATA[c_idx][e_idx].name);
+	RAW_DATA.forEach(function(c_val, c_idx){
+		RAW_DATA[c_idx].forEach(function(e_val, e_idx){
+			if(c_idx==10 && e_val.subraces){
+				e_val.subraces.forEach(function(sub_val, sub_idx){
+					var en_name = (!e_val.ENG_name)? null: (!sub_val.ENG_name)? (e_val.ENG_name+" ("+sub_val.name+")"): (e_val.ENG_name+" ("+sub_val.ENG_name+")");
+					var ch_name = e_val.name+"("+sub_val.name+")";
+					printOneEntry(c_idx, en_name, ch_name);
+				});
+			}else{
+				printOneEntry(c_idx, RAW_DATA[c_idx][e_idx].ENG_name, RAW_DATA[c_idx][e_idx].name);
+			}
 		});
 	});
 	/*
