@@ -2577,7 +2577,7 @@
 			]
 		},
 		{
-			"name": "Blade Barrier",
+			"name": "劍刃障壁", "ENG_name": "Blade Barrier",
 			"level": 6,
 			"school": "V",
 			"time": [
@@ -2617,8 +2617,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You create a vertical wall of whirling, razor-sharp blades made of magical energy. The wall appears within range and lasts for the duration. You can make a straight wall up to 100 feet long, 20 feet high, and 5 feet thick, or a ringed wall up to 60 feet in diameter, 20 feet high, and 5 feet thick. The wall provides three-quarters cover to creatures behind it, and its space is difficult terrain.",
-				"When a creature enters the wall's area for the first time on a turn or starts its turn there, the creature must make a Dexterity saving throw. On a failed save, the creature takes {@dice 6d10} slashing damage. On a successful save, the creature takes half as much damage."
+				"你創造出一道由魔法能量構成，垂直的飛舞、鋒利劍刃之牆。這道牆將出現在射程內，且持續直到法術持續時間結束。你可以創造出一道最多100呎長、20呎高、以及5呎厚的筆直牆壁，或一道有著直徑最多60呎長、20呎高、以及5呎厚的環型牆。這道牆會為它後面的生物提供四分之三掩護，且它所在的空間為困難地形。",
+				"當一個生物在一個回合中第一次進入這道牆的區域，或在該處開始它回合，則該生物必須進行一次敏捷豁免。若豁免失敗，該生物將受到{@dice 6d10}劈砍傷害。若豁免成功，則只受到一半的傷害。"
 			],
 			"page": 218,
 			"damageInflict": [
@@ -3679,7 +3679,7 @@
 			]
 		},
 		{
-			"name": "Chain Lightning",
+			"name": "連環閃電", "ENG_name": "Chain Lightning",
 			"level": 6,
 			"school": "V",
 			"time": [
@@ -3698,7 +3698,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a bit of fur; a piece of amber, glass, or a crystal rod; and three silver pins"
+				"m": "一小塊皮毛；一塊琥珀、玻璃、或水晶權杖；以及三根銀針"
 			},
 			"duration": [
 				{
@@ -3719,15 +3719,15 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You create a bolt of lightning that arcs toward a target of your choice that you can see within range. Three bolts then leap from that target to as many as three other targets, each of which must be within 30 feet of the first target. A target can be a creature or an object and can be targeted by only one of the bolts.",
-				"A target must make a Dexterity saving throw. The target takes {@dice 10d8} lightning damage on a failed save, or half as much damage on a successful one."
+				"你創造出一道閃電束向著射程內你所能看見的一個目標弧射而去。三道閃電束接著從該目標身上躍向最多三個其他目標，各目標都必須在第一個目標30呎距離內。目標可以是一個生物或一個物體，且每個目標只能成為其中一道閃電束的目標。",
+				"目標必須進行一次敏捷豁免。目標若豁免失敗將受到{@dice 10d8}閃電傷害，豁免成功則只受到一半的傷害。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 7th level or higher, one additional bolt leaps from the first target to another target for each slot level above 6th."
+						"當你使用7環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，從第一個目標躍向另一個目標的閃電束便會再額外增加一條。"
 					]
 				}
 			],
@@ -6107,7 +6107,7 @@
 			]
 		},
 		{
-			"name": "Contingency",
+			"name": "觸發術", "ENG_name": "Contingency",
 			"level": 6,
 			"school": "V",
 			"time": [
@@ -6126,7 +6126,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a statuette of yourself carved from ivory and decorated with gems worth at least 1,500 gp",
+					"text": "一個你自己的小雕像，由象牙雕製而成，並裝飾以價值至少1,500金幣的珠寶",
 					"cost": 1500
 				}
 			},
@@ -6149,9 +6149,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Choose a spell of 5th level or lower that you can cast, that has a casting time of 1 action, and that can target you. You cast that spell\u2014called the contingent spell\u2014as part of casting contingency, expending spell slots for both, but the contingent spell doesn't come into effect. Instead, it takes effect when a certain circumstance occurs. You describe that circumstance when you cast the two spells. For example, a contingency cast with water breathing might stipulate that water breathing comes into effect when you are engulfed in water or a similar liquid.",
-				"The contingent spell takes effect immediately after the circumstance is met for the first time, whether or not you want it to, and then contingency ends.",
-				"The contingent spell takes effect only on you, even if it can normally target others. You can use only one contingency spell at a time. If you cast this spell again, the effect of another contingency spell on you ends. Also, contingency ends on you if its material component is ever not on your person."
+				"選擇一個你所能施放的環位為5環或更低，施法時間為1個動作，且能以你自己為目標的法術。作為施放觸發術的一部份，你施放該法術\u2014以下稱其為併發法術\u2014，為這兩個法術消耗各自的法術位，但併發法術並不會馬上產生效果，而是在特定狀況發生時發揮效果。你在施放這兩個法術時描述一個狀況。舉例來說，一個和{@spell 水下呼吸}法術一同被施放的觸發術可能會設定在你被水或類似液體吞沒時讓{@spell 水下呼吸發揮效果。",
+				"併發法術會緊接在第一次遭遇該狀況時立刻發揮效果，無論你是否希望如此，且觸發術結束。",
+				"併發法術只會對你發揮效果，即使它原本可以指定其他目標也一樣。你同時只能使用一個觸發術。若你再次施放此法術，則另一個作用在你身上的觸發術將被中止。觸發術也會在你不再擁有它的材料構材時結束。"
 			],
 			"page": 227
 		},
@@ -20277,7 +20277,7 @@
 			"permanentEffects": true
 		},
 		{
-			"name": "Otiluke's Freezing Sphere",
+			"name": "歐提路克冰凍法球", "ENG_name": "Otiluke's Freezing Sphere",
 			"level": 6,
 			"school": "V",
 			"time": [
@@ -20296,7 +20296,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a small crystal sphere"
+				"m": "一個小水晶球"
 			},
 			"duration": [
 				{
@@ -20313,16 +20313,16 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A frigid globe of cold energy streaks from your fingertips to a point of your choice within range, where it explodes in a 60-foot-radius sphere. Each creature within the area must make a Constitution saving throw. On a failed save, a creature takes {@dice 10d6} cold damage. On a successful save, it takes half as much damage.",
-				"If the globe strikes a body of water or a liquid that is principally water (not including water-based creatures), it freezes the liquid to a depth of 6 inches over an area 30 feet square. This ice lasts for 1 minute. Creatures that were swimming on the surface of frozen water are trapped in the ice. A trapped creature can use an action to make a Strength check against your spell save DC to break free.",
-				"You can refrain from firing the globe after completing the spell, if you wish. A small globe about the size of a sling stone, cool to the touch, appears in your hand. At any time, you or a creature you give the globe to can throw the globe (to a range of 40 feet) or hurl it with a sling (to the sling's normal range). It shatters on impact, with the same effect as the normal casting of the spell. You can also set the globe down without shattering it. After 1 minute, if the globe hasn't already shattered, it explodes."
+				"一個寒冰能量形成的急凍球體從你的指尖襲向射程內你所選擇的一點，並在該處爆炸席捲60呎半徑的球體範圍。每個在該範圍內的生物都必須進行一次體質豁免。若豁免失敗，該生物受到{@dice 10d6}寒冰傷害，豁免成功則只受到一半的傷害。",
+				"若這個球體擊中一片水體或主要由水組成的液體（不包括水構成的生物），則它將把30呎平方範圍內的液體凍結6吋厚。這塊冰將維持1分鐘。游在被凍結水面的生物將被困在冰中。一個被困住的生物可以使用一個動作進行一次對抗你法術豁免DC的力量檢定以破冰而出。",
+				"若你希望，則你可以在完成此法術後選擇不發射這個球體。一顆尺寸大約等同投石索彈丸，觸感冰涼的小球體將出現在你手中。在任何時候，你或一個你交付此球體的生物可以將此球體投擲出去（射程40呎），或使用{@item 投石索|phb}將之投出（投石索的正常射程）。它將在衝擊中粉碎，並產生與正常施放此法術時相同的效果。你也可以不粉碎該球體而將之設置好。在1分鐘後，若該球體尚未被粉碎，則它將爆炸。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 7th level or higher, the damage increases by {@scaledice 10d6|6-9|1d6} for each slot level above 6th."
+						"當你使用7環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 10d6|6-9|1d6}。"
 					]
 				}
 			],
@@ -26715,7 +26715,7 @@
 			]
 		},
 		{
-			"name": "Sunbeam",
+			"name": "烈日光束", "ENG_name": "Sunbeam",
 			"level": 6,
 			"school": "V",
 			"time": [
@@ -26734,7 +26734,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a magnifying glass"
+				"m": "一面放大鏡"
 			},
 			"duration": [
 				{
@@ -26764,9 +26764,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A beam of brilliant light flashes out from your hand in a 5-foot-wide, 60-foot-long line. Each creature in the line must make a Constitution saving throw. On a failed save, a creature takes {@dice 6d8} radiant damage and is {@condition blinded} until your next turn. On a successful save, it takes half as much damage and isn't {@condition blinded} by this spell. Undead and oozes have disadvantage on this saving throw.",
-				"You can create a new line of radiance as your action on any turn until the spell ends.",
-				"For the duration, a mote of brilliant radiance shines in your hand. It sheds bright light in a 30-foot radius and dim light for an additional 30 feet. This light is sunlight."
+				"一道耀眼的光耀射線從你的手中閃射而出一束15呎寬、60呎長的直線。每個在這個直線內的生物必須進行一次體質豁免。若豁免失敗，該生物將受到{@dice 6d8}光耀傷害且陷入{@condition 目盲}直到你的下個回合。豁免成功則只受到一半的傷害。若豁免成功，該生物只受到一半的傷害，且不會因此法術陷入{@condition 目盲}。不死生物和泥怪在此豁免檢定中具有劣勢。",
+				"直到此法術結束前，你能夠以一個動作再射出一道新的光耀射線。",
+				"在法術持續期間，耀眼的光輝粒子在你手中閃耀。它將散發出30呎半徑的明亮光照和再延伸30呎的微光光照。這道光線視為日光。"
 			],
 			"page": 279,
 			"damageInflict": [
