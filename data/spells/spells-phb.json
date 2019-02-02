@@ -566,7 +566,7 @@
 			"entries": [
 				"此法術創造出一個不死生物僕從。選擇射程內一個中型或小型類人生物的骨骸或屍體。你的法術將汙穢的仿製生命能量注入目標，使它做為不死生物復活。若你選擇骨骸，則目標變成一個{@creature 骷髏}；若你選擇屍體，則目標變成一個{@creature 殭屍}（DM掌控這些生物的遊戲數據）。",
 				"在你的每個回合，你可以使用一個附贈動作以心靈命令任何你透過此法術創造，且距離你60呎內的生物（如果你控制了複數生物，你可以同時命令他們部分或全部，對它們下達相同的命令）。你決定該生物在它的下個回合間將採取的動作以及移動的位置，或者你可以下達一個籠統的命令，例如守衛一個特定的房間或走廊。若你沒有下達命令，則該生物只會在面對敵意生物時採取自我防衛。一旦接獲指令，該生物將會持續遵從該指令直到它的任務被完成。",
-				"該生物處於你的控制長達24小時，在這之後它將停止服從任何你給予的命令。若要再延續24小時對該生物的控制，則你必須在當前24小時的時段結束前再次對該生施放此法術。使用此法術的這個用法將會延續你對已經透過此法術喚起的最多四個生物的控制，而不會喚起新的生物。"
+				"該生物處於你的控制長達24小時，在這之後它將停止服從任何你給予的命令。若要再延續24小時對該生物的控制，則你必須在當前24小時的時段結束前再次對該生施放此法術。以這個用法使用此法術將會延續你對已經透過此法術喚起的最多四個生物的控制，而不會喚起新的生物。"
 			],
 			"entriesHigherLevel": [
 				{
@@ -1097,7 +1097,7 @@
 			"page": 214
 		},
 		{
-			"name": "Arcane Gate",
+			"name": "祕法之門", "ENG_name": "Arcane Gate",
 			"level": 6,
 			"school": "C",
 			"time": [
@@ -1145,9 +1145,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You create linked teleportation portals that remain open for the duration. Choose two points on the ground that you can see, one point within 10 feet of you and one point within 500 feet of you. A circular portal, 10 feet in diameter, opens over each point. If the portal would open in the space occupied by a creature, the spell fails, and the casting is lost.",
-				"The portals are two-dimensional glowing rings filled with mist, hovering inches from the ground and perpendicular to it at the points you choose. A ring is visible only from one side (your choice), which is the side that functions as a portal.",
-				"Any creature or object entering the portal exits from the other portal as if the two were adjacent to each other; passing through a portal from the nonportal side has no effect. The mist that fills each portal is opaque and blocks vision through it. On your turn, you can rotate the rings as a bonus action so that the active side faces in a different direction."
+				"你創造一對互相連結的傳送門，並在法術持續期間內持續開啟。在你所能看見的地面上選擇兩個點，一點距離你10呎內，另一點則需距離你500呎內。一個10呎半徑的圓形傳送門將在各點位置出現並開啟。若該傳送門會在一個已經被某個生物佔據的空間開啟，則此法術將失敗，且該次施法被浪費。",
+				"這對傳送門呈現一個二維的發光圓環，內部充滿迷霧，並垂直懸浮於你所選地面位置數吋上空。這個圓環只能從其中一側被看見（由你選擇），且只有該側具有傳送門的功能。",
+				"任何進入傳送門的生物或物體都將從另一個傳送門離開，就如同它們兩道傳送門彼此相鄰；穿過圓環非傳送門的那一側不會有任何效果。傳送門內充斥的迷霧不透光，且將阻擋視線穿透它。在你的回合，你能夠以一個附贈動作旋轉圓環，好讓其有效的那一側面向一個不同的方向。"
 			],
 			"page": 214
 		},
@@ -4022,7 +4022,7 @@
 			]
 		},
 		{
-			"name": "Circle of Death",
+			"name": "死亡之環", "ENG_name": "Circle of Death",
 			"level": 6,
 			"school": "N",
 			"time": [
@@ -4042,7 +4042,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "the powder of a crushed black pearl worth at least 500 gp",
+					"text": "一顆價值至少500金幣的黑珍珠碾碎而成的粉末",
 					"cost": 500
 				}
 			},
@@ -4069,14 +4069,14 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A sphere of negative energy ripples out in a 60-foot-radius sphere from a point within range. Each creature in that area must make a Constitution saving throw. A target takes {@dice 8d6} necrotic damage on a failed save, or half as much damage on a successful one."
+				"一個負能量球體從射程內一點向外擴散，波及至60呎半徑球體範圍。每個在範圍內的生物都必須進行一次體質豁免。一個豁免失敗的目標將受到{@dice 8d6}死靈傷害，豁免成功則只受到一半的傷害。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 7th level or higher, the damage increases by {@scaledice 8d6|6-9|2d6} for each slot level above 6th."
+						"當你使用7環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，傷害便會再增加{@scaledice 8d6|6-9|2d6}。"
 					]
 				}
 			],
@@ -6698,7 +6698,7 @@
 			"page": 229
 		},
 		{
-			"name": "Create Undead",
+			"name": "創造不死生物", "ENG_name": "Create Undead",
 			"level": 6,
 			"school": "N",
 			"time": [
@@ -6718,7 +6718,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "one clay pot filled with grave dirt, one clay pot filled with brackish water, and one 150 gp black onyx stone for each corpse",
+					"text": "每具屍體各一個裝滿墓土的陶罐、一個裝滿苦鹹水的陶罐、跟一個價值150金幣的黑瑪瑙石",
 					"cost": 150
 				}
 			},
@@ -6745,16 +6745,16 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You can cast this spell only at night. Choose up to three corpses of Medium or Small humanoids within range. Each corpse becomes a {@creature ghoul} under your control. (The DM has game statistics for these creatures.)",
-				"As a bonus action on each of your turns, you can mentally command any creature you animated with this spell if the creature is within 120 feet of you (if you control multiple creatures, you can command any or all of them at the same time, issuing the same command to each one). You decide what action the creature will take and where it will move during its next turn, or you can issue a general command, such as to guard a particular chamber or corridor. If you issue no commands, the creature only defends itself against hostile creatures. Once given an order, the creature continues to follow it until its task is complete.",
-				"The creature is under your control for 24 hours, after which it stops obeying any command you have given it. To maintain control of the creature for another 24 hours, you must cast this spell on the creature before the current 24-hour period ends. This use of the spell reasserts your control over up to three creatures you have animated with this spell, rather than animating new ones."
+				"你只能在夜晚施放此法術。選擇射程內最多三具中型或小型類人生物的屍體。每具屍體將各自變成一個處於你控制之下的{@creature 食屍鬼}。（這些生物的數據資料由DM掌控。）",
+				"在你的每個回合以一個附贈動作，你可以以心靈命令任何你透過此法術活化，且距離你120呎內的生物（如果你控制了複數生物，你可以同時命令他們部分或全部，對它們下達相同的命令）。你決定該生物在它的下個回合間將採取的動作以及移動的位置，或者你可以下達一個籠統的命令，例如守衛一個特定的房間或走廊。若你沒有下達命令，則該生物只會在面對敵意生物時採取自我防衛。一旦接獲指令，該生物將會持續遵從該指令直到它的任務被完成。",
+				"該生物處於你的控制長達24小時，在這之後它將停止服從任何你給予的命令。若要再延續24小時對該生物的控制，則你必須在當前24小時的時段結束前再次對該生施放此法術。以這個用法使用此法術將會延續你對已經透過此法術喚起的最多三個生物的控制，而不會喚起新的生物。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a 7th-level spell slot, you can animate or reassert control over four ghouls. When you cast this spell using an 8th-level spell slot, you can animate or reassert control over five ghouls or two ghasts or wights. When you cast this spell using a 9th-level spell slot, you can animate or reassert control over six ghouls, three ghasts or wights, or two mummies."
+						"當你使用7環法術位施放此法術時，你可以活化或延續控制四個{@creature 食屍鬼}。當你使用8環法術位施放此法術時，你可以活化或延續控制五個{@creature 食屍鬼}、或二個{@creature 妖鬼}或{@creature 屍妖}。當你使用9環法術位施放此法術時，你可以活化或延續控制六個{@creature 食屍鬼}、或三個{@creature 妖鬼}或{@creature 屍妖}、或二個{@creature 木乃伊}。"
 					]
 				}
 			],
@@ -10624,7 +10624,7 @@
 			"page": 238
 		},
 		{
-			"name": "Eyebite",
+			"name": "攝心目光", "ENG_name": "Eyebite",
 			"level": 6,
 			"school": "N",
 			"time": [
@@ -10675,26 +10675,26 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"For the spell's duration, your eyes become an inky void imbued with dread power. One creature of your choice within 60 feet of you that you can see must succeed on a Wisdom saving throw or be affected by one of the following effects of your choice for the duration. On each of your turns until the spell ends, you can use your action to target another creature but can't target a creature again if it has succeeded on a saving throw against this casting of eyebite.",
+				"在法術持續期間，你的雙眼因注入了恐懼能量而變得漆黑空洞。一個距離你60呎內，你所選且你能看見的生物必須成功通過一次睿知豁免，否則將在法術持續期間受到以下其中一個你所選擇的效果影響。直到此法術結束前在你的每個回合，你可以使用你的動作以選擇另一個生物作為目標，但不能再選擇那些已經成功通過對抗此攝心目光豁免檢定的生物。",
 				{
 					"type": "entries",
-					"name": "Asleep",
+					"name": "沉睡",
 					"entries": [
-						"The target falls {@condition unconscious}. It wakes up if it takes any damage or if another creature uses its action to shake the sleeper awake."
+						"目標陷入{@condition 昏迷}。若它受到任何傷害、或有人使用它的動作把它搖醒，則它將醒轉。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Panicked",
+					"name": "驚慌",
 					"entries": [
-						"The target is {@condition 恐懼} of you. On each of its turns, the {@condition 恐懼} creature must take the Dash action and move away from you by the safest and shortest available route, unless there is nowhere to move. If the target moves to a place at least 60 feet away from you where it can no longer see you, this effect ends."
+						"目標被你{@condition 恐懼}。在它的每個回合，除非它已經無路可逃，否則被{@condition 恐懼}的生物必須採取{@action 疾走}動作並以最安全且最短的路徑遠離你。若該目標移動到離你至少60呎遠，且無法再看到你的位置，則此法術結束。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Sickened",
+					"name": "致病",
 					"entries": [
-						"The target has disadvantage on attack rolls and ability checks. At the end of each of its turns, it can make another Wisdom saving throw. If it succeeds, the effect ends."
+						"目標在攻擊檢定和屬性檢定具有劣勢。在它的每個回合結束時，它可以再進行一次睿知豁免。若它豁免成功，則此效果結束。"
 					]
 				}
 			],
@@ -11772,7 +11772,7 @@
 			]
 		},
 		{
-			"name": "Fire Storm",
+			"name": "火焰風暴", "ENG_name": "Fire Storm",
 			"level": 7,
 			"school": "V",
 			"time": [
@@ -11815,8 +11815,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A storm made up of sheets of roaring flame appears in a location you choose within range. The area of the storm consists of up to ten 10-foot cubes, which you can arrange as you wish. Each cube must have at least one face adjacent to the face of another cube. Each creature in the area must make a Dexterity saving throw. It takes {@dice 7d10} fire damage on a failed save, or half as much damage on a successful one.",
-				"The fire damages objects in the area and ignites flammable objects that aren't being worn or carried. If you choose, plant life in the area is unaffected by this spell."
+				"一團由重重轟隆烈焰構成的風暴出現在射程內你所選擇的一處。這個風暴區域是由最多十個10呎邊長立方體組成的，且你可以按你希望的方式排列。每個立方體的其中一面都必須鄰近另一個立方體的其中一面。任何在這個區域內的生物都必須進行一次敏捷豁免。若豁免失敗則它將受到{@dice 7d10}火焰傷害，豁免成功則只受到一半的傷害。",
+				"這團火焰會傷害範圍內的物體，並點燃未被穿戴或攜帶的可燃物體。若你希望，範圍內的植物生命將不會受到此法術的影響。"
 			],
 			"page": 242,
 			"damageInflict": [
@@ -12602,7 +12602,7 @@
 			]
 		},
 		{
-			"name": "Foresight",
+			"name": "預視術", "ENG_name": "Foresight",
 			"level": 9,
 			"school": "D",
 			"time": [
@@ -12620,7 +12620,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a hummingbird feather"
+				"m": "一根蜂鳥的羽毛"
 			},
 			"duration": [
 				{
@@ -12653,8 +12653,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You touch a willing creature and bestow a limited ability to see into the immediate future. For the duration, the target can't be surprised and has advantage on attack rolls, ability checks, and saving throws. Additionally, other creatures have disadvantage on attack rolls against the target for the duration.",
-				"This spell immediately ends if you cast it again before its duration ends."
+				"你觸碰一個自願生物並賜予它能夠看見當前未來的有限能力。在法術持續期間，目標不會被突襲，且在所有攻擊檢定、屬性檢定、豁免檢定中具有優勢。此外，在法術持續期間，其他生物對目標進行的攻擊檢定將具有劣勢。",
+				"若你在持續時間結束前再次施放此它，則此法術立刻結束。"
 			],
 			"page": 244
 		},
@@ -14620,7 +14620,7 @@
 			]
 		},
 		{
-			"name": "Harm",
+			"name": "傷害術", "ENG_name": "Harm",
 			"level": 6,
 			"school": "N",
 			"time": [
@@ -14655,7 +14655,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You unleash a virulent disease on a creature that you can see within range. The target must make a Constitution saving throw. On a failed save, it takes {@dice 14d6} necrotic damage, or half as much damage on a successful save. The damage can't reduce the target's hit points below 1. If the target fails the saving throw, its hit point maximum is reduced for 1 hour by an amount equal to the necrotic damage it took. Any effect that removes a disease allows a creature's hit point maximum to return to normal before that time passes."
+				"你向射程內一個你所能看見的生物釋放一道致命疾病。目標必須進行一次體質豁免。若豁免失敗，它將受到{@dice 14d6}死靈傷害，豁免成功則只受到一半的傷害。這個傷害無法將目標的生命值降到1以下。若目標在此豁免檢定中失敗，則它的生命值最大值將被減少等同於它所受到死靈傷害的數值長達1小時。任何可以移除疾病的效果都能讓該生物的生命值最大值在時間經過之前回復它原本的數值。"
 			],
 			"page": 249,
 			"damageInflict": [
@@ -15097,7 +15097,7 @@
 			]
 		},
 		{
-			"name": "Heroes' Feast",
+			"name": "英雄宴", "ENG_name": "Heroes' Feast",
 			"level": 6,
 			"school": "C",
 			"time": [
@@ -15117,7 +15117,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a gem-encrusted bowl worth at least 1,000 gp, which the spell consumes",
+					"text": "一個價值至少1,000金幣的寶石碗，在施法時消耗",
 					"cost": 1000,
 					"consume": true
 				}
@@ -15141,8 +15141,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You bring forth a great feast, including magnificent food and drink. The feast takes 1 hour to consume and disappears at the end of that time, and the beneficial effects don't set in until this hour is over. Up to twelve creatures can partake of the feast.",
-				"A creature that partakes of the feast gains several benefits. The creature is cured of all diseases and poison, becomes immune to poison and being {@condition 恐懼}, and makes all Wisdom saving throws with advantage. Its hit point maximum also increases by {@dice 2d10}, and it gains the same number of hit points. These benefits last for 24 hours."
+				"你呼喚出一場盛宴，包括著豪華的食物和飲品。這道盛宴需要花費1小時的時間才能吃完，且食物會在這段時間結束時消失，且直到這1小時結束之前，此法術的效益都不會生效。最多12個生物可以參與享用這道盛宴。",
+				"一個參與這場盛宴將獲得數個效益。該生物身上的所有疾病和毒素將被治癒，免疫於任何毒素和{@condition 恐懼}狀態，且在進行所有睿知豁免中具有優勢。它的生命值最大值同時會增加{@dice 2d10}，且或相同數量的生命值。這些效益會持續存在長達24個小時。"
 			],
 			"page": 250,
 			"damageImmune": [
