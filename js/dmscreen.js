@@ -149,7 +149,7 @@ class Board {
 	}
 
 	doShowLoading () {
-		$(`<div class="dm-screen-loading"><span class="initial-message">Loading...</span></div>`).css({
+		$(`<div class="dm-screen-loading"><span class="initial-message">讀取中...</span></div>`).css({
 			gridColumnStart: "1",
 			gridColumnEnd: String(this.width + 1),
 			gridRowStart: "1",
@@ -2590,7 +2590,7 @@ class AddMenuSearchTab extends AddMenuTab {
 				this.doSearch();
 			});
 
-			const $srch = $(`<input class="panel-tab-search search form-control" autocomplete="off" placeholder="Search...">`).appendTo($wrpCtrls);
+			const $srch = $(`<input class="panel-tab-search search form-control" autocomplete="off" placeholder="搜尋...(只能搜尋英文)">`).appendTo($wrpCtrls);
 			const $results = $(`<div class="panel-tab-results"/>`).appendTo($tab);
 
 			DmScreenUtil.bindAutoSearch($srch, {

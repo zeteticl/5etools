@@ -67,14 +67,14 @@ class InitiativeTracker {
 		const $wrpHeader = $(`
 			<div class="dm-init-wrp-header">
 				<div class="dm-init-row-lhs dm-init-header">
-					<div class="full-width">Creature/Status</div>
+					<div class="full-width">生物/狀態</div>
 				</div>
 
 				<div class="dm-init-row-mid"/>
 
 				<div class="dm-init-row-rhs">
-					<div class="dm-init-header dm-init-header--input" title="Hit Points">HP</div>
-					<div class="dm-init-header dm-init-header--input" title="Initiative Score">#</div>
+					<div class="dm-init-header dm-init-header--input" title="生命值">HP</div>
+					<div class="dm-init-header dm-init-header--input" title="先攻數值">先攻</div>
 					<div style="width: 20px;"/>
 				</div>
 			</div>
@@ -86,19 +86,19 @@ class InitiativeTracker {
 
 		const $wrpAddNext = $(`<div/>`).appendTo($wrpControls);
 		const $wrpAdd = $(`<div class="btn-group"/>`).appendTo($wrpAddNext);
-		const $btnAdd = $(`<button class="btn btn-primary btn-xs dm-init-lockable" title="Add Player"><span class="glyphicon glyphicon-plus"/></button>`).appendTo($wrpAdd);
-		const $btnAddMonster = $(`<button class="btn btn-success btn-xs dm-init-lockable mr-2" title="Add Monster"><span class="glyphicon glyphicon-print"/></button>`).appendTo($wrpAdd);
-		$(`<button class="btn btn-default btn-xs" title="Next Turn"><span class="glyphicon glyphicon-step-forward"/></button>`).appendTo($wrpAddNext)
+		const $btnAdd = $(`<button class="btn btn-primary btn-xs dm-init-lockable" title="添加玩家"><span class="glyphicon glyphicon-plus"/></button>`).appendTo($wrpAdd);
+		const $btnAddMonster = $(`<button class="btn btn-success btn-xs dm-init-lockable mr-2" title="添加怪物"><span class="glyphicon glyphicon-print"/></button>`).appendTo($wrpAdd);
+		$(`<button class="btn btn-default btn-xs" title="下個回合"><span class="glyphicon glyphicon-step-forward"/></button>`).appendTo($wrpAddNext)
 			.click(() => setNextActive());
 
 		const $wrpSort = $(`<div class="btn-group"/>`).appendTo($wrpControls);
-		$(`<button title="Sort Alphabetically" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-sort-by-alphabet"/></button>`).appendTo($wrpSort)
+		$(`<button title="照名稱排序" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-sort-by-alphabet"/></button>`).appendTo($wrpSort)
 			.click(() => {
 				if (cfg.sort === ALPHA) flipDir();
 				else cfg.sort = ALPHA;
 				doSort(ALPHA);
 			});
-		$(`<button title="Sort Numerically" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-sort-by-order"/></button>`).appendTo($wrpSort)
+		$(`<button title="照先攻排序" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-sort-by-order"/></button>`).appendTo($wrpSort)
 			.click(() => {
 				if (cfg.sort === NUM) flipDir();
 				else cfg.sort = NUM;
@@ -107,7 +107,7 @@ class InitiativeTracker {
 
 		const $wrpUtils = $(`<div/>`).appendTo($wrpControls);
 		const $wrpLockSettings = $(`<div class="btn-group"/>`).appendTo($wrpUtils);
-		const $btnLock = $(`<button class="btn btn-danger btn-xs" title="Lock Tracker"><span class="glyphicon glyphicon-lock"></span></button>`).appendTo($wrpLockSettings);
+		const $btnLock = $(`<button class="btn btn-danger btn-xs" title="鎖定追蹤器"><span class="glyphicon glyphicon-lock"></span></button>`).appendTo($wrpLockSettings);
 		$btnLock.on("click", () => {
 			if (cfg.isLocked) {
 				$btnLock.removeClass("btn-success").addClass("btn-danger");
@@ -125,17 +125,17 @@ class InitiativeTracker {
 			.appendTo($wrpLockSettings)
 			.click(() => {
 				const $modalInner = DmScreenUtil.getShow$Modal(
-					"Settings",
+					"先攻追蹤器 設置",
 					() => {
 						handleStatColsChange();
 						board.doSaveStateDebounced();
 					}
 				);
 				DmScreenUtil.addModal$Sep($modalInner);
-				DmScreenUtil.getAddModal$RowCb($modalInner, "Roll hit points", cfg, "isRollHp");
+				DmScreenUtil.getAddModal$RowCb($modalInner, "擲骰決定生命值", cfg, "isRollHp");
 				DmScreenUtil.addModal$Sep($modalInner);
 
-				const $cbStats = DmScreenUtil.getAddModal$RowCb($modalInner, "Additional Columns", cfg, "statsAddColumns");
+				const $cbStats = DmScreenUtil.getAddModal$RowCb($modalInner, "添加額外欄位", cfg, "statsAddColumns");
 				const $wrpTblStatsHead = DmScreenUtil._getAdd$Row($modalInner, "div")
 					.addClass("tab-body-row--stats-header")
 					// intentional difference in column widths compared to the rows, to position the long header
@@ -143,9 +143,9 @@ class InitiativeTracker {
 					.append(`
 						<div class="row dm_init__stats_row">
 							<div class="col-1-3"/>
-							<div class="col-4-9">Auto-Fill With...</div>
-							<div class="col-2-7">Abbreviation</div>
-							<div class="col-1-7 text-align-center">Editable?</div>
+							<div class="col-4-9">自動填入...</div>
+							<div class="col-2-7">縮寫</div>
+							<div class="col-1-7 text-align-center">可否編輯?</div>
 						</div>
 					`);
 				const $wrpTblStats = DmScreenUtil._getAdd$Row($modalInner, "div").addClass("tab-body-row--stats");
@@ -169,7 +169,7 @@ class InitiativeTracker {
 
 						const $selPre = $(`
 								<select class="form-control input-xs">
-									<option value="">(None)</option>
+									<option value="">(無)</option>
 									${Object.entries(InitiativeTracker.STAT_COLUMNS).map(([k, v]) => v.isHr ? `<option disabled>\u2014</option>` : `<option value="${k}">${v.name}</option>`)}
 								</select>
 							`).change(() => {
@@ -185,7 +185,7 @@ class InitiativeTracker {
 							$selPre.val(thisCfg.p);
 						}
 
-						const $iptAbv = $(`<input class="form-control input-xs" placeholder="Abbreviation" value="${(thisCfg.a || "").escapeQuotes()}">`).change(() => {
+						const $iptAbv = $(`<input class="form-control input-xs" placeholder="縮寫" value="${(thisCfg.a || "").escapeQuotes()}">`).change(() => {
 							thisCfg.a = $iptAbv.val();
 							board.doSaveStateDebounced();
 						});
@@ -265,15 +265,15 @@ class InitiativeTracker {
 			});
 
 		const $wrpLoadReset = $(`<div class="btn-group"/>`).appendTo($wrpUtils);
-		const $btnLoad = $(`<button title="Import an encounter from the Bestiary" class="btn btn-success btn-xs dm-init-lockable"><span class="glyphicon glyphicon-upload"/></button>`).appendTo($wrpLoadReset)
+		const $btnLoad = $(`<button title="從怪物圖鑑導入遭遇" class="btn btn-success btn-xs dm-init-lockable"><span class="glyphicon glyphicon-upload"/></button>`).appendTo($wrpLoadReset)
 			.click((evt) => {
 				if (cfg.isLocked) return;
 				ContextUtil.handleOpenContextMenu(evt, $btnLoad, contextId);
 			});
-		$(`<button title="Reset" class="btn btn-danger btn-xs dm-init-lockable"><span class="glyphicon glyphicon-trash"/></button>`).appendTo($wrpLoadReset)
+		$(`<button title="重置" class="btn btn-danger btn-xs dm-init-lockable"><span class="glyphicon glyphicon-trash"/></button>`).appendTo($wrpLoadReset)
 			.click(() => {
 				if (cfg.isLocked) return;
-				confirm("Are you sure?") && doReset();
+				confirm("你確定嗎？") && doReset();
 			});
 
 		$btnAdd.on("click", () => {
@@ -298,10 +298,10 @@ class InitiativeTracker {
 			$(`body`).append($modal);
 
 			const $controls = $(`<div class="split" style="flex-shrink: 0"/>`).appendTo($modalInner);
-			const $srch = $(`<input class="panel-tab-search search form-control" autocomplete="off" placeholder="Search...">`).appendTo($controls);
+			const $srch = $(`<input class="panel-tab-search search form-control" autocomplete="off" placeholder="搜尋...(只能搜尋英文)">`).appendTo($controls);
 			const $wrpCount = $(`
 				<div class="panel-tab-search-sub-wrp" style="padding-right: 0;">
-					<div style="margin-right: 7px;">Add</div>
+					<div style="margin-right: 7px;">數量</div>
 					<label class="panel-tab-search-sub-lbl"><input type="radio" name="mon-count" class="panel-tab-search-sub-ipt" value="1" checked> 1</label>
 					<label class="panel-tab-search-sub-lbl"><input type="radio" name="mon-count" class="panel-tab-search-sub-ipt" value="2"> 2</label>
 					<label class="panel-tab-search-sub-lbl"><input type="radio" name="mon-count" class="panel-tab-search-sub-ipt" value="3"> 3</label>
@@ -320,7 +320,7 @@ class InitiativeTracker {
 				return Number(val);
 			};
 
-			const $wrpCbRoll = $(`<label class="panel-tab-search-sub-wrp"> Roll HP</label>`).appendTo($controls);
+			const $wrpCbRoll = $(`<label class="panel-tab-search-sub-wrp">骰HP</label>`).appendTo($controls);
 			const $cbRoll = $(`<input type="checkbox">`).prop("checked", cfg.isRollHp).on("change", () => cfg.isRollHp = $cbRoll.prop("checked")).prependTo($wrpCbRoll);
 			const $results = $(`<div class="panel-tab-results"/>`).appendTo($modalInner);
 
@@ -372,7 +372,7 @@ class InitiativeTracker {
 					const get$Row = (r) => {
 						return $(`
 							<div class="panel-tab-results-row">
-								<span>${r.doc.n}</span>
+								<span>${$T.translate_name(1,r.doc.n)}(${r.doc.n})</span>
 								<span>${r.doc.s ? `<i title="${Parser.sourceJsonToFull(r.doc.s)}">${Parser.sourceJsonToAbv(r.doc.s)}${r.doc.p ? ` p${r.doc.p}` : ""}</i>` : ""}</span>
 							</div>
 						`);
@@ -499,7 +499,7 @@ class InitiativeTracker {
 			const $wrpRow = $(`<div class="dm-init-row ${isActive ? "dm-init-row-active" : ""}"/>`);
 
 			const $wrpLhs = $(`<div class="dm-init-row-lhs"/>`).appendTo($wrpRow);
-			const $iptName = $(`<input class="form-control input-sm name dm-init-lockable dm-init-row-input ${isMon ? "hidden" : ""}" placeholder="Name" value="${name}">`).appendTo($wrpLhs);
+			const $iptName = $(`<input class="form-control input-sm name dm-init-lockable dm-init-row-input ${isMon ? "hidden" : ""}" placeholder="名稱" value="${name}">`).appendTo($wrpLhs);
 			$iptName.on("change", () => doSort(ALPHA));
 			if (isMon) {
 				const $rows = $wrpEntries.find(`.dm-init-row`);
@@ -516,7 +516,7 @@ class InitiativeTracker {
 				}
 
 				const getLink = () => {
-					if (typeof nameOrMeta === "string" || nameOrMeta.scaledTo == null) return EntryRenderer.getDefaultRenderer().renderEntry(`{@creature ${name}|${source}}`);
+					if (typeof nameOrMeta === "string" || nameOrMeta.scaledTo == null) return EntryRenderer.getDefaultRenderer().renderEntry(`{@creature ${$T.translate_name(1,name)}|${source}}`);
 					else {
 						const parts = [name, source, displayName, Parser.numberToCr(nameOrMeta.scaledTo)];
 						return EntryRenderer.getDefaultRenderer().renderEntry(`{@creature ${parts.join("|")}}`);
@@ -631,7 +631,7 @@ class InitiativeTracker {
 
 			const $wrpConds = $(`<div class="split"/>`).appendTo($wrpLhs);
 			const $conds = $(`<div class="dm-init-wrp-conds"/>`).appendTo($wrpConds);
-			$(`<button class="btn btn-warning btn-xs dm-init-row-btn dm-init-row-btn-flag" title="Add Condition" tabindex="-1"><span class="glyphicon glyphicon-flag"/></button>`)
+			$(`<button class="btn btn-warning btn-xs dm-init-row-btn dm-init-row-btn-flag" title="添加異常狀態" tabindex="-1"><span class="glyphicon glyphicon-flag"/></button>`)
 				.appendTo($wrpConds)
 				.on("click", () => {
 					const $modal = $(`<div class="panel-addmenu-inner dropdown-menu" style="height: initial"/>`);
@@ -659,9 +659,9 @@ class InitiativeTracker {
 					$wrpRows.append(`<hr>`);
 
 					$(`<div class="row mb-2">
-						<div class="col-5">Name (optional)</div>
-						<div class="col-2 text-align-center">Color</div>
-						<div class="col-5">Duration (optional)</div>
+						<div class="col-5">名稱 (選填)</div>
+						<div class="col-2 text-align-center">顏色</div>
+						<div class="col-5">持續時間 (選填)</div>
 					</div>`).appendTo($wrpRows);
 					const $controls = $(`<div class="row mb-2"/>`).appendTo($wrpRows);
 					const [$wrpName, $wrpColor, $wrpTurns] = [...new Array(3)].map((it, i) => $(`<div class="col-${i === 1 ? 2 : 5} text-align-center"/>`).appendTo($controls));
@@ -671,14 +671,14 @@ class InitiativeTracker {
 						})
 						.appendTo($wrpName);
 					const $iptColor = $(`<input class="form-control" type="color" value="${MiscUtil.randomColor()}">`).appendTo($wrpColor);
-					const $iptTurns = $(`<input class="form-control" type="number" step="1" min="1" placeholder="Unlimited">`)
+					const $iptTurns = $(`<input class="form-control" type="number" step="1" min="1" placeholder="無限制">`)
 						.on("keydown", (e) => {
 							if (e.which === 13) $btnAdd.click();
 						})
 						.appendTo($wrpTurns);
 					const $wrpAdd = $(`<div class="row">`).appendTo($wrpRows);
 					const $wrpAddInner = $(`<div class="col-12 text-align-center">`).appendTo($wrpAdd);
-					const $btnAdd = $(`<button class="btn btn-primary">Set Condition</button>`)
+					const $btnAdd = $(`<button class="btn btn-primary">設置狀態</button>`)
 						.click(() => {
 							addCondition($iptName.val().trim(), $iptColor.val(), $iptTurns.val());
 							$wrpModal.remove();
@@ -701,8 +701,7 @@ class InitiativeTracker {
 
 			if (isMon && (curHp === "" || init === "")) {
 				const doUpdate = () => {
-					const m = EntryRenderer.hover._getFromCache(UrlUtil.PG_BESTIARY, source, hash);
-
+					const m = EntryRenderer.hover._getFromCache(UrlUtil.PG_BESTIARY, source, encodeURIComponent(hash));
 					// set or roll HP
 					if (!rollHp && m.hp.average) {
 						curHp = m.hp.average;
@@ -722,7 +721,7 @@ class InitiativeTracker {
 					}
 				};
 
-				const hash = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_BESTIARY]({name: name, source: source});
+				const hash = $T.translate_uri(1, UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_BESTIARY]({name: name, source: source}) );
 				if (EntryRenderer.hover._isCached(UrlUtil.PG_BESTIARY, source, hash)) doUpdate();
 				else {
 					EntryRenderer.hover._doFillThenCall(UrlUtil.PG_BESTIARY, source, hash, () => {
@@ -749,7 +748,7 @@ class InitiativeTracker {
 				}
 			});
 
-			$(`<button class="btn btn-danger btn-xs dm-init-row-btn dm-init-lockable" title="Delete" tabindex="-1"><span class="glyphicon glyphicon-trash"/></button>`)
+			$(`<button class="btn btn-danger btn-xs dm-init-row-btn dm-init-lockable" title="刪除" tabindex="-1"><span class="glyphicon glyphicon-trash"/></button>`)
 				.appendTo($wrpRhs)
 				.on("click", () => {
 					if (cfg.isLocked) return;
@@ -964,7 +963,7 @@ class InitiativeTracker {
 			if (bestiaryList.l && bestiaryList.l.items) {
 				Promise.all(bestiaryList.l.items.map(it => {
 					const count = Number(it.c);
-					const hash = it.h;
+					const hash = $T.translate_uri(1,it.h);
 					const scaling = (() => {
 						if (it.uid) {
 							const m = /_([\d.,]+)$/.exec(it.uid);
@@ -1024,106 +1023,105 @@ class InitiativeTracker {
 }
 InitiativeTracker.CONDITIONS = [
 	{
-		name: "Blinded",
+		name: "目盲",
 		color: "#434343"
 	},
 	{
-		name: "Charmed",
+		name: "魅惑",
 		color: "#f01789"
 	},
 	{
-		name: "Concentrating",
+		name: "專注",
 		color: "#009f7a",
 		condName: null
 	},
 	{
-		name: "Deafened",
+		name: "耳聾",
 		color: "#c7d0d3"
 	},
 	{
-		name: "Drunk",
+		name: "酒醉",
 		color: "#ffcc00"
 	},
 	{
-		name: "Exhausted",
-		color: "#947a47",
-		condName: "Exhaustion"
+		name: "力竭",
+		color: "#947a47"
 	},
 	{
-		name: "Frightened",
+		name: "恐懼",
 		color: "#c9ca18"
 	},
 	{
-		name: "Grappled",
+		name: "被擒",
 		color: "#8784a0"
 	},
 	{
-		name: "Incapacitated",
+		name: "無力",
 		color: "#3165a0"
 	},
 	{
-		name: "Invisible",
+		name: "隱形",
 		color: "#7ad2d6"
 	},
 	{
-		name: "!!On Fire!!",
+		name: "!!著火!!",
 		color: "#ff6800",
 		condName: null
 	},
 	{
-		name: "Paralyzed",
+		name: "麻痺",
 		color: "#c00900"
 	},
 	{
-		name: "Petrified",
+		name: "石化",
 		color: "#a0a0a0"
 	},
 	{
-		name: "Poisoned",
+		name: "中毒",
 		color: "#4dc200"
 	},
 	{
-		name: "Prone",
+		name: "伏地",
 		color: "#5e60a0"
 	},
 	{
-		name: "Restrained",
+		name: "束縛",
 		color: "#d98000"
 	},
 	{
-		name: "Stunned",
+		name: "震懾",
 		color: "#a23bcb"
 	},
 	{
-		name: "Unconscious",
+		name: "昏迷",
 		color: "#1c2383"
 	}
 ];
 InitiativeTracker._GET_STAT_COLUMN_HR = () => ({isHr: true});
 InitiativeTracker.STAT_COLUMNS = {
 	hpFormula: {
-		name: "HP Formula",
+		name: "HP公式",
 		get: mon => (mon.hp || {}).formula
 	},
 	armorClass: {
-		name: "Armor Class",
+		name: "護甲等級",
 		abv: "AC",
 		get: mon => mon.ac[0] ? (mon.ac[0].ac || mon.ac[0]) : null
 	},
 	passivePerception: {
-		name: "Passive Perception",
+		name: "被動感知",
 		abv: "PP",
 		get: mon => mon.passive
 	},
 	speed: {
-		name: "Speed",
+		name: "移動速度",
 		abv: "SPD",
 		get: mon => Math.max(0, ...Object.values(mon.speed || {})
 			.map(it => it.number ? it.number : it)
 			.filter(it => typeof it === "number"))
 	},
 	spellDc: {
-		name: "Spell DC",
+		name: "法術豁免DC",
 		abv: "DC",
 		get: mon => Math.max(0, ...(mon.spellcasting || [])
 			.filter(it => it.headerEntries)
@@ -1136,7 +1134,7 @@ InitiativeTracker.STAT_COLUMNS = {
 			}))
 	},
 	legendaryActions: {
-		name: "Legendary Actions",
+		name: "傳奇動作",
 		abv: "LA",
 		get: mon => mon.legendaryActions || mon.legendary ? 3 : null
 	},
@@ -1145,7 +1143,7 @@ InitiativeTracker.STAT_COLUMNS = {
 		const out = {};
 		Parser.ABIL_ABVS.forEach(it => {
 			out[`${it}Save`] = {
-				name: `${Parser.attAbvToFull(it)} Save`,
+				name: `${Parser.attAbvToFull(it)}豁免`,
 				abv: it.toUpperCase(),
 				get: mon => mon.save && mon.save[it] ? mon.save[it] : Parser.getAbilityModifier(mon[it])
 			};
@@ -1157,7 +1155,7 @@ InitiativeTracker.STAT_COLUMNS = {
 		const out = {};
 		Parser.ABIL_ABVS.forEach(it => {
 			out[`${it}Bonus`] = {
-				name: `${Parser.attAbvToFull(it)} Bonus`,
+				name: `${Parser.attAbvToFull(it)}調整值`,
 				abv: it.toUpperCase(),
 				get: mon => Parser.getAbilityModifier(mon[it])
 			};
@@ -1169,7 +1167,7 @@ InitiativeTracker.STAT_COLUMNS = {
 		const out = {};
 		Parser.ABIL_ABVS.forEach(it => {
 			out[`${it}Score`] = {
-				name: `${Parser.attAbvToFull(it)} Score`,
+				name: `${Parser.attAbvToFull(it)}屬性值`,
 				abv: it.toUpperCase(),
 				get: mon => mon[it]
 			};
@@ -1181,7 +1179,7 @@ InitiativeTracker.STAT_COLUMNS = {
 		const out = {};
 		Object.keys(Parser.SKILL_TO_ATB_ABV).sort(SortUtil.ascSort).forEach(s => {
 			out[s.toCamelCase()] = {
-				name: s.toTitleCase(),
+				name: Parser.SkillToDisplay(s),
 				abv: Parser.skillToShort(s).toUpperCase(),
 				get: mon => mon.skill && mon.skill[s] ? mon.skill[s] : Parser.getAbilityModifier(mon[Parser.skillToAbilityAbv(s)])
 			};
