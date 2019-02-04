@@ -9447,7 +9447,7 @@
 			]
 		},
 		{
-			"name": "Drawmij's Instant Summons",
+			"name": "卓姆吉瞬間召喚", "ENG_name": "Drawmij's Instant Summons",
 			"level": 6,
 			"school": "C",
 			"time": [
@@ -9466,7 +9466,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a sapphire worth 1,000 gp",
+					"text": "一個價值1,000金幣的藍寶石",
 					"cost": 1000
 				}
 			},
@@ -9491,10 +9491,10 @@
 				"ritual": true
 			},
 			"entries": [
-				"You touch an object weighing 10 pounds or less whose longest dimension is 6 feet or less. The spell leaves an invisible mark on its surface and invisibly inscribes the name of the item on the sapphire you use as the material component. Each time you cast this spell, you must use a different sapphire.",
-				"At any time thereafter, you can use your action to speak the item's name and crush the sapphire. The item instantly appears in your hand regardless of physical or planar distances, and the spell ends.",
-				"If another creature is holding or carrying the item, crushing the sapphire doesn't transport the item to you, but instead you learn who the creature possessing the object is and roughly where that creature is located at that moment.",
-				"{@spell Dispel magic} or a similar effect successfully applied to the sapphire ends this spell's effect."
+				"你觸碰一個重量為10磅或以下、且最大邊長為6呎或以下的物體。此法術將在它的表面留下一個隱形的印記，並在你用來做為材料構材的藍寶石上留下一道寫著該物體名稱的隱形銘印。每次你施放此法術時，你都必須使用一顆不同的藍寶石。",
+				"在這之後的任何時候，你可以使用你的動作以說出該物體的名字，並粉碎該藍寶石。無論該物體與你之間的物理和位面距離有多遠，它都將瞬間出現在你的手中，且此法術結束。",
+				"若另一個生物正持有或攜帶該物品，則粉碎藍寶石並不會將該物體傳送到你手中，取而代之，你將知道正擁有該物體的生物是誰，且能知道該生物在那個時間點所在的大致位置。",
+				"一個成功作用於該藍寶石的{@spell 解除魔法}法術或類似的效果將會結束這個法術的效果。"
 			],
 			"page": 235
 		},
@@ -12259,7 +12259,7 @@
 			]
 		},
 		{
-			"name": "Flesh to Stone",
+			"name": "石化術", "ENG_name": "Flesh to Stone",
 			"level": 6,
 			"school": "T",
 			"time": [
@@ -12304,10 +12304,10 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You attempt to turn one creature that you can see within range into stone. If the target's body is made of flesh, the creature must make a Constitution saving throw. On a failed save, it is {@condition restrained} as its flesh begins to harden. On a successful save, the creature isn't affected.",
-				"A creature {@condition restrained} by this spell must make another Constitution saving throw at the end of each of its turns. If it successfully saves against this spell three times, the spell ends. If it fails its saves three times, it is turned to stone and subjected to the {@condition petrified} condition for the duration. The successes and failures don't need to be consecutive; keep track of both until the target collects three of a kind.",
-				"If the creature is physically broken while {@condition petrified}, it suffers from similar deformities if it reverts to its original state.",
-				"If you maintain your concentration on this spell for the entire possible duration, the creature is turned to stone until the effect is removed."
+				"你嘗試將射程內你所能看見的一個生物變成石頭。若目標的身體是由血肉構成，則該生物必須進行一次體質豁免。若豁免失敗，它將因為血肉開始硬化而被{@condition 束縛}。若豁免成功，則該生物不受影響。",
+				"一個被此法術{@condition 束縛}的生物必須在每次它的回合結束時再進行一次體質豁免。若它成功通過三次對抗此法術的豁免檢定，則此法術結束。若它在這些豁免檢定中失敗三次，則它將被變成石頭，並在法術持續期間陷入{@condition 石化}狀態。這些豁免檢定的成功和失敗並不需要是連續的；請記錄這兩者的次數直到目標集齊其中一邊三次。",
+				"若該生物在處於{@condition 石化}狀態時受到物理性損壞，則它將在回復它原本狀態時承受相同的殘缺。",
+				"若你在此法術的完整持續時間內都維持著專注，則該生物將被永遠變成石頭直到此效果被移除。"
 			],
 			"page": 243,
 			"savingThrow": [
@@ -12480,7 +12480,7 @@
 			]
 		},
 		{
-			"name": "Forbiddance",
+			"name": "禁制術", "ENG_name": "Forbiddance",
 			"level": 6,
 			"school": "A",
 			"time": [
@@ -12499,7 +12499,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a sprinkling of holy water, rare incense, and powdered ruby worth at least 1,000 gp",
+					"text": "一點聖水、稀有焚香、和價值至少1,000金幣的紅寶石塵",
 					"cost": 1000
 				}
 			},
@@ -12525,10 +12525,10 @@
 				"ritual": true
 			},
 			"entries": [
-				"You create a ward against magical travel that protects up to 40,000 square feet of floor space to a height of 30 feet above the floor. For the duration, creatures can't teleport into the area or use portals, such as those created by the gate spell, to enter the area. The spell proofs the area against planar travel, and therefore prevents creatures from accessing the area by way of the Astral Plane, Ethereal Plane, Feywild, Shadowfell, or the plane shift spell.",
-				"In addition, the spell damages types of creatures that you choose when you cast it. Choose one or more of the following: celestials, elementals, fey, fiends, and undead. When a chosen creature enters the spell's area for the first time on a turn or starts its turn there, the creature takes {@dice 5d10} radiant or necrotic damage (your choice when you cast this spell).",
-				"When you cast this spell, you can designate a password. A creature that speaks the password as it enters the area takes no damage from the spell.",
-				"The spell's area can't overlap with the area of another forbiddance spell. If you cast forbiddance every day for 30 days in the same location, the spell lasts until it is dispelled, and the material components are consumed on the last casting."
+				"你創造出一道能阻擋魔法旅行、覆蓋最大40,000平方呎面積、30呎高空間範圍的防護屏障。在法術持續期間，生物無法透過傳送進入這個區域，或使用傳送門（像是藉由{@spell 異界之門}創造的傳送門）進入這個區域。此法術將阻擋在這片區域內發生的位面旅行，並因此能阻止其他生物經由星界、乙太位面、妖精荒野、墮影冥界、或透過{@spell 異界傳送}法術進入該區域。",
+				"此外，此法術會傷害你在施放它時所選擇類型的生物。從以下選擇一種或更多：天界生物、元素、精類、邪魔、和不死生物。當一個所選類型的生物在一個回合中第一次進入此法術的區域，或在該處開始它回合，則該生物將受到{@dice 5d10}光耀傷害或{@dice 5d10}死靈傷害（由你在施放此法術時決定）。",
+				"當你施放此法術時，你可以設定一句密語。一個說出這句密語的生物可以進入這個區域而不至於受到此法術的傷害。",
+				"此法術的區域不能和另一個禁制術法術的區域重疊。若你每天在相同地點施展此法術長達30天，則此法術將持續直到它被解消，且材料構材將在最後一次施法時被消耗。"
 			],
 			"page": 243,
 			"damageInflict": [
@@ -12969,7 +12969,7 @@
 			"page": 244
 		},
 		{
-			"name": "Gate",
+			"name": "異界之門", "name": "Gate",
 			"level": 9,
 			"school": "C",
 			"time": [
@@ -14008,7 +14008,7 @@
 			]
 		},
 		{
-			"name": "Guards and Wards",
+			"name": "銅牆鐵壁", "ENG_name": "Guards and Wards",
 			"level": 6,
 			"school": "A",
 			"time": [
@@ -14027,7 +14027,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "burning incense, a small measure of brimstone and oil, a knotted string, a small amount of umber hulk blood, and a small silver rod worth at least 10 gp",
+					"text": "燃燒的焚香、少量的硫磺和油、一根打結的線、少量土巨怪的鮮血、以及一根價值至少10金幣的銀製小棍",
 					"cost": 10
 				}
 			},
@@ -14054,49 +14054,49 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You create a ward that protects up to 2,500 square feet of floor space (an area 50 feet square, or one hundred 5-foot squares or twenty-five 10-foot squares). The warded area can be up to 20 feet tall, and shaped as you desire. You can ward several stories of a stronghold by dividing the area among them, as long as you can walk into each contiguous area while you are casting the spell.",
-				"When you cast this spell, you can specify individuals that are unaffected by any or all of the effects that you choose. You can also specify a password that, when spoken aloud, makes the speaker immune to these effects.",
-				"Guards and wards creates the following effects within the warded area.",
+				"你創造出一道保護著最多2,500平方呎面積區域的防護屏障（一個50呎邊長的方形區域、一百個的5呎邊方形組成的區域、或二十五個10呎邊長方形組成的區域）。被守護的區域最高可以為20呎高，且呈現你所希望的形狀。你可以藉由分割這些區域以守護要塞中的數個樓層，只要你在施放此法術時可以走進每個連續的樓層。",
+				"當你施放此法術時，你可以指定特定個體不受到任意或所有你選擇的效果影響。你也可以設定一句密語，當大聲的說出密語時，述說者將免疫於這些效果。",
+				"銅牆鐵壁將在被守護的區域內創造出以下效果。",
 				{
 					"type": "entries",
-					"name": "Corridors",
+					"name": "走廊",
 					"entries": [
-						"Fog fills all the warded corridors, making them heavily obscured. In addition, at each intersection or branching passage offering a choice of direction, there is a 50 percent chance that a creature other than you will believe it is going in the opposite direction from the one it chooses."
+						"濃霧將充斥在所有受保護的走廊，使它們處於重度遮蔽。此外，在每個會提供不同方向選擇的交界處或叉路口，除了你以外的生物將會有50％的機率相信它們正在向著它們所選路徑相反的方向前進。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Doors",
+					"name": "門扉",
 					"entries": [
-						"All doors in the warded area are magically locked, as if sealed by an arcane lock spell. In addition, you can cover up to ten doors with an illusion (equivalent to the illusory object function of the minor illusion spell) to make them appear as plain sections of wall."
+						"所有在受保護區域內的門扉都將被魔法鎖住，就如同其被{@spell 祕法鎖}法術給封住。此外，你可以在最多十扇門上覆蓋一層幻象（效果等同於{@spell 次級幻象}法術創造的幻象物體）以使它們看起來像是牆壁的一部份。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Stairs",
+					"name": "階梯",
 					"entries": [
-						"Webs fill all stairs in the warded area from top to bottom, as the web spell. These strands regrow in 10 minutes if they are burned or torn away while guards and wards lasts."
+						"所有在受保護區域內的階梯從下到上都充斥著蛛網，就如同{@spell 蛛網術}法術的效果。在銅牆鐵壁的持續時間內，這些蛛絲將會在被焚燒或扯掉後10分鐘內重新長回。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Other Spell Effect",
+					"name": "其他法術效果",
 					"entries": [
-						"You can place your choice of one of the following magical effects within the warded area of the stronghold."
+						"你可以從以下魔法效果中選擇一項以設置在要塞內受保護的區域內。"
 					]
 				},
 				{
 					"type": "list",
 					"items": [
-						"Place dancing lights in four corridors. You can designate a simple program that the lights repeat as long as guards and wards lasts.",
-						"Place magic mouth in two locations.",
-						"Place stinking cloud in two locations. The vapors appear in the places you designate; they return within 10 minutes if dispersed by wind while guards and wards lasts.",
-						"Place a constant gust of wind in one corridor or room.",
-						"Place a suggestion in one location. You select an area of up to 5 feet square, and any creature that enters or passes through the area receives the suggestion mentally."
+						"在四個走廊上設置{@spell 舞光術}。你可以設定一個簡單的程序以讓光源在銅牆鐵壁的持續時間內重複執行。",
+						"在二個地點設置{@spell 魔嘴術}。",
+						"在二個地點設置{@spell 臭雲術}。這團毒氣將在你指定的地點出現；在銅牆鐵壁的持續時間內，若這團毒氣被風吹散，則它們會在10分鐘內重新出現。",
+						"在一個走廊或房間設置一個常駐的{@spell 造風術}。",
+						"在一個地點設置{@spell 暗示術}。你選擇一個最多5呎平方的區域，且任何進入或經過該區域的生物都將接收到這個心靈暗示。"
 					]
 				},
-				"The whole warded area radiates magic. A {@spell dispel magic} cast on a specific effect, if successful, removes only that effect.",
-				"You can create a permanently guarded and warded structure by casting this spell there every day for one year."
+				"整個受保護的區域散發著魔法。一個施放於特定效果的{@spell 解除魔法}法術，若施放成功，只會移除該效果。",
+				"你可以透過每天施展此法術一整年，來創造出受到銅牆鐵壁效果永久保護的建築物。"
 			],
 			"page": 248,
 			"permanentEffects": true
@@ -16229,7 +16229,7 @@
 					"type": "entries",
 					"name": "Chaining",
 					"entries": [
-						"Heavy chains, firmly rooted in the ground, hold the target in place. The target is {@condition restrained} until the spell ends, and it can't move or be moved by any means until then."
+						"Heavy chains, firmly rooted in the ground, hold the target in place. The target is {@condition 束縛} until the spell ends, and it can't move or be moved by any means until then."
 					]
 				},
 				"The special component for this version of the spell is a fine chain of precious metal.",
@@ -21719,7 +21719,7 @@
 					"type": "entries",
 					"name": "6-Indigo",
 					"entries": [
-						"On a failed save, the target is {@condition restrained}. It must then make a Constitution saving throw at the end of each of its turns. If it successfully saves three times, the spell ends. If it fails its save three times, it permanently turns to stone and is subjected to the {@condition petrified} condition. The successes and failures don't need to be consecutive, keep track of both until the target collects three of a kind."
+						"On a failed save, the target is {@condition 束縛}. It must then make a Constitution saving throw at the end of each of its turns. If it successfully saves three times, the spell ends. If it fails its save three times, it permanently turns to stone and is subjected to the {@condition 石化} condition. The successes and failures don't need to be consecutive, keep track of both until the target collects three of a kind."
 					]
 				},
 				{
@@ -21840,7 +21840,7 @@
 					"type": "entries",
 					"name": "Indigo",
 					"entries": [
-						"On a failed save, the creature is {@condition restrained}. It must then make a Constitution saving throw at the end of each of its turns. If it successfully saves three times, the spell ends. If it fails its save three times, it permanently turns to stone and is subjected to the {@condition petrified} condition. The successes and failures don't need to be consecutive; keep track of both until the creature collects three of a kind.",
+						"On a failed save, the creature is {@condition 束縛}. It must then make a Constitution saving throw at the end of each of its turns. If it successfully saves three times, the spell ends. If it fails its save three times, it permanently turns to stone and is subjected to the {@condition 石化} condition. The successes and failures don't need to be consecutive; keep track of both until the creature collects three of a kind.",
 						"While this layer is in place, spells can't be cast through the wall. The layer is destroyed by bright light shed by a daylight spell or a similar spell of equal or higher level."
 					]
 				},
@@ -29059,7 +29059,7 @@
 				"這道牆可以是任何你想要的形狀，但它不能佔據其他生物或物體所在的空間。這道牆不需要是垂直的，也不需要立於任何穩固的地基。然而，它必須與既存且能牢固支撐它的石頭融合。因此你可以使用此法術以在峽谷之間造橋、或創造出斜坡。",
 				"若你創造出一道長度超過20呎的橋，則你必須將每個板塊的尺寸減半以製作支撐結構。你可以粗略地在牆上形塑出槍眼、城垛、或類似的構造。",
 				"這道牆是一個石製物體，可以被傷害並因此損壞。每個板塊都具有AC 15，每1吋厚度30點的生命值。將一個板塊的生命值歸零將會摧毀它，並在DM的裁斷下可能會導致相連的板塊隨之崩塌。",
-				"若你在此法術的完成持續時間內都維持著專注，則這道牆將變為永久造物且不會被解除。否則這道牆將在此法術結束時消失。"
+				"若你在此法術的完整持續時間內都維持著專注，則這道牆將變為永久造物且不會被解除。否則這道牆將在此法術結束時消失。"
 			],
 			"page": 287,
 			"savingThrow": [

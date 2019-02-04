@@ -1084,7 +1084,7 @@
 			]
 		},
 		{
-			"name": "Create Homunculus",
+			"name": "創造荷蒙庫魯斯", "ENG_name": "Create Homunculus",
 			"source": "XGE",
 			"level": 6,
 			"school": "T",
@@ -1104,7 +1104,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "clay, ash, and mandrake root, all of which the spell consumes, and a jewel-encrusted dagger worth at least 1,000 gp",
+					"text": "黏土、灰燼、和曼德拉草根，以上材料皆會在施法時消耗，以及一個價值至少1,000金幣的珠寶鑲嵌匕首",
 					"cost": 1000,
 					"consume": true
 				}
@@ -1123,9 +1123,9 @@
 				]
 			},
 			"entries": [
-				"While speaking an intricate incantation, you cut yourself with a jewel-encrusted dagger, taking {@dice 2d4} piercing damage that can't be reduced in any way. You then drip your blood on the spell's other components and touch them, transforming them into a special construct called a {@creature homunculus}.",
-				"The statistics of the {@creature homunculus} are in the Monster Manual. It is your faithful companion, and it dies if you die. Whenever you finish a long rest, you can spend up to half your Hit Dice if the homunculus is on the same plane of existence as you. When you do so, roll each die and add your Constitution modifier to it. Your hit point maximum is reduced by the total, and the homunculus's hit point maximum and current hit points are both increased by it. This process can reduce you to no lower than 1 hit point, and the change to your and the homunculus's hit points ends when you finish your next long rest. The reduction to your hit point maximum can't be removed by any means before then, except by the homunculus's death.",
-				"You can have only one homunculus at a time. If you cast this spell while your homunculus lives, the spell fails."
+				"隨著你詠唱著複雜的咒語，你使用珠寶鑲嵌匕首在自己身上切一刀，受到無法以任何方式減少的{@dice 2d4}穿刺傷害。你接著將你的血液滴在此法術的其他構材上並碰觸它們，將它們轉化成一個被稱作{@creature 荷蒙庫魯斯}的特殊構裝體。",
+				"{@creature 荷蒙庫魯斯}的數據資料寫在《怪物圖鑑》中。他是你最忠實的夥伴，且會在你死亡時跟著死去。每當你完成一次長休，若荷蒙庫魯斯與你處於相同的存在位面，你可以最多消耗你一半的生命骰。當你這麼做時，骰每一顆生命骰並加上你的體質調整值。你的生命值最大值將減少其數值的總和，而荷蒙庫魯斯的生命值最大值和當下生命值將增加相同的數值。這個過程無法將你的生命值降低至低於1點，且你和荷蒙庫魯斯生命值的變化會在你完成你下一次的長休時恢復。你生命值最大值的減損無法透過任何手段被移除，除非荷蒙庫魯斯死亡。",
+				"你同時只能擁有一個{@creature 荷蒙庫魯斯}。若你在你的荷蒙庫魯斯仍活著的時候再次施放此法術，則此法術失敗。"
 			],
 			"page": 152,
 			"permanentEffects": true
@@ -1380,7 +1380,7 @@
 			]
 		},
 		{
-			"name": "Druid Grove",
+			"name": "德魯伊林地", "ENG_name": "Druid Grove",
 			"source": "XGE",
 			"level": 6,
 			"school": "A",
@@ -1400,7 +1400,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "mistletoe, which the spell consumes, that was harvested with a golden sickle under the light of a full moon",
+					"text": "在滿月月光照耀下使用黃金鐮刀採收的槲寄生，在施法時消耗",
 					"consume": true
 				}
 			},
@@ -1422,46 +1422,46 @@
 				]
 			},
 			"entries": [
-				"You invoke the spirits of nature to protect an area outdoors or underground. The area can be as small as a 30-foot cube or as large as a 90-foot cube. Buildings and other structures are excluded from the affected area. If you cast this spell in the same area every day for a year, the spell lasts until dispelled.",
-				"The spell creates the following effects within the area. When you cast this spell, you can specify creatures as friends who are immune to the effects. You can also specify a password that, when spoken aloud, makes the speaker immune to these effects.",
-				"The entire warded area radiates magic. A dispel magic cast on the area, if successful, removes only one of the following effects, not the entire area. That spell's caster chooses which effect to end. Only when all its effects are gone is this spell dispelled.",
+				"你呼喚自然的精魂以守護戶外或地底的一個區域。這個區域最小可以為30呎邊長立方體，最大可達90呎邊長立方體。建築物和其他構造物會被排除在受影響的區域外。若你每天在相同的區域施展此法術一整年，則此法術將持續直到被解消。",
+				"此法術將在區域內創造出以下效果。當你施放此法術，你可以施放此法術時，你可以指定生物做為友伴以免疫這些效果。你也可以設定一句密語，當大聲的說出密語時，述說者將免疫於這些效果。",
+				"整個受保護的區域散發著魔法。一個成功施放於該區域的{@spell 解除魔法}法術，只會移除以下其中一個效果，而非整個區域。由此法術的施術者決定哪一個效果會被結束。只有當它的所有效果被移除時，此法術才會被解消。",
 				{
 					"type": "entries",
-					"name": "Solid Fog",
+					"name": "厚重濃霧",
 					"entries": [
-						"You can fill any number of 5-foot squares on the ground with thick fog, making them heavily obscured. The fog reaches 10 feet high. In addition, every foot of movement through the fog costs 2 extra feet. To a creature immune to this effect, the fog obscures nothing and looks like soft mist, with motes of green light floating in the air."
+						"你可以讓地面上任意數量的5呎平方區域充滿厚重濃霧，使它們被重度遮蔽。濃霧高達10呎。此外，每移動穿過濃霧一呎都需要消耗額外的2呎移動速度。對一個免疫於此效果的生物而言，這陣濃霧沒有任何遮蔽效果，且看起來像是一團在空氣中點綴著漂浮綠光的薄霧。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Grasping Undergrowth",
+					"name": "糾纏灌木",
 					"entries": [
-						"You can fill any number of 5-foot squares on the ground that aren't filled with fog with grasping weeds and vines, as if they were affected by an entangle spell. To a creature immune to this effect, the weeds and vines feel soft and reshape themselves to serve as temporary seats or beds."
+						"你可以讓地面上任意數量未被濃霧充滿的5呎平方區域蔓生著雜草和藤蔓，就如同它們受到{@spell 糾纏術}的影響。對一個免疫於此效果的生物而言，這些雜草和藤蔓相當柔軟，且會重塑自己的形狀以做為暫時的座椅或床鋪。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Grove Guardians",
+					"name": "林地守衛",
 					"entries": [
-						"You can animate up to four trees in the area, causing them to uproot themselves from the ground. These trees have the same statistics as an awakened tree, which appears in the Monster Manual, except they can't speak, and their bark is covered with druidic symbols. If any creature not immune to this effect enters the warded area, the grove guardians fight until they have driven off or slain the intruders. The grove guardians also obey your spoken commands (no action required by you) that you issue while in the area. If you don't give them commands and no intruders are present, the grove guardians do nothing. The grove guardians can't leave the warded area. When the spell ends, the magic animating them disappears, and the trees take root again if possible."
+						"你可以活化最多四顆區域內的樹木，使它們從地面上拔根而起。這些樹木具有與《怪物圖鑑》中{@creature 啟蒙樹木}相同的數據資料，但它們不會說話，且它們的樹皮被德魯伊符號給覆蓋著。若任何未免疫於此法術的生物進入被守護的區域，這些林地守衛將與它們戰鬥直到入侵者被趕走或被殺死。這些林地守衛也會服從你在這個區域內所下達的口頭命令（不需要動作）。若你沒有下達命令且沒有入侵者出現，則林地守衛什麼事都不會做。林地守衛無法離開被守護的區域。當此法術結束時，活化它們的魔法將會消失，且這些這些樹木若可能的話將會重新扎根﹐"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Additional Spell Effect",
+					"name": "額外法術效果",
 					"entries": [
-						"You can place your choice of one of the following magical effects within the warded area:"
+						"你可以從以下魔法效果中選擇一項以設置在受保護的區域內："
 					]
 				},
 				{
 					"type": "list",
 					"items": [
-						"A constant gust of wind in two locations of your choice",
-						"Spike growth in one location of your choice",
-						"Wind wall in two locations of your choice"
+						"設置常駐的{@spell 造風術}在你所選的二個場所。",
+						"設置{@spell 荊棘叢生}在你所選的一個場所。",
+						"設置{@spell 風牆術}在你所選的二個場所。"
 					]
 				},
-				"To a creature immune to this effect, the winds are a fragrant, gentle breeze, and the area of spike growth is harmless."
+				"對一個免疫於此效果的生物而言，風是芬芳溫和的微風，而荊棘叢生的區域則是無害的。"
 			],
 			"page": 154,
 			"permanentEffects": true
@@ -2811,7 +2811,7 @@
 			"scalingEffects": true
 		},
 		{
-			"name": "Investiture of Flame",
+			"name": "熾焰賦權", "ENG_name": "Investiture of Flame",
 			"source": "XGE",
 			"level": 6,
 			"school": "T",
@@ -2862,13 +2862,13 @@
 				]
 			},
 			"entries": [
-				"Flames race across your body, shedding bright light in a 30-foot radius and dim light for an additional 30 feet for the spell's duration. The flames don't harm you. Until the spell ends, you gain the following benefits:",
+				"烈焰在你的身體間穿梭，在此法術持續期間散發出30呎半徑的明亮光照和再延伸30呎的微光光照。這道火焰不會傷害。直到此法術結束前，你獲得以下好處：",
 				{
 					"type": "list",
 					"items": [
-						"You are immune to fire damage and have resistance to cold damage.",
-						"Any creature that moves within 5 feet of you for the first time on a turn or ends its turn there takes {@dice 1d10} fire damage.",
-						"You can use your action to create a line of fire 15 feet long and 5 feet wide extending from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. A creature takes {@dice 4d8} fire damage on a failed save, or half as much damage on a successful one."
+						"你免疫於火焰傷害，且對寒冰傷害具有抗性。",
+						"任何在一個回合第一次移動到距離你5呎內或在該處結束它回合的生物將受到{@dice 1d10}火焰傷害。",
+						"你可以使用你的動作以創造一束15呎長、5呎寬的火焰直線，從你向一個你所選擇方向延伸。每個在這個直線內的生物必須進行一次敏捷豁免。豁免失敗的生物將受到{@dice 4d8}火焰傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
@@ -2893,7 +2893,7 @@
 			]
 		},
 		{
-			"name": "Investiture of Ice",
+			"name": "寒冰賦權", "ENG_name": "Investiture of Ice",
 			"source": "XGE",
 			"level": 6,
 			"school": "T",
@@ -2944,14 +2944,14 @@
 				]
 			},
 			"entries": [
-				"Until the spell ends, ice rimes your body, and you gain the following benefits:",
+				"直到此法術結束前，寒冰將霜覆於你的身體，且你獲得以下好處：",
 				{
 					"type": "list",
 					"items": [
-						"You are immune to cold damage and have resistance to fire damage.",
-						"You can move across difficult terrain created by ice or snow without spending extra movement.",
-						"The ground in a 10-foot radius around you is icy and is difficult terrain for creatures other than you. The radius moves with you.",
-						"You can use your action to create a 15-foot cone of freezing wind extending from your outstretched hand in a direction you choose. Each creature in the cone must make a Constitution saving throw. A creature takes {@dice 4d6} cold damage on a failed save, or half as much damage on a successful one. A creature that fails its save against this effect has its speed halved until the start of your next turn."
+						"你免疫於寒冰傷害，且對火焰傷害具有抗性。",
+						"你可以移動穿過冰或雪構成的困難地形，而無需消耗額外的移動速度。",
+						"距離你10呎半徑的地面被凍結，且對你以外的生物而言視作困難地形。這個半徑範圍將會隨著你移動。",
+						"你可以使用你的動作創造一道15呎錐形的寒凍之風，從你向一個你所選擇方向延伸。每個錐形範圍內的生物都必須進行一次體質豁免。豁免失敗的生物將受到{@dice 4d6}寒冰傷害，豁免成功則只受到一半的傷害。在對抗此效果的豁免檢定中失敗的生物的移動速度將被減半直到你的下個回合開始。"
 					]
 				}
 			],
@@ -2976,7 +2976,7 @@
 			]
 		},
 		{
-			"name": "Investiture of Stone",
+			"name": "堅岩賦權", "ENG_name": "Investiture of Stone",
 			"source": "XGE",
 			"level": 6,
 			"school": "T",
@@ -3027,13 +3027,13 @@
 				]
 			},
 			"entries": [
-				"Until the spell ends, bits of rock spread across your body, and you gain the following benefits:",
+				"直到此法術結束前，岩塊遍佈著你的身體，且你獲得以下好處：",
 				{
 					"type": "list",
 					"items": [
-						"You have resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks.",
-						"You can use your action to create a small earthquake on the ground in a 15-foot radius centered on you. Other creatures on that ground must succeed on a Dexterity saving throw or be knocked {@condition 伏地}.",
-						"You can move across difficult terrain made of earth or stone without spending extra movement. You can move through solid earth or stone as if it was air and without destabilizing it, but you can't end your movement there. If you do so, you are ejected to the nearest unoccupied space, this spell ends, and you are {@condition stunned} until the end of your next turn."
+						"你對非魔法攻擊所造成鈍擊、穿刺、和劈砍傷害具有抗性。",
+						"你可以使用你的動作在以你為中心的15呎半徑範圍地面創造一陣小型地震。其他地面上的生物必須成功通過一次敏捷豁免，否則被擊倒{@condition 伏地}。",
+						"你可以移動穿過泥土或岩石構成的困難地形，而無需消耗額外的移動速度。你也可以像穿透空氣一樣移穿固體泥土或岩石，且不會因此使之結構不穩定。但你無法在該處結束你的移動。若你這麼做，則你將被排到最近的一處未被佔據空間，此法術結束，且你被{@condition 震懾}直到你的下個回合結束。"
 					]
 				}
 			],
@@ -3058,7 +3058,7 @@
 			]
 		},
 		{
-			"name": "Investiture of Wind",
+			"name": "清風賦權", "ENG_name": "Investiture of Wind",
 			"source": "XGE",
 			"level": 6,
 			"school": "T",
@@ -3109,13 +3109,13 @@
 				]
 			},
 			"entries": [
-				"Until the spell ends, wind whirls around you, and you gain the following benefits:",
+				"直到此法術結束前，清風將在你身邊環繞，且你獲得以下好處：",
 				{
 					"type": "list",
 					"items": [
-						"Ranged weapon attacks made against you have disadvantage on the attack roll.",
-						"You gain a flying speed of 60 feet. If you are still flying when the spell ends, you fall, unless you can somehow prevent it.",
-						"You can use your action to create a 15-foot cube of swirling wind centered on a point you can see within 60 feet of you. Each creature in that area must make a Constitution saving throw. A creature takes {@dice 2d10} bludgeoning damage on a failed save, or half as much damage on a successful one. If a Large or smaller creature fails the save, that creature is also pushed up to 10 feet away from the center of the cube."
+						"對你進行的遠程武器攻擊將在攻擊檢定中具有劣勢。",
+						"你獲得60呎的飛行速度。若你在此法術結束時仍在飛行狀態，則你將墜落，除非你有其他方式避免墜落。",
+						"你可以使用你的動作在以你60呎內所選一點為中心的15呎邊長立方體區域內創造一陣旋風。每個在該區域內的生物都必須進行一次體質豁免。一個豁免失敗的目標將受到{@dice 2d10}鈍擊傷害，豁免成功則只受到一半的傷害。若一個體型為大型或更小的生物在該豁免檢定中失敗，則該生物也會被推離立方體中心10呎距離。"
 					]
 				}
 			],
@@ -3616,7 +3616,7 @@
 			]
 		},
 		{
-			"name": "Mental Prison",
+			"name": "心靈監獄", "ENG_name": "Mental Prison",
 			"source": "XGE",
 			"level": 6,
 			"school": "I",
@@ -3663,7 +3663,7 @@
 				]
 			},
 			"entries": [
-				"You attempt to bind a creature within an illusory cell that only it perceives. One creature you can see within range must make an Intelligence saving throw. The target succeeds automatically if it is immune to being {@condition charmed}. On a successful save, the target takes {@dice 5d10} psychic damage, and the spell ends. On a failed save, the target takes {@dice 5d10} psychic damage, and you make the area immediately around the target's space appear dangerous to it in some way. You might cause the target to perceive itself as being surrounded by fire, floating razors, or hideous maws filled with dripping teeth. Whatever form the illusion takes, the target can't see or hear anything beyond it and is {@condition 束縛} for the spell's duration. If the target is moved out of the illusion, makes a melee attack through it, or reaches any part of its body through it, the target takes {@dice 10d10} psychic damage, and the spell ends."
+				"你嘗試將一個生物困在一個只有它能察覺的幻象牢房中。一個射程內你所能看見的生物必須進行一次致力豁免。免疫於{@condition 魅惑}的目標將自動成功通過此豁免檢定。若豁免成功，目標將受到{@dice 5d10}精神傷害，且此法術結束。若豁免失敗，目標將受到{@dice 5d10}精神傷害，且你立刻使目標所在空間周遭的區域對它在某種程度上顯得危險。你可以讓目標認為自己被火焰、浮空鋒刃、或長滿垂涎利齒的駭人大口給環繞。無論幻象呈現什麼形式，目標都無法看見或聽見任何來自外頭的事物，且在法術持續期間被{@condition 束縛}。若目標移出幻象、透過幻象進行一次近戰攻擊、或透過幻象伸出任何它的身體部位，則目標將受到{@dice 10d10}精神傷害，且此法術結束。"
 			],
 			"page": 161,
 			"damageInflict": [
@@ -4018,7 +4018,7 @@
 			"scalingEffects": true
 		},
 		{
-			"name": "Primordial Ward",
+			"name": "原初守護", "ENG_name": "Primordial Ward",
 			"source": "XGE",
 			"level": 6,
 			"school": "A",
@@ -4057,8 +4057,8 @@
 				]
 			},
 			"entries": [
-				"You have resistance to acid, cold, fire, lightning, and thunder damage for the spell's duration.",
-				"When you take damage of one of those types, you can use your reaction to gain immunity to that type of damage, including against the triggering damage. If you do so, the resistances end, and you have the immunity until the end of your next turn, at which time the spell ends."
+				"你在此法術持續期間內對酸蝕、寒冰、火焰、閃電、和雷鳴傷害具有抗性。",
+				"當你受到其中一種類型的傷害時，你可以使用你的反應以獲得對該傷害類型的免疫，這也將使你免疫於觸發的傷害。若你這麼做，則其他傷害抗性將會中止，且你將在你的下個回合結束前免疫於該傷害類型，在這之後此法術結束。"
 			],
 			"page": 163,
 			"damageInflict": [
@@ -4125,8 +4125,8 @@
 			},
 			"entries": [
 				"You unleash the power of your mind to blast the intellect of up to ten creatures of your choice that you can see within range. Creatures that have an Intelligence score of 2 or lower are unaffected.",
-				"Each target must make an Intelligence saving throw. On a failed save, a target takes {@dice 14d6} psychic damage and is {@condition stunned}. On a successful save, a target takes half as much damage and isn't {@condition stunned}. If a target is killed by this damage, its head explodes, assuming it has one.",
-				"A {@condition stunned} target can make an Intelligence saving throw at the end of each of its turns. On a successful save, the stunning effect ends."
+				"Each target must make an Intelligence saving throw. On a failed save, a target takes {@dice 14d6} psychic damage and is {@condition 震懾}. On a successful save, a target takes half as much damage and isn't {@condition 震懾}. If a target is killed by this damage, its head explodes, assuming it has one.",
+				"A {@condition 震懾} target can make an Intelligence saving throw at the end of each of its turns. On a successful save, the stunning effect ends."
 			],
 			"page": 163,
 			"damageInflict": [
@@ -4214,7 +4214,7 @@
 			]
 		},
 		{
-			"name": "Scatter",
+			"name": "散射術", "ENG_name": "Scatter",
 			"source": "XGE",
 			"level": 6,
 			"school": "C",
@@ -4256,7 +4256,7 @@
 				]
 			},
 			"entries": [
-				"The air quivers around up to five creatures of your choice that you can see within range. An unwilling creature must succeed on a Wisdom saving throw to resist this spell. You teleport each affected target to an unoccupied space that you can see within 120 feet of you. That space must be on the ground or on a floor."
+				"空氣震顫環繞著最多五個射程內你所選擇且你能看見的生物。非自願的生物必須成功通過一次睿知豁免以抵抗此法術。你將每個受影響的目標各自傳送到一處距離你120呎內你所能看見的未被佔據空間。該空間必須在地面或樓層地板上。"
 			],
 			"page": 164,
 			"savingThrow": [
@@ -4773,7 +4773,7 @@
 			]
 		},
 		{
-			"name": "Soul Cage",
+			"name": "靈魂囚籠", "ENG_name": "Soul Cage",
 			"source": "XGE",
 			"level": 6,
 			"school": "N",
@@ -4781,7 +4781,7 @@
 				{
 					"number": 1,
 					"unit": "reaction",
-					"condition": "which you take when a humanoid you can see within 60 feet of you dies"
+					"condition": "在一個距離你60呎內的類人生物死亡時進行。"
 				}
 			],
 			"range": {
@@ -4795,7 +4795,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a tiny silver cage worth 100 gp",
+					"text": "一個價值100金幣的銀製小籠子",
 					"cost": 100
 				}
 			},
@@ -4821,36 +4821,36 @@
 				]
 			},
 			"entries": [
-				"This spell snatches the soul of a humanoid as it dies and traps it inside the tiny cage you use for the material component. A stolen soul remains inside the cage until the spell ends or until you destroy the cage, which ends the spell. While you have a soul inside the cage, you can exploit it in any of the ways described below. You can use a trapped soul up to six times. Once you exploit a soul for the sixth time, it is released, and the spell ends. While a soul is trapped, the dead humanoid it came from can't be revived.",
+				"此法術將在一個類人生物死亡時抓住它的靈魂，並將它困在你用以做為材料構材的小型籠子中。被抓住的靈魂將待在籠子內直到此法術結束、或者你摧毀這個籠子，這也將使此法術結束。當你的籠子內有一個靈魂時，你可以透過以下記載的任意方式以利用它。你可以使用一個被困住的靈魂最多六次。一旦你利用了這個靈魂第六次，它將被解放，且此法術結束。當一個靈魂被困住時，該靈魂所屬的死去類人生物將無法被復活。",
 				{
 					"type": "entries",
-					"name": "Steal Life",
+					"name": "竊取生命",
 					"entries": [
-						"You can use a bonus action to drain vigor from the soul and regain {@dice 2d8} hit points."
+						"你可以使用一個附贈動作以吸取該靈魂的活力，並回復{@dice 2d8}點生命值。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Query Soul",
+					"name": "質問靈魂",
 					"entries": [
-						"You ask the soul a question (no action required) and receive a brief telepathic answer, which you can understand regardless of the language used. The soul knows only what it knew in life, but it must answer you truthfully and to the best of its ability. The answer is no more than a sentence or two and might be cryptic."
+						"你詢問該靈魂一個問題（不需要動作），並得到一個簡短的心靈感應做為回答，無論它使用什麼語言你都能夠理解。這個靈魂只知道它生前所知的事，且它必須盡其所能的誠實回答。這個回答不能超過一至二個句子，且可能是晦澀難解的。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Borrow Experience",
+					"name": "借取經驗",
 					"entries": [
-						"You can use a bonus action to bolster yourself with the soul's life experience, making your next attack roll, ability check, or saving throw with advantage. If you don't use this benefit before the start of your next turn, it is lost."
+						"你可以使用一個附贈動作以使用靈魂的生命經歷援助你自己，使你的下次攻擊檢定、屬性檢定、或豁免檢定具有優勢。若你在你的下個回合開始之前沒有使用這個好處，則它的效果將被丟失。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Eyes of the Dead",
+					"name": "死者之眼",
 					"entries": [
-						"You can use an action to name a place the humanoid saw in life, which creates an invisible sensor somewhere in that place if it is on the plane of existence you're currently on. The sensor remains for as long as you concentrate, up to 10 minutes (as if you were concentrating on a spell). You receive visual and auditory information from the sensor as if you were in its space using your senses."
+						"你可以使用一個動作以指名該類人生物生前曾見過的場所，若該場所位於你所處的存在平面，則你將在該場所的某處創造出一個隱形的感應器。只要你維持專注，這個感應器便會維持其存在最多10分鐘（如同你專注於法術）。你將透過該感應器接收視覺和聽覺資訊，就如同你位於該處使用你自己的感官一樣。"
 					]
 				},
-				"A creature that can see the sensor (such as one using {@spell see invisibility} or truesight) sees a translucent image of the tormented humanoid whose soul you caged."
+				"一個可以看見感應器的生物（例如使用{@spell 識破隱形}法術或真實視覺的生物）會看見一個靈魂被你囚禁的痛苦類人生物的半透明影像。"
 			],
 			"page": 165,
 			"isHeal": true
@@ -5273,7 +5273,7 @@
 			"isHeal": true
 		},
 		{
-			"name": "譚森魔能轉換術", "name": "Tenser's Transformation",
+			"name": "譚森魔能轉換術", "ENG_name": "Tenser's Transformation",
 			"source": "XGE",
 			"level": 6,
 			"school": "T",
@@ -5292,7 +5292,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a few hairs from a bull"
+				"m": "幾根公牛的毛髮"
 			},
 			"duration": [
 				{
@@ -5313,19 +5313,19 @@
 				]
 			},
 			"entries": [
-				"You endow yourself with endurance and martial prowess fueled by magic. Until the spell ends, you can't cast spells, and you gain the following benefits:",
+				"你賦予自己以魔法驅動的耐力與高強武藝。直到此法術結束前，你不能施放法術，但你獲得以下好處：",
 				{
 					"type": "list",
 					"items": [
-						"You gain 50 temporary hit points. If any of these remain when the spell ends, they are lost.",
-						"You have advantage on attack rolls that you make with simple and martial weapons.",
-						"When you hit a target with a weapon attack, that target takes an extra {@dice 2d12} force damage.",
-						"You have proficiency with all armor, shields, simple weapons, and martial weapons.",
-						"You have proficiency in Strength and Constitution saving throws.",
-						"You can attack twice, instead of once, when you take the Attack action on your turn. You ignore this benefit if you already have a feature, like Extra Attack, that gives you extra attacks."
+						"你獲得50點臨時生命值。若在此法術結束時有任何臨時生命值殘留，則它們將被丟失。",
+						"你在使用簡易或軍用武器進行的攻擊檢定中具有優勢。",
+						"當你以一次武器攻擊命中一個目標時，目標將受到額外的{@dice 2d12}力場傷害。",
+						"你熟練於所有護甲、盾牌、簡易武器、和軍用武器。",
+						"你熟練於力量和體質豁免。",
+						"當你在你的回合採取攻擊動作時，你可以攻擊二次，而非一次。若你已經擁有能讓你進行額外攻擊的能力，像是額外攻擊，則你忽略此好處。"
 					]
 				},
-				"Immediately after the spell ends, you must succeed on a DC 15 Constitution saving throw or suffer one level of {@condition exhaustion}."
+				"緊接在此法術結束後，你必須成功通過一次DC 15的體質豁免，否則承受一級{@condition 力竭}。"
 			],
 			"page": 168,
 			"damageInflict": [

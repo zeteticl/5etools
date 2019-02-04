@@ -22802,7 +22802,7 @@
 			]
 		},
 		{
-			"name": "Homunculus",
+			"name": "荷蒙庫魯斯", "ENG_name": "Homunculus",
 			"size": "T",
 			"type": "construct",
 			"source": "MM",
@@ -22840,13 +22840,13 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 10,
-			"languages": "understands the languages of its creator but can't speak",
+			"languages": "理解它創造者的語言，但不會說",
 			"cr": "0",
 			"trait": [
 				{
-					"name": "Telepathic Bond",
+					"name": "心靈連結",
 					"entries": [
-						"While the homunculus is on the same plane of existence as its master, it can magically convey what it senses to its master, and the two can communicate telepathically."
+						"當荷蒙庫魯斯和它的主人處於相同的存在位面，它可以用魔法將它所察覺的事物傳達給它的主人，且雙方可以透過心靈感應溝通。"
 					]
 				}
 			],
@@ -22854,7 +22854,7 @@
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一生物。{@h}1 piercing damage, and the target must succeed on a DC 10 Constitution saving throw or be {@condition poisoned} for 1 minute. If the saving throw fails by 5 or more, the target is instead {@condition poisoned} for 5 ({@dice 1d10}) minutes and {@condition unconscious} while {@condition poisoned} in this way."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一生物。{@h}1 穿刺傷害，且目標必須成功通過一次DC 10的體質豁免，否則將陷入{@condition 中毒}狀態長達1分鐘。若此豁免檢定的結果與目標值差距5點或更多，則目標將改為陷入{@condition 中毒}長達 5 ({@dice 1d10})分鐘，且在{@condition 中毒}狀態的持續期間陷入{@condition 昏迷}。"
 					]
 				}
 			],
@@ -39861,7 +39861,7 @@
 			]
 		},
 		{
-			"name": "Umber Hulk",
+			"name": "土巨怪", "ENG_name": "Umber Hulk",
 			"size": "L",
 			"type": "monstrosity",
 			"source": "MM",
@@ -39891,23 +39891,23 @@
 			"int": 9,
 			"wis": 10,
 			"cha": 10,
-			"senses": "黑暗視覺120呎, tremorsense 60 ft.",
+			"senses": "黑暗視覺120呎, 震顫感知60呎",
 			"passive": 10,
-			"languages": "Umber Hulk",
+			"languages": "土巨怪語",
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Confusing Gaze",
+					"name": "困惑凝視",
 					"entries": [
-						"When a creature starts its turn within 30 feet of the umber hulk and is able to see the umber hulk's eyes, the umber hulk can magically force it to make a DC 15 Charisma saving throw, unless the umber hulk is {@condition incapacitated}.",
-						"On a failed saving throw, the creature can't take reactions until the start of its next turn and rolls a {@dice d8} to determine what it does during that turn. On a 1 to 4, the creature does nothing. On a 5 or 6, the creature takes no action but uses all its movement to move in a random direction. On a 7 or 8, the creature makes one melee attack against a random creature, or it does nothing if no creature is within reach.",
-						"Unless surprised, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can't see the umber hulk until the start of its next turn, when it can avert its eyes again. If the creature looks at the umber hulk in the meantime, it must immediately make the save."
+						"當一個生物在距離土巨怪30呎內，且能看見土巨怪雙眼的位置開始它的回合，則除非土巨怪處於{@condition 無力}，可以使用魔法迫使它進行一次DC 15的魅力豁免。",
+						"若豁免失敗，則直到它的下個回合開始，該生物不能採取反應，且必須骰一顆{@dice d8}以決定它在這回合間的行動。若結果為1~4，該生物不會做任何事。若結果為5~6，該生物不採取動作，而是使用它所有的移動速度向著任意方向移動。若結果為7~8，該生物對一個隨機生物進行一次近戰攻擊，惑若沒有生物在它的觸及範圍內，則不做任何事。",
+						"除非被突襲，否則生物可以移開視線以避免在它的回合開始時進行豁免檢定。若該生物這麼做，則它直到它的下個回合開始前都將無法看見土巨怪，且它可以在下個回合開始時再次選擇移開視線。在該生物看向土巨怪的瞬間，它就必須立刻進行該豁免檢定。"
 					]
 				},
 				{
-					"name": "Tunneler",
+					"name": "掘道者",
 					"entries": [
-						"The umber hulk can burrow through solid rock at half its burrowing speed and leaves a 5 foot-wide, 8-foot-high tunnel in its wake."
+						"土巨怪能夠以它掘地速度一半的速度掘穿堅硬的岩層，並在身後留下一個5呎寬，8呎高的地道。"
 					]
 				}
 			],
@@ -39915,17 +39915,17 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The umber hulk makes three attacks: two with its claws and one with its mandibles."
+						"土巨怪進行三次攻擊：二次爪抓，一次大顎。"
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "爪抓",
 					"entries": [
 						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}9 ({@damage 1d8 + 5})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Mandibles",
+					"name": "大顎",
 					"entries": [
 						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}14 ({@damage 2d8 + 5})劈砍傷害。"
 					]
