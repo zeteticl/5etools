@@ -824,7 +824,7 @@
 			"page": 213
 		},
 		{
-			"name": "Antimagic Field",
+			"name": "反魔法結界", "name": "Antimagic Field",
 			"level": 8,
 			"school": "A",
 			"time": [
@@ -8993,7 +8993,7 @@
 			]
 		},
 		{
-			"name": "Divine Word",
+			"name": "聖言術", "ENG_name": "Divine Word",
 			"level": 7,
 			"school": "V",
 			"time": [
@@ -9027,17 +9027,17 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You utter a divine word, imbued with the power that shaped the world at the dawn of creation. Choose any number of creatures you can see within range. Each creature that can hear you must make a Charisma saving throw. On a failed save, a creature suffers an effect based on its current hit points:",
+				"你念誦一句神聖之語，充滿著在創世黎明期時形塑世界的力量。選擇射程內你所能看見的任意數量個生物。每個可以聽見你的生物都必須進行一次魅力豁免。若豁免失敗，則生物將根據它的當下生命值而承受效果：",
 				{
 					"type": "list",
 					"items": [
-						"50 hit points or fewer: {@condition deafened} for 1 minute",
-						"40 hit points or fewer: {@condition deafened} and {@condition blinded} for 10 minutes",
-						"30 hit points or fewer: {@condition blinded}, {@condition deafened}, and {@condition 震懾} for 1 hour",
-						"20 hit points or fewer: killed instantly"
+						"50點生命值或更少：長達1分鐘的{@condition 耳聾}狀態",
+						"40點生命值或更少：長達10分鐘的{@condition 耳聾}和{@condition 目盲}狀態",
+						"30點生命值或更少：長達1小時的{@condition 耳聾}、{@condition 目盲}、和{@condition 震懾}狀態",
+						"20點生命值或更少：立刻死亡"
 					]
 				},
-				"Regardless of its current hit points, a celestial, an elemental, a fey, or a fiend that fails its save is forced back to its plane of origin (if it isn't there already) and can't return to your current plane for 24 hours by any means short of a wish spell."
+				"無論它當下的生命值為何，一個在該豁免檢定中失敗的天界生物、元素、精類、或邪魔都將被迫返回它的原生位面（若它不在該位面），且在24小時內無法再透過任何除了{@spell 祈願術}以外的方式回到你當下所在的位面。"
 			],
 			"page": 234,
 			"savingThrow": [
@@ -10387,7 +10387,7 @@
 			]
 		},
 		{
-			"name": "Etherealness",
+			"name": "跨入乙太界", "ENG_name": "Etherealness",
 			"level": 7,
 			"school": "T",
 			"time": [
@@ -10442,18 +10442,18 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You step into the border regions of the Ethereal Plane, in the area where it overlaps with your current plane. You remain in the Border Ethereal for the duration or until you use your action to dismiss the spell. During this time, you can move in any direction. If you move up or down, every foot of movement costs an extra foot. You can see and hear the plane you originated from, but everything there looks gray, and you can't see anything more than 60 feet away.",
-				"While on the Ethereal Plane, you can only affect and be affected by other creatures on that plane. Creatures that aren't on the Ethereal Plane can't perceive you and can't interact with you, unless a special ability or magic has given them the ability to do so.",
-				"You ignore all objects and effects that aren't on the Ethereal Plane, allowing you to move through objects you perceive on the plane you originated from.",
-				"When the spell ends, you immediately return to the plane you originated from in the spot you currently occupy. If you occupy the same spot as a solid object or creature when this happens, you are immediately shunted to the nearest unoccupied space that you can occupy and take force damage equal to twice the number of feet you are moved.",
-				"This spell has no effect if you cast it while you are on the Ethereal Plane or a plane that doesn't border it, such as one of the Outer Planes."
+				"你踏入乙太位面與你當下所在位面重疊的邊界區域。你在法術持續期間維持在乙太邊界，或直到你使用你的動作以解消此法術。在這段期間，你可以向任意方向移動。若你向上或向下移動，則你每移動一呎都會再額外消耗一呎的移動速度。你可以看見並聽見你原本所在的位面，但該位面的景象將呈現灰階，且你不能看見任何距離60呎外的事物。",
+				"當處於乙太位面時，你只能影響或被其他處於該位面的生物影響。除非特殊能力或魔法讓它們這麼做，否則不在乙太位面的生物無法察覺你，也無法與你產生互動。",
+				"你忽略所有不在乙太位面的物體或效果，這讓你能夠移動穿過任何你在原本所在位面所能察覺到的物體。",
+				"當此法術結束時，你立刻返回你原本所在位面中你當下所佔據的位置。若你在這時與一個固態物體或生物佔據著相同的位置，則你將立刻被排至最近的一處未被佔據空間，且受到等同於你被移動距離呎數兩倍的力場傷害。",
+				"當你在處於乙太位面、或處於非接壤於乙太位面的位面，像是外層位面，時施放此法術，則此法術不會有任何效果。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 8th level or higher, you can target up to three willing creatures (including you) for each slot level above 7th. The creatures must be within 10 feet of you when you cast the spell."
+						"當你使用8環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，你就可以再額外選擇最多三個自願生物作為目標。這些生物在你施放此法術時必須距離你10呎內。"
 					]
 				}
 			],
@@ -20009,7 +20009,7 @@
 			"permanentEffects": true
 		},
 		{
-			"name": "Mordenkainen's Sword",
+			"name": "魔鄧肯之劍", "ENG_name": "Mordenkainen's Sword",
 			"level": 7,
 			"school": "V",
 			"time": [
@@ -20029,7 +20029,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a miniature platinum sword with a grip and pommel of copper and zinc, worth 250 gp",
+					"text": "一把白金製成，銅鋅合金劍柄的寶劍模型，價值250金幣",
 					"cost": 250
 				}
 			},
@@ -20057,8 +20057,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You create a sword-shaped plane of force that hovers within range. It lasts for the duration.",
-				"When the sword appears, you make a melee spell attack against a target of your choice within 5 feet of the sword. On a hit, the target takes {@dice 3d10} force damage. Until the spell ends, you can use a bonus action on each of your turns to move the sword up to 20 feet to a spot you can see and repeat this attack against the same target or a different one."
+				"你創造出一塊劍形的力場平面，漂浮於射程內。它將在法術持續期間內持續存在。",
+				"當這把劍出現時，你可以對距離這把劍5呎內的一個目標進行一次近戰法術攻擊。若命中，則目標將受到{@dice 3d10}力場傷害。直到此法術結束前，你可以在你的每隔回合以一個附贈動作移動該這把劍最多20呎距離到一處你所能看見的位置，並再對一個相同或不同的目標重複進行一次此攻擊。"
 			],
 			"page": 262,
 			"damageInflict": [
@@ -26887,7 +26887,7 @@
 			"scalingEffects": true
 		},
 		{
-			"name": "Symbol",
+			"name": "徽記術", "ENG_name": "Symbol",
 			"level": 7,
 			"school": "A",
 			"time": [
@@ -26906,7 +26906,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "mercury, phosphorus, and powdered diamond and opal with a total value of at least 1,000 gp, which the spell consumes",
+					"text": "總共價值至少1,000金幣的水銀、磷、和鑽石與貓眼石的粉末，在施法時消耗",
 					"cost": 1000,
 					"consume": true
 				}
@@ -26938,65 +26938,65 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"When you cast this spell, you inscribe a harmful glyph either on a surface (such as a section of floor, a wall, or a table) or within an object that can be closed to conceal the glyph (such as a book, a scroll, or a treasure chest). If you choose a surface, the glyph can cover an area of the surface no larger than 10 feet in diameter. If you choose an object, that object must remain in its place; if the object is moved more than 10 feet from where you cast this spell, the glyph is broken, and the spell ends without being triggered.",
-				"The glyph is nearly invisible, requiring an Intelligence (Investigation) check against your spell save DC to find it.",
-				"You decide what triggers the glyph when you cast the spell. For glyphs inscribed on a surface, the most typical triggers include touching or stepping on the glyph, removing another object covering it, approaching within a certain distance of it, or manipulating the object that holds it. For glyphs inscribed within an object, the most common triggers are opening the object, approaching within a certain distance of it, or seeing or reading the glyph.",
-				"You can further refine the trigger so the spell is activated only under certain circumstances or according to a creature's physical characteristics (such as height or weight), or physical kind (for example, the ward could be set to affect hags or shapechangers). You can also specify creatures that don't trigger the glyph, such as those who say a certain password.",
-				"When you inscribe the glyph, choose one of the options below for its effect. Once triggered, the glyph glows, filling a 60-foot-radius sphere with dim light for 10 minutes, after which time the spell ends. Each creature in the sphere when the glyph activates is targeted by its effect, as is a creature that enters the sphere for the first time on a turn or ends its turn there.",
+				"當你施放此法術時，你刻寫一個具有傷害性的銘文。你可以刻寫在一個表面（像是桌面、一區地面或牆面）或者一個能被關上以隱蔽銘文的物體中（像是一本書、一張卷軸、或一個寶箱）。若你選擇刻寫在表面，則此銘文覆蓋一片不超過10呎直徑的區域。若你選擇刻寫在物體中，則該物體必須留在它所在的位置；若該物體被移離你施放此法術的位置超過10呎，該銘文將被破壞，且此法術在不被觸發的情況下結束。",
+				"銘文幾乎是隱形的，且需要成功通過一次對抗你法術豁免DC的智力（{@skill 調查}）檢定才能被發現。",
+				"當施放此法術時，你決定什麼東西將會觸發銘文。對於刻寫於表面的銘文而言，最典型的觸發方式包括觸碰或站在銘文上、移開蓋住銘文的其他物體、接近到符文的一定範圍內、或是操作刻有銘文的物體等等。對於刻寫在物體內部的銘文而言，最常見的觸發方式包括打開該物體、接近到該物體的一定範圍內、或看見或閱讀符文。",
+				"你可以進一步定義觸發條件，好讓此法術只會在特定情況、或根據生物的物理特徵（像是高度或重量）、或生物類型（例如可以被設置成只對鬼婆或變形者產生影響）。你也可以設定讓特定生物不會觸發銘文，例如說出特定密語的生物等等。",
+				"當你刻寫銘文時，選擇以下其中一個效果選項。一旦被觸發，銘文將會發光，並在60呎半徑內的球體範圍內散發微光光照長達10分鐘，在這之後此法術結束。每個在銘文作用時處於球體範圍的生物，以及在一個回合中第一次進入球體範圍內，或在該處結束它回合的生物，都會成為銘文效果的目標。",
 				{
 					"type": "entries",
-					"name": "Death",
+					"name": "死亡",
 					"entries": [
-						"Each target must make a Constitution saving throw, taking {@dice 10d10} necrotic damage on a failed save, or half as much damage on a successful save."
+						"每個目標都必須進行一次體質豁免，若豁免失敗將受到{@dice 10d10}死靈傷害，豁免成功則只受到一半的傷害。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Discord",
+					"name": "不諧",
 					"entries": [
-						"Each target must make a Constitution saving throw. On a failed save, a target bickers and argues with other creatures for 1 minute. During this time, it is incapable of meaningful communication and has disadvantage on attack rolls and ability checks."
+						"每個目標都必須進行一次體質豁免。若豁免失敗，目標將和其他生物爭吵怒罵長達1分鐘。在這段期間，它將無法進行有意義的溝通，且在攻擊檢定和屬性檢定中具有劣勢。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Fear",
+					"name": "恐懼",
 					"entries": [
-						"Each target must make a Wisdom saving throw and becomes {@condition 恐懼} for 1 minute on a failed save. While {@condition 恐懼}, the target drops whatever it is holding and must move at least 30 feet away from the glyph on each of its turns, if able."
+						"每個目標都必須進行一次睿知豁免。若豁免失敗則陷入{@condition 恐懼}狀態長達1分鐘。當處於{@condition 恐懼}狀態，目標將丟下任何它所持握的東西，且若可以的話，必須在它的每個回合移動遠離銘文至少30呎距離。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Hopelessness",
+					"name": "絕望",
 					"entries": [
-						"Each target must make a Charisma saving throw. On a failed save, the target is overwhelmed with despair for 1 minute. During this time, it can't attack or target any creature with harmful abilities, spells, or other magical effects."
+						"每個目標都必須進行一次魅力豁免。若豁免失敗，目標將被絕望給征服長達1分鐘。在這段時間，它無法攻擊或以任何生物做為傷害性能力、法術、或其他魔法效果的目標。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Insanity",
+					"name": "瘋狂",
 					"entries": [
-						"Each target must make an Intelligence saving throw. On a failed save, the target is driven insane for 1 minute. An insane creature can't take actions, can't understand what other creatures say, can't read, and speaks only in gibberish. The DM controls its movement, which is erratic."
+						"每個目標都必須進行一次致力豁免。若豁免失敗，目標將陷入瘋狂長達1分鐘。一個瘋狂的生物無法採取動作、無法理解其他生物在說什麼，無法閱讀，且只能說出無意義的胡言亂語。DM將控制它的移動，且它的移動將會變得古怪而無規律。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Pain",
+					"name": "苦痛",
 					"entries": [
-						"Each target must make a Constitution saving throw and becomes {@condition incapacitated} with excruciating pain for 1 minute on a failed save."
+						"每個目標都必須進行一次體質豁免，若豁免失敗則在難以忍受的痛苦下陷入{@condition 無力}狀態長達1分鐘。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Sleep",
+					"name": "沉眠",
 					"entries": [
-						"Each target must make a Wisdom saving throw and falls {@condition unconscious} for 10 minutes on a failed save. A creature awakens if it takes damage or if someone uses an action to shake or slap it awake."
+						"每個目標都必須進行一次睿知豁免，若豁免失敗則陷入{@condition 昏迷}狀態長達10分鐘。一個生物會在它受到傷害，或其他人使用一個動作將它搖醒或拍醒時醒轉。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Stunning",
+					"name": "震懾",
 					"entries": [
-						"Each target must make a Wisdom saving throw and becomes {@condition 震懾} for 1 minute on a failed save."
+						"每個目標都必須進行一次睿知豁免。若豁免失敗則陷入{@condition 震懾}狀態長達1分鐘。"
 					]
 				}
 			],
@@ -29648,7 +29648,7 @@
 			]
 		},
 		{
-			"name": "祈願術", "name": "Wish",
+			"name": "祈願術", "ENG_name": "Wish",
 			"level": 9,
 			"school": "C",
 			"time": [
@@ -29685,20 +29685,20 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Wish is the mightiest spell a mortal creature can cast. By simply speaking aloud, you can alter the very foundations of reality in accord with your desires.",
-				"The basic use of this spell is to duplicate any other spell of 8th level or lower. You don't need to meet any requirements in that spell, including costly components. The spell simply takes effect. Alternatively, you can create one of the following effects of your choice:",
+				"祈願術是凡間生物所能施展最為強大的法術。藉由單純地大聲說出願望，你就能根據你的渴望操弄現實世界的根基。",
+				"此法術的基本用途是複製任何其他8環或以下法術的效果。你不需要滿足任何該法術的需求，包括消耗構材。該法術將單純地發揮效果。或者，你可以選擇創造以下其中一種效果：",
 				{
 					"type": "list",
 					"items": [
-						"You create one object of up to 25,000 gp in value that isn't a magic item. The object can be no more than 300 feet in any dimension, and it appears in an unoccupied space you can see on the ground.",
-						"You allow up to twenty creatures that you can see to regain all hit points, and you end all effects on them described in the {@spell greater restoration} spell.",
-						"You grant up to ten creatures that you can see resistance to a damage type you choose.",
-						"You grant up to ten creatures you can see immunity to a single spell or other magical effect for 8 hours. For instance, you could make yourself and all your companions immune to a {@creature lich}'s life drain attack.",
-						"You undo a single recent event by forcing a reroll of any roll made within the last round (including your last turn). Reality reshapes itself to accommodate the new result. For example, a wish spell could undo an opponent's successful save, a foe's critical hit, or a friend's failed save. You can force the reroll to be made with advantage or disadvantage, and you can choose whether to use the reroll or the original roll."
+						"你創造出一個並非魔法物品，且價值最高25,000金幣的物體。這個物體的各邊尺寸不能超過300呎，且它將出現在你所能看見地面上的一處未被佔據空間。",
+						"你讓最多二十個你所能看見的生物回復所有的生命值，且你結束所有它們身上在{@spell 高等復原術}法術中記載的效果。",
+						"你賦予最多十個你所能看見的生物對於一種你所選擇的傷害類型的抗力。",
+						"你賦予最多十個你所能看見的生物免疫於一種法術或其他魔法效果長達8小時。舉例來說，你可以使你和你的所有同伴免疫於{@creature 半巫妖}的生命吸取攻擊。",
+						"藉由強迫重骰任何在上一輪內進行的擲骰，你撤銷一件剛剛發生的事件（包括你的上一回合）。現實將自我形塑以適應新的擲骰結果。舉例來說，祈願術可以撤銷對手成功的豁免檢定、一個敵人的重擊、或一個友方失敗的豁免檢定。你可以強迫該次重骰具有優勢或劣勢，且你可以選擇要使用重骰後的擲骰結果或是使用原本的結果。"
 					]
 				},
-				"You might be able to achieve something beyond the scope of the above examples. State your wish to the DM as precisely as possible. The DM has great latitude in ruling what occurs in such an instance; the greater the wish, the greater the likelihood that something goes wrong. This spell might simply fail, the effect you desire might only be partly achieved, or you might suffer some unforeseen consequence as a result of how you worded the wish. For example, wishing that a villain were dead might propel you forward in time to a period when that villain is no longer alive, effectively removing you from the game. Similarly, wishing for a legendary magic item or artifact might instantly transport you to the presence of the item's current owner.",
-				"The stress of casting this spell to produce any effect other than duplicating another spell weakens you. After enduring that stress, each time you cast a spell until you finish a long rest, you take {@dice 1d10} necrotic damage per level of that spell. This damage can't be reduced or prevented in any way. In addition, your Strength drops to 3, if it isn't 3 or lower already, for {@dice 2d4} days. For each of those days that you spend resting and doing nothing more than light activity, your remaining recovery time decreases by 2 days. Finally, there is a {@chance 33} chance that you are unable to cast wish ever again if you suffer this stress."
+				"你也可以藉由此法術達成某件不在上述範例的結果。盡可能精準地向DM敘述你的願望。DM擁有充分的自由去裁定這個願望會導致什麼樣的結果；願望越大，結果就越有可能出錯。此法術可能會單純的失敗、你所想要的效果可能會被部分達成、或者你可能會因為你措辭表達願望的方式而承受某些無法預期的後果做為結果。舉例來說，許願讓一個反派死亡可能會讓你穿越到未來該反派已經死亡的時間段，將你實質意義上被從遊戲中除外。同樣的，許願獲得一個傳奇魔法物品或神器可能會立刻將你傳送到該物品當前持有者的面前。",
+				"施放此法術以產生任何複製其它法術以外的效果都將對你造成極大的負擔。在承受此負擔後，直到完成一次長休之前，你每施放一次法術，都會使你受到每環位{@dice 1d10}的死靈傷害。這個傷害無法被任何方式減少或避免。此外，若你的力量不為3或更低，則你的力量將減少至3，持續{@dice 2d4}天。在這幾天內，你每花費一整天休息且不進行任何除了輕省活動以外的事情，則你剩餘的回復時間將減少2天。最後，若你承受此負擔，則你將有{@chance 33}的機率再也無法施放祈願術。"
 			],
 			"page": 288,
 			"damageInflict": [

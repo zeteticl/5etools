@@ -1366,7 +1366,7 @@ EntryRenderer.splitByPropertyInjectors = EntryRenderer._splitByTagsBase("=");
 
 EntryRenderer.getEntryDice = function (entry, name) {
 	function getDiceAsStr () {
-		if (entry.successThresh) return `${entry.successThresh} percent`;
+		if (entry.successThresh) return `${entry.successThresh}％`;
 		else if (typeof entry.toRoll === "string") return entry.toRoll;
 		else {
 			// handle legacy format
@@ -2444,20 +2444,20 @@ EntryRenderer.monster = {
 				5: {
 					U: ["心靈遙控", "怪物定身術", "次元門", "石牆術", "力牆術"],
 					G: ["死雲術", "魅惑怪物|XGE", "修改記憶", "假象術", "幻景", "次元門"],
-					Z: ["鋼風打擊|XGE", "操控天氣", "control winds|XGE", "水體法球|XGE", "暴風法球|XGE", "潮湧浪|XGE"],
-					O: ["怪物定身術", "immolation|XGE", "火牆術", "高等隱形術", "次元門"],
-					S: ["寒冰錐", "冰風暴", "傳送法陣", "skill empowerment|XGE", "造物術", "魔鄧肯私人密室"]
+					Z: ["鋼風打擊|XGE", "操控天氣", "操控風相|XGE", "水體法球|XGE", "暴風法球|XGE", "潮湧浪|XGE"],
+					O: ["怪物定身術", "燔焚術|XGE", "火牆術", "高等隱形術", "次元門"],
+					S: ["寒冰錐", "冰風暴", "傳送法陣", "技能賦權|XGE", "造物術", "魔鄧肯私人密室"]
 				},
 				6: {
-					W: ["寒冰錐", "wall of ice"],
-					A: ["探知", "拉瑞心靈聯結", "Otto's irresistible dance", "通曉傳奇", "怪物定身術", "託夢術"]
+					W: ["寒冰錐", "冰牆術"],
+					A: ["探知", "拉瑞心靈聯結", "奧圖狂舞術", "通曉傳奇", "怪物定身術", "託夢術"]
 				},
 				7: {
 					B: ["律令痛苦|XGE", "死亡一指", "解離術", "怪物定身術"],
-					U: ["chain lightning", "forcecage", "傳送術", "etherealness"],
+					U: ["連環閃電", "forcecage", "傳送術", "跨入乙太界"],
 					G: ["project image", "mirage arcane", "prismatic spray", "傳送術"],
-					Z: ["whirlwind|XGE", "chain lightning", "scatter|XGE", "傳送術", "解離術", "閃電束"],
-					C: ["symbol", "simulacrum", "reverse gravity", "project image", "畢格比之掌", "mental prison|XGE", "偽裝術"],
+					Z: ["龍卷旋風|XGE", "連環閃電", "散射術|XGE", "傳送術", "解離術", "閃電束"],
+					C: ["symbol", "simulacrum", "reverse gravity", "project image", "畢格比之掌", "心靈監獄|XGE", "偽裝術"],
 					S: ["Otiluke's freezing sphere", "prismatic spray", "wall of ice", "contingency", "arcane gate"]
 				},
 				8: {
@@ -4751,7 +4751,7 @@ EntryRenderer.dice = {
 			const lbl = rolledBy.label && (!rolledBy.name || rolledBy.label.trim().toLowerCase() !== rolledBy.name.trim().toLowerCase()) ? rolledBy.label : null;
 
 			const totalPart = tree.successThresh
-				? `<span class="roll">${result > (tree.successMax || 100) - tree.successThresh ? "Success!" : "Failure"}</span>`
+				? `<span class="roll">${result > (tree.successMax || 100) - tree.successThresh ? "成功！" : "失敗"}</span>`
 				: `<span class="roll ${allMax ? "roll-max" : allMin ? "roll-min" : ""}">${result}</span>`;
 
 			const title = `${rolledBy.name ? `${rolledBy.name} \u2014 ` : ""}${lbl ? `${lbl}: ` : ""}${tree._asString}`;
@@ -5543,7 +5543,7 @@ EntryRenderer.stripTags = function (str) {
 								return `（充能 ${asNum}${asNum < 6 ? `\u20136` : ""}）`;
 							}
 							case "@chance": {
-								return displayText || `${rollText} percent`;
+								return displayText || `${rollText}％`;
 							}
 						}
 						throw new Error(`Unhandled tag: ${tag}`);

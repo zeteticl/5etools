@@ -541,7 +541,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "價值25金幣的銀粉，施法時消耗",
+					"text": "價值25金幣的銀粉，在施法時消耗",
 					"cost": 25,
 					"consume": true
 				}
@@ -1131,7 +1131,7 @@
 			"permanentEffects": true
 		},
 		{
-			"name": "Crown of Stars",
+			"name": "群星冠冕", "ENG_name": "Crown of Stars",
 			"source": "XGE",
 			"level": 7,
 			"school": "V",
@@ -1177,15 +1177,15 @@
 				]
 			},
 			"entries": [
-				"Seven star-like motes of light appear and orbit your head until the spell ends. You can use a bonus action to send one of the motes streaking toward one creature or object within 120 feet of you. When you do so, make a ranged spell attack. On a hit, the target takes {@dice 4d12} radiant damage. Whether you hit or miss, the mote is expended. The spell ends early if you expend the last mote.",
-				"If you have four or more motes remaining, they shed bright light in a 30-foot radius and dim light for an additional 30 feet. If you have one to three motes remaining, they shed dim light in a 30-foot radius."
+				"七顆星形的光點出現並環繞在你的頭頂直到此法術結束。你可以使用一個附贈動作以消耗一顆光點襲向距離你120呎內的一個生物或物體。當你這麼做時，進行一次遠程法術攻擊。若命中，目標將受到{@dice 4d12}光耀傷害。無論你命中與否，光點都將被消耗。當你消耗掉最後一顆光點時，此法術將提前結束。",
+				"若你留有四顆或更多的光點，則它們將散發出30呎半徑的明亮光照和再延伸30呎的微光光照。若你留有一至三顆的光點，則它們將散發出30呎半徑的微光光照。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 8th level or higher, the number of motes created increases by two for each slot level above 7th."
+						"當你使用8環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，你就可以再額外創造二顆光點。"
 					]
 				}
 			],
@@ -2558,7 +2558,7 @@
 			]
 		},
 		{
-			"name": "Illusory Dragon",
+			"name": "幻象巨龍", "ENG_name": "Illusory Dragon",
 			"source": "XGE",
 			"level": 8,
 			"school": "I",
@@ -2597,10 +2597,10 @@
 				]
 			},
 			"entries": [
-				"By gathering threads of shadow material from the Shadowfell, you create a Huge shadowy dragon in an unoccupied space that you can see within range. The illusion lasts for the spell's duration and occupies its space, as if it were a creature.",
-				"When the illusion appears, any of your enemies that can see it must succeed on a Wisdom saving throw or become {@condition frightened} of it for 1 minute. If a {@condition frightened} creature ends its turn in a location where it doesn't have line of sight to the illusion, it can repeat the saving throw, ending the effect on itself on a success.",
-				"As a bonus action on your turn, you can move the illusion up to 60 feet. At any point during its movement, you can cause it to exhale a blast of energy in a 60-foot cone originating from its space. When you create the dragon, choose a damage type: acid, cold, fire, lightning, necrotic, or poison. Each creature in the cone must make an Intelligence saving throw, taking {@dice 7d6} damage of the chosen damage type on a failed save, or half as much damage on a successful one.",
-				"The illusion is tangible because of the shadow stuff used to create it, but attacks miss it automatically, it succeeds on all saving throws, and it is immune to all damage and conditions. A creature that uses an action to examine the dragon can determine that it is an illusion by succeeding on an Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through it and has advantage on saving throws against its breath."
+				"藉由收集來自墮影冥界的陰影線材，你在射程內你所能看見的一處未被佔據空間創造出一個體型為巨型的陰影巨龍。這個幻象將在此法術的持續期間內持續存在，並佔據它所在的空間，就如同它是一個真實存在的生物。",
+				"當這個幻象出現時，任何能夠看見它的你的敵人都必須進行一次睿知豁免，否則被它{@condition 恐懼}長達1分鐘。若被{@condition 恐懼}的生物在一處它無法看見該幻象的位置結束它的回合，則它可以重複進行此豁免檢定，若成功則結束此法術對它的效果。",
+				"在你的回合以一個附贈動作，你可以移動該幻象最多60呎距離。在它移動期間的任何時候，你可以使它噴吐出一道以它所在空間延伸而出的60呎錐形能量爆風。當你創造這個巨龍時，選擇一種傷害類型：酸蝕、寒冰、火焰、閃電、死靈、或毒素。每個在錐形範圍內的生物都必須進行一次智力豁免，若豁免失敗將受到{@dice 7d6}所選類型的傷害，豁免成功則只受到一半的傷害。",
+				"由於該幻象是使用陰影物質所創造的，因此它是具有實體的。但對它進行的攻擊將會自動失手，它能夠成功通過所偶的豁免檢定，且免疫所有傷害和狀態。一個使用它的動作去檢視幻象的生物，可以透過成功通過一個對抗你法術豁免DC的智力（{@skill 調查}）檢定以辨識出它是幻象。如果一個生物辨識出這是幻象，該生物的視線將可以穿透該影像，且在對抗它噴吐攻擊的豁免檢定中具有優勢。"
 			],
 			"page": 157,
 			"damageInflict": [
@@ -3154,7 +3154,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "一小塊價值至少500金幣的精金，施法時消耗",
+					"text": "一小塊價值至少500金幣的精金，在施法時消耗",
 					"cost": 500,
 					"consume": true
 				}
@@ -3240,7 +3240,7 @@
 			"isHeal": true
 		},
 		{
-			"name": "Maddening Darkness",
+			"name": "發狂黑暗", "ENG_name": "Maddening Darkness",
 			"source": "XGE",
 			"level": 8,
 			"school": "V",
@@ -3259,7 +3259,7 @@
 			},
 			"components": {
 				"v": true,
-				"m": "a drop of pitch mixed with a drop of mercury"
+				"m": "一滴瀝青和一滴水銀的混合物"
 			},
 			"duration": [
 				{
@@ -3284,8 +3284,8 @@
 				]
 			},
 			"entries": [
-				"Magical darkness spreads from a point you choose within range to fill a 60-foot-radius sphere until the spell ends. The darkness spreads around corners. A creature with darkvision can't see through this darkness. Non-magical light, as well as light created by spells of 8th level or lower, can't illuminate the area.",
-				"Shrieks, gibbering, and mad laughter can be heard within the sphere. Whenever a creature starts its turn in the sphere, it must make a Wisdom saving throw, taking {@dice 8d8} psychic damage on a failed save, or half as much damage on a successful one."
+				"魔法性黑暗將從射程內你所選擇的一點蔓延，充斥在半徑60呎的球體範圍內直到此法術結束。這片黑暗會繞過轉角。擁有黑暗視覺的生物無法看透這片黑暗。非魔法光源、以及使用8環或以下法術創造的魔法光源也無法照亮這片區域。",
+				"在球體範圍內可以聽見尖叫、低語、以及瘋狂的大笑聲。每當一個生物在球體範圍內開始它的回合，它必須進行一次睿知豁免，豁免失敗將受到{@dice 8d8}精神傷害，豁免成功則只受到一半的傷害。"
 			],
 			"page": 160,
 			"damageInflict": [
@@ -3674,7 +3674,7 @@
 			]
 		},
 		{
-			"name": "Mighty Fortress",
+			"name": "宏偉堡壘", "ENG_name": "Mighty Fortress",
 			"source": "XGE",
 			"level": 8,
 			"school": "C",
@@ -3695,7 +3695,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a diamond worth at least 500 gp, which the spell consumes",
+					"text": "一個價值至少500金幣的鑽石，在施法時消耗",
 					"cost": 500,
 					"consume": true
 				}
@@ -3714,13 +3714,13 @@
 				]
 			},
 			"entries": [
-				"A fortress of stone erupts from a square area of ground of your choice that you can see within range. The area is 120 feet on each side, and it must not have any buildings or other structures on it. Any creatures in the area are harmlessly lifted up as the fortress rises.",
-				"The fortress has four turrets with square bases, each one 20 feet on a side and 30 feet tall, with one turret on each corner. The turrets are connected to each other by stone walls that are each 80 feet long, creating an enclosed area. Each wall is 1 foot thick and is composed of panels that are 10 feet wide and 20 feet tall. Each panel is contiguous with two other panels or one other panel and a turret. You can place up to four stone doors in the fortress's outer wall.",
-				"A small keep stands inside the enclosed area. The keep has a square base that is 50 feet on each side, and it has three floors with 10-foot-high ceilings. Each of the floors can be divided into as many rooms as you like, provided each room is at least 5 feet on each side. The floors of the keep are connected by stone staircases, its walls are 6 inches thick, and interior rooms can have stone doors or open archways as you choose. The keep is furnished and decorated however you like, and it contains sufficient food to serve a nine-course banquet for up to 100 people each day. Furnishings, food, and other objects created by this spell crumble to dust if removed from the fortress.",
-				"A staff of one hundred invisible servants obeys any command given to them by creatures you designate when you cast the spell. Each servant functions as if created by the unseen servant spell.",
-				"The walls, turrets, and keep are all made of stone that can be damaged. Each 10-foot-by-10-foot section of stone has AC 15 and 30 hit points per inch of thickness. It is immune to poison and psychic damage. Reducing a section of stone to 0 hit points destroys it and might cause connected sections to buckle and collapse at the DM's discretion.",
-				"After 7 days or when you cast this spell somewhere else, the fortress harmlessly crumbles and sinks back into the ground, leaving any creatures that were inside it safely on the ground.",
-				"Casting this spell on the same spot once every 7 days for a year makes the fortress permanent."
+				"一座石製堡壘將從射程內你所選且你能看見的方形地面區域升起。這個區域的各邊長為120呎，且在這片區域上不能有任何房屋或其他建築物。任何在這片區域內的生物都將在堡壘升起時被無害的抬起。",
+				"這座堡壘具有四座方形基底的塔樓，塔樓的各邊長為20呎，且高度為30呎，分別坐落在堡壘的角落。這些塔樓透過80呎長的石製城牆彼此連接著，形成一個封閉的區域。每面牆具有1呎厚度，且由10呎寬、20呎高的複數板塊所構成。每個板塊都與另外兩個板塊、或另一個板塊和塔樓彼此相連。你可以在堡壘的外牆上設置最多四扇石製城門。",
+				"一個小型的城堡主樓坐落在封閉的區域內。這座主樓具有各邊50呎的方形基底，且它擁有三層10呎高的樓層。每層樓都可以被你隨意分隔成任意數量的房間，但每個房間的各邊都必須至少為5呎長。主樓的樓層之間透過石製階梯相連接，它的牆壁為6吋厚，且內部房間可以具有石製門板或開放式拱門，由你選擇。主樓內的家具和裝潢可以按你所喜歡的布置，且它存有足夠的食物，能夠每天為最多100人提供九道菜的盛宴。任何有此法術創造出的家具、食物、或其他物體都將在被移出堡壘時粉碎成塵。",
+				"由一百個隱形僕役組成的職員，將服從任何由你在施放此法術時所指定的生物們給予它們的命令。每個僕役的功能都與{@spell 隱形僕役}法術所創造出來的僕役相同。",
+				"城牆、塔樓、和城堡主樓都事由可以被傷害的石頭所構成。每塊10呎x10呎的石製區塊都具有AC 15和每1吋厚度30點的生命值。它免疫於毒素和精神傷害。將一個區塊的生命值歸零將會摧毀它，並在DM的裁斷下可能會導致相連的區塊垮下並崩塌。",
+				"在7天之後，或當你在其他地方再次施放此法術，將會使這座堡壘無害地粉碎並沉入地表，並將任何原本在裡面的生物安全地留在地面。",
+				"透過每7天在相同地點施展此法術一整年，將會使這座堡壘永久存在。"
 			],
 			"page": 161,
 			"damageInflict": [
@@ -4078,7 +4078,7 @@
 			]
 		},
 		{
-			"name": "Psychic Scream",
+			"name": "精神尖嘯", "ENG_name": "Psychic Scream",
 			"source": "XGE",
 			"level": 9,
 			"school": "E",
@@ -4124,9 +4124,9 @@
 				]
 			},
 			"entries": [
-				"You unleash the power of your mind to blast the intellect of up to ten creatures of your choice that you can see within range. Creatures that have an Intelligence score of 2 or lower are unaffected.",
-				"Each target must make an Intelligence saving throw. On a failed save, a target takes {@dice 14d6} psychic damage and is {@condition 震懾}. On a successful save, a target takes half as much damage and isn't {@condition 震懾}. If a target is killed by this damage, its head explodes, assuming it has one.",
-				"A {@condition 震懾} target can make an Intelligence saving throw at the end of each of its turns. On a successful save, the stunning effect ends."
+				"你釋放你的心靈力量以轟炸射程內最多十個你所選且你能看見生物的智能思維。智力為2或更低的生物將不受此法術的影響。",
+				"每個目標都必須進行一次智力豁免。若豁免失敗，目標將受到{@dice 14d6}精神傷害且被{@condition 震懾}。若豁免成功，則目標只受到一半的傷害，且不會被{@condition 震懾}。若目標被此傷害給殺死，則若它有頭的話，它的頭將會爆炸。",
+				"一個被{@condition 震懾}的目標可以在它的每次回合結束時進行一次智力豁免。若豁免成功，則{@condition 震懾}的效果結束。"
 			],
 			"page": 163,
 			"damageInflict": [
@@ -5200,7 +5200,7 @@
 				]
 			},
 			"entries": [
-				"你選擇射程內一點，並使一陣精神能量在該處爆炸。任何處於以該點為中心20半徑球體範圍內的生物都必須進行一次智力豁免。一個智力為２或更低的生物將不受此法術的影響。一個豁免失敗的目標將受到{@dice 8d6}精神傷害，豁免成功則只受到一半的傷害。",
+				"你選擇射程內一點，並使一陣精神能量在該處爆炸。任何處於以該點為中心20半徑球體範圍內的生物都必須進行一次智力豁免。一個智力為2或更低的生物將不受此法術的影響。一個豁免失敗的目標將受到{@dice 8d6}精神傷害，豁免成功則只受到一半的傷害。",
 				"在豁免失敗之後，目標的思維將變得混亂長達1分鐘。在這段期間，它將骰一顆{@dice d6}，並將骰出來的數字減掉所有它攻擊檢定、屬性檢定、以及用以維持專注的體質豁免的結果。目標可以在它每個回合結束時進行一次智力豁免，若豁免成功則結束此效果對它的影響。"
 			],
 			"page": 167,
@@ -5213,7 +5213,7 @@
 			]
 		},
 		{
-			"name": "Temple of the Gods",
+			"name": "諸神殿堂", "ENG_name": "Temple of the Gods",
 			"source": "XGE",
 			"level": 7,
 			"school": "C",
@@ -5234,7 +5234,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a holy symbol worth at least 5 gp",
+					"text": "一個價值至少5金幣的聖徽",
 					"cost": 5
 				}
 			},
@@ -5256,14 +5256,14 @@
 				]
 			},
 			"entries": [
-				"You cause a temple to shimmer into existence on ground you can see within range. The temple must fit within an unoccupied cube of space, up to 120 feet on each side. The temple remains until the spell ends. It is dedicated to whatever god, pantheon, or philosophy is represented by the holy symbol used in the casting.",
-				"You make all decisions about the temple's appearance. The interior is enclosed by a floor, walls, and a roof, with one door granting access to the interior and as many windows as you wish. Only you and any creatures you designate when you cast the spell can open or close the door.",
-				"The temple's interior is an open space with an idol or altar at one end. You decide whether the temple is illuminated and whether that illumination is bright light or dim light. The smell of burning incense fills the air within, and the temperature is mild.",
-				"The temple opposes types of creatures you choose when you cast this spell. Choose one or more of the following: celestials, elementals, fey, fiends, or undead. If a creature of the chosen type attempts to enter the temple, that creature must make a Charisma saving throw. On a failed save, it can't enter the temple for 24 hours. Even if the creature can enter the temple, the magic there hinders it; whenever it makes an attack roll, an ability check, or a saving throw inside the temple, it must roll a {@dice d4} and subtract the number rolled from the {@dice d20} roll.",
-				"In addition, the sensors created by divination spells can't appear inside the temple, and creatures within can't be targeted by divination spells.",
-				"Finally, whenever any creature in the temple regains hit points from a spell of 1st level or higher, the creature regains additional hit points equal to your Wisdom modifier (minimum 1 hit point).",
-				"The temple is made from opaque magical force that extends into the Ethereal Plane, thus blocking ethereal travel into the temple's interior. Nothing can physically pass through the temple's exterior. It can't be dispelled by dispel magic, and antimagic field has no effect on it. A {@spell disintegrate} spell destroys the temple instantly.",
-				"Casting this spell on the same spot every day for a year makes this effect permanent."
+				"你使一道神殿在閃爍的光輝中出現在射程內你所能看見的一處地面上。這座神殿必須能夠容納於一處未被佔據的立方體空間，各邊最多120呎長。這座神殿會維持其存在直到此法術結束。它將供奉於任何你在施法時所用聖輝所代表的神祇、諸神、或哲學概念。",
+				"你可以決定關於這座神殿的所有外觀設定。它的內部由地板、牆壁、和屋頂所包圍，且有一扇用以進入內部的門，以及你所希望數量的窗戶。只有你和任何你在施放此法術時指定的生物可以開啟或關上這扇門。",
+				"這座神殿的內部是個開放空間，在其中一端擺有神像或祭壇。你決定神殿內是否具有照明、且其光線照明為明亮光照或者微光光照。焚香的香氣瀰漫在內部，且其溫度溫暖舒適。",
+				"這座神殿會反抗你在施放此法術時所選擇的生物類型。從以下選擇一種或多種：天界生物、元素、精類、邪魔、或不死生物。若一個所選類型的生物嘗試進入此神殿，則該生物必須進行一次魅力豁免。若豁免失敗，則該生物在24小時內將無法進入此神殿。即使該生物能夠進入此神殿，神殿內的魔法也會妨礙它；每當它在神殿內部進行攻擊檢定、屬性檢定、或豁免檢定，它都必須骰一顆{@dice d4}，並將骰出來的數字減掉其{@dice d20}骰的結果。",
+				"此外，預言系法術所創造出的感應器無法出現在神殿內，且神殿內的生物無法成為預言系法術的目標。",
+				"最後，每當任何神殿內的生物因為1環或更高環位的法術而回復生命值時，該生物將額外回復等同於你睿知調整值的生命值（最少1點生命值）。",
+				"這座神殿是由不透光的魔法力場所構成，且會延伸至乙太位面，並因此阻止任何透過乙太旅行進入神殿內部的行為。沒有任何事物能夠物理性的穿過這座神殿的外部。它不會被{@spell 解除魔法}給解消，且{@spell 反魔法結界}對它沒有任何效果。然而，{@spell 解離術}法術可以在瞬間摧毀這座神殿。",
+				"透過每天在相同地點施展此法術一整年，你可以使此效果永久持續。"
 			],
 			"page": 167,
 			"savingThrow": [
@@ -6145,7 +6145,7 @@
 			]
 		},
 		{
-			"name": "Whirlwind",
+			"name": "龍卷旋風", "ENG_name": "Whirlwind",
 			"source": "XGE",
 			"level": 7,
 			"school": "V",
@@ -6164,7 +6164,7 @@
 			},
 			"components": {
 				"v": true,
-				"m": "a piece of straw"
+				"m": "一根稻草"
 			},
 			"duration": [
 				{
@@ -6193,9 +6193,9 @@
 				]
 			},
 			"entries": [
-				"A whirlwind howls down to a point that you can see on the ground within range. The whirlwind is a 10-foot-radius, 30-foot-high cylinder centered on that point. Until the spell ends, you can use your action to move the whirlwind up to 30 feet in any direction along the ground. The whirlwind sucks up any Medium or smaller objects that aren't secured to anything and that aren't worn or carried by anyone.",
-				"A creature must make a Dexterity saving throw the first time on a turn that it enters the whirlwind or that the whirlwind enters its space, including when the whirlwind first appears. A creature takes {@dice 10d6} bludgeoning damage on a failed save, or half as much damage on a successful one. In addition, a Large or smaller creature that fails the save must succeed on a Strength saving throw or become {@condition 束縛} in the whirlwind until the spell ends. When a creature starts its turn {@condition 束縛} by the whirlwind, the creature is pulled 5 feet higher inside it, unless the creature is at the top. A {@condition 束縛} creature moves with the whirlwind and falls when the spell ends, unless the creature has some means to stay aloft.",
-				"A {@condition 束縛} creature can use an action to make a Strength or Dexterity check against your spell save DC. If successful, the creature is no longer {@condition 束縛} by the whirlwind and is hurled {@dice 3d6 × 10} feet away from it in a random direction."
+				"一道旋風在射程內你所能看見地面上的一點呼嘯而現。這道旋風是一個以該點為中心，10呎半徑、30呎高的圓柱體。直到此法術結束前，你可以使用你的動作以讓這道旋風沿著地面向任意方向移動最多30呎。這道旋風會吸起任何未被固定、且未被任何人穿戴或攜帶的中型或更小的物體。",
+				"當一個生物在一個回合中第一次進入旋風區域、或當旋風進入它所在的空間（包括旋風初次出現時）時，它都必須進行一次敏捷豁免。一個豁免失敗的生物將受到{@dice 10d6}鈍擊傷害，豁免成功則只受到一半的傷害。此外，一個在該豁免中失敗，體型為大型或更小的生物，必須再成功通過一次力量豁免，否則在旋風中被{@condition 束縛}直到此法術結束。當一個被{@condition 束縛}的生物在旋風中開始它的回合，除非該生物已經位於頂端，否則它將被向上拖動5呎。一個被{@condition 束縛}的生物將隨著旋風移動，並在此法術結束時墜落，除非該生物有其他方式能夠使自己維持浮空。",
+				"一個被{@condition 束縛}的生物可以使用一個動作進行一次對抗你法術豁免DC的力量或敏捷檢定。若檢定成功，則該生物將不再被旋風{@condition 束縛}，且被往隨機方向拋離{@dice 3d6 × 10}尺距離。"
 			],
 			"page": 171,
 			"damageInflict": [
