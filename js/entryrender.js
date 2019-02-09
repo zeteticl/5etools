@@ -2454,14 +2454,14 @@ EntryRenderer.monster = {
 				},
 				7: {
 					B: ["律令痛苦|XGE", "死亡一指", "解離術", "怪物定身術"],
-					U: ["連環閃電", "forcecage", "傳送術", "跨入乙太界"],
-					G: ["project image", "mirage arcane", "prismatic spray", "傳送術"],
+					U: ["連環閃電", "力場監牢", "傳送術", "跨入乙太界"],
+					G: ["投影術", "海市蜃樓", "虹光噴射", "傳送術"],
 					Z: ["龍卷旋風|XGE", "連環閃電", "散射術|XGE", "傳送術", "解離術", "閃電束"],
-					C: ["symbol", "simulacrum", "reverse gravity", "project image", "畢格比之掌", "心靈監獄|XGE", "偽裝術"],
-					S: ["Otiluke's freezing sphere", "prismatic spray", "wall of ice", "contingency", "arcane gate"]
+					C: ["徽記術", "擬像術", "重力反轉", "投影術", "畢格比之掌", "心靈監獄|XGE", "偽裝術"],
+					S: ["歐提路克冰凍法球", "虹光噴射", "冰牆術", "觸發術", "祕法之門"]
 				},
 				8: {
-					O: ["sunburst", "delayed blast fireball", "antimagic field", "傳送術", "法術無效結界", "maze"]
+					O: ["陽炎爆", "延遲爆裂火球", "反魔法結界", "傳送術", "法術無效結界", "迷宮術"]
 				}
 			};
 

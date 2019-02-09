@@ -455,7 +455,7 @@
 			"page": 212
 		},
 		{
-			"name": "動物形體", "name": "Animal Shapes",
+			"name": "動物化形", "ENG_name": "Animal Shapes",
 			"level": 8,
 			"school": "T",
 			"time": [
@@ -495,9 +495,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Your magic turns others into beasts. Choose any number of willing creatures that you can see within range. You transform each target into the form of a Large or smaller beast with a challenge rating of 4 or lower. On subsequent turns, you can use your action to transform affected creatures into new forms.",
-				"The transformation lasts for the duration for each target, or until the target drops to 0 hit points or dies. You can choose a different form for each target. A target's game statistics are replaced by the statistics of the chosen beast, though the target retains its alignment and Intelligence, Wisdom, and Charisma scores. The target assumes the hit points of its new form, and when it reverts to its normal form, it returns to the number of hit points it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form. As long as the excess damage doesn't reduce the creature's normal form to 0 hit points, it isn't knocked {@condition unconscious}. The creature is limited in the actions it can perform by the nature of its new form, and it can't speak or cast spells.",
-				"The target's gear melds into the new form. The target can't activate, wield, or otherwise benefit from any of its equipment."
+				"你的魔法將其它生物轉變成野獸。選擇射程內任意個你所能看見的生物。你將每個目標轉變成挑戰等級為4或更低，體型為大型或更小的野獸。在後續的回合中，你可以使用你的動作以將受影響的生物變回它們原本的型態。",
+				"每個目標的轉變都將在法術持續期間內持續生效，或直到目標的生命值歸零或死亡。你可以為每個目標各自選擇不同的型態。目標的遊戲數據將被所選野獸的數據資料給取代，但目標保留它的陣營、智力、睿知、和魅力值。目標取用它新型態的生命值，且當它回復它原本的型態時，該生物將取回它轉變之前的生命值。若它是因為生命值歸零而回復，則任何溢出傷害都將被帶到它原本的型態，扣減它原本的生命值。只要這個溢出傷害沒有讓該生物原本型態的生命值歸零，它就不會被擊倒{@condition 昏迷}。該生物被限制只能進行它新型態天生所能進行的動作，且它無法說話、施放法術、或採取任何其他需要雙手或語言的動作。",
+				"目標的裝備將被融入新形態之中。目標無法啟動、使用、揮舞、或透過其他方式來從它的裝備獲得好處。"
 			],
 			"page": 212
 		},
@@ -824,7 +824,7 @@
 			"page": 213
 		},
 		{
-			"name": "反魔法結界", "name": "Antimagic Field",
+			"name": "反魔法結界", "ENG_name": "Antimagic Field",
 			"level": 8,
 			"school": "A",
 			"time": [
@@ -843,7 +843,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a pinch of powdered iron or iron filings"
+				"m": "一撮鐵粉或鐵屑"
 			},
 			"duration": [
 				{
@@ -869,63 +869,63 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A 10-foot-radius invisible sphere of antimagic surrounds you. This area is divorced from the magical energy that suffuses the multiverse. Within the sphere, spells can't be cast, summoned creatures disappear, and even magic items become mundane. Until the spell ends, the sphere moves with you, centered on you.",
-				"Spells and other magical effects, except those created by an artifact or a deity, are suppressed in the sphere and can't protrude into it. A slot expended to cast a suppressed spell is consumed. While an effect is suppressed, it doesn't function, but the time it spends suppressed counts against its duration.",
+				"一個10呎半徑的隱形反魔法球體環繞著你。這個區域將被從遍布魔法能量的多元宇宙中分離。在這個球體內，法術無法被施展、被召喚的生物將會消失、甚至連魔法物品也會變成凡物。直到此法術結束，這個球體會隨著你移動，以你為中心。",
+				"法術和其他魔法效果，除了那些由神器或神祇創造的之外，在球體內都將被壓制，無法進入球體。一個用以施放被壓制法術的法術位仍會被消耗。當一個效果被壓制時，它不會發揮作用，但它在被壓制的期間仍會被算在它的持續時間內。",
 				{
 					"type": "entries",
-					"name": "Targeted Effects",
+					"name": "目標效果",
 					"entries": [
-						"Spells and other magical effects, such as magic missile and charm person, that target a creature or an object in the sphere have no effect on that target."
+						"以球體內一個生物或物體為目標的法術和其他魔法效果，像是{@spell 魔法飛彈}和{@spell 魅惑人類}，將不會對該目標產生任何效果。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Areas of Magic",
+					"name": "範圍魔法",
 					"entries": [
-						"The area of another spell or magical effect, such as {@spell fireball}, can't extend into the sphere. If the sphere overlaps an area of magic, the part of the area that is covered by the sphere is suppressed. For example, the flames created by a wall of fire are suppressed within the sphere, creating a gap in the wall if the overlap is large enough."
+						"其他法術或魔法效果的效果範圍，像是{@spell 火球術}，無法延伸進球體的範圍內。若這個球體與另一個魔法的範圍重疊，則被球體範圍覆蓋的一部分區域將被壓制。舉例來說，{@spell 火牆術}創造出來的火焰將在球體內被壓制，若重疊範圍夠大的話，甚至會在這面火牆上產生一道缺口。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Spells",
+					"name": "法術",
 					"entries": [
-						"Any active spell or other magical effect on a creature or an object in the sphere is suppressed while the creature or object is in it."
+						"當一個生物或物體處於球體內，任何作用於該生物或物體的法術或其他魔法效果將被壓制。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Magic Items",
+					"name": "魔法物品",
 					"entries": [
-						"The properties and powers of magic items are suppressed in the sphere. For example, a +1 longsword in the sphere functions as a nonmagical longsword.",
-						"A magic weapon's properties and powers are suppressed if it is used against a target in the sphere or wielded by an attacker in the sphere. If a magic weapon or a piece of magic ammunition fully leaves the sphere (for example, if you fire a magic arrow or throw a magic spear at a target outside the sphere), the magic of the item ceases to be suppressed as soon as it exits."
+						"在球體內，魔法物品的屬性和力量將被壓制。舉例來說，一把在球體內的{@item 長劍+1}將被做為一把非魔法{@item 長劍|phb}作用。",
+						"若一把魔法武器被用於對付球體內的一個目標、或被球體內的一個攻擊者所持用，則它的屬性和力量都將被壓制。若一把魔法武器或一發魔法彈藥完全脫離球體（舉例來說，若你像球體外的一個目標發射一發魔法箭矢或投擲一把魔法矛），則該物體上的魔法將在離開球體的瞬間不再被壓制。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Magical Travel",
+					"name": "魔法旅行",
 					"entries": [
-						"Teleportation and planar travel fail to work in the sphere, whether the sphere is the destination or the departure point for such magical travel. A portal to another location, world, or plane of existence, as well as an opening to an extradimensional space such as that created by the rope trick spell, temporarily closes while in the sphere."
+						"在球體內，傳送和位面旅行將無法發揮作用，無論這個球體是這類魔法旅行的終點還是起點。一個通往另一個場所、世界、或存在位面的傳送門、以及像是藉由{@spell 通天繩}法術創造的通往異次元空間的入口，將在處於球體內時被暫時關閉。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Creatures and Objects",
+					"name": "生物和物體",
 					"entries": [
-						"A creature or object summoned or created by magic temporarily winks out of existence in the sphere. Such a creature instantly reappears once the space the creature occupied is no longer within the sphere."
+						"一個被魔法召喚或創造的生物或物體將在處於球體內時暫時地消失不見。該生物會在它所佔據的空間不再處於球體內時立即重新出現。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Dispel Magic",
+					"name": "解除魔法",
 					"entries": [
-						"Spells and magical effects such as {@spell dispel magic} have no effect on the sphere. Likewise, the spheres created by different {@spell antimagic field} spells don't nullify each other."
+						"在球體內，像是{@spell 解除魔法}的法術和魔法效果將不會產生任何效果。同樣的，由另一個{@spell 反魔法結界}法術創造出的球體不會彼此抵消。"
 					]
 				}
 			],
 			"page": 213
 		},
 		{
-			"name": "Antipathy/Sympathy",
+			"name": "嫌惡/共感術", "ENG_name": "Antipathy/Sympathy",
 			"level": 8,
 			"school": "E",
 			"time": [
@@ -944,7 +944,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "either a lump of alum soaked in vinegar for the antipathy effect or a drop of honey for the sympathy effect"
+				"m": "嫌惡效果則為一團浸醋的明礬，共感效果則為一滴蜂蜜"
 			},
 			"duration": [
 				{
@@ -969,30 +969,30 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"This spell attracts or repels creatures of your choice. You target something within range, either a Huge or smaller object or creature or an area that is no larger than a 200-foot cube. Then specify a kind of intelligent creature, such as red dragons, goblins, or vampires. You invest the target with an aura that either attracts or repels the specified creatures for the duration. Choose antipathy or sympathy as the aura's effect.",
+				"此法術將吸引或驅趕你所選擇的生物。你選擇射程內一個巨型或更小的物體或生物、或一片不超過200呎邊長立方體的區域做為目標。接著指定一種智慧生物，像是紅龍、哥布林、或吸血鬼。你為目標注入能夠在法術持續期間吸引或驅散指定生物的靈光。選擇厭惡或共感做為這道靈光的效果。",
 				{
 					"type": "entries",
-					"name": "Antipathy",
+					"name": "嫌惡",
 					"entries": [
-						"The enchantment causes creatures of the kind you designated to feel an intense urge to leave the area and avoid the target. When such a creature can see the target or comes within 60 feet of it, the creature must succeed on a Wisdom saving throw or become {@condition 恐懼}. The creature remains {@condition 恐懼} while it can see the target or is within 60 feet of it. While {@condition 恐懼} by the target, the creature must use its movement to move to the nearest safe spot from which it can't see the target. If the creature moves more than 60 feet from the target and can't see it, the creature is no longer {@condition 恐懼}, but the creature becomes {@condition 恐懼} again if it regains sight of the target or moves within 60 feet of it."
+						"這個魔法將使你指定的生物種類感受到一陣強烈的衝動以離開這個區域並避開目標。當這類生物能夠看見目標、或來到距離它60呎內的位置時，該生物必須成功通過一次睿知豁免，否則陷入{@condition 恐懼}。該生物將在它可以看見目標或距離目標60呎內時維持{@condition 恐懼}狀態。當{@condition 恐懼}於目標時，該生物必須使用它的移動以移動到最近一處它無法看見目標的位置。若該生物移動超過目標60呎距離且它無法看見目標時，該生物將不再{@condition 恐懼}，但若它再次看見目標或移動到目標60呎內，則該生物將再次陷入{@condition 恐懼}狀態。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Sympathy",
+					"name": "共感",
 					"entries": [
-						"The enchantment causes the specified creatures to feel an intense urge to approach the target while within 60 feet of it or able to see it. When such a creature can see the target or comes within 60 feet of it, the creature must succeed on a Wisdom saving throw or use its movement on each of its turns to enter the area or move within reach of the target. When the creature has done so, it can't willingly move away from the target.",
-						"If the target damages or otherwise harms an affected creature, the affected creature can make a Wisdom saving throw to end the effect, as described below."
+						"這個魔法將使指定的生物在能夠看見目標、或來到距離它60呎內的位置時感受到一陣強烈的衝動以接近目標。當這類生物能夠看見目標、或來到距離它60呎內的位置時，該生物必須成功通過一次睿知豁免，否則必須在它的每個回合使用它的移動以進入該區域或移動到可以觸及目標的範圍內。當該生物這麼做後，它將無法自願移動遠離目標。",
+						"若目標傷害或以其他方式危害一個受影響的生物，受影響的生物可以進行一次睿知豁免以結束此效果，見下文。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Ending the Effect",
+					"name": "終止效果",
 					"entries": [
-						"If an affected creature ends its turn while not within 60 feet of the target or able to see it, the creature makes a Wisdom saving throw. On a successful save, the creature is no longer affected by the target and recognizes the feeling of repugnance or attraction as magical. In addition, a creature affected by the spell is allowed another Wisdom saving throw every 24 hours while the spell persists."
+						"若一個受影響的生物在無法看見目標、或不在其60呎內的位置結束它的回合，該生物可以進行一次睿知豁免。若豁免成功，該生物將不再受到目標的影響，並意識到這陣厭惡感或吸引力是因為魔法而產生的。此外，在法術持續期間，一個受此法術影響的生物可以每24小時再進行一次睿知豁免。"
 					]
 				},
-				"A creature that successfully saves against this effect is immune to it for 1 minute, after which time it can be affected again."
+				"一個成功通過對抗此效果的豁免檢定的生物將免疫於此效果長達1分鐘，在這段時間後，它可以再次被此效果影響。"
 			],
 			"page": 214,
 			"savingThrow": [
@@ -2708,7 +2708,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a sprinkling of holy water"
+				"m": "一點聖水"
 			},
 			"duration": [
 				{
@@ -4240,7 +4240,7 @@
 			"page": 222
 		},
 		{
-			"name": "Clone",
+			"name": "克隆術", "ENG_name": "Clone",
 			"level": 8,
 			"school": "N",
 			"time": [
@@ -4259,7 +4259,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a diamond worth at least 1,000 gp and at least 1 cubic inch of flesh of the creature that is to be cloned, which the spell consumes, and a vessel worth at least 2,000 gp that has a sealable lid and is large enough to hold a Medium creature, such as a huge urn, coffin, mud-filled cyst in the ground, or crystal container filled with salt water",
+					"text": "一個價值至少1,000金幣的鑽石和一塊來自被克隆生物至少1立方吋的血肉，在施法時消耗；一個價值至少2,000金幣的容器，具有密封蓋和足以容納一個中型生物的容量，例如巨型缸甕、棺材、埋在地底的泥封囊艙、或裝滿鹽水的水晶容器。",
 					"cost": 1000,
 					"consume": true
 				}
@@ -4279,8 +4279,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"This spell grows an inert duplicate of a living creature as a safeguard against death. This clone forms inside a sealed vessel and grows to full size and maturity after 120 days; you can also choose to have the clone be a younger version of the same creature. It remains inert and endures indefinitely, as long as its vessel remains undisturbed.",
-				"At any time after the clone matures, if the original creature dies, its soul transfers to the clone, provided that the soul is free and willing to return. The clone is physically identical to the original and has the same personality, memories, and abilities, but none of the original's equipment. The original creature's physical remains, if they still exist, become inert and can't thereafter be restored to life, since the creature's soul is elsewhere."
+				"此法術將培養一個活著生物的無活性複製體做為對抗死亡的防護措施。這個克隆體將在密封容器內成形，並在120天後長成完整體型並生長成熟；你也可以選擇讓這個克隆體成為該生物的年輕版本。只要它的容器保持不受擾動，克隆體將維持無活性的狀態並永久存在。",
+				"在克隆體成熟後的任何時候，若原本的生物死亡，只要它的靈魂不受束縛且自願返回，則它的靈魂將轉移到克隆體身上。這個克隆體在生理上與原本的生物相同，且具有相同的個性、記憶、以及能力，但並沒有它原本的裝備。原本生物的身體殘骸若仍然存在，將因此失去活性，且因為該生物的靈魂已經在別處而無法被復活。"
 			],
 			"page": 222,
 			"permanentEffects": true
@@ -7779,7 +7779,7 @@
 			"page": 230
 		},
 		{
-			"name": "Delayed Blast Fireball",
+			"name": "延遲爆裂火球", "ENG_name": "Delayed Blast Fireball",
 			"level": 7,
 			"school": "V",
 			"time": [
@@ -7798,7 +7798,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a tiny ball of bat guano and sulfur"
+				"m": "一小球的蝙蝠糞便和硫磺"
 			},
 			"duration": [
 				{
@@ -7824,17 +7824,17 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A beam of yellow light flashes from your pointing finger, then condenses to linger at a chosen point within range as a glowing bead for the duration. When the spell ends, either because your concentration is broken or because you decide to end it, the bead blossoms with a low roar into an explosion of flame that spreads around corners. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A creature takes fire damage equal to the total accumulated damage on a failed save, or half as much damage on a successful one.",
-				"The spell's base damage is {@dice 12d6}. If at the end of your turn the bead has not yet detonated, the damage increases by {@dice 1d6}.",
-				"If the glowing bead is touched before the interval has expired, the creature touching it must make a Dexterity saving throw. On a failed save, the spell ends immediately, causing the bead to erupt in flame. On a successful save, the creature can throw the bead up to 40 feet. When it strikes a creature or a solid object, the spell ends, and the bead explodes.",
-				"The fire damages objects in the area and ignites flammable objects that aren't being worn or carried."
+				"一道黃色光束從你的指尖閃現，接著在射程內你所選的一點凝聚成一個閃爍的光珠，在法術持續期間內持續存在。當此法術結束時、你的專注被中斷、或你決定結束它時，這個小珠將伴隨著轟隆低鳴聲炸開成一陣會繞過轉角的爆炸烈焰。每個在以該點為中心20呎半徑球體範圍內的生物都必須進行一次敏捷豁免。一個豁免失敗的目標將受到等同於積累傷害總和的火焰傷害，豁免成功則只受到一半的傷害。",
+				"此法術的基礎傷害為{@dice 12d6}。若這個光珠在你的回合結束時尚未被引爆，則傷害將再增加{@dice 1d6}。",
+				"若這個光珠在引爆之前被碰觸，則碰觸的生物必須進行一次敏捷豁免。若豁免失敗，則此法術立即結束，並使光珠因而引爆。若豁免成功，則該生物可以將光珠投擲最多40呎距離。當它擊中一個生物或一個固體物體，則此法術將結束，且光珠將被引爆。",
+				"這團火焰會傷害範圍內的物體，並點燃範圍內所有未被穿戴或攜帶的可燃物體。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 8th level or higher, the base damage increases by {@scaledice 12d6|7-9|1d6} for each slot level above 7th."
+						"當你使用8環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，基礎傷害便會再增加{@scaledice 12d6|7-9|1d6}。"
 					]
 				}
 			],
@@ -7847,7 +7847,7 @@
 			]
 		},
 		{
-			"name": "Demiplane",
+			"name": "創造半位面", "ENG_name": "Demiplane",
 			"level": 8,
 			"school": "C",
 			"time": [
@@ -7889,8 +7889,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You create a shadowy door on a flat solid surface that you can see within range. The door is large enough to allow Medium creatures to pass through unhindered. When opened, the door leads to a demiplane that appears to be an empty room 30 feet in each dimension, made of wood or stone. When the spell ends, the door disappears, and any creatures or objects inside the demiplane remain trapped there, as the door also disappears from the other side.",
-				"Each time you cast this spell, you can create a new demiplane, or have the shadowy door connect to a demiplane you created with a previous casting of this spell. Additionally, if you know the nature and contents of a demiplane created by a casting of this spell by another creature, you can have the shadowy door connect to its demiplane instead."
+				"你在射程內你所能看見的一面平坦固體表面上創造一扇幽暗朦朧的門。這扇門的大小足以讓體型為中型的生物不受阻礙的穿過。當這扇門被開啟，它將通向一個半位面，呈現出一個由木頭或石質製造，各邊30呎寬的空房間。當此法術結束時，這扇門將消失，且隨著另一側的門一起消失，任何仍在半位面內的生物和物體將繼續被困在該處。",
+				"每次你施放此法術時，你可以創造一個新的半位面，或讓這道幽影之門連接上你過去施放此法術時創造的半位面。此外，若你知曉一個由其他生物透過施放此法術所創造的半位面的性質和內容，則你也可以讓這扇幽影之門改為連接上它的半位面。"
 			],
 			"page": 231,
 			"permanentEffects": true
@@ -9631,7 +9631,7 @@
 			"page": 236
 		},
 		{
-			"name": "Earthquake",
+			"name": "地震術", "ENG_name": "Earthquake",
 			"level": 8,
 			"school": "V",
 			"time": [
@@ -9650,7 +9650,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a pinch of dirt, a piece of rock, and a lump of clay"
+				"m": "一撮泥土、一塊岩石、和一團黏土"
 			},
 			"duration": [
 				{
@@ -9680,23 +9680,23 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You create a seismic disturbance at a point on the ground that you can see within range. For the duration, an intense tremor rips through the ground in a 100-foot-radius circle centered on that point and shakes creatures and structures in contact with the ground in that area.",
-				"The ground in the area becomes difficult terrain. Each creature on the ground that is concentrating must make a Constitution saving throw. On a failed save, the creature's concentration is broken.",
-				"When you cast this spell and at the end of each turn you spend concentrating on it, each creature on the ground in the area must make a Dexterity saving throw. On a failed save, the creature is knocked {@condition 伏地}.",
-				"This spell can have additional effects depending on the terrain in the area, as determined by the DM.",
+				"你在射程內你所能看見地面上的一點創造出一陣地震擾動。在法術持續期間，一陣劇烈的震動將撕扯著以該點為中心100呎半徑範圍內的地面，並撼動所有與該區域地面相接的生物和建築物。",
+				"區域內的地面將變為困難地形。每個地面上正專注於法術的生物都必須進行一次體質豁免。若豁免失敗，則該生物的專注將被中斷。",
+				"當你施放此法術，以及當你在你的每個回合結束仍專注於此法術時，每個在該區域內地面上的生物都必須進行一次敏捷豁免。若豁免失敗，則該生物將被擊倒{@condition 伏地}。",
+				"根據該區域的地形，此法術可以具有額外的效果，由DM決定。",
 				{
 					"type": "entries",
-					"name": "Fissures",
+					"name": "裂縫",
 					"entries": [
-						"Fissures open throughout the spell's area at the start of your next turn after you cast the spell. A total of {@dice 1d6} such fissures open in locations chosen by the DM. Each is {@dice 1d10 × 10} feet deep, 10 feet wide, and extends from one edge of the spell's area to the opposite side. A creature standing on a spot where a fissure opens must succeed on a Dexterity saving throw or fall in. A creature that successfully saves moves with the fissure's edge as it opens.",
-						"A fissure that opens beneath a structure causes it to automatically collapse (see below)."
+						"在你施放此法術後的下個回合開始時，此法術範圍內的地面將被撕扯出數個裂縫。總共{@dice 1d6}個這樣的裂縫出現在DM所選的位置。每個裂縫具有{@dice 1d10 × 10}呎深度、10呎寬，且從此法術範圍的一側延伸至另一惻。一個站在裂縫出現位置的生物必須成功通過一次敏捷豁免，否則將墜入其中。一個成功通過此豁免的生物則在裂縫出現時移動到它的邊緣。",
+						"一個在建築物下方出現的裂縫將使該建築物自動崩塌（見下文）。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Structures",
+					"name": "建築物",
 					"entries": [
-						"The tremor deals 50 bludgeoning damage to any structure in contact with the ground in the area when you cast the spell and at the start of each of your turns until the spell ends. If a structure drops to 0 hit points, it collapses and potentially damages nearby creatures. A creature within half the distance of a structure's height must make a Dexterity saving throw. On a failed save, the creature takes {@dice 5d6} bludgeoning damage, is knocked {@condition 伏地}, and is buried in the rubble, requiring a DC 20 Strength (Athletics) check as an action to escape. The DM can adjust the DC higher or lower, depending on the nature of the rubble. On a successful save, the creature takes half as much damage and doesn't fall {@condition 伏地} or become buried."
+						"當你施放此法術，以及直到此法術結束前的每個你的回合開始時，這陣震動將對任何與區域內地面相接的建築物造成50點鈍擊傷害。若一棟建築物的生命值歸零，它將崩塌且可能因此傷害附近的生物。一個與該建築物之間的距離在建築物高度一半之內的生物必須進行一次敏捷豁免。若豁免失敗，該生物將受到{@dice 5d6}鈍擊傷害，被擊倒{@condition 伏地}，且被瓦礫堆給掩埋，需要以一個動作進行一次DC 20的力量（{@skill 運動}）檢定才有辦法逃脫。根據瓦礫堆的性質，DM可以調整這個檢定的DC。若豁免成功，則該生物將只受到一半的傷害，且不會{@condition 伏地}或被掩埋。"
 					]
 				}
 			],
@@ -12538,7 +12538,7 @@
 			"permanentEffects": true
 		},
 		{
-			"name": "Forcecage",
+			"name": "力場監牢", "ENG_name": "Forcecage",
 			"level": 7,
 			"school": "V",
 			"time": [
@@ -12558,7 +12558,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "ruby dust worth 1,500 gp",
+					"text": "價值1,500金幣的紅寶石塵",
 					"cost": 1500
 				}
 			},
@@ -12589,12 +12589,12 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"An immobile, invisible, cube-shaped prison composed of magical force springs into existence around an area you choose within range. The prison can be a cage or a solid box as you choose.",
-				"A prison in the shape of a cage can be up to 20 feet on a side and is made from 1/2-inch diameter bars spaced 1/2 inch apart.",
-				"A prison in the shape of a box can be up to 10 feet on a side, creating a solid barrier that prevents any matter from passing through it and blocking any spells cast into or out from the area.",
-				"When you cast the spell, any creature that is completely inside the cage's area is trapped. Creatures only partially within the area, or those too large to fit inside the area, are pushed away from the center of the area until they are completely outside the area.",
-				"A creature inside the cage can't leave it by nonmagical means. If the creature tries to use teleportation or interplanar travel to leave the cage, it must first make a Charisma saving throw. On a success, the creature can use that magic to exit the cage. On a failure, the creature can't exit the cage and wastes the use of the spell or effect. The cage also extends into the Ethereal Plane, blocking ethereal travel.",
-				"This spell can't be dispelled by {@spell dispel magic}."
+				"一座不可移動，立方體形狀，由魔法力場構成的的隱形監獄將突然出現在射程內你所選擇的區域周圍。你可以選擇這座監獄呈現牢籠或是固體箱盒的外型。",
+				"一座牢籠形狀的監牢可以為各邊最大20呎長，且由厚度直徑1/2吋的隔條構成，以1/2吋的間距彼此相隔。",
+				"一座箱盒形狀的監牢可以為各邊最大10呎長，創造出防止任何物質通過的固體屏障，並阻擋任何法術進入或穿出這個區域。",
+				"當你施放此法術時，任何完全處於監牢範圍內的生物將被困住。只有一部份處於範圍內的生物、或那些太過龐大而無法容納於範圍內的生物，將被從範圍中心推離，直到它們被完全推離範圍之外。",
+				"一個監牢內的生物無法透過任何非魔法手段離開這個區域。若生物嘗試使用傳送或跨位面旅行以離開監牢，則它必須先進行一次魅力豁免。若豁免成功，則該生物可以使用該魔法以離開監牢。若豁免失敗，則該生物無法離開監牢，且該次法術或效果的使用將被浪費。這道監牢同時延伸至乙太位面，並阻擋乙太旅行。",
+				"此法術無法被{@spell 解除魔法}給解消。"
 			],
 			"page": 243,
 			"savingThrow": [
@@ -12969,7 +12969,7 @@
 			"page": 244
 		},
 		{
-			"name": "異界之門", "name": "Gate",
+			"name": "異界之門", "ENG_name": "Gate",
 			"level": 9,
 			"school": "C",
 			"time": [
@@ -12989,7 +12989,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a diamond worth at least 5,000 gp",
+					"text": "一顆價值至少5,000金幣的鑽石",
 					"cost": 5000
 				}
 			},
@@ -13021,10 +13021,10 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You conjure a portal linking an unoccupied space you can see within range to a precise location on a different plane of existence. The portal is a circular opening, which you can make 5 to 20 feet in diameter. You can orient the portal in any direction you choose. The portal lasts for the duration.",
-				"The portal has a front and a back on each plane where it appears. Travel through the portal is possible only by moving through its front. Anything that does so is instantly transported to the other plane, appearing in the unoccupied space nearest to the portal.",
-				"Deities and other planar rulers can prevent portals created by this spell from opening in their presence or anywhere within their domains.",
-				"When you cast this spell, you can speak the name of a specific creature (a pseudonym, title, or nickname doesn't work). If that creature is on a plane other than the one you are on, the portal opens in the named creature's immediate vicinity and draws the creature through it to the nearest unoccupied space on your side of the portal. You gain no special power over the creature, and it is free to act as the DM deems appropriate. It might leave, attack you, or help you."
+				"你在射程內你所能看見的一個位被佔據空間喚出一個傳送門，連結著處於不同存在位面的一個確切的地點。這個傳送門是一個圓型的開口，你可以使它的直徑長度為5呎到20呎。你可以讓這個傳送門朝向任何你所選擇的方向。傳送門將在法術持續期間內持續存在。",
+				"在各位面出現的這對傳送門都具有前後兩側。只有透過從傳送門的前端進入才能夠通過這個傳送門。任何穿過這個傳送門的事物都將被瞬間傳送到另一個位面，出現於距離傳送門最近的未被佔據空間。",
+				"神祇和其他位面統治者可以阻止此法術所創造出的傳送門開啟於祂們所在或掌管領域內的任何場所。",
+				"當你施放此法術時，你可以說出一個特定生物的名字（假名、稱號、或暱稱不會生效）。若該生物位於跟你不同的存在位面，則傳送門將瞬間出現在被指名生物的附近，並將該生物拉入傳送門出現在距離你這一側傳送門最近的一處未被佔據空間。這樣做並不會讓你獲得掌控該生物的特殊力量，且它能自由做出DM認為合適的行動。它可能會離開、攻擊你、或協助你。"
 			],
 			"page": 244
 		},
@@ -16169,7 +16169,7 @@
 			"page": 252
 		},
 		{
-			"name": "Imprisonment",
+			"name": "禁錮術", "ENG_name": "Imprisonment",
 			"level": 9,
 			"school": "A",
 			"time": [
@@ -16189,7 +16189,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a vellum depiction or a carved statuette in the likeness of the target, and a special component that varies according to the version of the spell you choose, worth at least 500 gp per Hit Die of the target",
+					"text": "一張描繪著目標的羊皮紙或刻成目標外貌的小雕像，和一種根據你所選擇法術版本而有所不同的特殊構材，價值至少為目標的每顆生命骰500金幣",
 					"cost": 500
 				}
 			},
@@ -16215,57 +16215,57 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You create a magical restraint to hold a creature that you can see within range. The target must succeed on a Wisdom saving throw or be bound by the spell; if it succeeds, it is immune to this spell if you cast it again. While affected by this spell, the creature doesn't need to breathe, eat, or drink, and it doesn't age. Divination spells can't locate or perceive the target.",
-				"When you cast the spell, you choose one of the following forms of imprisonment.",
+				"你創造出一道魔法束縛以禁錮一個射程內你所能看見的生物。目標必須成功通過一次睿知豁免，否則將被此法術給禁錮；若它豁免成功，則它將免疫於由你施放的此法術。當受到此法術影響時，該生物不需要呼吸、進食、或飲水，且它不會衰老。預言系法術無法定位或察覺該目標。",
+				"當你施放此法術時，你選擇以下其中一個禁錮的形式。",
 				{
 					"type": "entries",
-					"name": "Burial",
+					"name": "埋葬",
 					"entries": [
-						"The target is entombed far beneath the earth in a sphere of magical force that is just large enough to contain the target. Nothing can pass through the sphere, nor can any creature teleport or use planar travel to get into or out of it."
+						"目標被封入一個剛好足以容納它的魔法球體力場，並被深埋於大地之下。沒有任何事物能穿透此球體，也沒有任何生物可以透過傳送或位面旅行進入或離開它。"
 					]
 				},
-				"The special component for this version of the spell is a small mithral orb.",
+				"這個法術版本的特殊構材是一顆秘銀小球。",
 				{
 					"type": "entries",
-					"name": "Chaining",
+					"name": "鎖鏈",
 					"entries": [
-						"Heavy chains, firmly rooted in the ground, hold the target in place. The target is {@condition 束縛} until the spell ends, and it can't move or be moved by any means until then."
+						"牢牢地根植於地面的沉重鎖鏈將目標固定在原地。目標被{@condition 束縛}直到此法術結束，且它在那之前無法透過任何方式移動或被移動。"
 					]
 				},
-				"The special component for this version of the spell is a fine chain of precious metal.",
+				"這個法術版本的特殊構材是一條由貴重金屬打造的上好鎖鏈。",
 				{
 					"type": "entries",
-					"name": "Hedged Prison",
+					"name": "遁世監獄",
 					"entries": [
-						"The spell transports the target into a tiny demiplane that is warded against teleportation and planar travel. The demiplane can be a labyrinth, a cage, a tower, or any similar confined structure or area of your choice."
+						"此法術將目標傳送到一個阻擋傳送或位面旅行的小型半位面。這個半位面可以是一座迷宮、牢籠、高塔、或任何你所選擇類似的密閉建築或區域。"
 					]
 				},
-				"The special component for this version of the spell is a miniature representation of the prison made from jade.",
+				"這個法術版本的特殊構材是一個玉製監獄的微縮模型。",
 				{
 					"type": "entries",
-					"name": "Minimus Containment",
+					"name": "微縮收容",
 					"entries": [
-						"The target shrinks to a height of 1 inch and is imprisoned inside a gemstone or similar object. Light can pass through the gemstone normally (allowing the target to see out and other creatures to see in), but nothing else can pass through, even by means of teleportation or planar travel. The gemstone can't be cut or broken while the spell remains in effect."
+						"目標縮小至1吋高度，且被囚禁在在一顆寶石或類似的物體中。光線可以如常地穿透該寶石（讓目標可以看到外部，且讓其他生物可以看到內部），但任何其他事物都無法穿透它，就算透過傳送或位面旅行也不行。當此法術維持其效果時，該寶石無法被切割或破壞。"
 					]
 				},
-				"The special component for this version of the spell is a large, transparent gemstone, such as a corundum, diamond, or ruby.",
+				"這個法術版本的特殊構材一個透明的大型寶石，像是剛玉、鑽石、或紅寶石。",
 				{
 					"type": "entries",
-					"name": "Slumber",
+					"name": "休眠",
 					"entries": [
-						"The target falls asleep and can't be awoken."
+						"目標陷入沉睡，且無法被叫醒。"
 					]
 				},
-				"The special component for this version of the spell consists of rare soporific herbs.",
+				"這個法術版本的特殊構材是由稀有的致眠草藥構成。",
 				{
 					"type": "entries",
-					"name": "Ending the Spell",
+					"name": "結束此法術",
 					"entries": [
-						"During the casting of the spell, in any of its versions, you can specify a condition that will cause the spell to end and release the target. The condition can be as specific or as elaborate as you choose, but the DM must agree that the condition is reasonable and has a likelihood of coming to pass. The conditions can be based on a creature's name, identity, or deity but otherwise must be based on observable actions or qualities and not based on intangibles such as level, class, or hit points."
+						"在你施放此法術的期間，無論法術版本為何，你可以指定一個會使此法術結束並釋放目標的條件。這個條件可以很籠統也可以很具體，由你決定，但DM必須同意這個條件是合理的，且可能會發生的。這個條件可以是基於一個生物的名稱、身分、或神性，或除此之外必須基於可觀測的動作或性質，且不能基於像是等級、職業、或生命值這類無形的事物。"
 					]
 				},
-				"A {@spell dispel magic} spell can end the spell only if it is cast as a 9th-level spell, targeting either the prison or the special component used to create it.",
-				"You can use a particular special component to create only one prison at a time. If you cast the spell again using the same component, the target of the first casting is immediately freed from its binding."
+				"{@spell 解除魔法}法術只有在以9環法術被施放才可以結束此法術，且必須以禁錮監獄或用於創造它的特殊構材為目標。",
+				"你同時只能使用特定的特殊構材創造一個禁錮監獄。若你使用相同的構材再次施放此法術，則前次施法的目標將立即從它的禁錮中被釋放。"
 			],
 			"page": 252,
 			"savingThrow": [
@@ -16276,7 +16276,7 @@
 			]
 		},
 		{
-			"name": "Incendiary Cloud",
+			"name": "焚雲術", "ENG_name": "Incendiary Cloud",
 			"level": 8,
 			"school": "C",
 			"time": [
@@ -16320,9 +16320,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A swirling cloud of smoke shot through with white-hot embers appears in a 20-foot-radius sphere centered on a point within range. The cloud spreads around corners and is heavily obscured. It lasts for the duration or until a wind of moderate or greater speed (at least 10 miles per hour) disperses it.",
-				"When the cloud appears, each creature in it must make a Dexterity saving throw. A creature takes {@dice 10d8} fire damage on a failed save, or half as much damage on a successful one. A creature must also make this saving throw when it enters the spell's area for the first time on a turn or ends its turn there.",
-				"The cloud moves 10 feet directly away from you in a direction that you choose at the start of each of your turns."
+				"一團貫穿著白熱餘火的盤旋煙雲出現在射程內一點為中心的20呎半徑球體範圍內。這團煙雲會繞過轉角散佈，且它所在的區域被重度遮蔽。。它會在法術持續期間持續存在，或直到一陣中速或更強（風速至少每小時10哩）的風將它吹散。",
+				"當這團煙雲出現時，每個在雲內的生物都必須進行一次敏捷豁免。一個豁免失敗的目標將受到{@dice 10d8}火焰傷害，豁免成功則只受到一半的傷害。在一個回合中第一次進入此法術的區域，或在該處結束它回合的生物也必須進行此豁免檢定。",
+				"在你的每個回合開始時，這團煙雲會向著你所選的方向直線移動10呎。"
 			],
 			"page": 253,
 			"damageInflict": [
@@ -18816,7 +18816,7 @@
 			]
 		},
 		{
-			"name": "Maze",
+			"name": "迷宮術", "ENG_name": "Maze",
 			"level": 8,
 			"school": "C",
 			"time": [
@@ -18856,9 +18856,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You banish a creature that you can see within range into a labyrinthine demiplane. The target remains there for the duration or until it escapes the maze.",
-				"The target can use its action to attempt to escape. When it does so, it makes a DC 20 Intelligence check. If it succeeds, it escapes, and the spell ends (a minotaur or goristro demon automatically succeeds).",
-				"When the spell ends, the target reappears in the space it left or, if that space is occupied, in the nearest unoccupied space."
+				"你將射程內一個你所能看見的生物放逐到一個迷宮似的半位面。目標將在法術持續期間內留在該處、或直到它從該迷宮中逃出。",
+				"目標可以使用它的動作以嘗試逃脫。當它這麼做時，它進行一次DC 20的智力檢定。若它檢定成功，則它成功逃脫，且此法術結束（{@creature 米諾陶}或{@creature 巨牛魔}將自動通過此檢定）。",
+				"當此法術結束時，目標將重新出現在它離開時所在的空間，或若該空間已被佔據，則出現在最近的一處未被佔據空間。"
 			],
 			"page": 258
 		},
@@ -19122,7 +19122,7 @@
 			]
 		},
 		{
-			"name": "Meteor Swarm",
+			"name": "流星爆", "ENG_name": "Meteor Swarm",
 			"level": 9,
 			"school": "V",
 			"time": [
@@ -19161,8 +19161,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Blazing orbs of fire plummet to the ground at four different points you can see within range. Each creature in a 40-foot-radius sphere centered on each point you choose must make a Dexterity saving throw. The sphere spreads around corners. A creature takes {@dice 20d6} fire damage and {@dice 20d6} bludgeoning damage on a failed save, or half as much damage on a successful one. A creature in the area of more than one fiery burst is affected only once.",
-				"The spell damages objects in the area and ignites flammable objects that aren't being worn or carried."
+				"熾烈的火焰球體轟炸射程內地面上你所能看見的四個點。每個位於以你所選各點為中心40呎半徑球體範圍內的生物都必須進行一次敏捷豁免。這個球體範圍會繞過轉角。一個豁免失敗的生物將受到{@dice 20d6}火焰傷害和{@dice 20d6}鈍擊傷害，豁免成功則只受到一半的傷害。一個同時處於多個烈焰爆炸範圍的生物只會被影響一次。",
+				"此法術會傷害範圍內的物體，並點燃所有未被穿戴或攜帶的可燃物體。"
 			],
 			"page": 259,
 			"damageInflict": [
@@ -19328,7 +19328,7 @@
 			]
 		},
 		{
-			"name": "Mirage Arcane",
+			"name": "海市蜃樓", "ENG_name": "Mirage Arcane",
 			"level": 7,
 			"school": "I",
 			"time": [
@@ -19374,10 +19374,10 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You make terrain in an area up to 1 mile square look, sound, smell, and even feel like some other sort of terrain. The terrain's general shape remains the same, however. Open fields or a road could be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road.",
-				"Similarly, you can alter the appearance of structures, or add them where none are present. The spell doesn't disguise, conceal, or add creatures.",
-				"The illusion includes audible, visual, tactile, and olfactory elements, so it can turn clear ground into difficult terrain (or vice versa) or otherwise impede movement through the area. Any piece of the illusory terrain (such as a rock or stick) that is removed from the spell's area disappears immediately.",
-				"Creatures with truesight can see through the illusion to the terrain's true form; however, all other elements of the illusion remain, so while the creature is aware of the illusion's presence, the creature can still physically interact with the illusion."
+				"你使一片最大1哩平方範圍內的地形在視覺、聽覺、嗅覺、和甚至觸覺上都像是另一種地形。然而，地形的大致形狀仍保持不變。一片開闊的平原或道路可以被變得像是一片沼澤、丘陵、裂谷或其他難以通過或者無法通過的地形。一個池塘可以被變得看起來像是一片草原，一個懸崖可以像是一段緩坡，或者讓一條亂石溪谷變得像是一條寬闊平坦的道路。",
+				"同樣的，你也可以改變建築物的外觀，或是在本來沒有建築物的位置上添加一棟。此法術並不能偽裝、隱藏、或是添加生物。",
+				"這個幻象包括了聽覺、視覺、觸覺、和嗅覺要素，因此它可以將平整的地表變成困難地形（反之亦然），或阻礙通過這片區域的移動。一旦幻象地形中的任意部分（像是石頭或樹枝）被移出此法術區域外，它將會立即消失。",
+				"具有真實視覺的生物可以看穿幻象，並看見這片地形的真實型態；然而，任何其他幻象的要素仍會保留，因此即使該生物能意識到幻象的存在，它仍然能夠與這個幻象進行物理性的互動。"
 			],
 			"page": 260
 		},
@@ -19883,7 +19883,7 @@
 			]
 		},
 		{
-			"name": "Mordenkainen's Magnificent Mansion",
+			"name": "魔鄧肯豪宅術", "ENG_name": "Mordenkainen's Magnificent Mansion",
 			"level": 7,
 			"school": "C",
 			"time": [
@@ -19903,7 +19903,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a miniature portal carved from ivory, a small piece of polished marble, and a tiny silver spoon, each item worth at least 5 gp",
+					"text": "一個象牙雕刻而成的正門模型、一小塊打磨過的大理石、和一根銀製小湯匙，各自價值至少5金幣",
 					"cost": 5
 				}
 			},
@@ -19930,9 +19930,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You conjure an extradimensional dwelling in range that lasts for the duration. You choose where its one entrance is located. The entrance shimmers faintly and is 5 feet wide and 10 feet tall. You and any creature you designate when you cast the spell can enter the extradimensional dwelling as long as the portal remains open. You can open or close the portal if you are within 30 feet of it. While closed, the portal is invisible.",
-				"Beyond the portal is a magnificent foyer with numerous chambers beyond. The atmosphere is clean, fresh, and warm.",
-				"You can create any floor plan you like, but the space can't exceed 50 cubes, each cube being 10 feet on each side. The place is furnished and decorated as you choose. It contains sufficient food to serve a nine course banquet for up to 100 people. A staff of 100 near-transparent servants attends all who enter. You decide the visual appearance of these servants and their attire. They are completely obedient to your orders. Each servant can perform any task a normal human servant could perform, but they can't attack or take any action that would directly harm another creature. Thus the servants can fetch things, clean, mend, fold clothes, light fires, serve food, pour wine, and so on. The servants can go anywhere in the mansion but can't leave it. Furnishings and other objects created by this spell dissipate into smoke if removed from the mansion. When the spell ends, any creatures inside the extradimensional space are expelled into the open spaces nearest to the entrance."
+				"你在射程內變出一座位於異次元的住處，並在法術持續期間持續存在。你決定它唯一的入口出現在何處。這個入口閃爍著微光，且為5呎寬和10呎高。只要傳送門仍保持開啟，你和任何你在施放此法術時指定的生物就可以進入這座異次元住處。你可以在你距離傳送門30呎內時開啟或關上這個傳送門。當傳送門被關上，它將變為隱形。",
+				"在傳送門內，是一座連接著許多房間的華麗大廳。住處內的空氣清新且溫暖。",
+				"你可以創造出任何你想要樓層規劃，但它的空間不能超過50個10呎邊長立方體所構成的空間。這個場所的家具和裝潢由你決定。它含有足夠的食物以為最多100人提供九道菜的盛宴。100個近乎隱形的僕役組織而成的職員將招待所有進入住處的人。你決定這些僕役的視覺外觀和衣著。它們將完全服從你的命令。每個僕役都能夠執行任何尋常人類僕役可以執行的工作，但它們無法攻擊、或採取任何會對其它生物有直接傷害的行動。這些僕役可以拿取東西、打掃、縫補、摺衣服、點火、上菜、和倒酒等等。這些僕役可以在豪宅內四處移動，但不能離開豪宅。家具和其他由此法術創造的物體將在被移出豪宅時如煙消散。當此法術結束時，任何仍在異次元空間內的生物都將被逐出至最接近入口處的開放空間。"
 			],
 			"page": 261
 		},
@@ -21640,7 +21640,7 @@
 			]
 		},
 		{
-			"name": "Prismatic Spray",
+			"name": "虹光噴射", "ENG_name": "Prismatic Spray",
 			"level": 7,
 			"school": "V",
 			"time": [
@@ -21679,61 +21679,61 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Eight multicolored rays of light flash from your hand. Each ray is a different color and has a different power and purpose. Each creature in a 60-foot cone must make a Dexterity saving throw. For each target, roll a {@dice d8} to determine which color ray affects it.",
+				"八道多彩的射線光束從你的手中閃耀掠出。每道射線都有著不同顏色和不同的能量和效果。每個在60呎錐形範圍內的生物都必須進行一次敏捷豁免。為每個目標骰一顆{@dice d8}以決定哪個顏色的射線影響了它。",
 				{
 					"type": "entries",
-					"name": "1-Red",
+					"name": "1-紅色",
 					"entries": [
-						"The target takes {@dice 10d6} fire damage on a failed save, or half as much damage on a successful one."
+						"目標若豁免失敗將{@dice 10d6}火焰傷害，豁免成功則只受到一半的傷害。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "2-Orange",
+					"name": "2-橙色",
 					"entries": [
-						"The target takes {@dice 10d6} acid damage on a failed save, or half as much damage on a successful one."
+						"目標若豁免失敗將{@dice 10d6}酸蝕傷害，豁免成功則只受到一半的傷害。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "3-Yellow",
+					"name": "3-黃色",
 					"entries": [
-						"The target takes {@dice 10d6} lightning damage on a failed save, or half as much damage on a successful one."
+						"目標若豁免失敗將{@dice 10d6}閃電傷害，豁免成功則只受到一半的傷害。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "4-Green",
+					"name": "4-綠色",
 					"entries": [
-						"The target takes {@dice 10d6} poison damage on a failed save, or half as much damage on a successful one."
+						"目標若豁免失敗將{@dice 10d6}毒素傷害，豁免成功則只受到一半的傷害。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "5-Blue",
+					"name": "5-藍色",
 					"entries": [
-						"The target takes {@dice 10d6} cold damage on a failed save, or half as much damage on a successful one."
+						"目標若豁免失敗將{@dice 10d6}寒冰傷害，豁免成功則只受到一半的傷害。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "6-Indigo",
+					"name": "6-靛色",
 					"entries": [
-						"On a failed save, the target is {@condition 束縛}. It must then make a Constitution saving throw at the end of each of its turns. If it successfully saves three times, the spell ends. If it fails its save three times, it permanently turns to stone and is subjected to the {@condition 石化} condition. The successes and failures don't need to be consecutive, keep track of both until the target collects three of a kind."
+						"若豁免失敗，目標將陷入{@condition 束縛}狀態。它接著必須在它的每個回合結束時進行一次體質豁免。若它成功通過三次豁免，則此法術結束。若它豁免失敗三次，則它將永久地被變成石頭並陷入{@condition 石化}狀態。這些豁免檢定的成功和失敗並不需要是連續的；記錄這兩者的次數直到目標集齊其中一邊三次。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "7-Violet",
+					"name": "7-紫色",
 					"entries": [
-						"On a failed save, the target is {@condition blinded}. It must then make a Wisdom saving throw at the start of your next turn. A successful save ends the blindness. If it fails that save, the creature is transported to another plane of existence of the DM's choosing and is no longer {@condition blinded}. (Typically, a creature that is on a plane that isn't its home plane is banished home, while other creatures are usually cast into the Astral or Ethereal planes.)"
+						"若豁免失敗，目標將陷入{@condition 目盲}狀態。它接著必須在你的下個回合開始時進行一次睿知豁免。若豁免成功則結束{@condition 目盲}狀態。若它豁免失敗，則該生物將被傳送到另一個由DM所選擇的存在位面，且不再{@condition 目盲}。（通常，一個不在它原生位面的生物將被驅逐回它的原生位面，而其他生物則通常會被傳送到星界或乙太位面。)"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "8-Special",
+					"name": "8-特殊",
 					"entries": [
-						"The target is struck by two rays. Roll twice more, rerolling any 8."
+						"目標被兩道射線擊中。再骰二次，並在骰到8時重骰。"
 					]
 				}
 			],
@@ -21758,7 +21758,7 @@
 			]
 		},
 		{
-			"name": "Prismatic Wall",
+			"name": "虹光法牆", "ENG_name": "Prismatic Wall",
 			"level": 9,
 			"school": "A",
 			"time": [
@@ -21797,58 +21797,58 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A shimmering, multicolored plane of light forms a vertical opaque wall\u2014up to 90 feet long, 30 feet high, and 1 inch thick\u2014centered on a point you can see within range. Alternatively, you can shape the wall into a sphere up to 30 feet in diameter centered on a point you choose within range. The wall remains in place for the duration. If you position the wall so that it passes through a space occupied by a creature, the spell fails, and your action and the spell slot are wasted.",
-				"The wall sheds bright light out to a range of 100 feet and dim light for an additional 100 feet. You and creatures you designate at the time you cast the spell can pass through and remain near the wall without harm. If another creature that can see the wall moves to within 20 feet of it or starts its turn there, the creature must succeed on a Constitution saving throw or become {@condition blinded} for 1 minute.",
-				"The wall consists of seven layers, each with a different color. When a creature attempts to reach into or pass through the wall, it does so one layer at a time through all the wall's layers. As it passes or reaches through each layer, the creature must make a Dexterity saving throw or be affected by that layer's properties as described below.",
-				"The wall can be destroyed, also one layer at a time, in order from red to violet, by means specific to each layer. Once a layer is destroyed, it remains so for the duration of the spell. An antimagic field has no effect on a prismatic wall.",
+				"一道閃爍、多彩的光線平面構成一道垂直不透光的牆壁\u2014最多90呎長、30呎高、和1吋厚\u2014並在射程內以你所能看見的一點為中心出現。或者，你可以將這道牆形塑成一個以射程內你所選擇一點為中心，直徑最多30呎的球體。這道牆將在法術持續期間內於該處持續存在。若你將這道牆設置在一個會穿過被生物佔據空間的位置，則此法術失敗，且你的動作和法術位將被浪費。",
+				"這道牆散發出100呎範圍的明亮光照以及再延伸100呎的微光光照。你和你在施放此法術時所指定的生物可以穿過並待在牆壁附近而不被其傷害。若其他可以看見這道牆壁的生物移動到距離它20呎內的位置，或在該處開始它的回合，則該生物必須成功通過一次體質豁免，否則陷入{@condition 目盲}狀態長達1分鐘。",
+				"這道牆是由七層彩光構成，每層都有著不同的顏色。當一個生物嘗試進入或穿過這道牆，它將一次一層的穿過所有光層。它每穿過一層光層，該生物就必須進行一次敏捷豁免，否則受到該光層下述的特性給影響。",
+				"這道牆可以被摧毀，同樣按照紅到紫的順序一次一層處理。一旦一層光層被摧毀，它將在此法術的持續期間中維持被摧毀的狀態。{@spell 反魔法結界}對虹光法牆沒有任何效果。",
 				{
 					"type": "entries",
-					"name": "Red",
+					"name": "紅色",
 					"entries": [
-						"The creature takes {@dice 10d6} fire damage on a failed save, or half as much damage on a successful one. While this layer is in place, nonmagical ranged attacks can't pass through the wall. The layer can be destroyed by dealing at least 25 cold damage to it."
+						"生物若豁免失敗則受到{@dice 10d6}火焰傷害，豁免成功則只受到一半的傷害。當此光層存在時，非魔法遠程攻擊無法穿透這道牆。此光層可以透過對其造成至少25點寒冰傷害來摧毀。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Orange",
+					"name": "橙色",
 					"entries": [
-						"The creature takes {@dice 10d6} acid damage on a failed save, or half as much damage on a successful one. While this layer is in place, magical ranged attacks can't pass through the wall. The layer is destroyed by a strong wind."
+						"生物若豁免失敗則受到{@dice 10d6}酸蝕傷害，豁免成功則只受到一半的傷害。當此光層存在時，魔法遠程攻擊無法穿透這道牆。此光層可以透過一陣強風來摧毀。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Yellow",
+					"name": "黃色",
 					"entries": [
-						"The creature takes {@dice 10d6} lightning damage on a failed save, or half as much damage on a successful one. This layer can be destroyed by dealing at least 60 force damage to it."
+						"生物若豁免失敗則受到{@dice 10d6}閃電傷害，豁免成功則只受到一半的傷害。此光層可以透過對其造成至少60點寒冰傷害來摧毀。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Green",
+					"name": "綠色",
 					"entries": [
-						"The creature takes {@dice 10d6} poison damage on a failed save, or half as much damage on a successful one. A passwall spell, or another spell of equal or greater level that can open a portal on a solid surface, destroys this layer."
+						"生物若豁免失敗則受到{@dice 10d6}毒素傷害，豁免成功則只受到一半的傷害。{@spell 穿牆術}、或其他相同或更高環位且可以在固體表面上開啟通道的法術可以摧毀此光層。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Blue",
+					"name": "藍色",
 					"entries": [
-						"The creature takes {@dice 10d6} cold damage on a failed save, or half as much damage on a successful one. This layer can be destroyed by dealing at least 25 fire damage to it."
+						"生物若豁免失敗則受到{@dice 10d6}寒冰傷害，豁免成功則只受到一半的傷害。此光層可以透過對其造成至少25點火焰傷害來摧毀。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Indigo",
+					"name": "靛色",
 					"entries": [
-						"On a failed save, the creature is {@condition 束縛}. It must then make a Constitution saving throw at the end of each of its turns. If it successfully saves three times, the spell ends. If it fails its save three times, it permanently turns to stone and is subjected to the {@condition 石化} condition. The successes and failures don't need to be consecutive; keep track of both until the creature collects three of a kind.",
-						"While this layer is in place, spells can't be cast through the wall. The layer is destroyed by bright light shed by a daylight spell or a similar spell of equal or higher level."
+						"若豁免失敗，生物將陷入{@condition 束縛}狀態。它接著必須在它的每個回合結束時進行一次體質豁免。若它成功通過三次豁免，則此法術結束。若它豁免失敗三次，則它將永久地被變成石頭並陷入{@condition 石化}狀態。這些豁免檢定的成功和失敗並不需要是連續的；記錄這兩者的次數直到目標集齊其中一邊三次。",
+						"當此光層存在時，法術無法穿透這道牆。此光層可以透過{@spell 晝明術}法術、或其他相同或更高環位的類似法術所散發的明亮光照來摧毀。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Violet",
+					"name": "紫色",
 					"entries": [
-						"On a failed save, the creature is {@condition blinded}. It must then make a Wisdom saving throw at the start of your next turn. A successful save ends the blindness. If it fails that save, the creature is transported to another plane of the DM's choosing and is no longer {@condition blinded}. (Typically, a creature that is on a plane that isn't its home plane is banished home, while other creatures are usually cast into the Astral or Ethereal planes.) This layer is destroyed by a {@spell dispel magic} spell or a similar spell of equal or higher level that can end spells and magical effects."
+						"若豁免失敗，生物將陷入{@condition 目盲}狀態。它接著必須在你的下個回合開始時進行一次睿知豁免。若豁免成功則結束{@condition 目盲}狀態。若它豁免失敗，則該生物將被傳送到另一個由DM所選擇的存在位面，且不再{@condition 目盲}。（通常，一個不在它原生位面的生物將被驅逐回它的原生位面，而其他生物則通常會被傳送到星界或乙太位面。)此光層可以透過{@spell 解除魔法}法術、或其他相同或更高環位且的結束法術和魔法效果的類似法術來摧毀。"
 					]
 				}
 			],
@@ -21991,7 +21991,7 @@
 			]
 		},
 		{
-			"name": "Project Image",
+			"name": "投影術", "ENG_name": "Project Image",
 			"level": 7,
 			"school": "I",
 			"time": [
@@ -22011,7 +22011,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a small replica of you made from materials worth at least 5 gp",
+					"text": "一個由價值至少5金幣的材料製成的一個你的小模型",
 					"cost": 5
 				}
 			},
@@ -22039,10 +22039,10 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You create an illusory copy of yourself that lasts for the duration. The copy can appear at any location within range that you have seen before, regardless of intervening obstacles. The illusion looks and sounds like you but is intangible. If the illusion takes any damage, it disappears, and the spell ends.",
-				"You can use your action to move this illusion up to twice your speed, and make it gesture, speak, and behave in whatever way you choose. It mimics your mannerisms perfectly.",
-				"You can see through its eyes and hear through its ears as if you were in its space. On your turn as a bonus action, you can switch from using its senses to using your own, or back again. While you are using its senses, you are {@condition blinded} and {@condition deafened} in regard to your own surroundings.",
-				"Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and any noise it makes sounds hollow to the creature."
+				"你創出一個你自己的幻象複製體，在法術持續期間持續存在。這個複製體可以出現在射程內任何你曾經見過的地方，無論你與該處之間有沒有障礙物都一樣。除了沒有實體之外，這個幻象看起來和聽起來都和你一模一樣。若幻象受到任何傷害，則它將消失，且此法術結束。",
+				"你可以使用你的動作以移動這個幻象最多等同於你移動速度兩倍的距離，並讓它以你選擇的方式打手勢、說話、並行動。它將完美地模仿你的舉止習慣。",
+				"你可以透過它的眼睛視物並透過它的耳朵聆聽，就如同你位於它所在的位置。在你的每個回合以一個附贈動作，你可以從在它的感官和你的感官之間切換。當你使用它的感官時，你對你自己的周遭環境視作{@condition 耳聾}和{@condition 目盲}。",
+				"由於東西會穿過幻影，與幻影的任何物理性互動都將暴露它是幻象的事實。一個使用它的動作去檢視幻影的生物，可以透過成功通過一次對抗你法術豁免DC的智力（{@skill 調查}）檢定以辨識出它是幻象。如果一個生物辨識出這是幻象，該生物的視線將可以穿透該影像，且任何它所製造出的聲音對該生物而言都會顯得空洞虛偽。"
 			],
 			"page": 270,
 			"opposedCheck": [
@@ -23375,7 +23375,7 @@
 			"isHeal": true
 		},
 		{
-			"name": "Reverse Gravity",
+			"name": "重力反轉", "ENG_name": "Reverse Gravity",
 			"level": 7,
 			"school": "T",
 			"time": [
@@ -23394,7 +23394,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a lodestone and iron filings"
+				"m": "一顆天然磁石和一些鐵屑"
 			},
 			"duration": [
 				{
@@ -23424,9 +23424,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"This spell reverses gravity in a 50-foot-radius, 100-foot high cylinder centered on a point within range. All creatures and objects that aren't somehow anchored to the ground in the area fall upward and reach the top of the area when you cast this spell. A creature can make a Dexterity saving throw to grab onto a fixed object it can reach, thus avoiding the fall.",
-				"If some solid object (such as a ceiling) is encountered in this fall, falling objects and creatures strike it just as they would during a normal downward fall. If an object or creature reaches the top of the area without striking anything, it remains there, oscillating slightly, for the duration.",
-				"At the end of the duration, affected objects and creatures fall back down."
+				"此法術將使以射程內一點為中心，50呎半徑，100呎高的圓柱體區域內的重力反轉。當你施放此法術時，區域內所有沒有被固定在地面上的生物和物體都會向上墜落，直到抵達該區域的頂端為止。一個生物可以進行一次敏捷豁免以抓住一件被固定的物體，從而避免向上墜落。",
+				"若某些固體物體（像是天花板）在墜落的過程中被碰撞，則墜落中的物體和生物將受到如同正常向下墜落時的衝擊。若一個物體或生物在沒有撞上任何東西的情況下抵達區域的頂端，則它將在法術持續期間內留在該處，輕微擺動。",
+				"在法術持續時間結束時，受影響的物體和生物將重新向下墜落。"
 			],
 			"page": 272,
 			"savingThrow": [
@@ -24409,7 +24409,7 @@
 			"page": 274
 		},
 		{
-			"name": "Sequester",
+			"name": "隔離術", "ENG_name": "Sequester",
 			"level": 7,
 			"school": "T",
 			"time": [
@@ -24428,7 +24428,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a powder composed of diamond, emerald, ruby, and sapphire dust worth at least 5,000 gp, which the spell consumes",
+					"text": "鑽石、綠寶石、紅寶石、藍寶石塵混合而成，價值至少5,000金幣的粉末，在施法時消耗",
 					"cost": 5000,
 					"consume": true
 				}
@@ -24451,9 +24451,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"By means of this spell, a willing creature or an object can be hidden away, safe from detection for the duration. When you cast the spell and touch the target, it becomes {@condition invisible} and can't be targeted by {@filter divination spells|spells|school=D} or perceived through scrying sensors created by divination spells.",
-				"If the target is a creature, it falls into a state of suspended animation. Time ceases to flow for it, and it doesn't grow older.",
-				"You can set a condition for the spell to end early. The condition can be anything you choose, but it must occur or be visible within 1 mile of the target. Examples include \"after 1,000 years\" or \"when the tarrasque awakens.\" This spell also ends if the target takes any damage."
+				"透過此法術，一個自願生物或一個物體可以被藏匿起來，且在法術持續期間內不會被偵測到。當你施放此法術並觸碰一個目標，它將變為{@condition 隱形}，且無法成為{@filter 預言系法術|spells|school=D}的目標，或被預言系法術創造出的探知感應器給察覺到。",
+				"若該目標為一個生物，則它將陷入一種假死狀態。它身上的時間將停止流動，且它不會衰老。",
+				"你可以設置一個條件以讓此法術提前結束。這個條件可以由你任意決定，但它必須在距離目標1哩內發生或可被看見的事件。例如「經過1,000年後」或「當泰拉斯奎巨獸甦醒時」。此法術也會在目標受到任何傷害時結束。"
 			],
 			"page": 274,
 			"conditionInflict": [
@@ -24461,7 +24461,7 @@
 			]
 		},
 		{
-			"name": "形體變化", "name": "Shapechange",
+			"name": "形體變化", "ENG_name": "Shapechange",
 			"level": 9,
 			"school": "T",
 			"time": [
@@ -24480,7 +24480,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a jade circlet worth at least 1,500 gp, which you must place on your head before you cast the spell",
+					"text": "一個價值至少1,500金幣的玉質飾環，你必須在施放此法術前戴在頭上",
 					"cost": 1500
 				}
 			},
@@ -24508,12 +24508,12 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You assume the form of a different creature for the duration. The new form can be of any creature with a challenge rating equal to your level or lower. The creature can't be a construct or an undead, and you must have seen the sort of creature at least once. You transform into an average example of that creature, one without any class levels or the Spellcasting trait.",
-				"Your game statistics are replaced by the statistics of the chosen creature, though you retain your alignment and Intelligence, Wisdom, and Charisma scores. You also retain all of your skill and saving throw proficiencies, in addition to gaining those of the creature. If the creature has the same proficiency as you and the bonus listed in its statistics is higher than yours, use the creature's bonus in place of yours. You can't use any legendary actions or lair actions of the new form.",
-				"You assume the hit points and Hit Dice of the new form. When you revert to your normal form, you return to the number of hit points you had before you transformed. If you revert as a result of dropping to 0 hit points, any excess damage carries over to your normal form. As long as the excess damage doesn't reduce your normal form to 0 hit points, you aren't knocked {@condition unconscious}.",
-				"You retain the benefit of any features from your class, race, or other source and can use them, provided that your new form is physically capable of doing so. You can't use any special senses you have (for example, darkvision) unless your new form also has that sense. You can only speak if the creature can normally speak.",
-				"When you transform, you choose whether your equipment falls to the ground, merges into the new form, or is worn by it. Worn equipment functions as normal. The DM determines whether it is practical for the new form to wear a piece of equipment, based on the creature's shape and size. Your equipment doesn't change shape or size to match the new form, and any equipment that the new form can't wear must either fall to the ground or merge into your new form. Equipment that merges has no effect in that state.",
-				"During this spell's duration, you can use your action to assume a different form following the same restrictions and rules for the original form, with one exception: if your new form has more hit points than your current one, your hit points remain at their current value."
+				"你在法術持續期間內變成一個不同生物的型態。這個新型態可以是任何挑戰等級等於或低於你等級的生物。該生物不能是構裝體或不死生物，且你必須曾經看過這類生物至少一次。你轉變成該生物的一個尋常個體，不具備任何職業等級或施法特質。",
+				"你的遊戲數據將被所選生物的數據資料給取代，但你保留你的陣營和智力、睿知、和魅力值。你也保留你的所有技能和豁免熟練，並額外獲得該生物所具有的熟練。若該生物具有與你相同的熟練項，且它數據資料中列出的加值比你的還要高，則你使用該生物的加值取代你自己的。你不能使用新型態的任何傳奇動作或巢穴動作。",
+				"你取用新型態的生命值和生命骰。當你回復你原本的型態時，你將取回你轉變之前的生命值。若你是因為生命值歸零而回復原本型態，則任何溢出傷害都將被帶到你原本的型態，扣減你原本的生命值。只要這個溢出傷害沒有讓你原本型態的生命值歸零，你就不會被擊倒{@condition 昏迷}。",
+				"你保有任何來自你職業、種族、或其他來源的好處並得以使用它們，只要你的新形態在物理上能夠這麼做。你不能使用任何你擁有的特殊感官（例如黑暗視覺），除非你新型態也具有該感官。只有在該生物可以正常說話的情況下，你才能夠說話。",
+				"當你轉變時，你選擇你的裝備是會掉在地上、融入新型態、或是被新型態穿戴。被穿戴的裝備將正常生效。DM將根據該生物的體型和形狀以決定新型態是否可以正常穿戴你的每個裝備。你的裝備並不會改變形狀或尺寸以符合你的新形態，因此任何新型態無法穿戴的裝備將會掉在地上或融入新型態。融入新型態的裝備不會產生任何效果。",
+				"在此法術的持續期間，你可以使用你的動作以變成一個不同的型態，其限制與規則與第一次變形相同，除了一個例外：若你新型態的生命值具有比你當下型態更多的生命值，則你的生命值將維持其當下的數值。"
 			],
 			"page": 274
 		},
@@ -25071,7 +25071,7 @@
 			]
 		},
 		{
-			"name": "擬真術", "name": "Simulacrum",
+			"name": "擬像術", "ENG_name": "Simulacrum",
 			"level": 7,
 			"school": "I",
 			"time": [
@@ -25090,7 +25090,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "snow or ice in quantities sufficient to made a life-size copy of the duplicated creature; some hair, fingernail clippings, or other piece of that creature's body placed inside the snow or ice; and powdered ruby worth 1,500 gp, sprinkled over the duplicate and consumed by the spell",
+					"text": "份量足以製作一個複製生物的活體尺寸複製體的雪或冰；放在冰或雪內的一些毛髮、指甲屑、或其他該生物的身體部分；以及價值1,500金幣的紅寶石塵，用以灑在複製品上，且在施法時消耗",
 					"cost": 1500,
 					"consume": true
 				}
@@ -25113,10 +25113,10 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You shape an illusory duplicate of one beast or humanoid that is within range for the entire casting time of the spell. The duplicate is a creature, partially real and formed from ice or snow, and it can take actions and otherwise be affected as a normal creature. It appears to be the same as the original, but it has half the creature's hit point maximum and is formed without any equipment. Otherwise, the illusion uses all the statistics of the creature it duplicates, except that it is a construct.",
-				"The simulacrum is friendly to you and creatures you designate. It obeys your spoken commands, moving and acting in accordance with your wishes and acting on your turn in combat. The simulacrum lacks the ability to learn or become more powerful, so it never increases its level or other abilities, nor can it regain expended spell slots.",
-				"If the simulacrum is damaged, you can repair it in an alchemical laboratory, using rare herbs and minerals worth 100 gp per hit point it regains. The simulacrum lasts until it drops to 0 hit points, at which point it reverts to snow and melts instantly.",
-				"If you cast this spell again, any currently active duplicates you created with this spell are instantly destroyed."
+				"選擇一個在此法術的完整施法過程中都處於射程內的野獸或類人生物，你塑造出一個它的幻象複製體。這個複製體是一個生物，部分真實，由冰或雪所構成，可以採取動作，且可以如同一個正常生物被影響。它與本尊看起來一模一樣，但只有該生物一半的生命值最大值，且在被塑造出來時沒有任何裝備。除此之外，這個幻象具有所有其複製生物的數據資料，但其生物類型為構裝體。",
+				"這個擬像對你和你所指定的生物友善。它會服從任何你的口頭指令，並在戰鬥中於你的回合依據你所希望的方式移動和行動。擬像缺乏學習和變得強大的能力，因此它永遠無法提升它的等級或其他能力，也無法恢復消耗掉的法術位。",
+				"若這個擬像被傷害，你可以在煉金實驗室內修理它，每使用價值100金幣的稀有藥草和材料，它就會回復一點生命值。這個擬像會持續存在直到它的生命值歸零，並在之後變回冰雪並立即融化。",
+				"若你再次施放此法術，任何你使用此法術所創造，且當下正啟動中的複製體將立刻被摧毀。"
 			],
 			"page": 276
 		},
@@ -26515,7 +26515,7 @@
 			]
 		},
 		{
-			"name": "Storm of Vengeance",
+			"name": "復仇風暴", "ENG_name": "Storm of Vengeance",
 			"level": 9,
 			"school": "C",
 			"time": [
@@ -26554,34 +26554,34 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A churning storm cloud forms, centered on a point you can see and spreading to a radius of 360 feet. Lightning flashes in the area, thunder booms, and strong winds roar. Each creature under the cloud (no more than 5,000 feet beneath the cloud) when it appears must make a Constitution saving throw. On a failed save, a creature takes {@dice 2d6} thunder damage and becomes {@condition deafened} for 5 minutes.",
-				"Each round you maintain concentration on this spell, the storm produces different effects on your turn.",
+				"一團翻攪的風暴雷雲以你所能看見的一點為中心緩緩成形，並一直蔓延到360呎半徑的範圍。在這個區域內電閃雷鳴、狂風呼嘯。每個在這片雷雲出現時處於其下方的生物（雷雲下方不超過5,000呎的距離）必須進行一次體質豁免。若豁免失敗，該生物將受到{@dice 2d6}雷鳴傷害，且陷入{@condition 耳聾}狀態長達5分鐘。",
+				"你每維持一輪對此法術的專注，這個風暴就會在你的回合產生不同的效果。",
 				{
 					"type": "entries",
-					"name": "Round 2",
+					"name": "第二輪",
 					"entries": [
-						"Acidic rain falls from the cloud. Each creature and object under the cloud takes {@dice 1d6} acid damage."
+						"酸蝕之雨從雷雲降下。每個在雷雲下方的生物和物體都將受到{@dice 1d6}酸蝕傷害。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Round 3",
+					"name": "第三輪",
 					"entries": [
-						"You call six bolts of lightning from the cloud to strike six creatures or objects of your choice beneath the cloud. A given creature or object can't be struck by more than one bolt. A struck creature must make a Dexterity saving throw. The creature takes {@dice 10d6} lightning damage on a failed save, or half as much damage on a successful one."
+						"你從雷雲中喚出六道閃電擊向雷雲下方六個你所選擇的生物或物體。各生物或物體不能被多於一道閃電襲擊。一個被襲擊的生物必須進行一次敏捷豁免。豁免失敗的生物將受到{@dice 10d6}閃電傷害，豁免成功則只受到一半的傷害。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Round 4",
+					"name": "第四輪",
 					"entries": [
-						"Hailstones rain down from the cloud. Each creature under the cloud takes {@dice 2d6} bludgeoning damage."
+						"冰雹從雷雲傾盆而下。每個在雷雲下方的生物都將受到{@dice 2d6}鈍擊傷害。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Round 5\u201310",
+					"name": "第五～十輪",
 					"entries": [
-						"Gusts and freezing rain assail the area under the cloud. The area becomes difficult terrain and is heavily obscured. Each creature there takes {@dice 1d6} cold damage. Ranged weapon attacks in the area are impossible. The wind and rain count as a severe distraction for the purposes of maintaining concentration on spells. Finally, gusts of strong wind (ranging from 20 to 50 miles per hour) automatically disperse fog, mists, and similar phenomena in the area, whether mundane or magical."
+						"狂風和刺骨的雨勢侵襲整片雷雲下方的區域。這片區域變成困難地形，且它被重度遮蔽。每個在該處的生物將受到{@dice 1d6}寒冰傷害。在這片區域內進行遠程武器攻擊是不可能的。該處的狂風暴雨在維持法術專注時被視作嚴重干擾。最後，這片區域的強烈風勢（風速為每小時20到50哩）將自動吹散雲煙、迷霧、或其他類似現象，無論它是魔法性或尋常現象都一樣。"
 					]
 				}
 			],
@@ -26780,7 +26780,7 @@
 			]
 		},
 		{
-			"name": "Sunburst",
+			"name": "陽炎爆", "ENG_name": "Sunburst",
 			"level": 8,
 			"school": "V",
 			"time": [
@@ -26799,7 +26799,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "fire and a piece of sunstone"
+				"m": "火焰和一小塊太陽石"
 			},
 			"duration": [
 				{
@@ -26824,9 +26824,9 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Brilliant sunlight flashes in a 60-foot radius centered on a point you choose within range. Each creature in that light must make a Constitution saving throw. On a failed save, a creature takes {@dice 12d6} radiant damage and is {@condition blinded} for 1 minute. On a successful save, it takes half as much damage and isn't {@condition blinded} by this spell. Undead and oozes have disadvantage on this saving throw.",
-				"A creature {@condition blinded} by this spell makes another Constitution saving throw at the end of each of its turns. On a successful save, it is no longer {@condition blinded}.",
-				"This spell dispels any darkness in its area that was created by a spell."
+				"耀眼奪目的陽光在以射程內你所選擇一點為中心的60呎半徑內閃現爆發。每個在這道光線內的生物必須進行一次體質豁免。若豁免失敗，該生物將受到{@dice 12d6}光耀傷害，且陷入{@condition 目盲}狀態長達1分鐘。若豁免成功，該生物只受到一半的傷害，且不會陷入{@condition 目盲}。不死生物和泥怪在此豁免檢定中具有劣勢。",
+				"一個因此法術而陷入{@condition 目盲}狀態的生物可以在它的每個回合結束時進行一次體質豁免。若豁免成功，則它不再處於{@condition 目盲}狀態。",
+				"此法術將驅散任何它範圍內由法術所創造出的黑暗。"
 			],
 			"page": 279,
 			"damageInflict": [
@@ -27180,7 +27180,7 @@
 			]
 		},
 		{
-			"name": "Telepathy",
+			"name": "心靈感應", "ENG_name": "Telepathy",
 			"level": 8,
 			"school": "V",
 			"time": [
@@ -27198,7 +27198,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a pair of linked silver rings"
+				"m": "一對相連的銀製戒指"
 			},
 			"duration": [
 				{
@@ -27219,8 +27219,8 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"You create a telepathic link between yourself and a willing creature with which you are familiar. The creature can be anywhere on the same plane of existence as you. The spell ends if you or the target are no longer on the same plane.",
-				"Until the spell ends, you and the target can instantaneously share words, images, sounds, and other sensory messages with one another through the link, and the target recognizes you as the creature it is communicating with. The spell enables a creature with an Intelligence score of at least 1 to understand the meaning of your words and take in the scope of any sensory messages you send to it."
+				"你在你自己和一個你所熟悉的自願生物之間創造一道心靈連結。該生物可以位於你所在存在位面上的任何地方。若你或目標不再處於相同的位面，則此法術結束。",
+				"直到此法術結束前，你和目標可以透過這道連結與對方即時分享話語、影像、聲音、和其他感官信息，且目標將會認出與它交流的生物是你。此法術能夠讓一個智力至少為1的生物理解你話語的意義以及任何你傳給它的感官信息。"
 			],
 			"page": 281
 		},
@@ -28144,7 +28144,7 @@
 			"page": 283
 		},
 		{
-			"name": "完全變形術", "name": "True Polymorph",
+			"name": "完全變形術", "ENG_name": "True Polymorph",
 			"level": 9,
 			"school": "T",
 			"time": [
@@ -28163,7 +28163,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a drop of mercury, a dollop of gum arabic, and a wisp of smoke"
+				"m": "一滴水銀、一團阿拉伯膠、和一縷煙霧"
 			},
 			"duration": [
 				{
@@ -28193,31 +28193,31 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Choose one creature or nonmagical object that you can see within range. You transform the creature into a different creature, the creature into a nonmagical object, or the object into a creature (the object must be neither worn nor carried by another creature). The transformation lasts for the duration, or until the target drops to 0 hit points or dies. If you concentrate on this spell for the full duration, the transformation lasts until it is dispelled.",
-				"This spell has no effect on a shapechanger or a creature with 0 hit points. An unwilling creature can make a Wisdom saving throw, and if it succeeds, it isn't affected by this spell.",
+				"選擇射程內一個你所能看見的生物或非魔法物體。你將該生物轉變成一個不同的生物、生物變成非魔法物體、或將該物體變成一個生物（該物體必須未被其他生物穿戴或攜帶）。這個轉變將在法術持續期間內持續生效，或直到目標的生命值歸零或死亡。若你在此法術的完整持續時間內都維持著專注，則這個轉變將持續直到它被解消。",
+				"此法術對變形者或生命值為零的生物沒有任何效果。一個非自願的生物可以進行一次睿知豁免，且若它豁免成功，則它將不受此法術的影響。",
 				{
 					"type": "entries",
-					"name": "Creature into Creature",
+					"name": "生物變成生物",
 					"entries": [
-						"If you turn a creature into another kind of creature, the new form can be any kind you choose whose challenge rating is equal to or less than the target's (or its level, if the target doesn't have a challenge rating). The target's game statistics, including mental ability scores, are replaced by the statistics of the new form. It retains its alignment and personality."
+						"若你將一個生物變成另一種生物，它的新型態可以是任何你所選的，挑戰等級等於或低於目標挑戰等級（或若目標沒有挑戰等級，則為目標的等級）的生物。目標的遊戲數據，包括心智屬性值，都會被它新型態的數據資料給取代。但它保留它的陣營和個性。"
 					]
 				},
-				"The target assumes the hit points of its new form, and when it reverts to its normal form, the creature returns to the number of hit points it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form. As long as the excess damage doesn't reduce the creature's normal form to 0 hit points, it isn't knocked {@condition unconscious}.",
-				"The creature is limited in the actions it can perform by the nature of its new form, and it can't speak, cast spells, or take any other action that requires hands or speech unless its new form is capable of such actions.",
-				"The target's gear melds into the new form. The creature can't activate, use, wield, or otherwise benefit from any of its equipment.",
+				"目標取用它新型態的生命值，且當它回復它原本的型態時，該生物將取回它轉變之前的生命值。若它是因為生命值歸零而回復，則任何溢出傷害都將被帶到它原本的型態，扣減它原本的生命值。只要這個溢出傷害沒有讓該生物原本型態的生命值歸零，它就不會被擊倒{@condition 昏迷}。",
+				"該生物被限制只能進行它新型態天生所能進行的動作，且它無法說話、施放法術、或採取任何其他需要雙手或語言的動作。",
+				"目標的裝備將被融入新形態之中。目標無法啟動、使用、揮舞、或透過其他方式來從它的裝備獲得好處。",
 				{
 					"type": "entries",
-					"name": "Object into Creature",
+					"name": "物體變成生物",
 					"entries": [
-						"You can turn an object into any kind of creature, as long as the creature's size is no larger than the object's size and the creature's challenge rating is {@filter 9 or lower|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4;5;67;8;9|miscellaneous=!swarm}. The creature is friendly to you and your companions. It acts on each of your turns. You decide what action it takes and how it moves. The DM has the creature's statistics and resolves all of its actions and movement."
+						"你可以將一個物體變成一個任意種類的生物，只要該生物的體型不超過該物體的尺寸，且該生物的{@filter 挑戰等級不大於9或更低|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4;5;67;8;9|miscellaneous=!swarm}。該生物對你和你的同伴友善。它在每個你的回合行動。你決定它將採取什麼動作以及它如何移動。這個生物的數據資料由DM掌控，且由DM處理它所有的動作和移動。"
 					]
 				},
-				"If the spell becomes permanent, you no longer control the creature. It might remain friendly to you, depending on how you have treated it.",
+				"若此法術變為永久有效，你將不再能控制該生物。根據你對待它的方式，它可能會維持對你的友善態度。",
 				{
 					"type": "entries",
-					"name": "Creature into Object",
+					"name": "生物變成物體",
 					"entries": [
-						"If you turn a creature into an object, it transforms along with whatever it is wearing and carrying into that form, as long as the object's size is no larger than the creature's size. The creature's statistics become those of the object, and the creature has no memory of time spent in this form, after the spell ends and it returns to its normal form."
+						"若你將一個生物變成一個物體，只要該物體的尺寸不超過該生物的體型，則它將連同它所穿戴或攜帶的所有東西一起被轉變成該型態。該生物的數據資料將變成該物體的數據，且在此法術結束之後，它將回復它原本的型態，而該生物不會擁有處於這個型態時的記憶。"
 					]
 				}
 			],
@@ -28407,7 +28407,7 @@
 			]
 		},
 		{
-			"name": "Tsunami",
+			"name": "海嘯術", "ENG_name": "Tsunami",
 			"level": 8,
 			"school": "C",
 			"time": [
@@ -28446,10 +28446,10 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"A wall of water springs into existence at a point you choose within range. You can make the wall up to 300 feet long, 300 feet high, and 50 feet thick. The wall lasts for the duration.",
-				"When the wall appears, each creature within its area must make a Strength saving throw. On a failed save, a creature takes {@dice 6d10} bludgeoning damage, or half as much damage on a successful save.",
-				"At the start of each of your turns after the wall appears, the wall, along with any creatures in it, moves 50 feet away from you. Any Huge or smaller creature inside the wall or whose space the wall enters when it moves must succeed on a Strength saving throw or take {@dice 5d10} bludgeoning damage. A creature can take this damage only once per round. At the end of the turn, the wall's height is reduced by 50 feet, and the damage creatures take from the spell on subsequent rounds is reduced by {@dice 1d10}. When the wall reaches 0 feet in height, the spell ends.",
-				"A creature caught in the wall can move by swimming. Because of the force of the wave, though, the creature must make a successful Strength (Athletics) check against your spell save DC in order to move at all. If it fails the check, it can't move. A creature that moves out of the area falls to the ground."
+				"一面水牆在射程內你所選擇的一點突然出現。你可以使這道牆呈現最多300呎長、300呎高、以及50呎厚。這道牆在法術持續期間內持續存在。",
+				"當這道牆出現時，每個在範圍內的生物都必須進行一次力量豁免。若豁免失敗，該生物將受到{@dice 6d10}鈍擊傷害，豁免成功則只受到一半的傷害。",
+				"在這道牆出現後你的每個回合開始時，這道牆，和任何在其中的生物，將移動遠離你50呎的距離。任何在這道牆內、或在水牆移動時其所在空間被水牆進入的體型為巨型或以下的生物，都必須成功通過一次力量豁免，否則受到{@dice 5d10}鈍擊傷害。一個生物在每輪只會受到此傷害一次。在該回合結束時，這道牆的高度將會減少50呎，且在後續輪中此法術對生物所造成的傷害將減少{@dice 1d10}。當這道牆的高度降低至0呎，此法術結束。",
+				"一個在水牆內的生物可以藉由游泳移動。但因為波濤的阻力，該生物必須成功通過一次對抗你法術豁免DC的力量（{@skill 運動}）檢定才能夠移動。若它在此檢定中失敗，則它無法移動。一個移出水牆區域的生物將會墜落到地面。"
 			],
 			"page": 284,
 			"damageInflict": [
@@ -29475,7 +29475,7 @@
 			]
 		},
 		{
-			"name": "Weird",
+			"name": "怪影殺手", "ENG_name": "Weird",
 			"level": 9,
 			"school": "I",
 			"time": [
@@ -29515,7 +29515,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Drawing on the deepest fears of a group of creatures, you create illusory creatures in their minds, visible only to them. Each creature in a 30-foot-radius sphere centered on a point of your choice within range must make a Wisdom saving throw. On a failed save, a creature becomes {@condition 恐懼} for the duration. The illusion calls on the creature's deepest fears, manifesting its worst nightmares as an implacable threat. At the end of each of the {@condition 恐懼} creature's turns, it must succeed on a Wisdom saving throw or take {@dice 4d10} psychic damage. On a successful save, the spell ends for that creature."
+				"利用一群生物心中最深的恐懼，你在它們的腦海中創造出一群只有它們才能看見的幻象生物。每個位於射程內你所選擇一點為中心的30呎半徑球體範圍內的生物都必須進行一次睿知豁免。若豁免失敗，該生物將在法術持續期間陷入{@condition 恐懼}狀態。這道幻象將喚出生物最深的恐懼，將它最駭人的惡夢顯現成一個無法擺脫的威脅。在被{@condition 恐懼}生物的每個回合結束時，它必須成功通過一次睿知豁免，否則受到{@dice 4d10}精神傷害。若豁免成功，則結束這個法術對該生物的影響。"
 			],
 			"page": 288,
 			"damageInflict": [

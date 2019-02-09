@@ -11429,7 +11429,7 @@
 					],
 					"daily": {
 						"1e": [
-							"{@spell commune}",
+							"{@spell 通神術}",
 							"{@spell 喚醒死者}"
 						]
 					},
@@ -13447,7 +13447,7 @@
 					]
 				},
 				{
-					"name": "Siege Monster",
+					"name": "攻城怪物",
 					"entries": [
 						"The elemental deals double damage to objects and structures."
 					]
@@ -13866,14 +13866,14 @@
 						"{@spell 高等復原術}",
 						"{@spell 行蹤無跡}",
 						"{@spell 水下呼吸}",
-						"{@spell water walk}"
+						"{@spell 水面行走}"
 					],
 					"daily": {
 						"1e": [
-							"{@spell commune}",
-							"{@spell dispel evil and good}",
-							"{@spell earthquake}",
-							"{@spell fire storm}",
+							"{@spell 通神術}",
+							"{@spell 反制善惡}",
+							"{@spell 地震術}",
+							"{@spell 火焰風暴}",
 							"{@spell 異界傳送}(限定自身)"
 						]
 					},
@@ -15242,7 +15242,7 @@
 						"Some adult fire giants are trained to lay siege to strong­holds and break through enemy lines. These abilities are represented by the following traits.",
 						{
 							"type": "entries",
-							"name": "Siege Monster",
+							"name": "攻城怪物",
 							"entries": [
 								"The giant deals double damage to objects and structures."
 							]
@@ -20053,7 +20053,7 @@
 			]
 		},
 		{
-			"name": "Goristro",
+			"name": "巨牛魔", "ENG_name": "Goristro",
 			"size": "H",
 			"type": {
 				"type": "fiend",
@@ -20106,7 +20106,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -20117,31 +20117,31 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 17,
-			"languages": "Abyssal",
+			"languages": "深淵語",
 			"cr": "17",
 			"trait": [
 				{
 					"name": "衝鋒",
 					"entries": [
-						"若goristro向著一個目標直線移動至少15呎並接著在同回合以一次gore攻擊命中它，則目標將受到額外的38 ({@damage 7d10})穿刺傷害。若目標為一個生物，則它必須成功通過一次DC 21的力量豁免，否則被推離最多20呎並被擊倒{@condition 伏地}。"
+						"若巨牛魔向著一個目標直線移動至少15呎並接著在同回合以一次角撞攻擊命中它，則目標將受到額外的38 ({@damage 7d10})穿刺傷害。若目標為一個生物，則它必須成功通過一次DC 21的力量豁免，否則被推離最多20呎並被擊倒{@condition 伏地}。"
 					]
 				},
 				{
-					"name": "Labyrinthine Recall",
+					"name": "迷宮追憶",
 					"entries": [
-						"The goristro can perfectly recall any path it has traveled."
+						"巨牛魔可以完美地回想起任何它走過的道路。"
 					]
 				},
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The goristro 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"巨牛魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Siege Monster",
+					"name": "攻城怪物",
 					"entries": [
-						"The goristro deals double damage to objects and structures."
+						"巨牛魔對物體和建築物造成兩倍的傷害。"
 					]
 				}
 			],
@@ -20149,23 +20149,23 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The goristro makes three attacks: two with its fists and one with its hoof."
+						"巨牛魔進行三次攻擊：兩次拳擊，一次蹄擊。"
 					]
 				},
 				{
-					"name": "Fist",
+					"name": "拳擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 13}，觸及10呎，單一目標。{@h}20 ({@damage 3d8 + 7})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Hoof",
+					"name": "蹄擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 13}，觸及5呎，單一目標。{@h}23 ({@damage 3d10 + 7})鈍擊傷害。若目標為一個生物，則它必須成功通過一次DC 21的力量豁免，否則被擊倒{@condition 伏地}。"
 					]
 				},
 				{
-					"name": "Gore",
+					"name": "角撞",
 					"entries": [
 						"{@atk mw} 命中{@hit 13}，觸及10呎，單一目標。{@h}45 ({@damage 7d10 + 7})穿刺傷害。"
 					]
@@ -20718,7 +20718,7 @@
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell eyebite}"
+								"{@spell 攝心目光}"
 							]
 						}
 					},
@@ -24808,7 +24808,7 @@
 					]
 				},
 				{
-					"name": "Siege Monster",
+					"name": "攻城怪物",
 					"entries": [
 						"The kraken deals double damage to objects and structures."
 					]
@@ -27030,7 +27030,7 @@
 						"3e": [
 							"{@spell 巧舌術}",
 							"{@spell 水下呼吸}",
-							"{@spell water walk}"
+							"{@spell 水面行走}"
 						],
 						"1e": [
 							"{@spell 召喚元素生物} (water elemental only)",
@@ -28069,7 +28069,7 @@
 			]
 		},
 		{
-			"name": "Minotaur",
+			"name": "米諾陶", "ENG_name": "Minotaur",
 			"size": "L",
 			"type": "monstrosity",
 			"source": "MM",
@@ -28103,25 +28103,25 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 17,
-			"languages": "Abyssal",
+			"languages": "深淵語",
 			"cr": "3",
 			"trait": [
 				{
 					"name": "衝鋒",
 					"entries": [
-						"若minotaur向著一個目標直線移動至少10呎並接著在同回合以一次gore攻擊命中它，則目標將受到額外的9 ({@damage 2d8})穿刺傷害。若目標為一個生物，則它必須成功通過一次DC 14的力量豁免，否則被推離最多10呎並被擊倒{@condition 伏地}。"
+						"若米諾陶向著一個目標直線移動至少10呎並接著在同回合以一次角撞攻擊命中它，則目標將受到額外的9 ({@damage 2d8})穿刺傷害。若目標為一個生物，則它必須成功通過一次DC 14的力量豁免，否則被推離最多10呎並被擊倒{@condition 伏地}。"
 					]
 				},
 				{
-					"name": "Labyrinthine Recall",
+					"name": "迷宮追憶",
 					"entries": [
-						"The minotaur can perfectly recall any path it has traveled."
+						"米諾陶可以完美地回想起任何它走過的道路。"
 					]
 				},
 				{
 					"name": "魯莽",
 					"entries": [
-						"在它的回合開始時，minotaur可以讓它在該回合間進行的所有近戰武器攻擊具有優勢，但直到它的下個回合開始前，所有對它進行的攻擊檢定也都具有優勢。"
+						"在它的回合開始時，米諾陶可以讓它在該回合間進行的所有近戰武器攻擊具有優勢，但直到它的下個回合開始前，所有對它進行的攻擊檢定也都具有優勢。"
 					]
 				}
 			],
@@ -28133,7 +28133,7 @@
 					]
 				},
 				{
-					"name": "Gore",
+					"name": "角撞",
 					"entries": [
 						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}13 ({@damage 2d8 + 4})穿刺傷害。"
 					]
@@ -28740,20 +28740,20 @@
 							"slots": 3,
 							"spells": [
 								"{@spell 預言術}",
-								"{@spell guardian of faith}"
+								"{@spell 虔誠守衛}"
 							]
 						},
 						"5": {
 							"slots": 2,
 							"spells": [
-								"{@spell contagion}",
-								"{@spell insect plague}"
+								"{@spell 疫病術}",
+								"{@spell 疫病蟲群}"
 							]
 						},
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell harm}"
+								"{@spell 傷害術}"
 							]
 						}
 					},
@@ -29458,7 +29458,7 @@
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell eyebite}"
+								"{@spell 攝心目光}"
 							]
 						}
 					},
@@ -31789,15 +31789,15 @@
 					],
 					"daily": {
 						"3e": [
-							"{@spell blade barrier}",
-							"{@spell dispel evil and good}",
+							"{@spell 劍刃障壁}",
+							"{@spell 反制善惡}",
 							"{@spell 焰擊術}",
 							"{@spell 喚醒死者}"
 						],
 						"1e": [
-							"{@spell commune}",
+							"{@spell 通神術}",
 							"{@spell 操控天氣}",
-							"{@spell insect plague}"
+							"{@spell 疫病蟲群}"
 						]
 					},
 					"ability": "cha"
@@ -35190,7 +35190,7 @@
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell eyebite}"
+								"{@spell 攝心目光}"
 							]
 						}
 					},
@@ -36210,12 +36210,12 @@
 					],
 					"daily": {
 						"3e": [
-							"{@spell blade barrier}",
-							"{@spell dispel evil and good}",
-							"{@spell resurrection}"
+							"{@spell 劍刃障壁}",
+							"{@spell 反制善惡}",
+							"{@spell 復活術}"
 						],
 						"1e": [
-							"{@spell commune}",
+							"{@spell 通神術}",
 							"{@spell 操控天氣}"
 						]
 					},
@@ -38482,7 +38482,7 @@
 					]
 				},
 				{
-					"name": "Siege Monster",
+					"name": "攻城怪物",
 					"entries": [
 						"The tarrasque deals double damage to objects and structures."
 					]
@@ -39047,7 +39047,7 @@
 					]
 				},
 				{
-					"name": "Siege Monster",
+					"name": "攻城怪物",
 					"entries": [
 						"The treant deals double damage to objects and structures."
 					]
@@ -39835,8 +39835,8 @@
 							"{@spell 火牆術}"
 						],
 						"1e": [
-							"{@spell fire storm}",
-							"{@spell mass suggestion}"
+							"{@spell 火焰風暴}",
+							"{@spell 群體暗示術}"
 						]
 					},
 					"ability": "cha"
@@ -40072,7 +40072,7 @@
 					"daily": {
 						"1e": [
 							"{@spell 安定心神}",
-							"{@spell dispel evil and good}",
+							"{@spell 反制善惡}",
 							"{@spell 糾纏術}"
 						]
 					},
