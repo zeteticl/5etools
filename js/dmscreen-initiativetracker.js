@@ -340,7 +340,7 @@ class InitiativeTracker {
 				const srch = $srch.val().trim();
 				const MAX_RESULTS = 75; // hard cap results
 
-				const index = board.availContent["生物"];
+				const index = board.availContent["生物(Creature)"];
 				const results = index.search(srch, {
 					fields: {
 						n: {boost: 5, expand: true},
