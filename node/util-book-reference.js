@@ -6,17 +6,17 @@ UtilBookReference = {
 		switch (refId) {
 			case "bookref-quick":
 				return [
-					"Character Creation",
-					"Equipment",
-					"Playing the Game",
-					"Combat",
-					"Adventuring"
+					"角色創建",
+					"裝備",
+					"遊玩遊戲",
+					"戰鬥",
+					"冒險"
 				];
 			case "bookref-dmscreen":
 				return [
-					"Running the Game",
-					"Combat",
-					"Factions"
+					"運行遊戲",
+					"戰鬥",
+					"派系"
 				];
 			default:
 				throw new Error(`No sections defined for book id ${refId}`);

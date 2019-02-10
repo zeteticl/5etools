@@ -199,7 +199,20 @@ class Board {
 					d.n = data._meta.name[d.b];
 					d.b = data._meta.id[d.b];
 					d.s = data._meta.section[d.s];
+					d.cf = d.n+":"+d.s;
+					if (!this.availRules[d.cf]) {
+						this.availRules[d.cf] = elasticlunr(function () {
+							this.addField("b");
+							this.addField("s");
+							this.addField("p");
+							this.addField("n");
+							this.addField("h");
+							this.setRef("id");
+						});
+						SearchUtil.removeStemmer(this.availRules[d.cf]);
+					}
 					this.availRules.ALL.addDoc(d);
+					this.availRules[d.cf].addDoc(d);
 				});
 
 				return DataUtil.loadJSON("search/index.json");
@@ -222,7 +235,7 @@ class Board {
 				let ixMax = 0;
 				data.forEach(d => {
 					if (hasBadCat(d) || fromDeepIndex(d)) return;
-					d.cf = d.c === Parser.CAT_ID_CREATURE ? "生物" : Parser.pageCategoryToFull(d.c);
+					d.cf = d.c === Parser.CAT_ID_CREATURE ? "生物(Creature)" : Parser.pageCategoryToFull(d.c);
 					if (!this.availContent[d.cf]) {
 						this.availContent[d.cf] = elasticlunr(function () {
 							this.addField("n");
@@ -242,7 +255,7 @@ class Board {
 					index.forEach(d => {
 						if (hasBadCat(d) || fromDeepIndex(d)) return;
 						d.cf = Parser.pageCategoryToFull(d.c);
-						d.cf = d.c === Parser.CAT_ID_CREATURE ? "Creature" : Parser.pageCategoryToFull(d.c);
+						d.cf = d.c === Parser.CAT_ID_CREATURE ? "生物(Creature)" : Parser.pageCategoryToFull(d.c);
 						this.availContent.ALL.addDoc(d);
 						this.availContent[d.cf].addDoc(d);
 					});
@@ -2526,7 +2539,7 @@ class AddMenuSearchTab extends AddMenuTab {
 
 						this.menu.pnl.doPopulate_Stats(page, source, hash);
 					} else {
-						this.menu.pnl.doPopulate_Rules(r.doc.b, r.doc.p, r.doc.h);
+						this.menu.pnl.doPopulate_Rules(r.doc.b, r.doc.p, (r.doc.ch)? r.doc.ch: r.doc.h);
 					}
 					this.menu.doClose();
 				};
@@ -2546,7 +2559,7 @@ class AddMenuSearchTab extends AddMenuTab {
 					} else {
 						return $(`
 							<div class="panel-tab-results-row">
-								<span>${r.doc.h}</span>
+								<span>${r.doc.ch? (r.doc.ch+"("+r.doc.h+")"): r.doc.h}</span>
 								<span><i>${r.doc.n}, ${r.doc.s}</i></span>
 							</div>
 						`);
@@ -2581,7 +2594,7 @@ class AddMenuSearchTab extends AddMenuTab {
 
 			const $selCat = $(`
 				<select class="form-control panel-tab-cat">
-					<option value="ALL">All Categories</option>
+					<option value="ALL">所有類別</option>
 				</select>
 			`).appendTo($wrpCtrls);
 			Object.keys(this.indexes).sort().filter(it => it !== "ALL").forEach(it => $selCat.append(`<option value="${it}">${it}</option>`));
