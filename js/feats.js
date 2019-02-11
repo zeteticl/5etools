@@ -125,7 +125,7 @@ function addFeats (data) {
 
 	list.reIndex();
 	if (lastSearch) list.search(lastSearch);
-	list.sort("name");
+	list.sort("source");
 	filterBox.render();
 	handleFilterChange();
 
