@@ -245,7 +245,8 @@ class HashLoad {
 		ClassDisplay.curClass = ClassData.classes[id];
 
 		// name
-		$("th#nameTable").html(ClassDisplay.curClass.name);
+		const class_eng_name = ClassDisplay.curClass.ENG_name?(" <st style='font-size:80%;'>"+ClassDisplay.curClass.ENG_name+"<st>"):"";
+		$("th#nameTable").html(ClassDisplay.curClass.name+class_eng_name);
 		$("th#nameSummary").html(ClassDisplay.curClass.name);
 		if (ClassDisplay.curClass.authors) {
 			$("th#author").html(`By ${ClassDisplay.curClass.authors.join(", ")}`).show();
@@ -1081,7 +1082,7 @@ class SubClassLoader {
 						return this.nodeType === 3 && this.nodeValue.trim();
 					});
 					if (!textNodes.length) return;
-					const displayText = textNodes[0].nodeValue.trim().replace(/[:.]$/g, "");
+					const displayText = textNodes.parent().attr("book-idx");//textNodes[0].nodeValue.trim().replace(/[:.]$/g, "");
 					const scrollTo = $e.data("title-index");
 					makeScroller($navBody, idTr, pTr, pClass, displayText, scrollTo);
 				});

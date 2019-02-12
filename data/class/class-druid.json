@@ -1,7 +1,7 @@
 {
 	"class": [
 		{
-			"name": "德魯伊",
+			"name": "德魯伊", "ENG_name": "Druid",
 			"source": "PHB",
 			"hd": {
 				"number": 1,
@@ -375,20 +375,20 @@
 			"classFeatures": [
 				[
 					{
-						"name": "Druidic",
+						"name": "德魯伊語", "ENG_name": "Druidic",
 						"entries": [
-							"You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic."
+							"你知曉德魯伊語，一種屬於德魯伊的秘密語言。你可以說這種語言，並用它來留下隱藏的信息。你和其他知曉這種語言的人將會自動注意到這類信息。其他人則可以透過成功通過一次DC 15的睿知（{@skill 感知}）檢定以察覺這個信息的存在，但不使用魔法就無法解讀它。"
 						]
 					},
 					{
-						"name": "Spellcasting",
+						"name": "施法", "ENG_name": "Spellcasting",
 						"entries": [
-							"Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will. See {@book chapter 10|PHB|10} for the general rules of spellcasting and chapter 11 for the {@filter druid spell list|spells|class=druid}.",
+							"借助大自然本身的天授精粹，你可以施放法術以按照你的意願形塑它。請參閱{@book 第十章|PHB|10}以了解關於施法的規則，以及第十一章以查閱{@filter 德魯伊法術列表|spells|class=druid}。",
 							{
 								"type": "entries",
-								"name": "Cantrips",
+								"name": "戲法",
 								"entries": [
-									"At 1st level, you know two cantrips of your choice from the druid spell list. You learn additional druid cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Druid table."
+									"在1級時，你知曉兩個從{@filter 德魯伊法術列表|spells|class=druid}自選的戲法。你將在升至更高的德魯伊等級時學會額外的德魯伊戲法，見德魯伊表格中的戲法欄位。"
 								]
 							},
 							{
@@ -403,19 +403,19 @@
 							},
 							{
 								"type": "entries",
-								"name": "Spellcasting Ability",
+								"name": "施法屬性",
 								"entries": [
 									"Wisdom is your spellcasting ability for your druid spells, since your magic draws upon your devotion and attunement to nature. You use your Wisdom whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a druid spell you cast and when making an attack roll with one.",
 									{
 										"type": "abilityDc",
-										"name": "Spell",
+										"name": "法術",
 										"attributes": [
 											"wis"
 										]
 									},
 									{
 										"type": "abilityAttackMod",
-										"name": "Spell",
+										"name": "法術",
 										"attributes": [
 											"wis"
 										]
@@ -424,16 +424,16 @@
 							},
 							{
 								"type": "entries",
-								"name": "Ritual Casting",
+								"name": "儀式施法",
 								"entries": [
-									"You can cast a druid spell as a ritual if that spell has the ritual tag and you have the spell prepared."
+									"若一個德魯伊法術具有儀式標籤，且你已準備了該法術，則你可以將它做為儀式法術施放。"
 								]
 							},
 							{
 								"type": "entries",
-								"name": "Spellcasting Focus",
+								"name": "施法法器",
 								"entries": [
-									"You can use a druidic focus (found in chapter 5) as a spellcasting focus for your druid spells"
+									"你可以使用一個{@item 德魯伊法器|phb}（第五章），來做為你施放德魯伊法術的法器。"
 								]
 							}
 						]

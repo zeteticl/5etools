@@ -649,8 +649,8 @@ function EntryRenderer () {
 			if (entry.name != null) self._handleTrackTitles(entry.name);
 			const headerSpan = entry.name ? `
 				<span class="entry-title" data-title-index="${self._headerIndex++}" ${self._getEnumeratedTitleRel(entry.name)}>
-				<span class="entry-title-inner">
-					${self.renderEntry({type: "inline", entries: [entry.name]})}${inlineTitle ? ":" : ""}
+				<span class="entry-title-inner" book-idx="${entry.name}">
+					${self.renderEntry({type: "inline", entries: [entry.name]})}${entry.ENG_name?(" <st style='font-size:80%;'>"+entry.ENG_name+"<st>"):""}${inlineTitle ? ":" : ""}
 				</span>${pagePart}</span> ` : "";
 
 			if (depth === -1) {
@@ -1405,7 +1405,7 @@ EntryRenderer.utils = {
 		return `<tr>
 					<th class="rnd-name name" colspan="6">
 						<div class="name-inner">
-							<span><b class="stats-name copyable" onmousedown="event.preventDefault()" onclick="EntryRenderer.utils._handleNameClick(this, '${it.source.escapeQuotes()}')">${prefix || ""}${it._displayName || it.name}${suffix || ""}</b>${it.ENG_name? "("+it.ENG_name+")": ""}</span>
+							<span><b class="stats-name copyable" onmousedown="event.preventDefault()" onclick="EntryRenderer.utils._handleNameClick(this, '${it.source.escapeQuotes()}')">${prefix || ""}${it._displayName || it.name}${suffix || ""}</b>${it.ENG_name? " <st style='font-size:80%;'>"+it.ENG_name+"<st>": ""}</span>
 							<span class="stats-source source${it.source}" title="${Parser.sourceJsonToFull(it.source)}${EntryRenderer.utils.getSourceSubText(it)}">
 								${Parser.sourceJsonToAbv(it.source)}${addPageNum && it.page ? ` p${it.page}` : ""}
 							</span>
@@ -2026,7 +2026,7 @@ EntryRenderer.race = {
 					delete s.name;
 				}
 				if (s.ENG_name) {
-					cpy.ENG_name = `${cpy.ENG_name?cpy.ENG_name:cpy.name} (${s.ENG_name})`;
+					cpy.ENG_name = `${cpy.ENG_name?cpy.ENG_name:cpy.name}  <st style='font-size:80%;'>${s.ENG_name}<st>`;
 					delete s.ENG_name;
 				}
 				if (s.ability) {

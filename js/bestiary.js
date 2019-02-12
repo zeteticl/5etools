@@ -927,7 +927,7 @@ function renderStatblock (mon, isScaled) {
 		} else imgError();
 
 		$content.find(".mon__name--token").html(
-			`<span><b class="stats-name copyable" onclick="EntryRenderer.utils._handleNameClick(this, '${mon.source.escapeQuotes()}')">${displayName}</b>${mon.ENG_name? "("+mon.ENG_name+")": ""}</span>
+			`<span><b class="stats-name copyable" onclick="EntryRenderer.utils._handleNameClick(this, '${mon.source.escapeQuotes()}')">${displayName}</b>${mon.ENG_name? " <st style='font-size:80%;'>"+mon.ENG_name+"</st>": ""}</span>
 			${mon.soundClip ? getPronunciationButton() : ""}
 			<span class="stats-source ${Parser.sourceJsonToColor(mon.source)}" title="${sourceFull}${EntryRenderer.utils.getSourceSubText(mon)}">${source}</span>`
 		);
