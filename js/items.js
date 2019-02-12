@@ -300,7 +300,7 @@ function addItems (data) {
 		magiclist.search(lastSearch);
 	}
 	mundanelist.sort("type", {order: "desc"});
-	magiclist.sort("name", {order: "desc"});
+	magiclist.sort("type", {order: "desc"});
 	filterBox.render();
 	handleFilterChange();
 

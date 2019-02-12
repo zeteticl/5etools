@@ -55,7 +55,10 @@ const patronFilter = new Filter({
 const spellFilter = new Filter({
 	header: "Spell", headerName: "法術",
 	items: ["eldritch blast", "hex/curse"],
-	displayFn: StrUtil.toTitleCase
+	displayFn: function(it){switch(it){
+		case "eldritch blast": return "魔能爆";
+		case "hex/curse": return "脆弱詛咒/詛咒";
+	};}
 });
 const featureFilter = new Filter({
 	header: "Feature", headerName: "能力",
@@ -85,7 +88,7 @@ async function onJsonLoad (data) {
 	);
 
 	const subList = ListUtil.initSublist({
-		valueNames: ["name", "ability", "prerequisite", "id", "sortIndex"],
+		valueNames: ["name", "ability", "prerequisite", "id", "sortIndex", "eng_name"],
 		listClass: "suboptfeatures",
 		getSublistRow: getSublistItem,
 		sortFunction: listSortOptFeatures
@@ -171,6 +174,7 @@ function addOptionalfeatures (data) {
 					<span class="hidden sortIndex">${it._sLevel ? it._sLevel : it._sPrereq ? -1 : -2}</span>
 					
 					<span class="uniqueid hidden">${it.uniqueId ? it.uniqueId : ivI}</span>
+					<span class="eng_name hidden">${it.ENG_name ? it.ENG_name : it.name}</span>
 				</a>
 			</li>
 		`;
@@ -190,7 +194,7 @@ function addOptionalfeatures (data) {
 
 	list.reIndex();
 	if (lastSearch) list.search(lastSearch);
-	list.sort("name");
+	list.sort("type");
 	filterBox.render();
 	handleFilterChange();
 
@@ -255,7 +259,7 @@ function loadhash (jsonIndex) {
 			if (i > 0) $wrpOptFeatType.append("/");
 			$(`<span class="roller">${Parser.optFeatureTypeToFull(ft).substring(commonPrefix.length)}</span>`)
 				.click(() => {
-					filterBox.setFromValues({"能力類型": [ft.toLowerCase()]});
+					filterBox.setFromValues({"Feature Type": [ft.toLowerCase()]});
 					handleFilterChange();
 				})
 				.appendTo($wrpOptFeatType);
@@ -263,7 +267,7 @@ function loadhash (jsonIndex) {
 	} else {
 		$(`<span class="roller">${Parser.optFeatureTypeToFull(it.featureType)}</span>`)
 			.click(() => {
-				filterBox.setFromValues({"能力類型": [it.featureType.toLowerCase()]});
+				filterBox.setFromValues({"Feature Type": [it.featureType.toLowerCase()]});
 				handleFilterChange();
 			})
 			.appendTo($wrpOptFeatType);
