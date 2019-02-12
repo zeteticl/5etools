@@ -1221,18 +1221,18 @@ Parser.prereqPatronToShort = function (patron) {
 
 // NOTE: These need to be reflected in omnidexer.js to be indexed
 Parser.OPT_FEATURE_TYPE_TO_FULL = {
-	EI: "Eldritch Invocation",
+	EI: "魔能祈喚",
 	MM: "Metamagic",
 	"MV:B": "Maneuver, Battlemaster",
 	"MV:C2-UA": "Maneuver, Cavalier V2 (UA)",
 	"AS:V1-UA": "Arcane Shot, V1 (UA)",
 	"AS:V2-UA": "Arcane Shot, V2 (UA)",
 	"AS": "Arcane Shot",
-	OTH: "Other",
-	"FS:F": "Fighting Style; Fighter",
-	"FS:B": "Fighting Style; Bard",
-	"FS:P": "Fighting Style; Paladin",
-	"FS:R": "Fighting Style; Ranger"
+	OTH: "其他",
+	"FS:F": "戰鬥風格; 戰士",
+	"FS:B": "戰鬥風格; 吟遊詩人",
+	"FS:P": "戰鬥風格; 聖騎士",
+	"FS:R": "戰鬥風格; 遊俠"
 };
 
 Parser.optFeatureTypeToFull = function (type) {
