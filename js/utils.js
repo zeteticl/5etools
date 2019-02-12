@@ -1199,8 +1199,8 @@ Parser.levelToFull = function (level) {
 };
 
 Parser.prereqSpellToFull = function (spell) {
-	if (spell === "eldritch blast") return EntryRenderer.getDefaultRenderer().renderEntry(`{@spell ${spell}}戲法`);
-	else if (spell === "hex/curse") return EntryRenderer.getDefaultRenderer().renderEntry("{@spell hex}法術 或 能施加詛咒的契術師能力");
+	if (spell === "eldritch blast") return EntryRenderer.getDefaultRenderer().renderEntry(`{@spell 魔能爆}戲法`);
+	else if (spell === "hex/curse") return EntryRenderer.getDefaultRenderer().renderEntry("{@spell 脆弱詛咒}法術 或 能施加詛咒的契術師能力");
 	else if (spell) return EntryRenderer.getDefaultRenderer().renderEntry(`{@spell ${spell}}`);
 	return STR_NONE;
 };
