@@ -1199,16 +1199,16 @@ Parser.levelToFull = function (level) {
 };
 
 Parser.prereqSpellToFull = function (spell) {
-	if (spell === "eldritch blast") return EntryRenderer.getDefaultRenderer().renderEntry(`{@spell ${spell}} cantrip`);
-	else if (spell === "hex/curse") return EntryRenderer.getDefaultRenderer().renderEntry("{@spell hex} spell or a warlock feature that curses");
+	if (spell === "eldritch blast") return EntryRenderer.getDefaultRenderer().renderEntry(`{@spell ${spell}}戲法`);
+	else if (spell === "hex/curse") return EntryRenderer.getDefaultRenderer().renderEntry("{@spell hex}法術 或 能施加詛咒的契術師能力");
 	else if (spell) return EntryRenderer.getDefaultRenderer().renderEntry(`{@spell ${spell}}`);
 	return STR_NONE;
 };
 
 Parser.prereqPactToFull = function (pact) {
-	if (pact === "Chain") return "Pact of the Chain";
-	if (pact === "Tome") return "Pact of the Tome";
-	if (pact === "Blade") return "Pact of the Blade";
+	if (pact === "Chain") return "鎖鏈魔契";
+	if (pact === "Tome") return "書卷魔契";
+	if (pact === "Blade") return "鋒刃魔契";
 	return pact;
 };
 
@@ -1222,12 +1222,12 @@ Parser.prereqPatronToShort = function (patron) {
 // NOTE: These need to be reflected in omnidexer.js to be indexed
 Parser.OPT_FEATURE_TYPE_TO_FULL = {
 	EI: "魔能祈喚",
-	MM: "Metamagic",
-	"MV:B": "Maneuver, Battlemaster",
-	"MV:C2-UA": "Maneuver, Cavalier V2 (UA)",
-	"AS:V1-UA": "Arcane Shot, V1 (UA)",
-	"AS:V2-UA": "Arcane Shot, V2 (UA)",
-	"AS": "Arcane Shot",
+	MM: "超魔法",
+	"MV:B": "戰技, 戰鬥大師",
+	"MV:C2-UA": "戰技, 騎兵 V2 (UA)",
+	"AS:V1-UA": "祕法射擊, V1 (UA)",
+	"AS:V2-UA": "祕法射擊, V2 (UA)",
+	"AS": "祕法射擊",
 	OTH: "其他",
 	"FS:F": "戰鬥風格; 戰士",
 	"FS:B": "戰鬥風格; 吟遊詩人",

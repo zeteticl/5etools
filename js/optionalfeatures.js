@@ -55,7 +55,10 @@ const patronFilter = new Filter({
 const spellFilter = new Filter({
 	header: "Spell", headerName: "法術",
 	items: ["eldritch blast", "hex/curse"],
-	displayFn: StrUtil.toTitleCase
+	displayFn: function(it){switch(it){
+		case "eldritch blast": return "魔能爆";
+		case "hex/curse": return "脆弱詛咒/詛咒";
+	};}
 });
 const featureFilter = new Filter({
 	header: "Feature", headerName: "能力",
