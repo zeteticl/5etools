@@ -441,18 +441,18 @@
 				],
 				[
 					{
-						"name": "Wild Shape",
+						"name": "荒野形態", "ENG_name": "Wild Shape",
 						"entries": [
-							"Starting at 2nd level, you can use your action to magically assume the shape of a beast that you have seen before. You can use this feature twice. You regain expended uses when you finish a short or long rest.",
-							"Your druid level determines the beasts you can transform into, as shown in the Beast Shapes table. At 2nd level, for example, you can transform into any beast that has a challenge rating of 1/4 or lower that doesn't have a flying or swimming speed.",
+							"從2級開始，你可以使用你的動作以魔法變成一個你曾經見過野獸的型態。你可以使用這個能力二次。你在完成一次短休或長休後恢復所有你花費掉的次數。",
+							"你的德魯伊等級決定了你可以變化成的野獸，參見野獸型態表。舉例來說，在2級時，你可以轉變成任何挑戰等級為1/4或更低，且不具有飛行或游泳速度的野獸。",
 							{
 								"type": "table",
-								"caption": "Beast Shapes",
+								"caption": "野獸型態",
 								"colLabels": [
-									"Level",
-									"Max. CR",
-									"Limitations",
-									"Example"
+									"等級",
+									"最高挑戰等級",
+									"限制",
+									"範例"
 								],
 								"colStyles": [
 									"col-2 text-align-center",
@@ -462,35 +462,35 @@
 								],
 								"rows": [
 									[
-										"{@filter 2nd|bestiary|cr=0;1/8;1/4|type=beast|speed=!fly;!swim|miscellaneous=!swarm}",
+										"{@filter 2級|bestiary|cr=0;1/8;1/4|type=beast|speed=!fly;!swim|miscellaneous=!swarm}",
 										"1/4",
-										"No flying or swimming speed",
-										"Wolf"
+										"沒有飛行或游泳速度",
+										"狼"
 									],
 									[
-										"{@filter 4th|bestiary|cr=0;1/8;1/4;1/2|type=beast|speed=!fly|miscellaneous=!swarm}",
+										"{@filter 4級|bestiary|cr=0;1/8;1/4;1/2|type=beast|speed=!fly|miscellaneous=!swarm}",
 										"1/2",
-										"No flying speed",
-										"Crocodile"
+										"沒有飛行速度",
+										"鱷魚"
 									],
 									[
-										"{@filter 8th|bestiary|cr=0;1/8;1/4;1/2;1|type=beast|miscellaneous=!swarm}",
+										"{@filter 8級|bestiary|cr=0;1/8;1/4;1/2;1|type=beast|miscellaneous=!swarm}",
 										"1",
 										"\u2014",
-										"Giant eagle"
+										"巨鷹"
 									]
 								]
 							},
-							"You can stay in a beast shape for a number of hours equal to half your druid level (rounded down). You then revert to your normal form unless you expend another use of this feature. You can revert to your normal form earlier by using a bonus action on your turn. You automatically revert if you fall {@condition unconscious}, drop to 0 hit points, or die.",
-							"While you are transformed, the following rules apply:",
+							"你可以保持野獸型態長達等同於你德魯伊等級一半的小時數。你接著將回復你原本的型態，除非你再花費此能力的一個次數。你可以透過在你的回合使用一個附贈動作以提早回復你原本的型態。你將在你陷入{@condition 昏迷}、生命值歸零、或死亡時自動回復原本的型態。",
+							"當你變形後，適用以下規則：",
 							{
 								"type": "list",
 								"items": [
-									"Your game statistics are replaced by the statistics of the beast, but you retain your alignment, personality, and Intelligence, Wisdom, and Charisma scores. You also retain all of your skill and saving throw proficiencies, in addition to gaining those of the creature. If the creature has the same proficiency as you and the bonus in its stat block is higher than yours, use the creature's bonus instead of yours. If the creature has any legendary or lair actions, you can't use them.",
-									"When you transform, you assume the beast's hit points and Hit Dice. When you revert to your normal form, you return to the number of hit points you had before you transformed. However, if you revert as a result of dropping to 0 hit points, any excess damage carries over to your normal form. For example, if you take 10 damage in animal form and have only 1 hit point left, you revert and take 9 damage. As long as the excess damage doesn't reduce your normal form to 0 hit points, you aren't knocked {@condition unconscious}.",
-									"You can't cast spells, and your ability to speak or take any action that requires hands is limited to the capabilities of your beast form. Transforming doesn't break your concentration on a spell you've already cast, however, or prevent you from taking actions that are part of a spell, such as {@spell call lightning}, that you've already cast.",
-									"You retain the benefit of any features from your class, race, or other source and can use them if the new form is physically capable of doing so. However, you can't use any of your special senses, such as darkvision, unless your new form also has that sense.",
-									"You choose whether your equipment falls to the ground in your space, merges into your new form, or is worn by it. Worn equipment functions as normal, but the DM decides whether it is practical for the new form to wear a piece of equipment, based on the creature's shape and size. Your equipment doesn't change size or shape to match the new form, and any equipment that the new form can't wear must either fall to the ground or merge with it. Equipment that merges with the form has no effect until you leave the form."
+									"你的遊戲數據被該野獸的數據給取，但你保留你的陣營、個性，和智力、睿知、和魅力值。你同時也保留你的所有技能和豁免熟練，並額外獲得該生物所具有的熟練。若該生物具有與你相同的熟練項，且它數據資料中列出的加值比你的還要高，則你使用該生物的加值取代你自己的。若該生物具有任何傳奇動作或巢穴動作，你不能使用它們。",
+									"當你變形時，你取用該野獸的生命值和生命骰。當你回復你原本的型態時，你將取回你變形之前的生命值。若你是因為生命值歸零而回復原本型態，則任何溢出傷害都將被帶到你原本的型態，扣減你原本的生命值。舉例來說，若你在處於動物型態時受到10點傷害，且只剩下1點生命值，你將回復原本的型態並承受9點傷害。只要這個溢出傷害沒有讓你原本型態的生命值歸零，你就不會被擊倒{@condition 昏迷}。",
+									"你不能施放法術，且你說話或採取任何需要雙手的動作的能力將受限於你的野獸型態。然而，變形並不會中斷你對已施放法術的專注，也不會讓你無法採取你已經施放法術所提供的動作，像是{@spell 召雷術}。",
+									"你保留任何來自你職業、種族、或其他來源的能力，且若新型態物理上有能力這麼做，你就能夠使用它們。然而，你無法使用你的特殊感官，像是黑暗視覺，除非你的新型態也具有該感官。",
+									"你選擇你的裝備是會掉在地上、融入新型態、或是被新型態穿戴。被穿戴的裝備將正常生效，但DM將根據該生物的體型和形狀以決定新型態是否可以正常穿戴你的每個裝備。你的裝備並不會改變形狀或尺寸以符合你的新形態，且任何新型態無法穿戴的裝備將會掉在地上或融入新型態。直到你解除該型態前，融入新型態的裝備將不會產生任何效果。"
 								]
 							}
 						]
@@ -506,9 +506,9 @@
 				[],
 				[
 					{
-						"name": "Wild Shape Improvement",
+						"name": "荒野形態強化", "ENG_name": "Wild Shape Improvement",
 						"entries": [
-							"At 4th level, your Wild Shape improves as shown on the Beast Shapes table."
+							"在4級時，你的荒野形態獲得強化，參見野獸型態表。"
 						]
 					},
 					{
@@ -532,9 +532,9 @@
 				[],
 				[
 					{
-						"name": "Wild Shape Improvement",
+						"name": "荒野形態強化", "ENG_name": "Wild Shape Improvement",
 						"entries": [
-							"At 8th level, your Wild Shape improves as shown on the Beast Shapes table."
+							"在8級時，你的荒野形態獲得強化，參見野獸型態表。"
 						]
 					},
 					{
@@ -588,15 +588,15 @@
 				[],
 				[
 					{
-						"name": "Timeless Body",
+						"name": "不老身軀", "ENG_name": "Timeless Body",
 						"entries": [
-							"Starting at 18th level, the primal magic that you wield causes you to age more slowly. For every 10 years that pass, your body ages only 1 year."
+							"從18級開始，你使用的原初魔法讓你老化的更加緩慢。每10年過去，你的身體只會老化1年。"
 						]
 					},
 					{
-						"name": "Beast Spells",
+						"name": "野獸施法", "ENG_name": "Beast Spells",
 						"entries": [
-							"Beginning at 18th level, you can cast many of your druid spells in any shape you assume using Wild Shape. You can perform the somatic and verbal components of a druid spell while in a beast shape, but you aren't able to provide material components."
+							"從18級開始，你可以在處於荒野形態所變成的任何型態時施放你的許多德魯伊法術。你可以在處於野獸型態時執行德魯伊法術的姿勢和聲音構材，但你無法提供材料構材。"
 						]
 					}
 				],
@@ -611,10 +611,10 @@
 				],
 				[
 					{
-						"name": "Archdruid",
+						"name": "大德魯伊", "ENG_name": "Archdruid",
 						"entries": [
-							"At 20th level, you can use your Wild Shape an unlimited number of times.",
-							"Additionally, you can ignore the verbal and somatic components of your druid spells, as well as any material components that lack a cost and aren't consumed by a spell. You gain this benefit in both your normal shape and your beast shape from Wild Shape."
+							"在20級時，你可以無限次的使用你的荒野形態。",
+							"此外，你可以忽略你德魯伊法術的姿勢和聲音構材、以及任何沒有價值且不會被法術消耗的材料構材。你在你的原本型態和來自荒野形態的野獸型態中都獲得這個好處。"
 						]
 					}
 				]
