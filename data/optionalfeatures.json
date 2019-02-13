@@ -376,7 +376,7 @@
 			"featureType": "EI"
 		},
 		{
-			"name": "Eldritch Sight",
+			"name": "魔能視界", "ENG_name": "Eldritch Sight",
 			"entries": [
 				"你可以隨意施放{@spell 偵測魔法}，無需消耗法術位。"
 			],
@@ -588,7 +588,7 @@
 			"featureType": "EI"
 		},
 		{
-			"name": "Gift of the Depths",
+			"name": "深海之賜", "ENG_name": "Gift of the Depths",
 			"prerequisite": [
 				{
 					"type": "prereqLevel",
@@ -599,7 +599,7 @@
 				}
 			],
 			"entries": [
-				"You can breathe underwater, and you gain a swimming speed equal to your walking speed. You can also cast {@spell water breathing} without expending a spell slot. Once you cast it using this invocation, you can't do so again until you finish a long rest."
+				"你可以在水下呼吸，且你獲得等同於你步行速度的游泳速度。你也可以施放{@spell 水下呼吸}一次而無需消耗法術位。一旦你使用此祈喚施放它，直到你完成一次長休之前你都不能再這麼做。"
 			],
 			"data": {
 				"previousVersion": {
@@ -612,7 +612,7 @@
 			"featureType": "EI"
 		},
 		{
-			"name": "Gift of the Depths",
+			"name": "深海之賜", "ENG_name": "Gift of the Depths",
 			"prerequisite": [
 				{
 					"type": "prereqLevel",
@@ -623,15 +623,15 @@
 				}
 			],
 			"entries": [
-				"You can breathe underwater, and you gain a swimming speed equal to your walking speed.",
-				"You can also cast {@spell water breathing} once without expending a spell slot. You regain the ability to do so when you finish a long rest."
+				"你可以在水下呼吸，且你獲得等同於你步行速度的游泳速度。",
+				"你也可以施放{@spell 水下呼吸}一次而無需消耗法術位。你在完成一次長休後恢復這麼做的能力。"
 			],
 			"source": "XGE",
 			"page": 57,
 			"featureType": "EI"
 		},
 		{
-			"name": "Gift of the Ever-Living Ones",
+			"name": "永生者之賜", "ENG_name": "Gift of the Ever-Living Ones",
 			"prerequisite": [
 				{
 					"type": "prereqPact",
@@ -639,7 +639,7 @@
 				}
 			],
 			"entries": [
-				"Whenever you regain hit points while your familiar is within 100 feet of you, treat any dice rolled to determine the hit points you regain as having rolled their maximum value for you."
+				"每當你在你的魔寵距離你100呎內時回復生命值，將任何用以決定你生命值回復量的骰子都視作它們骰出了最大值。"
 			],
 			"data": {
 				"previousVersion": {
@@ -652,7 +652,7 @@
 			"featureType": "EI"
 		},
 		{
-			"name": "Gift of the Ever-Living Ones",
+			"name": "永生者之賜", "ENG_name": "Gift of the Ever-Living Ones",
 			"prerequisite": [
 				{
 					"type": "prereqPact",
@@ -660,7 +660,7 @@
 				}
 			],
 			"entries": [
-				"Whenever you regain hit points while your familiar is within 100 feet of you, treat any dice rolled to determine the hit points you regain as having rolled their maximum value for you."
+				"每當你在你的魔寵距離你100呎內時回復生命值，將任何用以決定你生命值回復量的骰子都視作它們骰出了最大值。"
 			],
 			"source": "XGE",
 			"page": 57,
@@ -743,7 +743,7 @@
 			"featureType": "EI"
 		},
 		{
-			"name": "Improved Pact Weapon",
+			"name": "進階契約武器", "ENG_name": "Improved Pact Weapon",
 			"prerequisite": [
 				{
 					"type": "prereqPact",
@@ -751,7 +751,7 @@
 				}
 			],
 			"entries": [
-				"You can use any weapon you summon with your Pact of the Blade feature as a spellcasting focus for your warlock spells. In addition, the weapon counts as a magic weapon with a +1 bonus to its attack and damage rolls, unless it is already a magic weapon that you transformed into your pact weapon."
+				"你可以使用任何你透過鋒刃魔契能力召喚出來的武器做為你施放契術師法術的法器。此外，該武器視作一把在攻擊檢定和傷害骰上具有+1加值的魔法武器，除非它已經是一把被你轉化為你契約武器的魔法武器。"
 			],
 			"data": {
 				"previousVersion": {
@@ -779,14 +779,14 @@
 				}
 			],
 			"entries": [
-				"Any weapon you create using your Pact of the Blade feature is a +1 weapon. This invocation doesn't affect a magic weapon you transformed into your pact weapon."
+				"任何你使用你鋒刃魔契能力創造出來的武器是一把{@item 武器+1}。這個祈喚並不會影響你轉化為你契約武器的魔法武器。"
 			],
 			"source": "UAWarlockAndWizard",
 			"page": 4,
 			"featureType": "EI"
 		},
 		{
-			"name": "Improved Pact Weapon",
+			"name": "進階契約武器", "ENG_name": "Improved Pact Weapon",
 			"prerequisite": [
 				{
 					"type": "prereqPact",
@@ -794,9 +794,9 @@
 				}
 			],
 			"entries": [
-				"You can use any weapon you summon with your Pact of the Blade feature as a spellcasting focus for your warlock spells.",
-				"In addition, the weapon gains a +1 bonus to its attack and damage rolls, unless it is a magic weapon that already has a bonus to those rolls.",
-				"Finally, the weapon you conjure can be a {@item shortbow|phb}, {@item longbow|phb}, {@item light crossbow|phb}, or {@item heavy crossbow|phb}."
+				"你可以使用任何你透過鋒刃魔契能力召喚出來的武器做為你施放契術師法術的法器。",
+				"此外，該武器在它的攻擊檢定和傷害骰上獲得+1加值，除非它已經是一把在這些擲骰中具有加值的魔法武器。",
+				"最後，你所召喚的該武器可以是一把{@item 短弓|phb}、{@item 長弓|phb}、{@item 輕弩|phb}、或{@item 重弩|phb}。"
 			],
 			"source": "XGE",
 			"page": 57,
@@ -878,7 +878,7 @@
 			"featureType": "EI"
 		},
 		{
-			"name": "Lifedrinker",
+			"name": "飲命者", "ENG_name": "Lifedrinker",
 			"prerequisite": [
 				{
 					"type": "prereqLevel",
@@ -893,7 +893,7 @@
 				}
 			],
 			"entries": [
-				"When you hit a creature with your pact weapon, the creature takes extra necrotic damage equal to your Charisma modifier (minimum of 1)."
+				"當你使用你的契約武器命中一個生物時，該生物受到等同你魅力調整值的額外死靈傷害（最少為1）。"
 			],
 			"source": "PHB",
 			"page": 111,
@@ -1370,7 +1370,7 @@
 			"featureType": "EI"
 		},
 		{
-			"name": "命運竊賊", "ENG_name": "Thief of Five Fates",
+			"name": "五運竊賊", "ENG_name": "Thief of Five Fates",
 			"entries": [
 				"你可以使用契術師法術位施放一次{@spell 災禍術}。直到你完成一次長休之前你都不能再這麼做。"
 			],
