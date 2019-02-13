@@ -55,11 +55,13 @@ const patronFilter = new Filter({
 const spellFilter = new Filter({
 	header: "Spell", headerName: "法術",
 	items: ["eldritch blast", "hex/curse"],
-	displayFn: function(it){switch(it){
-		case "eldritch blast": return "魔能爆";
-		case "hex/curse": return "脆弱詛咒/詛咒";
-	};}
+	displayFn: parse_EI_spell
 });
+function parse_EI_spell(it){switch(it){
+	case "eldritch blast": return "魔能爆";
+	case "hex/curse": return "脆弱詛咒/詛咒";
+	default: return it;
+};}
 const featureFilter = new Filter({
 	header: "Feature", headerName: "能力",
 	displayFn: StrUtil.toTitleCase

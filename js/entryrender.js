@@ -1915,6 +1915,13 @@ EntryRenderer.optionalfeature = {
 			return EntryRenderer.optionalfeature._prereqWeights[a.type] - EntryRenderer.optionalfeature._prereqWeights[b.type]
 		});
 
+		function parse_prereq_spell (spell) {
+			if (spell === "eldritch blast") return "魔能爆";
+			else if (spell === "hex/curse") return "脆弱詛咒/詛咒";
+			else if (spell) return spell;
+			return STR_NONE;
+		}
+
 		const outList = prerequisites.map(it => {
 			switch (it.type) {
 				case "prereqLevel":
@@ -1924,7 +1931,7 @@ EntryRenderer.optionalfeature = {
 				case "prereqPatron":
 					return listMode ? `${Parser.prereqPatronToShort(it.entry)} patron` : `${it.entry} patron`;
 				case "prereqSpell":
-					return listMode ? it.entries.map(x => x.toTitleCase()).join("; ") : it.entries.map(sp => Parser.prereqSpellToFull(sp)).joinConjunct(", ", " 或 ");
+					return listMode ? it.entries.map(x => parse_prereq_spell(x)).join("; ") : it.entries.map(sp => Parser.prereqSpellToFull(sp)).joinConjunct(", ", " 或 ");
 				case "prereqFeature":
 					return listMode ? it.entries.map(x => x.toTitleCase()).join("; ") : it.entries.joinConjunct(", ", " 或 ");
 				default: // string

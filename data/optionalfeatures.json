@@ -147,7 +147,7 @@
 			"featureType": "EI"
 		},
 		{
-			"name": "Book of Ancient Secrets",
+			"name": "遠古奧秘卷冊", "ENG_name": "Book of Ancient Secrets",
 			"prerequisite": [
 				{
 					"type": "prereqPact",
@@ -155,15 +155,15 @@
 				}
 			],
 			"entries": [
-				"You can now inscribe magical rituals in your Book of Shadows. Choose two {@filter 1st-level spells that have the ritual tag from any class's spell list|spells|tag=ritual|level=1}. The spells needn't be from the same spell list. The spells appear in the book and don't count against the number of spells you know. With your Book of Shadows in hand, you can cast the chosen spells as rituals. You can't cast the spells except as rituals, unless you've learned them by some other means. You can also cast a warlock spell you know as a ritual if it has the ritual tag.",
-				"On your adventures, you can add other ritual spells to your Book of Shadows. When you find such a spell, you can add it to the book if the spell's level is equal to or less than half your warlock level (rounded up) and if you can spare the time to transcribe the spell. For each level of the spell, the transcription process takes 2 hours and costs 50 gp for the rare inks needed to inscribe it."
+				"現在你可以將魔法儀式抄寫進你的影之書。選擇二個{@filter 任何職業法術列表中具有儀式標籤的1環法術|spells|tag=ritual|level=1}。這些法術並不需要是來自同一個法術列表。這些法術將出現在書中，且不會計入你的已知法術數量。當影之書在你手上時，你能夠以儀式施展所選的法術。你不能以儀式以外的方式施展這些法術，除非你透過其他方式習得了它們。若一個你已知的契術師法術具有儀式標籤，你也可以將它作為儀式施展。",
+				"在你的冒險中，你可以將其他儀式法術加入你的影之書。當你找到一個這樣的法術時，若該法術的環位等於或低於你契術師等級的一半（小數點進位）且你能夠騰出時間抄寫該法術，你就可以將它加到書中。抄寫該法術的過程需要花費每環位2小時的時間，和成本為每環位50金幣用於抄寫的稀有墨水。"
 			],
 			"source": "PHB",
 			"page": 110,
 			"featureType": "EI"
 		},
 		{
-			"name": "Burning Hex",
+			"name": "燃燒惡咒", "ENG_name": "Burning Hex",
 			"prerequisite": [
 				{
 					"type": "prereqPatron",
@@ -171,7 +171,7 @@
 				}
 			],
 			"entries": [
-				"As a bonus action, you cause a target cursed by your Hexblade's Curse to take fire damage equal to your Charisma modifier (minimum of 1)."
+				"以一個附贈動作，你使一個被你咒劍詛咒給影響的目標受到等同於你魅力調整值的火焰傷害（最少為1）。"
 			],
 			"source": "UAWarlockAndWizard",
 			"page": 3,
@@ -208,7 +208,7 @@
 				}
 			],
 			"entries": [
-				"你可以隨意施放{@spell 怪物定身術}\u2014以一個天界生物、邪魔、或元素為目標\u2014而無需消耗法術位或材料構材。你必須完成一次長休才能再對同一個生物使用這個祈喚。"
+				"你可以隨意施放{@spell 怪物定身術}\u2014以一個天界生物、邪魔、或元素為目標\u2014而無需消耗法術位或材料構材。你必須完成一次長休才能再對同一個生物使用此祈喚。"
 			],
 			"source": "PHB",
 			"page": 110,
@@ -309,7 +309,7 @@
 			"featureType": "EI"
 		},
 		{
-			"name": "Cloak of Flies",
+			"name": "飛蠅斗篷", "ENG_name": "Cloak of Flies",
 			"prerequisite": [
 				{
 					"type": "prereqLevel",
@@ -320,9 +320,9 @@
 				}
 			],
 			"entries": [
-				"As a bonus action, you can surround yourself with a magical aura that looks like buzzing flies. The aura extends 5 feet from you in every direction, but not through total cover. It lasts until you're {@condition incapacitated} or you dismiss it as a bonus action.",
-				"The aura grants you advantage on Charisma (Intimidation) checks but disadvantage on all other Charisma checks. Any other creature that starts its turn in the aura takes poison damage equal to your Charisma modifier (minimum of 0 damage).",
-				"Once you use this invocation, you can't use it again until you finish a short or long rest."
+				"以一個附贈動作，你可以讓一道彷彿嗡嗡飛蠅的魔法靈光環繞在你周圍。這道靈光從你向四周延伸5呎，但不會穿過全掩護。它會持續存在直到你陷入{@condition 無力}狀態或你以一個附贈動作解消它。",
+				"這道靈光將讓你在魅力（{@skill 威嚇}）檢定中獲得優勢，但在其他所有魅力檢定中承受劣勢。任何其他在這道靈光中開始它回合的生物將受到等同於你魅力調整值的毒素傷害（最少為0）。",
+				"一旦你使用此祈喚，直到你完成一次短休或長休之前都無法再使用它。"
 			],
 			"source": "XGE",
 			"page": 56,
@@ -349,16 +349,16 @@
 			"featureType": "EI"
 		},
 		{
-			"name": "Devil's Sight",
+			"name": "魔鬼視覺", "ENG_name": "Devil's Sight",
 			"entries": [
-				"You can see normally in darkness, both magical and nonmagical, to a distance of 120 feet."
+				"當你在黑暗中，無論是魔法還是非魔法黑暗，你可以正常看見距離你120呎範圍內的事物。"
 			],
 			"source": "PHB",
 			"page": 110,
 			"featureType": "EI"
 		},
 		{
-			"name": "Dreadful Word",
+			"name": "恐懼之語", "ENG_name": "Dreadful Word",
 			"prerequisite": [
 				{
 					"type": "prereqLevel",
@@ -369,7 +369,7 @@
 				}
 			],
 			"entries": [
-				"You can cast {@spell confusion} once using a warlock spell slot. You can't do so again until you finish a long rest."
+				"你可以使用契術師法術位施放一次{@spell 困惑術}。直到你完成一次長休之前你都不能再這麼做。"
 			],
 			"source": "PHB",
 			"page": 110,
@@ -378,14 +378,14 @@
 		{
 			"name": "Eldritch Sight",
 			"entries": [
-				"You can cast {@spell detect magic} at will, without expending a spell slot."
+				"你可以隨意施放{@spell 偵測魔法}，無需消耗法術位。"
 			],
 			"source": "PHB",
 			"page": 110,
 			"featureType": "EI"
 		},
 		{
-			"name": "Eldritch Smite",
+			"name": "魔能重斬", "ENG_name": "Eldritch Smite",
 			"prerequisite": [
 				{
 					"type": "prereqPact",
@@ -400,7 +400,7 @@
 				}
 			],
 			"entries": [
-				"Once per turn when you hit a creature with your pact weapon, you can expend a warlock spell slot to deal an extra {@dice 1d8} force damage to the target, plus another {@dice 1d8} per level of the spell slot. If the target takes any of this damage, you can knock the target {@condition prone} if it is Huge or smaller."
+				"每回合一次，當你使用你的契約武器命中一個生物時，你可以消耗一個契術師法術位以對目標造成額外的{@dice 1d8}力場傷害，加上該法術位每環位再{@dice 1d8}點的傷害。若目標受到此傷害且它的體型為巨型或更小，你可以將目標擊倒{@condition 伏地}。"
 			],
 			"data": {
 				"previousVersion": {
@@ -413,7 +413,7 @@
 			"featureType": "EI"
 		},
 		{
-			"name": "Eldritch Smite",
+			"name": "魔能重斬", "ENG_name": "Eldritch Smite",
 			"prerequisite": [
 				{
 					"type": "prereqPact",
@@ -428,7 +428,7 @@
 				}
 			],
 			"entries": [
-				"Once per turn when you hit a creature with your pact weapon, you can expend a warlock spell slot to deal an extra {@dice 1d8} force damage to the target, plus another {@dice 1d8} per level of the spell slot, and you can knock the target {@condition prone} if it is Huge or smaller."
+				"每回合一次，當你使用你的契約武器命中一個生物時，你可以消耗一個契術師法術位以對目標造成額外的{@dice 1d8}力場傷害，加上該法術位每環位再{@dice 1d8}點的傷害，且若目標的體型為巨型或更小，你可以將目標擊倒{@condition 伏地}。"
 			],
 			"source": "XGE",
 			"page": 56,
@@ -452,18 +452,18 @@
 			"featureType": "EI"
 		},
 		{
-			"name": "Eyes of the Rune Keeper",
+			"name": "符文師之眼", "ENG_name": "Eyes of the Rune Keeper",
 			"entries": [
-				"You can read all writing."
+				"你可以讀懂所有文字。"
 			],
 			"source": "PHB",
 			"page": 111,
 			"featureType": "EI"
 		},
 		{
-			"name": "Fiendish Vigor",
+			"name": "邪魔精力", "ENG_name": "Fiendish Vigor",
 			"entries": [
-				"You can cast {@spell false life} on yourself at will as a 1st-level spell, without expending a spell slot or material components."
+				"你可以對你自己以1環法術隨意施放{@spell 摹造生命}，無需消耗法術位或材料構材。"
 			],
 			"source": "PHB",
 			"page": 111,
@@ -536,9 +536,9 @@
 			"featureType": "EI"
 		},
 		{
-			"name": "Gaze of Two Minds",
+			"name": "聯心之視", "ENG_name": "Gaze of Two Minds",
 			"entries": [
-				"You can use your action to touch a willing humanoid and perceive through its senses until the end of your next turn. As long as the creature is on the same plane of existence as you, you can use your action on subsequent turns to maintain this connection, extending the duration until the end of your next turn. While perceiving through the other creature's senses, you benefit from any special senses possessed by that creature, and you are {@condition blinded} and {@condition deafened} to your own surroundings."
+				"你可以使用你的動作以觸碰一個自願的類人生物，並直到你的下個回合結束前透過它的感官感知周遭。只要該生物和你處於相同的存在位面，你就可以在後續的回合中使用你的動作以維持這道連結，將持續時間延長到你的下個回合結束。當透過該生物的感官感知時，你得益於該生物所擁有的任何特殊感官，且你對你自己的周遭環境視作{@condition 耳聾}和{@condition 目盲}。"
 			],
 			"source": "PHB",
 			"page": 111,
@@ -967,16 +967,16 @@
 			"featureType": "EI"
 		},
 		{
-			"name": "Mask of Many Faces",
+			"name": "千面之臉", "ENG_name": "Mask of Many Faces",
 			"entries": [
-				"You can cast {@spell disguise self} at will, without expending a spell slot."
+				"你可以隨意施放{@spell 易容術}，無需消耗法術位。"
 			],
 			"source": "PHB",
 			"page": 111,
 			"featureType": "EI"
 		},
 		{
-			"name": "Master of Myriad Forms",
+			"name": "萬形之主", "ENG_name": "Master of Myriad Forms",
 			"prerequisite": [
 				{
 					"type": "prereqLevel",
@@ -987,14 +987,14 @@
 				}
 			],
 			"entries": [
-				"You can cast {@spell alter self} at will, without expending a spell slot."
+				"你可以隨意施放{@spell 變造自身}，無需消耗法術位。"
 			],
 			"source": "PHB",
 			"page": 111,
 			"featureType": "EI"
 		},
 		{
-			"name": "Minions of Chaos",
+			"name": "渾沌僕役", "ENG_name": "Minions of Chaos",
 			"prerequisite": [
 				{
 					"type": "prereqLevel",
@@ -1005,14 +1005,14 @@
 				}
 			],
 			"entries": [
-				"You can cast {@spell conjure elemental} once using a warlock spell slot. You can't do so again until you finish a long rest."
+				"你可以使用契術師法術位施放一次{@spell 召喚元素生物}。直到你完成一次長休之前你都不能再這麼做。"
 			],
 			"source": "PHB",
 			"page": 111,
 			"featureType": "EI"
 		},
 		{
-			"name": "Mire the Mind",
+			"name": "陷困心靈", "ENG_name": "Mire the Mind",
 			"prerequisite": [
 				{
 					"type": "prereqLevel",
@@ -1023,16 +1023,16 @@
 				}
 			],
 			"entries": [
-				"You can cast {@spell slow} once using a warlock spell slot. You can't do so again until you finish a long rest."
+				"你可以使用契術師法術位施放一次{@spell 緩速術}。直到你完成一次長休之前你都不能再這麼做。"
 			],
 			"source": "PHB",
 			"page": 111,
 			"featureType": "EI"
 		},
 		{
-			"name": "Misty Visions",
+			"name": "迷霧幻影", "ENG_name": "Misty Visions",
 			"entries": [
-				"You can cast {@spell silent image} at will, without expending a spell slot or material components."
+				"你可以隨意施放{@spell 無聲幻影}，無需消耗法術位或材料構材。"
 			],
 			"source": "PHB",
 			"page": 111,
@@ -1200,7 +1200,7 @@
 			"featureType": "EI"
 		},
 		{
-			"name": "Repelling Blast",
+			"name": "斥力衝擊", "ENG_name": "Repelling Blast",
 			"prerequisite": [
 				{
 					"type": "prereqSpell",
@@ -1210,7 +1210,7 @@
 				}
 			],
 			"entries": [
-				"When you hit a creature with {@spell eldritch blast}, you can push the creature up to 10 feet away from you in a straight line."
+				"當你使用{@spell 魔能爆}命中一個生物時，你可以直線推動該生物遠離你最多10呎。"
 			],
 			"source": "PHB",
 			"page": 111,
@@ -1370,16 +1370,16 @@
 			"featureType": "EI"
 		},
 		{
-			"name": "Thief of Five Fates",
+			"name": "命運竊賊", "ENG_name": "Thief of Five Fates",
 			"entries": [
-				"You can cast {@spell bane} once using a warlock spell slot. You can't do so again until you finish a long rest."
+				"你可以使用契術師法術位施放一次{@spell 災禍術}。直到你完成一次長休之前你都不能再這麼做。"
 			],
 			"source": "PHB",
 			"page": 111,
 			"featureType": "EI"
 		},
 		{
-			"name": "Thirsting Blade",
+			"name": "飢渴鋒刃", "ENG_name": "Thirsting Blade",
 			"prerequisite": [
 				{
 					"type": "prereqPact",
@@ -1394,7 +1394,7 @@
 				}
 			],
 			"entries": [
-				"You can attack with your pact weapon twice, instead of once, whenever you take the Attack action on your turn."
+				"每當你在你的回合採取攻擊動作時，你可以使用你的契約武器攻擊二次，而非一次。"
 			],
 			"source": "PHB",
 			"page": 111,
