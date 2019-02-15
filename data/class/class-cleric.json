@@ -362,41 +362,41 @@
 			"classFeatures": [
 				[
 					{
-						"name": "Spellcasting",
+						"name": "施法", "ENG_name": "Spellcasting",
 						"entries": [
-							"As a conduit for divine power, you can cast cleric spells. See {@book chapter 10|PHB|10} for the general rules of spellcasting and chapter 11 for a selection of {@filter cleric spells|spells|class=cleric}.",
+							"作為神性力量的通道，你可以施放牧師法術。請參閱{@book 第十章|PHB|10}以了解關於施法的規則，以及第十一章以查閱{@filter 牧師法術列表|spells|class=cleric}。",
 							{
 								"type": "entries",
-								"name": "Cantrips",
+								"name": "戲法",
 								"entries": [
-									"At 1st level, you know three cantrips of your choice from the cleric spell list. You learn additional cleric cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Cleric table."
+									"在1級時，你知曉三個從{@filter 牧師法術列表|spells|class=cleric}自選的戲法。你將在升至更高的牧師等級時學會額外的牧師戲法，見牧師表格中的已知戲法欄位。"
 								]
 							},
 							{
 								"type": "entries",
-								"name": "Preparing and Casting Spells",
+								"name": "準備及施放法術",
 								"entries": [
-									"The Cleric table shows how many spell slots you have to cast your {@filter cleric spells|spells|class=cleric} of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
-									"You prepare the list of cleric spells that are available for you to cast, choosing from the cleric spell list. When you do so, choose a number of cleric spells equal to your Wisdom modifier + your cleric level (minimum of one spell). The spells must be of a level for which you have spell slots.",
-									"For example, if you are a 3rd-level cleric, you have four 1st-level and two 2nd-level spell slots. With a Wisdom of 16, your list of prepared spells can include six spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell {@spell cure wounds}, you can cast it using a 1st-level or 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.",
-									"You can change your list of prepared spells when you finish a long rest. Preparing a new list of cleric spells requires time spent in prayer and meditation: at least 1 minute per spell level for each spell on your list."
+									"牧師表中顯示了你有多少個法術位可以用來施放你一環或更高環的{@filter 牧師法術|spells|class=cleric}。要施放其中一個這些法術，你必須消耗一個與該法術環位相同或更高的法術位。你在完成一次長休後恢復所有你花費掉的法術位。",
+									"準備一份你所能施放牧師法術的列表，從牧師法術列表中選擇。當你這麼做時，選擇數量等同於你睿知調整值 + 你牧師等級的牧師法術（最少一個法術）。這些法術的環位都必須符合你所擁有法術位的環位。",
+									"舉例來說，如果你是一個3級的牧師，你擁有四個1環和二個2環的法術位。你的睿知為16，則你已準備法術的列表中可以包含總共六個1環或2環的法術。若你準備了1環法術{@spell 治療傷勢}，你可以使用1環和2環的法術位來施放它。施放法術並不會將它從你的準備法術列表中移除。",
+									"你可以在你完成一次長休時改變你的準備法術列表。準備一份新的牧師法術列表需要花費時間於祈禱和冥想：你需要為你列表上每個法術的每個環位都花費至少1分鐘的時間。"
 								]
 							},
 							{
 								"type": "entries",
-								"name": "Spellcasting Ability",
+								"name": "施法屬性",
 								"entries": [
-									"Wisdom is your spellcasting ability for your cleric spells. The power of your spells comes from your devotion to your deity. You use your Wisdom whenever a cleric spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a cleric spell you cast and when making an attack roll with one.",
+									"睿知是你施展牧師法術的施法屬性。你法術的力量來自於你對於你信仰的奉獻。每當一個牧師法術提及你的施法屬性時，你將使用你的睿知。此外，當決定你牧師法術的豁免DC、以及使用德魯伊法術進行攻擊檢定時，你使用你的睿知調整值。",
 									{
 										"type": "abilityDc",
-										"name": "Spell",
+										"name": "法術",
 										"attributes": [
 											"wis"
 										]
 									},
 									{
 										"type": "abilityAttackMod",
-										"name": "Spell",
+										"name": "法術",
 										"attributes": [
 											"wis"
 										]
@@ -405,16 +405,16 @@
 							},
 							{
 								"type": "entries",
-								"name": "Ritual Casting",
+								"name": "儀式施法",
 								"entries": [
-									"You can cast a cleric spell as a ritual if that spell has the ritual tag and you have the spell prepared."
+									"若一個牧師法術具有儀式標籤，且你已準備了該法術，則你可以將它做為儀式法術施放。"
 								]
 							},
 							{
 								"type": "entries",
-								"name": "Spellcasting Focus",
+								"name": "施法法器",
 								"entries": [
-									"You can use a holy symbol (found in chapter 5) as a spellcasting focus for your cleric spells."
+									"你可以使用一個{@item 聖徽|phb}（第五章），來做為你施放牧師法術的法器。"
 								]
 							}
 						]

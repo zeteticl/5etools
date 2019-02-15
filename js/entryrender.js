@@ -3147,7 +3147,7 @@ EntryRenderer.item = {
 			if (item.armor && item.stealth) item.entries.push("穿戴者在敏捷（隱匿）檢定上有劣勢。");
 			if (item.type === "HA" && item.strength) item.entries.push("如果穿戴者的力量屬性不到 " + item.strength + "，他們的移動速度減少10呎。");
 		} else if (item.resist) {
-			if (item.type === "P") item.entries.push("當你飲下這瓶藥水，你獲得對" + Parser.DamageToDisplay(item.resist) + "傷害的抗性持續1小時。");
+			if (item.type === "P") item.entries.push("當你飲用這瓶藥水時，你獲得對" + Parser.DamageToDisplay(item.resist) + "傷害的抗性持續1小時。");
 			if (item.type === "RG") item.entries.push("你在穿戴此戒指時具有對" + Parser.DamageToDisplay(item.resist) + "傷害的抗性。");
 		}
 		if (item.type === "SCF") {
