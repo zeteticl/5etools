@@ -649,8 +649,8 @@ function EntryRenderer () {
 			if (entry.name != null) self._handleTrackTitles(entry.name);
 			const headerSpan = entry.name ? `
 				<span class="entry-title" data-title-index="${self._headerIndex++}" ${self._getEnumeratedTitleRel(entry.name)}>
-				<span class="entry-title-inner" book-idx="${entry.name}">
-					${self.renderEntry({type: "inline", entries: [entry.name]})}${entry.ENG_name?(" <st style='font-size:80%;'>"+entry.ENG_name+"<st>"):""}${inlineTitle ? ":" : ""}
+				<span class="entry-title-inner" book-idx="${entry.idx_name ? entry.idx_name : entry.name}">
+					${self.renderEntry({type: "inline", entries: [entry.name]})}${entry.ENG_name ? (" <st style='font-size:80%;'>" entry.ENG_name+"<st>") : ""}${inlineTitle ? ":" : ""}
 				</span>${pagePart}</span> ` : "";
 
 			if (depth === -1) {

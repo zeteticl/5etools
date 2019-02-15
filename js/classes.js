@@ -477,6 +477,7 @@ class HashLoad {
 								for (let m = 0; m < subFeature.entries.length; m++) {
 									const childEntry = subFeature.entries[m];
 									if (childEntry.name !== undefined && !childEntry.name.startsWith(`<span class="${CLSS_SUBCLASS_PREFIX}">`)) {
+										childEntry.idx_name = childEntry.name;
 										childEntry.name = `<span class="${CLSS_SUBCLASS_PREFIX}">${subClass.name}: </span>${childEntry.name}`;
 									}
 								}
