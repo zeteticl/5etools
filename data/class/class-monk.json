@@ -1,7 +1,7 @@
 {
 	"class": [
 		{
-			"name": "武僧",
+			"name": "武僧", "ENG_name": "Monk",
 			"source": "PHB",
 			"hd": {
 				"number": 1,
@@ -386,151 +386,151 @@
 			"classFeatures": [
 				[
 					{
-						"name": "Unarmored Defense",
+						"name": "無甲防禦", "ENG_name": "Unarmored Defense",
 						"entries": [
-							"Beginning at 1st level, while you are wearing no armor and not wielding a shield, your AC equals 10 + your Dexterity modifier + your Wisdom modifier."
+							"從2級開始，當你未穿戴護甲且未持用盾牌時，你的AC等於10 + 你的敏捷調整值 + 你的睿知調整值。"
 						]
 					},
 					{
-						"name": "Martial Arts",
+						"name": "武藝", "ENG_name": "Martial Arts",
 						"entries": [
-							"Your practice of martial arts gives you mastery of combat styles that use unarmed strikes and monk weapons, which are shortswords and any simple melee weapons that don't have the two-handed or heavy property.",
-							"You gain the following benefits while you are unarmed or wielding only monk weapons and you aren't wearing armor or wielding a shield.",
+							"你在武術上的練習讓你掌握了使用徒手打擊和武僧武器的戰鬥方式，武僧武器包含了{@item 短劍|phb}和任何並不具有雙手或重型屬性的簡易近戰武器。",
+							"當你徒手或只持用武僧武器，且未穿戴護甲或持用盾牌時，你獲得下列好處：",
 							{
 								"type": "list",
 								"items": [
-									"You can use Dexterity instead of Strength for the attack and damage rolls of your unarmed strikes and monk weapons.",
-									"You can roll a {@dice d4} in place of the normal damage of your unarmed strike or monk weapon. This die changes as you gain monk levels, as shown in the Martial Arts column of the Monk table.",
-									"When you use the {@action Attack} action with an unarmed strike or a monk weapon on your turn, you can make one unarmed strike as a bonus action. For example, if you take the {@action Attack} action and attack with a quarterstaff, you can also make an unarmed strike as a bonus action, assuming you haven't already taken a bonus action this turn."
+									"你可以在徒手打擊和武僧武器中使用敏捷而非力量來計算其攻擊檢定和傷害骰。",
+									"你可以骰一顆{@dice d4}以取代你徒手打擊或武僧武器的傷害。這顆骰子會隨著你提升武僧等級時變化，參見武僧表中的武藝欄位。",
+									"當你在你的回合以徒手打擊或一把武僧武器採取{@action 攻擊}動作，你能夠以附贈動作進行一次徒手打擊。舉例來說，若你採取{@action 攻擊}動作並使用{@item 長棍|phb}進行攻擊，只要你在該回合尚未採取附贈動作，你就能夠以一個附贈動作再進行一次徒手打擊。"
 								]
 							},
-							"Certain monasteries use specialized forms of the monk weapons. For example, you might use a club that is two lengths of wood connected by a short chain (called a nunchaku) or a sickle with a shorter, straighter blade (called a kama)."
+							"某些宗派會使用特別外型的武僧武器。舉例來說，你可能使用二截用短鍊相連的木棍（名為雙節棍）、或一個刀刃較短而直的鐮刀（名為單鐮）。"
 						]
 					}
 				],
 				[
 					{
-						"name": "Ki",
+						"name": "氣", "ENG_name": "Ki",
 						"entries": [
-							"Starting at 2nd level, your training allows you to harness the mystic energy of ki. Your access to this energy is represented by a number of ki points. Your monk level determines the number of points you have, as shown in the Ki Points column of the Monk table.",
-							"You can spend these points to fuel various ki features. You start knowing three such features: Flurry of Blows, Patient Defense, and Step of the Wind. You learn more ki features as you gain levels in this class.",
-							"When you spend a ki point, it is unavailable until you finish a short or long rest, at the end of which you draw all of your expended ki back into yourself. You must spend at least 30 minutes of the rest meditating to regain your ki points.",
-							"Some of your ki features require your target to make a saving throw to resist the feature's effects. The saving throw DC is calculated as follows:",
+							"從2級開始，你所受的訓練讓你得以駕馭這被稱為氣的神祕能量。你對於這股能量的掌握體現為你擁有一定數量的氣。你的武僧等級將決定你所擁有的氣的數量，參見武僧表中的氣的欄位。",
+							"你可以消耗這些氣以驅動多種與氣有關能力。你一開始知曉三個這類能力：疾風連擊、堅強防禦、以及飛簷走壁。你將在你於本職業升至特定等級時學到更多與氣有關的能力。",
+							"當你消耗一點氣時，直到你完成一次短休或長休前你都無法再使用被消耗的氣，且你將在短休或長休結束的時候恢復所有你花費掉的氣。你必須在休息中花費至少30分鐘的時間冥想才能恢復你的氣。",
+							"某些與氣有關的能力會要求你的目標進行一次豁免檢定對抗該能力的效果。該豁免檢定的DC計算方式如下：",
 							{
 								"type": "abilityDc",
-								"name": "Ki",
+								"name": "氣",
 								"attributes": [
 									"wis"
 								]
 							},
 							{
 								"type": "entries",
-								"name": "Flurry of Blows",
+								"name": "疾風連擊", "ENG_name": "Flurry of Blows",
 								"entries": [
-									"Immediately after you take the {@action Attack} action on your turn, you can spend 1 ki point to make two unarmed strikes as a bonus action."
+									"緊接在你於你的回合採取{@action 攻擊}動作之後，你可以消耗1點氣以使用一個附贈動作進行二次徒手打擊。"
 								]
 							},
 							{
 								"type": "entries",
-								"name": "Patient Defense",
+								"name": "堅強防禦", "ENG_name": "Patient Defense",
 								"entries": [
-									"You can spend 1 ki point to take the {@action Dodge} action as a bonus action on your turn."
+									"你可以在你的回合消耗1點氣以使用一個附贈動作採取{@action 閃避}動作。"
 								]
 							},
 							{
 								"type": "entries",
-								"name": "Step of the Wind",
+								"name": "飛簷走壁", "ENG_name": "Step of the Wind",
 								"entries": [
-									"You can spend 1 ki point to take the {@action Disengage} or {@action Dash} action as a bonus action on your turn, and your jump distance is doubled for the turn."
+									"你可以在你的回合消耗1點氣以使用一個附贈動作採取{@action 撤離}或{@action 疾走}動作，且你的跳躍距離在該回合變為二倍。"
 								]
 							}
 						]
 					},
 					{
-						"name": "Unarmored Movement",
+						"name": "無甲移動", "ENG_name": "Unarmored Movement",
 						"entries": [
-							"Starting at 2nd level, your speed increases by 10 feet while you are not wearing armor or wielding a shield. This bonus increases when you reach certain monk levels, as shown in the Monk table.",
-							"At 9th level, you gain the ability to move along vertical surfaces and across liquids on your turn without falling during the move."
+							"從2級開始，當你未穿戴護甲或持用盾牌時，你的移動速度增加10呎。這個加值會在你升至特定武僧等級時提升，參見武僧表中的無甲移動欄位。",
+							"在9級時，你獲得在你的回合移動期間，可以沿著垂直表面或橫越水面移動而不至於摔落的能力。"
 						]
 					}
 				],
 				[
 					{
-						"name": "Deflect Missiles",
+						"name": "撥擋飛彈", "ENG_name": "Deflect Missiles",
 						"entries": [
-							"Starting at 3rd level, you can use your reaction to deflect or catch the missile when you are hit by a ranged weapon attack. When you do so, the damage you take from the attack is reduced by {@dice 1d10} + your Dexterity modifier + your monk level.",
-							"If you reduce the damage to 0, you can catch the missile if it is small enough for you to hold in one hand and you have at least one hand free. If you catch a missile in this way, you can spend 1 ki point to make a ranged attack (range 20/60 feet) with the weapon or piece of ammunition you just caught, as part of the same reaction. You make this attack with proficiency, regardless of your weapon proficiencies, and the missile counts as a monk weapon for the attack."
+							"從3級開始，當你被一次遠程武器攻擊命中時，你可以使用你的反應以撥擋或抓住該投射物。當你這麼做時，你從該攻擊所受到的傷害將被減少{@dice 1d10} + 你的敏捷調整值 + 你的武僧等級。",
+							"若你將該傷害降低至零，且若該投射物的大小能夠被你單手抓住且你有至少一隻空手，則你可以抓住該投射物。若你透過這個方式抓住一個投射物，你可以消耗1點氣，做為你該次反應的一部份，使用你剛抓到的武器或彈藥進行一次遠程攻擊（範圍20/60）。無論你的武器熟練如何，你都熟練於該次攻擊，且該投射物在此攻擊中被視作武僧武器。"
 						]
 					},
 					{
-						"name": "Monastic Tradition",
+						"name": "宗派傳承", "ENG_name": "Monastic Tradition",
 						"entries": [
-							"When you reach 3rd level, you commit yourself to a monastic tradition, chosen from the list of available traditions. Your tradition grants you features at 3rd level and again at 6th, 11th, and 17th level."
+							"當你升至3級時，你將投身於一種宗派傳承，從可選宗派傳承列表中選擇。你的宗派將在3級、6級、11級、和17級時賦予你新的能力。"
 						],
 						"gainSubclassFeature": true
 					}
 				],
 				[
 					{
-						"name": "屬性值提升",
+						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
 							"當你在此職業升至4級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					},
 					{
-						"name": "Slow Fall",
+						"name": "輕身墜", "ENG_name": "Slow Fall",
 						"entries": [
-							"Beginning at 4th level, you can use your reaction when you fall to reduce any falling damage you take by an amount equal to five times your monk level."
+							"從4級開始，當你墜落時，你可以使用你的反應以將任何你所受到的墜落傷害減少等同於你五倍武僧等級的數值。"
 						]
 					}
 				],
 				[
 					{
-						"name": "Extra Attack",
+						"name": "額外攻擊", "ENG_name": "Extra Attack",
 						"entries": [
-							"Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
+							"從5級開始，每當你在你的回合採取{@action 攻擊}動作，你可以攻擊二次，而非一次。"
 						]
 					},
 					{
-						"name": "Stunning Strike",
+						"name": "震懾拳", "ENG_name": "Stunning Strike",
 						"entries": [
-							"Starting at 5th level, you can interfere with the flow of ki in an opponent's body. When you hit another creature with a melee weapon attack, you can spend 1 ki point to attempt a stunning strike. The target must succeed on a Constitution saving throw or be {@condition stunned} until the end of your next turn."
+							"從5級開始，你可以干擾一個對手體內氣的流動。當你以近戰武器攻擊命中另一個生物時，你可以消耗1點氣以嘗試進行一次震懾拳。目標必須成功通過一次體質豁免，否則被{@condition 震懾}直到你的下個回合結束。"
 						]
 					}
 				],
 				[
 					{
-						"name": "Ki-Empowered Strikes",
+						"name": "真氣駐拳", "ENG_name": "Ki-Empowered Strikes",
 						"entries": [
-							"Starting at 6th level, your unarmed strikes count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage."
+							"從6級開始，在克服對非魔法攻擊和傷害的抗性和免疫能力時，你的徒手打擊被視作魔法武器。"
 						]
 					},
 					{
-						"name": "Monastic Tradition feature",
+						"name": "宗派傳承能力", "ENG_name": "Monastic Tradition feature",
 						"entries": [
-							"At 6th level, you gain one feature granted by your Monastic Tradition."
+							"在6級時，你獲得一個來自你宗派傳承的能力。"
 						],
 						"gainSubclassFeature": true
 					}
 				],
 				[
 					{
-						"name": "Evasion",
+						"name": "反射閃避", "ENG_name": "Evasion",
 						"entries": [
-							"At 7th level, your instinctive agility lets you dodge out of the way of certain area effects, such as a blue dragon's lightning breath or a {@spell fireball} spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail."
+							"在7級時，你直覺性的靈活身法讓你能夠躲開某些範圍效果，像是藍龍的閃電吐息、或{@spell 火球術}法術。當你成為一個允許你進行敏捷豁免以僅承受一半傷害的效果的目標時，你改為在豁免成功時不受任何傷害，且在豁免失敗時僅承受一半傷害。"
 						]
 					},
 					{
-						"name": "Stillness of Mind",
+						"name": "心頭滅卻", "ENG_name": "Stillness of Mind",
 						"entries": [
-							"Starting at 7th level, you can use your action to end one effect on yourself that is causing you to be {@condition charmed} or {@condition frightened}."
+							"從7級開始，你可以使用你的動作以結束一個讓你被{@condition 魅惑}或{@condition 恐懼}的效果。"
 						]
 					}
 				],
 				[
 					{
-						"name": "屬性值提升",
+						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
 							"當你在此職業升至8級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
@@ -539,32 +539,32 @@
 				],
 				[
 					{
-						"name": "Unarmored Movement improvement",
+						"name": "無甲移動強化", "ENG_name": "Unarmored Movement improvement",
 						"entries": [
-							"At 9th level, you gain the ability to move along vertical surfaces and across liquids on your turn without falling during the move."
+							"在9級時，你獲得在你的回合移動期間，可以沿著垂直表面或橫越水面移動而不至於摔落的能力。"
 						]
 					}
 				],
 				[
 					{
-						"name": "Purity of Body",
+						"name": "百病不侵", "ENG_name": "Purity of Body",
 						"entries": [
-							"At 10th level, your mastery of the ki flowing through you makes you immune to disease and poison."
+							"在10級時，流通於你周身的氣讓你免疫於疾病和毒素（包含中毒狀態）。"
 						]
 					}
 				],
 				[
 					{
-						"name": "Monastic Tradition feature",
+						"name": "宗派傳承能力", "ENG_name": "Monastic Tradition feature",
 						"entries": [
-							"At 11th level, you gain one feature granted by your Monastic Tradition."
+							"在11級時，你獲得一個來自你宗派傳承的能力。"
 						],
 						"gainSubclassFeature": true
 					}
 				],
 				[
 					{
-						"name": "屬性值提升",
+						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
 							"當你在此職業升至12級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
@@ -573,32 +573,32 @@
 				],
 				[
 					{
-						"name": "Tongue of the Sun and Moon",
+						"name": "天語通", "ENG_name": "Tongue of the Sun and Moon",
 						"entries": [
-							"Starting at 13th level, you learn to touch the ki of other minds so that you understand all spoken languages. Moreover, any creature that can understand a language can understand what you say."
+							"從13級開始，你習得接觸其他心靈中的氣魂，好讓你理解所有被說出的語言。同時，任何理解至少一種語言的生物也都可以理解你所說的話。"
 						]
 					}
 				],
 				[
 					{
-						"name": "Diamond Soul",
+						"name": "金剛魂", "ENG_name": "Diamond Soul",
 						"entries": [
-							"Beginning at 14th level, your mastery of ki grants you proficiency in all saving throws.",
-							"Additionally, whenever you make a saving throw and fail, you can spend 1 ki point to reroll it and take the second result."
+							"從14級開始，你對氣的掌握讓你熟練於所有的豁免檢定。",
+							"此外，每當你進行一次豁免檢定且豁免失敗，你可以消耗1點氣以重骰它並使用第二個擲骰結果。"
 						]
 					}
 				],
 				[
 					{
-						"name": "Timeless Body",
+						"name": "不朽身軀", "ENG_name": "Timeless Body",
 						"entries": [
-							"At 15th level, your ki sustains you so that you suffer none of the frailty of old age, and you can't be aged magically. You can still die of old age, however. In addition, you no longer need food or water."
+							"在15級時，你體內的氣將維持你免受任何衰老的弊害，且你不會被魔法變老。然而，你仍然會因為衰老而死亡。此外，你將不再需要食物和飲水。"
 						]
 					}
 				],
 				[
 					{
-						"name": "屬性值提升",
+						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
 							"當你在此職業升至16級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
@@ -607,25 +607,25 @@
 				],
 				[
 					{
-						"name": "Monastic Tradition feature",
+						"name": "宗派傳承能力", "ENG_name": "Monastic Tradition feature",
 						"entries": [
-							"At 17th level, you gain one feature granted by your Monastic Tradition."
+							"在17級時，你獲得一個來自你宗派傳承的能力。"
 						],
 						"gainSubclassFeature": true
 					}
 				],
 				[
 					{
-						"name": "Empty Body",
+						"name": "空靈體", "ENG_name": "Empty Body",
 						"entries": [
-							"Beginning at 18th level, you can use your action to spend 4 ki points to become {@condition invisible} for 1 minute. During that time, you also have resistance to all damage but force damage.",
-							"Additionally, you can spend 8 ki points to cast the {@spell astral projection} spell, without needing material components. When you do so, you can't take any other creatures with you."
+							"從18級開始，你可以使用你的動作消耗4點氣以變得{@condition 隱形}長達1分鐘。在這段期間，你同時獲得對除了力場傷害以外所有傷害的抗性。",
+							"此外，你可以消耗8點氣以施放{@spell 星界投影}法術，無需材料構材。當你這麼做時，你無法讓任何其他生物跟你一起被投影至星界。"
 						]
 					}
 				],
 				[
 					{
-						"name": "屬性值提升",
+						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
 							"當你在此職業升至19級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
@@ -634,9 +634,9 @@
 				],
 				[
 					{
-						"name": "Perfect Soul",
+						"name": "超凡魂", "ENG_name": "Perfect Soul",
 						"entries": [
-							"At 20th level, when you roll for initiative and have no ki points remaining, you regain 4 ki points."
+							"在20級時，當你骰先攻時且已經沒有剩下的氣時，你獲得4點氣。"
 						]
 					}
 				]
