@@ -55,7 +55,10 @@ class Omnidexer {
 
 		function handleItem (it, i, name) {
 			if (!it.noDisplay) {
-				const toAdd = getToAdd(it, {n: name}, i);
+				var obj = {};
+				if(it.ENG_name){ obj.cn = name; obj.n = it.ENG_name; }
+				else {			 obj.n = name;}
+				const toAdd = getToAdd(it, obj, i);
 				if ((isTestMode || (!arbiter.include && !(arbiter.filter && arbiter.filter(it))) || (!arbiter.filter && (!arbiter.include || arbiter.include(it)))) && !arbiter.onlyDeep) index.push(toAdd);
 				if (arbiter.deepIndex) {
 					const primary = {it: it, i: i, parentName: name};
@@ -319,9 +322,10 @@ Omnidexer.TO_INDEX = [
 		deepIndex: (primary, it) => {
 			const subs = EntryRenderer.race._mergeSubrace(it);
 			return subs.map(r => ({
-				n: r.name,
+				n: r.ENG_name? r.ENG_name: r.name,
 				s: r.source,
-				u: UrlUtil.URL_TO_HASH_BUILDER["races.html"](r)
+				u: UrlUtil.URL_TO_HASH_BUILDER["races.html"](r),
+				cn: r.ENG_name? r.name: null
 			}));
 		},
 		hover: true

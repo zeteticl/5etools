@@ -2535,7 +2535,7 @@ class AddMenuSearchTab extends AddMenuTab {
 					if (this.subType === "content") {
 						const page = UrlUtil.categoryToPage(r.doc.c);
 						const source = r.doc.s;
-						const hash = $T.translate_uri(r.doc.c,r.doc.u);
+						const hash = r.doc.u;//$T.translate_uri(r.doc.c,r.doc.u);
 
 						this.menu.pnl.doPopulate_Stats(page, source, hash);
 					} else {
@@ -2546,8 +2546,8 @@ class AddMenuSearchTab extends AddMenuTab {
 
 				const get$Row = (r) => {
 					if (this.subType === "content") {
-						var full_name = $T.translate_name(r.doc.c,r.doc.n);
-						if(full_name==r.doc.n) 	full_name=r.doc.n;
+						var full_name = r.doc.cn;//$T.translate_name(r.doc.c,r.doc.n);
+						if(full_name==null) 	full_name=r.doc.n;
 						else					full_name+=`(${r.doc.n})`;
 						
 						return $(`

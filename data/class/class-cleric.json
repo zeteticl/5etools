@@ -1,7 +1,7 @@
 {
 	"class": [
 		{
-			"name": "牧師",
+			"name": "牧師", "ENG_name": "Cleric",
 			"source": "PHB",
 			"hd": {
 				"number": 1,
@@ -425,7 +425,7 @@
 							"從可用領域列表中選擇一個你所信仰神祇的關聯領域。每個領域在它們的能力說明中被詳述，且各自提供了與其相關的範例神祇。你的選擇將在1級時賦予你領域法術以及其他能力。它也將在2級時賦予你另一種使用引導神力能力的方式，並在6級、8級、和17級時賦予你其他額外好處。",
 							{
 								"type": "entries",
-								"name": "領域法術",
+								"name": "領域法術", "ENG_name": "Domain Spells",
 								"entries": [
 									"每個領域都擁有一張法術列表\u2014亦即領域法術\u2014且你將在升至領域說明中指定的牧師等級時獲得這些法術。一旦你獲得領域法術，你將永遠視作已經準備了它，且它不會計入你每日可準備的法術數量中。",
 									"若你擁有一個不在牧師法術列表上的領域法術，則該法術對你而言仍然視作牧師法術。"
@@ -437,26 +437,26 @@
 				],
 				[
 					{
-						"name": "Channel Divinity (1/rest)",
+						"name": "引導神力(1/休息)", "ENG_name": "Channel Divinity",
 						"entries": [
-							"At 2nd level, you gain the ability to channel divine energy directly from your deity, using that energy to fuel magical effects. You start with two such effects: Turn Undead and an effect determined by your domain. Some domains grant you additional effects as you advance in levels, as noted in the domain description.",
-							"When you use your Channel Divinity, you choose which effect to create. You must then finish a short or long rest to use your Channel Divinity again.",
-							"Some Channel Divinity effects require saving throws. When you use such an effect from this class, the DC equals your cleric spell save DC.",
-							"Beginning at 6th level, you can use your Channel Divinity twice between rests, and beginning at 18th level, you can use it three times between rests. When you finish a short or long rest, you regain your expended uses.",
+							"在2級時，你獲得引導直接來自你神祇的神聖能量，並用其能量驅動魔法效果的能力。你起始擁有二個這種效果：驅散不死，以及一個由你神聖領域決定的效果。某些領域會在你升至更高等級時賦予你額外的效果，參見各領域的說明。",
+							"當你使用你的引導神力時，你選擇要創造出哪一個效果。你接著必須在完成一次短休或長休後才能再使用你的引導神力。",
+							"某些引導神力的效果會需要豁免檢定。當你使用本職業的這類效果時，其DC等同於你的牧師法術豁免DC。",
+							"從6級開始，你可以在休息之間使用引導神力二次。且從18級開始，你可以在休息之間使用引導神力三次。你在完成一次短休或長休後恢復所有你花費掉的次數。",
 							{
 								"type": "entries",
-								"name": "Turn Undead",
+								"name": "驅散不死", "ENG_name": "Turn Undead",
 								"entries": [
-									"As an action, you present your holy symbol and speak a prayer censuring the undead. Each undead that can see or hear you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage.",
-									"A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the {@action Dash} action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the {@action Dodge} action."
+									"以一個動作，你展現你的聖徽並說出斥責不死生物的禱詞。每個距離你30呎內且可以看見或聽見你的不死生物必須進行一次睿知豁免。若該生物豁免失敗，則它將被驅散長達1分鐘或直到它受到傷害。",
+									"一個被驅散的不死生物必須用它的回合嘗試盡可能的遠離你，且它無法自願的移動到距離你30呎內的空間。它無法採取反應。至於其動作，它只能使用{@action 疾走}動作或嘗試掙脫阻止它移動的效果。若它無法移動，則該生物將使用{@action 迴避}動作。"
 								]
 							}
 						]
 					},
 					{
-						"name": "Divine Domain feature",
+						"name": "神聖領域能力", "ENG_name": "Divine Domain feature",
 						"entries": [
-							"At 2nd level, you gain a feature from your Divine Domain."
+							"在2級時，你獲得一個由你神聖領域所賦予的能力。"
 						],
 						"gainSubclassFeature": true
 					}
@@ -473,23 +473,23 @@
 				],
 				[
 					{
-						"name": "Destroy Undead (CR 1/2)",
+						"name": "摧毀不死 (CR 1/2)", "ENG_name": "Destroy Undead",
 						"entries": [
-							"Starting at 5th level, when an {@filter undead of CR 1/2 or lower|bestiary|cr=0;1/8;1/4;1/2|type=undead|miscellaneous=!swarm} fails its saving throw against your Turn Undead feature, the creature is instantly destroyed."
+							"從5級開始，當一個{@filter 挑戰等級為1/2或更低的不死生物|bestiary|cr=0;1/8;1/4;1/2|type=undead|miscellaneous=!swarm}在對抗你驅散不死能力的豁免檢定中失敗，該生物將立即被摧毀。"
 						]
 					}
 				],
 				[
 					{
-						"name": "Channel Divinity (2/rest)",
+						"name": "引導神力(2/休息)", "ENG_name": "Channel Divinity",
 						"entries": [
-							"Beginning at 6th level, you can use your Channel Divinity twice between rests."
+							"從6級開始，你可以在休息之間使用引導神力二次。"
 						]
 					},
 					{
-						"name": "Divine Domain feature",
+						"name": "神聖領域能力", "ENG_name": "Divine Domain feature",
 						"entries": [
-							"At 6th level, you gain a feature from your Divine Domain."
+							"在6級時，你獲得一個由你神聖領域所賦予的能力。"
 						],
 						"gainSubclassFeature": true
 					}
@@ -504,15 +504,15 @@
 						]
 					},
 					{
-						"name": "Destroy Undead (CR 1)",
+						"name": "摧毀不死 (CR 1)", "ENG_name": "Destroy Undead",
 						"entries": [
-							"Starting at 8th level, when an {@filter undead of CR 1 or lower|bestiary|cr=0;1/8;1/4;1/2;1|type=undead|miscellaneous=!swarm} fails its saving throw against your Turn Undead feature, the creature is instantly destroyed."
+							"從8級開始，當一個{@filter 挑戰等級為1或更低的不死生物|bestiary|cr=0;1/8;1/4;1/2;1|type=undead|miscellaneous=!swarm}在對抗你驅散不死能力的豁免檢定中失敗，該生物將立即被摧毀。"
 						]
 					},
 					{
-						"name": "Divine Domain feature",
+						"name": "神聖領域能力", "ENG_name": "Divine Domain feature",
 						"entries": [
-							"At 8th level, you gain a feature from your Divine Domain."
+							"在8級時，你獲得一個由你神聖領域所賦予的能力。"
 						],
 						"gainSubclassFeature": true
 					}
@@ -520,19 +520,19 @@
 				[],
 				[
 					{
-						"name": "Divine Intervention",
+						"name": "神力干預", "ENG_name": "Divine Intervention",
 						"entries": [
-							"Beginning at 10th level, you can call on your deity to intervene on your behalf when your need is great.",
-							"Imploring your deity's aid requires you to use your action. Describe the assistance you seek, and roll percentile dice. If you roll a number equal to or lower than your cleric level, your deity intervenes. The DM chooses the nature of the intervention; the effect of any cleric spell or cleric domain spell would be appropriate. If your deity intervenes, you can't use this feature again for 7 days. Otherwise, you can use it again after you finish a long rest.",
-							"At 20th level, your call for intervention succeeds automatically, no roll required."
+							"從10級開始，你可以在你迫切需要的時候呼求你的神祇為你插手介入。",
+							"懇求你神祇的幫助需要你使用你的動作。描述你所尋求的協助，並骰一顆百面骰。若你骰出的數字等於或低於你的牧師等級，則你的神祇將出手干預。由DM決定這次干預的性質；任何牧師法術或牧師領域法術都會是適合的例子。若你的神祇出手干預，則你在7天內都不能再使用此能力。否則你可以在你完成一次長休後再次使用它。",
+							"在20級時，你呼求干預的動作將自動成功，不再需要擲骰。"
 						]
 					}
 				],
 				[
 					{
-						"name": "Destroy Undead (CR 2)",
+						"name": "摧毀不死 (CR 2)", "ENG_name": "Destroy Undead",
 						"entries": [
-							"Starting at 11th level, when an {@filter undead of CR 2 or lower|bestiary|cr=0;1/8;1/4;1/2;1;2|type=undead|miscellaneous=!swarm} or lower fails its saving throw against your Turn Undead feature, the creature is instantly destroyed."
+							"從11級開始，當一個{@filter 挑戰等級為2或更低的不死生物|bestiary|cr=0;1/8;1/4;1/2;1;2|type=undead|miscellaneous=!swarm}在對抗你驅散不死能力的豁免檢定中失敗，該生物將立即被摧毀。"
 						]
 					}
 				],
@@ -548,9 +548,9 @@
 				[],
 				[
 					{
-						"name": "Destroy Undead (CR 3)",
+						"name": "摧毀不死 (CR 3)", "ENG_name": "Destroy Undead",
 						"entries": [
-							"Starting at 14th level, when an {@filter undead of CR 3 or lower|bestiary|cr=0;1/8;1/4;1/2;1;2;3|type=undead|miscellaneous=!swarm} fails its saving throw against your Turn Undead feature, the creature is instantly destroyed."
+							"從11級開始，當一個{@filter 挑戰等級為3或更低的不死生物|bestiary|cr=0;1/8;1/4;1/2;1;2;3|type=undead|miscellaneous=!swarm}在對抗你驅散不死能力的豁免檢定中失敗，該生物將立即被摧毀。"
 						]
 					}
 				],
@@ -566,24 +566,24 @@
 				],
 				[
 					{
-						"name": "Destroy Undead (CR 4)",
+						"name": "摧毀不死 (CR 4)", "ENG_name": "Destroy Undead",
 						"entries": [
-							"Starting at 17th level, when an {@filter undead of CR 4 or lower|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4|type=undead|miscellaneous=!swarm} fails its saving throw against your Turn Undead feature, the creature is instantly destroyed."
+							"從17級開始，當一個{@filter 挑戰等級為4或更低的不死生物|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4|type=undead|miscellaneous=!swarm}在對抗你驅散不死能力的豁免檢定中失敗，該生物將立即被摧毀。"
 						]
 					},
 					{
-						"name": "Divine Domain feature",
+						"name": "神聖領域能力", "ENG_name": "Divine Domain feature",
 						"entries": [
-							"At 17th level, you gain a feature from your Divine Domain."
+							"在17級時，你獲得一個由你神聖領域所賦予的能力。"
 						],
 						"gainSubclassFeature": true
 					}
 				],
 				[
 					{
-						"name": "Channel Divinity (3/rest)",
+						"name": "引導神力(3/休息)", "ENG_name": "Channel Divinity",
 						"entries": [
-							"Beginning at 18th level, you can use your Channel Divinity three times between rests."
+							"從18級開始，你可以在休息之間使用引導神力三次。"
 						]
 					}
 				],
@@ -598,9 +598,9 @@
 				],
 				[
 					{
-						"name": "Divine Intervention Improvement",
+						"name": "神力干預強化", "ENG_name": "Divine Intervention Improvement",
 						"entries": [
-							"At 20th level, your call for intervention succeeds automatically, no roll required."
+							"在20級時，你呼求干預的動作將自動成功，不再需要擲骰。"
 						]
 					}
 				]

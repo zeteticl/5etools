@@ -355,7 +355,7 @@ class InitiativeTracker {
 				$results.empty();
 				if (toProcess.length) {
 					const handleClick = (r) => {
-						const name = r.doc.n;
+						const name = r.doc.cn?r.doc.cn:r.doc.n;
 						const source = r.doc.s;
 						const count = getCount();
 						if (isNaN(count) || count < 1) return;
@@ -370,9 +370,10 @@ class InitiativeTracker {
 					};
 
 					const get$Row = (r) => {
+						var name = (r.doc.cn)? (r.doc.cn+"("+r.doc.n+")"): r.doc.n;
 						return $(`
 							<div class="panel-tab-results-row">
-								<span>${$T.translate_name(1,r.doc.n)}(${r.doc.n})</span>
+								<span>${name}</span>
 								<span>${r.doc.s ? `<i title="${Parser.sourceJsonToFull(r.doc.s)}">${Parser.sourceJsonToAbv(r.doc.s)}${r.doc.p ? ` p${r.doc.p}` : ""}</i>` : ""}</span>
 							</div>
 						`);
@@ -516,7 +517,7 @@ class InitiativeTracker {
 				}
 
 				const getLink = () => {
-					if (typeof nameOrMeta === "string" || nameOrMeta.scaledTo == null) return EntryRenderer.getDefaultRenderer().renderEntry(`{@creature ${$T.translate_name(1,name)}|${source}}`);
+					if (typeof nameOrMeta === "string" || nameOrMeta.scaledTo == null) return EntryRenderer.getDefaultRenderer().renderEntry(`{@creature ${name}|${source}}`);
 					else {
 						const parts = [name, source, displayName, Parser.numberToCr(nameOrMeta.scaledTo)];
 						return EntryRenderer.getDefaultRenderer().renderEntry(`{@creature ${parts.join("|")}}`);
@@ -701,7 +702,7 @@ class InitiativeTracker {
 
 			if (isMon && (curHp === "" || init === "")) {
 				const doUpdate = () => {
-					const m = EntryRenderer.hover._getFromCache(UrlUtil.PG_BESTIARY, source, encodeURIComponent(hash));
+					const m = EntryRenderer.hover._getFromCache(UrlUtil.PG_BESTIARY, source, hash);
 					// set or roll HP
 					if (!rollHp && m.hp.average) {
 						curHp = m.hp.average;
@@ -721,7 +722,7 @@ class InitiativeTracker {
 					}
 				};
 
-				const hash = $T.translate_uri(1, UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_BESTIARY]({name: name, source: source}) );
+				const hash = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_BESTIARY]({name: name, source: source});
 				if (EntryRenderer.hover._isCached(UrlUtil.PG_BESTIARY, source, hash)) doUpdate();
 				else {
 					EntryRenderer.hover._doFillThenCall(UrlUtil.PG_BESTIARY, source, hash, () => {
@@ -963,7 +964,7 @@ class InitiativeTracker {
 			if (bestiaryList.l && bestiaryList.l.items) {
 				Promise.all(bestiaryList.l.items.map(it => {
 					const count = Number(it.c);
-					const hash = $T.translate_uri(1,it.h);
+					const hash = it.h;
 					const scaling = (() => {
 						if (it.uid) {
 							const m = /_([\d.,]+)$/.exec(it.uid);
