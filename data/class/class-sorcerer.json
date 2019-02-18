@@ -1,7 +1,7 @@
 {
 	"class": [
 		{
-			"name": "術士",
+			"name": "術士", "ENG_name": "Sorcerer",
 			"source": "PHB",
 			"hd": {
 				"number": 1,
@@ -442,48 +442,48 @@
 			"classFeatures": [
 				[
 					{
-						"name": "Spellcasting",
+						"name": "施法", "ENG_name": "Spellcasting",
 						"entries": [
-							"An event in your past, or in the life of a parent or ancestor, left an indelible mark on you, infusing you with arcane magic. This font of magic, whatever its origin, fuels your spells. See {@book chapter 10|PHB|10} for the general rules of spellcasting and chapter 11 for the {@filter sorcerer spell list|spells|class=sorcerer}.",
+							"過去的一個事件、或者你雙親或先祖的血脈，在你身上留下了不可磨滅的印記，使你充滿了奧秘魔法。不論其起源如何，這種魔法泉源驅動著你的法術。請參閱{@book 第十章|PHB|10}以了解關於施法的規則，以及第十一章以查閱{@filter 術士法術列表|spells|class=sorcerer}。",
 							{
 								"type": "entries",
-								"name": "Cantrips",
+								"name": "戲法",
 								"entries": [
-									"At 1st level, you know four cantrips of your choice from the sorcerer spell list. You learn an additional sorcerer cantrip of your choice at 4th level and another at 10th level."
+									"在1級時，你知曉四個從{@filter 術士法術列表|spells|class=wizard}自選的戲法。你將在升至更高的術士等級時學會額外的術士戲法：在4級的時候學會第3個戲法，在10級的時候學會第4個。"
 								]
 							},
 							{
 								"type": "entries",
-								"name": "Spell Slots",
+								"name": "法術位",
 								"entries": [
-									"The Sorcerer table shows how many spell slots you have to cast your {@filter sorcerer spells|spells|class=sorcerer} of 1st level and higher. To cast one of these sorcerer spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
-									"For example, if you know the 1st-level spell {@spell burning hands} and have a 1st-level and a 2nd-level spell slot available, you can cast {@spell burning hands} using either slot."
+									"術士表中顯示了你有多少個法術位可以用來施放你一環或更高環的{@filter 術士法術|spells|class=wizard}。要施放其中一個術士法術，你必須消耗一個與該法術環位相同或更高的法術位。你在完成一次長休後恢復所有你花費掉的法術位。",
+									"舉例來說，如果你知曉一個1環的{@spell 燃燒之手}法術，且你擁有一個1環和一個2環的法術位，則你可以使用其中任意一個法術位來施放{@spell 燃燒之手}。"
 								]
 							},
 							{
 								"type": "entries",
-								"name": "Spells Known of 1st Level and Higher",
+								"name": "一環或更高環的已知法術",
 								"entries": [
-									"You know two 1st-level spells of your choice from the sorcerer spell list.",
-									"You learn an additional sorcerer spell of your choice at each level except 12th, 14th, 16th, 18th, 19th, and 20th. Each of these spells must be of a level for which you have spell slots. For instance, when you reach 3rd level in this class, you can learn one new spell of 1st or 2nd level.",
-									"Additionally, when you gain a level in this class, you can choose one of the sorcerer spells you know and replace it with another spell from the sorcerer spell list, which also must be of a level for which you have spell slots."
+									"你知曉二個從術士法術列表中自選的1環法術。",
+									"你將在提升至在每個除了第12,14,16,18,19,和20級的術士等級時，習得一個新的術士法術。每個這些法術的環位都必須符合你所擁有法術位的環位。舉例來說，當你在此職業升至3級時，你可以學習一個新的1環或2環法術。",
+									"此外，當你提升這個職業的等級時，你可以從術士的法術列表中挑選一個法術來取代一個你目前已知的法術，而它的環位也必須符合你所擁有法術位的環位。"
 								]
 							},
 							{
 								"type": "entries",
-								"name": "Spellcasting Ability",
+								"name": "施法屬性",
 								"entries": [
-									"Charisma is your spellcasting ability for your sorcerer spells, since the power of your magic relies on your ability to project your will into the world. You use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a sorcerer spell you cast and when making an attack roll with one.",
+									"因為你魔法的力量依賴於你將自己的意志投射於世界的能力，魅力是你施展術士法術的施法屬性。每當法術提及你的施法屬性時，你將使用你的魅力。此外，當決定你術士法術的豁免DC、以及使用術士法術進行攻擊檢定時，你使用你的魅力調整值。",
 									{
 										"type": "abilityDc",
-										"name": "Spell",
+										"name": "法術",
 										"attributes": [
 											"cha"
 										]
 									},
 									{
 										"type": "abilityAttackMod",
-										"name": "Spell",
+										"name": "法術",
 										"attributes": [
 											"cha"
 										]
@@ -492,18 +492,18 @@
 							},
 							{
 								"type": "entries",
-								"name": "Spellcasting Focus",
+								"name": "施法法器",
 								"entries": [
-									"You can use an arcane focus (found in chapter 5) as a spellcasting focus for your sorcerer spells."
+									"你可以使用一個{@item 奧術法器|phb}（第五章），來做為你施放術士法術的法器。"
 								]
 							}
 						]
 					},
 					{
-						"name": "Sorcerous Origin",
+						"name": "術法起源", "ENG_name": "Sorcerous Origin",
 						"entries": [
-							"Choose a sorcerous origin, which describes the source of your innate magical power, from the list of available origins",
-							"Your choice grants you features when you choose it at 1st level and again at 6th, 14th, and 18th level."
+							"從可選的起源列表中選擇一個術法起源，它代表著你天生魔法力量的來源。",
+							"你的選擇會在1級、6級、14級、和18級的時候賦予你新的能力。"
 						],
 						"gainSubclassFeature": true
 					}
@@ -582,68 +582,68 @@
 					{
 						"name": "Metamagic",
 						"entries": [
-							"At 3rd level, you gain the ability to twist your spells to suit your needs. You gain two of the following Metamagic options of your choice. You gain another one at 10th and 17th level.",
-							"You can use only one Metamagic option on a spell when you cast it, unless otherwise noted.",
+							"在3級時，你獲得扭曲你的法術以使其符合你需求的能力。你獲得下列超魔法選項中的二個。你將在10級和17級時再各獲得一個。",
+							"除非另有說明，否則你只能在你施放一個法術時對其使用一個超魔法選項。",
 							{
 								"type": "options",
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Careful Spell",
+										"name": "謹慎法術", "ENG_name": "Careful Spell",
 										"entries": [
-											"When you cast a spell that forces other creatures to make a saving throw, you can protect some of those creatures from the spell's full force. To do so, you spend 1 sorcery point and choose a number of those creatures up to your Charisma modifier (minimum of one creature). A chosen creature automatically succeeds on its saving throw against the spell."
+											"當你施放一個會強迫其他生物進行豁免檢定的法術時，你可以保護其中一些生物不受該法術的完整威力影響。要這麼做，你得消耗1點術法點，並選擇最多等同於你魅力調整值數量的生物（最少一個生物）。被選擇的生物將在對抗該法術的豁免檢定中自動成功。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Distant Spell",
+										"name": "遠程法術", "ENG_name": "Distant Spell",
 										"entries": [
-											"When you cast a spell that has a range of 5 feet or greater, you can spend 1 sorcery point to double the range of the spell.",
-											"When you cast a spell that has a range of touch, you can spend 1 sorcery point to make the range of the spell 30 feet."
+											"當你施放一個射程為5呎或更遠的法術時，你可以消耗1點術法點以將該法術的射程變為二倍。",
+											"當你施放一個射程為觸碰的法術時，你可以消耗1點術法點以將該法術的射程變為30呎。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Empowered Spell",
+										"name": "強效法術", "ENG_name": "Empowered Spell",
 										"entries": [
-											"When you roll damage for a spell, you can spend 1 sorcery point to reroll a number of the damage dice up to your Charisma modifier (minimum of one). You must use the new rolls.",
-											"You can use Empowered Spell even if you have already used a different Metamagic option during the casting of the spell."
+											"當你在為法術骰傷害時，你可以消耗1點術法點以重骰最多等同於你魅力調整值數量的骰子（最少一顆）。你必須使用新的擲骰結果。",
+											"即使你已經在施放此法術的期間已經使用了一個不同的超魔法選項，你仍然可以使用強效法術。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Extended Spell",
+										"name": "延時法術", "ENG_name": "Extended Spell",
 										"entries": [
-											"When you cast a spell that has a duration of 1 minute or longer, you can spend 1 sorcery point to double its duration, to a maximum duration of 24 hours."
+											"當你施放一個持續時間為1分鐘或更久的法術時，你可以消耗1點術法點以將它的持續時間變為二倍，最久到24小時。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Heightened Spell",
+										"name": "升階法術", "ENG_name": "Heightened Spell",
 										"entries": [
-											"When you cast a spell that forces a creature to make a saving throw to resist its effects, you can spend 3 sorcery points to give one target of the spell disadvantage on its first saving throw made against the spell."
+											"當你施放一個會強迫一個生物進行豁免檢定以抵抗它效果的法術時，你可以消耗3點術法點以讓一個該法術的目標在它對抗該法術的第一次豁免檢定中承受劣勢。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Quickened Spell",
+										"name": "瞬發法術", "ENG_name": "Quickened Spell",
 										"entries": [
-											"When you cast a spell that has a casting time of 1 action, you can spend 2 sorcery points to change the casting time to 1 bonus action for this casting."
+											"當你施放一個施法時間為1個動作的法術時，你可以消耗2點術法點以將它在這次施法的的施法時間變為1個附贈動作。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Subtle Spell",
+										"name": "精妙法術", "ENG_name": "Subtle Spell",
 										"entries": [
-											"When you cast a spell, you can spend 1 sorcery point to cast it without any somatic or verbal components."
+											"當你施放一個法術時，你可以消耗1點術法點以施放它而無須提供任何姿勢或聲音構材。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Twinned Spell",
+										"name": "孿生法術", "ENG_name": "Twinned Spell",
 										"entries": [
-											"When you cast a spell that doesn't have a range of self and is incapable of targeting more than one creature at the spell's current level, you can spend a number of sorcery points equal to the spell's level to target a second creature in range with the same spell (1 sorcery point if the spell is a cantrip).",
-											"To be eligible, a spell must be incapable of targeting more than one creature at the spell's current level. For example, magic missile and scorching ray aren't eligible, but ray of frost and chromatic orb are."
+											"當你施放一個射程不為自身，且在當前使用環位無法指定超過一個生物作為目標的法術時，你可以消耗等同於該法術環位數量的術法點以使用同個法術指定射程內的第二個生物做為目標（若該法術為戲法，則消耗1點術法點）。",
+											"要符合條件，該法術必須要在當前使用的環位無法指定超過一個生物作為目標。舉例來說，{@spell 魔法飛彈}和{@spell 灼熱射線}並不符合條件，但{@spell 冷凍射線}和{@spell 幻色法球}則可。"
 										]
 									}
 								]
@@ -653,7 +653,7 @@
 				],
 				[
 					{
-						"name": "屬性值提升",
+						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
 							"當你在此職業升至4級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
@@ -663,9 +663,9 @@
 				[],
 				[
 					{
-						"name": "Sorcerous Origin feature",
+						"name": "術法起源能力", "ENG_name": "Sorcerous Origin feature",
 						"entries": [
-							"At 6th level, you gain a feature granted by your Sorcerous Origin."
+							"在6級時，你獲得一個由你術法起源所賦予的能力。"
 						],
 						"gainSubclassFeature": true
 					}
@@ -673,7 +673,7 @@
 				[],
 				[
 					{
-						"name": "屬性值提升",
+						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
 							"當你在此職業升至8級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
@@ -683,16 +683,16 @@
 				[],
 				[
 					{
-						"name": "Metamagic",
+						"name": "超魔法", "ENG_name": "Metamagic",
 						"entries": [
-							"At 10th level, you learn an additional metamagic option."
+							"在10級時，你習得一個額外的超魔法選項。"
 						]
 					}
 				],
 				[],
 				[
 					{
-						"name": "屬性值提升",
+						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
 							"當你在此職業升至12級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
@@ -702,9 +702,9 @@
 				[],
 				[
 					{
-						"name": "Sorcerous Origin feature",
+						"name": "術法起源能力", "ENG_name": "Sorcerous Origin feature",
 						"entries": [
-							"At 14th level, you gain a feature granted by your Sorcerous Origin."
+							"在14級時，你獲得一個由你術法起源所賦予的能力。"
 						],
 						"gainSubclassFeature": true
 					}
@@ -712,7 +712,7 @@
 				[],
 				[
 					{
-						"name": "屬性值提升",
+						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
 							"當你在此職業升至16級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
@@ -721,24 +721,24 @@
 				],
 				[
 					{
-						"name": "Metamagic",
+						"name": "超魔法", "ENG_name": "Metamagic",
 						"entries": [
-							"At 17th level, you learn an additional metamagic option."
+							"在17級時，你習得一個額外的超魔法選項。"
 						]
 					}
 				],
 				[
 					{
-						"name": "Sorcerous Origin feature",
+						"name": "術法起源能力", "ENG_name": "Sorcerous Origin feature",
 						"entries": [
-							"At 18th level, you gain a feature granted by your Sorcerous Origin."
+							"在18級時，你獲得一個由你術法起源所賦予的能力。"
 						],
 						"gainSubclassFeature": true
 					}
 				],
 				[
 					{
-						"name": "屬性值提升",
+						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
 							"當你在此職業升至19級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
