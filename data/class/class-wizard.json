@@ -1,7 +1,7 @@
 {
 	"class": [
 		{
-			"name": "法師",
+			"name": "法師", "ENG_name": "Wizard",
 			"source": "PHB",
 			"hd": {
 				"number": 1,
@@ -344,7 +344,7 @@
 					"(a)一套{@item 學者套裝|phb} 或 (b)一套{@item 探索者套裝|phb}",
 					"一本{@item 法術書|phb}"
 				],
-				"goldAlternative": "{@dice 4d4×10|4d4 × 10|Starting Gold}"
+				"goldAlternative": "{@dice 4d4×10|4d4 × 10|起始金錢}"
 			},
 			"multiclassing": {
 				"requirements": {
@@ -354,56 +354,56 @@
 			"classFeatures": [
 				[
 					{
-						"name": "Arcane Recovery",
+						"name": "奧術恢復", "ENG_name": "Arcane Recovery",
 						"entries": [
-							"You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher.",
-							"For example, if you're a 4th-level wizard, you can recover up to two levels worth of spell slots.",
-							"You can recover either a 2nd-level spell slot or two 1st-level spell slots."
+							"你學會了通過研讀法術書來恢復失去魔法能量的方法。每天一次，當你完成一次短休時，你可以選擇已消耗的法術位來恢復。這些法術位的環位總和必須小於或等於你法師等級的一半（小數點進位），且每個法術位都不能為6環或更高。",
+							"舉例來說，若你是個4級法師，你可以恢復最多共計2個環位的法術位。",
+							"你可以恢復一個2環法術位，或選擇恢復二個1環法術位。"
 						]
 					},
 					{
-						"name": "Spellcasting",
+						"name": "施法", "ENG_name": "Spellcasting",
 						"entries": [
-							"As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power. See {@book chapter 10|PHB|10} for the general rules of spellcasting and chapter 11 for the {@filter wizard spell list|spells|class=wizard}.",
+							"作為一介奧術魔法的學生，你擁有一本記載著法術的法術書，展示著你的真正力量的閃耀先兆。請參閱{@book 第十章|PHB|10}以了解關於施法的規則，以及第十一章以查閱{@filter 法師法術列表|spells|class=wizard}。",
 							{
 								"type": "entries",
-								"name": "Cantrips",
+								"name": "戲法",
 								"entries": [
-									"At 1st level, you know three cantrips of your choice from the wizard spell list. You learn additional wizard cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Wizard table."
+									"在1級時，你知曉三個從{@filter 法師法術列表|spells|class=wizard}自選的戲法。你將在升至更高的法師等級時學會額外的法師戲法，見法師表格中的已知戲法欄位。"
 								]
 							},
 							{
 								"type": "entries",
-								"name": "Spellbook",
+								"name": "法術書",
 								"entries": [
-									"At 1st level, you have a spellbook containing six 1st-level {@filter wizard spells|spells|class=wizard} of your choice. Your spellbook is the repository of the wizard spells you know, except your cantrips, which are fixed in your mind."
+									"在1級時，你擁有一本載有六個自選的1環{@filter 法師法術|spells|class=wizard}的法術書。你的法術書是儲存著你已知法師法術的容器；除了你的戲法之外，戲法則直接被記憶在你的心中。"
 								]
 							},
 							{
 								"type": "entries",
-								"name": "Preparing and Casting Spells",
+								"name": "準備及施放法術",
 								"entries": [
-									"The Wizard table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
-									"You prepare the list of wizard spells that are available for you to cast. To do so, choose a number of wizard spells from your spellbook equal to your Intelligence modifier + your wizard level (minimum of one spell). The spells must be of a level for which you have spell slots.",
-									"For example, if you're a 3rd-level wizard, you have four 1st-level and two 2nd-level spell slots. With an Intelligence of 16, your list of prepared spells can include six spells of 1st or 2nd level, in any combination, chosen from your spellbook. If you prepare the 1st-level spell {@spell magic missile}, you can cast it using a 1st-level or a 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.",
-									"You can change your list of prepared spells when you finish a long rest. Preparing a new list of wizard spells requires time spent studying your spellbook and memorizing the incantations and gestures you must make to cast the spell: at least 1 minute per spell level for each spell on your list."
+									"法師表中顯示了你有多少個法術位可以用來施放你一環或更高環的法師法術。要施放其中一個這些法術，你必須消耗一個與該法術環位相同或更高的法術位。你在完成一次長休後恢復所有你花費掉的法術位。",
+									"你準備一份你所能施放法師法術的列表。當你這麼做時，從你的法術書中選擇數量等同於你智力調整值 + 你法師等級的法師法術（最少一個法術）。這些法術的環位都必須符合你所擁有法術位的環位。",
+									"舉例來說，如果你是一個3級的法師，你擁有四個1環和二個2環的法術位。你的智力為16，則你已準備法術的列表中可以包含總共六個1環或2環的法術。若你準備了1環法術{@spell 魔法飛彈}，你可以使用1環和2環的法術位來施放它。施放法術並不會將它從你的準備法術列表中移除。",
+									"你可以在你完成一次長休時改變你的準備法術列表。準備一份新的法師法術列表需要花費時間於研讀你的法術書並記憶你施放該法術所必須的咒語和姿勢：你需要為你列表上每個法術的每個環位都花費至少1分鐘的時間。"
 								]
 							},
 							{
 								"type": "entries",
-								"name": "Spellcasting Ability",
+								"name": "施法屬性",
 								"entries": [
-									"Intelligence is your spellcasting ability for your wizard spells, since you learn your wizard spells through dedicated study and memorization. You use your Intelligence whenever a spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for a wizard spell you cast and when making an attack roll with one.",
+									"由於你是透過致力研讀與記憶習得你的法師法術，因此智力是你施展法師法術的施法屬性。每當法術提及你的施法屬性時，你將使用你的智力。此外，當決定你法師法術的豁免DC、以及使用法師法術進行攻擊檢定時，你使用你的智力調整值。",
 									{
 										"type": "abilityDc",
-										"name": "Spell",
+										"name": "法術",
 										"attributes": [
 											"int"
 										]
 									},
 									{
 										"type": "abilityAttackMod",
-										"name": "Spell",
+										"name": "法術",
 										"attributes": [
 											"int"
 										]
@@ -412,28 +412,28 @@
 							},
 							{
 								"type": "entries",
-								"name": "Ritual Casting",
+								"name": "儀式施法",
 								"entries": [
-									"You can cast a wizard spell as a ritual if that spell has the ritual tag and you have the spell in your spellbook. You don't need to have the spell prepared."
+									"若一個法師法術具有儀式標籤且你的法術書中有記載該法術，則你可以將它做為儀式法術施放。你並不需要準備該法術。"
 								]
 							},
 							{
 								"type": "entries",
-								"name": "Spellcasting Focus",
+								"name": "施法法器",
 								"entries": [
-									"You can use an arcane focus (found in chapter 5) as a spellcasting focus for your wizard spells."
+									"你可以使用一個{@item 奧術法器|phb}（第五章），來做為你施放法師法術的法器。"
 								]
 							},
 							{
 								"type": "entries",
-								"name": "Learning Spells of 1st Level and Higher",
+								"name": "習得一環或更高環的法術",
 								"entries": [
 									"Each time you gain a wizard level, you can add two wizard spells of your choice to your spellbook. Each of these spells must be of a level for which you have spell slots, as shown on the Wizard table. On your adventures, you might find other spells that you can add to your spellbook (see \"Your Spellbook\")."
 								]
 							},
 							{
 								"type": "inset",
-								"name": "Your Spellbook",
+								"name": "你的法術書",
 								"entries": [
 									"The spells that you add to your spellbook as you gain levels reflect the arcane research you conduct on your own, as well as intellectual breakthroughs you have had about the nature of the multiverse. You might find other spells during your adventures. You could discover a spell recorded on a scroll in an evil wizard's chest, for example, or in a dusty tome in an ancient library.",
 									"A spellbook doesn't contain cantrips.",
@@ -484,9 +484,9 @@
 				],
 				[
 					{
-						"name": "Arcane Tradition",
+						"name": "奥法學派", "ENG_name": "Arcane Tradition",
 						"entries": [
-							"When you reach 2nd level, you choose an arcane tradition from the list of available traditions, shaping your practice of magic. Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level."
+							"當你升至2級時，你從可選的學派列表中選擇一個奥法學派，發展你的魔法實踐。你的選擇會在2級、6級、10級、和14級的時候賦予你新的能力。"
 						],
 						"gainSubclassFeature": true
 					}
@@ -504,9 +504,9 @@
 				[],
 				[
 					{
-						"name": "Arcane Tradition feature",
+						"name": "奥法學派能力", "ENG_name": "Arcane Tradition feature",
 						"entries": [
-							"At 6th level, you gain a feature granted by your Arcane Tradition."
+							"在6級時，你獲得一個由你奧法學派所賦予的能力。"
 						],
 						"gainSubclassFeature": true
 					}
@@ -524,9 +524,9 @@
 				[],
 				[
 					{
-						"name": "Arcane Tradition feature",
+						"name": "奥法學派能力", "ENG_name": "Arcane Tradition feature",
 						"entries": [
-							"At 10th level, you gain a feature granted by your Arcane Tradition."
+							"在10級時，你獲得一個由你奧法學派所賦予的能力。"
 						],
 						"gainSubclassFeature": true
 					}
@@ -544,9 +544,9 @@
 				[],
 				[
 					{
-						"name": "Arcane Tradition feature",
+						"name": "奥法學派能力", "ENG_name": "Arcane Tradition feature",
 						"entries": [
-							"At 14th level, you gain a feature granted by your Arcane Tradition."
+							"在14級時，你獲得一個由你奧法學派所賦予的能力。"
 						],
 						"gainSubclassFeature": true
 					}
@@ -564,10 +564,10 @@
 				[],
 				[
 					{
-						"name": "Spell Mastery",
+						"name": "法術精通", "ENG_name": "Spell Mastery",
 						"entries": [
-							"At 18th level, you have achieved such mastery over certain spells that you can cast them at will. Choose a 1st-level wizard spell and a 2nd-level wizard spell that are in your spellbook. You can cast those spells at their lowest level without expending a spell slot when you have them prepared. If you want to cast either spell at a higher level, you must expend a spell slot as normal.",
-							"By spending 8 hours in study, you can exchange one or both of the spells you chose for different spells of the same levels."
+							"在18級時，你對特定法術已經如此精通，以至於你可以隨意施放它們。選擇你法術書中的一個1環法術和一個2環法術。若你已經準備這些法術，則你能夠以它們的最低環位施放這些法術而無需消耗法術位。若你想要以更高環位施放這些法術，則你必須如常消耗法術位。",
+							"藉由花費8小時的研讀，你可以改變其中一個或這兩個所選法術為其他相同環位的不同法術。"
 						]
 					}
 				],
@@ -582,10 +582,10 @@
 				],
 				[
 					{
-						"name": "Signature Spells",
+						"name": "招牌法術", "ENG_name": "Signature Spells",
 						"entries": [
-							"When you reach 20th level, you gain mastery over two powerful spells and can cast them with little effort. Choose two 3rd-level wizard spells in your spellbook as your signature spells. You always have these spells prepared, they don't count against the number of spells you have prepared, and you can cast each of them once at 3rd level without expending a spell slot. When you do so, you can't do so again until you finish a short or long rest.",
-							"If you want to cast either spell at a higher level, you must expend a spell slot as normal."
+							"當你升至20級時，你精通於二個強力法術而可以不費吹灰之力施放它們。選擇你法術書中的二個3環法術做為你的招牌法術。你永遠視作已經準備了這些法術，它們不會計入你已準備的法術數量中，且你可以各自施放它們一次而無需消耗法術位。當你這麼做後，你直到完成一次短休或長休之前都不能再使用此能力。",
+							"若你想要以更高環位施放這些法術，則你必須如常消耗法術位。"
 						]
 					}
 				]
