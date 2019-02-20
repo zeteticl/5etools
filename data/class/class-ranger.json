@@ -295,32 +295,32 @@
 			"classFeatures": [
 				[
 					{
-						"name": "Favored Enemy",
+						"name": "宿敵", "ENG_name": "Favored Enemy",
 						"entries": [
-							"Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy.",
-							"Choose a type of favored enemy: {@filter aberrations|bestiary|type=aberration}, {@filter beasts|bestiary|type=beast}, {@filter celestials|bestiary|type=celestial}, {@filter constructs|bestiary|type=construct}, {@filter dragons|bestiary|type=dragon}, {@filter elementals|bestiary|type=elemental}, {@filter fey|bestiary|type=fey}, {@filter fiends|bestiary|type=fiend}, {@filter giants|bestiary|type=giant}, {@filter monstrosities|bestiary|type=monstrosity}, {@filter oozes|bestiary|type=ooze}, {@filter plants|bestiary|type=plant}, or {@filter undead|bestiary|type=undead}. Alternatively, you can select two races of {@filter humanoid|bestiary|type=humanoid} (such as {@creature gnoll|mm|gnolls} and {@creature orc|mm|orcs}) as favored enemies.",
-							"You have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.",
-							"When you gain this feature, you also learn one language of your choice that is spoken by your favored enemies, if they speak one at all.",
-							"You choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures."
+							"從5級開始，你在對一個特定類型的敵人的研究、追跡、狩獵、和甚至交談上已相當具備充足的經驗。",
+							"選擇一個宿敵類型：{@filter 異怪|bestiary|type=aberration}、{@filter 野獸|bestiary|type=beast}、{@filter 天界生物|bestiary|type=celestial}、{@filter 構裝體|bestiary|type=construct}、{@filter 龍|bestiary|type=dragon}、{@filter 元素|bestiary|type=elemental}、{@filter 精類|bestiary|type=fey}、{@filter 邪魔|bestiary|type=fiend}、{@filter 巨人|bestiary|type=giant}、{@filter 怪物|bestiary|type=monstrosity}、{@filter 泥怪|bestiary|type=ooze}、{@filter 植物|bestiary|type=plant}、或{@filter 不死生物|bestiary|type=undead}。或者，你可以選擇二個{@filter 類人生物|bestiary|type=humanoid}種族（像是{@creature 豺狼人|mm}和{@creature 獸人|mm}）做為宿敵。",
+							"你在用於追蹤你宿敵的睿知（{@skill 生存}）檢定、以及用以回憶關於它們情報的智力檢定中具有優勢。",
+							"當你獲得此能力時，若你的宿敵擁有至少一種語言，你也選擇學會一種被它們所使用的語言。",
+							"你在6級和14級時選擇一種額外的宿敵以及一種關聯語言。隨著你提升等級，你的選擇必須反映你在你冒險中所遭遇過的怪物類型。"
 						]
 					},
 					{
-						"name": "Natural Explorer",
+						"name": "自然探索者", "ENG_name": "Natural Explorer",
 						"entries": [
-							"You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. Choose one type of favored terrain: arctic, coast, desert, forest, grassland, mountain, swamp, or the Underdark. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you're proficient in.",
-							"While traveling for an hour or more in your favored terrain, you gain the following benefits:",
+							"你特別熟悉於一種自然環境，且熟稔在這類區域中旅行和生存的方式。選擇一種偏好環境：極地、海岸、沙漠、森林、草地、高山、沼澤、或幽暗地域。當你進行一次關聯於你偏好環境的智力或睿知檢定時，若你使用一個你所熟練的技能，則你的熟練加值變為二倍。",
+							"當在你的偏好環境中旅行長達1個小時或更久，你將獲得下列好處：",
 							{
 								"type": "list",
 								"items": [
-									"Difficult terrain doesn't slow your group's travel.",
-									"Your group can't become lost except by magical means.",
-									"Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.",
-									"If you are traveling alone, you can move stealthily at a normal pace.",
-									"When you forage, you find twice as much food as you normally would.",
-									"While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area."
+									"困難地形不會減慢你們團隊的旅行速度。",
+									"你們團隊不會迷路，除非是因為魔法的緣故。",
+									"即使你在旅行途中正從事於其他行動（像是覓食、導航、或追跡），你仍保持對危險的警戒。",
+									"若你正獨自旅行，你能夠以正常步調隱匿移動。",
+									"當你覓食時，你能找到二倍你原本所能找到的食物。",
+									"當你追跡其他生物時，你也能得知它們確切的數量、它們的體型、以及它們在多久之前經過這片區域。"
 								]
 							},
-							"You choose additional favored terrain types at 6th and 10th level."
+							"你在6級和10級時選擇一種額外的偏好環境。"
 						]
 					}
 				],
@@ -442,9 +442,9 @@
 						"gainSubclassFeature": true
 					},
 					{
-						"name": "Primeval Awareness",
+						"name": "原初意識", "ENG_name": "Primeval Awareness",
 						"entries": [
-							"Beginning at 3rd level, you can use your action and expend one ranger spell slot to focus your awareness on the region around you. For 1 minute per level of the spell slot you expend, you can sense whether the following types of creatures are present within 1 mile of you (or within up to 6 miles if you are in your favored terrain): aberrations, celestials, dragons, elementals, fey, fiends, and undead. This feature doesn't reveal the creatures' location or number."
+							"從3級開始，你可以使用你的動作並消耗一個遊俠法術位以集中你的意識於你周遭的區域。在為你所消耗法術位的每環位1分鐘內，你可以感知下列類型的生物是否存在於距離你1哩內的區域：異怪、天界生物、龍、元素、精類、邪魔、和不死生物。此能力無法揭露出該生物的位置和數量。"
 						]
 					}
 				],
@@ -467,10 +467,10 @@
 				],
 				[
 					{
-						"name": "Favored Enemy and Natural Explorer improvements",
+						"name": "宿敵和自然探索者強化", "ENG_name": "Favored Enemy and Natural Explorer improvements",
 						"entries": [
-							"At 6th level, you gain an additional favored terrain.",
-							"At 6th level, you choose one additional favored enemy, as well as an associated language. Your choice should reflect the types of monsters you have encountered on your adventures."
+							"在6級時，你獲得一種額外的偏好環境。",
+							"在6級時，你選擇一種額外的宿敵以及一種關聯語言。你的選擇必須反映你在你冒險中所遭遇過的怪物類型。"
 						]
 					}
 				],
@@ -492,26 +492,26 @@
 						]
 					},
 					{
-						"name": "Land's Stride",
+						"name": "大地行者", "ENG_name": "Land's Stride",
 						"entries": [
-							"Starting at 8th level, moving through nonmagical difficult terrain costs you no extra movement. You can also pass through nonmagical plants without being slowed by them and without taking damage from them if they have thorns, spines, or a similar hazard.",
-							"In addition, you have advantage on saving throws against plants that are magically created or manipulated to impede movement, such those created by the {@spell entangle} spell."
+							"從8級開始，移動穿過非魔法的困難地形並不會花費你額外的移動速度。你也可以穿越非魔法植物而不會被它們減緩速度，若它們是荊棘、棘刺、或其他類似危險，你也不會被它們的傷害。",
+							"此外，在對抗由魔法創造或控制的植物所造成的阻礙移動效果時（像是{@spell 糾纏術}法術創造出的植物），你所進行的豁免檢定具有優勢。"
 						]
 					}
 				],
 				[],
 				[
 					{
-						"name": "Hide in Plain Sight",
+						"name": "遁術", "ENG_name": "Hide in Plain Sight",
 						"entries": [
-							"Starting at 10th level, you can spend 1 minute creating camouflage for yourself. You must have access to fresh mud, dirt, plants, soot, and other naturally occurring materials with which to create your camouflage.",
-							"Once you are camouflaged in this way, you can try to hide by pressing yourself up against a solid surface, such as a tree or wall, that is at least as tall and wide as you are. You gain a +10 bonus to Dexterity ({@skill Stealth}) checks as long as you remain there without moving or taking actions. Once you move or take an action or a reaction, you must camouflage yourself again to gain this benefit."
+							"從10級開始，你可以花費1分鐘的時間為自己創造一個偽裝。你必須要能取用新鮮的泥巴、土壤、植物、煙灰、和其他自然產出的材料以創造你的偽裝。",
+							"一旦你透過這個方式偽裝，你可以透過將自己貼合於一個高度和寬度至少與你一樣大的固體表面上，例如樹木或牆壁，以嘗試進行躲藏。只要你待於該處且不移動或採取動作，你就在敏捷（{@skill 隱匿}）檢定中獲得+10的加值。一旦你移動或採取動作或反應，你就必須再次偽裝自己以獲得這個好處。"
 						]
 					},
 					{
-						"name": "Natural Explorer improvement",
+						"name": "自然探索者強化", "ENG_name": "Natural Explorer improvement",
 						"entries": [
-							"You gain an additional favored terrain."
+							"在10級時，你獲得一種額外的偏好環境。"
 						]
 					}
 				],
@@ -536,15 +536,15 @@
 				[],
 				[
 					{
-						"name": "Vanish",
+						"name": "無蹤步", "ENG_name": "Vanish",
 						"entries": [
-							"Starting at 14th level, you can use the {@action Hide} action as a bonus action on your turn. Also, you can't be tracked by nonmagical means, unless you choose to leave a trail."
+							"從14級開始，你可以在你的回合以一個附贈動作採取{@action 躲藏}動作。同時，你不會被非魔法的手段追蹤，除非你選擇留下蹤跡。"
 						]
 					},
 					{
-						"name": "Favored Enemy improvement",
+						"name": "宿敵強化", "ENG_name": "Favored Enemy improvement",
 						"entries": [
-							"At 14th level, you choose one additional favored enemy, as well as an associated language. Your choice should reflect the types of monsters you have encountered on your adventures."
+							"在14級時，你選擇一種額外的宿敵以及一種關聯語言。你的選擇必須反映你在你冒險中所遭遇過的怪物類型。"
 						]
 					}
 				],
@@ -569,9 +569,9 @@
 				[],
 				[
 					{
-						"name": "Feral Senses",
+						"name": "野性感官", "ENG_name": "Feral Senses",
 						"entries": [
-							"At 18th level, you gain preternatural senses that help you fight creatures you can't see. When you attack a creature you can't see, your inability to see it doesn't impose disadvantage on your attack rolls against it. You are also aware of the location of any {@condition invisible} creature within 30 feet of you, provided that the creature isn't hidden from you and you aren't {@condition blinded} or {@condition deafened}."
+							"在18級時，你獲得超自然的感官以幫助你對抗看不見的生物。當你攻擊一個你看不見的生物時，你並不會因為無法看見它而在你對它進行的攻擊檢定中承受劣勢。同時，你也能察覺到任何距離你30呎內{@condition 隱形}生物的位置，只要該生物沒有躲藏於你，且你不處於{@condition 目盲}或{@condition 耳聾}狀態。"
 						]
 					}
 				],
@@ -586,9 +586,9 @@
 				],
 				[
 					{
-						"name": "Foe Slayer",
+						"name": "眾敵屠戮", "ENG_name": "Foe Slayer",
 						"entries": [
-							"At 20th level, you become an unparalleled hunter of your enemies. Once on each of your turns, you can add your Wisdom modifier to the attack roll or the damage roll of an attack you make against one of your favored enemies. You can choose to use this feature before or after the roll, but before any effects of the roll are applied."
+							"在20級時，你成為了一名針對你敵人的無雙獵手。在你的每個回合一次，你可以將你的睿知調整值加到你對你其中一個宿敵所進行的攻擊檢定或傷害骰中。你可以選擇在擲骰之前或之後使用此能力，但是必須在任何擲骰效果適用之前使用。"
 						]
 					}
 				]
