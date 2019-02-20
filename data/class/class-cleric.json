@@ -448,7 +448,7 @@
 								"name": "驅散不死", "ENG_name": "Turn Undead",
 								"entries": [
 									"以一個動作，你展現你的聖徽並說出斥責不死生物的禱詞。每個距離你30呎內且可以看見或聽見你的不死生物必須進行一次睿知豁免。若該生物豁免失敗，則它將被驅散長達1分鐘或直到它受到傷害。",
-									"一個被驅散的不死生物必須用它的回合嘗試盡可能的遠離你，且它無法自願的移動到距離你30呎內的空間。它無法採取反應。至於其動作，它只能使用{@action 疾走}動作或嘗試掙脫阻止它移動的效果。若它無法移動，則該生物將使用{@action 迴避}動作。"
+									"一個被驅散的不死生物必須用它的回合嘗試盡可能的遠離你，且它無法自願的移動到距離你30呎內的空間。它無法採取反應。它的動作只能使用{@action 疾走}動作或嘗試掙脫阻止它移動的效果。若它無法移動，則該生物將使用{@action 迴避}動作。"
 								]
 							}
 						]
@@ -608,21 +608,21 @@
 			"subclassTitle": "Divine Domain",
 			"subclasses": [
 				{
-					"name": "Arcana Domain",
+					"name": "奧秘領域", "ENG_name": "Arcana Domain",
 					"subclassFeatures": [
 						[
 							{
-								"name": "Arcana Domain",
+								"name": "奧秘領域", "ENG_name": "Arcana Domain",
 								"entries": [
-									"Magic is an energy that suffuses the multiverse and that fuels both destruction and creation. Gods of the Arcana domain know the secrets and potential of magic intimately. For some of these gods, magical knowledge is a great responsibility that comes with a special understanding of the nature of reality. Other gods of Arcana see magic as pure power, to be used as its wielder sees fit.",
-									"The gods of this domain are often associated with knowledge, as learning and arcane power tend to go hand-in-hand. In the Realms, deities of this domain include Azuth and Mystra, as well as Corellon Larethian of the elven pantheon. In other worlds, this domain includes Hecate, Math Mathonwy, and Isis; the triple moon gods of Solinari, Lunitari, and Nuitari of Krynn; and Boccob, Vecna, and WeeJas of Greyhawk.",
-									"At each indicated cleric level, add the listed spells to your spells prepared. They do not count towards your limit.",
+									"魔法是一種能量遍布在多元宇宙各處的能量，激起毀滅與創造。掌管奧秘領域的神祗詳盡知曉魔法的秘密和潛能。對於其中一些神祗而言，魔法知識是一項偉大的責任，伴隨著對於縣市本質的特殊理解；而其他奧秘之神則將魔法視為純粹的能量，並在其使用者認為合適時使用它。",
+									"因為學習和奧秘能量往往關係密切，這個領域的神祗通常和知識領域有關聯。在被遺忘的國度，掌管這個領域的神祗包括阿祖斯、密斯特拉、以及精靈之神柯瑞隆．拉瑞斯安。在其他世界，這個領域的神祇包括了赫卡忒、麥斯．麥索威、還有伊西斯；克萊恩世界的三月之神索林那瑞、努林塔瑞、和努塔瑞；灰鷹世界的博卡布、維克那、和維婕斯。",
+									"在每個下記的牧師等級，將列出的法術加入你的準備法術中。它們並不會計入你每日可準備的法術上限。",
 									{
 										"type": "table",
-										"caption": "Arcana Domain Spells",
+										"caption": "奧秘領域法術",
 										"colLabels": [
-											"Cleric Level",
-											"Spells"
+											"牧師等級",
+											"法術"
 										],
 										"colStyles": [
 											"col-3 text-align-center",
@@ -630,32 +630,32 @@
 										],
 										"rows": [
 											[
-												"1st",
-												"{@spell detect magic}, {@spell magic missile}"
+												"1級",
+												"{@spell 偵測魔法}, {@spell 魔法飛彈}"
 											],
 											[
-												"3rd",
-												"{@spell magic weapon}, {@spell Nystul's magic aura}"
+												"3級",
+												"{@spell 魔化武器}, {@spell 涅斯圖魔法靈光}"
 											],
 											[
-												"5th",
-												"{@spell dispel magic}, {@spell magic circle}"
+												"5級",
+												"{@spell 解除魔法}, {@spell 防護法陣}"
 											],
 											[
-												"7th",
-												"{@spell arcane eye}, {@spell Leomund's secret chest}"
+												"7級",
+												"{@spell 祕法眼}, {@spell 李歐蒙秘藏箱}"
 											],
 											[
-												"9th",
-												"{@spell planar binding}, {@spell teleportation circle}"
+												"9級",
+												"{@spell 異界誓縛}, {@spell 傳送法陣}"
 											]
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Arcane Initiate",
+										"name": "奧法學徒", "ENG_name": "Arcane Initiate",
 										"entries": [
-											"When you choose this domain at 1st level, you gain proficiency in the {@skill Arcana} skill, and you gain two cantrips of your choice from the wizard spell list. For you, these cantrips count as cleric cantrips."
+											"當你在1級時選擇此領域，你將獲得{@skill 奧秘}技能的熟練，且你獲得二個從{@filter 法師法術列表|spells|class=wizard}中自選的戲法。對你而言，這些戲法被視作牧師戲法。"
 										]
 									}
 								]
@@ -666,18 +666,18 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Channel Divinity: Arcane Abjuration",
+										"name": "引導神力：奧秘阻絕", "ENG_name": "Channel Divinity: Arcane Abjuration",
 										"entries": [
-											"Starting at 2nd level, you can use your Channel Divinity to abjure otherworldly creatures",
-											"As an action, you present your holy symbol, and one celestial, elemental, fey, or fiend of your choice that is within 30 feet of you must make a Wisdom saving throw, provided that the creature can see or hear you. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage.",
-											"A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly end its move in a space within 30 feet of you. It also can't take reactions. For its action, it can use only the {@action Dash} action or try to escape from an effect that prevents it from moving. If there's nowhere to move, then the creature can use the {@action Dodge} action.",
-											"After you reach 5th level, when a creature fails its saving throw against you Arcane Abjuration feature, the creature is banished for 1 minute (as in the {@spell banishment} spell, no concentration required) if it isn't on its plane of origin, and its challenge rating is at or below a certain threshold, as shown below.",
+											"從2級開始，你可以使用你的引導神力來抵禦異界生物。",
+											"以一個動作，你展現你的聖徽，且只要距離你30呎內你所選擇的一個天界生物、元素、精類、或邪魔可以看間或聽見你，它就必須進行一次睿知豁免。若該生物豁免失敗，則它將被驅散長達1分鐘或直到它受到傷害。",
+											"一個被驅散的不死生物必須用它的回合嘗試盡可能的遠離你，且它無法自願的移動到距離你30呎內的空間。它無法採取反應。它的動作只能使用{@action 疾走}動作或嘗試掙脫阻止它移動的效果。若它無法移動，則該生物將使用{@action 迴避}動作。",
+											"在你升至5級後，當一個生物在對抗你奧秘阻絕能力的豁免檢定中失敗，若該生物並不在它的原生位面，且它的挑戰等級為特定數值或更低（見下表），則該生物將被放逐長達1分鐘（如同{@spell 放逐術}，無須專注）。",
 											{
 												"type": "table",
-												"caption": "Arcane Banishment",
+												"caption": "奧秘阻絕",
 												"colLabels": [
-													"Cleric level",
-													"Banishes Creatures of CR..."
+													"牧師等級",
+													"被放逐生物的CR..."
 												],
 												"colStyles": [
 													"col-3 text-align-center",
@@ -685,24 +685,24 @@
 												],
 												"rows": [
 													[
-														"5th",
-														"1/2 or lower"
+														"5級",
+														"1/2或更低"
 													],
 													[
-														"8th",
-														"1 or lower"
+														"8級",
+														"1或更低"
 													],
 													[
-														"11th",
-														"2 or lower"
+														"11級",
+														"2或更低"
 													],
 													[
-														"14th",
-														"3 or lower"
+														"14級",
+														"3或更低"
 													],
 													[
-														"17th",
-														"4 or lower"
+														"17級",
+														"4或更低"
 													]
 												]
 											}
@@ -716,9 +716,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Spell Breaker",
+										"name": "法術破壞者", "ENG_name": "Spell Breaker",
 										"entries": [
-											"Starting at 6th level, when you restore hit points to an ally with a spell of 1st level or higher, you can also end one spell of your choice on that creature. The level of the spell you end must be equal to or lower than the level of the spell slot you use to cast the healing spell."
+											"從6級開始，當你使用1環或更高環的法術回復一個盟友的生命值，你也可以選擇結束一個作用於該生物上的法術。你所結束法術的環衛必須等於或低於你用以施放該治療法術所使用的法術位環位。"
 										]
 									}
 								]
@@ -729,9 +729,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Potent Spellcasting",
+										"name": "強力施法", "ENG_name": "Potent Spellcasting",
 										"entries": [
-											"Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
+											"從8級開始，你將你的睿知調整值加入任何你使用牧師戲法所造成的傷害中。"
 										]
 									}
 								]
@@ -742,9 +742,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Arcane Mastery",
+										"name": "奧術宗師", "ENG_name": "Arcane Mastery",
 										"entries": [
-											"At 17th level, you choose four spells from the Wizard spell list, one from each of the following levels: 6th, 7th, 8th, and 9th. You add them to your list of domain spells. Like your other domain spells, they are always prepared and count as cleric spells for you."
+											"在17級時，你從{@filter 法師法術列表|spells|class=wizard}中選擇四個法術，其環位分別如下：6環、7環、8環、9環。你將它們加入你的領域法術列表中。如同你其他的領域法術，它們永遠視作被準備，且對你而言視作牧師法術。"
 										]
 									}
 								]
@@ -752,7 +752,7 @@
 						]
 					],
 					"source": "SCAG",
-					"shortName": "Arcana"
+					"shortName": "奧秘"
 				},
 				{
 					"name": "City Domain (UA)",
@@ -878,14 +878,14 @@
 						]
 					],
 					"source": "UAModernMagic",
-					"shortName": "City (UA)"
+					"shortName": "城市(UA)"
 				},
 				{
-					"name": "Death Domain",
+					"name": "死亡領域", "ENG_name": "Death Domain",
 					"subclassFeatures": [
 						[
 							{
-								"name": "Death Domain",
+								"name": "死亡領域", "ENG_name": "Death Domain",
 								"entries": [
 									"The Death domain is concerned with the forces that cause death, as well as the negative energy that gives rise to undead creatures. Deities such as Chemosh, Myrkul, and WeeJas are patrons of necromancers, death knights, liches, mummy lords, and vampires. Gods of the Death domain also embody murder (Anubis, Bhaal, and Pyremius), pain (Iuz or Loviatar), disease or poison (Incabulos, Talona, or Morgion), and the underworld (Hades and Hel).",
 									"At each indicated cleric level, add the listed spells to your spells prepared. They do not count towards your limit.",
@@ -998,20 +998,20 @@
 					"shortName": "Death"
 				},
 				{
-					"name": "Knowledge Domain",
+					"name": "知識領域", "ENG_name": "Knowledge Domain",
 					"subclassFeatures": [
 						[
 							{
-								"name": "Knowledge Domain",
+								"name": "知識領域", "ENG_name": "Knowledge Domain",
 								"entries": [
-									"The gods of knowledge\u2014including Oghma, Boccob, Gilean, Aureon, and Thoth\u2014value learning and understanding above all. Some teach that knowledge is to be gathered and shared in libraries and universities, or promote the practical knowledge of craft and invention. Some deities hoard knowledge and keep its secrets to themselves. And some promise their followers that they will gain tremendous power if they unlock the secrets of the multiverse. Followers of these gods study esoteric lore, collect old tomes, delve into the secret places of the earth, and learn all they can. Some gods of knowledge promote the practical knowledge of craft and invention, including smith deities like Gond, Reorx, Onatar, Moradin, Hephaestus, and Goibhniu.",
-									"At each indicated cleric level, you add the listed spells to your spells prepared.",
+									"知識之神\u2014包括歐格馬、博卡布、吉力安、奥林、和托特\u2014祂們重視學習和理解勝過一切。有些神的教訓是知識應該被收集和分享於圖書館和大學，或將實用知識推廣於製造和發現。有些神祇則將知識密藏起來，不讓其他人所知。而有些則承諾祂們的追隨者，若他們能解開多元宇宙中的秘密，就將獲得無比的權力。這些神祇的追隨者研讀深奧的學識、收集古老的典籍、挖掘地球上的秘境、並盡他們可能的不斷學習。有些知識之神會推廣實用知識於製造和發明中，包括鍛造神祇，像是貢德、李奥克斯、昂那塔、摩拉丁、赫菲斯托斯、和戈伊布尼烏。",
+									"在每個下記的牧師等級，將列出的法術加入你的準備法術中。",
 									{
 										"type": "table",
-										"caption": "Knowledge Domain Spells",
+										"caption": "知識領域法術",
 										"colLabels": [
-											"Cleric Level",
-											"Spells"
+											"牧師等級",
+											"法術"
 										],
 										"colStyles": [
 											"col-3 text-align-center",
@@ -1019,33 +1019,33 @@
 										],
 										"rows": [
 											[
-												"1st",
-												"{@spell command}, {@spell identify}"
+												"1級",
+												"{@spell 命令術}, {@spell 鑑定術}"
 											],
 											[
-												"3rd",
-												"{@spell augury}, {@spell suggestion}"
+												"3級",
+												"{@spell 卜筮}, {@spell 暗示術}"
 											],
 											[
-												"5th",
-												"{@spell nondetection}, {@spell speak with dead}"
+												"5級",
+												"{@spell 迴避偵測}, {@spell 死者交談術}"
 											],
 											[
-												"7th",
-												"{@spell arcane eye}, {@spell confusion}"
+												"7級",
+												"{@spell 祕法眼}, {@spell 困惑術}"
 											],
 											[
-												"9th",
-												"{@spell legend lore}, {@spell scrying}"
+												"9級",
+												"{@spell 通曉傳奇}, {@spell 探知}"
 											]
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Blessings of Knowledge",
+										"name": "知識祝福", "ENG_name": "Blessings of Knowledge",
 										"entries": [
-											"At 1st level, you learn two languages of your choice. You also become proficient in your choice of two of the following skills: {@skill Arcana}, {@skill History}, {@skill Nature}, or {@skill Religion}.",
-											"Your proficiency bonus is doubled for any ability check you make that uses either of those skills."
+											"在1級時，你學會二種自選的語言。你也變得熟練於二個從下列選項中自選的技能：{@skill 奧秘}、{@skill 歷史}、{@skill 自然}、或{@skill 宗教}。",
+											"你的熟練加值在使用這些技能所進行的任何屬性檢定中變為兩倍。"
 										]
 									}
 								]
@@ -1056,9 +1056,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Channel Divinity: Knowledge of the Ages",
+										"name": "引導神力：歲月知識", "ENG_name": "Channel Divinity: Knowledge of the Ages",
 										"entries": [
-											"Starting at 2nd level, you can use your Channel Divinity to tap into a divine well of knowledge. As an action, you choose one skill or tool. For 10 minutes, you have proficiency with the chosen skill or tool."
+											"從2級開始，你可以使用你的引導神力以進入知識的神聖之井。以一個動作，你選擇一項技能或工具。在10分鐘內，你將熟練於所選的技能或工具。"
 										]
 									}
 								]
@@ -1069,12 +1069,12 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Channel Divinity: Read Thoughts",
+										"name": "引導神力：閱讀思想", "ENG_name": "Channel Divinity: Read Thoughts",
 										"entries": [
-											"At 6th level, you can use your Channel Divinity to read a creature's thoughts. You can then use your access to the creature's mind to command it.",
-											"As an action, choose one creature that you can see within 60 feet of you. That creature must make a Wisdom saving throw. If the creature succeeds on the saving throw, you can't use this feature on it again until you finish a long rest.",
-											"If the creature fails its save, you can read its surface thoughts (those foremost in its mind, reflecting its current emotions and what it is actively thinking about) when it is within 60 feet of you. This effect lasts for 1 minute.",
-											"During that time, you can use your action to end this effect and cast the suggestion spell on the creature without expending a spell slot. The target automatically fails its saving throw against the spell."
+											"在6級時，你可以使用你的引導神力以閱讀一個生物的思想。你可以接著利用你對該生物的心靈通道以命令它。",
+											"以一個動作，選擇一個距離你60呎內且你所能看見的生物。該生物必須進行一次睿知豁免。若該生物成功通過此豁免，則直到你完成一次長休之前都不能再對它使用此能力。",
+											"若該生物豁免失敗，你可以在它距離你60呎內時讀取它的表層思想（那些它腦中最主要的思想，反映著它當下的情緒和它主動思考的事物）。這個效果將持續1分鐘。",
+											"在這段期間，你可以使用你的動作以結束此效果，並對該生物施放{@skill 暗示術}法術而無需消耗法術位。目標將在對抗此法術的豁免檢定中自動失敗。"
 										]
 									}
 								]
@@ -1085,9 +1085,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Potent Spellcasting",
+										"name": "強力施法", "ENG_name": "Potent Spellcasting",
 										"entries": [
-											"Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
+											"從8級開始，你將你的睿知調整值加入任何你使用牧師戲法所造成的傷害中。"
 										]
 									}
 								]
@@ -1098,18 +1098,18 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Visions of the Past",
+										"name": "過去之景", "ENG_name": "Visions of the Past",
 										"entries": [
-											"Starting at 17th level, you can call up visions of the past that relate to an object you hold or your immediate surroundings. You spend at least 1 minute in meditation and prayer, then receive dreamlike, shadowy glimpses of recent events. You can meditate in this way for a number of minutes equal to your Wisdom score and must maintain concentration during that time, as if you were casting a spell.",
-											"Once you use this feature, you can't use it again until you finish a short or long rest.",
+											"從17級開始，你可以呼喚出與你所持握的一個物體或你當下環境有關的過去景象。你花費至少1分鐘的時間冥想與祈禱，然後接收到有如夢境般，近期事件的朦朧一瞥。你可以透過這個方式冥想長達等同於你睿知數值的分鐘時間，且必須在這段期間保持專注，就如同你施放專注法術一樣。",
+											"一旦你使用此能力，直到你完成一次短休或長休之前，都不能再使用它。",
 											{
 												"type": "entries",
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Object Reading",
+														"name": "物體讀見",
 														"entries": [
-															"Holding an object as you meditate, you can see visions of the object's previous owner. After meditating for 1 minute, you learn how the owner acquired and lost the object, as well as the most recent significant event involving the object and that owner. If the object was owned by another creature in the recent past (within a number of days equal to your Wisdom score), you can spend 1 additional minute for each owner to learn the same information about that creature."
+															"在你冥想時持握一個物體，你可以看見該物體前一個擁有者的影像。在冥想1分鐘之後，你理解到如何該擁有者是如何獲得和遺失這個物體，以及最近一件涉及該物體和擁有者的重大事件。若該物體在近期曾被另一個生物所擁有（等同於你睿知數值的天數內），你可以為每個擁有者額外各花費1分鐘以理解關於該生物的相同情報。"
 														]
 													}
 												]
@@ -1119,9 +1119,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Area Reading",
+														"name": "區域讀見",
 														"entries": [
-															"As you meditate, you see visions of recent events in your immediate vicinity (a room, street, tunnel, clearing, or the like, up to a 50-foot cube), going back a number of days equal to your Wisdom score. For each minute you meditate, you learn about one significant event, beginning with the most recent. Significant events typically involve powerful emotions, such as battles and betrayals, marriages and murders, births and funerals. However, they might also include more mundane events that are nevertheless important in your current situation."
+															"在你冥想時，你看見在你當下周遭環境（一個房間、街道、隧道、空地、或最大50呎立方體空間的類似區域）所發生最近事件的影像，回到等同於你睿知數值的天數的過去。你每冥想一分鐘，你就能知曉一個重大的事件，從最近發生的事件開始。重大事件通常涉及了強烈的情緒，像是鬥爭和背叛、結婚與謀殺、誕生和葬禮等等。然而，它們也可能包括一些更加尋常但對你當下情況而言相當重要的事件。"
 														]
 													}
 												]
@@ -1133,7 +1133,7 @@
 						]
 					],
 					"source": "PHB",
-					"shortName": "Knowledge"
+					"shortName": "知識"
 				},
 				{
 					"name": "Knowledge Domain (PSA)",
