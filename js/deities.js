@@ -13,18 +13,13 @@ const sourceFilter = getSourceFilter();
 const pantheonFilter = new Filter({
 	header: "Pantheon", headerName: "神系",
 	items: [
+		"Forgotten Realms",
 		"Dawn War",
 		"Dragonlance",
-		"Drow",
-		"Dwarven",
 		"Eberron",
-		"Elven",
-		"Forgotten Realms",
-		"Gnomish",
 		"Greyhawk",
-		"Halfling",
 		"Nonhuman",
-		"Orc",
+		"Elven", "Drow", "Dwarven", "Duergar", "Gnomish", "Halfling", "Orc",
 		"Celtic", "Egyptian", "Greek", "Norse"
 	],
 	displayFn: function(p){switch(p){
