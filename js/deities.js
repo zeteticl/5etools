@@ -11,26 +11,30 @@ window.onload = async function load () {
 let list;
 const sourceFilter = getSourceFilter();
 const pantheonFilter = new Filter({
-	header: "Pantheon",
+	header: "Pantheon", headerName: "神系",
 	items: [
-		"Celtic",
 		"Dawn War",
 		"Dragonlance",
 		"Drow",
 		"Dwarven",
 		"Eberron",
-		"Egyptian",
 		"Elven",
 		"Faerûnian",
 		"Forgotten Realms",
 		"Gnomish",
-		"Greek",
 		"Greyhawk",
 		"Halfling",
 		"Nonhuman",
-		"Norse",
-		"Orc"
-	]
+		"Orc",
+		"Celtic", "Egyptian", "Greek", "Norse"
+	],
+	displayFn: function(p){switch(p){
+		case "Celtic": return "凱爾特";
+		case "Egyptian": return "埃及";
+		case "Greek": return "希臘";
+		case "Norse": return "北歐";
+		default: return p;
+	}}
 });
 const categoryFilter = new Filter({
 	header: "Category",
@@ -65,16 +69,17 @@ async function onJsonLoad (data) {
 	});
 
 	const alignmentFilter = new Filter({
-		header: "Alignment",
+		header: "Alignment", headerName: "陣營",
 		items: ["L", "NX", "C", "G", "NY", "E", "N"],
 		displayFn: Parser.alignmentAbvToFull
 	});
 	const domainFilter = new Filter({
-		header: "Domain",
-		items: ["Arcana", "Death", "Forge", "Grave", "Knowledge", "Life", "Light", "Nature", STR_NONE, "Order", "Tempest", "Trickery", "War"]
+		header: "Domain", headerName: "領域",
+		items: ["Arcana", "Death", "Forge", "Grave", "Knowledge", "Life", "Light", "Nature", STR_NONE, "Order", "Tempest", "Trickery", "War"],
+		displayFn: Parser.SubclassToDisplay
 	});
 	const miscFilter = new Filter({
-		header: "Miscellaneous",
+		header: "Miscellaneous", headerName: "雜項",
 		items: [STR_REPRINTED],
 		displayFn: StrUtil.uppercaseFirst,
 		deselFn: (it) => { return it === STR_REPRINTED }
