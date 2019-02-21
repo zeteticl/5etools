@@ -22,13 +22,7 @@ const pantheonFilter = new Filter({
 		"Elven", "Drow", "Dwarven", "Duergar", "Gnomish", "Halfling", "Orc",
 		"Celtic", "Egyptian", "Greek", "Norse"
 	],
-	displayFn: function(p){switch(p){
-		case "Celtic": return "凱爾特";
-		case "Egyptian": return "埃及";
-		case "Greek": return "希臘";
-		case "Norse": return "北歐";
-		default: return p;
-	}}
+	displayFn: Parser.PantheonToDisplay
 });
 const categoryFilter = new Filter({
 	header: "Category",
@@ -69,7 +63,7 @@ async function onJsonLoad (data) {
 	});
 	const domainFilter = new Filter({
 		header: "Domain", headerName: "領域",
-		items: ["Arcana", "Death", "Forge", "Grave", "Knowledge", "Life", "Light", "Nature", STR_NONE, "Order", "Tempest", "Trickery", "War"],
+		items: [STR_NONE, "Arcana", "Death", "Forge", "Grave", "Knowledge", "Life", "Light", "Nature", "Order", "Tempest", "Trickery", "War"],
 		displayFn: Parser.SubclassToDisplay
 	});
 	const miscFilter = new Filter({
@@ -91,7 +85,7 @@ async function onJsonLoad (data) {
 	);
 
 	const subList = ListUtil.initSublist({
-		valueNames: ["name", "pantheon", "alignment", "domains", "id"],
+		valueNames: ["name", "pantheon", "alignment", "domains", "id", "eng_name"],
 		listClass: "subdeities",
 		getSublistRow: getSublistItem
 	});

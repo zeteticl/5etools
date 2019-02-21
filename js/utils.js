@@ -6284,6 +6284,21 @@ Parser.EnvironmentToDisplay = function(e){
 	return Parser.translateKeyInMapToDisplay(Parser.environmentKeyToDisplay, e);
 }
 
+//Pantheon
+Parser.pantheonKeyToDisplay = {};
+Parser.pantheonKeyToDisplay["celtic"] = "凱爾特";
+Parser.pantheonKeyToDisplay["egyptian"] = "埃及";
+Parser.pantheonKeyToDisplay["greek"] = "希臘";
+Parser.pantheonKeyToDisplay["norse"] = "北歐";
+Parser.pantheonKeyToDisplay["nonhuman"] = "非人類";
+Parser.pantheonKeyToDisplay["forgotten realms"] = "被遺忘的國度";
+Parser.pantheonKeyToDisplay["dawn war"] = "破曉之戰";
+Parser.pantheonKeyToDisplay["dragonlance"] = "龍槍";
+Parser.pantheonKeyToDisplay["eberron"] = "艾伯倫";
+Parser.pantheonKeyToDisplay["greyhawk"] = "灰鷹";
+Parser.PantheonToDisplay = function(p){
+	return Parser.translateKeyInMapToDisplay(Parser.pantheonKeyToDisplay, p);
+}
 
 Parser.itemValueToDisplay = function(value){
 	if(!value) return value;

@@ -2078,28 +2078,29 @@ EntryRenderer.race = {
 
 EntryRenderer.deity = {
 	_basePartTranslators: {
-		"Alignment": {
+		"陣營": {
 			prop: "alignment",
-			displayFn: (it) => it.map(a => Parser.alignmentAbvToFull(a)).join(" ")
+			displayFn: (it) => it.map(a => Parser.alignmentAbvToFull(a))
 		},
-		"Pantheon": {
-			prop: "pantheon"
+		"神系": {
+			prop: "pantheon",
+			displayFn: Parser.PantheonToDisplay
 		},
-		"Category": {
+		"類別": {
 			prop: "category"
 		},
-		"Domains": {
+		"領域": {
 			prop: "domains",
-			displayFn: (it) => it.join(", ")
+			displayFn: (it) => it.map(d => Parser.SubclassToDisplay(d)).join(", ")
 		},
 		"Province": {
 			prop: "province"
 		},
-		"Alternate Names": {
+		"其他名稱": {
 			prop: "altNames",
 			displayFn: (it) => it.join(", ")
 		},
-		"Symbol": {
+		"聖徽": {
 			prop: "symbol"
 		}
 	},
