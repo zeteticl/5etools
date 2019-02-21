@@ -19,7 +19,6 @@ const pantheonFilter = new Filter({
 		"Dwarven",
 		"Eberron",
 		"Elven",
-		"Faerûnian",
 		"Forgotten Realms",
 		"Gnomish",
 		"Greyhawk",
@@ -155,6 +154,7 @@ function addDeities (data) {
 					<span class="source col-2 text-align-center ${Parser.sourceJsonToColor(abvSource)}" title="${Parser.sourceJsonToFull(g.source)}">${abvSource}</span>
 					
 					<span class="uniqueid hidden">${g.uniqueId ? g.uniqueId : dtI}</span>
+					<span class="eng_name hidden">${g.ENG_name ? g.ENG_name : g.name}</span>
 				</a>
 			</li>
 		`;
@@ -171,7 +171,7 @@ function addDeities (data) {
 
 	list.reIndex();
 	if (lastSearch) list.search(lastSearch);
-	list.sort("name");
+	list.sort("pantheon");
 	filterBox.render();
 	handleFilterChange();
 
@@ -245,7 +245,7 @@ function loadhash (jsonIndex) {
 	const $content = $(`#pagecontent`).empty();
 	$content.append(`
 		${EntryRenderer.utils.getBorderTr()}
-		${EntryRenderer.utils.getNameTr(deity, false, "", deity.title ? `, ${deity.title.toTitleCase()}` : "")}
+		${EntryRenderer.utils.getNameTr(deity, false, deity.title ? `${deity.title.toTitleCase()}, ` : "", "")}
 		${getDeityBody(deity)}
 		${deity.reprinted ? `<tr class="text"><td colspan="6"><i class="text-muted">Note: this deity has been reprinted in a newer publication.</i></td></tr>` : ""}
 		${EntryRenderer.utils.getPageTr(deity)}
