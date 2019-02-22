@@ -6007,6 +6007,7 @@ Parser.subclassKeyToDisplay["grave"]      = "墳墓";
 Parser.subclassKeyToDisplay["beauty"]     = "美麗";
 Parser.subclassKeyToDisplay["darkness"]   = "黑暗";
 Parser.subclassKeyToDisplay["destruction"]= "毀滅";
+Parser.subclassKeyToDisplay["order"]      = "秩序";
 Parser.SubclassToDisplay = function(sc){
 	let sc_match = sc.match(/([^()]*)( ?\((.*)\))?/);
 	if(sc_match && sc_match[2]){
@@ -6299,7 +6300,7 @@ Parser.pantheonKeyToDisplay["gnomish"] = "地侏";
 Parser.pantheonKeyToDisplay["halfling"] = "半身人";
 Parser.pantheonKeyToDisplay["orc"] = "獸人";
 Parser.pantheonKeyToDisplay["forgotten realms"] = "被遺忘的國度";
-Parser.pantheonKeyToDisplay["faerûnians"] = "費倫";
+Parser.pantheonKeyToDisplay["faerûnian"] = "費倫";
 Parser.pantheonKeyToDisplay["dawn war"] = "破曉之戰";
 Parser.pantheonKeyToDisplay["dragonlance"] = "龍槍";
 Parser.pantheonKeyToDisplay["eberron"] = "艾伯倫";
