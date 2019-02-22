@@ -137,9 +137,9 @@ function addDeities (data) {
 			<li class="row" ${FLTR_ID}="${dtI}" onclick="ListUtil.toggleSelected(event, this)" oncontextmenu="ListUtil.openContextMenu(event, this)">
 				<a id="${dtI}" href="#${UrlUtil.autoEncodeHash(g)}" title="${g.name}">
 					<span class="name col-3">${g.name}</span>
-					<span class="pantheon col-2 text-align-center">${g.pantheon}</span>
-					<span class="alignment col-2 text-align-center">${g.alignment.join("")}</span>
-					<span class="domains col-3 ${g.domains[0] === STR_NONE ? `list-entry-none` : ""}">${g.domains.join(", ")}</span>
+					<span class="pantheon col-2 text-align-center">${Parser.PantheonToDisplay(g.pantheon)}</span>
+					<span class="alignment col-2 text-align-center">${g.alignment.map(a => Parser.alignmentAbvToFull(a)).join("")}</span>
+					<span class="domains col-3 ${g.domains[0] === STR_NONE ? `list-entry-none` : ""}">${g.domains.map(d => Parser.SubclassToDisplay(d)).join(", ")}</span>
 					<span class="source col-2 text-align-center ${Parser.sourceJsonToColor(abvSource)}" title="${Parser.sourceJsonToFull(g.source)}">${abvSource}</span>
 					
 					<span class="uniqueid hidden">${g.uniqueId ? g.uniqueId : dtI}</span>
