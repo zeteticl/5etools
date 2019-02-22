@@ -219,7 +219,7 @@ function loadhash (jsonIndex) {
 		${reprintIndex ? `
 			<tr><td colspan="6">
 			<i class="text-muted">
-			${reprintIndex === 1 ? `這個神祇是再印版本。` : ""} 以下版本被印於較舊的出版品中 (${Parser.sourceJsonToFull(deity.source)}${deity.page ? `, page ${deity.page}` : ""}).
+			${reprintIndex === 1 ? `這個神祇是再印版本。` : ""} 以下版本被印於較舊的出版品中 (${Parser.sourceJsonToFull(deity.source)}${deity.page ? `-第${deity.page}頁` : ""}).
 			</i>
 			</td></tr>
 		` : ""}
