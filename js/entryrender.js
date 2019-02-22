@@ -2080,7 +2080,7 @@ EntryRenderer.deity = {
 	_basePartTranslators: {
 		"陣營": {
 			prop: "alignment",
-			displayFn: (it) => it.map(a => Parser.alignmentAbvToFull(a))
+			displayFn: (it) => it.map(a => Parser.alignmentAbvToFull(a)).join("")
 		},
 		"神系": {
 			prop: "pantheon",

@@ -13,7 +13,7 @@ const sourceFilter = getSourceFilter();
 const pantheonFilter = new Filter({
 	header: "Pantheon", headerName: "神系",
 	items: [
-		"Forgotten Realms",
+		"Forgotten Realms", "Faerûnian",
 		"Dawn War",
 		"Dragonlance",
 		"Eberron",
