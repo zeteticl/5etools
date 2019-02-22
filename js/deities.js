@@ -51,7 +51,7 @@ function unpackAlignment (g) {
 let filterBox;
 async function onJsonLoad (data) {
 	list = ListUtil.search({
-		valueNames: ["name", "pantheon", "alignment", "domains", "symbol", "source", "uniqueid"],
+		valueNames: ["name", "pantheon", "alignment", "domains", "symbol", "source", "uniqueid", "eng_name"],
 		listClass: "deities",
 		sortFunction: SortUtil.listSort
 	});
@@ -85,7 +85,7 @@ async function onJsonLoad (data) {
 	);
 
 	const subList = ListUtil.initSublist({
-		valueNames: ["name", "pantheon", "alignment", "domains", "id", "eng_name"],
+		valueNames: ["name", "pantheon", "alignment", "domains", "id"],
 		listClass: "subdeities",
 		getSublistRow: getSublistItem
 	});
@@ -219,7 +219,7 @@ function loadhash (jsonIndex) {
 		${reprintIndex ? `
 			<tr><td colspan="6">
 			<i class="text-muted">
-			${reprintIndex === 1 ? `This deity is a reprint.` : ""} The version below was printed in an older publication (${Parser.sourceJsonToFull(deity.source)}${deity.page ? `, page ${deity.page}` : ""}).
+			${reprintIndex === 1 ? `這個神祇是再印版本。` : ""} 以下版本被印於較舊的出版品中 (${Parser.sourceJsonToFull(deity.source)}${deity.page ? `, page ${deity.page}` : ""}).
 			</i>
 			</td></tr>
 		` : ""}
@@ -236,7 +236,7 @@ function loadhash (jsonIndex) {
 		${EntryRenderer.utils.getBorderTr()}
 		${EntryRenderer.utils.getNameTr(deity, false, deity.title ? `${deity.title.toTitleCase()}, ` : "", "")}
 		${getDeityBody(deity)}
-		${deity.reprinted ? `<tr class="text"><td colspan="6"><i class="text-muted">Note: this deity has been reprinted in a newer publication.</i></td></tr>` : ""}
+		${deity.reprinted ? `<tr class="text"><td colspan="6"><i class="text-muted">註記：這個神祇已在更新的出版品中被再印。</i></td></tr>` : ""}
 		${EntryRenderer.utils.getPageTr(deity)}
 		${deity.previousVersions ? `
 		${EntryRenderer.utils.getDividerTr()}
