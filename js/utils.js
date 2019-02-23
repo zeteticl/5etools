@@ -6308,6 +6308,7 @@ Parser.pantheonKeyToDisplay["greyhawk"] = "灰鷹";
 Parser.PantheonToDisplay = function(p){
 	return Parser.translateKeyInMapToDisplay(Parser.pantheonKeyToDisplay, p);
 }
+Parser.pantheonCategoryKeyToDisplay = {};
 Parser.pantheonCategoryKeyToDisplay["the sovereign host"] = "天命諸神";
 Parser.pantheonCategoryKeyToDisplay["the dark six"] = "黑暗六邪";
 Parser.pantheonCategoryKeyToDisplay["other faiths of eberron"] = "艾伯倫的其他信仰";
