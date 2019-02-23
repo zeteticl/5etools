@@ -6308,6 +6308,15 @@ Parser.pantheonKeyToDisplay["greyhawk"] = "灰鷹";
 Parser.PantheonToDisplay = function(p){
 	return Parser.translateKeyInMapToDisplay(Parser.pantheonKeyToDisplay, p);
 }
+Parser.pantheonCategoryKeyToDisplay["the sovereign host"] = "天命諸神";
+Parser.pantheonCategoryKeyToDisplay["the dark six"] = "黑暗六邪";
+Parser.pantheonCategoryKeyToDisplay["other faiths of eberron"] = "艾伯倫的其他信仰";
+Parser.pantheonCategoryKeyToDisplay["the gods of good"] = "善良諸神";
+Parser.pantheonCategoryKeyToDisplay["the gods of neutrality"] = "中立諸神";
+Parser.pantheonCategoryKeyToDisplay["the gods of evil"] = "邪惡諸神";
+Parser.PantheonCategoryToDisplay = function(p){
+	return Parser.translateKeyInMapToDisplay(Parser.pantheonCategoryKeyToDisplay, p);
+}
 
 Parser.itemValueToDisplay = function(value){
 	if(!value) return value;

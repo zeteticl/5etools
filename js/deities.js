@@ -13,14 +13,14 @@ const sourceFilter = getSourceFilter();
 const pantheonFilter = new Filter({
 	header: "Pantheon", headerName: "神系",
 	items: [
+		"Celtic", "Egyptian", "Greek", "Norse",
 		"Forgotten Realms", "Faerûnian",
 		"Dawn War",
 		"Dragonlance",
 		"Eberron",
 		"Greyhawk",
 		"Nonhuman",
-		"Elven", "Drow", "Dwarven", "Duergar", "Gnomish", "Halfling", "Orc",
-		"Celtic", "Egyptian", "Greek", "Norse"
+		"Elven", "Drow", "Dwarven", "Duergar", "Gnomish", "Halfling", "Orc"
 	],
 	displayFn: Parser.PantheonToDisplay
 });
@@ -28,13 +28,14 @@ const categoryFilter = new Filter({
 	header: "Category",
 	items: [
 		STR_NONE,
-		"Other Faiths of Eberron",
+		"The Sovereign Host",
 		"The Dark Six",
-		"The Gods of Evil",
+		"Other Faiths of Eberron",
 		"The Gods of Good",
 		"The Gods of Neutrality",
-		"The Sovereign Host"
-	]
+		"The Gods of Evil"
+	],
+	displayFn: Parser.PantheonCategoryToDisplay
 });
 
 function unpackAlignment (g) {

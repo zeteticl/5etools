@@ -2087,7 +2087,8 @@ EntryRenderer.deity = {
 			displayFn: Parser.PantheonToDisplay
 		},
 		"類別": {
-			prop: "category"
+			prop: "category",
+			displayFn: Parser.PantheonCategoryToDisplay
 		},
 		"領域": {
 			prop: "domains",
