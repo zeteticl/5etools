@@ -2115,14 +2115,14 @@
 							{
 								"name": "幽影魔法", "ENG_name": "Shadow Magic",
 								"entries": [
-									"You are a creature of shadow, for your innate magic comes from the Shadowfell itself. You might trace your lineage to an entity from that place, or perhaps you were exposed to its fell energy and transformed by it.",
-									"The power of shadow magic casts a strange pall over your physical presence. The spark of life that sustains you is muffled, as if it struggles to remain viable against the dark energy that imbues your soul. At your option, you can pick from or roll on the Shadow Sorcerer Quirks table to create a quirk for your character.",
+									"身為影之造物，你的天生魔法來自墮影冥界本身。或許你能追溯你的家系到一個來自該處的存在，又或者你曾暴露於墮影冥界的可怕能量之下並被其轉化。",
+									"幽影魔法的力量在你的身體表徵上蒙上了一層怪異的帷幕。維持著你的生命火花因壓抑而模糊，彷彿它在與深入你靈魂的黑暗能量對抗而掙扎求生。根據你的選擇，你可以從幽影術士怪異特徵表中為你的角色挑選或擲骰決定一個怪異特徵。",
 									{
 										"type": "table",
-										"caption": "Shadow Sorcerer Quirks",
+										"caption": "幽影術士怪異特徵",
 										"colLabels": [
 											"d6",
-											"Quirk"
+											"怪異特徵"
 										],
 										"colStyles": [
 											"col-2 text-align-center",
@@ -2131,44 +2131,44 @@
 										"rows": [
 											[
 												"1",
-												"You are always icy cold to the touch."
+												"你摸起來永遠如冰般寒冷。"
 											],
 											[
 												"2",
-												"When you are asleep, you don't appear to breathe (though you must still breathe to survive)."
+												"當你熟睡時，你像是沒有在呼吸（但你仍需要呼吸以維生）。"
 											],
 											[
 												"3",
-												"You barely bleed, even when badly injured."
+												"你鮮少流血，即使受到重傷也一樣。"
 											],
 											[
 												"4",
-												"Your heart beats once per minute. This event sometimes surprises you."
+												"你的心跳每一分鐘才脈動一下。這件事有時候也會讓你驚訝。"
 											],
 											[
 												"5",
-												"You have trouble remembering that living creatures and corpses should be treated differently."
+												"你難以記住活著的生物和屍體應該被差別待遇。"
 											],
 											[
 												"6",
-												"You blinked. Once. Last week."
+												"你上週，眨眼，只眨了一次。"
 											]
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Eyes of the Dark",
+										"name": "幽暗之瞳", "ENG_name": "Eyes of the Dark",
 										"entries": [
-											"Starting at 1st level, you have darkvision with a range of 120 feet.",
-											"When you reach 3rd level in this class, you learn the {@spell darkness} spell, which doesn't count against your number of sorcerer spells known. In addition, you can cast it by spending 2 sorcery points or by expending a spell slot. If you cast it with sorcery points, you can see through the {@spell darkness} created by the spell."
+											"從1級開始，你具有120呎範圍的黑暗視覺。",
+											"當你在本職業升至3級時，你習得{@spell 黑暗術}法術，且它不會計入你的已知術士法術數量中。此外，你可以藉由消耗2點術法點或一個法術位來施放它。若你透過術法點施放它，你可以看透由此法術創造出來的黑暗。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Strength of the Grave",
+										"name": "終焉之力", "ENG_name": "Strength of the Grave",
 										"entries": [
-											"Starting at 1st level, your existence in a twilight state between life and death makes you difficult to defeat. When damage reduces you to 0 hit points, you can make a Charisma saving throw (DC 5 + the damage taken). On a success, you instead drop to 1 hit point. You can't use this feature if you are reduced to 0 hit points by radiant damage or by a critical hit.",
-											"After the saving throw succeeds, you can't use this feature again until you finish a long rest."
+											"從1級開始，你處於生與死之間模糊狀態的存在使你難以被擊敗。當傷害將你的生命值歸零時，你可以進行一次魅力豁免（DC 5+所受到的傷害）。若豁免成功，你改為將你的生命值減少至1。若你是因為光耀傷害或暴擊而導致生命值歸零，則你不能使用此能力。",
+											"在該豁免檢定成功後，你直到完成一次長休之前都不能再使用此能力。"
 										]
 									}
 								]
@@ -2179,19 +2179,19 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Hound of Ill Omen",
+										"name": "凶兆獵犬", "ENG_name": "Hound of Ill Omen",
 										"entries": [
-											"At 6th level, you gain the ability to call forth a howling creature of darkness to harass your foes. As a bonus action, you can spend 3 sorcery points to magically summon a hound of ill omen to target one creature you can see within 120 feet of you. The hound uses the {@creature dire wolf}'s statistics (see the Monster Manual or appendix C in the Player's Handbook), with the following changes:",
+											"在6級時，你獲得呼喚出一個咆嘯著的黑暗生物以侵擾你敵人的能力。以一個附贈動作，你可以消耗3點術法點以用魔法召喚出一個凶兆獵犬，並指定一個距離你120呎內且你所能看見的生物做為目標。這個獵犬使用{@creature 恐狼}的數據（參見《怪物圖鑑》或《玩家手冊》的附錄C），但有以下的改變：",
 											{
 												"type": "list",
 												"items": [
-													"The hound is size Medium, not Large, and it counts as a monstrosity, not a beast.",
-													"It appears with a number of temporary hit points equal to half your sorcerer level.",
-													"It can move through other creatures and objects as if they were difficult terrain. The hound takes 5 force damage if it ends its turn inside an object.",
-													"At the start of its turn, the hound automatically knows its target's location. If the target was hidden, it is no longer hidden from the hound."
+													"獵犬的體型為中型，而非大型；且它被視作怪獸，而非野獸。",
+													"它在出現時擁有等同於你術士等級一半的臨時生命值。",
+													"它可以如同穿過困難地形一樣移動穿過其他生物和物體。若獵犬在一個物體內結束它的回合，獵犬將受到5點力場傷害。",
+													"在它的回合開始時，獵犬將自動知曉它目標的所在位置。若該目標在躲藏中，則它對獵犬而言不再視為躲藏中。"
 												]
 											},
-											"The hound appears in an unoccupied space of your choice within 30 feet of the target. Roll initiative for the hound. On its turn, it can move only toward its target by the most direct route, and it can use its action only to attack its target. The hound can make opportunity attacks, but only against its target. Additionally, while the hound is within 5 feet of the target, the target has disadvantage on saving throws against any spell you cast. The hound disappears if it is reduced to 0 hit points, if its target is reduced to 0 hit points, or after 5 minutes."
+											"獵犬會出現在距離目標30呎內你所選擇的一處未被佔據空間。為獵犬骰先攻。在它的回合，它只能透過最直接的路徑移向它的目標，且它只能使用它的動作以攻擊它的目標。獵犬可以進行藉機攻擊，但只能以它的目標為攻擊對象。此外，當獵犬距離目標5呎內，目標在對抗你所施放的任何法術的豁免檢定中具有劣勢。獵犬會在它的生命值歸零、它目標的生命值歸零、或者5分鐘之後消失。"
 										]
 									}
 								]
@@ -2202,9 +2202,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Shadow Walk",
+										"name": "幽影漫步", "ENG_name": "Shadow Walk",
 										"entries": [
-											"At 14th level, you gain the ability to step from one shadow into another. When you are in dim light or darkness, as a bonus action, you can magically teleport up to 120 feet to an unoccupied space you can see that is also in dim light or darkness."
+											"在14級時，你獲得從陰影間穿梭的能力。當你處於微光光照或黑暗環境中，以一個附贈動作，你可以用魔法傳送最多120呎距離到一處你所能看見，且同樣處於微光光照或黑暗環境中的未被佔據空間。"
 										]
 									}
 								]
@@ -2215,10 +2215,10 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Umbral Form",
+										"name": "暗影型態", "ENG_name": "Umbral Form",
 										"entries": [
-											"Starting at 18th level, you can spend 6 sorcery points as a bonus action to magically transform yourself into a shadowy form. In this form, you have resistance to all damage except force and radiant damage, and you can move through other creatures and objects as if they were difficult terrain. You take 5 force damage if you end your turn inside an object.",
-											"You remain in this form for 1 minute. It ends early if you are {@condition incapacitated}, if you die, or if you dismiss it as a bonus action."
+											"從18級開始，你可以消耗6點術法點並以一個附贈動作魔法地將自己轉變為幽影型態。當處於此型態，你對除了力場和光耀傷害以外的所有傷害具有抗性，且你可以如同穿過困難地形一樣移動穿過其他生物和物體。若你在一個物體內結束它的回合，你將受到5點力場傷害。",
+											"你能維持此型態長達1分鐘。它會在你陷入{@condition 無力}狀態、你死亡、或你以一個附贈動作解消它時提早結束。"
 										]
 									}
 								]
@@ -2226,7 +2226,7 @@
 						]
 					],
 					"source": "XGE",
-					"shortName": "Shadow"
+					"shortName": "幽影魔法"
 				},
 				{
 					"name": "暴風術法", "ENG_name": "Storm Sorcery",
@@ -2235,20 +2235,20 @@
 							{
 								"name": "暴風術法", "ENG_name": "Storm Sorcery",
 								"entries": [
-									"Your innate magic comes from the power of elemental air. Many with this power can trace their magic back to a near-death experience caused by the Great Rain, but perhaps you were born during a howling gale so powerful that folk still tell stories of it, or your lineage might include the influence of potent air creatures such as djinn. Whatever the case, the magic of the storm permeates your being.",
-									"Storm sorcerers are invaluable members of a ship's crew. Their magic allows them to exert control over wind and weather in their immediate area. Their abilities also prove useful in repelling attacks by sahuagin, pirates, and other waterborne threats.",
+									"你的天生魔法來自於風元素的力量。許多擁有這種力量的人可以追溯其魔法到一次暴雨導致的瀕死經驗、或可能你在一陣狂風呼嘯中誕生，而那狂風是如此強大以至於人們至今仍傳誦著它的故事，又或者，你的家系可能受到了像是風巨靈之類的風元素生物影響。無論是哪種情況，暴風魔法都已充斥於你體內。",
+									"暴風術士在船隊中是無價的成員。他們的魔法讓他們得以駕馭周遭區域風和氣象。他們的能力也被證明在對抗沙華魚人、海盜、或其他水生威脅時相當有效。",
 									{
 										"type": "entries",
-										"name": "Wind Speaker",
+										"name": "風語者", "ENG_name": "Wind Speaker",
 										"entries": [
-											"The arcane magic you command is infused with elemental air. You can speak, read, and write Primordial. Knowing this language allows you to understand and be understood by those who speak its dialects: Aquan, Auran, Ignan, and Terran."
+											"你所支配的奧法魔力充盈著氣之元素。你可以說、讀、寫原初語。知曉這個語言讓你得以理解使用其同源語系的生物，並讓它們理解你所說的話。其同源語系為：水族語、氣族語、火族語、和土族語。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Tempestuous Magic",
+										"name": "風暴魔法", "ENG_name": "Tempestuous Magic",
 										"entries": [
-											"Starting at 1st level, you can use a bonus action on your turn to cause whirling gusts of elemental air to briefly surround you, immediately before or after you cast a spell of 1st level or higher. Doing so allows you to fly up to 10 feet without provoking opportunity attacks."
+											"從1級開始，緊接在你施放一個1環或更高環的法術之前或之後，你可以在你的回合使用一個附贈動作以使元素之氣形成的旋轉陣風短暫地環繞著你。這麼做讓你得以飛行最多10呎距離，而不會引發藉機攻擊。"
 										]
 									}
 								]
@@ -2259,9 +2259,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Heart of the Storm",
+										"name": "暴風之心", "ENG_name": "Heart of the Storm",
 										"entries": [
-											"At 6th level, you gain resistance to lightning and thunder damage. In addition, whenever you start casting a spell of 1st level or higher that deals lightning or thunder damage, stormy magic erupts from you. This eruption causes creatures of your choice that you can see within 10 feet of you to take lightning or thunder damage (choose each time this ability activates) equal to half your sorcerer level."
+											"在6級時，你獲得對閃電和雷鳴傷害的抗性。此外，每當你開始施放一個1環或更高環，且會造成閃電或雷鳴傷害的法術時，暴風魔法將從你身上迸發而出。這陣迸發會使距離你10呎內你所選且你能看見的所有生物受到等同於你術士等級一半的閃電或雷鳴傷害（每次此能力發動時選擇）。"
 										]
 									}
 								]
@@ -2270,11 +2270,11 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Storm Guide",
+										"name": "暴風導向", "ENG_name": "Storm Guide",
 										"entries": [
-											"At 6th level, you gain the ability to subtly control the weather around you.",
-											"If it is raining, you can use an action to cause the rain to stop falling in a 20-foot-radius sphere centered on you. You can end this effect as a bonus action.",
-											"If it is windy, you can use a bonus action each round to choose the direction that the wind blows in a 100-foot-radius sphere centered on you. The wind blows in that direction until the end of your next turn. This feature doesn't alter the speed of the wind."
+											"在6級時，你獲得巧妙控制你周遭天氣的能力。",
+											"若正在下雨，你可以使用一個動作，讓以你為中心20呎半徑球體內的空間停止降雨。你能夠以一個附贈動作中止這個效果。",
+											"若正在颳風，你可以在每輪以一個附贈動作選擇以你為中心100呎半徑球體內的陣風吹向你所選的方向。這陣風會向著該方向吹拂直到你的下個回合結束。此能力並不會改變風速。"
 										]
 									}
 								]
@@ -2285,9 +2285,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Storm's Fury",
+										"name": "暴風狂怒", "ENG_name": "Storm's Fury",
 										"entries": [
-											"Starting at 14th level, when you are hit by a melee attack, you can use your reaction to deal lightning damage to the attacker. The damage equals your sorcerer level. The attacker must also make a Strength saving throw against your sorcerer spell save DC. On a failed save, the attacker is pushed in a straight line up to 20 feet away from you."
+											"從14級開始，當你被一次近戰攻擊命中時，你可以使用你的反應以對攻擊者造成閃電傷害。此傷害等同於你的術士等級。攻擊者同時必須進行一次對抗你術士法術豁免DC的力量豁免。若豁免失敗，攻擊者將被直線推離你最遠20呎的距離。"
 										]
 									}
 								]
@@ -2298,10 +2298,10 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Wind Soul",
+										"name": "清風之魂", "ENG_name": "Wind Soul",
 										"entries": [
-											"At 18th level, you gain immunity to lightning and thunder damage.",
-											"You also gain a magical flying speed of 60 feet. As an action, you can reduce your flying speed to 30 feet for 1 hour and choose a number of creatures within 30 feet of you equal to 3 + your Charisma modifier. The chosen creatures gain a magical flying speed of 30 feet for 1 hour. Once you reduce your flying speed in this way, you can't do so again until you finish a short or long rest."
+											"在18級時，你獲得對閃電和雷鳴傷害的免疫。",
+											"你也獲得魔法性的60呎飛行速度。以一個動作，你可以降低你的飛行速度至30呎，持續1小時，並選擇數量最多等同於3+你魅力調整值的生物。所選生物將獲得魔法性的30呎飛行速度，持續1小時。一旦你透過這個方式降低你的飛行速度，你直到完成一次短休或長休之前都不能再這麼做。"
 										]
 									}
 								]
@@ -2309,7 +2309,7 @@
 						]
 					],
 					"source": "XGE",
-					"shortName": "Storm "
+					"shortName": "暴風術法"
 				},
 				{
 					"name": "Giant Soul (UA)",
