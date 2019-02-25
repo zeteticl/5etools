@@ -879,7 +879,7 @@
 						]
 					],
 					"source": "PHB",
-					"shortName": "龍血"
+					"shortName": "龍族血脈"
 				},
 				{
 					"name": "狂野魔法", "ENG_name": "Wild Magic",
@@ -1163,7 +1163,7 @@
 						]
 					],
 					"source": "PHB",
-					"shortName": "狂野"
+					"shortName": "狂野魔法"
 				},
 				{
 					"name": "Favored Soul (UA)",
@@ -2002,27 +2002,27 @@
 					"shortName": "Pyromancer (PSK)"
 				},
 				{
-					"name": "Divine Soul",
+					"name": "神聖之魂", "ENG_name": "Divine Soul",
 					"subclassFeatures": [
 						[
 							{
-								"name": "Divine Soul",
+								"name": "神聖之魂", "ENG_name": "Divine Soul",
 								"entries": [
-									"Sometimes the spark of magic that fuels a sorcerer comes from a divine source that glimmers within the soul. Having such a blessed soul is a sign that your innate magic might come from a distant but powerful familial connection to a divine being. Perhaps your ancestor was an angel, transformed into a mortal and sent to fight in a god's name.",
-									"Or your birth might align with an ancient prophecy, marking you as a servant of the gods or a chosen vessel of divine magic.",
-									"A Divine Soul, with a natural magnetism, is seen as a threat by some religious hierarchies. As an outsider who commands sacred power, a Divine Soul can undermine an existing order by claiming a direct tie to the divine.",
-									"In some cultures, only those who can claim the power of a Divine Soul may command religious power. In these lands, ecclesiastical positions are dominated by a few bloodlines and preserved over generations.",
+									"有時候充斥於術士體內的魔力火花是來自於一種閃耀於靈魂中神性泉源。擁有著這種祝福靈魂，代表你的天生魔法可能來自一個與某種神性存在有所聯繫，遙遠而強大家族。也許你的祖先曾是一名天使，變成了凡人並奉神之名被遣來戰鬥。",
+									"或者，你的出生可能符合了一個古老的預言，表明你做為諸神的僕從或神聖魔法的器皿。",
+									"一個具有天生魅力的神聖之魂術士，會被某些宗教派系視為威脅。做為一個能行使神聖力量的局外人，一個神聖之魂術士可以透過聲稱與神之間的直接聯繫來顛覆現有的秩序。",
+									"在某些文化中，只有那些擁有神聖之魂力量的人們才能統御宗教勢力。在這些國度，教會的地位僅由少數血脈給支配，代代相傳。",
 									{
 										"type": "entries",
-										"name": "Divine Magic",
+										"name": "神聖魔法", "ENG_name": "Divine Magic",
 										"entries": [
-											"Your link to the divine allows you to learn spells from the cleric class. When your Spellcasting feature lets you learn or replace a sorcerer cantrip or a sorcerer spell of 1st level or higher, you can choose the new spell from the cleric spell list or the sorcerer spell list. You must otherwise obey all the restrictions for selecting the spell, and it becomes a sorcerer spell for you.",
-											"In addition, choose an affinity for the source of your divine power: good, evil, law, chaos, or neutrality. You learn an additional spell based on that affinity, as shown below. It is a sorcerer spell for you, but it doesn't count against your number of sorcerer spells known. If you later replace this spell, you must replace it with a spell from the cleric spell list.",
+											"你與神性之間的聯繫讓你得以學習來自牧師職業的法術。當你的施法特性讓你學習或取代一個術士戲法、或一個1環或更高環的術士法術時，你可以從牧師法術列表或術士法術列表中選擇新的法術。你仍然必須遵從選擇法術的所有其它限制，且它對你而言視作術士法術。",
+											"此外，為你神聖能量的源頭選擇一種傾向：善良、邪惡、守序、混亂、中立。你基於該傾向學習一個額外的法術，如下表所示。它對你而言視作術士法術，但並不會計入你已知術士法術的數量中。若你之後想取代該法術，則你必須以一個來自牧師法術列表的法術取代它。",
 											{
 												"type": "table",
 												"colLabels": [
-													"Affinity",
-													"Spell"
+													"傾向",
+													"法術"
 												],
 												"colStyles": [
 													"col-5",
@@ -2030,24 +2030,24 @@
 												],
 												"rows": [
 													[
-														"Good",
-														"{@spell cure wounds}"
+														"善良",
+														"{@spell 治療傷勢}"
 													],
 													[
-														"Evil",
-														"{@spell inflict wounds}"
+														"邪惡",
+														"{@spell 造成傷勢}"
 													],
 													[
-														"Law",
-														"{@spell bless}"
+														"守序",
+														"{@spell 祝福術}"
 													],
 													[
-														"Chaos",
-														"{@spell bane}"
+														"混亂",
+														"{@spell 災禍術}"
 													],
 													[
-														"Neutrality",
-														"{@spell protection from evil and good}"
+														"中立",
+														"{@spell 防護善惡}"
 													]
 												]
 											}
@@ -2055,9 +2055,9 @@
 									},
 									{
 										"type": "entries",
-										"name": "Favored by the Gods",
+										"name": "諸神眷顧", "ENG_name": "Favored by the Gods",
 										"entries": [
-											"Starting at 1st level, divine power guards your destiny. If you fail a saving throw or miss with an attack roll, you can roll {@dice 2d4} and add it to the total, possibly changing the outcome. Once you use this feature, you can't use it again until you finish a short or long rest."
+											"從1級開始，神聖能量守護著你的命運。若你在一次豁免檢定中失敗、或在一次攻擊檢定中失手，你可以骰{@dice 2d4}並將其擲骰結果加入檢定的總和中，並可能因此改變檢定結果。一旦你使用此能力，你直到完成一次短休或長休前都不能再使用它。"
 										]
 									}
 								]
@@ -2068,9 +2068,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Empowered Healing",
+										"name": "強效治療", "ENG_name": "Empowered Healing",
 										"entries": [
-											"Starting at 6th level, the divine energy coursing through you can empower healing spells. Whenever you or an ally within 5 feet of you rolls dice to determine the number of hit points a spell restores, you can spend 1 sorcery point to reroll any number of those dice once, provided you aren't {@condition incapacitated}. You can use this feature only once per turn."
+											"從6級開始，奔馳於你體內的神聖能量可以強化治療法術。每當你或一個距離你5呎內的盟友擲骰決定一個法術所回復的生命值數值時，只要你並非處於{@condition 無力}狀態，你就可以消耗1點術法點以重骰任意數量的這些骰子一次。你每個回合只能使用此能力一次。"
 										]
 									}
 								]
@@ -2081,10 +2081,10 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Otherworldly Wings",
+										"name": "超凡之翼", "ENG_name": "Otherworldly Wings",
 										"entries": [
-											"Starting at 14th level, you can use a bonus action to manifest a pair of spectral wings from your back. While the wings are present, you have a flying speed of 30 feet. The wings last until you're {@condition incapacitated}, you die, or you dismiss them as a bonus action.",
-											"The affinity you chose for your Divine Magic feature determines the appearance of the spectral wings: eagle wings for good or law, bat wings for evil or chaos, and dragonfly wings for neutrality."
+											"從14級開始，你可以使用一個附贈動作以從你背後展現出一對靈體翅膀。當這對翅膀存在時，你擁有30呎的飛行速度。這對翅膀會持續存在直到你陷入{@condition 無力}狀態、死亡、或你以一個附贈動作解消它們。",
+											"你為你神聖魔法能力所選擇的傾向，將會決定這對靈體翅膀的外觀：善良或守序則為鷹翼、邪惡或混亂則為蝙蝠翅膀、中立則為蜻蜓翅膀。"
 										]
 									}
 								]
@@ -2095,10 +2095,10 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Unearthly Recovery",
+										"name": "神秘痊癒", "ENG_name": "Unearthly Recovery",
 										"entries": [
-											"At 18th level, you gain the ability to overcome grievous injuries. As a bonus action when you have fewer than half of your hit points remaining, you can regain a number of hit points equal to half your hit point maximum.",
-											"Once you use this feature, you can't use it again until you finish a long rest."
+											"在18級時，你獲得克服嚴重傷勢的能力。當你只剩下少於一半的生命值時，以一個附贈動作，你可以回復等同於你生命值最大值一半的生命值。",
+											"一旦你使用此能力，直到你完成一次長休前都不能再使用它。"
 										]
 									}
 								]
@@ -2106,14 +2106,14 @@
 						]
 					],
 					"source": "XGE",
-					"shortName": "Divine Soul"
+					"shortName": "神聖之魂"
 				},
 				{
-					"name": "Shadow Magic",
+					"name": "幽影魔法", "ENG_name": "Shadow Magic",
 					"subclassFeatures": [
 						[
 							{
-								"name": "Shadow Magic",
+								"name": "幽影魔法", "ENG_name": "Shadow Magic",
 								"entries": [
 									"You are a creature of shadow, for your innate magic comes from the Shadowfell itself. You might trace your lineage to an entity from that place, or perhaps you were exposed to its fell energy and transformed by it.",
 									"The power of shadow magic casts a strange pall over your physical presence. The spark of life that sustains you is muffled, as if it struggles to remain viable against the dark energy that imbues your soul. At your option, you can pick from or roll on the Shadow Sorcerer Quirks table to create a quirk for your character.",
@@ -2229,11 +2229,11 @@
 					"shortName": "Shadow"
 				},
 				{
-					"name": "Storm Sorcery",
+					"name": "暴風術法", "ENG_name": "Storm Sorcery",
 					"subclassFeatures": [
 						[
 							{
-								"name": "Storm Sorcery",
+								"name": "暴風術法", "ENG_name": "Storm Sorcery",
 								"entries": [
 									"Your innate magic comes from the power of elemental air. Many with this power can trace their magic back to a near-death experience caused by the Great Rain, but perhaps you were born during a howling gale so powerful that folk still tell stories of it, or your lineage might include the influence of potent air creatures such as djinn. Whatever the case, the magic of the storm permeates your being.",
 									"Storm sorcerers are invaluable members of a ship's crew. Their magic allows them to exert control over wind and weather in their immediate area. Their abilities also prove useful in repelling attacks by sahuagin, pirates, and other waterborne threats.",
