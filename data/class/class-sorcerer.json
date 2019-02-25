@@ -882,25 +882,25 @@
 					"shortName": "龍血"
 				},
 				{
-					"name": "Wild Magic",
+					"name": "狂野魔法", "ENG_name": "Wild Magic",
 					"subclassFeatures": [
 						[
 							{
-								"name": "Wild Magic",
+								"name": "狂野魔法", "ENG_name": "Wild Magic",
 								"entries": [
-									"Your innate magic comes from the wild forces of chaos that underlie the order of creation. You might have endured exposure to some form of raw magic, perhaps through a planar portal leading to Limbo, the Elemental Planes, or the mysterious Far Realm. Perhaps you were blessed by a powerful fey creature or marked by a demon. Or your magic could be a fluke of your birth, with no apparent cause or reason. However it came to be, this chaotic magic churns within you, waiting for any outlet.",
+									"你的天生魔法來自於潛伏於創造秩序之下的狂野混沌之力。你也許曾暴露於某種形式的原初魔力之下，也許穿越了一扇位面傳送門到混沌海、元素位面、或者神秘的遙遠國度。也許你曾被一個強大的精類生物祝福、或被一名惡魔所標記。又或者你的魔法僅僅是你誕生時僥倖獲得，並沒有顯著的原因或理由。無論其來源為何，這道混亂魔力在你體內翻湧著，等待著被以任何方式釋放出來。",
 									{
 										"type": "entries",
-										"name": "Wild Magic Surge",
+										"name": "狂野魔法浪湧", "ENG_name": "Wild Magic Surge",
 										"entries": [
-											"Starting when you choose this origin at 1st level, your spellcasting can unleash surges of untamed magic. Immediately after you cast a sorcerer spell of 1st level or higher, the DM can have you roll a {@dice d20}. If you roll a 1, roll on the Wild Magic Surge table to create a random magical effect. A Wild Magic Surge can happen once per turn.",
-											"If a Wild Magic effect is a spell, it's too wild to be affected by Metamagic. If it normally requires concentration, it doesn't require concentration in this case; the spell lasts for its full duration.",
+											"從你在1級時選擇此起源開始，你的施法可以釋放出未經馴服的魔法浪湧。緊接在你施放一個1環或更高環的法術，DM可以要求你骰一顆{@dice d20}。若你骰出了1，則擲骰使用狂野魔法浪湧表以創造出一個隨機的魔法效果。一道狂野魔法浪湧在每回合可以發生一次。",
+											"若狂野魔法效果為一個法術，則它太過狂野以至於它無法被超魔法影響。若它原本需要專注，則它在這個情況下也不需要專注；該法術將持續到它的完整持續時間。",
 											{
 												"type": "table",
-												"caption": "Wild Magic Surge",
+												"caption": "狂野魔法浪湧",
 												"colLabels": [
 													"{@dice d100}",
-													"Effect"
+													"效果"
 												],
 												"colStyles": [
 													"col-1 text-align-center",
@@ -909,203 +909,203 @@
 												"rows": [
 													[
 														"01-02",
-														"Roll on this table at the start of each of your turns for the next minute, ignoring this result on subsequent rolls."
+														"在接下來一分鐘內，你在你的每個回合開始時骰這張表，並在後續的擲骰中無視骰到這個項目的擲骰結果。"
 													],
 													[
 														"03-04",
-														"For the next minute, you can see any {@condition invisible} creature if you have line of sight to it."
+														"在接下來一分鐘內，若任何{@condition 隱形}生物處於你的視線範圍內，則你可以看見它。"
 													],
 													[
 														"05-06",
-														"A modron chosen and controlled by the DM appears in an unoccupied space within 5 feet of you, then disappears 1 minute later."
+														"一個DM所選擇並控制的魔冢出現在距離你5呎內的一處未被佔據空間，並在1分鐘後消失。"
 													],
 													[
 														"07-08",
-														"You cast {@spell fireball} as a 3rd-level spell centered on yourself."
+														"你以3環法術，以你自己為中心施放{@spell 火球術}。"
 													],
 													[
 														"09-10",
-														"You cast {@spell magic missile} as a 5th-level spell."
+														"你以5環法術施放{@spell 魔法飛彈}。"
 													],
 													[
 														"11-12",
-														"Roll a {@dice d10}. Your height changes by a number of inches equal to the roll. If the roll is odd, you shrink. If the roll is even, you grow."
+														"骰一顆{@dice d10}。你的身高改變等同於擲骰結果的吋數。若擲骰結果為奇數，你的身高變矮。若擲骰結果為偶數，你的身高變高。"
 													],
 													[
 														"13-14",
-														"You cast {@spell confusion} centered on yourself."
+														"你以自己為中心施放{@spell 困惑術}。"
 													],
 													[
 														"15-16",
-														"For the next minute, you regain 5 hit points at the start of each of your turns."
+														"在接下來一分鐘內，你在你的每個回合開始時回復5點生命值。"
 													],
 													[
 														"17-18",
-														"You grow a long beard made of feathers that remains until you sneeze, at which point the feathers explode out from your face."
+														"你的臉上長出大把羽毛組成的長鬚。一旦你打了噴嚏，這些羽毛將從你臉上被炸飛出去。"
 													],
 													[
 														"19-20",
-														"You cast {@spell grease} centered on yourself."
+														"你以自己為中心施放{@spell 油膩術}。"
 													],
 													[
 														"21-22",
-														"Creatures have disadvantage on saving throws against the next spell you cast in the next minute that involves a saving throw."
+														"所有生物在對抗你在接下來一分鐘內所施放的下一個涉及豁免檢定的法術時，所進行的豁免檢定具有劣勢。"
 													],
 													[
 														"23-24",
-														"Your skin turns a vibrant shade of blue. A {@spell remove curse} spell can end this effect."
+														"你的肌膚變成有著鮮豔漸層的藍色。一個{@spell 移除詛咒}法術可以終止此效果。"
 													],
 													[
 														"25-26",
-														"An eye appears on your forehead for the next minute."
+														"一顆眼睛將在接下來一分鐘內出現在你的額頭上。"
 													],
 													[
 														"27-28",
-														"For the next minute, all your spells with a casting time of 1 action have a casting time of 1 bonus action."
+														"在接下來一分鐘內，你所有施法時間為1個動作的法術，其施法時間變成1個附贈動作。"
 													],
 													[
 														"29-30",
-														"You teleport up to 60 feet to an unoccupied space of your choice that you can see."
+														"你傳送最遠60呎距離到一處你所選且你能看見的一處未被佔據空間。"
 													],
 													[
 														"31-32",
-														"You are transported to the Astral Plane until the end of your next turn, after which time you return to the space you previously occupied or the nearest unoccupied space if that space is occupied."
+														"你被傳送到星界直到你的下個回合結束，在那之後你將回到你先前所佔據的空間，或若該空間被佔據，則回到離該處最近的一處未被佔據空間。"
 													],
 													[
 														"33-34",
-														"Maximize the damage of the next damaging spell you cast within the next minute."
+														"在接下來一分鐘內你所施放的下一個傷害法術的傷害取最大值。"
 													],
 													[
 														"35-36",
-														"Roll a {@dice d10}. Your age changes by a number of years equal to the roll. If the roll is odd, you get younger (minimum 1 year old). If the roll is even, you get older."
+														"骰一顆{@dice d10}。你的年齡改變等同於擲骰結果的年數。若擲骰結果為奇數，你變年輕（最小一歲）。若擲骰結果為偶數，你變得更老。"
 													],
 													[
 														"37-38",
-														"{@dice 1d6} {@creature flumph|MM|flumphs} controlled by the DM appear in unoccupied spaces within 60 feet of you and are {@condition frightened} of you. They vanish after 1 minute."
+														"{@dice 1d6}個由DM控制的{@creature 呋嚕|MM}出現在距離你60呎內的未被佔據空間，且對你感到{@condition 恐懼}。它們將在1分鐘後消失。"
 													],
 													[
 														"39-40",
-														"You regain {@dice 2d10} hit points."
+														"你回復{@dice 2d10}點生命值。"
 													],
 													[
 														"41-42",
-														"You turn into a potted plant until the start of your next turn. While a plant, you are {@condition incapacitated} and have vulnerability to all damage. If you drop to 0 hit points, your pot breaks, and your form reverts."
+														"你變成一個盆栽植物直到你的下個回合開始。當變成盆栽植物時，你處於{@condition 無力}狀態且對所有傷害易傷。若你的生命值歸零，你的盆栽將被破壞，且你恢復原本的型態。"
 													],
 													[
 														"43-44",
-														"For the next minute, you can teleport up to 20 feet as a bonus action on each of your turns."
+														"在接下來一分鐘內，你可以在你的每個回合以一個附贈動作傳送最遠20呎距離。"
 													],
 													[
 														"45-46",
-														"You cast {@spell levitate} on yourself."
+														"你對你自己施放{@spell 浮空術}。"
 													],
 													[
 														"47-48",
-														"A {@creature unicorn} controlled by the DM appears in a space within 5 feet of you, then disappears 1 minute later."
+														"一個由DM控制的{@creature unicorn}出現在距離你5呎內的一個空間，並在1分鐘後消失。"
 													],
 													[
 														"49-50",
-														"You can't speak for the next minute. Whenever you try, pink bubbles float out of your mouth."
+														"你在接下來一分鐘內無法說話。每當你嘗試說話時，粉紅色的泡泡將從你口中飄出。"
 													],
 													[
 														"51-52",
-														"A spectral shield hovers near you for the next minute, granting you a +2 bonus to AC and immunity to {@spell magic missile}."
+														"一道靈體似的護盾在接下來一分鐘內漂浮於你附近，使你的AC獲得+2加值，並讓你免疫於{@spell 魔法飛彈}。"
 													],
 													[
 														"53-54",
-														"You are immune to being intoxicated by alcohol for the next {@dice 5d6} days."
+														"你在接下來的{@dice 5d6}天內免疫於酒精導致的酒醉狀態。"
 													],
 													[
 														"55-56",
-														"Your hair falls out but grows back within 24 hours."
+														"你的頭髮掉光，但在24小時內重新長回來。"
 													],
 													[
 														"57-58",
-														"For the next minute, any flammable object you touch that isn't being worn or carried by another creature bursts into flame."
+														"在接下來一分鐘內，任何你所碰觸，且未被其他生物穿戴或攜帶的可燃物體都將熊熊燃燒。"
 													],
 													[
 														"59-60",
-														"You regain your lowest-level expended spell slot."
+														"你恢復你花費掉最低環位的法術位。"
 													],
 													[
 														"61-62",
-														"For the next minute, you must shout when you speak."
+														"在接下來一分鐘內，你在說話時必須用吼的。"
 													],
 													[
 														"63-64",
-														"You cast {@spell fog cloud} centered on yourself."
+														"你以你自己為中心施放{@spell 雲霧術}。"
 													],
 													[
 														"65-66",
-														"Up to three creatures you choose within 30 feet of you take {@dice 4d10} lightning damage."
+														"最多三個你所選擇距離你30呎內的生物受到{@dice 4d10}閃電傷害。"
 													],
 													[
 														"67-68",
-														"You are {@condition frightened} by the nearest creature until the end of your next turn."
+														"你因離你最近的生物而陷入{@condition 恐懼}狀態，持續直到你的下個回合結束。"
 													],
 													[
 														"69-70",
-														"Each creature within 30 feet of you becomes {@condition invisible} for the next minute. The invisibility ends on a creature when it attacks or casts a spell."
+														"每個距離你30呎內的生物在接下來一分鐘內變得{@condition 隱形}。作用於一個生物的隱形狀態會在它攻擊或施放法術時結束。"
 													],
 													[
 														"71-72",
-														"You gain resistance to all damage for the next minute."
+														"你在接下來一分鐘內獲得對所有傷害的抗性。"
 													],
 													[
 														"73-74",
-														"A random creature within 60 feet of you becomes poisoned for {@dice 1d4} hours."
+														"一個距離你60呎內的隨機生物將陷入{@condition 中毒}狀態長達{@dice 1d4}小時。"
 													],
 													[
 														"75-76",
-														"You glow with bright light in a 30-foot radius for the next minute. Any creature that ends its turn within 5 feet of you is {@condition blinded} until the end of its next turn."
+														"你在接下來一分鐘內發出30呎半徑的明亮光照。任何在距離你5呎內結束它回合的生物將陷入{@condition 目盲}狀態直到它的下個回合結束。"
 													],
 													[
 														"77-78",
-														"You cast {@spell polymorph} on yourself. If you fail the saving throw, you turn into a sheep for the spell's duration."
+														"你對你自己施放{@spell 變形術}。若你在該豁免檢定中失敗，你將在法術的持續時間內被變成一隻綿羊。"
 													],
 													[
 														"79-80",
-														"Illusory butterflies and flower petals flutter in the air within 10 feet of you for the next minute."
+														"幻影蝴蝶和花瓣在接下來一分鐘內於你10呎內翩翩飛舞於空中。"
 													],
 													[
 														"81-82",
-														"You can take one additional action immediately."
+														"你可以立刻採取一個額外的動作。"
 													],
 													[
 														"83-84",
-														"Each creature within 30 feet of you takes {@dice 1d10} necrotic damage. You regain hit points equal to the sum of the necrotic damage dealt."
+														"每個距離你30呎內的生物受到{@dice 1d10}死靈傷害。你回復等同於所造成死靈傷害總和的生命值。"
 													],
 													[
 														"85-86",
-														"You cast {@spell mirror image}."
+														"你施放{@spell 鏡影術}。"
 													],
 													[
 														"87-88",
-														"You cast {@spell fly} on a random creature within 60 feet of you."
+														"你對一個距離你60呎內的隨機生物施放{@spell 飛行術}。"
 													],
 													[
 														"89-90",
-														"You become {@condition invisible} for the next minute. During that time, other creatures can't hear you. The invisibility ends if you attack or cast a spell."
+														"你在接下來一分鐘內變得{@condition 隱形}。在這段時間內，其他生物無法聽見你。這個隱形狀態會在你攻擊或施放法術時結束。"
 													],
 													[
 														"91-92",
-														"If you die within the next minute, you immediately come back to life as if by the {@spell reincarnate} spell."
+														"若你在接下來一分鐘內死亡，你將立刻復活，如同被施放了{@spell 轉生術}法術。"
 													],
 													[
 														"93-94",
-														"Your size increases by one size category for the next minute."
+														"你的體型在接下來一分鐘內增加一級。"
 													],
 													[
 														"95-96",
-														"You and all creatures within 30 feet of you gain vulnerability to piercing damage for the next minute."
+														"你和所有距離你30呎內的生物在接下來一分鐘內獲得對穿刺傷害的易傷。"
 													],
 													[
 														"97-98",
-														"You are surrounded by faint, ethereal music for the next minute."
+														"你在接下來一分鐘內被模糊縹緲的音樂環繞。"
 													],
 													[
 														"99-00",
-														"You regain all expended sorcery points."
+														"你恢復所有你花費掉的術法點。"
 													]
 												]
 											}
@@ -1113,10 +1113,10 @@
 									},
 									{
 										"type": "entries",
-										"name": "Tides of Chaos",
+										"name": "混亂之潮", "ENG_name": "Tides of Chaos",
 										"entries": [
-											"Starting at 1st level, you can manipulate the forces of chance and chaos to gain advantage on one attack roll, ability check, or saving throw. Once you do so, you must finish a long rest before you can use this feature again.",
-											"Any time before you regain the use of this feature, the DM can have you roll on the Wild Magic Surge table immediately after you cast a sorcerer spell of 1st level or higher. You then regain the use of this feature."
+											"從1級開始，你可以操作機率和混亂之力以在一次攻擊檢定、屬性檢定、或豁免檢定中獲得優勢。一旦你這麼做，你必須在完成一次長休後才能再使用此能力。",
+											"在你重新獲得使用混亂之潮的能力之前，DM可以緊接你施放一個1環或更高環的術士法術後要求你擲骰使用狂野魔法浪湧表。接著你恢復使用混亂之潮的能力。"
 										]
 									}
 								]
@@ -1127,9 +1127,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Bend Luck",
+										"name": "竄改運氣", "ENG_name": "Bend Luck",
 										"entries": [
-											"Starting at 6th level, you have the ability to twist fate using your wild magic. When another creature you can see makes an attack roll, an ability check, or a saving throw, you can use your reaction and spend 2 sorcery points to roll {@dice 1d4} and apply the number rolled as a bonus or penalty (your choice) to the creature's roll. You can do so after the creature rolls but before any effects of the roll occur."
+											"從6級開始，你擁有透過你狂野魔法來扭曲命運的能力。當另一個你所能看見的生物進行一次攻擊檢定、屬性檢定、或豁免檢定時，你可以使用你的反應並消耗2點術法點，骰{@dice 1d4}並將擲骰結果做為加值或減值（由你決定）加入該生物的檢定結果。你可以在該生物擲骰後，但在任何該檢定的效果生效之前這麼做。"
 										]
 									}
 								]
@@ -1140,9 +1140,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Controlled Chaos",
+										"name": "控制混沌", "ENG_name": "Controlled Chaos",
 										"entries": [
-											"At 14th level, you gain a modicum of control over the surges of your wild magic. Whenever you roll on the Wild Magic Surge table, you can roll twice and use either number."
+											"在14級時，你獲得了對於你狂野魔法浪湧的些微控制。每當你擲骰使用狂野魔法浪湧表時，你可以重骰二次並使用其中一個擲骰結果。"
 										]
 									}
 								]
@@ -1153,9 +1153,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Spell Bombardment",
+										"name": "法術轟擊", "ENG_name": "Spell Bombardment",
 										"entries": [
-											"Beginning at 18th level, the harmful energy of your spells intensifies. When you roll damage for a spell and roll the highest number possible on any of the dice, choose one of those dice, roll it again and add that roll to the damage. You can use the feature only once per turn."
+											"從18級開始，你法術的傷害性能量明顯加劇。當你會一個法術擲骰決定傷害，且其中任何一顆骰子骰出了最大的骰面，則從這些骰子中選擇一顆，重骰它並將其擲骰結果加到傷害中。你在每個回合只能使用此能力一次。"
 										]
 									}
 								]
@@ -1163,7 +1163,7 @@
 						]
 					],
 					"source": "PHB",
-					"shortName": "Wild "
+					"shortName": "狂野"
 				},
 				{
 					"name": "Favored Soul (UA)",

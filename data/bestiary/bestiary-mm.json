@@ -15630,7 +15630,7 @@
 			]
 		},
 		{
-			"name": "Flumph",
+			"name": "呋嚕", "ENG_name": "Flumph",
 			"size": "S",
 			"type": "aberration",
 			"source": "MM",
@@ -15665,39 +15665,39 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 12,
-			"languages": "understands Undercommon but can't speak, telepathy 60 ft.",
+			"languages": "理解地底通用語但不會說、心靈感應60呎",
 			"cr": "1/8",
 			"trait": [
 				{
-					"name": "Advanced Telepathy",
+					"name": "進階心靈感應",
 					"entries": [
-						"The flumph can perceive the content of any telepathic communication used within 60 feet of it, and it can't be surprised by creatures with any form of telepathy."
+						"呋嚕可以感知到任何在它60呎內使用心靈感應交流的內容，且它不會被具有任何心靈感應能力的生物給突襲。"
 					]
 				},
 				{
-					"name": "Prone Deficiency",
+					"name": "倒地缺陷",
 					"entries": [
-						"If the flumph is knocked {@condition prone}, roll a die. On an odd result, the flumph lands upside-down and is {@condition incapacitated}. At the end of each of its turns, the flumph can make a DC 10 Dexterity saving throw, righting itself and ending the {@condition incapacitated} condition if it succeeds."
+						"若呋嚕被擊倒{@condition 伏地}，擲一顆骰。若擲骰結果為奇數，呋嚕將上下顛倒著地且陷入{@condition 無力}狀態。在它的每個回合結束時，呋嚕可以進行一次DC 10的敏捷豁免，若豁免成功則將它自己導正並結束{@condition 無力}狀態。"
 					]
 				},
 				{
-					"name": "Telepathic Shroud",
+					"name": "讀心屏障",
 					"entries": [
-						"The flumph is immune to any effect that would sense its emotions or read its thoughts, as well as all divination spells."
+						"呋嚕免疫於任何可以感知它情緒或閱讀它思想的效果，以及所有預言系法術。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Tendrils",
+					"name": "觸手",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一生物。{@h}4 ({@damage 1d4 + 2}) piercing damage plus 2 ({@damage 1d4}) acid damage. At the end of each of its turns, the target must make a DC 10 Constitution saving throw, taking 2 ({@damage 1d4}) acid damage on a failure or ending the recurring acid damage on a success. A lesser restoration spell cast on the target also ends the recurring acid damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一生物。{@h}4 ({@damage 1d4 + 2})穿刺傷害加 2 ({@damage 1d4})酸蝕傷害。在目標的每個回合結束時，它必須進行一次DC 10的體質豁免，若豁免失敗則受到2 ({@damage 1d4})酸蝕傷害，豁免成功則結束這個持續的酸蝕傷害。一個施放於目標的{@spell 次級復原術}法術也可以結束這個持續的酸蝕傷害。"
 					]
 				},
 				{
-					"name": "Stench Spray (1/Day)",
+					"name": "惡臭噴吐 (1/日)",
 					"entries": [
-						"Each creature in a 15-foot cone originating from the flumph must succeed on a DC 10 Dexterity saving throw or be coated in a foul-smelling liquid. A coated creature exudes a horrible stench for {@dice 1d4} hours. The coated creature is {@condition poisoned} as long as the stench lasts, and other creatures are {@condition poisoned} while with in 5 feet of the coated creature. A creature can remove the stench on itself by using a short rest to bathe in water, alcohol, or vinegar."
+						"每個在以呋嚕為源頭的15呎錐形範圍內的生物必須成功通過一次DC 10的敏捷豁免，否則被惡臭的液體給覆蓋。被覆蓋的生物將散發出可怕的惡臭長達{@dice 1d4}小時。只要這個惡臭仍然持續，該生物處於{@condition 中毒}狀態，且其它生物在距離被覆蓋生物5呎內時也將處於{@condition 中毒}狀態。一個生物可以藉由使用一次短休，用水、酒精、或醋來洗掉它身上的惡臭。"
 					]
 				}
 			],
