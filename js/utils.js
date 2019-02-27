@@ -5989,10 +5989,18 @@ Parser.ClassToDisplay = function(c){
 }
 //subclass
 Parser.subclassKeyToDisplay = {};
-Parser.subclassKeyToDisplay["arcane trickster"]  = "詭術師";
-Parser.subclassKeyToDisplay["totem warrior"]     = "圖騰勇士";
-Parser.subclassKeyToDisplay["eldritch knight"]   = "魔能騎士";
-Parser.subclassKeyToDisplay["arcane archer"]     = "魔射手";
+Parser.subclassKeyToDisplay["arcane trickster"] = "詭術師";
+Parser.subclassKeyToDisplay["totem warrior"] = "圖騰勇士";
+Parser.subclassKeyToDisplay["eldritch knight"] = "魔能騎士";
+Parser.subclassKeyToDisplay["arcane archer"] = "魔射手";
+Parser.subclassKeyToDisplay["divine soul"] = "神聖之魂";
+Parser.subclassKeyToDisplay["celestial"] = "天界宗主";
+Parser.subclassKeyToDisplay["undying"] = "不朽者";
+Parser.subclassKeyToDisplay["fiend"] = "邪魔宗主";
+Parser.subclassKeyToDisplay["great old one"] = "舊日支配者";
+Parser.subclassKeyToDisplay["archfey"] = "至高妖精";
+Parser.subclassKeyToDisplay["hexblade"] = "咒劍士";
+Parser.subclassKeyToDisplay["land"] = "大地結社";
 Parser.subclassKeyToDisplay["knowledge"]  = "知識";
 Parser.subclassKeyToDisplay["life"]       = "生命";
 Parser.subclassKeyToDisplay["light"]      = "光明";
