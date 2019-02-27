@@ -28513,7 +28513,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "非魔法攻擊所造成的"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -36330,7 +36330,7 @@
 			]
 		},
 		{
-			"name": "Specter",
+			"name": "幽靈", "ENG_name": "Specter",
 			"size": "M",
 			"type": "undead",
 			"source": "MM",
@@ -36349,7 +36349,7 @@
 				"walk": 0,
 				"fly": {
 					"number": 50,
-					"condition": "(hover)"
+					"condition": "(浮空)"
 				},
 				"canHover": true
 			},
@@ -36371,7 +36371,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -36391,27 +36391,27 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 10,
-			"languages": "understands all languages it knew in life but can't speak",
+			"languages": "理解所有它生前掌握的語言，但不會說",
 			"cr": "1",
 			"trait": [
 				{
-					"name": "Incorporeal Movement",
+					"name": "虛體移動",
 					"entries": [
-						"The specter can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
+						"幽靈可以把其它生物和物體視作困難地形移動穿過它們。若它在一個物體內結束它的回合，則它將受到5 ({@damage 1d10})力場傷害。"
 					]
 				},
 				{
 					"name": "日光敏感",
 					"entries": [
-						"當處於日光照耀下時，specter在攻擊檢定，以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
+						"當處於日光照耀下時，幽靈在攻擊檢定，以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Life Drain",
+					"name": "生命吸取",
 					"entries": [
-						"{@atk ms} 命中{@hit 4}，觸及5呎，單一生物。{@h}10 ({@damage 3d6}) necrotic damage. The target must succeed on a DC 10 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the creature finishes a long rest. The target dies if this effect reduces its hit point maximum to 0."
+						"{@atk ms} 命中{@hit 4}，觸及5呎，單一生物。{@h}10 ({@damage 3d6})死靈傷害。目標必須成功通過一次DC 10的體質豁免，否則它的生命值最大值將減少等同於所受傷害的數值。這個減損持續直到該生物完成一次長休。若目標因為這個效果而導致生命值最大值歸零，則目標死亡。"
 					]
 				}
 			],
@@ -42372,7 +42372,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "非銀製武器且非魔法攻擊所造成的"
+					"preNote": "非銀製武器且非魔法攻擊所造成的"
 				}
 			],
 			"immune": [

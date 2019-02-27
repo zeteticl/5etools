@@ -301,7 +301,7 @@
 								"entries": [
 									{
 										"type": "patron",
-										"name": "鎖鏈魔契", "ENG_name": "Pact of the Blade",
+										"name": "鎖鏈魔契", "ENG_name": "Pact of the Chain",
 										"entries": [
 											"你習得{@spell 尋獲魔寵}法術，並可以將之做為儀式施放。此法術不會計入你的已知法術數量中。",
 											"當你施放此法術時，你可以為你的魔寵選擇一個正常的型態，或選擇下列其中一個特殊的型態：{@creature 小魔鬼}、{@creature 偽龍}、{@creature 夸塞魔}、或{@creature 小妖精}。",
@@ -310,7 +310,7 @@
 									},
 									{
 										"type": "patron",
-										"name": "鋒刃魔契", "ENG_name": "Pact of the Chain",
+										"name": "鋒刃魔契", "ENG_name": "Pact of the Blade",
 										"entries": [
 											"你可以使用你的動作以在你的一隻空著的手中創造一把契約武器。你可以在每次創造它時選擇這把近戰武器的型態（參見第五章的武器選項）。你在使用它時熟練於該武器。這把武器在克服對非魔法攻擊和傷害的抗性和免疫時視作魔法武器。",
 											"你的契約武器會在距離你超過5呎外的情況下長達1分鐘或更久時消失。這把武器也會在你再次使用這個能力創造武器、你解消武器（無需花費動作）、或你死亡時消失。",
@@ -1601,8 +1601,8 @@
 							{
 								"name": "天界宗主", "ENG_name": "The Celestial",
 								"entries": [
-									"Your patron is a powerful being of the Upper Planes. You have bound yourself to an ancient empyrean, solar, ki-rin, unicorn, or other entity that resides in the planes of everlasting bliss. Your pact with that being allows you to experience the barest touch of the holy light that illuminates the multiverse.",
-									"Being connected to such power can cause changes in your behavior and beliefs. You might find yourself driven to annihilate the undead, to defeat fiends, and to protect the innocent. At times, your heart might also be filled with a longing for the celestial realm of your patron, and a desire to wander that paradise for the rest of your days. But you know that your mission is among mortals for now, and that your pact binds you to bring light to the dark places of the world.",
+									"你的宗主是一個上層位面的強大存在。你和一位古老的至高天、熾天神侍、麒麟、獨角獸、或其他居住於那永樂位面中的存在締結了契約。你與該存在之間的契約讓你得以經歷到那照亮多元宇宙的聖光最直接的觸碰。",
+									"與這般力量的連接可能會導致你行為和信仰的改變。你可能會發現自己投身於殲滅不死生物、抵禦邪魔、和保護無辜者的大業中。有時候，你的心靈會充滿著你對宗主所在天界國度的渴望，並希冀能在你的餘生中漫遊在這樣的天堂之中。然而，你知道你現在的任務是待在凡世之中，且你的契約約束著你為世界上最黑暗的角落帶來光明。",
 									{
 										"type": "entries",
 										"name": "擴展法術列表", "ENG_name": "Expanded Spell List",
@@ -1646,18 +1646,18 @@
 									},
 									{
 										"type": "entries",
-										"name": "Bonus Cantrips",
+										"name": "額外戲法", "ENG_name": "Bonus Cantrips",
 										"entries": [
-											"At 1st level, you learn the {@spell 聖焰} and {@spell 光亮術} cantrips. They count as warlock cantrips for you, but they don't count against your number of cantrips known."
+											"在1級時，你學會{@spell 聖焰}和{@spell 光亮術}戲法。它們對你而言視作契術師戲法，但不會被計入你已知戲法的數量中。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Healing Light",
+										"name": "治癒之光", "ENG_name": "Healing Light",
 										"entries": [
-											"At 1st level, you gain the ability to channel celestial energy to heal wounds. You have a pool of {@dice d6}s that you spend to fuel this healing. The number of dice in the pool equals 1 + your warlock level.",
-											"As a bonus action, you can heal one creature you can see within 60 feet of you, spending dice from the pool. The maximum number of dice you can spend at once equals your Charisma modifier (minimum of one die). Roll the dice you spend, add them together, and restore a number of hit points equal to the total.",
-											"Your pool regains all expended dice when you finish a long rest."
+											"在1級時，你獲得引導天界能量以醫治傷口的能力。你獲得一組{@dice d6}骰池，並可以消耗它來使用此治療能力。骰池中的骰子數量等同於1+你的契術師等級。",
+											"以一個附贈動作，你可以消耗骰池中的骰子，治療一個距離你60呎內且你能看見的生物。你一次所能消耗的最大骰數等同於你的魅力調整值（最少一顆骰）。投擲你所消耗的骰子，將它們加在一起，並回復等同於其總和的生命值。",
+											"你的骰池將在你完成一次長休時恢復所有花費掉的骰子。"
 										]
 									}
 								]
@@ -1668,9 +1668,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Radiant Soul",
+										"name": "Radiant Soul", "ENG_name": "Radiant Soul",
 										"entries": [
-											"Starting at 6th level, your link to the Celestial allows you to serve as a conduit for radiant energy. You have resistance to radiant damage, and when you cast a spell that deals radiant or fire damage, you can add your Charisma modifier to one radiant or fire damage roll of that spell against one of its targets."
+											"從6級開始，你與天界宗主的聯繫讓你得以做為釋放光耀能量的管道。你對光耀傷害具有抗性，且當你施放一個會造成光耀或火焰傷害的法術時，你可以將你的魅力調整值加入對其中一個目標所造成的一次光耀或火焰傷害骰中。"
 										]
 									}
 								]
@@ -1681,9 +1681,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Celestial Resilience",
+										"name": "天族韌性", "ENG_name": "Celestial Resilience",
 										"entries": [
-											"Starting at 10th level, you gain temporary hit points whenever you finish a short or long rest. These temporary hit points equal your warlock level + your Charisma modifier. Additionally, choose up to five creatures you can see at the end of the rest. Those creatures each gain temporary hit points equal to half your warlock level + your Charisma modifier."
+											"從10級開始，每當你完成一次短休或長休時，你將獲得臨時生命值。這些臨時生命值等同於你的契術師等級+你的魅力調整值。此外，在休息結束時選擇最多五個你所能看見的生物。這些生物將各自獲得等同於你契術師等級的一半+你的魅力調整值的臨時生命值。"
 										]
 									}
 								]
@@ -1694,10 +1694,10 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Searing Vengeance",
+										"name": "灼光復仇", "ENG_name": "Searing Vengeance",
 										"entries": [
-											"Starting at 14th level, the radiant energy you channel allows you to resist death. When you have to make a death saving throw at the start of your turn, you can instead spring back to your feet with a burst of radiant energy. You regain hit points equal to half your hit point maximum, and then you stand up if you so choose. Each creature of your choice that is within 30 feet of you takes radiant damage equal to {@dice 2d8} + your Charisma modifier, and it is {@condition blinded} until the end of the current turn.",
-											"Once you use this feature, you can't use it again until you finish a long rest."
+											"從14級開始，你所引導的光耀能量讓你得以抵抗死亡。當你在你的回合開始時必須進行一次死亡豁免時，你可以改為在一陣光耀能量的爆發中一躍而起。你回復等同於你生命值最大值一半的生命值，並接著可以選擇重新起身。每個距離你30呎內你所選擇的生物將受到等同於{@dice 2d8}+你的魅力調整值的光耀傷害，且陷入{@condition 目盲}狀態直到該回合結束。",
+											"一旦你使用此能力，直到你完成一次長休之前你都不能再使用它。"
 										]
 									}
 								]
@@ -1705,7 +1705,7 @@
 						]
 					],
 					"source": "XGE",
-					"shortName": "Celestial"
+					"shortName": "天界宗主"
 				},
 				{
 					"name": "咒劍士", "ENG_name": "The Hexblade",
@@ -1714,8 +1714,8 @@
 							{
 								"name": "咒劍士", "ENG_name": "The Hexblade",
 								"entries": [
-									"You have made your pact with a mysterious entity from the Shadowfell\u2014a force that manifests in sentient magic weapons carved from the stuff of shadow. The mighty sword Blackrazor is the most notable of these weapons, which have been spread across the multiverse over the ages. The shadowy force behind these weapons can offer power to warlocks who form pacts with it. Many hexblade warlocks create weapons that emulate those formed in the Shadowfell. Others forgo such arms, content to weave the dark magic of that plane into their spellcasting.",
-									"Because the Raven Queen is known to have forged the first of these weapons, many sages speculate that she and the force are one and that the weapons, along with hexblade warlocks, are tools she uses to manipulate events on the Material Plane to her inscrutable ends.",
+									"你和一個來自墮影冥界的神秘存在締結了契約\u2014一股在暗影物質雕琢而成的智能魔法武器身上顯露出的力量。強大的魔劍「黑刃」就是這類武器中最著名的一例，並以在世紀間輾轉橫跨多元宇宙。這些武器背後的陰影之力可以為與之締結契約的契術師提供力量。許多咒劍契術師模仿著那些在墮影冥界中成形的存在來創造自己的武器，其他人則放棄這類兵器，轉而將墮影冥界中的黑暗魔法編入他們的法術施展中。",
+									"由於眾所周知，是鴉后打造出了最初的這類武器，因此許多賢者推測她就是這股力量的真身，且這些武器、以及咒劍契術師，都只不過是她用以操弄物質位面的工具，用以達到她那難以揣測的最終目的。",
 									{
 										"type": "entries",
 										"name": "擴展法術列表", "ENG_name": "Expanded Spell List",
@@ -1759,26 +1759,26 @@
 									},
 									{
 										"type": "entries",
-										"name": "Hexblade's Curse",
+										"name": "咒劍詛咒", "ENG_name": "Hexblade's Curse",
 										"entries": [
-											"Starting at 1st level, you gain the ability to place a baleful curse on someone. As a bonus action, choose one creature you can see within 30 feet of you. The target is cursed for 1 minute. The curse ends early if the target dies, you die, or you are {@condition incapacitated}. Until the curse ends, you gain the following benefits:",
+											"從1級開始，你獲得向某人施加惡毒詛咒的能力。以一個附贈動作，選擇一個距離你30呎內且你能看見的生物。目標將被詛咒長達1分鐘。這個詛咒會在目標死亡、你死亡、或你陷入{@condition 無力}狀態時提早結束。直到此詛咒結束前，你獲得下列好處：",
 											{
 												"type": "list",
 												"items": [
-													"You gain a bonus to damage rolls against the cursed target. The bonus equals your proficiency bonus.",
-													"Any attack roll you make against the cursed target is a critical hit on a roll of 19 or 20 on the {@dice d20}.",
-													"If the cursed target dies, you regain hit points equal to your warlock level + your Charisma modifier (minimum of 1 hit point)."
+													"你對受詛咒目標所進行的傷害骰獲得加值。這個加值等同於你的熟練加值。",
+													"任何你對受詛咒目標所進行的攻擊檢定，若在{@dice d20}中骰出19或20的骰面，則該攻擊視為重擊。",
+													"若受詛咒目標死亡，你將回復等同於你契術師等級+你的魅力調整值的生命值（最少1點生命值）。"
 												]
 											},
-											"You can't use this feature again until you finish a short or long rest."
+											"直到你完成一次短休或長休之前你都不能再使用此能力。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Hex Warrior",
+										"name": "巫咒戰士", "ENG_name": "Hex Warrior",
 										"entries": [
-											"At 1st level, you acquire the training necessary to effectively arm yourself for battle. You gain proficiency with medium armor, shields, and martial weapons.",
-											"The influence of your patron also allows you to mystically channel your will through a particular weapon. Whenever you finish a long rest, you can touch one weapon that you are proficient with and that lacks the two-handed property. When you attack with that weapon, you can use your Charisma modifier, instead of Strength or Dexterity, for the attack and damage rolls. This benefit lasts until you finish a long rest. If you later gain the Pact of the Blade feature, this benefit extends to every pact weapon you conjure with that feature, no matter the weapon's type."
+											"在1級時，你學會了在戰鬥中有效武裝自己所必要的訓練。你獲得中甲、盾牌、和軍用武器的熟練。",
+											"你宗主的影響也讓你得以神秘地透過特定武器引導你的意志。每當你完成一次長休，你可以觸碰一把你所熟練且沒有雙手屬性的武器。當你使用該武器進行攻擊時，你可以使用你的魅力調整值，而非力量或敏捷，來計算其攻擊檢定和傷害骰。這個好處會持續直到你完成一次長休。若你之後獲得了鋒刃魔契能力，則這個好處將擴展到你使用該能力召喚出的每一把契約武器，且無視武器類型的限制。"
 										]
 									}
 								]
@@ -1789,11 +1789,11 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Accursed Specter",
+										"name": "咒縛幽靈", "ENG_name": "Accursed Specter",
 										"entries": [
-											"Starting at 6th level, you can curse the soul of a person you slay, temporarily binding it to your service. When you slay a humanoid, you can cause its spirit to rise from its corpse as a {@creature specter}, the statistics for which are in the Monster Manual. When the specter appears, it gains temporary hit points equal to half your warlock level. Roll initiative for the specter, which has its own turns. It obeys your verbal commands, and it gains a special bonus to its attack rolls equal to your Charisma modifier (minimum of +0).",
-											"The specter remains in your service until the end of your next long rest, at which point it vanishes to the afterlife.",
-											"Once you bind a specter with this feature, you can't use the feature again until you finish a long rest."
+											"從6級開始，你可以詛咒一個你所殺害之人的靈魂，束縛它暫時為你服務。當你殺死一個類人生物時，你可以使它的靈魂做為一個{@creature 幽靈}從它的屍體中升起。幽靈的數據被記載於《怪物圖鑑》中。當幽靈出現時，它將獲得等同於你契術師等級一半的臨時生命值。為這個幽靈骰先攻，且它擁有自己的回合。它會服從你的任何口頭指令，且它在它的攻擊檢定中獲得等同於你魅力調整值（最低為+0）的特殊加值。",
+											"這個幽靈會持續為你服務直到你的下一次長休結束，在那之後它將消失並進入來世。",
+											"一旦你使用此能力束縛一個幽靈，直到你完成一次長休之前你都不能再使用此能力。"
 										]
 									}
 								]
@@ -1804,9 +1804,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Armor of Hexes",
+										"name": "巫咒護甲", "ENG_name": "Armor of Hexes",
 										"entries": [
-											"At 10th level, your hex grows more powerful. If the target cursed by your Hexblade's Curse hits you with an attack roll, you can use your reaction to roll a {@dice d6}. On a 4 or higher, the attack instead misses you, regardless of its roll."
+											"在10級時，你的巫咒變得更加強大。若你使用咒劍詛咒所詛咒的目標以一次攻擊檢定命中你，你可以使用你的反應骰一顆{@dice d6}。若結果為4或更高，則無論該攻擊的檢定結果如何，該攻擊結果改為失手。"
 										]
 									}
 								]
@@ -1817,9 +1817,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Master of Hexes",
+										"name": "巫咒大師", "ENG_name": "Master of Hexes",
 										"entries": [
-											"Starting at 14th level, you can spread your Hexblade's Curse from a slain creature to another creature. When the creature cursed by your Hexblade's Curse dies, you can apply the curse to a different creature you can see within 30 feet of you, provided you aren't {@condition incapacitated}. When you apply the curse in this way, you don't regain hit points from the death of the previously cursed creature."
+											"從14級開始，你可以將你的咒劍詛咒從一個被殺死的生物散佈到另一個生物身上。當一個被你使用咒劍詛咒所詛咒的生物死亡時，只要你不處於{@condition 無力}狀態，你就可以將該詛咒轉移到一個距離你30呎內且你能看見的不同生物。當你透過這個方法轉移詛咒，你將不能因為前一個受詛咒生物的死亡而回復生命值。"
 										]
 									}
 								]
@@ -1827,7 +1827,7 @@
 						]
 					],
 					"source": "XGE",
-					"shortName": "Hexblade"
+					"shortName": "咒劍士"
 				},
 				{
 					"name": "The Kraken (Livestream)",
