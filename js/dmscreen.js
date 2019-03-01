@@ -280,7 +280,7 @@ class Board {
 			let ixMax = 0;
 			data.forEach(d => {
 				if (hasBadCat(d) || fromDeepIndex(d)) return;
-				d.cf = d.c === Parser.CAT_ID_CREATURE ? "Creature" : Parser.pageCategoryToFull(d.c);
+				d.cf = d.c === Parser.CAT_ID_CREATURE ? "生物(Creature)" : Parser.pageCategoryToFull(d.c);
 				if (!this.availContent[d.cf]) {
 					this.availContent[d.cf] = elasticlunr(function () {
 						this.addField("n");

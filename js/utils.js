@@ -1277,6 +1277,7 @@ Parser.prereqPatronToShort = function (patron) {
 
 // NOTE: These need to be reflected in omnidexer.js to be indexed
 Parser.OPT_FEATURE_TYPE_TO_FULL = {
+	ED: "四象法門",
 	EI: "魔能祈喚",
 	MM: "超魔法",
 	"MV:B": "戰技, 戰鬥大師",
