@@ -26,7 +26,7 @@ class AcConvert {
 
 				const from = [];
 
-				const splitter = new RegExp(/,\s?(?![^(]*\))/, "g"); // split on commas not within parentheses
+				const splitter = StrUtil.COMMAS_NOT_IN_PARENTHESES_REGEX;
 
 				const parts = brak.split(splitter).map(it => it.trim());
 
@@ -362,7 +362,15 @@ AlignmentConvert.ALIGNMENTS = {
 	}]
 };
 
-class TraitsActionsTag {
+class TagUtil {
+	static isNoneOrEmpty (str) {
+		if (!str || !str.trim()) return false;
+		return !!TagUtil.NONE_EMPTY_REGEX.exec(str);
+	}
+}
+TagUtil.NONE_EMPTY_REGEX = /^(([-\u2014\u2013\u2221])+|none)$/gi;
+
+class TraitActionTag {
 	static tryRun (m, cbMan) {
 		function doTag (prop, outProp) {
 			function isTraits () {
@@ -375,7 +383,7 @@ class TraitsActionsTag {
 					t.name = t.name.trim();
 
 					const cleanName = t.name.toLowerCase();
-					const mapped = TraitsActionsTag.tags[prop][cleanName];
+					const mapped = TraitActionTag.tags[prop][cleanName];
 					if (mapped) {
 						m[outProp] = m[outProp] || [];
 						if (mapped === true) {
@@ -411,7 +419,7 @@ class TraitsActionsTag {
 		if (m.actionTags && !m.actionTags.length) delete m.actionTags;
 	}
 }
-TraitsActionsTag.tags = { // true = map directly; string = map to this string
+TraitActionTag.tags = { // true = map directly; string = map to this string
 	trait: {
 		"turn immunity": true,
 		"brute": true,
@@ -513,12 +521,7 @@ class LanguageTag {
 	static tryRun (m, cbAll, cbTracked) {
 		if (m.languages) {
 			m.languages = m.languages.trim();
-			if (m.languages === "-" ||
-				m.languages === "--" ||
-				m.languages === "\u2014" ||
-				m.languages === "\u2013" ||
-				m.languages === "\u2212" ||
-				m.languages === "none") {
+			if (TagUtil.isNoneOrEmpty(m.languages)) {
 				delete m.languages;
 				return;
 			} else {
@@ -628,21 +631,95 @@ LanguageTag.LANGUAGE_MAP = {
 	"any language": "X"
 };
 
-class LanguageSpeakerTag {
-	static tryRun (m) {
-		if (m.languages && (m.languages.toLowerCase().includes("can't speak") || m.languages.toLowerCase().includes("cannot speak"))) {
-			m.languageSpeaks = false;
+class SenseTag {
+	static tryRun (m, cbAll) {
+		if (m.senses) {
+			if (TagUtil.isNoneOrEmpty(m.senses)) {
+				delete m.senses;
+			} else {
+				const senseTags = new Set();
+				m.senses.toLowerCase().split(StrUtil.COMMAS_NOT_IN_PARENTHESES_REGEX).map(it => it.trim())
+					.forEach(s => {
+						Object.entries(SenseTag.TAGS).forEach(([k, v]) => {
+							if (s.includes(k)) {
+								if (v === "D" && /\d\d\d ft/.exec(s)) senseTags.add("SD");
+								else senseTags.add(v);
+							}
+						});
+
+						if (cbAll) cbAll(s);
+					});
+
+				if (senseTags.size === 0) delete m.senseTags;
+				else m.senseTags = [...senseTags];
+			}
 		}
 	}
 }
+SenseTag.TAGS = {
+	"blindsight": "B",
+	"darkvision": "D",
+	"tremorsense": "T",
+	"truesight": "U"
+};
 
-class JsonClean {
-	static getClean (json) {
-		json = json.replace(JsonClean.REPLACEMENT_REGEX, (match) => JsonClean.REPLACEMENTS[match]);
-		return json.replace(/\s*(\\u2014|\\u2013)\s*/g, "$1");
+class SpellcastingTypeTag {
+	static tryRun (m, cbAll) {
+		if (!m.spellcasting) {
+			delete m.spellcastingTags;
+		} else {
+			const tags = new Set();
+			m.spellcasting.forEach(sc => {
+				if (!sc.name) return;
+				if (/(^|[^a-zA-Z])psionics([^a-zA-Z]|$)/gi.exec(sc.name)) tags.add("P");
+				if (/(^|[^a-zA-Z])innate([^a-zA-Z]|$)/gi.exec(sc.name)) tags.add("I");
+				if (/(^|[^a-zA-Z])form([^a-zA-Z]|$)/gi.exec(sc.name)) tags.add("F");
+				if (/(^|[^a-zA-Z])shared([^a-zA-Z]|$)/gi.exec(sc.name)) tags.add("S");
+
+				if (sc.headerEntries) {
+					const strHeader = JSON.stringify(sc.headerEntries);
+					Object.entries(SpellcastingTypeTag.CLASSES).forEach(([tag, regex]) => {
+						regex.lastIndex = 0;
+						const match = regex.exec(strHeader);
+						if (match) {
+							tags.add(tag);
+							cbAll(match[0]);
+						}
+					});
+				}
+
+				cbAll(sc.name);
+			});
+			if (tags.size) m.spellcastingTags = [...tags];
+			else delete m.spellcastingTags;
+		}
 	}
 }
-JsonClean.REPLACEMENTS = {
+SpellcastingTypeTag.CLASSES = {
+	"CB": /(^|[^a-zA-Z])bard([^a-zA-Z]|$)/gi,
+	"CC": /(^|[^a-zA-Z])cleric([^a-zA-Z]|$)/gi,
+	"CD": /(^|[^a-zA-Z])druid([^a-zA-Z]|$)/gi,
+	"CP": /(^|[^a-zA-Z])paladin([^a-zA-Z]|$)/gi,
+	"CR": /(^|[^a-zA-Z])ranger([^a-zA-Z]|$)/gi,
+	"CS": /(^|[^a-zA-Z])sorcerer([^a-zA-Z]|$)/gi,
+	"CL": /(^|[^a-zA-Z])warlock([^a-zA-Z]|$)/gi,
+	"CW": /(^|[^a-zA-Z])wizard([^a-zA-Z]|$)/gi
+};
+
+class TextClean {
+	static getCleanedJson (str) {
+		str = str.replace(TextClean.REPLACEMENT_REGEX, (match) => TextClean.REPLACEMENTS[match]);
+		return str.replace(/\s*(\\u2014|\\u2013)\s*/g, "$1");
+	}
+
+	static getReplacedQuotesText (str) {
+		return str
+			.replace(/’/g, "'")
+			.replace(/[“”]/g, `"`)
+			.replace(/…/g, `...`)
+	}
+}
+TextClean.REPLACEMENTS = {
 	"—": "\\u2014",
 	"–": "\\u2013",
 	"−": "\\u2212",
@@ -651,7 +728,7 @@ JsonClean.REPLACEMENTS = {
 	"”": '\\"',
 	"…": "..."
 };
-JsonClean.REPLACEMENT_REGEX = new RegExp(Object.keys(JsonClean.REPLACEMENTS).join("|"), 'g');
+TextClean.REPLACEMENT_REGEX = new RegExp(Object.keys(TextClean.REPLACEMENTS).join("|"), 'g');
 
 if (typeof module !== "undefined") {
 	module.exports = {
@@ -659,8 +736,10 @@ if (typeof module !== "undefined") {
 		TagAttack,
 		TagHit,
 		AlignmentConvert,
-		TraitsActionsTag,
+		TraitActionTag,
 		LanguageTag,
-		JsonClean
+		SenseTag,
+		SpellcastingTypeTag,
+		TextClean
 	};
 }

@@ -68,22 +68,29 @@
 		.btn-reroll::before {
 			content: "Reroll";
 		}
+
+		.output {
+			margin: 1em 0;
+			padding: 0.2em 0.7em;
+			border-radius: 0.2em;
+			display: none;
+		}
 	</style>
 </head>
 
 <body>
-<header class="hidden-xs hidden-sm">
+<header class="hidden-xs hidden-sm page__header">
 	<div class="container">
 
-		<h1>這是你的人生</h1>
-		<p>選擇選項，然後點擊生成。</p>
+		<h1 class="page__title">這是你的人生</h1>
+		<p class="page__subtitle">選擇選項，然後點擊生成。</p>
 	</div>
 </header>
-<nav class="container" id="navigation">
+<nav class="container page__nav" id="navigation">
 	<ul class="nav nav-pills" id="navbar">
 	</ul>
 </nav>
-<main class="container bodyContent">
+<main class="container">
 
 	<div class="row noprint">
 		<div class="form-group col-2-4">
@@ -160,9 +167,7 @@
 		<p id="events"></p>
 	</div>
 </main>
-<footer class="container">
-
-</footer>    <!--5ETOOLS_SCRIPT_ANCHOR-->
+<!--5ETOOLS_SCRIPT_ANCHOR-->
 <script type="text/javascript" src="js/utils.js"></script>
 <script type="text/javascript" src="lib/localforage.js"></script>
 <script type="text/javascript" src="js/genutils.js"></script>

@@ -50,7 +50,11 @@
 			"savingThrow": [
 				"dexterity"
 			],
-			"scalingEffects": true
+			"scalingEffects": true,
+			"areaTags": [
+				"ST",
+				"MT"
+			]
 		},
 		{
 			"name": "援助術", "ENG_name": "Aid",
@@ -134,7 +138,10 @@
 					]
 				}
 			],
-			"page": 211
+			"page": 211,
+			"areaTags": [
+				"MT"
+			]
 		},
 		{
 			"name": "警報術", "ENG_name": "Alarm",
@@ -192,7 +199,10 @@
 				"若你距離守護區域1里內，精神警報會透過在你的意識中發出的尖銳聲響來警告你。若你正在沉睡，這個聲響將會把你叫醒。",
 				"聲音警報會在60呎範圍內製造出搖鈴的聲響，持續10秒鐘。"
 			],
-			"page": 211
+			"page": 211,
+			"areaTags": [
+				"C"
+			]
 		},
 		{
 			"name": "變造自身", "ENG_name": "Alter Self",
@@ -386,6 +396,9 @@
 			],
 			"conditionInflict": [
 				"charmed"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -452,7 +465,10 @@
 					]
 				}
 			],
-			"page": 212
+			"page": 212,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "動物化形", "ENG_name": "Animal Shapes",
@@ -499,7 +515,10 @@
 				"每個目標的轉變都將在法術持續期間內持續生效，或直到目標的生命值歸零或死亡。你可以為每個目標各自選擇不同的型態。目標的遊戲數據將被所選野獸的數據資料給取代，但目標保留它的陣營、智力、睿知、和魅力值。目標取用它新型態的生命值，且當它回復它原本的型態時，該生物將取回它轉變之前的生命值。若它是因為生命值歸零而回復，則任何溢出傷害都將被帶到它原本的型態，扣減它原本的生命值。只要這個溢出傷害沒有讓該生物原本型態的生命值歸零，它就不會被擊倒{@condition 昏迷}。該生物被限制只能進行它新型態天生所能進行的動作，且它無法說話、施放法術、或採取任何其他需要雙手或語言的動作。",
 				"目標的裝備將被融入新形態之中。目標無法啟動、使用、揮舞、或透過其他方式來從它的裝備獲得好處。"
 			],
-			"page": 212
+			"page": 212,
+			"areaTags": [
+				"MT"
+			]
 		},
 		{
 			"name": "活化死屍", "ENG_name": "Animate Dead",
@@ -578,7 +597,8 @@
 				}
 			],
 			"page": 212,
-			"permanentEffects": true
+			"permanentEffects": true,
+			"isSummon": true
 		},
 		{
 			"name": "活化物體", "ENG_name": "Animate Objects",
@@ -732,7 +752,11 @@
 				"bludgeoning",
 				"piercing",
 				"slashing"
-			]
+			],
+			"areaTags": [
+				"MT"
+			],
+			"isSummon": true
 		},
 		{
 			"name": "反活物護罩", "ENG_name": "Antilife Shell",
@@ -922,7 +946,10 @@
 					]
 				}
 			],
-			"page": 213
+			"page": 213,
+			"areaTags": [
+				"S"
+			]
 		},
 		{
 			"name": "嫌惡/共感術", "ENG_name": "Antipathy/Sympathy",
@@ -1000,6 +1027,9 @@
 			],
 			"conditionInflict": [
 				"frightened"
+			],
+			"areaTags": [
+				"C"
 			]
 		},
 		{
@@ -1395,6 +1425,9 @@
 			],
 			"savingThrow": [
 				"strength"
+			],
+			"areaTags": [
+				"R"
 			]
 		},
 		{
@@ -1456,6 +1489,9 @@
 			"page": 215,
 			"conditionInflict": [
 				"unconscious"
+			],
+			"areaTags": [
+				"MT"
 			]
 		},
 		{
@@ -1615,7 +1651,10 @@
 			"damageResist": [
 				"necrotic"
 			],
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"R"
+			]
 		},
 		{
 			"name": "淨化靈光", "ENG_name": "Aura of Purity",
@@ -1662,6 +1701,9 @@
 			"page": 216,
 			"damageResist": [
 				"poison"
+			],
+			"areaTags": [
+				"R"
 			]
 		},
 		{
@@ -1719,7 +1761,10 @@
 				"治癒能量從你身上散發形成一個30呎半徑的靈光。直到此法術結束前，該靈光將會跟隨你移動，並以你為中心。你可以使用一個附贈動作以使靈光內的一個生物（包括你）回復{@dice 2d6}點生命值。"
 			],
 			"page": 216,
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"R"
+			]
 		},
 		{
 			"name": "啟蒙術", "ENG_name": "Awaken",
@@ -1772,6 +1817,9 @@
 			"permanentEffects": true,
 			"conditionInflict": [
 				"charmed"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -1886,6 +1934,9 @@
 			"page": 216,
 			"savingThrow": [
 				"charisma"
+			],
+			"areaTags": [
+				"MT"
 			]
 		},
 		{
@@ -2128,6 +2179,9 @@
 			],
 			"conditionInflict": [
 				"incapacitated"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -2200,7 +2254,10 @@
 			"entries": [
 				"你碰觸一個自願生物。直到法術結束前，目標的肌膚將呈現粗糙、樹皮狀的外表，且無論目標穿著什麼樣的護甲，它的AC都不會低於16。"
 			],
-			"page": 217
+			"page": 217,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "希望信標", "ENG_name": "Beacon of Hope",
@@ -2288,7 +2345,10 @@
 				"此法術將賦予希望和活力。選擇射程內任意數量的生物。在法術持續期間，每個目標在睿知豁免和死亡豁免中具有優勢，且在受到任何治療時會回復最大可能數值的生命值。"
 			],
 			"page": 217,
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"MT"
+			]
 		},
 		{
 			"name": "野獸知覺", "ENG_name": "Beast Sense",
@@ -2350,7 +2410,10 @@
 			"entries": [
 				"你觸碰一個自願野獸。在此法術的持續期間，你可以使用你的動作以透過該野獸的眼睛視物並聽到它所聽見的聲音，且持續直到你使用你的動作以返回你原本的知覺。當透過野獸的知覺感知時，你獲得任何該生物所擁有的特殊感知的好處，儘管你對你自己的感官而言視作{@condition 耳聾}和{@condition 目盲}。"
 			],
-			"page": 217
+			"page": 217,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "降咒", "ENG_name": "Bestow Curse",
@@ -2479,6 +2542,9 @@
 			],
 			"savingThrow": [
 				"wisdom"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -2626,6 +2692,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"W"
 			]
 		},
 		{
@@ -2777,7 +2846,10 @@
 					]
 				}
 			],
-			"page": 219
+			"page": 219,
+			"areaTags": [
+				"MT"
+			]
 		},
 		{
 			"name": "枯萎術", "ENG_name": "Blight",
@@ -2919,6 +2991,9 @@
 			],
 			"savingThrow": [
 				"constitution"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -3097,6 +3172,9 @@
 			"conditionInflict": [
 				"blinded",
 				"deafened"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -3505,6 +3583,9 @@
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
 				}
+			],
+			"areaTags": [
+				"N"
 			]
 		},
 		{
@@ -3600,6 +3681,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -3676,6 +3760,9 @@
 			"page": 221,
 			"savingThrow": [
 				"charisma"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -3737,6 +3824,10 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"ST",
+				"MT"
 			]
 		},
 		{
@@ -3870,6 +3961,9 @@
 			],
 			"conditionInflict": [
 				"charmed"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -3951,6 +4045,9 @@
 					"baseName": "Elf (Zendikar)",
 					"baseSource": "PSZ"
 				}
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -4019,6 +4116,9 @@
 			],
 			"spellAttack": [
 				"R"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -4086,6 +4186,9 @@
 			],
 			"savingThrow": [
 				"constitution"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -4152,7 +4255,11 @@
 			"entries": [
 				"神性能量自你身上散發而出，扭曲並發散距離你30呎內的魔法能量。直到此法術結束前，這個球體範圍將跟隨你移動，並以你為中心。在法術持續期間，每個範圍內的友善生物（包括你）在對抗法術或其他魔法效果的豁免檢定中具有優勢。此外，當一個受影響生物成功通過一次對抗法術或魔法效果以讓它在豁免成功時減半傷害的豁免檢定時，則當它改為在豁免成功時不受到任何傷害。"
 			],
-			"page": 221
+			"page": 221,
+			"areaTags": [
+				"S",
+				"R"
+			]
 		},
 		{
 			"name": "銳眼術", "ENG_name": "Clairvoyance",
@@ -4353,6 +4460,9 @@
 			"page": 222,
 			"damageInflict": [
 				"slashing"
+			],
+			"areaTags": [
+				"C"
 			]
 		},
 		{
@@ -4482,6 +4592,9 @@
 			],
 			"savingThrow": [
 				"constitution"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -4544,6 +4657,9 @@
 			"page": 222,
 			"conditionInflict": [
 				"blinded"
+			],
+			"areaTags": [
+				"N"
 			]
 		},
 		{
@@ -4724,6 +4840,9 @@
 			],
 			"conditionInflict": [
 				"prone"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -4987,6 +5106,9 @@
 			"page": 224,
 			"savingThrow": [
 				"wisdom"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -5130,6 +5252,9 @@
 			"page": 224,
 			"savingThrow": [
 				"wisdom"
+			],
+			"areaTags": [
+				"MT"
 			]
 		},
 		{
@@ -5234,6 +5359,9 @@
 			],
 			"savingThrow": [
 				"constitution"
+			],
+			"areaTags": [
+				"N"
 			]
 		},
 		{
@@ -5401,6 +5529,9 @@
 			"page": 224,
 			"savingThrow": [
 				"wisdom"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -5474,10 +5605,10 @@
 				{
 					"type": "list",
 					"items": [
-						"一隻{@filter 挑戰等級2或以下的野獸|bestiary|cr=2|type=beast|miscellaneous=!swarm}",
-						"二隻{@filter 挑戰等級1或以下的野獸|bestiary|cr=1|type=beast|miscellaneous=!swarm}",
-						"四隻{@filter 挑戰等級1/2或以下的野獸|bestiary|cr=1/2|type=beast|miscellaneous=!swarm}",
-						"八隻{@filter 挑戰等級1/4或以下的野獸|bestiary|cr=0;1/8;1/4|type=beast|miscellaneous=!swarm}"
+						"一隻{@filter 挑戰等級2或以下的野獸|bestiary|challenge rating=2|type=beast|miscellaneous=!swarm}",
+						"二隻{@filter 挑戰等級1或以下的野獸|bestiary|challenge rating=1|type=beast|miscellaneous=!swarm}",
+						"四隻{@filter 挑戰等級1/2或以下的野獸|bestiary|challenge rating=1/2|type=beast|miscellaneous=!swarm}",
+						"八隻{@filter 挑戰等級1/4或以下的野獸|bestiary|challenge rating=0;1/8;1/4|type=beast|miscellaneous=!swarm}"
 					]
 				},
 				"每隻野獸同時也被視作精類生物，且它會在它生命值歸零或此法術結束時消失。",
@@ -5493,7 +5624,8 @@
 					]
 				}
 			],
-			"page": 225
+			"page": 225,
+			"isSummon": true
 		},
 		{
 			"name": "召喚箭幕", "ENG_name": "Conjure Barrage",
@@ -5537,6 +5669,9 @@
 			"page": 225,
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"N"
 			]
 		},
 		{
@@ -5580,7 +5715,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"你召喚出一個{@filter 挑戰等級4或以下的天界生物|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4|type=celestial|miscellaneous=!swarm}，且它將出現在射程內一處你所能看見的未被佔據空間。該天界生物會在它生命值歸零或此法術結束時消失。",
+				"你召喚出一個{@filter 挑戰等級4或以下的天界生物|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3;4|type=celestial|miscellaneous=!swarm}，且它將出現在射程內一處你所能看見的未被佔據空間。該天界生物會在它生命值歸零或此法術結束時消失。",
 				"該天界生物在法術持續期間對你和你的同伴友善。為該天界生物骰先攻，且它擁有自己的回合。它會服從任何你交代它的口頭指令（你不需要花費動作），只要這不會因此違反它的陣營。若你不對該生物交代任何指令，則它將在面對敵對生物時自我防衛，除此之外不採取其他動作。",
 				"這個天界生物的數據資料由DM掌控。"
 			],
@@ -5589,10 +5724,11 @@
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"當你使用9環法術位施放此法術時，你可以改為召喚一個{@filter 挑戰等級5或以下的天界生物|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4;5|type=celestial|miscellaneous=!swarm}。"
+						"當你使用9環法術位施放此法術時，你可以改為召喚一個{@filter 挑戰等級5或以下的天界生物|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3;4;5|type=celestial|miscellaneous=!swarm}."
 					]
 				}
 			],
+			"isSummon": true,
 			"page": 225
 		},
 		{
@@ -5654,7 +5790,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"你呼喚出一個元素僕役。選擇射程內一處在10呎邊長立方體內充滿氣、土、火、或水的區域。一個對應你所選區域的{@filter 挑戰等級5或以下的元素生物|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4;5|type=elemental|miscellaneous=!swarm}將會出現在距離該處10呎內的一處未被佔據空間。舉例來說，一個{@creature 火元素}會從一團篝火中浮現，而一個{@creature 土元素}會從大地中升起。該元素生物會在它生命值歸零或此法術結束時消失。",
+				"你呼喚出一個元素僕役。選擇射程內一處在10呎邊長立方體內充滿氣、土、火、或水的區域。一個對應你所選區域的{@filter 挑戰等級5或以下的元素生物|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3;4;5|type=elemental|miscellaneous=!swarm}將會出現在距離該處10呎內的一處未被佔據空間。舉例來說，一個{@creature 火元素}會從一團篝火中浮現，而一個{@creature 土元素}會從大地中升起。該元素生物會在它生命值歸零或此法術結束時消失。",
 				"該元素生物對你和你的同伴友善。為該元素生物骰先攻，且它擁有自己的回合。它會服從任何你交代它的口頭指令（你不需要花費動作）。若你不對該生物交代任何指令，則它將在面對敵對生物時自我防衛，除此之外不採取其他動作。",
 				"若你的專注被中斷，該元素生物並不會消失。取而代之，你將失去對該元素生物的控制，它將會對你和你的同伴具有敵意，且可能會展開攻擊。一個失去控制的元素生物無法被你解消，且它會在你召喚它之後1小時後消失。",
 				"這個元素生物的數據資料由DM掌控。"
@@ -5668,6 +5804,7 @@
 					]
 				}
 			],
+			"isSummon": true,
 			"page": 225
 		},
 		{
@@ -5715,7 +5852,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"你召喚出一個{@filter 挑戰等級6或以下的精類生物|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4;5;6|type=fey|miscellaneous=!swarm}、或一個呈現{@filter 挑戰等級6或以下的野獸|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4;5;6|type=beast|miscellaneous=!swarm}型態的精類精魂。它將出現在射程內一處你所能看見的未被佔據空間。該精類生物會在它生命值歸零或此法術結束時消失。",
+				"你召喚出一個{@filter 挑戰等級6或以下的精類生物|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3;4;5;6|type=fey|miscellaneous=!swarm}、或一個呈現{@filter 挑戰等級6或以下的野獸|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3;4;5;6|type=beast|miscellaneous=!swarm}型態的精類精魂。它將出現在射程內一處你所能看見的未被佔據空間。該精類生物會在它生命值歸零或此法術結束時消失。",
 				"該精類生物在法術持續期間對你和你的同伴友善。為該精類生物骰先攻，且它擁有自己的回合。它會服從任何你交代它的口頭指令（你不需要花費動作），只要這不會因此違反它的陣營。若你不對該生物交代任何指令，則它將在面對敵對生物時自我防衛，除此之外不採取其他動作。",
 				"若你的專注被中斷，該精類生物並不會消失。取而代之，你將失去對該精類生物的控制，它將會對你和你的同伴具有敵意，且可能會展開攻擊。一個失去控制的精類生物無法被你解消，且它會在你召喚它之後1小時後消失。",
 				"這個精類生物的數據資料由DM掌控。"
@@ -5729,6 +5866,7 @@
 					]
 				}
 			],
+			"isSummon": true,
 			"page": 226
 		},
 		{
@@ -5780,10 +5918,10 @@
 				{
 					"type": "list",
 					"items": [
-						"一個{@filter 挑戰等級2或以下的元素生物|bestiary|cr=2|type=elemental|miscellaneous=!swarm}",
-						"二個{@filter 挑戰等級1或以下的元素生物|bestiary|cr=1|type=elemental|miscellaneous=!swarm}",
-						"四個{@filter 挑戰等級1/2或以下的元素生物|bestiary|cr=1/2|type=elemental|miscellaneous=!swarm}",
-						"八個{@filter 挑戰等級1/4或以下的元素生物|bestiary|cr=0;1/8;1/4|type=elemental|miscellaneous=!swarm}."
+						"一個{@filter 挑戰等級2或以下的元素生物|bestiary|challenge rating=2|type=elemental|miscellaneous=!swarm}",
+						"二個{@filter 挑戰等級1或以下的元素生物|bestiary|challenge rating=1|type=elemental|miscellaneous=!swarm}",
+						"四個{@filter 挑戰等級1/2或以下的元素生物|bestiary|challenge rating=1/2|type=elemental|miscellaneous=!swarm}",
+						"八個{@filter 挑戰等級1/4或以下的元素生物|bestiary|challenge rating=0;1/8;1/4|type=elemental|miscellaneous=!swarm}."
 					]
 				},
 				"一個被此法術召喚的元素生物會在它生命值歸零或此法術結束時消失。",
@@ -5799,6 +5937,7 @@
 					]
 				}
 			],
+			"isSummon": true,
 			"page": 226
 		},
 		{
@@ -5843,6 +5982,9 @@
 			"page": 226,
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"Y"
 			]
 		},
 		{
@@ -5895,10 +6037,10 @@
 				{
 					"type": "list",
 					"items": [
-						"一個{@filter 挑戰等級2或以下的精類生物|bestiary|cr=2|type=fey|miscellaneous=!swarm}",
-						"二個{@filter 挑戰等級1或以下的精類生物|bestiary|cr=1|type=fey|miscellaneous=!swarm}",
-						"四個{@filter 挑戰等級1/2或以下的精類生物|bestiary|cr=1/2|type=fey|miscellaneous=!swarm}",
-						"八個{@filter 挑戰等級1/4或以下的精類生物|bestiary|cr=0;1/8;1/4|type=fey|miscellaneous=!swarm}"
+						"一個{@filter 挑戰等級2或以下的精類生物|bestiary|challenge rating=2|type=fey|miscellaneous=!swarm}",
+						"二個{@filter 挑戰等級1或以下的精類生物|bestiary|challenge rating=1|type=fey|miscellaneous=!swarm}",
+						"四個{@filter 挑戰等級1/2或以下的精類生物|bestiary|challenge rating=1/2|type=fey|miscellaneous=!swarm}",
+						"八個{@filter 挑戰等級1/4或以下的精類生物|bestiary|challenge rating=0;1/8;1/4|type=fey|miscellaneous=!swarm}"
 					]
 				},
 				"一個被召喚的生物會在它生命值歸零或此法術結束時消失。",
@@ -5914,6 +6056,7 @@
 					]
 				}
 			],
+			"isSummon": true,
 			"page": 226
 		},
 		{
@@ -6104,6 +6247,9 @@
 				"blinded",
 				"stunned",
 				"poisoned"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -6336,6 +6482,9 @@
 			],
 			"opposedCheck": [
 				"strength"
+			],
+			"areaTags": [
+				"N"
 			]
 		},
 		{
@@ -6559,6 +6708,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -6759,6 +6911,7 @@
 				}
 			],
 			"page": 229,
+			"isSummon": true,
 			"permanentEffects": true
 		},
 		{
@@ -6848,6 +7001,9 @@
 					"baseName": "Genasi",
 					"baseSource": "EEPC"
 				}
+			],
+			"areaTags": [
+				"C"
 			]
 		},
 		{
@@ -7051,6 +7207,9 @@
 			],
 			"conditionInflict": [
 				"charmed"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -7120,6 +7279,9 @@
 			"page": 230,
 			"damageInflict": [
 				"radiant"
+			],
+			"areaTags": [
+				"R"
 			]
 		},
 		{
@@ -7239,7 +7401,10 @@
 					"baseSource": "PHB"
 				}
 			],
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "舞光術", "ENG_name": "Dancing Lights",
@@ -7480,6 +7645,9 @@
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
 				}
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -7540,7 +7708,10 @@
 			"entries": [
 				"你觸碰一個自願生物以賦予它能在黑暗中視物的能力。在法術持續期間，該生物獲得60呎黑暗視覺。"
 			],
-			"page": 230
+			"page": 230,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "晝明術", "ENG_name": "Daylight",
@@ -7661,6 +7832,9 @@
 					"name": "Aasimar",
 					"source": "DMG"
 				}
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -7776,7 +7950,10 @@
 				"當目標第一次因為受到傷害而導致生命值歸零時，目標改為使生命值減少至1，且此法術結束。",
 				"若此法術在目標受到不造成傷害而導致它立刻死亡的效果時仍然作用著，則其對目標的即死效果將被抵銷，且此法術結束。"
 			],
-			"page": 230
+			"page": 230,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "延遲爆裂火球", "ENG_name": "Delayed Blast Fireball",
@@ -7844,6 +8021,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -7995,6 +8175,10 @@
 			],
 			"conditionInflict": [
 				"prone"
+			],
+			"areaTags": [
+				"MT",
+				"R"
 			]
 		},
 		{
@@ -8607,6 +8791,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -8677,6 +8864,9 @@
 			],
 			"spellAttack": [
 				"M"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -8782,7 +8972,10 @@
 					]
 				}
 			],
-			"page": 234
+			"page": 234,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "噪音暗語", "ENG_name": "Dissonant Whispers",
@@ -8848,6 +9041,9 @@
 			],
 			"savingThrow": [
 				"wisdom"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -9047,6 +9243,9 @@
 				"blinded",
 				"deafened",
 				"stunned"
+			],
+			"areaTags": [
+				"MT"
 			]
 		},
 		{
@@ -9186,6 +9385,9 @@
 			],
 			"conditionInflict": [
 				"charmed"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -9261,6 +9463,9 @@
 			],
 			"conditionInflict": [
 				"charmed"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -9444,6 +9649,9 @@
 			],
 			"conditionInflict": [
 				"charmed"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -9567,6 +9775,9 @@
 			],
 			"savingThrow": [
 				"wisdom"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -9713,6 +9924,9 @@
 			],
 			"conditionInflict": [
 				"prone"
+			],
+			"areaTags": [
+				"R"
 			]
 		},
 		{
@@ -9761,7 +9975,10 @@
 			"spellAttack": [
 				"R"
 			],
-			"scalingEffects": true
+			"scalingEffects": true,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "元素武器", "ENG_name": "Elemental Weapon",
@@ -10037,7 +10254,10 @@
 					]
 				}
 			],
-			"page": 237
+			"page": 237,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "變巨/縮小術", "ENG_name": "Enlarge/Reduce",
@@ -10147,6 +10367,9 @@
 					"baseName": "Dwarf",
 					"baseSource": "PHB"
 				}
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -10313,6 +10536,9 @@
 			],
 			"conditionInflict": [
 				"restrained"
+			],
+			"areaTags": [
+				"Q"
 			]
 		},
 		{
@@ -10384,6 +10610,9 @@
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
 				}
+			],
+			"areaTags": [
+				"MT"
 			]
 		},
 		{
@@ -10553,6 +10782,9 @@
 			],
 			"conditionInflict": [
 				"restrained"
+			],
+			"areaTags": [
+				"Q"
 			]
 		},
 		{
@@ -10705,6 +10937,9 @@
 			"conditionInflict": [
 				"frightened",
 				"unconscious"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -10872,6 +11107,9 @@
 					"baseName": "Half-Elf",
 					"baseSource": "PHB"
 				}
+			],
+			"areaTags": [
+				"C"
 			]
 		},
 		{
@@ -11122,6 +11360,9 @@
 			],
 			"conditionInflict": [
 				"frightened"
+			],
+			"areaTags": [
+				"N"
 			]
 		},
 		{
@@ -11187,7 +11428,10 @@
 			"entries": [
 				"選擇最多五個射程內的生物。直到法術結束前，墜落中生物的下降速率降至每輪60呎。若該生物在法術結束之前落地，則它不會承受任何墜落傷害且能用它的腳著地，接著結束這個法術對該生物的效果。"
 			],
-			"page": 239
+			"page": 239,
+			"areaTags": [
+				"MT"
+			]
 		},
 		{
 			"name": "弱智術", "ENG_name": "Feeblemind",
@@ -11249,6 +11493,9 @@
 			],
 			"savingThrow": [
 				"intelligence"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -11349,6 +11596,9 @@
 			"conditionInflict": [
 				"blinded",
 				"incapacitated"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -11404,6 +11654,7 @@
 				"最後，當你施放一個射程為觸碰的法術時，你的魔寵可以傳遞該法術就彷彿它施放了該法術一樣。你的魔寵必須位於你100呎範圍內，且它必須在你施放時使用它的反應以傳遞法術。如果該法術要求一次攻擊檢定，則你在該檢定中使用你的攻擊調整值。"
 			],
 			"page": 240,
+			"isSummon": true,
 			"permanentEffects": true
 		},
 		{
@@ -11448,6 +11699,7 @@
 				"當你的坐騎距離你1哩內，你可以與它藉由心靈感應溝通。",
 				"你不能同時擁有超過一隻透過此法術連結的坐騎。以一個動作，你可以在任何時候將該坐騎從它與你的連結中釋放，使它憑空消失。"
 			],
+			"isSummon": true,
 			"page": 240
 		},
 		{
@@ -11610,7 +11862,10 @@
 			"savingThrow": [
 				"constitution"
 			],
-			"permanentEffects": true
+			"permanentEffects": true,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "火焰箭", "ENG_name": "Fire Bolt",
@@ -11683,6 +11938,9 @@
 					"baseName": "Elf",
 					"baseSource": "PHB"
 				}
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -11824,6 +12082,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"C"
 			]
 		},
 		{
@@ -11927,6 +12188,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -11997,6 +12261,9 @@
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
 				}
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -12136,6 +12403,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"Y"
 			]
 		},
 		{
@@ -12256,6 +12526,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -12316,6 +12589,9 @@
 			"conditionInflict": [
 				"petrified",
 				"restrained"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -12382,7 +12658,10 @@
 					]
 				}
 			],
-			"page": 243
+			"page": 243,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "雲霧術", "ENG_name": "Fog Cloud",
@@ -12477,6 +12756,9 @@
 					"name": "Triton",
 					"source": "VGM"
 				}
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -12599,6 +12881,9 @@
 			"page": 243,
 			"savingThrow": [
 				"charisma"
+			],
+			"areaTags": [
+				"C"
 			]
 		},
 		{
@@ -12656,7 +12941,10 @@
 				"你觸碰一個自願生物並賜予它能夠看見當前未來的有限能力。在法術持續期間，目標不會被突襲，且在所有攻擊檢定、屬性檢定、豁免檢定中具有優勢。此外，在法術持續期間，其他生物對目標進行的攻擊檢定將具有劣勢。",
 				"若你在持續時間結束前再次施放此它，則此法術立刻結束。"
 			],
-			"page": 244
+			"page": 244,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "行動自如術", "ENG_name": "Freedom of Movement",
@@ -12804,7 +13092,10 @@
 				"你觸碰一個自願生物。在法術持續期間，目標的移動不會受到困難地形的影響，且法術和其他魔法效果無法降低目標的移動速度、也無法使它被{@condition 麻痺}或{@condition 束縛}。",
 				"目標也可以花費5呎移動速度以自動從非魔法束縛中逃脫，像是{@item 鐐銬|phb}或一個使它{@condition 被擒}的生物。最後，處於水下並不會對目標的移動和攻擊產生任何懲罰。"
 			],
-			"page": 244
+			"page": 244,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "交友術", "ENG_name": "Friends",
@@ -12884,6 +13175,9 @@
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
 				}
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -12966,7 +13260,10 @@
 				"當處於這個形態時，目標唯一的移動手段為10呎的飛行速度。目標可以可以進入並佔據其他生物所在的空間。目標具有對非魔法傷害的抗性，且它在力量、敏捷、和體質豁免中具有優勢。目標可以穿過小孔洞、狹窄的開口、甚至裂縫，但它將視液體如同其為固體表面。目標即使在陷入{@condition 震懾}或{@condition 無力}狀態時也不會墜落，且會懸浮在空中。",
 				"當處於這個朦朧雲霧的形態時，目標無法說話或操縱物體，且任何它所攜帶或持握的物體不會掉落、被使用或互動。目標無法攻擊或施放法術。"
 			],
-			"page": 244
+			"page": 244,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "異界之門", "ENG_name": "Gate",
@@ -13117,6 +13414,9 @@
 			],
 			"conditionInflict": [
 				"charmed"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -13271,7 +13571,11 @@
 				"一個生物會在法術持續期間維持它的巨大體型，直到它生命值歸零，或你使用一個動作解消它身上的效果。",
 				"DM可能會允許你選擇不同的目標。舉例來說，若你轉變一隻蜜蜂，則牠的巨大版本可能會擁有與{@creature 巨黃蜂}相同的數據資料。"
 			],
-			"page": 245
+			"isSummon": true,
+			"page": 245,
+			"areaTags": [
+				"MT"
+			]
 		},
 		{
 			"name": "花言巧語", "ENG_name": "Glibness",
@@ -13377,7 +13681,10 @@
 					]
 				}
 			],
-			"page": 245
+			"page": 245,
+			"areaTags": [
+				"S"
+			]
 		},
 		{
 			"name": "守衛銘文", "ENG_name": "Glyph of Warding",
@@ -13499,6 +13806,9 @@
 			],
 			"opposedCheck": [
 				"intelligence"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -13610,6 +13920,9 @@
 			"page": 246,
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -13662,6 +13975,9 @@
 			],
 			"conditionInflict": [
 				"prone"
+			],
+			"areaTags": [
+				"Q"
 			]
 		},
 		{
@@ -13790,6 +14106,9 @@
 			"page": 246,
 			"conditionInflict": [
 				"invisible"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -13873,7 +14192,10 @@
 					]
 				}
 			],
-			"page": 246
+			"page": 246,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "虔誠守衛", "ENG_name": "Guardian of Faith",
@@ -14099,7 +14421,10 @@
 				"你可以透過每天施展此法術一整年，來創造出受到銅牆鐵壁效果永久保護的建築物。"
 			],
 			"page": 248,
-			"permanentEffects": true
+			"permanentEffects": true,
+			"areaTags": [
+				"Q"
+			]
 		},
 		{
 			"name": "指導術", "ENG_name": "Guidance",
@@ -14147,7 +14472,10 @@
 			"entries": [
 				"你觸碰一個自願生物。在法術結束前一次，目標可以擲一顆{@dice d4}，並將骰出的數字加到它所選的一次屬性檢定中。它可以在進行該屬性檢定之前或之後擲這顆骰。然後法術將會結束。"
 			],
-			"page": 248
+			"page": 248,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "光導箭", "ENG_name": "Guiding Bolt",
@@ -14228,6 +14556,9 @@
 			],
 			"spellAttack": [
 				"R"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -14327,6 +14658,9 @@
 					"name": "Triton",
 					"source": "VGM"
 				}
+			],
+			"areaTags": [
+				"L"
 			]
 		},
 		{
@@ -14385,6 +14719,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -14617,6 +14954,9 @@
 			"page": 249,
 			"opposedCheck": [
 				"intelligence"
+			],
+			"areaTags": [
+				"C"
 			]
 		},
 		{
@@ -14663,6 +15003,9 @@
 			],
 			"savingThrow": [
 				"constitution"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -14791,7 +15134,10 @@
 				"選擇一個射程內你所能看見的自願生物。直到此法術結束前，目標的移動速度變為兩倍，它的AC獲得+2加值，在敏捷豁免中具有優勢，且在它的每個回合中獲得一個額外的動作。這個動作只能被用來採取{@action 攻擊}（僅有一次武器攻擊）、{@action 疾走}、{@action 撤離}、{@action 躲藏}、或{@action 使用物件}動作。",
 				"當此法術結束時，一陣無力感襲向目標，直到它的下個回合結束前，它都無法移動或採取動作。"
 			],
-			"page": 250
+			"page": 250,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "治癒術", "ENG_name": "Heal",
@@ -14845,7 +15191,10 @@
 				}
 			],
 			"page": 250,
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "治癒真言", "ENG_name": "Healing Word",
@@ -14902,7 +15251,10 @@
 				}
 			],
 			"page": 250,
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "灼熱金屬", "ENG_name": "Heat Metal",
@@ -15000,6 +15352,9 @@
 			],
 			"savingThrow": [
 				"constitution"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -15094,6 +15449,9 @@
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
 				}
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -15147,6 +15505,9 @@
 			"page": 250,
 			"damageImmune": [
 				"poison"
+			],
+			"areaTags": [
+				"MT"
 			]
 		},
 		{
@@ -15237,7 +15598,10 @@
 					]
 				}
 			],
-			"page": 250
+			"page": 250,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "脆弱詛咒", "ENG_name": "Hex",
@@ -15317,6 +15681,9 @@
 					"baseName": "Elf (Zendikar)",
 					"baseSource": "PSZ"
 				}
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -15452,6 +15819,9 @@
 			],
 			"conditionInflict": [
 				"paralyzed"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -15627,6 +15997,9 @@
 			],
 			"conditionInflict": [
 				"paralyzed"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -15681,6 +16054,9 @@
 			],
 			"conditionInflict": [
 				"blinded"
+			],
+			"areaTags": [
+				"R"
 			]
 		},
 		{
@@ -15738,6 +16114,9 @@
 			],
 			"conditionInflict": [
 				"blinded"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -15806,6 +16185,9 @@
 			"page": 251,
 			"opposedCheck": [
 				"wisdom"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -15903,6 +16285,9 @@
 			"conditionInflict": [
 				"charmed",
 				"incapacitated"
+			],
+			"areaTags": [
+				"C"
 			]
 		},
 		{
@@ -16022,6 +16407,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"Y"
 			]
 		},
 		{
@@ -16105,7 +16493,10 @@
 				"你選擇一個你必須在施放此法術時始終觸碰著的物體。如果它是一件魔法物品或含有魔法的物品，你將得知它的特性、該如何使用它們、它是否需要同調才能使用、以及它還剩下幾次充能（若有）。你得知是否有任何法術正在作用這個物品，若有則你也以知道那是什麼法術。如果該物品是被某個法術所創造的，你也得知是什麼法術創造了它。",
 				"如果你在施法時觸碰的是一個生物而非物體，則你得知現在有什麼法術正在影響它（若有）。"
 			],
-			"page": 252
+			"page": 252,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "迷幻手稿", "ENG_name": "Illusory Script",
@@ -16273,6 +16664,9 @@
 			],
 			"conditionInflict": [
 				"restrained"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -16330,6 +16724,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -16416,6 +16813,9 @@
 			],
 			"spellAttack": [
 				"M"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -16592,6 +16992,9 @@
 			],
 			"savingThrow": [
 				"constitution"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -16737,6 +17140,9 @@
 			],
 			"conditionInflict": [
 				"invisible"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -16833,6 +17239,9 @@
 					"baseName": "Gith",
 					"baseSource": "MTF"
 				}
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -17094,7 +17503,10 @@
 				"這個半球可以容納你和九個體型為中型或更小的生物。若該區域內包括了一個大型生物或超過九個生物，則此法術失敗。在你施放此法術時就處於半球內的生物和物體可以自由地移動穿過此半球。所有其他生物和物體都將被阻擋而無法穿過半球。法術和其他魔法效果無法延伸或被施放穿過半球。無論外側的天候如何，半球內的空氣永遠舒適而乾燥。",
 				"直到此法術結束前，你可以控制半球內部的照明變為微光或黑暗。從外側看，這個半球是不透明且呈現任何你所選的顏色，但它從內側看出去則是透明的。"
 			],
-			"page": 255
+			"page": 255,
+			"areaTags": [
+				"H"
+			]
 		},
 		{
 			"name": "次級復原術", "ENG_name": "Lesser Restoration",
@@ -17201,6 +17613,9 @@
 					"name": "Aasimar",
 					"source": "DMG"
 				}
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -17282,6 +17697,9 @@
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
 				}
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -17454,6 +17872,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -17548,6 +17969,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"L"
 			]
 		},
 		{
@@ -17867,7 +18291,10 @@
 					]
 				}
 			],
-			"page": 256
+			"page": 256,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "法師護甲", "ENG_name": "Mage Armor",
@@ -17915,7 +18342,10 @@
 			"entries": [
 				"你觸碰一個沒有穿戴護甲的自願生物，直到法術結束前，一道防護性的魔法力場將環繞在它身邊。目標的基本AC變為13+它的敏捷調整值。此法術將在目標穿戴護甲或你以一個動作解消此法術時結束。"
 			],
-			"page": 256
+			"page": 256,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "法師之手", "ENG_name": "Mage Hand",
@@ -18158,6 +18588,9 @@
 			"page": 256,
 			"savingThrow": [
 				"charisma"
+			],
+			"areaTags": [
+				"Y"
 			]
 		},
 		{
@@ -18295,6 +18728,9 @@
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
 				}
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -18637,7 +19073,11 @@
 				}
 			],
 			"page": 258,
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"MT",
+				"S"
+			]
 		},
 		{
 			"name": "群體治癒術", "ENG_name": "Mass Heal",
@@ -18678,7 +19118,10 @@
 				"一陣治癒能量洪流從你流至你周圍的重傷生物體內。你回復最多700點生命值，由你決定如何分配給射程內任意數量你所能看見的生物。且此法術所治癒的生物身上所有的疾病、以及任何使它們{@condition 目盲}或{@condition 耳聾}的效果都將被痊癒。此法術對不死生物或構裝體沒有任何效果。"
 			],
 			"page": 258,
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"MT"
+			]
 		},
 		{
 			"name": "群體治癒真言", "ENG_name": "Mass Healing Word",
@@ -18739,7 +19182,10 @@
 				}
 			],
 			"page": 258,
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"MT"
+			]
 		},
 		{
 			"name": "群體暗示術", "ENG_name": "Mass Suggestion",
@@ -18813,6 +19259,9 @@
 			],
 			"conditionInflict": [
 				"charmed"
+			],
+			"areaTags": [
+				"MT"
 			]
 		},
 		{
@@ -18860,7 +19309,10 @@
 				"目標可以使用它的動作以嘗試逃脫。當它這麼做時，它進行一次DC 20的智力檢定。若它檢定成功，則它成功逃脫，且此法術結束（{@creature 米諾陶}或{@creature 巨牛魔}將自動通過此檢定）。",
 				"當此法術結束時，目標將重新出現在它離開時所在的空間，或若該空間已被佔據，則出現在最近的一處未被佔據空間。"
 			],
-			"page": 258
+			"page": 258,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "融身入石", "ENG_name": "Meld into Stone",
@@ -19000,6 +19452,9 @@
 			],
 			"spellAttack": [
 				"R"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -19119,6 +19574,9 @@
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
 				}
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -19171,6 +19629,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -19750,6 +20211,9 @@
 			"conditionInflict": [
 				"charmed",
 				"incapacitated"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -19826,6 +20290,9 @@
 			],
 			"savingThrow": [
 				"constitution"
+			],
+			"areaTags": [
+				"Y"
 			]
 		},
 		{
@@ -20066,6 +20533,9 @@
 			],
 			"spellAttack": [
 				"M"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -20124,7 +20594,10 @@
 				"此法術無法改變天然岩石或石製建築。岩石和建築物會被搬移以適應新的地形。若你重塑地形的方式可能會導致建築結構不穩定，則它可能會因此崩塌。",
 				"同樣的，此法術無法直接影響植物的生長。被影響的土壤會帶著任何生長在上面的植物一起移動。"
 			],
-			"page": 263
+			"page": 263,
+			"areaTags": [
+				"Q"
+			]
 		},
 		{
 			"name": "迴避偵測", "ENG_name": "Nondetection",
@@ -20202,7 +20675,10 @@
 			"entries": [
 				"在法術持續期間，你隱藏你所觸碰的目標不受預言系法術偵測。目標可以是一個自願生物、一個地方、或一個各邊不超過10呎的物體。目標將無法成為任何預言系法術的目標，也無法透過魔法占卜偵測等手段被察覺。"
 			],
-			"page": 263
+			"page": 263,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "涅斯圖魔法靈光", "ENG_name": "Nystul's Magic Aura",
@@ -20274,7 +20750,10 @@
 				}
 			],
 			"page": 263,
-			"permanentEffects": true
+			"permanentEffects": true,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "歐提路克冰凍法球", "ENG_name": "Otiluke's Freezing Sphere",
@@ -20335,6 +20814,9 @@
 			],
 			"opposedCheck": [
 				"strength"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -20438,6 +20920,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -20490,6 +20975,9 @@
 			"page": 264,
 			"savingThrow": [
 				"wisdom"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -20570,6 +21058,9 @@
 					"baseName": "Genasi",
 					"baseSource": "EEPC"
 				}
+			],
+			"areaTags": [
+				"MT"
 			]
 		},
 		{
@@ -20823,6 +21314,9 @@
 			],
 			"conditionInflict": [
 				"frightened"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -20916,6 +21410,7 @@
 				"在該生物完成任務後，或超過了服務所商議的持續時間，則該生物將回到它的原生位面。若符合任務且可能達成的話，則它將在此之前回到你身邊並回報結果。若你不能同意該生物服務所需的報酬，則該生物將立刻返回它的原生位面。",
 				"一個被招募加入你隊伍的生物將被視作隊伍的一名成員，且會正常分享隊伍所獲得的經驗值。"
 			],
+			"isSummon": true,
 			"page": 265
 		},
 		{
@@ -21042,6 +21537,10 @@
 			"page": 265,
 			"savingThrow": [
 				"charisma"
+			],
+			"isSummon": true,
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -21109,6 +21608,10 @@
 			],
 			"spellAttack": [
 				"M"
+			],
+			"areaTags": [
+				"ST",
+				"MT"
 			]
 		},
 		{
@@ -21273,6 +21776,9 @@
 					"name": "Yuan-ti Pureblood",
 					"source": "VGM"
 				}
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -21350,6 +21856,9 @@
 			"page": 266,
 			"savingThrow": [
 				"wisdom"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -21390,7 +21899,10 @@
 				"一波治癒能量沖刷你所碰觸的生物。目標回復它所有的生命值。若該生物被{@condition 魅惑}、{@condition 恐懼}、{@condition 麻痺}、或{@condition 震懾}，則該狀態結束。若該生物處於{@condition 伏地}狀態，則它可以使用它的反應起身。此法術對不死生物或構裝體沒有任何效果。"
 			],
 			"page": 266,
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "律令死亡", "ENG_name": "Power Word Kill",
@@ -21441,7 +21953,10 @@
 			"entries": [
 				"你說出一句律令真言，強迫一個射程內你所能看見的生物立即死亡。若你所選的該生物擁有100點生命值或更少，則它立刻死亡。否則此法術不會產生任何效果。"
 			],
-			"page": 266
+			"page": 266,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "律令震懾", "ENG_name": "Power Word Stun",
@@ -21499,6 +22014,9 @@
 			],
 			"conditionInflict": [
 				"stunned"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -21548,7 +22066,10 @@
 				}
 			],
 			"page": 267,
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"MT"
+			]
 		},
 		{
 			"name": "魔法技倆", "ENG_name": "Prestidigitation",
@@ -21755,6 +22276,9 @@
 				"blinded",
 				"petrified",
 				"restrained"
+			],
+			"areaTags": [
+				"N"
 			]
 		},
 		{
@@ -21871,6 +22395,9 @@
 				"blinded",
 				"petrified",
 				"restrained"
+			],
+			"areaTags": [
+				"W"
 			]
 		},
 		{
@@ -21931,6 +22458,9 @@
 					"baseName": "Genasi",
 					"baseSource": "EEPC"
 				}
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -22215,6 +22745,9 @@
 				"fire",
 				"lightning",
 				"thunder"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -22388,7 +22921,10 @@
 				"直到法術結束前，一個你觸碰的自願生物在對抗特定類型的生物時受到保護：天界、異怪、元素、精類、邪魔、和不死生物。",
 				"這項保護提供了數個好處：這些類別的生物在對目標進行的攻擊檢定具有劣勢。目標也不會被它們{@condition 魅惑}、{@condition 恐懼}、或附身。如果目標已經被這類生物{@condition 魅惑}、{@condition 恐懼}、或附身，則目標將在之後任何對抗相關效果的豁免檢定中具有優勢。"
 			],
-			"page": 270
+			"page": 270,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "防護毒素", "ENG_name": "Protection from Poison",
@@ -22473,6 +23009,9 @@
 			"page": 270,
 			"damageResist": [
 				"poison"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -22524,7 +23063,10 @@
 			"entries": [
 				"以你在射程內所選一點為中心，5呎半徑球體內的所有非魔法的食物和飲料被淨化，且變得沒有毒素和疾病。"
 			],
-			"page": 270
+			"page": 270,
+			"areaTags": [
+				"S"
+			]
 		},
 		{
 			"name": "喚醒死者", "ENG_name": "Raise Dead",
@@ -22661,7 +23203,10 @@
 				"你在射程內最多八個你所選擇的自願生物之間創造一道心靈連結，在法術持續期間使每個生物在精神上與所有其他生物聯繫在一起。智力為2或更低的生物不會受到此法術的影響。",
 				"直到此法術結束前，無論目標之間有沒有共通的語言，它們都可以透過這道連結用心靈溝通。這個溝通方式可以跨越任何距離，但不能跨越不同的存在位面。"
 			],
-			"page": 270
+			"page": 270,
+			"areaTags": [
+				"MT"
+			]
 		},
 		{
 			"name": "衰弱射線", "ENG_name": "Ray of Enfeeblement",
@@ -22769,6 +23314,9 @@
 			],
 			"spellAttack": [
 				"R"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -22848,6 +23396,9 @@
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
 				}
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -22949,6 +23500,9 @@
 			],
 			"conditionInflict": [
 				"poisoned"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -23003,7 +23557,10 @@
 				"若目標有任何殘缺的身體部位（手指、腿、尾巴、諸如此類），則這些身體部位將在2分鐘後回復。若你持有這些被斷開的肢體並將之按在斷口上，則此法術將瞬間使該肢體與斷口接合。"
 			],
 			"page": 271,
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "轉生術", "ENG_name": "Reincarnate",
@@ -23257,7 +23814,10 @@
 			"entries": [
 				"隨著你的觸碰，所有正影響著一個生物或物體的詛咒都將結束。如果該物體是被詛咒的魔法物品，它的詛咒仍會存在，但此法術會破壞它擁有者和該物體的同調，並因此可以將它脫下或丟棄。"
 			],
-			"page": 271
+			"page": 271,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "提升抗力", "ENG_name": "Resistance",
@@ -23319,7 +23879,10 @@
 			"entries": [
 				"你觸碰一個自願生物。在法術結束前一次，目標可以擲一顆{@dice d4}，並將骰出的數字加到它所選的一次豁免檢定中。它可以在進行該豁免檢定之前或之後擲這顆骰。然後法術將會結束。"
 			],
-			"page": 272
+			"page": 272,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "復活術", "ENG_name": "Resurrection",
@@ -23431,6 +23994,9 @@
 			"page": 272,
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"Y"
 			]
 		},
 		{
@@ -23536,7 +24102,10 @@
 				"你觸碰一個在過去一分鐘內死去的生物。該生物將以1點生命值的狀態復活。此法術無法復活因年老而死去的生物，也無法恢復它任何失去的身體部位。"
 			],
 			"page": 272,
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "通天繩", "ENG_name": "Rope Trick",
@@ -23699,7 +24268,10 @@
 			"savingThrow": [
 				"dexterity"
 			],
-			"scalingEffects": true
+			"scalingEffects": true,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "聖域術", "ENG_name": "Sanctuary",
@@ -23784,6 +24356,9 @@
 			"page": 272,
 			"savingThrow": [
 				"wisdom"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -23866,6 +24441,9 @@
 			],
 			"spellAttack": [
 				"R"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -24331,6 +24909,9 @@
 			],
 			"opposedCheck": [
 				"intelligence"
+			],
+			"areaTags": [
+				"MT"
 			]
 		},
 		{
@@ -24458,6 +25039,9 @@
 			"page": 274,
 			"conditionInflict": [
 				"invisible"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -24616,6 +25200,9 @@
 			],
 			"savingThrow": [
 				"constitution"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -24796,7 +25383,10 @@
 			"entries": [
 				"一道閃爍著微光的力場出現並環繞在射程內你所選擇的一個生物身邊，使它在法術持續時間內的AC獲得+2加值。"
 			],
-			"page": 275
+			"page": 275,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "橡棍術", "ENG_name": "Shillelagh",
@@ -24917,7 +25507,10 @@
 			"spellAttack": [
 				"M"
 			],
-			"scalingEffects": true
+			"scalingEffects": true,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "沉默術", "ENG_name": "Silence",
@@ -25009,6 +25602,9 @@
 			"page": 275,
 			"conditionInflict": [
 				"deafened"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -25217,6 +25813,9 @@
 			"page": 276,
 			"conditionInflict": [
 				"unconscious"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -25303,6 +25902,9 @@
 			],
 			"conditionInflict": [
 				"prone"
+			],
+			"areaTags": [
+				"Y"
 			]
 		},
 		{
@@ -25393,6 +25995,10 @@
 			"savingThrow": [
 				"wisdom",
 				"dexterity"
+			],
+			"areaTags": [
+				"MT",
+				"C"
 			]
 		},
 		{
@@ -25446,6 +26052,9 @@
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
 				}
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -25892,6 +26501,9 @@
 			],
 			"opposedCheck": [
 				"wisdom"
+			],
+			"areaTags": [
+				"R"
 			]
 		},
 		{
@@ -25977,6 +26589,9 @@
 			],
 			"savingThrow": [
 				"wisdom"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -26100,6 +26715,9 @@
 			],
 			"spellAttack": [
 				"M"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -26284,6 +26902,9 @@
 			"page": 278,
 			"savingThrow": [
 				"constitution"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -26512,6 +27133,9 @@
 				"bludgeoning",
 				"piercing",
 				"slashing"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -26599,6 +27223,9 @@
 			],
 			"conditionInflict": [
 				"deafened"
+			],
+			"areaTags": [
+				"Y"
 			]
 		},
 		{
@@ -26712,6 +27339,9 @@
 					"name": "Yuan-ti Pureblood",
 					"source": "VGM"
 				}
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -26777,6 +27407,9 @@
 			],
 			"conditionInflict": [
 				"blinded"
+			],
+			"areaTags": [
+				"L"
 			]
 		},
 		{
@@ -26837,6 +27470,9 @@
 			],
 			"conditionInflict": [
 				"blinded"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -27018,6 +27654,9 @@
 				"incapacitated",
 				"stunned",
 				"unconscious"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -27096,6 +27735,9 @@
 			"conditionInflict": [
 				"incapacitated",
 				"prone"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -27177,6 +27819,9 @@
 			"page": 280,
 			"conditionInflict": [
 				"restrained"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -27222,7 +27867,10 @@
 				"你在你自己和一個你所熟悉的自願生物之間創造一道心靈連結。該生物可以位於你所在存在位面上的任何地方。若你或目標不再處於相同的位面，則此法術結束。",
 				"直到此法術結束前，你和目標可以透過這道連結與對方即時分享話語、影像、聲音、和其他感官信息，且目標將會認出與它交流的生物是你。此法術能夠讓一個智力至少為1的生物理解你話語的意義以及任何你傳給它的感官信息。"
 			],
-			"page": 281
+			"page": 281,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "傳送術", "ENG_name": "Teleport",
@@ -27731,7 +28379,10 @@
 			"spellAttack": [
 				"M"
 			],
-			"scalingEffects": true
+			"scalingEffects": true,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "雷霆斬", "ENG_name": "Thunderous Smite",
@@ -27914,6 +28565,9 @@
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
 				}
+			],
+			"areaTags": [
+				"C"
 			]
 		},
 		{
@@ -28209,7 +28863,7 @@
 					"type": "entries",
 					"name": "物體變成生物",
 					"entries": [
-						"你可以將一個物體變成一個任意種類的生物，只要該生物的體型不超過該物體的尺寸，且該生物的{@filter 挑戰等級不大於9或更低|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4;5;67;8;9|miscellaneous=!swarm}。該生物對你和你的同伴友善。它在每個你的回合行動。你決定它將採取什麼動作以及它如何移動。這個生物的數據資料由DM掌控，且由DM處理它所有的動作和移動。"
+						"你可以將一個物體變成一個任意種類的生物，只要該生物的體型不超過該物體的尺寸，且該生物的{@filter 挑戰等級不大於9或更低|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3;4;5;67;8;9|miscellaneous=!swarm}。該生物對你和你的同伴友善。它在每個你的回合行動。你決定它將採取什麼動作以及它如何移動。這個生物的數據資料由DM掌控，且由DM處理它所有的動作和移動。"
 					]
 				},
 				"若此法術變為永久有效，你將不再能控制該生物。根據你對待它的方式，它可能會維持對你的友善態度。",
@@ -28225,7 +28879,11 @@
 			"savingThrow": [
 				"wisdom"
 			],
-			"permanentEffects": true
+			"permanentEffects": true,
+			"isSummon": true,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "完全復活術", "ENG_name": "True Resurrection",
@@ -28276,7 +28934,10 @@
 				"若原本的身體已經不復存在，此法術甚至可以提供一具新的身體，但在這個情況下你必須說出該生物的名字。該生物接著將會出現在距離你10呎內一處你所選擇的未被佔據空間。"
 			],
 			"page": 284,
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "真知術", "ENG_name": "True Seeing",
@@ -28460,6 +29121,9 @@
 			],
 			"opposedCheck": [
 				"strength"
+			],
+			"areaTags": [
+				"W"
 			]
 		},
 		{
@@ -28644,7 +29308,10 @@
 			"spellAttack": [
 				"M"
 			],
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "惡毒嘲笑", "ENG_name": "Vicious Mockery",
@@ -28699,6 +29366,9 @@
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
 				}
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -28832,6 +29502,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"W"
 			]
 		},
 		{
@@ -28914,6 +29587,9 @@
 			"page": 285,
 			"damageImmune": [
 				"force"
+			],
+			"areaTags": [
+				"W"
 			]
 		},
 		{
@@ -28978,6 +29654,9 @@
 			"savingThrow": [
 				"dexterity",
 				"constitution"
+			],
+			"areaTags": [
+				"W"
 			]
 		},
 		{
@@ -29065,7 +29744,10 @@
 			"savingThrow": [
 				"dexterity"
 			],
-			"permanentEffects": true
+			"permanentEffects": true,
+			"areaTags": [
+				"W"
+			]
 		},
 		{
 			"name": "棘牆術", "ENG_name": "Wall of Thorns",
@@ -29129,6 +29811,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"W"
 			]
 		},
 		{
@@ -29199,7 +29884,10 @@
 				"此法術守護著你觸碰的一個自願生物，且在你和目標之間創造一道神祕的連結直到法術結束。當目標處於你60呎範圍內，它的AC和豁免檢定將獲得+1加值，且它獲得對所有傷害的抗性。同時，每當它受到傷害，你也將承受等量的傷害。",
 				"此法術將在你的生命值歸零、或你與目標分開距離超過60呎時結束。它也會在此法術被重複施放於任一個被連結生物時結束。你也可以以一個動作解消此法術。"
 			],
-			"page": 287
+			"page": 287,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "水下呼吸", "ENG_name": "Water Breathing",
@@ -29286,7 +29974,10 @@
 			"entries": [
 				"直到此法術結束前，此法術能賦予射程內最多十個你所能看見的自願生物在水下呼吸的能力。受影響的生物同時也保留它們正常的呼吸模式。"
 			],
-			"page": 287
+			"page": 287,
+			"areaTags": [
+				"MT"
+			]
 		},
 		{
 			"name": "水面行走", "ENG_name": "Water Walk",
@@ -29375,7 +30066,10 @@
 				"此法術將給予在任何液體表面上行走的能力\u2014像是水、酸液、泥漿、雪、流沙、或岩漿\u2014就如同它們是無害的固體表面一樣（走過熔岩的生物仍可能會因為高溫而受到傷害）。射程內最多十個你所能看見的生物將在法術持續期間獲得這個能力。",
 				"若你以一個被液體淹沒的生物為目標，此法術將以每輪60呎的速率將目標帶到液體表面。"
 			],
-			"page": 287
+			"page": 287,
+			"areaTags": [
+				"MT"
+			]
 		},
 		{
 			"name": "蛛網術", "ENG_name": "Web",
@@ -29472,6 +30166,9 @@
 			],
 			"conditionInflict": [
 				"restrained"
+			],
+			"areaTags": [
+				"C"
 			]
 		},
 		{
@@ -29526,6 +30223,9 @@
 			],
 			"conditionInflict": [
 				"frightened"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -29575,6 +30275,9 @@
 			"page": 288,
 			"conditionInflict": [
 				"incapacitated"
+			],
+			"areaTags": [
+				"MT"
 			]
 		},
 		{
@@ -29645,6 +30348,9 @@
 			],
 			"savingThrow": [
 				"strength"
+			],
+			"areaTags": [
+				"W"
 			]
 		},
 		{
@@ -29788,6 +30494,9 @@
 			],
 			"spellAttack": [
 				"R"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -30043,6 +30752,9 @@
 			"page": 289,
 			"savingThrow": [
 				"charisma"
+			],
+			"areaTags": [
+				"S"
 			]
 		}
 	]

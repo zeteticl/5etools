@@ -12,6 +12,7 @@ const META_ADD_M_COST = "Material with Cost";
 const META_ADD_M_CONSUMED = "Material is Consumed";
 const META_ADD_MB_PERMANENT = "Permanent Effects";
 const META_ADD_MB_SCALING = "Scaling Effects";
+const META_ADD_MB_SUMMONS = "Summons Creature";
 const META_ADD_MB_HEAL = "Healing";
 const META_RITUAL = "Ritual";
 const META_TECHNOMAGIC = "Technomagic";
@@ -24,6 +25,7 @@ META_ADD_TO_FULL[META_ADD_M_COST] = "價值材料";
 META_ADD_TO_FULL[META_ADD_M_CONSUMED] = "消耗材料";
 META_ADD_TO_FULL[META_ADD_MB_PERMANENT] = "永久效果";
 META_ADD_TO_FULL[META_ADD_MB_SCALING] = "升級效果";
+META_ADD_TO_FULL[META_ADD_MB_SUMMONS] = "召喚生物";
 META_ADD_TO_FULL[META_ADD_MB_HEAL] = "治療";
 META_ADD_TO_FULL[META_RITUAL] = "儀式";
 META_ADD_TO_FULL[META_TECHNOMAGIC] = "科技魔法";
@@ -131,8 +133,12 @@ function getNormalisedRange (range) {
 			offset = 5;
 			adjustForDistance();
 			break;
-		case RNG_CUBE:
+		case RNG_CYLINDER:
 			offset = 6;
+			adjustForDistance();
+			break;
+		case RNG_CUBE:
+			offset = 7;
 			adjustForDistance();
 			break;
 	}
@@ -203,6 +209,7 @@ function getRangeType (range) {
 		case RNG_RADIUS:
 		case RNG_HEMISPHERE:
 		case RNG_SPHERE:
+		case RNG_CYLINDER:
 		case RNG_CUBE:
 			return F_RNG_SELF_AREA
 	}
@@ -239,6 +246,7 @@ function getMetaFilterObj (s) {
 	if (s.permanentEffects || s.duration.filter(it => it.type === "permanent").length) out.push(META_ADD_MB_PERMANENT);
 	if (s.scalingEffects || s.entriesHigherLevel) out.push(META_ADD_MB_SCALING);
 	if (s.isHeal) out.push(META_ADD_MB_HEAL);
+	if (s.isSummon) out.push(META_ADD_MB_SUMMONS);
 	return out;
 }
 
@@ -259,11 +267,12 @@ function pPostLoad () {
 	return new Promise(resolve => {
 		BrewUtil.pAddBrewData()
 			.then(handleBrew)
+			.then(() => BrewUtil.bind({list}))
 			.then(BrewUtil.pAddLocalBrewData)
 			.catch(BrewUtil.pPurgeBrew)
 			.then(async () => {
 				BrewUtil.makeBrewButton("manage-brew");
-				BrewUtil.bind({list, filterBox, sourceFilter});
+				BrewUtil.bind({filterBox, sourceFilter});
 				await ListUtil.pLoadState();
 
 				ListUtil.bindShowTableButton(
@@ -271,16 +280,16 @@ function pPostLoad () {
 					"Spells",
 					spellList,
 					{
-						name: {name: "名稱", transform: true},
-						source: {name: "資源", transform: (it) => `<span class="${Parser.sourceJsonToColor(it)}" title="${Parser.sourceJsonToFull(it)}">${Parser.sourceJsonToAbv(it)}</span>`},
-						level: {name: "環位", transform: (it) => Parser.spLevelToFull(it)},
-						time: {name: "施法時間", transform: (it) => getTblTimeStr(it[0])},
-						school: {name: "學派", transform: (it) => `<span class="school_${it}">${Parser.spSchoolAbvToFull(it)}</span>`},
-						range: {name: "射程", transform: (it) => Parser.spRangeToFull(it)},
-						components: {name: "構材", transform: (it) => Parser.spComponentsToFull(it)},
-						classes: {name: "職業", transform: (it) => Parser.spMainClassesToFull(it)},
-						entries: {name: "文字", transform: (it) => EntryRenderer.getDefaultRenderer().renderEntry({type: "entries", entries: it}, 1), flex: 3},
-						entriesHigherLevel: {name: "升環效果", transform: (it) => EntryRenderer.getDefaultRenderer().renderEntry({type: "entries", entries: (it || [])}, 1), flex: 2}
+						name: {name: "Name", transform: true},
+						source: {name: "Source", transform: (it) => `<span class="${Parser.sourceJsonToColor(it)}" title="${Parser.sourceJsonToFull(it)}">${Parser.sourceJsonToAbv(it)}</span>`},
+						level: {name: "Level", transform: (it) => Parser.spLevelToFull(it)},
+						time: {name: "Casting Time", transform: (it) => getTblTimeStr(it[0])},
+						_school: {name: "School", transform: (sp) => `<span class="school_${sp.school}">${Parser.spSchoolAndSubschoolsAbvsToFull(sp.school, sp.subschools)}</span>`},
+						range: {name: "Range", transform: (it) => Parser.spRangeToFull(it)},
+						components: {name: "Components", transform: (it) => Parser.spComponentsToFull(it)},
+						classes: {name: "Classes", transform: (it) => Parser.spMainClassesToFull(it)},
+						entries: {name: "Text", transform: (it) => EntryRenderer.getDefaultRenderer().renderEntry({type: "entries", entries: it}, 1), flex: 3},
+						entriesHigherLevel: {name: "At Higher Levels", transform: (it) => EntryRenderer.getDefaultRenderer().renderEntry({type: "entries", entries: (it || [])}, 1), flex: 2}
 					},
 					{generator: ListUtil.basicFilterGenerator},
 					(a, b) => SortUtil.ascSort(a.level, b.level) || SortUtil.ascSort(a.name, b.name) || SortUtil.ascSort(a.source, b.source)
@@ -299,6 +308,7 @@ window.onload = async function load () {
 		raceFilter,
 		metaFilter,
 		schoolFilter,
+		subSchoolFilter,
 		damageFilter,
 		conditionFilter,
 		spellAttackFilter,
@@ -306,7 +316,8 @@ window.onload = async function load () {
 		checkFilter,
 		timeFilter,
 		durationFilter,
-		rangeFilter
+		rangeFilter,
+		areaTypeFilter
 	);
 	await ExcludeUtil.pInitialise();
 	SortUtil.initHandleFilterButtonClicks();
@@ -340,7 +351,7 @@ const classAndSubclassFilter = new MultiFilter({name: "職業"}, classFilter, su
 const raceFilter = new Filter({header: "Race", headerName: "種族", displayFn: Parser.RaceToDisplay});
 const metaFilter = new Filter({
 	header: "Components & Miscellaneous", headerName: "構材＆雜項",
-	items: [META_ADD_CONC, META_ADD_V, META_ADD_S, META_ADD_M, META_ADD_M_COST, META_ADD_M_CONSUMED, META_ADD_MB_HEAL, META_ADD_MB_PERMANENT, META_ADD_MB_SCALING, META_RITUAL, META_TECHNOMAGIC],
+	items: [META_ADD_CONC, META_ADD_V, META_ADD_S, META_ADD_M, META_ADD_M_COST, META_ADD_M_CONSUMED, META_ADD_MB_HEAL, META_ADD_MB_PERMANENT, META_ADD_MB_SCALING, META_ADD_MB_SUMMONS, META_RITUAL, META_TECHNOMAGIC],
 	displayFn: function(misc){
 		return (META_ADD_TO_FULL[misc])? META_ADD_TO_FULL[misc]: misc;
 	}
@@ -357,8 +368,13 @@ const schoolFilter = new Filter({
 		SKL_ABV_NEC,
 		SKL_ABV_TRA
 	],
-	displayFn: Parser.spSchoolAbvToFull}
-);
+	displayFn: Parser.spSchoolAbvToFull
+});
+const subSchoolFilter = new Filter({
+	header: "Subschool",
+	items: [],
+	displayFn: Parser.spSchoolAbvToFull
+});
 const damageFilter = new Filter({
 	header: "Damage Type", headerName: "傷害類型",
 	items: [
@@ -378,12 +394,12 @@ const spellAttackFilter = new Filter({
 });
 const saveFilter = new Filter({
 	header: "Saving Throw", headerName: "豁免",
-	items: ["strength", "constitution", "dexterity", "intelligence", "wisdom", "charisma"],
+	items: ["strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma"],
 	displayFn: getFilterAbilitySave
 });
 const checkFilter = new Filter({
 	header: "Opposed Ability Check", headerName: "能力檢定對抗",
-	items: ["strength", "constitution", "dexterity", "intelligence", "wisdom", "charisma"],
+	items: ["strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma"],
 	displayFn: getFilterAbilityCheck
 });
 const timeFilter = new Filter({
@@ -427,6 +443,11 @@ const rangeFilter = new Filter({
 		return (F_RNG_TO_FULL[r])? F_RNG_TO_FULL[r]: r;
 	}
 });
+const areaTypeFilter = new Filter({
+	header: "Area Style",
+	items: ["ST", "MT", "R", "N", "C", "Y", "H", "L", "S", "Q", "W"],
+	displayFn: Parser.spAreaTypeToFull
+});
 let filterBox;
 
 function pPageInit (loadedSources) {
@@ -450,7 +471,7 @@ function pPageInit (loadedSources) {
 		handleFilterChange
 	);
 
-	$("#filtertools").find("button.sort").on(EVNT_CLICK, function () {
+	$("#filtertools").find("button.sort").click(function () {
 		const $this = $(this);
 		if ($this.attr("sortby") === "asc") {
 			$this.attr("sortby", "desc");
@@ -555,7 +576,7 @@ function getSublistItem (spell, pinId) {
 				<span class="name col-3-2">${spell.name}</span>
 				<span class="level col-1-5">${Parser.spLevelToFull(spell.level)}</span>
 				<span class="time col-1-8">${getTblTimeStr(spell.time[0])}</span>
-				<span class="school col-1-6 school_${spell.school}" title="${Parser.spSchoolAbvToFull(spell.school)}">${Parser.spSchoolAbvToShort(spell.school)}</span>
+				<span class="school col-1-6 school_${spell.school}" title="${Parser.spSchoolAndSubschoolsAbvsToFull(spell.school, spell.subschools)}">${Parser.spSchoolAndSubschoolsAbvsShort(spell.school, spell.subschools)}</span>
 				<span class="concentration concentration--sublist col-0-7" title="Concentration">${spell._isConc ? "×" : ""}</span>
 				<span class="range col-3-2">${Parser.spRangeToFull(spell.range)}</span>
 				<span class="id hidden">${pinId}</span>
@@ -576,6 +597,7 @@ function handleFilterChange () {
 			s._fRaces,
 			s._fMeta,
 			s.school,
+			s.subschools,
 			s.damageInflict,
 			s.conditionInflict,
 			s.spellAttack,
@@ -583,7 +605,8 @@ function handleFilterChange () {
 			s.opposedCheck,
 			s._fTimeType,
 			s._fDurationType,
-			s._fRangeType
+			s._fRangeType,
+			s.areaTags
 		);
 	});
 	onFilterChangeMulti(spellList);
@@ -625,11 +648,20 @@ function addSpells (data) {
 
 		// add divine soul, favored soul v2, favored soul v3
 		if (spell.classes.fromClassList && spell.classes.fromClassList.filter(c => c.name === STR_CLERIC && c.source === SRC_PHB).length) {
-			if (!spell.classes.fromSubclass) spell.classes.fromSubclass = [];
-			spell.classes.fromSubclass.push({
-				class: {name: STR_SORCERER, source: SRC_PHB},
-				subclass: {name: STR_DIV_SOUL, source: SRC_XGE}
-			});
+			if (!spell.classes.fromSubclass) {
+				spell.classes.fromSubclass = [];
+				spell.classes.fromSubclass.push({
+					class: {name: STR_SORCERER, source: SRC_PHB},
+					subclass: {name: STR_DIV_SOUL, source: SRC_XGE}
+				});
+			} else {
+				if (!spell.classes.fromSubclass.find(it => it.class.name === STR_SORCERER && it.class.source === SRC_PHB && it.subclass.name === STR_DIV_SOUL && it.subclass.source === SRC_XGE)) {
+					spell.classes.fromSubclass.push({
+						class: {name: STR_SORCERER, source: SRC_PHB},
+						subclass: {name: STR_DIV_SOUL, source: SRC_XGE}
+					});
+				}
+			}
 			spell.classes.fromSubclass.push({
 				class: {name: STR_SORCERER, source: SRC_PHB},
 				subclass: {name: STR_FAV_SOUL_V2, source: SRC_UAS}
@@ -689,12 +721,12 @@ function addSpells (data) {
 			<li class="row" ${FLTR_ID}="${spI}" onclick="ListUtil.toggleSelected(event, this)" oncontextmenu="ListUtil.openContextMenu(event, this)">
 				<a id="${spI}" href="#${UrlUtil.autoEncodeHash(spell)}" title="${spell.name}">
 					<span class="name col-2-9">${spell.name}</span>
-					<span class="source col-1-7 text-align-center ${Parser.sourceJsonToColor(spell.source)}" title="${Parser.sourceJsonToFull(spell.source)}">${Parser.sourceJsonToAbv(spell.source)}</span>
 					<span class="level col-1-5">${levelText}</span>
 					<span class="time col-1-7">${getTblTimeStr(spell.time[0])}</span>
-					<span class="school col-1-2 school_${spell.school}" title="${Parser.spSchoolAbvToFull(spell.school)}">${Parser.spSchoolAbvToShort(spell.school)}</span>
+					<span class="school col-1-2 school_${spell.school}" title="${Parser.spSchoolAndSubschoolsAbvsToFull(spell.school, spell.subschools)}">${Parser.spSchoolAndSubschoolsAbvsShort(spell.school, spell.subschools)}</span>
 					<span class="concentration col-0-6" title="Concentration">${spell._isConc ? "×" : ""}</span>
 					<span class="range col-2-4">${Parser.spRangeToFull(spell.range)}</span>
+					<span class="source col-1-7 text-align-center ${Parser.sourceJsonToColor(spell.source)}" title="${Parser.sourceJsonToFull(spell.source)}">${Parser.sourceJsonToAbv(spell.source)}</span>
 
 					<span class="classes" style="display: none">${Parser.spClassesToFull(spell.classes, true)}</span>
 					<span class="uniqueid hidden">${spell.uniqueId ? spell.uniqueId : spI}</span>
@@ -703,10 +735,12 @@ function addSpells (data) {
 			</li>`;
 
 		// populate filters
+		if (spell.level > 9) levelFilter.addIfAbsent(spell.level);
 		sourceFilter.addIfAbsent(spell._fSources);
 		raceFilter.addIfAbsent(spell._fRaces);
 		spell._fClasses.forEach(c => classFilter.addIfAbsent(c));
 		spell._fSubclasses.forEach(sc => subclassFilter.addIfAbsent(sc));
+		subSchoolFilter.addIfAbsent(spell.subschools);
 	}
 	const lastSearch = ListUtil.getSearchTermAndReset(list);
 	spellTable.append(tempString);

@@ -30,14 +30,14 @@
 
 <body>
 <div class="viewport-wrapper">
-	<header class="hidden-xs hidden-sm">
+	<header class="hidden-xs hidden-sm page__header">
 		<div class="container">
 
-			<h1>可選能力列表</h1>
-			<p>使用左側的名稱搜尋，點擊項目名稱以在右側顯示。</p>
+			<h1 class="page__title">職業能力選項</h1>
+			<p class="page__subtitle">使用左側的名稱搜尋，點擊項目名稱以在右側顯示。</p>
 		</div>
 	</header>
-	<nav class="container" id="navigation">
+	<nav class="container page__nav" id="navigation">
 		<ul class="nav nav-pills" id="navbar">
 		</ul>
 	</nav>
@@ -50,9 +50,10 @@
 			</div>
 			<div id="filtertools" class="sortlabel btn-group">
 				<button class="col-3-2 sort btn btn-default btn-xs" data-sort="name">名稱<span class="caret_wrp"></span></button>
-				<button class="col-1-5 sort btn btn-default btn-xs" data-sort="source">資源<span class="caret_wrp"></span></button>
 				<button class="col-1-5 sort btn btn-default btn-xs" data-sort="type">類型<span class="caret_wrp"></span></button>
-				<button class="col-5-8 sort btn btn-default btn-xs" data-sort="prerequisite">先決條件<span class="caret_wrp"></span></button>
+				<button class="col-4-8 sort btn btn-default btn-xs" data-sort="prerequisite">先決條件<span class="caret_wrp"></span></button>
+				<button class="col-1 sort btn btn-default btn-xs" data-sort="level">等級<span class="caret_wrp"></span></button>
+				<button class="col-1-5 sort btn btn-default btn-xs" data-sort="source">資源<span class="caret_wrp"></span></button>
 			</div>
 
 			<ul id="optfeaturesList" class="list optfeatures">
@@ -65,7 +66,8 @@
 				<div id="sublistsort" class="sortlabel btn-group">
 					<button class="col-4 sort btn btn-default btn-xs" data-sort="name">名稱</button>
 					<button class="col-2 sort btn btn-default btn-xs" data-sort="type">類型</button>
-					<button class="col-6 sort btn btn-default btn-xs" data-sort="prerequisite">先決條件</button>
+					<button class="col-4-5 sort btn btn-default btn-xs" data-sort="prerequisite">先決條件</button>
+					<button class="col-1-5 sort btn btn-default btn-xs" data-sort="level">等級</button>
 				</div>
 				<ul class="list suboptfeatures">
 					<!-- populate with JS -->

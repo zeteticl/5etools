@@ -10,6 +10,8 @@
 
 	<title>DM屏幕 - 5etools</title>
 
+	<link rel="manifest" href="manifest.json">
+
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/jquery-ui.css">
 	<link rel="stylesheet" href="css/jquery-ui-slider-pips.css">
@@ -20,19 +22,10 @@
 	<script type="text/javascript" src="js/navigation.js"></script>
 
 	<style>
-		body.dm-screen-fullscreen header {
-			display: none;
-		}
-
-		body.dm-screen-fullscreen nav {
-			display: none;
-		}
-
-		body.dm-screen-locked .panel-control-bar {
-			display: none !important;
-		}
-
-		body.dm-screen-locked .content-tab-remove {
+		body.dm-screen-locked .panel-control-bar,
+		body.dm-screen-locked .content-tab-remove,
+		body.dm-screen-locked .panel-history-control-remove-wrapper,
+		body.dm-screen-locked .panel-history-control-middle {
 			display: none !important;
 		}
 
@@ -74,8 +67,9 @@
 
 		.panel-control-bar {
 			position: absolute;
-			right: 0;
+			right: 11px;
 			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;
 			padding-left: 3px;
 			opacity: 0.2;
 			z-index: 56;
@@ -164,7 +158,6 @@
 			position: relative;
 			width: 100%;
 			height: 100%;
-			overflow-y: auto;
 			padding-right: -9px;
 			box-sizing: content-box;
 			box-shadow: inset 0 0 10px 0 #909090b0;
@@ -234,6 +227,16 @@
 		.panel-content-wrapper-inner {
 			height: 100%;
 			width: 100%;
+			overflow-y: auto;
+			overflow-x: hidden;
+		}
+
+		.panel-content-wrapper-inner::-webkit-scrollbar-track {
+			background: #f0f0f0;
+		}
+
+		.night-mode .panel-content-wrapper-inner::-webkit-scrollbar-track {
+			background: #222222;
 		}
 
 		.panel-control {
@@ -337,7 +340,12 @@
 			max-height: 400px;
 		}
 
-		.panel-addmenu-inner--modal-scroller {
+		.panel-addmenu-inner--large-modal {
+			width: 100%;
+			max-height: 90vh;
+		}
+
+		.panel-addmenu-modal-scroller {
 			max-height: 100%;
 			width: 100%;
 			overflow-y: auto;
@@ -622,7 +630,7 @@
 			top: -35px;
 		}
 
-		body.dm-screen-fullscreen .sidemenu__toggle {
+		body.is-fullscreen .sidemenu__toggle {
 			top: 12px;
 			left: -12px;
 		}
@@ -711,6 +719,7 @@
 		}
 
 		.dm-init-wrp-header-outer {
+			overflow-x: auto;
 			display: flex;
 			flex-direction: column;
 		}
@@ -722,6 +731,7 @@
 			justify-content: space-between;
 			font-variant: small-caps;
 			border-bottom: 1px solid #ccc;
+			min-width: min-content;
 		}
 
 		.dm-init-header {
@@ -735,8 +745,14 @@
 			margin-right: 3px;
 		}
 
+		.dm-init-header--input-wide {
+			width: 83px;
+			margin-right: 3px;
+		}
+
 		.dm-init-wrp-entries {
 			overflow-y: auto;
+			min-width: min-content;
 		}
 
 		.dm-init-row {
@@ -749,10 +765,12 @@
 		.dm-init-row-rhs {
 			display: flex;
 			justify-content: space-between;
+			position: relative;
 		}
 
 		.dm-init-row-lhs {
 			width: 100%;
+			min-width: 115px;
 		}
 
 		.dm-init-row-mid {
@@ -764,7 +782,8 @@
 			padding: 1px 3px;
 		}
 
-		.dm-init-row-btn-flag {
+		.dm-init-row-btn-flag,
+		.dm_init__btn_eye {
 			margin-right: 3px;
 		}
 
@@ -800,8 +819,11 @@
 			margin-right: 3px;
 		}
 
-		.dm-init-row-rhs .dm-init-header,
-		.dm-init-row-rhs input {
+		.dm-init-name {
+			min-width: 50px;
+		}
+
+		.dm_init__ipt--rhs {
 			width: 40px;
 		}
 
@@ -814,11 +836,20 @@
 
 		.dm-init-wrp-controls {
 			flex: none;
-			height: 28px;
+			height: 29px;
 			padding: 3px;
 			border-top: 1px solid #ccc;
 			justify-content: space-evenly;
 			display: flex;
+		}
+
+		.dm_init__rounds {
+			width: 35px;
+			height: 22px;
+			display: inline-block;
+			border-radius: 0;
+			padding: 0;
+			text-align: right;
 		}
 
 		.dm-init-modal-wrp-rows {
@@ -832,25 +863,28 @@
 			outline: none !important;
 		}
 
-		.dm-init-wrp-conds {
+		.dm_init__hp {
+			width: 42px;
+		}
+
+		.dm_init__hp--current {
+			margin-right: 0;
+			border-right: 0;
+		}
+
+		.dm_init__hp--max {
+			border-left: 0;
+		}
+
+		.dm_init__hp_slash {
+			position: absolute;
+			left: 40px;
+			pointer-events: none;
+			top: 0;
+			bottom: 0;
 			display: flex;
-		}
-
-		.dm-init-cond {
-			width: 7px;
-			margin-right: 3px;
-			display: grid;
-			grid-gap: 3px;
-			cursor: pointer;
-		}
-
-		.dm-init-cond:hover {
-			box-shadow: 0 0 5px 0 rgba(240, 173, 78, 1);
-		}
-
-		.dm-init-cond-bar {
-			width: 7px;
-			height: 100%;
+			align-items: center;
+			color: #888;
 		}
 
 		.dm_init__stats_rows {
@@ -907,6 +941,13 @@
 			border-radius: 0;
 			margin-right: 3px;
 			width: 40px;
+		}
+
+		/* player view */
+		textarea.dm_init__pl_textarea {
+			resize: none;
+			width: 100%;
+			height: 240px;
 		}
 
 		.dm-unitconv {
@@ -1037,19 +1078,35 @@
 				max-width: 1170px;
 			}
 		}
+
+		.btn-text-insert {
+			display: inline-block;
+			font-size: 12px;
+			line-height: 14px;
+			padding: 0 2px;
+			margin: -1px 1px;
+		}
+
+		.dms__tab_hidden {
+			display: none !important;
+		}
+
+		.panel-content-wrapper table.stats.stats-book--hover {
+			box-shadow: none;
+		}
 	</style>
 </head>
 
 <body>
 <div class="viewport-wrapper">
-	<header class="hidden-xs hidden-sm">
+	<header class="hidden-xs hidden-sm page__header">
 		<div class="container">
 
-			<h1>DM屏幕</h1>
-			<p>構築你個人的DM屏幕</p>
+			<h1 class="page__title">DM屏幕</h1>
+			<p class="page__subtitle">構築你個人的DM屏幕</p>
 		</div>
 	</header>
-	<nav class="container" id="navigation">
+	<nav class="container page__nav" id="navigation">
 		<ul class="nav nav-pills" id="navbar">
 		</ul>
 	</nav>
@@ -1069,17 +1126,22 @@
 <script type="text/javascript" src="lib/jquery.panzoom.js"></script>
 <script type="text/javascript" src="lib/jquery-ui.js"></script>
 <script type="text/javascript" src="lib/jquery-ui-slider-pip.js"></script>
+<script type="text/javascript" src="lib/lzma.js"></script>
 <script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/p2putils.js"></script>
 <script type="text/javascript" src="lib/localforage.js"></script>
 <script type="text/javascript" src="js/omnidexer.js"></script>
 <script type="text/javascript" src="js/omnisearch.js"></script>
 <script type="text/javascript" src="js/entryrender.js"></script>
 <script type="text/javascript" src="js/scalecreature.js"></script>
+<script type="text/javascript" src="js/initiativetrackerutils.js"></script>
 <script type="text/javascript" src="js/dmscreen.js"></script>
 <script type="text/javascript" src="js/dmscreen-initiativetracker.js"></script>
+<script type="text/javascript" src="js/dmscreen-playerinitiativetracker.js"></script>
 <script type="text/javascript" src="js/dmscreen-moneyconverter.js"></script>
 <script type="text/javascript" src="js/history.js"></script>
 <script type="text/javascript" src="lib/list.js"></script>
+<script type="text/javascript" src="lib/bootstrap-tooltip.js"></script>
 <script type="text/javascript" src="lib/elasticlunr.js"></script>
 <script type="text/javascript" src="lib/bootstrap-tooltip.js"></script>
 </body>

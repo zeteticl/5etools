@@ -355,7 +355,7 @@
 				"additionalFromBackground": true,
 				"default": [
 					"(a)一個木製{@item 盾牌|phb} 或 (b)任意一把{@filter 簡易武器|items|source=phb|category=basic|type=simple weapon}",
-					"(a)一把{@item 彎刀|phb} 或 (b)任意一把{@filter 簡易近戰武器|items|source=phb|category=basic|type=simple weapon;melee weapon}",
+					"(a)一把{@item 彎刀|phb} 或 (b)任意一把{@filter 簡易近戰武器|items|source=phb|category=basic|type=simple weapon;melee weapon=&}",
 					"一件{@item 皮甲|phb}、一套{@item 探索者套裝|phb}、和一個{@item 德魯伊法器|phb}"
 				],
 				"goldAlternative": "{@dice 2d4×10|2d4 × 10|起始金錢}"
@@ -462,19 +462,19 @@
 								],
 								"rows": [
 									[
-										"{@filter 2級|bestiary|cr=0;1/8;1/4|type=beast|speed=!fly;!swim|miscellaneous=!swarm}",
+										"{@filter 2級|bestiary|challenge rating=0;1/8;1/4|type=beast|speed type=!fly;!swim|miscellaneous=!swarm}",
 										"1/4",
 										"沒有飛行或游泳速度",
 										"狼"
 									],
 									[
-										"{@filter 4級|bestiary|cr=0;1/8;1/4;1/2|type=beast|speed=!fly|miscellaneous=!swarm}",
+										"{@filter 4級|bestiary|challenge rating=0;1/8;1/4;1/2|type=beast|speed type=!fly|miscellaneous=!swarm}",
 										"1/2",
 										"沒有飛行速度",
 										"鱷魚"
 									],
 									[
-										"{@filter 8級|bestiary|cr=0;1/8;1/4;1/2;1|type=beast|miscellaneous=!swarm}",
+										"{@filter 8級|bestiary|challenge rating=0;1/8;1/4;1/2;1|type=beast|miscellaneous=!swarm}",
 										"1",
 										"\u2014",
 										"巨鷹"
@@ -961,7 +961,7 @@
 										"type": "entries",
 										"name": "結社型態", "ENG_name": "Circle Forms",
 										"entries": [
-											"你結社的儀式賦予你轉變成更加危險動物型態的能力。從2級開始，你可以使用你的荒野形態以轉變成一個{@filter 挑戰等級最高為1的野獸|bestiary|cr=0;1/8;1/4;1/2;1|type=beast|speed=!fly;!swim|miscellaneous=!swarm}（你忽視原本野獸型態表中的最高挑戰等級欄位，但仍受限於該表中的其它限制）。",
+											"你結社的儀式賦予你轉變成更加危險動物型態的能力。從2級開始，你可以使用你的荒野形態以轉變成一個{@filter 挑戰等級最高為1的野獸|bestiary|challenge rating=0;1/8;1/4;1/2;1|type=beast|speed=!fly;!swim|miscellaneous=!swarm}（你忽視原本野獸型態表中的最高挑戰等級欄位，但仍受限於該表中的其它限制）。",
 											"從6級開始，你可以轉變成一個挑戰等級最高等同於你德魯伊等級除以3（向下取整）的野獸。",
 											{
 												"type": "table",
@@ -979,42 +979,42 @@
 												"rows": [
 													[
 														"2級",
-														"{@filter 1|bestiary|cr=0;1/8;1/4;1/2;1|type=beast|speed=!fly;!swim|miscellaneous=!swarm}",
+														"{@filter 1|bestiary|challenge rating=0;1/8;1/4;1/2;1|type=beast|speed type=!fly;!swim|miscellaneous=!swarm}",
 														"沒有飛行或游泳速度"
 													],
 													[
 														"4級",
-														"{@filter 1|bestiary|cr=0;1/8;1/4;1/2;1|type=beast|speed=!fly|miscellaneous=!swarm}",
+														"{@filter 1|bestiary|challenge rating=0;1/8;1/4;1/2;1|type=beast|speed type=!fly|miscellaneous=!swarm}",
 														"沒有飛行速度"
 													],
 													[
 														"6級",
-														"{@filter 2|bestiary|cr=0;1/8;1/4;1/2;1;2|type=beast|speed=!fly|miscellaneous=!swarm}",
+														"{@filter 2|bestiary|challenge rating=0;1/8;1/4;1/2;1;2|type=beast|speed type=!fly|miscellaneous=!swarm}",
 														"沒有飛行速度"
 													],
 													[
 														"8級",
-														"{@filter 2|bestiary|cr=0;1/8;1/4;1/2;1;2|type=beast|miscellaneous=!swarm}",
+														"{@filter 2|bestiary|challenge rating=0;1/8;1/4;1/2;1;2|type=beast|miscellaneous=!swarm}",
 														"\u2014"
 													],
 													[
 														"9級",
-														"{@filter 3|bestiary|cr=0;1/8;1/4;1/2;1;2;3|type=beast|miscellaneous=!swarm}",
+														"{@filter 3|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3|type=beast|miscellaneous=!swarm}",
 														"\u2014"
 													],
 													[
 														"12級",
-														"{@filter 4|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4|type=beast|miscellaneous=!swarm}",
+														"{@filter 4|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3;4|type=beast|miscellaneous=!swarm}",
 														"\u2014"
 													],
 													[
 														"15級",
-														"{@filter 5|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4;5|type=beast|miscellaneous=!swarm}",
+														"{@filter 5|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3;4;5|type=beast|miscellaneous=!swarm}",
 														"\u2014"
 													],
 													[
 														"18級",
-														"{@filter 6|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4;5;6|type=beast|miscellaneous=!swarm}",
+														"{@filter 6|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3;4;5;6|type=beast|miscellaneous=!swarm}",
 														"\u2014"
 													]
 												]
@@ -1671,7 +1671,7 @@
 										"type": "entries",
 										"entries": [
 											"At 6th level, your spores gain the ability to infest a humanoid corpse and animate it.",
-											"If you slay a humanoid with your Halo of Spores damage, the creature rises as a zombie at the end of your turn. It has 1 hit point. In combat, its turn is immediately after yours. It obeys your mental commands, and the only action it can take is the {@action Attack} action, making one melee attack. It remains animate for 1 hour, after which time it collapses and dies."
+											"If you slay a humanoid with your Halo of Spores damage, the creature rises as a {@creature zombie} at the end of your turn. It has 1 hit point. In combat, its turn is immediately after yours. It obeys your mental commands, and the only action it can take is the {@action Attack} action, making one melee attack. It remains animate for 1 hour, after which time it collapses and dies."
 										]
 									}
 								]
@@ -1794,7 +1794,7 @@
 										"name": "Fungal Infestation",
 										"type": "entries",
 										"entries": [
-											"At 6th level, your spores gain the ability to infest a corpse and animate it. If a beast or a humanoid that is Small or Medium dies within 10 feet of you, you can use your reaction to animate it, causing it to stand up immediately with 1 hit point. The creature uses the zombie stat block in the {@book Monster Manual|MM}. It remains animate for 1 hour, after which time it collapses and dies.",
+											"At 6th level, your spores gain the ability to infest a corpse and animate it. If a beast or a humanoid that is Small or Medium dies within 10 feet of you, you can use your reaction to animate it, causing it to stand up immediately with 1 hit point. The creature uses the {@creature zombie} stat block in the {@book Monster Manual|MM}. It remains animate for 1 hour, after which time it collapses and dies.",
 											"In combat, the zombie's turn comes immediately after yours. It obeys your mental commands, and the only action it can take is the {@action Attack} action, making one melee attack.",
 											"You can use this feature a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses of it when you finish a long rest."
 										]
@@ -1832,7 +1832,8 @@
 						]
 					],
 					"source": "GGR",
-					"shortName": "Spores"
+					"shortName": "Spores",
+					"page": 26
 				}
 			],
 			"fluff": [

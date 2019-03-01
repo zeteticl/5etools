@@ -27,6 +27,12 @@
 			display: none;
 		}
 
+		.cls__squash_header {
+			overflow: hidden;
+			max-height: 32px;
+			display: block;
+		}
+
 		table#stats > tbody > tr > td {
 			padding: 0 0.8em;
 		}
@@ -211,6 +217,45 @@
 			line-height: 12px;
 		}
 
+		th#nameTable,
+		th#nameSummary {
+			font-size: 1.8em;
+			font-family: 'Andada', serif;
+			font-variant: small-caps;
+			font-weight: 500;
+			padding-left: 0.2em !important;
+		}
+
+		th#author {
+			color: inherit;
+			display: none;
+			font-style: italic;
+			font-size: 0.9em;
+		}
+
+		td#hp,
+		td#prof,
+		td#equipment,
+		td#multiclassing {
+			font-size: 0.8em;
+			padding: 0.4em 0.7em;
+		}
+
+		td#hp h5,
+		td#prof h5,
+		td#equipment h5,
+		td#multiclassing h5 {
+			font-family: serif;
+			font-weight: 500;
+			font-size: 1.5em;
+			margin-bottom: 0;
+		}
+
+		td#equipment ul,
+		td#multiclassing ul {
+			padding: 0 0 0 1.7em;
+		}
+
 		@media (max-width: 991px) {
 			.wrp-btn-readmode {
 				margin-top: 0;
@@ -251,18 +296,17 @@
 </head>
 
 <body>
-<header class="hidden-xs hidden-sm">
+<header class="hidden-xs hidden-sm page__header">
 	<div class="container">
-
-		<h1>職業列表</h1>
-		<p>使用左側的名稱搜尋，點擊職業名稱以在右側顯示。</p>
+		<h1 class="page__title">職業</h1>
+		<p class="page__subtitle">使用左側的名稱搜尋，點擊職業名稱以在右側顯示。</p>
 	</div>
 </header>
-<nav class="container" id="navigation">
+<nav class="container page__nav" id="navigation">
 	<ul class="nav nav-pills" id="navbar">
 	</ul>
 </nav>
-<main class="container bodyContent classes">
+<main class="container classes">
 
 	<div class="row">
 		<div class="col-sm-3" id="listcontainer">
@@ -503,9 +547,7 @@
 		</div>
 	</div>
 </main>
-<footer class="container">
-
-</footer>    <!--5ETOOLS_SCRIPT_ANCHOR-->
+<!--5ETOOLS_SCRIPT_ANCHOR-->
 <script type="text/javascript" src="lib/jquery.js"></script>
 <script type="text/javascript" src="lib/jquery-ui.js"></script>
 <script type="text/javascript" src="lib/jquery-ui-slider-pip.js"></script>

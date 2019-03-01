@@ -264,6 +264,11 @@
 			"source": "DMG",
 			"page": 150,
 			"reqAttune": true,
+			"ability": {
+				"static": {
+					"con": 19
+				}
+			},
 			"entries": [
 				"Your Constitution score is 19 while you wear this amulet. It has no effect on you if your Constitution score is already 19 or higher without it."
 			]
@@ -1308,6 +1313,11 @@
 			"source": "DMG",
 			"page": 155,
 			"reqAttune": true,
+			"ability": {
+				"static": {
+					"str": 27
+				}
+			},
 			"entries": [
 				"While wearing this belt, your Strength score changes to 27. The item has no effect on you if your Strength without the belt is equal to or greater than the belt's score."
 			]
@@ -1320,6 +1330,9 @@
 			"source": "DMG",
 			"page": 155,
 			"reqAttune": true,
+			"ability": {
+				"con": 2
+			},
 			"entries": [
 				"While wearing this belt, you gain the following benefits:",
 				{
@@ -1358,6 +1371,11 @@
 			"source": "DMG",
 			"page": 155,
 			"reqAttune": true,
+			"ability": {
+				"static": {
+					"str": 25
+				}
+			},
 			"entries": [
 				"While wearing this belt, your Strength score changes to 25. The item has no effect on you if your Strength without the belt is equal to or greater than the belt's score."
 			]
@@ -1370,6 +1388,11 @@
 			"source": "DMG",
 			"page": 155,
 			"reqAttune": true,
+			"ability": {
+				"static": {
+					"str": 23
+				}
+			},
 			"entries": [
 				"While wearing this belt, your Strength score changes to 23. The item has no effect on you if your Strength without the belt is equal to or greater than the belt's score."
 			]
@@ -1382,6 +1405,11 @@
 			"source": "DMG",
 			"page": 155,
 			"reqAttune": true,
+			"ability": {
+				"static": {
+					"str": 21
+				}
+			},
 			"entries": [
 				"While wearing this belt, your Strength score changes to 21. The item has no effect on you if your Strength without the belt is equal to or greater than the belt's score."
 			]
@@ -1394,6 +1422,11 @@
 			"source": "DMG",
 			"page": 155,
 			"reqAttune": true,
+			"ability": {
+				"static": {
+					"str": 23
+				}
+			},
 			"entries": [
 				"While wearing this belt, your Strength score changes to 23. The item has no effect on you if your Strength without the belt is equal to or greater than the belt's score."
 			]
@@ -1406,6 +1439,11 @@
 			"source": "DMG",
 			"page": 155,
 			"reqAttune": true,
+			"ability": {
+				"static": {
+					"str": 29
+				}
+			},
 			"entries": [
 				"While wearing this belt, your Strength score changes to 29. The item has no effect on you if your Strength without the belt is equal to or greater than the belt's score."
 			]
@@ -1836,6 +1874,9 @@
 			"source": "DMG",
 			"page": 222,
 			"reqAttune": "by a Creature of Good Alignment",
+			"ability": {
+				"wis": 2
+			},
 			"entries": [
 				"The definitive treatise on all that is good in the multiverse, the fabled Book of Exalted Deeds figures prominently in many religions. Rather than being a scripture devoted to a particular faith, the book's various authors filled the pages with their own vision of true virtue, providing guidance for defeating evil.",
 				"The Book of Exalted Deeds rarely lingers in one place. As soon as the book is read, it vanishes to some other corner of the multiverse where its moral guidance can bring light to a darkened world. Although attempts have been made to copy the work, efforts to do so fail to capture its magical nature or translate the benefits it offers to those pure of heart and firm of purpose.",
@@ -1893,6 +1934,22 @@
 			"source": "DMG",
 			"page": 222,
 			"reqAttune": true,
+			"ability": {
+				"choose": [
+					{
+						"from": [
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						],
+						"count": 1,
+						"amount": 2
+					}
+				]
+			},
 			"entries": [
 				"The contents of this foul manuscript of ineffable wickedness are the meat and drink of those in evil's thrall. No mortal was meant to know the secrets it contains, knowledge so horrid that to even glimpse the scrawled pages invites madness.",
 				"Most believe the lich-god Vecna authored the Book of Vile Darkness. He recorded in its pages every diseased idea, every unhinged thought, and every example of blackest magic he came across or devised. Vecna covered every vile topic he could, making the book a gruesome catalog of all mortal wrongs.",
@@ -3914,6 +3971,9 @@
 						"You can try to cast a cantrip that you don't know. The cantrip must be on the warlock spell list, and you must make a DC 10 Intelligence ({@skill Arcana}) check. If the check succeeds, you cast the spell. If the check fails, so does the spell, and the action used to cast the spell is wasted. In either case, you can't use this property again until you finish a long rest."
 					]
 				}
+			],
+			"focus": [
+				"Warlock"
 			]
 		},
 		{
@@ -4345,6 +4405,18 @@
 			"rarity": "Legendary",
 			"source": "DMG",
 			"page": 162,
+			"ability": {
+				"from": [
+					"str",
+					"dex",
+					"con",
+					"int",
+					"wis",
+					"cha"
+				],
+				"count": 1,
+				"amount": 2
+			},
 			"entries": [
 				"Usually found in a box or pouch, this deck contains a number of cards made of ivory or vellum. Most (75 percent) of these decks have only thirteen cards, but the rest have twenty-two.",
 				"Before you draw a card, you must declare how many cards you intend to draw and then draw them randomly (you can use an altered deck of playing cards to simulate the deck). Any cards drawn in excess of this number have no effect. Otherwise, as soon as you draw a card from the deck, its magic takes effect. You must draw each card no more than 1 hour after the previous draw. If you fail to draw the chosen number, the remaining number of cards fly from the deck on their own and take effect all at once.",
@@ -4892,6 +4964,7 @@
 			"rarity": "Rare",
 			"source": "UAWGE",
 			"page": 120,
+			"sentient": true,
 			"entries": [
 				"A docent is a small metal sphere, approximately 2 inches across, studded with dragonshards. Despite a strong magical aura, it has no obvious abilities. If you're a warforged, you can attune to the docent, at which point the sphere becomes embedded in your chest and comes to life\u2014literally.",
 				"A docent is an intelligent magic item designed to advise and assist the warforged it's attached to. A typical docent has an Intelligence score of 16 and Wisdom and Charisma scores of 14. Once you're attuned to the docent, it can communicate with you telepathically and can perceive the world through your senses. One of the simple functions of a docent is to serve as a translator. All docents understand Common and Giant, but a docent knows up to four additional languages. Elven and Draconic are common options. If a docent knows less than six languages in total, it can add new languages to its repertoire after encountering them. So a docent found in Xen'drik may have never encountered a dwarf before... but after spending some time in Khorvaire studying dwarves, it could pick up the Dwarven language.",
@@ -6126,6 +6199,11 @@
 			"source": "DMG",
 			"page": 171,
 			"reqAttune": true,
+			"ability": {
+				"static": {
+					"str": 19
+				}
+			},
 			"entries": [
 				"Your Strength score is 19 while you wear these gauntlets. They have no effect on you if your Strength is already 19 or higher without them."
 			]
@@ -6776,6 +6854,9 @@
 			"rarity": "Legendary",
 			"source": "DMG",
 			"page": 173,
+			"ability": {
+				"str": 4
+			},
 			"entries": [
 				"You gain a +1 bonus to attack and damage rolls made with this magic weapon.",
 				{
@@ -6806,6 +6887,11 @@
 			"source": "DMG",
 			"page": 224,
 			"reqAttune": true,
+			"ability": {
+				"static": {
+					"str": 20
+				}
+			},
 			"entries": [
 				"Seldom is the name of Vecna spoken except in a hushed voice. Vecna was, in his time, one of the mightiest of all wizards. Through dark magic and conquest, he forged a terrible empire. For all his power, Vecna couldn't escape his own mortality. He began to fear death and take steps to prevent his end from ever coming about.",
 				"{@creature Orcus|OotA}, the demon prince of undeath, taught Vecna a ritual that would allow him to live on as a {@creature lich}. Beyond death, he became the greatest of all liches. Even though his body gradually withered and decayed, Vecna continued to expand his evil dominion. So formidable and hideous was his temper that his subjects feared to speak his name. He was the Whispered One, the Master of the Spider Throne, the Undying King, and the Lord of the Rotted Tower.",
@@ -6832,7 +6918,7 @@
 					"name": "Properties of the Hand",
 					"type": "entries",
 					"entries": [
-						"Your alignment changes neutral evil, and you gain the following benefits:"
+						"Your alignment changes to neutral evil, and you gain the following benefits:"
 					]
 				},
 				{
@@ -6922,6 +7008,9 @@
 						"You can try to cast a cantrip that you don't know. The cantrip must be on the wizard spell list, and you must make a DC 10 Intelligence ({@skill Arcana}) check. If the check succeeds, you cast the spell. If the check fails, so does the spell, and the action used to cast the spell is wasted. In either case, you can't use this property again until you finish a long rest."
 					]
 				}
+			],
+			"focus": [
+				"Wizard"
 			]
 		},
 		{
@@ -6942,7 +7031,7 @@
 			"reqAttune": true,
 			"sentient": true,
 			"entries": [
-				"A sentient (neutral evil) greatsword, Hazirawn is capable of speech in Common and Netherese. Even if you aren't attuned to the sword, you gain a +1 bonus on attack and damage rolls made with this weapon. If you are attuned to Hazirawn, you deal an extra {@dice 1d6} necrotic damage when you hit with the weapon.",
+				"A sentient (neutral evil) greatsword, Hazirawn is capable of speech in Common and Netherese. Even if you aren't attuned to the sword, you gain a +1 bonus on attack and damage rolls made with this weapon. If you are not attuned to Hazirawn, you deal an extra {@dice 1d6} necrotic damage when you hit with the weapon.",
 				{
 					"name": "Increased Potency",
 					"type": "entries",
@@ -6980,6 +7069,11 @@
 			"source": "DMG",
 			"page": 173,
 			"reqAttune": true,
+			"ability": {
+				"static": {
+					"int": 19
+				}
+			},
 			"entries": [
 				"Your Intelligence score is 19 while you wear this headband. It has no effect on you if your Intelligence is already 19 or higher without it."
 			]
@@ -7852,6 +7946,9 @@
 			"source": "DMG",
 			"page": 176,
 			"reqAttune": true,
+			"ability": {
+				"dex": 2
+			},
 			"entries": [
 				"An {@italic Ioun stone} is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of {@italic Ioun stone} exist, each type a distinct combination of shape and color.",
 				"When you use an action to toss one of these stones into the air, the stone orbits your head at a distance of {@dice 1d3} feet and confers a benefit to you. Thereafter, another creature must use an action to grasp or net the stone to separate it from you, either by making a successful attack roll against AC 24 or a successful DC 24 Dexterity ({@skill Acrobatics}) check. You can use an action to seize and stow the stone, ending its effect.",
@@ -7882,6 +7979,9 @@
 			"source": "DMG",
 			"page": 176,
 			"reqAttune": true,
+			"ability": {
+				"con": 2
+			},
 			"entries": [
 				"An {@italic Ioun stone} is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of {@italic Ioun stone} exist, each type a distinct combination of shape and color.",
 				"When you use an action to toss one of these stones into the air, the stone orbits your head at a distance of {@dice 1d3} feet and confers a benefit to you. Thereafter, another creature must use an action to grasp or net the stone to separate it from you, either by making a successful attack roll against AC 24 or a successful DC 24 Dexterity ({@skill Acrobatics}) check. You can use an action to seize and stow the stone, ending its effect.",
@@ -7912,6 +8012,9 @@
 			"source": "DMG",
 			"page": 176,
 			"reqAttune": true,
+			"ability": {
+				"wis": 2
+			},
 			"entries": [
 				"An {@italic Ioun stone} is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of {@italic Ioun stone} exist, each type a distinct combination of shape and color.",
 				"When you use an action to toss one of these stones into the air, the stone orbits your head at a distance of {@dice 1d3} feet and confers a benefit to you. Thereafter, another creature must use an action to grasp or net the stone to separate it from you, either by making a successful attack roll against AC 24 or a successful DC 24 Dexterity ({@skill Acrobatics}) check. You can use an action to seize and stow the stone, ending its effect.",
@@ -7927,6 +8030,9 @@
 			"source": "DMG",
 			"page": 176,
 			"reqAttune": true,
+			"ability": {
+				"int": 2
+			},
 			"entries": [
 				"An {@italic Ioun stone} is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of {@italic Ioun stone} exist, each type a distinct combination of shape and color.",
 				"When you use an action to toss one of these stones into the air, the stone orbits your head at a distance of {@dice 1d3} feet and confers a benefit to you. Thereafter, another creature must use an action to grasp or net the stone to separate it from you, either by making a successful attack roll against AC 24 or a successful DC 24 Dexterity ({@skill Acrobatics}) check. You can use an action to seize and stow the stone, ending its effect.",
@@ -7942,6 +8048,9 @@
 			"source": "DMG",
 			"page": 176,
 			"reqAttune": true,
+			"ability": {
+				"cha": 2
+			},
 			"entries": [
 				"An {@italic Ioun stone} is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of {@italic Ioun stone} exist, each type a distinct combination of shape and color.",
 				"When you use an action to toss one of these stones into the air, the stone orbits your head at a distance of {@dice 1d3} feet and confers a benefit to you. Thereafter, another creature must use an action to grasp or net the stone to separate it from you, either by making a successful attack roll against AC 24 or a successful DC 24 Dexterity ({@skill Acrobatics}) check. You can use an action to seize and stow the stone, ending its effect.",
@@ -8019,6 +8128,9 @@
 			"source": "DMG",
 			"page": 176,
 			"reqAttune": true,
+			"ability": {
+				"str": 2
+			},
 			"entries": [
 				"An {@italic Ioun stone} is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of {@italic Ioun stone} exist, each type a distinct combination of shape and color.",
 				"When you use an action to toss one of these stones into the air, the stone orbits your head at a distance of {@dice 1d3} feet and confers a benefit to you. Thereafter, another creature must use an action to grasp or net the stone to separate it from you, either by making a successful attack roll against AC 24 or a successful DC 24 Dexterity ({@skill Acrobatics}) check. You can use an action to seize and stow the stone, ending its effect.",
@@ -8999,6 +9111,9 @@
 			"rarity": "Very Rare",
 			"source": "DMG",
 			"page": 180,
+			"ability": {
+				"con": 2
+			},
 			"entries": [
 				"This book contains health and diet tips, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Constitution score increases by 2, as does your maximum for that score. The manual then loses its magic, but regains it in a century."
 			]
@@ -9037,6 +9152,9 @@
 			"rarity": "Very Rare",
 			"source": "DMG",
 			"page": 180,
+			"ability": {
+				"str": 2
+			},
 			"entries": [
 				"This book describes fitness exercises, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Strength score increases by 2, as does your maximum for that score. The manual then loses its magic, but regains it in a century."
 			]
@@ -9062,6 +9180,9 @@
 			"rarity": "Very Rare",
 			"source": "DMG",
 			"page": 181,
+			"ability": {
+				"dex": 2
+			},
 			"entries": [
 				"This book contains coordination and balance exercises, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Dexterity score increases by 2, as does your maximum for that score. The manual then loses its magic, but regains it in a century."
 			]
@@ -9464,7 +9585,7 @@
 						],
 						[
 							"00",
-							"The moonblade functions as a vorpal sword."
+							"The moonblade functions as a {@item vorpal sword}."
 						]
 					]
 				},
@@ -10406,7 +10527,7 @@
 			"source": "DMG",
 			"page": 184,
 			"entries": [
-				"You are immune to contracting any disease while you wear this pendant. If you are already infected with a disease, the effects of the disease are suppressed you while you wear the pendant."
+				"You are immune to contracting any disease while you wear this pendant. If you are already infected with a disease, the effects of the disease are suppressed while you wear the pendant."
 			]
 		},
 		{
@@ -10556,6 +10677,7 @@
 			"name": "Plate Armor of Etherealness",
 			"type": "HA",
 			"armor": true,
+			"baseItem": "plate armor|phb",
 			"weight": "65",
 			"ac": 18,
 			"strength": "15",
@@ -10629,7 +10751,8 @@
 				}
 			],
 			"entries": [
-				"一套製毒工具組包括了若干小瓶、化學材料、以及其他製毒所需的裝備。熟練於這套工具組能讓你將你的熟練加值加到任何你在為了製作或使用毒藥時所進行的屬性檢定中。"
+				"一套製毒工具組包括了若干小瓶、化學材料、以及其他製毒所需的裝備。熟練於這套工具組能讓你將你的熟練加值加到任何你在為了製作或使用毒藥時所進行的屬性檢定中。",
+				"此外，{@book Crafting and Harvesting Poison|dmg|8|毒藥的製作與提煉}的規則也需要使用。"
 			],
 			"additionalEntries": [
 				"製毒工具組對於竊賊、暗殺者、以及其他熱衷於陰謀詭計的人們而言，是個備受青睞的資源。它讓你能夠運用毒藥、並使用各樣材料製取毒素。你對毒素的知識也能在你解毒時提供幫助。",
@@ -10839,6 +10962,11 @@
 			"rarity": "Very Rare",
 			"source": "DMG",
 			"page": 187,
+			"ability": {
+				"static": {
+					"str": 27
+				}
+			},
 			"entries": [
 				"當你飲用這瓶藥水後，你的力量值將變為27，持續1小時。若你的力量值等於或大於這個數值，則此藥水不會有任何效果。",
 				"這瓶藥水的透明液體中漂浮著一片來自{@creature 雲巨人}的指甲碎片。"
@@ -10889,6 +11017,11 @@
 			"rarity": "Rare",
 			"source": "DMG",
 			"page": 187,
+			"ability": {
+				"static": {
+					"str": 25
+				}
+			},
 			"entries": [
 				"當你飲用這瓶藥水後，你的力量值將變為25，持續1小時。若你的力量值等於或大於這個數值，則此藥水不會有任何效果。",
 				"這瓶藥水的透明液體中漂浮著一片來自{@creature 火巨人}的指甲碎片。"
@@ -10934,6 +11067,11 @@
 			"rarity": "Rare",
 			"source": "DMG",
 			"page": 187,
+			"ability": {
+				"static": {
+					"str": 23
+				}
+			},
 			"entries": [
 				"當你飲用這瓶藥水後，你的力量值將變為23，持續1小時。若你的力量值等於或大於這個數值，則此藥水不會有任何效果。",
 				"這瓶藥水的透明液體中漂浮著一片來自{@creature 霜巨人}的指甲碎片。"
@@ -11042,6 +11180,11 @@
 			"rarity": "Uncommon",
 			"source": "DMG",
 			"page": 187,
+			"ability": {
+				"static": {
+					"str": 21
+				}
+			},
 			"entries": [
 				"當你飲用這瓶藥水後，你的力量值將變為21，持續1小時。若你的力量值等於或大於這個數值，則此藥水不會有任何效果。",
 				"這瓶藥水的透明液體中漂浮著一片來自{@creature 山丘巨人}的指甲碎片。"
@@ -11229,6 +11372,11 @@
 			"rarity": "Rare",
 			"source": "DMG",
 			"page": 187,
+			"ability": {
+				"static": {
+					"str": 23
+				}
+			},
 			"entries": [
 				"當你飲用這瓶藥水後，你的力量值將變為23，持續1小時。若你的力量值等於或大於這個數值，則此藥水不會有任何效果。",
 				"這瓶藥水的透明液體中漂浮著一片來自{@creature 石巨人}的指甲碎片。"
@@ -11242,6 +11390,11 @@
 			"rarity": "Legendary",
 			"source": "DMG",
 			"page": 187,
+			"ability": {
+				"static": {
+					"str": 29
+				}
+			},
 			"entries": [
 				"當你飲用這瓶藥水後，你的力量值將變為29，持續1小時。若你的力量值等於或大於這個數值，則此藥水不會有任何效果。",
 				"這瓶藥水的透明液體中漂浮著一片來自{@creature 風暴巨人}的指甲碎片。"
@@ -12934,7 +13087,8 @@
 			"reqAttune": "by a Spellcaster",
 			"entries": [
 				"Etched with eldritch runes, this 1\u2014inch-diameter ruby allows you to use a simple or martial weapon as a spellcasting focus for your spells. For this property to work, you must attach the ruby to the weapon by pressing the ruby against it for at least 10 minutes. Thereafter, the ruby can't be removed unless you detach it as an action or the weapon is destroyed. Not even an {@spell antimagic field} causes it to fall off. The ruby does fall off the weapon if your attunement to the ruby ends."
-			]
+			],
+			"focus": true
 		},
 		{
 			"name": "Ryath Root",
@@ -15054,7 +15208,7 @@
 			"sentient": true,
 			"entries": [
 				"The Sunsword is a unique blade once possessed by Strahd's brother, Sergei von Zarovich. In its original form, it had a platinum hilt and guard, and a thin crystal blade as strong as steel.",
-				"Strahd employed a powerful wizard named Khazan to destroy the weapon after Sergei's death. The first part of the process required the hilt and the blade to be separated, which Khazan accomplished. While Khazan was busying himself destroying the blade, his apprentice stole the hilt and fled. Khazan later located his apprentice's mutilated corpse in the Svalich Woods, but the hilt was nowhere to be found. To avoid the {@creature vampire|mm|vampire's} wrath, Khazan told Strahd that the entire weapon had been destroyed.",
+				"Strahd employed a powerful wizard named Khazan to destroy the weapon after Sergei's death. The first part of the process required the hilt and the blade to be separated, which Khazan accomplished. While Khazan was busying himself destroying the blade, his apprentice stole the hilt and fled. Khazan later located his apprentice's mutilated corpse in the Svalich Woods, but the hilt was nowhere to be found. To avoid the vampire's wrath, Khazan told Strahd that the entire weapon had been destroyed.",
 				"The hilt, which is sentient, knows that it can never be reunited with its original crystal blade. It has, however, gained the properties of a {@item sun blade}.",
 				{
 					"name": "Sentience",
@@ -15748,6 +15902,9 @@
 			"rarity": "Very Rare",
 			"source": "DMG",
 			"page": 208,
+			"ability": {
+				"int": 2
+			},
 			"entries": [
 				"This book contains memory and logic exercises, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Intelligence score increases by 2, as does your maximum for that score. The manual then loses its magic, but regains it in a century."
 			]
@@ -15760,6 +15917,9 @@
 			"rarity": "Very Rare",
 			"source": "DMG",
 			"page": 208,
+			"ability": {
+				"cha": 2
+			},
 			"entries": [
 				"This book contains guidelines for influencing and charming others, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Charisma score increases by 2, as does your maximum for that score. The manual then loses its magic, but regains it in a century."
 			]
@@ -15789,6 +15949,9 @@
 				"If you can attune to this item, you can use it as a spellbook and an arcane focus. In addition, while holding the tome, you can use a bonus action to cast a spell you have written in this tome, without expending a spell slot or using any verbal or somatic component Once used, this property of the tome can't be used again until the next dawn.",
 				"While attuned to the book, you can remove the tongue from the book's cover. If you do so, all spells written in the book are permanently erased.",
 				"Vecna watches anyone using this tome. He can also write cryptic messages in the book. These messages appear at midnight and fade away after they are read."
+			],
+			"focus": [
+				"Wizard"
 			]
 		},
 		{
@@ -15799,6 +15962,9 @@
 			"rarity": "Very Rare",
 			"source": "DMG",
 			"page": 209,
+			"ability": {
+				"wis": 2
+			},
 			"entries": [
 				"This book contains intuition and insight exercises, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Wisdom score increases by 2, as does your maximum for that score. The manual then loses its magic, but regains it in a century."
 			]
@@ -18133,7 +18299,8 @@
 			"dmgType": "P",
 			"property": [
 				"T",
-				"V"
+				"V",
+				"F"
 			],
 			"range": "20/60",
 			"rarity": "Legendary",
@@ -19368,27 +19535,27 @@
 					"rows": [
 						[
 							"1\u20132",
-							"The dodecahedron explodes and is destroyed. Each creature within 20 feet of the exploding die must make a DC 13 Dexterity saving throw, taking 40 ({@dice 9d8}) force damage on a failed save, or half as much damage on a successful one."
+							"The dodecahedron explodes and is destroyed. Each creature within 20 feet of the exploding die must make a DC 13 Dexterity saving throw, taking 40 ({@dice 9d8}) force damage on a failed save, or half as much damage on a successful one."
 						],
 						[
 							"3\u20134",
-							"The dodecahedron casts {@spell light} on itself. The effect lasts until a creature touches the die."
+							"The dodecahedron casts {@spell light} on itself. The effect lasts until a creature touches the die."
 						],
 						[
 							"5\u20136",
-							"The dodecahedron casts {@spell ray of frost} (+5 to hit), targeting a random creature within 60 feet of it that doesn't have total cover against the attack."
+							"The dodecahedron casts {@spell ray of frost} (+5 to hit), targeting a random creature within 60 feet of it that doesn't have total cover against the attack."
 						],
 						[
 							"7\u20138",
-							"The dodecahedron casts {@spell shocking grasp} (+5 to hit) on the next creature that touches it."
+							"The dodecahedron casts {@spell shocking grasp} (+5 to hit) on the next creature that touches it."
 						],
 						[
 							"9\u201310",
-							"The dodecahedron casts {@spell darkness} on itself. The effect has a duration of 10 minutes."
+							"The dodecahedron casts {@spell darkness} on itself. The effect has a duration of 10 minutes."
 						],
 						[
 							"11\u201312",
-							"The next creature to touch the dodecahedron gains {@dice 1d10} temporary hit points that last for 1 hour."
+							"The next creature to touch the dodecahedron gains {@dice 1d10} temporary hit points that last for 1 hour."
 						]
 					]
 				}
@@ -19528,12 +19695,18 @@
 			],
 			"attachedSpells": [
 				"thunderwave"
+			],
+			"focus": [
+				"Sorcerer",
+				"Warlock",
+				"Wizard"
 			]
 		},
 		{
 			"name": "Azorius Keyrune",
 			"wondrous": true,
 			"source": "GGR",
+			"page": 177,
 			"reqAttune": "by a member of the Azorius guild",
 			"rarity": "Rare",
 			"entries": [
@@ -19547,6 +19720,7 @@
 			"name": "Boros Keyrune",
 			"wondrous": true,
 			"source": "GGR",
+			"page": 177,
 			"reqAttune": "by a member of the Boros guild",
 			"rarity": "Rare",
 			"entries": [
@@ -19560,6 +19734,7 @@
 			"name": "Dimir Keyrune",
 			"wondrous": true,
 			"source": "GGR",
+			"page": 177,
 			"reqAttune": "by a member of the Dimir guild",
 			"rarity": "Very Rare",
 			"entries": [
@@ -19573,6 +19748,7 @@
 			"name": "Golgari Keyrune",
 			"wondrous": true,
 			"source": "GGR",
+			"page": 177,
 			"reqAttune": "by a member of the Golgari guild",
 			"rarity": "Very Rare",
 			"entries": [
@@ -19586,6 +19762,7 @@
 			"name": "Gruul Keyrune",
 			"wondrous": true,
 			"source": "GGR",
+			"page": 177,
 			"reqAttune": "by a member of the Gruul guild",
 			"rarity": "Rare",
 			"entries": [
@@ -19599,6 +19776,7 @@
 			"name": "Izzet Keyrune",
 			"wondrous": true,
 			"source": "GGR",
+			"page": 177,
 			"reqAttune": "by a member of the Izzet guild",
 			"rarity": "Rare",
 			"entries": [
@@ -19612,6 +19790,7 @@
 			"name": "Orzhov Keyrune",
 			"wondrous": true,
 			"source": "GGR",
+			"page": 178,
 			"reqAttune": "by a member of the Orzhov guild",
 			"rarity": "Rare",
 			"entries": [
@@ -19625,6 +19804,7 @@
 			"name": "Rakdos Keyrune",
 			"wondrous": true,
 			"source": "GGR",
+			"page": 178,
 			"reqAttune": "by a member of the Rakdos guild",
 			"rarity": "Uncommon",
 			"entries": [
@@ -19638,6 +19818,7 @@
 			"name": "Selesnya Keyrune",
 			"wondrous": true,
 			"source": "GGR",
+			"page": 178,
 			"reqAttune": "by a member of the Selesnya guild",
 			"rarity": "Rare",
 			"entries": [
@@ -19651,6 +19832,7 @@
 			"name": "Simic Keyrune",
 			"wondrous": true,
 			"source": "GGR",
+			"page": 178,
 			"reqAttune": "by a member of the Simic guild",
 			"rarity": "Uncommon",
 			"entries": [
@@ -19664,6 +19846,7 @@
 			"name": "Azorius Guild Signet",
 			"type": "RG",
 			"source": "GGR",
+			"page": 178,
 			"reqAttune": true,
 			"rarity": "Uncommon",
 			"entries": [
@@ -19679,6 +19862,7 @@
 			"name": "Boros Guild Signet",
 			"type": "RG",
 			"source": "GGR",
+			"page": 178,
 			"reqAttune": true,
 			"rarity": "Uncommon",
 			"entries": [
@@ -19694,6 +19878,7 @@
 			"name": "Dimir Guild Signet",
 			"type": "RG",
 			"source": "GGR",
+			"page": 178,
 			"reqAttune": true,
 			"rarity": "Uncommon",
 			"entries": [
@@ -19709,6 +19894,7 @@
 			"name": "Golgari Guild Signet",
 			"type": "RG",
 			"source": "GGR",
+			"page": 178,
 			"reqAttune": true,
 			"rarity": "Uncommon",
 			"entries": [
@@ -19724,6 +19910,7 @@
 			"name": "Gruul Guild Signet",
 			"type": "RG",
 			"source": "GGR",
+			"page": 178,
 			"reqAttune": true,
 			"rarity": "Uncommon",
 			"entries": [
@@ -19739,6 +19926,7 @@
 			"name": "Izzet Guild Signet",
 			"type": "RG",
 			"source": "GGR",
+			"page": 178,
 			"reqAttune": true,
 			"rarity": "Uncommon",
 			"entries": [
@@ -19754,6 +19942,7 @@
 			"name": "Orzhov Guild Signet",
 			"type": "RG",
 			"source": "GGR",
+			"page": 178,
 			"reqAttune": true,
 			"rarity": "Uncommon",
 			"entries": [
@@ -19769,6 +19958,7 @@
 			"name": "Rakdos Guild Signet",
 			"type": "RG",
 			"source": "GGR",
+			"page": 178,
 			"reqAttune": true,
 			"rarity": "Uncommon",
 			"entries": [
@@ -19784,6 +19974,7 @@
 			"name": "Selesnya Guild Signet",
 			"type": "RG",
 			"source": "GGR",
+			"page": 178,
 			"reqAttune": true,
 			"rarity": "Uncommon",
 			"entries": [
@@ -19799,6 +19990,7 @@
 			"name": "Simic Guild Signet",
 			"type": "RG",
 			"source": "GGR",
+			"page": 178,
 			"reqAttune": true,
 			"rarity": "Uncommon",
 			"entries": [
@@ -19814,6 +20006,7 @@
 			"name": "Illusionist's Bracers",
 			"wondrous": true,
 			"source": "GGR",
+			"page": 178,
 			"reqAttune": "by a spellcaster",
 			"rarity": "Very Rare",
 			"entries": [
@@ -19825,6 +20018,7 @@
 			"name": "Mizzium Apparatus",
 			"wondrous": true,
 			"source": "GGR",
+			"page": 179,
 			"reqAttune": "by a sorcerer, warlock, or wizard",
 			"rarity": "Uncommon",
 			"entries": [
@@ -20007,12 +20201,18 @@
 						]
 					]
 				}
+			],
+			"focus": [
+				"Sorcerer",
+				"Warlock",
+				"Wizard"
 			]
 		},
 		{
 			"name": "Mizzium Mortar",
 			"wondrous": true,
 			"source": "GGR",
+			"page": 179,
 			"rarity": "Rare",
 			"entries": [
 				"This short tube, about 2 feet long and 6 inches in diameter, is made from mizzium, a magically enhanced metal alloy forged by the Izzet League. The end that's pointed toward a target is open, and a glowing ball of molten metal can be seen at the other end as long as the mortar has at least 1 charge remaining.",
@@ -20038,6 +20238,7 @@
 			"name": "Moodmark Paint",
 			"wondrous": true,
 			"source": "GGR",
+			"page": 180,
 			"rarity": "Common",
 			"entries": [
 				"This thick, black paint is stored in a small jar, containing enough paint to apply moodmarks to one creature. The paint is dabbed on the face in spots or markings that often resemble the eyes of insects or spiders. Applying the paint in this way takes 1 minute.",
@@ -20051,6 +20252,7 @@
 			"weight": "6",
 			"rarity": "Rare",
 			"source": "GGR",
+			"page": 180,
 			"reqAttune": true,
 			"entries": [
 				"Soldiers of the Boros Legion consider it an honor to bear this shield, even knowing that it might be the last honor they receive. The front of the shield is sculpted to depict a grieving human face.",
@@ -20063,6 +20265,7 @@
 			"wondrous": true,
 			"rarity": "Very Rare",
 			"source": "GGR",
+			"page": 180,
 			"reqAttune": true,
 			"entries": [
 				"While wearing this winged helm, you have a flying speed of 60 feet. In addition, you have advantage on initiative rolls."
@@ -20073,6 +20276,7 @@
 			"wondrous": true,
 			"rarity": "Uncommon",
 			"source": "GGR",
+			"page": 180,
 			"reqAttune": true,
 			"entries": [
 				"A Pyroconverger is an Izzet-made flamethrower. It carries a risk of malfunction each time you use it.",
@@ -20096,6 +20300,7 @@
 			"range": "20/60",
 			"rarity": "Legendary",
 			"source": "GGR",
+			"page": 180,
 			"reqAttune": true,
 			"entries": [
 				"You gain a +1 bonus to attack and damage rolls made with this magic weapon. Its blade is cruelly serrated, and its hilt resembles a demonic head and wings. Whenever you slay a creature with an attack using the dagger, the creature's soul is imprisoned inside the dagger, and that creature can be restored to life only by a {@spell wish} spell. The dagger can hold a maximum of five souls.",
@@ -20123,6 +20328,7 @@
 			"weight": "4",
 			"rarity": "Uncommon",
 			"source": "GGR",
+			"page": 181,
 			"reqAttune": true,
 			"entries": [
 				"You gain a +1 bonus to attack and damage rolls made with this magic quarterstaff. While holding it, you gain a +1 bonus to spell attack rolls.",
@@ -20134,6 +20340,7 @@
 			"wondrous": true,
 			"rarity": "Uncommon",
 			"source": "GGR",
+			"page": 181,
 			"reqAttune": true,
 			"entries": [
 				"This headpiece, crafted from dark metal, is worn curved around the ear. If you know a creature wearing another Spies' Murmur and that creature is within 1 mile of you, you can communicate telepathically with each other. As a bonus action, you can allow that creature to hear everything you hear for 1 hour. You can end this effect as a bonus action, and it ends if you're {@condition incapacitated}."
@@ -20155,6 +20362,7 @@
 			"range": "20/60",
 			"rarity": "Rare",
 			"source": "GGR",
+			"page": 181,
 			"reqAttune": true,
 			"entries": [
 				"You gain a +2 bonus to attack and damage rolls made with this magic weapon.",
@@ -20176,6 +20384,7 @@
 			],
 			"rarity": "Very Rare",
 			"source": "GGR",
+			"page": 181,
 			"reqAttune": true,
 			"entries": [
 				"You gain a +1 bonus to attack and damage rolls made with this magic weapon. Additionally, once on each of your turns, you can use one of the following properties if you're holding the sword:",
@@ -20195,6 +20404,7 @@
 			"weight": "4",
 			"rarity": "Very Rare",
 			"source": "GGR",
+			"page": 181,
 			"reqAttune": true,
 			"entries": [
 				"You gain a +1 bonus to attack and damage rolls made with this magic quarterstaff. While you hold it, you gain a +1 bonus to spell attack rolls.",
@@ -20209,7 +20419,6 @@
 			"weight": "25",
 			"rarity": "Common",
 			"source": "WDMM",
-			"reqAttune": true,
 			"entries": [
 				"Food and other perishable items do not age or decay while inside a Chest of Preserving. The chest is 2½ feet long, 1½ feet wide, and 1 foot tall with a half-barrel lid. The chest has a lock, which can be picked with thieves' tools and a successful DC 15 Dexterity check. Smashing the lock or any other part of the chest renders it nonmagical."
 			]
@@ -20363,6 +20572,21 @@
 			"rarity": "Legendary",
 			"source": "LLK",
 			"page": 53,
+			"ability": {
+				"choose": [
+					{
+						"from": [
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						],
+						"count": 1
+					}
+				]
+			},
 			"entries": [
 				"Stored in a leather pouch, this unique deck contains twenty-two colored cards made of some strong but unknown metal, each of which features a design printed as a mosaic of raised dots. Before you draw a card, you must declare how many cards you intend to draw and then draw them randomly (you can use an altered deck of playing cards to simulate the deck). Any cards drawn in excess of this number have no effect. Otherwise, as soon as you draw a card from the deck, its magic takes effect. You must draw each card no more than 1 hour after the previous draw. If you fail to draw the chosen number, the remaining number of cards fly from the deck on their own and take effect all at once.",
 				"Once a card is drawn, it fades from existence. Unless the card is the Fool or the Jester, the card reappears in the deck, making it possible to draw the same card twice.",
@@ -20955,6 +21179,11 @@
 			"source": "LLK",
 			"ac": 19,
 			"page": 56,
+			"ability": {
+				"static": {
+					"str": 18
+				}
+			},
 			"entries": [
 				"Powered armor resembles a suit of unusual plate armor, with finely articulated joints connected by an oily, black, leather-like material. The armor has been worked to create the appearance of a heavily muscled warrior, and its great helm is unusual in that it has no openings\u2014only a broad glass plate in the front with a second piece of glass above it. Strange plates, tubing, and large metal bosses adorn the armor in seemingly random fashion. On the back of the armor's left gauntlet is a rectangular metal box, from which projects a short rod tipped with a cone-shaped red crystal.",
 				"While wearing this armor, you gain the following benefits:",
@@ -21096,12 +21325,17 @@
 				"權杖|phb",
 				"法杖|phb",
 				"魔杖|phb"
+			],
+			"focus": [
+				"Sorcerer",
+				"Warlock",
+				"Wizard"
 			]
 		},
 		{
 			"name": "德魯伊法器", "ENG_name": "Druidic Focus",
 			"type": "SCF",
-			"scfType": "arcane",
+			"scfType": "druid",
 			"rarity": "None",
 			"source": "PHB",
 			"page": 151,
@@ -21110,7 +21344,9 @@
 				"圖騰|phb",
 				"木質法杖|phb",
 				"紫杉魔杖|phb"
-
+			],
+			"focus": [
+				"Druid"
 			]
 		},
 		{
@@ -21124,6 +21360,10 @@
 				"護符|phb",
 				"徽章|phb",
 				"聖物匣|phb"
+			],
+			"focus": [
+				"Cleric",
+				"Paladin"
 			]
 		},
 		{

@@ -1,9 +1,15 @@
 {
 	"_meta": {
-		"dependencies": [
-			"MM",
-			"VGM"
-		]
+		"dependencies": {
+			"monster": [
+				"MM"
+			]
+		},
+		"otherSources": {
+			"monster": {
+				"VGM": "WDMM"
+			}
+		}
 	},
 	"monster": [
 		{
@@ -11,13 +17,14 @@
 			"_copy": {
 				"name": "強盜首領",
 				"source": "MM",
-				"replacers": [
-					{
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
 						"replace": "the captain",
 						"with": "Embric",
 						"flags": "i"
 					}
-				]
+				}
 			},
 			"isNPC": true,
 			"type": {
@@ -55,6 +62,9 @@
 			"languageTags": [
 				"C",
 				"P"
+			],
+			"spellcastingTags": [
+				"I"
 			]
 		},
 		{
@@ -62,24 +72,21 @@
 			"_copy": {
 				"name": "祭司",
 				"source": "MM",
-				"replacers": [
-					{
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
 						"replace": "the priest",
 						"with": "Avi",
 						"flags": "i"
-					}
-				],
-				"arrayModifiers": {
+					},
 					"trait": {
-						"mode": "prepend",
-						"data": [
-							{
-								"name": "Control Water",
-								"entries": [
-									"At will, Avi can control the flow and shape of water in a 5-foot cube, or cause the water to freeze for up to 1 hour."
-								]
-							}
-						]
+						"mode": "prependArr",
+						"items": {
+							"name": "Control Water",
+							"entries": [
+								"At will, Avi can control the flow and shape of water in a 5-foot cube, or cause the water to freeze for up to 1 hour."
+							]
+						}
 					}
 				}
 			},
@@ -646,6 +653,9 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"spellcastingTags": [
+				"CW"
 			]
 		},
 		{
@@ -783,6 +793,9 @@
 			],
 			"senseTags": [
 				"SD"
+			],
+			"spellcastingTags": [
+				"I"
 			]
 		},
 		{
@@ -1272,6 +1285,10 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"spellcastingTags": [
+				"I",
+				"CC"
 			]
 		},
 		{
@@ -1397,6 +1414,10 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"spellcastingTags": [
+				"I",
+				"CC"
 			]
 		},
 		{
@@ -1522,6 +1543,10 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"spellcastingTags": [
+				"I",
+				"CC"
 			]
 		},
 		{
@@ -1653,6 +1678,9 @@
 				"DR",
 				"D",
 				"E"
+			],
+			"spellcastingTags": [
+				"CW"
 			]
 		},
 		{
@@ -1783,6 +1811,9 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"spellcastingTags": [
+				"CB"
 			]
 		},
 		{
@@ -2014,6 +2045,9 @@
 			"languageTags": [
 				"C",
 				"H"
+			],
+			"spellcastingTags": [
+				"CW"
 			]
 		},
 		{
@@ -2121,6 +2155,9 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"spellcastingTags": [
+				"CD"
 			]
 		},
 		{
@@ -2287,6 +2324,10 @@
 			],
 			"senseTags": [
 				"SD"
+			],
+			"spellcastingTags": [
+				"I",
+				"CW"
 			]
 		},
 		{
@@ -2620,6 +2661,9 @@
 			"languageTags": [
 				"C",
 				"D"
+			],
+			"spellcastingTags": [
+				"CW"
 			]
 		},
 		{
@@ -2712,6 +2756,9 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"spellcastingTags": [
+				"CW"
 			]
 		},
 		{
@@ -3010,6 +3057,9 @@
 			"languageTags": [
 				"C",
 				"DR"
+			],
+			"spellcastingTags": [
+				"CC"
 			]
 		},
 		{
@@ -3706,6 +3756,9 @@
 			"languageTags": [
 				"C",
 				"H"
+			],
+			"spellcastingTags": [
+				"CW"
 			]
 		},
 		{
@@ -3949,6 +4002,9 @@
 				"DR",
 				"D",
 				"E"
+			],
+			"spellcastingTags": [
+				"CW"
 			]
 		},
 		{
@@ -4060,6 +4116,9 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"spellcastingTags": [
+				"CD"
 			]
 		},
 		{
@@ -4213,6 +4272,9 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"spellcastingTags": [
+				"CW"
 			]
 		},
 		{
@@ -4452,6 +4514,9 @@
 				"DR",
 				"E",
 				"I"
+			],
+			"spellcastingTags": [
+				"CW"
 			]
 		},
 		{
@@ -4525,7 +4590,7 @@
 				{
 					"name": "Spellcasting",
 					"headerEntries": [
-						"Barnibus is a 7th-level spellcaster. His spellcasting ability is Intelligence. He has the following wizard spells prepared:"
+						"Barnibus is a 7th-level spellcaster. His spellcasting ability is Intelligence (spell save DC 13, {@hit 5} to hit with spell attacks) He has the following wizard spells prepared:"
 					],
 					"spells": {
 						"0": {
@@ -4576,6 +4641,9 @@
 				"DR",
 				"D",
 				"H"
+			],
+			"spellcastingTags": [
+				"CW"
 			]
 		},
 		{
@@ -4760,7 +4828,7 @@
 				{
 					"name": "Spellcasting",
 					"headerEntries": [
-						"Davil is a 12th-level spellcaster. His spellcasting ability is Charisma. He has the following bard spells prepared:"
+						"Davil is a 12th-level spellcaster. His spellcasting ability is Charisma (spell save DC 14, {@hit 6} to hit with spell attacks) He has the following bard spells prepared:"
 					],
 					"spells": {
 						"0": {
@@ -4831,6 +4899,9 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"spellcastingTags": [
+				"CB"
 			]
 		},
 		{
@@ -4926,7 +4997,7 @@
 				{
 					"name": "Innate Spellcasting",
 					"headerEntries": [
-						"The drow's spellcasting ability is Charisma. It can innately cast the following spells, requiring no material components:"
+						"The drow's spellcasting ability is Charisma (spell save DC 12) It can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
 						"{@spell dancing lights}"
@@ -4954,6 +5025,9 @@
 			],
 			"senseTags": [
 				"SD"
+			],
+			"spellcastingTags": [
+				"I"
 			]
 		},
 		{
@@ -5271,7 +5345,7 @@
 				{
 					"name": "Spellcasting",
 					"headerEntries": [
-						"Hlam is a 5th-level spellcaster. His spellcasting ability is Wisdom. He has the following cleric spells prepared:"
+						"Hlam is a 5th-level spellcaster. His spellcasting ability is Wisdom (spell save DC 18, {@hit 10} to hit with spell attacks) He has the following cleric spells prepared:"
 					],
 					"spells": {
 						"0": {
@@ -5317,6 +5391,9 @@
 			],
 			"languageTags": [
 				"XX"
+			],
+			"spellcastingTags": [
+				"CC"
 			]
 		},
 		{
@@ -5493,7 +5570,7 @@
 				{
 					"name": "Spellcasting",
 					"headerEntries": [
-						"Istrid is a 9th-level spellcaster. Her spellcasting ability is Wisdom. She has the following cleric spells prepared:"
+						"Istrid is a 9th-level spellcaster. Her spellcasting ability is Wisdom (spell save DC 14, {@hit 6} to hit with spell attacks) She has the following cleric spells prepared:"
 					],
 					"spells": {
 						"0": {
@@ -5564,6 +5641,9 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"spellcastingTags": [
+				"CC"
 			]
 		},
 		{
@@ -5808,7 +5888,7 @@
 				{
 					"name": "Innate Spellcasting",
 					"headerEntries": [
-						"Jarlaxle's innate spellcasting ability is Charisma. He can innately cast the following spells, requiring no material components:"
+						"Jarlaxle's innate spellcasting ability is Charisma (spell save DC 17, {@hit 9} to hit with spell attacks) He can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
 						"{@spell dancing lights}"
@@ -5843,6 +5923,9 @@
 			],
 			"senseTags": [
 				"SD"
+			],
+			"spellcastingTags": [
+				"I"
 			]
 		},
 		{
@@ -6067,6 +6150,9 @@
 			],
 			"senseTags": [
 				"U"
+			],
+			"spellcastingTags": [
+				"CW"
 			]
 		},
 		{
@@ -6253,6 +6339,9 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"spellcastingTags": [
+				"CW"
 			]
 		},
 		{
@@ -6758,6 +6847,9 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"spellcastingTags": [
+				"CW"
 			]
 		},
 		{
@@ -6831,7 +6923,7 @@
 				{
 					"name": "Spellcasting",
 					"headerEntries": [
-						"Skeemo is a 9th-level spellcaster. His spellcasting ability is Intelligence. He has the following wizard spells prepared:"
+						"Skeemo is a 9th-level spellcaster. His spellcasting ability is Intelligence (spell save DC 14, {@hit 6} to hit with spell attacks) He has the following wizard spells prepared:"
 					],
 					"spells": {
 						"0": {
@@ -6891,6 +6983,9 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"spellcastingTags": [
+				"CW"
 			]
 		},
 		{
@@ -7168,6 +7263,9 @@
 				"GI",
 				"H",
 				"U"
+			],
+			"spellcastingTags": [
+				"CW"
 			]
 		},
 		{
@@ -7376,6 +7474,9 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"spellcastingTags": [
+				"CC"
 			]
 		},
 		{
@@ -7614,6 +7715,9 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"spellcastingTags": [
+				"CP"
 			]
 		}
 	]

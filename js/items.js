@@ -48,11 +48,11 @@ let mundanelist;
 let magiclist;
 const sourceFilter = getSourceFilter();
 const DEFAULT_HIDDEN_TYPES = new Set(["$", "Futuristic", "Modern", "Renaissance"]);
-const typeFilter = new Filter({header: "Type", headerName: "類型", deselFn: (it) => DEFAULT_HIDDEN_TYPES.has(it), 
-	items:["$","Trade Good","Adventuring Gear","Light Armor","Medium Armor","Heavy Armor","Shield","Simple Weapon","Martial Weapon","Melee Weapon","Ranged Weapon","Firearm","Ammunition","Explosive","Tool","Artisan Tool","Instrument","Gaming Set","Spellcasting Focus","Rod","Staff","Wand","Scroll","Ring","Wondrous Item","Potion","Poison","Mount","Vehicle","Tack and Harness","Renaissance","Modern","Futuristic"], displayFn: Parser.ItemTypeToDisplay});
+const typeFilter = new Filter({header: "Type", headerName: "類型", deselFn: (it) => DEFAULT_HIDDEN_TYPES.has(it)});
 const tierFilter = new Filter({header: "Tier", headerName: "階級", items: ["None", "Minor", "Major"], displayFn:Parser.ItemTierToDisplay });
 const propertyFilter = new Filter({header: "Property", headerName: "物品屬性", displayFn: StrUtil.uppercaseFirst});
 const costFilter = new RangeFilter({header: "Cost", headerName: "價值", min: 0, max: 100, allowGreater: true, suffix: "金幣"});
+const focusFilter = new Filter({header: "Spellcasting Focus", headerName: "施法法器", items: ["Bard", "Cleric", "Druid", "Paladin", "Sorcerer", "Warlock", "Wizard"], displayFn:Parser.ClassToDisplay});
 const attachedSpellsFilter = new Filter({header: "Attached Spells", headerName: "附加法術", displayFn: (it) => it.split("|")[0].toTitleCase()});
 let filterBox;
 async function populateTablesAndFilters (data) {
@@ -74,7 +74,8 @@ async function populateTablesAndFilters (data) {
 		items: ["Basic", "Generic Variant", "Specific Variant", "Other"],
 		deselFn: (it) => it === "Specific Variant"
 	});
-	const miscFilter = new Filter({header: "Miscellaneous", headerName: "雜項", items: ["Charges", "Cursed", "Magic", "Mundane", "Sentient"], displayFn:function(str){switch(str){
+	const miscFilter = new Filter({header: "Miscellaneous", headerName: "雜項", items: ["Ability Score Adjustment", "Charges", "Cursed", "Magic", "Mundane", "Sentient"], displayFn:function(str){switch(str){
+		case "Ability Score Adjustment": return "屬性值調整";
 		case "Magic": return "魔法物品";
 		case "Mundane": return "尋常物品";
 		case "Cursed": return "詛咒";
@@ -83,7 +84,7 @@ async function populateTablesAndFilters (data) {
 		default: return str;
 		}}});
 
-	filterBox = await pInitFilterBox(sourceFilter, typeFilter, tierFilter, rarityFilter, propertyFilter, attunementFilter, categoryFilter, costFilter, miscFilter, attachedSpellsFilter);
+	filterBox = await pInitFilterBox(sourceFilter, typeFilter, tierFilter, rarityFilter, propertyFilter, attunementFilter, categoryFilter, costFilter, focusFilter, miscFilter, attachedSpellsFilter);
 
 	const mundaneOptions = {
 		valueNames: ["name", "type", "cost", "weight", "source", "uniqueid", "eng_name"],
@@ -175,9 +176,6 @@ async function populateTablesAndFilters (data) {
 		});
 	});
 
-	RollerUtil.addListRollButton();
-	addListShowHide();
-
 	const subList = ListUtil.initSublist(
 		{
 			valueNames: ["name", "weight", "price", "count", "id"],
@@ -192,12 +190,15 @@ async function populateTablesAndFilters (data) {
 	addItems(data);
 	BrewUtil.pAddBrewData()
 		.then(handleBrew)
+		.then(() => BrewUtil.bind({list}))
 		.then(BrewUtil.pAddLocalBrewData)
 		.catch(BrewUtil.pPurgeBrew)
 		.then(async () => {
 			BrewUtil.makeBrewButton("manage-brew");
 			BrewUtil.bind({lists: [mundanelist, magiclist], filterBox, sourceFilter});
 			await ListUtil.pLoadState();
+			RollerUtil.addListRollButton();
+			ListUtil.addListShowHide();
 
 			History.init(true);
 			ExcludeUtil.checkShowAllExcluded(itemList, $(`#pagecontent`));
@@ -239,8 +240,32 @@ function addItems (data) {
 		if (curitem.curse) curitem._fMisc.push("Cursed");
 		const isMundane = rarity === "None" || rarity === "Unknown" || category === "Basic";
 		curitem._fMisc.push(isMundane ? "Mundane" : "Magic");
+		if (curitem.ability) curitem._fMisc.push("Ability Score Adjustment");
 		if (curitem.charges) curitem._fMisc.push("Charges");
 		curitem._fCost = Parser.coinValueToNumber(curitem.value);
+		if (curitem.focus || curitem.type === "INS" || curitem.type === "SCF") {
+			curitem._fFocus = curitem.focus ? curitem.focus === true ? ["Bard", "Cleric", "Druid", "Paladin", "Sorcerer", "Warlock", "Wizard"] : [...curitem.focus] : [];
+			if (curitem.type === "INS" && !curitem._fFocus.includes("Bard")) curitem._fFocus.push("Bard");
+			if (curitem.type === "SCF") {
+				switch (curitem.scfType) {
+					case "arcane": {
+						if (!curitem._fFocus.includes("Sorcerer")) curitem._fFocus.push("Sorcerer");
+						if (!curitem._fFocus.includes("Warlock")) curitem._fFocus.push("Warlock");
+						if (!curitem._fFocus.includes("Wizard")) curitem._fFocus.push("Wizard");
+						break;
+					}
+					case "druid": {
+						if (!curitem._fFocus.includes("Druid")) curitem._fFocus.push("Druid");
+						break;
+					}
+					case "holy":
+						if (!curitem._fFocus.includes("Cleric")) curitem._fFocus.push("Cleric");
+						if (!curitem._fFocus.includes("Paladin")) curitem._fFocus.push("Paladin");
+						break;
+				}
+			}
+		}
+
 		if (isMundane) {
 			liList["mundane"] += `
 			<li class="row" ${FLTR_ID}=${itI} onclick="ListUtil.toggleSelected(event, this)" oncontextmenu="ListUtil.openContextMenu(event, this)">
@@ -331,6 +356,7 @@ function handleFilterChange () {
 			i.attunementCategory,
 			i.category,
 			i._fCost,
+			i._fFocus,
 			i._fMisc,
 			i.attachedSpells
 		);
@@ -380,12 +406,7 @@ function loadhash (id) {
 		const $toAppend = $(`
 		${EntryRenderer.utils.getBorderTr()}
 		${EntryRenderer.utils.getNameTr(item)}
-		<tr>
-			<td id="typerarityattunement" class="typerarityattunement" colspan="6">
-				<span id="type">Type</span><span id="rarity">, rarity</span>
-				<span id="attunement">(requires attunement)</span>
-			</td>
-		</tr>
+		<tr><td class="typerarityattunement" colspan="6">${EntryRenderer.item.getTypeRarityAndAttunementText(item)}</td></tr>
 		<tr>
 			<td id="valueweight" colspan="2"><span id="value">10gp</span> <span id="weight">45 lbs.</span></td>
 			<td id="damageproperties" class="damageproperties" colspan="4"><span id="damage">Damage</span> <span id="damagetype">type</span> <span id="properties">(versatile)</span></td>
@@ -417,9 +438,6 @@ function loadhash (id) {
 		$content.find("span#damagetype").html(damageType);
 		$content.find("span#properties").html(propertiesTxt);
 
-		const typeRarityAttunement = EntryRenderer.item.getTypeRarityAndAttunementText(item).filter(Boolean).join(", ");
-		$content.find("#typerarityattunement").html(typeRarityAttunement);
-
 		$content.find("tr.text").remove();
 		const renderStack = [];
 		if (item.entries && item.entries.length) {
@@ -429,7 +447,7 @@ function loadhash (id) {
 
 		// tools, artisan tools, instruments, gaming sets
 		if (type === "T" || type === "AT" || type === "INS" || type === "GS") {
-			renderStack.push(`<p class="text-align-center"><i>參見「變體與可選規則」頁面的 <a href="${renderer.baseUrl}variantrules.html#${UrlUtil.encodeForHash(["Tool Proficiencies", "XGE"])}" target="_blank">工具熟練</a> 條目以瞭解更多情報。</i></p>`);
+			renderStack.push(`<p class="text-align-center"><i>參見「變體與可選規則」頁面的<a href="${renderer.baseUrl}variantrules.html#${UrlUtil.encodeForHash(["Tool Proficiencies", "XGE"])}">工具熟練</a>條目以瞭解更多情報。</i></p>`);
 			if (type === "INS") {
 				const additionEntriesList = {type: "entries", entries: TOOL_INS_ADDITIONAL_ENTRIES};
 				renderer.recursiveEntryRender(additionEntriesList, renderStack, 1);
@@ -487,7 +505,7 @@ function loadhash (id) {
 	);
 
 	// only display the "Info" tab if there's some fluff info--currently (2018-12-13), no official item has text fluff
-	if (item.fluff) EntryRenderer.utils.bindTabButtons(statTab, infoTab, picTab);
+	if (item.fluff && item.fluff.entries) EntryRenderer.utils.bindTabButtons(statTab, infoTab, picTab);
 	else EntryRenderer.utils.bindTabButtons(statTab, picTab);
 
 	ListUtil.updateSelected();

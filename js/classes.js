@@ -1,4 +1,5 @@
 "use strict";
+
 const HASH_HIDE_FEATURES = "hideclassfs:";
 const HASH_SHOW_FLUFF = "showfluff:";
 const HASH_SOURCES = "sources:";
@@ -169,7 +170,10 @@ class ClassData {
 			// get the class
 			const c = ClassData.classes.find(c => c.name.toLowerCase() === subClass.class.toLowerCase() && (c.source.source || c.source).toLowerCase() === (subClass.classSource || SRC_PHB).toLowerCase());
 			if (!c) {
-				alert(`Could not add subclass; could not find class with name: ${subClass.class}`);
+				JqueryUtil.doToast({
+					content: `Could not add subclass; could not find class with name: ${subClass.class}`,
+					type: "danger"
+				});
 				return;
 			}
 
@@ -374,7 +378,28 @@ class HashLoad {
 
 		const groupHeaders = $("#groupHeaders");
 		const colHeaders = $("#colHeaders");
-		const levelTrs = [...new Array(20)].map((_, i) => $(`#level${i + 1}`));
+		const $levelTrs = [];
+
+		// support for more than (or less than) 20 levels
+		(() => {
+			let i = 0;
+			let $ele;
+			while (($ele = $(`#level${i++ + 1}`)).length) $levelTrs.push($ele);
+			const lenDiff = ClassDisplay.curClass.classFeatures.length - $levelTrs.length;
+			if (lenDiff > 0) {
+				let addCount = 1;
+				[...new Array(lenDiff)].forEach(() => {
+					const level = $levelTrs.length + addCount++;
+					$levelTrs.push($(`<tr id="level${level}">
+						<td class="level">${Parser.getOrdinalForm(level)}</td>
+						<td class="pb">+6</td>
+						<td class="features"></td>
+					</tr>`).insertAfter($levelTrs.last()));
+				});
+			} else if (lenDiff < 0) {
+				[...new Array(-lenDiff)].forEach(() => $levelTrs.pop().remove());
+			}
+		})();
 
 		if (tData) {
 			for (let i = 0; i < tData.length; i++) {
@@ -389,7 +414,7 @@ class HashLoad {
 				groupHeaders.append(`<th ${hasTitle ? `class="colGroupTitle"` : ""} colspan="${tGroup.colLabels.length}" ${subclassData}>${hasTitle ? tGroup.title : ""}</th>`);
 
 				for (let j = 0; j < tGroup.colLabels.length; j++) {
-					let lbl = renderer.renderEntry(tGroup.colLabels[j]);
+					let lbl = `<div class="cls__squash_header">${renderer.renderEntry(tGroup.colLabels[j])}</div>`;
 					colHeaders.append(`<th class="centred-col" ${subclassData}>${lbl}</th>`)
 				}
 
@@ -399,7 +424,7 @@ class HashLoad {
 						if (entry === 0) entry = "\u2014";
 						const stack = [];
 						renderer.recursiveEntryRender(entry, stack);
-						levelTrs[j].append(`<td class="centred-col" ${subclassData}>${stack.join("")}</td>`)
+						$levelTrs[j].append(`<td class="centred-col" ${subclassData}>${stack.join("")}</td>`)
 					}
 				}
 			}
@@ -428,9 +453,9 @@ class HashLoad {
 
 		// FEATURE DESCRIPTIONS
 		let subclassIndex = 0; // the subclass array is not 20 elements
-		for (let i = 0; i < levelTrs.length; i++) {
+		for (let i = 0; i < $levelTrs.length; i++) {
 			// track class table feature names
-			const tblLvlFeatures = levelTrs[i].find(".features");
+			const tblLvlFeatures = $levelTrs[i].find(".features");
 			// used to build class table
 			const featureLinks = [];
 
@@ -1298,11 +1323,11 @@ ClassBookView._$scToggles = {};
 function initLinkGrabbers () {
 	const $body = $(`body`);
 	$body.on(`mousedown`, `.linked-titles--classes > td > * > .entry-title .entry-title-inner`, (evt) => evt.preventDefault());
-	$body.on(`click`, `.linked-titles--classes > td > * > .entry-title .entry-title-inner`, function (evt) {
+	$body.on(`click`, `.linked-titles--classes > td > * > .entry-title .entry-title-inner`, async function (evt) {
 		const $this = $(this);
 
 		if (evt.shiftKey) {
-			copyText($this.text().replace(/\.$/, ""));
+			await MiscUtil.pCopyTextToClipboard($this.text().replace(/\.$/, ""));
 			JqueryUtil.showCopiedEffect($this);
 		} else {
 			const fTag = $this.closest(`tr`).attr("id");
@@ -1310,7 +1335,7 @@ function initLinkGrabbers () {
 			const hash = `${window.location.hash.slice(1).split(HASH_PART_SEP)
 				.filter(it => !it.startsWith(CLSS_HASH_FEATURE)).join(HASH_PART_SEP)}${HASH_PART_SEP}${fTag}`;
 
-			copyText(`${window.location.href.split("#")[0]}#${hash}`);
+			await MiscUtil.pCopyTextToClipboard(`${window.location.href.split("#")[0]}#${hash}`);
 			JqueryUtil.showCopiedEffect($this, "Copied link!");
 		}
 	});
