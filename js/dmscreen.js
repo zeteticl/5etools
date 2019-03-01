@@ -2568,9 +2568,9 @@ class AddMenuSpecialTab extends AddMenuTab {
 				this.menu.doClose();
 			});
 
-			$(`<div class="tab-body-row"><span>Initiative Tracker Player View</span><div data-r="$btnTrackerPlayer"/></div>`)
+			$(`<div class="tab-body-row"><span>先攻追蹤器:玩家檢視頁</span><div data-r="$btnTrackerPlayer"/></div>`)
 				.swap({
-					$btnTrackerPlayer: $(`<button class="btn btn-primary">Add</button>`)
+					$btnTrackerPlayer: $(`<button class="btn btn-primary">加入</button>`)
 						.click(() => {
 							this.menu.pnl.doPopulate_InitiativeTrackerPlayer();
 							this.menu.doClose();
@@ -2660,10 +2660,10 @@ class AddMenuListTab extends AddMenuTab {
 class AddMenuSearchTab extends AddMenuTab {
 	static _getTitle (subType) {
 		switch (subType) {
-			case "content": return "Content";
-			case "rules": return "Rules";
-			case "adventures": return "Adventures";
-			case "books": return "Books";
+			case "content": return "內容";
+			case "rules": return "規則";
+			case "adventures": return "冒險模組";
+			case "books": return "書籍";
 			default: throw new Error(`Unhandled search tab subtype: "${subType}"`);
 		}
 	}
@@ -2717,7 +2717,7 @@ class AddMenuSearchTab extends AddMenuTab {
 		switch (this.subType) {
 			case "content": return $(`
 				<div class="panel-tab-results-row">
-					<span>${r.doc.n}</span>
+					<span>${r.doc.cn? (r.doc.cn+"("+r.doc.n+")") : r.doc.n}</span>
 					<span>${r.doc.s ? `<i title="${Parser.sourceJsonToFull(r.doc.s)}">${Parser.sourceJsonToAbv(r.doc.s)}${r.doc.p ? ` p${r.doc.p}` : ""}</i>` : ""}</span>
 				</div>
 			`);
@@ -2740,10 +2740,10 @@ class AddMenuSearchTab extends AddMenuTab {
 
 	_getAllTitle () {
 		switch (this.subType) {
-			case "content": return "All Categories";
-			case "rules": return "All Categories";
-			case "adventures": return "All Adventures";
-			case "books": return "All Books";
+			case "content": return "所有類別";
+			case "rules": return "所有類別";
+			case "adventures": return "所有冒險模組";
+			case "books": return "所有書籍";
 			default: throw new Error(`Unhandled search tab subtype: "${this.subType}"`);
 		}
 	}
