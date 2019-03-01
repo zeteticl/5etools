@@ -518,7 +518,7 @@ class HashLoad {
 
 		// show/hide class features pill
 		HashLoad.makeGenericTogglePill("職業能力", CLSS_CLASS_FEATURES_ACTIVE, ID_CLASS_FEATURES_TOGGLE, HASH_HIDE_FEATURES, true, "開關職業能力");
-		if (ClassDisplay.curClass.fluff) HashLoad.makeGenericTogglePill("情報", CLSS_FLUFF_ACTIVE, ID_FLUFF_TOGGLE, HASH_SHOW_FLUFF, false, "開關職業詳細情報");
+		if (ClassDisplay.curClass.fluff) HashLoad.makeGenericTogglePill("資訊", CLSS_FLUFF_ACTIVE, ID_FLUFF_TOGGLE, HASH_SHOW_FLUFF, false, "開關職業詳細情報");
 
 		// show/hide UA/other sources
 		HashLoad.makeSourceCyclePill();

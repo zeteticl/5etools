@@ -476,7 +476,7 @@ function loadhash (id) {
 		buildStatsTab
 	);
 	const infoTab = EntryRenderer.utils.tabButton(
-		"情報",
+		"資訊",
 		() => {},
 		buildFluffTab
 	);

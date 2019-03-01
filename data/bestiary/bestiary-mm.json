@@ -2233,7 +2233,7 @@
 			]
 		},
 		{
-			"name": "Air Elemental",
+			"name": "氣元素", "ENG_name": "Air Elemental",
 			"size": "L",
 			"type": "elemental",
 			"source": "MM",
@@ -2250,7 +2250,7 @@
 			"speed": {
 				"fly": {
 					"number": 90,
-					"condition": "(hover)"
+					"condition": "(浮空)"
 				},
 				"canHover": true
 			},
@@ -2269,7 +2269,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -2287,13 +2287,13 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 10,
-			"languages": "Auran",
+			"languages": "氣族語",
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Air Form",
+					"name": "氣態形體",
 					"entries": [
-						"The elemental can enter a hostile creature's space and stop there. It can move through a space as narrow as 1 inch wide without squeezing."
+						"氣元素可以進入一個敵對生物所在的空間並在該處停下。它也可以移動穿越最窄1吋的狹窄空間而不用擠縮身體。"
 					]
 				}
 			],
@@ -2301,20 +2301,20 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The elemental makes two slam attacks."
+						"氣元素進行二次猛擊攻擊。"
 					]
 				},
 				{
-					"name": "Slam",
+					"name": "猛擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}14 ({@damage 2d8 + 5})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Whirlwind {@recharge 4}",
+					"name": "旋風 {@recharge 4}",
 					"entries": [
-						"Each creature in the elemental's space must make a DC 13 Strength saving throw. On a failure, a target takes 15 ({@damage 3d8 + 2}) bludgeoning damage and is flung up 20 feet away from the elemental in a random direction and knocked {@condition prone}. If a thrown target strikes an object, such as a wall or floor, the target takes 3 ({@damage 1d6}) bludgeoning damage for every 10 feet it was thrown. If the target is thrown at another creature, that creature must succeed on a DC 13 Dexterity saving throw or take the same damage and be knocked {@condition prone}.",
-						"If the saving throw is successful, the target takes half the bludgeoning damage and isn't flung away or knocked {@condition prone}."
+						"每個在氣元素所在空間的生物都必須進行一次DC 13的力量豁免。若豁免失敗，目標將受到15 ({@damage 3d8 + 2})鈍擊傷害，被向隨機方向拋離氣元素最多20呎距離，並被擊倒{@condition 伏地}。若被拋飛的目標撞上了一個物體，像是牆壁或地面，則該生物每被拋離10呎，它就會受到3 ({@damage 1d6})鈍擊傷害。若目標被拋向另一個生物，則該生物必須成功通過一次DC 13的敏捷豁免，否則受到相同的傷害並被擊倒{@condition 伏地}。",
+						"若豁免成功，目標將只受到一半的鈍擊傷害，且不會被拋飛或被擊倒{@condition 伏地}。"
 					]
 				}
 			],
@@ -6768,7 +6768,7 @@
 				{
 					"name": "無定形",
 					"entries": [
-						"黑布丁可以移動穿越最窄1英寸的狹窄空間而不用擠縮身體。"
+						"黑布丁可以移動穿越最窄1吋的狹窄空間而不用擠縮身體。"
 					]
 				},
 				{
@@ -13383,7 +13383,7 @@
 			]
 		},
 		{
-			"name": "Earth Elemental",
+			"name": "土元素", "ENG_name": "Earth Elemental",
 			"size": "L",
 			"type": "elemental",
 			"source": "MM",
@@ -13419,7 +13419,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"vulnerable": [
@@ -13435,21 +13435,21 @@
 				"poisoned",
 				"unconscious"
 			],
-			"senses": "黑暗視覺60呎, tremorsense 60 ft.",
+			"senses": "黑暗視覺60呎, 震顫感知60呎",
 			"passive": 10,
-			"languages": "Terran",
+			"languages": "土族語",
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Earth Glide",
+					"name": "遁地", "ENGname": "Earth Glide",
 					"entries": [
-						"The elemental can burrow through nonmagical, unworked earth and stone. While doing so, the elemental doesn't disturb the material it moves through."
+						"土元素可以移動掘穿非魔法、且未經加工的土層或岩層。當這麼做時，土元素並不會擾動它所移動穿過的物質。"
 					]
 				},
 				{
 					"name": "攻城怪物",
 					"entries": [
-						"The elemental deals double damage to objects and structures."
+						"土元素對物體和建築物造成兩倍的傷害。"
 					]
 				}
 			],
@@ -13457,11 +13457,11 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The elemental makes two slam attacks."
+						"土元素進行二次猛擊攻擊。"
 					]
 				},
 				{
-					"name": "Slam",
+					"name": "猛擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 8}，觸及10呎，單一目標。{@h}14 ({@damage 2d8 + 5})鈍擊傷害。"
 					]
@@ -15066,7 +15066,7 @@
 			]
 		},
 		{
-			"name": "Fire Elemental",
+			"name": "火元素", "ENG_name": "Fire Elemental",
 			"size": "L",
 			"type": "elemental",
 			"source": "MM",
@@ -15096,7 +15096,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -15115,25 +15115,25 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 10,
-			"languages": "Ignan",
+			"languages": "火族語",
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Fire Form",
+					"name": "火焰形體",
 					"entries": [
-						"The elemental can move through a space as narrow as 1 inch wide without squeezing. A creature that touches the elemental or hits it with a melee attack while within 5 feet of it takes 5 ({@damage 1d10}) fire damage. In addition, the elemental can enter a hostile creature's space and stop there. The first time it enters a creature's space on a turn, that creature takes 5 ({@damage 1d10}) fire damage and catches fire; until someone takes an action to douse the fire, the creature takes 5 ({@damage 1d10}) fire damage at the start of each of its turns."
+						"火元素可以移動穿越最窄1吋的狹窄空間而不用擠縮身體。一個觸碰火元素或在距離它5呎內時以近戰攻擊命中它的生物將受到5 ({@damage 1d10})火焰傷害。此外，火元素可以進入一個敵對生物所在的空間並在該處停下。當在一個回合中第一次進入一個生物所在的空間時，該生物將受到5 ({@damage 1d10})火焰傷害並被點燃；直到某人採取一個動作撲滅火焰，該生物將在它的每個回合開始時受到5 ({@damage 1d10})火焰傷害。"
 					]
 				},
 				{
-					"name": "Illumination",
+					"name": "照明",
 					"entries": [
-						"The elemental sheds bright light in a 30-foot radius and dim light in an additional 30 ft.."
+						"火元素會散發出30呎半徑的明亮光照和再延伸30呎的微光光照。"
 					]
 				},
 				{
-					"name": "Water Susceptibility",
+					"name": "水體敏感",
 					"entries": [
-						"For every 5 ft. the elemental moves in water, or for every gallon of water splashed on it, it takes 1 cold damage."
+						"火元素每在水中移動5呎，或每被噴濺一加侖的水，它就會受到1點寒冰傷害。"
 					]
 				}
 			],
@@ -15141,13 +15141,13 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The elemental makes two touch attacks."
+						"火元素進行二次觸碰攻擊。"
 					]
 				},
 				{
-					"name": "Touch",
+					"name": "觸碰",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}10 ({@damage 2d6 + 3}) fire damage. If the target is a creature or a flammable object, it ignites. Until a creature takes an action to douse the fire, the target takes 5 ({@damage 1d10}) fire damage at the start of each of its turns."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}10 ({@damage 2d6 + 3})火焰傷害。若目標是一個生物或可燃物體，它將被點燃。直到一個生物採取一個動作撲滅火焰，目標將在它的每個回合開始時受到5 ({@damage 1d10})火焰傷害。"
 					]
 				}
 			],
@@ -20236,7 +20236,7 @@
 				{
 					"name": "無定形",
 					"entries": [
-						"泥怪可以移動穿越最窄1英寸的狹窄空間而不用擠縮身體。"
+						"泥怪可以移動穿越最窄1吋的狹窄空間而不用擠縮身體。"
 					]
 				},
 				{
@@ -20322,7 +20322,7 @@
 				{
 					"name": "無定形",
 					"entries": [
-						"泥怪可以移動穿越最窄1英寸的狹窄空間而不用擠縮身體。"
+						"泥怪可以移動穿越最窄1吋的狹窄空間而不用擠縮身體。"
 					]
 				},
 				{
@@ -29923,7 +29923,7 @@
 				{
 					"name": "無定形",
 					"entries": [
-						"赭凍怪可以移動穿越最窄1英寸的狹窄空間而不用擠縮身體。"
+						"赭凍怪可以移動穿越最窄1吋的狹窄空間而不用擠縮身體。"
 					]
 				},
 				{
@@ -35324,7 +35324,7 @@
 				{
 					"name": "無定形",
 					"entries": [
-						"幽影可以移動穿越最窄1英寸的狹窄空間而不用擠縮身體。"
+						"幽影可以移動穿越最窄1吋的狹窄空間而不用擠縮身體。"
 					]
 				},
 				{
@@ -41379,7 +41379,7 @@
 			]
 		},
 		{
-			"name": "Water Elemental",
+			"name": "水元素", "ENG_name": "Water Elemental",
 			"size": "L",
 			"type": "elemental",
 			"source": "MM",
@@ -41416,7 +41416,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -41434,19 +41434,19 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 10,
-			"languages": "Aquan",
+			"languages": "水族語",
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Water Form",
+					"name": "流水形體",
 					"entries": [
-						"The elemental can enter a hostile creature's space and stop there. It can move through a space as narrow as 1 inch wide without squeezing."
+						"水元素可以進入一個敵對生物所在的空間並在該處停下。它也可以移動穿越最窄1吋的狹窄空間而不用擠縮身體。"
 					]
 				},
 				{
-					"name": "Freeze",
+					"name": "凍結", "ENGname": "Freeze",
 					"entries": [
-						"If the elemental takes cold damage, it partially freezes; its speed is reduced by 20 ft. until the end of its next turn."
+						"若水元素受到寒冰傷害，它身體的一部分將被凍結；直到它的下個回合結束前，它的移動速度降低20呎。"
 					]
 				}
 			],
@@ -41454,20 +41454,20 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The elemental makes two slam attacks."
+						"水元素進行二次猛擊攻擊。"
 					]
 				},
 				{
-					"name": "Slam",
+					"name": "猛擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}13 ({@damage 2d8 + 4})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Whelm {@recharge 4}",
+					"name": "淹沒 {@recharge 4}",
 					"entries": [
-						"Each creature in the elemental's space must make a DC 15 Strength saving throw. On a failure, a target takes 13 ({@damage 2d8 + 4})鈍擊傷害。 If it is Large or smaller, it is also {@condition grappled} (escape DC 14). Until this grapple ends, the target is {@condition restrained} and unable to breathe unless it can breathe water. If the saving throw is successful, the target is pushed out of the elemental's space.",
-						"The elemental can grapple one Large creature or up to two Medium or smaller creatures at one time. At the start of each of the elemental's turns, each target {@condition grappled} by it takes 13 ({@damage 2d8 + 4})鈍擊傷害。 A creature within 5 feet of the elemental can pull a creature or object out of it by taking an action to make a DC 14 Strength check and succeeding."
+						"每個在水元素所在空間的生物都必須進行一次DC 15的力量豁免。若豁免失敗，目標將受到13 ({@damage 2d8 + 4})鈍擊傷害。若它的體型為大型或更小，它也將被{@condition 擒抱}（逃脫DC 14）。直到擒抱結束前，目標被{@condition 束縛}且無法呼吸（除非它能在水下呼吸）。若豁免成功，目標將被推出水元素所在的空間。",
+						"水元素可以同時擒抱一個大型生物或最多二個體型為中型或更小的生物。在水元素的每個回合開始時，每個被它{@condition 擒抱}的生物將受到13 ({@damage 2d8 + 4})鈍擊傷害。一個距離水元素5尺內的生物可以藉由採取一個動作以進行並成功通過一次DC 14的力量檢定，以將一個生物或物體從水元素體內拉出。"
 					]
 				}
 			],

@@ -328,6 +328,8 @@ const traitFilter = new Filter({
 			case "Reckless": return "魯莽";
 			case "Rampage": return "暴走";
 			case "Shapechanger": return "變形者";
+			case "Siege Monster": return "攻城怪物";
+			case "Sneak Attack": return "偷襲";
 			case "Spider Climb": return "蛛行";
 			case "Sunlight Sensitivity": return "日光敏感";
 			case "Turn Immunity": return "驅散免疫";
@@ -1238,7 +1240,7 @@ function renderStatblock (mon, isScaled) {
 		buildStatsTab
 	);
 	const infoTab = EntryRenderer.utils.tabButton(
-		"情報",
+		"資訊",
 		() => {
 			profBtn = profBtn || $wrpBtnProf.children().detach();
 			$(`#float-token`).hide();
