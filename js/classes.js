@@ -189,6 +189,7 @@ class ClassData {
 	 * @param classes an Array of classes
 	 */
 	static sortSubclasses (classes) {
+		return ; // haz: no, don't sort subclass
 		for (const c of classes) {
 			if (c.subclasses) c.subclasses = c.subclasses.sort((a, b) => SortUtil.ascSort(a.name, b.name));
 		}
@@ -554,10 +555,10 @@ class HashLoad {
 		// subclass pills
 		const subClasses = ClassDisplay.curClass.subclasses
 			.filter(sc => !ExcludeUtil.isExcluded(sc.name, "subclass", sc.source))
-			.map(sc => ({name: sc.name, source: sc.source, shortName: sc.shortName}))
-			.sort(function (a, b) {
+			.map(sc => ({name: sc.name, source: sc.source, shortName: sc.shortName}));
+			/*.sort(function (a, b) {
 				return SortUtil.ascSort(a.shortName, b.shortName)
-			});
+			});*/
 		for (let i = 0; i < subClasses.length; i++) {
 			const subClass = subClasses[i];
 			const nonStandardSource = SourceUtil.isNonstandardSource(subClass.source) || SourceUtil.hasBeenReprinted(subClass.shortName, subClass.source) || (subClass.source.source || subClass.source) === SRC_DMG;
