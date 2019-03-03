@@ -7,12 +7,12 @@ const BookUtil = {
 
 	_getSelectors (scrollTo) {
 		return [
-			`.entry-title > .entry-title-inner[book-idx='${scrollTo}']`/*,
+			`.entry-title > .entry-title-inner[book-idx='${scrollTo}']`,
 			`.statsBlockSectionHead > .entry-title > .entry-title-inner:textEquals("${scrollTo}")`,
 			`.statsBlockHead > .entry-title > .entry-title-inner:textEquals("${scrollTo}")`,
 			`.statsBlockSubHead > .entry-title > .entry-title-inner:textEquals("${scrollTo}")`,
 			`.statsBlockInset > .entry-title > .entry-title-inner:textEquals("${scrollTo}")`,
-			`.statsInlineHead > .entry-title > .entry-title-inner:textEquals("${scrollTo}.")`*/
+			`.statsInlineHead > .entry-title > .entry-title-inner:textEquals("${scrollTo}.")`
 		];
 	},
 
