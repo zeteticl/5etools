@@ -3666,13 +3666,13 @@ ListUtil = {
 	addListShowHide () {
 		const toInjectShow = `
 			<div class="col-12" id="showsearch">
-				<button class="btn btn-block btn-default btn-xs" type="button">Show Search</button>
+				<button class="btn btn-block btn-default btn-xs" type="button">顯示搜尋</button>
 				<br>
 			</div>
 		`;
 
 		const toInjectHide = `
-			<button class="btn btn-default" id="hidesearch">Hide</button>
+			<button class="btn btn-default" id="hidesearch">隱藏</button>
 		`;
 
 		$(`#filter-search-input-group`).find(`#reset`).before(toInjectHide);

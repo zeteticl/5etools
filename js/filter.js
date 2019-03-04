@@ -130,9 +130,9 @@ class FilterBox {
 		this.$miniView = $(`<div class="mini-view btn-group"/>`);
 		const $inputGroup = $(this.inputGroup);
 
-		const $btnShowAll = $(`<button id="fltr-show-all" class="btn btn-xs btn-default">Show All</button>`).click(() => this.showAll());
-		const $btnHideAll = $(`<button id="fltr-hide-all" class="btn btn-xs btn-default">Hide All</button>`).click(() => this.hideAll());
-		const $btnReset = $(`<button id="fltr-reset" class="btn btn-xs btn-default">Reset</button>`).click((evt) => this.reset(evt.shiftKey));
+		const $btnShowAll = $(`<button id="fltr-show-all" class="btn btn-xs btn-default">顯示全部</button>`).click(() => this.showAll());
+		const $btnHideAll = $(`<button id="fltr-hide-all" class="btn btn-xs btn-default">隱藏全部</button>`).click(() => this.hideAll());
+		const $btnReset = $(`<button id="fltr-reset" class="btn btn-xs btn-default">重置</button>`).click((evt) => this.reset(evt.shiftKey));
 
 		this._$outer = $(`<div class="dropdown-menu ${FilterBox.CLS_DROPDOWN_MENU_FILTER} homebrew-window">
 			<h4 class="title">
@@ -262,16 +262,16 @@ class FilterBox {
 						$e.data("resetMeta") && $e.data("resetMeta")();
 					});
 				});
-			const $btnShowHideGroup = $(`<button class="btn btn-default btn-xs show-hide-button multi-compact-visible btn-meta" style="margin-left: 5px;">Hide</button>`)
+			const $btnShowHideGroup = $(`<button class="btn btn-default btn-xs show-hide-button multi-compact-visible btn-meta" style="margin-left: 5px;">隱藏</button>`)
 				.appendTo($wrpButtons)
 				.click(function () {
 					const $this = $(this);
-					if ($this.text() === "Hide") {
+					if ($this.text() === "隱藏") {
 						filter.eles.forEach($e => $e.data("hideFilter")());
-						$this.text("Show");
+						$this.text("顯示");
 					} else {
 						filter.eles.forEach($e => $e.data("showFilter")());
-						$this.text("Hide");
+						$this.text("隱藏");
 					}
 					updateSummary();
 				});
@@ -288,7 +288,7 @@ class FilterBox {
 					return this.storedVisible[it] === false;
 				}
 			}).length;
-			if (numHidden) $btnShowHideGroup.text("Show");
+			if (numHidden) $btnShowHideGroup.text("顯示");
 			updateSummary();
 
 			$parent.data(
@@ -851,7 +851,7 @@ class FilterBox {
 			_addGroupLabel(idx, $line);
 
 			const $quickBtns = $(`<span class="btn-group quick-btns" style="margin-left: auto;"/>`).appendTo($line);
-			$(`<button class="btn btn-default btn-xs multi-compact-hidden btn-meta" style="border-radius: 3px;">Reset</button>`)
+			$(`<button class="btn btn-default btn-xs multi-compact-hidden btn-meta" style="border-radius: 3px;">重置</button>`)
 				.appendTo($quickBtns)
 				.click(() => {
 					$wrpSlide.data("resetValues")();
@@ -861,17 +861,17 @@ class FilterBox {
 			const $summaryRange = $(`<span class="filter__summary_item filter__summary_item--include multi-compact-hidden" title="Selected range"/>`).appendTo($summary);
 			$summary.hide();
 
-			const $showHide = $(`<button class="btn btn-default btn-xs show-hide-button multi-compact-hidden btn-meta" style="margin-left: 5px;">Hide</button>`).appendTo($line);
+			const $showHide = $(`<button class="btn btn-default btn-xs show-hide-button multi-compact-hidden btn-meta" style="margin-left: 5px;">隱藏</button>`).appendTo($line);
 
 			const doHide = () => {
-				$showHide.text("Show");
+				$showHide.text("顯示");
 				$wrpSlide.hide();
 				$quickBtns.hide();
 				updateSummary();
 				$summary.show();
 			};
 			const doShow = () => {
-				$showHide.text("Hide");
+				$showHide.text("隱藏");
 				$wrpSlide.show();
 				$quickBtns.show();
 				$summary.hide();
