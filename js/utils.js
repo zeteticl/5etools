@@ -26,8 +26,8 @@ STR_VOID_LINK = "javascript:void(0)";
 STR_SLUG_DASH = "-";
 STR_APOSTROPHE = "\u2019";
 
-HTML_NO_INFO = "<i>No information available.</i>";
-HTML_NO_IMAGES = "<i>No images available.</i>";
+HTML_NO_INFO = "<i>沒有可用的資訊。</i>";
+HTML_NO_IMAGES = "<i>沒有可用的圖片。</i>";
 
 ID_SEARCH_BAR = "filter-search-input-group";
 ID_RESET_BUTTON = "reset";
@@ -985,7 +985,7 @@ Parser.spRangeToFull = function (range) {
 
 	function renderArea () {
 		const size = range.distance;
-		return `自身(${size.amount}-${Parser.getSingletonUnit(size.type)}${getAreaStyleStr()}${range.type === RNG_CYLINDER ? `, ${size.amountSecondary}-${Parser.getSingletonUnit(size.typeSecondary)}-high cylinder` : ""})`;
+		return `自身(${size.amount}${Parser.getSingletonUnit(size.type)}${getAreaStyleStr()}${range.type === RNG_CYLINDER ? `, ${size.amountSecondary}-${Parser.getSingletonUnit(size.typeSecondary)}-high cylinder` : ""})`;
 
 		function getAreaStyleStr () {
 			switch (range.type) {

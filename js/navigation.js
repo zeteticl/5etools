@@ -38,11 +38,11 @@ class NavBar {
 		addLi(ulRules, "books.html", "查看所有/自製內容");
 
 		const ulPlayers = addDropdown(navBar, "玩家選項");
+		addLi(ulPlayers, "races.html", "種族");
 		addLi(ulPlayers, "classes.html", "職業");
 		addLi(ulPlayers, "optionalfeatures.html", "職業能力選項");
 		addLi(ulPlayers, "backgrounds.html", "背景");
 		addLi(ulPlayers, "feats.html", "專長");
-		addLi(ulPlayers, "races.html", "種族");
 		addDivider(ulPlayers);
 		addLi(ulPlayers, "statgen.html", "屬性生成器");
 		addDivider(ulPlayers);

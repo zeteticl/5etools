@@ -355,7 +355,7 @@ class FilterBox {
 
 		function _addGroupLabel (idx, $line) {
 			$(`
-					<div class="multi-compact-hidden">${namePrefix ? `<span class="text-muted">${namePrefix} <span class="group-comb-toggle">(群組 ${parent.mode.toUpperCase()})</span>: </span>` : ""}<span>${filter.header}</span></div>
+					<div class="multi-compact-hidden">${namePrefix ? `<span class="text-muted">${namePrefix} <span class="group-comb-toggle">(群組 ${parent.mode.toUpperCase()})</span>: </span>` : ""}<span>${filter.headerName ? filter.headerName : filter.header}</span></div>
 				`).appendTo($line);
 
 			$line.find(`.group-comb-toggle`).click(function () {
@@ -412,10 +412,10 @@ class FilterBox {
 			});
 
 			const $quickBtns = $(`<span class="btn-group quick-btns" style="margin-left: auto;"/>`).appendTo($line);
-			const $all = $(`<button class="btn btn-default btn-xs btn-meta ${minimalClass}">All</button>`).appendTo($quickBtns);
-			const $clear = $(`<button class="btn btn-default btn-xs btn-meta ${minimalClass}">Clear</button>`).appendTo($quickBtns);
-			const $none = $(`<button class="btn btn-default btn-xs btn-meta ${minimalClass}">None</button>`).appendTo($quickBtns);
-			const $default = $(`<button class="btn btn-default btn-xs btn-meta ${minimalClass}">Default</button>`).appendTo($quickBtns);
+			const $all = $(`<button class="btn btn-default btn-xs btn-meta ${minimalClass}">全選</button>`).appendTo($quickBtns);
+			const $clear = $(`<button class="btn btn-default btn-xs btn-meta ${minimalClass}">清除</button>`).appendTo($quickBtns);
+			const $none = $(`<button class="btn btn-default btn-xs btn-meta ${minimalClass}">全無</button>`).appendTo($quickBtns);
+			const $default = $(`<button class="btn btn-default btn-xs btn-meta ${minimalClass}">預設</button>`).appendTo($quickBtns);
 
 			const $summary = $(`<span class="summary"/>`).appendTo($line);
 			const $summaryInclude = $(`<span class="filter__summary_item filter__summary_item--include" title="Hidden includes"/>`).appendTo($summary);
@@ -425,18 +425,18 @@ class FilterBox {
 
 			const $logicBtns = $(`<span class="btn-group andor-btns" style="margin-left: 5px;"/>`).append($btnAndOrBlue).append($btnAndOrRed).appendTo($line);
 
-			const $showHide = $(`<button class="btn btn-default btn-xs btn-meta show-hide-button ${minimalClass}" style="margin-left: 5px;">Hide</button>`).appendTo($line);
+			const $showHide = $(`<button class="btn btn-default btn-xs btn-meta show-hide-button ${minimalClass}" style="margin-left: 5px;">隱藏</button>`).appendTo($line);
 
 			// FIXME this bugs out in some unknown cases
 			const doShow = () => {
-				$showHide.text("Hide");
+				$showHide.text("隱藏");
 				$grid.show();
 				$quickBtns.show();
 				$logicBtns.css("margin-left", "5px");
 				$summary.hide();
 			};
 			const doHide = () => {
-				$showHide.text("Show");
+				$showHide.text("顯示");
 				$grid.hide();
 				$quickBtns.hide();
 				updateSummary();
