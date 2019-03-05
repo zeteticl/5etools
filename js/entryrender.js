@@ -1956,11 +1956,12 @@ EntryRenderer.optionalfeature = {
 		const outList = prerequisites.map(it => {
 			switch (it.type) {
 				case "prereqLevel":
-					return listMode ? false : `${Parser.levelToFull(it.level)}級`;
+					return listMode ? false : `${it.level}級`;
 				case "prereqPact":
 					return Parser.prereqPactToFull(it.entry);
 				case "prereqPatron":
-					return listMode ? `${Parser.prereqPatronToShort(it.entry)} patron` : `${it.entry} patron`;
+					return `${Parser.SubclassToDisplay(Parser.prereqPatronToShort(it.entry))}宗主`;
+					// return listMode ? `${Parser.SubclassToDisplay(Parser.prereqPatronToShort(it.entry))}宗主` : `${it.entry}宗主`;
 				case "prereqSpell":
 					return listMode ? it.entries.map(x => parse_prereq_spell(x)).join("; ") : it.entries.map(sp => Parser.prereqSpellToFull(sp)).joinConjunct(", ", " 或 ");
 				case "prereqFeature":
