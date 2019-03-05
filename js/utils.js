@@ -1007,7 +1007,7 @@ Parser.getSingletonUnit = function (unit) {
 		case UNT_FEET:
 			return "呎";
 		case UNT_MILES:
-			return "里";
+			return "哩";
 		default: {
 			const fromBrew = MiscUtil.getProperty(BrewUtil.homebrewMeta, "spellDistanceUnits", unit, "singular");
 			if (fromBrew) return fromBrew;
