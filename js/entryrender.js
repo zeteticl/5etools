@@ -1960,7 +1960,8 @@ EntryRenderer.optionalfeature = {
 				case "prereqPact":
 					return Parser.prereqPactToFull(it.entry);
 				case "prereqPatron":
-					return `${Parser.SubclassToDisplay(Parser.prereqPatronToShort(it.entry))}宗主`;
+					var short_patron = Parser.prereqPatronToShort(it.entry);
+					return `${short_patron}${short_patron.match(/宗主$/) ? "" : "宗主"}`;
 					// return listMode ? `${Parser.SubclassToDisplay(Parser.prereqPatronToShort(it.entry))}宗主` : `${it.entry}宗主`;
 				case "prereqSpell":
 					return listMode ? it.entries.map(x => parse_prereq_spell(x)).join("; ") : it.entries.map(sp => Parser.prereqSpellToFull(sp)).joinConjunct(", ", " 或 ");

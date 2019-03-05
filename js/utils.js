@@ -1270,9 +1270,8 @@ Parser.prereqPactToFull = function (pact) {
 
 Parser.prereqPatronToShort = function (patron) {
 	if (patron === STR_ANY) return STR_ANY;
-	patron = Parser.SubclassToDisplay(patron);
 	const mThe = /^The (.*?)$/.exec(patron);
-	if (mThe) return mThe[1];
+	if (mThe) return Parser.SubclassToDisplay(mThe[1]);
 	return patron;
 };
 
