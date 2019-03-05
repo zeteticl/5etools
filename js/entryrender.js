@@ -1765,7 +1765,7 @@ EntryRenderer.spell = {
 			<tr><td colspan="6">
 				<table class="summary striped-even">
 					<tr>
-						<th colspan="1">環位</th>
+						<th colspan="1">環階</th>
 						<th colspan="1">學派</th>
 						<th colspan="2">施法時間</th>
 						<th colspan="2">射程</th>
@@ -2623,13 +2623,13 @@ EntryRenderer.monster = {
 		const pb = Parser.crToPb(dragon.cr);
 		const maxSpellLevel = Math.floor(Parser.crToNumber(dragon.cr) / 3);
 		const exampleSpells = getExampleSpells(maxSpellLevel, dragon.dragonCastingColor);
-		const levelString = maxSpellLevel === 0 ? `${chaMod === 1 ? "這個" : "這些"}法術為戲法。` : `${chaMod === 1 ? "這個" : "每個"}法術的環位不能超過 ${Parser.spLevelToFull(maxSpellLevel)}。`;
+		const levelString = maxSpellLevel === 0 ? `${chaMod === 1 ? "這個" : "這些"}法術為戲法。` : `${chaMod === 1 ? "這個" : "每個"}法術的環階不能超過 ${Parser.spLevelToFull(maxSpellLevel)}。`;
 		const v = {
 			type: "variant",
 			name: "龍類天生施法者",
 			entries: [
 				"做為天生的魔法生物，使用這個變體的龍類可以隨著年齡增長而掌握一些法術。",
-				"一個少年龍或更年長的龍天生就能夠施放等同於它魅力調整值數量的法術。每個法術每日只能施放一次，無需任何材料構材，且法術環位不能超過該龍挑戰等級的三分之一（向下取整）。該龍使用法術攻擊的加值等同於它的熟練加值 + 它的魅力調整值。該龍的法術豁免DC等同於8 + 它的熟練加值 + 它的魅力調整值。",
+				"一個少年龍或更年長的龍天生就能夠施放等同於它魅力調整值數量的法術。每個法術每日只能施放一次，無需任何材料構材，且法術環階不能超過該龍挑戰等級的三分之一（向下取整）。該龍使用法術攻擊的加值等同於它的熟練加值 + 它的魅力調整值。該龍的法術豁免DC等同於8 + 它的熟練加值 + 它的魅力調整值。",
 				`{@i 此龍天生就能施放${Parser.numberToText(chaMod)}種法術，${chaMod === 1 ? "" : "各項"}每日一次，且無需任何材料構材。${levelString}此龍的法術豁免DC為${pb + chaMod + 8}，且它使用此法術攻擊的加值為{@hit ${pb + chaMod}}。參見{@filter 法術頁面|spells|level=${[...new Array(maxSpellLevel + 1)].map((it, i) => i).join(";")}}以查閱此龍得以施放的法術列表。${exampleSpells ? "以下列出一些範例組合：" : ""}`
 			]
 		};

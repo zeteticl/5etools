@@ -17,7 +17,7 @@
 						"{@filter 已知戲法|spells|level=0|class=Warlock}",
 						"{@filter 已知法術|spells|class=Warlock}",
 						"法術位",
-						"環位",
+						"環階",
 						"{@filter 已知祈喚|optionalfeatures|feature type=ei}"
 					],
 					"rows": [
@@ -224,7 +224,7 @@
 								"type": "entries",
 								"name": "法術位",
 								"entries": [
-									"契術師表中顯示了你有多少個法術位可以用來施放你一環到五環的{@filter 契術師法術|spells|class=warlock}。這張表也顯示了這些法術位的環位；你所有法術位的環位都是相同的。要施放其中一個一環或更高的契術師法術，你必須消耗一個法術位。你在完成一次短休或長休後恢復所有你花費掉的法術位。",
+									"契術師表中顯示了你有多少個法術位可以用來施放你一環到五環的{@filter 契術師法術|spells|class=warlock}。這張表也顯示了這些法術位的環階；你所有法術位的環階都是相同的。要施放其中一個一環或更高的契術師法術，你必須消耗一個法術位。你在完成一次短休或長休後恢復所有你花費掉的法術位。",
 									"舉例來說，當你在5級時，你擁有二個3環的法術位。當你要施放一環法術{@spell 巫術箭}時，你必須消耗其中一個法術位，且你將它做為一個3環法術施放。"
 								]
 							},
@@ -233,8 +233,8 @@
 								"name": "一環或更高環的已知法術",
 								"entries": [
 									"在1級時，你知曉二個從契術師法術列表中自選的1環法術。",
-									"契術師表中的已知法術欄位顯示你會在什麼時候習得更多自選的一環或更高環的契術師法術。一個你所選的法術的環位必須不超過你當前等級在表上對應的環位。舉例來說，當你在此職業升至6級時，你可以學會一個新的契術師法術，這個法術可以是1環、2環、或3環。",
-									"此外，當你提升這個職業的等級時，你可以從契術師的法術列表中挑選一個法術來取代一個你目前已知的法術，而它的環位也不能超過你現有法術位的環位。"
+									"契術師表中的已知法術欄位顯示你會在什麼時候習得更多自選的一環或更高環的契術師法術。一個你所選的法術的環階必須不超過你當前等級在表上對應的環階。舉例來說，當你在此職業升至6級時，你可以學會一個新的契術師法術，這個法術可以是1環、2環、或3環。",
+									"此外，當你提升這個職業的等級時，你可以從契術師的法術列表中挑選一個法術來取代一個你目前已知的法術，而它的環階也不能超過你現有法術位的環階。"
 								]
 							},
 							{
@@ -486,7 +486,7 @@
 												"type": "table",
 												"caption": "至高妖精擴展法術",
 												"colLabels": [
-													"法術環位",
+													"法術環階",
 													"法術"
 												],
 												"colStyles": [
@@ -592,7 +592,7 @@
 												"type": "table",
 												"caption": "邪魔擴展法術",
 												"colLabels": [
-													"法術環位",
+													"法術環階",
 													"法術"
 												],
 												"colStyles": [
@@ -698,7 +698,7 @@
 												"type": "table",
 												"caption": "Ghost in the Machine Expanded Spells",
 												"colLabels": [
-													"法術環位",
+													"法術環階",
 													"法術"
 												],
 												"colStyles": [
@@ -810,7 +810,7 @@
 												"type": "table",
 												"caption": "舊日支配者擴展法術",
 												"colLabels": [
-													"法術環位",
+													"法術環階",
 													"法術"
 												],
 												"colStyles": [
@@ -915,7 +915,7 @@
 												"type": "table",
 												"caption": "不朽者擴展法術",
 												"colLabels": [
-													"法術環位",
+													"法術環階",
 													"法術"
 												],
 												"colStyles": [
@@ -1061,7 +1061,7 @@
 												"type": "table",
 												"caption": "Undying Light Expanded Spells",
 												"colLabels": [
-													"法術環位",
+													"法術環階",
 													"法術"
 												],
 												"colStyles": [
@@ -1166,7 +1166,7 @@
 												"type": "table",
 												"caption": "Celestial Expanded Spells",
 												"colLabels": [
-													"法術環位",
+													"法術環階",
 													"法術"
 												],
 												"colStyles": [
@@ -1279,7 +1279,7 @@
 												"type": "table",
 												"caption": "Seeker Expanded Spells",
 												"colLabels": [
-													"法術環位",
+													"法術環階",
 													"法術"
 												],
 												"colStyles": [
@@ -1386,7 +1386,7 @@
 												"type": "table",
 												"caption": "Raven Queen Expanded Spells",
 												"colLabels": [
-													"法術環位",
+													"法術環階",
 													"法術"
 												],
 												"colStyles": [
@@ -1492,7 +1492,7 @@
 												"type": "table",
 												"caption": "Hexblade Expanded Spells",
 												"colLabels": [
-													"法術環位",
+													"法術環階",
 													"法術"
 												],
 												"colStyles": [
@@ -1612,7 +1612,7 @@
 												"type": "table",
 												"caption": "天界宗主擴展法術",
 												"colLabels": [
-													"法術環位",
+													"法術環階",
 													"法術"
 												],
 												"colStyles": [
@@ -1725,7 +1725,7 @@
 												"type": "table",
 												"caption": "咒劍士擴展法術",
 												"colLabels": [
-													"法術環位",
+													"法術環階",
 													"法術"
 												],
 												"colStyles": [
@@ -1846,7 +1846,7 @@
 												"type": "table",
 												"caption": "Kraken Patron Expanded Spells",
 												"colLabels": [
-													"法術環位",
+													"法術環階",
 													"法術"
 												],
 												"colStyles": [
@@ -1980,7 +1980,7 @@
 												"type": "table",
 												"caption": "Lolth Expanded Spells",
 												"colLabels": [
-													"法術環位",
+													"法術環階",
 													"法術"
 												],
 												"colStyles": [

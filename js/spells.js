@@ -334,7 +334,7 @@ let brewSpellClasses;
 const sourceFilter = getSourceFilter();
 const levelFilter = new Filter({
 	header: "Level",
-	headerName: "環位",
+	headerName: "環階",
 	items: [
 		0, 1, 2, 3, 4, 5, 6, 7, 8, 9
 	],
