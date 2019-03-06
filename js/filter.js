@@ -554,7 +554,7 @@ class FilterBox {
 				nested.forEach(nestObj => {
 					const nest = nestObj.nest
 					if (!nests[nest]) {
-						const $nest = $(`<div class="filter__btn_nest">${nest} [${nestObj.nestHidden ? "\u2212" : "+"}]</div>`).click(() => {
+						const $nest = $(`<div class="filter__btn_nest">${filter.displayNestFn(nest)} [${nestObj.nestHidden ? "\u2212" : "+"}]</div>`).click(() => {
 							$nest.html($nest.html().replace(/\[[\u2212+]]$/, (it) => it === "[+]" ? "[\u2212]" : "[+]"))
 							const myNest = nests[nest];
 							myNest.$children.forEach($e => $e.toggle());
