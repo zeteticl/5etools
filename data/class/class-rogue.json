@@ -502,7 +502,7 @@
 			"subclassTitle": "Roguish Archetype",
 			"subclasses": [
 				{
-					"name": "Arcane Trickster",
+					"name": "詭術師", "ENG_name": "Arcane Trickster",
 					"subclassTableGroups": [
 						{
 							"subclasses": [
@@ -512,8 +512,8 @@
 								}
 							],
 							"colLabels": [
-								"{@filter Cantrips Known|spells|level=0|subclass=Arcane Trickster}",
-								"{@filter Spells Known|spells|subclass=Arcane Trickster}"
+								"{@filter 已知戲法|spells|level=0|subclass=Arcane Trickster}",
+								"{@filter 已知法術|spells|subclass=Arcane Trickster}"
 							],
 							"rows": [
 								[
@@ -599,7 +599,7 @@
 							]
 						},
 						{
-							"title": "Spell Slots per Spell Level",
+							"title": "法術位/每環",
 							"subclasses": [
 								{
 									"name": "Arcane Trickster",
@@ -607,10 +607,10 @@
 								}
 							],
 							"colLabels": [
-								"{@filter 1st|spells|level=1|subclass=Arcane Trickster}",
-								"{@filter 2nd|spells|level=2|subclass=Arcane Trickster}",
-								"{@filter 3rd|spells|level=3|subclass=Arcane Trickster}",
-								"{@filter 4th|spells|level=4|subclass=Arcane Trickster}"
+								"{@filter 1環|spells|level=1|subclass=Arcane Trickster}",
+								"{@filter 2環|spells|level=2|subclass=Arcane Trickster}",
+								"{@filter 3環|spells|level=3|subclass=Arcane Trickster}",
+								"{@filter 4環|spells|level=4|subclass=Arcane Trickster}"
 							],
 							"rows": [
 								[
@@ -739,39 +739,39 @@
 					"subclassFeatures": [
 						[
 							{
-								"name": "Arcane Trickster",
+								"name": "詭術師", "ENG_name": "Arcane Trickster",
 								"entries": [
-									"Some rogues enhance their fine-honed skills of stealth and agility with magic, learning tricks of enchantment and illusion. These rogues include pickpockets and burglars, but also pranksters, mischief-makers, and a significant number of adventurers.",
+									"有些盜賊利用魔法增進了他們精心琢磨的隱匿和靈動技巧，學習惑控和幻術系的詭術。這些盜賊包括了扒手和竊賊，但也包括惡作劇者、離間者，和相當數量的冒險者們。",
 									{
 										"type": "entries",
-										"name": "Mage Hand Legerdemain",
+										"name": "法師之手詐術", "ENG_name": "Mage Hand Legerdemain",
 										"entries": [
-											"Starting at 3rd level, when you cast {@spell mage hand}, you can make the spectral hand {@condition invisible}, and you can perform the following additional tasks with it:",
+											"從3級開始，當你施放{@spell 法師之手}時，你可以讓這隻幽靈般的手掌{@condition 隱形}，且你可以用它來進行下列的額外行動：",
 											{
 												"type": "list",
 												"items": [
-													"You can stow one object the hand is holding in a container worn or carried by another creature.",
-													"You can retrieve an object in a container worn or carried by another creature.",
-													"You can use {@item thieves' tools|phb} to pick lock and disarm traps at range."
+													"你可以將一個這隻手所持握的物體放入一個被其他生物所穿戴或攜帶的容器內。",
+													"你可以取走一個被裝在其他生物所穿戴或攜帶的容器內的物體。",
+													"你可以使用{@item 盜賊工具|phb}以在射程內開鎖或解除陷阱。"
 												]
 											},
-											"You can perform one of these tasks without being noticed by a creature if you succeed on a Dexterity (Sleight of Hand) check contested by the creature's Wisdom (Perception) check.",
-											"In addition, you can use the bonus action granted by your Cunning Action to control the hand."
+											"若你成功通過一次對抗某個生物睿知（{@skill 感知}）檢定的敏捷（{@skill 手上把戲}）檢定，則你可以進行上述其中一個行動而不會被該生物察覺。",
+											"此外，你可以使用你巧妙動作能力所賦予的附贈動作以控制這隻手。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Spellcasting",
+										"name": "施法", "ENG_name": "Spellcasting",
 										"entries": [
-											"When you reach 3rd level, you gain the ability to cast spells. See {@book chapter 10|PHB|10} for the general rules of spellcasting and chapter 11 for the {@filter wizard spell list|spells|class=wizard}.",
+											"當你升至3級時，你獲得了施放法術的能力。請參閱{@book 第十章|PHB|10}以了解關於施法的規則，以及第十一章以查閱{@filter 法師法術列表|spells|class=wizard}。",
 											{
 												"type": "entries",
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Cantrips",
+														"name": "戲法",
 														"entries": [
-															"You learn three cantrips: {@spell mage hand} and two other cantrips of your choice from the wizard spell list. You learn another wizard cantrip of your choice at 10th level."
+															"你學會三個戲法：{@spell 法師之手}、和另外二個你從法師法術列表中自選的戲法。你將在10級時學會另一個自選的法師戲法。"
 														]
 													}
 												]
@@ -781,10 +781,10 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Spell Slots",
+														"name": "法術位",
 														"entries": [
-															"The Arcane Trickster Spellcasting table shows how many spell slots you have to cast your {@filter wizard spells|spells|class=wizard} of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
-															"For example, if you know the 1st-level spell {@spell charm person} and have a 1st-level and a 2nd-level spell slot available, you can cast {@spell charm person} using either slot."
+															"詭術師施法表中顯示了你有多少個法術位可以用來施放你一環或更高環的{@filter 法師法術|spells|class=wizard}。要施放其中一個法術，你必須消耗一個與該法術環階相同或更高的法術位。你在完成一次長休後恢復所有你花費掉的法術位。",
+															"舉例來說，如果你知曉一個1環法術{@spell 魅惑人類}，且你擁有一個1環和一個2環的法術位，則你可以使用其中任意一個法術位來施放{@spell 魅惑人類}。"
 														]
 													}
 												]
@@ -794,12 +794,12 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Spells Known of 1st-Level and Higher",
+														"name": "一環或更高環的已知法術",
 														"entries": [
-															"You know three 1st-level wizard spells of your choice, two of which you must choose from the enchantment and illusion spells on the wizard spell list.",
-															"The Spells Known column of the Arcane Trickster Spellcasting table shows when you learn more wizard spells of 1st level or higher. Each of these spells must be an enchantment or illusion spell of your choice, and must be of a level for which you have spell slots. For instance, when you reach 7th level in this class, you can learn one new spell of 1st or 2nd level.",
-															"The spells you learn at 8th, 14th, and 20th level can come from any school of magic.",
-															"Whenever you gain a level in this class, you can replace one of the wizard spells you know with another spell of your choice from the wizard spell list. The new spell must be of a level for which you have spell slots, and it must be an enchantment or illusion spell, unless you're replacing the spell you gained at 8th, 14th, or 20th level."
+															"你知曉三個從法師法術列表中自選的1環法術，其中二個必須從法師法術列表中的惑控系和幻術系法術中選擇。",
+															"詭術師施法表中的已知法術欄位顯示了你會在何時學習到新的1環或更高環的法師法術。每個這些法術都必須是一個惑控系和幻術系法術，且環階也必須符合你所擁有法術位的環階。舉例來說，當你在此職業升至7級時，你可以學習一個新的1環或2環法術。",
+															"你在8級、14級、和20級時所學會的法術可以來自任何魔法學派。",
+															"每當你提升這個職業的等級時，你可以從法師法術列表中挑選一個法術來取代一個你目前已知的法師法術。新法術的環階必須符合你所擁有法術位的環階，且它必須是一個惑控系和幻術系法術，除非你取代的法術是你在8級、14級、或20級時所獲得的來自任意魔法學派的法術。"
 														]
 													}
 												]
@@ -809,19 +809,19 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Spellcasting Ability",
+														"name": "施法屬性",
 														"entries": [
-															"Intelligence is your spellcasting ability for your wizard spells, since you learn your spells through dedicated study and memorization. You use your Intelligence whenever a spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for a wizard spell you cast and when making an attack roll with one.",
+															"因為你是透過致力研讀與記憶習得你的法師法術，智力是你施展法師法術的施法屬性。每當法術提及你的施法屬性時，你將使用你的智力。此外，當決定你法師法術的豁免DC、以及使用法師法術進行攻擊檢定時，你使用你的智力調整值。",
 															{
 																"type": "abilityDc",
-																"name": "Spell",
+																"name": "法術",
 																"attributes": [
 																	"int"
 																]
 															},
 															{
 																"type": "abilityAttackMod",
-																"name": "Spell",
+																"name": "法術",
 																"attributes": [
 																	"int"
 																]
@@ -840,9 +840,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Magical Ambush",
+										"name": "魔法伏擊", "ENG_name": "Magical Ambush",
 										"entries": [
-											"Starting at 9th level, if you are hidden from a creature when you cast a spell on it, the creature has disadvantage on any saving throw it makes against the spell this turn."
+											"從9級開始，若你在對一個生物處於躲藏狀態的情況下對它施放一個法術，則該生物在該回合為對抗該法術所進行的任何豁免檢定都將具有劣勢。"
 										]
 									}
 								]
@@ -853,9 +853,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Versatile Trickster",
+										"name": "萬能詭術", "ENG_name": "Versatile Trickster",
 										"entries": [
-											"At 13th level, you gain the ability to distract targets with your {@spell mage hand}. As a bonus action on your turn, you can designate a creature within 5 feet of the spectral hand created by the spell. Doing so gives you advantage on attack rolls against that creature until the end of the turn."
+											"在13級時，你獲得用你的{@spell 法師之手}以干擾目標的能力。在你的回合以一個附贈動作，你可以指定一個與{@spell 法師之手}法術創造出的幽靈手掌之間距離在5呎內的生物。這麼做會讓你在該回合結束前，對該生物所進行的攻擊檢定中獲得優勢。"
 										]
 									}
 								]
@@ -866,11 +866,11 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Spell Thief",
+										"name": "法術竊賊", "ENG_name": "Spell Thief",
 										"entries": [
-											"At 17th level, you gain the ability to magically steal the knowledge of how to cast a spell from another spellcaster.",
-											"Immediately after a creature casts a spell that targets you or includes you in its area of effect, you can use your reaction to force the creature to make a saving throw with its spellcasting ability modifier. The DC equals your spell save DC. On a failed save, you negate the spell's effect against you, and you steal the knowledge of the spell if it is at least 1st level and of a level you can cast (it doesn't need to be a wizard spell). For the next 8 hours, you know the spell and can cast it using your spell slots. The creature can't cast that spell until the 8 hours have passed.",
-											"Once you use this feature, you can't use it again until you finish a long rest."
+											"在17級時，你獲得以魔法從其他施法者手中偷走施展法術知識的能力。",
+											"緊接在一個生物施放以你為目標、或將你納入範圍效果的法術之後，你可以使用你的反應以強迫該生物進行一次使用它施法屬性調整值的豁免檢定。這個豁免檢定的DC等同於你的法術豁免DC。若它豁免失敗，你將無效該法術對你的效果，且若該法術為至少1環且為你所能施放的環階（它不需要是法師法術），則你將盜取關於該法術的知識。在接下來的8小時內，你知曉該法術，且可以使用你的法術位施放它。該生物直到8小時經過之前都無法再施放該法術。",
+											"一旦你使用此能力，直到你完成一次長休之前你都不能再使用它。"
 										]
 									}
 								]
@@ -878,7 +878,7 @@
 						]
 					],
 					"source": "PHB",
-					"shortName": "Arcane Trickster"
+					"shortName": "詭術師"
 				},
 				{
 					"name": "Assassin",
