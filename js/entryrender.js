@@ -2542,7 +2542,9 @@ EntryRenderer.monster = {
 					if (prop === "*") doMod(modInfos, "action", "reaction", "trait", "legendary", "variant", "spellcasting");
 					else doMod(modInfos, prop);
 				} catch (e) {
-					console.error(e);
+					console.log("============");
+					console.warn(copyMeta);
+					console.warn(e);
 				}
 			});
 		}

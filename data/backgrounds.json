@@ -1954,7 +1954,7 @@
 			]
 		},
 		{
-			"name": "Criminal",
+			"name": "罪犯", "ENG_name": "Criminal",
 			"source": "PHB",
 			"page": 129,
 			"skillProficiencies": [
@@ -1981,30 +1981,30 @@
 						{
 							"type": "item",
 							"name": "裝備",
-							"entry": "一根{@item 撬棍|phb}、a set of dark {@item common clothes|phb} including a hood、和一個裝有15金幣的纏腰{@item 囊袋|phb}"
+							"entry": "一根{@item 撬棍|phb}、一套包含兜帽的暗色{@item 尋常服裝|phb}、和一個裝有15金幣的纏腰{@item 囊袋|phb}"
 						}
 					]
 				},
 				{
-					"name": "Feature: Criminal Contact",
+					"name": "特性：罪犯人脈", "ENG_name": "Criminal Contact",
 					"type": "entries",
 					"entries": [
-						"You have a reliable and trustworthy contact who acts as your liaison to a network of other criminals. You know how to get messages to and from your contact, even over great distances; specifically, you know the local messengers, corrupt caravan masters, and seedy sailors who can deliver messages for you."
+						"你有著一個可靠且可以信賴的聯絡人，能做為你與其他罪犯聯絡的橋樑。你知道如何接收或傳遞訊息給你的聯絡人，即使你們之間相隔甚遠也一樣；具體來說，你可能認識當地的信使、貪腐的商隊長、以及能夠為你傳遞訊息的骯髒水手。"
 					],
 					"data": {
 						"isFeature": true
 					}
 				},
 				{
-					"name": "Specialty",
+					"name": "專科罪犯", "ENG_name": "Specialty",
 					"type": "entries",
 					"entries": [
-						"There are many kinds of criminals, and within a thieves' guild or similar criminal organization, individual members have particular specialties. Even criminals who operate outside of such organizations have strong preferences for certain kinds of crimes over others. Choose the role you played in your criminal life, or roll on the table below.",
+						"罪犯有很多種類，且在一個盜賊公會或類似的犯罪組織裡，每名成員都擁有特定的專長。即使是不隸屬這類組織的獨行罪犯也都有著偏好的犯罪類型。選擇你在你犯罪生涯中扮演的角色，或者擲骰從下表中隨機決定。",
 						{
 							"type": "table",
 							"colLabels": [
 								"d8",
-								"Specialty"
+								"專科罪犯"
 							],
 							"colStyles": [
 								"col-1 text-align-center",
@@ -2013,35 +2013,35 @@
 							"rows": [
 								[
 									"1",
-									"Blackmailer"
+									"勒索犯"
 								],
 								[
 									"2",
-									"Burglar"
+									"竊盜犯"
 								],
 								[
 									"3",
-									"Enforcer"
+									"打手"
 								],
 								[
 									"4",
-									"Fence"
+									"贓貨商"
 								],
 								[
 									"5",
-									"Highway robber"
+									"攔路劫匪"
 								],
 								[
 									"6",
-									"Hired killer"
+									"雇傭殺手"
 								],
 								[
 									"7",
-									"Pickpocket"
+									"扒手"
 								],
 								[
 									"8",
-									"Smuggler"
+									"走私客"
 								]
 							]
 						}
@@ -2051,7 +2051,7 @@
 					"name": "建議特質",
 					"type": "entries",
 					"entries": [
-						"Criminals might seem like villains on the surface, and many of them are villainous to the core. But some have an abundance of endearing, if not redeeming, characteristics. There might be honor among thieves, but criminals rarely show any respect for law or authority.",
+						"罪犯們也許看起來像是壞蛋，有些也真的壞到骨子裡了。有些人擁有許多討喜的特質，雖然這不見得能抵銷他們討人厭的部分。罪犯之間可能存在著某種榮譽，但他們鮮少會對法律或權威表示尊重。",
 						{
 							"type": "table",
 							"colLabels": [
@@ -2065,35 +2065,35 @@
 							"rows": [
 								[
 									"1",
-									"I always have a plan for when things go wrong."
+									"當事情出錯時，我總是有備案。"
 								],
 								[
 									"2",
-									"I am always calm, no matter what the situation. I never raise my voice or let my emotions control me."
+									"無論在什麼狀況下，我總是保持冷靜。我從不提高我的聲音或是讓情緒控制我。"
 								],
 								[
 									"3",
-									"The first thing I do in a new place is note the locations of everything valuable\u2014or where such things could be hidden."
+									"我在新地方所做的第一件事，就是記下所有值錢事物的位置\u2014或可能藏著這類東西的地方。"
 								],
 								[
 									"4",
-									"I would rather make a new friend than a new enemy."
+									"多一個敵人不如多一個朋友。"
 								],
 								[
 									"5",
-									"I am incredibly slow to trust. Those who seem the fairest often have the most to hide."
+									"我難以信任他人。那些表面公正的人們往往隱藏著最多的祕密。"
 								],
 								[
 									"6",
-									"I don't pay attention to the risks in a situation. Never tell me the odds."
+									"我不在乎風險。永遠別跟我談機率。"
 								],
 								[
 									"7",
-									"The best way to get me to do something is to tell me I can't do it."
+									"讓我做事的最好辦法，就是跟我說我辦不到。"
 								],
 								[
 									"8",
-									"I blow up at the slightest insult."
+									"最輕微的侮辱就足以使我暴怒。"
 								]
 							]
 						},
@@ -2110,27 +2110,27 @@
 							"rows": [
 								[
 									"1",
-									"Honor. I don't steal from others in the trade. (Lawful)"
+									"信譽。我不對同行下手。（守序）"
 								],
 								[
 									"2",
-									"Freedom. Chains are meant to be broken, as are those who would forge them. (Chaotic)"
+									"自由。枷鎖束縛、與那些製造它們的人將注定被打破。（混亂）"
 								],
 								[
 									"3",
-									"Charity. I steal from the wealthy so that I can help people in need. (Good)"
+									"慷慨。我劫富濟貧。（善良）"
 								],
 								[
 									"4",
-									"Greed. I will do whatever it takes to become wealthy. (Evil)"
+									"貪婪。為了錢我可以不擇手段。（邪惡）"
 								],
 								[
 									"5",
-									"People. I'm loyal to my friends, not to any ideals, and everyone else can take a trip down the Styx for all I care. (Neutral)"
+									"友人。我忠於我的朋友而不是什麼理想。為了我所在乎的人，其他人都下黃泉也無所謂。"
 								],
 								[
 									"6",
-									"Redemption. There's a spark of good in everyone. (Good)"
+									"贖罪。所有人心中都保有人性的光輝。（善良）"
 								]
 							]
 						},
@@ -2147,27 +2147,27 @@
 							"rows": [
 								[
 									"1",
-									"I'm trying to pay off an old debt I owe to a generous benefactor."
+									"我正努力償還我虧欠於一位慷慨恩人的舊債。"
 								],
 								[
 									"2",
-									"My ill-gotten gains go to support my family."
+									"我所得的不義之財被用以養活我的家人。"
 								],
 								[
 									"3",
-									"Something important was taken from me, and I aim to steal it back."
+									"我某個重要之物被奪走了，我得將它偷回來。"
 								],
 								[
 									"4",
-									"I will become the greatest thief that ever lived."
+									"我要成為史上最偉大的神偷。"
 								],
 								[
 									"5",
-									"I'm guilty of a terrible crime. I hope I can redeem myself for it."
+									"我犯下了一起可怕的罪行，我希望我能為此贖罪。"
 								],
 								[
 									"6",
-									"Someone I loved died because of a mistake I made. That will never happen again."
+									"某個我所愛的人因我犯下的過錯而死去。我永遠不會讓這件事再次發生。"
 								]
 							]
 						},
@@ -2184,27 +2184,27 @@
 							"rows": [
 								[
 									"1",
-									"When I see something valuable, I can't think about anything but how to steal it."
+									"當我見到某個值錢的東西時，我腦中只想著怎麼把它偷到手。"
 								],
 								[
 									"2",
-									"When faced with a choice between money and my friends, I usually choose the money."
+									"當要從朋友與利益中做出選擇時，我通常會選擇利益。"
 								],
 								[
 									"3",
-									"If there's a plan, I'll forget it. If I don't forget it, I'll ignore it."
+									"如果有計畫，我會忘掉它。如果我沒忘掉它，那我將無視它。"
 								],
 								[
 									"4",
-									"I have a 'tell' that reveals when I'm lying."
+									"我說謊時有個小習慣。"
 								],
 								[
 									"5",
-									"I turn tail and run when things look bad."
+									"當情況不對時，我會轉頭落跑。"
 								],
 								[
 									"6",
-									"An innocent person is in prison for a crime that I committed. I'm okay with that."
+									"當一個無辜的人因我犯下的罪行而鋃鐺入獄，我不會因此良心不安。"
 								]
 							]
 						}
