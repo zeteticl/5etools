@@ -2440,6 +2440,7 @@ EntryRenderer.monster = {
 		}
 
 		// copy over required values
+		if(copyFrom == null) console.log(copyTo);
 		Object.keys(copyFrom).forEach(k => {
 			if (copyTo[k] === null) return delete copyTo[k];
 			if (copyTo[k] == null) {
