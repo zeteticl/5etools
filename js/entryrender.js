@@ -2384,7 +2384,7 @@ EntryRenderer.monster = {
 		function search () {
 			return monList.find(it => {
 				EntryRenderer.monster._mergeCache[UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_BESTIARY](it)] = it;
-				return it.name === mon._copy.name && it.source === mon._copy.source;
+				return (it.name === mon._copy.name || it.ENG_name === mon._copy.name) && it.source === mon._copy.source;
 			});
 		}
 
