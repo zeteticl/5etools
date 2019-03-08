@@ -1897,7 +1897,7 @@ EntryRenderer.background = {
 		if (!profGroupArr) return "";
 
 		function getEntry (s) {
-			if (hoverTag === `skill`) 	s = Parser.SkillToDisplay(s);
+			if (hoverTag === "skill") 	s = Parser.SkillToDisplay(s);
 			else 						s = Parser.translateKeyToDisplay(s);
 			return short ? s.toTitleCase() : hoverTag ? `{@${hoverTag} ${s.toTitleCase()}}` : s.toTitleCase();
 		}
@@ -2483,7 +2483,7 @@ EntryRenderer.monster = {
 
 		function doMod_replaceArr (modInfo, prop) {
 			doEnsureArray(modInfo, "with");
-			const ixOld = copyTo[prop].findIndex(it => it.name === modInfo.replace);
+			const ixOld = copyTo[prop].findIndex(it => (it.name === modInfo.replace || it.ENG_name === modInfo.replace));
 			if (~ixOld) {
 				copyTo[prop].splice(ixOld, 1, ...modInfo.with);
 			} else throw new Error(`Could not find "${prop}" item with name "${modInfo.replace}" to replace`);
@@ -2538,8 +2538,12 @@ EntryRenderer.monster = {
 		// apply mods
 		if (copyMeta._mod) {
 			Object.entries(copyMeta._mod).forEach(([prop, modInfos]) => {
-				if (prop === "*") doMod(modInfos, "action", "reaction", "trait", "legendary", "variant", "spellcasting");
-				else doMod(modInfos, prop);
+				try {
+					if (prop === "*") doMod(modInfos, "action", "reaction", "trait", "legendary", "variant", "spellcasting");
+					else doMod(modInfos, prop);
+				} catch (e) {
+					console.error(e);
+				}
 			});
 		}
 
