@@ -1897,7 +1897,8 @@ EntryRenderer.background = {
 		if (!profGroupArr) return "";
 
 		function getEntry (s) {
-			s = Parser.translateKeyToDisplay(s);
+			if (hoverTag === `skill`) 	s = Parser.SkillToDisplay(s);
+			else 						s = Parser.translateKeyToDisplay(s);
 			return short ? s.toTitleCase() : hoverTag ? `{@${hoverTag} ${s.toTitleCase()}}` : s.toTitleCase();
 		}
 
