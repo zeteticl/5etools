@@ -89,7 +89,7 @@ function addBackgrounds (data) {
 		tempString +=
 			`<li class="row" ${FLTR_ID}="${bgI}" onclick="ListUtil.toggleSelected(event, this)" oncontextmenu="ListUtil.openContextMenu(event, this)">
 				<a id="${bgI}" href="#${UrlUtil.autoEncodeHash(bg)}" title="${bg.name}">
-					<span class="name col-4">${bg.name.replace("Variant ", "")}</span>
+					<span class="name col-4">${bg.name.replace("Variant ", "").replace("變體", "")}</span>
 					<span class="skills col-6">${skillDisplay}</span>
 					<span class="source col-2 text-align-center ${Parser.sourceJsonToColor(bg.source)}" title="${Parser.sourceJsonToFull(bg.source)}">${Parser.sourceJsonToAbv(bg.source)}</span>
 					
@@ -115,7 +115,7 @@ function addBackgrounds (data) {
 
 	list.reIndex();
 	if (lastSearch) list.search(lastSearch);
-	list.sort("name");
+	list.sort("source");
 	filterBox.render();
 	handleFilterChange();
 
