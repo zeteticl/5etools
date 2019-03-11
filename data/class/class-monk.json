@@ -653,9 +653,9 @@
 									"暗影宗的武僧們遵循著崇尚隱匿和詭計的傳統。這些武僧也可以被稱作忍者或是影舞者，並擔當間諜和刺客的工作。有時一個忍者宗派的成員彼此都是家族成員，他們形成一個氏族，誓言將他們技藝與任務隱藏於黑暗中。至於其他宗派則可能更像是盜賊公會，提供他們的服務給貴族、富商、或任何付得起價格的對象。無論他們方式如何，這些宗派的首領都要求下屬無條件的服從他們。",
 									{
 										"type": "entries",
-										"name": "Shadow Arts",
+										"name": "影之技藝", "ENG_name": "Shadow Arts",
 										"entries": [
-											"You can use your ki to duplicate the effects of certain spells. As an action, you can spend 2 ki points to cast {@spell darkness}, {@spell darkvision}, {@spell pass without trace}, or {@spell silence}, without providing material components. Additionally, you gain the {@spell minor illusion} cantrip if you don't already know it."
+											"從你在3級時選擇此宗派開始，你可以使用你的氣以複製特定法術的效果。以一個動作，你可以消耗2點氣以施放{@spell 黑暗術}、{@spell 黑暗視覺}、{@spell 行蹤無跡}、或{@spell 沉默術}，且無須提供材料構材。此外，若你尚未知曉{@spell 次級幻象}戲法，則你將習得它。"
 										]
 									}
 								]
@@ -666,9 +666,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Shadow Step",
+										"name": "暗影步", "ENG_name": "Shadow Step",
 										"entries": [
-											"You gain the ability to step from one shadow into another. When you are in dim light or darkness, as a bonus action you can teleport up to 60 feet to an unoccupied space you can see that is also in dim light or darkness. You then have advantage on the first melee attack you make before the end of the turn."
+											"從6級開始，你獲得穿梭於陰影之間的能力。當你處於微光光照或黑暗環境時，以一個附贈動作，你可以傳送最多60呎距離到一處你所能看見，且同樣處於微光光照或黑暗環境的未被佔據空間。接著你在該回合結束前所進行的第一次近戰攻擊檢定中具有優勢。"
 										]
 									}
 								]
@@ -679,9 +679,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Cloak of Shadows",
+										"name": "暗影斗篷", "ENG_name": "Cloak of Shadows",
 										"entries": [
-											"By 11th level, you have learned to become one with the shadows. When you are in an area of dim light or darkness, you can use your action to become {@condition invisible}. You remain {@condition invisible} until you make an attack, cast a spell, or are in an area of bright light."
+											"從11級起，你學會如何與陰影融為一體。當你處於微光光照或黑暗環境時，你可以使用你的動作以變得{@condition 隱形}。你保持{@condition 隱形}狀態直到你進行一次攻擊、施放法術、或處於明亮光照的區域。"
 										]
 									}
 								]
@@ -692,9 +692,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Opportunist",
+										"name": "趁人之危", "ENG_name": "Opportunist",
 										"entries": [
-											"At 17th level, you can exploit a creature's momentary distraction when it is hit by an attack. Whenever a creature within 5 feet of you is hit by an attack made by a creature other than you, you can use your reaction to make a melee attack against that creature."
+											"在17級時，你可以利用一個生物被攻擊命中時所產生的瞬間分神。當一個距離你5呎內的生物被除你以外的另一個生物的攻擊命中，你可以使用你的反應以對該生物進行一次近戰攻擊。"
 										]
 									}
 								]
@@ -702,7 +702,7 @@
 						]
 					],
 					"source": "PHB",
-					"shortName": "Shadow"
+					"shortName": "暗影宗"
 				},
 				{
 					"name": "散打宗", "ENG_name": "Way of the Open Hand",
@@ -711,18 +711,18 @@
 							{
 								"name": "散打宗", "ENG_name": "Way of the Open Hand",
 								"entries": [
-									"Monks of the Way of the Open Hand are the ultimate masters of martial arts combat, whether armed or unarmed. They learn techniques to push and trip their opponents, manipulate ki to heal damage to their bodies, and practice advanced meditation that can protect them from harm.",
+									"散打宗的武僧都是武術格鬥的終極大師，無論是持武還是空手。他們學習推撞與絆摔對手的技巧、操作氣以治療他們身體所受的傷害、並施展能夠保護他們不受傷害的深度冥想。",
 									{
 										"type": "entries",
-										"name": "Open Hand Technique",
+										"name": "散打技巧", "ENG_name": "Open Hand Technique",
 										"entries": [
-											"You can manipulate your enemy's ki when you harness your own. Whenever you hit a creature with one of the attacks granted by your Flurry of Blows, you can impose one of the following effects on that target.",
+											"從你在3級時選擇此宗派開始，你可以在你駕馭你自己體內氣的同時操作你敵人的氣。當你使用你疾風連擊所賦予的其中一次攻擊命中一個生物時，你可以對該目標強加下列其中一個效果。",
 											{
 												"type": "list",
 												"items": [
-													"It must succeed on a Dexterity saving throw or be knocked {@condition prone}.",
-													"It must make a Strength saving throw. If it fails, you can push it up to 15 feet away from you.",
-													"It can't take reactions until the end of your next turn."
+													"它必須成功通過一次敏捷豁免，否則被擊倒{@condition 伏地}。",
+													"它必須進行一次力量豁免。若它豁免失敗，則你可以將它推離你最多15呎距離。",
+													"它直到你的下個回合結束前都不能採取反應。"
 												]
 											}
 										]
@@ -735,9 +735,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Wholeness of Body",
+										"name": "混元體", "ENG_name": "Wholeness of Body",
 										"entries": [
-											"You gain the ability to heal yourself. As an action, you can regain hit points equal to three times your monk level. You must finish a long rest before you can use this feature again."
+											"從6級起，你獲得治療你自己的能力。以一個動作，你可以回復等同於你武僧等級三倍的生命值。你必須完成一次長休之後才能再次使用此能力。"
 										]
 									}
 								]
@@ -748,11 +748,11 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Tranquility",
+										"name": "凝神境", "ENG_name": "Tranquility",
 										"entries": [
-											"Beginning at 11th level, you can enter a special meditation that surrounds you with an aura of peace. At the end of a long rest, you gain the effect of a {@spell sanctuary} spell that lasts until the start of your next long rest (the spell can end early as normal). The saving throw DC for the spell equals 8 + your Wisdom modifier + your proficiency bonus.",
-											"{@spell Sanctuary} gives this effect: You ward a creature within range against attack. Until the spell ends, any creature who targets the warded creature with an attack or a harmful spell must first make a Wisdom saving throw. On a failed save, the creature must choose a new target or lose the attack or spell. This spell doesn't protect the warded creature from area effects, such as the explosion of a {@spell fireball}.",
-											"If the warded creature makes an attack or casts a spell that affects an enemy creature, this spell ends."
+											"從11級起，你可以進入一種特別的冥想以使你周遭環繞著一道和平靈光。在一次長休結束時，你將獲得{@spell 聖域術}法術的效果，持續直到你的下一次長休開始（此法術可以和原本一樣被提早結束）。此法術的豁免檢定DC等同於8+你的睿知調整值+你的熟練加值。",
+											"{@spell 聖域術}的效果如下：你守護射程內一個生物不受攻擊。直到法術結束前，以被守護生物為目標進行攻擊或施放危害法術的任何生物都必須先進行一次睿知豁免。若豁免失敗，該生物必須選擇另一個目標，否則該次攻擊或法術失敗。此法術並不會從範圍效果中保護被守護的生物，像是{@spell 火球術}。",
+											"若被守護的生物進行一次攻擊、施放一個會影響敵人的法術、或對另一個生物造成傷害，則此法術結束。"
 										]
 									}
 								]
@@ -763,10 +763,10 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Quivering Palm",
+										"name": "震顫掌", "ENG_name": "Quivering Palm",
 										"entries": [
-											"You gain the ability to set up lethal vibrations in someone's body. When you hit a creature with an unarmed strike, you can spend 3 ki points to start these imperceptible vibrations, which last for a number of days equal to your monk level. The vibrations are harmless unless you use your action to end them. To do so, you and the target must be on the same plane of existence. When you use this action, the creature must make a Constitution saving throw. If it fails, it is reduced to 0 hit points. If it succeeds, it takes {@dice 10d10} necrotic damage.",
-											"You can have only one creature under the effect of this feature at a time. You can choose to end the vibrations harmlessly without using an action."
+											"從17級起，你獲得在某人體內製造致命震顫的能力。當你以徒手打擊命中一個生物時，你可以消耗3點氣以讓這陣難以察覺的震動在目標體內開始鼓動，持續等同於你武僧等級的天數。這陣震動是無害的，直到你使用你的動作以結束它。若要這麼做，你與目標必須處於相同的存在位面。當你使用這個動作時，該生物必須進行一次體質豁免。若豁免失敗，則它的生命值歸零。若豁免成功，則它將受到{@dice 10d10}死靈傷害。",
+											"你只能同時讓一個生物處於此能力的效果之下。你也可以選擇無害的結束這陣震動，而無須使用動作。"
 										]
 									}
 								]
@@ -774,7 +774,7 @@
 						]
 					],
 					"source": "PHB",
-					"shortName": "Open Hand"
+					"shortName": "散打宗"
 				},
 				{
 					"name": "四象宗", "ENG_name": "Way of the Four Elements",
@@ -783,28 +783,28 @@
 							{
 								"name": "四象宗", "ENG_name": "Way of the Four Elements",
 								"entries": [
-									"You follow a monastic tradition that teaches you to harness the elements. When you focus your ki, you can align yourself with the forces of creation and bend the four elements to your will, using them as an extension of your body. Some members of this tradition dedicate themselves to a single element, but others weave the elements together.",
-									"Many monks of this tradition tattoo their bodies with representations of their ki powers, commonly imagined as coiling dragons, but also as phoenixes, fish, plants, mountains, and cresting waves.",
+									"你遵循著一個教導你駕馭元素之力的宗派傳統。當你凝神運氣時，你可以使你自己調和於創造和操縱四元素之力，如臂使指般驅使它們。這個宗派的部分成員投身於單一元素，而其它人則將四元素織為一體。",
+									"這個宗派的許多武僧會將他們氣的象徵紋在身上，常見的像是盤龍，或者諸如火鳳、游魚、古木、群山、奔浪等等。",
 									{
 										"type": "entries",
-										"name": "Disciple of the Elements",
+										"name": "元素門徒", "ENG_name": "Disciple of the Elements",
 										"entries": [
-											"You learn magical disciplines that harness the power of the four elements. A discipline requires you to spend ki points each time you use it.",
-											"You know the Elemental Attunement discipline and one other elemental discipline of your choice. You learn one additional elemental discipline of your choice at 6th, 11th, and 17th level.",
-											"Whenever you learn a new elemental discipline, you can also replace one elemental discipline that you already know with a different discipline.",
+											"當你在3級時選擇此宗派時，你學會駕馭四元素力量的魔法法門。每種法門都會要求你在每次使用它的時候消耗氣。",
+											"你知曉元素調律法門、以及另外一個你所選擇的四象法門。你將在6級、11級、和17級時各學會一個你所選擇的額外四象法門。",
+											"每當你學會一個新的四象法門，你也可以將其中一個你已知的四象法門替換成另一個不同的法門。",
 											{
 												"type": "entries",
-												"name": "Casting Elemental Spells",
+												"name": "施放元素法術",
 												"entries": [
-													"Some elemental disciplines allow you to cast spells. See {@book chapter 10|PHB|10} of the Player's Handbook for the general rules of spellcasting. To cast one of these spells, you use its casting time and other rules, but you don't need to provide material components for it.",
-													"Once you reach 5th level in this class, you can spend additional ki points to increase the level of an elemental discipline spell that you cast, provided that the spell has an enhanced effect at a higher level, as {@spell burning hands} does. The spell's level increases by 1 for each additional ki point you spend. For example, if you are a 5th-level monk and use Sweeping Cinder Strike to cast {@spell burning hands}, you can spend 3 ki points to cast it as a 2nd-level spell (the discipline's base cost of 2 ki points plus 1).",
-													"The maximum number of ki points you can spend to cast a spell in this way (including its base ki point cost and any additional ki points you spend to increase its level) is determined by your monk level, as shown in the Spells and Ki Points table. At 5th level, you may spend up to 3 ki points; this increases to 4 ki points at 9th level, 5 at 13th level, and 6 at 17th level.",
+													"有些四象法門會允許你施放法術。請參閱{@book 第十章|PHB|10}以了解關於施法的通用規則。要施放其中一個這些法術，你使用該法術的施法時間和其他規則，但你不需要為其提供材料構材。",
+													"一旦你在本職業升至5級時，你可以消耗額外的氣以提升你透過四象法門所施放的法術的環階，只要該法術在以更高法術位施放時具有升階效果，例如{@spell 燃燒之手}。你每額外消耗1點氣，就可以使該法術的環階提升1環。舉例來說，若你是一個5級武僧並使用飛焰擊以施放{@spell 燃燒之手}，你可以消耗3點氣以將此法術做為2環法術施放（該法門的基本消耗為2點氣，加上額外的1點）。",
+													"你透過這個方式施放法術時所能消耗的氣的最大值（包括它的基本消耗以及任何你用以提升其環階所消耗的氣）由你的武僧等級決定，如下列的法術與氣表格所示。在5級時，你可以消耗最多3點氣；這個數值會在9級時增加到4點氣；13級時5點；和17級時6點。",
 													{
 														"type": "table",
-														"caption": "Spells and Ki Points",
+														"caption": "法術與氣",
 														"colLabels": [
-															"Monk Levels",
-															"Maximum Ki Points for a Spell"
+															"武僧等級",
+															"單一法術消耗氣的最大值"
 														],
 														"colStyles": [
 															"col-5 text-align-center",
@@ -812,19 +812,19 @@
 														],
 														"rows": [
 															[
-																"5th-8th",
+																"5級-8級",
 																3
 															],
 															[
-																"9th-12th",
+																"9級-12級",
 																4
 															],
 															[
-																"13th-16th",
+																"13級-16級",
 																5
 															],
 															[
-																"17th-20th",
+																"17級-20級",
 																6
 															]
 														]
@@ -835,138 +835,138 @@
 									},
 									{
 										"type": "entries",
-										"name": "Elemental Disciplines",
+										"name": "四象法門", "ENG_name": "Elemental Disciplines",
 										"entries": [
-											"The elemental disciplines are presented in alphabetical order. If a discipline requires a level, you must be the level in this class to learn the discipline.",
+											"這些四象法門將在以下按照等級需求（然後按照字母順序）排列呈現。若某個法門要求特定等級，則你必須在此職業中達到該等級才能夠學習這個法門。",
 											{
 												"type": "options",
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Breath of Winter (17th Level Required)",
+														"name": "元素調律",
 														"entries": [
-															"You can spend 6 ki points to cast {@spell cone of cold}."
-														]
-													},
-													{
-														"type": "entries",
-														"name": "Clench of the North Wind (6th Level Required)",
-														"entries": [
-															"You can spend 3 ki points to cast {@spell hold person}."
-														]
-													},
-													{
-														"type": "entries",
-														"name": "Elemental Attunement",
-														"entries": [
-															"You can use your action to briefly control elemental forces within 30 feet of you, causing one of the following effects of your choice:",
+															"你可以使用你的動作以簡單地控制距離你30呎內的元素之力，造成下列其中一個你所選擇的效果：",
 															{
 																"type": "list",
 																"items": [
-																	"Create a harmless, instantaneous sensory effect related to air, earth, fire, or water, such as a shower of sparks, a puff of wind, a spray of light mist, orc a gentle rumbling of stone.",
-																	"Instantaneously light or snuff out a candle, a torch, or a small campfire.",
-																	"Chill or warm up to 1 pound of nonliving material for up to 1 hour.",
-																	"Cause earth, fire, water, or mist that can fit within a 1-foot cube to shape itself into a crude form you designate for 1 minute."
+																	"創造出一個與氣、土、火、或水有關，即效而無害的感官效果，像是火花飛濺、清風吹拂、輕煙飄散、或岩石輕微地隆隆作響。",
+																	"立刻點亮或熄滅一根蠟燭、火炬、或一處小型篝火。",
+																	"冷卻或溫熱最多1磅的非活物物質長達最多1小時。",
+																	"使一片可容納於1呎邊長立方體內的土、火、水、或霧以自我形塑成你指定的粗糙形狀，長達1分鐘。"
 																]
 															}
 														]
 													},
 													{
 														"type": "entries",
-														"name": "Eternal Mountain Defense (17th Level Required)",
+														"name": "火蛇利牙",
 														"entries": [
-															"You can spend 5 ki points to cast {@spell stoneskin}, targeting yourself."
+															"當你在你的回合使用{@action 攻擊}動作時，你可以消耗1點氣以讓烈焰觸手從你的拳腳延伸而出。你徒手打擊的觸及範圍在該動作以及該回合結束前視為增加10呎。這類攻擊在命中時將造成火焰傷害，而非鈍擊傷害。且若你在攻擊命中時消耗1點氣，它將造成額外的{@dice 1d10}火焰傷害。"
 														]
 													},
 													{
 														"type": "entries",
-														"name": "Fangs of the Fire Snake",
+														"name": "四雷拳",
 														"entries": [
-															"When you use the {@action Attack} action on your turn, you can spend 1 ki point to cause tendrils of flame to stretch out from your fists and feet. Your reach with your unarmed strikes increases by 10 feet for that action, as well as the rest of the turn. A hit with such an attack deals fire damage instead of bludgeoning damage, and if you spend 1 ki point when the attack hits, it also deals an extra {@dice 1d10} fire damage."
+															"你可以消耗2點氣以施放{@spell 雷鳴波}。"
 														]
 													},
 													{
 														"type": "entries",
-														"name": "Fist of Four Thunders",
+														"name": "凝氣剛拳",
 														"entries": [
-															"You can spend 2 ki points to cast {@spell thunderwave}."
+															"你可以創造出一道凝聚空氣所形成的爆風並使它如拳頭猛力打擊敵人。以一個動作，你可以消耗2點氣並選擇一個距離你30呎內的生物。該生物必須進行一次力量豁免。若豁免失敗，該生物將受到{@dice 3d10}鈍擊傷害，加上你每額外消耗一點氣的額外{@dice 1d10}鈍擊傷害，且你可以將它推離你最多20呎距離並將它擊倒{@condition 伏地}。若豁免成功，該生物只受到一半的傷害，且你無法推動它或將它擊倒{@condition 伏地}。"
 														]
 													},
 													{
 														"type": "entries",
-														"name": "Unbroken Air",
+														"name": "風靈突進",
 														"entries": [
-															"You can create a blast of compressed air that strikes like a mighty fist. As an action, you can spend 2 ki points and choose a creature within 30 feet of you. That creature must make a Strength saving throw. On a failed save, the creature takes {@dice 3d10} bludgeoning damage, plus an extra {@dice 1d10} bludgeoning damage for each additional ki point you spend, and you can push the creature up to 20 feet away from you and knock it {@condition prone}. On a successful save, the creature takes half as much damage, and you don't push it or knock it {@condition prone}."
+															"你可以消耗2點氣以施放{@spell 造風術}。"
 														]
 													},
 													{
 														"type": "entries",
-														"name": "Flames of the Phoenix (11th Level Required)",
+														"name": "形塑流川",
 														"entries": [
-															"You can spend 4 ki points to cast {@spell fireball}."
+															"以一個動作，你可以消耗1點氣以選擇一片距離你120呎內，各邊不超過30呎的冰或水的區域。你可以將該區域內的水變成冰，反之亦可，且你可以將區域內的冰重塑成任何你想要的樣子。你可以升高或降低冰的海拔高度、創造或填滿一道溝壑，升起或移平一道牆、或形成一根立柱。任何這類變化的程度都不能超過這片區域最大邊長的一半。舉例來說，若你影響了一片30呎平方的方形區域，你可以創造出一個最多15呎高的立柱、將這片方形區域的高度提升或降低最多15呎、或挖掘一道最多15呎深的溝壑，諸如此類。你無法透過形塑冰以困住或傷害位於區域內的生物。"
 														]
 													},
 													{
 														"type": "entries",
-														"name": "Gong of the Summit (6th Level Required)",
+														"name": "飛炎擊",
 														"entries": [
-															"You can spend 3 ki points to cast {@spell shatter}."
+															"你可以消耗2點氣以施放{@spell 燃燒之手}。"
 														]
 													},
 													{
 														"type": "entries",
-														"name": "Mist Stance (11th Level Required)",
+														"name": "清流鞭",
 														"entries": [
-															"You can spend 4 ki points to cast {@spell gaseous form}, targeting yourself."
+															"你可以消耗2點氣，並以一個動作創造出一條流水長鞭推拉目標使其失衡。一個距離你30呎內且你所能看見的生物必須進行一次敏捷豁免。若豁免失敗，該生物將受到{@dice 3d10}鈍擊傷害，加上你每額外消耗一點氣的額外{@dice 1d10}鈍擊傷害，且你可以將它擊倒{@condition 伏地}或將它向你拉近最多25呎距離。若豁免成功，該生物只受到一半的傷害，且你無法拉動它或將它擊倒{@condition 伏地}。"
 														]
 													},
 													{
 														"type": "entries",
-														"name": "Ride the Wind (11th Level Required)",
+														"name": "北風之握 (需求6級)",
 														"entries": [
-															"You can spend 4 ki points to cast {@spell fly}, targeting yourself."
+															"你可以消耗3點氣以施放{@spell 人類定身術}。"
 														]
 													},
 													{
 														"type": "entries",
-														"name": "River of Hungry Flame (17th Level Required)",
+														"name": "獅吼功 (需求6級)",
 														"entries": [
-															"You can spend 5 ki points to cast {@spell wall of fire}."
+															"你可以消耗3點氣以施放{@spell 粉碎音波}。"
 														]
 													},
 													{
 														"type": "entries",
-														"name": "Rush of the Gale Spirits",
+														"name": "鳳凰火 (需求11級)",
 														"entries": [
-															"You can spend 2 ki points to cast {@spell gust of wind}."
+															"你可以消耗4點氣以施放{@spell 火球術}。"
 														]
 													},
 													{
 														"type": "entries",
-														"name": "Shape the Flowing River",
+														"name": "雲霧式 (需求11級)",
 														"entries": [
-															"As an action, you can spend 1 ki point to choose an area of ice or water no larger than 30 feet on a side within 120 feet of you. You can change water to ice within the area and vice versa, and you can reshape ice in the area in any manner you choose. You can raise or lower the ice's elevation, create or fill in a trench, erect or flatten a wall, or form a pillar. The extent of any such changes can't exceed half the area's largest dimension. For example, if you affect a 30-foot square, you can create a pillar up to 15 feet high. raise or lower the square's elevation by up to 15 feet, dig a trench up to 15 feet deep, and so on. You can't shape the ice to trap or injure a creature in the area."
+															"你可以消耗4點氣以施放{@spell 氣化形體}，以你自己為目標。"
 														]
 													},
 													{
 														"type": "entries",
-														"name": "Sweeping Cinder Strike",
+														"name": "攀雲步 (需求11級)",
 														"entries": [
-															"You can spend 2 ki points to cast {@spell burning hands}."
+															"你可以消耗4點氣以施放{@spell 飛行術}，以你自己為目標。"
 														]
 													},
 													{
 														"type": "entries",
-														"name": "Water Whip",
+														"name": "寒冬之息 (需求17級)",
 														"entries": [
-															"You can spend 2 ki points as an action to create a whip of water that shoves and pulls a creature to unbalance it. A creature that you can see that is within 30 feet of you must make a Dexterity saving throw. On a failed save, the creature takes {@dice 3d10} bludgeoning damage, plus an extra {@dice 1d10} bludgeoning damage for each additional ki point you spend, and you can either knock it {@condition prone} or pull it up to 25 feet closer to you. On a successful save, the creature takes half as much damage, and you don't pull it or knock it {@condition prone}."
+															"你可以消耗6點氣以施放{@spell 寒冰錐}。"
 														]
 													},
 													{
 														"type": "entries",
-														"name": "Wave of Rolling Earth (17th Level Required)",
+														"name": "蒼山庇佑 (需求17級)",
 														"entries": [
-															"You can spend 6 ki points to cast {@spell wall of stone}."
+															"你可以消耗5點氣以施放{@spell 石膚術}，以你自己為目標。"
+														]
+													},
+													{
+														"type": "entries",
+														"name": "噬焰流 (需求17級)",
+														"entries": [
+															"你可以消耗5點氣以施放{@spell 火牆術}。"
+														]
+													},
+													{
+														"type": "entries",
+														"name": "滾石浪 (需求17級)",
+														"entries": [
+															"你可以消耗6點氣以施放{@spell 石牆術}。"
 														]
 													}
 												]
@@ -981,10 +981,10 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Extra Elemental Discipline",
+										"name": "額外四象法門", "ENG_name": "Extra Elemental Discipline",
 										"entries": [
-											"You learn one additional elemental discipline of your choice. You should know 2 elemental disciplines, as well as Elemental Attunement.",
-											"Whenever you learn a new elemental discipline, you can also replace one elemental discipline that you already know with a different discipline."
+											"在6級時，你學會一個你所選擇的額外四象法門。",
+											"每當你學會一個新的四象法門，你也可以將其中一個你已知的四象法門替換成另一個不同的法門。"
 										]
 									}
 								]
@@ -995,10 +995,10 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Extra Elemental Discipline",
+										"name": "額外四象法門", "ENG_name": "Extra Elemental Discipline",
 										"entries": [
-											"You learn one additional elemental discipline of your choice. You should know 3 elemental disciplines, as well as Elemental Attunement.",
-											"Whenever you learn a new elemental discipline, you can also replace one elemental discipline that you already know with a different discipline."
+											"在11級時，你學會一個你所選擇的額外四象法門。",
+											"每當你學會一個新的四象法門，你也可以將其中一個你已知的四象法門替換成另一個不同的法門。"
 										]
 									}
 								]
@@ -1009,10 +1009,10 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Extra Elemental Discipline",
+										"name": "額外四象法門", "ENG_name": "Extra Elemental Discipline",
 										"entries": [
-											"You learn one additional elemental discipline of your choice. You should know 4 elemental disciplines, as well as Elemental Attunement.",
-											"Whenever you learn a new elemental discipline, you can also replace one elemental discipline that you already know with a different discipline."
+											"在17級時，你學會一個你所選擇的額外四象法門。",
+											"每當你學會一個新的四象法門，你也可以將其中一個你已知的四象法門替換成另一個不同的法門。"
 										]
 									}
 								]
@@ -1020,7 +1020,7 @@
 						]
 					],
 					"source": "PHB",
-					"shortName": "Four Elements"
+					"shortName": "四象宗"
 				},
 				{
 					"name": "永亡宗", "ENG_name": "Way of the Long Death",
