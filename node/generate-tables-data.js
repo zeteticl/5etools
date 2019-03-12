@@ -17,10 +17,10 @@ class GenTables {
 		return [temp.book[0]];
 		 */
 
-		const index = JSON.parse(fs.readFileSync(`./data/books.json`, "utf-8"));
+		const index = JSON.parse(fs.readFileSync(`../data/books.json`, "utf-8"));
 		return index.book.map(idx => {
 			if (!GenTables.BOOK_BLACKLIST[idx.id]) {
-				idx.bookData = JSON.parse(fs.readFileSync(`./data/book/book-${idx.id.toLowerCase()}.json`, "utf-8"));
+				idx.bookData = JSON.parse(fs.readFileSync(`../data/book/book-${idx.id.toLowerCase()}.json`, "utf-8"));
 				return idx;
 			}
 		}).filter(it => it);
@@ -152,7 +152,7 @@ class GenTables {
 		});
 
 		const toSave = JSON.stringify({table: tables, tableGroup: tableGroups});
-		fs.writeFileSync(`./data/generated/gendata-tables.json`, toSave, "utf-8");
+		fs.writeFileSync(`../data/generated/gendata-tables.json`, toSave, "utf-8");
 	}
 }
 
