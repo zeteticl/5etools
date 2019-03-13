@@ -1499,7 +1499,7 @@ Parser.spSubclassesToCurrentAndLegacyFull = function (classes) {
 			const toAdd = Parser._spSubclassItem(c);
 			if (SourceUtil.hasBeenReprinted(nm, src)) {
 				out[1].push(toAdd);
-			} else if (Parser.sourceJsonToFull(src).startsWith(UA_PREFIX) || Parser.sourceJsonToFull(src).startsWith(PS_PREFIX)) {
+			} else if (Parser.sourceJsonToFull(src).startsWith(UA_PREFIX) || Parser.sourceJsonToFull(src).startsWith(PS_PREFIX)  || Parser.sourceJsonToFull(src).startsWith("Twitter")) {
 				const cleanName = mapClassShortNameToMostRecent(nm.split("(")[0].trim().split(/v\d+/)[0].trim());
 				toCheck.push({"name": cleanName, "ele": toAdd});
 			} else {
