@@ -2072,7 +2072,7 @@ EntryRenderer.race = {
 					delete s.name;
 				}
 				if (s.ENG_name) {
-					cpy.ENG_name = `${s.ENG_name} ${cpy.ENG_name?cpy.ENG_name:cpy.name}`;
+					cpy.ENG_name = `${cpy.ENG_name?cpy.ENG_name:cpy.name} (${s.ENG_name})`;
 					delete s.ENG_name;
 				}
 				if (s.ability) {
