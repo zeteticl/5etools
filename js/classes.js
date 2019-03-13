@@ -123,6 +123,7 @@ class ClassList {
 						${Parser.sourceJsonToAbv(classToRender.source)}
 					</span>
 					<span class="uniqueid hidden">${classToRender.uniqueId ? classToRender.uniqueId : id}</span>
+					<span class="eng_name hidden">${classToRender.ENG_name ? classToRender.ENG_name : classToRender.name}</span>
 				</a>
 			</li>`;
 	}
@@ -1371,7 +1372,7 @@ async function doPageInit () {
 	);
 
 	ClassList.classList = ListUtil.search({
-		valueNames: ['name', 'source', 'uniqueid'],
+		valueNames: ['name', 'source', 'uniqueid', 'eng_name'],
 		listClass: "classes"
 	});
 

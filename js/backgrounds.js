@@ -203,7 +203,7 @@ function loadhash (id) {
 			$pgContent.append(EntryRenderer.utils.getBorderTr());
 
 			DataUtil.loadJSON(JSON_FLUFF_URL).then((data) => {
-				const baseFluff = data.background.find(it => it.name.toLowerCase() === bg.name.toLowerCase() && it.source.toLowerCase() === bg.source.toLowerCase());
+				const baseFluff = data.background.find(it => (isStringMatch(it.name, bg.name) || isStringMatch(it.name, bg.ENG_name)) && it.source.toLowerCase() === bg.source.toLowerCase());
 				if (bg.fluff && bg.fluff.entries) { // override; for homebrew usage only
 					renderer.setFirstSection(true);
 					$td.append(renderer.renderEntry({type: "section", entries: bg.fluff.entries}));
