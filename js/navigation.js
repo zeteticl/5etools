@@ -104,7 +104,7 @@ class NavBar {
 		addLi(ulUtils, "roll20.html", "Roll20腳本小幫手");
 		addLi(ulUtils, "makeshaped.html", "Roll20 Shaped Sheet JS Builder");
 
-		addLi(navBar, "donate.html", "捐獻");
+		// addLi(navBar, "donate.html", "捐獻");
 
 		addNightModeToggle(navBar);
 
