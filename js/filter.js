@@ -442,6 +442,7 @@ class FilterBox {
 				updateSummary();
 			};
 			const updateSummary = () => {
+				return null; // HZ: Don't need summary, it is ugly
 				const counts = $grid.data("getCounts")();
 				if (counts.yes > 0 || counts.no > 0) {
 					if (counts.yes > 0) {
