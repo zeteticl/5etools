@@ -425,13 +425,13 @@ function loadhash (id) {
 		const predefined = EntryRenderer.utils.getPredefinedFluff(race, "raceFluff");
 		if (predefined) return predefined;
 
-		const subFluff = race._baseName && race.name.toLowerCase() === race._baseName.toLowerCase() ? "" : fluffJson.race.find(it => it.name.toLowerCase() === race.name.toLowerCase() && it.source.toLowerCase() === race.source.toLowerCase());
+		const subFluff = race._baseName && race.name.toLowerCase() === race._baseName.toLowerCase() ? "" : fluffJson.race.find(it => (isStringMatch(it.name, race.name) || isStringMatch(it.name, race.ENG_name)) && it.source.toLowerCase() === race.source.toLowerCase());
 
-		const baseFluff = fluffJson.race.find(it => race._baseName && it.name.toLowerCase() === race._baseName.toLowerCase() && race._baseSource && it.source.toLowerCase() === race._baseSource.toLowerCase());
+		const baseFluff = fluffJson.race.find(it => race._baseName && (isStringMatch(it.name, race._baseName) || isStringMatch(it.name, race._baseENG_name)) && race._baseSource && it.source.toLowerCase() === race._baseSource.toLowerCase());
 
 		if (!subFluff && !baseFluff) return null;
 
-		const findFluff = (toFind) => fluffJson.race.find(it => toFind.name.toLowerCase() === it.name.toLowerCase() && toFind.source.toLowerCase() === it.source.toLowerCase());
+		const findFluff = (toFind) => fluffJson.race.find(it => (isStringMatch(it.name, toFind.name) || isStringMatch(it.name, toFind.ENG_name)) && toFind.source.toLowerCase() === it.source.toLowerCase());
 
 		const fluff = {type: "section"};
 

@@ -2063,6 +2063,7 @@ EntryRenderer.race = {
 			srCopy.forEach(s => {
 				const cpy = JSON.parse(JSON.stringify(race));
 				cpy._baseName = cpy.name;
+				cpy._baseENG_name = cpy.ENG_name; // haz add
 				cpy._baseSource = cpy.source;
 				delete cpy.subraces;
 
