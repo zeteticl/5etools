@@ -6341,7 +6341,7 @@ Parser.ArmorToDisplay = function(armor){
 Parser.keyToDisplay["simple"]  = "簡易";
 Parser.keyToDisplay["martial"] = "軍用";
 //Tools
-Parser.keyToDisplay["alchemist's supplies"] 	= "煉金術士設備";
+Parser.keyToDisplay["alchemist's supplies"] 	= "煉金師設備";
 Parser.keyToDisplay["artisan's tools"]  		= "工匠工具";
 Parser.keyToDisplay["brewer's supplies"]  		= "釀酒設備";
 Parser.keyToDisplay["calligrapher's supplies"]  = "書寫設備";
