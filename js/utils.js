@@ -6239,6 +6239,16 @@ Parser.subclassKeyToDisplay["beauty"]     = "美麗";
 Parser.subclassKeyToDisplay["darkness"]   = "黑暗";
 Parser.subclassKeyToDisplay["destruction"]= "毀滅";
 Parser.subclassKeyToDisplay["order"]      = "秩序";
+Parser.subclassKeyToDisplay["gloom stalker"] = "幽域追蹤者";
+Parser.subclassKeyToDisplay["horizon walker"] = "境界行者";
+Parser.subclassKeyToDisplay["monster slayer"] = "怪物殺手";
+Parser.subclassKeyToDisplay["ancients"] = "先賢";
+Parser.subclassKeyToDisplay["devotion"] = "奉獻";
+Parser.subclassKeyToDisplay["vengeance"] = "復仇";
+Parser.subclassKeyToDisplay["oathbreaker"] = "破誓者";
+Parser.subclassKeyToDisplay["crown"] = "王冠";
+Parser.subclassKeyToDisplay["conquest"] = "征服";
+Parser.subclassKeyToDisplay["redemption"] = "救贖";
 Parser.SubclassToDisplay = function(sc){
 	let sc_match = sc.match(/([^()]*)( ?\((.*)\))?/);
 	if(sc_match && sc_match[2]){
