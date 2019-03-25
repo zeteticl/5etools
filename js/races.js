@@ -401,7 +401,7 @@ function loadhash (id) {
 		if (race.traitTags && race.traitTags.includes("NPC Race")) {
 			renderStack.push(`<tr class="text"><td colspan="6"><section class="text-muted">`);
 			renderer.recursiveEntryRender(
-				`{@i Note: This race is listed in the {@i Dungeon Master's Guide} as an option for creating NPCs. It is not designed for use as a playable race.}`
+				`{@i 註記： 這個種族被記載於{@i 《地下城主指南》}以做為創造非玩家角色的選項。它並非被設計做為玩家可用的種族。}`
 				, renderStack, 2);
 			renderStack.push(`</section></td></tr>`);
 		}
