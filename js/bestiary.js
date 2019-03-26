@@ -648,6 +648,7 @@ function addMonsters (data) {
 	// build the table
 	for (; mI < monsters.length; mI++) {
 		const mon = monsters[mI];
+		console.log(mon.name, mon);
 		const monHash = UrlUtil.autoEncodeHash(mon);
 		if (_addedHashes.has(monHash)) continue;
 		_addedHashes.add(monHash);
