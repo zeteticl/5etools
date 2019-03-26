@@ -1,7 +1,7 @@
 {
 	"monster": [
 		{
-			"name": "Aarakocra",
+			"name": "阿蘭寇拉鷹人", "ENG_name": "Aarakocra",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -35,19 +35,19 @@
 				"perception": "+5"
 			},
 			"passive": 15,
-			"languages": "Auran, Aarakocra",
+			"languages": "氣族語、阿蘭寇拉語",
 			"cr": "1/4",
 			"trait": [
 				{
-					"name": "Dive Attack",
+					"name": "俯衝攻擊", "tENG_name": "Dive Attack",
 					"entries": [
-						"If the aarakocra is flying and dives at least 30 ft. straight toward a target and then hits it with a melee weapon attack, the attack deals an extra 3 ({@dice 1d6}) damage to the target."
+						"若阿蘭寇拉鷹人在飛行中且向一個目標直線俯衝至少30呎距離，並接著以一次近戰武器攻擊命中它，該攻擊將對目標造成額外的3 ({@dice 1d6})傷害。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Talon",
+					"name": "禽爪",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}4 ({@damage 1d4 + 2})劈砍傷害。"
 					]
@@ -59,9 +59,9 @@
 					]
 				},
 				{
-					"name": "Summon Air Elemental",
+					"name": "召喚氣元素",
 					"entries": [
-						"Five aarakocra within 30 feet of each other can magically summon an {@creature air elemental}. Each of the five must use its action and movement on three consecutive turns to perform an aerial dance and must maintain concentration while doing so (as if concentrating on a spell). When all five have finished their third turn of the dance, the elemental appears in an unoccupied space within 60 feet of them. It is friendly toward them and obeys their spoken commands. It remains for 1 hour, until it or all its summoners die, or until any of its summoners dismisses it as a bonus action. A summoner can't perform the dance again until it finishes a short rest. When the elemental returns to the Elemental Plane of Air, any aarakocra within 5 feet of it can return with it."
+						"五個彼此距離30呎內的阿蘭寇拉鷹人可以用魔法召喚出一個{@creature 氣元素}。這五個鷹人都必須各自在三個連續的回合使用它們的動作和移動以施展一種空中演舞，且必須在這麼做時維持專注（如同專注於一個法術）。當這五個鷹人都完成了它們在第三個回合的舞蹈，則氣元素將會出現在距離它們60呎內的一處未被佔據空間。氣元素將對它們友善，且服從它們的口頭命令。它將持續存在長達1小時，直到它或它的所有召喚者死亡，或直到它的任何召喚者以一個附贈動作解消它。召喚者直到它完成一次短休之前都無法在施展這個舞蹈。當氣元素回到其氣元素位面，任何距離它5呎內的阿蘭寇拉鷹人將可以跟著它一同返回。"
 					]
 				}
 			],
@@ -11134,7 +11134,7 @@
 			]
 		},
 		{
-			"name": "Deep Gnome (Svirfneblin)",
+			"name": "地底地侏 (斯奈布力)", "ENG_name": "Deep Gnome (Svirfneblin)",
 			"size": "S",
 			"type": {
 				"type": "humanoid",
@@ -11175,33 +11175,33 @@
 			},
 			"senses": "黑暗視覺120呎",
 			"passive": 12,
-			"languages": "Gnomish, Terran, Undercommon",
+			"languages": "地侏語、土族語、地底通用語",
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Stone Camouflage",
+					"name": "岩地偽裝",
 					"entries": [
-						"The gnome has advantage on Dexterity (Stealth) checks made to hide in rocky terrain."
+						"地侏在岩石地形為躲藏所進行的敏捷（{@skill 隱匿}）檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Gnome Cunning",
+					"name": "地侏狡黠",
 					"entries": [
-						"The gnome has advantage on Intelligence, Wisdom, and Charisma saving throws against magic."
+						"地侏在對抗魔法的所有智力、睿知、和魅力豁免中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "War Pick",
+					"name": "戰鎬",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}6 ({@damage 1d8 + 2})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Poisoned Dart",
+					"name": "毒鏢",
 					"entries": [
-						"{@atk rw} {@hit 4} to hit, range 30/120 ft., one creature. {@h}4 ({@damage 1d4 + 2}) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or be {@condition poisoned} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success"
+						"{@atk rw} 命中{@hit 4}，射程30/120呎，單一生物。{@h}4 ({@damage 1d4 + 2})穿刺傷害，且目標必須成功通過一次DC 12的體質或免，否則陷入{@condition 中毒}狀態長達1分鐘。 目標可以在每次它的回合結束時重複這個豁免檢定，若檢定成功則結束這個效果對它的影響。"
 					]
 				}
 			],
@@ -11210,7 +11210,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"gnome's的天生施法屬性為Intelligence（法術豁免DC 11）。它生來就可以施展以下法術，且無需任何材料構材："
+						"地侏的天生施法屬性為智力（法術豁免DC 11）。它生來就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 迴避偵測}(限定自身)"
@@ -13189,7 +13189,7 @@
 			]
 		},
 		{
-			"name": "Duergar",
+			"name": "灰矮人", "ENG_name": "Duergar",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -13229,45 +13229,45 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 10,
-			"languages": "Dwarvish, Undercommon",
+			"languages": "矮人語、地底通用語",
 			"cr": "1",
 			"trait": [
 				{
-					"name": "Duergar Resilience",
+					"name": "灰矮人韌性",
 					"entries": [
-						"The duergar has advantage on saving throws against poison, spells, and illusions, as well as to resist being {@condition charmed} or {@condition paralyzed}."
+						"灰矮人在對抗毒素、法術、幻像、以及抵抗{@condition 魅惑}或{@condition 麻痺}的豁免檢定中具有優勢。"
 					]
 				},
 				{
 					"name": "日光敏感",
 					"entries": [
-						"當處於日光照耀下時，duergar在攻擊檢定，以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
+						"當處於日光照耀下時，灰矮人在攻擊檢定，以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Enlarge (Recharges after a Short or Long Rest)",
+					"name": "變巨術（短休或長休之後充能）",
 					"entries": [
-						"For 1 minute, the duergar magically increases in size, along with anything it is wearing or carrying. While enlarged, the duergar is Large, doubles its damage dice on Strength-based weapon attacks (included in the attacks), and makes Strength checks and Strength saving throws with advantage. If the duergar lacks the room to become Large, it attains the maximum size possible in the space available."
+						"持續1分鐘，灰矮人將用魔法將自己的體型連同任何它正穿戴或攜帶的物體變大。當處於變巨效果時，灰矮人的體型變為大型，它基於力量的武器攻擊的傷害骰變為二倍（已包含在攻擊條目），且在力量檢定和力量豁免中具有優勢。若灰矮人沒有足夠的空間變成大型，則它將會長到該空間可容納的最大尺寸。"
 					]
 				},
 				{
-					"name": "War Pick",
+					"name": "戰鎬",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}6 ({@damage 1d8 + 2}) piercing damage, or 11 ({@damage 2d8 + 2}) piercing damage while enlarged."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}6 ({@damage 1d8 + 2})穿刺傷害，或若處於變巨效果時則造成 11 ({@damage 2d8 + 2})穿刺傷害。"
 					]
 				},
 				{
 					"name": "標槍",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或 射程30/120呎，單一目標。{@h}5 ({@damage 1d6 + 2}) piercing damage, or 9 ({@damage 2d6 + 2}) piercing damage while enlarged."
+						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或 射程30/120呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害，或若處於變巨效果時則造成 9 ({@damage 2d6 + 2})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Invisibility (Recharges after a Short or Long Rest)",
+					"name": "隱形（短休或長休之後充能）",
 					"entries": [
-						"The duergar magically turns {@condition invisible} until it attacks, casts a spell, or uses its Enlarge, or until its concentration is broken, up to 1 hour (as if concentrating on a spell). Any equipment the duergar wears or carries is invisible with it."
+						"灰矮人用魔法使自己{@condition 隱形}，直到它攻擊、施放法術、使用變巨術、或它的專注被打斷（如同專注於法術）。這個效果最多持續1小時。任何灰矮人穿戴或攜帶的裝備都會隨著它隱形。"
 					]
 				}
 			],
