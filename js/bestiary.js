@@ -648,13 +648,10 @@ function addMonsters (data) {
 	// build the table
 	for (; mI < monsters.length; mI++) {
 		const mon = monsters[mI];
-		console.log(mon.name, mon);
 		const monHash = UrlUtil.autoEncodeHash(mon);
 		if (_addedHashes.has(monHash)) continue;
-		console.log(mon.name, monHash);
 		_addedHashes.add(monHash);
 		if (ExcludeUtil.isExcluded(mon.name, "monster", mon.source)) continue;
-		console.log(mon.name, ExcludeUtil.isExcluded(mon.name, "monster", mon.source));
 		_initParsed(mon);
 		mon._fSpeedType = Object.keys(mon.speed).filter(k => mon.speed[k]);
 		if (mon._fSpeedType.length) mon._fSpeed = mon._fSpeedType.map(k => mon.speed[k]).sort((a, b) => SortUtil.ascSort(b, a))[0];
