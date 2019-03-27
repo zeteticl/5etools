@@ -310,10 +310,13 @@ const traitFilter = new Filter({
 	displayFn: function(t){
 		switch(t){
 			case "Aggressive": return "侵略性";
+			case "Ambusher": return "伏擊者";
 			case "Amorphous": return "無定形";
 			case "Amphibious": return "兩棲";
+			case "Antimagic Susceptibility": return "反魔法敏感";
 			case "Brute": return "殘暴";
 			case "Charge": return "衝鋒";
+			case "Damage Absorption": return "傷害吸收";
 			case "Devil's Sight": return "魔鬼視界";
 			case "False Appearance": return "擬形";
 			case "Fey Ancestry": return "精類血統";
