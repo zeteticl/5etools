@@ -22054,7 +22054,7 @@
 			]
 		},
 		{
-			"name": "Half-Red Dragon Veteran",
+			"name": "半紅龍老兵", "ENG_name": "Half-Red Dragon Veteran",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -22102,13 +22102,13 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The veteran makes two longsword attacks. If it has a shortsword drawn, it can also make a shortsword attack."
+						"老兵進行二次長劍攻擊。若它已經抽出一把短劍，則它可以再進行一次短劍攻擊。"
 					]
 				},
 				{
 					"name": "長劍",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3}) slashing damage, or 8 ({@damage 1d10 + 3}) slashing damage if used with two hands."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3})劈砍傷害，或若以雙手使用時 8 ({@damage 1d10 + 3})劈砍傷害。"
 					]
 				},
 				{
@@ -22124,9 +22124,9 @@
 					]
 				},
 				{
-					"name": "Fire Breath {@recharge 5}",
+					"name": "火焰吐息 {@recharge 5}",
 					"entries": [
-						"The veteran exhales fire in a 15-foot cone. Each creature in that area must make a DC 15 Dexterity saving throw, taking 24 ({@damage 7d6}) fire damage on a failed save, or half as much damage on a successful one."
+						"老兵吐出一道15呎錐形的烈焰。每個在吐息範圍內的生物都必須進行一次DC 15的敏捷豁免，豁免失敗則受到24 ({@damage 7d6})火焰傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
@@ -25132,7 +25132,7 @@
 			]
 		},
 		{
-			"name": "Kuo-toa",
+			"name": "寇濤魚人", "ENG_name": "Kuo-toa",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -25179,25 +25179,25 @@
 				{
 					"name": "兩棲",
 					"entries": [
-						"The kuo-toa可以在空氣和水中呼吸。"
+						"寇濤魚人可以在空氣和水中呼吸。"
 					]
 				},
 				{
-					"name": "Otherworldly Perception",
+					"name": "異界感知", "tENG_name": "Otherworldly Perception",
 					"entries": [
-						"The kuo-toa can sense the presence of any creature within 30 feet of it that is {@condition invisible} or on the Ethereal Plane. It can pinpoint such a creature that is moving."
+						"寇濤魚人可以感知到任何距離它30呎內處於{@condition 隱形}狀態或在乙太位面的生物。它可以準確知道這類生物在移動時的確切位置。"
 					]
 				},
 				{
-					"name": "Slippery",
+					"name": "滑溜", "tENG_name": "Slippery",
 					"entries": [
-						"The kuo-toa has advantage on ability checks and saving throws made to escape a grapple."
+						"寇濤魚人在為逃離擒抱所進行的屬性檢定和豁免檢定中具有優勢。"
 					]
 				},
 				{
 					"name": "日光敏感",
 					"entries": [
-						"While in sunlight, the kuo-toa has disadvantage on attack rolls, as well as on Wisdom ({@skill Perception}) checks that rely on sight."
+						"當處於日光照耀下時，寇濤魚人在攻擊檢定，以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
 					]
 				}
 			],
@@ -25211,21 +25211,21 @@
 				{
 					"name": "矛",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 3}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d6 + 1}) piercing damage, or 5 ({@damage 1d8 + 1}) piercing damage if used with two hands to make a melee attack."
+						"{@atk mw,rw} 命中{@hit 3}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d6 + 1})穿刺傷害，或若雙手使用以進行一次近戰攻擊時則造成 5 ({@damage 1d8 + 1})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Net",
+					"name": "捕網",
 					"entries": [
-						"{@atk rw} {@hit 3} to hit, range 5/15 ft., one Large or smaller creature. {@h}The target is {@condition restrained}. A creature can use its action to make a DC 10 Strength check to free itself or another creature in a net, ending the effect on a success. Dealing 5 slashing damage to the net (AC 10) frees the target without harming it and destroys the net."
+						"{@atk rw} 命中{@hit 3}，射程5/15呎，單一體型為大型或更小的生物。{@h}目標將被{@condition 束縛}。一個生物可以使用它的動作進行一次DC 10的力量檢定，成功則釋放它自己或另一個在捕網內的生物。對捕網（AC10）造成5點劈砍傷害可以將捕網摧毀，釋放目標而不會傷害到它。"
 					]
 				}
 			],
 			"reaction": [
 				{
-					"name": "Sticky Shield",
+					"name": "黏性盾牌",
 					"entries": [
-						"When a creature misses the kuo-toa with a melee weapon attack, the kuo-toa uses its sticky shield to catch the weapon. The attacker must succeed on a DC 11 Strength saving throw, or the weapon becomes stuck to the kuo-toa's shield. If the weapon's wielder can't or won't let go of the weapon, the wielder is {@condition grappled} while the weapon is stuck. While stuck, the weapon can't be used. A creature can pull the weapon free by taking an action to make a DC 11 Strength check and succeeding."
+						"當一個生物在對寇濤魚人所進行的近戰武器攻擊失手時，寇濤魚人可以使用它的黏性盾牌以捕獲該武器。攻擊者必須成功通過一次DC 11的力量豁免，否則該武器將黏在寇濤魚人的盾牌上。若該武器的持用者無法或不願放開該武器，則持用者將在武器被黏住的期間視作{@condition 被擒}。當武器被黏住時，該武器將無法被使用。一個生物可以藉由進行一次DC 11的力量檢定並成功以將該武器從盾牌上拉開。"
 					]
 				}
 			],
@@ -25246,7 +25246,7 @@
 			]
 		},
 		{
-			"name": "Kuo-toa Archpriest",
+			"name": "寇濤魚人大祭司", "ENG_name": "Kuo-toa Archpriest",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -25293,25 +25293,25 @@
 				{
 					"name": "兩棲",
 					"entries": [
-						"The kuo-toa可以在空氣和水中呼吸。"
+						"寇濤魚人可以在空氣和水中呼吸。"
 					]
 				},
 				{
-					"name": "Otherworldly Perception",
+					"name": "異界感知", "tENG_name": "Otherworldly Perception",
 					"entries": [
-						"The kuo-toa can sense the presence of any creature within 30 feet of it that is {@condition invisible} or on the Ethereal Plane. It can pinpoint such a creature that is moving."
+						"寇濤魚人可以感知到任何距離它30呎內處於{@condition 隱形}狀態或在乙太位面的生物。它可以準確知道這類生物在移動時的確切位置。"
 					]
 				},
 				{
-					"name": "Slippery",
+					"name": "滑溜", "tENG_name": "Slippery",
 					"entries": [
-						"The kuo-toa has advantage on ability checks and saving throws made to escape a grapple."
+						"寇濤魚人在為逃離擒抱所進行的屬性檢定和豁免檢定中具有優勢。"
 					]
 				},
 				{
 					"name": "日光敏感",
 					"entries": [
-						"While in sunlight, the kuo-toa has disadvantage on attack rolls, as well as on Wisdom ({@skill Perception}) checks that rely on sight."
+						"當處於日光照耀下時，寇濤魚人在攻擊檢定，以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
 					]
 				}
 			],
@@ -25319,17 +25319,17 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The kuo-toa makes two melee attacks."
+						"寇濤魚人進行二次近戰攻擊。"
 					]
 				},
 				{
-					"name": "Scepter",
+					"name": "祭祀權杖",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3}) bludgeoning damage plus 14 ({@damage 4d6}) lightning damage."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})鈍擊傷害加 14 ({@damage 4d6})閃電傷害。"
 					]
 				},
 				{
-					"name": "Unarmed Strike",
+					"name": "徒手打擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}5 ({@damage 1d4 + 3})鈍擊傷害。"
 					]
@@ -25338,9 +25338,9 @@
 			"page": 200,
 			"spellcasting": [
 				{
-					"name": "Spellcasting",
+					"name": "施法",
 					"headerEntries": [
-						"The kuo-toa is a 10th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 14, {@hit 6} to hit with spell attacks). The kuo-toa has the following cleric spells prepared:"
+						"寇濤魚人是10級的施法者。它的施法屬性為睿知（法術豁免DC 14，法術攻擊命中{@hit 6}）。寇濤魚人已準備了以下牧師法術："
 					],
 					"spells": {
 						"0": {
@@ -25368,21 +25368,21 @@
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell spirit guardians}",
+								"{@spell 靈體守衛}",
 								"{@spell 巧舌術}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell control water}",
+								"{@spell 操控水體}",
 								"{@spell 預言術}"
 							]
 						},
 						"5": {
 							"slots": 2,
 							"spells": [
-								"{@spell mass cure wounds}",
+								"{@spell 群體治療傷勢}",
 								"{@spell 探知}"
 							]
 						}
@@ -25412,7 +25412,7 @@
 			]
 		},
 		{
-			"name": "Kuo-toa Monitor",
+			"name": "寇濤魚人監督者", "ENG_name": "Kuo-toa Monitor",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -25430,7 +25430,7 @@
 					"ac": 13,
 					"from": [
 						"天生護甲",
-						"unarmored defense"
+						"無甲防禦"
 					]
 				}
 			],
@@ -25460,31 +25460,31 @@
 				{
 					"name": "兩棲",
 					"entries": [
-						"The kuo-toa可以在空氣和水中呼吸。"
+						"寇濤魚人可以在空氣和水中呼吸。"
 					]
 				},
 				{
-					"name": "Otherworldly Perception",
+					"name": "異界感知", "tENG_name": "Otherworldly Perception",
 					"entries": [
-						"The kuo-toa can sense the presence of any creature within 30 feet of it that is {@condition invisible} or on the Ethereal Plane. It can pinpoint such a creature that is moving."
+						"寇濤魚人可以感知到任何距離它30呎內處於{@condition 隱形}狀態或在乙太位面的生物。它可以準確知道這類生物在移動時的確切位置。"
 					]
 				},
 				{
-					"name": "Slippery",
+					"name": "滑溜", "tENG_name": "Slippery",
 					"entries": [
-						"The kuo-toa has advantage on ability checks and saving throws made to escape a grapple."
+						"寇濤魚人在為逃離擒抱所進行的屬性檢定和豁免檢定中具有優勢。"
 					]
 				},
 				{
 					"name": "日光敏感",
 					"entries": [
-						"While in sunlight, the kuo-toa has disadvantage on attack rolls, as well as on Wisdom ({@skill Perception}) checks that rely on sight."
+						"當處於日光照耀下時，寇濤魚人在攻擊檢定，以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
 					]
 				},
 				{
-					"name": "Unarmored Defense",
+					"name": "無甲防禦", "tENG_name": "Unarmored Defense",
 					"entries": [
-						"The kuo-toa adds its Wisdom modifier to its armor class."
+						"寇濤魚人將它的睿知調整值加入它的護甲等級中。"
 					]
 				}
 			],
@@ -25492,7 +25492,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The kuo-toa makes one bite attack and two unarmed strikes."
+						"寇濤魚人進行一次啃咬攻擊和二次徒手打擊。"
 					]
 				},
 				{
@@ -25502,9 +25502,9 @@
 					]
 				},
 				{
-					"name": "Unarmed Strike",
+					"name": "徒手打擊",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2}) bludgeoning damage plus 3 ({@damage 1d6}) lightning damage, and the target can't take reactions until the end of the kuo-toa's next turn."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})鈍擊傷害加 3 ({@damage 1d6})閃電傷害，且目標直到寇濤魚人的下個回合結束前都不能採取反應。"
 					]
 				}
 			],
@@ -25525,7 +25525,7 @@
 			]
 		},
 		{
-			"name": "Kuo-toa Whip",
+			"name": "寇濤魚人鞭策者", "ENG_name": "Kuo-toa Whip",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -25572,25 +25572,25 @@
 				{
 					"name": "兩棲",
 					"entries": [
-						"The kuo-toa可以在空氣和水中呼吸。"
+						"寇濤魚人可以在空氣和水中呼吸。"
 					]
 				},
 				{
-					"name": "Otherworldly Perception",
+					"name": "異界感知", "tENG_name": "Otherworldly Perception",
 					"entries": [
-						"The kuo-toa can sense the presence of any creature within 30 feet of it that is {@condition invisible} or on the Ethereal Plane. It can pinpoint such a creature that is moving."
+						"寇濤魚人可以感知到任何距離它30呎內處於{@condition 隱形}狀態或在乙太位面的生物。它可以準確知道這類生物在移動時的確切位置。"
 					]
 				},
 				{
-					"name": "Slippery",
+					"name": "滑溜", "tENG_name": "Slippery",
 					"entries": [
-						"The kuo-toa has advantage on ability checks and saving throws made to escape a grapple."
+						"寇濤魚人在為逃離擒抱所進行的屬性檢定和豁免檢定中具有優勢。"
 					]
 				},
 				{
 					"name": "日光敏感",
 					"entries": [
-						"While in sunlight, the kuo-toa has disadvantage on attack rolls, as well as on Wisdom ({@skill Perception}) checks that rely on sight."
+						"當處於日光照耀下時，寇濤魚人在攻擊檢定，以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
 					]
 				}
 			],
@@ -25598,7 +25598,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The kuo-toa makes two attacks: one with its bite and one with its pincer staff."
+						"寇濤魚人進行二次攻擊：一次啃咬，一次鉗杖。"
 					]
 				},
 				{
@@ -25608,18 +25608,18 @@
 					]
 				},
 				{
-					"name": "Pincer Staff",
+					"name": "鉗杖",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及10呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害。 If the target is a Medium or smaller creature, it is {@condition grappled} (escape DC 14). Until this grapple ends, the kuo-toa can't use its pincer staff on another target."
+						"{@atk mw} 命中{@hit 4}，觸及10呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害。若目標為一個體型為中型或更小的生物，則它將{@condition 被擒}(逃脫DC 14)。直到擒抱結束前，寇濤魚人不能對另一個目標使用它的鉗杖。"
 					]
 				}
 			],
 			"page": 200,
 			"spellcasting": [
 				{
-					"name": "Spellcasting",
+					"name": "施法",
 					"headerEntries": [
-						"The kuo-toa is a 2nd-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, {@hit 4} to hit with spell attacks). The kuo-toa has the following cleric spells prepared:"
+						"寇濤魚人是2級的施法者。它的施法屬性為睿知（法術豁免DC 12，法術攻擊命中{@hit 4}）。寇濤魚人已準備了以下牧師法術："
 					],
 					"spells": {
 						"0": {
@@ -27298,7 +27298,7 @@
 						],
 						"1e": [
 							"{@spell 召喚元素生物} (water elemental only)",
-							"{@spell control water}",
+							"{@spell 操控水體}",
 							"{@spell 氣化形體}",
 							"{@spell 隱形術}",
 							"{@spell 異界傳送}"
@@ -41994,7 +41994,7 @@
 			]
 		},
 		{
-			"name": "Werebear",
+			"name": "(獸化)熊人", "ENG_name": "Werebear",
 			"group": "Lycanthropes",
 			"size": "M",
 			"type": {
@@ -42012,14 +42012,14 @@
 			"ac": [
 				{
 					"ac": 10,
-					"condition": "in humanoid form"
+					"condition": "(類人型態)"
 				},
 				{
 					"ac": 11,
 					"from": [
 						"天生護甲"
 					],
-					"condition": "in bear or hybrid form"
+					"condition": "(熊或半熊人型態)"
 				}
 			],
 			"hp": {
@@ -42029,7 +42029,7 @@
 			"speed": {
 				"walk": {
 					"number": 30,
-					"condition": " (40 ft., climb 30 ft. in bear or hybrid form)"
+					"condition": " (熊或半熊人型態下則為40呎, 攀爬30呎)"
 				}
 			},
 			"str": 19,
@@ -42048,23 +42048,23 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"preNote": "非銀製武器且非魔法攻擊所造成的"
 				}
 			],
 			"passive": 17,
-			"languages": "Common (can't speak in bear form)",
+			"languages": "通用語 (不能在熊型態下說話)",
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Shapechanger",
+					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
-						"The werebear can use its action to polymorph into a Large bear-humanoid hybrid or into a Large bear, or back into its true form, which is humanoid. Its statistics, other than its size and AC, are the same in each form. Any equipment it. is wearing or carrying isn't transformed. It reverts to its true form if it dies."
+						"熊人可以使用它的動作以變形成一個大型的半熊類人或一個大型熊，或變回它類人生物的的真實型態。除了它的體型和AC之外，它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。它會在死亡時回復它的真實型態。"
 					]
 				},
 				{
 					"name": "敏銳嗅覺",
 					"entries": [
-						"The werebear在依賴嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
+						"熊人在依賴嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				}
 			],
@@ -42072,23 +42072,23 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"In bear form, the werebear makes two claw attacks. In humanoid form, it makes two greataxe attacks. In hybrid form, it can attack like a bear or a humanoid."
+						"在熊型態下，熊人進行二次爪抓攻擊。在類人型態下，它進行二次巨斧攻擊。在半熊人型態下，它可以像熊型態或類人型態一樣進行攻擊。"
 					]
 				},
 				{
-					"name": "Bite (Bear or Hybrid Form Only)",
+					"name": "啃咬 (限定熊或半熊人型態)",
 					"entries": [
-						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}15 ({@damage 2d10 + 4})穿刺傷害。 If the target is a humanoid, it must succeed on a DC 14 Constitution saving throw or be cursed with were bear lycanthropy."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}15 ({@damage 2d10 + 4})穿刺傷害。若目標為一個類人生物，則它必須成功通過一次DC 14的體質豁免，否則將被熊人獸化症給詛咒。"
 					]
 				},
 				{
-					"name": "Claw (Bear or Hybrid Form Only)",
+					"name": "爪抓 (限定熊或半熊人型態)",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}13 ({@damage 2d8 + 4})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Greataxe (Humanoid or Hybrid Form Only)",
+					"name": "巨斧 (限定類人或半熊人型態)",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}10 ({@damage 1d12 + 4})劈砍傷害。"
 					]
@@ -42097,9 +42097,9 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Nonhuman Lycanthropes",
+					"name": "非人類獸化者",
 					"entries": [
-						"The statistics presented in this section assume a base creature of human. However, you can also use the statistics to represent nonhuman lycanthropes, adding verisimilitude by allowing a nonhuman lycanthrope to retain one or more of its humanoid racial traits. For example, an elf werewolf might have the Fey Ancestry trait."
+						"這個欄目中所提供的數據是以人類做為獸化症的基礎生物。然而，你也可以使用這個數據以呈現非人類獸化者，並藉由讓非人類獸化者保留一個或多個它的類人屬性特質以添加真實感。舉例來說，一名精靈狼人可能會保有「精類血統特性」。"
 					]
 				}
 			],
@@ -42123,7 +42123,7 @@
 			]
 		},
 		{
-			"name": "Wereboar",
+			"name": "(獸化)野豬人", "ENG_name": "Wereboar",
 			"group": "Lycanthropes",
 			"size": "M",
 			"type": {
@@ -42141,14 +42141,14 @@
 			"ac": [
 				{
 					"ac": 10,
-					"condition": "in humanoid form"
+					"condition": "(類人型態)"
 				},
 				{
 					"ac": 11,
 					"from": [
 						"天生護甲"
 					],
-					"condition": "in boar or hybrid form"
+					"condition": "(野豬或半野豬人型態)"
 				}
 			],
 			"hp": {
@@ -42158,7 +42158,7 @@
 			"speed": {
 				"walk": {
 					"number": 30,
-					"condition": " (40 ft. in boar form)"
+					"condition": " (野豬型態下則為40呎)"
 				}
 			},
 			"str": 17,
@@ -42177,58 +42177,58 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"preNote": "非銀製武器且非魔法攻擊所造成的"
 				}
 			],
 			"passive": 12,
-			"languages": "Common (can't speak in boar form)",
+			"languages": "通用語 (不能在野豬型態下說話)",
 			"cr": "4",
 			"trait": [
 				{
-					"name": "Shapechanger",
+					"name": "變形者",
 					"entries": [
-						"The wereboar can use its action to polymorph into a boar-humanoid hybrid or into a boar, or back into its true form, which is humanoid. Its statistics, other than its AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies."
+						"野豬人可以使用它的動作以變形成一個半野豬類人或一個大型熊，或變回它類人生物的的真實型態。除了它的AC之外，它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。它會在死亡時回復它的真實型態。"
 					]
 				},
 				{
-					"name": "Charge (Boar or Hybrid Form Only)",
+					"name": "衝鋒 (限定野豬或半野豬人型態)",
 					"entries": [
-						"If the wereboar moves at least 15 feet straight toward a target and then hits it with its tusks on the same turn, the target takes an extra 7 ({@damage 2d6})劈砍傷害。若目標為一個生物，則它必須成功通過一次DC 13的力量豁免，否則被擊倒{@condition 伏地}。"
+						"若野豬人向著一個目標直線移動至少15呎並接著在同回合以一次獠牙攻擊命中它，則目標將受到額外的7 (2d6)劈砍傷害。若目標為一個生物，則它必須成功通過一次DC 13的力量豁免，否則被擊倒{@condition 伏地}。"
 					]
 				},
 				{
 					"name": "頑強 (短休或長休之後充能)",
 					"entries": [
-						"若wereboar受到14點或更低的傷害而使其生命值歸零，則改為將它的生命值減少至1。"
+						"若野豬人受到14點或更低的傷害而使其生命值歸零，則改為將它的生命值減少至1。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack (Humanoid or Hybrid Form Only)",
+					"name": "多重攻擊 (限定類人或半野豬人型態)",
 					"entries": [
-						"The wereboar makes two attacks, only one of which can be with its tusks."
+						"野豬人進行二次攻擊，其中只有一次可以是獠牙攻擊。"
 					]
 				},
 				{
-					"name": "Maul (Humanoid or Hybrid Form Only)",
+					"name": "巨鎚 (限定類人或半野豬人型態)",
 					"entries": [
 						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}10 ({@damage 2d6 + 3})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Tusks (Boar or Hybrid Form Only)",
+					"name": "獠牙 (限定野豬或半野豬人型態)",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}10 ({@damage 2d6 + 3})劈砍傷害。 If the target is a humanoid, it must succeed on a DC 12 Constitution saving throw or be cursed with wereboar lycanthropy."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}10 ({@damage 2d6 + 3})劈砍傷害。若目標為一個類人生物，則它必須成功通過一次DC 12的體質豁免，否則將被野豬人獸化症給詛咒。"
 					]
 				}
 			],
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Nonhuman Lycanthropes",
+					"name": "非人類獸化者",
 					"entries": [
-						"The statistics presented in this section assume a base creature of human. However, you can also use the statistics to represent nonhuman lycanthropes, adding verisimilitude by allowing a nonhuman lycanthrope to retain one or more of its humanoid racial traits. For example, an elf werewolf might have the Fey Ancestry trait."
+						"這個欄目中所提供的數據是以人類做為獸化症的基礎生物。然而，你也可以使用這個數據以呈現非人類獸化者，並藉由讓非人類獸化者保留一個或多個它的類人屬性特質以添加真實感。舉例來說，一名精靈狼人可能會保有「精類血統特性」。"
 					]
 				}
 			],
