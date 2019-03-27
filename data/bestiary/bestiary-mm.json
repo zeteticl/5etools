@@ -9178,7 +9178,7 @@
 			]
 		},
 		{
-			"name": "Clay Golem",
+			"name": "黏土魔像", "ENG_name": "Clay Golem",
 			"size": "L",
 			"type": "construct",
 			"source": "MM",
@@ -9216,7 +9216,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't adamantine"
+					"preNote": "非精金武器且非魔法攻擊所造成的"
 				}
 			],
 			"conditionImmune": [
@@ -9229,37 +9229,37 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 9,
-			"languages": "understands the languages of its creator but can't speak",
+			"languages": "理解它製造者所掌握的語言，但不會說",
 			"cr": "9",
 			"trait": [
 				{
-					"name": "Acid Absorption",
+					"name": "酸蝕吸收", "tENG_name": "Acid Absorption",
 					"entries": [
-						"Whenever the golem is subjected to acid damage, it takes no damage and instead regains a number of hit points equal to the acid damage dealt."
+						"每當魔像承受酸蝕傷害時，它並不會受到任何傷害，反而會回復等同於所受到酸蝕傷害數值的生命值。"
 					]
 				},
 				{
-					"name": "Berserk",
+					"name": "狂暴", "tENG_name": "Berserk",
 					"entries": [
-						"Whenever the golem starts its turn with 60 hit points or fewer, roll a {@dice d6}. On a 6, the golem goes berserk. On each of its turns while berserk, the golem attacks the nearest creature it can see. If no creature is near enough to move to and attack, the golem attacks an object, with preference for an object smaller than itself. Once the golem goes berserk, it continues to do so until it is destroyed or regains all its hit points."
+						"每當魔像以60點或更低生命值的情況開始它的回合，骰一顆{@dice d6}。若骰出的結果為6，則魔像將開始狂暴。在它狂暴期間的每個回合，魔像將會攻擊距離它最近且它能看見的生物。如果沒有任何生物位於它移動並攻擊的範圍內，則魔像將會攻擊一個物體，並優先選擇比自己體型更小的物體。一旦魔像開始狂暴，它將會一直持續狂暴直到它被摧毀，或回復它所有的生命值。"
 					]
 				},
 				{
-					"name": "Immutable Form",
+					"name": "不變形態", "tENG_name": "Immutable Form",
 					"entries": [
-						"The golem is immune to any spell or effect that would alter its form."
+						"魔像免疫於任何會改變它形態的法術或效果。"
 					]
 				},
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The golem 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"魔像在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Magic Weapons",
+					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The golem's weapon attacks are magical."
+						"魔像的武器攻擊視作魔法攻擊。"
 					]
 				}
 			],
@@ -9267,19 +9267,19 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The golem makes two slam attacks."
+						"魔像進行二次猛擊攻擊。"
 					]
 				},
 				{
-					"name": "Slam",
+					"name": "猛擊",
 					"entries": [
-						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}16 ({@damage 2d10 + 5})鈍擊傷害。 If the target is a creature, it must succeed on a DC 15 Constitution saving throw or have its hit point maximum reduced by an amount equal to the damage taken. The target dies if this attack reduces its hit point maximum to 0. The reduction lasts until removed by the  {@spell greater restoration} spell or other magic."
+						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}16 ({@damage 2d10 + 5})鈍擊傷害。若目標為一個生物，則它必須成功通過一次DC 15的體質豁免，否則它的生命值最大值將減少等同於所受傷害的數值。若這個攻擊將目標的生命值最大值歸零，則目標死亡。這個減損持續直到被{@spell 高等復原術}法術或其他魔法給移除。"
 					]
 				},
 				{
-					"name": "Haste {@recharge 5}",
+					"name": "加速 {@recharge 5}",
 					"entries": [
-						"Until the end of its next turn, the golem magically gains a +2 bonus to its AC, has advantage on Dexterity saving throws, and can use its slam attack as a bonus action."
+						"直到它的下個回合結束前，魔像將以魔法使自己的AC獲得+2加值，在敏捷豁免中具有優勢，且能夠以一個附贈動作使用它的猛擊攻擊﹒"
 					]
 				}
 			],
@@ -24345,7 +24345,7 @@
 			]
 		},
 		{
-			"name": "Iron Golem",
+			"name": "鋼鐵魔像", "ENG_name": "Iron Golem",
 			"size": "L",
 			"type": "construct",
 			"source": "MM",
@@ -24383,7 +24383,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't adamantine"
+					"preNote": "非精金武器且非魔法攻擊所造成的"
 				}
 			],
 			"conditionImmune": [
@@ -24396,19 +24396,19 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 10,
-			"languages": "understands the languages of its creator but can't speak",
+			"languages": "理解它製造者所掌握的語言，但不會說",
 			"cr": "16",
 			"trait": [
 				{
-					"name": "Fire Absorption",
+					"name": "火焰吸收", "tENG_name": "Fire Absorption",
 					"entries": [
-						"Whenever the golem is subjected to fire damage, it takes no damage and instead regains a number of hit points equal to the fire damage dealt."
+						"每當魔像承受火焰傷害時，它並不會受到任何傷害，反而會回復等同於所受到火焰傷害數值的生命值。"
 					]
 				},
 				{
-					"name": "Immutable Form",
+					"name": "不變形態", "tENG_name": "Immutable Form",
 					"entries": [
-						"The golem is immune to any spell or effect that would alter its form."
+						"魔像免疫於任何會改變它形態的法術或效果。"
 					]
 				},
 				{
@@ -24418,9 +24418,9 @@
 					]
 				},
 				{
-					"name": "Magic Weapons",
+					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The golem's weapon attacks are magical."
+						"魔像的武器攻擊視作魔法攻擊。"
 					]
 				}
 			],
@@ -24428,25 +24428,25 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The golem makes two melee attacks."
+						"魔像進行二次近戰攻擊。"
 					]
 				},
 				{
-					"name": "Slam",
+					"name": "猛擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 13}，觸及5呎，單一目標。{@h}20 ({@damage 3d8 + 7})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Sword",
+					"name": "劍劈",
 					"entries": [
 						"{@atk mw} 命中{@hit 13}，觸及10呎，單一目標。{@h}23 ({@damage 3d10 + 7})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Poison Breath {@recharge 5}",
+					"name": "劇毒吐息 {@recharge 5}",
 					"entries": [
-						"The golem exhales poisonous gas in a 15-foot cone. Each creature in that area must make a DC 19 Constitution saving throw, taking 45 ({@damage 10d8}) poison damage on a failed save, or half as much damage on a successful one."
+						"魔像吐出一道15呎錐形的劇毒氣體。每個在吐息範圍內的生物都必須進行一次DC 19的體質豁免，豁免失敗則受到45 ({@damage 10d8})毒素傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
@@ -35895,7 +35895,7 @@
 			]
 		},
 		{
-			"name": "Shield Guardian",
+			"name": "構裝盾衛", "ENG_name": "Shield Guardian",
 			"size": "L",
 			"type": "construct",
 			"source": "MM",
@@ -35935,25 +35935,25 @@
 			],
 			"senses": "盲視10呎, 黑暗視覺60呎",
 			"passive": 10,
-			"languages": "understands commands given in any language but can't speak",
+			"languages": "理解任何語言所下達的命令，但不會說",
 			"cr": "7",
 			"trait": [
 				{
-					"name": "Bound",
+					"name": "聯繫", "tENG_name": "Bound",
 					"entries": [
-						"The shield guardian is magically bound to an amulet. As long as the guardian and its amulet are on the same plane of existence, the amulet's wearer can telepathically call the guardian to travel to it, and the guardian knows the distance and direction to the amulet. If the guardian is within 60 feet of the amulet's wearer, half of any damage the wearer takes (rounded up) is transferred to the guardian."
+						"構裝盾衛被以魔法與一個護符互相聯繫。只要構裝盾衛與它的護符處於鄉同的存在位面，護符的穿戴者就能夠以心靈感應呼喚構裝盾衛向它移動，且構裝盾衛將會知道護符所在的距離和方位。若構裝盾衛位於護符的穿戴者60呎內，則任何穿戴者所受到傷害的一半（向上取整）都將被轉移到構裝盾衛身上。"
 					]
 				},
 				{
-					"name": "Regeneration",
+					"name": "再生", "tENG_name": "Regeneration",
 					"entries": [
-						"The shield guardian regains 10 hit points at the start of its turn if it has at least 1 hit point."
+						"若構裝盾衛擁有至少1點生命值，則它將在它的回合開始石回復10點生命值。"
 					]
 				},
 				{
-					"name": "Spell Storing",
+					"name": "法術儲存", "tENG_name": "Spell Storing",
 					"entries": [
-						"A spellcaster who wears the shield guardian's amulet can cause the guardian to store one spell of 4th level or lower. To do so, the wearer must cast the spell on the guardian. The spell has no effect but is stored within the guardian. When commanded to do so by the wearer or when a situation arises that was predefined by the spellcaster, the guardian casts the stored spell with any parameters set by the original caster, requiring no components. When the spell is cast or a new spell is stored, any previously stored spell is lost."
+						"一個穿戴盾衛護符的施法者可以在構裝盾衛內儲存一個環階為4或以下的法術。若要這麼做，穿戴者必須對構裝盾衛施放該法術。該法術不會產生任何效果，而會儲存至構裝盾衛體內。當穿戴者下令，或當施法者事前設置的條件被滿足時，構裝盾衛將會以任何施法者原本設定的參數施放被儲存的法術，且無須任何構材。當該法術被施放、或一個新的法術被儲存時，任何先前儲存的法術都將隨之消失。"
 					]
 				}
 			],
@@ -35961,11 +35961,11 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The guardian makes two fist attacks."
+						"構裝盾衛進行二次拳擊攻擊。"
 					]
 				},
 				{
-					"name": "Fist",
+					"name": "拳擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}11 ({@damage 2d6 + 4})鈍擊傷害。"
 					]
@@ -35973,9 +35973,9 @@
 			],
 			"reaction": [
 				{
-					"name": "Shield",
+					"name": "護盾",
 					"entries": [
-						"When a creature makes an attack against the wearer of the guardian's amulet, the guardian grants a +2 bonus to the wearer's AC if the guardian is within 5 feet of the wearer."
+						"當一個生物對盾衛護符的穿戴者進行一次攻擊時，若構裝盾衛位於穿戴者5呎內，則它將讓穿戴者的AC獲得+2加值。"
 					]
 				}
 			],
@@ -37541,7 +37541,7 @@
 			]
 		},
 		{
-			"name": "Stone Golem",
+			"name": "石魔像", "ENG_name": "Stone Golem",
 			"size": "L",
 			"type": "construct",
 			"source": "MM",
@@ -37578,7 +37578,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't adamantine"
+					"preNote": "非精金武器且非魔法攻擊所造成的"
 				}
 			],
 			"conditionImmune": [
@@ -37591,25 +37591,25 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 10,
-			"languages": "understands the languages of its creator but can't speak",
+			"languages": "理解它製造者所掌握的語言，但不會說",
 			"cr": "10",
 			"trait": [
 				{
-					"name": "Immutable Form",
+					"name": "不變形態", "tENG_name": "Immutable Form",
 					"entries": [
-						"The golem is immune to any spell or effect that would alter its form."
+						"魔像免疫於任何會改變它形態的法術或效果。"
 					]
 				},
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The golem 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"魔像在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Magic Weapons",
+					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The golem's weapon attacks are magical."
+						"魔像的武器攻擊視作魔法攻擊。"
 					]
 				}
 			],
@@ -37617,19 +37617,19 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The golem makes two slam attacks."
+						"魔像進行二次猛擊攻擊。"
 					]
 				},
 				{
-					"name": "Slam",
+					"name": "猛擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}19 ({@damage 3d8 + 6})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Slow {@recharge 5}",
+					"name": "緩速 {@recharge 5}",
 					"entries": [
-						"The golem targets one or more creatures it can see within 10 feet of it. Each target must make a DC 17 Wisdom saving throw against this magic. On a failed save, a target can't use reactions, its speed is halved, and it can't make more than one attack on its turn. In addition, the target can take either an action or a bonus action on its turn, not both. These effects last for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"魔像選擇一個或多個距離它10呎內且它所能看見的生物做為目標。每個目標都必須進行一次DC 17的睿知豁免以對抗這個魔法。若豁免失敗，目標將無法使用反應，它的速度減半，且在它的回合不能進行超過一次攻擊。此外，目標只能在它的回合採取一個動作或一個附贈動作，而不能在同一回合使用兩者。這些效果持續長達1分鐘。目標可以在每次它的回合結束時重複這個豁免檢定，若檢定成功則結束這個效果對它的影響。"
 					]
 				}
 			],
