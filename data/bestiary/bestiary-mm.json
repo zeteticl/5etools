@@ -341,7 +341,7 @@
 				"walk": 0,
 				"fly": {
 					"number": 30,
-					"condition": "(hover)"
+					"condition": "(浮空)"
 				},
 				"canHover": true
 			},
@@ -4242,7 +4242,7 @@
 			]
 		},
 		{
-			"name": "Animated Armor",
+			"name": "活化盔甲", "ENG_name": "Animated Armor",
 			"group": "Animated Objects",
 			"size": "M",
 			"type": "construct",
@@ -4290,15 +4290,15 @@
 			"cr": "1",
 			"trait": [
 				{
-					"name": "Antimagic Susceptibility",
+					"name": "反魔法敏感", "tENG_name": "Antimagic Susceptibility",
 					"entries": [
-						"The armor is {@condition incapacitated} while in the area of an antimagic field. If targeted by dispel magic, the armor must succeed on a Constitution saving throw against the caster's spell save DC or fall {@condition unconscious} for 1 minute."
+						"當處於{@spell 反魔法結界}的效果範圍時，活化盔甲將陷入{@condition 無力}狀態。若它被做為{@spell 解除魔法}的目標，活化盔甲必須成功通過一次對抗施法者法術豁免DC的體質豁免，否則陷入{@condition 昏迷}狀態持續1分鐘。"
 					]
 				},
 				{
-					"name": "False Appearance",
+					"name": "擬形", "tENG_name": "False Appearance",
 					"entries": [
-						"While the armor remains motionless, it is indistinguishable from a normal suit of armor."
+						"當活化盔甲保持不動，它看起來就跟普通的盔甲一模一樣。"
 					]
 				}
 			],
@@ -4306,11 +4306,11 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The armor makes two melee attacks."
+						"活化盔甲進行二次近戰攻擊。"
 					]
 				},
 				{
-					"name": "Slam",
+					"name": "猛擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})鈍擊傷害。"
 					]
@@ -5680,7 +5680,7 @@
 				"walk": 0,
 				"fly": {
 					"number": 40,
-					"condition": "(hover)"
+					"condition": "(浮空)"
 				},
 				"canHover": true
 			},
@@ -6408,7 +6408,7 @@
 				"walk": 0,
 				"fly": {
 					"number": 20,
-					"condition": "(hover)"
+					"condition": "(浮空)"
 				},
 				"canHover": true
 			},
@@ -6520,7 +6520,7 @@
 				"walk": 0,
 				"fly": {
 					"number": 20,
-					"condition": "(hover)"
+					"condition": "(浮空)"
 				},
 				"canHover": true
 			},
@@ -11035,7 +11035,7 @@
 				"walk": 0,
 				"fly": {
 					"number": 20,
-					"condition": "(hover)"
+					"condition": "(浮空)"
 				},
 				"canHover": true
 			},
@@ -11307,7 +11307,7 @@
 				"walk": 0,
 				"fly": {
 					"number": 30,
-					"condition": "(hover)"
+					"condition": "(浮空)"
 				},
 				"canHover": true
 			},
@@ -15574,7 +15574,7 @@
 				"walk": 0,
 				"fly": {
 					"number": 40,
-					"condition": "(hover)"
+					"condition": "(浮空)"
 				},
 				"canHover": true
 			},
@@ -15703,7 +15703,7 @@
 			]
 		},
 		{
-			"name": "Flesh Golem",
+			"name": "血肉魔像", "ENG_name": "Flesh Golem",
 			"size": "M",
 			"type": "construct",
 			"source": "MM",
@@ -15735,7 +15735,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't adamantine"
+					"preNote": "非精金武器且非魔法攻擊所造成的"
 				}
 			],
 			"conditionImmune": [
@@ -15748,44 +15748,44 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 10,
-			"languages": "understands the languages of its creator but can't speak",
+			"languages": "理解它製造者所掌握的語言，但不會說",
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Berserk",
+					"name": "狂暴", "tENG_name": "Berserk",
 					"entries": [
-						"Whenever the golem starts its turn with 40 hit points or fewer, roll a {@dice d6}. On a 6, the golem goes berserk. On each of its turns while berserk, the golem attacks the nearest creature it can see. If no creature is near enough to move to and attack, the golem attacks an object, with preference for an object smaller than itself. Once the golem goes berserk, it continues to do so until it is destroyed or regains all its hit points.",
-						"The golem's creator, if within 60 feet of the berserk golem, can try to calm it by speaking firmly and persuasively. The golem must be able to hear its creator, who must take an action to make a DC 15 Charisma (Persuasion) check. If the check succeeds, the golem ceases being berserk. If it takes damage while still at 40 hit points or fewer, the golem might go berserk again."
+						"每當魔像以40點或更低生命值的情況開始它的回合，骰一顆{@dice d6}。若骰出的結果為6，則魔像將開始狂暴。在它狂暴期間的每個回合，魔像將會攻擊距離它最近且它能看見的生物。如果沒有任何生物位於它移動並攻擊的範圍內，則魔像將會攻擊一個物體，並優先選擇比自己體型更小的物體。一旦魔像開始狂暴，它將會一直持續狂暴直到它被摧毀，或回復它所有的生命值。",
+						"若魔像的製造者距離狂暴魔像60呎內，則它可以嘗試藉由堅定且充滿說服力的話語使魔像冷靜。魔像必須要能夠聽見它的製造者，且製造者必須採取一個動作以進行一次DC 15的魅力（{@skill 說服}）檢定。若該檢定成功，魔像將會停止狂暴。若它在擁有40點或更低生命值的情況下受到傷害，則它可能會再次開始狂暴。"
 					]
 				},
 				{
-					"name": "Aversion of Fire",
+					"name": "厭惡火焰", "tENG_name": "Aversion of Fire",
 					"entries": [
-						"If the golem takes fire damage, it has disadvantage on attack rolls and ability checks until the end of its next turn."
+						"當魔像受到火焰傷害，則直到它的下個回合結束前，它將在攻擊檢定和屬性檢定中具有劣勢。"
 					]
 				},
 				{
-					"name": "Immutable Form",
+					"name": "不變形態", "tENG_name": "Immutable Form",
 					"entries": [
-						"The golem is immune to any spell or effect that would alter its form."
+						"魔像免疫於任何會改變它形態的法術或效果。"
 					]
 				},
 				{
-					"name": "Lightning Absorption",
+					"name": "閃電吸收", "tENG_name": "Lightning Absorption",
 					"entries": [
-						"Whenever the golem is subjected to lightning damage, it takes no damage and instead regains a number of hit points equal to the lightning damage dealt."
+						"每當魔像承受閃電傷害時，它並不會受到任何傷害，反而會回復等同於所受到閃電傷害數值的生命值。"
 					]
 				},
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The golem 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"魔像在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Magic Weapons",
+					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The golem's weapon attacks are magical."
+						"魔像的武器攻擊視作魔法攻擊。"
 					]
 				}
 			],
@@ -15793,11 +15793,11 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The golem makes two slam attacks."
+						"魔像進行二次猛擊攻擊。"
 					]
 				},
 				{
-					"name": "Slam",
+					"name": "猛擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}13 ({@damage 2d8 + 4})鈍擊傷害。"
 					]
@@ -15965,7 +15965,7 @@
 			]
 		},
 		{
-			"name": "Flying Sword",
+			"name": "飛行劍", "ENG_name": "Flying Sword",
 			"group": "Animated Objects",
 			"size": "S",
 			"type": "construct",
@@ -15989,7 +15989,7 @@
 				"walk": 0,
 				"fly": {
 					"number": 50,
-					"condition": "(hover)"
+					"condition": "(浮空)"
 				},
 				"canHover": true
 			},
@@ -16020,15 +16020,15 @@
 			"cr": "1/4",
 			"trait": [
 				{
-					"name": "Antimagic Susceptibility",
+					"name": "反魔法敏感", "tENG_name": "Antimagic Susceptibility",
 					"entries": [
-						"The sword is {@condition incapacitated} while in the area of an antimagic field. If targeted by dispel magic, the sword must succeed on a Constitution saving throw against the caster's spell save DC or fall {@condition unconscious} for 1 minute."
+						"當處於{@spell 反魔法結界}的效果範圍時，飛行劍將陷入{@condition 無力}狀態。若它被做為{@spell 解除魔法}的目標，飛行劍必須成功通過一次對抗施法者法術豁免DC的體質豁免，否則陷入{@condition 昏迷}狀態持續1分鐘。"
 					]
 				},
 				{
-					"name": "False Appearance",
+					"name": "擬形", "tENG_name": "False Appearance",
 					"entries": [
-						"While the sword remains motionless and isn't flying, it is indistinguishable from a normal sword."
+						"當飛行劍保持不動，它看起來就跟普通的劍一模一樣。"
 					]
 				}
 			],
@@ -16504,7 +16504,7 @@
 				"walk": 0,
 				"fly": {
 					"number": 10,
-					"condition": "(hover)"
+					"condition": "(浮空)"
 				},
 				"canHover": true
 			},
@@ -16742,7 +16742,7 @@
 				"walk": 0,
 				"fly": {
 					"number": 40,
-					"condition": "(hover)"
+					"condition": "(浮空)"
 				},
 				"canHover": true
 			},
@@ -21190,7 +21190,7 @@
 				"walk": 10,
 				"fly": {
 					"number": 30,
-					"condition": "(hover)"
+					"condition": "(浮空)"
 				},
 				"canHover": true
 			},
@@ -22356,7 +22356,7 @@
 			]
 		},
 		{
-			"name": "Helmed Horror",
+			"name": "恐怖鎧甲", "ENG_name": "Helmed Horror",
 			"size": "M",
 			"type": "construct",
 			"source": "MM",
@@ -22396,7 +22396,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't adamantine"
+					"preNote": "非精金武器且非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -22416,19 +22416,19 @@
 			],
 			"senses": "盲視60呎（超過半徑範圍則視作目盲）",
 			"passive": 14,
-			"languages": "understands the languages of its creator but can't speak",
+			"languages": "理解它製造者所掌握的語言，但不會說",
 			"cr": "4",
 			"trait": [
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The helmed horror 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"恐怖鎧甲在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Spell Immunity",
+					"name": "法術免疫", "tENG_name": "Spell Immunity",
 					"entries": [
-						"The helmed horror is immune to three spells chosen by its creator. Typical immunities include {@spell fireball}, {@spell heat metal}, and {@spell lightning bolt}."
+						"恐怖鎧甲免疫於三種由它製造者所選擇的法術。這個法術免疫的選擇通常會包括{@spell 火球術}、{@spell 灼熱金屬}、和{@spell 閃電束}。"
 					]
 				}
 			],
@@ -22436,13 +22436,13 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The helmed horror makes two longsword attacks."
+						"恐怖鎧甲進行二次長劍攻擊。"
 					]
 				},
 				{
 					"name": "長劍",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}8 ({@damage 1d8 + 4}) slashing damage, or 9 ({@damage 1d10 + 4}) slashing damage if used with two hands."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}8 ({@damage 1d8 + 4})劈砍傷害，或若以雙手使用則造成 9 ({@damage 1d10 + 4})劈砍傷害。"
 					]
 				}
 			],
@@ -24259,7 +24259,7 @@
 				"walk": 50,
 				"fly": {
 					"number": 50,
-					"condition": "(hover)"
+					"condition": "(浮空)"
 				},
 				"canHover": true
 			},
@@ -28824,9 +28824,9 @@
 					]
 				},
 				{
-					"name": "恐怖凝視",
+					"name": "恐怖瞪視",
 					"entries": [
-						"木乃伊選擇一個距離它60呎內且它所能看見的生物做為目標。若該目標可以看見木乃伊，則它必須成功通過一次DC 11的睿知豁免對抗這個魔法，否則陷入{@condition 恐懼}直到木乃伊的下個回合結束。若此豁免檢定的結果與目標值差距5點或更多，則它也將陷入{@condition 麻痺}狀態長達相同的持續時間。成功通過此豁免檢定的目標將在接下來的24小時內免疫於所有木乃伊（不包括{@creature 木乃伊領主}）的恐怖凝視。"
+						"木乃伊選擇一個距離它60呎內且它所能看見的生物做為目標。若該目標可以看見木乃伊，則它必須成功通過一次DC 11的睿知豁免對抗這個魔法，否則陷入{@condition 恐懼}直到木乃伊的下個回合結束。若此豁免檢定的結果與目標值差距5點或更多，則它也將陷入{@condition 麻痺}狀態長達相同的持續時間。成功通過此豁免檢定的目標將在接下來的24小時內免疫於所有木乃伊（不包括{@creature 木乃伊領主}）的恐怖瞪視。"
 					]
 				}
 			],
@@ -32336,7 +32336,7 @@
 				"walk": 0,
 				"fly": {
 					"number": 50,
-					"condition": "(hover)"
+					"condition": "(浮空)"
 				},
 				"canHover": true
 			},
@@ -34355,7 +34355,7 @@
 			]
 		},
 		{
-			"name": "Rug of Smothering",
+			"name": "悶窒魔毯", "ENG_name": "Rug of Smothering",
 			"group": "Animated Objects",
 			"size": "L",
 			"type": "construct",
@@ -34397,29 +34397,29 @@
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Antimagic Susceptibility",
+					"name": "反魔法敏感", "tENG_name": "Antimagic Susceptibility",
 					"entries": [
-						"The rug is {@condition incapacitated} while in the area of an antimagic field. If targeted by dispel magic, the rug must succeed on a Constitution saving throw against the caster's spell save DC or fall {@condition unconscious} for 1 minute."
+						"當處於{@spell 反魔法結界}的效果範圍時，悶窒魔毯將陷入{@condition 無力}狀態。若它被做為{@spell 解除魔法}的目標，悶窒魔毯必須成功通過一次對抗施法者法術豁免DC的體質豁免，否則陷入{@condition 昏迷}狀態持續1分鐘。"
 					]
 				},
 				{
-					"name": "Damage Transfer",
+					"name": "傷害轉移", "tENG_name": "Damage Transfer",
 					"entries": [
-						"While it is grappling a creature, the rug takes only half the damage dealt to it, and the creature {@condition grappled} by the rug takes the other half."
+						"當悶窒魔毯擒抱一個生物時，它只會受到任何對它造成傷害的一半，且被魔毯擒抱的生物將受到另一半的傷害。"
 					]
 				},
 				{
-					"name": "False Appearance",
+					"name": "擬形", "tENG_name": "False Appearance",
 					"entries": [
-						"While the rug remains motionless, it is indistinguishable from a normal rug."
+						"當悶窒魔毯保持不動，它看起來就跟普通的地毯一模一樣。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Smother",
+					"name": "纏悶",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one Medium or smaller creature. {@h}The creature is {@condition grappled} (escape DC 13). Until this grapple ends, the target is {@condition restrained}, {@condition blinded}, and at risk of suffocating, and the rug can't smother another target. In addition, at the start of each of the target's turns, the target takes 10 ({@damage 2d6 + 3})鈍擊傷害。"
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一體型為中型或更小的生物。{@h}該生物將{@condition 被擒}(逃脫DC 13)。直到擒抱結束前，目標被{@condition 束縛}，{@condition 目盲}，並處於窒息的危險之下，且悶窒魔毯不能再纏悶另一個目標。此外，在目標的每個回合開始時，目標將受到10 ({@damage 2d6 + 3})鈍擊傷害。"
 					]
 				}
 			],
@@ -35148,7 +35148,7 @@
 			]
 		},
 		{
-			"name": "Scarecrow",
+			"name": "稻草人", "ENG_name": "Scarecrow",
 			"size": "M",
 			"type": "construct",
 			"source": "MM",
@@ -35179,7 +35179,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"vulnerable": [
@@ -35198,13 +35198,13 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 10,
-			"languages": "understands the languages of its creator but can't speak",
+			"languages": "理解它製造者所掌握的語言，但不會說",
 			"cr": "1",
 			"trait": [
 				{
-					"name": "False Appearance",
+					"name": "擬形", "tENG_name": "False Appearance",
 					"entries": [
-						"While the scarecrow remains motionless, it is indistinguishable from an ordinary, inanimate scarecrow."
+						"當稻草人保持不動，它看起來就跟普通的、無生命的稻草人一模一樣。"
 					]
 				}
 			],
@@ -35212,19 +35212,19 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The scarecrow makes two claw attacks."
+						"稻草人進行二次爪抓攻擊。"
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "爪抓",
 					"entries": [
-						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}6 ({@damage 2d4 + 1})劈砍傷害。 If the target is a creature, it must succeed on a DC 11 Wisdom saving throw or be {@condition frightened} until the end of the scarecrow's next turn."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}6 ({@damage 2d4 + 1})劈砍傷害。若目標為一個生物，則它必須成功通過一次DC 11的睿知豁免，否則陷入{@condition 恐懼}直到稻草人的下個回合結束。"
 					]
 				},
 				{
-					"name": "Terrifying Glare",
+					"name": "恐怖瞪視",
 					"entries": [
-						"The scarecrow targets one creature it can see within 30 feet of it. If the target can see the scarecrow, the target must succeed on a DC 11 Wisdom saving throw or be magically {@condition frightened} until the end of the scarecrow's next turn. The {@condition frightened} target is {@condition paralyzed}."
+						"稻草人選擇一個距離它30呎內且它所能看見的生物做為目標。若該目標可以看見稻草人，則目標必須成功通過一次DC 11的睿知豁免，否則將因魔法陷入{@condition 恐懼}直到稻草人的下個回合結束。則它也將陷入麻痺狀態長達相同的持續時間。被{@condition 恐懼}的目標也將陷入{@condition 麻痺}狀態。"
 					]
 				}
 			],
@@ -35583,7 +35583,7 @@
 			]
 		},
 		{
-			"name": "幽影", "ENG_name": "Shadow",
+			"name": "陰影", "ENG_name": "Shadow",
 			"size": "M",
 			"type": "undead",
 			"source": "MM",
@@ -35649,19 +35649,19 @@
 				{
 					"name": "無定形",
 					"entries": [
-						"幽影可以移動穿越最窄1吋的狹窄空間而不用擠縮身體。"
+						"陰影可以移動穿越最窄1吋的狹窄空間而不用擠縮身體。"
 					]
 				},
 				{
 					"name": "幽影隱匿",
 					"entries": [
-						"當處於微光光照或黑暗環境時，幽影能夠以一個附贈動作採取躲藏動作。它的隱匿加值同時被增加至+6。"
+						"當處於微光光照或黑暗環境時，陰影能夠以一個附贈動作採取躲藏動作。它的隱匿加值同時被增加至+6。"
 					]
 				},
 				{
 					"name": "日光弱點",
 					"entries": [
-						"當處於日光照耀下時，幽影在攻擊檢定、屬性檢定、和豁免檢定中具有劣勢。"
+						"當處於日光照耀下時，陰影在攻擊檢定、屬性檢定、和豁免檢定中具有劣勢。"
 					]
 				}
 			],
@@ -35670,7 +35670,7 @@
 					"name": "力量汲取",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一生物。{@h}9 ({@damage 2d6 + 2})死靈傷害，且目標的力量值被減少{@dice 1d4}點。若目標的力量值因此歸零，則目標死亡。反之，這個屬性值減損將持續直到目標完成一次短休或長休。",
-						"若一個非邪惡的類人生物因為此攻擊而死亡，一個新的幽影將在{@dice 1d4}小時後從該屍體升起。"
+						"若一個非邪惡的類人生物因為此攻擊而死亡，一個新的陰影將在{@dice 1d4}小時後從該屍體升起。"
 					]
 				}
 			],
@@ -36594,7 +36594,7 @@
 				"walk": 0,
 				"fly": {
 					"number": 30,
-					"condition": "(hover)"
+					"condition": "(浮空)"
 				},
 				"canHover": true
 			},
@@ -42824,7 +42824,7 @@
 				"walk": 0,
 				"fly": {
 					"number": 50,
-					"condition": "(hover)"
+					"condition": "(浮空)"
 				},
 				"canHover": true
 			},
@@ -43257,7 +43257,7 @@
 				"walk": 0,
 				"fly": {
 					"number": 60,
-					"condition": "(hover)"
+					"condition": "(浮空)"
 				},
 				"canHover": true
 			},
@@ -44746,7 +44746,7 @@
 				{
 					"name": "幽影吐息 {@recharge 5}",
 					"entries": [
-						"幽影龍吐出一道30呎錐形的幽影烈焰。每個在吐息範圍內的生物都必須進行一次DC 18的敏捷豁免，豁免失敗則受到56 ({@damage 16d6})死靈傷害，豁免成功則只受到一半的傷害。一個生命值被此傷害歸零的類人生物將會死亡，且一個不死{@creature 幽影}將從它的屍體升起，並緊接在幽影龍的先攻順序之後行動。這個陰影處於幽影龍的控制下。"
+						"幽影龍吐出一道30呎錐形的幽影烈焰。每個在吐息範圍內的生物都必須進行一次DC 18的敏捷豁免，豁免失敗則受到56 ({@damage 16d6})死靈傷害，豁免成功則只受到一半的傷害。一個生命值被此傷害歸零的類人生物將會死亡，且一個不死生物{@creature 陰影}將從它的屍體升起，並緊接在幽影龍的先攻順序之後行動。這個陰影處於幽影龍的控制下。"
 					]
 				}
 			],
