@@ -42058,7 +42058,7 @@
 				{
 					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
-						"熊人可以使用它的動作以變形成一個大型的半熊類人或一個大型熊，或變回它類人生物的的真實型態。除了它的體型和AC之外，它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。它會在死亡時回復它的真實型態。"
+						"熊人可以使用它的動作以變形成一個大型的半熊類人或一隻大型的熊，或變回它類人生物的的真實型態。除了它的體型和AC之外，它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。它會在死亡時回復它的真實型態。"
 					]
 				},
 				{
@@ -42185,9 +42185,9 @@
 			"cr": "4",
 			"trait": [
 				{
-					"name": "變形者",
+					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
-						"野豬人可以使用它的動作以變形成一個半野豬類人或一個大型熊，或變回它類人生物的的真實型態。除了它的AC之外，它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。它會在死亡時回復它的真實型態。"
+						"野豬人可以使用它的動作以變形成一個半野豬類人或一隻野豬，或變回它類人生物的的真實型態。除了它的AC之外，它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。它會在死亡時回復它的真實型態。"
 					]
 				},
 				{
@@ -42248,7 +42248,7 @@
 			]
 		},
 		{
-			"name": "Wererat",
+			"name": "(獸化)鼠人", "ENG_name": "Wererat",
 			"group": "Lycanthropes",
 			"size": "M",
 			"type": {
@@ -42290,48 +42290,48 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"preNote": "非銀製武器且非魔法攻擊所造成的"
 				}
 			],
-			"senses": "黑暗視覺60呎 (rat form only)",
+			"senses": "黑暗視覺60呎 (限定鼠型態)",
 			"passive": 12,
-			"languages": "Common (can't speak in rat form)",
+			"languages": "通用語 (不能在鼠型態下說話)",
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Shapechanger",
+					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
-						"The wererat can use its action to polymorph into a rat-humanoid hybrid or into a giant rat, or back into its true form, which is humanoid. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies."
+						"鼠人可以使用它的動作以變形成一個半鼠類人或一隻巨鼠，或變回它類人生物的真實型態。除了它的體型之外，它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。它會在死亡時回復它的真實型態。"
 					]
 				},
 				{
 					"name": "敏銳嗅覺",
 					"entries": [
-						"The wererat在依賴嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
+						"鼠人在依賴嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack (Humanoid or Hybrid Form Only)",
+					"name": "多重攻擊 (限定類人或半鼠人型態)",
 					"entries": [
-						"The wererat makes two attacks, only one of which can be a bite."
+						"鼠人進行二次攻擊，其中只有一次可以是啃咬攻擊。"
 					]
 				},
 				{
-					"name": "Bite (Rat or Hybrid Form Only)",
+					"name": "啃咬 (限定鼠或半鼠人型態)",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}4 ({@damage 1d4 + 2})穿刺傷害。 If the target is a humanoid, it must succeed on a DC 11 Constitution saving throw or be cursed with wererat lycanthropy."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}4 ({@damage 1d4 + 2})穿刺傷害。若目標為一個類人生物，則它必須成功通過一次DC 11的體質豁免，否則將被鼠人獸化症給詛咒。"
 					]
 				},
 				{
-					"name": "Shortsword (Humanoid or Hybrid Form Only)",
+					"name": "短劍 (限定類人或半鼠人型態)",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Hand Crossbow (Humanoid or Hybrid Form Only)",
+					"name": "手弩 (限定類人或半鼠人型態)",
 					"entries": [
 						"{@atk rw} 命中{@hit 4}，射程30/120呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害。"
 					]
@@ -42340,9 +42340,9 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Nonhuman Lycanthropes",
+					"name": "非人類獸化者",
 					"entries": [
-						"The statistics presented in this section assume a base creature of human. However, you can also use the statistics to represent nonhuman lycanthropes, adding verisimilitude by allowing a nonhuman lycanthrope to retain one or more of its humanoid racial traits. For example, an elf werewolf might have the Fey Ancestry trait."
+						"這個欄目中所提供的數據是以人類做為獸化症的基礎生物。然而，你也可以使用這個數據以呈現非人類獸化者，並藉由讓非人類獸化者保留一個或多個它的類人屬性特質以添加真實感。舉例來說，一名精靈狼人可能會保有「精類血統特性」。"
 					]
 				}
 			],
@@ -42365,7 +42365,7 @@
 			]
 		},
 		{
-			"name": "Weretiger",
+			"name": "(獸化)虎人", "ENG_name": "Weretiger",
 			"group": "Lycanthropes",
 			"size": "M",
 			"type": {
@@ -42389,7 +42389,7 @@
 			"speed": {
 				"walk": {
 					"number": 30,
-					"condition": " (40 ft. in tiger form)"
+					"condition": " (虎型態下則為40呎)"
 				}
 			},
 			"str": 17,
@@ -42409,60 +42409,60 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"preNote": "非銀製武器且非魔法攻擊所造成的"
 				}
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 15,
-			"languages": "Common (can't speak in tiger form)",
+			"languages": "通用語 (不能在虎型態下說話)",
 			"cr": "4",
 			"trait": [
 				{
-					"name": "Shapechanger",
+					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
-						"The weretiger can use its action to polymorph into a tiger-humanoid hybrid or into a tiger, or back into its true form, which is humanoid. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies."
+						"虎人可以使用它的動作以變形成一個半虎類人或一隻老虎，或變回它類人生物的的真實型態。除了它的體型之外，它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。它會在死亡時回復它的真實型態。"
 					]
 				},
 				{
 					"name": "敏銳聽覺和嗅覺",
 					"entries": [
-						"The weretiger在依賴聽覺和嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
+						"虎人在依賴聽覺和嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Pounce (Tiger or Hybrid Form Only)",
+					"name": "猛撲 (限定虎或半虎人型態)",
 					"entries": [
-						"If the weretiger moves at least 15 feet straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 14 Strength saving throw or be knocked {@condition prone}. If the target is {@condition prone}, the weretiger can make one bite attack against it as a bonus action."
+						"若虎人向著一個生物直線移動至少15呎並接著在同回合以一次爪抓攻擊命中它，則目標必須成功通過一次DC 14的力量豁免，否則被擊倒伏地{@condition 伏地}。若目標{@condition 伏地}，則老虎能夠以一次附贈動作對它進行一次啃咬攻擊。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack (Humanoid or Hybrid Form Only)",
+					"name": "多重攻擊 (限定類人或半虎人型態)",
 					"entries": [
-						"In humanoid form, the weretiger makes two scimitar attacks or two longbow attacks. In hybrid form, it can attack like a humanoid or make two claw attacks."
+						"在類人型態下，虎人進行二次彎刀攻擊或二次長弓攻擊。在半虎人型態下，它可以像類人型態一樣攻擊或進行二次爪抓攻擊。"
 					]
 				},
 				{
-					"name": "Bite (Tiger or Hybrid Form Only)",
+					"name": "啃咬 (限定虎或半虎人型態)",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}8 ({@damage 1d10 + 3})穿刺傷害。 If the target is a humanoid, it must succeed on a DC 13 Constitution saving throw or be cursed with weretiger lycanthropy."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}8 ({@damage 1d10 + 3})穿刺傷害。若目標為一個類人生物，則它必須成功通過一次DC 13的體質豁免，否則將被虎人獸化症給詛咒。"
 					]
 				},
 				{
-					"name": "Claw (Tiger or Hybrid Form Only)",
+					"name": "爪抓 (限定虎或半虎人型態)",
 					"entries": [
 						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Scimitar (Humanoid or Hybrid Form Only)",
+					"name": "彎刀 (限定類人或半虎人型態)",
 					"entries": [
 						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Longbow (Humanoid or Hybrid Form Only)",
+					"name": "長弓 (限定類人或半虎人型態)",
 					"entries": [
 						"{@atk rw} 命中{@hit 4}，射程150/600呎，單一目標。{@h}6 ({@damage 1d8 + 2})穿刺傷害。"
 					]
@@ -42471,9 +42471,9 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Nonhuman Lycanthropes",
+					"name": "非人類獸化者",
 					"entries": [
-						"The statistics presented in this section assume a base creature of human. However, you can also use the statistics to represent nonhuman lycanthropes, adding verisimilitude by allowing a nonhuman lycanthrope to retain one or more of its humanoid racial traits. For example, an elf werewolf might have the Fey Ancestry trait."
+						"這個欄目中所提供的數據是以人類做為獸化症的基礎生物。然而，你也可以使用這個數據以呈現非人類獸化者，並藉由讓非人類獸化者保留一個或多個它的類人屬性特質以添加真實感。舉例來說，一名精靈狼人可能會保有「精類血統特性」。"
 					]
 				}
 			],
@@ -42497,7 +42497,7 @@
 			]
 		},
 		{
-			"name": "Werewolf",
+			"name": "(獸化)狼人", "ENG_name": "Werewolf",
 			"group": "Lycanthropes",
 			"size": "M",
 			"type": {
@@ -42515,14 +42515,14 @@
 			"ac": [
 				{
 					"ac": 11,
-					"condition": "in humanoid form"
+					"condition": "(類人型態)"
 				},
 				{
 					"ac": 12,
 					"from": [
 						"天生護甲"
 					],
-					"condition": "in wolf or hybrid form"
+					"condition": "(狼或半狼人型態)"
 				}
 			],
 			"hp": {
@@ -42532,7 +42532,7 @@
 			"speed": {
 				"walk": {
 					"number": 30,
-					"condition": " (40 ft. in wolf form)"
+					"condition": " (狼型態下則為40呎)"
 				}
 			},
 			"str": 15,
@@ -42551,58 +42551,58 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"preNote": "非銀製武器且非魔法攻擊所造成的"
 				}
 			],
 			"passive": 14,
-			"languages": "Common (can't speak in wolf form)",
+			"languages": "通用語 (不能在狼型態下說話)",
 			"cr": "3",
 			"trait": [
 				{
-					"name": "Shapechanger",
+					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
-						"The werewolf can use its action to polymorph into a wolf-humanoid hybrid or into a wolf, or back into its true form, which is humanoid. Its statistics, other than its AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies."
+						"狼人可以使用它的動作以變形成一個半狼類人或一隻狼，或變回它類人生物的的真實型態。除了它的AC之外，它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。它會在死亡時回復它的真實型態。"
 					]
 				},
 				{
 					"name": "敏銳聽覺和嗅覺",
 					"entries": [
-						"The werewolf在依賴聽覺和嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
+						"狼人在依賴聽覺和嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack (Humanoid or Hybrid Form Only)",
+					"name": "多重攻擊 (限定類人或半狼人型態)",
 					"entries": [
-						"The werewolf makes two attacks: two with its spear (humanoid form) or one with its bite and one with its claws (hybrid form)."
+						"狼人進行二次攻擊：二次矛攻擊（類人型態）、或一次啃咬，一次爪抓（半狼人型態）。"
 					]
 				},
 				{
-					"name": "Bite (Wolf or Hybrid Form Only)",
+					"name": "啃咬 (限定狼或半狼人型態)",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}6 ({@damage 1d8 + 2})穿刺傷害。 If the target is a humanoid, it must succeed on a DC 12 Constitution saving throw or be cursed with werewolf lycanthropy."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}6 ({@damage 1d8 + 2})穿刺傷害。若目標為一個類人生物，則它必須成功通過一次DC 12的體質豁免，否則將被狼人獸化症給詛咒。"
 					]
 				},
 				{
-					"name": "Claws (Hybrid Form Only)",
+					"name": "爪抓 (限定半狼人型態)",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一生物。{@h}7 ({@damage 2d4 + 2})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Spear (Humanoid Form Only)",
+					"name": "矛 (限定類人型態)",
 					"entries": [
-						"{@atk mw,rw} {@hit 4} to hit, reach 5 ft. or range 20/60 ft., one creature. {@h}5 ({@damage 1d6 + 2}) piercing damage, or 6 ({@damage 1d8 + 2}) piercing damage if used with two hands to make a melee attack."
+						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或 射程20/60呎，單一生物。{@h}5 ({@damage 1d6 + 2})穿刺傷害，或若雙手使用以進行一次近戰攻擊時則造成 6 ({@damage 1d8 + 2})穿刺傷害。"
 					]
 				}
 			],
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Nonhuman Lycanthropes",
+					"name": "非人類獸化者",
 					"entries": [
-						"The statistics presented in this section assume a base creature of human. However, you can also use the statistics to represent nonhuman lycanthropes, adding verisimilitude by allowing a nonhuman lycanthrope to retain one or more of its humanoid racial traits. For example, an elf werewolf might have the Fey Ancestry trait."
+						"這個欄目中所提供的數據是以人類做為獸化症的基礎生物。然而，你也可以使用這個數據以呈現非人類獸化者，並藉由讓非人類獸化者保留一個或多個它的類人屬性特質以添加真實感。舉例來說，一名精靈狼人可能會保有「精類血統特性」。"
 					]
 				}
 			],
