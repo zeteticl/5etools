@@ -5426,31 +5426,31 @@
 			],
 			"senses": "真實視覺120呎",
 			"passive": 13,
-			"languages": "Abyssal, telepathy 120 ft.",
+			"languages": "深淵語、心靈感應120呎",
 			"cr": "19",
 			"trait": [
 				{
-					"name": "Death Throes",
+					"name": "焚身爆", "tENG_name": "Death Throes",
 					"entries": [
-						"When the balor dies, it explodes, and each creature within 30 feet of it must make a DC 20 Dexterity saving throw, taking 70 ({@damage 20d6}) fire damage on a failed save, or half as much damage on a successful one. The explosion ignites flammable objects in that area that aren't being worn or carried, and it destroys the balor's weapons."
+						"當巴洛炎魔死亡時，它將會爆炸，且每個距離它30呎內的生物都必須進行一次DC 20的敏捷豁免，豁免失敗則受到70 ({@damage 20d6})火焰傷害，豁免成功則只受到一半的傷害。這個爆炸會點燃範圍內所有未被穿戴或攜帶的可燃物體，並摧毀巴洛炎魔的武器。"
 					]
 				},
 				{
-					"name": "Fire Aura",
+					"name": "火焰靈光", "tENG_name": "Fire Aura",
 					"entries": [
-						"At the start of each of the balor's turns, each creature within 5 feet of it takes 10 ({@damage 3d6}) fire damage, and flammable objects in the aura that aren't being worn or carried ignite. A creature that touches the balor or hits it with a melee attack while within 5 feet of it takes 10 ({@damage 3d6}) fire damage."
+						"在巴洛炎魔的每個回合開始時，每個距離它5呎內的生物都將受到10 ({@damage 3d6})火焰傷害，且flammable objects in the aura that aren't being worn or carried ignite. A creature that touches the balor or hits it with a melee attack while within 5 feet of it takes 10 ({@damage 3d6}) fire damage."
 					]
 				},
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The balor 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"巴洛炎魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Magic Weapons",
+					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The balor's weapon attacks are magical."
+						"巴洛炎魔的武器攻擊視作魔法攻擊。"
 					]
 				}
 			],
@@ -5458,25 +5458,25 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The balor makes two attacks: one with its longsword and one with its whip."
+						"巴洛炎魔進行二次攻擊：一次長劍，一次鞭。"
 					]
 				},
 				{
 					"name": "長劍",
 					"entries": [
-						"{@atk mw} 命中{@hit 14}，觸及10呎，單一目標。{@h}21 ({@damage 3d8 + 8}) slashing damage plus 13 ({@damage 3d8}) lightning damage. If the balor scores a critical hit, it rolls damage dice three times, instead of twice."
+						"{@atk mw} 命中{@hit 14}，觸及10呎，單一目標。{@h}21 ({@damage 3d8 + 8})劈砍傷害加 13 ({@damage 3d8})閃電傷害。若巴洛炎魔造成重擊，則它將骰三次傷害骰，而非原本的二次。"
 					]
 				},
 				{
-					"name": "Whip",
+					"name": "鞭",
 					"entries": [
-						"{@atk mw} 命中{@hit 14}，觸及30呎，單一目標。{@h}15 ({@damage 2d6 + 8}) slashing damage plus 10 ({@damage 3d6}) fire damage, and the target must succeed on a DC 20 Strength saving throw or be pulled up to 25 feet toward the balor."
+						"{@atk mw} 命中{@hit 14}，觸及30呎，單一目標。{@h}15 ({@damage 2d6 + 8})劈砍傷害加 10 ({@damage 3d6})火焰傷害，且目標必須成功通過一次DC 20的力量豁免，否則被拉向巴洛炎魔最多25呎距離。"
 					]
 				},
 				{
-					"name": "Teleport",
+					"name": "傳送",
 					"entries": [
-						"The balor magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see."
+						"巴洛炎魔用魔法將自己連同任何它所穿戴或攜帶的裝備一起傳送最多120呎距離到一處它所能看見的未被佔據空間。"
 					]
 				}
 			],
@@ -5487,8 +5487,8 @@
 					"name": "召喚惡魔 (1/日)",
 					"entries": [
 						"該惡魔選擇要召喚什麼，並嘗試進行一次魔法召喚。",
-						"A balor has a {@chance 50|50 percent|50% summoning chance} chance of summoning {@dice 1d8} {@creature vrock|mm|vrocks}, {@dice 1d6} {@creature hezrou|mm|hezrous}, {@dice 1d4} {@creature glabrezu|mm|glabrezus}, {@dice 1d3} {@creature nalfeshnee|mm|nalfeshnees}, {@dice 1d2} {@creature marilith|mm|mariliths}, or one {@creature goristro}.",
-						"A summoned demon appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. It remains for 1 minute, until it or its summoner dies, or until its summoner dismisses it as an action."
+						"一個巴洛炎魔有{@chance 50|50％|50％召喚機率}機率召喚出、{@dice 1d8}個{@creature 弗洛魔|mm}、{@dice 1d6}個{@creature 狂戰魔|mm}、{@dice 1d4}個{@creature 迷誘魔|mm}、{@dice 1d3}個{@creature 判魂魔|mm}、{@dice 1d2}個{@creature 六臂蛇魔|mm}、或一個{@creature 巨牛魔}。",
+						"被召喚的惡魔將出現距離它召喚者60呎內的一處未被佔據空間，做為召喚者的盟友行動，且不能再召喚其它惡魔。它會持續存在長達1分鐘，直到它或它的召喚者死亡、或直到召喚者以一個動作解消它。"
 					]
 				}
 			],
@@ -27342,7 +27342,7 @@
 			]
 		},
 		{
-			"name": "Marilith",
+			"name": "六臂蛇魔", "ENG_name": "Marilith",
 			"size": "L",
 			"type": {
 				"type": "fiend",
@@ -27403,25 +27403,25 @@
 			],
 			"senses": "真實視覺120呎",
 			"passive": 13,
-			"languages": "Abyssal, telepathy 120 ft.",
+			"languages": "深淵語、心靈感應120呎",
 			"cr": "16",
 			"trait": [
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The marilith 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"六臂蛇魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Magic Weapons",
+					"name": "魔法武器",
 					"entries": [
-						"The marilith's weapon attacks are magical."
+						"六臂蛇魔的武器攻擊視作魔法攻擊。"
 					]
 				},
 				{
-					"name": "Reactive",
+					"name": "靈敏反應", "tENG_name": "Reactive",
 					"entries": [
-						"The marilith can take one reaction on every turn in combat."
+						"六臂蛇魔在戰鬥中的每個回合都可以採取一個反應。"
 					]
 				}
 			],
@@ -27429,7 +27429,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The marilith can make seven attacks: six with its longswords and one with its tail."
+						"六臂蛇魔可以進行七次攻擊：六次長劍，一次尾擊。"
 					]
 				},
 				{
@@ -27439,23 +27439,23 @@
 					]
 				},
 				{
-					"name": "Tail",
+					"name": "尾擊",
 					"entries": [
-						"{@atk mw} 命中{@hit 9}，觸及10呎，單一生物。{@h}15 ({@damage 2d10 + 4})鈍擊傷害。 If the target is Medium or smaller, it is {@condition grappled} (escape DC 19). Until this grapple ends, the target is {@condition restrained}, the marilith can automatically hit the target with its tail, and the marilith can't make tail attacks against other targets."
+						"{@atk mw} 命中{@hit 9}，觸及10呎，單一生物。{@h}15 ({@damage 2d10 + 4})鈍擊傷害。若目標的體型為中型或更小，則它將{@condition 被擒}(逃脫DC 19)。直到擒抱結束前，該目標被{@condition 束縛}，六臂蛇魔可以使用它的尾擊自動命中目標，且六臂蛇魔不能對其它目標使用尾擊攻擊。"
 					]
 				},
 				{
-					"name": "Teleport",
+					"name": "傳送",
 					"entries": [
-						"The marilith magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see."
+						"六臂蛇魔用魔法將自己連同任何它所穿戴或攜帶的裝備一起傳送最多120呎距離到一處它所能看見的未被佔據空間。"
 					]
 				}
 			],
 			"reaction": [
 				{
-					"name": "Parry",
+					"name": "格擋",
 					"entries": [
-						"The marilith adds 5 to its AC against one melee attack that would hit it. To do so, the marilith must see the attacker and be wielding a melee weapon."
+						"六臂蛇魔在一次近戰攻擊將要命中它時可以針對該次攻擊使它的AC增加5點。若要這麼做，六臂蛇魔必須要能看見攻擊者且正持用一把近戰武器。"
 					]
 				}
 			],
@@ -27466,8 +27466,8 @@
 					"name": "召喚惡魔 (1/日)",
 					"entries": [
 						"該惡魔選擇要召喚什麼，並嘗試進行一次魔法召喚。",
-						"A marilith has a {@chance 50|50 percent|50% summoning chance} chance of summoning {@dice 1d6} {@creature vrock}s, {@dice 1d4} {@creature hezrou}s, {@dice 1d3} {@creature glabrezu}s, {@dice 1d2} {@creature nalfeshnee}s, or one marilith.",
-						"A summoned demon appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. It remains for 1 minute, until it or its summoner dies, or until its summoner dismisses it as an action."
+						"一個六臂蛇魔有{@chance 50|50％|50％召喚機率}機率召喚出{@dice 1d6}個{@creature 弗洛魔}、{@dice 1d4}個{@creature 狂戰魔}、{@dice 1d3}個{@creature 迷誘魔}、{@dice 1d2}個{@creature 判魂魔}、或一個六臂蛇魔。",
+						"被召喚的惡魔將出現距離它召喚者60呎內的一處未被佔據空間，做為召喚者的盟友行動，且不能再召喚其它惡魔。它會持續存在長達1分鐘，直到它或它的召喚者死亡、或直到召喚者以一個動作解消它。"
 					]
 				}
 			],
