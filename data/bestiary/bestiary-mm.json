@@ -374,7 +374,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				},
 				"necrotic",
 				"poison",
@@ -4069,7 +4069,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"conditionImmune": [
@@ -4555,7 +4555,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -5414,7 +5414,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -5486,7 +5486,7 @@
 					"type": "variant",
 					"name": "召喚惡魔 (1/日)",
 					"entries": [
-						"The demon chooses what to summon and attempts a magical summoning.",
+						"該惡魔選擇要召喚什麼，並嘗試進行一次魔法召喚。",
 						"A balor has a {@chance 50|50 percent|50% summoning chance} chance of summoning {@dice 1d8} {@creature vrock|mm|vrocks}, {@dice 1d6} {@creature hezrou|mm|hezrous}, {@dice 1d4} {@creature glabrezu|mm|glabrezus}, {@dice 1d3} {@creature nalfeshnee|mm|nalfeshnees}, {@dice 1d2} {@creature marilith|mm|mariliths}, or one {@creature goristro}.",
 						"A summoned demon appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. It remains for 1 minute, until it or its summoner dies, or until its summoner dismisses it as an action."
 					]
@@ -5705,7 +5705,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -8326,7 +8326,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"senses": "黑暗視覺60呎",
@@ -8879,7 +8879,7 @@
 			]
 		},
 		{
-			"name": "Chasme",
+			"name": "喀嘶魔", "ENG_name": "Chasme",
 			"size": "L",
 			"type": {
 				"type": "fiend",
@@ -8934,33 +8934,33 @@
 			],
 			"senses": "盲視10呎, 黑暗視覺120呎",
 			"passive": 15,
-			"languages": "Abyssal, telepathy 120 ft.",
+			"languages": "深淵語、心靈感應120呎",
 			"cr": "6",
 			"trait": [
 				{
-					"name": "Drone",
+					"name": "蜂鳴噪音", "tENG_name": "Drone",
 					"entries": [
-						"The chasme produces a horrid droning sound to which demons are immune. Any other creature that starts its turn with in 30 feet of the chasme must succeed on a DC 12 Constitution saving throw or fall {@condition unconscious} for 10 minutes. A creature that can't hear the drone automatically succeeds on the save. The effect on the creature ends if it takes damage or if another creature takes an action to splash it with holy water. If a creature's saving throw is successful or the effect ends for it, it is immune to the drone for the next 24 hours."
+						"喀嘶魔製造出被惡魔免疫的可怕蜂鳴噪音。任何其他在距離喀嘶魔30呎內開始它回合的生物必須成功通過一次DC 12的體質豁免，否則陷入{@condition 昏迷}長達10分鐘。一個無法聽見蜂鳴聲的生物將自動通過這個豁免。若該生物受到傷害、獲若另一個生物使用一個動作以將{@item 聖水(扁瓶裝)|phb|聖水}灑在該生物身上，則這個效果對它的影響結束。若一個生物成功通過此豁免檢定或終止了這個效果對它的影響，則它將在接下來24小時內免疫於這個蜂鳴噪音。"
 					]
 				},
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The chasme 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"喀嘶魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
 					"name": "蛛行",
 					"entries": [
-						"chasme可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
+						"喀嘶魔可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Proboscis",
+					"name": "刺喙", "tENG_name": "Proboscis",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}16 ({@damage 4d6 + 2}) piercing damage plus 24 ({@damage 7d6}) necrotic damage, and the target's hit point maximum is reduced by an amount equal to the necrotic damage taken. If this effect reduces a creature's hit point maximum to 0, the creature dies. This reduction to a creature's hit point maximum lasts until the creature finishes a long rest or until it is affected by a spell like  {@spell greater restoration}."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}16 ({@damage 4d6 + 2})穿刺傷害加 24 ({@damage 7d6})死靈傷害，且目標的生命值最大值將減少等同於所受死靈傷害的數值。若這個效果將一個生物的生命值最大值歸零，則該生物死亡。這個生命值最大值的減損持續直到該生物完成一次長休，或被像是{@spell 高等復原術}的法術給移除。"
 					]
 				}
 			],
@@ -8970,9 +8970,9 @@
 					"type": "variant",
 					"name": "召喚惡魔 (1/日)",
 					"entries": [
-						"The demon chooses what to summon and attempts a magical summoning.",
-						"A chasme has a {@chance 30|30 percent|30% summoning chance} chance of summoning one chasme.",
-						"A summoned demon appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. It remains for 1 minute, until it or its summoner dies, or until its summoner dismisses it as an action."
+						"該惡魔選擇要召喚什麼，並嘗試進行一次魔法召喚。",
+						"一個喀嘶魔有{@chance 30|30％|30％召喚機率}機率召喚出另一個喀嘶魔。",
+						"被召喚的惡魔將出現距離它召喚者60呎內的一處未被佔據空間，做為召喚者的盟友行動，且不能再召喚其它惡魔。它會持續存在長達1分鐘，直到它或它的召喚者死亡、或直到召喚者以一個動作解消它。"
 					]
 				}
 			],
@@ -9855,7 +9855,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"senses": "真實視覺120呎",
@@ -11343,7 +11343,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"conditionImmune": [
@@ -11491,7 +11491,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"conditionImmune": [
@@ -13956,7 +13956,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"senses": "真實視覺120呎",
@@ -15497,7 +15497,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"vulnerable": [
@@ -16324,7 +16324,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -16763,7 +16763,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -19319,7 +19319,7 @@
 			]
 		},
 		{
-			"name": "Glabrezu",
+			"name": "迷誘魔", "ENG_name": "Glabrezu",
 			"size": "L",
 			"type": {
 				"type": "fiend",
@@ -19369,7 +19369,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -19380,13 +19380,13 @@
 			],
 			"senses": "真實視覺120呎",
 			"passive": 13,
-			"languages": "Abyssal, telepathy 120 ft.",
+			"languages": "深淵語、心靈感應120呎",
 			"cr": "9",
 			"trait": [
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The glabrezu 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"迷誘魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
@@ -19394,17 +19394,17 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The glabrezu makes four attacks: two with its pincers and two with its fists. Alternatively, it makes two attacks with its pincers and casts one spell."
+						"迷誘魔進行四次攻擊：二次鉗擊和二次拳擊。或者，它可以進行二次鉗擊並施放一個法術。"
 					]
 				},
 				{
-					"name": "Pincer",
+					"name": "鉗擊",
 					"entries": [
-						"{@atk mw} 命中{@hit 9}，觸及10呎，單一目標。{@h}16 ({@damage 2d10 + 5})鈍擊傷害。 If the target is a Medium or smaller creature, it is {@condition grappled} (escape DC 15). The glabrezu has two pincers, each of which can grapple only one target."
+						"{@atk mw} 命中{@hit 9}，觸及10呎，單一目標。{@h}16 ({@damage 2d10 + 5})鈍擊傷害。若目標為一個體型為中型或更小的生物，則它將{@condition 被擒}(逃脫DC 15)。迷誘魔擁有兩隻鉗爪，各自只能擒抱一個目標。"
 					]
 				},
 				{
-					"name": "Fist",
+					"name": "拳擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}7 ({@damage 2d4 + 2})鈍擊傷害。"
 					]
@@ -19415,7 +19415,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The glabrezu's spellcasting ability is Intelligence (spell save DC 16). The glabrezu can innately cast the following spells, requiring no material components:"
+						"迷誘魔的天生施法屬性為智力（法術豁免DC 16）。它天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 黑暗術}",
@@ -19437,9 +19437,9 @@
 					"type": "variant",
 					"name": "召喚惡魔 (1/日)",
 					"entries": [
-						"The demon chooses what to summon and attempts a magical summoning.",
-						"A glabrezu has a {@chance 30|30 percent|30% summoning chance} chance of summoning {@dice 1d3} {@creature vrock}s, {@dice 1d2} {@creature hezrou}s, or one glabrezu.",
-						"A summoned demon appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. It remains for 1 minute, until it or its summoner dies, or until its summoner dismisses it as an action."
+						"該惡魔選擇要召喚什麼，並嘗試進行一次魔法召喚。",
+						"一個迷誘魔有{@chance 30|30％|30％召喚機率}機率召喚出{@dice 1d3}個{@creature 弗洛魔}、{@dice 1d2}個{@creature 狂戰魔}、或一個迷誘魔。",
+						"被召喚的惡魔將出現距離它召喚者60呎內的一處未被佔據空間，做為召喚者的盟友行動，且不能再召喚其它惡魔。它會持續存在長達1分鐘，直到它或它的召喚者死亡、或直到召喚者以一個動作解消它。"
 					]
 				}
 			],
@@ -21289,7 +21289,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"senses": "黑暗視覺60呎",
@@ -21374,7 +21374,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"senses": "黑暗視覺60呎",
@@ -21841,7 +21841,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -22460,7 +22460,7 @@
 			]
 		},
 		{
-			"name": "Hezrou",
+			"name": "狂戰魔", "ENG_name": "Hezrou",
 			"size": "L",
 			"type": {
 				"type": "fiend",
@@ -22509,7 +22509,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -22520,19 +22520,19 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 11,
-			"languages": "Abyssal, telepathy 120 ft.",
+			"languages": "深淵語、心靈感應120呎",
 			"cr": "8",
 			"trait": [
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The hezrou 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"狂戰魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
 					"name": "惡臭",
 					"entries": [
-						"Any creature that starts its turn within 10 feet of the hezrou must succeed on a DC 14 Constitution saving throw or be {@condition poisoned} until the start of its next turn. On a successful saving throw, the creature is immune to the hezrou's stench for 24 hours."
+						"任何在距離狂戰魔10呎內開始它回合的生物都必須成功通過一次DC 14的體質豁免，否則陷入{@condition 中毒}狀態直到它的下個回合開始。若此豁免成功，該生物將免疫於該狂戰魔的惡臭長達24小時。"
 					]
 				}
 			],
@@ -22540,7 +22540,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The hezrou makes three attacks: one with its bite and two with its claws."
+						"狂戰魔進行三次攻擊：一次啃咬，二次爪抓。"
 					]
 				},
 				{
@@ -22562,9 +22562,9 @@
 					"type": "variant",
 					"name": "召喚惡魔 (1/日)",
 					"entries": [
-						"The demon chooses what to summon and attempts a magical summoning.",
-						"A hezrou has a {@chance 30|30 percent|30% summoning chance} chance of summoning {@dice 2d6} {@creature dretch}es or one hezrou.",
-						"A summoned demon appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. It remains for 1 minute, until it or its summoner dies, or until its summoner dismisses it as an action."
+						"該惡魔選擇要召喚什麼，並嘗試進行一次魔法召喚。",
+						"一個狂戰魔有{@chance 30|30％|30％召喚機率}機率召喚出{@dice 2d6}個{@creature 怯魔}或一個狂戰魔。",
+						"被召喚的惡魔將出現距離它召喚者60呎內的一處未被佔據空間，做為召喚者的盟友行動，且不能再召喚其它惡魔。它會持續存在長達1分鐘，直到它或它的召喚者死亡、或直到召喚者以一個動作解消它。"
 					]
 				}
 			],
@@ -24076,7 +24076,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"senses": "黑暗視覺60呎",
@@ -24178,7 +24178,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"conditionImmune": [
@@ -24280,7 +24280,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -25019,7 +25019,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"conditionImmune": [
@@ -25905,7 +25905,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"conditionImmune": [
@@ -26935,7 +26935,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -27392,7 +27392,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -27465,7 +27465,7 @@
 					"type": "variant",
 					"name": "召喚惡魔 (1/日)",
 					"entries": [
-						"The demon chooses what to summon and attempts a magical summoning.",
+						"該惡魔選擇要召喚什麼，並嘗試進行一次魔法召喚。",
 						"A marilith has a {@chance 50|50 percent|50% summoning chance} chance of summoning {@dice 1d6} {@creature vrock}s, {@dice 1d4} {@creature hezrou}s, {@dice 1d3} {@creature glabrezu}s, {@dice 1d2} {@creature nalfeshnee}s, or one marilith.",
 						"A summoned demon appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. It remains for 1 minute, until it or its summoner dies, or until its summoner dismisses it as an action."
 					]
@@ -27839,7 +27839,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -28894,7 +28894,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"conditionImmune": [
@@ -29367,7 +29367,7 @@
 			]
 		},
 		{
-			"name": "Nalfeshnee",
+			"name": "判魂魔", "ENG_name": "Nalfeshnee",
 			"size": "L",
 			"type": {
 				"type": "fiend",
@@ -29418,7 +29418,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -29429,13 +29429,13 @@
 			],
 			"senses": "真實視覺120呎",
 			"passive": 11,
-			"languages": "Abyssal, telepathy 120 ft.",
+			"languages": "深淵語、心靈感應120呎",
 			"cr": "13",
 			"trait": [
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The nalfeshnee 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"判魂魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
@@ -29443,7 +29443,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The nalfeshnee uses Horror Nimbus if it can. It then makes three attacks: one with its bite and two with its claws."
+						"若可以的話，判魂魔會使用它的恐懼光環。它接著會進行三次攻擊：一次啃咬，二次爪抓。"
 					]
 				},
 				{
@@ -29453,21 +29453,21 @@
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "爪抓",
 					"entries": [
 						"{@atk mw} 命中{@hit 10}，觸及10呎，單一目標。{@h}15 ({@damage 3d6 + 5})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Horror Nimbus {@recharge 5}",
+					"name": "恐懼光環 {@recharge 5}",
 					"entries": [
-						"The nalfeshnee magically emits scintillating, multicolored light. Each creature within 15 feet of the nalfeshnee that can see the light must succeed on a DC 15 Wisdom saving throw or be {@condition frightened} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the nalfeshnee's Horror Nimbus for the next 24 hours."
+						"判魂魔以魔法散發出一道閃耀的多彩光芒。每個距離判魂魔15呎內且可以看見這到光芒的生物都必須成功通過一次DC 15的睿知豁免，否則陷入{@condition 恐懼}長達1分鐘。一個生物可以在它的每個回合結束時重複進行這個豁免檢定，若豁免成功則結束這個效果對它的影響。若一個生物在此豁免檢定成功，或終止了這個效果對它的影響，則該生物將在接下來24小時內免疫於該判魂魔的恐懼光環。"
 					]
 				},
 				{
-					"name": "Teleport",
+					"name": "傳送",
 					"entries": [
-						"The nalfeshnee magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see."
+						"判魂魔用魔法將自己連同任何它所穿戴或攜帶的裝備一起傳送最多120呎距離到一處它所能看見的未被佔據空間。"
 					]
 				}
 			],
@@ -29477,9 +29477,9 @@
 					"type": "variant",
 					"name": "召喚惡魔 (1/日)",
 					"entries": [
-						"The demon chooses what to summon and attempts a magical summoning.",
-						"A nalfeshnee has a {@chance 50|50 percent|50% summoning chance} chance of summoning {@dice 1d4} {@creature vrock}s, {@dice 1d3} {@creature hezrou}s, {@dice 1d2} {@creature glabrezu}s, or one nalfeshnee.",
-						"A summoned demon appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. It remains for 1 minute, until it or its summoner dies, or until its summoner dismisses it as an action."
+						"該惡魔選擇要召喚什麼，並嘗試進行一次魔法召喚。",
+						"一個判魂魔有{@chance 50|50％|50％召喚機率}機率召喚出{@dice 1d4}個{@creature 弗洛魔}、{@dice 1d3}個{@creature 狂戰魔}、{@dice 1d2}個{@creature 迷誘魔}、或一個判魂魔。",
+						"被召喚的惡魔將出現距離它召喚者60呎內的一處未被佔據空間，做為召喚者的盟友行動，且不能再召喚其它惡魔。它會持續存在長達1分鐘，直到它或它的召喚者死亡、或直到召喚者以一個動作解消它。"
 					]
 				}
 			],
@@ -30058,7 +30058,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -32029,7 +32029,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"conditionImmune": [
@@ -32358,7 +32358,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -33426,7 +33426,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"senses": "黑暗視覺60呎",
@@ -34967,7 +34967,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"vulnerable": [
@@ -36436,7 +36436,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -37848,7 +37848,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"senses": "黑暗視覺60呎",
@@ -38790,7 +38790,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"conditionImmune": [
@@ -40081,7 +40081,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -40506,7 +40506,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"senses": "黑暗視覺120呎",
@@ -40676,7 +40676,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"senses": "黑暗視覺60呎",
@@ -40796,7 +40796,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"senses": "黑暗視覺120呎",
@@ -41030,7 +41030,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"senses": "黑暗視覺120呎",
@@ -41394,7 +41394,7 @@
 			]
 		},
 		{
-			"name": "Vrock",
+			"name": "弗洛魔", "ENG_name": "Vrock",
 			"size": "L",
 			"type": {
 				"type": "fiend",
@@ -41444,7 +41444,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -41455,13 +41455,13 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 11,
-			"languages": "Abyssal, telepathy 120 ft.",
+			"languages": "深淵語、心靈感應120呎",
 			"cr": "6",
 			"trait": [
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The vrock 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"弗洛魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
@@ -41469,31 +41469,31 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The vrock makes two attacks: one with its beak and one with its talons."
+						"弗洛魔進行二次攻擊：一次喙啄，一次禽爪。"
 					]
 				},
 				{
-					"name": "Beak",
+					"name": "喙啄",
 					"entries": [
 						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}10 ({@damage 2d6 + 3})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Talons",
+					"name": "禽爪",
 					"entries": [
 						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}14 ({@damage 2d10 + 3})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Spores {@recharge}",
+					"name": "孢子 {@recharge}",
 					"entries": [
-						"A 15-foot-radius cloud of toxic spores extends out from the vrock. The spores spread around corners. Each creature in that area must succeed on a DC 14 Constitution saving throw or become {@condition poisoned}. While {@condition poisoned} in this way, a target takes 5 ({@damage 1d10}) poison damage at the start of each of its turns. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. Emptying a vial of holy water on the target also ends the effect on it."
+						"一團15呎半徑的劇毒孢子雲從弗洛魔身上擴散。這團孢子雲會繞過轉角。每個在範圍內的生物都必須成功通過一次DC 14的體質豁免，否則陷入{@condition 中毒}狀態。當因此而{@condition 中毒}時，目標將在它的每個回合開始時受到5 ({@damage 1d10})毒素傷害。目標可以在它的每個回合結束時重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。將整瓶的{@item 聖水(扁瓶裝)|phb|聖水}潑在目標上也能結束這個效果對它的影響。"
 					]
 				},
 				{
-					"name": "Stunning Screech (1/Day)",
+					"name": "震懾尖嘯 (1/Day)",
 					"entries": [
-						"The vrock emits a horrific screech. Each creature within 20 feet of it that can hear it and that isn't a demon must succeed on a DC 14 Constitution saving throw or be {@condition stunned} until the end of the vrock's next turn."
+						"弗洛魔發出一陣恐怖的尖嘯。每個距離它20呎內，可以聽見它，且不是惡魔的生物必須成功通過一次DC 14的體質豁免，否則被{@condition 震懾}直到弗洛魔的下個回合結束。"
 					]
 				}
 			],
@@ -41503,9 +41503,9 @@
 					"type": "variant",
 					"name": "召喚惡魔 (1/日)",
 					"entries": [
-						"The demon chooses what to summon and attempts a magical summoning.",
-						"A vrock has a {@chance 30|30 percent|30% summoning chance} chance of summoning {@dice 2d4} {@creature dretch}es or one vrock.",
-						"A summoned demon appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. It remains for 1 minute, until it or its summoner dies, or until its summoner dismisses it as an action."
+						"該惡魔選擇要召喚什麼，並嘗試進行一次魔法召喚。",
+						"一個弗洛魔有{@chance 30|30％|30％召喚機率}機率召喚出{@dice 2d4}個{@creature 怯魔}或一個弗洛魔。",
+						"被召喚的惡魔將出現距離它召喚者60呎內的一處未被佔據空間，做為召喚者的盟友行動，且不能再召喚其它惡魔。它會持續存在長達1分鐘，直到它或它的召喚者死亡、或直到召喚者以一個動作解消它。"
 					]
 				}
 			],
@@ -41886,7 +41886,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -42846,7 +42846,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
