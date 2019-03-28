@@ -24528,7 +24528,7 @@
 			]
 		},
 		{
-			"name": "Jackalwere",
+			"name": "化豺", "ENG_name": "Jackalwere",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -24569,49 +24569,49 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"preNote": "非銀製武器且非魔法攻擊所造成的"
 				}
 			],
 			"passive": 12,
-			"languages": "Common (can't speak in jackal form)",
+			"languages": "通用語 (不能在豺狼型態下說話)",
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Shapechanger",
+					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
-						"The jackalwere can use its action to polymorph into a specific Medium human or a jackal-humanoid hybrid, or back into its true form (that of a Small jackal). Other than its size, its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies."
+						"化豺可以使用它的動作以變形成一個體型為中型的特定人類或一個半豺狼類人，或變回它的真實型態（一隻小型的豺狼）。除了它的體型之外，它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。它會在死亡時回復它的真實型態。"
 					]
 				},
 				{
 					"name": "敏銳聽覺和嗅覺",
 					"entries": [
-						"The jackalwere 在依賴聽覺和嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
+						"化豺在依賴聽覺和嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				},
 				{
 					"name": "群體戰術",
 					"entries": [
-						"若jackalwere有至少一個隊友距離目標生物5呎內且該隊友並未{@condition 無力}，則jackalwere在對該生物進行的攻擊檢定中具有優勢。"
+						"若化豺有至少一個隊友距離目標生物5呎內且該隊友並未{@condition 無力}，則化豺在對該生物進行的攻擊檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bite (Jackal or Hybrid Form Only)",
+					"name": "啃咬 (限定豺狼或半豺狼人型態)",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}4 ({@damage 1d4 + 2})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Scimitar (Human or Hybrid Form Only)",
+					"name": "彎刀 (限定人類或半豺狼人型態)",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Sleep Gaze",
+					"name": "催眠凝視", "tENG_name": "Sleep Gaze",
 					"entries": [
-						"The jackalwere gazes at one creature it can see within 30 feet of it. The target must make a DC 10 Wisdom saving throw. On a failed save, the target succumbs to a magical slumber, falling {@condition unconscious} for 10 minutes or until someone uses an action to shake the target awake. A creature that successfully saves against the effect is immune to this jackalwere's gaze for the next 24 hours. Undead and creatures immune to being {@condition charmed} aren't affected by it."
+						"化豺凝視一個距離它30呎內且它所能看見的生物。目標必須進行一次DC 10的睿知豁免。若豁免失敗，目標將屈服於魔法睡眠中，並陷入{@condition 昏迷}狀態長達10分鐘，或直到有人使用它的動作把目標搖醒。一個成功通過此豁免檢定的生物將在接下來的24小時內免疫於該化豺的催眠凝視。不死生物和免疫於{@condition 魅惑}的生物不會受到這個效果的影響。"
 					]
 				}
 			],
@@ -38913,7 +38913,7 @@
 			]
 		},
 		{
-			"name": "Thri-kreen",
+			"name": "斯里克林螳螂人", "ENG_name": "Thri-kreen",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -38954,19 +38954,19 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 13,
-			"languages": "Thri-kreen",
+			"languages": "斯里克林語",
 			"cr": "1",
 			"trait": [
 				{
-					"name": "Chameleon Carapace",
+					"name": "變色甲殼", "tENG_name": "Chameleon Carapace",
 					"entries": [
-						"The thri-kreen can change the color of its carapace to match the color and texture of its surroundings. As a result, it has advantage on Dexterity (Stealth) checks made to hide."
+						"斯里克林螳螂人可以改變它甲殼的顏色以模擬周遭環境的色彩與質感。因此，它在為躲藏所進行的敏捷（{@skill 隱匿}）檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Standing Leap",
+					"name": "立定跳躍", "tENG_name": "Standing Leap",
 					"entries": [
-						"The thri-kreen's long jump is up to 30 feet and its high jump is up to 15 feet, with or without a running start."
+						"斯里克林螳螂人的跳遠距離最多30呎、且跳高距離最多15呎，無論有沒有助跑都一樣。"
 					]
 				}
 			],
@@ -38974,13 +38974,13 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The thri-kreen makes two attacks: one with its bite and one with its claws."
+						"斯里克林螳螂人進行二次攻擊：一次啃咬，一次爪抓。"
 					]
 				},
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 3}，觸及5呎，單一生物。{@h}4 ({@damage 1d6 + 1}) piercing damage, and the target must succeed on a DC 11 Constitution saving throw or be {@condition poisoned} for 1 minute. If the saving throw fails by 5 or more, the target is also {@condition paralyzed} while {@condition poisoned} in this way. The {@condition poisoned} target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一生物。{@h}4 ({@damage 1d6 + 1})穿刺傷害，且目標必須成功通過一次DC 11的體質豁免，否則陷入{@condition 中毒}狀態長達1分鐘。若此豁免檢定的結果與目標值差距5點或更多，則因此{@condition 中毒}的目標也將連帶陷入{@condition 麻痺}狀態。{@condition 中毒}的目標可以在它的每個回合結束時重複進行這個豁免檢定，若檢定成功則結束這個效果對它的影響。"
 					]
 				},
 				{
@@ -38994,25 +38994,25 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Thri-kreen Weapons and Psionics",
+					"name": "斯里克林螳螂人的武器和靈能",
 					"entries": [
-						"Some thri-kreen employ special martial weapons. A gythka is a two-handed polearm with a blade at each end. A chatkcha is a flat, triangular wedge with three serrated blades (a light thrown weapon). A thri-kreen armed with a gythka and chatkchas gains the following action options:",
+						"有些斯里克林螳螂人會使用特殊的軍用武器。螳螂戟(Gythka)是一種在兩端各有一片斧刃的雙手長柄武器。三稜梭(Chatkcha)則是一種由三片鋸齒刀刃組成的三角扁平武器（一種輕型投擲武器）。一個裝備著螳螂戟和三稜梭的斯里克林螳螂人將會獲得下列動作選項：",
 						{
-							"name": "Weapons Multiattack",
+							"name": "武器多重攻擊",
 							"type": "entries",
 							"entries": [
-								"The thri-kreen makes two gythka attacks or two chatkcha attacks."
+								"斯里克林螳螂人進行二次螳螂戟攻擊或二次三稜梭攻擊。"
 							]
 						},
 						{
-							"name": "Gythka",
+							"name": "螳螂戟", "tENG_name": "Gythka",
 							"type": "entries",
 							"entries": [
 								"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}5 ({@damage 1d8 + 1})劈砍傷害。"
 							]
 						},
 						{
-							"name": "Chatkcha",
+							"name": "三稜梭", "tENG_name": "Chatkcha",
 							"type": "entries",
 							"entries": [
 								"{@atk rw} 命中{@hit 4}，射程30/120呎，單一目標。{@h}5 ({@damage 1d6 + 2})劈砍傷害。"
@@ -39037,7 +39037,7 @@
 			]
 		},
 		{
-			"name": "Thri-kreen (Psionic)",
+			"name": "斯里克林螳螂人(靈能)", "ENG_name": "Thri-kreen (Psionic)",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -39078,19 +39078,19 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 13,
-			"languages": "Thri-kreen, telepathy 60 ft.",
+			"languages": "斯里克林語、心靈感應60呎",
 			"cr": "1",
 			"trait": [
 				{
-					"name": "Chameleon Carapace",
+					"name": "變色甲殼", "tENG_name": "Chameleon Carapace",
 					"entries": [
-						"The thri-kreen can change the color of its carapace to match the color and texture of its surroundings. As a result, it has advantage on Dexterity (Stealth) checks made to hide."
+						"斯里克林螳螂人可以改變它甲殼的顏色以模擬周遭環境的色彩與質感。因此，它在為躲藏所進行的敏捷（{@skill 隱匿}）檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Standing Leap",
+					"name": "立定跳躍", "tENG_name": "Standing Leap",
 					"entries": [
-						"The thri-kreen's long jump is up to 30 feet and its high jump is up to 15 feet, with or without a running start."
+						"斯里克林螳螂人的跳遠距離最多30呎、且跳高距離最多15呎，無論有沒有助跑都一樣。"
 					]
 				}
 			],
@@ -39098,13 +39098,13 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The thri-kreen makes two attacks: one with its bite and one with its claws."
+						"斯里克林螳螂人進行二次攻擊：一次啃咬，一次爪抓。"
 					]
 				},
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 3}，觸及5呎，單一生物。{@h}4 ({@damage 1d6 + 1}) piercing damage, and the target must succeed on a DC 11 Constitution saving throw or be {@condition poisoned} for 1 minute. If the saving throw fails by 5 or more, the target is also {@condition paralyzed} while {@condition poisoned} in this way. The {@condition poisoned} target can repeat the saving throw on each of its turns, ending the effect on itself on a success."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一生物。{@h}4 ({@damage 1d6 + 1})穿刺傷害，且目標必須成功通過一次DC 11的體質豁免，否則陷入{@condition 中毒}狀態長達1分鐘。若此豁免檢定的結果與目標值差距5點或更多，則因此{@condition 中毒}的目標也將連帶陷入{@condition 麻痺}狀態。{@condition 中毒}的目標可以在它的每個回合結束時重複進行這個豁免檢定，若檢定成功則結束這個效果對它的影響。"
 					]
 				},
 				{
@@ -39117,9 +39117,9 @@
 			"page": 288,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting (Psionics)",
+					"name": "天生施法 (靈能)",
 					"headerEntries": [
-						"The thri-kreen's innate spellcasting ability is Wisdom. The thri-kreen can innately cast the following spells, requiring no components:"
+						"斯里克林螳螂人的天生施法屬性為睿知。它天生就可以施展以下法術，且無需任何構材："
 					],
 					"will": [
 						"{@spell 法師之手}（這隻手為隱形狀態）"
@@ -39139,25 +39139,25 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Thri-kreen Weapons and Psionics",
+					"name": "斯里克林螳螂人的武器和靈能",
 					"entries": [
-						"Some thri-kreen employ special martial weapons. A gythka is a two-handed polearm with a blade at each end. A chatkcha is a flat, triangular wedge with three serrated blades (a light thrown weapon). A thri-kreen armed with a gythka and chatkchas gains the following action options:",
+						"有些斯里克林螳螂人會使用特殊的軍用武器。螳螂戟(Gythka)是一種在兩端各有一片斧刃的雙手長柄武器。三稜梭(Chatkcha)則是一種由三片鋸齒刀刃組成的三角扁平武器（一種輕型投擲武器）。一個裝備著螳螂戟和三稜梭的斯里克林螳螂人將會獲得下列動作選項：",
 						{
-							"name": "Weapons Multiattack",
+							"name": "武器多重攻擊",
 							"type": "entries",
 							"entries": [
-								"The thri-kreen makes two gythka attacks or two chatkcha attacks."
+								"斯里克林螳螂人進行二次螳螂戟攻擊或二次三稜梭攻擊。"
 							]
 						},
 						{
-							"name": "Gythka",
+							"name": "螳螂戟", "tENG_name": "Gythka",
 							"type": "entries",
 							"entries": [
 								"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}5 ({@damage 1d8 + 1})劈砍傷害。"
 							]
 						},
 						{
-							"name": "Chatkcha",
+							"name": "三稜梭", "tENG_name": "Chatkcha",
 							"type": "entries",
 							"entries": [
 								"{@atk rw} 命中{@hit 4}，射程30/120呎，單一目標。{@h}5 ({@damage 1d6 + 2})劈砍傷害。"
@@ -42058,7 +42058,7 @@
 				{
 					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
-						"熊人可以使用它的動作以變形成一個大型的半熊類人或一隻大型的熊，或變回它類人生物的的真實型態。除了它的體型和AC之外，它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。它會在死亡時回復它的真實型態。"
+						"熊人可以使用它的動作以變形成一個大型的半熊類人或一隻大型的熊，或變回它類人生物的真實型態。除了它的體型和AC之外，它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。它會在死亡時回復它的真實型態。"
 					]
 				},
 				{
@@ -42187,7 +42187,7 @@
 				{
 					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
-						"野豬人可以使用它的動作以變形成一個半野豬類人或一隻野豬，或變回它類人生物的的真實型態。除了它的AC之外，它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。它會在死亡時回復它的真實型態。"
+						"野豬人可以使用它的動作以變形成一個半野豬類人或一隻野豬，或變回它類人生物的真實型態。除了它的AC之外，它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。它會在死亡時回復它的真實型態。"
 					]
 				},
 				{
@@ -42420,7 +42420,7 @@
 				{
 					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
-						"虎人可以使用它的動作以變形成一個半虎類人或一隻老虎，或變回它類人生物的的真實型態。除了它的體型之外，它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。它會在死亡時回復它的真實型態。"
+						"虎人可以使用它的動作以變形成一個半虎類人或一隻老虎，或變回它類人生物的真實型態。除了它的體型之外，它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。它會在死亡時回復它的真實型態。"
 					]
 				},
 				{
@@ -42561,7 +42561,7 @@
 				{
 					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
-						"狼人可以使用它的動作以變形成一個半狼類人或一隻狼，或變回它類人生物的的真實型態。除了它的AC之外，它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。它會在死亡時回復它的真實型態。"
+						"狼人可以使用它的動作以變形成一個半狼類人或一隻狼，或變回它類人生物的真實型態。除了它的AC之外，它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。它會在死亡時回復它的真實型態。"
 					]
 				},
 				{
