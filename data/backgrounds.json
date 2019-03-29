@@ -3143,7 +3143,7 @@
 			]
 		},
 		{
-			"name": "Faction Agent",
+			"name": "派系特工", "ENG_name": "Faction Agent",
 			"source": "SCAG",
 			"page": 147,
 			"skillProficiencies": [
@@ -3177,25 +3177,25 @@
 						{
 							"type": "item",
 							"name": "技能熟練",
-							"entry": "{@skill 察言觀色} and one Intelligence, Wisdom, or Charisma skill of your choice, as appropriate to your faction"
+							"entry": "{@skill 察言觀色}，和一個你所選擇且符合你派系的智力、睿知、或魅力技能"
 						},
 						{
 							"type": "item",
 							"name": "語言",
-							"entry": "Any two of your choice"
+							"entry": "自選二種"
 						},
 						{
 							"type": "item",
 							"name": "裝備",
-							"entry": "Badge or emblem of your faction, a copy of a seminal faction text (or code-book for a covert faction), a set of {@item 尋常服裝|phb}, and a {@item 囊袋|phb} containing 15 gp"
+							"entry": "你所屬派系的徽章或標誌、一份開創性派系文件的手抄本（或秘密派系的密文本）、一套{@item 尋常服裝|phb}、和一個裝有15金幣的{@item 囊袋|phb}"
 						}
 					]
 				},
 				{
-					"name": "特性：Safe Haven",
+					"name": "特性：避風港", "ENG_name": "Safe Haven",
 					"type": "entries",
 					"entries": [
-						"As a faction agent, you have access to a secret network of supporters and operatives who can provide assistance on your adventures. You know a set of secret signs and passwords you can use to identify such operatives, who can provide you with access to a hidden safe house, free room and board, or assistance in finding information. These agents never risk their lives for you or risk revealing their true identities."
+						"做為一名派系特工，你可以接觸那些秘密聯絡網中的支援者和探員來為你的冒險提供協助。你知道一套你可以用於辨別這些探員的暗號和密語，這些人可以為你提供一個有著免費食宿的隱秘安全住所，或是協助你尋找所需的訊息。這些特工並不會為你而冒上生命危險或暴露他們真實身份的風險。"
 					],
 					"data": {
 						"isFeature": true
@@ -3205,8 +3205,8 @@
 					"type": "entries",
 					"name": "建議特質", "ENG_name": "Suggested Characteristics",
 					"entries": [
-						"Use the tables for the {@background acolyte} background in the Player's Handbook as the basis for your traits and motivations, modifying the entries when appropriate to suit your identity as a faction agent. (For instance, consider the words \"faith\" and \"faction\" to be interchangeable.)",
-						"Your bond might be associated with other members of your faction, or a location or an object that is important to your faction. The ideal you strive for is probably in keeping with the tenets and principles of your faction, but might be more personal in nature."
+						"使用《玩家手冊》中{@background 侍僧}的表格做為你特質和動機的基礎，並在適當的時候修改條目以使其符合你做為派系特工的身分。（舉例來說，你可以將「信仰」替換成「派系」。）",
+						"你的羈絆可能會關聯於你派系中的其他成員、或一個對你派系而言相當重要的場所或物件。你所追求的理念可能會與你所屬派系的信條和原則一致，但在本質上更個人一些。"
 					]
 				}
 			],
@@ -5121,7 +5121,7 @@
 						{
 							"type": "item",
 							"name": "裝備",
-							"entry": "A set of {@item fine clothes|phb}, a {@item signet ring|phb}, a letter of introduction from your family's trading house, and a purse containing 25 gp"
+							"entry": "A set of {@item 高級服裝|phb}, a {@item signet ring|phb}, a letter of introduction from your family's trading house, and a purse containing 25 gp"
 						}
 					]
 				},
@@ -5615,7 +5615,7 @@
 						{
 							"type": "item",
 							"name": "裝備",
-							"entry": "A set of {@item fine clothes|phb}, house signet ring, ID papers, and a purse containing 20 gp."
+							"entry": "A set of {@item 高級服裝|phb}, house signet ring, ID papers, and a purse containing 20 gp."
 						}
 					]
 				},
@@ -5903,7 +5903,7 @@
 			]
 		},
 		{
-			"name": "Inheritor",
+			"name": "繼承者", "ENG_name": "Inheritor",
 			"source": "SCAG",
 			"page": 150,
 			"skillProficiencies": [
@@ -5926,37 +5926,37 @@
 						{
 							"type": "item",
 							"name": "技能熟練",
-							"entry": "{@skill 求生}, plus one from among {@skill 奧秘}, {@skill 歷史}, and {@skill 宗教}"
+							"entry": "{@skill 求生}，加上你從{@skill 奧秘}、{@skill 歷史}、和{@skill 宗教}自選一個"
 						},
 						{
 							"type": "item",
 							"name": "語言",
-							"entry": "Any one of your choice"
+							"entry": "自選一種"
 						},
 						{
 							"type": "item",
 							"name": "工具熟練",
-							"entry": "Your choice of a gaming set or a musical instrument"
+							"entry": "自選一種{@filter 遊戲套組|items|source=phb|miscellaneous=mundane|type=gaming set}或{@filter 樂器|items|source=phb|miscellaneous=mundane|type=instrument}"
 						},
 						{
 							"type": "item",
 							"name": "裝備",
-							"entry": "Your inheritance, a set of {@item 旅行者服裝|phb}, the tool you choose for this background's tool proficiency ({@filter gaming set|items|source=phb|miscellaneous=mundane|type=gaming set} or {@filter musical instrument|items|source=phb|miscellaneous=mundane|type=instrument}), and a {@item 囊袋|phb} containing 15 gp"
+							"entry": "你所繼承的遺產、一套{@item 旅行者服裝|phb}、你為此背景的工具熟練所選擇的工具({@filter 遊戲套組|items|source=phb|miscellaneous=mundane|type=gaming set}或{@filter 樂器|items|source=phb|miscellaneous=mundane|type=instrument})、和一個裝有15金幣的{@item 囊袋|phb}"
 						}
 					]
 				},
 				{
-					"name": "特性：Inheritance",
+					"name": "特性：繼承權", "ENG_name": "Inheritance",
 					"type": "entries",
 					"entries": [
-						"Choose or randomly determine your inheritance from the possibilities in the table below. Work with your Dungeon Master to come up with details: Why is your inheritance so important, and what is its full story? You might prefer for the DM to invent these details as part of the game, allowing you to learn more about your inheritance as your character does.",
-						"The Dungeon Master is free to use your inheritance as a story hook, sending you on quests to learn more about its history or true nature, or confronting you with foes who want to claim it for themselves or prevent you from learning what you seek. The DM also determines the properties of your inheritance and how they figure into the item's history and importance. For instance, the object might be a minor magic item, or one that begins with a modest ability and increases in potency with the passage of time. Or, the true nature of your inheritance might not be apparent at first and is revealed only when certain conditions are met.",
-						"When you begin your adventuring career, you can decide whether to tell your companions about your inheritance right away. Rather than attracting attention to yourself, you might want to keep your inheritance a secret until you learn more about what it means to you and what it can do for you.",
+						"從下表中選擇或隨機決定一個你所繼承的遺產。和你的DM一起討論並決定其細節：你的繼承物為什麼如此重要，它的來龍去脈又是什麽？你可能會希望讓DM在遊戲中創造這些細節，讓你得以如同你的角色在遊戲過程中一步步知道更多關於你繼承物的事情。",
+						"DM可以自由運用你的繼承物作為故事引鉤，讓你透過任務學習到更多有關繼承物的歷史或本質，或讓你對抗那些想要搶奪這個遺產、或想要阻止你從中得知關於你追求目標的敵人。DM也決定這個繼承物的性質，以及它是如何展現出它所擁有的歷史和重要性。舉例來說，這個物品可能會是一件弱效魔法物品，或是一個起始只有適度能力，卻會隨著時間的流逝而增強能力的東西。又或者，你繼承物的本質在一開始可能並不明顯，且只會在滿足某些條件時才會被揭露出來。",
+						"當你開始你的冒險生涯時，你可以決定是否要立即告訴你的同伴關於你繼承物的事情。與其引起別人對你的注意，你可能會希望悄悄地保守這個秘密，直到你更了解它對你的意義，以及它可以為你帶來什麽。",
 						{
 							"type": "table",
 							"colLabels": [
 								"d8",
-								"Object or item:"
+								"物件或物品"
 							],
 							"colStyles": [
 								"col-1 text-align-center",
@@ -5965,31 +5965,31 @@
 							"rows": [
 								[
 									"1",
-									"A document such as a map, a letter, or a journal"
+									"一份文件，像是地圖、信件、或是日記"
 								],
 								[
 									"2-3",
-									"a trinket (see \"Trinkets\" in chapter 5 of the Player's Handbook)"
+									"一個小飾品(參見《玩家手冊》第五章中的「{@item 飾品(PHB)|phb|飾品}」"
 								],
 								[
 									"4",
-									"an article of clothing"
+									"一件衣物"
 								],
 								[
 									"5",
-									"a piece of jewelry"
+									"一件珠寶首飾"
 								],
 								[
 									"6",
-									"an arcane book or formulary"
+									"一本祕法書或處方"
 								],
 								[
 									"7",
-									"a written story, song, poem, or secret"
+									"一個手寫的故事、歌曲、詩文、或秘密"
 								],
 								[
 									"8",
-									"a tattoo or other body marking"
+									"一處紋身或其他身體記號"
 								]
 							]
 						}
@@ -6002,8 +6002,8 @@
 					"type": "entries",
 					"name": "建議特質", "ENG_name": "Suggested Characteristics",
 					"entries": [
-						"Use the tables for the {@background folk hero} background in the Player's Handbook as the basis for your traits and motivations, modifying the entries when appropriate to suit your identity as an inheritor.",
-						"Your bond might be directly related to your inheritance, or to the person from whom you received it. Your ideal might be influenced by what you know about your inheritance, or by what you intend to do with your gift once you realize what it is capable of."
+						"使用《玩家手冊》中{@background 平民英雄}的表格做為你特質和動機的基礎，並在適當的時候修改條目以使其符合你做為繼承者的身分。",
+						"你的羈絆可能會與你的繼承物直接相關，或可能會是你從之接收到繼承物的某人。你的理念可能會受到你對繼承物瞭解的影響，或可能被在你所得到贈禮所能做到的事給影響。"
 					]
 				}
 			],
@@ -6721,7 +6721,7 @@
 						{
 							"type": "item",
 							"name": "裝備",
-							"entry": "One set of {@filter artisan's tools|items|source=phb|miscellaneous=mundane|type=artisan tool} or {@filter musical instrument|items|source=phb|miscellaneous=mundane|type=instrument}, a set of {@item fine clothes|phb}, and a purse containing 10 gp"
+							"entry": "One set of {@filter artisan's tools|items|source=phb|miscellaneous=mundane|type=artisan tool} or {@filter musical instrument|items|source=phb|miscellaneous=mundane|type=instrument}, a set of {@item 高級服裝|phb}, and a purse containing 10 gp"
 						}
 					]
 				},
@@ -8684,7 +8684,7 @@
 						{
 							"type": "item",
 							"name": "裝備",
-							"entry": "A {@item 偽造工具組|phb}, a transparent cylinder of shadow that has no opening, a {@item signet ring|phb}, a set of {@item fine clothes|phb}, and 15 gp"
+							"entry": "A {@item 偽造工具組|phb}, a transparent cylinder of shadow that has no opening, a {@item signet ring|phb}, a set of {@item 高級服裝|phb}, and 15 gp"
 						}
 					]
 				},
@@ -9649,7 +9649,7 @@
 						{
 							"type": "item",
 							"name": "裝備",
-							"entry": "{@item Thieves' tools|phb}, a gray cloak, Sheriff's insignia (badge) a set of {@item fine clothes|phb}, and 17 gp"
+							"entry": "{@item Thieves' tools|phb}, a gray cloak, Sheriff's insignia (badge) a set of {@item 高級服裝|phb}, and 17 gp"
 						}
 					]
 				},
@@ -10569,7 +10569,7 @@
 						{
 							"type": "item",
 							"name": "裝備",
-							"entry": "A set of {@filter artisan's tools|items|source=phb|miscellaneous=mundane|type=artisan tool} or a {@filter musical instrument|items|source=phb|miscellaneous=mundane|type=instrument} (one of your choice), a scroll of your god's teachings, a vizier's cartouche, a set of {@item fine clothes|phb}, and a {@item 囊袋|phb} containing 25 gp"
+							"entry": "A set of {@filter artisan's tools|items|source=phb|miscellaneous=mundane|type=artisan tool} or a {@filter musical instrument|items|source=phb|miscellaneous=mundane|type=instrument} (one of your choice), a scroll of your god's teachings, a vizier's cartouche, a set of {@item 高級服裝|phb}, and a {@item 囊袋|phb} containing 25 gp"
 						}
 					]
 				},
@@ -10763,7 +10763,7 @@
 			]
 		},
 		{
-			"name": "Waterdhavian Noble",
+			"name": "深水城貴族", "ENG_name": "Waterdhavian Noble",
 			"source": "SCAG",
 			"page": 154,
 			"skillProficiencies": [
@@ -10785,26 +10785,26 @@
 						{
 							"type": "item",
 							"name": "語言",
-							"entry": "Any one of your choice"
+							"entry": "自選一種"
 						},
 						{
 							"type": "item",
 							"name": "工具熟練",
-							"entry": "One type of gaming set or musical instrument"
+							"entry": "一種{@filter 遊戲套組|items|source=phb|miscellaneous=mundane|type=gaming set}或{@filter 樂器|items|source=phb|miscellaneous=mundane|type=instrument}"
 						},
 						{
 							"type": "item",
 							"name": "裝備",
-							"entry": "A set of {@item fine clothes|phb}, a {@item signet ring|phb} or brooch, a scroll of pedigree, a skin of fine zzar or wine, and a purse containing 20 gp"
+							"entry": "一套{@item 高級服裝|phb}、一枚{@item 璽戒|phb}或胸針、一卷家系族譜、一囊袋的高級札爾酒或葡萄酒、和一個裝有20金幣的錢包"
 						}
 					]
 				},
 				{
-					"name": "特性：Kept in Style",
+					"name": "特性：保持時尚", "ENG_name": "Kept in Style",
 					"type": "entries",
 					"entries": [
-						"While you are in Waterdeep or elsewhere in the North, your house sees to your everyday needs. Your name and signet are sufficient to cover most of your expenses; the inns, taverns, and festhalls you frequent are glad to record your debt and send an accounting to your family's estate in Waterdeep to settle what you owe.",
-						"This advantage enables you to live a comfortable lifestyle without having to pay 2 gp a day for it, or reduces the cost of a wealthy or aristocratic lifestyle by that amount. You may not maintain a less affluent lifestyle and use the difference as income\u2014the benefit is a line of credit, not an actual monetary reward."
+						"當你在深水城或北地的其他地方，你的家族都會滿足你的日常需求。你的名號和璽印足夠支付你大部分的開銷；旅店、酒館、和你常光顧的會所都很樂意記下你的債款，並將帳單寄到你家族在深水城的莊園以結清你的債務。",
+						"這個優勢將允許你過著舒適的生活風格而無需為其支付每日2金幣的開銷，或者讓你在過著富裕或奢華的生活風格時能減少該數值的開銷。你不能維持開銷在這之下的生活風格以利用這個差額做為收入──這個好處代表的是信用額度，而非實際的財政獎勵。"
 					],
 					"data": {
 						"isFeature": true
@@ -10814,8 +10814,8 @@
 					"type": "section",
 					"name": "建議特質", "ENG_name": "Suggested Characteristics",
 					"entries": [
-						"Use the tables for the {@background noble} background in the Player's Handbook as the basis for your traits and motivations, modifying the entries when appropriate to suit your identity as a member of a Waterdhavian family.",
-						"Like other nobles, you were born and raised in a different world from the one that most folk know - one that grants you privilege but also calls you to fulfill a duty befitting your station. Your bond might be associated with your family alone, or it could be concerned with another noble house that sides with or opposes your own. Your ideal depends to some extent on how you view your role in the family, and how you intend to conduct yourself in the world at large as a representative of your house."
+						"使用《玩家手冊》中{@background 貴族}的表格做為你特質和動機的基礎，並在適當的時候修改條目以使其符合你做為深水城人貴族家系成員的身分。",
+						"和其他貴族一樣，你出生並成長在一個與大多數群眾所知不同的世界──一個賦予你特權，但也要求你履行與你身分相符職責義務的世界。你的羈絆可能只會與你的家族有關，或可能關聯於其他與你們同盟或對立的貴族家系。你的理念在某種程度上取決於你如何看待你在家族中扮演的角色，以及你做為你家族的代表，打算如何在這個大千世界中處世。"
 					]
 				}
 			],
