@@ -6575,7 +6575,7 @@ Parser.itemValueToDisplay = function(value){
 function isStringMatch (a, b, case_sensitive) {
 	if ((typeof a) !== 'string' || (typeof b) !== 'string')	return false;
 	if (case_sensitive) return a === b;
-	else 				return a.toUpperCase === b.toUpperCase;
+	else 				return a.toUpperCase() === b.toUpperCase();
 }
 
 // Haz code
