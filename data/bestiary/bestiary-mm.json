@@ -9344,7 +9344,7 @@
 					]
 				},
 				{
-					"name": "False Appearance",
+					"name": "擬形", "tENG_name": "False Appearance",
 					"entries": [
 						"While the cloaker remains motionless without its underside exposed, it is indistinguishable from a dark leather cloak."
 					]
@@ -10581,7 +10581,7 @@
 					]
 				},
 				{
-					"name": "False Appearance",
+					"name": "擬形", "tENG_name": "False Appearance",
 					"entries": [
 						"While the darkmantle remains motionless, it is indistinguishable from a cave formation such as a stalactite or stalagmite."
 					]
@@ -16342,7 +16342,7 @@
 			"cr": "6",
 			"trait": [
 				{
-					"name": "False Appearance",
+					"name": "擬形", "tENG_name": "False Appearance",
 					"entries": [
 						"While the galeb duhr remains motionless, it is indistinguishable from a normal boulder."
 					]
@@ -16440,7 +16440,7 @@
 			"cr": "2",
 			"trait": [
 				{
-					"name": "False Appearance",
+					"name": "擬形", "tENG_name": "False Appearance",
 					"entries": [
 						"While the gargoyle remains motionless, it is indistinguishable from an inanimate statue."
 					]
@@ -16486,7 +16486,7 @@
 			]
 		},
 		{
-			"name": "Gas Spore",
+			"name": "毒氣孢子", "ENG_name": "Gas Spore",
 			"size": "L",
 			"type": "plant",
 			"source": "MM",
@@ -16530,24 +16530,24 @@
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Death Burst",
+					"name": "死亡自爆", "tENG_name": "Death Burst",
 					"entries": [
-						"The gas spore explodes when it drops to 0 hit points. Each creature within 20 feet of it must succeed on a DC 15 Constitution saving throw or take 10 ({@damage 3d6}) poison damage and become infected with a disease on a failed save. Creatures immune to the {@condition poisoned} condition are immune to this disease.",
-						"Spores invade an infected creature's system, killing the creature in a number of hours equal to {@dice 1d12} + the creature's Constitution score, unless the disease is removed. In half that time, the creature becomes {@condition poisoned} for the rest of the duration. After the creature dies, it sprouts {@dice 2d4} Tiny gas spores that grow to full size in 7 days."
+						"當毒氣孢子的生命值歸零時，它將會爆炸。每個距離它20呎內的生物都必須成功通過一次DC 15的體質豁免檢定，否則受到10 ({@damage 3d6})毒素傷害，並被一種疾病給感染。免疫於{@condition 中毒}狀態的生物將免疫於此疾病效果。",
+						"孢子入侵感染生物的體內，且除非此疾病被移除，否則該生物將在經過等同於{@dice 1d12}+該生物體質數值的小時之後被殺死。從這段期間的一半開始，該生物將在剩餘的期間陷入{@condition 中毒}狀態。在該生物死亡後，從它身上將長出{@dice 2d4}個微型的毒氣孢子，並於7天內成長至成熟體型。"
 					]
 				},
 				{
-					"name": "Eerie Resemblance",
+					"name": "怪異擬像", "tENG_name": "Eerie Resemblance",
 					"entries": [
-						"The gas spore resembles a beholder. A creature that can see the gas spore can discern its true nature with a successful DC 15 Intelligence (Nature) check."
+						"毒氣孢子看起來與眼魔相當類似。一個看見毒氣孢子的生物可以透過成功通過一次DC 15的智力（自然）檢定以辨識出它真正的本質。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Touch",
+					"name": "觸碰",
 					"entries": [
-						"{@atk mw} 命中{@hit 0}，觸及5呎，單一生物。{@h}1 poison damage, and the creature must succeed on a DC 10 Constitution saving throw or become infected with the disease described in the Death Burst trait."
+						"{@atk mw} 命中{@hit 0}，觸及5呎，單一生物。{@h}1 毒素傷害，且該生物必須成功通過一次DC 10的體質豁免，否則將被死亡自爆特性中描述的疾病給感染。"
 					]
 				}
 			],
@@ -23835,7 +23835,7 @@
 					]
 				},
 				{
-					"name": "False Appearance",
+					"name": "擬形", "tENG_name": "False Appearance",
 					"entries": [
 						"While the mephit remains motionless, it is indistinguishable from an ordinary shard of ice."
 					]
@@ -26837,7 +26837,7 @@
 					]
 				},
 				{
-					"name": "False Appearance",
+					"name": "擬形", "tENG_name": "False Appearance",
 					"entries": [
 						"While the mephit remains motionless, it is indistinguishable from an ordinary mound of magma."
 					]
@@ -28647,7 +28647,7 @@
 					]
 				},
 				{
-					"name": "False Appearance",
+					"name": "擬形", "tENG_name": "False Appearance",
 					"entries": [
 						"While the mephit remains motionless, it is indistinguishable from an ordinary mound of mud."
 					]
@@ -29061,7 +29061,7 @@
 			]
 		},
 		{
-			"name": "Myconid Adult",
+			"name": "蕈人成體", "name": "Myconid Adult",
 			"size": "M",
 			"type": "plant",
 			"source": "MM",
@@ -29095,63 +29095,63 @@
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Distress Spores",
+					"name": "苦痛孢子", "tENG_name": "Distress Spores",
 					"entries": [
-						"When the myconid takes damage, all other myconids within 240 feet of it can sense its pain."
+						"當蕈人受到傷害時，所有距離它240呎內的其他蕈人都將察覺到它的痛苦。"
 					]
 				},
 				{
-					"name": "Sun Sickness",
+					"name": "厭日", "tENG_name": "Sun Sickness",
 					"entries": [
-						"While in sunlight, the myconid has disadvantage on ability checks, attack rolls, and saving throws. The myconid dies if it spends more than 1 hour in direct sunlight."
+						"當處於日光照射下，蕈人在屬性檢定、攻擊檢定，和豁免檢定中具有劣勢。蕈人會在超過1小時的日光直射下死亡。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Fist",
+					"name": "拳擊",
 					"entries": [
-						"{@atk mw} 命中{@hit 2}，觸及5呎，單一目標。{@h}5 ({@damage 2d4}) bludgeoning damage plus 5 ({@damage 2d4}) poison damage."
+						"{@atk mw} 命中{@hit 2}，觸及5呎，單一目標。{@h}5 ({@damage 2d4})鈍擊傷害加 5 ({@damage 2d4})毒素傷害。"
 					]
 				},
 				{
-					"name": "Pacifying Spores (3/Day)",
+					"name": "鎮靜孢子 (3/日)",
 					"entries": [
-						"The myconid ejects spores at one creature it can see within 5 feet of it. The target must succeed on a DC 11 Constitution saving throw or be {@condition stunned} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"蕈人向一個距離它5呎內且它所能看見的生物噴吐孢子。目標必須成功通過一次DC 11的體質豁免，否則陷入{@condition 震懾}長達1分鐘。目標可以在它的每個回合結束時重複進行這個檢定，若成功則結束這個效果對它的影響。"
 					]
 				},
 				{
-					"name": "Rapport Spores",
+					"name": "通念孢子",
 					"entries": [
-						"A 20-foot radius of spores extends from the myconid. These spores can go around corners and affect only creatures with an Intelligence of 2 or higher that aren't undead, constructs, or elementals. Affected creatures can communicate telepathically with one another while they are within 30 feet of each other. The effect lasts for 1 hour."
+						"一團20呎半徑的孢子將從蕈人身上發出。這些孢子可以繞過轉角，且只會影響智力值為2或更高，並非不死生物、構裝體、或元素生物的生物。受到影響的生物可以在相距30呎內時透過心靈感應彼此溝通。這個效果將持續1小時。"
 					]
 				}
 			],
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Zuggtomoy's Empowerment",
+					"name": "祖格莫伊之賦權",
 					"entries": [
-						"Myconids that embrace {@creature Zuggtmoy|OotA} can develop new, more destructive kinds of spores. Myconid adults can have two of the following spore effects.",
+						"那些信奉{@creature Zuggtmoy|OotA}的蕈人們能夠發展出嶄新、更具毀滅性的孢子。蕈人成體可以擁有二種下列孢子效果。",
 						{
 							"type": "entries",
-							"name": "Caustic Spores (1/Day)",
+							"name": "腐蝕孢子 (1/日)",
 							"entries": [
-								"The myconid releases spores in a 30-foot cone. Each creature inside the cone must succeed on a DC 11 Dexterity saving throw or take 3 ({@damage 1d6}) acid damage at the start of each of the myconid's turns. A creature can repeat the saving throw at the end of its turn, ending the effect on itself on a success. The save DC is 8 + the myconid's Constitution modifier + the myconid's proficiency bonus."
+								"蕈人釋放出一道30呎錐形的孢子。每個在錐形範圍內的生物都必須成功通過一次DC 11的敏捷豁免，否則將在每個該蕈人的回合開始時受到3 ({@damage 1d6})酸蝕傷害。這個豁免檢定的DC為8+蕈人的體質調整值+蕈人的熟練加值。該生物可以在它的每個回合結束時重複進行這個檢定，若成功則結束這個效果對它的影響。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Infestation Spores (1/Day)",
+							"name": "寄生孢子 (1/日)",
 							"entries": [
-								"The myconid releases spores that burst out in a cloud that fills a 10-foot-radius sphere centered on it, and the cloud lingers for 1 minute. Any flesh-and-blood creature in the cloud when it appears, or that enters it later, must make a DC 11 Constitution saving throw. The save DC is 8 + the myconid's Constitution modifier + the myconid's proficiency bonus. On a successful save, the creature can't be infected by these spores for 24 hours. On a failed save, the creature is infected with a disease called the spores of Zuggtmoy) and also gains a random form of indefinite madness (determined by rolling on the Madness of {@creature Zuggtmoy|OotA} table) that lasts until the creature is cured of the disease or dies. While infected in this way, the creature can't be reinfected, and it must repeat the saving throw at the end of every 24 hours, ending the infection on a success. On a failure, the infected creature's body is slowly taken over by fungal growth, and after three such failed saves, the creature dies and is reanimated as a spore servant if it's a humanoid or a Large or smaller beast."
+								"蕈人以自己為中心釋放出一團10呎半徑球體的孢子雲團，且這團雲將會持續存在長達1分鐘。任何具有血肉之軀的生物若在這團雲出現時處於其中，或在之後進入雲團中，都必須進行一次DC 11的體質豁免。這個豁免檢定的DC為8+蕈人的體質調整值+蕈人的熟練加值。若豁免成功，該生物在24小時內將不會被這些孢子給感染。若豁免失敗，該生物則會被一種被稱作「祖格莫伊孢子」的疾病給感染，並同時獲得一個隨機的永久瘋狂（透過擲骰使用祖格莫伊瘋狂表決定）並持續直到該生物身上的此疾病被治癒，或該生物死亡。當被這個方式感染時，該生物不會再被二度感染，且它必須在之後每經過24小時後重複進行這個豁免檢定，若成功則結束這個效果對它的影響。若豁免失敗，則被感染生物的身體將會緩慢地被生長出的蕈類佔據，且在三次這種豁免失敗後，該生物將會死亡，且若該生物為一個類人生物或體型為大型或更小的野獸，則它將被做為孢子僕役被重新活化。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Euphoria Spores (1/Day)",
+							"name": "興奮孢子 (1/日)",
 							"entries": [
-								"The myconid releases a cloud of spores in a 20-foot-radius sphere centered on itself. Other creatures in that area must each succeed on a DC 11 Constitution saving throw or become {@condition poisoned} for 1 minute. The save DC is 8 + the myconid's Constitution modifier + the myconid's proficiency bonus. A creature can repeat the saving throw at the end of each of its turns, ending the effect early on itself on a success. When the effect ends on it, the creature gains one level of {@condition exhaustion}."
+								"蕈人以自己為中心釋放出一團20呎半徑球體的孢子。其他在這個範圍內的生物都必須各自成功通過一次DC 11的體質豁免，否則陷入{@condition 中毒}狀態長達1分鐘。這個豁免檢定的DC為8+蕈人的體質調整值+蕈人的熟練加值。該生物可以在它的每個回合結束時重複進行這個檢定，若成功則結束這個效果對它的影響。當這個效果對該生物的影響結束時，該生物將獲得一級的{@condition 力竭}。"
 							]
 						}
 					],
@@ -29171,7 +29171,7 @@
 			]
 		},
 		{
-			"name": "Myconid Sovereign",
+			"name": "蕈人王", "name": "Myconid Sovereign",
 			"size": "L",
 			"type": "plant",
 			"source": "MM",
@@ -29205,15 +29205,15 @@
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Distress Spores",
+					"name": "苦痛孢子", "tENG_name": "Distress Spores",
 					"entries": [
-						"When the myconid takes damage, all other myconids within 240 feet of it can sense its pain."
+						"當蕈人受到傷害時，所有距離它240呎內的其他蕈人都將察覺到它的痛苦。"
 					]
 				},
 				{
-					"name": "Sun Sickness",
+					"name": "厭日", "tENG_name": "Sun Sickness",
 					"entries": [
-						"While in sunlight, the myconid has disadvantage on ability checks, attack rolls, and saving throws. The myconid dies if it spends more than 1 hour in direct sunlight."
+						"當處於日光照射下，蕈人在屬性檢定、攻擊檢定，和豁免檢定中具有劣勢。蕈人會在超過1小時的日光直射下死亡。"
 					]
 				}
 			],
@@ -29221,65 +29221,65 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The myconid uses either its Hallucination Spores or its Pacifying Spores, then makes a fist attack."
+						"蕈人使用它的致幻孢子或鎮靜孢子，接著進行一次拳擊攻擊。"
 					]
 				},
 				{
-					"name": "Fist",
+					"name": "拳擊",
 					"entries": [
-						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}8 ({@damage 3d4 + 1}) bludgeoning damage plus 7 ({@damage 3d4}) poison damage."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}8 ({@damage 3d4 + 1})鈍擊傷害加 7 ({@damage 3d4})毒素傷害。"
 					]
 				},
 				{
-					"name": "Animating Spores (3/Day)",
+					"name": "活化孢子 (3/日)",
 					"entries": [
-						"The myconid targets one corpse of a humanoid or a Large or smaller beast within 5 feet of it and releases spores at the corpse. In 24 hours, the corpse rises as a spore servant. The corpse stays animated for {@dice 1d4 + 1} weeks or until destroyed, and it can't be animated again in this way."
+						"蕈人選擇一個距離它5呎內類人生物的屍體，或一個體型為大型或更小的野獸的屍體做為目標，並對該屍體釋放出孢子。這具屍體將在24小時後做為{@creature 澤地熊人孢子僕役|mm|孢子僕役}復活。這具屍體將保持活化持續{@dice 1d4 + 1}周或直到被摧毀,且它無法再透過這個方式被活化。"
 					]
 				},
 				{
-					"name": "Hallucination Spores",
+					"name": "致幻孢子",
 					"entries": [
-						"The myconid ejects spores at one creature it can see within 5 feet of it. The target must succeed on a DC 12 Constitution saving throw or be {@condition poisoned} for 1 minute. The {@condition poisoned} target is {@condition incapacitated} while it hallucinates. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"蕈人向一個距離它5呎內且它所能看見的生物噴吐孢子。目標必須成功通過一次DC 12的體質豁免，否則陷入{@condition 中毒}狀態長達1分鐘。{@condition 中毒}的目標將在產生幻覺的同時陷入{@condition 無力}狀態。目標可以在它的每個回合結束時重複進行這個檢定，若成功則結束這個效果對它的影響。"
 					]
 				},
 				{
-					"name": "Pacifying Spores",
+					"name": "鎮靜孢子",
 					"entries": [
-						"The myconid ejects spores at one creature it can see within 5 feet of it. The target must succeed on a DC 12 Constitution saving throw or be {@condition stunned} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"蕈人向一個距離它5呎內且它所能看見的生物噴吐孢子。目標必須成功通過一次DC 12的體質豁免，否則陷入{@condition 震懾}長達1分鐘。目標可以在它的每個回合結束時重複進行這個檢定，若成功則結束這個效果對它的影響。"
 					]
 				},
 				{
-					"name": "Rapport Spores",
+					"name": "通念孢子",
 					"entries": [
-						"A 30-foot radius of spores extends from the myconid. These spores can go around corners and affect only creatures with an Intelligence of 2 or higher that aren't undead, constructs, or elementals. Affected creatures can communicate telepathically with one another while they are within 30 feet of each other. The effect lasts for 1 hour."
+						"一團30呎半徑的孢子將從蕈人身上發出。這些孢子可以繞過轉角，且只會影響智力值為2或更高，並非不死生物、構裝體、或元素生物的生物。受到影響的生物可以在相距30呎內時透過心靈感應彼此溝通。這個效果將持續1小時。"
 					]
 				}
 			],
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Zuggtomoy's Empowerment",
+					"name": "祖格莫伊之賦權",
 					"entries": [
-						"Myconids that embrace {@creature Zuggtmoy|OotA} can develop new, more destructive kinds of spores. Myconid sovereigns have all these spore effects.",
+						"那些信奉{@creature Zuggtmoy|OotA}的蕈人們能夠發展出嶄新、更具毀滅性的孢子。蕈人王可以擁有所有這些孢子效果。",
 						{
 							"type": "entries",
-							"name": "Caustic Spores (1/Day)",
+							"name": "腐蝕孢子 (1/日)",
 							"entries": [
-								"The myconid releases spores in a 30-foot cone. Each creature inside the cone must succeed on a DC 12 Dexterity saving throw or take 3 ({@damage 1d6}) acid damage at the start of each of the myconid's turns. A creature can repeat the saving throw at the end of its turn, ending the effect on itself on a success. The save DC is 8 + the myconid's Constitution modifier + the myconid's proficiency bonus."
+								"蕈人釋放出一道30呎錐形的孢子。每個在錐形範圍內的生物都必須成功通過一次DC 12的敏捷豁免，否則將在每個該蕈人的回合開始時受到3 ({@damage 1d6})酸蝕傷害。該生物可以在它的每個回合結束時重複進行這個檢定，若成功則結束這個效果對它的影響。這個豁免檢定的DC為8+蕈人的體質調整值+蕈人的熟練加值。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Infestation Spores (1/Day)",
+							"name": "寄生孢子 (1/日)",
 							"entries": [
-								"The myconid releases spores that burst out in a cloud that fills a 10-foot-radius sphere centered on it, and the cloud lingers for 1 minute. Any flesh-and-blood creature in the cloud when it appears, or that enters it later, must make a DC 12 Constitution saving throw. The save DC is 8 + the myconid's Constitution modifier + the myconid's proficiency bonus. On a successful save, the creature can't be infected by these spores for 24 hours. On a failed save, the creature is infected with a disease called the spores of Zuggtmoy) and also gains a random form of indefinite madness (determined by rolling on the Madness of {@creature Zuggtmoy|OotA} table) that lasts until the creature is cured of the disease or dies. While infected in this way, the creature can't be reinfected, and it must repeat the saving throw at the end of every 24 hours, ending the infection on a success. On a failure, the infected creature's body is slowly taken over by fungal growth, and after three such failed saves, the creature dies and is reanimated as a spore servant if it's a humanoid or a Large or smaller beast."
+								"蕈人以自己為中心釋放出一團10呎半徑球體的孢子雲團，且這團雲將會持續存在長達1分鐘。任何具有血肉之軀的生物若在這團雲出現時處於其中，或在之後進入雲團中，都必須進行一次DC 12的體質豁免。這個豁免檢定的DC為8+蕈人的體質調整值+蕈人的熟練加值。若豁免成功，該生物在24小時內將不會被這些孢子給感染。若豁免失敗，該生物則會被一種被稱作「祖格莫伊孢子」的疾病給感染，並同時獲得一個隨機的永久瘋狂（透過擲骰使用祖格莫伊瘋狂表決定）並持續直到該生物身上的此疾病被治癒，或該生物死亡。當被這個方式感染時，該生物不會再被二度感染，且它必須在之後每經過24小時後重複進行這個豁免檢定，若成功則結束這個效果對它的影響。若豁免失敗，則被感染生物的身體將會緩慢地被生長出的蕈類佔據，且在三次這種豁免失敗後，該生物將會死亡，且若該生物為一個類人生物或體型為大型或更小的野獸，則它將被做為孢子僕役被重新活化。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Euphoria Spores (1/Day)",
+							"name": "興奮孢子 (1/日)",
 							"entries": [
-								"The myconid releases a cloud of spores in a 20-foot-radius sphere centered on itself. Other creatures in that area must each succeed on a DC 12 Constitution saving throw or become {@condition poisoned} for 1 minute. The save DC is 8 + the myconid's Constitution modifier + the myconid's proficiency bonus. A creature can repeat the saving throw at the end of each of its turns, ending the effect early on itself on a success. When the effect ends on it, the creature gains one level of {@condition exhaustion}."
+								"蕈人以自己為中心釋放出一團20呎半徑球體的孢子。其他在這個範圍內的生物都必須各自成功通過一次DC 12的體質豁免，否則陷入{@condition 中毒}狀態長達1分鐘。這個豁免檢定的DC為8+蕈人的體質調整值+蕈人的熟練加值。該生物可以在它的每個回合結束時重複進行這個檢定，若成功則結束這個效果對它的影響。當這個效果對該生物的影響結束時，該生物將獲得一級的{@condition 力竭}。"
 							]
 						}
 					],
@@ -29302,7 +29302,7 @@
 			]
 		},
 		{
-			"name": "Myconid Sprout",
+			"name": "蕈人幼體", "ENG_name": "Myconid Sprout",
 			"size": "S",
 			"type": "plant",
 			"source": "MM",
@@ -29331,29 +29331,29 @@
 			"cr": "0",
 			"trait": [
 				{
-					"name": "Distress Spores",
+					"name": "苦痛孢子", "tENG_name": "Distress Spores",
 					"entries": [
-						"When the myconid takes damage, all other myconids within 240 feet of it can sense its pain."
+						"當蕈人受到傷害時，所有距離它240呎內的其他蕈人都將察覺到它的痛苦。"
 					]
 				},
 				{
-					"name": "Sun Sickness",
+					"name": "厭日", "tENG_name": "Sun Sickness",
 					"entries": [
-						"While in sunlight, the myconid has disadvantage on ability checks, attack rolls, and saving throws. The myconid dies if it spends more than 1 hour in direct sunlight."
+						"當處於日光照射下，蕈人在屬性檢定、攻擊檢定，和豁免檢定中具有劣勢。蕈人會在超過1小時的日光直射下死亡。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Fist",
+					"name": "拳擊",
 					"entries": [
-						"{@atk mw} 命中{@hit 1}，觸及5呎，單一目標。{@h}1 ({@damage 1d4 - 1}) bludgeoning damage plus 2 ({@damage 1d4}) poison damage."
+						"{@atk mw} 命中{@hit 1}，觸及5呎，單一目標。{@h}1 ({@damage 1d4 - 1})鈍擊傷害加 2 ({@damage 1d4})毒素傷害。"
 					]
 				},
 				{
-					"name": "Rapport Spores (3/Day)",
+					"name": "通念孢子 (3/日)",
 					"entries": [
-						"A 10-foot radius of spores extends from the myconid. These spores can go around corners and affect only creatures with an Intelligence of 2 or higher that aren't undead, constructs, or elementals. Affected creatures can communicate telepathically with one another while they are within 30 feet of each other. The effect lasts for 1 hour."
+						"一團10呎半徑的孢子將從蕈人身上發出。這些孢子可以繞過轉角，且只會影響智力值為2或更高，並非不死生物、構裝體、或元素生物的生物。受到影響的生物可以在相距30呎內時透過心靈感應彼此溝通。這個效果將持續1小時。"
 					]
 				}
 			],
@@ -31703,7 +31703,7 @@
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "False Appearance",
+					"name": "擬形", "tENG_name": "False Appearance",
 					"entries": [
 						"While the piercer remains motionless on the ceiling, it is indistinguishable from a normal stalactite."
 					]
@@ -34294,7 +34294,7 @@
 			"cr": "5",
 			"trait": [
 				{
-					"name": "False Appearance",
+					"name": "擬形", "tENG_name": "False Appearance",
 					"entries": [
 						"While the roper remains motionless, it is indistinguishable from a normal cave formation, such as a stalagmite."
 					]
@@ -36000,7 +36000,7 @@
 			]
 		},
 		{
-			"name": "Shrieker",
+			"name": "尖叫蕈", "ENG_name": "Shrieker",
 			"size": "M",
 			"type": "plant",
 			"source": "MM",
@@ -36033,17 +36033,17 @@
 			"cr": "0",
 			"trait": [
 				{
-					"name": "False Appearance",
+					"name": "擬形", "tENG_name": "False Appearance",
 					"entries": [
-						"While the shrieker remains motionless, it is indistinguishable from an ordinary fungus."
+						"當尖叫蕈保持不動，它看起來就跟普通的蕈類一模一樣。"
 					]
 				}
 			],
-			"action": [
+			"reaction": [
 				{
-					"name": "Shriek",
+					"name": "尖叫",
 					"entries": [
-						"When bright light or a creature is within 30 feet of the shrieker, it emits a shriek audible within 300 feet of it. The shrieker continues to shriek until the disturbance moves out of range and for {@dice 1d4} of the shrieker's turns afterward"
+						"當明亮光照或一個生物距離尖叫蕈30呎內，它將持續發出在它300呎內都可以被聽見的尖叫聲。尖叫蕈會持續尖叫直到該干擾移出範圍，並在這之後經過{@dice 1d4}個尖叫蕈的回合。"
 					]
 				}
 			],
@@ -39385,7 +39385,7 @@
 			"cr": "9",
 			"trait": [
 				{
-					"name": "False Appearance",
+					"name": "擬形", "tENG_name": "False Appearance",
 					"entries": [
 						"While the treant remains motionless, it is indistinguishable from a normal tree."
 					]
@@ -41325,7 +41325,7 @@
 			]
 		},
 		{
-			"name": "Violet Fungus",
+			"name": "紫蕈", "ENG_name": "Violet Fungus",
 			"size": "M",
 			"type": "plant",
 			"source": "MM",
@@ -41358,9 +41358,9 @@
 			"cr": "1/4",
 			"trait": [
 				{
-					"name": "False Appearance",
+					"name": "擬形", "tENG_name": "False Appearance",
 					"entries": [
-						"While the violet fungus remains motionless, it is indistinguishable from an ordinary fungus."
+						"當紫蕈保持不動，它看起來就跟普通的蕈類一模一樣。"
 					]
 				}
 			],
@@ -41368,13 +41368,13 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The fungus makes {@dice 1d4} Rotting Touch attacks."
+						"紫蕈進行{@dice 1d4}次腐壞之觸攻擊。"
 					]
 				},
 				{
-					"name": "Rotting Touch",
+					"name": "腐壞之觸",
 					"entries": [
-						"{@atk mw} 命中{@hit 2}，觸及10呎，單一生物。{@h}4 ({@damage 1d8}) necrotic damage."
+						"{@atk mw} 命中{@hit 2}，觸及10呎，單一生物。{@h}4 ({@damage 1d8})死靈傷害。"
 					]
 				}
 			],

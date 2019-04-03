@@ -317,6 +317,7 @@ const traitFilter = new Filter({
 			case "Brute": return "殘暴";
 			case "Charge": return "衝鋒";
 			case "Damage Absorption": return "傷害吸收";
+			case "Death Burst": return "死亡自爆";
 			case "Devil's Sight": return "魔鬼視界";
 			case "False Appearance": return "擬形";
 			case "Fey Ancestry": return "精類血統";
