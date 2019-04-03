@@ -9565,7 +9565,7 @@
 			]
 		},
 		{
-			"name": "Cockatrice",
+			"name": "雞蛇獸", "ENG_name": "Cockatrice",
 			"size": "S",
 			"type": "monstrosity",
 			"source": "MM",
@@ -9596,7 +9596,7 @@
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 3}，觸及5呎，單一生物。{@h}3 ({@damage 1d4 + 1}) piercing damage, and the target must succeed on a DC 11 Constitution saving throw against being magically {@condition petrified}. On a failed save, the creature begins to turn to stone and is {@condition restrained}. It must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is {@condition petrified} for 24 hours."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一生物。{@h}3 ({@damage 1d4 + 1})穿刺傷害，且目標必須成功通過一次DC 11的體質豁免以抵抗不被魔法石化。若豁免失敗，該生物將會開始轉變成石頭並因此被{@condition 束縛}。它必須在它的下個回合結束時重複進行這個檢定。若豁免成功，則此效果結束。若豁免失敗，則該生物將被{@condition 石化}持續24小時。"
 					]
 				}
 			],
@@ -21253,7 +21253,7 @@
 			]
 		},
 		{
-			"name": "Grick",
+			"name": "穴居攫怪", "ENG_name": "Grick",
 			"size": "M",
 			"type": "monstrosity",
 			"source": "MM",
@@ -21297,9 +21297,9 @@
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Stone Camouflage",
+					"name": "岩地偽裝", "tENG_name": "Stone Camouflage",
 					"entries": [
-						"The grick has advantage on Dexterity (Stealth) checks made to hide in rocky terrain."
+						"穴居攫怪在岩石地形為躲藏所進行的敏捷（{@skill 隱匿}）檢定中具有優勢。"
 					]
 				}
 			],
@@ -21307,17 +21307,17 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The grick makes one attack with its tentacles. If that attack hits, the grick can make one beak attack against the same target."
+						"穴居攫怪進行一次觸手攻擊。若該攻擊命中，則穴居攫怪可以再對同個目標進行一次喙啄攻擊。"
 					]
 				},
 				{
-					"name": "Tentacles",
+					"name": "觸手",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}9 ({@damage 2d6 + 2})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Beak",
+					"name": "喙啄",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害。"
 					]
@@ -21338,7 +21338,7 @@
 			]
 		},
 		{
-			"name": "Grick Alpha",
+			"name": "穴居攫怪菁英", "ENG_name": "Grick Alpha",
 			"size": "L",
 			"type": "monstrosity",
 			"source": "MM",
@@ -21382,9 +21382,9 @@
 			"cr": "7",
 			"trait": [
 				{
-					"name": "Stone Camouflage",
+					"name": "岩地偽裝", "tENG_name": "Stone Camouflage",
 					"entries": [
-						"The grick has advantage on Dexterity (Stealth) checks made to hide in rocky terrain."
+						"穴居攫怪在岩石地形為躲藏所進行的敏捷（{@skill 隱匿}）檢定中具有優勢。"
 					]
 				}
 			],
@@ -21392,23 +21392,23 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The grick makes two attacks: one with its tail and one with its tentacles. If it hits with its tentacles, the grick can make one beak attack against the same target."
+						"穴居攫怪進行二次：一次尾擊，一次觸手。若它的觸手攻擊命中，則穴居攫怪可以再對同個目標進行一次喙啄攻擊。"
 					]
 				},
 				{
-					"name": "Tail",
+					"name": "尾擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及10呎，單一目標。{@h}11 ({@damage 2d6 + 4})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Tentacles",
+					"name": "觸手",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及10呎，單一目標。{@h}22 ({@damage 4d8 + 4})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Beak",
+					"name": "喙啄",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及10呎，單一目標。{@h}13 ({@damage 2d8 + 4})穿刺傷害。"
 					]
@@ -31666,7 +31666,7 @@
 			]
 		},
 		{
-			"name": "Piercer",
+			"name": "穿刺蟲", "ENG_name": "Piercer",
 			"size": "M",
 			"type": "monstrosity",
 			"source": "MM",
@@ -31705,21 +31705,21 @@
 				{
 					"name": "擬形", "tENG_name": "False Appearance",
 					"entries": [
-						"While the piercer remains motionless on the ceiling, it is indistinguishable from a normal stalactite."
+						"當穿刺蟲保持不動，它看起來就跟普通的鐘乳石一模一樣。"
 					]
 				},
 				{
 					"name": "蛛行",
 					"entries": [
-						"piercer可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
+						"穿刺蟲可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Drop",
+					"name": "墜落",
 					"entries": [
-						"{@atk mw} {@hit 3} to hit, one creature directly underneath the piercer. {@h}3 ({@damage 1d6}) piercing damage per 10 feet fallen, up to 21 ({@dice 6d6}). Miss: The piercer takes half the normal falling damage for the distance fallen."
+						"{@atk mw} 命中{@hit 3}，單一位於穿刺蟲正下方的生物。{@h}每落下10呎造成 3 ({@damage 1d6})穿刺傷害，最大值為 21 ({@dice 6d6})。{@i 若失手:}穿刺蟲將受到原本因墜落距離而造成墜落傷害的一半。"
 					]
 				}
 			],
