@@ -144,7 +144,7 @@
 				}
 			],
 			"regionalEffects": [
-				"這片包含著傳奇黑龍巢穴的區域被龍的魔法所扭曲，並創造出以下其中一個或更多的效應：",
+				"這片居住著傳奇黑龍巢穴的區域被龍的魔法所扭曲，並創造出以下其中一個或多個效應：",
 				{
 					"type": "list",
 					"items": [
@@ -160,34 +160,34 @@
 		{
 			"name": "Blue Dragon",
 			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the dragon takes a lair action to cause one of the following effects; the dragon can't use the same effect two rounds in a row:",
+				"在先攻順序輪到20時（先攻相等時則為後手），藍龍可以採取一次巢穴動作以造成以下其中一個效果；藍龍不能連續兩輪使用相同的效果：",
 				{
 					"type": "list",
 					"items": [
-						"Part of the ceiling collapses above one creature that the dragon can see within 120 feet of it. The creature must succeed on a DC 15 Dexterity saving throw or take 10 ({@dice 3d6}) bludgeoning damage and be knocked prone and buried. The buried target is restrained and unable to breathe or stand up. A creature can take an action to make a DC 10 Strength check, ending the buried state on a success.",
-						"A cloud of sand swirls about in a 20-foot-radius sphere centered on a point the dragon can see within 120 feet of it. The cloud spreads around corners. Each creature in the cloud must succeed on a DC 15 Constitution saving throw or be blinded for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
-						"Lightning arcs, forming a 5-foot-wide line between two of the lair's solid surfaces that the dragon can see. They must be within 120 feet of the dragon and 120 feet of each other. Each creature in that line must succeed on a DC 15 Dexterity saving throw or take 10 ({@dice 3d6}) lightning damage."
+						"距離藍龍120呎內且它所能看見的一個生物上方一部分的天花板坍塌下來。該生物必須成功通過一次DC 15的敏捷豁免，否則受到10 ({@dice 3d6})鈍擊傷害，被擊倒{@condition 伏地}並被掩埋。被掩埋的目標將被{@condition 束縛}且無法呼吸或起身。一個生物可以採取一個動作以進行一次DC 10的力量檢定，成功則終止被掩埋的狀態。",
+						"一團沙塵旋轉卷起的雲團將以距離藍龍120呎內且它所能看見的一點為中心形成一個20呎半徑的球體區域。這團沙雲會繞過轉角。每個在這團沙雲內的生物都必須成功通過一次DC 15的體質豁免，否則將陷入{@condition 目盲}長達1分鐘。一個生物可以在它的每個回合結束時重複進行這個豁免檢定，成功則結束這個效果對它的影響。",
+						"閃電弧光在巢穴內藍龍所能看見的兩個固態表面之間形成一道5呎寬的直線區域。這兩個表面必須距離藍龍120呎內，且彼此相距120呎內。每個在直線區域內的生物必須成功通過一次DC 15的敏捷豁免，否則受到10 ({@dice 3d6})閃電傷害。"
 					]
 				}
 			],
 			"regionalEffects": [
-				"The region containing a legendary blue dragon's lair is warped by the dragon's magic, which creates one or more of the following effects:",
+				"這片居住著傳奇藍龍巢穴的區域被龍的魔法所扭曲，並創造出以下其中一個或多個效應：",
 				{
 					"type": "list",
 					"items": [
-						"Thunderstorms rage within 6 miles of the lair.",
-						"Dust devils scour the land within 6 miles of the lair. A dust devil has the statistics of an air elemental, but it can't fly, has a speed of 50 feet, and has an Intelligence and Charisma of 1 (-5).",
-						"Hidden sinkholes form in and around the dragon's lair. A sinkhole can be spotted from a safe distance with a successful DC 20 Wisdom (Perception) check. Otherwise, the first creature to step on the thin crust covering the sinkhole must succeed on a DC 15 Dexterity saving throw or fall {@dice 1d6 × 10} feet into the sinkhole."
+						"距離巢穴6哩內的區域肆虐著雷鳴風暴。",
+						"距離巢穴6哩內的區域被塵捲風席捲著。塵捲風具有{@creature 氣元素}的數據，但它不會飛，具有50呎的移動速度，且智力和魅力只有1(-5)。",
+						"隱藏的陷落沙坑將在藍龍的巢穴內和巢穴周遭成形。透過成功通過一次DC 20的睿知（{@skill 感知}）檢定可以在安全距離外發現一個隱藏的陷落沙坑。除此之外，第一個踩上陷落沙坑上覆蓋的稀薄沙層的生物必須成功通過一次DC 15的敏捷豁免，否則將跌入陷落沙坑並墜落{@dice 1d6 × 10}呎的距離。"
 					]
 				},
-				"If the dragon dies, the dust devils disappear immediately, and the thunderstorms abate within {@dice 1d10} days. Any sinkholes remain where they are."
+				"若藍龍死亡，塵捲風將會立刻消失，且雷鳴風暴將在{@dice 1d10}天內消散。任何陷落沙坑都會維持它們所在的位置。"
 			],
 			"source": "MM"
 		},
 		{
 			"name": "Brass Dragon",
 			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the dragon takes a lair action to cause one of the following effects:",
+				"在先攻順序輪到20時（先攻相等時則為後手），黃銅龍可以採取一次巢穴動作以造成以下其中一個效果：",
 				{
 					"type": "list",
 					"items": [
@@ -197,7 +197,7 @@
 				}
 			],
 			"regionalEffects": [
-				"The region containing a legendary brass dragon's lair is warped by the dragon's magic, which creates one or more of the following effects:",
+				"這片居住著傳奇黃銅龍巢穴的區域被龍的魔法所扭曲，並創造出以下其中一個或多個效應：",
 				{
 					"type": "list",
 					"items": [
@@ -213,7 +213,7 @@
 		{
 			"name": "Bronze Dragon",
 			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the dragon takes a lair action to cause one of the following effects:",
+				"在先攻順序輪到20時（先攻相等時則為後手），青銅龍可以採取一次巢穴動作以造成以下其中一個效果：",
 				{
 					"type": "list",
 					"items": [
@@ -239,7 +239,7 @@
 		{
 			"name": "Copper Dragon",
 			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the dragon takes a lair action to cause one of the following effects:",
+				"在先攻順序輪到20時（先攻相等時則為後手），赤銅龍可以採取一次巢穴動作以造成以下其中一個效果：",
 				{
 					"type": "list",
 					"items": [
@@ -489,7 +489,7 @@
 		{
 			"name": "Gold Dragon",
 			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the dragon takes a lair action to cause one of the following effects; the dragon can't use the same effect two rounds in a row:",
+				"在先攻順序輪到20時（先攻相等時則為後手），金龍可以採取一次巢穴動作以造成以下其中一個效果；金龍不能連續兩輪使用相同的效果：",
 				{
 					"type": "list",
 					"items": [
@@ -586,7 +586,7 @@
 		{
 			"name": "Green Dragon",
 			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the dragon takes a lair action to cause one of the following effects; the dragon can't use the same effect two rounds in a row:",
+				"在先攻順序輪到20時（先攻相等時則為後手），綠龍可以採取一次巢穴動作以造成以下其中一個效果；綠龍不能連續兩輪使用相同的效果：",
 				{
 					"type": "list",
 					"items": [
