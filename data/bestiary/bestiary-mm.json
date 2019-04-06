@@ -10322,7 +10322,7 @@
 			]
 		},
 		{
-			"name": "Cyclops",
+			"name": "獨眼巨人", "ENG_name": "Cyclops",
 			"size": "H",
 			"type": "giant",
 			"source": "MM",
@@ -10352,13 +10352,13 @@
 			"wis": 6,
 			"cha": 10,
 			"passive": 8,
-			"languages": "Giant",
+			"languages": "巨人語",
 			"cr": "6",
 			"trait": [
 				{
-					"name": "Poor Depth Perception",
+					"name": "拙劣距離感", "tENG_name": "Poor Depth Perception",
 					"entries": [
-						"The cyclops has disadvantage on any attack roll against a target more than 30 ft. away."
+						"獨眼巨人在對任何距離它超過30呎距離的目標所進行的攻擊檢定中具有劣勢。"
 					]
 				}
 			],
@@ -10366,7 +10366,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The cyclops makes two greatclub attacks."
+						"獨眼巨人進行二次巨棍攻擊。"
 					]
 				},
 				{
@@ -10376,7 +10376,7 @@
 					]
 				},
 				{
-					"name": "Rock",
+					"name": "投石",
 					"entries": [
 						"{@atk rw} 命中{@hit 9}，射程30/120呎，單一目標。{@h}28 ({@damage 4d10 + 6})鈍擊傷害。"
 					]
@@ -14302,7 +14302,7 @@
 			]
 		},
 		{
-			"name": "Ettin",
+			"name": "雙頭巨人", "ENG_name": "Ettin",
 			"size": "L",
 			"type": "giant",
 			"source": "MM",
@@ -14336,19 +14336,19 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 14,
-			"languages": "Giant, Orc",
+			"languages": "巨人語、獸人語",
 			"cr": "4",
 			"trait": [
 				{
-					"name": "Two Heads",
+					"name": "雙頭", "tENG_name": "Two Heads",
 					"entries": [
-						"The ettin has advantage on Wisdom ({@skill Perception}) checks and on saving throws against being {@condition blinded}, {@condition charmed}, {@condition deafened}, {@condition frightened}, {@condition stunned}, and knocked {@condition unconscious}."
+						"雙頭巨人在睿知（{@skill 感知}）檢定和對抗{@condition 目盲}、{@condition 魅惑}、{@condition 耳聾}、{@condition 恐懼}、{@condition 震懾}、和被擊暈{@condition 昏迷}的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Wakeful",
+					"name": "警醒", "tENG_name": "Wakeful",
 					"entries": [
-						"When one of the ettin's heads is asleep, its other head is awake."
+						"當雙頭巨人的其中一顆頭睡著時，它的另一顆頭將會保持清醒。"
 					]
 				}
 			],
@@ -14356,7 +14356,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The ettin makes two attacks: one with its battleaxe and one with its morningstar."
+						"雙頭巨人進行二次攻擊：一次戰斧，一次釘頭錘。"
 					]
 				},
 				{
@@ -16051,7 +16051,7 @@
 			]
 		},
 		{
-			"name": "Fomorian",
+			"name": "廢陋巨人(弗摩爾巨人)", "ENG_name": "Fomorian",
 			"size": "H",
 			"type": "giant",
 			"source": "MM",
@@ -16086,13 +16086,13 @@
 			},
 			"senses": "黑暗視覺120呎",
 			"passive": 18,
-			"languages": "Giant, Undercommon",
+			"languages": "巨人語、地底通用語",
 			"cr": "8",
 			"action": [
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The fomorian attacks twice with its greatclub or makes one greatclub attack and uses Evil Eye once."
+						"廢陋巨人用它的巨棍進行二次攻擊，或進行一次巨棍攻擊並使用一次邪眼。"
 					]
 				},
 				{
@@ -16102,16 +16102,16 @@
 					]
 				},
 				{
-					"name": "Evil Eye",
+					"name": "邪眼",
 					"entries": [
-						"The fomorian magically forces a creature it can see within 60 feet of it to make a DC 14 Charisma saving throw. The creature takes 27 ({@damage 6d8}) psychic damage on a failed save, or half as much damage on a successful one."
+						"廢陋巨人用魔法強迫一個距離它60呎內且它所能看見的生物進行一次DC 14的魅力豁免。該生物若豁免失敗則受到27 ({@damage 6d8})精神傷害，豁免成功則只受到一半的傷害。"
 					]
 				},
 				{
-					"name": "Curse of the Evil Eye (Recharges after a Short or Long Rest)",
+					"name": "邪眼詛咒（短休或長休之後充能）",
 					"entries": [
-						"With a stare, the fomorian uses Evil Eye, but on a failed save, the creature is also cursed with magical deformities. While deformed, the creature has its speed halved and has disadvantage on ability checks, saving throws, and attacks based on Strength or Dexterity.",
-						"The transformed creature can repeat the saving throw whenever it finishes a long rest, ending the effect on a success."
+						"藉由一次凝視，廢陋巨人使用它的邪眼攻擊，且若目標的豁免失敗，該生物將同時受到魔法性的畸形詛咒。當因此陷入畸形詛咒變化時，該生物的移動速度減半，且在基於力量和敏捷的屬性檢定、豁免檢定、和攻擊檢定中具有劣勢。",
+						"被畸形變化的生物可以在每次完成一次長休時重複進行這個豁免檢定，豁免成功則結束這個效果。"
 					]
 				}
 			],
@@ -30473,7 +30473,7 @@
 			]
 		},
 		{
-			"name": "Oni",
+			"name": "惡鬼", "ENG_name": "Oni",
 			"size": "L",
 			"type": "giant",
 			"source": "MM",
@@ -30516,19 +30516,19 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 14,
-			"languages": "Common, Giant",
+			"languages": "通用語、巨人語",
 			"cr": "7",
 			"trait": [
 				{
-					"name": "Magic Weapons",
+					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The oni's weapon attacks are magical."
+						"惡鬼的武器攻擊視作魔法攻擊。"
 					]
 				},
 				{
-					"name": "Regeneration",
+					"name": "再生", "tENG_name": "Regeneration",
 					"entries": [
-						"The oni regains 10 hit points at the start of its turn if it has at least 1 hit point."
+						"若惡鬼擁有至少1點生命值，則它將在它的回合開始時回復10點生命值。"
 					]
 				}
 			],
@@ -30536,11 +30536,11 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The oni makes two attacks, either with its claws or its glaive."
+						"惡鬼進行二次攻擊，使用它的爪抓或長柄刀。"
 					]
 				},
 				{
-					"name": "Claw (Oni Form Only)",
+					"name": "爪抓 (限定惡鬼型態)",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}8 ({@damage 1d8 + 4})劈砍傷害。"
 					]
@@ -30548,13 +30548,13 @@
 				{
 					"name": "長柄刀",
 					"entries": [
-						"{@atk mw} 命中{@hit 7}，觸及10呎，單一目標。{@h}15 ({@damage 2d10 + 4}) slashing damage, or 9 ({@damage 1d10 + 4}) slashing damage in Small or Medium form."
+						"{@atk mw} 命中{@hit 7}，觸及10呎，單一目標。{@h}15 ({@damage 2d10 + 4})劈砍傷害，或若在體型為中型或小型時則造成 9 ({@damage 1d10 + 4})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Change Shape",
+					"name": "變形",
 					"entries": [
-						"The oni magically polymorphs into a Small or Medium humanoid, into a Large giant, or back into its true form. Other than its size, its statistics are the same in each form. The only equipment that is transformed is its glaive, which shrinks so that it can be wielded in humanoid form. If the oni dies, it reverts to its true form, and its glaive reverts to its normal size."
+						"惡鬼可以用魔法變形成一個體型為小型或中型的類人生物、一個體型為大型的巨人、或變回它的真實型態。除了它的體型之外，它在各個型態的數據保持不變。它唯一會隨著變形發生轉變的裝備是長柄刀，這把長柄刀會隨之縮小以讓它可以在類人型態時揮舞自如。若惡鬼死亡，它會回復它的真實型態，且它的長柄刀會回復其原本的尺寸。"
 					]
 				}
 			],
@@ -30563,7 +30563,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The oni's innate spellcasting ability is Charisma (spell save DC 13). The oni can innately cast the following spells, requiring no material components:"
+						"惡鬼的天生施法屬性為魅力（法術豁免DC 13）。惡鬼天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 黑暗術}",
@@ -35947,7 +35947,7 @@
 				{
 					"name": "再生", "tENG_name": "Regeneration",
 					"entries": [
-						"若構裝盾衛擁有至少1點生命值，則它將在它的回合開始石回復10點生命值。"
+						"若構裝盾衛擁有至少1點生命值，則它將在它的回合開始時回復10點生命值。"
 					]
 				},
 				{
@@ -39756,7 +39756,7 @@
 			]
 		},
 		{
-			"name": "Troll",
+			"name": "巨魔", "ENG_name": "Troll",
 			"size": "L",
 			"type": "giant",
 			"source": "MM",
@@ -39790,28 +39790,28 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 12,
-			"languages": "Giant",
+			"languages": "巨人語",
 			"cr": "5",
 			"trait": [
 				{
 					"name": "敏銳嗅覺",
 					"entries": [
-						"The troll在依賴嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
+						"巨魔在依賴嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Regeneration",
+					"name": "再生", "tENG_name": "Regeneration",
 					"entries": [
-						"The troll regains 10 hit points at the start of its turn. If the troll takes acid or fire damage, this trait doesn't function at the start of the troll's next turn. The troll dies only if it starts its turn with 0 hit points and doesn't regenerate."
+						"巨魔在它的回合開始時回復10點生命值。若巨魔受到酸蝕或火焰傷害，則這個特性在巨魔下個回合開始時並不會發揮作用。巨魔只會在它以0點生命值開始它回合，且再生並未發揮效果時死亡。"
 					]
 				}
 			],
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Loathsome Limbs",
+					"name": "擾人斷肢",
 					"entries": [
-						"Whenever the troll takes at least 15 slashing damage at one time, roll a {@dice d20} to determine what else happens to it:",
+						"每當巨魔一次受到至少15點劈砍傷害時，骰一顆{@dice d20}以決定它還會發生什麼事：",
 						{
 							"type": "list",
 							"style": "list-hang-notitle",
@@ -39819,30 +39819,30 @@
 								{
 									"type": "item",
 									"name": "1\u201310:",
-									"entry": "Nothing else happens."
+									"entry": "沒有其他事情發生。"
 								},
 								{
 									"type": "item",
 									"name": "11\u201314:",
-									"entry": "One leg is severed from the troll if it has any legs left."
+									"entry": "若巨魔還擁有任何腿，則巨魔的一條腿將被切斷。"
 								},
 								{
 									"type": "item",
 									"name": "15\u201318:",
-									"entry": "One arm is severed from the troll if it has any arms left."
+									"entry": "若巨魔還擁有任何手臂，則巨魔的一條手臂將被切斷。"
 								},
 								{
 									"type": "item",
 									"name": "19\u201320:",
-									"entry": "The troll is decapitated, but the troll dies only if it can't regenerate. If it dies, so does the severed head."
+									"entry": "巨魔被斬首，但巨魔只會在它無法再生時才會因此死亡。若它死亡，則被砍下的頭也會隨之死亡。"
 								}
 							]
 						},
-						"If the troll finishes a short or long rest without reattaching a severed limb or head, the part regrows. At that point, the severed part dies. Until then, a severed part acts on the troll's initiative and has its own action and movement. A severed part has AC 13, 10 hit points, and the troll's Regeneration trait.",
-						"A severed leg is unable to attack and has a speed of 5 feet.",
-						"A severed arm has a speed of 5 feet and can make one claw attack on its turn, with disadvantage on the attack roll unless the troll can see the arm and its target. Each time the troll loses an arm, it loses a claw attack.",
-						"If its head is severed, the troll loses its bite attack and its body is {@condition blinded} unless the head can see it. The severed head has a speed of 0 feet and the troll's 敏銳嗅覺 trait. It can make a bite attack but only against a target in its space.",
-						"The troll's speed is halved if it's missing a leg. If it loses both legs, it falls {@condition prone}. If it has both arms, it can crawl. With only one arm, it can still crawl, but its speed is halved. With no arms or legs, its speed is 0, and it can't benefit from bonuses to speed."
+						"若巨魔未接上斷肢或斷頭而完成一次短休或長休，則該部位將會重新長出。同時，被切斷的身體部位將會死亡。在這之前，被切斷的身體部位將會在巨魔的先攻順序行動，並執行自己的動作和移動。一個被切斷的身體部位具有AC 13和10點生命值，且擁有巨魔的再生特性。",
+						"一只斷腿無法進行攻擊，且具有5呎的移動速度。",
+						"一只斷臂具有5呎的移動速度，且可以在它的回合進行一次爪抓攻擊，除非巨魔可以看見斷臂和它的攻擊目標，否則該攻擊將具有劣勢。巨魔每失去一隻手臂，它就失去一次爪抓攻擊。",
+						"若巨魔的頭被砍下，巨魔將失去它的啃咬攻擊，且除非它的頭可以看見本體，否則它的本體將陷入{@condition 目盲}狀態。斷頭具有0呎的移動速度，且擁有巨魔的敏銳嗅覺特性。它可以進行一次啃咬攻擊，但只能對處於它所在空間的目標進行攻擊。",
+						"若巨魔失去一條腿，則它的移動速度將被減半。若它失去了兩條腿，則它將陷入{@condition 伏地}狀態。若它仍具有兩隻手臂，則它可以爬行移動。若它只剩下一隻手臂，則它仍可以爬行，但移動速度減半。若它失去了所有手臂和雙腿，則它的移動速度歸零，且無法得益於任何對移動速度的加值。"
 					]
 				}
 			],
@@ -39850,7 +39850,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The troll makes three attacks: one with its bite and two with its claws."
+						"巨魔進行三次攻擊：一次啃咬，二次爪抓。"
 					]
 				},
 				{
