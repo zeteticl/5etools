@@ -13379,7 +13379,7 @@
 			]
 		},
 		{
-			"name": "Dust Mephit",
+			"name": "塵魔蝠", "ENG_name": "Dust Mephit",
 			"size": "S",
 			"type": "elemental",
 			"source": "MM",
@@ -13419,13 +13419,13 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 12,
-			"languages": "Auran, Terran",
+			"languages": "氣族語、土族語",
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Death Burst",
+					"name": "死亡自爆", "tENG_name": "Death Burst",
 					"entries": [
-						"When the mephit dies, it explodes in a burst of dust. Each creature within 5 feet of it must then succeed on a DC 10 Constitution saving throw or be {@condition blinded} for 1 minute. A {@condition blinded} creature can repeat the saving throw on each of its turns, ending the effect on itself on a success."
+						"當塵魔蝠死亡時，它將會爆炸成塵。每個距離它5呎內的生物都必須接著成功通過一次DC 10的體質豁免，否則陷入{@condition 目盲}狀態長達1分鐘。陷入{@condition 目盲}的生物可以在它的每個回合結束時重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。"
 					]
 				}
 			],
@@ -13437,18 +13437,18 @@
 					]
 				},
 				{
-					"name": "Blinding Breath {@recharge}",
+					"name": "致盲吐息{@recharge}",
 					"entries": [
-						"The mephit exhales a 15-foot cone of blinding dust. Each creature in that area must succeed on a DC 10 Dexterity saving throw or be {@condition blinded} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"塵魔蝠吐出一道15呎錐形的致盲沙塵。每個在吐息範圍內的生物都必須成功通過一次DC 10的敏捷豁免，否則陷入{@condition 目盲}狀態長達1分鐘。一個生物可以在它的每個回合結束時重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。"
 					]
 				}
 			],
 			"page": 215,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting (1/Day)",
+					"name": "天生施法 (1/日)",
 					"headerEntries": [
-						"The mephit can innately cast {@spell 睡眠術}, requiring no material components. Its innate spellcasting ability is Charisma."
+						"塵魔蝠天生就可以施放{@spell 睡眠術}，且無需任何材料構材。它的天生施法屬性為魅力。"
 					],
 					"headerWill": [
 						"{@spell 睡眠術}"
@@ -13459,9 +13459,9 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Summon Mephits (1/Day)",
+					"name": "召喚魔蝠 (1/日)",
 					"entries": [
-						"The mephit has a {@chance 25|25 percent|25% summoning chance} chance of summoning {@dice 1d4} mephits of its kind. A summoned mephit appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other mephits. It remains for 1 minute, until it or its summoner dies, or until its summoner dismisses it as an action."
+						"魔蝠有{@chance 25|25％|25％召喚機率}機率召喚出{@dice 1d4}個與它同種類的魔蝠。被召喚的魔蝠將出現距離它召喚者60呎內的一處未被佔據空間，做為召喚者的盟友行動，且不能再召喚其它魔蝠。它會持續存在長達1分鐘，直到它或它的召喚者死亡、或直到召喚者以一個動作解消它。"
 					]
 				}
 			],
@@ -23783,7 +23783,7 @@
 			]
 		},
 		{
-			"name": "Ice Mephit",
+			"name": "冰魔蝠", "ENG_name": "Ice Mephit",
 			"size": "S",
 			"type": "elemental",
 			"source": "MM",
@@ -23825,19 +23825,19 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 12,
-			"languages": "Aquan, Auran",
+			"languages": "水族語、氣族語",
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Death Burst",
+					"name": "死亡自爆", "tENG_name": "Death Burst", 
 					"entries": [
-						"When the mephit dies, it explodes in a burst of jagged ice. Each creature within 5 feet of it must make a DC 10 Dexterity saving throw, taking 4 ({@damage 1d8}) slashing damage on a failed save, or half as much damage on a successful one."
+						"當冰魔蝠死亡時，它將會爆炸成眾多銳利的碎冰。每個距離它5呎內的生物都必須進行一次DC 10的敏捷豁免，豁免失敗則受到4 ({@damage 1d8})劈砍傷害，豁免成功則只受到一半的傷害。"
 					]
 				},
 				{
 					"name": "擬形", "tENG_name": "False Appearance",
 					"entries": [
-						"While the mephit remains motionless, it is indistinguishable from an ordinary shard of ice."
+						"當冰魔蝠保持不動，它看起來就跟普通的碎冰一模一樣。"
 					]
 				}
 			],
@@ -23845,22 +23845,22 @@
 				{
 					"name": "爪抓",
 					"entries": [
-						"{@atk mw} 命中{@hit 3}，觸及5呎，單一生物。{@h}3 ({@damage 1d4 + 1}) slashing damage plus 2 ({@damage 1d4}) cold damage."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一生物。{@h}3 ({@damage 1d4 + 1})劈砍傷害加 2 ({@damage 1d4})寒冰傷害。"
 					]
 				},
 				{
-					"name": "Frost Breath {@recharge}",
+					"name": "寒霜吐息{@recharge}",
 					"entries": [
-						"The mephit exhales a 15-foot cone of cold air. Each creature in that area must succeed on a DC 10 Dexterity saving throw, taking 5 ({@damage 2d4}) cold damage on a failed save, or half as much damage on a successful one."
+						"冰魔蝠吐出一道15呎錐形的寒冷空氣。每個在吐息範圍內的生物都必須成功通過一次DC 10的敏捷豁免，豁免失敗則受到5 ({@damage 2d4})寒冰傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
 			"page": 215,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting (1/Day)",
+					"name": "天生施法 (1/日)",
 					"headerEntries": [
-						"The mephit can innately cast {@spell 雲霧術}, requiring no material components. Its innate spellcasting ability is Charisma."
+						"冰魔蝠天生就可以施放{@spell 雲霧術}，且無需任何材料構材。它的天生施法屬性為魅力。"
 					],
 					"headerWill": [
 						"{@spell 雲霧術}"
@@ -23871,9 +23871,9 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Summon Mephits (1/Day)",
+					"name": "召喚魔蝠 (1/日)",
 					"entries": [
-						"The mephit has a {@chance 25|25 percent|25% summoning chance} chance of summoning {@dice 1d4} mephits of its kind. A summoned mephit appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other mephits. It remains for 1 minute, until it or its summoner dies, or until its summoner dismisses it as an action."
+						"魔蝠有{@chance 25|25％|25％召喚機率}機率召喚出{@dice 1d4}個與它同種類的魔蝠。被召喚的魔蝠將出現距離它召喚者60呎內的一處未被佔據空間，做為召喚者的盟友行動，且不能再召喚其它魔蝠。它會持續存在長達1分鐘，直到它或它的召喚者死亡、或直到召喚者以一個動作解消它。"
 					]
 				}
 			],
@@ -26787,7 +26787,7 @@
 			]
 		},
 		{
-			"name": "Magma Mephit",
+			"name": "熔岩魔蝠", "ENG_name": "Magma Mephit",
 			"size": "S",
 			"type": "elemental",
 			"source": "MM",
@@ -26827,19 +26827,19 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 10,
-			"languages": "Ignan, Terran",
+			"languages": "火族語、土族語",
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Death Burst",
+					"name": "死亡自爆", "tENG_name": "Death Burst",
 					"entries": [
-						"When the mephit dies, it explodes in a burst of lava. Each creature within 5 feet of it must make a DC 11 Dexterity saving throw, taking 7 ({@damage 2d6}) fire damage on a failed save, or half as much damage on a successful one."
+						"當熔岩魔蝠死亡時，它將會爆炸成岩漿四濺。每個距離它5呎內的生物都必須進行一次DC 11的敏捷豁免，豁免失敗則受到7 ({@damage 2d6})火焰傷害，豁免成功則只受到一半的傷害。"
 					]
 				},
 				{
 					"name": "擬形", "tENG_name": "False Appearance",
 					"entries": [
-						"While the mephit remains motionless, it is indistinguishable from an ordinary mound of magma."
+						"當熔岩魔蝠保持不動，它看起來就跟一團普通的熔岩一模一樣。"
 					]
 				}
 			],
@@ -26847,22 +26847,22 @@
 				{
 					"name": "爪抓",
 					"entries": [
-						"{@atk mw} 命中{@hit 3}，觸及5呎，單一生物。{@h}3 ({@damage 1d4 + 1}) slashing damage plus 2 ({@damage 1d4}) fire damage."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一生物。{@h}3 ({@damage 1d4 + 1})劈砍傷害加 2 ({@damage 1d4})火焰傷害。"
 					]
 				},
 				{
-					"name": "Fire Breath {@recharge}",
+					"name": "火焰吐息{@recharge}",
 					"entries": [
-						"The mephit exhales a 15-foot cone of fire. Each creature in that area must make a DC 11 Dexterity saving throw, taking 7 ({@damage 2d6}) fire damage on a failed save, or half as much damage on a successful one."
+						"熔岩魔蝠吐出一道15呎錐形的烈焰。每個在吐息範圍內的生物都必須進行一次DC 11的敏捷豁免，豁免失敗則受到7 ({@damage 2d6})火焰傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
 			"page": 216,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting (1/Day)",
+					"name": "天生施法 (1/日)",
 					"headerEntries": [
-						"The mephit can innately cast {@spell 灼熱金屬} (spell save DC 10), requiring no material components. Its innate spellcasting ability is Charisma."
+						"熔岩魔蝠天生就可以施放{@spell 灼熱金屬}（法術豁免DC 10），且無需任何材料構材。它的天生施法屬性為魅力。"
 					],
 					"headerWill": [
 						"{@spell 灼熱金屬}"
@@ -26873,9 +26873,9 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Summon Mephits (1/Day)",
+					"name": "召喚魔蝠 (1/日)",
 					"entries": [
-						"The mephit has a {@chance 25|25 percent|25% summoning chance} chance of summoning {@dice 1d4} mephits of its kind. A summoned mephit appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other mephits. It remains for 1 minute, until it or its summoner dies, or until its summoner dismisses it as an action."
+						"魔蝠有{@chance 25|25％|25％召喚機率}機率召喚出{@dice 1d4}個與它同種類的魔蝠。被召喚的魔蝠將出現距離它召喚者60呎內的一處未被佔據空間，做為召喚者的盟友行動，且不能再召喚其它魔蝠。它會持續存在長達1分鐘，直到它或它的召喚者死亡、或直到召喚者以一個動作解消它。"
 					]
 				}
 			],
@@ -26947,7 +26947,7 @@
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Death Burst",
+					"name": "死亡自爆", "tENG_name": "Death Burst",
 					"entries": [
 						"When the magmin dies, it explodes in a burst of fire and magma. Each creature within 10 feet of it must make a DC 11 Dexterity saving throw, taking 7 ({@damage 2d6}) fire damage on a failed save, or half as much damage on a successful one. Flammable objects that aren't being worn or carried in that area are ignited."
 					]
@@ -28641,7 +28641,7 @@
 			"cr": "1/4",
 			"trait": [
 				{
-					"name": "Death Burst",
+					"name": "死亡自爆", "tENG_name": "Death Burst",
 					"entries": [
 						"When the mephit dies, it explodes in a burst of sticky mud. Each Medium or smaller creature within 5 feet of it must succeed on a DC 11 Dexterity saving throw or be {@condition restrained} until the end of the creature's next turn."
 					]
@@ -28671,9 +28671,9 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Summon Mephits (1/Day)",
+					"name": "召喚魔蝠 (1/日)",
 					"entries": [
-						"The mephit has a {@chance 25|25 percent|25% summoning chance} chance of summoning {@dice 1d4} mephits of its kind. A summoned mephit appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other mephits. It remains for 1 minute, until it or its summoner dies, or until its summoner dismisses it as an action."
+						"魔蝠有{@chance 25|25％|25％召喚機率}機率召喚出{@dice 1d4}個與它同種類的魔蝠。被召喚的魔蝠將出現距離它召喚者60呎內的一處未被佔據空間，做為召喚者的盟友行動，且不能再召喚其它魔蝠。它會持續存在長達1分鐘，直到它或它的召喚者死亡、或直到召喚者以一個動作解消它。"
 					]
 				}
 			],
@@ -36328,7 +36328,7 @@
 			"cr": "1/4",
 			"trait": [
 				{
-					"name": "Death Burst",
+					"name": "死亡自爆", "tENG_name": "Death Burst",
 					"entries": [
 						"When the mephit dies, it leaves behind a cloud of smoke that fills a 5-foot-radius sphere centered on its space. The sphere is heavily obscured. Wind disperses the cloud, which otherwise lasts for 1 minute."
 					]
@@ -36364,9 +36364,9 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Summon Mephits (1/Day)",
+					"name": "召喚魔蝠 (1/日)",
 					"entries": [
-						"The mephit has a {@chance 25|25 percent|25% summoning chance} chance of summoning {@dice 1d4} mephits of its kind. A summoned mephit appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other mephits. It remains for 1 minute, until it or its summoner dies, or until its summoner dismisses it as an action."
+						"魔蝠有{@chance 25|25％|25％召喚機率}機率召喚出{@dice 1d4}個與它同種類的魔蝠。被召喚的魔蝠將出現距離它召喚者60呎內的一處未被佔據空間，做為召喚者的盟友行動，且不能再召喚其它魔蝠。它會持續存在長達1分鐘，直到它或它的召喚者死亡、或直到召喚者以一個動作解消它。"
 					]
 				}
 			],
@@ -37299,7 +37299,7 @@
 			"cr": "1/4",
 			"trait": [
 				{
-					"name": "Death Burst",
+					"name": "死亡自爆", "tENG_name": "Death Burst",
 					"entries": [
 						"When the mephit dies, it explodes in a cloud of steam. Each creature within 5 feet of the mephit must succeed on a DC 10 Dexterity saving throw or take 4 ({@damage 1d8}) fire damage."
 					]
@@ -37335,9 +37335,9 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Summon Mephits (1/Day)",
+					"name": "召喚魔蝠 (1/日)",
 					"entries": [
-						"The mephit has a {@chance 25|25 percent|25% summoning chance} chance of summoning {@dice 1d4} mephits of its kind. A summoned mephit appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other mephits. It remains for 1 minute, until it or its summoner dies, or until its summoner dismisses it as an action."
+						"魔蝠有{@chance 25|25％|25％召喚機率}機率召喚出{@dice 1d4}個與它同種類的魔蝠。被召喚的魔蝠將出現距離它召喚者60呎內的一處未被佔據空間，做為召喚者的盟友行動，且不能再召喚其它魔蝠。它會持續存在長達1分鐘，直到它或它的召喚者死亡、或直到召喚者以一個動作解消它。"
 					]
 				}
 			],

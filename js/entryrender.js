@@ -2914,7 +2914,7 @@ EntryRenderer.monster = {
 	getFluff (mon, legendaryMeta, fluffJson) {
 		const predefined = EntryRenderer.utils.getPredefinedFluff(mon, "monsterFluff");
 
-		const fluff = predefined || (fluffJson || {monster: []}).monster.find(it => it.name === mon.name && it.source === mon.source);
+		const fluff = predefined || (fluffJson || {monster: []}).monster.find(it => (it.name === mon.name || it.name === mon.ENG_name) && it.source === mon.source);
 
 		if (!fluff) return null;
 
