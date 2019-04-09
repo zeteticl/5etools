@@ -16386,7 +16386,7 @@
 			]
 		},
 		{
-			"name": "Gargoyle",
+			"name": "石像鬼", "ENG_name": "Gargoyle",
 			"size": "M",
 			"type": "elemental",
 			"source": "MM",
@@ -16423,7 +16423,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't adamantine"
+					"preNote": "非精金武器且非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -16436,13 +16436,13 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 10,
-			"languages": "Terran",
+			"languages": "土族語",
 			"cr": "2",
 			"trait": [
 				{
 					"name": "擬形", "tENG_name": "False Appearance",
 					"entries": [
-						"While the gargoyle remains motionless, it is indistinguishable from an inanimate statue."
+						"當石像鬼保持不動，它看起來就跟普通的、無生命的雕像一模一樣。"
 					]
 				}
 			],
@@ -16450,7 +16450,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The gargoyle makes two attacks: one with its bite and one with its claws."
+						"石像鬼進行二次攻擊，一次啃咬，一次爪抓。"
 					]
 				},
 				{
@@ -28600,7 +28600,7 @@
 			]
 		},
 		{
-			"name": "Mud Mephit",
+			"name": "泥魔蝠", "ENG_name": "Mud Mephit",
 			"size": "S",
 			"type": "elemental",
 			"source": "MM",
@@ -28637,33 +28637,33 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 10,
-			"languages": "Aquan, Terran",
+			"languages": "水族語、土族語",
 			"cr": "1/4",
 			"trait": [
 				{
 					"name": "死亡自爆", "tENG_name": "Death Burst",
 					"entries": [
-						"When the mephit dies, it explodes in a burst of sticky mud. Each Medium or smaller creature within 5 feet of it must succeed on a DC 11 Dexterity saving throw or be {@condition restrained} until the end of the creature's next turn."
+						"當泥魔蝠死亡時，它將會爆炸成一團黏稠的爛泥。每個距離它5呎內且體型為中型或更小的生物必須成功通過一次DC 11的敏捷豁免，否則陷入{@condition 束縛}狀態直到該生物的下個回合結束。"
 					]
 				},
 				{
 					"name": "擬形", "tENG_name": "False Appearance",
 					"entries": [
-						"While the mephit remains motionless, it is indistinguishable from an ordinary mound of mud."
+						"當泥魔蝠保持不動，它看起來就跟一團普通的爛泥一模一樣。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Fists",
+					"name": "拳擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 3}，觸及5呎，單一生物。{@h}4 ({@damage 1d6 + 1})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Mud Breath {@recharge}",
+					"name": "泥濘吐息{@recharge}",
 					"entries": [
-						"The mephit belches viscid mud onto one creature within 5 feet of it. If the target is Medium or smaller, it must succeed on a DC 11 Dexterity saving throw or be {@condition restrained} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"泥魔蝠向著一個距離它5呎內的生物噴吐出一團半流體的淤泥。若該目標的體型為中型或更小，則它必須成功通過一次DC 11的敏捷豁免，否則陷入{@condition 束縛}狀態長達1分鐘。該生物可以在它的每個回合結束時重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。"
 					]
 				}
 			],
@@ -36286,7 +36286,7 @@
 			]
 		},
 		{
-			"name": "Smoke Mephit",
+			"name": "煙魔蝠", "ENG_name": "Smoke Mephit",
 			"size": "S",
 			"type": "elemental",
 			"source": "MM",
@@ -36324,13 +36324,13 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 12,
-			"languages": "Auran, Ignan",
+			"languages": "氣族語、火族語",
 			"cr": "1/4",
 			"trait": [
 				{
 					"name": "死亡自爆", "tENG_name": "Death Burst",
 					"entries": [
-						"When the mephit dies, it leaves behind a cloud of smoke that fills a 5-foot-radius sphere centered on its space. The sphere is heavily obscured. Wind disperses the cloud, which otherwise lasts for 1 minute."
+						"當煙魔蝠死亡時，它將遺留下一團煙霧，充斥在以它所在空間為中心的5呎半徑球體範圍。這個球體區域內被重度遮蔽。陣風可以將這團煙霧吹散，否則它將持續存在長達1分鐘。"
 					]
 				}
 			],
@@ -36342,18 +36342,18 @@
 					]
 				},
 				{
-					"name": "Cinder Breath {@recharge}",
+					"name": "灰燼吐息{@recharge}",
 					"entries": [
-						"The mephit exhales a 15-foot cone of smoldering ash. Each creature in that area must succeed on a DC 10 Dexterity saving throw or be {@condition blinded} until the end of the mephit's next turn."
+						"煙魔蝠吐出一道15呎錐形的悶燒煙塵。每個在吐息範圍內的生物都必須成功通過一次DC 10的敏捷豁免，否則陷入{@condition 目盲}狀態直到煙魔蝠的下個回合結束。"
 					]
 				}
 			],
 			"page": 217,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting (1/Day)",
+					"name": "天生施法 (1/日)",
 					"headerEntries": [
-						"The mephit can innately cast {@spell 舞光術}, requiring no material components. Its innate spellcasting ability is Charisma."
+						"煙魔蝠天生就可以施放{@spell 舞光術}，且無需任何材料構材。它的天生施法屬性為魅力。"
 					],
 					"headerWill": [
 						"{@spell 舞光術}"
@@ -37261,7 +37261,7 @@
 			]
 		},
 		{
-			"name": "Steam Mephit",
+			"name": "蒸氣魔蝠", "ENG_name": "Steam Mephit",
 			"size": "S",
 			"type": "elemental",
 			"source": "MM",
@@ -37295,13 +37295,13 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 10,
-			"languages": "Aquan, Ignan",
+			"languages": "水族語、火族語",
 			"cr": "1/4",
 			"trait": [
 				{
 					"name": "死亡自爆", "tENG_name": "Death Burst",
 					"entries": [
-						"When the mephit dies, it explodes in a cloud of steam. Each creature within 5 feet of the mephit must succeed on a DC 10 Dexterity saving throw or take 4 ({@damage 1d8}) fire damage."
+						"當蒸氣魔蝠死亡時，它將會爆炸成一團蒸氣雲。每個距離它5呎內的生物都必須成功通過一次DC 10的敏捷豁免，否則受到4 ({@damage 1d8})火焰傷害。"
 					]
 				}
 			],
@@ -37309,22 +37309,22 @@
 				{
 					"name": "爪抓",
 					"entries": [
-						"{@atk mw} 命中{@hit 2}，觸及5呎，單一生物。{@h}2 ({@damage 1d4}) slashing damage plus 2 ({@damage 1d4}) fire damage."
+						"{@atk mw} 命中{@hit 2}，觸及5呎，單一生物。{@h}2 ({@damage 1d4})劈砍傷害加 2 ({@damage 1d4})火焰傷害。"
 					]
 				},
 				{
-					"name": "Steam Breath {@recharge}",
+					"name": "蒸氣吐息{@recharge}",
 					"entries": [
-						"The mephit exhales a 15-foot cone of scalding steam. Each creature in that area must succeed on a DC 10 Dexterity saving throw, taking 4 ({@damage 1d8}) fire damage on a failed save, or half as much damage on a successful one."
+						"蒸氣魔蝠吐出一道15呎錐形的滾燙蒸氣。每個在吐息範圍內的生物都必須成功通過一次DC 10的敏捷豁免，豁免失敗則受到4 ({@damage 1d8})火焰傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
 			"page": 217,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting (1/Day)",
+					"name": "天生施法 (1/日).",
 					"headerEntries": [
-						"The mephit can innately cast {@spell 朦朧術}, requiring no material components. Its innate spellcasting ability is Charisma."
+						"蒸氣魔蝠天生就可以施放{@spell 朦朧術}，且無需任何材料構材。它的天生施法屬性為魅力。"
 					],
 					"headerWill": [
 						"{@spell 朦朧術}"
