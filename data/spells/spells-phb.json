@@ -35,6 +35,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -54,6 +58,12 @@
 			"areaTags": [
 				"ST",
 				"MT"
+			],
+			"backgrounds": [
+				{
+					"name": "Simic Scientist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -100,6 +110,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -141,6 +155,16 @@
 			"page": 211,
 			"areaTags": [
 				"MT"
+			],
+			"backgrounds": [
+				{
+					"name": "Boros Legionnaire",
+					"source": "GGR"
+				},
+				{
+					"name": "Selesnya Initiate",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -187,6 +211,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -247,6 +275,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -309,6 +341,12 @@
 					"source": "UAThatOldBlackMagic",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				}
+			],
+			"backgrounds": [
+				{
+					"name": "Simic Scientist",
+					"source": "GGR"
 				}
 			]
 		},
@@ -399,6 +437,12 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Selesnya Initiate",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -468,6 +512,12 @@
 			"page": 212,
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Selesnya Initiate",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -598,7 +648,13 @@
 			],
 			"page": 212,
 			"permanentEffects": true,
-			"isSummon": true
+			"isSummon": true,
+			"backgrounds": [
+				{
+					"name": "Golgari Agent",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "活化物體", "ENG_name": "Animate Objects",
@@ -644,6 +700,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -698,40 +758,40 @@
 							"20",
 							"18",
 							"命中{@hit +8}，{@damage 1d4 + 4}傷害",
-							"{@dice 1d20+4|4}",
-							"{@dice 1d20+18|18}"
+							"{@dice 1d20-3|4}",
+							"{@dice 1d20+4|18}"
 						],
 						[
 							"{@creature 活化物體(小型)|phb|小型}",
 							"25",
 							"16",
 							"命中{@hit +6}，{@damage 1d8 + 2}傷害",
-							"{@dice 1d20+6|6}",
-							"{@dice 1d20+14|14}"
+							"{@dice 1d20-2|6}",
+							"{@dice 1d20+2|14}"
 						],
 						[
 							"{@creature 活化物體(中型)|phb|中型}",
 							"40",
 							"13",
 							"命中{@hit +5}，{@damage 2d6 + 1}傷害",
-							"{@dice 1d20+10|10}",
-							"{@dice 1d20+12|12}"
+							"{@dice 1d20|10}",
+							"{@dice 1d20+1|12}"
 						],
 						[
 							"{@creature 活化物體(大型)|phb|大型}",
 							"50",
 							"10",
 							"命中{@hit +6}，{@damage 2d10 + 2}傷害",
-							"{@dice 1d20+14|14}",
-							"{@dice 1d20+10|10}"
+							"{@dice 1d20+2|14}",
+							"{@dice 1d20|10}"
 						],
 						[
 							"{@creature 活化物體(巨型)|phb|巨型}",
 							"80",
 							"10",
 							"命中{@hit +8}，{@damage 2d12 + 4}傷害",
-							"{@dice 1d20+18|18}",
-							"{@dice 1d20+6|6}"
+							"{@dice 1d20+4|18}",
+							"{@dice 1d20-3|6}"
 						]
 					]
 				},
@@ -756,7 +816,13 @@
 			"areaTags": [
 				"MT"
 			],
-			"isSummon": true
+			"isSummon": true,
+			"backgrounds": [
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "反活物護罩", "ENG_name": "Antilife Shell",
@@ -1073,6 +1139,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -1124,7 +1194,13 @@
 				"你透過心靈接收來自這個眼睛的視覺情報，它具有正常視覺和30呎的黑暗視覺。這個眼睛可以看向任何方向。",
 				"以一個動作，你可以使這個眼睛向任何方向移動最多30呎距離。眼睛與你之間的距離沒有限制，但它不能進入另一個存在位面。一道固體屏障可以阻擋眼睛的移動，但這個眼睛可以穿過直徑最少1吋的開口。"
 			],
-			"page": 214
+			"page": 214,
+			"backgrounds": [
+				{
+					"name": "Dimir Operative",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "祕法之門", "ENG_name": "Arcane Gate",
@@ -1223,6 +1299,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -1244,6 +1324,12 @@
 					"source": "MTF",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				}
+			],
+			"backgrounds": [
+				{
+					"name": "Azorius Functionary",
+					"source": "GGR"
 				}
 			]
 		},
@@ -1560,6 +1646,16 @@
 							"name": "Kraken (Stream)",
 							"source": "Stream"
 						}
+					},
+					{
+						"class": {
+							"name": "Barbarian",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Ancestral Guardian",
+							"source": "XGE"
+						}
 					}
 				]
 			},
@@ -1654,6 +1750,12 @@
 			"isHeal": true,
 			"areaTags": [
 				"R"
+			],
+			"backgrounds": [
+				{
+					"name": "Selesnya Initiate",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -1820,6 +1922,12 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Selesnya Initiate",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -2348,6 +2456,12 @@
 			"isHeal": true,
 			"areaTags": [
 				"MT"
+			],
+			"backgrounds": [
+				{
+					"name": "Boros Legionnaire",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -2413,6 +2527,12 @@
 			"page": 217,
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Gruul Anarch",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -2545,6 +2665,12 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Orzhov Representative",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -2584,6 +2710,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -2994,6 +3124,12 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Orzhov Representative",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -3059,6 +3195,12 @@
 			],
 			"conditionInflict": [
 				"blinded"
+			],
+			"backgrounds": [
+				{
+					"name": "Boros Legionnaire",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -3219,6 +3361,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -3313,6 +3459,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -3586,6 +3736,12 @@
 			],
 			"areaTags": [
 				"N"
+			],
+			"backgrounds": [
+				{
+					"name": "Rakdos Cultist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -3684,6 +3840,12 @@
 			],
 			"areaTags": [
 				"S"
+			],
+			"backgrounds": [
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -3763,6 +3925,16 @@
 			],
 			"areaTags": [
 				"S"
+			],
+			"backgrounds": [
+				{
+					"name": "Azorius Functionary",
+					"source": "GGR"
+				},
+				{
+					"name": "Selesnya Initiate",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -3964,6 +4136,12 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Selesnya Initiate",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -4335,6 +4513,16 @@
 							"name": "Seeker (UA)",
 							"source": "UATheFaithful"
 						}
+					},
+					{
+						"class": {
+							"name": "Barbarian",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Ancestral Guardian",
+							"source": "XGE"
+						}
 					}
 				]
 			},
@@ -4344,7 +4532,13 @@
 				"當你施放此法術時，你選擇視覺或是聽覺。你可以透過該感應器使用所選的感官，就如同你位於該空間。以一個動作，你可以在視覺和聽覺間切換。",
 				"一個可以看見感應器的生物（例如得益於{@spell 識破隱形}法術或真實視覺的生物）會看見一個約為你拳頭大小，發著光的無形球體。"
 			],
-			"page": 222
+			"page": 222,
+			"backgrounds": [
+				{
+					"name": "Azorius Functionary",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "克隆術", "ENG_name": "Clone",
@@ -4386,7 +4580,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"此法術將培養一個活著生物的無活性複製體做為對抗死亡的防護措施。這個克隆體將在密封容器內成形，並在120天後長成完整體型並生長成熟；你也可以選擇讓這個克隆體成為該生物的年輕版本。只要它的容器保持不受擾動，克隆體將維持無活性的狀態並永久存在。",
+				"此法術將培養一個活著，且體型為中型的生物的無活性複製體做為對抗死亡的防護措施。這個克隆體將在密封容器內成形，並在120天後長成完整體型並生長成熟；你也可以選擇讓這個克隆體成為該生物的年輕版本。只要它的容器保持不受擾動，克隆體將維持無活性的狀態並永久存在。",
 				"在克隆體成熟後的任何時候，若原本的生物死亡，只要它的靈魂不受束縛且自願返回，則它的靈魂將轉移到克隆體身上。這個克隆體在生理上與原本的生物相同，且具有相同的個性、記憶、以及能力，但並沒有它原本的裝備。原本生物的身體殘骸若仍然存在，將因此失去活性，且因為該生物的靈魂已經在別處而無法被復活。"
 			],
 			"page": 222,
@@ -4595,6 +4789,12 @@
 			],
 			"areaTags": [
 				"S"
+			],
+			"backgrounds": [
+				{
+					"name": "Golgari Agent",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -4782,6 +4982,16 @@
 							"name": "Order (UA)",
 							"source": "UAOrderDomain"
 						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Order",
+							"source": "GGR"
+						}
 					}
 				]
 			},
@@ -4843,6 +5053,16 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Azorius Functionary",
+					"source": "GGR"
+				},
+				{
+					"name": "Orzhov Representative",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -4911,6 +5131,16 @@
 						"subclass": {
 							"name": "Order (UA)",
 							"source": "UAOrderDomain"
+						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Order",
+							"source": "GGR"
 						}
 					}
 				]
@@ -5026,7 +5256,13 @@
 				},
 				"舉例來說，你可以判斷出該區域內強大不死生物的位置、可安全飲用的主水源的位置、以及任何附近城鎮的位置。"
 			],
-			"page": 224
+			"page": 224,
+			"backgrounds": [
+				{
+					"name": "Selesnya Initiate",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "強迫決鬥", "ENG_name": "Compelled Duel",
@@ -5109,6 +5345,12 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Gruul Anarch",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -5241,6 +5483,16 @@
 							"name": "Beauty (Stream)",
 							"source": "Twitter"
 						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Order",
+							"source": "GGR"
+						}
 					}
 				]
 			},
@@ -5255,6 +5507,12 @@
 			],
 			"areaTags": [
 				"MT"
+			],
+			"backgrounds": [
+				{
+					"name": "Azorius Functionary",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -5532,6 +5790,12 @@
 			],
 			"areaTags": [
 				"S"
+			],
+			"backgrounds": [
+				{
+					"name": "Rakdos Cultist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -5625,7 +5889,13 @@
 				}
 			],
 			"page": 225,
-			"isSummon": true
+			"isSummon": true,
+			"backgrounds": [
+				{
+					"name": "Gruul Anarch",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "召喚箭幕", "ENG_name": "Conjure Barrage",
@@ -5672,6 +5942,12 @@
 			],
 			"areaTags": [
 				"N"
+			],
+			"backgrounds": [
+				{
+					"name": "Gruul Anarch",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -5805,7 +6081,13 @@
 				}
 			],
 			"isSummon": true,
-			"page": 225
+			"page": 225,
+			"backgrounds": [
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "召喚精類生物", "ENG_name": "Conjure Fey",
@@ -5938,7 +6220,17 @@
 				}
 			],
 			"isSummon": true,
-			"page": 226
+			"page": 226,
+			"backgrounds": [
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
+				},
+				{
+					"name": "Selesnya Initiate",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "召喚箭雨", "ENG_name": "Conjure Volley",
@@ -6347,6 +6639,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -6690,7 +6986,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"你在射程內的地表上插下四枝非魔法彈藥\u2014箭或弩矢\u2014並在其上施加魔法以保護這個區域。直到法術結束前，每當一個你以外的生物在一個回合中第一次進入距離彈藥30呎內的範圍，或在該處結束它的回合，其中一枝彈藥將會飛起並擊向它。該生物必須成功通過一次敏捷豁免，否則受到{@dice 1d6}穿刺傷害。該枝彈藥將會損毀。當沒有剩餘的彈藥時，此法術結束。",
+				"你在射程內的地表上插下四枝非魔法彈藥\u2014{@item 箭|phb}或{@item 弩矢|phb}\u2014並在其上施加魔法以保護這個區域。直到法術結束前，每當一個你以外的生物在一個回合中第一次進入距離彈藥30呎內的範圍，或在該處結束它的回合，其中一枝彈藥將會飛起並擊向它。該生物必須成功通過一次敏捷豁免，否則受到{@dice 1d6}穿刺傷害。該枝彈藥將會損毀。當沒有剩餘的彈藥時，此法術結束。",
 				"當你施放此法術時，你可以指定任何你所選擇的生物，此法術將無視它們。"
 			],
 			"entriesHigherLevel": [
@@ -6790,7 +7086,13 @@
 					]
 				}
 			],
-			"page": 228
+			"page": 228,
+			"backgrounds": [
+				{
+					"name": "Azorius Functionary",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "創造飲食", "ENG_name": "Create Food and Water",
@@ -7004,6 +7306,12 @@
 			],
 			"areaTags": [
 				"C"
+			],
+			"backgrounds": [
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -7042,6 +7350,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -7116,7 +7428,13 @@
 					]
 				}
 			],
-			"page": 229
+			"page": 229,
+			"backgrounds": [
+				{
+					"name": "Simic Scientist",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "瘋狂冠冕", "ENG_name": "Crown of Madness",
@@ -7210,6 +7528,12 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Rakdos Cultist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -7334,6 +7658,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -7451,6 +7779,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -7478,6 +7810,12 @@
 					"source": "UAThatOldBlackMagic",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				}
+			],
+			"backgrounds": [
+				{
+					"name": "Golgari Agent",
+					"source": "GGR"
 				}
 			]
 		},
@@ -7701,6 +8039,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -7953,6 +8295,16 @@
 			"page": 230,
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Boros Legionnaire",
+					"source": "GGR"
+				},
+				{
+					"name": "Orzhov Representative",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -8179,6 +8531,12 @@
 			"areaTags": [
 				"MT",
 				"R"
+			],
+			"backgrounds": [
+				{
+					"name": "Gruul Anarch",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -8289,6 +8647,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -8379,7 +8741,13 @@
 				"在法術持續期間，你可以察覺距離你30呎範圍內任何毒素、有毒生物、疾病的存在和位置。你同時能夠辨識出各毒素、有毒生物、或疾病的種類。",
 				"此法術可以穿透大部分的障礙物，但會被1呎厚的石頭、1吋厚的尋常金屬、一層薄薄的鉛、或3呎的木頭或泥土給阻擋。"
 			],
-			"page": 231
+			"page": 231,
+			"backgrounds": [
+				{
+					"name": "Simic Scientist",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "偵測思想", "ENG_name": "Detect Thoughts",
@@ -8473,6 +8841,12 @@
 					"source": "MTF",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				}
+			],
+			"backgrounds": [
+				{
+					"name": "Dimir Operative",
+					"source": "GGR"
 				}
 			]
 		},
@@ -8620,6 +8994,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -8701,10 +9079,6 @@
 					"source": "VGM"
 				},
 				{
-					"name": "Firbolg",
-					"source": "VGM"
-				},
-				{
 					"name": "Tiefling (Dispater)",
 					"source": "UAFiendishOptions",
 					"baseName": "Tiefling",
@@ -8727,6 +9101,12 @@
 					"source": "MTF",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				}
+			],
+			"backgrounds": [
+				{
+					"name": "Dimir Operative",
+					"source": "GGR"
 				}
 			]
 		},
@@ -8924,6 +9304,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -9044,6 +9428,12 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Rakdos Cultist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -9117,7 +9507,17 @@
 				"此法術並不會將任何可能改變結果的潛在環境因素納入考量，像是施展額外的法術或者同伴的加入或離去。",
 				"若你在完成下一次長休之前施放此法術兩次或以上，則第一次之後的每次施放都會有累積25%的機率導致隨機的結果。DM將暗自擲骰決定。"
 			],
-			"page": 234
+			"page": 234,
+			"backgrounds": [
+				{
+					"name": "Azorius Functionary",
+					"source": "GGR"
+				},
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "神恩術", "ENG_name": "Divine Favor",
@@ -9388,6 +9788,12 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Gruul Anarch",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -9624,6 +10030,16 @@
 							"name": "Beauty (Stream)",
 							"source": "Twitter"
 						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Order",
+							"source": "GGR"
+						}
 					}
 				]
 			},
@@ -9652,6 +10068,16 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Azorius Functionary",
+					"source": "GGR"
+				},
+				{
+					"name": "Rakdos Cultist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -9839,7 +10265,17 @@
 					]
 				}
 			],
-			"page": 236
+			"page": 236,
+			"backgrounds": [
+				{
+					"name": "Selesnya Initiate",
+					"source": "GGR"
+				},
+				{
+					"name": "Simic Scientist",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "地震術", "ENG_name": "Earthquake",
@@ -9977,7 +10413,8 @@
 			],
 			"scalingEffects": true,
 			"areaTags": [
-				"ST"
+				"ST",
+				"MT"
 			]
 		},
 		{
@@ -10015,6 +10452,10 @@
 					{
 						"name": "Paladin",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -10100,6 +10541,12 @@
 				"fire",
 				"lightning",
 				"thunder"
+			],
+			"backgrounds": [
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -10154,6 +10601,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -10257,6 +10708,12 @@
 			"page": 237,
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Simic Scientist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -10304,6 +10761,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -10370,6 +10831,12 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Simic Scientist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -10447,6 +10914,16 @@
 			],
 			"conditionInflict": [
 				"restrained"
+			],
+			"backgrounds": [
+				{
+					"name": "Azorius Functionary",
+					"source": "GGR"
+				},
+				{
+					"name": "Azorius Functionary",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -10539,6 +11016,12 @@
 			],
 			"areaTags": [
 				"Q"
+			],
+			"backgrounds": [
+				{
+					"name": "Golgari Agent",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -10613,6 +11096,16 @@
 			],
 			"areaTags": [
 				"MT"
+			],
+			"backgrounds": [
+				{
+					"name": "Orzhov Representative",
+					"source": "GGR"
+				},
+				{
+					"name": "Rakdos Cultist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -10834,6 +11327,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -10853,7 +11350,13 @@
 			"entries": [
 				"此法術讓你能以驚人的速度移動。當你施放此法術時，你接著直到法術結束前的每個回合都能夠以一個附贈動作採取{@action 疾走}動作。"
 			],
-			"page": 238
+			"page": 238,
+			"backgrounds": [
+				{
+					"name": "Simic Scientist",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "攝心目光", "ENG_name": "Eyebite",
@@ -10977,6 +11480,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -11155,6 +11662,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -11363,6 +11874,12 @@
 			],
 			"areaTags": [
 				"N"
+			],
+			"backgrounds": [
+				{
+					"name": "Rakdos Cultist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -11902,6 +12419,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -11941,6 +12462,20 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Boros Legionnaire",
+					"source": "GGR"
+				},
+				{
+					"name": "Gruul Anarch",
+					"source": "GGR"
+				},
+				{
+					"name": "Rakdos Cultist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -12406,6 +12941,12 @@
 			],
 			"areaTags": [
 				"Y"
+			],
+			"backgrounds": [
+				{
+					"name": "Boros Legionnaire",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -12529,6 +13070,12 @@
 			],
 			"areaTags": [
 				"S"
+			],
+			"backgrounds": [
+				{
+					"name": "Rakdos Cultist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -12642,6 +13189,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -12997,6 +13548,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -13095,6 +13650,16 @@
 			"page": 244,
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Dimir Operative",
+					"source": "GGR"
+				},
+				{
+					"name": "Simic Scientist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -13178,6 +13743,20 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Azorius Functionary",
+					"source": "GGR"
+				},
+				{
+					"name": "Orzhov Representative",
+					"source": "GGR"
+				},
+				{
+					"name": "Selesnya Initiate",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -13228,6 +13807,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -13263,6 +13846,16 @@
 			"page": 244,
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Dimir Operative",
+					"source": "GGR"
+				},
+				{
+					"name": "Simic Scientist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -13417,6 +14010,12 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Orzhov Representative",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -13575,6 +14174,12 @@
 			"page": 245,
 			"areaTags": [
 				"MT"
+			],
+			"backgrounds": [
+				{
+					"name": "Golgari Agent",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -13737,6 +14342,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -13809,6 +14418,12 @@
 			],
 			"areaTags": [
 				"S"
+			],
+			"backgrounds": [
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -13923,6 +14538,12 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Golgari Agent",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -13961,6 +14582,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -14154,6 +14779,10 @@
 					{
 						"name": "Druid",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -14465,6 +15094,10 @@
 					{
 						"name": "Druid",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -14475,6 +15108,12 @@
 			"page": 248,
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Orzhov Representative",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -14559,6 +15198,12 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Boros Legionnaire",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -15053,6 +15698,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -15137,6 +15786,12 @@
 			"page": 250,
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Rakdos Cultist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -15297,6 +15952,10 @@
 					{
 						"name": "Druid",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -15355,6 +16014,12 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -15452,6 +16117,12 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Rakdos Cultist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -15582,6 +16253,16 @@
 							"name": "Beauty (Stream)",
 							"source": "Twitter"
 						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Order",
+							"source": "GGR"
+						}
 					}
 				]
 			},
@@ -15601,6 +16282,12 @@
 			"page": 250,
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Boros Legionnaire",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -15975,6 +16662,16 @@
 							"source": "UAGiantSoulSorcerer",
 							"subSubclass": "Frost"
 						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Order",
+							"source": "GGR"
+						}
 					}
 				]
 			},
@@ -16000,6 +16697,12 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Azorius Functionary",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -16450,6 +17153,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -16557,7 +17264,13 @@
 				"一旦此法術被解除，原始手稿和幻象將一起消失。",
 				"一個擁有真實視覺的生物可以讀出被隱藏的訊息。"
 			],
-			"page": 252
+			"page": 252,
+			"backgrounds": [
+				{
+					"name": "Orzhov Representative",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "禁錮術", "ENG_name": "Imprisonment",
@@ -16995,6 +17708,12 @@
 			],
 			"areaTags": [
 				"S"
+			],
+			"backgrounds": [
+				{
+					"name": "Golgari Agent",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -17049,6 +17768,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -17196,6 +17919,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -17242,6 +17969,12 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Simic Scientist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -17427,6 +18160,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -17449,7 +18186,13 @@
 				"在60天後，每一天此法術的效果都會有累積5%的機率就此結束。此法術會在你再次施放此法術時、箱子的小複製品被摧毀時、或是你選擇以一個動作結束此法術時結束。若此法術結束時那個較大的那個箱子仍處在乙太位面，則它將就此遺失，無法挽回。"
 			],
 			"page": 254,
-			"permanentEffects": true
+			"permanentEffects": true,
+			"backgrounds": [
+				{
+					"name": "Orzhov Representative",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "李歐蒙小屋", "ENG_name": "Leomund's Tiny Hut",
@@ -17558,6 +18301,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -17659,6 +18406,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -17748,6 +18499,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -18134,6 +18889,16 @@
 							"name": "Order (UA)",
 							"source": "UAOrderDomain"
 						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Order",
+							"source": "GGR"
+						}
 					}
 				]
 			},
@@ -18275,6 +19040,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -18394,6 +19163,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -18452,6 +19225,12 @@
 					"source": "MTF",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				}
+			],
+			"backgrounds": [
+				{
+					"name": "Dimir Operative",
+					"source": "GGR"
 				}
 			]
 		},
@@ -18730,7 +19509,8 @@
 				}
 			],
 			"areaTags": [
-				"ST"
+				"ST",
+				"MT"
 			]
 		},
 		{
@@ -18776,6 +19556,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -18833,6 +19617,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -19235,6 +20023,18 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Order",
+							"source": "GGR"
+						}
+					}
 				]
 			},
 			"source": "PHB",
@@ -19383,6 +20183,12 @@
 			],
 			"conditionInflict": [
 				"prone"
+			],
+			"backgrounds": [
+				{
+					"name": "Dimir Operative",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -19504,6 +20310,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -19558,6 +20368,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -19577,6 +20391,12 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Azorius Functionary",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -20214,6 +21034,12 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Dimir Operative",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -20335,6 +21161,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -20443,6 +21273,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -20678,6 +21512,12 @@
 			"page": 263,
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Dimir Operative",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -20860,6 +21700,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -20923,6 +21767,12 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -21061,6 +21911,12 @@
 			],
 			"areaTags": [
 				"MT"
+			],
+			"backgrounds": [
+				{
+					"name": "Dimir Operative",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -21710,7 +22566,17 @@
 				"你可以從此法術區域內排除一個或更多任意大小的區域不受此法術影響。",
 				"若你以超過8小時的時間施放此法術，則你使這片土地變得肥沃。以射程內一點為中心半哩半徑範圍內的所有植物都會變得豐饒持續整整1年。這些植物在收穫時將產出原本兩倍數量的食物。"
 			],
-			"page": 266
+			"page": 266,
+			"backgrounds": [
+				{
+					"name": "Golgari Agent",
+					"source": "GGR"
+				},
+				{
+					"name": "Selesnya Initiate",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "毒氣噴灑", "ENG_name": "Poison Spray",
@@ -21755,6 +22621,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -21859,6 +22729,12 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Simic Scientist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -22119,6 +22995,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -22461,6 +23341,16 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Gruul Anarch",
+					"source": "GGR"
+				},
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -22638,6 +23528,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -22976,6 +23870,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -23012,6 +23910,12 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Golgari Agent",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -23317,6 +24221,16 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Golgari Agent",
+					"source": "GGR"
+				},
+				{
+					"name": "Orzhov Representative",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -23354,6 +24268,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -23503,6 +24421,12 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Golgari Agent",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -23859,6 +24783,10 @@
 					{
 						"name": "Druid",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -24042,6 +24970,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -24146,6 +25078,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -24198,7 +25134,17 @@
 				"攻擊和法術無法穿出或穿入異位面的入口，但在異位面內的人可以透過入口看到外面的景象，就彷彿以繩子為中心的位置有著一扇3呎x5呎大小的窗戶一樣。",
 				"當此法術結束時，任何在異位面內的東西都會掉出來。"
 			],
-			"page": 272
+			"page": 272,
+			"backgrounds": [
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
+				},
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "聖焰", "ENG_name": "Sacred Flame",
@@ -24271,6 +25217,12 @@
 			"scalingEffects": true,
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Boros Legionnaire",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -24313,6 +25265,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -24443,7 +25399,14 @@
 				"R"
 			],
 			"areaTags": [
-				"ST"
+				"ST",
+				"MT"
+			],
+			"backgrounds": [
+				{
+					"name": "Boros Legionnaire",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -24789,6 +25752,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -25203,6 +26170,12 @@
 			],
 			"areaTags": [
 				"S"
+			],
+			"backgrounds": [
+				{
+					"name": "Gruul Anarch",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -25354,6 +26327,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -25479,6 +26456,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -25510,6 +26491,12 @@
 			"scalingEffects": true,
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -25816,6 +26803,12 @@
 			],
 			"areaTags": [
 				"S"
+			],
+			"backgrounds": [
+				{
+					"name": "Dimir Operative",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -25981,6 +26974,16 @@
 							"name": "Order (UA)",
 							"source": "UAOrderDomain"
 						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Order",
+							"source": "GGR"
+						}
 					}
 				]
 			},
@@ -26031,6 +27034,10 @@
 					{
 						"name": "Cleric",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -26055,6 +27062,12 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Golgari Agent",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -26151,7 +27164,13 @@
 			"entries": [
 				"你在法術持續期間獲得能夠理解且與野獸透過言語溝通的能力。許多野獸的知識和認知能力受限於他們的智力，但至少，牠們都能提供你關於周遭地域和怪物的情報，包括任何牠們能察覺或在過去幾天內察覺到的事物。你也許可以說服也受幫你一個小忙，由DM決定。"
 			],
-			"page": 277
+			"page": 277,
+			"backgrounds": [
+				{
+					"name": "Gruul Anarch",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "死者交談術", "ENG_name": "Speak with Dead",
@@ -26243,7 +27262,13 @@
 				"你賦予射程內一個你選擇的屍體虛假的生命和智力，讓它能回答你所提出的問題。這具屍體必須仍擁有嘴巴，且不能是不死生物。若這具屍體在最近10天內曾做為此法術的目標,則此法術失敗。",
 				"直到此法術結束前，你可以詢問屍體最多五個問題。這具屍體只會知曉它生前所知的事情，包括語言。它的回答通常會是簡短的、晦澀的、或重覆的。若你對它有敵意、或它將你認做敵人，這具屍體不會被強迫提供誠實的回答。此法術並不會讓該生物的靈魂回到它的身體，而只會帶回它的精魄。因此，這具屍體無法得知新的情報、無法理解任何它在死後發生的事情、也無法推測關於未來的事件。"
 			],
-			"page": 277
+			"page": 277,
+			"backgrounds": [
+				{
+					"name": "Orzhov Representative",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "植物交談術", "ENG_name": "Speak with Plants",
@@ -26299,7 +27324,13 @@
 				"如果一個植物生物在該區域內，你可以如同你和它之間有著共通語言一般與之交談，但你不會因此獲得影響它的魔法能力。",
 				"此法術可以讓{@spell 糾纏術}創造出的植物釋放一個被{@condition 束縛}的生物。"
 			],
-			"page": 277
+			"page": 277,
+			"backgrounds": [
+				{
+					"name": "Selesnya Initiate",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "蛛行術", "ENG_name": "Spider Climb",
@@ -26349,6 +27380,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -26398,6 +27433,12 @@
 					"source": "UAThatOldBlackMagic",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				}
+			],
+			"backgrounds": [
+				{
+					"name": "Golgari Agent",
+					"source": "GGR"
 				}
 			]
 		},
@@ -26592,6 +27633,12 @@
 			],
 			"areaTags": [
 				"S"
+			],
+			"backgrounds": [
+				{
+					"name": "Orzhov Representative",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -26950,6 +27997,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -27039,6 +28090,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -27136,6 +28191,12 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Gruul Anarch",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -28364,6 +29425,10 @@
 					{
 						"name": "Druid",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -28568,6 +29633,12 @@
 			],
 			"areaTags": [
 				"C"
+			],
+			"backgrounds": [
+				{
+					"name": "Gruul Anarch",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -29182,7 +30253,13 @@
 				"你的每個回合一次，以一次附贈動作，你可以用精神命令這個僕役移動最多15呎並與一個物件互動。這個僕役可以執行人類僕從可以進行的簡單工作，像是拿取東西、打掃、縫補、摺衣服、點火、上菜、和倒酒等等。一旦你下達了命令，這個僕役將會盡它的全力去執行任務，直到工作完成，並接著等候你的下一個命令。",
 				"如果你命令僕役去執行一項會讓它離你超過60呎距離的工作，則此法術結束。"
 			],
-			"page": 284
+			"page": 284,
+			"backgrounds": [
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "吸血鬼之觸", "ENG_name": "Vampiric Touch",
@@ -29369,6 +30446,12 @@
 			],
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Rakdos Cultist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -29505,6 +30588,16 @@
 			],
 			"areaTags": [
 				"W"
+			],
+			"backgrounds": [
+				{
+					"name": "Boros Legionnaire",
+					"source": "GGR"
+				},
+				{
+					"name": "Rakdos Cultist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -29704,6 +30797,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -29887,6 +30984,12 @@
 			"page": 287,
 			"areaTags": [
 				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Selesnya Initiate",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -29941,6 +31044,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -29977,6 +31084,12 @@
 			"page": 287,
 			"areaTags": [
 				"MT"
+			],
+			"backgrounds": [
+				{
+					"name": "Simic Scientist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -30031,6 +31144,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -30351,6 +31468,12 @@
 			],
 			"areaTags": [
 				"W"
+			],
+			"backgrounds": [
+				{
+					"name": "Simic Scientist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -30741,6 +31864,16 @@
 							"name": "Monster Slayer",
 							"source": "XGE"
 						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Order",
+							"source": "GGR"
+						}
 					}
 				]
 			},
@@ -30755,6 +31888,12 @@
 			],
 			"areaTags": [
 				"S"
+			],
+			"backgrounds": [
+				{
+					"name": "Orzhov Representative",
+					"source": "GGR"
+				}
 			]
 		}
 	]

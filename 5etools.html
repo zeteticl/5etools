@@ -48,8 +48,31 @@
 	<ul class="nav nav-pills" id="navbar">
 	</ul>
 </nav>
+
+<div class="cancer__wrp-leaderboard"><!--5ETOOLS_AD_LEADERBOARD--></div>
+<div class="cancer__wrp-sidebar-rhs"><!--5ETOOLS_AD_RIGHT_1--><!--5ETOOLS_AD_RIGHT_2--></div>
+
 <main class="container">
 	<div class="alert alert-warning"><p><strong>注意：</strong>本站為非官方/個人的翻譯，且並不保證資料為最新版。5etools開發團隊並不支援本站。請自行承擔使用風險。除非你沒有其他選擇，否則請使用位於<a class="alert-link" href="https://5e.tools/" target="_blank">5e.tools</a>的官方網站。</p></div>
+	<!--<div class="alert alert-warning">-->
+		<!--<p><strong>Discord update:</strong> A recent bot-hijack resulted in many accounts being banned from our Discord server, along with a general server reset. Besides bans, no user accounts were affected, and the server has largely been restored to its former state. <a class="alert-link" href="https://discord.gg/AzyBjtQ" target="_blank" rel="noopener">You can rejoin here.</a></p>-->
+	<!--</div>-->
+	<!--
+	<div id="don-wrapper" class="alert alert-info" style="display: none">
+		<div class="split" style="align-items: center">
+			<div class="text-align-center" style="max-width: 260px; padding-right: 10px;">For those with an abundance of gold, we accept <a href="donate.html">donations</a>.</div>
+			<div style="width: 100%">
+				<div class="don__bar don__bar--home">
+					<div class="don__bar_inner"></div>
+				</div>
+				<div class="split">
+					<span>€0.00</span>
+					<span id="don-total">Loading...</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	-->
 	<div class="row">
 		<table class="home-table">
 			<tr>
@@ -217,18 +240,19 @@
 <footer class="container">
 	<p class="text-align-center">
 		Version
-		<!--5ETOOLS_VERSION__FOOTER_OPEN-->1.70.1<!--5ETOOLS_VERSION__FOOTER_CLOSE-->
-		| <span style="text-decoration: red line-through">&nbsp;&copy;&nbsp;</span>2018 5etools
+		<!--5ETOOLS_VERSION__FOOTER_OPEN-->1.73.5<!--5ETOOLS_VERSION__FOOTER_CLOSE-->
+		| <span style="text-decoration: red line-through">&nbsp;&copy;&nbsp;</span><span id="current_year">2019</span> 5etools
 		<br>
 		<i>5etools&reg; is a Registered Trademark of The Norr Group, LLC. All rights reserved.</i>
 	</p>
 </footer>
 <!--5ETOOLS_SCRIPT_ANCHOR-->
 <script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/utils-ui.js"></script>
 <script type="text/javascript" src="lib/localforage.js"></script>
 <script type="text/javascript" src="js/omnidexer.js"></script>
 <script type="text/javascript" src="js/omnisearch.js"></script>
-<script type="text/javascript" src="js/entryrender.js"></script>
+<script type="text/javascript" src="js/render.js"></script>
 <script type="text/javascript" src="js/scalecreature.js"></script>
 <script type="text/javascript" src="lib/jquery.js"></script>
 <script type="text/javascript" src="lib/jquery-ui.js"></script>
@@ -238,8 +262,12 @@
 	ExcludeUtil.pInitialise();
 
 	const $demoRoller = $(`#demo_roller`);
-	$demoRoller.html(EntryRenderer.getDefaultRenderer().renderEntry(`{@dice ${$demoRoller.html()}}`));
+	$demoRoller.html(Renderer.get().render(`{@dice ${$demoRoller.html()}}`));
 
+	$(`#current_year`).text((new Date).getFullYear());
+
+	// TAG Disabled until further notice
+	/*
 	(async () => {
 		if (!await _Donate.pNotDonating()) {
 			const $wrpDon = $(`#don-wrapper`).show();
@@ -255,6 +283,7 @@
 			_Donate.init();
 		}
 	})();
+	*/
 </script>
 </body>
 </html>

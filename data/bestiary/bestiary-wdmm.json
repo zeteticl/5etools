@@ -178,6 +178,11 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"damageTags": [
+				"B",
+				"P",
+				"L"
 			]
 		},
 		{
@@ -302,6 +307,10 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"damageTags": [
+				"P",
+				"S"
 			]
 		},
 		{
@@ -636,6 +645,10 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"damageTags": [
+				"P",
+				"S"
 			]
 		},
 		{
@@ -824,6 +837,11 @@
 			],
 			"spellcastingTags": [
 				"CW"
+			],
+			"damageTags": [
+				"S",
+				"P",
+				"I"
 			]
 		},
 		{
@@ -941,6 +959,10 @@
 			],
 			"languageTags": [
 				"CS"
+			],
+			"damageTags": [
+				"P",
+				"N"
 			]
 		},
 		{
@@ -1047,6 +1069,11 @@
 			],
 			"traitTags": [
 				"Regeneration"
+			],
+			"damageTags": [
+				"S",
+				"P",
+				"I"
 			]
 		},
 		{
@@ -1245,6 +1272,11 @@
 			],
 			"actionTags": [
 				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"P",
+				"N"
 			]
 		},
 		{
@@ -1285,7 +1317,7 @@
 		},
 		{
 			"name": "Captain N'ghathrod",
-			"isNPC": true,
+			"isNpc": true,
 			"source": "WDMM",
 			"page": 250,
 			"hp": {
@@ -1451,6 +1483,9 @@
 			],
 			"senseTags": [
 				"B"
+			],
+			"damageTags": [
+				"F"
 			]
 		},
 		{
@@ -1568,7 +1603,10 @@
 						}
 					}
 				}
-			}
+			},
+			"damageTags": [
+				"B"
+			]
 		},
 		{
 			"name": "Iron Spider",
@@ -1674,7 +1712,7 @@
 		},
 		{
 			"name": "Maddgoth's Homunculus",
-			"isNPC": true,
+			"isNpc": true,
 			"source": "WDMM",
 			"page": 96,
 			"cr": "2",
@@ -1711,7 +1749,7 @@
 		},
 		{
 			"name": "Otto",
-			"isNPC": true,
+			"isNpc": true,
 			"source": "WDMM",
 			"page": 96,
 			"cr": "3",
@@ -1870,6 +1908,10 @@
 			],
 			"senseTags": [
 				"B"
+			],
+			"damageTags": [
+				"L",
+				"B"
 			]
 		},
 		{
@@ -1916,6 +1958,10 @@
 			],
 			"senseTags": [
 				"B"
+			],
+			"damageTags": [
+				"B",
+				"F"
 			]
 		},
 		{
@@ -1966,11 +2012,17 @@
 				"DR",
 				"D",
 				"T"
+			],
+			"damageTags": [
+				"P",
+				"S",
+				"B",
+				"A"
 			]
 		},
 		{
 			"name": "Umbraxakar",
-			"isNPC": true,
+			"isNpc": true,
 			"source": "WDMM",
 			"page": 241,
 			"alignment": [
@@ -1989,6 +2041,12 @@
 				"Amphibious",
 				"Legendary Resistances",
 				"Sunlight Sensitivity"
+			],
+			"damageTags": [
+				"P",
+				"S",
+				"B",
+				"N"
 			]
 		},
 		{
@@ -2026,7 +2084,11 @@
 						"with": "poison weird"
 					}
 				}
-			}
+			},
+			"damageTags": [
+				"B",
+				"I"
+			]
 		},
 		{
 			"name": "Carrion Ogre",
@@ -2072,11 +2134,15 @@
 			"actionTags": [
 				"Multiattack",
 				"Tentacles"
+			],
+			"damageTags": [
+				"I",
+				"P"
 			]
 		},
 		{
 			"name": "Emberosa",
-			"isNPC": true,
+			"isNpc": true,
 			"source": "WDMM",
 			"page": 185,
 			"hp": {
@@ -2097,18 +2163,23 @@
 						}
 					}
 				}
-			}
+			},
+			"damageTags": [
+				"S",
+				"B",
+				"F"
+			]
 		},
 		{
 			"name": "Berlain",
-			"isNPC": true,
+			"isNpc": true,
 			"source": "WDMM",
 			"page": 283,
 			"alignment": [
 				"C",
 				"E"
 			],
-			"type": "abberation",
+			"type": "aberration",
 			"languages": "Common, Deep Speech, Grell, Undercommon",
 			"_copy": {
 				"name": "Archmage",
@@ -2229,14 +2300,14 @@
 		},
 		{
 			"name": "Cassiok Shadowdusk",
-			"isNPC": true,
+			"isNpc": true,
 			"source": "WDMM",
 			"page": 287,
 			"alignment": [
 				"C",
 				"E"
 			],
-			"type": "abberation",
+			"type": "aberration",
 			"languages": "Common, Deep Speech, Infernal, Undercommon",
 			"ac": [
 				14,
@@ -2374,7 +2445,7 @@
 		},
 		{
 			"name": "Valtagar Steelshadow",
-			"isNPC": true,
+			"isNpc": true,
 			"source": "WDMM",
 			"page": 271,
 			"alignment": [
@@ -2559,7 +2630,7 @@
 		},
 		{
 			"name": "Sundeth",
-			"isNPC": true,
+			"isNpc": true,
 			"source": "WDMM",
 			"page": 304,
 			"alignment": [
@@ -2592,7 +2663,7 @@
 		},
 		{
 			"name": "Kavil",
-			"isNPC": true,
+			"isNpc": true,
 			"source": "WDMM",
 			"page": 205,
 			"alignment": [
@@ -2708,7 +2779,7 @@
 		},
 		{
 			"name": "Gorka Tharn",
-			"isNPC": true,
+			"isNpc": true,
 			"source": "WDMM",
 			"page": 257,
 			"languages": "Dwarvish, Undercommon",
@@ -2804,7 +2875,7 @@
 		},
 		{
 			"name": "Nester",
-			"isNPC": true,
+			"isNpc": true,
 			"source": "WDMM",
 			"page": 131,
 			"type": "undead",
@@ -2930,7 +3001,7 @@
 		},
 		{
 			"name": "Trenzia",
-			"isNPC": true,
+			"isNpc": true,
 			"source": "WDMM",
 			"page": 32,
 			"resist": [
@@ -3004,12 +3075,16 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"damageTags": [
+				"L"
+			]
 		},
 		{
 			"name": "Undead Bulette",
 			"source": "WDMM",
 			"page": 0,
+			"type": "undead",
 			"hp": {
 				"average": 125,
 				"formula": "9d10 + 45"

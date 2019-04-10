@@ -5,7 +5,7 @@ const META_URL = "meta.json";
 const FLUFF_INDEX = "fluff-index.json";
 const JSON_LIST_NAME = "monster";
 const ECGEN_BASE_PLAYERS = 4; // assume a party size of four
-const renderer = EntryRenderer.getDefaultRenderer();
+const renderer = Renderer.get();
 
 window.PROF_MODE_BONUS = "bonus";
 window.PROF_MODE_DICE = "dice";
@@ -14,7 +14,8 @@ window.PROF_DICE_MODE = PROF_MODE_BONUS;
 function imgError (x) {
 	if (x) $(x).remove();
 	$(`#pagecontent th.name`).css("padding-right", "0.3em");
-	$(`.mon__wrp_hp`).css("max-width", "none");
+	$(`.mon__wrp-size-type-align`).css("max-width", "none");
+	$(`.mon__wrp-hp`).css("max-width", "none");
 }
 
 function handleStatblockScroll (event, ele) {
@@ -50,10 +51,6 @@ function getAllImmRest (toParse, key) {
 	return out;
 }
 
-function basename (str, sep) {
-	return str.substr(str.lastIndexOf(sep) + 1);
-}
-
 const meta = {};
 const languages = {};
 
@@ -85,14 +82,8 @@ function addLegendaryGroups (toAdd) {
 }
 
 let ixFluff = {};
-function pLoadFluffIndex () {
-	return new Promise(resolve => {
-		DataUtil.loadJSON(JSON_DIR + FLUFF_INDEX)
-			.then((data) => {
-				ixFluff = data;
-				resolve();
-			});
-	});
+async function pLoadFluffIndex () {
+	ixFluff = await DataUtil.loadJSON(JSON_DIR + FLUFF_INDEX);
 }
 
 function handleBrew (homebrew) {
@@ -106,7 +97,7 @@ function pPostLoad () {
 		BrewUtil.pAddBrewData()
 			.then(handleBrew)
 			.then(() => BrewUtil.bind({list}))
-			.then(BrewUtil.pAddLocalBrewData)
+			.then(() => BrewUtil.pAddLocalBrewData())
 			.catch(BrewUtil.pPurgeBrew)
 			.then(async () => {
 				BrewUtil.makeBrewButton("manage-brew");
@@ -140,6 +131,7 @@ window.onload = async function load () {
 		skillFilter,
 		senseFilter,
 		languageFilter,
+		damageTypeFilter,
 		acFilter,
 		averageHpFilter,
 		abilityScoreFilter
@@ -188,22 +180,7 @@ const acFilter = new RangeFilter({header: "Armor Class",headerName:"護甲等級
 const averageHpFilter = new RangeFilter({header: "Average Hit Points",headerName:"平均生命值"});
 const typeFilter = new Filter({
 	header: "Type", headerName: "生物類型",
-	items: [
-		"aberration",
-		"beast",
-		"celestial",
-		"construct",
-		"dragon",
-		"elemental",
-		"fey",
-		"fiend",
-		"giant",
-		"humanoid",
-		"monstrosity",
-		"ooze",
-		"plant",
-		"undead"
-	],
+	items: Parser.MON_TYPES,
 	displayFn: Parser.monTypeToPlural
 });
 const tagFilter = new Filter({header: "Tag", headerName: "類型附標", items:["any race"], displayFn: Parser.MonsterTagToDisplay});
@@ -217,6 +194,11 @@ const languageFilter = new Filter({
 	displayFn: (k) => Parser.LanguageToDisplay(languages[k]),
 	umbrellaItems: ["X", "XX"],
 	umbrellaExcludes: ["CS"]
+});
+const damageTypeFilter = new Filter({
+	header: "Damage Inflicted",
+	displayFn: (it) => Parser.dmgTypeToFull(it).toTitleCase(),
+	items: ["A", "B", "C", "F", "O", "L", "N", "P", "I", "Y", "R", "S", "T"]
 });
 const senseFilter = new Filter({
 	header: "Senses", headerName: "感官能力",
@@ -424,7 +406,7 @@ function pPageInit (loadedSources) {
 		sortFunction: sortMonsters,
 		onUpdate: onSublistChange,
 		uidHandler: (mon, uid) => ScaleCreature.scale(mon, Number(uid.split("_").last())),
-		uidUnpacker: (uid) => ({scaled: Number(uid.split("_").last()), uid})
+		uidUnpacker: getUnpackedUid
 	});
 	const baseHandlerOptions = {shiftCount: 5};
 	function addHandlerGenerator () {
@@ -433,7 +415,7 @@ function pPageInit (loadedSources) {
 			if (lastRendered.isScaled) {
 				if (evt.shiftKey) ListUtil.pDoSublistAdd(History.lastLoadedId, true, 5, getScaledData());
 				else ListUtil.pDoSublistAdd(History.lastLoadedId, true, 1, getScaledData());
-			} else ListUtil._genericAddButtonHandler(evt, baseHandlerOptions);
+			} else ListUtil.genericAddButtonHandler(evt, baseHandlerOptions);
 		};
 	}
 	function subtractHandlerGenerator () {
@@ -442,7 +424,7 @@ function pPageInit (loadedSources) {
 			if (lastRendered.isScaled) {
 				if (evt.shiftKey) ListUtil.pDoSublistSubtract(History.lastLoadedId, 5, getScaledData());
 				else ListUtil.pDoSublistSubtract(History.lastLoadedId, 1, getScaledData());
-			} else ListUtil._genericSubtractButtonHandler(evt, baseHandlerOptions);
+			} else ListUtil.genericSubtractButtonHandler(evt, baseHandlerOptions);
 		};
 	}
 	ListUtil.bindAddButton(addHandlerGenerator, baseHandlerOptions);
@@ -453,7 +435,7 @@ function pPageInit (loadedSources) {
 	printBookView = new BookModeView("bookview", $(`#btn-printbook`), "If you wish to view multiple creatures, please first make a list",
 		($tbl) => {
 			return new Promise(resolve => {
-				const promises = ListUtil._genericPinKeyMapper();
+				const promises = ListUtil.genericPinKeyMapper();
 
 				Promise.all(promises).then(toShow => {
 					toShow.sort((a, b) => SortUtil.ascSort(a._displayName || a.name, b._displayName || b.name));
@@ -464,12 +446,12 @@ function pPageInit (loadedSources) {
 
 					const renderCreature = (mon) => {
 						stack.push(`<table class="printbook-bestiary-entry"><tbody>`);
-						stack.push(EntryRenderer.monster.getCompactRenderedString(mon, renderer));
+						stack.push(Renderer.monster.getCompactRenderedString(mon, renderer));
 						if (mon.legendaryGroup) {
 							const thisGroup = (meta[mon.legendaryGroup.source] || {})[mon.legendaryGroup.name];
 							if (thisGroup) {
-								stack.push(EntryRenderer.monster.getCompactRenderedStringSection(thisGroup, renderer, "Lair Actions", "lairActions", 0));
-								stack.push(EntryRenderer.monster.getCompactRenderedStringSection(thisGroup, renderer, "Regional Effects", "regionalEffects", 0));
+								stack.push(Renderer.monster.getCompactRenderedStringSection(thisGroup, renderer, "Lair Actions", "lairActions", 0));
+								stack.push(Renderer.monster.getCompactRenderedStringSection(thisGroup, renderer, "Regional Effects", "regionalEffects", 0));
 							}
 						}
 						stack.push(`</tbody></table>`);
@@ -520,11 +502,13 @@ class EncounterBuilderUtils {
 		return ListUtil.sublist.items.map(it => {
 			const mon = monsters[Number(it._values.id)];
 			if (mon.cr) {
+				const crScaled = it._values.uid ? Number(getUnpackedUid(it._values.uid).scaled) : null;
 				return {
-					cr: Parser.crToNumber(it._values.cr),
+					cr: it._values.cr,
 					count: Number(it._values.count),
 
 					// used for encounter adjuster
+					crScaled: crScaled,
 					uid: it._values.uid,
 					hash: UrlUtil.autoEncodeHash(mon)
 				}
@@ -537,14 +521,14 @@ class EncounterBuilderUtils {
 	}
 
 	static getCrCutoff (data) {
-		data = data.filter(it => it.cr !== 100).sort((a, b) => SortUtil.ascSort(b.cr, a.cr));
+		data = data.filter(it => getCr(it) !== 100).sort((a, b) => SortUtil.ascSort(getCr(b), getCr(a)));
 
 		// "When making this calculation, don't count any monsters whose challenge rating is significantly below the average
 		// challenge rating of the other monsters in the group unless you think the weak monsters significantly contribute
 		// to the difficulty of the encounter." -- DMG, p. 82
 
 		// no cutoff for CR 0-2
-		return data[0].cr <= 2 ? 0 : data[0].cr / 2;
+		return getCr(data[0]) <= 2 ? 0 : getCr(data[0]) / 2;
 	}
 
 	/**
@@ -552,7 +536,8 @@ class EncounterBuilderUtils {
 	 * @param playerCount number of players in the party
 	 */
 	static calculateEncounterXp (data, playerCount = ECGEN_BASE_PLAYERS) {
-		data = data.filter(it => it.cr !== 100).sort((a, b) => SortUtil.ascSort(b.cr, a.cr));
+		data = data.filter(it => getCr(it) !== 100)
+			.sort((a, b) => SortUtil.ascSort(getCr(b), getCr(a)));
 
 		let baseXp = 0;
 		let relevantCount = 0;
@@ -560,8 +545,8 @@ class EncounterBuilderUtils {
 
 		const crCutoff = EncounterBuilderUtils.getCrCutoff(data);
 		data.forEach(it => {
-			if (it.cr >= crCutoff) relevantCount += it.count;
-			baseXp += Parser.crToXpNumber(Parser.numberToCr(it.cr)) * it.count;
+			if (getCr(it) >= crCutoff) relevantCount += it.count;
+			baseXp += Parser.crToXpNumber(Parser.numberToCr(getCr(it))) * it.count;
 		});
 
 		const playerAdjustedXpMult = Parser.numMonstersToXpMult(relevantCount, playerCount);
@@ -609,6 +594,7 @@ function handleFilterChange () {
 			m._fSkill,
 			m.senseTags,
 			m.languageTags,
+			m.damageTags,
 			m._fAc,
 			m._fHp,
 			[
@@ -637,11 +623,6 @@ function getUid (name, source, scaledCr) {
 	return `${name}_${source}_${scaledCr}`.toLowerCase();
 }
 
-function _initParsed (mon) {
-	mon._pTypes = Parser.monTypeToFullObj(mon.type); // store the parsed type
-	mon._pCr = mon.cr === undefined ? "Unknown" : (mon.cr.cr || mon.cr);
-}
-
 const _NEUT_ALIGNS = ["NX", "NY"];
 const _addedHashes = new Set();
 function addMonsters (data) {
@@ -658,7 +639,7 @@ function addMonsters (data) {
 		if (_addedHashes.has(monHash)) continue;
 		_addedHashes.add(monHash);
 		if (ExcludeUtil.isExcluded(mon.name, "monster", mon.source)) continue;
-		_initParsed(mon);
+		RenderBestiary.initParsed(mon);
 		mon._fSpeedType = Object.keys(mon.speed).filter(k => mon.speed[k]);
 		if (mon._fSpeedType.length) mon._fSpeed = mon._fSpeedType.map(k => mon.speed[k].number || mon.speed[k]).sort((a, b) => SortUtil.ascSort(b, a))[0];
 		else mon._fSpeed = 0;
@@ -689,7 +670,7 @@ function addMonsters (data) {
 					<span class="ecgen__name name col-4-2">${mon.name}</span>
 					<span class="type col-4-1">${mon._pTypes.asText.uppercaseFirst()}</span>
 					<span class="col-1-7 text-align-center cr">${mon._pCr}</span>
-					<span title="${Parser.sourceJsonToFull(mon.source)}${EntryRenderer.utils.getSourceSubText(mon)}" class="col-2 source text-align-center ${Parser.sourceJsonToColor(mon.source)}">${abvSource}</span>
+					<span title="${Parser.sourceJsonToFull(mon.source)}${Renderer.utils.getSourceSubText(mon)}" class="col-2 source text-align-center ${Parser.sourceJsonToColor(mon.source)}">${abvSource}</span>
 					
 					${mon.group ? `<span class="group hidden">${mon.group}</span>` : ""}
 					<span class="alias hidden">${(mon.alias || []).map(it => `"${it}"`).join(",")}</span>
@@ -724,7 +705,7 @@ function addMonsters (data) {
 				}
 			});
 		}
-		if (mon.isNPC) mon._fMisc.push("Named NPC");
+		if (mon.isNpc) mon._fMisc.push("Named NPC");
 		if (mon.legendaryGroup && (meta[mon.legendaryGroup.source] || {})[mon.legendaryGroup.name]) {
 			if ((meta[mon.legendaryGroup.source] || {})[mon.legendaryGroup.name].lairActions) mon._fMisc.push("Lair Actions");
 			if ((meta[mon.legendaryGroup.source] || {})[mon.legendaryGroup.name].regionalEffects) mon._fMisc.push("Regional Effects");
@@ -733,6 +714,7 @@ function addMonsters (data) {
 		if (mon.variant) mon._fMisc.push("Has Variants");
 		traitFilter.addIfAbsent(mon.traitTags);
 		actionReactionFilter.addIfAbsent(mon.actionTags);
+		environmentFilter.addIfAbsent(mon.environment);
 	}
 	const lastSearch = ListUtil.getSearchTermAndReset(list);
 	table.append(textStack);
@@ -761,24 +743,20 @@ function addMonsters (data) {
 	function popoutHandlerGenerator (toList, $btnPop, popoutCodeId) {
 		return (evt) => {
 			if (evt.shiftKey) {
-				EntryRenderer.hover.handlePopoutCode(evt, toList, $btnPop, popoutCodeId);
+				Renderer.hover.handlePopoutCode(evt, toList, $btnPop, popoutCodeId);
 			} else {
-				if (lastRendered.mon != null && lastRendered.isScaled) EntryRenderer.hover.doPopoutPreloaded($btnPop, lastRendered.mon, evt.clientX);
-				else if (History.lastLoadedId !== null) EntryRenderer.hover.doPopout($btnPop, toList, History.lastLoadedId, evt.clientX);
+				if (lastRendered.mon != null && lastRendered.isScaled) Renderer.hover.doPopoutPreloaded($btnPop, lastRendered.mon, evt.clientX);
+				else if (History.lastLoadedId !== null) Renderer.hover.doPopout($btnPop, toList, History.lastLoadedId, evt.clientX);
 			}
 		};
 	}
 
-	EntryRenderer.hover.bindPopoutButton(monsters, popoutHandlerGenerator);
+	Renderer.hover.bindPopoutButton(monsters, popoutHandlerGenerator);
 	UrlUtil.bindLinkExportButton(filterBox);
 	ListUtil.bindDownloadButton();
 	ListUtil.bindUploadButton(sublistFuncPreload);
 
-	$(`body`).on("click", ".btn-name-pronounce", function () {
-		const audio = $(this).find(`.name-pronounce`)[0];
-		audio.currentTime = 0;
-		audio.play();
-	});
+	Renderer.utils.bindPronounceButtons();
 }
 
 function sublistFuncPreload (json, funcOnload) {
@@ -810,8 +788,9 @@ function pGetSublistItem (mon, pinId, addCount, data = {}) {
 		const pMon = data.scaled ? ScaleCreature.scale(mon, data.scaled) : Promise.resolve(mon);
 
 		pMon.then(mon => {
+			RenderBestiary.updateParsed(mon);
 			const subHash = data.scaled ? `${HASH_PART_SEP}${MON_HASH_SCALED}${HASH_SUB_KV_SEP}${data.scaled}` : "";
-			_initParsed(mon);
+			RenderBestiary.initParsed(mon);
 
 			resolve(`
 				<li class="row row--bestiary_sublist" ${FLTR_ID}="${pinId}" oncontextmenu="ListUtil.openSubContextMenu(event, this)">
@@ -820,7 +799,7 @@ function pGetSublistItem (mon, pinId, addCount, data = {}) {
 						<span class="type col-3">${mon._pTypes.asText.uppercaseFirst()}</span>
 						<span class="cr col-2 text-align-center">${mon._pCr}</span>						
 						<span class="count col-2 text-align-center">${addCount || 1}</span>
-						<span class="id hidden">${data.uid ? "" : pinId}</span>
+						<span class="id hidden">${pinId}</span>
 						<span class="uid hidden">${data.uid || ""}</span>
 					</a>
 					
@@ -895,7 +874,7 @@ function renderStatblock (mon, isScaled) {
 				evt.stopPropagation();
 				const mon = monsters[History.lastLoadedId];
 				const lastCr = lastRendered.mon ? lastRendered.mon.cr.cr || lastRendered.mon.cr : mon.cr.cr || mon.cr;
-				EntryRenderer.monster.getCrScaleTarget($btnScaleCr, lastCr, (targetCr) => {
+				Renderer.monster.getCrScaleTarget($btnScaleCr, lastCr, (targetCr) => {
 					if (targetCr === Parser.crToNumber(mon.cr)) renderStatblock(mon);
 					else History.setSubhash(MON_HASH_SCALED, targetCr);
 				});
@@ -908,77 +887,11 @@ function renderStatblock (mon, isScaled) {
 			.click(() => History.setSubhash(MON_HASH_SCALED, null))
 			.toggle(isScaled);
 
-		$(`
-		${EntryRenderer.utils.getBorderTr()}
-		<tr><th class="name mon__name--token" colspan="6">Name <span class="source" title="Source book">SRC</span></th></tr>
-		<tr><td colspan="6" class="mon__size-type-alignment">
-			<i>${Parser.sizeAbvToFull(mon.size)} ${mon._pTypes.asText}, ${Parser.alignmentListToFull(mon.alignment).toLowerCase()}</i>
-		</td></tr>
-		<tr><td class="divider" colspan="6"><div></div></td></tr>
-		
-		<tr><td colspan="6"><strong>護甲等級</strong> ${Parser.acToFull(mon.ac)}</td></tr>
-		<tr><td colspan="6"><div class="mon__wrp_hp"><strong>生命值</strong> ${EntryRenderer.monster.getRenderedHp(mon.hp)}</div></td></tr>
-		<tr><td colspan="6"><strong>速度</strong> ${Parser.getSpeedString(mon)}</td></tr>
-		<tr><td class="divider" colspan="6"><div></div></td></tr>
-		
-		<tr class="mon__ability-names">
-			<th>力量</th><th>敏捷</th><th>體質</th><th>智力</th><th>睿知</th><th>魅力</th>
-		</tr>
-		<tr class="mon__ability-scores">
-			<td>${EntryRenderer.getDefaultRenderer().renderEntry(`{@d20 ${Parser.getAbilityModifier(mon.str)}|${mon.str} (${Parser.getAbilityModifier(mon.str)})|Strength}`)}</td>
-			<td>${EntryRenderer.getDefaultRenderer().renderEntry(`{@d20 ${Parser.getAbilityModifier(mon.dex)}|${mon.dex} (${Parser.getAbilityModifier(mon.dex)})|Dexterity}`)}</td>
-			<td>${EntryRenderer.getDefaultRenderer().renderEntry(`{@d20 ${Parser.getAbilityModifier(mon.con)}|${mon.con} (${Parser.getAbilityModifier(mon.con)})|Constitution}`)}</td>
-			<td>${EntryRenderer.getDefaultRenderer().renderEntry(`{@d20 ${Parser.getAbilityModifier(mon.int)}|${mon.int} (${Parser.getAbilityModifier(mon.int)})|Intelligence}`)}</td>
-			<td>${EntryRenderer.getDefaultRenderer().renderEntry(`{@d20 ${Parser.getAbilityModifier(mon.wis)}|${mon.wis} (${Parser.getAbilityModifier(mon.wis)})|Wisdom}`)}</td>
-			<td>${EntryRenderer.getDefaultRenderer().renderEntry(`{@d20 ${Parser.getAbilityModifier(mon.cha)}|${mon.cha} (${Parser.getAbilityModifier(mon.cha)})|Charisma}`)}</td>
-		</tr>
-		<tr><td class="divider" colspan="6"><div></div></td></tr>
-		
-		${mon.save ? `<tr><td colspan="6"><strong>豁免</strong> ${Object.keys(mon.save).map(it => EntryRenderer.monster.getSave(renderer, it, mon.save[it])).join(", ")}</td></tr>` : ""}
-		${mon.skill ? `<tr><td colspan="6"><strong>技能</strong> ${EntryRenderer.monster.getSkillsString(renderer, mon)}</td></tr>` : ""}
-		${mon.vulnerable ? `<tr><td colspan="6"><strong>傷害易傷</strong> ${Parser.monImmResToFull(mon.vulnerable)}</td></tr>` : ""}
-		${mon.resist ? `<tr><td colspan="6"><strong>傷害抗性</strong> ${Parser.monImmResToFull(mon.resist)}</td></tr>` : ""}
-		${mon.immune ? `<tr><td colspan="6"><strong>傷害免疫</strong> ${Parser.monImmResToFull(mon.immune)}</td></tr>` : ""}
-		${mon.conditionImmune ? `<tr><td colspan="6"><strong>狀態免疫</strong> ${Parser.monCondImmToFull(mon.conditionImmune)}</td></tr>` : ""}
-		<tr><td colspan="6"><strong>感官</strong> ${mon.senses ? `${EntryRenderer.monster.getRenderedSenses(mon.senses)},` : ""} 被動感知 ${mon.passive || "\u2014"}</td></tr>
-		<tr><td colspan="6"><strong>語言</strong> ${mon.languages || "\u2014"}</td></tr>
-		
-		<tr><td colspan="6" style="position: relative;"><strong>挑戰等級</strong>
-			<span>${Parser.monCrToFull(mon.cr)}</span>
-			<div data-r="$btnScaleCr"/>
-			<div data-r="$btnResetScaleCr"/>
-		</td></tr>
-		
-		<tr id="traits"><td class="divider" colspan="6"><div></div></td></tr>
-		<tr id="actions"><td colspan="6" class="mon__stat-header-underline"><span class="mon__sect-header-inner">動作</span></td></tr>
-		<tr id="reactions"><td colspan="6" class="mon__stat-header-underline"><span class="mon__sect-header-inner">反應</span></td></tr>
-		<tr id="legendaries"><td colspan="6" class="mon__stat-header-underline"><span class="mon__sect-header-inner">傳奇動作</span></td></tr>
-		<tr id="lairactions"><td colspan="6" class="mon__stat-header-underline"><span class="mon__sect-header-inner">巢穴動作</span></td></tr>
-		<tr id="regionaleffects"><td colspan="6" class="mon__stat-header-underline"><span class="mon__sect-header-inner">區域效應</span></td></tr>
-		
-		<tr id="variants"></tr>
-		<tr id="source"></tr>
-		${EntryRenderer.utils.getBorderTr()}
-		`).swap({$btnScaleCr, $btnResetScaleCr}).appendTo($content);
-
-		let renderStack = [];
-		const displayName = mon._displayName || mon.name;
-		const source = Parser.sourceJsonToAbv(mon.source);
-		const sourceFull = Parser.sourceJsonToFull(mon.source);
-
-		function getPronunciationButton () {
-			return `<button class="btn btn-xs btn-default btn-name-pronounce">
-				<span class="glyphicon glyphicon-volume-up name-pronounce-icon"></span>
-				<audio class="name-pronounce">
-				   <source src="${mon.soundClip}" type="audio/mpeg">
-				   <source src="audio/bestiary/${basename(mon.soundClip, '/')}" type="audio/mpeg">
-				</audio>
-			</button>`;
-		}
+		$content.append(RenderBestiary.$getRenderedCreature(mon, meta, {$btnScaleCr, $btnResetScaleCr}));
 
 		const $floatToken = $(`#float-token`).empty();
 		if (mon.tokenUrl || !mon.uniqueId) {
-			const imgLink = EntryRenderer.monster.getTokenUrl(mon);
+			const imgLink = Renderer.monster.getTokenUrl(mon);
 			$floatToken.append(`
 				<a href="${imgLink}" target="_blank" rel="noopener">
 					<img src="${imgLink}" id="token_image" class="token" onerror="imgError(this)" alt="${mon.name}">
@@ -986,115 +899,12 @@ function renderStatblock (mon, isScaled) {
 			);
 		} else imgError();
 
-		$content.find(".mon__name--token").html(
-			`<span><b class="stats-name copyable" onclick="EntryRenderer.utils._pHandleNameClick(this, '${mon.source.escapeQuotes()}')">${displayName}</b>${mon.ENG_name? " <st style='font-size:80%;'>"+mon.ENG_name+"</st>": ""}</span>
-			${mon.soundClip ? getPronunciationButton() : ""}
-			<span class="stats-source ${Parser.sourceJsonToColor(mon.source)}" title="${sourceFull}${EntryRenderer.utils.getSourceSubText(mon)}">${source}</span>`
-		);
-
-		// TODO most of this could be rolled into the string template above
-
-		let trait = EntryRenderer.monster.getOrderedTraits(mon, renderer);
-		if (trait) renderSection("trait", trait, 1);
-
-		const action = mon.action;
-		$content.find("tr#actions").hide();
-		if (action) renderSection("action", action, 1);
-
-		const reaction = mon.reaction;
-		$content.find("tr#reactions").hide();
-		if (reaction) renderSection("reaction", reaction, 1);
-
-		const dragonVariant = EntryRenderer.monster.getDragonCasterVariant(renderer, mon);
-		const variants = mon.variant;
-		const variantSect = $content.find(`#variants`);
-		if (!variants && !dragonVariant) variantSect.hide();
-		else {
-			const rStack = [];
-			(variants || []).forEach(v => renderer.recursiveEntryRender(v, rStack));
-			if (dragonVariant) rStack.push(dragonVariant);
-			variantSect.html(`<td colspan=6>${rStack.join("")}</td>`);
-			variantSect.show();
-		}
-
-		const srcCpy = {
-			source: mon.source,
-			sourceSub: mon.sourceSub,
-			page: mon.page,
-			otherSources: mon.otherSources,
-			additionalSources: mon.additionalSources,
-			externalSources: mon.externalSources
-		};
-		const additional = mon.additionalSources ? JSON.parse(JSON.stringify(mon.additionalSources)) : [];
-		if (mon.variant && mon.variant.length > 1) {
-			mon.variant.forEach(v => {
-				if (v.variantSource) {
-					additional.push({
-						source: v.variantSource.source,
-						page: v.variantSource.page
-					})
-				}
-			})
-		}
-		srcCpy.additionalSources = additional;
-		const $trSource = $content.find(`#source`);
-		const $tdSource = $(EntryRenderer.utils.getPageTr(srcCpy));
-		$trSource.append($tdSource);
-		if (mon.environment && mon.environment.length) {
-			$tdSource.attr("colspan", 4);
-			$trSource.append(`<td colspan="2" class="text-align-right mr-2"><i>環境：${mon.environment.sort(SortUtil.ascSortLower).map(it => Parser.EnvironmentToDisplay(it)).join(", ")}</i></td>`)
-		}
-
-		const legendary = mon.legendary;
-		$content.find("tr#legendaries").hide();
-		if (legendary) {
-			renderSection("legendary", legendary, 1);
-			$content.find("tr#legendaries").after(`<tr class='legendary'><td colspan='6' class='legendary'><span class='name'></span> <span>${EntryRenderer.monster.getLegendaryActionIntro(mon)}</span></td></tr>`);
-		}
-
-		const legGroup = mon.legendaryGroup;
-		$content.find("tr#lairactions").hide();
-		$content.find("tr#regionaleffects").hide();
-		if (legGroup) {
-			const thisGroup = (meta[legGroup.source] || {})[legGroup.name];
-			if (thisGroup.lairActions) renderSection("lairaction", thisGroup.lairActions, -1);
-			if (thisGroup.regionalEffects) renderSection("regionaleffect", thisGroup.regionalEffects, -1);
-		}
-
-		function renderSection (sectionTrClass, sectionEntries, sectionLevel) {
-			let pluralSectionTrClass = sectionTrClass === `legendary` ? `legendaries` : `${sectionTrClass}s`;
-			$content.find(`tr#${pluralSectionTrClass}`).show();
-			renderStack = [];
-			if (sectionTrClass === "legendary") {
-				const cpy = MiscUtil.copy(sectionEntries).map(it => {
-					if (it.name && it.entries) {
-						it.name = `${it.name}:`;
-						it.type = it.type || "item";
-					}
-					return it;
-				});
-				const toRender = {type: "list", style: "list-hang-notitle", items: cpy};
-				renderer.recursiveEntryRender(toRender, renderStack, sectionLevel);
-			} else {
-				sectionEntries.forEach(e => {
-					if (e.rendered) renderStack.push(e.rendered);
-					else renderer.recursiveEntryRender(e, renderStack, sectionLevel + 1);
-				});
-			}
-			$content.find(`tr#${pluralSectionTrClass}`).after(`<tr class='${sectionTrClass}'><td colspan='6' class="mon__sect-row-inner">${renderStack.join("")}</td></tr>`);
-		}
-
-		// add click links for rollables
-		$content.find(".mon__ability-scores td").each(function () {
-			$(this).wrapInner(`<span class="roller" data-roll="1d20${$(this).children(".mod").html()}" title="${Parser.attAbvToFull($(this).prop("id"))}"></span>`);
-		});
-
+		// inline rollers //////////////////////////////////////////////////////////////////////////////////////////////
 		const isProfDiceMode = PROF_DICE_MODE === PROF_MODE_DICE;
 		function _addSpacesToDiceExp (exp) {
 			return exp.replace(/([^0-9d])/gi, " $1 ").replace(/\s+/g, " ");
 		}
-		// inline rollers
-		// /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 		// add proficiency dice stuff for attack rolls, since those _generally_ have proficiency
 		// this is not 100% accurate; for example, ghouls don't get their prof bonus on bite attacks
 		// fixing it would probably involve machine learning though; we need an AI to figure it out on-the-fly
@@ -1139,7 +949,7 @@ function renderStatblock (mon, isScaled) {
 						const nu = `
 							(function(it) {
 								if (PROF_DICE_MODE === PROF_MODE_DICE) {
-									EntryRenderer.dice.rollerClick(event, it, '{"type":"dice","rollable":true,"toRoll":"1d20 + ${profDiceString}"}'${$(this).prop("title") ? `, '${$(this).prop("title")}'` : ""})
+									Renderer.dice.rollerClick(event, it, '{"type":"dice","rollable":true,"toRoll":"1d20 + ${profDiceString}"}'${$(this).prop("title") ? `, '${$(this).prop("title")}'` : ""})
 								} else {
 									${cached.replace(/this/g, "it")}
 								}
@@ -1153,7 +963,7 @@ function renderStatblock (mon, isScaled) {
 					}
 				} catch (e) {
 					setTimeout(() => {
-						throw new Error(`Invalid save or skill roller! Bonus was ${bonus >= 0 ? "+" : ""}${bonus}, but creature's PB was +${expectedPB} and relevant ability score (${ability}) was ${fromAbility >= 0 ? "+" : ""}${fromAbility} (should have been ${expectedPB + fromAbility >= 0 ? "+" : ""}${expectedPB + fromAbility} total)`);
+						throw new Error(`Invalid save or skill roller! Bonus was ${bonus >= 0 ? "+" : ""}${bonus}, but creature s PB was +${expectedPB} and relevant ability score (${ability}) was ${fromAbility >= 0 ? "+" : ""}${fromAbility} (should have been ${expectedPB + fromAbility >= 0 ? "+" : ""}${expectedPB + fromAbility} total)`);
 					}, 0);
 				}
 			});
@@ -1177,18 +987,18 @@ function renderStatblock (mon, isScaled) {
 	}
 
 	function buildFluffTab (isImageTab) {
-		return EntryRenderer.utils.buildFluffTab(
+		return Renderer.utils.buildFluffTab(
 			isImageTab,
 			$content,
 			mon,
-			EntryRenderer.monster.getFluff.bind(null, mon, meta),
+			Renderer.monster.getFluff.bind(null, mon, meta),
 			`${JSON_DIR}${ixFluff[mon.source]}`,
 			() => ixFluff[mon.source]
 		);
 	}
 
 	// reset tabs
-	const statTab = EntryRenderer.utils.tabButton(
+	const statTab = Renderer.utils.tabButton(
 		"資料卡",
 		() => {
 			$wrpBtnProf.append(profBtn);
@@ -1196,7 +1006,7 @@ function renderStatblock (mon, isScaled) {
 		},
 		buildStatsTab
 	);
-	const infoTab = EntryRenderer.utils.tabButton(
+	const infoTab = Renderer.utils.tabButton(
 		"資訊",
 		() => {
 			profBtn = profBtn || $wrpBtnProf.children().detach();
@@ -1204,7 +1014,7 @@ function renderStatblock (mon, isScaled) {
 		},
 		buildFluffTab
 	);
-	const picTab = EntryRenderer.utils.tabButton(
+	const picTab = Renderer.utils.tabButton(
 		"圖片",
 		() => {
 			profBtn = profBtn || $wrpBtnProf.children().detach();
@@ -1212,7 +1022,7 @@ function renderStatblock (mon, isScaled) {
 		},
 		() => buildFluffTab(true)
 	);
-	EntryRenderer.utils.bindTabButtons(statTab, infoTab, picTab);
+	Renderer.utils.bindTabButtons(statTab, infoTab, picTab);
 }
 
 function handleUnknownHash (link, sub) {
@@ -1232,7 +1042,16 @@ function dcRollerClick (event, ele, exp) {
 		rollable: true,
 		toRoll: exp
 	};
-	EntryRenderer.dice.rollerClick(event, ele, JSON.stringify(it));
+	Renderer.dice.rollerClick(event, ele, JSON.stringify(it));
+}
+
+function getUnpackedUid (uid) {
+	return {scaled: Number(uid.split("_").last()), uid};
+}
+
+function getCr (obj) {
+	if (obj.crScaled != null) return obj.crScaled;
+	return typeof obj.cr === "string" ? obj.cr.includes("/") ? Parser.crToNumber(obj.cr) : Number(obj.cr) : obj.cr;
 }
 
 function loadsub (sub) {

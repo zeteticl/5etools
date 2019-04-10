@@ -70,13 +70,15 @@ class ConverterUi {
 
 		this._storedSettings = StorageUtil.syncGetForPage(ConverterUi.STORAGE_SETTINGS) || {};
 		this._saveSettingsDebounced = MiscUtil.debounce(() => StorageUtil.syncSetForPage(ConverterUi.STORAGE_SETTINGS, this._storedSettings), 50);
+
+		this._$selSource = null;
 	}
 
 	set statblockConverter (statblockConverter) { this._statblockConverter = statblockConverter; }
 
 	set tableConverter (tableConverter) { this._tableConverter = tableConverter; }
 
-	async init (bestiarySources) {
+	async init () {
 		this._editorIn = ace.edit("converter_input");
 		this._editorIn.setOptions({
 			wrap: true,
@@ -99,13 +101,104 @@ class ConverterUi {
 			if (confirm(`Edits will be overwritten as you parse new statblocks. Enable anyway?`)) this.outReadOnly = false;
 		});
 
+		$(`#save_local`).click(async () => {
+			const output = this.outText;
+			if (output && output.trim()) {
+				try {
+					const prop = this._storedSettings.parser === "Statblock" ? "monster" : "table";
+					const entries = JSON.parse(`[${output}]`);
+
+					const invalidSources = entries.map(it => !it.source || !BrewUtil.hasSourceJson(it.source) ? (it.name || it.caption || "(Unnamed)").trim() : false).filter(Boolean);
+					if (invalidSources.length) {
+						JqueryUtil.doToast({
+							content: `One or more entries have missing or unknown sources: ${invalidSources.join(", ")}`,
+							type: "danger"
+						});
+						return;
+					}
+
+					// ignore duplicates
+					const _dupes = {};
+					const dupes = [];
+					const dedupedEntries = entries.map(it => {
+						const lSource = it.source.toLowerCase();
+						const lName = it.name.toLowerCase();
+						_dupes[lSource] = _dupes[lSource] || {};
+						if (_dupes[lSource][lName]) {
+							dupes.push(it.name);
+							return null;
+						} else {
+							_dupes[lSource][lName] = true;
+							return it;
+						}
+					}).filter(Boolean);
+					if (dupes.length) {
+						JqueryUtil.doToast({
+							type: "warning",
+							content: `Ignored ${dupes.length} duplicate entr${dupes.length === 1 ? "y" : "ies"}`
+						})
+					}
+
+					// handle overwrites
+					const overwriteMeta = dedupedEntries.map(it => {
+						const ix = (BrewUtil.homebrew[prop] || []).findIndex(bru => bru.name.toLowerCase() === it.name.toLowerCase() && bru.source.toLowerCase() === it.source.toLowerCase());
+						if (~ix) {
+							return {
+								isOverwrite: true,
+								ix,
+								entry: it
+							}
+						} else return {entry: it, isOverwrite: false};
+					}).filter(Boolean);
+					const willOverwrite = overwriteMeta.map(it => it.isOverwrite).filter(Boolean);
+					if (willOverwrite.length && !confirm(`This will overwrite ${willOverwrite.length} entr${willOverwrite.length === 1 ? "y" : "ies"}. Are you sure?`)) {
+						return;
+					}
+
+					await Promise.all(overwriteMeta.map(meta => {
+						if (meta.isOverwrite) {
+							return BrewUtil.pUpdateEntryByIx(prop, meta.ix, MiscUtil.copy(meta.entry));
+						} else {
+							return BrewUtil.pAddEntry(prop, MiscUtil.copy(meta.entry));
+						}
+					}));
+
+					JqueryUtil.doToast({
+						type: "success",
+						content: `Saved!`
+					});
+
+					Omnisearch.pAddToIndex("monster", overwriteMeta.filter(meta => !meta.isOverwrite).map(meta => meta.entry));
+				} catch (e) {
+					JqueryUtil.doToast({
+						content: `Current output was not valid JSON!`,
+						type: "danger"
+					});
+					setTimeout(() => { throw e });
+				}
+			} else {
+				JqueryUtil.doToast({
+					content: "Nothing to save!",
+					type: "danger"
+				});
+			}
+		});
+
 		$(`#download`).click(() => {
 			const output = this.outText;
 			if (output && output.trim()) {
-				const out = {
-					monster: JSON.parse(`[${output}]`)
-				};
-				DataUtil.userDownload(`converter-output`, out);
+				try {
+					const prop = this._storedSettings.parser === "Statblock" ? "monster" : "table";
+					const out = {[prop]: JSON.parse(`[${output}]`)};
+					DataUtil.userDownload(`converter-output`, out);
+				} catch (e) {
+					JqueryUtil.doToast({
+						content: `Current output was not valid JSON. Downloading as <span class="code">.txt</span> instead.`,
+						type: "warning"
+					});
+					DataUtil.userDownloadText(`converter-output.txt`, output);
+					setTimeout(() => { throw e; });
+				}
 			} else {
 				JqueryUtil.doToast({
 					content: "Nothing to download!",
@@ -144,16 +237,16 @@ class ConverterUi {
 			catchErrors(() => this._menuAccess.handleParseAndAdd());
 		});
 
-		this.initSideMenu(bestiarySources);
+		this.initSideMenu();
 	}
 
-	initSideMenu (bestiarySources) {
+	initSideMenu () {
 		const $mnu = $(`.sidemenu`);
 		const renderDivider = ($menu, heavy) => $menu.append(`<hr class="sidemenu__row__divider ${heavy ? "sidemenu__row__divider--heavy" : ""}">`);
 
 		const prevParser = this._storedSettings.parser;
 
-		const $wrpParser = $(`<div class="sidemenu__row"><div class="sidemenu__row__label">Mode</div></div>`).appendTo($mnu);
+		const $wrpParser = $(`<div class="sidemenu__row split-v-center"><div class="sidemenu__row__label">Mode</div></div>`).appendTo($mnu);
 		const $selParser = $(`
 			<select class="form-control input-sm">
 				<option>Statblock</option>
@@ -172,16 +265,17 @@ class ConverterUi {
 		const $wrpCustom = $(`<div/>`).appendTo($mnu);
 
 		const renderStatblockSidemenu = () => {
+			$(`#save_local`).show();
 			this._menuAccess = {};
 
 			$wrpCustom.empty();
-			$(`<div class="sidemenu__row">
+			$(`<div class="sidemenu__row split-v-center">
 				<small>This parser is <span class="help" title="Notably poor at handling text split across multiple lines, as Carriage Return is used to separate blocks of text.">very particular</span> about its input. Use at your own risk.</small>
 			</div>`).appendTo($wrpCustom);
 
 			renderDivider($wrpCustom);
 
-			const $wrpMode = $(`<div class="sidemenu__row--alt"/>`).appendTo($wrpCustom);
+			const $wrpMode = $(`<div class="sidemenu__row flex-vh-center-around"/>`).appendTo($wrpCustom);
 			const $selMode = $(`
 					<select class="form-control input-sm select-inline">
 							<option value="txt">Parse as Text</option>
@@ -196,85 +290,150 @@ class ConverterUi {
 			const prevMode = this._storedSettings.statblockMode;
 			if (prevMode) $selMode.val(prevMode);
 
-			const $wrpTitle = $(`<div class="sidemenu__row"><label class="sidemenu__row__label sidemenu__row__label--cb-label" title="Should the creature's name be converted to title-case? Useful when pasting a name which is all-caps."><span>Title-Case Name</span></label></div>`).appendTo($wrpCustom);
-			const $cbTitleCase = $(`<input type="checkbox" class="sidemenu__row__label__cb">`).appendTo($wrpTitle.find(`label`));
+			const $wrpTitle = $(`<div class="sidemenu__row split-v-center"><label class="sidemenu__row__label sidemenu__row__label--cb-label" title="Should the creature's name be converted to title-case? Useful when pasting a name which is all-caps."><span>Title-Case Name</span></label></div>`).appendTo($wrpCustom);
+			const $cbTitleCase = $(`<input type="checkbox" class="sidemenu__row__label__cb">`)
+				.change(() => {
+					this._storedSettings.statblockTitleCase = $cbTitleCase.prop("checked");
+					this._saveSettingsDebounced();
+				})
+				.appendTo($wrpTitle.find(`label`))
+				.prop("checked", !!this._storedSettings.statblockTitleCase);
 			this._menuAccess.isTitleCase = () => !!$cbTitleCase.prop("checked");
 
 			renderDivider($wrpCustom);
 
-			const $wrpPage = $(`<div class="sidemenu__row"><div class="sidemenu__row__label">Page</div></div>`).appendTo($wrpCustom);
-			const $iptPage = $(`<input class="form-control input-sm" type="number" value="0" style="max-width: 9rem;">`).appendTo($wrpPage);
+			const $wrpPage = $(`<div class="sidemenu__row split-v-center"><div class="sidemenu__row__label">Page</div></div>`).appendTo($wrpCustom);
+			const $iptPage = $(`<input class="form-control input-sm" type="number" style="max-width: 9rem;">`)
+				.change(() => {
+					this._storedSettings.statblockPage = $iptPage.val();
+					this._saveSettingsDebounced();
+				})
+				.appendTo($wrpPage)
+				.val(this._storedSettings.statblockPage || "0");
 			this._menuAccess.getPage = () => Number($iptPage.val());
 
 			renderDivider($wrpCustom);
 
-			const $wrpSource = $(`<div class="sidemenu__row"><div class="sidemenu__row__label">Source</div></div>`).appendTo($wrpCustom);
-			const $selSource = $(`<select id="source" class="form-control select-inline input-sm"/>`).appendTo($wrpSource);
-			this._menuAccess.getSource = () => $selSource.val();
+			const $wrpSource = $(`<div class="sidemenu__row split-v-center"><div class="sidemenu__row__label">Source</div></div>`).appendTo($wrpCustom);
+			this._menuAccess.getSource = () => this._$selSource.val();
 
-			const $wrpSourceAdd = $(`<div class="sidemenu__row--alt"/>`).appendTo($wrpCustom);
-			const $iptSourceAdd = $(`<input class="form-control input-sm" placeholder="Custom source" style="margin-right: 7px;">`).appendTo($wrpSourceAdd);
-			const $btnSourceAdd = $(`<button class="btn btn-sm btn-default">Add</button>`).appendTo($wrpSourceAdd);
-			this._menuAccess.getPage = () => Number($iptPage.val());
+			const $wrpSourceOverlay = $(`<div class="full-height full-width"/>`);
+			let $sourceModal = null;
 
-			(function initSourceDropdown () {
-				const appendSource = (src) => $selSource.append(`<option value="${src}">${src}</option>`);
+			const rebuildStageSource = (options) => {
+				SourceUiUtil.render({
+					...options,
+					$parent: $wrpSourceOverlay,
+					cbConfirm: (source) => {
+						const isNewSource = options.mode !== "edit";
 
-				// custom sources
-				Object.keys(bestiarySources).forEach(src => appendSource(src));
-				const sourceMeta = StorageUtil.syncGetForPage(ConverterUi.STORAGE_SOURCES) || {sources: [], selected: SRC_MM};
-				sourceMeta.sources.forEach(src => appendSource(src));
-				SortUtil.ascSort$Options($selSource);
-				$selSource.val(sourceMeta.selected);
+						if (isNewSource) BrewUtil.addSource(source);
+						else BrewUtil.updateSource(source);
 
-				$selSource.on("change", () => sourceMeta.selected = $selSource.val());
-
-				window.addEventListener("unload", () => StorageUtil.syncSetForPage(ConverterUi.STORAGE_SOURCES, sourceMeta));
-
-				$btnSourceAdd.on("click", () => {
-					const toAdd = $iptSourceAdd.val().trim();
-					if (!sourceMeta.sources.find(src => toAdd.toLowerCase() === src.toLowerCase())) {
-						sourceMeta.selected = toAdd;
-						sourceMeta.sources.push(toAdd);
-						appendSource(toAdd);
-						SortUtil.ascSort$Options($selSource);
-						$selSource.val(toAdd);
-						$iptSourceAdd.val("");
+						if (isNewSource) this._$selSource.append(`<option value="${source.json.escapeQuotes()}">${source.full.escapeQuotes()}</option>`);
+						this._$selSource.val(source.json);
+						if ($sourceModal) $sourceModal.data("close")();
+					},
+					cbConfirmExisting: (source) => {
+						this._$selSource.val(source.json);
+						if ($sourceModal) $sourceModal.data("close")();
+					},
+					cbCancel: () => {
+						if ($sourceModal) $sourceModal.data("close")();
 					}
 				});
-			})();
+			};
+
+			this._allSources = (BrewUtil.homebrewMeta.sources || []).sort((a, b) => SortUtil.ascSortLower(a.full, b.full))
+				.map(it => it.json);
+			this._$selSource = $$`
+			<select class="form-control input-sm">
+				<option value="">(None)</option>
+				${this._allSources.map(s => `<option value="${s.escapeQuotes()}">${Parser.sourceJsonToFull(s).escapeQuotes()}</option>`)}
+			</select>`
+				.appendTo($wrpSource)
+				.change(() => {
+					if (this._$selSource.val()) this._storedSettings.sourceJson = this._$selSource.val();
+					else delete this._storedSettings.sourceJson;
+					this._saveSettingsDebounced();
+				});
+			if (this._storedSettings.sourceJson) this._$selSource.val(this._storedSettings.sourceJson);
+			else this._$selSource[0].selectedIndex = 0;
+
+			const $btnSourceEdit = $(`<button class="btn btn-default btn-sm mr-2">Edit Selected Source</button>`)
+				.click(() => {
+					const curSourceJson = this._storedSettings.sourceJson;
+					if (!curSourceJson) {
+						JqueryUtil.doToast({type: "warning", content: "No source selected!"});
+						return;
+					}
+
+					const curSource = BrewUtil.sourceJsonToSource(curSourceJson);
+					if (!curSource) return;
+					rebuildStageSource({mode: "edit", source: MiscUtil.copy(curSource)});
+					$sourceModal = UiUtil.getShow$Modal({
+						fullHeight: true,
+						fullWidth: true,
+						cbClose: () => $wrpSourceOverlay.detach()
+					});
+					$wrpSourceOverlay.appendTo($sourceModal);
+				});
+			$$`<div class="sidemenu__row">${$btnSourceEdit}</div>`.appendTo($wrpCustom);
+
+			const $btnSourceAdd = $(`<button class="btn btn-default btn-sm">Add New Source</button>`).click(() => {
+				rebuildStageSource({mode: "add"});
+				$sourceModal = UiUtil.getShow$Modal({
+					fullHeight: true,
+					fullWidth: true,
+					cbClose: () => $wrpSourceOverlay.detach()
+				});
+				$wrpSourceOverlay.appendTo($sourceModal);
+			});
+			$$`<div class="sidemenu__row">${$btnSourceAdd}</div>`.appendTo($wrpCustom);
 
 			renderDivider($wrpCustom);
 
-			const $wrpSample = $(`<div class="sidemenu__row--alt"/>`).appendTo($wrpCustom);
+			const $wrpSample = $(`<div class="sidemenu__row flex-vh-center-around"/>`).appendTo($wrpCustom);
 			$(`<button class="btn btn-sm btn-default">Sample Text</button>`)
 				.appendTo($wrpSample).click(() => {
-					statblockConverter.showSample("txt");
+					this.inText = statblockConverter.getSample("txt");
 					$selMode.val("txt").change();
 				});
 			$(`<button class="btn btn-sm btn-default">Sample Markdown</button>`)
 				.appendTo($wrpSample).click(() => {
-					statblockConverter.showSample("md");
+					this.inText = statblockConverter.getSample("md");
 					$selMode.val("md").change();
 				});
 
+			const _getStatblockParseOptions = (isAppend) => ({
+				cbWarning: this.showWarning,
+				cbOutput: (stats, append) => {
+					this.doCleanAndOutput(stats, append);
+				},
+				source: this.source,
+				pageNumber: this.pageNumber,
+				isAppend,
+				isTitleCaseName: this.menuAccess.isTitleCase()
+			});
+
 			this._menuAccess.handleParse = () => {
-				if ($selMode.val() === "txt") this._statblockConverter.doParseText(false);
-				else this._statblockConverter.doParseMarkdown(false);
+				const opts = _getStatblockParseOptions(false);
+				$selMode.val() === "txt" ? this._statblockConverter.doParseText(this.inText, opts) : this._statblockConverter.doParseMarkdown(this.inText, opts);
 			};
 
 			this._menuAccess.handleParseAndAdd = () => {
-				if ($selMode.val() === "txt") this._statblockConverter.doParseText(true);
-				else this._statblockConverter.doParseMarkdown(true);
+				const opts = _getStatblockParseOptions(true);
+				$selMode.val() === "txt" ? this._statblockConverter.doParseText(this.inText, opts) : this._statblockConverter.doParseMarkdown(this.inText, opts);
 			};
 		};
 
 		const renderTableSidemenu = () => {
+			$(`#save_local`).hide();
 			this._menuAccess = {};
 
 			$wrpCustom.empty();
 
-			const $wrpMode = $(`<div class="sidemenu__row--alt"/>`).appendTo($wrpCustom);
+			const $wrpMode = $(`<div class="sidemenu__row flex-vh-center-around"/>`).appendTo($wrpCustom);
 			const $selMode = $(`
 					<select class="form-control input-sm select-inline">
 							<option value="html" selected>Parse as HTML</option>
@@ -291,27 +450,37 @@ class ConverterUi {
 
 			renderDivider($wrpCustom);
 
-			const $wrpSample = $(`<div class="sidemenu__row"/>`).appendTo($wrpCustom);
+			const $wrpSample = $(`<div class="sidemenu__row split-v-center"/>`).appendTo($wrpCustom);
 
 			$(`<button class="btn btn-sm btn-default">Sample HTML</button>`)
 				.appendTo($wrpSample).click(() => {
-					tableConverter.showSample("html");
+					this.inText = tableConverter.showSample("html");
 					$selMode.val("html").change();
 				});
 			$(`<button class="btn btn-sm btn-default">Sample Markdown</button>`)
 				.appendTo($wrpSample).click(() => {
-					tableConverter.showSample("md");
+					this.inText = tableConverter.showSample("md");
 					$selMode.val("md").change();
 				});
 
+			const _getTableParseOptions = (isAppend) => ({
+				cbWarning: this.showWarning,
+				cbOutput: (table, append) => {
+					this.doCleanAndOutput(table, append);
+				},
+				isAppend
+			});
+
 			this._menuAccess.handleParse = () => {
-				if ($selMode.val() === "html") this._tableConverter.doParseHtml(false);
-				else this._tableConverter.doParseMarkdown(false);
+				const opts = _getTableParseOptions(false);
+				if ($selMode.val() === "html") this._tableConverter.doParseHtml(this.inText, opts);
+				else this._tableConverter.doParseMarkdown(this.inText, opts);
 			};
 
 			this._menuAccess.handleParseAndAdd = () => {
-				if ($selMode.val() === "html") this._tableConverter.doParseHtml(true);
-				else this._tableConverter.doParseMarkdown(true);
+				const opts = _getTableParseOptions(true);
+				if ($selMode.val() === "html") this._tableConverter.doParseHtml(this.inText, opts);
+				else this._tableConverter.doParseMarkdown(this.inText, opts);
 			};
 		};
 
@@ -355,34 +524,42 @@ class ConverterUi {
 }
 ConverterUi.STORAGE_INPUT = "converterInput";
 ConverterUi.STORAGE_SETTINGS = "converterSettings";
-ConverterUi.STORAGE_SOURCES = "converterSources";
 
 class StatblockConverter {
-	constructor () {
-		this._ui = null;
-	}
-
-	set ui (ui) {
-		this._ui = ui;
+	static _getValidOptions (options) {
+		options = options || {};
+		options.isAppend = options.isAppend || false;
+		if (!options.cbWarning || !options.cbOutput) throw new Error(`Missing required callback options!`);
+		return options;
 	}
 
 	/**
 	 * Parses statblocks from raw text pastes
-	 * @param append
+	 * @param inText Input text.
+	 * @param options Options object.
+	 * @param options.cbWarning Warning callback.
+	 * @param options.cbOutput Output callback.
+	 * @param options.isAppend Default output append mode.
 	 */
-	doParseText (append) {
+	doParseText (inText, options) {
+		options = StatblockConverter._getValidOptions(options);
+
 		function startNextPhase (cur) {
 			return (!cur.toUpperCase().indexOf("ACTIONS") || !cur.toUpperCase().indexOf("LEGENDARY ACTIONS") || !cur.toUpperCase().indexOf("REACTIONS"))
 		}
 
-		if (!this._ui.inText || !this._ui.inText.trim()) return this._ui.showWarning("No input!");
-		const toConvert = StatblockConverter._getCleanInput(this._ui.inText)
-			.replace(/(\d\d?\s+\([-+]\d\)\s*)+/gi, (...m) => `${m[0].replace(/\n/g, " ").replace(/\s+/g, " ")}\n`) // collapse multi-line ability scores
-			.split("\n");
+		if (!inText || !inText.trim()) return options.cbWarning("No input!");
+		const toConvert = (() => {
+			const clean = StatblockConverter._getCleanInput(inText);
+			const spl = clean.split(/(Challenge)/i);
+			spl[0] = spl[0]
+				.replace(/(\d\d?\s+\([-—+]\d\)\s*)+/gi, (...m) => `${m[0].replace(/\n/g, " ").replace(/\s+/g, " ")}\n`); // collapse multi-line ability scores
+			return spl.join("").split("\n");
+		})();
 		const stats = {};
-		stats.source = this._ui.source;
+		stats.source = options.source || "";
 		// for the user to fill out
-		stats.page = this._ui.pageNumber;
+		stats.page = options.pageNumber;
 
 		let prevLine = null;
 		let curLine = null;
@@ -394,13 +571,13 @@ class StatblockConverter {
 
 			// name of monster
 			if (i === 0) {
-				stats.name = this._getCleanName(curLine);
+				stats.name = this._getCleanName(curLine, options);
 				continue;
 			}
 
 			// size type alignment
 			if (i === 1) {
-				StatblockConverter._setCleanSizeTypeAlignment(stats, curLine);
+				StatblockConverter._setCleanSizeTypeAlignment(stats, curLine, options);
 				continue;
 			}
 
@@ -418,14 +595,14 @@ class StatblockConverter {
 
 			// speed
 			if (i === 4) {
-				this._setCleanSpeed(stats, curLine);
+				this._setCleanSpeed(stats, curLine, options);
 				continue;
 			}
 
 			if (i === 5) continue;
 			// ability scores
 			if (i === 6) {
-				const abilities = curLine.split(/ ?\(([+\-–‒])?[0-9]*\) ?/g);
+				const abilities = curLine.split(/ ?\(([+\-—])?[0-9]*\) ?/g);
 				stats.str = StatblockConverter._tryConvertNumber(abilities[0]);
 				stats.dex = StatblockConverter._tryConvertNumber(abilities[2]);
 				stats.con = StatblockConverter._tryConvertNumber(abilities[4]);
@@ -506,47 +683,46 @@ class StatblockConverter {
 				stats.reaction = [];
 				stats.legendary = [];
 
-				let curtrait = {};
+				let curTrait = {};
 
-				let ontraits = true;
-				let onactions = false;
-				let onreactions = false;
-				let onlegendaries = false;
-				let onlegendarydescription = false;
+				let isTraits = true;
+				let isActions = false;
+				let isReactions = false;
+				let isLegendaryActions = false;
+				let isLegendaryDescription = false;
 
 				// keep going through traits til we hit actions
 				while (i < toConvert.length) {
 					if (startNextPhase(curLine)) {
-						ontraits = false;
-						onactions = !curLine.toUpperCase().indexOf_handleColon("ACTIONS");
-						onreactions = !curLine.toUpperCase().indexOf_handleColon("REACTIONS");
-						onlegendaries = !curLine.toUpperCase().indexOf_handleColon("LEGENDARY ACTIONS");
-						onlegendarydescription = onlegendaries;
+						isTraits = false;
+						isActions = !curLine.toUpperCase().indexOf_handleColon("ACTIONS");
+						isReactions = !curLine.toUpperCase().indexOf_handleColon("REACTIONS");
+						isLegendaryActions = !curLine.toUpperCase().indexOf_handleColon("LEGENDARY ACTIONS");
+						isLegendaryDescription = isLegendaryActions;
 						i++;
 						curLine = toConvert[i];
 					}
 
-					// get the name
-					curtrait.name = "";
-					curtrait.entries = [];
+					curTrait.name = "";
+					curTrait.entries = [];
 
-					const parseAction = line => {
-						curtrait.name = line.split(/([.!])/g)[0];
-						curtrait.entries.push(line.split(".").splice(1).join(".").trim());
+					const parseFirstLine = line => {
+						curTrait.name = line.split(/([.!?])/g)[0];
+						curTrait.entries.push(line.substring(curTrait.name.length + 1, line.length).trim());
 					};
 
-					if (onlegendarydescription) {
+					if (isLegendaryDescription) {
 						// usually the first paragraph is a description of how many legendary actions the creature can make
 						// but in the case that it's missing the substring "legendary" and "action" it's probably an action
 						const compressed = curLine.replace(/\s*/g, "").toLowerCase();
-						if (!compressed.includes("legendary") && !compressed.includes("action")) onlegendarydescription = false;
+						if (!compressed.includes("legendary") && !compressed.includes("action")) isLegendaryDescription = false;
 					}
 
-					if (onlegendarydescription) {
-						curtrait.entries.push(curLine.trim());
-						onlegendarydescription = false;
+					if (isLegendaryDescription) {
+						curTrait.entries.push(curLine.trim());
+						isLegendaryDescription = false;
 					} else {
-						parseAction(curLine);
+						parseFirstLine(curLine);
 					}
 
 					i++;
@@ -556,34 +732,34 @@ class StatblockConverter {
 					// connecting words can start with: o ("of", "or"); t ("the"); a ("and", "at"). Accept numbers, e.g. (Costs 2 Actions)
 					// allow numbers
 					// allow "a" and "I" as single-character words
-					while (curLine && curLine.match(StrUtil.NAME_REGEX) === null && !startNextPhase(curLine)) {
-						curtrait.entries.push(curLine.trim());
+					while (curLine && !ConvertUtil.isNameLine(curLine) && !startNextPhase(curLine)) {
+						curTrait.entries.push(curLine.trim());
 						i++;
 						curLine = toConvert[i];
 					}
 
-					if (curtrait.name || curtrait.entries) {
+					if (curTrait.name || curTrait.entries) {
 						// convert dice tags
-						StatblockConverter._doConvertDiceTags(curtrait);
+						DiceConvert.convertTraitActionDice(curTrait);
 
 						// convert spellcasting
-						if (ontraits) {
-							if (curtrait.name.toLowerCase().includes("spellcasting")) {
-								curtrait = this._tryParseSpellcasting(curtrait);
-								if (curtrait.success) {
+						if (isTraits) {
+							if (curTrait.name.toLowerCase().includes("spellcasting")) {
+								curTrait = this._tryParseSpellcasting(curTrait, false, options);
+								if (curTrait.success) {
 									// merge in e.g. innate spellcasting
-									if (stats.spellcasting) stats.spellcasting = stats.spellcasting.concat(curtrait.out);
-									else stats.spellcasting = curtrait.out;
-								} else stats.trait.push(curtrait.out);
+									if (stats.spellcasting) stats.spellcasting = stats.spellcasting.concat(curTrait.out);
+									else stats.spellcasting = curTrait.out;
+								} else stats.trait.push(curTrait.out);
 							} else {
-								if (StatblockConverter._hasEntryContent(curtrait)) stats.trait.push(curtrait);
+								if (StatblockConverter._hasEntryContent(curTrait)) stats.trait.push(curTrait);
 							}
 						}
-						if (onactions && StatblockConverter._hasEntryContent(curtrait)) stats.action.push(curtrait);
-						if (onreactions && StatblockConverter._hasEntryContent(curtrait)) stats.reaction.push(curtrait);
-						if (onlegendaries && StatblockConverter._hasEntryContent(curtrait)) stats.legendary.push(curtrait);
+						if (isActions && StatblockConverter._hasEntryContent(curTrait)) stats.action.push(curTrait);
+						if (isReactions && StatblockConverter._hasEntryContent(curTrait)) stats.reaction.push(curTrait);
+						if (isLegendaryActions && StatblockConverter._hasEntryContent(curTrait)) stats.legendary.push(curTrait);
 					}
-					curtrait = {};
+					curTrait = {};
 				}
 
 				// Remove keys if they are empty
@@ -606,15 +782,21 @@ class StatblockConverter {
 			}
 		})();
 
-		this._doStatblockPostProcess(stats);
-		this._ui.doCleanAndOutput(stats, append);
+		this._doStatblockPostProcess(stats, options);
+		options.cbOutput(stats, options.isAppend);
 	}
 
 	/**
 	 * Parses statblocks from Homebrewery/GM Binder Markdown
-	 * @param append
+	 * @param inText Input text.
+	 * @param options Options object.
+	 * @param options.cbWarning Warning callback.
+	 * @param options.cbOutput Output callback.
+	 * @param options.isAppend Default output append mode.
 	 */
-	doParseMarkdown (append) {
+	doParseMarkdown (inText, options) {
+		options = StatblockConverter._getValidOptions(options);
+
 		const self = this;
 
 		function stripQuote (line) {
@@ -640,14 +822,14 @@ class StatblockConverter {
 			return line.trim().startsWith("**");
 		}
 
-		if (!this._ui.inText || !this._ui.inText.trim()) return this._ui.showWarning("No input!");
-		const toConvert = StatblockConverter._getCleanInput(this._ui.inText).split("\n");
+		if (!inText || !inText.trim()) return options.cbWarning("No input!");
+		const toConvert = StatblockConverter._getCleanInput(inText).split("\n");
 		let stats = null;
 
 		const getNewStatblock = () => {
 			return {
-				source: this._ui.source,
-				page: this._ui.pageNumber
+				source: options.source,
+				page: options.pageNumber
 			}
 		};
 
@@ -656,11 +838,11 @@ class StatblockConverter {
 		const doOutputStatblock = () => {
 			if (trait != null) doAddFromParsed();
 			if (stats) {
-				this._doStatblockPostProcess(stats);
-				this._ui.doCleanAndOutput(stats, append)
+				this._doStatblockPostProcess(stats, options);
+				options.cbOutput(stats, options.isAppend);
 			}
 			stats = getNewStatblock();
-			if (hasMultipleBlocks) append = true; // append any further blocks we find in this parse
+			if (hasMultipleBlocks) options.isAppend = true; // append any further blocks we find in this parse
 			parsed = 0;
 		};
 
@@ -691,11 +873,11 @@ class StatblockConverter {
 			if (StatblockConverter._hasEntryContent(trait)) {
 				stats.trait = stats.trait || [];
 
-				StatblockConverter._doConvertDiceTags(trait);
+				DiceConvert.convertTraitActionDice(trait);
 
 				// convert spellcasting
 				if (trait.name.toLowerCase().includes("spellcasting")) {
-					trait = self._tryParseSpellcasting(trait, true);
+					trait = self._tryParseSpellcasting(trait, true, options);
 					if (trait.success) {
 						// merge in e.g. innate spellcasting
 						if (stats.spellcasting) stats.spellcasting = stats.spellcasting.concat(trait.out);
@@ -712,7 +894,7 @@ class StatblockConverter {
 			if (StatblockConverter._hasEntryContent(trait)) {
 				stats.action = stats.action || [];
 
-				StatblockConverter._doConvertDiceTags(trait);
+				DiceConvert.convertTraitActionDice(trait);
 				stats.action.push(trait);
 			}
 			trait = null;
@@ -722,7 +904,7 @@ class StatblockConverter {
 			if (StatblockConverter._hasEntryContent(trait)) {
 				stats.reaction = stats.reaction || [];
 
-				StatblockConverter._doConvertDiceTags(trait);
+				DiceConvert.convertTraitActionDice(trait);
 				stats.reaction.push(trait);
 			}
 			trait = null;
@@ -732,7 +914,7 @@ class StatblockConverter {
 			if (StatblockConverter._hasEntryContent(trait)) {
 				stats.legendary = stats.legendary || [];
 
-				StatblockConverter._doConvertDiceTags(trait);
+				DiceConvert.convertTraitActionDice(trait);
 				stats.legendary.push(trait);
 			}
 			trait = null;
@@ -771,7 +953,7 @@ class StatblockConverter {
 			// name of monster
 			if (parsed === 0) {
 				curLine = curLine.replace(/^\s*##/, "").trim();
-				stats.name = this._getCleanName(curLine);
+				stats.name = this._getCleanName(curLine, options);
 				parsed++;
 				continue;
 			}
@@ -779,7 +961,7 @@ class StatblockConverter {
 			// size type alignment
 			if (parsed === 1) {
 				curLine = curLine.replace(/^\**(.*?)\**$/, "$1");
-				StatblockConverter._setCleanSizeTypeAlignment(stats, curLine);
+				StatblockConverter._setCleanSizeTypeAlignment(stats, curLine, options);
 				parsed++;
 				continue;
 			}
@@ -800,7 +982,7 @@ class StatblockConverter {
 
 			// speed
 			if (parsed === 4) {
-				this._setCleanSpeed(stats, stripDashStarStar(curLine));
+				this._setCleanSpeed(stats, stripDashStarStar(curLine), options);
 				parsed++;
 				continue;
 			}
@@ -950,16 +1132,16 @@ class StatblockConverter {
 		doOutputStatblock();
 	}
 
-	showSample (format) {
+	getSample (format) {
 		switch (format) {
-			case "txt": this._ui.inText = StatblockConverter.SAMPLE_TEXT; break;
-			case "md": this._ui.inText = StatblockConverter.SAMPLE_MARKDOWN; break;
-			default: throw new Error(`Unknown format "${format}"`)
+			case "txt": return StatblockConverter.SAMPLE_TEXT;
+			case "md": return StatblockConverter.SAMPLE_MARKDOWN;
+			default: throw new Error(`Unknown format "${format}"`);
 		}
 	}
 
 	// SHARED UTILITY FUNCTIONS ////////////////////////////////////////////////////////////////////////////////////////
-	_doStatblockPostProcess (stats) {
+	_doStatblockPostProcess (stats, options) {
 		const doCleanup = () => {
 			// remove any empty arrays
 			Object.keys(stats).forEach(k => {
@@ -971,21 +1153,22 @@ class StatblockConverter {
 
 		AcConvert.tryPostProcessAc(
 			stats,
-			(ac) => this._ui.showWarning(`AC "${ac}" requires manual conversion`),
-			(ac) => this._ui.showWarning(`Failed to parse AC "${ac}"`)
+			(ac) => options.cbWarning(`AC "${ac}" requires manual conversion`),
+			(ac) => options.cbWarning(`Failed to parse AC "${ac}"`)
 		);
-		TagAttack.tryTagAttacks(stats, (atk) => this._ui.showWarning(`Manual attack tagging required for "${atk}"`));
+		TagAttack.tryTagAttacks(stats, (atk) => options.cbWarning(`Manual attack tagging required for "${atk}"`));
 		TagHit.tryTagHits(stats);
 		TraitActionTag.tryRun(stats);
 		LanguageTag.tryRun(stats);
 		SenseTag.tryRun(stats);
 		SpellcastingTypeTag.tryRun(stats);
+		DamageTypeTag.tryRun(stats);
 		doCleanup();
 	}
 
 	static _tryConvertNumber (strNumber) {
 		try {
-			return Number(strNumber)
+			return Number(strNumber.replace(/—/g, "-"))
 		} catch (e) {
 			return strNumber;
 		}
@@ -1044,148 +1227,28 @@ class StatblockConverter {
 		}
 	}
 
-	_tryParseSpellcasting (trait, isMarkdown) {
-		let spellcasting = [];
-
-		function parseSpellcasting (trait) {
-			const splitter = StrUtil.COMMAS_NOT_IN_PARENTHESES_REGEX;
-
-			function getParsedSpells (thisLine) {
-				let spellPart = thisLine.substring(thisLine.indexOf(": ") + 2).trim();
-				if (isMarkdown) {
-					const cleanPart = (part) => {
-						part = part.trim();
-						while (part.startsWith("*") && part.endsWith("*")) {
-							part = part.replace(/^\*(.*)\*$/, "$1");
-						}
-						return part;
-					};
-
-					const cleanedInner = spellPart.split(splitter).map(it => cleanPart(it)).filter(it => it);
-					spellPart = cleanedInner.join(", ");
-
-					while (spellPart.startsWith("*") && spellPart.endsWith("*")) {
-						spellPart = spellPart.replace(/^\*(.*)\*$/, "$1");
-					}
-				}
-				return spellPart.split(splitter).map(i => parseSpell(i));
-			}
-
-			let name = trait.name;
-			let spellcastingEntry = {"name": name, "headerEntries": [parseToHit(trait.entries[0])]};
-			let doneHeader = false;
-			trait.entries.forEach((thisLine, i) => {
-				if (i === 0) return;
-				if (thisLine.includes("/rest")) {
-					doneHeader = true;
-					let property = thisLine.substr(0, 1) + (thisLine.includes(" each:") ? "e" : "");
-					const value = getParsedSpells(thisLine);
-					if (!spellcastingEntry.rest) spellcastingEntry.rest = {};
-					spellcastingEntry.rest[property] = value;
-				} else if (thisLine.includes("/day")) {
-					doneHeader = true;
-					let property = thisLine.substr(0, 1) + (thisLine.includes(" each:") ? "e" : "");
-					const value = getParsedSpells(thisLine);
-					if (!spellcastingEntry.daily) spellcastingEntry.daily = {};
-					spellcastingEntry.daily[property] = value;
-				} else if (thisLine.includes("/week")) {
-					doneHeader = true;
-					let property = thisLine.substr(0, 1) + (thisLine.includes(" each:") ? "e" : "");
-					const value = getParsedSpells(thisLine);
-					if (!spellcastingEntry.weekly) spellcastingEntry.weekly = {};
-					spellcastingEntry.weekly[property] = value;
-				} else if (thisLine.startsWith("Constant: ")) {
-					doneHeader = true;
-					spellcastingEntry.constant = getParsedSpells(thisLine);
-				} else if (thisLine.startsWith("At will: ")) {
-					doneHeader = true;
-					spellcastingEntry.will = getParsedSpells(thisLine);
-				} else if (thisLine.includes("Cantrip")) {
-					doneHeader = true;
-					const value = getParsedSpells(thisLine);
-					if (!spellcastingEntry.spells) spellcastingEntry.spells = {"0": {"spells": []}};
-					spellcastingEntry.spells["0"].spells = value;
-				} else if (thisLine.includes(" level") && thisLine.includes(": ")) {
-					doneHeader = true;
-					let property = thisLine.substr(0, 1);
-					const value = getParsedSpells(thisLine);
-					if (!spellcastingEntry.spells) spellcastingEntry.spells = {};
-					let slots = thisLine.includes(" slot") ? parseInt(thisLine.substr(11, 1)) : 0;
-					spellcastingEntry.spells[property] = {"slots": slots, "spells": value};
-					if (!spellcastingEntry.spells[property]) delete spellcastingEntry.spells[property];
-				} else {
-					if (doneHeader) {
-						if (!spellcastingEntry.footerEntries) spellcastingEntry.footerEntries = [];
-						spellcastingEntry.footerEntries.push(parseToHit(thisLine));
-					} else {
-						spellcastingEntry.headerEntries.push(parseToHit(thisLine));
-					}
-				}
-			});
-
-			if (spellcastingEntry.headerEntries) {
-				const m = /charisma|intelligence|wisdom|constitution/gi.exec(JSON.stringify(spellcastingEntry.headerEntries));
-				if (m) spellcastingEntry.ability = m[0].substring(0, 3).toLowerCase();
-			}
-
-			spellcasting.push(spellcastingEntry);
-		}
-
-		function parseSpell (name) {
-			function getSourcePart (spellName) {
-				const source = StatblockConverter._getSpellSource(spellName);
-				return `${source && source !== SRC_PHB ? `|${source}` : ""}`;
-			}
-
-			name = name.trim();
-			let asterix = name.indexOf("*");
-			let brackets = name.indexOf(" (");
-			if (asterix !== -1) {
-				const trueName = name.substr(0, asterix);
-				return `{@spell ${trueName}${getSourcePart(trueName)}}*`;
-			} else if (brackets !== -1) {
-				const trueName = name.substr(0, brackets);
-				return `{@spell ${trueName}${getSourcePart(trueName)}}${name.substring(brackets)}`;
-			}
-			return `{@spell ${name}${getSourcePart(name)}}`;
-		}
-
-		function parseToHit (line) {
-			return line.replace(/( \+)(\d+)( to hit with spell)/g, (m0, m1, m2, m3) => ` {@hit ${m2}}${m3}`);
-		}
-
-		try {
-			parseSpellcasting(trait);
-			return {out: spellcasting, success: true};
-		} catch (e) {
-			this._ui.showWarning(`Failed to parse spellcasting: ${e.message}`);
-			return {out: trait, success: false};
-		}
-	}
-
-	static _getSpellSource (spellName) {
-		if (spellName && StatblockConverter.SPELL_SRC_MAP[spellName.toLowerCase()]) return StatblockConverter.SPELL_SRC_MAP[spellName.toLowerCase()];
-		return null;
+	_tryParseSpellcasting (trait, isMarkdown, options) {
+		return SpellcastingTraitConvert.tryParseSpellcasting(trait, isMarkdown, (err) => options.cbWarning(err));
 	}
 
 	// SHARED PARSING FUNCTIONS ////////////////////////////////////////////////////////////////////////////////////////
 	static _getCleanInput (ipt) {
 		return ipt
-			.replace(/[−–]/g, "-") // convert minus signs to hyphens
+			.replace(/[−–‒]/g, "-") // convert minus signs to hyphens
 		;
 	}
 
-	_getCleanName (line) {
-		return this._ui.menuAccess.isTitleCase() ? line.toLowerCase().toTitleCase() : line;
+	_getCleanName (line, options) {
+		return options.isTitleCaseName ? line.toLowerCase().toTitleCase() : line;
 	}
 
-	static _setCleanSizeTypeAlignment (stats, line) {
+	static _setCleanSizeTypeAlignment (stats, line, options) {
 		stats.size = line[0].toUpperCase();
 		stats.type = line.split(StrUtil.COMMAS_NOT_IN_PARENTHESES_REGEX)[0].split(" ").splice(1).join(" ");
 		stats.type = StatblockConverter._tryParseType(stats.type);
 
 		stats.alignment = line.split(StrUtil.COMMAS_NOT_IN_PARENTHESES_REGEX)[1].toLowerCase();
-		AlignmentConvert.tryConvertAlignment(stats);
+		AlignmentConvert.tryConvertAlignment(stats, (ali) => options.cbWarning(`Alignment "${ali}" requires manual conversion`));
 	}
 
 	static _setCleanHp (stats, line) {
@@ -1196,12 +1259,13 @@ class StatblockConverter {
 		else {
 			stats.hp = {
 				average: Number(m[1]),
-				formula: m[2].replace(/\s+/g, "").replace(/([^0-9d])/gi, " $1 ")
+				formula: m[2]
 			};
+			DiceConvert.cleanHpDice(stats);
 		}
 	}
 
-	_setCleanSpeed (stats, line) {
+	_setCleanSpeed (stats, line, options) {
 		line = line.toLowerCase().trim().replace(/^speed:?\s*/, "");
 		const ALLOWED = ["walk", "fly", "swim", "climb", "burrow"];
 
@@ -1257,7 +1321,7 @@ class StatblockConverter {
 		// flag speed as needing hand-parsing
 		if (byHand) {
 			out.UNPARSED_SPEED = line;
-			this._ui.showWarning(`Speed requires manual conversion: "${line}"`);
+			options.cbWarning(`Speed requires manual conversion: "${line}"`);
 		}
 		stats.speed = out;
 	}
@@ -1341,42 +1405,7 @@ class StatblockConverter {
 	static _hasEntryContent (trait) {
 		return trait && (trait.name || (trait.entries.length === 1 && trait.entries[0]) || trait.entries.length > 1);
 	}
-
-	static _doConvertDiceTags (trait) {
-		function doTagDice (str) {
-			// un-tag dice
-			str = str.replace(/{@(?:dice|damage) ([^}]*)}/gi, "$1");
-
-			// re-tag + format dice
-			str = str.replace(/((\s*[-+]\s*)?(([1-9]\d*)?d([1-9]\d*)(\s*?[-+×x]\s*?\d+)?))+/gi, (...m) => {
-				const expanded = m[0].replace(/([^0-9d])/gi, " $1 ").replace(/\s+/g, " ");
-				return `{@dice ${expanded}}`;
-			});
-
-			// tag damage
-			str = str.replace(/(\d+)( \({@dice )([-+0-9d ]*)(}\) [a-z]+( or [a-z]+)? damage)/ig, (...m) => {
-				return m[0].replace(/{@dice /gi, "{@damage ");
-			});
-
-			return str;
-		}
-
-		if (trait.entries) {
-			trait.entries = trait.entries.filter(it => it.trim()).map(e => {
-				if (typeof e !== "string") return e;
-
-				// replace e.g. "+X to hit"
-				e = e.replace(/([-+])?\d+(?= to hit)/g, function (match) {
-					const cleanMatch = match.startsWith("+") ? match.replace("+", "") : match;
-					return `{@hit ${cleanMatch}}`
-				});
-
-				return doTagDice(e);
-			});
-		}
-	}
 }
-StatblockConverter.SPELL_SRC_MAP = {};
 StatblockConverter.SKILL_SPACE_MAP = {
 	"sleightofhand": "sleight of hand",
 	"animalhandling": "animal handling"
@@ -1477,18 +1506,10 @@ StatblockConverter.SAMPLE_MARKDOWN =
 >`;
 
 class TableConverter {
-	constructor () {
-		this._ui = null;
-	}
-
-	set ui (ui) {
-		this._ui = ui;
-	}
-
 	showSample (format) {
 		switch (format) {
-			case "html": this._ui.inText = TableConverter.SAMPLE_HTML; break;
-			case "md": this._ui.inText = TableConverter.SAMPLE_MARKDOWN; break;
+			case "html": return TableConverter.SAMPLE_HTML;
+			case "md": return TableConverter.SAMPLE_MARKDOWN;
 			default: throw new Error(`Unknown format "${format}"`)
 		}
 	}
@@ -1500,8 +1521,16 @@ class TableConverter {
 		if (!tbl.rows.some(Boolean)) throw new Error("Table had no rows!");
 	}
 
-	doParseHtml (append) {
-		if (!this._ui.inText || !this._ui.inText.trim()) return this._ui.showWarning("No input!");
+	/**
+	 * Parses tables from HTML.
+	 * @param inText Input text.
+	 * @param options Options object.
+	 * @param options.cbWarning Warning callback.
+	 * @param options.cbOutput Output callback.
+	 * @param options.isAppend Default output append mode.
+	 */
+	doParseHtml (inText, options) {
+		if (!inText || !inText.trim()) return options.cbWarning("No input!");
 
 		const handleTable = ($table, caption) => {
 			const tbl = {
@@ -1529,7 +1558,7 @@ class TableConverter {
 			// Columns
 			if ($table.find(`thead`)) {
 				const $headerRows = $table.find(`thead tr`);
-				if ($headerRows.length !== 1) this._ui.showWarning(`Table header had ${$headerRows.length} rows!`);
+				if ($headerRows.length !== 1) options.cbWarning(`Table header had ${$headerRows.length} rows!`);
 				$headerRows.each((i, r) => {
 					const $r = $(r);
 					if (i === 0) { // use first tr as column headers
@@ -1564,10 +1593,10 @@ class TableConverter {
 			}
 
 			this._postProcessTable(tbl);
-			this._ui.doCleanAndOutput(tbl, append);
+			options.cbOutput(tbl, options.isAppend);
 		};
 
-		const $input = $(this._ui.inText);
+		const $input = $(inText);
 		if ($input.is("table")) {
 			handleTable($input);
 		} else {
@@ -1580,10 +1609,18 @@ class TableConverter {
 		}
 	}
 
-	doParseMarkdown (append) {
-		if (!this._ui.inText || !this._ui.inText.trim()) return this._ui.showWarning("No input!");
+	/**
+	 * Parses tables from Markdown.
+	 * @param inText Input text.
+	 * @param options Options object.
+	 * @param options.cbWarning Warning callback.
+	 * @param options.cbOutput Output callback.
+	 * @param options.isAppend Default output append mode.
+	 */
+	doParseMarkdown (inText, options) {
+		if (!inText || !inText.trim()) return options.cbWarning("No input!");
 
-		const handleTable = (lines, caption) => {
+		const getConvertedTable = (lines, caption) => {
 			// trim leading/trailing pipes if they're uniformly present
 			const contentLines = lines.filter(l => l && l.trim());
 			if (contentLines.every(l => l.trim().startsWith("|"))) {
@@ -1630,11 +1667,31 @@ class TableConverter {
 			tbl.colStyles = alignment;
 
 			this._postProcessTable(tbl);
-			this._ui.doCleanAndOutput(tbl, append);
+			return tbl;
 		};
 
-		// TODO feed in caption
-		handleTable(this._ui.inText.split("\n"));
+		const lines = inText.replace(/\r\n/g, "\n").replace(/\r/g, "\n").split(/\n/g);
+		const stack = [];
+		let cur = null;
+		lines.forEach(l => {
+			if (l.trim().startsWith("##### ")) {
+				if (cur && cur.lines.length) stack.push(cur);
+				cur = {caption: l.trim().replace(/^##### /, ""), lines: []};
+			} else {
+				cur = cur || {lines: []};
+				cur.lines.push(l);
+			}
+		});
+		if (cur && cur.lines.length) stack.push(cur);
+
+		const toOutput = stack.map(tbl => getConvertedTable(tbl.lines, tbl.caption)).reverse();
+		toOutput.forEach((out, i) => {
+			if (options.isAppend) options.cbOutput(out, true);
+			else {
+				if (i === 0) options.cbOutput(out, false);
+				else options.cbOutput(out, true);
+			}
+		});
 	}
 
 	_postProcessTable (tbl) {
@@ -1763,15 +1820,11 @@ const ui = new ConverterUi();
 
 ui.statblockConverter = statblockConverter;
 ui.tableConverter = tableConverter;
-statblockConverter.ui = ui;
-tableConverter.ui = ui;
 
 async function doPageInit () {
 	ExcludeUtil.pInitialise(); // don't await, as this is only used for search
-	const spellIndex = await DataUtil.loadJSON(`data/spells/index.json`);
-	const spellData = await Promise.all(Object.values(spellIndex).map(f => DataUtil.loadJSON(`data/spells/${f}`)));
-	// reversed so official sources take precedence over 3pp
-	spellData.reverse().forEach(d => d.spell.forEach(s => StatblockConverter.SPELL_SRC_MAP[s.name.toLowerCase()] = s.source));
-	const bestiarySources = await DataUtil.loadJSON("data/bestiary/index.json");
-	ui.init(bestiarySources);
+	await BrewUtil.pAddBrewData(); // init homebrew
+	const spellData = await SpellcastingTraitConvert.pGetSpellData();
+	SpellcastingTraitConvert.init(spellData);
+	ui.init();
 }

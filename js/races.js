@@ -93,8 +93,8 @@ async function onJsonLoad (data) {
 		listClass: "races"
 	});
 
-	const jsonRaces = EntryRenderer.race.mergeSubraces(data.race);
-	const speedFilter = new Filter({header: "Speed", headerName: "速度", items: ["Climb", "Fly", "Swim", "Walk (Fast)", "Walk", "Walk (Slow)"], displayFn: Parser.SpeedToDisplay});
+	const jsonRaces = Renderer.race.mergeSubraces(data.race);
+	const speedFilter = new Filter({header: "Speed", headerName: "速度", items: ["Climb", "Fly", "Swim", "Walk (Fast)", "Walk", "Walk (Slow)"]});
 	const traitFilter = new Filter({
 		header: "Traits", headerName: "特性",
 		items: [
@@ -197,7 +197,7 @@ async function onJsonLoad (data) {
 	BrewUtil.pAddBrewData()
 		.then(handleBrew)
 		.then(() => BrewUtil.bind({list}))
-		.then(BrewUtil.pAddLocalBrewData)
+		.then(() => BrewUtil.pAddLocalBrewData())
 		.catch(BrewUtil.pPurgeBrew)
 		.then(async () => {
 			BrewUtil.makeBrewButton("manage-brew");
@@ -319,16 +319,12 @@ function addRaces (data) {
 		primaryLists: [list]
 	});
 	ListUtil.bindPinButton();
-	EntryRenderer.hover.bindPopoutButton(raceList);
+	Renderer.hover.bindPopoutButton(raceList);
 	UrlUtil.bindLinkExportButton(filterBox);
 	ListUtil.bindDownloadButton();
 	ListUtil.bindUploadButton();
 
-	$(`body`).on("click", ".btn-name-pronounce", function () {
-		const audio = $(this).find(`.name-pronounce`)[0];
-		audio.currentTime = 0;
-		audio.play();
-	});
+	Renderer.utils.bindPronounceButtons();
 }
 
 function handleFilterChange () {
@@ -361,7 +357,7 @@ function getSublistItem (race, pinId) {
 	`;
 }
 
-const renderer = EntryRenderer.getDefaultRenderer();
+const renderer = Renderer.get();
 function loadhash (id) {
 	renderer.setFirstSection(true);
 	const $pgContent = $("#pagecontent").empty();
@@ -380,9 +376,9 @@ function loadhash (id) {
 
 		$pgContent.append(`
 		<tbody>
-		${EntryRenderer.utils.getBorderTr()}
+		${Renderer.utils.getBorderTr()}
 		<tr><th class="name" colspan="6">
-		<span><b class="stats-name copyable" onclick="EntryRenderer.utils._pHandleNameClick(this, '${race.source.escapeQuotes()}')">${race.name}</b>${race.ENG_name? (" <st style='font-size:80%;'>"+race.ENG_name+"</st>"):""}</span>
+		<span><b class="stats-name copyable" onclick="Renderer.utils._pHandleNameClick(this, '${race.source.escapeQuotes()}')">${race.name}</b>${race.ENG_name? (" <st style='font-size:80%;'>"+race.ENG_name+"</st>"):""}</span>
 		${race.soundClip ? getPronunciationButton() : ""}
 		<span class="stats-source ${Parser.sourceJsonToColor(race.source)}" title="${Parser.sourceJsonToFull(race.source)}">${Parser.sourceJsonToAbv(race.source)}</span>
 		</th></tr>
@@ -390,28 +386,28 @@ function loadhash (id) {
 		<tr><td colspan="6"><b>體型：</b> ${Parser.sizeAbvToFull(race.size)}</td></tr>
 		<tr><td colspan="6"><b>速度：</b> ${Parser.getSpeedString(race)}</td></tr>
 		<tr id="traits"><td class="divider" colspan="6"><div></div></td></tr>
-		${EntryRenderer.utils.getBorderTr()}
+		${Renderer.utils.getBorderTr()}
 		</tbody>
 		`);
 
 		const renderStack = [];
 		renderStack.push("<tr class='text'><td colspan='6'>");
-		renderer.recursiveEntryRender({type: "entries", entries: race.entries}, renderStack, 1);
+		renderer.recursiveRender({type: "entries", entries: race.entries}, renderStack, {depth: 1});
 		renderStack.push("</td></tr>");
 		if (race.traitTags && race.traitTags.includes("NPC Race")) {
 			renderStack.push(`<tr class="text"><td colspan="6"><section class="text-muted">`);
-			renderer.recursiveEntryRender(
+			renderer.recursiveRender(
 				`{@i 註記： 這個種族被記載於{@i 《地下城主指南》}以做為創造非玩家角色的選項。它並非被設計做為玩家可用的種族。}`
-				, renderStack, 2);
+				, renderStack, {depth: 2});
 			renderStack.push(`</section></td></tr>`);
 		}
-		renderStack.push(EntryRenderer.utils.getPageTr(race));
+		renderStack.push(Renderer.utils.getPageTr(race));
 
 		$pgContent.find('tbody tr:last').before(renderStack.join(""));
 	}
 
 	function buildFluffTab (isImageTab) {
-		return EntryRenderer.utils.buildFluffTab(
+		return Renderer.utils.buildFluffTab(
 			isImageTab,
 			$pgContent,
 			race,
@@ -422,7 +418,7 @@ function loadhash (id) {
 	}
 
 	function getFluff (fluffJson) {
-		const predefined = EntryRenderer.utils.getPredefinedFluff(race, "raceFluff");
+		const predefined = Renderer.utils.getPredefinedFluff(race, "raceFluff");
 		if (predefined) return predefined;
 
 		const subFluff = race._baseName && race.name.toLowerCase() === race._baseName.toLowerCase() ? "" : fluffJson.race.find(it => it.name.toLowerCase() === race.name.toLowerCase() && it.source.toLowerCase() === race.source.toLowerCase());
@@ -465,13 +461,23 @@ function loadhash (id) {
 		if (baseFluff) addFluff(baseFluff, true);
 
 		if ((subFluff && subFluff.uncommon) || (baseFluff && baseFluff.uncommon)) {
-			fluff.entries = fluff.entries || [];
-			fluff.entries.push({type: "section", entries: [MiscUtil.copy(fluffJson.meta.uncommon)]});
+			const entryUncommon = {type: "section", entries: [MiscUtil.copy(fluffJson.meta.uncommon)]};
+			if (fluff.entries) {
+				fluff.entries.push(entryUncommon);
+			} else {
+				fluff.entries = [HTML_NO_INFO];
+				fluff.entries.push(...entryUncommon.entries)
+			}
 		}
 
 		if ((subFluff && subFluff.monstrous) || (baseFluff && baseFluff.monstrous)) {
-			fluff.entries = fluff.entries || [];
-			fluff.entries.push({type: "section", entries: [MiscUtil.copy(fluffJson.meta.monstrous)]});
+			const entryMonstrous = {type: "section", entries: [MiscUtil.copy(fluffJson.meta.monstrous)]};
+			if (fluff.entries) {
+				fluff.entries.push(entryMonstrous);
+			} else {
+				fluff.entries = [HTML_NO_INFO];
+				fluff.entries.push(...entryMonstrous.entries)
+			}
 		}
 
 		if (fluff.entries.length && fluff.entries[0].type === "section") {
@@ -482,23 +488,23 @@ function loadhash (id) {
 		return fluff;
 	}
 
-	const traitTab = EntryRenderer.utils.tabButton(
+	const traitTab = Renderer.utils.tabButton(
 		"特性",
 		() => {},
 		buildStatsTab
 	);
-	const infoTab = EntryRenderer.utils.tabButton(
+	const infoTab = Renderer.utils.tabButton(
 		"資訊",
 		() => {},
 		buildFluffTab
 	);
-	const picTab = EntryRenderer.utils.tabButton(
+	const picTab = Renderer.utils.tabButton(
 		"圖片",
 		() => {},
 		buildFluffTab.bind(null, true)
 	);
 
-	EntryRenderer.utils.bindTabButtons(traitTab, infoTab, picTab);
+	Renderer.utils.bindTabButtons(traitTab, infoTab, picTab);
 
 	ListUtil.updateSelected();
 }

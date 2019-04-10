@@ -5,9 +5,9 @@ const CONTENTS_URL = "data/adventures.json";
 window.onload = function load () {
 	BookUtil.renderArea = $(`#pagecontent`);
 
-	BookUtil.renderArea.append(EntryRenderer.utils.getBorderTr());
+	BookUtil.renderArea.append(Renderer.utils.getBorderTr());
 	BookUtil.renderArea.append(`<tr><td colspan="6" class="initial-message book-loading-message">Loading...</td></tr>`);
-	BookUtil.renderArea.append(EntryRenderer.utils.getBorderTr());
+	BookUtil.renderArea.append(Renderer.utils.getBorderTr());
 
 	ExcludeUtil.pInitialise(); // don't await, as this is only used for search
 	Omnisearch.addScrollTopFloat();
@@ -38,7 +38,7 @@ function onJsonLoad (data) {
 	window.onhashchange = BookUtil.booksHashChange;
 	BrewUtil.pAddBrewData()
 		.then(handleBrew)
-		.then(BrewUtil.pAddLocalBrewData)
+		.then(() => BrewUtil.pAddLocalBrewData())
 		.catch(BrewUtil.pPurgeBrew)
 		.then(() => {
 			if (window.location.hash.length) {

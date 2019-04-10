@@ -2,7 +2,7 @@
 
 const GEN_JSON_URL = "data/generated/gendata-tables.json";
 const JSON_URL = "data/tables.json";
-const renderer = EntryRenderer.getDefaultRenderer();
+const renderer = Renderer.get();
 
 window.onload = function load () {
 	ExcludeUtil.pInitialise(); // don't await, as this is only used for search
@@ -55,7 +55,7 @@ async function onJsonLoad (data) {
 	BrewUtil.pAddBrewData()
 		.then(handleBrew)
 		.then(() => BrewUtil.bind({list}))
-		.then(BrewUtil.pAddLocalBrewData)
+		.then(() => BrewUtil.pAddLocalBrewData())
 		.catch(BrewUtil.pPurgeBrew)
 		.then(async () => {
 			BrewUtil.makeBrewButton("manage-brew");
@@ -121,7 +121,7 @@ function addTables (data) {
 		primaryLists: [list]
 	});
 	ListUtil.bindPinButton();
-	EntryRenderer.hover.bindPopoutButton(tableList);
+	Renderer.hover.bindPopoutButton(tableList);
 	UrlUtil.bindLinkExportButton(filterBox);
 	ListUtil.bindDownloadButton();
 	ListUtil.bindUploadButton();
@@ -157,15 +157,15 @@ function loadhash (id) {
 	const it = tableList[id];
 
 	$content.append(`
-		${EntryRenderer.utils.getBorderTr()}
-		${EntryRenderer.utils.getNameTr(it)}
+		${Renderer.utils.getBorderTr()}
+		${Renderer.utils.getNameTr(it)}
 		<tr><td class="divider" colspan="6"><div></div></td></tr>
-		${EntryRenderer.table.getCompactRenderedString(it)}
+		${Renderer.table.getCompactRenderedString(it)}
 		${it.chapter ? `<tr class="text"><td colspan="6">
-		${EntryRenderer.getDefaultRenderer().renderEntry(`{@note ${it._type === "t" ? `這個表格` : "這些表格"}可以在 ${Parser.sourceJsonToFull(it.source)}${Parser.bookOrdinalToAbv(it.chapter.ordinal, true)}, {@book ${it.chapter.name}|${it.source}|${it.chapter.index}|${it.chapter.name}} 中被找到}`)}
+		${Renderer.get().render(`{@note ${it._type === "t" ? `這個表格` : "這些表格"}可以在 ${Parser.sourceJsonToFull(it.source)}${Parser.bookOrdinalToAbv(it.chapter.ordinal, true)}, {@book ${it.chapter.name}|${it.source}|${it.chapter.index}|${it.chapter.name}} 中被找到}`)}
 		</td></tr>` : ""}
-		${EntryRenderer.utils.getPageTr(it)}
-		${EntryRenderer.utils.getBorderTr()}
+		${Renderer.utils.getPageTr(it)}
+		${Renderer.utils.getBorderTr()}
 	`);
 
 	ListUtil.updateSelected();
