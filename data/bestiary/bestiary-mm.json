@@ -4090,7 +4090,7 @@
 				{
 					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The sphinx's weapon attacks are magical."
+						"The sphinx's的武器攻擊視作魔法攻擊。"
 					]
 				}
 			],
@@ -4498,7 +4498,7 @@
 			]
 		},
 		{
-			"name": "Arcanaloth",
+			"name": "奧登羅斯魔", "ENG_name": "Arcanaloth",
 			"size": "M",
 			"type": {
 				"type": "fiend",
@@ -4568,19 +4568,19 @@
 			],
 			"senses": "真實視覺120呎",
 			"passive": 17,
-			"languages": "all, telepathy 120 ft.",
+			"languages": "全部語言、心靈感應120呎",
 			"cr": "12",
 			"trait": [
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The arcanaloth 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"奧登羅斯魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
 					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The arcanaloth's weapon attacks are magical."
+						"奧登羅斯魔的武器攻擊視作魔法攻擊。"
 					]
 				}
 			],
@@ -4588,29 +4588,29 @@
 				{
 					"name": "爪抓",
 					"entries": [
-						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}8 ({@damage 2d4 + 3})劈砍傷害。 The target must make a DC 14 Constitution saving throw, taking 10 ({@damage 3d6}) poison damage on a failed save, or half as much damage on a successful one."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}8 ({@damage 2d4 + 3})劈砍傷害。目標必須進行一次DC 14的體質豁免，豁免失敗則受到10 ({@damage 3d6})毒素傷害，豁免成功則只受到一半的傷害。"
 					]
 				},
 				{
-					"name": "Teleport",
+					"name": "傳送",
 					"entries": [
-						"The arcanaloth magically teleports, along with any equipment it is wearing or carrying, up to 60 feet to an unoccupied space it can see."
+						"奧登羅斯魔用魔法將自己連同任何它所穿戴或攜帶的裝備一起傳送最多60呎距離到一處它所能看見的未被佔據空間。"
 					]
 				}
 			],
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Yugoloth Summoning",
+					"name": "召喚尤格羅斯魔",
 					"entries": [
-						"Some yugoloths have an action option that allows them to summon other yugoloths.",
+						"有些尤格羅斯魔擁有允許它們召喚出其他尤格羅斯魔的動作項。",
 						{
-							"name": "Summon Yugoloth (1/Day)",
+							"name": "召喚尤格羅斯魔 (1/日)",
 							"type": "entries",
 							"entries": [
-								"The yugoloth attempts a magical summoning.",
-								"An arcanaloth has a {@chance 40|40 percent|40% summoning chance} chance of summoning one arcanaloth.",
-								"A summoned yugoloth appears in an unoccupied space within 60 feet of its summoner, does as it pleases, and can't summon other yugoloths. The summoned yugoloth remains for 1 minute, until it or its summoner dies, or until its summoner takes a bonus action to dismiss it."
+								"該尤格羅斯魔嘗試進行一次魔法召喚。",
+								"一個奧登羅斯魔有{@chance 40|40％|40％召喚機率}機率召喚出另一個奧登羅斯魔。",
+								"被召喚的尤格羅斯魔將出現距離它召喚者60呎內的一處未被佔據空間，隨自己的喜好行動，且不能再召喚其它尤格羅斯魔。它會持續存在長達1分鐘，直到它或它的召喚者死亡、或直到召喚者以一個附贈動作解消它。"
 							]
 						}
 					]
@@ -4621,7 +4621,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The arcanaloth's innate spellcasting ability is Charisma (spell save DC 15). The arcanaloth can innately cast the following spells, requiring no material components:"
+						"奧登羅斯魔的天生施法屬性為魅力（法術豁免DC 15）。奧登羅斯魔天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 變造自身}",
@@ -4633,14 +4633,14 @@
 					"ability": "cha"
 				},
 				{
-					"name": "Spellcasting",
+					"name": "施法",
 					"headerEntries": [
-						"The arcanaloth is a 16th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 17, {@hit 9} to hit with spell attacks). The arcanaloth has the following wizard spells prepared:"
+						"奧登羅斯魔是16級的施法者。它的施法屬性為智力（法術豁免DC 17，法術攻擊命中{@hit 9}）。奧登羅斯魔已準備了以下法師法術："
 					],
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell fire bolt}",
+								"{@spell 火焰箭}",
 								"{@spell 法師之手}",
 								"{@spell 次級幻象}",
 								"{@spell 魔法技倆}"
@@ -4652,7 +4652,7 @@
 								"{@spell 偵測魔法}",
 								"{@spell 鑑定術}",
 								"{@spell 護盾術}",
-								"{@spell Tenser's floating disk}"
+								"{@spell 譚森浮碟術}"
 							]
 						},
 						"2": {
@@ -4660,7 +4660,7 @@
 							"spells": [
 								"{@spell 偵測思想}",
 								"{@spell 鏡影術}",
-								"{@spell phantasmal force}",
+								"{@spell 魅影之力}",
 								"{@spell 暗示術}"
 							]
 						},
@@ -4689,7 +4689,7 @@
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell chain lightning}"
+								"{@spell 連環閃電}"
 							]
 						},
 						"7": {
@@ -9866,7 +9866,7 @@
 				{
 					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The couatl's weapon attacks are magical."
+						"The couatl's的武器攻擊視作魔法攻擊。"
 					]
 				},
 				{
@@ -13979,7 +13979,7 @@
 				{
 					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The empyrean's weapon attacks are magical."
+						"The empyrean's的武器攻擊視作魔法攻擊。"
 					]
 				}
 			],
@@ -21865,7 +21865,7 @@
 				{
 					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The sphinx's weapon attacks are magical."
+						"The sphinx's的武器攻擊視作魔法攻擊。"
 					]
 				}
 			],
@@ -27792,7 +27792,7 @@
 			]
 		},
 		{
-			"name": "Mezzoloth",
+			"name": "麥澤羅斯魔", "ENG_name": "Mezzoloth",
 			"size": "M",
 			"type": {
 				"type": "fiend",
@@ -27851,19 +27851,19 @@
 			],
 			"senses": "盲視60呎, 黑暗視覺60呎",
 			"passive": 13,
-			"languages": "Abyssal, Infernal, telepathy 60 ft.",
+			"languages": "深淵語、煉獄語、心靈感應60呎",
 			"cr": "5",
 			"trait": [
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The mezzoloth 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"麥澤羅斯魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
 					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The mezzoloth's weapon attacks are magical."
+						"麥澤羅斯魔的武器攻擊視作魔法攻擊。"
 					]
 				}
 			],
@@ -27871,7 +27871,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The mezzoloth makes two attacks: one with its claws and one with its trident."
+						"麥澤羅斯魔進行二次攻擊：一次爪抓，一次三叉戟。"
 					]
 				},
 				{
@@ -27881,31 +27881,31 @@
 					]
 				},
 				{
-					"name": "Trident",
+					"name": "三叉戟",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 7}，觸及5呎 或 射程20/60呎，單一目標。{@h}7 ({@damage 1d6 + 4}) piercing damage, or 8 ({@damage 1d8 + 4}) piercing damage when held with two claws and used to make a melee attack."
+						"{@atk mw,rw} 命中{@hit 7}，觸及5呎 或 射程20/60呎，單一目標。{@h}7 ({@damage 1d6 + 4})穿刺傷害，或若雙爪持握以進行一次近戰攻擊時則造成 8 ({@damage 1d8 + 4})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Teleport",
+					"name": "傳送",
 					"entries": [
-						"The mezzoloth magically teleports, along with any equipment it is wearing or carrying, up to 60 feet to an unoccupied space it can see."
+						"麥澤羅斯魔用魔法將自己連同任何它所穿戴或攜帶的裝備一起傳送最多60呎距離到一處它所能看見的未被佔據空間。"
 					]
 				}
 			],
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Yugoloth Summoning",
+					"name": "召喚尤格羅斯魔",
 					"entries": [
-						"Some yugoloths have an action option that allows them to summon other yugoloths.",
+						"有些尤格羅斯魔擁有允許它們召喚出其他尤格羅斯魔的動作項。",
 						{
-							"name": "Summon Yugoloth (1/Day)",
+							"name": "召喚尤格羅斯魔 (1/日)",
 							"type": "entries",
 							"entries": [
-								"The yugoloth attempts a magical summoning.",
-								"A mezzoloth has a {@chance 30|30 percent|30% summoning chance} chance of summoning one mezzoloth.",
-								"A summoned yugoloth appears in an unoccupied space within 60 feet of its summoner, does as it pleases, and can't summon other yugoloths. The summoned yugoloth remains for 1 minute, until it or its summoner dies, or until its summoner takes a bonus action to dismiss it."
+								"該尤格羅斯魔嘗試進行一次魔法召喚。",
+								"一個麥澤羅斯魔有{@chance 30|30％|30％召喚機率}機率召喚出另一個麥澤羅斯魔。",
+								"被召喚的尤格羅斯魔將出現距離它召喚者60呎內的一處未被佔據空間，隨自己的喜好行動，且不能再召喚其它尤格羅斯魔。它會持續存在長達1分鐘，直到它或它的召喚者死亡、或直到召喚者以一個附贈動作解消它。"
 							]
 						}
 					]
@@ -27916,7 +27916,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The mezzoloth's innate spellcasting ability is Charisma (spell save DC 11). The mezzoloth can innately cast the following spells, requiring no material components:"
+						"麥澤羅斯魔的天生施法屬性為魅力（法術豁免DC 11）。麥澤羅斯魔天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"daily": {
 						"1": [
@@ -30008,7 +30008,7 @@
 			]
 		},
 		{
-			"name": "Nycaloth",
+			"name": "尼卡羅斯魔", "ENG_name": "Nycaloth",
 			"size": "L",
 			"type": {
 				"type": "fiend",
@@ -30070,19 +30070,19 @@
 			],
 			"senses": "盲視60呎, 黑暗視覺60呎",
 			"passive": 14,
-			"languages": "Abyssal, Infernal, telepathy 60 ft.",
+			"languages": "深淵語、煉獄語、心靈感應60呎",
 			"cr": "9",
 			"trait": [
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The nycaloth 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"尼卡羅斯魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
 					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The nycaloth's weapon attacks are magical."
+						"尼卡羅斯魔的武器攻擊視作魔法攻擊。"
 					]
 				}
 			],
@@ -30090,13 +30090,13 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The nycaloth makes two melee attacks, or it makes one melee attack and teleports before or after the attack."
+						"尼卡羅斯魔進行二次近戰攻擊，或它進行一次近戰攻擊並在該攻擊之前或之後使用傳送。"
 					]
 				},
 				{
 					"name": "爪抓",
 					"entries": [
-						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5})劈砍傷害。 If the target is a creature, it must succeed on a DC 16 Constitution saving throw or take 5 ({@damage 2d4}) slashing damage at the start of each of its turns due to a fiendish wound. Each time the nycaloth hits the wounded target with this attack, the damage dealt by the wound increases by 5 ({@dice 2d4}). Any creature can take an action to stanch the wound with a successful DC 13 Wisdom (Medicine) check. The wound also closes if the target receives magical healing."
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5})劈砍傷害。若目標為一個生物，則它必須成功通過一次DC 16的體質豁免，否則將在它的每個回合開始時因為邪魔創傷而受到5 ({@damage 2d4})劈砍傷害。每當尼卡羅斯魔使用此攻擊命中一個帶有該創傷的生物，這個創傷造成的傷害將會增加5 ({@dice 2d4})點。任何生物都可以使用一個動作，透過成功通過一次DC 13的睿知（{@skill 醫藥}）檢定以為創傷止血。這個創傷也會在目標被魔法治療的時候癒合。"
 					]
 				},
 				{
@@ -30106,25 +30106,25 @@
 					]
 				},
 				{
-					"name": "Teleport",
+					"name": "傳送",
 					"entries": [
-						"The nycaloth magically teleports, along with any equipment it is wearing or carrying, up to 60 feet to an unoccupied space it can see."
+						"尼卡羅斯魔用魔法將自己連同任何它所穿戴或攜帶的裝備一起傳送最多60呎距離到一處它所能看見的未被佔據空間。"
 					]
 				}
 			],
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Yugoloth Summoning",
+					"name": "召喚尤格羅斯魔",
 					"entries": [
-						"Some yugoloths have an action option that allows them to summon other yugoloths.",
+						"有些尤格羅斯魔擁有允許它們召喚出其他尤格羅斯魔的動作項。",
 						{
-							"name": "Summon Yugoloth (1/Day)",
+							"name": "召喚尤格羅斯魔 (1/日)",
 							"type": "entries",
 							"entries": [
-								"The yugoloth chooses what to summon and attempts a magical summoning.",
-								"A nycaloth has a {@chance 50|50 percent|50% summoning chance} chance of summoning {@dice 1d4} {@creature mezzoloth}s or one nycaloth.",
-								"A summoned yugoloth appears in an unoccupied space within 60 feet of its summoner, does as it pleases, and can't summon other yugoloths. The summoned yugoloth remains for 1 minute, until it or its summoner dies, or until its summoner takes a bonus action to dismiss it."
+								"該尤格羅斯魔選擇要召喚什麼並嘗試進行一次魔法召喚。",
+								"一個尼卡羅斯魔有{@chance 50|50％|50％召喚機率}機率召喚出{@dice 1d4}格{@creature 麥澤羅斯魔}、或一個尼卡羅斯魔。",
+								"被召喚的尤格羅斯魔將出現距離它召喚者60呎內的一處未被佔據空間，隨自己的喜好行動，且不能再召喚其它尤格羅斯魔。它會持續存在長達1分鐘，直到它或它的召喚者死亡、或直到召喚者以一個附贈動作解消它。"
 							]
 						}
 					]
@@ -30135,7 +30135,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The nycaloth's innate spellcasting ability is Charisma. The nycaloth can innately cast the following spells, requiring no material components:"
+						"尼卡羅斯魔的天生施法屬性為魅力。尼卡羅斯魔天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 黑暗術}",
@@ -31816,7 +31816,7 @@
 				{
 					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The pit fiend's weapon attacks are magical."
+						"The pit fiend's的武器攻擊視作魔法攻擊。"
 					]
 				}
 			],
@@ -40031,7 +40031,7 @@
 			]
 		},
 		{
-			"name": "Ultroloth",
+			"name": "烏特羅斯魔", "ENG_name": "Ultroloth",
 			"size": "M",
 			"type": {
 				"type": "fiend",
@@ -40095,19 +40095,19 @@
 			],
 			"senses": "真實視覺120呎",
 			"passive": 17,
-			"languages": "Abyssal, Infernal, telepathy 120 ft.",
+			"languages": "深淵語、煉獄語、心靈感應120呎",
 			"cr": "13",
 			"trait": [
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The ultroloth 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"烏特羅斯魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
 					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The ultroloth's weapon attacks are magical."
+						"烏特羅斯魔的武器攻擊視作魔法攻擊。"
 					]
 				}
 			],
@@ -40115,41 +40115,41 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The ultroloth can use its Hypnotic Gaze and makes three melee attacks."
+						"烏特羅斯魔可以使用它的催眠凝視，並進行三次近戰攻擊。"
 					]
 				},
 				{
 					"name": "長劍",
 					"entries": [
-						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3}) slashing damage, or 8 ({@damage 1d10 + 3}) slashing damage if used with two hands."
+						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3})劈砍傷害，或若以雙手使用則造成 8 ({@damage 1d10 + 3})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Hypnotic Gaze",
+					"name": "催眠凝視",
 					"entries": [
-						"The ultroloth's eyes sparkle with opalescent light as it targets one creature it can see within 30 feet of it. If the target can see the ultroloth, the target must succeed on a DC 17 Wisdom saving throw against this magic or be {@condition charmed} until the end of the ultroloth's next turn. The {@condition charmed} target is {@condition stunned}. If the target's saving throw is successful, the target is immune to the ultroloth's gaze for the next 24 hours."
+						"烏特羅斯魔的雙眼綻放出乳白色的光芒，選擇一個距離它30呎內且它所能看見的生物做為目標。若該目標可以看見烏特羅斯魔，則該目標必須成功通過一次對抗這個魔法的DC 17的睿知豁免，否則被{@condition 魅惑}直到該烏特羅斯魔的下個回合結束。這個被{@condition 魅惑}的生物同時陷入{@condition 震懾}狀態。若目標的豁免檢定成功，目標將在接下來的24小時內免疫於該烏特羅斯魔的催眠凝視。"
 					]
 				},
 				{
-					"name": "Teleport",
+					"name": "傳送",
 					"entries": [
-						"The ultroloth magically teleports, along with any equipment it is wearing or carrying, up to 60 feet to an unoccupied space it can see."
+						"烏特羅斯魔用魔法將自己連同任何它所穿戴或攜帶的裝備一起傳送最多60呎距離到一處它所能看見的未被佔據空間。"
 					]
 				}
 			],
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Yugoloth Summoning",
+					"name": "召喚尤格羅斯魔",
 					"entries": [
-						"Some yugoloths have an action option that allows them to summon other yugoloths.",
+						"有些尤格羅斯魔擁有允許它們召喚出其他尤格羅斯魔的動作項。",
 						{
-							"name": "Summon Yugoloth (1/Day)",
+							"name": "召喚尤格羅斯魔 (1/日)",
 							"type": "entries",
 							"entries": [
-								"The yugoloth chooses what to summon and attempts a magical summoning.",
-								"An ultroloth has a {@chance 50|50 percent|50% summoning chance} chance of summoning {@dice 1d6} {@creature mezzoloth}s, {@dice 1d4} {@creature nycaloth}s, or one ultroloth.",
-								"A summoned yugoloth appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other yugoloths. The summoned yugoloth remains for 1 minute, until it or its summoner dies, or until its summoner takes a bonus action to dismiss it."
+								"該尤格羅斯魔選擇要召喚什麼並嘗試進行一次魔法召喚。",
+								"一個烏特羅斯魔有{@chance 50|50％|50％召喚機率}機率召喚出{@dice 1d6}個{@creature 麥澤羅斯魔}、{@dice 1d4}個{@creature 尼卡羅斯魔}、或一個烏特羅斯魔。",
+								"被召喚的尤格羅斯魔將出現距離它召喚者60呎內的一處未被佔據空間，做為召喚者的盟友行動，且不能再召喚其它尤格羅斯魔。它會持續存在長達1分鐘，直到它或它的召喚者死亡、或直到召喚者以一個附贈動作解消它。"
 							]
 						}
 					]
@@ -40160,7 +40160,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The ultroloth's innate spellcasting ability is Charisma (spell save DC 17). The ultroloth can innately cast the following spells, requiring no material components:"
+						"烏特羅斯魔的天生施法屬性為魅力（法術豁免DC 17）。烏特羅斯魔天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 變造自身}",
@@ -40347,7 +40347,7 @@
 				{
 					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The unicorn's weapon attacks are magical."
+						"The unicorn's的武器攻擊視作魔法攻擊。"
 					]
 				}
 			],
