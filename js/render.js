@@ -444,7 +444,7 @@ function Renderer () {
 
 		const headerClass = `rd__h--${meta.depth + 1}`; // adjust as the CSS is 0..4 rather than -1..3
 
-		const headerSpan = entry.name ? `<span class="rd__h ${headerClass}" data-title-index="${this._headerIndex++}" ${this._getEnumeratedTitleRel(entry.name)}> <span class="entry-title-inner">${this.render({type: "inline", entries: [entry.name]})}${isInlineTitle ? "." : ""}</span>${pagePart}</span> ` : "";
+		const headerSpan = entry.name ? `<span class="rd__h ${headerClass}" data-title-index="${this._headerIndex++}" ${this._getEnumeratedTitleRel(entry.name)}> <span class="entry-title-inner" book-idx="${entry.idx_name ? entry.idx_name : entry.name}">${this.render({type: "inline", entries: [entry.name]})}${entry.ENG_name ? (" <st style='font-size:80%;'>"+entry.ENG_name+"<st>") : ""}${isInlineTitle ? "." : ""}</span>${pagePart}</span> ` : "";
 
 		if (meta.depth === -1) {
 			if (!this._firstSection) textStack[0] += `<hr class="rd__hr rd__hr--section">`;
@@ -555,7 +555,7 @@ function Renderer () {
 	this._renderVariant = function (entry, textStack, meta, options) {
 		this._handleTrackTitles(entry.name);
 		textStack[0] += `<${this.wrapperTag} class="rd__b-inset">`;
-		textStack[0] += `<span class="rd__h rd__h--2-inset" data-title-index="${this._headerIndex++}" ${this._getEnumeratedTitleRel(entry.name)}><span class="entry-title-inner">Variant: ${entry.name}</span></span>`;
+		textStack[0] += `<span class="rd__h rd__h--2-inset" data-title-index="${this._headerIndex++}" ${this._getEnumeratedTitleRel(entry.name)}><span class="entry-title-inner">變體：${entry.name}</span></span>`;
 		const len = entry.entries.length;
 		for (let i = 0; i < len; ++i) {
 			const cacheDepth = meta.depth;
@@ -605,13 +605,13 @@ function Renderer () {
 
 	this._renderAbilityDc = function (entry, textStack, meta, options) {
 		this._renderPrefix(entry, textStack, meta, options);
-		textStack[0] += `<div class='text-align-center'><b>${entry.name} save DC</b> = 8 + your proficiency bonus + your ${Parser.attrChooseToFull(entry.attributes)}</div>`;
+		textStack[0] += `<div class='text-align-center'><b>${entry.name}豁免DC</b> = 8 + 你的熟練加值 + 你的${Parser.attrChooseToFull(entry.attributes)}</div>`;
 		this._renderSuffix(entry, textStack, meta, options);
 	};
 
 	this._renderAbilityAttackMod = function (entry, textStack, meta, options) {
 		this._renderPrefix(entry, textStack, meta, options);
-		textStack[0] += `<div class='text-align-center'><b>${entry.name} attack modifier</b> = your proficiency bonus + your ${Parser.attrChooseToFull(entry.attributes)}</div>`;
+		textStack[0] += `<div class='text-align-center'><b>${entry.name}攻擊調整值</b> = 你的熟練加值 + 你的${Parser.attrChooseToFull(entry.attributes)}</div>`;
 		this._renderSuffix(entry, textStack, meta, options);
 	};
 
@@ -873,10 +873,10 @@ function Renderer () {
 								const asNum = Number(rollText || 6);
 								fauxEntry.successThresh = 7 - asNum;
 								fauxEntry.successMax = 6;
-								textStack[0] += `(Recharge `;
+								textStack[0] += `（充能 `;
 								fauxEntry.displayText = `${asNum}${asNum < 6 ? `\u20136` : ""}`;
 								this._recursiveRender(fauxEntry, textStack, meta);
-								textStack[0] += `)`;
+								textStack[0] += `）`;
 								break;
 							}
 						}
@@ -1406,7 +1406,7 @@ Renderer.applyProperties._leadingAn = new Set(["a", "e", "i", "o", "u"]);
 
 Renderer.attackTagToFull = function (tagStr) {
 	function renderTag (tags) {
-		return `${tags.includes("m") ? "Melee " : tags.includes("r") ? "Ranged " : tags.includes("a") ? "Area " : ""}${tags.includes("w") ? "Weapon " : tags.includes("s") ? "Spell " : ""}`;
+		return `${tags.includes("m") ? "近戰" : tags.includes("r") ? "遠程" : tags.includes("a") ? "範圍" : ""}${tags.includes("w") ? "武器" : tags.includes("s") ? "法術" : ""}`;
 	}
 
 	const tagGroups = tagStr.toLowerCase().split(",").map(it => it.trim()).filter(it => it).map(it => it.split(""));
@@ -1420,7 +1420,7 @@ Renderer.attackTagToFull = function (tagStr) {
 			});
 		}
 	}
-	return `${tagGroups.map(it => renderTag(it)).join(" or ")}Attack:`;
+	return `${tagGroups.map(it => renderTag(it)).join(" 或 ")}攻擊：`;
 };
 
 Renderer.HOVER_TAG_TO_PAGE = {
@@ -1545,7 +1545,7 @@ Renderer.utils = {
 		return `<tr>
 					<th class="rnd-name name" colspan="6">
 						<div class="name-inner">
-							<span class="stats-name copyable" onmousedown="event.preventDefault()" onclick="Renderer.utils._pHandleNameClick(this, '${it.source.escapeQuotes()}')">${prefix || ""}${it._displayName || it.name}${suffix || ""}</span>
+							<span><b class="stats-name copyable" onmousedown="event.preventDefault()" onclick="Renderer.utils._pHandleNameClick(this, '${it.source.escapeQuotes()}')">${prefix || ""}${it._displayName || it.name}${suffix || ""}</b>${it.ENG_name? " <st style='font-size:80%;'>"+it.ENG_name+"<st>": ""}</span>
 							<span class="stats-source source${it.source}" title="${Parser.sourceJsonToFull(it.source)}${Renderer.utils.getSourceSubText(it)}">
 								${Parser.sourceJsonToAbv(it.source)}${addPageNum && it.page ? ` p${it.page}` : ""}
 							</span>
@@ -1570,15 +1570,15 @@ Renderer.utils = {
 					if (as.entry) {
 						return Renderer.get().render(as.entry);
 					} else {
-						return `<i title="${Parser.sourceJsonToFull(as.source)}">${Parser.sourceJsonToAbv(as.source)}</i>${as.page ? `, page ${as.page}` : ""}`;
+						return `<i title="${Parser.sourceJsonToFull(as.source)}">${Parser.sourceJsonToAbv(as.source)}</i>${as.page ? `, 第 ${as.page}頁` : ""}`;
 					}
 				}).join("; ")}`
 			} else return "";
 		}
 		const sourceSub = Renderer.utils.getSourceSubText(it);
-		const baseText = it.page ? `<b>Source: </b> <i title="${Parser.sourceJsonToFull(it.source)}${sourceSub}">${Parser.sourceJsonToAbv(it.source)}${sourceSub}</i>, page ${it.page}` : "";
-		const addSourceText = getAltSourceText("additionalSources", "Additional information from");
-		const otherSourceText = getAltSourceText("otherSources", "Also found in");
+		const baseText = it.page ? `<b>資源：</b><i title="${Parser.sourceJsonToFull(it.source)}${sourceSub}">${Parser.sourceJsonToAbv(it.source)}${sourceSub}</i>, 第 ${it.page}頁` : "";
+		const addSourceText = getAltSourceText("additionalSources", "額外情報記載於");
+		const otherSourceText = getAltSourceText("otherSources", "同時記載於");
 		const externalSourceText = getAltSourceText("externalSources", "External sources:");
 
 		return `${[baseText, addSourceText, otherSourceText, externalSourceText].filter(it => it).join(". ")}${baseText && (addSourceText || otherSourceText || externalSourceText) ? "." : ""}`;
@@ -1762,9 +1762,9 @@ Renderer.feat = {
 			const pre = prereqList[i];
 			if (pre.level) {
 				if (isShorthand) {
-					outStack.push(`Lvl ${pre.level}`);
+					outStack.push(`${pre.level}級`);
 				} else {
-					outStack.push(`${Parser.spLevelToFull(pre.level)} level`);
+					outStack.push(`${pre.level}級`);
 				}
 			}
 			if (pre.race != null) {
@@ -1777,10 +1777,10 @@ Renderer.feat = {
 							raceName.push(raceNameParts[k].uppercaseFirst());
 						}
 						raceName = raceName.join(DASH);
-						outStack.push(raceName + (pre.race[j].subrace != null ? " (" + pre.race[j].subrace + ")" : ""))
+						outStack.push(Parser.RaceToDisplay(raceName) + (pre.race[j].subrace != null ? "(" + Parser.SubraceToDisplay(pre.race[j].subrace) + ")" : ""))
 					} else {
 						const raceName = j === 0 ? pre.race[j].name.uppercaseFirst() : pre.race[j].name;
-						outStack.push(raceName + (pre.race[j].subrace != null ? " (" + pre.race[j].subrace + ")" : ""))
+						outStack.push(Parser.RaceToDisplay(raceName) + (pre.race[j].subrace != null ? "(" + Parser.SubraceToDisplay(pre.race[j].subrace) + ")" : ""))
 					}
 				}
 			}
@@ -1791,9 +1791,9 @@ Renderer.feat = {
 					for (const att in pre.ability[j]) {
 						if (!pre.ability[j].hasOwnProperty(att)) continue;
 						if (isShorthand) {
-							outStack.push(att.uppercaseFirst() + (attCount === pre.ability.length - 1 ? " 13+" : ""));
+							outStack.push(Parser.AtrAbvToDisplay(att) + (attCount === pre.ability.length - 1 ? " 13+" : ""));
 						} else {
-							outStack.push(Parser.attAbvToFull(att) + (attCount === pre.ability.length - 1 ? " 13 or higher" : ""));
+							outStack.push(Parser.AtrAbvToDisplay(att) + (attCount === pre.ability.length - 1 ? " 13或以上" : ""));
 						}
 						attCount++;
 					}
@@ -1806,9 +1806,9 @@ Renderer.feat = {
 						if (!pre.proficiency[j].hasOwnProperty(type)) continue;
 						if (type === "armor") {
 							if (isShorthand) {
-								outStack.push("prof " + Parser.armorFullToAbv(pre.proficiency[j][type]) + " armor");
+								outStack.push("熟練" + Parser.ArmorToDisplay(pre.proficiency[j][type]) + "甲");
 							} else {
-								outStack.push("Proficiency with " + pre.proficiency[j][type] + " armor");
+								outStack.push("熟練" + Parser.ArmorToDisplay(pre.proficiency[j][type]) + "甲");
 							}
 						}
 					}
@@ -1816,13 +1816,13 @@ Renderer.feat = {
 			}
 			if (pre.spellcasting) {
 				if (isShorthand) {
-					outStack.push("Spellcasting");
+					outStack.push("施法能力");
 				} else {
-					outStack.push("The ability to cast at least one spell");
+					outStack.push("具有施展至少一種法術的能力");
 				}
 			}
 			if (pre.special) {
-				if (isShorthand) outStack.push("Special");
+				if (isShorthand) outStack.push("特殊");
 				else {
 					const renderer = Renderer.get();
 					outStack.push(renderer.render(pre.special));
@@ -1836,7 +1836,7 @@ Renderer.feat = {
 			if (isShorthand) return andStack.map(it => it.join("/")).join("; ");
 			else {
 				const anyLong = andStack.filter(it => it.length > 1).length && andStack.length > 1;
-				return andStack.map(it => it.joinConjunct(", ", " or ")).joinConjunct(anyLong ? "; " : ", ", anyLong ? " and " : ", ");
+				return andStack.map(it => it.joinConjunct(", ", " 或 ")).joinConjunct(anyLong ? "; " : ", ", anyLong ? " 和 " : ", ");
 			}
 		}
 	},
@@ -1857,18 +1857,18 @@ Renderer.feat = {
 		}
 
 		function abilityObjToListItem () {
-			const TO_MAX_OF_TWENTY = ", to a maximum of 20.";
+			const TO_MAX_OF_TWENTY = "，上限為20。";
 			const abbArr = [];
 			if (!abilityObj.choose) {
-				Object.keys(abilityObj).forEach(ab => abbArr.push(`Increase your ${Parser.attAbvToFull(ab)} score by ${abilityObj[ab]}${TO_MAX_OF_TWENTY}`));
+				Object.keys(abilityObj).forEach(ab => abbArr.push(`你的 ${Parser.attAbvToFull(ab)} 增加${abilityObj[ab]}點${TO_MAX_OF_TWENTY}`));
 			} else {
 				const choose = abilityObj.choose;
 				for (let i = 0; i < choose.length; ++i) {
 					if (choose[i].from.length === 6) {
 						if (choose[i].textreference) { // only used in "Resilient"
-							abbArr.push(`Increase the chosen ability score by ${choose[i].amount}${TO_MAX_OF_TWENTY}`);
+							abbArr.push(`所選的屬性值增加${choose[i].amount}點${TO_MAX_OF_TWENTY}`);
 						} else {
-							abbArr.push(`Increase one ability score of your choice by ${choose[i].amount}${TO_MAX_OF_TWENTY}`);
+							abbArr.push(`你所選的一個屬性值增加${choose[i].amount}點${TO_MAX_OF_TWENTY}`);
 						}
 					} else {
 						const from = choose[i].from;
@@ -1877,8 +1877,8 @@ Renderer.feat = {
 						for (let j = 0; j < from.length; ++j) {
 							abbChoices.push(Parser.attAbvToFull(from[j]));
 						}
-						const abbChoicesText = abbChoices.joinConjunct(", ", " or ");
-						abbArr.push(`Increase your ${abbChoicesText} by ${amount}${TO_MAX_OF_TWENTY}`);
+						const abbChoicesText = abbChoices.joinConjunct(", ", " 或 ");
+						abbArr.push(`你的 ${abbChoicesText} 增加${amount}點${TO_MAX_OF_TWENTY}`);
 					}
 				}
 			}
@@ -2102,20 +2102,27 @@ Renderer.optionalfeature = {
 			return Renderer.optionalfeature._prereqWeights[a.type] - Renderer.optionalfeature._prereqWeights[b.type]
 		});
 
+		function parse_prereq_spell (spell) {
+			if (spell === "eldritch blast") return "魔能爆";
+			else if (spell === "hex/curse") return "脆弱詛咒/詛咒";
+			else if (spell) return spell;
+			return STR_NONE;
+		}
+
 		const outList = prerequisites.map(it => {
 			switch (it.type) {
 				case "prereqLevel":
-					return listMode ? false : `${Parser.levelToFull(it.level)} level`;
+					return listMode ? false : `${it.level}級`;
 				case "prereqPact":
 					return Parser.prereqPactToFull(it.entry);
 				case "prereqPatron":
-					return listMode ? `${Parser.prereqPatronToShort(it.entry)} patron` : `${it.entry} patron`;
+					return listMode ? `${Parser.prereqPatronToShort(it.entry)}宗主` : `${it.entry}宗主`;
 				case "prereqSpell":
-					return listMode ? it.entries.map(x => x.toTitleCase()).join("; ") : it.entries.map(sp => Parser.prereqSpellToFull(sp)).joinConjunct(", ", " or ");
+					return listMode ? it.entries.map(x => parse_prereq_spell(x)).join("; ") : it.entries.map(sp => Parser.prereqSpellToFull(sp)).joinConjunct(", ", " 或 ");
 				case "prereqFeature":
-					return listMode ? it.entries.map(x => x.toTitleCase()).join("; ") : it.entries.joinConjunct(", ", " or ");
+					return listMode ? it.entries.map(x => x.toTitleCase()).join("; ") : it.entries.joinConjunct(", ", " 或 ");
 				case "prereqItem":
-					return listMode ? it.entries.map(x => x.toTitleCase()).join("; ") : it.entries.joinConjunct(", ", " or ");
+					return listMode ? it.entries.map(x => x.toTitleCase()).join("; ") : it.entries.joinConjunct(", ", " 或 ");
 				case "prereqSpecial":
 					return listMode ? (it.entrySummary || it.entry) : it.entry;
 				default: // string
@@ -2123,7 +2130,7 @@ Renderer.optionalfeature = {
 			}
 		});
 
-		return listMode ? outList.filter(Boolean).join(", ") : `Prerequisites: ${outList.join(", ")}`;
+		return listMode ? outList.filter(Boolean).join(", ") : `先決條件：${outList.join(", ")}`;
 	},
 
 	getListPrerequisiteLevelText (prerequisites) {
@@ -2710,7 +2717,7 @@ Renderer.monster = {
 
 	getSave (renderer, attr, mod) {
 		if (attr === "special") return renderer.render(mod);
-		else return renderer.render(`<span data-mon-save="${attr.uppercaseFirst()}|${mod}">${attr.uppercaseFirst()} {@d20 ${mod}|${mod}|${Parser.attAbvToFull([attr])} save}</span>`);
+		else return renderer.render(`<span data-mon-save="${Parser.AtrAbvToDisplay(attr)}|${mod}">${Parser.AtrAbvToDisplay(attr)} {@d20 ${mod}|${mod}|${Parser.attAbvToFull([attr])}豁免}</span>`);
 	},
 
 	getDragonCasterVariant (renderer, dragon) {
@@ -2850,10 +2857,10 @@ Renderer.monster = {
 			<tr><td colspan="6">
 				<table class="summary-noback" style="position: relative;">
 					<tr>
-						<th>Armor Class</th>
-						<th>Hit Points</th>
-						<th>Speed</th>
-						<th>Challenge Rating</th>
+						<th>護甲等級</th>
+						<th>生命值</th>
+						<th>速度</th>
+						<th>挑戰等級</th>
 					</tr>
 					<tr>
 						<td>${Parser.acToFull(mon.ac)}</td>					
@@ -3026,7 +3033,7 @@ Renderer.monster = {
 		}
 
 		function doSortMapJoinSkillKeys (obj, keys, joinWithOr) {
-			const toJoin = keys.sort(SortUtil.ascSort).map(s => `<span data-mon-skill="${s.toTitleCase()}|${obj[s]}">${renderer.render(`{@skill ${s.toTitleCase()}}`)} ${makeSkillRoller(s.toTitleCase(), obj[s])}</span>`);
+			const toJoin = keys.sort(SortUtil.ascSort).map(s => `<span data-mon-skill="${Parser.SkillToDisplay(s)}|${obj[s]}">${renderer.render(`{@skill ${Parser.SkillToDisplay(s)}}`)}${makeSkillRoller(Parser.SkillToDisplay(s), obj[s])}</span>`);
 			return joinWithOr ? toJoin.joinConjunct(", ", " or ") : toJoin.join(", ")
 		}
 
@@ -3807,8 +3814,8 @@ Renderer.ship = {
 		function getSectionHpPart (sect, each) {
 			if (!sect.ac && !sect.hp) return "";
 			return `
-				<div><b>Armor Class</b> ${sect.ac}</div>
-				<div><b>Hit Points</b> ${sect.hp}${each ? ` each` : ""}${sect.dt ? ` (damage threshold ${sect.dt})` : ""}${sect.hpNote ? `; ${sect.hpNote}` : ""}</div>
+				<div><b>護甲等級</b> ${sect.ac}</div>
+				<div><b>生命值</b> ${sect.hp}${each ? ` each` : ""}${sect.dt ? ` (damage threshold ${sect.dt})` : ""}${sect.hpNote ? `; ${sect.hpNote}` : ""}</div>
 			`;
 		}
 
@@ -6169,7 +6176,7 @@ Renderer.stripTags = function (str) {
 								if (isNaN(asNum)) {
 									throw new Error(`Could not parse "${rollText}" as a number!`)
 								}
-								return `(Recharge ${asNum}${asNum < 6 ? `\u20136` : ""})`;
+								return `（充能${asNum}${asNum < 6 ? `\u20136` : ""}）`;
 							}
 							case "@chance": {
 								return displayText || `${rollText} percent`;

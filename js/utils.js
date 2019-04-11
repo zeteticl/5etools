@@ -6531,12 +6531,13 @@ Parser.ConditionToDisplay = function(c){
 }
 
 //Armor
-Parser.keyToDisplay["light"]  = "輕";
-Parser.keyToDisplay["medium"] = "中";
-Parser.keyToDisplay["heavy"]  = "重";
-Parser.keyToDisplay["shields"]  = "盾牌";
+Parser.armorKeyToDisplay = {};
+Parser.armorKeyToDisplay["light"]  = "輕";
+Parser.armorKeyToDisplay["medium"] = "中";
+Parser.armorKeyToDisplay["heavy"]  = "重";
+Parser.armorKeyToDisplay["shields"]  = "盾牌";
 Parser.ArmorToDisplay = function(armor){
-	return Parser.translateKeyToDisplay(armor);
+	return Parser.translateKeyInMapToDisplay(Parser.armorKeyToDisplay, armor);
 }
 
 //Weapon
