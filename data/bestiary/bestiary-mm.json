@@ -10930,19 +10930,19 @@
 				{
 					"name": "啃咬 (限定史拉蟾型態)",
 					"entries": [
-						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}9 ({@damage 1d8 + 5}) piercing damage plus 7 ({@damage 2d6}) necrotic damage."
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}9 ({@damage 1d8 + 5})穿刺傷害加 7 ({@damage 2d6})死靈傷害。"
 					]
 				},
 				{
 					"name": "爪抓 (限定史拉蟾型態)",
 					"entries": [
-						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}10 ({@damage 1d10 + 5}) slashing damage plus 7 ({@damage 2d6}) necrotic damage."
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}10 ({@damage 1d10 + 5})劈砍傷害加 7 ({@damage 2d6})死靈傷害。"
 					]
 				},
 				{
 					"name": "巨劍",
 					"entries": [
-						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5}) slashing damage plus 7 ({@damage 2d6}) necrotic damage."
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5})劈砍傷害加 7 ({@damage 2d6})死靈傷害。"
 					]
 				}
 			],
@@ -35803,7 +35803,7 @@
 			]
 		},
 		{
-			"name": "Shambling Mound",
+			"name": "蔓生怪", "ENG_name": "Shambling Mound",
 			"size": "L",
 			"type": "plant",
 			"source": "MM",
@@ -35852,9 +35852,9 @@
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Lightning Absorption",
+					"name": "閃電吸收", "tENG_name": "Lightning Absorption",
 					"entries": [
-						"Whenever the shambling mound is subjected to lightning damage, it takes no damage and regains a number of hit points equal to the lightning damage dealt."
+						"每當蔓生怪承受閃電傷害時，它並不會受到任何傷害，反而會回復等同於所受到閃電傷害數值的生命值。"
 					]
 				}
 			],
@@ -35862,19 +35862,19 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The shambling mound makes two slam attacks. If both attacks hit a Medium or smaller target, the target is {@condition grappled} (escape DC 14), and the shambling mound uses its Engulf on it."
+						"蔓生怪進行二次猛擊攻擊。若這兩次攻擊都命中一個體型為中型或更小的目標，則目標將{@condition 被擒}(逃脫DC 14)，且蔓生怪對它使用吞沒攻擊。"
 					]
 				},
 				{
-					"name": "Slam",
+					"name": "猛擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}13 ({@damage 2d8 + 4})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Engulf",
+					"name": "吞沒",
 					"entries": [
-						"The shambling mound engulfs a Medium or smaller creature {@condition grappled} by it. The engulfed target is {@condition blinded}, {@condition restrained}, and unable to breathe, and it must succeed on a DC 14 Constitution saving throw at the start of each of the mound's turns or take 13 ({@damage 2d8 + 4})鈍擊傷害。 If the mound moves, the engulfed target moves with it. The mound can have only one creature engulfed at a time."
+						"蔓生怪吞沒一個它正擒抱的體型為中型或更小的生物。被吞沒的目標將陷入{@condition 目盲}、{@condition 束縛}狀態，無法呼吸，且必須在蔓生怪的每個回合開始時成功通過一次DC 14的體質豁免，否則受到13 ({@damage 2d8 + 4})鈍擊傷害。當蔓生怪移動時，被吞沒的目標也將跟著它移動。蔓生怪同時只能吞沒一個生物。"
 					]
 				}
 			],
@@ -39344,7 +39344,7 @@
 			]
 		},
 		{
-			"name": "Treant",
+			"name": "樹人", "ENG_name": "Treant",
 			"size": "H",
 			"type": "plant",
 			"source": "MM",
@@ -39381,19 +39381,19 @@
 				"fire"
 			],
 			"passive": 13,
-			"languages": "Common, Druidic, Elvish, Sylvan",
+			"languages": "通用語、德魯伊語、精靈語、木族語",
 			"cr": "9",
 			"trait": [
 				{
 					"name": "擬形", "tENG_name": "False Appearance",
 					"entries": [
-						"While the treant remains motionless, it is indistinguishable from a normal tree."
+						"當樹人保持不動，它看起來就跟普通的樹木一模一樣。"
 					]
 				},
 				{
 					"name": "攻城怪物",
 					"entries": [
-						"The treant deals double damage to objects and structures."
+						"樹人對物體和建築物造成兩倍的傷害。"
 					]
 				}
 			],
@@ -39401,25 +39401,25 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The treant makes two slam attacks."
+						"樹人進行二次猛擊攻擊。"
 					]
 				},
 				{
-					"name": "Slam",
+					"name": "猛擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}16 ({@damage 3d6 + 6})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Rock",
+					"name": "投石",
 					"entries": [
 						"{@atk rw} 命中{@hit 10}，射程60/180呎，單一目標。{@h}28 ({@damage 4d10 + 6})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Animate Trees (1/Day)",
+					"name": "活化樹木 (1/日)",
 					"entries": [
-						"The treant magically animates one or two trees it can see within 60 feet of it. These trees have the same statistics as a treant, except they have Intelligence and Charisma scores of 1, they can't speak, and they have only the Slam action option. An animated tree acts as an ally of the treant. The tree remains animate for 1 day or until it dies; until the treant dies or is more than 120 feet from the tree; or until the treant takes a bonus action to turn it back into an inanimate tree. The tree then takes root if possible."
+						"樹人用魔法活化一棵或二棵距離它60呎內且它所能看見的樹木。這些樹木將具有和樹人相同的數據，但它們的智力和魅力值為1，無法說話，且只擁有猛擊的動作項。被活化的樹木將做為樹人的盟友行動。這些樹木將維持活化長達1天，或直到它死亡、樹人死亡、或樹人距離該樹木超過120呎，或直到樹人以一個附贈動作將其變回普通樹木。接著若可能的話，這棵樹木將會原地扎根。"
 					]
 				}
 			],
