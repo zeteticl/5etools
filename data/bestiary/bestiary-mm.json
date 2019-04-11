@@ -15461,7 +15461,7 @@
 			]
 		},
 		{
-			"name": "Fire Snake",
+			"name": "火蛇", "ENG_name": "Fire Snake",
 			"size": "M",
 			"type": "elemental",
 			"source": "MM",
@@ -15508,13 +15508,13 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 10,
-			"languages": "understands Ignan but can't speak",
+			"languages": "理解火族語，但不會說",
 			"cr": "1",
 			"trait": [
 				{
-					"name": "Heated Body",
+					"name": "灼熱身軀", "tENG_name": "Heated Body",
 					"entries": [
-						"A creature that touches the snake or hits it with a melee attack while within 5 feet of it takes 3 ({@damage 1d6}) fire damage."
+						"一個觸碰火蛇或在距離它5呎內以一次近戰攻擊命中它的生物將受到3 ({@damage 1d6})火焰傷害。"
 					]
 				}
 			],
@@ -15522,19 +15522,19 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The snake makes two attacks: one with its bite and one with its tail."
+						"火蛇進行二次攻擊：一次啃咬，一次尾擊。"
 					]
 				},
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}3 ({@damage 1d4 + 1}) piercing damage plus 3 ({@damage 1d6}) fire damage."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}3 ({@damage 1d4 + 1})穿刺傷害加 3 ({@damage 1d6})火焰傷害。"
 					]
 				},
 				{
 					"name": "尾擊",
 					"entries": [
-						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}3 ({@damage 1d4 + 1}) bludgeoning damage plus 3 ({@damage 1d6}) fire damage."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}3 ({@damage 1d4 + 1})鈍擊傷害加 3 ({@damage 1d6})火焰傷害。"
 					]
 				}
 			],
@@ -26899,7 +26899,7 @@
 			]
 		},
 		{
-			"name": "Magmin",
+			"name": "火童", "ENG_name": "Magmin",
 			"size": "S",
 			"type": "elemental",
 			"source": "MM",
@@ -26949,21 +26949,21 @@
 				{
 					"name": "死亡自爆", "tENG_name": "Death Burst",
 					"entries": [
-						"When the magmin dies, it explodes in a burst of fire and magma. Each creature within 10 feet of it must make a DC 11 Dexterity saving throw, taking 7 ({@damage 2d6}) fire damage on a failed save, or half as much damage on a successful one. Flammable objects that aren't being worn or carried in that area are ignited."
+						"當火童死亡時，它將會爆炸成烈火和熔岩。每個距離它10呎內的生物都必須進行一次DC 11的敏捷豁免，豁免失敗則受到7 ({@damage 2d6})火焰傷害，豁免成功則只受到一半的傷害。在這個範圍內為被穿戴或攜帶的可燃物品將被點燃。"
 					]
 				},
 				{
-					"name": "Ignited Illumination",
+					"name": "燃火照明", "tENG_name": "Ignited Illumination",
 					"entries": [
-						"As a bonus action, the magmin can set itself ablaze or extinguish its flames. While ablaze, the magmin sheds bright light in a 10-foot radius and dim light for an additional 10 feet."
+						"以一個附贈動作，火童可以點燃或熄滅自己身上的火焰。當被點燃時，火童將散發出10呎半徑的明亮光照和再延伸10呎的微光光照。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Touch",
+					"name": "觸擊",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}7 ({@damage 2d6}) fire damage. If the target is a creature or a flammable object, it ignites. Until a creature takes an action to douse the fire, the target takes 3 ({@damage 1d6}) fire damage at the end of each of its turns."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}7 ({@damage 2d6})火焰傷害。若目標是一個生物或可燃物體，它將被點燃。直到一個生物採取一個動作撲滅火焰，目標將在它的每個回合結束時受到3 ({@damage 1d6})火焰傷害。"
 					]
 				}
 			],
