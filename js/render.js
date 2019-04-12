@@ -2275,28 +2275,30 @@ Renderer.race = {
 
 Renderer.deity = {
 	_basePartTranslators: {
-		"Alignment": {
+		"陣營": {
 			prop: "alignment",
-			displayFn: (it) => it.map(a => Parser.alignmentAbvToFull(a)).join(" ")
+			displayFn: (it) => it.map(a => Parser.alignmentAbvToFull(a)).join("")
 		},
-		"Pantheon": {
-			prop: "pantheon"
+		"神系": {
+			prop: "pantheon",
+			displayFn: Parser.PantheonToDisplay
 		},
-		"Category": {
-			prop: "category"
+		"類別": {
+			prop: "category",
+			displayFn: Parser.PantheonCategoryToDisplay
 		},
-		"Domains": {
+		"領域": {
 			prop: "domains",
-			displayFn: (it) => it.join(", ")
+			displayFn: (it) => it.map(d => Parser.SubclassToDisplay(d)).join(", ")
 		},
 		"Province": {
 			prop: "province"
 		},
-		"Alternate Names": {
+		"其他名稱": {
 			prop: "altNames",
 			displayFn: (it) => it.join(", ")
 		},
-		"Symbol": {
+		"聖徽": {
 			prop: "symbol"
 		}
 	},
@@ -3172,7 +3174,7 @@ Renderer.item = {
 			if (item.dmg1) damage = Renderer.get().render(item.dmg1);
 			if (item.dmgType) damageType = Parser.dmgTypeToFull(item.dmgType);
 		} else if (type === "LA" || type === "MA" || type === "HA") {
-			damage = "AC " + item.ac + (type === "LA" ? " + Dex" : type === "MA" ? " + Dex (max 2)" : "");
+			damage = "AC " + item.ac + (type === "LA" ? " + 敏捷調整" : type === "MA" ? " + 敏捷調整(最高2)" : "");
 		} else if (type === "S") {
 			damage = "AC +" + item.ac;
 		} else if (type === "MNT" || type === "VEH" || type === "SHP") {
@@ -3182,7 +3184,7 @@ Renderer.item = {
 			if (speed && capacity) damage += type === "MNT" ? ", " : "<br>";
 			if (capacity) {
 				damage += "Carrying Capacity: " + capacity;
-				if (capacity.indexOf("ton") === -1 && capacity.indexOf("passenger") === -1) damage += Number(capacity) === 1 ? " lb." : " lbs.";
+				if (capacity.indexOf("ton") === -1 && capacity.indexOf("passenger") === -1) damage += Number(capacity) === 1 ? "磅" : "磅";
 			}
 			if (type === "SHP") {
 				damage += `<br>Crew ${item.crew}, AC ${item.vehAc}, HP ${item.vehHp}${item.vehDmgThresh ? `, Damage Threshold ${item.vehDmgThresh}` : ""}`;
@@ -3200,7 +3202,7 @@ Renderer.item = {
 				const prop = properties[i];
 				let a = item._allPropertiesPtr[prop].name;
 				if (prop === "V") a = `${a} (${Renderer.get().render(item.dmg2)})`;
-				if (prop === "T" || prop === "A" || prop === "AF") a = `${a} (${item.range} ft.)`;
+				if (prop === "T" || prop === "A" || prop === "AF") a = `${a} (${item.range}呎)`;
 				if (prop === "RLD") a = `${a} (${item.reload} shots)`;
 				a = (i > 0 ? ", " : item.dmg1 ? "- " : "") + a;
 				propertiesTxt += a;
@@ -3212,7 +3214,7 @@ Renderer.item = {
 	getTypeRarityAndAttunementText (item) {
 		const typeRarity = [
 			item.typeText === "Other" ? "" : item.typeText.trim(),
-			[item.tier, (item.rarity && Renderer.item.doRenderRarity(item.rarity) ? item.rarity : "")].map(it => (it || "").trim()).filter(it => it).join(", ")
+			[Parser.ItemTierToDisplay(item.tier), (item.rarity && Renderer.item.doRenderRarity(item.rarity) ? Parser.translateItemKeyToDisplay(item.rarity) : "")].map(it => (it || "").trim()).filter(it => it).join(", ")
 		].filter(Boolean).join(", ");
 		return item.reqAttune ? `${typeRarity} ${item.reqAttune}` : typeRarity
 	},
@@ -3464,19 +3466,19 @@ Renderer.item = {
 		}
 		// The following could be encoded in JSON, but they depend on more than one JSON property; maybe fix if really bored later
 		if (item.armor) {
-			if (item.resist) item.entries.push("You have resistance to " + item.resist + " damage while you wear this armor.");
-			if (item.armor && item.stealth) item.entries.push("The wearer has disadvantage on Stealth (Dexterity) checks.");
-			if (item.type === "HA" && item.strength) item.entries.push("If the wearer has a Strength score lower than " + item.strength + ", their speed is reduced by 10 feet.");
+			if (item.resist) item.entries.push("你在穿著此護甲時具有對" + Parser.DamageToDisplay(item.resist) + "傷害的抗性。");
+			if (item.armor && item.stealth) item.entries.push("穿戴者在敏捷（隱匿）檢定上有劣勢。");
+			if (item.type === "HA" && item.strength) item.entries.push("如果穿戴者的力量屬性不到 " + item.strength + "，他們的移動速度減少10呎。");
 		} else if (item.resist) {
-			if (item.type === "P") item.entries.push("When you drink this potion, you gain resistance to " + item.resist + " damage for 1 hour.");
-			if (item.type === "RG") item.entries.push("You have resistance to " + item.resist + " damage while wearing this ring.");
+			if (item.type === "P") item.entries.push("當你飲用這瓶藥水時，你獲得對" + Parser.DamageToDisplay(item.resist) + "傷害的抗性持續1小時。");
+			if (item.type === "RG") item.entries.push("你在穿戴此戒指時具有對" + Parser.DamageToDisplay(item.resist) + "傷害的抗性。");
 		}
 		if (item.type === "SCF") {
-			if (item.scfType === "arcane") item.entries.push("An arcane focus is a special item designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus, using it in place of any material component which does not list a cost.");
-			if (item.scfType === "druid") item.entries.push("A druid can use such a druidic focus as a spellcasting focus, using it in place of any material component that does not have a cost.");
+			if (item.scfType === "arcane") item.entries.push("奧術法器是一種被設計成能用以引導奧秘法術能量的特殊物品。術士、契術師、或法師可以將這類物品作為法器使用，用它來取代任何沒有列出價值的材料構材。");
+			if (item.scfType === "druid") item.entries.push("德魯伊可以將這類德魯伊法器作為法器使用，用它來取代任何沒有列出價值的材料構材。");
 			if (item.scfType === "holy") {
-				item.entries.push("A holy symbol is a representation of a god or pantheon.");
-				item.entries.push("A cleric or paladin can use a holy symbol as a spellcasting focus, using it in place of any material components which do not list a cost. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield.");
+				item.entries.push("聖徽是代表著一尊神明或諸神的圖像雕紋。");
+				item.entries.push("牧師或聖騎士可以將聖徽作為法器使用，用它來取代任何沒有列出價值的材料構材。若要用這個方式使用聖徽，施法者必須將它持握在手中、顯眼地穿戴它、或將它佩帶在盾牌上。");
 			}
 		}
 		// add additional entries based on type (e.g. XGE variants)
@@ -3533,7 +3535,7 @@ Renderer.item = {
 			typeListText.push(Parser.ItemTypeToDisplay("Poison"));
 		}
 		item.procType = filterType;
-		item.typeText = type.join(", ");
+		item.typeText = type.map(it => Parser.ItemTypeToDisplay(it)).join(", ");
 		item.typeListText = typeListText.join(", ");
 
 		// bake in attunement
@@ -3541,16 +3543,16 @@ Renderer.item = {
 		if (item.reqAttune != null) {
 			if (item.reqAttune === true) {
 				attunement = "Yes";
-				item.reqAttune = "(Requires Attunement)"
+				item.reqAttune = "(需同調)"
 			} else if (item.reqAttune === "OPTIONAL") {
 				attunement = "Optional";
-				item.reqAttune = "(Attunement Optional)"
+				item.reqAttune = "(可同調)"
 			} else if (item.reqAttune.toLowerCase().startsWith("by")) {
 				attunement = "By...";
-				item.reqAttune = "(Requires Attunement " + item.reqAttune + ")";
+				item.reqAttune = "(需" + item.reqAttune + "同調)";
 			} else {
 				attunement = "Yes"; // throw any weird ones in the "Yes" category (e.g. "outdoors at night")
-				item.reqAttune = "(Requires Attunement " + item.reqAttune + ")";
+				item.reqAttune = "(需" + item.reqAttune + "同調)";
 			}
 		}
 		item.attunementCategory = attunement;
@@ -3558,7 +3560,7 @@ Renderer.item = {
 		// handle item groups
 		if (item._isItemGroup) {
 			item.entries.push(
-				"Multiple variants of this item exist, as listed below:",
+				"這個物品存在許多個變體，見下表：",
 				{
 					type: "list",
 					items: item.items.map(it => typeof it === "string" ? `{@item ${it}}` : `{@item ${it.name}|${it.source}}`)
@@ -3588,9 +3590,9 @@ Renderer.item = {
 				const entries = item.entries;
 				entries.push({
 					type: "entries",
-					name: "Base items",
+					name: "基礎物品：",
 					entries: [
-						"This item variant can be applied to the following base items:",
+						"這個物品變體可以應用於以下基礎物品：",
 						{
 							type: "list",
 							items: variants.map(({base, specificVariant}) => {
