@@ -862,7 +862,7 @@
 				{
 					"name": "Wing Attack (Costs 2 Actions)",
 					"entries": [
-						"The dracolich beats its tattered wings. Each creature within 10 feet of the dracolich must succeed on a DC 21 Dexterity saving throw or take 14 ({@damage 2d6 + 7}) bludgeoning damage and be knocked {@condition prone}. After beating its wings this way, the dracolich can fly up to half its flying speed."
+						"The dracolich beats its tattered wings. Each creature within 10 feet of the dracolich must succeed on a DC 21 Dexterity saving throw or take 14 ({@damage 2d6 + 7}) bludgeoning damage and be knocked {@condition 伏地}. After beating its wings this way, the dracolich can fly up to half its flying speed."
 					]
 				}
 			],
@@ -4239,9 +4239,9 @@
 					]
 				},
 				{
-					"name": "Magic Weapons",
+					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The sphinx's weapon attacks are magical."
+						"The sphinx's的武器攻擊視作魔法攻擊。"
 					]
 				}
 			],
@@ -4279,7 +4279,7 @@
 								{
 									"type": "item",
 									"name": "Third Roar",
-									"entry": "Each creature makes a DC 18 Constitution saving throw. On a failed save, a creature takes 44 ({@damage 8d10}) thunder damage and is knocked {@condition prone}. On a successful save, the creature takes half as much damage and isn't knocked {@condition prone}."
+									"entry": "Each creature makes a DC 18 Constitution saving throw. On a failed save, a creature takes 44 ({@damage 8d10}) thunder damage and is knocked {@condition 伏地}. On a successful save, the creature takes half as much damage and isn't knocked {@condition 伏地}."
 								}
 							]
 						}
@@ -4666,7 +4666,7 @@
 			]
 		},
 		{
-			"name": "Arcanaloth",
+			"name": "奧登羅斯魔", "ENG_name": "Arcanaloth",
 			"size": "M",
 			"type": {
 				"type": "fiend",
@@ -4736,19 +4736,19 @@
 			],
 			"senses": "真實視覺120呎",
 			"passive": 17,
-			"languages": "all, telepathy 120 ft.",
+			"languages": "全部語言、心靈感應120呎",
 			"cr": "12",
 			"trait": [
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The arcanaloth 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"奧登羅斯魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Magic Weapons",
+					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The arcanaloth's weapon attacks are magical."
+						"奧登羅斯魔的武器攻擊視作魔法攻擊。"
 					]
 				}
 			],
@@ -4756,29 +4756,29 @@
 				{
 					"name": "爪抓",
 					"entries": [
-						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}8 ({@damage 2d4 + 3})劈砍傷害。 The target must make a DC 14 Constitution saving throw, taking 10 ({@damage 3d6}) poison damage on a failed save, or half as much damage on a successful one."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}8 ({@damage 2d4 + 3})劈砍傷害。目標必須進行一次DC 14的體質豁免，豁免失敗則受到10 ({@damage 3d6})毒素傷害，豁免成功則只受到一半的傷害。"
 					]
 				},
 				{
-					"name": "Teleport",
+					"name": "傳送",
 					"entries": [
-						"The arcanaloth magically teleports, along with any equipment it is wearing or carrying, up to 60 feet to an unoccupied space it can see."
+						"奧登羅斯魔用魔法將自己連同任何它所穿戴或攜帶的裝備一起傳送最多60呎距離到一處它所能看見的未被佔據空間。"
 					]
 				}
 			],
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Yugoloth Summoning",
+					"name": "召喚尤格羅斯魔",
 					"entries": [
-						"Some yugoloths have an action option that allows them to summon other yugoloths.",
+						"有些尤格羅斯魔擁有允許它們召喚出其他尤格羅斯魔的動作項。",
 						{
-							"name": "Summon Yugoloth (1/Day)",
+							"name": "召喚尤格羅斯魔 (1/日)",
 							"type": "entries",
 							"entries": [
-								"The yugoloth attempts a magical summoning.",
-								"An arcanaloth has a {@chance 40|40 percent|40% summoning chance} chance of summoning one arcanaloth.",
-								"A summoned yugoloth appears in an unoccupied space within 60 feet of its summoner, does as it pleases, and can't summon other yugoloths. The summoned yugoloth remains for 1 minute, until it or its summoner dies, or until its summoner takes a bonus action to dismiss it."
+								"該尤格羅斯魔嘗試進行一次魔法召喚。",
+								"一個奧登羅斯魔有{@chance 40|40％|40％召喚機率}機率召喚出另一個奧登羅斯魔。",
+								"被召喚的尤格羅斯魔將出現距離它召喚者60呎內的一處未被佔據空間，隨自己的喜好行動，且不能再召喚其它尤格羅斯魔。它會持續存在長達1分鐘，直到它或它的召喚者死亡、或直到召喚者以一個附贈動作解消它。"
 							]
 						}
 					]
@@ -4789,7 +4789,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The arcanaloth's innate spellcasting ability is Charisma (spell save DC 15). The arcanaloth can innately cast the following spells, requiring no material components:"
+						"奧登羅斯魔的天生施法屬性為魅力（法術豁免DC 15）。奧登羅斯魔天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 變造自身}",
@@ -4801,14 +4801,14 @@
 					"ability": "cha"
 				},
 				{
-					"name": "Spellcasting",
+					"name": "施法",
 					"headerEntries": [
-						"The arcanaloth is a 16th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 17, {@hit 9} to hit with spell attacks). The arcanaloth has the following wizard spells prepared:"
+						"奧登羅斯魔是16級的施法者。它的施法屬性為智力（法術豁免DC 17，法術攻擊命中{@hit 9}）。奧登羅斯魔已準備了以下法師法術："
 					],
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell fire bolt}",
+								"{@spell 火焰箭}",
 								"{@spell 法師之手}",
 								"{@spell 次級幻象}",
 								"{@spell 魔法技倆}"
@@ -4820,7 +4820,7 @@
 								"{@spell 偵測魔法}",
 								"{@spell 鑑定術}",
 								"{@spell 護盾術}",
-								"{@spell Tenser's floating disk}"
+								"{@spell 譚森浮碟術}"
 							]
 						},
 						"2": {
@@ -4828,7 +4828,7 @@
 							"spells": [
 								"{@spell 偵測思想}",
 								"{@spell 鏡影術}",
-								"{@spell phantasmal force}",
+								"{@spell 魅影之力}",
 								"{@spell 暗示術}"
 							]
 						},
@@ -4857,7 +4857,7 @@
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell chain lightning}"
+								"{@spell 連環閃電}"
 							]
 						},
 						"7": {
@@ -5362,7 +5362,7 @@
 			]
 		},
 		{
-			"name": "Azer",
+			"name": "火矮人", "ENG_name": "Azer",
 			"size": "M",
 			"type": "elemental",
 			"source": "MM",
@@ -5403,33 +5403,33 @@
 				"poisoned"
 			],
 			"passive": 11,
-			"languages": "Ignan",
+			"languages": "火族語",
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Heated Body",
+					"name": "灼熱身軀", "tENG_name": "Heated Body",
 					"entries": [
-						"A creature that touches the azer or hits it with a melee attack while within 5 feet of it takes 5 ({@damage 1d10}) fire damage."
+						"一個觸碰火矮人或在距離它5呎內以一次近戰攻擊命中它的生物將受到5 ({@damage 1d10})火焰傷害。"
 					]
 				},
 				{
-					"name": "Heated Weapons",
+					"name": "灼熱武器", "tENG_name": "Heated Weapons",
 					"entries": [
-						"When the azer hits with a metal melee weapon, it deals an extra 3 ({@damage 1d6}) fire damage (included in the attack)."
+						"當火矮人使用一把金屬近戰武器以命中目標時，它將造成額外的3 ({@damage 1d6})火焰傷害（已包含在攻擊條目）。"
 					]
 				},
 				{
-					"name": "Illumination",
+					"name": "照明", "tENG_name": "Illumination",
 					"entries": [
-						"The azer sheds bright light in a 10-foot radius and dim light for an additional 10 ft.."
+						"火矮人會散發出30呎半徑的明亮光照和再延伸10呎的微光光照。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Warhammer",
+					"name": "戰錘",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3}) bludgeoning damage, or 8 ({@damage 1d10 + 3}) bludgeoning damage if used with two hands to make a melee attack, plus 3 ({@damage 1d6}) fire damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3})鈍擊傷害，或若雙手使用以進行一次近戰攻擊時則造成 8 ({@damage 1d10 + 3})鈍擊傷害，加上 3 ({@damage 1d6})火焰傷害。"
 					]
 				}
 			],
@@ -6234,7 +6234,7 @@
 						],
 						"2e": [
 							"{@spell 易容術}",
-							"{@spell 隱形術} (限定自身)"
+							"{@spell 隱形術}(限定自身)"
 						]
 					},
 					"ability": "wis"
@@ -6591,7 +6591,7 @@
 					"name": "Swallow",
 					"entries": [
 						"The behir makes one bite attack against a Medium or smaller target it is grappling. If the attack hits, the target is also swallowed, and the grapple ends. While swallowed, the target is {@condition blinded} and {@condition restrained}, it has total cover against attacks and other effects outside the behir, and it takes 21 ({@damage 6d6}) acid damage at the start of each of the behir's turns. A behir can have only one creature swallowed at a time.",
-						"If the behir takes 30 damage or more on a single turn from the swallowed creature, the behir must succeed on a DC 14 Constitution saving throw at the end of that turn or regurgitate the creature, which falls {@condition prone} in a space within 10 feet of the behir. If the behir dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse by using 15 ft. of movement, exiting {@condition prone}."
+						"If the behir takes 30 damage or more on a single turn from the swallowed creature, the behir must succeed on a DC 14 Constitution saving throw at the end of that turn or regurgitate the creature, which falls {@condition 伏地} in a space within 10 feet of the behir. If the behir dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse by using 15 ft. of movement, exiting {@condition 伏地}."
 					]
 				}
 			],
@@ -7384,7 +7384,7 @@
 			]
 		},
 		{
-			"name": "Blue Slaad",
+			"name": "史拉藍蟾", "ENG_name": "Blue Slaad",
 			"size": "L",
 			"type": "aberration",
 			"source": "MM",
@@ -7425,19 +7425,19 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 11,
-			"languages": "Slaad, telepathy 60 ft.",
+			"languages": "史拉蟾語、心靈感應60呎",
 			"cr": "7",
 			"trait": [
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The slaad 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"史拉蟾在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Regeneration",
+					"name": "再生", "tENG_name": "Regeneration",
 					"entries": [
-						"The slaad regains 10 hit points at the start of its turn if it has at least 1 hit point."
+						"若史拉蟾在它的回合開始時擁有至少1點生命值，則它將回復10點生命值。"
 					]
 				}
 			],
@@ -7445,7 +7445,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The slaad makes three attacks: one with its bite and two with its claws."
+						"史拉蟾進行三次攻擊：一次啃咬，二次爪抓。"
 					]
 				},
 				{
@@ -7457,7 +7457,7 @@
 				{
 					"name": "爪抓",
 					"entries": [
-						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5})劈砍傷害。 If the target is a humanoid, it must succeed on a DC 15 Constitution saving throw or be infected with a disease called chaos phage. While infected, the target can't regain hit points, and its hit point maximum is reduced by 10 ({@dice 3d6}) every 24 hours. If the disease reduces the target's hit point maximum to 0, the target instantly transforms into a red slaad or, if it has the ability to cast spells of 3rd level or higher, a green slaad. Only a wish spell can reverse the transformation."
+						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5})劈砍傷害。若目標為一個類人生物，則它必須成功通過一次DC 15的體質豁免，否則被一種名為「混沌噬菌體」的疾病給感染。當被感染時，目標無法回復生命值，且它的生命值最大值每經過24小時就會減少10 ({@dice 3d6})點。若目標的生命值最大值因為這個疾病而歸零，則目標將立即轉變成一隻{@creature 史拉紅蟾}，或者若它具有施放3環或以上法術的能力，則轉變成一隻{@creature 史拉綠蟾}。只有{@spell 祈願術}能夠將這個轉變逆轉。"
 					]
 				}
 			],
@@ -7465,12 +7465,12 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Control Gem",
+					"name": "支配寶石",
 					"entries": [
-						"Implanted in the slaad's brain is a magic control gem. The slaad must obey whoever possesses the gem and is immune to being {@condition charmed} while so controlled.",
-						"Certain spells can be used to acquire the gem. If the slaad fails its saving throw against {@spell imprisonment}, the spell can transfer the gem to the spellcaster's open hand, instead of imprisoning the slaad. A {@spell wish} spell, if cast in the slaad's presence, can be worded to acquire the gem.",
-						"A {@spell 高等復原術} spell cast on the slaad destroys the gem without harming the slaad.",
-						"Someone who is proficient in Wisdom (Medicine) can remove the gem from an {@condition incapacitated} slaad. Each try requires 1 minute of uninterrupted work and a successful DC 20 Wisdom (Medicine) check. Each failed attempt deals 22 ({@damage 4d10}) psychic damage to the slaad."
+						"植入史拉蟾腦內的是一顆魔法支配寶石。該史拉蟾必須服從任何擁有該寶石的對象，且在被這個方式支配時免疫於{@condition 魅惑}。",
+						"某些法術可以被用於獲得該寶石。若史拉蟾在對抗{@spell 禁錮術}的豁免檢定中失敗，則該法術可以將寶石轉移到施法者的手上，而非將史拉蟾給禁錮。{@spell 祈願術}法術若在史拉蟾在場時被施放，則可以被許願以獲得該寶石。",
+						"施放於史拉蟾的{@spell 高等復原術}法術將會摧毀該寶石而不至於傷害到史拉蟾。",
+						"熟練於睿知（{@skill 醫藥}）的角色可以從一個{@condition 無力}的史拉蟾腦中移除該寶石。每次嘗試都需要1分鐘不被打擾的工作時間，且必須成功通過一次DC 20的睿知（{@skill 醫藥}）檢定。每次嘗試失敗都會對該史拉蟾造成22 ({@damage 4d10})精神傷害。"
 					]
 				}
 			],
@@ -8460,7 +8460,7 @@
 				{
 					"name": "Deadly Leap",
 					"entries": [
-						"If the bulette jumps at least 15 ft. as part of its movement, it can then use this action to land on its feet in a space that contains one or more other creatures. Each of those creatures must succeed on a DC 16 Strength or Dexterity saving throw (target's choice) or be knocked {@condition prone} and take 14 ({@damage 3d6 + 4}) bludgeoning damage plus 14 ({@damage 3d6 + 4})劈砍傷害。 On a successful save, the creature takes only half the damage, isn't knocked {@condition prone}, and is pushed 5 ft. out of the bulette's space into an unoccupied space of the creature's choice. If no unoccupied space is within range, the creature instead falls {@condition prone} in the bulette's space."
+						"If the bulette jumps at least 15 ft. as part of its movement, it can then use this action to land on its feet in a space that contains one or more other creatures. Each of those creatures must succeed on a DC 16 Strength or Dexterity saving throw (target's choice) or be knocked {@condition 伏地} and take 14 ({@damage 3d6 + 4}) bludgeoning damage plus 14 ({@damage 3d6 + 4})劈砍傷害。 On a successful save, the creature takes only half the damage, isn't knocked {@condition 伏地}, and is pushed 5 ft. out of the bulette's space into an unoccupied space of the creature's choice. If no unoccupied space is within range, the creature instead falls {@condition 伏地} in the bulette's space."
 					]
 				}
 			],
@@ -10244,9 +10244,9 @@
 			"cr": "4",
 			"trait": [
 				{
-					"name": "Magic Weapons",
+					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The couatl's weapon attacks are magical."
+						"The couatl's的武器攻擊視作魔法攻擊。"
 					]
 				},
 				{
@@ -10800,7 +10800,7 @@
 			]
 		},
 		{
-			"name": "Dao",
+			"name": "土巨靈(達奧)", "ENG_name": "Dao",
 			"size": "L",
 			"type": "elemental",
 			"source": "MM",
@@ -10841,25 +10841,25 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 11,
-			"languages": "Terran",
+			"languages": "土族語",
 			"cr": "11",
 			"trait": [
 				{
-					"name": "Earth Glide",
+					"name": "遁地", "tENG_name": "Earth Glide",
 					"entries": [
-						"The dao can burrow through nonmagical, unworked earth and stone. While doing so, the dao doesn't disturb the material it moves through."
+						"土巨靈可以移動掘穿非魔法、且未經加工的土層或岩層。當這麼做時，土巨靈並不會擾動它所移動穿過的物質。"
 					]
 				},
 				{
-					"name": "Elemental Demise",
+					"name": "元素消亡", "tENG_name": "Elemental Demise",
 					"entries": [
-						"If the dao dies, its body disintegrates into crystalline powder, leaving behind only equipment the dao was wearing or carrying."
+						"若土巨靈死亡，它的身體將消散成一團結晶狀的粉塵，留下任何土巨靈所穿戴或攜帶的裝備。"
 					]
 				},
 				{
-					"name": "Sure-Footed",
+					"name": "穩妥步伐", "tENG_name": "Sure-Footed",
 					"entries": [
-						"The dao has advantage on Strength and Dexterity saving throws made against effects that would knock it {@condition prone}."
+						"土巨靈在用以對抗不被擊倒{@condition 伏地}的力量或敏捷豁免中具有優勢。"
 					]
 				}
 			],
@@ -10867,19 +10867,19 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The Dao makes two fist attacks or two maul attacks."
+						"土巨靈進行二次拳擊攻擊或二次巨鎚攻擊。"
 					]
 				},
 				{
-					"name": "Fist",
+					"name": "拳擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}15 ({@damage 2d8 + 6})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Maul",
+					"name": "巨鎚",
 					"entries": [
-						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}20 ({@damage 4d6 + 6})鈍擊傷害。 If the target is a Huge or smaller creature, it must succeed on a DC 18 Strength check or be knocked {@condition prone}."
+						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}20 ({@damage 4d6 + 6})鈍擊傷害。若目標為一個體型為巨型或更小的生物，則它必須成功通過一次DC 18的力量檢定，否則被擊倒{@condition 伏地}。"
 					]
 				}
 			],
@@ -10888,7 +10888,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The dao's innate spellcasting ability is Charisma (spell save DC 14, {@hit 6} to hit with spell attacks). It can innately cast the following spells, requiring no material components:"
+						"土巨靈的天生施法屬性為魅力（法術豁免DC 14，法術攻擊命中{@hit 6}）。土巨靈天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 偵測善惡}",
@@ -10898,11 +10898,11 @@
 					"daily": {
 						"3e": [
 							"{@spell 穿牆術}",
-							"{@spell move earth}",
+							"{@spell 地動術}",
 							"{@spell 巧舌術}"
 						],
 						"1e": [
-							"{@spell 召喚元素生物} (earth elemental only)",
+							"{@spell 召喚元素生物}(限定{@creature 土元素})",
 							"{@spell 氣化形體}",
 							"{@spell 隱形術}",
 							"{@spell 魅影殺手}",
@@ -10916,22 +10916,22 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Genie Powers",
+					"name": "巨靈之力",
 					"entries": [
-						"Genies have a variety of magical capabilities, including spells. A few have even greater powers that allow them to alter their appearance or the nature of reality.",
+						"巨靈擁有各式各樣的魔法能力，包括各種法術。其中一些個體甚至擁有更強大的力量，讓它們得以改變自己的外表和現實性質。",
 						{
 							"type": "entries",
-							"name": "Disguises",
+							"name": "偽裝",
 							"entries": [
-								"Some genies can veil themselves in illusion to pass as other similarly shaped creatures. Such genies can innately cast the {@spell disguise self} spell at will, often with a longer duration than is normal for that spell. Mightier genies can cast the {@spell true polymorph} spell one to three times per day, possibly with a longer duration than normal. Such genies can change only their own shape, but a rare few can use the spell on other creatures and objects as well."
+								"某些巨靈可以將它們自己隱藏在幻象中，使它們偽裝成其他相似身型的生物。這類巨靈天生就可以隨意施放{@spell 易容術}法術，且其通常會具有比原本法術更長的持續時間。更強大的巨靈可以每日施放一到三次的{@spell 完全變形術}法術，並可能也具有比原本更長的持續時間。這類巨靈只能改變它們自己的身形，但仍有極少數的個體也能夠將該法術施放在其他生物或物體上。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Wishes",
+							"name": "許願",
 							"entries": [
-								"The genie power to grant wishes is legendary among mortals. Only the most potent genies, such as those among the nobility, can do so. A particular genie that has this power can grant one to three wishes to a creature that isn't a genie. Once a genie has granted its limit of wishes, it can't grant wishes again for some amount of time (usually 1 year). and cosmic law dictates that the same genie can expend its limit of wishes on a specific creature only once in that creature's existence.",
-								"To be granted a wish, a creature within 60 feet of the genie states a desired effect to it. The genie can then cast the {@spell wish} spell on the creature's behalf to bring about the effect. Depending on the genie's nature, the genie might try to pervert the intent of the wish by exploiting the wish's poor wording. The perversion of the wording is usually crafted to be to the genie's benefit."
+								"在俗世間，巨靈實現願望的力量已經是一件廣為人知的傳說。只有最強大的巨靈（像是巨靈貴族中的某些個體）才能夠做到。一個擁有這項能力的巨靈可以實現一個非巨靈的生物一到三個願望。一旦巨靈實現了它所能給予的所有願望，它在一段時間內將無法再實現任何願望（通常為1年）。除此之外，宇宙法則也規定了同一個巨靈只能為一個特定生物實現其所能授予願望上限的願望一次。一旦巨靈在該生物身上用盡了它的願望額度，該巨靈將再也不能讓該生物許願。",
+								"要向巨靈許願的生物必須距離巨靈60呎內，並向巨靈說出所想要的效果。巨靈可以為該生物施放{@spell 祈願術}以產生該效果。根據巨靈的本性不同，巨靈可能會試圖利用願望的糟糕措辭以曲解願望的意圖。這種意圖的曲解往往是巨靈為了自己的利益而故意為之。"
 							]
 						}
 					]
@@ -11272,7 +11272,7 @@
 			]
 		},
 		{
-			"name": "Death Slaad",
+			"name": "史拉亡蟾", "ENG_name": "Death Slaad",
 			"size": "M",
 			"type": {
 				"type": "aberration",
@@ -11319,31 +11319,31 @@
 			],
 			"senses": "盲視60呎, 黑暗視覺60呎",
 			"passive": 18,
-			"languages": "Slaad, telepathy 60 ft.",
+			"languages": "史拉蟾語、心靈感應60呎",
 			"cr": "10",
 			"trait": [
 				{
-					"name": "Shapechanger",
+					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
-						"The slaad can use its action to polymorph into a Small or Medium humanoid, or back into its true form. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies."
+						"史拉蟾可以使用它的動作以變形成一個小型或中型的類人生物，或變回它的真實型態。除了它的體型之外，它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。它會在死亡時回復它的真實型態。"
 					]
 				},
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The slaad 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"史拉蟾在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Magic Weapons",
+					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The slaad's weapon attacks are magical."
+						"史拉蟾的武器攻擊視作魔法攻擊。"
 					]
 				},
 				{
-					"name": "Regeneration",
+					"name": "再生", "tENG_name": "Regeneration",
 					"entries": [
-						"The slaad regains 10 hit points at the start of its turn if it has at least 1 hit point."
+						"若史拉蟾在它的回合開始時擁有至少1點生命值，則它將回復10點生命值。"
 					]
 				}
 			],
@@ -11351,25 +11351,25 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The slaad makes three attacks: one with its bite and two with its claws or greatsword."
+						"史拉蟾進行三次攻擊：一次啃咬，二次爪抓或巨劍。"
 					]
 				},
 				{
-					"name": "Bite (Slaad Form Only)",
+					"name": "啃咬 (限定史拉蟾型態)",
 					"entries": [
-						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}9 ({@damage 1d8 + 5}) piercing damage plus 7 ({@damage 2d6}) necrotic damage."
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}9 ({@damage 1d8 + 5})穿刺傷害加 7 ({@damage 2d6})死靈傷害。"
 					]
 				},
 				{
-					"name": "Claws (Slaad Form Only)",
+					"name": "爪抓 (限定史拉蟾型態)",
 					"entries": [
-						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}10 ({@damage 1d10 + 5}) slashing damage plus 7 ({@damage 2d6}) necrotic damage."
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}10 ({@damage 1d10 + 5})劈砍傷害加 7 ({@damage 2d6})死靈傷害。"
 					]
 				},
 				{
 					"name": "巨劍",
 					"entries": [
-						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5}) slashing damage plus 7 ({@damage 2d6}) necrotic damage."
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5})劈砍傷害加 7 ({@damage 2d6})死靈傷害。"
 					]
 				}
 			],
@@ -11378,7 +11378,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The slaad's innate spellcasting ability is Charisma (spell save DC 15, {@hit 7} to hit with spell attacks). The slaad can innately cast the following spells, requiring no material components:"
+						"史拉蟾的天生施法屬性為魅力（法術豁免DC 15，法術攻擊命中{@hit 7}）。史拉蟾天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 偵測魔法}",
@@ -11405,12 +11405,12 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Control Gem",
+					"name": "支配寶石",
 					"entries": [
-						"Implanted in the slaad's brain is a magic control gem. The slaad must obey whoever possesses the gem and is immune to being {@condition charmed} while so controlled.",
-						"Certain spells can be used to acquire the gem. If the slaad fails its saving throw against {@spell imprisonment}, the spell can transfer the gem to the spellcaster's open hand, instead of imprisoning the slaad. A {@spell wish} spell, if cast in the slaad's presence, can be worded to acquire the gem.",
-						"A {@spell 高等復原術} spell cast on the slaad destroys the gem without harming the slaad.",
-						"Someone who is proficient in Wisdom (Medicine) can remove the gem from an {@condition incapacitated} slaad. Each try requires 1 minute of uninterrupted work and a successful DC 20 Wisdom (Medicine) check. Each failed attempt deals 22 ({@damage 4d10}) psychic damage to the slaad."
+						"植入史拉蟾腦內的是一顆魔法支配寶石。該史拉蟾必須服從任何擁有該寶石的對象，且在被這個方式支配時免疫於{@condition 魅惑}。",
+						"某些法術可以被用於獲得該寶石。若史拉蟾在對抗{@spell 禁錮術}的豁免檢定中失敗，則該法術可以將寶石轉移到施法者的手上，而非將史拉蟾給禁錮。{@spell 祈願術}法術若在史拉蟾在場時被施放，則可以被許願以獲得該寶石。",
+						"施放於史拉蟾的{@spell 高等復原術}法術將會摧毀該寶石而不至於傷害到史拉蟾。",
+						"熟練於睿知（{@skill 醫藥}）的角色可以從一個{@condition 無力}的史拉蟾腦中移除該寶石。每次嘗試都需要1分鐘不被打擾的工作時間，且必須成功通過一次DC 20的睿知（{@skill 醫藥}）檢定。每次嘗試失敗都會對該史拉蟾造成22 ({@damage 4d10})精神傷害。"
 					]
 				}
 			],
@@ -12182,7 +12182,7 @@
 			]
 		},
 		{
-			"name": "Djinni",
+			"name": "氣巨靈(鎮尼)", "ENG_name": "Djinni",
 			"size": "L",
 			"type": "elemental",
 			"source": "MM",
@@ -12223,13 +12223,13 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 13,
-			"languages": "Auran",
+			"languages": "氣族語",
 			"cr": "11",
 			"trait": [
 				{
-					"name": "Elemental Demise",
+					"name": "元素消亡", "tENG_name": "Elemental Demise",
 					"entries": [
-						"If the djinni dies, its body disintegrates into a warm breeze, leaving behind only equipment the djinni was wearing or carrying."
+						"若氣巨靈死亡，它的身體將消散成一陣溫暖的微風,留下任何氣巨靈所穿戴或攜帶的裝備。"
 					]
 				}
 			],
@@ -12237,20 +12237,20 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The djinni makes three scimitar attacks."
+						"氣巨靈進行三次彎刀攻擊。"
 					]
 				},
 				{
 					"name": "彎刀",
 					"entries": [
-						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5}) slashing damage plus 3 ({@damage 1d6}) lightning or thunder damage (djinni's choice)."
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5})劈砍傷害加 3 ({@damage 1d6})閃電或雷鳴傷害（由氣巨靈決定）。"
 					]
 				},
 				{
-					"name": "Create Whirlwind",
+					"name": "創造旋風",
 					"entries": [
-						"A 5-foot-radius, 30-foot-tall cylinder of swirling air magically forms on a point the djinni can see within 120 feet of it. The whirlwind lasts as long as the djinni maintains concentration (as if concentrating on a spell). Any creature but the djinni that enters the whirlwind must succeed on a DC 18 Strength saving throw or be {@condition restrained} by it. The djinni can move the whirlwind up to 60 feet as an action, and creatures {@condition restrained} by the whirlwind move with it. The whirlwind ends if the djinni loses sight of it.",
-						"A creature can use its action to free a creature {@condition restrained} by the whirlwind, including itself, by succeeding on a DC 18 Strength check. If the check succeeds, the creature is no longer {@condition restrained} and moves to the nearest space outside the whirlwind."
+						"一陣5呎半徑，30呎高的柱狀旋風將在距離氣巨靈120呎內且它所能看見的一點形成。只要氣巨靈仍維持專注，這陣旋風就會持續存在（如同專注於法術）。任何氣巨靈以外的生物在進入旋風時都必須成功通過一次DC 18的力量豁免，否則將被其{@condition 束縛}。氣巨靈能夠以一個動作移動這陣旋風最多60呎距離．且被旋風{@condition 束縛}的生物將跟著它移動。這陣旋風將在離開氣巨靈的視野範圍時終止。",
+						"一個生物可以藉由使用它的動作並成功通過一次DC 18的力量檢定以釋放一個被旋風{@condition 束縛}的生物，包括它自己。若該檢定成功，該生物將不再被{@condition 束縛}且移動到旋風範圍外一處最近的空間。"
 					]
 				}
 			],
@@ -12259,7 +12259,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The djinni's innate spellcasting ability is Charisma (spell save DC 17, {@hit 9} to hit with spell attacks). It can innately cast the following spells, requiring no material components:"
+						"氣巨靈的天生施法屬性為魅力（法術豁免DC 17，法術攻擊命中{@hit 9}）。氣巨靈天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 偵測善惡}",
@@ -12268,13 +12268,13 @@
 					],
 					"daily": {
 						"3e": [
-							"{@spell 創造飲食} (can create wine instead of water)",
+							"{@spell 創造飲食}(可以創造紅酒而非水)",
 							"{@spell 巧舌術}",
-							"{@spell wind walk}"
+							"{@spell 御風而行}"
 						],
 						"1e": [
-							"{@spell 召喚元素生物} (air elemental only)",
-							"{@spell creation}",
+							"{@spell 召喚元素生物}(限定{@creature 氣元素}})",
+							"{@spell 造物術}",
 							"{@spell 氣化形體}",
 							"{@spell 隱形術}",
 							"{@spell 強效幻影}",
@@ -12287,22 +12287,22 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Genie Powers",
+					"name": "巨靈之力",
 					"entries": [
-						"Genies have a variety of magical capabilities, including spells. A few have even greater powers that allow them to alter their appearance or the nature of reality.",
+						"巨靈擁有各式各樣的魔法能力，包括各種法術。其中一些個體甚至擁有更強大的力量，讓它們得以改變自己的外表和現實性質。",
 						{
 							"type": "entries",
-							"name": "Disguises",
+							"name": "偽裝",
 							"entries": [
-								"Some genies can veil themselves in illusion to pass as other similarly shaped creatures. Such genies can innately cast the {@spell disguise self} spell at will, often with a longer duration than is normal for that spell. Mightier genies can cast the {@spell true polymorph} spell one to three times per day, possibly with a longer duration than normal. Such genies can change only their own shape, but a rare few can use the spell on other creatures and objects as well."
+								"某些巨靈可以將它們自己隱藏在幻象中，使它們偽裝成其他相似身型的生物。這類巨靈天生就可以隨意施放{@spell 易容術}法術，且其通常會具有比原本法術更長的持續時間。更強大的巨靈可以每日施放一到三次的{@spell 完全變形術}法術，並可能也具有比原本更長的持續時間。這類巨靈只能改變它們自己的身形，但仍有極少數的個體也能夠將該法術施放在其他生物或物體上。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Wishes",
+							"name": "許願",
 							"entries": [
-								"The genie power to grant wishes is legendary among mortals. Only the most potent genies, such as those among the nobility, can do so. A particular genie that has this power can grant one to three wishes to a creature that isn't a genie. Once a genie has granted its limit of wishes, it can't grant wishes again for some amount of time (usually 1 year). and cosmic law dictates that the same genie can expend its limit of wishes on a specific creature only once in that creature's existence.",
-								"To be granted a wish, a creature within 60 feet of the genie states a desired effect to it. The genie can then cast the {@spell wish} spell on the creature's behalf to bring about the effect. Depending on the genie's nature, the genie might try to pervert the intent of the wish by exploiting the wish's poor wording. The perversion of the wording is usually crafted to be to the genie's benefit."
+								"在俗世間，巨靈實現願望的力量已經是一件廣為人知的傳說。只有最強大的巨靈（像是巨靈貴族中的某些個體）才能夠做到。一個擁有這項能力的巨靈可以實現一個非巨靈的生物一到三個願望。一旦巨靈實現了它所能給予的所有願望，它在一段時間內將無法再實現任何願望（通常為1年）。除此之外，宇宙法則也規定了同一個巨靈只能為一個特定生物實現其所能授予願望上限的願望一次。一旦巨靈在該生物身上用盡了它的願望額度，該巨靈將再也不能讓該生物許願。",
+								"要向巨靈許願的生物必須距離巨靈60呎內，並向巨靈說出所想要的效果。巨靈可以為該生物施放{@spell 祈願術}以產生該效果。根據巨靈的本性不同，巨靈可能會試圖利用願望的糟糕措辭以曲解願望的意圖。這種意圖的曲解往往是巨靈為了自己的利益而故意為之。"
 							]
 						}
 					]
@@ -12373,7 +12373,7 @@
 			"cr": "3",
 			"trait": [
 				{
-					"name": "Shapechanger",
+					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
 						"The doppelganger can use its action to polymorph into a Small or Medium humanoid it has seen, or back into its true form. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies."
 					]
@@ -14135,7 +14135,7 @@
 			"cr": "5",
 			"trait": [
 				{
-					"name": "遁地", "ENGname": "Earth Glide",
+					"name": "遁地", "tENG_name": "Earth Glide",
 					"entries": [
 						"土元素可以移動掘穿非魔法、且未經加工的土層或岩層。當這麼做時，土元素並不會擾動它所移動穿過的物質。"
 					]
@@ -14184,7 +14184,7 @@
 			]
 		},
 		{
-			"name": "Efreeti",
+			"name": "火巨靈(伊夫利特)", "ENG_name": "Efreeti",
 			"size": "L",
 			"type": "elemental",
 			"source": "MM",
@@ -14224,13 +14224,13 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 12,
-			"languages": "Ignan",
+			"languages": "火族語",
 			"cr": "11",
 			"trait": [
 				{
-					"name": "Elemental Demise",
+					"name": "元素消亡", "tENG_name": "Elemental Demise",
 					"entries": [
-						"If the efreeti dies, its body disintegrates in a flash of fire and puff of smoke, leaving behind only equipment the djinni was wearing or carrying."
+						"若火巨靈死亡，它的身體將消散成一團烈焰和黑煙,留下任何火巨靈所穿戴或攜帶的裝備。"
 					]
 				}
 			],
@@ -14238,19 +14238,19 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The efreeti makes two scimitar attacks or uses its Hurl Flame twice."
+						"火巨靈進行二次彎刀攻擊，或使用二次投擲烈焰。"
 					]
 				},
 				{
 					"name": "彎刀",
 					"entries": [
-						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}13 ({@damage 2d6 + 6}) slashing damage plus 7 ({@damage 2d6}) fire damage."
+						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}13 ({@damage 2d6 + 6})劈砍傷害加 7 ({@damage 2d6})火焰傷害。"
 					]
 				},
 				{
-					"name": "Hurl Flame",
+					"name": "投擲烈焰",
 					"entries": [
-						"{@atk rs} {@hit 7} to hit, range 120 ft., one target. {@h}17 ({@damage 5d6}) fire damage."
+						"{@atk rs} 命中{@hit 7}，射程120呎，單一目標。{@h}17 ({@damage 5d6})火焰傷害。"
 					]
 				}
 			],
@@ -14259,7 +14259,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The efreeti's innate spellcasting ability is Charisma (spell save DC 15, {@hit 7} to hit with spell attacks). It can innately cast the following spells, requiring no material components:"
+						"火巨靈的天生施法屬性為魅力（法術豁免DC 15，法術攻擊命中{@hit 7}）。火巨靈天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 偵測魔法}"
@@ -14270,7 +14270,7 @@
 							"{@spell 巧舌術}"
 						],
 						"1e": [
-							"{@spell 召喚元素生物} (fire elemental only)",
+							"{@spell 召喚元素生物}(限定{@creature 火元素})",
 							"{@spell 氣化形體}",
 							"{@spell 隱形術}",
 							"{@spell 強效幻影}",
@@ -14284,22 +14284,22 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Genie Powers",
+					"name": "巨靈之力",
 					"entries": [
-						"Genies have a variety of magical capabilities, including spells. A few have even greater powers that allow them to alter their appearance or the nature of reality.",
+						"巨靈擁有各式各樣的魔法能力，包括各種法術。其中一些個體甚至擁有更強大的力量，讓它們得以改變自己的外表和現實性質。",
 						{
 							"type": "entries",
-							"name": "Disguises",
+							"name": "偽裝",
 							"entries": [
-								"Some genies can veil themselves in illusion to pass as other similarly shaped creatures. Such genies can innately cast the {@spell disguise self} spell at will, often with a longer duration than is normal for that spell. Mightier genies can cast the {@spell true polymorph} spell one to three times per day, possibly with a longer duration than normal. Such genies can change only their own shape, but a rare few can use the spell on other creatures and objects as well."
+								"某些巨靈可以將它們自己隱藏在幻象中，使它們偽裝成其他相似身型的生物。這類巨靈天生就可以隨意施放{@spell 易容術}法術，且其通常會具有比原本法術更長的持續時間。更強大的巨靈可以每日施放一到三次的{@spell 完全變形術}法術，並可能也具有比原本更長的持續時間。這類巨靈只能改變它們自己的身形，但仍有極少數的個體也能夠將該法術施放在其他生物或物體上。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Wishes",
+							"name": "許願",
 							"entries": [
-								"The genie power to grant wishes is legendary among mortals. Only the most potent genies, such as those among the nobility, can do so. A particular genie that has this power can grant one to three wishes to a creature that isn't a genie. Once a genie has granted its limit of wishes, it can't grant wishes again for some amount of time (usually 1 year). and cosmic law dictates that the same genie can expend its limit of wishes on a specific creature only once in that creature's existence.",
-								"To be granted a wish, a creature within 60 feet of the genie states a desired effect to it. The genie can then cast the {@spell wish} spell on the creature's behalf to bring about the effect. Depending on the genie's nature, the genie might try to pervert the intent of the wish by exploiting the wish's poor wording. The perversion of the wording is usually crafted to be to the genie's benefit."
+								"在俗世間，巨靈實現願望的力量已經是一件廣為人知的傳說。只有最強大的巨靈（像是巨靈貴族中的某些個體）才能夠做到。一個擁有這項能力的巨靈可以實現一個非巨靈的生物一到三個願望。一旦巨靈實現了它所能給予的所有願望，它在一段時間內將無法再實現任何願望（通常為1年）。除此之外，宇宙法則也規定了同一個巨靈只能為一個特定生物實現其所能授予願望上限的願望一次。一旦巨靈在該生物身上用盡了它的願望額度，該巨靈將再也不能讓該生物許願。",
+								"要向巨靈許願的生物必須距離巨靈60呎內，並向巨靈說出所想要的效果。巨靈可以為該生物施放{@spell 祈願術}以產生該效果。根據巨靈的本性不同，巨靈可能會試圖利用願望的糟糕措辭以曲解願望的意圖。這種意圖的曲解往往是巨靈為了自己的利益而故意為之。"
 							]
 						}
 					]
@@ -14539,15 +14539,15 @@
 					]
 				},
 				{
-					"name": "Magic Weapons",
+					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The empyrean's weapon attacks are magical."
+						"The empyrean's的武器攻擊視作魔法攻擊。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Maul",
+					"name": "巨鎚",
 					"entries": [
 						"{@atk mw} 命中{@hit 17}，觸及10呎，單一目標。{@h}31 ({@damage 6d6 + 10})鈍擊傷害。 If the target is a creature, it must succeed on a DC 15 Constitution saving throw or be {@condition stunned} until the end of the empyrean's next turn."
 					]
@@ -14575,7 +14575,7 @@
 				{
 					"name": "Trembling Strike (Costs 2 Actions)",
 					"entries": [
-						"The empyrean strikes the ground with its maul, triggering an earth tremor. All other creatures on the ground within 60 feet of the empyrean must succeed on a DC 25 Strength saving throw or be knocked {@condition prone}."
+						"The empyrean strikes the ground with its maul, triggering an earth tremor. All other creatures on the ground within 60 feet of the empyrean must succeed on a DC 25 Strength saving throw or be knocked {@condition 伏地}."
 					]
 				}
 			],
@@ -16048,7 +16048,7 @@
 			]
 		},
 		{
-			"name": "Fire Snake",
+			"name": "火蛇", "ENG_name": "Fire Snake",
 			"size": "M",
 			"type": "elemental",
 			"source": "MM",
@@ -16095,13 +16095,13 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 10,
-			"languages": "understands Ignan but can't speak",
+			"languages": "理解火族語，但不會說",
 			"cr": "1",
 			"trait": [
 				{
-					"name": "Heated Body",
+					"name": "灼熱身軀", "tENG_name": "Heated Body",
 					"entries": [
-						"A creature that touches the snake or hits it with a melee attack while within 5 feet of it takes 3 ({@damage 1d6}) fire damage."
+						"一個觸碰火蛇或在距離它5呎內以一次近戰攻擊命中它的生物將受到3 ({@damage 1d6})火焰傷害。"
 					]
 				}
 			],
@@ -16109,19 +16109,19 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The snake makes two attacks: one with its bite and one with its tail."
+						"火蛇進行二次攻擊：一次啃咬，一次尾擊。"
 					]
 				},
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}3 ({@damage 1d4 + 1}) piercing damage plus 3 ({@damage 1d6}) fire damage."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}3 ({@damage 1d4 + 1})穿刺傷害加 3 ({@damage 1d6})火焰傷害。"
 					]
 				},
 				{
 					"name": "尾擊",
 					"entries": [
-						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}3 ({@damage 1d4 + 1}) bludgeoning damage plus 3 ({@damage 1d6}) fire damage."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}3 ({@damage 1d4 + 1})鈍擊傷害加 3 ({@damage 1d6})火焰傷害。"
 					]
 				}
 			],
@@ -16203,7 +16203,7 @@
 			"cr": "4",
 			"trait": [
 				{
-					"name": "Illumination",
+					"name": "照明", "tENG_name": "Illumination",
 					"entries": [
 						"The flameskull sheds either dim light in a 15-foot radius, or bright light in a 15-foot radius and dim light for an additional 15 feet. It can switch between the options as an action."
 					]
@@ -16902,7 +16902,7 @@
 			]
 		},
 		{
-			"name": "Galeb Duhr",
+			"name": "格萊石人", "ENG_name": "Galeb Duhr",
 			"size": "M",
 			"type": "elemental",
 			"source": "MM",
@@ -16924,7 +16924,7 @@
 			"speed": {
 				"walk": {
 					"number": 15,
-					"condition": " (30 ft. when rolling, 60 ft. rolling downhill)"
+					"condition": " (滾動時30呎，滾動下坡時60呎)"
 				}
 			},
 			"str": 20,
@@ -16952,35 +16952,35 @@
 				"poisoned",
 				"petrified"
 			],
-			"senses": "黑暗視覺60呎, tremorsense 60 ft.",
+			"senses": "黑暗視覺60呎, 震顫感知60呎",
 			"passive": 11,
-			"languages": "Terran",
+			"languages": "土族語",
 			"cr": "6",
 			"trait": [
 				{
 					"name": "擬形", "tENG_name": "False Appearance",
 					"entries": [
-						"While the galeb duhr remains motionless, it is indistinguishable from a normal boulder."
+						"當格萊石人保持不動，它看起來就跟普通的巨石一模一樣。"
 					]
 				},
 				{
-					"name": "Rolling Charge",
+					"name": "滾石衝鋒", "tENG_name": "Rolling Charge",
 					"entries": [
-						"If the galeb duhr rolls at least 20 ft. straight toward a target and then hits it with a slam attack on the same turn, the target takes an extra 7 ({@damage 2d6})鈍擊傷害。若目標為一個生物，則它必須成功通過一次DC 16的力量豁免，否則被擊倒{@condition 伏地}。"
+						"若格萊石人向著一個目標直線滾動至少20呎並接著在同回合以一次猛擊攻擊命中它，目標將受到額外的 7 ({@damage 2d6})鈍擊傷害。若目標為一個生物，則它必須成功通過一次DC 16的力量豁免，否則被擊倒{@condition 伏地}。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Slam",
+					"name": "猛擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Animate Boulders (1/Day)",
+					"name": "活化巨石 (1/日)",
 					"entries": [
-						"The galeb duhr magically animates up to two boulders it can see within 60 feet of it. A boulder has statistics like those of a galeb duhr, except it has Intelligence 1 and Charisma 1, it can't be {@condition charmed} or {@condition frightened}, and it lacks this action option. A boulder remains animated as long as the galeb duhr maintains concentration, up to 1 minute (as if concentrating on a spell)."
+						"格萊石人用魔法活化最多二塊距離它60呎內且它所能看見的巨石。這些巨石將具有和格萊石人相同的數據，但它們的智力和魅力值為1，不會陷入{@condition 魅惑}或{@condition 恐懼}，且沒有這個動作項。只要格萊石人仍維持專注，這些巨石就能夠維持活化，最多1分鐘（就如同專注於法術）。"
 					]
 				}
 			],
@@ -19655,7 +19655,7 @@
 				{
 					"name": "Bites",
 					"entries": [
-						"{@atk mw} 命中{@hit 2}，觸及5呎，單一生物。{@h}17 ({@damage 5d6})穿刺傷害。 If the target is Medium or smaller, it must succeed on a DC 10 Strength saving throw or be knocked {@condition prone}. If the target is killed by this damage, it is absorbed into the mouther."
+						"{@atk mw} 命中{@hit 2}，觸及5呎，單一生物。{@h}17 ({@damage 5d6})穿刺傷害。 If the target is Medium or smaller, it must succeed on a DC 10 Strength saving throw or be knocked {@condition 伏地}. If the target is killed by this damage, it is absorbed into the mouther."
 					]
 				},
 				{
@@ -21388,7 +21388,7 @@
 			]
 		},
 		{
-			"name": "Gray Slaad",
+			"name": "史拉灰蟾", "ENG_name": "Gray Slaad",
 			"size": "M",
 			"type": {
 				"type": "aberration",
@@ -21435,31 +21435,31 @@
 			],
 			"senses": "盲視60呎, 黑暗視覺60呎",
 			"passive": 17,
-			"languages": "Slaad, telepathy 60 ft.",
+			"languages": "史拉蟾語、心靈感應60呎",
 			"cr": "9",
 			"trait": [
 				{
-					"name": "Shapechanger",
+					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
-						"The slaad can use its action to polymorph into a Small or Medium humanoid, or back into its true form. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies."
+						"史拉蟾可以使用它的動作以變形成一個小型或中型的類人生物，或變回它的真實型態。除了它的體型之外，它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。它會在死亡時回復它的真實型態。"
 					]
 				},
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The slaad 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"史拉蟾在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Magic Weapons",
+					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The slaad's weapon attacks are magical."
+						"史拉蟾的武器攻擊視作魔法攻擊。"
 					]
 				},
 				{
-					"name": "Regeneration",
+					"name": "再生", "tENG_name": "Regeneration",
 					"entries": [
-						"The slaad regains 10 hit points at the start of its turn if it has at least 1 hit point."
+						"若史拉蟾在它的回合開始時擁有至少1點生命值，則它將回復10點生命值。"
 					]
 				}
 			],
@@ -21467,17 +21467,17 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The slaad makes three attacks: one with its bite and two with its claws or greatsword."
+						"史拉蟾進行三次攻擊：一次啃咬，二次爪抓或巨劍。"
 					]
 				},
 				{
-					"name": "Bite (Slaad Form Only)",
+					"name": "啃咬 (限定史拉蟾型態)",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Claws (Slaad Form Only)",
+					"name": "爪抓 (限定史拉蟾型態)",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}8 ({@damage 1d10 + 3})劈砍傷害。"
 					]
@@ -21494,7 +21494,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The slaad's innate spellcasting ability is Charisma (spell save DC 14). The slaad can innately cast the following spells, requiring no material components:"
+						"史拉蟾的天生施法屬性為魅力（法術豁免DC 14）。史拉蟾天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 偵測魔法}",
@@ -21520,12 +21520,12 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Control Gem",
+					"name": "支配寶石",
 					"entries": [
-						"Implanted in the slaad's brain is a magic control gem. The slaad must obey whoever possesses the gem and is immune to being {@condition charmed} while so controlled.",
-						"Certain spells can be used to acquire the gem. If the slaad fails its saving throw against {@spell imprisonment}, the spell can transfer the gem to the spellcaster's open hand, instead of imprisoning the slaad. A {@spell wish} spell, if cast in the slaad's presence, can be worded to acquire the gem.",
-						"A {@spell 高等復原術} spell cast on the slaad destroys the gem without harming the slaad.",
-						"Someone who is proficient in Wisdom (Medicine) can remove the gem from an {@condition incapacitated} slaad. Each try requires 1 minute of uninterrupted work and a successful DC 20 Wisdom (Medicine) check. Each failed attempt deals 22 ({@damage 4d10}) psychic damage to the slaad."
+						"植入史拉蟾腦內的是一顆魔法支配寶石。該史拉蟾必須服從任何擁有該寶石的對象，且在被這個方式支配時免疫於{@condition 魅惑}。",
+						"某些法術可以被用於獲得該寶石。若史拉蟾在對抗{@spell 禁錮術}的豁免檢定中失敗，則該法術可以將寶石轉移到施法者的手上，而非將史拉蟾給禁錮。{@spell 祈願術}法術若在史拉蟾在場時被施放，則可以被許願以獲得該寶石。",
+						"施放於史拉蟾的{@spell 高等復原術}法術將會摧毀該寶石而不至於傷害到史拉蟾。",
+						"熟練於睿知（{@skill 醫藥}）的角色可以從一個{@condition 無力}的史拉蟾腦中移除該寶石。每次嘗試都需要1分鐘不被打擾的工作時間，且必須成功通過一次DC 20的睿知（{@skill 醫藥}）檢定。每次嘗試失敗都會對該史拉蟾造成22 ({@damage 4d10})精神傷害。"
 					]
 				}
 			],
@@ -21837,7 +21837,7 @@
 			]
 		},
 		{
-			"name": "Green Slaad",
+			"name": "史拉綠蟾", "ENG_name": "Green Slaad",
 			"size": "L",
 			"type": {
 				"type": "aberration",
@@ -21884,25 +21884,25 @@
 			],
 			"senses": "盲視30呎, 黑暗視覺60呎",
 			"passive": 12,
-			"languages": "Slaad, telepathy 60 ft.",
+			"languages": "史拉蟾語、心靈感應60呎",
 			"cr": "8",
 			"trait": [
 				{
-					"name": "Shapechanger",
+					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
-						"The slaad can use its action to polymorph into a Small or Medium humanoid, or back into its true form. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies."
+						"史拉蟾可以使用它的動作以變形成一個小型或中型的類人生物，或變回它的真實型態。除了它的體型之外，它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。它會在死亡時回復它的真實型態。"
 					]
 				},
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The slaad 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"史拉蟾在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Regeneration",
+					"name": "再生", "tENG_name": "Regeneration",
 					"entries": [
-						"The slaad regains 10 hit points at the start of its turn if it has at least 1 hit point."
+						"若史拉蟾在它的回合開始時擁有至少1點生命值，則它將回復10點生命值。"
 					]
 				}
 			],
@@ -21910,17 +21910,17 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The slaad makes three attacks: one with its bite and two with its claws or staff. Alternatively, it uses its Hurl Flame twice."
+						"史拉蟾進行三次攻擊：一次啃咬，二次爪抓或法杖攻擊。或者，它可以使用二次投擲烈焰。"
 					]
 				},
 				{
-					"name": "Bite (Slaad Form Only)",
+					"name": "啃咬 (限定史拉蟾型態)",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}11 ({@damage 2d6 + 4})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Claw (Slaad Form Only)",
+					"name": "爪抓 (限定史拉蟾型態)",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}7 ({@damage 1d6 + 4})劈砍傷害。"
 					]
@@ -21932,9 +21932,9 @@
 					]
 				},
 				{
-					"name": "Hurl Flame",
+					"name": "投擲烈焰",
 					"entries": [
-						"{@atk rs} {@hit 4} to hit, range 60 ft., one target. {@h}10 ({@damage 3d6}) fire damage. The fire ignites flammable objects that aren't being worn or carried."
+						"{@atk rs} 命中{@hit 4}，射程60呎，單一目標。{@h}10 ({@damage 3d6})火焰傷害。這團火焰將會點燃未被穿戴或攜帶的可燃物體。"
 					]
 				}
 			],
@@ -21943,7 +21943,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The slaad's innate spellcasting ability is Charisma (spell save DC 12). The slaad can innately cast the following spells, requiring no material components:"
+						"史拉蟾的天生施法屬性為魅力（法術豁免DC 12）。史拉蟾天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 偵測魔法}",
@@ -21965,12 +21965,12 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Control Gem",
+					"name": "支配寶石",
 					"entries": [
-						"Implanted in the slaad's brain is a magic control gem. The slaad must obey whoever possesses the gem and is immune to being {@condition charmed} while so controlled.",
-						"Certain spells can be used to acquire the gem. If the slaad fails its saving throw against {@spell imprisonment}, the spell can transfer the gem to the spellcaster's open hand, instead of imprisoning the slaad. A {@spell wish} spell, if cast in the slaad's presence, can be worded to acquire the gem.",
-						"A {@spell 高等復原術} spell cast on the slaad destroys the gem without harming the slaad.",
-						"Someone who is proficient in Wisdom (Medicine) can remove the gem from an {@condition incapacitated} slaad. Each try requires 1 minute of uninterrupted work and a successful DC 20 Wisdom (Medicine) check. Each failed attempt deals 22 ({@damage 4d10}) psychic damage to the slaad."
+						"植入史拉蟾腦內的是一顆魔法支配寶石。該史拉蟾必須服從任何擁有該寶石的對象，且在被這個方式支配時免疫於{@condition 魅惑}。",
+						"某些法術可以被用於獲得該寶石。若史拉蟾在對抗{@spell 禁錮術}的豁免檢定中失敗，則該法術可以將寶石轉移到施法者的手上，而非將史拉蟾給禁錮。{@spell 祈願術}法術若在史拉蟾在場時被施放，則可以被許願以獲得該寶石。",
+						"施放於史拉蟾的{@spell 高等復原術}法術將會摧毀該寶石而不至於傷害到史拉蟾。",
+						"熟練於睿知（{@skill 醫藥}）的角色可以從一個{@condition 無力}的史拉蟾腦中移除該寶石。每次嘗試都需要1分鐘不被打擾的工作時間，且必須成功通過一次DC 20的睿知（{@skill 醫藥}）檢定。每次嘗試失敗都會對該史拉蟾造成22 ({@damage 4d10})精神傷害。"
 					]
 				}
 			],
@@ -22722,9 +22722,9 @@
 					]
 				},
 				{
-					"name": "Magic Weapons",
+					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The sphinx's weapon attacks are magical."
+						"The sphinx's的武器攻擊視作魔法攻擊。"
 					]
 				}
 			],
@@ -23535,7 +23535,7 @@
 							"name": "輾壓",
 							"type": "entries",
 							"entries": [
-								"{@atk mw} 命中{@hit 8}，觸及5呎，單一體型為中型或更小的生物。{@h}26 ({@damage 6d6 + 5})鈍擊傷害，巨人在目標的空間內以{@condition prone}狀態著地，且目標{@condition 被擒}(逃脫DC 15)。直到擒抱結束前，目標處於{@condition 伏地}。這個擒抱會在山丘巨人起身時提早結束。"
+								"{@atk mw} 命中{@hit 8}，觸及5呎，單一體型為中型或更小的生物。{@h}26 ({@damage 6d6 + 5})鈍擊傷害，巨人在目標的空間內以{@condition 伏地}狀態著地，且目標{@condition 被擒}(逃脫DC 15)。直到擒抱結束前，目標處於{@condition 伏地}。這個擒抱會在山丘巨人起身時提早結束。"
 							]
 						}
 					],
@@ -25033,7 +25033,7 @@
 					]
 				},
 				{
-					"name": "Shapechanger",
+					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
 						"The fiend can use its action to polymorph into a Small or Medium humanoid, or back into its true form. Without wings, the fiend loses its flying speed. Other than its size and speed, its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies."
 					]
@@ -25191,7 +25191,7 @@
 			]
 		},
 		{
-			"name": "Invisible Stalker",
+			"name": "隱形潛獵者", "ENG_name": "Invisible Stalker",
 			"size": "M",
 			"type": "elemental",
 			"source": "MM",
@@ -25248,19 +25248,19 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 18,
-			"languages": "Auran, understands Common but doesn't speak it",
+			"languages": "氣族語，理解通用語但不會說",
 			"cr": "6",
 			"trait": [
 				{
-					"name": "Invisibility",
+					"name": "隱形", "tENG_name": "Invisibility",
 					"entries": [
-						"The stalker is {@condition invisible}."
+						"潛獵者處於{@condition 隱形}狀態。"
 					]
 				},
 				{
-					"name": "Faultless Tracker",
+					"name": "完美追蹤者", "tENG_name": "Faultless Tracker",
 					"entries": [
-						"The stalker is given a quarry by its summoner. The stalker knows the direction and distance to its quarry as long as the two of them are on the same plane of existence. The stalker also knows the location of its summoner."
+						"潛獵者的召喚者將為它指定一個獵物。只要潛獵者和它的獵物處於相同的存在位面，潛獵者便知曉它獵物所在的方位和距離。潛獵者也知曉其召喚者的位置。"
 					]
 				}
 			],
@@ -25268,11 +25268,11 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The stalker makes two slam attacks."
+						"潛獵者進行二次猛擊攻擊。"
 					]
 				},
 				{
-					"name": "Slam",
+					"name": "猛擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}10 ({@damage 2d6 + 3})鈍擊傷害。"
 					]
@@ -26039,7 +26039,7 @@
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 17}，觸及5呎，單一目標。{@h}23 ({@damage 3d8 + 10})穿刺傷害。 If the target is a Large or smaller creature {@condition grappled} by the kraken, that creature is swallowed, and the grapple ends. While swallowed, the creature is {@condition blinded} and {@condition restrained}, it has total cover against attacks and other effects outside the kraken, and it takes 42 ({@damage 12d6}) acid damage at the start of each of the kraken's turns. If the kraken takes 50 damage or more on a single turn from a creature inside it, the kraken must succeed on a DC 25 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition prone} in a space within 10 feet of the kraken. If the kraken dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse using 15 feet of movement, exiting {@condition prone}."
+						"{@atk mw} 命中{@hit 17}，觸及5呎，單一目標。{@h}23 ({@damage 3d8 + 10})穿刺傷害。 If the target is a Large or smaller creature {@condition grappled} by the kraken, that creature is swallowed, and the grapple ends. While swallowed, the creature is {@condition blinded} and {@condition restrained}, it has total cover against attacks and other effects outside the kraken, and it takes 42 ({@damage 12d6}) acid damage at the start of each of the kraken's turns. If the kraken takes 50 damage or more on a single turn from a creature inside it, the kraken must succeed on a DC 25 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition 伏地} in a space within 10 feet of the kraken. If the kraken dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse using 15 feet of movement, exiting {@condition 伏地}."
 					]
 				},
 				{
@@ -26051,7 +26051,7 @@
 				{
 					"name": "Fling",
 					"entries": [
-						"One Large or smaller object held or creature {@condition grappled} by the kraken is thrown up to 60 feet in a random direction and knocked {@condition prone}. If a thrown target strikes a solid surface, the target takes 3 ({@damage 1d6}) bludgeoning damage for every 10 feet it was thrown. If the target is thrown at another creature, that creature must succeed on a DC 18 Dexterity saving throw or take the same damage and be knocked {@condition prone}."
+						"One Large or smaller object held or creature {@condition grappled} by the kraken is thrown up to 60 feet in a random direction and knocked {@condition 伏地}. If a thrown target strikes a solid surface, the target takes 3 ({@damage 1d6}) bludgeoning damage for every 10 feet it was thrown. If the target is thrown at another creature, that creature must succeed on a DC 18 Dexterity saving throw or take the same damage and be knocked {@condition 伏地}."
 					]
 				},
 				{
@@ -27672,7 +27672,7 @@
 						"3": {
 							"slots": 2,
 							"spells": [
-								"{@spell 召喚動物} (限定爬蟲類)",
+								"{@spell 召喚動物}(限定爬蟲類)",
 								"{@spell 植物滋長}"
 							]
 						}
@@ -27941,7 +27941,7 @@
 			]
 		},
 		{
-			"name": "Magmin",
+			"name": "火童", "ENG_name": "Magmin",
 			"size": "S",
 			"type": "elemental",
 			"source": "MM",
@@ -27985,27 +27985,27 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 10,
-			"languages": "Ignan",
+			"languages": "火族語",
 			"cr": "1/2",
 			"trait": [
 				{
 					"name": "死亡自爆", "tENG_name": "Death Burst",
 					"entries": [
-						"When the magmin dies, it explodes in a burst of fire and magma. Each creature within 10 feet of it must make a DC 11 Dexterity saving throw, taking 7 ({@damage 2d6}) fire damage on a failed save, or half as much damage on a successful one. Flammable objects that aren't being worn or carried in that area are ignited."
+						"當火童死亡時，它將會爆炸成烈火和熔岩。每個距離它10呎內的生物都必須進行一次DC 11的敏捷豁免，豁免失敗則受到7 ({@damage 2d6})火焰傷害，豁免成功則只受到一半的傷害。在這個範圍內為被穿戴或攜帶的可燃物品將被點燃。"
 					]
 				},
 				{
-					"name": "Ignited Illumination",
+					"name": "燃火照明", "tENG_name": "Ignited Illumination",
 					"entries": [
-						"As a bonus action, the magmin can set itself ablaze or extinguish its flames. While ablaze, the magmin sheds bright light in a 10-foot radius and dim light for an additional 10 feet."
+						"以一個附贈動作，火童可以點燃或熄滅自己身上的火焰。當被點燃時，火童將散發出10呎半徑的明亮光照和再延伸10呎的微光光照。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Touch",
+					"name": "觸擊",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}7 ({@damage 2d6}) fire damage. If the target is a creature or a flammable object, it ignites. Until a creature takes an action to douse the fire, the target takes 3 ({@damage 1d6}) fire damage at the end of each of its turns."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}7 ({@damage 2d6})火焰傷害。若目標是一個生物或可燃物體，它將被點燃。直到一個生物採取一個動作撲滅火焰，目標將在它的每個回合結束時受到3 ({@damage 1d6})火焰傷害。"
 					]
 				}
 			],
@@ -28253,7 +28253,7 @@
 			]
 		},
 		{
-			"name": "Marid",
+			"name": "水巨靈(瑪利德)", "ENG_name": "Marid",
 			"size": "L",
 			"type": "elemental",
 			"source": "MM",
@@ -28296,19 +28296,19 @@
 			],
 			"senses": "盲視30呎, 黑暗視覺120呎",
 			"passive": 13,
-			"languages": "Aquan",
+			"languages": "水族語",
 			"cr": "11",
 			"trait": [
 				{
 					"name": "兩棲",
 					"entries": [
-						"The marid可以在空氣和水中呼吸。"
+						"水巨靈可以在空氣和水中呼吸。"
 					]
 				},
 				{
-					"name": "Elemental Demise",
+					"name": "元素消亡", "tENG_name": "Elemental Demise",
 					"entries": [
-						"If the marid dies, its body disintegrates into a burst of water and foam, leaving behind only equipment the marid was wearing or carrying."
+						"若水巨靈死亡，它的身體將消散成一團水和泡沫，留下任何水巨靈所穿戴或攜帶的裝備。"
 					]
 				}
 			],
@@ -28316,19 +28316,19 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The marid makes two trident attacks."
+						"水巨靈進行二次三叉戟攻擊。"
 					]
 				},
 				{
-					"name": "Trident",
+					"name": "三叉戟",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 10}，觸及5呎 或 射程20/60呎，單一目標。{@h}13 ({@damage 2d6 + 6}) piercing damage, or 15 ({@damage 2d8 + 6}) piercing damage if used with two hands to make a melee attack."
+						"{@atk mw,rw} 命中{@hit 10}，觸及5呎 或 射程20/60呎，單一目標。{@h}13 ({@damage 2d6 + 6})穿刺傷害，或若雙手使用以進行一次近戰攻擊時則造成 15 ({@damage 2d8 + 6})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Water Jet",
+					"name": "水柱噴射",
 					"entries": [
-						"The marid magically shoots water in a 60-foot line that is 5 feet wide. Each creature in that line must make a DC 16 Dexterity saving throw. On a failure, a target takes 21 ({@damage 6d6}) bludgeoning damage and, if it is Huge or smaller, is pushed up to 20 feet away from the marid and knocked {@condition prone}. On a success, a target takes half the bludgeoning damage, but is neither pushed nor knocked {@condition prone}."
+						"水巨靈用魔法射出一道60呎長，5呎寬直線型的水柱。每個在直線範圍內的生物都必須進行一次DC 16的敏捷豁免，若豁免失敗，目標將受到21 ({@damage 6d6})鈍擊傷害，且若目標的體型為巨型或更小，則它將被推離水巨靈最多20呎距離並被擊倒{@condition 伏地}。若豁免成功，則目標只受到一半的傷害，且不會被推離或擊倒{@condition 伏地}。"
 					]
 				}
 			],
@@ -28337,14 +28337,14 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The marid's innate spellcasting ability is Charisma (spell save DC 16, {@hit 8} to hit with spell attacks). It can innately cast the following spells, requiring no material components:"
+						"水巨靈的天生施法屬性為魅力（法術豁免DC 16，法術攻擊命中{@hit 8}）。水巨靈天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 造水/枯水術}",
 						"{@spell 偵測善惡}",
 						"{@spell 偵測魔法}",
 						"{@spell 雲霧術}",
-						"{@spell purify food and drink}"
+						"{@spell 淨化飲食}"
 					],
 					"daily": {
 						"3e": [
@@ -28353,7 +28353,7 @@
 							"{@spell 水面行走}"
 						],
 						"1e": [
-							"{@spell 召喚元素生物} (water elemental only)",
+							"{@spell 召喚元素生物}(限定{@creature 水元素})",
 							"{@spell 操控水體}",
 							"{@spell 氣化形體}",
 							"{@spell 隱形術}",
@@ -28366,22 +28366,22 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Genie Powers",
+					"name": "巨靈之力",
 					"entries": [
-						"Genies have a variety of magical capabilities, including spells. A few have even greater powers that allow them to alter their appearance or the nature of reality.",
+						"巨靈擁有各式各樣的魔法能力，包括各種法術。其中一些個體甚至擁有更強大的力量，讓它們得以改變自己的外表和現實性質。",
 						{
 							"type": "entries",
-							"name": "Disguises",
+							"name": "偽裝",
 							"entries": [
-								"Some genies can veil themselves in illusion to pass as other similarly shaped creatures. Such genies can innately cast the {@spell disguise self} spell at will, often with a longer duration than is normal for that spell. Mightier genies can cast the {@spell true polymorph} spell one to three times per day, possibly with a longer duration than normal. Such genies can change only their own shape, but a rare few can use the spell on other creatures and objects as well."
+								"某些巨靈可以將它們自己隱藏在幻象中，使它們偽裝成其他相似身型的生物。這類巨靈天生就可以隨意施放{@spell 易容術}法術，且其通常會具有比原本法術更長的持續時間。更強大的巨靈可以每日施放一到三次的{@spell 完全變形術}法術，並可能也具有比原本更長的持續時間。這類巨靈只能改變它們自己的身形，但仍有極少數的個體也能夠將該法術施放在其他生物或物體上。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Wishes",
+							"name": "許願",
 							"entries": [
-								"The genie power to grant wishes is legendary among mortals. Only the most potent genies, such as those among the nobility, can do so. A particular genie that has this power can grant one to three wishes to a creature that isn't a genie. Once a genie has granted its limit of wishes, it can't grant wishes again for some amount of time (usually 1 year). and cosmic law dictates that the same genie can expend its limit of wishes on a specific creature only once in that creature's existence.",
-								"To be granted a wish, a creature within 60 feet of the genie states a desired effect to it. The genie can then cast the {@spell wish} spell on the creature's behalf to bring about the effect. Depending on the genie's nature, the genie might try to pervert the intent of the wish by exploiting the wish's poor wording. The perversion of the wording is usually crafted to be to the genie's benefit."
+								"在俗世間，巨靈實現願望的力量已經是一件廣為人知的傳說。只有最強大的巨靈（像是巨靈貴族中的某些個體）才能夠做到。一個擁有這項能力的巨靈可以實現一個非巨靈的生物一到三個願望。一旦巨靈實現了它所能給予的所有願望，它在一段時間內將無法再實現任何願望（通常為1年）。除此之外，宇宙法則也規定了同一個巨靈只能為一個特定生物實現其所能授予願望上限的願望一次。一旦巨靈在該生物身上用盡了它的願望額度，該巨靈將再也不能讓該生物許願。",
+								"要向巨靈許願的生物必須距離巨靈60呎內，並向巨靈說出所想要的效果。巨靈可以為該生物施放{@spell 祈願術}以產生該效果。根據巨靈的本性不同，巨靈可能會試圖利用願望的糟糕措辭以曲解願望的意圖。這種意圖的曲解往往是巨靈為了自己的利益而故意為之。"
 							]
 						}
 					]
@@ -28883,7 +28883,7 @@
 			]
 		},
 		{
-			"name": "Mezzoloth",
+			"name": "麥澤羅斯魔", "ENG_name": "Mezzoloth",
 			"size": "M",
 			"type": {
 				"type": "fiend",
@@ -28942,19 +28942,19 @@
 			],
 			"senses": "盲視60呎, 黑暗視覺60呎",
 			"passive": 13,
-			"languages": "Abyssal, Infernal, telepathy 60 ft.",
+			"languages": "深淵語、煉獄語、心靈感應60呎",
 			"cr": "5",
 			"trait": [
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The mezzoloth 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"麥澤羅斯魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Magic Weapons",
+					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The mezzoloth's weapon attacks are magical."
+						"麥澤羅斯魔的武器攻擊視作魔法攻擊。"
 					]
 				}
 			],
@@ -28962,7 +28962,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The mezzoloth makes two attacks: one with its claws and one with its trident."
+						"麥澤羅斯魔進行二次攻擊：一次爪抓，一次三叉戟。"
 					]
 				},
 				{
@@ -28972,31 +28972,31 @@
 					]
 				},
 				{
-					"name": "Trident",
+					"name": "三叉戟",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 7}，觸及5呎 或 射程20/60呎，單一目標。{@h}7 ({@damage 1d6 + 4}) piercing damage, or 8 ({@damage 1d8 + 4}) piercing damage when held with two claws and used to make a melee attack."
+						"{@atk mw,rw} 命中{@hit 7}，觸及5呎 或 射程20/60呎，單一目標。{@h}7 ({@damage 1d6 + 4})穿刺傷害，或若雙爪持握以進行一次近戰攻擊時則造成 8 ({@damage 1d8 + 4})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Teleport",
+					"name": "傳送",
 					"entries": [
-						"The mezzoloth magically teleports, along with any equipment it is wearing or carrying, up to 60 feet to an unoccupied space it can see."
+						"麥澤羅斯魔用魔法將自己連同任何它所穿戴或攜帶的裝備一起傳送最多60呎距離到一處它所能看見的未被佔據空間。"
 					]
 				}
 			],
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Yugoloth Summoning",
+					"name": "召喚尤格羅斯魔",
 					"entries": [
-						"Some yugoloths have an action option that allows them to summon other yugoloths.",
+						"有些尤格羅斯魔擁有允許它們召喚出其他尤格羅斯魔的動作項。",
 						{
-							"name": "Summon Yugoloth (1/Day)",
+							"name": "召喚尤格羅斯魔 (1/日)",
 							"type": "entries",
 							"entries": [
-								"The yugoloth attempts a magical summoning.",
-								"A mezzoloth has a {@chance 30|30 percent|30% summoning chance} chance of summoning one mezzoloth.",
-								"A summoned yugoloth appears in an unoccupied space within 60 feet of its summoner, does as it pleases, and can't summon other yugoloths. The summoned yugoloth remains for 1 minute, until it or its summoner dies, or until its summoner takes a bonus action to dismiss it."
+								"該尤格羅斯魔嘗試進行一次魔法召喚。",
+								"一個麥澤羅斯魔有{@chance 30|30％|30％召喚機率}機率召喚出另一個麥澤羅斯魔。",
+								"被召喚的尤格羅斯魔將出現距離它召喚者60呎內的一處未被佔據空間，隨自己的喜好行動，且不能再召喚其它尤格羅斯魔。它會持續存在長達1分鐘，直到它或它的召喚者死亡、或直到召喚者以一個附贈動作解消它。"
 							]
 						}
 					]
@@ -29007,7 +29007,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The mezzoloth's innate spellcasting ability is Charisma (spell save DC 11). The mezzoloth can innately cast the following spells, requiring no material components:"
+						"麥澤羅斯魔的天生施法屬性為魅力（法術豁免DC 11）。麥澤羅斯魔天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"daily": {
 						"1": [
@@ -29095,7 +29095,7 @@
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Shapechanger",
+					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
 						"The mimic can use its action to polymorph into an object or back into its true, amorphous form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies."
 					]
@@ -30106,7 +30106,7 @@
 				{
 					"name": "Whirlwind of Sand (Costs 2 Actions)",
 					"entries": [
-						"The mummy lord magically transforms into a whirlwind of sand, moves up to 60 feet, and reverts to its normal form. While in whirlwind form, the mummy lord is immune to all damage, and it can't be {@condition grappled}, {@condition petrified}, knocked {@condition prone}, {@condition restrained}, or {@condition stunned}. Equipment worn or carried by the mummy lord remain in its possession."
+						"The mummy lord magically transforms into a whirlwind of sand, moves up to 60 feet, and reverts to its normal form. While in whirlwind form, the mummy lord is immune to all damage, and it can't be {@condition grappled}, {@condition petrified}, knocked {@condition 伏地}, {@condition restrained}, or {@condition stunned}. Equipment worn or carried by the mummy lord remain in its possession."
 					]
 				}
 			],
@@ -30973,7 +30973,7 @@
 					]
 				},
 				{
-					"name": "Illumination",
+					"name": "照明", "tENG_name": "Illumination",
 					"entries": [
 						"The nightmare sheds bright light in a 10-foot radius and dim light for an additional 10 feet."
 					]
@@ -31176,7 +31176,7 @@
 			]
 		},
 		{
-			"name": "Nycaloth",
+			"name": "尼卡羅斯魔", "ENG_name": "Nycaloth",
 			"size": "L",
 			"type": {
 				"type": "fiend",
@@ -31238,19 +31238,19 @@
 			],
 			"senses": "盲視60呎, 黑暗視覺60呎",
 			"passive": 14,
-			"languages": "Abyssal, Infernal, telepathy 60 ft.",
+			"languages": "深淵語、煉獄語、心靈感應60呎",
 			"cr": "9",
 			"trait": [
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The nycaloth 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"尼卡羅斯魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Magic Weapons",
+					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The nycaloth's weapon attacks are magical."
+						"尼卡羅斯魔的武器攻擊視作魔法攻擊。"
 					]
 				}
 			],
@@ -31258,13 +31258,13 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The nycaloth makes two melee attacks, or it makes one melee attack and teleports before or after the attack."
+						"尼卡羅斯魔進行二次近戰攻擊，或它進行一次近戰攻擊並在該攻擊之前或之後使用傳送。"
 					]
 				},
 				{
 					"name": "爪抓",
 					"entries": [
-						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5})劈砍傷害。 If the target is a creature, it must succeed on a DC 16 Constitution saving throw or take 5 ({@damage 2d4}) slashing damage at the start of each of its turns due to a fiendish wound. Each time the nycaloth hits the wounded target with this attack, the damage dealt by the wound increases by 5 ({@dice 2d4}). Any creature can take an action to stanch the wound with a successful DC 13 Wisdom (Medicine) check. The wound also closes if the target receives magical healing."
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5})劈砍傷害。若目標為一個生物，則它必須成功通過一次DC 16的體質豁免，否則將在它的每個回合開始時因為邪魔創傷而受到5 ({@damage 2d4})劈砍傷害。每當尼卡羅斯魔使用此攻擊命中一個帶有該創傷的生物，這個創傷造成的傷害將會增加5 ({@dice 2d4})點。任何生物都可以使用一個動作，透過成功通過一次DC 13的睿知（{@skill 醫藥}）檢定以為創傷止血。這個創傷也會在目標被魔法治療的時候癒合。"
 					]
 				},
 				{
@@ -31274,25 +31274,25 @@
 					]
 				},
 				{
-					"name": "Teleport",
+					"name": "傳送",
 					"entries": [
-						"The nycaloth magically teleports, along with any equipment it is wearing or carrying, up to 60 feet to an unoccupied space it can see."
+						"尼卡羅斯魔用魔法將自己連同任何它所穿戴或攜帶的裝備一起傳送最多60呎距離到一處它所能看見的未被佔據空間。"
 					]
 				}
 			],
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Yugoloth Summoning",
+					"name": "召喚尤格羅斯魔",
 					"entries": [
-						"Some yugoloths have an action option that allows them to summon other yugoloths.",
+						"有些尤格羅斯魔擁有允許它們召喚出其他尤格羅斯魔的動作項。",
 						{
-							"name": "Summon Yugoloth (1/Day)",
+							"name": "召喚尤格羅斯魔 (1/日)",
 							"type": "entries",
 							"entries": [
-								"The yugoloth chooses what to summon and attempts a magical summoning.",
-								"A nycaloth has a {@chance 50|50 percent|50% summoning chance} chance of summoning {@dice 1d4} {@creature mezzoloth}s or one nycaloth.",
-								"A summoned yugoloth appears in an unoccupied space within 60 feet of its summoner, does as it pleases, and can't summon other yugoloths. The summoned yugoloth remains for 1 minute, until it or its summoner dies, or until its summoner takes a bonus action to dismiss it."
+								"該尤格羅斯魔選擇要召喚什麼並嘗試進行一次魔法召喚。",
+								"一個尼卡羅斯魔有{@chance 50|50％|50％召喚機率}機率召喚出{@dice 1d4}格{@creature 麥澤羅斯魔}、或一個尼卡羅斯魔。",
+								"被召喚的尤格羅斯魔將出現距離它召喚者60呎內的一處未被佔據空間，隨自己的喜好行動，且不能再召喚其它尤格羅斯魔。它會持續存在長達1分鐘，直到它或它的召喚者死亡、或直到召喚者以一個附贈動作解消它。"
 							]
 						}
 					]
@@ -31303,7 +31303,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The nycaloth's innate spellcasting ability is Charisma. The nycaloth can innately cast the following spells, requiring no material components:"
+						"尼卡羅斯魔的天生施法屬性為魅力。尼卡羅斯魔天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 黑暗術}",
@@ -31710,7 +31710,7 @@
 				{
 					"name": "再生", "tENG_name": "Regeneration",
 					"entries": [
-						"若惡鬼擁有至少1點生命值，則它將在它的回合開始時回復10點生命值。"
+						"若惡鬼在它的回合開始時擁有至少1點生命值，則它將回復10點生命值。"
 					]
 				}
 			],
@@ -33041,9 +33041,9 @@
 					]
 				},
 				{
-					"name": "Magic Weapons",
+					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The pit fiend's weapon attacks are magical."
+						"The pit fiend's的武器攻擊視作魔法攻擊。"
 					]
 				}
 			],
@@ -33642,7 +33642,7 @@
 					]
 				},
 				{
-					"name": "Invisibility",
+					"name": "隱形", "tENG_name": "Invisibility",
 					"entries": [
 						"The poltergeist is {@condition invisible}."
 					]
@@ -34073,7 +34073,7 @@
 					"name": "啃咬",
 					"entries": [
 						"{@atk mw} 命中{@hit 14}，觸及10呎，單一目標。{@h}22 ({@damage 3d8 + 9})穿刺傷害。 If the target is a Large or smaller creature, it must succeed on a DC 19 Dexterity saving throw or be swallowed by the worm. A swallowed creature is {@condition blinded} and {@condition restrained}, it has total cover against attacks and other effects outside the worm, and it takes 21 ({@damage 6d6}) acid damage at the start of each of the worm's turns.",
-						"If the worm takes 30 damage or more on a single turn from a creature inside it, the worm must succeed on a DC 21 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition prone} in a space within 10 feet of the worm. If the worm dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse by using 20 feet of movement, exiting {@condition prone}."
+						"If the worm takes 30 damage or more on a single turn from a creature inside it, the worm must succeed on a DC 21 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition 伏地} in a space within 10 feet of the worm. If the worm dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse by using 20 feet of movement, exiting {@condition 伏地}."
 					]
 				},
 				{
@@ -34984,7 +34984,7 @@
 			]
 		},
 		{
-			"name": "Red Slaad",
+			"name": "史拉紅蟾", "ENG_name": "Red Slaad",
 			"size": "L",
 			"type": "aberration",
 			"source": "MM",
@@ -35025,19 +35025,19 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 11,
-			"languages": "Slaad, telepathy 60 ft.",
+			"languages": "史拉蟾語、心靈感應60呎",
 			"cr": "5",
 			"trait": [
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The slaad 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"史拉蟾在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Regeneration",
+					"name": "再生", "tENG_name": "Regeneration",
 					"entries": [
-						"The slaad regains 10 hit points at the start of its turn if it has at least 1 hit point."
+						"若史拉蟾在它的回合開始時擁有至少1點生命值，則它將回復10點生命值。"
 					]
 				}
 			],
@@ -35045,7 +35045,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The slaad makes three attacks: one with its bite and two with its claws."
+						"史拉蟾進行三次攻擊：一次啃咬，二次爪抓。"
 					]
 				},
 				{
@@ -35057,9 +35057,9 @@
 				{
 					"name": "爪抓",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3})穿刺傷害。 If the target is a humanoid, it must succeed on a DC 14 Constitution saving throw or be infected with a disease\u2014a minuscule slaad egg.",
-						"A humanoid host can carry only one slaad egg to term at a time. Over three months, the egg moves to the chest cavity, gestates, and forms a slaad tadpole. In the 24-hour period before giving birth, the host starts to feel unwell, its speed is halved, and it has disadvantage on attack rolls, ability checks, and saving throws. At birth, the tadpole chews its way through vital organs and out of the host's chest in 1 round, killing the host in the process.",
-						"If the disease is cured before the tadpole's emergence, the unborn slaad is disintegrated."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3})穿刺傷害。若目標為一個類人生物，則它必須成功通過一次DC 14的體質豁免，否則被「史拉蟾微型卵」疾病給感染。",
+						"一個類人生物一次只能攜帶一顆史拉蟾卵。在三個月後，這顆卵將會移動到宿主的胸腔、孕育、並形成一隻{@creature 史拉蟾蝌蚪}。在史拉蟾蝌蚪出生前24小時期間，宿主將會開始感覺不適，移動速度減半，且將在攻擊檢定、屬性檢定、和豁免檢定中具有劣勢。在出生時，史拉蟾蝌蚪將在一輪的時間內咬穿宿主的維生器官並從其胸腔離開宿主，在這個過程中殺死宿主。",
+						"若這個疾病在蝌蚪出生前被治癒，則該未出生的史拉蟾蝌蚪將被解離消散。"
 					]
 				}
 			],
@@ -35067,12 +35067,12 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Control Gem",
+					"name": "支配寶石",
 					"entries": [
-						"Implanted in the slaad's brain is a magic control gem. The slaad must obey whoever possesses the gem and is immune to being {@condition charmed} while so controlled.",
-						"Certain spells can be used to acquire the gem. If the slaad fails its saving throw against {@spell imprisonment}, the spell can transfer the gem to the spellcaster's open hand, instead of imprisoning the slaad. A {@spell wish} spell, if cast in the slaad's presence, can be worded to acquire the gem.",
-						"A {@spell 高等復原術} spell cast on the slaad destroys the gem without harming the slaad.",
-						"Someone who is proficient in Wisdom (Medicine) can remove the gem from an {@condition incapacitated} slaad. Each try requires 1 minute of uninterrupted work and a successful DC 20 Wisdom (Medicine) check. Each failed attempt deals 22 ({@damage 4d10}) psychic damage to the slaad."
+						"植入史拉蟾腦內的是一顆魔法支配寶石。該史拉蟾必須服從任何擁有該寶石的對象，且在被這個方式支配時免疫於{@condition 魅惑}。",
+						"某些法術可以被用於獲得該寶石。若史拉蟾在對抗{@spell 禁錮術}的豁免檢定中失敗，則該法術可以將寶石轉移到施法者的手上，而非將史拉蟾給禁錮。{@spell 祈願術}法術若在史拉蟾在場時被施放，則可以被許願以獲得該寶石。",
+						"施放於史拉蟾的{@spell 高等復原術}法術將會摧毀該寶石而不至於傷害到史拉蟾。",
+						"熟練於睿知（{@skill 醫藥}）的角色可以從一個{@condition 無力}的史拉蟾腦中移除該寶石。每次嘗試都需要1分鐘不被打擾的工作時間，且必須成功通過一次DC 20的睿知（{@skill 醫藥}）檢定。每次嘗試失敗都會對該史拉蟾造成22 ({@damage 4d10})精神傷害。"
 					]
 				}
 			],
@@ -35208,7 +35208,7 @@
 			"cr": "11",
 			"trait": [
 				{
-					"name": "Heated Body",
+					"name": "灼熱身軀", "tENG_name": "Heated Body",
 					"entries": [
 						"A creature that touches the remorhaz or hits it with a melee attack while within 5 feet of it takes 10 ({@damage 3d6}) fire damage."
 					]
@@ -35225,7 +35225,7 @@
 					"name": "Swallow",
 					"entries": [
 						"The remorhaz makes one bite attack against a Medium or smaller creature it is grappling. If the attack hits, that creature takes the bite's damage and is swallowed, and the grapple ends. While swallowed, the creature is {@condition blinded} and {@condition restrained}, it has total cover against attacks and other effects outside the remorhaz, and it takes 21 ({@damage 6d6}) acid damage at the start of each of the remorhaz's turns.",
-						"If the remorhaz takes 30 damage or more on a single turn from a creature inside it, the remorhaz must succeed on a DC 15 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition prone} in a space within 10 feet oft he remorhaz. If the remorhaz dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse using 15 feet of movement, exiting {@condition prone}."
+						"If the remorhaz takes 30 damage or more on a single turn from a creature inside it, the remorhaz must succeed on a DC 15 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition 伏地} in a space within 10 feet oft he remorhaz. If the remorhaz dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse using 15 feet of movement, exiting {@condition 伏地}."
 					]
 				}
 			],
@@ -35303,7 +35303,7 @@
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Regeneration",
+					"name": "再生", "tENG_name": "Regeneration",
 					"entries": [
 						"The revenant regains 10 hit points at the start of its turn. If the revenant takes fire or radiant damage, this trait doesn't function at the start of the revenant's next turn. The revenant's body is destroyed only if it starts its turn with 0 hit points and doesn't regenerate."
 					]
@@ -36275,7 +36275,7 @@
 			]
 		},
 		{
-			"name": "Salamander",
+			"name": "火蜥蜴(沙拉曼達)", "ENG_name": "Salamander",
 			"size": "L",
 			"type": "elemental",
 			"source": "MM",
@@ -36322,19 +36322,19 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 10,
-			"languages": "Ignan",
+			"languages": "火族語",
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Heated Body",
+					"name": "灼熱身軀", "tENG_name": "Heated Body",
 					"entries": [
-						"A creature that touches the salamander or hits it with a melee attack while within 5 feet of it takes 7 ({@damage 2d6}) fire damage."
+						"一個觸碰火蜥蜴或在距離它5呎內以一次近戰攻擊命中它的生物將受到7 ({@damage 2d6})火焰傷害。"
 					]
 				},
 				{
-					"name": "Heated Weapons",
+					"name": "灼熱武器", "tENG_name": "Heated Weapons",
 					"entries": [
-						"Any metal melee weapon the salamander wields deals an extra 3 ({@damage 1d6}) fire damage on a hit (included in the attack)."
+						"任何火蜥蜴所使用的金屬近戰武器都將在命中時造成額外的3 ({@damage 1d6})火焰傷害（已包含在攻擊條目）。"
 					]
 				}
 			],
@@ -36342,19 +36342,19 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The salamander makes two attacks: one with its spear and one with its tail."
+						"火蜥蜴進行二次攻擊：一次矛，一次尾擊。"
 					]
 				},
 				{
 					"name": "矛",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 7}，觸及5呎 或 射程20/60呎，單一目標。{@h}11 ({@damage 2d6 + 4}) piercing damage, or 13 ({@damage 2d8 + 4}) piercing damage if used with two hands to make a melee attack, plus 3 ({@damage 1d6}) fire damage."
+						"{@atk mw,rw} 命中{@hit 7}，觸及5呎 或 射程20/60呎，單一目標。{@h}11 ({@damage 2d6 + 4})穿刺傷害，或若雙手使用以進行一次近戰攻擊時則造成 13 ({@damage 2d8 + 4})穿刺傷害，加上 3 ({@damage 1d6})火焰傷害。"
 					]
 				},
 				{
 					"name": "尾擊",
 					"entries": [
-						"{@atk mw} 命中{@hit 7}，觸及10呎，單一目標。{@h}11 ({@damage 2d6 + 4}) bludgeoning damage plus 7 ({@damage 2d6}) fire damage, and the target is {@condition grappled} (escape DC 14). Until this grapple ends, the target is {@condition restrained}, the salamander can automatically hit the target with its tail, and the salamander can't make tail attacks against other targets."
+						"{@atk mw} 命中{@hit 7}，觸及10呎，單一目標。{@h}11 ({@damage 2d6 + 4})鈍擊傷害加 7 ({@damage 2d6})火焰傷害，且目標{@condition 被擒}(逃脫DC 14)。直到擒抱結束前，目標被{@condition 束縛}，火蜥蜴可以使用它的尾擊自動命中目標，且火蜥蜴不能對其它目標使用尾擊攻擊。"
 					]
 				}
 			],
@@ -37175,7 +37175,7 @@
 			]
 		},
 		{
-			"name": "Shambling Mound",
+			"name": "蔓生怪", "ENG_name": "Shambling Mound",
 			"size": "L",
 			"type": "plant",
 			"source": "MM",
@@ -37224,9 +37224,9 @@
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Lightning Absorption",
+					"name": "閃電吸收", "tENG_name": "Lightning Absorption",
 					"entries": [
-						"Whenever the shambling mound is subjected to lightning damage, it takes no damage and regains a number of hit points equal to the lightning damage dealt."
+						"每當蔓生怪承受閃電傷害時，它並不會受到任何傷害，反而會回復等同於所受到閃電傷害數值的生命值。"
 					]
 				}
 			],
@@ -37234,19 +37234,19 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The shambling mound makes two slam attacks. If both attacks hit a Medium or smaller target, the target is {@condition grappled} (escape DC 14), and the shambling mound uses its Engulf on it."
+						"蔓生怪進行二次猛擊攻擊。若這兩次攻擊都命中一個體型為中型或更小的目標，則目標將{@condition 被擒}(逃脫DC 14)，且蔓生怪對它使用吞沒攻擊。"
 					]
 				},
 				{
-					"name": "Slam",
+					"name": "猛擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}13 ({@damage 2d8 + 4})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Engulf",
+					"name": "吞沒",
 					"entries": [
-						"The shambling mound engulfs a Medium or smaller creature {@condition grappled} by it. The engulfed target is {@condition blinded}, {@condition restrained}, and unable to breathe, and it must succeed on a DC 14 Constitution saving throw at the start of each of the mound's turns or take 13 ({@damage 2d8 + 4})鈍擊傷害。 If the mound moves, the engulfed target moves with it. The mound can have only one creature engulfed at a time."
+						"蔓生怪吞沒一個它正擒抱的體型為中型或更小的生物。被吞沒的目標將陷入{@condition 目盲}、{@condition 束縛}狀態，無法呼吸，且必須在蔓生怪的每個回合開始時成功通過一次DC 14的體質豁免，否則受到13 ({@damage 2d8 + 4})鈍擊傷害。當蔓生怪移動時，被吞沒的目標也將跟著它移動。蔓生怪同時只能吞沒一個生物。"
 					]
 				}
 			],
@@ -37322,7 +37322,7 @@
 				{
 					"name": "再生", "tENG_name": "Regeneration",
 					"entries": [
-						"若構裝盾衛擁有至少1點生命值，則它將在它的回合開始時回復10點生命值。"
+						"若構裝盾衛在它的回合開始時擁有至少1點生命值，則它將回復10點生命值。"
 					]
 				},
 				{
@@ -37603,7 +37603,7 @@
 			]
 		},
 		{
-			"name": "Slaad Tadpole",
+			"name": "史拉蟾蝌蚪", "ENG_name": "Slaad Tadpole",
 			"size": "T",
 			"type": "aberration",
 			"source": "MM",
@@ -37639,13 +37639,13 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 7,
-			"languages": "understands Slaad but can't speak",
+			"languages": "理解史拉蟾語，但不會說",
 			"cr": "1/8",
 			"trait": [
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The slaad 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"史拉蟾蝌蚪在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
@@ -39308,7 +39308,7 @@
 					]
 				},
 				{
-					"name": "Shapechanger",
+					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
 						"The fiend can use its action to polymorph into a Small or Medium humanoid, or back into its true form. Without wings, the fiend loses its flying speed. Other than its size and speed, its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies."
 					]
@@ -40349,7 +40349,7 @@
 					"name": "Swallow",
 					"entries": [
 						"The tarrasque makes one bite attack against a Large or smaller creature it is grappling. If the attack hits, the target takes the bite's damage, the target is swallowed, and the grapple ends. While swallowed, the creature is {@condition blinded} and {@condition restrained}, it has total cover against attacks and other effects outside the tarrasque, and it takes 56 ({@damage 16d6}) acid damage at the start of each of the tarrasque's turns.",
-						"If the tarrasque takes 60 damage or more on a single turn from a creature inside it, the tarrasque must succeed on a DC 20 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition prone} in a space within 10 feet of the tarrasque. If the tarrasque dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse by using 30 feet of movement, exiting {@condition prone}."
+						"If the tarrasque takes 60 damage or more on a single turn from a creature inside it, the tarrasque must succeed on a DC 20 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition 伏地} in a space within 10 feet of the tarrasque. If the tarrasque dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse by using 30 feet of movement, exiting {@condition 伏地}."
 					]
 				}
 			],
@@ -40846,7 +40846,7 @@
 			]
 		},
 		{
-			"name": "Treant",
+			"name": "樹人", "ENG_name": "Treant",
 			"size": "H",
 			"type": "plant",
 			"source": "MM",
@@ -40883,19 +40883,19 @@
 				"fire"
 			],
 			"passive": 13,
-			"languages": "Common, Druidic, Elvish, Sylvan",
+			"languages": "通用語、德魯伊語、精靈語、木族語",
 			"cr": "9",
 			"trait": [
 				{
 					"name": "擬形", "tENG_name": "False Appearance",
 					"entries": [
-						"While the treant remains motionless, it is indistinguishable from a normal tree."
+						"當樹人保持不動，它看起來就跟普通的樹木一模一樣。"
 					]
 				},
 				{
 					"name": "攻城怪物",
 					"entries": [
-						"The treant deals double damage to objects and structures."
+						"樹人對物體和建築物造成兩倍的傷害。"
 					]
 				}
 			],
@@ -40903,25 +40903,25 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The treant makes two slam attacks."
+						"樹人進行二次猛擊攻擊。"
 					]
 				},
 				{
-					"name": "Slam",
+					"name": "猛擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}16 ({@damage 3d6 + 6})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Rock",
+					"name": "投石",
 					"entries": [
 						"{@atk rw} 命中{@hit 10}，射程60/180呎，單一目標。{@h}28 ({@damage 4d10 + 6})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Animate Trees (1/Day)",
+					"name": "活化樹木 (1/日)",
 					"entries": [
-						"The treant magically animates one or two trees it can see within 60 feet of it. These trees have the same statistics as a treant, except they have Intelligence and Charisma scores of 1, they can't speak, and they have only the Slam action option. An animated tree acts as an ally of the treant. The tree remains animate for 1 day or until it dies; until the treant dies or is more than 120 feet from the tree; or until the treant takes a bonus action to turn it back into an inanimate tree. The tree then takes root if possible."
+						"樹人用魔法活化一棵或二棵距離它60呎內且它所能看見的樹木。這些樹木將具有和樹人相同的數據，但它們的智力和魅力值為1，無法說話，且只擁有猛擊的動作項。被活化的樹木將做為樹人的盟友行動。這些樹木將維持活化長達1天，或直到它死亡、樹人死亡、或樹人距離該樹木超過120呎，或直到樹人以一個附贈動作將其變回普通樹木。接著若可能的話，這棵樹木將會原地扎根。"
 					]
 				}
 			],
@@ -41562,7 +41562,7 @@
 			]
 		},
 		{
-			"name": "Ultroloth",
+			"name": "烏特羅斯魔", "ENG_name": "Ultroloth",
 			"size": "M",
 			"type": {
 				"type": "fiend",
@@ -41626,19 +41626,19 @@
 			],
 			"senses": "真實視覺120呎",
 			"passive": 17,
-			"languages": "Abyssal, Infernal, telepathy 120 ft.",
+			"languages": "深淵語、煉獄語、心靈感應120呎",
 			"cr": "13",
 			"trait": [
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The ultroloth 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"烏特羅斯魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Magic Weapons",
+					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The ultroloth's weapon attacks are magical."
+						"烏特羅斯魔的武器攻擊視作魔法攻擊。"
 					]
 				}
 			],
@@ -41646,41 +41646,41 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The ultroloth can use its Hypnotic Gaze and makes three melee attacks."
+						"烏特羅斯魔可以使用它的催眠凝視，並進行三次近戰攻擊。"
 					]
 				},
 				{
 					"name": "長劍",
 					"entries": [
-						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3}) slashing damage, or 8 ({@damage 1d10 + 3}) slashing damage if used with two hands."
+						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3})劈砍傷害，或若以雙手使用則造成 8 ({@damage 1d10 + 3})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Hypnotic Gaze",
+					"name": "催眠凝視",
 					"entries": [
-						"The ultroloth's eyes sparkle with opalescent light as it targets one creature it can see within 30 feet of it. If the target can see the ultroloth, the target must succeed on a DC 17 Wisdom saving throw against this magic or be {@condition charmed} until the end of the ultroloth's next turn. The {@condition charmed} target is {@condition stunned}. If the target's saving throw is successful, the target is immune to the ultroloth's gaze for the next 24 hours."
+						"烏特羅斯魔的雙眼綻放出乳白色的光芒，選擇一個距離它30呎內且它所能看見的生物做為目標。若該目標可以看見烏特羅斯魔，則該目標必須成功通過一次對抗這個魔法的DC 17的睿知豁免，否則被{@condition 魅惑}直到該烏特羅斯魔的下個回合結束。這個被{@condition 魅惑}的生物同時陷入{@condition 震懾}狀態。若目標的豁免檢定成功，目標將在接下來的24小時內免疫於該烏特羅斯魔的催眠凝視。"
 					]
 				},
 				{
-					"name": "Teleport",
+					"name": "傳送",
 					"entries": [
-						"The ultroloth magically teleports, along with any equipment it is wearing or carrying, up to 60 feet to an unoccupied space it can see."
+						"烏特羅斯魔用魔法將自己連同任何它所穿戴或攜帶的裝備一起傳送最多60呎距離到一處它所能看見的未被佔據空間。"
 					]
 				}
 			],
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Yugoloth Summoning",
+					"name": "召喚尤格羅斯魔",
 					"entries": [
-						"Some yugoloths have an action option that allows them to summon other yugoloths.",
+						"有些尤格羅斯魔擁有允許它們召喚出其他尤格羅斯魔的動作項。",
 						{
-							"name": "Summon Yugoloth (1/Day)",
+							"name": "召喚尤格羅斯魔 (1/日)",
 							"type": "entries",
 							"entries": [
-								"The yugoloth chooses what to summon and attempts a magical summoning.",
-								"An ultroloth has a {@chance 50|50 percent|50% summoning chance} chance of summoning {@dice 1d6} {@creature mezzoloth}s, {@dice 1d4} {@creature nycaloth}s, or one ultroloth.",
-								"A summoned yugoloth appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other yugoloths. The summoned yugoloth remains for 1 minute, until it or its summoner dies, or until its summoner takes a bonus action to dismiss it."
+								"該尤格羅斯魔選擇要召喚什麼並嘗試進行一次魔法召喚。",
+								"一個烏特羅斯魔有{@chance 50|50％|50％召喚機率}機率召喚出{@dice 1d6}個{@creature 麥澤羅斯魔}、{@dice 1d4}個{@creature 尼卡羅斯魔}、或一個烏特羅斯魔。",
+								"被召喚的尤格羅斯魔將出現距離它召喚者60呎內的一處未被佔據空間，做為召喚者的盟友行動，且不能再召喚其它尤格羅斯魔。它會持續存在長達1分鐘，直到它或它的召喚者死亡、或直到召喚者以一個附贈動作解消它。"
 							]
 						}
 					]
@@ -41691,7 +41691,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The ultroloth's innate spellcasting ability is Charisma (spell save DC 17). The ultroloth can innately cast the following spells, requiring no material components:"
+						"烏特羅斯魔的天生施法屬性為魅力（法術豁免DC 17）。烏特羅斯魔天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 變造自身}",
@@ -41882,9 +41882,9 @@
 					]
 				},
 				{
-					"name": "Magic Weapons",
+					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The unicorn's weapon attacks are magical."
+						"The unicorn's的武器攻擊視作魔法攻擊。"
 					]
 				}
 			],
@@ -42056,7 +42056,7 @@
 			"cr": "13",
 			"trait": [
 				{
-					"name": "Shapechanger",
+					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
 						"If the vampire isn't in sunlight or running water, it can use its action to polymorph into a Tiny bat or a Medium cloud of mist, or back into its true form.",
 						"While in bat form, the vampire can't speak, its walking speed is 5 feet, and it has a flying speed of 30 feet. Its statistics, other than its size and speed, are unchanged. Anything it is wearing transforms with it, but nothing it is carrying does. It reverts to its true form if it dies.",
@@ -42077,7 +42077,7 @@
 					]
 				},
 				{
-					"name": "Regeneration",
+					"name": "再生", "tENG_name": "Regeneration",
 					"entries": [
 						"The vampire regains 20 hit points at the start of its turn if it has at least 1 hit point and isn't in sunlight or running water. If the vampire takes radiant damage or damage from holy water, this trait doesn't function at the start of the vampire's next turn."
 					]
@@ -42231,7 +42231,7 @@
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Regeneration",
+					"name": "再生", "tENG_name": "Regeneration",
 					"entries": [
 						"The vampire regains 10 hit points at the start of its turn if it has at least 1 hit point and isn't in sunlight or running water. If the vampire takes radiant damage or damage from holy water, this trait doesn't function at the start of the vampire's next turn."
 					]
@@ -42356,7 +42356,7 @@
 			"cr": "15",
 			"trait": [
 				{
-					"name": "Shapechanger",
+					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
 						"If the vampire isn't in sunlight or running water, it can use its action to polymorph into a Tiny bat or a Medium cloud of mist, or back into its true form.",
 						"While in bat form, the vampire can't speak, its walking speed is 5 feet, and it has a flying speed of 30 feet. Its statistics, other than its size and speed, are unchanged. Anything it is wearing transforms with it, but nothing it is carrying does. It reverts to its true form if it dies.",
@@ -42377,7 +42377,7 @@
 					]
 				},
 				{
-					"name": "Regeneration",
+					"name": "再生", "tENG_name": "Regeneration",
 					"entries": [
 						"The vampire regains 20 hit points at the start of its turn if it has at least 1 hit point and isn't in sunlight or running water. If the vampire takes radiant damage or damage from holy water, this trait doesn't function at the start of the vampire's next turn."
 					]
@@ -42595,7 +42595,7 @@
 			"cr": "15",
 			"trait": [
 				{
-					"name": "Shapechanger",
+					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
 						"If the vampire isn't in sunlight or running water, it can use its action to polymorph into a Tiny bat or a Medium cloud of mist, or back into its true form.",
 						"While in bat form, the vampire can't speak, its walking speed is 5 feet, and it has a flying speed of 30 feet. Its statistics, other than its size and speed, are unchanged. Anything it is wearing transforms with it, but nothing it is carrying does. It reverts to its true form if it dies.",
@@ -42616,7 +42616,7 @@
 					]
 				},
 				{
-					"name": "Regeneration",
+					"name": "再生", "tENG_name": "Regeneration",
 					"entries": [
 						"The vampire regains 20 hit points at the start of its turn if it has at least 1 hit point and isn't in sunlight or running water. If the vampire takes radiant damage or damage from holy water, this trait doesn't function at the start of the vampire's next turn."
 					]
@@ -43443,7 +43443,7 @@
 			]
 		},
 		{
-			"name": "Water Weird",
+			"name": "水詭", "ENG_name": "Water Weird",
 			"size": "L",
 			"type": "elemental",
 			"source": "MM",
@@ -43492,27 +43492,27 @@
 			],
 			"senses": "盲視30呎",
 			"passive": 10,
-			"languages": "understands Aquan but doesn't speak",
+			"languages": "理解水族語，但不會說",
 			"cr": "3",
 			"trait": [
 				{
-					"name": "Invisible in Water",
+					"name": "水中隱形", "tENG_name": "Invisible in Water",
 					"entries": [
-						"The water weird is {@condition invisible} while fully immersed in water."
+						"水詭在完全浸入水中時處於{@condition 隱形}狀態。"
 					]
 				},
 				{
-					"name": "Water Bound",
+					"name": "水體聯結", "tENG_name": "Water Bound",
 					"entries": [
-						"The water weird dies if it leaves the water to which it is bound or if that water is destroyed."
+						"若水詭離開它所聯結的水體、或該水體被摧毀，則水詭將會死亡。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Constrict",
+					"name": "絞纏",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及10呎，單一生物。{@h}13 ({@damage 3d6 + 3})鈍擊傷害。 If the target is Medium or smaller, it is {@condition grappled} (escape DC 13) and pulled 5 ft. toward the water weird. Until this grapple ends, the target is {@condition restrained}, the water weird tries to drown it, and the water weird can't constrict another target."
+						"{@atk mw} 命中{@hit 5}，觸及10呎，單一生物。{@h}13 ({@damage 3d6 + 3})鈍擊傷害。若目標為一個體型為中型或更小的生物，則它將{@condition 被擒}(逃脫DC 13)且被向水詭的位置拉近5呎距離。直到擒抱結束前，該目標被{@condition 束縛}，水詭將嘗試將它溺斃，且水詭不能絞纏另一個目標。"
 					]
 				}
 			],
@@ -44520,7 +44520,7 @@
 					]
 				},
 				{
-					"name": "Invisibility",
+					"name": "隱形", "tENG_name": "Invisibility",
 					"entries": [
 						"The will-o'-wisp and its light magically become {@condition invisible} until it attacks or uses its Consume Life, or until its concentration ends (as if concentrating on a spell)."
 					]
@@ -45064,7 +45064,7 @@
 			]
 		},
 		{
-			"name": "Xorn",
+			"name": "索爾石怪", "ENG_name": "Xorn",
 			"size": "M",
 			"type": "elemental",
 			"source": "MM",
@@ -45100,32 +45100,33 @@
 			"resist": [
 				{
 					"resist": [
-						"piercing"
+						"piercing",
+						"slashing"
 					],
-					"note": "and slashing from nonmagical attacks that aren't adamantine"
+					"preNote": "非精金武器且非魔法攻擊所造成的"
 				}
 			],
-			"senses": "黑暗視覺60呎, tremorsense 60 ft.",
+			"senses": "黑暗視覺60呎, 震顫感知60呎",
 			"passive": 16,
-			"languages": "Terran",
+			"languages": "土族語",
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Earth Glide",
+					"name": "遁地", "tENG_name": "Earth Glide",
 					"entries": [
-						"The xorn can burrow through nonmagical, unworked earth and stone. While doing so, the xorn doesn't disturb the material it moves through."
+						"索爾石怪可以移動掘穿非魔法、且未經加工的土層或岩層。當這麼做時，索爾石怪並不會擾動它所移動穿過的物質。"
 					]
 				},
 				{
-					"name": "Stone Camouflage",
+					"name": "岩地偽裝", "tENG_name": "Stone Camouflage",
 					"entries": [
-						"The xorn has advantage on Dexterity (Stealth) checks made to hide in rocky terrain."
+						"索爾石怪在岩石地形為躲藏所進行的敏捷（{@skill 隱匿}）檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Treasure Sense",
+					"name": "財寶感知", "tENG_name": "Treasure Sense",
 					"entries": [
-						"The xorn can pinpoint, by scent, the location of precious metals and stones, such as coins and gems, within 60 feet of it."
+						"索爾石怪可以透過嗅覺，準確知道距離它60呎內貴重金屬和礦石的確切位置，例如錢幣和寶石。"
 					]
 				}
 			],
@@ -45133,7 +45134,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The xorn makes three claw attacks and one bite attack."
+						"索爾石怪進行三次爪抓和一次啃咬攻擊。"
 					]
 				},
 				{
@@ -46513,7 +46514,7 @@
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Heated Body",
+					"name": "灼熱身軀", "tENG_name": "Heated Body",
 					"entries": [
 						"A creature that touches the remorhaz or hits it with a melee attack while within 5 feet of it takes 7 ({@damage 2d6}) fire damage."
 					]
@@ -46816,7 +46817,7 @@
 			"cr": "7",
 			"trait": [
 				{
-					"name": "Shapechanger",
+					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
 						"The yuan-ti can use its action to polymorph into a Large snake, or back into its true form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It doesn't change form if it dies."
 					]
@@ -46957,7 +46958,7 @@
 			"cr": "3",
 			"trait": [
 				{
-					"name": "Shapechanger",
+					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
 						"The yuan-ti can use its action to polymorph into a Medium snake, or back into its true form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It doesn't change form if it dies."
 					]
@@ -47097,7 +47098,7 @@
 			"cr": "3",
 			"trait": [
 				{
-					"name": "Shapechanger",
+					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
 						"The yuan-ti can use its action to polymorph into a Medium snake, or back into its true form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It doesn't change form if it dies."
 					]
@@ -47224,7 +47225,7 @@
 			"cr": "3",
 			"trait": [
 				{
-					"name": "Shapechanger",
+					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
 						"The yuan-ti can use its action to polymorph into a Medium snake, or back into its true form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It doesn't change form if it dies."
 					]
