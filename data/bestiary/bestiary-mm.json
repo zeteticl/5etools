@@ -838,7 +838,7 @@
 				{
 					"name": "Wing Attack (Costs 2 Actions)",
 					"entries": [
-						"The dracolich beats its tattered wings. Each creature within 10 feet of the dracolich must succeed on a DC 21 Dexterity saving throw or take 14 ({@damage 2d6 + 7}) bludgeoning damage and be knocked {@condition prone}. After beating its wings this way, the dracolich can fly up to half its flying speed."
+						"The dracolich beats its tattered wings. Each creature within 10 feet of the dracolich must succeed on a DC 21 Dexterity saving throw or take 14 ({@damage 2d6 + 7}) bludgeoning damage and be knocked {@condition 伏地}. After beating its wings this way, the dracolich can fly up to half its flying speed."
 					]
 				}
 			],
@@ -4128,7 +4128,7 @@
 								{
 									"type": "item",
 									"name": "Third Roar",
-									"entry": "Each creature makes a DC 18 Constitution saving throw. On a failed save, a creature takes 44 ({@damage 8d10}) thunder damage and is knocked {@condition prone}. On a successful save, the creature takes half as much damage and isn't knocked {@condition prone}."
+									"entry": "Each creature makes a DC 18 Constitution saving throw. On a failed save, a creature takes 44 ({@damage 8d10}) thunder damage and is knocked {@condition 伏地}. On a successful save, the creature takes half as much damage and isn't knocked {@condition 伏地}."
 								}
 							]
 						}
@@ -6017,7 +6017,7 @@
 						],
 						"2e": [
 							"{@spell 易容術}",
-							"{@spell 隱形術} (限定自身)"
+							"{@spell 隱形術}(限定自身)"
 						]
 					},
 					"ability": "wis"
@@ -6362,7 +6362,7 @@
 					"name": "Swallow",
 					"entries": [
 						"The behir makes one bite attack against a Medium or smaller target it is grappling. If the attack hits, the target is also swallowed, and the grapple ends. While swallowed, the target is {@condition blinded} and {@condition restrained}, it has total cover against attacks and other effects outside the behir, and it takes 21 ({@damage 6d6}) acid damage at the start of each of the behir's turns. A behir can have only one creature swallowed at a time.",
-						"If the behir takes 30 damage or more on a single turn from the swallowed creature, the behir must succeed on a DC 14 Constitution saving throw at the end of that turn or regurgitate the creature, which falls {@condition prone} in a space within 10 feet of the behir. If the behir dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse by using 15 ft. of movement, exiting {@condition prone}."
+						"If the behir takes 30 damage or more on a single turn from the swallowed creature, the behir must succeed on a DC 14 Constitution saving throw at the end of that turn or regurgitate the creature, which falls {@condition 伏地} in a space within 10 feet of the behir. If the behir dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse by using 15 ft. of movement, exiting {@condition 伏地}."
 					]
 				}
 			],
@@ -8150,7 +8150,7 @@
 				{
 					"name": "Deadly Leap",
 					"entries": [
-						"If the bulette jumps at least 15 ft. as part of its movement, it can then use this action to land on its feet in a space that contains one or more other creatures. Each of those creatures must succeed on a DC 16 Strength or Dexterity saving throw (target's choice) or be knocked {@condition prone} and take 14 ({@damage 3d6 + 4}) bludgeoning damage plus 14 ({@damage 3d6 + 4})劈砍傷害。 On a successful save, the creature takes only half the damage, isn't knocked {@condition prone}, and is pushed 5 ft. out of the bulette's space into an unoccupied space of the creature's choice. If no unoccupied space is within range, the creature instead falls {@condition prone} in the bulette's space."
+						"If the bulette jumps at least 15 ft. as part of its movement, it can then use this action to land on its feet in a space that contains one or more other creatures. Each of those creatures must succeed on a DC 16 Strength or Dexterity saving throw (target's choice) or be knocked {@condition 伏地} and take 14 ({@damage 3d6 + 4}) bludgeoning damage plus 14 ({@damage 3d6 + 4})劈砍傷害。 On a successful save, the creature takes only half the damage, isn't knocked {@condition 伏地}, and is pushed 5 ft. out of the bulette's space into an unoccupied space of the creature's choice. If no unoccupied space is within range, the creature instead falls {@condition 伏地} in the bulette's space."
 					]
 				}
 			],
@@ -10400,7 +10400,7 @@
 			]
 		},
 		{
-			"name": "Dao",
+			"name": "土巨靈(達奧)", "ENG_name": "Dao",
 			"size": "L",
 			"type": "elemental",
 			"source": "MM",
@@ -10441,25 +10441,25 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 11,
-			"languages": "Terran",
+			"languages": "土族語",
 			"cr": "11",
 			"trait": [
 				{
 					"name": "遁地", "tENG_name": "Earth Glide",
 					"entries": [
-						"The dao can burrow through nonmagical, unworked earth and stone. While doing so, the dao doesn't disturb the material it moves through."
+						"土巨靈可以移動掘穿非魔法、且未經加工的土層或岩層。當這麼做時，土巨靈並不會擾動它所移動穿過的物質。"
 					]
 				},
 				{
 					"name": "元素消亡", "tENG_name": "Elemental Demise",
 					"entries": [
-						"If the dao dies, its body disintegrates into crystalline powder, leaving behind only equipment the dao was wearing or carrying."
+						"若土巨靈死亡，它的身體將消散成一團結晶狀的粉塵，留下任何土巨靈所穿戴或攜帶的裝備。"
 					]
 				},
 				{
-					"name": "Sure-Footed",
+					"name": "穩妥步伐", "tENG_name": "Sure-Footed",
 					"entries": [
-						"The dao has advantage on Strength and Dexterity saving throws made against effects that would knock it {@condition prone}."
+						"土巨靈在用以對抗不被擊倒{@condition 伏地}的力量或敏捷豁免中具有優勢。"
 					]
 				}
 			],
@@ -10467,19 +10467,19 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The Dao makes two fist attacks or two maul attacks."
+						"土巨靈進行二次拳擊攻擊或二次巨鎚攻擊。"
 					]
 				},
 				{
-					"name": "Fist",
+					"name": "拳擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}15 ({@damage 2d8 + 6})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Maul",
+					"name": "巨鎚",
 					"entries": [
-						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}20 ({@damage 4d6 + 6})鈍擊傷害。 If the target is a Huge or smaller creature, it must succeed on a DC 18 Strength check or be knocked {@condition prone}."
+						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}20 ({@damage 4d6 + 6})鈍擊傷害。若目標為一個體型為巨型或更小的生物，則它必須成功通過一次DC 18的力量檢定，否則被擊倒{@condition 伏地}。"
 					]
 				}
 			],
@@ -10488,7 +10488,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The dao's innate spellcasting ability is Charisma (spell save DC 14, {@hit 6} to hit with spell attacks). It can innately cast the following spells, requiring no material components:"
+						"土巨靈的天生施法屬性為魅力（法術豁免DC 14，法術攻擊命中{@hit 6}）。土巨靈天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 偵測善惡}",
@@ -10498,11 +10498,11 @@
 					"daily": {
 						"3e": [
 							"{@spell 穿牆術}",
-							"{@spell move earth}",
+							"{@spell 地動術}",
 							"{@spell 巧舌術}"
 						],
 						"1e": [
-							"{@spell 召喚元素生物} (earth elemental only)",
+							"{@spell 召喚元素生物}(限定{@creature 土元素})",
 							"{@spell 氣化形體}",
 							"{@spell 隱形術}",
 							"{@spell 魅影殺手}",
@@ -11724,7 +11724,7 @@
 			]
 		},
 		{
-			"name": "Djinni",
+			"name": "氣巨靈(鎮尼)", "ENG_name": "Djinni",
 			"size": "L",
 			"type": "elemental",
 			"source": "MM",
@@ -11765,13 +11765,13 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 13,
-			"languages": "Auran",
+			"languages": "氣族語",
 			"cr": "11",
 			"trait": [
 				{
 					"name": "元素消亡", "tENG_name": "Elemental Demise",
 					"entries": [
-						"If the djinni dies, its body disintegrates into a warm breeze, leaving behind only equipment the djinni was wearing or carrying."
+						"若氣巨靈死亡，它的身體將消散成一陣溫暖的微風,留下任何氣巨靈所穿戴或攜帶的裝備。"
 					]
 				}
 			],
@@ -11779,20 +11779,20 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The djinni makes three scimitar attacks."
+						"氣巨靈進行三次彎刀攻擊。"
 					]
 				},
 				{
 					"name": "彎刀",
 					"entries": [
-						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5}) slashing damage plus 3 ({@damage 1d6}) lightning or thunder damage (djinni's choice)."
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5})劈砍傷害加 3 ({@damage 1d6})閃電或雷鳴傷害（由氣巨靈決定）。"
 					]
 				},
 				{
-					"name": "Create Whirlwind",
+					"name": "創造旋風",
 					"entries": [
-						"A 5-foot-radius, 30-foot-tall cylinder of swirling air magically forms on a point the djinni can see within 120 feet of it. The whirlwind lasts as long as the djinni maintains concentration (as if concentrating on a spell). Any creature but the djinni that enters the whirlwind must succeed on a DC 18 Strength saving throw or be {@condition restrained} by it. The djinni can move the whirlwind up to 60 feet as an action, and creatures {@condition restrained} by the whirlwind move with it. The whirlwind ends if the djinni loses sight of it.",
-						"A creature can use its action to free a creature {@condition restrained} by the whirlwind, including itself, by succeeding on a DC 18 Strength check. If the check succeeds, the creature is no longer {@condition restrained} and moves to the nearest space outside the whirlwind."
+						"一陣5呎半徑，30呎高的柱狀旋風將在距離氣巨靈120呎內且它所能看見的一點形成。只要氣巨靈仍維持專注，這陣旋風就會持續存在（如同專注於法術）。任何氣巨靈以外的生物在進入旋風時都必須成功通過一次DC 18的力量豁免，否則將被其{@condition 束縛}。氣巨靈能夠以一個動作移動這陣旋風最多60呎距離．且被旋風{@condition 束縛}的生物將跟著它移動。這陣旋風將在離開氣巨靈的視野範圍時終止。",
+						"一個生物可以藉由使用它的動作並成功通過一次DC 18的力量檢定以釋放一個被旋風{@condition 束縛}的生物，包括它自己。若該檢定成功，該生物將不再被{@condition 束縛}且移動到旋風範圍外一處最近的空間。"
 					]
 				}
 			],
@@ -11801,7 +11801,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The djinni's innate spellcasting ability is Charisma (spell save DC 17, {@hit 9} to hit with spell attacks). It can innately cast the following spells, requiring no material components:"
+						"氣巨靈的天生施法屬性為魅力（法術豁免DC 17，法術攻擊命中{@hit 9}）。氣巨靈天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 偵測善惡}",
@@ -11810,13 +11810,13 @@
 					],
 					"daily": {
 						"3e": [
-							"{@spell 創造飲食} (can create wine instead of water)",
+							"{@spell 創造飲食}(可以創造紅酒而非水)",
 							"{@spell 巧舌術}",
-							"{@spell wind walk}"
+							"{@spell 御風而行}"
 						],
 						"1e": [
-							"{@spell 召喚元素生物} (air elemental only)",
-							"{@spell creation}",
+							"{@spell 召喚元素生物}(限定{@creature 氣元素}})",
+							"{@spell 造物術}",
 							"{@spell 氣化形體}",
 							"{@spell 隱形術}",
 							"{@spell 強效幻影}",
@@ -13732,7 +13732,7 @@
 							"{@spell 巧舌術}"
 						],
 						"1e": [
-							"{@spell 召喚元素生物} (限定{@creature 火元素})",
+							"{@spell 召喚元素生物}(限定{@creature 火元素})",
 							"{@spell 氣化形體}",
 							"{@spell 隱形術}",
 							"{@spell 強效幻影}",
@@ -13985,7 +13985,7 @@
 			],
 			"action": [
 				{
-					"name": "Maul",
+					"name": "巨鎚",
 					"entries": [
 						"{@atk mw} 命中{@hit 17}，觸及10呎，單一目標。{@h}31 ({@damage 6d6 + 10})鈍擊傷害。 If the target is a creature, it must succeed on a DC 15 Constitution saving throw or be {@condition stunned} until the end of the empyrean's next turn."
 					]
@@ -14013,7 +14013,7 @@
 				{
 					"name": "Trembling Strike (Costs 2 Actions)",
 					"entries": [
-						"The empyrean strikes the ground with its maul, triggering an earth tremor. All other creatures on the ground within 60 feet of the empyrean must succeed on a DC 25 Strength saving throw or be knocked {@condition prone}."
+						"The empyrean strikes the ground with its maul, triggering an earth tremor. All other creatures on the ground within 60 feet of the empyrean must succeed on a DC 25 Strength saving throw or be knocked {@condition 伏地}."
 					]
 				}
 			],
@@ -18912,7 +18912,7 @@
 				{
 					"name": "Bites",
 					"entries": [
-						"{@atk mw} 命中{@hit 2}，觸及5呎，單一生物。{@h}17 ({@damage 5d6})穿刺傷害。 If the target is Medium or smaller, it must succeed on a DC 10 Strength saving throw or be knocked {@condition prone}. If the target is killed by this damage, it is absorbed into the mouther."
+						"{@atk mw} 命中{@hit 2}，觸及5呎，單一生物。{@h}17 ({@damage 5d6})穿刺傷害。 If the target is Medium or smaller, it must succeed on a DC 10 Strength saving throw or be knocked {@condition 伏地}. If the target is killed by this damage, it is absorbed into the mouther."
 					]
 				},
 				{
@@ -22649,7 +22649,7 @@
 							"name": "輾壓",
 							"type": "entries",
 							"entries": [
-								"{@atk mw} 命中{@hit 8}，觸及5呎，單一體型為中型或更小的生物。{@h}26 ({@damage 6d6 + 5})鈍擊傷害，巨人在目標的空間內以{@condition prone}狀態著地，且目標{@condition 被擒}(逃脫DC 15)。直到擒抱結束前，目標處於{@condition 伏地}。這個擒抱會在山丘巨人起身時提早結束。"
+								"{@atk mw} 命中{@hit 8}，觸及5呎，單一體型為中型或更小的生物。{@h}26 ({@damage 6d6 + 5})鈍擊傷害，巨人在目標的空間內以{@condition 伏地}狀態著地，且目標{@condition 被擒}(逃脫DC 15)。直到擒抱結束前，目標處於{@condition 伏地}。這個擒抱會在山丘巨人起身時提早結束。"
 							]
 						}
 					],
@@ -25060,7 +25060,7 @@
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 17}，觸及5呎，單一目標。{@h}23 ({@damage 3d8 + 10})穿刺傷害。 If the target is a Large or smaller creature {@condition grappled} by the kraken, that creature is swallowed, and the grapple ends. While swallowed, the creature is {@condition blinded} and {@condition restrained}, it has total cover against attacks and other effects outside the kraken, and it takes 42 ({@damage 12d6}) acid damage at the start of each of the kraken's turns. If the kraken takes 50 damage or more on a single turn from a creature inside it, the kraken must succeed on a DC 25 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition prone} in a space within 10 feet of the kraken. If the kraken dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse using 15 feet of movement, exiting {@condition prone}."
+						"{@atk mw} 命中{@hit 17}，觸及5呎，單一目標。{@h}23 ({@damage 3d8 + 10})穿刺傷害。 If the target is a Large or smaller creature {@condition grappled} by the kraken, that creature is swallowed, and the grapple ends. While swallowed, the creature is {@condition blinded} and {@condition restrained}, it has total cover against attacks and other effects outside the kraken, and it takes 42 ({@damage 12d6}) acid damage at the start of each of the kraken's turns. If the kraken takes 50 damage or more on a single turn from a creature inside it, the kraken must succeed on a DC 25 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition 伏地} in a space within 10 feet of the kraken. If the kraken dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse using 15 feet of movement, exiting {@condition 伏地}."
 					]
 				},
 				{
@@ -25072,7 +25072,7 @@
 				{
 					"name": "Fling",
 					"entries": [
-						"One Large or smaller object held or creature {@condition grappled} by the kraken is thrown up to 60 feet in a random direction and knocked {@condition prone}. If a thrown target strikes a solid surface, the target takes 3 ({@damage 1d6}) bludgeoning damage for every 10 feet it was thrown. If the target is thrown at another creature, that creature must succeed on a DC 18 Dexterity saving throw or take the same damage and be knocked {@condition prone}."
+						"One Large or smaller object held or creature {@condition grappled} by the kraken is thrown up to 60 feet in a random direction and knocked {@condition 伏地}. If a thrown target strikes a solid surface, the target takes 3 ({@damage 1d6}) bludgeoning damage for every 10 feet it was thrown. If the target is thrown at another creature, that creature must succeed on a DC 18 Dexterity saving throw or take the same damage and be knocked {@condition 伏地}."
 					]
 				},
 				{
@@ -26644,7 +26644,7 @@
 						"3": {
 							"slots": 2,
 							"spells": [
-								"{@spell 召喚動物} (限定爬蟲類)",
+								"{@spell 召喚動物}(限定爬蟲類)",
 								"{@spell 植物滋長}"
 							]
 						}
@@ -27297,7 +27297,7 @@
 							"{@spell 水面行走}"
 						],
 						"1e": [
-							"{@spell 召喚元素生物} (限定{@creature 水元素})",
+							"{@spell 召喚元素生物}(限定{@creature 水元素})",
 							"{@spell 操控水體}",
 							"{@spell 氣化形體}",
 							"{@spell 隱形術}",
@@ -28977,7 +28977,7 @@
 				{
 					"name": "Whirlwind of Sand (Costs 2 Actions)",
 					"entries": [
-						"The mummy lord magically transforms into a whirlwind of sand, moves up to 60 feet, and reverts to its normal form. While in whirlwind form, the mummy lord is immune to all damage, and it can't be {@condition grappled}, {@condition petrified}, knocked {@condition prone}, {@condition restrained}, or {@condition stunned}. Equipment worn or carried by the mummy lord remain in its possession."
+						"The mummy lord magically transforms into a whirlwind of sand, moves up to 60 feet, and reverts to its normal form. While in whirlwind form, the mummy lord is immune to all damage, and it can't be {@condition grappled}, {@condition petrified}, knocked {@condition 伏地}, {@condition restrained}, or {@condition stunned}. Equipment worn or carried by the mummy lord remain in its possession."
 					]
 				}
 			],
@@ -32808,7 +32808,7 @@
 					"name": "啃咬",
 					"entries": [
 						"{@atk mw} 命中{@hit 14}，觸及10呎，單一目標。{@h}22 ({@damage 3d8 + 9})穿刺傷害。 If the target is a Large or smaller creature, it must succeed on a DC 19 Dexterity saving throw or be swallowed by the worm. A swallowed creature is {@condition blinded} and {@condition restrained}, it has total cover against attacks and other effects outside the worm, and it takes 21 ({@damage 6d6}) acid damage at the start of each of the worm's turns.",
-						"If the worm takes 30 damage or more on a single turn from a creature inside it, the worm must succeed on a DC 21 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition prone} in a space within 10 feet of the worm. If the worm dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse by using 20 feet of movement, exiting {@condition prone}."
+						"If the worm takes 30 damage or more on a single turn from a creature inside it, the worm must succeed on a DC 21 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition 伏地} in a space within 10 feet of the worm. If the worm dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse by using 20 feet of movement, exiting {@condition 伏地}."
 					]
 				},
 				{
@@ -33924,7 +33924,7 @@
 					"name": "Swallow",
 					"entries": [
 						"The remorhaz makes one bite attack against a Medium or smaller creature it is grappling. If the attack hits, that creature takes the bite's damage and is swallowed, and the grapple ends. While swallowed, the creature is {@condition blinded} and {@condition restrained}, it has total cover against attacks and other effects outside the remorhaz, and it takes 21 ({@damage 6d6}) acid damage at the start of each of the remorhaz's turns.",
-						"If the remorhaz takes 30 damage or more on a single turn from a creature inside it, the remorhaz must succeed on a DC 15 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition prone} in a space within 10 feet oft he remorhaz. If the remorhaz dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse using 15 feet of movement, exiting {@condition prone}."
+						"If the remorhaz takes 30 damage or more on a single turn from a creature inside it, the remorhaz must succeed on a DC 15 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition 伏地} in a space within 10 feet oft he remorhaz. If the remorhaz dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse using 15 feet of movement, exiting {@condition 伏地}."
 					]
 				}
 			],
@@ -38869,7 +38869,7 @@
 					"name": "Swallow",
 					"entries": [
 						"The tarrasque makes one bite attack against a Large or smaller creature it is grappling. If the attack hits, the target takes the bite's damage, the target is swallowed, and the grapple ends. While swallowed, the creature is {@condition blinded} and {@condition restrained}, it has total cover against attacks and other effects outside the tarrasque, and it takes 56 ({@damage 16d6}) acid damage at the start of each of the tarrasque's turns.",
-						"If the tarrasque takes 60 damage or more on a single turn from a creature inside it, the tarrasque must succeed on a DC 20 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition prone} in a space within 10 feet of the tarrasque. If the tarrasque dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse by using 30 feet of movement, exiting {@condition prone}."
+						"If the tarrasque takes 60 damage or more on a single turn from a creature inside it, the tarrasque must succeed on a DC 20 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition 伏地} in a space within 10 feet of the tarrasque. If the tarrasque dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse by using 30 feet of movement, exiting {@condition 伏地}."
 					]
 				}
 			],
