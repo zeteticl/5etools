@@ -799,7 +799,7 @@ class FilterBox {
 				(mode) => {
 					if (parent) {
 						this.headers[filter.header].$header.find(`.group-comb-toggle`).each((i, e) => {
-							$(e).text(`(group ${mode.toUpperCase()})`);
+							$(e).text(`(群組 ${mode.toUpperCase()})`);
 						});
 					}
 				}

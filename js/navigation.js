@@ -107,11 +107,11 @@ class NavBar {
 
 		// addLi(navBar, "donate.html", "捐獻");
 
-		const ulSettings = addDropdown(navBar, "Settings");
+		const ulSettings = addDropdown(navBar, "設置");
 		addButton(
 			ulSettings,
 			{
-				html: styleSwitcher.getActiveStyleSheet() === StyleSwitcher.STYLE_DAY ? "Night Mode" : "Day Mode",
+				html: styleSwitcher.getActiveStyleSheet() === StyleSwitcher.STYLE_DAY ? "夜晚模式" : "白晝模式",
 				click: (evt) => {
 					evt.preventDefault();
 					styleSwitcher.toggleActiveStyleSheet();
@@ -122,7 +122,7 @@ class NavBar {
 		addButton(
 			ulSettings,
 			{
-				html: "Save State to File",
+				html: "儲存狀態至檔案",
 				click: async (evt) => {
 					evt.preventDefault();
 					const sync = StorageUtil.syncGetDump();
@@ -136,7 +136,7 @@ class NavBar {
 		addButton(
 			ulSettings,
 			{
-				html: "Load State from File",
+				html: "從檔案讀取狀態",
 				click: async (evt) => {
 					evt.preventDefault();
 					const dump = await DataUtil.pUserUpload();

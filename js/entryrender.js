@@ -2987,7 +2987,8 @@ EntryRenderer.monster = {
 	},
 
 	getRenderedSenses (senses) {
-		return EntryRenderer.getDefaultRenderer().renderEntry(senses.replace(/(^| )(震顫感知|盲視|真實視覺|黑暗視覺)( |$)/gi, (...m) => `${m[1]}{@sense ${m[2]}}${m[3]}`));
+		console.log("OAO")
+		return EntryRenderer.getDefaultRenderer().renderEntry(senses.replace(/(^|)(震顫感知|盲視|真實視覺|黑暗視覺)(\d|$)/gi, (...m) => `${m[1]}{@sense ${m[2]}}${m[3]}`));
 	}
 };
 

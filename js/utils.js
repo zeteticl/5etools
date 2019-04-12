@@ -1350,7 +1350,7 @@ Parser.alignmentListToFull = function (alignList) {
 		if (alignList.length === 1) return Parser.alignmentAbvToFull(alignList[0]);
 		// a pair of abv's, e.g. "L" "G"
 		if (alignList.length === 2) {
-			return alignList.map(a => Parser.alignmentAbvToFull(a)).join(" ");
+			return alignList.map(a => Parser.alignmentAbvToFull(a)).join("");
 		}
 		if (alignList.length === 3) {
 			if (alignList.includes("NX") && alignList.includes("NY") && alignList.includes("N")) return "任意中立陣營";
@@ -6345,11 +6345,11 @@ Parser.raceKeyToDisplay["elf (zendikar)"]	= "精靈(贊迪卡)";
 
 //Subrace
 Parser.subraceKeyToDisplay = {};
-Parser.subraceKeyToDisplay["earth"] = "土";
+Parser.subraceKeyToDisplay["earth"] = "土"; // 元素裔
 Parser.subraceKeyToDisplay["air"]   = "氣";
 Parser.subraceKeyToDisplay["water"] = "水";
 Parser.subraceKeyToDisplay["fire"]  = "火";
-Parser.subraceKeyToDisplay["drow"]  = "卓爾";
+Parser.subraceKeyToDisplay["drow"]  = "卓爾"; // 精靈
 Parser.subraceKeyToDisplay["eladrin"]= "雅靈";
 Parser.subraceKeyToDisplay["high"]  = "高等";
 Parser.subraceKeyToDisplay["wood"]  = "木";
@@ -6360,20 +6360,43 @@ Parser.subraceKeyToDisplay["shadar-kai"]= "影靈";
 Parser.subraceKeyToDisplay["aereni"]    = "艾瑞尼";
 Parser.subraceKeyToDisplay["Valenar"]   = "維歐諾爾";
 Parser.subraceKeyToDisplay["mark of shadow"]= "影龍紋";
-
-Parser.subraceKeyToDisplay["forest"]= "林";
+Parser.subraceKeyToDisplay["mul daya nation"]  = "慕達雅族"; // 精靈贊迪卡
+Parser.subraceKeyToDisplay["forest"]= "林"; // 地侏
 Parser.subraceKeyToDisplay["rock"]  = "岩";
 Parser.subraceKeyToDisplay["deep"]  = "地底";
+Parser.subraceKeyToDisplay["fallen"]= "墮落"; // 阿斯莫
+Parser.subraceKeyToDisplay["scourge"]= "天譴";
+Parser.subraceKeyToDisplay["protector"]= "守護者";
+Parser.subraceKeyToDisplay["duergar"]= "灰"; // 矮人
+Parser.subraceKeyToDisplay["githyanki"]= "吉斯洋基"; // 吉斯人
+Parser.subraceKeyToDisplay["githzerai"]= "吉斯澤萊";
+Parser.subraceKeyToDisplay["drow descent"]= "卓爾血統"; // 半精靈
+Parser.subraceKeyToDisplay["variant"]= "變體"; // 提夫林
+Parser.subraceKeyToDisplay["asmodeus"]= "阿斯莫德";
+Parser.subraceKeyToDisplay["levistus"]= "萊維斯圖斯";
+Parser.subraceKeyToDisplay["fierna"]= "菲爾娜";
+Parser.subraceKeyToDisplay["mammon"]= "瑪門";
+Parser.subraceKeyToDisplay["dispater"]= "狄斯帕特";
+Parser.subraceKeyToDisplay["mephistopheles"]= "梅菲斯托費勒斯";
+Parser.subraceKeyToDisplay["glasya"]= "格萊希亞";
+Parser.subraceKeyToDisplay["zariel"]= "扎瑞爾";
+Parser.subraceKeyToDisplay["baalzebul"]= "巴力西卜";
+Parser.subraceKeyToDisplay[""]= "";
 
 Parser.RaceToDisplay = function(race){
-	race = Parser.translateKeyInMapToDisplay(Parser.raceKeyToDisplay, race);
-	let r_match = race.match(/([^()]*)( ?\((.*)\))?/);
-	if(r_match && r_match[2]){
-		let main_race = Parser.translateKeyInMapToDisplay(Parser.raceKeyToDisplay, r_match[1].replace(/ *$/,""));
-		let sub_race  = Parser.translateKeyInMapToDisplay(Parser.subraceKeyToDisplay, r_match[3]);
-		return main_race + "(" + sub_race + ")";
+	let trans_race = Parser.translateKeyInMapToDisplay(Parser.raceKeyToDisplay, race);
+	if(race===trans_race){
+		let r_match = race.match(/(.*)( ?\(([^(]*)\))$/);
+		if(r_match && r_match[2]){
+			let main_race = Parser.translateKeyInMapToDisplay(Parser.raceKeyToDisplay, r_match[1].replace(/ *$/,""));
+			let sub_race  = Parser.translateKeyInMapToDisplay(Parser.subraceKeyToDisplay, r_match[3]);
+			return main_race + "(" + sub_race + ")";
+		}
+		return race;
 	}
-	return race;
+	else{
+		return trans_race;
+	}
 }
 Parser.SubraceToDisplay = function(sub_race){
 	return Parser.translateKeyInMapToDisplay(Parser.subraceKeyToDisplay, sub_race);
@@ -6569,9 +6592,6 @@ Parser.keyToDisplay["cube"]= "立方";
 Parser.keyToDisplay["cone"]= "錐形";
 Parser.keyToDisplay["cylinder"]= "圓柱";
 Parser.keyToDisplay["radius"]= "半徑";
-
-
-
 
 //Spell
 Parser.keyToDisplay["action"] = "動作";
