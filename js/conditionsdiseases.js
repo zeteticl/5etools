@@ -1,7 +1,7 @@
 "use strict";
 
 const JSON_URL = "data/conditionsdiseases.json";
-const entryRenderer = EntryRenderer.getDefaultRenderer();
+const entryRenderer = Renderer.get();
 
 window.onload = function load () {
 	ExcludeUtil.pInitialise(); // don't await, as this is only used for search
@@ -55,7 +55,7 @@ async function onJsonLoad (data) {
 	BrewUtil.pAddBrewData()
 		.then(handleBrew)
 		.then(() => BrewUtil.bind({list}))
-		.then(BrewUtil.pAddLocalBrewData)
+		.then(() => BrewUtil.pAddLocalBrewData())
 		.catch(BrewUtil.pPurgeBrew)
 		.then(async () => {
 			BrewUtil.makeBrewButton("manage-brew");
@@ -121,7 +121,7 @@ function addConditions (data) {
 		primaryLists: [list]
 	});
 	ListUtil.bindPinButton();
-	EntryRenderer.hover.bindPopoutButton(conditionList);
+	Renderer.hover.bindPopoutButton(conditionList);
 	UrlUtil.bindLinkExportButton(filterBox);
 	ListUtil.bindDownloadButton();
 	ListUtil.bindUploadButton();
@@ -158,14 +158,14 @@ function loadhash (id) {
 	const it = conditionList[id];
 	const entryList = {type: "entries", entries: it.entries};
 	const textStack = [];
-	entryRenderer.recursiveEntryRender(entryList, textStack);
+	entryRenderer.recursiveRender(entryList, textStack);
 	$content.append(`
-		${EntryRenderer.utils.getBorderTr()}
-		${EntryRenderer.utils.getNameTr(it)}
+		${Renderer.utils.getBorderTr()}
+		${Renderer.utils.getNameTr(it)}
 		<tr><td class="divider" colspan="6"><div></div></td></tr>
 		<tr class='text'><td colspan='6'>${textStack.join("")}</td></tr>
-		${EntryRenderer.utils.getPageTr(it)}
-		${EntryRenderer.utils.getBorderTr()}
+		${Renderer.utils.getPageTr(it)}
+		${Renderer.utils.getBorderTr()}
 	`);
 
 	ListUtil.updateSelected();

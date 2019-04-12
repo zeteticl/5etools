@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-06/schema#",
-	"version": "1.9.1",
+	"version": "1.9.2",
 	"title": "Bestiary Schema",
 	"id": "/Bestiary",
 	"type": "object",
@@ -735,9 +735,6 @@
 					}
 				]
 			},
-			"description": {
-				"type": "string"
-			},
 			"vulnerable": {
 				"type": "array",
 				"items": {
@@ -777,9 +774,6 @@
 							}
 						},
 						"constant": {
-							"$ref": "#/definitions/arrayOfString"
-						},
-						"headerWill": {
 							"$ref": "#/definitions/arrayOfString"
 						},
 						"will": {
@@ -1062,7 +1056,7 @@
 			"isNamedCreature": {
 				"type": "boolean"
 			},
-			"isNPC": {
+			"isNpc": {
 				"description": "Used to flag quest-specific NPCs",
 				"type": "boolean"
 			},
@@ -1176,6 +1170,13 @@
 				"items": {
 					"type": "string",
 					"enum": ["I", "P", "S"]
+				}
+			},
+			"damageTags": {
+				"type": "array",
+				"items": {
+					"type": "string",
+					"enum": ["A", "B", "C", "F", "O", "L", "N", "P", "I", "Y", "R", "S", "T"]
 				}
 			},
 			"footer": {

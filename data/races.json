@@ -927,7 +927,7 @@
 			]
 		},
 		{
-			"name": "精靈 (贊迪卡)", "ENG_name": "Elf (Zendikar)",
+			"name": "精靈(贊迪卡)", "ENG_name": "Elf (Zendikar)",
 			"speed": 30,
 			"source": "PSZ",
 			"page": 18,
@@ -1094,7 +1094,7 @@
 			]
 		},
 		{
-			"name": "精靈 (卡拉德許)", "ENG_name": "Elf (Kaladesh)",
+			"name": "精靈(卡拉德許)", "ENG_name": "Elf (Kaladesh)",
 			"speed": 30,
 			"source": "PSK",
 			"page": 20,
@@ -4377,7 +4377,7 @@
 				{
 					"name": "軍事訓練",
 					"entries": [
-						"你熟練於二種你所選擇的軍用武器和輕甲。"
+						"你熟練於二種你所選擇的{@filter 軍用武器|items|source=phb|category=basic|type=martial weapon}和輕甲。"
 					],
 					"type": "entries"
 				},
@@ -5284,6 +5284,13 @@
 					]
 				},
 				{
+					"type": "entries",
+					"name": "Alignment",
+					"entries": [
+						"Most merfolk are neutral, though merfolk of the Emeria and Cosi creeds have chaotic leanings."
+					]
+				},
+				{
 					"name": "Amphibious",
 					"entries": [
 						"You can breathe air and water."
@@ -5459,10 +5466,10 @@
 			],
 			"subraces": [
 				{
-					"name": "Grogtag Tribe",
+					"name": "Grotag Tribe",
 					"entries": [
 						{
-							"name": "Grogtag Tamer",
+							"name": "Grotag Tamer",
 							"entries": [
 								"You have proficiency in the {@skill Animal Handling} skill."
 							],
@@ -5693,7 +5700,7 @@
 					"name": "陣營",
 					"type": "entries",
 					"entries": [
-						"As a rule, aetherborn are driven by hedonism and self-interest, making them neutral at best"
+						"As a rule, aetherborn are driven by hedonism and self-interest, making them neutral at best and thoroughly evil at worst. Neutral aetherborn might devote much of their time (and wealth) to parties and social activity, while evil aetherborn are usually involved in the criminal underworld."
 					]
 				},
 				{
@@ -6330,6 +6337,16 @@
 					"page": 6,
 					"entries": [
 						{
+							"name": "年齡",
+							"type": "entries",
+							"entries": [
+								"Like humans, aven reach adulthood in their late teens and can live into their 80s."
+							],
+							"data": {
+								"overwrite": "年齡"
+							}
+						},
+						{
 							"name": "陣營",
 							"type": "entries",
 							"entries": [
@@ -6397,7 +6414,7 @@
 					"type": "entries"
 				},
 				{
-					"name": "Khenra Twins.",
+					"name": "Khenra Twins",
 					"entries": [
 						"If your twin is alive and you can see your twin, whenever you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll. If your twin is dead (or if you were born without a twin), you can't be {@condition frightened}."
 					],
@@ -7899,7 +7916,7 @@
 				{
 					"name": "Languages",
 					"entries": [
-						"Languages. You can speak, read, and write Common and Sylvan."
+						"You can speak, read, and write Common and Sylvan."
 					],
 					"type": "entries"
 				}
@@ -8950,13 +8967,6 @@
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Graceful",
-							"entries": [
-								"You have proficiency with the {@skill Acrobatics} skill."
-							]
-						},
-						{
-							"type": "entries",
 							"name": "Swift",
 							"entries": [
 								"Your walking speed increases by 5 feet."
@@ -9183,7 +9193,7 @@
 					"type": "entries",
 					"name": "Languages",
 					"entries": [
-						"You can speak, read, and write Common amd Elvish."
+						"You can speak, read, and write Common and Elvish."
 					]
 				}
 			],

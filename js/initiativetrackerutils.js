@@ -97,7 +97,7 @@ class InitiativeTrackerUtil {
 				$cond.on("mouseover", (evt) => {
 					if (evt.shiftKey) {
 						evt.shiftKey = false;
-						EntryRenderer.hover.mouseOver(
+						Renderer.hover.mouseOver(
 							evt,
 							$cond[0],
 							UrlUtil.PG_CONDITIONS_DISEASES,
@@ -338,7 +338,7 @@ class InitiativeTrackerPlayerMessageHandler {
 		this._$head.append(`
 			<div class="initp__h_name${this._isCompact ? " initp__h_name--compact" : ""}">Creature/Status</div>
 			<div class="initp__h_hp${this._isCompact ? " initp__h_hp--compact" : ""}">Health</div>
-			${(data.c || []).map(statCol => `<div class="initp_h_stat">${statCol.a || ""}</div>`).join("")}
+			${(data.c || []).map(statCol => `<div class="initp__h_stat">${statCol.a || ""}</div>`).join("")}
 			<div class="initp__h_score${this._isCompact ? " initp__h_score--compact" : ""}">${this._isCompact ? "#" : "Init."}</div>
 		`);
 
@@ -381,7 +381,9 @@ class InitiativeTrackerPlayerMessageHandler {
 				<div class="initp__r_hp">
 					<div class="initp__r_hp_pill" style="background: ${hpColor};">${hpText}</div>
 				</div>
-				${(rowData.k || []).map(statVal => `<div class="initp_r_stat">${statVal.v}</div>`).join("")}
+				${(rowData.k || []).map(statVal => `<div class="initp__r_stat flex-vh-center">
+					${statVal.v === true ? `<span class="text-success glyphicon glyphicon-ok"/>` : statVal.v === false ? `<span class="text-danger glyphicon glyphicon-remove"/>` : statVal.v}
+				</div>`).join("")}
 				<div class="initp__r_score${this._isCompact ? " initp__r_score--compact" : ""}">${rowData.i}</div>
 			</div>
 		`).swap({$conds});

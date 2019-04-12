@@ -600,7 +600,7 @@
 					"type": "entries",
 					"name": "祝聖水",
 					"entries": [
-						"你觸碰一瓶水並將它變成聖水。"
+						"你觸碰一瓶水並將它變成{@item 聖水(扁瓶裝)|phb|聖水}。"
 					]
 				},
 				{
@@ -621,7 +621,7 @@
 					"type": "entries",
 					"name": "葬禮",
 					"entries": [
-						"你觸碰一具屍體，且在接下來的7天中，該目標不會因為任何弱於祈願術的效果變成不死生物"
+						"你觸碰一具屍體，且在接下來的7天中，該目標不會因為任何弱於{@spell 祈願術}的效果變成不死生物"
 					]
 				},
 				{
@@ -775,6 +775,12 @@
 			"page": 151,
 			"otherSources": [
 				{
+					"source": "GGR"
+				}
+			],
+			"backgrounds": [
+				{
+					"name": "Izzet Engineer",
 					"source": "GGR"
 				}
 			],
@@ -3854,9 +3860,6 @@
 				"透過每7天在相同地點施展此法術一整年，將會使這座堡壘永久存在。"
 			],
 			"page": 161,
-			"damageInflict": [
-				"psychic"
-			],
 			"damageImmune": [
 				"poison",
 				"psychic"
