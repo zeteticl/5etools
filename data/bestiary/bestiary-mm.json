@@ -5736,7 +5736,7 @@
 					]
 				},
 				{
-					"name": "Incorporeal Movement",
+					"name": "虛體移動", "tENG_name": "Incorporeal Movement",
 					"entries": [
 						"The banshee can move through other creatures and objects as if they were difficult terrain. She takes 5 ({@damage 1d10}) force damage if she ends her turn inside an object."
 					]
@@ -16794,7 +16794,7 @@
 					]
 				},
 				{
-					"name": "Incorporeal Movement",
+					"name": "虛體移動", "tENG_name": "Incorporeal Movement",
 					"entries": [
 						"The ghost can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
 					]
@@ -25661,7 +25661,7 @@
 			]
 		},
 		{
-			"name": "Lamia",
+			"name": "人身獅(拉米亞)", "ENG_name": "Lamia",
 			"size": "L",
 			"type": "monstrosity",
 			"source": "MM",
@@ -25697,13 +25697,13 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 12,
-			"languages": "Abyssal, Common",
+			"languages": "深淵語、通用語",
 			"cr": "4",
 			"action": [
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The lamia makes two attacks: one with its claws and one with its dagger or Intoxicating Touch."
+						"人身獅進行二次攻擊：一次爪抓，一次匕首或沉醉之觸。"
 					]
 				},
 				{
@@ -25719,9 +25719,9 @@
 					]
 				},
 				{
-					"name": "Intoxicating Touch",
+					"name": "沉醉之觸",
 					"entries": [
-						"{@atk ms} 命中{@hit 5}，觸及5呎，單一生物。{@h}The target is magically cursed for 1 hour. Until the curse ends, the target has disadvantage on Wisdom saving throws and all ability checks."
+						"{@atk ms} 命中{@hit 5}，觸及5呎，單一生物。{@h}目標將被魔法詛咒長達1小時。直到詛咒結束前，目標將在睿知豁免和所有屬性檢定中具有劣勢。"
 					]
 				}
 			],
@@ -25730,10 +25730,10 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The lamia's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast the following spells, requiring no material components."
+						"人身獅的天生施法屬性為魅力（法術豁免DC 13）。人身天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
-						"{@spell 易容術} (any humanoid form)",
+						"{@spell 易容術}(任意類人生物型態)",
 						"{@spell 強效幻影}"
 					],
 					"daily": {
@@ -32317,7 +32317,7 @@
 			]
 		},
 		{
-			"name": "Poltergeist",
+			"name": "作祟幽靈", "ENG_name": "Poltergeist",
 			"size": "M",
 			"type": "undead",
 			"source": "MM",
@@ -32378,41 +32378,41 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 10,
-			"languages": "understands all languages it knew in life but can't speak",
+			"languages": "理解所有它生前掌握的語言，但不會說",
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Incorporeal Movement",
+					"name": "虛體移動", "tENG_name": "Incorporeal Movement",
 					"entries": [
-						"The poltergeist can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
+						"作祟幽靈可以把其它生物和物體視作困難地形移動穿過它們。若它在一個物體內結束它的回合，則它將受到5 ({@damage 1d10})力場傷害。"
 					]
 				},
 				{
 					"name": "日光敏感",
 					"entries": [
-						"當處於日光照耀下時，poltergeist在攻擊檢定，以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
+						"當處於日光照耀下時，作祟幽靈在攻擊檢定，以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
 					]
 				},
 				{
 					"name": "隱形", "tENG_name": "Invisibility",
 					"entries": [
-						"The poltergeist is {@condition invisible}."
+						"作祟幽靈處於{@condition 隱形}狀態。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Forceful Slam",
+					"name": "斥力猛擊",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一生物。{@h}10 ({@damage 3d6}) force damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一生物。{@h}10 ({@damage 3d6})力場傷害。"
 					]
 				},
 				{
-					"name": "Telekinetic Thrust",
+					"name": "念力推擲",
 					"entries": [
-						"The poltergeist targets a creature or unattended object within 30 feet of it. A creature must be Medium or smaller to be affected by this magic, and an object can weigh up to 150 pounds.",
-						"If the target is a creature, the poltergeist makes a Charisma check contested by the target's Strength check. If the poltergeist wins the contest, the poltergeist hurls the target up to 30 feet in any direction, including upward. If the target then comes into contact with a hard surface or heavy object, the target takes {@dice 1d6} damage per 10 feet moved.",
-						"If the target is an object that isn't being worn or carried, the poltergeist hurls it up to 30 feet in any direction. The poltergeist can use the object as a ranged weapon, attacking one creature along the object's path ({@hit 4} to hit) and dealing 5 ({@damage 2d4}) bludgeoning damage on a hit."
+						"作祟幽靈選擇一個距離它30呎內的生物或未固定物體作為目標。這個生物的體型必須為中型或更小才能被此魔法影響，若為物體的話則重量最多為150磅。",
+						"若目標為一個生物，則作祟幽靈將進行一次魅力檢定以對抗目標的力量檢定。若作祟幽靈在該對抗中勝出，則作祟幽靈可以將目標向任意方向投出最多30呎距離，包括向上。若目標接著撞上一處硬質表面或沉重物體，則目標每被移動10呎就會受到{@dice 1d6}點傷害。",
+						"若目標為一個未被穿戴或攜帶的物體，則作祟幽靈可以將目標向任意方向投出最多30呎距離。作祟幽靈可以將該物體做為遠程武器使用，攻擊一個在物體投擲軌跡上的生物（命中{@hit 4}），若命中則造成5 ({@damage 2d4})鈍擊傷害。"
 					]
 				}
 			],
@@ -42880,7 +42880,7 @@
 					]
 				},
 				{
-					"name": "Incorporeal Movement",
+					"name": "虛體移動", "tENG_name": "Incorporeal Movement",
 					"entries": [
 						"The will-o'-wisp can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
 					]
@@ -43302,7 +43302,7 @@
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Incorporeal Movement",
+					"name": "虛體移動", "tENG_name": "Incorporeal Movement",
 					"entries": [
 						"The wraith can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
 					]
