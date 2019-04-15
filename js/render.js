@@ -3203,7 +3203,7 @@ Renderer.item = {
 				let a = item._allPropertiesPtr[prop].name;
 				if (prop === "V") a = `${a} (${Renderer.get().render(item.dmg2)})`;
 				if (prop === "T" || prop === "A" || prop === "AF") a = `${a} (${item.range}呎)`;
-				if (prop === "RLD") a = `${a} (${item.reload} shots)`;
+				if (prop === "RLD") a = `${a} (${item.reload}發)`;
 				a = (i > 0 ? ", " : item.dmg1 ? "- " : "") + a;
 				propertiesTxt += a;
 			}
@@ -3229,7 +3229,7 @@ Renderer.item = {
 		renderStack.push(`<tr><td class="typerarityattunement" colspan="6">${Renderer.item.getTypeRarityAndAttunementText(item)}</td>`);
 
 		const [damage, damageType, propertiesTxt] = Renderer.item.getDamageAndPropertiesText(item);
-		renderStack.push(`<tr><td colspan="2">${item.value ? item.value + (item.weight ? ", " : "") : ""}${Parser.itemWeightToFull(item)}</td><td class="damageproperties" colspan="4">${damage} ${damageType} ${propertiesTxt}</tr>`);
+		renderStack.push(`<tr><td colspan="2">${item.value ? Parser.itemValueToDisplay(item.value) + (item.weight ? ", " : "") : ""}${Parser.itemWeightToFull(item)}</td><td class="damageproperties" colspan="4">${damage} ${damageType} ${propertiesTxt}</tr>`);
 
 		if (item.entries && item.entries.length) {
 			renderStack.push(Renderer.utils.getDividerTr());

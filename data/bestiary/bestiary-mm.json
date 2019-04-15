@@ -8773,7 +8773,7 @@
 			]
 		},
 		{
-			"name": "Carrion Crawler",
+			"name": "食腐蟲", "ENG_name": "Carrion Crawler",
 			"size": "L",
 			"type": "monstrosity",
 			"source": "MM",
@@ -8812,13 +8812,13 @@
 				{
 					"name": "敏銳嗅覺",
 					"entries": [
-						"The carrion crawler在依賴嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
+						"食腐蟲在依賴嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				},
 				{
 					"name": "蛛行",
 					"entries": [
-						"carrion crawler可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
+						"食腐蟲可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
 					]
 				}
 			],
@@ -8826,13 +8826,13 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The carrion crawler makes two attacks: one with its tentacles and one with its bite."
+						"食腐蟲進行二次攻擊：一次觸鬚，一次啃咬。"
 					]
 				},
 				{
-					"name": "Tentacles",
+					"name": "觸鬚", "tENG_name": "Tentacles",
 					"entries": [
-						"{@atk mw} 命中{@hit 8}，觸及10呎，單一生物。{@h}4 ({@damage 1d4 + 2}) poison damage, and the target must succeed on a DC 13 Constitution saving throw or be {@condition poisoned} for 1 minute. Until this poison ends, the target is {@condition paralyzed}. The target can repeat the saving throw at the end of each of its turns, ending the poison on itself on a success."
+						"{@atk mw} 命中{@hit 8}，觸及10呎，單一生物。{@h}4 ({@damage 1d4 + 2})毒素傷害，且目標必須成功通過一次DC 13的體質豁免，否則陷入{@condition 中毒}狀態長達1分鐘。直到這個毒素結束前，目標也將陷入{@condition 麻痺}狀態。目標可以在它的每個回合結束時重複進行這個豁免檢定，若成功則結束這個毒素對它的影響。"
 					]
 				},
 				{
@@ -34018,7 +34018,7 @@
 			]
 		},
 		{
-			"name": "Purple Worm",
+			"name": "巨紫蠕蟲", "ENG_name": "Purple Worm",
 			"size": "G",
 			"type": "monstrosity",
 			"source": "MM",
@@ -34051,14 +34051,14 @@
 				"con": "+11",
 				"wis": "+4"
 			},
-			"senses": "盲視30呎, tremorsense 60 ft.",
+			"senses": "盲視30呎, 震顫感知60呎",
 			"passive": 9,
 			"cr": "15",
 			"trait": [
 				{
-					"name": "Tunneler",
+					"name": "掘道者", "tENG_name": "Tunneler",
 					"entries": [
-						"The worm can burrow through solid rock at half its burrow speed and leaves a 10-foot-diameter tunnel in its wake."
+						"巨紫蠕蟲能夠以它掘地速度一半的速度掘穿堅硬的岩層，並在身後留下一個10呎直徑的地道。"
 					]
 				}
 			],
@@ -34066,20 +34066,20 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The worm makes two attacks: one with its bite and one with its stinger."
+						"巨紫蠕蟲進行二次攻擊：一次啃咬，一次尾螫。"
 					]
 				},
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 14}，觸及10呎，單一目標。{@h}22 ({@damage 3d8 + 9})穿刺傷害。 If the target is a Large or smaller creature, it must succeed on a DC 19 Dexterity saving throw or be swallowed by the worm. A swallowed creature is {@condition blinded} and {@condition restrained}, it has total cover against attacks and other effects outside the worm, and it takes 21 ({@damage 6d6}) acid damage at the start of each of the worm's turns.",
-						"If the worm takes 30 damage or more on a single turn from a creature inside it, the worm must succeed on a DC 21 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition 伏地} in a space within 10 feet of the worm. If the worm dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse by using 20 feet of movement, exiting {@condition 伏地}."
+						"{@atk mw} 命中{@hit 14}，觸及10呎，單一目標。{@h}22 ({@damage 3d8 + 9})穿刺傷害。若目標為一個體型為大型或更小的生物，則它必須成功通過一次DC 19的敏捷豁免，否則被巨紫蠕蟲給吞下。被吞下的生物陷入{@condition 目盲}和{@condition 束縛}，它對來自巨紫蠕蟲體外的攻擊和其他效果有全掩護，且在每次巨紫蠕蟲的回合開始時受到21 ({@damage 6d6})酸蝕傷害。",
+						"若巨紫蠕蟲在單一回合內受到超過30點來自它體內生物所造成的傷害，巨紫蠕蟲必須在該回合結束時成功通過一次DC 21的體質豁免，否則將反胃嘔出所有它吞下的生物，並使它們以{@condition 伏地}狀態摔落至距離巨紫蠕蟲10呎內的空間。若巨紫蠕蟲死亡，被吞下的生物將不再被它{@condition 束縛}，且可以花費20呎的移動速度從屍體中逃脫，以{@condition 伏地}狀態離開。"
 					]
 				},
 				{
-					"name": "Tail Stinger",
+					"name": "尾螫",
 					"entries": [
-						"{@atk mw} 命中{@hit 14}，觸及10呎，單一生物。{@h}19 ({@damage 3d6 + 9}) piercing damage, and the target must make a DC 19 Constitution saving throw, taking 42 ({@damage 12d6}) poison damage on a failed save, or half as much damage on a successful one."
+						"{@atk mw} 命中{@hit 14}，觸及10呎，單一生物。{@h}19 ({@damage 3d6 + 9})穿刺傷害，且目標必須進行一次DC 19的體質豁免，豁免失敗則受到42 ({@damage 12d6})毒素傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
@@ -41786,7 +41786,7 @@
 					]
 				},
 				{
-					"name": "掘道者",
+					"name": "掘道者", "tENG_name": "Tunneler",
 					"entries": [
 						"土巨怪能夠以它掘地速度一半的速度掘穿堅硬的岩層，並在身後留下一個5呎寬，8呎高的地道。"
 					]
