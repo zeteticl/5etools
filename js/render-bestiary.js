@@ -95,7 +95,7 @@ class RenderBestiary {
 
 			const pageTrInner = Renderer.utils._getPageTrText(srcCpy);
 			if (mon.environment && mon.environment.length) {
-				return [pageTrInner, `<i>Environment: ${mon.environment.sort(SortUtil.ascSortLower).map(it => it.toTitleCase()).join(", ")}</i>`];
+				return [pageTrInner, `<i>環境： ${mon.environment.sort(SortUtil.ascSortLower).map(it => Parser.EnvironmentToDisplay(it)).join(", ")}</i>`];
 			} else {
 				return [pageTrInner];
 			}

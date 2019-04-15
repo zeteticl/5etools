@@ -815,7 +815,7 @@ function Renderer () {
 						textStack[0] += `<i>${Renderer.attackTagToFull(text)}</i>`;
 						break;
 					case "@h":
-						textStack[0] += `<i>Hit:</i> `;
+						textStack[0] += `<i>若命中：</i> `;
 						break;
 
 					// DICE ////////////////////////////////////////////////////////////////////////////////////////////

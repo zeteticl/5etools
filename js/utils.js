@@ -1147,8 +1147,8 @@ Parser.monCrToFull = function (cr) {
 	if (typeof cr === "string" || !cr) return `${cr || "Unknown"} (${Parser.crToXp(cr)} XP)`;
 	else {
 		const stack = [Parser.monCrToFull(cr.cr)];
-		if (cr.lair) stack.push(`${Parser.monCrToFull(cr.lair)} when encountered in lair`);
-		if (cr.coven) stack.push(`${Parser.monCrToFull(cr.coven)} when part of a coven`);
+		if (cr.lair) stack.push(`當遭遇於巢穴時 ${Parser.monCrToFull(cr.lair)}`);
+		if (cr.coven) stack.push(`當做為鬼婆集會一員時 ${Parser.monCrToFull(cr.coven)}`);
 		return stack.join(" 或 ");
 	}
 };
