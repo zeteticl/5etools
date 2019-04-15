@@ -104,7 +104,7 @@ class RenderBestiary {
 		return $$`
 		${Renderer.utils.getBorderTr()}
 		<tr><th class="name mon__name--token" colspan="6">
-			<span class="stats-name copyable" onclick="Renderer.utils._pHandleNameClick(this, '${mon.source.escapeQuotes()}')">${mon._displayName || mon.name}</span>
+			<span><b class="stats-name copyable" onclick="Renderer.utils._pHandleNameClick(this, '${mon.source.escapeQuotes()}')">${mon._displayName || mon.name}</b>${mon.ENG_name ? ("<st style='font-size:80%;'>"+mon.ENG_name+"<st>") : ""}</span>
 			${mon.soundClip ? RenderBestiary._getPronunciationButton(mon) : ""}
 			<span class="stats-source ${Parser.sourceJsonToColor(mon.source)}" title="${Parser.sourceJsonToFull(mon.source)}${Renderer.utils.getSourceSubText(mon)}">${Parser.sourceJsonToAbv(mon.source)}</span>
 		</th></tr>
