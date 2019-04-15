@@ -275,7 +275,7 @@
 					]
 				},
 				{
-					"name": "Snow Camouflage",
+					"name": "雪地偽裝", "tENG_name": "Snow Camouflage",
 					"entries": [
 						"The yeti has advantage on Dexterity ({@skill Stealth}) checks made to hide in snowy terrain."
 					]
@@ -7615,7 +7615,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"preNote": "非銀製武器且非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -9142,7 +9142,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"preNote": "非銀製武器且非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -14673,7 +14673,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"preNote": "非銀製武器且非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -21651,7 +21651,7 @@
 			]
 		},
 		{
-			"name": "Green Hag",
+			"name": "綠鬼婆", "ENG_name": "Green Hag",
 			"size": "M",
 			"type": "fey",
 			"source": "MM",
@@ -21688,7 +21688,7 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 14,
-			"languages": "Common, Draconic, Sylvan",
+			"languages": "通用語、龍語、木族語",
 			"cr": {
 				"cr": "3",
 				"coven": "5"
@@ -21697,7 +21697,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The hag's innate spellcasting ability is Charisma (spell save DC 12). She can innately cast the following spells, requiring no material components:"
+						"鬼婆的天生施法屬性為魅力（法術豁免DC 12）。她天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 舞光術}",
@@ -21707,9 +21707,9 @@
 					"ability": "cha"
 				},
 				{
-					"name": "Shared Spellcasting (Coven Only)",
+					"name": "共享施法 (限定集會)", "tENG_name": "Shared Spellcasting (Coven Only)",
 					"headerEntries": [
-						"While all three members of a hag coven are within 30 feet of one another, they can each cast the following spells from the wizard's spell list but must share the spell slots among themselves:"
+						"當鬼婆集會的三個成員都距離彼此30呎內，它們各自都可以施放以下來自法師法術列表的法術，且必須共用法術位："
 					],
 					"spells": {
 						"1": {
@@ -21756,7 +21756,7 @@
 						}
 					},
 					"footerEntries": [
-						"For casting these spells, each hag is a 12th-level spellcaster that uses Intelligence as her spellcasting ability. The spell save DC is 12 + the hag's Intelligence modifier, and the spell attack bonus is 4 + the hag's Intelligence modifier."
+						"在施放這些法術時，每個鬼婆都是12級的施法者，且使用智力做為她的施法屬性。法術的豁免DC為12+鬼婆的智力調整值，且法術攻擊加值為4+鬼婆的智力調整值。"
 					]
 				}
 			],
@@ -21764,27 +21764,27 @@
 				{
 					"name": "兩棲",
 					"entries": [
-						"The hag可以在空氣和水中呼吸。"
+						"鬼婆可以在空氣和水中呼吸。"
 					]
 				},
 				{
-					"name": "Mimicry",
+					"name": "擬聲", "tENG_name": "Mimicry",
 					"entries": [
-						"The hag can mimic animal sounds and humanoid voices. A creature that hears the sounds can tell they are imitations with a successful DC 14 Wisdom (Insight) check."
+						"鬼婆可以模仿動物和類人生物的聲音。一個聽到這類聲音的生物可以透過成功通過一次DC 14的睿知（{@skill 察言觀色}）檢定以辨別出該聲音是被模仿發出的。"
 					]
 				},
 				{
-					"name": "Hag Coven",
+					"name": "鬼婆集會", "tENG_name": "Hag Coven",
 					"entries": [
-						"When hags must work together, they form covens, in spite of their selfish natures. A coven is made up of hags of any type, all of whom are equals within the group. However, each of the hags continues to desire more personal power.",
-						"A coven consists of three hags so that any arguments between two hags can be settled by the third. If more than three hags ever come together, as might happen if two covens come into conflict, the result is usually chaos."
+						"儘管鬼婆們生性自私，但當她們必須共事時，她們會組成集會。一個集會可以由任何類型的鬼婆組成，且她們在集會中都有著平等的地位。然而，鬼婆們各自都渴望握有更多的個人權力。",
+						"一個集會由三個鬼婆組成，如此一來每當兩個鬼婆之間發生任何爭執，都可以由第三個鬼婆解決。若有超過三個鬼婆聚集在一起，就如同兩個鬼婆集會之間會發生衝突一樣，結果通常會變得混亂無比。"
 					]
 				},
 				{
-					"name": "Hag Eye (Coven Only)",
+					"name": "鬼婆之眼 (限定集會)", "tENG_name": "Hag Eye (Coven Only)",
 					"entries": [
-						"A hag coven can craft a magic item called a hag eye, which is made from a real eye coated in varnish and often fitted to a pendant or other wearable item. The hag eye is usually entrusted to a minion for safekeeping and transport. A hag in the coven can take an action to see what the hag eye sees if the hag eye is on the same plane of existence. A hag eye has AC 10, 1 hit point, and darkvision with a radius of 60 feet. If it is destroyed, each coven member takes {@dice 3d10} psychic damage and is {@condition blinded} for 24 hours.",
-						"A hag coven can have only one hag eye at a time, and creating a new one requires all three members of the coven to perform a ritual. The ritual takes 1 hour, and the hags can't perform it while {@condition blinded}. During the ritual, if the hags take any action other than performing the ritual, they must start over."
+						"鬼婆集會可以製作一個被稱為「鬼婆之眼」的魔法物品。鬼婆之眼是由一顆覆蓋著清漆的眼珠製成，且通常被安置於吊墜或其他可穿戴的飾品上。鬼婆之眼通常會被託付給僕從以保管和運送。若鬼婆之眼與一個集會中的鬼婆位於相同的存在位面，則她可以採取一個動作以看見鬼婆之眼所看見的事物。鬼婆之眼具有AC 10和1點生命值，且具有60呎的黑暗視覺。若鬼婆之眼被摧毀，每個鬼婆集會的成員都將受到{@dice 3d10}精神傷害並陷入{@condition 目盲}狀態長達24小時。",
+						"一個鬼婆集會同時只能擁有一顆鬼婆之眼，且創造一個新的鬼婆之眼需要集會的所有三名成員施展一個儀式。儀式的施展時間需要1小時，且鬼婆們不能在處於{@condition 目盲}狀態時施展它。在儀式施展期間，若鬼婆採取了任何施展儀式以外的動作，則儀式將必須重新開始。"
 					]
 				}
 			],
@@ -21796,16 +21796,16 @@
 					]
 				},
 				{
-					"name": "Illusory Appearance",
+					"name": "幻象外貌", "tENG_name": "Illusory Appearance",
 					"entries": [
-						"The hag covers herself and anything she is wearing or carrying with a magical illusion that makes her look like another creature of her general size and humanoid shape. The illusion ends if the hag takes a bonus action to end it or if she dies.",
-						"The changes wrought by this effect fail to hold up to physical inspection. For example, the hag could appear to have smooth skin, but someone touching her would feel her rough flesh. Otherwise, a creature must take an action to visually inspect the illusion and succeed on a DC 20 Intelligence (Investigation) check to discern that the hag is disguised."
+						"鬼婆用一層魔法幻象覆蓋她自己和任何她所穿戴或攜帶的事物，以使她看起來像是其他與她體型相近且擁有類人生物身形的生物。這個幻象會在鬼婆採取一個附贈動作將它終止，或她死亡時終止。",
+						"這個效果帶來的改變經不起物理的檢驗。舉例來說，鬼婆可以幻化出光滑的肌膚，但碰觸她的人仍會感覺到她粗糙的皮肉。除此之外，一個以視覺檢驗幻象的生物必須採取一個動作並成功通過一次DC 20的智力（{@skill 調查}）檢定才能辨別出鬼婆的偽裝。"
 					]
 				},
 				{
-					"name": "Invisible Passage",
+					"name": "隱形通行", "tENG_name": "Invisible Passage",
 					"entries": [
-						"The hag magically turns {@condition invisible} until she attacks or casts a spell, or until her concentration ends (as if concentrating on a spell). While {@condition invisible}, she leaves no physical evidence of her passage, so she can be tracked only by magic. Any equipment she wears or carries is invisible with her."
+						"鬼婆用魔法使自己{@condition 隱形}，直到她攻擊、施放法術、或她的專注被打斷（如同專注於法術）。當處於{@condition 隱形}狀態時，她不會留下任何她通過的物理痕跡，因此只有魔法能夠追蹤她。任何她所穿戴或攜帶的裝備都會隨著她隱形。"
 					]
 				}
 			],
@@ -24135,7 +24135,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"preNote": "非銀製武器且非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -24486,7 +24486,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"preNote": "非銀製武器且非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -24621,7 +24621,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"preNote": "非銀製武器且非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -30719,7 +30719,7 @@
 			]
 		},
 		{
-			"name": "Night Hag",
+			"name": "夜鬼婆", "ENG_name": "Night Hag",
 			"size": "M",
 			"type": "fiend",
 			"source": "MM",
@@ -30763,7 +30763,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"preNote": "非銀製武器且非魔法攻擊所造成的"
 				}
 			],
 			"conditionImmune": [
@@ -30771,7 +30771,7 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 16,
-			"languages": "Abyssal, Common, Infernal, Primordial",
+			"languages": "深淵語、通用語、煉獄語、原初語",
 			"cr": {
 				"cr": "5",
 				"coven": "7"
@@ -30780,55 +30780,55 @@
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The hag 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"鬼婆在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Night Hag Items",
+					"name": "夜鬼婆物品", "tENG_name": "Night Hag Items",
 					"entries": [
-						"A night hag carries two very rare magic items that she must craft for herself If either object is lost, the night hag will go to great lengths to retrieve it, as creating a new tool takes time and effort.",
-						"Heartstone: This lustrous black gem allows a night hag to become ethereal while it is in her possession. The touch of a heartstone also cures any disease. Crafting a heartstone takes 30 days.",
-						"Soul Bag: When an evil humanoid dies as a result of a night hag's Nightmare Haunting, the hag catches the soul in this black sack made of stitched flesh. A soul bag can hold only one evil soul at a time, and only the night hag who crafted the bag can catch a soul with it. Crafting a soul bag takes 7 days and a humanoid sacrifice (whose flesh is used to make the bag)."
+						"一個夜鬼婆會攜帶二件非常珍稀的魔法物品，這兩件物品必須由她親自製作。由於製作一件新的物品需要花費許多時間和精力，因此一旦其中任何一件遺失，夜鬼婆將會竭盡全力把它找回來。",
+						"心石(Heartstone)：這顆閃耀光澤的黑色寶石讓夜鬼婆在擁有它時得以變為乙太態。觸碰心石也可以治癒任何疾病。製作一顆心石需要花費30天的時間。",
+						"靈魂袋(Soul Bag)：當一個邪惡的類人生物因夜鬼婆的噩夢纏身而死亡，它的靈魂將被鬼婆用這個以血肉縫製而成的黑色袋子給捕捉。一個靈魂袋同時可以容納一個邪惡的靈魂，且只有製作這個靈魂袋的夜鬼婆可以用它來捕捉靈魂。製作一個靈魂袋需要花費7天的時間和一個類人生物犧牲者（它的血肉將被用於製作袋子）。"
 					]
 				},
 				{
-					"name": "Hag Coven",
+					"name": "鬼婆集會", "tENG_name": "Hag Coven",
 					"entries": [
-						"When hags must work together, they form covens, in spite of their selfish natures. A coven is made up of hags of any type, all of whom are equals within the group. However, each of the hags continues to desire more personal power.",
-						"A coven consists of three hags so that any arguments between two hags can be settled by the third. If more than three hags ever come together, as might happen if two covens come into conflict, the result is usually chaos."
+						"儘管鬼婆們生性自私，但當她們必須共事時，她們會組成集會。一個集會可以由任何類型的鬼婆組成，且她們在集會中都有著平等的地位。然而，鬼婆們各自都渴望握有更多的個人權力。",
+						"一個集會由三個鬼婆組成，如此一來每當兩個鬼婆之間發生任何爭執，都可以由第三個鬼婆解決。若有超過三個鬼婆聚集在一起，就如同兩個鬼婆集會之間會發生衝突一樣，結果通常會變得混亂無比。"
 					]
 				},
 				{
-					"name": "Hag Eye (Coven Only)",
+					"name": "鬼婆之眼 (限定集會)", "tENG_name": "Hag Eye (Coven Only)",
 					"entries": [
-						"A hag coven can craft a magic item called a hag eye, which is made from a real eye coated in varnish and often fitted to a pendant or other wearable item. The hag eye is usually entrusted to a minion for safekeeping and transport. A hag in the coven can take an action to see what the hag eye sees if the hag eye is on the same plane of existence. A hag eye has AC 10, 1 hit point, and darkvision with a radius of 60 feet. If it is destroyed, each coven member takes {@dice 3d10} psychic damage and is {@condition blinded} for 24 hours.",
-						"A hag coven can have only one hag eye at a time, and creating a new one requires all three members of the coven to perform a ritual. The ritual takes 1 hour, and the hags can't perform it while {@condition blinded}. During the ritual, if the hags take any action other than performing the ritual, they must start over."
+						"鬼婆集會可以製作一個被稱為「鬼婆之眼」的魔法物品。鬼婆之眼是由一顆覆蓋著清漆的眼珠製成，且通常被安置於吊墜或其他可穿戴的飾品上。鬼婆之眼通常會被託付給僕從以保管和運送。若鬼婆之眼與一個集會中的鬼婆位於相同的存在位面，則她可以採取一個動作以看見鬼婆之眼所看見的事物。鬼婆之眼具有AC 10和1點生命值，且具有60呎的黑暗視覺。若鬼婆之眼被摧毀，每個鬼婆集會的成員都將受到{@dice 3d10}精神傷害並陷入{@condition 目盲}狀態長達24小時。",
+						"一個鬼婆集會同時只能擁有一顆鬼婆之眼，且創造一個新的鬼婆之眼需要集會的所有三名成員施展一個儀式。儀式的施展時間需要1小時，且鬼婆們不能在處於{@condition 目盲}狀態時施展它。在儀式施展期間，若鬼婆採取了任何施展儀式以外的動作，則儀式將必須重新開始。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Claws (Hag Form Only)",
+					"name": "爪抓 (限定鬼婆型態)",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}13 ({@damage 2d8 + 4})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Change Shape",
+					"name": "變形", "tENG_name": "Change Shape",
 					"entries": [
-						"The hag magically polymorphs into a Small or Medium female humanoid, or back into her true form. Her statistics are the same in each form. Any equipment she is wearing or carrying isn't transformed. She reverts to her true form if she dies."
+						"鬼婆可以用魔法變形成一個體型為小型或中型的女性類人生物，或變回她的真實型態。任何她所穿戴或攜帶的裝備並不會隨著變形發生轉變。她會在死亡時回復她的真實型態。"
 					]
 				},
 				{
 					"name": "靈體化", "tENG_name": "Etherealness",
 					"entries": [
-						"The hag magically enters the Ethereal Plane from the Material Plane, or vice versa. To do so, the hag must have a heartstone in her possession."
+						"鬼婆用魔法從物質位面進入乙太位面，或者反過來從乙太位面進入物質位面。若要這麼做，鬼婆必須要擁有一顆心石。"
 					]
 				},
 				{
-					"name": "Nightmare Haunting (1/Day)",
+					"name": "噩夢纏身 (1/日)",
 					"entries": [
-						"While on the Ethereal Plane, the hag magically touches a sleeping humanoid on the Material Plane. A {@spell protection from evil and good} spell cast on the target prevents this contact, as does a magic circle. As long as the contact persists, the target has dreadful visions. If these visions last for at least 1 hour, the target gains no benefit from its rest, and its hit point maximum is reduced by 5 ({@dice 1d10}). If this effect reduces the target's hit point maximum to 0, the target dies, and if the target was evil, its soul is trapped in the hag's soul bag. The reduction to the target's hit point maximum lasts until removed by the  {@spell greater restoration} spell or similar magic."
+						"當處於乙太位面時，鬼婆可以魔法性的觸碰一個在物質位面中睡著的累人生物。施放於目標的{@spell 防護善惡}法術、以及{@spell 防護法陣}可以避免這個接觸。只要這個接觸持續，目標將會看見可怕的景象。若這些景象持續持續至少1小時，則目標將無法獲得它休息所帶來的好處，且它的生命值最大值將減少5 ({@dice 1d10})點。若這個效果將目標的生命值最大值歸零，則目標死亡，且若目標為邪惡陣營，則它的靈魂將被困在鬼婆的靈魂袋中。目標生命值最大值的這個減損會持續直到被{@spell 高等復原術}法術或其他類似的魔法給移除。"
 					]
 				}
 			],
@@ -30837,7 +30837,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The hag's innate spellcasting ability is Charisma (spell save DC 14, {@hit 6} to hit with spell attacks). She can innately cast the following spells, requiring no material components:"
+						"鬼婆的天生施法屬性為魅力（法術豁免DC 14，法術攻擊命中{@hit 6}）。她天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 偵測魔法}",
@@ -30853,9 +30853,9 @@
 					"ability": "cha"
 				},
 				{
-					"name": "Shared Spellcasting (Coven Only)",
+					"name": "共享施法 (限定集會)", "tENG_name": "Shared Spellcasting (Coven Only)",
 					"headerEntries": [
-						"While all three members of a hag coven are within 30 feet of one another, they can each cast the following spells from the wizard's spell list but must share the spell slots among themselves:"
+						"當鬼婆集會的三個成員都距離彼此30呎內，她們各自都可以施放以下來自法師法術列表的法術，且必須共用法術位："
 					],
 					"spells": {
 						"1": {
@@ -30902,7 +30902,7 @@
 						}
 					},
 					"footerEntries": [
-						"For casting these spells, each hag is a 12th-level spellcaster that uses Intelligence as her spellcasting ability. The spell save DC is 12 + the hag's Intelligence modifier, and the spell attack bonus is 4 + the hag's Intelligence modifier."
+						"在施放這些法術時，每個鬼婆都是12級的施法者，且使用智力做為它的施法屬性。法術的豁免DC為12+鬼婆的智力調整值，且法術攻擊加值為4+鬼婆的智力調整值。"
 					]
 				}
 			],
@@ -33013,7 +33013,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"preNote": "非銀製武器且非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -36739,7 +36739,7 @@
 			]
 		},
 		{
-			"name": "Sea Hag",
+			"name": "海鬼婆", "ENG_name": "Sea Hag",
 			"size": "M",
 			"type": "fey",
 			"source": "MM",
@@ -36771,7 +36771,7 @@
 			"cha": 13,
 			"senses": "黑暗視覺60呎",
 			"passive": 11,
-			"languages": "Aquan, Common, Giant",
+			"languages": "水族語、通用語、巨人語",
 			"cr": {
 				"cr": "2",
 				"coven": "4"
@@ -36780,28 +36780,28 @@
 				{
 					"name": "兩棲",
 					"entries": [
-						"The hag可以在空氣和水中呼吸。"
+						"鬼婆可以在空氣和水中呼吸。"
 					]
 				},
 				{
-					"name": "Horrific Appearance",
+					"name": "恐怖形象", "tENG_name": "Horrific Appearance",
 					"entries": [
-						"Any humanoid that starts its turn within 30 feet of the hag and can see the hag's true form must make a DC 11 Wisdom saving throw. On a failed save, the creature is {@condition frightened} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, with disadvantage if the hag is within line of sight, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the hag's Horrific Appearance for the next 24 hours.",
-						"Unless the target is surprised or the revelation of the hag's true form is sudden, the target can avert its eyes and avoid making the initial saving throw. Until the start of its next turn, a creature that averts its eyes has disadvantage on attack rolls against the hag."
+						"任何在距離鬼婆30呎內開始回合，且可以看見鬼婆真實型態的生物都必須進行一次DC 11的睿知豁免。若豁免失敗，該生物將陷入{@condition 恐懼}長達1分鐘。一個生物可以在它的每個回合結束時重複這個豁免檢定，若鬼婆在它的視線內則此檢定具有劣勢，若檢定成功則結束這個效果對它的影響。若該生物的豁免檢定成功或該效果對它的影響終止，該生物將在接下來的24小時內免疫於該鬼婆的恐怖形象。",
+						"除非目標被突襲，或者鬼婆突然揭露其真實形象，否則目標可以移開視線以避免在進行第一次的豁免檢定。直到它的下個回合開始前，移開視線的生物將在對該鬼婆所進行的攻擊檢定中具有劣勢。"
 					]
 				},
 				{
-					"name": "Hag Coven",
+					"name": "鬼婆集會", "tENG_name": "Hag Coven",
 					"entries": [
-						"When hags must work together, they form covens, in spite of their selfish natures. A coven is made up of hags of any type, all of whom are equals within the group. However, each of the hags continues to desire more personal power.",
-						"A coven consists of three hags so that any arguments between two hags can be settled by the third. If more than three hags ever come together, as might happen if two covens come into conflict, the result is usually chaos."
+						"儘管鬼婆們生性自私，但當她們必須共事時，她們會組成集會。一個集會可以由任何類型的鬼婆組成，且她們在集會中都有著平等的地位。然而，鬼婆們各自都渴望握有更多的個人權力。",
+						"一個集會由三個鬼婆組成，如此一來每當兩個鬼婆之間發生任何爭執，都可以由第三個鬼婆解決。若有超過三個鬼婆聚集在一起，就如同兩個鬼婆集會之間會發生衝突一樣，結果通常會變得混亂無比。"
 					]
 				},
 				{
-					"name": "Hag Eye (Coven Only)",
+					"name": "鬼婆之眼 (限定集會)", "tENG_name": "Hag Eye (Coven Only)",
 					"entries": [
-						"A hag coven can craft a magic item called a hag eye, which is made from a real eye coated in varnish and often fitted to a pendant or other wearable item. The hag eye is usually entrusted to a minion for safekeeping and transport. A hag in the coven can take an action to see what the hag eye sees if the hag eye is on the same plane of existence. A hag eye has AC 10, 1 hit point, and darkvision with a radius of 60 feet. If it is destroyed, each coven member takes {@dice 3d10} psychic damage and is {@condition blinded} for 24 hours.",
-						"A hag coven can have only one hag eye at a time, and creating a new one requires all three members of the coven to perform a ritual. The ritual takes 1 hour, and the hags can't perform it while {@condition blinded}. During the ritual, if the hags take any action other than performing the ritual, they must start over."
+						"鬼婆集會可以製作一個被稱為「鬼婆之眼」的魔法物品。鬼婆之眼是由一顆覆蓋著清漆的眼珠製成，且通常被安置於吊墜或其他可穿戴的飾品上。鬼婆之眼通常會被託付給僕從以保管和運送。若鬼婆之眼與一個集會中的鬼婆位於相同的存在位面，則她可以採取一個動作以看見鬼婆之眼所看見的事物。鬼婆之眼具有AC 10和1點生命值，且具有60呎的黑暗視覺。若鬼婆之眼被摧毀，每個鬼婆集會的成員都將受到{@dice 3d10}精神傷害並陷入{@condition 目盲}狀態長達24小時。",
+						"一個鬼婆集會同時只能擁有一顆鬼婆之眼，且創造一個新的鬼婆之眼需要集會的所有三名成員施展一個儀式。儀式的施展時間需要1小時，且鬼婆們不能在處於{@condition 目盲}狀態時施展它。在儀式施展期間，若鬼婆採取了任何施展儀式以外的動作，則儀式將必須重新開始。"
 					]
 				}
 			],
@@ -36813,25 +36813,25 @@
 					]
 				},
 				{
-					"name": "Death Glare",
+					"name": "死亡瞪視", "tENG_name": "Death Glare",
 					"entries": [
-						"The hag targets one {@condition frightened} creature she can see within 30 feet of her. If the target can see the hag, it must succeed on a DC 11 Wisdom saving throw against this magic or drop to 0 hit points."
+						"鬼婆選擇一個距離她30呎內，她所能看見且陷入{@condition 恐懼}的生物做為目標。若目標可以看見鬼婆，則它必須成功通過一次DC 11的睿知豁免以對抗這個魔法，否則生命值歸零。"
 					]
 				},
 				{
-					"name": "Illusory Appearance",
+					"name": "幻象外貌", "tENG_name": "Illusory Appearance",
 					"entries": [
-						"The hag covers herself and anything she is wearing or carrying with a magical illusion that makes her look like an ugly creature of her general size and humanoid shape. The effect ends if the hag takes a bonus action to end it or if she dies.",
-						"The changes wrought by this effect fail to hold up to physical inspection. For example, the hag could appear to have no claws, but someone touching her hand might feel the claws. Otherwise, a creature must take an action to visually inspect the illusion and succeed on a DC 16 Intelligence (Investigation) check to discern that the hag is disguised."
+						"鬼婆用一層魔法幻象覆蓋她自己和任何她所穿戴或攜帶的事物，以使她看起來像是其他與她體型相近且擁有類人生物身形的生物。這個幻象會在鬼婆採取一個附贈動作將它終止，或她死亡時終止。",
+						"這個效果帶來的改變經不起物理的檢驗。舉例來說，鬼婆可以用幻象隱藏她的利爪，但碰觸她手的人仍會感覺到尖銳的爪子。除此之外，一個以視覺檢驗幻象的生物必須採取一個動作並成功通過一次DC 16的智力（{@skill 調查}）檢定才能辨別出鬼婆的偽裝。"
 					]
 				}
 			],
 			"page": 179,
 			"spellcasting": [
 				{
-					"name": "Shared Spellcasting (Coven Only)",
+					"name": "共享施法 (限定集會)", "tENG_name": "Shared Spellcasting (Coven Only)",
 					"headerEntries": [
-						"While all three members of a hag coven are within 30 feet of one another, they can each cast the following spells from the wizard's spell list but must share the spell slots among themselves:"
+						"當鬼婆集會的三個成員都距離彼此30呎內，她們各自都可以施放以下來自法師法術列表的法術，且必須共用法術位："
 					],
 					"spells": {
 						"1": {
@@ -36878,7 +36878,7 @@
 						}
 					},
 					"footerEntries": [
-						"For casting these spells, each hag is a 12th-level spellcaster that uses Intelligence as her spellcasting ability. The spell save DC is 12 + the hag's Intelligence modifier, and the spell attack bonus is 4 + the hag's Intelligence modifier."
+						"在施放這些法術時，每個鬼婆都是12級的施法者，且使用智力做為她的施法屬性。法術的豁免DC為12+鬼婆的智力調整值，且法術攻擊加值為4+鬼婆的智力調整值。"
 					]
 				}
 			],
@@ -38289,7 +38289,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"preNote": "非銀製武器且非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -44917,7 +44917,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"preNote": "非銀製武器且非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -45226,7 +45226,7 @@
 					]
 				},
 				{
-					"name": "Snow Camouflage",
+					"name": "雪地偽裝", "tENG_name": "Snow Camouflage",
 					"entries": [
 						"The yeti has advantage on Dexterity (Stealth) checks made to hide in snowy terrain."
 					]
