@@ -7563,7 +7563,7 @@
 			]
 		},
 		{
-			"name": "Bone Devil",
+			"name": "骨魔", "ENG_name": "Bone Devil",
 			"size": "L",
 			"type": {
 				"type": "fiend",
@@ -7633,13 +7633,13 @@
 				{
 					"name": "魔鬼視界",
 					"entries": [
-						"魔法黑暗並不會阻礙devil的黑暗視覺。"
+						"魔法黑暗並不會阻礙骨魔的黑暗視覺。"
 					]
 				},
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The devil 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"骨魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
@@ -7647,7 +7647,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The devil makes three attacks: two with its claws and one with its sting."
+						"骨魔進行三次攻擊：二次爪抓，一次釘刺。"
 					]
 				},
 				{
@@ -7657,30 +7657,30 @@
 					]
 				},
 				{
-					"name": "Sting",
+					"name": "釘刺",
 					"entries": [
-						"{@atk mw} 命中{@hit 8}，觸及10呎，單一目標。{@h}13 ({@damage 2d8 + 4}) piercing damage plus 17 ({@damage 5d6}) poison damage, and the target must succeed on a DC 14 Constitution saving throw or become {@condition poisoned} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk mw} 命中{@hit 8}，觸及10呎，單一目標。{@h}13 ({@damage 2d8 + 4})穿刺傷害加 17 ({@damage 5d6})毒素傷害，且目標必須成功通過一次DC 14的體質豁免，否則陷入{@condition 中毒}狀態長達1分鐘。目標可以在它的每個回合結束時重複這個豁免檢定，若檢定成功則結束這個效果對它的影響。"
 					]
 				}
 			],
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Bone Devil Polearm",
+					"name": "骨魔鉤槍兵",
 					"entries": [
-						"Some bone devils have the following action options.",
+						"有些骨魔擁有下列動作項。",
 						{
 							"name": "多重攻擊",
 							"type": "entries",
 							"entries": [
-								"The devil makes two attacks: one with its hooked polearm and one with its sting."
+								"骨魔進行二次攻擊：一次長柄鉤槍，一次釘刺。"
 							]
 						},
 						{
-							"name": "Hooked Polearm",
+							"name": "長柄鉤槍",
 							"type": "entries",
 							"entries": [
-								"{@atk mw} 命中{@hit 8}，觸及10呎，單一目標。{@h}17 ({@dice 2d12 + 4})穿刺傷害。 If the target is a Huge or smaller creature, it is grappled (escape DC 14). Until this grapple ends, the devil can't use its polearm on another target."
+								"{@atk mw} 命中{@hit 8}，觸及10呎，單一目標。{@h}17 ({@dice 2d12 + 4})穿刺傷害。若目標為一個體型為巨型或更小的生物，則它將{@condition 被擒}(逃脫DC 14)。直到擒抱結束前，骨魔不能對另一個目標使用它的長柄鉤槍。"
 							]
 						}
 					]
@@ -9095,7 +9095,7 @@
 			]
 		},
 		{
-			"name": "Chain Devil",
+			"name": "鏈魔", "ENG_name": "Chain Devil",
 			"size": "M",
 			"type": {
 				"type": "fiend",
@@ -9160,13 +9160,13 @@
 				{
 					"name": "魔鬼視界",
 					"entries": [
-						"魔法黑暗並不會阻礙devil的黑暗視覺。"
+						"魔法黑暗並不會阻礙鏈魔的黑暗視覺。"
 					]
 				},
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The devil 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"鏈魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
@@ -9174,28 +9174,28 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The devil makes two attacks with its chains."
+						"鏈魔進行二次鎖鏈攻擊。"
 					]
 				},
 				{
-					"name": "Chain",
+					"name": "鎖鏈",
 					"entries": [
-						"{@atk mw} 命中{@hit 8}，觸及10呎，單一目標。{@h}11 ({@damage 2d6 + 4})劈砍傷害。 The target is {@condition grappled} (escape DC 14) if the devil isn't already grappling a creature. Until this grapple ends, the target is {@condition restrained} and takes 7 ({@damage 2d6}) piercing damage at the start of each of its turns."
+						"{@atk mw} 命中{@hit 8}，觸及10呎，單一目標。{@h}11 ({@damage 2d6 + 4})劈砍傷害。目標{@condition 被擒}(逃脫DC 14)。直到擒抱結束前，該目標被{@condition 束縛}且在它的每個回合開始時受到7 ({@damage 2d6})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Animate Chains (Recharges after a Short or Long Rest)",
+					"name": "活化魔鏈 (短休或長休之後充能)",
 					"entries": [
-						"Up to four chains the devil can see within 60 feet of it magically sprout razor-edged barbs and animate under the devil's control, provided that the chains aren't being worn or carried.",
-						"Each animated chain is an object with AC 20, 20 hit points, resistance to piercing damage, and immunity to psychic and thunder damage. When the devil uses Multiattack on its turn, it can use each animated chain to make one additional chain attack. An animated chain can grapple one creature of its own but can't make attacks while grappling. An animated chain reverts to its inanimate state if reduced to 0 hit points or if the devil is {@condition incapacitated} or dies."
+						"距離鏈魔60呎內且它所能看見的最多四條鎖鏈將被魔法長出帶刃的倒鉤，且只要這些鎖鏈為被穿戴或攜帶，它們將在該鏈魔的控制下活化。",
+						"每條活化的鎖鏈是一個具有AC 20和20點生命值的物體，對穿刺傷害具有抗性，且免疫於精神和雷鳴傷害。當鏈魔在它的回合使用多重攻擊時，它可以使用每條活化鎖鏈再各自進行一次額外的鎖鏈攻擊。一條活化鎖鏈可以單獨擒抱一個生物，但在擒抱時無法進行攻擊。一條活化鎖鏈將在其生命值歸零，或當鏈魔陷入{@condition 無力}狀態或死亡時恢復其無生命的狀態。"
 					]
 				}
 			],
 			"reaction": [
 				{
-					"name": "Unnerving Mask",
+					"name": "惶怯面具", "tENG_name": "Unnerving Mask",
 					"entries": [
-						"When a creature the devil can see starts its turn within 30 feet of the devil, the devil can create the illusion that it looks like one of the creature's departed loved ones or bitter enemies. If the creature can see the devil, it must succeed on a DC 14 Wisdom saving throw or be {@condition frightened} until the end of its turn."
+						"當一個鏈魔所能看見的生物在距離鏈魔30呎內的位置開始它的回合，鏈魔可以創造出一個幻象，使其看起來像是該生物已故愛人或仇敵。若該生物可以看見鏈魔，則它必須成功通過一次DC 14的睿知豁免，否則陷入{@condition 恐懼}直到它的下個回合結束。"
 					]
 				}
 			],
@@ -11194,7 +11194,7 @@
 			],
 			"reaction": [
 				{
-					"name": "Parry",
+					"name": "格擋", "tENG_name": "Parry",
 					"entries": [
 						"The death knight adds 6 to its AC against one melee attack that would hit it. To do so, the death knight must see the attacker and be wielding a melee weapon."
 					]
@@ -14624,7 +14624,7 @@
 			]
 		},
 		{
-			"name": "Erinyes",
+			"name": "慾魔", "ENG_name": "Erinyes",
 			"size": "M",
 			"type": {
 				"type": "fiend",
@@ -14689,15 +14689,15 @@
 			"cr": "12",
 			"trait": [
 				{
-					"name": "Hellish Weapons",
+					"name": "地獄武器", "tENG_name": "Hellish Weapons",
 					"entries": [
-						"The erinyes's weapon attacks are magical and deal an extra 13 ({@damage 3d8}) poison damage on a hit (included in the attacks)."
+						"慾魔的武器攻擊視作魔法攻擊，且在命中時造成額外的13 ({@damage 3d8})毒素傷害（已包含在攻擊條目）。"
 					]
 				},
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The erinyes 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"慾魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
@@ -14705,27 +14705,27 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The erinyes makes three attacks"
+						"慾魔進行三次攻擊。"
 					]
 				},
 				{
 					"name": "長劍",
 					"entries": [
-						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}8 ({@damage 1d8 + 4}) slashing damage, or 9 ({@damage 1d10 + 4}) slashing damage if used with two hands, plus 13 ({@damage 3d8}) poison damage."
+						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}8 ({@damage 1d8 + 4})劈砍傷害，或若以雙手使用則造成 9 ({@damage 1d10 + 4})劈砍傷害，加上 13 ({@damage 3d8})毒素傷害。"
 					]
 				},
 				{
 					"name": "長弓",
 					"entries": [
-						"{@atk rw} 命中{@hit 7}，射程150/600呎，單一目標。{@h}7 ({@damage 1d8 + 3}) piercing damage plus 13 ({@damage 3d8}) poison damage, and the target must succeed on a DC 14 Constitution saving throw or be {@condition poisoned}. The poison lasts until it is removed by the {@spell lesser restoration} spell or similar magic."
+						"{@atk rw} 命中{@hit 7}，射程150/600呎，單一目標。{@h}7 ({@damage 1d8 + 3})穿刺傷害加 13 ({@damage 3d8})毒素傷害，且目標必須成功通過一次DC 14的體質豁免，否則陷入{@condition 中毒}狀態。這個毒素將持續直到它被{@spell 次級復原術}法術或其他類似的魔法給移除。"
 					]
 				}
 			],
 			"reaction": [
 				{
-					"name": "Parry",
+					"name": "格擋", "tENG_name": "Parry",
 					"entries": [
-						"The erinyes adds 4 to its AC against one melee attack that would hit it. To do so, the erinyes must see the attacker and be wielding a melee weapon."
+						"慾魔在一次近戰攻擊將要命中它時可以針對該次攻擊使它的AC增加4點。若要這麼做，慾魔必須要能看見攻擊者且正持用一把近戰武器。"
 					]
 				}
 			],
@@ -14733,9 +14733,9 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Rope of Entanglement",
+					"name": "糾纏繩", "tENG_name": "Rope of Entanglement",
 					"entries": [
-						"Some erinyes carry a rope of entanglement (detailed in the Dungeon Master's Guide). When such an erinyes uses its Multiattack, the erinyes can use the rope in place of two of the attacks."
+						"有些慾魔會攜帶糾纏繩（詳細記載於《地下城主指南》）。當這類慾魔使用多重攻擊時，慾魔可以使用糾纏繩以取代其中二次攻擊。"
 					]
 				}
 			],
@@ -24086,7 +24086,7 @@
 			]
 		},
 		{
-			"name": "Horned Devil",
+			"name": "角魔", "ENG_name": "Horned Devil",
 			"size": "L",
 			"type": {
 				"type": "fiend",
@@ -24153,13 +24153,13 @@
 				{
 					"name": "魔鬼視界",
 					"entries": [
-						"魔法黑暗並不會阻礙devil的黑暗視覺。"
+						"魔法黑暗並不會阻礙角魔的黑暗視覺。"
 					]
 				},
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The devil 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"角魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
@@ -24167,11 +24167,11 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The devil makes three melee attacks: two with its fork and one with its tail. It can use Hurl Flame in place of any melee attack."
+						"角魔進行三次近戰攻擊：二次叉刺，一次尾擊。它也可以使用以取代任何近戰攻擊。"
 					]
 				},
 				{
-					"name": "Fork",
+					"name": "叉刺",
 					"entries": [
 						"{@atk mw} 命中{@hit 10}，觸及10呎，單一目標。{@h}15 ({@damage 2d8 + 6})穿刺傷害。"
 					]
@@ -24179,13 +24179,13 @@
 				{
 					"name": "尾擊",
 					"entries": [
-						"{@atk mw} 命中{@hit 10}，觸及10呎，單一目標。{@h}10 ({@damage 1d8 + 6})穿刺傷害。 If the target is a creature other than an undead or a construct, it must succeed on a DC 17 Constitution saving throw or lose 10 ({@dice 3d6}) hit points at the start of each of its turns due to an infernal wound. Each time the devil hits the wounded target with this attack, the damage dealt by the wound increases by 10 ({@dice 3d6}). Any creature can take an action to stanch the wound with a successful DC 12 Wisdom (Medicine) check. The wound also closes if the target receives magical healing."
+						"{@atk mw} 命中{@hit 10}，觸及10呎，單一目標。{@h}10 ({@damage 1d8 + 6})穿刺傷害。若目標為一個不死生物或構裝體以外的生物，則它必須成功通過一次DC 17的體質豁免，否則將在它的每個回合開始時因為煉獄創傷而失去10 ({@dice 3d6})生命值。每當角魔使用此攻擊命中一個帶有該創傷的生物，這個創傷造成的傷害將會增加10 ({@dice 3d6})點。任何生物都可以使用一個動作，透過成功通過一次DC 12的睿知（{@skill 醫藥}）檢定以為創傷止血。這個創傷也會在目標被魔法治療的時候癒合。"
 					]
 				},
 				{
-					"name": "Hurl Flame",
+					"name": "投擲烈焰",
 					"entries": [
-						"{@atk rs} {@hit 7} to hit, range 150 ft., one target. {@h}14 ({@damage 4d6}) fire damage. If the target is a flammable object that isn't being worn or carried, it also catches fire."
+						"{@atk rs} 命中{@hit 7}，射程150呎，單一目標。{@h}14 ({@damage 4d6})火焰傷害。若目標為未被穿戴或攜帶的可燃物體，則它將被點燃。"
 					]
 				}
 			],
@@ -24439,7 +24439,7 @@
 			]
 		},
 		{
-			"name": "Ice Devil",
+			"name": "冰魔", "ENG_name": "Ice Devil",
 			"size": "L",
 			"type": {
 				"type": "fiend",
@@ -24505,13 +24505,13 @@
 				{
 					"name": "魔鬼視界",
 					"entries": [
-						"魔法黑暗並不會阻礙devil的黑暗視覺。"
+						"魔法黑暗並不會阻礙冰魔的黑暗視覺。"
 					]
 				},
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The devil 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"冰魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
@@ -24519,33 +24519,33 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The devil makes three attacks: one with its bite, one with its claws, and one with its tail."
+						"冰魔進行三次攻擊：一次啃咬，一次爪抓，一次尾擊。"
 					]
 				},
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5}) piercing damage plus 10 ({@damage 3d6}) cold damage."
+						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5})穿刺傷害加 10 ({@damage 3d6})寒冰傷害。"
 					]
 				},
 				{
 					"name": "爪抓",
 					"entries": [
-						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}10 ({@damage 2d4 + 5}) slashing damage plus 10 ({@damage 3d6}) cold damage."
+						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}10 ({@damage 2d4 + 5})劈砍傷害加 10 ({@damage 3d6})寒冰傷害。"
 					]
 				},
 				{
 					"name": "尾擊",
 					"entries": [
-						"{@atk mw} 命中{@hit 10}，觸及10呎，單一目標。{@h}12 ({@damage 2d6 + 5}) bludgeoning damage plus 10 ({@damage 3d6}) cold damage."
+						"{@atk mw} 命中{@hit 10}，觸及10呎，單一目標。{@h}12 ({@damage 2d6 + 5})鈍擊傷害加 10 ({@damage 3d6})寒冰傷害。"
 					]
 				},
 				{
-					"name": "Wall of Ice {@recharge}",
+					"name": "冰牆{@recharge}",
 					"entries": [
-						"The devil magically forms an opaque wall of ice on a solid surface it can see within 60 feet of it. The wall is 1 foot thick and up to 30 feet long and 10 feet high, or it's a hemispherical dome up to 20 feet in diameter.",
-						"When the wall appears, each creature in its space is pushed out of it by the shortest route. The creature chooses which side of the wall to end up on, unless the creature is {@condition incapacitated}. The creature then makes a DC 17 Dexterity saving throw, taking 35 ({@damage 10d6}) cold damage on a failed save, or half as much damage on a successful one.",
-						"The wall lasts for 1 minute or until the devil is {@condition incapacitated} or dies. The wall can be damaged and breached; each 10-foot section has AC 5, 30 hit points, vulnerability to fire damage, and immunity to acid, cold, necrotic, poison, and psychic damage. If a section is destroyed, it leaves behind a sheet of frigid air in the space the wall occupied. Whenever a creature finishes moving through the frigid air on a turn, willingly or otherwise, the creature must make a DC 17 Constitution saving throw, taking 17 ({@damage 5d6}) cold damage on a failed save, or half as much damage on a successful one. The frigid air dissipates when the rest of the wall vanishes."
+						"冰魔在距離它60呎內且它所能看見的一處固體表面用魔法形成一道不透光的寒冰之牆。這道牆有1呎厚，且呈現最多30呎長，10呎寬，或形成一個直徑最多20呎的半球圓頂。",
+						"當這道牆出現時，每個在冰牆所在空間的生物都將被沿著最短路徑推出牆壁。除非該生物處於{@condition 無力}狀態，否則該生物可以選擇要在牆的哪一側落地。該生物接著進行一次DC 17的敏捷豁免，豁免失敗將受到35 ({@damage 10d6})寒冰傷害，豁免成功則只受到一半的傷害。",
+						"這道牆會持續存在長達1分鐘，或直到冰魔陷入{@condition 無力}狀態或死亡。這道牆可以被傷害並因此損壞；每10呎邊長的區塊具有AC 5和30點生命值，對火焰易傷，且免疫於酸蝕、寒冰、死靈、毒素、和精神傷害。若其中一個區塊被摧毀，它將在該牆壁原本佔據的空間留下一層刺骨寒氣。每當一個生物在一個回合移動穿過該層寒氣並結束移動，無論自願與否，該生物都必須進行一次DC 17的體質豁免，豁免失敗將受到17 ({@damage 5d6})寒冰傷害，豁免成功則只受到一半的傷害。這層寒氣將在這整座牆消失時一併消散。"
 					]
 				}
 			],
@@ -24574,7 +24574,7 @@
 			]
 		},
 		{
-			"name": "Ice Devil Spear",
+			"name": "冰魔矛兵", "ENG_name": "Ice Devil Spear",
 			"size": "L",
 			"type": {
 				"type": "fiend",
@@ -24640,13 +24640,13 @@
 				{
 					"name": "魔鬼視界",
 					"entries": [
-						"魔法黑暗並不會阻礙devil的黑暗視覺。"
+						"魔法黑暗並不會阻礙冰魔的黑暗視覺。"
 					]
 				},
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The devil 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"冰魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
@@ -24654,39 +24654,39 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The devil makes two attacks: one with its spear and one with its tail."
+						"冰魔進行二次攻擊：一次冰矛，一次尾擊。"
 					]
 				},
 				{
-					"name": "Ice Spear",
+					"name": "冰矛",
 					"entries": [
-						"{@atk mw} 命中{@hit 10}，觸及10呎，單一目標。{@h}14 ({@damage 2d8 + 5}) piercing damage plus 10 ({@damage 3d6}) cold damage. If the target is a creature, it must succeed on a DC 15 Constitution saving throw, or for 1 minute, its speed is reduced by 10 feet; it can take either an action or a bonus action on each of its turns, not both; and it can't take reactions. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk mw} 命中{@hit 10}，觸及10呎，單一目標。{@h}14 ({@damage 2d8 + 5})穿刺傷害加 10 ({@damage 3d6})寒冰傷害。若目標為一個生物，則它必須成功通過一次DC 15的體質豁免，否則在1分鐘內，它的移動速度將被減少10呎；在它的每個回合只能使用一個動作或一個附贈動作，而不能在同一回合使用兩者；且它無法採取反應。目標可以在它的每個回合結束時重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。"
 					]
 				},
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5}) piercing damage plus 10 ({@damage 3d6}) cold damage."
+						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5})穿刺傷害加 10 ({@damage 3d6})寒冰傷害。"
 					]
 				},
 				{
 					"name": "爪抓",
 					"entries": [
-						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}10 ({@damage 2d4 + 5}) slashing damage plus 10 ({@damage 3d6}) cold damage."
+						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}10 ({@damage 2d4 + 5})劈砍傷害加 10 ({@damage 3d6})寒冰傷害。"
 					]
 				},
 				{
 					"name": "尾擊",
 					"entries": [
-						"{@atk mw} 命中{@hit 10}，觸及10呎，單一目標。{@h}12 ({@damage 2d6 + 5}) bludgeoning damage plus 10 ({@damage 3d6}) cold damage."
+						"{@atk mw} 命中{@hit 10}，觸及10呎，單一目標。{@h}12 ({@damage 2d6 + 5})鈍擊傷害加 10 ({@damage 3d6})寒冰傷害。"
 					]
 				},
 				{
-					"name": "Wall of Ice",
+					"name": "冰牆{@recharge}",
 					"entries": [
-						"The devil magically forms an opaque wall of ice on a solid surface it can see within 60 feet of it. The wall is 1 foot thick and up to 30 feet long and 10 feet high, or it's a hemispherical dome up to 20 feet in diameter.",
-						"When the wall appears, each creature in its space is pushed out of it by the shortest route. The creature chooses which side of the wall to end up on, unless the creature is {@condition incapacitated}. The creature then makes a DC 17 Dexterity saving throw, taking 35 ({@damage 10d6}) cold damage on a failed save, or half as much damage on a successful one.",
-						"The wall lasts for 1 minute or until the devil is {@condition incapacitated} or dies. The wall can be damaged and breached; each 10-foot section has AC 5, 30 hit points, vulnerability to fire damage, and immunity to acid, cold, necrotic, poison, and psychic damage. If a section is destroyed, it leaves behind a sheet of frigid air in the space the wall occupied. Whenever a creature finishes moving through the frigid air on a turn, willingly or otherwise, the creature must make a DC 17 Constitution saving throw, taking 17 ({@damage 5d6}) cold damage on a failed save, or half as much damage on a successful one. The frigid air dissipates when the rest of the wall vanishes."
+						"冰魔在距離它60呎內且它所能看見的一處固體表面用魔法形成一道不透光的寒冰之牆。這道牆有1呎厚，且呈現最多30呎長，10呎寬，或形成一個直徑最多20呎的半球圓頂。",
+						"當這道牆出現時，每個在冰牆所在空間的生物都將被沿著最短路徑推出牆壁。除非該生物處於{@condition 無力}狀態，否則該生物可以選擇要在牆的哪一側落地。該生物接著進行一次DC 17的敏捷豁免，豁免失敗將受到35 ({@damage 10d6})寒冰傷害，豁免成功則只受到一半的傷害。",
+						"這道牆會持續存在長達1分鐘，或直到冰魔陷入{@condition 無力}狀態或死亡。這道牆可以被傷害並因此損壞；每10呎邊長的區塊具有AC 5和30點生命值，對火焰易傷，且免疫於酸蝕、寒冰、死靈、毒素、和精神傷害。若其中一個區塊被摧毀，它將在該牆壁原本佔據的空間留下一層刺骨寒氣。每當一個生物在一個回合移動穿過該層寒氣並結束移動，無論自願與否，該生物都必須進行一次DC 17的體質豁免，豁免失敗將受到17 ({@damage 5d6})寒冰傷害，豁免成功則只受到一半的傷害。這層寒氣將在這整座牆消失時一併消散。"
 					]
 				}
 			],
@@ -32965,7 +32965,7 @@
 			]
 		},
 		{
-			"name": "Pit Fiend",
+			"name": "深獄煉魔", "name": "Pit Fiend",
 			"size": "L",
 			"type": {
 				"type": "fiend",
