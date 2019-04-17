@@ -13590,7 +13590,7 @@
 			]
 		},
 		{
-			"name": "Dryad",
+			"name": "樹精", "ENG_name": "Dryad",
 			"size": "M",
 			"type": "fey",
 			"source": "MM",
@@ -13601,7 +13601,7 @@
 				11,
 				{
 					"ac": 16,
-					"condition": "with {@spell 樹膚術}",
+					"condition": "使用{@spell 樹膚術}時",
 					"braces": true
 				}
 			],
@@ -13624,25 +13624,25 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 14,
-			"languages": "Elvish, Sylvan",
+			"languages": "精靈語、木族語",
 			"cr": "1",
 			"trait": [
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The dryad 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"樹精在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Speak with Beasts and Plants",
+					"name": "動植物交談", "tENG_name": "Speak with Beasts and Plants",
 					"entries": [
-						"The dryad can communicate with beasts and plants as if they shared a language."
+						"樹精可以與野獸和植物溝通，就如同它們都掌握了相同的語言。"
 					]
 				},
 				{
-					"name": "Tree Stride",
+					"name": "樹躍", "tENG_name": "Tree Stride",
 					"entries": [
-						"Once on her turn, the dryad can use 10 ft. of her movement to step magically into one living tree within her reach and emerge from a second living tree within 60 feet of the first tree, appearing in an unoccupied space within 5 feet of the second tree. Both trees must be large or bigger."
+						"在她的回合一次，樹精可以使用她的10呎移動速度以魔法性地步入一棵活體樹木，並從距離該樹木60呎內的另一棵活體樹木中出現，現身於距離第二棵樹木5呎內的一處未被佔據空間。這兩棵樹木都必須為大型或更大。"
 					]
 				}
 			],
@@ -13650,15 +13650,15 @@
 				{
 					"name": "棍棒",
 					"entries": [
-						"{@atk mw} {@hit 2} to hit ({@hit 6} to hit with shillelagh), reach 5 ft., one target. {@h}2 ({@damage 1d4}) bludgeoning damage, or 8 ({@damage 1d8 + 4}) bludgeoning damage with shillelagh."
+						"{@atk mw} 命中{@hit 2}(橡棍術時命中{@hit 6})，觸及5呎，單一目標。{@h}2 ({@damage 1d4})鈍擊傷害，或若使用橡棍術時則造成 8 ({@damage 1d8 + 4})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Fey Charm",
+					"name": "妖精魅惑", "tENG_name": "Fey Charm",
 					"entries": [
-						"The dryad targets one humanoid or beast that she can see within 30 feet of her. If the target can see the dryad, it must succeed on a DC 14 Wisdom saving throw or be magically {@condition charmed}. The {@condition charmed} creature regards the dryad as a trusted friend to be heeded and protected. Although the target isn't under the dryad's control, it takes the dryad's requests or actions in the most favorable way it can.",
-						"Each time the dryad or its allies do anything harmful to the target, it can repeat the saving throw, ending the effect on itself on a success. Otherwise, the effect lasts 24 hours or until the dryad dies, is on a different plane of existence from the target, or ends the effect as a bonus action. If a target's saving throw is successful, the target is immune to the dryad's Fey Charm for the next 24 hours.",
-						"The dryad can have no more than one humanoid and up to three beasts {@condition charmed} at a time."
+						"樹精選擇一個距離她30呎內且她所能看見的類人生物或野獸做為目標。若該目標可以看見樹精，則它必須成功通過一次DC 14的睿知豁免，否則被魔法{@condition 魅惑}。被{@condition 魅惑}的生物將視樹精為一名可信任的朋友，且需要被順從和保護。儘管目標並不處於樹精的控制下，它仍然會盡可能以對其有利的方式執行樹精的要求或行動。",
+						"每當樹精或她的盟友做出任何對目標有害的行為，目標將可以重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。除此之外，這個效果將持續24小時，或直到樹精死亡、她與目標處於不同的存在位面、或以一個附贈動作結束這個效果。若目標豁免成功，目標將在接下來的24小時內免疫該樹精的妖精魅惑。",
+						"樹精同時只能{@condition 魅惑}不超過一個類人生物和最多三個野獸。"
 					]
 				}
 			],
@@ -13667,7 +13667,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The dryad's innate spellcasting ability is Charisma (spell save DC 14). The dryad can innately cast the following spells, requiring no material components:"
+						"樹精的天生施法屬性為魅力（法術豁免DC 14）。樹精天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 德魯伊伎倆}"
@@ -33029,21 +33029,21 @@
 			"cr": "20",
 			"trait": [
 				{
-					"name": "Fear Aura",
+					"name": "恐懼靈氣", "tENG_name": "Fear Aura",
 					"entries": [
-						"Any creature hostile to the pit fiend that starts its turn within 20 feet of the pit fiend must make a DC 21 Wisdom saving throw, unless the pit fiend is {@condition incapacitated}. On a failed save, the creature is {@condition frightened} until the start of its next turn. If a creature's saving throw is successful, the creature is immune to the pit fiend's Fear Aura for the next 24 hours."
+						"除非深獄煉魔處於{@condition 無力}狀態，否則任何對深獄煉魔具有敵意，且在距離深獄煉魔20呎內開始它回合的生物必須進行一次DC 21的睿知豁免。若豁免失敗，該生物將陷入{@condition 恐懼}直到它的下個回合開始。若豁免成功，則該生物將在接下來的24小時內免疫於該深獄煉魔的恐懼靈氣。"
 					]
 				},
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The pit fiend 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"深獄煉魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
 					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The pit fiend's的武器攻擊視作魔法攻擊。"
+						"深獄煉魔的武器攻擊視作魔法攻擊。"
 					]
 				}
 			],
@@ -33051,13 +33051,13 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The pit fiend makes four attacks: one with its bite, one with its claw, one with its mace, and one with its tail."
+						"深獄煉魔進行四次攻擊：一次啃咬，一次爪抓，一次硬頭錘，和一次尾擊。"
 					]
 				},
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 14}，觸及5呎，單一目標。{@h}22 ({@damage 4d6 + 8})穿刺傷害。 The target must succeed on a DC 21 Constitution saving throw or become {@condition poisoned}. While {@condition poisoned} in this way, the target can't regain hit points, and it takes 21 ({@damage 6d6}) poison damage at the start of each of its turns. The {@condition poisoned} target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk mw} 命中{@hit 14}，觸及5呎，單一目標。{@h}22 ({@damage 4d6 + 8})穿刺傷害。目標必須成功通過一次DC 21的體質豁免，否則陷入{@condition 中毒}狀態。當因此而{@condition 中毒}時，目標無法回復生命值，且會在它的每個回合開始時受到21 ({@damage 6d6})毒素傷害。{@condition 中毒}的目標可以在它的每個回合結束時重複進行這個豁免檢定，若豁免成功則結束這個效果對它的影響。"
 					]
 				},
 				{
@@ -33067,9 +33067,9 @@
 					]
 				},
 				{
-					"name": "Mace",
+					"name": "硬頭錘",
 					"entries": [
-						"{@atk mw} 命中{@hit 14}，觸及10呎，單一目標。{@h}15 ({@damage 2d6 + 8}) bludgeoning damage plus 21 ({@damage 6d6}) fire damage."
+						"{@atk mw} 命中{@hit 14}，觸及10呎，單一目標。{@h}15 ({@damage 2d6 + 8})鈍擊傷害加 21 ({@damage 6d6})火焰傷害。"
 					]
 				},
 				{
@@ -33084,7 +33084,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The pit fiend's spellcasting ability is Charisma (spell save DC 21). The pit fiend can innately cast the following spells, requiring no material components:"
+						"深獄煉魔的天生施法屬性為魅力（法術豁免DC 21）。深獄煉魔天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 偵測魔法}",
@@ -36379,7 +36379,7 @@
 			]
 		},
 		{
-			"name": "Satyr",
+			"name": "薩特羊人", "ENG_name": "Satyr",
 			"size": "M",
 			"type": "fey",
 			"source": "MM",
@@ -36414,19 +36414,19 @@
 				"stealth": "+5"
 			},
 			"passive": 12,
-			"languages": "Common, Elvish, Sylvan",
+			"languages": "通用語、精靈語、木族語",
 			"cr": "1/2",
 			"trait": [
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The satyr 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"薩特羊人在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Ram",
+					"name": "衝撞",
 					"entries": [
 						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}6 ({@damage 2d4 + 1})鈍擊傷害。"
 					]
@@ -36447,34 +36447,34 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Satyr Pipes",
+					"name": "薩特羊人排笛",
 					"entries": [
-						"A satyr might carry panpipes that it can play to create magical effects. Usually, only one satyr in a group carries such pipes. If a satyr has pipes, it gains the following additional action option.",
+						"一個薩特羊人可能會攜帶一個能夠演奏並創造魔法效果的排笛。通常來說，一個團體中只會有一個薩特羊人攜帶這種排笛。若一個薩特羊人擁有此排笛，它將獲得下列的額外動作項。",
 						{
 							"type": "entries",
-							"name": "Panpipes",
+							"name": "潘神排笛", "tENG_name": "Panpipes",
 							"entries": [
-								"The satyr plays its pipes and chooses one of the following magical effects: a charming melody, a frightening strain, or a gentle lullaby. Any creature within 60 feet of the satyr that can hear the pipes must succeed on a DC 13 Wisdom saving throw or be affected as described below. Other satyrs and creature that can't be {@condition charmed} are unaffected",
-								"An affected creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to these panpipes for the next 24 hours.",
+								"薩特羊人演奏它的排笛，並從下列魔法效果中選擇一種：魅惑旋律、驚恐音聲、或柔美催眠曲。任何距離薩特羊人60呎內且可以聽到排笛聲的生物都必須成功通過一次DC 13的睿知豁免，否則被下述的效果影響。其他薩特羊人和不會被{@condition 魅惑}的生物將不會受到任何影響。",
+								"一個受影響的生物可以在它的每個回合結束時重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。若該生物豁免成功，或該效果對它的影響結束，則該生物將在接下來的24小時內免疫於這些潘神排笛的效果。",
 								{
 									"type": "variantSub",
-									"name": "Charming Melody",
+									"name": "魅惑旋律", "tENG_name": "Charming Melody",
 									"entries": [
-										"The creature is {@condition charmed} by the satyr for 1 minute. If the satyr or any of its companions harms the creature, the effect on it ends immediately."
+										"該生物被薩特羊人{@condition 魅惑}長達1分鐘。若薩特羊人或它的任何同伴傷害了該生物，這個效果將立刻結束。"
 									]
 								},
 								{
 									"type": "variantSub",
-									"name": "Frightening Strain",
+									"name": "驚恐音聲", "tENG_name": "Frightening Strain",
 									"entries": [
-										"The creature is {@condition frightened} for 1 minute."
+										"該生物陷入{@condition 恐懼}狀態長達1分鐘。"
 									]
 								},
 								{
 									"type": "variantSub",
-									"name": "Gentle Lullaby",
+									"name": "柔美催眠曲", "tENG_name": "Gentle Lullaby",
 									"entries": [
-										"The creature falls asleep and is {@condition unconscious} for 1 minute. The effect ends if the creature takes damage or if someone takes an action to shake the creature awake."
+										"該生物陷入沉睡並處於{@condition 昏迷}狀態長達1分鐘。這個效果會在該生物受到傷害，或當其他人採取一個動作將該生物搖醒時結束。"
 									]
 								}
 							]
