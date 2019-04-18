@@ -2543,7 +2543,7 @@ Renderer.monster = {
 		function search () {
 			return monList.find(it => {
 				Renderer.monster._mergeCache[UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_BESTIARY](it)] = it;
-				return it.name === mon._copy.name && it.source === mon._copy.source;
+				return (it.name === mon._copy.name || it.ENG_name === mon._copy.name) && it.source === mon._copy.source;
 			});
 		}
 
@@ -2598,6 +2598,10 @@ Renderer.monster = {
 			delete copyMeta._trait;
 		}
 
+		if(!copyFrom){
+			console.warn("not found", copyTo._copy);
+			return ;
+		}
 		// copy over required values
 		Object.keys(copyFrom).forEach(k => {
 			if (copyTo[k] === null) return delete copyTo[k];
@@ -2640,10 +2644,13 @@ Renderer.monster = {
 
 		function doMod_replaceArr (modInfo, prop) {
 			doEnsureArray(modInfo, "with");
-			const ixOld = copyTo[prop].findIndex(it => it.name === modInfo.replace);
+			const ixOld = copyTo[prop].findIndex(it => (it.name === modInfo.replace || it.tENG_name === modInfo.replace));
 			if (~ixOld) {
 				copyTo[prop].splice(ixOld, 1, ...modInfo.with);
-			} else throw new Error(`Could not find "${prop}" item with name "${modInfo.replace}" to replace`);
+			} else{
+				console.warn("cannot find "+prop+" item with name "+modInfo.replace+" to replace");
+				// throw new Error(`Could not find "${prop}" item with name "${modInfo.replace}" to replace`);
+			}
 		}
 
 		function doMod_removeArr (modInfo, prop) {
