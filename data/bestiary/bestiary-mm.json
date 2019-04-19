@@ -438,7 +438,7 @@
 					]
 				},
 				{
-					"name": "Life Drain",
+					"name": "生命吸取", "tENG_name": "Life Drain",
 					"entries": [
 						"The demilich targets up to three creatures that it can see within 10 feet of it. Each target must succeed on a DC 19 Constitution saving throw or take 21 ({@damage 6d6}) necrotic damage, and the demilich regains hit points equal to the total damage dealt to all targets."
 					]
@@ -9007,7 +9007,7 @@
 			]
 		},
 		{
-			"name": "Centaur",
+			"name": "半人馬", "ENG_name": "Centaur",
 			"size": "L",
 			"type": "monstrosity",
 			"source": "MM",
@@ -9037,13 +9037,13 @@
 				"survival": "+3"
 			},
 			"passive": 13,
-			"languages": "Elvish, Sylvan",
+			"languages": "精靈語、木族語",
 			"cr": "2",
 			"trait": [
 				{
 					"name": "衝鋒",
 					"entries": [
-						"若centaur向著一個目標直線移動至少30呎並接著在同回合以一次pike攻擊命中它，則目標將受到額外的10 ({@damage 3d6})穿刺傷害。"
+						"若半人馬向著一個目標直線移動至少30呎並接著在同回合以一次長柄槍攻擊命中它，則目標將受到額外的10 ({@damage 3d6})穿刺傷害。"
 					]
 				}
 			],
@@ -9051,17 +9051,17 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The centaur makes two attacks: one with its pike and one with its hooves or two with its longbow."
+						"半人馬進行二次攻擊：一次長柄槍，一次蹄擊，或者二次長弓。"
 					]
 				},
 				{
-					"name": "Pike",
+					"name": "長柄槍", "tENG_name": "Pike",
 					"entries": [
 						"{@atk mw} 命中{@hit 6}，觸及10呎，單一目標。{@h}9 ({@damage 1d10 + 4})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Hooves",
+					"name": "蹄擊", "tENG_name": "Hooves",
 					"entries": [
 						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}11 ({@damage 2d6 + 4})鈍擊傷害。"
 					]
@@ -9337,7 +9337,7 @@
 			]
 		},
 		{
-			"name": "Chimera",
+			"name": "奇美拉", "ENG_name": "Chimera",
 			"size": "L",
 			"type": "monstrosity",
 			"source": "MM",
@@ -9372,13 +9372,13 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 18,
-			"languages": "understands Draconic but can't speak",
+			"languages": "理解龍語，但不會說",
 			"cr": "6",
 			"action": [
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The chimera makes three attacks: one with its bite, one with its horns, and one with its claws. When its fire breath is available, it can use the breath in place of its bite or horns."
+						"奇美拉進行三次攻擊：一次啃咬，一次角擊，一次爪抓。若它能夠使用火焰吐息，則它可以使用吐息以代替啃咬或角擊。"
 					]
 				},
 				{
@@ -9388,7 +9388,7 @@
 					]
 				},
 				{
-					"name": "Horns",
+					"name": "角擊",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}10 ({@damage 1d12 + 4})鈍擊傷害。"
 					]
@@ -9400,9 +9400,9 @@
 					]
 				},
 				{
-					"name": "Fire Breath {@recharge 5}",
+					"name": "火焰吐息{@recharge 5}",
 					"entries": [
-						"The dragon head exhales fire in a 15-foot cone. Each creature in that area must make a DC 15 Dexterity saving throw, taking 31 ({@damage 7d8}) fire damage on a failed save, or half as much damage on a successful one."
+						"龍頭吐出一道15呎錐形的烈焰。每個在吐息範圍內的生物都必須進行一次DC 15的敏捷豁免，豁免失敗則受到31 ({@damage 7d8})火焰傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
@@ -11841,7 +11841,7 @@
 					]
 				},
 				{
-					"name": "Life Drain",
+					"name": "生命吸取", "tENG_name": "Life Drain",
 					"entries": [
 						"The demilich targets up to three creatures that it can see within 10 feet of it. Each target must succeed on a DC 19 Constitution saving throw or take 21 ({@damage 6d6}) necrotic damage, and the demilich regains hit points equal to the total damage dealt to all targets."
 					]
@@ -20980,7 +20980,7 @@
 			]
 		},
 		{
-			"name": "Gorgon",
+			"name": "石化牛(戈爾貢)", "ENG_name": "Gorgon",
 			"size": "L",
 			"type": "monstrosity",
 			"source": "MM",
@@ -21021,27 +21021,27 @@
 				{
 					"name": "踐踏衝鋒",
 					"entries": [
-						"若gorgon向著一個生物直線移動至少20呎並接著在同回合以一次gore攻擊命中它，則目標必須成功通過一次DC 16的力量豁免，否則被擊倒{@condition 伏地}。若目標{@condition 伏地}，則gorgon能夠以一次附贈動作對它進行一次hooves攻擊。"
+						"若石化牛向著一個生物直線移動至少20呎並接著在同回合以一次角撞攻擊命中它，則目標必須成功通過一次DC 16的力量豁免，否則被擊倒{@condition 伏地}。若目標{@condition 伏地}，則石化牛能夠以一次附贈動作對它進行一次蹄擊攻擊。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Gore",
+					"name": "角撞", "tENG_name": "Gore",
 					"entries": [
 						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}18 ({@damage 2d12 + 5})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Hooves",
+					"name": "蹄擊", "tENG_name": "Hooves",
 					"entries": [
 						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}16 ({@damage 2d10 + 5})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Petrifying Breath {@recharge 5}",
+					"name": "石化吐息{@recharge 5}",
 					"entries": [
-						"The gorgon exhales petrifying gas in a 30-foot cone. Each creature in that area must succeed on a DC 13 Constitution saving throw. On a failed save, a target begins to turn to stone and is {@condition 束縛}. The {@condition 束縛} target must repeat the saving throw at the end of its next turn. On a success, the effect ends on the target. On a failure, the target is {@condition petrified} until freed by the  {@spell greater restoration} spell or other magic."
+						"石化牛吐出一道30呎錐形的石化毒氣。每個在吐息範圍內的生物必須成功通過一次DC 13的體質豁免。若豁免失敗，目標的身體將開始變成石頭並被{@condition 束縛}。被{@condition 束縛}的目標必須在它的下個回合結束時重複進行這個豁免檢定。若豁免成功，則結束這個效果對目標的影響。若豁免失敗，則目標將被{@condition 石化}，直到被{@spell 高等復原術}法術或其他魔法給解放。"
 					]
 				}
 			],
@@ -24283,7 +24283,7 @@
 			]
 		},
 		{
-			"name": "Hydra",
+			"name": "海德拉", "ENG_name": "Hydra",
 			"size": "H",
 			"type": "monstrosity",
 			"source": "MM",
@@ -24322,27 +24322,27 @@
 				{
 					"name": "屏息",
 					"entries": [
-						"The hydra可以屏住牠的呼吸長達1小時。"
+						"海德拉可以屏住它的呼吸長達1小時。"
 					]
 				},
 				{
-					"name": "Multiple Heads",
+					"name": "多頭", "tENG_name": "Multiple Heads",
 					"entries": [
-						"The hydra has five heads. While it has more than one head, the hydra has advantage on saving throws against being {@condition blinded}, {@condition charmed}, {@condition deafened}, {@condition frightened}, {@condition stunned}, and knocked {@condition 昏迷}.",
-						"Whenever the hydra takes 25 or more damage in a single turn, one of its heads dies. If all its heads die, the hydra dies.",
-						"At the end of its turn, it grows two heads for each of its heads that died since its last turn, unless it has taken fire damage since its last turn. The hydra regains 10 hit points for each head regrown in this way."
+						"海德拉擁有五顆頭。當它有超過一顆頭時，海德拉在對抗{@condition 目盲}、{@condition 魅惑}、{@condition 耳聾}、{@condition 恐懼}、{@condition 震懾}、和被擊暈{@condition 昏迷}的豁免檢定中具有優勢。",
+						"每當海德拉在單一回合中受到25點或更多的傷害，它的其中一顆頭將會死亡。若它所有的頭都死亡，則海德拉也會隨之死亡。",
+						"在它的回合結束時，除非它從它的上個回合至今曾受到火焰傷害，否則從它的上個回合以來，它每有一顆頭死亡，就會再有二顆新的頭重新長出。每有一顆頭透過這個方式再生，海德拉都將回復10點生命值。"
 					]
 				},
 				{
-					"name": "Reactive Heads",
+					"name": "多頭反應", "tENG_name": "Reactive Heads",
 					"entries": [
-						"For each head the hydra has beyond one, it gets an extra reaction that can be used only for opportunity attacks."
+						"海德拉的頭每超過一顆，它就會得到一個額外的反應。這個額外的反應只能用於進行藉機攻擊。"
 					]
 				},
 				{
-					"name": "Wakeful",
+					"name": "警醒", "tENG_name": "Wakeful",
 					"entries": [
-						"While the hydra sleeps, at least one of its heads is awake."
+						"當海德拉睡著時，它至少有一顆頭會保持清醒。"
 					]
 				}
 			],
@@ -24350,7 +24350,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The hydra makes as many bite attacks as it has heads."
+						"海德拉進行多次啃咬攻擊，其次數等同於它頭的數量。"
 					]
 				},
 				{
@@ -30035,7 +30035,7 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 14,
-			"languages": "the languages it knew in life",
+			"languages": "它生前所知的語言",
 			"cr": {
 				"cr": "15",
 				"lair": "16"
@@ -32804,7 +32804,7 @@
 			]
 		},
 		{
-			"name": "Phase Spider",
+			"name": "相位蜘蛛", "ENG_name": "Phase Spider",
 			"size": "L",
 			"type": "monstrosity",
 			"source": "MM",
@@ -32841,21 +32841,21 @@
 			"cr": "3",
 			"trait": [
 				{
-					"name": "Ethereal Jaunt",
+					"name": "乙太漫旅", "tENG_name": "Ethereal Jaunt",
 					"entries": [
-						"As a bonus action, the spider can magically shift from the Material Plane to the Ethereal Plane, or vice versa."
+						"以一個附贈動作，相位蜘蛛可以用魔法從物質位面轉移到乙太位面，或者反過來從乙太位面轉移到物質位面。"
 					]
 				},
 				{
 					"name": "蛛行",
 					"entries": [
-						"spider可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
+						"相位蜘蛛可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
 					]
 				},
 				{
 					"name": "蛛網行者",
 					"entries": [
-						"The spider 無視蛛網所造成的移動限制。"
+						"相位蜘蛛無視蛛網所造成的移動限制。"
 					]
 				}
 			],
@@ -32863,7 +32863,7 @@
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一生物。{@h}7 ({@damage 1d10 + 2}) piercing damage, and the target must make a DC 11 Constitution saving throw, taking 18 ({@damage 4d8}) poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but {@condition 中毒} for 1 hour, even after regaining hit points, and is {@condition 麻痺} while {@condition 中毒} in this way."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一生物。{@h}7 ({@damage 1d10 + 2})穿刺傷害，且目標必須進行一次DC 11的體質豁免。若豁免失敗則受到18 ({@damage 4d8})毒素傷害，豁免成功則只受到一半的傷害。若此毒素傷害將目標的生命值歸零，則目標的傷勢穩定，但陷入{@condition 中毒}狀態長達1小時，這個狀態即使在目標回復生命值之後仍會持續。且目標若因此而{@condition 中毒}，則將連帶陷入{@condition 麻痺}狀態。"
 					]
 				}
 			],
@@ -35299,7 +35299,7 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 13,
-			"languages": "the languages it knew in life",
+			"languages": "它生前所知的語言",
 			"cr": "5",
 			"trait": [
 				{
@@ -41896,7 +41896,7 @@
 					]
 				},
 				{
-					"name": "Hooves",
+					"name": "蹄擊", "tENG_name": "Hooves",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}11 ({@damage 2d6 + 4})鈍擊傷害。"
 					]
@@ -41926,7 +41926,7 @@
 			},
 			"legendary": [
 				{
-					"name": "Hooves",
+					"name": "蹄擊", "tENG_name": "Hooves",
 					"entries": [
 						"The unicorn makes one attack with its hooves."
 					]
@@ -42052,7 +42052,7 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 17,
-			"languages": "the languages it knew in life",
+			"languages": "它生前所知的語言",
 			"cr": "13",
 			"trait": [
 				{
@@ -42227,7 +42227,7 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 13,
-			"languages": "the languages it knew in life",
+			"languages": "它生前所知的語言",
 			"cr": "5",
 			"trait": [
 				{
@@ -42352,7 +42352,7 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 17,
-			"languages": "the languages it knew in life",
+			"languages": "它生前所知的語言",
 			"cr": "15",
 			"trait": [
 				{
@@ -42591,7 +42591,7 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 17,
-			"languages": "the languages it knew in life",
+			"languages": "它生前所知的語言",
 			"cr": "15",
 			"trait": [
 				{
@@ -44484,7 +44484,7 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 12,
-			"languages": "the languages it knew in life",
+			"languages": "它生前所知的語言",
 			"cr": "2",
 			"trait": [
 				{
@@ -44876,7 +44876,7 @@
 			]
 		},
 		{
-			"name": "Wraith",
+			"name": "縛靈", "ENG_name": "Wraith",
 			"size": "M",
 			"type": "undead",
 			"source": "MM",
@@ -44936,33 +44936,33 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 12,
-			"languages": "the languages it knew in life",
+			"languages": "它生前所知的語言",
 			"cr": "5",
 			"trait": [
 				{
 					"name": "虛體移動", "tENG_name": "Incorporeal Movement",
 					"entries": [
-						"The wraith can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
+						"縛靈可以把其它生物和物體視作困難地形移動穿過它們。若它在一個物體內結束它的回合，則它將受到5 ({@damage 1d10})力場傷害。"
 					]
 				},
 				{
 					"name": "日光敏感",
 					"entries": [
-						"當處於日光照耀下時，wraith在攻擊檢定，以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
+						"當處於日光照耀下時，縛靈在攻擊檢定，以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Life Drain",
+					"name": "生命吸取", "tENG_name": "Life Drain",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一生物。{@h}21 ({@damage 4d8 + 3}) necrotic damage. The target must succeed on a DC 14 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一生物。{@h}21 ({@damage 4d8 + 3})死靈傷害。目標必須成功通過一次DC 14的體質豁免，否則它的生命值最大值將減少等同於所受傷害的數值。這個減損持續直到該生物完成一次長休。若目標因為這個效果而導致生命值最大值歸零，則目標死亡。"
 					]
 				},
 				{
-					"name": "Create Specter",
+					"name": "創造幽靈", "tENG_name": "Create Specter",
 					"entries": [
-						"The wraith targets a humanoid within 10 feet of it that has been dead for no longer than 1 minute and died violently. The target's spirit rises as a {@creature specter} in the space of its corpse or in the nearest unoccupied space. The {@creature specter} is under the wraith's control. The wraith can have no more than seven specters under its control at one time."
+						"縛靈選擇一個距離它10呎內，一個因暴力而死，且死亡時間不超過1分鐘的類人生物做為目標。目標的靈魂將做為一個{@creature 幽靈}被喚起，出現在它屍體所在的空間或最近一處未被佔據空間。這個{@creature 幽靈}處於縛靈的控制之下。縛靈同時最多只能控制不超過七個{@creature 幽靈}。"
 					]
 				}
 			],
