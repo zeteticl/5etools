@@ -4364,7 +4364,7 @@
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell heroes' feast}"
+								"{@spell 英雄宴}"
 							]
 						}
 					},
@@ -6310,7 +6310,7 @@
 				{
 					"name": "Petrifying Gaze",
 					"entries": [
-						"If a creature starts its turn within 30 feet of the basilisk and the two of them can see each other, the basilisk can force the creature to make a DC 12 Constitution saving throw if the basilisk isn't {@condition incapacitated}. On a failed save, the creature magically begins to turn to stone and is {@condition 束縛}. It must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is {@condition petrified} until freed by the  {@spell greater restoration} spell or other magic.",
+						"If a creature starts its turn within 30 feet of the basilisk and the two of them can see each other, the basilisk can force the creature to make a DC 12 Constitution saving throw if the basilisk isn't {@condition 無力}. On a failed save, the creature magically begins to turn to stone and is {@condition 束縛}. It must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is {@condition petrified} until freed by the  {@spell greater restoration} spell or other magic.",
 						"A creature that isn't surprised can avert its eyes to avoid the saving throw at the start of its turn. If it does so, it can't see the basilisk until the start of its next turn, when it can avert its eyes again. If it looks at the basilisk in the meantime, it must immediately make the save.",
 						"If the basilisk sees its reflection within 30 feet of it in bright light, it mistakes itself for a rival and targets itself with its gaze."
 					]
@@ -6696,7 +6696,7 @@
 						"3. Fear Ray. The targeted creature must succeed on a DC 16 Wisdom saving throw or be {@condition frightened} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
 						"4. Slowing Ray. The targeted creature must succeed on a DC 16 Dexterity saving throw. On a failed save, the target's speed is halved for 1 minute. In addition, the creature can't take reactions, and it can take either an action or a bonus action on its turn, not both. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
 						"5. Enervation Ray. The targeted creature must make a DC 16 Constitution saving throw, taking 36 ({@damage 8d8}) necrotic damage on a failed save, or half as much damage on a successful one.",
-						"6. Telekinetic Ray. If the target is a creature, it must succeed on a DC 16 Strength saving throw or the beholder moves it up to 30 feet in any direction. It is {@condition 束縛} by the ray's telekinetic grip until the start of the beholder's next turn or until the beholder is {@condition incapacitated}.",
+						"6. Telekinetic Ray. If the target is a creature, it must succeed on a DC 16 Strength saving throw or the beholder moves it up to 30 feet in any direction. It is {@condition 束縛} by the ray's telekinetic grip until the start of the beholder's next turn or until the beholder is {@condition 無力}.",
 						"If the target is an object weighing 300 pounds or less that isn't being worn or carried, it is moved up to 30 feet in any direction. The beholder can also exert fine control on objects with this ray, such as manipulating a simple tool or opening a door or a container.",
 						"7. Sleep Ray. The targeted creature must succeed on a DC 16 Wisdom saving throw or fall asleep and remain {@condition 昏迷} for 1 minute. The target awakens if it takes damage or another creature takes an action to wake it. This ray has no effect on constructs and undead.",
 						"8. Petrification Ray. The targeted creature must make a DC 16 Dexterity saving throw. On a failed save, the creature begins to turn to stone and is {@condition 束縛}. It must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is {@condition petrified} until freed by the  {@spell greater restoration} spell or other magic.",
@@ -11104,7 +11104,7 @@
 			]
 		},
 		{
-			"name": "Death Knight",
+			"name": "死亡騎士", "ENG_name": "Death Knight",
 			"size": "M",
 			"type": "undead",
 			"source": "MM",
@@ -11150,25 +11150,25 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 13,
-			"languages": "Abyssal, Common",
+			"languages": "深淵語、通用語",
 			"cr": "17",
 			"trait": [
 				{
-					"name": "Undead Nature",
+					"name": "不死本質", "tENG_name": "Undead Nature",
 					"entries": [
-						"A death knight doesn't require air, food, drink, or sleep."
+						"死亡騎士不需要呼吸、進食、飲水、或睡眠。"
 					]
 				},
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The death knight 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"死亡騎士在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Marshal Undead",
+					"name": "不死統帥", "tENG_name": "Marshal Undead",
 					"entries": [
-						"Unless the death knight is {@condition incapacitated}, it and undead creatures of its choice within 60 feet of it have advantage on saving throws against features that turn undead."
+						"除非死亡騎士陷入{@condition 無力}狀態，否則它和距離它60呎內它所選擇的不死生物，在對抗驅散不死能力時所進行的豁免檢定中具有優勢。"
 					]
 				}
 			],
@@ -11176,19 +11176,19 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The death knight makes three longsword attacks."
+						"死亡騎士進行三次長劍攻擊。"
 					]
 				},
 				{
 					"name": "長劍",
 					"entries": [
-						"{@atk mw} 命中{@hit 11}，觸及5呎，單一目標。{@h}9 ({@damage 1d8 + 5}) slashing damage, or 10 ({@damage 1d10 + 5}) slashing damage if used with two hands, plus 18 ({@damage 4d8}) necrotic damage."
+						"{@atk mw} 命中{@hit 11}，觸及5呎，單一目標。{@h}9 ({@damage 1d8 + 5})劈砍傷害，或若以雙手使用則造成 10 ({@damage 1d10 + 5})劈砍傷害，加上 18 ({@damage 4d8})死靈傷害。"
 					]
 				},
 				{
-					"name": "Hellfire Orb (1/Day)",
+					"name": "地獄火珠 (1/日)", "tENG_name": "Hellfire Orb",
 					"entries": [
-						"The death knight hurls a magical ball of fire that explodes at a point it can see within 120 feet of it. Each creature in a 20-foot-radius sphere centered on that point must make a DC 18 Dexterity saving throw. The sphere spreads around corners. A creature takes 35 ({@damage 10d6}) fire damage and 35 ({@damage 10d6}) necrotic damage on a failed save, or half as much damage on a successful one."
+						"死亡騎士投出一顆火焰法球並使其在距離它120呎內且它能看見的一點爆炸。每個在以該點為中心的20呎半徑球體範圍的生物都必須進行一次DC 18的敏捷豁免。這個球體範圍會繞過轉角。一個豁免失敗的生物將受到35 ({@damage 10d6})火焰傷害和35 ({@damage 10d6})死靈傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
@@ -11196,7 +11196,7 @@
 				{
 					"name": "格擋", "tENG_name": "Parry",
 					"entries": [
-						"The death knight adds 6 to its AC against one melee attack that would hit it. To do so, the death knight must see the attacker and be wielding a melee weapon."
+						"死亡騎士在一次近戰攻擊將要命中它時可以針對該次攻擊使它的AC增加6點。若要這麼做，死亡騎士必須要能看見攻擊者且正持用一把近戰武器。"
 					]
 				}
 			],
@@ -11205,15 +11205,15 @@
 				{
 					"name": "施法", "tENG_name": "Spellcasting",
 					"headerEntries": [
-						"The death knight is a 19th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 18, {@hit 10} to hit with spell attacks). It has the following paladin spells prepared:"
+						"死亡騎士是19級的施法者。它的施法屬性為魅力（法術豁免DC 18，法術攻擊命中{@hit 10}）。死亡騎士已準備了以下聖騎士法術："
 					],
 					"spells": {
 						"1": {
 							"slots": 4,
 							"spells": [
 								"{@spell 命令術}",
-								"{@spell compelled duel}",
-								"{@spell searing smite}"
+								"{@spell 強迫決鬥}",
+								"{@spell 熾炎斬}"
 							]
 						},
 						"2": {
@@ -11227,20 +11227,20 @@
 							"slots": 3,
 							"spells": [
 								"{@spell 解除魔法}",
-								"{@spell elemental weapon}"
+								"{@spell 元素武器}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
 								"{@spell 放逐術}",
-								"{@spell staggering smite}"
+								"{@spell 驚震斬}"
 							]
 						},
 						"5": {
 							"slots": 2,
 							"spells": [
-								"{@spell destructive wave} (necrotic)"
+								"{@spell 湮滅波}(死靈)"
 							]
 						}
 					},
@@ -11531,7 +11531,7 @@
 						"3. Fear Ray. The targeted creature must succeed on a DC 17 Wisdom saving throw or be {@condition frightened} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
 						"4. Slowing Ray. The targeted creature must succeed on a DC 17 Dexterity saving throw. On a failed save, the target's speed is halved for 1 minute. In addition, the creature can't take reactions, and it can take either an action or a bonus action on its turn, not both. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
 						"5. Enervation Ray. The targeted creature must make a DC 17 Constitution saving throw, taking 36 ({@damage 8d8}) necrotic damage on a failed save, or half as much damage on a successful one.",
-						"6. Telekinetic Ray. If the target is a creature, it must succeed on a DC 17 Strength saving throw or the death tyrant moves it up to 30 feet in any direction. It is {@condition 束縛} by the ray's telekinetic grip until the start of the death tyrant's next turn or until the death tyrant is {@condition incapacitated}.",
+						"6. Telekinetic Ray. If the target is a creature, it must succeed on a DC 17 Strength saving throw or the death tyrant moves it up to 30 feet in any direction. It is {@condition 束縛} by the ray's telekinetic grip until the start of the death tyrant's next turn or until the death tyrant is {@condition 無力}.",
 						"If the target is an object weighing 300 pounds or less that isn't being worn or carried, it is moved up to 30 feet in any direction. The death tyrant can also exert fine control on objects with this ray, such as manipulating a simple tool or opening a door or a container.",
 						"7. Sleep Ray. The targeted creature must succeed on a DC 17 Wisdom saving throw or fall asleep and remain {@condition 昏迷} for 1 minute. The target awakens if it takes damage or another creature takes an action to wake it. This ray has no effect on constructs and undead.",
 						"8. Petrification Ray. The targeted creature must make a DC 17 Dexterity saving throw. On a failed save, the creature begins to turn to stone and is {@condition 束縛}. It must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is {@condition petrified} until freed by the  {@spell greater restoration} spell or other magic.",
@@ -11809,7 +11809,7 @@
 			},
 			"trait": [
 				{
-					"name": "Undead Nature",
+					"name": "不死本質", "tENG_name": "Undead Nature",
 					"entries": [
 						"A demilich doesn't require air, food, drink, or sleep. So great is a demilich's will to survive that it always has the maximum number of hit points for its Hit Dice, instead of average hit points."
 					]
@@ -11891,7 +11891,7 @@
 			]
 		},
 		{
-			"name": "Deva",
+			"name": "梵天神侍", "ENG_name": "Deva",
 			"group": "Angels",
 			"size": "M",
 			"type": "celestial",
@@ -11948,19 +11948,19 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 19,
-			"languages": "all, telepathy 120 ft.",
+			"languages": "全部語言、心靈感應120呎",
 			"cr": "10",
 			"trait": [
 				{
-					"name": "Angelic Weapons",
+					"name": "天使武器", "tENG_name": "Angelic Weapons",
 					"entries": [
-						"The deva's weapon attacks are magical. When the deva hits with any weapon, the weapon deals an extra {@dice 4d8} radiant damage (included in the attack)."
+						"梵天神侍的武器攻擊視作魔法攻擊。當梵天神侍以任何武器命中時，該武器將造成額外的{@dice 4d8}光耀傷害（已包含在攻擊條目）。"
 					]
 				},
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The deva 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"梵天神侍在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
@@ -11968,26 +11968,26 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The deva makes two melee attacks."
+						"梵天神侍進行二次近戰攻擊。"
 					]
 				},
 				{
 					"name": "硬頭錘",
 					"entries": [
-						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}7 ({@damage 1d6 + 4}) bludgeoning damage plus 18 ({@damage 4d8}) radiant damage."
+						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}7 ({@damage 1d6 + 4})鈍擊傷害加 18 ({@damage 4d8})光耀傷害。"
 					]
 				},
 				{
-					"name": "Healing Touch (3/Day)",
+					"name": "治癒之觸 (3/日)", "tENG_name": "Healing Touch",
 					"entries": [
-						"The deva touches another creature. The target magically regains 20 ({@dice 4d8 + 2}) hit points and is freed from any curse, disease, poison, blindness, or deafness."
+						"梵天神侍觸碰另一個生物。目標被魔法回復20 ({@dice 4d8 + 2})點生命值，且移除身上任何的詛咒、疾病、毒素、{@condition 目盲}或{@condition 耳聾}狀態。"
 					]
 				},
 				{
 					"name": "變形", "tENG_name": "Change Shape",
 					"entries": [
-						"The deva magically polymorphs into a humanoid or beast that has a challenge rating equal to or less than its own, or back into its true form. It reverts to its true form if it dies. Any equipment it is wearing or carrying is absorbed or borne by the new form (the deva's choice).",
-						"In a new form, the deva retains its game statistics and ability to speak, but its AC, movement modes, Strength, Dexterity, and special senses are replaced by those of the new form, and it gains any statistics and capabilities (except class features, legendary actions, and lair actions) that the new form has but that it lacks."
+						"梵天神侍可以用魔法變形成一個挑戰等級等於或低於自己的類人生物或野獸，或變回它的真實型態。它會在死亡時回復它的真實型態。任何它所穿戴或攜帶的裝備將會被新形態吸收或適應於新型態（由梵天神侍選擇）。",
+						"在新型態中，梵天神侍保留它的遊戲數據和說話能力，但它的AC、移動方式、它的力量、敏捷屬性值、和其他特殊感官將被新型態給取代，且它將獲得任何新型態有但它缺少的數據和能力（但不包括新型態的職業能力、傳奇動作、和巢穴動作）。"
 					]
 				}
 			],
@@ -11996,7 +11996,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The deva's spellcasting ability is Charisma (spell save DC 17). The deva can innately cast the following spells, requiring only verbal components:"
+						"梵天神侍的天生施法屬性為魅力（法術豁免DC 17）。梵天神侍天生就可以施展以下法術，且只需要聲音構材："
 					],
 					"will": [
 						"{@spell 偵測善惡}"
@@ -12146,7 +12146,7 @@
 				{
 					"name": "Displacement",
 					"entries": [
-						"The displacer beast projects a magical illusion that makes it appear to be standing near its actual location, causing attack rolls against it to have disadvantage. If it is hit by an attack, this trait is disrupted until the end of its next turn. This trait is also disrupted while the displacer beast is {@condition incapacitated} or has a speed of 0."
+						"The displacer beast projects a magical illusion that makes it appear to be standing near its actual location, causing attack rolls against it to have disadvantage. If it is hit by an attack, this trait is disrupted until the end of its next turn. This trait is also disrupted while the displacer beast is {@condition 無力} or has a speed of 0."
 					]
 				}
 			],
@@ -17455,7 +17455,7 @@
 				{
 					"name": "Possession {@recharge}",
 					"entries": [
-						"One humanoid that the ghost can see within 5 feet of it must succeed on a DC 13 Charisma saving throw or be possessed by the ghost; the ghost then disappears, and the target is {@condition incapacitated} and loses control of its body. The ghost now controls the body but doesn't deprive the target of awareness. The ghost can't be targeted by any attack, spell, or other effect, except ones that turn undead, and it retains its alignment, Intelligence, Wisdom, Charisma, and immunity to being {@condition charmed} and {@condition frightened}. It otherwise uses the possessed target's statistics, but doesn't gain access to the target's knowledge, class features, or proficiencies.",
+						"One humanoid that the ghost can see within 5 feet of it must succeed on a DC 13 Charisma saving throw or be possessed by the ghost; the ghost then disappears, and the target is {@condition 無力} and loses control of its body. The ghost now controls the body but doesn't deprive the target of awareness. The ghost can't be targeted by any attack, spell, or other effect, except ones that turn undead, and it retains its alignment, Intelligence, Wisdom, Charisma, and immunity to being {@condition charmed} and {@condition frightened}. It otherwise uses the possessed target's statistics, but doesn't gain access to the target's knowledge, class features, or proficiencies.",
 						"The possession lasts until the body drops to 0 hit points, the ghost ends it as a bonus action, or the ghost is turned or forced out by an effect like the dispel evil and good spell. When the possession ends, the ghost reappears in an unoccupied space within 5 feet of the body. The target is immune to this ghost's Possession for 24 hours after succeeding on the saving throw or after the possession ends."
 					]
 				}
@@ -19641,7 +19641,7 @@
 				{
 					"name": "Gibbering",
 					"entries": [
-						"The mouther babbles incoherently while it can see any creature and isn't {@condition incapacitated}. Each creature that starts its turn within 20 feet of the mouther and can hear the gibbering must succeed on a DC 10 Wisdom saving throw. On a failure, the creature can't take reactions until the start of its next turn and rolls a {@dice d8} to determine what it does during its turn. On a 1 to 4, the creature does nothing. On a 5 or 6, the creature takes no action or bonus action and uses all its movement to move in a randomly determined direction. On a 7 or 8, the creature makes a melee attack against a randomly determined creature within its reach or does nothing if it can't make such an attack."
+						"The mouther babbles incoherently while it can see any creature and isn't {@condition 無力}. Each creature that starts its turn within 20 feet of the mouther and can hear the gibbering must succeed on a DC 10 Wisdom saving throw. On a failure, the creature can't take reactions until the start of its next turn and rolls a {@dice d8} to determine what it does during its turn. On a 1 to 4, the creature does nothing. On a 5 or 6, the creature takes no action or bonus action and uses all its movement to move in a randomly determined direction. On a 7 or 8, the creature makes a melee attack against a randomly determined creature within its reach or does nothing if it can't make such an attack."
 					]
 				}
 			],
@@ -22815,7 +22815,7 @@
 						"5": {
 							"slots": 1,
 							"spells": [
-								"{@spell legend lore}"
+								"{@spell 通曉傳奇}"
 							]
 						}
 					},
@@ -23066,8 +23066,8 @@
 				{
 					"name": "Luring Song",
 					"entries": [
-						"The harpy sings a magical melody. Every humanoid and giant within 300 feet of the harpy that can hear the song must succeed on a DC 11 Wisdom saving throw or be {@condition charmed} until the song ends. The harpy must take a bonus action on its subsequent turns to continue singing. It can stop singing at any time. The song ends if the harpy is {@condition incapacitated}.",
-						"While {@condition charmed} by the harpy, a target is {@condition incapacitated} and ignores the songs of other harpies. If the {@condition charmed} target is more than 5 ft. away from the harpy, the target must move on its turn toward the harpy by the most direct route. It doesn't avoid opportunity attacks, but before moving into damaging terrain, such as lava or a pit, and whenever it takes damage from a source other than the harpy, a target can repeat the saving throw. A creature can also repeat the saving throw at the end of each of its turns. If a creature's saving throw is successful, the effect ends on it.",
+						"The harpy sings a magical melody. Every humanoid and giant within 300 feet of the harpy that can hear the song must succeed on a DC 11 Wisdom saving throw or be {@condition charmed} until the song ends. The harpy must take a bonus action on its subsequent turns to continue singing. It can stop singing at any time. The song ends if the harpy is {@condition 無力}.",
+						"While {@condition charmed} by the harpy, a target is {@condition 無力} and ignores the songs of other harpies. If the {@condition charmed} target is more than 5 ft. away from the harpy, the target must move on its turn toward the harpy by the most direct route. It doesn't avoid opportunity attacks, but before moving into damaging terrain, such as lava or a pit, and whenever it takes damage from a source other than the harpy, a target can repeat the saving throw. A creature can also repeat the saving throw at the end of each of its turns. If a creature's saving throw is successful, the effect ends on it.",
 						"A target that successfully saves is immune to this harpy's song for the next 24 hours."
 					]
 				}
@@ -25164,7 +25164,7 @@
 				{
 					"name": "Body Thief",
 					"entries": [
-						"The intellect devourer initiates an Intelligence contest with an {@condition incapacitated} humanoid within 5 feet of it that isn't protected by {@spell protection from evil and good}. If it wins the contest, the intellect devourer magically consumes the target's brain, teleports into the target's skull, and takes control of the target's body. While inside a creature, the intellect devourer has total cover against attacks and other effects originating outside its host. The intellect devourer retains its Intelligence, Wisdom, and Charisma scores, as well as its understanding of Deep Speech, its telepathy, and its traits. It otherwise adopts the target's statistics. It knows everything the creature knew, including spells and languages.",
+						"The intellect devourer initiates an Intelligence contest with an {@condition 無力} humanoid within 5 feet of it that isn't protected by {@spell protection from evil and good}. If it wins the contest, the intellect devourer magically consumes the target's brain, teleports into the target's skull, and takes control of the target's body. While inside a creature, the intellect devourer has total cover against attacks and other effects originating outside its host. The intellect devourer retains its Intelligence, Wisdom, and Charisma scores, as well as its understanding of Deep Speech, its telepathy, and its traits. It otherwise adopts the target's statistics. It knows everything the creature knew, including spells and languages.",
 						"If the host body dies, the intellect devourer must leave it. A {@spell protection from evil and good} spell cast on the body drives the intellect devourer out. The intellect devourer is also forced out if the target regains its devoured brain by means of a {@spell wish}. By spending 5 feet of its movement, the intellect devourer can voluntarily leave the body, teleporting to the nearest unoccupied space within 5 feet of it. The body then dies, unless its brain is restored within 1 round."
 					]
 				}
@@ -27047,8 +27047,8 @@
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell disintegrate}",
-								"{@spell globe of invulnerability}"
+								"{@spell 解離術}",
+								"{@spell 法術無效結界}"
 							]
 						},
 						"7": {
@@ -28669,7 +28669,7 @@
 				{
 					"name": "Petrifying Gaze",
 					"entries": [
-						"When a creature that can see the medusa's eyes starts its turn within 30 feet of the medusa, the medusa can force it to make a DC 14 Constitution saving throw if the medusa isn't {@condition incapacitated} and can see the creature. If the saving throw fails by 5 or more, the creature is instantly {@condition petrified}. Otherwise, a creature that fails the save begins to turn to stone and is {@condition 束縛}. The {@condition 束縛} creature must repeat the saving throw at the end of its next turn, becoming {@condition petrified} on a failure or ending the effect on a success. The petrification lasts until the creature is freed by the  {@spell greater restoration} spell or other magic.",
+						"When a creature that can see the medusa's eyes starts its turn within 30 feet of the medusa, the medusa can force it to make a DC 14 Constitution saving throw if the medusa isn't {@condition 無力} and can see the creature. If the saving throw fails by 5 or more, the creature is instantly {@condition petrified}. Otherwise, a creature that fails the save begins to turn to stone and is {@condition 束縛}. The {@condition 束縛} creature must repeat the saving throw at the end of its next turn, becoming {@condition petrified} on a failure or ending the effect on a success. The petrification lasts until the creature is freed by the  {@spell greater restoration} spell or other magic.",
 						"Unless surprised, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can't see the medusa until the start of its next turn, when it can avert its eyes again. If the creature looks at the medusa in the meantime, it must immediately make the save.",
 						"If the medusa sees itself reflected on a polished surface within 30 feet of it and in an area of bright light, the medusa is, due to its curse, affected by its own gaze."
 					]
@@ -29219,7 +29219,7 @@
 				{
 					"name": "Extract Brain",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one {@condition incapacitated} humanoid {@condition 被擒} by the mind flayer. {@h}The target takes 55 ({@damage 10d10})穿刺傷害。 If this damage reduces the target to 0 hit points, the mind flayer kills the target by extracting and devouring its brain."
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one {@condition 無力} humanoid {@condition 被擒} by the mind flayer. {@h}The target takes 55 ({@damage 10d10})穿刺傷害。 If this damage reduces the target to 0 hit points, the mind flayer kills the target by extracting and devouring its brain."
 					]
 				},
 				{
@@ -29341,7 +29341,7 @@
 				{
 					"name": "Extract Brain",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one {@condition incapacitated} humanoid {@condition 被擒} by the mind flayer. {@h}The target takes 55 ({@damage 10d10})穿刺傷害。 If this damage reduces the target to 0 hit points, the mind flayer kills the target by extracting and devouring its brain."
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one {@condition 無力} humanoid {@condition 被擒} by the mind flayer. {@h}The target takes 55 ({@damage 10d10})穿刺傷害。 If this damage reduces the target to 0 hit points, the mind flayer kills the target by extracting and devouring its brain."
 					]
 				},
 				{
@@ -33216,7 +33216,7 @@
 			]
 		},
 		{
-			"name": "Planetar",
+			"name": "異域神侍", "ENG_name": "Planetar",
 			"group": "Angels",
 			"size": "L",
 			"type": "celestial",
@@ -33273,25 +33273,25 @@
 			],
 			"senses": "真實視覺120呎",
 			"passive": 21,
-			"languages": "all, telepathy 120 ft.",
+			"languages": "全部語言、心靈感應120呎",
 			"cr": "16",
 			"trait": [
 				{
-					"name": "Angelic Weapons",
+					"name": "天使武器", "tENG_name": "Angelic Weapons",
 					"entries": [
-						"The planetar's weapon attacks are magical. When the planetar hits with any weapon, the weapon deals an extra {@dice 5d8} radiant damage (included in the attack)."
+						"異域神侍的武器攻擊視作魔法攻擊。當異域神侍以任何武器命中時，該武器將造成額外的{@dice 5d8}光耀傷害（已包含在攻擊條目）。"
 					]
 				},
 				{
-					"name": "Divine Awareness",
+					"name": "神性警覺", "tENG_name": "Divine Awareness",
 					"entries": [
-						"The planetar knows if it hears a lie."
+						"異域神侍能夠辨別它所聽到的是否為謊言。"
 					]
 				},
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The planetar 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"異域神侍在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
@@ -33299,19 +33299,19 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The planetar makes two melee attacks."
+						"異域神侍進行二次近戰攻擊。"
 					]
 				},
 				{
 					"name": "巨劍",
 					"entries": [
-						"{@atk mw} 命中{@hit 12}，觸及5呎，單一目標。{@h}21 ({@damage 4d6 + 7}) slashing damage plus 22 ({@damage 5d8}) radiant damage."
+						"{@atk mw} 命中{@hit 12}，觸及5呎，單一目標。{@h}21 ({@damage 4d6 + 7})劈砍傷害加 22 ({@damage 5d8})光耀傷害。"
 					]
 				},
 				{
-					"name": "Healing Touch (4/Day)",
+					"name": "治癒之觸 (4/日)", "tENG_name": "Healing Touch",
 					"entries": [
-						"The planetar touches another creature. The target magically regains 30 ({@dice 6d8 + 3}) hit points and is freed from any curse, disease, poison, blindness, or deafness."
+						"異域神侍觸碰另一個生物。目標被魔法回復30 ({@dice 6d8 + 3})點生命值，且移除身上任何的詛咒、疾病、毒素、{@condition 目盲}或{@condition 耳聾}狀態。"
 					]
 				}
 			],
@@ -33320,7 +33320,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The planetar's spellcasting ability is Charisma (spell save DC 20). The planetar can innately cast the following spells, requiring no material components:"
+						"異域神侍的天生施法屬性為魅力（法術豁免DC 20）。異域神侍天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 偵測善惡}",
@@ -37783,7 +37783,7 @@
 			]
 		},
 		{
-			"name": "Solar",
+			"name": "熾天神侍", "ENG_name": "Solar",
 			"group": "Angels",
 			"size": "L",
 			"type": "celestial",
@@ -37845,25 +37845,25 @@
 			],
 			"senses": "真實視覺120呎",
 			"passive": 24,
-			"languages": "all, telepathy 120 ft.",
+			"languages": "全部語言、心靈感應120呎",
 			"cr": "21",
 			"trait": [
 				{
-					"name": "Angelic Weapons",
+					"name": "天使武器", "tENG_name": "Angelic Weapons",
 					"entries": [
-						"The solar's weapon attacks are magical. When the solar hits with any weapon, the weapon deals an extra {@dice 6d8} radiant damage (included in the attack)."
+						"熾天神侍的武器攻擊視作魔法攻擊。當熾天神侍以任何武器命中時，該武器將造成額外的{@dice 6d8}光耀傷害（已包含在攻擊條目）。"
 					]
 				},
 				{
-					"name": "Divine Awareness",
+					"name": "神性警覺", "tENG_name": "Divine Awareness",
 					"entries": [
-						"The solar knows if it hears a lie."
+						"熾天神侍能夠辨別它所聽到的是否為謊言。"
 					]
 				},
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The solar 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"熾天神侍在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
@@ -37871,51 +37871,51 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The solar makes two greatsword attacks."
+						"熾天神侍進行二次巨劍攻擊。"
 					]
 				},
 				{
 					"name": "巨劍",
 					"entries": [
-						"{@atk mw} 命中{@hit 15}，觸及5呎，單一目標。{@h}22 ({@damage 4d6 + 8}) slashing damage plus 27 ({@damage 6d8}) radiant damage."
+						"{@atk mw} 命中{@hit 15}，觸及5呎，單一目標。{@h}22 ({@damage 4d6 + 8})劈砍傷害加 27 ({@damage 6d8})光耀傷害。"
 					]
 				},
 				{
-					"name": "Slaying Longbow",
+					"name": "殺戮長弓", "tENG_name": "Slaying Longbow",
 					"entries": [
-						"{@atk rw} 命中{@hit 13}，射程150/600呎，單一目標。{@h}15 ({@damage 2d8 + 6}) piercing damage plus 27 ({@damage 6d8}) radiant damage. If the target is a creature that has 100 hit points or fewer, it must succeed on a DC 15 Constitution saving throw or die."
+						"{@atk rw} 命中{@hit 13}，射程150/600呎，單一目標。{@h}15 ({@damage 2d8 + 6})穿刺傷害加 27 ({@damage 6d8})光耀傷害。若目標為一個生命值為100點或更少的生物，則它必須成功通過一次DC 15的體質豁免，否則立即死亡。"
 					]
 				},
 				{
-					"name": "Flying Sword",
+					"name": "凌空劍刃", "tENG_name": "Flying Sword",
 					"entries": [
-						"The solar releases its greatsword to hover magically in an unoccupied space within 5 feet of it. If the solar can see the sword, the solar can mentally command it as a bonus action to fly up to 50 ft. and either make one attack against a target or return to the solar's hands. If the hovering sword is targeted by any effect, the solar is considered to be holding it. The hovering sword falls if the solar dies."
+						"熾天神侍釋放它的巨劍以使其魔法性的飄浮在一處距離它5呎內的未被佔據空間。若熾天神侍可以看見該劍刃，則熾天神侍能夠以一個附贈動作以心靈命令它飛行最多50呎距離，並對一個目標進行一次攻擊或返回熾天神侍的手中。若這把漂浮劍刃被做為任何效果的目標，它將視作被熾天神侍所持握。若熾天神侍死亡，這把漂浮劍刃也將摔落。"
 					]
 				},
 				{
-					"name": "Healing Touch (4/Day)",
+					"name": "治癒之觸 (4/日)", "tENG_name": "Healing Touch",
 					"entries": [
-						"The solar touches another creature. The target magically regains 40 ({@dice 8d8 + 4}) hit points and is freed from any curse, disease, poison, blindness, or deafness."
+						"熾天神侍觸碰另一個生物。目標被魔法回復40 ({@dice 8d8 + 4})點生命值，且移除身上任何的詛咒、疾病、毒素、{@condition 目盲}或{@condition 耳聾}狀態。"
 					]
 				}
 			],
 			"legendary": [
 				{
-					"name": "Teleport",
+					"name": "傳送",
 					"entries": [
-						"The solar magically teleports, along with any equipment it is wearing or carrying, up to 120 ft. to an unoccupied space it can see."
+						"熾天神侍用魔法將自己連同任何它所穿戴或攜帶的裝備一起傳送最多120呎距離到一處它所能看見的未被佔據空間。"
 					]
 				},
 				{
-					"name": "Searing Burst (Costs 2 Actions)",
+					"name": "熾炎爆 (消耗 2動作)", "tENG_name": "Searing Burst",
 					"entries": [
-						"The solar emits magical, divine energy. Each creature of its choice in a 10-foot radius must make a DC 23 Dexterity saving throw, taking 14 ({@damage 4d6}) fire damage plus 14 ({@damage 4d6}) radiant damage on a failed save, or half as much damage on a successful one."
+						"熾天神侍釋放出魔法性的神性能量。每個它所選擇且距離它10呎半徑內的生物都必須進行一次DC 23的敏捷豁免，若豁免失敗則受到14 ({@damage 4d6})火焰傷害加14 ({@damage 4d6})光耀傷害，豁免成功則只受到一半的傷害。"
 					]
 				},
 				{
-					"name": "Blinding Gaze (Costs 3 Actions)",
+					"name": "致盲凝視 (消耗 3動作)", "tENG_name": "Blinding Gaze",
 					"entries": [
-						"The solar targets one creature it can see within 30 feet of it. If the target can see it, the target must succeed on a DC 15 Constitution saving throw or be {@condition blinded} until magic such as the {@spell lesser restoration} spell removes the blindness."
+						"熾天神侍選擇一個距離它30呎內且它所能看見的生物做為目標。若目標可以看見熾天神侍，則目標必須成功通過一次DC 15的體質豁免，否則陷入{@condition 目盲}狀態，持續直到{@condition 目盲}狀態被像是{@spell 次級復原術}法術的魔法給移除。"
 					]
 				}
 			],
@@ -37924,7 +37924,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The solar's spellcasting ability is Charisma (spell save DC 25). It can innately cast the following spells, requiring no material components:"
+						"熾天神侍的天生施法屬性為魅力（法術豁免DC 25）。熾天神侍天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 偵測善惡}",
@@ -41908,7 +41908,7 @@
 					]
 				},
 				{
-					"name": "Healing Touch (3/Day)",
+					"name": "治癒之觸 (3/日)", "tENG_name": "Healing Touch",
 					"entries": [
 						"The unicorn touches another creature with its horn. The target magically regains 11 ({@dice 2d8 + 2}) hit points. In addition, the touch removes all diseases and neutralizes all poisons afflicting the target."
 					]
@@ -42094,7 +42094,7 @@
 						"The vampire has the following flaws:",
 						"{@i Forbiddance.} The vampire can't enter a residence without an invitation from one of the occupants.",
 						"{@i Harmed by Running Water.} The vampire takes 20 acid damage if it ends its turn in running water.",
-						"{@i Stake to the Heart.} If a piercing weapon made of wood is driven into the vampire's heart while the vampire is {@condition incapacitated} in its resting place, the vampire is {@condition 麻痺} until the stake is removed.",
+						"{@i Stake to the Heart.} If a piercing weapon made of wood is driven into the vampire's heart while the vampire is {@condition 無力} in its resting place, the vampire is {@condition 麻痺} until the stake is removed.",
 						"{@i Sunlight Hypersensitivity.} The vampire takes 20 radiant damage when it starts its turn in sunlight. While in sunlight, it has disadvantage on attack rolls and ability checks."
 					]
 				}
@@ -42115,7 +42115,7 @@
 				{
 					"name": "Bite (Bat or Vampire Form Only)",
 					"entries": [
-						"{@atk mw} {@hit 9} to hit, reach 5 ft., one willing creature, or a creature that is {@condition 被擒} by the vampire, {@condition incapacitated}, or {@condition 束縛}. {@h}7 ({@damage 1d6 + 4}) piercing damage plus 10 ({@damage 3d6}) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and the vampire regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0. A humanoid slain in this way and then buried in the ground rises the following night as a vampire spawn under the vampire's control."
+						"{@atk mw} {@hit 9} to hit, reach 5 ft., one willing creature, or a creature that is {@condition 被擒} by the vampire, {@condition 無力}, or {@condition 束縛}. {@h}7 ({@damage 1d6 + 4}) piercing damage plus 10 ({@damage 3d6}) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and the vampire regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0. A humanoid slain in this way and then buried in the ground rises the following night as a vampire spawn under the vampire's control."
 					]
 				},
 				{
@@ -42248,7 +42248,7 @@
 						"The vampire has the following flaws:",
 						"{@i Forbiddance.} The vampire can't enter a residence without an invitation from one of the occupants.",
 						"{@i Harmed by Running Water.} The vampire takes 20 acid damage when it ends its turn in running water.",
-						"{@i Stake to the Heart.} The vampire is destroyed if a piercing weapon made of wood is driven into its heart while it is {@condition incapacitated} in its resting place.",
+						"{@i Stake to the Heart.} The vampire is destroyed if a piercing weapon made of wood is driven into its heart while it is {@condition 無力} in its resting place.",
 						"{@i Sunlight Hypersensitivity.} The vampire takes 20 radiant damage when it starts its turn in sunlight. While in sunlight, it has disadvantage on attack rolls and ability checks."
 					]
 				}
@@ -42263,7 +42263,7 @@
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one willing creature, or a creature that is {@condition 被擒} by the vampire, {@condition incapacitated}, or {@condition 束縛}. {@h}6 ({@damage 1d6 + 3}) piercing damage plus 7 ({@damage 2d6}) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and the vampire regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0."
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one willing creature, or a creature that is {@condition 被擒} by the vampire, {@condition 無力}, or {@condition 束縛}. {@h}6 ({@damage 1d6 + 3}) piercing damage plus 7 ({@damage 2d6}) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and the vampire regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0."
 					]
 				},
 				{
@@ -42394,7 +42394,7 @@
 						"The vampire has the following flaws:",
 						"{@i Forbiddance.} The vampire can't enter a residence without an invitation from one of the occupants.",
 						"{@i Harmed by Running Water.} The vampire takes 20 acid damage if it ends its turn in running water.",
-						"{@i Stake to the Heart.} If a piercing weapon made of wood is driven into the vampire's heart while the vampire is {@condition incapacitated} in its resting place, the vampire is {@condition 麻痺} until the stake is removed.",
+						"{@i Stake to the Heart.} If a piercing weapon made of wood is driven into the vampire's heart while the vampire is {@condition 無力} in its resting place, the vampire is {@condition 麻痺} until the stake is removed.",
 						"{@i Sunlight Hypersensitivity.} The vampire takes 20 radiant damage when it starts its turn in sunlight. While in sunlight, it has disadvantage on attack rolls and ability checks."
 					]
 				}
@@ -42415,7 +42415,7 @@
 				{
 					"name": "Bite (Bat or Vampire Form Only)",
 					"entries": [
-						"{@atk mw} {@hit 9} to hit, reach 5 ft., one willing creature, or a creature that is {@condition 被擒} by the vampire, {@condition incapacitated}, or {@condition 束縛}. {@h}7 ({@damage 1d6 + 4}) piercing damage plus 10 ({@damage 3d6}) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and the vampire regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0. A humanoid slain in this way and then buried in the ground rises the following night as a vampire spawn under the vampire's control."
+						"{@atk mw} {@hit 9} to hit, reach 5 ft., one willing creature, or a creature that is {@condition 被擒} by the vampire, {@condition 無力}, or {@condition 束縛}. {@h}7 ({@damage 1d6 + 4}) piercing damage plus 10 ({@damage 3d6}) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and the vampire regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0. A humanoid slain in this way and then buried in the ground rises the following night as a vampire spawn under the vampire's control."
 					]
 				},
 				{
@@ -42633,7 +42633,7 @@
 						"The vampire has the following flaws:",
 						"{@i Forbiddance.} The vampire can't enter a residence without an invitation from one of the occupants.",
 						"{@i Harmed by Running Water.} The vampire takes 20 acid damage if it ends its turn in running water.",
-						"{@i Stake to the Heart.} If a piercing weapon made of wood is driven into the vampire's heart while the vampire is {@condition incapacitated} in its resting place, the vampire is {@condition 麻痺} until the stake is removed.",
+						"{@i Stake to the Heart.} If a piercing weapon made of wood is driven into the vampire's heart while the vampire is {@condition 無力} in its resting place, the vampire is {@condition 麻痺} until the stake is removed.",
 						"{@i Sunlight Hypersensitivity.} The vampire takes 20 radiant damage when it starts its turn in sunlight. While in sunlight, it has disadvantage on attack rolls and ability checks."
 					]
 				}
@@ -42666,7 +42666,7 @@
 				{
 					"name": "Bite (Bat or Vampire Form Only)",
 					"entries": [
-						"{@atk mw} {@hit 9} to hit, reach 5 ft., one willing creature, or a creature that is {@condition 被擒} by the vampire, {@condition incapacitated}, or {@condition 束縛}. {@h}7 ({@damage 1d6 + 4}) piercing damage plus 10 ({@damage 3d6}) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and the vampire regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0. A humanoid slain in this way and then buried in the ground rises the following night as a vampire spawn under the vampire's control."
+						"{@atk mw} {@hit 9} to hit, reach 5 ft., one willing creature, or a creature that is {@condition 被擒} by the vampire, {@condition 無力}, or {@condition 束縛}. {@h}7 ({@damage 1d6 + 4}) piercing damage plus 10 ({@damage 3d6}) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and the vampire regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0. A humanoid slain in this way and then buried in the ground rises the following night as a vampire spawn under the vampire's control."
 					]
 				},
 				{
