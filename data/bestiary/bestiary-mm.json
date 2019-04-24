@@ -6275,7 +6275,7 @@
 			]
 		},
 		{
-			"name": "Basilisk",
+			"name": "石化蜥蜴(巴西利斯克)", "ENG_name": "Basilisk",
 			"size": "M",
 			"type": "monstrosity",
 			"source": "MM",
@@ -6308,11 +6308,11 @@
 			"cr": "3",
 			"trait": [
 				{
-					"name": "Petrifying Gaze",
+					"name": "石化凝視", "tENG_name": "Petrifying Gaze",
 					"entries": [
-						"If a creature starts its turn within 30 feet of the basilisk and the two of them can see each other, the basilisk can force the creature to make a DC 12 Constitution saving throw if the basilisk isn't {@condition 無力}. On a failed save, the creature magically begins to turn to stone and is {@condition 束縛}. It must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is {@condition petrified} until freed by the  {@spell greater restoration} spell or other magic.",
-						"A creature that isn't surprised can avert its eyes to avoid the saving throw at the start of its turn. If it does so, it can't see the basilisk until the start of its next turn, when it can avert its eyes again. If it looks at the basilisk in the meantime, it must immediately make the save.",
-						"If the basilisk sees its reflection within 30 feet of it in bright light, it mistakes itself for a rival and targets itself with its gaze."
+						"若一個生物在距離石化蜥蜴30呎內，且它們彼此能互相看見對方的位置開始它的回合，則若石化蜥蜴不處於{@condition 無力}，它就可以強迫該生物進行一次DC 12的體質豁免。若豁免失敗，該生物將會被魔法開始轉變成石頭並因此被{@condition 束縛}。它必須在它的下個回合結束時重複進行這個豁免檢定。若豁免成功，則此效果結束。若豁免失敗，則該生物將被{@condition 石化}，直到被{@spell 高等復原術}法術或其他魔法給解放。",
+						"一個沒有被突襲的生物可以移開視線以避免在它的回合開始時進行豁免檢定。若該生物這麼做，則它直到它的下個回合開始前都將無法看見石化蜥蜴，且它可以在下個回合開始時再次選擇移開視線。在該生物看向石化蜥蜴的瞬間，它就必須立刻進行該豁免檢定。",
+						"若石化蜥蜴在明亮光照下看見距離它30呎內自己的倒影，它將把自己誤認成敵人，並選擇自己做為它石化凝視的目標。"
 					]
 				}
 			],
@@ -6320,7 +6320,7 @@
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}10 ({@damage 2d6 + 3}) piercing damage plus 7 ({@damage 2d6}) poison damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}10 ({@damage 2d6 + 3})穿刺傷害加 7 ({@damage 2d6})毒素傷害。"
 					]
 				}
 			],
@@ -6521,7 +6521,7 @@
 			]
 		},
 		{
-			"name": "Behir",
+			"name": "青足龍蛇", "ENG_name": "Behir",
 			"size": "H",
 			"type": "monstrosity",
 			"source": "MM",
@@ -6566,7 +6566,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The behir makes two attacks: one with its bite and one to constrict."
+						"青足龍蛇進行二次攻擊：一次啃咬，一次絞纏。"
 					]
 				},
 				{
@@ -6578,20 +6578,20 @@
 				{
 					"name": "絞纏", "tENG_name": "Constrict",
 					"entries": [
-						"{@atk mw} {@hit 10} to hit, reach 5 ft., one Large or smaller creature. {@h}17 ({@damage 2d10 + 6}) bludgeoning damage plus 17 ({@damage 2d10 + 6})劈砍傷害。 The target is {@condition 被擒} (escape DC 16) if the behir isn't already constricting a creature, and the target is {@condition 束縛} until this grapple ends."
+						"{@atk mw} 命中{@hit 10}，觸及5呎，單一體型為大型或更小的生物。{@h}17 ({@damage 2d10 + 6})鈍擊傷害加 17 ({@damage 2d10 + 6})劈砍傷害。若青足龍蛇同時沒有絞纏另一個生物，則目標{@condition 被擒}(逃脫DC 16)，且直到擒抱結束前，目標被{@condition 束縛}。"
 					]
 				},
 				{
-					"name": "Lightning Breath {@recharge 5}",
+					"name": "閃電吐息{@recharge 5}",
 					"entries": [
-						"The behir exhales a line of lightning that is 20 feet long and 5 feet wide. Each creature in that line must make a DC 16 Dexterity saving throw, taking 66 ({@damage 12d10}) lightning damage on a failed save, or half as much damage on a successful one."
+						"青足龍蛇吐出一道20呎長，5呎寬直線型的閃電。每個在直線範圍內的生物都必須進行一次DC 16的敏捷豁免，豁免失敗則受到66 ({@damage 12d10})閃電傷害，豁免成功則只受到一半的傷害。"
 					]
 				},
 				{
-					"name": "Swallow",
+					"name": "吞嚥", "tENG_name": "Swallow",
 					"entries": [
-						"The behir makes one bite attack against a Medium or smaller target it is grappling. If the attack hits, the target is also swallowed, and the grapple ends. While swallowed, the target is {@condition blinded} and {@condition 束縛}, it has total cover against attacks and other effects outside the behir, and it takes 21 ({@damage 6d6}) acid damage at the start of each of the behir's turns. A behir can have only one creature swallowed at a time.",
-						"If the behir takes 30 damage or more on a single turn from the swallowed creature, the behir must succeed on a DC 14 Constitution saving throw at the end of that turn or regurgitate the creature, which falls {@condition 伏地} in a space within 10 feet of the behir. If the behir dies, a swallowed creature is no longer {@condition 束縛} by it and can escape from the corpse by using 15 ft. of movement, exiting {@condition 伏地}."
+						"青足龍蛇對一個它正擒抱，且體型為中型或更小的目標進行一次啃咬攻擊。若該攻擊命中，則目標被吞嚥，且擒抱結束。被吞嚥的目標陷入{@condition 目盲}和{@condition 束縛}，它對青足龍蛇外的攻擊和其他效果有全掩護，且在每次青足龍蛇的回合開始時受到21 ({@damage 6d6})酸蝕傷害。青足龍蛇同時只能讓一個目標被吞嚥。",
+						"若青足龍蛇在單一回合內受到超過30點來自被吞嚥生物所造成的傷害，青足龍蛇必須在該回合結束時成功通過一次DC 14的體質豁免，否則將反胃嘔出該生物，並使它以{@condition 伏地}狀態摔落至距離青足龍蛇10呎內的空間。若青足龍蛇死亡，被吞嚥的生物將不再被它{@condition 束縛}，且可以花費15呎的移動速度從屍體中逃脫，以{@condition 伏地}狀態離開。"
 					]
 				}
 			],
@@ -8407,7 +8407,7 @@
 			]
 		},
 		{
-			"name": "Bulette",
+			"name": "鯊蜥獸", "ENG_name": "Bulette",
 			"size": "L",
 			"type": "monstrosity",
 			"source": "MM",
@@ -8439,14 +8439,14 @@
 			"skill": {
 				"perception": "+6"
 			},
-			"senses": "黑暗視覺60呎, tremorsense 60 ft.",
+			"senses": "黑暗視覺60呎, 震顫感知60呎",
 			"passive": 16,
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Standing Leap",
+					"name": "立定跳躍", "tENG_name": "Standing Leap",
 					"entries": [
-						"The bulette's long jump is up to 30 ft. and its high jump is up to 15 ft., with or without a running start."
+						"鯊蜥獸的跳遠距離最多30呎、且跳高距離最多15呎，無論有沒有助跑都一樣。"
 					]
 				}
 			],
@@ -8458,9 +8458,9 @@
 					]
 				},
 				{
-					"name": "Deadly Leap",
+					"name": "致命跳躍", "tENG_name": "Deadly Leap",
 					"entries": [
-						"If the bulette jumps at least 15 ft. as part of its movement, it can then use this action to land on its feet in a space that contains one or more other creatures. Each of those creatures must succeed on a DC 16 Strength or Dexterity saving throw (target's choice) or be knocked {@condition 伏地} and take 14 ({@damage 3d6 + 4}) bludgeoning damage plus 14 ({@damage 3d6 + 4})劈砍傷害。 On a successful save, the creature takes only half the damage, isn't knocked {@condition 伏地}, and is pushed 5 ft. out of the bulette's space into an unoccupied space of the creature's choice. If no unoccupied space is within range, the creature instead falls {@condition 伏地} in the bulette's space."
+						"若鯊蜥獸做為移動的一部份，跳躍了至少15呎距離，它可以接著使用它的動作以在一處容納了一個或多個其他生物的空間落地。每個這些生物都必須成功通過一次DC 16的力量或敏捷豁免（由目標決定），否則被擊倒{@condition 伏地}且受到14 ({@damage 3d6 + 4})鈍擊傷害加 14 ({@damage 3d6 + 4})劈砍傷害。若豁免成功，該生物只受到一半的傷害，不會被擊倒{@condition 伏地}，且被從鯊蜥獸所在的空間推離5呎到一處由該生物所選擇的未被佔據空間。若範圍內沒有未被佔據的空間，該生物將改為在鯊蜥獸所在的空間失足{@condition 伏地}。"
 					]
 				}
 			],
@@ -9432,7 +9432,7 @@
 			]
 		},
 		{
-			"name": "Chuul",
+			"name": "甲伏怪", "ENG_name": "Chuul",
 			"size": "L",
 			"type": "aberration",
 			"source": "MM",
@@ -9473,19 +9473,19 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 14,
-			"languages": "understands Deep Speech but can't speak",
+			"languages": "理解深幽語，但不會說",
 			"cr": "4",
 			"trait": [
 				{
 					"name": "兩棲",
 					"entries": [
-						"The chuul可以在空氣和水中呼吸。"
+						"甲伏怪可以在空氣和水中呼吸。"
 					]
 				},
 				{
-					"name": "Sense Magic",
+					"name": "感測魔法", "tENG_name": "Sense Magic",
 					"entries": [
-						"The chuul senses magic within 120 feet of it at will. This trait otherwise works like the detect magic spell but isn't itself magical."
+						"甲伏怪可以隨意感測距離它120呎內的魔法。除此之外這個特性就如同{@spell 偵測魔法}法術，但它本身並非魔法。"
 					]
 				}
 			],
@@ -9493,19 +9493,19 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The chuul makes two pincer attacks. If the chuul is grappling a creature, the chuul can also use its tentacles once."
+						"甲伏怪進行二次鉗擊攻擊。若甲伏怪正擒抱一個生物，則甲伏怪還可以使用一次觸鬚攻擊。"
 					]
 				},
 				{
-					"name": "Pincer",
+					"name": "鉗擊", "tENG_name": "Pincer",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及10呎，單一目標。{@h}11 ({@damage 2d6 + 4})鈍擊傷害。 The target is {@condition 被擒} (escape DC 14) if it is a Large or smaller creature and the chuul doesn't have two other creatures {@condition 被擒}."
+						"{@atk mw} 命中{@hit 6}，觸及10呎，單一目標。{@h}11 ({@damage 2d6 + 4})鈍擊傷害。若目標為一個體型為大型或更小的生物，且甲伏怪在此同時未使二個其他生物{@condition 被擒}，則目標將{@condition 被擒}(逃脫DC 14)。"
 					]
 				},
 				{
-					"name": "Tentacles",
+					"name": "觸鬚", "tENG_name": "Tentacles",
 					"entries": [
-						"One creature {@condition 被擒} by the chuul must succeed on a DC 13 Constitution saving throw or be {@condition 中毒} for 1 minute. Until this poison ends, the target is {@condition 麻痺}. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"一個{@condition 被擒}於甲伏怪的生物必須成功通過一次DC 13的體質豁免，否則陷入{@condition 中毒}狀態長達1分鐘。直到這個毒素結束前，目標也將陷入{@condition 麻痺}狀態。目標可以在它的每個回合結束時重複進行這個豁免檢定，若成功則結束這個效果對它的影響。"
 					]
 				}
 			],
@@ -11035,7 +11035,7 @@
 			]
 		},
 		{
-			"name": "Death Dog",
+			"name": "亡命惡犬", "ENG_name": "Death Dog",
 			"size": "M",
 			"type": "monstrosity",
 			"source": "MM",
@@ -11068,9 +11068,9 @@
 			"cr": "1",
 			"trait": [
 				{
-					"name": "Two-Headed",
+					"name": "雙頭", "tENG_name": "Two-Headed",
 					"entries": [
-						"The dog has advantage on Wisdom ({@skill Perception}) checks and on saving throws against being {@condition blinded}, {@condition 魅惑}, {@condition deafened}, {@condition 恐懼}, {@condition stunned}, or knocked {@condition 昏迷}."
+						"惡犬在睿知（{@skill 感知}）檢定和對抗{@condition 目盲}、{@condition 魅惑}、{@condition 耳聾}、{@condition 恐懼}、{@skill 震懾}、和被擊暈{@skill 昏迷}的豁免檢定中具有優勢。"
 					]
 				}
 			],
@@ -11078,13 +11078,13 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The dog makes two bite attacks."
+						"惡犬進行二次啃咬攻擊。"
 					]
 				},
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害。 If the target is a creature, it must succeed on a DC 12 Constitution saving throw against disease or become {@condition 中毒} until the disease is cured. Every 24 hours that elapse, the creature must repeat the saving throw, reducing its hit point maximum by 5 ({@dice 1d10}) on a failure. This reduction lasts until the disease is cured. The creature dies if the disease reduces its hit point maximum to 0."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害。若目標為一個生物，則它必須成功通過一次DC 12的體質豁免，否則陷入{@condition 中毒}狀態直到這個疾病被治癒。每經過24小時，該生物都必須重複進行這個豁免檢定，豁免失敗則目標的生命值最大值將減少5 ({@dice 1d10})點。這個減損持續直到該疾病被治癒。若目標的生命值最大值因為這個疾病而歸零，則目標死亡。"
 					]
 				}
 			],
@@ -11639,7 +11639,7 @@
 				{
 					"name": "毒鏢",
 					"entries": [
-						"{@atk rw} 命中{@hit 4}，射程30/120呎，單一生物。{@h}4 ({@damage 1d4 + 2})穿刺傷害，且目標必須成功通過一次DC 12的體質或免，否則陷入{@condition 中毒}狀態長達1分鐘。 目標可以在每次它的回合結束時重複這個豁免檢定，若檢定成功則結束這個效果對它的影響。"
+						"{@atk rw} 命中{@hit 4}，射程30/120呎，單一生物。{@h}4 ({@damage 1d4 + 2})穿刺傷害，且目標必須成功通過一次DC 12的體質豁免，否則陷入{@condition 中毒}狀態長達1分鐘。 目標可以在每次它的回合結束時重複這個豁免檢定，若檢定成功則結束這個效果對它的影響。"
 					]
 				}
 			],
@@ -12753,7 +12753,7 @@
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一生物。{@h}2 ({@damage 1d4}) piercing damage plus 9 ({@damage 2d8}) poison damage."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一生物。{@h}2 ({@damage 1d4}) piercing damage plus 9 ({@damage 2d8}) 毒素傷害。"
 					]
 				},
 				{
@@ -12765,7 +12765,7 @@
 				{
 					"name": "長弓",
 					"entries": [
-						"{@atk rw} 命中{@hit 6}，射程150/600呎，單一目標。{@h}7 ({@damage 1d8 + 3}) piercing damage plus 4 ({@damage 1d8}) poison damage."
+						"{@atk rw} 命中{@hit 6}，射程150/600呎，單一目標。{@h}7 ({@damage 1d8 + 3}) piercing damage plus 4 ({@damage 1d8}) 毒素傷害。"
 					]
 				}
 			],
@@ -14829,7 +14829,7 @@
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一生物。{@h}6 ({@damage 1d8 + 2}) piercing damage plus 4 ({@damage 1d8}) poison damage. The target must succeed on a DC 11 Constitution saving throw or be {@condition 中毒} for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一生物。{@h}6 ({@damage 1d8 + 2}) piercing damage plus 4 ({@damage 1d8}) 毒素傷害。 The target must succeed on a DC 11 Constitution saving throw or be {@condition 中毒} for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				},
 				{
@@ -22003,7 +22003,7 @@
 			]
 		},
 		{
-			"name": "Grell",
+			"name": "觸鬚怪", "ENG_name": "Grell",
 			"size": "M",
 			"type": "aberration",
 			"source": "MM",
@@ -22051,14 +22051,14 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The grell makes two attacks: one with its tentacles and one with its beak."
+						"觸鬚怪進行二次攻擊：一次觸鬚，一次喙啄。"
 					]
 				},
 				{
-					"name": "Tentacles",
+					"name": "觸鬚", "tENG_name": "Tentacles",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及10呎，單一生物。{@h}7 ({@damage 1d10 + 2}) piercing damage, and the target must succeed on a DC 11 Constitution saving throw or be {@condition 中毒} for 1 minute. The {@condition 中毒} target is {@condition 麻痺}, and it can repeat the saving throw at the end of each of its turns, ending the effect on a success.",
-						"The target is also {@condition 被擒} (escape DC 15). If the target is Medium or smaller, it is also {@condition 束縛} until this grapple ends. While grappling the target, the grell has advantage on attack rolls against it and can 't use this attack against other targets. When the grell moves, any Medium or smaller target it is grappling moves with it."
+						"{@atk mw} 命中{@hit 4}，觸及10呎，單一生物。{@h}7 ({@damage 1d10 + 2})穿刺傷害，且目標必須成功通過一次DC 11的體質豁免，否則陷入{@condition 中毒}狀態長達1分鐘。陷入{@condition 中毒}狀態的目標也將陷入{@condition 麻痺}狀態，且它可以在它的每個回合結束時重複進行這個豁免檢定，若豁免成功則結束這個效果。",
+						"目標同時也將{@condition 被擒}(逃脫DC 15)。若目標的體型為中型或更小，則它直到擒抱結束前也將陷入{@condition 束縛}狀態。當擒抱目標時，觸鬚怪對它所進行的攻擊檢定將具有優勢，且不能再對其他目標使用這個攻擊。當觸鬚怪移動時，任何它正擒抱的體型為中型或更小的生物也將跟著它移動。"
 					]
 				},
 				{
@@ -23016,7 +23016,7 @@
 			]
 		},
 		{
-			"name": "Harpy",
+			"name": "鳥身女妖(哈耳庇厄)", "ENG_name": "Harpy",
 			"size": "M",
 			"type": "monstrosity",
 			"source": "MM",
@@ -23042,13 +23042,13 @@
 			"wis": 10,
 			"cha": 13,
 			"passive": 10,
-			"languages": "Common",
+			"languages": "通用語",
 			"cr": "1",
 			"action": [
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The harpy makes two attacks: one with its claws and one with its club."
+						"鳥身女妖進行二次攻擊：一次爪抓，一次棍棒。"
 					]
 				},
 				{
@@ -23064,11 +23064,11 @@
 					]
 				},
 				{
-					"name": "Luring Song",
+					"name": "誘惑之歌", "tENG_name": "Luring Song",
 					"entries": [
-						"The harpy sings a magical melody. Every humanoid and giant within 300 feet of the harpy that can hear the song must succeed on a DC 11 Wisdom saving throw or be {@condition 魅惑} until the song ends. The harpy must take a bonus action on its subsequent turns to continue singing. It can stop singing at any time. The song ends if the harpy is {@condition 無力}.",
-						"While {@condition 魅惑} by the harpy, a target is {@condition 無力} and ignores the songs of other harpies. If the {@condition 魅惑} target is more than 5 ft. away from the harpy, the target must move on its turn toward the harpy by the most direct route. It doesn't avoid opportunity attacks, but before moving into damaging terrain, such as lava or a pit, and whenever it takes damage from a source other than the harpy, a target can repeat the saving throw. A creature can also repeat the saving throw at the end of each of its turns. If a creature's saving throw is successful, the effect ends on it.",
-						"A target that successfully saves is immune to this harpy's song for the next 24 hours."
+						"鳥身女妖唱出一段魔法旋律。每個距離鳥身女妖300呎內且可以聽見這首歌的類人生物和巨人都必須成功通過一次DC 11的睿知豁免，否則被{@condition 魅惑}直到這首歌結束。鳥身女妖必須在它後續的回合採取一個附贈動作以持續歌唱。它可以在任何時候停止歌唱。這首歌會在鳥身女妖陷入{@condition 無力}時結束。",
+						"當被鳥身女妖給{@condition 魅惑}時，目標將陷入{@condition 無力}且忽略其他鳥身女妖的歌。若被{@condition 魅惑}的目標距離該鳥身女妖超過5呎，則目標必須在它的回合以最直接的路徑向著鳥身女妖移動。這個移動仍會觸發藉機攻擊，但在移動進入傷害地形，像是岩漿或深坑之前，且每當它受到來自鳥身女妖以外的傷害，目標將可以重複進行這個豁免檢定。一個生物也可以在它的每個回合結束前重複進行這個豁免檢定。若該生物的豁免檢定成功，則結束這個效果對它的影響。",
+						"一個豁免成功的目標將在接下來的24小時內免疫於該鳥身女妖的誘惑之歌。"
 					]
 				}
 			],
@@ -28685,7 +28685,7 @@
 				{
 					"name": "Snake Hair",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}4 ({@damage 1d4 + 2}) piercing damage plus 14 ({@damage 4d6}) poison damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}4 ({@damage 1d4 + 2}) piercing damage plus 14 ({@damage 4d6}) 毒素傷害。"
 					]
 				},
 				{
@@ -28697,7 +28697,7 @@
 				{
 					"name": "長弓",
 					"entries": [
-						"{@atk rw} 命中{@hit 5}，射程150/600呎，單一目標。{@h}6 ({@damage 1d8 + 2}) piercing damage plus 7 ({@damage 2d6}) poison damage."
+						"{@atk rw} 命中{@hit 5}，射程150/600呎，單一目標。{@h}6 ({@damage 1d8 + 2}) piercing damage plus 7 ({@damage 2d6}) 毒素傷害。"
 					]
 				}
 			],
@@ -35222,7 +35222,7 @@
 					]
 				},
 				{
-					"name": "Swallow",
+					"name": "吞嚥", "tENG_name": "Swallow",
 					"entries": [
 						"The remorhaz makes one bite attack against a Medium or smaller creature it is grappling. If the attack hits, that creature takes the bite's damage and is swallowed, and the grapple ends. While swallowed, the creature is {@condition blinded} and {@condition 束縛}, it has total cover against attacks and other effects outside the remorhaz, and it takes 21 ({@damage 6d6}) acid damage at the start of each of the remorhaz's turns.",
 						"If the remorhaz takes 30 damage or more on a single turn from a creature inside it, the remorhaz must succeed on a DC 15 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition 伏地} in a space within 10 feet oft he remorhaz. If the remorhaz dies, a swallowed creature is no longer {@condition 束縛} by it and can escape from the corpse using 15 feet of movement, exiting {@condition 伏地}."
@@ -40346,7 +40346,7 @@
 					]
 				},
 				{
-					"name": "Swallow",
+					"name": "吞嚥", "tENG_name": "Swallow",
 					"entries": [
 						"The tarrasque makes one bite attack against a Large or smaller creature it is grappling. If the attack hits, the target takes the bite's damage, the target is swallowed, and the grapple ends. While swallowed, the creature is {@condition blinded} and {@condition 束縛}, it has total cover against attacks and other effects outside the tarrasque, and it takes 56 ({@damage 16d6}) acid damage at the start of each of the tarrasque's turns.",
 						"If the tarrasque takes 60 damage or more on a single turn from a creature inside it, the tarrasque must succeed on a DC 20 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition 伏地} in a space within 10 feet of the tarrasque. If the tarrasque dies, a swallowed creature is no longer {@condition 束縛} by it and can escape from the corpse by using 30 feet of movement, exiting {@condition 伏地}."
