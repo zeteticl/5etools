@@ -317,6 +317,7 @@ const traitFilter = new Filter({
 			case "Pounce": return "猛撲";
 			case "Reckless": return "魯莽";
 			case "Regeneration": return "再生";
+			case "Rejuvenation": return "復生";
 			case "Rampage": return "暴走";
 			case "Shapechanger": return "變形者";
 			case "Siege Monster": return "攻城怪物";

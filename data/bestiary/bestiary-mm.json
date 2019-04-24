@@ -165,8 +165,8 @@
 				{
 					"name": "Enslave (3/Day)",
 					"entries": [
-						"The aboleth targets one creature it can see within 30 feet of it. The target must succeed on a DC 14 Wisdom saving throw or be magically {@condition charmed} by the aboleth until the aboleth dies or until it is on a different plane of existence from the target. The {@condition charmed} target is under the aboleth's control and can't take reactions, and the aboleth and the target can communicate telepathically with each other over any distance.",
-						"Whenever the {@condition charmed} target takes damage, the target can repeat the saving throw. On a success, the effect ends. No more than once every 24 hours, the target can also repeat the saving throw when it is at least 1 mile away from the aboleth."
+						"The aboleth targets one creature it can see within 30 feet of it. The target must succeed on a DC 14 Wisdom saving throw or be magically {@condition 魅惑} by the aboleth until the aboleth dies or until it is on a different plane of existence from the target. The {@condition 魅惑} target is under the aboleth's control and can't take reactions, and the aboleth and the target can communicate telepathically with each other over any distance.",
+						"Whenever the {@condition 魅惑} target takes damage, the target can repeat the saving throw. On a success, the effect ends. No more than once every 24 hours, the target can also repeat the saving throw when it is at least 1 mile away from the aboleth."
 					]
 				}
 			],
@@ -190,7 +190,7 @@
 				{
 					"name": "Psychic Drain (Costs 2 Actions)",
 					"entries": [
-						"One creature {@condition charmed} by the aboleth takes 10 ({@damage 3d6}) psychic damage, and the aboleth regains hit points equal to the damage the creature takes."
+						"One creature {@condition 魅惑} by the aboleth takes 10 ({@damage 3d6}) psychic damage, and the aboleth regains hit points equal to the damage the creature takes."
 					]
 				}
 			],
@@ -424,7 +424,7 @@
 					]
 				},
 				{
-					"name": "Turn Immunity",
+					"name": "驅散免疫", "tENG_name": "Turn Immunity",
 					"entries": [
 						"The demilich is immune to effects that turn undead."
 					]
@@ -4488,7 +4488,7 @@
 			]
 		},
 		{
-			"name": "Ankheg",
+			"name": "掘地蟲", "ENG_name": "Ankheg",
 			"size": "L",
 			"type": "monstrosity",
 			"source": "MM",
@@ -4504,7 +4504,7 @@
 				},
 				{
 					"ac": 11,
-					"condition": "while prone"
+					"condition": "伏地時"
 				}
 			],
 			"hp": {
@@ -4521,20 +4521,20 @@
 			"int": 1,
 			"wis": 13,
 			"cha": 6,
-			"senses": "黑暗視覺60呎, tremorsense 60 ft.",
+			"senses": "黑暗視覺60呎, 震顫感知60呎",
 			"passive": 11,
 			"cr": "2",
 			"action": [
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}10 ({@damage 2d6 + 3}) slashing damage plus 3 ({@damage 1d6}) acid damage. If the target is a Large or smaller creature, it is {@condition 被擒} (escape DC 13). Until this grapple ends, the ankheg can bite only the {@condition 被擒} creature and has advantage on attack rolls to do so."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}10 ({@damage 2d6 + 3})劈砍傷害加 3 ({@damage 1d6})酸蝕傷害。若目標為一個體型為大型或更小的生物，則它{@condition 被擒}逃脫DC 13)。直到擒抱結束前，掘地蟲只能對該{@condition 被擒}的生物進行啃咬攻擊，且在這麼做時的攻擊檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Acid Spray {@recharge}",
+					"name": "酸液噴射{@recharge}", "tENG_name": "Acid Spray",
 					"entries": [
-						"The ankheg spits acid in a line that is 30 ft. long and 5 ft. wide, provided that it has no creature {@condition 被擒}. Each creature in that line must make a DC 13 Dexterity saving throw, taking 10 ({@damage 3d6}) acid damage on a failed save, or half as much damage on a successful one."
+						"只要沒有生物{@condition 被擒}於掘地蟲，它就可以噴出一道30呎長，5呎寬直線型的強酸。每個在直線範圍內的生物都必須進行一次DC 13的敏捷豁免，豁免失敗則受到10 ({@damage 3d6})酸蝕傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
@@ -6691,7 +6691,7 @@
 					"name": "Eye Rays",
 					"entries": [
 						"The beholder shoots three of the following magical eye rays at random (reroll duplicates), choosing one to three targets it can see within 120 feet of it:",
-						"1. Charm Ray. The targeted creature must succeed on a DC 16 Wisdom saving throw or be {@condition charmed} by the beholder for 1 hour, or until the beholder harms the creature.",
+						"1. Charm Ray. The targeted creature must succeed on a DC 16 Wisdom saving throw or be {@condition 魅惑} by the beholder for 1 hour, or until the beholder harms the creature.",
 						"2. Paralyzing Ray. The targeted creature must succeed on a DC 16 Constitution saving throw or be {@condition 麻痺} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
 						"3. Fear Ray. The targeted creature must succeed on a DC 16 Wisdom saving throw or be {@condition 恐懼} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
 						"4. Slowing Ray. The targeted creature must succeed on a DC 16 Dexterity saving throw. On a failed save, the target's speed is halved for 1 minute. In addition, the creature can't take reactions, and it can take either an action or a bonus action on its turn, not both. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
@@ -11070,7 +11070,7 @@
 				{
 					"name": "Two-Headed",
 					"entries": [
-						"The dog has advantage on Wisdom ({@skill Perception}) checks and on saving throws against being {@condition blinded}, {@condition charmed}, {@condition deafened}, {@condition 恐懼}, {@condition stunned}, or knocked {@condition 昏迷}."
+						"The dog has advantage on Wisdom ({@skill Perception}) checks and on saving throws against being {@condition blinded}, {@condition 魅惑}, {@condition deafened}, {@condition 恐懼}, {@condition stunned}, or knocked {@condition 昏迷}."
 					]
 				}
 			],
@@ -11526,7 +11526,7 @@
 					"name": "Eye Rays",
 					"entries": [
 						"The death tyrant shoots three of the following magical eye rays at random (reroll duplicates), choosing one to three targets it can see within 120 feet of it:",
-						"1. Charm Ray. The targeted creature must succeed on a DC 17 Wisdom saving throw or be {@condition charmed} by the death tyrant for 1 hour, or until the death tyrant harms the creature.",
+						"1. Charm Ray. The targeted creature must succeed on a DC 17 Wisdom saving throw or be {@condition 魅惑} by the death tyrant for 1 hour, or until the death tyrant harms the creature.",
 						"2. Paralyzing Ray. The targeted creature must succeed on a DC 17 Constitution saving throw or be {@condition 麻痺} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
 						"3. Fear Ray. The targeted creature must succeed on a DC 17 Wisdom saving throw or be {@condition 恐懼} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
 						"4. Slowing Ray. The targeted creature must succeed on a DC 17 Dexterity saving throw. On a failed save, the target's speed is halved for 1 minute. In addition, the creature can't take reactions, and it can take either an action or a bonus action on its turn, not both. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
@@ -11827,7 +11827,7 @@
 					]
 				},
 				{
-					"name": "Turn Immunity",
+					"name": "驅散免疫", "tENG_name": "Turn Immunity",
 					"entries": [
 						"The demilich is immune to effects that turn undead."
 					]
@@ -12721,7 +12721,7 @@
 				{
 					"name": "精類血統",
 					"entries": [
-						"The drider has advantage on saving throws against being {@condition charmed}, and magic can't put the drider to sleep."
+						"The drider has advantage on saving throws against being {@condition 魅惑}, and magic can't put the drider to sleep."
 					]
 				},
 				{
@@ -17357,7 +17357,7 @@
 			]
 		},
 		{
-			"name": "Ghost",
+			"name": "鬼魂", "ENG_name": "Ghost",
 			"size": "M",
 			"type": "undead",
 			"source": "MM",
@@ -17417,46 +17417,46 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 11,
-			"languages": "any languages it knew in life",
+			"languages": "任何它生前所知的語言",
 			"cr": "4",
 			"trait": [
 				{
-					"name": "Ethereal Sight",
+					"name": "乙太視界", "tENG_name": "Ethereal Sight",
 					"entries": [
-						"The ghost can see 60 feet into the Ethereal Plane when it is on the Material Plane, and vice versa."
+						"當鬼魂在物質位面時，它可以看見它60呎內乙太位面的景象，反之亦然。"
 					]
 				},
 				{
 					"name": "虛體移動", "tENG_name": "Incorporeal Movement",
 					"entries": [
-						"The ghost can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
+						"鬼魂可以把其它生物和物體視作困難地形移動穿過它們。若它在一個物體內結束它的回合，則它將受到5 ({@damage 1d10})力場傷害。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Withering Touch",
+					"name": "凋零之觸", "tENG_name": "Withering Touch",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}17 ({@damage 4d6 + 3}) necrotic damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}17 ({@damage 4d6 + 3})死靈傷害。"
 					]
 				},
 				{
 					"name": "靈體化", "tENG_name": "Etherealness",
 					"entries": [
-						"The ghost enters the Ethereal Plane from the Material Plane, or vice versa. It is visible on the Material Plane while it is in the Border Ethereal, and vice versa, yet it can't affect or be affected by anything on the other plane."
+						"鬼魂從物質位面進入乙太位面，或者反過來從乙太位面進入物質位面。它在處於乙太位面邊界時，可以從物質位面被看見，反之亦然，但它無法影響其他位面的事物，或被任何其他位面的事物給影響。"
 					]
 				},
 				{
 					"name": "駭人面容", "tENG_name": "Horrifying Visage",
 					"entries": [
-						"Each non-undead creature within 60 feet of the ghost that can see it must succeed on a DC 13 Wisdom saving throw or be {@condition 恐懼} for 1 minute. If the save fails by 5 or more, the target also ages {@dice 1d4    ×    10} years. A {@condition 恐懼} target can repeat the saving throw at the end of each of its turns, ending the {@condition 恐懼} condition on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to this ghost's Horrifying Visage for the next 24 hours. The aging effect can be reversed with a  {@spell greater restoration} spell, but only within 24 hours of it occurring."
+						"每個距離鬼魂60呎內且可以看見它的非不死生物都必須成功通過一次DC 13的睿知豁免，否則陷入{@condition 恐懼}長達1分鐘。若此豁免檢定的結果與目標值差距5點或更多，則目標也將衰老{@dice 1d4    ×    10}歲。陷入{@condition 恐懼}的生物可以在它的每個回合結束時重複進行這個豁免檢定，若豁免成功則結束這個效果對它的影響。若目標豁免成功，或這個效果對它的影響結束，則該目標將在接下來24小時內免疫於該鬼魂的駭人面容。這個衰老的效應可以被{@spell 高等復原術}法術回復，但只能在它發生後24小時內被回復。"
 					]
 				},
 				{
-					"name": "Possession {@recharge}",
+					"name": "附身{@recharge}", "tENG_name": "Possession",
 					"entries": [
-						"One humanoid that the ghost can see within 5 feet of it must succeed on a DC 13 Charisma saving throw or be possessed by the ghost; the ghost then disappears, and the target is {@condition 無力} and loses control of its body. The ghost now controls the body but doesn't deprive the target of awareness. The ghost can't be targeted by any attack, spell, or other effect, except ones that turn undead, and it retains its alignment, Intelligence, Wisdom, Charisma, and immunity to being {@condition charmed} and {@condition 恐懼}. It otherwise uses the possessed target's statistics, but doesn't gain access to the target's knowledge, class features, or proficiencies.",
-						"The possession lasts until the body drops to 0 hit points, the ghost ends it as a bonus action, or the ghost is turned or forced out by an effect like the dispel evil and good spell. When the possession ends, the ghost reappears in an unoccupied space within 5 feet of the body. The target is immune to this ghost's Possession for 24 hours after succeeding on the saving throw or after the possession ends."
+						"一個距離鬼魂5呎內且它所能看見的類人生物必須成功通過一次DC 13的魅力豁免，否則將被鬼魂給附身；鬼魂接著將消失，目標陷入{@condition 無力}狀態並失去對它身體的控制權。鬼魂現在將控制這具身體，但不會剝奪目標的意識。鬼魂無法被做為任何攻擊、法術、或其他除了驅散不死生務以外效果的目標，且它將維持它的陣營、智力、睿知、魅力屬性值，且免疫於{@condition 魅惑}和{@condition 恐懼}。它將擁有附身目標除此之外的遊戲數據，但無法獲得目標的知識、職業能力、或熟練項。",
+						"附身將會持續直到該具身體的生命值歸零、鬼魂以一個附贈動作結束附身、鬼魂被驅散、或被像是{@spell 反制善惡}法術的效果給強迫趕出。當附身結束時，鬼魂將會重新出現在距離該具身體5呎內的一處未被佔據空間。目標將在豁免成功後或附身結束後24小時內免疫於該鬼魂的附身。"
 					]
 				}
 			],
@@ -23066,8 +23066,8 @@
 				{
 					"name": "Luring Song",
 					"entries": [
-						"The harpy sings a magical melody. Every humanoid and giant within 300 feet of the harpy that can hear the song must succeed on a DC 11 Wisdom saving throw or be {@condition charmed} until the song ends. The harpy must take a bonus action on its subsequent turns to continue singing. It can stop singing at any time. The song ends if the harpy is {@condition 無力}.",
-						"While {@condition charmed} by the harpy, a target is {@condition 無力} and ignores the songs of other harpies. If the {@condition charmed} target is more than 5 ft. away from the harpy, the target must move on its turn toward the harpy by the most direct route. It doesn't avoid opportunity attacks, but before moving into damaging terrain, such as lava or a pit, and whenever it takes damage from a source other than the harpy, a target can repeat the saving throw. A creature can also repeat the saving throw at the end of each of its turns. If a creature's saving throw is successful, the effect ends on it.",
+						"The harpy sings a magical melody. Every humanoid and giant within 300 feet of the harpy that can hear the song must succeed on a DC 11 Wisdom saving throw or be {@condition 魅惑} until the song ends. The harpy must take a bonus action on its subsequent turns to continue singing. It can stop singing at any time. The song ends if the harpy is {@condition 無力}.",
+						"While {@condition 魅惑} by the harpy, a target is {@condition 無力} and ignores the songs of other harpies. If the {@condition 魅惑} target is more than 5 ft. away from the harpy, the target must move on its turn toward the harpy by the most direct route. It doesn't avoid opportunity attacks, but before moving into damaging terrain, such as lava or a pit, and whenever it takes damage from a source other than the harpy, a target can repeat the saving throw. A creature can also repeat the saving throw at the end of each of its turns. If a creature's saving throw is successful, the effect ends on it.",
 						"A target that successfully saves is immune to this harpy's song for the next 24 hours."
 					]
 				}
@@ -31149,7 +31149,7 @@
 				{
 					"name": "Weird Insight",
 					"entries": [
-						"The nothic targets one creature it can see within 30 feet of it. The target must contest its Charisma (Deception) check against the nothic's Wisdom (Insight) check. If the nothic wins, it magically learns one fact or secret about the target. The target automatically wins if it is immune to being {@condition charmed}."
+						"The nothic targets one creature it can see within 30 feet of it. The target must contest its Charisma (Deception) check against the nothic's Wisdom (Insight) check. If the nothic wins, it magically learns one fact or secret about the target. The target automatically wins if it is immune to being {@condition 魅惑}."
 					]
 				}
 			],
@@ -35248,7 +35248,7 @@
 			]
 		},
 		{
-			"name": "Revenant",
+			"name": "還魂屍", "ENG_name": "Revenant",
 			"size": "M",
 			"type": "undead",
 			"source": "MM",
@@ -35305,25 +35305,25 @@
 				{
 					"name": "再生", "tENG_name": "Regeneration",
 					"entries": [
-						"The revenant regains 10 hit points at the start of its turn. If the revenant takes fire or radiant damage, this trait doesn't function at the start of the revenant's next turn. The revenant's body is destroyed only if it starts its turn with 0 hit points and doesn't regenerate."
+						"還魂屍在它的回合開始時回復10點生命值。若還魂屍受到火焰或光耀傷害，則這個特性在還魂屍下個回合開始時並不會發揮作用。還魂屍只會在它以0點生命值開始它回合，且再生並未發揮效果時死亡。"
 					]
 				},
 				{
 					"name": "復生", "tENG_name": "Rejuvenation",
 					"entries": [
-						"When the revenant's body is destroyed, its soul lingers. After 24 hours, the soul inhabits and animates another humanoid corpse on the same plane of existence and regains all its hit points. While the soul is bodiless, a wish spell can be used to force the soul to go to the afterlife and not return."
+						"當還魂屍的身體被摧毀，它的靈魂將會徘徊遊蕩。在24小時之後，它的靈魂將佔據並活化另一具在相同存在位面的類人生物屍體，並回復它所有的生命值。當其靈魂處於無身體的遊蕩狀態時，{@spell 祈願術}可以被用以強迫其靈魂前往來生且不再回歸。"
 					]
 				},
 				{
-					"name": "Turn Immunity",
+					"name": "驅散免疫", "tENG_name": "Turn Immunity",
 					"entries": [
-						"The revenant is immune to effects that turn undead."
+						"還魂屍免疫於驅散不死的效果。"
 					]
 				},
 				{
-					"name": "Vengeful Tracker",
+					"name": "復仇追獵者", "tENG_name": "Vengeful Tracker",
 					"entries": [
-						"The revenant knows the distance to and direction of any creature against which it seeks revenge, even if the creature and the revenant are on different planes of existence. If the creature being tracked by the revenant dies, the revenant knows."
+						"還魂屍知曉任何它所要報復的生物所在的距離和方位，即使該生物與還魂屍處於不同的存在位面也一樣。若被還魂屍給追蹤的生物死亡，還魂屍也會立即知曉。"
 					]
 				}
 			],
@@ -35331,28 +35331,28 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The revenant makes two fist attacks."
+						"還魂屍進行二次拳擊攻擊。"
 					]
 				},
 				{
-					"name": "Fist",
+					"name": "拳擊", "tENG_name": "Fist",
 					"entries": [
-						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}11 ({@damage 2d6 + 4})鈍擊傷害。 If the target is a creature against which the revenant has sworn vengeance, the target takes an extra 14 ({@damage 4d6})鈍擊傷害。 Instead of dealing damage, the revenant can grapple the target (escape DC 14) provided the target is Large or smaller."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}11 ({@damage 2d6 + 4})鈍擊傷害。若目標為還魂屍所誓言復仇的生物，則目標將受到額外的 14 ({@damage 4d6})鈍擊傷害。只要目標的體型為大型或更小，則還魂屍也可以選擇不造成傷害，而是擒抱該目標(逃脫DC 14)。"
 					]
 				},
 				{
-					"name": "Vengeful Glare",
+					"name": "復仇瞪視", "tENG_name": "Vengeful Glare",
 					"entries": [
-						"The revenant targets one creature it can see within 30 feet of it and against which it has sworn vengeance. The target must make a DC 15 Wisdom saving throw. On a failure, the target is {@condition 麻痺} until the revenant deals damage to it, or until the end of the revenant's next turn. When the paralysis ends, the target is {@condition 恐懼} of the revenant for 1 minute. The {@condition 恐懼} target can repeat the saving throw at the end of each of its turns, with disadvantage if it can see the revenant, ending the {@condition 恐懼} condition on itself on a success."
+						"還魂屍選擇一個距離它30呎內，它所能看見，且它所誓言復仇的生物做為目標。目標必須進行一次DC 15的睿知豁免。若豁免失敗，則目標將陷入{@condition 麻痺}狀態直到還魂屍對其造成傷害，或直到還魂屍的下個回合結束。當這個麻痺狀態結束，目標將因還魂屍而陷入{@condition 恐懼}長達1分鐘。陷入{@condition 恐懼}的目標可以在它的每個回合結束時重複進行這個豁免檢定，若它可以看見還魂屍則此豁免檢定具有劣勢，若豁免成功則結束{@condition 恐懼}狀態對它的影響。"
 					]
 				}
 			],
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Revenants with Spells and Weapons",
+					"name": "還魂屍的法術和武器",
 					"entries": [
-						"Revenants that were spellcasters before they died might retain some or all of their spellcasting capabilities. Similarly, revenants that wore armor and wielded weapons in life might continue to do so."
+						"在死亡前曾身為施法者的還魂屍可能會保有它們一部份或所有的施法能力。同樣的，還魂屍也可能繼續穿戴並揮舞其生前使用的護甲和武器。"
 					]
 				}
 			],
@@ -42089,13 +42089,13 @@
 					]
 				},
 				{
-					"name": "Vampire Weaknesses",
+					"name": "吸血鬼弱點", "tENG_name": "Vampire Weaknesses",
 					"entries": [
 						"The vampire has the following flaws:",
-						"{@i Forbiddance.} The vampire can't enter a residence without an invitation from one of the occupants.",
+						"{@i 禁入：} 吸血鬼若沒有得到居住者的邀請，就無法進入其住處。",
 						"{@i Harmed by Running Water.} The vampire takes 20 acid damage if it ends its turn in running water.",
 						"{@i Stake to the Heart.} If a piercing weapon made of wood is driven into the vampire's heart while the vampire is {@condition 無力} in its resting place, the vampire is {@condition 麻痺} until the stake is removed.",
-						"{@i Sunlight Hypersensitivity.} The vampire takes 20 radiant damage when it starts its turn in sunlight. While in sunlight, it has disadvantage on attack rolls and ability checks."
+						"{@i 日光過敏：} 當它在日光照耀下開始它的回合時，吸血鬼將受到20點光耀傷害。當處於日光照耀下時，它在攻擊檢定和屬性檢定中具有劣勢。"
 					]
 				}
 			],
@@ -42121,7 +42121,7 @@
 				{
 					"name": "Charm",
 					"entries": [
-						"The vampire targets one humanoid it can see within 30 feet of it. If the target can see the vampire, the target must succeed on a DC 17 Wisdom saving throw against this magic or be {@condition charmed} by the vampire. The {@condition charmed} target regards the vampire as a trusted friend to be heeded and protected. Although the target isn't under the vampire's control, it takes the vampire's requests or actions in the most favorable way it can, and it is a willing target for the vampire's bite attack.",
+						"The vampire targets one humanoid it can see within 30 feet of it. If the target can see the vampire, the target must succeed on a DC 17 Wisdom saving throw against this magic or be {@condition 魅惑} by the vampire. The {@condition 魅惑} target regards the vampire as a trusted friend to be heeded and protected. Although the target isn't under the vampire's control, it takes the vampire's requests or actions in the most favorable way it can, and it is a willing target for the vampire's bite attack.",
 						"Each time the vampire or the vampire's companions do anything harmful to the target, it can repeat the saving throw, ending the effect on itself on a success. Otherwise, the effect lasts 24 hours or until the vampire is destroyed, is on a different plane of existence than the target, or takes a bonus action to end the effect."
 					]
 				},
@@ -42177,7 +42177,7 @@
 			]
 		},
 		{
-			"name": "Vampire Spawn",
+			"name": "吸血鬼眷族", "ENG_name": "Vampire Spawn",
 			"size": "M",
 			"type": "undead",
 			"source": "MM",
@@ -42233,23 +42233,23 @@
 				{
 					"name": "再生", "tENG_name": "Regeneration",
 					"entries": [
-						"The vampire regains 10 hit points at the start of its turn if it has at least 1 hit point and isn't in sunlight or running water. If the vampire takes radiant damage or damage from holy water, this trait doesn't function at the start of the vampire's next turn."
+						"若吸血鬼眷族在它的回合開始時擁有至少1點生命值且不處於日光照射或流水中，則它將回復10點生命值。若吸血鬼眷族受到光耀傷害或來自聖水的傷害，則這個特性在吸血鬼眷族的下個回合開始時並不會發揮作用"
 					]
 				},
 				{
 					"name": "蛛行",
 					"entries": [
-						"vampire可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
+						"吸血鬼眷族可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
 					]
 				},
 				{
-					"name": "Vampire Weaknesses",
+					"name": "吸血鬼弱點", "tENG_name": "Vampire Weaknesses",
 					"entries": [
-						"The vampire has the following flaws:",
-						"{@i Forbiddance.} The vampire can't enter a residence without an invitation from one of the occupants.",
-						"{@i Harmed by Running Water.} The vampire takes 20 acid damage when it ends its turn in running water.",
-						"{@i Stake to the Heart.} The vampire is destroyed if a piercing weapon made of wood is driven into its heart while it is {@condition 無力} in its resting place.",
-						"{@i Sunlight Hypersensitivity.} The vampire takes 20 radiant damage when it starts its turn in sunlight. While in sunlight, it has disadvantage on attack rolls and ability checks."
+						"吸血鬼眷族具有以下缺陷：",
+						"{@i 禁入：} 吸血鬼若沒有得到居住者的邀請，就無法進入其住處。",
+						"{@i 為流水所傷：} 當吸血鬼在流水中結束它的回合時，它將受到20點酸蝕傷害。",
+						"{@i 木樁穿心：} 若吸血鬼在陷入{@condition 無力}狀態時於它的棲所被木製的穿刺武器插穿心臟，吸血鬼將會被摧毀。",
+						"{@i 日光過敏：} 當它在日光照耀下開始它的回合時，吸血鬼將受到20點光耀傷害。當處於日光照耀下時，它在攻擊檢定和屬性檢定中具有劣勢。"
 					]
 				}
 			],
@@ -42257,19 +42257,19 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The vampire makes two attacks, only one of which can be a bite attack."
+						"吸血鬼眷族進行二次攻擊，但其中只有一次可以是啃咬攻擊。"
 					]
 				},
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one willing creature, or a creature that is {@condition 被擒} by the vampire, {@condition 無力}, or {@condition 束縛}. {@h}6 ({@damage 1d6 + 3}) piercing damage plus 7 ({@damage 2d6}) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and the vampire regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一自願生物，或一個{@condition 被擒}於該吸血鬼眷族、或陷入{@condition 無力}、或{@condition 束縛}狀態的生物。{@h}6 ({@damage 1d6 + 3})穿刺傷害加 7 ({@damage 2d6})死靈傷害。目標的生命值最大值將減少等同於所受死靈傷害的數值，且該吸血鬼眷族回復等同該數值的生命值。這個減損持續直到目標完成一次長休。若目標因為這個效果而導致生命值最大值歸零，則目標死亡。"
 					]
 				},
 				{
 					"name": "爪抓",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一生物。{@h}8 ({@damage 2d4 + 3})劈砍傷害。 Instead of dealing damage, the vampire can grapple the target (escape DC 13)."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一生物。{@h}8 ({@damage 2d4 + 3})劈砍傷害。吸血鬼眷族也可以選擇不造成傷害，而是擒抱該目標(逃脫DC 13)。"
 					]
 				}
 			],
@@ -42389,13 +42389,13 @@
 					]
 				},
 				{
-					"name": "Vampire Weaknesses",
+					"name": "吸血鬼弱點", "tENG_name": "Vampire Weaknesses",
 					"entries": [
 						"The vampire has the following flaws:",
-						"{@i Forbiddance.} The vampire can't enter a residence without an invitation from one of the occupants.",
+						"{@i 禁入：} 吸血鬼若沒有得到居住者的邀請，就無法進入其住處。",
 						"{@i Harmed by Running Water.} The vampire takes 20 acid damage if it ends its turn in running water.",
 						"{@i Stake to the Heart.} If a piercing weapon made of wood is driven into the vampire's heart while the vampire is {@condition 無力} in its resting place, the vampire is {@condition 麻痺} until the stake is removed.",
-						"{@i Sunlight Hypersensitivity.} The vampire takes 20 radiant damage when it starts its turn in sunlight. While in sunlight, it has disadvantage on attack rolls and ability checks."
+						"{@i 日光過敏：} 當它在日光照耀下開始它的回合時，吸血鬼將受到20點光耀傷害。當處於日光照耀下時，它在攻擊檢定和屬性檢定中具有劣勢。"
 					]
 				}
 			],
@@ -42421,7 +42421,7 @@
 				{
 					"name": "Charm",
 					"entries": [
-						"The vampire targets one humanoid it can see within 30 feet of it. If the target can see the vampire, the target must succeed on a DC 17 Wisdom saving throw against this magic or be {@condition charmed} by the vampire. The {@condition charmed} target regards the vampire as a trusted friend to be heeded and protected. Although the target isn't under the vampire's control, it takes the vampire's requests or actions in the most favorable way it can, and it is a willing target for the vampire's bite attack.",
+						"The vampire targets one humanoid it can see within 30 feet of it. If the target can see the vampire, the target must succeed on a DC 17 Wisdom saving throw against this magic or be {@condition 魅惑} by the vampire. The {@condition 魅惑} target regards the vampire as a trusted friend to be heeded and protected. Although the target isn't under the vampire's control, it takes the vampire's requests or actions in the most favorable way it can, and it is a willing target for the vampire's bite attack.",
 						"Each time the vampire or the vampire's companions do anything harmful to the target, it can repeat the saving throw, ending the effect on itself on a success. Otherwise, the effect lasts 24 hours or until the vampire is destroyed, is on a different plane of existence than the target, or takes a bonus action to end the effect."
 					]
 				},
@@ -42628,13 +42628,13 @@
 					]
 				},
 				{
-					"name": "Vampire Weaknesses",
+					"name": "吸血鬼弱點", "tENG_name": "Vampire Weaknesses",
 					"entries": [
 						"The vampire has the following flaws:",
-						"{@i Forbiddance.} The vampire can't enter a residence without an invitation from one of the occupants.",
+						"{@i 禁入：} 吸血鬼若沒有得到居住者的邀請，就無法進入其住處。",
 						"{@i Harmed by Running Water.} The vampire takes 20 acid damage if it ends its turn in running water.",
 						"{@i Stake to the Heart.} If a piercing weapon made of wood is driven into the vampire's heart while the vampire is {@condition 無力} in its resting place, the vampire is {@condition 麻痺} until the stake is removed.",
-						"{@i Sunlight Hypersensitivity.} The vampire takes 20 radiant damage when it starts its turn in sunlight. While in sunlight, it has disadvantage on attack rolls and ability checks."
+						"{@i 日光過敏：} 當它在日光照耀下開始它的回合時，吸血鬼將受到20點光耀傷害。當處於日光照耀下時，它在攻擊檢定和屬性檢定中具有劣勢。"
 					]
 				}
 			],
@@ -42672,7 +42672,7 @@
 				{
 					"name": "Charm",
 					"entries": [
-						"The vampire targets one humanoid it can see within 30 feet of it. If the target can see the vampire, the target must succeed on a DC 17 Wisdom saving throw against this magic or be {@condition charmed} by the vampire. The {@condition charmed} target regards the vampire as a trusted friend to be heeded and protected. Although the target isn't under the vampire's control, it takes the vampire's requests or actions in the most favorable way it can, and it is a willing target for the vampire's bite attack.",
+						"The vampire targets one humanoid it can see within 30 feet of it. If the target can see the vampire, the target must succeed on a DC 17 Wisdom saving throw against this magic or be {@condition 魅惑} by the vampire. The {@condition 魅惑} target regards the vampire as a trusted friend to be heeded and protected. Although the target isn't under the vampire's control, it takes the vampire's requests or actions in the most favorable way it can, and it is a willing target for the vampire's bite attack.",
 						"Each time the vampire or the vampire's companions do anything harmful to the target, it can repeat the saving throw, ending the effect on itself on a success. Otherwise, the effect lasts 24 hours or until the vampire is destroyed, is on a different plane of existence than the target, or takes a bonus action to end the effect."
 					]
 				},
