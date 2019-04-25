@@ -19601,7 +19601,7 @@
 			]
 		},
 		{
-			"name": "Gibbering Mouther",
+			"name": "懼噬體", "ENG_name": "Gibbering Mouther",
 			"size": "M",
 			"type": "aberration",
 			"source": "MM",
@@ -19633,15 +19633,15 @@
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Aberrant Ground",
+					"name": "怪異地表", "tENG_name": "Aberrant Ground",
 					"entries": [
-						"The ground in a 10-foot radius around the mouther is doughlike difficult terrain. Each creature that starts its turn in that area must succeed on a DC 10 Strength saving throw or have its speed reduced to 0 until the start of its next turn."
+						"懼噬體周遭10呎半徑範圍的地面將變為糊狀的困難地形。每個在該區域內開始它回合的生物都必須成功通過一次DC 10的力量豁免，否則它的速度將被歸零直到它的下個回合開始。"
 					]
 				},
 				{
-					"name": "Gibbering",
+					"name": "囈語", "tENG_name": "Gibbering",
 					"entries": [
-						"The mouther babbles incoherently while it can see any creature and isn't {@condition 無力}. Each creature that starts its turn within 20 feet of the mouther and can hear the gibbering must succeed on a DC 10 Wisdom saving throw. On a failure, the creature can't take reactions until the start of its next turn and rolls a {@dice d8} to determine what it does during its turn. On a 1 to 4, the creature does nothing. On a 5 or 6, the creature takes no action or bonus action and uses all its movement to move in a randomly determined direction. On a 7 or 8, the creature makes a melee attack against a randomly determined creature within its reach or does nothing if it can't make such an attack."
+						"懼噬體在看見任何未處於{@condition 無力}狀態時的生物時將會開始瘋狂地囈語。每個在距離懼噬體20呎內處開始回合，且可以聽見囈語的生物必須成功通過一次DC 10的睿知豁免。若豁免失敗，直到它的下個回合開始前，該生物將無法採取反應，且必須骰一顆{@dice d8}以決定它這回合要做什麼。若擲骰結果為1到4，該生物什麼事都不會做。若結果為5或6，該生物不會採取任何動作或附贈動作，並會使用它全部的移動速度以向著一個隨機方向移動。若結果為7或8，該生物將對一個在它觸及範圍內的隨機生物進行一次近戰攻擊，或若無法進行這類攻擊則什麼事也不做。"
 					]
 				}
 			],
@@ -19649,19 +19649,19 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The gibbering mouther makes one bite attack and, if it can, uses its Blinding Spittle."
+						"懼噬體進行一次啃咬攻擊，且若可以的話，它會再使用它的致盲唾沫。"
 					]
 				},
 				{
-					"name": "Bites",
+					"name": "啃咬", "tENG_name": "Bites",
 					"entries": [
-						"{@atk mw} 命中{@hit 2}，觸及5呎，單一生物。{@h}17 ({@damage 5d6})穿刺傷害。 If the target is Medium or smaller, it must succeed on a DC 10 Strength saving throw or be knocked {@condition 伏地}. If the target is killed by this damage, it is absorbed into the mouther."
+						"{@atk mw} 命中{@hit 2}，觸及5呎，單一生物。{@h}17 ({@damage 5d6})穿刺傷害。若目標的體型為中型或更小，則它必須成功通過一次DC 10的力量豁免，否則被擊倒{@condition 伏地}。若目標被此攻擊殺死，則它將被懼噬體給吸收同化。"
 					]
 				},
 				{
-					"name": "Blinding Spittle {@recharge 5}",
+					"name": "致盲唾沫{@recharge 5}", "tENG_name": "Blinding Spittle",
 					"entries": [
-						"The mouther spits a chemical glob at a point it can see within 15 feet of it. The glob explodes in a blinding flash of light on impact. Each creature within 5 feet of the flash must succeed on a DC 13 Dexterity saving throw or be {@condition blinded} until the end of the mouther's next turn."
+						"懼噬體向著距離它15呎內且它所能看見的一點噴吐出一團化學黏液。這團黏液將在衝擊中爆發出一陣致盲閃光。每個距離這道閃光5呎內的生物都必須成功通過一次DC 13的敏捷豁免，否則陷入{@condition 目盲}直到懼噬體的下個回合結束。"
 					]
 				}
 			],
@@ -25089,7 +25089,7 @@
 			]
 		},
 		{
-			"name": "Intellect Devourer",
+			"name": "噬腦怪", "ENG_name": "Intellect Devourer",
 			"size": "T",
 			"type": "aberration",
 			"source": "MM",
@@ -25132,13 +25132,13 @@
 			],
 			"senses": "盲視60呎（超過半徑範圍則視作目盲）",
 			"passive": 12,
-			"languages": "understands Deep Speech but can't speak, telepathy 60 ft.",
+			"languages": "理解深幽語但不會說、心靈感應60呎",
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Detect Sentience",
+					"name": "偵測知性", "tENG_name": "Detect Sentience",
 					"entries": [
-						"The intellect devourer can sense the presence and location of any creature within 300 feet of it that has an Intelligence of 3 or higher, regardless of interposing barriers, unless the creature is protected by a mind blank spell."
+						"除非該生物被{@spell 心靈屏障}法術給保護，否則噬腦怪可以感知到任何距離它300呎內且智力值為3或更高的生物的存在與位置，無論它們之間有沒有障礙物都一樣。"
 					]
 				}
 			],
@@ -25146,7 +25146,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The intellect devourer makes one attack with its claws and uses Devour Intellect."
+						"噬腦怪進行一次爪抓攻擊，並使用吞食智力。"
 					]
 				},
 				{
@@ -25156,16 +25156,16 @@
 					]
 				},
 				{
-					"name": "Devour Intellect",
+					"name": "吞食智力", "tENG_name": "Devour Intellect",
 					"entries": [
-						"The intellect devourer targets one creature it can see within 10 feet of it that has a brain. The target must succeed on a DC 12 Intelligence saving throw against this magic or take 11 ({@damage 2d10}) psychic damage. Also on a failure, roll {@dice 3d6}: If the total equals or exceeds the target's Intelligence score, that score is reduced to 0. The target is {@condition 震懾} until it regains at least one point of Intelligence."
+						"噬腦怪選擇一個距離它10呎內，它所能看見，且擁有大腦的生物做為目標。目標必須成功通過一次DC 12的智力豁免以對抗此魔法，否則將受到11 ({@damage 2d10})精神傷害。同時，若豁免失敗，骰{@dice 3d6}：若其總合等於或超過目標的智力值，目標的智力值將被歸零。目標將陷入{@condition 震懾}狀態直到它回復至少一點智力值。"
 					]
 				},
 				{
-					"name": "Body Thief",
+					"name": "竊據身體", "tENG_name": "Body Thief",
 					"entries": [
-						"The intellect devourer initiates an Intelligence contest with an {@condition 無力} humanoid within 5 feet of it that isn't protected by {@spell protection from evil and good}. If it wins the contest, the intellect devourer magically consumes the target's brain, teleports into the target's skull, and takes control of the target's body. While inside a creature, the intellect devourer has total cover against attacks and other effects originating outside its host. The intellect devourer retains its Intelligence, Wisdom, and Charisma scores, as well as its understanding of Deep Speech, its telepathy, and its traits. It otherwise adopts the target's statistics. It knows everything the creature knew, including spells and languages.",
-						"If the host body dies, the intellect devourer must leave it. A {@spell protection from evil and good} spell cast on the body drives the intellect devourer out. The intellect devourer is also forced out if the target regains its devoured brain by means of a {@spell wish}. By spending 5 feet of its movement, the intellect devourer can voluntarily leave the body, teleporting to the nearest unoccupied space within 5 feet of it. The body then dies, unless its brain is restored within 1 round."
+						"噬腦怪對一個距離它5呎內，未受{@spell 防護善惡}法術保護，且陷入{@condition 無力}狀態的類人生物發起一次智力對抗。若它在此對抗中勝出，噬腦怪將以魔法吸收該生物的大腦，傳送進目標的頭骨中，並控制目標的身體。當處於該生物體內時，噬腦怪對源自其宿主體外的攻擊和其他效果有全掩護。噬腦怪保留它的智力、睿知、和魅力屬性值，以及它對於深幽語的理解、它的心靈感應、和它的所有特性。除此之外，它將取用目標的遊戲數據。它將知曉所有該生物所知道的事物，包括法術和語言。",
+						"若宿主的身體死亡，則噬腦怪必須從中離開。對該身體施放{@spell 防護善惡}法術會將噬腦怪從中驅離。若目標因為{@spell 祈願術}而回復了它被吞食的大腦，則噬腦怪也會被強迫從中離開。藉由消耗5呎移動速度，噬腦怪可以自願離開該身體，傳送到距離它5呎內最近的一處未被佔據空間。這具身體接著將會死亡，除非它的大腦在1輪內被復原。"
 					]
 				}
 			],
@@ -31080,7 +31080,7 @@
 			]
 		},
 		{
-			"name": "Nothic",
+			"name": "諾斯獨眼怪", "ENG_name": "Nothic",
 			"size": "M",
 			"type": "aberration",
 			"source": "MM",
@@ -31123,7 +31123,7 @@
 				{
 					"name": "敏銳視覺",
 					"entries": [
-						"The nothic在依賴視覺的睿知（{@skill 感知}）檢定中具有優勢。"
+						"諾斯獨眼怪在依賴視覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				}
 			],
@@ -31131,7 +31131,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The nothic makes two claw attacks."
+						"諾斯獨眼怪進行二次爪抓攻擊。"
 					]
 				},
 				{
@@ -31141,15 +31141,15 @@
 					]
 				},
 				{
-					"name": "Rotting Gaze",
+					"name": "腐朽凝視", "tENG_name": "Rotting Gaze",
 					"entries": [
-						"The nothic targets one creature it can see within 30 feet of it. The target must succeed on a DC 12 Constitution saving throw against this magic or take 10 ({@damage 3d6}) necrotic damage."
+						"諾斯獨眼怪選擇一個距離它30呎內且它所能看見的生物做為目標。目標必須成功通過一次DC 12的體質豁免以對抗此魔法，否則將受到10 ({@damage 3d6})死靈傷害。"
 					]
 				},
 				{
-					"name": "Weird Insight",
+					"name": "怪異洞悉", "tENG_name": "Weird Insight",
 					"entries": [
-						"The nothic targets one creature it can see within 30 feet of it. The target must contest its Charisma (Deception) check against the nothic's Wisdom (Insight) check. If the nothic wins, it magically learns one fact or secret about the target. The target automatically wins if it is immune to being {@condition 魅惑}."
+						"諾斯獨眼怪選擇一個距離它30呎內且它所能看見的生物做為目標。目標必須進行魅力（欺瞞）檢定以對抗諾斯獨眼怪的睿知（察言觀色）檢定。若諾斯獨眼怪勝出，它將用魔法得知一個關於目標的事實或秘密。若目標免疫於{@condition 魅惑，則它將自動在這個對抗中勝出。"
 					]
 				}
 			],
@@ -32219,7 +32219,7 @@
 			]
 		},
 		{
-			"name": "Otyugh",
+			"name": "食腐獸", "ENG_name": "Otyugh",
 			"size": "L",
 			"type": "aberration",
 			"source": "MM",
@@ -32252,13 +32252,13 @@
 			},
 			"senses": "黑暗視覺120呎",
 			"passive": 11,
-			"languages": "Otyugh",
+			"languages": "食腐獸語",
 			"cr": "5",
 			"trait": [
 				{
 					"name": "有限心靈感應",
 					"entries": [
-						"The otyugh can magically transmit simple messages and images to any creature within 120 feet of it that can understand a language. This form of telepathy doesn't allow the receiving creature to telepathically respond."
+						"食腐獸可以用魔法傳送簡單的訊息和影像給任何距離它120呎內且至少理解一種語言的生物。這個心靈感應的形式並不會讓接收生物得以透過心靈感應回覆。"
 					]
 				}
 			],
@@ -32266,25 +32266,25 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The otyugh makes three attacks: one with its bite and two with its tentacles."
+						"食腐獸進行三次攻擊：一次啃咬，二次觸手。"
 					]
 				},
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}12 ({@damage 2d8 + 3})穿刺傷害。 If the target is a creature, it must succeed on a DC 15 Constitution saving throw against disease or become {@condition 中毒} until the disease is cured. Every 24 hours that elapse, the target must repeat the saving throw, reducing its hit point maximum by 5 ({@dice 1d10}) on a failure. The disease is cured on a success. The target dies if the disease reduces its hit point maximum to 0. This reduction to the target's hit point maximum lasts until the disease is cured."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}12 ({@damage 2d8 + 3})穿刺傷害。若目標為一個生物，則它必須成功通過一次DC 15的體質豁免以對抗疾病，否則將陷入{@condition 中毒}直到該疾病被治癒。每經過24小時，該目標都必須重複進行這個豁免檢定，豁免失敗則目標的生命值最大值將減少5 ({@dice 1d10})點。若豁免成功則此疾病被治癒。若目標的生命值最大值因為這個疾病而歸零，則目標死亡。這個對目標生命值最大值的減損將持續直到該疾病被治癒。"
 					]
 				},
 				{
-					"name": "Tentacle",
+					"name": "觸手", "tENG_name": "Tentacle",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及10呎，單一目標。{@h}7 ({@damage 1d8 + 3}) bludgeoning damage plus 4 ({@damage 1d8})穿刺傷害。 If the target is Medium or smaller, it is {@condition 被擒} (escape DC 13) and {@condition 束縛} until the grapple ends. The otyugh has two tentacles, each of which can grapple one target."
+						"{@atk mw} 命中{@hit 6}，觸及10呎，單一目標。{@h}7 ({@damage 1d8 + 3})鈍擊傷害加 4 ({@damage 1d8})穿刺傷害。若目標的體型為中型或更小，它將{@condition 被擒}(逃脫DC 13)且被{@condition 束縛}直到擒抱結束。食腐獸擁有兩隻觸手，各自只能擒抱一個目標。"
 					]
 				},
 				{
-					"name": "Tentacle Slam",
+					"name": "觸手猛擊", "tENG_name": "Tentacle Slam",
 					"entries": [
-						"The otyugh slams creatures {@condition 被擒} by it into each other or a solid surface. Each creature must succeed on a DC 14 Constitution saving throw or take 10 ({@damage 2d6 + 3}) bludgeoning damage and be {@condition 震懾} until the end of the otyugh's next turn. On a successful save, the target takes half the bludgeoning damage and isn't {@condition 震懾}."
+						"食腐獸將{@condition 被擒}於它的生物用力猛砸向彼此或一個固體表面上。每個被猛砸的生物都必須成功通過一次DC 14的體質豁免，否則受到10 ({@damage 2d6 + 3})鈍擊傷害且被{@condition 震懾}直到食腐獸的下個回合結束。若豁免成功，目標只受到一半的傷害且不會被{@condition 震懾}。"
 					]
 				}
 			],
