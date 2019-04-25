@@ -6688,7 +6688,7 @@
 					]
 				},
 				{
-					"name": "Eye Rays",
+					"name": "眼波射線", "tENG_name": "Eye Rays",
 					"entries": [
 						"The beholder shoots three of the following magical eye rays at random (reroll duplicates), choosing one to three targets it can see within 120 feet of it:",
 						"1. Charm Ray. The targeted creature must succeed on a DC 16 Wisdom saving throw or be {@condition 魅惑} by the beholder for 1 hour, or until the beholder harms the creature.",
@@ -11523,7 +11523,7 @@
 					]
 				},
 				{
-					"name": "Eye Rays",
+					"name": "眼波射線", "tENG_name": "Eye Rays",
 					"entries": [
 						"The death tyrant shoots three of the following magical eye rays at random (reroll duplicates), choosing one to three targets it can see within 120 feet of it:",
 						"1. Charm Ray. The targeted creature must succeed on a DC 17 Wisdom saving throw or be {@condition 魅惑} by the death tyrant for 1 hour, or until the death tyrant harms the creature.",
@@ -25158,7 +25158,7 @@
 				{
 					"name": "Devour Intellect",
 					"entries": [
-						"The intellect devourer targets one creature it can see within 10 feet of it that has a brain. The target must succeed on a DC 12 Intelligence saving throw against this magic or take 11 ({@damage 2d10}) psychic damage. Also on a failure, roll {@dice 3d6}: If the total equals or exceeds the target's Intelligence score, that score is reduced to 0. The target is {@condition stunned} until it regains at least one point of Intelligence."
+						"The intellect devourer targets one creature it can see within 10 feet of it that has a brain. The target must succeed on a DC 12 Intelligence saving throw against this magic or take 11 ({@damage 2d10}) psychic damage. Also on a failure, roll {@dice 3d6}: If the total equals or exceeds the target's Intelligence score, that score is reduced to 0. The target is {@condition 震懾} until it regains at least one point of Intelligence."
 					]
 				},
 				{
@@ -29152,7 +29152,7 @@
 			]
 		},
 		{
-			"name": "Mind Flayer",
+			"name": "奪心魔", "ENG_name": "Mind Flayer",
 			"alias": [
 				"Illithid"
 			],
@@ -29199,42 +29199,42 @@
 			},
 			"senses": "黑暗視覺120呎",
 			"passive": 16,
-			"languages": "Deep Speech, Undercommon, telepathy 120 ft.",
+			"languages": "深幽語、地底通用語、心靈感應120呎",
 			"cr": "7",
 			"trait": [
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The mind flayer 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"奪心魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Tentacles",
+					"name": "觸鬚", "tENG_name": "Tentacles",
 					"entries": [
-						"{@atk mw} 命中{@hit 7}，觸及5呎，單一生物。{@h}15 ({@damage 2d10 + 4}) psychic damage. If the target is Medium or smaller, it is {@condition 被擒} (escape DC 15) and must succeed on a DC 15 Intelligence saving throw or be {@condition stunned} until this grapple ends."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一生物。{@h}15 ({@damage 2d10 + 4})精神傷害。若目標的體型為中型或更小，它將{@condition 被擒}(逃脫DC 15)且必須成功通過一次DC 15的智力豁免，否則被{@condition 震懾}直到擒抱結束。"
 					]
 				},
 				{
-					"name": "Extract Brain",
+					"name": "吸腦", "tENG_name": "Extract Brain",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one {@condition 無力} humanoid {@condition 被擒} by the mind flayer. {@h}The target takes 55 ({@damage 10d10})穿刺傷害。 If this damage reduces the target to 0 hit points, the mind flayer kills the target by extracting and devouring its brain."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一陷入{@condition 無力}且{@condition 被擒}於奪心魔的類人生物。{@h}目標受到 55 ({@damage 10d10})穿刺傷害。若這個傷害將目標的生命值歸零，奪心魔將吸取並吞噬目標的大腦以將它殺死。"
 					]
 				},
 				{
-					"name": "Mind Blast {@recharge 5}",
+					"name": "心靈震爆{@recharge 5}", "tENG_name": "Mind Blast",
 					"entries": [
-						"The mind flayer magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 15 Intelligence saving throw or take 22 ({@damage 4d8 + 4}) psychic damage and be {@condition stunned} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"奪心魔以魔法釋放出一道60呎錐形的精神能量。每個在範圍內的生物都必須成功通過一次DC 15的智力豁免，否則受到 22 ({@damage 4d8 + 4})精神傷害且被{@condition 震懾}長達1分鐘。一個生物可以在它的每個回合結束時重複這個豁免檢定，若豁免成功則結束這個效果對它的影響。"
 					]
 				}
 			],
 			"page": 222,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting (Psionics)",
+					"name": "天生施法（靈能）",
 					"headerEntries": [
-						"The mind flayer's innate spellcasting ability is Intelligence (spell save DC 15). It can innately cast the following spells, requiring no components:"
+						"奪心魔的天生施法屬性為智力（法術豁免DC 15）。它天生就可以施展以下法術，且無需任何構材："
 					],
 					"will": [
 						"{@spell 偵測思想}",
@@ -29277,7 +29277,7 @@
 			]
 		},
 		{
-			"name": "Mind Flayer Arcanist",
+			"name": "奪心魔奧術師", "ENG_name": "Mind Flayer Arcanist",
 			"size": "M",
 			"type": "aberration",
 			"source": "MM",
@@ -29321,42 +29321,42 @@
 			},
 			"senses": "黑暗視覺120呎",
 			"passive": 16,
-			"languages": "Deep Speech, Undercommon, telepathy 120 ft.",
+			"languages": "深幽語、地底通用語、心靈感應120呎",
 			"cr": "8",
 			"trait": [
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The mind flayer 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"奪心魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Tentacles",
+					"name": "觸鬚", "tENG_name": "Tentacles",
 					"entries": [
-						"{@atk mw} 命中{@hit 7}，觸及5呎，單一生物。{@h}15 ({@damage 2d10 + 4}) psychic damage. If the target is Medium or smaller, it is {@condition 被擒} (escape DC 15) and must succeed on a DC 15 Intelligence saving throw or be {@condition stunned} until this grapple ends."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一生物。{@h}15 ({@damage 2d10 + 4})精神傷害。若目標的體型為中型或更小，它將{@condition 被擒}(逃脫DC 15)且必須成功通過一次DC 15的智力豁免，否則被{@condition 震懾}直到擒抱結束。"
 					]
 				},
 				{
-					"name": "Extract Brain",
+					"name": "吸腦", "tENG_name": "Extract Brain",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one {@condition 無力} humanoid {@condition 被擒} by the mind flayer. {@h}The target takes 55 ({@damage 10d10})穿刺傷害。 If this damage reduces the target to 0 hit points, the mind flayer kills the target by extracting and devouring its brain."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一陷入{@condition 無力}且{@condition 被擒}於奪心魔的類人生物。{@h}目標受到 55 ({@damage 10d10})穿刺傷害。若這個傷害將目標的生命值歸零，奪心魔將吸取並吞噬目標的大腦以將它殺死。"
 					]
 				},
 				{
-					"name": "Mind Blast {@recharge 5}",
+					"name": "心靈震爆{@recharge 5}", "tENG_name": "Mind Blast",
 					"entries": [
-						"The mind flayer magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 15 Intelligence saving throw or take 22 ({@damage 4d8 + 4}) psychic damage and be {@condition stunned} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"奪心魔以魔法釋放出一道60呎錐形的精神能量。每個在範圍內的生物都必須成功通過一次DC 15的智力豁免，否則受到 22 ({@damage 4d8 + 4})精神傷害且被{@condition 震懾}長達1分鐘。一個生物可以在它的每個回合結束時重複這個豁免檢定，若豁免成功則結束這個效果對它的影響。"
 					]
 				}
 			],
 			"page": 222,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting (Psionics)",
+					"name": "天生施法（靈能）",
 					"headerEntries": [
-						"The mind flayer's innate spellcasting ability is Intelligence (spell save DC 15). It can innately cast the following spells, requiring no components:"
+						"奪心魔的天生施法屬性為智力（法術豁免DC 15）。它天生就可以施展以下法術，且無需任何構材："
 					],
 					"will": [
 						"{@spell 偵測思想}",
@@ -29373,7 +29373,7 @@
 				{
 					"name": "施法", "tENG_name": "Spellcasting",
 					"headerEntries": [
-						"The mind flayer is a 10th-level spellcaster. Its spellcasting ability is Intelligence (save DC 15, {@hit 7} to hit with spell attacks). The mind flayer has the following wizard spells prepared:"
+						"奪心魔是10級的施法者。它的施法屬性為智力（法術豁免DC 15，法術攻擊命中{@hit 7}）。奪心魔已準備了以下法師法術："
 					],
 					"spells": {
 						"0": {
@@ -30094,7 +30094,7 @@
 				{
 					"name": "Blasphemous Word (Costs 2 Actions)",
 					"entries": [
-						"The mummy lord utters a blasphemous word. Each non-undead creature within 10 feet of the mummy lord that can hear the magical utterance must succeed on a DC 16 Constitution saving throw or be {@condition stunned} until the end of the mummy lord's next turn."
+						"The mummy lord utters a blasphemous word. Each non-undead creature within 10 feet of the mummy lord that can hear the magical utterance must succeed on a DC 16 Constitution saving throw or be {@condition 震懾} until the end of the mummy lord's next turn."
 					]
 				},
 				{
@@ -30106,7 +30106,7 @@
 				{
 					"name": "Whirlwind of Sand (Costs 2 Actions)",
 					"entries": [
-						"The mummy lord magically transforms into a whirlwind of sand, moves up to 60 feet, and reverts to its normal form. While in whirlwind form, the mummy lord is immune to all damage, and it can't be {@condition 被擒}, {@condition petrified}, knocked {@condition 伏地}, {@condition 束縛}, or {@condition stunned}. Equipment worn or carried by the mummy lord remain in its possession."
+						"The mummy lord magically transforms into a whirlwind of sand, moves up to 60 feet, and reverts to its normal form. While in whirlwind form, the mummy lord is immune to all damage, and it can't be {@condition 被擒}, {@condition petrified}, knocked {@condition 伏地}, {@condition 束縛}, or {@condition 震懾}. Equipment worn or carried by the mummy lord remain in its possession."
 					]
 				}
 			],
@@ -32284,7 +32284,7 @@
 				{
 					"name": "Tentacle Slam",
 					"entries": [
-						"The otyugh slams creatures {@condition 被擒} by it into each other or a solid surface. Each creature must succeed on a DC 14 Constitution saving throw or take 10 ({@damage 2d6 + 3}) bludgeoning damage and be {@condition stunned} until the end of the otyugh's next turn. On a successful save, the target takes half the bludgeoning damage and isn't {@condition stunned}."
+						"The otyugh slams creatures {@condition 被擒} by it into each other or a solid surface. Each creature must succeed on a DC 14 Constitution saving throw or take 10 ({@damage 2d6 + 3}) bludgeoning damage and be {@condition 震懾} until the end of the otyugh's next turn. On a successful save, the target takes half the bludgeoning damage and isn't {@condition 震懾}."
 					]
 				}
 			],
@@ -37969,7 +37969,7 @@
 			]
 		},
 		{
-			"name": "Spectator",
+			"name": "觀察者眼魔", "ENG_name": "Spectator",
 			"group": "Beholders",
 			"size": "M",
 			"type": "aberration",
@@ -38012,7 +38012,7 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 16,
-			"languages": "Deep Speech, Undercommon, telepathy 120 ft.",
+			"languages": "深幽語、地底通用語、心靈感應120呎",
 			"cr": "3",
 			"action": [
 				{
@@ -38022,27 +38022,27 @@
 					]
 				},
 				{
-					"name": "Eye Rays",
+					"name": "眼波射線", "tENG_name": "Eye Rays",
 					"entries": [
-						"The spectator shoots up to two of the following magical eye rays at one or two creatures it can see within 90 feet of it. It can use each ray only once on a turn.",
-						"1. Confusion Ray. The target must succeed on a DC 13 Wisdom saving throw, or it can't take reactions until the end of its next turn. On its turn, the target can't move, and it uses its action to make a melee or ranged attack against a randomly determined creature within range. If the target can't attack, it does nothing on its turn.",
-						"2. Paralyzing Ray. The target must succeed on a DC 13 Constitution saving throw or be {@condition 麻痺} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
-						"3. Fear Ray. The target must succeed on a DC 13 Wisdom saving throw or be {@condition 恐懼} for 1 minute. The target can repeat the saving throw at the end of each of its turns, with disadvantage if the spectator is visible to the target, ending the effect on itself on a success.",
-						"4. Wounding Ray. The target must make a DC 13 Constitution saving throw, taking 16 ({@damage 3d10}) necrotic damage on a failed save, or half as much damage on a successful one."
+						"觀察者眼魔對一個或二個距離它90呎內且它所能看見的生物，射出最多二道以下其中一種魔法眼波射線。它在一回合中只能使用每種射線一次。",
+						"1. 困惑射線：目標必須成功通過一次DC 13的睿知豁免，否則直到它的下個回合結束前，它將無法採取反應。在它的回合，目標無法移動，且它必須使用它的動作對一個射程內的隨機生物進行一次近戰或遠程攻擊。若目標無法攻擊，則目標在它的回合將什麼事也不做。",
+						"2. 麻痺射線：目標必須成功通過一次DC 13的體質豁免，否則陷入{@condition 麻痺}狀態長達1分鐘。目標可以在它的每個回合結束時重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。",
+						"3. 恐懼射線：目標必須成功通過一次DC 13的睿知豁免，否則陷入{@condition 恐懼}狀態長達1分鐘。目標可以在它的每個回合結束時重複進行這個豁免檢定，若觀察者眼魔在它的視線內則此豁免檢定具有劣勢，豁免成功則結束這個效果對它的影響。",
+						"4. 致傷射線：目標必須進行一次DC 13的體質豁免，豁免失敗則受到16 ({@damage 3d10})死靈傷害，豁免成功則只受到一半的傷害。"
 					]
 				},
 				{
-					"name": "Create Food and Water",
+					"name": "創造飲食", "tENG_name": "Create Food and Water",
 					"entries": [
-						"The spectator magically creates enough food and water to sustain itself for 24 hours."
+						"觀察者眼魔用魔法創造出足以維持自己生存24小時的食物和飲水。"
 					]
 				}
 			],
 			"reaction": [
 				{
-					"name": "Spell Reflection",
+					"name": "法術反射", "tENG_name": "Spell Reflection",
 					"entries": [
-						"If the spectator makes a successful saving throw against a spell, or a spell attack misses it, the spectator can choose another creature (including the spellcaster) it can see within 30 feet of it. The spell targets the chosen creature instead of the spectator. If the spell forced a saving throw, the chosen creature makes its own save. If the spell was an attack, the attack roll is rerolled against the chosen creature."
+						"若觀察者眼魔成功通過一次對抗法術的豁免檢定，或者一次對它進行的法術攻擊失手，觀察者眼魔可以選擇另一個距離它30呎內且它所能看見的生物（包括施法者）。該法術將改為以所選生物做為目標。若該法術會強迫目標進行豁免檢定，則所選生物必須再進行它自己的豁免檢定。若該法術為一次攻擊，則對所選生物重骰一次攻擊檢定。"
 					]
 				}
 			],
