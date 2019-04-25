@@ -465,7 +465,7 @@
 				{
 					"name": "Cloud of Dust",
 					"entries": [
-						"The demilich magically swirls its dusty remains. Each creature within 10 feet of the demilich, including around a corner, must succeed on a DC 15 Constitution saving throw or be {@condition blinded} until the end of the demilich's next turn. A creature that succeeds on the saving throw is immune to this effect until the end of the demilich's next turn."
+						"The demilich magically swirls its dusty remains. Each creature within 10 feet of the demilich, including around a corner, must succeed on a DC 15 Constitution saving throw or be {@condition 目盲} until the end of the demilich's next turn. A creature that succeeds on the saving throw is immune to this effect until the end of the demilich's next turn."
 					]
 				},
 				{
@@ -9657,7 +9657,7 @@
 			]
 		},
 		{
-			"name": "Cloaker",
+			"name": "斗篷偽怪", "ENG_name": "Cloaker",
 			"size": "L",
 			"type": "aberration",
 			"source": "MM",
@@ -9692,25 +9692,25 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 11,
-			"languages": "Deep Speech, Undercommon",
+			"languages": "深幽語、地底通用語",
 			"cr": "8",
 			"trait": [
 				{
-					"name": "Damage Transfer",
+					"name": "傷害轉移", "tENG_name": "Damage Transfer",
 					"entries": [
-						"While attached to a creature, the cloaker takes only half the damage dealt to it (rounded down). and that creature takes the other half."
+						"當斗篷偽怪附著於一個生物時，它只會受到任何對它造成傷害的一半（向下取整），且該生物將受到另一半的傷害。"
 					]
 				},
 				{
 					"name": "擬形", "tENG_name": "False Appearance",
 					"entries": [
-						"While the cloaker remains motionless without its underside exposed, it is indistinguishable from a dark leather cloak."
+						"當斗篷偽怪保持不動，它看起來就跟深色革質斗篷一模一樣。"
 					]
 				},
 				{
-					"name": "Light Sensitivity",
+					"name": "光線敏感", "tENG_name": "Light Sensitivity",
 					"entries": [
-						"While in bright light, the cloaker has disadvantage on attack rolls and Wisdom ({@skill Perception}) checks that rely on sight."
+						"當處於明亮光照環境時，斗篷偽怪在攻擊檢定、以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
 					]
 				}
 			],
@@ -9718,13 +9718,13 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The cloaker makes two attacks: one with its bite and one with its tail."
+						"斗篷偽怪進行二次攻擊：一次啃咬，一次尾擊。"
 					]
 				},
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一生物。{@h}10 ({@damage 2d6 + 3}) piercing damage, and if the target is Large or smaller, the cloaker attaches to it. If the cloaker has advantage against the target, the cloaker attaches to the target's head, and the target is {@condition blinded} and unable to breathe while the cloaker is attached. While attached, the cloaker can make this attack only against the target and has advantage on the attack roll. The cloaker can detach itself by spending 5 feet of its movement. A creature, including the target, can take its action to detach the cloaker by succeeding on a DC 16 Strength check."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一生物。{@h}10 ({@damage 2d6 + 3})穿刺傷害，且若目標的體型為大型或更小，則斗篷偽怪將附著於目標身上。若斗篷偽怪對目標的攻擊具有優勢，則斗篷偽怪將附著於目標的頭部，且目標將因此陷入{@condition 目盲}，且在斗篷偽怪附著期間無法呼吸。在附著時，斗篷偽怪只能對目標進行啃咬攻擊，且在該攻擊檢定中具有優勢。斗篷偽怪可以藉由消耗5呎移動速度來解除附著狀態。包括目標在內的一個生物也可以使用一個動作，藉由成功通過一次DC 16的力量檢定以使斗篷偽怪解除附著。"
 					]
 				},
 				{
@@ -9734,17 +9734,17 @@
 					]
 				},
 				{
-					"name": "Moan",
+					"name": "低吟", "tENG_name": "Moan",
 					"entries": [
-						"Each creature within 60 feet of the cloaker that can hear its moan and that isn't an aberration must succeed on a DC 13 Wisdom saving throw or become {@condition 恐懼} until the end of the cloaker's next turn. If a creature's saving throw is successful, the creature is immune to the cloaker's moan for the next 24 hours."
+						"每個距離斗篷偽怪60呎內，可以聽見它低吟的生物，且並非異怪的生物都必須成功通過一次DC 13的睿知豁免，否則陷入{@condition 恐懼}直到斗篷偽怪的下個回合結束。若一個生物的豁免檢定成功，則它將在接下來的24小時內免疫於該斗篷偽怪的低吟。"
 					]
 				},
 				{
-					"name": "Phantasms (Recharges after a Short or Long Rest)",
+					"name": "幻象 (短休或長休之後充能)", "tENG_name": "Phantasms",
 					"entries": [
-						"The cloaker magically creates three illusory duplicates of itself if it isn't in bright light. The duplicates move with it and mimic its actions, shifting position so as to make it impossible to track which cloaker is the real one. If the cloaker is ever in an area of bright light, the duplicates disappear.",
-						"Whenever any creature targets the cloaker with an attack or a harmful spell while a duplicate remains, that creature rolls randomly to determine whether it targets the cloaker or one of the duplicates. A creature is unaffected by this magical effect if it can't see or if it relies on senses other than sight.",
-						"A duplicate has the cloaker's AC and uses its saving throws. If an attack hits a duplicate, or if a duplicate fails a saving throw against an effect that deals damage, the duplicate disappears."
+						"當斗篷偽怪不處於明亮光照時，它可以用魔法創造出三個自己的幻象複製體。這些複製體會隨著本體移動並模仿它的動作，變換位置以讓人無法追蹤哪一個斗篷偽怪才是本體。一旦斗篷偽怪進入了明亮光照的區域中，這些複製品都將消失。",
+						"每當任何生物在這些複製體還存在時，選擇斗篷偽怪做為一次攻擊或傷害性法術的目標，該生物將擲骰以隨機決定它是選擇了斗篷偽怪還是它的其中一個複製體。若一個生物無法視物，或它依賴於視覺以外的感官，則它將不會受到這個魔法效果的影響。",
+						"一個複製體具有斗篷偽怪的AC並使用它的豁免。若攻擊命中一個複製體，或一個複製體在對抗會造成傷害的效果的豁免檢定中失敗，該複製體將會消失不見。"
 					]
 				}
 			],
@@ -11007,7 +11007,7 @@
 				{
 					"name": "Crush",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}6 ({@damage 1d6 + 3}) bludgeoning damage, and the darkmantle attaches to the target. If the target is Medium or smaller and the darkmantle has advantage on the attack roll, it attaches by engulfing the target's head, and the target is also {@condition blinded} and unable to breathe while the darkmantle is attached in this way.",
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}6 ({@damage 1d6 + 3}) bludgeoning damage, and the darkmantle attaches to the target. If the target is Medium or smaller and the darkmantle has advantage on the attack roll, it attaches by engulfing the target's head, and the target is also {@condition 目盲} and unable to breathe while the darkmantle is attached in this way.",
 						"While attached to the target, the darkmantle can attack no other creature except the target but has advantage on its attack rolls. The darkmantle's speed also becomes 0, it can't benefit from any bonus to its speed, and it moves with the target.",
 						"A creature can detach the darkmantle by making a successful DC 13 Strength check as an action. On its turn, the darkmantle can detach itself from the target by using 5 feet of movement."
 					]
@@ -11861,7 +11861,7 @@
 				{
 					"name": "Cloud of Dust",
 					"entries": [
-						"The demilich magically swirls its dusty remains. Each creature within 10 feet of the demilich, including around a corner, must succeed on a DC 15 Constitution saving throw or be {@condition blinded} until the end of the demilich's next turn. A creature that succeeds on the saving throw is immune to this effect until the end of the demilich's next turn."
+						"The demilich magically swirls its dusty remains. Each creature within 10 feet of the demilich, including around a corner, must succeed on a DC 15 Constitution saving throw or be {@condition 目盲} until the end of the demilich's next turn. A creature that succeeds on the saving throw is immune to this effect until the end of the demilich's next turn."
 					]
 				},
 				{
@@ -14761,7 +14761,7 @@
 			]
 		},
 		{
-			"name": "Ettercap",
+			"name": "伊特蛛怪", "ENG_name": "Ettercap",
 			"size": "M",
 			"type": "monstrosity",
 			"source": "MM",
@@ -14803,19 +14803,19 @@
 				{
 					"name": "蛛行",
 					"entries": [
-						"ettercap可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
+						"伊特蛛怪可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
 					]
 				},
 				{
 					"name": "蛛網感知",
 					"entries": [
-						"當與蛛網保持接觸時，the ettercap可以知道任何其他與同一張蛛網接觸生物的確切位置。"
+						"當與蛛網保持接觸時，伊特蛛怪可以知道任何其他與同一張蛛網接觸生物的確切位置。"
 					]
 				},
 				{
 					"name": "蛛網行者",
 					"entries": [
-						"The ettercap 無視蛛網所造成的移動限制。"
+						"伊特蛛怪無視蛛網所造成的移動限制。"
 					]
 				}
 			],
@@ -14823,13 +14823,13 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The ettercap makes two attacks: one with its bite and one with its claws."
+						"伊特蛛怪進行二次攻擊：一次啃咬，一次爪抓。"
 					]
 				},
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一生物。{@h}6 ({@damage 1d8 + 2}) piercing damage plus 4 ({@damage 1d8}) 毒素傷害。 The target must succeed on a DC 11 Constitution saving throw or be {@condition 中毒} for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一生物。{@h}6 ({@damage 1d8 + 2})穿刺傷害加 4 ({@damage 1d8})毒素傷害。目標必須成功通過一次DC 11的體質豁免，否則將陷入{@condition 中毒}狀態長達1分鐘。該生物可以在它的每個回合結束時重複進行這個豁免檢定，成功則結束這個效果對它的影響。"
 					]
 				},
 				{
@@ -14839,9 +14839,9 @@
 					]
 				},
 				{
-					"name": "Web {@recharge 5}",
+					"name": "蛛網{@recharge 5}", "tENG_name": "Web",
 					"entries": [
-						"{@atk rw} {@hit 4} to hit, range 30/60 ft., one Large or smaller creature. {@h}The creature is {@condition 束縛} by webbing. As an action, the {@condition 束縛} creature can make a DC 11 Strength check, escaping from the webbing on a success. The effect ends if the webbing is destroyed. The webbing has AC 10, 5 hit points, is vulnerable to fire damage and immune to bludgeoning, poison and psychic damage."
+						"{@atk rw} 命中{@hit 4}，射程30/60呎，單一體型為大型或更小的生物。{@h}該生物將被蛛網給{@condition 束縛}。以一個動作，被{@condition 束縛}的生物可以進行一次DC 11的力量檢定，若檢定成功則從蛛網中掙脫。這個效果會在蛛網被摧毀時結束。蛛網具有AC 10和5點生命值，對火焰易傷，且免疫於鈍擊、毒素和精神傷害。"
 					]
 				}
 			],
@@ -14849,9 +14849,9 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Web Garrote",
+					"name": "蛛絲絞索",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one Medium or Small creature against which the ettercap has advantage on the attack roll. {@h}4 ({@damage 1d4 + 2}) bludgeoning damage, and the target is {@condition 被擒} (escape DC 12). Until this grapple ends, the target can't breathe, and the ettercap has advantage on attack rolls against it."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一體型為中型或小型，且伊特蛛怪對其的攻擊檢定具有優勢的生物。{@h}4 ({@damage 1d4 + 2})鈍擊傷害，且目標{@condition 被擒}(逃脫DC 12)。直到擒抱結束前，目標被無法呼吸，且伊特蛛怪在對其進行的攻擊檢定中具有優勢。"
 					]
 				}
 			],
@@ -26039,7 +26039,7 @@
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 17}，觸及5呎，單一目標。{@h}23 ({@damage 3d8 + 10})穿刺傷害。 If the target is a Large or smaller creature {@condition 被擒} by the kraken, that creature is swallowed, and the grapple ends. While swallowed, the creature is {@condition blinded} and {@condition 束縛}, it has total cover against attacks and other effects outside the kraken, and it takes 42 ({@damage 12d6}) acid damage at the start of each of the kraken's turns. If the kraken takes 50 damage or more on a single turn from a creature inside it, the kraken must succeed on a DC 25 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition 伏地} in a space within 10 feet of the kraken. If the kraken dies, a swallowed creature is no longer {@condition 束縛} by it and can escape from the corpse using 15 feet of movement, exiting {@condition 伏地}."
+						"{@atk mw} 命中{@hit 17}，觸及5呎，單一目標。{@h}23 ({@damage 3d8 + 10})穿刺傷害。 If the target is a Large or smaller creature {@condition 被擒} by the kraken, that creature is swallowed, and the grapple ends. While swallowed, the creature is {@condition 目盲} and {@condition 束縛}, it has total cover against attacks and other effects outside the kraken, and it takes 42 ({@damage 12d6}) acid damage at the start of each of the kraken's turns. If the kraken takes 50 damage or more on a single turn from a creature inside it, the kraken must succeed on a DC 25 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition 伏地} in a space within 10 feet of the kraken. If the kraken dies, a swallowed creature is no longer {@condition 束縛} by it and can escape from the corpse using 15 feet of movement, exiting {@condition 伏地}."
 					]
 				},
 				{
@@ -30088,7 +30088,7 @@
 				{
 					"name": "Blinding Dust",
 					"entries": [
-						"Blinding dust and sand swirls magically around the mummy lord. Each creature within 5 feet of the mummy lord must succeed on a DC 16 Constitution saving throw or be {@condition blinded} until the end of the creature's next turn."
+						"Blinding dust and sand swirls magically around the mummy lord. Each creature within 5 feet of the mummy lord must succeed on a DC 16 Constitution saving throw or be {@condition 目盲} until the end of the creature's next turn."
 					]
 				},
 				{
@@ -35170,7 +35170,7 @@
 			]
 		},
 		{
-			"name": "Remorhaz",
+			"name": "百足魔獸", "ENG_name": "Remorhaz",
 			"size": "H",
 			"type": "monstrosity",
 			"source": "MM",
@@ -35203,14 +35203,14 @@
 				"cold",
 				"fire"
 			],
-			"senses": "黑暗視覺60呎, tremorsense 60 ft.",
+			"senses": "黑暗視覺60呎, 震顫感知60呎",
 			"passive": 10,
 			"cr": "11",
 			"trait": [
 				{
 					"name": "灼熱身軀", "tENG_name": "Heated Body",
 					"entries": [
-						"A creature that touches the remorhaz or hits it with a melee attack while within 5 feet of it takes 10 ({@damage 3d6}) fire damage."
+						"一個觸碰百足魔獸或在距離它5呎內以一次近戰攻擊命中它的生物將受到10 ({@damage 3d6})火焰傷害。"
 					]
 				}
 			],
@@ -35218,14 +35218,14 @@
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 11}，觸及10呎，單一目標。{@h}40 ({@damage 6d10 + 7}) piercing damage plus 10 ({@damage 3d6}) fire damage. If the target is a creature, it is {@condition 被擒} (escape DC 17). Until this grapple ends, the target is {@condition 束縛}, and the remorhaz can't bite another target."
+						"{@atk mw} 命中{@hit 11}，觸及10呎，單一目標。{@h}40 ({@damage 6d10 + 7})穿刺傷害加 10 ({@damage 3d6})火焰傷害。若目標為一個生物，則它將{@condition 被擒}(逃脫DC 17)。直到擒抱結束前，目標將被{@condition 束縛}，且百足魔獸不能啃咬另一個目標。"
 					]
 				},
 				{
 					"name": "吞嚥", "tENG_name": "Swallow",
 					"entries": [
-						"The remorhaz makes one bite attack against a Medium or smaller creature it is grappling. If the attack hits, that creature takes the bite's damage and is swallowed, and the grapple ends. While swallowed, the creature is {@condition blinded} and {@condition 束縛}, it has total cover against attacks and other effects outside the remorhaz, and it takes 21 ({@damage 6d6}) acid damage at the start of each of the remorhaz's turns.",
-						"If the remorhaz takes 30 damage or more on a single turn from a creature inside it, the remorhaz must succeed on a DC 15 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition 伏地} in a space within 10 feet oft he remorhaz. If the remorhaz dies, a swallowed creature is no longer {@condition 束縛} by it and can escape from the corpse using 15 feet of movement, exiting {@condition 伏地}."
+						"百足魔獸對一個它正擒抱，且體型為中型或更小的目標進行一次啃咬攻擊。若該攻擊命中，則該生物將受到啃咬傷害並被吞嚥，且擒抱結束。在被吞嚥時，目標將陷入{@condition 目盲}和{@condition 束縛}，它對百足魔獸外的攻擊和其他效果有全掩護，且在每次百足魔獸的回合開始時受到21 ({@damage 6d6})酸蝕傷害。",
+						"若百足魔獸在單一回合內受到超過30點來自它體內生物所造成的傷害，百足魔獸必須在該回合結束時成功通過一次DC 15的體質豁免，否則將反胃嘔出所有它吞下的生物，並使它們以{@condition 伏地}狀態摔落至距離百足魔獸10呎內的空間。若百足魔獸死亡，被吞下的生物將不再被它{@condition 束縛}，且可以花費15呎的移動速度從屍體中逃脫，以{@condition 伏地}狀態離開。"
 					]
 				}
 			],
@@ -40348,7 +40348,7 @@
 				{
 					"name": "吞嚥", "tENG_name": "Swallow",
 					"entries": [
-						"The tarrasque makes one bite attack against a Large or smaller creature it is grappling. If the attack hits, the target takes the bite's damage, the target is swallowed, and the grapple ends. While swallowed, the creature is {@condition blinded} and {@condition 束縛}, it has total cover against attacks and other effects outside the tarrasque, and it takes 56 ({@damage 16d6}) acid damage at the start of each of the tarrasque's turns.",
+						"The tarrasque makes one bite attack against a Large or smaller creature it is grappling. If the attack hits, the target takes the bite's damage, the target is swallowed, and the grapple ends. While swallowed, the creature is {@condition 目盲} and {@condition 束縛}, it has total cover against attacks and other effects outside the tarrasque, and it takes 56 ({@damage 16d6}) acid damage at the start of each of the tarrasque's turns.",
 						"If the tarrasque takes 60 damage or more on a single turn from a creature inside it, the tarrasque must succeed on a DC 20 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition 伏地} in a space within 10 feet of the tarrasque. If the tarrasque dies, a swallowed creature is no longer {@condition 束縛} by it and can escape from the corpse by using 30 feet of movement, exiting {@condition 伏地}."
 					]
 				}
@@ -42246,7 +42246,7 @@
 					"name": "吸血鬼弱點", "tENG_name": "Vampire Weaknesses",
 					"entries": [
 						"吸血鬼眷族具有以下缺陷：",
-						"{@i 禁入：} 吸血鬼若沒有得到居住者的邀請，就無法進入其住處。",
+						"{@i 禁入住家：} 吸血鬼若沒有得到居住者的邀請，就無法進入其住處。",
 						"{@i 為流水所傷：} 當吸血鬼在流水中結束它的回合時，它將受到20點酸蝕傷害。",
 						"{@i 木樁穿心：} 若吸血鬼在陷入{@condition 無力}狀態時於它的棲所被木製的穿刺武器插穿心臟，吸血鬼將會被摧毀。",
 						"{@i 日光過敏：} 當它在日光照耀下開始它的回合時，吸血鬼將受到20點光耀傷害。當處於日光照耀下時，它在攻擊檢定和屬性檢定中具有劣勢。"
@@ -46476,7 +46476,7 @@
 			]
 		},
 		{
-			"name": "Young Remorhaz",
+			"name": "幼年百足魔獸", "ENG_name": "Young Remorhaz",
 			"size": "L",
 			"type": "monstrosity",
 			"source": "MM",
@@ -46509,14 +46509,14 @@
 				"cold",
 				"fire"
 			],
-			"senses": "黑暗視覺60呎, tremorsense 60 ft.",
+			"senses": "黑暗視覺60呎, 震顫感知60呎",
 			"passive": 10,
 			"cr": "5",
 			"trait": [
 				{
 					"name": "灼熱身軀", "tENG_name": "Heated Body",
 					"entries": [
-						"A creature that touches the remorhaz or hits it with a melee attack while within 5 feet of it takes 7 ({@damage 2d6}) fire damage."
+						"一個觸碰百足魔獸或在距離它5呎內以一次近戰攻擊命中它的生物將受到7 ({@damage 2d6})火焰傷害。"
 					]
 				}
 			],
@@ -46524,7 +46524,7 @@
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}20 ({@damage 3d10 + 4}) piercing damage plus 7 ({@damage 2d6}) fire damage."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}20 ({@damage 3d10 + 4})穿刺傷害加 7 ({@damage 2d6})火焰傷害。"
 					]
 				}
 			],
