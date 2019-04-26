@@ -14,7 +14,7 @@
 				}
 			],
 			"regionalEffects": [
-				"這片坐落著底棲魔魚巢穴的區域被該生物的存在所扭曲，並創造出以下其中一個或多個效應：",
+				"這片坐落著底棲魔魚巢穴的區域被該生物的本質所扭曲，並創造出以下其中一個或多個效應：",
 				{
 					"type": "list",
 					"items": [
@@ -106,27 +106,27 @@
 		{
 			"name": "Beholder",
 			"lairActions": [
-				"When fighting inside its lair, a beholder can invoke the ambient magic to take lair actions. On initiative count 20 (losing initiative ties), the beholder can take one lair action to cause one of the following effects:",
+				"當眼魔在其巢穴戰鬥時，它可以引發周圍環境的魔法以採取它的巢穴動作。在先攻順序輪到20時（先攻相等時則為後手），眼魔可以採取一次巢穴動作以造成以下其中一個效果：",
 				{
 					"type": "list",
 					"items": [
-						"A 50-foot-square area of ground within 120 feet of the beholder becomes slimy; that area is difficult terrain until initiative count 20 on the next round.",
-						"Walls within 120 feet of the beholder sprout grasping appendages until initiative count 20 on the round after next. Each creature of the beholder's choice that starts its turn within 10 feet of such a wall must succeed on a DC 15 Dexterity saving throw or be grappled. Escaping requires a successful DC 15 Strength (Athletics) or Dexterity (Acrobatics) check.",
-						"An eye opens on a solid surface within 60 feet of the beholder. One random eye ray of the beholder shoots from that eye at a target of the beholder's choice that it can see. The eye then closes and disappears."
+						"距離眼魔120呎內一處50呎平方的地表範圍將變得黏滑；該區域被變為困難地形直到下一輪的先攻順序輪到20。",
+						"距離眼魔120呎內的牆面將長出攫抓觸肢，持續直到下一輪之後，先攻順序再次輪到20。每個眼魔所選，且在這類牆面10呎內開始它回合的生物，都必須成功通過一次DC 15的敏捷豁免，否則將{@condition 被擒}。從中逃脫需要成功通過一次DC 15的力量（{@skill 運動}）或敏捷（{@skill 特技}）檢定。",
+						"距離眼魔60呎內的一處固體表面將張開一隻眼睛。一道眼魔的隨機眼波射線將從這隻眼睛射向一個眼魔所選擇且它所能看見的生物。這隻眼睛接著將閉上並消失。"
 					]
 				},
-				"The beholder can't repeat an effect until they have all been used, and it can't use the same effect two rounds in a row."
+				"在所有的效果都被使用過之前，眼魔不能使用已經用過的巢穴動作效果，且眼魔不能連續兩輪使用相同的效果。"
 			],
 			"regionalEffects": [
-				"A region containing a beholder's lair is warped by the creature's unnatural presence, which creates one or more of the following effects:",
+				"這片坐落著眼魔巢穴的區域被該生物的非自然本質所扭曲，並創造出以下其中一個或多個效應：",
 				{
 					"type": "list",
 					"items": [
-						"Creatures within 1 mile of the beholder's lair sometimes feel as if they're being watched when they aren't.",
-						"When the beholder sleeps, minor warps in reality occur within 1 mile of its lair and then vanish 24 hours later. Marks on cave walls might change subtly, an eerie trinket might appear where none existed before, harmless slime might coat a statue, and so on. These effects apply only to natural surfaces and to nonmagical objects that aren't on anyone's person."
+						"距離眼魔巢穴1哩內的生物偶爾會感覺到自己正在被注視，儘管實際上並沒有這回事。",
+						"當眼魔入睡時，輕微的現實扭曲將會發生在距離它巢穴1哩內的區域，並接著在24小時後消失。這些扭曲可能會是雕刻牆面上記號的微妙變化、怪異的飾品出現在它們先前不存在的地方、無害的黏液覆蓋於雕像表面，諸如此類。這些效應只會發生在自然表面和不屬於任何人的非魔法物體上。"
 					]
 				},
-				"If the beholder dies, these effects fade over the course of {@dice 1d10} days."
+				"若眼魔死亡，這些效應都將在{@dice 1d10}天內逐漸消散。"
 			],
 			"source": "MM"
 		},
