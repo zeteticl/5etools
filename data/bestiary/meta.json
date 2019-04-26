@@ -3,27 +3,27 @@
 		{
 			"name": "Aboleth",
 			"lairActions": [
-				"When fighting inside its lair, an aboleth can invoke the ambient magic to take lair actions. On initiative count 20 (losing initiative ties), the aboleth takes a lair action to cause one of the following effects:",
+				"當底棲魔魚在其巢穴戰鬥時，它可以引發周圍環境的魔法以採取它的巢穴動作。在先攻順序輪到20時（先攻相等時則為後手），底棲魔魚可以採取一次巢穴動作以造成以下其中一個效果：",
 				{
 					"type": "list",
 					"items": [
-						"The aboleth casts {@spell phantasmal force} (no components required) on any number of creatures it can see within 60 feet of it. While maintaining concentration on this effect, the aboleth can't take other lair actions. If a target succeeds on the saving throw or if the effect ends for it, the target is immune to the aboleth's phantasmal force lair action for the next 24 hours, although such a creature can choose to be affected.",
-						"Pools of water within 90 feet of the aboleth surge outward in a grasping tide. Any creature on the ground within 20 feet of such a pool must succeed on a DC 14 Strength saving throw or be pulled up to 20 feet into the water and knocked prone. The aboleth can't use this lair action again until it has used a different one.",
-						"Water in the aboleth's lair magically becomes a conduit for the creature's rage. The aboleth can target any number of creatures it can see in such water within 90 feet of it. A target must succeed on a DC 14 Wisdom saving throw or take 7 ({@dice 2d6}) psychic damage. The aboleth can't use this lair action again until it has used a different one."
+						"底棲魔魚對距離它60呎內且它所能看見的任意數量個生物施放{@spell 魅影之力}(無須任何構材)。當專注於這個效果時，底棲魔魚不能採取其它的巢穴動作。 若目標成功通過此豁免檢定，或這個效果對它的影響結束，則目標將在接下來24小時內免疫於該底棲魔魚使用巢穴動作施放的{@spell 魅影之力}，然而該生物仍然可以選擇自願被影響。",
+						"距離底棲魔魚90呎內的水池將化作洶湧的攫抓浪潮向外湧出。任何在地面上且距離這類水池20呎內的生物都必須成功通過一次DC 14的力量豁免，否則被拉向水中最多20呎距離且被擊倒{@condition 伏地}。直到底棲魔魚使用了另一個巢穴動作之前，它都不能再使用此巢穴動作。",
+						"底棲魔魚巢穴內的水體將被魔法變成生物狂怒的導管。底棲魔魚可以選擇任意個距離它90呎內，它所能看見，且處於這類水體中的生物做為目標。目標必須成功通過一次DC 14的睿知豁免，否則受到 7 ({@dice 2d6})精神傷害。直到底棲魔魚使用了另一個巢穴動作之前，它都不能再使用此巢穴動作。"
 					]
 				}
 			],
 			"regionalEffects": [
-				"The region containing an aboleth's lair is warped by the creature's presence, which creates one or more of the following effects:",
+				"這片坐落著底棲魔魚巢穴的區域被該生物的存在所扭曲，並創造出以下其中一個或多個效應：",
 				{
 					"type": "list",
 					"items": [
-						"Underground surfaces within 1 mile of the aboleth's lair are slimy and wet and are difficult terrain.",
-						"Water sources within 1 mile of the lair are supernaturally fouled. Enemies of the aboleth that drink such water vomit it within minutes.",
-						"As an action, the aboleth can create an illusory image of itself within 1 mile of the lair. The copy can appear at any location the aboleth has seen before or in any location a creature charmed by the aboleth can currently see. Once created, the image lasts for as long as the aboleth maintains concentration, as if concentrating on a spell. Although the image is intangible, it looks, sounds, and can move like the aboleth. The aboleth can sense, speak, and use telepathy from the image's position as if present at that position. If the image takes any damage, it disappears."
+						"距離底棲魔魚巢穴1哩內的地底表面將變為黏滑而潮濕的困難地形。",
+						"距離巢穴1哩內的水源被超自然力量汙染。底棲魔魚的敵人在喝下這樣的水後將反胃長達數分鐘。",
+						"以一個動作，底棲魔魚可以在它巢穴1哩內創造一個自己的幻影。這個幻影可以出現在任何底棲魔魚曾經見過的地方，或在任何被底棲魔魚{@condition 魅惑}的生物當下所能看見的地方。一旦幻影被創造，只要底棲魔魚維持專注（如同專注於法術），這個幻影就將持續存在。儘管這個幻影沒有實體，但它的外觀、聲音，以及移動方式都跟底棲魔魚一樣。底棲魔魚可以透過該幻影的位置感知、說話、並使用它的心靈感應，就如同它存在於該處一樣。若這個幻影受到任何傷害，則它將消失。"
 					]
 				},
-				"If the aboleth dies, the first two effects fade over the course of {@dice 3d10} days."
+				"若底棲魔魚死亡，前兩個效應將在{@dice 3d10}天內逐漸消散。"
 			],
 			"source": "MM"
 		},

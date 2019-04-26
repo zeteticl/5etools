@@ -80,7 +80,7 @@
 			]
 		},
 		{
-			"name": "Aboleth",
+			"name": "底棲魔魚", "ENG_name": "Aboleth",
 			"size": "L",
 			"type": "aberration",
 			"source": "MM",
@@ -121,25 +121,25 @@
 			},
 			"senses": "黑暗視覺120呎",
 			"passive": 20,
-			"languages": "Deep Speech, telepathy 120 ft.",
+			"languages": "深幽語、心靈感應120呎",
 			"cr": "10",
 			"trait": [
 				{
 					"name": "兩棲",
 					"entries": [
-						"The aboleth可以在空氣和水中呼吸。"
+						"底棲魔魚可以在空氣和水中呼吸。"
 					]
 				},
 				{
-					"name": "Mucous Cloud",
+					"name": "黏液雲團", "tENG_name": "Mucous Cloud",
 					"entries": [
-						"While underwater, the aboleth is surrounded by transformative mucus. A creature that touches the aboleth or that hits it with a melee attack while within 5 feet of it must make a DC 14 Constitution saving throw. On a failure, the creature is diseased for {@dice 1d4} hours. The diseased creature can breathe only underwater."
+						"當處於水中，底棲魔魚將被不定型的黏液環繞。一個觸碰底棲魔魚或在距離它5呎內以一次近戰攻擊命中它的生物必須進行一次DC 14的體質豁免。若豁免失敗，則該生物將被疾病感染長達{@dice 1d4}個小時。被該疾病感染的生物將只能在水下呼吸。"
 					]
 				},
 				{
-					"name": "Probing Telepathy",
+					"name": "心靈探索", "tENG_name": "Probing Telepathy",
 					"entries": [
-						"If a creature communicates telepathically with the aboleth, the aboleth learns the creature's greatest desires if the aboleth can see the creature."
+						"當一個生物透過心靈感應與底棲魔魚交流，若底棲魔魚能夠看見該生物，則底棲魔魚將得知該生物最強烈的渴望。"
 					]
 				}
 			],
@@ -147,13 +147,13 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The aboleth makes three tentacle attacks."
+						"底棲魔魚進行三次觸手攻擊。"
 					]
 				},
 				{
-					"name": "Tentacle",
+					"name": "觸手", "tENG_name": "Tentacle",
 					"entries": [
-						"{@atk mw} 命中{@hit 9}，觸及10呎，單一目標。{@h}12 ({@damage 2d6 + 5})鈍擊傷害。 If the target is a creature, it must succeed on a DC 14 Constitution saving throw or become diseased. The disease has no effect for 1 minute and can be removed by any magic that cures disease. After 1 minute, the diseased creature's skin becomes translucent and slimy, the creature can't regain hit points unless it is underwater, and the disease can be removed only by heal or another disease-curing spell of 6th level or higher. When the creature is outside a body of water, it takes 6 ({@damage 1d12}) acid damage every 10 minutes unless moisture is applied to the skin before 10 minutes have passed."
+						"{@atk mw} 命中{@hit 9}，觸及10呎，單一目標。{@h}12 ({@damage 2d6 + 5})鈍擊傷害。若目標為一個生物，則它必須成功通過一次DC 14的體質豁免，否則將感染疾病。這個疾病在1分鐘內不會有任何效果，且可以被任何能夠治癒疾病的魔法給移除。在1分鐘之後，被感染生物的肌膚將變得半透明而黏滑，除非該生物處於水中，否則它將無法回復生命值，且此疾病將只能被{@spell 治癒術}或其他6環或更高的疾病治癒法術給移除。當該生物離開水體時，除非它的肌膚在10分鐘經過之前接觸到水分，否則每經過10分鐘，它就會受到6 ({@damage 1d12})酸蝕傷害。"
 					]
 				},
 				{
@@ -163,10 +163,10 @@
 					]
 				},
 				{
-					"name": "Enslave (3/Day)",
+					"name": "奴役 (3/日)", "tENG_name": "Enslave",
 					"entries": [
-						"The aboleth targets one creature it can see within 30 feet of it. The target must succeed on a DC 14 Wisdom saving throw or be magically {@condition 魅惑} by the aboleth until the aboleth dies or until it is on a different plane of existence from the target. The {@condition 魅惑} target is under the aboleth's control and can't take reactions, and the aboleth and the target can communicate telepathically with each other over any distance.",
-						"Whenever the {@condition 魅惑} target takes damage, the target can repeat the saving throw. On a success, the effect ends. No more than once every 24 hours, the target can also repeat the saving throw when it is at least 1 mile away from the aboleth."
+						"底棲魔魚選擇一個距離它30呎內且它所能看見的生物做為目標。目標必須成功通過一次DC 14的睿知豁免，否則將被底棲魔魚以魔法{@condition 魅惑}，持續直到底棲魔魚死亡，或直到底棲魔魚與目標處於不同的存在位面。被{@condition 魅惑}的目標將處於底棲魔魚的控制下，無法採取反應，且底棲魔魚與目標之間能夠跨越任何距離以心靈感應溝通。",
+						"每當被{@condition 魅惑}的目標受到傷害，目標可以重複進行這個豁免檢定。若豁免成功，則這個效果結束。當目標遠離底棲魔魚至少1哩的距離時，它每24小時也可以再重複進行這個豁免檢定不超過一次。"
 					]
 				}
 			],
@@ -176,21 +176,21 @@
 			},
 			"legendary": [
 				{
-					"name": "Detect",
+					"name": "偵查",
 					"entries": [
-						"The aboleth makes a Wisdom ({@skill Perception}) check."
+						"底棲魔魚進行一次睿知（{@skill 感知}）檢定。"
 					]
 				},
 				{
-					"name": "Tail Swipe",
+					"name": "掃尾",
 					"entries": [
-						"The aboleth makes one tail attack."
+						"底棲魔魚進行一次尾擊攻擊。"
 					]
 				},
 				{
-					"name": "Psychic Drain (Costs 2 Actions)",
+					"name": "精神吸取 (消耗 2動作)",
 					"entries": [
-						"One creature {@condition 魅惑} by the aboleth takes 10 ({@damage 3d6}) psychic damage, and the aboleth regains hit points equal to the damage the creature takes."
+						"一個被底棲魔魚{@condition 魅惑}的生物將受到 10 ({@damage 3d6})精神傷害，且底棲魔魚將回復等同於該生物所受傷害的生命值。"
 					]
 				}
 			],
