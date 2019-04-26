@@ -12104,7 +12104,7 @@
 			]
 		},
 		{
-			"name": "Displacer Beast",
+			"name": "位移獸", "ENG_name": "Displacer Beast",
 			"size": "L",
 			"type": "monstrosity",
 			"source": "MM",
@@ -12138,15 +12138,15 @@
 			"cr": "3",
 			"trait": [
 				{
-					"name": "Avoidance",
+					"name": "迴避", "tENG_name": "Avoidance",
 					"entries": [
-						"If the displacer beast is subjected to an effect that allows it to make a saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails."
+						"若位移獸成為一個允許它進行敏捷豁免以僅承受一半傷害的效果的目標時，它改為在豁免成功時不受任何傷害，且在豁免失敗時僅承受一半傷害。"
 					]
 				},
 				{
-					"name": "Displacement",
+					"name": "位移幻象", "tENG_name": "Displacement",
 					"entries": [
-						"The displacer beast projects a magical illusion that makes it appear to be standing near its actual location, causing attack rolls against it to have disadvantage. If it is hit by an attack, this trait is disrupted until the end of its next turn. This trait is also disrupted while the displacer beast is {@condition 無力} or has a speed of 0."
+						"位移獸投射出一個魔法幻象，使其看起來像是站在它實際位置的附近，並讓對它進行的攻擊檢定因此承受劣勢。若它被一次攻擊命中，這個特性將被中斷直到它的下個回合結束。這個特性同樣會在位移獸陷入{@condition 無力}狀態或移動速度歸零時被中斷。"
 					]
 				}
 			],
@@ -12154,13 +12154,13 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The displacer beast makes two attacks with its tentacles."
+						"位移獸進行二次觸肢攻擊。"
 					]
 				},
 				{
-					"name": "Tentacle",
+					"name": "觸肢", "tENG_name": "Tentacle",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及10呎，單一目標。{@h}7 ({@damage 1d6 + 4}) bludgeoning damage plus 3 ({@damage 1d6})穿刺傷害。"
+						"{@atk mw} 命中{@hit 6}，觸及10呎，單一目標。{@h}7 ({@damage 1d6 + 4})鈍擊傷害加 3 ({@damage 1d6})穿刺傷害。"
 					]
 				}
 			],
@@ -12332,7 +12332,7 @@
 			]
 		},
 		{
-			"name": "Doppelganger",
+			"name": "二重身", "ENG_name": "Doppelganger",
 			"size": "M",
 			"type": {
 				"type": "monstrosity",
@@ -12369,25 +12369,25 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 11,
-			"languages": "Common",
+			"languages": "通用語",
 			"cr": "3",
 			"trait": [
 				{
 					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
-						"The doppelganger can use its action to polymorph into a Small or Medium humanoid it has seen, or back into its true form. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies."
+						"二重身可以使用它的動作以變形成一個它曾看過的小型或中型類人生物，或變回它的真實型態。除了它的體型之外，它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。它會在死亡時回復它的真實型態。"
 					]
 				},
 				{
-					"name": "Ambusher",
+					"name": "伏擊者", "tENG_name": "Ambusher",
 					"entries": [
-						"In the first round of a combat, the doppelganger has advantage on attack rolls against any creature it surprised."
+						"在戰鬥的第一輪中，二重身對任何被它突襲的生物所進行的攻擊檢定具有優勢。"
 					]
 				},
 				{
-					"name": "Surprise Attack",
+					"name": "突襲攻擊", "tENG_name": "Surprise Attack",
 					"entries": [
-						"If the doppelganger surprises a creature and hits it with an attack during the first round of combat, the target takes an extra 10 ({@dice 3d6}) damage from the attack."
+						"若二重身突襲一個生物並在戰鬥的第一輪期間以一次攻擊命中它，則目標將受到額外的10 ({@dice 3d6})傷害。"
 					]
 				}
 			],
@@ -12395,19 +12395,19 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The doppelganger makes two melee attacks."
+						"二重身進行二次近戰攻擊。"
 					]
 				},
 				{
-					"name": "Slam",
+					"name": "猛擊", "tENG_name": "Slam",
 					"entries": [
 						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}7 ({@damage 1d6 + 4})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Read Thoughts",
+					"name": "讀取思想", "tENG_name": "Read Thoughts",
 					"entries": [
-						"The doppelganger magically reads the surface thoughts of one creature within 60 feet of it. The effect can penetrate barriers, but 3 ft. of wood or dirt, 2 ft. of stone, 2 inches of metal, or a thin sheet of lead blocks it. While the target is in range, the doppelganger can continue reading its thoughts, as long as the doppelganger's concentration isn't broken (as if concentrating on a spell). While reading the target's mind, the doppelganger has advantage on Wisdom ({@skill Insight}) and Charisma ({@skill Deception}, {@skill Intimidation}, and {@skill Persuasion}) checks against the target."
+						"二重身以魔法閱讀一個距離它60呎內的生物的表層思想。這個效果可以穿透障礙物，但會被3呎厚的木頭或泥土、2呎厚的石頭、2吋厚的金屬、或一層薄薄的鉛給阻擋。當目標位於範圍內時，只要二重身的專注沒有被打斷（如同專注於法術），二重身就可以持續閱讀它的思想。當二重身正在閱讀目標的思想時，它在對目標所進行的睿知（{@skill 察言觀色}）和魅力（{@skill 欺瞞}、{@skill 威嚇}、和{@skill 說服}）檢定中具有優勢。"
 					]
 				}
 			],
@@ -12679,7 +12679,7 @@
 			]
 		},
 		{
-			"name": "Drider",
+			"name": "蛛化精靈", "ENG_name": "Drider",
 			"size": "L",
 			"type": "monstrosity",
 			"source": "MM",
@@ -12721,25 +12721,25 @@
 				{
 					"name": "精類血統",
 					"entries": [
-						"The drider has advantage on saving throws against being {@condition 魅惑}, and magic can't put the drider to sleep."
+						"蛛化精靈在對抗{@condition 魅惑}的豁免檢定中具有優勢，且魔法無法使蛛化精靈入睡。"
 					]
 				},
 				{
 					"name": "蛛行",
 					"entries": [
-						"drider可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
+						"蛛化精靈可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
 					]
 				},
 				{
 					"name": "日光敏感",
 					"entries": [
-						"當處於日光照耀下時，drider在攻擊檢定，以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
+						"當處於日光照耀下時，蛛化精靈在攻擊檢定，以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
 					]
 				},
 				{
 					"name": "蛛網行者",
 					"entries": [
-						"The drider 無視蛛網所造成的移動限制。"
+						"蛛化精靈無視蛛網所造成的移動限制。"
 					]
 				}
 			],
@@ -12747,25 +12747,25 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The drider makes three attacks, either with its longsword or its longbow. It can replace one of those attacks with a bite attack."
+						"蛛化精靈進行三次攻擊，使用它的長劍或長弓。它能夠以一次啃咬攻擊取代其中的一次攻擊。"
 					]
 				},
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一生物。{@h}2 ({@damage 1d4}) piercing damage plus 9 ({@damage 2d8}) 毒素傷害。"
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一生物。{@h}2 ({@damage 1d4})穿刺傷害加 9 ({@damage 2d8})毒素傷害。"
 					]
 				},
 				{
 					"name": "長劍",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3}) slashing damage, or 8 ({@damage 1d10 + 3}) slashing damage if used with two hands."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3})劈砍傷害，或若以雙手使用則造成 8 ({@damage 1d10 + 3})劈砍傷害。"
 					]
 				},
 				{
 					"name": "長弓",
 					"entries": [
-						"{@atk rw} 命中{@hit 6}，射程150/600呎，單一目標。{@h}7 ({@damage 1d8 + 3}) piercing damage plus 4 ({@damage 1d8}) 毒素傷害。"
+						"{@atk rw} 命中{@hit 6}，射程150/600呎，單一目標。{@h}7 ({@damage 1d8 + 3})穿刺傷害加 4 ({@damage 1d8})毒素傷害。"
 					]
 				}
 			],
@@ -12774,7 +12774,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"The drider's innate spellcasting ability is Wisdom (spell save DC 13). The drider can innately cast the following spells, requiring no material components:"
+						"蛛化精靈的天生施法屬性為睿知（法術豁免DC 13）。蛛化精靈天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 舞光術}"
@@ -12791,19 +12791,19 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Drider Spellcasting",
+					"name": "蛛化精靈施法",
 					"entries": [
-						"Driders that were once drow spellcasters might retain their ability to cast spells. Such driders typically have a higher spellcasting ability (15 or 16) than other driders. Further, the drider gains the Spellcasting trait. A drider that was a drow divine spellcaster, therefore, could have a Wisdom of 16 (+3) and a Spellcasting trait as follows.",
-						"Spellcasting. The drider is a 7th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 14, {@hit 6} to hit with spell attacks). The drider has the following spells prepared from the cleric spell list:",
+						"曾經身為卓爾施法者的蛛化精靈可能會保留它們施放法術的能力。這類蛛化精靈通常擁有較其他蛛化精靈更高的施法屬性（15或16），並且具有施法特性。因此，一個曾是卓爾神術施法者的蛛化精靈可能會具有16點的睿知值(+3)，並具有如下的施法特性。",
+						"施法. 蛛化精靈是7級的施法者。它的施法屬性為睿知（法術豁免DC 14，法術攻擊命中{@hit 6}）。蛛化精靈已經從牧師法術列表中準備了以下法術：",
 						{
 							"type": "list",
 							"style": "list-hang-notitle",
 							"items": [
-								"Cantrips (at will): {@spell 毒氣噴灑}, {@spell 奇術}",
-								"1st level (4 slots): {@spell 災禍術}, {@spell 偵測魔法}, {@spell 聖域術}",
-								"2nd level (3 slots): {@spell 人類定身術}, {@spell 沉默術}",
-								"3rd level (3 slots): {@spell 銳眼術}, {@spell 解除魔法}",
-								"4th level (2 slots): {@spell 預言術}, {@spell 行動自如術}"
+								"戲法 (隨意): {@spell 毒氣噴灑}, {@spell 奇術}",
+								"1環 (4法術位):: {@spell 災禍術}, {@spell 偵測魔法}, {@spell 聖域術}",
+								"2環 (3法術位): {@spell 人類定身術}, {@spell 沉默術}",
+								"3環 (3法術位: {@spell 銳眼術}, {@spell 解除魔法}",
+								"4環 (2法術位): {@spell 預言術}, {@spell 行動自如術}"
 							]
 						}
 					]
@@ -28626,7 +28626,7 @@
 			]
 		},
 		{
-			"name": "Medusa",
+			"name": "梅杜莎", "ENG_name": "Medusa",
 			"size": "M",
 			"type": "monstrosity",
 			"source": "MM",
@@ -28663,15 +28663,15 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 14,
-			"languages": "Common",
+			"languages": "通用語",
 			"cr": "6",
 			"trait": [
 				{
-					"name": "Petrifying Gaze",
+					"name": "石化凝視", "tENG_name": "Petrifying Gaze",
 					"entries": [
-						"When a creature that can see the medusa's eyes starts its turn within 30 feet of the medusa, the medusa can force it to make a DC 14 Constitution saving throw if the medusa isn't {@condition 無力} and can see the creature. If the saving throw fails by 5 or more, the creature is instantly {@condition petrified}. Otherwise, a creature that fails the save begins to turn to stone and is {@condition 束縛}. The {@condition 束縛} creature must repeat the saving throw at the end of its next turn, becoming {@condition petrified} on a failure or ending the effect on a success. The petrification lasts until the creature is freed by the  {@spell greater restoration} spell or other magic.",
-						"Unless surprised, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can't see the medusa until the start of its next turn, when it can avert its eyes again. If the creature looks at the medusa in the meantime, it must immediately make the save.",
-						"If the medusa sees itself reflected on a polished surface within 30 feet of it and in an area of bright light, the medusa is, due to its curse, affected by its own gaze."
+						"當一個可以看見梅杜莎雙眼的生物在距離梅杜莎30呎內的位置開始它的回合，且若梅杜莎不處於{@condition 無力}並可以看見該生物，梅杜莎就可以強迫它進行一次DC 14的體質豁免。若此豁免失敗且檢定結果與目標值差距5點或更多，則該生物將瞬間被{@condition 石化}。除此之外，一個豁免失敗的生物將會開始轉變成石頭並因此被{@condition 束縛}。被{@condition 束縛}的生物必須在它的下個回合結束時重複進行這個豁免檢定。若豁免成功則此效果結束。若豁免失敗則該生物將被{@condition 石化}。這個石化狀態將持續直到該生物被{@spell 高等復原術}法術或其他魔法給解放。",
+						"除非被突襲，否則一個生物可以移開視線以避免在它的回合開始時進行豁免檢定。若該生物這麼做，則它直到它的下個回合開始前都將無法看見梅杜莎，且它可以在下個回合開始時再次選擇移開視線。在該生物看向梅杜莎的同時，它必須立刻進行該豁免檢定。",
+						"若梅杜莎在明亮光照的區域中看見距離它30呎內自己位於磨光表面的倒影，由於它所遭受的詛咒，它將被自己石化凝視的效果給影響。"
 					]
 				}
 			],
@@ -28679,13 +28679,13 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The medusa makes either three melee attacks\u2014one with its snake hair and two with its shortsword\u2014or two ranged attacks with its longbow."
+						"梅杜莎進行三次近戰攻擊（一次蛇髮，二次短劍）或以長弓進行二次遠程攻擊。"
 					]
 				},
 				{
-					"name": "Snake Hair",
+					"name": "蛇髮", "tENG_name": "Snake Hair",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}4 ({@damage 1d4 + 2}) piercing damage plus 14 ({@damage 4d6}) 毒素傷害。"
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}4 ({@damage 1d4 + 2})穿刺傷害加 14 ({@damage 4d6})毒素傷害。"
 					]
 				},
 				{
@@ -28697,7 +28697,7 @@
 				{
 					"name": "長弓",
 					"entries": [
-						"{@atk rw} 命中{@hit 5}，射程150/600呎，單一目標。{@h}6 ({@damage 1d8 + 2}) piercing damage plus 7 ({@damage 2d6}) 毒素傷害。"
+						"{@atk rw} 命中{@hit 5}，射程150/600呎，單一目標。{@h}6 ({@damage 1d8 + 2})穿刺傷害加 7 ({@damage 2d6})毒素傷害。"
 					]
 				}
 			],
@@ -29048,7 +29048,7 @@
 			]
 		},
 		{
-			"name": "Mimic",
+			"name": "擬身怪", "ENG_name": "Mimic",
 			"size": "M",
 			"type": {
 				"type": "monstrosity",
@@ -29097,39 +29097,39 @@
 				{
 					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
-						"The mimic can use its action to polymorph into an object or back into its true, amorphous form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies."
+						"擬身怪可以使用它的動作以變形成一個物體，或變回它的真實型態。它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。它會在死亡時回復它的真實型態。"
 					]
 				},
 				{
-					"name": "Adhesive (Object Form Only)",
+					"name": "黏著 (限定物體型態)", "tENG_name": "Adhesive (Object Form Only)",
 					"entries": [
-						"The mimic adheres to anything that touches it. A Huge or smaller creature adhered to the mimic is also {@condition 被擒} by it (escape DC 13). Ability checks made to escape this grapple have disadvantage."
+						"擬身怪黏住任何觸碰它的事物。一個體型為巨型或更小的生物在被擬身怪黏住時同時視作{@condition 被擒}(逃脫DC 13)。用以逃脫這個擒抱所進行的屬性檢定將承受劣勢。"
 					]
 				},
 				{
-					"name": "False Appearance (Object Form Only)",
+					"name": "擬形 (限定物體型態)", "tENG_name": "False Appearance (Object Form Only)",
 					"entries": [
-						"While the mimic remains motionless, it is indistinguishable from an ordinary object."
+						"當擬身怪保持不動，它看起來就跟普通的物體一模一樣。"
 					]
 				},
 				{
-					"name": "Grappler",
+					"name": "擒抱者", "tENG_name": "Grappler",
 					"entries": [
-						"The mimic has advantage on attack rolls against any creature {@condition 被擒} by it."
+						"擬身怪在對任何{@condition 被擒}於它的生物所進行的攻擊檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Pseudopod",
+					"name": "偽足", "tENG_name": "Pseudopod",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3})鈍擊傷害。 If the mimic is in object form, the target is subjected to its Adhesive trait."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3})鈍擊傷害。若擬身怪處於物體形態，則目標將被它的黏著特性影響。"
 					]
 				},
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3}) piercing damage plus 4 ({@damage 1d8}) acid damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3})穿刺傷害加 4 ({@damage 1d8})酸蝕傷害。"
 					]
 				}
 			],
@@ -40223,7 +40223,7 @@
 			]
 		},
 		{
-			"name": "Tarrasque",
+			"name": "泰拉斯奎巨獸", "ENG_name": "Tarrasque",
 			"size": "G",
 			"type": {
 				"type": "monstrosity",
@@ -40286,25 +40286,25 @@
 				{
 					"name": "傳奇抗性 (3/日)",
 					"entries": [
-						"If the tarrasque fails a saving throw, it can choose to succeed instead."
+						"若泰拉斯奎巨獸在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				},
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The tarrasque 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"泰拉斯奎巨獸在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Reflective Carapace",
+					"name": "反射甲殼", "tENG_name": "Reflective Carapace",
 					"entries": [
-						"Any time the tarrasque is targeted by a magic missile spell, a line spell, or a spell that requires a ranged attack roll, roll a {@dice d6}. On a 1 to 5, the tarrasque is unaffected. On a 6, the tarrasque is unaffected, and the effect is reflected back at the caster as though it originated from the tarrasque, turning the caster into the target."
+						"任何時候當泰拉斯奎巨獸成為一個{@spell 魔法飛彈}法術、直線區域法術、或一個要求進行遠程攻擊檢定法術的目標時，骰一顆{@dice d6}。若擲骰結果為1到5，則泰拉斯奎巨獸將不受影響。若結果為6，泰拉斯奎巨獸不受影響，且該效果將被反射回施法者，就如同其源自於泰拉斯奎巨獸並將施法者變為該法術的目標。"
 					]
 				},
 				{
 					"name": "攻城怪物",
 					"entries": [
-						"The tarrasque deals double damage to objects and structures."
+						"泰拉斯奎巨獸對物體和建築物造成兩倍的傷害。"
 					]
 				}
 			],
@@ -40312,13 +40312,13 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The tarrasque can use its Frightful Presence. It then makes five attacks: one with its bite, two with its claws, one with its horns, and one with its tail. It can use its Swallow instead of its bite."
+						"泰拉斯奎巨獸可以使用它的駭人威儀。它接著進行五次攻擊：一次啃咬，二次爪抓，一次角擊，和一次尾擊。它可以使用它的吞嚥以取代啃咬攻擊。"
 					]
 				},
 				{
 					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 19}，觸及10呎，單一目標。{@h}36 ({@damage 4d12 + 10})穿刺傷害。 If the target is a creature, it is {@condition 被擒} (escape DC 20). Until this grapple ends, the target is {@condition 束縛}, and the tarrasque can't bite another target."
+						"{@atk mw} 命中{@hit 19}，觸及10呎，單一目標。{@h}36 ({@damage 4d12 + 10})穿刺傷害。若目標為一個生物，則它將{@condition 被擒}(逃脫DC 20)。直到擒抱結束前，目標被{@condition 束縛}，且泰拉斯奎巨獸不能再啃咬另一個目標。"
 					]
 				},
 				{
@@ -40328,7 +40328,7 @@
 					]
 				},
 				{
-					"name": "Horns",
+					"name": "角擊", "tENG_name": "Horns",
 					"entries": [
 						"{@atk mw} 命中{@hit 19}，觸及10呎，單一目標。{@h}32 ({@damage 4d10 + 10})穿刺傷害。"
 					]
@@ -40342,34 +40342,34 @@
 				{
 					"name": "駭人威儀",
 					"entries": [
-						"Each creature of the tarrasque's choice within 120 feet of it and aware of it must succeed on a DC 17 Wisdom saving throw or become {@condition 恐懼} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, with disadvantage if the tarrasque is within line of sight, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the tarrasque's Frightful Presence for the next 24 hours."
+						"每個距離泰拉斯奎巨獸120呎內，由泰拉斯奎巨獸所選擇的且意識到其存在的生物都必須成功通過一次DC 17的睿知豁免，否則將陷入{@condition 恐懼}長達1分鐘。一個生物可以在它的每個回合結束時重複這個豁免檢定，若泰拉斯奎巨獸在它的視線內則此檢定具有劣勢，若檢定成功則結束這個效果對它的影響。若一個生物成功通過該豁免檢定或結束這個效果對它的影響，則該生物將在接下來的24小時內免疫此泰拉斯奎巨獸的駭人威儀。"
 					]
 				},
 				{
 					"name": "吞嚥", "tENG_name": "Swallow",
 					"entries": [
-						"The tarrasque makes one bite attack against a Large or smaller creature it is grappling. If the attack hits, the target takes the bite's damage, the target is swallowed, and the grapple ends. While swallowed, the creature is {@condition 目盲} and {@condition 束縛}, it has total cover against attacks and other effects outside the tarrasque, and it takes 56 ({@damage 16d6}) acid damage at the start of each of the tarrasque's turns.",
-						"If the tarrasque takes 60 damage or more on a single turn from a creature inside it, the tarrasque must succeed on a DC 20 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition 伏地} in a space within 10 feet of the tarrasque. If the tarrasque dies, a swallowed creature is no longer {@condition 束縛} by it and can escape from the corpse by using 30 feet of movement, exiting {@condition 伏地}."
+						"泰拉斯奎巨獸對一個它正擒抱，且體型為大型或更小的目標進行一次啃咬攻擊。若該攻擊命中，則目標將受到啃咬傷害並被吞嚥，且擒抱結束。在被吞嚥時，目標將陷入{@condition 目盲}和{@condition 束縛}，它對泰拉斯奎巨獸外的攻擊和其他效果有全掩護，且在每次泰拉斯奎巨獸的回合開始時受到56 ({@damage 16d6})酸蝕傷害。",
+						"若泰拉斯奎巨獸在單一回合內受到超過60點來自它體內生物所造成的傷害，泰拉斯奎巨獸必須在該回合結束時成功通過一次DC 20的體質豁免，否則將反胃嘔出所有它吞下的生物，並使它們以{@condition 伏地}狀態摔落至距離泰拉斯奎巨獸10呎內的空間。若泰拉斯奎巨獸死亡，被吞下的生物將不再被它束縛，且可以花費30呎的移動速度從屍體中逃脫，以{@condition 伏地}狀態離開。"
 					]
 				}
 			],
 			"legendary": [
 				{
-					"name": "Attack",
+					"name": "攻擊", "tENG_name": "Attack",
 					"entries": [
-						"The tarrasque makes one claw attack or tail attack."
+						"泰拉斯奎巨獸進行一次爪抓攻擊或尾擊攻擊。"
 					]
 				},
 				{
-					"name": "Move",
+					"name": "移動", "tENG_name": "Move",
 					"entries": [
-						"The tarrasque moves up to half its speed."
+						"泰拉斯奎巨獸移動最多等同它移動速度一半的距離。"
 					]
 				},
 				{
-					"name": "Chomp (Costs 2 Actions)",
+					"name": "咀嚼 (消耗 2動作)", "tENG_name": "Chomp",
 					"entries": [
-						"The tarrasque makes one bite attack or uses its Swallow."
+						"泰拉斯奎巨獸進行一次啃咬攻擊，或使用它的吞嚥。"
 					]
 				}
 			],
