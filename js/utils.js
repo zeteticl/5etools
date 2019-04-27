@@ -3794,6 +3794,9 @@ function defaultSourceDeselFn (val) {
 }
 
 function defaultSourceSelFn (val) {
+	var standard = ["PHB", "DMG", "MM", "SCAG", "VGM", "XGE", "MTF", "EEPC", "TTP"];
+	return standard.includes(val);
+	// Haz Edit
 	return !defaultSourceDeselFn(val);
 }
 

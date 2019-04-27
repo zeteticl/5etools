@@ -2658,7 +2658,8 @@ Renderer.monster = {
 			modInfo.names.forEach(nameToRemove => {
 				const ixOld = copyTo[prop].findIndex(it => it.name === nameToRemove);
 				if (~ixOld) copyTo[prop].splice(ixOld, 1);
-				else throw new Error(`Could not find "${prop}" item with name "${nameToRemove}" to remove`);
+				else console.warn("cannot find "+prop+" item with name "+modInfo.replace+" to remove");
+				 //throw new Error(`Could not find "${prop}" item with name "${nameToRemove}" to remove`);
 			});
 		}
 
