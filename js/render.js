@@ -3188,14 +3188,14 @@ Renderer.item = {
 		} else if (type === "MNT" || type === "VEH" || type === "SHP") {
 			const speed = item.speed;
 			const capacity = item.carryingcapacity;
-			if (speed) damage += "Speed: " + speed;
+			if (speed) damage += "速度：" + speed;
 			if (speed && capacity) damage += type === "MNT" ? ", " : "<br>";
 			if (capacity) {
-				damage += "Carrying Capacity: " + capacity;
-				if (capacity.indexOf("ton") === -1 && capacity.indexOf("passenger") === -1) damage += Number(capacity) === 1 ? "磅" : "磅";
+				damage += "運載量：" + capacity;
+				if (capacity.indexOf("噸") === -1 && capacity.indexOf("乘客") === -1) damage += Number(capacity) === 1 ? "磅" : "磅";
 			}
 			if (type === "SHP") {
-				damage += `<br>Crew ${item.crew}, AC ${item.vehAc}, HP ${item.vehHp}${item.vehDmgThresh ? `, Damage Threshold ${item.vehDmgThresh}` : ""}`;
+				damage += `<br>船員 ${item.crew}, AC ${item.vehAc}, HP ${item.vehHp}${item.vehDmgThresh ? `, 傷害閾值 ${item.vehDmgThresh}` : ""}`;
 			}
 		}
 
@@ -3895,9 +3895,9 @@ Renderer.ship = {
 			${Renderer.utils.getNameTr(ship)}
 			<tr class="text"><td colspan="6"><i>${Parser.sizeAbvToFull(ship.size)} vehicle${ship.dimensions ? `, (${ship.dimensions.join(" by ")})` : ""}</i><br></td></tr>
 			<tr class="text"><td colspan="6">
-				<div><b>Creature Capacity</b> ${ship.capCrew} crew${ship.capPassenger ? `, ${ship.capPassenger} passengers` : ""}</div>
-				${ship.capCargo ? `<div><b>Cargo Capacity</b> ${ship.capCargo} ton${ship.capCargo === 1 ? "" : "s"}</div>` : ""}
-				<div><b>Travel Pace</b> ${ship.pace} miles per hour (${ship.pace * 24} miles per day)</div>
+				<div><b>運載量</b> ${ship.capCrew} 船員${ship.capPassenger ? `, ${ship.capPassenger} 乘客` : ""}</div>
+				${ship.capCargo ? `<div><b>載貨量</b> ${ship.capCargo} 噸</div>` : ""}
+				<div><b>旅行步調</b> ${ship.pace} 哩/小時 (${ship.pace * 24} 哩/日)</div>
 			</td></tr>
 			<tr><td colspan="6">
 				<table class="summary striped-even">
@@ -3920,8 +3920,8 @@ Renderer.ship = {
 				</table>
 			</td></tr>
 			<tr class="text"><td colspan="6">
-				${ship.immune ? `<div><b>Damage Immunities</b> ${Parser.monImmResToFull(ship.immune)}</div>` : ""}
-				${ship.conditionImmune ? `<div><b>Condition Immunities</b> ${Parser.monCondImmToFull(ship.conditionImmune)}</div>` : ""}
+				${ship.immune ? `<div><b>傷害免疫</b> ${Parser.monImmResToFull(ship.immune)}</div>` : ""}
+				${ship.conditionImmune ? `<div><b>狀態免疫</b> ${Parser.monCondImmToFull(ship.conditionImmune)}</div>` : ""}
 			</td></tr>
 			${getSectionTitle("Hull")}
 			<tr><td colspan="6">
