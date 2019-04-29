@@ -6676,7 +6676,7 @@
 				{
 					"name": "反魔法錐形力場", "tENG_name": "Antimagic Cone",
 					"entries": [
-						"眼魔的主眼將創造出一片150呎錐形區域的反魔法力場，效果如同{@spell 反魔法結界}。在它的每個回合開始時，眼魔將決定這個錐形區域面向何方，且這著錐形力場是否作用。這個區域同樣會對眼魔自己的眼波射線產生效果。"
+						"眼魔的主眼將創造出一片150呎錐形區域的反魔法力場，效果如同{@spell 反魔法結界}。在它的每個回合開始時，眼魔將決定這個錐形區域面向何方，且這個錐形力場是否發揮作用。這個區域同樣會對眼魔自己的眼波射線產生效果。"
 					]
 				}
 			],
@@ -11443,7 +11443,7 @@
 			]
 		},
 		{
-			"name": "Death Tyrant",
+			"name": "亡眼暴君", "ENG_name": "Death Tyrant",
 			"group": "Beholders",
 			"size": "L",
 			"type": "undead",
@@ -11501,17 +11501,17 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 22,
-			"languages": "Deep Speech, Undercommon",
+			"languages": "深幽語、地底通用語",
 			"cr": {
 				"cr": "14",
 				"lair": "15"
 			},
 			"trait": [
 				{
-					"name": "Negative Energy Cone",
+					"name": "負能量錐形力場", "tENG_name": "Negative Energy Cone",
 					"entries": [
-						"The death tyrant's central eye emits an invisible, magical 150-foot cone of negative energy. At the start of each of its turns, the tyrant decides which way the cone faces and whether the cone is active.",
-						"Any creature in that area can't regain hit points. Any humanoid that dies there becomes a zombie under the tyrant's command. The dead humanoid retains its place in the initiative order and animates at the start of its next turn, provided that its body hasn't been completely destroyed."
+						"亡眼暴君的主眼將創造出一片150呎錐形區域的隱形負能量力場。在它的每個回合開始時，亡眼暴君將決定這個錐形區域面向何方，且這個錐形力場是否發揮作用。",
+						"任何在該區域中的生物將無法回復生命值。任何在該處死亡的類人生物都將變成一個在亡眼暴君控制下的{@creature 殭屍}。只要死去類人生物的身體尚未被完全摧毀，它就能保留它先攻順序的位置，並在它的下個回合開始時活化。"
 					]
 				}
 			],
@@ -11525,19 +11525,19 @@
 				{
 					"name": "眼波射線", "tENG_name": "Eye Rays",
 					"entries": [
-						"The death tyrant shoots three of the following magical eye rays at random (reroll duplicates), choosing one to three targets it can see within 120 feet of it:",
-						"1. Charm Ray. The targeted creature must succeed on a DC 17 Wisdom saving throw or be {@condition 魅惑} by the death tyrant for 1 hour, or until the death tyrant harms the creature.",
-						"2. Paralyzing Ray. The targeted creature must succeed on a DC 17 Constitution saving throw or be {@condition 麻痺} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
-						"3. Fear Ray. The targeted creature must succeed on a DC 17 Wisdom saving throw or be {@condition 恐懼} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
-						"4. Slowing Ray. The targeted creature must succeed on a DC 17 Dexterity saving throw. On a failed save, the target's speed is halved for 1 minute. In addition, the creature can't take reactions, and it can take either an action or a bonus action on its turn, not both. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
-						"5. Enervation Ray. The targeted creature must make a DC 17 Constitution saving throw, taking 36 ({@damage 8d8}) necrotic damage on a failed save, or half as much damage on a successful one.",
-						"6. Telekinetic Ray. If the target is a creature, it must succeed on a DC 17 Strength saving throw or the death tyrant moves it up to 30 feet in any direction. It is {@condition 束縛} by the ray's telekinetic grip until the start of the death tyrant's next turn or until the death tyrant is {@condition 無力}.",
-						"If the target is an object weighing 300 pounds or less that isn't being worn or carried, it is moved up to 30 feet in any direction. The death tyrant can also exert fine control on objects with this ray, such as manipulating a simple tool or opening a door or a container.",
-						"7. Sleep Ray. The targeted creature must succeed on a DC 17 Wisdom saving throw or fall asleep and remain {@condition 昏迷} for 1 minute. The target awakens if it takes damage or another creature takes an action to wake it. This ray has no effect on constructs and undead.",
-						"8. Petrification Ray. The targeted creature must make a DC 17 Dexterity saving throw. On a failed save, the creature begins to turn to stone and is {@condition 束縛}. It must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is {@condition petrified} until freed by the  {@spell greater restoration} spell or other magic.",
-						"9. Disintegration Ray. If the target is a creature, it must succeed on a DC 17 Dexterity saving throw or take 45 ({@damage 10d8}) force damage. If this damage reduces the creature to 0 hit points, its body becomes a pile of fine gray dust.",
-						"If the target is a Large or smaller nonmagical object or creation of magical force, it is disintegrated without a saving throw. If the target is a Huge or larger object or creation of magical force, this ray disintegrates a 10-foot cube of it.",
-						"10. Death Ray. The targeted creature must succeed on a DC 17 Dexterity saving throw or take 55 ({@damage 10d10}) necrotic damage. The target dies if the ray reduces it to 0 hit points."
+						"亡眼暴君隨機射出三道下列其中一種魔法眼波射線（重複則重骰），選擇一到三個距離它120呎內且它所能看見的生物做為目標：",
+						"1. 魅惑射線：目標生物必須成功通過一次DC 17的睿知豁免，否則將被亡眼暴君{@condition 魅惑}長達1小時，或直到亡眼暴君傷害該生物。",
+						"2. 麻痺射線：目標生物必須成功通過一次DC 17的體質豁免，否則陷入{@condition 麻痺}狀態長達1分鐘。目標可以在它的每個回合結束時重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。",
+						"3. 恐懼射線：目標生物必須成功通過一次DC 17的睿知豁免，否則陷入{@condition 恐懼}狀態長達1分鐘。目標可以在它的每個回合結束時重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。",
+						"4. 遲緩射線：目標生物必須成功通過一次DC 17的敏捷豁免。若豁免失敗，目標的移動速度將減半長達1分鐘。此外，該生物將無法採取反應、且在它的回合只能使用一個動作或一個附贈動作，而不能在同一回合使用兩者。該生物可以在每次它的回合結束時重複這個豁免檢定，若檢定成功則結束這個效果對它的影響。",
+						"5. 衰弱射線：目標生物必須進行一次DC 17的體質豁免，豁免失敗則受到36 ({@damage 8d8})死靈傷害，豁免成功則只受到一半的傷害。",
+						"6. 念動射線：若目標為一個生物，則它必須成功通過一次DC 17的力量豁免，否則將被亡眼暴君向任意方向移動最多30呎距離。它將被該射線的念動抓握給{@condition 束縛}直到亡眼暴君的下個回合開始，或直到亡眼暴君陷入{@condition 無力}狀態。",
+						"若目標為一個重量為300磅或更輕，且未被穿戴或持握的物體，則它將被向任意方向移動最多30呎距離。亡眼暴君也可以透過該射線對該物體進行精細的控制，像是操作簡單的工具、或是打開一扇門或容器。",
+						"7. 催眠射線：目標生物必須成功通過一次DC 17的睿知豁免，否則將陷入沉睡並維持{@condition 昏迷}狀態長達1分鐘。目標將在受到傷害、或另一個生物使用一個動作將它叫醒時甦醒。這道射線對構裝體和不死生物沒有任何效果。",
+						"8. 石化射線：目標生物必須進行一次DC 17的敏捷豁免。若豁免失敗，該生物將開始變成石頭並被{@condition 束縛}。它必須在它的下個回合結束時重複進行這個豁免檢定。若豁免成功，則這個效果結束。若豁免失敗，則目標將被{@condition 石化}，直到被{@spell 高等復原術}法術或其他魔法給解放。",
+						"9. 解離射線：若目標為一個生物，則它必須成功通過一次DC 17的敏捷豁免，否則受到45 ({@damage 10d8})力場傷害。若這個傷害將該生物的生命值歸零，它的身體將被化作一堆細緻的灰色粉塵。",
+						"若目標為一個大型或更小的非魔法物體或魔法力量造物，它將無須豁免並直接被解離。若目標為一個巨型或更大的非魔法物體或魔法力量造物，則此射線將解離它其中一塊10呎邊長立方體大小的部份。",
+						"10. 致死射線：目標生物必須成功通過一次DC 17的敏捷豁免，否則受到55 ({@damage 10d10})死靈傷害。若這個射線將目標的生命值歸零，則它將立即死亡。"
 					]
 				}
 			],
@@ -11547,9 +11547,9 @@
 			},
 			"legendary": [
 				{
-					"name": "Eye Ray",
+					"name": "眼波射線", "tENG_name": "Eye Ray",
 					"entries": [
-						"The death tyrant uses one random eye ray."
+						"亡眼暴君使用一種隨機的眼波射線。"
 					]
 				}
 			],
@@ -11727,7 +11727,7 @@
 			]
 		},
 		{
-			"name": "Demilich",
+			"name": "半巫妖", "name": "Demilich",
 			"size": "T",
 			"type": "undead",
 			"source": "MM",
@@ -26858,7 +26858,7 @@
 			]
 		},
 		{
-			"name": "巫妖", "name": "Lich",
+			"name": "巫妖", "ENG_name": "Lich",
 			"size": "M",
 			"type": "undead",
 			"source": "MM",
@@ -26925,7 +26925,7 @@
 			],
 			"senses": "真實視覺120呎",
 			"passive": 19,
-			"languages": "Common plus up to five other languages",
+			"languages": "通用語、和最多五種其他語言",
 			"cr": {
 				"cr": "21",
 				"lair": "22"
@@ -26934,27 +26934,27 @@
 				{
 					"name": "傳奇抗性 (3/日)",
 					"entries": [
-						"If the lich fails a saving throw, it can choose to succeed instead."
+						"若巫妖在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				},
 				{
 					"name": "復生", "tENG_name": "Rejuvenation",
 					"entries": [
-						"If it has a phylactery, a destroyed lich gains a new body in {@dice 1d10} days, regaining all its hit points and becoming active again. The new body appears within 5 feet of the phylactery."
+						"若它還擁有命匣，則一個被摧毀的巫妖將在{@dice 1d10}天時內獲得一具新的身體，回復它所有的生命值並再次復甦。這具新的身體將出現在距離命匣5呎內的位置。"
 					]
 				},
 				{
-					"name": "Turn Resistance",
+					"name": "驅散抗性", "tENG_name": "Turn Resistance",
 					"entries": [
-						"The lich has advantage on saving throws against any effect that turns undead."
+						"巫妖在對抗驅散不死效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Paralyzing Touch",
+					"name": "麻痺之觸", "tENG_name": "Paralyzing Touch",
 					"entries": [
-						"{@atk ms} 命中{@hit 12}，觸及5呎，單一生物。{@h}10 ({@damage 3d6}) cold damage. The target must succeed on a DC 18 Constitution saving throw or be {@condition 麻痺} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk ms} 命中{@hit 12}，觸及5呎，單一生物。{@h}10 ({@damage 3d6})寒冰傷害。目標必須成功通過一次DC 18的體質豁免，否則陷入{@condition 麻痺}狀態長達1分鐘。目標可以在它的每個回合結束時重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。"
 					]
 				}
 			],
@@ -26964,27 +26964,27 @@
 			},
 			"legendary": [
 				{
-					"name": "Cantrip",
+					"name": "戲法", "tENG_name": "Cantrip",
 					"entries": [
-						"The lich casts a cantrip."
+						"巫妖施放一個戲法。"
 					]
 				},
 				{
-					"name": "Paralyzing Touch (Costs 2 Actions)",
+					"name": "麻痺之觸 (消耗 2動作)", "tENG_name": "Paralyzing Touch",
 					"entries": [
-						"The lich uses its Paralyzing Touch."
+						"巫妖使用它的麻痺之觸。"
 					]
 				},
 				{
-					"name": "Frightening Gaze (Costs 2 Actions)",
+					"name": "恐懼凝視 (消耗 2動作)", "tENG_name": "Frightening Gaze",
 					"entries": [
-						"The lich fixes its gaze on one creature it can see within 10 feet of it. The target must succeed on a DC 18 Wisdom saving throw against this magic or become {@condition 恐懼} for 1 minute. The {@condition 恐懼} target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to the lich's gaze for the next 24 hours."
+						"巫妖凝視一個距離它10呎內且它所能看見的生物。目標必須成功通過一次DC 18的睿知豁免以對抗此魔法，否則將陷入{@condition 恐懼}長達1分鐘。陷入{@condition 恐懼}的目標可以在它的每個回合結束時重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。若目標豁免成功，或這個效果對它的影響結束，則該目標將在接下來24小時內免疫於該巫妖的恐懼凝視。"
 					]
 				},
 				{
-					"name": "Disrupt Life (Costs 3 Actions)",
+					"name": "干擾生命 (消耗 3動作)", "tENG_name": "Disrupt Life",
 					"entries": [
-						"Each non-undead creature within 20 feet of the lich must make a DC 18 Constitution saving throw against this magic, taking 21 ({@damage 6d6}) necrotic damage on a failed save, or half as much damage on a successful one."
+						"每個距離巫妖20呎內的非不死生物都必須進行一次DC 18的體質豁免以對抗此魔法，豁免失敗將受到21 ({@damage 6d6})死靈傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
@@ -26993,7 +26993,7 @@
 				{
 					"name": "施法", "tENG_name": "Spellcasting",
 					"headerEntries": [
-						"The lich is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 20, {@hit 12} to hit with spell attacks). The lich has the following wizard spells prepared:"
+						"巫妖是18級的施法者。它的施法屬性為智力（法術豁免DC 20，法術攻擊命中{@hit 12}）。巫妖已準備了以下法師法術："
 					],
 					"spells": {
 						"0": {
@@ -29972,7 +29972,7 @@
 			]
 		},
 		{
-			"name": "木乃伊領主", "name": "Mummy Lord",
+			"name": "木乃伊領主", "ENG_name": "Mummy Lord",
 			"size": "M",
 			"type": "undead",
 			"source": "MM",
@@ -30044,13 +30044,13 @@
 				{
 					"name": "魔法抗性",
 					"entries": [
-						"The mummy lord 在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"木乃伊領主在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
 					"name": "復生", "tENG_name": "Rejuvenation",
 					"entries": [
-						"A destroyed mummy lord gains a new body in 24 hours if its heart is intact, regaining all its hit points and becoming active again. The new body appears within 5 feet of the mummy lord's heart."
+						"若它的心臟仍完好無缺，則一個被摧毀的木乃伊領主將在24小時內獲得一具新的身體，回復它所有的生命值並再次復甦。這具新的身體將出現在距離木乃伊領主心臟5呎內的位置。"
 					]
 				}
 			],
@@ -30058,19 +30058,19 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The mummy can use its Dreadful Glare and makes one attack with its rotting fist."
+						"木乃伊領主可以使用它的恐怖凝視，並進行一次腐壞之拳攻擊。"
 					]
 				},
 				{
-					"name": "Rotting Fist",
+					"name": "腐壞之拳", "tENG_name": "Rotting Fist",
 					"entries": [
-						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}14 ({@damage 3d6 + 4}) bludgeoning damage plus 21 ({@damage 6d6}) necrotic damage. If the target is a creature, it must succeed on a DC 16 Constitution saving throw or be cursed with mummy rot. The cursed target can't regain hit points, and its hit point maximum decreases by 10 ({@dice 3d6}) for every 24 hours that elapse. If the curse reduces the target's hit point maximum to 0, the target dies, and its body turns to dust. The curse lasts until removed by the remove curse spell or other magic."
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}14 ({@damage 3d6 + 4})鈍擊傷害加 21 ({@damage 6d6})死靈傷害。若目標為一個生物，則它必須成功通過一次DC 16的體質豁免，否則受到木乃伊腐壞的詛咒。受到詛咒的目標無法回復生命值，且時間每流逝24小時，它的生命值最大值就會減少10 ({@dice 3d6})點。若這個詛咒使目標的生命值最大值歸零，則目標死亡，且它的身體將化作塵土。這個詛咒會持續直到被{@spell 移除詛咒}法術或其他魔法效果解除。"
 					]
 				},
 				{
-					"name": "Dreadful Glare",
+					"name": "恐怖凝視", "tENG_name": "Dreadful Glare",
 					"entries": [
-						"The mummy lord targets one creature it can see within 60 feet of it. If the target can see the mummy lord, it must succeed on a DC 16 Wisdom saving throw against this magic or become {@condition 恐懼} until the end of the mummy's next turn. If the target fails the saving throw by 5 or more, it is also {@condition 麻痺} for the same duration. A target that succeeds on the saving throw is immune to the Dreadful Glare of all mummies and mummy lords for the next 24 hours."
+						"木乃伊領主選擇一個距離它60呎內且它所能看見的生物做為目標。若該目標可以看見木乃伊領主，則它必須成功通過一次DC 16的睿知豁免對抗這個魔法，否則陷入{@condition 恐懼}直到木乃伊領主的下個回合結束。若此豁免檢定的結果與目標值差距5點或更多，則它也將陷入{@condition 麻痺}狀態長達相同的持續時間。成功通過此豁免檢定的目標將在接下來的24小時內免疫於所有木乃伊和該木乃伊領主的恐怖瞪視。"
 					]
 				}
 			],
@@ -30080,33 +30080,33 @@
 			},
 			"legendary": [
 				{
-					"name": "Attack",
+					"name": "攻擊", "tENG_name": "Attack",
 					"entries": [
-						"The mummy lord makes one attack with its rotting fist or uses its Dreadful Glare."
+						"木乃伊領主進行一次腐壞之拳攻擊，或使用它的恐怖凝視。"
 					]
 				},
 				{
-					"name": "Blinding Dust",
+					"name": "致盲沙塵", "tENG_name": "Blinding Dust",
 					"entries": [
-						"Blinding dust and sand swirls magically around the mummy lord. Each creature within 5 feet of the mummy lord must succeed on a DC 16 Constitution saving throw or be {@condition 目盲} until the end of the creature's next turn."
+						"致盲沙塵魔法性地在木乃伊領主周遭迴旋升起。每個距離木乃伊領主5呎內的生物都必須成功通過一次DC 16的體質豁免，否則陷入{@condition 目盲}狀態直到該生物的下個回合結束。"
 					]
 				},
 				{
-					"name": "Blasphemous Word (Costs 2 Actions)",
+					"name": "瀆神之語 (消耗 2動作)", "tENG_name": "Blasphemous Word",
 					"entries": [
-						"The mummy lord utters a blasphemous word. Each non-undead creature within 10 feet of the mummy lord that can hear the magical utterance must succeed on a DC 16 Constitution saving throw or be {@condition 震懾} until the end of the mummy lord's next turn."
+						"木乃伊領主說出一句瀆神之語。每個距離木乃伊領主10呎內，可以聽見這句魔法咒語的非不死生物都必須成功通過一次DC 16的體質豁免，否則被{@condition 震懾}直到木乃伊領主的下個回合結束。"
 					]
 				},
 				{
-					"name": "Channel Negative Energy (Costs 2 Actions)",
+					"name": "引導負能量 (消耗 2動作)", "tENG_name": "Channel Negative Energy",
 					"entries": [
-						"The mummy lord magically unleashes negative energy. Creatures within 60 feet of the mummy lord, including ones behind barriers and around corners, can't regain hit points until the end of the mummy lord's next turn."
+						"木乃伊領主以魔法釋放出負能量。距離木乃伊領主60呎內的所有生物，包括位於障礙物或轉角後方的生物，直到木乃伊領主的下個回合結束前都無法回復生命值。"
 					]
 				},
 				{
-					"name": "Whirlwind of Sand (Costs 2 Actions)",
+					"name": "沙塵旋風 (消耗 2動作)", "tENG_name": "Whirlwind of Sand",
 					"entries": [
-						"The mummy lord magically transforms into a whirlwind of sand, moves up to 60 feet, and reverts to its normal form. While in whirlwind form, the mummy lord is immune to all damage, and it can't be {@condition 被擒}, {@condition petrified}, knocked {@condition 伏地}, {@condition 束縛}, or {@condition 震懾}. Equipment worn or carried by the mummy lord remain in its possession."
+						"木乃伊領主以魔法轉變成一陣沙塵旋風，移動最多60呎距離，並回復它原本的型態。當處於旋風型態時，木乃伊領主免疫於所有傷害，且不會{@condition 被擒}，被{@condition 石化}、被擊倒{@condition 伏地}、或陷入{@condition 束縛}、或{@condition 震懾}狀態。木乃伊領主所穿戴或攜帶的裝備仍會保留在它身上。"
 					]
 				}
 			],
@@ -30115,7 +30115,7 @@
 				{
 					"name": "施法", "tENG_name": "Spellcasting",
 					"headerEntries": [
-						"The mummy lord is a 10th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 17, {@hit 9} to hit with spell attacks). The mummy lord has the following cleric spells prepared:"
+						"木乃伊領主是10級的施法者。它的施法屬性為睿知（法術豁免DC 17，法術攻擊命中{@hit 9}）。木乃伊領主已準備了以下牧師法術："
 					],
 					"spells": {
 						"0": {

@@ -265,54 +265,54 @@
 		{
 			"name": "Death Tyrant",
 			"lairActions": [
-				"When fighting inside its lair, a death tyrant can invoke the ambient magic to take lair actions. On initiative count 20 (losing initiative ties), the death tyrant can take one lair action to cause one of the following effects:",
+				"當亡眼暴君在其巢穴戰鬥時，它可以引發周圍環境的魔法以採取它的巢穴動作。在先攻順序輪到20時（先攻相等時則為後手），亡眼暴君可以採取一次巢穴動作以造成以下其中一個效果：",
 				{
 					"type": "list",
 					"items": [
-						"An area that is a 50-foot cube within 120 feet of the tyrant is filled with spectral eyes and tentacles. To creatures other than the death tyrant, that area is lightly obscured and difficult terrain until initiative count 20 on the next round.",
-						"Walls sprout spectral appendages until initiative count 20 on the round after next. Any creature, including one on the Ethereal Plane, that is hostile to the tyrant and starts its turn within 10 feet of a wall must succeed on a DC 17 Dexterity saving throw or be grappled. Escaping requires a successful DC 17 Strength (Athletics) or Dexterity (Acrobatics) check.",
-						"A spectral eye opens in the air at a point within 50 feet of the tyrant. One random eye ray of the tyrant shoots from that eye, which is considered to be an ethereal source, at a target of the tyrant's choice. The eye then closes and disappears."
+						"距離亡眼暴君120呎內一處50呎平方的區域將充滿幽靈般的眼珠和觸手。對亡眼暴君以外的生物而言，該區域被輕度遮蔽，且變為困難地形直到下一輪的先攻順序輪到20。",
+						"牆面將長出幽靈般的觸肢，持續直到下一輪之後，先攻順序再次輪到20。任何敵對於亡眼暴君且在牆面10呎內開始它回合的生物（包括位於乙太位面的生物），都必須成功通過一次DC 17的敏捷豁免，否則將{@condition 被擒}。從中逃脫需要成功通過一次DC 17的力量（{@skill 運動}）或敏捷（{@skill 特技}）檢定。",
+						"距離亡眼暴君50呎內的空中一點將張開一顆幽靈般的眼睛。一道亡眼暴君的隨機眼波射線將從這顆眼睛（被視作源自乙太位面）射向一個亡眼暴君所選擇的目標。這隻眼睛接著將閉上並消失。"
 					]
 				},
-				"The death tyrant can't repeat an effect until all three have been used, and it can't use the same effect on consecutive rounds."
+				"在所有的效果都被使用過之前，亡眼暴君不能使用已經用過的巢穴動作效果，且亡眼暴君不能連續兩輪使用相同的效果。"
 			],
 			"regionalEffects": [
-				"A region containing a death tyrant's lair is warped by the creature's unnatural presence, which creates one or more of the following effects:",
+				"這片坐落著亡眼暴君巢穴的區域被該生物的非自然本質所扭曲，並創造出以下其中一個或多個效應：",
 				{
 					"type": "list",
 					"items": [
-						"Creatures within 1 mile of the tyrant's lair sometimes feel as if they're being watched even when they aren't.",
-						"When a creature hostile to the tyrant and aware of its existence finishes a long rest within 1 mile of the tyrant's lair, roll a {@dice d20} for that creature. On a roll of 10 or lower, the creature is subjected to one random eye ray of the tyrant."
+						"距離亡眼暴君巢穴1哩內的生物偶爾會感覺到自己正在被注視，儘管實際上並沒有這回事。",
+						"當一個敵對於亡眼暴君並意識到其存在的生物在距離亡眼暴君巢穴1哩內的區域完成一次長休，則為該生物骰一顆{@dice d20}。若擲骰結果為10或更低，該生物將受到亡眼暴君一種隨機眼波射線的效果。"
 					]
 				},
-				"If the death tyrant dies, these effects fade over the course of {@dice 1d10} days."
+				"若亡眼暴君死亡，這些效應都將在{@dice 1d10}天內逐漸消散。"
 			],
 			"source": "MM"
 		},
 		{
 			"name": "Demilich",
 			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the demilich rolls a {@dice d20}. On a result of 11 or higher, the demilich takes a lair action to cause one of the following effects. It can't use the same effect two rounds in a row.",
+				"在先攻順序輪到20時（先攻相等時則為後手），半巫妖骰一顆{@dice d20}。若結果為11或更高，則半巫妖可以採取一次巢穴動作以造成以下其中一個效果。它不能連續兩輪使用相同的效果：",
 				{
 					"type": "list",
 					"items": [
-						"The tomb trembles violently for a moment. Each creature on the floor of the tomb must succeed on a DC 19 Dexterity saving throw or be knocked prone.",
-						"The demilich targets one creature it can see within 60 feet of it. An {@spell antimagic field} fills the space of the target, moving with it until initiative count 20 on the next round.",
-						"The demilich targets any number of creatures it can see within 30 feet of it. No target can regain hit points until initiative count 20 on the next round."
+						"整座陵墓將劇烈震動片刻。每個在陵墓中的地面上的生物必須成功通過一次DC 19的敏捷豁免，否則將被擊倒{@condition 伏地}。",
+						"半巫妖選擇一個距離它60呎內且它所能看見的生物做為目標。一道{@spell 反魔法結界}將充斥於目標所在的空間並隨著它移動，持續直到下一輪的先攻順序輪到20。",
+						"半巫妖選擇任意個距離它30呎內且它所能看見的生物做為目標。直到下一輪的先攻順序輪到20，這些目標都無法回復生命值。"
 					]
 				}
 			],
 			"regionalEffects": [
-				"A demilich's tomb might have any or all of the following effects in place:",
+				"半巫妖的陵墓可能會具有以下任意或全部的效應：",
 				{
 					"type": "list",
 					"items": [
-						"The first time a non-evil creature enters the tomb's area, the creature takes 16 ({@dice 3d10}) necrotic damage.",
-						"Monsters in the tomb have advantage on saving throws against being charmed or frightened, and against features that turn undead.",
-						"The tomb is warded against the magical travel of creatures the demilich hasn't authorized. Such creatures can't teleport into or out of the tomb's area or use planar travel to enter or leave it. Effects that allow teleportation or planar travel work within the tomb as long as they aren't used to leave or enter the tomb's area."
+						"當一個非邪惡的生物第一次進入陵墓區域時，該生物將受到16 ({@dice 3d10})死靈傷害。",
+						"陵墓中的怪物在對抗不被{@condition 魅惑}或{@condition 恐懼}，以及對抗驅散不死效果的豁免檢定中具有優勢。",
+						"陵墓將防止那些未經半巫妖許可的生物所進行的魔法旅行。這類生物無法傳送或使用位面旅行進入或離開陵墓區域。在陵墓區域內傳送或位面旅行的效果將正常運作，只要它們不被用來離開或進入陵墓區域。"
 					]
 				},
-				"If the demilich is destroyed, these effects fade over the course of 10 days."
+				"若半巫妖被摧毀，這些效應都將在10天內逐漸消散。"
 			],
 			"source": "MM"
 		},
@@ -757,13 +757,13 @@
 		{
 			"name": "Lich",
 			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the lich can take a lair action to cause one of the following magical effects; the lich can't use the same effect two rounds in a row:",
+				"在先攻順序輪到20時（先攻相等時則為後手），巫妖可以採取一次巢穴動作以造成以下其中一個效果；巫妖不能連續兩輪使用相同的效果：",
 				{
 					"type": "list",
 					"items": [
-						"The lich rolls a {@dice d8} and regains a spell slot of that level or lower. If it has no spent spell slots of that level or lower, nothing happens.",
-						"The lich targets one creature it can see within 30 feet of it. A crackling cord of negative energy tethers the lich to the target. Whenever the lich takes damage, the target must make a DC 18 Constitution saving throw. On a failed save, the lich takes half the damage (rounded down), and the target takes the remaining damage. This tether lasts until initiative count 20 on the next round or until the lich or the target is no longer in the lich's lair.",
-						"The lich calls forth the spirits of creatures that died in its lair. These apparitions materialize and attack one creature that the lich can see within 60 feet of it. The target must succeed on a DC 18 Constitution saving throw, taking 52 ({@dice 15d6}) necrotic damage on a failed save, or half as much damage on a success. The apparitions then disappear."
+						"巫妖骰一顆{@dice d8}並恢復一個環階等同於該骰值或更低的法術位。若它沒有已消耗的法術位，則什麼事都不會發生。",
+						"巫妖選擇一個距離它30呎內且它所能看見的生物做為目標。一道帶著劈啪聲的負能量繫繩將連結著巫妖和目標。每當巫妖受到傷害，目標將必須進行一次DC 18的體質豁免。若豁免失敗，巫妖將只受到一半的傷害（向下取整），且目標將受到另一半的傷害。這道繫繩將持續直到下一輪的先攻順序輪到20，或直到目標或巫妖都不再位於巫妖的巢穴。",
+						"巫妖呼喚四個在它巢穴內死去的生物的精魂。這些亡魂將顯現並攻擊一個距離巫妖60呎內且它所能看見的生物。目標必須成功通過一次DC 18的體質豁免，豁免失敗將受到52 ({@dice 15d6})死靈傷害，豁免成功則只受到一半的傷害。這些亡魂接著將消失無蹤。"
 					]
 				}
 			],
@@ -795,27 +795,27 @@
 		{
 			"name": "Mummy Lord",
 			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the mummy lord takes a lair action to cause one of the following effects; the mummy lord can't use the same effect two rounds in a row:",
+				"在先攻順序輪到20時（先攻相等時則為後手），木乃伊領主可以採取一次巢穴動作以造成以下其中一個效果；木乃伊領主不能連續兩輪使用相同的效果：",
 				{
 					"type": "list",
 					"items": [
-						"Each undead creature in the lair can pinpoint the location of each living creature within 120 feet of it until initiative count 20 on the next round.",
-						"Each undead in the lair has advantage on saving throws against effects that turn undead until initiative count 20 on the next round.",
-						"Until initiative count 20 on the next round, any non-undead creature that tries to cast a spell of 4th level or lower in the mummy lord's lair is wracked with pain. The creature can choose another action, but if it tries to cast the spell, it must make a DC 16 Constitution saving throw. On a failed save, it takes {@dice 1d6} necrotic damage per level of the spell, and the spell has no effect and is wasted."
+						"直到下一輪的先攻順序輪到20，每個巢穴內的不死生物都可以準確定位每個距離其120呎內的活體生物所在的確切位置。",
+						"直到下一輪的先攻順序輪到20，每個巢穴內的不死生物在對抗驅散不死的效果時所進行的豁免檢定中具有優勢。",
+						"直到下一輪的先攻順序輪到20，任何在木乃伊領主的巢穴內嘗試施放4環或以下法術的非不死生物都將被痛苦侵襲。該生物可以選擇進行其他動作，但若它仍嘗試施放法術，則它必須進行一次DC 16的體質豁免。若豁免失敗，則它將受到該法術每環階{@dice 1d6}的死靈傷害，且該法術不會發揮任何效果並被浪費。"
 					]
 				}
 			],
 			"regionalEffects": [
-				"A mummy lord's temple or tomb is warped in any of the following ways by the creature's dark presence:",
+				"一座木乃伊領主的神廟或陵墓將被該生物的黑暗本質以下列任何方式給扭曲：",
 				{
 					"type": "list",
 					"items": [
-						"Food instantly molders and water instantly evaporates when brought into the lair. Other non magical drinks are spoiled - wine turning to vinegar, for instance.",
-						"Divination spells cast within the lair by creatures other than the mummy lord have a 25 percent chance to provide misleading results, as determined by the DM. If a divination spell already has a chance to fail or become unreliable when cast multiple times, that chance increases by 25 percent.",
-						"A creature that takes treasure from the lair is cursed until the treasure is returned. The cursed target has disadvantage on all saving throws. The curse lasts until removed by a {@spell remove curse} spell or other magic."
+						"被帶進巢穴的食物將立即腐敗，且飲用水也將立即蒸發。其他非魔法的飲料也將變質－舉例來說，葡萄酒將被變成醋。",
+						"在巢穴中由木乃伊領主以外生物所施放的預言系法術，將有25％的機率呈現誤導性的結果，由DM決定。若該預言系法術已經存在失敗的機率或會在多次施放時變得不可靠，則該機率將會增加25％。",
+						"一個從巢穴內取走財寶的生物將被詛咒，直到該財寶被歸還。被詛咒的目標將在所有豁免檢定中承受劣勢。這個詛咒會持續直到被{@spell 移除詛咒}法術或其他魔法效果解除。"
 					]
 				},
-				"If the mummy lord is destroyed, these regional effects end immediately."
+				"若木乃伊領主被摧毀，這些效應都將立即消失。"
 			],
 			"source": "MM"
 		},
