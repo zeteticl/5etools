@@ -330,7 +330,7 @@
 			]
 		},
 		{
-			"name": "Acererak Demilich",
+			"name": "阿瑟瑞拉克半巫妖", "ENG_name": "Acererak Demilich",
 			"size": "T",
 			"type": "undead",
 			"source": "MM",
@@ -377,7 +377,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from magic weapons"
+					"preNote": "魔法武器所造成的"
 				}
 			],
 			"immune": [
@@ -412,42 +412,42 @@
 			},
 			"trait": [
 				{
-					"name": "Avoidance",
+					"name": "迴避", "tENG_name": "Avoidance",
 					"entries": [
-						"If the demilich is subjected to an effect that allows it to make a saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails."
+						"若半巫妖成為一個允許它進行豁免檢定以僅承受一半傷害的效果的目標時，它改為在豁免成功時不受任何傷害，且在豁免失敗時僅承受一半傷害。"
 					]
 				},
 				{
 					"name": "傳奇抗性 (3/日)",
 					"entries": [
-						"If the demilich fails a saving throw, it can choose to succeed instead."
+						"若半巫妖在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				},
 				{
 					"name": "驅散免疫", "tENG_name": "Turn Immunity",
 					"entries": [
-						"The demilich is immune to effects that turn undead."
+						"半巫妖免疫於驅散不死的效果。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Howl {@recharge 5}",
+					"name": "嚎哭{@recharge 5}", "tENG_name": "Howl {@recharge 5}",
 					"entries": [
-						"The demilich emits a bloodcurdling howl. Each creature within 30 feet of the demilich that can hear the howl must succeed on a DC 15 Constitution saving throw or drop to 0 hit points. On a successful save, the creature is {@condition 恐懼} until the end of its next turn."
+						"半巫妖發出一陣令人毛骨悚然的嚎哭。每個距離半巫妖30呎內且可以聽見嚎哭聲的生物都必須成功通過一次DC 15的體質豁免，否則生命值被歸零。若豁免成功，則該生物陷入{@condition 恐懼}狀態直到它的下個回合結束。"
 					]
 				},
 				{
 					"name": "生命吸取", "tENG_name": "Life Drain",
 					"entries": [
-						"The demilich targets up to three creatures that it can see within 10 feet of it. Each target must succeed on a DC 19 Constitution saving throw or take 21 ({@damage 6d6}) necrotic damage, and the demilich regains hit points equal to the total damage dealt to all targets."
+						"半巫妖選擇最多三個距離它10呎內且它所能看見的生物做為目標。每個目標都必須成功通過一次DC 19的體質豁免，否則受到21 ({@damage 6d6})死靈傷害，且半巫妖將回復等同於對所有目標造成傷害總合數值的生命值。"
 					]
 				},
 				{
-					"name": "Trap Soul",
+					"name": "囚魂", "tENG_name": "Trap Soul",
 					"entries": [
-						"The demilich targets one creature that it can see within 30 feet of it. The target must make a DC 19 Charisma saving throw. On a failed save, the target's soul is magically trapped inside one of the demilich's gems. While the soul is trapped, the target's body and all the equipment it is carrying cease to exist. On a successful save, the target takes 24 ({@damage 7d6}) necrotic damage, and if this damage reduces the target to 0 hit points, its soul is trapped as if it failed the saving throw. A soul trapped in a gem for 24 hours is devoured and ceases to exist.",
-						"If the demilich drops to 0 hit points, it is destroyed and turns to powder, leaving behind its gems. Crushing a gem releases any soul trapped within, at which point the target's body re-forms in an unoccupied space nearest to the gem and in the same state as when it was trapped."
+						"半巫妖選擇一個距離它30呎內且它所能看見的生物做為目標。目標必須進行一次DC 19的魅力豁免。若豁免失敗，則目標的靈魂將被魔法囚禁在半巫妖的其中一顆寶石內。當靈魂被囚禁時，目標的身體和所有它攜帶的裝備將不復存在。若豁免成功，則目標受到24 ({@damage 7d6})死靈傷害，且若這個傷害將目標的生命值歸零，則它的靈魂仍會如同豁免失敗一樣被半巫妖囚禁。一個被囚禁在寶石內超過24小時的靈魂將會被吞噬並不復存在。",
+						"若半巫妖的生命值歸零，它將被摧毀並化作粉塵，僅留下它的寶石。將寶石粉碎能夠釋放任何被囚禁在其中的靈魂，且目標的身體將重新成形並出現在距離寶石最近的一處未被佔據空間，並呈現與它被囚禁時相同的狀態。"
 					]
 				}
 			],
@@ -457,27 +457,27 @@
 			},
 			"legendary": [
 				{
-					"name": "Flight",
+					"name": "飛行", "tENG_name": "Flight",
 					"entries": [
-						"The demilich flies up to half its flying speed."
+						"半巫妖飛行最多等同於它飛行速度一半的距離。"
 					]
 				},
 				{
-					"name": "Cloud of Dust",
+					"name": "塵土之雲", "tENG_name": "Cloud of Dust",
 					"entries": [
-						"The demilich magically swirls its dusty remains. Each creature within 10 feet of the demilich, including around a corner, must succeed on a DC 15 Constitution saving throw or be {@condition 目盲} until the end of the demilich's next turn. A creature that succeeds on the saving throw is immune to this effect until the end of the demilich's next turn."
+						"半巫妖以魔法卷起它化作塵埃的遺體。每個距離半巫妖10呎內的生物（包括轉角後的生物），都必須成功通過一次DC 15的體質豁免，否則陷入{@condition 目盲}狀態直到半巫妖的下個回合結束。一個成功通過此豁免檢定的生物將免疫於這個效果直到半巫妖的下個回合結束。"
 					]
 				},
 				{
-					"name": "Energy Drain (Costs 2 Actions)",
+					"name": "能量吸取 (消耗 2動作)", "tENG_name": "Energy Drain",
 					"entries": [
-						"Each creature with in 30 feet of the demilich must make a DC 15 Constitution saving throw. On a failed save, the creature's hit point maximum is magically reduced by 10 ({@dice 3d6}). If a creature's hit point maximum is reduced to 0 by this effect, the creature dies. A creature's hit point maximum can be restored with the  {@spell greater restoration} spell or similar magic."
+						"每個距離半巫妖30呎內的生物都必須進行一次DC 15的體質豁免。若豁免失敗，該生物的生命值最大值將被魔法減少10 ({@dice 3d6})點。若該生物的生命值最大值被這個效果歸零，則該生物死亡。一個生物的生命值最大值可以被{@spell 高等復原術}法術或類似的魔法給恢復。"
 					]
 				},
 				{
-					"name": "Vile Curse (Costs 3 Actions)",
+					"name": "邪穢詛咒 (消耗 3動作)", "tENG_name": "Vile Curse",
 					"entries": [
-						"The demilich targets one creature it can see within 30 feet of it. The target must succeed on a DC 15 Wisdom saving throw or be magically cursed. Until the curse ends, the target has disadvantage on attack rolls and saving throws. The target can repeat the saving throw at the end of each of its turns, ending the curse on a success."
+						"半巫妖選擇一個距離它30呎內且它所能看見的生物做為目標。目標必須成功通過一次DC 15的睿知豁免，否則將被魔法詛咒。直到詛咒結束前，目標在攻擊檢定和豁免檢定中將具有劣勢。目標可以在它的每個回合結束時重複進行這個豁免檢定，豁免成功則結束這個詛咒。"
 					]
 				}
 			],
@@ -11727,7 +11727,7 @@
 			]
 		},
 		{
-			"name": "半巫妖", "name": "Demilich",
+			"name": "半巫妖", "ENG_name": "Demilich",
 			"size": "T",
 			"type": "undead",
 			"source": "MM",
@@ -11774,7 +11774,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from magic weapons"
+					"preNote": "魔法武器所造成的"
 				}
 			],
 			"immune": [
@@ -11811,39 +11811,39 @@
 				{
 					"name": "不死本質", "tENG_name": "Undead Nature",
 					"entries": [
-						"A demilich doesn't require air, food, drink, or sleep. So great is a demilich's will to survive that it always has the maximum number of hit points for its Hit Dice, instead of average hit points."
+						"半巫妖不需要呼吸、進食、飲水、或睡眠。半巫妖的求生意志是如此強大，因此它的生命值永遠是取其生命骰的最大值，而非平均生命值。"
 					]
 				},
 				{
-					"name": "Avoidance",
+					"name": "迴避", "tENG_name": "Avoidance",
 					"entries": [
-						"If the demilich is subjected to an effect that allows it to make a saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails."
+						"若半巫妖成為一個允許它進行豁免檢定以僅承受一半傷害的效果的目標時，它改為在豁免成功時不受任何傷害，且在豁免失敗時僅承受一半傷害。"
 					]
 				},
 				{
 					"name": "傳奇抗性 (3/日)",
 					"entries": [
-						"If the demilich fails a saving throw, it can choose to succeed instead."
+						"若半巫妖在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				},
 				{
 					"name": "驅散免疫", "tENG_name": "Turn Immunity",
 					"entries": [
-						"The demilich is immune to effects that turn undead."
+						"半巫妖免疫於驅散不死的效果。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Howl {@recharge 5}",
+					"name": "嚎哭{@recharge 5}", "tENG_name": "Howl {@recharge 5}",
 					"entries": [
-						"The demilich emits a bloodcurdling howl. Each creature within 30 feet of the demilich that can hear the howl must succeed on a DC 15 Constitution saving throw or drop to 0 hit points. On a successful save, the creature is {@condition 恐懼} until the end of its next turn."
+						"半巫妖發出一陣令人毛骨悚然的嚎哭。每個距離半巫妖30呎內且可以聽見嚎哭聲的生物都必須成功通過一次DC 15的體質豁免，否則生命值被歸零。若豁免成功，則該生物陷入{@condition 恐懼}狀態直到它的下個回合結束。"
 					]
 				},
 				{
 					"name": "生命吸取", "tENG_name": "Life Drain",
 					"entries": [
-						"The demilich targets up to three creatures that it can see within 10 feet of it. Each target must succeed on a DC 19 Constitution saving throw or take 21 ({@damage 6d6}) necrotic damage, and the demilich regains hit points equal to the total damage dealt to all targets."
+						"半巫妖選擇最多三個距離它10呎內且它所能看見的生物做為目標。每個目標都必須成功通過一次DC 19的體質豁免，否則受到21 ({@damage 6d6})死靈傷害，且半巫妖將回復等同於對所有目標造成傷害總合數值的生命值。"
 					]
 				}
 			],
@@ -11853,27 +11853,27 @@
 			},
 			"legendary": [
 				{
-					"name": "Flight",
+					"name": "飛行", "tENG_name": "Flight",
 					"entries": [
-						"The demilich flies up to half its flying speed."
+						"半巫妖飛行最多等同於它飛行速度一半的距離。"
 					]
 				},
 				{
-					"name": "Cloud of Dust",
+					"name": "塵土之雲", "tENG_name": "Cloud of Dust",
 					"entries": [
-						"The demilich magically swirls its dusty remains. Each creature within 10 feet of the demilich, including around a corner, must succeed on a DC 15 Constitution saving throw or be {@condition 目盲} until the end of the demilich's next turn. A creature that succeeds on the saving throw is immune to this effect until the end of the demilich's next turn."
+						"半巫妖以魔法卷起它化作塵埃的遺體。每個距離半巫妖10呎內的生物（包括轉角後的生物），都必須成功通過一次DC 15的體質豁免，否則陷入{@condition 目盲}狀態直到半巫妖的下個回合結束。一個成功通過此豁免檢定的生物將免疫於這個效果直到半巫妖的下個回合結束。"
 					]
 				},
 				{
-					"name": "Energy Drain (Costs 2 Actions)",
+					"name": "能量吸取 (消耗 2動作)", "tENG_name": "Energy Drain",
 					"entries": [
-						"Each creature with in 30 feet of the demilich must make a DC 15 Constitution saving throw. On a failed save, the creature's hit point maximum is magically reduced by 10 ({@dice 3d6}). If a creature's hit point maximum is reduced to 0 by this effect, the creature dies. A creature's hit point maximum can be restored with the  {@spell greater restoration} spell or similar magic."
+						"每個距離半巫妖30呎內的生物都必須進行一次DC 15的體質豁免。若豁免失敗，該生物的生命值最大值將被魔法減少10 ({@dice 3d6})點。若該生物的生命值最大值被這個效果歸零，則該生物死亡。一個生物的生命值最大值可以被{@spell 高等復原術}法術或類似的魔法給恢復。"
 					]
 				},
 				{
-					"name": "Vile Curse (Costs 3 Actions)",
+					"name": "邪穢詛咒 (消耗 3動作)", "tENG_name": "Vile Curse",
 					"entries": [
-						"The demilich targets one creature it can see within 30 feet of it. The target must succeed on a DC 15 Wisdom saving throw or be magically cursed. Until the curse ends, the target has disadvantage on attack rolls and saving throws. The target can repeat the saving throw at the end of each of its turns, ending the curse on a success."
+						"半巫妖選擇一個距離它30呎內且它所能看見的生物做為目標。目標必須成功通過一次DC 15的睿知豁免，否則將被魔法詛咒。直到詛咒結束前，目標在攻擊檢定和豁免檢定中將具有劣勢。目標可以在它的每個回合結束時重複進行這個豁免檢定，豁免成功則結束這個詛咒。"
 					]
 				}
 			],
@@ -12140,7 +12140,7 @@
 				{
 					"name": "迴避", "tENG_name": "Avoidance",
 					"entries": [
-						"若位移獸成為一個允許它進行敏捷豁免以僅承受一半傷害的效果的目標時，它改為在豁免成功時不受任何傷害，且在豁免失敗時僅承受一半傷害。"
+						"若位移獸成為一個允許它進行豁免檢定以僅承受一半傷害的效果的目標時，它改為在豁免成功時不受任何傷害，且在豁免失敗時僅承受一半傷害。"
 					]
 				},
 				{
