@@ -10,14 +10,14 @@ window.onload = async function load () {
 function rarityValue (rarity) {
 	switch (rarity) {
 		case "None": return 0;
-		case "Common": return 1;
-		case "Uncommon": return 2;
-		case "Rare": return 3;
-		case "Very Rare": return 4;
-		case "Legendary": return 5;
-		case "Artifact": return 6;
+		case "Common": case "常見": return 1;
+		case "Uncommon":case "非常見": return 2;
+		case "Rare": case "珍稀": return 3;
+		case "Very Rare":case "非常珍稀": return 4;
+		case "Legendary": case "傳說": return 5;
+		case "Artifact": case "神器": return 6;
 		case "Other": return 7;
-		case "Varies": return 8;
+		case "Varies": case "可變": 	return 8;
 		case "Unknown (Magic)": return 9;
 		case "Unknown": return 10;
 		default: return 11;
@@ -33,7 +33,6 @@ function sortItems (a, b, o) {
 		if (b._values.source === a._values.source) return SortUtil.compareNames(a, b);
 		return b._values.source.toLowerCase() > a._values.source.toLowerCase() ? 1 : -1;
 	} else if (o.valueName === "rarity") {
-		console.log(b._values.rarity, a._values.rarity);
 		if (b._values.rarity === a._values.rarity) return SortUtil.compareNames(a, b);
 		return rarityValue(b._values.rarity) > rarityValue(a._values.rarity) ? 1 : -1;
 	} else if (o.valueName === "count") {
