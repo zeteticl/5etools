@@ -18080,7 +18080,7 @@
 			"page": 157
 		},
 		{
-			"name": "Wand of Binding",
+			"name": "定身魔杖", "ENG_name": "Wand of Binding",
 			"type": "WD",
 			"weight": "1",
 			"tier": "Major",
@@ -18089,19 +18089,19 @@
 			"page": 209,
 			"reqAttune": "由施法者",
 			"entries": [
-				"This wand has 7 charges for the following properties. It regains {@dice 1d6+1} expended charges daily at dawn. If you expend the wand's last charge, roll a {@dice d20}. On a 1, the wand crumbles into ashes and is destroyed.",
+				"這把魔杖含有7發充能以用做下列用途。這把魔杖會在每日清晨恢復{@dice 1d6+1}發已消耗的充能。若你消耗了這把魔杖的最後一發充能，骰一顆{@dice d20}。若結果為1，則這把魔杖將被摧毀並粉碎成塵。",
 				{
-					"name": "Spells",
+					"name": "法術", "tENG_name": "Spells",
 					"type": "entries",
 					"entries": [
-						"While holding the wand, you can use an action to expend some of its charges to cast one of the following spells (save DC 17): {@spell hold monster} (5 charges) or {@spell hold person} (2 charges)."
+						"當持握這把魔杖時，你可以使用一個動作以消耗其中一些充能，並施放以下其中一個法術（豁免DC 17）：{@spell 怪物定身術}(5發充能) 或{@spell 人類定身術}(2 發充能)。"
 					]
 				},
 				{
-					"name": "Assisted Escape",
+					"name": "援助逃脫", "tENG_name": "Assisted Escape",
 					"type": "entries",
 					"entries": [
-						"While holding the wand, you can use your reaction to expend 1 charge and gain advantage on a saving throw you make to avoid being {@condition paralyzed} or {@condition restrained}, or you can expend 1 charge and gain advantage on any check you make to escape a grapple."
+						"當持握這把魔杖時，你可以使用你的反應以消耗1發充能，並在避免被{@condition 麻痺}或{@condition 束縛}而進行的豁免檢定中獲得優勢，或者你可以消耗1發充能以在為了逃脫擒抱而進行的任何檢定中獲得優勢。"
 					]
 				}
 			],
@@ -18128,7 +18128,7 @@
 			"charges": 3
 		},
 		{
-			"name": "Wand of Enemy Detection",
+			"name": "搜敵魔杖", "ENG_name": "Wand of Enemy Detection",
 			"type": "WD",
 			"weight": "1",
 			"tier": "Major",
@@ -18137,8 +18137,8 @@
 			"page": 210,
 			"reqAttune": true,
 			"entries": [
-				" This wand has 7 charges. While holding it, you can use an action and expend 1 charge to speak its command word. For the next minute, you know the direction of the nearest creature hostile to you within 60 feet, but not its distance from you. The wand can sense the presence of hostile creatures that are ethereal, {@condition invisible}, disguised, or hidden, as well as those in plain sight. The effect ends if you stop holding the wand.",
-				"The wand regains {@dice 1d6+1} expended charges daily at dawn. If you expend the wand's last charge, roll a {@dice d20}. On a 1, the wand crumbles into ashes and is destroyed."
+				"這把魔杖含有7發充能。當持握這把魔杖時，你可以使用一個動作以消耗1發充能並說出它的命令語。在接下來的一分鐘內，你將得知距離你60呎內距離你最近的敵意生物所在的方位，但不知道它與你之間的距離。這把魔杖可以感測到位於視線內，以及處於靈體、{@condition 隱形}、偽裝、或躲藏起來的敵意生物的存在。若你停止持握這把魔杖，則這個效果結束。",
+				"這把魔杖會在每日清晨恢復{@dice 1d6+1}發已消耗的充能。若你消耗了這把魔杖的最後一發充能，骰一顆{@dice d20}。若結果為1，則這把魔杖將被摧毀並粉碎成塵。"
 			],
 			"charges": 7,
 			"lootTables": [
@@ -18163,7 +18163,7 @@
 			]
 		},
 		{
-			"name": "Wand of Fear",
+			"name": "恐懼魔杖", "ENG_name": "Wand of Fear",
 			"type": "WD",
 			"weight": "1",
 			"tier": "Major",
@@ -18172,19 +18172,19 @@
 			"page": 210,
 			"reqAttune": true,
 			"entries": [
-				"This wand has 7 charges for the following properties. It regains {@dice 1d6+1} expended charges daily at dawn. If you expend the wand's last charge, roll a {@dice d20}. On a 1, the wand crumbles into ashes and is destroyed.",
+				"這把魔杖含有7發充能以用做下列用途。這把魔杖會在每日清晨恢復{@dice 1d6+1}發已消耗的充能。若你消耗了這把魔杖的最後一發充能，骰一顆{@dice d20}。若結果為1，則這把魔杖將被摧毀並粉碎成塵。",
 				{
-					"name": "Command",
+					"name": "命令", "tENG_name": "Command",
 					"type": "entries",
 					"entries": [
-						"While holding the wand, you can use an action to expend 1 charge and command another creature to flee or grovel, as with the {@spell command} spell (save DC 15)."
+						"當持握這把魔杖時，你可以使用一個動作以消耗1發充能，並命令另一個生物逃走或趴下，如同使用{@spell 命令術}法術（豁免DC 15）。"
 					]
 				},
 				{
-					"name": "Cone of Fear",
+					"name": "恐懼錐形力場", "tENG_name": "Cone of Fear",
 					"type": "entries",
 					"entries": [
-						"While holding the wand, you can use an action to expend 2 charges, causing the wand's tip to emit a 60-foot cone of amber light. Each creature in the cone must succeed on a DC 15 Wisdom saving throw or become {@condition frightened} of you for 1 minute. While it is {@condition frightened} in this way, a creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevent it from moving. If it has nowhere it can move, the creature can use the Dodge action. At the end of each of its turns, a creature can repeat the saving throw, ending the effect on itself on a success."
+						"當持握這把魔杖時，你可以使用一個動作以消耗2發充能，並使魔杖的尖端發出一道60呎錐形的琥珀色光芒。每個在錐形範圍內的生物都必須成功通過一次DC 15的睿知豁免，否則因你而陷入{@condition 恐懼}長達1分鐘。當因為這個方式而陷入{@condition 恐懼}時，該生物必須耗用它的回合以嘗試盡可能的遠離你，且無法自願移動到距離你30呎內的空間。它也將無法採取反應。在它採取動作時，它只能使用{@action 疾走}動作或嘗試從阻止它移動的效果中逃脫。若它無處可逃，則該生物可以使用{@action 閃避}動作。在它的每個回合結束時，該生物可以重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。"
 					]
 				}
 			],
@@ -18392,7 +18392,7 @@
 			]
 		},
 		{
-			"name": "Wand of Paralysis",
+			"name": "麻痺魔杖", "ENG_name": "Wand of Paralysis",
 			"type": "WD",
 			"weight": "1",
 			"tier": "Major",
@@ -18401,8 +18401,8 @@
 			"page": 211,
 			"reqAttune": "由施法者",
 			"entries": [
-				" This wand has 7 charges. While holding it, you can use an action to expend 1 of its charges to cause a thin blue ray to streak from the tip toward a creature you can see within 60 feet of you. The target must succeed on a DC 15 Constitution saving throw or be {@condition paralyzed} for 1 minute. At the end of each of the target's turns, it can repeat the saving throw, ending the effect on itself on a success.",
-				"The wand regains {@dice 1d6+1} expended charges daily at dawn. If you expend the wand's last charge, roll a {@dice d20}. On a 1, the wand crumbles into ashes and is destroyed."
+				"這把魔杖含有7發充能。當持握這把魔杖時，你可以使用一個動作以消耗1發或以上的充能，並使一道藍色射線從尖端射向一個距離你60呎內且你所能看見的生物。目標必須成功通過一次DC 15的體質豁免，否則將陷入{@condition 麻痺}狀態長達1分鐘。在目標的每個回合結束時，它可以重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。",
+				"這把魔杖會在每日清晨恢復{@dice 1d6+1}發已消耗的充能。若你消耗了這把魔杖的最後一發充能，骰一顆{@dice d20}。若結果為1，則這把魔杖將被摧毀並粉碎成塵。"
 			],
 			"charges": 7,
 			"lootTables": [
@@ -18588,7 +18588,7 @@
 			]
 		},
 		{
-			"name": "Wand of Wonder",
+			"name": "驚奇魔杖", "ENG_name": "Wand of Wonder",
 			"type": "WD",
 			"weight": "1",
 			"tier": "Major",
@@ -18597,15 +18597,15 @@
 			"page": 212,
 			"reqAttune": "由施法者",
 			"entries": [
-				" This wand has 7 charges. While holding it, you can use an action to expend 1 of its charges and choose a target within 120 feet of you. The target can be a creature, an object, or a point in space. Roll {@dice d100} and consult the following table to discover what happens.",
-				"If the effect causes you to cast a spell from the wand, the spell's save DC is 15. If the spell normally has a range expressed in feet, its range becomes 120 feet if it isn't already.",
-				"If an effect covers an area, you must center the spell on and include the target. If an effect has multiple possible subjects, the DM randomly determines which ones are affected.",
-				"The wand regains {@dice 1d6+1} expended charges daily at dawn. If you expend the wand's last charge, roll a {@dice d20}. On a 1, the wand crumbles into dust and is destroyed.",
+				"這把魔杖含有7發充能。當持握這把魔杖時，你可以使用一個動作以消耗1發充能，並選擇一個距離你120呎內的目標。目標可以是一個生物、物體、或位於空間內的一點。骰{@dice d100}並查閱下表以決定發生了什麼事。",
+				"若該效果讓你從這把魔杖施放一個法術，則該法術的豁免DC為15。若該法術原本的射程以呎計算，則它的射程將變為120呎。",
+				"若其效果將覆蓋一片區域，則你必須使該法術以目標為中心並將目標包括在內。若其效果具有多個可能目標，則由DM隨機決定誰會受到影響。",
+				"這把魔杖會在每日清晨恢復{@dice 1d6+1}發已消耗的充能。若你消耗了這把魔杖的最後一發充能，骰一顆{@dice d20}。若結果為1，則這把魔杖將被摧毀並粉碎成塵。",
 				{
 					"type": "table",
 					"colLabels": [
 						"{@dice d100}",
-						"Effect"
+						"效果"
 					],
 					"colStyles": [
 						"col-1 text-align-center",
@@ -18614,91 +18614,91 @@
 					"rows": [
 						[
 							"01-05",
-							"You cast {@spell slow}."
+							"你施放{@spell 緩速術}。"
 						],
 						[
 							"06-10",
-							"You cast {@spell faerie fire}."
+							"你施放{@spell 妖火術}。"
 						],
 						[
 							"11-15",
-							"You are {@condition stunned} until the start of your next turn, believing something awesome just happened."
+							"你深信剛剛發生了某件令人驚嘆的事，因此被{@condition 震懾}直到你的下個回合開始。"
 						],
 						[
 							"16-20",
-							"You cast {@spell gust of wind}."
+							"你施放{@spell 造風術}。"
 						],
 						[
 							"21-25",
-							"You cast {@spell detect thoughts} on the target you chose. If you didn't target a creature, you instead take {@dice 1d6} psychic damage."
+							"你對你所選的目標施放{@spell 偵測思想}。若你並未選擇一個生物做為目標，則你將改為受到{@dice 1d6}精神傷害。"
 						],
 						[
 							"26-30",
-							"You cast {@spell stinking cloud}."
+							"你施放{@spell 臭雲術}。"
 						],
 						[
 							"31-33",
-							"Heavy rain falls in a 60-foot radius centered on the target. The area becomes lightly obscured. The rain falls until the start of your next turn."
+							"以目標為中心的60呎半徑範圍內降下豪雨。該區域被輕度遮蔽。這陣雨將持續到你的下個回合開始。"
 						],
 						[
 							"34-36",
-							"An animal appears in the unoccupied space nearest the target. The animal isn't under your control and acts as it normally would. Roll a {@dice d100} to determine which animal appears. On a 01-25, a {@creature rhinoceros} appears; on a 26-50, an {@creature elephant} appears; and on a 51-100, a {@creature rat} appears."
+							"一隻動物出現在距離目標最近的一處未被佔據空間。該動物不處於你的控制下，且會按其天性正常行動。骰一顆{@dice d100}以決定會出現什麼動物。若結果為01-25，則出現一隻{@creature 犀牛}；若結果為26-50，則出現一隻{@creature 象}；若結果為51-100，則出現一隻{@creature 老鼠}。"
 						],
 						[
 							"37-46",
-							"You cast {@spell lightning bolt}."
+							"你施放{@spell 閃電束}。"
 						],
 						[
 							"47-49",
-							"A cloud of 600 oversized butterflies fills a 30-foot radius centered on the target. The area becomes heavily obscured. The butterflies remain for 10 minutes."
+							"600隻巨大的蝴蝶集結成雲並充斥在以目標為中心的30呎半徑區域內。該區域被重度遮蔽。這些蝴蝶將持續存在長達10分鐘。"
 						],
 						[
 							"50-53",
-							"You enlarge the target as if you had cast {@spell enlarge/reduce}. If the target can't be affected by that spell or if you didn't target a creature, you become the target."
+							"你將目標變巨，就如同你對目標施放了{@spell 變巨/縮小術}。若目標無法被該法術影響，或你並未選擇一個生物做為目標，則你將成為該法術的目標。"
 						],
 						[
 							"54-58",
-							"You cast {@spell darkness}."
+							"你施放{@spell 黑暗術}。"
 						],
 						[
 							"59-62",
-							"Grass grows on the ground in a 60-foot radius centered on the target. If grass is already there, it grows to ten times its normal size and remains overgrown for 1 minute."
+							"以目標為中心的60呎半徑範圍內的地面長出青草。若該處已經有青草生長，則它們將生長至原本的十倍大並維持1分鐘。"
 						],
 						[
 							"63-65",
-							"An object of the DM 's choice disappears into the Ethereal Plane. The object must be neither worn nor carried, within 120 feet of the target, and no larger than 10 feet in any dimension."
+							"一件DM所選的物體將消失進入乙太位面。這個物體必須距離目標120呎內，不能被穿戴或攜帶，且大小不超過10呎邊長立方體。"
 						],
 						[
 							"66-69",
-							"You shrink yourself as if you had cast {@spell enlarge/reduce} on yourself."
+							"你把自己縮小，就如同你對自己施放了{@spell 變巨/縮小術}。"
 						],
 						[
 							"70-79",
-							"You cast {@spell fireball}."
+							"你施放{@spell 火球術}。"
 						],
 						[
 							"80-84",
-							"You cast {@spell invisibility}."
+							"你施放{@spell 隱形術}。"
 						],
 						[
 							"85-87",
-							"Leaves grow from the target. If you chose a point in space as the target, leaves sprout from the creature nearest to that point. Unless they are picked off, the leaves turn brown and fall off after 24 hours."
+							"目標將長出樹葉。若你選擇空間內的一點做為目標，則樹葉將從距離該點最近的生物身上長出。除非樹葉被摘下，否則這些樹葉將在24小時後枯黃並凋落。"
 						],
 						[
 							"88-90",
-							"A stream of {@dice 1d4 × 10} gems, each worth 1 gp, shoots from the wand 's tip in a line 30 feet long and 5 feet wide. Each gem deals 1 bludgeoning damage, and the total damage of the gems is divided equally among all creatures in the line."
+							"從魔杖的尖端射出一道{@dice 1d4 × 10}顆寶石組成的激流，每顆寶石價值1金幣，影響一道30呎長，5呎寬的直線區域。每顆寶石都將造成1點鈍擊傷害，且這些寶石所造成的總傷害值將被直線區域內的所有生物平分。"
 						],
 						[
 							"91-95",
-							"A burst of colorful shimmering light extends from you in a 30-foot radius. You and each creature in the area that can see must succeed on a DC 15 Constitution saving throw or become {@condition blinded} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+							"一道多彩的閃耀光芒將從你迸發而出，影響你周遭30呎半徑的範圍。你和每個在範圍內且可以看見光芒的生物都必須成功通過一次DC 15的體質豁免，否則陷入{@condition 目盲}長達1分鐘。一個生物可以在它的每個回合結束時重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。"
 						],
 						[
 							"96-97",
-							"The target's skin turns bright blue for {@dice 1d10} days. If you chose a point in space, the creature nearest to that point is affected."
+							"目標的肌膚將變成亮藍色長達{@dice 1d10}天。若你選擇空間內的一點為目標，則距離該點最近的生物將被影響。"
 						],
 						[
 							"98-00",
-							"If you targeted a creature, it must make a DC 15 Constitution saving throw. If you didn't target a creature, you become the target and must make the saving throw. If the saving throw fails by 5 or more, the target is instantly {@condition petrified}. On any other failed save, the target is {@condition restrained} and begins to turn to stone. While {@condition restrained} in this way, the target must repeat the saving throw at the end of its next turn, becoming {@condition petrified} on a failure or ending the effect on a success. The petrification lasts until the target is freed by the {@spell greater restoration} spell or similar magic."
+							"若你選擇一個生物做為目標，則它必須進行一次DC 15的體質豁免。若你並未選擇一個生物做為目標，則你將成為目標且必須進行該豁免檢定。若此豁免檢定失敗且結果與目標值差距5點或更多，則目標將被立即{@condition 石化}。除此之外，一個豁免失敗的目標將會開始轉變成石頭並因此被{@condition 束縛}。當因此被{@condition 束縛}時，該目標必須在它的下個回合結束時重複進行這個豁免檢定，若豁免失敗則被{@condition 石化}，豁免成功則結束這個效果的影響。這個石化狀態將持續直到該生物被{@spell 高等復原術}法術或其他類似魔法給解放。"
 						]
 					]
 				}
