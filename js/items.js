@@ -33,6 +33,7 @@ function sortItems (a, b, o) {
 		if (b._values.source === a._values.source) return SortUtil.compareNames(a, b);
 		return b._values.source.toLowerCase() > a._values.source.toLowerCase() ? 1 : -1;
 	} else if (o.valueName === "rarity") {
+		console.log(b._values.rarity, a._values.rarity);
 		if (b._values.rarity === a._values.rarity) return SortUtil.compareNames(a, b);
 		return rarityValue(b._values.rarity) > rarityValue(a._values.rarity) ? 1 : -1;
 	} else if (o.valueName === "count") {
