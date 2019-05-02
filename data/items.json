@@ -529,7 +529,7 @@
 			]
 		},
 		{
-			"name": "Armor of Invulnerability",
+			"name": "堅不可摧護甲", "ENG_name": "Armor of Invulnerability",
 			"type": "HA",
 			"armor": true,
 			"weight": "65",
@@ -542,14 +542,14 @@
 			"page": 152,
 			"reqAttune": true,
 			"entries": [
-				"You have resistance to nonmagical damage while you wear this armor. Additionally, you can use an action to make yourself immune to nonmagical damage for 10 minutes or until you are no longer wearing the armor. Once this special action is used, it can't be used again until the next dawn."
+				"你在穿著此護甲時具有對非魔法傷害的抗性。此外，你可以使用一個動作以讓你自己免疫於非魔法傷害長達10分鐘，或直到你不再穿戴此護甲。一旦這個特殊動作被使用，則它直到次日清晨前都不能再被使用。"
 			],
 			"lootTables": [
 				"Magic Item Table I"
 			]
 		},
 		{
-			"name": "Armor of Vulnerability (Bludgeoning)",
+			"name": "易傷護甲（鈍擊）", "ENG_name": "Armor of Vulnerability (Bludgeoning)",
 			"type": "HA",
 			"armor": true,
 			"weight": "65",
@@ -562,20 +562,20 @@
 			"page": 152,
 			"reqAttune": true,
 			"curse": true,
-			"baseItem": "plate armor|phb",
+			"baseItem": "全身板甲|phb",
 			"entries": [
-				"While wearing this armor, you have resistance to bludgeoning damage.",
+				"當穿戴此護甲時，你具有對鈍擊傷害的抗性。",
 				{
 					"type": "entries",
-					"name": "Curse",
+					"name": "詛咒", "tENG_name": "Curse",
 					"entries": [
-						"This armor is cursed, a fact that is revealed only when an {@spell identify} spell is cast on the armor or you attune to it. Attuning to the armor curses you until you are targeted by the {@spell remove curse} spell or similar magic; removing the armor fails to end the curse. While cursed you have vulnerability to piercing and slashing damage."
+						"這件護甲受到詛咒，這個事實只會在{@spell 鑑定術}法術被施放於這個護甲、或你同調於它時被揭露。與這個護甲同調會使你受到詛咒，並持續直到你被做為{@spell 移除詛咒}法術或其他類似魔法的目標；移除這件護甲並不能終止這個詛咒。當被詛咒時，你具有對穿刺和劈砍傷害的易傷。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Armor of Vulnerability (Piercing)",
+			"name": "易傷護甲（穿刺）", "ENG_name": "Armor of Vulnerability (Piercing)",
 			"type": "HA",
 			"armor": true,
 			"weight": "65",
@@ -588,20 +588,20 @@
 			"page": 152,
 			"reqAttune": true,
 			"curse": true,
-			"baseItem": "plate armor|phb",
+			"baseItem": "全身板甲|phb",
 			"entries": [
-				"While wearing this armor, you have resistance to piercing damage.",
+				"當穿戴此護甲時，你具有對穿刺傷害的抗性。",
 				{
 					"type": "entries",
-					"name": "Curse",
+					"name": "詛咒", "tENG_name": "Curse",
 					"entries": [
-						"This armor is cursed, a fact that is revealed only when an {@spell identify} spell is cast on the armor or you attune to it. Attuning to the armor curses you until you are targeted by the {@spell remove curse} spell or similar magic; removing the armor fails to end the curse. While cursed you have vulnerability to bludgeoning and slashing damage."
+						"這件護甲受到詛咒，這個事實只會在{@spell 鑑定術}法術被施放於這個護甲、或你同調於它時被揭露。與這個護甲同調會使你受到詛咒，並持續直到你被做為{@spell 移除詛咒}法術或其他類似魔法的目標；移除這件護甲並不能終止這個詛咒。當被詛咒時，你具有對鈍擊和劈砍傷害的易傷。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Armor of Vulnerability (Slashing)",
+			"name": "易傷護甲（劈砍）", "ENG_name": "Armor of Vulnerability (Slashing)",
 			"type": "HA",
 			"armor": true,
 			"weight": "65",
@@ -614,14 +614,14 @@
 			"page": 152,
 			"reqAttune": true,
 			"curse": true,
-			"baseItem": "plate armor|phb",
+			"baseItem": "全身板甲|phb",
 			"entries": [
-				"While wearing this armor, you have resistance to slashing damage.",
+				"當穿戴此護甲時，你具有對劈砍傷害的抗性。",
 				{
 					"type": "entries",
-					"name": "Curse",
+					"name": "詛咒", "tENG_name": "Curse",
 					"entries": [
-						"This armor is cursed, a fact that is revealed only when an {@spell identify} spell is cast on the armor or you attune to it. Attuning to the armor curses you until you are targeted by the {@spell remove curse} spell or similar magic; removing the armor fails to end the curse. While cursed you have vulnerability to bludgeoning and piercing damage."
+						"這件護甲受到詛咒，這個事實只會在{@spell 鑑定術}法術被施放於這個護甲、或你同調於它時被揭露。與這個護甲同調會使你受到詛咒，並持續直到你被做為{@spell 移除詛咒}法術或其他類似魔法的目標；移除這件護甲並不能終止這個詛咒。當被詛咒時，你具有對鈍擊和穿刺傷害的易傷。"
 					]
 				}
 			]
@@ -732,7 +732,7 @@
 				},
 				{
 					"type": "entries",
-					"name": "Curse",
+					"name": "詛咒", "tENG_name": "Curse",
 					"entries": [
 						"The axe bears a curse that affects any non-dwarf that becomes attuned to it. Even if the attunement ends, the curse remains. With each passing day, the creature's physical appearance and stature become more dwarflike. After seven days, the creature looks like a typical dwarf, but the creature neither loses its racial traits nor gains the racial traits of a dwarf. The physical changes wrought by the axe aren't considered magical in nature (and therefore can't be dispelled), but they can be undone by any effect that removes a curse, such as a {@spell greater restoration} or {@spell remove curse} spell."
 					]
@@ -2308,7 +2308,7 @@
 				"While you wear this gold bracelet, it grants you immunity to being {@condition petrified}, and it allows you to cast {@spell flesh to stone} (save DC 15) as an action. Once the spell has been cast three times, the bracelet can no longer cast it. Thereafter, you can cast {@spell stone shape} as an action. After you have done this thirteen times, the bracelet loses its magic and turns from gold to lead.",
 				{
 					"type": "entries",
-					"name": "Curse",
+					"name": "詛咒", "tENG_name": "Curse",
 					"entries": [
 						"The bracelet's affinity with earth manifests as an unusual curse. Creatures of flesh that are strongly related to earth and stone, such as stone giants and dwarves, have advantage on the saving throw against {@spell flesh to stone} cast from the bracelet. If such a creature's save is successful, the bracelet breaks your attunement to it and casts the spell on you. You make your saving throw with disadvantage, and on a failed save you are {@condition petrified} instantly."
 					]
@@ -4887,7 +4887,7 @@
 			]
 		},
 		{
-			"name": "Demon Armor",
+			"name": "惡魔護甲", "ENG_name": "Demon Armor",
 			"type": "HA",
 			"armor": true,
 			"weight": "65",
@@ -4901,12 +4901,12 @@
 			"reqAttune": true,
 			"curse": true,
 			"entries": [
-				"While wearing this armor, you gain a +1 bonus to AC, and you can understand and speak Abyssal. In addition, the armor's clawed gauntlets turn unarmed strikes with your hands into magic weapons that deal slashing damage, with a +1 bonus to attack and damage rolls and a damage die of {@dice 1d8}.",
+				"當穿戴此護甲時，你的AC獲得+1加值，且你可以理解並說深淵語。此外，這個護甲的帶爪護手將使以你雙手進行的徒手打擊變為魔法武器，該徒手打擊造成劈砍傷害，傷害骰為{@dice 1d8}，且在攻擊檢定和傷害骰上具有+1加值。",
 				{
 					"type": "entries",
-					"name": "Curse",
+					"name": "詛咒", "tENG_name": "Curse",
 					"entries": [
-						"Once you don this cursed armor, you can't doff it unless you are targeted by the {@spell remove curse} spell or similar magic. While wearing the armor, you have disadvantage on attack rolls against demons and on saving throws against their spells and special abilities."
+						"一旦你穿上這個被詛咒的護甲，則你將無法將它脫下，除非你被做為{@spell 移除詛咒}法術或其他類似魔法的目標。當穿戴此護甲時，你在對惡魔進行的攻擊檢定和對抗其法術和特殊能力的豁免檢定中具有劣勢。"
 					]
 				}
 			],
@@ -7409,7 +7409,7 @@
 				"This dark cloak is made of cured {@creature hell hound} hide. As an action, you can command the cloak to transform you into a {@creature hell hound} for up to 1 hour. The transformation otherwise functions as the {@spell polymorph} spell, but you can use a bonus action to revert to your normal form.",
 				{
 					"type": "entries",
-					"name": "Curse",
+					"name": "詛咒", "tENG_name": "Curse",
 					"entries": [
 						"This cloak is cursed with the essence of a {@creature hell hound}, and becoming attuned to it extends the curse to you. Until the curse is broken with {@spell remove curse} or similar magic, you are unwilling to part with the cloak, keeping it within reach at all times."
 					]
@@ -8890,7 +8890,7 @@
 				"You gain a +2 bonus to attack and damage rolls made with this magic weapon. When you throw it, its normal and long ranges both increase by 30 feet. and it deals one extra die of damage on a hit. After you throw it and it hits or misses, it flies back to your hand immediately.",
 				{
 					"type": "entries",
-					"name": "Curse",
+					"name": "詛咒", "tENG_name": "Curse",
 					"entries": [
 						"This weapon is cursed, and becoming attuned to it extends the curse to you. Until the curse is broken with {@spell remove curse} or similar magic, you are unwilling to part with the weapon, keeping it within reach at all times. In addition, you have disadvantage on attack rolls made with weapons other than this one."
 					]
@@ -9278,7 +9278,7 @@
 				"This stone is a large gem worth 150 gp.",
 				{
 					"type": "entries",
-					"name": "Curse",
+					"name": "詛咒", "tENG_name": "Curse",
 					"entries": [
 						"The stone is cursed, but its magical nature is hidden; {@spell detect magic} doesn't detect it. An {@spell identify} spell reveals the stone's true nature. If you use the Dash or Disengage action while the stone is on your person, its curse activates. Until the curse is broken with {@spell remove curse} or similar magic, your speed is reduced by 5 feet, and your maximum load and maximum lift capacities are halved. You also become unwilling to part with the stone."
 					]
@@ -14002,7 +14002,7 @@
 				},
 				{
 					"type": "entries",
-					"name": "Curse",
+					"name": "詛咒", "tENG_name": "Curse",
 					"entries": [
 						"This armor is cursed. Whenever you don or doff it, you must make a DC 15 Constitution saving throw, taking 100 ({@dice 10d10+45}) poison damage on a failed save, or half as much damage on a successful one. Only a {@spell wish} spell can remove the armor's curse."
 					]
@@ -14345,7 +14345,7 @@
 				"While holding this shield, you have resistance to damage from ranged weapon attacks.",
 				{
 					"type": "entries",
-					"name": "Curse",
+					"name": "詛咒", "tENG_name": "Curse",
 					"entries": [
 						"This shield is cursed. Attuning to it curses you until you are targeted by the {@spell remove curse} spell or similar magic. Removing the shield fails to end the curse on you. Whenever a ranged weapon attack is made against a target within 10 feet of you, the curse causes you to become the target instead."
 					]
@@ -14744,7 +14744,7 @@
 				"You gain a +2 bonus to attack and damage rolls made with this magic weapon. When you throw it, its normal and long ranges both increase by 30 feet. and it deals one extra die of damage on a hit. After you throw it and it hits or misses, it flies back to your hand immediately.",
 				{
 					"type": "entries",
-					"name": "Curse",
+					"name": "詛咒", "tENG_name": "Curse",
 					"entries": [
 						"This weapon is cursed, and becoming attuned to it extends the curse to you. Until the curse is broken with {@spell remove curse} or similar magic, you are unwilling to part with the weapon, keeping it within reach at all times. In addition, you have disadvantage on attack rolls made with weapons other than this one."
 					]
@@ -15916,7 +15916,7 @@
 				"This polished agate appears to be a {@item stone of good luck} to anyone who tries to {@spell identify} it, and it confers that item's property while on your person.",
 				{
 					"type": "entries",
-					"name": "Curse",
+					"name": "詛咒", "tENG_name": "Curse",
 					"entries": [
 						"This item is cursed. While it is on your person, you take a -2 penalty to ability checks and saving throws. Until the curse is discovered, the DM secretly applies this penalty, assuming you are adding the item's bonus. You are unwilling to part with the stone until the curse is broken with {@spell remove curse} or similar magic."
 					]
@@ -22048,7 +22048,7 @@
 				},
 				{
 					"type": "entries",
-					"name": "Curse",
+					"name": "詛咒", "tENG_name": "Curse",
 					"entries": [
 						"This armor is cursed, and becoming attuned to it extends the curse to you. Until the curse is broken with a remove curse spell or similar magic, you are unwilling to part with the armor. In addition, while you wear the cursed armor, you gain the following properties:",
 						{
@@ -22711,7 +22711,7 @@
 			]
 		},
 		{
-			"name": "Armor of Vulnerability",
+			"name": "易傷護甲", "ENG_name": "Armor of Vulnerability",
 			"type": "HA",
 			"armor": true,
 			"weight": "65",
@@ -22724,11 +22724,11 @@
 			"page": 152,
 			"reqAttune": true,
 			"curse": true,
-			"baseItem": "plate armor|phb",
+			"baseItem": "全身板甲|phb",
 			"items": [
-				"Armor of Vulnerability (Bludgeoning)",
-				"Armor of Vulnerability (Piercing)",
-				"Armor of Vulnerability (Slashing)"
+				"易傷護甲（鈍擊）",
+				"易傷護甲（穿刺）",
+				"易傷護甲（劈砍）"
 			],
 			"lootTables": [
 				"Magic Item Table G"
