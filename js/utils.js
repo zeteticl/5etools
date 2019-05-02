@@ -1218,18 +1218,18 @@ Parser.monSenseTagToFull = function (tag) {
 };
 
 Parser.MON_SPELLCASTING_TAG_TO_FULL = {
-	"P": "Psionics",
-	"I": "Innate",
-	"F": "Form Only",
-	"S": "Shared",
-	"CB": "Class, Bard",
-	"CC": "Class, Cleric",
-	"CD": "Class, Druid",
-	"CP": "Class, Paladin",
-	"CR": "Class, Ranger",
-	"CS": "Class, Sorcerer",
-	"CL": "Class, Warlock",
-	"CW": "Class, Wizard"
+	"P": "靈能",
+	"I": "天生",
+	"F": "限定型態",
+	"S": "共享",
+	"CB": "職業, 吟遊詩人",
+	"CC": "職業, 牧師",
+	"CD": "職業, 德魯伊",
+	"CP": "職業, 聖騎士",
+	"CR": "職業, 遊俠",
+	"CS": "職業, 術士",
+	"CL": "職業, 契術師",
+	"CW": "職業, 法師"
 };
 Parser.monSpellcastingTagToFull = function (tag) {
 	return Parser._parse_aToB(Parser.MON_SPELLCASTING_TAG_TO_FULL, tag);
@@ -6669,8 +6669,12 @@ Parser.ItemTierToDisplay = function(t){
 
 //Language
 Parser.languageKeyToDisplay["any"] 	 = "任意";
+Parser.languageKeyToDisplay["any (choose)"]  = "任意(選擇)";
+Parser.languageKeyToDisplay["all"] 	 = "全部語言";
 Parser.languageKeyToDisplay["other"] = "其他";
 Parser.languageKeyToDisplay["choose"]= "自選";
+Parser.languageKeyToDisplay["can't speak known languages"]= "理解但不會說";
+Parser.languageKeyToDisplay["telepathy"]= "心靈感應";
 Parser.languageKeyToDisplay["thieves' cant"]= "竊賊黑話";
 Parser.languageKeyToDisplay["druidic"] 		= "德魯伊語";
 Parser.languageKeyToDisplay["common"] 	  = "通用語";

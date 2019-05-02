@@ -196,7 +196,7 @@ const languageFilter = new Filter({
 	umbrellaExcludes: ["CS"]
 });
 const damageTypeFilter = new Filter({
-	header: "Damage Inflicted",
+	header: "Damage Inflicted", headerName: "造成傷害",
 	displayFn: (it) => Parser.dmgTypeToFull(it).toTitleCase(),
 	items: ["A", "B", "C", "F", "O", "L", "N", "P", "I", "Y", "R", "S", "T"]
 });
@@ -278,7 +278,7 @@ const immuneFilter = new Filter({
 	items: DMG_TYPES,
 	displayFn: dispImmFilter
 });
-const defenceFilter = new MultiFilter({name: "Damage", mode: "and"}, vulnerableFilter, resistFilter, immuneFilter);
+const defenceFilter = new MultiFilter({name: "Damage", headerName: "傷害", mode: "and"}, vulnerableFilter, resistFilter, immuneFilter);
 const conditionImmuneFilter = new Filter({
 	header: "Condition Immunity", headerName: "狀態免疫",
 	items: CONDS,
@@ -359,15 +359,19 @@ const miscFilter = new Filter({
 			case "Legendary": return "傳奇";
 			case "Named NPC": return "具名NPC";
 			case "Spellcaster": return "施法者";
+			case "Spellcaster, int": return "施法者,智力";
+			case "Spellcaster, wis": return "施法者,睿知";
+			case "Spellcaster, cha": return "施法者,魅力";
 			case "Regional Effects": return "區域效應";
 			case "Swarm": return "集群";
 			case "Has Variants": return "擁有變體";
+			case "Reactions": return "反應";
 			default: return m;
 		};},
 	deselFn: (it) => it === "Named NPC"
 });
 const spellcastingTypeFilter = new Filter({
-	header: "Spellcasting Type",
+	header: "Spellcasting Type", headerName: "施法類型",
 	items: ["F", "I", "P", "S", "CB", "CC", "CD", "CP", "CR", "CS", "CL", "CW"],
 	displayFn: Parser.monSpellcastingTagToFull
 });

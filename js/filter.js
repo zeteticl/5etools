@@ -324,7 +324,7 @@ class FilterBox {
 			const $outI = $(`<li class="filter-item"/>`);
 
 			this.headers[filter.header] = {outer: $outI, filter: filter};
-			const $wrpSlider = makeSliderWrapper.bind(this)(filter.header);
+			const $wrpSlider = makeSliderWrapper.bind(this)(filter.headerName? filter.headerName: filter.header);
 			this.headers[filter.header].ele = $wrpSlider;
 			if (parent) parent.eles.push($wrpSlider);
 
@@ -902,7 +902,7 @@ class FilterBox {
 		function makeSliderWrapper () {
 			const $wrp = $(`<div class="pill-grid pill-grid--flex"/>`);
 
-			const $lblInline = $(`<div class="multi-compact-visible range-inline-label">${filter.header}</div>`).appendTo($wrp);
+			const $lblInline = $(`<div class="multi-compact-visible range-inline-label">${filter.headerName? filter.headerName: filter.header}</div>`).appendTo($wrp);
 			const $sld = $(`<div class="filter-slider"/>`).appendTo($wrp);
 			const subSliderOpts = {};
 			if (filter.labels) {
@@ -930,13 +930,13 @@ class FilterBox {
 				const [min, max] = $sld.slider("values");
 
 				if (min === max && filter.min !== filter.max) {
-					$miniPillMin.attr("state", FilterBox._PILL_STATES[1]).text(`${filter.header} = ${filter.labels ? filter.items[min] : min}`);
+					$miniPillMin.attr("state", FilterBox._PILL_STATES[1]).text(`${filter.headerName? filter.headerName: filter.header} = ${filter.labels ? filter.items[min] : min}`);
 					$miniPillMax.attr("state", FilterBox._PILL_STATES[0]);
 				} else {
-					if (min > filter.min) $miniPillMin.attr("state", FilterBox._PILL_STATES[1]).text(`${filter.header} ≥ ${filter.labels ? filter.items[min] : min}`);
+					if (min > filter.min) $miniPillMin.attr("state", FilterBox._PILL_STATES[1]).text(`${filter.headerName? filter.headerName: filter.header} ≥ ${filter.labels ? filter.items[min] : min}`);
 					else $miniPillMin.attr("state", FilterBox._PILL_STATES[0]);
 
-					if (max < filter.max) $miniPillMax.attr("state", FilterBox._PILL_STATES[1]).text(`${filter.header} ≤ ${filter.labels ? filter.items[max] : max}`);
+					if (max < filter.max) $miniPillMax.attr("state", FilterBox._PILL_STATES[1]).text(`${filter.headerName? filter.headerName: filter.header} ≤ ${filter.labels ? filter.items[max] : max}`);
 					else $miniPillMax.attr("state", FilterBox._PILL_STATES[0]);
 				}
 			}
@@ -1690,7 +1690,7 @@ class MultiFilter {
 	 * @param filters the list of filters
 	 */
 	constructor (options, ...filters) {
-		this.categoryName = options.name;
+		this.categoryName = (options.headerName)? options.headerName: options.name;
 		// designed to be toggle-able: to switch, toggle class `wrp-multi-compact` on the wrapper
 		// warning: only fully implemented for RangeFilter; currently only used there
 		this.compact = !!options.compact;
