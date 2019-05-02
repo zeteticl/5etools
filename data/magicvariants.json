@@ -44,7 +44,7 @@
 				"page": 150,
 				"namePrefix": "精金", "ENG_namePrefix": "Adamantine ",
 				"entries": [
-					"這套護甲是由精金打造，現存最堅硬的物質之一。當你穿戴此護甲時，任何對你的重擊都將變為普通命中。"
+					"這套護甲是由精金打造，現存最堅硬的物質之一。當你穿著此護甲時，任何對你的重擊都將變為普通命中。"
 				]
 			}
 		},
@@ -230,7 +230,7 @@
 				"page": 152,
 				"nameSuffix": "+1", "ENG_nameSuffix": " +1",
 				"entries": [
-					"你在穿戴此護甲時AC獲得{=genericBonus}加值。"
+					"你在穿著此護甲時AC獲得{=genericBonus}加值。"
 				],
 				"modifier": [
 					{
@@ -259,7 +259,7 @@
 				"page": 152,
 				"nameSuffix": "+2", "ENG_nameSuffix": " +2",
 				"entries": [
-					"你在穿戴此護甲時AC獲得{=genericBonus}加值。"
+					"你在穿著此護甲時AC獲得{=genericBonus}加值。"
 				],
 				"modifier": [
 					{
@@ -288,7 +288,7 @@
 				"page": 152,
 				"nameSuffix": "+3", "ENG_nameSuffix": " +3",
 				"entries": [
-					"你在穿戴此護甲時AC獲得{=genericBonus}加值。"
+					"你在穿著此護甲時AC獲得{=genericBonus}加值。"
 				],
 				"modifier": [
 					{
@@ -501,12 +501,12 @@
 			}
 		},
 		{
-			"name": "Arrow of Slaying (Generic)",
+			"name": "屠殺箭(通用)", "ENG_name": "Arrow of Slaying (Generic)",
 			"type": "GV",
 			"entries": [
-				"An {@italic arrow of slaying} is a magic weapon meant to slay a particular kind of creature. Some are more focused than others; for example, there are both {@italic arrows of dragon slaying} and {@italic arrows of blue dragon slaying}. If a creature belonging to the type, race, or group associated with an {@italic arrow of slaying} takes damage from the arrow, the creature must make a DC 17 Constitution saving throw, taking an extra {@dice 6d10} piercing damage on a failed save, or half as much extra damage on a successful one.",
-				"Once an {@italic arrow of slaying} deals its extra damage to a creature, it becomes a nonmagical arrow.",
-				"Other types of magic ammunition of this kind exist, such as bolts of slaying meant for a crossbow, though arrows are most common."
+				"一支{@italic 屠殺箭}是一種用以屠殺特定種類生物的魔法武器。它們有些會比其他同類更局限於某個範圍；舉例來說，一支{@italic 龍族屠殺箭}和一支{@italic 藍龍屠殺箭}都可能存在。若一個屬於{@italic 屠殺箭}所關聯類型、種族、或團體的生物受到來自這支箭的傷害，該生物必須進行一次DC 17的體質豁免，若豁免失敗則受到額外的{@dice 6d10}穿刺傷害，豁免成功則只受到一半的傷害。",
+				"一旦一支{@italic 屠殺箭}對一個生物造成了它的額外傷害，它將變回非魔法箭矢。",
+				"儘管箭是最常見的種類，但也存在著其他類型的這類魔法彈藥，像是供弩使用的屠殺弩矢。"
 			],
 			"requires": [
 				{
@@ -521,15 +521,15 @@
 				"rarity": "Very Rare",
 				"source": "DMG",
 				"page": 152,
-				"nameSuffix": " of Slaying",
+				"namePrefix": "屠殺", "ENG_nameSuffix": " of Slaying",
 				"entries": [
-					"{=baseName/at} {=baseName/l} of slaying is a magic weapon meant to slay a particular kind of creature. Some are more focused than others; for example, there are both {@i {=baseName/l}s of dragon slaying} and {@i {=baseName/l}s of blue dragon slaying}. If a creature belonging to the type, race, or group associated with {=baseName/a} {=baseName/l} of slaying takes damage from the {=baseName/l}, the creature must make a DC 17 Constitution saving throw, taking an extra {@dice 6d10} piercing damage on a failed save, or half as much extra damage on a successful one.",
-					"Once {=baseName/a} {=baseName/l} of slaying deals its extra damage to a creature, it becomes a nonmagical {=baseName/l}."
+					"一個屠殺{=baseName/l}是一種用以屠殺特定種類生物的魔法武器。它們有些會比其他同類更局限於某個範圍；舉例來說，一個{@italic 龍族屠殺{=baseName/l}}和一個{@italic 藍龍屠殺{=baseName/l}}都可能存在。若一個屬於{@italic 屠殺{=baseName/l}}所關聯類型、種族、或團體的生物受到來自這支{=baseName/l}的傷害，該生物必須進行一次DC 17的體質豁免，若豁免失敗則受到額外的{@dice 6d10}穿刺傷害，豁免成功則只受到一半的傷害。",
+					"一旦一個屠殺{=baseName/l}對一個生物造成了它的額外傷害，它將變回非魔法{=baseName/l}。"
 				]
 			}
 		},
 		{
-			"name": "Berserker Axe",
+			"name": "狂戰士之斧", "ENG_name": "Berserker Axe",
 			"type": "GV",
 			"requires": [
 				{
@@ -543,17 +543,17 @@
 				"page": 155,
 				"reqAttune": true,
 				"curse": true,
-				"namePrefix": "Berserker ",
+				"namePrefix": "狂戰士", "ENG_namePrefix": "Berserker ",
 				"entries": [
-					"You gain a +1 bonus to attack and damage rolls made with this magic weapon. In addition, while you are attuned to this weapon, your hit point maximum increases by 1 for each level you have attained.",
+					"你在使用這把武器進行的攻擊檢定和傷害骰上具有+1加值。此外，當你同調於這把武器時，你的生命值最大值將增加等同你等級的數值。",
 					{
 						"type": "entries",
-						"name": "Curse",
+						"name": "詛咒", "tENG_name": "Curse",
 						"entries": [
-							"This axe is cursed, and becoming attuned to it extends the curse to you. As long as you remain cursed, you are unwilling to part with the axe, keeping it within reach at all times. You also have disadvantage on attack rolls with weapons other than this one, unless no foe is within 60 feet of you that you can see or hear."
+							"這把斧頭受到詛咒，且與它同調將會使詛咒蔓延到你身上。只要你還承受這個詛咒，你就會不願意與這把斧頭分開，且永遠會將它放在你的觸及範圍內。同時，除非距離你60呎內沒有任何你能看見或聽見的敵人，否則你在使用它以外的武器所進行的攻擊檢定中具有劣勢。"
 						]
 					},
-					"Whenever a hostile creature damages you while the axe is in your possession, you must succeed on a DC 15 Wisdom saving throw or go berserk. While berserk, you must use your action each round to attack the creature nearest to you with the axe. If you can make extra attacks as part of the Attack action, you use those extra attacks, moving to attack the next nearest creature after you fell your current target. If you have multiple possible targets, you attack one at random. You are berserk until you start your turn with no creatures within 60 feet of you that you can see or hear."
+					"每當一個敵對生物在你持有這把斧頭時傷害你，你就必須成功通過一次DC 15的睿知豁免，否則陷入狂怒。當處於狂怒狀態時，你每輪都必須使用你的動作以這把斧頭攻擊距離你最近的生物。若你能夠進行額外攻擊以做為攻擊動作的一部份，則你可以使用這些攻擊，在你擊敗你當前的目標之後向著下一個最近生物移動並攻擊。若你有多個可選目標，則你隨機攻擊其中一個。你將維持狂怒直到你在周遭60呎內沒有任何你能看見或聽見的生物的情況下開始你的回合。"
 				],
 				"modifier": [
 					{
@@ -1151,7 +1151,7 @@
 			]
 		},
 		{
-			"name": "Mariner's Armor",
+			"name": "水手護甲", "ENG_name": "Mariner's Armor",
 			"type": "GV",
 			"requires": [
 				{
@@ -1163,9 +1163,9 @@
 				"rarity": "Uncommon",
 				"source": "DMG",
 				"page": 181,
-				"namePrefix": "Mariner's ",
+				"namePrefix": "水手", "ENG_namePrefix": "Mariner's ",
 				"entries": [
-					"While wearing this armor, you have a swimming speed equal to your walking speed. In addition, whenever you start your turn underwater with 0 hit points, the armor causes you to rise 60 feet toward the surface. The armor is decorated with fish and shell motifs."
+					"當穿著此護甲時，你具有等同於你步行速度的游泳速度。此外，每當你在水中以0點生命值的狀態開始你的回合，這件護甲將會使你向著水面升起60呎的距離。這件護甲被飾以魚和貝類的圖案。"
 				],
 				"lootTables": [
 					"Magic Item Table B"
@@ -1211,7 +1211,7 @@
 			}
 		},
 		{
-			"name": "Mithral Armor",
+			"name": "秘銀護甲", "ENG_name": "Mithral Armor",
 			"type": "GV",
 			"requires": [
 				{
@@ -1230,9 +1230,9 @@
 				"source": "DMG",
 				"page": 182,
 				"stealth": false,
-				"namePrefix": "Mithral ",
+				"namePrefix": "秘銀", "ENG_namePrefix": "Mithral ",
 				"entries": [
-					"Mithral is a light, flexible metal. A mithral chain shirt or breastplate can be worn under normal clothes. If the armor normally imposes disadvantage on Dexterity ({@skill Stealth}) checks or has a Strength requirement, the mithral version of the armor doesn't."
+					"秘銀是一種輕盈柔韌的金屬。一件秘銀鏈甲衫或護胸甲可以被穿在普通衣物之下。若該護甲原本會導致敏捷（隱匿）檢定承受劣勢，或具有對穿戴者力量屬性的需求，則該護甲的秘銀版本不會具有這些特性。"
 				],
 				"lootTables": [
 					"Magic Item Table B"
@@ -1750,7 +1750,7 @@
 			}
 		},
 		{
-			"name": "Sword of Vengeance",
+			"name": "復仇之劍", "ENG_name": "Sword of Vengeance",
 			"type": "GV",
 			"requires": [
 				{
@@ -1762,16 +1762,16 @@
 				"rarity": "Uncommon",
 				"source": "DMG",
 				"page": 206,
-				"nameSuffix": " of Vengeance",
+				"namePrefix": "復仇", "ENG_nameSuffix": " of Vengeance",
 				"reqAttune": true,
 				"curse": true,
 				"entries": [
-					"You gain a +1 bonus to attack and damage rolls made with this magic weapon.",
+					"你在使用這把武器進行的攻擊檢定和傷害骰上具有+1加值。",
 					{
-						"name": "Curse",
+						"name": "詛咒", "tENG_name": "Curse",
 						"type": "entries",
 						"entries": [
-							"This sword is cursed and possessed by a vengeful spirit. Becoming attuned to it extends the curse to you. As long as you remain cursed, you are unwilling to part with the sword, keeping it on your person at all times. While attuned to this weapon, you have disadvantage on attack rolls made with weapons other than this one.",
+							"這把劍受到詛咒，且被一個渴望復仇的靈魂所寄宿。與它同調將會使詛咒蔓延到你身上。只要你還承受這個詛咒，你就會不願意與這把劍分開，且永遠會將它放在你的觸及範圍內。同時，除非距離你60呎內沒有任何你能看見或聽見的敵人，否則你在使用它以外的武器所進行的攻擊檢定中具有劣勢。This sword is cursed and possessed by a vengeful spirit. Becoming attuned to it extends the curse to you. As long as you remain cursed, you are unwilling to part with the sword, keeping it on your person at all times. While attuned to this weapon, you have disadvantage on attack rolls made with weapons other than this one.",
 							"In addition, while the sword is on your person, you must succeed on a DC 15 Wisdom saving throw whenever you take damage in combat. On a failed save you must attack the creature that damaged you until you drop to 0 hit points or it does, or until you can't reach the creature to make a melee attack against it.",
 							"You can break the curse in the usual ways. Alternatively, casting {@spell banishment|phb} on the sword forces the vengeful spirit to leave it. The sword then becomes a +1 weapon with no other properties."
 						]
@@ -2116,7 +2116,7 @@
 					"When you attack a creature with this magic weapon and roll a 20 on the attack roll, the creature must make a DC 15 Constitution saving throw in addition to suffering the attack's normal effects. On a failed save, the creature is restrained and must make another Constitution saving throw at the end of each of its turns. If it successfully saves against this effect three times, the effect ends. If it fails its saves three times, it is turned to stone and subjected to the {@condition petrified} condition for 1 hour.",
 					"A creature is immune to this effect if it is immune to damage of the weapon's type, does not have a body made of flesh, or has legendary actions.",
 					{
-						"name": "Curse",
+						"name": "詛咒", "tENG_name": "Curse",
 						"type": "entries",
 						"entries": [
 							"This weapon is cursed, and becoming attuned to it extends the curse to you. Until the curse is broken with a {@spell remove curse} spell or similar magic, you are unwilling to part with the weapon. Whenever you attack a creature with this weapon and roll a 1 on the attack roll, you must succeed on a DC 15 Constitution saving throw or be {@condition restrained} and forced to make additional saves against being {@condition petrified}, as above."
@@ -2143,7 +2143,7 @@
 				"entries": [
 					"Choose a magical bonus of +1 to +3. This sword gains that bonus to its attack and damage rolls. For each point of bonus you choose for the sword, you take a corresponding penalty (\u22121 to \u22123) to your death saving throws. You can change this magical bonus each day at dawn.",
 					{
-						"name": "Curse",
+						"name": "詛咒", "tENG_name": "Curse",
 						"type": "entries",
 						"entries": [
 							"This weapon is cursed, and becoming attuned to it extends the curse to you. Until the curse is broken with a {@spell remove curse} spell or similar magic, you are unwilling to part with the weapon."
@@ -2265,7 +2265,7 @@
 					},
 					"A creature is immune to this effect if it is immune to damage of the weapon's type, is a shapechanger, or has legendary actions.",
 					{
-						"name": "Curse",
+						"name": "詛咒", "tENG_name": "Curse",
 						"type": "entries",
 						"entries": [
 							"This weapon is cursed, and becoming attuned to it extends the curse to you. Until the curse is broken with a {@spell remove curse} spell or similar magic, you are unwilling to part with the weapon. Whenever you attack a creature with this weapon and roll a 1 on the attack roll, you suffer the effect of a {@spell polymorph} spell for 1 hour, rolling on the table to determine your new form."
