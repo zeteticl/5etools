@@ -930,7 +930,7 @@
 			]
 		},
 		{
-			"name": "Bag of Holding",
+			"name": "次元袋", "ENG_name": "Bag of Holding",
 			"wondrous": true,
 			"weight": "15",
 			"tier": "Minor",
@@ -938,17 +938,17 @@
 			"source": "DMG",
 			"page": 153,
 			"entries": [
-				"This bag has an interior space considerably larger than its outside dimensions, roughly 2 feet in diameter at the mouth and 4 feet deep. The bag can hold up to 500 pounds, not exceeding a volume of 64 cubic feet. The bag weighs 15 pounds, regardless of its contents. Retrieving an item from the bag requires an action.",
-				"If the bag is overloaded, pierced, or torn, it ruptures and is destroyed, and its contents are scattered in the Astral Plane. If the bag is turned inside out, its contents spill forth, unharmed, but the bag must be put right before it can be used again. Breathing creatures inside the bag can survive up to a number of minutes equal to 10 divided by the number of creatures (minimum 1 minute), after which time they begin to suffocate.",
-				"Placing a bag of holding inside an extradimensional space created by a {@item Heward's handy haversack}, {@item portable hole}, or similar item instantly destroys both items and opens a gate to the Astral Plane. The gate originates where the one item was placed inside the other. Any creature within 10 feet of the gate is sucked through it to a random location on the Astral Plane. The gate then closes. The gate is one-way only and can't be reopened."
+				"這個袋子具有一個比它外部尺寸要大上許多的內部空間，它的袋口直徑約莫2呎，且深約4呎。這個袋子可以容納最多500磅的重量，且體積不能超過64立方呎。無論它裝了什麼，這個袋子的重量皆為15磅。將一個物品從袋中取出需要花費一個動作。",
+				"若這個袋子超載、被戳破、或撕裂，則它將因此破裂並被摧毀，且它裝載的東西將散落在星界位面。若這個袋子被裡外翻轉，則它裝載的東西將無傷地掉落而出，但這個袋子必須被恢復原狀才能夠被再次使用。需要呼吸的生物在袋中可以存活的時間最多等同於10除以生物數量的分鐘數（最少1分鐘），在這之後它們將開始窒息。",
+				"將次元袋放入由{@item 霍華德的便利袋}、{@item 便攜式次元洞}、或類似物品所創造的異次元空間中，將會立刻摧毀這兩件物品，並打開一道通往星界位面的傳送門。這道傳送門將產生載這兩件物品被放入彼此的位置。任何距離這道傳送門10呎內的生物將被吸進門內，並被送往星界位面中的一處隨機地點。這道傳送門接著將會關閉。這道傳送門僅限單向傳送，且無法再次被開啟。"
 			],
 			"lootTables": [
-				"Magic Item Table A",
+				"魔法物品表A",
 				"Magic Item Table B"
 			]
 		},
 		{
-			"name": "Bag of Tricks, Gray",
+			"name": "魔術袋，灰色", "ENG_name": "Bag of Tricks, Gray",
 			"wondrous": true,
 			"weight": "0.5",
 			"tier": "Major",
@@ -956,15 +956,15 @@
 			"source": "DMG",
 			"page": 154,
 			"entries": [
-				"This ordinary bag, made from gray cloth, appears empty. Reaching inside the bag, however, reveals the presence of a small, fuzzy object.",
-				"You can use an action to pull the fuzzy object from the bag and throw it up to 20 feet. When the object lands, it transforms into a creature you determine by rolling a {@dice d8} and consulting the table. The creature vanishes at the next dawn or when it is reduced to 0 hit points.",
-				"The creature is friendly to you and your companions, and it acts on your turn. You can use a bonus action to command how the creature moves and what action it takes on its next turn, or to give it general orders, such as to attack your enemies. In the absence of such orders, the creature acts in a fashion appropriate to its nature.",
-				"Once three fuzzy objects have been pulled from the bag, the bag can't be used again until the next dawn.",
+				"這個由灰色布料製成的普通袋子看起來空無一物。然而，將手伸入袋中將會揭露一個小型絨毛物體的存在。",
+				"你可以使用一個動作將這個絨毛物體拉出袋子，並將它丟出最多20呎的距離。當這個物體落地時，它將轉變成一個生物。你骰一顆{@dice d8}，並查詢下表以決定該生物的種類。這個生物將在次日清晨、或當它的生命值被歸零時消失。",
+				"這個生物對你和你的同伴友善，且它會在你的回合行動。你可以使用一個附贈動作以命令該生物在它的下個回合要如何移動並採取什麼動作，或者你可以給它一個籠統的命令，像是攻擊你的敵人。若沒有下達這類命令，該生物將依照它的天性行動。",
+				"一旦三個絨毛物體被從袋中拉出，則這個魔術袋直到次日清晨之前都不能再被使用。",
 				{
 					"type": "table",
 					"colLabels": [
 						"{@dice d8}",
-						"Creature"
+						"生物"
 					],
 					"colStyles": [
 						"col-1 text-align-center",
@@ -973,35 +973,35 @@
 					"rows": [
 						[
 							"1",
-							"{@creature Weasel}"
+							"{@creature 鼬鼠}"
 						],
 						[
 							"2",
-							"{@creature Giant rat}"
+							"{@creature 巨鼠}"
 						],
 						[
 							"3",
-							"{@creature Badger}"
+							"{@creature 獾}"
 						],
 						[
 							"4",
-							"{@creature Boar}"
+							"{@creature 野豬}"
 						],
 						[
 							"5",
-							"{@creature Panther}"
+							"{@creature 黑豹}"
 						],
 						[
 							"6",
-							"{@creature Giant badger}"
+							"{@creature 巨獾}"
 						],
 						[
 							"7",
-							"{@creature Dire wolf}"
+							"{@creature 恐狼}"
 						],
 						[
 							"8",
-							"{@creature Giant elk}"
+							"{@creature 巨麋鹿}"
 						]
 					]
 				}
@@ -1011,7 +1011,7 @@
 			]
 		},
 		{
-			"name": "Bag of Tricks, Rust",
+			"name": "魔術袋，鐵鏽色", "ENG_name": "Bag of Tricks, Rust",
 			"wondrous": true,
 			"weight": "0.5",
 			"tier": "Major",
@@ -1019,15 +1019,15 @@
 			"source": "DMG",
 			"page": 154,
 			"entries": [
-				"This ordinary bag, made from rust cloth, appears empty. Reaching inside the bag, however, reveals the presence of a small, fuzzy object.",
-				"You can use an action to pull the fuzzy object from the bag and throw it up to 20 feet. When the object lands, it transforms into a creature you determine by rolling a {@dice d8} and consulting the table. The creature vanishes at the next dawn or when it is reduced to 0 hit points.",
-				"The creature is friendly to you and your companions, and it acts on your turn. You can use a bonus action to command how the creature moves and what action it takes on its next turn, or to give it general orders, such as to attack your enemies. In the absence of such orders, the creature acts in a fashion appropriate to its nature.",
-				"Once three fuzzy objects have been pulled from the bag, the bag can't be used again until the next dawn.",
+				"這個由鐵鏽色布料製成的普通袋子看起來空無一物。然而，將手伸入袋中將會揭露一個小型絨毛物體的存在。",
+				"你可以使用一個動作將這個絨毛物體拉出袋子，並將它丟出最多20呎的距離。當這個物體落地時，它將轉變成一個生物。你骰一顆{@dice d8}，並查詢下表以決定該生物的種類。這個生物將在次日清晨、或當它的生命值被歸零時消失。",
+				"這個生物對你和你的同伴友善，且它會在你的回合行動。你可以使用一個附贈動作以命令該生物在它的下個回合要如何移動並採取什麼動作，或者你可以給它一個籠統的命令，像是攻擊你的敵人。若沒有下達這類命令，該生物將依照它的天性行動。",
+				"一旦三個絨毛物體被從袋中拉出，則這個魔術袋直到次日清晨之前都不能再被使用。",
 				{
 					"type": "table",
 					"colLabels": [
 						"{@dice d8}",
-						"Creature"
+						"生物"
 					],
 					"colStyles": [
 						"col-1 text-align-center",
@@ -1036,35 +1036,35 @@
 					"rows": [
 						[
 							"1",
-							"{@creature Rat}"
+							"{@creature 老鼠}"
 						],
 						[
 							"2",
-							"{@creature Owl}"
+							"{@creature 貓頭鷹}"
 						],
 						[
 							"3",
-							"{@creature Mastiff}"
+							"{@creature 獒犬}"
 						],
 						[
 							"4",
-							"{@creature Goat}"
+							"{@creature 山羊}"
 						],
 						[
 							"5",
-							"{@creature Giant goat}"
+							"{@creature 巨山羊}"
 						],
 						[
 							"6",
-							"{@creature Giant boar}"
+							"{@creature 巨野豬}"
 						],
 						[
 							"7",
-							"{@creature Lion}"
+							"{@creature 獅子}"
 						],
 						[
 							"8",
-							"{@creature Brown bear}"
+							"{@creature 棕熊}"
 						]
 					]
 				}
@@ -1074,7 +1074,7 @@
 			]
 		},
 		{
-			"name": "Bag of Tricks, Tan",
+			"name": "魔術袋，棕褐色", "ENG_name": "Bag of Tricks, Tan",
 			"wondrous": true,
 			"weight": "0.5",
 			"tier": "Major",
@@ -1082,15 +1082,15 @@
 			"source": "DMG",
 			"page": 154,
 			"entries": [
-				"This ordinary bag, made from tan cloth, appears empty. Reaching inside the bag, however, reveals the presence of a small, fuzzy object.",
-				"You can use an action to pull the fuzzy object from the bag and throw it up to 20 feet. When the object lands, it transforms into a creature you determine by rolling a {@dice d8} and consulting the table. The creature vanishes at the next dawn or when it is reduced to 0 hit points.",
-				"The creature is friendly to you and your companions, and it acts on your turn. You can use a bonus action to command how the creature moves and what action it takes on its next turn, or to give it general orders, such as to attack your enemies. In the absence of such orders, the creature acts in a fashion appropriate to its nature.",
-				"Once three fuzzy objects have been pulled from the bag, the bag can't be used again until the next dawn.",
+				"這個由棕褐色布料製成的普通袋子看起來空無一物。然而，將手伸入袋中將會揭露一個小型絨毛物體的存在。",
+				"你可以使用一個動作將這個毛茸茸的物體拉出袋子，並將它丟出最多20呎的距離。當這個物體落地時，它將轉變成一個生物。你骰一顆{@dice d8}，並查詢下表以決定該生物的種類。這個生物將在次日清晨、或當它的生命值被歸零時消失。",
+				"這個生物對你和你的同伴友善，且它會在你的回合行動。你可以使用一個附贈動作以命令該生物在它的下個回合要如何移動並採取什麼動作，或者你可以給它一個籠統的命令，像是攻擊你的敵人。若沒有下達這類命令，該生物將依照它的天性行動。",
+				"一旦三個絨毛物體被從袋中拉出，則這個魔術袋直到次日清晨之前都不能再被使用。",
 				{
 					"type": "table",
 					"colLabels": [
 						"{@dice d8}",
-						"Creature"
+						"生物"
 					],
 					"colStyles": [
 						"col-1 text-align-center",
@@ -1099,35 +1099,35 @@
 					"rows": [
 						[
 							"1",
-							"{@creature Jackal}"
+							"{@creature 豺狼}"
 						],
 						[
 							"2",
-							"{@creature Ape}"
+							"{@creature 猿}"
 						],
 						[
 							"3",
-							"{@creature Baboon}"
+							"{@creature 狒狒}"
 						],
 						[
 							"4",
-							"{@creature Axe beak}"
+							"{@creature 斧喙鳥}"
 						],
 						[
 							"5",
-							"{@creature Black bear}"
+							"{@creature 黑熊}"
 						],
 						[
 							"6",
-							"{@creature Giant weasel}"
+							"{@creature 巨鼬鼠}"
 						],
 						[
 							"7",
-							"{@creature Giant hyena}"
+							"{@creature 巨鬣狗}"
 						],
 						[
 							"8",
-							"{@creature Tiger}"
+							"{@creature 老虎}"
 						]
 					]
 				}
@@ -1234,7 +1234,7 @@
 					"name": "Mark of Courage",
 					"type": "entries",
 					"entries": [
-						"As a bonus action, you can touch the unfurled banner and cause it to emanate courage. You and your allies are immune to the {@condition frightened} condition while within 20 feet of it. This benefit lasts for 10 minutes or until the banner is furled. Once you use this property, you can't use it again until you finish a short or long rest."
+						"As a bonus action, you can touch the unfurled banner and cause it to emanate courage. You and your allies are immune to the {@condition 恐懼} condition while within 20 feet of it. This benefit lasts for 10 minutes or until the banner is furled. Once you use this property, you can't use it again until you finish a short or long rest."
 					]
 				},
 				{
@@ -1256,7 +1256,7 @@
 					"type": "entries",
 					"entries": [
 						"You can transfer the banner's magic to a place by tracing the krig rune on the ground with your finger. The point where you trace it becomes the center of a spherical area of magic that has a 500-foot radius and that is fixed to the place. The transfer takes 8 hours of work that requires the banner to be within 5 feet of you and during which you choose creatures, creature types, or both that will benefit from the magic. At the end, the banner is destroyed, and the area gains the following property:",
-						"While in the 500-foot-radius sphere, the creatures you chose during the transfer process are immune to the {@condition frightened} condition and gain a +1 bonus to attack rolls and AC."
+						"While in the 500-foot-radius sphere, the creatures you chose during the transfer process are immune to the {@condition 恐懼} condition and gain a +1 bonus to attack rolls and AC."
 					]
 				}
 			]
@@ -1374,7 +1374,7 @@
 			"page": 150
 		},
 		{
-			"name": "Belt of Cloud Giant Strength",
+			"name": "雲巨人力量腰帶", "ENG_name": "Belt of Cloud Giant Strength",
 			"wondrous": true,
 			"tier": "Major",
 			"rarity": "Legendary",
@@ -1387,7 +1387,7 @@
 				}
 			},
 			"entries": [
-				"While wearing this belt, your Strength score changes to 27. The item has no effect on you if your Strength without the belt is equal to or greater than the belt's score."
+				"當穿戴這個腰帶時，你的力量值變為27。若你在未穿戴這個腰帶時的力量值就已經等於或高於這個腰帶的數值，則這個物品對你將不會有任何效果。"
 			],
 			"lootTables": [
 				"Magic Item Table I"
@@ -1438,7 +1438,7 @@
 			]
 		},
 		{
-			"name": "Belt of Fire Giant Strength",
+			"name": "火巨人力量腰帶", "ENG_name": "Belt of Fire Giant Strength",
 			"wondrous": true,
 			"tier": "Major",
 			"rarity": "Very Rare",
@@ -1451,14 +1451,14 @@
 				}
 			},
 			"entries": [
-				"While wearing this belt, your Strength score changes to 25. The item has no effect on you if your Strength without the belt is equal to or greater than the belt's score."
+				"當穿戴這個腰帶時，你的力量值變為25。若你在未穿戴這個腰帶時的力量值就已經等於或高於這個腰帶的數值，則這個物品對你將不會有任何效果。"
 			],
 			"lootTables": [
 				"Magic Item Table H"
 			]
 		},
 		{
-			"name": "Belt of Frost Giant Strength",
+			"name": "霜巨人力量腰帶", "ENG_name": "Belt of Frost Giant Strength",
 			"wondrous": true,
 			"tier": "Major",
 			"rarity": "Very Rare",
@@ -1471,14 +1471,14 @@
 				}
 			},
 			"entries": [
-				"While wearing this belt, your Strength score changes to 23. The item has no effect on you if your Strength without the belt is equal to or greater than the belt's score."
+				"當穿戴這個腰帶時，你的力量值變為23。若你在未穿戴這個腰帶時的力量值就已經等於或高於這個腰帶的數值，則這個物品對你將不會有任何效果。"
 			],
 			"lootTables": [
 				"Magic Item Table H"
 			]
 		},
 		{
-			"name": "Belt of Hill Giant Strength",
+			"name": "山丘巨人力量腰帶", "ENG_name": "Belt of Hill Giant Strength",
 			"wondrous": true,
 			"tier": "Major",
 			"rarity": "Rare",
@@ -1491,14 +1491,14 @@
 				}
 			},
 			"entries": [
-				"While wearing this belt, your Strength score changes to 21. The item has no effect on you if your Strength without the belt is equal to or greater than the belt's score."
+				"當穿戴這個腰帶時，你的力量值變為21。若你在未穿戴這個腰帶時的力量值就已經等於或高於這個腰帶的數值，則這個物品對你將不會有任何效果。"
 			],
 			"lootTables": [
 				"Magic Item Table G"
 			]
 		},
 		{
-			"name": "Belt of Stone Giant Strength",
+			"name": "石巨人力量腰帶", "ENG_name": "Belt of Stone Giant Strength",
 			"wondrous": true,
 			"tier": "Major",
 			"rarity": "Very Rare",
@@ -1511,14 +1511,14 @@
 				}
 			},
 			"entries": [
-				"While wearing this belt, your Strength score changes to 23. The item has no effect on you if your Strength without the belt is equal to or greater than the belt's score."
+				"當穿戴這個腰帶時，你的力量值變為23。若你在未穿戴這個腰帶時的力量值就已經等於或高於這個腰帶的數值，則這個物品對你將不會有任何效果。"
 			],
 			"lootTables": [
 				"Magic Item Table H"
 			]
 		},
 		{
-			"name": "Belt of Storm Giant Strength",
+			"name": "風暴巨人力量腰帶", "ENG_name": "Belt of Storm Giant Strength",
 			"wondrous": true,
 			"tier": "Major",
 			"rarity": "Legendary",
@@ -1531,7 +1531,7 @@
 				}
 			},
 			"entries": [
-				"While wearing this belt, your Strength score changes to 29. The item has no effect on you if your Strength without the belt is equal to or greater than the belt's score."
+				"當穿戴這個腰帶時，你的力量值變為29。若你在未穿戴這個腰帶時的力量值就已經等於或高於這個腰帶的數值，則這個物品對你將不會有任何效果。"
 			],
 			"lootTables": [
 				"Magic Item Table I"
@@ -1716,7 +1716,7 @@
 					"name": "Soul Hunter",
 					"type": "entries",
 					"entries": [
-						"While you hold the weapon. you are aware of the presence of Tiny or larger creatures within 60 feet of you that aren't constructs or undead. You also can't be {@condition charmed} or {@condition frightened}.",
+						"While you hold the weapon. you are aware of the presence of Tiny or larger creatures within 60 feet of you that aren't constructs or undead. You also can't be {@condition charmed} or {@condition 恐懼}.",
 						"Blackrazor can cast the {@spell haste} spell on you once per day. It decides when to cast the spell and maintains concentration on it so that you don't have to."
 					]
 				},
@@ -4102,10 +4102,10 @@
 			]
 		},
 		{
-			"name": "Dagger of Venom",
+			"name": "淬毒匕首", "ENG_name": "Dagger of Venom",
 			"type": "M",
 			"weaponCategory": "Simple",
-			"baseItem": "dagger|phb",
+			"baseItem": "匕首|phb",
 			"weight": "1",
 			"dmg1": "{@dice 1d4}",
 			"dmgType": "P",
@@ -4120,8 +4120,8 @@
 			"source": "DMG",
 			"page": 161,
 			"entries": [
-				"You gain a +1 bonus to attack and damage rolls made with this magic weapon.",
-				"You can use an action to cause thick, black poison to coat the blade. The poison remains for 1 minute or until an attack using this weapon hits a creature. That creature must succeed on a DC 15 Constitution saving throw or take {@dice 2d10} poison damage and become {@condition poisoned} for 1 minute. The dagger can't be used this way again until the next dawn."
+				"你在使用這把魔法武器進行的攻擊檢定和傷害骰上具有+1加值。",
+				"你可以使用一個動作以使厚重、漆黑的毒液裹住刀刃。這個毒液將持續長達1分鐘，或直到一次使用此武器的攻擊命中一個生物。該生物必須成功通過一次DC 15的體質豁免，否則受到{@dice 2d10}毒素傷害，並陷入{@condition 中毒}狀台長達1分鐘。這把匕首直到次日清晨之前都不能再次被以此方式使用。"
 			],
 			"lootTables": [
 				"Magic Item Table G"
@@ -4165,7 +4165,7 @@
 			"name": "Dawnbringer",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "longsword|phb",
+			"baseItem": "長劍|phb",
 			"weight": "3",
 			"dmg1": "{@dice 1d8}",
 			"dmg2": "{@dice 1d10}",
@@ -4197,7 +4197,7 @@
 					"type": "entries",
 					"entries": [
 						"Forged by ancient sun worshippers, Dawnbringer is meant to bring light into darkness and to fight creatures of darkness. It is kind and compassionate to those in need, but fierce and destructive to its enemies.",
-						"Long years lost in darkness have made Dawnbringer {@condition frightened} of both the dark and abandonment. It prefers that its blade always be present and shedding light in areas of darkness, and it strongly resists being parted from its wielder for any length of time."
+						"Long years lost in darkness have made Dawnbringer {@condition 恐懼} of both the dark and abandonment. It prefers that its blade always be present and shedding light in areas of darkness, and it strongly resists being parted from its wielder for any length of time."
 					]
 				}
 			],
@@ -5293,7 +5293,7 @@
 			]
 		},
 		{
-			"name": "Driftglobe",
+			"name": "漂浮光球", "ENG_name": "Driftglobe",
 			"wondrous": true,
 			"weight": "1",
 			"tier": "Minor",
@@ -5301,15 +5301,15 @@
 			"source": "DMG",
 			"page": 166,
 			"entries": [
-				"This small sphere of thick glass weighs 1 pound. If you are within 60 feet of it, you can speak its command word and cause it to emanate the {@spell light} or {@spell daylight} spell. Once used, the {@spell daylight} effect can't be used again until the next dawn.",
-				"You can speak another command word as an action to make the illuminated globe rise into the air and float no more than 5 feet off the ground. The globe hovers in this way until you or another creature grasps it. If you move more than 60 feet from the hovering globe, it follows you until it is within 60 feet of you. It takes the shortest route to do so. If prevented from moving, the globe sinks gently to the ground and becomes inactive, and its light winks out."
+				"這個厚玻璃製成的小型球體的重量為1磅。若你距離它60呎內，你可以說出它的命令語並使它發揮出{@spell 光亮術}或{@spell 晝明術}法術。一旦被使用，{@spell 晝明術}的效果直到次日清晨之前都不能再被使用。",
+				"你能夠以一個動作說出另一個命令語，使這個發光球體飛到空中，並漂浮在距離地面不超過5呎的位置。這個球體將以這個方式浮空直到你或另一個生物將它抓住。若你移動離開浮空球體超過60呎的距離，它將跟隨你移動直到它處於距離你60呎內的位置。它將沿著最短路徑以跟隨你移動。若它的移動遭到妨礙，則它將緩緩落到地面並停止活動，且它的光芒將熄滅。"
 			],
 			"attachedSpells": [
 				"light",
 				"daylight"
 			],
 			"lootTables": [
-				"Magic Item Table A",
+				"魔法物品表A",
 				"Magic Item Table B"
 			]
 		},
@@ -5345,7 +5345,7 @@
 			"reqAttune": true,
 			"entries": [
 				"A steel trident decorated with bronze barnacles along the upper part of its haft, Drown has a sea-green jewel just below the tines and a silver shell at the end of its haft. It floats on the surface if dropped onto water, and it floats in place if it is released underwater. The trident is always cool to the touch, and it is immune to any damage due to exposure to water. Drown contains a spark of {@creature Olhydra|pota}, the Princess of Evil Water.",
-				"You gain a +1 bonus to attack and damage rolls made with this magic weapon. When you hit with it, the targets take an extra {@dice 1d8} cold damage.",
+				"你在使用這把魔法武器進行的攻擊檢定和傷害骰上具有+1加值。 When you hit with it, the targets take an extra {@dice 1d8} cold damage.",
 				{
 					"name": "Water Mastery",
 					"type": "entries",
@@ -5489,10 +5489,10 @@
 			]
 		},
 		{
-			"name": "Dwarven Thrower",
+			"name": "矮人飛錘", "ENG_name": "Dwarven Thrower",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "warhammer|phb",
+			"baseItem": "戰錘|phb",
 			"weight": "2",
 			"dmg1": "{@dice 1d8}",
 			"dmg2": "{@dice 1d10}",
@@ -5506,9 +5506,9 @@
 			"rarity": "Very Rare",
 			"source": "DMG",
 			"page": 167,
-			"reqAttune": "by a Dwarf",
+			"reqAttune": "由矮人",
 			"entries": [
-				"You gain a +3 bonus to attack and damage rolls made with this magic weapon. It has the thrown property with a normal range of 20 feet and a long range of 60 feet. When you hit with a ranged attack using this weapon, it deals an extra {@dice 1d8} damage or, if the target is a giant, {@dice 2d8} damage. Immediately after the attack, the weapon flies back to your hand."
+				"你在使用這把魔法武器進行的攻擊檢定和傷害骰上具有+3加值。它具有投擲屬性，正常射程為20呎，且最大射程為60呎。當你使用這把武器並以一次遠程攻擊命中時，它將造成額外的{@dice 1d8}傷害，或者若目標為一個巨人，則造成額外的{@dice 2d8}傷害。緊接在該攻擊之後，這把武器將會飛回你的手中。"
 			],
 			"lootTables": [
 				"Magic Item Table H"
@@ -6142,7 +6142,7 @@
 					"items": [
 						"The goat of traveling can become a Large goat with the same statistics as a {@creature riding horse}. It has 24 charges, and each hour or portion thereof it spends in beast form costs 1 charge. While it has charges, you can use it as often as you wish. When it runs out of charges, it reverts to a figurine and can't be used again until 7 days have passed, when it regains all its charges.",
 						"The goat of travail becomes a {@creature giant goat} for up to 3 hours. Once it has been used, it can't be used again until 30 days have passed.",
-						"The goat of terror becomes a {@creature giant goat} for up to 3 hours. The goat can't attack, but you can remove its horns and use them as weapons. One horn becomes a +1 lance, and the other becomes a +2 longsword. Removing a horn requires an action, and the weapons disappear and the horns return when the goat reverts to figurine form. In addition, the goat radiates a 30-foot-radius aura of terror while you are riding it. Any creature hostile to you that starts its turn in the aura must succeed on a DC 15 Wisdom saving throw or be {@condition frightened} of the goat for 1 minute, or until the goat reverts to figurine form. The {@condition frightened} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. Once it successfully saves against the effect, a creature is immune to the goat's aura for the next 24 hours. Once the figurine has been used, it can't be used again until 15 days have passed."
+						"The goat of terror becomes a {@creature giant goat} for up to 3 hours. The goat can't attack, but you can remove its horns and use them as weapons. One horn becomes a +1 lance, and the other becomes a +2 longsword. Removing a horn requires an action, and the weapons disappear and the horns return when the goat reverts to figurine form. In addition, the goat radiates a 30-foot-radius aura of terror while you are riding it. Any creature hostile to you that starts its turn in the aura must succeed on a DC 15 Wisdom saving throw or be {@condition 恐懼} of the goat for 1 minute, or until the goat reverts to figurine form. The {@condition 恐懼} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. Once it successfully saves against the effect, a creature is immune to the goat's aura for the next 24 hours. Once the figurine has been used, it can't be used again until 15 days have passed."
 					]
 				}
 			],
@@ -7107,7 +7107,7 @@
 			"reqAttune": true,
 			"entries": [
 				"In the Year of the Icy Axe (123 DR), the {@creature frost giant} Lord Gurt fell to Uthgar Gardolfsson\u2014leader of the folk who would become the Uthgardt barbarians\u2014in a battle that marked the ascendance of humankind over the giants in the Dessarin Valley. Gurt's greataxe was buried in Morgur's Mound until it was unearthed and brought back to Waterdeep. After laying in the city's vaults for decades, the axe was given to Harshnag, a {@creature frost giant} adventurer, in recognition of his service to Waterdeep. Uthgardt barbarians recognize the weapon on sight and attack any giant that wields it.",
-				"You gain a +1 bonus to attack and damage rolls made with this magic weapon. It is sized for a giant, weighs 325 pounds, and deals {@dice 3d12} slashing damage on a hit, plus an extra {@dice 2d12} slashing damage if the target is human.",
+				"你在使用這把魔法武器進行的攻擊檢定和傷害骰上具有+1加值。 It is sized for a giant, weighs 325 pounds, and deals {@dice 3d12} slashing damage on a hit, plus an extra {@dice 2d12} slashing damage if the target is human.",
 				"The axe sheds light as a torch when the temperature around it drops below 0 degrees Fahrenheit. The light can't be shut off in these conditions.",
 				"As an action, you can cast a version of the {@spell heat metal} spell (save DC 13) that deals cold damage instead of fire damage. Once this power is used, it can't be used again until the next dawn."
 			],
@@ -7155,7 +7155,7 @@
 				"str": 4
 			},
 			"entries": [
-				"You gain a +1 bonus to attack and damage rolls made with this magic weapon.",
+				"你在使用這把魔法武器進行的攻擊檢定和傷害骰上具有+1加值。",
 				{
 					"type": "entries",
 					"name": "Giant's Bane (Requires Attunement)",
@@ -7617,7 +7617,7 @@
 			]
 		},
 		{
-			"name": "Heward's Handy Haversack",
+			"name": "霍華德的便利袋", "ENG_name": "Heward's Handy Haversack",
 			"wondrous": true,
 			"weight": "5",
 			"tier": "Minor",
@@ -7625,10 +7625,10 @@
 			"source": "DMG",
 			"page": 174,
 			"entries": [
-				"This backpack has a central pouch and two side pouches, each of which is an extradimensional space. Each side pouch can hold up to 20 pounds of material, not exceeding a volume of 2 cubic feet. The large central pouch can hold up to 8 cubic feet or 80 pounds of material. The backpack always weighs 5 pounds, regardless of its contents.",
-				"Placing an object in the haversack follows the normal rules for interacting with objects. Retrieving an item from the haversack requires you to use an action. When you reach into the haversack for a specific item, the item is always magically on top.",
-				"The haversack has a few limitations. If it is overloaded, or if a sharp object pierces it or tears it, the haversack ruptures and is destroyed. If the haversack is destroyed, its contents are lost forever, although an artifact always turns up again somewhere. If the haversack is turned inside out, its contents spill forth, unharmed, and the haversack must be put right before it can be used again. If a breathing creature is placed within the haversack, the creature can survive for up to 10 minutes, after which time it begins to suffocate.",
-				"Placing the haversack inside an extradimensional space created by a {@item bag of holding}, {@item portable hole}, or similar item instantly destroys both items and opens a gate to the Astral Plane. The gate originates where the one item was placed inside the other. Any creature within 10-feet of the gate is sucked through it and deposited in a random location on the Astral Plane. The gate then closes. The gate is one-way only and can't be reopened."
+				"這個背包有著一個中央囊袋和二個側袋，各自連接著一個異次元空間。每個側袋各自可以容納最多20磅重的物質，且體積不能超過2立方呎。中間的大囊袋則可以容納最多8立方呎，或最多80磅重的物質。無論它裝了什麼，這個背包的重量永遠為5磅。",
+				"將一個物體放入便利袋時使用與物件互動的規則。從便利袋中取出一件物品則需要你使用一個動作。當你伸入便利袋以找尋某個特定物品時，該物品將永遠神奇的位於最上層。",
+				"這個便利袋擁有幾個限制。若它超載、或若一個尖銳的物體將它戳破或把它撕裂，則這個便利袋將因此破裂並被摧毀。若便利袋被摧毀，則它裝載的東西將永遠遺失，儘管遺失的神器永遠會再次出現於某處。若這個便利袋被裡外翻轉，則它裝載的東西將無傷地掉落而出，且這個便利袋必須被恢復原狀才能夠被再次使用。若一個需要呼吸的生物被放入便利袋內，該生物可以存活最多10分鐘，在這之後它將開始窒息。",
+				"將便利袋放入由{@item 次元袋}、{@item 便攜式次元洞}、或類似物品所創造的異次元空間中，將會立刻摧毀這兩件物品，並打開一道通往星界位面的傳送門。這道傳送門將產生載這兩件物品被放入彼此的位置。任何距離這道傳送門10呎內的生物將被吸進門內，並被送往星界位面中的一處隨機地點。這道傳送門接著將會關閉。這道傳送門僅限單向傳送，且無法再次被開啟。"
 			],
 			"lootTables": [
 				"Magic Item Table C"
@@ -8899,10 +8899,10 @@
 			]
 		},
 		{
-			"name": "Javelin of Lightning",
+			"name": "閃電標槍", "ENG_name": "Javelin of Lightning",
 			"type": "M",
 			"weaponCategory": "Simple",
-			"baseItem": "javelin|phb",
+			"baseItem": "標槍|phb",
 			"weight": "2",
 			"dmg1": "{@dice 1d6}",
 			"dmgType": "P",
@@ -8915,8 +8915,8 @@
 			"source": "DMG",
 			"page": 178,
 			"entries": [
-				"This javelin is a magic weapon. When you hurl it and speak its command word, it transforms into a bolt of lightning, forming a line 5 feet wide that extends out from you to a target within 120 feet. Each creature in the line excluding you and the target must make a DC 13 Dexterity saving throw, taking {@dice 4d6} lightning damage on a failed save, and half as much damage on a successful one. The lightning bolt turns back into a javelin when it reaches the target. Make a ranged weapon attack against the target. On a hit, the target takes damage from the javelin plus {@dice 4d6} lightning damage.",
-				"The javelin's property can't be used again until the next dawn. In the meantime, the javelin can still be used as a magic weapon."
+				"這個標槍是一把魔法武器。當你將它投出並說出它的命令語，它將轉變成一道閃電，並覆蓋一塊5呎寬，從你向距離120呎內一個目標延伸的直線範圍。除了你和目標以外，每個在直線範圍內的生物都必須進行一次DC 13的敏捷豁免，豁免失敗將受到{@dice 4d6}閃電傷害，成功則只受到一半的傷害。這道閃電束將在到達目標時變回標槍。對該目標進行一次遠程武器攻擊。若命中，該目標將受到來自標槍的傷害加上{@dice 4d6}閃電傷害。",
+				"這把標槍的特性直到次日清晨之前都不能再被使用，但這把標槍仍可已被做為魔法武器使用。"
 			],
 			"lootTables": [
 				"Magic Item Table F"
@@ -9253,7 +9253,7 @@
 			"source": "LMoP",
 			"page": 48,
 			"weaponCategory": "Simple",
-			"baseItem": "mace|phb",
+			"baseItem": "硬頭錘|phb",
 			"entries": [
 				"This +1 mace was made for a cleric of Lathander, the god of dawn. The head of the mace is shaped like a sunburst and made of solid brass. Named Lightbringer, this weapon glows as bright as a torch when its wielder commands. While glowing, the mace deals an extra {@dice 1d6} radiant damage to undead creatures."
 			]
@@ -9415,10 +9415,10 @@
 			]
 		},
 		{
-			"name": "Mace of Disruption",
+			"name": "瓦解之錘", "ENG_name": "Mace of Disruption",
 			"type": "M",
 			"weaponCategory": "Simple",
-			"baseItem": "mace|phb",
+			"baseItem": "硬頭錘|phb",
 			"weight": "4",
 			"dmg1": "{@dice 1d6}",
 			"dmgType": "B",
@@ -9428,18 +9428,18 @@
 			"page": 179,
 			"reqAttune": true,
 			"entries": [
-				"When you hit a fiend or an undead with this magic weapon, that creature takes an extra {@dice 2d6} radiant damage. If the target has 25 hit points or fewer after taking this damage, it must succeed on a DC 15 Wisdom saving throw or be destroyed. On a successful save, the creature becomes {@condition frightened} of you until the end of your next turn.",
-				"While you hold this weapon, it sheds bright light in a 20-foot radius and dim light for an additional 20 feet."
+				"當你以這把魔法武器命中一個邪魔或不死生物時，該生物將受到額外的{@dice 2d6}光耀傷害。若該目標在承受該傷害之後剩下25點或更低的生命值，則它必須成功通過一次DC 15的睿知豁免，否則將被摧毀。若豁免成功，該生物將因你而陷入{@condition 恐懼}狀態，持續直到你的下個回合結束。",
+				"當你持握這把武器時，它將散發出20呎半徑的明亮光照和再延伸20呎的微光光照。"
 			],
 			"lootTables": [
 				"Magic Item Table G"
 			]
 		},
 		{
-			"name": "Mace of Smiting",
+			"name": "打擊之錘", "ENG_name": "Mace of Smiting",
 			"type": "M",
 			"weaponCategory": "Simple",
-			"baseItem": "mace|phb",
+			"baseItem": "硬頭錘|phb",
 			"weight": "4",
 			"dmg1": "{@dice 1d6}",
 			"dmgType": "B",
@@ -9448,18 +9448,18 @@
 			"source": "DMG",
 			"page": 179,
 			"entries": [
-				"You gain a +1 bonus to attack and damage rolls made with this magic weapon. The bonus increases to +3 when you use the mace to attack a construct.",
-				"When you roll a 20 on an attack roll made with this weapon, the target takes an extra 7 bludgeoning damage, or an extra 14 bludgeoning damage if it's a construct. If a construct has 25 hit points or fewer after taking this damage, it is destroyed."
+				"你在使用這把魔法武器進行的攻擊檢定和傷害骰上具有+1加值。當你使用這把硬頭錘攻擊一個構裝體時，這個加值將增加至+3。",
+				"當你在以這把武器進行的攻擊檢定中骰出了20，目標將受到額外的7點鈍擊傷害，或若目標為構裝體，則為額外的14點鈍擊傷害。若一個構裝體在承受該傷害之後剩下25點或更低的生命值，則它將被摧毀。"
 			],
 			"lootTables": [
 				"Magic Item Table G"
 			]
 		},
 		{
-			"name": "Mace of Terror",
+			"name": "恐懼之錘", "ENG_name": "Mace of Terror",
 			"type": "M",
 			"weaponCategory": "Simple",
-			"baseItem": "mace|phb",
+			"baseItem": "硬頭錘|phb",
 			"weight": "4",
 			"dmg1": "{@dice 1d6}",
 			"dmgType": "B",
@@ -9469,8 +9469,8 @@
 			"page": 180,
 			"reqAttune": true,
 			"entries": [
-				"This magic weapon has 3 charges. While holding it, you can use an action and expend 1 charge to release a wave of terror. Each creature of your choice in a 30-foot radius extending from you must succeed on a DC 15 Wisdom saving throw or become {@condition frightened} of you for 1 minute. While it is {@condition frightened} in this way, a creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action it can use only the {@action Dash} action or try to escape from an effect that prevents it from moving. If it has nowhere it can move, the creature can use the {@action Dodge} action. At the end of each of its turns, a creature can repeat the saving throw, ending the effect on itself on a success.",
-				"The mace regains {@dice 1d3} expended charges daily at dawn."
+				"這把魔法武器含有3發充能。當持握它時，你可以使用一個動作並消耗1發充能以釋放出一股恐懼波動。每個距離你30呎內且你所選擇的生物必須成功通過一次DC 15的睿知豁免，否則因你而陷入{@condition 恐懼}長達1分鐘。當它因這個方式而陷入{@condition 恐懼}時，該生物必須花費它的動作以盡可能的移動遠離你，且無法自願移動到距離你30呎內的空間。它也無法採取反應。它唯一能採取的動作只有{@action 疾走}動作，或是嘗試從防止它移動的效果中逃脫。若它無處可逃，則該生物可以使用{@action 閃避}動作。在它的每個回合結束時，該生物可以重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。",
+				"這把硬頭錘會在每日清晨恢復{@dice 1d3}發已消耗的充能。"
 			],
 			"charges": 3,
 			"lootTables": [
@@ -9958,7 +9958,7 @@
 			"name": "Moonblade",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "longsword|phb",
+			"baseItem": "長劍|phb",
 			"weight": "3",
 			"dmg1": "{@dice 1d8}",
 			"dmg2": "{@dice 1d10}",
@@ -10331,10 +10331,10 @@
 			]
 		},
 		{
-			"name": "Oathbow",
+			"name": "誓仇弓", "ENG_name": "Oathbow",
 			"type": "R",
 			"weaponCategory": "Martial",
-			"baseItem": "longbow|phb",
+			"baseItem": "長弓|phb",
 			"weight": "2",
 			"dmg1": "{@dice 1d8}",
 			"dmgType": "P",
@@ -10350,9 +10350,9 @@
 			"page": 183,
 			"reqAttune": true,
 			"entries": [
-				"When you nock an arrow on this bow, it whispers in Elvish, \"Swift defeat to my enemies.\" When you use this weapon to make a ranged attack, you can, as a command phrase, say, \"Swift death to you who have wronged me.\" The target of your attack becomes your sworn enemy until it dies or until dawn seven days later. You can have only one such sworn enemy at a time. When your sworn enemy dies, you can choose a new one after the next dawn.",
-				"When you make a ranged attack roll with this weapon against your sworn enemy, you have advantage on the roll. In addition, your target gains no benefit from cover, other than total cover, and you suffer no disadvantage due to long range. If the attack hits, your sworn enemy takes an extra {@dice 3d6} piercing damage.",
-				"While your sworn enemy lives, you have disadvantage on attack rolls with all other weapons."
+				"當你將箭搭在這把弓上時，它將以精靈語悄聲低語：「速殲我敵。」當你使用這把武器以進行一次遠程攻擊，你可以做為命令語誦唸：「速亡負我之人。」直到它死亡、或直到七日後的清晨之前，你所攻擊的目標將成為你的仇敵。你同時只能擁有一個這樣的仇敵。當你的仇敵死亡，你可以在次日清晨之後再選擇一個新的仇敵。",
+				"當你使用這把武器對你的仇敵進行一次遠程攻擊檢定，你在該檢定中具有優勢。此外，你的目標將無法得益於全掩護以外的掩護，且你不會因為長射程而承受劣勢。若該攻擊命中，你的仇敵將受到額外的{@dice 3d6}穿刺傷害。",
+				"只要你的仇敵仍然活著，你將在使用所有其他武器的攻擊檢定中具有劣勢。"
 			],
 			"lootTables": [
 				"Magic Item Table H"
@@ -10704,7 +10704,7 @@
 						"You gain a +2 bonus to attack and damage rolls made with it.",
 						"When you roll a 20 on an attack roll with this weapon against an {@creature orc}, that {@creature orc} must succeed on a DC 17 Constitution saving throw or drop to 0 hit points.",
 						"You can't be surprised by {@creature orc|mm|orcs} while you're not {@condition incapacitated}. You are also aware when {@creature orc|mm|orcs} are within 120 feet of you and aren't behind total cover, although you don't know their location.",
-						"You and any of your friends within 30 feet of you can't be {@condition frightened} while you're not {@condition incapacitated}."
+						"You and any of your friends within 30 feet of you can't be {@condition 恐懼} while you're not {@condition incapacitated}."
 					]
 				},
 				{
@@ -11096,7 +11096,7 @@
 			"source": "DMG",
 			"page": 185,
 			"entries": [
-				"You must be proficient with wind instruments to use these pipes. They have 3 charges. You can use an action to play them and expend 1 charge to create an eerie, spellbinding tune. Each creature within 30 feet of you that hears you play must succeed on a DC 15 Wisdom saving throw or become {@condition frightened} of you for 1 minute. If you wish, all creatures in the area that aren't hostile toward you automatically succeed on the saving throw. A creature that fails the saving throw can repeat it at the end of each of its turns, ending the effect on itself on a success. A creature that succeeds on its saving throw is immune to the effect of these pipes for 24 hours. The pipes regain {@dice 1d3} expended charges daily at dawn."
+				"You must be proficient with wind instruments to use these pipes. They have 3 charges. You can use an action to play them and expend 1 charge to create an eerie, spellbinding tune. Each creature within 30 feet of you that hears you play must succeed on a DC 15 Wisdom saving throw or become {@condition 恐懼} of you for 1 minute. If you wish, all creatures in the area that aren't hostile toward you automatically succeed on the saving throw. A creature that fails the saving throw can repeat it at the end of each of its turns, ending the effect on itself on a success. A creature that succeeds on its saving throw is immune to the effect of these pipes for 24 hours. The pipes regain {@dice 1d3} expended charges daily at dawn."
 			],
 			"charges": 3,
 			"lootTables": [
@@ -11362,18 +11362,18 @@
 			"page": 157
 		},
 		{
-			"name": "Portable Hole",
+			"name": "便攜式次元洞", "ENG_name": "Portable Hole",
 			"wondrous": true,
 			"tier": "Minor",
 			"rarity": "Rare",
 			"source": "DMG",
 			"page": 185,
 			"entries": [
-				"This fine black cloth, soft as silk, is folded up to the dimensions of a handkerchief. It unfolds into a circular sheet 6 feet in diameter.",
-				"You can use an action to unfold a portable hole and place it on or against a solid surface, whereupon the portable hole creates an extradimensional hole 10 feet deep. The cylindrical space within the hole exists on a different plane, so it can't be used to create open passages. Any creature inside an open portable hole can exit the hole by climbing out of it.",
-				"You can use an action to close a portable hole by taking hold of the edges of the cloth and folding it up. Folding the cloth closes the hole, and any creatures or objects within remain in the extradimensional space. No matter what's in it, the hole weighs next to nothing.",
-				"If the hole is folded up, a creature within the hole's extradimensional space can use an action to make a DC 10 Strength check. On a successful check, the creature forces its way out and appears within 5 feet of the portable hole or the creature carrying it. A breathing creature within a closed portable hole can survive for up to 10 minutes, after which time it begins to suffocate.",
-				"Placing a portable hole inside an extradimensional space created by a {@item bag of holding}, {@item Heward's handy haversack}, or similar item instantly destroys both items and opens a gate to the Astral Plane. The gate originates where the one item was placed inside the other. Any creature within 10 feet of the gate is sucked through it and deposited in a random location on the Astral Plane. The gate then closes. The gate is one-way only and can't be reopened."
+				"這塊絲綢般滑順的上好黑色布料在展開時呈現一個6呎直徑的圓形，且最小可以被摺疊成一張手帕的尺寸。",
+				"你可以使用一個動作將便攜式次元洞展開，並將它放置或靠在一個固態表面上，這個便攜式次元洞將隨即創造出一個10呎深的異次元孔洞。這個孔洞內的圓柱狀空間存在於一個不同的位面，因此它無法被用以創造一個開放式的通道。在便攜式次元洞開啟時，任何在其內部的生物都可以從中攀爬而出。",
+				"你可以使用一個動作，藉由抓住布料的邊緣並將之摺疊以關閉便攜式次元洞。將這塊布料折起將會關閉次元洞，且任何在內部的生物和物體仍會留存在異次元空間。無論裝了什麽，次元洞的重量都可以忽略不計。",
+				"若次元洞被折起，次元洞中的生物可以使用一個動作以進行一次DC 10的力量檢定。如果檢定成功，則該生物將強行從中鑽出，並出現在距離次元洞或攜帶它的人5呎內的位置。在關閉的便攜式次元洞中，一名需要呼吸的生物可以存活最多10分鐘，在這之後它將開始窒息。",
+				"將便攜式次元洞放入由{@item 次元袋}、{@item 霍華德的便利袋}、或類似物品所創造的異次元空間中，將會立刻摧毀這兩件物品，並打開一道通往星界位面的傳送門。這道傳送門將產生載這兩件物品被放入彼此的位置。任何距離這道傳送門10呎內的生物將被吸進門內，並被送往星界位面中的一處隨機地點。這道傳送門接著將會關閉。這道傳送門僅限單向傳送，且無法再次被開啟。"
 			],
 			"lootTables": [
 				"Magic Item Table D"
@@ -11461,7 +11461,7 @@
 				"當你飲用這瓶藥水時，你將獲得等同於你移動速度的攀爬速度，持續1小時。在這段期間，你在進行用於攀爬的力量（{@skill 運動}）檢定中具有優勢。這瓶藥水分離成類似於岩層的褐色、銀色、灰色三層。搖晃這瓶藥水並不會讓這三種顏色混合。"
 			],
 			"lootTables": [
-				"Magic Item Table A"
+				"魔法物品表A"
 			]
 		},
 		{
@@ -11647,7 +11647,7 @@
 				"你在飲用此藥水時回復{@dice 4d4+4}點生命值。這瓶藥水的紅色液體會在被搖動時散發微光。"
 			],
 			"lootTables": [
-				"Magic Item Table A",
+				"魔法物品表A",
 				"Magic Item Table B"
 			]
 		},
@@ -11695,7 +11695,7 @@
 			],
 			"value": "50 gp",
 			"lootTables": [
-				"Magic Item Table A"
+				"魔法物品表A"
 			]
 		},
 		{
@@ -13127,7 +13127,7 @@
 							"items": [
 								"You can expend 1 charge as an action and use the ring to lower the temperature in a 120-foot-radius sphere centered on a point you can see within 300 feet of you. The temperature in that area drops 20 degrees per minute, to a minimum of -30 degrees Fahrenheit. Frost and ice begin to form on surfaces once the temperature drops below 32 degrees. This effect is permanent unless you use the ring to end it as an action, at which point the temperature in the area returns to normal at a rate of 10 degrees per minute.",
 								"You can cast one of the following spells from the ring (spell save DC 17) by expending the necessary number of charges: {@spell Bigby's hand} (2 charges; the hand is made of ice, is immune to cold damage, and deals bludgeoning damage instead of force damage as a clenched fist), {@spell cone of cold} (2 charges), flesh to ice (3 charges; as {@spell flesh to stone} except that the target turns to solid ice with the density and durability of stone), {@spell ice storm} (2 charges), {@spell Otiluke's freezing sphere} (3 charges), {@spell sleet storm} (1 charge), {@spell spike growth} (1 charge; the spikes are made of ice), or {@spell wall of ice} (2 charges).",
-								"You can expend the necessary number of charges as an action and use the ring to create either an inanimate ice object (2 charges) or an animated ice creature (4 charges). The ice object can't have any moving parts, must be able to fit inside a 10-foot cube, and has the density and durability of metal or stone (your choice). The ice creature must be modeled after a beast with a challenge rating of 2 or less. The ice creature has the same statistics as the beast it models, with the following changes: the creature is a construct with vulnerability to fire damage, immunity to cold and poison damage, and immunity to the following conditions: {@condition charmed}, {@condition exhaustion}, {@condition frightened}, {@condition paralyzed}, {@condition petrified}, and {@condition poisoned}. The ice creature obeys only its creator's commands. The ice object or creature appears in an unoccupied space within 60 feet of you. It melts into a pool of normal water after 24 hours or when it drops to 0 hit points. In extreme heat, it loses 5 ({@dice 1d10}) hit points per minute as it melts. Use the guidelines in chapter 8 of the Dungeon Master's Guide to determine the hit points of an inanimate object if they become necessary."
+								"You can expend the necessary number of charges as an action and use the ring to create either an inanimate ice object (2 charges) or an animated ice creature (4 charges). The ice object can't have any moving parts, must be able to fit inside a 10-foot cube, and has the density and durability of metal or stone (your choice). The ice creature must be modeled after a beast with a challenge rating of 2 or less. The ice creature has the same statistics as the beast it models, with the following changes: the creature is a construct with vulnerability to fire damage, immunity to cold and poison damage, and immunity to the following conditions: {@condition charmed}, {@condition exhaustion}, {@condition 恐懼}, {@condition paralyzed}, {@condition petrified}, and {@condition poisoned}. The ice creature obeys only its creator's commands. The ice object or creature appears in an unoccupied space within 60 feet of you. It melts into a pool of normal water after 24 hours or when it drops to 0 hit points. In extreme heat, it loses 5 ({@dice 1d10}) hit points per minute as it melts. Use the guidelines in chapter 8 of the Dungeon Master's Guide to determine the hit points of an inanimate object if they become necessary."
 							]
 						}
 					]
@@ -13533,7 +13533,7 @@
 					"name": "Terrify",
 					"type": "entries",
 					"entries": [
-						"While holding the rod, you can use an action to force each creature you can see within 30 feet of you to make a DC 17 Wisdom saving throw. On a failure, a target is {@condition frightened} of you for 1 minute. A {@condition frightened} target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. This property can't be used again until the next dawn."
+						"While holding the rod, you can use an action to force each creature you can see within 30 feet of you to make a DC 17 Wisdom saving throw. On a failure, a target is {@condition 恐懼} of you for 1 minute. A {@condition 恐懼} target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. This property can't be used again until the next dawn."
 					]
 				}
 			],
@@ -13883,7 +13883,7 @@
 				"Markovia had long considered Strahd a mad tyrant, but only after his transformation into a {@creature vampire} did she dare to challenge him. As she rallied her followers and prepared to march on Castle Ravenloft, Strahd sent a group of {@creature vampire spawn} to her abbey. They confronted Markovia and were destroyed to a one.",
 				"Suffused with confidence born of a righteous victory, Markovia advanced on Castle Ravenloft. A great battle raged from the catacombs to the parapets. In the end, Markovia never returned to Barovia, and Strahd long afterward walked with a limp and a grimace of pain. It is said that he trapped Markovia in a crypt beneath his castle, and her remains linger there yet.",
 				"The essence of Markovia's saintliness passed partly into her bones as the rest of her body decomposed. Her remaining thighbone is imbued with power that inflicts grievous injury on the undead.",
-				"{@item Mace of Disruption}. When you hit a fiend or an undead with this magic weapon, that creature takes an extra {@dice 2d6} radiant damage. If the target has 25 hit points or fewer after taking this damage, it must succeed on a DC 15 Wisdom saving throw or be destroyed. On a successful save, the creature becomes {@condition frightened} of you until the end of your next turn.",
+				"{@item Mace of Disruption}. When you hit a fiend or an undead with this magic weapon, that creature takes an extra {@dice 2d6} radiant damage. If the target has 25 hit points or fewer after taking this damage, it must succeed on a DC 15 Wisdom saving throw or be destroyed. On a successful save, the creature becomes {@condition 恐懼} of you until the end of your next turn.",
 				"While you hold this weapon, it sheds bright light in a 20-foot radius and dim light for an additional 20 feet."
 			]
 		},
@@ -13955,10 +13955,10 @@
 			]
 		},
 		{
-			"name": "Scimitar of Speed",
+			"name": "急速彎刀", "ENG_name": "Scimitar of Speed",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "scimitar|phb",
+			"baseItem": "彎刀|phb",
 			"weight": "3",
 			"dmg1": "{@dice 1d6}",
 			"dmgType": "S",
@@ -13972,7 +13972,7 @@
 			"page": 199,
 			"reqAttune": true,
 			"entries": [
-				"You gain a +2 bonus to attack and damage rolls made with this magic weapon. In addition, you can make one attack with it as a bonus action on each of your turns."
+				"你在使用這把魔法武器進行的攻擊檢定和傷害骰上具有+2加值。此外，你可以在你的每個回合以一個附贈動作使用它進行一次攻擊。"
 			],
 			"lootTables": [
 				"Magic Item Table H"
@@ -14261,7 +14261,7 @@
 			"name": "Shatterspike",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "longsword|phb",
+			"baseItem": "長劍|phb",
 			"weight": "3",
 			"dmg1": "{@dice 1d8}",
 			"dmg2": "{@dice 1d10}",
@@ -14917,7 +14917,7 @@
 				"一個記載於法術卷軸上的法師法術可以如同其記載於法術書上一樣被抄寫。當一個法術被從卷軸上抄寫時，抄寫者必須成功通過一次DC 11的智力（{@skill 奧秘}）檢定。若檢定成功，則該法術被成功抄寫。無論檢定成功與否，此法術卷軸都將因此毀壞。"
 			],
 			"lootTables": [
-				"Magic Item Table A"
+				"魔法物品表A"
 			]
 		},
 		{
@@ -14935,7 +14935,7 @@
 				"一個記載於法術卷軸上的法師法術可以如同其記載於法術書上一樣被抄寫。當一個法術被從卷軸上抄寫時，抄寫者必須成功通過一次DC 12的智力（{@skill 奧秘}）檢定。若檢定成功，則該法術被成功抄寫。無論檢定成功與否，此法術卷軸都將因此毀壞。"
 			],
 			"lootTables": [
-				"Magic Item Table A",
+				"魔法物品表A",
 				"Magic Item Table B"
 			]
 		},
@@ -15079,7 +15079,7 @@
 				"由此卷軸施放的法術具有13的豁免DC，以及{@hit 5}的攻擊加值。"
 			],
 			"lootTables": [
-				"Magic Item Table A"
+				"魔法物品表A"
 			]
 		},
 		{
@@ -15560,7 +15560,7 @@
 							"type": "list",
 							"items": [
 								"Your proficiency bonus to Intelligence ({@skill Arcana}) and Intelligence ({@skill History}) checks is doubled.",
-								"You can't be {@condition blinded}, {@condition charmed}, {@condition deafened}, {@condition frightened}, {@condition petrified}, or {@condition stunned}.",
+								"You can't be {@condition blinded}, {@condition charmed}, {@condition deafened}, {@condition 恐懼}, {@condition petrified}, or {@condition stunned}.",
 								"Undead with a challenge rating of 2 or lower will neither threaten nor attack you unless you harm them.",
 								"You can wield the staff as a +3 quarterstaff that deals an extra 10 ({@dice 3d6}) necrotic damage on a hit."
 							]
@@ -15979,10 +15979,10 @@
 			]
 		},
 		{
-			"name": "Sun Blade",
+			"name": "陽炎劍", "ENG_name": "Sun Blade",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "longsword|phb",
+			"baseItem": "長劍|phb",
 			"weight": "3",
 			"dmg1": "{@dice 1d8}",
 			"dmg2": "{@dice 1d10}",
@@ -15997,9 +15997,9 @@
 			"page": 205,
 			"reqAttune": true,
 			"entries": [
-				"This item appears to be a longsword hilt. While grasping the hilt, you can use a bonus action to cause a blade of pure radiance to spring into existence, or make the blade disappear. While the blade exists, this magic longsword has the finesse property. If you are proficient with {@item shortsword|phb|shortswords} or {@item longsword|phb|longswords}, you are proficient with the sun blade.",
-				"You gain a +2 bonus to attack and damage rolls made with this weapon, which deals radiant damage instead of slashing damage. When you hit an undead with it, that target takes an extra {@dice 1d8} radiant damage.",
-				"The sword's luminous blade emits bright light in a 15-foot radius and dim light for an additional 15 feet. The light is sunlight. While the blade persists, you can use an action to expand or reduce its radius of bright and dim light by 5 feet each, to a maximum of 30 feet each or a minimum of 10 feet each."
+				"這件物品看起來像是一把長劍的劍柄。當持握這個劍柄時，你可以使用一個附贈動作以讓純淨光輝構成的劍刃從劍柄形成，或使這個劍刃消失。當此劍刃存在時，這把魔法長劍具有靈巧屬性。若你熟練於{@item 短劍|phb}或{@item 長劍|phb}，則你也將熟練於陽炎劍。",
+				"你在使用這把武器進行的攻擊檢定和傷害骰上具有+2加值，且它將造成光耀傷害而非劈砍傷害。當你以它命中一個不死生物，該目標將受到額外的{@dice 1d8}光耀傷害。",
+				"這把劍的光輝劍刃將散發出15呎半徑的明亮光照和再延伸15呎的微光光照。這個光照視為日光。當該劍刃存在時，你可以使用一個動作以將明亮和微光光照的半徑範圍各自延伸或縮短5呎，其各自的上限為30呎，最短為10呎。"
 			],
 			"lootTables": [
 				"Magic Item Table G"
@@ -16009,7 +16009,7 @@
 			"name": "Sunsword",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "longsword|phb",
+			"baseItem": "長劍|phb",
 			"dmg1": "{@dice 1d8}",
 			"dmg2": "{@dice 1d10}",
 			"dmgType": "R",
@@ -16065,7 +16065,7 @@
 			"name": "Sword of Answering (Answerer)",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "longsword|phb",
+			"baseItem": "長劍|phb",
 			"weight": "3",
 			"dmg1": "{@dice 1d8}",
 			"dmg2": "{@dice 1d10}",
@@ -16088,7 +16088,7 @@
 			"name": "Sword of Answering (Back Talker)",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "longsword|phb",
+			"baseItem": "長劍|phb",
 			"weight": "3",
 			"dmg1": "{@dice 1d8}",
 			"dmg2": "{@dice 1d10}",
@@ -16111,7 +16111,7 @@
 			"name": "Sword of Answering (Concluder)",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "longsword|phb",
+			"baseItem": "長劍|phb",
 			"weight": "3",
 			"dmg1": "{@dice 1d8}",
 			"dmg2": "{@dice 1d10}",
@@ -16134,7 +16134,7 @@
 			"name": "Sword of Answering (Last Quip)",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "longsword|phb",
+			"baseItem": "長劍|phb",
 			"weight": "3",
 			"dmg1": "{@dice 1d8}",
 			"dmg2": "{@dice 1d10}",
@@ -16157,7 +16157,7 @@
 			"name": "Sword of Answering (Rebutter)",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "longsword|phb",
+			"baseItem": "長劍|phb",
 			"weight": "3",
 			"dmg1": "{@dice 1d8}",
 			"dmg2": "{@dice 1d10}",
@@ -16180,7 +16180,7 @@
 			"name": "Sword of Answering (Replier)",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "longsword|phb",
+			"baseItem": "長劍|phb",
 			"weight": "3",
 			"dmg1": "{@dice 1d8}",
 			"dmg2": "{@dice 1d10}",
@@ -16203,7 +16203,7 @@
 			"name": "Sword of Answering (Retorter)",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "longsword|phb",
+			"baseItem": "長劍|phb",
 			"weight": "3",
 			"dmg1": "{@dice 1d8}",
 			"dmg2": "{@dice 1d10}",
@@ -16226,7 +16226,7 @@
 			"name": "Sword of Answering (Scather)",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "longsword|phb",
+			"baseItem": "長劍|phb",
 			"weight": "3",
 			"dmg1": "{@dice 1d8}",
 			"dmg2": "{@dice 1d10}",
@@ -16249,7 +16249,7 @@
 			"name": "Sword of Answering (Squelcher)",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "longsword|phb",
+			"baseItem": "長劍|phb",
 			"weight": "3",
 			"dmg1": "{@dice 1d8}",
 			"dmg2": "{@dice 1d10}",
@@ -16272,7 +16272,7 @@
 			"name": "Sword of Kas",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "longsword|phb",
+			"baseItem": "長劍|phb",
 			"weight": "3",
 			"dmg1": "{@dice 1d8}",
 			"dmg2": "{@dice 1d10}",
@@ -16875,10 +16875,10 @@
 			"page": 150
 		},
 		{
-			"name": "Trident of Fish Command",
+			"name": "命令魚類三叉戟", "ENG_name": "Trident of Fish Command",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "trident|phb",
+			"baseItem": "三叉戟|phb",
 			"weight": "4",
 			"dmg1": "{@dice 1d6}",
 			"dmg2": "{@dice 1d8}",
@@ -16894,7 +16894,7 @@
 			"page": 209,
 			"reqAttune": true,
 			"entries": [
-				"This trident is a magic weapon. It has 3 charges. While you carry it, you can use an action and expend 1 charge to cast {@spell dominate beast} (save DC 15) from it on a beast that has an innate swimming speed. The trident regains {@dice 1d3} expended charges daily at dawn."
+				"這個三叉戟是一把魔法武器。它含有3發充能。當你攜帶它時，你可以使用一個動作以消耗1發充能，並從它對一個具有天生游泳速度的野獸施放{@spell 支配野獸}法術（豁免DC 15）。這把三叉戟會在每日清晨恢復{@dice 1d3}發已消耗的充能。"
 			],
 			"charges": 3,
 			"attachedSpells": [
@@ -18239,7 +18239,7 @@
 			]
 		},
 		{
-			"name": "探魔魔杖", "ENG_name": "Wand of Magic Detection",
+			"name": "偵測魔法魔杖", "ENG_name": "Wand of Magic Detection",
 			"type": "WD",
 			"weight": "1",
 			"tier": "Minor",
@@ -18282,7 +18282,7 @@
 			"type": "WD",
 			"wondrous": true,
 			"weaponCategory": "Simple",
-			"baseItem": "mace|phb",
+			"baseItem": "硬頭錘|phb",
 			"weight": "4",
 			"rarity": "Artifact",
 			"source": "DMG",
@@ -18851,7 +18851,7 @@
 			"sentient": true,
 			"entries": [
 				"Waythe is a unique greatsword most recently in the possession of a high-ranking {@creature cloud giant} ambassador.",
-				"You gain a +1 bonus to attack and damage rolls made with this magic weapon. When you hit a creature of the giant type with it, the giant takes an extra {@dice 2d6} slashing damage, and it must succeed on a DC 15 Strength saving throw or fall {@condition prone}.",
+				"你在使用這把魔法武器進行的攻擊檢定和傷害骰上具有+1加值。 When you hit a creature of the giant type with it, the giant takes an extra {@dice 2d6} slashing damage, and it must succeed on a DC 15 Strength saving throw or fall {@condition prone}.",
 				"The sword also functions as a {@item wand of enemy detection}. It regains all of its expended charges at dawn and isn't at risk of crumbling if its last charge is used.",
 				{
 					"name": "Sentience",
@@ -19002,7 +19002,7 @@
 			"name": "Whelm",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "warhammer|phb",
+			"baseItem": "戰錘|phb",
 			"weight": "2",
 			"dmg1": "{@dice 1d8}",
 			"dmg2": "{@dice 1d10}",
@@ -21208,7 +21208,7 @@
 			"page": 180,
 			"reqAttune": true,
 			"entries": [
-				"You gain a +1 bonus to attack and damage rolls made with this magic weapon. Its blade is cruelly serrated, and its hilt resembles a demonic head and wings. Whenever you slay a creature with an attack using the dagger, the creature's soul is imprisoned inside the dagger, and that creature can be restored to life only by a {@spell wish} spell. The dagger can hold a maximum of five souls.",
+				"你在使用這把魔法武器進行的攻擊檢定和傷害骰上具有+1加值。 Its blade is cruelly serrated, and its hilt resembles a demonic head and wings. Whenever you slay a creature with an attack using the dagger, the creature's soul is imprisoned inside the dagger, and that creature can be restored to life only by a {@spell wish} spell. The dagger can hold a maximum of five souls.",
 				"For each soul imprisoned in the dagger, your attacks with it deal an extra {@dice 1d4} necrotic damage on a hit. While the dagger is within 5 feet of you, your dreams are haunted by whispers from the trapped souls.",
 				"The dagger has the following additional properties.",
 				{
@@ -21255,7 +21255,7 @@
 			"name": "Sunforger",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "warhammer|phb",
+			"baseItem": "戰錘|phb",
 			"weight": "2",
 			"dmg1": "{@dice 1d8}",
 			"dmg2": "{@dice 1d10}",
@@ -21279,7 +21279,7 @@
 			"name": "Sword of the Paruns",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "longsword|phb",
+			"baseItem": "長劍|phb",
 			"weight": "3",
 			"dmg1": "{@dice 1d8}",
 			"dmg2": "{@dice 1d10}",
@@ -21292,7 +21292,7 @@
 			"page": 181,
 			"reqAttune": true,
 			"entries": [
-				"You gain a +1 bonus to attack and damage rolls made with this magic weapon. Additionally, once on each of your turns, you can use one of the following properties if you're holding the sword:",
+				"你在使用這把魔法武器進行的攻擊檢定和傷害骰上具有+1加值。 Additionally, once on each of your turns, you can use one of the following properties if you're holding the sword:",
 				{
 					"type": "list",
 					"items": [
@@ -21361,7 +21361,7 @@
 			"name": "Tearulai",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "longsword|phb",
+			"baseItem": "長劍|phb",
 			"weight": "3",
 			"dmg1": "{@dice 1d8}",
 			"dmg2": "{@dice 1d10}",
@@ -22433,7 +22433,7 @@
 			"name": "Sword of Answering",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "longsword|phb",
+			"baseItem": "長劍|phb",
 			"weight": "3",
 			"dmg1": "{@dice 1d8}",
 			"dmg2": "{@dice 1d10}",
@@ -22479,7 +22479,7 @@
 			]
 		},
 		{
-			"name": "Bag of Tricks",
+			"name": "魔術袋", "ENG_name": "Bag of Tricks",
 			"wondrous": true,
 			"weight": "0.5",
 			"tier": "Major",
@@ -22487,25 +22487,25 @@
 			"source": "DMG",
 			"page": 154,
 			"items": [
-				"Bag of Tricks, Gray",
-				"Bag of Tricks, Rust",
-				"Bag of Tricks, Tan"
+				"魔術袋，灰色",
+				"魔術袋，鐵鏽色",
+				"魔術袋，棕褐色"
 			]
 		},
 		{
-			"name": "Belt of Giant Strength",
+			"name": "巨人力量腰帶", "ENG_name": "Belt of Giant Strength",
 			"wondrous": true,
 			"rarity": "Varies",
 			"source": "DMG",
 			"page": 155,
 			"reqAttune": true,
 			"items": [
-				"Belt of Cloud Giant Strength",
-				"Belt of Fire Giant Strength",
-				"Belt of Frost Giant Strength",
-				"Belt of Hill Giant Strength",
-				"Belt of Stone Giant Strength",
-				"Belt of Storm Giant Strength"
+				"雲巨人力量腰帶",
+				"火巨人力量腰帶",
+				"霜巨人力量腰帶",
+				"山丘巨人力量腰帶",
+				"石巨人力量腰帶",
+				"風暴巨人力量腰帶"
 			]
 		},
 		{

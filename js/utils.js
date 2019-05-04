@@ -6656,6 +6656,11 @@ Parser.itemTypeKeyToDisplay["futuristic"] = "未來";
 Parser.itemTypeKeyToDisplay["staff"] 	= "法杖";
 Parser.itemTypeKeyToDisplay["firearm"] 	= "槍械";
 Parser.ItemTypeToDisplay = function(i){
+	let item_match = i.match(/([^()]*) (\((.*)\))?/);
+	if(item_match && item_match[2]){
+		var type = Parser.translateKeyInMapToDisplay(Parser.itemTypeKeyToDisplay, item_match[1]);
+		return type+" "+item_match[2]
+	}
 	return Parser.translateKeyInMapToDisplay(Parser.itemTypeKeyToDisplay, i);
 }
 //Item Tier
