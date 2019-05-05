@@ -55,7 +55,7 @@ const propertyFilter = new Filter({header: "Property", headerName: "物品屬性
 const costFilter = new RangeFilter({header: "Cost", headerName: "價值", min: 0, max: 100, allowGreater: true, suffix: "金幣"});
 const focusFilter = new Filter({header: "Spellcasting Focus", headerName: "施法法器", items: ["Bard", "Cleric", "Druid", "Paladin", "Sorcerer", "Warlock", "Wizard"]});
 const attachedSpellsFilter = new Filter({header: "Attached Spells", headerName: "附加法術", displayFn: (it) => it.split("|")[0].toTitleCase()});
-const lootTableFilter = new Filter({header: "Found On", headerName: "列於魔法物品表", items: ["魔法物品表A", "Magic Item Table B", "Magic Item Table C", "Magic Item Table D", "Magic Item Table E", "Magic Item Table F", "Magic Item Table G", "Magic Item Table H", "Magic Item Table I"]});
+const lootTableFilter = new Filter({header: "Found On", headerName: "列於魔法物品表", items: ["魔法物品表A", "魔法物品表B", "Magic Item Table C", "Magic Item Table D", "Magic Item Table E", "Magic Item Table F", "Magic Item Table G", "Magic Item Table H", "Magic Item Table I"]});
 
 let filterBox;
 async function populateTablesAndFilters (data) {

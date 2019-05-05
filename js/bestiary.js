@@ -813,11 +813,11 @@ function pGetSublistItem (mon, pinId, addCount, data = {}) {
 						<span class="ecgen__name--sub col-5">${mon._displayName || mon.name}</span>
 						<span class="col-1-5 help--hover ecgen__visible" onmouseover="EncounterBuilder.doStatblockMouseOver(event, this, ${pinId}, ${mon._isScaledCr})">Statblock</span>
 						<span class="col-1-5 ecgen__visible help--hover" ${EncounterBuilder.getTokenMouseOver(mon)}>Token</span>
-						${mon._pCr !== "Unknown" ? `
+						${(mon._pCr !== "不明" && mon._pCr !== "Unknown") ? `
 							<span class="col-2 text-align-center">
 								<input value="${mon._pCr}" onchange="encounterBuilder.doCrChange(this, ${pinId}, ${mon._isScaledCr})" class="ecgen__cr_input form-control form-control--minimal input-xs">
 							</span>
-						` : `<span class="col-2 text-align-center">${mon._pCr}</span>`}
+						` : `<span class="col-2 text-align-center">不明</span>`}
 						<span class="col-2 text-align-center count">${addCount || 1}</span>
 					</div>
 				</li>

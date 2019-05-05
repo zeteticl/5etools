@@ -22,10 +22,10 @@
 			]
 		},
 		{
-			"name": "Adventurer's Battleaxe",
+			"name": "冒險者戰斧", "ENG_name": "Adventurer's Battleaxe",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "battleaxe|phb",
+			"baseItem": "戰斧|phb",
 			"rarity": "Unknown (Magic)",
 			"weight": "2",
 			"dmg1": "{@dice 1d8}",
@@ -37,7 +37,7 @@
 			"source": "CoS",
 			"page": 198,
 			"entries": [
-				"The axe's handle is carved with leaves and vines, and it weighs half as much as a normal battleaxe. When the axe hits a plant, whether an ordinary plant or a plant creature, the target takes an extra {@dice 1d8} slashing damage. When a creature of non-good alignment wields the axe, it sprouts thorns whenever its wielder makes an attack with it. These thorns prick the wielder for 1 piercing damage after the attack is made, and this damage is considered magical."
+				"這把斧頭的手柄刻有樹葉和藤蔓的圖案，且它的重量只有正常戰斧的一半。當這把斧頭命中一株植物，無論這株植物是尋常植物或是植物生物，目標都將受到額外的{@dice 1d8}劈砍傷害。當一個非善良陣營的生物持握這把斧頭，則它將在每次持握者使用它進行攻擊時長出荊棘。這些棘刺會在該次攻擊之後扎刺持握者並造成1點穿刺傷害，且這個傷害將被視為魔法傷害。"
 			]
 		},
 		{
@@ -212,7 +212,7 @@
 				}
 			],
 			"lootTables": [
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
@@ -659,7 +659,7 @@
 			"name": "Axe of the Dwarvish Lords",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "battleaxe|phb",
+			"baseItem": "戰斧|phb",
 			"weight": "4",
 			"dmg1": "{@dice 1d8}",
 			"dmg2": "{@dice 1d10}",
@@ -814,7 +814,7 @@
 					"rows": [
 						[
 							"01",
-							"{@dice 5d4} toadstools sprout. If a creature eats a toadstool, roll any die. On an odd roll, the eater must succeed on a DC 15 Constitution saving throw or take {@dice 5d6} poison damage and become {@condition poisoned} for 1 hour. On an even roll, the eater gains {@dice 5d6} temporary hit points for 1 hour."
+							"{@dice 5d4} toadstools sprout. If a creature eats a toadstool, roll any die. On an odd roll, the eater must succeed on a DC 15 Constitution saving throw or take {@dice 5d6} poison damage and become {@condition 中毒} for 1 hour. On an even roll, the eater gains {@dice 5d6} temporary hit points for 1 hour."
 						],
 						[
 							"02-10",
@@ -944,7 +944,7 @@
 			],
 			"lootTables": [
 				"魔法物品表A",
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
@@ -1241,7 +1241,7 @@
 					"name": "Sentinel Standard",
 					"type": "entries",
 					"entries": [
-						"You can see {@condition invisible} creatures while they are within 20 feet of the unfurled banner and within your line of sight."
+						"You can see {@condition 隱形} creatures while they are within 20 feet of the unfurled banner and within your line of sight."
 					]
 				},
 				{
@@ -2156,7 +2156,7 @@
 			"source": "DMG",
 			"page": 155,
 			"entries": [
-				"While you wear these boots, your steps make no sound, regardless of the surface you are moving across. You also have advantage on Dexterity ({@skill Stealth}) checks that rely on moving silently."
+				"While you wear these boots, your steps make no sound, regardless of the surface you are moving across. You also have advantage on Dexterity ({@skill 隱匿}) checks that rely on moving silently."
 			],
 			"lootTables": [
 				"Magic Item Table F"
@@ -2829,17 +2829,17 @@
 			"page": 157
 		},
 		{
-			"name": "Cap of Water Breathing",
+			"name": "水下呼吸帽", "ENG_name": "Cap of Water Breathing",
 			"wondrous": true,
 			"tier": "Minor",
 			"rarity": "Uncommon",
 			"source": "DMG",
 			"page": 157,
 			"entries": [
-				"While wearing this cap underwater, you can speak its command word as an action to create a bubble of air around your head. It allows you to breathe normally underwater. This bubble stays with you until you speak the command word again, the cap is removed, or you are no longer underwater."
+				"當在水中穿戴這個帽子時，你可以使用一個動作說出它的命令語，以創造出一個環繞你頭部的氣泡。這個氣泡將讓你得以在水下正常呼吸。這個氣泡將會維持直到你再次說出命令語、這頂帽子被脫卸、或你不再處於水中。"
 			],
 			"lootTables": [
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
@@ -3444,7 +3444,7 @@
 			"page": 158,
 			"reqAttune": true,
 			"entries": [
-				"While you wear this cloak, it projects an illusion that makes you appear to be standing in a place near your actual location, causing any creature to have disadvantage on attack rolls against you. If you take damage, the property ceases to function until the start of your next turn. This property is suppressed while you are {@condition incapacitated}, {@condition restrained}, or otherwise unable to move."
+				"While you wear this cloak, it projects an illusion that makes you appear to be standing in a place near your actual location, causing any creature to have disadvantage on attack rolls against you. If you take damage, the property ceases to function until the start of your next turn. This property is suppressed while you are {@condition 無力}, {@condition restrained}, or otherwise unable to move."
 			],
 			"lootTables": [
 				"Magic Item Table G"
@@ -3459,7 +3459,7 @@
 			"page": 158,
 			"reqAttune": true,
 			"entries": [
-				"While you wear this cloak with its hood up, Wisdom ({@skill Perception}) checks made to see you have disadvantage. and you have advantage on Dexterity ({@skill Stealth}) checks made to hide, as the cloak's color shifts to camouflage you. Pulling the hood up or down requires an action."
+				"While you wear this cloak with its hood up, Wisdom ({@skill Perception}) checks made to see you have disadvantage. and you have advantage on Dexterity ({@skill 隱匿}) checks made to hide, as the cloak's color shifts to camouflage you. Pulling the hood up or down requires an action."
 			],
 			"lootTables": [
 				"Magic Item Table F"
@@ -3474,7 +3474,7 @@
 			"page": 158,
 			"reqAttune": true,
 			"entries": [
-				"While wearing this cloak, you can pull its hood over your head to cause yourself to become {@condition invisible}. While you are {@condition invisible}, anything you are carrying or wearing is {@condition invisible} with you. You become visible when you cease wearing the hood. Pulling the hood up or down requires an action.",
+				"While wearing this cloak, you can pull its hood over your head to cause yourself to become {@condition 隱形}. While you are {@condition 隱形}, anything you are carrying or wearing is {@condition 隱形} with you. You become visible when you cease wearing the hood. Pulling the hood up or down requires an action.",
 				"Deduct the time you are invisible, in increments of 1 minute, from the cloak's maximum duration of 2 hours. After 2 hours of use, the cloak ceases to function. For every uninterrupted period of 12 hours the cloak goes unused, it regains 1 hour of duration."
 			],
 			"lootTables": [
@@ -3508,7 +3508,7 @@
 			]
 		},
 		{
-			"name": "Cloak of the Bat",
+			"name": "蝙蝠斗篷", "ENG_name": "Cloak of the Bat",
 			"wondrous": true,
 			"tier": "Major",
 			"rarity": "Rare",
@@ -3516,8 +3516,8 @@
 			"page": 159,
 			"reqAttune": true,
 			"entries": [
-				"While wearing this cloak, you have advantage on Dexterity ({@skill Stealth}) checks. In an area of dim light or darkness, you can grip the edges of the cloak with both hands and use it to fly at a speed of 40 feet. If you ever fail to grip the cloak's edges while flying in this way, or if you are no longer in dim light or darkness, you lose this flying speed.",
-				"While wearing the cloak in an area of dim light or darkness, you can use your action to cast {@spell polymorph} on yourself, transforming into a {@creature bat}. While you are in the form of the {@creature bat}, you retain your Intelligence, Wisdom, and Charisma scores. The cloak can't be used this way again until the next dawn."
+				"當穿著此斗篷時，你在敏捷（{@skill 隱匿}）檢定中具有優勢。在微光光照或黑暗的區域中，你可以用雙手抓住斗篷的邊緣，並使用它以40呎的速度飛行。若你在用這個方式飛行的期間失手鬆開斗篷的邊緣、或你不再處於微光光照或黑暗的環境中，則你將失去這個飛行速度。",
+				"當在微光光照或黑暗的環境中穿著此斗篷時，你可以使用你的動作對你自己施放{@spell 變形術}法術，將你自己轉變成一隻{@creature 蝙蝠}。當你處於蝙蝠型態時，你保留你的智力、睿知、和魅力屬性值。這個斗篷直到次日清晨之前都無法再次以這個方式被使用。"
 			],
 			"attachedSpells": [
 				"polymorph"
@@ -3527,17 +3527,17 @@
 			]
 		},
 		{
-			"name": "Cloak of the Manta Ray",
+			"name": "魟魚斗篷", "ENG_name": "Cloak of the Manta Ray",
 			"wondrous": true,
 			"tier": "Minor",
 			"rarity": "Uncommon",
 			"source": "DMG",
 			"page": 159,
 			"entries": [
-				"While wearing this cloak with its hood up, you can breathe underwater, and you have a swimming speed of 60 feet. Pulling the hood up or down requires an action."
+				"當穿著此斗篷並戴上其兜帽時，你可以在水中呼吸，且你將具有60呎的游泳速度。將兜帽戴上或拉下都需要一個動作。"
 			],
 			"lootTables": [
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
@@ -3976,7 +3976,7 @@
 			"reqAttune": true,
 			"entries": [
 				"This cube is about an inch across. Each face has a distinct marking on it that can be pressed. The cube starts with 36 charges, and it regains {@dice 1d20} expended charges daily at dawn.",
-				"You can use an action to press one of the cube's faces, expending a number of charges based on the chosen face, as shown in the Cube of Force Faces table. Each face has a different effect. If the cube has insufficient charges remaining, nothing happens. Otherwise, a barrier of {@condition invisible} force springs into existence, forming a cube 15 feet on a side. The barrier is centered on you, moves with you, and lasts for 1 minute, until you use an action to press the cube's sixth face, or the cube runs out of charges. You can change the barrier's effect by pressing a different face of the cube and expending the requisite number of charges, resetting the duration. If your movement causes the barrier to come into contact with a solid object that can't pass through the cube, you can't move any closer to that object as long as the barrier remains.",
+				"You can use an action to press one of the cube's faces, expending a number of charges based on the chosen face, as shown in the Cube of Force Faces table. Each face has a different effect. If the cube has insufficient charges remaining, nothing happens. Otherwise, a barrier of {@condition 隱形} force springs into existence, forming a cube 15 feet on a side. The barrier is centered on you, moves with you, and lasts for 1 minute, until you use an action to press the cube's sixth face, or the cube runs out of charges. You can change the barrier's effect by pressing a different face of the cube and expending the requisite number of charges, resetting the duration. If your movement causes the barrier to come into contact with a solid object that can't pass through the cube, you can't move any closer to that object as long as the barrier remains.",
 				{
 					"type": "table",
 					"caption": "Cube of Force Faces",
@@ -4135,8 +4135,8 @@
 			"source": "ToA",
 			"page": 205,
 			"entries": [
-				"This rare magical fruit produces enough juice to fill a vial. Any humanoid that eats a dancing monkey fruit or drinks its juice must succeed on a DC 14 Constitution saving throw or begin a comic dance that lasts for 1 minute. Humanoids that can't be {@condition poisoned} are immune to this magical effect.",
-				"The dancer must use all its movement to dance without leaving its space and has disadvantage on attack rolls and Dexterity saving throws, and other creatures have advantage on attack rolls against it. Each time it takes damage, the dancer can repeat the saving throw, ending the effect on itself on a success. When the dancing effect ends, the humanoid suffers the {@condition poisoned} condition for 1 hour."
+				"This rare magical fruit produces enough juice to fill a vial. Any humanoid that eats a dancing monkey fruit or drinks its juice must succeed on a DC 14 Constitution saving throw or begin a comic dance that lasts for 1 minute. Humanoids that can't be {@condition 中毒} are immune to this magical effect.",
+				"The dancer must use all its movement to dance without leaving its space and has disadvantage on attack rolls and Dexterity saving throws, and other creatures have advantage on attack rolls against it. Each time it takes damage, the dancer can repeat the saving throw, ending the effect on itself on a success. When the dancing effect ends, the humanoid suffers the {@condition 中毒} condition for 1 hour."
 			]
 		},
 		{
@@ -4763,7 +4763,7 @@
 								"entry": "King of clubs"
 							},
 							"The Void",
-							"This black card spells disaster. Your soul is drawn from your body and contained in an object in a place of the DM's choice. One or more powerful beings guard the place. While your soul is trapped in this way, your body is {@condition incapacitated}. A {@spell wish} spell can't restore your soul, but the spell reveals the location of the object that holds it. You draw no more cards."
+							"This black card spells disaster. Your soul is drawn from your body and contained in an object in a place of the DM's choice. One or more powerful beings guard the place. While your soul is trapped in this way, your body is {@condition 無力}. A {@spell wish} spell can't restore your soul, but the spell reveals the location of the object that holds it. You draw no more cards."
 						],
 						[
 							{
@@ -5032,7 +5032,7 @@
 			"source": "DMG",
 			"page": 165,
 			"entries": [
-				"You can use an action to place these shackles on an {@condition incapacitated} creature. The shackles adjust to fit a creature of Small to Large size. In addition to serving as mundane manacles, the shackles prevent a creature bound by them from using any method of extradimensional movement, including teleportation or travel to a different plane of existence. They don't prevent the creature from passing-through an interdimensional portal.",
+				"You can use an action to place these shackles on an {@condition 無力} creature. The shackles adjust to fit a creature of Small to Large size. In addition to serving as mundane manacles, the shackles prevent a creature bound by them from using any method of extradimensional movement, including teleportation or travel to a different plane of existence. They don't prevent the creature from passing-through an interdimensional portal.",
 				"You and any creature you designate when you use the shackles can use an action to remove them. Once every 30 days, the bound creature can make a DC 30 Strength ({@skill Athletics}) check. On a success, the creature breaks free and destroys the shackles."
 			],
 			"lootTables": [
@@ -5310,7 +5310,7 @@
 			],
 			"lootTables": [
 				"魔法物品表A",
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
@@ -5425,48 +5425,48 @@
 			]
 		},
 		{
-			"name": "Dust of Disappearance",
+			"name": "無蹤塵", "ENG_name": "Dust of Disappearance",
 			"wondrous": true,
 			"tier": "Minor",
 			"rarity": "Uncommon",
 			"source": "DMG",
 			"page": 166,
 			"entries": [
-				"Found in a small packet, this powder resembles very fine sand. There is enough of it for one use. When you use an action to throw the dust into the air, you and each creature and object within 10 feet of you become {@condition invisible} for {@dice 2d4} minutes. The duration is the same for all subjects, and the dust is consumed when its magic takes effect. If a creature affected by the dust attacks or casts a spell, the invisibility ends for that creature."
+				"被裝於袋中，這些粉末是由非常細緻的沙塵所組成。其分量僅足夠一次使用。當你使用一個動作將這些粉塵灑向空中，你和每個距離你10呎內的生物和物體都將變得{@condition 隱形}長達{@dice 2d4}分鐘。其持續時間對所有受影響的目標而言都是相同的，且這些粉塵將在它的魔法發揮效果時被消耗。若一個被這些粉塵影響的生物進行攻擊或施放法術，則該生物的隱形效果將會隨之終止。"
 			],
 			"lootTables": [
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
-			"name": "Dust of Dryness",
+			"name": "乾燥塵", "ENG_name": "Dust of Dryness",
 			"wondrous": true,
 			"tier": "Minor",
 			"rarity": "Uncommon",
 			"source": "DMG",
 			"page": 166,
 			"entries": [
-				"This small packet contains {@dice 1d6+4} pinches of dust. You can use an action to sprinkle a pinch of it over water. The dust turns a cube of water 15 feet on a side into one marble-sized pellet, which floats or rests near where the dust was sprinkled. The pellet's weight is negligible.",
-				"Someone can use an action to smash the pellet against a hard surface, causing the pellet to shatter and release the water the dust absorbed. Doing so ends that pellet's magic.",
-				"An elemental composed mostly of water that is exposed to a pinch of the dust must make a DC 13 Constitution saving throw, taking {@dice 10d6} necrotic damage on a failed save, or half as much damage on a successful one."
+				"這個小袋中裝有{@dice 1d6+4}搓粉塵。你可以使用一個動作將一搓這些粉塵灑到水面上。這些粉塵將會使15呎邊長立方體的水體轉變成一顆彈珠大小的珠子，並漂浮或停留在粉塵被灑下的位置附近。這個珠子的重量可以忽略不計。",
+				"某個生物可以使用一個動作將這顆珠子砸向一片堅硬表面，使這顆珠子粉碎並釋放出這些粉塵所吸收的水份。這麼做將會結束這顆珠子的魔法。",
+				"一個身體大部分由水組成的元素生物在暴露於一搓這些粉塵時，必須進行一次DC 13的體質豁免，豁免失敗將受到{@dice 10d6}死靈傷害，豁免成功則只受到一半的傷害。"
 			],
 			"lootTables": [
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
-			"name": "Dust of Sneezing and Choking",
+			"name": "噴嚏窒息塵", "ENG_name": "Dust of Sneezing and Choking",
 			"wondrous": true,
 			"tier": "Minor",
 			"rarity": "Uncommon",
 			"source": "DMG",
 			"page": 166,
 			"entries": [
-				"Found in a small container, this powder resembles very fine sand. It appears to be {@item dust of disappearance}, and an {@spell identify} spell reveals it to be such. There is enough of it for one use.",
-				"When you use an action to throw a handful of the dust into the air, you and each creature that needs to breathe within 30 feet of you must succeed on a DC 15 Constitution saving throw or become unable to breathe while sneezing uncontrollably. A creature affected in this way is {@condition incapacitated} and suffocating. As long as it is conscious, a creature can repeat the saving throw at the end of each of its turns, ending the effect on it on a success. The {@spell lesser restoration} spell can also end the effect on a creature."
+				"被裝於小型容器中，這些粉末是由非常細緻的沙塵所組成。它看起來就像是{@item 無蹤塵}，且一個{@spell 鑑定術}法術也會顯示這樣的結果。其分量僅足夠一次使用。",
+				"當你使用一個動作將一把這些粉塵灑向空中，你和每個距離你30呎內且需要呼吸的生物都必須成功通過一次DC 15的體質豁免，否則將因為不停打噴嚏而無法呼吸。一個被這種方式影響的生物將陷入{@condition 無力}狀態並窒息。只要它還意識清醒，該生物就可以在它的每個回合結束時重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。{@spell 次級復原術}法術也可以結束這個效果對一個生物的影響。"
 			],
 			"lootTables": [
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
@@ -5641,56 +5641,56 @@
 			]
 		},
 		{
-			"name": "Elemental Gem, Blue Sapphire",
+			"name": "元素寶石，藍寶石", "ENG_name": "Elemental Gem, Blue Sapphire",
 			"wondrous": true,
 			"tier": "Minor",
 			"rarity": "Uncommon",
 			"source": "DMG",
 			"page": 167,
 			"entries": [
-				"This gem contains a mote of elemental energy. When you use an action to break the gem, an {@creature air elemental} is summoned as if you had cast the {@spell conjure elemental} spell, and the gem's magic is lost."
+				"這顆寶石含有微量的元素能量。當你使用一個動作將這顆寶石打破時，一個{@creature 氣元素}將被召喚，就如同你施放了{@spell 召喚元素生物}法術一樣，且這顆寶石中的魔法將隨之消散。"
 			],
 			"attachedSpells": [
 				"conjure elemental"
 			]
 		},
 		{
-			"name": "Elemental Gem, Emerald",
+			"name": "元素寶石，翡翠", "ENG_name": "Elemental Gem, Emerald",
 			"wondrous": true,
 			"tier": "Minor",
 			"rarity": "Uncommon",
 			"source": "DMG",
 			"page": 167,
 			"entries": [
-				"This gem contains a mote of elemental energy. When you use an action to break the gem, a {@creature water elemental} is summoned as if you had cast the {@spell conjure elemental} spell, and the gem's magic is lost."
+				"這顆寶石含有微量的元素能量。當你使用一個動作將這顆寶石打破時，一個{@creature 水元素}將被召喚，就如同你施放了{@spell 召喚元素生物}法術一樣，且這顆寶石中的魔法將隨之消散。"
 			],
 			"attachedSpells": [
 				"conjure elemental"
 			]
 		},
 		{
-			"name": "Elemental Gem, Red Corundum",
+			"name": "元素寶石，紅剛玉", "ENG_name": "Elemental Gem, Red Corundum",
 			"wondrous": true,
 			"tier": "Minor",
 			"rarity": "Uncommon",
 			"source": "DMG",
 			"page": 167,
 			"entries": [
-				"This gem contains a mote of elemental energy. When you use an action to break the gem, a {@creature fire elemental} is summoned as if you had cast the {@spell conjure elemental} spell, and the gem's magic is lost."
+				"這顆寶石含有微量的元素能量。當你使用一個動作將這顆寶石打破時，一個{@creature 火元素}將被召喚，就如同你施放了{@spell 召喚元素生物}法術一樣，且這顆寶石中的魔法將隨之消散。"
 			],
 			"attachedSpells": [
 				"conjure elemental"
 			]
 		},
 		{
-			"name": "Elemental Gem, Yellow Diamond",
+			"name": "元素寶石，黃鑽石", "ENG_name": "Elemental Gem, Yellow Diamond",
 			"wondrous": true,
 			"tier": "Minor",
 			"rarity": "Uncommon",
 			"source": "DMG",
 			"page": 167,
 			"entries": [
-				"This gem contains a mote of elemental energy. When you use an action to break the gem, an {@creature earth elemental} is summoned as if you had cast the {@spell conjure elemental} spell, and the gem's magic is lost."
+				"這顆寶石含有微量的元素能量。當你使用一個動作將這顆寶石打破時，一個{@creature 土元素}將被召喚，就如同你施放了{@spell 召喚元素生物}法術一樣，且這顆寶石中的魔法將隨之消散。"
 			],
 			"attachedSpells": [
 				"conjure elemental"
@@ -5971,7 +5971,7 @@
 					"items": [
 						"You are immune to disease and poison.",
 						"Using the eye's X-ray vision never causes you to suffer {@condition exhaustion}.",
-						"You experience premonitions of danger and, unless you are {@condition incapacitated}, can't be surprised.",
+						"You experience premonitions of danger and, unless you are {@condition 無力}, can't be surprised.",
 						"If you start your turn with at least 1 hit point, you regain {@dice 1d10} hit points.",
 						"If a creature has a skeleton, you can attempt to turn its bones to jelly with a touch of the {@item Hand of Vecna}. You can do so by using an action to make a melee attack against a creature you can reach, using your choice of your melee attack bonus for weapons or spells. On a hit, the target must succeed on a DC 18 Constitution saving throw or drop to 0 hit points.",
 						"You can use an action to cast {@spell wish}. This property can't be used again until 30 days have passed."
@@ -6200,7 +6200,7 @@
 				"The creature is friendly to you and your companions. It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions.",
 				"The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description.",
 				"{@creature mastiff|mm|Onyx Dog}.",
-				"This onyx statuette of a dog can become a {@creature mastiff} for up to 6 hours. The {@creature mastiff} has an Intelligence of 8 and can speak Common. It also has dark vision out to a range of 60 feet and can see {@condition invisible} creatures and objects within that range. Once it has been used, it can't be used again until 7 days have passed."
+				"This onyx statuette of a dog can become a {@creature mastiff} for up to 6 hours. The {@creature mastiff} has an Intelligence of 8 and can speak Common. It also has dark vision out to a range of 60 feet and can see {@condition 隱形} creatures and objects within that range. Once it has been used, it can't be used again until 7 days have passed."
 			],
 			"lootTables": [
 				"Magic Item Table G"
@@ -6752,7 +6752,7 @@
 			"source": "DMG",
 			"page": 172,
 			"entries": [
-				"These gloves are {@condition invisible} while worn. While wearing them, you gain a +5 bonus to Dexterity ({@skill Sleight of Hand}) checks and Dexterity checks made to pick locks."
+				"These gloves are {@condition 隱形} while worn. While wearing them, you gain a +5 bonus to Dexterity ({@skill Sleight of Hand}) checks and Dexterity checks made to pick locks."
 			],
 			"lootTables": [
 				"Magic Item Table F"
@@ -6767,17 +6767,17 @@
 			"page": 157
 		},
 		{
-			"name": "Goggles of Night",
+			"name": "夜視護目鏡", "ENG_name": "Goggles of Night",
 			"wondrous": true,
 			"tier": "Minor",
 			"rarity": "Uncommon",
 			"source": "DMG",
 			"page": 172,
 			"entries": [
-				"While wearing these dark lenses, you have darkvision out to a range of 60 feet. If you already have darkvision. wearing the goggles increases its range by 60 feet."
+				"當穿戴這副暗色鏡片時，你具有60呎範圍的黑暗視覺。若你已經具有黑暗視覺，則穿戴這副護目鏡時將會使它的範圍增加60呎。"
 			],
 			"lootTables": [
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
@@ -7241,7 +7241,7 @@
 					"items": [
 						"You are immune to disease and poison.",
 						"Using the eye's X-ray vision never causes you to suffer {@condition exhaustion}.",
-						"You experience premonitions of danger and, unless you are {@condition incapacitated}, can't be surprised.",
+						"You experience premonitions of danger and, unless you are {@condition 無力}, can't be surprised.",
 						"If you start your turn with at least 1 hit point, you regain {@dice 1d10} hit points.",
 						"If a creature has a skeleton, you can attempt to turn its bones to jelly with a touch of the Hand of Vecna. You can do so by using an action to make a melee attack against a creature you can reach, using your choice of your melee attack bonus for weapons or spells. On a hit, the target must succeed on a DC 18 Constitution saving throw or drop to 0 hit points.",
 						"You can use an action to cast {@spell wish}. This property can't be used again until 30 days have passed."
@@ -7453,20 +7453,20 @@
 			]
 		},
 		{
-			"name": "Helm of Comprehending Languages",
+			"name": "通曉語言頭盔", "ENG_name": "Helm of Comprehending Languages",
 			"wondrous": true,
 			"tier": "Minor",
 			"rarity": "Uncommon",
 			"source": "DMG",
 			"page": 173,
 			"entries": [
-				"While wearing this helm, you can use an action to cast the {@spell comprehend languages} spell from it at will."
+				"當穿戴此頭盔時，你可以使用一個動作從中隨意施放{@spell 通曉語言}法術。"
 			],
 			"attachedSpells": [
 				"comprehend languages"
 			],
 			"lootTables": [
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
@@ -7911,7 +7911,7 @@
 				"這支扁平的鐵製權杖在其中一端有著一個按鈕。你可以使用一個動作按下按鈕，並讓權杖魔法性地固定在原地。直到你或另一個生物使用一個動作再次按下按鈕，這個權杖將保持不動，即使這違反重力也一樣。這個權杖最多能負載 8,000 磅的重量，在這之上的重量將使權杖解除效果並摔落。一個生物可以使用一個動作進行一次DC 30的力量檢定，檢定成功則可以將固定住的權杖移動至多10呎距離。"
 			],
 			"lootTables": [
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
@@ -9055,18 +9055,18 @@
 			]
 		},
 		{
-			"name": "Keoghtom's Ointment",
+			"name": "卡夫統靈藥", "ENG_name": "Keoghtom's Ointment",
 			"wondrous": true,
 			"tier": "Minor",
 			"rarity": "Uncommon",
 			"source": "DMG",
 			"page": 179,
 			"entries": [
-				"This glass jar, 3 inches in diameter, contains {@dice 1d4+1} doses of a thick mixture that smells faintly of aloe. The jar and its contents weigh ½ pound.",
-				"As an action, one dose of the ointment can be swallowed or applied to the skin. The creature that receives it regains {@dice 2d8+2} hit points, ceases to be {@condition poisoned}, and is cured of any disease."
+				"這個直徑3吋的玻璃罐中裝有{@dice 1d4+1}劑濃厚混合物，帶有淡淡的蘆薈氣味。這個玻璃罐和它內容物共重1/2磅。",
+				"以一個動作，一劑藥膏可以被服用或外敷在肌膚上。接受其使用的生物將回復{@dice 2d8+2}點生命值，解除{@condition 中毒}狀態，且任何疾病都將被治癒。"
 			],
 			"lootTables": [
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
@@ -9134,7 +9134,7 @@
 			]
 		},
 		{
-			"name": "Lantern of Revealing",
+			"name": "顯像提燈", "ENG_name": "Lantern of Revealing",
 			"wondrous": true,
 			"weight": "2",
 			"tier": "Minor",
@@ -9142,10 +9142,10 @@
 			"source": "DMG",
 			"page": 179,
 			"entries": [
-				"While lit, this {@item hooded lantern|phb} burns for 6 hours on 1 pint of oil, shedding bright light in a 30-foot radius and dim light for an additional 30 feet. {@condition Invisible} creatures and objects are visible as long as they are in the lantern's bright light. You can use an action to lower the hood, reducing the light to dim light in a 5-foot radius."
+				"當被點亮，每1品脫的燈油都可以讓這盞{@item 附蓋提燈|phb}燃燒持續6小時，並散發出30呎半徑的明亮光照以及再延伸30呎的微光光照。處於這盞提燈明亮光照範圍內的{@condition 隱形}生物和物體將變得可見。你可以使用一個動作降下燈蓋，將光照減弱為5呎半徑的微光光照。"
 			],
 			"lootTables": [
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
@@ -10438,7 +10438,7 @@
 				"freedom of movement"
 			],
 			"lootTables": [
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
@@ -10703,8 +10703,8 @@
 					"items": [
 						"You gain a +2 bonus to attack and damage rolls made with it.",
 						"When you roll a 20 on an attack roll with this weapon against an {@creature orc}, that {@creature orc} must succeed on a DC 17 Constitution saving throw or drop to 0 hit points.",
-						"You can't be surprised by {@creature orc|mm|orcs} while you're not {@condition incapacitated}. You are also aware when {@creature orc|mm|orcs} are within 120 feet of you and aren't behind total cover, although you don't know their location.",
-						"You and any of your friends within 30 feet of you can't be {@condition 恐懼} while you're not {@condition incapacitated}."
+						"You can't be surprised by {@creature orc|mm|orcs} while you're not {@condition 無力}. You are also aware when {@creature orc|mm|orcs} are within 120 feet of you and aren't behind total cover, although you don't know their location.",
+						"You and any of your friends within 30 feet of you can't be {@condition 恐懼} while you're not {@condition 無力}."
 					]
 				},
 				{
@@ -10950,7 +10950,7 @@
 								{
 									"type": "item",
 									"name": "Armor.",
-									"entry": "The armor is now an uncommon magic item that requires attunement. You gain a bonus to speed of 5 feet while you wear the armor, and if it normally imposes disadvantage on {@skill Stealth} checks, it no longer does so."
+									"entry": "The armor is now an uncommon magic item that requires attunement. You gain a bonus to speed of 5 feet while you wear the armor, and if it normally imposes disadvantage on {@skill 隱匿} checks, it no longer does so."
 								},
 								{
 									"type": "item",
@@ -11019,7 +11019,7 @@
 			"source": "DMG",
 			"page": 184,
 			"entries": [
-				"This delicate silver chain has a brilliant-cut black gem pendant. While you wear it, poisons have no effect on you. You are immune to the {@condition poisoned} condition and have immunity to poison damage."
+				"This delicate silver chain has a brilliant-cut black gem pendant. While you wear it, poisons have no effect on you. You are immune to the {@condition 中毒} condition and have immunity to poison damage."
 			],
 			"lootTables": [
 				"Magic Item Table G"
@@ -11064,7 +11064,7 @@
 				"在你飲用這瓶藥水之後的10分鐘內，你將被你第一眼看見的生物{@condition 魅惑}長達1小時。若該生物是你原本會喜歡的物種和性別，則你將在{@condition 魅惑}期間視它為你的真愛。這瓶藥水冒泡的玫瑰色液體包含著一顆容易被忽略的心形氣泡。"
 			],
 			"lootTables": [
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
@@ -11153,7 +11153,7 @@
 			"reqAttune": true,
 			"entries": [
 				"This dark spider-silk cloak is made by {@creature drow}. It is a {@item cloak of elvenkind}. It loses its magic if exposed to sunlight for 1 hour without interruption.",
-				"While you wear this cloak with its hood up, Wisdom ({@skill Perception}) checks made to see you have disadvantage. and you have advantage on Dexterity ({@skill Stealth}) checks made to hide, as the cloak's color shifts to camouflage you. Pulling the hood up or down requires an action."
+				"While you wear this cloak with its hood up, Wisdom ({@skill Perception}) checks made to see you have disadvantage. and you have advantage on Dexterity ({@skill 隱匿}) checks made to hide, as the cloak's color shifts to camouflage you. Pulling the hood up or down requires an action."
 			]
 		},
 		{
@@ -11165,7 +11165,7 @@
 			"reqAttune": true,
 			"entries": [
 				"This dark spider-silk cloak is made by {@creature drow}. It is a {@item cloak of elvenkind}. It also grants resistance to fire damage while you wear it. It loses its magic if exposed to sunlight for 1 hour without interruption.",
-				"While you wear this cloak with its hood up, Wisdom ({@skill Perception}) checks made to see you have disadvantage. and you have advantage on Dexterity ({@skill Stealth}) checks made to hide, as the cloak's color shifts to camouflage you. Pulling the hood up or down requires an action."
+				"While you wear this cloak with its hood up, Wisdom ({@skill Perception}) checks made to see you have disadvantage. and you have advantage on Dexterity ({@skill 隱匿}) checks made to hide, as the cloak's color shifts to camouflage you. Pulling the hood up or down requires an action."
 			]
 		},
 		{
@@ -11428,7 +11428,7 @@
 				"animal friendship"
 			],
 			"lootTables": [
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
@@ -11525,7 +11525,7 @@
 				"在飲用這瓶藥水後，你可以使用一個附贈動作向距離你30呎內的一個目標噴吐火焰。目標必須進行一次DC 13的敏捷豁免，豁免失敗將受到{@dice 4d6}火焰傷害，豁免成功則只受到一半的傷害。這個效果將在你噴出火焰三次、或1個小時過去後結束。這瓶藥水的橙色液體不停閃爍，且濃煙瀰漫在容器頂部，並在容器被打開時飄散而出。"
 			],
 			"lootTables": [
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
@@ -11648,7 +11648,7 @@
 			],
 			"lootTables": [
 				"魔法物品表A",
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
@@ -11666,7 +11666,7 @@
 				"enlarge/reduce"
 			],
 			"lootTables": [
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
@@ -11734,7 +11734,7 @@
 				"這瓶藥水的透明液體中漂浮著一片來自{@creature 山丘巨人}的指甲碎片。"
 			],
 			"lootTables": [
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
@@ -11878,7 +11878,7 @@
 				"若你飲用它，你將受到{@dice 3d6}毒素傷害，且你必須成功通過一次DC 13的體質豁免，否則陷入{@condition 中毒}狀態。當你因此而處於{@condition 中毒}期間，在你的每個回合開始時，你都將再受到 {@dice 3d6}毒素傷害。在你的每個回合結束時，你可以重複這個豁免檢定。若豁免成功，則你在後續回合內受到的毒素傷害將減少{@dice 1d6}。這個毒素效果將在毒素傷害被降至0時終止。"
 			],
 			"lootTables": [
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
@@ -12039,7 +12039,7 @@
 				"你可以在飲用這瓶藥水後在水下呼吸持續1小時。這瓶藥水的渾濁綠色液體聞起來有海水的味道，且有一個水母形狀的氣泡漂浮其中。"
 			],
 			"lootTables": [
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
@@ -12269,7 +12269,7 @@
 					"type": "entries",
 					"entries": [
 						"You can use an action to throw the token to a point within 10 feet of you. The token disappears, and a floating whip takes its place. You can then use a bonus action to make a melee spell attack against a creature within 10 feet of the whip, with an attack bonus of {@hit 9}. On a hit, the target takes {@dice 1d6+5} force damage.",
-						"As a bonus action on your turn, you can direct the whip to fly up to 20 feet and repeat the attack against a creature within 10 feet of it. The whip disappears after 1 hour, when you use an action to dismiss it, or when you are {@condition incapacitated} or die."
+						"As a bonus action on your turn, you can direct the whip to fly up to 20 feet and repeat the attack against a creature within 10 feet of it. The whip disappears after 1 hour, when you use an action to dismiss it, or when you are {@condition 無力} or die."
 					]
 				}
 			]
@@ -12724,7 +12724,7 @@
 			"page": 191,
 			"reqAttune": true,
 			"entries": [
-				"While wearing this ring, you can turn {@condition invisible} as an action. Anything you are wearing or carrying is {@condition invisible} with you. You remain {@condition invisible} until the ring is removed, until you attack or cast a spell, or until you use a bonus action to become visible again."
+				"While wearing this ring, you can turn {@condition 隱形} as an action. Anything you are wearing or carrying is {@condition 隱形} with you. You remain {@condition 隱形} until the ring is removed, until you attack or cast a spell, or until you use a bonus action to become visible again."
 			],
 			"lootTables": [
 				"Magic Item Table I"
@@ -12768,7 +12768,7 @@
 			"reqAttune": true,
 			"entries": [
 				"While wearing this ring, you are immune to magic that allows other creatures to read your thoughts, determine whether you are lying, know your alignment, or know your creature type. Creatures can telepathically communicate with you only if you allow it.",
-				"You can use an action to cause the ring to become {@condition invisible} until you use another action to make it visible, until you remove the ring, or until you die.",
+				"You can use an action to cause the ring to become {@condition 隱形} until you use another action to make it visible, until you remove the ring, or until you die.",
 				"If you die while wearing the ring, your soul enters it, unless it already houses a soul. You can remain in the ring or depart for the afterlife. As long as your soul is in the ring, you can telepathically communicate with any creature wearing it. A wearer can't prevent this telepathic communication."
 			],
 			"lootTables": [
@@ -12940,17 +12940,17 @@
 			]
 		},
 		{
-			"name": "Ring of Swimming",
+			"name": "游泳戒指", "ENG_name": "Ring of Swimming",
 			"type": "RG",
 			"tier": "Minor",
 			"rarity": "Uncommon",
 			"source": "DMG",
 			"page": 193,
 			"entries": [
-				"You have a swimming speed of 40 feet while wearing this ring."
+				"你在穿戴此戒指時具有40呎的游泳速度。"
 			],
 			"lootTables": [
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
@@ -13127,7 +13127,7 @@
 							"items": [
 								"You can expend 1 charge as an action and use the ring to lower the temperature in a 120-foot-radius sphere centered on a point you can see within 300 feet of you. The temperature in that area drops 20 degrees per minute, to a minimum of -30 degrees Fahrenheit. Frost and ice begin to form on surfaces once the temperature drops below 32 degrees. This effect is permanent unless you use the ring to end it as an action, at which point the temperature in the area returns to normal at a rate of 10 degrees per minute.",
 								"You can cast one of the following spells from the ring (spell save DC 17) by expending the necessary number of charges: {@spell Bigby's hand} (2 charges; the hand is made of ice, is immune to cold damage, and deals bludgeoning damage instead of force damage as a clenched fist), {@spell cone of cold} (2 charges), flesh to ice (3 charges; as {@spell flesh to stone} except that the target turns to solid ice with the density and durability of stone), {@spell ice storm} (2 charges), {@spell Otiluke's freezing sphere} (3 charges), {@spell sleet storm} (1 charge), {@spell spike growth} (1 charge; the spikes are made of ice), or {@spell wall of ice} (2 charges).",
-								"You can expend the necessary number of charges as an action and use the ring to create either an inanimate ice object (2 charges) or an animated ice creature (4 charges). The ice object can't have any moving parts, must be able to fit inside a 10-foot cube, and has the density and durability of metal or stone (your choice). The ice creature must be modeled after a beast with a challenge rating of 2 or less. The ice creature has the same statistics as the beast it models, with the following changes: the creature is a construct with vulnerability to fire damage, immunity to cold and poison damage, and immunity to the following conditions: {@condition charmed}, {@condition exhaustion}, {@condition 恐懼}, {@condition paralyzed}, {@condition petrified}, and {@condition poisoned}. The ice creature obeys only its creator's commands. The ice object or creature appears in an unoccupied space within 60 feet of you. It melts into a pool of normal water after 24 hours or when it drops to 0 hit points. In extreme heat, it loses 5 ({@dice 1d10}) hit points per minute as it melts. Use the guidelines in chapter 8 of the Dungeon Master's Guide to determine the hit points of an inanimate object if they become necessary."
+								"You can expend the necessary number of charges as an action and use the ring to create either an inanimate ice object (2 charges) or an animated ice creature (4 charges). The ice object can't have any moving parts, must be able to fit inside a 10-foot cube, and has the density and durability of metal or stone (your choice). The ice creature must be modeled after a beast with a challenge rating of 2 or less. The ice creature has the same statistics as the beast it models, with the following changes: the creature is a construct with vulnerability to fire damage, immunity to cold and poison damage, and immunity to the following conditions: {@condition charmed}, {@condition exhaustion}, {@condition 恐懼}, {@condition paralyzed}, {@condition petrified}, and {@condition 中毒}. The ice creature obeys only its creator's commands. The ice object or creature appears in an unoccupied space within 60 feet of you. It melts into a pool of normal water after 24 hours or when it drops to 0 hit points. In extreme heat, it loses 5 ({@dice 1d10}) hit points per minute as it melts. Use the guidelines in chapter 8 of the Dungeon Master's Guide to determine the hit points of an inanimate object if they become necessary."
 							]
 						}
 					]
@@ -13201,7 +13201,7 @@
 					"items": [
 						"The robe lets you see in all directions, and you have advantage on Wisdom ({@skill Perception}) checks that rely on sight.",
 						"You have darkvision out to a range of 120 feet.",
-						"You can see {@condition invisible} creatures and objects, as well as see into the Ethereal Plane, out to a range of 120 feet."
+						"You can see {@condition 隱形} creatures and objects, as well as see into the Ethereal Plane, out to a range of 120 feet."
 					]
 				},
 				"The eyes on the robe can't be closed or averted. Although you can close or avert your own eyes, you are never considered to be doing so while wearing this robe.",
@@ -13328,32 +13328,32 @@
 			]
 		},
 		{
-			"name": "Robe of Useful Items",
+			"name": "雜貨法袍", "ENG_name": "Robe of Useful Items",
 			"wondrous": true,
 			"tier": "Minor",
 			"rarity": "Uncommon",
 			"source": "DMG",
 			"page": 195,
 			"entries": [
-				"This robe has cloth patches of various shapes and colors covering it. While wearing the robe. you can use an action to detach one of the patches, causing it to become the object or creature it represents. Once the last patch is removed, the robe becomes an ordinary garment.",
-				"The robe has two of each of the following patches:",
+				"這件長袍上打有各種顏色和形狀的補丁。當穿著這件長袍時，你可以使用一個動作撕下其中一塊補丁，使它變成它所呈現的物體或生物。一旦最後一塊補丁被撕下，這件長袍將變為一件普通的衣物。",
+				"這件長袍有著以下每種補丁各兩個：",
 				{
 					"type": "list",
 					"items": [
-						"Dagger",
-						"Bullseye lantern (filled and lit)",
-						"Steel mirror",
-						"10-foot pole",
-						"Hempen rope (50 feet, coiled)",
-						"Sack"
+						"{@item 匕首|phb}",
+						"{@item 牛眼提燈|phb}（裝滿燈油且被點燃）",
+						"{@item 鋼面小鏡|phb}",
+						"{@item 長桿(10呎)|phb|10呎長桿}",
+						"{@item 麻繩(50呎)|phb|麻繩}(50呎, 盤繞狀態)",
+						"{@item 麻袋|phb}"
 					]
 				},
-				"In addition, the robe has {@dice 4d4} other patches. The DM chooses the patches or determines them randomly.",
+				"此外，這件長袍有著{@dice 4d4}塊其它補丁，由DM選擇隨機決定這些補丁的種類。",
 				{
 					"type": "table",
 					"colLabels": [
 						"{@dice d100}",
-						"Patch"
+						"補丁"
 					],
 					"colStyles": [
 						"col-1 text-align-center",
@@ -13362,61 +13362,61 @@
 					"rows": [
 						[
 							"01-08",
-							"Bag of 100 gp"
+							"裝有100金幣的錢袋"
 						],
 						[
 							"09-15",
-							"Silver coffer (1 foot long, 6 inches wide and deep) worth 500 gp"
+							"價值500金幣的銀製箱櫃（1呎長，6吋寬度和深度）"
 						],
 						[
 							"16-22",
-							"Iron door (up to 10 feet wide and 10 feet high, barred on one side of your choice), which you can place in an opening you can reach; it conforms to fit the opening, attaching and hinging itself"
+							"一扇鐵門（最多10呎寬，10呎高，其中一側有著門閂），你可以將其放置在一處你所能觸及的通路開口；它將改變形狀以適應於該通道，貼合，並將自己拴起"
 						],
 						[
 							"23-30",
-							"10 gems worth 100 gp each"
+							"10顆價值各100金幣的寶石"
 						],
 						[
 							"31-44",
-							"Wooden ladder (24 feet long)"
+							"木製長梯(24呎長)"
 						],
 						[
 							"45-51",
-							"A {@creature riding horse} with saddle bags"
+							"一個附有{@item 鞍囊|phb}的{@creature 騎用馬}"
 						],
 						[
 							"52-59",
-							"Pit (a cube 10 feet on a side), which you can place on the ground within 10 feet of you"
+							"陷坑(一個10呎邊長立方體)。你可以將其放置在距離你10呎內的地面上"
 						],
 						[
 							"60-68",
-							"4 {@item potion of healing|dmg|potions of healing}"
+							"4瓶{@item 治療藥水|dmg}"
 						],
 						[
 							"69-75",
-							"{@item Rowboat} (12 feet long)"
+							"一艘{@item 划艇}(12呎長)"
 						],
 						[
 							"76-83",
-							"Spell scroll containing one spell of 1st to 3rd level"
+							"寫有一個1到3環法術的{@item 法術卷軸}"
 						],
 						[
 							"84-90",
-							"2 {@creature mastiff|mm|mastiffs}"
+							"2隻{@creature 獒犬|mm}"
 						],
 						[
 							"91-96",
-							"Window (2 feet by 4 feet, up to 2 feet deep), which you can place on a vertical surface you can reach"
+							"一扇窗戶(2呎x4呎，最多2呎深)，你可以將其放置在所能觸及的垂直表面上"
 						],
 						[
 							"97-00",
-							"{@item Portable ram|phb}"
+							"一個{@item 便攜型攻城鎚|phb}"
 						]
 					]
 				}
 			],
 			"lootTables": [
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
@@ -13476,7 +13476,7 @@
 					"name": "Protective Aura",
 					"type": "entries",
 					"entries": [
-						"As an action, you can plant the haft end of the rod in the ground, whereupon the rod's head sheds bright light in a 60-foot radius and dim light for an additional 60 feet. While in that bright light, you and any creature that is friendly to you gain a +1 bonus to AC and saving throws and can sense the location of any {@condition invisible} hostile creature that is also in the bright light.",
+						"As an action, you can plant the haft end of the rod in the ground, whereupon the rod's head sheds bright light in a 60-foot radius and dim light for an additional 60 feet. While in that bright light, you and any creature that is friendly to you gain a +1 bonus to AC and saving throws and can sense the location of any {@condition 隱形} hostile creature that is also in the bright light.",
 						"The rod's head stops glowing and the effect ends after 10 minutes, or when a creature uses an action to pull the rod from the ground. This property can't be used again until the next dawn."
 					]
 				}
@@ -13712,7 +13712,7 @@
 			]
 		},
 		{
-			"name": "Rope of Climbing",
+			"name": "攀爬繩", "ENG_name": "Rope of Climbing",
 			"wondrous": true,
 			"weight": "3",
 			"tier": "Minor",
@@ -13720,12 +13720,12 @@
 			"source": "DMG",
 			"page": 197,
 			"entries": [
-				"This 60-foot length of silk rope weighs 3 pounds and can hold up to 3,000 pounds. If you hold one end of the rope and use an action to speak the command word, the rope animates. As a bonus action, you can command the other end to move toward a destination you choose. That end moves 10 feet on your turn when you first command it and 10 feet on each of your turns until reaching its destination, up to its maximum length away, or until you tell it to stop. You can also tell the rope to fasten itself securely to an object or to unfasten itself, to knot or unknot itself, or to coil itself for carrying.",
-				"If you tell the rope to knot, large knots appear at 1-foot intervals along the rope. While knotted, the rope shortens to a 50-foot length and grants advantage on checks made to climb it.",
-				"The rope has AC 20 and 20 hit points. It regains 1 hit point every 5 minutes as long as it has at least 1 hit point. If the rope drops to 0 hit points, it is destroyed."
+				"這條60呎長的絲質繩索重3磅，且可以承受最多3,000磅的重量。若你持握繩索的其中一端並使用一個動作說出其命令語，繩索將會活化。以一個附贈動作，你可以命令繩索的另一端向著你所選擇的目的地移動。繩索的另一端將在你第一次命令它的回合移動10呎距離，並在你接下來的每個回合時移動10呎，直到它抵達目的地、伸展至它的最大長度、或直到你命令它停止。你也可以命令這個繩索牢牢綁住一個物體或是將自己鬆綁、自己打結或解結、或將自己盤起以方便你攜帶。",
+				"若你命令這個繩索打結，它將以1呎的間距沿著自己打好幾個大結。打完結後，這個繩索的長度將會縮短至50呎，且讓用於攀爬它的檢定獲得優勢。",
+				"這個繩索具有AC 20和20點生命值。只要它還具有最少1點生命值，繩索每過5分鐘就可以回復1點生命值。若繩索的生命值歸零，則它將被摧毀。"
 			],
 			"lootTables": [
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
@@ -13806,7 +13806,7 @@
 			"source": "ToA",
 			"page": 205,
 			"entries": [
-				"Any creature that ingests a ryath root gains {@dice 2d4} temporary hit points. A creature that consumes more than one ryath root in a 24-hour period must succeed on a DC 13 Constitution saving throw or suffer the {@condition poisoned} condition for 1 hour"
+				"Any creature that ingests a ryath root gains {@dice 2d4} temporary hit points. A creature that consumes more than one ryath root in a 24-hour period must succeed on a DC 13 Constitution saving throw or suffer the {@condition 中毒} condition for 1 hour"
 			]
 		},
 		{
@@ -13822,17 +13822,17 @@
 			]
 		},
 		{
-			"name": "Saddle of the Cavalier",
+			"name": "騎兵鞍座", "ENG_name": "Saddle of the Cavalier",
 			"wondrous": true,
 			"tier": "Minor",
 			"rarity": "Uncommon",
 			"source": "DMG",
 			"page": 199,
 			"entries": [
-				"While in this saddle on a mount, you can't be dismounted against your will if you're conscious, and attack rolls against the mount have disadvantage."
+				"當騎乘於配有這副鞍座的坐騎時，只要你的意識清醒，你就不會在非自願的情況下落馬，且對該坐騎所進行的攻擊檢定將具有劣勢。"
 			],
 			"lootTables": [
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
@@ -13995,8 +13995,8 @@
 				{
 					"type": "list",
 					"items": [
-						"The armor improves your combat readiness, granting you a +5 bonus to initiative as long as you aren't {@condition incapacitated}.",
-						"The armor doesn't impose disadvantage on your Dexterity ({@skill Stealth}) checks.",
+						"The armor improves your combat readiness, granting you a +5 bonus to initiative as long as you aren't {@condition 無力}.",
+						"The armor doesn't impose disadvantage on your Dexterity ({@skill 隱匿}) checks.",
 						"The armor doesn't impose disadvantage on saving throws made to resist the effects of extreme heat (see chapter 5 of the Dungeon Master's Guide)."
 					]
 				},
@@ -14240,7 +14240,7 @@
 								{
 									"type": "item",
 									"name": "Cloak.",
-									"entry": "The cloak is now a rare magic item that requires attunement. While wearing it, you have resistance to fire damage, and you have advantage on Dexterity ({@skill Stealth}) checks made while in snowy terrain."
+									"entry": "The cloak is now a rare magic item that requires attunement. While wearing it, you have resistance to fire damage, and you have advantage on Dexterity ({@skill 隱匿}) checks made while in snowy terrain."
 								},
 								{
 									"type": "item",
@@ -14936,7 +14936,7 @@
 			],
 			"lootTables": [
 				"魔法物品表A",
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
@@ -14954,7 +14954,7 @@
 				"一個記載於法術卷軸上的法師法術可以如同其記載於法術書上一樣被抄寫。當一個法術被從卷軸上抄寫時，抄寫者必須成功通過一次DC 13的智力（{@skill 奧秘}）檢定。若檢定成功，則該法術被成功抄寫。無論檢定成功與否，此法術卷軸都將因此毀壞。"
 			],
 			"lootTables": [
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
@@ -15689,7 +15689,7 @@
 			"page": 204,
 			"entries": [
 				"You can use an action to speak this staff's command word and throw the staff on the ground within 10 feet of you. The staff becomes a {@creature giant constrictor snake} under your control and acts on its own initiative count. By using a bonus action to speak the command word again, you return the staff to its normal form in a space formerly occupied by the snake.",
-				"On your turn, you can mentally command the snake if it is within 60 feet of you and you aren't {@condition incapacitated}. You decide what action the snake takes and where it moves during its next turn, or you can issue it a general command, such as to attack your enemies or guard a location.",
+				"On your turn, you can mentally command the snake if it is within 60 feet of you and you aren't {@condition 無力}. You decide what action the snake takes and where it moves during its next turn, or you can issue it a general command, such as to attack your enemies or guard a location.",
 				"If the snake is reduced to 0 hit points, it dies and reverts to its staff form. The staff then shatters and is destroyed. If the snake reverts to staff form before losing all its hit points, it regains all of them."
 			],
 			"lootTables": [
@@ -16962,7 +16962,7 @@
 						],
 						[
 							"19-20",
-							"A bottle of {@condition invisible} ink that can only be read at sunset"
+							"A bottle of {@condition 隱形} ink that can only be read at sunset"
 						],
 						[
 							"21-22",
@@ -18254,7 +18254,7 @@
 				"detect magic"
 			],
 			"lootTables": [
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
@@ -18469,7 +18469,7 @@
 			],
 			"charges": 3,
 			"lootTables": [
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
@@ -19166,7 +19166,7 @@
 			"source": "ToA",
 			"page": 205,
 			"entries": [
-				"Introducing the juice of a wildroot into a {@condition poisoned} creature's bloodstream (for example, by rubbing it on an open wound) rids the creature of the {@condition poisoned} condition. Once used in this way, a wildroot loses this property."
+				"Introducing the juice of a wildroot into a {@condition 中毒} creature's bloodstream (for example, by rubbing it on an open wound) rids the creature of the {@condition 中毒} condition. Once used in this way, a wildroot loses this property."
 			]
 		},
 		{
@@ -19488,7 +19488,7 @@
 			"source": "ToA",
 			"page": 205,
 			"entries": [
-				"Zabou mushrooms feed on offal and the rotting wood of dead trees. If handled carefully, a zabou can be picked or uprooted without causing it to release its spores. If crushed or struck, a zabou releases its spores in a 10-foot-radius sphere. A zabou can also be hurled up to 30 feet away or dropped like a grenade, releasing its cloud of spores on impact. Any creature in that area must succeed on a DC 10 Constitution saving throw or be {@condition poisoned} for 1 minute. The {@condition poisoned} creature's skin itches for the duration. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+				"Zabou mushrooms feed on offal and the rotting wood of dead trees. If handled carefully, a zabou can be picked or uprooted without causing it to release its spores. If crushed or struck, a zabou releases its spores in a 10-foot-radius sphere. A zabou can also be hurled up to 30 feet away or dropped like a grenade, releasing its cloud of spores on impact. Any creature in that area must succeed on a DC 10 Constitution saving throw or be {@condition 中毒} for 1 minute. The {@condition 中毒} creature's skin itches for the duration. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 			]
 		},
 		{
@@ -19516,7 +19516,7 @@
 			"name": "Azuredge",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "battleaxe|phb",
+			"baseItem": "戰斧|phb",
 			"rarity": "Legendary",
 			"weight": "4",
 			"dmg1": "{@dice 1d8}",
@@ -21248,7 +21248,7 @@
 			"page": 181,
 			"reqAttune": true,
 			"entries": [
-				"This headpiece, crafted from dark metal, is worn curved around the ear. If you know a creature wearing another Spies' Murmur and that creature is within 1 mile of you, you can communicate telepathically with each other. As a bonus action, you can allow that creature to hear everything you hear for 1 hour. You can end this effect as a bonus action, and it ends if you're {@condition incapacitated}."
+				"This headpiece, crafted from dark metal, is worn curved around the ear. If you know a creature wearing another Spies' Murmur and that creature is within 1 mile of you, you can communicate telepathically with each other. As a bonus action, you can allow that creature to hear everything you hear for 1 hour. You can end this effect as a bonus action, and it ends if you're {@condition 無力}."
 			]
 		},
 		{
@@ -21880,7 +21880,7 @@
 					"type": "entries",
 					"name": "The Void",
 					"entries": [
-						"This black card spells disaster. Your soul is drawn from your body and held within machinery in either the control room of the Monastery of the Distressed Body (area M8) or Kwalish's lab in Daoine Gloine (area O7), whichever comes later in the adventure. While your soul is trapped in this way, your body is {@condition incapacitated}. {@spell Divination}, {@spell contact other plane}, or a similar spell of 4th level or higher reveals the location of the machinery that holds your soul. You draw no more cards."
+						"This black card spells disaster. Your soul is drawn from your body and held within machinery in either the control room of the Monastery of the Distressed Body (area M8) or Kwalish's lab in Daoine Gloine (area O7), whichever comes later in the adventure. While your soul is trapped in this way, your body is {@condition 無力}. {@spell Divination}, {@spell contact other plane}, or a similar spell of 4th level or higher reveals the location of the machinery that holds your soul. You draw no more cards."
 					]
 				},
 				{
@@ -22130,7 +22130,7 @@
 							"type": "entries",
 							"name": "Battle of Wills",
 							"entries": [
-								"When donned by a new user, the armor deems itself superior and attempts to take possession of that user. The user must succeed on a DC 13 Charisma saving throw or be possessed by the armor. While possessed, the user is {@condition incapacitated} and loses control of its body but retains its awareness. The armor uses the possessed user's statistics (as adjusted by the armor), but doesn't gain access to the user's knowledge, features, or proficiencies.",
+								"When donned by a new user, the armor deems itself superior and attempts to take possession of that user. The user must succeed on a DC 13 Charisma saving throw or be possessed by the armor. While possessed, the user is {@condition 無力} and loses control of its body but retains its awareness. The armor uses the possessed user's statistics (as adjusted by the armor), but doesn't gain access to the user's knowledge, features, or proficiencies.",
 								"Freeing a creature trapped inside the armor first requires defeating the armor's automatic defenses (as above). The trapped creature can also attempt a DC 20 Charisma saving throw each day at dawn. On a successful save, the armor no longer controls the creature and can be safely donned by that creature at any time."
 							]
 						},
@@ -22293,7 +22293,7 @@
 				"雷鳴抗性藥水"
 			],
 			"lootTables": [
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{
@@ -22337,7 +22337,7 @@
 			]
 		},
 		{
-			"name": "Elemental Gem",
+			"name": "元素寶石", "ENG_name": "Elemental Gem",
 			"wondrous": true,
 			"tier": "Minor",
 			"rarity": "Uncommon",
@@ -22347,13 +22347,13 @@
 				"conjure elemental"
 			],
 			"items": [
-				"Elemental Gem, Blue Sapphire",
-				"Elemental Gem, Emerald",
-				"Elemental Gem, Red Corundum",
-				"Elemental Gem, Yellow Diamond"
+				"元素寶石，藍寶石",
+				"元素寶石，翡翠",
+				"元素寶石，紅剛玉",
+				"元素寶石，黃鑽石"
 			],
 			"lootTables": [
-				"Magic Item Table B"
+				"魔法物品表B"
 			]
 		},
 		{

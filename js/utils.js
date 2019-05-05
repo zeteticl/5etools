@@ -580,7 +580,7 @@ Parser._addCommas = function (intNum) {
 };
 
 Parser.crToXp = function (cr) {
-	if (cr === "Unknown" || cr === undefined) return "Unknown";
+	if (cr === "Unknown" || cr === undefined) return "不明";
 	if (cr === "0") return "0 或 10";
 	if (cr === "1/8") return "25";
 	if (cr === "1/4") return "50";
@@ -625,6 +625,7 @@ Parser._greatestCommonDivisor = function (a, b) {
 Parser.numberToCr = function (number, safe) {
 	// avoid dying if already-converted number is passed in
 	if (safe && typeof number === "string" && Parser.CRS.includes(number)) return number;
+	if (isNaN(number)) return 0;
 
 	const len = number.toString().length - 2;
 	let denominator = Math.pow(10, len);
@@ -1144,7 +1145,10 @@ Parser.monTypeToPlural = function (type) {
 };
 
 Parser.monCrToFull = function (cr) {
-	if (typeof cr === "string" || !cr) return `${cr || "Unknown"} (${Parser.crToXp(cr)} XP)`;
+	if (typeof cr === "string" || !cr){
+		if(cr === "Unknown") return `不明`;
+		else 			     return `${cr || "不明"} (${Parser.crToXp(cr)} XP)`;
+	}
 	else {
 		const stack = [Parser.monCrToFull(cr.cr)];
 		if (cr.lair) stack.push(`當遭遇於巢穴時 ${Parser.monCrToFull(cr.lair)}`);

@@ -41,7 +41,7 @@ class RenderBestiary {
 
 	static initParsed (mon) {
 		mon._pTypes = mon._pTypes || Parser.monTypeToFullObj(mon.type); // store the parsed type
-		mon._pCr = mon._pCr || (mon.cr === undefined ? "Unknown" : (mon.cr.cr || mon.cr));
+		mon._pCr = mon._pCr || (mon.cr === undefined || mon.cr === "Unknown" ? "不明" : (mon.cr.cr || mon.cr));
 	}
 
 	/**

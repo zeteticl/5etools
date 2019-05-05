@@ -3371,6 +3371,18 @@ Renderer.item = {
 				switch (inheritedProperty) {
 					case "namePrefix": specificVariant.name = `${inherits.namePrefix}${specificVariant.name}`; break;
 					case "nameSuffix": specificVariant.name = `${specificVariant.name}${inherits.nameSuffix}`; break;
+					case "ENG_namePrefix":
+						if(specificVariant.ENG_name)
+							specificVariant.ENG_name = `${inherits.ENG_namePrefix}${specificVariant.ENG_name}`;
+						else
+							specificVariant.name = `${inherits.ENG_namePrefix}${specificVariant.name}`;
+						break;
+					case "ENG_nameSuffix":
+						if(specificVariant.ENG_name)
+							specificVariant.ENG_name = `${specificVariant.ENG_name}${inherits.ENG_nameSuffix}`;
+						else
+							specificVariant.name = `${specificVariant.name}${inherits.ENG_nameSuffix}`;
+						break;
 					case "entries": {
 						inherits.entries.forEach((ent, i) => {
 							if (typeof ent === "string") {

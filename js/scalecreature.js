@@ -319,7 +319,7 @@
 
 			// cleanup
 			[`str`, `dex`, `con`, `int`, `wis`, `cha`].forEach(a => delete mon[`${a}Old`]);
-
+			console.log(toCr);
 			const crOutStr = Parser.numberToCr(toCr);
 			if (mon.cr.cr) mon.cr.cr = crOutStr;
 			else mon.cr = crOutStr;
