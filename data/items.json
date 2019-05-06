@@ -7163,7 +7163,7 @@
 						"You must be wearing a {@italic belt of giant strength} (any variety) and {@item gauntlets of ogre power} to attune to this weapon. The attunement ends if you take off either of those items. While you are attuned to this weapon and holding it, your Strength score increases by 4 and can exceed 20, but not 30. When you roll a 20 on an attack roll made with this weapon against a giant, the giant must succeed on a DC 17 Constitution saving throw or die."
 					]
 				},
-				"The hammer also has 5 charges. While attuned to it, you can expend 1 charge and make a ranged weapon attack with the hammer, hurling it as if it had the thrown property with a normal range of 20 feet and a long range of 60 feet. If the attack hits, the hammer unleashes a thunderclap audible out to 300 feet. The target and every creature within 30 feet of it must succeed on a DC 17 Constitution saving throw or be {@condition stunned} until the end of your next turn. The hammer regains {@dice 1d4+1} expended charges daily at dawn."
+				"The hammer also has 5 charges. While attuned to it, you can expend 1 charge and make a ranged weapon attack with the hammer, hurling it as if it had the thrown property with a normal range of 20 feet and a long range of 60 feet. If the attack hits, the hammer unleashes a thunderclap audible out to 300 feet. The target and every creature within 30 feet of it must succeed on a DC 17 Constitution saving throw or be {@condition 震懾} until the end of your next turn. The hammer regains {@dice 1d4+1} expended charges daily at dawn."
 			],
 			"charges": 5,
 			"lootTables": [
@@ -13220,7 +13220,7 @@
 			"page": 194,
 			"reqAttune": true,
 			"entries": [
-				"This robe has 3 charges, and it regains {@dice 1d3} expended charges daily at dawn. While you wear it, you can use an action and expend 1 charge to cause the garment to display a shifting pattern of dazzling hues until the end of your next turn. During this time, the robe sheds bright light in a 30-foot radius and dim light for an additional 30 feet. Creatures that can see you have disadvantage on attack rolls against you. In addition, any creature in the bright light that can see you when the robe's power is activated must succeed on a DC 15 Wisdom saving throw or become {@condition stunned} until the effect ends."
+				"This robe has 3 charges, and it regains {@dice 1d3} expended charges daily at dawn. While you wear it, you can use an action and expend 1 charge to cause the garment to display a shifting pattern of dazzling hues until the end of your next turn. During this time, the robe sheds bright light in a 30-foot radius and dim light for an additional 30 feet. Creatures that can see you have disadvantage on attack rolls against you. In addition, any creature in the bright light that can see you when the robe's power is activated must succeed on a DC 15 Wisdom saving throw or become {@condition 震懾} until the effect ends."
 			],
 			"charges": 3,
 			"lootTables": [
@@ -13287,7 +13287,7 @@
 			"rarity": "Legendary",
 			"source": "DMG",
 			"page": 194,
-			"reqAttune": "by a Sorcerer, Warlock, or Wizard",
+			"reqAttune": "由術士、契術師、或法師",
 			"entries": [
 				"This elegant garment is made from exquisite cloth of white, gray, or black and adorned with silvery runes. The robe's color corresponds to the alignment for which the item was created. A white robe was made for good, gray for neutral, and black for evil. You can't attune to a robe of the archmagi that doesn't correspond to your alignment.",
 				"You gain these benefits while wearing the robe:",
@@ -15386,42 +15386,42 @@
 			]
 		},
 		{
-			"name": "Staff of Power",
+			"name": "威力法杖", "ENG_name": "Staff of Power",
 			"technology": "Staff",
 			"weight": "4",
 			"tier": "Major",
 			"rarity": "Very Rare",
 			"source": "DMG",
 			"page": 202,
-			"reqAttune": "by a Sorcerer, Warlock, or Wizard",
+			"reqAttune": "由術士、契術師、或法師",
 			"entries": [
-				"This staff can be wielded as a magic quarterstaff that grants a +2 bonus to attack and damage rolls made with it. While holding it, you gain a +2 bonus to Armor Class, saving throws, and spell attack rolls.",
-				"The staff has 20 charges for the following properties. The staff regains {@dice 2d8+4} expended charges daily at dawn. If you expend the last charge, roll a {@dice d20}. On a 1, the staff retains its +2 bonus to attack and damage roll but loses all other properties. On a 20, the staff regain {@dice 1d8+2} charges.",
+				"這把法杖可以被做為魔法{@item 長棍}使用，並在使用它進行的攻擊檢定和傷害骰上具有+2加值。當持握它時，你的防禦等級、豁免檢定、和法術攻擊加值將獲得+2加值。",
+				"這把法杖含有20發充能以用做下列用途。這把法杖會在每日清晨恢復{@dice 2d8+4}發已消耗的充能。若你消耗了這把法杖的最後一發充能，骰一顆{@dice d20}。若結果為1，則這把法杖將保留它在攻擊檢定和傷害骰上的+2加值，但失去所有其他特性。若結果為20，則這把法杖將恢復{@dice 1d8+2}發充能。",
 				{
-					"name": "Power Strike",
+					"name": "威力打擊", "tENG_name": "Power Strike",
 					"type": "entries",
 					"entries": [
-						"When you hit with a melee attack using the staff, you can expend 1 charge to deal an extra {@dice 1d6} force damage to the target."
+						"當你使用這把法杖以一次近戰攻擊命中目標時，你可以消耗1發充能以對目標造成額外的{@dice 1d6}力場傷害。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Spells",
+					"name": "法術", "tENG_name": "Spells",
 					"entries": [
-						"While holding this staff, you can use an action to expend 1 or more of its charges to cast one of the following spells from it, using your spell save DC and spell attack bonus: {@spell cone of cold} (5 charges), {@spell fireball} (5th-level version, 5 charges), {@spell globe of invulnerability} (6 charges), {@spell hold monster} (5 charges), {@spell levitate} (2 charges). {@spell lightning bolt} (5th-level version, 5 charges), {@spell magic missile} (1 charge), {@spell ray of enfeeblement} (1 charge), or {@spell wall of force} (5 charges)."
+						"當持握這把法杖時，你可以使用一個動作以消耗1發或以上的充能，並從它施放下列其中一個法術，使用你的法術豁免DC和法術攻擊加值：{@spell 寒冰錐}(5發充能)、{@spell 火球術}(5環版本，5發充能)、{@spell 法術無效結界}(6發充能)、{@spell 怪物定身術}(5發充能)、{@spell 浮空術}(2發充能)、{@spell 閃電束}(5環版本，5發充能)、{@spell 魔法飛彈}(1發充能)、{@spell 衰弱射線}(1發充能)、或{@spell 力牆術}(5發充能)。"
 					]
 				},
 				{
-					"name": "Retributive Strike",
+					"name": "反饋衝擊", "tENG_name": "Retributive Strike",
 					"type": "entries",
 					"entries": [
-						"You can use an action to break the staff over your knee or against a solid surface, performing a retributive strike. The staff is destroyed and releases its remaining magic in an explosion that expands to fill a 30-foot-radius sphere centered on it.",
-						"You have a {@chance 50} chance to instantly travel to a random plane of existence, avoiding the explosion. If you fail to avoid the effect, you take force damage equal to 16 × the number of charges in the staff. Every other creature in the area must make a DC 17 Dexterity saving throw. On a failed save, a creature takes an amount of damage based on how far away it is from the point of origin, as shown in the following table. On a successful save, a creature takes half as much damage.",
+						"你可以使用一個動作將這把法杖在你的膝蓋或堅固表面上折斷，釋放出一陣反饋衝擊。這把法杖將因此被摧毀，並產生一陣以它為中心30呎半徑的爆炸，釋放出它剩餘的魔法能量。",
+						"你有{@chance 50}％的機率會在瞬間被傳送到一個隨機的存在位面以避開爆炸。若你沒能成功避開這個效果，則你將受到等同於16 x 法杖剩餘充能數的力場傷害。爆炸範圍內的每個其他生物都必須進行一次DC 17的敏捷豁免。若豁免失敗，該生物所受到的傷害量將基於它與爆炸中心的距離決定，如下表所示。若豁免成功，則該生物只受到一半的傷害。",
 						{
 							"type": "table",
 							"colLabels": [
-								"Distance from Origin",
-								"Effect"
+								"與爆炸中心的距離",
+								"傷害"
 							],
 							"colStyles": [
 								"col-3",
@@ -15429,16 +15429,16 @@
 							],
 							"rows": [
 								[
-									"10 ft. away or closer",
-									"8 × the number of charges in the staff"
+									"10呎或更近",
+									"8 × 法杖剩餘充能數"
 								],
 								[
-									"11 to 20 ft. away",
-									"6 × the number of charges in the staff"
+									"11 到 20呎",
+									"6 × 法杖剩餘充能數"
 								],
 								[
-									"21 to 30 ft. away",
-									"4 × the number of charges in the staff"
+									"21 到 30呎",
+									"4 × 法杖剩餘充能數"
 								]
 							]
 						}
@@ -15462,7 +15462,7 @@
 			]
 		},
 		{
-			"name": "Staff of Striking",
+			"name": "強襲法杖", "ENG_name": "Staff of Striking",
 			"technology": "Staff",
 			"weight": "4",
 			"tier": "Major",
@@ -15471,8 +15471,8 @@
 			"page": 203,
 			"reqAttune": true,
 			"entries": [
-				"This staff can be wielded as a magic quarterstaff that grants a +3 bonus to attack and damage rolls made with it.",
-				"The staff has 10 charges. When you hit with a melee attack using it, you can expend up to 3 of its charges. For each charge you expend, the target takes an extra {@dice 1d6} force damage. The staff regains {@dice 1d6+4} expended charges daily at dawn. If you expend the last charge, roll a {@dice d20}. On a 1, the staff becomes a nonmagical quarterstaff."
+				"這把法杖可以被做為魔法{@item 長棍}使用，並在使用它進行的攻擊檢定和傷害骰上具有+3加值。",
+				"這把法杖含有10發充能。當你使用它以一次近戰攻擊命中目標時，你可以消耗它的最多3發充能。你每消耗一發充能，目標便會受到額外的{@dice 1d6}力場傷害。這把法杖會在每日清晨恢復{@dice 1d6+4}發已消耗的充能。若你消耗了這把法杖的最後一發充能，骰一顆{@dice d20}。若結果為1，則這把法杖將失去它的特性並變為一把非魔法{@item 長棍}。"
 			],
 			"charges": 10,
 			"lootTables": [
@@ -15480,7 +15480,7 @@
 			]
 		},
 		{
-			"name": "Staff of Swarming Insects",
+			"name": "蟲群法杖", "ENG_name": "Staff of Swarming Insects",
 			"technology": "Staff",
 			"weight": "4",
 			"tier": "Major",
@@ -15489,19 +15489,19 @@
 			"page": 203,
 			"reqAttune": "由吟遊詩人、牧師、德魯伊、術士、契術師、或法師",
 			"entries": [
-				"This staff has 10 charges and regains {@dice 1d6+4} expended charges daily at dawn. If you expend the last charge, roll a {@dice d20}. On a 1, a {@creature swarm of insects} consumes and destroys the staff, then disperses.",
+				"這把法杖含有10發充能，且會在每日清晨恢復{@dice 1d6+4}發已消耗的充能。若你消耗了這把法杖的最後一發充能，骰一顆{@dice d20}。若結果為1，則一群蟲群將會吞噬並摧毀這把法杖，將著消失無蹤。",
 				{
-					"name": "Spells",
+					"name": "法術", "tENG_name": "Spells",
 					"type": "entries",
 					"entries": [
-						"While holding the staff, you can use an action to expend some of its charges to cast one of the following spells from it, using your spell save DC: {@spell giant insect} (4 charges) or {@spell insect plague} (5 charges)."
+						"當持握這把法杖時，你可以使用一個動作以消耗它的其中一些充能，並從它施放下列其中一個法術，使用你的法術豁免DC：{@spell 巨蟲術}(4發充能)、或{@spell 疫病蟲群}(5發充能)。"
 					]
 				},
 				{
-					"name": "Insect Cloud",
+					"name": "蟲群之雲", "tENG_name": "Insect Cloud",
 					"type": "entries",
 					"entries": [
-						"While holding the staff, you can use an action and expend 1 charge to cause a swarm of harmless flying insects to spread out in a 30-foot radius from you. The insects remain for 10 minutes, making the area heavily obscured for creatures other than you. The swarm moves with you, remaining centered on you. A wind of at least 10 miles per hour disperses the swarm and ends the effect."
+						"當持握這把法杖時，你可以使用一個動作以消耗1發充能，並使一群無害的飛行蟲群佈滿你周遭30呎半徑的區域。這些蟲群將持續存在長達10分鐘，並使這片區域對除了你以外的生物視作重度遮蔽。這些蟲群會跟隨你移動，並保持以你為中心。一陣風速至少每小時10哩的風將會吹散這些蟲群並結束這個效果。"
 					]
 				}
 			],
@@ -15560,7 +15560,7 @@
 							"type": "list",
 							"items": [
 								"Your proficiency bonus to Intelligence ({@skill Arcana}) and Intelligence ({@skill History}) checks is doubled.",
-								"You can't be {@condition blinded}, {@condition charmed}, {@condition deafened}, {@condition 恐懼}, {@condition petrified}, or {@condition stunned}.",
+								"You can't be {@condition blinded}, {@condition charmed}, {@condition deafened}, {@condition 恐懼}, {@condition petrified}, or {@condition 震懾}.",
 								"Undead with a challenge rating of 2 or lower will neither threaten nor attack you unless you harm them.",
 								"You can wield the staff as a +3 quarterstaff that deals an extra 10 ({@dice 3d6}) necrotic damage on a hit."
 							]
@@ -15599,38 +15599,38 @@
 			"rarity": "Legendary",
 			"source": "DMG",
 			"page": 203,
-			"reqAttune": "by a Sorcerer, Warlock, or Wizard",
+			"reqAttune": "由術士、契術師、或法師",
 			"entries": [
-				"This staff can be wielded as a magic quarterstaff that grants a +2 bonus to attack and damage rolls made with it. While you hold it, you gain a +2 bonus to spell attack rolls.",
-				"The staff has 50 charges for the following properties. It regains {@dice 4d6+2} expended charges daily at dawn. If you expend the last charge, roll a {@dice d20}. On a 20, the staff regains {@dice 1d12+1} charges.",
+				"這把法杖可以被做為魔法{@item 長棍}使用，並在使用它進行的攻擊檢定和傷害骰上具有+2加值。當持握這把法杖時，你在法術攻擊檢定中具有+2加值。",
+				"這把法杖含有50發充能以用做下列用途。這把法杖會在每日清晨恢復{@dice 4d6+2}發已消耗的充能。若你消耗了這把法杖的最後一發充能，骰一顆{@dice d20}。若結果為20，則這把法杖將恢復{@dice 1d12+1}發充能。",
 				{
-					"name": "Spell Absorption",
+					"name": "法術吸收", "tENG_name": "Spell Absorption",
 					"type": "entries",
 					"entries": [
-						"While holding the staff, you have advantage on saving throws against spells. In addition, you can use your reaction when another creature casts a spell that targets only you. If you do, the staff absorbs the magic of the spell, canceling its effect and gaining a number of charges equal to the absorbed spell's level. However, if doing so brings the staff's total number of charges above 50, the staff explodes as if you activated its retributive strike (see below)."
+						"當持握這把法杖時，你在對抗法術的豁免檢定中具有優勢。此外，當另一個生物施放一個只以你為目標的法術時，你可以使用你的反應。若你這麼做，則這把法杖將吸收該法術的魔法，取消該法術的效果並回復等同於被吸收法術環階的充能數。然而，若這麼做會導致該法杖的總充能數超過50，則這把法杖將如同你啟動了它的反饋衝擊特性而爆炸（參照下文）。"
 					]
 				},
 				{
-					"name": "Spells",
+					"name": "法術", "tENG_name": "Spells",
 					"type": "entries",
 					"entries": [
-						"While holding the staff, you can use an action to expend some of its charges to cast one of the following spells from it, using your spell save DC and spellcasting ability: {@spell conjure elemental} (7 charges), {@spell dispel magic} (3 charges), {@spell fireball} (7th-level version, 7 charges), {@spell flaming sphere} (2 charges), {@spell ice storm} (4 charges), {@spell invisibility} (2 charges), {@spell knock} (2 charges), {@spell lightning bolt} (7th-level version, 7 charges), {@spell passwall} (5 charges), {@spell plane shift} (7 charges), {@spell telekinesis} (5 charges), {@spell wall of fire} (4 charges), or {@spell web} (2 charges).",
-						"You can also use an action to cast one of the following spells from the staff without using any charges: {@spell arcane lock}, {@spell detect magic}, {@spell enlarge/reduce}, {@spell light}, {@spell mage hand}, or {@spell protection from evil and good}."
+						"當持握這把法杖時，你可以使用一個動作以消耗它的其中一些充能，並從它施放下列其中一個法術，使用你的法術豁免DC和施法屬性：{@spell 召喚元素生物}(7發充能)、{@spell 解除魔法}(3發充能)、{@spell 火球術}(7環版本，7發充能)、{@spell 熾焰法球}(2發充能)、{@spell 冰風暴}(4發充能)、{@spell 隱形術}(2發充能)、{@spell 敲擊術}(2發充能)、{@spell 閃電束}(7環版本，7發充能)、{@spell 穿牆術}(5發充能)、{@spell 異界傳送}(7發充能)、{@spell 心靈遙控}(5發充能)、{@spell 火牆術}(4發充能)、或{@spell 蛛網術}(2發充能)。",
+						"你也可以使用一個動作並從這把法杖施放下列其中一個法術，而無需消耗任何充能：{@spell 祕法鎖}、{@spell 偵測魔法}、{@spell 變巨/縮小術}、{@spell 光亮術}、{@spell 法師之手}、或{@spell 防護善惡}。"
 					]
 				},
 				{
-					"name": "Retributive Strike",
+					"name": "反饋衝擊", "tENG_name": "Retributive Strike",
 					"type": "entries",
 					"entries": [
-						"You can use an action to break the staff over your knee or against a solid surface, performing a retributive strike. The staff is destroyed and releases its remaining magic in an explosion that expands to fill a 30-foot-radius sphere centered on it.",
-						"You have a {@chance 50} chance to instantly travel to a random plane of existence, avoiding the explosion. If you fail to avoid the effect, you take force damage equal to 16 × the number of charges in the staff. Every other creature in the area must make a DC 17 Dexterity saving throw. On a failed save, a creature takes an amount of damage based on how far away it is from the point of origin, as shown in the following table. On a successful save, a creature takes half as much damage."
+						"你可以使用一個動作將這把法杖在你的膝蓋或堅固表面上折斷，釋放出一陣反饋衝擊。這把法杖將因此被摧毀，並產生一陣以它為中心30呎半徑的爆炸，釋放出它剩餘的魔法能量。",
+						"你有{@chance 50}％的機率會在瞬間被傳送到一個隨機的存在位面以避開爆炸。若你沒能成功避開這個效果，則你將受到等同於16 x 法杖剩餘充能數的力場傷害。爆炸範圍內的每個其他生物都必須進行一次DC 17的敏捷豁免。若豁免失敗，該生物所受到的傷害量將基於它與爆炸中心的距離決定，如下表所示。若豁免成功，則該生物只受到一半的傷害。"
 					]
 				},
 				{
 					"type": "table",
 					"colLabels": [
-						"Distance from Origin",
-						"Damage"
+						"與爆炸中心的距離",
+						"傷害"
 					],
 					"colStyles": [
 						"col-3",
@@ -15638,16 +15638,16 @@
 					],
 					"rows": [
 						[
-							"10 ft. away or closer",
-							"8 × the number of charges in the staff"
+							"10呎或更近",
+							"8 × 法杖剩餘充能數"
 						],
 						[
-							"11 to 20 ft. away",
-							"6 × the number of charges in the staff"
+							"11 到 20呎",
+							"6 × 法杖剩餘充能數"
 						],
 						[
-							"21 to 30 ft. away",
-							"4 × the number of charges in the staff"
+							"21 到 30呎",
+							"4 × 法杖剩餘充能數"
 						]
 					]
 				}
@@ -15697,30 +15697,30 @@
 			]
 		},
 		{
-			"name": "Staff of the Woodlands",
+			"name": "林地法杖", "ENG_name": "Staff of the Woodlands",
 			"technology": "Staff",
 			"weight": "4",
 			"tier": "Major",
 			"rarity": "Rare",
 			"source": "DMG",
 			"page": 204,
-			"reqAttune": "by a Druid",
+			"reqAttune": "由德魯伊",
 			"entries": [
-				"This staff can be wielded as a magic quarterstaff that grants a +2 bonus to attack and damage rolls made with it. While holding it, you have a +2 bonus to spell attack rolls.",
-				"The staff has 10 charges for the following properties. It regains {@dice 1d6+4} expended charges daily at dawn. If you expend the last charge, roll a {@dice d20}. On a 1, the staff loses its properties and becomes a nonmagical quarterstaff.",
+				"這把法杖可以被做為魔法{@item 長棍}使用，並在使用它進行的攻擊檢定和傷害骰上具有+2加值。當持握這把法杖時，你在法術攻擊檢定中具有+2加值。",
+				"這把法杖含有10發充能以用做下列用途。它會在每日清晨恢復{@dice 1d6+4}發已消耗的充能。若你消耗了這把法杖的最後一發充能，骰一顆{@dice d20}。若結果為1，則這把法杖將失去它的特性並變為一把非魔法{@item 長棍}。",
 				{
 					"type": "entries",
-					"name": "Spells",
+					"name": "法術", "tENG_name": "Spells",
 					"entries": [
-						"You can use an action to expend 1 or more of the staff's charges to cast one of the following spells from it, using your spell save DC: {@spell animal friendship} (1 charge), {@spell awaken} (5 charges), {@spell barkskin} (2 charges), {@spell locate animals or plants} (2 charges), {@spell speak with animals} (1 charge), {@spell speak with plants} (3 charges), or {@spell wall of thorns} (6 charges).",
-						"You can also use an action to cast the {@spell pass without trace} spell from the staff without using any charges."
+						"你可以使用一個動作以消耗1發或以上的充能，並從它施放下列其中一個法術，使用你的法術豁免DC：{@spell 化獸為友}(1發充能)、{@spell 啟蒙術}(5發充能)、{@spell 樹膚術}(2發充能)、{@spell 動植物定位術}(2發充能)、{@spell 動物交談術}(1發充能)、{@spell 植物交談術}(3發充能)、或{@spell 棘牆術}(6發充能)。",
+						"你也可以使用一個動作並從這把法杖施放{@spell 行蹤無跡}，而無需消耗任何充能。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Tree Form",
+					"name": "樹木型態", "tENG_name": "Tree Form",
 					"entries": [
-						"You can use an action to plant one end of the staff in fertile earth and expend 1 charge to transform the staff into a healthy tree. The tree is 60 feet tall and has a 5-foot-diameter trunk, and its branches at the top spread out in a 20-foot radius. The tree appears ordinary but radiates a faint aura of transmutation magic if targeted by {@spell detect magic}. While touching the tree and using another action to speak its command word, you return the staff to its normal form. Any creature in the tree falls when it reverts to a staff."
+						"你可以使用一個動作以將這把法杖的一端植入肥沃的泥土中，並消耗1發充能以將這把法杖轉變成一株健康的樹木。這棵樹有60呎高，樹幹寬度為5呎直徑，且它的頂端的樹冠以20呎半徑展開。這棵樹看起來和普通的樹木沒什麼區別，但若被做為{@spell 偵測魔法}的目標，則會散發出淡淡的變化系魔法靈光。你可以在觸碰這棵樹的時候使用另一個動作說出它的命令語，將這把法杖變回它原本的型態。任何在樹木上的生物都會在其變回法杖時摔落。"
 					]
 				}
 			],
@@ -15740,7 +15740,7 @@
 			]
 		},
 		{
-			"name": "Staff of Thunder and Lightning",
+			"name": "雷霆閃電法杖", "ENG_name": "Staff of Thunder and Lightning",
 			"technology": "Staff",
 			"weight": "4",
 			"tier": "Major",
@@ -15749,40 +15749,40 @@
 			"page": 204,
 			"reqAttune": true,
 			"entries": [
-				"This staff can be wielded as a magic quarterstaff that grants a +2 bonus to attack and damage rolls made with it. It also has the following additional properties. When one of these properties is used, it can't be used again until the next dawn.",
+				"這把法杖可以被做為魔法{@item 長棍}使用，並在使用它進行的攻擊檢定和傷害骰上具有+2加值。它同時具有下列的額外特性。當其中一個特性被使用，則該特性直到次日清晨之前都不能再被使用。",
 				{
 					"type": "entries",
-					"name": "Lightning",
+					"name": "閃電", "tENG_name": "Lightning",
 					"entries": [
-						"When you hit with a melee attack using the staff, you can cause the target to take an extra {@dice 2d6} lightning damage."
+						"當你使用這把法杖以一次近戰攻擊命中目標時，你可以使目標受到額外的{@dice 2d6}閃電傷害。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Thunder",
+					"name": "雷鳴", "tENG_name": "Thunder",
 					"entries": [
-						"When you hit with a melee attack using the staff, you can cause the staff to emit a crack of thunder, audible out to 300 feet. The target you hit must succeed on a DC 17 Constitution saving throw or become {@condition stunned} until the end of your next turn."
+						"當你使用這把法杖以一次近戰攻擊命中目標時，你可以使這把法杖發出一道雷鳴聲，可以在最遠300呎的距離外被聽到。你所命中的目標必須成功通過一次DC 17的體質豁免，否則被{@condition 震懾}直到你的下個回合結束。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Lightning Strike",
+					"name": "閃電衝擊", "tENG_name": "Lightning Strike",
 					"entries": [
-						"You can use an action to cause a bolt of lightning to leap from the staff's tip in a line that is 5 feet wide and 120 feet long. Each creature in that line must make a DC 17 Dexterity saving throw, taking {@dice 9d6} lightning damage on a failed save, or half as much damage on a successful one."
+						"你可以使用一個動作以讓一道閃電束從此法杖的尖端躍出，形成一道5呎寬，120呎長的直線範圍。每個在直線範圍內的生物都必須進行一次DC 17的敏捷豁免，豁免失敗將受到{@dice 9d6}閃電傷害，豁免成功則只受到一半的傷害。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Thunderclap",
+					"name": "雷鳴迸發", "tENG_name": "Thunderclap",
 					"entries": [
-						"You can use an action to cause the staff to issue a deafening thunderclap, audible out to 600 feet. Each creature within 60 feet of you (not including you) must make a DC 17 Constitution saving throw. On a failed save, a creature takes {@dice 2d6} thunder damage and becomes {@condition deafened} for 1 minute. On a successful save, a creature takes half damage and isn't {@condition deafened}."
+						"你可以使用一個動作讓此法杖迸發出一道震耳欲聾的雷鳴聲，可以在最遠600呎的距離外被聽到。每個距離你60呎內的生物（不包括你）都必須進行一次DC 17的體質豁免。若豁免失敗，該生物將受到{@dice 2d6}雷鳴傷害且陷入{@condition 耳聾}狀態長達1分鐘。若豁免成功，則該生物只受到一半的傷害且不會陷入{@condition 耳聾}狀態。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Thunder and Lightning",
+					"name": "雷霆閃電", "tENG_name": "Thunder and Lightning",
 					"entries": [
-						"You can use an action to use the Lightning Strike and Thunderclap properties at the same time. Doing so doesn't expend the daily use of those properties, only the use of this one."
+						"你可以使用一個動作以在同時使用閃電衝擊和雷鳴迸發的特性。這麼做不會消耗這些特性的每日使用次數，而只會消耗這個特性的使用次數。"
 					]
 				}
 			],
@@ -15791,7 +15791,7 @@
 			]
 		},
 		{
-			"name": "Staff of Withering",
+			"name": "凋零法杖", "ENG_name": "Staff of Withering",
 			"technology": "Staff",
 			"weight": "4",
 			"tier": "Major",
@@ -15800,8 +15800,8 @@
 			"page": 205,
 			"reqAttune": "由牧師、德魯伊、或契術師",
 			"entries": [
-				"This staff has 3 charges and regains {@dice 1d3} expended charges daily at dawn.",
-				"The staff can be wielded as a magic quarterstaff. On a hit, it deals damage as a normal quarterstaff, and you can expend 1 charge to deal an extra {@dice 2d10} necrotic damage to the target. In addition, the target must succeed on a DC 15 Constitution saving throw or have disadvantage for 1 hour on any ability check or saving throw that uses Strength or Constitution."
+				"這把法杖含有3發充能，且會在每日清晨恢復{@dice 1d3}發已消耗的充能。",
+				"這把法杖可以被做為一把魔法{@item 長棍|phb}使用。若命中，它將做為一把普通長棍造成其原本的傷害，且你可以消耗1發充能以對目標造成額外的{@dice 2d10}死靈傷害。此外，目標必須成功通過一次DC 15的體質豁免，否則將在任何使用力量或體質的屬性檢定或豁免檢定中承受劣勢長達1小時。"
 			],
 			"charges": 3,
 			"lootTables": [
@@ -15954,7 +15954,7 @@
 			"source": "PotA",
 			"page": 223,
 			"entries": [
-				"This boomerang is a ranged weapon carved from {@creature griffon} bone and etched with the symbol of elemental air. When thrown, it has a range of 60/120 feet, and any creature that is proficient with the javelin is also proficient with this weapon. On a hit, the boomerang deals {@dice 1d4} bludgeoning damage and {@dice 3d4} thunder damage, and the target must succeed on a DC 10 Constitution saving throw or be {@condition stunned} until the end of its next turn. On a miss, the boomerang returns to the thrower's hand.",
+				"This boomerang is a ranged weapon carved from {@creature griffon} bone and etched with the symbol of elemental air. When thrown, it has a range of 60/120 feet, and any creature that is proficient with the javelin is also proficient with this weapon. On a hit, the boomerang deals {@dice 1d4} bludgeoning damage and {@dice 3d4} thunder damage, and the target must succeed on a DC 10 Constitution saving throw or be {@condition 震懾} until the end of its next turn. On a miss, the boomerang returns to the thrower's hand.",
 				"Once the boomerang deals thunder damage to a target, the weapon loses its ability to deal thunder damage and its ability to stun a target. These properties return after the boomerang spends at least 1 hour inside an elemental air node."
 			]
 		},
@@ -19031,7 +19031,7 @@
 					"name": "Shock Wave",
 					"type": "entries",
 					"entries": [
-						"You can use an action to strike the ground with Whelm and send a shock wave out from the point of impact. Each creature of your choice on the ground within 60 feet of that point must succeed on a DC 15 Constitution saving throw or become {@condition stunned} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. Once used, this property can't be used again until the next dawn."
+						"You can use an action to strike the ground with Whelm and send a shock wave out from the point of impact. Each creature of your choice on the ground within 60 feet of that point must succeed on a DC 15 Constitution saving throw or become {@condition 震懾} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. Once used, this property can't be used again until the next dawn."
 					]
 				},
 				{
