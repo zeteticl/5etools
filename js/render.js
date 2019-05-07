@@ -3503,7 +3503,7 @@ Renderer.item = {
 		}
 		// add additional entries based on type (e.g. XGE variants)
 		if (item.type === "T" || item.type === "AT" || item.type === "INS" || item.type === "GS") { // tools, artisan tools, instruments, gaming sets
-			(item.additionalEntries = item.additionalEntries || []).push({type: "hr"}, `{@note See the {@5etools Tool Proficiencies|variantrules.html|${UrlUtil.encodeForHash(["Tool Proficiencies", "XGE"])}} entry on the Variant and Optional rules page for more information.}`);
+			(item.additionalEntries = item.additionalEntries || []).push({type: "hr"}, `{@note 參見「變體與可選規則」頁面的{@5etools 工具熟練|variantrules.html|${UrlUtil.encodeForHash(["Tool Proficiencies", "XGE"])}}條目以瞭解更多情報。}`);
 		}
 		if (item.type && Renderer.item._additionalEntriesMap[item.type]) {
 			const additional = Renderer.item._additionalEntriesMap[item.type];
