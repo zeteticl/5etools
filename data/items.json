@@ -790,7 +790,7 @@
 			]
 		},
 		{
-			"name": "Bag of Beans",
+			"name": "魔豆之袋", "ENG_name": "Bag of Beans",
 			"wondrous": true,
 			"weight": "0.5",
 			"tier": "Minor",
@@ -798,14 +798,14 @@
 			"source": "DMG",
 			"page": 152,
 			"entries": [
-				"Inside this heavy cloth bag are {@dice 3d4} dry beans. The bag weighs ½ pound plus ¼ pound for each bean it contains.",
-				"If you dump the bag's contents out on the ground, they explode in a 10-foot radius, extending from the beans. Each creature in the area, including you, must make a DC 15 Dexterity saving throw, taking {@dice 5d4} fire damage on a failed save, or half as much damage on a successful one. The fire ignites flammable objects in the area that aren't being worn or carried.",
-				"If you remove a bean from the bag, plant it in dirt or sand, and then water it, the bean produces an effect 1 minute later from the ground where it was planted. The DM can choose an effect from the following table, determine it randomly, or create an effect.",
+				"這個沉重布袋內裝著{@dice 3d4}顆乾燥的豆子。這個袋子重1/2磅，再加上每顆豆子1/4磅的重量。",
+				"若你將這個袋子內的東西倒在地面，這些豆子將引發一場10呎半徑的爆炸。每個範圍內的生物（包括你在內）都必須進行一次DC 15的敏捷豁免，豁免失敗將受到{@dice 5d4}火焰傷害，豁免成功則只受到一半的傷害。這個火焰將會點燃範圍內未被穿戴或攜帶的可燃物體。",
+				"若你從袋中拿出一顆豆子，並將它種在土壤或砂石中，並對它澆水，它將在1分鐘之後從它被種植的地面處產生一個效果。DM可以從下表中選擇一種效果、隨機決定、或是創造一個新的效果。",
 				{
 					"type": "table",
 					"colLabels": [
 						"{@dice d100}",
-						"Effect"
+						"效果"
 					],
 					"colStyles": [
 						"col-1 text-align-center",
@@ -814,51 +814,51 @@
 					"rows": [
 						[
 							"01",
-							"{@dice 5d4} toadstools sprout. If a creature eats a toadstool, roll any die. On an odd roll, the eater must succeed on a DC 15 Constitution saving throw or take {@dice 5d6} poison damage and become {@condition 中毒} for 1 hour. On an even roll, the eater gains {@dice 5d6} temporary hit points for 1 hour."
+							"{@dice 5d4}株傘蕈破土而出。若一個生物吃下一株傘蕈，骰一顆任意骰。若結果為奇數，則食用者必須成功通過一次DC 15的體質豁免，否則受到{@dice 5d6}毒素傷害，且陷入{@condition 中毒}長達1小時。若結果為偶數，則食用者將獲得{@dice 5d6}臨時生命值長達1小時。"
 						],
 						[
 							"02-10",
-							"A geyser erupts and spouts water, beer, berry juice, tea, vinegar, wine, or oil (DM's choice) 30 feet into the air for {@dice 1d12} rounds."
+							"一道噴泉從地面噴湧而出到30呎的高空，持續{@dice 1d12}輪。這道噴泉的液體可以是水、啤酒、莓果汁、茶、醋、或油（由DM決定）。"
 						],
 						[
 							"11-20",
-							"A {@creature treant} sprouts. There's a {@chance 50} chance that the treant is chaotic evil and attacks."
+							"一個{@creature 樹人}破土而出。這個樹人有{@chance 50}的機率會是混亂邪惡，並會發起攻擊。"
 						],
 						[
 							"21-30",
-							"An animate, immobile stone statue in your likeness rises. It makes verbal threats against you. If you leave it and others come near, it describes you as the most heinous of villains and directs the newcomers to find and attack you. If you are on the same plane of existence as the statue, it knows where you are. The statue becomes inanimate after 24 hours."
+							"一尊外型與你相像，被活化但無法移動的石製雕像從地面升起。它將對你進行言語上的威脅。若你離開它且其他人接近到它身邊，它將會把你描述成一名最卑劣的惡棍，並引導他們尋找並攻擊你。若你和這尊雕像處於相同的存在位面，它將會知曉你所在的位置。這尊雕像將在24小時後變成無生命的石像。"
 						],
 						[
 							"31-40",
-							"A campfire with blue flames springs forth and burns for 24 hours (or until it is extinguished)."
+							"一團藍色火焰的營火湧現而出，並燃燒持續24小時（或直到被熄滅）。"
 						],
 						[
 							"41-50",
-							"{@dice 1d6+6} {@creature shrieker|mm|shriekers} sprout."
+							"{@dice 1d6+6}個{@creature 尖叫蕈|mm}破土而出。"
 						],
 						[
 							"51-60",
-							"{@dice 1d4+8} bright pink toads crawl forth. Whenever a toad is touched, it transforms into a Large or smaller monster of the DM's choice. The monster remains for 1 minute, then disappears in a puff of bright pink smoke."
+							"{@dice 1d4+8}個鮮豔粉紅色的蟾蜍從土中爬出。每當一個蟾蜍被觸碰，它將轉變成一個體型為大型或更小，由DM所選的怪物。這個怪物將存在長達1分鐘，並接著在一陣亮粉色的煙霧中消失。"
 						],
 						[
 							"61-70",
-							"A hungry {@creature bulette} burrows up and attacks."
+							"一個飢餓的{@creature 鯊蜥獸}從土中掘出並發起攻擊。"
 						],
 						[
 							"71-80",
-							"A fruit tree grows. It has {@dice 1d10+20} fruit, {@dice 1d8} of which act as randomly determined magic potions, while one acts as an ingested poison of the DM's choice. The tree vanishes after 1 hour. Picked fruit remains, retaining any magic for 30 days."
+							"一棵果樹從地上長出。它長有{@dice 1d10+20}顆果實，其中{@dice 1d8}顆的效果等同隨機的魔法藥水，其中一顆的作用則等同一種由DM決定的服用型毒藥。這棵樹將在1小時之後消失。被摘下的果實仍會保留，且其中任何魔法都將維持長達30天。"
 						],
 						[
 							"81-90",
-							"A nest of {@dice 1d4+3} eggs springs up. Any creature that eats an egg must make a DC 20 Constitution saving throw. On a successful save, a creature permanently increases its lowest ability score by 1, randomly choosing among equally low scores. On a failed save, the creature takes {@dice 10d6} force damage from an internal magical explosion."
+							"一窩{@dice 1d4+3}個蛋將湧現而出。任何吃下蛋的生物都必須進行一次DC 20的體質豁免。若豁免成功，該生物最低的屬性值將永久增加1點，若有多個屬性同為最低則隨機決定。若豁免失敗，該生物將受到來自體內魔法爆炸而造成的{@dice 10d6}力場傷害。"
 						],
 						[
 							"91-99",
-							"A pyramid with a 60-foot-square base bursts upward. Inside is a sarcophagus containing a {@creature mummy lord}. The pyramid is treated as the {@creature mummy lord|mm|mummy lord's} lair, and its sarcophagus contains treasure of the DM's choice."
+							"一座基底為60呎平方呎的金字塔從地面迸發升起。其內部有著一個{@creature 木乃伊領主}的石棺。這座金字塔將被視為{@creature 木乃伊領主}的巢穴，且它的石棺內將裝有DM所決定的寶藏。"
 						],
 						[
 							"00",
-							"A giant beanstalk sprouts, growing to a height of the DM's choice. The top leads where the DM chooses, such as to a great view, a {@creature cloud giant|mm|cloud giant's} castle, or a different plane of existence."
+							"一顆巨大的豌豆莖從地上長出，並成長到DM所決定的高度。它的頂端將通往一處DM所選擇的場所，像是到一處雄偉的景點、一座{@creature 雲巨人|mm}的城堡、或另一個不同的存在位面。"
 						]
 					]
 				}
@@ -1684,10 +1684,10 @@
 			"page": 134
 		},
 		{
-			"name": "Blackrazor",
+			"name": "黑刃", "ENG_name": "Blackrazor",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "greatsword|phb",
+			"baseItem": "巨劍|phb",
 			"weight": "6",
 			"dmg1": "{@dice 2d6}",
 			"dmgType": "S",
@@ -1698,44 +1698,44 @@
 			"rarity": "Legendary",
 			"source": "DMG",
 			"page": 216,
-			"reqAttune": "by a Creature of non-Lawful Alignment",
+			"reqAttune": "由非守序陣營的生物",
 			"sentient": true,
 			"entries": [
-				"Hidden in the dungeon of White Plume Mountain, Blackrazor shines like a piece of night sky filled with stars. Its black scabbard is decorated with pieces of cut obsidian.",
-				"You gain a +3 bonus to attack and damage rolls made with this magic weapon. It has the following additional properties.",
+				"被藏在白羽山的地下城中，黑刃閃耀就如同一片滿佈繁星的夜空。它漆黑的劍鞘上裝飾著切割精良的黑曜石片。",
+				"你在使用這把魔法武器進行的攻擊檢定和傷害骰上具有+3加值。它還具有下列額外的特性。",
 				{
-					"name": "Devour Soul",
+					"name": "吞噬靈魂", "tENG_name": "Devour Soul",
 					"type": "entries",
 					"entries": [
-						"Whenever you use it to reduce a creature to 0 hit points, the sword slays the creature devours its soul, unless it is a construct or an undead. A creature whose soul has been devoured by Blackrazor can be restored to life only by a {@spell wish} spell.",
-						"When it devours a soul, Blackrazor grants you temporary hit points equal to the slain creature's hit point maximum. These hit points fade after 24 hours. As long as these temporary hit points last and you keep Blackrazor in hand, you have advantage on attack roll. saving throws, and ability checks.",
-						"If you hit an undead with this weapon, you take {@dice 1d10} necrotic damage and the target regains {@dice 1d10} hit point If this necrotic damage reduces you to 0 hit points, Blackrazor devours your soul."
+						"每當你使用它將一個生物的生命值歸零時，除非該生物為構裝體或不死生物，否則這把劍將殺死它並吞噬它的靈魂。一個靈魂被黑刃給吞噬的生物只能透過{@spell 祈願術}法術而被復活。",
+						"當黑刃吞噬一個靈魂時，黑刃將賦予你等同於被殺死生物的生命值最大值的臨時生命值。這些臨時生命值將在24小時之後消散。只要這些臨時生命值仍然存在，且你正手持黑刃，則你將在攻擊檢定、豁免檢定、和屬性檢定中具有優勢。",
+						"若你以這把武器命中一個不死生物，你將受到{@dice 1d10}死靈傷害，且目標將回復{@dice 1d10}點生命值。若這個死靈傷害將你的生命值歸零，黑刃將吞噬你的靈魂。"
 					]
 				},
 				{
-					"name": "Soul Hunter",
+					"name": "靈魂獵手", "tENG_name": "Soul Hunter",
 					"type": "entries",
 					"entries": [
-						"While you hold the weapon. you are aware of the presence of Tiny or larger creatures within 60 feet of you that aren't constructs or undead. You also can't be {@condition charmed} or {@condition 恐懼}.",
-						"Blackrazor can cast the {@spell haste} spell on you once per day. It decides when to cast the spell and maintains concentration on it so that you don't have to."
+						"當你持握這把武器，你將意識到任何距離你60呎內，體型為微型或更大，且並非構裝體或不死生物的生物的存在。你也將不會陷入{@condition 魅惑}或{@condition 恐懼}。",
+						"每天一次，黑刃可以對你施放{@spell 加速術}法術。它會決定何時施放這個法術，並由它維持該法術的專注，因此你並不需要維持其專注。"
 					]
 				},
 				{
-					"name": "Sentience",
+					"name": "智能", "tENG_name": "Sentience",
 					"type": "entries",
 					"entries": [
-						"Blackrazor is a sentient chaotic neutral weapon with an Intelligence of 17, a Wisdom of 10, and a Charisma of 19. It has hearing and darkvision out to a range of 120 feet.",
-						"The weapon can speak, read, and understand Common, and can communicate with its wielder telepathically. Its voice is deep and echoing. While you are attuned to it, Blackrazor also understands every language you know."
+						"黑刃是一把混亂中立的智能魔法武器，它具有17點智力、10點睿知、和19點魅力值。它具有聽覺和120呎範圍的黑暗視覺。",
+						"這把武器可以說、讀、並理解通用語，且可以透過心靈感應與它的持握者溝通。它的聲音低沉且帶有回聲。當你與它同調時，黑刃也將理解所有你知曉的語言。"
 					]
 				},
 				{
-					"name": "Personality",
+					"name": "個性", "tENG_name": "Personality",
 					"type": "entries",
 					"entries": [
-						"Blackrazor speaks with an imperious tone, as though accustomed to being obeyed.",
-						"The sword's purpose is to consume souls. It doesn't care whose souls it eats, including the wielder's. The sword believes that all matter and energy sprang from a void of negative energy and will one day return to it. Blackrazor is meant to hurry that process along.",
-						"Despite its nihilism, Blackrazor feels a strange kinship to {@item Wave} and {@item Whelm}, two other weapons locked away under White Plume Mountain. It wants the three weapons to be united again and wielded together in combat, even though it violently disagrees with {@item Whelm} and finds {@item Wave} tedious.",
-						"Blackrazor's hunger for souls must be regularly fed. If the sword goes three days or more without consuming a soul, a conflict between it and its wielder occurs at the next sunset."
+						"黑刃的語氣帶著傲慢，就像是它已經習慣於他人服從於它。",
+						"這把劍的目的就是吞噬靈魂。它並不在乎它所吞吃的是誰的靈魂，甚至包括其持有者在內。這把劍相信世間一切物質和能量都源自於負能量的虛無之中，且總有一日一切都將回歸其中。而黑刃則希望能加速這個過程。",
+						"儘管它信仰虛無主義，黑刃仍對{@item 波濤}和{@item 征服}這兩把同樣被封印於白羽山的武器抱有莫名的親近感。它希望這三把武器能夠再次重聚並一同戰鬥，儘管它相當反對{@item 征服}的意見，且覺得{@item 波濤}沉悶無趣。",
+						"黑刃渴求靈魂且必須被經常性的餵養。若這把劍超過三天或更久的時間都沒有吞噬靈魂，它將會在次日黃昏與它的持用者進行對抗。"
 					]
 				}
 			],
@@ -18790,7 +18790,7 @@
 			]
 		},
 		{
-			"name": "Wave",
+			"name": "波濤", "name": "Wave",
 			"type": "M",
 			"weaponCategory": "Martial",
 			"baseItem": "trident|phb",
@@ -19001,7 +19001,7 @@
 			]
 		},
 		{
-			"name": "Whelm",
+			"name": "征服", "name": "Whelm",
 			"type": "M",
 			"weaponCategory": "Martial",
 			"baseItem": "戰錘|phb",

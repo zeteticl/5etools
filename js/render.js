@@ -1503,7 +1503,7 @@ Renderer.getEntryDice = function (entry, name) {
 	}
 
 	function getDiceAsStr () {
-		if (entry.successThresh) return `${entry.successThresh} percent`;
+		if (entry.successThresh) return `${entry.successThresh}％`;
 		else if (typeof entry.toRoll === "string") return entry.toRoll;
 		else {
 			// handle legacy format
