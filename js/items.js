@@ -480,7 +480,7 @@ function loadhash (id) {
 			isImageTab,
 			$content,
 			item,
-			(fluffJson) => item.fluff || fluffJson.item.find(it => it.name === item.name && it.source === item.source),
+			(fluffJson) => item.fluff || fluffJson.item.find(it => (it.name === item.name || it.name === item.ENG_name) && it.source === item.source),
 			`data/fluff-items.json`,
 			() => true
 		);

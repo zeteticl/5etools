@@ -12532,20 +12532,20 @@
 			]
 		},
 		{
-			"name": "Ring of Animal Influence",
+			"name": "支配動物戒指", "ENG_name": "Ring of Animal Influence",
 			"type": "RG",
 			"tier": "Major",
 			"rarity": "Rare",
 			"source": "DMG",
 			"page": 189,
 			"entries": [
-				"This ring has 3 charges, and it regains {@dice 1d3} expended charges daily at dawn. While wearing the ring, you can use an action to expend 1 of its charges to cast one of the following spells:",
+				"這枚戒指含有3發充能，且它會在每日清晨恢復{@dice 1d3}發已消耗的充能。當穿戴此戒指時，你可以使用一個動作以消耗其中1發充能，並施放下列其中一個法術：",
 				{
 					"type": "list",
 					"items": [
-						"{@spell Animal friendship} (save DC 13)",
-						"{@spell Fear} (save DC 13), targeting only beasts that have an Intelligence of 3 or lower",
-						"{@spell Speak with animals}"
+						"{@spell 化獸為友}(豁免DC 13)",
+						"{@spell 恐懼術}(豁免DC 13)，只能選擇智力值為3或更低的野獸做為目標",
+						"{@spell 動物交談術}"
 					]
 				}
 			],
@@ -12620,7 +12620,7 @@
 			]
 		},
 		{
-			"name": "Ring of Evasion",
+			"name": "閃避戒指", "ENG_name": "Ring of Evasion",
 			"type": "RG",
 			"tier": "Major",
 			"rarity": "Rare",
@@ -12628,7 +12628,7 @@
 			"page": 191,
 			"reqAttune": true,
 			"entries": [
-				"This ring has 3 charges, and it regains {@dice 1d3} expended charges daily at dawn. When you fail a Dexterity saving throw while wearing it, you can use your reaction to expend 1 of its charges to succeed on that saving throw instead."
+				"這枚戒指含有3發充能，且它會在每日清晨恢復{@dice 1d3}發已消耗的充能。當你在穿戴此戒指時於一次敏捷豁免中失敗，你可以使用你的反應以消耗其中1發充能，並將該豁免檢定的結果改為成功。"
 			],
 			"charges": 3,
 			"lootTables": [
@@ -12636,7 +12636,7 @@
 			]
 		},
 		{
-			"name": "Ring of Feather Falling",
+			"name": "羽落戒指", "ENG_name": "Ring of Feather Falling",
 			"type": "RG",
 			"tier": "Major",
 			"rarity": "Rare",
@@ -12644,7 +12644,7 @@
 			"page": 191,
 			"reqAttune": true,
 			"entries": [
-				"When you fall while wearing this ring, you descend 60 feet per round and take no damage from falling."
+				"當你在穿戴此戒指時墜落時，你將以每輪60呎的速度下降，且不會受到任何來自墜落的傷害。"
 			],
 			"lootTables": [
 				"Magic Item Table G"
@@ -12703,7 +12703,7 @@
 			"reqAttune": true
 		},
 		{
-			"name": "Ring of Free Action",
+			"name": "自由行動戒指", "ENG_name": "Ring of Free Action",
 			"type": "RG",
 			"tier": "Major",
 			"rarity": "Rare",
@@ -12711,14 +12711,14 @@
 			"page": 191,
 			"reqAttune": true,
 			"entries": [
-				"While you wear this ring, difficult terrain doesn't cost you extra movement. In addition, magic can neither reduce your speed nor cause you to be {@condition paralyzed} or {@condition restrained}."
+				"當你穿戴此戒指時，困難地形將不會消耗你額外的移動速度。此外，魔法無法降低你的移動速度，也無法使你陷入{@condition 麻痺}或{@condition 束縛}狀態。"
 			],
 			"lootTables": [
 				"Magic Item Table G"
 			]
 		},
 		{
-			"name": "Ring of Invisibility",
+			"name": "隱身戒指", "ENG_name": "Ring of Invisibility",
 			"type": "RG",
 			"tier": "Major",
 			"rarity": "Legendary",
@@ -12726,14 +12726,14 @@
 			"page": 191,
 			"reqAttune": true,
 			"entries": [
-				"While wearing this ring, you can turn {@condition 隱形} as an action. Anything you are wearing or carrying is {@condition 隱形} with you. You remain {@condition 隱形} until the ring is removed, until you attack or cast a spell, or until you use a bonus action to become visible again."
+				"當穿戴此戒指時，你能夠以一個動作變得{@condition 隱形}。任何你所穿戴或攜帶的事物都將隨著你一起{@condition 隱形}。你將維持{@condition 隱形}直到此戒指被移除、直到你攻擊或施放法術、或直到你以一個附贈動作變得可見。"
 			],
 			"lootTables": [
 				"Magic Item Table I"
 			]
 		},
 		{
-			"name": "Ring of Jumping",
+			"name": "跳躍戒指", "ENG_name": "Ring of Jumping",
 			"type": "RG",
 			"tier": "Major",
 			"rarity": "Uncommon",
@@ -12741,7 +12741,7 @@
 			"page": 191,
 			"reqAttune": true,
 			"entries": [
-				"While wearing this ring, you can cast the {@spell jump} spell from it as a bonus action at will, but can target only yourself when you do so."
+				"當穿戴此戒指時，你可以隨意以一個附贈動作從它施放{@spell 跳躍術}法術，但當你這麼做時只能選擇自己為目標。"
 			],
 			"attachedSpells": [
 				"jump"
@@ -12761,7 +12761,7 @@
 			"reqAttune": true
 		},
 		{
-			"name": "Ring of Mind Shielding",
+			"name": "心靈護盾戒指", "ENG_name": "Ring of Mind Shielding",
 			"type": "RG",
 			"tier": "Major",
 			"rarity": "Uncommon",
@@ -12769,9 +12769,9 @@
 			"page": 191,
 			"reqAttune": true,
 			"entries": [
-				"While wearing this ring, you are immune to magic that allows other creatures to read your thoughts, determine whether you are lying, know your alignment, or know your creature type. Creatures can telepathically communicate with you only if you allow it.",
-				"You can use an action to cause the ring to become {@condition 隱形} until you use another action to make it visible, until you remove the ring, or until you die.",
-				"If you die while wearing the ring, your soul enters it, unless it already houses a soul. You can remain in the ring or depart for the afterlife. As long as your soul is in the ring, you can telepathically communicate with any creature wearing it. A wearer can't prevent this telepathic communication."
+				"當穿戴此戒指時，你將免疫於那些讓其他生物得以閱讀你的思想、辨別你是否說謊、知曉你的陣營、或知曉你的生物類型的魔法效果。其他生物只能在你同意的情況下與你透過心靈感應溝通。",
+				"你可以使用一個動作讓此戒指{@condition 隱形}，直到你使用另一個動作讓它變得可見，或直到你移除此戒指、或直到你死亡。",
+				"若你在穿戴這枚戒指時死亡，除非它內部已經居住著一個靈魂，否則你的靈魂將得以進入其中。你可以待在戒指內或從中離開以前往來生。只要你的靈魂還待在戒指內，你就可以和任何穿戴它的生物透過心靈感應溝通。穿戴者無法拒絕這種來自寄居靈魂的心靈感應溝通。"
 			],
 			"lootTables": [
 				"Magic Item Table F"
@@ -13018,7 +13018,7 @@
 			"reqAttune": true
 		},
 		{
-			"name": "Ring of Warmth",
+			"name": "溫暖戒指", "ENG_name": "Ring of Warmth",
 			"type": "RG",
 			"tier": "Major",
 			"rarity": "Uncommon",
@@ -13026,7 +13026,7 @@
 			"page": 193,
 			"reqAttune": true,
 			"entries": [
-				"While wearing this ring, you have resistance to cold damage. In addition, you and everything you wear and carry are unharmed by temperatures as low as -50 degrees Fahrenheit."
+				"當穿戴此戒指時，你將具有寒冰傷害的抗性。此外，你和你所穿戴或攜帶的所有東西都不會被最低華氏-50度的低溫給傷害。"
 			],
 			"lootTables": [
 				"Magic Item Table F"
@@ -13066,14 +13066,14 @@
 			]
 		},
 		{
-			"name": "Ring of Water Walking",
+			"name": "水行戒指", "ENG_name": "Ring of Water Walking",
 			"type": "RG",
 			"tier": "Major",
 			"rarity": "Uncommon",
 			"source": "DMG",
 			"page": 193,
 			"entries": [
-				"While wearing this ring, you can stand on and move across any liquid surface as if it were solid ground."
+				"當穿戴此戒指時，你可以在任何液體表面上站立或行走，就如同它們是固體表面一樣。"
 			],
 			"lootTables": [
 				"Magic Item Table F"
