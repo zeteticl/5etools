@@ -7138,10 +7138,10 @@
 			"page": 150
 		},
 		{
-			"name": "Hammer of Thunderbolts",
+			"name": "雷神之鎚", "ENG_name": "Hammer of Thunderbolts",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "maul|phb",
+			"baseItem": "巨鎚|phb",
 			"weight": "10",
 			"dmg1": "{@dice 2d6}",
 			"dmgType": "B",
@@ -7160,12 +7160,12 @@
 				"你在使用這把魔法武器進行的攻擊檢定和傷害骰上具有+1加值。",
 				{
 					"type": "entries",
-					"name": "Giant's Bane (Requires Attunement)",
+					"name": "巨人剋星(需同調)", "tENG_name": "Giant's Bane (Requires Attunement)",
 					"entries": [
-						"You must be wearing a {@italic belt of giant strength} (any variety) and {@item gauntlets of ogre power} to attune to this weapon. The attunement ends if you take off either of those items. While you are attuned to this weapon and holding it, your Strength score increases by 4 and can exceed 20, but not 30. When you roll a 20 on an attack roll made with this weapon against a giant, the giant must succeed on a DC 17 Constitution saving throw or die."
+						"你必須穿戴一條{@item 巨人力量腰帶}(任意一種)和{@item 食人魔力量護手}才能與這把武器同調。這個同調會在你卸下其中任何一件裝備時終止。當你與這把武器同調並持握它時，你的力量值增加4點且可以超過20，但不能超過30。當你在使用這把武器對一個巨人所進行的攻擊檢定中骰出了20時，該巨人必須成功通過一次DC 17的體質豁免，否則它將死亡。"
 					]
 				},
-				"The hammer also has 5 charges. While attuned to it, you can expend 1 charge and make a ranged weapon attack with the hammer, hurling it as if it had the thrown property with a normal range of 20 feet and a long range of 60 feet. If the attack hits, the hammer unleashes a thunderclap audible out to 300 feet. The target and every creature within 30 feet of it must succeed on a DC 17 Constitution saving throw or be {@condition 震懾} until the end of your next turn. The hammer regains {@dice 1d4+1} expended charges daily at dawn."
+				"這把鎚子同時含有5發充能。當與它同調時，你可以消耗1發充能並將這把鎚子投出，以它進行一次遠程武器攻擊，如同它具有20呎正常射程和60呎長射程的投擲屬性一樣。若該攻擊命中，這把鎚子將釋放出可以在最遠300呎的距離外被聽見的雷鳴聲。目標和所有距離它30呎內的生物都必須成功通過一次DC 17的體質豁免，否則被{@condition 震懾}直到你的下個回合結束。這把鎚子會在每日清晨恢復{@dice 1d4+1}發已消耗的充能。"
 			],
 			"charges": 5,
 			"lootTables": [
@@ -9957,7 +9957,7 @@
 			]
 		},
 		{
-			"name": "Moonblade",
+			"name": "月刃", "ENG_name": "Moonblade",
 			"type": "M",
 			"weaponCategory": "Martial",
 			"baseItem": "長劍|phb",
@@ -9971,20 +9971,20 @@
 			"rarity": "Legendary",
 			"source": "DMG",
 			"page": 217,
-			"reqAttune": "by an Elf or Half-Elf of Neutral Good Alignment",
+			"reqAttune": "由中立善良陣營的精靈或半精靈",
 			"sentient": true,
 			"entries": [
-				"Of all the magic items created by the elves, one of the most prized and jealously guarded is a moon blade. In ancient times, nearly all elven noble houses claimed one such blade. Over the centuries, some blades have faded from the world, their magic lost as family lines have become extinct. Other blades have vanished with their bearers during great quests. Thus, only a few of these weapons remain.",
-				"A moonblade passes down from parent to child. The sword chooses its bearer and remains bonded to that person for life. If the bearer dies, another heir can claim the blade. If no worthy heir exists, the sword lies dormant. It functions like a normal longsword until a worthy soul finds it and lays claim to its power.",
-				"A moonblade serves only one master at a time. The attunement process requires a special ritual in the throne room of an elven regent or in a temple dedicated to the elven gods.",
-				"A moonblade won't serve anyone it regards as craven, erratic, corrupt, or at odds with preserving and protecting elvenkind. If the blade rejects you, you make ability checks, attack rolls, and saving throws with disadvantage for 24 hours. If the blade accepts you, you become attuned to it and a new rune appears on the blade. You remain attuned to the weapon until you die or the weapon is destroyed.",
-				"A moonblade has one rune on its blade for each master it has served (typically {@dice 1d6+1}). The first rune always grants a +1 bonus to attack and damage rolls made with this magic weapon. Each rune beyond the first grants the moon blade an additional property. The DM chooses each property or determines it randomly on the Moon Blade Properties table.",
+				"在所有精靈所製造的魔法武器中，月刃是最具價值，也最被謹慎守護的。在遠古時期，幾乎每個精靈貴族家庭都擁有這麼一把長劍。幾個世紀以來，其中一些月刃已經從這個世界上消失，它們的魔法也隨著家族血脈的滅絕而消散。還有一些則伴隨其持用者消失在履行崇高使命的過程中。因此，只有寥寥幾把月刃被保存了下來。",
+				"月刃由親代傳給子女，代代相傳。這把劍會選擇它的持有者，並與這個人保持終生的聯繫。若持有者死亡，則其另一名繼承人將可以繼承這把劍。若是沒有任何適合的繼承人存在，則這把劍將進入休眠狀態，其功能等同一把普通長劍，直到一個配得上它的靈魂發現它，並要求獲得它的力量。",
+				"一把月刃同時只會服侍於一個主人。與它同調的過程需要在一名精靈攝政王的王宮、或在崇拜精靈諸神的神殿中舉行一種特殊的儀式。",
+				"月刃不會服侍於任何它認為懦弱、乖僻、墮落、或不願保護精靈一族的人。若這把劍拒絕了你，則你在接下來的24小時內所進行的屬性檢定、攻擊檢定、和豁免檢定中都具有劣勢。若這把劍接受了你，則你將與之同調，且一個新的符文將出現在它的刀刃上。你將維持與這把武器的同調直到你死亡，或是這把武器被摧毀。",
+				"月刃每服侍過一個主人，它的刀刃上就會浮現一個符文（通常會有共計{@dice 1d6+1}個符文）。第一個符文永遠是讓使用這把武器所進行的攻擊檢定和傷害骰上獲得+1加值。在這之後的每一個符文都將賦予該月刃一個額外的特性。由DM自行選擇每個特性或從月刃特性表中隨機決定。",
 				{
 					"type": "table",
-					"caption": "Moonblade Properties",
+					"caption": "月刃特性",
 					"colLabels": [
 						"{@dice d100}",
-						"Property"
+						"特性"
 					],
 					"colStyles": [
 						"col-1 text-align-center",
@@ -9993,51 +9993,51 @@
 					"rows": [
 						[
 							"01-40",
-							"Increase the bonus to attack and damage rolls by 1, to a maximum of +3. Reroll if the moonblade already has a +3 bonus."
+							"將它在攻擊檢定和傷害骰上的加值提升1點，最高到+3。若這把月刃已經具有+3加值，則重新擲骰。"
 						],
 						[
 							"41-80",
-							"The moonblade gains a randomly determined minor property (see \"Special Features\" DMG p143)."
+							"這把月刃獲得一個隨機決定的弱效特性（參見《地下城主指南》第143頁的「特殊性質」）。"
 						],
 						[
 							"81-82",
-							"The moonblade gains the finesse property."
+							"這把月刃獲得靈巧屬性。"
 						],
 						[
 							"83-84",
-							"The moonblade gains the thrown property (range 20/60 feet)."
+							"這把月刃獲得投擲屬性（射程20/60呎）。"
 						],
 						[
 							"85-86",
-							"The moonblade functions as a defender."
+							"這把月刃具有如同一把{@item 防禦者}的功能。"
 						],
 						[
 							"87-90",
-							"The moon blade scores a critical hit on a roll of 19 or 20."
+							"這把月刃會在骰出19或20的時候造成重擊。"
 						],
 						[
 							"91-92",
-							"When you hit with an attack using the moon blade, the attack deals an extra {@dice 1d6} slashing damage."
+							"當你使用這把月刃以一次攻擊命中目標時，該攻擊將造成額外的{@dice 1d6}劈砍傷害。"
 						],
 						[
 							"93-94",
-							"When you hit a creature of a specific type (such as dragon, fiend, or undead) with the moonblade, the target takes an extra {@dice 1d6} damage of one of these types: acid, cold, fire, lightning, or thunder."
+							"當你使用這把月刃命中一個特殊類型的生物（像是龍、邪魔、或不死生物）時，目標將額外受到{@dice 1d6}點下列其中一種類型的傷害：酸蝕、寒冰、火焰、閃電、雷鳴。"
 						],
 						[
 							"95-96",
-							"You can use a bonus action to cause the moonblade to flash brightly. Each creature that can see you and is within 30 feet of you must succeed on a DC 15 Constitution saving throw or become {@condition blinded} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. This property can't be used again until you take a short rest while attuned to the weapon."
+							"你可以使用一個附贈動作以讓這把月刃發出耀眼的閃光。每個距離你30呎內且可以看見你的生物必須成功通過一次DC 15的體質豁免，否則將陷入{@condition 目盲}長達1分鐘。一個生物可以在它的每個回合結束時重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。這個特性直到你在與這把武器同調時完成一次短休之前都不能再被使用。"
 						],
 						[
 							"97-98",
-							"The moonblade functions as a ring of spell storing."
+							"這把月刃具有如同一枚{@item 法術儲存戒指}的功能。"
 						],
 						[
 							"99",
-							"You can use an action to call forth an elfshadow, provided that you don't already have one serving you. The elfshadow appears in an unoccupied space within 120 feet of you. It uses the statistics for a {@creature shadow}, except it is neutral, immune to effects that turn undead, and doesn't create new shadows. You control this creature, deciding how it acts and moves. It remains until it drops to 0 hit points or you dismiss it as an action."
+							"只要你尚未喚出精靈陰影，你就可以使用一個動作以喚來一個精靈陰影。這個精靈陰影將出現在距離你120呎內的一處未被佔據空間。它使用{@creature 陰影}的遊戲數據，但其陣營為絕對中立，免疫於驅散不死的效果，且無法創造新的陰影。這個生物處於你的控制下，由你決定它將如何行動和移動。它將持續存在直到它的生命值歸零，或你以一個動作將它解消。"
 						],
 						[
 							"00",
-							"The moonblade functions as a {@item vorpal sword}."
+							"這把月刃具有如同一把{@item 斬首之劍}的功能。"
 						]
 					]
 				},
@@ -10045,17 +10045,17 @@
 					"name": "智能", "tENG_name": "Sentience",
 					"type": "entries",
 					"entries": [
-						"A moon blade is a sentient neutral good weapon with an Intelligence of 12, a Wisdom of 10, and a Charisma of 12. It has hearing and darkvision out to a range of 120 feet.",
-						"The weapon communicates by transmitting emotions, sending a tingling sensation through the wielder's hand when it wants to communicate something it has sensed. It can communicate more explicitly, through visions or dreams, when the wielder is either in a trance or asleep."
+						"月刃是一把中立善良的智能魔法武器，它具有12點智力、10點睿知、和12點魅力值。它具有聽覺和120呎範圍的黑暗視覺。",
+						"當它想要傳達某個它所感覺到的事物時，這把武器會透過傳遞情緒、並透過持用者的手傳送一陣刺痛般的感覺來進行交流。當持用者處於冥想或睡眠時，它也可以透過夢境或影像以進行更細緻的交流。"
 					]
 				},
 				{
 					"name": "個性", "tENG_name": "Personality",
 					"type": "entries",
 					"entries": [
-						"Every moonblade seeks the advancement of elvenkind and elven ideals. Courage, loyalty, beauty, music, and life are all part of this purpose.",
-						"The weapon is bonded to the family line it is meant to serve. Once it has bonded with an owner who shares its ideals, its loyalty is absolute.",
-						"If a moon blade has a flaw, it is overconfidence. Once it has decided on an owner, it believes that only that person should wield it, even if the owner falls short of elven ideals."
+						"每一把月刃都尋求著精靈族的進步和理想。勇氣、忠誠、美麗、音樂、和生命都是這些追求的一部份。",
+						"這把武器與其決心侍奉的家族血脈緊緊聯繫在一起。一旦它與一名和它有共同理想的持有者建立聯繫，它的忠誠就不會動搖。",
+						"若說月刃有什麼缺點，那就是它的過度自信。一旦決定了自己的持有者，它就認定只有對方能夠持用自己，即使其持有者並不符合精靈的理想也一樣。"
 					]
 				}
 			]
