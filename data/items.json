@@ -350,7 +350,7 @@
 						],
 						[
 							"71-95",
-							"You are {@condition paralyzed} for 1 minute or until this effect is ended with a {@spell lesser restoration} spell or similar magic."
+							"You are {@condition 麻痺} for 1 minute or until this effect is ended with a {@spell lesser restoration} spell or similar magic."
 						],
 						[
 							"96-00",
@@ -1153,7 +1153,7 @@
 			"source": "TftYP",
 			"page": 228,
 			"entries": [
-				"This scale bears celestial symbols on one pan and fiendish symbols on the other. You can use the scale to cast {@spell detect evil and good} as a ritual. Doing so requires you to place the scale on a solid surface, then sprinkle the pans with holy water or place a transparent gem worth 100 gp in each pan. The scale remains motionless if it detects nothing, tips to one side or the other for good (consecrated) or evil (desecrated), and fluctuates slightly if it detects a creature appropriate to the spell but neither good nor evil. By touching the scales after casting the ritual, you instantly learn any information the spell can normally convey, and then the effect ends."
+				"This scale bears celestial symbols on one pan and fiendish symbols on the other. You can use the scale to cast {@spell 偵測善惡} as a ritual. Doing so requires you to place the scale on a solid surface, then sprinkle the pans with holy water or place a transparent gem worth 100 gp in each pan. The scale remains motionless if it detects nothing, tips to one side or the other for good (consecrated) or evil (desecrated), and fluctuates slightly if it detects a creature appropriate to the spell but neither good nor evil. By touching the scales after casting the ritual, you instantly learn any information the spell can normally convey, and then the effect ends."
 			],
 			"attachedSpells": [
 				"detect evil and good"
@@ -2734,7 +2734,7 @@
 			"page": 157,
 			"reqAttune": true,
 			"entries": [
-				"This slender taper is dedicated to a deity and shares that deity's alignment. The candle's alignment can be detected with the {@spell detect evil and good} spell. The DM chooses the god and associated alignment or determines the alignment randomly.",
+				"This slender taper is dedicated to a deity and shares that deity's alignment. The candle's alignment can be detected with the {@spell 偵測善惡} spell. The DM chooses the god and associated alignment or determines the alignment randomly.",
 				{
 					"type": "table",
 					"colLabels": [
@@ -3459,7 +3459,7 @@
 			"page": 158,
 			"reqAttune": true,
 			"entries": [
-				"While you wear this cloak with its hood up, Wisdom ({@skill Perception}) checks made to see you have disadvantage. and you have advantage on Dexterity ({@skill 隱匿}) checks made to hide, as the cloak's color shifts to camouflage you. Pulling the hood up or down requires an action."
+				"While you wear this cloak with its hood up, Wisdom ({@skill 感知}) checks made to see you have disadvantage. and you have advantage on Dexterity ({@skill 隱匿}) checks made to hide, as the cloak's color shifts to camouflage you. Pulling the hood up or down requires an action."
 			],
 			"lootTables": [
 				"Magic Item Table F"
@@ -5172,8 +5172,8 @@
 				{
 					"type": "list",
 					"items": [
-						"Can cast {@spell detect magic} at will",
-						"Can cast {@spell detect evil and good} at will",
+						"Can cast {@spell 偵測魔法} at will",
+						"Can cast {@spell 偵測善惡} at will",
 						"Can detect any form of divination or scrying targeting the warforged host.",
 						"Intelligence (Arcana) +7",
 						"Intelligence (History) +7",
@@ -6045,7 +6045,7 @@
 			"page": 168,
 			"reqAttune": true,
 			"entries": [
-				"These crystal lenses fit over the eyes. While wearing them, you have advantage on Wisdom ({@skill Perception}) checks that rely on sight. In conditions of clear visibility, you can make out details of even extremely distant creatures and objects as small as 2 feet across."
+				"These crystal lenses fit over the eyes. While wearing them, you have advantage on Wisdom ({@skill 感知}) checks that rely on sight. In conditions of clear visibility, you can make out details of even extremely distant creatures and objects as small as 2 feet across."
 			],
 			"lootTables": [
 				"Magic Item Table F"
@@ -7348,7 +7348,7 @@
 					"name": "Spells",
 					"type": "entries",
 					"entries": [
-						"Hazirawn has 4 charges to cast spells. As long as the sword is attuned to you and you are holding it in your hand, you can cast {@spell detect magic} (1 charge), {@spell detect evil and good} (1 charge), or {@spell detect thoughts} (2 charges). Each night at midnight, Hazirawn regains {@dice 1d4} expended charges."
+						"Hazirawn has 4 charges to cast spells. As long as the sword is attuned to you and you are holding it in your hand, you can cast {@spell 偵測魔法} (1 charge), {@spell 偵測善惡} (1 charge), or {@spell detect thoughts} (2 charges). Each night at midnight, Hazirawn regains {@dice 1d4} expended charges."
 					]
 				},
 				{
@@ -7663,7 +7663,7 @@
 					"name": "Hold Vampires",
 					"type": "entries",
 					"entries": [
-						"As an Action, you can expend 1 charge and present the holy symbol to make it flare with holy power. Vampires and {@creature vampire spawn} within 30 feet of the holy symbol when it flares must make a DC 15 Wisdom saving throw. On a failed save, a target is {@condition paralyzed} for 1 minute. It can repeat the saving throw at the end of its turns to end the effect on itself."
+						"As an Action, you can expend 1 charge and present the holy symbol to make it flare with holy power. Vampires and {@creature vampire spawn} within 30 feet of the holy symbol when it flares must make a DC 15 Wisdom saving throw. On a failed save, a target is {@condition 麻痺} for 1 minute. It can repeat the saving throw at the end of its turns to end the effect on itself."
 					]
 				},
 				{
@@ -9282,7 +9282,7 @@
 					"type": "entries",
 					"name": "詛咒", "tENG_name": "Curse",
 					"entries": [
-						"The stone is cursed, but its magical nature is hidden; {@spell detect magic} doesn't detect it. An {@spell identify} spell reveals the stone's true nature. If you use the Dash or Disengage action while the stone is on your person, its curse activates. Until the curse is broken with {@spell remove curse} or similar magic, your speed is reduced by 5 feet, and your maximum load and maximum lift capacities are halved. You also become unwilling to part with the stone."
+						"The stone is cursed, but its magical nature is hidden; {@spell 偵測魔法} doesn't detect it. An {@spell identify} spell reveals the stone's true nature. If you use the Dash or Disengage action while the stone is on your person, its curse activates. Until the curse is broken with {@spell remove curse} or similar magic, your speed is reduced by 5 feet, and your maximum load and maximum lift capacities are halved. You also become unwilling to part with the stone."
 					]
 				}
 			]
@@ -10584,7 +10584,7 @@
 					"type": "entries",
 					"name": "Spells",
 					"entries": [
-						"The orb has 7 charges and regains {@dice 1d4+3} expended charges daily at dawn. If you control the orb, you can use an action and expend 1 or more charges to cast one of the following spells (save DC 18) from it: {@spell cure wounds} (5th-level version, 3 charges), {@spell daylight} (1 charge), {@spell death ward} (2 charges), or {@spell scrying} (3 charges). You can also use an action to cast the {@spell detect magic} spell from the orb without using any charges."
+						"The orb has 7 charges and regains {@dice 1d4+3} expended charges daily at dawn. If you control the orb, you can use an action and expend 1 or more charges to cast one of the following spells (save DC 18) from it: {@spell cure wounds} (5th-level version, 3 charges), {@spell daylight} (1 charge), {@spell death ward} (2 charges), or {@spell scrying} (3 charges). You can also use an action to cast the {@spell 偵測魔法} spell from the orb without using any charges."
 					]
 				},
 				{
@@ -11155,7 +11155,7 @@
 			"reqAttune": true,
 			"entries": [
 				"This dark spider-silk cloak is made by {@creature drow}. It is a {@item cloak of elvenkind}. It loses its magic if exposed to sunlight for 1 hour without interruption.",
-				"While you wear this cloak with its hood up, Wisdom ({@skill Perception}) checks made to see you have disadvantage. and you have advantage on Dexterity ({@skill 隱匿}) checks made to hide, as the cloak's color shifts to camouflage you. Pulling the hood up or down requires an action."
+				"While you wear this cloak with its hood up, Wisdom ({@skill 感知}) checks made to see you have disadvantage. and you have advantage on Dexterity ({@skill 隱匿}) checks made to hide, as the cloak's color shifts to camouflage you. Pulling the hood up or down requires an action."
 			]
 		},
 		{
@@ -11167,7 +11167,7 @@
 			"reqAttune": true,
 			"entries": [
 				"This dark spider-silk cloak is made by {@creature drow}. It is a {@item cloak of elvenkind}. It also grants resistance to fire damage while you wear it. It loses its magic if exposed to sunlight for 1 hour without interruption.",
-				"While you wear this cloak with its hood up, Wisdom ({@skill Perception}) checks made to see you have disadvantage. and you have advantage on Dexterity ({@skill 隱匿}) checks made to hide, as the cloak's color shifts to camouflage you. Pulling the hood up or down requires an action."
+				"While you wear this cloak with its hood up, Wisdom ({@skill 感知}) checks made to see you have disadvantage. and you have advantage on Dexterity ({@skill 隱匿}) checks made to hide, as the cloak's color shifts to camouflage you. Pulling the hood up or down requires an action."
 			]
 		},
 		{
@@ -13129,7 +13129,7 @@
 							"items": [
 								"You can expend 1 charge as an action and use the ring to lower the temperature in a 120-foot-radius sphere centered on a point you can see within 300 feet of you. The temperature in that area drops 20 degrees per minute, to a minimum of -30 degrees Fahrenheit. Frost and ice begin to form on surfaces once the temperature drops below 32 degrees. This effect is permanent unless you use the ring to end it as an action, at which point the temperature in the area returns to normal at a rate of 10 degrees per minute.",
 								"You can cast one of the following spells from the ring (spell save DC 17) by expending the necessary number of charges: {@spell Bigby's hand} (2 charges; the hand is made of ice, is immune to cold damage, and deals bludgeoning damage instead of force damage as a clenched fist), {@spell cone of cold} (2 charges), flesh to ice (3 charges; as {@spell flesh to stone} except that the target turns to solid ice with the density and durability of stone), {@spell ice storm} (2 charges), {@spell Otiluke's freezing sphere} (3 charges), {@spell sleet storm} (1 charge), {@spell spike growth} (1 charge; the spikes are made of ice), or {@spell wall of ice} (2 charges).",
-								"You can expend the necessary number of charges as an action and use the ring to create either an inanimate ice object (2 charges) or an animated ice creature (4 charges). The ice object can't have any moving parts, must be able to fit inside a 10-foot cube, and has the density and durability of metal or stone (your choice). The ice creature must be modeled after a beast with a challenge rating of 2 or less. The ice creature has the same statistics as the beast it models, with the following changes: the creature is a construct with vulnerability to fire damage, immunity to cold and poison damage, and immunity to the following conditions: {@condition 魅惑}, {@condition exhaustion}, {@condition 恐懼}, {@condition paralyzed}, {@condition petrified}, and {@condition 中毒}. The ice creature obeys only its creator's commands. The ice object or creature appears in an unoccupied space within 60 feet of you. It melts into a pool of normal water after 24 hours or when it drops to 0 hit points. In extreme heat, it loses 5 ({@dice 1d10}) hit points per minute as it melts. Use the guidelines in chapter 8 of the Dungeon Master's Guide to determine the hit points of an inanimate object if they become necessary."
+								"You can expend the necessary number of charges as an action and use the ring to create either an inanimate ice object (2 charges) or an animated ice creature (4 charges). The ice object can't have any moving parts, must be able to fit inside a 10-foot cube, and has the density and durability of metal or stone (your choice). The ice creature must be modeled after a beast with a challenge rating of 2 or less. The ice creature has the same statistics as the beast it models, with the following changes: the creature is a construct with vulnerability to fire damage, immunity to cold and poison damage, and immunity to the following conditions: {@condition 魅惑}, {@condition exhaustion}, {@condition 恐懼}, {@condition 麻痺}, {@condition petrified}, and {@condition 中毒}. The ice creature obeys only its creator's commands. The ice object or creature appears in an unoccupied space within 60 feet of you. It melts into a pool of normal water after 24 hours or when it drops to 0 hit points. In extreme heat, it loses 5 ({@dice 1d10}) hit points per minute as it melts. Use the guidelines in chapter 8 of the Dungeon Master's Guide to determine the hit points of an inanimate object if they become necessary."
 							]
 						}
 					]
@@ -13201,7 +13201,7 @@
 				{
 					"type": "list",
 					"items": [
-						"The robe lets you see in all directions, and you have advantage on Wisdom ({@skill Perception}) checks that rely on sight.",
+						"The robe lets you see in all directions, and you have advantage on Wisdom ({@skill 感知}) checks that rely on sight.",
 						"You have darkvision out to a range of 120 feet.",
 						"You can see {@condition 隱形} creatures and objects, as well as see into the Ethereal Plane, out to a range of 120 feet."
 					]
@@ -13431,7 +13431,7 @@
 			"page": 150
 		},
 		{
-			"name": "Rod of Absorption",
+			"name": "吸收權杖", "ENG_name": "Rod of Absorption",
 			"type": "RD",
 			"weight": "2",
 			"tier": "Major",
@@ -13440,17 +13440,17 @@
 			"page": 195,
 			"reqAttune": true,
 			"entries": [
-				"While holding this rod, you can use your reaction to absorb a spell that is targeting only you and not with an area of effect. The absorbed spell's effect is canceled, and the spell's energy\u2014not the spell itself\u2014is stored in the rod. The energy has the same level as the spell when it was cast. The rod can absorb and store up to 50 levels of energy over the course of its existence. Once the rod absorbs 50 levels of energy, it can't absorb more. If you are targeted by a spell that the rod can't store, the rod has no effect on that spell.",
-				"When you become attuned to the rod, you know how many levels of energy the rod has absorbed over the course of its existence, and how many levels of spell energy it currently has stored.",
-				"If you are a spellcaster holding the rod, you can convert energy stored in it into spell slots to cast spells you have prepared or know. You can create spell slots only of a level equal to or lower than your own spell slots, up to a maximum of 5th level. You use the stored levels in place of your slots, but otherwise cast the spell as normal. For example, you can use 3 levels stored in the rod as a 3rd-level spell slot.",
-				"A newly found rod has {@dice 1d10} levels of spell energy stored in it already. A rod that can no longer absorb spell energy and has no energy remaining becomes nonmagical."
+				"當持握這把權杖時，你可以使用你的反應以吸收一個只以你為目標，且不具備範圍效果的法術時。被吸收的法術效果將被取消，且該法術的能量（而非法術本身）將被儲存進這把權杖之中。這股能量有著等同該法術被施放時所用的環階。這把權杖從它製成到毀滅總共只能吸收最多50環階的能量。一旦這把權杖吸收了50環階的能量，它將無法再吸收任何能量。若你被一個這把權杖無法儲存的法術做為目標，則這把權杖將不會對該法術產生任何效果。",
+				"當你與這把權杖同調時，你將知曉這把權杖已經吸收了總共多少環階的能量，以及它現在正儲存著多少環階的法術能量。",
+				"若你是一個正持握這把權杖的施法者，你可以將這把權杖內儲存的能量轉變成法術位，以用來施放你已準備或已知的法術。你創造出法術位的環階只能等於或低於你所擁有法術位環階，且最高為5環。你仍如原本一樣施法，只是改為消耗這把權杖儲存的能量代替你的法術位。舉例來說，你可以用這把權杖儲存的3環能量以作為一個3環的法術位。",
+				"這種權杖在被發現時已經存有總共{@dice 1d10}環階的法術能量。當一把權杖無法再吸收法術能量，且沒有任何剩餘能量時，它將變為非魔法物品。"
 			],
 			"lootTables": [
 				"Magic Item Table H"
 			]
 		},
 		{
-			"name": "Rod of Alertness",
+			"name": "警示權杖", "ENG_name": "Rod of Alertness",
 			"type": "RD",
 			"weight": "2",
 			"tier": "Major",
@@ -13459,27 +13459,27 @@
 			"page": 196,
 			"reqAttune": true,
 			"entries": [
-				"This rod has a flanged head and the following properties.",
+				"這把權杖有著附有凸緣的端頂，且具有下列特性。",
 				{
-					"name": "Alertness",
+					"name": "警示", "tENG_name": "Alertness",
 					"type": "entries",
 					"entries": [
-						"While holding the rod, you have advantage on Wisdom ({@skill Perception}) checks and on rolls for initiative."
+						"當持握這把權杖時，你在睿知（{@skill 感知}）檢定和先攻檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Spells",
+					"name": "法術", "tENG_name": "Spells",
 					"type": "entries",
 					"entries": [
-						"While holding the rod, you can use an action to cast one of the following spells from it: {@spell detect evil and good}, {@spell detect magic}, {@spell detect poison and disease}, or {@spell see invisibility}."
+						"當持握這把權杖時，你可以使用一個動作以從它施放下列其中一個法術：{@spell 偵測善惡}、{@spell 偵測魔法}、{@spell 偵測毒素或疾病}、或{@spell 識破隱形}。"
 					]
 				},
 				{
-					"name": "Protective Aura",
+					"name": "防護靈光", "tENG_name": "Protective Aura",
 					"type": "entries",
 					"entries": [
-						"As an action, you can plant the haft end of the rod in the ground, whereupon the rod's head sheds bright light in a 60-foot radius and dim light for an additional 60 feet. While in that bright light, you and any creature that is friendly to you gain a +1 bonus to AC and saving throws and can sense the location of any {@condition 隱形} hostile creature that is also in the bright light.",
-						"The rod's head stops glowing and the effect ends after 10 minutes, or when a creature uses an action to pull the rod from the ground. This property can't be used again until the next dawn."
+						"以一個動作，你可以將這把權杖的手柄末端插在地上，這把權杖的端頂將散發出60呎半徑的明亮光照和再延伸60呎的微光光照。當處於其明亮光照範圍時，你和任何對你友善的生物將在AC和豁免檢定上獲得+1加值，且可以察覺到任何同樣處於該明亮光照內，{@condition 隱形}的敵意生物所在的位置。",
+						"這把權杖的端頂將在10分鐘之後、或當一個生物使用一個動作將權杖從地面拔起時停止發光，並結束這個效果。這個特性直到次日清晨前都不能再被使用。"
 					]
 				}
 			],
@@ -13494,7 +13494,7 @@
 			]
 		},
 		{
-			"name": "Rod of Lordly Might",
+			"name": "王者力量權杖", "ENG_name": "Rod of Lordly Might",
 			"type": "RD",
 			"weight": "2",
 			"tier": "Major",
@@ -13503,39 +13503,39 @@
 			"page": 196,
 			"reqAttune": true,
 			"entries": [
-				"This rod has a flanged head, and it functions as a magic mace that grants a +3 bonus to attack and damage roll made with it. The rod has properties associated with six different buttons that are set in a row along the haft. It has three other properties as well, detailed below.",
+				"這把權杖有著一個附有凸緣的端頂，且它具有如同一把{@item 硬頭錘+3|phb|魔法硬頭錘}的功能，讓使用它所進行的攻擊檢定和傷害骰上獲得+3加值。這把權杖具有一系列關聯於沿著其杖柄設置的六個按鈕的特性。它也具備其他三個特性，細節如下。",
 				{
-					"name": "Six Buttons",
+					"name": "六個按鈕", "tENG_name": "Six Buttons",
 					"type": "entries",
 					"entries": [
-						"You can press one of the rod's six buttons as a bonus action. A button's effect lasts until you push a different button or until you push the same button again, which causes the rod to revert to its normal form.",
-						"If you press button 1, the rod becomes a flame tongue as a fiery blade sprouts from the end opposite the rod's flanged head (you choose the type of sword).",
-						"If you press button 2, the rod's flanged head folds down and two crescent-shaped blades spring out, transforming the rod into a magic battleaxe that grants a +3 bonus to attack and damage rolls made with it.",
-						"If you press button 3, the rod's flanged head folds down, a spear point springs from the rod's tip, and the rod's handle lengthens into a 6-foot haft, transforming the rod into a magic spear that grants a+3 bonus to attack and damage rolls made with it.",
-						"If you press button 4, the rod transforms into a climbing pole up to 50 feet long, as you specify. In surfaces as hard as granite, a spike at the bottom and three hooks at the top anchor the pole. Horizontal bars 3 inches long fold out from the sides, 1 foot apart, forming a ladder. The pole can bear up to 4,000 pounds. More weight or lack of solid anchoring causes the rod to revert to its normal form.",
-						"If you press button 5, the rod transforms into a handheld battering ram and gram its user a +10 bonus to Strength checks made to break through doors, barricades, and other barriers.",
-						"If you press button 6, the rod assumes or remains in its normal form and indicates magnetic north. (Nothing happens if this function of the rod is used in a location that has no magnetic north.) The rod also gives you knowledge of your approximate depth beneath the ground or your height above it."
+						"你能夠以一個附贈動作按下這把權杖六個按鈕中的其中一個。一個按鈕的效果將持續直到你按下另一個不同的按鈕，或直到你再次按下同個按鈕，並讓這把權杖恢復其原本的型態。",
+						"若你按下按鈕1：這把權杖將隨著烈焰刀刃迸發自權杖凸緣端頂的另一端，而變為一把{@item 焰舌}（由你選擇這把劍的類型）。",
+						"若你按下按鈕2：這把權杖的凸緣端頂將摺疊收起並長出兩片新月形的斧刃，將這把權杖轉變成一把{@item 戰斧+3|phb|魔法戰斧}，讓使用它所進行的攻擊檢定和傷害骰上獲得+3加值。",
+						"若你按下按鈕3：這把權杖的凸緣端頂將摺疊收起，從權杖尖端伸出矛尖，並讓權杖的手柄伸長成6呎長的杖柄，將這把權杖轉變成一把{@item 矛+3|phb|魔法矛}，讓使用它所進行的攻擊檢定和傷害骰上獲得+3加值。",
+						"若你按下按鈕4：這把權杖將變形成一根長度由你指定，但最多50呎長的爬桿。在它如花崗岩般堅硬的表面上，其底端的岩釘和頂端的三個爪鉤可以把爬桿牢牢固定住。爬桿上每隔1呎的距離都會伸出一根3吋長的水平橫槓，構成了一個梯子。這個爬桿可以承受最多4,000磅的重量。超重或是失去固定點將會使這把權杖變回其原本的型態。",
+						"若你按下按鈕5：這把權杖將變形成一把手持式戰鬥攻城鎚，並附與其使用者在用以破壞門、路障、或其他障礙物時所進行的力量檢定中獲得+10加值。",
+						"若你按下按鈕6：這把權杖將變回或維持其原本的型態，並指出地磁北極的方向（若權杖在使用這個功能時所在的位置並沒有地磁北極，則什麼事都不會發生。）。這把權杖同時會使你知曉你自己在地下或地上的大致深度或高度。"
 					]
 				},
 				{
-					"name": "Drain Life",
+					"name": "汲取生命", "tENG_name": "Drain Life",
 					"type": "entries",
 					"entries": [
-						"When you hit a creature with a melee attack using the rod, you can force the target to make a DC 17 Constitution saving throw. On a failure, the target rakes an extra {@dice 4d6} necrotic damage, and you regain a number of hit points equal to half that necrotic damage. This property can't be used again until the next dawn."
+						"當你使用這把權杖以一次近戰攻擊命中一個生物時，你可以強迫該目標進行一次DC 17的體質豁免。若豁免失敗，目標將受到額外的{@dice 4d6}死靈傷害，且你回復等同於該死靈傷害一半的生命值。這個特性直到次日清晨之前都不能再被使用。"
 					]
 				},
 				{
-					"name": "Paralyze",
+					"name": "麻痺", "tENG_name": "Paralyze",
 					"type": "entries",
 					"entries": [
-						"When you hit a creature with a melee attack using the rod, you can force the target to make a DC 17 Strength saving throw. On a failure, the target is {@condition paralyzed} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on a success. This property can't be used again until the next dawn."
+						"當你使用這把權杖以一次近戰攻擊命中一個生物時，你可以強迫該目標進行一次DC 17的力量豁免。若豁免失敗，目標將陷入{@condition 麻痺}狀態長達1分鐘。目標可以在它的每個回合結束時重複這個豁免檢定，豁免成功則結束這個效果對它的影響。這個特性直到次日清晨之前都不能再被使用。"
 					]
 				},
 				{
-					"name": "Terrify",
+					"name": "驚駭", "tENG_name": "Terrify",
 					"type": "entries",
 					"entries": [
-						"While holding the rod, you can use an action to force each creature you can see within 30 feet of you to make a DC 17 Wisdom saving throw. On a failure, a target is {@condition 恐懼} of you for 1 minute. A {@condition 恐懼} target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. This property can't be used again until the next dawn."
+						"當持握這把權杖時，你可以使用一個動作以強迫每個距離你30呎內且你所能看見的生物進行一次DC 17的睿知豁免。若豁免失敗，目標將因你而陷入{@condition 恐懼}長達1分鐘。陷入{@condition 恐懼}的目標可以在它的每個回合結束時重複這個豁免檢定，豁免成功則結束這個效果對它的影響。這個特性直到次日清晨之前都不能再被使用。"
 					]
 				}
 			],
@@ -13582,7 +13582,7 @@
 			]
 		},
 		{
-			"name": "Rod of Security",
+			"name": "庇護權杖", "ENG_name": "Rod of Security",
 			"type": "RD",
 			"weight": "2",
 			"tier": "Major",
@@ -13590,9 +13590,9 @@
 			"source": "DMG",
 			"page": 197,
 			"entries": [
-				"While holding this rod, you can use an action to activate it. The rod then instantly transports you and up to 199 other willing creatures you can see to a paradise that exists in an extraplanar space. You choose the form that the paradise takes. It could be a tranquil garden, lovely glade, cheery tavern, immense palace, tropical island, fantastic carnival, or whatever else you can imagine. Regardless of its nature, the paradise contains enough water and food to sustain its visitors. Everything else that can be interacted with inside the extraplanar space can exist only there. For example, a flower picked from a garden in the paradise disappears if it is taken outside the extraplanar space.",
-				"For each hour spent in the paradise, a visitor regains hit points as if it had spent 1 Hit Die. Also, creatures don't age while in the paradise, although time passes normally. Visitors can remain in the paradise for up to 200 days divided by the number of creatures present (round down).",
-				"When the time runs out or you use an action to end it, all visitors reappear in the location they occupied when you activated the rod, or an unoccupied space nearest that location. The rod can't be used again until ten days have passed."
+				"當持握這把權杖時，你可以使用一個動作去啟動它。這把權杖接著將立刻把你和其他最多199個你所能看見的自願生物傳送到一個位於異位面空間的樂園福地。由你決定這個樂園呈現的樣貌，它可以是寧靜的花園、迷人的林間空地、熱鬧的酒館、無垠的宮殿、熱帶海島、幻想嘉年華會、或任何你所能想像到的美景。無論其環境性質如何，這座樂園都含有足夠其訪問者維生所需的水和食物。除此之外，所有樂園內可互動的事物都只能在這個異位面空間中存在。舉例來說，在樂園的花園中摘下的花朵將在被帶出異位面空間時消失。",
+				"訪問者在樂園中每度過一小時，就會如同它消耗了1顆生命骰一樣回復生命值。同時，儘管樂園中的時間會如常流動，但在樂園中的生物並不會因此老化。訪問者們可以待在樂園中的時間等同於200天除以在場生物的數量（向下取整）。",
+				"當停留時間用盡，或你使用一個動作結束它時，所有訪問者將重新出現它們在你啟動這把權杖時所佔據的位置，或另一處距離該位置最近的未被佔據空間。這把權杖直到經過10天之前都不能再被使用。"
 			],
 			"lootTables": [
 				"Magic Item Table H"
@@ -19040,7 +19040,7 @@
 					"name": "Supernatural Awareness",
 					"type": "entries",
 					"entries": [
-						"While you are holding the weapon, it alerts you to the location of any secret or concealed doors within 30 feet of you. In addition, you can use an action to cast {@spell detect evil and good} or {@spell locate object} from the weapon. Once you cast either spell, you can't cast it from the weapon again until the next dawn."
+						"While you are holding the weapon, it alerts you to the location of any secret or concealed doors within 30 feet of you. In addition, you can use an action to cast {@spell 偵測善惡} or {@spell locate object} from the weapon. Once you cast either spell, you can't cast it from the weapon again until the next dawn."
 					]
 				},
 				{
@@ -19398,7 +19398,7 @@
 			"entries": [
 				"Built by dwarven gods and entrusted to the rulers of Shanatar, an ancient dwarven empire. The Wyrmskull Throne was a symbol of dwarven power and pride for ages untold. The throne hovers a foot off the ground and is a massive thing made of polished obsidian with oversized feet\u2014the impaled skulls of four ancient blue dragons. Runes glisten in the carved obsidian winking to life with blue energy when the throne's powers are activated.",
 				"After the fall of Shanatar, the Wyrmskull Throne fell into the clutches of less honorable creatures. A band of adventurers wrested the throne from the aquatic elf tyrant Gantar Kraok and sold it to the {@creature storm giant} Neri for a considerable fortune. Neri had the throne magically enlarged and gave it to her husband, King Hekaton, as a gift, along with one of the Ruling Scepters of Shanatar, which she had found in a wreck at the bottom of the Trackless Sea. Only a creature attuned to a Ruling Scepter and in possession of it can harness the powers of the Wyrmskull Throne, which has become the centerpiece of King Hekaton's throne room in the undersea citadel of Maelstrom. Fear of the throne's power has helped prevent evil giants from challenging or threatening Hekaton's leadership.",
-				"Any creature not attuned to a Ruling Scepter who sits on the throne is {@condition paralyzed} and encased in a magical force field. While encased, the creature can't be touched or moved from the throne. Touching a Ruling Scepter to the force field dispels the field, though the creature remains {@condition paralyzed} until it is separated from the throne.",
+				"Any creature not attuned to a Ruling Scepter who sits on the throne is {@condition 麻痺} and encased in a magical force field. While encased, the creature can't be touched or moved from the throne. Touching a Ruling Scepter to the force field dispels the field, though the creature remains {@condition 麻痺} until it is separated from the throne.",
 				"Any creature seated on the throne can hear faint Whispers in Draconic\u2014the whisperings of four blue dragons whose skulls adorn the throne. Although powerless, these spirits try to influence the decisions of the throne's master",
 				{
 					"name": "Properties of the Throne",
@@ -19765,7 +19765,7 @@
 				{
 					"type": "list",
 					"items": [
-						"You have advantage on Wisdom ({@skill Perception}) checks that rely on sight.",
+						"You have advantage on Wisdom ({@skill 感知}) checks that rely on sight.",
 						"If you have the Sunlight Sensitivity trait, you are unaffected by the trait.",
 						"You are immune to magic that allows other creatures to read your thoughts or determine whether you are lying. Creatures can communicate telepathically with you only if you allow it."
 					]
