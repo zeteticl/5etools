@@ -4230,22 +4230,22 @@
 			]
 		},
 		{
-			"name": "Deck of Illusions",
+			"name": "幻象牌組", "ENG_name": "Deck of Illusions",
 			"wondrous": true,
 			"tier": "Major",
 			"rarity": "Uncommon",
 			"source": "DMG",
 			"page": 161,
 			"entries": [
-				"This box contains a set of parchment cards. A full deck has 34 cards. A deck found as treasure is usually missing {@dice 1d20-1} cards.",
-				"The magic of the deck functions only if cards are drawn at random (you can use an altered deck of playing cards to simulate the deck). You can use an action to draw a card at random from the deck and throw it to the ground at a point within 30 feet of you.",
-				"An illusion of one or more creatures forms over the thrown card and remains until dispelled. An illusory creature appears real, of the appropriate size, and behaves as if it were a real creature, except that it can do no harm. While you are within 120 feet of the illusory creature and can see it, you can use an action to move it magically anywhere within 30 feet of its card. Any physical interaction with the illusory creature reveals it to be an illusion, because objects pass through it. Someone who uses an action to visually inspect the creature identifies it as illusory with a successful DC 15 Intelligence ({@skill Investigation}) check. The creature then appears translucent.",
-				"The illusion lasts until its card is moved or the illusion is dispelled. When the illusion ends, the image on its card disappears, and that card can't be used again.",
+				"這個盒子內裝有一套羊皮紙製成的卡牌。一套完整的牌組有34張卡牌。而一個做為寶藏被發現的牌組通常會遺失{@dice 1d20-1}張卡牌。",
+				"這套牌組的魔法只會在卡牌被隨機抽出時發揮作用（你可以使用一套調整過的撲克牌以模擬這套牌組）。你可以使用一個動作從牌組中隨機抽出一張卡牌，並將它丟到距離你30呎內地面上一點。",
+				"一個或多個生物的幻象將會從被扔出的該卡牌上成形，且維持其存在直到被解消。一個幻象生物看起來跟真的一模一樣，有著相仿的體型，且其行為就如同它是真實的生物一樣，但它無法造成任何傷害。當你距離該幻象生物120呎內且可以看見它時，你可以使用一個動作讓它用魔法移動到任何距離其卡牌30呎內的地方。由於東西會穿過幻象，與幻象的任何物理性互動都將暴露它是幻象的事實。一個使用它的動作去檢視該幻象的生物，可以藉由成功通過一次DC 15的智力（{@skill 調查}）檢定以辨識出它是幻象。該幻象接著對該生物而言將變得半透明。",
+				"這個幻象將持續直到它的卡牌被移除、或是該幻象被解消。當這個幻象結束，其卡牌上的圖樣將會消失，且該卡牌將無法再被使用。",
 				{
 					"type": "table",
 					"colLabels": [
-						"{@dice 1d33|Playing Card}",
-						"Illusion"
+						"{@dice 1d33|撲克牌}",
+						"幻象"
 					],
 					"colStyles": [
 						"col-3",
@@ -4258,9 +4258,9 @@
 								"roll": {
 									"exact": 1
 								},
-								"entry": "Ace of hearts"
+								"entry": "紅心A"
 							},
-							"{@creature adult red dragon|mm|Red dragon}"
+							"{@creature 成年紅龍|mm|紅龍}"
 						],
 						[
 							{
@@ -4268,9 +4268,9 @@
 								"roll": {
 									"exact": 2
 								},
-								"entry": "King of hearts"
+								"entry": "紅心K"
 							},
-							"{@creature Knight} and four {@creature guard|mm|guards}"
+							"{@creature 騎士}和四個{@creature 衛兵}"
 						],
 						[
 							{
@@ -4278,9 +4278,9 @@
 								"roll": {
 									"exact": 3
 								},
-								"entry": "Queen of hearts"
+								"entry": "紅心Q"
 							},
-							"{@creature Succubus|mm|Succubus/Incubus}"
+							"{@creature 魅魔|mm|魅魔/夢魔}"
 						],
 						[
 							{
@@ -4288,9 +4288,9 @@
 								"roll": {
 									"exact": 4
 								},
-								"entry": "Jack of hearts"
+								"entry": "紅心J"
 							},
-							"{@creature Druid}"
+							"{@creature 德魯伊}"
 						],
 						[
 							{
@@ -4298,9 +4298,9 @@
 								"roll": {
 									"exact": 5
 								},
-								"entry": "Ten of hearts"
+								"entry": "紅心10"
 							},
-							"{@creature Cloud giant}"
+							"{@creature 雲巨人}"
 						],
 						[
 							{
@@ -4308,9 +4308,9 @@
 								"roll": {
 									"exact": 6
 								},
-								"entry": "Nine of hearts"
+								"entry": "紅心9"
 							},
-							"{@creature Ettin}"
+							"{@creature 雙頭巨人}"
 						],
 						[
 							{
@@ -4318,9 +4318,9 @@
 								"roll": {
 									"exact": 7
 								},
-								"entry": "Eight of hearts"
+								"entry": "紅心8"
 							},
-							"{@creature Bugbear}"
+							"{@creature 熊地精}"
 						],
 						[
 							{
@@ -4328,9 +4328,9 @@
 								"roll": {
 									"exact": 8
 								},
-								"entry": "Two of hearts"
+								"entry": "紅心2"
 							},
-							"{@creature Goblin}"
+							"{@creature 哥布林}"
 						],
 						[
 							{
@@ -4338,9 +4338,9 @@
 								"roll": {
 									"exact": 9
 								},
-								"entry": "Ace of diamonds"
+								"entry": "方塊A"
 							},
-							"{@creature Beholder}"
+							"{@creature 眼魔}"
 						],
 						[
 							{
@@ -4348,9 +4348,9 @@
 								"roll": {
 									"exact": 10
 								},
-								"entry": "King of diamonds"
+								"entry": "方塊K"
 							},
-							"{@creature Archmage} and {@creature mage} apprentice"
+							"{@creature 大法師}和一個{@creature 魔法師}學徒"
 						],
 						[
 							{
@@ -4358,9 +4358,9 @@
 								"roll": {
 									"exact": 11
 								},
-								"entry": "Queen of diamonds"
+								"entry": "方塊Q"
 							},
-							"{@creature Night hag}"
+							"{@creature 夜鬼婆}"
 						],
 						[
 							{
@@ -4368,9 +4368,9 @@
 								"roll": {
 									"exact": 12
 								},
-								"entry": "Jack of diamonds"
+								"entry": "方塊J"
 							},
-							"{@creature Assassin}"
+							"{@creature 刺客}"
 						],
 						[
 							{
@@ -4378,9 +4378,9 @@
 								"roll": {
 									"exact": 13
 								},
-								"entry": "Ten of diamonds"
+								"entry": "方塊10"
 							},
-							"{@creature Fire giant}"
+							"{@creature 火巨人}"
 						],
 						[
 							{
@@ -4388,9 +4388,9 @@
 								"roll": {
 									"exact": 14
 								},
-								"entry": "Nine of diamonds"
+								"entry": "方塊9"
 							},
-							"{@creature Ogre} {@creature mage}"
+							"{@creature 食人魔}{@creature 魔法師}"
 						],
 						[
 							{
@@ -4398,9 +4398,9 @@
 								"roll": {
 									"exact": 15
 								},
-								"entry": "Eight of diamonds"
+								"entry": "方塊8"
 							},
-							"{@creature Gnoll}"
+							"{@creature 豺狼人}"
 						],
 						[
 							{
@@ -4408,9 +4408,9 @@
 								"roll": {
 									"exact": 16
 								},
-								"entry": "Two of diamonds"
+								"entry": "方塊2"
 							},
-							"{@creature Kobold}"
+							"{@creature 狗頭人}"
 						],
 						[
 							{
@@ -4418,9 +4418,9 @@
 								"roll": {
 									"exact": 17
 								},
-								"entry": "Ace of spades"
+								"entry": "黑桃A"
 							},
-							"{@creature Lich}"
+							"{@creature 巫妖}"
 						],
 						[
 							{
@@ -4428,9 +4428,9 @@
 								"roll": {
 									"exact": 18
 								},
-								"entry": "King of spades"
+								"entry": "黑桃K"
 							},
-							"{@creature Priest} and two {@creature acolyte|mm|acolytes}"
+							"{@creature 祭司}和二個{@creature 侍僧}"
 						],
 						[
 							{
@@ -4438,9 +4438,9 @@
 								"roll": {
 									"exact": 19
 								},
-								"entry": "Queen of spades"
+								"entry": "黑桃Q"
 							},
-							"{@creature Medusa}"
+							"{@creature 梅杜莎}"
 						],
 						[
 							{
@@ -4448,9 +4448,9 @@
 								"roll": {
 									"exact": 20
 								},
-								"entry": "Jack of spades"
+								"entry": "黑桃J"
 							},
-							"{@creature Veteran}"
+							"{@creature 老兵}"
 						],
 						[
 							{
@@ -4458,9 +4458,9 @@
 								"roll": {
 									"exact": 21
 								},
-								"entry": "Ten of spades"
+								"entry": "黑桃10"
 							},
-							"{@creature Frost giant}"
+							"{@creature 霜巨人}"
 						],
 						[
 							{
@@ -4468,9 +4468,9 @@
 								"roll": {
 									"exact": 22
 								},
-								"entry": "Nine of spades"
+								"entry": "黑桃9"
 							},
-							"{@creature Troll}"
+							"{@creature 巨魔}"
 						],
 						[
 							{
@@ -4478,9 +4478,9 @@
 								"roll": {
 									"exact": 23
 								},
-								"entry": "Eight of spades"
+								"entry": "黑桃8"
 							},
-							"{@creature Hobgoblin}"
+							"{@creature 大哥布林}"
 						],
 						[
 							{
@@ -4488,9 +4488,9 @@
 								"roll": {
 									"exact": 24
 								},
-								"entry": "Two of spades"
+								"entry": "黑桃2"
 							},
-							"{@creature Goblin}"
+							"{@creature 哥布林}"
 						],
 						[
 							{
@@ -4498,9 +4498,9 @@
 								"roll": {
 									"exact": 25
 								},
-								"entry": "Ace of clubs"
+								"entry": "梅花A"
 							},
-							"{@creature Iron golem}"
+							"{@creature 鋼鐵魔像}"
 						],
 						[
 							{
@@ -4508,9 +4508,9 @@
 								"roll": {
 									"exact": 26
 								},
-								"entry": "King of clubs"
+								"entry": "梅花K"
 							},
-							"{@creature Bandit captain} and three {@creature bandit|mm|bandits}"
+							"{@creature 強盜首領}和三個{@creature 強盜}"
 						],
 						[
 							{
@@ -4518,9 +4518,9 @@
 								"roll": {
 									"exact": 27
 								},
-								"entry": "Queen of clubs"
+								"entry": "梅花Q"
 							},
-							"{@creature Erinyes}"
+							"{@creature 慾魔}"
 						],
 						[
 							{
@@ -4528,9 +4528,9 @@
 								"roll": {
 									"exact": 28
 								},
-								"entry": "Jack of clubs"
+								"entry": "梅花J"
 							},
-							"{@creature Berserker}"
+							"{@creature 狂戰士}"
 						],
 						[
 							{
@@ -4538,9 +4538,9 @@
 								"roll": {
 									"exact": 29
 								},
-								"entry": "Ten of clubs"
+								"entry": "梅花10"
 							},
-							"{@creature Hill giant}"
+							"{@creature 山丘巨人}"
 						],
 						[
 							{
@@ -4548,9 +4548,9 @@
 								"roll": {
 									"exact": 30
 								},
-								"entry": "Nine of clubs"
+								"entry": "梅花9"
 							},
-							"{@creature Ogre}"
+							"{@creature 食人魔}"
 						],
 						[
 							{
@@ -4558,9 +4558,9 @@
 								"roll": {
 									"exact": 31
 								},
-								"entry": "Eight of clubs"
+								"entry": "梅花8"
 							},
-							"{@creature Orc}"
+							"{@creature 獸人}"
 						],
 						[
 							{
@@ -4568,9 +4568,9 @@
 								"roll": {
 									"exact": 32
 								},
-								"entry": "Two of clubs"
+								"entry": "梅花2"
 							},
-							"{@creature Kobold}"
+							"{@creature 狗頭人}"
 						],
 						[
 							{
@@ -4578,9 +4578,9 @@
 								"roll": {
 									"exact": 33
 								},
-								"entry": "jokers (2)"
+								"entry": "鬼牌(2張)"
 							},
-							"You (the deck's owner)"
+							"你（這套牌組的持有者）"
 						]
 					]
 				}
@@ -7367,7 +7367,7 @@
 			]
 		},
 		{
-			"name": "Headband of Intellect",
+			"name": "智力頭帶", "ENG_name": "Headband of Intellect",
 			"wondrous": true,
 			"tier": "Major",
 			"rarity": "Uncommon",
@@ -7380,7 +7380,7 @@
 				}
 			},
 			"entries": [
-				"Your Intelligence score is 19 while you wear this headband. It has no effect on you if your Intelligence is already 19 or higher without it."
+				"當你穿戴這條頭帶時，你的智力值變為19。若你在未穿戴它時的智力值就已經為19或更高，則這條頭帶對你將不會有任何效果。"
 			],
 			"lootTables": [
 				"Magic Item Table F"
@@ -9552,7 +9552,7 @@
 				"con": 2
 			},
 			"entries": [
-				"這本書記載著關於健康和飲食的訣竅，且它的文字充滿著魔力。若你在6天或更短的期間內花費了總共48小時的時間研讀這本書的內容，並實踐它的指示，則你的體質值和體值值上限都將增加2點。這本手冊接著將失去它的魔力，並在一個世紀之後恢復。"
+				"這本書記載著關於健康和飲食的訣竅，且它的文字充滿著魔力。若你在6天或更短的期間內花費了總共48小時的時間研讀這本書的內容，並實踐它的指示，則你的體質值和體質值上限都將增加2點。這本手冊接著將失去它的魔力，並在一個世紀之後恢復。"
 			],
 			"lootTables": [
 				"Magic Item Table H"
@@ -16726,7 +16726,7 @@
 			]
 		},
 		{
-			"name": "Tome of Clear Thought",
+			"name": "清澈思想卷冊", "ENG_name": "Tome of Clear Thought",
 			"wondrous": true,
 			"weight": "5",
 			"tier": "Major",
@@ -16737,14 +16737,14 @@
 				"int": 2
 			},
 			"entries": [
-				"This book contains memory and logic exercises, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Intelligence score increases by 2, as does your maximum for that score. The manual then loses its magic, but regains it in a century."
+				"這本書記載著關於記憶力和邏輯的鍛鍊訣竅，且它的文字充滿著魔力。若你在6天或更短的期間內花費了總共48小時的時間研讀這本書的內容，並實踐它的指示，則你的智力值和智力值上限都將增加2點。這本手冊接著將失去它的魔力，並在一個世紀之後恢復。"
 			],
 			"lootTables": [
 				"Magic Item Table H"
 			]
 		},
 		{
-			"name": "Tome of Leadership and Influence",
+			"name": "統御影響卷冊", "ENG_name": "Tome of Leadership and Influence",
 			"wondrous": true,
 			"weight": "5",
 			"tier": "Major",
@@ -16755,7 +16755,7 @@
 				"cha": 2
 			},
 			"entries": [
-				"This book contains guidelines for influencing and charming others, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Charisma score increases by 2, as does your maximum for that score. The manual then loses its magic, but regains it in a century."
+				"這本書記載著關於影響力和吸引他人的訣竅，且它的文字充滿著魔力。若你在6天或更短的期間內花費了總共48小時的時間研讀這本書的內容，並實踐它的指示，則你的魅力值和魅力值上限都將增加2點。這本手冊接著將失去它的魔力，並在一個世紀之後恢復。"
 			],
 			"lootTables": [
 				"Magic Item Table H"
@@ -16795,7 +16795,7 @@
 			]
 		},
 		{
-			"name": "Tome of Understanding",
+			"name": "通曉卷冊", "ENG_name": "Tome of Understanding",
 			"wondrous": true,
 			"weight": "5",
 			"tier": "Major",
@@ -16806,7 +16806,7 @@
 				"wis": 2
 			},
 			"entries": [
-				"This book contains intuition and insight exercises, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Wisdom score increases by 2, as does your maximum for that score. The manual then loses its magic, but regains it in a century."
+				"這本書記載著關於直覺和洞察力的鍛鍊訣竅，且它的文字充滿著魔力。若你在6天或更短的期間內花費了總共48小時的時間研讀這本書的內容，並實踐它的指示，則你的睿知值和睿知值上限都將增加2點。這本手冊接著將失去它的魔力，並在一個世紀之後恢復。"
 			],
 			"lootTables": [
 				"Magic Item Table H"
