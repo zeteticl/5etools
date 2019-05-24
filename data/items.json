@@ -1735,7 +1735,7 @@
 						"黑刃的語氣帶著傲慢，就像是它已經習慣於他人服從於它。",
 						"這把劍的目的就是吞噬靈魂。它並不在乎它所吞吃的是誰的靈魂，甚至包括其持有者在內。這把劍相信世間一切物質和能量都源自於負能量的虛無之中，且總有一日一切都將回歸其中。而黑刃則希望能加速這個過程。",
 						"儘管它信仰虛無主義，黑刃仍對{@item 波濤}和{@item 征服}這兩把同樣被封印於白羽山的武器抱有莫名的親近感。它希望這三把武器能夠再次重聚並一同戰鬥，儘管它相當反對{@item 征服}的意見，且覺得{@item 波濤}沉悶無趣。",
-						"黑刃渴求靈魂且必須被經常性的餵養。若這把劍超過三天或更久的時間都沒有吞噬靈魂，它將會在次日黃昏與它的持用者發生衝突。"
+						"黑刃渴求靈魂且必須被經常性的餵養。若這把劍超過三天或更久的時間都沒有吞噬靈魂，它將會在下次日落時與它的持用者發生衝突。"
 					]
 				}
 			],
@@ -3436,7 +3436,7 @@
 			]
 		},
 		{
-			"name": "Cloak of Displacement",
+			"name": "位移斗篷", "ENG_name": "Cloak of Displacement",
 			"wondrous": true,
 			"tier": "Major",
 			"rarity": "Rare",
@@ -3444,7 +3444,7 @@
 			"page": 158,
 			"reqAttune": true,
 			"entries": [
-				"While you wear this cloak, it projects an illusion that makes you appear to be standing in a place near your actual location, causing any creature to have disadvantage on attack rolls against you. If you take damage, the property ceases to function until the start of your next turn. This property is suppressed while you are {@condition 無力}, {@condition 束縛}, or otherwise unable to move."
+				"你穿著此斗篷時，它將投射出一個幻象，使你看起來像是站在你實際位置的附近，並使任何生物對你所進行的攻擊檢定承受劣勢。若你受到傷害，則這個特性將停止運作直到你的下個回合開始。這個特性將在你陷入{@condition 無力}、{@condition 束縛}、或其他使你無法移動的狀態時被壓抑。"
 			],
 			"lootTables": [
 				"Magic Item Table G"
@@ -3466,7 +3466,7 @@
 			]
 		},
 		{
-			"name": "Cloak of Invisibility",
+			"name": "隱形斗篷", "ENG_name": "Cloak of Invisibility",
 			"wondrous": true,
 			"tier": "Major",
 			"rarity": "Legendary",
@@ -3474,8 +3474,8 @@
 			"page": 158,
 			"reqAttune": true,
 			"entries": [
-				"While wearing this cloak, you can pull its hood over your head to cause yourself to become {@condition 隱形}. While you are {@condition 隱形}, anything you are carrying or wearing is {@condition 隱形} with you. You become visible when you cease wearing the hood. Pulling the hood up or down requires an action.",
-				"Deduct the time you are invisible, in increments of 1 minute, from the cloak's maximum duration of 2 hours. After 2 hours of use, the cloak ceases to function. For every uninterrupted period of 12 hours the cloak goes unused, it regains 1 hour of duration."
+				"當穿著此斗篷時，你可以將其兜帽拉起罩住你的頭以使自己變得{@condition 隱形}。當你處於{@condition 隱形}狀態時，任何你所攜帶或穿戴的事物都將隨著你{@condition 隱形}。當你脫下兜帽時，你將變為可見。將兜帽戴上或拉下都需要一個動作。",
+				"這件斗篷隱形效果的持續時間上限為2個小時，將你隱形的時間以1分鐘為單位從中扣除。在2個小時的使用時間被用盡後，這件斗篷將停止發揮作用。這件斗篷在沒被使用的狀況下每經過不間斷的12小時,就可以恢復1小時的使用時間。"
 			],
 			"lootTables": [
 				"Magic Item Table I"
@@ -5551,7 +5551,7 @@
 			]
 		},
 		{
-			"name": "Efreeti Bottle",
+			"name": "火巨靈囚瓶", "ENG_name": "Efreeti Bottle",
 			"wondrous": true,
 			"weight": "1",
 			"tier": "Major",
@@ -5559,13 +5559,13 @@
 			"source": "DMG",
 			"page": 167,
 			"entries": [
-				"This painted brass bottle weighs 1 pound. When you use an action to remove the stopper, a cloud of thick smoke flows out of the bottle. At the end of your turn, the smoke disappears with a flash of harmless fire, and an {@creature efreeti} appears in an unoccupied space within 30 feet of you.",
-				"The first time the bottle is opened, the DM rolls to determine what happens.",
+				"這個彩繪的黃銅瓶子重1磅。當你使用一個動作以拔除其瓶塞時，一團濃煙將從瓶子中流出。在你的回合結束時，這陣濃煙將隨著一陣無害火焰的閃現而消失，且一個{@creature 火巨靈(伊夫利特)|mm|火巨靈}將出現在距離你30呎內的一處未被佔據空間。",
+				"當這個瓶子第一次被打開時，DM將擲骰隨機決定發生什麼事。",
 				{
 					"type": "table",
 					"colLabels": [
 						"{@dice d100}",
-						"Effect"
+						"效果"
 					],
 					"colStyles": [
 						"col-1 text-align-center",
@@ -5574,15 +5574,15 @@
 					"rows": [
 						[
 							"01-10",
-							"The {@creature efreeti} attacks you. After fighting for 5 rounds, the {@creature efreeti} disappears, and the bottle loses its magic."
+							"該{@creature 火巨靈(伊夫利特)|mm|火巨靈}將攻擊你。在進行5輪的戰鬥之後，{@creature 火巨靈(伊夫利特)|mm|火巨靈}將會消失，且這個瓶子將失去它的魔力。"
 						],
 						[
 							"11-90",
-							"The {@creature efreeti} serves you for 1 hour, doing as you command. Then the {@creature efreeti} returns to the bottle, and a new stopper contains it. The stopper can't be removed for 24 hours. The next two times the bottle is opened, the same effect occurs. If the bottle is opened a fourth time, the {@creature efreeti} escapes and disappears, and the bottle loses its magic."
+							"該{@creature 火巨靈(伊夫利特)|mm|火巨靈}將服侍你長達1小時，依照你的命令行事。接著該{@creature 火巨靈(伊夫利特)|mm|火巨靈}將會返回這個瓶子，且一個新的瓶塞將把它再次封印。這個瓶塞在24小時內都無法被拔除。在這之後二次，當這個瓶子被打開時，將會發生同樣的效果。若這個瓶子被打開第四次，該{@creature 火巨靈(伊夫利特)|mm|火巨靈}將逃脫並消失，且這個瓶子將失去它的魔力。"
 						],
 						[
 							"91-00",
-							"The {@creature efreeti} can cast the {@spell wish} spell three times for you. It disappears when it grants the final wish or after 1 hour, and the bottle loses its magic."
+							"該{@creature 火巨靈(伊夫利特)|mm|火巨靈}可以為你施放三次{@spell 祈願術}法術。它會在1小時之後，或當它為你實現最後一個願望時消失，且這個瓶子接著將失去它的魔力。"
 						]
 					]
 				}
@@ -13189,7 +13189,7 @@
 			]
 		},
 		{
-			"name": "Robe of Eyes",
+			"name": "百眼法袍", "ENG_name": "Robe of Eyes",
 			"wondrous": true,
 			"tier": "Major",
 			"rarity": "Rare",
@@ -13197,24 +13197,24 @@
 			"page": 193,
 			"reqAttune": true,
 			"entries": [
-				"This robe is adorned with eyelike patterns. While you wear the robe, you gain the following benefits:",
+				"這件長袍被飾以許多眼睛一般的圖紋。當你穿著這件長袍時，你獲得下列好處：",
 				{
 					"type": "list",
 					"items": [
-						"The robe lets you see in all directions, and you have advantage on Wisdom ({@skill 感知}) checks that rely on sight.",
-						"You have darkvision out to a range of 120 feet.",
-						"You can see {@condition 隱形} creatures and objects, as well as see into the Ethereal Plane, out to a range of 120 feet."
+						"這件長袍讓你得以看見所有方向，且你在依賴於視覺的睿知（{@skill 感知}）檢定中具有優勢。",
+						"你具有120呎範圍的黑暗視覺。",
+						"你可以看見120呎範圍內，{@condition 隱形}的生物和物體，你也可以看見該範圍內位於乙太位面的事物。"
 					]
 				},
-				"The eyes on the robe can't be closed or averted. Although you can close or avert your own eyes, you are never considered to be doing so while wearing this robe.",
-				"A {@spell light} spell cast on the robe or a {@spell daylight} spell cast within 5 feet of the robe causes you to be {@condition blinded} for 1 minute. At the end of each of your turns, you can make a Constitution saving throw (DC 11 for {@spell light} or DC 15 for {@spell daylight}), ending the blindness on a success."
+				"這件長袍上的眼睛無法被閉上或轉移視線。儘管你可以閉上或移開你自己的雙眼，但當你穿著這件長袍時，你永遠不會被視作閉上或移開了眼睛。",
+				"施放於該長袍的{@spell 光亮術}法術、或施放於距離該長袍5呎內的{@spell 晝明術}法術，都會使你陷入{@condition 目盲}狀態長達1分鐘。在你的每個回合結束時，你可以進行一次體質豁免（{@spell 光亮術}的話DC 11，{@spell 晝明術}的話則DC 15），豁免成功則解除{@condition 目盲}狀態。"
 			],
 			"lootTables": [
 				"Magic Item Table G"
 			]
 		},
 		{
-			"name": "Robe of Scintillating Colors",
+			"name": "虹光法袍", "ENG_name": "Robe of Scintillating Colors",
 			"wondrous": true,
 			"tier": "Major",
 			"rarity": "Very Rare",
@@ -13222,7 +13222,7 @@
 			"page": 194,
 			"reqAttune": true,
 			"entries": [
-				"This robe has 3 charges, and it regains {@dice 1d3} expended charges daily at dawn. While you wear it, you can use an action and expend 1 charge to cause the garment to display a shifting pattern of dazzling hues until the end of your next turn. During this time, the robe sheds bright light in a 30-foot radius and dim light for an additional 30 feet. Creatures that can see you have disadvantage on attack rolls against you. In addition, any creature in the bright light that can see you when the robe's power is activated must succeed on a DC 15 Wisdom saving throw or become {@condition 震懾} until the effect ends."
+				"這件法袍含有3發充能，且它會在每天日出時恢復{@dice 1d3}發已消耗的充能。當你穿著它時，你可以使用一個動作並消耗1發充能以使這件衣物散發出奪目鮮豔的變幻圖紋，持續直到你的下個回合結束。在這段期間，這件長袍將散發出30呎半徑的明亮光照和再延伸30呎的微光光照。可以看見你的生物將在對你進行的攻擊檢定中具有劣勢。此外，在這件長袍的能力被啟動期間，任何處於其明亮光照中且可以看見你的生物都必須成功通過一次DC 15的睿知豁免，否則將被{@condition 震懾}直到該效果結束。"
 			],
 			"charges": 3,
 			"lootTables": [
@@ -13242,7 +13242,7 @@
 			]
 		},
 		{
-			"name": "Robe of Stars",
+			"name": "星辰法袍", "ENG_name": "Robe of Stars",
 			"wondrous": true,
 			"tier": "Major",
 			"rarity": "Very Rare",
@@ -13250,9 +13250,9 @@
 			"page": 194,
 			"reqAttune": true,
 			"entries": [
-				"This black or dark blue robe is embroidered with small white or silver stars. You gain a +1 bonus to saving throws while you wear it.",
-				"Six stars, located on the robe's upper front portion, are particularly large. While wearing this robe, you can use an action to pull off one of the stars and use it to cast {@spell magic missile} as a 5th-level spell. Daily at dusk, {@dice 1d6} removed stars reappear on the robe.",
-				"While you wear the robe, you can use an action to enter the Astral Plane along with everything you are wearing and carrying. You remain there until you use an action to return to the plane you were on. You reappear in the last space you occupied, or if that space is occupied, the nearest unoccupied space."
+				"這件黑色或暗藍色的長袍上繡著許多白色或銀色的星星。當你穿著它時，你在豁免檢定中獲得+1加值。",
+				"在這件長袍的前襟附近，有著六顆特別大的星星。當穿著這件長袍時，你可以使用一個動作將其中一個這些星星摘下，並使用它以一個5環法術施放{@spell 魔法飛彈}。在每天日落時，{@dice 1d6}顆被摘逐的星星將會重新出現在這件長袍上。",
+				"當你穿戴這件長袍時，你可以使用一個動作以和任何你所穿戴和攜帶的事物一起進入星界位面。你將持續待在該處，直到你使用一個動作返回你原本所在的位面。你將重新出現在你之前佔據的空間，或若該空間已經被佔據，則出現在最近的一處未被佔據空間。"
 			],
 			"modifier": [
 				{
@@ -13283,7 +13283,7 @@
 			]
 		},
 		{
-			"name": "Robe of the Archmagi",
+			"name": "大法師法袍", "ENG_name": "Robe of the Archmagi",
 			"wondrous": true,
 			"tier": "Major",
 			"rarity": "Legendary",
@@ -13291,14 +13291,14 @@
 			"page": 194,
 			"reqAttune": "由術士、契術師、或法師",
 			"entries": [
-				"This elegant garment is made from exquisite cloth of white, gray, or black and adorned with silvery runes. The robe's color corresponds to the alignment for which the item was created. A white robe was made for good, gray for neutral, and black for evil. You can't attune to a robe of the archmagi that doesn't correspond to your alignment.",
-				"You gain these benefits while wearing the robe:",
+				"這件優雅的衣物是由白色、灰色、或黑色的精緻布料製成，並飾以銀色的符文。這件長袍的顏色反映著這個物品被創造時所對應的陣營。白色長袍代表善良，灰色代表中立，而黑色代表邪惡。你無法與不符合你陣營的大法師長袍同調。",
+				"你在穿著這件長袍時獲得下列好處：",
 				{
 					"type": "list",
 					"items": [
-						"If you aren't wearing armor, your base Armor Class is 15 + your Dexterity modifier.",
-						"You have advantage on saving throws against spell and other magical effects.",
-						"Your spell save DC and spell attack bonus each increase by 2."
+						"若你未穿戴護甲，則你的基本防禦等級為15+你的敏捷調整值。",
+						"你在對抗法術或其他魔法效果所進行的豁免檢定中具有優勢。",
+						"你的法術豁免DC和法術攻擊加值各自增加2點。"
 					]
 				}
 			],
@@ -15188,7 +15188,7 @@
 			"entries": [
 				"這把漆黑、堅硬的法杖頂端有著一隻蜘蛛的造型。這把法杖重6磅。你必須與這把法杖同調才能獲得它的好處並施放它的法術。這把法杖可以被做為{@item 長棍|phb}使用。當被用於進行一次武器攻擊時，它將在命中時造成額外的{@dice 1d6}毒素傷害。",
 				"這把法杖含有10發充能，用來為它內部的法術提供能量。當這把法杖在手時，若下列其中一個法術在你的職業法術列表中，則你可以使用你的動作以從法杖施放該法術：{@spell 蛛行術}(1發充能) 或{@spell 蛛網術}(2發充能，法術豁免DC 15)。這些法術無須任何構材。",
-				"這把法杖會在每日黃昏恢復{@dice 1d6+4}發已消耗的充能。若你消耗了這把法杖的最後一發充能，骰一顆{@dice d20}。若結果為1，則這把法杖將被摧毀並粉碎成塵。"
+				"這把法杖會在每天日落時恢復{@dice 1d6+4}發已消耗的充能。若你消耗了這把法杖的最後一發充能，骰一顆{@dice d20}。若結果為1，則這把法杖將被摧毀並粉碎成塵。"
 			],
 			"charges": 10,
 			"attachedSpells": [
