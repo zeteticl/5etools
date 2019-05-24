@@ -6004,7 +6004,7 @@
 			"page": 135
 		},
 		{
-			"name": "Eyes of Charming",
+			"name": "魅惑鏡片", "ENG_name": "Eyes of Charming",
 			"wondrous": true,
 			"tier": "Major",
 			"rarity": "Uncommon",
@@ -6012,7 +6012,7 @@
 			"page": 168,
 			"reqAttune": true,
 			"entries": [
-				"These crystal lenses fit over the eyes. They have 3 charges. While wearing them, you can expend 1 charge as an action to cast the {@spell charm person} spell (save DC 13) on a humanoid within 30 feet of you, provided that you and the target can see each other. The lenses regain all expended charges daily at dawn."
+				"這對水晶鏡片適合被穿戴在眼睛上。它們含有3發充能。當穿戴它們時，只要你與一個距離你30呎內的類人生物可以看見彼此，你就能夠以一個動作消耗1發充能以對該目標施放{@spell 魅惑人類}法術（豁免DC 13）。這對鏡片會在每天日出時恢復所有以消耗的充能。"
 			],
 			"charges": 3,
 			"attachedSpells": [
@@ -6520,7 +6520,7 @@
 			]
 		},
 		{
-			"name": "Gem of Brightness",
+			"name": "光彩奪目寶石", "ENG_name": "Gem of Brightness",
 			"wondrous": true,
 			"weight": "1",
 			"tier": "Major",
@@ -6528,16 +6528,16 @@
 			"source": "DMG",
 			"page": 171,
 			"entries": [
-				"This prism has 50 charges. While you are holding it, you can use an action to speak one of three command words to cause one of the following effects:",
+				"這個稜形寶石含有50發充能。當你持握它時，你可以使用一個動作以說出它三個命令語的其中之一，並造成下列其中一個效果：",
 				{
 					"type": "list",
 					"items": [
-						"The first command word causes the gem to shed bright light in a 30-foot radius and dim light for an additional 30 feet. This effect doesn't expend a charge. It lasts until you use a bonus action to repeat the command word or until you use another function of the gem.",
-						"The second command word expends 1 charge and causes the gem to fire a brilliant beam of light at one creature you can see within 60 feet of you. The creature must succeed on a DC 15 Constitution saving throw or become {@condition blinded} for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
-						"The third command word expends 5 charges and causes the gem to flare with blinding light in a 30-foot cone originating from it. Each creature in the cone must make a saving throw as if struck by the beam created with the second command word."
+						"第一個命令語會使這顆寶石散發出30呎半徑的明亮光照和再延伸30呎的微光光照。這個效果不會消耗充能。它會持續直到你使用一個附贈動作重複該命令語，或直到你使用該寶石的另一個功能。",
+						"第二個命令語會消耗1發充能，並使這顆寶石向一個距離你60呎內且你所能看見的生物射出一道璀璨的光輝射線。該生物必須成功通過一次DC 15的體質豁免，否則陷入{@condition 目盲}狀態長達1分鐘。該生物可以在它的每個回合結束時重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。",
+						"第三個命令語會消耗5發充能，並使這顆寶石閃耀出一道源自它30呎錐形的致盲光線。每個在錐形範圍內的生物都必須進行一次豁免檢定，就如同它們被第二個命令語所創造出的射線命中一樣。"
 					]
 				},
-				"When all of the gem's charges are expended, the gem becomes a nonmagical jewel worth 50 gp."
+				"當這顆寶石所有的充能都被消耗，這顆寶石將變為一顆價值50金幣的非魔法寶石。"
 			],
 			"charges": 50,
 			"lootTables": [
@@ -6545,7 +6545,7 @@
 			]
 		},
 		{
-			"name": "Gem of Seeing",
+			"name": "真視寶石", "ENG_name": "Gem of Seeing",
 			"wondrous": true,
 			"weight": "1",
 			"tier": "Major",
@@ -6554,8 +6554,8 @@
 			"page": 172,
 			"reqAttune": true,
 			"entries": [
-				"This gem has 3 charges. As an action, you can speak the gem's command word and expend 1 charge. For the next 10 minutes, you have truesight out to 120 feet when you peer through the gem.",
-				"The gem regains {@dice 1d3} expended charges daily at dawn."
+				"這顆寶石含有3發充能。以一個動作，你可以說出這顆寶石的命令語並消耗1發充能。在接下來10分鐘內，當你透過這顆寶石窺視周圍時，你具有120呎範圍的真實視覺。",
+				"這顆寶石會在每天日出時恢復{@dice 1d3}發已消耗的充能。"
 			],
 			"charges": 3,
 			"lootTables": [
@@ -8462,7 +8462,7 @@
 				"艾恩在許多世界被尊為知識和寓言之神，而這種石頭便是以祂為名。{@italic 艾恩石}存在著許多種類，各自有著不同形狀和顏色的獨特組合。",
 				"當你使用一個動作將其中一個這種石頭投向空中，該石頭將會以{@dice 1d3}呎的距離繞著你的頭旋轉，並賦予你一項好處。此後，另一個生物必須使用一個動作去捕捉它或網住該石頭，透過成功進行一次對抗AC 24的攻擊檢定、或成功通過一次DC 24的敏捷（{@skill 特技}）檢定，才能將它與你分開。你自己則可以使用一個動作以抓住並收起該石頭，結束它的效果。",
 				"這顆石頭具有AC 24，10點生命值，和對所有傷害的抗性。它在繞著你的頭旋轉時被視為一個被你穿戴的物體。",
-				"當這顆淡綠色的稜柱繞著你的頭旋轉時，你的熟練加值增加1點。"
+				"當這顆淡綠色的稜形石繞著你的頭旋轉時，你的熟練加值增加1點。"
 			],
 			"lootTables": [
 				"Magic Item Table I"
@@ -8480,7 +8480,7 @@
 				"艾恩在許多世界被尊為知識和寓言之神，而這種石頭便是以祂為名。{@italic 艾恩石}存在著許多種類，各自有著不同形狀和顏色的獨特組合。",
 				"當你使用一個動作將其中一個這種石頭投向空中，該石頭將會以{@dice 1d3}呎的距離繞著你的頭旋轉，並賦予你一項好處。此後，另一個生物必須使用一個動作去捕捉它或網住該石頭，透過成功進行一次對抗AC 24的攻擊檢定、或成功通過一次DC 24的敏捷（{@skill 特技}）檢定，才能將它與你分開。你自己則可以使用一個動作以抓住並收起該石頭，結束它的效果。",
 				"這顆石頭具有AC 24，10點生命值，和對所有傷害的抗性。它在繞著你的頭旋轉時被視為一個被你穿戴的物體。",
-				"當這顆灰玫瑰色的稜柱繞著你的頭旋轉時，你的AC獲得+1加值。"
+				"當這顆灰玫瑰色的稜形石繞著你的頭旋轉時，你的AC獲得+1加值。"
 			],
 			"lootTables": [
 				"Magic Item Table G"
@@ -8516,7 +8516,7 @@
 				"艾恩在許多世界被尊為知識和寓言之神，而這種石頭便是以祂為名。{@italic 艾恩石}存在著許多種類，各自有著不同形狀和顏色的獨特組合。",
 				"當你使用一個動作將其中一個這種石頭投向空中，該石頭將會以{@dice 1d3}呎的距離繞著你的頭旋轉，並賦予你一項好處。此後，另一個生物必須使用一個動作去捕捉它或網住該石頭，透過成功進行一次對抗AC 24的攻擊檢定、或成功通過一次DC 24的敏捷（{@skill 特技}）檢定，才能將它與你分開。你自己則可以使用一個動作以抓住並收起該石頭，結束它的效果。",
 				"這顆石頭具有AC 24，10點生命值，和對所有傷害的抗性。它在繞著你的頭旋轉時被視為一個被你穿戴的物體。",
-				"這顆亮紫色的稜柱可以將它施放的法術儲存起來，並保存這些法術直到你使用它們。這顆石頭可以同時儲存總計最多3環的法術。當被發現時，這顆石頭已經存有{@dice 1d4-1}環由DM選擇的法術。",
+				"這顆亮紫色的稜形石可以將它施放的法術儲存起來，並保存這些法術直到你使用它們。這顆石頭可以同時儲存總計最多3環的法術。當被發現時，這顆石頭已經存有{@dice 1d4-1}環由DM選擇的法術。",
 				"透過在施放法術時觸碰這顆石頭，任何生物都可以將一個1環到3環的法術施放在這顆石頭上。這個法術當下並不會發揮任何效果，而是被儲存進這顆石頭中。若這顆石頭無法容納該法術，則該法術將被浪費而不會發揮任何效果。用以施放該法術的法術位環階將會決定它在該艾恩石中所使用的空間。",
 				"當這顆石頭繞著你的頭旋轉時，你可以施放任何它所儲存的法術。該法術將使用其原本施法者所使用的法術位環階、法術豁免DC、法術攻擊加值、和施法屬性，但除此之外，它仍被視作是由你施放了該法術。從這顆石頭施放的法術將不再被儲存於石頭中，並釋放它原本佔據的空間。"
 			],
@@ -13910,7 +13910,7 @@
 			]
 		},
 		{
-			"name": "Scarab of Protection",
+			"name": "防護聖甲蟲", "ENG_name": "Scarab of Protection",
 			"wondrous": true,
 			"tier": "Major",
 			"rarity": "Legendary",
@@ -13918,12 +13918,12 @@
 			"page": 199,
 			"reqAttune": true,
 			"entries": [
-				"If you hold this beetle-shaped medallion in your hand for 1 round, an inscription appears on its surface revealing its magical nature. It provides two benefits while it is on your person:",
+				"若你將這個甲蟲外型的徽章持握在手中長達1輪，它的表面將會浮現出銘文，並揭示出它的魔法性質。當你擁有它時，它將提供二個好處：",
 				{
 					"type": "list",
 					"items": [
-						"You have advantage on saving throws against spells.",
-						"The scarab has 12 charges. If you fail a saving throw against a necromancy spell or a harmful effect originating from an undead creature, you can use your reaction to expend 1 charge and turn the failed save into a successful one. The scarab crumbles into powder and is destroyed when its last charge is expended."
+						"你在對抗法術的豁免檢定中具有優勢。",
+						"這個聖甲蟲含有12發充能。若你在一次對抗死靈法術或源自於不死生物的傷害性效果的豁免檢定中失敗，你可以使用你的反應以消耗1發充能，並使該失敗的豁免變為豁免成功。這個聖甲蟲會在它的最後一發充能被消耗時被摧毀並粉碎成塵。"
 					]
 				}
 			],
@@ -14140,15 +14140,15 @@
 			]
 		},
 		{
-			"name": "Sending Stones",
+			"name": "傳訊石", "ENG_name": "Sending Stones",
 			"wondrous": true,
 			"tier": "Minor",
 			"rarity": "Uncommon",
 			"source": "DMG",
 			"page": 199,
 			"entries": [
-				"Sending stones come in pairs, with each smooth stone carved to match the other so the pairing is easily recognized. While you touch one stone, you can use an action to cast the {@spell sending} spell from it. The target is the bearer of the other stone. If no creature bears the other stone, you know that fact as soon as you use the stone and don't cast the spell.",
-				"Once {@spell sending} is cast through the stones, they can't be used again until the next dawn. If one of the stones in a pair is destroyed, the other one becomes nonmagical."
+				"傳訊石兩兩成對，各為一塊被雕刻成互相匹配的光滑石頭構成，也因此成對的傳訊石相當容易辨識。當你觸碰其中一顆石頭，你可以使用一個動作以從它施放{@spell 短訊術}法術。該法術的目標為另一顆石頭的攜帶者。若沒有任何生物攜帶另一顆石頭，則你會在你使用這顆石頭的同時知道這個事實，且不會施放該法術。",
+				"一旦{@spell 短訊術}被藉由這顆石頭施放，則它們直到下次日出之前都不能再被使用。若這對傳訊石的其中一顆石頭被摧毀，則另一顆將會變為非魔法物體。"
 			],
 			"attachedSpells": [
 				"sending"
@@ -14559,7 +14559,7 @@
 			"page": 150
 		},
 		{
-			"name": "Slippers of Spider Climbing",
+			"name": "蛛行拖鞋", "ENG_name": "Slippers of Spider Climbing",
 			"wondrous": true,
 			"tier": "Major",
 			"rarity": "Uncommon",
@@ -14567,7 +14567,7 @@
 			"page": 200,
 			"reqAttune": true,
 			"entries": [
-				"While you wear these light shoes, you can move up, down, and across vertical surfaces and upside down along ceilings, while leaving your hands free. You have a climbing speed equal to your walking speed. However, the slippers don't allow you to move this way on a slippery surface, such as one covered by ice or oil."
+				"當你穿著這雙便鞋時，你可以在垂直表面上下移動、或甚至在天花板上下顛倒的移動，而無須使用你的雙手。你獲得等同於你步行速度的攀爬速度。然而，這雙拖鞋並不能讓你用這個方式在滑溜的表面上移動，像是覆蓋著冰或油的表面。"
 			],
 			"lootTables": [
 				"Magic Item Table F"
