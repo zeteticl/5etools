@@ -53,9 +53,9 @@ const typeFilter = new Filter({header: "Type", headerName: "類型", deselFn: (i
 const tierFilter = new Filter({header: "Tier", headerName: "階級", items: ["None", "Minor", "Major"], displayFn:Parser.ItemTierToDisplay });
 const propertyFilter = new Filter({header: "Property", headerName: "物品屬性", displayFn: StrUtil.uppercaseFirst});
 const costFilter = new RangeFilter({header: "Cost", headerName: "價值", min: 0, max: 100, allowGreater: true, suffix: "金幣"});
-const focusFilter = new Filter({header: "Spellcasting Focus", headerName: "施法法器", items: ["Bard", "Cleric", "Druid", "Paladin", "Sorcerer", "Warlock", "Wizard"]});
+const focusFilter = new Filter({header: "Spellcasting Focus", headerName: "施法法器", items: ["Bard", "Cleric", "Druid", "Paladin", "Sorcerer", "Warlock", "Wizard"], displayFn: Parser.ClassToDisplay});
 const attachedSpellsFilter = new Filter({header: "Attached Spells", headerName: "附加法術", displayFn: (it) => it.split("|")[0].toTitleCase()});
-const lootTableFilter = new Filter({header: "Found On", headerName: "列於魔法物品表", items: ["魔法物品表A", "魔法物品表B", "Magic Item Table C", "Magic Item Table D", "Magic Item Table E", "Magic Item Table F", "Magic Item Table G", "Magic Item Table H", "Magic Item Table I"]});
+const lootTableFilter = new Filter({header: "Found On", headerName: "列於魔法物品表", items: ["魔法物品表A", "魔法物品表B", "魔法物品表C", "魔法物品表D", "魔法物品表E", "Magic Item Table F", "Magic Item Table G", "Magic Item Table H", "Magic Item Table I"]});
 
 let filterBox;
 async function populateTablesAndFilters (data) {
@@ -75,7 +75,15 @@ async function populateTablesAndFilters (data) {
 	const categoryFilter = new Filter({
 		header: "Category", headerName: "分類",
 		items: ["Basic", "Generic Variant", "Specific Variant", "Other"],
-		deselFn: (it) => it === "Specific Variant"
+		deselFn: (it) => it === "Specific Variant",
+		displayFn: function(str){
+			switch(str){
+			case "Basic": return "基本";
+			case "Generic Variant": return "通用變體";
+			case "Specific Variant": return "特定變體";
+			case "Other": return "不須";
+			default: return str;
+		};}
 	});
 	const miscFilter = new Filter({header: "Miscellaneous", headerName: "雜項", items: ["Ability Score Adjustment", "Charges", "Cursed", "Magic", "Mundane", "Sentient"], displayFn:function(str){switch(str){
 		case "Ability Score Adjustment": return "屬性值調整";
