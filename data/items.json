@@ -2726,7 +2726,7 @@
 			]
 		},
 		{
-			"name": "Candle of Invocation",
+			"name": "祈神蠟燭", "ENG_name": "Candle of Invocation",
 			"wondrous": true,
 			"tier": "Major",
 			"rarity": "Very Rare",
@@ -2734,12 +2734,12 @@
 			"page": 157,
 			"reqAttune": true,
 			"entries": [
-				"This slender taper is dedicated to a deity and shares that deity's alignment. The candle's alignment can be detected with the {@spell 偵測善惡} spell. The DM chooses the god and associated alignment or determines the alignment randomly.",
+				"這根纖細的蠟燭奉獻給了某個神祇，並共享著該神祇的陣營。這根蠟燭的陣營可以透過{@spell 偵測善惡}法術被偵測。由DM選擇或隨機決定一尊神明和其所屬的陣營。",
 				{
 					"type": "table",
 					"colLabels": [
 						"{@dice d20}",
-						"Alignment"
+						"陣營"
 					],
 					"colStyles": [
 						"col-1 text-align-center",
@@ -2748,45 +2748,45 @@
 					"rows": [
 						[
 							"1-2",
-							"Chaotic evil"
+							"混亂邪惡"
 						],
 						[
 							"3-4",
-							"Chaotic neutral"
+							"混亂中立"
 						],
 						[
 							"5-7",
-							"Chaotic good"
+							"混亂善良"
 						],
 						[
 							"8-9",
-							"Neutral evil"
+							"中立邪惡"
 						],
 						[
 							"10-11",
-							"Neutral"
+							"絕對中立"
 						],
 						[
 							"12-13",
-							"Neutral good"
+							"中立善良"
 						],
 						[
 							"14-15",
-							"Lawful evil"
+							"守序邪惡"
 						],
 						[
 							"16-17",
-							"Lawful neutral"
+							"守序中立"
 						],
 						[
 							"18-20",
-							"Lawful good"
+							"守序善良"
 						]
 					]
 				},
-				"The candle's magic is activated when the candle is lit, which requires an action. After burning for 4 hours, the candle is destroyed. You can snuff it out early for use at a later time. Deduct the time it burned in increments of 1 minute from the candle's total burn time.",
-				"While lit, the candle sheds dim light in a 30-foot radius. Any creature within that light whose alignment matches that of the candle makes attack rolls, saving throws, and ability checks with advantage. In addition, a cleric or druid in the light whose alignment matches the candle's can cast 1st-level spells he or she has prepared without expending spell slots, though the spell's effect is as if cast with a 1st-level slot.",
-				"Alternatively, when you light the candle for the first time, you can cast the {@spell gate} spell with it. Doing so destroys the candle."
+				"這根蠟燭的魔法會在它被點燃時被啟動，且點燃它需要一個動作。在燃燒4小時之後，這根蠟燭將被摧毀。你可以提早熄滅它以備日後使用。將它燃燒的時間以1分鐘為單位從這根蠟燭總燃燒時間中扣除。",
+				"當被點燃時，這根蠟燭將散發出30呎半徑的微光光照。任何在該光照範圍內，且陣營與此蠟燭符合的生物將在攻擊檢定、豁免檢定、和屬性檢定中具有優勢。此外，陣營與此蠟燭符合的牧師或德魯伊可以施放他或她所準備的1環法術而無須消耗法術位，該法術的效果將如同被以1環法術位施放。",
+				"或者，當你第一次點燃此蠟燭時，你可以使用它施放{@spell 異界之門}法術。這麼做會摧毀這根蠟燭。"
 			],
 			"attachedSpells": [
 				"gate"
@@ -7423,7 +7423,7 @@
 			]
 		},
 		{
-			"name": "Helm of Brilliance",
+			"name": "光輝頭盔", "ENG_name": "Helm of Brilliance",
 			"wondrous": true,
 			"tier": "Major",
 			"rarity": "Very Rare",
@@ -7431,18 +7431,18 @@
 			"page": 173,
 			"reqAttune": true,
 			"entries": [
-				"This dazzling helm is set with {@dice 1d10} diamonds, {@dice 2d10} rubies, {@dice 3d10} fire opals, and {@dice 4d10} opals. Any gem pried from the helm crumbles to dust. When all the gems are removed or destroyed, the helm loses its magic.",
-				"You gain the following benefits while wearing it:",
+				"這個耀眼的頭盔上鑲嵌著{@dice 1d10}顆鑽石、{@dice 2d10}顆紅寶石、{@dice 3d10} 顆火蛋白石、和{@dice 4d10}顆蛋白石。任何從頭盔上摘下的寶石都將粉碎成塵。當所有寶石都被摘下或摧毀，這個頭盔將失去它的魔力。",
+				"當穿戴它時，你獲得下列好處：",
 				{
 					"type": "list",
 					"items": [
-						"You can use an action to cast one of the following spells (save DC 18), using one of the helm's gems of the specified type as a component: {@spell daylight} (opal), {@spell fireball} (fire opal), {@spell prismatic spray} (diamond), or {@spell wall of fire} (ruby). The gem is destroyed when the spell is cast and disappears from the helm.",
-						"As long as it has at least one diamond, the helm emits dim light in a 30-foot radius when at least one undead is within that area. Any undead that starts its turn in that area takes {@dice 1d6} radiant damage.",
-						"As long as the helm has at least one ruby, you have resistance to fire damage.",
-						"As long as the helm has at least one fire opal, you can use an action and speak a command word to cause one weapon you are holding to burst into flames. The flames emit bright light in a 10-foot radius and dim light for an additional 10 feet. The flames are harmless to you and the weapon. When you hit with an attack using the blazing weapon, the target takes an extra {@dice 1d6} fire damage. The flames last until you use a bonus action to speak the command word again or until you drop or stow the weapon."
+						"你可以使用一個動作以施放下列其中一個法術（豁免DC 18），使用這個頭盔的其中一顆特定類型的寶石做為構材：{@spell 晝明術}（蛋白石）、{@spell 火球術}（火蛋白石）、{@spell 虹光噴射}（鑽石）、或{@spell 火牆術}（紅寶石）。該寶石將在法術施放時被摧毀，並從頭盔上消失。",
+						"只要這個頭盔上還有至少一顆鑽石，它就會在30呎半徑範圍內有至少一個不死生物時散發出30呎半徑的微光光照。任何在該範圍內開始它回合的不死生物都將受到{@dice 1d6}光耀傷害。",
+						"只要這個頭盔上還有至少一顆紅寶石，你就具有對火焰傷害的抗性。",
+						"只要這個頭盔上還有至少一顆火蛋白石，你就可以使用一個動作並說出一個命令語，以使你正持握的一把武器迸發出火焰。這團火焰將散發出10呎半徑的明亮光照和再延伸10呎的微光光照。這團火焰對你和該武器是無害的。當你使用這把熾焰武器以一次攻擊命中目標時，目標將受到額外的{@dice 1d6}火焰傷害。這團火焰將持續直到你使用一個附贈動作再次說出其命令語、或直到你丟下或收起該武器。"
 					]
 				},
-				"Roll a {@dice d20} if you are wearing the helm and take fire damage as a result of failing a saving throw against a spell. On a roll of 1, the helm emits beams of light from its remaining gems. Each creature within 60 feet of the helm other than you must succeed on a DC 17 Dexterity saving throw or be struck by a beam, taking radiant damage equal to the number of gems in the helm. The helm and its gems are then destroyed."
+				"當你在穿戴這個頭盔期間因為在一次對抗法術的豁免檢定中失敗而受到火焰傷害時，骰一顆{@dice d20}。若擲骰結果為1，則這個頭盔將從它剩下的寶石中散發出無數光輝射線。每個除了你以外，距離此頭盔60呎內的生物都必須成功通過一次DC 17的敏捷豁免，否則將被其中一道射線擊中，並受到等同於此頭盔上剩餘寶石數量的光耀傷害。這個頭盔和它的寶石接著將被摧毀。"
 			],
 			"attachedSpells": [
 				"daylight",
@@ -7472,7 +7472,7 @@
 			]
 		},
 		{
-			"name": "Helm of Telepathy",
+			"name": "心靈感應頭盔", "ENG_name": "Helm of Telepathy",
 			"wondrous": true,
 			"tier": "Major",
 			"rarity": "Uncommon",
@@ -7480,8 +7480,8 @@
 			"page": 174,
 			"reqAttune": true,
 			"entries": [
-				"While wearing this helm, you can use an action to cast the {@spell detect thoughts} spell (save DC 13) from it. As long as you maintain concentration on the spell, you can use a bonus action to send a telepathic message to a creature you are focused on. It can reply\u2014using a bonus action to do so\u2014while your focus on it continues.",
-				"While focusing on a creature with {@spell detect thoughts}, you can use an action to cast the {@spell suggestion} spell (save DC 13) from the helm on that creature. Once used, the suggestion property can't be used again until the next dawn."
+				"當穿戴此頭盔時，你可以使用一個動作以從它施放{@spell 偵測思想}法術（豁免DC 13）。只要你仍專注於這個法術，你就可以使用一個附贈動作以對你正專注的該生物傳送一個心靈訊息。當你持續專注於它的期間，它也可以使用一個附贈動作進行回覆。",
+				"當以{@spell 偵測思想}專注於一個生物時，你可以使用一個動作以從此頭盔對該生物施放{@spell 暗示術}法術（豁免DC 13）。一旦你這麼使用，這個暗示能力直到下次日出之前都不能再被使用。"
 			],
 			"attachedSpells": [
 				"detect thoughts",
@@ -7492,7 +7492,7 @@
 			]
 		},
 		{
-			"name": "Helm of Teleportation",
+			"name": "傳送頭盔", "ENG_name": "Helm of Teleportation",
 			"wondrous": true,
 			"tier": "Major",
 			"rarity": "Rare",
@@ -7500,7 +7500,7 @@
 			"page": 174,
 			"reqAttune": true,
 			"entries": [
-				"This helm has 3 charges. While wearing it, you can use an action and expend 1 charge to cast the {@spell teleport} spell from it. The helm regains {@dice 1d3} expended charges daily at dawn."
+				"這個頭盔含有3發充能。當穿戴它時，你可以使用一個動作並消耗1發充能以從它施放{@spell 傳送術}法術。這個頭盔會在每天日出時恢復{@dice 1d3}發已消耗的充能。"
 			],
 			"charges": 3,
 			"attachedSpells": [
