@@ -2843,15 +2843,15 @@
 			]
 		},
 		{
-			"name": "Cape of the Mountebank",
+			"name": "郎中披肩", "ENG_name": "Cape of the Mountebank",
 			"wondrous": true,
 			"tier": "Major",
 			"rarity": "Rare",
 			"source": "DMG",
 			"page": 157,
 			"entries": [
-				"This cape smells faintly of brimstone. While wearing it, you can use it to cast the {@spell dimension door} spell as an action. This property of the cape can't be used again until the next dawn.",
-				"When you disappear, you leave behind a cloud of smoke, and you appear in a similar cloud of smoke at your destination. The smoke lightly obscures the space you left and the space you appear in, and it dissipates at the end of your next turn. A light or stronger wind disperses the smoke."
+				"這件披肩聞起來帶有淡淡的硫磺味。當穿戴它時，你可以使用它以一個動作施放{@spell 次元門}法術。這件披肩的這個特性直到下次日出前都不能再被使用。",
+				"當你消失時，你將留下一團煙霧，且你會伴隨著一團類似的煙霧出現在你的目的地。這團煙霧輕度遮蔽著你離開時所在的空間和你出現時所在的空間，且它將在你的下個回合結束時消散。一陣微風或更強的風將吹散這陣煙霧。"
 			],
 			"attachedSpells": [
 				"dimension door"
@@ -3975,15 +3975,15 @@
 			"page": 159,
 			"reqAttune": true,
 			"entries": [
-				"This cube is about an inch across. Each face has a distinct marking on it that can be pressed. The cube starts with 36 charges, and it regains {@dice 1d20} expended charges daily at dawn.",
-				"You can use an action to press one of the cube's faces, expending a number of charges based on the chosen face, as shown in the Cube of Force Faces table. Each face has a different effect. If the cube has insufficient charges remaining, nothing happens. Otherwise, a barrier of {@condition 隱形} force springs into existence, forming a cube 15 feet on a side. The barrier is centered on you, moves with you, and lasts for 1 minute, until you use an action to press the cube's sixth face, or the cube runs out of charges. You can change the barrier's effect by pressing a different face of the cube and expending the requisite number of charges, resetting the duration. If your movement causes the barrier to come into contact with a solid object that can't pass through the cube, you can't move any closer to that object as long as the barrier remains.",
+				"這個魔方的直徑約1吋。它的各面都有著獨特的標記，且可以被按壓。這個魔方起始含有36發充能，且它會在每天日出時恢復{@dice 1d20}發已消耗的充能。",
+				"你可以使用一個動作以按下這個魔方的其中一面，並參照力場魔方各面的表格，根據所選的面消耗對應的充能數。每個面都有著不同的效果。若這個魔方沒有足夠的充能，則什麼事也不會發生。除此之外，一道{@condition 隱形}的力場屏障將會憑空出現，形成一個各邊邊長15呎的立方體。這個屏障將以你為中心，會隨著你移動，且會持續長達1分鐘、或直到你使用一個動作按下這個魔方的第六面、或直到這個魔方的充能耗盡。你可以藉由按下這個魔方的不同面並消耗所需的充能，以改變這道屏障的效果並重置其持續時間。若你的移動導致這道屏障撞上一個無法穿過立方體力場的固態物體，則你在這道屏障存在的期間，將無法再更移動靠近該物體。",
 				{
 					"type": "table",
-					"caption": "Cube of Force Faces",
+					"caption": "力場魔方各面",
 					"colLabels": [
-						"Face",
-						"Charges",
-						"Effect"
+						"面",
+						"消耗充能",
+						"效果"
 					],
 					"colStyles": [
 						"col-1 text-align-center",
@@ -3994,41 +3994,41 @@
 						[
 							"1",
 							"1",
-							"Gases, wind, and fog can't pass through the barrier."
+							"氣體、風、和霧無法穿過這道屏障。"
 						],
 						[
 							"2",
 							"2",
-							"Nonliving matter can't pass through the barrier. Walls, floors, and ceilings can pass through at your discretion."
+							"非活體物質無法穿過這道屏障。由你決定牆壁、地板、和天花板是否可以穿過這道屏障。"
 						],
 						[
 							"3",
 							"3",
-							"Living matter can't pass through the barrier."
+							"活體物質無法穿過這道屏障。"
 						],
 						[
 							"4",
 							"4",
-							"Spell effects can't pass through the barrier."
+							"法術效果無法穿過這道屏障。"
 						],
 						[
 							"5",
 							"5",
-							"Nothing can pass through the barrier. Walls, floors, and ceilings can pass through at your discretion."
+							"任何事物都無法穿過這道屏障。由你決定牆壁、地板、和天花板是否可以穿過這道屏障。"
 						],
 						[
 							"6",
 							"0",
-							"The barrier deactivates."
+							"這道屏障被解除。"
 						]
 					]
 				},
-				"The cube loses charges when the barrier is targeted by certain spells or comes into contact with certain spell or magic item effects, as shown in the table below.",
+				"這個魔方會在其屏障被做為特定法術的目標、或接觸到特定法術或魔法物品的效果時失去充能，如下表所示。",
 				{
 					"type": "table",
 					"colLabels": [
-						"Spell or item",
-						"Charges Lost"
+						"法術或物品",
+						"充能損失"
 					],
 					"colStyles": [
 						"col-3",
@@ -4036,23 +4036,23 @@
 					],
 					"rows": [
 						[
-							"{@spell Disintegrate}",
+							"{@spell 解離術}",
 							"{@dice 1d12}"
 						],
 						[
-							"{@item Horn of blasting}",
+							"{@item 音爆號角}",
 							"{@dice 1d10}"
 						],
 						[
-							"{@spell Passwall}",
+							"{@spell 穿牆術}",
 							"{@dice 1d6}"
 						],
 						[
-							"{@spell Prismatic spray}",
+							"{@spell 虹光噴射}",
 							"{@dice 1d20}"
 						],
 						[
-							"{@spell Wall of fire}",
+							"{@spell 火牆術}",
 							"{@dice 1d4}"
 						]
 					]
@@ -4064,16 +4064,16 @@
 			]
 		},
 		{
-			"name": "Cubic Gate",
+			"name": "界門魔方", "name": "Cubic Gate",
 			"wondrous": true,
 			"tier": "Major",
 			"rarity": "Legendary",
 			"source": "DMG",
 			"page": 160,
 			"entries": [
-				"This cube is 3 inches across and radiates palpable magical energy. The six sides of the cube are each keyed to a different plane of existence, one of which is the Material Plane. The other sides are linked to planes determined by the DM.",
-				"You can use an action to press one side of the cube to cast the {@spell gate} spell with it, opening a portal to the plane keyed to that side. Alternatively, if you use an action to press one side twice, you can cast the {@spell plane shift} spell (save DC 17) with the cube and transport the targets to the plane keyed to that side.",
-				"The cube has 3 charges. Each use of the cube expends 1 charge. The cube regains {@dice 1d3} expended charges daily at dawn."
+				"這個魔方的直徑為3吋，且散發著明顯可見的魔法能量。這個魔方的六個面都各自對應著一個不同的存在位面，其中一個是物質位面，而其他各面所聯繫的位面則由DM決定。",
+				"你可以使用一個動作以按下這個魔方的其中一面，以使用它施放{@spell 異界之門}法術，開啟一扇通往該面對應位面的傳送門。或者，若你使用一個動作以按下同一面兩次，則你可以使用這個魔方施放{@spell 異界傳送}法術（豁免DC 17），並將目標傳送到該面所對應的位面。",
+				"這個魔方含有3發充能。每次使用這個魔方都會消耗1發充能。這個魔方會在每天日出時恢復{@dice 1d3}發已消耗的充能。"
 			],
 			"charges": 3,
 			"attachedSpells": [
@@ -7718,7 +7718,7 @@
 			"page": 154
 		},
 		{
-			"name": "Horn of Blasting",
+			"name": "音爆號角", "ENG_name": "Horn of Blasting",
 			"wondrous": true,
 			"weight": "2",
 			"tier": "Major",
@@ -7726,8 +7726,8 @@
 			"source": "DMG",
 			"page": 174,
 			"entries": [
-				"You can use an action to speak the horn's command word and then blow the horn, which emits a thunderous blast in a 30-foot cone that is audible 600 feet away. Each creature in the cone must make a DC 15 Constitution saving throw. On a failed save, a creature takes {@dice 5d6} thunder damage and is {@condition deafened} for 1 minute. On a successful save, a creature takes half as much damage and isn't {@condition deafened}. Creatures and objects made of glass or crystal have disadvantage on the saving throw and take {@dice 10d6} thunder damage instead of {@dice 5d6}.",
-				"Each use of the horn's magic has a {@chance 20} chance of causing the horn to explode. The explosion deals {@dice 10d6} fire damage to the blower and destroys the horn."
+				"你可以使用一個動作以說出這個號角的命令語，並接著吹響這個號角，它將釋放出一陣30呎錐形，可以在最遠600呎的距離被聽到的雷鳴音爆。每個在錐形範圍內的生物都必須進行一次DC 15的體質豁免。若豁免失敗，該生物將受到{@dice 5d6}雷鳴傷害並陷入{@condition 耳聾}狀態長達1分鐘。若豁免成功，則該生物只受到一半的傷害，且不會陷入{@condition 耳聾}狀態。由玻璃或水晶所製成的生物和物體在該豁免檢定上具有劣勢，且會受到{@dice 10d6}雷鳴傷害，而非{@dice 5d6}。",
+				"每次使用這個號角的魔法，都會有{@chance 20}機率使這個號角爆炸。這陣爆炸將會對吹奏者造成{@dice 10d6}火焰傷害，並摧毀這個號角。"
 			],
 			"lootTables": [
 				"Magic Item Table G"
@@ -8591,7 +8591,7 @@
 			]
 		},
 		{
-			"name": "Iron Flask",
+			"name": "收妖瓶", "ENG_name": "Iron Flask",
 			"wondrous": true,
 			"weight": "1",
 			"tier": "Major",
@@ -8599,14 +8599,14 @@
 			"source": "DMG",
 			"page": 178,
 			"entries": [
-				"This iron bottle has a brass stopper. You can use an action to speak the flask's command word, targeting a creature that you can see within 60 feet of you. If the target is native to a plane of existence other than the one you're on, the target must succeed on a DC 17 Wisdom saving throw or be trapped in the flask. If the target has been trapped by the flask before, it has advantage on the saving throw. Once trapped, a creature remains in the flask until released. The flask can hold only one creature at a time. A creature trapped in the flask doesn't need to breathe, eat, or drink and doesn't age.",
-				"You can use an action to remove the flask's stopper and release the creature the flask contains. The creature is friendly to you and your companions for 1 hour and obeys your commands for that duration. If you give no commands or give it a command that is likely to result in its death, it defends itself but otherwise takes no actions. At the end of the duration, the creature acts in accordance with its normal disposition and alignment.",
-				"An {@spell identify} spell reveals that a creature is inside the flask, but the only way to determine the type of creature is to open the flask. A newly discovered bottle might already contain a creature chosen by the DM or determined randomly.",
+				"這個鐵製瓶子附有一個黃銅瓶塞。你可以使用一個動作以說出這個扁瓶的命令語，選擇一個距離你60呎內且你所能看見的生物做為目標。若目標並非原生於你現在所在位面的生物，則目標必須成功通過一次DC 17的睿知豁免，否則將被囚禁在這個扁瓶內。若目標過去曾經被囚禁在這個扁瓶內，則它將在該豁免檢定中具有優勢。一旦被囚禁，該生物直到被釋放前都將待在這個扁瓶內。這個扁瓶同時只能容納一個生物。一個被囚禁在扁瓶內的生物不需要呼吸、進食、或飲水，且不會衰老。",
+				"你可以使用一個動作以拔除這個扁瓶的瓶塞，並釋放出這個扁瓶內裝載的生物。該生物將在1小時內對你和你的同伴友善，且會在這段期間內服從你的命令。若你沒有下達命令、或給了一個可能會導致它死亡的命令，則它將會自我防衛，且除此之外不採取其他動作。在這段期間結束後，該生物將根據它原本的性格和陣營行動。",
+				"{@spell 鑑定術}法術可以揭示出這個扁瓶內是否有生物存在，而唯一能知道該生物具體種類的方式只有將這個扁瓶打開。一個剛被發現的收妖瓶可能已經裝有一個由DM選擇或隨機決定的生物。",
 				{
 					"type": "table",
 					"colLabels": [
 						"{@dice d100}",
-						"Contents"
+						"內容物"
 					],
 					"colStyles": [
 						"col-1 text-align-center",
@@ -8615,123 +8615,123 @@
 					"rows": [
 						[
 							"01-50",
-							"Empty"
+							"無"
 						],
 						[
 							"51",
-							"{@creature Arcanaloth}"
+							"{@creature 奧登羅斯魔}"
 						],
 						[
 							"52",
-							"{@creature Cambion}"
+							"{@creature 魔裔}"
 						],
 						[
 							"53-54",
-							"{@creature Dao}"
+							"{@creature 土巨靈(達奧)|mm|土巨靈}"
 						],
 						[
 							"55-57",
-							"Demon (type 1): {@creature barlgura}, {@creature shadow demon}, or {@creature vrock}"
+							"惡魔(類型1)：{@creature 巴古拉魔}、{@creature 影魔}、或{@creature 弗洛魔}"
 						],
 						[
 							"58-60",
-							"Demon (type 2): {@creature chasme} or {@creature hezrou}"
+							"惡魔(類型2)：{@creature 喀嘶魔}、或{@creature 狂戰魔}"
 						],
 						[
 							"61-62",
-							"Demon (type 3): {@creature glabrezu} or {@creature yochlol}"
+							"惡魔(類型3)：{@creature 迷誘魔}、或{@creature 蠟融妖}"
 						],
 						[
 							"63-64",
-							"Demon (type 4): {@creature nalfeshnee}"
+							"惡魔(類型4)：{@creature 判魂魔}"
 						],
 						[
 							"65",
-							"Demon (type 5): {@creature marilith}"
+							"惡魔(類型5)：{@creature 六臂蛇魔}"
 						],
 						[
 							"66",
-							"Demon (type 6): {@creature balor} or {@creature goristro}"
+							"惡魔(類型6)：{@creature 巴洛炎魔}、或{@creature 巨牛魔}"
 						],
 						[
 							"67",
-							"{@creature Deva}"
+							"{@creature 梵天神侍}"
 						],
 						[
 							"68-69",
-							"Devil (greater): {@creature horned devil}, {@creature erinyes}, {@creature ice devil}, or {@creature pit fiend}"
+							"魔鬼(高等)：{@creature 角魔}、{@creature 慾魔}、{@creature 冰魔}、或{@creature 深獄煉魔}"
 						],
 						[
 							"70-72",
-							"Devil (lesser): {@creature imp}, {@creature spined devil}, {@creature bearded devil}, {@creature barbed devil}, {@creature chain devil}, or {@creature bone devil}"
+							"魔鬼(次級)：{@creature 小魔鬼}、{@creature 棘魔}、@creature 鬚魔}、{@creature 猬魔}、{@creature 鏈魔}、或{@creature 骨魔}"
 						],
 						[
 							"73-74",
-							"{@creature Djinni}"
+							"{@creature 氣巨靈(鎮尼)|mm|氣巨靈}"
 						],
 						[
 							"75-76",
-							"{@creature Efreeti}"
+							"{@creature 火巨靈(伊夫利特)|mm|火巨靈}"
 						],
 						[
 							"77-78",
-							"Elemental (any)"
+							"元素生物(任意)"
 						],
 						[
 							"79",
-							"{@creature Githyanki knight}"
+							"{@creature 吉斯洋基騎士}"
 						],
 						[
 							"80",
-							"{@creature Githzerai zerth}"
+							"{@creature 吉斯澤萊澤斯修士}"
 						],
 						[
 							"81-82",
-							"{@creature Invisible stalker}"
+							"{@creature 隱形潛獵者}"
 						],
 						[
 							"83-84",
-							"{@creature Marid}"
+							"{@creature 水巨靈(瑪利德)|mm|水巨靈}"
 						],
 						[
 							"85-86",
-							"{@creature Mezzoloth}"
+							"{@creature 麥澤羅斯魔}"
 						],
 						[
 							"87-88",
-							"{@creature Night hag}"
+							"{@creature 夜鬼婆}"
 						],
 						[
 							"89-90",
-							"{@creature Nycaloth}"
+							"{@creature 尼卡羅斯魔}"
 						],
 						[
 							"91",
-							"{@creature Planetar}"
+							"{@creature 異域神侍}"
 						],
 						[
 							"92-93",
-							"{@creature Salamander}"
+							"{@creature 火蜥蜴(沙拉曼達)|mm|火蜥蜴}"
 						],
 						[
 							"94-95",
-							"Slaad (any)"
+							"史拉蟾(任意)"
 						],
 						[
 							"96",
-							"{@creature Solar}"
+							"{@creature 熾天神侍}"
 						],
 						[
 							"97-98",
-							"{@creature succubus|mm|Succubus/Incubus}"
+							"{@creature 魅魔}/{@creature 夢魔}"
 						],
 						[
 							"99",
-							"{@creature Ultroloth}"
+							"{@creature 烏特羅斯魔}"
 						],
 						[
 							"00",
-							"{@creature Xorn}"
+							"{@creature 索爾石怪}"
 						]
 					]
 				}
@@ -15135,23 +15135,23 @@
 			]
 		},
 		{
-			"name": "Sphere of Annihilation",
+			"name": "湮滅法球", "ENG_name": "Sphere of Annihilation",
 			"wondrous": true,
 			"tier": "Major",
 			"rarity": "Legendary",
 			"source": "DMG",
 			"page": 201,
 			"entries": [
-				"This 2-foot-diameter black sphere is a hole in the multiverse, hovering in space and stabilized by a magical field surrounding it.",
-				"The sphere obliterates all matter it passes through and all matter that passes through it. Artifacts are the exception. Unless an artifact is susceptible to damage from a sphere of annihilation, it passes through the sphere unscathed. Anything else that touches the sphere but isn't wholly engulfed and obliterated by it takes {@dice 4d10} force damage.",
-				"The sphere is stationary until someone controls it. If you are within 60 feet of an uncontrolled sphere, you can use an action to make a DC 25 Intelligence ({@skill Arcana}) check. On a success, the sphere levitates in one direction of your choice, up to a number of feet equal to 5 × your Intelligence modifier (minimum 5 feet). On a failure, the sphere moves 10 feet toward you. A creature whose space the sphere enters must succeed on a DC 13 Dexterity saving throw or be touched by it, taking {@dice 4d10} force damage.",
-				"If you attempt to control a sphere that is under another creature's control, you make an Intelligence ({@skill Arcana}) check contested by the other creature's Intelligence ({@skill Arcana}) check. The winner of the contest gains control of the sphere and can levitate it as normal.",
-				"If the sphere comes into contact with a planar portal, such as that created by the {@spell gate} spell, or an extradimensional space, such as that within a {@item portable hole}, the DM determines randomly what happens, using the following table.",
+				"這個2呎直徑的黑色球體是一個多元宇宙中的孔洞，懸浮在空間中並因環繞著它的魔法力場而維持穩定。",
+				"這個法球會毀滅所有它所穿過和穿過它的物質。只有神器例外。除非神器註明其會被來自湮滅法球的傷害影響，否則它將可以不受影響的穿過湮滅法球。任何其他碰觸這個球體，但並未整個被它吞噬或毀滅的事物都將受到{@dice 4d10}力場傷害。",
+				"除非被某人控制，否則這個球體總是靜止不動。若一個未受控制的法球距離你60內，則你可以使用一個動作以進行一次DC 25的智力（{@skill 奧秘}）檢定。若檢定成功，則這個法球將往一個你所選擇的方向漂移，移動最多等同5x你的智力調整值的呎數（最少5呎）。若檢定失敗，該法球將向著你移動10呎距離。一個所在空間被法球闖入的生物必須成功通過一次DC 13的敏捷豁免，否則將被它觸碰，並受到{@dice 4d10}力場傷害。",
+				"若你嘗試控制一個處於其他生物控制下的湮滅法球，則你進行一次智力（{@skill 奧秘}）檢定以對抗該生物的智力（{@skill 奧秘}）檢定。這場對抗的獲勝者將獲得湮滅法球的控制權，且可以如常讓它飄移。",
+				"若這個法球接觸到一個位面傳送門，例如被{@spell 異界之門}法術創造出的傳送門、或是一個像是{@item 便攜式次元洞}內部的異次元空間，則DM將使用下表隨機決定發生什麼事情。",
 				{
 					"type": "table",
 					"colLabels": [
 						"{@dice d100}",
-						"Result"
+						"結果"
 					],
 					"colStyles": [
 						"col-1 text-align-center",
@@ -15160,15 +15160,15 @@
 					"rows": [
 						[
 							"01-50",
-							"The sphere is destroyed."
+							"這個法球被摧毀。"
 						],
 						[
 							"51-85",
-							"The sphere moves through the portal or into the extradimensional space."
+							"這個法球穿過該傳送門、或進入該異次元空間。"
 						],
 						[
 							"86-00",
-							"A spatial rift sends each creature and object within 180 feet of the sphere, including the sphere, to a random plane of existence."
+							"一個空間裂縫出現，並將湮滅法球和距離它180呎內的每個生物和物體傳送到一個隨機的存在位面。"
 						]
 					]
 				}
@@ -16354,18 +16354,18 @@
 			]
 		},
 		{
-			"name": "Talisman of Pure Good",
+			"name": "純善護符", "ENG_name": "Talisman of Pure Good",
 			"wondrous": true,
 			"weight": "1",
 			"tier": "Major",
 			"rarity": "Legendary",
 			"source": "DMG",
 			"page": 207,
-			"reqAttune": "by a Creature of Good Alignment",
+			"reqAttune": "由善良陣營的生物",
 			"entries": [
-				"This talisman is a mighty symbol of goodness. A creature that is neither good nor evil in alignment takes {@dice 6d6} radiant damage upon touching the talisman. An evil creature takes {@dice 8d6} radiant damage upon touching the talisman. Either sort of creature takes the damage again each time it ends its turn holding or carrying the talisman.",
-				"If you are a good cleric or paladin, you can use the talisman as a holy symbol, and you gain a +2 bonus to spell attack rolls while you wear or hold it.",
-				"The talisman has 7 charges. If you are wearing or holding it, you can use an action to expend 1 charge from it and choose one creature you can see on the ground within 120 feet of you. If the target is of evil alignment, a flaming fissure opens under it. The target must succeed on a DC 20 Dexterity saving throw or fall into the fissure and be destroyed, leaving no remains. The fissure then closes, leaving no trace of its existence. When you expend the last charge, the talisman disperses into motes of golden light and is destroyed."
+				"這個護符是善良的強大象徵。一個既非善良也非邪惡陣營的生物會在觸碰這個護符時受到{@dice 6d6}光耀傷害。一個邪惡的生物則會在觸碰這個護符時受到{@dice 8d6}光耀傷害。這兩類生物在它們每次回合結束時若正持握或攜帶這個護符，則它們都將再次受到該傷害。",
+				"若你是一個善良的牧師或聖騎士，則你可以使用這個護符做為一個聖徽，且你在穿戴或持握它的期間在法術攻擊檢定中獲得+2加值。",
+				"這個護符含有7發充能。若你正穿戴或持握它，你可以使用一個動作以消耗1發充能，並選擇一個距離你120呎內，在地面上且你能看見的生物。若該生物屬於邪惡陣營，則一道烈焰裂隙將在它腳下開啟。目標必須成功通過一次DC 20的敏捷豁免，否則將摔入裂隙中並被摧毀，屍骨無存。這道裂隙接著將不留痕跡的關閉。當你消耗最後一發充能時，這個護符將粉碎成金黃色的光點並被摧毀。"
 			],
 			"charges": 7,
 			"lootTables": [
@@ -16373,7 +16373,7 @@
 			]
 		},
 		{
-			"name": "Talisman of the Sphere",
+			"name": "法球護符", "ENG_name": "Talisman of the Sphere",
 			"wondrous": true,
 			"weight": "1",
 			"tier": "Major",
@@ -16382,25 +16382,25 @@
 			"page": 207,
 			"reqAttune": true,
 			"entries": [
-				"When you make an Intelligence ({@skill Arcana}) check to control a {@item sphere of annihilation} while you are holding this talisman, you double your proficiency bonus on the check. In addition, when you start your turn with control over a {@item sphere of annihilation}, you can use an action to levitate it 10 feet plus a number of additional feet equal to 10 × your Intelligence modifier."
+				"當你在持握這個護符時進行用以控制{@item 湮滅法球}的智力（{@skill 奧秘}）檢定時，你使你的熟練加值在該檢定中變為兩倍。此外，當你在控制{@item 湮滅法球}期間開始你的回合，你可以使用一個動作使它飄移10呎加上等同於10x你的智力調整值呎數的距離。"
 			],
 			"lootTables": [
 				"Magic Item Table I"
 			]
 		},
 		{
-			"name": "Talisman of Ultimate Evil",
+			"name": "至惡護符", "ENG_name": "Talisman of Ultimate Evil",
 			"wondrous": true,
 			"weight": "1",
 			"tier": "Major",
 			"rarity": "Legendary",
 			"source": "DMG",
 			"page": 207,
-			"reqAttune": "by a Creature of Evil Alignment",
+			"reqAttune": "由邪惡陣營的生物",
 			"entries": [
-				"This item symbolizes unrepentant evil. A creature that is neither good nor evil in alignment takes {@dice 6d6} necrotic damage upon touching the talisman. A good creature takes {@dice 8d6} necrotic damage upon touching the talisman. Either sort of creature takes the damage again each time it ends its turn holding or carrying the talisman.",
-				"If you are an evil cleric or paladin, you can use the talisman as a holy symbol, and you gain a +2 bonus to spell attack rolls while you wear or hold it.",
-				"The talisman has 6 charges. If you are wearing or holding it, you can use an action to expend 1 charge from the talisman and choose one creature you can see on the ground within 120 feet of you. If the target is of good alignment, a flaming fissure opens under it. The target must succeed on a DC 20 Dexterity saving throw or fall into the fissure and be destroyed, leaving no remains. The fissure then closes, leaving no trace of its existence. When you expend the last charge, the talisman dissolves into foul-smelling slime and is destroyed."
+				"這個物品象徵著不思悔悟的邪惡。一個既非善良也非邪惡陣營的生物會在觸碰這個護符時受到{@dice 6d6}死靈傷害。一個善良的生物則會在觸碰這個護符時受到{@dice 8d6}死靈傷害。這兩類生物在它們每次回合結束時若正持握或攜帶這個護符，則它們都將再次受到該傷害。",
+				"若你是一個邪惡的牧師或聖騎士，則你可以使用這個護符做為一個聖徽，且你在穿戴或持握它的期間在法術攻擊檢定中獲得+2加值。",
+				"這個護符含有6發充能。若你正穿戴或持握它，你可以使用一個動作以消耗1發充能，並選擇一個距離你120呎內，在地面上且你能看見的生物。若該生物屬於善良陣營，則一道烈焰裂隙將在它腳下開啟。目標必須成功通過一次DC 20的敏捷豁免，否則將摔入裂隙中並被摧毀，屍骨無存。這道裂隙接著將不留痕跡的關閉。當你消耗最後一發充能時，這個護符將溶解成散發惡臭的黏液並被摧毀。"
 			],
 			"charges": 6,
 			"lootTables": [
@@ -18966,15 +18966,15 @@
 			]
 		},
 		{
-			"name": "Well of Many Worlds",
+			"name": "諸界之井", "ENG_name": "Well of Many Worlds",
 			"wondrous": true,
 			"tier": "Major",
 			"rarity": "Legendary",
 			"source": "DMG",
 			"page": 213,
 			"entries": [
-				"This fine black cloth, soft as silk, is folded up to the dimensions of a handkerchief. It unfolds into a circular sheet 6 feet in diameter.",
-				"You can use an action to unfold and place the well of many worlds on a solid surface, whereupon it creates a two-way portal to another world or plane of existence. Each time the item opens a portal, the DM decides where it leads. You can use an action to close an open portal by taking hold of the edges of the cloth and folding it up. Once well of many worlds has opened a portal, it can't do so again for {@dice 1d8} hours."
+				"這件黑色如絲綢般柔順的精緻布料被摺疊成了手帕的大小。它可以被展開呈一塊直徑6呎的圓形薄片。",
+				"你可以使用一個動作將諸界之井展開並放置在一個固體表面上，它將隨之創造出一個通往另一個世界或存在位面的雙向傳送門。每次這個物品開啟一扇傳送門時，DM將決定它通往的場所。你可以使用一個動作，藉由抓住布料的邊緣並將之摺疊以關閉一扇開啟的傳送門。一但諸界之井開啟了一扇傳送門，則它在接下來{@dice 1d8}小時內都不能再這麼做。"
 			],
 			"lootTables": [
 				"Magic Item Table I"
