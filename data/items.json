@@ -3967,7 +3967,7 @@
 			]
 		},
 		{
-			"name": "力場魔方", "name": "Cube of Force",
+			"name": "力場魔方", "ENG_name": "Cube of Force",
 			"wondrous": true,
 			"tier": "Major",
 			"rarity": "Rare",
@@ -4064,7 +4064,7 @@
 			]
 		},
 		{
-			"name": "界門魔方", "name": "Cubic Gate",
+			"name": "界門魔方", "ENG_name": "Cubic Gate",
 			"wondrous": true,
 			"tier": "Major",
 			"rarity": "Legendary",
@@ -4590,7 +4590,7 @@
 			]
 		},
 		{
-			"name": "Deck of Many Things",
+			"name": "Deck of Many Things", "name": "萬象無常牌",
 			"wondrous": true,
 			"tier": "Major",
 			"rarity": "Legendary",
@@ -4623,9 +4623,9 @@
 				{
 					"type": "table",
 					"colLabels": [
-						"{@dice 1d22|Playing Card}",
-						"Card",
-						"Effect"
+						"{@dice 1d22|撲克牌}",
+						"牌面",
+						"效果"
 					],
 					"colStyles": [
 						"col-3",
@@ -4639,9 +4639,9 @@
 								"roll": {
 									"exact": 1
 								},
-								"entry": "Ace of diamonds"
+								"entry": "方塊A"
 							},
-							"Vizier*",
+							"大臣*",
 							"At any time you choose within one year of drawing this card, you can ask a question in meditation and mentally receive a truthful answer to that question. Besides information, the answer helps you solve a puzzling problem or other dilemma. In other words, the knowledge comes with wisdom on how to apply it."
 						],
 						[
@@ -4650,9 +4650,9 @@
 								"roll": {
 									"exact": 2
 								},
-								"entry": "King of diamonds"
+								"entry": "方塊K"
 							},
-							"Sun",
+							"太陽",
 							"You gain 50,000 XP, and a wondrous item (which the DM determines randomly) appears in your hands."
 						],
 						[
@@ -4661,9 +4661,9 @@
 								"roll": {
 									"exact": 3
 								},
-								"entry": "Queen of diamonds"
+								"entry": "方塊Q"
 							},
-							"Moon",
+							"月亮",
 							"You are granted the ability to cast the {@spell wish} spell {@dice 1d3} times."
 						],
 						[
@@ -4672,9 +4672,9 @@
 								"roll": {
 									"exact": 4
 								},
-								"entry": "Jack of diamonds"
+								"entry": "方塊J"
 							},
-							"Star",
+							"星星",
 							"Increase one of your ability scores by 2. The score can exceed 20 but can't exceed 24."
 						],
 						[
@@ -4683,9 +4683,9 @@
 								"roll": {
 									"exact": 5
 								},
-								"entry": "Two of diamonds"
+								"entry": "方塊2"
 							},
-							"Comet*",
+							"彗星*",
 							"If you single-handedly defeat the next hostile monster or group of monsters you encounter, you gain experience points enough to gain one level. Otherwise, this card has no effect."
 						],
 						[
@@ -4694,9 +4694,9 @@
 								"roll": {
 									"exact": 6
 								},
-								"entry": "Ace of hearts"
+								"entry": "紅心A"
 							},
-							"The Fates*",
+							"命運*",
 							"Reality's fabric unravels and spins anew, allowing you to avoid or erase one event as if it never happened. You can use the card's magic as soon as you draw the card or at any other time before you die."
 						],
 						[
@@ -4705,9 +4705,9 @@
 								"roll": {
 									"exact": 7
 								},
-								"entry": "King of hearts"
+								"entry": "紅心K"
 							},
-							"Throne",
+							"君王",
 							"You gain proficiency in the {@skill 說服} skill, and you double your proficiency bonus on checks made with that skill. In addition, you gain rightful ownership of a small keep somewhere in the world. However, the keep is currently in the hands of monsters, which you must clear out before you can claim the keep as yours."
 						],
 						[
@@ -4716,9 +4716,9 @@
 								"roll": {
 									"exact": 8
 								},
-								"entry": "Queen of hearts"
+								"entry": "紅心Q"
 							},
-							"Key",
+							"鑰匙",
 							"A rare or rarer magic weapon with which you are proficient appears in your hands. The DM chooses the weapon."
 						],
 						[
@@ -4727,9 +4727,9 @@
 								"roll": {
 									"exact": 9
 								},
-								"entry": "Jack of hearts"
+								"entry": "紅心J"
 							},
-							"Knight",
+							"騎士",
 							"You gain the service of a 4th-level fighter who appears in a space you choose within 30 feet of you. The fighter is of the same race as you and serves you loyally until death, believing the fates have drawn him or her to you. You control this character."
 						],
 						[
@@ -4738,9 +4738,9 @@
 								"roll": {
 									"exact": 10
 								},
-								"entry": "Two of hearts"
+								"entry": "紅心2"
 							},
-							"Gem*",
+							"寶石*",
 							"Twenty-five pieces of jewelry worth 2,000 gp each or fifty gems worth 1,000 gp each appear at your feet."
 						],
 						[
@@ -4749,9 +4749,9 @@
 								"roll": {
 									"exact": 11
 								},
-								"entry": "Ace of clubs"
+								"entry": "梅花A"
 							},
-							"Talons*",
+							"禽爪*",
 							"Every magic item you wear or carry disintegrates. Artifacts in your possession aren't destroyed but do vanish."
 						],
 						[
@@ -4760,9 +4760,9 @@
 								"roll": {
 									"exact": 12
 								},
-								"entry": "King of clubs"
+								"entry": "梅花K"
 							},
-							"The Void",
+							"虛空",
 							"This black card spells disaster. Your soul is drawn from your body and contained in an object in a place of the DM's choice. One or more powerful beings guard the place. While your soul is trapped in this way, your body is {@condition 無力}. A {@spell wish} spell can't restore your soul, but the spell reveals the location of the object that holds it. You draw no more cards."
 						],
 						[
@@ -4771,9 +4771,9 @@
 								"roll": {
 									"exact": 13
 								},
-								"entry": "Queen of clubs"
+								"entry": "梅花Q"
 							},
-							"Flames",
+							"火焰",
 							"A powerful devil becomes your enemy. The devil seeks your ruin and plagues your life, savoring your suffering before attempting to slay you. This enmity lasts until either you or the devil dies."
 						],
 						[
@@ -4782,9 +4782,9 @@
 								"roll": {
 									"exact": 14
 								},
-								"entry": "Jack of clubs"
+								"entry": "梅花J"
 							},
-							"Skull",
+							"頭骨",
 							"You summon an {@creature avatar of death|dmg}-a ghostly humanoid skeleton clad in a tattered black robe and carrying a spectral scythe. It appears in a space of the DM's choice within 10 feet of you and attacks you, warning all others that you must win the battle alone. The avatar fights until you die or it drops to 0 hit points, whereupon it disappears. If anyone tries to help you, the helper summons its own {@creature avatar of death|dmg}. A creature slain by an {@creature avatar of death|dmg} can't be restored to life."
 						],
 						[
@@ -4793,9 +4793,9 @@
 								"roll": {
 									"exact": 15
 								},
-								"entry": "Two of clubs"
+								"entry": "梅花2"
 							},
-							"Idiot*",
+							"傻瓜*",
 							"Permanently reduce your Intelligence by {@dice 1d4+1} (to a minimum score of 1). You can draw one additional card beyond your declared draws."
 						],
 						[
@@ -4804,9 +4804,9 @@
 								"roll": {
 									"exact": 16
 								},
-								"entry": "Ace of spades"
+								"entry": "黑桃A"
 							},
-							"Donjon*",
+							"城堡*",
 							"You disappear and become entombed in a state of suspended animation in an extradimensional sphere. Everything you were wearing and carrying stays behind in the space you occupied when you disappeared. You remain imprisoned until you are found and removed from the sphere. You can't be located by any divination magic, but a {@spell wish} spell can reveal the location of your prison. You draw no more cards."
 						],
 						[
@@ -4815,9 +4815,9 @@
 								"roll": {
 									"exact": 17
 								},
-								"entry": "King of spades"
+								"entry": "黑桃K"
 							},
-							"Ruin",
+							"廢墟",
 							"All forms of wealth that you carry or own, other than magic items, are lost to you. Portable property vanishes. Businesses, buildings, and land you own are lost in a way that alters reality the least. Any documentation that proves you should own something lost to this card also disappears."
 						],
 						[
@@ -4826,9 +4826,9 @@
 								"roll": {
 									"exact": 18
 								},
-								"entry": "Queen of spades"
+								"entry": "黑桃Q"
 							},
-							"Euryale",
+							"尤瑞艾莉",
 							"The card's {@creature medusa}-like visage curses you. You take a -2 penalty on saving throws while cursed in this way. Only a god or the magic of The Fates card can end this curse."
 						],
 						[
@@ -4837,9 +4837,9 @@
 								"roll": {
 									"exact": 19
 								},
-								"entry": "Jack of spades"
+								"entry": "黑桃J"
 							},
-							"Rogue",
+							"盜賊",
 							"A nonplayer character of the DM's choice becomes hostile toward you. The identity of your new enemy isn't known until the NPC or someone else reveals it. Nothing less than a {@spell wish} spell or divine intervention can end the NPC's hostility toward you."
 						],
 						[
@@ -4848,9 +4848,9 @@
 								"roll": {
 									"exact": 20
 								},
-								"entry": "Two of spades"
+								"entry": "黑桃2"
 							},
-							"Balance*",
+							"平衡*",
 							"Your mind suffers a wrenching alteration, causing your alignment to change. Lawful becomes chaotic, good becomes evil, and vice versa. If you are true neutral or unaligned, this card has no effect on you."
 						],
 						[
@@ -4859,9 +4859,9 @@
 								"roll": {
 									"exact": 21
 								},
-								"entry": "Joker (with TM)"
+								"entry": "鬼牌(帶商標)"
 							},
-							"Fool*",
+							"愚者*",
 							"You lose 10,000 XP, discard this card, and draw from the deck again, counting both draws as one of your declared draws. If losing that much XP would cause you to lose a level, you instead lose an amount that leaves you with just enough XP to keep your level."
 						],
 						[
@@ -4870,9 +4870,9 @@
 								"roll": {
 									"exact": 22
 								},
-								"entry": "Joker (without TM)"
+								"entry": "鬼牌(不帶TM)"
 							},
-							"Jester",
+							"弄臣",
 							"You gain 10,000 XP, or you can draw two additional cards beyond your declared draws."
 						]
 					]
