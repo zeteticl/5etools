@@ -81,7 +81,7 @@ async function populateTablesAndFilters (data) {
 			case "Basic": return "基本";
 			case "Generic Variant": return "通用變體";
 			case "Specific Variant": return "特定變體";
-			case "Other": return "不須";
+			case "Other": return "其他";
 			default: return str;
 		};}
 	});
