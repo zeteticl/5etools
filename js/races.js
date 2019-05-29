@@ -94,7 +94,7 @@ async function onJsonLoad (data) {
 	});
 
 	const jsonRaces = Renderer.race.mergeSubraces(data.race);
-	const speedFilter = new Filter({header: "Speed", headerName: "速度", items: ["Climb", "Fly", "Swim", "Walk (Fast)", "Walk", "Walk (Slow)"]});
+	const speedFilter = new Filter({header: "Speed", headerName: "速度", items: ["Climb", "Fly", "Swim", "Walk (Fast)", "Walk", "Walk (Slow)"], displayFn:Parser.SpeedToDisplay});
 	const traitFilter = new Filter({
 		header: "Traits", headerName: "特性",
 		items: [

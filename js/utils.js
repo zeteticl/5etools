@@ -2186,54 +2186,54 @@ Parser.SKILL_JSON_TO_FULL = {
 
 Parser.ACTION_JSON_TO_FULL = {
 	"攻擊": [
-		"The most common action to take in combat is the Attack action, whether you are swinging a sword, firing an arrow from a bow, or brawling with your fists.",
-		"With this action, you make one melee or ranged attack. See the \"{@book Making an Attack|phb|9|making an attack}\" section for the rules that govern attacks.",
-		"Certain features, such as the Extra Attack feature of the fighter, allow you to make more than one attack with this action."
+		"攻擊動作是戰鬥中最常被採取的動作，包括了揮劍劈砍、彎弓射箭、或徒手揮拳等行動。",
+		"透過這個動作，你進行一次近戰或遠程攻擊。參見「{@book Making an Attack|phb|9|發動攻擊}」章節以獲得更多關於攻擊的規則。",
+		"某些能力，例如戰士的額外攻擊能力，能讓你透過這個動作進行超過一次的攻擊。"
 	],
 	"疾走": [
-		"When you take the Dash action, you gain extra movement for the current turn. The increase equals your speed, after applying any modifiers. With a speed of 30 feet, for example, you can move up to 60 feet on your turn if you dash.",
-		"Any increase or decrease to your speed changes this additional movement by the same amount. If your speed of 30 feet is reduced to 15 feet, for instance, you can move up to 30 feet this turn if you dash."
+		"當你採取疾走動作時，你在當回合獲得額外的移動力。其增加的移動力等同於你應用任何適用加值後的移動速度。舉例來說，若你的移動速度為30呎，則當你採取疾走動作後，你可以在你的回合移動最多60呎距離。",
+		"任何對你移動速度的增減都會使這個額外的移動力改變相同的數值。舉例來說，若你的30呎移動速度被減少至15呎，則當你採取疾走動作後，你在該回合就只能移動最多30呎距離。"
 	],
 	"撤離": [
-		"If you take the Disengage action, your movement doesn't provoke opportunity attacks for the rest of the turn."
+		"若你採取撤離動作，則你接著在該回合的移動將不會引發藉機攻擊。"
 	],
 	"閃避": [
-		"When you take the Dodge action, you focus entirely on avoiding attacks. Until the start of your next turn, any attack roll made against you has disadvantage if you can see the attacker, and you make Dexterity saving throws with advantage. You lose this benefit if you are incapacitated (as explained in the appendix) or if your speed drops to 0."
+		"當你採取閃避動作，你將全神專注於閃躲攻擊。直到你的下個回合開始前，若你可以看見攻擊者，則任何對你所進行的攻擊檢定都將具有劣勢，且你在敏捷豁免檢定中具有優勢。若你陷入無力狀態（見附錄說明）、或若你的移動速度歸零，則你將失去這些好處。"
 	],
 	"協助": [
-		"You can lend your aid to another creature in the completion of a task. When you take the Help action, the creature you aid gains advantage on the next ability check it makes to perform the task you are helping with, provided that it makes the check before the start of your next turn.",
-		"Alternatively, you can aid a friendly creature in attacking a creature within 5 feet of you. You feint, distract the target, or in some other way team up to make your ally's attack more effective. If your ally attacks the target before your next turn, the first attack roll is made with advantage."
+		"你可以提供支援以協助另一個生物達成其行動。當你採取協助動作，你所協助的生物將在下一次它為了執行你所幫助事項而進行的屬性檢定中具有優勢，但該檢定必須在你的下個回合開始前進行才能獲得這個好處。",
+		"或者，你可以協助一個友善生物攻擊一個距離你5呎內的生物。你做出佯攻、使目標分心、或用其他某些方式合作已使你盟友的攻擊更有效果。若你的盟友在你的下個回合前攻擊該目標，則其進行的第一次攻擊檢定將具有優勢。"
 	],
 	"躲藏": [
-		"When you take the Hide action, you make a Dexterity (Stealth) check in an attempt to hide, following the rules in chapter 7 for hiding. If you succeed, you gain certain benefits, as described in the \"{@book Unseen Attackers and Targets|PHB|9|unseen attackers and targets}\" section in the Player's Handbook."
+		"當你採取躲藏動作，你進行一次敏捷（隱匿）檢定以嘗試躲藏，遵循第七章關於躲藏的規則。若你檢定成功，則你將獲得某些好處，詳情參照《玩家手冊》中的「{@book Unseen Attackers and Targets|PHB|9|看不見的攻擊者和目標}」章節中的描述。"
 	],
 	"預備": [
-		"Sometimes you want to get the jump on a foe or wait for a particular circumstance before you act. To do so, you can take the Ready action on your turn so that you can act later in the round using your reaction.",
-		"First, you decide what perceivable circumstance will trigger your reaction. Then, you choose the action you will take in response to that trigger, or you choose to move up to your speed in response to it. Examples include \"If the cultist steps on the trapdoor, I'll pull the lever that opens it,\" and \"If the goblin steps next to me, I move away.\"",
-		"When the trigger occurs, you can either take your reaction right after the trigger finishes or ignore the trigger. Remember that you can take only one reaction per round.",
-		"When you ready a spell, you cast it as normal but hold its energy, which you release with your reaction when the trigger occurs. To be readied, a spell must have a casting time of 1 action, and holding onto the spell's magic requires concentration (explained in chapter 10). If your concentration is broken, the spell dissipates without taking effect. For example, if you are concentrating on the web spell and ready magic missile, your web spell ends, and if you take damage before you release magic missile with your reaction, your concentration might be broken.",
-		"You have until the start of your next turn to use a readied action."
+		"有時候你想要搶在敵人之前、或者等到特定情況發生後立即行動。若要這麼做，你可以在你的回合採取預備動作，好讓你可以在該輪稍後的時機使用你的反應以採取行動。",
+		"首先，你決定什麼樣的情況將會觸發你的反應，這個情況必須是可以被觀測的。接著，你選擇你在回應其觸發時所要採取的動作，或者你選擇移動最多等同於你移動速度的距離以回應其觸發。一些例子包括「如果那名邪教徒踩上陷阱門，我就要拉下拉桿以打開它」、和「如果那隻哥不林走到我面前，我就立刻移開。」",
+		"當觸發事件發生時，你可以選擇在觸發事件結束後緊接著採取你的反應，或者選擇忽略該觸發事件。記住，你在每輪中只能採取一個反應。",
+		"當你預備一個法術時，你仍如常施放它但扣住其能量，好讓你在觸發事件發生時能夠以你的反應釋放它。一個法術必須具有1個動作的施法時間才能被預備，且扣住該法術的魔法需要專注（參見第十章的說明）。若你的專注被打斷，則該法術將消散且不會發揮任何效果。舉例來說，若你正專注於蛛網術法術，並預備施放了魔法飛彈，則你的蛛網術法術將結束，且若你在以你的反應釋放魔法飛彈之前承受傷害，則你的專注可能會因此被打斷。",
+		"你預備好的動作只能在你的下個回合開始之前被使用。"
 	],
 	"搜尋": [
-		"When you take the Search action, you devote your attention to finding something. Depending on the nature of your search, the DM might have you make a Wisdom ({@skill Perception}) check or an Intelligence ({@skill Investigation}) check."
+		"當你採取搜尋動作，你將全神投入於找尋某個事物。根據你搜尋方式的性質，DM可能會要求你進行一次睿知（感知）檢定或一次智力（調查）檢定。"
 	],
 	"使用物件": [
-		"You normally interact with an object while doing something else, such as when you draw a sword as part of an attack. When an object requires your action for its use, you take the Use an Object action. This action is also useful when you want to interact with more than one object on your turn."
+		"你通常會在做其他事的同時與一個物體互動，例如在攻擊的同時抽出長劍。當使用一個物體需要你的動作時，你採取使用物件的動作。這個動作在你想要於你的回合中與超過一個物體互動時也能派上用場。"
 	]
 };
 
 Parser.SENSE_JSON_TO_FULL = {
 	"盲視": [
-		"A creature with blindsight can perceive its surroundings without relying on sight, within a specific radius. Creatures without eyes, such as oozes, and creatures with echolocation or heightened senses, such as bats and true dragons, have this sense."
+		"具有盲視的生物即使不依賴視覺也可以感知其周遭特定半徑範圍內的環境。沒有眼睛的生物（像是泥怪）、以及具有回聲定位或高敏感官的生物（像是蝙蝠和真龍）都具有這種感官。"
 	],
 	"黑暗視覺": [
-		"Many creatures in fantasy gaming worlds, especially those that dwell underground, have darkvision. Within a specified range, a creature with darkvision can see in dim light as if it were bright light and in darkness as if it were dim light, so areas of darkness are only lightly obscured as far as that creature is concerned. However, the creature can't discern color in that darkness, only shades of gray."
+		"奇幻遊戲世界中的許多生物，特別是那些居住於地底的生物，都具有黑暗視覺。在特定半徑範圍內，具有黑暗視覺的生物可以將微光光照視作明亮光照，並將黑暗環境視作微光光照，因此黑暗環境對於這些生物而言僅會被輕度遮蔽。然而，這些生物無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
 	],
 	"震顫感知": [
-		"A creature with tremorsense can detect and pinpoint the origin of vibrations within a specific radius, provided that the creature and the source of the vibrations are in contact with the same ground or substance. Tremorsense can't be used to detect flying or incorporeal creatures. Many burrowing creatures, such as ankhegs and umber hulks, have this special sense."
+		"只要具有震顫感知的生物與震動來源都接觸著相同的地表或物質，該生物可以感知並精準定位其特定半徑範圍內的震動來源。震顫感知並不能被用以偵測飛行或虛體生物。許多掘穴生物，像是掘地蟲和土巨怪，都具有這種特殊的感官。"
 	],
 	"真實視覺": [
-		"A creature with truesight can, out to a specific range, see in normal and magical darkness, see invisible creatures and objects, automatically detect visual illusions and succeed on saving throws against them, and perceives the original form of a shapechanger or a creature that is transformed by magic. Furthermore, the creature can see into the Ethereal Plane."
+		"具有真實視覺的生物在特定半徑範圍內，可以看透普通或魔法黑暗、看見隱形的生物和物體、自動偵測出視覺幻象並成功通過對抗它們的豁免檢定、並看穿變形者或被魔法變形的生物的原始型態。此外，這些生物也可以看見位於乙太位面的事物。"
 	]
 };
 
@@ -4140,11 +4140,17 @@ SortUtil = {
 	},
 
 	srcSort_ch (a,b){
+		if (a.hasOwnProperty("item") && b.hasOwnProperty("item")) {
+			return SortUtil._srcSort_ch(a.item, b.item);
+		}
+		return SortUtil._srcSort_ch(a, b);
+	},
+
+	_srcSort_ch (a,b){
 		let weight_cmp = SortUtil._getSourceWeight(a) - SortUtil._getSourceWeight(b);
 		if (weight_cmp != 0) return weight_cmp;
 		return SortUtil._ascSort(a, b);
 	},
-
 	_getSourceWeight(src){
 		switch(src){
 			case SRC_PHB: return 0;
@@ -4156,6 +4162,7 @@ SortUtil = {
 			case SRC_TTP: return 13;
 			case SRC_XGE: return 14;
 			case SRC_MTF: return 15;
+			case SRC_GGR: return 16;
 			default:
 				return 100;
 		}
