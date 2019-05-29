@@ -180,7 +180,7 @@ function addOptionalfeatures (data) {
 	$(`#optfeaturesList`).append(tempString);
 
 	// sort filters
-	sourceFilter.items.sort(SortUtil.ascSort);
+	sourceFilter.items.sort(SortUtil.srcSort_ch);
 	spellFilter.items.sort(SortUtil.ascSort);
 	levelFilter.items.sort(SortUtil.ascSortNumericalSuffix);
 	typeFilter.items.sort((a, b) => SortUtil.ascSort(Parser.optFeatureTypeToFull(a), Parser.optFeatureTypeToFull(b)));

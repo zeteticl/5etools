@@ -108,7 +108,7 @@ function addBackgrounds (data) {
 	bgTable.append(tempString);
 
 	// sort filters
-	sourceFilter.items.sort(SortUtil.ascSort);
+	sourceFilter.items.sort(SortUtil.srcSort_ch);
 	skillFilter.items.sort(SortUtil.ascSort);
 	toolFilter.items.sort(SortUtil.ascSort);
 	languageFilter.items.sort(SortUtil.ascSort);

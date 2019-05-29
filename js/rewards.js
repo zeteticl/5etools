@@ -106,7 +106,7 @@ function addRewards (data) {
 	$("ul.rewards").append(tempString);
 
 	// sort filters
-	sourceFilter.items.sort(SortUtil.ascSort);
+	sourceFilter.items.sort(SortUtil.srcSort_ch);
 	typeFilter.items.sort(SortUtil.ascSort);
 
 	list.reIndex();

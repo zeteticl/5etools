@@ -326,7 +326,7 @@ function addItems (data) {
 	$(`h3.ele-mundane span.side-label`).text("尋常物品");
 	$(`h3.ele-magic span.side-label`).text("魔法物品");
 	// sort filters
-	sourceFilter.items.sort(SortUtil.ascSort);
+	sourceFilter.items.sort(SortUtil.srcSort_ch);
 	//typeFilter.items.sort(SortUtil.ascSort);
 	attachedSpellsFilter.items.sort(SortUtil.ascSortLower);
 

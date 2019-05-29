@@ -4137,6 +4137,28 @@ SortUtil = {
 
 		$(target).find(".caret").removeClass("caret");
 		$this.find(".caret_wrp").addClass("caret").toggleClass("caret--reverse", direction === "asc");
+	},
+
+	srcSort_ch (a,b){
+		let weight_cmp = SortUtil._getSourceWeight(a) - SortUtil._getSourceWeight(b);
+		if (weight_cmp != 0) return weight_cmp;
+		return SortUtil._ascSort(a, b);
+	},
+
+	_getSourceWeight(src){
+		switch(src){
+			case SRC_PHB: return 0;
+			case SRC_DMG: return 1;
+			case SRC_MM: return 2;
+			case SRC_EEPC: return 10;
+			case SRC_SCAG: return 11;
+			case SRC_VGM: return 12;
+			case SRC_TTP: return 13;
+			case SRC_XGE: return 14;
+			case SRC_MTF: return 15;
+			default:
+				return 100;
+		}
 	}
 };
 

@@ -182,7 +182,7 @@ function addInvocations (data) {
 	$(`#${ID_INVOCATION_LIST}`).append(tempString);
 
 	// sort filters
-	sourceFilter.items.sort(SortUtil.ascSort);
+	sourceFilter.items.sort(SortUtil.srcSort_ch);
 	spellFilter.items.sort(SortUtil.ascSort);
 	levelFilter.items.sort(SortUtil.ascSort);
 

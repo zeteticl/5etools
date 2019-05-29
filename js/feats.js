@@ -124,7 +124,7 @@ function addFeats (data) {
 	featTable.append(tempString);
 
 	// sort filters
-	sourceFilter.items.sort(SortUtil.ascSort);
+	sourceFilter.items.sort(SortUtil.srcSort_ch);
 
 	list.reIndex();
 	if (lastSearch) list.search(lastSearch);

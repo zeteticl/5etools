@@ -189,7 +189,7 @@ function addPsionics (data) {
 	$(`#${ID_PSIONICS_LIST}`).append(tempString);
 
 	// sort filters
-	sourceFilter.items.sort(SortUtil.ascSort);
+	sourceFilter.items.sort(SortUtil.srcSort_ch);
 
 	list.reIndex();
 	if (lastSearch) list.search(lastSearch);

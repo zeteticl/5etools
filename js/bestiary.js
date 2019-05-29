@@ -378,7 +378,7 @@ const spellcastingTypeFilter = new Filter({
 
 function pPageInit (loadedSources) {
 	sourceFilter.items = Object.keys(loadedSources).map(src => new FilterItem({item: src, changeFn: loadSource(JSON_LIST_NAME, addMonsters)}));
-	sourceFilter.items.sort(SortUtil.ascSort);
+	sourceFilter.items.sort(SortUtil.srcSort_ch);
 
 	list = ListUtil.search({
 		valueNames: ["name", "source", "type", "cr", "group", "alias", "uniqueid", "eng_name"],
@@ -725,7 +725,7 @@ function addMonsters (data) {
 	table.append(textStack);
 
 	// sort filters
-	sourceFilter.items.sort(SortUtil.ascSort);
+	sourceFilter.items.sort(SortUtil.srcSort_ch);
 	crFilter.items.sort(SortUtil.ascSortCr);
 	typeFilter.items.sort(SortUtil.ascSortLower);
 	tagFilter.items.sort(SortUtil.ascSort);

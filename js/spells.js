@@ -454,7 +454,7 @@ function pPageInit (loadedSources) {
 	tableDefault = $("#pagecontent").html();
 
 	sourceFilter.items = Object.keys(loadedSources).map(src => new FilterItem({item: src, changeFn: loadSource(JSON_LIST_NAME, addSpells)}));
-	sourceFilter.items.sort(SortUtil.ascSort);
+	sourceFilter.items.sort(SortUtil.srcSort_ch);
 
 	list = ListUtil.search({
 		valueNames: ["name", "source", "level", "time", "school", "range", "concentration", "classes", "uniqueid", "eng_name"],
@@ -771,7 +771,7 @@ function addSpells (data) {
 	spellTable.append(tempString);
 
 	// sort filters
-	sourceFilter.items.sort(SortUtil.ascSort);
+	sourceFilter.items.sort(SortUtil.srcSort_ch);
 	classFilter.items.sort(SortUtil.ascSort);
 	subclassFilter.items.sort(SortUtil.ascSort);
 	raceFilter.items.sort(SortUtil.ascSort);

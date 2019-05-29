@@ -111,7 +111,7 @@ class ClassList {
 			const id = i + previousClassAmount;
 			tempString += ClassList._renderClass(curClass, id);
 		}
-		sourceFilter.items.sort(SortUtil.ascSort);
+		sourceFilter.items.sort(SortUtil.srcSort_ch);
 		$classTable.append(tempString);
 	}
 

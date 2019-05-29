@@ -272,7 +272,7 @@ function addRaces (data) {
 	racesTable.append(tempString);
 
 	// sort filters
-	sourceFilter.items.sort(SortUtil.ascSort);
+	sourceFilter.items.sort(SortUtil.srcSort_ch);
 	sizeFilter.items.sort(ascSortSize);
 	asiFilter.items.sort(ascSortAsi);
 

@@ -157,7 +157,7 @@ function addDeities (data) {
 	const lastSearch = ListUtil.getSearchTermAndReset(list);
 	$(`#deitiesList`).append(tempString);
 	// sort filters
-	sourceFilter.items.sort(SortUtil.ascSort);
+	sourceFilter.items.sort(SortUtil.srcSort_ch);
 	categoryFilter.items.sort();
 
 	list.reIndex();
