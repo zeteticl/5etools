@@ -6647,6 +6647,7 @@ Parser.itemKeyToDisplay["very rare"]= "非常珍稀";
 Parser.itemKeyToDisplay["legendary"]= "傳說";
 Parser.itemKeyToDisplay["artifact"] = "神器";
 Parser.itemKeyToDisplay["unknown"] 	= "不明";
+Parser.itemKeyToDisplay["unknown (magic)"] 	= "不明(魔法)";
 Parser.itemKeyToDisplay["other"] 	= "其他";
 Parser.itemKeyToDisplay["varies"] 	= "可變";
 
