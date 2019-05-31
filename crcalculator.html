@@ -8,7 +8,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>CR Calc - 5etools</title>
+	<title>CR計算機 - 5etools</title>
 
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/jquery-ui.css">
@@ -86,8 +86,8 @@
 <header class="hidden-xs hidden-sm page__header">
 	<div class="container">
 
-		<h1 class="page__title">CR Calculator</h1>
-		<p class="page__subtitle">Easily build custom creatures.</p>
+		<h1 class="page__title">CR計算機</h1>
+		<p class="page__subtitle">輕鬆地構築自訂生物。</p>
 	</div>
 </header>
 <nav class="container page__nav" id="navigation">
@@ -103,30 +103,26 @@
 	<form id="crcalc" autocomplete="off">
 		<div class="row">
 			<div class="col-sm-6">
-				<div id="croutput">Waiting for calculation...</div>
-				<button class="btn btn-sm btn-danger crc__reset mt-3" id="crcalc_reset" type="button">Reset</button>
-				<h4>Instructions</h4>
+				<div id="croutput">等待計算結束...</div>
+				<button class="btn btn-sm btn-danger crc__reset mt-3" id="crcalc_reset" type="button">重置</button>
+				<h4>操作指南</h4>
 				<ol>
-					<li>Enter expected CR of creature.</li>
-					<li>Fill in the HP, AC, and other defensive attributes of creature.</li>
-					<li>Fill in offensives attributes of creature. DPR is averaged over three rounds!</li>
-					<li>Click which special Monster Features it has.</li>
-					<li>Done!</li>
+					<li>輸入該生物的預期CR。</li>
+					<li>填寫該生物的HP、AC、以及其他的防禦性屬性。</li>
+					<li>填寫該生物的攻擊性屬性。DPR(每輪平均傷害)代表著三個戰鬥輪的平均！</li>
+					<li>勾選該生物所擁有的特殊怪物特性。</li>
+					<li>完成！</li>
 				</ol>
 				<p>
-					<small>Be sure to read the <em>Dungeon Master's Guide</em> section on monster creation, pages 273
-						through 283. You can click on the table to the right to fill in values for a given and adjust to
-						taste. You can hover over the individual labels for a short description of how each attribute
-						contributes to a monster's CR. You can also hover over each feature description to see how that
-						feature affects the calculations.
+					<small>請確保你已經閱讀了<em>《地下城主指南》</em>的怪物創建章節，從第273頁到第283頁。你可以點擊右側的表格以自動填入固定的數值，再隨你的喜好調整。你可以將滑鼠指向各個標籤以透過一段簡短敘述瞭解各屬性對怪物CR的影響。你也可以指向各個特性描述以瞭解該特性對CR計算的影響。
 					</small>
 				</p>
 				<hr>
 				<div class="crc__row">
 					<label for="expectedcr" class="help--subtle" style="font-size: 1em;">
-						Expected CR:
+						預期CR：
 						<span class="explanation">
-							CR calculation begins by determining what you want the final CR of the monster to be.
+							要進行CR計算，首先你必須決定這個怪物最終的CR是多少。
 						</span>
 					</label>
 					<span class="flex-v-center">
@@ -135,17 +131,17 @@
 				</div>
 			</div>
 			<div class="col-sm-6 text-align-center">
-				<h4>Monster Statistics by Challenge Rating</h4>
+				<h4>各挑戰等級的怪物數據</h4>
 				<table id="msbcr">
 					<tr>
 						<th>CR</th>
 						<th>XP</th>
-						<th>Prof.<br/>Bonus</th>
-						<th>Armor<br/>Class</th>
-						<th>Hit<br/>Points</th>
-						<th>Attack<br/>Bonus</th>
-						<th>Damage/<br/>Round</th>
-						<th>Save<br/>DC</th>
+						<th>熟練<br/>加值</th>
+						<th>護甲<br/>等級</th>
+						<th>生命值</th>
+						<th>攻擊<br/>加值</th>
+						<th>傷害/<br/>每輪</th>
+						<th>豁免<br/>DC</th>
 					</tr>
 				</table>
 			</div>
@@ -153,13 +149,13 @@
 		<hr>
 		<div class="row">
 			<div class="col-sm-6">
-				<h4>Defensive</h4>
+				<h4>防禦屬性</h4>
 
 				<div class="crc__row">
 					<label for="hp" class="help--subtle">
-						Hit Points:
+						生命值：
 						<span class="explanation">
-							A creature's hit points determine its defensive CR before it is adjusted by its AC.
+							生物的生命值會決定其根據AC調整前的防禦性CR。
 						</span>
 					</label>
 					<input type="number" id="hp" placeholder="Average HP" value="1" min="0" max="850" class="form-control form-control--minimal input-xs">
@@ -167,9 +163,9 @@
 
 				<div class="crc__row">
 					<label for="ac" class="help--subtle">
-						Armor Class:
+						護甲等級：
 						<span class="explanation">
-							A creature's AC adjusts its defensive CR.
+							生物的AC會調整其防禦性CR。
 						</span>
 					</label>
 					<input type="number" id="ac" placeholder="AC" value="13" min="1" max="40" class="form-control form-control--minimal input-xs">
@@ -177,13 +173,13 @@
 			</div>
 
 			<div class="col-sm-6">
-				<h4>Offensive</h4>
+				<h4>攻擊屬性</h4>
 
 				<div class="crc__row">
 					<label for="dpr" class="help--subtle">
-						Damage Per Round:
+						每輪平均傷害：
 						<span class="explanation">
-							A creature's damage per round (DPR) determines its offensive CR, which is offset by its attack bonus or save DC. DPR is determined by averaging its maximum damage output (taking the average of dice rolls, ignoring critics and accuracy) over three rounds. Areas of effect are treated as though they hit two creatures, which fail any involved saving throws.
+							生物的每輪平均傷害(DPR)決定了它的攻擊性CR，且其攻擊性CR會再根據其攻擊加值或豁免DC進行調整。DPR是以它在三輪內最大傷害輸出的平均值決定（擲骰取平均值，忽視暴擊和命中準確）。區域效應將被視為它命中了兩個生物，且目標被視作在任何豁免檢定中失敗。
 						</span>
 					</label>
 					<input type="number" id="dpr" placeholder="Average DPR" value="1" min="0" max="320" class="form-control form-control--minimal input-xs">
@@ -191,9 +187,9 @@
 
 				<div class="crc__row">
 					<label for="attackbonus" class="help--subtle">
-						Attack Bonus/Save DC:
+						攻擊加值/豁免DC：
 						<span class="explanation">
-							A creature's attack bonus or save DC adjusts its offensive CR.
+							生物的攻擊加值或豁免DC會調整其攻擊性CR。
 						</span>
 					</label>
 					<input type="number" id="attackbonus" placeholder="Attack Bonus" value="3" min="-5" max="19" class="form-control form-control--minimal input-xs">
@@ -201,9 +197,9 @@
 
 				<div class="crc__row">
 					<label for="saveinstead" class="help--subtle">
-						Use Saves?
+						使用豁免？
 						<span class="explanation">
-							If a creature's damage output is more dependent on save-based abilities, its save DC is used for adjusting its offensive CR instead of its attack bonus.
+							若一個生物的傷害輸出比起攻擊更依賴涉及豁免的能力，則它的豁免DC將被用於調整它的攻擊性CR，而非使用它的攻擊加值。
 						</span>
 					</label>
 					<input type="checkbox" id="saveinstead" value="0">
@@ -216,28 +212,28 @@
 
 				<div class="crc__row">
 					<label for="size" class="help--subtle">
-						Size:
+						體型：
 						<span class="explanation">
-							A creature's size determines the size of its individual hit dice.
+							生物的體型將決定它每顆生命骰的大小。
 						</span>
 					</label>
 					<span class="flex-v-center">
 						<select id="size" class="form-control input-xs">
-							<option value="Tiny">Tiny</option>
-							<option value="Small">Small</option>
-							<option value="Medium" selected>Medium</option>
-							<option value="Large">Large</option>
-							<option value="Huge">Huge</option>
-							<option value="Gargantuan">Gargantuan</option>
+							<option value="Tiny">微型</option>
+							<option value="Small">小型</option>
+							<option value="Medium" selected>中型</option>
+							<option value="Large">大型</option>
+							<option value="Huge">巨型</option>
+							<option value="Gargantuan">超巨型</option>
 						</select>
 					</span>
 				</div>
 
 				<div class="crc__row">
 					<label for="hd" class="help--subtle">
-						Hit Dice:
+						生命骰：
 						<span class="explanation">
-							Unlike player characters, the number of hit dice an NPC gets is completely arbitrary. Adjust this amount to taste.
+							與玩家角色不同，NPC所得到的生命骰數量完全是任意決定的。隨你喜好調整這個數量。
 						</span>
 					</label>
 					<div class="flex-v-center">
@@ -248,9 +244,9 @@
 
 				<div class="crc__row">
 					<label for="con" class="help--subtle">
-						Constitution:
+						體質值：
 						<span class="explanation">
-							A creature's HP is increases by its Constitution modifier for each hit die it has.
+							生物的HP會因為它每一顆擁有的生命骰得到其體質調整值的加值。
 						</span>
 					</label>
 					<input type="number" id="con" value="10" min="1" max="30" class="form-control form-control--minimal input-xs">
@@ -262,9 +258,9 @@
 
 				<div class="crc__row">
 					<label for="vulnerabilities" class="help--subtle">
-						Vulnerabilities:
+						易傷：
 						<span class="explanation">
-							If a creature is vulnerable to common damage types (especially bludgeoning, piercing, and slashing damage), its effective hit points are halved.
+							若生物具有某個常見傷害類型的易傷（特別是鈍擊、穿刺、劈砍傷害），則它的有效生命值將被視為原本的一半。
 						</span>
 					</label>
 					<input type="checkbox" id="vulnerabilities" class="form-control form-control--minimal input-xs">
@@ -272,25 +268,25 @@
 
 				<div class="crc__row">
 					<label for="resistances" class="help--subtle">
-						Resistances/Immunities:
+						抗性/免疫：
 						<span class="explanation">
-							A monster's HP is multiplied based on the resistances and immunities has to common damage types (non-magical bludgeoning, piercing, and slashing chief among them).
+							怪物的HP會根據它對於常見傷害類型（其中最主要為非魔法的鈍擊、穿刺、和劈砍傷害）而乘上倍率。
 						</span>
 					</label>
 					<span class="flex-v-center">
 						<select id="resistances" class="form-control input-xs">
-							<option value="0" selected>None</option>
-							<option value="res">Resistances</option>
-							<option value="imm">Immunities</option>
+							<option value="0" selected>無</option>
+							<option value="res">抗性</option>
+							<option value="imm">免疫</option>
 						</select>
 					</span>
 				</div>
 
 				<div class="crc__row">
 					<label for="flying" class="help--subtle">
-						Flies and can deal damage at range (CR 0-9 only):
+						飛行且可以在遠距離造成傷害(限定CR 0~9)：
 						<span class="explanation">
-							A monster's effective AC is increased by 2 if it can fly and deal damage at range, though only if its expected challenge rating is 10 or lower.
+							若怪物可以飛行且能在遠距離造成傷害，則它的有效AC將增加2點。但這個加成只會發生在其預期挑戰等級為10或更低。
 						</span>
 					</label>
 					<input type="checkbox" id="flying">
@@ -298,9 +294,9 @@
 
 				<div class="crc__row">
 					<label for="saveprofs" class="help--subtle">
-						Save Proficiencies:
+						豁免熟練：
 						<span class="explanation">
-							Increase a creature's effective AC by 2 if it has 3 or 4 saving throw proficiencies, or by 4 if it has 5 or 6.
+							若生物具有3或4個豁免熟練項，則它的有效AC增加2點。若有5或6個豁免熟練項，則有效AC增加4點。
 						</span>
 					</label>
 					<span class="flex-v-center">
@@ -317,19 +313,18 @@
 	<hr>
 	<div class="row">
 		<div class="col-sm-12" id="monsterfeatures">
-			<h4>Monster Features</h4>
+			<h4>怪物特性</h4>
 			<div class="row crc__hdr_mon_features">
 				<div class="col-1"></div>
-				<div class="col-2">Name</div>
-				<div class="col-2">Example Monster</div>
-				<div class="col-7">Feature Description</div>
+				<div class="col-2">名稱</div>
+				<div class="col-2">範例怪物</div>
+				<div class="col-7">特性描述</div>
 			</div>
 			<div class="crc__wrp_mon_features">
 				<!-- populate with JS -->
 			</div>
 			<p>
-				<small><em>Note: Not all monster features are covered here. The DMG has specific instructions on how to
-					manage other features.</em></small>
+				<small><em>註記：這裡並為含括所有的怪物特性。在DMG另有關於要如何評估其它特性的記載。</em></small>
 			</p>
 		</div>
 	</div>
