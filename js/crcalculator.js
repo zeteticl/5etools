@@ -55,7 +55,7 @@ function addMonsterFeatures (mfData) {
 
 	// when clicking a row in the "Monster Statistics by Challenge Rating" table
 	$("#msbcr tr").not(":has(th)").click(function () {
-		if (!confirm("This will reset the calculator. Are you sure?")) return;
+		if (!confirm("這麼做將會重置計算機。你確定嗎？")) return;
 		$("#expectedcr").val($(this).children("td:eq(0)").html());
 		const [minHp, maxHp] = $(this).children("td:eq(4)").html().split("-").map(it => parseInt(it));
 		$("#hp").val(minHp + (maxHp - minHp) / 2);
@@ -154,7 +154,7 @@ function addMonsterFeatures (mfData) {
 	$("#monsterfeatures .crc__wrp_mon_features input").change(calculateCr);
 
 	$("#crcalc_reset").click(() => {
-		confirm("Are you sure?") && (() => {
+		confirm("你確定要重置嗎？") && (() => {
 			window.location = "";
 			parseUrl();
 		})();
@@ -287,15 +287,15 @@ function calculateCr () {
 	window.location = `#${hashParts.join(",")}`;
 
 	$("#croutput").html(`
-		<h4>Challenge Rating: ${cr}</h4>
-		<p>Offensive CR: ${offensiveCR}</p>
-		<p>Defensive CR: ${defensiveCR}</p>
-		<p>Proficiency Bonus: +${msbcr.cr[finalCr].pb}</p>
-		<p>Effective HP: ${effectiveHp} (${hitDice}${hitDiceSize}${conMod < 0 ? "" : "+"}${conMod * hitDice})</p>
-		<p>Effective AC: ${ac}</p>
-		<p>Average Damage Per Round: ${effectiveDpr}</p>
-		<p>${useSaveDc ? "Save DC: " : "Effective Attack Bonus: +"}${attackBonus}</p>
-		<p>Experience Points: ${Parser.crToXp(msbcr.cr[finalCr]._cr)}</p>
+		<h4>挑戰等級：${cr}</h4>
+		<p>攻擊性CR: ${offensiveCR}</p>
+		<p>防禦性CR: ${defensiveCR}</p>
+		<p>熟練加值： +${msbcr.cr[finalCr].pb}</p>
+		<p>有效HP： ${effectiveHp} (${hitDice}${hitDiceSize}${conMod < 0 ? "" : "+"}${conMod * hitDice})</p>
+		<p>有效AC： ${ac}</p>
+		<p>每輪平均傷害： ${effectiveDpr}</p>
+		<p>${useSaveDc ? "豁免DC： " : "有效攻擊加值： +"}${attackBonus}</p>
+		<p>經驗值： ${Parser.crToXp(msbcr.cr[finalCr]._cr)}</p>
 	`);
 }
 
