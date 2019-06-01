@@ -892,8 +892,8 @@ class Panel {
 			source,
 			hash,
 			() => {
-				const fn = EntryRenderer.hover._pageToRenderFn(page);
-				const it = EntryRenderer.hover._getFromCache(page, source, hash);
+				const fn = Renderer.hover._pageToRenderFn(page);
+				const it = Renderer.hover._getFromCache(page, source, hash);
 				const $contentInner = $(`<div class="panel-content-wrapper-inner"/>`);
 				const $contentStats = $(`<table class="stats"/>`).appendTo($contentInner);
 				$contentStats.append(fn(it));

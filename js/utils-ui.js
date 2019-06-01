@@ -162,7 +162,7 @@ class SearchUiUtil {
 
 		const handleDataItem = (d, isAlternate) => {
 			if (SearchUiUtil._isNoHoverCat(d.c) || fromDeepIndex(d)) return;
-			d.cf = d.c === Parser.CAT_ID_CREATURE ? "Creature" : Parser.pageCategoryToFull(d.c);
+			d.cf = d.c === Parser.CAT_ID_CREATURE ? "生物(Creature)" : Parser.pageCategoryToFull(d.c);
 			if (isAlternate) d.cf = `alt_${d.cf}`;
 			if (!availContent[d.cf]) {
 				availContent[d.cf] = elasticlunr(function () {
