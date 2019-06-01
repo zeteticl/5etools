@@ -7,7 +7,7 @@ const BookUtil = {
 
 	_getSelectors (scrollTo) {
 		return [
-			`.entry-title > .entry-title-inner[book-idx='${scrollTo}']`,
+			`.entry-title-inner[book-idx='${scrollTo}']`,
 			`.rd__h--0 > .entry-title-inner:textEquals("${scrollTo}")`,
 			`.rd__h--1 > .entry-title-inner:textEquals("${scrollTo}")`,
 			`.rd__h--2 > .entry-title-inner:textEquals("${scrollTo}")`,
@@ -213,7 +213,6 @@ const BookUtil = {
 					const $match = $e.children(`.rd__h`).find(`span.entry-title-inner`).filter(`:textEquals("${sectionHeader}")`);
 					return $match.length;
 				});
-
 				if ($toShow.length) {
 					BookUtil.curRender.lastRefHeader = sectionHeader.toLowerCase();
 					$allSects.hide();
@@ -414,7 +413,8 @@ const BookUtil = {
 		});
 		$body.on(`click`, `.entry-title-inner`, async function (evt) {
 			const $this = $(this);
-			const text = $this.text().trim().replace(/\.$/, "");
+			const mod_text = $this.html().replace(/<st .+>/,"");
+			const text = mod_text.trim().replace(/\.$/, "");
 
 			if (evt.shiftKey) {
 				await MiscUtil.pCopyTextToClipboard(text);
@@ -446,7 +446,7 @@ const BookUtil = {
 		async function pHandleFound (fromIndex, homebrewData) {
 			document.title = `${fromIndex.name} - 5etools`;
 			$(`.book-head-header`).html(cleanName(fromIndex.name));
-			$(`.book-head-message`).html("Browse content. Press F to find, and G to go to page.");
+			$(`.book-head-message`).html("瀏覽內容。按下F以搜尋，按下G以前往指定頁數。");
 			await BookUtil.pLoadBook(fromIndex, bookId, hashParts, homebrewData);
 			NavBar.highlightCurrentPage();
 		}
