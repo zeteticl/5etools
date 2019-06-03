@@ -18,7 +18,7 @@ function makeContentsBlock (i, loc) {
 }
 
 function getTableName (loc, table) {
-	return `${loc.location} Encounters (Levels ${table.minlvl}\u2014${table.maxlvl})`;
+	return `${loc.location}遭遇 (等級 ${table.minlvl}\u2014${table.maxlvl})`;
 }
 
 window.onload = function load () {
@@ -74,7 +74,7 @@ function loadhash (id) {
 							<th class="col-2 text-align-center">
 								<span class="roller" onclick="rollAgainstTable('${iLoad}', '${jLoad}')">d100</span>
 							</th>
-							<th class="col-10">Encounter</th>
+							<th class="col-10">遭遇</th>
 						</tr>
 					</thead>`;
 
