@@ -734,7 +734,7 @@ const randomLootTables = {
 			if (useClosestTier) level = $(".slider").slider("value");
 			else level = $("#charLevel").val();
 
-			const text = useClosestTier ? `level ${level}` : `level ${$(`#charLevel option[value=${level}]`).text()}`;
+			const text = useClosestTier ? `${level}級` : `${$(`#charLevel option[value=${level}]`).text()}級`;
 			const itemsNeeded = randomLootTables.getNumberOfItemsNeeded(Number(level), useClosestTier, accumulateTiers);
 			const title = `給<strong>${text}</strong>隊伍的魔法物品：`;
 			const $el = $(`<div/>`);

@@ -2429,7 +2429,7 @@ JqueryUtil = {
 		// Add a selector to match exact text (case insensitive) to jQuery's arsenal
 		$.expr[':'].textEquals = (el, i, m) => {
 			const searchText = m[3];
-			const match = $(el).text().toLowerCase().trim().match(`^${RegExp.escape(searchText.toLowerCase().trim())}( [a-z ]+$)?$`);
+			const match = $(el).text().toLowerCase().trim().match(`^${RegExp.escape(searchText.toLowerCase().trim())}( [a-z0-9 ]+$)?$`);
 			return match && match.length > 0;
 		};
 
