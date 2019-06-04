@@ -89,11 +89,11 @@ class LootGen {
 					<tbody>
 					<tr>
 						<th class="col-2 text-align-center"><span class="roller" onclick="lootGen.pRollAgainstTable(${arrayEntry});">d100</span></th>
-						<th class="col-10">Magic Item</th>
+						<th class="col-10">魔法物品</th>
 					</tr>
 					</tbody>
 				</table>
-				<small><strong>Source:</strong> <em>${Parser.sourceJsonToFull(itemsTable.source)}</em>, page ${itemsTable.page}</small>
+				<small><strong>Source:</strong> <em>${Parser.sourceJsonToFull(itemsTable.source)}</em>, 第 ${itemsTable.page}頁</small>
 			`);
 
 			const $tbody = $table.find("tbody");
@@ -142,7 +142,7 @@ class LootGen {
 			const $item = await LootGen.p$ParseLink(row, {rollSpellScroll: true, rollChoices: true});
 			return $(`<ul><li class="split">
 				<span><div data-r/> (rolled ${rowRoll})</span>
-				<span class="roller" onclick="lootGen.pRerollItem(this, ${ixTable})">[reroll]</span>
+				<span class="roller" onclick="lootGen.pRerollItem(this, ${ixTable})">[重骰]</span>
 			</li></ul>`).swap($item);
 		}
 
@@ -154,7 +154,7 @@ class LootGen {
 
 			return $(`<ul><li class="split">
 				<span><div data-r/> (rolled ${roll})</span>
-				<span class="roller" onclick="lootGen.pRerollItem(this, ${ixTable})">[reroll]</span>
+				<span class="roller" onclick="lootGen.pRerollItem(this, ${ixTable})">[重骰]</span>
 			</li></ul>`).swap($item);
 		}
 
@@ -207,7 +207,7 @@ class LootGen {
 				const gems = [];
 				for (let i = 0; i < roll; i++) gems.push(artAndGemsTable.table[LootGen.randomNumber(0, artAndGemsTable.table.length - 1)]);
 				$(`
-					<li>${Parser._addCommas(artAndGems.type)} gp ${loot.artobjects ? "art object" : "gemstone"}${roll > 1 ? "s" : ""}${roll > 1 ? ` (${MULT_SIGN}${roll})` : ""}:
+					<li>${Parser._addCommas(artAndGems.type)} 金幣 ${loot.artobjects ? "藝術品" : "寶石"}${roll > 1 ? "" : ""}${roll > 1 ? ` (${MULT_SIGN}${roll})` : ""}:
 					<ul data-r/>
 					</li>
 				`).swap(lootGen.$getSortedDeduplicatedList(gems)).appendTo($el);
@@ -262,8 +262,8 @@ class LootGen {
 			$el.prepend(`<li>${lootGen.getFormattedCoinsForDisplay(loot.coins)}</li>`);
 		}
 		let title = hoard
-			? `<strong>Hoard</strong> for challenge rating: <strong>${CHALLENGE_RATING_RANGE[cr]}</strong>`
-			: `<strong>Individual Treasure</strong> for challenge rating: <strong>${CHALLENGE_RATING_RANGE[cr]}</strong>`;
+			? `<strong>積藏寶藏</strong> - 挑戰等級：<strong>${CHALLENGE_RATING_RANGE[cr]}</strong>`
+			: `<strong>個體寶藏</strong> - 挑戰等級：<strong>${CHALLENGE_RATING_RANGE[cr]}</strong>`;
 		lootOutput.add($el, title);
 	}
 
@@ -304,11 +304,11 @@ class LootGen {
 		const $ulOut = $(`<ul/>`);
 
 		sorted.forEach(current => {
-			const $rollPart = $(`<span class="text-muted">(Rolled ${current.roll})</span>`);
+			const $rollPart = $(`<span class="text-muted">(骰出 ${current.roll})</span>`);
 
-			const $reroll = $(`<span class="roller">[reroll]</span>`).click(async () => {
+			const $reroll = $(`<span class="roller">[重骰]</span>`).click(async () => {
 				const {itemRoll, rolled} = LootGen.__getRolledItemFromTable(current.table);
-				$rollPart.text(`(Rolled ${itemRoll})`);
+				$rollPart.text(`(骰出 ${itemRoll})`);
 				const new$Render = await LootGen.p$ParseLink(rolled, {rollSpellScroll: true, rollChoices: true});
 				current.$render.replaceWith(new$Render);
 				current.$render = new$Render;
@@ -344,11 +344,11 @@ class LootGen {
 		const generatedCoins = LootGen.generateCoinsFromLoot(loot);
 		const individuallyFormattedCoins = [];
 		generatedCoins.forEach((coin) => {
-			individuallyFormattedCoins.unshift(`<li>${Parser._addCommas(coin.value)} ${coin.denomination}</li>`);
+			individuallyFormattedCoins.unshift(`<li>${Parser._addCommas(coin.value)} ${Parser.itemValueToDisplay(coin.denomination)}</li>`);
 		});
 		const totalValueGP = Parser._addCommas(LootGen.getGPValueFromCoins(generatedCoins));
 		const combinedFormattedCoins = individuallyFormattedCoins.reduce((total, formattedCoin) => total + formattedCoin, "");
-		return `${totalValueGP} gp total:<ul> ${combinedFormattedCoins}</ul>`;
+		return `總計${totalValueGP} 金幣:<ul> ${combinedFormattedCoins}</ul>`;
 	}
 
 	static generateCoinsFromLoot (loot) {
@@ -485,7 +485,7 @@ class LootGen {
 		};
 		const handleReroll = () => $wrpItem.empty().append(renderer.render(getRandomItem()));
 
-		const $roll = $(`<span class="roller" onmousedown="event.preventDefault()">[reroll]</span>`).click(() => handleReroll());
+		const $roll = $(`<span class="roller" onmousedown="event.preventDefault()">[重骰]</span>`).click(() => handleReroll());
 		const $wrpItem = $(`<span/>`).append(renderer.render(getRandomItem()));
 
 		return $(`<em>(<span><span data-r="$wrpItem"/> <span data-r="$roll"/></span>)</em>`)
@@ -497,7 +497,7 @@ class LootGen {
 
 	getSpell$ele (level) {
 		if (this.hasLoadedSpells()) {
-			const $roll = $(`<span class="roller" onmousedown="event.preventDefault()">[reroll]</span>`).click(() => this.loadRollSpell($roll.parent(), level));
+			const $roll = $(`<span class="roller" onmousedown="event.preventDefault()">[重骰]</span>`).click(() => this.loadRollSpell($roll.parent(), level));
 			return $(`<em>(<span>${renderer.render(this.getRandomSpell(level))} <div data-r/></span> or ${LootGen._getOrViewSpellsPart(level)})</em>`).swap($roll);
 		}
 		const $spnRoll = $(`<span class="roller">roll</span>`).click(() => this.loadRollSpell($spnRoll.parent(), level));
@@ -506,7 +506,7 @@ class LootGen {
 
 	loadRollSpell ($ele, level) {
 		const output = () => {
-			const $roll = $(`<span class="roller" onmousedown="event.preventDefault()">[reroll]</span>`)
+			const $roll = $(`<span class="roller" onmousedown="event.preventDefault()">[重骰]</span>`)
 				.click(() => this.loadRollSpell($roll.parent(), level));
 			$ele
 				.removeClass("roller").attr("onclick", "")
@@ -841,7 +841,7 @@ const randomLootTables = {
 		return $(`
 			<li class="split">
 				<span><span data-r/> <span class="text-muted">(Rolled ${roll + 1})</span></span>
-				<span class="roller" onclick="randomLootTables.pRerollItem(this)">[reroll]</span>
+				<span class="roller" onclick="randomLootTables.pRerollItem(this)">[重骰]</span>
 			</li>
 		`).swap($link);
 	},
@@ -860,11 +860,11 @@ const randomLootTables = {
 			let html = $(`
 			<hr/>
 			<table id="stats">
-				<caption>Table for ${tier} Magic items that are ${rarity}</caption>
+				<caption>稀有度為${rarity}的${tier}魔法物品表</caption>
 				<tbody>
 				<tr>
 					<th class="col-2 text-align-center"><span class="roller" onclick="randomLootTables.getRandomItem('${tier}', '${rarity}');">d${itemsArray.length}</span></th>
-					<th class="col-10">${tier} ${rarity} Magic Items</th>
+					<th class="col-10">${tier} ${rarity} 魔法物品</th>
 				</tr>
 				</tbody>
 			</table>`);
