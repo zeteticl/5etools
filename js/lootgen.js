@@ -647,7 +647,7 @@ const randomLootTables = {
 			let keys = Object.keys(itemList[nameTier]).sort((a, b) => randomLootTables._rarityOrder.findIndex(val => val === a) - randomLootTables._rarityOrder.findIndex((val) => val === b));
 			for (let nameRarity of keys) {
 				if (nameRarity !== undefined && nameRarity !== "None" && nameTier && nameTier !== "undefined") {
-					$selector.append(`<option value="${nameTier}-${nameRarity}">${nameTier} ${Parser.itemKeyToDisplay(nameRarity)}</option>`);
+					$selector.append(`<option value="${nameTier}-${nameRarity}">${Parser.ItemTierToDisplay(nameTier)} ${Parser.translateItemKeyToDisplay(nameRarity)}</option>`);
 				}
 			}
 		}
