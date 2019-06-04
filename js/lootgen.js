@@ -104,7 +104,7 @@ class LootGen {
 				const range = it.min === it.max ? it.min : `${it.min}-${it.max}`;
 				const primary$Element = $(`<tr>
 					<td class="text-align-center">${range}</td>
-					<td><div data-r/>${it.table ? ` (roll <span class="roller" onclick="lootGen.pRollAgainstTable(${arrayEntry}, ${it.min})">d${LootGen.getMaxRoll(it.table)}</span>)` : ""}</td>
+					<td><div data-r/>${it.table ? ` (骰 <span class="roller" onclick="lootGen.pRollAgainstTable(${arrayEntry}, ${it.min})">d${LootGen.getMaxRoll(it.table)}</span>)` : ""}</td>
 				</tr>`).swap(primaryLink);
 				$out.push(primary$Element);
 
@@ -647,7 +647,7 @@ const randomLootTables = {
 			let keys = Object.keys(itemList[nameTier]).sort((a, b) => randomLootTables._rarityOrder.findIndex(val => val === a) - randomLootTables._rarityOrder.findIndex((val) => val === b));
 			for (let nameRarity of keys) {
 				if (nameRarity !== undefined && nameRarity !== "None" && nameTier && nameTier !== "undefined") {
-					$selector.append(`<option value="${nameTier}-${nameRarity}">${nameTier} ${Parser.itemKeyToDisp(nameRarity)}</option>`);
+					$selector.append(`<option value="${nameTier}-${nameRarity}">${nameTier} ${Parser.itemKeyToDisplay(nameRarity)}</option>`);
 				}
 			}
 		}
@@ -840,7 +840,7 @@ const randomLootTables = {
 		const $link = await randomLootTables.p$CreateLink(item);
 		return $(`
 			<li class="split">
-				<span><span data-r/> <span class="text-muted">(Rolled ${roll + 1})</span></span>
+				<span><span data-r/> <span class="text-muted">(骰出 ${roll + 1})</span></span>
 				<span class="roller" onclick="randomLootTables.pRerollItem(this)">[重骰]</span>
 			</li>
 		`).swap($link);
