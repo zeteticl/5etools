@@ -249,8 +249,8 @@ class LootGen {
 					magicItems.forEach((it, i) => it.$render = magicItemResults[i]);
 					$(`
 						<li>
-							Magic Item${roll > 1 ? "s" : ""}
-							(<span class="roller" onclick="MiscUtil.scrollPageTop() || lootGen.pDisplayTable(${tableArrayEntry}, true);">Table ${curType}</span>)
+							魔法物品
+							(<span class="roller" onclick="MiscUtil.scrollPageTop() || lootGen.pDisplayTable(${tableArrayEntry}, true);">表${curType}</span>)
 							${magicItems.length > 1 ? ` (${MULT_SIGN}${magicItems.length})` : ""}:
 							<ul data-r/>
 						</li>
