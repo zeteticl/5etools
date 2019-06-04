@@ -926,7 +926,7 @@ Parser.spellLevelToArticle = function (level) {
 };
 
 Parser.spLevelToFullLevelText = function (level, dash) {
-	return `${Parser.spLevelToFull(level)}${(level === 0 ? "s" : `${dash ? "-" : " "}level`)}`;
+	return `${Parser.spLevelToFull(level)}`;
 };
 
 Parser.spMetaToFull = function (meta) {

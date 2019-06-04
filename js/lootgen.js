@@ -141,7 +141,7 @@ class LootGen {
 		async function p$GetMessage () {
 			const $item = await LootGen.p$ParseLink(row, {rollSpellScroll: true, rollChoices: true});
 			return $(`<ul><li class="split">
-				<span><div data-r/> (rolled ${rowRoll})</span>
+				<span><div data-r/> (骰出 ${rowRoll})</span>
 				<span class="roller" onclick="lootGen.pRerollItem(this, ${ixTable})">[重骰]</span>
 			</li></ul>`).swap($item);
 		}
@@ -153,7 +153,7 @@ class LootGen {
 			const $item = await LootGen.p$ParseLink(rolled, {rollSpellScroll: true, rollChoices: true});
 
 			return $(`<ul><li class="split">
-				<span><div data-r/> (rolled ${roll})</span>
+				<span><div data-r/> (骰出 ${roll})</span>
 				<span class="roller" onclick="lootGen.pRerollItem(this, ${ixTable})">[重骰]</span>
 			</li></ul>`).swap($item);
 		}
@@ -162,7 +162,7 @@ class LootGen {
 	}
 
 	static itemTitleHtml (table) {
-		return $(`<div class="id-top">Rolled against <strong>${table.name}</strong>:</div>`);
+		return $(`<div class="id-top">從<strong>${table.name}</strong>中擲骰:</div>`);
 	}
 
 	async pRollAgainstTable (ixTable, parentRoll) {
@@ -392,7 +392,7 @@ class LootGen {
 	}
 
 	static _getOrViewSpellsPart (level) {
-		return renderer.render(`{@filter see all ${Parser.spLevelToFullLevelText(level, true)} spells|spells|level=${level}}`);
+		return renderer.render(`{@filter 查看所有${Parser.spLevelToFullLevelText(level, true)}法術|spells|level=${level}}`);
 	}
 
 	static async p$ParseLink (result, options = {}) {
@@ -498,10 +498,10 @@ class LootGen {
 	getSpell$ele (level) {
 		if (this.hasLoadedSpells()) {
 			const $roll = $(`<span class="roller" onmousedown="event.preventDefault()">[重骰]</span>`).click(() => this.loadRollSpell($roll.parent(), level));
-			return $(`<em>(<span>${renderer.render(this.getRandomSpell(level))} <div data-r/></span> or ${LootGen._getOrViewSpellsPart(level)})</em>`).swap($roll);
+			return $(`<em>(<span>${renderer.render(this.getRandomSpell(level))} <div data-r/></span> 或 ${LootGen._getOrViewSpellsPart(level)})</em>`).swap($roll);
 		}
-		const $spnRoll = $(`<span class="roller">roll</span>`).click(() => this.loadRollSpell($spnRoll.parent(), level));
-		return $(`<em>(<div data-r/> or ${LootGen._getOrViewSpellsPart(level)})</em>`).swap($spnRoll);
+		const $spnRoll = $(`<span class="roller">擲骰</span>`).click(() => this.loadRollSpell($spnRoll.parent(), level));
+		return $(`<em>(<div data-r/> 或 ${LootGen._getOrViewSpellsPart(level)})</em>`).swap($spnRoll);
 	}
 
 	loadRollSpell ($ele, level) {
@@ -647,7 +647,7 @@ const randomLootTables = {
 			let keys = Object.keys(itemList[nameTier]).sort((a, b) => randomLootTables._rarityOrder.findIndex(val => val === a) - randomLootTables._rarityOrder.findIndex((val) => val === b));
 			for (let nameRarity of keys) {
 				if (nameRarity !== undefined && nameRarity !== "None" && nameTier && nameTier !== "undefined") {
-					$selector.append(`<option value="${nameTier}-${nameRarity}">${nameTier} ${nameRarity}</option>`);
+					$selector.append(`<option value="${nameTier}-${nameRarity}">${nameTier} ${Parser.itemKeyToDisp(nameRarity)}</option>`);
 				}
 			}
 		}
