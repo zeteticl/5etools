@@ -6700,6 +6700,7 @@ Parser.ItemTypeToDisplay = function(i){
 //Item Tier
 Parser.itemTierKeyToDisplay = {};
 Parser.itemTierKeyToDisplay["none"] = "無";
+Parser.itemTierKeyToDisplay["other"] = "其他";
 Parser.itemTierKeyToDisplay["minor"] = "弱效";
 Parser.itemTierKeyToDisplay["major"] = "強效";
 Parser.ItemTierToDisplay = function(t){

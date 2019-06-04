@@ -93,7 +93,7 @@ class LootGen {
 					</tr>
 					</tbody>
 				</table>
-				<small><strong>Source:</strong> <em>${Parser.sourceJsonToFull(itemsTable.source)}</em>, 第 ${itemsTable.page}頁</small>
+				<small><strong>資源:</strong> <em>${Parser.sourceJsonToFull(itemsTable.source)}</em>, 第 ${itemsTable.page}頁</small>
 			`);
 
 			const $tbody = $table.find("tbody");
@@ -722,7 +722,7 @@ const randomLootTables = {
 			$("#random-from-loot-table").toggleClass("error-background", !tier && !rarity);
 			if (tier && rarity) {
 				const $ul = $(`<ul data-rarity="${rarity}" data-tier="${tier}"></ul>`).append(await randomLootTables.p$GetRandomItemHtml(tier, rarity));
-				lootOutput.add($ul, `Rolled on the table for <strong>${tier} ${rarity}</strong> items`);
+				lootOutput.add($ul, `從<strong>${Parser.ItemTierToDisplay(tier)} ${Parser.translateItemKeyToDisplay(rarity)}</strong>物品表中擲骰`);
 			}
 		});
 
@@ -736,7 +736,7 @@ const randomLootTables = {
 
 			const text = useClosestTier ? `level ${level}` : `level ${$(`#charLevel option[value=${level}]`).text()}`;
 			const itemsNeeded = randomLootTables.getNumberOfItemsNeeded(Number(level), useClosestTier, accumulateTiers);
-			const title = `Magical Items for a <strong>${text}</strong> Party:`;
+			const title = `給<strong>${text}</strong>隊伍的魔法物品：`;
 			const $el = $(`<div/>`);
 
 			const itemCount = {};
@@ -744,11 +744,11 @@ const randomLootTables = {
 				itemsNeeded,
 				async function (rarityValues, path) {
 					let tier = path[0];
-					let $tier = $(`<ul data-tier="${tier}"><li>${tier} items</li></ul>`);
+					let $tier = $(`<ul data-tier="${tier}"><li>${Parser.ItemTierToDisplay(tier)}物品</li></ul>`);
 
 					await Promise.all(Object.keys(rarityValues).map(async rarity => {
 						let count = rarityValues[rarity];
-						let $rarity = $(`<ul data-rarity="${rarity}"><li>${rarity} items(${count})</li></ul>`);
+						let $rarity = $(`<ul data-rarity="${rarity}"><li>${Parser.translateItemKeyToDisplay(rarity)}物品(${count})</li></ul>`);
 						let $items = $(`<ul data-tier="${tier}"></ul>`);
 						itemCount[tier] = (itemCount[tier] || 0) + count;
 						const $toAppend = await Promise.all([...new Array(count)].map(async () => randomLootTables.p$GetRandomItemHtml(tier, rarity)));
@@ -763,7 +763,7 @@ const randomLootTables = {
 				},
 				{depth: 1}
 			);
-			if (!Object.values(itemCount).reduce((a, b) => a + b, 0)) $el.append(`<i>No items.</i>`);
+			if (!Object.values(itemCount).reduce((a, b) => a + b, 0)) $el.append(`<i>無道具。</i>`);
 			lootOutput.add($el, title);
 		});
 	},
@@ -860,11 +860,11 @@ const randomLootTables = {
 			let html = $(`
 			<hr/>
 			<table id="stats">
-				<caption>稀有度為${rarity}的${tier}魔法物品表</caption>
+				<caption>稀有度為${Parser.translateItemKeyToDisplay(rarity)}的${Parser.ItemTierToDisplay(tier)}魔法物品表</caption>
 				<tbody>
 				<tr>
 					<th class="col-2 text-align-center"><span class="roller" onclick="randomLootTables.getRandomItem('${tier}', '${rarity}');">d${itemsArray.length}</span></th>
-					<th class="col-10">${tier} ${rarity} 魔法物品</th>
+					<th class="col-10">${Parser.ItemTierToDisplay(tier)} ${Parser.translateItemKeyToDisplay(rarity)} 魔法物品</th>
 				</tr>
 				</tbody>
 			</table>`);
