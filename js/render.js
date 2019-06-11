@@ -3189,7 +3189,7 @@ Renderer.item = {
 			const speed = item.speed;
 			const capacity = item.carryingcapacity;
 			if (speed) damage += "速度：" + speed;
-			if (speed && capacity) damage += type === "MNT" ? ", " : "<br>";
+			if (speed && capacity) damage += type === "MNT" ? "呎, " : "<br>";
 			if (capacity) {
 				damage += "運載量：" + capacity;
 				if (capacity.indexOf("噸") === -1 && capacity.indexOf("乘客") === -1) damage += Number(capacity) === 1 ? "磅" : "磅";
