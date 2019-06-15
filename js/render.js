@@ -1717,7 +1717,7 @@ Renderer.utils = {
 		function renderFluff (data) {
 			renderer.setFirstSection(true);
 			const fluff = fnFluffBuilder(data);
-
+			
 			if (!fluff) {
 				$td.empty().append(HTML_NO_INFO);
 				return;

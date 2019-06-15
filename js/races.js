@@ -422,9 +422,9 @@ function loadhash (id) {
 		if (predefined) return predefined;
 
 		const subFluff = race._baseName && race.name.toLowerCase() === race._baseName.toLowerCase() ? "" : fluffJson.race.find(it => (isStringMatch(it.name, race.name) || isStringMatch(it.name, race.ENG_name)) && it.source.toLowerCase() === race.source.toLowerCase());
-
-		const baseFluff = fluffJson.race.find(it => race._baseName && (isStringMatch(it.name, race._baseName) || isStringMatch(it.name, race.ENG_name)) && race._baseSource && it.source.toLowerCase() === race._baseSource.toLowerCase());
-
+console.log("sub",subFluff)
+		const baseFluff = fluffJson.race.find(it => race._baseName && (isStringMatch(it.name, race._baseName) /*|| isStringMatch(it.name, race.ENG_name)*/) && race._baseSource && it.source.toLowerCase() === race._baseSource.toLowerCase());
+console.log("base",baseFluff)
 		if (!subFluff && !baseFluff) return null;
 
 		const findFluff = (toFind) => fluffJson.race.find(it => isStringMatch(toFind.name, it.name) && toFind.source.toLowerCase() === it.source.toLowerCase());
