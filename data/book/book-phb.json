@@ -5892,11 +5892,11 @@
 					"name": "屬性檢定", "ENG_name": "Ability Checks",
 					"page": 174,
 					"entries": [
-						"An ability check tests a character's or monster's innate talent and training in an effort to overcome a challenge. The DM calls for an ability check when a character or monster attempts an action (other than an attack) that has a chance of failure. When the outcome is uncertain, the dice determine the results.",
-						"For every ability check, the DM decides which of the six abilities is relevant to the task at hand and the difficulty of the task, represented by a Difficulty Class. The more difficult a task, the higher its DC. The Typical Difficulty Classes table shows the most common DCs.",
+						"屬性檢定是用於判斷繳色或怪物的天賦和訓練是否足以克服某項挑戰。當角色或怪物嘗試進行某項有機率失敗的動作（除了攻擊以外）時，DM將會要求其進行一次屬性檢定。當不確定其結果的時候，就由骰子來決定成敗。",
+						"每一次屬性檢定，DM會決定六個屬性中哪一個與當前狀況有關，並決定該事件的難度，即該事件的難度等級(DC)。事件的難度越高，DC就會越高。常用難度等級表中顯示了最常見的各項DC數值。",
 						{
 							"type": "table",
-							"caption": "常用難度等級(DC)", "ENG_name": "Ability Checks; Typical Difficulty Classes",
+							"caption": "常用難度等級(DC)", "ENG_name": "Typical Difficulty Classes",
 							"colLabels": [
 								"任務難度",
 								"DC"
@@ -5932,16 +5932,16 @@
 								]
 							]
 						},
-						"To make an ability check, roll a d20 and add the relevant ability modifier.",
-						"As with other d20 rolls, apply bonuses and penalties, and compare the total to the DC. If the total equals or exceeds the DC, the ability check is a success\u2014the creature overcomes the challenge at hand. Otherwise, it's a failure, which means the character or monster makes no progress toward the objective or makes progress combined with a setback determined by the DM.",
+						"進行屬性檢定的方式如下：骰一顆d20，然後加上相應的屬性調整值。",
+						"如同其他的d20檢定，加上任何適用的加減值後，將其總和與DC比較。若總和等於或超過DC，則屬性檢定成功\u2014代表著該生物成功克服了眼前的挑戰。否則，該屬性檢定失敗，意味著該角色或怪物在該事件上沒能取得進展、或是在進展過程中遭遇了挫敗，具體情況由DM決定。",
 						{
 							"type": "entries",
-							"name": "Contests",
+							"name": "對抗", "ENG_name": "Contests",
 							"page": 174,
 							"entries": [
-								"Sometimes once character's or monster's efforts are directly opposed to another's. This can occur when both of them are trying to do the same thing and only one can succeed, such as attempting to snatch up a magic ring that has fallen to the floor. This situation also applies when one of them is trying to prevent the other one from accomplishing a goal\u2014for example, when a monster tries to force open a door that an adventurer is holding closed. In situations like these, the outcome is determined by a special form of ability check, called a contest.",
-								"Both participants in a contest make ability checks appropriate to their efforts. They apply all appropriate bonuses and penalties, but instead of comparing the total to a DC, they compare the totals of their two checks. The participant with the higher check total wins the contest. That character or monster either succeeds at the action or prevents the other one from succeeding.",
-								"If the contest results in a tie, the situation remains the same as it was before the contest. Thus, one contestant might win the contest by default. If two characters tie in a contest to snatch a ring off the floor, neither character grabs it. In a contest between a monster trying to open a door and an adventurer trying to keep the door closed, a tie means that the door remains shut."
+								"有時候角色們或怪物們之間的行動會出現直接對立的情況。這種情況可能會發生在雙方都想做同一件事，但只有一方能夠成功（比如說嘗試搶奪掉在地上的一個魔法戒指）。這種情況也可能發生在其中一方積極阻止另一方達成某件事情（舉例來說，當一個怪物嘗試強行開門，而冒險者們則壓著門不讓其推開）。在這些情況中，其行動的結果會透過一種特殊的屬性檢定決定，也就是對抗。",
+								"參與對抗的雙方都進行一次與他們行動相符的屬性檢定，各自加上所有適用的加減值後，並不是將總和與DC相比，而是比較他們雙方的檢定總值。檢定總值較高的參與者將在這次對抗中獲勝。角色或怪物要嘛成功達成其行動、或成功阻止了另一方的行動。",
+								"若對抗結果為平手，則情況將維持與進行對抗前相同的狀況。因此，其中一方可能會在這種平手情況下被當作獲勝。舉例來說，若兩個角色在搶奪地上戒指的對抗中平手，則雙方都沒能搶到戒指。而在怪物嘗試推開門而冒險者嘗試壓住門的對抗情況中，平手則代表著門仍然維持緊閉。"
 							]
 						},
 						{
@@ -6003,35 +6003,35 @@
 						},
 						{
 							"type": "entries",
-							"name": "Passive Checks",
+							"name": "被動檢定", "ENG_name": "Passive Checks",
 							"page": 175,
 							"entries": [
-								"A passive check is a special kind of ability check that doesn't involve any die rolls. Such a check can represent the average result for a task done repeatedly, such as searching for secret doors over and over again, or can be used when the DM wants to secretly determine whether the characters succeed at something without rolling dice, such as noticing a hidden monster.",
-								"Here's how to determine a character's total for a passive check:",
+								"被動檢定是一種不需要擲骰的特殊屬性檢定。這類檢定可以反映一些頻繁重複行動的平均結果（像是一再搜索密門），或可以在DM希望不擲骰而偷偷決定角色在某些事情上是否成功時被使用（例如決定是否察覺躲藏起來的怪物）。",
+								"以下是角色的被動檢定總值的決定方式：",
 								{
 									"type": "abilityGeneric",
-									"text": "10 + all modifiers that normally apply to the check"
+									"text": "10 + 所有一般狀況下適用於該檢定的調整值"
 								},
-								"If the character has advantage on the check, add 5. For disadvantage, subtract 5. The game refers to a passive check total as a score.",
-								"For example, if a 1st-level character has a Wisdom of 15 and proficiency in Perception, he or she has a passive Wisdom (Perception) score of 14.",
-								"The rules on hiding in the \"Dexterity\" section below rely on passive checks, as do the exploration rules in chapter 8."
+								"若角色在該檢定中具有優勢，將被動檢定結果加上5。若具有劣勢則減去5。在遊戲進行中，被動檢定總值將被當作一個可以被直接應用的數值。",
+								"舉例來說，若一個1級角色具有15點睿知，且熟練於感知技能，則他或她的被動睿知（感知）值就會是14。",
+								"下文中「敏捷」段落的躲藏規則、以及第八章的探索規則都會使用到被動檢定。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Working Together",
+							"name": "合作", "ENG_name": "Working Together",
 							"page": 175,
 							"entries": [
-								"Sometimes two or more characters team up to attempt a task. The character who's leading the effort\u2014or the one with the highest ability modifier\u2014can make an ability check with advantage, reflecting the help provided by the other characters. In combat, this requires the Help action (see chapter 9).",
-								"A character can only provide help if the task is one that he or she could attempt alone. For example, trying to open a lock requires proficiency with thieves' tools, so a character who lacks that proficiency can't help another character in that task. Moreover, a character can help only when two or more individuals working together would actually be productive. Some tasks, such as threading a needle, are no easier with help.",
+								"有時候二名或更多的角色會一起合作以嘗試完成一件事。帶領進行嘗試的角色\u2014或具有最高屬性調整值的角色\u2014可以進行一次帶有優勢的屬性檢定，反映其他角色所提供的協助。在戰鬥中，這種合作需要透過採取協助動作（參見第九章）來進行。",
+								"一個角色只能在他或她可以獨自嘗試進行該行為時，才能為他人提供協助。舉例來說，你必須熟練於盜賊工具才能嘗試開鎖，因此不具備該熟練項的角色就無法協助其他角色進行開鎖。除此之外，只有在多人合作確實能提升這項任務的成效時，角色才能提供協助。有些工作（例如穿針引線）並不是那麼容易就能幫上忙。",
 								{
 									"type": "entries",
-									"name": "Group Checks",
+									"name": "團體檢定", "ENG_name": "Group Checks",
 									"page": 175,
 									"entries": [
-										"When a number of individuals are trying to accomplish something as a group, the DM might ask for a group ability check. In such a situation, the characters who are skilled at a particular task help cover those who aren't.",
-										"To make a group ability check, everyone in the group makes the ability check. If at least half the group succeeds, the whole group succeeds. Otherwise, the group fails.",
-										"Group checks don't come up very often, and they're most useful when all the characters succeed or fail as a group. For example, when adventurers are navigating a swamp, the DM might call for a group Wisdom (Survival) check to see if the characters can avoid the quicksand, sinkholes, and other natural hazards of the environment. If at least half the group succeeds, the successful characters are able to guide their companions out of danger. Otherwise, the group stumbles into one of these hazards."
+										"當一群人以一個團體嘗試去完成某件事情時，DM可能會要求其進行一次團體屬性檢定。在這種情況中，那些擅長特定任務的角色將會協助那些不擅長的人。",
+										"當進行團體屬性檢定時，團體中的每一個人都需要進行一次屬性檢定。若團體中有至少一半的人成功，則團體檢定成功。否則團體檢定失敗。",
+										"團體檢定並不會經常發生，且它們通常會適用於全體角色會一起成功或失敗的情況。舉例來說，當冒險者們在沼澤中尋路時，DM可能會要求進行一次團體睿知（求生）檢定以判斷他們能否避開流沙、陷坑、和其他環境中的自然危害。若團隊中有至少一半的人成功，則檢定成功的角色們就能夠帶領他們的同伴避開危險。否則大家將一起跌撞栽進這些危害之中。"
 									]
 								}
 							]
@@ -6552,15 +6552,15 @@
 					"data": {
 						"quickref": 3
 					},
-					"name": "Saving Throws",
+					"name": "豁免檢定", "ENG_name": "Saving Throws",
 					"page": 179,
 					"entries": [
-						"A saving throw\u2014also called a save\u2014represents an attempt to resist a spell, a trap, a poison, a disease, or a similar threat. You don't normally decide to make a saving throw; you are forced to make one because your character or monster is at risk of harm.",
-						"To make a saving throw, roll a d20 and add the appropriate ability modifier. For example, you use your Dexterity modifier for a Dexterity saving throw.",
-						"A saving throw can be modified by a situational bonus or penalty and can be affected by advantage and disadvantage, as determined by the DM.",
-						"Each class gives proficiency in at least two saving throws. The wizard, for example, is proficient in Intelligence saves. As with skill proficiencies, proficiency in a saving throw lets a character add his or her proficiency bonus to saving throws made using a particular ability score. Some monsters have saving throw proficiencies as well.",
-						"The Difficulty Class for a saving throw is determined by the effect that causes it. For example, the DC for a saving throw allowed by a spell is determined by the caster's spellcasting ability and proficiency bonus.",
-						"The result of a successful or failed saving throw is also detailed in the effect that allows the save. Usually, a successful save means that a creature suffers no harm, or reduced harm, from an effect."
+						"豁免檢定\u2014或被簡稱為豁免\u2014代表著你在面對法術、陷阱、毒素、疾病、或其他類似威脅時所做的抵抗。通常來說，你並不會主動選擇進行豁免檢定；而是當你的角色或怪物受到威脅時被迫進行。",
+						"進行豁免檢定的方式如下：骰一顆d20，然後加上相應的屬性調整值。舉例來說，你會在進行敏捷豁免時使用你的敏捷調整值。",
+						"豁免檢定可以受到情境加值或罰值的影響，且可以被優勢和劣勢影響，由DM決定。",
+						"每個職業都會讓你熟練於至少二種豁免檢定。舉例來說，法師熟練於智力豁免。與技能熟練相同，熟練於一種豁免檢定讓繳色可以在使用特定屬性進行豁免檢定時加入他或她的熟練加值。有些怪物也會具有豁免檢定的熟練項。",
+						"豁免檢定的難度等級(DC)是由引發豁免的效果所決定。例如，一個由法術所引發的豁免檢定，其DC是由其施法者的施法屬性和熟練加值所決定。",
+						"豁免檢定成功或失敗所導致的結果也會記載於引發豁免的效果中。通常來說，一次成功的豁免檢定意味著該生物迴避或減弱了其效果的影響。"
 					]
 				}
 			]
@@ -7855,27 +7855,27 @@
 					"data": {
 						"quickref": 4
 					},
-					"name": "Damage and Healing",
+					"name": "傷害與治療", "ENG_name": "Damage and Healing",
 					"page": 196,
 					"entries": [
-						"Injury and the risk of death are constant companions of those who explore the worlds of D&D. The thrust of a sword, a well-placed arrow, or a blast of flame from a fireball spell all have the potential to damage, or even kill, the hardiest of creatures.",
+						"受傷和死亡的風險時常伴隨著探索D&D世界的人們。挺刺而出的劍刃、瞄準飛射的箭矢、或是來自火球術法術的烈焰爆風都有可能傷害，會甚至殺死最強韌的生物。",
 						{
 							"type": "entries",
-							"name": "Hit Points",
+							"name": "生命值", "ENG_name": "Hit Points",
 							"page": 196,
 							"entries": [
-								"Hit points represent a combination of physical and mental durability, the will to live, and luck. Creatures with more hit points are more difficult to kill. Those with fewer hit points are more fragile.",
-								"A creature's current hit points (usually just called hit points) can be any number from the creature's hit point maximum down to 0. This number changes frequently as a creature takes damage or receives healing. Whenever a creature takes damage, that damage is subtracted from its hit points. The loss of hit points has no effect on a creature's capabilities until the creature drops to 0 hit points."
+								"生命值代表著肉體和心靈耐受性、生存意志、和運氣等因素的綜合指標。擁有高生命值的生物將更難以被殺死。而那些生命值較少的生物則更加脆弱。",
+								"生物的當前生命值（通常直接稱作生命值）可以是從0到該生物生命值最大值之間的任意數值。這個數值會隨著該生物受到傷害或接受治療而經常變動。每當生物受到傷害，從其生命值扣除等同該傷害的數值。在該生物的生命值歸零之前，失去生命值並不會對該生物的行動能力有任何影響。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Damage Rolls",
+							"name": "傷害骰", "ENG_name": "Damage Rolls",
 							"page": 196,
 							"entries": [
-								"Each weapon, spell, and harmful monster ability specifies the damage it deals. You roll the damage die or dice, add any modifiers, and apply the damage to your target. Magic weapons, special abilities, and other factors can grant a bonus to damage.",
-								"When attacking with a {@b weapon}, you add your ability modifier\u2014the same modifier used for the attack roll to the damage. A {@b spell} tells you which dice to roll for damage and whether to add any modifiers.",
-								"If a spell or other effect deals damage to {@b more than one target} at the same time, roll the damage once for all of them. For example, when a wizard casts fireball or a cleric casts flame strike, the spell's damage is rolled once for all creatures caught in the blast.",
+								"所有武器、法術、和傷害性怪物能力都會指定其造成的傷害。你擲其傷害骰，加上任何調整值，並對你的目標造成該傷害。魔法武器、特殊能力、和其他要素可能會使該傷害提供額外的加值。",
+								"當使用{@b 武器}攻擊時，你將你的屬性調整值\u2014使用與你進行攻擊檢定相同的屬性調整值加入該傷害中。至於{@b 法術}造成傷害時所擲的骰子，以及是否要加入任何調整值，則會在其描述中作說明。",
+								"若一個法術或其他效果會對{@b 超過一個目標}同時造成傷害，為所有目標骰一次傷害即可。舉例來說，當一名法師施放火球術或一名牧師施放燄擊術時，骰一次該法術的傷害，然後對所有在爆焰範圍內的生物造成該傷害。",
 								{
 									"type": "entries",
 									"name": "重擊", "ENG_name": "Critical Hits",
@@ -8002,20 +8002,20 @@
 						},
 						{
 							"type": "entries",
-							"name": "Damage Resistance and Vulnerability",
+							"name": "傷害抗性與易傷", "ENG_name": "Damage Resistance and Vulnerability",
 							"page": 197,
 							"entries": [
-								"Some creatures and objects are exceedingly difficult or unusually easy to hurt with certain types of damage.",
-								"If a creature or an object has {@b resistance} to a damage type, damage of that type is halved against it. If a creature or an object has {@b vulnerability} to a damage type, damage of that type is doubled against it.",
-								"Resistance and then vulnerability are applied after all other modifiers to damage. For example, a creature has resistance to bludgeoning damage and is hit by an attack that deals 25 bludgeoning damage. The creature is also within a magical aura that reduces all damage by 5. The 25 damage is first reduced by 5 and then halved, so the creature takes 10 damage.",
-								"Multiple instances of resistance or vulnerability that affect the same damage type count as only one instance. For example, if a creature has resistance to fire damage as well as resistance to all nonmagical damage, the damage of a nonmagical fire is reduced by half against the creature, not reduced by three-quarters.",
+								"有些生物和物體極其困難或相當容易受到某種類型的傷害的影響。",
+								"若一個生物或物體具有對某個傷害類型的{@b 抗性}，則其受到該傷害類型時的傷害數值將被減半。若一個生物或物體具有對某個傷害類型的{@b 易傷}，則它受到該傷害類型時的傷害數值將被加倍。",
+								"在計算所有其他傷害的調整值之後，先計算抗性，然後適用易傷的影響。舉例來說，一個生物具有對鈍擊傷害的抗性，且被一次造成25點鈍擊傷害的攻擊給命中。該生物同時處於一個能夠使所有傷害減少5點的魔法靈光中。這25點傷害將會先被減少5點，然後被減半，因此該生物最後將受到10點傷害。",
+								"複數個影響同一種傷害類型的抗性或易傷效果將只被視作一種效果。舉例來說，若一個生物具有對火焰傷害的抗性以及對所有非魔法傷害的抗性，則該生物受到的非魔法火焰傷害將只會被減半，而不會被減少至四分之一。",
 								{
 									"type": "entries",
-									"name": "Describing the Effects of Damage",
+									"name": "描述傷害效果", "ENG_name": "Describing the Effects of Damage",
 									"page": 197,
 									"entries": [
-										"Dungeon Masters describe hit point loss in different ways.",
-										"When your current hit point total is half or more of your hit point maximum, you typically show no signs of injury. When you drop below half your hit point maximum, you show signs of injury. When you drop below half of your hit point maximum, you show signs of wear, such as cuts and bruises. An attack that reduces you to 0 hit points strikes you directly, leaving a bleeding injury or other trauma, or it simply knocks you unconscious."
+										"地下城主會使用不同的方式描述失去生命值的情境。",
+										"當你的當前生命值總和處於你生命值最大值的一半或以上，你通常不會留下受傷的表象。但當你的生命值降至最大值的一半以下，你就會出現像是切割傷或瘀青等輕微傷勢。將你生命值歸零的攻擊將會直接擊中你，留下血流如注的傷口或是其它創傷，或者單純地將你擊暈昏迷。"
 									]
 								}
 							]
