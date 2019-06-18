@@ -78,7 +78,7 @@
 			"name": "駭人威儀", "ENG_name": "Frightful Presence",
 			"example": "遠古金龍",
 			"effect": "每個在範圍內由該生物所選的生物都必須進行一次睿知豁免，否則將陷入恐懼長達1分鐘。",
-			"hp": "Math.floor((expectedcr <= 10) ? hp * 0.25 : 0)",
+			"hp": "Math.floor((expectedCr <= 10) ? hp * 0.25 : 0)",
 			"ac": "",
 			"dpr": "",
 			"attackbonus": ""
@@ -97,7 +97,7 @@
 			"name": "駭人面容", "ENG_name": "Horrifying Visage",
 			"example": "報喪女妖(班西)",
 			"effect": "每個範圍內的非不死生物都必須進行一次睿知豁免，否則將陷入恐懼長達1分鐘。",
-			"hp": "Math.floor((expectedcr <= 10) ? hp * 0.25 : 0)",
+			"hp": "Math.floor((expectedCr <= 10) ? hp * 0.25 : 0)",
 			"ac": "",
 			"dpr": "",
 			"attackbonus": ""
@@ -106,7 +106,7 @@
 			"name": "傳奇抗性", "ENG_name": "Legendary Resistance",
 			"example": "泰拉斯奎巨獸",
 			"effect": "若該生物在豁免檢定中失敗，它可以選擇改為使其成功。請輸入它每天可以使用的次數。",
-			"hp": "((expectedcr >= 0 && expectedcr <= 4) ? 10*trait : ((expectedcr >= 5 && expectedcr <= 10) ? 20*trait : ((expectedcr >= 11) ? 30*trait : 0)))",
+			"hp": "((expectedCr >= 0 && expectedCr <= 4) ? 10*trait : ((expectedCr >= 5 && expectedCr <= 10) ? 20*trait : ((expectedCr >= 11) ? 30*trait : 0)))",
 			"ac": "",
 			"dpr": "",
 			"attackbonus": "",
@@ -181,7 +181,7 @@
 			"name": "頑強", "ENG_name": "Relentless",
 			"example": "野豬",
 			"effect": "若該生物的生命值將要被歸零，則它有機會改為使它的生命值被減少至1。",
-			"hp": "((expectedcr >= 0 && expectedcr <= 4) ? 7 : ((expectedcr >= 5 && expectedcr <= 10) ? 14 : ((expectedcr >= 11 && expectedcr <= 16) ? 21 : ((expectedcr >= 17) ? 28 : 0))))",
+			"hp": "((expectedCr >= 0 && expectedCr <= 4) ? 7 : ((expectedCr >= 5 && expectedCr <= 10) ? 14 : ((expectedCr >= 11 && expectedCr <= 16) ? 21 : ((expectedCr >= 17) ? 28 : 0))))",
 			"ac": "",
 			"dpr": "",
 			"attackbonus": ""
@@ -217,7 +217,7 @@
 			"name": "不死韌性", "ENG_name": "Undead Fortitude",
 			"example": "殭屍",
 			"effect": "若該生物的生命值將要被歸零，則它有機會改為使它的生命值被減少至1。若這個傷害來自光耀屬性，則這個特性將被無效。",
-			"hp": "((expectedcr >= 0 && expectedcr <= 4) ? 7 : ((expectedcr >= 5 && expectedcr <= 10) ? 14 : ((expectedcr >= 11 && expectedcr <= 16) ? 21 : ((expectedcr >= 17) ? 28 : 0))))",
+			"hp": "((expectedCr >= 0 && expectedCr <= 4) ? 7 : ((expectedCr >= 5 && expectedCr <= 10) ? 14 : ((expectedCr >= 11 && expectedCr <= 16) ? 21 : ((expectedCr >= 17) ? 28 : 0))))",
 			"ac": "",
 			"dpr": "",
 			"attackbonus": ""
