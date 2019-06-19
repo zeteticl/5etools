@@ -4575,24 +4575,24 @@
 									"1 磅"
 								],
 								[
-									"四輪馬車",
-									"100 金幣",
-									"600 磅"
-								],
-								[
 									"運貨車",
 									"15 金幣",
 									"200 磅"
 								],
 								[
+									"運貨馬車",
+									"35 金幣",
+									"400 磅"
+								],
+								[
+									"四輪馬車",
+									"100 金幣",
+									"600 磅"
+								],
+								[
 									"雙輪戰車",
 									"250 金幣",
 									"100 磅"
-								],
-								[
-									"動物飼料(每日)",
-									"5 銅幣",
-									"10 磅"
 								],
 								[
 									"{@i 鞍座}",
@@ -4646,14 +4646,14 @@
 									"300 磅"
 								],
 								[
+									"動物飼料(每日)",
+									"5 銅幣",
+									"10 磅"
+								],
+								[
 									"馬廄設備(每日)",
 									"5 銀幣",
 									"\u2014"
-								],
-								[
-									"Wagon",
-									"35 金幣",
-									"400 磅"
 								]
 							]
 						},
@@ -7253,22 +7253,22 @@
 						"A typical combat encounter is a clash between two sides, a flurry of weapon swings, feints, parries, footwork, and spellcasting. The game organizes the chaos of combat into a cycle of rounds and turns. A round represents about 6 seconds in the game world. During a round, each participant in a battle takes a turn. The order of turns is determined at the beginning of a combat encounter, when everyone rolls initiative. Once everyone has taken a turn, the fight continues to the next round if neither side has defeated the other.",
 						{
 							"type": "entries",
-							"name": "Surprise",
+							"name": "突襲", "ENG_name": "Surprise",
 							"page": 189,
 							"entries": [
-								"A band of adventurers sneaks up on a bandit camp, springing from the trees to attack them. A gelatinous cube glides down a dungeon passage, unnoticed by the adventurers until the cube engulfs one of them. In these situations, one side of the battle gains surprise over the other.",
-								"The DM determines who might be surprised. If neither side tries to be stealthy, they automatically notice each other. Otherwise, the DM compares the Dexterity (Stealth) checks of anyone hiding with the passive Wisdom (Perception) score of each creature on the opposing side. Any character or monster that doesn't notice a threat is surprised at the start of the encounter.",
-								"If you're surprised, you can't move or take an action on your first turn of the combat, and you can't take a reaction until that turn ends. A member of a group can be surprised even if the other members aren't."
+								"一對冒險者們悄悄地潛入強盜的營地，從樹後躍出並發動襲擊。一只凝膠方塊在地城通道中滑行，當冒險者們注意到它時已經有同伴被其吞沒。在這些情境中，戰鬥的其中一方將對另一方進行突襲。",
+								"由DM決定哪一方可能遭受突襲。若戰鬥雙方都未嘗試隱匿行動，則他們將自動注意到彼此。否則的話，DM將會把躲藏方每個人的敏捷（隱匿）檢定結果與另一方每個生物的被動睿知（感知）數值做比較。任何沒能注意到威脅的角色或怪物將在戰鬥遭遇開始的時候被突襲。",
+								"若你被突襲，則你在戰鬥中你的第一個回合時將無法移動或採取任何動作，且你直到該回合結束之前都無法採取反應。另外，即使團隊中的其他成員沒有被突襲，單獨成員也可能會因為沒能發現危險而遭受突襲。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Initiative",
+							"name": "先攻", "ENG_name": "Initiative",
 							"page": 189,
 							"entries": [
-								"Initiative determines the order of turns during combat. When combat starts, every participant makes a Dexterity check to determine their place in the initiative order. The DM makes one roll for an entire group of identical creatures, so each member of the group acts at the same time.",
-								"The DM ranks the combatants in order from the one with the highest Dexterity check total to the one with the lowest. This is the order (called the initiative order) in which they act during each round. The initiative order remains the same from round to round.",
-								"If a tie occurs, the DM decides the order among tied DM-controlled creatures, and the players decide the order among their tied characters. The DM can decide the order if the tie is between a monster and a player character. Optionally, the DM can have the tied characters and monsters each roll a d20 to determine the order, highest roll going first."
+								"先攻決定了你在戰鬥中的回合順序。當戰鬥開始時，所有參與戰鬥的角色都要進行一次敏捷檢定以決定他們在先攻順序的位置。DM可以為一整群相同的生物進行一次檢定，讓群體中的每個成員都在同一時間採取行動。",
+								"DM將參戰者的敏捷檢定結果由高到低排序。這個順序（稱做先攻順序）即為他們在戰鬥中每輪的行動順序。這個先攻順序在戰鬥輪交替的過程中都將保持不變。",
+								"當先攻的敏捷檢定結果相同時，若是DM控制的生物之間平手，則由DM決定其具體順序；若是玩家們的角色平手，則具體順序由玩家之間自行決定。若先攻平手的狀況是發生在怪物和玩家角色之間，則DM可以決定其順序。或者，DM也可以讓先攻平手的角色和怪物各自骰一顆d20以決定順序，由擲骰結果較高的一方先手。"
 							]
 						},
 						{
@@ -7302,34 +7302,34 @@
 										"The DM might require you to use an action for any of these activities when it needs special care or when it presents an unusual obstacle. For instance, the DM could reasonably expect you to use an action to open a stuck door or turn a crank to lower a drawbridge.",
 										{
 											"type": "inset",
-											"name": "Interacting with Objects Around You",
+											"name": "與身邊的物體互動", "tENG_name": "Interacting with Objects Around You",
 											"page": 190,
 											"entries": [
-												"Here are a few examples of the sorts of thing you can do in tandem with your movement and action:",
+												"這裡將列出一些你在移動或採取動作時可以連帶進行的互動範例：",
 												{
 													"type": "list",
 													"items": [
-														"draw or sheathe a sword",
-														"open or close a door",
-														"withdraw a potion from your backpack",
-														"pick up a dropped axe",
-														"take a bauble from a table",
-														"remove a ring from your finger",
-														"stuff some food into your mouth",
-														"plant a banner in the ground",
-														"fish a few coins from your belt pouch",
-														"drink all the ale in a flagon",
-														"throw a lever or a switch",
-														"pull a torch from a sconce",
-														"take a book from a shelf you can reach",
-														"extinguish a small flame",
-														"don a mask",
-														"pull the hood of your cloak up and over your head",
-														"put your ear to a door",
-														"kick a small stone",
-														"turn a key in a lock",
-														"tap the floor with a 10-foot pole",
-														"hand an item to another character"
+														"抽出或收起一把劍",
+														"打開或關上一扇門",
+														"從你的背包中取出一瓶藥水",
+														"撿起一把掉在地上的斧頭",
+														"從桌上拿起一件飾品",
+														"從你的手指上取下一枚戒指",
+														"將一些食物塞進你的口中",
+														"將一面旗幟插在地面",
+														"從腰包中撈出幾枚硬幣",
+														"喝掉酒壺中的所有麥酒",
+														"轉動拉桿或開關",
+														"從壁檯上取下一根火炬",
+														"從你能夠觸及的書架上拿下一本書",
+														"熄滅一撮小火苗",
+														"戴上面具",
+														"拉起斗篷的兜帽並罩住你的頭部",
+														"將你的耳朵貼在門上",
+														"踢飛一顆小石頭",
+														"轉動一把插在鎖上的鑰匙",
+														"以10呎長桿輕敲地面",
+														"將一個物品交給另一名角色"
 													]
 												}
 											]
@@ -7340,11 +7340,11 @@
 						},
 						{
 							"type": "entries",
-							"name": "Reactions",
+							"name": "反應", "ENG_name": "Reactions",
 							"page": 190,
 							"entries": [
-								"Certain special abilities, spells, and situations allow you to take a special action called a reaction. A reaction is an instant response to a trigger of some kind, which can occur on your turn or on someone else's. The opportunity attack, described later in this chapter, is the most common type of reaction.",
-								"When you take a reaction, you can't take another one until the start of your next turn. If the reaction interrupts another creature's turn, that creature can continue its turn right after the reaction."
+								"某些特殊能力、法術、和特定情況會允許你採取一種被稱之為反應的特殊動作。反應是對於某種觸發事件的即時回應，且可以發生在你或其他人的回合。在這個章節中稍後會提及的藉機攻擊，就是最常見的一種反應。",
+								"當你採取一次反應，則直到你的下個回合開始前你都無法再採取另一次反應。若這個反應會打斷了另一個生物回合的進行，則該生物可以在處理完該反應之後繼續進行它的回合。"
 							]
 						}
 					]
@@ -7430,8 +7430,8 @@
 							"name": "生物體型", "ENG_name": "Creature Size",
 							"page": 191,
 							"entries": [
-								"Each creature takes up a different amount of space.",
-								"The Size Categories table shows how much space a creature of a particular size controls in combat. Objects sometimes use the same size categories.",
+								"每個生物都佔據著不同大小的空間。",
+								"體型分類表格中顯示了特定體型生物在戰鬥中所能控制的空間大小。有時候物體也會使用相同的體型分類。",
 								{
 									"type": "table",
 									"caption": "體型分類", "ENG_name": "Creature Size; Size Categories",
