@@ -1653,25 +1653,25 @@
 						"Wealth appears in many forms in a D&D world. Coins, gemstones, trade goods, art objects, animals, and property can reflect your character's financial well-being. Members of the peasantry trade in goods, bartering for what they need and paying taxes in grain and cheese. Members of the nobility trade in legal rights, such as the rights to mine, a port, or farmland, or in gold bars, measuring gold by the pound rather than by the coin. Only merchants, adventurers, and those offering professional services for hire deal in coins.",
 						{
 							"type": "entries",
-							"name": "Coinage",
+							"name": "貨幣制度", "ENG_name": "Coinage",
 							"page": 143,
 							"entries": [
-								"Common coins come in several different denominations based on the relative worth of the metal from which they are made. The three most common coins are the gold piece (gp), the silver piece (sp), and the copper piece (cp).",
-								"With one gold piece, a character can buy a quiver, 50 feet of good rope, or a goat. A skilled (but not exceptional) artisan can earn one gold piece a day. The gold piece is the standard unit of measure for wealth, even if the coin itself is not commonly used. When merchants discuss deals that involve goods or services worth hundreds or thousands of gold pieces, the transactions don't usually involve the exchange of individual coins. Rather, the gold piece is a standard measure of value, and the actual exchange is in gold bars, letters of credit, or valuable goods.",
-								"One gold piece is worth ten silver pieces, the most prevalent coin among commoners. A silver piece buys a set of dice, a flask of lamp oil, or a night's rest in a poor inn.",
-								"One silver piece is worth ten copper pieces, which are common among laborers and beggars. A single copper piece buys a candle, a torch, or a piece of chalk.",
-								"In addition, unusual coins made of other precious metals sometimes appear in treasure hoards. The electrum piece (ep) and the platinum piece (pp) originate from fallen empires and lost kingdoms, and they sometimes arouse suspicion and skepticism when used in transactions. An electrum piece is worth five silver pieces, and a platinum piece is worth ten gold pieces.",
-								"A standard coin weighs about a third of an ounce, so fifty coins weigh a pound.",
+								"一般的貨幣會有數個不同的幣值單位在市面上流通，且其面額會根據鑄造它們所使用的金屬的相對價值來決定。三種最常見的貨幣是金幣(gp)、銀幣(sp)、和銅幣(cp)。",
+								"一枚金幣，可以讓一個角色購買一個腰包、50呎的優質繩索、或一頭山羊。一名純熟（但並不傑出）的工匠每天可以賺取一枚金幣。儘管金幣本身並不常被直接使用，但黃金仍然是衡量財富的標準單位。當商人們商談著的交易涉及價值千百金幣的貨物或服務，其交易本身通常不會涉及貨幣的交換。更確切的說，金幣只是衡量價值的標準，而實際交易中使用的則是金條、信用狀、或其他值錢的商品。",
+								"一枚金幣值十枚銀幣，銀幣是普通人之間最盛行的貨幣。一枚銀幣可以僱傭一名勞動者工作一整天、購買一扁瓶的燈油、或是在簡陋旅館的一夜休眠。",
+								"一枚銀幣值十枚銅幣，銅幣則常見於勞動者和乞丐之間。一枚銅幣能買一根蠟燭、一支火炬、或是一支粉筆。",
+								"除此之外，使用其他貴重金屬鑄造的罕見貨幣有時也會出現在寶藏中。珀金幣(ep)和鉑金幣(pp)源自於衰落帝國和失落的王國，且當它們被用於交易時也偶爾會引起猜忌與懷疑。一枚珀金幣價值五枚銀幣，而一枚鉑金幣則價值十枚金幣。",
+								"一枚標準貨幣的重量約為三分之一盎司，所以五十枚貨幣重約一磅。",
 								{
 									"type": "table",
-									"caption": "Standard Exchange Rates",
+									"caption": "標準兌換率", "ENG_name": "Standard Exchange Rates",
 									"colLabels": [
-										"Coin",
-										"cp",
-										"sp",
-										"ep",
-										"gp",
-										"pp"
+										"貨幣",
+										"銅幣(cp)",
+										"銀幣(sp)",
+										"珀金幣(ep)",
+										"金幣(gp)",
+										"鉑金幣(pp)"
 									],
 									"colStyles": [
 										"col-2",
@@ -1683,7 +1683,7 @@
 									],
 									"rows": [
 										[
-											"Copper (cp)",
+											"銅幣(cp)",
 											"1",
 											"1/10",
 											"1/50",
@@ -1691,7 +1691,7 @@
 											"1/1,000"
 										],
 										[
-											"Silver (sp)",
+											"銀幣(sp)",
 											"10",
 											"1",
 											"1/5",
@@ -1699,7 +1699,7 @@
 											"1/100"
 										],
 										[
-											"Electrum (ep)",
+											"珀金幣(ep)",
 											"50",
 											"5",
 											"1",
@@ -1707,7 +1707,7 @@
 											"1/20"
 										],
 										[
-											"Gold (gp)",
+											"金幣(gp)",
 											"100",
 											"10",
 											"2",
@@ -1715,7 +1715,7 @@
 											"1/10"
 										],
 										[
-											"Platinum (pp)",
+											"鉑金幣(pp)",
 											"1,000",
 											"100",
 											"20",
@@ -8266,32 +8266,32 @@
 						},
 						{
 							"type": "entries",
-							"name": "Casting Time",
+							"name": "施法時間", "ENG_name": "Casting Time",
 							"page": 202,
 							"entries": [
-								"Most spells require a single action to cast, but some spells require a bonus action, a reaction, or much more time to cast.",
+								"大部分的法術在施放時都只需要一個動作，但有些法術會要求一個附贈動作、一個反應、或更長的時間才能施放。",
 								{
 									"type": "entries",
-									"name": "Bonus Action",
+									"name": "附贈動作", "ENG_name": "Bonus Action",
 									"page": 202,
 									"entries": [
-										"A spell cast with a bonus action is especially swift. You must use a bonus action on your turn to cast the spell, provided that you haven't already taken a bonus action this turn. You can't cast another spell during the same turn, except for a cantrip with a casting time of 1 action."
+										"以附贈動作施放的法術特別迅捷。你必須在你的回合使用一個附贈動作才能施放該法術，但前提是你在該回合尚未採取過其他附贈動作。在該回合中，除了施法時間為1個動作的戲法以外，你不能再施放其他法術。"
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Reactions",
+									"name": "反應", "ENG_name": "Reactions",
 									"page": 202,
 									"entries": [
-										"Some spells can be cast as reactions. These spells take a fraction of a second to bring about and are cast in response to some event. If a spell can be cast as a reaction, the spell description tells you exactly when you can do so."
+										"有些法術可以使用反應施放。這些法術通常只需要幾分之一秒的時間就能施放完成，且被用於回應某些事件。若一個法術可以使用反應來施放，該法術的描述將會確切地告訴你在什麼時候可以這麼做。"
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Longer Casting Times",
+									"name": "更長的施法時間", "ENG_name": "Longer Casting Times",
 									"page": 202,
 									"entries": [
-										"Certain spells (including spells cast as rituals) require more time to cast: minutes or even hours. When you cast a spell with a casting time longer than a single action or reaction, you must spend your action each turn casting the spell, and you must maintain your concentration while you do so (see \"Concentration\" below). If your concentration is broken, the spell fails, but you don't expend a spell slot. If you want to try casting the spell again, you must start over."
+										"某些法術（包括以儀式施放的法術）會需要更多的時間施放：數分鐘或甚至數小時。當你施放一個施法時間超過一個動作或反應的法術時，你必須在每一輪中都使用你的動作施放該法術，且你必須在你這麼做時維持你的專注（參見下述的「專注」條目）。若你的專注被中斷，則該法術失敗，但你並不會消耗掉法術位。若你想要再次嘗試施放該法術，則你必須重新開始。"
 									]
 								}
 							]
@@ -8309,34 +8309,34 @@
 						},
 						{
 							"type": "entries",
-							"name": "Components",
+							"name": "構材", "ENG_name": "Components",
 							"page": 203,
 							"entries": [
 								"A spell's components are the physical requirements you must meet in order to cast it. Each spell's description indicates whether it requires verbal (V), somatic (S), or material (M) components. If you can't provide one or more of a spell's components, you are unable to cast the spell.",
 								{
 									"type": "entries",
-									"name": "Verbal (V)",
+									"name": "聲音（聲）", "ENG_name": "Verbal (V)",
 									"page": 203,
 									"entries": [
-										"Most spells require the chanting of mystic words. The words themselves aren't the source of the spell's power; rather, the particular combination of sounds, with specific pitch and resonance, sets the threads of magic in motion. Thus, a character who is gagged or in an area of silence, such as one created by the silence spell, can't cast a spell with a verbal component."
+										"大部分的法術都需要詠唱咒語。這些咒語本身並不是法術能量的源頭；但其特定音調和共鳴的聲音組合卻能夠牽動魔網的絲弦，完成施法。因此，若一名角色被塞住嘴巴或處於完全靜默的空間（例如沉默術所造成的區域），則他將無法施放任何需要聲音構材的法術。"
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Somatic (S)",
+									"name": "姿勢（勢）", "ENG_name": "Somatic (S)",
 									"page": 203,
 									"entries": [
-										"Spellcasting gestures might include a forceful gesticulation or an intricate set of gestures. If a spell requires a somatic component, the caster must have free use of at least one hand to perform these gestures."
+										"施法姿勢可能會包括一個固定的手勢、或一連串精巧的動作。若一個法術需要姿勢構材，則施法者必須至少有一隻空手才能完成這些姿勢。"
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Material (M)",
+									"name": "材料（材）", "ENG_name": "Material (M)",
 									"page": 203,
 									"entries": [
-										"Casting some spells requires particular objects, specified in parentheses in the component entry. A character can use a component pouch or a spellcasting focus (found in chapter 5) in place of the components specified for a spell. But if a cost is indicated for a component, a character must have that specific component before he or she can cast the spell.",
-										"If a spell states that a material component is consumed by the spell, the caster must provide this component for each casting of the spell.",
-										"A spellcaster must have a hand free to access a spell's material components\u2014or to hold a spellcasting focus\u2014but it can be the same hand that he or she uses to perform somatic components."
+										"施放某些法術會需要特定的物品，這些物品會被註記在其構材欄位中。角色可以使用一個材料包或一個法器（參見第五章）以取代法術中註記的材料構材。但若該材料構材有指定價格，則角色必須持有該特定構材才能夠施放該法術。",
+										"若一個法術註記其材料構才會被該法術消耗，則施法者必須在每一次施放該法術時都提供該構材。",
+										"一個施法者必須有至少一隻空手以接觸該法術的材料構材\u2014或持握一個法器。這隻空手可以是他或她用以施展姿勢構材的那隻手。"
 									]
 								}
 							]
