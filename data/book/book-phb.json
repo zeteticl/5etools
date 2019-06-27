@@ -8312,7 +8312,7 @@
 							"name": "構材", "ENG_name": "Components",
 							"page": 203,
 							"entries": [
-								"A spell's components are the physical requirements you must meet in order to cast it. Each spell's description indicates whether it requires verbal (V), somatic (S), or material (M) components. If you can't provide one or more of a spell's components, you are unable to cast the spell.",
+								"法術的構材代表著你施放它所必須滿足的物質條件。每個法術的敘述都會說明其是否需要滿足聲音（聲）、姿勢（勢）、或材料（材）構材。你必須滿足一個法術的所有構材才能夠施放該法術。",
 								{
 									"type": "entries",
 									"name": "聲音（聲）", "ENG_name": "Verbal (V)",
@@ -8335,7 +8335,7 @@
 									"page": 203,
 									"entries": [
 										"施放某些法術會需要特定的物品，這些物品會被註記在其構材欄位中。角色可以使用一個材料包或一個法器（參見第五章）以取代法術中註記的材料構材。但若該材料構材有指定價格，則角色必須持有該特定構材才能夠施放該法術。",
-										"若一個法術註記其材料構才會被該法術消耗，則施法者必須在每一次施放該法術時都提供該構材。",
+										"若一個法術註記其材料構材會被該法術消耗，則施法者必須在每一次施放該法術時都提供該構材。",
 										"一個施法者必須有至少一隻空手以接觸該法術的材料構材\u2014或持握一個法器。這隻空手可以是他或她用以施展姿勢構材的那隻手。"
 									]
 								}
@@ -8343,32 +8343,32 @@
 						},
 						{
 							"type": "entries",
-							"name": "Duration",
+							"name": "持續時間", "ENG_name": "Duration",
 							"page": 203,
 							"entries": [
 								"A spell's duration is the length of time the spell persists. A duration can be expressed in rounds, minutes, hours, or even years. Some spells specify that their effects last until the spells are dispelled or destroyed.",
 								{
 									"type": "entries",
-									"name": "Instantaneous",
+									"name": "即效", "ENG_name": "Instantaneous",
 									"page": 203,
 									"entries": [
-										"Many spells are instantaneous. The spell harms, heals, creates, or alters a creature or an object in a way that can't be dispelled, because its magic exists only for an instant."
+										"許多法術的效果都是轉瞬而逝。這些會以某種方式傷害、治療、或改變一個生物或物體的法術，因為其魔法僅會存在一瞬間，因此它們的效果將無法被解消。"
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Concentration",
+									"name": "專注", "ENG_name": "Concentration",
 									"page": 203,
 									"entries": [
-										"Some spells require you to maintain concentration in order to keep their magic active. If you lose concentration, such a spell ends.",
-										"If a spell must be maintained with concentration, that fact appears in its Duration entry, and the spell specifies how long you can concentrate on it. You can end concentration at any time (no action required).",
-										"Normal activity, such as moving and attacking, doesn't interfere with concentration. The following factors can break concentration:",
+										"有些法術會需要你維持專注以讓它的魔法效果持續作用。若你的專注中斷，則這類法術也將隨之結束。",
+										"若一個法術需要專注以維持，則其將在它的持續時間欄目中被註明，且該法術也會註明你最多可以維持該專注的多久的時間。你可以在任何時候停止專注（無須動作）。",
+										"尋常舉動（像是移動或攻擊）並不會影響專注。只有下列因素會使專注被中斷：",
 										{
 											"type": "list",
 											"items": [
-												"{@b Casting another spell that requires concentration.} You lose concentration on a spell if you cast another spell that requires concentration. You can't concentrate on two spells at once.",
-												"{@b Taking damage.} Whenever you take damage while you are concentrating on a spell, you must make a Constitution saving throw to maintain your concentration. The DC equals 10 or half the damage you take, whichever number is higher. If you take damage from multiple sources, such as an arrow and a dragon's breath, you make a separate saving throw for each source of damage.",
-												"{@b Being incapacitated or killed.} You lose concentration on a spell if you are incapacitated or if you die."
+												"{@b 施放另一個需要專注的法術。} 若你施放了另一個需要專注的法術，則你當前的專注將被中斷。你不能同時專注於兩個法術。",
+												"{@b 受到傷害。} 每當你在專注於一個法術的期間受到傷害，你都必須進行一次體質豁免，成功則繼續維持你的專注。該豁免檢定的DC等同於10或你所受到傷害的一半，兩者取高。若你受到多次不同來源的傷害（例如箭矢和龍息），則你必須為每一次傷害來源分別進行豁免檢定。",
+												"{@b 陷入無力或被殺死。} 若你陷入無力狀態或若你死亡，則你當前的專注將被中斷。"
 											]
 										}
 									]
