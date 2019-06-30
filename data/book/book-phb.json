@@ -8251,17 +8251,17 @@
 					"data": {
 						"quickref": 3
 					},
-					"name": "Casting a Spell",
+					"name": "施放法術", "ENG_name": "Casting a Spell",
 					"page": 202,
 					"entries": [
-						"When a character casts any spell, the same basic rules are followed, regardless of the character's class or the spell's effects.",
-						"Each spell description in chapter 11 begins with a block of information, including the spell's name, level, school of magic, casting time, range, components, and duration. The rest of a spell entry describes the spell's effect.",
+						"當角色施放任何法術時，無論該角色的職業或該法術的效果如何，都遵循著下列基本的規則。",
+						"在第十一章，每個法術的描述都會包含一組固定的情報欄位，包括該法術的名稱、環階、學派、施法時間、射程、構材、和持續時間。法術的其餘欄位則會用以詳述該法術的具體效果。",
 						{
 							"type": "inset",
-							"name": "Casting in Armor",
+							"name": "穿戴護甲施放法術", "tENG_name": "Casting in Armor",
 							"page": 201,
 							"entries": [
-								"Because of the mental focus and precise gestures required for spellcasting, you must be proficient with the armor you are wearing to cast a spell. You are otherwise too distracted and physically hampered by your armor for spellcasting."
+								"由於施法所需要的心靈專注和精確姿勢，你必須要熟練於你正穿戴的護甲才能夠施放法術。否則你將會因為護甲所造成的干擾和物理妨礙而無法順利施放法術。"
 							]
 						},
 						{
@@ -8298,13 +8298,13 @@
 						},
 						{
 							"type": "entries",
-							"name": "Range",
+							"name": "射程", "ENG_name": "Range",
 							"page": 202,
 							"entries": [
-								"The target of a spell must be within the spell's range. For a spell like magic missile, the target is a creature. For a spell like fireball, the target is the point in space where the ball of fire erupts.",
-								"Most spells have ranges expressed in feet. Some spells can target only a creature (including you) that you touch. Other spells, such as the shield spell, affect only you. These spells have a range of self.",
-								"Spells that create cones or lines of effect that originate from you also have a range of self, indicating that the origin point of the spell's effect must be you (see \"Areas of Effect\" later in the this chapter).",
-								"Once a spell is cast, its effects aren't limited by its range, unless the spell's description says otherwise."
+								"法術的目標必須處於該法樹的射程範圍內。對於如魔法飛彈一類的法術，其目標必須要是一個生物。而對於像是火球術一類的法術，其目標則會是空間中使火球從中爆炸的一點。",
+								"大部分法術的射程會以呎為單位表示。有些法術只能夠指定一個你觸碰的生物（包括你自己）作為目標。也有一些法術（例如護盾術）只能影響你自己，這些法術的射程將標註為自身。",
+								"有些法術會創造出以你為源頭的錐形或線性效果範圍，而這些法術的射程也同樣會標註為自身，用以表示該法術的效果範圍必須以你做為源頭（參見本章稍後提及的「效果範圍」）。",
+								"一旦法術被施放，除非該法術的描述另有說明，否則它的效果將不會再被限定於射程範圍內。"
 							]
 						},
 						{
@@ -8346,7 +8346,7 @@
 							"name": "持續時間", "ENG_name": "Duration",
 							"page": 203,
 							"entries": [
-								"A spell's duration is the length of time the spell persists. A duration can be expressed in rounds, minutes, hours, or even years. Some spells specify that their effects last until the spells are dispelled or destroyed.",
+								"法術的持續時間代表著法術效果生效的時間長度。持續時間可能會以輪、分鐘、小時、或甚至年為單位表示。有些法術會特別註明其效果會持續直到該法術被解消或被破壞。",
 								{
 									"type": "entries",
 									"name": "即效", "ENG_name": "Instantaneous",
@@ -8373,114 +8373,114 @@
 										}
 									]
 								},
-								"The DM might also decide that certain environmental phenomena, such as a wave crashing over you while you're on a storm-tossed ship, require you to succeed on a DC 10 Constitution saving throw to maintain concentration on a spell."
+								"DM可能會認定在特定環境現象下，例如面對暴風雨中撲面而來的巨浪，你會需要成功通過一次DC 10的體質豁免才能夠維持法術的專注。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Targets",
+							"name": "目標", "ENG_name": "Targets",
 							"page": 204,
 							"entries": [
-								"A typical spell requires you to pick one or more targets to be affected by the spell's magic. A spell's description tells you whether the spell targets creatures, objects, or a point of origin for an area of effect (described below).",
-								"Unless a spell has a perceptible effect, a creature might not know it was targeted by a spell at all. An effect like crackling lightning is obvious, but a more subtle effect, such as an attempt to read a creature's thoughts, typically goes unnoticed, unless a spell says otherwise.",
+								"大部分的法術都會要求你選擇一個或多個受法術魔法所影響的目標。法術的描述將會說明該法術要指定生物、物體、還是效果範圍的源點（後述）作為目標。",
+								"除非該法術具有可觀察到的效果，否則目標生物完全不會知道自己成為了法術的目標。霹靂作響的閃電也許相當明顯，但像是閱讀思想這種效果更加精細的法術，除非其另有說明，否則通常都不會被注意到。",
 								{
 									"type": "entries",
-									"name": "A Clear Path to the Target",
+									"name": "通往目標的暢通路徑", "ENG_name": "A Clear Path to the Target",
 									"page": 204,
 									"entries": [
-										"To target something, you must have a clear path to it, so it can't be behind total cover.",
-										"If you place an area of effect at a point that you can't see and an obstruction, such as a wall, is between you and that point, the point of origin comes into being on the near side of that obstruction."
+										"當要指定某個事物做為目標時，你與它之間必須要有一條暢通的路徑，因此你不能指定處於全掩護的事物做為目標。",
+										"若你將法術範圍效果的源點指定在一個你無法看見的點，且你與該點之間存在著一道障礙物時，則效果的源點將改為變成位於該障礙物靠近你的那一側。"
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Targeting Yourself",
+									"name": "以自身為目標", "ENG_name": "Targeting Yourself",
 									"page": 204,
 									"entries": [
-										"If a spell targets a creature of your choice, you can choose yourself, unless the creature must be hostile or specifically a creature other than you. If you are in the area of effect of a spell you cast, you can target yourself."
+										"若法術指定一個你所選擇的生物做為目標，你可以選擇你自己作為目標，除非該生物被特別註明必須是敵對生物、或除了你以外的其他生物。若你處於你所施放法術的效果範圍內，則你可以選擇自己做為目標。"
 									]
 								}
 							]
 						},
 						{
 							"type": "inset",
-							"name": "The Schools of Magic",
+							"name": "魔法學派", "tENG_name": "The Schools of Magic",
 							"page": 203,
 							"entries": [
 								{
 									"type": "entries",
-									"name": "Abjuration",
+									"name": "防護系", "tENG_name": "Abjuration",
 									"page": 203,
 									"entries": [
-										"spells are protective in nature, though some of them have aggressive uses. They create magical barriers, negate harmful effects, harm trespassers, or banish creatures to other planes of existence."
+										"儘管其中有些法術具有攻擊性的用途，但防護系法術的本質是用於守護。它們可以創造出魔法屏障、抵銷有害效果、傷害入侵者、或驅逐來自另一個存在位面的生物。"
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Conjuration",
+									"name": "咒法系", "tENG_name": "Conjuration",
 									"page": 203,
 									"entries": [
-										"spells involve the transportation of objects and creatures from one location to another. Some spells summon creatures or objects to the caster's side, whereas others allow the caster to teleport to another location. Some conjurations create objects or effects out of nothing."
+										"咒法系的法術設計將物體或生物從一處傳送到另一處。有些法術會將生物或物體召喚到施術者身旁，而有些則會將施術者傳送到另一個地方。有些咒法系法術甚至可以憑空創造出物體或效應。"
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Divination",
+									"name": "預言系", "tENG_name": "Divination",
 									"page": 203,
 									"entries": [
-										"spells reveal information, whether in the form of secrets long forgotten, glimpses of the future, the locations of hidden things, the truth behind illusions, or visions of distant people or places."
+										"預言系的法術揭曉情報，無論其形式是失傳的古老秘密、未來的瞬像、祕寶的藏第、幻術背後的真相、或遙遠人物或區域的景象。"
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Enchantment",
+									"name": "惑控系", "tENG_name": "Enchantment",
 									"page": 203,
 									"entries": [
-										"spells affect the minds of others, influencing or controlling their behavior. Such spells can make enemies see the caster as a friend, force creatures to take a course of action, or even control another creature like a puppet."
+										"惑控系的法術影響他人的心靈，改變或控制他們的行為。這類法術可以使敵人將施術者視作摯友、強迫生物採取特定行動、或甚至如同操控扯線木偶般控制其他生物。"
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Evocation",
+									"name": "塑能系", "tENG_name": "Evocation",
 									"page": 203,
 									"entries": [
-										"spells manipulate magical energy to produce a desired effect. Some call up blasts of fire or lightning. Others channel positive energy to heal wounds."
+										"塑能系法術操縱魔法能量以產生其想要的效果。有些法術會換出爆炎或閃電，有些則引導正能量以治療傷口。"
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Illusion",
+									"name": "幻術系", "tENG_name": "Illusion",
 									"page": 203,
 									"entries": [
-										"spells deceive the senses or minds of others. They cause people to see things that are not there, to miss things that are there, to hear phantom noises, or to remember things that never happened. Some illusions create phantom images that any creature can see, but the most insidious illusions plant an image directly in the mind of a creature."
+										"幻術系法術可以欺騙他人的感官或心靈。它們能使人們看見不存在的事物、忽視既在的事物、使人產生幻聽、或讓人記起從未發生過的過去。有些幻術系法術會創造出所有生物都能夠看見的幻影，但最陰險狡詐的幻術魔法則會將幻影直接植入生物的心靈之中。"
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Necromancy",
+									"name": "死靈系", "tENG_name": "Necromancy",
 									"page": 203,
 									"entries": [
-										"spells manipulate the energies of life and death. Such spells can grant an extra reserve of life force, drain the life energy from another creature, create the undead, or even bring the dead back to life.",
-										"Creating the undead through the use of necromancy spells such as animate dead is not a good act, and only evil casters use such spells frequently."
+										"死靈系法術操弄生死能量。這類法術能夠賦予額外的生命力、從其他生物身上汲取生命能量、創造不死生物、或甚至起死回生。",
+										"透過活化死屍這類的法術以創造不死生物並不是什麼善良的行徑，只有邪惡的施術者會常常使用這類法術。"
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Transmutation",
+									"name": "變化系", "tENG_name": "Transmutation",
 									"page": 203,
 									"entries": [
-										"spells change the properties of a creature, object, or environment. They might turn an enemy into a harmless creature, bolster the strength of an ally, make an object move at the caster's command, or enhance a creature's innate healing abilities to rapidly recover from injury."
+										"變化系法術能夠改變生物、物體、或環境的性質。它們可能會將敵人變成無害的生物、強化盟友的力量、使物體依照施術者的命令移動、或提升生物的自癒能力以使傷勢迅速回復。"
 									]
 								}
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Areas of Effect",
+							"name": "效果範圍", "ENG_name": "Areas of Effect",
 							"page": 204,
 							"entries": [
-								"Spells such as burning hands and cone of cold cover an area, allowing them to affect multiple creatures at once. A spell's description specifies its area of effect, which typically has one of five different shapes: cone, cube, cylinder, line, or sphere. Every area of effect has a point of origin, a location from which the spell's energy erupts. The rules for each shape specify how you position its point of origin. Typically, a point of origin is a point in space, but some spells have an area whose origin is a creature or an object.",
-								"A spell's effect expands in straight lines from the point of origin. If no unblocked straight line extends from the point of origin to a location within the area of effect, that location isn't included in the spell's area. To block one of these imaginary lines, an obstruction must provide total cover, as explained in chapter 9.",
+								"燃燒之手和寒冰錐這類法術的效果會覆蓋一片區域，讓其得以同時影響複數個生物。法術的描述會詳細說明其效果範圍，這些效果範圍通常會是下列五種形狀的其中之一：錐形、立方體、圓柱、直線、或球體。每個效果範圍都有其「源點」，一個讓法術能量從中爆發的點。各效果範圍形狀的規則將定義你設置相應源點的方式。通常來說，源點都會是空間中的一點，但有些法術會指定一個生物或一個物體做為其源點。",
+								"法術的效果會從源點開始向外線性擴散。若效果範圍內的某個場所與源點之間不存在任何一條不被阻礙的直線，則該場所將不會被包括在該法術的影響範圍內。障礙物必須要能提供全掩護，才能對這些效果線形成阻礙（掩護的規則請參見第九章的描述）。",
 								{
 									"type": "image",
 									"href": {
@@ -8492,63 +8492,63 @@
 								},
 								{
 									"type": "entries",
-									"name": "Cone",
+									"name": "錐形", "ENG_name": "Cone",
 									"page": 204,
 									"entries": [
-										"A cone extends in a direction you choose from its point of origin. A cone's width at a given point along its length is equal to that point's distance from the point of origin. A cone's area of effect specifies its maximum length.",
-										"A cone's point of origin is not included in the cone's area of effect, unless you decide otherwise."
+										"錐形效果會從其源點向你所選擇的方向延伸。錐形上任意一點的寬度將等於其中點到源點的距離。錐形的效果範圍會指定其最大的長度。",
+										"錐形的源點並不包括在錐形的效果範圍中，除非你選擇將其包括在內。"
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Cube",
+									"name": "立方體", "ENG_name": "Cube",
 									"page": 204,
 									"entries": [
-										"You select a cube's point of origin, which lies anywhere on a face of the cubic effect. The cube's size is expressed as the length of each side.",
-										"A cube's point of origin is not included in the cube's area of effect, unless you decide otherwise."
+										"你從立方體效應的任意一面上選擇一點做為其源點。立方體的大小會以各邊邊長的形式表示。",
+										"立方體的源點並不包括在立方體的效果範圍中，除非你選擇將其包括在內。"
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Cylinder",
+									"name": "圓柱", "ENG_name": "Cylinder",
 									"page": 204,
 									"entries": [
-										"A cylinder's point of origin is the center of a circle of a particular radius, as given in the spell description. The circle must either be on the ground or at the height of the spell effect. The energy in a cylinder expands in straight lines from the point of origin to the perimeter of the circle, forming the base of the cylinder. The spell's effect then shoots up from the base or down from the top, to a distance equal to the height of the cylinder.",
-										"A cylinder's point of origin is included in the cylinder's area of effect."
+										"圓柱的源點位於其截面圓形的中心，法術的描述將會指定其圓的半徑。這個截面園必須位於地上，或位於該法術效果範圍的頂部。圓柱的能量會先從源點向外展開道圓形的周界，形成圓柱的基底後，接著法術效果才會從圓柱的基底向下或向上射出，直到其形成圓柱的指定高度為止。",
+										"圓柱的源點被包括在圓柱的效果範圍之中。"
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Line",
+									"name": "直線", "ENG_name": "Line",
 									"page": 205,
 									"entries": [
-										"A line extends from its point of origin in a straight path up to its length and covers an area defined by its width.",
-										"A line's point of origin is not included in the line's area of effect, unless you decide otherwise."
+										"直線會由其源點以一直線延伸出去，並覆蓋由其寬度定義的區域。",
+										"直線的源點並不包括在直線的效果範圍中，除非你選擇將其包括在內。"
 									]
 								},
 								{
 									"type": "entries",
-									"name": "Sphere",
+									"name": "球體", "ENG_name": "Sphere",
 									"page": 205,
 									"entries": [
-										"You select a sphere's point of origin, and the sphere extends outward from that point. The sphere's size is expressed as a radius in feet that extends from the point.",
-										"A sphere's point of origin is included in the sphere's area of effect."
+										"你選擇一個球體的源點，接著球體將從該點向外延伸並構成一個球體的效果範圍。這個球體的大小會以其自源點延伸的半徑呎數來表示。",
+										"球體的源點被包括在球體的效果範圍之中。"
 									]
 								}
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Combining Magical Effects",
+							"name": "混合魔法效果", "ENG_name": "Combining Magical Effects",
 							"page": 205,
 							"entries": [
-								"The effects of different spells add together while the durations of those spells overlap. The effects of the same spell cast multiple times don't combine, however. Instead, the most potent effect\u2014such as the highest bonus\u2014from those castings applies while their durations overlap, or the most recent effect applies if the castings are equally potent and their durations overlap.",
-								"For example, if two clerics cast bless on the same target, that character gains the spell's benefit only once; he or she doesn't get to roll two bonus dice."
+								"當不同法術的持續時間重合時，它們的效果將會被累加在一起。然而，多次施放的相同法術並不會讓其效果疊加，而只有最強大的效果（例如加值最高者）會在其持續時間重合的期間生效；若其施放強度相同，則最近一次施放的效果將會生效。",
+								"舉例來說，若兩名牧師都對同個目標施放了祝福術，該角色只會得益於該法術一次；他或她不會因此得以骰二顆加值骰。"
 							]
 						},
 						{
 							"type": "inset",
-							"name": "The Weave of Magic",
+							"name": "魔法之網", "tENG_name": "The Weave of Magic",
 							"page": 205,
 							"entries": [
 								"The words within the D&D multiverse are magical places. All existence is suffused with magical power, and potential energy lies untapped in every rock, stream, and living creature, the mute and mindless will of existence, permeating every bit of matter and present in every manifestation of energy throughout the multiverse.",
