@@ -57,7 +57,7 @@
 				{
 					"name": "Quarterstaff",
 					"entries": [
-						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}2 ({@damage 1d6 - 1}) bludgeoning damage, or 3 ({@damage 1d8 - 1}) bludgeoning damage if used with two hands."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}2 ({@damage 1d6 - 1})鈍擊傷害, or 3 ({@damage 1d8 - 1})鈍擊傷害 if used with two hands."
 					]
 				}
 			],
@@ -166,7 +166,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -376,7 +376,7 @@
 				{
 					"ac": 17,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -411,7 +411,7 @@
 					"note": "from nonmagical attacks"
 				}
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 15,
 			"languages": "Common, Giant, Sylvan",
 			"cr": {
@@ -436,27 +436,27 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The annis makes three attacks: one with her bite and two with her claws."
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}15 ({@damage 3d6 + 5}) piercing damage."
+						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}15 ({@damage 3d6 + 5})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "爪抓", "tENG_name": "Claw",
 					"entries": [
-						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}15 ({@damage 3d6 + 5}) slashing damage."
+						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}15 ({@damage 3d6 + 5})劈砍傷害."
 					]
 				},
 				{
 					"name": "Crushing Hug",
 					"entries": [
-						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}36 ({@damage 9d6 + 5}) bludgeoning damage, and the target is {@condition grappled} (escape DC 15) if it is a Large or smaller creature. Until the grapple ends, the target takes 36 ({@damage 9d6 + 5}) bludgeoning damage at the start of each of the hag's turns. The hag can't make attacks while grappling a creature in this way."
+						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}36 ({@damage 9d6 + 5})鈍擊傷害, and the target is {@condition grappled} (escape DC 15) if it is a Large or smaller creature. Until the grapple ends, the target takes 36 ({@damage 9d6 + 5})鈍擊傷害 at the start of each of the hag's turns. The hag can't make attacks while grappling a creature in this way."
 					]
 				}
 			],
@@ -746,7 +746,7 @@
 				{
 					"name": "Dagger",
 					"entries": [
-						"{@atk mw,rw} {@hit 2} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}2 ({@damage 1d4}) piercing damage."
+						"{@atk mw,rw} 命中{@hit 2}，觸及5呎 或 射程20/60呎，單一目標。{@h}2 ({@damage 1d4})穿刺傷害。"
 					]
 				}
 			],
@@ -853,7 +853,7 @@
 				{
 					"name": "Scimitar",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) slashing damage."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})劈砍傷害."
 					]
 				},
 				{
@@ -1021,7 +1021,7 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The archer makes two attacks with its longbow."
 					]
@@ -1029,13 +1029,13 @@
 				{
 					"name": "Shortsword",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d6 + 4}) piercing damage."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}7 ({@damage 1d6 + 4})穿刺傷害。"
 					]
 				},
 				{
 					"name": "Longbow",
 					"entries": [
-						"{@atk rw} {@hit 6} to hit, range 150/600 ft., one target. {@h}8 ({@damage 1d8 + 4}) piercing damage."
+						"{@atk rw} 命中{@hit 6}，射程150/600呎，單一目標。{@h}8 ({@damage 1d8 + 4})穿刺傷害。"
 					]
 				}
 			],
@@ -1068,7 +1068,7 @@
 				{
 					"ac": 11,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -1099,7 +1099,7 @@
 				{
 					"name": "Gore",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}14 ({@damage 2d8 + 5}) piercing damage."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}14 ({@damage 2d8 + 5})穿刺傷害。"
 					]
 				}
 			],
@@ -1135,7 +1135,7 @@
 				{
 					"ac": 16,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -1181,21 +1181,21 @@
 			"cr": "4",
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The babau makes two melee attacks. It can also use Weakening Gaze before or after making these attacks."
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "爪抓", "tENG_name": "Claw",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d8 + 4}) slashing damage."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}8 ({@damage 1d8 + 4})劈砍傷害."
 					]
 				},
 				{
 					"name": "Spear",
 					"entries": [
-						"{@atk mw,rw} {@hit 6} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}7 ({@damage 1d6 + 4}) piercing damage, or 8 ({@damage 1d8 + 4}) piercing damage when used with two hands to make a melee attack."
+						"{@atk mw,rw} 命中{@hit 6}，觸及5呎 或 射程20/60呎，單一目標。{@h}7 ({@damage 1d6 + 4}) piercing damage, or 8 ({@damage 1d8 + 4}) piercing damage when used with two hands to make a melee attack."
 					]
 				},
 				{
@@ -1257,7 +1257,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -1302,15 +1302,15 @@
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}22 ({@damage 5d6 + 5}) piercing damage, and the target is {@condition grappled} (escape DC 15) if it is a Large or smaller creature. Until this grapple ends, the target is {@condition restrained}, and the banderhobb can't use its bite attack or tongue attack on another target."
+						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}22 ({@damage 5d6 + 5}) piercing damage, and the target is {@condition grappled} (escape DC 15) if it is a Large or smaller creature. Until this grapple ends, the target is {@condition restrained}, and the banderhobb can't use its bite attack or tongue attack on another target."
 					]
 				},
 				{
 					"name": "Tongue",
 					"entries": [
-						"{@atk mw} {@hit 8} to hit, reach 15 ft., one target. {@h}10 ({@damage 3d6}) necrotic damage, and the target must make a DC 15 Strength saving throw. On a failed save, the target is pulled to a space within 5 feet of the banderhobb, which can use a bonus action to make a bite attack against the target."
+						"{@atk mw} 命中{@hit 8}，觸及15呎，單一目標。{@h}10 ({@damage 3d6}) necrotic damage, and the target must make a DC 15 Strength saving throw. On a failed save, the target is pulled to a space within 5 feet of the banderhobb, which can use a bonus action to make a bite attack against the target."
 					]
 				},
 				{
@@ -1411,13 +1411,13 @@
 				{
 					"name": "Shortsword",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害。"
 					]
 				},
 				{
 					"name": "Shortbow",
 					"entries": [
-						"{@atk rw} {@hit 4} to hit, range 80/320 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage."
+						"{@atk rw} 命中{@hit 4}，射程80/320呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害。"
 					]
 				}
 			],
@@ -1494,7 +1494,7 @@
 				{
 					"ac": 17,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -1540,7 +1540,7 @@
 			"conditionImmune": [
 				"poisoned"
 			],
-			"senses": "blindsight 60 ft., darkvision 60 ft.",
+			"senses": "blindsight 60 ft., 黑暗視覺60呎",
 			"passive": 15,
 			"languages": "Abyssal, Common, Goblin, Infernal, telepathy 60 ft.",
 			"cr": "4",
@@ -1573,15 +1573,15 @@
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}13 ({@damage 2d8 + 4}) piercing damage."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}13 ({@damage 2d8 + 4})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Claws",
+					"name": "爪抓", "tENG_name": "Claws",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d8 + 4}) slashing damage."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}8 ({@damage 1d8 + 4})劈砍傷害."
 					]
 				}
 			],
@@ -1651,7 +1651,7 @@
 				{
 					"ac": 17,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -1680,7 +1680,7 @@
 			"immune": [
 				"cold"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 14,
 			"languages": "Auran, Common, Giant",
 			"cr": {
@@ -1719,7 +1719,7 @@
 				{
 					"name": "Slam",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. Hit:10 ({@damage 2d8 + 1}) bludgeoning damage plus 3 ({@damage 1d6}) cold damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。Hit:10 ({@damage 2d8 + 1})鈍擊傷害 plus 3 ({@damage 1d6}) cold damage."
 					]
 				},
 				{
@@ -1979,7 +1979,7 @@
 			]
 		},
 		{
-			"name": "Black Guard Drake",
+			"name": "黑守衛龍獸", "ENG_name": "Black Guard Drake",
 			"size": "M",
 			"type": "dragon",
 			"source": "VGM",
@@ -1990,7 +1990,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -2014,35 +2014,35 @@
 			"resist": [
 				"acid"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 12,
-			"languages": "understands Draconic but can't speak it",
+			"languages": "理解龍語，但不會說",
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Amphibious",
+					"name": "兩棲", "tENG_name": "Amphibious",
 					"entries": [
-						"The guard drake can breathe air and water."
+						"守衛龍獸可以在空氣和水中呼吸。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The drake attacks twice, once with its bite and once with its tail."
+						"龍獸進行二次攻擊，一次啃咬，一次尾擊。"
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) piercing damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Tail",
+					"name": "尾擊", "tENG_name": "Tail",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) bludgeoning damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})鈍擊傷害。"
 					]
 				}
 			],
@@ -2122,7 +2122,7 @@
 			"cr": "8",
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The blackguard makes three attacks with its glaive or its shortbow."
 					]
@@ -2130,13 +2130,13 @@
 				{
 					"name": "Glaive",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 10 ft., one target. {@h}9 ({@damage 1d10 + 4}) slashing damage."
+						"{@atk mw} 命中{@hit 7}，觸及10呎，單一目標。{@h}9 ({@damage 1d10 + 4})劈砍傷害."
 					]
 				},
 				{
 					"name": "Shortbow",
 					"entries": [
-						"{@atk rw} {@hit 3} to hit, range 80/320 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage."
+						"{@atk rw} 命中{@hit 3}，射程80/320呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害。"
 					]
 				},
 				{
@@ -2201,7 +2201,7 @@
 			]
 		},
 		{
-			"name": "Blue Guard Drake",
+			"name": "藍守衛龍獸", "ENG_name": "Blue Guard Drake",
 			"size": "M",
 			"type": "dragon",
 			"source": "VGM",
@@ -2212,7 +2212,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -2236,27 +2236,27 @@
 			"resist": [
 				"lightning"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 12,
-			"languages": "understands Draconic but can't speak it",
+			"languages": "理解龍語，但不會說",
 			"cr": "2",
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The drake attacks twice, once with its bite and once with its tail."
+						"龍獸進行二次攻擊，一次啃咬，一次尾擊。"
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) piercing damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Tail",
+					"name": "尾擊", "tENG_name": "Tail",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) bludgeoning damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})鈍擊傷害。"
 					]
 				}
 			],
@@ -2294,7 +2294,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -2366,7 +2366,7 @@
 				{
 					"name": "Fist",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d4 + 2}) bludgeoning damage plus 9 ({@damage 2d8}) necrotic damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}4 ({@damage 1d4 + 2})鈍擊傷害 plus 9 ({@damage 2d8}) necrotic damage."
 					]
 				},
 				{
@@ -2432,7 +2432,7 @@
 			"resist": [
 				"fire"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 13,
 			"languages": "Sylvan",
 			"cr": "1/8",
@@ -2462,7 +2462,7 @@
 				{
 					"name": "Pummel",
 					"entries": [
-						"{@atk mw} {@hit 1} to hit, reach 5 ft., one target. {@h}2 ({@damage 1d6 - 1}) bludgeoning damage."
+						"{@atk mw} 命中{@hit 1}，觸及5呎，單一目標。{@h}2 ({@damage 1d6 - 1})鈍擊傷害。"
 					]
 				},
 				{
@@ -2493,7 +2493,7 @@
 			]
 		},
 		{
-			"name": "Brontosaurus",
+			"name": "雷龍", "ENG_name": "Brontosaurus",
 			"size": "G",
 			"type": "beast",
 			"source": "VGM",
@@ -2504,7 +2504,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -2528,15 +2528,15 @@
 			"cr": "5",
 			"action": [
 				{
-					"name": "Stomp",
+					"name": "踩踏", "tENG_name": "Stomp",
 					"entries": [
-						"{@atk mw} {@hit 8} to hit, reach 20 ft., one target. {@h}27 ({@damage 5d8 + 5}) bludgeoning damage, and the target must succeed on a DC 14 Strength saving throw or be knocked {@condition prone}."
+						"{@atk mw} 命中{@hit 8}，觸及20呎，單一目標。{@h}27 ({@damage 5d8 + 5})鈍擊傷害，且目標必須成功通過一次DC 14的力量豁免，否則被擊倒{@condition 伏地}。"
 					]
 				},
 				{
-					"name": "Tail",
+					"name": "尾擊", "tENG_name": "Tail",
 					"entries": [
-						"{@atk mw} {@hit 8} to hit, reach 20 ft., one target. {@h}32 ({@damage 6d8 + 5}) bludgeoning damage."
+						"{@atk mw} 命中{@hit 8}，觸及20呎，單一目標。{@h}32 ({@damage 6d8 + 5})鈍擊傷害。"
 					]
 				}
 			],
@@ -2562,7 +2562,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -2579,7 +2579,7 @@
 			"int": 3,
 			"wis": 14,
 			"cha": 8,
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 12,
 			"cr": "5",
 			"trait": [
@@ -2598,9 +2598,9 @@
 			],
 			"action": [
 				{
-					"name": "Tail",
+					"name": "尾擊", "tENG_name": "Tail",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 10 ft., one target. {@h}21 ({@damage 5d6 + 4}) bludgeoning damage, and the target must succeed on a DC 16 Constitution saving throw or be {@condition stunned} until the start of the catoblepas's next turn."
+						"{@atk mw} 命中{@hit 7}，觸及10呎，單一目標。{@h}21 ({@damage 5d6 + 4})鈍擊傷害, and the target must succeed on a DC 16 Constitution saving throw or be {@condition stunned} until the start of the catoblepas's next turn."
 					]
 				},
 				{
@@ -2638,7 +2638,7 @@
 				{
 					"ac": 16,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -2685,15 +2685,15 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The cave fisher makes two attacks with its claws."
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "爪抓", "tENG_name": "Claw",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}10 ({@damage 2d6 + 3}) slashing damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}10 ({@damage 2d6 + 3})劈砍傷害."
 					]
 				},
 				{
@@ -2788,7 +2788,7 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The champion makes three attacks with its greatsword or its shortbow."
 					]
@@ -2796,13 +2796,13 @@
 				{
 					"name": "Greatsword",
 					"entries": [
-						"{@atk mw} {@hit 9} to hit, reach 5 ft., one target. {@h}12 ({@damage 2d6 + 5}) slashing damage, plus 7 ({@damage 2d6}) slashing damage if the champion has more than half of its total hit points remaining."
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5})劈砍傷害, plus 7 ({@damage 2d6})劈砍傷害 if the champion has more than half of its total hit points remaining."
 					]
 				},
 				{
 					"name": "Shortbow",
 					"entries": [
-						"{@atk rw} {@hit 6} to hit, range 80/320 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage, plus 7 ({@damage 2d6}) piercing damage if the champion has more than half of its total hit points remaining."
+						"{@atk rw} 命中{@hit 6}，射程80/320呎，單一目標。{@h}5 ({@damage 1d6 + 2}) piercing damage, plus 7 ({@damage 2d6}) piercing damage if the champion has more than half of its total hit points remaining."
 					]
 				}
 			],
@@ -2859,7 +2859,7 @@
 				"athletics": "+4",
 				"stealth": "+4"
 			},
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 10,
 			"languages": "Undercommon",
 			"cr": "1/2",
@@ -2891,7 +2891,7 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The chitine makes three attacks with its daggers."
 					]
@@ -2899,7 +2899,7 @@
 				{
 					"name": "Dagger",
 					"entries": [
-						"{@atk mw,rw} {@hit 4} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}4 ({@damage 1d4 + 2}) piercing damage."
+						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d4 + 2})穿刺傷害。"
 					]
 				}
 			],
@@ -2963,7 +2963,7 @@
 				"religion": "+2",
 				"stealth": "+5"
 			},
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 12,
 			"languages": "Undercommon",
 			"cr": "3",
@@ -3003,13 +3003,13 @@
 				{
 					"name": "Dagger",
 					"entries": [
-						"{@atk mw,rw} {@hit 5} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}5 ({@damage 1d4 + 3}) piercing damage plus 10 ({@damage 3d6}) poison damage."
+						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或 射程20/60呎，單一目標。{@h}5 ({@damage 1d4 + 3}) piercing damage plus 10 ({@damage 3d6}) poison damage."
 					]
 				},
 				{
 					"name": "Web {@recharge 5}",
 					"entries": [
-						"{@atk rw} {@hit 5} to hit, range 30/60 ft., one Large or smaller creature. {@h}The target is {@condition restrained} by webbing. As an action, the {@condition restrained} target can make a DC 11 Strength check, bursting the webbing on a success. The webbing can also be attacked and destroyed (AC 10; 5 hit points; vulnerability to fire damage; immunity to bludgeoning, poison, and psychic damage)."
+						"{@atk rw} 命中{@hit 5}，射程30/60呎， one Large or smaller creature. {@h}The target is {@condition restrained} by webbing. As an action, the {@condition restrained} target can make a DC 11 Strength check, bursting the webbing on a success. The webbing can also be attacked and destroyed (AC 10; 5 hit points; vulnerability to fire damage; immunity to bludgeoning, poison, and psychic damage)."
 					]
 				}
 			],
@@ -3092,7 +3092,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -3133,7 +3133,7 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The giant makes two attacks with its morningstar."
 					]
@@ -3141,13 +3141,13 @@
 				{
 					"name": "Morningstar",
 					"entries": [
-						"{@atk mw} {@hit 12} to hit, reach 10 ft., one target. {@h}21 ({@damage 3d8 + 8}) bludgeoning damage. The attack deals an extra 14 ({@dice 4d6}) damage if the giant has advantage on the attack roll."
+						"{@atk mw} 命中{@hit 12}，觸及10呎，單一目標。{@h}21 ({@damage 3d8 + 8})鈍擊傷害。 The attack deals an extra 14 ({@dice 4d6}) damage if the giant has advantage on the attack roll."
 					]
 				},
 				{
 					"name": "Rock",
 					"entries": [
-						"{@atk rw} {@hit 12} to hit, range 60/240 ft., one target. {@h}30 ({@damage 4d10 + 8}) bludgeoning damage. The attack deals an extra 14 ({@dice 4d6}) damage if the giant has advantage on the attack roll."
+						"{@atk rw} 命中{@hit 12}，射程60/240呎，單一目標。{@h}30 ({@damage 4d10 + 8})鈍擊傷害。 The attack deals an extra 14 ({@dice 4d6}) damage if the giant has advantage on the attack roll."
 					]
 				},
 				{
@@ -3302,7 +3302,7 @@
 				{
 					"name": "Dagger",
 					"entries": [
-						"{@atk mw,rw} {@hit 5} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}4 ({@damage 1d4 + 2}) piercing damage."
+						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d4 + 2})穿刺傷害。"
 					]
 				}
 			],
@@ -3410,7 +3410,7 @@
 				{
 					"name": "Charge",
 					"entries": [
-						"If the cow moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 7 ({@damage 2d6}) piercing damage."
+						"If the cow moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 7 ({@damage 2d6})穿刺傷害。"
 					]
 				}
 			],
@@ -3418,7 +3418,7 @@
 				{
 					"name": "Gore",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d6 + 4}) piercing damage."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}7 ({@damage 1d6 + 4})穿刺傷害。"
 					]
 				}
 			],
@@ -3479,9 +3479,9 @@
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}1 piercing damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}1穿刺傷害。"
 					]
 				}
 			],
@@ -3559,7 +3559,7 @@
 				{
 					"name": "Dagger",
 					"entries": [
-						"{@atk mw,rw} {@hit 5} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}5 ({@damage 1d4 + 3}) piercing damage. If the darkling has advantage on the attack roll, the attack deals an extra 7 ({@damage 2d6}) piercing damage."
+						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或 射程20/60呎，單一目標。{@h}5 ({@damage 1d4 + 3}) piercing damage. If the darkling has advantage on the attack roll, the attack deals an extra 7 ({@damage 2d6})穿刺傷害。"
 					]
 				}
 			],
@@ -3636,7 +3636,7 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The darkling elder makes two melee attacks."
 					]
@@ -3644,7 +3644,7 @@
 				{
 					"name": "Shortsword",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) piercing damage. If the darkling elder had advantage on the attack roll, the attack deals as: extra 10 ({@damage 3d6}) piercing damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3}) piercing damage. If the darkling elder had advantage on the attack roll, the attack deals as: extra 10 ({@damage 3d6})穿刺傷害。"
 					]
 				},
 				{
@@ -3692,7 +3692,7 @@
 				{
 					"ac": 16,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -3735,13 +3735,13 @@
 				{
 					"name": "Lightning Blood",
 					"entries": [
-						"A creature within 5 feet of the death kiss takes 5 ({@damage 1d10}) lightning damage whenever it hits the death kiss with a melee attack that deals piercing or slashing damage."
+						"A creature within 5 feet of the death kiss takes 5 ({@damage 1d10}) lightning damage whenever it hits the death kiss with a melee attack that deals piercing or劈砍傷害."
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The death kiss makes three tentacle attacks. Up to three of these attacks can be replaced by Blood Drain, one replacement per tentacle grappling a creature"
 					]
@@ -3749,7 +3749,7 @@
 				{
 					"name": "Tentacle",
 					"entries": [
-						"{@atk mw} {@hit 8} to hit, reach 20 ft., one target. {@h}14 ({@damage 3d6 + 4}) piercing damage, and the target is {@condition grappled} (escape DC 14) if it is a Huge or smaller creature. Until this grapple ends, the target is {@condition restrained}, and the death kiss can't use the same tentacle on another target. The death kiss has ten tentacles."
+						"{@atk mw} 命中{@hit 8}，觸及20呎，單一目標。{@h}14 ({@damage 3d6 + 4}) piercing damage, and the target is {@condition grappled} (escape DC 14) if it is a Huge or smaller creature. Until this grapple ends, the target is {@condition restrained}, and the death kiss can't use the same tentacle on another target. The death kiss has ten tentacles."
 					]
 				},
 				{
@@ -3804,14 +3804,14 @@
 			"int": 2,
 			"wis": 10,
 			"cha": 4,
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 10,
 			"cr": "1/4",
 			"trait": [
 				{
 					"name": "Charge",
 					"entries": [
-						"If the rothé moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 7 ({@damage 2d6}) piercing damage."
+						"If the rothé moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 7 ({@damage 2d6})穿刺傷害。"
 					]
 				}
 			],
@@ -3819,7 +3819,7 @@
 				{
 					"name": "Gore",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d6 + 4}) piercing damage."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}7 ({@damage 1d6 + 4})穿刺傷害。"
 					]
 				}
 			],
@@ -3913,13 +3913,13 @@
 				{
 					"name": "Amphibious (Hybrid Form Only)",
 					"entries": [
-						"The deep scion can breathe air and water."
+						"deep scion可以在空氣和水中呼吸。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"In humanoid form, the deep scion makes two melee attacks. In hybrid form, the deep scion makes three attacks: one with its bite and two with its claws."
 					]
@@ -3927,19 +3927,19 @@
 				{
 					"name": "Battleaxe (Humanoid Form Only)",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d8 + 4}) slashing damage, or 9 ({@damage 1d10 + 4}) slashing damage if used with two hands."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}8 ({@damage 1d8 + 4})劈砍傷害, or 9 ({@damage 1d10 + 4})劈砍傷害 if used with two hands."
 					]
 				},
 				{
 					"name": "Bite (Hybrid Form Only)",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one creature. {@h}6 ({@damage 1d4 + 4}) piercing damage."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一生物。{@h}6 ({@damage 1d4 + 4})穿刺傷害。"
 					]
 				},
 				{
 					"name": "Claw (Hybrid Form Only)",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d6 + 4}) slashing damage."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}7 ({@damage 1d6 + 4})劈砍傷害."
 					]
 				},
 				{
@@ -3975,7 +3975,7 @@
 			]
 		},
 		{
-			"name": "Deinonychus",
+			"name": "恐爪龍", "ENG_name": "Deinonychus",
 			"size": "M",
 			"type": "beast",
 			"source": "VGM",
@@ -3986,7 +3986,7 @@
 				{
 					"ac": 13,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -4010,29 +4010,29 @@
 			"cr": "1",
 			"trait": [
 				{
-					"name": "Pounce",
+					"name": "猛撲", "tENG_name": "Pounce",
 					"entries": [
-						"If the deinonychus moves at least 20 feet straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 12 Strength saving throw or be knocked {@condition prone}. If the target is {@condition prone}, the deinonychus can make one bite attack against it as a bonus action."
+						"若恐爪龍向著一個生物直線移動至少20呎並接著在同回合以一次爪抓攻擊命中它，則目標必須成功通過一次DC 12的力量豁免，否則被擊倒{@condition 伏地}。若目標{@condition 伏地}，則恐爪龍能夠以一次附贈動作對它進行一次啃咬攻擊。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The deinonychus makes three attacks: one with its bite and two with its claws."
+						"恐爪龍進行三次攻擊：一次啃咬，二次爪抓。"
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) piercing damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}6 ({@damage 1d8 + 2})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "爪抓", "tENG_name": "Claw",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) slashing damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}6 ({@damage 1d8 + 2})劈砍傷害。"
 					]
 				}
 			],
@@ -4067,7 +4067,7 @@
 				{
 					"ac": 16,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -4101,15 +4101,15 @@
 			"cr": "13",
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The devourer makes two claw attacks and can use either Imprison Soul or Soul Rend."
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "爪抓", "tENG_name": "Claw",
 					"entries": [
-						"{@atk mw} {@hit 10} to hit, reach 5 ft., one target. {@h}12 ({@damage 2d6 + 5}) slashing damage plus 21 ({@damage 6d6}) necrotic damage."
+						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5})劈砍傷害 plus 21 ({@damage 6d6}) necrotic damage."
 					]
 				},
 				{
@@ -4146,7 +4146,7 @@
 			]
 		},
 		{
-			"name": "Dimetrodon",
+			"name": "長棘龍", "ENG_name": "Dimetrodon",
 			"size": "M",
 			"type": "beast",
 			"source": "VGM",
@@ -4157,7 +4157,7 @@
 				{
 					"ac": 12,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -4182,9 +4182,9 @@
 			"cr": "1/4",
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}9 ({@damage 2d6 + 2}) piercing damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}9 ({@damage 2d6 + 2})穿刺傷害。"
 					]
 				}
 			],
@@ -4255,7 +4255,7 @@
 				{
 					"name": "Quarterstaff",
 					"entries": [
-						"{@atk mw} {@hit 2} to hit, reach 5 ft., one target. {@h}2 ({@damage 1d6 - 1}) bludgeoning damage, or 3 ({@damage 1d8 - 1}) bludgeoning damage if used with two hands."
+						"{@atk mw} 命中{@hit 2}，觸及5呎，單一目標。{@h}2 ({@damage 1d6 - 1})鈍擊傷害, or 3 ({@damage 1d8 - 1})鈍擊傷害 if used with two hands."
 					]
 				}
 			],
@@ -4368,7 +4368,7 @@
 				{
 					"ac": 12,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -4396,7 +4396,7 @@
 				{
 					"name": "Charge",
 					"entries": [
-						"If the dolphin moves at least 30 feet straight toward a target and then hits it with a slam attack on the same turn, the target takes an extra 3 ({@damage 1d6}) bludgeoning damage."
+						"If the dolphin moves at least 30 feet straight toward a target and then hits it with a slam attack on the same turn, the target takes an extra 3 ({@damage 1d6})鈍擊傷害。"
 					]
 				},
 				{
@@ -4410,7 +4410,7 @@
 				{
 					"name": "Slam",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) bludgeoning damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})鈍擊傷害。"
 					]
 				}
 			],
@@ -4449,7 +4449,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -4495,21 +4495,21 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The draegloth makes three attacks: one with its bite and two with its claws."
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 8} to hit, reach 5 ft., one creature. {@h}16 ({@damage 2d10 + 5}) piercing damage."
+						"{@atk mw} 命中{@hit 8}，觸及5呎，單一生物。{@h}16 ({@damage 2d10 + 5})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Claws",
+					"name": "爪抓", "tENG_name": "Claws",
 					"entries": [
-						"{@atk mw} {@hit 8} to hit, reach 10 ft., one target. {@h}16 ({@damage 2d10 + 5}) slashing damage."
+						"{@atk mw} 命中{@hit 8}，觸及10呎，單一目標。{@h}16 ({@damage 2d10 + 5})劈砍傷害."
 					]
 				}
 			],
@@ -4631,7 +4631,7 @@
 				{
 					"name": "Tentacle",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 30 ft., one target. {@h}20 ({@damage 4d8 + 2}) bludgeoning damage. If the target is a Huge or smaller creature, it is {@condition grappled} (escape DC 15) and takes 9 ({@damage 1d8 + 5}) psychic damage at the start of each of its turns until the grapple ends. The elder brain can have up to four targets {@condition grappled} at a time."
+						"{@atk mw} 命中{@hit 7}，觸及30呎，單一目標。{@h}20 ({@damage 4d8 + 2})鈍擊傷害。 If the target is a Huge or smaller creature, it is {@condition grappled} (escape DC 15) and takes 9 ({@damage 1d8 + 5}) psychic damage at the start of each of its turns until the grapple ends. The elder brain can have up to four targets {@condition grappled} at a time."
 					]
 				},
 				{
@@ -4782,7 +4782,7 @@
 				{
 					"name": "Quarterstaff",
 					"entries": [
-						"{@atk mw} {@hit 2} to hit, reach 5 ft., one target. {@h}2 ({@damage 1d6 - 1}) bludgeoning damage, or 3 ({@damage 1d8 - 1}) bludgeoning damage if used with two hands."
+						"{@atk mw} 命中{@hit 2}，觸及5呎，單一目標。{@h}2 ({@damage 1d6 - 1})鈍擊傷害, or 3 ({@damage 1d8 - 1})鈍擊傷害 if used with two hands."
 					]
 				}
 			],
@@ -4926,7 +4926,7 @@
 				{
 					"name": "Quarterstaff",
 					"entries": [
-						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}2 ({@damage 1d6 - 1}) bludgeoning damage, or 3 ({@damage 1d8 - 1}) bludgeoning damage if used with two hands."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}2 ({@damage 1d6 - 1})鈍擊傷害, or 3 ({@damage 1d8 - 1})鈍擊傷害 if used with two hands."
 					]
 				}
 			],
@@ -5073,7 +5073,7 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The giant makes two fireshield attacks."
 					]
@@ -5081,19 +5081,19 @@
 				{
 					"name": "Fireshield",
 					"entries": [
-						"{@atk mw} {@hit 13} to hit, reach 5 ft., one target. {@h}22 ({@damage 4d6 + 8}) bludgeoning damage plus 7 ({@damage 2d6}) fire damage plus 7 ({@damage 2d6}) piercing damage."
+						"{@atk mw} 命中{@hit 13}，觸及5呎，單一目標。{@h}22 ({@damage 4d6 + 8})鈍擊傷害 plus 7 ({@damage 2d6}) fire damage plus 7 ({@damage 2d6})穿刺傷害。"
 					]
 				},
 				{
 					"name": "Rock",
 					"entries": [
-						"{@atk rw} {@hit 13} to hit, range 60/240 ft., one target. {@h}30 ({@damage 4d10 + 8}) bludgeoning damage."
+						"{@atk rw} 命中{@hit 13}，射程60/240呎，單一目標。{@h}30 ({@damage 4d10 + 8})鈍擊傷害。"
 					]
 				},
 				{
 					"name": "Shield Charge",
 					"entries": [
-						"The giant moves up to 30 feet in a straight line and can move through the space of any creature smaller than Huge. The first time it enters a creature's space during this move, it makes a fireshield attack against that creature. If the attack hits, the target must also succeed on a DC 21 Strength saving throw or be pushed ahead of the giant for the rest of this move. If a creature fails the save by 5 or more, it is also knocked {@condition prone} and takes 18 ({@damage 3d6 + 8}) bludgeoning damage, or 29 ({@damage 6d6 + 8}) bludgeoning damage if it was already {@condition prone}."
+						"The giant moves up to 30 feet in a straight line and can move through the space of any creature smaller than Huge. The first time it enters a creature's space during this move, it makes a fireshield attack against that creature. If the attack hits, the target must also succeed on a DC 21 Strength saving throw or be pushed ahead of the giant for the rest of this move. If a creature fails the save by 5 or more, it is also knocked {@condition prone} and takes 18 ({@damage 3d6 + 8})鈍擊傷害, or 29 ({@damage 6d6 + 8})鈍擊傷害 if it was already {@condition prone}."
 					]
 				}
 			],
@@ -5159,9 +5159,9 @@
 			"cr": "1",
 			"trait": [
 				{
-					"name": "Amphibious",
+					"name": "兩棲", "tENG_name": "Amphibious",
 					"entries": [
-						"The firenewt can breathe air and water."
+						"firenewt可以在空氣和水中呼吸。"
 					]
 				},
 				{
@@ -5175,7 +5175,7 @@
 				{
 					"name": "Morningstar",
 					"entries": [
-						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d8 + 1}) piercing damage."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}5 ({@damage 1d8 + 1})穿刺傷害。"
 					]
 				}
 			],
@@ -5291,15 +5291,15 @@
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Amphibious",
+					"name": "兩棲", "tENG_name": "Amphibious",
 					"entries": [
-						"The firenewt can breathe air and water."
+						"firenewt可以在空氣和水中呼吸。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The firenewt makes two attacks with its scimitar."
 					]
@@ -5307,7 +5307,7 @@
 				{
 					"name": "Scimitar",
 					"entries": [
-						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d6 + 1}) slashing damage."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}4 ({@damage 1d6 + 1})劈砍傷害."
 					]
 				},
 				{
@@ -5352,7 +5352,7 @@
 				{
 					"ac": 16,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -5376,7 +5376,7 @@
 			"conditionImmune": [
 				"poisoned"
 			],
-			"senses": "darkvision 60 ft., tremorsense 60 ft.",
+			"senses": "黑暗視覺60呎, tremorsense 60 ft.",
 			"passive": 10,
 			"cr": "3",
 			"trait": [
@@ -5398,7 +5398,7 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The flail snail makes as many flail tentacle attacks as it has flail tentacles, all against the same target."
 					]
@@ -5406,7 +5406,7 @@
 				{
 					"name": "Flail Tentacle",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 10 ft., one target. {@h}6 ({@damage 1d6 + 3}) bludgeoning damage."
+						"{@atk mw} 命中{@hit 5}，觸及10呎，單一目標。{@h}6 ({@damage 1d6 + 3})鈍擊傷害。"
 					]
 				},
 				{
@@ -5483,7 +5483,7 @@
 				"intimidation": "+5",
 				"perception": "+5"
 			},
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 15,
 			"languages": "Abyssal, Gnoll",
 			"cr": "9",
@@ -5497,7 +5497,7 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The flind makes three attacks: one with each of its different flail attacks or three with its longbow."
 					]
@@ -5505,25 +5505,25 @@
 				{
 					"name": "Flail of Madness",
 					"entries": [
-						"{@atk mw} {@hit 9} to hit, reach 5 ft., one target. {@h}10 ({@damage 1d10 + 5}) bludgeoning damage, and the target must make a DC 16 Wisdom saving throw. On a failed save, the target must make a melee attack against a random target within its reach on its next turn. If it has no targets within its reach even after moving, it loses its action on that turn."
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}10 ({@damage 1d10 + 5})鈍擊傷害, and the target must make a DC 16 Wisdom saving throw. On a failed save, the target must make a melee attack against a random target within its reach on its next turn. If it has no targets within its reach even after moving, it loses its action on that turn."
 					]
 				},
 				{
 					"name": "Flail of Pain",
 					"entries": [
-						"{@atk mw} {@hit 9} to hit, reach 5 ft., one target. {@h}10 ({@damage 1d10 + 5}) bludgeoning damage plus 22 ({@damage 4d10}) psychic damage."
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}10 ({@damage 1d10 + 5})鈍擊傷害 plus 22 ({@damage 4d10}) psychic damage."
 					]
 				},
 				{
 					"name": "Flail of Paralysis",
 					"entries": [
-						"{@atk mw} {@hit 9} to hit, reach 5 ft., one target. {@h}10 ({@damage 1d10 + 5}) bludgeoning damage, and the target must succeed on a DC 16 Constitution saving throw or be {@condition paralyzed} until the end of its next turn."
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}10 ({@damage 1d10 + 5})鈍擊傷害, and the target must succeed on a DC 16 Constitution saving throw or be {@condition paralyzed} until the end of its next turn."
 					]
 				},
 				{
 					"name": "Longbow",
 					"entries": [
-						"{@atk rw} {@hit 4} to hit, range 150/600 ft., one target. {@h}4 ({@damage 1d8}) piercing damage."
+						"{@atk rw} 命中{@hit 4}，射程150/600呎，單一目標。{@h}4 ({@damage 1d8})穿刺傷害。"
 					]
 				}
 			],
@@ -5563,7 +5563,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -5593,14 +5593,14 @@
 				"fire",
 				"lightning"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 19,
 			"cr": "10",
 			"trait": [
 				{
-					"name": "Amphibious",
+					"name": "兩棲", "tENG_name": "Amphibious",
 					"entries": [
-						"The froghemoth can breathe air and water."
+						"froghemoth可以在空氣和水中呼吸。"
 					]
 				},
 				{
@@ -5612,7 +5612,7 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The froghemoth makes two attacks with its tentacles. It can also use its tongue or bite."
 					]
@@ -5620,13 +5620,13 @@
 				{
 					"name": "Tentacle",
 					"entries": [
-						"{@atk mw} {@hit 10} to hit, reach 20 ft., one target. {@h}19 ({@damage 3d8 + 6}) bludgeoning damage, and the target is {@condition grappled} (escape DC 16) if it is a Huge or smaller creature. Until the grapple ends, the froghemoth can't use this tentacle on another target. The froghemoth has four tentacles."
+						"{@atk mw} 命中{@hit 10}，觸及20呎，單一目標。{@h}19 ({@damage 3d8 + 6})鈍擊傷害, and the target is {@condition grappled} (escape DC 16) if it is a Huge or smaller creature. Until the grapple ends, the froghemoth can't use this tentacle on another target. The froghemoth has four tentacles."
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 10} to hit, reach 5 ft., one target. {@h}22 ({@damage 3d10 + 6}) piercing damage, and the target is swallowed if it is a Medium or smaller creature. A swallowed creature is {@condition blinded} and {@condition restrained}, has total cover against attacks and other effects outside the froghemoth, and takes 10 ({@damage 3d6}) acid damage at the start of each of the froghemoth's turns.",
+						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}22 ({@damage 3d10 + 6}) piercing damage, and the target is swallowed if it is a Medium or smaller creature. A swallowed creature is {@condition blinded} and {@condition restrained}, has total cover against attacks and other effects outside the froghemoth, and takes 10 ({@damage 3d6}) acid damage at the start of each of the froghemoth's turns.",
 						"The froghemoth's gullet can hold up to two creatures at a time. If the Froghemoth takes 20 damage or more on a single turn from a creature inside it, the Froghemoth must succeed on a DC 20 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, each of which falls {@condition prone} in a space within 10 feet of the froghemoth. If the froghemoth dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse using 10 feet of movement, exiting {@condition prone}."
 					]
 				},
@@ -5706,7 +5706,7 @@
 			"immune": [
 				"cold"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 14,
 			"languages": "Giant",
 			"cr": "12",
@@ -5729,13 +5729,13 @@
 						"As a bonus action, the giant can enter a rage at the start of its turn. The rage lasts for 1 minute or until the giant is {@condition incapacitated}. While raging, the giant gains the following benefits:",
 						"- The giant has advantage on Strength checks and Strength saving throws",
 						"- When it makes a melee weapon attack, the giant gains a +4 bonus to the damage roll.",
-						"- The giant has resistance to bludgeoning, piercing, and slashing damage."
+						"- The giant has resistance to bludgeoning, piercing, and劈砍傷害."
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The giant makes two attacks with its greataxe."
 					]
@@ -5743,13 +5743,13 @@
 				{
 					"name": "Greataxe",
 					"entries": [
-						"{@atk mw} {@hit 11} to hit, reach 10 ft., one target. {@h}26 ({@damage 3d12 + 7}) slashing damage, or 30 ({@damage 3d12 + 11}) slashing damage while raging."
+						"{@atk mw} 命中{@hit 11}，觸及10呎，單一目標。{@h}26 ({@damage 3d12 + 7})劈砍傷害, or 30 ({@damage 3d12 + 11})劈砍傷害 while raging."
 					]
 				},
 				{
 					"name": "Rock",
 					"entries": [
-						"{@atk rw} {@hit 11} to hit, range 60/240 ft., one target. {@h}29 ({@damage 4d10 + 7}) bludgeoning damage."
+						"{@atk rw} 命中{@hit 11}，射程60/240呎，單一目標。{@h}29 ({@damage 4d10 + 7})鈍擊傷害。"
 					]
 				}
 			],
@@ -5790,7 +5790,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -5843,9 +5843,9 @@
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}9 ({@damage 2d8}) piercing damage."
+						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}9 ({@damage 2d8})穿刺傷害。"
 					]
 				},
 				{
@@ -5924,7 +5924,7 @@
 			"conditionImmune": [
 				"prone"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 14,
 			"cr": "1/2",
 			"trait": [
@@ -5943,9 +5943,9 @@
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}1 piercing damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}1穿刺傷害。"
 					]
 				},
 				{
@@ -6010,7 +6010,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -6042,9 +6042,9 @@
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d8 + 4}) piercing damage."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}8 ({@damage 1d8 + 4})穿刺傷害。"
 					]
 				},
 				{
@@ -6098,7 +6098,7 @@
 				"perception": "+3",
 				"stealth": "+5"
 			},
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 13,
 			"cr": "4",
 			"trait": [
@@ -6111,21 +6111,21 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The girallon makes five attacks: one with its bite and four with its claws."
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one creature. {@h}7 ({@damage 1d6 + 4}) piercing damage."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一生物。{@h}7 ({@damage 1d6 + 4})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "爪抓", "tENG_name": "Claw",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit. reach 10 ft., one target. {@h}7 ({@damage 1d6 + 4}) slashing damage."
+						"{@atk mw} {@hit 6} to hit. reach 10 ft., one target. {@h}7 ({@damage 1d6 + 4})劈砍傷害."
 					]
 				}
 			],
@@ -6186,7 +6186,7 @@
 			"save": {
 				"dex": "+4"
 			},
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 10,
 			"languages": "Gnoll",
 			"cr": "1",
@@ -6200,21 +6200,21 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The gnoll makes three attacks: one with its bite and two with its shortsword."
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d4 + 2}) piercing damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}4 ({@damage 1d4 + 2})穿刺傷害。"
 					]
 				},
 				{
 					"name": "Shortsword",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害。"
 					]
 				},
 				{
@@ -6287,7 +6287,7 @@
 				"perception": "+3",
 				"stealth": "+3"
 			},
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 13,
 			"languages": "Gnoll",
 			"cr": "1/2",
@@ -6301,27 +6301,27 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The gnoll makes two melee attacks with its spear or two ranged attacks with its longbow."
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d4 + 2}) piercing damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}4 ({@damage 1d4 + 2})穿刺傷害。"
 					]
 				},
 				{
 					"name": "Spear",
 					"entries": [
-						"{@atk mw,rw} {@hit 4} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage, or 6 ({@damage 1d8 + 2}) piercing damage when used with two hands to make a melee attack."
+						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或 射程20/60呎，單一目標。{@h}5 ({@damage 1d6 + 2}) piercing damage, or 6 ({@damage 1d8 + 2}) piercing damage when used with two hands to make a melee attack."
 					]
 				},
 				{
 					"name": "Longbow",
 					"entries": [
-						"{@atk rw} {@hit 4} to hit, range 150/600 ft., one target. {@h}6 ({@damage 1d8 + 2}) piercing damage, and the target's speed is reduced by 10 feet until the end of its next turn."
+						"{@atk rw} 命中{@hit 4}，射程150/600呎，單一目標。{@h}6 ({@damage 1d8 + 2}) piercing damage, and the target's speed is reduced by 10 feet until the end of its next turn."
 					]
 				}
 			],
@@ -6362,7 +6362,7 @@
 				{
 					"ac": 12,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -6386,7 +6386,7 @@
 				"exhaustion",
 				"poisoned"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 7,
 			"languages": "understands Gnoll but can't speak",
 			"cr": "1/4",
@@ -6400,21 +6400,21 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The witherling makes two attacks: one with its bite and one with its club, or two with its club."
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d4 + 2}) piercing damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}4 ({@damage 1d4 + 2})穿刺傷害。"
 					]
 				},
 				{
 					"name": "Club",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d4 + 2}) bludgeoning damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}4 ({@damage 1d4 + 2})鈍擊傷害。"
 					]
 				}
 			],
@@ -6453,7 +6453,7 @@
 			]
 		},
 		{
-			"name": "Green Guard Drake",
+			"name": "綠守衛龍獸", "ENG_name": "Green Guard Drake",
 			"size": "M",
 			"type": "dragon",
 			"source": "VGM",
@@ -6464,7 +6464,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -6488,35 +6488,35 @@
 			"resist": [
 				"poison"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 12,
-			"languages": "understands Draconic but can't speak it",
+			"languages": "理解龍語，但不會說",
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Amphibious",
+					"name": "兩棲", "tENG_name": "Amphibious",
 					"entries": [
-						"The guard drake can breathe air and water."
+						"guard drake可以在空氣和水中呼吸。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The drake attacks twice, once with its bite and once with its tail."
+						"龍獸進行二次攻擊，一次啃咬，一次尾擊。"
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) piercing damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Tail",
+					"name": "尾擊", "tENG_name": "Tail",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) bludgeoning damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})鈍擊傷害。"
 					]
 				}
 			],
@@ -6595,9 +6595,9 @@
 			"cr": "1/4",
 			"trait": [
 				{
-					"name": "Amphibious",
+					"name": "兩棲", "tENG_name": "Amphibious",
 					"entries": [
-						"The grung can breathe air and water."
+						"grung可以在空氣和水中呼吸。"
 					]
 				},
 				{
@@ -6617,7 +6617,7 @@
 				{
 					"name": "Dagger",
 					"entries": [
-						"{@atk mw,rw} {@hit 4} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}4 ({@damage 1d4 + 2}) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 5 ({@damage 2d4}) poison damage."
+						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d4 + 2}) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 5 ({@damage 2d4}) poison damage."
 					]
 				}
 			],
@@ -6701,9 +6701,9 @@
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Amphibious",
+					"name": "兩棲", "tENG_name": "Amphibious",
 					"entries": [
-						"The grung can breathe air and water."
+						"grung可以在空氣和水中呼吸。"
 					]
 				},
 				{
@@ -6723,13 +6723,13 @@
 				{
 					"name": "Dagger",
 					"entries": [
-						"{@atk mw,rw} {@hit 5} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}5 ({@damage 1d4 + 3}) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 5 ({@damage 2d4}) poison damage."
+						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或 射程20/60呎，單一目標。{@h}5 ({@damage 1d4 + 3}) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 5 ({@damage 2d4}) poison damage."
 					]
 				},
 				{
 					"name": "Shortbow",
 					"entries": [
-						"{@atk rw} {@hit 5} to hit, range 80/320 ft., one target. {@h}6 ({@damage 1d6 + 3}) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 5 ({@damage 2d4}) poison damage."
+						"{@atk rw} 命中{@hit 5}，射程80/320呎，單一目標。{@h}6 ({@damage 1d6 + 3}) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 5 ({@damage 2d4}) poison damage."
 					]
 				},
 				{
@@ -6823,9 +6823,9 @@
 			"cr": "1",
 			"trait": [
 				{
-					"name": "Amphibious",
+					"name": "兩棲", "tENG_name": "Amphibious",
 					"entries": [
-						"The grung can breathe air and water."
+						"grung可以在空氣和水中呼吸。"
 					]
 				},
 				{
@@ -6845,13 +6845,13 @@
 				{
 					"name": "Dagger",
 					"entries": [
-						"{@atk mw,rw} {@hit 5} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}5 ({@damage 1d4 + 3}) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 5 ({@damage 2d4}) poison damage."
+						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或 射程20/60呎，單一目標。{@h}5 ({@damage 1d4 + 3}) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 5 ({@damage 2d4}) poison damage."
 					]
 				},
 				{
 					"name": "Shortbow",
 					"entries": [
-						"{@atk rw} {@hit 5} to hit, range 80/320 ft., one target. {@h}6 ({@damage 1d6 + 3}) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 5 ({@damage 2d4}) poison damage."
+						"{@atk rw} 命中{@hit 5}，射程80/320呎，單一目標。{@h}6 ({@damage 1d6 + 3}) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 5 ({@damage 2d4}) poison damage."
 					]
 				}
 			],
@@ -6917,7 +6917,7 @@
 			]
 		},
 		{
-			"name": "Hadrosaurus",
+			"name": "鴨嘴龍", "ENG_name": "Hadrosaurus",
 			"size": "L",
 			"type": "beast",
 			"source": "VGM",
@@ -6928,7 +6928,7 @@
 				{
 					"ac": 11,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -6952,9 +6952,9 @@
 			"cr": "1/4",
 			"action": [
 				{
-					"name": "Tail",
+					"name": "尾擊", "tENG_name": "Tail",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d10 + 2}) bludgeoning damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}7 ({@damage 1d10 + 2})鈍擊傷害。"
 					]
 				}
 			],
@@ -7006,7 +7006,7 @@
 			"skill": {
 				"arcana": "+5"
 			},
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 11,
 			"languages": "Common, Goblin",
 			"cr": "4",
@@ -7028,7 +7028,7 @@
 				{
 					"name": "Quarterstaff",
 					"entries": [
-						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d6 + 1}) bludgeoning damage, or 5 ({@damage 1d8 + 1}) bludgeoning damage if used with two hands."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}4 ({@damage 1d6 + 1})鈍擊傷害, or 5 ({@damage 1d8 + 1})鈍擊傷害 if used with two hands."
 					]
 				}
 			],
@@ -7137,7 +7137,7 @@
 				"athletics": "+4",
 				"stealth": "+5"
 			},
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 12,
 			"languages": "Common, Goblin",
 			"cr": "2",
@@ -7151,7 +7151,7 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The hobgoblin makes four attacks, each of which can be an unarmed strike or a dart attack. It can also use Shadow Jaunt once, either before or after one of the attacks."
 					]
@@ -7159,13 +7159,13 @@
 				{
 					"name": "Unarmed Strike",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d4 + 3}) bludgeoning damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}5 ({@damage 1d4 + 3})鈍擊傷害。"
 					]
 				},
 				{
 					"name": "Dart",
 					"entries": [
-						"{@atk rw} {@hit 5} to hit, range 20/60 ft., one target. {@h}5 ({@damage 1d4 + 3}) piercing damage."
+						"{@atk rw} 命中{@hit 5}，射程20/60呎，單一目標。{@h}5 ({@damage 1d4 + 3})穿刺傷害。"
 					]
 				},
 				{
@@ -7245,7 +7245,7 @@
 				{
 					"ac": 17,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -7336,13 +7336,13 @@
 				{
 					"name": "Tentacles",
 					"entries": [
-						"{@atk mw} {@hit 12} to hit, reach 5 ft., one creature. {@h}21 ({@damage 3d10 + 5}) psychic damage. If the target is Large or smaller, it is {@condition grappled} (escape DC 15) and must succeed on a DC 20 Intelligence saving throw or be {@condition stunned} until this grapple ends."
+						"{@atk mw} 命中{@hit 12}，觸及5呎，單一生物。{@h}21 ({@damage 3d10 + 5}) psychic damage. If the target is Large or smaller, it is {@condition grappled} (escape DC 15) and must succeed on a DC 20 Intelligence saving throw or be {@condition stunned} until this grapple ends."
 					]
 				},
 				{
 					"name": "Extract Brain",
 					"entries": [
-						"{@atk mw} {@hit 12} to hit, reach 5 ft., one {@condition incapacitated} humanoid {@condition grappled} by the lich. {@h}55 ({@damage 10d10}) piercing damage. If this damage reduces the target to 0 hit points, the lich kills the target by extracting and devouring its brain."
+						"{@atk mw} 命中{@hit 12}，觸及5呎， one {@condition incapacitated} humanoid {@condition grappled} by the lich. {@h}55 ({@damage 10d10}) piercing damage. If this damage reduces the target to 0 hit points, the lich kills the target by extracting and devouring its brain."
 					]
 				},
 				{
@@ -7575,7 +7575,7 @@
 				{
 					"name": "Quarterstaff",
 					"entries": [
-						"{@atk mw} {@hit 1} to hit, reach 5 ft., one target. {@h}2 ({@damage 1d6 - 1}) bludgeoning damage, or 3 ({@damage 1d8 - 1}) bludgeoning damage if used with two hands."
+						"{@atk mw} 命中{@hit 1}，觸及5呎，單一目標。{@h}2 ({@damage 1d6 - 1})鈍擊傷害, or 3 ({@damage 1d8 - 1})鈍擊傷害 if used with two hands."
 					]
 				}
 			],
@@ -7659,7 +7659,7 @@
 				{
 					"ac": 20,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -7718,7 +7718,7 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The ki-rin makes three attacks: two with its hooves and one with its horn."
 					]
@@ -7726,13 +7726,13 @@
 				{
 					"name": "Hoof",
 					"entries": [
-						"{@atk mw} {@hit 9} to hit, reach 15 ft., one target. {@h}10 ({@damage 2d4 + 5}) bludgeoning damage."
+						"{@atk mw} 命中{@hit 9}，觸及15呎，單一目標。{@h}10 ({@damage 2d4 + 5})鈍擊傷害。"
 					]
 				},
 				{
 					"name": "Horn",
 					"entries": [
-						"{@atk mw} {@hit 9} to hit, reach 5 ft., one target. {@h}14 ({@damage 2d8 + 5}) piercing damage."
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}14 ({@damage 2d8 + 5})穿刺傷害。"
 					]
 				}
 			],
@@ -7937,7 +7937,7 @@
 			"skill": {
 				"perception": "+1"
 			},
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 11,
 			"languages": "Common, Draconic",
 			"cr": "1",
@@ -7955,7 +7955,7 @@
 					]
 				},
 				{
-					"name": "Pack Tactics",
+					"name": "群體戰術", "tENG_name": "Pack Tactics",
 					"entries": [
 						"The kobold has advantage on an attack roll against a creature if at least one of the kobold's allies is within 5 feet of the creature and the ally isn't {@condition incapacitated}."
 					]
@@ -7969,7 +7969,7 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The kobold makes two melee attacks."
 					]
@@ -7977,7 +7977,7 @@
 				{
 					"name": "Spear",
 					"entries": [
-						"{@atk mw,rw} {@hit 3} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}4 ({@damage 1d6 + 1}) piercing damage, or 5 ({@damage 1d8 + 1}) piercing damage if used with two hands to make a melee attack."
+						"{@atk mw,rw} 命中{@hit 3}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d6 + 1}) piercing damage, or 5 ({@damage 1d8 + 1}) piercing damage if used with two hands to make a melee attack."
 					]
 				}
 			],
@@ -8040,7 +8040,7 @@
 			"skill": {
 				"perception": "+0"
 			},
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 10,
 			"languages": "Common, Draconic",
 			"cr": "1/4",
@@ -8052,7 +8052,7 @@
 					]
 				},
 				{
-					"name": "Pack Tactics",
+					"name": "群體戰術", "tENG_name": "Pack Tactics",
 					"entries": [
 						"The kobold has advantage on an attack roll against a creature if at least one of the kobold's allies is within 5 ft. of the creature and the ally isn't {@condition incapacitated}."
 					]
@@ -8062,25 +8062,25 @@
 				{
 					"name": "Dagger",
 					"entries": [
-						"{@atk mw,rw} {@hit 4} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}4 ({@damage 1d4 + 2}) piercing damage."
+						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d4 + 2})穿刺傷害。"
 					]
 				},
 				{
 					"name": "Sling",
 					"entries": [
-						"{@atk rw} {@hit 4} to hit, range 30/120 ft., one target. {@h}4 ({@damage 1d4 + 2}) bludgeoning damage."
+						"{@atk rw} 命中{@hit 4}，射程30/120呎，單一目標。{@h}4 ({@damage 1d4 + 2})鈍擊傷害。"
 					]
 				},
 				{
 					"name": "Weapon Invention",
 					"entries": [
 						"The kobold uses one of the following options (roll a {@dice d8} or choose one); the kobold can use each one no more than once per day:",
-						"{@i 1. Acid}. The kobold hurls a flask of {@item Acid (vial)|phb|acid}. {@atk rw} {@hit 4} to hit, range 5/20 ft., one target. {@h}7 ({@damage 2d6}) acid damage.",
-						"{@i 2. Alchemist's fire}. The kobold throws a flask of {@item Alchemist's Fire (flask)|phb|alchemist's fire}. {@atk rw} {@hit 4} to hit, range 5/20 ft., one target. {@h}2 ({@damage 1d4}) fire damage at the start of each of the target's turns. A creature can end this damage by using its action to make a DC 10 Dexterity check to extinguish the flames.",
+						"{@i 1. Acid}. The kobold hurls a flask of {@item Acid (vial)|phb|acid}. {@atk rw} 命中{@hit 4}，射程5/20呎，單一目標。{@h}7 ({@damage 2d6}) acid damage.",
+						"{@i 2. Alchemist's fire}. The kobold throws a flask of {@item Alchemist's Fire (flask)|phb|alchemist's fire}. {@atk rw} 命中{@hit 4}，射程5/20呎，單一目標。{@h}2 ({@damage 1d4}) fire damage at the start of each of the target's turns. A creature can end this damage by using its action to make a DC 10 Dexterity check to extinguish the flames.",
 						"{@i 3. Basket of Centipedes}. The kobold throws a small basket into a 5-foot-square space within 20 feet of it. A {@creature swarm of centipedes|mm|swarm of insects (centipedes)} with 11 hit points emerges from the basket and rolls initiative. At the end of each of the swarm's turns, there's a {@chance 50} chance that the swarm disperses.",
-						"{@i 4. Green Slime Pot}. The kobold throws a clay pot full of green slime at the target, and it breaks open on impact. {@atk rw} {@hit 4} to hit, range 5/20 ft., one target. {@h}The target is covered in a patch of {@hazard green slime} (see chapter 5 of the Dungeon Master's Guide). Miss: A patch of green slime covers a randomly determined 5-foot-square section of wall or floor within 5 feet of the target.",
+						"{@i 4. Green Slime Pot}. The kobold throws a clay pot full of green slime at the target, and it breaks open on impact. {@atk rw} 命中{@hit 4}，射程5/20呎，單一目標。{@h}The target is covered in a patch of {@hazard green slime} (see chapter 5 of the Dungeon Master's Guide). Miss: A patch of green slime covers a randomly determined 5-foot-square section of wall or floor within 5 feet of the target.",
 						"{@i 5. Rot Grub Pot}. The kobold throws a clay pot into a 5-foot-square space within 20 feet of it, and it breaks open on impact. A {@creature Swarm of Rot Grubs|vgm|swarm of rot grubs} (see appendix A) emerges from the shattered pot and remains a hazard in that square.",
-						"{@i 6. Scorpion on a Stick}. The kobold makes a melee attack with a scorpion tied to the end of a 5-foot-long pole. {@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}1 piercing damage, and the target must make a DC 9 Constitution saving throw, taking 4 ({@damage 1d8}) poison damage on a failed save, or half as much damage on a successful one.",
+						"{@i 6. Scorpion on a Stick}. The kobold makes a melee attack with a scorpion tied to the end of a 5-foot-long pole. {@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}1 piercing damage, and the target must make a DC 9 Constitution saving throw, taking 4 ({@damage 1d8}) poison damage on a failed save, or half as much damage on a successful one.",
 						"{@i 7. Skunk in a Cage}. The kobold releases a skunk into an unoccupied space within 5 feet of it. The skunk has a walking speed of 20 feet, AC 10, 1 hit point, and no effective attacks. It rolls initiative and, on its turn, uses its action to spray musk at a random creature within 5 feet of it. The target must make a DC 9 Constitution saving throw. On a failed save, the target retches and can't take actions for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. A creature that doesn't need to breathe or is immune to poison automatically succeeds on the saving throw. Once the skunk has sprayed its musk, it can't do so again until it finishes a short or long rest.",
 						"{@i 8. Wasp Nest in a Bag}. The kobold throws a small bag into a 5-foot-square space within 20 feet of it. A {@creature swarm of wasps|mm|swarm of insects (wasps)} with 11 hit points emerges from the bag and rolls initiative. At the end of each of the swarm's turns, there's a {@chance 50} chance that the swarm disperses."
 					]
@@ -8132,7 +8132,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -8153,7 +8153,7 @@
 				"arcana": "+2",
 				"medicine": "+1"
 			},
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 9,
 			"languages": "Common, Draconic",
 			"cr": "1",
@@ -8167,7 +8167,7 @@
 					]
 				},
 				{
-					"name": "Pack Tactics",
+					"name": "群體戰術", "tENG_name": "Pack Tactics",
 					"entries": [
 						"The kobold has advantage on an attack roll against a creature it at least one of the kobold's allies is within 5 feet of the creature and the ally isn't {@condition incapacitated}."
 					]
@@ -8183,7 +8183,7 @@
 				{
 					"name": "Dagger",
 					"entries": [
-						"{@atk mw,rw} {@hit 4} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}4 ({@damage 1d4 + 2}) piercing damage."
+						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d4 + 2})穿刺傷害。"
 					]
 				}
 			],
@@ -8260,7 +8260,7 @@
 				{
 					"ac": 17,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -8320,7 +8320,7 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The korred makes two attacks with its greatclub or hurls two rocks."
 					]
@@ -8328,13 +8328,13 @@
 				{
 					"name": "Greatclub",
 					"entries": [
-						"{@atk mw} {@hit 9} to hit, reach 5 ft., one target. {@h}10 ({@damage 1d8 + 6}) bludgeoning damage, or 19 ({@damage 3d8 + 6}) bludgeoning damage if the korred is on the ground."
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}10 ({@damage 1d8 + 6})鈍擊傷害, or 19 ({@damage 3d8 + 6})鈍擊傷害 if the korred is on the ground."
 					]
 				},
 				{
 					"name": "Rock",
 					"entries": [
-						"{@atk rw} {@hit 9} to hit, range 60/120 ft., one target. {@h}15 ({@damage 2d8 + 6}) bludgeoning damage, or 24 ({@damage 4d8 + 6}) bludgeoning damage if the korred is on the ground."
+						"{@atk rw} 命中{@hit 9}，射程60/120呎，單一目標。{@h}15 ({@damage 2d8 + 6})鈍擊傷害, or 24 ({@damage 4d8 + 6})鈍擊傷害 if the korred is on the ground."
 					]
 				}
 			],
@@ -8435,9 +8435,9 @@
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Amphibious",
+					"name": "兩棲", "tENG_name": "Amphibious",
 					"entries": [
-						"The priest can breathe air and water."
+						"priest可以在空氣和水中呼吸。"
 					]
 				}
 			],
@@ -8512,7 +8512,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -8533,7 +8533,7 @@
 				"deception": "+2",
 				"perception": "+3"
 			},
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 13,
 			"languages": "Abyssal, Gnoll",
 			"cr": "3",
@@ -8565,21 +8565,21 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The leucrotta makes two attacks: one with its bite and one with its hooves."
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d8 + 4}) piercing damage. If the leucrotta scores a critical hit, it rolls the damage dice three times, instead of twice."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}8 ({@damage 1d8 + 4}) piercing damage. If the leucrotta scores a critical hit, it rolls the damage dice three times, instead of twice."
 					]
 				},
 				{
 					"name": "Hooves",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}11 ({@damage 2d6 + 4}) bludgeoning damage."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}11 ({@damage 2d6 + 4})鈍擊傷害。"
 					]
 				}
 			],
@@ -8655,7 +8655,7 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The adept makes three unarmed strikes or three dart attacks."
 					]
@@ -8663,7 +8663,7 @@
 				{
 					"name": "Unarmed Strike",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) bludgeoning damage. If the target is a creature, the adept can choose one of the following additional effects:",
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3})鈍擊傷害。 If the target is a creature, the adept can choose one of the following additional effects:",
 						{
 							"type": "list",
 							"items": [
@@ -8677,7 +8677,7 @@
 				{
 					"name": "Dart",
 					"entries": [
-						"{@atk rw} {@hit 5} to hit, range 20/60 ft., one target. {@h}5 ({@damage 1d4 + 3}) piercing damage."
+						"{@atk rw} 命中{@hit 5}，射程20/60呎，單一目標。{@h}5 ({@damage 1d4 + 3})穿刺傷害。"
 					]
 				}
 			],
@@ -8781,7 +8781,7 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The thief makes three attacks with its shortsword."
 					]
@@ -8789,13 +8789,13 @@
 				{
 					"name": "Shortsword",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d6 + 4}) piercing damage."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}7 ({@damage 1d6 + 4})穿刺傷害。"
 					]
 				},
 				{
 					"name": "Light Crossbow",
 					"entries": [
-						"{@atk rw} {@hit 7} to hit, range 80/320 ft., one target. {@h}8 ({@damage 1d8 + 4}) piercing damage."
+						"{@atk rw} 命中{@hit 7}，射程80/320呎，單一目標。{@h}8 ({@damage 1d8 + 4})穿刺傷害。"
 					]
 				}
 			],
@@ -8845,7 +8845,7 @@
 				{
 					"ac": 13,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -8875,7 +8875,7 @@
 				"frightened",
 				"poisoned"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 9,
 			"languages": "understands Abyssal but can't speak",
 			"cr": "1",
@@ -8889,9 +8889,9 @@
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}11 ({@damage 2d8 + 2}) piercing damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}11 ({@damage 2d8 + 2})穿刺傷害。"
 					]
 				}
 			],
@@ -8927,7 +8927,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -8978,9 +8978,9 @@
 			],
 			"action": [
 				{
-					"name": "Claws",
+					"name": "爪抓", "tENG_name": "Claws",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}7 ({@damage 2d4 + 2}) slashing damage, and the target must succeed on a DC 11 Constitution saving throw or be {@condition paralyzed} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}7 ({@damage 2d4 + 2})劈砍傷害, and the target must succeed on a DC 11 Constitution saving throw or be {@condition paralyzed} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				}
 			],
@@ -9063,13 +9063,13 @@
 				{
 					"name": "Tentacles",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one creature. {@h}15 ({@damage 2d10 + 4}) psychic damage. If the target is Medium or smaller, it is {@condition grappled} (escape DC 15) and must succeed on a DC 15 Intelligence saving throw or be {@condition stunned} until this grapple ends."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一生物。{@h}15 ({@damage 2d10 + 4}) psychic damage. If the target is Medium or smaller, it is {@condition grappled} (escape DC 15) and must succeed on a DC 15 Intelligence saving throw or be {@condition stunned} until this grapple ends."
 					]
 				},
 				{
 					"name": "Extract Brain",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one {@condition incapacitated} humanoid {@condition grappled} by the mind flayer. {@h}The target takes 55 ({@damage 10d10}) piercing damage. If this damage reduces the target to 0 hit points, the mind flayer kills the target by extracting and devouring its brain."
+						"{@atk mw} 命中{@hit 7}，觸及5呎， one {@condition incapacitated} humanoid {@condition grappled} by the mind flayer. {@h}The target takes 55 ({@damage 10d10}) piercing damage. If this damage reduces the target to 0 hit points, the mind flayer kills the target by extracting and devouring its brain."
 					]
 				},
 				{
@@ -9175,7 +9175,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -9221,21 +9221,21 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The mindwitness makes two attacks: one with its tentacles and one with its bite."
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one creature. {@h}16 ({@damage 4d6 + 2}) piercing damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}16 ({@damage 4d6 + 2})穿刺傷害。"
 					]
 				},
 				{
 					"name": "Tentacles",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one creature. {@h}20 ({@damage 4d8 + 2}) psychic damage. if the target is Large or smaller, it is {@condition grappled} (escape DC 13) and must succeed on a DC 13 Intelligence saving throw or be {@condition stunned} until this grapple ends."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}20 ({@damage 4d8 + 2}) psychic damage. if the target is Large or smaller, it is {@condition grappled} (escape DC 13) and must succeed on a DC 13 Intelligence saving throw or be {@condition stunned} until this grapple ends."
 					]
 				},
 				{
@@ -9287,7 +9287,7 @@
 				{
 					"ac": 17,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -9335,29 +9335,29 @@
 			},
 			"trait": [
 				{
-					"name": "Amphibious",
+					"name": "兩棲", "tENG_name": "Amphibious",
 					"entries": [
-						"The morkoth can breathe air and water."
+						"morkoth可以在空氣和水中呼吸。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The morkoth makes three attacks: two with its bite and one with its tentacles or three with its bite."
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}9 ({@damage 2d6 + 2}) slashing damage."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}9 ({@damage 2d6 + 2})劈砍傷害."
 					]
 				},
 				{
 					"name": "Tentacles",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 15 ft., one target. {@h}15 ({@damage 3d8 + 2}) bludgeoning damage, and the target is {@condition grappled} (escape DC 14) if it is a Large or smaller creature. Until this grapple ends. the target is {@condition restrained} and takes 15 ({@damage 3d8 + 2}) bludgeoning damage at the start of each of the morkoth's turns. and the morkoth can't use its tentacles on another target."
+						"{@atk mw} 命中{@hit 6}，觸及15呎，單一目標。{@h}15 ({@damage 3d8 + 2})鈍擊傷害, and the target is {@condition grappled} (escape DC 14) if it is a Large or smaller creature. Until this grapple ends. the target is {@condition restrained} and takes 15 ({@damage 3d8 + 2})鈍擊傷害 at the start of each of the morkoth's turns. and the morkoth can't use its tentacles on another target."
 					]
 				},
 				{
@@ -9490,7 +9490,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -9531,15 +9531,15 @@
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 8} to hit, reach 5 ft., one creature. {@h}15 ({@damage 3d6 + 5}) piercing damage, and the giant magically regains hit points equal to the damage dealt."
+						"{@atk mw} 命中{@hit 8}，觸及5呎，單一生物。{@h}15 ({@damage 3d6 + 5}) piercing damage, and the giant magically regains hit points equal to the damage dealt."
 					]
 				},
 				{
 					"name": "Fist",
 					"entries": [
-						"{@atk mw} {@hit 8} to hit, reach 10 ft., one target. {@h}18 ({@damage 3d8 + 5}) bludgeoning damage."
+						"{@atk mw} 命中{@hit 8}，觸及10呎，單一目標。{@h}18 ({@damage 3d8 + 5})鈍擊傷害。"
 					]
 				}
 			],
@@ -9717,7 +9717,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -9739,7 +9739,7 @@
 				"intimidation": "+4",
 				"perception": "+3"
 			},
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 13,
 			"languages": "Common, Deep Speech, Undercommon",
 			"cr": "3",
@@ -9759,21 +9759,21 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The neogi makes two attacks: one with its bite and one with its claws."
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) piercing damage plus 14 ({@damage 4d6}) poison damage, and the target must succeed on a DC 12 Constitution saving throw or become {@condition poisoned} for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3}) piercing damage plus 14 ({@damage 4d6}) poison damage, and the target must succeed on a DC 12 Constitution saving throw or become {@condition poisoned} for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				},
 				{
-					"name": "Claws",
+					"name": "爪抓", "tENG_name": "Claws",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}8 ({@damage 2d4 + 3}) slashing damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}8 ({@damage 2d4 + 3})劈砍傷害."
 					]
 				},
 				{
@@ -9835,7 +9835,7 @@
 			"int": 6,
 			"wis": 10,
 			"cha": 9,
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 10,
 			"cr": "1/8",
 			"trait": [
@@ -9854,9 +9854,9 @@
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}3 ({@damage 1d4 + 1}) piercing damage plus 7 ({@damage 2d6}) poison damage, and the target must succeed on a DC 10 Constitution saving throw or become {@condition poisoned} for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}3 ({@damage 1d4 + 1}) piercing damage plus 7 ({@damage 2d6}) poison damage, and the target must succeed on a DC 10 Constitution saving throw or become {@condition poisoned} for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				}
 			],
@@ -9890,7 +9890,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -9938,21 +9938,21 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The neogi makes two attacks: one with its bite and one with its claws."
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) piercing damage plus 14 ({@damage 4d6}) poison damage, and the target must succeed on a DC 12 Constitution saving throw or become {@condition poisoned} for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3}) piercing damage plus 14 ({@damage 4d6}) poison damage, and the target must succeed on a DC 12 Constitution saving throw or become {@condition poisoned} for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				},
 				{
-					"name": "Claws",
+					"name": "爪抓", "tENG_name": "Claws",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}8 ({@damage 2d4 + 3}) slashing damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}8 ({@damage 2d4 + 3})劈砍傷害."
 					]
 				},
 				{
@@ -10045,7 +10045,7 @@
 				{
 					"ac": 16,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -10088,7 +10088,7 @@
 				{
 					"name": "Tentacles",
 					"entries": [
-						"{@atk mw} {@hit 13} to hit, reach 15 ft., one target. {@h}21 ({@damage 3d8 + 8}) bludgeoning damage plus 13 ({@damage 3d8}) psychic damage. If the target is a Large or smaller creature, it must succeed on a DC 18 Strength saving throw or be swallowed by the neothelid. A swallowed creature is {@condition blinded} and {@condition restrained}, it has total cover against attacks and other effects outside the neothelid, and it takes 35 ({@damage 10d6}) acid damage at the start of each of the neothelid's turns.",
+						"{@atk mw} 命中{@hit 13}，觸及15呎，單一目標。{@h}21 ({@damage 3d8 + 8})鈍擊傷害 plus 13 ({@damage 3d8}) psychic damage. If the target is a Large or smaller creature, it must succeed on a DC 18 Strength saving throw or be swallowed by the neothelid. A swallowed creature is {@condition blinded} and {@condition restrained}, it has total cover against attacks and other effects outside the neothelid, and it takes 35 ({@damage 10d6}) acid damage at the start of each of the neothelid's turns.",
 						"If the neothelid takes 30 damage or more on a single turn from a creature inside it, the neothelid must succeed on a DC 18 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition prone} in a space within 10 feet of the neothelid. If the neothelid dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse by using 20 feet of movement, exiting {@condition prone}."
 					]
 				},
@@ -10180,7 +10180,7 @@
 			"skill": {
 				"stealth": "+6"
 			},
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 9,
 			"languages": "Common, Goblin",
 			"cr": "1",
@@ -10202,13 +10202,13 @@
 				{
 					"name": "Fool's Scepter",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) bludgeoning damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})鈍擊傷害。"
 					]
 				},
 				{
 					"name": "Shortbow",
 					"entries": [
-						"{@atk rw} {@hit 4} to hit, range 80/320 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage."
+						"{@atk rw} 命中{@hit 4}，射程80/320呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害。"
 					]
 				}
 			],
@@ -10305,7 +10305,7 @@
 				"intimidation": "+4",
 				"perception": "+3"
 			},
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 13,
 			"languages": "Common, Orc",
 			"cr": "4",
@@ -10325,7 +10325,7 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The orc makes two melee attacks with its longsword or two ranged attacks with its javelins. If Ilneval's Command is available to use, the orc can use it after these attacks."
 					]
@@ -10333,13 +10333,13 @@
 				{
 					"name": "Longsword",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}12 ({@damage 2d8 + 3}) slashing damage, or 14 ({@damage 2d10 + 3}) slashing damage when used with two hands."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}12 ({@damage 2d8 + 3})劈砍傷害, or 14 ({@damage 2d10 + 3})劈砍傷害 when used with two hands."
 					]
 				},
 				{
 					"name": "Javelin",
 					"entries": [
-						"{@atk mw,rw} {@hit 5} to hit, reach 5 ft. or range 30/120 ft., one target. {@h}6 ({@damage 1d6 + 3}) piercing damage."
+						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或 射程30/120呎，單一目標。{@h}6 ({@damage 1d6 + 3})穿刺傷害。"
 					]
 				},
 				{
@@ -10416,7 +10416,7 @@
 				"medicine": "+4",
 				"survival": "+4"
 			},
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 12,
 			"languages": "Common, Orc",
 			"cr": "2",
@@ -10430,15 +10430,15 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The orc makes two claw attacks, or four claw attacks if it has fewer than half of its hit points remaining."
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "爪抓", "tENG_name": "Claw",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) slashing damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}6 ({@damage 1d8 + 2})劈砍傷害."
 					]
 				}
 			],
@@ -10550,7 +10550,7 @@
 				"medicine": "+4",
 				"religion": "+2"
 			},
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 12,
 			"languages": "understands Common and Orc but can't speak",
 			"cr": "2",
@@ -10566,7 +10566,7 @@
 				{
 					"name": "Touch of the White Hand",
 					"entries": [
-						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}9 ({@damage 2d8}) necrotic damage."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}9 ({@damage 2d8}) necrotic damage."
 					]
 				}
 			],
@@ -10662,7 +10662,7 @@
 			"int": 7,
 			"wis": 11,
 			"cha": 7,
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 10,
 			"languages": "Common, Orc",
 			"cr": "1/2",
@@ -10688,9 +10688,9 @@
 			],
 			"action": [
 				{
-					"name": "Claws",
+					"name": "爪抓", "tENG_name": "Claws",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d4 + 2}) slashing damage plus 2 ({@damage 1d4}) necrotic damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}4 ({@damage 1d4 + 2})劈砍傷害 plus 2 ({@damage 1d4}) necrotic damage."
 					]
 				},
 				{
@@ -10765,7 +10765,7 @@
 				"perception": "+2",
 				"stealth": "+5"
 			},
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 12,
 			"languages": "Common, Orc",
 			"cr": "3",
@@ -10797,7 +10797,7 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The orc makes two scimitar or dart attacks."
 					]
@@ -10805,13 +10805,13 @@
 				{
 					"name": "Scimitar",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}13 ({@damage 3d6 + 3}) slashing damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}13 ({@damage 3d6 + 3})劈砍傷害."
 					]
 				},
 				{
 					"name": "Dart",
 					"entries": [
-						"{@atk rw} {@hit 5} to hit, range 20/60 ft., one target. {@h}10 ({@damage 3d4 + 3}) piercing damage."
+						"{@atk rw} 命中{@hit 5}，射程20/60呎，單一目標。{@h}10 ({@damage 3d4 + 3})穿刺傷害。"
 					]
 				},
 				{
@@ -10875,7 +10875,7 @@
 				{
 					"name": "Charge",
 					"entries": [
-						"If the ox moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 7 ({@damage 2d6}) piercing damage."
+						"If the ox moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 7 ({@damage 2d6})穿刺傷害。"
 					]
 				},
 				{
@@ -10889,7 +10889,7 @@
 				{
 					"name": "Gore",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d6 + 4}) piercing damage."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}7 ({@damage 1d6 + 4})穿刺傷害。"
 					]
 				}
 			],
@@ -10906,7 +10906,7 @@
 			]
 		},
 		{
-			"name": "Quetzalcoatlus",
+			"name": "風神翼龍", "ENG_name": "Quetzalcoatlus",
 			"size": "H",
 			"type": "beast",
 			"source": "VGM",
@@ -10917,7 +10917,7 @@
 				{
 					"ac": 13,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -10942,23 +10942,23 @@
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Dive Attack",
+					"name": "俯衝攻擊", "tENG_name": "Dive Attack",
 					"entries": [
-						"If the quetzalcoatlus is flying and dives at least 30 feet toward a target and then hits with a bite attack, the attack deals an extra 10 ({@dice 3d6}) damage to the target."
+						"若風神翼龍在飛行中且向一個目標直線俯衝至少30呎距離，並接著以一次啃咬攻擊命中它，該攻擊將對目標造成額外的10 ({@dice 3d6})傷害。"
 					]
 				},
 				{
-					"name": "Flyby",
+					"name": "飛掠", "tENG_name": "Flyby",
 					"entries": [
-						"The quetzalcoatlus doesn't provoke an opportunity attack when it flies out of an enemy's reach."
+						"風神翼龍在飛出敵人的觸及範圍時不會觸發藉機攻擊。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 10 ft., one creature. {@h}12 ({@damage 3d6 + 2}) piercing damage."
+						"{@atk mw} 命中{@hit 4}，觸及10呎，單一生物。{@h}12 ({@damage 3d6 + 2})穿刺傷害。"
 					]
 				}
 			],
@@ -11007,7 +11007,7 @@
 				"sleight of hand": "+8",
 				"stealth": "+8"
 			},
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 15,
 			"languages": "Common, Sylvan",
 			"cr": "1",
@@ -11027,7 +11027,7 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The quickling makes three dagger attacks."
 					]
@@ -11035,7 +11035,7 @@
 				{
 					"name": "Dagger",
 					"entries": [
-						"{@atk mw,rw} {@hit 8} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}8 ({@damage 1d4 + 6}) piercing damage."
+						"{@atk mw,rw} 命中{@hit 8}，觸及5呎 或 射程20/60呎，單一目標。{@h}8 ({@damage 1d4 + 6})穿刺傷害。"
 					]
 				}
 			],
@@ -11059,7 +11059,7 @@
 			]
 		},
 		{
-			"name": "Red Guard Drake",
+			"name": "紅守衛龍獸", "ENG_name": "Red Guard Drake",
 			"size": "M",
 			"type": "dragon",
 			"source": "VGM",
@@ -11070,7 +11070,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -11094,27 +11094,27 @@
 			"resist": [
 				"fire"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 12,
-			"languages": "understands Draconic but can't speak it",
+			"languages": "理解龍語，但不會說",
 			"cr": "2",
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The drake attacks twice, once with its bite and once with its tail."
+						"龍獸進行二次攻擊，一次啃咬，一次尾擊。"
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) piercing damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Tail",
+					"name": "尾擊", "tENG_name": "Tail",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) bludgeoning damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})鈍擊傷害。"
 					]
 				}
 			],
@@ -11153,7 +11153,7 @@
 				{
 					"ac": 13,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -11174,7 +11174,7 @@
 				"athletics": "+6",
 				"perception": "+3"
 			},
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 13,
 			"languages": "Common, Sylvan",
 			"cr": "3",
@@ -11194,7 +11194,7 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The redcap makes three attacks with its wicked sickle."
 					]
@@ -11202,13 +11202,13 @@
 				{
 					"name": "Wicked Sickle",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}9 ({@damage 2d4 + 4}) slashing damage."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}9 ({@damage 2d4 + 4})劈砍傷害."
 					]
 				},
 				{
 					"name": "Ironbound Pursuit",
 					"entries": [
-						"The redcap moves up to its speed to a creature it can see and kicks with its iron boots. The target must succeed on a DC 14 Dexterity saving throw or take 20 ({@damage 3d10 + 4}) bludgeoning damage and be knocked {@condition prone}."
+						"The redcap moves up to its speed to a creature it can see and kicks with its iron boots. The target must succeed on a DC 14 Dexterity saving throw or take 20 ({@damage 3d10 + 4})鈍擊傷害 and be knocked {@condition prone}."
 					]
 				}
 			],
@@ -11265,7 +11265,7 @@
 				{
 					"name": "Charge",
 					"entries": [
-						"If the rothé moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 7 ({@damage 2d6}) piercing damage."
+						"If the rothé moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 7 ({@damage 2d6})穿刺傷害。"
 					]
 				}
 			],
@@ -11273,7 +11273,7 @@
 				{
 					"name": "Gore",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d6 + 4}) piercing damage."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}7 ({@damage 1d6 + 4})穿刺傷害。"
 					]
 				}
 			],
@@ -11305,7 +11305,7 @@
 				{
 					"ac": 11,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -11337,7 +11337,7 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The sea spawn makes three attacks: two unarmed strikes and one with its Piscine Anatomy."
 					]
@@ -11345,7 +11345,7 @@
 				{
 					"name": "Unarmed Strike",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d4 + 2}) bludgeoning damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}4 ({@damage 1d4 + 2})鈍擊傷害。"
 					]
 				},
 				{
@@ -11359,17 +11359,17 @@
 								{
 									"type": "item",
 									"name": "Bite.",
-									"entry": "{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d4 + 2}) piercing damage."
+									"entry": "{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}4 ({@damage 1d4 + 2})穿刺傷害。"
 								},
 								{
 									"type": "item",
 									"name": "Poison Quills.",
-									"entry": "{@atk mw} {@hit 5} to hit, reach 5 ft., one creature. {@h}3 ({@damage 1d6}) poison damage, and the target must succeed on a DC 12 Constitution saving throw or be {@condition poisoned} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+									"entry": "{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}3 ({@damage 1d6}) poison damage, and the target must succeed on a DC 12 Constitution saving throw or be {@condition poisoned} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 								},
 								{
 									"type": "item",
 									"name": "Tentacle.",
-									"entry": "{@atk mw} {@hit 5} to hit, reach 10 ft., one target. {@h}5 ({@damage 1d6 + 2}) bludgeoning damage, and the target is {@condition grappled} (escape DC 12) if it is a Medium or smaller creature. Until this grapple ends, the sea spawn can't use this tentacle on another target."
+									"entry": "{@atk mw} 命中{@hit 5}，觸及10呎，單一目標。{@h}5 ({@damage 1d6 + 2})鈍擊傷害, and the target is {@condition grappled} (escape DC 12) if it is a Medium or smaller creature. Until this grapple ends, the sea spawn can't use this tentacle on another target."
 								}
 							]
 						}
@@ -11438,7 +11438,7 @@
 					"note": "from nonmagical attacks while in dim light or darkness"
 				}
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 13,
 			"cr": "2",
 			"trait": [
@@ -11469,9 +11469,9 @@
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}10 ({@damage 2d6 + 3}) piercing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked {@condition prone}."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}10 ({@damage 2d6 + 3}) piercing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked {@condition prone}."
 					]
 				}
 			],
@@ -11534,7 +11534,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -11577,7 +11577,7 @@
 				"frightened",
 				"poisoned"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 12,
 			"languages": "Abyssal, Gnoll, telepathy 120 ft.",
 			"cr": "8",
@@ -11591,21 +11591,21 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The shoosuva makes two attacks: one with its bite and one with its tail stinger."
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}26 ({@damage 4d10 + 4}) piercing damage."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}26 ({@damage 4d10 + 4})穿刺傷害。"
 					]
 				},
 				{
 					"name": "Tail Stinger",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 15 ft., one creature. {@h}13 ({@damage 2d8 + 4}) piercing damage, and the target must succeed on a DC 14 Constitution saving throw or become {@condition poisoned}. While {@condition poisoned}, the target is also {@condition paralyzed}. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk mw} 命中{@hit 7}，觸及15呎，單一生物。{@h}13 ({@damage 2d8 + 4}) piercing damage, and the target must succeed on a DC 14 Constitution saving throw or become {@condition poisoned}. While {@condition poisoned}, the target is also {@condition paralyzed}. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				}
 			],
@@ -11742,7 +11742,7 @@
 				{
 					"name": "Slam",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d10 + 3}) bludgeoning damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}8 ({@damage 1d10 + 3})鈍擊傷害。"
 					]
 				},
 				{
@@ -11810,7 +11810,7 @@
 				"exhaustion",
 				"poisoned"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 8,
 			"languages": "understands the languages it knew in life but can't speak",
 			"cr": "5",
@@ -11830,7 +11830,7 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The spawn of Kyuss makes two attacks with its claws and uses Burrowing Worm."
 					]
@@ -11842,9 +11842,9 @@
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "爪抓", "tENG_name": "Claw",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) slashing damage plus 7 ({@damage 2d6}) necrotic damage."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})劈砍傷害 plus 7 ({@damage 2d6}) necrotic damage."
 					]
 				}
 			],
@@ -11872,7 +11872,7 @@
 			]
 		},
 		{
-			"name": "Stegosaurus",
+			"name": "劍龍", "ENG_name": "Stegosaurus",
 			"size": "H",
 			"type": "beast",
 			"source": "VGM",
@@ -11883,7 +11883,7 @@
 				{
 					"ac": 13,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -11904,9 +11904,9 @@
 			"cr": "4",
 			"action": [
 				{
-					"name": "Tail",
+					"name": "尾擊", "tENG_name": "Tail",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 10 ft., one target. {@h}26 ({@damage 6d6 + 5}) piercing damage."
+						"{@atk mw} 命中{@hit 7}，觸及10呎，單一目標。{@h}26 ({@damage 6d6 + 5})穿刺傷害。"
 					]
 				}
 			],
@@ -11949,14 +11949,14 @@
 				"fire",
 				"poison"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 10,
 			"cr": "1/4",
 			"trait": [
 				{
 					"name": "Charge",
 					"entries": [
-						"If the kow moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 7 ({@damage 2d6}) piercing damage."
+						"If the kow moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 7 ({@damage 2d6})穿刺傷害。"
 					]
 				},
 				{
@@ -11970,7 +11970,7 @@
 				{
 					"name": "Gore",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d6 + 4}) piercing damage."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}7 ({@damage 1d6 + 4})穿刺傷害。"
 					]
 				}
 			],
@@ -12004,7 +12004,7 @@
 				{
 					"ac": 18,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -12034,7 +12034,7 @@
 				"charmed",
 				"frightened"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 13,
 			"languages": "Common, Giant",
 			"cr": "10",
@@ -12048,7 +12048,7 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The giant makes two attacks with its greatclub."
 					]
@@ -12056,7 +12056,7 @@
 				{
 					"name": "Greatclub",
 					"entries": [
-						"{@atk mw} {@hit 10} to hit, reach 15 ft., one target. {@h}19 ({@damage 3d8 + 6}) bludgeoning damage."
+						"{@atk mw} 命中{@hit 10}，觸及15呎，單一目標。{@h}19 ({@damage 3d8 + 6})鈍擊傷害。"
 					]
 				},
 				{
@@ -12068,7 +12068,7 @@
 				{
 					"name": "Rock",
 					"entries": [
-						"{@atk rw} {@hit 10} to hit, range 60/240 ft., one target. {@h}28 ({@damage 4d10 + 6}) bludgeoning damage. If the target is a creature, it must succeed on a DC 17 Strength saving throw or be knocked {@condition prone}."
+						"{@atk rw} 命中{@hit 10}，射程60/240呎，單一目標。{@h}28 ({@damage 4d10 + 6})鈍擊傷害。 If the target is a creature, it must succeed on a DC 17 Strength saving throw or be knocked {@condition prone}."
 					]
 				}
 			],
@@ -12159,15 +12159,15 @@
 			"cr": "16",
 			"trait": [
 				{
-					"name": "Amphibious",
+					"name": "兩棲", "tENG_name": "Amphibious",
 					"entries": [
-						"The giant can breathe air and water."
+						"giant可以在空氣和水中呼吸。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The giant makes two Lightning Sword attacks or uses Wind Javelin twice."
 					]
@@ -12175,7 +12175,7 @@
 				{
 					"name": "Lightning Sword",
 					"entries": [
-						"{@atk mw} {@hit 14} to hit, reach 15 ft., one target. {@h}40 ({@damage 9d6 + 9}) lightning damage."
+						"{@atk mw} 命中{@hit 14}，觸及15呎，單一目標。{@h}40 ({@damage 9d6 + 9}) lightning damage."
 					]
 				},
 				{
@@ -12308,7 +12308,7 @@
 				{
 					"name": "Bites",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 0 ft., one target in the swarm's space. {@h}14 ({@damage 4d6}) piercing damage, or 7 ({@damage 2d6}) piercing damage if the swarm has half of its hit points or fewer."
+						"{@atk mw} 命中{@hit 5}，觸及0呎， one target in the swarm's space. {@h}14 ({@damage 4d6}) piercing damage, or 7 ({@damage 2d6}) piercing damage if the swarm has half of its hit points or fewer."
 					]
 				}
 			],
@@ -12411,7 +12411,7 @@
 				{
 					"name": "Bites",
 					"entries": [
-						"{@atk mw} {@hit 0} to hit, reach 0 ft., one creature in the swarm's space. {@h}The target is infested by {@dice 1d4} rot grubs. At the start of each of the target's turns, the target takes {@dice 1d6} piercing damage per rot grub infesting it. Applying fire to the bite wound before the end of the target's next turn deals 1 fire damage to the target and kills these rot grubs. After this time, these rot grubs are too far under the skin to be burned. If a target infested by rot grubs ends its turn with 0 hit points, it dies as the rot grubs burrow into its heart and kill it. Any effect that cures disease kills all rot grubs infesting the target."
+						"{@atk mw} 命中{@hit 0}，觸及0呎， one creature in the swarm's space. {@h}The target is infested by {@dice 1d4} rot grubs. At the start of each of the target's turns, the target takes {@dice 1d6} piercing damage per rot grub infesting it. Applying fire to the bite wound before the end of the target's next turn deals 1 fire damage to the target and kills these rot grubs. After this time, these rot grubs are too far under the skin to be burned. If a target infested by rot grubs ends its turn with 0 hit points, it dies as the rot grubs burrow into its heart and kill it. Any effect that cures disease kills all rot grubs infesting the target."
 					]
 				}
 			],
@@ -12487,7 +12487,7 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The swashbuckler makes three attacks: one with a dagger and two with its rapier."
 					]
@@ -12495,13 +12495,13 @@
 				{
 					"name": "Dagger",
 					"entries": [
-						"{@atk mw,rw} {@hit 6} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}6 ({@damage 1d4 + 4}) piercing damage."
+						"{@atk mw,rw} 命中{@hit 6}，觸及5呎 或 射程20/60呎，單一目標。{@h}6 ({@damage 1d4 + 4})穿刺傷害。"
 					]
 				},
 				{
 					"name": "Rapier",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d8 + 4}) piercing damage."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}8 ({@damage 1d8 + 4})穿刺傷害。"
 					]
 				}
 			],
@@ -12546,7 +12546,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -12571,7 +12571,7 @@
 				"fire",
 				"poison"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 12,
 			"languages": "Abyssal, Common, Orc",
 			"cr": "5",
@@ -12591,21 +12591,21 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The tanarukk makes two attacks: one with its bite and one with its greatsword."
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d8 + 4}) piercing damage."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}8 ({@damage 1d8 + 4})穿刺傷害。"
 					]
 				},
 				{
 					"name": "Greatsword",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}11 ({@damage 2d6 + 4}) slashing damage."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}11 ({@damage 2d6 + 4})劈砍傷害."
 					]
 				}
 			],
@@ -12656,7 +12656,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -12681,7 +12681,7 @@
 				"lightning",
 				"piercing"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 14,
 			"cr": "1",
 			"trait": [
@@ -12700,9 +12700,9 @@
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}8 ({@damage 2d6 + 1}) piercing damage."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}8 ({@damage 2d6 + 1})穿刺傷害。"
 					]
 				}
 			],
@@ -12735,7 +12735,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -12757,13 +12757,13 @@
 				"stealth": "+4",
 				"survival": "+4"
 			},
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 14,
 			"languages": "Tlincalli",
 			"cr": "5",
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The tlincalli makes two attacks: one with its longsword or spiked chain, and one with its sting."
 					]
@@ -12771,19 +12771,19 @@
 				{
 					"name": "Longsword",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) slashing damage, or 8 ({@damage 1d10 + 3}) slashing damage if used with two hands."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3})劈砍傷害, or 8 ({@damage 1d10 + 3})劈砍傷害 if used with two hands."
 					]
 				},
 				{
 					"name": "Spiked Chain",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 10 ft., one target. {@h}6 ({@damage 1d6 + 3}) piercing damage, and the target is {@condition grappled} (escape DC 11) if it is a Large or smaller creature. Until this grapple ends, the target is {@condition restrained}, and the tlincalli can't use the spiked chain against another target."
+						"{@atk mw} 命中{@hit 6}，觸及10呎，單一目標。{@h}6 ({@damage 1d6 + 3}) piercing damage, and the target is {@condition grappled} (escape DC 11) if it is a Large or smaller creature. Until this grapple ends, the target is {@condition restrained}, and the tlincalli can't use the spiked chain against another target."
 					]
 				},
 				{
 					"name": "Sting",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one creature. {@h}6 ({@damage 1d6 + 3}) piercing damage plus 14 ({@damage 4d6}) poison damage, and the target must succeed on a DC 14 Constitution saving throw or be {@condition poisoned} for 1 minute. If it fails the saving throw by 5 or more, the target is also {@condition paralyzed} while {@condition poisoned}. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一生物。{@h}6 ({@damage 1d6 + 3}) piercing damage plus 14 ({@damage 4d6}) poison damage, and the target must succeed on a DC 14 Constitution saving throw or be {@condition poisoned} for 1 minute. If it fails the saving throw by 5 or more, the target is also {@condition paralyzed} while {@condition poisoned}. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				}
 			],
@@ -12869,7 +12869,7 @@
 				{
 					"name": "Quarterstaff",
 					"entries": [
-						"{@atk mw} {@hit 2} to hit, reach 5 ft., one target. {@h}2 ({@damage 1d6 - 1}) bludgeoning damage, or 3 ({@damage 1d8 - 1}) bludgeoning damage if used with two hands."
+						"{@atk mw} 命中{@hit 2}，觸及5呎，單一目標。{@h}2 ({@damage 1d6 - 1})鈍擊傷害, or 3 ({@damage 1d8 - 1})鈍擊傷害 if used with two hands."
 					]
 				}
 			],
@@ -12959,7 +12959,7 @@
 				{
 					"ac": 13,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -12980,7 +12980,7 @@
 			"skill": {
 				"stealth": "+2"
 			},
-			"senses": "blindsight 30 ft., darkvision 60 ft.",
+			"senses": "blindsight 30 ft., 黑暗視覺60呎",
 			"passive": 11,
 			"cr": "3",
 			"trait": [
@@ -13001,7 +13001,7 @@
 				{
 					"name": "Smother",
 					"entries": [
-						"One Large or smaller creature within 5 feet of the trapper must succeed on a DC 14 Dexterity saving throw or be {@condition grappled} (escape DC 14). Until the grapple ends, the target takes 17 ({@damage 4d6 + 3}) bludgeoning damage plus 3 ({@damage 1d6}) acid damage at the start of each of its turns. While {@condition grappled} in this way, the target is {@condition restrained}, {@condition blinded}, and at risk of suffocating. The trapper can smother only one creature at a time."
+						"One Large or smaller creature within 5 feet of the trapper must succeed on a DC 14 Dexterity saving throw or be {@condition grappled} (escape DC 14). Until the grapple ends, the target takes 17 ({@damage 4d6 + 3})鈍擊傷害 plus 3 ({@damage 1d6}) acid damage at the start of each of its turns. While {@condition grappled} in this way, the target is {@condition restrained}, {@condition blinded}, and at risk of suffocating. The trapper can smother only one creature at a time."
 					]
 				}
 			],
@@ -13097,13 +13097,13 @@
 				{
 					"name": "Tentacles",
 					"entries": [
-						"{@atk mw} {@hit 9} to hit, reach 10 ft., one creature. {@h}27 ({@damage 4d10 + 5}) psychic damage. If the target is Large or smaller, it is {@condition grappled} (escape DC 14) and must succeed on a DC 17 Intelligence saving throw or be {@condition stunned} until this grapple ends."
+						"{@atk mw} 命中{@hit 9}，觸及10呎，單一生物。{@h}27 ({@damage 4d10 + 5}) psychic damage. If the target is Large or smaller, it is {@condition grappled} (escape DC 14) and must succeed on a DC 17 Intelligence saving throw or be {@condition stunned} until this grapple ends."
 					]
 				},
 				{
 					"name": "Extract Brain",
 					"entries": [
-						"{@atk mw} {@hit 9} to hit, reach 5 ft., one {@condition incapacitated} humanoid {@condition grappled} by the ulitharid. {@h}55 ({@damage 10d10}) piercing damage. If this damage reduces the target to 0 hit points, the ulitharid kills the target by extracting and devouring its brain."
+						"{@atk mw} 命中{@hit 9}，觸及5呎， one {@condition incapacitated} humanoid {@condition grappled} by the ulitharid. {@h}55 ({@damage 10d10}) piercing damage. If this damage reduces the target to 0 hit points, the ulitharid kills the target by extracting and devouring its brain."
 					]
 				},
 				{
@@ -13204,15 +13204,15 @@
 			"conditionImmune": [
 				"poisoned"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 8,
 			"languages": "understands Abyssal, Infernal, and any languages it knew before becoming a vargouille but can't speak",
 			"cr": "1",
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage plus 10 ({@damage 3d6}) poison damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2}) piercing damage plus 10 ({@damage 3d6}) poison damage."
 					]
 				},
 				{
@@ -13260,7 +13260,7 @@
 				{
 					"ac": 13,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -13285,7 +13285,7 @@
 				"lightning",
 				"piercing"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 12,
 			"languages": "Vegepygmy",
 			"cr": "1/4",
@@ -13305,15 +13305,15 @@
 			],
 			"action": [
 				{
-					"name": "Claws",
+					"name": "爪抓", "tENG_name": "Claws",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) slashing damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})劈砍傷害."
 					]
 				},
 				{
 					"name": "Sling",
 					"entries": [
-						"{@atk rw} {@hit 4} to hit, range 30/120 ft., one target. {@h}4 ({@damage 1d4 + 2}) bludgeoning damage."
+						"{@atk rw} 命中{@hit 4}，射程30/120呎，單一目標。{@h}4 ({@damage 1d4 + 2})鈍擊傷害。"
 					]
 				}
 			],
@@ -13349,7 +13349,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -13374,7 +13374,7 @@
 				"lightning",
 				"piercing"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 13,
 			"languages": "Vegepygmy",
 			"cr": "2",
@@ -13394,21 +13394,21 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The vegepygmy makes two attacks with its claws or two melee attacks with its spear."
 					]
 				},
 				{
-					"name": "Claws",
+					"name": "爪抓", "tENG_name": "Claws",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) slashing damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})劈砍傷害."
 					]
 				},
 				{
 					"name": "Spear",
 					"entries": [
-						"{@atk mw,rw} {@hit 4} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage, or 6 ({@damage 1d8 + 2}) piercing damage if used with two hands to make a melee attack."
+						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或 射程20/60呎，單一目標。{@h}5 ({@damage 1d6 + 2}) piercing damage, or 6 ({@damage 1d8 + 2}) piercing damage if used with two hands to make a melee attack."
 					]
 				},
 				{
@@ -13443,7 +13443,7 @@
 			]
 		},
 		{
-			"name": "Velociraptor",
+			"name": "迅猛龍", "ENG_name": "Velociraptor",
 			"size": "T",
 			"type": "beast",
 			"source": "VGM",
@@ -13454,7 +13454,7 @@
 				{
 					"ac": 13,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -13478,29 +13478,29 @@
 			"cr": "1/4",
 			"trait": [
 				{
-					"name": "Pack Tactics",
+					"name": "群體戰術", "tENG_name": "Pack Tactics",
 					"entries": [
-						"The velociraptor has advantage on an attack roll against a creature if at least one of the velociraptor's allies is within 5 feet of the creature and the ally isn't {@condition incapacitated}."
+						"若迅猛龍有至少一個隊友距離目標生物5呎內且該隊友並未{@condition 無力}，則迅猛龍在對該生物進行的攻擊檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The velociraptor makes two attacks: one with its bite and one with its claws."
+						"迅猛龍進行二次攻擊，一次啃咬，一次爪抓。"
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one creature. {@h}5 ({@damage 1d6 + 2}) piercing damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一生物。{@h}5 ({@damage 1d6 + 2})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Claws",
+					"name": "爪抓", "tENG_name": "Claws",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d4 + 2}) slashing damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}4 ({@damage 1d4 + 2})劈砍傷害."
 					]
 				}
 			],
@@ -13568,7 +13568,7 @@
 			"cr": "9",
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The priest makes two melee attacks."
 					]
@@ -13576,7 +13576,7 @@
 				{
 					"name": "Maul",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}10 ({@damage 2d6 + 3}) bludgeoning damage."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}10 ({@damage 2d6 + 3})鈍擊傷害。"
 					]
 				}
 			],
@@ -13727,7 +13727,7 @@
 				{
 					"name": "Dagger",
 					"entries": [
-						"{@atk mw,rw} {@hit 3} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}4 ({@damage 1d4 + 2}) piercing damage."
+						"{@atk mw,rw} 命中{@hit 3}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d4 + 2})穿刺傷害。"
 					]
 				}
 			],
@@ -13869,7 +13869,7 @@
 					"note": "from nonmagical attacks not made with silvered weapons"
 				}
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 11,
 			"languages": "any two languages (usually Abyssal or Infernal)",
 			"cr": "7",
@@ -13885,7 +13885,7 @@
 				{
 					"name": "Mace",
 					"entries": [
-						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}3 ({@damage 1d6}) bludgeoning damage plus 10 ({@damage 3d6}) fire damage."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}3 ({@damage 1d6})鈍擊傷害 plus 10 ({@damage 3d6}) fire damage."
 					]
 				}
 			],
@@ -14018,7 +14018,7 @@
 			"resist": [
 				"psychic"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 11,
 			"languages": "any two languages, telepathy 30 ft.",
 			"cr": "6",
@@ -14034,7 +14034,7 @@
 				{
 					"name": "Dagger",
 					"entries": [
-						"{@atk mw,rw} {@hit 5} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}4 ({@damage 1d4 + 2}) piercing damage."
+						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d4 + 2})穿刺傷害。"
 					]
 				}
 			],
@@ -14186,7 +14186,7 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The warlord makes two weapon attacks."
 					]
@@ -14194,13 +14194,13 @@
 				{
 					"name": "Greatsword",
 					"entries": [
-						"{@atk mw} {@hit 9} to hit, reach 5 ft., one target. {@h}12 ({@damage 2d6 + 5}) slashing damage."
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5})劈砍傷害."
 					]
 				},
 				{
 					"name": "Shortbow",
 					"entries": [
-						"{@atk rw} {@hit 7} to hit, range 80/320 ft., one target. {@h}6 ({@damage 1d6 + 3}) piercing damage."
+						"{@atk rw} 命中{@hit 7}，射程80/320呎，單一目標。{@h}6 ({@damage 1d6 + 3})穿刺傷害。"
 					]
 				}
 			],
@@ -14241,7 +14241,7 @@
 			]
 		},
 		{
-			"name": "White Guard Drake",
+			"name": "白守衛龍獸", "ENG_name": "White Guard Drake",
 			"size": "M",
 			"type": "dragon",
 			"source": "VGM",
@@ -14252,7 +14252,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -14277,27 +14277,27 @@
 			"resist": [
 				"cold"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 12,
-			"languages": "understands Draconic but can't speak it",
+			"languages": "理解龍語，但不會說",
 			"cr": "2",
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The drake attacks twice, once with its bite and once with its tail."
+						"龍獸進行二次攻擊，一次啃咬，一次尾擊。"
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) piercing damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Tail",
+					"name": "尾擊", "tENG_name": "Tail",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) bludgeoning damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})鈍擊傷害。"
 					]
 				}
 			],
@@ -14335,7 +14335,7 @@
 				{
 					"ac": 18,
 					"from": [
-						"natural armor",
+						"天生護甲",
 						"{@item shield|phb}"
 					]
 				}
@@ -14370,7 +14370,7 @@
 				"charmed",
 				"frightened"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 14,
 			"languages": "Sylvan",
 			"cr": "5",
@@ -14402,7 +14402,7 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The wood woad makes two attacks with its club."
 					]
@@ -14410,7 +14410,7 @@
 				{
 					"name": "Club",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}14 ({@damage 4d4 + 4}) bludgeoning damage."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}14 ({@damage 4d4 + 4})鈍擊傷害。"
 					]
 				}
 			],
@@ -14501,13 +14501,13 @@
 				{
 					"name": "Shortsword",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害。"
 					]
 				},
 				{
 					"name": "Sling",
 					"entries": [
-						"{@atk rw} {@hit 4} to hit, range 30/120 ft., one target. {@h}4 ({@damage 1d4 + 2}) bludgeoning damage."
+						"{@atk rw} 命中{@hit 4}，射程30/120呎，單一目標。{@h}4 ({@damage 1d4 + 2})鈍擊傷害。"
 					]
 				}
 			],
@@ -14594,13 +14594,13 @@
 				{
 					"name": "Shortsword",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害。"
 					]
 				},
 				{
 					"name": "Sling",
 					"entries": [
-						"{@atk rw} {@hit 4} to hit, range 30/120 ft., one target. {@h}4 ({@damage 1d4 + 2}) bludgeoning damage."
+						"{@atk rw} 命中{@hit 4}，射程30/120呎，單一目標。{@h}4 ({@damage 1d4 + 2})鈍擊傷害。"
 					]
 				}
 			],
@@ -14690,7 +14690,7 @@
 				{
 					"name": "Scimitar",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) slashing damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})劈砍傷害."
 					]
 				}
 			],
@@ -14768,7 +14768,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -14805,7 +14805,7 @@
 				"exhaustion",
 				"frightened"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 11,
 			"languages": "understands Common, Elvish, and Sylvan but can't speak",
 			"cr": "4",
@@ -14831,9 +14831,9 @@
 			],
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}11 ({@damage 2d6 + 4}) piercing damage, plus 14 ({@damage 4d6}) psychic damage if the target is {@condition frightened}."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}11 ({@damage 2d6 + 4}) piercing damage, plus 14 ({@damage 4d6}) psychic damage if the target is {@condition frightened}."
 					]
 				},
 				{
@@ -14886,7 +14886,7 @@
 				{
 					"ac": 16,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -14920,7 +14920,7 @@
 			"conditionImmune": [
 				"poisoned"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 17,
 			"languages": "Abyssal, Common, Draconic",
 			"cr": "12",
@@ -14960,19 +14960,19 @@
 				{
 					"name": "Claw (Anathema Form Only)",
 					"entries": [
-						"{@atk mw} {@hit 10} to hit, reach 10 ft., one target. {@h}13 ({@damage 2d6 + 6}) slashing damage."
+						"{@atk mw} 命中{@hit 10}，觸及10呎，單一目標。{@h}13 ({@damage 2d6 + 6})劈砍傷害."
 					]
 				},
 				{
 					"name": "Constrict",
 					"entries": [
-						"{@atk mw} {@hit 10} to hit, reach 15 ft., one Large or smaller creature. {@h}16 ({@damage 3d6 + 6}) bludgeoning damage plus 7 ({@damage 2d6}) acid damage, and the target is {@condition grappled} (escape DC 16). Until this grapple ends, the target is {@condition restrained} and takes 16 ({@damage 3d6 + 6}) bludgeoning damage plus 7 ({@damage 2d6}) acid damage at the start of each of its turns, and the anathema can't constrict another target."
+						"{@atk mw} 命中{@hit 10}，觸及15呎， one Large or smaller creature. {@h}16 ({@damage 3d6 + 6})鈍擊傷害 plus 7 ({@damage 2d6}) acid damage, and the target is {@condition grappled} (escape DC 16). Until this grapple ends, the target is {@condition restrained} and takes 16 ({@damage 3d6 + 6})鈍擊傷害 plus 7 ({@damage 2d6}) acid damage at the start of each of its turns, and the anathema can't constrict another target."
 					]
 				},
 				{
 					"name": "Flurry of Bites",
 					"entries": [
-						"{@atk mw} {@hit 10} to hit, reach 10 ft., one creature. {@h}27 ({@damage 6d6 + 6}) piercing damage plus 14 ({@damage 4d6}) poison damage."
+						"{@atk mw} 命中{@hit 10}，觸及10呎，單一生物。{@h}27 ({@damage 6d6 + 6}) piercing damage plus 14 ({@damage 4d6}) poison damage."
 					]
 				}
 			],
@@ -15073,7 +15073,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -15104,7 +15104,7 @@
 			"conditionImmune": [
 				"poisoned"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 12,
 			"languages": "Abyssal, Common, Draconic",
 			"cr": "2",
@@ -15124,21 +15124,21 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
 						"The broodguard makes three attacks: one with its bite and two with its claws."
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) piercing damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}6 ({@damage 1d8 + 2})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Claws",
+					"name": "爪抓", "tENG_name": "Claws",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) slashing damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})劈砍傷害."
 					]
 				}
 			],
@@ -15225,7 +15225,7 @@
 			"conditionImmune": [
 				"poisoned"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 11,
 			"languages": "Abyssal, Common, Draconic",
 			"cr": "3",
@@ -15261,19 +15261,19 @@
 				{
 					"name": "Bite (Snake Form Only)",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one creature. {@h}5 ({@damage 1d4 + 3}) piercing damage plus 7 ({@damage 2d6}) poison damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}5 ({@damage 1d4 + 3}) piercing damage plus 7 ({@damage 2d6}) poison damage."
 					]
 				},
 				{
 					"name": "Scimitar (Yuan-ti Form Only)",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) slashing damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})劈砍傷害."
 					]
 				},
 				{
 					"name": "Longbow (Yuan-ti Form Only)",
 					"entries": [
-						"{@atk rw} {@hit 4} to hit, range 150/600 ft., one target. {@h}6 ({@damage 1d8 + 2}) piercing damage."
+						"{@atk rw} 命中{@hit 4}，射程150/600呎，單一目標。{@h}6 ({@damage 1d8 + 2})穿刺傷害。"
 					]
 				}
 			],
@@ -15364,7 +15364,7 @@
 			"conditionImmune": [
 				"poisoned"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 11,
 			"languages": "Abyssal, Common, Draconic",
 			"cr": "3",
@@ -15400,19 +15400,19 @@
 				{
 					"name": "Bite (Snake Form Only)",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one creature. {@h}5 ({@damage 1d4 + 3}) piercing damage plus 7 ({@damage 2d6}) poison damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}5 ({@damage 1d4 + 3}) piercing damage plus 7 ({@damage 2d6}) poison damage."
 					]
 				},
 				{
 					"name": "Scimitar (Yuan-ti Form Only)",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) slashing damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})劈砍傷害."
 					]
 				},
 				{
 					"name": "Longbow (Yuan-ti Form Only)",
 					"entries": [
-						"{@atk rw} {@hit 4} to hit, range 150/600 ft., one target. {@h}6 ({@damage 1d8 + 2}) piercing damage."
+						"{@atk rw} 命中{@hit 4}，射程150/600呎，單一目標。{@h}6 ({@damage 1d8 + 2})穿刺傷害。"
 					]
 				}
 			],
@@ -15481,7 +15481,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -15550,15 +15550,15 @@
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d4 + 3}) piercing damage plus 7 ({@damage 2d6}) poison damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}5 ({@damage 1d4 + 3}) piercing damage plus 7 ({@damage 2d6}) poison damage."
 					]
 				},
 				{
 					"name": "Scimitar (Yuan-ti Form Only)",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) slashing damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})劈砍傷害."
 					]
 				}
 			],
@@ -15677,7 +15677,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -15742,13 +15742,13 @@
 				{
 					"name": "Constrict",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 10 ft., one target. {@h}10 ({@damage 2d6 + 3}) bludgeoning damage, and the target is {@condition grappled} (escape DC 14) if it is a Large or smaller creature. Until this grapple ends, the target is {@condition restrained}, and the yuan-ti can't constrict another target."
+						"{@atk mw} 命中{@hit 5}，觸及10呎，單一目標。{@h}10 ({@damage 2d6 + 3})鈍擊傷害, and the target is {@condition grappled} (escape DC 14) if it is a Large or smaller creature. Until this grapple ends, the target is {@condition restrained}, and the yuan-ti can't constrict another target."
 					]
 				},
 				{
 					"name": "Scimitar (Yuan-ti Form Only)",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) slashing damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})劈砍傷害."
 					]
 				},
 				{
@@ -15873,7 +15873,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -15936,9 +15936,9 @@
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d4 + 3}) piercing damage plus 7 ({@damage 2d6}) poison damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}5 ({@damage 1d4 + 3}) piercing damage plus 7 ({@damage 2d6}) poison damage."
 					]
 				},
 				{
