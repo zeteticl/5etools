@@ -17,7 +17,7 @@
 				12,
 				{
 					"ac": 15,
-					"condition": "with {@spell mage armor}",
+					"condition": "with {@spell 法師護甲}",
 					"braces": true
 				}
 			],
@@ -74,7 +74,7 @@
 								"{@spell blade ward}",
 								"{@spell dancing lights}",
 								"{@spell mending}",
-								"{@spell message}",
+								"{@spell 傳訊術}",
 								"{@spell ray of frost}"
 							]
 						},
@@ -82,7 +82,7 @@
 							"slots": 4,
 							"spells": [
 								"{@spell alarm}*",
-								"{@spell mage armor}",
+								"{@spell 法師護甲}",
 								"{@spell magic missile}",
 								"{@spell shield}*"
 							]
@@ -91,13 +91,13 @@
 							"slots": 3,
 							"spells": [
 								"{@spell arcane lock}*",
-								"{@spell invisibility}"
+								"{@spell 隱形術}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell counterspell}*",
+								"{@spell 反制法術}*",
 								"{@spell dispel magic}*",
 								"{@spell fireball}"
 							]
@@ -226,7 +226,7 @@
 			"cr": "10",
 			"trait": [
 				{
-					"name": "Magic Resistance",
+					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
 						"The alhoon has advantage on saving throws against spells and other magical effects."
 					]
@@ -260,7 +260,7 @@
 						"The alhoon's innate spellcasting ability is Intelligence (spell save DC 16). It can innately cast the following spells, requiring no components:"
 					],
 					"will": [
-						"{@spell detect thoughts}",
+						"{@spell 偵測思想}",
 						"{@spell levitate}"
 					],
 					"daily": {
@@ -279,17 +279,17 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell chill touch}",
+								"{@spell 寒顫之觸}",
 								"{@spell dancing lights}",
-								"{@spell mage hand}",
-								"{@spell prestidigitation}",
+								"{@spell 法師之手}",
+								"{@spell 魔法技倆}",
 								"{@spell shocking grasp}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell detect magic}",
+								"{@spell 偵測魔法}",
 								"{@spell disguise self}",
 								"{@spell magic missile}",
 								"{@spell shield}"
@@ -298,16 +298,16 @@
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell invisibility}",
+								"{@spell 隱形術}",
 								"{@spell mirror image}",
-								"{@spell scorching ray}"
+								"{@spell 灼熱射線}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell counterspell}",
-								"{@spell fly}",
+								"{@spell 反制法術}",
+								"{@spell 飛行術}",
 								"{@spell lightning bolt}"
 							]
 						},
@@ -450,7 +450,7 @@
 				{
 					"name": "爪抓", "tENG_name": "Claw",
 					"entries": [
-						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}15 ({@damage 3d6 + 5})劈砍傷害."
+						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}15 ({@damage 3d6 + 5})劈砍傷害。"
 					]
 				},
 				{
@@ -491,7 +491,7 @@
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell hold person}",
+								"{@spell 人類定身術}",
 								"{@spell locate object}"
 							]
 						},
@@ -499,7 +499,7 @@
 							"slots": 3,
 							"spells": [
 								"{@spell bestow curse}",
-								"{@spell counterspell}",
+								"{@spell 反制法術}",
 								"{@spell lightning bolt}"
 							]
 						},
@@ -507,7 +507,7 @@
 							"slots": 3,
 							"spells": [
 								"{@spell phantasmal killer}",
-								"{@spell polymorph}"
+								"{@spell 變形術}"
 							]
 						},
 						"5": {
@@ -587,7 +587,7 @@
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell entangle}",
+								"{@spell 糾纏術}",
 								"{@spell speak with animals}"
 							]
 						},
@@ -645,7 +645,7 @@
 							"slots": 3,
 							"spells": [
 								"{@spell augury}",
-								"{@spell detect thoughts}"
+								"{@spell 偵測思想}"
 							]
 						},
 						"3": {
@@ -762,13 +762,13 @@
 							"spells": [
 								"{@spell fire bolt}",
 								"{@spell mending}",
-								"{@spell prestidigitation}"
+								"{@spell 魔法技倆}"
 							]
 						},
 						"1": {
 							"slots": 2,
 							"spells": [
-								"{@spell burning hands}",
+								"{@spell 燃燒之手}",
 								"{@spell disguise self}",
 								"{@spell shield}"
 							]
@@ -853,7 +853,7 @@
 				{
 					"name": "Scimitar",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})劈砍傷害."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})劈砍傷害。"
 					]
 				},
 				{
@@ -877,7 +877,7 @@
 							"spells": [
 								"{@spell druidcraft}",
 								"{@spell mending}",
-								"{@spell poison spray}",
+								"{@spell 毒氣噴灑}",
 								"{@spell produce flame}"
 							]
 						},
@@ -885,7 +885,7 @@
 							"slots": 4,
 							"spells": [
 								"{@spell cure wounds}",
-								"{@spell entangle}",
+								"{@spell 糾纏術}",
 								"{@spell faerie fire}",
 								"{@spell speak with animals}"
 							]
@@ -895,7 +895,7 @@
 							"spells": [
 								"{@spell animal messenger}",
 								"{@spell beast sense}",
-								"{@spell hold person}"
+								"{@spell 人類定身術}"
 							]
 						},
 						"3": {
@@ -1189,7 +1189,7 @@
 				{
 					"name": "爪抓", "tENG_name": "Claw",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}8 ({@damage 1d8 + 4})劈砍傷害."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}8 ({@damage 1d8 + 4})劈砍傷害。"
 					]
 				},
 				{
@@ -1213,9 +1213,9 @@
 						"The babau's innate spellcasting ability is Wisdom (spell save DC 11). The babau can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell darkness}",
+						"{@spell 黑暗術}",
 						"{@spell dispel magic}",
-						"{@spell fear}",
+						"{@spell 恐懼術}",
 						"{@spell heat metal}",
 						"{@spell levitate}"
 					],
@@ -1431,15 +1431,15 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell friends}",
-								"{@spell mage hand}",
+								"{@spell 交友術}",
+								"{@spell 法師之手}",
 								"{@spell vicious mockery}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell charm person}",
+								"{@spell 魅惑人類}",
 								"{@spell healing word}",
 								"{@spell heroism}",
 								"{@spell sleep}",
@@ -1449,7 +1449,7 @@
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell invisibility}",
+								"{@spell 隱形術}",
 								"{@spell shatter}"
 							]
 						}
@@ -1546,7 +1546,7 @@
 			"cr": "4",
 			"trait": [
 				{
-					"name": "Shapechanger",
+					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
 						"The barghest can use its action to polymorph into a Small goblin or back into its true form. Other than its size and speed, its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. The barghest reverts to its true form if it dies."
 					]
@@ -1581,7 +1581,7 @@
 				{
 					"name": "爪抓", "tENG_name": "Claws",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}8 ({@damage 1d8 + 4})劈砍傷害."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}8 ({@damage 1d8 + 4})劈砍傷害。"
 					]
 				}
 			],
@@ -1594,14 +1594,14 @@
 					],
 					"will": [
 						"{@spell levitate}",
-						"{@spell minor illusion}",
+						"{@spell 次級幻象}",
 						"{@spell pass without trace}"
 					],
 					"daily": {
 						"1e": [
-							"{@spell charm person}",
+							"{@spell 魅惑人類}",
 							"{@spell dimension door}",
-							"{@spell suggestion}"
+							"{@spell 暗示術}"
 						]
 					},
 					"ability": "cha"
@@ -1737,7 +1737,7 @@
 						"The hag's innate spellcasting ability is Charisma (spell save DC 14, {@hit 6} to hit with spell attacks). She can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell hold person}*",
+						"{@spell 人類定身術}*",
 						"{@spell ray of frost}"
 					],
 					"daily": {
@@ -1768,7 +1768,7 @@
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell hold person}",
+								"{@spell 人類定身術}",
 								"{@spell locate object}"
 							]
 						},
@@ -1776,7 +1776,7 @@
 							"slots": 3,
 							"spells": [
 								"{@spell bestow curse}",
-								"{@spell counterspell}",
+								"{@spell 反制法術}",
 								"{@spell lightning bolt}"
 							]
 						},
@@ -1784,7 +1784,7 @@
 							"slots": 3,
 							"spells": [
 								"{@spell phantasmal killer}",
-								"{@spell polymorph}"
+								"{@spell 變形術}"
 							]
 						},
 						"5": {
@@ -1864,7 +1864,7 @@
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell entangle}",
+								"{@spell 糾纏術}",
 								"{@spell speak with animals}"
 							]
 						},
@@ -1922,7 +1922,7 @@
 							"slots": 3,
 							"spells": [
 								"{@spell augury}",
-								"{@spell detect thoughts}"
+								"{@spell 偵測思想}"
 							]
 						},
 						"3": {
@@ -2130,7 +2130,7 @@
 				{
 					"name": "Glaive",
 					"entries": [
-						"{@atk mw} 命中{@hit 7}，觸及10呎，單一目標。{@h}9 ({@damage 1d10 + 4})劈砍傷害."
+						"{@atk mw} 命中{@hit 7}，觸及10呎，單一目標。{@h}9 ({@damage 1d10 + 4})劈砍傷害。"
 					]
 				},
 				{
@@ -2157,7 +2157,7 @@
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell command}",
+								"{@spell 命令術}",
 								"{@spell protection from evil and good}",
 								"{@spell thunderous smite}"
 							]
@@ -2693,7 +2693,7 @@
 				{
 					"name": "爪抓", "tENG_name": "Claw",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}10 ({@damage 2d6 + 3})劈砍傷害."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}10 ({@damage 2d6 + 3})劈砍傷害。"
 					]
 				},
 				{
@@ -3003,7 +3003,7 @@
 				{
 					"name": "Dagger",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或 射程20/60呎，單一目標。{@h}5 ({@damage 1d4 + 3}) piercing damage plus 10 ({@damage 3d6}) poison damage."
+						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或 射程20/60呎，單一目標。{@h}5 ({@damage 1d4 + 3})穿刺傷害加 10 ({@damage 3d6})毒素傷害。"
 					]
 				},
 				{
@@ -3023,7 +3023,7 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell guidance}",
+								"{@spell 指導術}",
 								"{@spell mending}",
 								"{@spell resistance}",
 								"{@spell thaumaturgy}"
@@ -3041,7 +3041,7 @@
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell hold person}",
+								"{@spell 人類定身術}",
 								"{@spell spiritual weapon} (dagger)"
 							]
 						}
@@ -3165,15 +3165,15 @@
 						"The giant's innate spellcasting ability is Charisma (spell save DC 15). It can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell detect magic}",
+						"{@spell 偵測魔法}",
 						"{@spell fog cloud}",
 						"{@spell light}"
 					],
 					"daily": {
 						"3e": [
 							"{@spell feather fall}",
-							"{@spell fly}",
-							"{@spell misty step}",
+							"{@spell 飛行術}",
+							"{@spell 迷蹤步}",
 							"{@spell telekinesis}"
 						],
 						"1e": [
@@ -3191,8 +3191,8 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell minor illusion}",
-								"{@spell prestidigitation}",
+								"{@spell 次級幻象}",
+								"{@spell 魔法技倆}",
 								"{@spell vicious mockery}"
 							]
 						},
@@ -3208,8 +3208,8 @@
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell invisibility}",
-								"{@spell suggestion}"
+								"{@spell 隱形術}",
+								"{@spell 暗示術}"
 							]
 						},
 						"3": {
@@ -3262,7 +3262,7 @@
 				12,
 				{
 					"ac": 15,
-					"condition": "with {@spell mage armor}",
+					"condition": "with {@spell 法師護甲}",
 					"braces": true
 				}
 			],
@@ -3317,24 +3317,24 @@
 						"0": {
 							"spells": [
 								"{@spell acid splash}",
-								"{@spell mage hand}",
-								"{@spell poison spray}",
-								"{@spell prestidigitation}"
+								"{@spell 法師之手}",
+								"{@spell 毒氣噴灑}",
+								"{@spell 魔法技倆}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell mage armor}",
+								"{@spell 法師護甲}",
 								"{@spell magic missile}",
-								"{@spell unseen servant}*"
+								"{@spell 隱形僕役}*"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
 								"{@spell cloud of daggers}*",
-								"{@spell misty step}*",
+								"{@spell 迷蹤步}*",
 								"{@spell web}*"
 							]
 						},
@@ -3735,7 +3735,7 @@
 				{
 					"name": "Lightning Blood",
 					"entries": [
-						"A creature within 5 feet of the death kiss takes 5 ({@damage 1d10}) lightning damage whenever it hits the death kiss with a melee attack that deals piercing or劈砍傷害."
+						"A creature within 5 feet of the death kiss takes 5 ({@damage 1d10}) lightning damage whenever it hits the death kiss with a melee attack that deals piercing or劈砍傷害。"
 					]
 				}
 			],
@@ -3905,7 +3905,7 @@
 			"cr": "3",
 			"trait": [
 				{
-					"name": "Shapechanger",
+					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
 						"The deep scion can use its action to polymorph into a humanoid-piscine hybrid form, or back into its true form. Its statistics, other than its speed, are the same in each form. Any equipment it is wearing or carrying isn't transformed. The deep scion reverts to its true form if it dies."
 					]
@@ -3939,7 +3939,7 @@
 				{
 					"name": "Claw (Hybrid Form Only)",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}7 ({@damage 1d6 + 4})劈砍傷害."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}7 ({@damage 1d6 + 4})劈砍傷害。"
 					]
 				},
 				{
@@ -4215,7 +4215,7 @@
 				12,
 				{
 					"ac": 15,
-					"condition": "with {@spell mage armor}",
+					"condition": "with {@spell 法師護甲}",
 					"braces": true
 				}
 			],
@@ -4271,32 +4271,32 @@
 							"spells": [
 								"{@spell fire bolt}",
 								"{@spell light}",
-								"{@spell mage hand}",
-								"{@spell message}",
+								"{@spell 法師之手}",
+								"{@spell 傳訊術}",
 								"{@spell true strike}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell detect magic}*",
+								"{@spell 偵測魔法}*",
 								"{@spell feather fall}",
-								"{@spell mage armor}"
+								"{@spell 法師護甲}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell detect thoughts}*",
+								"{@spell 偵測思想}*",
 								"{@spell locate object}*",
-								"{@spell scorching ray}"
+								"{@spell 灼熱射線}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
 								"{@spell clairvoyance}*",
-								"{@spell fly}",
+								"{@spell 飛行術}",
 								"{@spell fireball}"
 							]
 						},
@@ -4509,7 +4509,7 @@
 				{
 					"name": "爪抓", "tENG_name": "Claws",
 					"entries": [
-						"{@atk mw} 命中{@hit 8}，觸及10呎，單一目標。{@h}16 ({@damage 2d10 + 5})劈砍傷害."
+						"{@atk mw} 命中{@hit 8}，觸及10呎，單一目標。{@h}16 ({@damage 2d10 + 5})劈砍傷害。"
 					]
 				}
 			],
@@ -4521,7 +4521,7 @@
 						"The draegloth's innate spellcasting ability is Charisma (spell save DC 11). The draegloth can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell darkness}"
+						"{@spell 黑暗術}"
 					],
 					"daily": {
 						"1e": [
@@ -4615,7 +4615,7 @@
 					]
 				},
 				{
-					"name": "Magic Resistance",
+					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
 						"The elder brain has advantage on saving throws against spells and other magical effects."
 					]
@@ -4691,7 +4691,7 @@
 						"The elder brain's innate spellcasting ability is Intelligence (spell save DC 18). It can innately cast the following spells, requiring no components:"
 					],
 					"will": [
-						"{@spell detect thoughts}",
+						"{@spell 偵測思想}",
 						"{@spell levitate}"
 					],
 					"daily": {
@@ -4750,7 +4750,7 @@
 				12,
 				{
 					"ac": 15,
-					"condition": "with {@spell mage armor}",
+					"condition": "with {@spell 法師護甲}",
 					"braces": true
 				}
 			],
@@ -4805,33 +4805,33 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell friends}",
-								"{@spell mage hand}",
+								"{@spell 交友術}",
+								"{@spell 法師之手}",
 								"{@spell mending}",
-								"{@spell message}"
+								"{@spell 傳訊術}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell charm person}*",
-								"{@spell mage armor}",
+								"{@spell 魅惑人類}*",
+								"{@spell 法師護甲}",
 								"{@spell magic missile}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell hold person}*",
-								"{@spell invisibility}",
-								"{@spell suggestion}*"
+								"{@spell 人類定身術}*",
+								"{@spell 隱形術}",
+								"{@spell 暗示術}*"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
 								"{@spell fireball}",
-								"{@spell haste}",
+								"{@spell 加速術}",
 								"{@spell tongues}"
 							]
 						},
@@ -4886,7 +4886,7 @@
 				12,
 				{
 					"ac": 15,
-					"condition": "with {@spell mage armor}",
+					"condition": "with {@spell 法師護甲}",
 					"braces": true
 				}
 			],
@@ -4942,15 +4942,15 @@
 							"spells": [
 								"{@spell fire bolt}*",
 								"{@spell light}*",
-								"{@spell prestidigitation}",
+								"{@spell 魔法技倆}",
 								"{@spell ray of frost}*"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell burning hands}*",
-								"{@spell mage armor}",
+								"{@spell 燃燒之手}*",
+								"{@spell 法師護甲}",
 								"{@spell magic missile}*"
 							]
 						},
@@ -4958,14 +4958,14 @@
 							"slots": 3,
 							"spells": [
 								"{@spell mirror image}",
-								"{@spell misty step}",
+								"{@spell 迷蹤步}",
 								"{@spell shatter}*"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell counterspell}",
+								"{@spell 反制法術}",
 								"{@spell fireball}*",
 								"{@spell lightning bolt}*"
 							]
@@ -5133,7 +5133,7 @@
 				10,
 				{
 					"ac": 13,
-					"condition": "with {@spell mage armor}",
+					"condition": "with {@spell 法師護甲}",
 					"braces": true
 				}
 			],
@@ -5153,7 +5153,7 @@
 			"immune": [
 				"fire"
 			],
-			"senses": "darkvision 120 ft. (penetrates magical darkness)",
+			"senses": "黑暗視覺120呎（看透魔法黑暗）",
 			"passive": 10,
 			"languages": "Draconic, Ignan",
 			"cr": "1",
@@ -5184,10 +5184,10 @@
 				{
 					"name": "天生施法", "tENG_name": "Innate Spellcasting",
 					"headerEntries": [
-						"The firenewt's innate spellcasting ability is Charisma. It can innately cast {@spell mage armor} (self only) at will, requiring no material components."
+						"The firenewt's innate spellcasting ability is Charisma. It can innately cast {@spell 法師護甲} (self only) at will, requiring no material components."
 					],
 					"will": [
-						"{@spell mage armor}"
+						"{@spell 法師護甲}"
 					],
 					"hidden": [
 						"will"
@@ -5203,20 +5203,20 @@
 						"0": {
 							"spells": [
 								"{@spell fire bolt}",
-								"{@spell guidance}",
+								"{@spell 指導術}",
 								"{@spell light}",
-								"{@spell mage hand}",
-								"{@spell prestidigitation}"
+								"{@spell 法師之手}",
+								"{@spell 魔法技倆}"
 							]
 						},
 						"2": {
 							"lower": 1,
 							"slots": 2,
 							"spells": [
-								"{@spell burning hands}",
+								"{@spell 燃燒之手}",
 								"{@spell flaming sphere}",
-								"{@spell hellish rebuke}",
-								"{@spell scorching ray}"
+								"{@spell 煉獄叱喝}",
+								"{@spell 灼熱射線}"
 							]
 						}
 					},
@@ -5307,7 +5307,7 @@
 				{
 					"name": "Scimitar",
 					"entries": [
-						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}4 ({@damage 1d6 + 1})劈砍傷害."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}4 ({@damage 1d6 + 1})劈砍傷害。"
 					]
 				},
 				{
@@ -5729,7 +5729,7 @@
 						"As a bonus action, the giant can enter a rage at the start of its turn. The rage lasts for 1 minute or until the giant is {@condition incapacitated}. While raging, the giant gains the following benefits:",
 						"- The giant has advantage on Strength checks and Strength saving throws",
 						"- When it makes a melee weapon attack, the giant gains a +4 bonus to the damage roll.",
-						"- The giant has resistance to bludgeoning, piercing, and劈砍傷害."
+						"- The giant has resistance to bludgeoning, piercing, and劈砍傷害。"
 					]
 				}
 			],
@@ -6125,7 +6125,7 @@
 				{
 					"name": "爪抓", "tENG_name": "Claw",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit. reach 10 ft., one target. {@h}7 ({@damage 1d6 + 4})劈砍傷害."
+						"{@atk mw} {@hit 6} to hit. reach 10 ft., one target. {@h}7 ({@damage 1d6 + 4})劈砍傷害。"
 					]
 				}
 			],
@@ -6617,7 +6617,7 @@
 				{
 					"name": "Dagger",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d4 + 2}) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 5 ({@damage 2d4}) poison damage."
+						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d4 + 2}) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 5 ({@damage 2d4})毒素傷害。"
 					]
 				}
 			],
@@ -6723,13 +6723,13 @@
 				{
 					"name": "Dagger",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或 射程20/60呎，單一目標。{@h}5 ({@damage 1d4 + 3}) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 5 ({@damage 2d4}) poison damage."
+						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或 射程20/60呎，單一目標。{@h}5 ({@damage 1d4 + 3}) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 5 ({@damage 2d4})毒素傷害。"
 					]
 				},
 				{
 					"name": "Shortbow",
 					"entries": [
-						"{@atk rw} 命中{@hit 5}，射程80/320呎，單一目標。{@h}6 ({@damage 1d6 + 3}) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 5 ({@damage 2d4}) poison damage."
+						"{@atk rw} 命中{@hit 5}，射程80/320呎，單一目標。{@h}6 ({@damage 1d6 + 3}) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 5 ({@damage 2d4})毒素傷害。"
 					]
 				},
 				{
@@ -6845,13 +6845,13 @@
 				{
 					"name": "Dagger",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或 射程20/60呎，單一目標。{@h}5 ({@damage 1d4 + 3}) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 5 ({@damage 2d4}) poison damage."
+						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或 射程20/60呎，單一目標。{@h}5 ({@damage 1d4 + 3}) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 5 ({@damage 2d4})毒素傷害。"
 					]
 				},
 				{
 					"name": "Shortbow",
 					"entries": [
-						"{@atk rw} 命中{@hit 5}，射程80/320呎，單一目標。{@h}6 ({@damage 1d6 + 3}) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 5 ({@damage 2d4}) poison damage."
+						"{@atk rw} 命中{@hit 5}，射程80/320呎，單一目標。{@h}6 ({@damage 1d6 + 3}) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 5 ({@damage 2d4})毒素傷害。"
 					]
 				}
 			],
@@ -7061,14 +7061,14 @@
 							"spells": [
 								"{@spell gust of wind}",
 								"{@spell Melf's acid arrow}",
-								"{@spell scorching ray}"
+								"{@spell 灼熱射線}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
 								"{@spell fireball}",
-								"{@spell fly}",
+								"{@spell 飛行術}",
 								"{@spell lightning bolt}"
 							]
 						},
@@ -7185,17 +7185,17 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell minor illusion}",
-								"{@spell prestidigitation}",
+								"{@spell 次級幻象}",
+								"{@spell 魔法技倆}",
 								"{@spell true strike}"
 							]
 						},
 						"1": {
 							"slots": 3,
 							"spells": [
-								"{@spell charm person}",
+								"{@spell 魅惑人類}",
 								"{@spell disguise self}",
-								"{@spell expeditious retreat}",
+								"{@spell 腳底抹油}",
 								"{@spell silent image}"
 							]
 						}
@@ -7320,7 +7320,7 @@
 					]
 				},
 				{
-					"name": "Magic Resistance",
+					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
 						"The illithilich has advantage on saving throws against spells and other magical effects."
 					]
@@ -7390,7 +7390,7 @@
 						"The illithilich's innate spellcasting ability is Intelligence (spell save DC 20). It can innately cast the following spells, requiring no components."
 					],
 					"will": [
-						"{@spell detect thoughts}",
+						"{@spell 偵測思想}",
 						"{@spell levitate}"
 					],
 					"daily": {
@@ -7409,15 +7409,15 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell mage hand}",
-								"{@spell prestidigitation}",
+								"{@spell 法師之手}",
+								"{@spell 魔法技倆}",
 								"{@spell ray of frost}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell detect magic}",
+								"{@spell 偵測魔法}",
 								"{@spell magic missile}",
 								"{@spell shield}",
 								"{@spell thunderwave}"
@@ -7426,8 +7426,8 @@
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell detect thoughts}",
-								"{@spell invisibility}",
+								"{@spell 偵測思想}",
+								"{@spell 隱形術}",
 								"{@spell Melf's acid arrow}",
 								"{@spell mirror image}"
 							]
@@ -7436,7 +7436,7 @@
 							"slots": 3,
 							"spells": [
 								"{@spell animate dead}",
-								"{@spell counterspell}",
+								"{@spell 反制法術}",
 								"{@spell dispel magic}",
 								"{@spell fireball}"
 							]
@@ -7535,7 +7535,7 @@
 				12,
 				{
 					"ac": 15,
-					"condition": "with {@spell mage armor}",
+					"condition": "with {@spell 法師護甲}",
 					"braces": true
 				}
 			],
@@ -7590,9 +7590,9 @@
 						"0": {
 							"spells": [
 								"{@spell dancing lights}",
-								"{@spell mage hand}",
-								"{@spell minor illusion}",
-								"{@spell poison spray}"
+								"{@spell 法師之手}",
+								"{@spell 次級幻象}",
+								"{@spell 毒氣噴灑}"
 							]
 						},
 						"1": {
@@ -7600,14 +7600,14 @@
 							"spells": [
 								"{@spell color spray}*",
 								"{@spell disguise self}*",
-								"{@spell mage armor}",
+								"{@spell 法師護甲}",
 								"{@spell magic missile}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell invisibility}*",
+								"{@spell 隱形術}*",
 								"{@spell mirror image}*",
 								"{@spell phantasmal force}"
 							]
@@ -7704,7 +7704,7 @@
 					]
 				},
 				{
-					"name": "Magic Resistance",
+					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
 						"The ki-rin has advantage on saving throws against spells and other magical effects."
 					]
@@ -7797,7 +7797,7 @@
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell command}",
+								"{@spell 命令術}",
 								"{@spell cure wounds}",
 								"{@spell detect evil and good}",
 								"{@spell protection from evil and good}",
@@ -8080,7 +8080,7 @@
 						"{@i 3. Basket of Centipedes}. The kobold throws a small basket into a 5-foot-square space within 20 feet of it. A {@creature swarm of centipedes|mm|swarm of insects (centipedes)} with 11 hit points emerges from the basket and rolls initiative. At the end of each of the swarm's turns, there's a {@chance 50} chance that the swarm disperses.",
 						"{@i 4. Green Slime Pot}. The kobold throws a clay pot full of green slime at the target, and it breaks open on impact. {@atk rw} 命中{@hit 4}，射程5/20呎，單一目標。{@h}The target is covered in a patch of {@hazard green slime} (see chapter 5 of the Dungeon Master's Guide). Miss: A patch of green slime covers a randomly determined 5-foot-square section of wall or floor within 5 feet of the target.",
 						"{@i 5. Rot Grub Pot}. The kobold throws a clay pot into a 5-foot-square space within 20 feet of it, and it breaks open on impact. A {@creature Swarm of Rot Grubs|vgm|swarm of rot grubs} (see appendix A) emerges from the shattered pot and remains a hazard in that square.",
-						"{@i 6. Scorpion on a Stick}. The kobold makes a melee attack with a scorpion tied to the end of a 5-foot-long pole. {@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}1 piercing damage, and the target must make a DC 9 Constitution saving throw, taking 4 ({@damage 1d8}) poison damage on a failed save, or half as much damage on a successful one.",
+						"{@i 6. Scorpion on a Stick}. The kobold makes a melee attack with a scorpion tied to the end of a 5-foot-long pole. {@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}1 piercing damage, and the target must make a DC 9 Constitution saving throw, taking 4 ({@damage 1d8})毒素傷害 on a failed save, or half as much damage on a successful one.",
 						"{@i 7. Skunk in a Cage}. The kobold releases a skunk into an unoccupied space within 5 feet of it. The skunk has a walking speed of 20 feet, AC 10, 1 hit point, and no effective attacks. It rolls initiative and, on its turn, uses its action to spray musk at a random creature within 5 feet of it. The target must make a DC 9 Constitution saving throw. On a failed save, the target retches and can't take actions for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. A creature that doesn't need to breathe or is immune to poison automatically succeeds on the saving throw. Once the skunk has sprayed its musk, it can't do so again until it finishes a short or long rest.",
 						"{@i 8. Wasp Nest in a Bag}. The kobold throws a small bag into a 5-foot-square space within 20 feet of it. A {@creature swarm of wasps|mm|swarm of insects (wasps)} with 11 hit points emerges from the bag and rolls initiative. At the end of each of the swarm's turns, there's a {@chance 50} chance that the swarm disperses."
 					]
@@ -8198,23 +8198,23 @@
 						"0": {
 							"spells": [
 								"{@spell fire bolt}",
-								"{@spell mage hand}",
+								"{@spell 法師之手}",
 								"{@spell mending}",
-								"{@spell poison spray}"
+								"{@spell 毒氣噴灑}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell charm person}",
+								"{@spell 魅惑人類}",
 								"{@spell chromatic orb}",
-								"{@spell expeditious retreat}"
+								"{@spell 腳底抹油}"
 							]
 						},
 						"2": {
 							"slots": 2,
 							"spells": [
-								"{@spell scorching ray}"
+								"{@spell 灼熱射線}"
 							]
 						}
 					},
@@ -8463,13 +8463,13 @@
 						"The priest's spellcasting ability is Wisdom (spell save DC 13, {@hit 5} to hit with spell attacks). It can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell command}",
+						"{@spell 命令術}",
 						"{@spell create or destroy water}"
 					],
 					"daily": {
 						"3e": [
 							"{@spell control water}",
-							"{@spell darkness}",
+							"{@spell 黑暗術}",
 							"{@spell water breathing}",
 							"{@spell water walk}"
 						],
@@ -9053,7 +9053,7 @@
 			"cr": "8",
 			"trait": [
 				{
-					"name": "Magic Resistance",
+					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
 						"The mind flayer has advantage on saving throws against spells and other magical effects."
 					]
@@ -9087,8 +9087,8 @@
 						"The mind flayer is a 10th-level spellcaster. Its innate spellcasting ability is Intelligence (spell save DC 15; {@hit 7} to hit with spell attacks). It can innately cast the following spells, requiring no components:"
 					],
 					"will": [
-						"{@spell guidance}",
-						"{@spell mage hand}",
+						"{@spell 指導術}",
+						"{@spell 法師之手}",
 						"{@spell vicious mockery}",
 						"{@spell true strike}"
 					],
@@ -9096,8 +9096,8 @@
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell charm person}",
-								"{@spell command}",
+								"{@spell 魅惑人類}",
+								"{@spell 命令術}",
 								"{@spell comprehend languages}",
 								"{@spell sanctuary}"
 							]
@@ -9105,7 +9105,7 @@
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell crown of madness}",
+								"{@spell 瘋狂冠冕}",
 								"{@spell phantasmal force}",
 								"{@spell see invisibility}"
 							]
@@ -9114,7 +9114,7 @@
 							"slots": 3,
 							"spells": [
 								"{@spell clairvoyance}",
-								"{@spell fear}",
+								"{@spell 恐懼術}",
 								"{@spell meld into stone}"
 							]
 						},
@@ -9351,7 +9351,7 @@
 				{
 					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}9 ({@damage 2d6 + 2})劈砍傷害."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}9 ({@damage 2d6 + 2})劈砍傷害。"
 					]
 				},
 				{
@@ -9386,7 +9386,7 @@
 						"0": {
 							"spells": [
 								"{@spell acid splash}",
-								"{@spell mage hand}",
+								"{@spell 法師之手}",
 								"{@spell mending}",
 								"{@spell ray of frost}",
 								"{@spell shocking grasp}"
@@ -9395,17 +9395,17 @@
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell detect magic}",
+								"{@spell 偵測魔法}",
 								"{@spell identify}",
 								"{@spell shield}",
-								"{@spell witch bolt}"
+								"{@spell 巫術箭}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell darkness}",
-								"{@spell detect thoughts}",
+								"{@spell 黑暗術}",
+								"{@spell 偵測思想}",
 								"{@spell shatter}"
 							]
 						},
@@ -9574,7 +9574,7 @@
 				12,
 				{
 					"ac": 15,
-					"condition": "with {@spell mage armor}",
+					"condition": "with {@spell 法師護甲}",
 					"braces": true
 				}
 			],
@@ -9631,9 +9631,9 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell chill touch}",
+								"{@spell 寒顫之觸}",
 								"{@spell dancing lights}",
-								"{@spell mage hand}",
+								"{@spell 法師之手}",
 								"{@spell mending}"
 							]
 						},
@@ -9641,7 +9641,7 @@
 							"slots": 4,
 							"spells": [
 								"{@spell false life}*",
-								"{@spell mage armor}",
+								"{@spell 法師護甲}",
 								"{@spell ray of sickness}*"
 							]
 						},
@@ -9658,7 +9658,7 @@
 							"spells": [
 								"{@spell animate dead}*",
 								"{@spell bestow curse}*",
-								"{@spell vampiric touch}*"
+								"{@spell 吸血鬼之觸}*"
 							]
 						},
 						"4": {
@@ -9767,13 +9767,13 @@
 				{
 					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3}) piercing damage plus 14 ({@damage 4d6}) poison damage, and the target must succeed on a DC 12 Constitution saving throw or become {@condition poisoned} for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})穿刺傷害加 14 ({@damage 4d6})毒素傷害, and the target must succeed on a DC 12 Constitution saving throw or become {@condition poisoned} for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				},
 				{
 					"name": "爪抓", "tENG_name": "Claws",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}8 ({@damage 2d4 + 3})劈砍傷害."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}8 ({@damage 2d4 + 3})劈砍傷害。"
 					]
 				},
 				{
@@ -9856,7 +9856,7 @@
 				{
 					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}3 ({@damage 1d4 + 1}) piercing damage plus 7 ({@damage 2d6}) poison damage, and the target must succeed on a DC 10 Constitution saving throw or become {@condition poisoned} for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}3 ({@damage 1d4 + 1})穿刺傷害加 7 ({@damage 2d6})毒素傷害, and the target must succeed on a DC 10 Constitution saving throw or become {@condition poisoned} for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				}
 			],
@@ -9918,7 +9918,7 @@
 				"perception": "+3",
 				"persuasion": "+6"
 			},
-			"senses": "darkvision 120 ft. (penetrates magical darkness)",
+			"senses": "黑暗視覺120呎（看透魔法黑暗）",
 			"passive": 13,
 			"languages": "Common, Deep Speech, Undercommon, telepathy 30 ft.",
 			"cr": "4",
@@ -9946,13 +9946,13 @@
 				{
 					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3}) piercing damage plus 14 ({@damage 4d6}) poison damage, and the target must succeed on a DC 12 Constitution saving throw or become {@condition poisoned} for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})穿刺傷害加 14 ({@damage 4d6})毒素傷害, and the target must succeed on a DC 12 Constitution saving throw or become {@condition poisoned} for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				},
 				{
 					"name": "爪抓", "tENG_name": "Claws",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}8 ({@damage 2d4 + 3})劈砍傷害."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}8 ({@damage 2d4 + 3})劈砍傷害。"
 					]
 				},
 				{
@@ -9972,11 +9972,11 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell eldritch blast} (range 300 ft., +4 bonus to each damage roll)",
-								"{@spell guidance}",
-								"{@spell mage hand}",
-								"{@spell minor illusion}",
-								"{@spell prestidigitation}",
+								"{@spell 魔能爆} (range 300 ft., +4 bonus to each damage roll)",
+								"{@spell 指導術}",
+								"{@spell 法師之手}",
+								"{@spell 次級幻象}",
+								"{@spell 魔法技倆}",
 								"{@spell vicious mockery}"
 							]
 						},
@@ -9984,14 +9984,14 @@
 							"lower": 1,
 							"slots": 2,
 							"spells": [
-								"{@spell arms of Hadar}",
-								"{@spell counterspell}",
+								"{@spell 哈達之臂}",
+								"{@spell 反制法術}",
 								"{@spell dimension door}",
-								"{@spell fear}",
-								"{@spell hold person}",
-								"{@spell hunger of Hadar}",
-								"{@spell invisibility}",
-								"{@spell unseen servant}"
+								"{@spell 恐懼術}",
+								"{@spell 人類定身術}",
+								"{@spell 哈達之欲}",
+								"{@spell 隱形術}",
+								"{@spell 隱形僕役}"
 							]
 						}
 					},
@@ -10078,7 +10078,7 @@
 					]
 				},
 				{
-					"name": "Magic Resistance",
+					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
 						"The neothelid has advantage on saving throws against spells and other magical effects."
 					]
@@ -10228,7 +10228,7 @@
 						"The nilbog's innate spellcasting ability is Charisma (spell save DC 12). It can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell mage hand}",
+						"{@spell 法師之手}",
 						"{@spell Tasha's hideous laughter}",
 						"{@spell vicious mockery}"
 					],
@@ -10438,7 +10438,7 @@
 				{
 					"name": "爪抓", "tENG_name": "Claw",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}6 ({@damage 1d8 + 2})劈砍傷害."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}6 ({@damage 1d8 + 2})劈砍傷害。"
 					]
 				}
 			],
@@ -10452,7 +10452,7 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell guidance}",
+								"{@spell 指導術}",
 								"{@spell mending}",
 								"{@spell resistance}",
 								"{@spell thaumaturgy}"
@@ -10580,7 +10580,7 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell guidance}",
+								"{@spell 指導術}",
 								"{@spell mending}",
 								"{@spell resistance}",
 								"{@spell thaumaturgy}"
@@ -10590,7 +10590,7 @@
 							"slots": 4,
 							"spells": [
 								"{@spell bane}",
-								"{@spell detect magic}",
+								"{@spell 偵測魔法}",
 								"{@spell inflict wounds}",
 								"{@spell protection from evil and good}"
 							]
@@ -10676,7 +10676,7 @@
 				{
 					"name": "Corrupted Carrier",
 					"entries": [
-						"When the orc is reduced to 0 hit points, it explodes, and any creature within 10 feet of it must make a DC 13 Constitution saving throw. On a failed save, the creature takes 14 ({@damage 4d6}) poison damage and becomes {@condition poisoned}. On a success, the creature takes half as much damage and isn't {@condition poisoned}. A creature {@condition poisoned} by this effect can repeat the save at the end of each of its turn, ending the effect on itself on a success. While {@condition poisoned} by this effect, a creature can't regain hit points."
+						"When the orc is reduced to 0 hit points, it explodes, and any creature within 10 feet of it must make a DC 13 Constitution saving throw. On a failed save, the creature takes 14 ({@damage 4d6})毒素傷害 and becomes {@condition poisoned}. On a success, the creature takes half as much damage and isn't {@condition poisoned}. A creature {@condition poisoned} by this effect can repeat the save at the end of each of its turn, ending the effect on itself on a success. While {@condition poisoned} by this effect, a creature can't regain hit points."
 					]
 				},
 				{
@@ -10805,7 +10805,7 @@
 				{
 					"name": "Scimitar",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}13 ({@damage 3d6 + 3})劈砍傷害."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}13 ({@damage 3d6 + 3})劈砍傷害。"
 					]
 				},
 				{
@@ -10817,7 +10817,7 @@
 				{
 					"name": "Veil of Shargaas (Recharges after a Short or Long Rest)",
 					"entries": [
-						"The orc casts {@spell darkness} without any components. Wisdom is its spellcasting ability."
+						"The orc casts {@spell 黑暗術} without any components. Wisdom is its spellcasting ability."
 					]
 				}
 			],
@@ -11202,7 +11202,7 @@
 				{
 					"name": "Wicked Sickle",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}9 ({@damage 2d4 + 4})劈砍傷害."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}9 ({@damage 2d4 + 4})劈砍傷害。"
 					]
 				},
 				{
@@ -11364,7 +11364,7 @@
 								{
 									"type": "item",
 									"name": "Poison Quills.",
-									"entry": "{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}3 ({@damage 1d6}) poison damage, and the target must succeed on a DC 12 Constitution saving throw or be {@condition poisoned} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+									"entry": "{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}3 ({@damage 1d6})毒素傷害, and the target must succeed on a DC 12 Constitution saving throw or be {@condition poisoned} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 								},
 								{
 									"type": "item",
@@ -12320,9 +12320,9 @@
 						"The swarm's innate spellcasting ability is Intelligence (spell save DC 13). As long as it has more than half of its hit points, it can innately cast the following spells, requiring no components:"
 					],
 					"will": [
-						"{@spell command}",
+						"{@spell 命令術}",
 						"{@spell comprehend languages}",
-						"{@spell detect thoughts}"
+						"{@spell 偵測思想}"
 					],
 					"daily": {
 						"1e": [
@@ -12583,7 +12583,7 @@
 					]
 				},
 				{
-					"name": "Magic Resistance",
+					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
 						"The tanarukk has advantage on saving throws against spells and other magical effects."
 					]
@@ -12605,7 +12605,7 @@
 				{
 					"name": "Greatsword",
 					"entries": [
-						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}11 ({@damage 2d6 + 4})劈砍傷害."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}11 ({@damage 2d6 + 4})劈砍傷害。"
 					]
 				}
 			],
@@ -12783,7 +12783,7 @@
 				{
 					"name": "Sting",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一生物。{@h}6 ({@damage 1d6 + 3}) piercing damage plus 14 ({@damage 4d6}) poison damage, and the target must succeed on a DC 14 Constitution saving throw or be {@condition poisoned} for 1 minute. If it fails the saving throw by 5 or more, the target is also {@condition paralyzed} while {@condition poisoned}. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一生物。{@h}6 ({@damage 1d6 + 3})穿刺傷害加 14 ({@damage 4d6})毒素傷害, and the target must succeed on a DC 14 Constitution saving throw or be {@condition poisoned} for 1 minute. If it fails the saving throw by 5 or more, the target is also {@condition paralyzed} while {@condition poisoned}. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				}
 			],
@@ -12824,7 +12824,7 @@
 				12,
 				{
 					"ac": 15,
-					"condition": "with {@spell mage armor}",
+					"condition": "with {@spell 法師護甲}",
 					"braces": true
 				}
 			],
@@ -12885,7 +12885,7 @@
 							"spells": [
 								"{@spell light}",
 								"{@spell mending}",
-								"{@spell prestidigitation}",
+								"{@spell 魔法技倆}",
 								"{@spell ray of frost}"
 							]
 						},
@@ -12893,15 +12893,15 @@
 							"slots": 4,
 							"spells": [
 								"{@spell chromatic orb}",
-								"{@spell expeditious retreat}*",
-								"{@spell mage armor}"
+								"{@spell 腳底抹油}*",
+								"{@spell 法師護甲}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
 								"{@spell alter self}*",
-								"{@spell hold person}",
+								"{@spell 人類定身術}",
 								"{@spell knock}*"
 							]
 						},
@@ -12916,7 +12916,7 @@
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell polymorph}*",
+								"{@spell 變形術}*",
 								"{@spell stoneskin}"
 							]
 						},
@@ -13081,7 +13081,7 @@
 					]
 				},
 				{
-					"name": "Magic Resistance",
+					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
 						"The ulitharid has advantage on saving throws against spells and other magical effects."
 					]
@@ -13121,7 +13121,7 @@
 						"The ulitharid's innate spellcasting ability is Intelligence (spell save DC 17). It can innately cast the following spells, requiring no components:"
 					],
 					"will": [
-						"{@spell detect thoughts}",
+						"{@spell 偵測思想}",
 						"{@spell levitate}"
 					],
 					"daily": {
@@ -13212,7 +13212,7 @@
 				{
 					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2}) piercing damage plus 10 ({@damage 3d6}) poison damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害加 10 ({@damage 3d6})毒素傷害。"
 					]
 				},
 				{
@@ -13307,7 +13307,7 @@
 				{
 					"name": "爪抓", "tENG_name": "Claws",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})劈砍傷害."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})劈砍傷害。"
 					]
 				},
 				{
@@ -13402,7 +13402,7 @@
 				{
 					"name": "爪抓", "tENG_name": "Claws",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})劈砍傷害."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})劈砍傷害。"
 					]
 				},
 				{
@@ -13414,7 +13414,7 @@
 				{
 					"name": "Spores (1/Day)",
 					"entries": [
-						"A 15-foot-radius cloud of toxic spores extends out from the vegepygmy. The spores spread around corners. Each creature in that area that isn't a plant must succeed on a DC 12 Constitution saving throw or be {@condition poisoned}. While {@condition poisoned} in this way, a target takes 9 ({@damage 2d8}) poison damage at the start of each of its turns. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"A 15-foot-radius cloud of toxic spores extends out from the vegepygmy. The spores spread around corners. Each creature in that area that isn't a plant must succeed on a DC 12 Constitution saving throw or be {@condition poisoned}. While {@condition poisoned} in this way, a target takes 9 ({@damage 2d8})毒素傷害 at the start of each of its turns. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				}
 			],
@@ -13500,7 +13500,7 @@
 				{
 					"name": "爪抓", "tENG_name": "Claws",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}4 ({@damage 1d4 + 2})劈砍傷害."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}4 ({@damage 1d4 + 2})劈砍傷害。"
 					]
 				}
 			],
@@ -13690,7 +13690,7 @@
 				11,
 				{
 					"ac": 14,
-					"condition": "with {@spell mage armor}",
+					"condition": "with {@spell 法師護甲}",
 					"braces": true
 				}
 			],
@@ -13748,7 +13748,7 @@
 					],
 					"will": [
 						"{@spell disguise self}",
-						"{@spell mage armor} (self only)",
+						"{@spell 法師護甲} (self only)",
 						"{@spell silent image}",
 						"{@spell speak with animals}"
 					],
@@ -13768,11 +13768,11 @@
 						"0": {
 							"spells": [
 								"{@spell dancing lights}",
-								"{@spell eldritch blast}",
-								"{@spell friends}",
-								"{@spell mage hand}",
-								"{@spell minor illusion}",
-								"{@spell prestidigitation}",
+								"{@spell 魔能爆}",
+								"{@spell 交友術}",
+								"{@spell 法師之手}",
+								"{@spell 次級幻象}",
+								"{@spell 魔法技倆}",
 								"{@spell vicious mockery}"
 							]
 						},
@@ -13781,13 +13781,13 @@
 							"slots": 3,
 							"spells": [
 								"{@spell blink}",
-								"{@spell charm person}",
+								"{@spell 魅惑人類}",
 								"{@spell dimension door}",
 								"{@spell dominate beast}",
 								"{@spell faerie fire}",
-								"{@spell fear}",
+								"{@spell 恐懼術}",
 								"{@spell hold monster}",
-								"{@spell misty step}",
+								"{@spell 迷蹤步}",
 								"{@spell phantasmal force}",
 								"{@spell seeming}",
 								"{@spell sleep}"
@@ -13834,7 +13834,7 @@
 				12,
 				{
 					"ac": 15,
-					"condition": "with {@spell mage armor}",
+					"condition": "with {@spell 法師護甲}",
 					"braces": true
 				}
 			],
@@ -13900,7 +13900,7 @@
 						"{@spell alter self}",
 						"{@spell false life}",
 						"{@spell levitate} (self only)",
-						"{@spell mage armor} (self only)",
+						"{@spell 法師護甲} (self only)",
 						"{@spell silent image}"
 					],
 					"daily": {
@@ -13920,12 +13920,12 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell eldritch blast}",
+								"{@spell 魔能爆}",
 								"{@spell fire bolt}",
-								"{@spell friends}",
-								"{@spell mage hand}",
-								"{@spell minor illusion}",
-								"{@spell prestidigitation}",
+								"{@spell 交友術}",
+								"{@spell 法師之手}",
+								"{@spell 次級幻象}",
+								"{@spell 魔法技倆}",
 								"{@spell shocking grasp}"
 							]
 						},
@@ -13934,14 +13934,14 @@
 							"slots": 4,
 							"spells": [
 								"{@spell banishment}",
-								"{@spell burning hands}",
+								"{@spell 燃燒之手}",
 								"{@spell flame strike}",
-								"{@spell hellish rebuke}",
+								"{@spell 煉獄叱喝}",
 								"{@spell magic circle}",
-								"{@spell scorching ray}",
+								"{@spell 灼熱射線}",
 								"{@spell scrying}",
 								"{@spell stinking cloud}",
-								"{@spell suggestion}",
+								"{@spell 暗示術}",
 								"{@spell wall of fire}"
 							]
 						}
@@ -13990,7 +13990,7 @@
 				12,
 				{
 					"ac": 15,
-					"condition": "with {@spell mage armor}",
+					"condition": "with {@spell 法師護甲}",
 					"braces": true
 				}
 			],
@@ -14046,10 +14046,10 @@
 						"The warlock's innate spellcasting ability is Charisma. It can innately cast the following spells (spell save DC 15), requiring no material components:"
 					],
 					"will": [
-						"{@spell detect magic}",
+						"{@spell 偵測魔法}",
 						"{@spell jump}",
 						"{@spell levitate}",
-						"{@spell mage armor} (self only)",
+						"{@spell 法師護甲} (self only)",
 						"{@spell speak with dead}"
 					],
 					"daily": {
@@ -14068,12 +14068,12 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell chill touch}",
-								"{@spell eldritch blast}",
-								"{@spell guidance}",
-								"{@spell mage hand}",
-								"{@spell minor illusion}",
-								"{@spell prestidigitation}",
+								"{@spell 寒顫之觸}",
+								"{@spell 魔能爆}",
+								"{@spell 指導術}",
+								"{@spell 法師之手}",
+								"{@spell 次級幻象}",
+								"{@spell 魔法技倆}",
 								"{@spell shocking grasp}"
 							]
 						},
@@ -14082,16 +14082,16 @@
 							"slots": 3,
 							"spells": [
 								"{@spell armor of Agathys}",
-								"{@spell arms of Hadar}",
-								"{@spell crown of madness}",
+								"{@spell 哈達之臂}",
+								"{@spell 瘋狂冠冕}",
 								"{@spell clairvoyance}",
 								"{@spell contact other plane}",
-								"{@spell detect thoughts}",
+								"{@spell 偵測思想}",
 								"{@spell dimension door}",
 								"{@spell dissonant whispers}",
 								"{@spell dominate beast}",
 								"{@spell telekinesis}",
-								"{@spell vampiric touch}"
+								"{@spell 吸血鬼之觸}"
 							]
 						}
 					},
@@ -14194,7 +14194,7 @@
 				{
 					"name": "Greatsword",
 					"entries": [
-						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5})劈砍傷害."
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5})劈砍傷害。"
 					]
 				},
 				{
@@ -14642,7 +14642,7 @@
 				12,
 				{
 					"ac": 15,
-					"condition": "with {@spell mage armor}",
+					"condition": "with {@spell 法師護甲}",
 					"braces": true
 				}
 			],
@@ -14690,7 +14690,7 @@
 				{
 					"name": "Scimitar",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})劈砍傷害."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})劈砍傷害。"
 					]
 				}
 			],
@@ -14702,8 +14702,8 @@
 						"The xvart's innate spellcasting ability is Charisma. it can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell detect magic}",
-						"{@spell mage armor} (self only)"
+						"{@spell 偵測魔法}",
+						"{@spell 法師護甲} (self only)"
 					],
 					"ability": "cha"
 				},
@@ -14715,21 +14715,21 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell eldritch blast}",
-								"{@spell mage hand}",
-								"{@spell minor illusion}",
-								"{@spell poison spray}",
-								"{@spell prestidigitation}"
+								"{@spell 魔能爆}",
+								"{@spell 法師之手}",
+								"{@spell 次級幻象}",
+								"{@spell 毒氣噴灑}",
+								"{@spell 魔法技倆}"
 							]
 						},
 						"2": {
 							"lower": 1,
 							"slots": 2,
 							"spells": [
-								"{@spell burning hands}",
-								"{@spell expeditious retreat}",
-								"{@spell invisibility}",
-								"{@spell scorching ray}"
+								"{@spell 燃燒之手}",
+								"{@spell 腳底抹油}",
+								"{@spell 隱形術}",
+								"{@spell 灼熱射線}"
 							]
 						}
 					},
@@ -14868,7 +14868,7 @@
 			]
 		},
 		{
-			"name": "Yuan-ti Anathema",
+			"name": "蛇人．咒恨者", "ENG_name": "Yuan-ti Anathema",
 			"size": "H",
 			"type": {
 				"type": "monstrosity",
@@ -14922,81 +14922,81 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 17,
-			"languages": "Abyssal, Common, Draconic",
+			"languages": "深淵語、通用語、龍語",
 			"cr": "12",
 			"trait": [
 				{
-					"name": "Magic Resistance",
+					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
-						"The anathema has advantage on saving throws against spells and other magical effects."
+						"咒恨者在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Ophidiophobia Aura",
+					"name": "恐蛇靈光", "tENG_name": "Ophidiophobia Aura",
 					"entries": [
-						"Any creature of the anathema's choice, other than a snake or a yuan-ti, that starts its turn within 30 feet of the anathema and can see or hear it must succeed on a DC 17 Wisdom saving throw or become {@condition frightened} of snakes and yuan-ti. A {@condition frightened} target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to this aura for the next 24 hours."
+						"任何除了蛇或蛇人以外，由咒恨者所選擇，可以看見或聽見咒恨者，且在距離咒恨者30呎內開始它回合的生物都必須成功通過一次DC 17的睿知豁免，否則將因為蛇和蛇人而陷入{@condition 恐懼}。陷入{@condition 恐懼}的生物可以在它的每個回合結束時重複這個豁免檢定，若豁免成功則結束這個效果對它的影響。若一個目標成功通過該豁免檢定或結束這個效果對它的影響，則該目標將在接下來的24小時內免疫這個靈光的效果。"
 					]
 				},
 				{
-					"name": "Shapechanger",
+					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
-						"The anathema can use its action to polymorph into a Huge giant constrictor snake, or back into its true form. its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed."
+						"咒恨者可以使用它的動作以變形成一個巨型的巨蟒蛇，或變回它的真實型態。它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。"
 					]
 				},
 				{
-					"name": "Six Heads",
+					"name": "六首", "tENG_name": "Six Heads",
 					"entries": [
-						"The anathema has advantage on Wisdom ({@skill Perception}) checks and on saving throws against being {@condition blinded}. {@condition charmed}, {@condition deafened}, {@condition frightened}, {@condition stunned}, or knocked {@condition unconscious}."
+						"咒恨者在睿知（{@skill 感知}）檢定和對抗{@condition 目盲}、{@condition 魅惑}、{@condition 耳聾}、{@condition 恐懼}、{@condition 震懾}、和被擊暈{@condition 昏迷}的豁免檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack (Anathema Form Only)",
+					"name": "多重攻擊 (限定咒恨者型態)", "tENG_name": "Multiattack (Anathema Form Only)",
 					"entries": [
-						"The anathema makes two claw attacks, one constrict attack, and one Flurry of Bites attack."
+						"咒恨者進行二次爪抓攻擊，一次絞纏攻擊，和一次疾風連咬攻擊。"
 					]
 				},
 				{
-					"name": "Claw (Anathema Form Only)",
+					"name": "爪抓 (限定咒恨者型態)", "tENG_name": "Claw (Anathema Form Only)",
 					"entries": [
-						"{@atk mw} 命中{@hit 10}，觸及10呎，單一目標。{@h}13 ({@damage 2d6 + 6})劈砍傷害."
+						"{@atk mw} 命中{@hit 10}，觸及10呎，單一目標。{@h}13 ({@damage 2d6 + 6})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Constrict",
+					"name": "絞纏", "tENG_name": "Constrict",
 					"entries": [
-						"{@atk mw} 命中{@hit 10}，觸及15呎， one Large or smaller creature. {@h}16 ({@damage 3d6 + 6})鈍擊傷害 plus 7 ({@damage 2d6}) acid damage, and the target is {@condition grappled} (escape DC 16). Until this grapple ends, the target is {@condition restrained} and takes 16 ({@damage 3d6 + 6})鈍擊傷害 plus 7 ({@damage 2d6}) acid damage at the start of each of its turns, and the anathema can't constrict another target."
+						"{@atk mw} 命中{@hit 10}，觸及15呎，單一體型為大型或更小的生物。{@h}16 ({@damage 3d6 + 6})鈍擊傷害加 7 ({@damage 2d6})酸蝕傷害，且目標{@condition 被擒}(逃脫DC 16)。直到擒抱結束前，目標被{@condition 束縛}，且在它的每個回合開始時受到16 ({@damage 3d6 + 6})鈍擊傷害加 7 ({@damage 2d6})酸蝕傷害，且咒恨者不能絞纏另一個目標。"
 					]
 				},
 				{
-					"name": "Flurry of Bites",
+					"name": "疾風連咬", "tENG_name": "Flurry of Bites",
 					"entries": [
-						"{@atk mw} 命中{@hit 10}，觸及10呎，單一生物。{@h}27 ({@damage 6d6 + 6}) piercing damage plus 14 ({@damage 4d6}) poison damage."
+						"{@atk mw} 命中{@hit 10}，觸及10呎，單一生物。{@h}27 ({@damage 6d6 + 6})穿刺傷害加 14 ({@damage 4d6})毒素傷害。"
 					]
 				}
 			],
 			"page": 202,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting (Anathema Form Only)",
+					"name": "天生施法 (限定咒恨者型態)", "tENG_name": "Innate Spellcasting (Anathema Form Only)",
 					"headerEntries": [
-						"The anathema's innate spellcasting ability is Charisma (spell save DC 17). It can innately cast the following spells, requiring no material components:"
+						"咒恨者的天生施法屬性為魅力（法術豁免DC 17）。它天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
-						"{@spell animal friendship} (snakes only)"
+						"{@spell 化獸為友} (限蛇類)"
 					],
 					"daily": {
 						"1": [
-							"{@spell divine word}"
+							"{@spell 聖言術}"
 						],
 						"3e": [
-							"{@spell darkness}",
-							"{@spell entangle}",
-							"{@spell fear}",
-							"{@spell haste}",
-							"{@spell suggestion}",
-							"{@spell polymorph}"
+							"{@spell 黑暗術}",
+							"{@spell 糾纏術}",
+							"{@spell 恐懼術}",
+							"{@spell 加速術}",
+							"{@spell 暗示術}",
+							"{@spell 變形術}"
 						]
 					},
 					"ability": "cha"
@@ -15005,23 +15005,23 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Acid Slime",
+					"name": "強酸黏液", "tENG_name": "Acid Slime",
 					"entries": [
-						"As a bonus action, the yuan-ti can coat its body in a slimy acid that lasts for 1 minute. A creature that touches the yuan-ti, hits it with a melee attack while within 5 feet of it, or is hit by its constrict attack takes 5 ({@damage 1d10}) acid damage."
+						"以一個附贈動作，蛇人可以使自己的身體覆蓋一層強酸黏液，持續1分鐘。任何觸碰到該蛇人、在距離它5呎內時以一次近戰攻擊命中它、或被該蛇人的絞纏攻擊命中的生物，都將受到5 ({@damage 1d10})酸蝕傷害。"
 					]
 				},
 				{
 					"type": "variant",
-					"name": "Chameleon Skin",
+					"name": "變色皮膚", "tENG_name": "Chameleon Skin",
 					"entries": [
-						"The yuan-ti has advantage on Dexterity (Stealth) checks made to hide."
+						"蛇人在為躲藏所進行的敏捷（{@skill 隱匿}）檢定中具有優勢。"
 					]
 				},
 				{
 					"type": "variant",
-					"name": "Shed Skin (1/Day)",
+					"name": "蛻皮 (1/日)", "tENG_name": "Shed Skin (1/Day)",
 					"entries": [
-						"The yuan-ti can shed its skin as a bonus action to free itself from a grapple, shackles, or other restraints. If the yuan-ti spends 1 minute eating its shed skin, it regains hit points equal to half its hit point maximum."
+						"蛇人能夠以一個附贈動作蛻皮，使它自己從擒抱、鐐銬、或其他束縛中掙脫。若蛇人在這之後花費1分鐘的時間吃掉它蛻下的皮，則它將回復等同於它生命值最大值一半的生命值。"
 					]
 				}
 			],
@@ -15056,7 +15056,7 @@
 			]
 		},
 		{
-			"name": "Yuan-ti Broodguard",
+			"name": "蛇人．雛獸守衛", "tENG_name": "Yuan-ti Broodguard",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -15106,19 +15106,19 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 12,
-			"languages": "Abyssal, Common, Draconic",
+			"languages": "深淵語、通用語、龍語",
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Mental Resistance",
+					"name": "精神抗性", "tENG_name": "Mental Resistance",
 					"entries": [
-						"The broodguard has advantage on saving throws against being {@condition charmed}, and magic can't paralyze it."
+						"雛獸守衛在對抗{@condition 魅惑}的豁免檢定中具有優勢，且魔法無法使它{@condition 麻痺}。"
 					]
 				},
 				{
-					"name": "Reckless",
+					"name": "魯莽", "tENG_name": "Reckless",
 					"entries": [
-						"At the start of its turn, the broodguard can gain advantage on all melee weapon attack rolls it makes during that turn, but attack rolls against it have advantage until the start of its next turn."
+						"在它的回合開始時，雛獸守衛可以讓它在該回合間進行的所有近戰武器攻擊具有優勢，但直到它的下個回合開始前，所有對它進行的攻擊檢定也都具有優勢。"
 					]
 				}
 			],
@@ -15126,7 +15126,7 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The broodguard makes three attacks: one with its bite and two with its claws."
+						"雛獸守衛進行三次攻擊，一次啃咬，二次爪抓。"
 					]
 				},
 				{
@@ -15138,7 +15138,7 @@
 				{
 					"name": "爪抓", "tENG_name": "Claws",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})劈砍傷害."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})劈砍傷害。"
 					]
 				}
 			],
@@ -15146,16 +15146,16 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Chameleon Skin",
+					"name": "變色皮膚", "tENG_name": "Chameleon Skin",
 					"entries": [
-						"The yuan-ti has advantage on Dexterity (Stealth) checks made to hide."
+						"蛇人在為躲藏所進行的敏捷（{@skill 隱匿}）檢定中具有優勢。"
 					]
 				},
 				{
 					"type": "variant",
-					"name": "Shed Skin (1/Day)",
+					"name": "蛻皮 (1/日)", "tENG_name": "Shed Skin (1/Day)",
 					"entries": [
-						"The yuan-ti can shed its skin as a bonus action to free itself from a grapple, shackles, or other restraints. If the yuan-ti spends 1 minute eating its shed skin, it regains hit points equal to half its hit point maximum."
+						"蛇人能夠以一個附贈動作蛻皮，使它自己從擒抱、鐐銬、或其他束縛中掙脫。若蛇人在這之後花費1分鐘的時間吃掉它蛻下的皮，則它將回復等同於它生命值最大值一半的生命值。"
 					]
 				}
 			],
@@ -15185,7 +15185,7 @@
 			]
 		},
 		{
-			"name": "Yuan-ti Malison (Type 4)",
+			"name": "惡咒蛇人(類型4)", "ENG_name": "Yuan-ti Malison (Type 4)",
 			"size": "M",
 			"type": {
 				"type": "monstrosity",
@@ -15227,51 +15227,51 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 11,
-			"languages": "Abyssal, Common, Draconic",
+			"languages": "深淵語、通用語、龍語",
 			"cr": "3",
 			"trait": [
 				{
-					"name": "Shapechanger",
+					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
-						"The yuan-ti can use its action to polymorph into a Medium snake, or back into its true form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It doesn't change form if it dies."
+						"蛇人可以使用它的動作以變形成一個中型的蛇，或變回它的真實型態。它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。它在死亡時並不會改變型態。"
 					]
 				},
 				{
-					"name": "Magic Resistance",
+					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
-						"The yuan-ti has advantage on saving throws against spells and other magical effects."
+						"蛇人在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Malison Type",
+					"name": "惡咒類型", "tENG_name": "Malison Type",
 					"entries": [
-						"The yuan-ti has one of the following types:",
-						"Type 4: Human form with one or more serpentine tails",
-						"Type 5: Human form covered in scales"
+						"惡咒蛇人屬於下列其中一種類型：",
+						"類型4：長有一條或多條蛇尾的人類外型",
+						"類型5：覆蓋著鱗片的人類外型"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack (Yuan-ti Form Only)",
+					"name": "多重攻擊 (限定蛇人型態)", "tENG_name": "Multiattack (Yuan-ti Form Only)",
 					"entries": [
-						"The yuan-ti makes two ranged attacks or two melee attacks."
+						"蛇人進行二次遠程攻擊或二次近戰攻擊。"
 					]
 				},
 				{
-					"name": "Bite (Snake Form Only)",
+					"name": "啃咬 (限定蛇型態)", "tENG_name": "Bite (Snake Form Only)",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}5 ({@damage 1d4 + 3}) piercing damage plus 7 ({@damage 2d6}) poison damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}5 ({@damage 1d4 + 3})穿刺傷害加 7 ({@damage 2d6})毒素傷害。"
 					]
 				},
 				{
-					"name": "Scimitar (Yuan-ti Form Only)",
+					"name": "彎刀 (限定蛇人型態)", "tENG_name": "Scimitar (Yuan-ti Form Only)",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})劈砍傷害."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Longbow (Yuan-ti Form Only)",
+					"name": "長弓 (限定蛇人型態)", "tENG_name": "Longbow (Yuan-ti Form Only)",
 					"entries": [
 						"{@atk rw} 命中{@hit 4}，射程150/600呎，單一目標。{@h}6 ({@damage 1d8 + 2})穿刺傷害。"
 					]
@@ -15280,16 +15280,16 @@
 			"page": 96,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting (Yuan-ti Form Only)",
+					"name": "天生施法 (限定蛇人型態)", "tENG_name": "Innate Spellcasting (Yuan-ti Form Only)",
 					"headerEntries": [
-						"The yuan-ti's innate spellcasting ability is Charisma (spell save DC 13). The yuan-ti can innately cast the following spells, requiring no material components:"
+						"蛇人的天生施法屬性為魅力（法術豁免DC 13）。蛇人天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
-						"{@spell animal friendship} (snakes only)"
+						"{@spell 化獸為友} (限蛇類)"
 					],
 					"daily": {
 						"3": [
-							"{@spell suggestion}"
+							"{@spell 暗示術}"
 						]
 					},
 					"ability": "cha"
@@ -15324,7 +15324,7 @@
 			]
 		},
 		{
-			"name": "Yuan-ti Malison (Type 5)",
+			"name": "惡咒蛇人(類型5)", "ENG_name": "Yuan-ti Malison (Type 5)",
 			"size": "M",
 			"type": {
 				"type": "monstrosity",
@@ -15366,51 +15366,51 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 11,
-			"languages": "Abyssal, Common, Draconic",
+			"languages": "深淵語、通用語、龍語",
 			"cr": "3",
 			"trait": [
 				{
-					"name": "Shapechanger",
+					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
-						"The yuan-ti can use its action to polymorph into a Medium snake, or back into its true form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It doesn't change form if it dies."
+						"蛇人可以使用它的動作以變形成一個中型的蛇，或變回它的真實型態。它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。它在死亡時並不會改變型態。"
 					]
 				},
 				{
-					"name": "Magic Resistance",
+					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
-						"The yuan-ti has advantage on saving throws against spells and other magical effects."
+						"蛇人在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Malison Type",
+					"name": "惡咒類型", "tENG_name": "Malison Type",
 					"entries": [
-						"The yuan-ti has one of the following types:",
-						"Type 4: Human form with one or more serpentine tails",
-						"Type 5: Human form covered in scales"
+						"惡咒蛇人屬於下列其中一種類型：",
+						"類型4：長有一條或多條蛇尾的人類外型",
+						"類型5：覆蓋著鱗片的人類外型"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack (Yuan-ti Form Only)",
+					"name": "多重攻擊 (限定蛇人型態)", "tENG_name": "Multiattack (Yuan-ti Form Only)",
 					"entries": [
-						"The yuan-ti makes two ranged attacks or two melee attacks."
+						"蛇人進行二次遠程攻擊或二次近戰攻擊。"
 					]
 				},
 				{
-					"name": "Bite (Snake Form Only)",
+					"name": "啃咬 (限定蛇型態)", "tENG_name": "Bite (Snake Form Only)",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}5 ({@damage 1d4 + 3}) piercing damage plus 7 ({@damage 2d6}) poison damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}5 ({@damage 1d4 + 3})穿刺傷害加 7 ({@damage 2d6})毒素傷害。"
 					]
 				},
 				{
-					"name": "Scimitar (Yuan-ti Form Only)",
+					"name": "彎刀 (限定蛇人型態)", "tENG_name": "Scimitar (Yuan-ti Form Only)",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})劈砍傷害."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Longbow (Yuan-ti Form Only)",
+					"name": "長弓 (限定蛇人型態)", "tENG_name": "Longbow (Yuan-ti Form Only)",
 					"entries": [
 						"{@atk rw} 命中{@hit 4}，射程150/600呎，單一目標。{@h}6 ({@damage 1d8 + 2})穿刺傷害。"
 					]
@@ -15419,16 +15419,16 @@
 			"page": 96,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting (Yuan-ti Form Only)",
+					"name": "天生施法 (限定蛇人型態)", "tENG_name": "Innate Spellcasting (Yuan-ti Form Only)",
 					"headerEntries": [
-						"The yuan-ti's innate spellcasting ability is Charisma (spell save DC 13). The yuan-ti can innately cast the following spells, requiring no material components:"
+						"蛇人的天生施法屬性為魅力（法術豁免DC 13）。蛇人天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
-						"{@spell animal friendship} (snakes only)"
+						"{@spell 化獸為友} (限蛇類)"
 					],
 					"daily": {
 						"3": [
-							"{@spell suggestion}"
+							"{@spell 暗示術}"
 						]
 					},
 					"ability": "cha"
@@ -15463,7 +15463,7 @@
 			]
 		},
 		{
-			"name": "Yuan-ti Mind Whisperer",
+			"name": "蛇人．心靈呢喃者", "tENG_name": "Yuan-ti Mind Whisperer",
 			"size": "M",
 			"type": {
 				"type": "monstrosity",
@@ -15512,100 +15512,100 @@
 			"conditionImmune": [
 				"poisoned"
 			],
-			"senses": "darkvision 120 ft. (penetrates magical darkness)",
+			"senses": "黑暗視覺120呎（看透魔法黑暗）",
 			"passive": 12,
-			"languages": "Abyssal, Common, Draconic",
+			"languages": "深淵語、通用語、龍語",
 			"cr": "4",
 			"trait": [
 				{
-					"name": "Shapechanger",
+					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
-						"The yuan-ti can use its action to polymorph into a Medium snake or back into its true form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. If it dies, it stays in its current form."
+						"蛇人可以使用它的動作以變形成一個中型的蛇，或變回它的真實型態。它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。當它死亡時，它將維持它當下的型態。"
 					]
 				},
 				{
-					"name": "Magic Resistance",
+					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
-						"The yuan-ti has advantage on saving throws against spells and other magical effects."
+						"蛇人在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Mind Fangs (2/Day)",
+					"name": "心靈毒牙 (2/日)", "tENG_name": "Mind Fangs (2/Day)",
 					"entries": [
-						"The first time the yuan-ti hits with a melee attack on its turn, it can deal an extra 16 ({@damage 3d10}) psychic damage to the target."
+						"當蛇人在它的回合以一次近戰攻擊第一次命中目標時，它可以對目標造成額外的16 ({@damage 3d10})精神傷害。"
 					]
 				},
 				{
-					"name": "Sseth's Blessing",
+					"name": "塞斯的祝福", "tENG_name": "Sseth's Blessing",
 					"entries": [
-						"When the yuan-ti reduces an enemy to 0 hit points, the yuan-ti gains 9 temporary hit points."
+						"當蛇人將一個敵人的生命值歸0時，該蛇人將獲得9點臨時生命值。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack (Yuan-ti Form Only)",
+					"name": "多重攻擊 (限定蛇人型態)", "tENG_name": "Multiattack (Yuan-ti Form Only)",
 					"entries": [
-						"The yuan-ti makes one bite attack and one scimitar attack."
+						"蛇人進行一次啃咬攻擊和一次彎刀攻擊。"
 					]
 				},
 				{
 					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}5 ({@damage 1d4 + 3}) piercing damage plus 7 ({@damage 2d6}) poison damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}5 ({@damage 1d4 + 3})穿刺傷害加 7 ({@damage 2d6})毒素傷害。"
 					]
 				},
 				{
-					"name": "Scimitar (Yuan-ti Form Only)",
+					"name": "彎刀 (限定蛇人型態)", "tENG_name": "Scimitar (Yuan-ti Form Only)",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})劈砍傷害."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})劈砍傷害。"
 					]
 				}
 			],
 			"page": 204,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting (Yuan-ti Form Only)",
+					"name": "天生施法 (限定蛇人型態)", "tENG_name": "Innate Spellcasting (Yuan-ti Form Only)",
 					"headerEntries": [
-						"The yuan-ti's innate spellcasting ability is Charisma (spell save DC 13). The yuan-ti can innately cast the following spells, requiring no material components:"
+						"蛇人的天生施法屬性為魅力（法術豁免DC 13）。蛇人天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
-						"{@spell animal friendship} (snakes only)"
+						"{@spell 化獸為友} (限蛇類)"
 					],
 					"daily": {
 						"3": [
-							"{@spell suggestion}"
+							"{@spell 暗示術}"
 						]
 					},
 					"ability": "cha"
 				},
 				{
-					"name": "Spellcasting (Yuan-ti Form Only)",
+					"name": "施法 (限定蛇人型態)", "tENG_name": "Spellcasting (Yuan-ti Form Only)",
 					"headerEntries": [
-						"The yuan-ti is a 6th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, {@hit 5} to hit with spell attacks). It regains its expended spell slots when it finishes a short or long rest. It knows the following warlock spells:"
+						"蛇人是6級的施法者。它的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。它將在完成一次短休或長休時恢復它所有已消耗的法術位。它知曉以下契術師法術："
 					],
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell eldritch blast} (range 300 ft., +3 bonus to each damage roll)",
-								"{@spell friends}",
-								"{@spell message}",
-								"{@spell minor illusion}",
-								"{@spell poison spray}",
-								"{@spell prestidigitation}"
+								"{@spell 魔能爆} (射程300呎,每次傷害骰+3額外傷害)",
+								"{@spell 交友術}",
+								"{@spell 傳訊術}",
+								"{@spell 次級幻象}",
+								"{@spell 毒氣噴灑}",
+								"{@spell 魔法技倆}"
 							]
 						},
 						"3": {
 							"lower": 1,
 							"slots": 2,
 							"spells": [
-								"{@spell charm person}",
-								"{@spell crown of madness}",
-								"{@spell detect thoughts}",
-								"{@spell expeditious retreat}",
-								"{@spell fly}",
-								"{@spell hypnotic pattern}",
-								"{@spell illusory script}"
+								"{@spell 魅惑人類}",
+								"{@spell 瘋狂冠冕}",
+								"{@spell 偵測思想}",
+								"{@spell 腳底抹油}",
+								"{@spell 飛行術}",
+								"{@spell 催眠圖紋}",
+								"{@spell 迷幻手稿}"
 							]
 						}
 					},
@@ -15615,16 +15615,16 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Chameleon Skin",
+					"name": "變色皮膚", "tENG_name": "Chameleon Skin",
 					"entries": [
-						"The yuan-ti has advantage on Dexterity (Stealth) checks made to hide."
+						"蛇人在為躲藏所進行的敏捷（{@skill 隱匿}）檢定中具有優勢。"
 					]
 				},
 				{
 					"type": "variant",
-					"name": "Shed Skin (1/Day)",
+					"name": "蛻皮 (1/日)", "tENG_name": "Shed Skin (1/Day)",
 					"entries": [
-						"The yuan-ti can shed its skin as a bonus action to free itself from a grapple, shackles, or other restraints. If the yuan-ti spends 1 minute eating its shed skin, it regains hit points equal to half its hit point maximum."
+						"蛇人能夠以一個附贈動作蛻皮，使它自己從擒抱、鐐銬、或其他束縛中掙脫。若蛇人在這之後花費1分鐘的時間吃掉它蛻下的皮，則它將回復等同於它生命值最大值一半的生命值。"
 					]
 				}
 			],
@@ -15659,7 +15659,7 @@
 			]
 		},
 		{
-			"name": "Yuan-ti Nightmare Speaker",
+			"name": "蛇人．夢魘語者", "ENG_name": "Yuan-ti Nightmare Speaker",
 			"size": "M",
 			"type": {
 				"type": "monstrosity",
@@ -15708,100 +15708,100 @@
 			"conditionImmune": [
 				"poisoned"
 			],
-			"senses": "darkvision 120 ft. (penetrates magical darkness)",
+			"senses": "黑暗視覺120呎（看透魔法黑暗）",
 			"passive": 11,
-			"languages": "Abyssal, Common, Draconic",
+			"languages": "深淵語、通用語、龍語",
 			"cr": "4",
 			"trait": [
 				{
-					"name": "Shapechanger",
+					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
-						"The yuan-ti can use its action to polymorph into a Medium snake or back into its true form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. If it dies, it stays in its current form."
+						"蛇人可以使用它的動作以變形成一個中型的蛇，或變回它的真實型態。它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。當它死亡時，它將維持它當下的型態。"
 					]
 				},
 				{
-					"name": "Death Fangs (2/Day)",
+					"name": "死亡毒牙 (2/日)", "tENG_name": "Death Fangs (2/Day)",
 					"entries": [
-						"The first time the yuan-ti hits with a melee attack on its turn, it can deal an extra 16 ({@damage 3d10}) necrotic damage to the target."
+						"當蛇人在它的回合以一次近戰攻擊第一次命中目標時，它可以對目標造成額外的16 ({@damage 3d10})死靈傷害。"
 					]
 				},
 				{
-					"name": "Magic Resistance",
+					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
-						"The yuan-ti has advantage on saving throws against spells and other magical effects."
+						"蛇人在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack (Yuan-ti Form Only)",
+					"name": "多重攻擊 (限定蛇人型態)", "tENG_name": "Multiattack (Yuan-ti Form Only)",
 					"entries": [
-						"The yuan-ti makes one constrict attack and one scimitar attack."
+						"蛇人進行一次絞纏攻擊和一次彎刀攻擊。"
 					]
 				},
 				{
-					"name": "Constrict",
+					"name": "絞纏", "tENG_name": "Constrict",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及10呎，單一目標。{@h}10 ({@damage 2d6 + 3})鈍擊傷害, and the target is {@condition grappled} (escape DC 14) if it is a Large or smaller creature. Until this grapple ends, the target is {@condition restrained}, and the yuan-ti can't constrict another target."
+						"{@atk mw} 命中{@hit 5}，觸及10呎，單一目標。{@h}10 ({@damage 2d6 + 3})鈍擊傷害，且目標{@condition 被擒}(逃脫DC 14)。直到擒抱結束前，目標被{@condition 束縛}，且蛇人不能絞纏另一個目標。"
 					]
 				},
 				{
-					"name": "Scimitar (Yuan-ti Form Only)",
+					"name": "彎刀 (限定蛇人型態)", "tENG_name": "Scimitar (Yuan-ti Form Only)",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})劈砍傷害."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Invoke Nightmare (Recharges after a Short or Long Rest)",
+					"name": "引發噩夢 (短休或長休之後充能)", "tENG_name": "Invoke Nightmare (Recharges after a Short or Long Rest)",
 					"entries": [
-						"The yuan-ti taps into the nightmares of a creature it can see within 60 feet of it and creates an illusory, immobile manifestation of the creature's deepest fears, visible only to that creature. The target must make a DC 13 Intelligence saving throw. On a failed save, the target takes 11 ({@damage 2d10}) psychic damage and is {@condition frightened} of the manifestation, believing it to be real. The yuan-ti must concentrate to maintain the illusion (as if concentrating on a spell), which lasts for up to 1 minute and can't be harmed. The target can repeat the saving throw at the end of each of its turns, ending the illusion on a success, or taking 11 ({@damage 2d10}) psychic damage on a failure."
+						"蛇人喚醒一個距離它60呎內它所能看見的生物的噩夢，並創造出該生物最為恐懼的一個靜止幻象，這個幻像只會倍該生物所看見。目標必須進行一次DC 13的智力豁免。若豁免失敗，目標將受到11 ({@damage 2d10})精神傷害，且因該幻象而陷入{@condition 恐懼}，相信它是真實存在的。蛇人必須專注以維持幻象（如同專注於法術），該幻象最長可以持續1分鐘，且無法被傷害。目標可以在它的每個回合結束時重複進行這個豁免檢定，若豁免成功則結束這個幻象，豁免失敗時受到11 ({@damage 2d10})精神傷害。"
 					]
 				}
 			],
 			"page": 205,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting (Yuan-ti Form Only)",
+					"name": "天生施法 (限定蛇人型態)", "tENG_name": "Innate Spellcasting (Yuan-ti Form Only)",
 					"headerEntries": [
-						"The yuan-ti's innate spellcasting ability is Charisma (spell save DC 13). The yuan-ti can innately cast the following spells, requiring no material components:"
+						"蛇人的天生施法屬性為魅力（法術豁免DC 13）。蛇人天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
-						"{@spell animal friendship} (snakes only)"
+						"{@spell 化獸為友} (限蛇類)"
 					],
 					"daily": {
 						"3": [
-							"{@spell suggestion}"
+							"{@spell 暗示術}"
 						]
 					},
 					"ability": "cha"
 				},
 				{
-					"name": "Spellcasting (Yuan-ti Form Only)",
+					"name": "施法 (限定蛇人型態)", "tENG_name": "Spellcasting (Yuan-ti Form Only)",
 					"headerEntries": [
-						"The yuan-ti is a 6th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, {@hit 5} to hit with spell attacks). It regains its expended spell slots when it finishes a short or long rest. It knows the following warlock spells:"
+						"蛇人是6級的施法者。它的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。它將在完成一次短休或長休時恢復它所有已消耗的法術位。它知曉以下契術師法術："
 					],
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell chill touch}",
-								"{@spell eldritch blast} (range 300 ft., +3 bonus to each damage roll)",
-								"{@spell mage hand}",
-								"{@spell message}",
-								"{@spell poison spray}",
-								"{@spell prestidigitation}"
+								"{@spell 寒顫之觸}",
+								"{@spell 魔能爆} (射程300呎,每次傷害骰+3額外傷害)",
+								"{@spell 法師之手}",
+								"{@spell 傳訊術}",
+								"{@spell 毒氣噴灑}",
+								"{@spell 魔法技倆}"
 							]
 						},
 						"3": {
 							"lower": 1,
 							"slots": 2,
 							"spells": [
-								"{@spell arms of Hadar}",
-								"{@spell darkness}",
-								"{@spell fear}",
-								"{@spell hex}",
-								"{@spell hold person}",
-								"{@spell hunger of Hadar}",
-								"{@spell witch bolt}"
+								"{@spell 哈達之臂}",
+								"{@spell 黑暗術}",
+								"{@spell 恐懼術}",
+								"{@spell 脆弱詛咒}",
+								"{@spell 人類定身術}",
+								"{@spell 哈達之欲}",
+								"{@spell 巫術箭}"
 							]
 						}
 					},
@@ -15811,16 +15811,16 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Chameleon Skin",
+					"name": "變色皮膚", "tENG_name": "Chameleon Skin",
 					"entries": [
-						"The yuan-ti has advantage on Dexterity (Stealth) checks made to hide."
+						"蛇人在為躲藏所進行的敏捷（{@skill 隱匿}）檢定中具有優勢。"
 					]
 				},
 				{
 					"type": "variant",
-					"name": "Shed Skin (1/Day)",
+					"name": "蛻皮 (1/日)", "tENG_name": "Shed Skin (1/Day)",
 					"entries": [
-						"The yuan-ti can shed its skin as a bonus action to free itself from a grapple, shackles, or other restraints. If the yuan-ti spends 1 minute eating its shed skin, it regains hit points equal to half its hit point maximum."
+						"蛇人能夠以一個附贈動作蛻皮，使它自己從擒抱、鐐銬、或其他束縛中掙脫。若蛇人在這之後花費1分鐘的時間吃掉它蛻下的皮，則它將回復等同於它生命值最大值一半的生命值。"
 					]
 				}
 			],
@@ -15855,7 +15855,7 @@
 			]
 		},
 		{
-			"name": "Yuan-ti Pit Master",
+			"name": "蛇人．深坑之主", "ENG_name": "Yuan-ti Pit Master",
 			"size": "M",
 			"type": {
 				"type": "monstrosity",
@@ -15904,94 +15904,94 @@
 			"conditionImmune": [
 				"poisoned"
 			],
-			"senses": "darkvision 120 ft. (penetrates magical darkness)",
+			"senses": "黑暗視覺120呎（看透魔法黑暗）",
 			"passive": 11,
-			"languages": "Abyssal, Common, Draconic",
+			"languages": "深淵語、通用語、龍語",
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Shapechanger",
+					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
-						"The yuan-ti can use its action to polymorph into a Medium snake or back into its true form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It doesn't change form if it dies."
+						"蛇人可以使用它的動作以變形成一個中型的蛇，或變回它的真實型態。它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。它在死亡時並不會改變型態。"
 					]
 				},
 				{
-					"name": "Magic Resistance",
+					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
-						"The yuan-ti has advantage on saving throws against spells and other magical effects."
+						"蛇人在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Poison's Disciple (2/Day)",
+					"name": "劇毒信徒 (1/日)", "tENG_name": "Poison's Disciple (2/Day)",
 					"entries": [
-						"The first time the yuan-ti hits with a melee attack on its turn, it can deal an extra 16 ({@damage 3d10}) poison damage to the target."
+						"當蛇人在它的回合以一次近戰攻擊第一次命中目標時，它可以對目標造成額外的16 ({@damage 3d10})毒素傷害。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack (Yuan-ti Form Only)",
+					"name": "多重攻擊 (限定蛇人型態)", "tENG_name": "Multiattack (Yuan-ti Form Only)",
 					"entries": [
-						"The yuan-ti makes two bite attacks using its snake arms."
+						"蛇人使用它的蛇臂進行二次啃咬攻擊。"
 					]
 				},
 				{
 					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}5 ({@damage 1d4 + 3}) piercing damage plus 7 ({@damage 2d6}) poison damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}5 ({@damage 1d4 + 3})穿刺傷害加 7 ({@damage 2d6})毒素傷害。"
 					]
 				},
 				{
-					"name": "Merrshaulk's Slumber (1/Day)",
+					"name": "麥爾紹克之沉睡 (1/日)", "tENG_name": "Merrshaulk's Slumber (1/Day)",
 					"entries": [
-						"The yuan-ti targets up to five creatures that it can see within 60 feet of it. Each target must succeed on a DC 13 Constitution saving throw or fall into a magical sleep and be {@condition unconscious} for 10 minutes. A sleeping target awakens if it takes damage or if someone uses an action to shake or slap it awake. This magical sleep has no effect on a creature immune to being {@condition charmed}."
+						"蛇人選擇最多五個它所能看見且距離它60呎內的生物。每個目標都必須成功通過一次DC 13的體質豁免，否則陷入一陣魔法性的睡眠中並{@condition 昏迷}長達10分鐘。若一個睡著的目標受到傷害、或有人使用它的動作把睡眠者搖醒或拍醒，則它將會醒來。這個魔法睡眠對免疫{@condition 魅惑}的生物不會有任何效果。"
 					]
 				}
 			],
 			"page": 206,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting (Yuan-ti Form Only)",
+					"name": "天生施法 (限定蛇人型態)", "tENG_name": "Innate Spellcasting (Yuan-ti Form Only)",
 					"headerEntries": [
-						"The yuan-ti's innate spellcasting ability is Charisma (spell save DC 13). The yuan-ti can innately cast the following spells, requiring no material components:"
+						"蛇人的天生施法屬性為魅力（法術豁免DC 13）。蛇人天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
-						"{@spell animal friendship} (snakes only)"
+						"{@spell 化獸為友} (限蛇類)"
 					],
 					"daily": {
 						"3": [
-							"{@spell suggestion}"
+							"{@spell 暗示術}"
 						]
 					},
 					"ability": "cha"
 				},
 				{
-					"name": "Spellcasting (Yuan-ti Form Only)",
+					"name": "施法 (限定蛇人型態)", "tENG_name": "Spellcasting (Yuan-ti Form Only)",
 					"headerEntries": [
-						"The yuan-ti is a 6th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, {@hit 5} to hit with spell attacks). It regains its expended spell slots when it finishes a short or long rest. It knows the following warlock spells:"
+						"蛇人是6級的施法者。它的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。它將在完成一次短休或長休時恢復它所有已消耗的法術位。它知曉以下契術師法術："
 					],
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell eldritch blast} (range 300 ft., +3 bonus to each damage roll)",
-								"{@spell friends}",
-								"{@spell guidance}",
-								"{@spell mage hand}",
-								"{@spell message}",
-								"{@spell poison spray}"
+								"{@spell 魔能爆} (射程300呎,每次傷害骰+3額外傷害)",
+								"{@spell 交友術}",
+								"{@spell 指導術}",
+								"{@spell 法師之手}",
+								"{@spell 傳訊術}",
+								"{@spell 毒氣噴灑}"
 							]
 						},
 						"3": {
 							"lower": 1,
 							"slots": 2,
 							"spells": [
-								"{@spell command}",
-								"{@spell counterspell}",
-								"{@spell hellish rebuke}",
-								"{@spell invisibility}",
-								"{@spell misty step}",
-								"{@spell unseen servant}",
-								"{@spell vampiric touch}"
+								"{@spell 命令術}",
+								"{@spell 反制法術}",
+								"{@spell 煉獄叱喝}",
+								"{@spell 隱形術}",
+								"{@spell 迷蹤步}",
+								"{@spell 隱形僕役}",
+								"{@spell 吸血鬼之觸}"
 							]
 						}
 					},
@@ -16001,16 +16001,16 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Chameleon Skin",
+					"name": "變色皮膚", "tENG_name": "Chameleon Skin",
 					"entries": [
-						"The yuan-ti has advantage on Dexterity (Stealth) checks made to hide."
+						"蛇人在為躲藏所進行的敏捷（{@skill 隱匿}）檢定中具有優勢。"
 					]
 				},
 				{
 					"type": "variant",
-					"name": "Shed Skin (1/Day)",
+					"name": "蛻皮 (1/日)", "tENG_name": "Shed Skin (1/Day)",
 					"entries": [
-						"The yuan-ti can shed its skin as a bonus action to free itself from a grapple, shackles, or other restraints. If the yuan-ti spends 1 minute eating its shed skin, it regains hit points equal to half its hit point maximum."
+						"蛇人能夠以一個附贈動作蛻皮，使它自己從擒抱、鐐銬、或其他束縛中掙脫。若蛇人在這之後花費1分鐘的時間吃掉它蛻下的皮，則它將回復等同於它生命值最大值一半的生命值。"
 					]
 				}
 			],
