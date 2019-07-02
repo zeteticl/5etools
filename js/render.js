@@ -3017,7 +3017,7 @@ Renderer.monster = {
 						if (slots >= 0) slotsAtWill = slots > 0 ? ` (${slots}法術位)` : ``;
 						if (lower) {
 							levelCantrip = `${Parser.spLevelToFull(lower)}-${levelCantrip}`;
-							if (slots >= 0) slotsAtWill = slots > 0 ? ` (${slots} ${Parser.spLevelToFull(j)}-level slot${slots > 1 ? "s" : ""})` : ``;
+							if (slots >= 0) slotsAtWill = slots > 0 ? ` (${slots}個 ${Parser.spLevelToFull(j)}法術位${slots > 1 ? "" : ""})` : ``;
 						}
 						tempList.items.push({type: "itemSpell", name: `${levelCantrip} ${slotsAtWill}:`, entry: spells.spells.join(", ")})
 					}
