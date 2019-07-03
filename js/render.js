@@ -4061,6 +4061,11 @@ Renderer.hover = {
 				const itHash = UrlUtil.URL_TO_HASH_BUILDER[page](it);
 				if (itemModifier) itemModifier(listProp, it);
 				Renderer.hover._addToCache(page, it.source, itHash, it);
+
+				if(it.ENG_name){
+					const itEngHash = UrlUtil.encodeForHash([it.ENG_name, it.source]);
+					Renderer.hover._addToCache(page, it.source, itEngHash, it);
+				}
 			});
 		}
 
@@ -4164,6 +4169,10 @@ Renderer.hover = {
 								allItems.forEach(item => {
 									const itemHash = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_ITEMS](item);
 									Renderer.hover._addToCache(page, item.source, itemHash, item);
+									if(item.ENG_name){
+										const itemEngHash = UrlUtil.encodeForHash([item.ENG_name, item.source]);
+										Renderer.hover._addToCache(page, item.source, itemEngHash, item);
+									}
 									const revName = Renderer.item.modifierPostToPre(item);
 									if (revName) Renderer.hover._addToCache(page, item.source, UrlUtil.URL_TO_HASH_BUILDER[page](revName), item);
 								});
