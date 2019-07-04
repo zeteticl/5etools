@@ -1193,7 +1193,7 @@
 					]
 				},
 				{
-					"name": "Spear",
+					"name": "矛", "tENG_name": "Spear",
 					"entries": [
 						"{@atk mw,rw} 命中{@hit 6}，觸及5呎 或 射程20/60呎，單一目標。{@h}7 ({@damage 1d6 + 4}) piercing damage, or 8 ({@damage 1d8 + 4}) piercing damage when used with two hands to make a melee attack."
 					]
@@ -3514,7 +3514,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"{@item leather armor|phb}"
+						"{@item 皮甲|phb}"
 					]
 				}
 			],
@@ -5441,7 +5441,7 @@
 			]
 		},
 		{
-			"name": "Flind",
+			"name": "弗林德豺狼人", "ENG_name": "Flind",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -5458,7 +5458,7 @@
 				{
 					"ac": 16,
 					"from": [
-						"{@item chain mail|phb}"
+						"{@item 鎖子甲|phb}"
 					]
 				}
 			],
@@ -5485,13 +5485,13 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 15,
-			"languages": "Abyssal, Gnoll",
+			"languages": "深淵語、豺狼人語",
 			"cr": "9",
 			"trait": [
 				{
-					"name": "Aura of Blood Thirst",
+					"name": "噬血靈光", "tENG_name": "Aura of Blood Thirst",
 					"entries": [
-						"If the flind isn't {@condition incapacitated}, any creature with the Rampage trait can make a bite attack as a bonus action while within 10 feet of the flind."
+						"若弗林德豺狼人未陷入{@condition 無力}狀態，則任何具有暴走特性的生物都可以在距離弗林德豺狼人10呎內時以一個附贈動作進行一次啃咬攻擊。"
 					]
 				}
 			],
@@ -5499,25 +5499,25 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The flind makes three attacks: one with each of its different flail attacks or three with its longbow."
+						"弗林德豺狼人進行三次攻擊：用它不同種類的連枷攻擊各攻擊一次，或三次長弓攻擊。"
 					]
 				},
 				{
-					"name": "Flail of Madness",
+					"name": "瘋狂連枷", "tENG_name": "Flail of Madness",
 					"entries": [
-						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}10 ({@damage 1d10 + 5})鈍擊傷害, and the target must make a DC 16 Wisdom saving throw. On a failed save, the target must make a melee attack against a random target within its reach on its next turn. If it has no targets within its reach even after moving, it loses its action on that turn."
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}10 ({@damage 1d10 + 5})鈍擊傷害，且目標必須進行一次DC 16的睿知豁免。若豁免失敗，目標必須在它的下個回合對一個處於它觸及範圍內的隨機目標進行一次近戰攻擊。若沒有任何目標處於它的觸及範圍內，則它在該回合將不能採取動作。"
 					]
 				},
 				{
-					"name": "Flail of Pain",
+					"name": "痛苦連枷", "tENG_name": "Flail of Pain",
 					"entries": [
-						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}10 ({@damage 1d10 + 5})鈍擊傷害 plus 22 ({@damage 4d10}) psychic damage."
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}10 ({@damage 1d10 + 5})鈍擊傷害加 22 ({@damage 4d10})精神傷害。"
 					]
 				},
 				{
-					"name": "Flail of Paralysis",
+					"name": "麻痺連枷", "tENG_name": "Flail of Paralysis",
 					"entries": [
-						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}10 ({@damage 1d10 + 5})鈍擊傷害, and the target must succeed on a DC 16 Constitution saving throw or be {@condition paralyzed} until the end of its next turn."
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}10 ({@damage 1d10 + 5})鈍擊傷害，且目標必須成功通過一次DC 16的體質豁免，否則陷入{@condition 麻痺}狀態直到它的下個回合結束。"
 					]
 				},
 				{
@@ -6149,7 +6149,7 @@
 			]
 		},
 		{
-			"name": "Gnoll Flesh Gnawer",
+			"name": "豺狼人噬肉者", "ENG_name": "Gnoll Flesh Gnawer",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -6188,13 +6188,13 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 10,
-			"languages": "Gnoll",
+			"languages": "豺狼人語",
 			"cr": "1",
 			"trait": [
 				{
-					"name": "Rampage",
+					"name": "暴走", "tENG_name": "Rampage",
 					"entries": [
-						"When the gnoll reduces a creature to 0 hit points with a melee attack on its turn, the gnoll can take a bonus action to move up to half its speed and make a bite attack."
+						"當豺狼人在它的回合以一次近戰攻擊將一個生物的生命值歸零，豺狼人可以使用一個附贈動作以移動最多等同於它移動速度一半的距離，並進行一次啃咬攻擊。"
 					]
 				}
 			],
@@ -6202,7 +6202,7 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The gnoll makes three attacks: one with its bite and two with its shortsword."
+						"豺狼人進行三次攻擊：一次啃咬，二次短劍。"
 					]
 				},
 				{
@@ -6218,9 +6218,9 @@
 					]
 				},
 				{
-					"name": "Sudden Rush",
+					"name": "瞬間衝刺", "tENG_name": "Sudden Rush",
 					"entries": [
-						"Until the end of the turn, the gnoll's speed increases by 60 feet and it doesn't provoke opportunity attacks."
+						"直到該回合結束前，豺狼人的移動速度將增加60呎，且它不會引發藉機攻擊。"
 					]
 				}
 			],
@@ -6249,7 +6249,7 @@
 			]
 		},
 		{
-			"name": "Gnoll Hunter",
+			"name": "豺狼人獵手", "ENG_name": "Gnoll Hunter",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -6266,7 +6266,7 @@
 				{
 					"ac": 13,
 					"from": [
-						"{@item leather armor|phb}"
+						"{@item 皮甲|phb}"
 					]
 				}
 			],
@@ -6289,13 +6289,13 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 13,
-			"languages": "Gnoll",
+			"languages": "豺狼人語",
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Rampage",
+					"name": "暴走", "tENG_name": "Rampage",
 					"entries": [
-						"When the gnoll reduces a creature to 0 hit points with a melee attack on its turn, the gnoll can take a bonus action to move up to half its speed and make a bite attack."
+						"當豺狼人在它的回合以一次近戰攻擊將一個生物的生命值歸零，豺狼人可以使用一個附贈動作以移動最多等同於它移動速度一半的距離，並進行一次啃咬攻擊。"
 					]
 				}
 			],
@@ -6303,7 +6303,7 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The gnoll makes two melee attacks with its spear or two ranged attacks with its longbow."
+						"豺狼人使用它的矛進行二次近戰攻擊，或使用它的長弓進行二次遠程攻擊。"
 					]
 				},
 				{
@@ -6313,15 +6313,15 @@
 					]
 				},
 				{
-					"name": "Spear",
+					"name": "矛", "tENG_name": "Spear",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或 射程20/60呎，單一目標。{@h}5 ({@damage 1d6 + 2}) piercing damage, or 6 ({@damage 1d8 + 2}) piercing damage when used with two hands to make a melee attack."
+						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或 射程20/60呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害，或若雙手使用以進行一次近戰攻擊時則造成 6 ({@damage 1d8 + 2})穿刺傷害。"
 					]
 				},
 				{
 					"name": "長弓", "tENG_name": "Longbow",
 					"entries": [
-						"{@atk rw} 命中{@hit 4}，射程150/600呎，單一目標。{@h}6 ({@damage 1d8 + 2}) piercing damage, and the target's speed is reduced by 10 feet until the end of its next turn."
+						"{@atk rw} 命中{@hit 4}，射程150/600呎，單一目標。{@h}6 ({@damage 1d8 + 2})穿刺傷害，且目標的移動速度將減少10呎，持續直到它的下個回合結束。"
 					]
 				}
 			],
@@ -6350,7 +6350,7 @@
 			]
 		},
 		{
-			"name": "Gnoll Witherling",
+			"name": "豺狼人凋零者", "ENG_name": "Gnoll Witherling",
 			"size": "M",
 			"type": "undead",
 			"source": "VGM",
@@ -6388,13 +6388,13 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 7,
-			"languages": "understands Gnoll but can't speak",
+			"languages": "理解豺狼人語，但不會說",
 			"cr": "1/4",
 			"trait": [
 				{
-					"name": "Rampage",
+					"name": "暴走", "tENG_name": "Rampage",
 					"entries": [
-						"When the witherling reduces a creature to 0 hit points with a melee attack on its turn, it can take a bonus action to move up to half its speed and make a bite attack."
+						"當凋零者在它的回合以一次近戰攻擊將一個生物的生命值歸零，它可以使用一個附贈動作以移動最多等同於它移動速度一半的距離，並進行一次啃咬攻擊。"
 					]
 				}
 			],
@@ -6402,7 +6402,7 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The witherling makes two attacks: one with its bite and one with its club, or two with its club."
+						"凋零者進行二次攻擊：一次啃咬，一次棍棒，或者二次棍棒。"
 					]
 				},
 				{
@@ -6412,7 +6412,7 @@
 					]
 				},
 				{
-					"name": "Club",
+					"name": "棍棒", "tENG_name": "Club",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}4 ({@damage 1d4 + 2})鈍擊傷害。"
 					]
@@ -6420,9 +6420,9 @@
 			],
 			"reaction": [
 				{
-					"name": "Vengeful Strike",
+					"name": "報復打擊", "tENG_name": "Vengeful Strike",
 					"entries": [
-						"In response to a gnoll being reduced to 0 hit points within 30 feet of the witherling, the witherling makes a melee attack."
+						"當距離凋零者30呎內的一名豺狼人的生命值被歸零時，凋零者可以進行一次近戰攻擊。"
 					]
 				}
 			],
@@ -7916,7 +7916,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item leather armor|phb}",
+						"{@item 皮甲|phb}",
 						"{@item shield|phb}"
 					]
 				}
@@ -7975,7 +7975,7 @@
 					]
 				},
 				{
-					"name": "Spear",
+					"name": "矛", "tENG_name": "Spear",
 					"entries": [
 						"{@atk mw,rw} 命中{@hit 3}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d6 + 1}) piercing damage, or 5 ({@damage 1d8 + 1}) piercing damage if used with two hands to make a melee attack."
 					]
@@ -8557,7 +8557,7 @@
 					]
 				},
 				{
-					"name": "Rampage",
+					"name": "暴走", "tENG_name": "Rampage",
 					"entries": [
 						"When the leucrotta reduces a creature to 0 hit points with a melee attack on its turn, it can take a bonus action to move up to half its speed and make an attack with its hooves."
 					]
@@ -8881,7 +8881,7 @@
 			"cr": "1",
 			"trait": [
 				{
-					"name": "Rampage",
+					"name": "暴走", "tENG_name": "Rampage",
 					"entries": [
 						"When it reduces a creature to 0 hit points with a melee attack on its turn, the maw demon can take a bonus action to move up to half its speed and make a bite attack."
 					]
@@ -10160,7 +10160,7 @@
 				{
 					"ac": 13,
 					"from": [
-						"{@item leather armor|phb}"
+						"{@item 皮甲|phb}"
 					]
 				}
 			],
@@ -10279,7 +10279,7 @@
 				{
 					"ac": 18,
 					"from": [
-						"{@item chain mail|phb}",
+						"{@item 鎖子甲|phb}",
 						"{@item shield|phb}"
 					]
 				}
@@ -11583,7 +11583,7 @@
 			"cr": "8",
 			"trait": [
 				{
-					"name": "Rampage",
+					"name": "暴走", "tENG_name": "Rampage",
 					"entries": [
 						"When it reduces a creature to 0 hit points with a melee attack on its turn, the shoosuva can take a bonus action to move up to half its speed and make a bite attack."
 					]
@@ -12446,7 +12446,7 @@
 				{
 					"ac": 17,
 					"from": [
-						"{@item leather armor|phb}"
+						"{@item 皮甲|phb}"
 					]
 				}
 			],
@@ -13406,7 +13406,7 @@
 					]
 				},
 				{
-					"name": "Spear",
+					"name": "矛", "tENG_name": "Spear",
 					"entries": [
 						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或 射程20/60呎，單一目標。{@h}5 ({@damage 1d6 + 2}) piercing damage, or 6 ({@damage 1d8 + 2}) piercing damage if used with two hands to make a melee attack."
 					]
@@ -14408,7 +14408,7 @@
 					]
 				},
 				{
-					"name": "Club",
+					"name": "棍棒", "tENG_name": "Club",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}14 ({@damage 4d4 + 4})鈍擊傷害。"
 					]
@@ -14453,7 +14453,7 @@
 				{
 					"ac": 13,
 					"from": [
-						"{@item leather armor|phb}"
+						"{@item 皮甲|phb}"
 					]
 				}
 			],
@@ -14546,7 +14546,7 @@
 				{
 					"ac": 13,
 					"from": [
-						"{@item leather armor|phb}"
+						"{@item 皮甲|phb}"
 					]
 				}
 			],
