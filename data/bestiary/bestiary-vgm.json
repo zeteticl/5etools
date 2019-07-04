@@ -210,7 +210,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"conditionImmune": [
@@ -220,7 +220,7 @@
 				"paralyzed",
 				"poisoned"
 			],
-			"senses": "truesight 120 ft.",
+			"senses": "真實視覺120呎",
 			"passive": 17,
 			"languages": "Deep Speech, Undercommon, telepathy 120 ft.",
 			"cr": "10",
@@ -228,13 +228,13 @@
 				{
 					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
-						"The alhoon has advantage on saving throws against spells and other magical effects."
+						"alhoon在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Turn Resistance",
+					"name": "驅散抗性", "tENG_name": "Turn Resistance",
 					"entries": [
-						"The alhoon has advantage on saving throws against any effect that turns undead."
+						"alhoon在對抗驅散不死效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
@@ -261,12 +261,12 @@
 					],
 					"will": [
 						"{@spell 偵測思想}",
-						"{@spell levitate}"
+						"{@spell 浮空術}"
 					],
 					"daily": {
 						"1e": [
-							"{@spell dominate monster}",
-							"{@spell plane shift} (self only)"
+							"{@spell 支配怪物}",
+							"{@spell 異界傳送} (self only)"
 						]
 					},
 					"ability": "int"
@@ -283,7 +283,7 @@
 								"{@spell 舞光術}",
 								"{@spell 法師之手}",
 								"{@spell 魔法技倆}",
-								"{@spell shocking grasp}"
+								"{@spell 電爪}"
 							]
 						},
 						"1": {
@@ -299,7 +299,7 @@
 							"slots": 3,
 							"spells": [
 								"{@spell 隱形術}",
-								"{@spell mirror image}",
+								"{@spell 鏡影術}",
 								"{@spell 灼熱射線}"
 							]
 						},
@@ -308,28 +308,28 @@
 							"spells": [
 								"{@spell 反制法術}",
 								"{@spell 飛行術}",
-								"{@spell lightning bolt}"
+								"{@spell 閃電束}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell confusion}",
+								"{@spell 困惑術}",
 								"{@spell 艾伐黑觸手}",
-								"{@spell phantasmal killer}"
+								"{@spell 魅影殺手}"
 							]
 						},
 						"5": {
 							"slots": 2,
 							"spells": [
-								"{@spell modify memory}",
+								"{@spell 修改記憶}",
 								"{@spell 力牆術}"
 							]
 						},
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell disintegrate}",
+								"{@spell 解離術}",
 								"{@spell 法術無效結界}"
 							]
 						}
@@ -408,7 +408,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"senses": "黑暗視覺60呎",
@@ -485,28 +485,28 @@
 							"slots": 4,
 							"spells": [
 								"{@spell identify}",
-								"{@spell ray of sickness}"
+								"{@spell 致病射線}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
 								"{@spell 人類定身術}",
-								"{@spell locate object}"
+								"{@spell 物品定位術}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell bestow curse}",
+								"{@spell 降咒}",
 								"{@spell 反制法術}",
-								"{@spell lightning bolt}"
+								"{@spell 閃電束}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell phantasmal killer}",
+								"{@spell 魅影殺手}",
 								"{@spell 變形術}"
 							]
 						},
@@ -537,7 +537,7 @@
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell false life}",
+								"{@spell 摹造生命}",
 								"{@spell inflict wounds}"
 							]
 						},
@@ -545,21 +545,21 @@
 							"slots": 3,
 							"spells": [
 								"{@spell gentle repose}",
-								"{@spell ray of enfeeblement}"
+								"{@spell 衰弱射線}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell animate dead}",
-								"{@spell revivify}",
+								"{@spell 活化死屍}",
+								"{@spell 回生術}",
 								"{@spell speak with dead}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell blight}",
+								"{@spell 枯萎術}",
 								"{@spell death ward}"
 							]
 						},
@@ -573,7 +573,7 @@
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell circle of death}"
+								"{@spell 死亡之環}"
 							]
 						}
 					}
@@ -588,7 +588,7 @@
 							"slots": 4,
 							"spells": [
 								"{@spell 糾纏術}",
-								"{@spell speak with animals}"
+								"{@spell 動物交談術}"
 							]
 						},
 						"2": {
@@ -602,14 +602,14 @@
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell call lightning}",
+								"{@spell 召雷術}",
 								"{@spell plant growth}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell dominate beast}",
+								"{@spell 支配野獸}",
 								"{@spell grasping vine}"
 							]
 						},
@@ -617,7 +617,7 @@
 							"slots": 2,
 							"spells": [
 								"{@spell insect plague}",
-								"{@spell tree stride}"
+								"{@spell 樹躍術}"
 							]
 						},
 						"6": {
@@ -637,21 +637,21 @@
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell bane}",
+								"{@spell 災禍術}",
 								"{@spell bless}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell augury}",
+								"{@spell 卜筮}",
 								"{@spell 偵測思想}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell clairvoyance}",
+								"{@spell 銳眼術}",
 								"{@spell 解除魔法}",
 								"{@spell nondetection}"
 							]
@@ -659,8 +659,8 @@
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell arcane eye}",
-								"{@spell locate creature}"
+								"{@spell 祕法眼}",
+								"{@spell 生物定位術}"
 							]
 						},
 						"5": {
@@ -673,7 +673,7 @@
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell true seeing}"
+								"{@spell 真知術}"
 							]
 						}
 					}
@@ -875,78 +875,78 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell druidcraft}",
+								"{@spell 德魯伊伎倆}",
 								"{@spell 修復術}",
 								"{@spell 毒氣噴灑}",
-								"{@spell produce flame}"
+								"{@spell 燃火術}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell cure wounds}",
+								"{@spell 治療傷勢}",
 								"{@spell 糾纏術}",
-								"{@spell faerie fire}",
-								"{@spell speak with animals}"
+								"{@spell 妖火術}",
+								"{@spell 動物交談術}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell animal messenger}",
-								"{@spell beast sense}",
+								"{@spell 動物信使}",
+								"{@spell 野獸知覺}",
 								"{@spell 人類定身術}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell conjure animals}",
-								"{@spell meld into stone}",
-								"{@spell water breathing}"
+								"{@spell 召喚動物}",
+								"{@spell 融身入石}",
+								"{@spell 水下呼吸}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell dominate beast}",
-								"{@spell locate creature}",
+								"{@spell 支配野獸}",
+								"{@spell 生物定位術}",
 								"{@spell 石膚術}",
-								"{@spell wall of fire}"
+								"{@spell 火牆術}"
 							]
 						},
 						"5": {
 							"slots": 3,
 							"spells": [
-								"{@spell commune with nature}",
-								"{@spell mass cure wounds}",
-								"{@spell tree stride}"
+								"{@spell 問道自然}",
+								"{@spell 群體治療傷勢}",
+								"{@spell 樹躍術}"
 							]
 						},
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell heal}",
-								"{@spell heroes' feast}",
-								"{@spell sunbeam}"
+								"{@spell 治癒術}",
+								"{@spell 英雄宴}",
+								"{@spell 烈日光束}"
 							]
 						},
 						"7": {
 							"slots": 1,
 							"spells": [
-								"{@spell fire storm}"
+								"{@spell 火焰風暴}"
 							]
 						},
 						"8": {
 							"slots": 1,
 							"spells": [
-								"{@spell animal shapes}"
+								"{@spell 動物化形}"
 							]
 						},
 						"9": {
 							"slots": 1,
 							"spells": [
-								"{@spell foresight}"
+								"{@spell 預視術}"
 							]
 						}
 					},
@@ -971,7 +971,7 @@
 			]
 		},
 		{
-			"name": "Archer",
+			"name": "弓箭手", "ENG_name": "Archer",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -987,7 +987,7 @@
 				{
 					"ac": 16,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item 鑲釘皮甲|phb}"
 					]
 				}
 			],
@@ -1013,9 +1013,9 @@
 			"cr": "3",
 			"trait": [
 				{
-					"name": "Archer's Eye (3/Day)",
+					"name": "射手之眼 (3/日)", "tENG_name": "Archer's Eye (3/Day)",
 					"entries": [
-						"As a bonus action, the archer can add {@dice 1d10} to its next attack or damage roll with a longbow or shortbow."
+						"以一個附贈動作，弓箭手可以讓它下一次使用長弓或短弓進行的攻擊檢定或傷害骰獲得{@dice 1d10}的加值。"
 					]
 				}
 			],
@@ -1023,17 +1023,17 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The archer makes two attacks with its longbow."
+						"弓箭手進行二次長弓攻擊。"
 					]
 				},
 				{
-					"name": "Shortsword",
+					"name": "短劍", "tENG_name": "Shortsword",
 					"entries": [
 						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}7 ({@damage 1d6 + 4})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Longbow",
+					"name": "長弓", "tENG_name": "Longbow",
 					"entries": [
 						"{@atk rw} 命中{@hit 6}，射程150/600呎，單一目標。{@h}8 ({@damage 1d8 + 4})穿刺傷害。"
 					]
@@ -1166,7 +1166,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -1217,7 +1217,7 @@
 						"{@spell 解除魔法}",
 						"{@spell 恐懼術}",
 						"{@spell heat metal}",
-						"{@spell levitate}"
+						"{@spell 浮空術}"
 					],
 					"ability": "wis"
 				}
@@ -1348,7 +1348,7 @@
 			]
 		},
 		{
-			"name": "Bard",
+			"name": "吟遊詩人", "ENG_name": "Bard",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -1364,7 +1364,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item chain shirt|phb}"
+						"{@item 鏈甲衫|phb}"
 					]
 				}
 			],
@@ -1391,25 +1391,25 @@
 				"performance": "+6"
 			},
 			"passive": 15,
-			"languages": "any two languages",
+			"languages": "任意兩種語言",
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Song of Rest",
+					"name": "紓壓曲", "tENG_name": "Song of Rest",
 					"entries": [
-						"The bard can perform a song while taking a short rest. Any ally who hears the song regains an extra {@dice 1d6} hit points if it spends any Hit Dice to regain hit points at the end of that rest. The bard can confer this benefit on itself as well."
+						"吟遊詩人可以在短休期間彈奏歌曲。任何可以聽見這首歌的盟友若在短休結束時藉由消耗生命骰回復生命值，則每個這麼做的生物將回復額外的{@dice 1d6}生命值。吟遊詩人自己也能獲得這個好處。"
 					]
 				},
 				{
-					"name": "Taunt (2/Day)",
+					"name": "嘲諷 (2/日)", "tENG_name": "Taunt (2/Day)",
 					"entries": [
-						"The bard can use a bonus action on its turn to target one creature within 30 feet of it. If the target can hear the bard, the target must succeed on a DC 12 Charisma saving throw or have disadvantage on ability checks, attack rolls, and saving throws until the start of the bard's next turn."
+						"吟遊詩人可以在它的回合使用一個附贈動作以嘲諷一個距離它30呎內的生物。若目標可以聽見吟遊詩人，則目標必須成功通過一次DC 12的魅力豁免，否則將在吟遊詩人的下個回合開始前在屬性檢定、攻擊檢定、和豁免檢定中承受劣勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Shortsword",
+					"name": "短劍", "tENG_name": "Shortsword",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害。"
 					]
@@ -1426,31 +1426,31 @@
 				{
 					"name": "施法", "tENG_name": "Spellcasting",
 					"headerEntries": [
-						"The bard is a 4th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 12, {@hit 4} to hit with spell attacks). It has the following bard spells prepared:"
+						"吟遊詩人是4級的施法者。它的施法屬性為魅力（法術豁免DC 12，法術攻擊命中{@hit 4}）。它已準備了以下吟遊詩人法術："
 					],
 					"spells": {
 						"0": {
 							"spells": [
 								"{@spell 交友術}",
 								"{@spell 法師之手}",
-								"{@spell vicious mockery}"
+								"{@spell 惡毒嘲笑}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
 								"{@spell 魅惑人類}",
-								"{@spell healing word}",
-								"{@spell heroism}",
-								"{@spell sleep}",
-								"{@spell thunderwave}"
+								"{@spell 治癒真言}",
+								"{@spell 英雄氣概}",
+								"{@spell 睡眠術}",
+								"{@spell 雷鳴波}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
 								"{@spell 隱形術}",
-								"{@spell shatter}"
+								"{@spell 粉碎音波}"
 							]
 						}
 					},
@@ -1530,7 +1530,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -1593,14 +1593,14 @@
 						"The barghest's innate spellcasting ability is Charisma (spell save DC 12). It can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell levitate}",
+						"{@spell 浮空術}",
 						"{@spell 次級幻象}",
 						"{@spell pass without trace}"
 					],
 					"daily": {
 						"1e": [
 							"{@spell 魅惑人類}",
-							"{@spell dimension door}",
+							"{@spell 次元門}",
 							"{@spell 暗示術}"
 						]
 					},
@@ -1743,8 +1743,8 @@
 					"daily": {
 						"3e": [
 							"{@spell 寒冰錐}*",
-							"{@spell ice storm}*",
-							"{@spell wall of ice}*"
+							"{@spell 冰風暴}*",
+							"{@spell 冰牆術}*"
 						],
 						"1e": [
 							"{@spell control weather}"
@@ -1762,28 +1762,28 @@
 							"slots": 4,
 							"spells": [
 								"{@spell identify}",
-								"{@spell ray of sickness}"
+								"{@spell 致病射線}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
 								"{@spell 人類定身術}",
-								"{@spell locate object}"
+								"{@spell 物品定位術}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell bestow curse}",
+								"{@spell 降咒}",
 								"{@spell 反制法術}",
-								"{@spell lightning bolt}"
+								"{@spell 閃電束}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell phantasmal killer}",
+								"{@spell 魅影殺手}",
 								"{@spell 變形術}"
 							]
 						},
@@ -1814,7 +1814,7 @@
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell false life}",
+								"{@spell 摹造生命}",
 								"{@spell inflict wounds}"
 							]
 						},
@@ -1822,21 +1822,21 @@
 							"slots": 3,
 							"spells": [
 								"{@spell gentle repose}",
-								"{@spell ray of enfeeblement}"
+								"{@spell 衰弱射線}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell animate dead}",
-								"{@spell revivify}",
+								"{@spell 活化死屍}",
+								"{@spell 回生術}",
 								"{@spell speak with dead}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell blight}",
+								"{@spell 枯萎術}",
 								"{@spell death ward}"
 							]
 						},
@@ -1850,7 +1850,7 @@
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell circle of death}"
+								"{@spell 死亡之環}"
 							]
 						}
 					}
@@ -1865,7 +1865,7 @@
 							"slots": 4,
 							"spells": [
 								"{@spell 糾纏術}",
-								"{@spell speak with animals}"
+								"{@spell 動物交談術}"
 							]
 						},
 						"2": {
@@ -1879,14 +1879,14 @@
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell call lightning}",
+								"{@spell 召雷術}",
 								"{@spell plant growth}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell dominate beast}",
+								"{@spell 支配野獸}",
 								"{@spell grasping vine}"
 							]
 						},
@@ -1894,7 +1894,7 @@
 							"slots": 2,
 							"spells": [
 								"{@spell insect plague}",
-								"{@spell tree stride}"
+								"{@spell 樹躍術}"
 							]
 						},
 						"6": {
@@ -1914,21 +1914,21 @@
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell bane}",
+								"{@spell 災禍術}",
 								"{@spell bless}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell augury}",
+								"{@spell 卜筮}",
 								"{@spell 偵測思想}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell clairvoyance}",
+								"{@spell 銳眼術}",
 								"{@spell 解除魔法}",
 								"{@spell nondetection}"
 							]
@@ -1936,8 +1936,8 @@
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell arcane eye}",
-								"{@spell locate creature}"
+								"{@spell 祕法眼}",
+								"{@spell 生物定位術}"
 							]
 						},
 						"5": {
@@ -1950,7 +1950,7 @@
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell true seeing}"
+								"{@spell 真知術}"
 							]
 						}
 					}
@@ -2158,21 +2158,21 @@
 							"slots": 4,
 							"spells": [
 								"{@spell 命令術}",
-								"{@spell protection from evil and good}",
-								"{@spell thunderous smite}"
+								"{@spell 防護善惡}",
+								"{@spell 雷霆斬}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell branding smite}",
-								"{@spell find steed}"
+								"{@spell 烙印斬}",
+								"{@spell 尋獲坐騎}"
 							]
 						},
 						"3": {
 							"slots": 2,
 							"spells": [
-								"{@spell blinding smite}",
+								"{@spell 致盲斬}",
 								"{@spell 解除魔法}"
 							]
 						}
@@ -2325,7 +2325,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -2940,7 +2940,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item 鑲釘皮甲|phb}"
 					]
 				}
 			],
@@ -3025,24 +3025,24 @@
 							"spells": [
 								"{@spell 指導術}",
 								"{@spell 修復術}",
-								"{@spell resistance}",
-								"{@spell thaumaturgy}"
+								"{@spell 提升抗力}",
+								"{@spell 奇術}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell bane}",
-								"{@spell healing word}",
+								"{@spell 災禍術}",
+								"{@spell 治癒真言}",
 								"{@spell sanctuary}",
-								"{@spell shield of faith}"
+								"{@spell 虔誠護盾}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
 								"{@spell 人類定身術}",
-								"{@spell spiritual weapon} (dagger)"
+								"{@spell 靈體武器} (dagger)"
 							]
 						}
 					},
@@ -3167,14 +3167,14 @@
 					"will": [
 						"{@spell 偵測魔法}",
 						"{@spell fog cloud}",
-						"{@spell light}"
+						"{@spell 光亮術}"
 					],
 					"daily": {
 						"3e": [
-							"{@spell feather fall}",
+							"{@spell 羽落術}",
 							"{@spell 飛行術}",
 							"{@spell 迷蹤步}",
-							"{@spell telekinesis}"
+							"{@spell 心靈遙控}"
 						],
 						"1e": [
 							"{@spell control weather}",
@@ -3193,13 +3193,13 @@
 							"spells": [
 								"{@spell 次級幻象}",
 								"{@spell 魔法技倆}",
-								"{@spell vicious mockery}"
+								"{@spell 惡毒嘲笑}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell cure wounds}",
+								"{@spell 治療傷勢}",
 								"{@spell 易容術}",
 								"{@spell silent image}",
 								"{@spell Tasha's hideous laughter}"
@@ -3215,8 +3215,8 @@
 						"3": {
 							"slots": 2,
 							"spells": [
-								"{@spell major image}",
-								"{@spell tongues}"
+								"{@spell 強效幻影}",
+								"{@spell 巧舌術}"
 							]
 						}
 					},
@@ -3599,7 +3599,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item 鑲釘皮甲|phb}"
 					]
 				}
 			],
@@ -3642,7 +3642,7 @@
 					]
 				},
 				{
-					"name": "Shortsword",
+					"name": "短劍", "tENG_name": "Shortsword",
 					"entries": [
 						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3}) piercing damage. If the darkling elder had advantage on the attack roll, the attack deals as: extra 10 ({@damage 3d6})穿刺傷害。"
 					]
@@ -4199,7 +4199,7 @@
 			]
 		},
 		{
-			"name": "Diviner",
+			"name": "預言師", "ENG_name": "Diviner",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -4245,9 +4245,9 @@
 			"cr": "8",
 			"trait": [
 				{
-					"name": "Portent (Recharges after the Diviner Casts a Divination Spell of 1st Level or Higher)",
+					"name": "預兆 (預言師施放一個一環或更高環的預言系法術之後充能)", "tENG_name": "Portent",
 					"entries": [
-						"When the diviner or a creature it can see makes an attack roll, a saving throw, or an ability check, the diviner can roll a {@dice d20} and choose to use this roll in place of the attack roll, saving throw, or ability check."
+						"當預言師或一個它所能看見的生物進行一次攻擊檢定、豁免檢定、或屬性檢定時，預言師可以骰一顆{@dice d20}並選擇使用該骰替換掉其攻擊檢定、豁免檢定、或屬性檢定的擲骰結果。"
 					]
 				}
 			],
@@ -4255,7 +4255,7 @@
 				{
 					"name": "長棍", "tENG_name": "Quarterstaff",
 					"entries": [
-						"{@atk mw} 命中{@hit 2}，觸及5呎，單一目標。{@h}2 ({@damage 1d6 - 1})鈍擊傷害, or 3 ({@damage 1d8 - 1})鈍擊傷害 if used with two hands."
+						"{@atk mw} 命中{@hit 2}，觸及5呎，單一目標。{@h}2 ({@damage 1d6 - 1})鈍擊傷害，或若以雙手使用時 3 ({@damage 1d8 - 1})鈍擊傷害。"
 					]
 				}
 			],
@@ -4264,23 +4264,23 @@
 				{
 					"name": "施法", "tENG_name": "Spellcasting",
 					"headerEntries": [
-						"The diviner is a 15th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 15, {@hit 7} to hit with spell attacks). The diviner has the following wizard spells prepared:"
+						"預言師是15級的施法者。它的施法屬性為智力（法術豁免DC 15，法術攻擊命中{@hit 7}）。預言師已準備了以下法師法術："
 					],
 					"spells": {
 						"0": {
 							"spells": [
 								"{@spell 火焰箭}",
-								"{@spell light}",
+								"{@spell 光亮術}",
 								"{@spell 法師之手}",
 								"{@spell 傳訊術}",
-								"{@spell true strike}"
+								"{@spell 克敵機先}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
 								"{@spell 偵測魔法}*",
-								"{@spell feather fall}",
+								"{@spell 羽落術}",
 								"{@spell 法師護甲}"
 							]
 						},
@@ -4288,14 +4288,14 @@
 							"slots": 3,
 							"spells": [
 								"{@spell 偵測思想}*",
-								"{@spell locate object}*",
+								"{@spell 物品定位術}*",
 								"{@spell 灼熱射線}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell clairvoyance}*",
+								"{@spell 銳眼術}*",
 								"{@spell 飛行術}",
 								"{@spell 火球術}"
 							]
@@ -4303,41 +4303,41 @@
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell arcane eye}*",
-								"{@spell ice storm}",
+								"{@spell 祕法眼}*",
+								"{@spell 冰風暴}",
 								"{@spell 石膚術}"
 							]
 						},
 						"5": {
 							"slots": 2,
 							"spells": [
-								"{@spell Rary's telepathic bond}*",
-								"{@spell seeming}"
+								"{@spell 拉瑞心靈聯結}*",
+								"{@spell 偽裝術}"
 							]
 						},
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell mass suggestion}",
-								"{@spell true seeing}*"
+								"{@spell 群體暗示術}",
+								"{@spell 真知術}*"
 							]
 						},
 						"7": {
 							"slots": 1,
 							"spells": [
-								"{@spell delayed blast fireball}",
+								"{@spell 延遲爆裂火球}",
 								"{@spell 傳送術}"
 							]
 						},
 						"8": {
 							"slots": 1,
 							"spells": [
-								"{@spell maze}"
+								"{@spell 迷宮術}"
 							]
 						}
 					},
 					"footerEntries": [
-						"* Divination spell of 1st level or higher"
+						"*一環或更高環的預言系法術"
 					],
 					"ability": "int"
 				}
@@ -4525,9 +4525,9 @@
 					],
 					"daily": {
 						"1e": [
-							"{@spell confusion}",
+							"{@spell 困惑術}",
 							"{@spell 舞光術}",
-							"{@spell faerie fire}"
+							"{@spell 妖火術}"
 						]
 					},
 					"ability": "cha"
@@ -4617,7 +4617,7 @@
 				{
 					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
-						"The elder brain has advantage on saving throws against spells and other magical effects."
+						"elder brain在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
@@ -4692,12 +4692,12 @@
 					],
 					"will": [
 						"{@spell 偵測思想}",
-						"{@spell levitate}"
+						"{@spell 浮空術}"
 					],
 					"daily": {
 						"1e": [
-							"{@spell dominate monster}",
-							"{@spell plane shift} (self only)"
+							"{@spell 支配怪物}",
+							"{@spell 異界傳送} (self only)"
 						]
 					},
 					"ability": "int"
@@ -4734,7 +4734,7 @@
 			]
 		},
 		{
-			"name": "Enchanter",
+			"name": "惑控師", "ENG_name": "Enchanter",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -4782,16 +4782,16 @@
 				{
 					"name": "長棍", "tENG_name": "Quarterstaff",
 					"entries": [
-						"{@atk mw} 命中{@hit 2}，觸及5呎，單一目標。{@h}2 ({@damage 1d6 - 1})鈍擊傷害, or 3 ({@damage 1d8 - 1})鈍擊傷害 if used with two hands."
+						"{@atk mw} 命中{@hit 2}，觸及5呎，單一目標。{@h}2 ({@damage 1d6 - 1})鈍擊傷害，或若以雙手使用時 3 ({@damage 1d8 - 1})鈍擊傷害。"
 					]
 				}
 			],
 			"reaction": [
 				{
-					"name": "Instinctive Charm (Recharges after the Enchanter Casts an Enchantment Spell of 1st level or Higher)",
+					"name": "本能魅惑 (惑控師施放一個一環或更高環的惑控系法術之後充能)", "tENG_name": "Instinctive Charm",
 					"entries": [
-						"The enchanter tries to magically divert an attack made against it, provided that the attacker is within 30 feet of it and visible to it. The enchanter must decide to do so before the attack hits or misses.",
-						"The attacker must make a DC 14 Wisdom saving throw. On a failed save, the attacker targets the creature closest to it, other than the enchanter or itself. If multiple creatures are closest, the attacker chooses which one to target."
+						"只要攻擊者距離惑控師30呎內且惑控師可以看見它，惑控師就可以嘗試使用魔法將一次對自己進行的攻擊轉向。惑控師必須在知道該攻擊命中與否之前選擇是否使用這個能力。",
+						"攻擊者必須進行一次DC 14的睿知豁免。若豁免失敗，則攻擊者必須指定距離它最近的一個生物（不包括惑控師和它自己）做為目標。若距離它最近的生物有複數個，則由攻擊者選擇要指定哪一個做為目標。"
 					]
 				}
 			],
@@ -4800,7 +4800,7 @@
 				{
 					"name": "施法", "tENG_name": "Spellcasting",
 					"headerEntries": [
-						"The enchanter is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, {@hit 6} to hit with spell attacks). The enchanter has the following wizard spells prepared:"
+						"惑控師是9級的施法者。它的施法屬性為智力（法術豁免DC 14，法術攻擊命中{@hit 6}）。惑控師已準備了以下法師法術："
 					],
 					"spells": {
 						"0": {
@@ -4832,25 +4832,25 @@
 							"spells": [
 								"{@spell 火球術}",
 								"{@spell 加速術}",
-								"{@spell tongues}"
+								"{@spell 巧舌術}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell dominate beast}*",
+								"{@spell 支配野獸}*",
 								"{@spell 石膚術}"
 							]
 						},
 						"5": {
 							"slots": 2,
 							"spells": [
-								"{@spell hold monster}*"
+								"{@spell 怪物定身術}*"
 							]
 						}
 					},
 					"footerEntries": [
-						"*Enchantment spell of 1st level or higher"
+						"*一環或更高環的惑控系法術"
 					],
 					"ability": "int"
 				}
@@ -4926,7 +4926,7 @@
 				{
 					"name": "長棍", "tENG_name": "Quarterstaff",
 					"entries": [
-						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}2 ({@damage 1d6 - 1})鈍擊傷害, or 3 ({@damage 1d8 - 1})鈍擊傷害 if used with two hands."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}2 ({@damage 1d6 - 1})鈍擊傷害，或若以雙手使用時 3 ({@damage 1d8 - 1})鈍擊傷害。"
 					]
 				}
 			],
@@ -4935,13 +4935,13 @@
 				{
 					"name": "施法", "tENG_name": "Spellcasting",
 					"headerEntries": [
-						"The evoker is a 12th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 15, {@hit 7} to hit with spell attacks). The evoker has the following wizard spells prepared:"
+						"塑能師是12級的施法者。它的施法屬性為智力（法術豁免DC 15，法術攻擊命中{@hit 7}）。塑能師已準備了以下法師法術："
 					],
 					"spells": {
 						"0": {
 							"spells": [
 								"{@spell 火焰箭}*",
-								"{@spell light}*",
+								"{@spell 光亮術}*",
 								"{@spell 魔法技倆}",
 								"{@spell 冷凍射線}*"
 							]
@@ -4957,9 +4957,9 @@
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell mirror image}",
+								"{@spell 鏡影術}",
 								"{@spell 迷蹤步}",
-								"{@spell shatter}*"
+								"{@spell 粉碎音波}*"
 							]
 						},
 						"3": {
@@ -4967,33 +4967,33 @@
 							"spells": [
 								"{@spell 反制法術}",
 								"{@spell 火球術}*",
-								"{@spell lightning bolt}*"
+								"{@spell 閃電束}*"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell ice storm}*",
+								"{@spell 冰風暴}*",
 								"{@spell 石膚術}"
 							]
 						},
 						"5": {
 							"slots": 2,
 							"spells": [
-								"{@spell Bigby's hand}*",
+								"{@spell 畢格比之掌}*",
 								"{@spell 寒冰錐}*"
 							]
 						},
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell chain lightning}*",
-								"{@spell wall of ice}*"
+								"{@spell 連環閃電}*",
+								"{@spell 冰牆術}*"
 							]
 						}
 					},
 					"footerEntries": [
-						"*Evocation spell"
+						"*塑能系法術"
 					],
 					"ability": "int"
 				}
@@ -5204,7 +5204,7 @@
 							"spells": [
 								"{@spell 火焰箭}",
 								"{@spell 指導術}",
-								"{@spell light}",
+								"{@spell 光亮術}",
 								"{@spell 法師之手}",
 								"{@spell 魔法技倆}"
 							]
@@ -5265,7 +5265,7 @@
 				{
 					"ac": 16,
 					"from": [
-						"{@item chain shirt|phb}",
+						"{@item 鏈甲衫|phb}",
 						"{@item shield|phb}"
 					]
 				}
@@ -5521,7 +5521,7 @@
 					]
 				},
 				{
-					"name": "Longbow",
+					"name": "長弓", "tENG_name": "Longbow",
 					"entries": [
 						"{@atk rw} 命中{@hit 4}，射程150/600呎，單一目標。{@h}4 ({@damage 1d8})穿刺傷害。"
 					]
@@ -6166,7 +6166,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item 鑲釘皮甲|phb}"
 					]
 				}
 			],
@@ -6212,7 +6212,7 @@
 					]
 				},
 				{
-					"name": "Shortsword",
+					"name": "短劍", "tENG_name": "Shortsword",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害。"
 					]
@@ -6319,7 +6319,7 @@
 					]
 				},
 				{
-					"name": "Longbow",
+					"name": "長弓", "tENG_name": "Longbow",
 					"entries": [
 						"{@atk rw} 命中{@hit 4}，射程150/600呎，單一目標。{@h}6 ({@damage 1d8 + 2}) piercing damage, and the target's speed is reduced by 10 feet until the end of its next turn."
 					]
@@ -6866,7 +6866,7 @@
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell cure wounds}",
+								"{@spell 治療傷勢}",
 								"{@spell jump}"
 							]
 						},
@@ -6986,7 +6986,7 @@
 				{
 					"ac": 13,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item 鑲釘皮甲|phb}"
 					]
 				}
 			],
@@ -7045,7 +7045,7 @@
 								"{@spell 酸液濺爆}",
 								"{@spell 火焰箭}",
 								"{@spell 冷凍射線}",
-								"{@spell shocking grasp}"
+								"{@spell 電爪}"
 							]
 						},
 						"1": {
@@ -7053,7 +7053,7 @@
 							"spells": [
 								"{@spell fog cloud}",
 								"{@spell 魔法飛彈}",
-								"{@spell thunderwave}"
+								"{@spell 雷鳴波}"
 							]
 						},
 						"2": {
@@ -7069,13 +7069,13 @@
 							"spells": [
 								"{@spell 火球術}",
 								"{@spell 飛行術}",
-								"{@spell lightning bolt}"
+								"{@spell 閃電束}"
 							]
 						},
 						"4": {
 							"slots": 1,
 							"spells": [
-								"{@spell ice storm}"
+								"{@spell 冰風暴}"
 							]
 						}
 					},
@@ -7187,7 +7187,7 @@
 							"spells": [
 								"{@spell 次級幻象}",
 								"{@spell 魔法技倆}",
-								"{@spell true strike}"
+								"{@spell 克敵機先}"
 							]
 						},
 						"1": {
@@ -7286,7 +7286,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"conditionImmune": [
@@ -7296,7 +7296,7 @@
 				"paralyzed",
 				"poisoned"
 			],
-			"senses": "truesight 120 ft.",
+			"senses": "真實視覺120呎",
 			"passive": 19,
 			"languages": "Deep Speech, Undercommon, telepathy 120 ft.",
 			"cr": "22",
@@ -7314,15 +7314,15 @@
 					]
 				},
 				{
-					"name": "Turn Resistance",
+					"name": "驅散抗性", "tENG_name": "Turn Resistance",
 					"entries": [
-						"The illithilich has advantage on saving throws against any effect that turns undead."
+						"illithilich在對抗驅散不死效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
 					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
-						"The illithilich has advantage on saving throws against spells and other magical effects."
+						"illithilich在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
@@ -7391,12 +7391,12 @@
 					],
 					"will": [
 						"{@spell 偵測思想}",
-						"{@spell levitate}"
+						"{@spell 浮空術}"
 					],
 					"daily": {
 						"1e": [
-							"{@spell dominate monster}",
-							"{@spell plane shift} (self only)"
+							"{@spell 支配怪物}",
+							"{@spell 異界傳送} (self only)"
 						]
 					},
 					"ability": "int"
@@ -7420,7 +7420,7 @@
 								"{@spell 偵測魔法}",
 								"{@spell 魔法飛彈}",
 								"{@spell 護盾術}",
-								"{@spell thunderwave}"
+								"{@spell 雷鳴波}"
 							]
 						},
 						"2": {
@@ -7429,13 +7429,13 @@
 								"{@spell 偵測思想}",
 								"{@spell 隱形術}",
 								"{@spell Melf's acid arrow}",
-								"{@spell mirror image}"
+								"{@spell 鏡影術}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell animate dead}",
+								"{@spell 活化死屍}",
 								"{@spell 反制法術}",
 								"{@spell 解除魔法}",
 								"{@spell 火球術}"
@@ -7444,8 +7444,8 @@
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell blight}",
-								"{@spell dimension door}"
+								"{@spell 枯萎術}",
+								"{@spell 次元門}"
 							]
 						},
 						"5": {
@@ -7458,7 +7458,7 @@
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell disintegrate}",
+								"{@spell 解離術}",
 								"{@spell 法術無效結界}"
 							]
 						},
@@ -7466,13 +7466,13 @@
 							"slots": 1,
 							"spells": [
 								"{@spell finger of death}",
-								"{@spell plane shift}"
+								"{@spell 異界傳送}"
 							]
 						},
 						"8": {
 							"slots": 1,
 							"spells": [
-								"{@spell dominate monster}",
+								"{@spell 支配怪物}",
 								"{@spell power word stun}"
 							]
 						},
@@ -7575,7 +7575,7 @@
 				{
 					"name": "長棍", "tENG_name": "Quarterstaff",
 					"entries": [
-						"{@atk mw} 命中{@hit 1}，觸及5呎，單一目標。{@h}2 ({@damage 1d6 - 1})鈍擊傷害, or 3 ({@damage 1d8 - 1})鈍擊傷害 if used with two hands."
+						"{@atk mw} 命中{@hit 1}，觸及5呎，單一目標。{@h}2 ({@damage 1d6 - 1})鈍擊傷害，或若以雙手使用時 3 ({@damage 1d8 - 1})鈍擊傷害。"
 					]
 				}
 			],
@@ -7598,7 +7598,7 @@
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell color spray}*",
+								"{@spell 七彩噴射}*",
 								"{@spell 易容術}*",
 								"{@spell 法師護甲}",
 								"{@spell 魔法飛彈}"
@@ -7608,26 +7608,26 @@
 							"slots": 3,
 							"spells": [
 								"{@spell 隱形術}*",
-								"{@spell mirror image}*",
-								"{@spell phantasmal force}"
+								"{@spell 鏡影術}*",
+								"{@spell 魅影之力}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell major image}*",
-								"{@spell phantom steed}*"
+								"{@spell 強效幻影}*",
+								"{@spell 魅影駒}*"
 							]
 						},
 						"4": {
 							"slots": 1,
 							"spells": [
-								"{@spell phantasmal killer}*"
+								"{@spell 魅影殺手}*"
 							]
 						}
 					},
 					"footerEntries": [
-						"*Illusion spell of 1st level or higher"
+						"*一環或更高環的幻術系法術"
 					],
 					"ability": "int"
 				}
@@ -7706,7 +7706,7 @@
 				{
 					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
-						"The ki-rin has advantage on saving throws against spells and other magical effects."
+						"ki-rin在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
@@ -7769,12 +7769,12 @@
 					],
 					"will": [
 						"{@spell gaseous form}",
-						"{@spell major image} (6th-level version)",
+						"{@spell 強效幻影} (6th-level version)",
 						"{@spell wind walk}"
 					],
 					"daily": {
 						"1": [
-							"{@spell create food and water}"
+							"{@spell 創造飲食}"
 						]
 					},
 					"ability": "cha"
@@ -7787,20 +7787,20 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell light}",
+								"{@spell 光亮術}",
 								"{@spell 修復術}",
-								"{@spell sacred flame}",
-								"{@spell spare the dying}",
-								"{@spell thaumaturgy}"
+								"{@spell 聖焰}",
+								"{@spell 拯救瀕死}",
+								"{@spell 奇術}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
 								"{@spell 命令術}",
-								"{@spell cure wounds}",
+								"{@spell 治療傷勢}",
 								"{@spell detect evil and good}",
-								"{@spell protection from evil and good}",
+								"{@spell 防護善惡}",
 								"{@spell sanctuary}"
 							]
 						},
@@ -7808,8 +7808,8 @@
 							"slots": 3,
 							"spells": [
 								"{@spell calm emotions}",
-								"{@spell lesser restoration}",
-								"{@spell silence}"
+								"{@spell 次級復原術}",
+								"{@spell 沉默術}"
 							]
 						},
 						"3": {
@@ -7824,30 +7824,30 @@
 							"slots": 3,
 							"spells": [
 								"{@spell 放逐術}",
-								"{@spell freedom of movement}",
-								"{@spell guardian of faith}"
+								"{@spell 行動自如術}",
+								"{@spell 虔誠守衛}"
 							]
 						},
 						"5": {
 							"slots": 3,
 							"spells": [
 								"{@spell greater restoration}",
-								"{@spell mass cure wounds}",
+								"{@spell 群體治療傷勢}",
 								"{@spell scrying}"
 							]
 						},
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell heroes' feast}",
-								"{@spell true seeing}"
+								"{@spell 英雄宴}",
+								"{@spell 真知術}"
 							]
 						},
 						"7": {
 							"slots": 1,
 							"spells": [
 								"{@spell etherealness}",
-								"{@spell plane shift}"
+								"{@spell 異界傳送}"
 							]
 						},
 						"8": {
@@ -8207,7 +8207,7 @@
 							"slots": 4,
 							"spells": [
 								"{@spell 魅惑人類}",
-								"{@spell chromatic orb}",
+								"{@spell 幻色法球}",
 								"{@spell 腳底抹油}"
 							]
 						},
@@ -8290,7 +8290,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"senses": "darkvision 120 ft., tremorsense 120 ft.",
@@ -8346,8 +8346,8 @@
 						"The korred's innate spellcasting ability is Wisdom (save DC 13). It can innately cast the following spells, requiring no components:"
 					],
 					"will": [
-						"{@spell commune with nature}",
-						"{@spell meld into stone}",
+						"{@spell 問道自然}",
+						"{@spell 融身入石}",
 						"{@spell stone shape}"
 					],
 					"daily": {
@@ -8427,11 +8427,11 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"passive": 15,
-			"languages": "any two languages",
+			"languages": "任意兩種語言",
 			"cr": "5",
 			"trait": [
 				{
@@ -8464,17 +8464,17 @@
 					],
 					"will": [
 						"{@spell 命令術}",
-						"{@spell create or destroy water}"
+						"{@spell 造水/枯水術}"
 					],
 					"daily": {
 						"3e": [
-							"{@spell control water}",
+							"{@spell 操控水體}",
 							"{@spell 黑暗術}",
-							"{@spell water breathing}",
-							"{@spell water walk}"
+							"{@spell 水下呼吸}",
+							"{@spell 水面行走}"
 						],
 						"1e": [
-							"{@spell call lightning}",
+							"{@spell 召雷術}",
 							"{@spell 艾伐黑觸手}"
 						]
 					},
@@ -8728,7 +8728,7 @@
 				{
 					"ac": 16,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item 鑲釘皮甲|phb}"
 					]
 				}
 			],
@@ -8787,7 +8787,7 @@
 					]
 				},
 				{
-					"name": "Shortsword",
+					"name": "短劍", "tENG_name": "Shortsword",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}7 ({@damage 1d6 + 4})穿刺傷害。"
 					]
@@ -9055,7 +9055,7 @@
 				{
 					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
-						"The mind flayer has advantage on saving throws against spells and other magical effects."
+						"mind flayer在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
@@ -9089,8 +9089,8 @@
 					"will": [
 						"{@spell 指導術}",
 						"{@spell 法師之手}",
-						"{@spell vicious mockery}",
-						"{@spell true strike}"
+						"{@spell 惡毒嘲笑}",
+						"{@spell 克敵機先}"
 					],
 					"spells": {
 						"1": {
@@ -9106,22 +9106,22 @@
 							"slots": 3,
 							"spells": [
 								"{@spell 瘋狂冠冕}",
-								"{@spell phantasmal force}",
+								"{@spell 魅影之力}",
 								"{@spell see invisibility}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell clairvoyance}",
+								"{@spell 銳眼術}",
 								"{@spell 恐懼術}",
-								"{@spell meld into stone}"
+								"{@spell 融身入石}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell confusion}",
+								"{@spell 困惑術}",
 								"{@spell stone shape}"
 							]
 						},
@@ -9129,7 +9129,7 @@
 							"slots": 2,
 							"spells": [
 								"{@spell scrying}",
-								"{@spell telekinesis}"
+								"{@spell 心靈遙控}"
 							]
 						}
 					},
@@ -9323,7 +9323,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"senses": "blindsight 30 ft., darkvision 120 ft.",
@@ -9389,7 +9389,7 @@
 								"{@spell 法師之手}",
 								"{@spell 修復術}",
 								"{@spell 冷凍射線}",
-								"{@spell shocking grasp}"
+								"{@spell 電爪}"
 							]
 						},
 						"1": {
@@ -9406,21 +9406,21 @@
 							"spells": [
 								"{@spell 黑暗術}",
 								"{@spell 偵測思想}",
-								"{@spell shatter}"
+								"{@spell 粉碎音波}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
 								"{@spell 解除魔法}",
-								"{@spell lightning bolt}",
+								"{@spell 閃電束}",
 								"{@spell sending}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell dimension door}",
+								"{@spell 次元門}",
 								"{@spell 艾伐黑觸手}"
 							]
 						},
@@ -9434,7 +9434,7 @@
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell chain lightning}"
+								"{@spell 連環閃電}"
 							]
 						}
 					},
@@ -9520,7 +9520,7 @@
 				{
 					"name": "Mouth of Madness",
 					"entries": [
-						"The giant is immune to {@spell confusion} spells and similar magic.",
+						"The giant is immune to {@spell 困惑術} spells and similar magic.",
 						"On each of its turns, the giant uses all its movement to move toward the nearest creature or whatever else it might perceive as food. Roll a {@dice d10} at the start of each of the giant's turns to determine its action for that turn:",
 						"1\u20133. The giant makes three attacks with its fists against one random target within its reach. If no other creatures are within its reach, the giant flies into a rage and gains advantage on all attack rolls until the end of its next turn.",
 						"4\u20135. The giant makes one attack with its fist against every creature within its reach. If no other creatures are within its reach, the giant makes one fist attack against itself.",
@@ -9640,51 +9640,51 @@
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell false life}*",
+								"{@spell 摹造生命}*",
 								"{@spell 法師護甲}",
-								"{@spell ray of sickness}*"
+								"{@spell 致病射線}*"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell blindness/deafness}*",
-								"{@spell ray of enfeeblement}*",
+								"{@spell 目盲/耳聾術}*",
+								"{@spell 衰弱射線}*",
 								"{@spell 蛛網術}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell animate dead}*",
-								"{@spell bestow curse}*",
+								"{@spell 活化死屍}*",
+								"{@spell 降咒}*",
 								"{@spell 吸血鬼之觸}*"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell blight}*",
-								"{@spell dimension door}",
+								"{@spell 枯萎術}*",
+								"{@spell 次元門}",
 								"{@spell 石膚術}"
 							]
 						},
 						"5": {
 							"slots": 2,
 							"spells": [
-								"{@spell Bigby's hand}",
+								"{@spell 畢格比之掌}",
 								"{@spell 死雲術}"
 							]
 						},
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell circle of death}*"
+								"{@spell 死亡之環}*"
 							]
 						}
 					},
 					"footerEntries": [
-						"*Necromancy spell of 1st level or higher"
+						"*一環或更高環的死靈系法術"
 					],
 					"ability": "int"
 				}
@@ -9977,7 +9977,7 @@
 								"{@spell 法師之手}",
 								"{@spell 次級幻象}",
 								"{@spell 魔法技倆}",
-								"{@spell vicious mockery}"
+								"{@spell 惡毒嘲笑}"
 							]
 						},
 						"4": {
@@ -9986,7 +9986,7 @@
 							"spells": [
 								"{@spell 哈達之臂}",
 								"{@spell 反制法術}",
-								"{@spell dimension door}",
+								"{@spell 次元門}",
 								"{@spell 恐懼術}",
 								"{@spell 人類定身術}",
 								"{@spell 哈達之欲}",
@@ -10080,7 +10080,7 @@
 				{
 					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
-						"The neothelid has advantage on saving throws against spells and other magical effects."
+						"neothelid在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
@@ -10107,13 +10107,13 @@
 						"The neothelid's innate spellcasting ability is Wisdom (spell save DC 16). It can innately cast the following spells, requiring no components:"
 					],
 					"will": [
-						"{@spell levitate}"
+						"{@spell 浮空術}"
 					],
 					"daily": {
 						"1e": [
-							"{@spell confusion}",
+							"{@spell 困惑術}",
 							"{@spell feeblemind}",
-							"{@spell telekinesis}"
+							"{@spell 心靈遙控}"
 						]
 					},
 					"ability": "wis"
@@ -10230,11 +10230,11 @@
 					"will": [
 						"{@spell 法師之手}",
 						"{@spell Tasha's hideous laughter}",
-						"{@spell vicious mockery}"
+						"{@spell 惡毒嘲笑}"
 					],
 					"daily": {
 						"1": [
-							"{@spell confusion}"
+							"{@spell 困惑術}"
 						]
 					},
 					"ability": "cha"
@@ -10454,30 +10454,30 @@
 							"spells": [
 								"{@spell 指導術}",
 								"{@spell 修復術}",
-								"{@spell resistance}",
-								"{@spell thaumaturgy}"
+								"{@spell 提升抗力}",
+								"{@spell 奇術}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell bane}",
-								"{@spell cure wounds}",
-								"{@spell guiding bolt}"
+								"{@spell 災禍術}",
+								"{@spell 治療傷勢}",
+								"{@spell 光導箭}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell augury}",
-								"{@spell warding bond}"
+								"{@spell 卜筮}",
+								"{@spell 守護聯結}"
 							]
 						},
 						"3": {
 							"slots": 2,
 							"spells": [
-								"{@spell bestow curse}",
-								"{@spell create food and water}"
+								"{@spell 降咒}",
+								"{@spell 創造飲食}"
 							]
 						}
 					},
@@ -10582,24 +10582,24 @@
 							"spells": [
 								"{@spell 指導術}",
 								"{@spell 修復術}",
-								"{@spell resistance}",
-								"{@spell thaumaturgy}"
+								"{@spell 提升抗力}",
+								"{@spell 奇術}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell bane}",
+								"{@spell 災禍術}",
 								"{@spell 偵測魔法}",
 								"{@spell inflict wounds}",
-								"{@spell protection from evil and good}"
+								"{@spell 防護善惡}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell blindness/deafness}",
-								"{@spell silence}"
+								"{@spell 目盲/耳聾術}",
+								"{@spell 沉默術}"
 							]
 						}
 					},
@@ -10743,7 +10743,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item 鑲釘皮甲|phb}"
 					]
 				}
 			],
@@ -11566,7 +11566,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -11672,7 +11672,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"vulnerable": [
@@ -12146,7 +12146,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -12326,8 +12326,8 @@
 					],
 					"daily": {
 						"1e": [
-							"{@spell confusion}",
-							"{@spell dominate monster}"
+							"{@spell 困惑術}",
+							"{@spell 支配怪物}"
 						]
 					},
 					"ability": "int"
@@ -12585,7 +12585,7 @@
 				{
 					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
-						"The tanarukk has advantage on saving throws against spells and other magical effects."
+						"tanarukk在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
@@ -12869,7 +12869,7 @@
 				{
 					"name": "長棍", "tENG_name": "Quarterstaff",
 					"entries": [
-						"{@atk mw} 命中{@hit 2}，觸及5呎，單一目標。{@h}2 ({@damage 1d6 - 1})鈍擊傷害, or 3 ({@damage 1d8 - 1})鈍擊傷害 if used with two hands."
+						"{@atk mw} 命中{@hit 2}，觸及5呎，單一目標。{@h}2 ({@damage 1d6 - 1})鈍擊傷害，或若以雙手使用時 3 ({@damage 1d8 - 1})鈍擊傷害。"
 					]
 				}
 			],
@@ -12883,7 +12883,7 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell light}",
+								"{@spell 光亮術}",
 								"{@spell 修復術}",
 								"{@spell 魔法技倆}",
 								"{@spell 冷凍射線}"
@@ -12892,7 +12892,7 @@
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell chromatic orb}",
+								"{@spell 幻色法球}",
 								"{@spell 腳底抹油}*",
 								"{@spell 法師護甲}"
 							]
@@ -12900,17 +12900,17 @@
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell alter self}*",
+								"{@spell 變造自身}*",
 								"{@spell 人類定身術}",
-								"{@spell knock}*"
+								"{@spell 敲擊術}*"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell blink}*",
+								"{@spell 閃現術}*",
 								"{@spell 火球術}",
-								"{@spell slow}*"
+								"{@spell 緩速術}*"
 							]
 						},
 						"4": {
@@ -12923,12 +12923,12 @@
 						"5": {
 							"slots": 1,
 							"spells": [
-								"{@spell telekinesis}*"
+								"{@spell 心靈遙控}*"
 							]
 						}
 					},
 					"footerEntries": [
-						"*Transmutation spell of 1st level or higher"
+						"*一環或更高環的變化系法術"
 					],
 					"ability": "int"
 				}
@@ -13083,7 +13083,7 @@
 				{
 					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
-						"The ulitharid has advantage on saving throws against spells and other magical effects."
+						"ulitharid在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
@@ -13122,19 +13122,19 @@
 					],
 					"will": [
 						"{@spell 偵測思想}",
-						"{@spell levitate}"
+						"{@spell 浮空術}"
 					],
 					"daily": {
 						"1e": [
-							"{@spell confusion}",
-							"{@spell dominate monster}",
+							"{@spell 困惑術}",
+							"{@spell 支配怪物}",
 							"{@spell eyebite}",
 							"{@spell feeblemind}",
-							"{@spell mass suggestion}",
-							"{@spell plane shift} (self only)",
+							"{@spell 群體暗示術}",
+							"{@spell 異界傳送} (self only)",
 							"{@spell project image}",
 							"{@spell scrying}",
-							"{@spell telekinesis}"
+							"{@spell 心靈遙控}"
 						]
 					},
 					"ability": "int"
@@ -13564,7 +13564,7 @@
 				"religion": "+4"
 			},
 			"passive": 13,
-			"languages": "any two languages",
+			"languages": "任意兩種語言",
 			"cr": "9",
 			"action": [
 				{
@@ -13602,57 +13602,57 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell light}",
+								"{@spell 光亮術}",
 								"{@spell 修復術}",
-								"{@spell sacred flame}",
-								"{@spell spare the dying}"
+								"{@spell 聖焰}",
+								"{@spell 拯救瀕死}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell divine favor}",
-								"{@spell guiding bolt}",
-								"{@spell healing word}",
-								"{@spell shield of faith}"
+								"{@spell 神恩術}",
+								"{@spell 光導箭}",
+								"{@spell 治癒真言}",
+								"{@spell 虔誠護盾}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell lesser restoration}",
-								"{@spell magic weapon}",
-								"{@spell prayer of healing}",
-								"{@spell silence}",
-								"{@spell spiritual weapon}"
+								"{@spell 次級復原術}",
+								"{@spell 魔化武器}",
+								"{@spell 治癒祈禱}",
+								"{@spell 沉默術}",
+								"{@spell 靈體武器}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell beacon of hope}",
-								"{@spell crusader's mantle}",
+								"{@spell 希望信標}",
+								"{@spell 十字軍斗篷}",
 								"{@spell 解除魔法}",
-								"{@spell revivify}",
-								"{@spell spirit guardians}",
-								"{@spell water walk}"
+								"{@spell 回生術}",
+								"{@spell 靈體守衛}",
+								"{@spell 水面行走}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
 								"{@spell 放逐術}",
-								"{@spell freedom of movement}",
-								"{@spell guardian of faith}",
+								"{@spell 行動自如術}",
+								"{@spell 虔誠守衛}",
 								"{@spell 石膚術}"
 							]
 						},
 						"5": {
 							"slots": 1,
 							"spells": [
-								"{@spell flame strike}",
-								"{@spell mass cure wounds}",
-								"{@spell hold monster}"
+								"{@spell 焰擊術}",
+								"{@spell 群體治療傷勢}",
+								"{@spell 怪物定身術}"
 							]
 						}
 					},
@@ -13750,7 +13750,7 @@
 						"{@spell 易容術}",
 						"{@spell 法師護甲} (self only)",
 						"{@spell silent image}",
-						"{@spell speak with animals}"
+						"{@spell 動物交談術}"
 					],
 					"daily": {
 						"1": [
@@ -13773,24 +13773,24 @@
 								"{@spell 法師之手}",
 								"{@spell 次級幻象}",
 								"{@spell 魔法技倆}",
-								"{@spell vicious mockery}"
+								"{@spell 惡毒嘲笑}"
 							]
 						},
 						"5": {
 							"lower": 1,
 							"slots": 3,
 							"spells": [
-								"{@spell blink}",
+								"{@spell 閃現術}",
 								"{@spell 魅惑人類}",
-								"{@spell dimension door}",
-								"{@spell dominate beast}",
-								"{@spell faerie fire}",
+								"{@spell 次元門}",
+								"{@spell 支配野獸}",
+								"{@spell 妖火術}",
 								"{@spell 恐懼術}",
-								"{@spell hold monster}",
+								"{@spell 怪物定身術}",
 								"{@spell 迷蹤步}",
-								"{@spell phantasmal force}",
-								"{@spell seeming}",
-								"{@spell sleep}"
+								"{@spell 魅影之力}",
+								"{@spell 偽裝術}",
+								"{@spell 睡眠術}"
 							]
 						}
 					},
@@ -13897,9 +13897,9 @@
 						"The warlock's innate spellcasting ability is Charisma. It can innately cast the following spells (spell save DC 15), requiring no material components:"
 					],
 					"will": [
-						"{@spell alter self}",
-						"{@spell false life}",
-						"{@spell levitate} (self only)",
+						"{@spell 變造自身}",
+						"{@spell 摹造生命}",
+						"{@spell 浮空術} (self only)",
 						"{@spell 法師護甲} (self only)",
 						"{@spell silent image}"
 					],
@@ -13907,7 +13907,7 @@
 						"1e": [
 							"{@spell feeblemind}",
 							"{@spell finger of death}",
-							"{@spell plane shift}"
+							"{@spell 異界傳送}"
 						]
 					},
 					"ability": "cha"
@@ -13926,7 +13926,7 @@
 								"{@spell 法師之手}",
 								"{@spell 次級幻象}",
 								"{@spell 魔法技倆}",
-								"{@spell shocking grasp}"
+								"{@spell 電爪}"
 							]
 						},
 						"5": {
@@ -13935,14 +13935,14 @@
 							"spells": [
 								"{@spell 放逐術}",
 								"{@spell 燃燒之手}",
-								"{@spell flame strike}",
+								"{@spell 焰擊術}",
 								"{@spell 煉獄叱喝}",
 								"{@spell magic circle}",
 								"{@spell 灼熱射線}",
 								"{@spell scrying}",
 								"{@spell 臭雲術}",
 								"{@spell 暗示術}",
-								"{@spell wall of fire}"
+								"{@spell 火牆術}"
 							]
 						}
 					},
@@ -14048,14 +14048,14 @@
 					"will": [
 						"{@spell 偵測魔法}",
 						"{@spell jump}",
-						"{@spell levitate}",
+						"{@spell 浮空術}",
 						"{@spell 法師護甲} (self only)",
 						"{@spell speak with dead}"
 					],
 					"daily": {
 						"1e": [
 							"{@spell arcane gate}",
-							"{@spell true seeing}"
+							"{@spell 真知術}"
 						]
 					},
 					"ability": "cha"
@@ -14074,7 +14074,7 @@
 								"{@spell 法師之手}",
 								"{@spell 次級幻象}",
 								"{@spell 魔法技倆}",
-								"{@spell shocking grasp}"
+								"{@spell 電爪}"
 							]
 						},
 						"5": {
@@ -14084,13 +14084,13 @@
 								"{@spell armor of Agathys}",
 								"{@spell 哈達之臂}",
 								"{@spell 瘋狂冠冕}",
-								"{@spell clairvoyance}",
+								"{@spell 銳眼術}",
 								"{@spell contact other plane}",
 								"{@spell 偵測思想}",
-								"{@spell dimension door}",
+								"{@spell 次元門}",
 								"{@spell dissonant whispers}",
-								"{@spell dominate beast}",
-								"{@spell telekinesis}",
+								"{@spell 支配野獸}",
+								"{@spell 心靈遙控}",
 								"{@spell 吸血鬼之觸}"
 							]
 						}
@@ -14168,7 +14168,7 @@
 				"persuasion": "+8"
 			},
 			"passive": 15,
-			"languages": "any two languages",
+			"languages": "任意兩種語言",
 			"cr": "12",
 			"trait": [
 				{
@@ -14499,7 +14499,7 @@
 			],
 			"action": [
 				{
-					"name": "Shortsword",
+					"name": "短劍", "tENG_name": "Shortsword",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害。"
 					]
@@ -14592,7 +14592,7 @@
 			],
 			"action": [
 				{
-					"name": "Shortsword",
+					"name": "短劍", "tENG_name": "Shortsword",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害。"
 					]
