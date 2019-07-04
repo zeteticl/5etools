@@ -470,7 +470,7 @@
 					"daily": {
 						"3e": [
 							"{@spell 易容術} (including the form of a Medium humanoid)",
-							"{@spell fog cloud}"
+							"{@spell 雲霧術}"
 						]
 					},
 					"ability": "cha"
@@ -514,7 +514,7 @@
 							"slots": 2,
 							"spells": [
 								"{@spell contact other plane}",
-								"{@spell scrying}"
+								"{@spell 探知}"
 							]
 						},
 						"6": {
@@ -1747,7 +1747,7 @@
 							"{@spell 冰牆術}*"
 						],
 						"1e": [
-							"{@spell control weather}"
+							"{@spell 操控天氣}"
 						]
 					},
 					"ability": "cha"
@@ -1791,7 +1791,7 @@
 							"slots": 2,
 							"spells": [
 								"{@spell contact other plane}",
-								"{@spell scrying}"
+								"{@spell 探知}"
 							]
 						},
 						"6": {
@@ -3034,7 +3034,7 @@
 							"spells": [
 								"{@spell 災禍術}",
 								"{@spell 治癒真言}",
-								"{@spell sanctuary}",
+								"{@spell 聖域術}",
 								"{@spell 虔誠護盾}"
 							]
 						},
@@ -3166,7 +3166,7 @@
 					],
 					"will": [
 						"{@spell 偵測魔法}",
-						"{@spell fog cloud}",
+						"{@spell 雲霧術}",
 						"{@spell 光亮術}"
 					],
 					"daily": {
@@ -3177,8 +3177,8 @@
 							"{@spell 心靈遙控}"
 						],
 						"1e": [
-							"{@spell control weather}",
-							"{@spell gaseous form}"
+							"{@spell 操控天氣}",
+							"{@spell 氣化形體}"
 						]
 					},
 					"ability": "cha"
@@ -3201,7 +3201,7 @@
 							"spells": [
 								"{@spell 治療傷勢}",
 								"{@spell 易容術}",
-								"{@spell silent image}",
+								"{@spell 無聲幻影}",
 								"{@spell Tasha's hideous laughter}"
 							]
 						},
@@ -3537,7 +3537,7 @@
 				"perception": "+5",
 				"stealth": "+7"
 			},
-			"senses": "blindsight 30 ft., darkvision 120 ft.",
+			"senses": "盲視30呎, 黑暗視覺120呎",
 			"passive": 15,
 			"languages": "Elvish, Sylvan",
 			"cr": "1/2",
@@ -3622,7 +3622,7 @@
 				"perception": "+6",
 				"stealth": "+7"
 			},
-			"senses": "blindsight 30 ft., darkvision 120 ft.",
+			"senses": "盲視30呎, 黑暗視覺120呎",
 			"passive": 16,
 			"languages": "Elvish, Sylvan",
 			"cr": "2",
@@ -3704,7 +3704,7 @@
 				"walk": 0,
 				"fly": {
 					"number": 30,
-					"condition": "(hover)"
+					"condition": "(浮空)"
 				},
 				"canHover": true
 			},
@@ -4609,7 +4609,7 @@
 					]
 				},
 				{
-					"name": "Legendary Resistance (3/Day)",
+					"name": "傳奇抗性 (3/日)", "tENG_name": "Legendary Resistance (3/Day)",
 					"entries": [
 						"If the elder brain fails a saving throw, it can choose to succeed instead."
 					]
@@ -5341,7 +5341,7 @@
 			]
 		},
 		{
-			"name": "Flail Snail",
+			"name": "連枷蝸牛", "ENG_name": "Flail Snail",
 			"size": "L",
 			"type": "elemental",
 			"source": "VGM",
@@ -5376,23 +5376,23 @@
 			"conditionImmune": [
 				"poisoned"
 			],
-			"senses": "黑暗視覺60呎, tremorsense 60 ft.",
+			"senses": "黑暗視覺60呎、震顫感知60呎",
 			"passive": 10,
 			"cr": "3",
 			"trait": [
 				{
-					"name": "Antimagic Shell",
+					"name": "反魔法外殼", "tENG_name": "Antimagic Shell",
 					"entries": [
-						"The snail has advantage on saving throws against spells, and any creature making a spell attack against the snail has disadvantage on the attack roll. If the snail succeeds on its saving throw against a spell or a spell attack misses it, an additional effect might occur, as determined by rolling a {@dice d6}:",
-						"1\u20132: If the spell affects an area or has multiple targets, it fails and has no effect. If the spell targets only the snail, it has no effect on the snail and is reflected back at the caster, using the spell slot level, spell save DC, attack bonus, and spellcasting ability of the caster.",
-						"3\u20134: No additional effect.",
-						"5\u20136: The snail's shell converts some of the spell's energy into a burst of destructive force. Each creature within 30 feet of the snail must make a DC 15 Constitution saving throw, taking {@dice 1d6} force damage per level of the spell on a failed save, or half as much damage on a successful one."
+						"連枷蝸牛在對抗法術所進行的豁免檢定中具有優勢，且任何對連枷蝸牛進行法術攻擊的生物也都將在該攻擊檢定中承受劣勢。若連枷蝸牛成功通過對抗法術的豁免檢定、或者對它進行的法術攻擊失手，則可能會發生額外的效果，骰一顆{@dice d6}決定：",
+						"1\u20132：若該法術會影響一個區域或多個目標，它將會失敗且不會產生任何效果。若該法術只以連枷蝸牛為目標，則它不會產生任何效果，並被反射給其施術者，使用該施術者的法術位階、法術豁免DC、攻擊加值、和施法屬性。",
+						"3\u20134：沒有額外效果。",
+						"5\u20136：連枷蝸牛的外殼將一部份法術能量轉變為一陣破壞性的力場爆炸。每個距離連枷蝸牛30呎內的生物都必須進行一次DC 15的體質豁免，豁免失敗將受到該法術環階每一環{@dice 1d6}的力場傷害，豁免成功則只受一半的傷害。"
 					]
 				},
 				{
-					"name": "Flail Tentacles",
+					"name": "連枷觸手", "tENG_name": "Flail Tentacles",
 					"entries": [
-						"The flail snail has five flail tentacles. Whenever the snail takes 10 damage or more on a single turn, one of its tentacles dies. If even one tentacle remains, the snail regrows all dead ones within {@dice 1d4} days. If all its tentacles die, the snail retracts into its shell, gaining total cover, and it begins wailing, a sound that can be heard for 600 feet, stopping only when it dies {@dice 5d6} minutes later. Healing magic that restores limbs, such as the regenerate spell, can halt this dying process."
+						"連枷蝸牛擁有五根連枷觸手。每當連枷蝸牛在單一回合中受到10點或更多的傷害，它的其中一根觸手將會死亡。只要它還殘有至少一根觸手，連枷蝸牛就能在{@dice 1d4}天後長回所有死去的連枷觸手。若它的所有觸手都死去，則連枷蝸牛將縮回它的殼中，獲得全掩護，並開始哀號。這個哀號聲可以在600呎的範圍內被聽見，且只會在它{@dice 5d6}分鐘後的死亡之後才會停止。能夠回復斷肢的治療魔法（像是{@spell 再生術}）能夠停止這個死亡的過程。"
 					]
 				}
 			],
@@ -5400,25 +5400,25 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The flail snail makes as many flail tentacle attacks as it has flail tentacles, all against the same target."
+						"連枷蝸牛對同一個目標進行多次連枷觸手攻擊，其次數等同於它所擁有連枷觸手的數量。"
 					]
 				},
 				{
-					"name": "Flail Tentacle",
+					"name": "連枷觸手", "tENG_name": "Flail Tentacle",
 					"entries": [
 						"{@atk mw} 命中{@hit 5}，觸及10呎，單一目標。{@h}6 ({@damage 1d6 + 3})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Scintillating Shell (Recharges after a Short or Long Rest)",
+					"name": "閃耀之殼 (短休或長休之後充能)", "tENG_name": "Scintillating Shell",
 					"entries": [
-						"The snail's shell emits dazzling, colored light until the end of the snail's next turn. During this time, the shell sheds bright light in a 30-foot radius and dim light for an additional 30 feet, and creatures that can see the snail have disadvantage on attack rolls against it. In addition, any creature within the bright light and able to see the snail when this power is activated must succeed on a DC 15 Wisdom saving throw or be {@condition stunned} until the light ends."
+						"連枷蝸牛的外殼持續釋放出耀眼的七彩光芒直到它的下個回合結束。在這段期間，它的外殼將散發出30呎半徑的明亮光照和再延伸30呎的微光光照，且可以看見連枷蝸牛的生物將在對它進行的攻擊檢定中承受劣勢。此外，任何在這個能力被發動時處於其明亮光照範圍內且可以看見連枷蝸牛的生物，都必須成功通過一次DC 15的睿知豁免，否則將被{@condition 震懾}直到這陣光芒結束。"
 					]
 				},
 				{
-					"name": "Shell Defense",
+					"name": "蝸殼防禦", "tENG_name": "Shell Defense",
 					"entries": [
-						"The flail snail withdraws into its shell, gaining a +4 bonus to AC until it emerges. It can emerge from its shell as a bonus action on its turn."
+						"連枷蝸牛縮回殼內，且直到它出殼之前，它的AC將獲得+4加值。它能夠以一個附贈動作從它的殼裡出來。"
 					]
 				}
 			],
@@ -5802,7 +5802,7 @@
 				"walk": 0,
 				"fly": {
 					"number": 20,
-					"condition": "(hover)"
+					"condition": "(浮空)"
 				},
 				"canHover": true
 			},
@@ -5904,7 +5904,7 @@
 				"walk": 0,
 				"fly": {
 					"number": 30,
-					"condition": "(hover)"
+					"condition": "(浮空)"
 				},
 				"canHover": true
 			},
@@ -7008,7 +7008,7 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 11,
-			"languages": "Common, Goblin",
+			"languages": "通用語、哥布林語",
 			"cr": "4",
 			"trait": [
 				{
@@ -7028,7 +7028,7 @@
 				{
 					"name": "長棍", "tENG_name": "Quarterstaff",
 					"entries": [
-						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}4 ({@damage 1d6 + 1})鈍擊傷害, or 5 ({@damage 1d8 + 1})鈍擊傷害 if used with two hands."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}4 ({@damage 1d6 + 1})鈍擊傷害，或若以雙手使用時 5 ({@damage 1d8 + 1})鈍擊傷害。"
 					]
 				}
 			],
@@ -7037,7 +7037,7 @@
 				{
 					"name": "施法", "tENG_name": "Spellcasting",
 					"headerEntries": [
-						"The hobgoblin is a 7th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 13, {@hit 5} to hit with spell attacks). It has the following wizard spells prepared:"
+						"大哥布林是7級的施法者。它的施法屬性為智力（法術豁免DC 13，法術攻擊命中{@hit 5}）。它已準備了以下法師法術："
 					],
 					"spells": {
 						"0": {
@@ -7051,7 +7051,7 @@
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell fog cloud}",
+								"{@spell 雲霧術}",
 								"{@spell 魔法飛彈}",
 								"{@spell 雷鳴波}"
 							]
@@ -7059,8 +7059,8 @@
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell gust of wind}",
-								"{@spell Melf's acid arrow}",
+								"{@spell 造風術}",
+								"{@spell 馬友夫強酸箭}",
 								"{@spell 灼熱射線}"
 							]
 						},
@@ -7103,7 +7103,7 @@
 			]
 		},
 		{
-			"name": "Hobgoblin Iron Shadow",
+			"name": "大哥布林．鐵之影", "ENG_name": "Hobgoblin Iron Shadow",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -7139,13 +7139,13 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 12,
-			"languages": "Common, Goblin",
+			"languages": "通用語、哥布林語",
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Unarmored Defense",
+					"name": "無甲防禦", "tENG_name": "Unarmored Defense",
 					"entries": [
-						"While the hobgoblin is wearing no armor and wielding no shield, its AC includes its Wisdom modifier."
+						"當大哥布林未穿戴任何護甲且未持用盾牌時，它的AC將加上它的睿知調整值。"
 					]
 				}
 			],
@@ -7153,25 +7153,25 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The hobgoblin makes four attacks, each of which can be an unarmed strike or a dart attack. It can also use Shadow Jaunt once, either before or after one of the attacks."
+						"大哥布林進行四次攻擊，各自可以是一次徒手打擊或一次飛鏢攻擊。它也可以在其中一次攻擊之前或之後使用一次暗影步。"
 					]
 				},
 				{
-					"name": "Unarmed Strike",
+					"name": "徒手打擊", "tENG_name": "Unarmed Strike",
 					"entries": [
 						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}5 ({@damage 1d4 + 3})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Dart",
+					"name": "飛鏢", "tENG_name": "Dart",
 					"entries": [
 						"{@atk rw} 命中{@hit 5}，射程20/60呎，單一目標。{@h}5 ({@damage 1d4 + 3})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Shadow Jaunt",
+					"name": "暗影步", "tENG_name": "Shadow Jaunt",
 					"entries": [
-						"The hobgoblin magically teleports, along with any equipment it is wearing or carrying, up to 30 feet to an unoccupied space it can see. Both the space it is leaving and its destination must be in dim light or darkness."
+						"大哥布林用魔法將自己連同任何它所穿戴或攜帶的裝備一起傳送最多30呎距離到一處它所能看見的未被佔據空間。它所離開的空間和目的地都必須處於微光光照或黑暗環境。"
 					]
 				}
 			],
@@ -7180,7 +7180,7 @@
 				{
 					"name": "施法", "tENG_name": "Spellcasting",
 					"headerEntries": [
-						"The hobgoblin is a 2nd-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 12, {@hit 4} to hit with spell attacks). It has the following wizard spells prepared:"
+						"大哥布林是2級的施法者。它的施法屬性為智力（法術豁免DC 12，法術攻擊命中{@hit 4}）。它已準備了以下法師法術："
 					],
 					"spells": {
 						"0": {
@@ -7196,7 +7196,7 @@
 								"{@spell 魅惑人類}",
 								"{@spell 易容術}",
 								"{@spell 腳底抹油}",
-								"{@spell silent image}"
+								"{@spell 無聲幻影}"
 							]
 						}
 					},
@@ -7302,7 +7302,7 @@
 			"cr": "22",
 			"trait": [
 				{
-					"name": "Legendary Resistance (3/Day)",
+					"name": "傳奇抗性 (3/日)", "tENG_name": "Legendary Resistance (3/Day)",
 					"entries": [
 						"If the illithilich fails a saving throw, it can choose to succeed instead."
 					]
@@ -7428,7 +7428,7 @@
 							"spells": [
 								"{@spell 偵測思想}",
 								"{@spell 隱形術}",
-								"{@spell Melf's acid arrow}",
+								"{@spell 馬友夫強酸箭}",
 								"{@spell 鏡影術}"
 							]
 						},
@@ -7452,7 +7452,7 @@
 							"slots": 3,
 							"spells": [
 								"{@spell 死雲術}",
-								"{@spell scrying}"
+								"{@spell 探知}"
 							]
 						},
 						"6": {
@@ -7671,7 +7671,7 @@
 				"walk": 60,
 				"fly": {
 					"number": 120,
-					"condition": "(hover)"
+					"condition": "(浮空)"
 				},
 				"canHover": true
 			},
@@ -7692,27 +7692,27 @@
 			"conditionImmune": [
 				"poisoned"
 			],
-			"senses": "blindsight 30 ft., darkvision 120 ft.",
+			"senses": "盲視30呎, 黑暗視覺120呎",
 			"passive": 19,
-			"languages": "all, telepathy 120 ft.",
+			"languages": "全部語言、心靈感應120呎",
 			"cr": "12",
 			"trait": [
 				{
-					"name": "Legendary Resistance (3/Day)",
+					"name": "傳奇抗性 (3/日)", "tENG_name": "Legendary Resistance (3/Day)",
 					"entries": [
-						"If the ki-rin fails a saving throw, it can choose to succeed instead."
+						"若麒麟在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				},
 				{
 					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
-						"ki-rin在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"麒麟在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Magic Weapons",
+					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The ki-rin's weapon attacks are magical."
+						"麒麟的武器攻擊視作魔法攻擊。"
 					]
 				}
 			],
@@ -7720,17 +7720,17 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The ki-rin makes three attacks: two with its hooves and one with its horn."
+						"麒麟進行三次攻擊：二次蹄擊、一次角擊。"
 					]
 				},
 				{
-					"name": "Hoof",
+					"name": "蹄擊", "tENG_name": "Hoof",
 					"entries": [
 						"{@atk mw} 命中{@hit 9}，觸及15呎，單一目標。{@h}10 ({@damage 2d4 + 5})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Horn",
+					"name": "角擊", "tENG_name": "Horn",
 					"entries": [
 						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}14 ({@damage 2d8 + 5})穿刺傷害。"
 					]
@@ -7738,9 +7738,9 @@
 			],
 			"legendary": [
 				{
-					"name": "Detect",
+					"name": "偵查", "tENG_name": "Detect",
 					"entries": [
-						"The ki-rin makes a Wisdom ({@skill Perception}) check or a Wisdom ({@skill Insight}) check."
+						"麒麟進行一次睿知（{@skill 感知}）檢定或一次睿知（{@skill 察言觀色}）檢定。"
 					]
 				},
 				{
@@ -7768,9 +7768,9 @@
 						"The ki-rin's innate spellcasting ability is Charisma (spell save DC 17). The ki-rin can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell gaseous form}",
+						"{@spell 氣化形體}",
 						"{@spell 強效幻影} (6th-level version)",
-						"{@spell wind walk}"
+						"{@spell 御風而行}"
 					],
 					"daily": {
 						"1": [
@@ -7799,15 +7799,15 @@
 							"spells": [
 								"{@spell 命令術}",
 								"{@spell 治療傷勢}",
-								"{@spell detect evil and good}",
+								"{@spell 偵測善惡}",
 								"{@spell 防護善惡}",
-								"{@spell sanctuary}"
+								"{@spell 聖域術}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell calm emotions}",
+								"{@spell 安定心神}",
 								"{@spell 次級復原術}",
 								"{@spell 沉默術}"
 							]
@@ -7816,8 +7816,8 @@
 							"slots": 3,
 							"spells": [
 								"{@spell 解除魔法}",
-								"{@spell remove curse}",
-								"{@spell sending}"
+								"{@spell 移除詛咒}",
+								"{@spell 短訊術}"
 							]
 						},
 						"4": {
@@ -7831,9 +7831,9 @@
 						"5": {
 							"slots": 3,
 							"spells": [
-								"{@spell greater restoration}",
+								"{@spell 高等復原術}",
 								"{@spell 群體治療傷勢}",
-								"{@spell scrying}"
+								"{@spell 探知}"
 							]
 						},
 						"6": {
@@ -7846,20 +7846,20 @@
 						"7": {
 							"slots": 1,
 							"spells": [
-								"{@spell etherealness}",
+								"{@spell 跨入乙太界}",
 								"{@spell 異界傳送}"
 							]
 						},
 						"8": {
 							"slots": 1,
 							"spells": [
-								"{@spell control weather}"
+								"{@spell 操控天氣}"
 							]
 						},
 						"9": {
 							"slots": 1,
 							"spells": [
-								"{@spell true resurrection}"
+								"{@spell 完全復活術}"
 							]
 						}
 					},
@@ -8293,7 +8293,7 @@
 					"preNote": "非魔法攻擊所造成的"
 				}
 			],
-			"senses": "darkvision 120 ft., tremorsense 120 ft.",
+			"senses": "darkvision 120 ft., 震顫感知120呎",
 			"passive": 15,
 			"languages": "Dwarvish, Gnomish, Sylvan, Terran, Undercommon",
 			"cr": "7",
@@ -8647,7 +8647,7 @@
 			"cr": "3",
 			"trait": [
 				{
-					"name": "Unarmored Defense",
+					"name": "無甲防禦", "tENG_name": "Unarmored Defense",
 					"entries": [
 						"While the adept is wearing no armor and wielding no shield, its AC includes its Wisdom modifier."
 					]
@@ -8661,7 +8661,7 @@
 					]
 				},
 				{
-					"name": "Unarmed Strike",
+					"name": "徒手打擊", "tENG_name": "Unarmed Strike",
 					"entries": [
 						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3})鈍擊傷害。 If the target is a creature, the adept can choose one of the following additional effects:",
 						{
@@ -8675,7 +8675,7 @@
 					]
 				},
 				{
-					"name": "Dart",
+					"name": "飛鏢", "tENG_name": "Dart",
 					"entries": [
 						"{@atk rw} 命中{@hit 5}，射程20/60呎，單一目標。{@h}5 ({@damage 1d4 + 3})穿刺傷害。"
 					]
@@ -9099,7 +9099,7 @@
 								"{@spell 魅惑人類}",
 								"{@spell 命令術}",
 								"{@spell comprehend languages}",
-								"{@spell sanctuary}"
+								"{@spell 聖域術}"
 							]
 						},
 						"2": {
@@ -9128,7 +9128,7 @@
 						"5": {
 							"slots": 2,
 							"spells": [
-								"{@spell scrying}",
+								"{@spell 探知}",
 								"{@spell 心靈遙控}"
 							]
 						}
@@ -9187,7 +9187,7 @@
 				"walk": 0,
 				"fly": {
 					"number": 20,
-					"condition": "(hover)"
+					"condition": "(浮空)"
 				},
 				"canHover": true
 			},
@@ -9326,7 +9326,7 @@
 					"preNote": "非魔法攻擊所造成的"
 				}
 			],
-			"senses": "blindsight 30 ft., darkvision 120 ft.",
+			"senses": "盲視30呎, 黑暗視覺120呎",
 			"passive": 20,
 			"languages": "telepathy 120 ft.",
 			"cr": {
@@ -9414,7 +9414,7 @@
 							"spells": [
 								"{@spell 解除魔法}",
 								"{@spell 閃電束}",
-								"{@spell sending}"
+								"{@spell 短訊術}"
 							]
 						},
 						"4": {
@@ -9428,7 +9428,7 @@
 							"slots": 3,
 							"spells": [
 								"{@spell geas}",
-								"{@spell scrying}"
+								"{@spell 探知}"
 							]
 						},
 						"6": {
@@ -10182,7 +10182,7 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 9,
-			"languages": "Common, Goblin",
+			"languages": "通用語、哥布林語",
 			"cr": "1",
 			"trait": [
 				{
@@ -10809,7 +10809,7 @@
 					]
 				},
 				{
-					"name": "Dart",
+					"name": "飛鏢", "tENG_name": "Dart",
 					"entries": [
 						"{@atk rw} 命中{@hit 5}，射程20/60呎，單一目標。{@h}10 ({@damage 3d4 + 3})穿刺傷害。"
 					]
@@ -11343,7 +11343,7 @@
 					]
 				},
 				{
-					"name": "Unarmed Strike",
+					"name": "徒手打擊", "tENG_name": "Unarmed Strike",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}4 ({@damage 1d4 + 2})鈍擊傷害。"
 					]
@@ -12118,7 +12118,7 @@
 				"walk": 50,
 				"fly": {
 					"number": 50,
-					"condition": "(hover)"
+					"condition": "(浮空)"
 				},
 				"swim": 50,
 				"canHover": true
@@ -13133,7 +13133,7 @@
 							"{@spell 群體暗示術}",
 							"{@spell 異界傳送} (self only)",
 							"{@spell project image}",
-							"{@spell scrying}",
+							"{@spell 探知}",
 							"{@spell 心靈遙控}"
 						]
 					},
@@ -13749,7 +13749,7 @@
 					"will": [
 						"{@spell 易容術}",
 						"{@spell 法師護甲} (self only)",
-						"{@spell silent image}",
+						"{@spell 無聲幻影}",
 						"{@spell 動物交談術}"
 					],
 					"daily": {
@@ -13901,7 +13901,7 @@
 						"{@spell 摹造生命}",
 						"{@spell 浮空術} (self only)",
 						"{@spell 法師護甲} (self only)",
-						"{@spell silent image}"
+						"{@spell 無聲幻影}"
 					],
 					"daily": {
 						"1e": [
@@ -13939,7 +13939,7 @@
 								"{@spell 煉獄叱喝}",
 								"{@spell magic circle}",
 								"{@spell 灼熱射線}",
-								"{@spell scrying}",
+								"{@spell 探知}",
 								"{@spell 臭雲術}",
 								"{@spell 暗示術}",
 								"{@spell 火牆術}"
@@ -14780,7 +14780,7 @@
 				"walk": 40,
 				"fly": {
 					"number": 40,
-					"condition": "(hover)"
+					"condition": "(浮空)"
 				},
 				"canHover": true
 			},
