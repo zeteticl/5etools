@@ -248,7 +248,7 @@
 				{
 					"name": "Mind Blast {@recharge 5}",
 					"entries": [
-						"The alhoon magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 16 Intelligence saving throw or take 22 ({@damage 4d8 + 4}) psychic damage and be {@condition stunned} for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"The alhoon magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 16 Intelligence saving throw or take 22 ({@damage 4d8 + 4}) psychic damage and be {@condition 震懾} for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				}
 			],
@@ -538,7 +538,7 @@
 							"slots": 4,
 							"spells": [
 								"{@spell 摹造生命}",
-								"{@spell inflict wounds}"
+								"{@spell 造成傷勢}"
 							]
 						},
 						"2": {
@@ -596,14 +596,14 @@
 							"spells": [
 								"{@spell flaming sphere}",
 								"{@spell moonbeam}",
-								"{@spell spike growth}"
+								"{@spell 荊棘叢生}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
 								"{@spell 召雷術}",
-								"{@spell plant growth}"
+								"{@spell 植物滋長}"
 							]
 						},
 						"4": {
@@ -819,8 +819,8 @@
 				{
 					"ac": 16,
 					"from": [
-						"{@item hide armor|phb}",
-						"{@item shield|phb}"
+						"{@item 生皮甲|phb}",
+						"{@item 盾牌|phb}"
 					]
 				}
 			],
@@ -851,7 +851,7 @@
 			"cr": "12",
 			"action": [
 				{
-					"name": "Scimitar",
+					"name": "彎刀", "tENG_name": "Scimitar",
 					"entries": [
 						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})劈砍傷害。"
 					]
@@ -1815,7 +1815,7 @@
 							"slots": 4,
 							"spells": [
 								"{@spell 摹造生命}",
-								"{@spell inflict wounds}"
+								"{@spell 造成傷勢}"
 							]
 						},
 						"2": {
@@ -1873,14 +1873,14 @@
 							"spells": [
 								"{@spell flaming sphere}",
 								"{@spell moonbeam}",
-								"{@spell spike growth}"
+								"{@spell 荊棘叢生}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
 								"{@spell 召雷術}",
-								"{@spell plant growth}"
+								"{@spell 植物滋長}"
 							]
 						},
 						"4": {
@@ -2600,7 +2600,7 @@
 				{
 					"name": "尾擊", "tENG_name": "Tail",
 					"entries": [
-						"{@atk mw} 命中{@hit 7}，觸及10呎，單一目標。{@h}21 ({@damage 5d6 + 4})鈍擊傷害, and the target must succeed on a DC 16 Constitution saving throw or be {@condition stunned} until the start of the catoblepas's next turn."
+						"{@atk mw} 命中{@hit 7}，觸及10呎，單一目標。{@h}21 ({@damage 5d6 + 4})鈍擊傷害, and the target must succeed on a DC 16 Constitution saving throw or be {@condition 震懾} until the start of the catoblepas's next turn."
 					]
 				},
 				{
@@ -2837,7 +2837,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"{@item hide armor|phb}"
+						"{@item 生皮甲|phb}"
 					]
 				}
 			],
@@ -3857,7 +3857,7 @@
 			]
 		},
 		{
-			"name": "Deep Scion",
+			"name": "深淵子嗣", "ENG_name": "Deep Scion",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -3880,7 +3880,7 @@
 			"speed": {
 				"walk": {
 					"number": 30,
-					"condition": " (20 ft. and swim 40 ft. in hybrid form)"
+					"condition": " (半魚人型態下則為20呎, 游泳40呎)"
 				}
 			},
 			"str": 18,
@@ -3901,19 +3901,19 @@
 			},
 			"senses": "黑暗視覺120呎",
 			"passive": 11,
-			"languages": "Aquan, Common, thieves' cant",
+			"languages": "水族語、通用語、竊賊黑話",
 			"cr": "3",
 			"trait": [
 				{
 					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
-						"The deep scion can use its action to polymorph into a humanoid-piscine hybrid form, or back into its true form. Its statistics, other than its speed, are the same in each form. Any equipment it is wearing or carrying isn't transformed. The deep scion reverts to its true form if it dies."
+						"深淵子嗣可以使用它的動作以變形成一個類人-類魚般的半魚人混合型態，或變回它的真實型態。除了它的速度之外，它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。它會在死亡時回復它的真實型態。"
 					]
 				},
 				{
-					"name": "Amphibious (Hybrid Form Only)",
+					"name": "兩棲 (限定半魚人型態)", "tENG_name": "Amphibious (Hybrid Form Only)",
 					"entries": [
-						"deep scion可以在空氣和水中呼吸。"
+						"深淵子嗣可以在空氣和水中呼吸。"
 					]
 				}
 			],
@@ -3921,31 +3921,31 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"In humanoid form, the deep scion makes two melee attacks. In hybrid form, the deep scion makes three attacks: one with its bite and two with its claws."
+						"在類人型態下，深淵子嗣進行二次近戰攻擊。在半魚人型態下，它進行三次攻擊：一次啃咬，二次爪抓。"
 					]
 				},
 				{
-					"name": "Battleaxe (Humanoid Form Only)",
+					"name": "戰斧 (限定類人形態)", "tENG_name": "Battleaxe (Humanoid Form Only)",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}8 ({@damage 1d8 + 4})劈砍傷害, or 9 ({@damage 1d10 + 4})劈砍傷害 if used with two hands."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}8 ({@damage 1d8 + 4})劈砍傷害，或若以雙手使用時 9 ({@damage 1d10 + 4})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Bite (Hybrid Form Only)",
+					"name": "啃咬 (限定半魚人形態)", "tENG_name": "Bite (Hybrid Form Only)",
 					"entries": [
 						"{@atk mw} 命中{@hit 6}，觸及5呎，單一生物。{@h}6 ({@damage 1d4 + 4})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Claw (Hybrid Form Only)",
+					"name": "爪抓 (限定半魚人形態)", "tENG_name": "Claw (Hybrid Form Only)",
 					"entries": [
 						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}7 ({@damage 1d6 + 4})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Psychic Screech (Hybrid Form Only; Recharges after a Short or Long Rest)",
+					"name": "心靈尖嘯 (限定半魚人形態；短休或長休之後充能)", "tENG_name": "Psychic Screech",
 					"entries": [
-						"The deep scion emits a terrible scream audible within 300 feet. Creatures within 30 feet of the deep scion must succeed on a DC 13 Wisdom saving throw or be {@condition stunned} until the end of the deep scion's next turn. In water, the psychic screech also telepathically transmits the deep scion's memories of the last 24 hours to its master, regardless of distance, so long as it and its master are in the same body of water."
+						"深淵子嗣發出可以在300呎內被聽見的可怕尖嘯聲。任何距離深淵子嗣30呎內的生物都必須成功通過一次DC 13的睿知豁免，否則被{@condition 震懾}直到深淵子嗣的下個回合結束。在水中，無視距離多遠，只要深淵子嗣和它的主人處於同一個水體中，這陣心靈尖嘯將同時透過心靈感應將該它24小時內的記憶傳遞給它的主人。"
 					]
 				}
 			],
@@ -4637,7 +4637,7 @@
 				{
 					"name": "Mind Blast {@recharge 5}",
 					"entries": [
-						"The elder brain magically emits psychic energy. Creatures of the elder brain's choice within 60 feet of it must succeed on a DC 18 Intelligence saving throw or take 32 ({@damage 5d10 + 5}) psychic damage and be {@condition stunned} for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"The elder brain magically emits psychic energy. Creatures of the elder brain's choice within 60 feet of it must succeed on a DC 18 Intelligence saving throw or take 32 ({@damage 5d10 + 5}) psychic damage and be {@condition 震懾} for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				},
 				{
@@ -5266,7 +5266,7 @@
 					"ac": 16,
 					"from": [
 						"{@item 鏈甲衫|phb}",
-						"{@item shield|phb}"
+						"{@item 盾牌|phb}"
 					]
 				}
 			],
@@ -5305,7 +5305,7 @@
 					]
 				},
 				{
-					"name": "Scimitar",
+					"name": "彎刀", "tENG_name": "Scimitar",
 					"entries": [
 						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}4 ({@damage 1d6 + 1})劈砍傷害。"
 					]
@@ -5714,7 +5714,7 @@
 				{
 					"name": "Extra Heads",
 					"entries": [
-						"The giant has a 25 percent chance of having more than one head. If it has more than one, it has advantage on Wisdom ({@skill Perception}) checks and on saving throws against being {@condition blinded}, {@condition 魅惑}, {@condition deafened}, {@condition frightened}, {@condition stunned}, or knocked {@condition unconscious}."
+						"The giant has a 25 percent chance of having more than one head. If it has more than one, it has advantage on Wisdom ({@skill Perception}) checks and on saving throws against being {@condition blinded}, {@condition 魅惑}, {@condition deafened}, {@condition frightened}, {@condition 震懾}, or knocked {@condition unconscious}."
 					]
 				},
 				{
@@ -5831,7 +5831,7 @@
 				{
 					"name": "Stunning Gaze",
 					"entries": [
-						"When a creature that can see the gauth's central eye starts its turn within 30 feet of the gauth, the gauth can force it to make a DC 14 Wisdom saving throw if the gauth isn't {@condition 無力} and can see the creature. A creature that fails the save is {@condition stunned} until the start of its next turn, when it can avert its eyes again. If the creature looks at the gauth in the meantime, it must immediately make the save."
+						"When a creature that can see the gauth's central eye starts its turn within 30 feet of the gauth, the gauth can force it to make a DC 14 Wisdom saving throw if the gauth isn't {@condition 無力} and can see the creature. A creature that fails the save is {@condition 震懾} until the start of its next turn, when it can avert its eyes again. If the creature looks at the gauth in the meantime, it must immediately make the save."
 					]
 				},
 				{
@@ -5929,7 +5929,7 @@
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Aggressive",
+					"name": "侵略性", "tENG_name": "Aggressive",
 					"entries": [
 						"As a bonus action, the gazer can move up to its speed toward a hostile creature that it can see."
 					]
@@ -6103,7 +6103,7 @@
 			"cr": "4",
 			"trait": [
 				{
-					"name": "Aggressive",
+					"name": "侵略性", "tENG_name": "Aggressive",
 					"entries": [
 						"As a bonus action, the girallon can move up to its speed toward a hostile creature that it can see."
 					]
@@ -6545,7 +6545,7 @@
 			]
 		},
 		{
-			"name": "Grung",
+			"name": "格龍蛙人", "ENG_name": "Grung",
 			"size": "S",
 			"type": {
 				"type": "humanoid",
@@ -6591,25 +6591,25 @@
 				"poisoned"
 			],
 			"passive": 12,
-			"languages": "Grung",
+			"languages": "格龍蛙人語",
 			"cr": "1/4",
 			"trait": [
 				{
 					"name": "兩棲", "tENG_name": "Amphibious",
 					"entries": [
-						"grung可以在空氣和水中呼吸。"
+						"格龍蛙人可以在空氣和水中呼吸。"
 					]
 				},
 				{
-					"name": "Poisonous Skin",
+					"name": "劇毒皮膚", "tENG_name": "Poisonous Skin",
 					"entries": [
-						"Any creature that grapples the grung or otherwise comes into direct contact with the grung's skin must succeed on a DC 12 Constitution saving throw or become {@condition 中毒} for 1 minute. A {@condition 中毒} creature no longer in direct contact with the grung can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"任何擒抱格龍蛙人、或透過任何其他方式直接碰觸到格龍蛙人皮膚的生物都必須成功通過一次DC 12的體質豁免，否則將陷入{@condition 中毒}狀態長達1分鐘。不再直接碰觸格龍蛙人皮膚的{@condition 中毒}生物可以在它的每個回合結束時重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。"
 					]
 				},
 				{
-					"name": "Standing Leap",
+					"name": "立定跳躍", "tENG_name": "Standing Leap",
 					"entries": [
-						"The grung's long jump is up to 25 feet and its high jump is up to 15 feet, with or without a running start."
+						"格龍蛙人的跳遠距離最多25呎、且跳高距離最多15呎，無論有沒有助跑都一樣。"
 					]
 				}
 			],
@@ -6617,7 +6617,7 @@
 				{
 					"name": "匕首", "tENG_name": "Dagger",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d4 + 2}) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 5 ({@damage 2d4})毒素傷害。"
+						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d4 + 2})穿刺傷害，且目標必須成功通過一次DC12的體質豁免，否則受到 5 ({@damage 2d4})毒素傷害。"
 					]
 				}
 			],
@@ -6625,13 +6625,13 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Grung Poison",
+					"name": "格龍蛙人毒素", "tENG_name": "Grung Poison",
 					"entries": [
-						"Grung poison loses its potency 1 minute after being removed from a grung. A similar breakdown occurs if the grung dies.",
-						"A creature {@condition 中毒} by a grung can suffer an additional effect that varies depending on the grung's skin color. This effect lasts until the creature is no longer {@condition 中毒} by the grung.",
-						"Green. The {@condition 中毒} creature can't move except to climb or make standing jumps. If the creature is flying, it can't take any actions or reactions unless it lands.",
-						"Blue. The {@condition 中毒} creature must shout loudly or otherwise make a loud noise at the start and end of its turn.",
-						"Purple. The {@condition 中毒} creature feels a desperate need to soak itself in liquid or mud. It can't take actions or move except to do so or to reach a body of liquid or mud."
+						"格龍蛙人的毒素會在離開其體表1分鐘之後失效。若格龍蛙人死亡，類似的情況也同樣會發生。",
+						"一個因為格龍蛙人毒素而{@condition 中毒}的生物可能會產生不同的額外效果，取決於該格龍蛙人的皮膚顏色。這個效果將持續直到該生物不再因為格龍蛙人毒素而{@condition 中毒}。",
+						"綠色：{@condition 中毒}生物不能透過攀爬或立定跳躍以外的方式移動。若該生物正在飛行中，則除非它著地，否則它將不能採取任何動作或反應。",
+						"藍色：{@condition 中毒}生物必須在它的回合開始和結束時大聲喊叫或發出吵鬧的噪音。",
+						"紫色：{@condition 中毒}生物迫切將自己浸泡在液體或泥漿之中。除非它是為了要接觸到液體或泥漿、或已經與之接觸，否則它將不能採取任何動作或移動。"
 					]
 				}
 			],
@@ -6651,7 +6651,7 @@
 			]
 		},
 		{
-			"name": "Grung Elite Warrior",
+			"name": "格龍蛙人菁英戰士", "ENG_name": "Grung Elite Warrior",
 			"size": "S",
 			"type": {
 				"type": "humanoid",
@@ -6697,25 +6697,25 @@
 				"poisoned"
 			],
 			"passive": 12,
-			"languages": "Grung",
+			"languages": "格龍蛙人語",
 			"cr": "2",
 			"trait": [
 				{
 					"name": "兩棲", "tENG_name": "Amphibious",
 					"entries": [
-						"grung可以在空氣和水中呼吸。"
+						"格龍蛙人可以在空氣和水中呼吸。"
 					]
 				},
 				{
-					"name": "Poisonous Skin",
+					"name": "劇毒皮膚", "tENG_name": "Poisonous Skin",
 					"entries": [
-						"Any creature that grapples the grung or otherwise comes into direct contact with the grung's skin must succeed on a DC 12 Constitution saving throw or become {@condition 中毒} for 1 minute. A {@condition 中毒} creature no longer in direct contact with the grung can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"任何擒抱格龍蛙人、或透過任何其他方式直接碰觸到格龍蛙人皮膚的生物都必須成功通過一次DC 12的體質豁免，否則將陷入{@condition 中毒}狀態長達1分鐘。不再直接碰觸格龍蛙人皮膚的{@condition 中毒}生物可以在它的每個回合結束時重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。"
 					]
 				},
 				{
-					"name": "Standing Leap",
+					"name": "立定跳躍", "tENG_name": "Standing Leap",
 					"entries": [
-						"The grung's long jump is up to 25 feet and its high jump is up to 15 feet, with or without a running start."
+						"格龍蛙人的跳遠距離最多25呎、且跳高距離最多15呎，無論有沒有助跑都一樣。"
 					]
 				}
 			],
@@ -6723,19 +6723,19 @@
 				{
 					"name": "匕首", "tENG_name": "Dagger",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或 射程20/60呎，單一目標。{@h}5 ({@damage 1d4 + 3}) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 5 ({@damage 2d4})毒素傷害。"
+						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或 射程20/60呎，單一目標。{@h}5 ({@damage 1d4 + 3})穿刺傷害，且目標必須成功通過一次DC12的體質豁免，否則受到 5 ({@damage 2d4})毒素傷害。"
 					]
 				},
 				{
 					"name": "短弓", "tENG_name": "Shortbow",
 					"entries": [
-						"{@atk rw} 命中{@hit 5}，射程80/320呎，單一目標。{@h}6 ({@damage 1d6 + 3}) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 5 ({@damage 2d4})毒素傷害。"
+						"{@atk rw} 命中{@hit 5}，射程80/320呎，單一目標。{@h}6 ({@damage 1d6 + 3})穿刺傷害，且目標必須成功通過一次DC12的體質豁免，否則受到 5 ({@damage 2d4})毒素傷害。"
 					]
 				},
 				{
-					"name": "Mesmerizing Chirr {@recharge}",
+					"name": "催眠蛙鳴 {@recharge}", "tENG_name": "Mesmerizing Chirr {@recharge}",
 					"entries": [
-						"The grung makes a chirring noise to which grungs are immune. Each humanoid or beast that is within 15 feet of the grung and able to hear it must succeed on a DC 12 Wisdom saving throw or be {@condition stunned} until the end of the grung's next turn."
+						"格龍蛙人發出一陣對格龍蛙人免疫的蛙鳴聲響。每個距離該格龍蛙人15呎內，且能夠聽見它的類人生物和野獸都必須成功通過一次DC 12的睿知豁免，否則被{@condition 震懾}直到該格龍蛙人的下個回合結束。"
 					]
 				}
 			],
@@ -6743,12 +6743,12 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Grung Poison",
+					"name": "格龍蛙人毒素", "tENG_name": "Grung Poison",
 					"entries": [
-						"Grung poison loses its potency 1 minute after being removed from a grung. A similar breakdown occurs if the grung dies.",
-						"A creature {@condition 中毒} by a grung can suffer an additional effect that varies depending on the grung's skin color. This effect lasts until the creature is no longer {@condition 中毒} by the grung.",
-						"Orange. The {@condition 中毒} creature is {@condition frightened} of its allies.",
-						"Gold. The {@condition 中毒} creature is {@condition 魅惑} and can speak Grung."
+						"格龍蛙人的毒素會在離開其體表1分鐘之後失效。若格龍蛙人死亡，類似的情況也同樣會發生。",
+						"一個因為格龍蛙人毒素而{@condition 中毒}的生物可能會產生不同的額外效果，取決於該格龍蛙人的皮膚顏色。這個效果將持續直到該生物不再因為格龍蛙人毒素而{@condition 中毒}。",
+						"橘色：{@condition 中毒}生物將因為它的盟友而{@condition 恐懼}。",
+						"金色：{@condition 中毒}生物將被{@condition 魅惑}且能夠說格龍蛙人語。"
 					]
 				}
 			],
@@ -6768,7 +6768,7 @@
 			]
 		},
 		{
-			"name": "Grung Wildling",
+			"name": "格龍蛙人荒野者", "ENG_name": "Grung Wildling",
 			"size": "S",
 			"type": {
 				"type": "humanoid",
@@ -6785,7 +6785,7 @@
 				13,
 				{
 					"ac": 16,
-					"condition": "with {@spell barkskin}",
+					"condition": "使用{@spell 樹膚術}時",
 					"braces": true
 				}
 			],
@@ -6819,25 +6819,25 @@
 				"poisoned"
 			],
 			"passive": 14,
-			"languages": "Grung",
+			"languages": "格龍蛙人語",
 			"cr": "1",
 			"trait": [
 				{
 					"name": "兩棲", "tENG_name": "Amphibious",
 					"entries": [
-						"grung可以在空氣和水中呼吸。"
+						"格龍蛙人可以在空氣和水中呼吸。"
 					]
 				},
 				{
-					"name": "Poisonous Skin",
+					"name": "劇毒皮膚", "tENG_name": "Poisonous Skin",
 					"entries": [
-						"Any creature that grapples the grung or otherwise comes into direct contact with the grung's skin must succeed on a DC 12 Constitution saving throw or become {@condition 中毒} for 1 minute. A {@condition 中毒} creature no longer in direct contact with the grung can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"任何擒抱格龍蛙人、或透過任何其他方式直接碰觸到格龍蛙人皮膚的生物都必須成功通過一次DC 12的體質豁免，否則將陷入{@condition 中毒}狀態長達1分鐘。不再直接碰觸格龍蛙人皮膚的{@condition 中毒}生物可以在它的每個回合結束時重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。"
 					]
 				},
 				{
-					"name": "Standing Leap",
+					"name": "立定跳躍", "tENG_name": "Standing Leap",
 					"entries": [
-						"The grung's long jump is up to 25 feet and its high jump is up to 15 feet, with or without a running start."
+						"格龍蛙人的跳遠距離最多25呎、且跳高距離最多15呎，無論有沒有助跑都一樣。"
 					]
 				}
 			],
@@ -6845,13 +6845,13 @@
 				{
 					"name": "匕首", "tENG_name": "Dagger",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或 射程20/60呎，單一目標。{@h}5 ({@damage 1d4 + 3}) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 5 ({@damage 2d4})毒素傷害。"
+						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或 射程20/60呎，單一目標。{@h}5 ({@damage 1d4 + 3})穿刺傷害，且目標必須成功通過一次DC12的體質豁免，否則受到 5 ({@damage 2d4})毒素傷害。"
 					]
 				},
 				{
 					"name": "短弓", "tENG_name": "Shortbow",
 					"entries": [
-						"{@atk rw} 命中{@hit 5}，射程80/320呎，單一目標。{@h}6 ({@damage 1d6 + 3}) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 5 ({@damage 2d4})毒素傷害。"
+						"{@atk rw} 命中{@hit 5}，射程80/320呎，單一目標。{@h}6 ({@damage 1d6 + 3})穿刺傷害，且目標必須成功通過一次DC12的體質豁免，否則受到 5 ({@damage 2d4})毒素傷害。"
 					]
 				}
 			],
@@ -6860,27 +6860,27 @@
 				{
 					"name": "施法", "tENG_name": "Spellcasting",
 					"headerEntries": [
-						"The grung is a 9th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, {@hit 4} to hit with spell attacks). It knows the following ranger spells:"
+						"格龍蛙人是9級的施法者。它的施法屬性為睿知（法術豁免DC 12，法術攻擊命中{@hit 4}）。格龍蛙人已準備了以下遊俠法術："
 					],
 					"spells": {
 						"1": {
 							"slots": 4,
 							"spells": [
 								"{@spell 治療傷勢}",
-								"{@spell jump}"
+								"{@spell 跳躍術}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell barkskin}",
-								"{@spell spike growth}"
+								"{@spell 樹膚術}",
+								"{@spell 荊棘叢生}"
 							]
 						},
 						"3": {
 							"slots": 2,
 							"spells": [
-								"{@spell plant growth}"
+								"{@spell 植物滋長}"
 							]
 						}
 					},
@@ -6890,11 +6890,11 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Grung Poison",
+					"name": "格龍蛙人毒素", "tENG_name": "Grung Poison",
 					"entries": [
-						"Grung poison loses its potency 1 minute after being removed from a grung. A similar breakdown occurs if the grung dies.",
-						"A creature {@condition 中毒} by a grung can suffer an additional effect that varies depending on the grung's skin color. This effect lasts until the creature is no longer {@condition 中毒} by the grung.",
-						"Red. The {@condition 中毒} creature must use its action to eat if food is within reach."
+						"格龍蛙人的毒素會在離開其體表1分鐘之後失效。若格龍蛙人死亡，類似的情況也同樣會發生。",
+						"一個因為格龍蛙人毒素而{@condition 中毒}的生物可能會產生不同的額外效果，取決於該格龍蛙人的皮膚顏色。這個效果將持續直到該生物不再因為格龍蛙人毒素而{@condition 中毒}。",
+						"紅色：若食物處於{@condition 中毒}生物的觸及範圍內，則它必須使用它的動作以吃食該食物。"
 					]
 				}
 			],
@@ -7336,7 +7336,7 @@
 				{
 					"name": "Tentacles",
 					"entries": [
-						"{@atk mw} 命中{@hit 12}，觸及5呎，單一生物。{@h}21 ({@damage 3d10 + 5}) psychic damage. If the target is Large or smaller, it is {@condition 被擒} (escape DC 15) and must succeed on a DC 20 Intelligence saving throw or be {@condition stunned} until this grapple ends."
+						"{@atk mw} 命中{@hit 12}，觸及5呎，單一生物。{@h}21 ({@damage 3d10 + 5}) psychic damage. If the target is Large or smaller, it is {@condition 被擒} (escape DC 15) and must succeed on a DC 20 Intelligence saving throw or be {@condition 震懾} until this grapple ends."
 					]
 				},
 				{
@@ -7348,7 +7348,7 @@
 				{
 					"name": "Mind Blast {@recharge 5}",
 					"entries": [
-						"The illithilich magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 18 Intelligence saving throw or take 27 ({@damage 5d8 + 5}) psychic damage and be {@condition stunned} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"The illithilich magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 18 Intelligence saving throw or take 27 ({@damage 5d8 + 5}) psychic damage and be {@condition 震懾} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				}
 			],
@@ -7917,7 +7917,7 @@
 					"ac": 15,
 					"from": [
 						"{@item 皮甲|phb}",
-						"{@item shield|phb}"
+						"{@item 盾牌|phb}"
 					]
 				}
 			],
@@ -8669,7 +8669,7 @@
 							"items": [
 								"The target must succeed on a DC 13 Strength saving throw or drop one item it is holding (adept's choice).",
 								"The target must succeed on a DC 13 Dexterity saving throw or be knocked {@condition prone}.",
-								"The target must succeed on a DC 13 Constitution saving throw or be {@condition stunned} until the end of the adept's next turn."
+								"The target must succeed on a DC 13 Constitution saving throw or be {@condition 震懾} until the end of the adept's next turn."
 							]
 						}
 					]
@@ -8761,7 +8761,7 @@
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Cunning Action",
+					"name": "巧妙動作", "tENG_name": "Cunning Action",
 					"entries": [
 						"On each of its turns, the thief can use a bonus action to take the Dash, Disengage, or Hide action."
 					]
@@ -9063,7 +9063,7 @@
 				{
 					"name": "Tentacles",
 					"entries": [
-						"{@atk mw} 命中{@hit 7}，觸及5呎，單一生物。{@h}15 ({@damage 2d10 + 4}) psychic damage. If the target is Medium or smaller, it is {@condition 被擒} (escape DC 15) and must succeed on a DC 15 Intelligence saving throw or be {@condition stunned} until this grapple ends."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一生物。{@h}15 ({@damage 2d10 + 4}) psychic damage. If the target is Medium or smaller, it is {@condition 被擒} (escape DC 15) and must succeed on a DC 15 Intelligence saving throw or be {@condition 震懾} until this grapple ends."
 					]
 				},
 				{
@@ -9075,7 +9075,7 @@
 				{
 					"name": "Mind Blast {@recharge 5}",
 					"entries": [
-						"The mind flayer magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 15 Intelligence saving throw or take 22 ({@damage 4d8 + 4}) psychic damage and be {@condition stunned} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"The mind flayer magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 15 Intelligence saving throw or take 22 ({@damage 4d8 + 4}) psychic damage and be {@condition 震懾} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				}
 			],
@@ -9235,7 +9235,7 @@
 				{
 					"name": "Tentacles",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}20 ({@damage 4d8 + 2}) psychic damage. if the target is Large or smaller, it is {@condition 被擒} (escape DC 13) and must succeed on a DC 13 Intelligence saving throw or be {@condition stunned} until this grapple ends."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}20 ({@damage 4d8 + 2}) psychic damage. if the target is Large or smaller, it is {@condition 被擒} (escape DC 13) and must succeed on a DC 13 Intelligence saving throw or be {@condition 震懾} until this grapple ends."
 					]
 				},
 				{
@@ -9246,7 +9246,7 @@
 						"2. Fear Ray: The targeted creature must succeed on a DC 13 Wisdom saving throw or be {@condition frightened} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
 						"3. Psychic Ray: The target must succeed on a DC 13 Intelligence saving throw or take 27 ({@damage 6d8}) psychic damage.",
 						"4. Slowing Ray: The targeted creature must make a DC 13 Dexterity saving throw. On a failed save, the target's speed is halved for 1 minute. In addition, the creature can't take reactions, and it can take either an action or a bonus action on its turn but not both. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
-						"5. Stunning Ray: The targeted creature must succeed on a DC 13 Constitution saving throw or be {@condition stunned} for 1 minute. The target can repeat the saving throw at the start of each of its turns, ending the effect on itself on a success.",
+						"5. Stunning Ray: The targeted creature must succeed on a DC 13 Constitution saving throw or be {@condition 震懾} for 1 minute. The target can repeat the saving throw at the start of each of its turns, ending the effect on itself on a success.",
 						"6. Telekinetic Ray: If the target is a creature, it must make a DC 13 Strength saving throw. On a failed save, the mindwitness moves it up to 30 feet in any direction, and it is {@condition restrained} by the ray's telekinetic grip until the start of the mindwitness's next turn or until the mindwitness is {@condition 無力}.",
 						"If the target is an object weighing 300 pounds or less that isn't being worn or carried, it is telekinetically moved up to 30 feet in any direction. The mindwitness can also exert fine control on objects with this ray, such as manipulating a simple tool or opening a door or a container."
 					]
@@ -9524,7 +9524,7 @@
 						"On each of its turns, the giant uses all its movement to move toward the nearest creature or whatever else it might perceive as food. Roll a {@dice d10} at the start of each of the giant's turns to determine its action for that turn:",
 						"1\u20133. The giant makes three attacks with its fists against one random target within its reach. If no other creatures are within its reach, the giant flies into a rage and gains advantage on all attack rolls until the end of its next turn.",
 						"4\u20135. The giant makes one attack with its fist against every creature within its reach. If no other creatures are within its reach, the giant makes one fist attack against itself.",
-						"6\u20137. The giant makes one attack with its bite against one random target within its reach. If no other creatures are within its reach, its eyes glaze over and it becomes {@condition stunned} until the start of its next turn.",
+						"6\u20137. The giant makes one attack with its bite against one random target within its reach. If no other creatures are within its reach, its eyes glaze over and it becomes {@condition 震懾} until the start of its next turn.",
 						"8\u201310. The giant makes three attacks against one random target within its reach: one attack with its bite and two with its fists. If no other creatures are within its reach, the giant flies into a rage and gains advantage on all attack rolls until the end of its next turn."
 					]
 				}
@@ -10262,7 +10262,7 @@
 			]
 		},
 		{
-			"name": "Orc Blade of Ilneval",
+			"name": "獸人．依那瓦之刃", "ENG_name": "Orc Blade of Ilneval",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -10280,7 +10280,7 @@
 					"ac": 18,
 					"from": [
 						"{@item 鎖子甲|phb}",
-						"{@item shield|phb}"
+						"{@item 盾牌|phb}"
 					]
 				}
 			],
@@ -10307,19 +10307,19 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 13,
-			"languages": "Common, Orc",
+			"languages": "通用語、獸人語",
 			"cr": "4",
 			"trait": [
 				{
-					"name": "Aggressive",
+					"name": "侵略性", "tENG_name": "Aggressive",
 					"entries": [
-						"As a bonus action, the orc can move up to its speed toward a hostile creature that it can see."
+						"以一個附贈動作，獸人可以向一個它所能看見的敵意生物移動最多等同它移動速度的距離。"
 					]
 				},
 				{
-					"name": "Foe Smiter of Ilneval",
+					"name": "依那瓦的破敵者", "tENG_name": "Foe Smiter of Ilneval",
 					"entries": [
-						"The orc deals an extra die of damage when it hits with a longsword attack (included in the attack)."
+						"當獸人以一次長劍攻擊命中目標時將造成一顆額外的傷害骰（已包含在攻擊條目）。"
 					]
 				}
 			],
@@ -10327,25 +10327,25 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The orc makes two melee attacks with its longsword or two ranged attacks with its javelins. If Ilneval's Command is available to use, the orc can use it after these attacks."
+						"獸人使用它的長劍進行二次近戰攻擊、或使用它的標槍進行二次遠程攻擊。若它能夠使用依那瓦的號令，則獸人可以在這些攻擊之後使用它。"
 					]
 				},
 				{
-					"name": "Longsword",
+					"name": "長劍", "tENG_name": "Longsword",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}12 ({@damage 2d8 + 3})劈砍傷害, or 14 ({@damage 2d10 + 3})劈砍傷害 when used with two hands."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}12 ({@damage 2d8 + 3})劈砍傷害，或若以雙手使用時 14 ({@damage 2d10 + 3})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Javelin",
+					"name": "標槍", "tENG_name": "Javelin",
 					"entries": [
 						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或 射程30/120呎，單一目標。{@h}6 ({@damage 1d6 + 3})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Ilneval's Command (Recharges 4\u20136)",
+					"name": "依那瓦的號令", "tENG_name": "Ilneval's Command (Recharges 4\u20136)",
 					"entries": [
-						"Up to three allied orcs within 120 feet of this orc that can hear it can use their reactions to each make one weapon attack."
+						"最多三名距離該獸人120呎內，且可以聽見它的獸人盟友可以使用它們的反應以各自進行一次武器攻擊。"
 					]
 				}
 			],
@@ -10377,7 +10377,7 @@
 			]
 		},
 		{
-			"name": "Orc Claw of Luthic",
+			"name": "獸人．茹賽可之爪", "ENG_name": "Orc Claw of Luthic",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -10394,7 +10394,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"{@item hide armor|phb}"
+						"{@item 生皮甲|phb}"
 					]
 				}
 			],
@@ -10418,13 +10418,13 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 12,
-			"languages": "Common, Orc",
+			"languages": "通用語、獸人語",
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Aggressive",
+					"name": "侵略性", "tENG_name": "Aggressive",
 					"entries": [
-						"As a bonus action, the orc can move up to its speed toward a hostile creature that it can see."
+						"以一個附贈動作，獸人可以向一個它所能看見的敵意生物移動最多等同它移動速度的距離。"
 					]
 				}
 			],
@@ -10432,7 +10432,7 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The orc makes two claw attacks, or four claw attacks if it has fewer than half of its hit points remaining."
+						"獸人進行二次爪抓攻擊，或若它剩餘的生命值低於一半則進行四次爪抓攻擊。"
 					]
 				},
 				{
@@ -10447,7 +10447,7 @@
 				{
 					"name": "施法", "tENG_name": "Spellcasting",
 					"headerEntries": [
-						"The orc is a 5th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, {@hit 4} to hit with spell attacks). The orc has the following cleric spells prepared:"
+						"獸人是5級的施法者。它的施法屬性為睿知（法術豁免DC 12，法術攻擊命中{@hit 4}）。獸人已準備了以下牧師法術："
 					],
 					"spells": {
 						"0": {
@@ -10510,7 +10510,7 @@
 			]
 		},
 		{
-			"name": "Orc Hand of Yurtrus",
+			"name": "獸人．耶卓斯之手", "ENG_name": "Orc Hand of Yurtrus",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -10527,7 +10527,7 @@
 				{
 					"ac": 12,
 					"from": [
-						"{@item hide armor|phb}"
+						"{@item 生皮甲|phb}"
 					]
 				}
 			],
@@ -10552,21 +10552,21 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 12,
-			"languages": "understands Common and Orc but can't speak",
+			"languages": "理解通用語和獸人語，但不會說",
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Aggressive",
+					"name": "侵略性", "tENG_name": "Aggressive",
 					"entries": [
-						"As a bonus action, the orc can move up to its speed toward a hostile creature that it can see."
+						"以一個附贈動作，獸人可以向一個它所能看見的敵意生物移動最多等同它移動速度的距離。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Touch of the White Hand",
+					"name": "白手之觸", "tENG_name": "Touch of the White Hand",
 					"entries": [
-						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}9 ({@damage 2d8}) necrotic damage."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}9 ({@damage 2d8})死靈傷害。"
 					]
 				}
 			],
@@ -10575,7 +10575,7 @@
 				{
 					"name": "施法", "tENG_name": "Spellcasting",
 					"headerEntries": [
-						"The orc is a 4th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, {@hit 4} to hit with spell attacks). It requires no verbal components to cast its spells. The orc has the following cleric spells prepared:"
+						"獸人是4級的施法者。它的施法屬性為睿知（法術豁免DC 12，法術攻擊命中{@hit 4}）。它不需要聲音構材就能夠施放它的法術。獸人已準備了以下牧師法術："
 					],
 					"spells": {
 						"0": {
@@ -10591,7 +10591,7 @@
 							"spells": [
 								"{@spell 災禍術}",
 								"{@spell 偵測魔法}",
-								"{@spell inflict wounds}",
+								"{@spell 造成傷勢}",
 								"{@spell 防護善惡}"
 							]
 						},
@@ -10633,7 +10633,7 @@
 			]
 		},
 		{
-			"name": "Orc Nurtured One of Yurtrus",
+			"name": "獸人．耶卓斯育疫者", "ENG_name": "Orc Nurtured One of Yurtrus",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -10664,25 +10664,25 @@
 			"cha": 7,
 			"senses": "黑暗視覺60呎",
 			"passive": 10,
-			"languages": "Common, Orc",
+			"languages": "通用語、獸人語",
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Aggressive",
+					"name": "侵略性", "tENG_name": "Aggressive",
 					"entries": [
-						"As a bonus action, the orc can move up to its speed toward a hostile creature that it can see."
+						"以一個附贈動作，獸人可以向一個它所能看見的敵意生物移動最多等同它移動速度的距離。"
 					]
 				},
 				{
-					"name": "Corrupted Carrier",
+					"name": "腐化載體", "tENG_name": "Corrupted Carrier",
 					"entries": [
-						"When the orc is reduced to 0 hit points, it explodes, and any creature within 10 feet of it must make a DC 13 Constitution saving throw. On a failed save, the creature takes 14 ({@damage 4d6})毒素傷害 and becomes {@condition 中毒}. On a success, the creature takes half as much damage and isn't {@condition 中毒}. A creature {@condition 中毒} by this effect can repeat the save at the end of each of its turn, ending the effect on itself on a success. While {@condition 中毒} by this effect, a creature can't regain hit points."
+						"當獸人的生命值被歸零，它將會爆炸，且任何距離它10呎內的生物都必須進行一次DC 13的體質豁免。若豁免失敗，該生物將受到14 ({@damage 4d6})毒素傷害，且陷入{@condition 中毒}狀態。若豁免成功，則該生物將只受到一半的傷害且不會陷入{@condition 中毒}狀態。因為這個效果而{@condition 中毒}的生物可以在它的每個回合結束時重複這個豁免檢定，若豁免成功則結束這個效果對它的影響。當因為這個效果而{@condition 中毒}時，該生物將無法回復生命值。"
 					]
 				},
 				{
-					"name": "Nurtured One of Yurtrus",
+					"name": "耶卓斯育疫者", "tENG_name": "Nurtured One of Yurtrus",
 					"entries": [
-						"The orc has advantage on saving throws against poison and disease."
+						"獸人在對抗毒素和疾病的豁免檢定中具有優勢。"
 					]
 				}
 			],
@@ -10690,13 +10690,13 @@
 				{
 					"name": "爪抓", "tENG_name": "Claws",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}4 ({@damage 1d4 + 2})劈砍傷害 plus 2 ({@damage 1d4}) necrotic damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}4 ({@damage 1d4 + 2})劈砍傷害加 2 ({@damage 1d4})死靈傷害。"
 					]
 				},
 				{
-					"name": "Corrupted Vengeance",
+					"name": "腐化復仇", "tENG_name": "Corrupted Vengeance",
 					"entries": [
-						"The orc reduces itself to 0 hit points, triggering its Corrupted Carrier trait."
+						"獸人將自己的生命值歸零，觸發它的腐化載體特性。"
 					]
 				}
 			],
@@ -10726,7 +10726,7 @@
 			]
 		},
 		{
-			"name": "Orc Red Fang of Shargaas",
+			"name": "獸人．沙葛司之紅牙", "ENG_name": "Orc Red Fang of Shargaas",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -10767,31 +10767,31 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 12,
-			"languages": "Common, Orc",
+			"languages": "通用語、獸人語",
 			"cr": "3",
 			"trait": [
 				{
-					"name": "Cunning Action",
+					"name": "巧妙動作", "tENG_name": "Cunning Action",
 					"entries": [
-						"On each of its turns, the orc can use a bonus action to take the Dash, Disengage, or Hide action."
+						"在它的每個回合，獸人可以使用一個附贈動作以採取{@action 疾走}、{@action 撤離}、或{@action 躲藏}動作。"
 					]
 				},
 				{
-					"name": "Hand of Shargaas",
+					"name": "沙葛司之手", "tENG_name": "Hand of Shargaas",
 					"entries": [
-						"The orc deals 2 extra dice of damage when it hits a target with a weapon attack (included in its attacks)."
+						"獸人在以一次武器攻擊命中目標時將造成二顆額外的傷害骰（已包含在攻擊條目）。"
 					]
 				},
 				{
-					"name": "Shargaas's Sight",
+					"name": "沙葛司視界", "tENG_name": "Shargaas's Sight",
 					"entries": [
-						"Magical darkness doesn't impede the orc's darkvision."
+						"魔法黑暗並不會阻礙獸人的黑暗視覺。"
 					]
 				},
 				{
-					"name": "Slayer",
+					"name": "殘殺者", "tENG_name": "Slayer",
 					"entries": [
-						"In the first round of a combat, the orc has advantage on attack rolls against any creature that hasn't taken a turn yet. If the orc hits a creature that round who was surprised, the hit is automatically a critical hit."
+						"在戰鬥的第一輪期間，獸人對任何尚未採取過回合的生物所進行的攻擊檢定具有優勢。若獸人在該輪尖命中一個被突襲的生物，則該刺命中將自動視為暴擊。"
 					]
 				}
 			],
@@ -10799,11 +10799,11 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The orc makes two scimitar or dart attacks."
+						"獸人進行二次彎刀或飛鏢攻擊。"
 					]
 				},
 				{
-					"name": "Scimitar",
+					"name": "彎刀", "tENG_name": "Scimitar",
 					"entries": [
 						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}13 ({@damage 3d6 + 3})劈砍傷害。"
 					]
@@ -10815,9 +10815,9 @@
 					]
 				},
 				{
-					"name": "Veil of Shargaas (Recharges after a Short or Long Rest)",
+					"name": "沙葛司的帷幕 (短休或長休之後充能)", "tENG_name": "Veil of Shargaas",
 					"entries": [
-						"The orc casts {@spell 黑暗術} without any components. Wisdom is its spellcasting ability."
+						"獸人可以施放{@spell 黑暗術}而無須任何構材。它的施法屬性為睿知。"
 					]
 				}
 			],
@@ -12577,7 +12577,7 @@
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Aggressive",
+					"name": "侵略性", "tENG_name": "Aggressive",
 					"entries": [
 						"As a bonus action, the tanarukk can move up to its speed toward a hostile creature that it can see."
 					]
@@ -12769,7 +12769,7 @@
 					]
 				},
 				{
-					"name": "Longsword",
+					"name": "長劍", "tENG_name": "Longsword",
 					"entries": [
 						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3})劈砍傷害, or 8 ({@damage 1d10 + 3})劈砍傷害 if used with two hands."
 					]
@@ -13097,7 +13097,7 @@
 				{
 					"name": "Tentacles",
 					"entries": [
-						"{@atk mw} 命中{@hit 9}，觸及10呎，單一生物。{@h}27 ({@damage 4d10 + 5}) psychic damage. If the target is Large or smaller, it is {@condition 被擒} (escape DC 14) and must succeed on a DC 17 Intelligence saving throw or be {@condition stunned} until this grapple ends."
+						"{@atk mw} 命中{@hit 9}，觸及10呎，單一生物。{@h}27 ({@damage 4d10 + 5}) psychic damage. If the target is Large or smaller, it is {@condition 被擒} (escape DC 14) and must succeed on a DC 17 Intelligence saving throw or be {@condition 震懾} until this grapple ends."
 					]
 				},
 				{
@@ -13109,7 +13109,7 @@
 				{
 					"name": "Mind Blast {@recharge 5}",
 					"entries": [
-						"The ulitharid magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 17 Intelligence saving throw or take 31 ({@damage 4d12 + 5}) psychic damage and be {@condition stunned} for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"The ulitharid magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 17 Intelligence saving throw or take 31 ({@damage 4d12 + 5}) psychic damage and be {@condition 震懾} for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				}
 			],
@@ -13224,7 +13224,7 @@
 				{
 					"name": "Stunning Shriek",
 					"entries": [
-						"The vargouille shrieks. Each humanoid and beast within 30 feet of the vargouille and able to hear it must succeed on a DC 12 Wisdom saving throw or be {@condition frightened} until the end of the vargouille's next turn. While {@condition frightened} in this way, a target is {@condition stunned}. If a target's saving throw is successful or the effect ends for it, the target is immune to the Stunning Shriek of all vargouilles for 1 hour."
+						"The vargouille shrieks. Each humanoid and beast within 30 feet of the vargouille and able to hear it must succeed on a DC 12 Wisdom saving throw or be {@condition frightened} until the end of the vargouille's next turn. While {@condition frightened} in this way, a target is {@condition 震懾}. If a target's saving throw is successful or the effect ends for it, the target is immune to the Stunning Shriek of all vargouilles for 1 hour."
 					]
 				}
 			],
@@ -14047,7 +14047,7 @@
 					],
 					"will": [
 						"{@spell 偵測魔法}",
-						"{@spell jump}",
+						"{@spell 跳躍術}",
 						"{@spell 浮空術}",
 						"{@spell 法師護甲} (self only)",
 						"{@spell speak with dead}"
@@ -14336,7 +14336,7 @@
 					"ac": 18,
 					"from": [
 						"天生護甲",
-						"{@item shield|phb}"
+						"{@item 盾牌|phb}"
 					]
 				}
 			],
@@ -14688,7 +14688,7 @@
 			],
 			"action": [
 				{
-					"name": "Scimitar",
+					"name": "彎刀", "tENG_name": "Scimitar",
 					"entries": [
 						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}5 ({@damage 1d6 + 2})劈砍傷害。"
 					]
