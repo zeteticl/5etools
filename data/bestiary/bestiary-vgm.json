@@ -513,7 +513,7 @@
 						"5": {
 							"slots": 2,
 							"spells": [
-								"{@spell contact other plane}",
+								"{@spell 異界探知}",
 								"{@spell 探知}"
 							]
 						},
@@ -553,7 +553,7 @@
 							"spells": [
 								"{@spell 活化死屍}",
 								"{@spell 回生術}",
-								"{@spell speak with dead}"
+								"{@spell 死者交談術}"
 							]
 						},
 						"4": {
@@ -798,7 +798,7 @@
 			]
 		},
 		{
-			"name": "Archdruid",
+			"name": "大德魯伊", "ENG_name": "Archdruid",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -847,7 +847,7 @@
 				"perception": "+9"
 			},
 			"passive": 19,
-			"languages": "Druidic plus any two languages",
+			"languages": "德魯伊語、和任意兩種語言",
 			"cr": "12",
 			"action": [
 				{
@@ -857,11 +857,11 @@
 					]
 				},
 				{
-					"name": "Change Shape (2/Day)",
+					"name": "荒野變形 (2/日)", "tENG_name": "Change Shape (2/Day)",
 					"entries": [
-						"The archdruid magically polymorphs into a beast or elemental with a challenge rating of 6 or less, and can remain in this form for up to 9 hours. The archdruid can choose whether its equipment falls to the ground, melds with its new form, or is worn by the new form. The archdruid reverts to its true form if it dies or falls {@condition unconscious}. The archdruid can revert to its true form using a bonus action on its turn.",
-						"While in a new form, the archdruid retains its game statistics and ability to speak, but its AC, movement modes, Strength, and Dexterity are replaced by those of the new form, and it gains any special senses, proficiencies, traits, actions, and reactions (except class features, legendary actions, and lair actions) that the new form has but that it lacks. It can cast its spells with verbal or somatic components in its new form.",
-						"The new form's attacks count as magical for the purpose of overcoming resistances and immunity to nonmagical attacks."
+						"大德魯伊以魔法變成一個挑戰等級為6或更低的野獸或元素生物，且可以維持該型態長達最多9個小時。大德魯伊可以選擇是否讓其裝備掉在地上、融入新型態、或是被新型態穿戴。大德魯伊將在它陷入{@condition 昏迷}或死亡時變回它原本的型態。大德魯伊可以在它的回合以一個附贈動作變回它原本的型態。",
+						"當處於新型態時，大德魯伊保留它的遊戲數據和說話的能力，但它的AC、移動方式、力量和敏捷屬性都將被新型態的數據給取代，且它獲得任何新型態的特殊感官、熟練項、特性、動作、和反應（但不包括職業能力、傳奇動作、和巢穴動作）。它可以在處於新型態時施放帶有聲音或姿勢構材的法術。",
+						"在克服對非魔法攻擊和傷害的抗性和免疫能力時，新型態的攻擊將被視作魔法攻擊。"
 					]
 				}
 			],
@@ -870,7 +870,7 @@
 				{
 					"name": "施法", "tENG_name": "Spellcasting",
 					"headerEntries": [
-						"The archdruid is an 18th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 17, {@hit 9} to hit with spell attacks). It has the following druid spells prepared:"
+						"大德魯伊是18級的施法者。它的施法屬性為睿知（法術豁免DC 17，法術攻擊命中{@hit 9}）。它已準備了以下德魯伊法術："
 					],
 					"spells": {
 						"0": {
@@ -1317,7 +1317,7 @@
 					"name": "Swallow",
 					"entries": [
 						"The banderhobb makes a bite attack against a Medium or smaller creature it is grappling. If the attack hits, the target is swallowed, and the grapple ends. The swallowed creature is {@condition blinded} and {@condition restrained}, it has total cover against attacks and other effects outside the banderhobb and it takes 10 ({@damage 3d6}) necrotic damage at the start of each of the banderhobb's turns. A creature reduced to 0 hit points in this way stops taking necrotic damage and becomes stable.",
-						"The banderhobb can have only one target swallowed at a time. While the banderhobb isn't {@condition 無力}, it can regurgitate the creature at any time (no action required) in a space within 5 feet of it. The creature exits {@condition prone}. If the banderhobb dies, it likewise regurgitates a swallowed creature."
+						"The banderhobb can have only one target swallowed at a time. While the banderhobb isn't {@condition 無力}, it can regurgitate the creature at any time (no action required) in a space within 5 feet of it. The creature exits {@condition 伏地}. If the banderhobb dies, it likewise regurgitates a swallowed creature."
 					]
 				},
 				{
@@ -1725,7 +1725,7 @@
 				{
 					"name": "Maddening Feast",
 					"entries": [
-						"The hag feasts on the corpse of one enemy within 5 feet of her that died within the past minute. Each creature of the hag's choice that is within 60 feet of her and able to see her must succeed on a DC 15 Wisdom saving throw or be {@condition frightened} of her for 1 minute. While {@condition frightened} in this way, a creature is {@condition 無力}, can't understand what others say, can't read, and speaks only in gibberish; the DM controls the creature's movement, which is erratic. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the hag's Maddening Feast for the next 24 hours."
+						"The hag feasts on the corpse of one enemy within 5 feet of her that died within the past minute. Each creature of the hag's choice that is within 60 feet of her and able to see her must succeed on a DC 15 Wisdom saving throw or be {@condition 恐懼} of her for 1 minute. While {@condition 恐懼} in this way, a creature is {@condition 無力}, can't understand what others say, can't read, and speaks only in gibberish; the DM controls the creature's movement, which is erratic. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the hag's Maddening Feast for the next 24 hours."
 					]
 				}
 			],
@@ -1790,7 +1790,7 @@
 						"5": {
 							"slots": 2,
 							"spells": [
-								"{@spell contact other plane}",
+								"{@spell 異界探知}",
 								"{@spell 探知}"
 							]
 						},
@@ -1830,7 +1830,7 @@
 							"spells": [
 								"{@spell 活化死屍}",
 								"{@spell 回生術}",
-								"{@spell speak with dead}"
+								"{@spell 死者交談術}"
 							]
 						},
 						"4": {
@@ -2071,7 +2071,7 @@
 			]
 		},
 		{
-			"name": "Blackguard",
+			"name": "黑暗衛士", "ENG_name": "Blackguard",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -2091,7 +2091,7 @@
 				{
 					"ac": 18,
 					"from": [
-						"{@item plate armor|phb}"
+						"{@item 全身板甲|phb}"
 					]
 				}
 			],
@@ -2124,11 +2124,11 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The blackguard makes three attacks with its glaive or its shortbow."
+						"黑暗衛士使用它的長柄刀或短弓進行三次攻擊。"
 					]
 				},
 				{
-					"name": "Glaive",
+					"name": "長柄刀", "tENG_name": "Glaive",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及10呎，單一目標。{@h}9 ({@damage 1d10 + 4})劈砍傷害。"
 					]
@@ -2140,9 +2140,9 @@
 					]
 				},
 				{
-					"name": "Dreadful Aspect (Recharges after a Short or Long Rest)",
+					"name": "恐怖具現 (短休或長休之後充能)", "tENG_name": "Dreadful Aspect",
 					"entries": [
-						"The blackguard exudes magical menace. Each enemy within 30 feet of the blackguard must succeed on a DC 13 Wisdom saving throw or be {@condition frightened} for 1 minute. If a {@condition frightened} target ends its turn more than 30 feet away from the blackguard, the target can repeat the saving throw, ending the effect on itself on a success."
+						"黑暗衛士釋放出魔法性的威嚇。每個距離黑暗衛士30呎內的敵人都必須成功通過一次DC 13的睿知豁免，否則陷入{@condition 恐懼}長達1分鐘。若陷入{@condition 恐懼}的目標在距離黑暗衛士超過30呎外的位置結束它的回合，則目標可以重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。"
 					]
 				}
 			],
@@ -2151,7 +2151,7 @@
 				{
 					"name": "施法", "tENG_name": "Spellcasting",
 					"headerEntries": [
-						"The blackguard is a 10th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, {@hit 5} to hit with spell attacks). It has the following paladin spells prepared:"
+						"塑黑暗衛士是10級的施法者。它的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。它已準備了以下聖騎士法術："
 					],
 					"spells": {
 						"1": {
@@ -2351,7 +2351,7 @@
 				{
 					"name": "Death Gaze",
 					"entries": [
-						"When a creature that can see the bodak's eyes starts its turn within 30 feet of the bodak, the bodak can force it to make a DC 13 Constitution saving throw if the bodak isn't {@condition 無力} and can see the creature. If the saving throw fails by 5 or more, the creature is reduced to 0 hit points, unless it is immune to the {@condition frightened} condition. Otherwise, a creature takes 16 ({@damage 3d10}) psychic damage on a failed save.",
+						"When a creature that can see the bodak's eyes starts its turn within 30 feet of the bodak, the bodak can force it to make a DC 13 Constitution saving throw if the bodak isn't {@condition 無力} and can see the creature. If the saving throw fails by 5 or more, the creature is reduced to 0 hit points, unless it is immune to the {@condition 恐懼} condition. Otherwise, a creature takes 16 ({@damage 3d10}) psychic damage on a failed save.",
 						"Unless surprised, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so. it has disadvantage on attack rolls against the bodak until the start of its next turn. If the creature looks at the bodak in the meantime, it must immediately make the saving throw."
 					]
 				},
@@ -2469,7 +2469,7 @@
 					"name": "Oil Puddle",
 					"entries": [
 						"The boggle creates a puddle of oil that is either slippery or sticky (boggle's choice). The puddle is 1 inch deep and covers the ground in the boggle's space. The puddle is difficult terrain For all creatures except boggles and lasts for 1 hour.",
-						"If the oil is slippery, any creature that enters the puddle's area or starts its turn there must succeed on a DC 11 Dexterity saving throw or fall {@condition prone}.",
+						"If the oil is slippery, any creature that enters the puddle's area or starts its turn there must succeed on a DC 11 Dexterity saving throw or fall {@condition 伏地}.",
 						"If the oil is sticky, any creature that enters the puddle's area or starts its turn there must succeed on a DC 11 Strength saving throw or be {@condition restrained}. On its turn. a creature can use an action to try to extricate itself from the sticky puddle, ending the effect and moving into the nearest safe unoccupied space with a successful DC 11 Strength check."
 					]
 				}
@@ -2722,7 +2722,7 @@
 			]
 		},
 		{
-			"name": "Champion",
+			"name": "勇士", "ENG_name": "Champion",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -2743,7 +2743,7 @@
 				{
 					"ac": 18,
 					"from": [
-						"{@item plate armor|phb}"
+						"{@item 全身板甲|phb}"
 					]
 				}
 			],
@@ -2774,15 +2774,15 @@
 			"cr": "9",
 			"trait": [
 				{
-					"name": "Indomitable (2/Day)",
+					"name": "不屈 (2/日)", "tENG_name": "Indomitable (2/Day)",
 					"entries": [
-						"The champion rerolls a failed saving throw."
+						"勇士可以重骰一次失敗的豁免檢定。"
 					]
 				},
 				{
-					"name": "Second Wind (Recharges after a Short or Long Rest)",
+					"name": "回氣 (短休或長休之後充能)", "tENG_name": "Second Wind",
 					"entries": [
-						"As a bonus action, the champion can regain 20 hit points."
+						"以一個附贈動作，勇士可以回復20點生命值。"
 					]
 				}
 			],
@@ -2790,19 +2790,19 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The champion makes three attacks with its greatsword or its shortbow."
+						"勇士使用它的巨劍或短弓進行三次攻擊。"
 					]
 				},
 				{
 					"name": "巨劍", "tENG_name": "Greatsword",
 					"entries": [
-						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5})劈砍傷害, plus 7 ({@damage 2d6})劈砍傷害 if the champion has more than half of its total hit points remaining."
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5})劈砍傷害，若勇士還殘有高於一半的生命值則再加上 7 ({@damage 2d6})劈砍傷害。"
 					]
 				},
 				{
 					"name": "短弓", "tENG_name": "Shortbow",
 					"entries": [
-						"{@atk rw} 命中{@hit 6}，射程80/320呎，單一目標。{@h}5 ({@damage 1d6 + 2}) piercing damage, plus 7 ({@damage 2d6}) piercing damage if the champion has more than half of its total hit points remaining."
+						"{@atk rw} 命中{@hit 6}，射程80/320呎，單一目標。{@h}5 ({@damage 1d6 + 2})穿刺傷害，若勇士還殘有高於一半的生命值則再加上 7 ({@damage 2d6})穿刺傷害。"
 					]
 				}
 			],
@@ -5030,7 +5030,7 @@
 				{
 					"ac": 21,
 					"from": [
-						"{@item plate armor|phb}",
+						"{@item 全身板甲|phb}",
 						"{@item shield|phb|shields}"
 					]
 				}
@@ -5093,7 +5093,7 @@
 				{
 					"name": "Shield Charge",
 					"entries": [
-						"The giant moves up to 30 feet in a straight line and can move through the space of any creature smaller than Huge. The first time it enters a creature's space during this move, it makes a fireshield attack against that creature. If the attack hits, the target must also succeed on a DC 21 Strength saving throw or be pushed ahead of the giant for the rest of this move. If a creature fails the save by 5 or more, it is also knocked {@condition prone} and takes 18 ({@damage 3d6 + 8})鈍擊傷害, or 29 ({@damage 6d6 + 8})鈍擊傷害 if it was already {@condition prone}."
+						"The giant moves up to 30 feet in a straight line and can move through the space of any creature smaller than Huge. The first time it enters a creature's space during this move, it makes a fireshield attack against that creature. If the attack hits, the target must also succeed on a DC 21 Strength saving throw or be pushed ahead of the giant for the rest of this move. If a creature fails the save by 5 or more, it is also knocked {@condition 伏地} and takes 18 ({@damage 3d6 + 8})鈍擊傷害, or 29 ({@damage 6d6 + 8})鈍擊傷害 if it was already {@condition 伏地}."
 					]
 				}
 			],
@@ -5627,7 +5627,7 @@
 					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
 						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}22 ({@damage 3d10 + 6}) piercing damage, and the target is swallowed if it is a Medium or smaller creature. A swallowed creature is {@condition blinded} and {@condition restrained}, has total cover against attacks and other effects outside the froghemoth, and takes 10 ({@damage 3d6}) acid damage at the start of each of the froghemoth's turns.",
-						"The froghemoth's gullet can hold up to two creatures at a time. If the Froghemoth takes 20 damage or more on a single turn from a creature inside it, the Froghemoth must succeed on a DC 20 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, each of which falls {@condition prone} in a space within 10 feet of the froghemoth. If the froghemoth dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse using 10 feet of movement, exiting {@condition prone}."
+						"The froghemoth's gullet can hold up to two creatures at a time. If the Froghemoth takes 20 damage or more on a single turn from a creature inside it, the Froghemoth must succeed on a DC 20 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, each of which falls {@condition 伏地} in a space within 10 feet of the froghemoth. If the froghemoth dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse using 10 feet of movement, exiting {@condition 伏地}."
 					]
 				},
 				{
@@ -5714,7 +5714,7 @@
 				{
 					"name": "Extra Heads",
 					"entries": [
-						"The giant has a 25 percent chance of having more than one head. If it has more than one, it has advantage on Wisdom ({@skill Perception}) checks and on saving throws against being {@condition blinded}, {@condition 魅惑}, {@condition deafened}, {@condition frightened}, {@condition 震懾}, or knocked {@condition unconscious}."
+						"The giant has a 25 percent chance of having more than one head. If it has more than one, it has advantage on Wisdom ({@skill Perception}) checks and on saving throws against being {@condition blinded}, {@condition 魅惑}, {@condition deafened}, {@condition 恐懼}, {@condition 震懾}, or knocked {@condition 昏迷}."
 					]
 				},
 				{
@@ -5857,7 +5857,7 @@
 						"3. Pushing Ray: The targeted creature must succeed on a DC 14 Strength saving throw or be pushed up to 15 feet directly away from the gauth and have its speed halved until the start of the gauth's next turn.",
 						"4. Fire Ray: The targeted creature must succeed on a DC 14 Dexterity saving throw or take 22 ({@damage 4d10}) fire damage.",
 						"5. Paralyzing Ray: The targeted creature must succeed on a DC 14 Constitution saving throw or be {@condition paralyzed} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
-						"6. Sleep Ray: The targeted creature must succeed on a DC 14 Wisdom saving throw or fall asleep and remain {@condition unconscious} for 1 minute. The target awakens if it takes damage or another creature takes an action to wake it. This ray has no effect on constructs and undead."
+						"6. Sleep Ray: The targeted creature must succeed on a DC 14 Wisdom saving throw or fall asleep and remain {@condition 昏迷} for 1 minute. The target awakens if it takes damage or another creature takes an action to wake it. This ray has no effect on constructs and undead."
 					]
 				}
 			],
@@ -5953,7 +5953,7 @@
 					"entries": [
 						"The gazer shoots two of the following magical eye rays at random (reroll duplicates), choosing one or two targets it can see within 60 feet of it:",
 						"1. Dazing Ray: The targeted creature must succeed on a DC 12 Wisdom saving throw or be {@condition 魅惑} until the start of the gazer's next turn. While the target is {@condition 魅惑} in this way, its speed is halved, and it has disadvantage on attack rolls.",
-						"2. Fear Ray: The targeted creature must succeed on a DC 12 Wisdom saving throw or be {@condition frightened} until the start of the gazer's next turn.",
+						"2. Fear Ray: The targeted creature must succeed on a DC 12 Wisdom saving throw or be {@condition 恐懼} until the start of the gazer's next turn.",
 						"3. Frost Ray: The targeted creature must succeed on a DC 12 Dexterity saving throw or take 10 ({@damage 3d6}) cold damage.",
 						"4. Telekinetic Ray: If the target is a creature that is Medium or smaller, it must succeed on a DC 12 Strength saving throw or be moved up to 30 feet directly away from the gazer.",
 						"If the target is an object weighing 10 pounds or less that isn't being worn or carried, the gazer moves it up to 30 feet in any direction. The gazer can also exert fine control on objects with this ray, such as manipulating a simple tool or opening a container."
@@ -7951,7 +7951,7 @@
 				{
 					"name": "Heart of the Dragon",
 					"entries": [
-						"If the kobold is {@condition frightened} or {@condition paralyzed} by an effect that allows a saving throw, it can repeat the save at the start of its turn to end the effect on itself and all kobolds within 30 feet of it. Any kobold that benefits from this trait (including the dragonshield) has advantage on its next attack roll."
+						"If the kobold is {@condition 恐懼} or {@condition paralyzed} by an effect that allows a saving throw, it can repeat the save at the start of its turn to end the effect on itself and all kobolds within 30 feet of it. Any kobold that benefits from this trait (including the dragonshield) has advantage on its next attack roll."
 					]
 				},
 				{
@@ -8385,7 +8385,7 @@
 			]
 		},
 		{
-			"name": "Kraken Priest",
+			"name": "克拉肯祭司", "ENG_name": "Kraken Priest",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -8437,21 +8437,21 @@
 				{
 					"name": "兩棲", "tENG_name": "Amphibious",
 					"entries": [
-						"priest可以在空氣和水中呼吸。"
+						"克拉肯祭司可以在空氣和水中呼吸。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Thunderous Touch",
+					"name": "雷霆之觸", "tENG_name": "Thunderous Touch",
 					"entries": [
-						"{@atk ms} {@hit 5} to hit, reach 5 ft., one creature. {@h}27 ({@damage 5d10}) thunder damage."
+						"{@atk ms} 命中{@hit 5}，觸及5呎，單一生物。{@h}27 ({@damage 5d10})雷鳴傷害。"
 					]
 				},
 				{
-					"name": "Voice of the Kraken (Recharges after a Short or Long Rest)",
+					"name": "克拉肯之聲 (短休或長休之後充能)", "tENG_name": "Voice of the Kraken",
 					"entries": [
-						"A kraken speaks through the priest with a thunderous voice audible within 300 feet. Creatures of the priest's choice that can hear the kraken's words (which are spoken in Abyssal, Infernal, or Primordial) must succeed on a DC 14 Charisma saving throw or be {@condition frightened} for 1 minute. A {@condition frightened} target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"克拉肯將透過克拉肯祭司以雷鳴般的聲音說話，這個聲音可以在最遠300呎的距離內被聽到。每個由克拉肯祭司所選擇，且可以聽見克拉肯的話語（通常會使用深淵語、煉獄語、或原初語）的生物都必須成功通過一次DC 14的魅力豁免，否則將陷入{@condition 恐懼}長達1分鐘。陷入{@condition 恐懼}的生物可以在它的每個回合結束時重複這個豁免檢定，豁免成功則結束這個效果對它的影響。"
 					]
 				}
 			],
@@ -8460,7 +8460,7 @@
 				{
 					"name": "天生施法", "tENG_name": "Innate Spellcasting",
 					"headerEntries": [
-						"The priest's spellcasting ability is Wisdom (spell save DC 13, {@hit 5} to hit with spell attacks). It can innately cast the following spells, requiring no material components:"
+						"克拉肯祭司的天生施法屬性為睿知（法術豁免DC 13，法術攻擊命中{@hit 5}）。它天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 命令術}",
@@ -8609,7 +8609,7 @@
 			]
 		},
 		{
-			"name": "Martial Arts Adept",
+			"name": "武術高手", "ENG_name": "Martial Arts Adept",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -8649,7 +8649,7 @@
 				{
 					"name": "無甲防禦", "tENG_name": "Unarmored Defense",
 					"entries": [
-						"While the adept is wearing no armor and wielding no shield, its AC includes its Wisdom modifier."
+						"當武術高手未穿戴任何護甲且未持用盾牌時，它的AC將加上它的睿知調整值。"
 					]
 				}
 			],
@@ -8657,19 +8657,19 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The adept makes three unarmed strikes or three dart attacks."
+						"武術高手進行三次徒手打擊或三次飛鏢攻擊。"
 					]
 				},
 				{
 					"name": "徒手打擊", "tENG_name": "Unarmed Strike",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3})鈍擊傷害。 If the target is a creature, the adept can choose one of the following additional effects:",
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3})鈍擊傷害。若目標為一個生物，則武術高手可以選擇下列其中一個額外效果：",
 						{
 							"type": "list",
 							"items": [
-								"The target must succeed on a DC 13 Strength saving throw or drop one item it is holding (adept's choice).",
-								"The target must succeed on a DC 13 Dexterity saving throw or be knocked {@condition prone}.",
-								"The target must succeed on a DC 13 Constitution saving throw or be {@condition 震懾} until the end of the adept's next turn."
+								"目標必須成功通過一次DC 13的力量豁免，否則它正持握的一個物品將脫手掉落（由武術高手選擇）。",
+								"目標必須成功通過一次DC 13的敏捷豁免，否則將被擊倒{@condition 伏地}。",
+								"目標必須成功通過一次DC 13的體質豁免，否則將被{@condition 震懾}直到武術高手的下個回合結束。"
 							]
 						}
 					]
@@ -8683,9 +8683,9 @@
 			],
 			"reaction": [
 				{
-					"name": "Deflect Missile",
+					"name": "撥擋飛彈", "tENG_name": "Deflect Missile",
 					"entries": [
-						"In response to being hit by a ranged weapon attack, the adept deflects the missile. The damage it takes from the attack is reduced by {@dice 1d10 + 3}. If the damage is reduced to 0, the adept catches the missile if it's small enough to hold in one hand and the adept has a hand free."
+						"當被一次遠程武器攻擊命中時，武術高手可以撥檔該投射物。它從該攻擊所受到的傷害將被減少{@dice 1d10 + 3}點。若該傷害被降低至零，且若該投射物的大小能夠被單手抓住且武術高手有至少一隻空手，則武術高手將抓住該投射物。"
 					]
 				}
 			],
@@ -8960,7 +8960,7 @@
 				{
 					"name": "Fear Aura",
 					"entries": [
-						"Any beast or humanoid that starts its turn within 10 feet of the meenlock must succeed on a DC 11 Wisdom saving throw or be {@condition frightened} until the start of the creature's next turn."
+						"Any beast or humanoid that starts its turn within 10 feet of the meenlock must succeed on a DC 11 Wisdom saving throw or be {@condition 恐懼} until the start of the creature's next turn."
 					]
 				},
 				{
@@ -9243,7 +9243,7 @@
 					"entries": [
 						"Eye Rays. The mindwitness shoots three of the following magical eye rays at random (reroll duplicates), choosing one to three targets it can see within 120 feet of it:",
 						"1. Aversion Ray: The targeted creature must make a DC 13 Charisma saving throw. On a failed save, the target has disadvantage on attack rolls for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
-						"2. Fear Ray: The targeted creature must succeed on a DC 13 Wisdom saving throw or be {@condition frightened} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+						"2. Fear Ray: The targeted creature must succeed on a DC 13 Wisdom saving throw or be {@condition 恐懼} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
 						"3. Psychic Ray: The target must succeed on a DC 13 Intelligence saving throw or take 27 ({@damage 6d8}) psychic damage.",
 						"4. Slowing Ray: The targeted creature must make a DC 13 Dexterity saving throw. On a failed save, the target's speed is halved for 1 minute. In addition, the creature can't take reactions, and it can take either an action or a bonus action on its turn but not both. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
 						"5. Stunning Ray: The targeted creature must succeed on a DC 13 Constitution saving throw or be {@condition 震懾} for 1 minute. The target can repeat the saving throw at the start of each of its turns, ending the effect on itself on a success.",
@@ -9747,7 +9747,7 @@
 				{
 					"name": "Mental Fortitude",
 					"entries": [
-						"The neogi has advantage on saving throws against being {@condition 魅惑} or {@condition frightened}. and magic can't put the neogi to sleep."
+						"The neogi has advantage on saving throws against being {@condition 魅惑} or {@condition 恐懼}. and magic can't put the neogi to sleep."
 					]
 				},
 				{
@@ -9842,7 +9842,7 @@
 				{
 					"name": "Mental Fortitude",
 					"entries": [
-						"The hatchling has advantage on saving throws against being {@condition 魅惑} or {@condition frightened}, and magic can't put the hatchling to sleep."
+						"The hatchling has advantage on saving throws against being {@condition 魅惑} or {@condition 恐懼}, and magic can't put the hatchling to sleep."
 					]
 				},
 				{
@@ -9926,7 +9926,7 @@
 				{
 					"name": "Mental Fortitude",
 					"entries": [
-						"The neogi has advantage on saving throws against being {@condition 魅惑} or {@condition frightened}, and magic can't put the neogi to sleep."
+						"The neogi has advantage on saving throws against being {@condition 魅惑} or {@condition 恐懼}, and magic can't put the neogi to sleep."
 					]
 				},
 				{
@@ -10089,7 +10089,7 @@
 					"name": "Tentacles",
 					"entries": [
 						"{@atk mw} 命中{@hit 13}，觸及15呎，單一目標。{@h}21 ({@damage 3d8 + 8})鈍擊傷害 plus 13 ({@damage 3d8}) psychic damage. If the target is a Large or smaller creature, it must succeed on a DC 18 Strength saving throw or be swallowed by the neothelid. A swallowed creature is {@condition blinded} and {@condition restrained}, it has total cover against attacks and other effects outside the neothelid, and it takes 35 ({@damage 10d6}) acid damage at the start of each of the neothelid's turns.",
-						"If the neothelid takes 30 damage or more on a single turn from a creature inside it, the neothelid must succeed on a DC 18 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition prone} in a space within 10 feet of the neothelid. If the neothelid dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse by using 20 feet of movement, exiting {@condition prone}."
+						"If the neothelid takes 30 damage or more on a single turn from a creature inside it, the neothelid must succeed on a DC 18 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition 伏地} in a space within 10 feet of the neothelid. If the neothelid dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse by using 20 feet of movement, exiting {@condition 伏地}."
 					]
 				},
 				{
@@ -11208,7 +11208,7 @@
 				{
 					"name": "Ironbound Pursuit",
 					"entries": [
-						"The redcap moves up to its speed to a creature it can see and kicks with its iron boots. The target must succeed on a DC 14 Dexterity saving throw or take 20 ({@damage 3d10 + 4})鈍擊傷害 and be knocked {@condition prone}."
+						"The redcap moves up to its speed to a creature it can see and kicks with its iron boots. The target must succeed on a DC 14 Dexterity saving throw or take 20 ({@damage 3d10 + 4})鈍擊傷害 and be knocked {@condition 伏地}."
 					]
 				}
 			],
@@ -11471,7 +11471,7 @@
 				{
 					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}10 ({@damage 2d6 + 3}) piercing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked {@condition prone}."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}10 ({@damage 2d6 + 3}) piercing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked {@condition 伏地}."
 					]
 				}
 			],
@@ -11499,7 +11499,7 @@
 							"type": "entries",
 							"name": "Terrifying Howl",
 							"entries": [
-								"The shadow mastiff howls. Any beast or humanoid within 300 feet of the mastiff and able to hear its howl must succeed on a DC 11 Wisdom saving throw or be {@condition frightened} for 1 minute. A {@condition frightened} target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to any shadow mastiff's Terrifying Howl for the next 24 hours."
+								"The shadow mastiff howls. Any beast or humanoid within 300 feet of the mastiff and able to hear its howl must succeed on a DC 11 Wisdom saving throw or be {@condition 恐懼} for 1 minute. A {@condition 恐懼} target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to any shadow mastiff's Terrifying Howl for the next 24 hours."
 							]
 						}
 					]
@@ -12068,7 +12068,7 @@
 				{
 					"name": "Rock",
 					"entries": [
-						"{@atk rw} 命中{@hit 10}，射程60/240呎，單一目標。{@h}28 ({@damage 4d10 + 6})鈍擊傷害。 If the target is a creature, it must succeed on a DC 17 Strength saving throw or be knocked {@condition prone}."
+						"{@atk rw} 命中{@hit 10}，射程60/240呎，單一目標。{@h}28 ({@damage 4d10 + 6})鈍擊傷害。 If the target is a creature, it must succeed on a DC 17 Strength saving throw or be knocked {@condition 伏地}."
 					]
 				}
 			],
@@ -12317,7 +12317,7 @@
 				{
 					"name": "天生施法 (靈能)", "tENG_name": "Innate Spellcasting (Psionics)",
 					"headerEntries": [
-						"顱鼠群的天生施法屬性為智力（法術豁免DC 13）。只要它的生命值還高於一半,它就可以施展以下法術，且無需任何構材："
+						"顱鼠群的天生施法屬性為智力（法術豁免DC 13）。只要它的生命值還高於一半，它就可以施展以下法術，且無需任何構材："
 					],
 					"will": [
 						"{@spell 命令術}",
@@ -12426,7 +12426,7 @@
 			]
 		},
 		{
-			"name": "Swashbuckler",
+			"name": "風流劍客", "ENG_name": "Swashbuckler",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -12473,15 +12473,15 @@
 			"cr": "3",
 			"trait": [
 				{
-					"name": "Lightfooted",
+					"name": "輕盈步伐", "tENG_name": "Lightfooted",
 					"entries": [
-						"The swashbuckler can take the Dash or Disengage action as a bonus action on each of its turns."
+						"風流劍客可以在它的每個回合以一個附贈動作採取{@action 疾走}或{@action 撤離}動作。"
 					]
 				},
 				{
-					"name": "Suave Defense",
+					"name": "倜儻防禦", "tENG_name": "Suave Defense",
 					"entries": [
-						"While the swashbuckler is wearing light or no armor and wielding no shield, its AC includes its Charisma modifier."
+						"當風流劍客穿戴輕甲或未穿戴護甲，且未持用盾牌時，它的AC將加上它的魅力調整值。"
 					]
 				}
 			],
@@ -12489,7 +12489,7 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The swashbuckler makes three attacks: one with a dagger and two with its rapier."
+						"風流劍客進行三次攻擊：一次匕首，二次刺劍。"
 					]
 				},
 				{
@@ -12499,7 +12499,7 @@
 					]
 				},
 				{
-					"name": "Rapier",
+					"name": "刺劍", "tENG_name": "Rapier",
 					"entries": [
 						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}8 ({@damage 1d8 + 4})穿刺傷害。"
 					]
@@ -13224,7 +13224,7 @@
 				{
 					"name": "Stunning Shriek",
 					"entries": [
-						"The vargouille shrieks. Each humanoid and beast within 30 feet of the vargouille and able to hear it must succeed on a DC 12 Wisdom saving throw or be {@condition frightened} until the end of the vargouille's next turn. While {@condition frightened} in this way, a target is {@condition 震懾}. If a target's saving throw is successful or the effect ends for it, the target is immune to the Stunning Shriek of all vargouilles for 1 hour."
+						"The vargouille shrieks. Each humanoid and beast within 30 feet of the vargouille and able to hear it must succeed on a DC 12 Wisdom saving throw or be {@condition 恐懼} until the end of the vargouille's next turn. While {@condition 恐懼} in this way, a target is {@condition 震懾}. If a target's saving throw is successful or the effect ends for it, the target is immune to the Stunning Shriek of all vargouilles for 1 hour."
 					]
 				}
 			],
@@ -13522,7 +13522,7 @@
 			]
 		},
 		{
-			"name": "War Priest",
+			"name": "戰爭祭司", "ENG_name": "War Priest",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -13538,7 +13538,7 @@
 				{
 					"ac": 18,
 					"from": [
-						"{@item plate armor|phb}"
+						"{@item 全身板甲|phb}"
 					]
 				}
 			],
@@ -13570,11 +13570,11 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The priest makes two melee attacks."
+						"戰爭祭司進行二次近戰攻擊。"
 					]
 				},
 				{
-					"name": "Maul",
+					"name": "巨鎚", "tENG_name": "Maul",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}10 ({@damage 2d6 + 3})鈍擊傷害。"
 					]
@@ -13582,9 +13582,9 @@
 			],
 			"reaction": [
 				{
-					"name": "Guided Strike (Recharges after a Short or Long Rest)",
+					"name": "神導打擊 (短休或長休之後充能)", "tENG_name": "Guided Strike (Recharges after a Short or Long Rest)",
 					"entries": [
-						"The priest grants a +10 bonus to an attack roll made by itself or another creature within 30 feet of it. The priest can make this choice after the roll is made but before it hits or misses."
+						"當戰爭祭司或另一個距離它30呎內的生物進行攻擊檢定時，戰爭祭司可以使該攻擊檢定獲得+10的加值。戰爭祭司可以選擇在看見擲骰結果之後，但宣布是否命中之前決定是否使用這個能力。"
 					]
 				}
 			],
@@ -13597,7 +13597,7 @@
 				{
 					"name": "施法", "tENG_name": "Spellcasting",
 					"headerEntries": [
-						"The priest is a 9th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 15, {@hit 7} to hit with spell attacks). It has the following cleric spells prepared:"
+						"戰爭祭司是9級的施法者。它的施法屬性為睿知（法術豁免DC 15，法術攻擊命中{@hit 7}）。戰爭祭司已準備了以下牧師法術："
 					],
 					"spells": {
 						"0": {
@@ -13721,7 +13721,7 @@
 				"charmed"
 			],
 			"passive": 11,
-			"languages": "any two languages (usually Sylvan)",
+			"languages": "任意二種語言（通常為木族語）",
 			"cr": "4",
 			"action": [
 				{
@@ -13744,7 +13744,7 @@
 				{
 					"name": "天生施法", "tENG_name": "Innate Spellcasting",
 					"headerEntries": [
-						"The warlock's innate spellcasting ability is Charisma. It can innately cast the following spells (spell save DC 15), requiring no material components:"
+						"契術師的天生施法屬性為魅力（法術豁免DC 15）。它天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 易容術}",
@@ -13754,7 +13754,7 @@
 					],
 					"daily": {
 						"1": [
-							"{@spell conjure fey}"
+							"{@spell 召喚精類生物}"
 						]
 					},
 					"ability": "cha"
@@ -13762,7 +13762,7 @@
 				{
 					"name": "施法", "tENG_name": "Spellcasting",
 					"headerEntries": [
-						"The warlock is an 11th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 14, {@hit 6} to hit with spell attacks). It regains its expended spell slots when it finishes a short or long rest. It knows the following warlock spells:"
+						"契術師是11級的施法者。它的施法屬性為魅力（法術豁免DC 14，法術攻擊命中{@hit 6}）。它將在完成一次短休或長休時恢復它所有已消耗的法術位。它知曉以下契術師法術："
 					],
 					"spells": {
 						"0": {
@@ -13866,12 +13866,12 @@
 					"resist": [
 						"slashing"
 					],
-					"note": "from nonmagical attacks not made with silvered weapons"
+					"preNote": "非銀製武器且非魔法攻擊所造成的"
 				}
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 11,
-			"languages": "any two languages (usually Abyssal or Infernal)",
+			"languages": "任意二種語言（通常為深淵語或煉獄語）",
 			"cr": "7",
 			"trait": [
 				{
@@ -13883,9 +13883,9 @@
 			],
 			"action": [
 				{
-					"name": "Mace",
+					"name": "硬頭錘", "tENG_name": "Mace",
 					"entries": [
-						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}3 ({@damage 1d6})鈍擊傷害 plus 10 ({@damage 3d6}) fire damage."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}3 ({@damage 1d6})鈍擊傷害加 10 ({@damage 3d6})火焰傷害。"
 					]
 				}
 			],
@@ -13894,7 +13894,7 @@
 				{
 					"name": "天生施法", "tENG_name": "Innate Spellcasting",
 					"headerEntries": [
-						"The warlock's innate spellcasting ability is Charisma. It can innately cast the following spells (spell save DC 15), requiring no material components:"
+						"契術師的天生施法屬性為魅力（法術豁免DC 15）。它天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 變造自身}",
@@ -13915,7 +13915,7 @@
 				{
 					"name": "施法", "tENG_name": "Spellcasting",
 					"headerEntries": [
-						"The warlock is a 17th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 15, {@hit 7} to hit with spell attacks). It regains its expended spell slots when it finishes a short or long rest. It knows the following warlock spells:"
+						"契術師是17級的施法者。它的施法屬性為魅力（法術豁免DC 15，法術攻擊命中{@hit 7}）。它將在完成一次短休或長休時恢復它所有已消耗的法術位。它知曉以下契術師法術："
 					],
 					"spells": {
 						"0": {
@@ -13937,7 +13937,7 @@
 								"{@spell 燃燒之手}",
 								"{@spell 焰擊術}",
 								"{@spell 煉獄叱喝}",
-								"{@spell magic circle}",
+								"{@spell 防護法陣}",
 								"{@spell 灼熱射線}",
 								"{@spell 探知}",
 								"{@spell 臭雲術}",
@@ -13974,7 +13974,7 @@
 			]
 		},
 		{
-			"name": "Warlock of the Great Old One",
+			"name": "舊日支配者契術師", "ENG_name": "Warlock of the Great Old One",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -14020,13 +14020,13 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 11,
-			"languages": "any two languages, 心靈感應30呎",
+			"languages": "任意二種語言、心靈感應30呎",
 			"cr": "6",
 			"trait": [
 				{
-					"name": "Whispering Aura",
+					"name": "暗語靈光", "tENG_name": "Whispering Aura",
 					"entries": [
-						"At the start of each of the warlock's turns, each creature of its choice within 5 feet of it must succeed on a DC 15 Wisdom saving throw or take 10 ({@damage 3d6}) psychic damage, provided that the warlock isn't {@condition 無力}."
+						"在契術師的每個回合開始時，只要契術師未處於{@condition 無力}狀態，則每個距離它5呎內且它所選擇的生物都必須成功通過一次DC 15的睿知豁免，否則將受到10 ({@damage 3d6})精神傷害。"
 					]
 				}
 			],
@@ -14043,18 +14043,18 @@
 				{
 					"name": "天生施法", "tENG_name": "Innate Spellcasting",
 					"headerEntries": [
-						"The warlock's innate spellcasting ability is Charisma. It can innately cast the following spells (spell save DC 15), requiring no material components:"
+						"契術師的天生施法屬性為魅力（法術豁免DC 15）。它天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 偵測魔法}",
 						"{@spell 跳躍術}",
 						"{@spell 浮空術}",
 						"{@spell 法師護甲}（限自身）",
-						"{@spell speak with dead}"
+						"{@spell 死者交談術}"
 					],
 					"daily": {
 						"1e": [
-							"{@spell arcane gate}",
+							"{@spell 祕法之門}",
 							"{@spell 真知術}"
 						]
 					},
@@ -14063,7 +14063,7 @@
 				{
 					"name": "施法", "tENG_name": "Spellcasting",
 					"headerEntries": [
-						"The warlock is a 14th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 15, {@hit 7} to hit with spell attacks). It regains its expended spell slots when it finishes a short or long rest. It knows the following warlock spells:"
+						"契術師是14級的施法者。它的施法屬性為魅力（法術豁免DC 15，法術攻擊命中{@hit 7}）。它將在完成一次短休或長休時恢復它所有已消耗的法術位。它知曉以下契術師法術："
 					],
 					"spells": {
 						"0": {
@@ -14081,14 +14081,14 @@
 							"lower": 1,
 							"slots": 3,
 							"spells": [
-								"{@spell armor of Agathys}",
+								"{@spell 艾嘉西斯之鎧}",
 								"{@spell 哈達之臂}",
 								"{@spell 瘋狂冠冕}",
 								"{@spell 銳眼術}",
-								"{@spell contact other plane}",
+								"{@spell 異界探知}",
 								"{@spell 偵測思想}",
 								"{@spell 次元門}",
-								"{@spell dissonant whispers}",
+								"{@spell 噪音暗語}",
 								"{@spell 支配野獸}",
 								"{@spell 心靈遙控}",
 								"{@spell 吸血鬼之觸}"
@@ -14139,7 +14139,7 @@
 				{
 					"ac": 18,
 					"from": [
-						"{@item plate armor|phb}"
+						"{@item 全身板甲|phb}"
 					]
 				}
 			],
@@ -14220,7 +14220,7 @@
 				{
 					"name": "Frighten Foe (Costs 2 Actions)",
 					"entries": [
-						"The warlord targets one enemy it can see within 30 feet of it. If the target can see and hear it, the target must succeed on a DC 16 Wisdom saving throw or be {@condition frightened} until the end of warlord's next turn."
+						"The warlord targets one enemy it can see within 30 feet of it. If the target can see and hear it, the target must succeed on a DC 16 Wisdom saving throw or be {@condition 恐懼} until the end of warlord's next turn."
 					]
 				}
 			],
@@ -14797,7 +14797,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks not made with silvered weapons"
+					"preNote": "非銀製武器且非魔法攻擊所造成的"
 				}
 			],
 			"conditionImmune": [
@@ -14833,13 +14833,13 @@
 				{
 					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}11 ({@damage 2d6 + 4}) piercing damage, plus 14 ({@damage 4d6}) psychic damage if the target is {@condition frightened}."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}11 ({@damage 2d6 + 4}) piercing damage, plus 14 ({@damage 4d6}) psychic damage if the target is {@condition 恐懼}."
 					]
 				},
 				{
 					"name": "Baleful Baying",
 					"entries": [
-						"The yeth hound bays magically. Every enemy within 300 feet of the hound that can hear it must succeed on a DC 13 Wisdom saving throw or be {@condition frightened} until the end of the hound's next turn or until the hound is {@condition 無力}. A {@condition frightened} target that starts its turn within 30 feet of the hound must use all its movement on that turn to get as far from the hound as possible, must finish the move before taking an action, and must take the most direct route, even if hazards lie that way. A target that successfully saves is immune to the baying of all yeth hounds for the next 24 hours."
+						"The yeth hound bays magically. Every enemy within 300 feet of the hound that can hear it must succeed on a DC 13 Wisdom saving throw or be {@condition 恐懼} until the end of the hound's next turn or until the hound is {@condition 無力}. A {@condition 恐懼} target that starts its turn within 30 feet of the hound must use all its movement on that turn to get as far from the hound as possible, must finish the move before taking an action, and must take the most direct route, even if hazards lie that way. A target that successfully saves is immune to the baying of all yeth hounds for the next 24 hours."
 					]
 				}
 			],
