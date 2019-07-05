@@ -1177,7 +1177,7 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 15,
-			"languages": "Abyssal",
+			"languages": "深淵語",
 			"cr": "4",
 			"action": [
 				{
@@ -2871,7 +2871,7 @@
 					]
 				},
 				{
-					"name": "Sunlight Sensitivity",
+					"name": "日光敏感", "tENG_name": "Sunlight Sensitivity",
 					"entries": [
 						"While in sunlight, the chitine has disadvantage on attack rolls, as well as on Wisdom ({@skill Perception}) checks that rely on sight."
 					]
@@ -2981,7 +2981,7 @@
 					]
 				},
 				{
-					"name": "Sunlight Sensitivity",
+					"name": "日光敏感", "tENG_name": "Sunlight Sensitivity",
 					"entries": [
 						"While in sunlight, the choldrith has disadvantage on attack rolls, as well as on Wisdom ({@skill Perception}) checks that rely on sight."
 					]
@@ -5856,7 +5856,7 @@
 						"2. Enervation Ray: The targeted creature must make a DC 14 Constitution saving throw, taking 18 ({@damage 4d8}) necrotic damage on a failed save, or half as much damage on a successful one.",
 						"3. Pushing Ray: The targeted creature must succeed on a DC 14 Strength saving throw or be pushed up to 15 feet directly away from the gauth and have its speed halved until the start of the gauth's next turn.",
 						"4. Fire Ray: The targeted creature must succeed on a DC 14 Dexterity saving throw or take 22 ({@damage 4d10}) fire damage.",
-						"5. Paralyzing Ray: The targeted creature must succeed on a DC 14 Constitution saving throw or be {@condition paralyzed} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+						"5. Paralyzing Ray: The targeted creature must succeed on a DC 14 Constitution saving throw or be {@condition 麻痺} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
 						"6. Sleep Ray: The targeted creature must succeed on a DC 14 Wisdom saving throw or fall asleep and remain {@condition 昏迷} for 1 minute. The target awakens if it takes damage or another creature takes an action to wake it. This ray has no effect on constructs and undead."
 					]
 				}
@@ -7330,7 +7330,7 @@
 				{
 					"name": "Paralyzing Touch",
 					"entries": [
-						"{@atk ms} {@hit 12} to hit, reach 5 ft., one creature. {@h}10 ({@damage 3d6}) cold damage. The target must succeed on a DC 18 Constitution saving throw or be {@condition paralyzed} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk ms} {@hit 12} to hit, reach 5 ft., one creature. {@h}10 ({@damage 3d6}) cold damage. The target must succeed on a DC 18 Constitution saving throw or be {@condition 麻痺} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				},
 				{
@@ -7899,7 +7899,7 @@
 			]
 		},
 		{
-			"name": "Kobold Dragonshield",
+			"name": "狗頭人龍盾護衛", "ENG_name": "Kobold Dragonshield",
 			"size": "S",
 			"type": {
 				"type": "humanoid",
@@ -7939,31 +7939,31 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 11,
-			"languages": "Common, Draconic",
+			"languages": "通用語、龍語",
 			"cr": "1",
 			"trait": [
 				{
-					"name": "Dragon's Resistance",
+					"name": "龍之抗性", "tENG_name": "Dragon's Resistance",
 					"entries": [
-						"The kobold has resistance to a type of damage based on the color of dragon that invested it with power (choose or roll a {@dice d10}): 1\u20132, acid (black); 3\u20134, cold (white); 5\u20136, fire (red); 7\u20138, lightning (blue); 9\u201310, poison (green)."
+						"狗頭人具有一種傷害類型的抗性，其類型根據賦予它力量的龍的顏色所決定（直接選擇或骰{@dice d10}決定）： 1\u20132, 酸蝕(黑); 3\u20134, 寒冰(白); 5\u20136, 火焰(紅); 7\u20138, 閃電(藍); 9\u201310, 毒素(綠)。"
 					]
 				},
 				{
-					"name": "Heart of the Dragon",
+					"name": "龍之心", "tENG_name": "Heart of the Dragon",
 					"entries": [
-						"If the kobold is {@condition 恐懼} or {@condition paralyzed} by an effect that allows a saving throw, it can repeat the save at the start of its turn to end the effect on itself and all kobolds within 30 feet of it. Any kobold that benefits from this trait (including the dragonshield) has advantage on its next attack roll."
+						"若狗頭人因一個允許其進行豁免檢定的效果而陷入{@condition 恐懼}或{@condition 麻痺}狀態，則牠可以在它的每個回合開始時重複進行這個豁免檢定，以結束這個效果對它自己和所有距離它30呎內的狗頭人的影響。任何得益於這個特性的狗頭人（包括龍盾護衛）將在下一次的攻擊檢定中具有優勢。"
 					]
 				},
 				{
 					"name": "群體戰術", "tENG_name": "Pack Tactics",
 					"entries": [
-						"The kobold has advantage on an attack roll against a creature if at least one of the kobold's allies is within 5 feet of the creature and the ally isn't {@condition 無力}."
+						"若狗頭人有至少一個隊友距離目標生物5呎內且該隊友並未{@condition 無力}，則狗頭人在對該生物進行的攻擊檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Sunlight Sensitivity",
+					"name": "日光敏感", "tENG_name": "Sunlight Sensitivity",
 					"entries": [
-						"While in sunlight, the kobold has disadvantage on attack rolls, as well as on Wisdom ({@skill Perception}) checks that rely on sight."
+						"當處於日光照耀下時，狗頭人在攻擊檢定，以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
 					]
 				}
 			],
@@ -7971,13 +7971,13 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The kobold makes two melee attacks."
+						"狗頭人進行二次近戰攻擊。"
 					]
 				},
 				{
 					"name": "矛", "tENG_name": "Spear",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 3}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d6 + 1}) piercing damage, or 5 ({@damage 1d8 + 1}) piercing damage if used with two hands to make a melee attack."
+						"{@atk mw,rw} 命中{@hit 3}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d6 + 1})穿刺傷害，或若雙手使用以進行一次近戰攻擊時則造成 5 ({@damage 1d8 + 1})穿刺傷害。"
 					]
 				}
 			],
@@ -8008,7 +8008,7 @@
 			]
 		},
 		{
-			"name": "Kobold Inventor",
+			"name": "狗頭人發明家", "ENG_name": "Kobold Inventor",
 			"size": "S",
 			"type": {
 				"type": "humanoid",
@@ -8042,19 +8042,19 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 10,
-			"languages": "Common, Draconic",
+			"languages": "通用語、龍語",
 			"cr": "1/4",
 			"trait": [
 				{
-					"name": "Sunlight Sensitivity",
+					"name": "日光敏感", "tENG_name": "Sunlight Sensitivity",
 					"entries": [
-						"While in sunlight, the kobold has disadvantage on attack rolls, as well as on Wisdom ({@skill Perception}) checks that rely on sight."
+						"當處於日光照耀下時，狗頭人在攻擊檢定，以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
 					]
 				},
 				{
 					"name": "群體戰術", "tENG_name": "Pack Tactics",
 					"entries": [
-						"The kobold has advantage on an attack roll against a creature if at least one of the kobold's allies is within 5 ft. of the creature and the ally isn't {@condition 無力}."
+						"若狗頭人有至少一個隊友距離目標生物5呎內且該隊友並未{@condition 無力}，則狗頭人在對該生物進行的攻擊檢定中具有優勢。"
 					]
 				}
 			],
@@ -8066,23 +8066,23 @@
 					]
 				},
 				{
-					"name": "Sling",
+					"name": "投石索", "tENG_name": "Sling",
 					"entries": [
 						"{@atk rw} 命中{@hit 4}，射程30/120呎，單一目標。{@h}4 ({@damage 1d4 + 2})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Weapon Invention",
+					"name": "武器發明", "tENG_name": "Weapon Invention",
 					"entries": [
-						"The kobold uses one of the following options (roll a {@dice d8} or choose one); the kobold can use each one no more than once per day:",
-						"{@i 1. Acid}. The kobold hurls a flask of {@item Acid (vial)|phb|acid}. {@atk rw} 命中{@hit 4}，射程5/20呎，單一目標。{@h}7 ({@damage 2d6}) acid damage.",
-						"{@i 2. Alchemist's fire}. The kobold throws a flask of {@item Alchemist's Fire (flask)|phb|alchemist's fire}. {@atk rw} 命中{@hit 4}，射程5/20呎，單一目標。{@h}2 ({@damage 1d4}) fire damage at the start of each of the target's turns. A creature can end this damage by using its action to make a DC 10 Dexterity check to extinguish the flames.",
-						"{@i 3. Basket of Centipedes}. The kobold throws a small basket into a 5-foot-square space within 20 feet of it. A {@creature swarm of centipedes|mm|swarm of insects (centipedes)} with 11 hit points emerges from the basket and rolls initiative. At the end of each of the swarm's turns, there's a {@chance 50} chance that the swarm disperses.",
-						"{@i 4. Green Slime Pot}. The kobold throws a clay pot full of green slime at the target, and it breaks open on impact. {@atk rw} 命中{@hit 4}，射程5/20呎，單一目標。{@h}The target is covered in a patch of {@hazard green slime} (see chapter 5 of the Dungeon Master's Guide). Miss: A patch of green slime covers a randomly determined 5-foot-square section of wall or floor within 5 feet of the target.",
-						"{@i 5. Rot Grub Pot}. The kobold throws a clay pot into a 5-foot-square space within 20 feet of it, and it breaks open on impact. A {@creature Swarm of Rot Grubs|vgm|swarm of rot grubs} (see appendix A) emerges from the shattered pot and remains a hazard in that square.",
-						"{@i 6. Scorpion on a Stick}. The kobold makes a melee attack with a scorpion tied to the end of a 5-foot-long pole. {@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}1 piercing damage, and the target must make a DC 9 Constitution saving throw, taking 4 ({@damage 1d8})毒素傷害 on a failed save, or half as much damage on a successful one.",
-						"{@i 7. Skunk in a Cage}. The kobold releases a skunk into an unoccupied space within 5 feet of it. The skunk has a walking speed of 20 feet, AC 10, 1 hit point, and no effective attacks. It rolls initiative and, on its turn, uses its action to spray musk at a random creature within 5 feet of it. The target must make a DC 9 Constitution saving throw. On a failed save, the target retches and can't take actions for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. A creature that doesn't need to breathe or is immune to poison automatically succeeds on the saving throw. Once the skunk has sprayed its musk, it can't do so again until it finishes a short or long rest.",
-						"{@i 8. Wasp Nest in a Bag}. The kobold throws a small bag into a 5-foot-square space within 20 feet of it. A {@creature swarm of wasps|mm|swarm of insects (wasps)} with 11 hit points emerges from the bag and rolls initiative. At the end of each of the swarm's turns, there's a {@chance 50} chance that the swarm disperses."
+						"狗頭人使用下列其中一個選項（骰{@dice d8}決定或直接選擇）；狗頭人每天只能各使用這些選項一次：",
+						"{@i 1. 強酸}：狗頭人投出一扁瓶裝的{@item 強酸(小瓶裝)|phb|強酸}。{@atk rw} 命中{@hit 4}，射程5/20呎，單一目標。{@h}7 ({@damage 2d6})酸蝕傷害。",
+						"{@i 2. 熾火膠}：狗頭人丟出一扁瓶裝的{@item 熾火膠(扁瓶裝)|phb|熾火膠}。{@atk rw} 命中{@hit 4}，射程5/20呎，單一目標。{@h}目標的每個回合開始時2 ({@damage 1d4})火焰傷害。若要結束這個傷害效果，一個生物可以透過使用它的動作進行一次DC 10的敏捷檢定以撲滅火焰。",
+						"{@i 3. 蜈蚣籃}：狗頭人將一個小型籃子丟到一個距離它20呎內的一處5呎平方空間。一個擁有11點生命值的{@creature 蜈蚣群}將從籃子中湧出，並骰自己的先攻。在蜈蚣群的每個回合結束時，這個集群有{@chance 50}的機率會自行四散。",
+						"{@i 4. 綠軟泥罐}：狗頭人將一個裝滿綠軟泥的陶罐丟向目標，且它將在衝擊中破碎。{@atk rw} 命中{@hit 4}，射程5/20呎，單一目標。{@h}目標將被一片{@hazard 綠軟泥}給覆蓋（參見地下城主指南的第五章）。失手：距離目標5呎內，隨機一處5呎平方的牆面或地板將被一片綠軟泥給覆蓋。",
+						"{@i 5. 腐蛆罐}：狗頭人將一個陶罐丟到一個距離它20呎內的一處5呎平方空間，且陶罐將在衝擊中破碎。一個{@creature 食腐蛆群|vgm}將從碎裂的陶罐中湧出，並做為危害物持續存在於該空間中。",
+						"{@i 6. 毒蠍棍}：狗頭人使用一根末端綁著毒蠍的5呎長棍進行一次近戰攻擊。{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}1 穿刺傷害，且目標必須進行一次DC 9的體質豁免，豁免失敗將受到 4 ({@damage 1d8})毒素傷害，豁免成功則只受到一半的傷害。",
+						"{@i 7. 籠中臭鼬}：狗頭人將一頭臭鼬釋放到距離它5呎的一處未被佔據空間。這頭臭鼬具有20呎的步行速度，AC 10，1點生命值，且缺乏有效的攻擊手段。牠會骰自己的先攻，且會在牠的回合使用牠的動作對一個距離牠5呎內的隨機生物噴灑麝香。目標必須進行一次DC 9的體質豁免。若豁免失敗，目標將在1分鐘內持續乾嘔且無法採取任何動作。目標可以在他的每個回合結束時重複進行這個豁免檢定，若豁免成功則結束這個效果對它的影響。不需要呼吸或免疫於毒素的生物將自動成功通過這個豁免檢定。一旦臭鼬噴灑麝香之後，牠直到完成一次短休或長休之前都不能再這麼做。",
+						"{@i 8. 袋中蜂巢}：狗頭人將一個小型袋子丟到一個距離它20呎內的一處5呎平方空間。一個擁有11點生命值的{@creature 黃蜂群}將從袋子中湧出，並骰自己的先攻。在黃蜂群的每個回合結束時，這個集群有{@chance 50}的機率會自行四散。"
 					]
 				}
 			],
@@ -8115,7 +8115,7 @@
 			]
 		},
 		{
-			"name": "Kobold Scale Sorcerer",
+			"name": "狗頭人鱗術士", "ENG_name": "Kobold Scale Sorcerer",
 			"size": "S",
 			"type": {
 				"type": "humanoid",
@@ -8155,27 +8155,27 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 9,
-			"languages": "Common, Draconic",
+			"languages": "通用語、龍語",
 			"cr": "1",
 			"trait": [
 				{
-					"name": "Sorcery Points",
+					"name": "術法點", "tENG_name": "Sorcery Points",
 					"entries": [
-						"The kobold has 3 sorcery points. It regains all its spent sorcery points when it finishes a long rest. It can spend its sorcery points on the following options:",
-						"Heightened Spell: When it casts a spell that forces a creature to a saving throw to resist the spell's effects, the kobold can spend 3 sorcery points to give one target of the spell disadvantage on its first saving throw against the spell.",
-						"Subtle Spell: When the kobold casts a spell, it can spend 1 sorcery point to cast the spell without any somatic or verbal components."
+						"狗頭人擁有3點術法點。它在完成一次長休後恢復所有它花費掉的術法點。它可以把術法點花費在下列選項中：",
+						"升階法術：當狗頭人施放一個會強迫一個生物進行豁免檢定以抵抗它效果的法術時，它可以消耗3點術法點以讓一個該法術的目標在它對抗該法術的第一次豁免檢定中承受劣勢。",
+						"精妙法術：當狗頭人施放一個法術時，它可以消耗1點術法點以施放該法術而無須提供任何姿勢或聲音構材。"
 					]
 				},
 				{
 					"name": "群體戰術", "tENG_name": "Pack Tactics",
 					"entries": [
-						"The kobold has advantage on an attack roll against a creature it at least one of the kobold's allies is within 5 feet of the creature and the ally isn't {@condition 無力}."
+						"若狗頭人有至少一個隊友距離目標生物5呎內且該隊友並未{@condition 無力}，則狗頭人在對該生物進行的攻擊檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Sunlight Sensitivity",
+					"name": "日光敏感", "tENG_name": "Sunlight Sensitivity",
 					"entries": [
-						"While in sunlight, the kobold has disadvantage on attack rolls, as well as on Wisdom ({@skill Perception}) checks that rely on sight."
+						"當處於日光照耀下時，狗頭人在攻擊檢定，以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
 					]
 				}
 			],
@@ -8192,7 +8192,7 @@
 				{
 					"name": "施法", "tENG_name": "Spellcasting",
 					"headerEntries": [
-						"The kobold is a 3rd-level spellcaster. Its spellcasting ability is Charisma (spell save DC 12, {@hit 4} to hit with spell attacks). It has the following sorcerer spells prepared:"
+						"狗頭人是3級的施法者。它的施法屬性為魅力（法術豁免DC 12，法術攻擊命中{@hit 4}）。它已準備了以下術士法術："
 					],
 					"spells": {
 						"0": {
@@ -8712,7 +8712,7 @@
 			]
 		},
 		{
-			"name": "Master Thief",
+			"name": "盜賊大師", "ENG_name": "Master Thief",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -8757,25 +8757,25 @@
 				"stealth": "+7"
 			},
 			"passive": 13,
-			"languages": "任意一種語言（通常為通用語） plus thieves' cant",
+			"languages": "任意一種語言（通常為通用語）、和竊賊黑話",
 			"cr": "5",
 			"trait": [
 				{
 					"name": "巧妙動作", "tENG_name": "Cunning Action",
 					"entries": [
-						"On each of its turns, the thief can use a bonus action to take the Dash, Disengage, or Hide action."
+						"在它的每個回合，盜賊大師可以使用一個附贈動作以採取{@action 疾走}、{@action 撤離}、或{@action 躲藏}動作。"
 					]
 				},
 				{
-					"name": "Evasion",
+					"name": "反射閃避", "tENG_name": "Evasion",
 					"entries": [
-						"If the thief is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the thief instead takes no damage if it succeeds on the saving throw, and only half damage if it fails."
+						"若盜賊大師成為一個允許它進行敏捷豁免以僅承受一半傷害的效果的目標，則盜賊大師可以改為在豁免成功時不受任何傷害，且在豁免失敗時僅承受一半傷害。"
 					]
 				},
 				{
-					"name": "Sneak Attack (1/Turn)",
+					"name": "偷襲 (1/回合)", "tENG_name": "Sneak Attack (1/Turn)",
 					"entries": [
-						"The thief deals an extra 14 ({@dice 4d6}) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the thief that isn't {@condition 無力} and the thief doesn't have disadvantage on the attack roll."
+						"當盜賊大師以武器攻擊命中一個目標時，若該攻擊檢定具有優勢，或者該攻擊檢定沒有劣勢且盜賊大師有一個未{@condition 無力}的隊友距離目標5呎內，則盜賊大師造成額外的14 ({@dice 4d6})傷害。"
 					]
 				}
 			],
@@ -8783,7 +8783,7 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The thief makes three attacks with its shortsword."
+						"盜賊大師進行三次短劍攻擊。"
 					]
 				},
 				{
@@ -8793,7 +8793,7 @@
 					]
 				},
 				{
-					"name": "Light Crossbow",
+					"name": "輕弩", "tENG_name": "Light Crossbow",
 					"entries": [
 						"{@atk rw} 命中{@hit 7}，射程80/320呎，單一目標。{@h}8 ({@damage 1d8 + 4})穿刺傷害。"
 					]
@@ -8801,9 +8801,9 @@
 			],
 			"reaction": [
 				{
-					"name": "Uncanny Dodge",
+					"name": "直覺閃避", "tENG_name": "Uncanny Dodge",
 					"entries": [
-						"The thief halves the damage that it takes from an attack that hits it. The thief must be able to see the attacker."
+						"盜賊大師將一次命中它的攻擊所造成的傷害減半。盜賊大師必須要能夠看見攻擊者才能使用此能力。"
 					]
 				}
 			],
@@ -8980,7 +8980,7 @@
 				{
 					"name": "爪抓", "tENG_name": "Claws",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}7 ({@damage 2d4 + 2})劈砍傷害, and the target must succeed on a DC 11 Constitution saving throw or be {@condition paralyzed} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}7 ({@damage 2d4 + 2})劈砍傷害, and the target must succeed on a DC 11 Constitution saving throw or be {@condition 麻痺} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				}
 			],
@@ -11019,9 +11019,9 @@
 					]
 				},
 				{
-					"name": "Evasion",
+					"name": "反射閃避", "tENG_name": "Evasion",
 					"entries": [
-						"If the quickling is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails."
+						"若快可靈成為一個允許它進行敏捷豁免以僅承受一半傷害的效果的目標，則快可靈可以改為在豁免成功時不受任何傷害，且在豁免失敗時僅承受一半傷害。"
 					]
 				}
 			],
@@ -11029,7 +11029,7 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The quickling makes three dagger attacks."
+						"快可靈進行三次匕首攻擊。"
 					]
 				},
 				{
@@ -11457,7 +11457,7 @@
 				{
 					"name": "Shadow Blend",
 					"entries": [
-						"While in dim light or darkness, the shadow mastiff can use a bonus action to become {@condition invisible}, along with anything it is wearing or carrying. The invisibility lasts until the shadow mastiff uses a bonus action to end it or until the shadow mastiff attacks, is in bright light, or is {@condition 無力}."
+						"While in dim light or darkness, the shadow mastiff can use a bonus action to become {@condition 隱形}, along with anything it is wearing or carrying. The invisibility lasts until the shadow mastiff uses a bonus action to end it or until the shadow mastiff attacks, is in bright light, or is {@condition 無力}."
 					]
 				},
 				{
@@ -11605,7 +11605,7 @@
 				{
 					"name": "Tail Stinger",
 					"entries": [
-						"{@atk mw} 命中{@hit 7}，觸及15呎，單一生物。{@h}13 ({@damage 2d8 + 4}) piercing damage, and the target must succeed on a DC 14 Constitution saving throw or become {@condition 中毒}. While {@condition 中毒}, the target is also {@condition paralyzed}. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk mw} 命中{@hit 7}，觸及15呎，單一生物。{@h}13 ({@damage 2d8 + 4}) piercing damage, and the target must succeed on a DC 14 Constitution saving throw or become {@condition 中毒}. While {@condition 中毒}, the target is also {@condition 麻痺}. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				}
 			],
@@ -12783,7 +12783,7 @@
 				{
 					"name": "Sting",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一生物。{@h}6 ({@damage 1d6 + 3})穿刺傷害加 14 ({@damage 4d6})毒素傷害, and the target must succeed on a DC 14 Constitution saving throw or be {@condition 中毒} for 1 minute. If it fails the saving throw by 5 or more, the target is also {@condition paralyzed} while {@condition 中毒}. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一生物。{@h}6 ({@damage 1d6 + 3})穿刺傷害加 14 ({@damage 4d6})毒素傷害, and the target must succeed on a DC 14 Constitution saving throw or be {@condition 中毒} for 1 minute. If it fails the saving throw by 5 or more, the target is also {@condition 麻痺} while {@condition 中毒}. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				}
 			],
@@ -13311,7 +13311,7 @@
 					]
 				},
 				{
-					"name": "Sling",
+					"name": "投石索", "tENG_name": "Sling",
 					"entries": [
 						"{@atk rw} 命中{@hit 4}，射程30/120呎，單一目標。{@h}4 ({@damage 1d4 + 2})鈍擊傷害。"
 					]
@@ -13674,7 +13674,7 @@
 			]
 		},
 		{
-			"name": "Warlock of the Archfey",
+			"name": "至高妖精契術師", "ENG_name": "Warlock of the Archfey",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -13733,9 +13733,9 @@
 			],
 			"reaction": [
 				{
-					"name": "Misty Escape (Recharges after a Short or Long Rest)",
+					"name": "霧遁 (短休或長休之後充能)", "tENG_name": "Misty Escape",
 					"entries": [
-						"In response to taking damage, the warlock turns {@condition invisible} and teleports up to 60 feet to an unoccupied space it can see. It remains {@condition invisible} until the start of its next turn or until it attacks, makes a damage roll, or casts a spell."
+						"當契術師受到傷害時，它可以變得{@condition 隱形}並傳送最遠60呎距離到一處它所能看見的未被佔據空間。它將保持{@condition 隱形}狀態直到它的下個回合開始，或直到它攻擊、擲傷害骰、或施放法術。"
 					]
 				}
 			],
@@ -13818,7 +13818,7 @@
 			]
 		},
 		{
-			"name": "Warlock of the Fiend",
+			"name": "邪魔宗主契術師", "ENG_name": "Warlock of the Fiend",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -13875,9 +13875,9 @@
 			"cr": "7",
 			"trait": [
 				{
-					"name": "Dark One's Own Luck (Recharges after a Short or Long Rest)",
+					"name": "黑暗者強運 (短休或長休之後充能)", "tENG_name": "Dark One's Own Luck",
 					"entries": [
-						"When the warlock makes an ability check or saving throw, it can add a {@dice d10} to the roll. It can do this after the roll is made but before any of the roll's effects occur."
+						"當契術師進行一次屬性檢定或豁免檢定時，它可以將一顆{@dice d10}加入該擲骰結果中。它可以在看見擲骰結果之後，但任何檢定效果發生之前使用此能力。"
 					]
 				}
 			],
@@ -14123,7 +14123,7 @@
 			]
 		},
 		{
-			"name": "Warlord",
+			"name": "督軍", "ENG_name": "Warlord",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -14172,15 +14172,15 @@
 			"cr": "12",
 			"trait": [
 				{
-					"name": "Indomitable (3/Day)",
+					"name": "不屈 (3/日)", "tENG_name": "Indomitable (3/Day)",
 					"entries": [
-						"The warlord can reroll a saving throw it fails. It must use the new roll."
+						"督軍可以重骰一次失敗的豁免檢定。它必須使用新的擲骰結果。"
 					]
 				},
 				{
-					"name": "Survivor",
+					"name": "生還者", "tENG_name": "Survivor",
 					"entries": [
-						"The warlord regains 10 hit points at the start of its turn if it has at least 1 hit point but fewer hit points than half its hit point maximum."
+						"若督軍在它的回合開始時擁有至少1點生命值，剩餘的生命值少於最大值的一半，則它將回復10點生命值。"
 					]
 				}
 			],
@@ -14188,7 +14188,7 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The warlord makes two weapon attacks."
+						"督軍進行二次武器攻擊。"
 					]
 				},
 				{
@@ -14206,21 +14206,21 @@
 			],
 			"legendary": [
 				{
-					"name": "Weapon Attack",
+					"name": "武器攻擊", "tENG_name": "Weapon Attack",
 					"entries": [
-						"The warlord makes a weapon attack."
+						"督軍進行一次武器攻擊。"
 					]
 				},
 				{
-					"name": "Command Ally",
+					"name": "號令盟友", "tENG_name": "Command Ally",
 					"entries": [
-						"The warlord targets one ally it can see within 30 feet of it. if the target can see and hear the warlord, the target can make one weapon attack as a reaction and gains advantage on the attack roll."
+						"督軍選擇一個距離它30呎內且它所能看見的盟友做為目標。若目標可以看見並聽見督軍，則目標能夠以一個反應進行一次武器攻擊，且在該攻擊檢定中獲得優勢。"
 					]
 				},
 				{
-					"name": "Frighten Foe (Costs 2 Actions)",
+					"name": "令敵恐懼 (消耗 2動作)", "tENG_name": "Frighten Foe (Costs 2 Actions)",
 					"entries": [
-						"The warlord targets one enemy it can see within 30 feet of it. If the target can see and hear it, the target must succeed on a DC 16 Wisdom saving throw or be {@condition 恐懼} until the end of warlord's next turn."
+						"督軍選擇一個距離它30呎內且它所能看見的敵人做為目標。若目標可以看見並聽見督軍，則目標必須成功通過一次DC 16的睿知豁免，否則陷入{@condition 恐懼}直到督軍的下個回合結束。"
 					]
 				}
 			],
@@ -14436,7 +14436,7 @@
 			]
 		},
 		{
-			"name": "Xvart",
+			"name": "法特怪", "ENG_name": "Xvart",
 			"size": "S",
 			"type": {
 				"type": "humanoid",
@@ -14475,25 +14475,25 @@
 			},
 			"senses": "黑暗視覺30呎",
 			"passive": 8,
-			"languages": "Abyssal",
+			"languages": "深淵語",
 			"cr": "1/8",
 			"trait": [
 				{
-					"name": "Low Cunning",
+					"name": "低矮狡詐", "tENG_name": "Low Cunning",
 					"entries": [
-						"The xvart can take the Disengage action as a bonus action on each of its turns."
+						"法特怪可以在它的每個回合以一個附贈動作採取{@action 撤離}動作。"
 					]
 				},
 				{
-					"name": "Overbearing Pack",
+					"name": "群體鎮壓", "tENG_name": "Overbearing Pack",
 					"entries": [
-						"The xvart has advantage on Strength (Athletics) checks to shove a creature if at least one of the xvart's allies is within 5 feet of the target and the ally isn't {@condition 無力}."
+						"若法特怪有至少一個隊友距離目標生物5呎內且該隊友並未{@condition 無力}，則法特怪在推撞該生物所進行的力量（{@skill 運動}）檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Raxivort's Tongue",
+					"name": "萊茲愛渥之舌", "tENG_name": "Raxivort's Tongue",
 					"entries": [
-						"The xvart can communicate with ordinary bats and rats, as well as giant bats and giant rats."
+						"法特怪可以和尋常蝙蝠、老鼠、以及巨蝙蝠和巨鼠溝通。"
 					]
 				}
 			],
@@ -14505,7 +14505,7 @@
 					]
 				},
 				{
-					"name": "Sling",
+					"name": "投石索", "tENG_name": "Sling",
 					"entries": [
 						"{@atk rw} 命中{@hit 4}，射程30/120呎，單一目標。{@h}4 ({@damage 1d4 + 2})鈍擊傷害。"
 					]
@@ -14529,7 +14529,7 @@
 			]
 		},
 		{
-			"name": "Xvart Speaker",
+			"name": "法特怪發言者", "ENG_name": "Xvart Speaker",
 			"size": "S",
 			"type": {
 				"type": "humanoid",
@@ -14568,25 +14568,25 @@
 			},
 			"senses": "黑暗視覺30呎",
 			"passive": 8,
-			"languages": "Abyssal and one additional language (usually Common or Goblin)",
+			"languages": "深淵語和一種額外語言（通常為通用語或哥布林語）",
 			"cr": "1/8",
 			"trait": [
 				{
-					"name": "Low Cunning",
+					"name": "低矮狡詐", "tENG_name": "Low Cunning",
 					"entries": [
-						"The xvart can take the Disengage action as a bonus action on each of its turns."
+						"法特怪可以在它的每個回合以一個附贈動作採取{@action 撤離}動作。"
 					]
 				},
 				{
-					"name": "Overbearing Pack",
+					"name": "群體鎮壓", "tENG_name": "Overbearing Pack",
 					"entries": [
-						"The xvart has advantage on Strength (Athletics) checks to shove a creature if at least one of the xvart's allies is within 5 feet of the target and the ally isn't {@condition 無力}."
+						"若法特怪有至少一個隊友距離目標生物5呎內且該隊友並未{@condition 無力}，則法特怪在推撞該生物所進行的力量（{@skill 運動}）檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Raxivort's Tongue",
+					"name": "萊茲愛渥之舌", "tENG_name": "Raxivort's Tongue",
 					"entries": [
-						"The xvart can communicate with ordinary bats and rats, as well as giant bats and giant rats."
+						"法特怪可以和尋常蝙蝠、老鼠、以及巨蝙蝠和巨鼠溝通。"
 					]
 				}
 			],
@@ -14598,7 +14598,7 @@
 					]
 				},
 				{
-					"name": "Sling",
+					"name": "投石索", "tENG_name": "Sling",
 					"entries": [
 						"{@atk rw} 命中{@hit 4}，射程30/120呎，單一目標。{@h}4 ({@damage 1d4 + 2})鈍擊傷害。"
 					]
@@ -14625,7 +14625,7 @@
 			]
 		},
 		{
-			"name": "Xvart Warlock of Raxivort",
+			"name": "法特怪．萊茲愛渥契術師", "ENG_name": "Xvart Warlock of Raxivort",
 			"size": "S",
 			"type": {
 				"type": "humanoid",
@@ -14664,25 +14664,25 @@
 			},
 			"senses": "黑暗視覺30呎",
 			"passive": 10,
-			"languages": "Abyssal",
+			"languages": "深淵語",
 			"cr": "1",
 			"trait": [
 				{
-					"name": "Low Cunning",
+					"name": "低矮狡詐", "tENG_name": "Low Cunning",
 					"entries": [
-						"The xvart can take the Disengage action as a bonus action on each of its turns."
+						"法特怪可以在它的每個回合以一個附贈動作採取{@action 撤離}動作。"
 					]
 				},
 				{
-					"name": "Overbearing Pack",
+					"name": "群體鎮壓", "tENG_name": "Overbearing Pack",
 					"entries": [
-						"The xvart has advantage on Strength (Athletics) checks to shove a creature if at least one of the xvart's allies is within 5 feet of the target and the ally isn't {@condition 無力}."
+						"若法特怪有至少一個隊友距離目標生物5呎內且該隊友並未{@condition 無力}，則法特怪在推撞該生物所進行的力量（{@skill 運動}）檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Raxivort's Tongue",
+					"name": "萊茲愛渥之舌", "tENG_name": "Raxivort's Tongue",
 					"entries": [
-						"The xvart can communicate with ordinary bats and rats, as well as giant bats and giant rats."
+						"法特怪可以和尋常蝙蝠、老鼠、以及巨蝙蝠和巨鼠溝通。"
 					]
 				}
 			],
@@ -14699,7 +14699,7 @@
 				{
 					"name": "天生施法", "tENG_name": "Innate Spellcasting",
 					"headerEntries": [
-						"The xvart's innate spellcasting ability is Charisma. it can innately cast the following spells, requiring no material components:"
+						"法特怪的天生施法屬性為魅力。它天生就可以施展下列法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 偵測魔法}",
@@ -14710,7 +14710,7 @@
 				{
 					"name": "施法", "tENG_name": "Spellcasting",
 					"headerEntries": [
-						"The xvart is a 3rd-level spellcaster. Its spellcasting ability is Charisma (spell save DC 11, {@hit 3} to hit with spell attacks). It regains its expended spell slots when it finishes a short or long rest. It knows the following warlock spells:"
+						"法特怪是3級的施法者。它的施法屬性為魅力（法術豁免DC 11，法術攻擊命中{@hit 3}）。它將在完成一次短休或長休時恢復它所有已消耗的法術位。它知曉以下契術師法術："
 					],
 					"spells": {
 						"0": {
