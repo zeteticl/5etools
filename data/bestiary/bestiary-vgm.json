@@ -266,7 +266,7 @@
 					"daily": {
 						"1e": [
 							"{@spell 支配怪物}",
-							"{@spell 異界傳送} (self only)"
+							"{@spell 異界傳送}（限自身）"
 						]
 					},
 					"ability": "int"
@@ -594,7 +594,7 @@
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell flaming sphere}",
+								"{@spell 熾焰法球}",
 								"{@spell moonbeam}",
 								"{@spell 荊棘叢生}"
 							]
@@ -1871,7 +1871,7 @@
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell flaming sphere}",
+								"{@spell 熾焰法球}",
 								"{@spell moonbeam}",
 								"{@spell 荊棘叢生}"
 							]
@@ -2794,7 +2794,7 @@
 					]
 				},
 				{
-					"name": "Greatsword",
+					"name": "巨劍", "tENG_name": "Greatsword",
 					"entries": [
 						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5})劈砍傷害, plus 7 ({@damage 2d6})劈砍傷害 if the champion has more than half of its total hit points remaining."
 					]
@@ -3139,7 +3139,7 @@
 					]
 				},
 				{
-					"name": "Morningstar",
+					"name": "釘頭錘", "tENG_name": "Morningstar",
 					"entries": [
 						"{@atk mw} 命中{@hit 12}，觸及10呎，單一目標。{@h}21 ({@damage 3d8 + 8})鈍擊傷害。 The attack deals an extra 14 ({@dice 4d6}) damage if the giant has advantage on the attack roll."
 					]
@@ -4697,7 +4697,7 @@
 					"daily": {
 						"1e": [
 							"{@spell 支配怪物}",
-							"{@spell 異界傳送} (self only)"
+							"{@spell 異界傳送}（限自身）"
 						]
 					},
 					"ability": "int"
@@ -5116,7 +5116,7 @@
 			]
 		},
 		{
-			"name": "Firenewt Warlock of Imix",
+			"name": "火蠑螈．伊密克斯契術師", "ENG_name": "Firenewt Warlock of Imix",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -5155,25 +5155,25 @@
 			],
 			"senses": "黑暗視覺120呎（看透魔法黑暗）",
 			"passive": 10,
-			"languages": "Draconic, Ignan",
+			"languages": "龍語、火族語",
 			"cr": "1",
 			"trait": [
 				{
 					"name": "兩棲", "tENG_name": "Amphibious",
 					"entries": [
-						"firenewt可以在空氣和水中呼吸。"
+						"火蠑螈可以在空氣和水中呼吸。"
 					]
 				},
 				{
-					"name": "Imix's Blessing",
+					"name": "伊密克斯的祝福", "tENG_name": "Imix's Blessing",
 					"entries": [
-						"When the firenewt reduces an enemy to 0 hit points, the firenewt gains 5 temporary hit points."
+						"當火蠑螈將一個敵人的生命值歸0時，該火蠑螈將獲得5點臨時生命值。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Morningstar",
+					"name": "釘頭錘", "tENG_name": "Morningstar",
 					"entries": [
 						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}5 ({@damage 1d8 + 1})穿刺傷害。"
 					]
@@ -5184,7 +5184,7 @@
 				{
 					"name": "天生施法", "tENG_name": "Innate Spellcasting",
 					"headerEntries": [
-						"The firenewt's innate spellcasting ability is Charisma. It can innately cast {@spell 法師護甲} (self only) at will, requiring no material components."
+						"火蠑螈的天生施法屬性為魅力。它天生就可以隨意施展{@spell 法師護甲}(限自身)，且無需任何材料構材。"
 					],
 					"will": [
 						"{@spell 法師護甲}"
@@ -5197,7 +5197,7 @@
 				{
 					"name": "施法", "tENG_name": "Spellcasting",
 					"headerEntries": [
-						"The firenewt is a 3rd-level spellcaster. Its spellcasting ability is Charisma (spell save DC 12, {@hit 4} to hit with spell attacks). It regains its expended spell slots when it finishes a short or long rest. It knows the following warlock spells:"
+						"火蠑螈是3級的施法者。它的施法屬性為魅力（法術豁免DC 12，法術攻擊命中{@hit 4}）。它將在完成一次短休或長休時恢復它所有已消耗的法術位。它知曉以下契術師法術："
 					],
 					"spells": {
 						"0": {
@@ -5214,7 +5214,7 @@
 							"slots": 2,
 							"spells": [
 								"{@spell 燃燒之手}",
-								"{@spell flaming sphere}",
+								"{@spell 熾焰法球}",
 								"{@spell 煉獄叱喝}",
 								"{@spell 灼熱射線}"
 							]
@@ -5248,7 +5248,7 @@
 			]
 		},
 		{
-			"name": "Firenewt Warrior",
+			"name": "火蠑螈戰士", "ENG_name": "Firenewt Warrior",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -5287,13 +5287,13 @@
 				"fire"
 			],
 			"passive": 10,
-			"languages": "Draconic, Ignan",
+			"languages": "龍語、火族語",
 			"cr": "1/2",
 			"trait": [
 				{
 					"name": "兩棲", "tENG_name": "Amphibious",
 					"entries": [
-						"firenewt可以在空氣和水中呼吸。"
+						"火蠑螈可以在空氣和水中呼吸。"
 					]
 				}
 			],
@@ -5301,7 +5301,7 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The firenewt makes two attacks with its scimitar."
+						"火蠑螈進行二次彎刀攻擊。"
 					]
 				},
 				{
@@ -5311,9 +5311,9 @@
 					]
 				},
 				{
-					"name": "Spit Fire (Recharges after a Short or Long Rest)",
+					"name": "噴火 (短休或長休之後充能)", "tENG_name": "Spit Fire",
 					"entries": [
-						"The firenewt spits fire at a creature within 10 feet of it. The creature must make a DC 11 Dexterity saving throw, taking 9 ({@damage 2d8}) fire damage on a failed save, or half as much damage on a successful one"
+						"火蠑螈對一個距離它10呎內的生物噴火。該生物必須進行一次DC 11的敏捷豁免，豁免失敗將受到9 ({@damage 2d8})火焰傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
@@ -5998,7 +5998,7 @@
 			]
 		},
 		{
-			"name": "Giant Strider",
+			"name": "巨闊步鳥", "ENG_name": "Giant Strider",
 			"size": "L",
 			"type": "monstrosity",
 			"source": "VGM",
@@ -6034,9 +6034,9 @@
 			"cr": "1",
 			"trait": [
 				{
-					"name": "Fire Absorption",
+					"name": "火焰吸收", "tENG_name": "Fire Absorption",
 					"entries": [
-						"Whenever the giant strider is subjected to fire damage, it takes no damage and regains a number of hit points equal to half the fire damage dealt."
+						"每當巨闊步鳥承受火焰傷害時，它並不會受到任何傷害，反而會回復等同於所受到火焰傷害數值的生命值。"
 					]
 				}
 			],
@@ -6048,9 +6048,9 @@
 					]
 				},
 				{
-					"name": "Fire Burst {@recharge 5}",
+					"name": "烈焰爆發 {@recharge 5}", "tENG_name": "Fire Burst",
 					"entries": [
-						"The giant strider hurls a gout of flame at a point it can see within 60 feet of it. Each creature in a 10-foot-radius sphere centered on that point must make a DC 12 Dexterity saving throw, taking 14 ({@damage 4d6}) fire damage on a failed save, or half as much damage on a successful one. The fire spreads around corners, and it ignites flammable objects in that area that aren't being worn or carried."
+						"巨闊步鳥向它所能看見且距離它60呎內的一點投出一團烈焰。每個處於以該點為中心的10呎半徑球體範圍內的生物都必須進行一次DC 12的敏捷豁免，豁免失敗將受到14 ({@damage 4d6})火焰傷害，豁免成功則只受到一半的傷害。這團火焰會繞過轉角。且會點燃範圍內所有未被穿戴或攜帶的可燃物體。"
 					]
 				}
 			],
@@ -7396,7 +7396,7 @@
 					"daily": {
 						"1e": [
 							"{@spell 支配怪物}",
-							"{@spell 異界傳送} (self only)"
+							"{@spell 異界傳送}（限自身）"
 						]
 					},
 					"ability": "int"
@@ -9098,7 +9098,7 @@
 							"spells": [
 								"{@spell 魅惑人類}",
 								"{@spell 命令術}",
-								"{@spell comprehend languages}",
+								"{@spell 通曉語言}",
 								"{@spell 聖域術}"
 							]
 						},
@@ -12238,7 +12238,7 @@
 			]
 		},
 		{
-			"name": "Swarm of Cranium Rats",
+			"name": "顱鼠群", "ENG_name": "Swarm of Cranium Rats",
 			"size": "M",
 			"type": {
 				"type": "beast",
@@ -12288,40 +12288,40 @@
 				{
 					"name": "照明", "tENG_name": "Illumination",
 					"entries": [
-						"As a bonus action, the swarm can shed dim light from its brains in a 5-foot radius, increase the illumination to bright light in a 5 to 20-foot radius (and dim light for an additional number of feet equal to the chosen radius), or extinguish the light."
+						"以一個附贈動作，顱鼠群可以從它們的大腦發出5呎半徑的微光光照，將其照明升級成5~20呎的明亮光照（和再延伸出去的微光光照，範圍等同於所選的明亮光照呎數）、或將之熄滅。"
 					]
 				},
 				{
-					"name": "Swarm",
+					"name": "集群", "tENG_name": "Swarm",
 					"entries": [
-						"The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny rat. The swarm can't regain hit points or gain temporary hit points."
+						"集群可以佔據另一個生物所在的空間，反之亦然。且集群可以穿過任何足以讓一隻微型老鼠通過的開口。集群無法回復生命值或獲得臨時生命值。"
 					]
 				},
 				{
 					"name": "心靈帷幕", "tENG_name": "Telepathic Shroud",
 					"entries": [
-						"The swarm is immune to any effect that would sense its emotions or read its thoughts. as well as to all divination spells."
+						"顱鼠群免疫於任何可以偵測其感情或思想的效果，以及所有的預言系法術。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bites",
+					"name": "啃咬", "tENG_name": "Bites",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及0呎， one target in the swarm's space. {@h}14 ({@damage 4d6}) piercing damage, or 7 ({@damage 2d6}) piercing damage if the swarm has half of its hit points or fewer."
+						"{@atk mw} 命中{@hit 5}，觸及0呎，單一處於集群所在位置的生物。{@h}14 ({@damage 4d6})穿刺傷害，或若集群的生命值等於或低於一半時則造成7 ({@damage 2d6})穿刺傷害。"
 					]
 				}
 			],
 			"page": 133,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting (Psionics)",
+					"name": "天生施法 (靈能)", "tENG_name": "Innate Spellcasting (Psionics)",
 					"headerEntries": [
-						"The swarm's innate spellcasting ability is Intelligence (spell save DC 13). As long as it has more than half of its hit points, it can innately cast the following spells, requiring no components:"
+						"顱鼠群的天生施法屬性為智力（法術豁免DC 13）。只要它的生命值還高於一半,它就可以施展以下法術，且無需任何構材："
 					],
 					"will": [
 						"{@spell 命令術}",
-						"{@spell comprehend languages}",
+						"{@spell 通曉語言}",
 						"{@spell 偵測思想}"
 					],
 					"daily": {
@@ -12356,7 +12356,7 @@
 			]
 		},
 		{
-			"name": "Swarm of Rot Grubs",
+			"name": "食腐蛆群", "ENG_name": "Swarm of Rot Grubs",
 			"size": "M",
 			"type": {
 				"type": "beast",
@@ -12396,22 +12396,22 @@
 				"prone",
 				"restrained"
 			],
-			"senses": "blindsight 10 ft.",
+			"senses": "盲視10呎",
 			"passive": 6,
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Swarm",
+					"name": "集群", "tENG_name": "Swarm",
 					"entries": [
-						"The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny maggot. The swarm can't regain hit points or gain temporary hit points."
+						"集群可以佔據另一個生物所在的空間，反之亦然。且集群可以穿過任何足以讓一隻微型蛆蟲通過的開口。集群無法回復生命值或獲得臨時生命值。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Bites",
+					"name": "啃咬", "tENG_name": "Bites",
 					"entries": [
-						"{@atk mw} 命中{@hit 0}，觸及0呎， one creature in the swarm's space. {@h}The target is infested by {@dice 1d4} rot grubs. At the start of each of the target's turns, the target takes {@dice 1d6} piercing damage per rot grub infesting it. Applying fire to the bite wound before the end of the target's next turn deals 1 fire damage to the target and kills these rot grubs. After this time, these rot grubs are too far under the skin to be burned. If a target infested by rot grubs ends its turn with 0 hit points, it dies as the rot grubs burrow into its heart and kill it. Any effect that cures disease kills all rot grubs infesting the target."
+						"{@atk mw} 命中{@hit 0}，觸及0呎，單一處於集群所在位置的生物。{@h}目標將被{@dice 1d4}隻食腐蛆給寄生。在目標的每個回合開始時，每一隻寄生在目標身上的食腐蛆都會對目標造成{@dice 1d6}穿刺傷害。在目標的下個回合結束之前用火焰灼燒被啃咬的傷口將能夠殺死這些食腐蛆。在這之後，這些食腐蛆將會因為太過深入血肉之中，而無法被上述方式殺死。若被食腐蛆寄生的目標以0點生命值的狀態結束它的回合，則它將會因被食腐蛆鑽入心臟而殺死。任何能夠治療疾病的效果都將殺死所有寄生於目標身上的食腐蛆。"
 					]
 				}
 			],
@@ -12528,7 +12528,7 @@
 			]
 		},
 		{
-			"name": "Tanarukk",
+			"name": "塔那羅克", "ENG_name": "Tanarukk",
 			"size": "M",
 			"type": {
 				"type": "fiend",
@@ -12573,19 +12573,19 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 12,
-			"languages": "Abyssal, Common, Orc",
+			"languages": "深淵語、通用語、獸人語",
 			"cr": "5",
 			"trait": [
 				{
 					"name": "侵略性", "tENG_name": "Aggressive",
 					"entries": [
-						"As a bonus action, the tanarukk can move up to its speed toward a hostile creature that it can see."
+						"以一個附贈動作，塔那羅克可以向一個它所能看見的敵意生物移動最多等同它移動速度的距離。"
 					]
 				},
 				{
 					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
-						"tanarukk在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"塔那羅克在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
@@ -12593,7 +12593,7 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The tanarukk makes two attacks: one with its bite and one with its greatsword."
+						"塔那羅克進行二次攻擊：一次啃咬，一次巨劍。"
 					]
 				},
 				{
@@ -12603,7 +12603,7 @@
 					]
 				},
 				{
-					"name": "Greatsword",
+					"name": "巨劍", "tENG_name": "Greatsword",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}11 ({@damage 2d6 + 4})劈砍傷害。"
 					]
@@ -12611,9 +12611,9 @@
 			],
 			"reaction": [
 				{
-					"name": "Unbridled Fury",
+					"name": "放縱狂怒", "tENG_name": "Unbridled Fury",
 					"entries": [
-						"In response to being hit by a melee attack, the tanarukk can make one melee weapon attack with advantage against the attacker."
+						"當被一次近戰攻擊命中時，塔那羅克可以對攻擊者進行一次具有優勢的近戰武器攻擊。"
 					]
 				}
 			],
@@ -13131,7 +13131,7 @@
 							"{@spell eyebite}",
 							"{@spell feeblemind}",
 							"{@spell 群體暗示術}",
-							"{@spell 異界傳送} (self only)",
+							"{@spell 異界傳送}（限自身）",
 							"{@spell project image}",
 							"{@spell 探知}",
 							"{@spell 心靈遙控}"
@@ -13748,7 +13748,7 @@
 					],
 					"will": [
 						"{@spell 易容術}",
-						"{@spell 法師護甲} (self only)",
+						"{@spell 法師護甲}（限自身）",
 						"{@spell 無聲幻影}",
 						"{@spell 動物交談術}"
 					],
@@ -13899,8 +13899,8 @@
 					"will": [
 						"{@spell 變造自身}",
 						"{@spell 摹造生命}",
-						"{@spell 浮空術} (self only)",
-						"{@spell 法師護甲} (self only)",
+						"{@spell 浮空術}（限自身）",
+						"{@spell 法師護甲}（限自身）",
 						"{@spell 無聲幻影}"
 					],
 					"daily": {
@@ -14049,7 +14049,7 @@
 						"{@spell 偵測魔法}",
 						"{@spell 跳躍術}",
 						"{@spell 浮空術}",
-						"{@spell 法師護甲} (self only)",
+						"{@spell 法師護甲}（限自身）",
 						"{@spell speak with dead}"
 					],
 					"daily": {
@@ -14192,7 +14192,7 @@
 					]
 				},
 				{
-					"name": "Greatsword",
+					"name": "巨劍", "tENG_name": "Greatsword",
 					"entries": [
 						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}12 ({@damage 2d6 + 5})劈砍傷害。"
 					]
@@ -14703,7 +14703,7 @@
 					],
 					"will": [
 						"{@spell 偵測魔法}",
-						"{@spell 法師護甲} (self only)"
+						"{@spell 法師護甲}（限自身）"
 					],
 					"ability": "cha"
 				},
