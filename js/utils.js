@@ -2256,8 +2256,7 @@ SourceUtil = {
 				(shortName === "Sun Soul" && source === SRC_SCAG) ||
 				(shortName === "Mastermind" && source === SRC_SCAG) ||
 				(shortName === "Swashbuckler" && source === SRC_SCAG) ||
-				(shortName === "Storm" && source === SRC_SCAG) ||
-				(shortName === "Deep Stalker Conclave" && source === SRC_UATRR)
+				(shortName === "Storm" && source === SRC_SCAG)
 			);
 	},
 
