@@ -1557,15 +1557,15 @@ Parser.trapHazTypeToFull = function (type) {
 };
 
 Parser.TRAP_HAZARD_TYPE_TO_FULL = {
-	MECH: "Mechanical trap",
-	MAG: "Magical trap",
-	SMPL: "Simple trap",
-	CMPX: "Complex trap",
-	HAZ: "Hazard",
-	WTH: "Weather",
-	ENV: "Environmental Hazard",
-	WLD: "Wilderness Hazard",
-	GEN: "Generic"
+	MECH: "機械陷阱",
+	MAG: "魔法陷阱",
+	SMPL: "簡易陷阱",
+	CMPX: "複雜陷阱",
+	HAZ: "危害物",
+	WTH: "天氣",
+	ENV: "環境危害",
+	WLD: "野外危害",
+	GEN: "通用"
 };
 
 Parser.tierToFullLevel = function (tier) {

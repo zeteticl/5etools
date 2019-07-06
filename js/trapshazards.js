@@ -106,6 +106,7 @@ function addTrapsHazards (data) {
 					<span class="source col-2 text-align-center ${Parser.sourceJsonToColor(abvSource)}" title="${Parser.sourceJsonToFull(it.source)}">${abvSource}</span>
 					
 					<span class="uniqueid hidden">${it.uniqueId ? it.uniqueId : thI}</span>
+					<span class="eng_name hidden">${it.ENG_name ? it.ENG_name : it.name}</span>
 				</a>
 			</li>
 		`;
@@ -121,7 +122,7 @@ function addTrapsHazards (data) {
 
 	list.reIndex();
 	if (lastSearch) list.search(lastSearch);
-	list.sort("name");
+	list.sort("trapType");
 	filterBox.render();
 	handleFilterChange();
 
