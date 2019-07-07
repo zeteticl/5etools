@@ -2116,7 +2116,7 @@ Renderer.optionalfeature = {
 				case "prereqPact":
 					return Parser.prereqPactToFull(it.entry);
 				case "prereqPatron":
-					return listMode ? `${Parser.prereqPatronToShort(it.entry)}宗主` : `${it.entry}宗主`;
+					return listMode ? `${Parser.prereqPatronToShort(it.entry)}宗主` : `${Parser.prereqPatronToShort(it.entry)}宗主`;
 				case "prereqSpell":
 					return listMode ? it.entries.map(x => parse_prereq_spell(x)).join("; ") : it.entries.map(sp => Parser.prereqSpellToFull(sp)).joinConjunct(", ", " 或 ");
 				case "prereqFeature":

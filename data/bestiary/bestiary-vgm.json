@@ -364,7 +364,7 @@
 			]
 		},
 		{
-			"name": "Annis Hag",
+			"name": "妖鬼婆", "ENG_name": "Annis Hag",
 			"size": "L",
 			"type": "fey",
 			"source": "VGM",
@@ -413,24 +413,24 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 15,
-			"languages": "Common, Giant, Sylvan",
+			"languages": "通用語、巨人語、木族語",
 			"cr": {
 				"cr": "6",
 				"coven": "8"
 			},
 			"trait": [
 				{
-					"name": "Hag Coven",
+					"name": "鬼婆集會", "tENG_name": "Hag Coven",
 					"entries": [
-						"When hags must work together, they form covens, in spite of their selfish natures. A coven is made up of hags of any type, all of whom are equals within the group. However, each of the hags continues to desire more personal power.",
-						"A coven consists of three hags so that any arguments between two hags can be settled by the third. If more than three hags ever come together, as might happen if two covens come into conflict, the result is usually chaos."
+						"儘管鬼婆們生性自私，但當她們必須共事時，她們會組成集會。一個集會可以由任何類型的鬼婆組成，且她們在集會中都有著平等的地位。然而，鬼婆們各自都渴望握有更多的個人權力。",
+						"一個集會由三個鬼婆組成，如此一來每當兩個鬼婆之間發生任何爭執，都可以由第三個鬼婆解決。若有超過三個鬼婆聚集在一起，就如同兩個鬼婆集會之間會發生衝突一樣，結果通常會變得混亂無比。"
 					]
 				},
 				{
-					"name": "Hag Eye (Coven Only)",
+					"name": "鬼婆之眼 (限定集會)", "tENG_name": "Hag Eye (Coven Only)",
 					"entries": [
-						"A hag coven can craft a magic item called a hag eye, which is made from a real eye coated in varnish and often fitted to a pendant or other wearable item. The hag eye is usually entrusted to a minion for safekeeping and transport. A hag in the coven can take an action to see what the hag eye sees if the hag eye is on the same plane of existence. A hag eye has AC 10, 1 hit point, and darkvision with a radius of 60 feet. If it is destroyed, each coven member takes {@dice 3d10} psychic damage and is {@condition blinded} for 24 hours.",
-						"A hag coven can have only one hag eye at a time, and creating a new one requires all three members of the coven to perform a ritual. The ritual takes 1 hour, and the hags can't perform it while {@condition blinded}. During the ritual, if the hags take any action other than performing the ritual, they must start over."
+						"鬼婆集會可以製作一個被稱為「鬼婆之眼」的魔法物品。鬼婆之眼是由一顆覆蓋著清漆的眼珠製成，且通常被安置於吊墜或其他可穿戴的飾品上。鬼婆之眼通常會被託付給僕從以保管和運送。若鬼婆之眼與一個集會中的鬼婆位於相同的存在位面，則她可以採取一個動作以看見鬼婆之眼所看見的事物。鬼婆之眼具有AC 10和1點生命值，且具有60呎的黑暗視覺。若鬼婆之眼被摧毀，每個鬼婆集會的成員都將受到{@dice 3d10}精神傷害並陷入{@condition 目盲}狀態長達24小時。",
+						"一個鬼婆集會同時只能擁有一顆鬼婆之眼，且創造一個新的鬼婆之眼需要集會的所有三名成員施展一個儀式。儀式的施展時間需要1小時，且鬼婆們不能在處於{@condition 目盲}狀態時施展它。在儀式施展期間，若鬼婆採取了任何施展儀式以外的動作，則儀式將必須重新開始。"
 					]
 				}
 			],
@@ -438,7 +438,7 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The annis makes three attacks: one with her bite and two with her claws."
+						"妖鬼婆進行三次攻擊：一次啃咬、二次爪抓。"
 					]
 				},
 				{
@@ -454,9 +454,9 @@
 					]
 				},
 				{
-					"name": "Crushing Hug",
+					"name": "壓輾擁抱", "tENG_name": "Crushing Hug",
 					"entries": [
-						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}36 ({@damage 9d6 + 5})鈍擊傷害, and the target is {@condition 被擒} (escape DC 15) if it is a Large or smaller creature. Until the grapple ends, the target takes 36 ({@damage 9d6 + 5})鈍擊傷害 at the start of each of the hag's turns. The hag can't make attacks while grappling a creature in this way."
+						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}36 ({@damage 9d6 + 5})鈍擊傷害，且若目標為一個大型或更小的生物，則目標{@condition 被擒}(逃脫DC 15)。直到擒抱結束前，目標將在該鬼婆的每個回合開始時受到 36 ({@damage 9d6 + 5})鈍擊傷害。當鬼婆以這個方式擒抱一個生物時，該鬼婆不能進行攻擊。"
 					]
 				}
 			],
@@ -465,26 +465,26 @@
 				{
 					"name": "天生施法", "tENG_name": "Innate Spellcasting",
 					"headerEntries": [
-						"The hag's innate spellcasting ability is Charisma (spell save DC 13). She can innately cast the following spells:"
+						"鬼婆的天生施法屬性為魅力（法術豁免DC 13）。她天生就可以施展以下法術："
 					],
 					"daily": {
 						"3e": [
-							"{@spell 易容術} (including the form of a Medium humanoid)",
+							"{@spell 易容術} (包括中型類人生物的型態)",
 							"{@spell 雲霧術}"
 						]
 					},
 					"ability": "cha"
 				},
 				{
-					"name": "Shared Spellcasting (Coven Only)",
+					"name": "共享施法 (限定集會)", "tENG_name": "Shared Spellcasting (Coven Only)",
 					"headerEntries": [
-						"While all three members of a hag coven are within 30 feet of one another, they can each cast the following spells from the wizard's spell list but must share the spell slots among themselves:"
+						"當鬼婆集會的三個成員都距離彼此30呎內，她們各自都可以施放以下來自法師法術列表的法術，且必須共用法術位："
 					],
 					"spells": {
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell identify}",
+								"{@spell 鑑定術}",
 								"{@spell 致病射線}"
 							]
 						},
@@ -520,18 +520,18 @@
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell eyebite}"
+								"{@spell 攝心目光}"
 							]
 						}
 					},
 					"footerEntries": [
-						"For casting these spells, each hag is a 12th-level spellcaster that uses Intelligence as her spellcasting ability. The spell save DC is 12 + the hag's Intelligence modifier, and the spell attack bonus is 4 + the hag's Intelligence modifier."
+						"在施放這些法術時，每個鬼婆都是12級的施法者，且使用智力做為她的施法屬性。法術的豁免DC為12+鬼婆的智力調整值，且法術攻擊加值為4+鬼婆的智力調整值。"
 					]
 				},
 				{
-					"name": "Variant: Death Coven",
+					"name": "變體：死亡集會", "tENG_name": "Variant: Death Coven",
 					"headerEntries": [
-						"For a death coven, replace the spell list of the hags' Shared Spellcasting trait with the following spells:"
+						"對於死亡集會，將該鬼婆的共享施法特性中的法術列表替換為下列法術："
 					],
 					"spells": {
 						"1": {
@@ -544,7 +544,7 @@
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell gentle repose}",
+								"{@spell 遺體防腐}",
 								"{@spell 衰弱射線}"
 							]
 						},
@@ -560,14 +560,14 @@
 							"slots": 3,
 							"spells": [
 								"{@spell 枯萎術}",
-								"{@spell death ward}"
+								"{@spell 防死護咒}"
 							]
 						},
 						"5": {
 							"slots": 2,
 							"spells": [
-								"{@spell contagion}",
-								"{@spell raise dead}"
+								"{@spell 疫病術}",
+								"{@spell 喚醒死者}"
 							]
 						},
 						"6": {
@@ -579,9 +579,9 @@
 					}
 				},
 				{
-					"name": "Variant: Nature Coven",
+					"name": "變體：自然集會", "tENG_name": "Variant: Nature Coven",
 					"headerEntries": [
-						"For a nature coven, replace the spell list of the hags' Shared Spellcasting trait with the following spells:"
+						"對於自然集會，將該鬼婆的共享施法特性中的法術列表替換為下列法術："
 					],
 					"spells": {
 						"1": {
@@ -595,7 +595,7 @@
 							"slots": 3,
 							"spells": [
 								"{@spell 熾焰法球}",
-								"{@spell moonbeam}",
+								"{@spell 月華之光}",
 								"{@spell 荊棘叢生}"
 							]
 						},
@@ -610,35 +610,35 @@
 							"slots": 3,
 							"spells": [
 								"{@spell 支配野獸}",
-								"{@spell grasping vine}"
+								"{@spell 抓攫藤蔓}"
 							]
 						},
 						"5": {
 							"slots": 2,
 							"spells": [
-								"{@spell insect plague}",
+								"{@spell 疫病蟲群}",
 								"{@spell 樹躍術}"
 							]
 						},
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell wall of thorns}"
+								"{@spell 棘牆術}"
 							]
 						}
 					}
 				},
 				{
-					"name": "Variant: Prophecy Coven",
+					"name": "變體：預言集會", "tENG_name": "Variant: Prophecy Coven",
 					"headerEntries": [
-						"For a prophecy coven, replace the spell list of the hags' Shared Spellcasting trait with the following spells:"
+						"對於預言集會，將該鬼婆的共享施法特性中的法術列表替換為下列法術："
 					],
 					"spells": {
 						"1": {
 							"slots": 4,
 							"spells": [
 								"{@spell 災禍術}",
-								"{@spell bless}"
+								"{@spell 祝福術}"
 							]
 						},
 						"2": {
@@ -653,7 +653,7 @@
 							"spells": [
 								"{@spell 銳眼術}",
 								"{@spell 解除魔法}",
-								"{@spell nondetection}"
+								"{@spell 迴避偵測}"
 							]
 						},
 						"4": {
@@ -666,8 +666,8 @@
 						"5": {
 							"slots": 2,
 							"spells": [
-								"{@spell geas}",
-								"{@spell legend lore}"
+								"{@spell 指使術}",
+								"{@spell 通曉傳奇}"
 							]
 						},
 						"6": {
@@ -1304,7 +1304,7 @@
 				{
 					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}22 ({@damage 5d6 + 5}) piercing damage, and the target is {@condition 被擒} (escape DC 15) if it is a Large or smaller creature. Until this grapple ends, the target is {@condition restrained}, and the banderhobb can't use its bite attack or tongue attack on another target."
+						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}22 ({@damage 5d6 + 5}) piercing damage, and the target is {@condition 被擒} (escape DC 15) if it is a Large or smaller creature. Until this grapple ends, the target is {@condition 束縛}, and the banderhobb can't use its bite attack or tongue attack on another target."
 					]
 				},
 				{
@@ -1316,7 +1316,7 @@
 				{
 					"name": "Swallow",
 					"entries": [
-						"The banderhobb makes a bite attack against a Medium or smaller creature it is grappling. If the attack hits, the target is swallowed, and the grapple ends. The swallowed creature is {@condition blinded} and {@condition restrained}, it has total cover against attacks and other effects outside the banderhobb and it takes 10 ({@damage 3d6}) necrotic damage at the start of each of the banderhobb's turns. A creature reduced to 0 hit points in this way stops taking necrotic damage and becomes stable.",
+						"The banderhobb makes a bite attack against a Medium or smaller creature it is grappling. If the attack hits, the target is swallowed, and the grapple ends. The swallowed creature is {@condition 目盲} and {@condition 束縛}, it has total cover against attacks and other effects outside the banderhobb and it takes 10 ({@damage 3d6}) necrotic damage at the start of each of the banderhobb's turns. A creature reduced to 0 hit points in this way stops taking necrotic damage and becomes stable.",
 						"The banderhobb can have only one target swallowed at a time. While the banderhobb isn't {@condition 無力}, it can regurgitate the creature at any time (no action required) in a space within 5 feet of it. The creature exits {@condition 伏地}. If the banderhobb dies, it likewise regurgitates a swallowed creature."
 					]
 				},
@@ -1639,7 +1639,7 @@
 			]
 		},
 		{
-			"name": "Bheur Hag",
+			"name": "冬靈鬼婆", "ENG_name": "Bheur Hag",
 			"size": "M",
 			"type": "fey",
 			"source": "VGM",
@@ -1682,36 +1682,36 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 14,
-			"languages": "Auran, Common, Giant",
+			"languages": "氣族語、通用語、巨人語",
 			"cr": {
 				"cr": "7",
 				"coven": "9"
 			},
 			"trait": [
 				{
-					"name": "Graystaff Magic",
+					"name": "灰杖魔法", "tENG_name": "Graystaff Magic",
 					"entries": [
-						"The hag carries a graystaff, a length of gray wood that is a focus for her inner power. She can ride the staff as if it were a broom of flying. While holding the staff, she can cast additional spells with her Innate Spellcasting trait (these spells are marked with an asterisk). If the staff is lost or destroyed, the hag must craft another, which takes a year and a day. Only a bheur hag can use a graystaff."
+						"冬靈鬼婆攜帶著一把灰杖，一把做為施放她內在力量法器的灰色木杖。她可以騎乘這把灰杖，就如同它是一把{@item 飛天掃帚}一樣。當持握這把灰杖時，她可以透過她的天生施法特性施放額外的法術（這些法術將使用*號標註）。若這把灰杖遺失或被摧毀，則冬靈鬼婆必須花費一年又一天的時間才能製作另一把新的灰杖。只有冬靈鬼婆能夠使用灰杖。"
 					]
 				},
 				{
-					"name": "Ice Walk",
+					"name": "冰上行走", "tENG_name": "Ice Walk",
 					"entries": [
-						"The hag can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost her extra moment."
+						"冬靈鬼婆可以移動穿過或攀爬冰面而無須進行屬性檢定。此外，冰或雪構成的困難地形不會使她消耗額外的移動速度。"
 					]
 				},
 				{
-					"name": "Hag Coven",
+					"name": "鬼婆集會", "tENG_name": "Hag Coven",
 					"entries": [
-						"When hags must work together, they form covens, in spite of their selfish natures. A coven is made up of hags of any type, all of whom are equals within the group. However, each of the hags continues to desire more personal power.",
-						"A coven consists of three hags so that any arguments between two hags can be settled by the third. If more than three hags ever come together, as might happen if two covens come into conflict, the result is usually chaos."
+						"儘管鬼婆們生性自私，但當她們必須共事時，她們會組成集會。一個集會可以由任何類型的鬼婆組成，且她們在集會中都有著平等的地位。然而，鬼婆們各自都渴望握有更多的個人權力。",
+						"一個集會由三個鬼婆組成，如此一來每當兩個鬼婆之間發生任何爭執，都可以由第三個鬼婆解決。若有超過三個鬼婆聚集在一起，就如同兩個鬼婆集會之間會發生衝突一樣，結果通常會變得混亂無比。"
 					]
 				},
 				{
-					"name": "Hag Eye (Coven Only)",
+					"name": "鬼婆之眼 (限定集會)", "tENG_name": "Hag Eye (Coven Only)",
 					"entries": [
-						"A hag coven can craft a magic item called a hag eye, which is made from a real eye coated in varnish and often fitted to a pendant or other wearable item. The hag eye is usually entrusted to a minion for safekeeping and transport. A hag in the coven can take an action to see what the hag eye sees if the hag eye is on the same plane of existence. A hag eye has AC 10, 1 hit point, and darkvision with a radius of 60 feet. If it is destroyed, each coven member takes {@dice 3d10} psychic damage and is {@condition blinded} for 24 hours.",
-						"A hag coven can have only one hag eye at a time, and creating a new one requires all three members of the coven to perform a ritual. The ritual takes 1 hour, and the hags can't perform it while {@condition blinded}. During the ritual, if the hags take any action other than performing the ritual, they must start over."
+						"鬼婆集會可以製作一個被稱為「鬼婆之眼」的魔法物品。鬼婆之眼是由一顆覆蓋著清漆的眼珠製成，且通常被安置於吊墜或其他可穿戴的飾品上。鬼婆之眼通常會被託付給僕從以保管和運送。若鬼婆之眼與一個集會中的鬼婆位於相同的存在位面，則她可以採取一個動作以看見鬼婆之眼所看見的事物。鬼婆之眼具有AC 10和1點生命值，且具有60呎的黑暗視覺。若鬼婆之眼被摧毀，每個鬼婆集會的成員都將受到{@dice 3d10}精神傷害並陷入{@condition 目盲}狀態長達24小時。",
+						"一個鬼婆集會同時只能擁有一顆鬼婆之眼，且創造一個新的鬼婆之眼需要集會的所有三名成員施展一個儀式。儀式的施展時間需要1小時，且鬼婆們不能在處於{@condition 目盲}狀態時施展它。在儀式施展期間，若鬼婆採取了任何施展儀式以外的動作，則儀式將必須重新開始。"
 					]
 				}
 			],
@@ -1719,13 +1719,13 @@
 				{
 					"name": "猛擊", "tENG_name": "Slam",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。Hit:10 ({@damage 2d8 + 1})鈍擊傷害 plus 3 ({@damage 1d6}) cold damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。Hit:10 ({@damage 2d8 + 1})鈍擊傷害加 3 ({@damage 1d6})寒冰傷害。"
 					]
 				},
 				{
-					"name": "Maddening Feast",
+					"name": "瘋狂盛宴", "tENG_name": "Maddening Feast",
 					"entries": [
-						"The hag feasts on the corpse of one enemy within 5 feet of her that died within the past minute. Each creature of the hag's choice that is within 60 feet of her and able to see her must succeed on a DC 15 Wisdom saving throw or be {@condition 恐懼} of her for 1 minute. While {@condition 恐懼} in this way, a creature is {@condition 無力}, can't understand what others say, can't read, and speaks only in gibberish; the DM controls the creature's movement, which is erratic. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the hag's Maddening Feast for the next 24 hours."
+						"冬靈鬼婆啃食距離她5呎內一個在最近幾分鐘內死去敵人的屍體。每個冬靈鬼婆所選擇的，距離她60呎內且可以看見她的生物都必須成功通過一次DC 15的睿知豁免，否則將因她而陷入{@condition 恐懼}長達1分鐘。當因為這個原因而陷入{@condition 恐懼}，該生物將陷入{@condition 無力}狀態，無法理解他人在說什麼，無法閱讀，且只能說出無意義的胡言亂語；DM將控制該生物混亂的移動。該生物可以在它的每個回合結束時重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。若目標豁免成功，或這個效果對它的影響結束，則該目標將在接下來24小時內免疫於該冬靈鬼婆的瘋狂盛宴。"
 					]
 				}
 			],
@@ -1734,7 +1734,7 @@
 				{
 					"name": "天生施法", "tENG_name": "Innate Spellcasting",
 					"headerEntries": [
-						"The hag's innate spellcasting ability is Charisma (spell save DC 14, {@hit 6} to hit with spell attacks). She can innately cast the following spells, requiring no material components:"
+						"鬼婆的天生施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 6}）。她天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 人類定身術}*",
@@ -1753,15 +1753,15 @@
 					"ability": "cha"
 				},
 				{
-					"name": "Shared Spellcasting (Coven Only)",
+					"name": "共享施法 (限定集會)", "tENG_name": "Shared Spellcasting (Coven Only)",
 					"headerEntries": [
-						"While all three members of a hag coven are within 30 feet of one another, they can each cast the following spells from the wizard's spell list but must share the spell slots among themselves:"
+						"當鬼婆集會的三個成員都距離彼此30呎內，她們各自都可以施放以下來自法師法術列表的法術，且必須共用法術位："
 					],
 					"spells": {
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell identify}",
+								"{@spell 鑑定術}",
 								"{@spell 致病射線}"
 							]
 						},
@@ -1797,18 +1797,18 @@
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell eyebite}"
+								"{@spell 攝心目光}"
 							]
 						}
 					},
 					"footerEntries": [
-						"For casting these spells, each hag is a 12th-level spellcaster that uses Intelligence as her spellcasting ability. The spell save DC is 12 + the hag's Intelligence modifier, and the spell attack bonus is 4 + the hag's Intelligence modifier."
+						"在施放這些法術時，每個鬼婆都是12級的施法者，且使用智力做為她的施法屬性。法術的豁免DC為12+鬼婆的智力調整值，且法術攻擊加值為4+鬼婆的智力調整值。"
 					]
 				},
 				{
-					"name": "Variant: Death Coven",
+					"name": "變體：死亡集會", "tENG_name": "Variant: Death Coven",
 					"headerEntries": [
-						"For a death coven, replace the spell list of the hags' Shared Spellcasting trait with the following spells:"
+						"對於死亡集會，將該鬼婆的共享施法特性中的法術列表替換為下列法術："
 					],
 					"spells": {
 						"1": {
@@ -1821,7 +1821,7 @@
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell gentle repose}",
+								"{@spell 遺體防腐}",
 								"{@spell 衰弱射線}"
 							]
 						},
@@ -1837,14 +1837,14 @@
 							"slots": 3,
 							"spells": [
 								"{@spell 枯萎術}",
-								"{@spell death ward}"
+								"{@spell 防死護咒}"
 							]
 						},
 						"5": {
 							"slots": 2,
 							"spells": [
-								"{@spell contagion}",
-								"{@spell raise dead}"
+								"{@spell 疫病術}",
+								"{@spell 喚醒死者}"
 							]
 						},
 						"6": {
@@ -1856,9 +1856,9 @@
 					}
 				},
 				{
-					"name": "Variant: Nature Coven",
+					"name": "變體：自然集會", "tENG_name": "Variant: Nature Coven",
 					"headerEntries": [
-						"For a nature coven, replace the spell list of the hags' Shared Spellcasting trait with the following spells:"
+						"對於自然集會，將該鬼婆的共享施法特性中的法術列表替換為下列法術："
 					],
 					"spells": {
 						"1": {
@@ -1872,7 +1872,7 @@
 							"slots": 3,
 							"spells": [
 								"{@spell 熾焰法球}",
-								"{@spell moonbeam}",
+								"{@spell 月華之光}",
 								"{@spell 荊棘叢生}"
 							]
 						},
@@ -1887,35 +1887,35 @@
 							"slots": 3,
 							"spells": [
 								"{@spell 支配野獸}",
-								"{@spell grasping vine}"
+								"{@spell 抓攫藤蔓}"
 							]
 						},
 						"5": {
 							"slots": 2,
 							"spells": [
-								"{@spell insect plague}",
+								"{@spell 疫病蟲群}",
 								"{@spell 樹躍術}"
 							]
 						},
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell wall of thorns}"
+								"{@spell 棘牆術}"
 							]
 						}
 					}
 				},
 				{
-					"name": "Variant: Prophecy Coven",
+					"name": "變體：預言集會", "tENG_name": "Variant: Prophecy Coven",
 					"headerEntries": [
-						"For a prophecy coven, replace the spell list of the hags' Shared Spellcasting trait with the following spells:"
+						"對於預言集會，將該鬼婆的共享施法特性中的法術列表替換為下列法術："
 					],
 					"spells": {
 						"1": {
 							"slots": 4,
 							"spells": [
 								"{@spell 災禍術}",
-								"{@spell bless}"
+								"{@spell 祝福術}"
 							]
 						},
 						"2": {
@@ -1930,7 +1930,7 @@
 							"spells": [
 								"{@spell 銳眼術}",
 								"{@spell 解除魔法}",
-								"{@spell nondetection}"
+								"{@spell 迴避偵測}"
 							]
 						},
 						"4": {
@@ -1943,8 +1943,8 @@
 						"5": {
 							"slots": 2,
 							"spells": [
-								"{@spell geas}",
-								"{@spell legend lore}"
+								"{@spell 指使術}",
+								"{@spell 通曉傳奇}"
 							]
 						},
 						"6": {
@@ -2470,7 +2470,7 @@
 					"entries": [
 						"The boggle creates a puddle of oil that is either slippery or sticky (boggle's choice). The puddle is 1 inch deep and covers the ground in the boggle's space. The puddle is difficult terrain For all creatures except boggles and lasts for 1 hour.",
 						"If the oil is slippery, any creature that enters the puddle's area or starts its turn there must succeed on a DC 11 Dexterity saving throw or fall {@condition 伏地}.",
-						"If the oil is sticky, any creature that enters the puddle's area or starts its turn there must succeed on a DC 11 Strength saving throw or be {@condition restrained}. On its turn. a creature can use an action to try to extricate itself from the sticky puddle, ending the effect and moving into the nearest safe unoccupied space with a successful DC 11 Strength check."
+						"If the oil is sticky, any creature that enters the puddle's area or starts its turn there must succeed on a DC 11 Strength saving throw or be {@condition 束縛}. On its turn. a creature can use an action to try to extricate itself from the sticky puddle, ending the effect and moving into the nearest safe unoccupied space with a successful DC 11 Strength check."
 					]
 				}
 			],
@@ -3009,7 +3009,7 @@
 				{
 					"name": "Web {@recharge 5}",
 					"entries": [
-						"{@atk rw} 命中{@hit 5}，射程30/60呎， one Large or smaller creature. {@h}The target is {@condition restrained} by webbing. As an action, the {@condition restrained} target can make a DC 11 Strength check, bursting the webbing on a success. The webbing can also be attacked and destroyed (AC 10; 5 hit points; vulnerability to fire damage; immunity to bludgeoning, poison, and psychic damage)."
+						"{@atk rw} 命中{@hit 5}，射程30/60呎， one Large or smaller creature. {@h}The target is {@condition 束縛} by webbing. As an action, the {@condition 束縛} target can make a DC 11 Strength check, bursting the webbing on a success. The webbing can also be attacked and destroyed (AC 10; 5 hit points; vulnerability to fire damage; immunity to bludgeoning, poison, and psychic damage)."
 					]
 				}
 			],
@@ -3145,7 +3145,7 @@
 					]
 				},
 				{
-					"name": "Rock",
+					"name": "投石", "tENG_name": "Rock",
 					"entries": [
 						"{@atk rw} 命中{@hit 12}，射程60/240呎，單一目標。{@h}30 ({@damage 4d10 + 8})鈍擊傷害。 The attack deals an extra 14 ({@dice 4d6}) damage if the giant has advantage on the attack roll."
 					]
@@ -3502,7 +3502,7 @@
 			]
 		},
 		{
-			"name": "Darkling",
+			"name": "闇靈", "ENG_name": "Darkling",
 			"size": "S",
 			"type": "fey",
 			"source": "VGM",
@@ -3539,19 +3539,19 @@
 			},
 			"senses": "盲視30呎, 黑暗視覺120呎",
 			"passive": 15,
-			"languages": "Elvish, Sylvan",
+			"languages": "精靈語、木族語",
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Death Flash",
+					"name": "死亡焚耀", "tENG_name": "Death Flash",
 					"entries": [
-						"When the darkling dies, nonmagical light flashes out from it in a 10-foot radius as its body and possessions, other than metal or magic objects, burn to ash. Any creature in that area and able to see the bright light must succeed on a DC 10 Constitution saving throw or be {@condition blinded} until the end of the creature's next turn."
+						"當闇靈死亡時，它的身體和除了金屬和魔法物體的持有物將閃耀出10呎半徑的非魔法光芒，並隨之焚燒成灰。任何在閃光範圍內且能夠看見該光芒的生物必須成功通過一次DC 10的體質豁免，否則將陷入{@condition 目盲}狀態直到該生物的下個回合結束。"
 					]
 				},
 				{
-					"name": "Light Sensitivity",
+					"name": "光線敏感", "tENG_name": "Light Sensitivity",
 					"entries": [
-						"While in bright light, the darkling has disadvantage on attack rolls, as well as on Wisdom ({@skill Perception}) checks that rely on sight."
+						"當處於明亮光照環境時，闇靈在攻擊檢定、以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
 					]
 				}
 			],
@@ -3559,7 +3559,7 @@
 				{
 					"name": "匕首", "tENG_name": "Dagger",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或 射程20/60呎，單一目標。{@h}5 ({@damage 1d4 + 3}) piercing damage. If the darkling has advantage on the attack roll, the attack deals an extra 7 ({@damage 2d6})穿刺傷害。"
+						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或 射程20/60呎，單一目標。{@h}5 ({@damage 1d4 + 3})穿刺傷害。若闇靈在此攻擊檢定中具有優勢，則該攻擊將造成額外的 7 ({@damage 2d6})穿刺傷害。"
 					]
 				}
 			],
@@ -3587,7 +3587,7 @@
 			]
 		},
 		{
-			"name": "Darkling Elder",
+			"name": "闇靈長老", "ENG_name": "Darkling Elder",
 			"size": "M",
 			"type": "fey",
 			"source": "VGM",
@@ -3624,13 +3624,13 @@
 			},
 			"senses": "盲視30呎, 黑暗視覺120呎",
 			"passive": 16,
-			"languages": "Elvish, Sylvan",
+			"languages": "精靈語、木族語",
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Death Burn",
+					"name": "死亡焚焰", "tENG_name": "Death Burn",
 					"entries": [
-						"When the darkling elder dies, magical light flashes out from it in a 10-foot radius as its body and possessions, other than metal or magic objects, burn to ash. Any creature in that area must make a DC 11 Constitution saving throw. On a failure, the creature takes 7 ({@damage 2d6}) radiant damage and, if the creature can see the light, is {@condition blinded} until the end of its next turn. If the saving throw is successful, the creature takes half the damage and isn't {@condition blinded}."
+						"當闇靈長老死亡時，它的身體和除了金屬和魔法物體的持有物將閃耀出10呎半徑的魔法光芒，並隨之焚燒成灰。任何在閃光範圍內的生物必須進行一次DC 11的體質豁免。若豁免失敗將受到陷入7 ({@damage 2d6})光耀傷害，且若該生物可以看見該光芒，則它將陷入{@condition 目盲}狀態直到它的下個回合結束。若豁免成功，則該生物只受到一半的傷害且不會陷入{@condition 目盲}。"
 					]
 				}
 			],
@@ -3638,19 +3638,19 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The darkling elder makes two melee attacks."
+						"闇靈長老進行二次近戰攻擊。"
 					]
 				},
 				{
 					"name": "短劍", "tENG_name": "Shortsword",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3}) piercing damage. If the darkling elder had advantage on the attack roll, the attack deals as: extra 10 ({@damage 3d6})穿刺傷害。"
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})穿刺傷害。若闇靈長老在此攻擊檢定中具有優勢，則該攻擊將造成額外的 10 ({@damage 3d6})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Darkness (Recharges after a Short or Long Rest)",
+					"name": "黑暗術 (短休或長休之後充能)", "tENG_name": "Darkness",
 					"entries": [
-						"The darkling elder casts darkness without any components. Wisdom is its spellcasting ability."
+						"闇靈長老施放{@spell 黑暗術}而無須任何構材。它的施法屬性為睿知。"
 					]
 				}
 			],
@@ -3749,7 +3749,7 @@
 				{
 					"name": "Tentacle",
 					"entries": [
-						"{@atk mw} 命中{@hit 8}，觸及20呎，單一目標。{@h}14 ({@damage 3d6 + 4}) piercing damage, and the target is {@condition 被擒} (escape DC 14) if it is a Huge or smaller creature. Until this grapple ends, the target is {@condition restrained}, and the death kiss can't use the same tentacle on another target. The death kiss has ten tentacles."
+						"{@atk mw} 命中{@hit 8}，觸及20呎，單一目標。{@h}14 ({@damage 3d6 + 4}) piercing damage, and the target is {@condition 被擒} (escape DC 14) if it is a Huge or smaller creature. Until this grapple ends, the target is {@condition 束縛}, and the death kiss can't use the same tentacle on another target. The death kiss has ten tentacles."
 					]
 				},
 				{
@@ -5085,7 +5085,7 @@
 					]
 				},
 				{
-					"name": "Rock",
+					"name": "投石", "tENG_name": "Rock",
 					"entries": [
 						"{@atk rw} 命中{@hit 13}，射程60/240呎，單一目標。{@h}30 ({@damage 4d10 + 8})鈍擊傷害。"
 					]
@@ -5626,8 +5626,8 @@
 				{
 					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}22 ({@damage 3d10 + 6}) piercing damage, and the target is swallowed if it is a Medium or smaller creature. A swallowed creature is {@condition blinded} and {@condition restrained}, has total cover against attacks and other effects outside the froghemoth, and takes 10 ({@damage 3d6}) acid damage at the start of each of the froghemoth's turns.",
-						"The froghemoth's gullet can hold up to two creatures at a time. If the Froghemoth takes 20 damage or more on a single turn from a creature inside it, the Froghemoth must succeed on a DC 20 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, each of which falls {@condition 伏地} in a space within 10 feet of the froghemoth. If the froghemoth dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse using 10 feet of movement, exiting {@condition 伏地}."
+						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}22 ({@damage 3d10 + 6}) piercing damage, and the target is swallowed if it is a Medium or smaller creature. A swallowed creature is {@condition 目盲} and {@condition 束縛}, has total cover against attacks and other effects outside the froghemoth, and takes 10 ({@damage 3d6}) acid damage at the start of each of the froghemoth's turns.",
+						"The froghemoth's gullet can hold up to two creatures at a time. If the Froghemoth takes 20 damage or more on a single turn from a creature inside it, the Froghemoth must succeed on a DC 20 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, each of which falls {@condition 伏地} in a space within 10 feet of the froghemoth. If the froghemoth dies, a swallowed creature is no longer {@condition 束縛} by it and can escape from the corpse using 10 feet of movement, exiting {@condition 伏地}."
 					]
 				},
 				{
@@ -5714,7 +5714,7 @@
 				{
 					"name": "Extra Heads",
 					"entries": [
-						"The giant has a 25 percent chance of having more than one head. If it has more than one, it has advantage on Wisdom ({@skill Perception}) checks and on saving throws against being {@condition blinded}, {@condition 魅惑}, {@condition deafened}, {@condition 恐懼}, {@condition 震懾}, or knocked {@condition 昏迷}."
+						"The giant has a 25 percent chance of having more than one head. If it has more than one, it has advantage on Wisdom ({@skill Perception}) checks and on saving throws against being {@condition 目盲}, {@condition 魅惑}, {@condition deafened}, {@condition 恐懼}, {@condition 震懾}, or knocked {@condition 昏迷}."
 					]
 				},
 				{
@@ -5747,7 +5747,7 @@
 					]
 				},
 				{
-					"name": "Rock",
+					"name": "投石", "tENG_name": "Rock",
 					"entries": [
 						"{@atk rw} 命中{@hit 11}，射程60/240呎，單一目標。{@h}29 ({@damage 4d10 + 7})鈍擊傷害。"
 					]
@@ -8248,7 +8248,7 @@
 			]
 		},
 		{
-			"name": "Korred",
+			"name": "考芮精", "ENG_name": "Korred",
 			"size": "S",
 			"type": "fey",
 			"source": "VGM",
@@ -8293,28 +8293,28 @@
 					"preNote": "非魔法攻擊所造成的"
 				}
 			],
-			"senses": "darkvision 120 ft., 震顫感知120呎",
+			"senses": "黑暗視覺120呎, 震顫感知120呎",
 			"passive": 15,
-			"languages": "Dwarvish, Gnomish, Sylvan, Terran, Undercommon",
+			"languages": "矮人語、地侏語、木族語、土族語、地底通用語",
 			"cr": "7",
 			"trait": [
 				{
-					"name": "Command Hair",
+					"name": "命令髮繩", "tENG_name": "Command Hair",
 					"entries": [
-						"The korred has at least one 50-foot-long rope woven out of its hair. As a bonus action, the korred commands one such rope within 30 feet of it to move up to 20 feet and entangle a Large or smaller creature that the korred can see. The target must succeed on a DC 13 Dexterity saving throw or become {@condition 被擒} by the rope (escape DC 13). Until this grapple ends. the target is {@condition restrained}. The korred can use a bonus action to release the target, which is also freed if the korred dies or becomes {@condition 無力}.",
-						"A rope of korred hair has AC 20 and 20 hit points. It regains 1 hit point at the start of each of the korred's turns while it has at least 1 hit point and the korred is alive. If the rope drops to 0 hit points, it is destroyed."
+						"考芮精擁有至少一條以它頭髮編織而成的50呎髮繩。以一個附贈動作，考芮精可以命令其中一條距離它30呎內的髮繩移動最多20呎距離，並纏繞一個考芮精所能看見，體型為大型或更小的生物。目標必須成功通過一次DC 13的敏捷豁免，否則將{@condition 被擒}於該髮繩(逃脫DC 13)。直到擒抱結束前，目標被{@condition 束縛}。考芮精可以使用一個附贈動作以釋放該目標，目標也將在考芮精死亡或陷入{@condition 無力}狀態時被釋放。",
+						"考芮精的髮繩具有AC 20和20點生命值。若它具有至少1點生命值，且考芮精仍然活著，則它將在考芮精的每個回合開始時回復1點生命值。若髮繩的生命值歸零，則它將被摧毀。"
 					]
 				},
 				{
-					"name": "Stone Camouflage",
+					"name": "岩地偽裝", "tENG_name": "Stone Camouflage",
 					"entries": [
-						"The korred has advantage on Dexterity (Stealth) checks made to hide in rocky terrain."
+						"考芮精在岩石地形為躲藏所進行的敏捷（{@skill 隱匿}）檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Stone's Strength",
+					"name": "岩石之力", "tENG_name": "Stone's Strength",
 					"entries": [
-						"While on the ground, the korred deals 2 extra dice of damage with any weapon attack (included in its attacks)."
+						"當位於地面上時，考芮精在使用任何武器攻擊時將造成二顆額外的傷害骰（已包含在攻擊條目）。"
 					]
 				}
 			],
@@ -8322,19 +8322,19 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The korred makes two attacks with its greatclub or hurls two rocks."
+						"考芮精進行二次巨棍攻擊，或二次投石攻擊。"
 					]
 				},
 				{
-					"name": "Greatclub",
+					"name": "巨棍", "tENG_name": "Greatclub",
 					"entries": [
-						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}10 ({@damage 1d8 + 6})鈍擊傷害, or 19 ({@damage 3d8 + 6})鈍擊傷害 if the korred is on the ground."
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。{@h}10 ({@damage 1d8 + 6})鈍擊傷害，或若考芮精位於地面上則造成 19 ({@damage 3d8 + 6})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Rock",
+					"name": "投石", "tENG_name": "Rock",
 					"entries": [
-						"{@atk rw} 命中{@hit 9}，射程60/120呎，單一目標。{@h}15 ({@damage 2d8 + 6})鈍擊傷害, or 24 ({@damage 4d8 + 6})鈍擊傷害 if the korred is on the ground."
+						"{@atk rw} 命中{@hit 9}，射程60/120呎，單一目標。{@h}15 ({@damage 2d8 + 6})鈍擊傷害，或若考芮精位於地面上則造成 24 ({@damage 4d8 + 6})鈍擊傷害。"
 					]
 				}
 			],
@@ -8343,17 +8343,17 @@
 				{
 					"name": "天生施法", "tENG_name": "Innate Spellcasting",
 					"headerEntries": [
-						"The korred's innate spellcasting ability is Wisdom (save DC 13). It can innately cast the following spells, requiring no components:"
+						"考芮精的天生施法屬性為睿知（法術豁免DC 13）。它天生就可以施展以下法術，且無需任何構材："
 					],
 					"will": [
 						"{@spell 問道自然}",
 						"{@spell 融身入石}",
-						"{@spell stone shape}"
+						"{@spell 塑石術}"
 					],
 					"daily": {
 						"1e": [
-							"{@spell 召喚元素生物} (as 6th-level spell; {@creature galeb duhr}, {@creature gargoyle}, {@creature earth elemental}, or {@creature xorn} only)",
-							"{@spell Otto's irresistible dance}"
+							"{@spell 奧圖狂舞術}",
+							"{@spell 召喚元素生物}(六環版本；限定{@creature 格萊石人}、{@creature 石像鬼}、{@creature 土元素}、或{@creature 索爾石怪})"
 						]
 					},
 					"ability": "wis"
@@ -8964,7 +8964,7 @@
 					]
 				},
 				{
-					"name": "Light Sensitivity",
+					"name": "光線敏感", "tENG_name": "Light Sensitivity",
 					"entries": [
 						"While in bright light, the meenlock has disadvantage on attack rolls, as well as on Wisdom ({@skill Perception}) checks that rely on sight."
 					]
@@ -9122,7 +9122,7 @@
 							"slots": 3,
 							"spells": [
 								"{@spell 困惑術}",
-								"{@spell stone shape}"
+								"{@spell 塑石術}"
 							]
 						},
 						"5": {
@@ -9247,7 +9247,7 @@
 						"3. Psychic Ray: The target must succeed on a DC 13 Intelligence saving throw or take 27 ({@damage 6d8}) psychic damage.",
 						"4. Slowing Ray: The targeted creature must make a DC 13 Dexterity saving throw. On a failed save, the target's speed is halved for 1 minute. In addition, the creature can't take reactions, and it can take either an action or a bonus action on its turn but not both. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
 						"5. Stunning Ray: The targeted creature must succeed on a DC 13 Constitution saving throw or be {@condition 震懾} for 1 minute. The target can repeat the saving throw at the start of each of its turns, ending the effect on itself on a success.",
-						"6. Telekinetic Ray: If the target is a creature, it must make a DC 13 Strength saving throw. On a failed save, the mindwitness moves it up to 30 feet in any direction, and it is {@condition restrained} by the ray's telekinetic grip until the start of the mindwitness's next turn or until the mindwitness is {@condition 無力}.",
+						"6. Telekinetic Ray: If the target is a creature, it must make a DC 13 Strength saving throw. On a failed save, the mindwitness moves it up to 30 feet in any direction, and it is {@condition 束縛} by the ray's telekinetic grip until the start of the mindwitness's next turn or until the mindwitness is {@condition 無力}.",
 						"If the target is an object weighing 300 pounds or less that isn't being worn or carried, it is telekinetically moved up to 30 feet in any direction. The mindwitness can also exert fine control on objects with this ray, such as manipulating a simple tool or opening a door or a container."
 					]
 				}
@@ -9357,7 +9357,7 @@
 				{
 					"name": "Tentacles",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及15呎，單一目標。{@h}15 ({@damage 3d8 + 2})鈍擊傷害, and the target is {@condition 被擒} (escape DC 14) if it is a Large or smaller creature. Until this grapple ends. the target is {@condition restrained} and takes 15 ({@damage 3d8 + 2})鈍擊傷害 at the start of each of the morkoth's turns. and the morkoth can't use its tentacles on another target."
+						"{@atk mw} 命中{@hit 6}，觸及15呎，單一目標。{@h}15 ({@damage 3d8 + 2})鈍擊傷害, and the target is {@condition 被擒} (escape DC 14) if it is a Large or smaller creature. Until this grapple ends. the target is {@condition 束縛} and takes 15 ({@damage 3d8 + 2})鈍擊傷害 at the start of each of the morkoth's turns. and the morkoth can't use its tentacles on another target."
 					]
 				},
 				{
@@ -9396,7 +9396,7 @@
 							"slots": 4,
 							"spells": [
 								"{@spell 偵測魔法}",
-								"{@spell identify}",
+								"{@spell 鑑定術}",
 								"{@spell 護盾術}",
 								"{@spell 巫術箭}"
 							]
@@ -9427,7 +9427,7 @@
 						"5": {
 							"slots": 3,
 							"spells": [
-								"{@spell geas}",
+								"{@spell 指使術}",
 								"{@spell 探知}"
 							]
 						},
@@ -10088,8 +10088,8 @@
 				{
 					"name": "Tentacles",
 					"entries": [
-						"{@atk mw} 命中{@hit 13}，觸及15呎，單一目標。{@h}21 ({@damage 3d8 + 8})鈍擊傷害 plus 13 ({@damage 3d8}) psychic damage. If the target is a Large or smaller creature, it must succeed on a DC 18 Strength saving throw or be swallowed by the neothelid. A swallowed creature is {@condition blinded} and {@condition restrained}, it has total cover against attacks and other effects outside the neothelid, and it takes 35 ({@damage 10d6}) acid damage at the start of each of the neothelid's turns.",
-						"If the neothelid takes 30 damage or more on a single turn from a creature inside it, the neothelid must succeed on a DC 18 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition 伏地} in a space within 10 feet of the neothelid. If the neothelid dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse by using 20 feet of movement, exiting {@condition 伏地}."
+						"{@atk mw} 命中{@hit 13}，觸及15呎，單一目標。{@h}21 ({@damage 3d8 + 8})鈍擊傷害 plus 13 ({@damage 3d8}) psychic damage. If the target is a Large or smaller creature, it must succeed on a DC 18 Strength saving throw or be swallowed by the neothelid. A swallowed creature is {@condition 目盲} and {@condition 束縛}, it has total cover against attacks and other effects outside the neothelid, and it takes 35 ({@damage 10d6}) acid damage at the start of each of the neothelid's turns.",
+						"If the neothelid takes 30 damage or more on a single turn from a creature inside it, the neothelid must succeed on a DC 18 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition 伏地} in a space within 10 feet of the neothelid. If the neothelid dies, a swallowed creature is no longer {@condition 束縛} by it and can escape from the corpse by using 20 feet of movement, exiting {@condition 伏地}."
 					]
 				},
 				{
@@ -10977,7 +10977,7 @@
 			]
 		},
 		{
-			"name": "Quickling",
+			"name": "快可靈", "ENG_name": "Quickling",
 			"size": "T",
 			"type": "fey",
 			"source": "VGM",
@@ -11009,13 +11009,13 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 15,
-			"languages": "Common, Sylvan",
+			"languages": "通用語、木族語",
 			"cr": "1",
 			"trait": [
 				{
-					"name": "Blurred Movement",
+					"name": "朦朧移動", "tENG_name": "Blurred Movement",
 					"entries": [
-						"Attack rolls against the quickling have disadvantage unless the quickling is {@condition 無力} or {@condition restrained}."
+						"除非快可靈陷入{@condition 無力}狀態或被{@condition 束縛}，否則對快可靈進行的攻擊檢定都將具有劣勢。"
 					]
 				},
 				{
@@ -11176,7 +11176,7 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 13,
-			"languages": "Common, Sylvan",
+			"languages": "通用語、木族語",
 			"cr": "3",
 			"trait": [
 				{
@@ -12054,7 +12054,7 @@
 					]
 				},
 				{
-					"name": "Greatclub",
+					"name": "巨棍", "tENG_name": "Greatclub",
 					"entries": [
 						"{@atk mw} 命中{@hit 10}，觸及15呎，單一目標。{@h}19 ({@damage 3d8 + 6})鈍擊傷害。"
 					]
@@ -12066,7 +12066,7 @@
 					]
 				},
 				{
-					"name": "Rock",
+					"name": "投石", "tENG_name": "Rock",
 					"entries": [
 						"{@atk rw} 命中{@hit 10}，射程60/240呎，單一目標。{@h}28 ({@damage 4d10 + 6})鈍擊傷害。 If the target is a creature, it must succeed on a DC 17 Strength saving throw or be knocked {@condition 伏地}."
 					]
@@ -12777,7 +12777,7 @@
 				{
 					"name": "Spiked Chain",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及10呎，單一目標。{@h}6 ({@damage 1d6 + 3}) piercing damage, and the target is {@condition 被擒} (escape DC 11) if it is a Large or smaller creature. Until this grapple ends, the target is {@condition restrained}, and the tlincalli can't use the spiked chain against another target."
+						"{@atk mw} 命中{@hit 6}，觸及10呎，單一目標。{@h}6 ({@damage 1d6 + 3}) piercing damage, and the target is {@condition 被擒} (escape DC 11) if it is a Large or smaller creature. Until this grapple ends, the target is {@condition 束縛}, and the tlincalli can't use the spiked chain against another target."
 					]
 				},
 				{
@@ -13001,7 +13001,7 @@
 				{
 					"name": "Smother",
 					"entries": [
-						"One Large or smaller creature within 5 feet of the trapper must succeed on a DC 14 Dexterity saving throw or be {@condition 被擒} (escape DC 14). Until the grapple ends, the target takes 17 ({@damage 4d6 + 3})鈍擊傷害 plus 3 ({@damage 1d6}) acid damage at the start of each of its turns. While {@condition 被擒} in this way, the target is {@condition restrained}, {@condition blinded}, and at risk of suffocating. The trapper can smother only one creature at a time."
+						"One Large or smaller creature within 5 feet of the trapper must succeed on a DC 14 Dexterity saving throw or be {@condition 被擒} (escape DC 14). Until the grapple ends, the target takes 17 ({@damage 4d6 + 3})鈍擊傷害 plus 3 ({@damage 1d6}) acid damage at the start of each of its turns. While {@condition 被擒} in this way, the target is {@condition 束縛}, {@condition 目盲}, and at risk of suffocating. The trapper can smother only one creature at a time."
 					]
 				}
 			],
@@ -13128,7 +13128,7 @@
 						"1e": [
 							"{@spell 困惑術}",
 							"{@spell 支配怪物}",
-							"{@spell eyebite}",
+							"{@spell 攝心目光}",
 							"{@spell feeblemind}",
 							"{@spell 群體暗示術}",
 							"{@spell 異界傳送}（限自身）",

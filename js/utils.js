@@ -4090,7 +4090,7 @@ SortUtil = {
 		if (!b) return 1;
 		if (a.toLowerCase().trim() === "special equipment") return -1;
 		if (b.toLowerCase().trim() === "special equipment") return 1;
-		return SortUtil.ascSortLower(a, b);
+		return 0;//SortUtil.ascSortLower(a, b);
 	},
 
 	_alignFirst: ["L", "C"],
@@ -6473,6 +6473,9 @@ Parser.subclassKeyToDisplay["fiend"] = "邪魔宗主";
 Parser.subclassKeyToDisplay["great old one"] = "舊日支配者";
 Parser.subclassKeyToDisplay["archfey"] = "至高妖精";
 Parser.subclassKeyToDisplay["hexblade"] = "咒劍士";
+Parser.subclassKeyToDisplay["kraken"] = "克拉肯";
+Parser.subclassKeyToDisplay["raven queen"] = "鴉后";
+Parser.subclassKeyToDisplay["seeker"] = "探求者";
 Parser.subclassKeyToDisplay["land"] = "大地結社";
 Parser.subclassKeyToDisplay["knowledge"]  = "知識";
 Parser.subclassKeyToDisplay["life"]       = "生命";
