@@ -1286,7 +1286,7 @@ Parser.prereqPatronToShort = function (patron) {
 
 // NOTE: These need to be reflected in omnidexer.js to be indexed
 Parser.OPT_FEATURE_TYPE_TO_FULL = {
-	AI: "Artificer Infusion",
+	AI: "奇械師注法",
 	ED: "四象法門",
 	EI: "魔能祈喚",
 	MM: "超魔法",
