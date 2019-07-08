@@ -131,6 +131,8 @@ function loadhash (jsonIndex) {
 	if (obj.actionEntries) renderer.recursiveRender({entries: obj.actionEntries}, renderStack, {depth: 2});
 
 	const $content = $(`#pagecontent`).empty();
+
+	console.log(obj);
 	$content.append(`
 		${Renderer.utils.getBorderTr()}
 		${Renderer.utils.getNameTr(obj)}
@@ -138,9 +140,9 @@ function loadhash (jsonIndex) {
 		<tr class="text"><td colspan="6">
 			<b>護甲等級：</b> ${obj.ac}<br>
 			<b>生命值：</b> ${obj.hp}<br>
-			<b>傷害免疫：</b> ${Parser.monImmResToFull(obj.immune)}<br>
-			${obj.resist ? `<b>傷害抗性：</b> ${Parser.monImmResToFull(obj.resist)}<br>` : ""}
-			${obj.vulnerable ? `<b>傷害易傷：</b> ${Parser.monImmResToFull(obj.vulnerable)}<br>` : ""}
+			<b>傷害免疫：</b> ${obj.immune=="Varies (see below)"?"可變(見下)":Parser.monImmResToFull(obj.immune.split(", "))}<br>
+			${obj.resist ? `<b>傷害抗性：</b> ${Parser.monImmResToFull(obj.resist.split(", "))}<br>` : ""}
+			${obj.vulnerable ? `<b>傷害易傷：</b> ${Parser.monImmResToFull(obj.vulnerable.split(", "))}<br>` : ""}
 		</td></tr>
 		<tr class="text"><td colspan="6">${renderStack.join("")}</td></tr>
 		${Renderer.utils.getPageTr(obj)}

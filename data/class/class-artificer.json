@@ -249,9 +249,9 @@
 			"classFeatures": [
 				[
 					{
-						"name": "奇械師專精", "ENG_name": "Artificer Specialist",
+						"name": "奇械師專業", "ENG_name": "Artificer Specialist",
 						"entries": [
-							"在1級時，你從可選列表中選擇一種奇械師專精。你的選擇將會在1級、3級、9級、14級、和19級時賦予你新的能力。"
+							"在1級時，你從可選列表中選擇一種奇械師專業。你的選擇將會在1級、3級、9級、14級、和19級時賦予你新的能力。"
 						],
 						"gainSubclassFeature": true
 					},
@@ -313,9 +313,9 @@
 				],
 				[
 					{
-						"name": "專精傑作", "ENG_name": "Masterwork Feature",
+						"name": "專業傑作", "ENG_name": "Masterwork Feature",
 						"entries": [
-							"在3級時，你獲得一個由你奇械師專精所賦予的能力。"
+							"在3級時，你獲得一個由你奇械師專業所賦予的能力。"
 						],
 						"gainSubclassFeature": true
 					},
@@ -431,9 +431,9 @@
 				],
 				[
 					{
-						"name": "專精傑作", "ENG_name": "Masterwork Feature",
+						"name": "專業傑作", "ENG_name": "Masterwork Feature",
 						"entries": [
-							"在9級時，你獲得一個由你奇械師專精所賦予的能力。"
+							"在9級時，你獲得一個由你奇械師專業所賦予的能力。"
 						],
 						"gainSubclassFeature": true
 					}
@@ -458,9 +458,9 @@
 				[],
 				[
 					{
-						"name": "專精傑作", "ENG_name": "Masterwork Feature",
+						"name": "專業傑作", "ENG_name": "Masterwork Feature",
 						"entries": [
-							"在14級時，你獲得一個由你奇械師專精所賦予的能力。"
+							"在14級時，你獲得一個由你奇械師專業所賦予的能力。"
 						],
 						"gainSubclassFeature": true
 					}
@@ -489,9 +489,9 @@
 				],
 				[
 					{
-						"name": "專精傑作", "ENG_name": "Masterwork Feature",
+						"name": "專業傑作", "ENG_name": "Masterwork Feature",
 						"entries": [
-							"在17級時，你獲得一個由你奇械師專精所賦予的能力。"
+							"在17級時，你獲得一個由你奇械師專業所賦予的能力。"
 						],
 						"gainSubclassFeature": true
 					}
@@ -1222,35 +1222,35 @@
 							"你已經鑽研了魔法的運作原理，理解如何將魔法引導注入物體，以及知道如何喚醒物體內部的魔法。因此，你獲得了有限的施法能力。在旁觀者眼中，你並不是以傳統方式施法；你看起來就像是透過各種物品以創造奇蹟。",
 							{
 								"type": "entries",
-								"name": "Tools Required",
+								"name": "必要工具",
 								"entries": [
-									"You produce your artificer spell effects through your tools. You must have a spellcasting focus\u2014specifically {@item thieves' tools|phb} or some kind of artisan's tool\u2014in hand when you cast any spell with this Spellcasting feature. You must be proficient with the tool to use it in this way. See chapter 5, \"{@book Equipment|phb|5|tools},\" in the Player's Handbook for descriptions of these tools.",
-									"After you gain the Infuse Item feature at 2nd level, you can also use any item bearing one of your infusions as a spellcasting focus."
+									"你藉由你的工具產生出你的奇械師法術效果。當你使用這個施法能力施放任何法術時，你手上必須要持有一個法器\u2014它必須是{@item 盜賊工具|phb}或其他種類的工匠工具。你必須熟練於該工具才能透過這個方式使用它。參見《玩家手冊》第五章的「{@book Equipment|phb|5|工具}」以查閱這些工具的描述。",
+									"在你於2級獲得注法奇物能力時，你也可以使用任意帶有你其中一個注法的物品做為你的法器。"
 								]
 							},
 							{
 								"type": "entries",
 								"name": "戲法",
 								"entries": [
-									"At 1st level, you know two cantrips of your choice from the artificer spell list below. At higher levels, you learn additional artificer cantrips of your choice, as shown in the Cantrips Known column of the Artificer table.",
-									"When you gain a level in this class, you can replace one of the artificer cantrips you know with another cantrip from the artificer spell list."
+									"在1級時，你知曉二個從下列{@filter 奇械師法術列表|spells|class=artificer revisited (uaar)}自選的戲法。當你升至更高的等級時，你將學會額外的奇械師戲法，見奇械師表格中的已知戲法欄位。",
+									"當你提升這個職業的等級時，你可以從奇械師的法術列表中挑選一個法術來取代一個你目前已知的奇械師戲法。"
 								]
 							},
 							{
 								"type": "entries",
 								"name": "準備及施放法術",
 								"entries": [
-									"The Artificer table shows how many spell slots you have to cast your artificer spells. To cast one of your artificer spells of 1st level or higher, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
-									"You prepare the list of artificer spells that are available for you to cast, choosing from the artificer spell list. When you do so, choose a number of artificer spells equal to your Intelligence modifier + half your artificer level, rounded down (minimum of one spell). The spells must be of a level for which you have spell slots.",
-									"For example, if you are a 5th-level artificer, you have four 1st-level and two 2nd-level spell slots. With an Intelligence of 14, your list of prepared spells can include four spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell cure wounds, you can cast it using a 1st-level or a 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.",
-									"You can change your list of prepared spells when you finish a long rest. Preparing a new list of artificer spells requires time spent in tinkering with your spellcasting focuses: at least 1 minute per spell level for each spell on your list."
+									"奇械師表中顯示了你有多少個法術位可以用來施放你的奇械師法術。要施放其中一個一環或更高環的奇械師法術，你必須消耗一個與該法術環階相同或更高的法術位。你在完成一次長休後恢復所有你花費掉的法術位。",
+									"你準備一份你所能施放的奇械師法術列表，從奇械師法術列表中選擇。當你這麼做時，選擇數量等同於你智力調整值 + 你奇械師等級一半的奇械師法術（最少一個法術）。這些法術的環階都必須符合你所擁有法術位的環階。",
+									"舉例來說，如果你是一個5級的奇械師，你擁有四個1環和二個2環的法術位。你的智力為14，則你已準備法術的列表中可以包含總共四個1環或2環的法術。若你準備了1環法術{@spell 治療傷勢}，你可以使用1環和2環的法術位來施放它。施放法術並不會將它從你的準備法術列表中移除。",
+									"你可以在你完成一次長休時改變你的準備法術列表。準備一份新的奇械師法術列表需要花費時間於調整改造你的法器：你需要為你列表上每個法術的每個環階都花費至少1分鐘的時間。"
 								]
 							},
 							{
 								"type": "entries",
 								"name": "施法屬性",
 								"entries": [
-									"Intelligence is your spellcasting ability for your artificer spells; your understanding of the theory behind magic allows you to wield these spells with superior skill. You use your Intelligence whenever an artificer spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for an artificer spell you cast and when making an attack roll with one.",
+									"智力是你施展奇械師法術的施法屬性；你對於魔法背後理論的理解讓你能以優異的技巧操控這些法術。每當奇械師法術提及你的施法屬性時，你將使用你的智力。此外，當決定你奇械師法術的豁免DC、以及使用奇械師法術進行攻擊檢定時，你使用你的智力調整值。",
 									{
 										"type": "abilityDc",
 										"name": "法術",
@@ -1276,11 +1276,11 @@
 							},
 							{
 								"type": "inset",
-								"name": "The Magic of Artifice",
+								"name": "奇械魔法", "tENG_name": "The Magic of Artifice",
 								"entries": [
-									"As an artificer, you use tools when you cast your spells. When describing your spellcasting, think about how you're using a tool to perform the spell effect. If you cast {@spell cure wounds} using alchemist's supplies, you could be quickly producing a salve. If you cast it using {@item tinker's tools|phb}, you might have a miniature mechanical spider that binds wounds. When you cast {@spell poison spray}, you could fling foul chemicals or use a wand that spits venom. The effect of the spell is the same as for a spellcaster of any other class, but your method of spellcasting is special.",
-									"The same principle applies when you prepare your spells. As an artificer, you don't study a spellbook or pray to prepare your spells. Instead, you work with your tools and create the specialized items you'll use to produce your effects. If you replace {@spell cure wounds} with {@spell shocking grasp}, you might be breaking down the device you used to heal and creating an offensive item in its place\u2014perhaps a gauntlet that lets you channel a surge of energy.",
-									"Such details don't limit you in any way or provide you with any benefit. You don't have to justify how you're using tools to cast a spell. But describing your spellcasting creatively is a fun way to distinguish yourself from other spellcasters."
+									"做為一名奇械師，你使用工具以施放你的法術。在描述你的施法過程時，請想想你是如何使用工具來執行這個法術效果的。若你是使用{@item 煉金師設備|phb}來施放{@spell 治療傷勢}，則你可能是迅速地製造出藥膏。若你是使用{@item 修補匠工具|phb}以施展該法術，則你可能會擁有一個用以縫合傷口地微型機械蜘蛛。當你施放{@spell 毒氣噴灑}時，你可能會扔出惡臭的化學物質、或是使用一根會噴射毒液的魔杖。這些法術的效果和其他的施法者相同，但你的施法方法尤其特別。",
+									"同樣的原則也適用於你準備法術的時候。做為一名奇械師，你不需要研讀法術書、也不需要祈禱以準備你的法術。相反的，你需要使用你的工具來製造用於產生你法術效果的專門道具。若你將{@spell 治療傷勢}替換成了{@spell 電爪}，則你可能會破壞調你用於治療的裝置，並用它的部件製造出一個攻擊性的道具（或許是一個讓你得以引導衝擊性能量的護手）。",
+									"這類細節並不會在任何方面上限制你，或為你提供任何好處。你並不需要證明你是如何使用工具來施展法術。但是有創意地描述你的施法過程，是一種能夠讓你從其他施法者中脫穎而出的有趣方式。"
 								]
 							}
 						]
@@ -1288,35 +1288,35 @@
 				],
 				[
 					{
-						"name": "Infuse Item",
+						"name": "注法奇物", "ENG_name": "Infuse Item",
 						"entries": [
-							"At 2nd level, you gain the ability to imbue mundane items with certain magical infusions. The magic items you create with this feature are effectively prototypes of permanent items.",
+							"在2級時，你獲得將特定魔法注法引導注入平凡物品的能力。你以這個能力製造的魔法物品實際上就是那些永久性魔法物品的原型。",
 							{
 								"type": "entries",
-								"name": "Infusions Known",
+								"name": "已知注法", "tENG_name": "Infusions Known",
 								"entries": [
-									"When you gain this feature, pick two artificer infusions to learn, choosing from the \"{@filter Artificer Infusions|optionalfeatures|feature type=ai|source=UAArtificerRevisited}\" section at the end of the class's description. You learn additional infusions of your choice when you reach certain levels in this class, as shown in the Infusions Known column of the Artificer table.",
-									"Whenever you gain a level in this class, you can replace one of the artificer infusions you learned with a new one."
+									"當你獲得此能力時，選擇二個奇械師注法並習得。可選的奇械師注法選項列表請參見{@filter 職業能力選項|optionalfeatures|Feature Type=ai|source=UAArtificerRevisited}頁面。當你升至特定奇械師等級時，你將再習得額外的自選奇械師注法，參見奇械師表格中的已知注法欄位。",
+									"每當你提升這個職業的等級時，你可以將一個你已習得的奇械師注法替換成一個新的奇械師注法。"
 								]
 							},
 							{
 								"type": "entries",
-								"name": "Infusing an Item",
+								"name": "為物品進行注能", "tENG_name": "Infusing an Item",
 								"entries": [
-									"Whenever you finish a long rest, you can touch a nonmagical object and imbue it with one of your artificer infusions, turning it into a magic item. An infusion works on only certain kinds of objects, as specified in the infusion's description. If the item requires attunement, you can attune yourself to it the instant you infuse the item, or you can forgo attunement so that someone else can attune to the item. If you decide to attune to the item later, you must do so using the normal process for attunement (see \"{@book Attunement|dmg|7|attunement}\" in the Dungeon Master's Guide, page 136).",
-									"Your infusion remains in an item indefinitely, but when you die, the infusion vanishes after a number of days have passed equal to your Intelligence modifier (minimum of 1 day). The infusion also vanishes if you give up your knowledge of the infusion for another one.",
-									"You can infuse more than one nonmagical object at the end of a long rest; the maximum number of objects appears in the Infused Items column of the Artificer table. You must touch each of the objects, and each of your infusions can be in only one object at a time. If you try to exceed your maximum number of infusions, the oldest infusion immediately ends, and then the new infusion applies."
+									"每當你完成一次長休，你可以觸碰一個非魔法物品並將你的一個奇械師注法灌入該物品，使它變成一件魔法物品。每個奇械師注法都只能作用於其描述中指定類型的物體。若該魔法物品需要同調，則你可以在你為該物品注能時使自己與之同調，或者你可以放棄同調，好讓其他人能夠和該物品同調。若你決定在那之後才與該物品同調，則你必須使用原本的同調流程（參見《地下城主指南》第136頁的{@book 同調|dmg|7|同調}章節）。",
+									"你灌入該物品內的注法將永久持續，但當你死亡，該注法將在等同於你智力調整值的天數之後消散（最短1天）。若你將已知的奇械師注法替換掉，則被替換掉的注法效果也將消散。",
+									"你可以在一次長休結束時為複數非魔法物體進行注能；其最大數量參見奇械師表格中的注法物品欄位。你必須觸碰每一個物體，且你的每個奇械師注法同時只能各自存在於一個物體內。若你嘗試注能超過你最大數量的物品，則最舊的奇械師注法將會立即終止，且新的奇械師注法將被注入。"
 								]
 							},
 							{
 								"type": "inset",
-								"name": "Artificer Infusions",
+								"name": "奇械師注法", "tENG_name": "Artificer Infusions",
 								"entries": [
-									"Artificers have invented numerous magical infusions that rapidly create magic items. To the untrained, artificers seem like wonderworkers, accomplishing in hours what others need weeks to complete.",
-									"The description of each infusion tells you the type of item that can receive it. The description also tells you if the resulting magic item requires attunement.",
-									"Some infusions specify a minimum artificer level. You can't learn such an infusion until you are at least that level.",
-									"Unless an infusion's description says otherwise, you can't learn the infusion more than once.",
-									"See the {@filter Class Feature Options page|optionalfeatures|feature type=ai|source=UAArtificerRevisited} for the full list of infusions."
+									"奇械師發明了許多種魔能注法以快速地製造魔法物品。對於沒有受過訓練的人來說，奇械師就像是能夠創造奇蹟，能夠在數小時內就完成他人需要數週才能辦到的事情。",
+									"每個注法的描述都會說明它可以注入的物品類型。其描述也會說明它所產生的魔法物品是否需要同調。",
+									"有些注法規定了最低的奇械師等級。你在升至該等級之前都不能習得這類注法。",
+									"除非該注法另有說明，否則你不能重複習得同一個注法。",
+									"參見{@filter 職業能力選項頁面|optionalfeatures|feature type=ai|source=UAArtificerRevisited}以查閱完整的注法列表。"
 								]
 							}
 						]
@@ -1324,12 +1324,12 @@
 				],
 				[
 					{
-						"name": "Artificer Specialist",
+						"name": "奇械師專業", "ENG_name": "Artificer Specialist",
 						"entries": [
-							"At 3rd level, you choose the type of specialist you are: Alchemist or Artillerist, each of which is detailed at the end of the class's description. Your choice grants you features at 3rd level and again at 6th and 14th level.",
+							"在3級時，你選擇你的專業類型：煉金師、或魔炮師。你的選擇將會在3級、6級、和14級時賦予你新的能力。",
 							{
 								"type": "inset",
-								"name": "Variant: Crafting",
+								"name": "變體：製作", "tENG_name": "Variant: Crafting",
 								"entries": [
 									"An artificer subclass makes you more efficient at crafting certain items. The feature you get from your subclass works whether you're using the crafting rules in the {@book Player's Handbook|phb|8|crafting}, {@book Dungeon Master's Guide|dmg|6|crafting a magic item}, or {@book Xanathar's Guide to Everything|xge|2|crafting an item}."
 								]
@@ -1338,9 +1338,9 @@
 						"gainSubclassFeature": true
 					},
 					{
-						"name": "Tool Expertise",
+						"name": "工具專精", "ENG_name": "Tool Expertise",
 						"entries": [
-							"Starting at 3rd level, your proficiency bonus is doubled for any ability check you make that uses your proficiency with a tool."
+							"從3級開始，你的熟練加值在使用你的工具熟練項所進行的任何屬性檢定中變為兩倍。"
 						]
 					}
 				],
@@ -1348,24 +1348,24 @@
 					{
 						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
-							"When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+							"當你在此職業升至4級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					}
 				],
 				[
 					{
-						"name": "Arcane Armament",
+						"name": "祕法戰備", "ENG_name": "Arcane Armament",
 						"entries": [
-							"Starting at 5th level, you can attack twice, rather than once, whenever you take the Attack action on your turn, but one of the attacks must be made with a magic weapon, the magic of which you use to propel the attack."
+							"從5級開始，每當你在你的回合採取{@action 攻擊}動作，你可以攻擊二次，而非一次。但其中一次攻擊必須使用魔法武器進行，因為你需要透過其中的魔法能量來驅動攻擊。"
 						]
 					}
 				],
 				[
 					{
-						"name": "Artificer Specialist Feature",
+						"name": "奇械師專業能力", "ENG_name": "Artificer Specialist Feature",
 						"entries": [
-							"At 6th level, you gain a feature granted by your Artificer Specialist choice."
+							"在6級時，你獲得一個由你所選奇械師專業賦予的能力。"
 						],
 						"gainSubclassFeature": true
 					}
@@ -1375,17 +1375,17 @@
 					{
 						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
-							"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+							"當你在此職業升至8級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					}
 				],
 				[],
 				[
 					{
-						"name": "The Right Cantrip for the Job",
+						"name": "適切戲法", "ENG_name": "The Right Cantrip for the Job",
 						"entries": [
-							"At 10th level, you gain the ability to make sure you have the right magical tool for a job. Whenever you finish a short or long rest, you can replace one of the artificer cantrips you know with another cantrip from the artificer spell list."
+							"在10級時，你獲得能夠根據當下情境準備最適切魔法工具的能力。每當你完成一次短休或長休，你可以將你已知的一個奇械師戲法替換成另一個奇械師法術列表中的戲法。"
 						]
 					}
 				],
@@ -1394,17 +1394,17 @@
 					{
 						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
-							"When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+							"當你在此職業升至12級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					}
 				],
 				[],
 				[
 					{
-						"name": "Artificer Specialist Feature",
+						"name": "奇械師專業能力", "ENG_name": "Artificer Specialist Feature",
 						"entries": [
-							"At 14th level, you gain a feature granted by your Artificer Specialist choice."
+							"在14級時，你獲得一個由你所選奇械師專業賦予的能力。"
 						],
 						"gainSubclassFeature": true
 					}
@@ -1414,15 +1414,15 @@
 					{
 						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
-							"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+							"當你在此職業升至16級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					}
 				],
 				[],
 				[
 					{
-						"name": "Spell-Storing Item",
+						"name": "儲法物品", "ENG_name": "Spell-Storing Item",
 						"entries": [
 							"When you reach 18th level, you learn how to store a spell in an object for repeated use. Whenever you finish a long rest, you can touch one simple or martial weapon or an item that you can use as a spellcasting focus and store a spell in it, choosing one 1st- or 2nd-level spell from the artificer spell list that requires 1 action to cast (you don't need to have the spell prepared). With the object in hand, a creature can take an action to produce the spell's effect from it, using your spellcasting ability modifier.",
 							"The spell stays in the object until it has been used a number of times equal to twice your Intelligence modifier (minimum of twice) or until you use this feature again."
@@ -1433,16 +1433,16 @@
 					{
 						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
-							"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+							"當你在此職業升至19級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					}
 				],
 				[
 					{
-						"name": "Soul of Artifice",
+						"name": "奇械之魂", "ENG_name": "Soul of Artifice",
 						"entries": [
-							"At 20th level, your understanding of magic items is unmatched, allowing you to mingle your soul with items linked to you. You can attune to up to six magic items at once. In addition, you gain a +1 bonus to all saving throws per magic item you are currently attuned to."
+							"在20級時，你對魔法物品的理解已經無可匹敵，使你得以將你的靈魂與聯繫於你的魔法物品互相融合。你可以同時和最多六個魔法物品維持同調。此外，你當下每有一個同調中的魔法物品，你就在所有豁免檢定中獲得+1加值。"
 						]
 					}
 				]
