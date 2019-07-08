@@ -25,7 +25,7 @@ window.onload = async function load () {
 let list;
 function onJsonLoad (data) {
 	list = ListUtil.search({
-		valueNames: ["name", "size", "source", "uniqueid"],
+		valueNames: ["name", "size", "source", "uniqueid", "eng_name"],
 		listClass: "objects",
 		sortFunction: SortUtil.listSort
 	});
@@ -84,6 +84,7 @@ function addObjects (data) {
 					<span class="source col-2 text-align-center ${Parser.sourceJsonToColor(obj.source)}" title="${Parser.sourceJsonToFull(obj.source)}">${abvSource}</span>
 					
 					<span class="uniqueid hidden">${obj.uniqueId ? obj.uniqueId : obI}</span>
+					<span class="eng_name hidden">${obj.ENG_name ? obj.ENG_name : obj.name}</span>
 				</a>
 			</li>
 		`;
@@ -93,7 +94,7 @@ function addObjects (data) {
 
 	list.reIndex();
 	if (lastSearch) list.search(lastSearch);
-	list.sort("name");
+	list.sort("size");
 
 	ListUtil.setOptions({
 		itemList: objectsList,
@@ -133,13 +134,13 @@ function loadhash (jsonIndex) {
 	$content.append(`
 		${Renderer.utils.getBorderTr()}
 		${Renderer.utils.getNameTr(obj)}
-		<tr class="text"><td colspan="6"><i>${obj.type !== "GEN" ? `${Parser.sizeAbvToFull(obj.size)} object` : `Variable size object`}</i><br></td></tr>
+		<tr class="text"><td colspan="6"><i>${obj.type !== "GEN" ? `${Parser.sizeAbvToFull(obj.size)} 物體` : `可變尺寸 物體`}</i><br></td></tr>
 		<tr class="text"><td colspan="6">
-			<b>Armor Class:</b> ${obj.ac}<br>
-			<b>Hit Points:</b> ${obj.hp}<br>
-			<b>Damage Immunities:</b> ${obj.immune}<br>
-			${obj.resist ? `<b>Damage Resistances:</b> ${obj.resist}<br>` : ""}
-			${obj.vulnerable ? `<b>Damage Vulnerabilities:</b> ${obj.vulnerable}<br>` : ""}
+			<b>護甲等級：</b> ${obj.ac}<br>
+			<b>生命值：</b> ${obj.hp}<br>
+			<b>傷害免疫：</b> ${Parser.monImmResToFull(obj.immune)}<br>
+			${obj.resist ? `<b>傷害抗性：</b> ${Parser.monImmResToFull(obj.resist)}<br>` : ""}
+			${obj.vulnerable ? `<b>傷害易傷：</b> ${Parser.monImmResToFull(obj.vulnerable)}<br>` : ""}
 		</td></tr>
 		<tr class="text"><td colspan="6">${renderStack.join("")}</td></tr>
 		${Renderer.utils.getPageTr(obj)}
