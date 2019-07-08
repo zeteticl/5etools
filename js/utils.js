@@ -1286,7 +1286,7 @@ Parser.prereqPatronToShort = function (patron) {
 
 // NOTE: These need to be reflected in omnidexer.js to be indexed
 Parser.OPT_FEATURE_TYPE_TO_FULL = {
-	AI: "Artificer Infusion",
+	AI: "奇械師注法",
 	ED: "四象法門",
 	EI: "魔能祈喚",
 	MM: "超魔法",
@@ -6449,7 +6449,7 @@ Parser.classKeyToDisplay["bard"]     = "吟遊詩人";
 Parser.classKeyToDisplay["barbarian"]= "野蠻人";
 Parser.classKeyToDisplay["fighter"]  = "戰士";
 Parser.classKeyToDisplay["rogue"]    = "遊蕩者";
-Parser.classKeyToDisplay["artificer"]= "機關術士";
+Parser.classKeyToDisplay["artificer"]= "奇械師";
 Parser.classKeyToDisplay["ranger (revised)"]   = "遊俠(修訂)";
 Parser.ClassToDisplay = function(c){
 	let c_match = c.match(/([^()]*)( ?\((.*)\))?/);

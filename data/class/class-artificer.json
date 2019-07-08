@@ -1,7 +1,7 @@
 {
 	"class": [
 		{
-			"name": "機關術士", "ENG_name": "Artificer",
+			"name": "奇械師", "ENG_name": "Artificer",
 			"source": "UAArtificer",
 			"hd": {
 				"number": 1,
@@ -249,16 +249,16 @@
 			"classFeatures": [
 				[
 					{
-						"name": "機關術士專精", "ENG_name": "Artificer Specialist",
+						"name": "奇械師專精", "ENG_name": "Artificer Specialist",
 						"entries": [
-							"在1級時，你從可選列表中選擇一種機關術士專精。你的選擇將會在1級、3級、9級、14級、和19級時賦予你新的能力。"
+							"在1級時，你從可選列表中選擇一種奇械師專精。你的選擇將會在1級、3級、9級、14級、和19級時賦予你新的能力。"
 						],
 						"gainSubclassFeature": true
 					},
 					{
 						"name": "魔法物品分析", "ENG_name": "Magic Item Analysis",
 						"entries": [
-							"從1級開始，你對於魔法物品的理解讓你得以分析並理解它們的秘密。你知曉機關術士法術：{@spell 偵測魔法}和{@spell 鑑定術}，且你可以將它們做為儀式施放。當你使用這個職業能力施放{@spell 鑑定術}時，你並不需要提供材料構材。"
+							"從1級開始，你對於魔法物品的理解讓你得以分析並理解它們的秘密。你知曉奇械師法術：{@spell 偵測魔法}和{@spell 鑑定術}，且你可以將它們做為儀式施放。當你使用這個職業能力施放{@spell 鑑定術}時，你並不需要提供材料構材。"
 						]
 					}
 				],
@@ -272,7 +272,7 @@
 					{
 						"name": "奇物發明", "ENG_name": "Wondrous Invention",
 						"entries": [
-							"在2級時，你得以使用你製造的魔法物品。從下列的2級物品表中選擇一個魔法物品。製造魔法物品是一項困難的任務。當你從這個能力獲得一個魔法物品時，它反映著透過長時間的研究、加工、以及實驗，讓你終於得以完成這個物品。你被假定在你的閒暇時間致力打造這個物品，並在你升級時使之得以完工。當你在此職業升至5級、10級、15級、和20級時，你將得以完成另一件你所選擇的魔法物品。這個物品必須從你當前機關術士等級或更低等級的物品列表中選擇。這些魔法物品的詳情記載於《地下城主指南》。",
+							"在2級時，你得以使用你製造的魔法物品。從下列的2級物品表中選擇一個魔法物品。製造魔法物品是一項困難的任務。當你從這個能力獲得一個魔法物品時，它反映著透過長時間的研究、加工、以及實驗，讓你終於得以完成這個物品。你被假定在你的閒暇時間致力打造這個物品，並在你升級時使之得以完工。當你在此職業升至5級、10級、15級、和20級時，你將得以完成另一件你所選擇的魔法物品。這個物品必須從你當前奇械師等級或更低等級的物品列表中選擇。這些魔法物品的詳情記載於《地下城主指南》。",
 							{
 								"type": "entries",
 								"name": "2級",
@@ -315,7 +315,7 @@
 					{
 						"name": "專精傑作", "ENG_name": "Masterwork Feature",
 						"entries": [
-							"在3級時，你獲得一個由你機關術士專精所賦予的能力。"
+							"在3級時，你獲得一個由你奇械師專精所賦予的能力。"
 						],
 						"gainSubclassFeature": true
 					},
@@ -327,21 +327,21 @@
 								"type": "entries",
 								"name": "法術位",
 								"entries": [
-									"機關術士表中顯示了你有多少個法術位可以用來施放你一環或更高環的法術。要施放其中一個法術，你必須消耗一個與該法術環階相同或更高的法術位。你在完成一次長休後恢復所有你花費掉的法術位。"
+									"奇械師表中顯示了你有多少個法術位可以用來施放你一環或更高環的法術。要施放其中一個法術，你必須消耗一個與該法術環階相同或更高的法術位。你在完成一次長休後恢復所有你花費掉的法術位。"
 								]
 							},
 							{
 								"type": "entries",
 								"name": "一環或更高環的已知法術",
 								"entries": [
-									"你知曉三個從{@filter 機關術士法術列表|spells|class=artificer (uaa)}中自選的1環法術。機關術士表中的已知法術欄位顯示你將在何時學習到更多自選的機關術士法術。每個這些法術的環階都必須符合你所擁有機關術士法術位的環階。此外，當你提升這個職業的等級時，你可以從機關術士的法術列表中挑選一個法術來取代一個你從這個能力中獲得的已知法術，而它的環階也必須符合你所擁有機關術士法術位的環階。"
+									"你知曉三個從{@filter 奇械師法術列表|spells|class=artificer (uaa)}中自選的1環法術。奇械師表中的已知法術欄位顯示你將在何時學習到更多自選的奇械師法術。每個這些法術的環階都必須符合你所擁有奇械師法術位的環階。此外，當你提升這個職業的等級時，你可以從奇械師的法術列表中挑選一個法術來取代一個你從這個能力中獲得的已知法術，而它的環階也必須符合你所擁有奇械師法術位的環階。"
 								]
 							},
 							{
 								"type": "entries",
 								"name": "施法屬性",
 								"entries": [
-									"智力是你施展機關術士法術的施法屬性；你對於魔法背後理論的理解讓你能以優異的技巧操控這些法術。每當機關術士法術提及你的施法屬性時，你將使用你的智力。此外，當決定你機關術士法術的豁免DC、以及使用機關術士法術進行攻擊檢定時，你使用你的智力調整值。",
+									"智力是你施展奇械師法術的施法屬性；你對於魔法背後理論的理解讓你能以優異的技巧操控這些法術。每當奇械師法術提及你的施法屬性時，你將使用你的智力。此外，當決定你奇械師法術的豁免DC、以及使用奇械師法術進行攻擊檢定時，你使用你的智力調整值。",
 									{
 										"type": "abilityDc",
 										"name": "法術",
@@ -362,7 +362,7 @@
 								"type": "entries",
 								"name": "施法法器",
 								"entries": [
-									"你可以使用一個{@item 奧術法器|phb}來做為你施放機關術士法術的法器。（參見《玩家手冊》第五章以查閱更多的奧術法器選項）"
+									"你可以使用一個{@item 奧術法器|phb}來做為你施放奇械師法術的法器。（參見《玩家手冊》第五章以查閱更多的奧術法器選項）"
 								]
 							}
 						]
@@ -372,7 +372,7 @@
 					{
 						"name": "注入魔法", "ENG_name": "Infuse Magic",
 						"entries": [
-							"從4級開始，你獲得將你的機關術士法術引導注入物品的能力，以供稍後使用。當你施放一個施法時間為一個動作的機關術士法術，你可以將它的施法時間增加至1分鐘。若你這麼做，且在施法期間持握一個非魔法物品，則你可以消耗其法術位，但不讓該法術的效果發揮作用。取而代之的是，若該物品尚未因此能力而容納一個法術，則該法術將被轉移到該物品中，以供稍後使用。",
+							"從4級開始，你獲得將你的奇械師法術引導注入物品的能力，以供稍後使用。當你施放一個施法時間為一個動作的奇械師法術，你可以將它的施法時間增加至1分鐘。若你這麼做，且在施法期間持握一個非魔法物品，則你可以消耗其法術位，但不讓該法術的效果發揮作用。取而代之的是，若該物品尚未因此能力而容納一個法術，則該法術將被轉移到該物品中，以供稍後使用。",
 							"任何在此之後持握這個物品的生物，若它具有至少6點智力值，將可以使用一個動作啟動物品內容納的法術。該法術將使用你的施法屬性、以啟動該物品的生物做為目標。若該法術能夠選擇超過一個生物做為目標，則由啟動這個物品的生物選擇額外的目標。若該法術具有效果範圍，則其將以該物品為中心。若該法術的射程為自身，它將選擇啟動該物品的生物做為目標。",
 							"當你透過這個方式注入一個法術，它將必須在8小時內被使用。在這段時間後，該法術的魔力便會消散並被浪費。你同時只能有有限數量的法術被注入，其數量等同於你的智力調整值。"
 						]
@@ -433,7 +433,7 @@
 					{
 						"name": "專精傑作", "ENG_name": "Masterwork Feature",
 						"entries": [
-							"在9級時，你獲得一個由你機關術士專精所賦予的能力。"
+							"在9級時，你獲得一個由你奇械師專精所賦予的能力。"
 						],
 						"gainSubclassFeature": true
 					}
@@ -460,7 +460,7 @@
 					{
 						"name": "專精傑作", "ENG_name": "Masterwork Feature",
 						"entries": [
-							"在14級時，你獲得一個由你機關術士專精所賦予的能力。"
+							"在14級時，你獲得一個由你奇械師專精所賦予的能力。"
 						],
 						"gainSubclassFeature": true
 					}
@@ -491,7 +491,7 @@
 					{
 						"name": "專精傑作", "ENG_name": "Masterwork Feature",
 						"entries": [
-							"在17級時，你獲得一個由你機關術士專精所賦予的能力。"
+							"在17級時，你獲得一個由你奇械師專精所賦予的能力。"
 						],
 						"gainSubclassFeature": true
 					}
@@ -781,7 +781,7 @@
 			]
 		},
 		{
-			"name": "Artificer (Revisited)",
+			"name": "奇械師(再訪)", "ENG_name": "Artificer (Revisited)",
 			"source": "UAArtificerRevisited",
 			"hd": {
 				"number": 1,
@@ -802,17 +802,17 @@
 						"shields"
 					],
 					"tools": [
-						"thieves' tools",
-						"tinker's tools"
+						"盜賊工具",
+						"修補匠工具"
 					]
 				}
 			},
 			"classTableGroups": [
 				{
 					"colLabels": [
-						"{@filter Infusions Known|optionalfeatures|feature type=ai|source=UAArtificerRevisited}",
-						"Infused Items",
-						"{@filter Cantrips Known|spells|level=0|class=artificer revisited (uaar)}"
+						"{@filter 已知注法|optionalfeatures|feature type=ai|source=UAArtificerRevisited}",
+						"注法物品",
+						"{@filter 已知戲法|spells|level=0|class=artificer revisited (uaar)}"
 					],
 					"rows": [
 						[
@@ -918,13 +918,13 @@
 					]
 				},
 				{
-					"title": "Spell Slots per Spell Level",
+					"title": "法術位/每環",
 					"colLabels": [
-						"{@filter 1st|spells|level=1|class=Artificer Revisited (UAAR)}",
-						"{@filter 2nd|spells|level=2|class=Artificer Revisited (UAAR)}",
-						"{@filter 3rd|spells|level=3|class=Artificer Revisited (UAAR)}",
-						"{@filter 4th|spells|level=4|class=Artificer Revisited (UAAR)}",
-						"{@filter 5th|spells|level=5|class=Artificer Revisited (UAAR)}"
+						"{@filter 1環|spells|level=1|class=Artificer Revisited (UAAR)}",
+						"{@filter 2環|spells|level=2|class=Artificer Revisited (UAAR)}",
+						"{@filter 3環|spells|level=3|class=Artificer Revisited (UAAR)}",
+						"{@filter 4環|spells|level=4|class=Artificer Revisited (UAAR)}",
+						"{@filter 5環|spells|level=5|class=Artificer Revisited (UAAR)}"
 					],
 					"rows": [
 						[
@@ -1078,13 +1078,13 @@
 				],
 				"weapons": [
 					"simple",
-					"hand crossbows",
-					"heavy crossbows"
+					"手弩",
+					"重弩"
 				],
 				"tools": [
-					"thieves' tools",
-					"tinker's tools",
-					"one type of artisan's tools of your choice"
+					"盜賊工具",
+					"修補匠工具",
+					"一種你所選擇的工匠工具"
 				],
 				"skills": {
 					"choose": 2,
@@ -1102,12 +1102,12 @@
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
-					"any two {@filter simple weapons|items|source=phb|category=basic|type=simple weapon}",
-					"a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts}",
-					"(a) {@item studded leather armor|phb} or (b) {@item scale mail|phb}",
-					"{@item thieves' tools|phb} and a {@item dungeoneer's pack|phb}"
+					"任意二把{@filter 簡易武器|items|source=phb|category=basic|type=simple weapon}",
+					"一把{@item 輕弩|phb}和{@item 弩矢(20)|phb|20支弩矢}",
+					"(a)一件{@item 鑲釘皮甲|phb} 或 (b)一件{@item 鱗甲|phb}",
+					"一組{@item 盜賊工具|phb}以及一套{@item 地城探險家套裝|phb}"
 				],
-				"goldAlternative": "{@dice 5d4×10|5d4 × 10|Starting Gold}"
+				"goldAlternative": "{@dice 5d4×10|5d4 × 10|起始金錢}"
 			},
 			"fluff": [
 				{
@@ -1200,26 +1200,26 @@
 			"classFeatures": [
 				[
 					{
-						"name": "Magical Tinkering",
+						"name": "魔法工藝", "ENG_name": "Magical Tinkering",
 						"entries": [
-							"At 1st level, you learn how to invest a spark of magic in objects that would otherwise be mundane. To use this ability, you must have thieves' tools, tinker's tools, or other artisan's tools in hand. You then touch a Tiny nonmagical object as an action and give it one of the following magical properties of your choice:",
+							"在1級時，你學會如何在凡物中注入魔法的火花。要使用此能力，你的手上必須要先有盜賊工具、修補匠工具、或其他工匠工具。你接著以一個動作觸碰一個微型的非魔法物體，並賦予它下列其中一個你所選擇的魔法屬性：",
 							{
 								"type": "list",
 								"items": [
-									"The object sheds bright light in a 5-foot radius and dim light for an additional 5 feet.",
-									"Whenever tapped by a creature, the object emits a recorded message that can be heard up to 10 feet away. You utter the message when you bestow this property on the object, and the recording can be no more than 6 seconds long.",
-									"The object continuously emits your choice of an odor or a nonverbal sound (wind, waves, chirping, or the like). The chosen phenomenon is perceivable up to 10 feet away.",
-									"A static visual effect appears on one of the object's surfaces. This effect can be a picture, up to 25 words of text, lines and shapes, or a mixture of these elements, as you like."
+									"該物體散發出5呎半徑的明亮光照以及再延伸5呎的微光光照。",
+									"每當被一個生物觸碰時，該物體將會發出一段可以在最遠10呎內被聽見的錄音訊息。你在賦予該物體這個屬性時說出這段訊息，且這段錄音訊息的長度不能超過6秒。",
+									"該物體將不斷發出你所選擇的一種氣味或非語言聲響（風聲、浪淘聲、鳥鳴、諸如此類）。你所選擇的現象可以在最遠10呎內被感知到。",
+									"一個靜態的視覺效果出現在物體的其中一個表面上。這個效果可以是一幅圖片、最多25個字的文字、線條和形狀、或這些要素的任意組合，由你自由決定。"
 								]
 							},
-							"The chosen property lasts indefinitely. As an action, you can touch the object and end the property early.",
-							"You can give the magic of this feature to multiple objects, touching one object each time you use the feature, and a single object can bear only one of the properties at a time. The maximum number of objects you can affect with the feature at one time is equal to your Intelligence modifier (minimum of one object). If you try to exceed your maximum, the oldest property immediately ends, and then the new property applies."
+							"所選的屬性將永久持續。以一個動作，你可以觸碰該物體並提早終止這個屬性。",
+							"你可以將這個能力的魔法賦予複數個物體，你每次使用這個能力時只能觸碰一個物體，且一個物體同時只能擁有其中一個屬性。你藉由這個能力同時所能影響的物體的最大數量等同於你的智力調整值（最少一個物體）。若你嘗試賦予超過你的最大值，則最舊的魔法屬性將會立即終止，且新的魔法屬性將被賦予上去。"
 						]
 					},
 					{
-						"name": "Spellcasting",
+						"name": "施法", "ENG_name": "Spellcasting",
 						"entries": [
-							"You have studied the workings of magic, how to channel it through objects, and how to awaken it within them. As a result, you have gained a limited ability to cast spells. To observers, you don't appear to be casting spells in a conventional way; you look as if you're producing wonders through various items.",
+							"你已經鑽研了魔法的運作原理，理解如何將魔法引導注入物體，以及知道如何喚醒物體內部的魔法。因此，你獲得了有限的施法能力。在旁觀者眼中，你並不是以傳統方式施法；你看起來就像是透過各種物品以創造奇蹟。",
 							{
 								"type": "entries",
 								"name": "Tools Required",
@@ -1230,7 +1230,7 @@
 							},
 							{
 								"type": "entries",
-								"name": "Cantrips",
+								"name": "戲法",
 								"entries": [
 									"At 1st level, you know two cantrips of your choice from the artificer spell list below. At higher levels, you learn additional artificer cantrips of your choice, as shown in the Cantrips Known column of the Artificer table.",
 									"When you gain a level in this class, you can replace one of the artificer cantrips you know with another cantrip from the artificer spell list."
@@ -1238,7 +1238,7 @@
 							},
 							{
 								"type": "entries",
-								"name": "Preparing and Casting Spells",
+								"name": "準備及施放法術",
 								"entries": [
 									"The Artificer table shows how many spell slots you have to cast your artificer spells. To cast one of your artificer spells of 1st level or higher, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
 									"You prepare the list of artificer spells that are available for you to cast, choosing from the artificer spell list. When you do so, choose a number of artificer spells equal to your Intelligence modifier + half your artificer level, rounded down (minimum of one spell). The spells must be of a level for which you have spell slots.",
@@ -1248,19 +1248,19 @@
 							},
 							{
 								"type": "entries",
-								"name": "Spellcasting Ability",
+								"name": "施法屬性",
 								"entries": [
 									"Intelligence is your spellcasting ability for your artificer spells; your understanding of the theory behind magic allows you to wield these spells with superior skill. You use your Intelligence whenever an artificer spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for an artificer spell you cast and when making an attack roll with one.",
 									{
 										"type": "abilityDc",
-										"name": "Spell",
+										"name": "法術",
 										"attributes": [
 											"int"
 										]
 									},
 									{
 										"type": "abilityAttackMod",
-										"name": "Spell",
+										"name": "法術",
 										"attributes": [
 											"int"
 										]
@@ -1269,9 +1269,9 @@
 							},
 							{
 								"type": "entries",
-								"name": "Ritual Casting",
+								"name": "儀式施法",
 								"entries": [
-									"You can cast an artificer spell as a ritual if that spell has the ritual tag and you have the spell prepared."
+									"若一個奇械師法術具有儀式標籤，且你已準備了該法術，則你可以將它做為儀式法術施放。"
 								]
 							},
 							{

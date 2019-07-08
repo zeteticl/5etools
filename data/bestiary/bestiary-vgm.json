@@ -7647,7 +7647,7 @@
 			]
 		},
 		{
-			"name": "Ki-rin",
+			"name": "麒麟", "ENG_name": "Ki-rin",
 			"size": "H",
 			"type": "celestial",
 			"source": "VGM",
@@ -7744,15 +7744,15 @@
 					]
 				},
 				{
-					"name": "Smite",
+					"name": "猛擊", "tENG_name": "Smite",
 					"entries": [
-						"The ki-rin makes a hoof attack or casts sacred flame."
+						"麒麟進行一次蹄擊、或施放一次{@spell 聖焰}。"
 					]
 				},
 				{
-					"name": "Move",
+					"name": "移動", "tENG_name": "Move",
 					"entries": [
-						"The ki-rin moves up to its half its speed without provoking opportunity attacks."
+						"麒麟移動最多等同它移動速度一半的距離，且不會引發藉機攻擊。"
 					]
 				}
 			],
@@ -7765,11 +7765,11 @@
 				{
 					"name": "天生施法", "tENG_name": "Innate Spellcasting",
 					"headerEntries": [
-						"The ki-rin's innate spellcasting ability is Charisma (spell save DC 17). The ki-rin can innately cast the following spells, requiring no material components:"
+						"麒麟的天生施法屬性為魅力（法術豁免DC 17）。麒麟天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 氣化形體}",
-						"{@spell 強效幻影} (6th-level version)",
+						"{@spell 強效幻影}(6環版本)",
 						"{@spell 御風而行}"
 					],
 					"daily": {
@@ -7782,7 +7782,7 @@
 				{
 					"name": "施法", "tENG_name": "Spellcasting",
 					"headerEntries": [
-						"The ki-rin is a 18th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 17, {@hit 9} to hit with spell attacks). It has the following cleric spells prepared:"
+						"麒麟是18級的施法者。它的施法屬性為睿知（法術豁免DC 17，法術攻擊命中{@hit 9}）。麒麟已準備了以下牧師法術："
 					],
 					"spells": {
 						"0": {
@@ -12948,7 +12948,7 @@
 			]
 		},
 		{
-			"name": "Trapper",
+			"name": "誘捕怪", "ENG_name": "Trapper",
 			"size": "L",
 			"type": "monstrosity",
 			"source": "VGM",
@@ -12980,28 +12980,28 @@
 			"skill": {
 				"stealth": "+2"
 			},
-			"senses": "blindsight 30 ft., 黑暗視覺60呎",
+			"senses": "盲視30呎, 黑暗視覺60呎",
 			"passive": 11,
 			"cr": "3",
 			"trait": [
 				{
 					"name": "擬形", "tENG_name": "False Appearance",
 					"entries": [
-						"While the trapper is attached to a ceiling, floor, or wall and remains motionless, it is almost indistinguishable from an ordinary section of ceiling, floor, or wall. A creature that can see it and succeeds on a DC 20 Intelligence (Investigation) or Intelligence (Nature) check can discern its presence."
+						"當誘捕怪附著於天花板、地面、或牆壁並保持不動時，它看起來幾乎就跟天花板、地面、或牆壁的普通區塊一模一樣。一個可以看見它且成功通過一次DC 20的智力（{@skill 調查}）檢定或智力（{@skill 自然}）檢定的生物才能夠辨別出它的存在。"
 					]
 				},
 				{
 					"name": "蛛行", "tENG_name": "Spider Climb",
 					"entries": [
-						"The trapper 可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
+						"誘捕怪可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Smother",
+					"name": "纏悶", "tENG_name": "Smother",
 					"entries": [
-						"One Large or smaller creature within 5 feet of the trapper must succeed on a DC 14 Dexterity saving throw or be {@condition 被擒} (escape DC 14). Until the grapple ends, the target takes 17 ({@damage 4d6 + 3})鈍擊傷害 plus 3 ({@damage 1d6}) acid damage at the start of each of its turns. While {@condition 被擒} in this way, the target is {@condition 束縛}, {@condition 目盲}, and at risk of suffocating. The trapper can smother only one creature at a time."
+						"一個距離誘捕怪5呎內，體型為大型或更小的生物必須成功通過一次DC 14的敏捷豁免，否則將{@condition 被擒}(逃脫DC 14)。直到擒抱結束前，目標將在它的每個回合開始時受到17 ({@damage 4d6 + 3})鈍擊傷害加3 ({@damage 1d6})酸蝕傷害。當被這個方式擒抱時，目標被{@condition 束縛}，{@condition 目盲}，並處於窒息的危險之下。誘捕怪同時只能纏悶一個生物。"
 					]
 				}
 			],

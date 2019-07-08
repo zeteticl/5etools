@@ -3905,7 +3905,7 @@ Renderer.ship = {
 		return `
 			${Renderer.utils.getBorderTr()}
 			${Renderer.utils.getNameTr(ship)}
-			<tr class="text"><td colspan="6"><i>${Parser.sizeAbvToFull(ship.size)} vehicle${ship.dimensions ? `, (${ship.dimensions.join(" by ")})` : ""}</i><br></td></tr>
+			<tr class="text"><td colspan="6"><i>${Parser.sizeAbvToFull(ship.size)} 載具${ship.dimensions ? `, (${ship.dimensions.join(" by ")})` : ""}</i><br></td></tr>
 			<tr class="text"><td colspan="6">
 				<div><b>運載量</b> ${ship.capCrew} 船員${ship.capPassenger ? `, ${ship.capPassenger} 乘客` : ""}</div>
 				${ship.capCargo ? `<div><b>載貨量</b> ${ship.capCargo} 噸</div>` : ""}
