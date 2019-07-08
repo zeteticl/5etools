@@ -429,8 +429,8 @@
 				{
 					"name": "Hag Eye (Coven Only)",
 					"entries": [
-						"A hag coven can craft a magic item called a hag eye, which is made from a real eye coated in varnish and often fitted to a pendant or other wearable item. The hag eye is usually entrusted to a minion for safekeeping and transport. A hag in the coven can take an action to see what the hag eye sees if the hag eye is on the same plane of existence. A hag eye has AC 10, 1 hit point, and darkvision with a radius of 60 feet. If it is destroyed, each coven member takes {@dice 3d10} psychic damage and is {@condition blinded} for 24 hours.",
-						"A hag coven can have only one hag eye at a time, and creating a new one requires all three members of the coven to perform a ritual. The ritual takes 1 hour, and the hags can't perform it while {@condition blinded}. During the ritual, if the hags take any action other than performing the ritual, they must start over."
+						"A hag coven can craft a magic item called a hag eye, which is made from a real eye coated in varnish and often fitted to a pendant or other wearable item. The hag eye is usually entrusted to a minion for safekeeping and transport. A hag in the coven can take an action to see what the hag eye sees if the hag eye is on the same plane of existence. A hag eye has AC 10, 1 hit point, and darkvision with a radius of 60 feet. If it is destroyed, each coven member takes {@dice 3d10} psychic damage and is {@condition 目盲} for 24 hours.",
+						"A hag coven can have only one hag eye at a time, and creating a new one requires all three members of the coven to perform a ritual. The ritual takes 1 hour, and the hags can't perform it while {@condition 目盲}. During the ritual, if the hags take any action other than performing the ritual, they must start over."
 					]
 				}
 			],
@@ -1304,7 +1304,7 @@
 				{
 					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}22 ({@damage 5d6 + 5}) piercing damage, and the target is {@condition 被擒} (escape DC 15) if it is a Large or smaller creature. Until this grapple ends, the target is {@condition restrained}, and the banderhobb can't use its bite attack or tongue attack on another target."
+						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}22 ({@damage 5d6 + 5}) piercing damage, and the target is {@condition 被擒} (escape DC 15) if it is a Large or smaller creature. Until this grapple ends, the target is {@condition 束縛}, and the banderhobb can't use its bite attack or tongue attack on another target."
 					]
 				},
 				{
@@ -1316,7 +1316,7 @@
 				{
 					"name": "Swallow",
 					"entries": [
-						"The banderhobb makes a bite attack against a Medium or smaller creature it is grappling. If the attack hits, the target is swallowed, and the grapple ends. The swallowed creature is {@condition blinded} and {@condition restrained}, it has total cover against attacks and other effects outside the banderhobb and it takes 10 ({@damage 3d6}) necrotic damage at the start of each of the banderhobb's turns. A creature reduced to 0 hit points in this way stops taking necrotic damage and becomes stable.",
+						"The banderhobb makes a bite attack against a Medium or smaller creature it is grappling. If the attack hits, the target is swallowed, and the grapple ends. The swallowed creature is {@condition 目盲} and {@condition 束縛}, it has total cover against attacks and other effects outside the banderhobb and it takes 10 ({@damage 3d6}) necrotic damage at the start of each of the banderhobb's turns. A creature reduced to 0 hit points in this way stops taking necrotic damage and becomes stable.",
 						"The banderhobb can have only one target swallowed at a time. While the banderhobb isn't {@condition 無力}, it can regurgitate the creature at any time (no action required) in a space within 5 feet of it. The creature exits {@condition 伏地}. If the banderhobb dies, it likewise regurgitates a swallowed creature."
 					]
 				},
@@ -1710,8 +1710,8 @@
 				{
 					"name": "Hag Eye (Coven Only)",
 					"entries": [
-						"A hag coven can craft a magic item called a hag eye, which is made from a real eye coated in varnish and often fitted to a pendant or other wearable item. The hag eye is usually entrusted to a minion for safekeeping and transport. A hag in the coven can take an action to see what the hag eye sees if the hag eye is on the same plane of existence. A hag eye has AC 10, 1 hit point, and darkvision with a radius of 60 feet. If it is destroyed, each coven member takes {@dice 3d10} psychic damage and is {@condition blinded} for 24 hours.",
-						"A hag coven can have only one hag eye at a time, and creating a new one requires all three members of the coven to perform a ritual. The ritual takes 1 hour, and the hags can't perform it while {@condition blinded}. During the ritual, if the hags take any action other than performing the ritual, they must start over."
+						"A hag coven can craft a magic item called a hag eye, which is made from a real eye coated in varnish and often fitted to a pendant or other wearable item. The hag eye is usually entrusted to a minion for safekeeping and transport. A hag in the coven can take an action to see what the hag eye sees if the hag eye is on the same plane of existence. A hag eye has AC 10, 1 hit point, and darkvision with a radius of 60 feet. If it is destroyed, each coven member takes {@dice 3d10} psychic damage and is {@condition 目盲} for 24 hours.",
+						"A hag coven can have only one hag eye at a time, and creating a new one requires all three members of the coven to perform a ritual. The ritual takes 1 hour, and the hags can't perform it while {@condition 目盲}. During the ritual, if the hags take any action other than performing the ritual, they must start over."
 					]
 				}
 			],
@@ -2470,7 +2470,7 @@
 					"entries": [
 						"The boggle creates a puddle of oil that is either slippery or sticky (boggle's choice). The puddle is 1 inch deep and covers the ground in the boggle's space. The puddle is difficult terrain For all creatures except boggles and lasts for 1 hour.",
 						"If the oil is slippery, any creature that enters the puddle's area or starts its turn there must succeed on a DC 11 Dexterity saving throw or fall {@condition 伏地}.",
-						"If the oil is sticky, any creature that enters the puddle's area or starts its turn there must succeed on a DC 11 Strength saving throw or be {@condition restrained}. On its turn. a creature can use an action to try to extricate itself from the sticky puddle, ending the effect and moving into the nearest safe unoccupied space with a successful DC 11 Strength check."
+						"If the oil is sticky, any creature that enters the puddle's area or starts its turn there must succeed on a DC 11 Strength saving throw or be {@condition 束縛}. On its turn. a creature can use an action to try to extricate itself from the sticky puddle, ending the effect and moving into the nearest safe unoccupied space with a successful DC 11 Strength check."
 					]
 				}
 			],
@@ -3009,7 +3009,7 @@
 				{
 					"name": "Web {@recharge 5}",
 					"entries": [
-						"{@atk rw} 命中{@hit 5}，射程30/60呎， one Large or smaller creature. {@h}The target is {@condition restrained} by webbing. As an action, the {@condition restrained} target can make a DC 11 Strength check, bursting the webbing on a success. The webbing can also be attacked and destroyed (AC 10; 5 hit points; vulnerability to fire damage; immunity to bludgeoning, poison, and psychic damage)."
+						"{@atk rw} 命中{@hit 5}，射程30/60呎， one Large or smaller creature. {@h}The target is {@condition 束縛} by webbing. As an action, the {@condition 束縛} target can make a DC 11 Strength check, bursting the webbing on a success. The webbing can also be attacked and destroyed (AC 10; 5 hit points; vulnerability to fire damage; immunity to bludgeoning, poison, and psychic damage)."
 					]
 				}
 			],
@@ -3545,7 +3545,7 @@
 				{
 					"name": "Death Flash",
 					"entries": [
-						"When the darkling dies, nonmagical light flashes out from it in a 10-foot radius as its body and possessions, other than metal or magic objects, burn to ash. Any creature in that area and able to see the bright light must succeed on a DC 10 Constitution saving throw or be {@condition blinded} until the end of the creature's next turn."
+						"When the darkling dies, nonmagical light flashes out from it in a 10-foot radius as its body and possessions, other than metal or magic objects, burn to ash. Any creature in that area and able to see the bright light must succeed on a DC 10 Constitution saving throw or be {@condition 目盲} until the end of the creature's next turn."
 					]
 				},
 				{
@@ -3630,7 +3630,7 @@
 				{
 					"name": "Death Burn",
 					"entries": [
-						"When the darkling elder dies, magical light flashes out from it in a 10-foot radius as its body and possessions, other than metal or magic objects, burn to ash. Any creature in that area must make a DC 11 Constitution saving throw. On a failure, the creature takes 7 ({@damage 2d6}) radiant damage and, if the creature can see the light, is {@condition blinded} until the end of its next turn. If the saving throw is successful, the creature takes half the damage and isn't {@condition blinded}."
+						"When the darkling elder dies, magical light flashes out from it in a 10-foot radius as its body and possessions, other than metal or magic objects, burn to ash. Any creature in that area must make a DC 11 Constitution saving throw. On a failure, the creature takes 7 ({@damage 2d6}) radiant damage and, if the creature can see the light, is {@condition 目盲} until the end of its next turn. If the saving throw is successful, the creature takes half the damage and isn't {@condition 目盲}."
 					]
 				}
 			],
@@ -3749,7 +3749,7 @@
 				{
 					"name": "Tentacle",
 					"entries": [
-						"{@atk mw} 命中{@hit 8}，觸及20呎，單一目標。{@h}14 ({@damage 3d6 + 4}) piercing damage, and the target is {@condition 被擒} (escape DC 14) if it is a Huge or smaller creature. Until this grapple ends, the target is {@condition restrained}, and the death kiss can't use the same tentacle on another target. The death kiss has ten tentacles."
+						"{@atk mw} 命中{@hit 8}，觸及20呎，單一目標。{@h}14 ({@damage 3d6 + 4}) piercing damage, and the target is {@condition 被擒} (escape DC 14) if it is a Huge or smaller creature. Until this grapple ends, the target is {@condition 束縛}, and the death kiss can't use the same tentacle on another target. The death kiss has ten tentacles."
 					]
 				},
 				{
@@ -5626,8 +5626,8 @@
 				{
 					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}22 ({@damage 3d10 + 6}) piercing damage, and the target is swallowed if it is a Medium or smaller creature. A swallowed creature is {@condition blinded} and {@condition restrained}, has total cover against attacks and other effects outside the froghemoth, and takes 10 ({@damage 3d6}) acid damage at the start of each of the froghemoth's turns.",
-						"The froghemoth's gullet can hold up to two creatures at a time. If the Froghemoth takes 20 damage or more on a single turn from a creature inside it, the Froghemoth must succeed on a DC 20 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, each of which falls {@condition 伏地} in a space within 10 feet of the froghemoth. If the froghemoth dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse using 10 feet of movement, exiting {@condition 伏地}."
+						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}22 ({@damage 3d10 + 6}) piercing damage, and the target is swallowed if it is a Medium or smaller creature. A swallowed creature is {@condition 目盲} and {@condition 束縛}, has total cover against attacks and other effects outside the froghemoth, and takes 10 ({@damage 3d6}) acid damage at the start of each of the froghemoth's turns.",
+						"The froghemoth's gullet can hold up to two creatures at a time. If the Froghemoth takes 20 damage or more on a single turn from a creature inside it, the Froghemoth must succeed on a DC 20 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, each of which falls {@condition 伏地} in a space within 10 feet of the froghemoth. If the froghemoth dies, a swallowed creature is no longer {@condition 束縛} by it and can escape from the corpse using 10 feet of movement, exiting {@condition 伏地}."
 					]
 				},
 				{
@@ -5714,7 +5714,7 @@
 				{
 					"name": "Extra Heads",
 					"entries": [
-						"The giant has a 25 percent chance of having more than one head. If it has more than one, it has advantage on Wisdom ({@skill Perception}) checks and on saving throws against being {@condition blinded}, {@condition 魅惑}, {@condition deafened}, {@condition 恐懼}, {@condition 震懾}, or knocked {@condition 昏迷}."
+						"The giant has a 25 percent chance of having more than one head. If it has more than one, it has advantage on Wisdom ({@skill Perception}) checks and on saving throws against being {@condition 目盲}, {@condition 魅惑}, {@condition deafened}, {@condition 恐懼}, {@condition 震懾}, or knocked {@condition 昏迷}."
 					]
 				},
 				{
@@ -7647,7 +7647,7 @@
 			]
 		},
 		{
-			"name": "Ki-rin",
+			"name": "麒麟", "ENG_name": "Ki-rin",
 			"size": "H",
 			"type": "celestial",
 			"source": "VGM",
@@ -7744,15 +7744,15 @@
 					]
 				},
 				{
-					"name": "Smite",
+					"name": "猛擊", "tENG_name": "Smite",
 					"entries": [
-						"The ki-rin makes a hoof attack or casts sacred flame."
+						"麒麟進行一次蹄擊、或施放一次{@spell 聖焰}。"
 					]
 				},
 				{
-					"name": "Move",
+					"name": "移動", "tENG_name": "Move",
 					"entries": [
-						"The ki-rin moves up to its half its speed without provoking opportunity attacks."
+						"麒麟移動最多等同它移動速度一半的距離，且不會引發藉機攻擊。"
 					]
 				}
 			],
@@ -7765,11 +7765,11 @@
 				{
 					"name": "天生施法", "tENG_name": "Innate Spellcasting",
 					"headerEntries": [
-						"The ki-rin's innate spellcasting ability is Charisma (spell save DC 17). The ki-rin can innately cast the following spells, requiring no material components:"
+						"麒麟的天生施法屬性為魅力（法術豁免DC 17）。麒麟天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 氣化形體}",
-						"{@spell 強效幻影} (6th-level version)",
+						"{@spell 強效幻影}(6環版本)",
 						"{@spell 御風而行}"
 					],
 					"daily": {
@@ -7782,7 +7782,7 @@
 				{
 					"name": "施法", "tENG_name": "Spellcasting",
 					"headerEntries": [
-						"The ki-rin is a 18th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 17, {@hit 9} to hit with spell attacks). It has the following cleric spells prepared:"
+						"麒麟是18級的施法者。它的施法屬性為睿知（法術豁免DC 17，法術攻擊命中{@hit 9}）。麒麟已準備了以下牧師法術："
 					],
 					"spells": {
 						"0": {
@@ -8301,7 +8301,7 @@
 				{
 					"name": "Command Hair",
 					"entries": [
-						"The korred has at least one 50-foot-long rope woven out of its hair. As a bonus action, the korred commands one such rope within 30 feet of it to move up to 20 feet and entangle a Large or smaller creature that the korred can see. The target must succeed on a DC 13 Dexterity saving throw or become {@condition 被擒} by the rope (escape DC 13). Until this grapple ends. the target is {@condition restrained}. The korred can use a bonus action to release the target, which is also freed if the korred dies or becomes {@condition 無力}.",
+						"The korred has at least one 50-foot-long rope woven out of its hair. As a bonus action, the korred commands one such rope within 30 feet of it to move up to 20 feet and entangle a Large or smaller creature that the korred can see. The target must succeed on a DC 13 Dexterity saving throw or become {@condition 被擒} by the rope (escape DC 13). Until this grapple ends. the target is {@condition 束縛}. The korred can use a bonus action to release the target, which is also freed if the korred dies or becomes {@condition 無力}.",
 						"A rope of korred hair has AC 20 and 20 hit points. It regains 1 hit point at the start of each of the korred's turns while it has at least 1 hit point and the korred is alive. If the rope drops to 0 hit points, it is destroyed."
 					]
 				},
@@ -9247,7 +9247,7 @@
 						"3. Psychic Ray: The target must succeed on a DC 13 Intelligence saving throw or take 27 ({@damage 6d8}) psychic damage.",
 						"4. Slowing Ray: The targeted creature must make a DC 13 Dexterity saving throw. On a failed save, the target's speed is halved for 1 minute. In addition, the creature can't take reactions, and it can take either an action or a bonus action on its turn but not both. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
 						"5. Stunning Ray: The targeted creature must succeed on a DC 13 Constitution saving throw or be {@condition 震懾} for 1 minute. The target can repeat the saving throw at the start of each of its turns, ending the effect on itself on a success.",
-						"6. Telekinetic Ray: If the target is a creature, it must make a DC 13 Strength saving throw. On a failed save, the mindwitness moves it up to 30 feet in any direction, and it is {@condition restrained} by the ray's telekinetic grip until the start of the mindwitness's next turn or until the mindwitness is {@condition 無力}.",
+						"6. Telekinetic Ray: If the target is a creature, it must make a DC 13 Strength saving throw. On a failed save, the mindwitness moves it up to 30 feet in any direction, and it is {@condition 束縛} by the ray's telekinetic grip until the start of the mindwitness's next turn or until the mindwitness is {@condition 無力}.",
 						"If the target is an object weighing 300 pounds or less that isn't being worn or carried, it is telekinetically moved up to 30 feet in any direction. The mindwitness can also exert fine control on objects with this ray, such as manipulating a simple tool or opening a door or a container."
 					]
 				}
@@ -9357,7 +9357,7 @@
 				{
 					"name": "Tentacles",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及15呎，單一目標。{@h}15 ({@damage 3d8 + 2})鈍擊傷害, and the target is {@condition 被擒} (escape DC 14) if it is a Large or smaller creature. Until this grapple ends. the target is {@condition restrained} and takes 15 ({@damage 3d8 + 2})鈍擊傷害 at the start of each of the morkoth's turns. and the morkoth can't use its tentacles on another target."
+						"{@atk mw} 命中{@hit 6}，觸及15呎，單一目標。{@h}15 ({@damage 3d8 + 2})鈍擊傷害, and the target is {@condition 被擒} (escape DC 14) if it is a Large or smaller creature. Until this grapple ends. the target is {@condition 束縛} and takes 15 ({@damage 3d8 + 2})鈍擊傷害 at the start of each of the morkoth's turns. and the morkoth can't use its tentacles on another target."
 					]
 				},
 				{
@@ -10088,8 +10088,8 @@
 				{
 					"name": "Tentacles",
 					"entries": [
-						"{@atk mw} 命中{@hit 13}，觸及15呎，單一目標。{@h}21 ({@damage 3d8 + 8})鈍擊傷害 plus 13 ({@damage 3d8}) psychic damage. If the target is a Large or smaller creature, it must succeed on a DC 18 Strength saving throw or be swallowed by the neothelid. A swallowed creature is {@condition blinded} and {@condition restrained}, it has total cover against attacks and other effects outside the neothelid, and it takes 35 ({@damage 10d6}) acid damage at the start of each of the neothelid's turns.",
-						"If the neothelid takes 30 damage or more on a single turn from a creature inside it, the neothelid must succeed on a DC 18 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition 伏地} in a space within 10 feet of the neothelid. If the neothelid dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse by using 20 feet of movement, exiting {@condition 伏地}."
+						"{@atk mw} 命中{@hit 13}，觸及15呎，單一目標。{@h}21 ({@damage 3d8 + 8})鈍擊傷害 plus 13 ({@damage 3d8}) psychic damage. If the target is a Large or smaller creature, it must succeed on a DC 18 Strength saving throw or be swallowed by the neothelid. A swallowed creature is {@condition 目盲} and {@condition 束縛}, it has total cover against attacks and other effects outside the neothelid, and it takes 35 ({@damage 10d6}) acid damage at the start of each of the neothelid's turns.",
+						"If the neothelid takes 30 damage or more on a single turn from a creature inside it, the neothelid must succeed on a DC 18 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition 伏地} in a space within 10 feet of the neothelid. If the neothelid dies, a swallowed creature is no longer {@condition 束縛} by it and can escape from the corpse by using 20 feet of movement, exiting {@condition 伏地}."
 					]
 				},
 				{
@@ -11015,7 +11015,7 @@
 				{
 					"name": "Blurred Movement",
 					"entries": [
-						"Attack rolls against the quickling have disadvantage unless the quickling is {@condition 無力} or {@condition restrained}."
+						"Attack rolls against the quickling have disadvantage unless the quickling is {@condition 無力} or {@condition 束縛}."
 					]
 				},
 				{
@@ -12777,7 +12777,7 @@
 				{
 					"name": "Spiked Chain",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及10呎，單一目標。{@h}6 ({@damage 1d6 + 3}) piercing damage, and the target is {@condition 被擒} (escape DC 11) if it is a Large or smaller creature. Until this grapple ends, the target is {@condition restrained}, and the tlincalli can't use the spiked chain against another target."
+						"{@atk mw} 命中{@hit 6}，觸及10呎，單一目標。{@h}6 ({@damage 1d6 + 3}) piercing damage, and the target is {@condition 被擒} (escape DC 11) if it is a Large or smaller creature. Until this grapple ends, the target is {@condition 束縛}, and the tlincalli can't use the spiked chain against another target."
 					]
 				},
 				{
@@ -12948,7 +12948,7 @@
 			]
 		},
 		{
-			"name": "Trapper",
+			"name": "誘捕怪", "ENG_name": "Trapper",
 			"size": "L",
 			"type": "monstrosity",
 			"source": "VGM",
@@ -12980,28 +12980,28 @@
 			"skill": {
 				"stealth": "+2"
 			},
-			"senses": "blindsight 30 ft., 黑暗視覺60呎",
+			"senses": "盲視30呎, 黑暗視覺60呎",
 			"passive": 11,
 			"cr": "3",
 			"trait": [
 				{
 					"name": "擬形", "tENG_name": "False Appearance",
 					"entries": [
-						"While the trapper is attached to a ceiling, floor, or wall and remains motionless, it is almost indistinguishable from an ordinary section of ceiling, floor, or wall. A creature that can see it and succeeds on a DC 20 Intelligence (Investigation) or Intelligence (Nature) check can discern its presence."
+						"當誘捕怪附著於天花板、地面、或牆壁並保持不動時，它看起來幾乎就跟天花板、地面、或牆壁的普通區塊一模一樣。一個可以看見它且成功通過一次DC 20的智力（{@skill 調查}）檢定或智力（{@skill 自然}）檢定的生物才能夠辨別出它的存在。"
 					]
 				},
 				{
 					"name": "蛛行", "tENG_name": "Spider Climb",
 					"entries": [
-						"The trapper 可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
+						"誘捕怪可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Smother",
+					"name": "纏悶", "tENG_name": "Smother",
 					"entries": [
-						"One Large or smaller creature within 5 feet of the trapper must succeed on a DC 14 Dexterity saving throw or be {@condition 被擒} (escape DC 14). Until the grapple ends, the target takes 17 ({@damage 4d6 + 3})鈍擊傷害 plus 3 ({@damage 1d6}) acid damage at the start of each of its turns. While {@condition 被擒} in this way, the target is {@condition restrained}, {@condition blinded}, and at risk of suffocating. The trapper can smother only one creature at a time."
+						"一個距離誘捕怪5呎內，體型為大型或更小的生物必須成功通過一次DC 14的敏捷豁免，否則將{@condition 被擒}(逃脫DC 14)。直到擒抱結束前，目標將在它的每個回合開始時受到17 ({@damage 4d6 + 3})鈍擊傷害加3 ({@damage 1d6})酸蝕傷害。當被這個方式擒抱時，目標被{@condition 束縛}，{@condition 目盲}，並處於窒息的危險之下。誘捕怪同時只能纏悶一個生物。"
 					]
 				}
 			],
