@@ -1118,7 +1118,7 @@
 			]
 		},
 		{
-			"name": "Babau",
+			"name": "巴布魔", "ENG_name": "Babau",
 			"size": "M",
 			"type": {
 				"type": "fiend",
@@ -1183,7 +1183,7 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The babau makes two melee attacks. It can also use Weakening Gaze before or after making these attacks."
+						"巴布魔進行二次近戰攻擊。它也可以在進行這些攻擊之前或之後使用它的弱化凝視。"
 					]
 				},
 				{
@@ -1195,13 +1195,13 @@
 				{
 					"name": "矛", "tENG_name": "Spear",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 6}，觸及5呎 或 射程20/60呎，單一目標。{@h}7 ({@damage 1d6 + 4}) piercing damage, or 8 ({@damage 1d8 + 4}) piercing damage when used with two hands to make a melee attack."
+						"{@atk mw,rw} 命中{@hit 6}，觸及5呎 或 射程20/60呎，單一目標。{@h}7 ({@damage 1d6 + 4})穿刺傷害，或若雙手使用以進行一次近戰攻擊時則造成 8 ({@damage 1d8 + 4})穿刺傷害。"
 					]
 				},
 				{
-					"name": "Weakening Gaze",
+					"name": "弱化凝視", "tENG_name": "Weakening Gaze",
 					"entries": [
-						"The babau targets one creature that it can see within 20 feet of it. The target must make a DC 13 Constitution saving throw. On a failed save, the target deals only half damage with weapon attacks that use Strength for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"巴布魔選擇一個距離它20呎內且它所能看見的生物做為目標。目標必須進行一次DC 13的體質豁免。若豁免失敗，則目標在1分鐘內使用力量所進行的武器攻擊將只造成一半的傷害。目標可以在它的每個回合結束時重複這個豁免檢定，豁免成功則結束這個效果對它的影響。"
 					]
 				}
 			],
@@ -1210,13 +1210,13 @@
 				{
 					"name": "天生施法", "tENG_name": "Innate Spellcasting",
 					"headerEntries": [
-						"The babau's innate spellcasting ability is Wisdom (spell save DC 11). The babau can innately cast the following spells, requiring no material components:"
+						"巴布魔的天生施法屬性為魅力（法術豁免DC 11）。巴布魔天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 黑暗術}",
 						"{@spell 解除魔法}",
 						"{@spell 恐懼術}",
-						"{@spell heat metal}",
+						"{@spell 灼熱金屬}",
 						"{@spell 浮空術}"
 					],
 					"ability": "wis"
@@ -1477,7 +1477,7 @@
 			]
 		},
 		{
-			"name": "Barghest",
+			"name": "犬魔", "ENG_name": "Barghest",
 			"size": "L",
 			"type": {
 				"type": "fiend",
@@ -1505,7 +1505,7 @@
 			"speed": {
 				"walk": {
 					"number": 60,
-					"condition": " (30 ft. in goblin form)"
+					"condition": " (哥布林型態下則為30呎)"
 				}
 			},
 			"str": 19,
@@ -1542,32 +1542,32 @@
 			],
 			"senses": "盲視60呎, 黑暗視覺60呎",
 			"passive": 15,
-			"languages": "Abyssal, Common, Goblin, Infernal, telepathy 60 ft.",
+			"languages": "深淵語、通用語、哥布林語、煉獄語、心靈感應60呎",
 			"cr": "4",
 			"trait": [
 				{
 					"name": "變形者", "tENG_name": "Shapechanger",
 					"entries": [
-						"The barghest can use its action to polymorph into a Small goblin or back into its true form. Other than its size and speed, its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. The barghest reverts to its true form if it dies."
+						"犬魔可以使用它的動作以變形成一個小型的哥布林，或變回它的真實型態。除了它的體型和速度之外，它在各個型態的數據保持不變。任何它所穿戴或攜帶的裝備並不會隨著變形發生轉變。犬魔會在死亡時回復它的真實型態。"
 					]
 				},
 				{
-					"name": "Fire Banishment",
+					"name": "火焰放逐", "tENG_name": "Fire Banishment",
 					"entries": [
-						"When the barghest starts its turn engulfed in flames that are at least 10 feet high or wide, it must succeed on a DC 15 Charisma saving throw or be instantly banished to Gehenna. Instantaneous bursts of flame (such as a red dragon's breath or a fireball spell) don't have this effect on the barghest."
+						"當犬魔在它的回合開始時被一團至少10呎高或寬的火焰給吞噬，則它必須成功通過一次DC 15的魅力豁免，否則將立即被放逐回焦炎地獄(Gehenna)。瞬間爆發的烈焰（例如紅龍的火焰吐息和火球術）並不會對犬魔產生這種影響。"
 					]
 				},
 				{
-					"name": "Keen Smell",
+					"name": "敏銳嗅覺", "tENG_name": "Keen Smell",
 					"entries": [
-						"The barghest has advantage on Wisdom ({@skill Perception}) checks that rely on smell."
+						"犬魔在依賴嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Soul Feeding",
+					"name": "靈魂飼食", "tENG_name": "Soul Feeding",
 					"entries": [
-						"A barghest can feed on the corpse of a humanoid that it killed that has been dead for less than 10 minutes, devouring both flesh and soul in doing so. This feeding takes at least 1 minute, and it destroys the victim's body. The victim's soul is trapped in the barghest for 24 hours, after which time it is digested. If the barghest dies before the soul is digested, the soul is released.",
-						"While a humanoid's soul is trapped in a barghest, any form of revival that could work has only a 50 percent chance of doing so, freeing the soul from the barghest if it is successful. Once a creature's soul is digested, however, no mortal magic can return that humanoid to life."
+						"犬魔可以吞時它在一具它在10分鐘內殺死的類人生物的屍體，同時消化它的血肉和靈魂。這個吞食的過程會花費至少1分鐘的時間，且它將摧毀掉受害者的屍體。受害者的靈魂將被困在犬魔體內長達24小時，且在這之後被徹底消化。若犬魔在靈魂被消化殆盡之前死亡，則這些靈魂將被釋放。",
+						"當一個類人生物的靈魂被困在犬魔體內時，任何形式的復活手段都只有50%的機率發揮作用，成功則將該靈魂從犬魔體內釋放。一旦靈魂被消化殆盡，則再也沒有任何凡間魔法能夠使該類人生物復活。"
 					]
 				}
 			],
@@ -1590,12 +1590,12 @@
 				{
 					"name": "天生施法", "tENG_name": "Innate Spellcasting",
 					"headerEntries": [
-						"The barghest's innate spellcasting ability is Charisma (spell save DC 12). It can innately cast the following spells, requiring no material components:"
+						"犬魔的天生施法屬性為魅力（法術豁免DC 12）。它天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 浮空術}",
 						"{@spell 次級幻象}",
-						"{@spell pass without trace}"
+						"{@spell 行蹤無跡}"
 					],
 					"daily": {
 						"1e": [
@@ -2584,7 +2584,7 @@
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Keen Smell",
+					"name": "敏銳嗅覺", "tENG_name": "Keen Smell",
 					"entries": [
 						"The catoblepas has advantage on Wisdom ({@skill Perception}) checks that rely on smell."
 					]
@@ -3125,7 +3125,7 @@
 			"cr": "11",
 			"trait": [
 				{
-					"name": "Keen Smell",
+					"name": "敏銳嗅覺", "tENG_name": "Keen Smell",
 					"entries": [
 						"The giant has advantage on Wisdom ({@skill Perception}) checks that rely on smell."
 					]
@@ -4432,7 +4432,7 @@
 			]
 		},
 		{
-			"name": "Draegloth",
+			"name": "卓格羅斯(魔裔卓爾)", "ENG_name": "Draegloth",
 			"size": "L",
 			"type": {
 				"type": "fiend",
@@ -4483,13 +4483,13 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 13,
-			"languages": "Abyssal, Elvish, Undercommon",
+			"languages": "深淵語、精靈語、地底通用語",
 			"cr": "7",
 			"trait": [
 				{
-					"name": "Fey Ancestry",
+					"name": "精類血統", "tENG_name": "Fey Ancestry",
 					"entries": [
-						"The draegloth has advantage on saving throws against being {@condition 魅惑}, and magic can't put it to sleep."
+						"卓格羅斯在對抗{@condition 魅惑}的豁免檢定中具有優勢，且魔法無法使它入睡。"
 					]
 				}
 			],
@@ -4497,7 +4497,7 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The draegloth makes three attacks: one with its bite and two with its claws."
+						"卓格羅斯進行三次攻擊：一次啃咬，二次爪抓。"
 					]
 				},
 				{
@@ -4518,7 +4518,7 @@
 				{
 					"name": "天生施法", "tENG_name": "Innate Spellcasting",
 					"headerEntries": [
-						"The draegloth's innate spellcasting ability is Charisma (spell save DC 11). The draegloth can innately cast the following spells, requiring no material components:"
+						"卓格羅斯的天生施法屬性為魅力（法術豁免DC 11）。卓格羅斯天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 黑暗術}"
@@ -8539,7 +8539,7 @@
 			"cr": "3",
 			"trait": [
 				{
-					"name": "Keen Smell",
+					"name": "敏銳嗅覺", "tENG_name": "Keen Smell",
 					"entries": [
 						"The leucrotta has advantage on Wisdom ({@skill Perception}) checks that rely on smell."
 					]
@@ -8828,7 +8828,7 @@
 			]
 		},
 		{
-			"name": "Maw Demon",
+			"name": "腹齒魔", "ENG_name": "Maw Demon",
 			"size": "M",
 			"type": {
 				"type": "fiend",
@@ -8877,13 +8877,13 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 9,
-			"languages": "understands Abyssal but can't speak",
+			"languages": "理解深淵語，但不會說",
 			"cr": "1",
 			"trait": [
 				{
 					"name": "暴走", "tENG_name": "Rampage",
 					"entries": [
-						"When it reduces a creature to 0 hit points with a melee attack on its turn, the maw demon can take a bonus action to move up to half its speed and make a bite attack."
+						"當腹齒魔在它的回合以一次近戰攻擊將一個生物的生命值歸零，腹齒魔可以使用一個附贈動作以移動最多等同於它移動速度一半的距離，並進行一次啃咬攻擊。"
 					]
 				}
 			],
@@ -11517,7 +11517,7 @@
 			]
 		},
 		{
-			"name": "Shoosuva",
+			"name": "蘇蘇瓦魔犬", "ENG_name": "Shoosuva",
 			"size": "L",
 			"type": {
 				"type": "fiend",
@@ -11579,13 +11579,13 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 12,
-			"languages": "Abyssal, Gnoll, telepathy 120 ft.",
+			"languages": "深淵語、豺狼人語、心靈感應120呎",
 			"cr": "8",
 			"trait": [
 				{
 					"name": "暴走", "tENG_name": "Rampage",
 					"entries": [
-						"When it reduces a creature to 0 hit points with a melee attack on its turn, the shoosuva can take a bonus action to move up to half its speed and make a bite attack."
+						"當蘇蘇瓦魔犬在它的回合以一次近戰攻擊將一個生物的生命值歸零，蘇蘇瓦魔犬可以使用一個附贈動作以移動最多等同於它移動速度一半的距離，並進行一次啃咬攻擊。"
 					]
 				}
 			],
@@ -11593,7 +11593,7 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The shoosuva makes two attacks: one with its bite and one with its tail stinger."
+						"蘇蘇瓦魔犬進行二次攻擊：一次啃咬，一次尾刺。"
 					]
 				},
 				{
@@ -11603,9 +11603,9 @@
 					]
 				},
 				{
-					"name": "Tail Stinger",
+					"name": "尾刺", "tENG_name": "Tail Stinger",
 					"entries": [
-						"{@atk mw} 命中{@hit 7}，觸及15呎，單一生物。{@h}13 ({@damage 2d8 + 4}) piercing damage, and the target must succeed on a DC 14 Constitution saving throw or become {@condition 中毒}. While {@condition 中毒}, the target is also {@condition 麻痺}. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk mw} 命中{@hit 7}，觸及15呎，單一生物。{@h}13 ({@damage 2d8 + 4})穿刺傷害，且目標必須成功通過一次DC 14的體質豁免，否則陷入{@condition 中毒}狀態。當陷入{@condition 中毒}狀態時，目標將連帶陷入{@condition 麻痺}狀態。目標可以在它的每個回合結束時重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。"
 					]
 				}
 			],
@@ -12528,7 +12528,7 @@
 			]
 		},
 		{
-			"name": "塔那羅克", "ENG_name": "Tanarukk",
+			"name": "塔那羅克(魔裔獸人)", "ENG_name": "Tanarukk",
 			"size": "M",
 			"type": {
 				"type": "fiend",
