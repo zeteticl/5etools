@@ -222,7 +222,7 @@
 			],
 			"senses": "真實視覺120呎",
 			"passive": 17,
-			"languages": "Deep Speech, Undercommon, telepathy 120 ft.",
+			"languages": "Deep Speech, Undercommon, 心靈感應120呎",
 			"cr": "10",
 			"trait": [
 				{
@@ -4055,7 +4055,7 @@
 			]
 		},
 		{
-			"name": "Devourer",
+			"name": "囚魂魔", "ENG_name": "Devourer",
 			"size": "L",
 			"type": "fiend",
 			"source": "VGM",
@@ -4097,13 +4097,13 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 10,
-			"languages": "Abyssal, telepathy 120 ft.",
+			"languages": "深淵語、心靈感應120呎",
 			"cr": "13",
 			"action": [
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The devourer makes two claw attacks and can use either Imprison Soul or Soul Rend."
+						"囚魂魔進行二次爪抓，且可以使用囚禁靈魂或撕裂靈魂 makes two claw attacks and can use either Imprison Soul or Soul Rend."
 					]
 				},
 				{
@@ -4113,15 +4113,15 @@
 					]
 				},
 				{
-					"name": "Imprison Soul",
+					"name": "囚禁靈魂", "tENG_name": "Imprison Soul",
 					"entries": [
-						"The devourer chooses a living humanoid with 0 hit points that it can see within 30 feet of it. That creature is teleported inside the devourer's ribcage and imprisoned there. A creature imprisoned in this manner has disadvantage on death saving throws. If it dies while imprisoned, the devourer regains 25 hit points, immediately recharges Soul Rend, and gains an additional action on its next turn. Additionally, at the start of its next turn, the devourer regurgitates the slain creature as a bonus action, and the creature becomes an undead. If the victim had 2 or fewer Hit Dice, it becomes a zombie. if it had 3 to 5 Hit Dice, it becomes a ghoul. Otherwise, it becomes a wight. A devourer can imprison only one creature at a time."
+						"囚魂魔選擇一個距離它30呎內，它所能看見，生命值為0且仍活著的類人生物。該生物將被傳送到囚魂魔的胸腔內，並被囚禁在該處。被這個方式囚禁的生物在死亡豁免中具有劣勢。若它在被囚禁時死亡，則囚魂魔將回復25點生命值，撕裂靈魂動作項將立即被充能，且在它的下個回合獲得一個額外的動作。此外，在囚魂魔的下個回合開始時，它能夠以一個附贈動作將被殺死的生物反芻吐出，並使該生物變為不死生物。若受害者的生命骰為2顆或以下，則它將變為{@creature 殭屍}；若它的生命骰為3到5顆，則它變為{@creature 食屍鬼}；除此之外的情況，它將變為{@creature 屍妖}。一個囚魂魔同時只能囚禁一個生物。"
 					]
 				},
 				{
-					"name": "Soul Rend {@recharge}",
+					"name": "撕裂靈魂 {@recharge}", "tENG_name": "Soul Rend {@recharge}",
 					"entries": [
-						"The devourer creates a vortex of life-draining energy in a 20-foot radius centered on itself. Each humanoid in that area must make a DC 18 Constitution saving throw, taking 44 ({@damage 8d10}) necrotic damage on a failed save, or half as much damage on a successful one. Increase the damage by 10 for each living humanoid with 0 hit points in that area."
+						"囚魂魔以它自己為中心創造出一道20呎半徑，能夠汲取生命的能量亂流。每個在範圍內的類人生物都必須進行一次DC 18的體質豁免，豁免失敗將受到44 ({@damage 8d10})死靈傷害，豁免成功則只受到一半的傷害。範圍內每有一個生命值為0但仍活著的類人生物，這個傷害就會增加10點。"
 					]
 				}
 			],
@@ -6070,7 +6070,7 @@
 			]
 		},
 		{
-			"name": "Girallon",
+			"name": "四臂猩猩", "ENG_name": "Girallon",
 			"size": "L",
 			"type": "monstrosity",
 			"source": "VGM",
@@ -6105,7 +6105,7 @@
 				{
 					"name": "侵略性", "tENG_name": "Aggressive",
 					"entries": [
-						"As a bonus action, the girallon can move up to its speed toward a hostile creature that it can see."
+						"以一個附贈動作，四臂猩猩可以向一個它所能看見的敵意生物移動最多等同它移動速度的距離。"
 					]
 				}
 			],
@@ -6113,7 +6113,7 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The girallon makes five attacks: one with its bite and four with its claws."
+						"四臂猩猩進行五次攻擊：一次啃咬，四次爪抓。"
 					]
 				},
 				{
@@ -6125,7 +6125,7 @@
 				{
 					"name": "爪抓", "tENG_name": "Claw",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit. reach 10 ft., one target. {@h}7 ({@damage 1d6 + 4})劈砍傷害。"
+						"{@atk mw} 命中{@hit 6}，觸及10呎，單一目標。{@h}7 ({@damage 1d6 + 4})劈砍傷害。"
 					]
 				}
 			],
@@ -7298,7 +7298,7 @@
 			],
 			"senses": "真實視覺120呎",
 			"passive": 19,
-			"languages": "Deep Speech, Undercommon, telepathy 120 ft.",
+			"languages": "Deep Speech, Undercommon, 心靈感應120呎",
 			"cr": "22",
 			"trait": [
 				{
@@ -8915,7 +8915,7 @@
 			]
 		},
 		{
-			"name": "Meenlock",
+			"name": "凌弱精怪", "ENG_name": "Meenlock",
 			"size": "S",
 			"type": "fey",
 			"source": "VGM",
@@ -8954,25 +8954,25 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 14,
-			"languages": "telepathy 120 ft.",
+			"languages": "心靈感應120呎",
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Fear Aura",
+					"name": "恐懼靈光", "tENG_name": "Fear Aura",
 					"entries": [
-						"Any beast or humanoid that starts its turn within 10 feet of the meenlock must succeed on a DC 11 Wisdom saving throw or be {@condition 恐懼} until the start of the creature's next turn."
+						"任何在距離凌弱精怪10呎內開始它回合的野獸和類人生物都必須成功通過一次DC 11的睿知豁免，否則將陷入{@condition 恐懼}直到該生物的下個回合開始。"
 					]
 				},
 				{
 					"name": "光線敏感", "tENG_name": "Light Sensitivity",
 					"entries": [
-						"While in bright light, the meenlock has disadvantage on attack rolls, as well as on Wisdom ({@skill Perception}) checks that rely on sight."
+						"當處於明亮光照環境時，凌弱精怪在攻擊檢定、以及依賴視覺的睿知（{@skill 感知}）檢定中具有劣勢。"
 					]
 				},
 				{
-					"name": "Shadow Teleport {@recharge 5}",
+					"name": "陰影傳送 {@recharge 5}", "tENG_name": "Shadow Teleport {@recharge 5}",
 					"entries": [
-						"As a bonus action, the meenlock can teleport to an unoccupied space within 30 feet of it, provided that both the space it's teleporting from and its destination are in dim light or darkness. The destination need not be within line of sight."
+						"以一個附贈動作，只要凌弱精怪傳送離開的空間和目的地都處於微光光照或黑暗環境，它就可以將自己傳送到30呎內一處未被佔據空間。其目的地並不需要在它的視線內。"
 					]
 				}
 			],
@@ -8980,7 +8980,7 @@
 				{
 					"name": "爪抓", "tENG_name": "Claws",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}7 ({@damage 2d4 + 2})劈砍傷害, and the target must succeed on a DC 11 Constitution saving throw or be {@condition 麻痺} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。{@h}7 ({@damage 2d4 + 2})劈砍傷害，且目標必須成功通過一次DC 11的體質豁免，否則將陷入{@condition 麻痺}狀態長達1分鐘。目標可以在每次它的回合結束時重複這個豁免檢定，若檢定成功則結束這個效果對它的影響。"
 					]
 				}
 			],
@@ -9049,7 +9049,7 @@
 			},
 			"senses": "黑暗視覺120呎",
 			"passive": 16,
-			"languages": "Deep Speech, Undercommon, telepathy 120 ft.",
+			"languages": "Deep Speech, Undercommon, 心靈感應120呎",
 			"cr": "8",
 			"trait": [
 				{
@@ -9328,7 +9328,7 @@
 			],
 			"senses": "盲視30呎, 黑暗視覺120呎",
 			"passive": 20,
-			"languages": "telepathy 120 ft.",
+			"languages": "心靈感應120呎",
 			"cr": {
 				"cr": "11",
 				"lair": "12"
@@ -12723,7 +12723,7 @@
 			]
 		},
 		{
-			"name": "Tlincalli",
+			"name": "特琳卡利蝎人", "ENG_name": "Tlincalli",
 			"size": "L",
 			"type": "monstrosity",
 			"source": "VGM",
@@ -12759,31 +12759,31 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 14,
-			"languages": "Tlincalli",
+			"languages": "特琳卡利蝎人語",
 			"cr": "5",
 			"action": [
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The tlincalli makes two attacks: one with its longsword or spiked chain, and one with its sting."
+						"特琳卡利蝎人進行二次攻擊：一次長劍或釘鏈，和一次螫刺。"
 					]
 				},
 				{
 					"name": "長劍", "tENG_name": "Longsword",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3})劈砍傷害, or 8 ({@damage 1d10 + 3})劈砍傷害 if used with two hands."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3})劈砍傷害，或若以雙手使用時 8 ({@damage 1d10 + 3})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Spiked Chain",
+					"name": "釘鏈", "tENG_name": "Spiked Chain",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及10呎，單一目標。{@h}6 ({@damage 1d6 + 3}) piercing damage, and the target is {@condition 被擒} (escape DC 11) if it is a Large or smaller creature. Until this grapple ends, the target is {@condition 束縛}, and the tlincalli can't use the spiked chain against another target."
+						"{@atk mw} 命中{@hit 6}，觸及10呎，單一目標。{@h}6 ({@damage 1d6 + 3})穿刺傷害，且若目標為一個大型或更小的生物，則目標{@condition 被擒}(逃脫DC 11)。直到擒抱結束前，該生物被{@condition 束縛}，且特琳卡利蝎人不能對另一個目標使用釘鏈。"
 					]
 				},
 				{
-					"name": "Sting",
+					"name": "螫刺", "tENG_name": "Sting",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一生物。{@h}6 ({@damage 1d6 + 3})穿刺傷害加 14 ({@damage 4d6})毒素傷害, and the target must succeed on a DC 14 Constitution saving throw or be {@condition 中毒} for 1 minute. If it fails the saving throw by 5 or more, the target is also {@condition 麻痺} while {@condition 中毒}. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一生物。{@h}6 ({@damage 1d6 + 3})穿刺傷害加 14 ({@damage 4d6})毒素傷害，且目標必須成功通過一次DC 14的體質豁免，否則陷入{@condition 中毒}狀態長達1分鐘。若此豁免檢定的結果與目標值差距5點或更多，則目標將在{@condition 中毒}時連帶陷入{@condition 麻痺}狀態，目標可以在它的每個回合結束時重複這個豁免檢定，若檢定成功則結束這個效果對它的影響。"
 					]
 				}
 			],
@@ -13168,7 +13168,7 @@
 			]
 		},
 		{
-			"name": "Vargouille",
+			"name": "飛頭蠻", "ENG_name": "Vargouille",
 			"size": "T",
 			"type": "fiend",
 			"source": "VGM",
@@ -13206,7 +13206,7 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 8,
-			"languages": "understands Abyssal, Infernal, and any languages it knew before becoming a vargouille but can't speak",
+			"languages": "理解深淵語、煉獄語、和任何它在變成飛頭蠻之前所知道的語言，但不會說",
 			"cr": "1",
 			"action": [
 				{
@@ -13216,15 +13216,15 @@
 					]
 				},
 				{
-					"name": "Kiss",
+					"name": "致命之吻", "tENG_name": "Kiss",
 					"entries": [
-						"The vargouille kisses one {@condition 無力} humanoid within 5 feet of it. The target must succeed on a DC 12 Charisma saving throw or become cursed. The cursed target loses 1 point of Charisma after each hour, as its head takes on fiendish aspects. The curse doesn't advance while the target is in sunlight or the area of a daylight spell; don't count that time. When the cursed target's Charisma becomes 2, it dies, and its head tears from its body and becomes a new vargouille. Casting remove curse, greater restoration, or a similar spell on the target before the transformation is complete can end the curse. Doing so undoes the changes made to the target by the curse."
+						"飛頭蠻親吻一個距離它5呎內且陷入{@condition 無力}狀態的類人生物。目標必須成功通過一次DC 12的魅力豁免，否則將被詛咒。每經過一小時，被詛咒的目標便會失去1點魅力值，且它的頭將隨之呈現出邪魔的外貌。當目標處於日光環境或{@spell 晝明術}法術的範圍內時，這個詛咒將被壓制，且不會計算時間。當被詛咒目標的魅力值變為2，它將會死亡，且它的頭將脫離身體並變成一個新的飛頭蠻。在轉變結束之前對目標施放{@spell 移除詛咒}、{@spell 高等復原術}、或其他類似法術可以終止這個詛咒。這麼做將會還原目標因為這個詛咒而產生的改變。"
 					]
 				},
 				{
-					"name": "Stunning Shriek",
+					"name": "震懾尖叫", "tENG_name": "Stunning Shriek",
 					"entries": [
-						"The vargouille shrieks. Each humanoid and beast within 30 feet of the vargouille and able to hear it must succeed on a DC 12 Wisdom saving throw or be {@condition 恐懼} until the end of the vargouille's next turn. While {@condition 恐懼} in this way, a target is {@condition 震懾}. If a target's saving throw is successful or the effect ends for it, the target is immune to the Stunning Shriek of all vargouilles for 1 hour."
+						"飛頭蠻發出尖叫。每個距離飛頭蠻30呎內且能夠聽見它的類人生物和野獸都必須成功通過一次DC 12的睿知豁免，否則將陷入{@condition 恐懼}直到該飛頭蠻的下個回合結束。當因為這個方式而陷入{@condition 恐懼}時，目標將連帶陷入{@condition 震懾}狀態。若目標成功通過豁免檢定，或這個效果對它的影響結束，則目標將在接下來的1小時內免疫於所有飛頭蠻的震懾尖叫。"
 					]
 				}
 			],
@@ -14756,7 +14756,7 @@
 			]
 		},
 		{
-			"name": "Yeth Hound",
+			"name": "夜嘶獵犬", "ENG_name": "Yeth Hound",
 			"size": "L",
 			"type": "fey",
 			"source": "VGM",
@@ -14807,25 +14807,25 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 11,
-			"languages": "understands Common, Elvish, and Sylvan but can't speak",
+			"languages": "理解通用語、精靈語、和木族語，但不會說",
 			"cr": "4",
 			"trait": [
 				{
-					"name": "Keen Hearing and Smell",
+					"name": "敏銳聽覺和嗅覺", "tENG_name": "Keen Hearing and Smell",
 					"entries": [
-						"The yeth hound has advantage on Wisdom ({@skill Perception}) checks that rely on hearing or smell."
+						"夜嘶獵犬在依賴聽覺和嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Sunlight Banishment",
+					"name": "日光放逐", "tENG_name": "Sunlight Banishment",
 					"entries": [
-						"If the yeth hound starts its turn in sunlight, it is transported to the Ethereal Plane. While sunlight shines on the spot from which it vanished, the hound must remain in the Deep Ethereal. After sunset, it returns to the Border Ethereal at the same spot, whereupon it typically sets out to find its pack or its master. The hound is visible on the Material Plane while it is in the Border Ethereal, and vice versa, but it can't affect or be affected by anything on the other plane. Once it is adjacent to its master or a pack mate that is on the Material Plane, a yeth hound in the Border Ethereal can return to the Material Plane as an action."
+						"若夜嘶獵犬在日光中開始它的回合，它將被傳送到乙太位面。當陽光照射在它消失的位置時，夜嘶獵犬必須待在深層乙太區。在日落之後，它才會返回該處的乙太邊境，並通常會準備出發尋找它的族群或主人。當夜嘶獵犬處於乙太邊境時，它可以被物質位面的生物所看見，反之亦然，但它並不能因此影響另一個位面、或被另一個位面的任何事物給影響。一旦它鄰近它的主人或一個位於物質位面的同族時，位於乙太邊境的夜嘶獵犬才能夠以一個動作返回物質位面。"
 					]
 				},
 				{
-					"name": "Telepathic Bond",
+					"name": "心靈聯繫", "tENG_name": "Telepathic Bond",
 					"entries": [
-						"While the yeth hound is on the same plane of existence as its master, it can magically convey what it senses to its master, and the two can communicate telepathically with each other."
+						"當夜嘶獵犬與它的主人處於相同的存在位面，它可以用魔將它所感知到的事物傳達給它的主人，且它們之間可以用心靈感應彼此溝通。"
 					]
 				}
 			],
@@ -14833,13 +14833,13 @@
 				{
 					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}11 ({@damage 2d6 + 4}) piercing damage, plus 14 ({@damage 4d6}) psychic damage if the target is {@condition 恐懼}."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}11 ({@damage 2d6 + 4})穿刺傷害，且若目標陷入{@condition 恐懼}則追加 14 ({@damage 4d6})精神傷害。"
 					]
 				},
 				{
-					"name": "Baleful Baying",
+					"name": "惡毒嚎吠", "tENG_name": "Baleful Baying",
 					"entries": [
-						"The yeth hound bays magically. Every enemy within 300 feet of the hound that can hear it must succeed on a DC 13 Wisdom saving throw or be {@condition 恐懼} until the end of the hound's next turn or until the hound is {@condition 無力}. A {@condition 恐懼} target that starts its turn within 30 feet of the hound must use all its movement on that turn to get as far from the hound as possible, must finish the move before taking an action, and must take the most direct route, even if hazards lie that way. A target that successfully saves is immune to the baying of all yeth hounds for the next 24 hours."
+						"夜嘶獵犬發出一陣魔法嚎吠。每個距離夜嘶獵犬300呎內且可以聽見它的敵人都必須成功通過一次DC 13的睿知豁免，否則將陷入{@condition 恐懼}直到該夜嘶獵犬的下個回合結束、或直到該夜嘶獵犬陷入{@condition 無力}狀態。一個陷入{@condition 恐懼}且在夜嘶獵犬30呎內開始它回合的目標必須在該回合使用它所有的移動力盡可能的遠離該夜嘶獵犬，它必須在採取任何動作之前完成移動，且必須沿著最直接的路徑移動，即使這條路徑上充滿危險也一樣。成功通過此豁免檢定的目標將在接下來的24小時內免疫於所有夜嘶獵犬的惡毒嚎吠。"
 					]
 				}
 			],
