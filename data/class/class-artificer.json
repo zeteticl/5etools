@@ -1331,7 +1331,7 @@
 								"type": "inset",
 								"name": "變體：製作", "tENG_name": "Variant: Crafting",
 								"entries": [
-									"An artificer subclass makes you more efficient at crafting certain items. The feature you get from your subclass works whether you're using the crafting rules in the {@book Player's Handbook|phb|8|crafting}, {@book Dungeon Master's Guide|dmg|6|crafting a magic item}, or {@book Xanathar's Guide to Everything|xge|2|crafting an item}."
+									"奇械師的子職業將使你在製作特定物品時更有效率。無論你是使用{@book 《玩家手冊》|phb|8|製作}、{@book 《地下城主指南》|dmg|6|crafting a magic item}、或是{@book 《姍納薩的萬事指南》|xge|2|crafting an item}的製作規則，你從子職業中獲得的這個能力都能夠發揮效果。"
 								]
 							}
 						],
@@ -1424,8 +1424,8 @@
 					{
 						"name": "儲法物品", "ENG_name": "Spell-Storing Item",
 						"entries": [
-							"When you reach 18th level, you learn how to store a spell in an object for repeated use. Whenever you finish a long rest, you can touch one simple or martial weapon or an item that you can use as a spellcasting focus and store a spell in it, choosing one 1st- or 2nd-level spell from the artificer spell list that requires 1 action to cast (you don't need to have the spell prepared). With the object in hand, a creature can take an action to produce the spell's effect from it, using your spellcasting ability modifier.",
-							"The spell stays in the object until it has been used a number of times equal to twice your Intelligence modifier (minimum of twice) or until you use this feature again."
+							"當你升至18級時，你學會將法術儲存於物體內以供重複使用的方式。每當你完成一次長休，你可以觸碰一把簡易或軍用武器、或一個你能夠做為法器使用的物品，並從奇械師法術列表中選擇一個施法動作為1個動作的1環或2環法術（你並不需要準備該法術），將其儲存在該物體中。當這個物體在手中時，一個生物可以採取一個動作以從該物體中產生出該法術的效果，使用你的施法屬性調整值。",
+							"儲存於該物體內的法術將維持直到它被使用等同於你智力調整值的次數（最少二次）、或直到你再次使用這個能力。"
 						]
 					}
 				],
@@ -1450,45 +1450,45 @@
 			"subclassTitle": "Artificer Specialist",
 			"subclasses": [
 				{
-					"name": "Alchemist",
+					"name": "煉金師", "ENG_name": "Alchemist",
 					"subclassFeatures": [
 						[
 							{
-								"name": "Alchemist",
+								"name": "煉金師", "ENG_name": "Alchemist",
 								"entries": [
-									"An Alchemist is an expert at combining exotic reagents to produce mystical effects. Among artificers, members of this subclass are the greatest healers, as well as the ones most adept at wielding dangerous chemicals.",
+									"煉金師是精通於混合奇異原料以產生神秘效果的專家，在奇械師中，這個子職業的成員是最優秀的治療者、也是最熟練於使用危險化學品的行家。",
 									{
 										"type": "entries",
-										"name": "Tools of the Trade",
+										"name": "本職工具", "ENG_name": "Tools of the Trade",
 										"entries": [
-											"By the time you adopt this specialty at 3rd level, you're deeply familiar with employing its tools.",
+											"當你在3級時選擇此專業時，你將深刻地熟悉於使用相應的工具。",
 											{
 												"type": "entries",
-												"name": "Proficiencies",
+												"name": "熟練項",
 												"entries": [
-													"You gain proficiency with {@item alchemist's supplies|phb} and the {@item herbalism kit|phb}, assuming you don't already have them. You also gain {@item alchemist's supplies|phb} and an {@item herbalism kit|phb} for free\u2014the result of tinkering you've done as you've prepared for this specialization."
+													"若你尚未熟練於{@item 煉金師設備|phb}和{@item 藥草師工具組|phb}，則你將獲得它們的熟練項。你同時免費獲得一組@item 煉金師設備|phb}和{@item 藥草師工具組|phb}──這是你為踏入這個專業所準備的成果。"
 												]
 											},
 											{
 												"type": "entries",
-												"name": "Crafting",
+												"name": "製作",
 												"entries": [
-													"If you craft a magic item in the potion category, it takes you a quarter of the normal time, and it costs you half as much of the usual gold."
+													"若你製作一個藥水類別的魔法物品，則製作它的過程只需要花費你正常情況下四分之一的時間，以及正常情況下一半的金錢。"
 												]
 											}
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Alchemist Spells",
+										"name": "煉金師法術", "ENG_name": "Alchemist Spells",
 										"entries": [
-											"Starting at 3rd level, you always have certain spells prepared after you reach particular levels in this class, as shown in the Alchemist Spells table. These spells count as artificer spells for you, but they don't count against the number of artificer spells you prepare.",
+											"從3級開始，當你在本職業升至特定等級時，你將永遠視作已經準備了某些法術，如煉金師法術表所示。這些法術對你而言被視作奇械師法術，且它們不會計入你每日可準備的奇械師法術數量中。",
 											{
 												"type": "table",
-												"caption": "Alchemist Spells",
+												"caption": "煉金師法術表", "tENG_name": "Alchemist Spells",
 												"colLabels": [
-													"Artificer Level",
-													"Spell"
+													"奇械師等級",
+													"法術"
 												],
 												"colStyles": [
 													"col-xs-2 text-align-center",
@@ -1497,23 +1497,23 @@
 												"rows": [
 													[
 														"3rd",
-														"{@spell purify food and drink}, {@spell ray of sickness}"
+														"{@spell 淨化飲食}, {@spell 致病射線}"
 													],
 													[
 														"5th",
-														"{@spell Melf's acid arrow}, {@spell web}"
+														"{@spell 馬友夫強酸箭}, {@spell 蛛網術}"
 													],
 													[
 														"9th",
-														"{@spell create food and water}, {@spell stinking cloud}"
+														"{@spell 創造飲食}, {@spell 臭雲術}"
 													],
 													[
 														"13th",
-														"{@spell blight}, {@spell death ward}"
+														"{@spell 枯萎術}, {@spell 防死護咒}"
 													],
 													[
 														"17th",
-														"{@spell cloudkill}, {@spell raise dead}"
+														"{@spell 死雲術}, {@spell 喚醒死者}"
 													]
 												]
 											}
@@ -1567,46 +1567,46 @@
 					"page": 6
 				},
 				{
-					"name": "Artillerist",
+					"name": "魔炮師", "ENG_name": "Artillerist",
 					"subclassFeatures": [
 						[
 							{
-								"name": "Artillerist",
+								"name": "魔炮師", "ENG_name": "Artillerist",
 								"entries": [
 									"An Artillerist specializes in using magic to create explosions and defensive positions, as well as magic-infused sidearms\u2014especially wands\u2014that can be used on the battlefield. Artillerists were valued by all the armies of the Last War.",
 									{
 										"type": "entries",
-										"name": "Tools of the Trade",
+										"name": "本職工具", "ENG_name": "Tools of the Trade",
 										"entries": [
-											"By the time you adopt this specialty at 3rd level, you're deeply familiar with employing its tools.",
+											"當你在3級時選擇此專業時，你將深刻地熟悉於使用相應的工具。",
 											{
 												"type": "entries",
-												"name": "Proficiencies",
+												"name": "熟練項",
 												"entries": [
-													"You gain proficiency with {@item smith's tools|phb} and {@item woodcarver's tools|phb}, assuming you don't already have them. You also gain those tools for free\u2014the result of tinkering you've done as you've prepared for this specialization.",
-													"In addition, you gain the ability to use rods, staffs, and wands as spellcasting focuses for your artificer spells. You also gain a nonmagical, wooden wand for free, which you've carved in your spare time."
+													"若你尚未熟練於{@item 鐵匠工具|phb}和{@item 木雕師工具|phb}，則你將獲得它們的熟練項。你同時免費獲得這些工具──這是你為踏入這個專業所準備的成果。",
+													"此外，你獲得使用權杖、法杖、和魔杖做為你施放奇械師法術的法器的能力。你同時免費獲得一個你在閒暇時間雕刻出來的非魔法木質魔杖。"
 												]
 											},
 											{
 												"type": "entries",
-												"name": "Crafting",
+												"name": "製作",
 												"entries": [
-													"If you craft a magic item in the wand category, it takes you a quarter of the normal time, and it costs you half as much of the usual gold."
+													"若你製作一個魔杖類別的魔法物品，則製作它的過程只需要花費你正常情況下四分之一的時間，以及正常情況下一半的金錢。"
 												]
 											}
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Artillerist Spells",
+										"name": "魔炮師法術", "ENG_name": "Artillerist Spells",
 										"entries": [
-											"Starting at 3rd level, you always have certain spells prepared after you reach particular levels in this class, as shown in the Alchemist Spells table. These spells count as artificer spells for you, but they don't count against the number of artificer spells you prepare.",
+											"從3級開始，當你在本職業升至特定等級時，你將永遠視作已經準備了某些法術，如魔炮師法術表所示。這些法術對你而言被視作奇械師法術，且它們不會計入你每日可準備的奇械師法術數量中。",
 											{
 												"type": "table",
-												"caption": "Artillerist Spells",
+												"caption": "魔炮師法術表", "tENG_name": "Artillerist Spells",
 												"colLabels": [
-													"Artificer Level",
-													"Spell"
+													"奇械師等級",
+													"法術"
 												],
 												"colStyles": [
 													"col-xs-2 text-align-center",
@@ -1615,23 +1615,23 @@
 												"rows": [
 													[
 														"3rd",
-														"{@spell shield}, {@spell thunderwave}"
+														"{@spell 護盾術}, {@spell 雷鳴波}"
 													],
 													[
 														"5th",
-														"{@spell scorching ray}, {@spell shatter}"
+														"{@spell 灼熱射線}, {@spell 粉碎音波}"
 													],
 													[
 														"9th",
-														"{@spell fireball}, {@spell wind wall}"
+														"{@spell 火球術}, {@spell 風牆術}"
 													],
 													[
 														"13th",
-														"{@spell ice storm}, {@spell wall of fire}"
+														"{@spell 冰風暴}, {@spell 火牆術}"
 													],
 													[
 														"17th",
-														"{@spell cone of cold}, {@spell wall of force}"
+														"{@spell 寒冰錐}, {@spell 力牆術}"
 													]
 												]
 											}
