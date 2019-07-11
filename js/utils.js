@@ -1922,7 +1922,7 @@ Parser.SOURCE_JSON_TO_FULL[SRC_PSK] = PS_PREFIX + "卡拉德許";
 Parser.SOURCE_JSON_TO_FULL[SRC_PSZ] = PS_PREFIX + "贊迪卡";
 Parser.SOURCE_JSON_TO_FULL[SRC_PSX] = PS_PREFIX + "依夏蘭";
 Parser.SOURCE_JSON_TO_FULL[SRC_PSD] = PS_PREFIX + "多明納里亞";
-Parser.SOURCE_JSON_TO_FULL[SRC_UAA] = UA_PREFIX + "Artificer";
+Parser.SOURCE_JSON_TO_FULL[SRC_UAA] = UA_PREFIX + "奇械師";
 Parser.SOURCE_JSON_TO_FULL[SRC_UAEAG] = UA_PREFIX + "Eladrin and Gith";
 Parser.SOURCE_JSON_TO_FULL[SRC_UAEBB] = UA_PREFIX + "Eberron";
 Parser.SOURCE_JSON_TO_FULL[SRC_UAFFR] = UA_PREFIX + "Feats for Races";
@@ -1968,7 +1968,7 @@ Parser.SOURCE_JSON_TO_FULL[SRC_UARoR] = UA_PREFIX + "Races of Ravnica";
 Parser.SOURCE_JSON_TO_FULL[SRC_UAWGE] = "Wayfinder's Guide to Eberron";
 Parser.SOURCE_JSON_TO_FULL[SRC_UAOSS] = UA_PREFIX + "Of Ships and the Sea";
 Parser.SOURCE_JSON_TO_FULL[SRC_UASIK] = UA_PREFIX + "Sidekicks";
-Parser.SOURCE_JSON_TO_FULL[SRC_UAAR] = UA_PREFIX + "Artificer Revisited";
+Parser.SOURCE_JSON_TO_FULL[SRC_UAAR] = UA_PREFIX + "奇械師再製";
 Parser.SOURCE_JSON_TO_FULL[SRC_STREAM] = "Livestream";
 Parser.SOURCE_JSON_TO_FULL[SRC_TWITTER] = "Twitter";
 
