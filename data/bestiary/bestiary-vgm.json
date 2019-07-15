@@ -222,7 +222,7 @@
 			],
 			"senses": "真實視覺120呎",
 			"passive": 17,
-			"languages": "Deep Speech, Undercommon, 心靈感應120呎",
+			"languages": "深幽語、地底通用語、心靈感應120呎",
 			"cr": "10",
 			"trait": [
 				{
@@ -246,7 +246,7 @@
 					]
 				},
 				{
-					"name": "Mind Blast {@recharge 5}",
+					"name": "心靈震爆 {@recharge 5}", "tENG_name": "Mind Blast {@recharge 5}",
 					"entries": [
 						"The alhoon magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 16 Intelligence saving throw or take 22 ({@damage 4d8 + 4}) psychic damage and be {@condition 震懾} for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
@@ -255,7 +255,7 @@
 			"page": 172,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting (Psionics)",
+					"name": "天生施法（靈能）", "tENG_name": "Innate Spellcasting (Psionics)",
 					"headerEntries": [
 						"The alhoon's innate spellcasting ability is Intelligence (spell save DC 16). It can innately cast the following spells, requiring no components:"
 					],
@@ -2364,7 +2364,7 @@
 			],
 			"action": [
 				{
-					"name": "Fist",
+					"name": "拳擊", "tENG_name": "Fist",
 					"entries": [
 						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}4 ({@damage 1d4 + 2})鈍擊傷害 plus 9 ({@damage 2d8}) necrotic damage."
 					]
@@ -2399,7 +2399,7 @@
 			]
 		},
 		{
-			"name": "Boggle",
+			"name": "搗蛋鬼", "ENG_name": "Boggle",
 			"size": "S",
 			"type": "fey",
 			"source": "VGM",
@@ -2438,39 +2438,39 @@
 			"cr": "1/8",
 			"trait": [
 				{
-					"name": "Boggle Oil",
+					"name": "搗蛋鬼之油", "tENG_name": "Boggle Oil",
 					"entries": [
-						"The boggle excretes nonflammable oil from its pores. The boggle chooses whether the oil is slippery or sticky and can change the oil on its skin from one consistency to another as a bonus action.",
-						"Slippery Oil: While coated in slippery oil, the boggle gains advantage on Dexterity (Acrobatics) checks made to escape bonds, squeeze through narrow spaces, and end grapples.",
-						"Sticky Oil: While coated in sticky oil, the boggle gains advantage on Strength (Athletics) checks made to grapple and any ability check made to maintain a hold on another creature, a surface, or an object. The boggle can also climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+						"搗蛋鬼會從毛孔中分泌出不可燃的油。搗蛋鬼決定這個油的性質是滑溜還是黏稠，且能夠以一個附贈動作改變它肌膚上油的性質。",
+						"滑溜之油：當覆蓋著滑溜之油時，搗蛋鬼在用以逃離束縛、擠過狹窄空間、以及逃脫擒抱所進行的敏捷（{@skill 特技}）檢定中具有優勢。",
+						"黏稠之油：當覆蓋著黏稠之油時，搗蛋鬼在用以擒抱的力量（{@skill 運動}）檢定，以及任何用以固定在其他生物、表面、或物體的屬性檢定中具有優勢。搗蛋鬼也可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
 					]
 				},
 				{
-					"name": "Dimensional Rift",
+					"name": "次元裂縫", "tENG_name": "Dimensional Rift",
 					"entries": [
-						"As a bonus action, the boggle can create an invisible and immobile rift within an opening or frame it can see within 5 feet of it, provided that the space is no bigger than 10 feet on any side. The dimensional rift bridges the distance between that space and any point within 30 feet of it that the boggle can see or specify by distance and direction (such as \"30 feet straight up\"). While next to the rift, the boggle can see through it and is considered to be next to the destination as well, and anything the boggle puts through the rift (including a portion of its body) emerges at the destination. Only the boggle can use the rift, and it lasts until the end of the boggle's next turn."
+						"以一個附贈動作，只要距離搗蛋鬼5呎內且它所能看見的一處開口或框架的任一邊都不超過10呎，搗蛋鬼就可以在該處創造一個隱形且不可動的裂縫。這個次元裂縫會使該空間連接到任意一處距離搗蛋鬼30呎，它所能看見或它指定方向和距離的空間（例如「向上30呎」）。當鄰近該裂縫時，搗蛋鬼可以看透到該裂縫的另一端，且同時被視為鄰近於目的地的位置，且任何被搗蛋鬼帶到裂縫中的事物（包括它身體的一部份）都將出現在目的地。只有該搗蛋鬼能夠使用這個裂縫，且這個裂縫將持續到該搗蛋鬼的下個回合結束。"
 					]
 				},
 				{
-					"name": "Uncanny Smell",
+					"name": "怪異嗅覺", "tENG_name": "Uncanny Smell",
 					"entries": [
-						"The boggle has advantage on Wisdom ({@skill Perception}) checks that rely on smell."
+						"搗蛋鬼在依賴嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Pummel",
+					"name": "狠揍", "tENG_name": "Pummel",
 					"entries": [
 						"{@atk mw} 命中{@hit 1}，觸及5呎，單一目標。{@h}2 ({@damage 1d6 - 1})鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Oil Puddle",
+					"name": "油坑", "tENG_name": "Oil Puddle",
 					"entries": [
-						"The boggle creates a puddle of oil that is either slippery or sticky (boggle's choice). The puddle is 1 inch deep and covers the ground in the boggle's space. The puddle is difficult terrain For all creatures except boggles and lasts for 1 hour.",
-						"If the oil is slippery, any creature that enters the puddle's area or starts its turn there must succeed on a DC 11 Dexterity saving throw or fall {@condition 伏地}.",
-						"If the oil is sticky, any creature that enters the puddle's area or starts its turn there must succeed on a DC 11 Strength saving throw or be {@condition 束縛}. On its turn. a creature can use an action to try to extricate itself from the sticky puddle, ending the effect and moving into the nearest safe unoccupied space with a successful DC 11 Strength check."
+						"搗蛋鬼製造出一池的滑溜之油或黏稠之油（由搗蛋鬼決定）。這個油坑的深度為1吋，且會覆蓋該搗蛋鬼所在空間的地表。這個油坑對於所有搗蛋鬼以外的生物都視為困難地形，且會持續存在1個小時。",
+						"若其油的性質為滑溜，則任何進入油坑區域或在該處開始它回合的生物都必須成功通過一次DC 11的敏捷豁免，否則將摔倒{@condition 伏地}。",
+						"若其油的性質為黏稠，則任何進入油坑區域或在該處開始它回合的生物都必須成功通過一次DC 11的力量豁免，否則將被{@condition 束縛}。在它的回合，該生物可以使用一個動作以嘗試將自己從黏稠油坑中掙脫，藉由成功通過一次DC 11的力量檢定以結束這個效果並移動到最近一處未被佔據的安全空間。"
 					]
 				}
 			],
@@ -2551,7 +2551,7 @@
 			]
 		},
 		{
-			"name": "Catoblepas",
+			"name": "卡托布雷帕斯", "ENG_name": "Catoblepas",
 			"size": "L",
 			"type": "monstrosity",
 			"source": "VGM",
@@ -2586,13 +2586,13 @@
 				{
 					"name": "敏銳嗅覺", "tENG_name": "Keen Smell",
 					"entries": [
-						"The catoblepas has advantage on Wisdom ({@skill Perception}) checks that rely on smell."
+						"卡托布雷帕斯在依賴嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				},
 				{
 					"name": "惡臭", "tENG_name": "Stench",
 					"entries": [
-						"Any creature other than a catoblepas that starts its turn within 10 feet of the catoblepas must succeed on a DC 16 Constitution saving throw or be {@condition 中毒} until the start of the creature's next turn. On a successful saving throw, the creature is immune to the stench of any catoblepas for 1 hour."
+						"任何除了卡托布雷帕斯以外在距離卡托布雷帕斯10呎內開始它回合的生物都必須成功通過一次DC 16的體質豁免，否則陷入{@condition 中毒}狀態直到該生物的下個回合開始。若此豁免成功，該生物將免疫於所有卡托布雷帕斯的惡臭長達1小時。"
 					]
 				}
 			],
@@ -2600,13 +2600,13 @@
 				{
 					"name": "尾擊", "tENG_name": "Tail",
 					"entries": [
-						"{@atk mw} 命中{@hit 7}，觸及10呎，單一目標。{@h}21 ({@damage 5d6 + 4})鈍擊傷害, and the target must succeed on a DC 16 Constitution saving throw or be {@condition 震懾} until the start of the catoblepas's next turn."
+						"{@atk mw} 命中{@hit 7}，觸及10呎，單一目標。{@h}21 ({@damage 5d6 + 4})鈍擊傷害，且目標必須成功通過一次DC 16的體質豁免，否則陷入{@condition 震懾}狀態直到卡托布雷帕斯的下個回合開始。"
 					]
 				},
 				{
-					"name": "Death Ray {@recharge 5}",
+					"name": "死亡射線 {@recharge 5}", "tENG_name": "Death Ray {@recharge 5}",
 					"entries": [
-						"The catoblepas targets a creature that it can see within 30 feet of it. The target must make a DC 16 Constitution saving throw, taking 36 ({@damage 8d8}) necrotic damage on a failed save, or half as much damage on a successful one. If the saving throw fails by 5 or more, the target instead takes 64 necrotic damage. The target dies if reduced to 0 hit points by this ray."
+						"卡托布雷帕斯選擇一個距離它30呎內且它所能看見的生物做為目標。目標必須進行一次DC 16的體質豁免，豁免失敗將受到 36 ({@damage 8d8})死靈傷害，豁免成功則只受到一半的傷害。若此豁免檢定失敗且結果與目標值差距5點或更多，則目標將改為受到64點死靈傷害。若目標的生命值被這道射線歸零，則目標將當場死亡。"
 					]
 				}
 			],
@@ -3075,7 +3075,7 @@
 			]
 		},
 		{
-			"name": "Cloud Giant Smiling One",
+			"name": "雲巨人．微笑者", "ENG_name": "Cloud Giant Smiling One",
 			"size": "H",
 			"type": {
 				"type": "giant",
@@ -3121,13 +3121,13 @@
 				"sleight of hand": "+9"
 			},
 			"passive": 17,
-			"languages": "Common, Giant",
+			"languages": "通用語、巨人語",
 			"cr": "11",
 			"trait": [
 				{
 					"name": "敏銳嗅覺", "tENG_name": "Keen Smell",
 					"entries": [
-						"The giant has advantage on Wisdom ({@skill Perception}) checks that rely on smell."
+						"巨人在依賴嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				}
 			],
@@ -3135,25 +3135,25 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The giant makes two attacks with its morningstar."
+						"巨人進行二次釘頭錘攻擊。"
 					]
 				},
 				{
 					"name": "釘頭錘", "tENG_name": "Morningstar",
 					"entries": [
-						"{@atk mw} 命中{@hit 12}，觸及10呎，單一目標。{@h}21 ({@damage 3d8 + 8})鈍擊傷害。 The attack deals an extra 14 ({@dice 4d6}) damage if the giant has advantage on the attack roll."
+						"{@atk mw} 命中{@hit 12}，觸及10呎，單一目標。{@h}21 ({@damage 3d8 + 8})鈍擊傷害。若該攻擊檢定具有優勢，則該攻擊造成額外的 14 ({@dice 4d6})傷害。"
 					]
 				},
 				{
 					"name": "投石", "tENG_name": "Rock",
 					"entries": [
-						"{@atk rw} 命中{@hit 12}，射程60/240呎，單一目標。{@h}30 ({@damage 4d10 + 8})鈍擊傷害。 The attack deals an extra 14 ({@dice 4d6}) damage if the giant has advantage on the attack roll."
+						"{@atk rw} 命中{@hit 12}，射程60/240呎，單一目標。{@h}30 ({@damage 4d10 + 8})鈍擊傷害。若該攻擊檢定具有優勢，則該攻擊造成額外的 14 ({@dice 4d6})傷害。"
 					]
 				},
 				{
-					"name": "Change Shape",
+					"name": "變形", "tENG_name": "Change Shape",
 					"entries": [
-						"The giant magically polymorphs into a beast or humanoid it has seen, or back into its true form. Any equipment the giant is wearing or carrying is absorbed by the new form. Its statistics, other than its size, are the same in each form. It reverts to its true form if it dies."
+						"巨人可以用魔法變形成一個它曾看過的類人生物或野獸，或變回它的真實型態。任何它所穿戴或攜帶的裝備將會被新形態吸收。除了它的體型之外，它在各個型態的數據保持不變。它會在死亡時回復它的真實型態。"
 					]
 				}
 			],
@@ -3162,7 +3162,7 @@
 				{
 					"name": "天生施法", "tENG_name": "Innate Spellcasting",
 					"headerEntries": [
-						"The giant's innate spellcasting ability is Charisma (spell save DC 15). It can innately cast the following spells, requiring no material components:"
+						"巨人的天生施法屬性為魅力（法術豁免DC 15）。它天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 偵測魔法}",
@@ -3186,7 +3186,7 @@
 				{
 					"name": "施法", "tENG_name": "Spellcasting",
 					"headerEntries": [
-						"The giant is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 15, {@hit 7} to hit with spell attacks). The giant has the following bard spells prepared:"
+						"巨人是5級的施法者。它的施法屬性為魅力（法術豁免DC 15，法術攻擊命中{@hit 7}）。巨人已準備了以下吟遊詩人法術："
 					],
 					"spells": {
 						"0": {
@@ -3679,7 +3679,7 @@
 			]
 		},
 		{
-			"name": "Death Kiss",
+			"name": "死吻眼魔", "ENG_name": "Death Kiss",
 			"group": "Beholders",
 			"size": "L",
 			"type": "aberration",
@@ -3729,13 +3729,13 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 15,
-			"languages": "Deep Speech, Undercommon",
+			"languages": "深幽語、地底通用語",
 			"cr": "10",
 			"trait": [
 				{
-					"name": "Lightning Blood",
+					"name": "閃電之血", "tENG_name": "Lightning Blood",
 					"entries": [
-						"A creature within 5 feet of the death kiss takes 5 ({@damage 1d10}) lightning damage whenever it hits the death kiss with a melee attack that deals piercing or劈砍傷害。"
+						"一個在距離死吻眼魔5呎內的生物，會在每次它以近戰攻擊命中死吻眼魔並對其造成穿刺或劈砍傷害時受到5 ({@damage 1d10})閃電傷害。"
 					]
 				}
 			],
@@ -3743,19 +3743,19 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The death kiss makes three tentacle attacks. Up to three of these attacks can be replaced by Blood Drain, one replacement per tentacle grappling a creature"
+						"死吻眼魔進行三次觸手攻擊。其中最多三次攻擊可以被替換成血液汲取，且每次替換的攻擊都必須對應於一條正在擒抱生物的觸手。"
 					]
 				},
 				{
-					"name": "Tentacle",
+					"name": "觸手", "tENG_name": "Tentacle",
 					"entries": [
-						"{@atk mw} 命中{@hit 8}，觸及20呎，單一目標。{@h}14 ({@damage 3d6 + 4}) piercing damage, and the target is {@condition 被擒} (escape DC 14) if it is a Huge or smaller creature. Until this grapple ends, the target is {@condition 束縛}, and the death kiss can't use the same tentacle on another target. The death kiss has ten tentacles."
+						"{@atk mw} 命中{@hit 8}，觸及20呎，單一目標。{@h}14 ({@damage 3d6 + 4})穿刺傷害，且若目標為一個體型為巨型或更小的生物，則目標{@condition 被擒}(逃脫DC 14)。直到擒抱結束前，目標被{@condition 束縛}，且死吻眼魔不能對另一個目標使用同一條觸手攻擊。死吻眼魔擁有十條觸手。"
 					]
 				},
 				{
-					"name": "Blood Drain",
+					"name": "血液汲取", "tENG_name": "Blood Drain",
 					"entries": [
-						"One creature {@condition 被擒} by a tentacle of the death kiss must make a DC 16 Constitution saving throw. On a failed save, the target takes 22 ({@damage 4d10}) lightning damage, and the death kiss regains half as many hit points."
+						"一個{@condition 被擒}於死吻眼魔的觸手的生物必須進行一次DC 16的體質豁免。若豁免失敗，該目標將受到22 ({@damage 4d10})閃電傷害，且死吻眼魔將回復等同於造成傷害一半的生命值。"
 					]
 				}
 			],
@@ -4635,7 +4635,7 @@
 					]
 				},
 				{
-					"name": "Mind Blast {@recharge 5}",
+					"name": "心靈震爆 {@recharge 5}", "tENG_name": "Mind Blast {@recharge 5}",
 					"entries": [
 						"The elder brain magically emits psychic energy. Creatures of the elder brain's choice within 60 feet of it must succeed on a DC 18 Intelligence saving throw or take 32 ({@damage 5d10 + 5}) psychic damage and be {@condition 震懾} for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
@@ -4686,7 +4686,7 @@
 			"page": 173,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting (Psionics)",
+					"name": "天生施法（靈能）", "tENG_name": "Innate Spellcasting (Psionics)",
 					"headerEntries": [
 						"The elder brain's innate spellcasting ability is Intelligence (spell save DC 18). It can innately cast the following spells, requiring no components:"
 					],
@@ -5013,7 +5013,7 @@
 			]
 		},
 		{
-			"name": "Fire Giant Dreadnought",
+			"name": "火巨人．無畏者", "ENG_name": "Fire Giant Dreadnought",
 			"size": "H",
 			"type": {
 				"type": "giant",
@@ -5031,7 +5031,7 @@
 					"ac": 21,
 					"from": [
 						"{@item 全身板甲|phb}",
-						"{@item shield|phb|shields}"
+						"{@item 盾牌|phb}"
 					]
 				}
 			],
@@ -5061,13 +5061,13 @@
 				"fire"
 			],
 			"passive": 15,
-			"languages": "Giant",
+			"languages": "巨人語",
 			"cr": "14",
 			"trait": [
 				{
-					"name": "Dual Shields",
+					"name": "雙持盾牌", "tENG_name": "Dual Shields",
 					"entries": [
-						"The giant carries two shields, each of which is accounted for in the giant's AC. The giant must stow or drop one of its shields to hurl rocks."
+						"巨人攜帶二面盾牌，每一面盾牌都會計入該巨人的AC中。巨人必須扔下或丟棄它的其中一面盾牌才能夠進行投石攻擊。"
 					]
 				}
 			],
@@ -5075,13 +5075,13 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The giant makes two fireshield attacks."
+						"巨人進行二次炎盾攻擊。"
 					]
 				},
 				{
-					"name": "Fireshield",
+					"name": "炎盾", "tENG_name": "Fireshield",
 					"entries": [
-						"{@atk mw} 命中{@hit 13}，觸及5呎，單一目標。{@h}22 ({@damage 4d6 + 8})鈍擊傷害 plus 7 ({@damage 2d6}) fire damage plus 7 ({@damage 2d6})穿刺傷害。"
+						"{@atk mw} 命中{@hit 13}，觸及5呎，單一目標。{@h}22 ({@damage 4d6 + 8})鈍擊傷害加 7 ({@damage 2d6})火焰傷害加 7 ({@damage 2d6})穿刺傷害。"
 					]
 				},
 				{
@@ -5091,9 +5091,9 @@
 					]
 				},
 				{
-					"name": "Shield Charge",
+					"name": "堅盾衝鋒", "tENG_name": "Shield Charge",
 					"entries": [
-						"The giant moves up to 30 feet in a straight line and can move through the space of any creature smaller than Huge. The first time it enters a creature's space during this move, it makes a fireshield attack against that creature. If the attack hits, the target must also succeed on a DC 21 Strength saving throw or be pushed ahead of the giant for the rest of this move. If a creature fails the save by 5 or more, it is also knocked {@condition 伏地} and takes 18 ({@damage 3d6 + 8})鈍擊傷害, or 29 ({@damage 6d6 + 8})鈍擊傷害 if it was already {@condition 伏地}."
+						"巨人以直線移動最多30呎距離，且可以移動穿過任何體型小於巨型的生物所在的空間。當它在這個移動期間第一次進入另一個生物所在的空間時，它對該生物進行一次炎盾攻擊。若該攻擊命中，則目標必須成功通過一次DC 21的力量豁免，否則將在該移動間持續在巨人面前被推動。若該生物在這個豁免檢定的結果與目標值差距5點或更多，則它也將被擊倒{@condition 伏地}並受到18 ({@damage 3d6 + 8})鈍擊傷害，或若它已經{@condition 伏地}，則受到29 ({@damage 6d6 + 8})鈍擊傷害。"
 					]
 				}
 			],
@@ -5660,7 +5660,7 @@
 			]
 		},
 		{
-			"name": "Frost Giant Everlasting One",
+			"name": "霜巨人．永恆者", "ENG_name": "Frost Giant Everlasting One",
 			"size": "H",
 			"type": {
 				"type": "giant",
@@ -5677,7 +5677,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"patchwork armor"
+						"縫拚護甲"
 					]
 				}
 			],
@@ -5708,28 +5708,28 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 14,
-			"languages": "Giant",
+			"languages": "巨人語",
 			"cr": "12",
 			"trait": [
 				{
-					"name": "Extra Heads",
+					"name": "額外頭顱", "tENG_name": "Extra Heads",
 					"entries": [
-						"The giant has a 25 percent chance of having more than one head. If it has more than one, it has advantage on Wisdom ({@skill Perception}) checks and on saving throws against being {@condition 目盲}, {@condition 魅惑}, {@condition deafened}, {@condition 恐懼}, {@condition 震懾}, or knocked {@condition 昏迷}."
+						"巨人有25%的機率擁有超過一顆的頭顱。若它擁有一顆以上的頭顱，則它將在睿知（{@skill 感知}）檢定和對抗{@condition 目盲}、{@condition 魅惑}、{@condition 耳聾}、@condition 恐懼}、{@condition 震懾}、和被擊暈 {@condition 昏迷}的豁免檢定中具有優勢。"
 					]
 				},
 				{
 					"name": "再生", "tENG_name": "Regeneration",
 					"entries": [
-						"The giant regains 10 hit points at the start of its turn. If the giant takes acid or fire damage, this trait doesn't function at the start of its next turn. The giant dies only if it starts its turn with 0 hit points and doesn't regenerate."
+						"巨人在它的回合開始時回復10點生命值。若巨人受到酸蝕或火焰傷害，則這個特性在巨人下個回合開始時並不會發揮作用。巨人只會在它以0點生命值開始它回合，且再生並未發揮效果時死亡。"
 					]
 				},
 				{
-					"name": "Vaprak's Rage (Recharges after a Short or Long Rest)",
+					"name": "瓦普拉克之怒 (短休或長休之後充能)", "tENG_name": "Vaprak's Rage (Recharges after a Short or Long Rest)",
 					"entries": [
-						"As a bonus action, the giant can enter a rage at the start of its turn. The rage lasts for 1 minute or until the giant is {@condition 無力}. While raging, the giant gains the following benefits:",
-						"- The giant has advantage on Strength checks and Strength saving throws",
-						"- When it makes a melee weapon attack, the giant gains a +4 bonus to the damage roll.",
-						"- The giant has resistance to bludgeoning, piercing, and劈砍傷害。"
+						"以一個附贈動作，巨人將在它的回合開始時進入狂暴。這個狂暴將持續1分鐘，或直到該巨人陷入{@condition 無力}狀態。在狂暴期間，巨人將獲得下列好處：",
+						"- 巨人在力量檢定和力量豁免中具有優勢。",
+						"- 當進行近戰武器攻擊時，巨人的傷害骰將獲得+4加值。",
+						"- 巨人具有對鈍擊、穿刺、和劈砍傷害的抗性。"
 					]
 				}
 			],
@@ -5737,13 +5737,13 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The giant makes two attacks with its greataxe."
+						"巨人進行二次巨斧攻擊。"
 					]
 				},
 				{
-					"name": "Greataxe",
+					"name": "巨斧", "tENG_name": "Greataxe",
 					"entries": [
-						"{@atk mw} 命中{@hit 11}，觸及10呎，單一目標。{@h}26 ({@damage 3d12 + 7})劈砍傷害, or 30 ({@damage 3d12 + 11})劈砍傷害 while raging."
+						"{@atk mw} 命中{@hit 11}，觸及10呎，單一目標。{@h}26 ({@damage 3d12 + 7})劈砍傷害，或在狂暴中則為 30 ({@damage 3d12 + 11})劈砍傷害。"
 					]
 				},
 				{
@@ -5777,7 +5777,7 @@
 			]
 		},
 		{
-			"name": "Gauth",
+			"name": "高斯眼魔", "ENG_name": "Gauth",
 			"group": "Beholders",
 			"size": "M",
 			"type": "aberration",
@@ -5825,19 +5825,19 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 15,
-			"languages": "Deep Speech, Undercommon",
+			"languages": "深幽語、地底通用語",
 			"cr": "6",
 			"trait": [
 				{
-					"name": "Stunning Gaze",
+					"name": "震懾凝視", "tENG_name": "Stunning Gaze",
 					"entries": [
-						"When a creature that can see the gauth's central eye starts its turn within 30 feet of the gauth, the gauth can force it to make a DC 14 Wisdom saving throw if the gauth isn't {@condition 無力} and can see the creature. A creature that fails the save is {@condition 震懾} until the start of its next turn, when it can avert its eyes again. If the creature looks at the gauth in the meantime, it must immediately make the save."
+						"當一個生物在距離高斯眼魔30呎內，且能看見高斯眼魔主眼的位置開始它的回合，則若高斯眼魔未陷入{@condition 無力}狀態且可以看見該生物，則高斯眼魔將可以強迫它進行一次DC 14的睿知豁免。豁免失敗的生物將陷入{@condition 震懾}狀態直到它的下個回合開始。除非被突襲，否則生物可以移開視線以避免在它的回合開始時進行豁免檢定。若該生物這麼做，則它直到它的下個回合開始前都將無法看見高斯眼魔，且它可以在下個回合開始時再次選擇移開視線。在該生物看向高斯眼魔的瞬間，它就必須立刻進行該豁免檢定。"
 					]
 				},
 				{
-					"name": "Death Throes",
+					"name": "死亡震爆", "tENG_name": "Death Throes",
 					"entries": [
-						"When the gauth dies, the magical energy within it explodes, and each creature within 10 feet of it must make a DC 14 Dexterity saving throw, taking 13 ({@damage 3d8}) force damage on a failed save, or half as much damage on a successful one."
+						"當高斯眼魔死亡時，它體內的魔法能量將會爆炸，且每個距離它10呎內的生物都必須進行一次DC 14的敏捷豁免，豁免失敗則受到13 ({@damage 3d8})力場傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
@@ -5849,15 +5849,15 @@
 					]
 				},
 				{
-					"name": "Eye Rays",
+					"name": "眼波射線", "tENG_name": "Eye Rays",
 					"entries": [
-						"The gauth shoots three of the following magical eye rays at random (reroll duplicates), choosing one to three targets it can see within 120 feet of it:",
-						"1. Devour Magic Ray: The targeted creature must succeed on a DC 14 Dexterity saving throw or have one of its magic items lose all magical properties until the start of the gauth's next turn. If the object is a charged item, it also loses {@dice 1d4} charges. Determine the affected item randomly, ignoring single-use items such as potions and scrolls.",
-						"2. Enervation Ray: The targeted creature must make a DC 14 Constitution saving throw, taking 18 ({@damage 4d8}) necrotic damage on a failed save, or half as much damage on a successful one.",
-						"3. Pushing Ray: The targeted creature must succeed on a DC 14 Strength saving throw or be pushed up to 15 feet directly away from the gauth and have its speed halved until the start of the gauth's next turn.",
-						"4. Fire Ray: The targeted creature must succeed on a DC 14 Dexterity saving throw or take 22 ({@damage 4d10}) fire damage.",
-						"5. Paralyzing Ray: The targeted creature must succeed on a DC 14 Constitution saving throw or be {@condition 麻痺} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
-						"6. Sleep Ray: The targeted creature must succeed on a DC 14 Wisdom saving throw or fall asleep and remain {@condition 昏迷} for 1 minute. The target awakens if it takes damage or another creature takes an action to wake it. This ray has no effect on constructs and undead."
+						"高斯眼魔隨機射出三道下列其中一種魔法眼波射線（若重複則重骰），選擇一到三個距離它120呎內且它所能看見的生物做為目標：",
+						"1. 吞噬魔法射線：目標生物必須成功通過一次DC 14的敏捷豁免，否則它的其中一個魔法物品將失去所有的魔法屬性直到高斯眼魔的下個回合開始。若該物體是一個含有充能的物品，則它同時將失去{@dice 1d4}發充能。隨機決定受到影響的物品，且忽略像是藥水和卷軸這類的一次性物品。",
+						"2. 衰弱射線：目標生物必須進行一次DC 14的體質豁免，豁免失敗則受到18 ({@damage 4d8})死靈傷害，豁免成功則只受到一半的傷害。",
+						"3. 推撞射線：目標生物必須成功通過一次DC 14的力量豁免，否則將被直線推離高斯眼魔15呎距離，且它的移動速度將被減半直到高斯眼魔的下個回合開始。",
+						"4. 火焰射線：目標生物必須進行一次DC 14的敏捷豁免，豁免失敗則受到22 ({@damage 4d10})火焰傷害，豁免成功則只受到一半的傷害。",
+						"5. 麻痺射線：目標生物必須成功通過一次DC 14的體質豁免，否則陷入{@condition 麻痺}狀態長達1分鐘。目標可以在它的每個回合結束時重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。",
+						"6. 催眠射線：目標生物必須成功通過一次DC 14的睿知豁免，否則將陷入沉睡並維持{@condition 昏迷} 狀態長達1分鐘。目標將在受到傷害、或另一個生物使用一個動作將它叫醒時甦醒。這道射線對構裝體和不死生物沒有任何效果。"
 					]
 				}
 			],
@@ -5884,7 +5884,7 @@
 			]
 		},
 		{
-			"name": "Gazer",
+			"name": "凝視者眼魔", "ENG_name": "Gazer",
 			"group": "Beholders",
 			"size": "T",
 			"type": "aberration",
@@ -5931,13 +5931,13 @@
 				{
 					"name": "侵略性", "tENG_name": "Aggressive",
 					"entries": [
-						"As a bonus action, the gazer can move up to its speed toward a hostile creature that it can see."
+						"以一個附贈動作，凝視者眼魔可以向一個它所能看見的敵意生物移動最多等同它移動速度的距離。"
 					]
 				},
 				{
-					"name": "Mimicry",
+					"name": "擬", "tENG_name": "Mimicry",
 					"entries": [
-						"The gazer can mimic simple sounds of speech it has heard, in any language. A creature that hears the sounds can tell they are imitations with a successful DC 10 Wisdom (Insight) check."
+						"凝視者眼魔可以模仿它曾聽過任何語言的簡單說話聲。一個聽到這類聲音的生物可以透過成功通過一次DC 10的睿知（{@skill 察言觀色}）檢定以辨別出該聲音是被模仿發出的。"
 					]
 				}
 			],
@@ -5949,14 +5949,14 @@
 					]
 				},
 				{
-					"name": "Eye Rays",
+					"name": "眼波射線", "tENG_name": "Eye Rays",
 					"entries": [
-						"The gazer shoots two of the following magical eye rays at random (reroll duplicates), choosing one or two targets it can see within 60 feet of it:",
-						"1. Dazing Ray: The targeted creature must succeed on a DC 12 Wisdom saving throw or be {@condition 魅惑} until the start of the gazer's next turn. While the target is {@condition 魅惑} in this way, its speed is halved, and it has disadvantage on attack rolls.",
-						"2. Fear Ray: The targeted creature must succeed on a DC 12 Wisdom saving throw or be {@condition 恐懼} until the start of the gazer's next turn.",
-						"3. Frost Ray: The targeted creature must succeed on a DC 12 Dexterity saving throw or take 10 ({@damage 3d6}) cold damage.",
-						"4. Telekinetic Ray: If the target is a creature that is Medium or smaller, it must succeed on a DC 12 Strength saving throw or be moved up to 30 feet directly away from the gazer.",
-						"If the target is an object weighing 10 pounds or less that isn't being worn or carried, the gazer moves it up to 30 feet in any direction. The gazer can also exert fine control on objects with this ray, such as manipulating a simple tool or opening a container."
+						"凝視者眼魔隨機射出二道下列其中一種魔法眼波射線（若重複則重骰），選擇一到二個距離它60呎內且它所能看見的生物做為目標：",
+						"1. 迷亂射線：目標生物必須成功通過一次DC 12的睿知豁免，否則將被{@condition 魅惑}直到凝視者眼魔的下個回合開始。當目標被這個方式{@condition 魅惑}時，它的移動速度將被減半，且它在所有攻擊檢定中具有劣勢。",
+						"2. 恐懼射線：目標生物必須成功通過一次DC 12的睿知豁免，否則陷入{@condition 恐懼}狀態直到凝視者眼魔的下個回合開始。",
+						"3. 冰霜射線：目標生物必須成功通過一次DC 12的敏捷豁免，否則將受到10 ({@damage 3d6})寒冰傷害。",
+						"4. 念動射線：若目標為一個體型為中型或更小的生物，則它必須成功通過一次DC 12的力量豁免，否則將被凝視者眼魔向任意方向移動最多30呎距離。",
+						"若目標為一個重量為10磅或更輕，且未被穿戴或持握的物體，則它將被凝視者眼魔向任意方向移動最多30呎距離。凝視者眼魔也可以透過該射線對該物體進行精細的控制，像是操作簡單的工具、或是打開一個容器。"
 					]
 				}
 			],
@@ -5967,14 +5967,14 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Gazer Familiar",
+					"name": "凝視者眼魔魔寵",
 					"entries": [
-						"Spellcasters who are interested in unusual familiars find that gazers are eager to serve someone who has magical power, especially those who make a point of bullying and harassing others. The gazer behaves aggressively toward creatures smaller than itself, and it tends to randomly attack house pets, farm animals, and even children in town unless its master is very strict. A gazer serving as a familiar has the following trait.",
+						"那些對奇特魔寵抱持興趣的施法者發現了凝視者眼魔渴望服侍於擁有魔法力量之人的傾向，它們尤其渴望服侍那些喜好恃強凌弱的傢伙。凝視者眼魔對於體型比它們小的生物會展現出強烈的侵略性行為，且除非它們的主人嚴格管教，否則它們喜好隨機襲擊家庭寵物、農場動物、或甚至村鎮中的孩童。做為魔寵服侍於他人的凝視者眼魔具有以下特質。",
 						{
 							"type": "entries",
-							"name": "Familiar",
+							"name": "魔寵",
 							"entries": [
-								"The gazer can serve another creature as a familiar, forming a telepathic bond with its willing master, provided that the master is at least a 3rd-level spellcaster. While the two are bonded, the master can sense what the gazer senses as long as they are within 1 mile of each other. If its master causes it physical harm, the gazer will end its service as a familiar, breaking the telepathic bond."
+								"凝視者眼魔可以做為魔寵服侍另一個生物，只要其主人是一名至少3級的施術者，它就能與它自願的主人建立一道心靈連結。當雙方連結時，只要他們距離彼此1哩之內，主人就可以感知凝視者眼魔所感知的事物。若其主人使其受到身體上的傷害，凝視者眼魔將結束它做為魔寵的服務，並中斷這道心靈連結。"
 							]
 						}
 					]
@@ -7228,7 +7228,7 @@
 			]
 		},
 		{
-			"name": "Illithilich",
+			"name": "奪心魔巫妖", "ENG_name": "Illithilich",
 			"alias": [
 				"Mind Flayer Lich"
 			],
@@ -7298,83 +7298,83 @@
 			],
 			"senses": "真實視覺120呎",
 			"passive": 19,
-			"languages": "Deep Speech, Undercommon, 心靈感應120呎",
+			"languages": "深幽語、地底通用語、心靈感應120呎",
 			"cr": "22",
 			"trait": [
 				{
 					"name": "傳奇抗性 (3/日)", "tENG_name": "Legendary Resistance (3/Day)",
 					"entries": [
-						"If the illithilich fails a saving throw, it can choose to succeed instead."
+						"若奪心魔巫妖在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				},
 				{
-					"name": "Rejuvenation",
+					"name": "復生", "tENG_name": "Rejuvenation",
 					"entries": [
-						"If it has a phylactery, a destroyed illithilich gains a new body in {@dice 1d10} days, regaining all its hit points and becoming active again. The new body appears within 5 feet of the phylactery."
+						"若它還擁有命匣，則一個被摧毀的奪心魔巫妖將在{@dice 1d10}天時內獲得一具新的身體，回復它所有的生命值並再次復甦。這具新的身體將出現在距離命匣5呎內的位置。"
 					]
 				},
 				{
 					"name": "驅散抗性", "tENG_name": "Turn Resistance",
 					"entries": [
-						"illithilich在對抗驅散不死效果的豁免檢定中具有優勢。"
+						"奪心魔巫妖在對抗驅散不死效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
 					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
-						"illithilich在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"奪心魔巫妖在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Paralyzing Touch",
+					"name": "麻痺之觸", "tENG_name": "Paralyzing Touch",
 					"entries": [
-						"{@atk ms} {@hit 12} to hit, reach 5 ft., one creature. {@h}10 ({@damage 3d6}) cold damage. The target must succeed on a DC 18 Constitution saving throw or be {@condition 麻痺} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk ms} 命中{@hit 12}，觸及5呎，單一生物。{@h}10 ({@damage 3d6})寒冰傷害。目標必須成功通過一次DC 18的體質豁免，否則陷入{@condition 麻痺}狀態長達1分鐘。目標可以在它的每個回合結束時重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。"
 					]
 				},
 				{
-					"name": "Tentacles",
+					"name": "觸鬚", "tENG_name": "Tentacles",
 					"entries": [
-						"{@atk mw} 命中{@hit 12}，觸及5呎，單一生物。{@h}21 ({@damage 3d10 + 5}) psychic damage. If the target is Large or smaller, it is {@condition 被擒} (escape DC 15) and must succeed on a DC 20 Intelligence saving throw or be {@condition 震懾} until this grapple ends."
+						"{@atk mw} 命中{@hit 12}，觸及5呎，單一生物。{@h}21 ({@damage 3d10 + 5})精神傷害。若目標的體型為大型或更小，它將{@condition 被擒}(逃脫DC 15)且必須成功通過一次DC 20的智力豁免，否則被{@condition 震懾}直到擒抱結束。"
 					]
 				},
 				{
-					"name": "Extract Brain",
+					"name": "吸腦", "tENG_name": "Extract Brain",
 					"entries": [
-						"{@atk mw} 命中{@hit 12}，觸及5呎， one {@condition 無力} humanoid {@condition 被擒} by the lich. {@h}55 ({@damage 10d10}) piercing damage. If this damage reduces the target to 0 hit points, the lich kills the target by extracting and devouring its brain."
+						"{@atk mw} 命中{@hit 12}，觸及5呎，單一陷入{@condition 無力}且{@condition 被擒}於奪心魔巫妖的類人生物。{@h}55 ({@damage 10d10})穿刺傷害。若這個傷害將目標的生命值歸零，奪心魔巫妖將吸取並吞噬目標的大腦以將它殺死。"
 					]
 				},
 				{
-					"name": "Mind Blast {@recharge 5}",
+					"name": "心靈震爆 {@recharge 5}", "tENG_name": "Mind Blast {@recharge 5}",
 					"entries": [
-						"The illithilich magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 18 Intelligence saving throw or take 27 ({@damage 5d8 + 5}) psychic damage and be {@condition 震懾} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"奪心魔巫妖以魔法釋放出一道60呎錐形的精神能量。每個在範圍內的生物都必須成功通過一次DC 18的智力豁免，否則受到 27 ({@damage 5d8 + 5})精神傷害且被{@condition 震懾}長達1分鐘。一個生物可以在它的每個回合結束時重複這個豁免檢定，若豁免成功則結束這個效果對它的影響。"
 					]
 				}
 			],
 			"legendary": [
 				{
-					"name": "Tentacles",
+					"name": "觸鬚", "tENG_name": "Tentacles",
 					"entries": [
-						"The illithilich makes one attack with its tentacles."
+						"奪心魔巫妖進行一次觸鬚攻擊。"
 					]
 				},
 				{
-					"name": "Extract Brain (Costs 2 Actions)",
+					"name": "吸腦 (消耗 2動作)", "tENG_name": "Extract Brain (Costs 2 Actions)",
 					"entries": [
-						"The illithilich uses Extract Brain."
+						"奪心魔巫妖使用吸腦。"
 					]
 				},
 				{
-					"name": "Mind Blast (Costs 3 Actions)",
+					"name": "心靈震爆 (消耗 3動作)", "tENG_name": "Mind Blast (Costs 3 Actions)",
 					"entries": [
-						"The illithilich recharges its Mind Blast and uses it."
+						"奪心魔巫妖將它的心靈震爆充能，並使用它。"
 					]
 				},
 				{
-					"name": "Cast Spell (Costs 1\u20133 Actions)",
+					"name": "施放法術 (消耗 1\u20133動作)", "tENG_name": "Cast Spell (Costs 1\u20133 Actions)",
 					"entries": [
-						"The illithilich uses a spell slot to cast a 1st-, 2nd-, or 3rd-level spell that it has prepared. Doing so costs 1 legendary action per level of the spell."
+						"奪心魔巫妖使用一個法術位以施放一個它已經準備的1環、2環、或3環法術。這麼做會消耗等同於該法術環階的傳奇動作數量。"
 					]
 				}
 			],
@@ -7385,9 +7385,9 @@
 			"page": 172,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting (Psionics)",
+					"name": "天生施法（靈能）", "tENG_name": "Innate Spellcasting (Psionics)",
 					"headerEntries": [
-						"The illithilich's innate spellcasting ability is Intelligence (spell save DC 20). It can innately cast the following spells, requiring no components."
+						"奪心魔巫妖的天生施法屬性為智力（法術豁免DC 20）。它天生就可以施展以下法術，且無需任何構材："
 					],
 					"will": [
 						"{@spell 偵測思想}",
@@ -7404,7 +7404,7 @@
 				{
 					"name": "施法", "tENG_name": "Spellcasting",
 					"headerEntries": [
-						"The illithilich is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 20, {@hit 12} to hit with spell attacks). The lich has the following wizard spells prepared:"
+						"奪心魔巫妖是18級的施法者。它的施法屬性為智力（法術豁免DC 20，法術攻擊命中{@hit 12}）。奪心魔巫妖已準備了以下法師法術："
 					],
 					"spells": {
 						"0": {
@@ -7465,7 +7465,7 @@
 						"7": {
 							"slots": 1,
 							"spells": [
-								"{@spell finger of death}",
+								"{@spell 死亡一指}",
 								"{@spell 異界傳送}"
 							]
 						},
@@ -7473,13 +7473,13 @@
 							"slots": 1,
 							"spells": [
 								"{@spell 支配怪物}",
-								"{@spell power word stun}"
+								"{@spell 律令震懾}"
 							]
 						},
 						"9": {
 							"slots": 1,
 							"spells": [
-								"{@spell power word kill}"
+								"{@spell 律令死亡}"
 							]
 						}
 					},
@@ -9049,7 +9049,7 @@
 			},
 			"senses": "黑暗視覺120呎",
 			"passive": 16,
-			"languages": "Deep Speech, Undercommon, 心靈感應120呎",
+			"languages": "深幽語、地底通用語、心靈感應120呎",
 			"cr": "8",
 			"trait": [
 				{
@@ -9067,13 +9067,13 @@
 					]
 				},
 				{
-					"name": "Extract Brain",
+					"name": "吸腦", "tENG_name": "Extract Brain",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎， one {@condition 無力} humanoid {@condition 被擒} by the mind flayer. {@h}The target takes 55 ({@damage 10d10}) piercing damage. If this damage reduces the target to 0 hit points, the mind flayer kills the target by extracting and devouring its brain."
 					]
 				},
 				{
-					"name": "Mind Blast {@recharge 5}",
+					"name": "心靈震爆 {@recharge 5}", "tENG_name": "Mind Blast {@recharge 5}",
 					"entries": [
 						"The mind flayer magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 15 Intelligence saving throw or take 22 ({@damage 4d8 + 4}) psychic damage and be {@condition 震懾} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
@@ -9082,7 +9082,7 @@
 			"page": 71,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting (Psionics)",
+					"name": "天生施法（靈能）", "tENG_name": "Innate Spellcasting (Psionics)",
 					"headerEntries": [
 						"The mind flayer is a 10th-level spellcaster. Its innate spellcasting ability is Intelligence (spell save DC 15; {@hit 7} to hit with spell attacks). It can innately cast the following spells, requiring no components:"
 					],
@@ -9239,7 +9239,7 @@
 					]
 				},
 				{
-					"name": "Eye Rays",
+					"name": "眼波射線", "tENG_name": "Eye Rays",
 					"entries": [
 						"Eye Rays. The mindwitness shoots three of the following magical eye rays at random (reroll duplicates), choosing one to three targets it can see within 120 feet of it:",
 						"1. Aversion Ray: The targeted creature must make a DC 13 Charisma saving throw. On a failed save, the target has disadvantage on attack rolls for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
@@ -9473,7 +9473,7 @@
 			]
 		},
 		{
-			"name": "Mouth of Grolantor",
+			"name": "葛洛藍托之口", "ENG_name": "Mouth of Grolantor",
 			"size": "H",
 			"type": {
 				"type": "giant",
@@ -9514,18 +9514,18 @@
 				"frightened"
 			],
 			"passive": 11,
-			"languages": "Giant",
+			"languages": "巨人語",
 			"cr": "6",
 			"trait": [
 				{
-					"name": "Mouth of Madness",
+					"name": "瘋狂之口", "tENG_name": "Mouth of Madness",
 					"entries": [
-						"The giant is immune to {@spell 困惑術} spells and similar magic.",
-						"On each of its turns, the giant uses all its movement to move toward the nearest creature or whatever else it might perceive as food. Roll a {@dice d10} at the start of each of the giant's turns to determine its action for that turn:",
-						"1\u20133. The giant makes three attacks with its fists against one random target within its reach. If no other creatures are within its reach, the giant flies into a rage and gains advantage on all attack rolls until the end of its next turn.",
-						"4\u20135. The giant makes one attack with its fist against every creature within its reach. If no other creatures are within its reach, the giant makes one fist attack against itself.",
-						"6\u20137. The giant makes one attack with its bite against one random target within its reach. If no other creatures are within its reach, its eyes glaze over and it becomes {@condition 震懾} until the start of its next turn.",
-						"8\u201310. The giant makes three attacks against one random target within its reach: one attack with its bite and two with its fists. If no other creatures are within its reach, the giant flies into a rage and gains advantage on all attack rolls until the end of its next turn."
+						"巨人免疫於{@spell 困惑術}法術和類似的魔法。",
+						"在它的每個回合，巨人使用它所有的移動速度向著一個最近的生物、或任何它視其為食物的事物移動。在該巨人的每個回合開始時骰一顆{@dice d10}以決定它這回合的動作：",
+						"1\u20133：巨人對一個處於它觸及範圍內的隨機目標進行三次拳擊攻擊。若沒有其他生物處於它的觸及範圍，則巨人將進入狂怒，且直到它的下個回合結束前在所有攻擊檢定中獲得優勢。",
+						"4\u20135：巨人隊每個處於它觸及範圍內的生物各進行一次拳擊攻擊。若沒有其他生物處於它的觸及範圍，則巨人將對自己進行一次拳擊攻擊。",
+						"6\u20137：巨人對一個處於它觸及範圍內的隨機目標進行一次啃咬攻擊。若沒有其他生物處於它的觸及範圍，則它的雙眼將變的呆滯，並陷入{@condition 震懾}狀態直到它的下個回合開始。",
+						"8\u201310：巨人對一個處於它觸及範圍內的隨機目標進行三次攻擊：一次啃咬，二次拳擊。若沒有其他生物處於它的觸及範圍，則巨人將進入狂怒，且直到它的下個回合結束前在所有攻擊檢定中獲得優勢。"
 					]
 				}
 			],
@@ -9533,11 +9533,11 @@
 				{
 					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} 命中{@hit 8}，觸及5呎，單一生物。{@h}15 ({@damage 3d6 + 5}) piercing damage, and the giant magically regains hit points equal to the damage dealt."
+						"{@atk mw} 命中{@hit 8}，觸及5呎，單一生物。{@h}15 ({@damage 3d6 + 5})穿刺傷害，且巨人將魔法性的回復等同於造成傷害的生命值。"
 					]
 				},
 				{
-					"name": "Fist",
+					"name": "拳擊", "tENG_name": "Fist",
 					"entries": [
 						"{@atk mw} 命中{@hit 8}，觸及10呎，單一目標。{@h}18 ({@damage 3d8 + 5})鈍擊傷害。"
 					]
@@ -9920,7 +9920,7 @@
 			},
 			"senses": "黑暗視覺120呎（看透魔法黑暗）",
 			"passive": 13,
-			"languages": "Common, Deep Speech, Undercommon, 心靈感應30呎",
+			"languages": "Common, 深幽語、地底通用語、心靈感應30呎",
 			"cr": "4",
 			"trait": [
 				{
@@ -10102,7 +10102,7 @@
 			"page": 181,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting (Psionics)",
+					"name": "天生施法（靈能）", "tENG_name": "Innate Spellcasting (Psionics)",
 					"headerEntries": [
 						"The neothelid's innate spellcasting ability is Wisdom (spell save DC 16). It can innately cast the following spells, requiring no components:"
 					],
@@ -11987,7 +11987,7 @@
 			]
 		},
 		{
-			"name": "Stone Giant Dreamwalker",
+			"name": "石巨人．夢行者", "ENG_name": "Stone Giant Dreamwalker",
 			"size": "H",
 			"type": {
 				"type": "giant",
@@ -12036,13 +12036,13 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 13,
-			"languages": "Common, Giant",
+			"languages": "通用語、巨人語",
 			"cr": "10",
 			"trait": [
 				{
-					"name": "Dreamwalker's Charm",
+					"name": "夢行者魅惑", "tENG_name": "Dreamwalker's Charm",
 					"entries": [
-						"An enemy that starts its turn within 30 feet of the giant must make a DC 13 Charisma saving throw, provided that the giant isn't {@condition 無力}. On a failed save, the creature is {@condition 魅惑} by the giant. A creature {@condition 魅惑} in this way can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. Once it succeeds on the saving throw, the creature is immune to this giant's Dreamwalker's Charm for 24 hours."
+						"只要巨人未陷入{@condition 無力}狀態，則在距離巨人30呎內之處開始其回合的敵人都必須進行一次DC 13的魅力豁免。若豁免失敗，該生物將被巨人{@condition 魅惑}。被這個方式{@condition 魅惑}的生物可以在它的每個回合結束時重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。一旦它成功通過此豁免檢定，該生物將在接下來的24小時內免疫於該巨人的夢行者魅惑。"
 					]
 				}
 			],
@@ -12050,7 +12050,7 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The giant makes two attacks with its greatclub."
+						"巨人進行二次巨棍攻擊。"
 					]
 				},
 				{
@@ -12060,15 +12060,15 @@
 					]
 				},
 				{
-					"name": "Petrifying Touch",
+					"name": "石化之觸", "tENG_name": "Petrifying Touch",
 					"entries": [
-						"The giant touches one Medium or smaller creature within 10 feet of it that is {@condition 魅惑} by it. The target must make a DC 17 Constitution saving throw. On a failed save, the target becomes {@condition petrified}, and the giant can adhere the target to its stony body. Greater restoration spells and other magic that can undo petrification have no effect on a {@condition petrified} creature on the giant unless the giant is dead, in which case the magic works normally, freeing the {@condition petrified} creature as well as ending the {@condition petrified} condition on it."
+						"巨人觸碰一個距離它10呎內且被它{@condition 魅惑}，體型為中型或更小的生物。目標必須進行一次DC 17的體質豁免。若豁免失敗，目標將陷入{@condition 石化}，且巨人可以將目標黏附在它石質的身體上。除非該巨人死亡，否則{@spell 高等復原術}和其他能夠解除石化的魔法對於該巨人身上被{@condition 石化}的生物沒有任何效果。若該巨人死亡，則其魔法將如常作用，使被{@condition 石化}的生物重獲自由並結束其{@condition 石化}狀態。"
 					]
 				},
 				{
 					"name": "投石", "tENG_name": "Rock",
 					"entries": [
-						"{@atk rw} 命中{@hit 10}，射程60/240呎，單一目標。{@h}28 ({@damage 4d10 + 6})鈍擊傷害。 If the target is a creature, it must succeed on a DC 17 Strength saving throw or be knocked {@condition 伏地}."
+						"{@atk rw} 命中{@hit 10}，射程60/240呎，單一目標。{@h}28 ({@damage 4d10 + 6})鈍擊傷害。若目標為一個生物，則它必須成功通過一次DC 17的力量豁免，否則將被擊倒{@condition 伏地}。"
 					]
 				}
 			],
@@ -12155,7 +12155,7 @@
 			],
 			"senses": "truesight 60 ft.",
 			"passive": 20,
-			"languages": "Common, Giant",
+			"languages": "通用語、巨人語",
 			"cr": "16",
 			"trait": [
 				{
@@ -12783,7 +12783,7 @@
 				{
 					"name": "螫刺", "tENG_name": "Sting",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一生物。{@h}6 ({@damage 1d6 + 3})穿刺傷害加 14 ({@damage 4d6})毒素傷害，且目標必須成功通過一次DC 14的體質豁免，否則陷入{@condition 中毒}狀態長達1分鐘。若此豁免檢定的結果與目標值差距5點或更多，則目標將在{@condition 中毒}時連帶陷入{@condition 麻痺}狀態，目標可以在它的每個回合結束時重複這個豁免檢定，若檢定成功則結束這個效果對它的影響。"
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一生物。{@h}6 ({@damage 1d6 + 3})穿刺傷害加 14 ({@damage 4d6})毒素傷害，且目標必須成功通過一次DC 14的體質豁免，否則陷入{@condition 中毒}狀態長達1分鐘。若此豁免檢定失敗且結果與目標值差距5點或更多，則目標將在{@condition 中毒}時連帶陷入{@condition 麻痺}狀態，目標可以在它的每個回合結束時重複這個豁免檢定，若檢定成功則結束這個效果對它的影響。"
 					]
 				}
 			],
@@ -13101,13 +13101,13 @@
 					]
 				},
 				{
-					"name": "Extract Brain",
+					"name": "吸腦", "tENG_name": "Extract Brain",
 					"entries": [
 						"{@atk mw} 命中{@hit 9}，觸及5呎， one {@condition 無力} humanoid {@condition 被擒} by the ulitharid. {@h}55 ({@damage 10d10}) piercing damage. If this damage reduces the target to 0 hit points, the ulitharid kills the target by extracting and devouring its brain."
 					]
 				},
 				{
-					"name": "Mind Blast {@recharge 5}",
+					"name": "心靈震爆 {@recharge 5}", "tENG_name": "Mind Blast {@recharge 5}",
 					"entries": [
 						"The ulitharid magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 17 Intelligence saving throw or take 31 ({@damage 4d12 + 5}) psychic damage and be {@condition 震懾} for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
@@ -13116,7 +13116,7 @@
 			"page": 175,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting (Psionics)",
+					"name": "天生施法（靈能）", "tENG_name": "Innate Spellcasting (Psionics)",
 					"headerEntries": [
 						"The ulitharid's innate spellcasting ability is Intelligence (spell save DC 17). It can innately cast the following spells, requiring no components:"
 					],
@@ -13906,7 +13906,7 @@
 					"daily": {
 						"1e": [
 							"{@spell feeblemind}",
-							"{@spell finger of death}",
+							"{@spell 死亡一指}",
 							"{@spell 異界傳送}"
 						]
 					},
