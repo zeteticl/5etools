@@ -152,7 +152,7 @@
 			]
 		},
 		{
-			"name": "Alhoon",
+			"name": "懾心魔", "ENG_name": "Alhoon",
 			"size": "M",
 			"type": "undead",
 			"source": "VGM",
@@ -228,27 +228,27 @@
 				{
 					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
-						"alhoon在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"懾心魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
 					"name": "驅散抗性", "tENG_name": "Turn Resistance",
 					"entries": [
-						"alhoon在對抗驅散不死效果的豁免檢定中具有優勢。"
+						"懾心魔在對抗驅散不死效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Chilling Grasp",
+					"name": "寒凍攫抓", "tENG_name": "Chilling Grasp",
 					"entries": [
-						"{@atk ms} {@hit 8} to hit, reach 5 ft., one target. {@h}10 ({@damage 3d6}) cold damage."
+						"{@atk ms} 命中{@hit 8}，觸及5呎，單一目標。{@h}10 ({@damage 3d6})寒冰傷害。"
 					]
 				},
 				{
 					"name": "心靈震爆 {@recharge 5}", "tENG_name": "Mind Blast {@recharge 5}",
 					"entries": [
-						"The alhoon magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 16 Intelligence saving throw or take 22 ({@damage 4d8 + 4}) psychic damage and be {@condition 震懾} for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"懾心魔以魔法釋放出一道60呎錐形的精神能量。每個在範圍內的生物都必須成功通過一次DC 16的智力豁免，否則受到 22 ({@damage 4d8 + 4})精神傷害且被{@condition 震懾}長達1分鐘。一個生物可以在它的每個回合結束時重複這個豁免檢定，若豁免成功則結束這個效果對它的影響。"
 					]
 				}
 			],
@@ -257,7 +257,7 @@
 				{
 					"name": "天生施法（靈能）", "tENG_name": "Innate Spellcasting (Psionics)",
 					"headerEntries": [
-						"The alhoon's innate spellcasting ability is Intelligence (spell save DC 16). It can innately cast the following spells, requiring no components:"
+						"懾心魔的天生施法屬性為智力（法術豁免DC 16）。它天生就可以施展以下法術，且無需任何構材："
 					],
 					"will": [
 						"{@spell 偵測思想}",
@@ -274,7 +274,7 @@
 				{
 					"name": "施法", "tENG_name": "Spellcasting",
 					"headerEntries": [
-						"The alhoon is a 12th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 16, {@hit 8} to hit with spell attacks). The alhoon has the following wizard spells prepared:"
+						"懾心魔是12級的施法者。它的施法屬性為智力（法術豁免DC 16，法術攻擊命中{@hit 8}）。攝心魔已準備了以下法師法術："
 					],
 					"spells": {
 						"0": {
@@ -4603,9 +4603,9 @@
 			"cr": "14",
 			"trait": [
 				{
-					"name": "Creature Sense",
+					"name": "生物感知", "tENG_name": "Creature Sense",
 					"entries": [
-						"The elder brain is aware of the presence of creatures within 5 miles of it that have an Intelligence score of 4 or higher. It knows the distance and direction to each creature, as well as each one's intelligence score, but can't sense anything else about it. A creature protected by a mind blank spell. a nondetection spell, or similar magic can't be perceived in this manner."
+						"The elder brain能夠感知到任何距離它5哩內且智力值為4或更高的生物的存在。它知曉每個生物的距離和方向，以及每個生物的智力值，但它無法感知道任何除此之外的情報。被{@spell 心靈屏障}法術、{@spell 迴避偵測}、或其他類似魔法力量所保護的生物不會被這種方式給感知到。"
 					]
 				},
 				{
@@ -4621,7 +4621,7 @@
 					]
 				},
 				{
-					"name": "Telepathic Hub",
+					"name": "心靈感應樞紐", "tENG_name": "Telepathic Hub",
 					"entries": [
 						"The elder brain can use its telepathy to initiate and maintain telepathic conversations with up to ten creatures at a time. The elder brain can let those creatures telepathically hear each other while connected in this way."
 					]
@@ -9005,7 +9005,7 @@
 			]
 		},
 		{
-			"name": "Mind Flayer Psion",
+			"name": "奪心魔靈能師", "ENG_name": "Mind Flayer Psion",
 			"size": "M",
 			"type": "aberration",
 			"source": "VGM",
@@ -9017,7 +9017,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item breastplate|phb}"
+						"{@item 護胸甲|phb}"
 					]
 				}
 			],
@@ -9055,27 +9055,27 @@
 				{
 					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
-						"mind flayer在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"奪心魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Tentacles",
+					"name": "觸鬚", "tENG_name": "Tentacles",
 					"entries": [
-						"{@atk mw} 命中{@hit 7}，觸及5呎，單一生物。{@h}15 ({@damage 2d10 + 4}) psychic damage. If the target is Medium or smaller, it is {@condition 被擒} (escape DC 15) and must succeed on a DC 15 Intelligence saving throw or be {@condition 震懾} until this grapple ends."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一生物。{@h}15 ({@damage 2d10 + 4})精神傷害。若目標的體型為中型或更小，它將{@condition 被擒}(逃脫DC 15)且必須成功通過一次DC 15的智力豁免，否則被{@condition 震懾}直到擒抱結束。"
 					]
 				},
 				{
 					"name": "吸腦", "tENG_name": "Extract Brain",
 					"entries": [
-						"{@atk mw} 命中{@hit 7}，觸及5呎， one {@condition 無力} humanoid {@condition 被擒} by the mind flayer. {@h}The target takes 55 ({@damage 10d10}) piercing damage. If this damage reduces the target to 0 hit points, the mind flayer kills the target by extracting and devouring its brain."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一陷入{@condition 無力}且{@condition 被擒}於奪心魔的類人生物。{@h}目標受到 55 ({@damage 10d10})穿刺傷害。若這個傷害將目標的生命值歸零，奪心魔將吸取並吞噬目標的大腦以將它殺死。"
 					]
 				},
 				{
 					"name": "心靈震爆 {@recharge 5}", "tENG_name": "Mind Blast {@recharge 5}",
 					"entries": [
-						"The mind flayer magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 15 Intelligence saving throw or take 22 ({@damage 4d8 + 4}) psychic damage and be {@condition 震懾} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"奪心魔以魔法釋放出一道60呎錐形的精神能量。每個在範圍內的生物都必須成功通過一次DC 15的智力豁免，否則受到 22 ({@damage 4d8 + 4})精神傷害且被{@condition 震懾}長達1分鐘。一個生物可以在它的每個回合結束時重複這個豁免檢定，若豁免成功則結束這個效果對它的影響。"
 					]
 				}
 			],
@@ -9084,7 +9084,7 @@
 				{
 					"name": "天生施法（靈能）", "tENG_name": "Innate Spellcasting (Psionics)",
 					"headerEntries": [
-						"The mind flayer is a 10th-level spellcaster. Its innate spellcasting ability is Intelligence (spell save DC 15; {@hit 7} to hit with spell attacks). It can innately cast the following spells, requiring no components:"
+						"奪心魔是10級的施法者。它的施法屬性為智力（法術豁免DC 15，法術攻擊命中{@hit 7}）。它天生就可以施展以下法術，且無需任何構材："
 					],
 					"will": [
 						"{@spell 指導術}",
@@ -9107,7 +9107,7 @@
 							"spells": [
 								"{@spell 瘋狂冠冕}",
 								"{@spell 魅影之力}",
-								"{@spell see invisibility}"
+								"{@spell 識破隱形}"
 							]
 						},
 						"3": {
@@ -9163,7 +9163,7 @@
 			]
 		},
 		{
-			"name": "Mindwitness",
+			"name": "證心者眼魔", "ENG_name": "Mindwitness",
 			"size": "L",
 			"type": "aberration",
 			"source": "VGM",
@@ -9209,13 +9209,13 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 18,
-			"languages": "Deep Speech, Undercommon, telepathy 600 ft.",
+			"languages": "深幽語、地底通用語、心靈感應600呎",
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Telepathic Hub",
+					"name": "心靈感應樞紐", "tENG_name": "Telepathic Hub",
 					"entries": [
-						"When the mindwitness receives a telepathic message, it can telepathically share that message with up to seven other creatures within 600 feet of it that it can see."
+						"當證心者眼魔接收到心靈感應訊息時，他可以使用心靈感應以將該訊息分享給距離他600呎內且它所能看見的最多七個其他生物。"
 					]
 				}
 			],
@@ -9223,7 +9223,7 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The mindwitness makes two attacks: one with its tentacles and one with its bite."
+						"證心者眼魔進行二次攻擊：一次觸鬚、一次啃咬。"
 					]
 				},
 				{
@@ -9233,22 +9233,22 @@
 					]
 				},
 				{
-					"name": "Tentacles",
+					"name": "觸鬚", "tENG_name": "Tentacles",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}20 ({@damage 4d8 + 2}) psychic damage. if the target is Large or smaller, it is {@condition 被擒} (escape DC 13) and must succeed on a DC 13 Intelligence saving throw or be {@condition 震懾} until this grapple ends."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。{@h}20 ({@damage 4d8 + 2})精神傷害。若目標的體型為大型或更小，它將{@condition 被擒}(逃脫DC 13)且必須成功通過一次DC 13的智力豁免，否則被{@condition 震懾}直到擒抱結束。"
 					]
 				},
 				{
 					"name": "眼波射線", "tENG_name": "Eye Rays",
 					"entries": [
-						"Eye Rays. The mindwitness shoots three of the following magical eye rays at random (reroll duplicates), choosing one to three targets it can see within 120 feet of it:",
-						"1. Aversion Ray: The targeted creature must make a DC 13 Charisma saving throw. On a failed save, the target has disadvantage on attack rolls for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
-						"2. Fear Ray: The targeted creature must succeed on a DC 13 Wisdom saving throw or be {@condition 恐懼} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
-						"3. Psychic Ray: The target must succeed on a DC 13 Intelligence saving throw or take 27 ({@damage 6d8}) psychic damage.",
-						"4. Slowing Ray: The targeted creature must make a DC 13 Dexterity saving throw. On a failed save, the target's speed is halved for 1 minute. In addition, the creature can't take reactions, and it can take either an action or a bonus action on its turn but not both. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
-						"5. Stunning Ray: The targeted creature must succeed on a DC 13 Constitution saving throw or be {@condition 震懾} for 1 minute. The target can repeat the saving throw at the start of each of its turns, ending the effect on itself on a success.",
-						"6. Telekinetic Ray: If the target is a creature, it must make a DC 13 Strength saving throw. On a failed save, the mindwitness moves it up to 30 feet in any direction, and it is {@condition 束縛} by the ray's telekinetic grip until the start of the mindwitness's next turn or until the mindwitness is {@condition 無力}.",
-						"If the target is an object weighing 300 pounds or less that isn't being worn or carried, it is telekinetically moved up to 30 feet in any direction. The mindwitness can also exert fine control on objects with this ray, such as manipulating a simple tool or opening a door or a container."
+						"證心者眼魔隨機射出三道下列其中一種魔法眼波射線（若重複則重骰），選擇一到三個距離它120呎內且它所能看見的生物做為目標：",
+						"1. 厭惡射線：目標生物必須進行一次DC 13的魅力豁免。若豁免失敗，目標將在進行攻擊檢定時承受劣勢長達1分鐘。該生物可以在每次它的回合結束時重複這個豁免檢定，若檢定成功則結束這個效果對它的影響。",
+						"2. 恐懼射線：目標生物必須成功通過一次DC 13的睿知豁免，否則陷入{@condition 恐懼}狀態長達1分鐘。目標可以在它的每個回合結束時重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。",
+						"3. 精神射線：目標必須成功通過一次DC 13的智力豁免，否則將受到27 ({@damage 6d8})精神傷害。",
+						"4. 遲緩射線：目標生物必須進行一次DC 13的敏捷豁免。若豁免失敗，目標的移動速度將減半長達1分鐘。此外，該生物將無法採取反應、且在它的回合只能使用一個動作或一個附贈動作，而不能在同一回合使用兩者。該生物可以在每次它的回合結束時重複這個豁免檢定，若檢定成功則結束這個效果對它的影響。",
+						"5. 震懾射線：目標生物必須成功通過一次DC 13的體質豁免，否則陷入{@condition 震懾}狀態長達1分鐘。目標可以在它的每個回合結束時重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。",
+						"6. 念動射線：若目標為一個生物，則它必須進行一次DC 13的力量豁免。若豁免失敗，則它將被證心者眼魔向任意方向移動最多30呎距離，且它被該射線的念動抓握給{@condition 束縛}直到證心者眼魔的下個回合開始，或直到證心者眼魔陷入{@condition 無力}狀態。",
+						"若目標為一個重量為300磅或更輕，且未被穿戴或持握的物體，則它將被向任意方向移動最多30呎距離。證心者眼魔也可以透過該射線對該物體進行精細的控制，像是操作簡單的工具、或是打開一扇門或容器。"
 					]
 				}
 			],
@@ -10028,7 +10028,7 @@
 			]
 		},
 		{
-			"name": "Neothelid",
+			"name": "奪心巨蟲", "ENG_name": "Neothelid",
 			"size": "G",
 			"type": "aberration",
 			"source": "VGM",
@@ -10072,30 +10072,30 @@
 			"cr": "13",
 			"trait": [
 				{
-					"name": "Creature Sense",
+					"name": "生物感知", "tENG_name": "Creature Sense",
 					"entries": [
-						"The neothelid is aware of the presence of creatures within 1 mile of it that have an Intelligence score of 4 or higher. It knows the distance and direction to each creature, as well as each creature's Intelligence score, but can't sense anything else about it. A creature protected by a mind blank spell, a nondetection spell, or similar magic can't be perceived in this manner."
+						"奪心巨蟲能夠感知到任何距離它1哩內且智力值為4或更高的生物的存在。它知曉每個生物的距離和方向，以及每個生物的智力值，但它無法感知道任何除此之外的情報。被{@spell 心靈屏障}法術、{@spell 迴避偵測}、或其他類似魔法力量所保護的生物不會被這種方式給感知到。"
 					]
 				},
 				{
 					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
-						"neothelid在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"奪心巨蟲在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Tentacles",
+					"name": "觸鬚", "tENG_name": "Tentacles",
 					"entries": [
-						"{@atk mw} 命中{@hit 13}，觸及15呎，單一目標。{@h}21 ({@damage 3d8 + 8})鈍擊傷害 plus 13 ({@damage 3d8}) psychic damage. If the target is a Large or smaller creature, it must succeed on a DC 18 Strength saving throw or be swallowed by the neothelid. A swallowed creature is {@condition 目盲} and {@condition 束縛}, it has total cover against attacks and other effects outside the neothelid, and it takes 35 ({@damage 10d6}) acid damage at the start of each of the neothelid's turns.",
-						"If the neothelid takes 30 damage or more on a single turn from a creature inside it, the neothelid must succeed on a DC 18 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition 伏地} in a space within 10 feet of the neothelid. If the neothelid dies, a swallowed creature is no longer {@condition 束縛} by it and can escape from the corpse by using 20 feet of movement, exiting {@condition 伏地}."
+						"{@atk mw} 命中{@hit 13}，觸及15呎，單一目標。{@h}21 ({@damage 3d8 + 8})鈍擊傷害加 13 ({@damage 3d8})精神傷害。若目標的體型為大型或更小，則它必須成功通過一次DC 18的力量豁免，否則被奪心巨蟲給吞下。被吞下的生物陷入{@condition 目盲}和{@condition 束縛}，它對來自奪心巨蟲體外的攻擊和其他效果有全掩護，且在每次奪心巨蟲的回合開始時受到35 ({@damage 10d6})酸蝕傷害。",
+						"若奪心巨蟲在單一回合內受到30點或以上來自它體內生物所造成的傷害，奪心巨蟲必須在該回合結束時成功通過一次DC 18的體質豁免，否則將反胃嘔出所有它吞下的生物，並使它們以{@condition 伏地}狀態摔落至距離奪心巨蟲10呎內的空間。若奪心巨蟲死亡，被吞下的生物將不再被它{@condition 束縛}，且可以花費20呎的移動速度從屍體中逃脫，以{@condition 伏地}狀態離開。"
 					]
 				},
 				{
-					"name": "Acid Breath {@recharge 5}",
+					"name": "酸蝕吐息 {@recharge 5}", "tENG_name": "Acid Breath {@recharge 5}",
 					"entries": [
-						"The neothelid exhales acid in a 60-foot cone. Each creature in that area must make a DC 18 Dexterity saving throw, taking 35 ({@damage 10d6}) acid damage on a failed save, or half as much damage on a successful one."
+						"奪心巨蟲吐出一道60呎錐形的強酸。每個在吐息範圍內的生物都必須進行一次DC 18的敏捷豁免，豁免失敗則受到35 ({@damage 10d6})酸蝕傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
@@ -10104,7 +10104,7 @@
 				{
 					"name": "天生施法（靈能）", "tENG_name": "Innate Spellcasting (Psionics)",
 					"headerEntries": [
-						"The neothelid's innate spellcasting ability is Wisdom (spell save DC 16). It can innately cast the following spells, requiring no components:"
+						"奪心巨蟲的天生施法屬性為睿知（法術豁免DC 16）。它天生就可以施展以下法術，且無需任何構材："
 					],
 					"will": [
 						"{@spell 浮空術}"
@@ -10112,7 +10112,7 @@
 					"daily": {
 						"1e": [
 							"{@spell 困惑術}",
-							"{@spell feeblemind}",
+							"{@spell 弱智術}",
 							"{@spell 心靈遙控}"
 						]
 					},
@@ -13024,7 +13024,7 @@
 			]
 		},
 		{
-			"name": "Ulitharid",
+			"name": "噬魂怪", "ENG_name": "Ulitharid",
 			"size": "L",
 			"type": "aberration",
 			"source": "VGM",
@@ -13041,7 +13041,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item breastplate|phb}"
+						"{@item 護胸甲|phb}"
 					]
 				}
 			],
@@ -13071,45 +13071,45 @@
 			},
 			"senses": "黑暗視覺120呎",
 			"passive": 18,
-			"languages": "Deep Speech, Undercommon, telepathy 2 miles",
+			"languages": "深幽語、地底通用語、心靈感應2哩",
 			"cr": "9",
 			"trait": [
 				{
-					"name": "Creature Sense",
+					"name": "生物感知", "tENG_name": "Creature Sense",
 					"entries": [
-						"The ulitharid is aware of the presence of creatures within 2 miles of it that have an Intelligence score of 4 or higher. It knows the distance and direction to each creature, as well as each creature's intelligence score, but can't sense anything else about it. A creature protected by a mind blank spell, a nondetection spell, or similar magic can't be perceived in this manner."
+						"噬魂怪能夠感知到任何距離它2哩內且智力值為4或更高的生物的存在。它知曉每個生物的距離和方向，以及每個生物的智力值，但它無法感知道任何除此之外的情報。被{@spell 心靈屏障}法術、{@spell 迴避偵測}、或其他類似魔法力量所保護的生物不會被這種方式給感知到。"
 					]
 				},
 				{
 					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
-						"ulitharid在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"噬魂怪在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Psionic Hub",
+					"name": "靈能樞紐", "tENG_name": "Psionic Hub",
 					"entries": [
-						"If an elder brain establishes a psychic link with the ulitharid, the elder brain can form a psychic link with any other creature the ulitharid can detect using its Creature Sense. Any such link ends if the creature falls outside the telepathy ranges of both the ulitharid and the elder brain. The ulitharid can maintain its psychic link with the elder brain regardless of the distance between them, so long as they are both on the same plane of existence. lithe ulitharid is more than 5 miles away from the elder brain, it can end the psychic link at any time (no action required)."
+						"若一個主腦與噬魂怪建立起心靈聯繫，則該主腦可以透過該噬魂怪的生物感知與任何其所感知到的生物形成心靈聯繫。若該生物同時離開主腦與噬魂怪的心靈感應範圍，則任何這類聯繫都將結束。只要它們處於相同的位面，噬魂怪就可以無視距離而維持它和主腦之間的心靈聯繫。若噬魂怪離開主腦超過5哩距離，它就可以隨時中斷這個心靈聯繫（不需消耗動作）。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Tentacles",
+					"name": "觸鬚", "tENG_name": "Tentacles",
 					"entries": [
-						"{@atk mw} 命中{@hit 9}，觸及10呎，單一生物。{@h}27 ({@damage 4d10 + 5}) psychic damage. If the target is Large or smaller, it is {@condition 被擒} (escape DC 14) and must succeed on a DC 17 Intelligence saving throw or be {@condition 震懾} until this grapple ends."
+						"{@atk mw} 命中{@hit 9}，觸及10呎，單一生物。{@h}27 ({@damage 4d10 + 5})精神傷害。若目標的體型為大型或更小，它將{@condition 被擒}(逃脫DC 14)且必須成功通過一次DC 17的智力豁免，否則被{@condition 震懾}直到擒抱結束。"
 					]
 				},
 				{
 					"name": "吸腦", "tENG_name": "Extract Brain",
 					"entries": [
-						"{@atk mw} 命中{@hit 9}，觸及5呎， one {@condition 無力} humanoid {@condition 被擒} by the ulitharid. {@h}55 ({@damage 10d10}) piercing damage. If this damage reduces the target to 0 hit points, the ulitharid kills the target by extracting and devouring its brain."
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一陷入{@condition 無力且{@condition 被擒}於噬魂怪的類人生物。{@h}55 ({@damage 10d10})穿刺傷害。若這個傷害將目標的生命值歸零，噬魂怪將吸取並吞噬目標的大腦以將它殺死。"
 					]
 				},
 				{
 					"name": "心靈震爆 {@recharge 5}", "tENG_name": "Mind Blast {@recharge 5}",
 					"entries": [
-						"The ulitharid magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 17 Intelligence saving throw or take 31 ({@damage 4d12 + 5}) psychic damage and be {@condition 震懾} for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"噬魂怪以魔法釋放出一道60呎錐形的精神能量。每個在範圍內的生物都必須成功通過一次DC 17的智力豁免，否則受到 31 ({@damage 4d12 + 5})精神傷害且被{@condition 震懾}長達1分鐘。一個生物可以在它的每個回合結束時重複這個豁免檢定，若豁免成功則結束這個效果對它的影響。"
 					]
 				}
 			],
@@ -13118,7 +13118,7 @@
 				{
 					"name": "天生施法（靈能）", "tENG_name": "Innate Spellcasting (Psionics)",
 					"headerEntries": [
-						"The ulitharid's innate spellcasting ability is Intelligence (spell save DC 17). It can innately cast the following spells, requiring no components:"
+						"噬魂怪的天生施法屬性為智力（法術豁免DC 17）。它天生就可以施展以下法術，且無需任何構材："
 					],
 					"will": [
 						"{@spell 偵測思想}",
@@ -13129,10 +13129,10 @@
 							"{@spell 困惑術}",
 							"{@spell 支配怪物}",
 							"{@spell 攝心目光}",
-							"{@spell feeblemind}",
+							"{@spell 弱智術}",
 							"{@spell 群體暗示術}",
 							"{@spell 異界傳送}（限自身）",
-							"{@spell project image}",
+							"{@spell 投射幻影}",
 							"{@spell 探知}",
 							"{@spell 心靈遙控}"
 						]
@@ -13905,7 +13905,7 @@
 					],
 					"daily": {
 						"1e": [
-							"{@spell feeblemind}",
+							"{@spell 弱智術}",
 							"{@spell 死亡一指}",
 							"{@spell 異界傳送}"
 						]
