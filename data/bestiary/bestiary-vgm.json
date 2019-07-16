@@ -4560,7 +4560,7 @@
 			]
 		},
 		{
-			"name": "Elder Brain",
+			"name": "主腦", "ENG_name": "Elder Brain",
 			"size": "L",
 			"type": "aberration",
 			"source": "VGM",
@@ -4599,83 +4599,83 @@
 			},
 			"senses": "盲視120呎",
 			"passive": 14,
-			"languages": "understands Common, Deep Speech, and Undercommon but can't speak, telepathy 5 miles",
+			"languages": "理解通用語、深幽語、地底通用語，但不會說；心靈感應5哩",
 			"cr": "14",
 			"trait": [
 				{
 					"name": "生物感知", "tENG_name": "Creature Sense",
 					"entries": [
-						"The elder brain能夠感知到任何距離它5哩內且智力值為4或更高的生物的存在。它知曉每個生物的距離和方向，以及每個生物的智力值，但它無法感知道任何除此之外的情報。被{@spell 心靈屏障}法術、{@spell 迴避偵測}、或其他類似魔法力量所保護的生物不會被這種方式給感知到。"
+						"主腦能夠感知到任何距離它5哩內且智力值為4或更高的生物的存在。它知曉每個生物的距離和方向，以及每個生物的智力值，但它無法感知道任何除此之外的情報。被{@spell 心靈屏障}法術、{@spell 迴避偵測}、或其他類似魔法力量所保護的生物不會被這種方式給感知到。"
 					]
 				},
 				{
 					"name": "傳奇抗性 (3/日)", "tENG_name": "Legendary Resistance (3/Day)",
 					"entries": [
-						"If the elder brain fails a saving throw, it can choose to succeed instead."
+						"若主腦在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				},
 				{
 					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
-						"elder brain在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"主腦在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
 					"name": "心靈感應樞紐", "tENG_name": "Telepathic Hub",
 					"entries": [
-						"The elder brain can use its telepathy to initiate and maintain telepathic conversations with up to ten creatures at a time. The elder brain can let those creatures telepathically hear each other while connected in this way."
+						"主腦可以使用它的心靈感應同時與最多十個生物建立並維持心靈感應溝通。當透過這個方式溝通時，主腦可以使這些生物透過心靈感應聽見彼此的聲音。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Tentacle",
+					"name": "觸手", "tENG_name": "Tentacle",
 					"entries": [
-						"{@atk mw} 命中{@hit 7}，觸及30呎，單一目標。{@h}20 ({@damage 4d8 + 2})鈍擊傷害。 If the target is a Huge or smaller creature, it is {@condition 被擒} (escape DC 15) and takes 9 ({@damage 1d8 + 5}) psychic damage at the start of each of its turns until the grapple ends. The elder brain can have up to four targets {@condition 被擒} at a time."
+						"{@atk mw} 命中{@hit 7}，觸及30呎，單一目標。{@h}20 ({@damage 4d8 + 2})鈍擊傷害。若目標為一個體型為巨型或更小的生物，則它將{@condition 被擒}(逃脫DC 15)，且直到擒抱結束前，在它的每個回合開始時受到 9 ({@damage 1d8 + 5})精神傷害。主腦同時可以使最多四個目標{@condition 被擒}。"
 					]
 				},
 				{
 					"name": "心靈震爆 {@recharge 5}", "tENG_name": "Mind Blast {@recharge 5}",
 					"entries": [
-						"The elder brain magically emits psychic energy. Creatures of the elder brain's choice within 60 feet of it must succeed on a DC 18 Intelligence saving throw or take 32 ({@damage 5d10 + 5}) psychic damage and be {@condition 震懾} for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"主腦以魔法釋放出精神能量。距離主腦60呎內且主腦所選擇的生物都必須成功通過一次DC 18的智力豁免，否則受到 32 ({@damage 5d10 + 5})精神傷害且被{@condition 震懾}長達1分鐘。一個生物可以在它的每個回合結束時重複這個豁免檢定，若豁免成功則結束這個效果對它的影響。"
 					]
 				},
 				{
-					"name": "Psychic Link",
+					"name": "精神連結", "tENG_name": "Psychic Link",
 					"entries": [
-						"The elder brain targets one {@condition 無力} creature it can perceive with its Creature Sense trait and establishes a psychic link with that creature. Until the psychic link ends, the elder brain can perceive everything the target senses. The target becomes aware that something is linked to its mind once it is no longer {@condition 無力}, and the elder brain can terminate the link at any time (no action required). The target can use an action on its turn to attempt to break the psychic link, doing so with a successful DC 18 Charisma saving throw. On a successful save, the target takes 10 ({@damage 3d6}) psychic damage. The psychic link also ends if the target and the elder brain are more than 5 miles apart, with no consequences to the target. The elder brain can form psychic links with up to ten creatures at a time."
+						"主腦選擇一個陷入{@condition 無力}狀態，且它可以透過生物感知特質察覺其存在的生物，並與該生物建立一道精神連結。直到這個精神連結中斷前，主腦可以接收到目標所感知到的一切。當目標不再陷入{@condition 無力}，它將會意識到有某種事物正連結著他的心靈，且主腦可以在任何時候中斷這道聯繫（不需消耗動作）。目標可以在它的回合使用一個動作嘗試中斷這道精神連結，這麼做需要成功通過一次DC 18的魅力豁免。若豁免成功，目標將受到10 ({@damage 3d6})精神傷害。這道精神連結同樣會在目標與主腦之間的距離超過5哩時中斷，且目標並不會因此承受任何後遺症。主腦同時可以和最多十個生物建立精神連結。"
 					]
 				},
 				{
-					"name": "Sense Thoughts",
+					"name": "感知思想", "tENG_name": "Sense Thoughts",
 					"entries": [
-						"The elder brain targets a creature with which it has a psychic link. The elder brain gains insight into the target's reasoning, its emotional state, and thoughts that loom large in its mind (including things the target worries about, loves, or hates). The elder brain can also make a Charisma (Deception) check with advantage to deceive the target's mind into thinking it believes one idea or feels a particular emotion. The target contests this attempt with a Wisdom (Insight) check. If the elder brain succeeds, the mind believes the deception for 1 hour or until evidence of the lie is presented to the target."
+						"主腦選擇一個已經和它建立精神連結的生物做為目標。主腦將能夠洞悉目標的推論理據、它的情緒狀態、以及其他在它腦海中揮之不去的事物（包括目標擔憂、愛、或恨著的東西）。主腦也可以進行一次帶有優勢的魅力（{@skill 欺瞞}）檢定以欺瞞目標的心靈，使其相信某個想法或感受到某種特定的情緒。目標將進行一次睿知（{@skill 察言觀色}）檢定與之對抗。若主腦對抗成功，則目標將會相信欺瞞的內容長達1小時，或直到謊言的證據被直接展示給目標。"
 					]
 				}
 			],
 			"legendary": [
 				{
-					"name": "Tentacle",
+					"name": "觸手", "tENG_name": "Tentacle",
 					"entries": [
-						"The elder brain makes a tentacle attack."
+						"主腦進行一次觸手攻擊。"
 					]
 				},
 				{
-					"name": "Break Concentration",
+					"name": "中斷專注", "tENG_name": "Break Concentration",
 					"entries": [
-						"The elder brain targets a creature within 120 feet of it with which it has a psychic link. The elder brain breaks the creature's concentration on a spell it has cast. The creature also takes {@dice 1d4} psychic damage per level of the spell."
+						"主腦選擇一個距離它120呎內，且已經與它建立精神連結的生物做為目標。主腦中斷該生物對其施放法術的專注。該生物同時將受到該法術每環階{@dice 1d4}點的精神傷害。"
 					]
 				},
 				{
-					"name": "Psychic Pulse",
+					"name": "精神脈衝", "tENG_name": "Psychic Pulse",
 					"entries": [
-						"The elder brain targets a creature within 120 feet of it with which it has a psychic link. Enemies of the elder brain within 10 feet of that creature take 10 ({@damage 3d6}) psychic damage."
+						"主腦選擇一個距離它120呎內，且已經與它建立精神連結的生物做為目標。距離該生物10呎內的主腦的敵人都將受到 10 ({@damage 3d6})精神傷害。"
 					]
 				},
 				{
-					"name": "Sever Psychic Link",
+					"name": "斷開精神連結", "tENG_name": "Sever Psychic Link",
 					"entries": [
-						"The elder brain targets a creature within 120 feet of it with which it has a psychic link. The elder brain ends the link, causing the creature to have disadvantage on all ability checks, attack rolls, and saving throws until the end of the creature's next turn."
+						"主腦選擇一個距離它120呎內，且已經與它建立精神連結的生物做為目標。主腦中斷其連結，並使該生物在所有的屬性檢定、攻擊檢定、和豁免檢定中承受劣勢，持續直到該生物的下個回合結束。"
 					]
 				}
 			],
@@ -4688,7 +4688,7 @@
 				{
 					"name": "天生施法（靈能）", "tENG_name": "Innate Spellcasting (Psionics)",
 					"headerEntries": [
-						"The elder brain's innate spellcasting ability is Intelligence (spell save DC 18). It can innately cast the following spells, requiring no components:"
+						"主腦的天生施法屬性為智力（法術豁免DC 18）。它天生就可以施展以下法術，且無需任何構材："
 					],
 					"will": [
 						"{@spell 偵測思想}",
@@ -12094,7 +12094,7 @@
 			]
 		},
 		{
-			"name": "Storm Giant Quintessent",
+			"name": "風暴巨人．昇華者", "ENG_name": "Storm Giant Quintessent",
 			"size": "H",
 			"type": {
 				"type": "giant",
@@ -12153,7 +12153,7 @@
 				"lightning",
 				"thunder"
 			],
-			"senses": "truesight 60 ft.",
+			"senses": "真實視覺60呎",
 			"passive": 20,
 			"languages": "通用語、巨人語",
 			"cr": "16",
@@ -12161,7 +12161,7 @@
 				{
 					"name": "兩棲", "tENG_name": "Amphibious",
 					"entries": [
-						"giant可以在空氣和水中呼吸。"
+						"巨人可以在空氣和水中呼吸。"
 					]
 				}
 			],
@@ -12169,39 +12169,39 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The giant makes two Lightning Sword attacks or uses Wind Javelin twice."
+						"巨人進行二次閃電之劍攻擊，或使用二次狂風標槍。"
 					]
 				},
 				{
-					"name": "Lightning Sword",
+					"name": "閃電之劍", "tENG_name": "Lightning Sword",
 					"entries": [
-						"{@atk mw} 命中{@hit 14}，觸及15呎，單一目標。{@h}40 ({@damage 9d6 + 9}) lightning damage."
+						"{@atk mw} 命中{@hit 14}，觸及15呎，單一目標。{@h}40 ({@damage 9d6 + 9})閃電傷害。"
 					]
 				},
 				{
-					"name": "Windjavelin",
+					"name": "狂風標槍", "tENG_name": "Windjavelin",
 					"entries": [
-						"The giant coalesces wind into a javelin-like form and hurls it at a creature it can see within 600 feet of it. The javelin is considered a magic weapon and deals 19 ({@damage 3d6 + 9}) piercing damage to the target, striking unerringly. The javelin disappears after it hits."
+						"巨人將狂風凝聚成標槍般的型態，並將之投向距離它600呎內的一個生物。這把標槍被視為魔法武器，必定命中，且會對目標造成19 ({@damage 3d6 + 9})穿刺傷害。這把標槍會在它命中目標後消散。"
 					]
 				}
 			],
 			"legendary": [
 				{
-					"name": "Gust",
+					"name": "烈風驟起", "tENG_name": "Gust",
 					"entries": [
-						"The giant targets a creature it can see within 60 feet of it and creates a magical gust of wind around it. The target must succeed on a DC 18 Strength saving throw or be pushed up to 20 feet in any horizontal direction the giant chooses."
+						"巨人選擇一個距離它60呎內且它所能看見的生物，並在它周遭創造出魔法狂風。目標必須成功通過一次DC 18的力量豁免，否將將被朝著任意巨人所選的水平方向推動最多20呎距離。"
 					]
 				},
 				{
-					"name": "Thunderbolt (2 Actions)",
+					"name": "雷霆霹靂 (消耗 2動作)", "tENG_name": "Thunderbolt (2 Actions)",
 					"entries": [
-						"The giant hurls a thunderbolt at a creature it can see within 600 feet of it. The target must make a DC 18 Dexterity saving throw, taking 22 ({@damage 4d10}) thunder damage on a failed save, or half as much damage on a successful one."
+						"巨人向著一個距離它600呎內且它所能看見的生物投出一道雷電。目標必須進行一次DC 18的敏捷豁免，豁免失敗將受到22 ({@damage 4d10})雷鳴傷害，豁免成功則只受到一半的傷害。"
 					]
 				},
 				{
-					"name": "One with the Storm (3 Actions)",
+					"name": "融身風暴 (消耗 3動作)", "tENG_name": "One with the Storm (3 Actions)",
 					"entries": [
-						"The giant vanishes, dispersing itself into the storm surrounding its lair. The giant can end this effect at the start of any of its turns, becoming a giant once more and appearing in any location it chooses within its lair. While dispersed, the giant can't take any actions other than lair actions, and it can't be targeted by attacks, spells, or other effects. The giant can't use this ability outside its lair, nor can it use this ability if another creature is using a control weather spell or similar magic to quell the storm."
+						"巨人消失無蹤，使自己消散並融入環繞在它巢穴周遭的風暴。巨人可以在它的任何回合開始時結束這個效果，再次成為一個巨人，並出現在其巢穴內任何它所選的位置。在它消散期間，巨人無法採取任何巢穴動作以外的動作，且它不會被指定為任何攻擊、法術、或其他效果的目標。巨人無法在其巢穴外使用這個能力，也不能在其他生物使用{@spell 操控天氣}法術或類似魔法以平息風暴時使用這個能力。"
 					]
 				}
 			],
@@ -13024,7 +13024,7 @@
 			]
 		},
 		{
-			"name": "噬魂怪", "ENG_name": "Ulitharid",
+			"name": "噬魂魔", "ENG_name": "Ulitharid",
 			"size": "L",
 			"type": "aberration",
 			"source": "VGM",
@@ -13077,19 +13077,19 @@
 				{
 					"name": "生物感知", "tENG_name": "Creature Sense",
 					"entries": [
-						"噬魂怪能夠感知到任何距離它2哩內且智力值為4或更高的生物的存在。它知曉每個生物的距離和方向，以及每個生物的智力值，但它無法感知道任何除此之外的情報。被{@spell 心靈屏障}法術、{@spell 迴避偵測}、或其他類似魔法力量所保護的生物不會被這種方式給感知到。"
+						"噬魂魔能夠感知到任何距離它2哩內且智力值為4或更高的生物的存在。它知曉每個生物的距離和方向，以及每個生物的智力值，但它無法感知道任何除此之外的情報。被{@spell 心靈屏障}法術、{@spell 迴避偵測}、或其他類似魔法力量所保護的生物不會被這種方式給感知到。"
 					]
 				},
 				{
 					"name": "魔法抗性", "tENG_name": "Magic Resistance",
 					"entries": [
-						"噬魂怪在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+						"噬魂魔在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
 					"name": "靈能樞紐", "tENG_name": "Psionic Hub",
 					"entries": [
-						"若一個主腦與噬魂怪建立起心靈聯繫，則該主腦可以透過該噬魂怪的生物感知與任何其所感知到的生物形成心靈聯繫。若該生物同時離開主腦與噬魂怪的心靈感應範圍，則任何這類聯繫都將結束。只要它們處於相同的位面，噬魂怪就可以無視距離而維持它和主腦之間的心靈聯繫。若噬魂怪離開主腦超過5哩距離，它就可以隨時中斷這個心靈聯繫（不需消耗動作）。"
+						"若一個主腦與噬魂魔建立起心靈聯繫，則該主腦可以透過該噬魂魔的生物感知與任何其所感知到的生物形成心靈聯繫。若該生物同時離開主腦與噬魂怪的心靈感應範圍，則任何這類聯繫都將結束。只要它們處於相同的位面，噬魂魔就可以無視距離而維持它和主腦之間的心靈聯繫。若噬魂魔離開主腦超過5哩距離，它就可以隨時中斷這個心靈聯繫（不需消耗動作）。"
 					]
 				}
 			],
@@ -13103,13 +13103,13 @@
 				{
 					"name": "吸腦", "tENG_name": "Extract Brain",
 					"entries": [
-						"{@atk mw} 命中{@hit 9}，觸及5呎，單一陷入{@condition 無力且{@condition 被擒}於噬魂怪的類人生物。{@h}55 ({@damage 10d10})穿刺傷害。若這個傷害將目標的生命值歸零，噬魂怪將吸取並吞噬目標的大腦以將它殺死。"
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一陷入{@condition 無力且{@condition 被擒}於噬魂怪的類人生物。{@h}55 ({@damage 10d10})穿刺傷害。若這個傷害將目標的生命值歸零，噬魂魔將吸取並吞噬目標的大腦以將它殺死。"
 					]
 				},
 				{
 					"name": "心靈震爆 {@recharge 5}", "tENG_name": "Mind Blast {@recharge 5}",
 					"entries": [
-						"噬魂怪以魔法釋放出一道60呎錐形的精神能量。每個在範圍內的生物都必須成功通過一次DC 17的智力豁免，否則受到 31 ({@damage 4d12 + 5})精神傷害且被{@condition 震懾}長達1分鐘。一個生物可以在它的每個回合結束時重複這個豁免檢定，若豁免成功則結束這個效果對它的影響。"
+						"噬魂魔以魔法釋放出一道60呎錐形的精神能量。每個在範圍內的生物都必須成功通過一次DC 17的智力豁免，否則受到 31 ({@damage 4d12 + 5})精神傷害且被{@condition 震懾}長達1分鐘。一個生物可以在它的每個回合結束時重複這個豁免檢定，若豁免成功則結束這個效果對它的影響。"
 					]
 				}
 			],
@@ -13118,7 +13118,7 @@
 				{
 					"name": "天生施法（靈能）", "tENG_name": "Innate Spellcasting (Psionics)",
 					"headerEntries": [
-						"噬魂怪的天生施法屬性為智力（法術豁免DC 17）。它天生就可以施展以下法術，且無需任何構材："
+						"噬魂魔的天生施法屬性為智力（法術豁免DC 17）。它天生就可以施展以下法術，且無需任何構材："
 					],
 					"will": [
 						"{@spell 偵測思想}",

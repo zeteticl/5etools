@@ -386,27 +386,27 @@
 		{
 			"name": "Elder Brain",
 			"lairActions": [
-				"When fighting inside its lair, an elder brain can use lair actions. On initiative count 20 (losing initiative ties), an elder brain can take one lair action to cause one of the following effects; the elder brain can't use the same lair action two rounds in a row:",
+				"當在其巢穴戰鬥時，主腦可以使用它的巢穴動作。在先攻順序輪到20時（先攻相等時則為後手），主腦可以採取一次巢穴動作以造成以下其中一個效果；主腦不能連續兩輪使用相同的效果：",
 				{
 					"type": "list",
 					"items": [
-						"The elder brain casts {@spell wall of force}.",
-						"The elder brain targets one friendly creature it can sense within 120 feet of it. The target has a flash of inspiration and gains advantage on one attack roll, ability check, or saving throw it makes before the end of its next turn. If the target doesn't or can't use this benefit in that time, the inspiration is lost.",
-						"The elder brain targets one creature it can sense within 120 feet of it and anchors it by sheer force of will. The target must succeed on a DC 18 Charisma saving throw or be unable to leave its current space. It can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"主腦施放{@spell 力牆術}法術。",
+						"主腦選擇一個距離它120呎內且它所能感知到的友善生物做為目標。目標將獲得一閃而過激勵，並在它的下個回合結束之前的一次攻擊檢定、屬性檢定、或豁免檢定中獲得優勢。若目標在時間內沒有使用或無法使用這個好處，則這個激勵將會消失。",
+						"主腦選擇一個距離它120呎內且它所能感知到的生物做為目標，並用純粹的意志力量將其固定住。目標必須成功通過一次DC 18的魅力豁免，否則將無法離開它當前所在的空間。目標可以在它的每個回合結束時重複這個豁免檢定，若豁免成功則結束這個效果對它的影響。"
 					]
 				}
 			],
 			"regionalEffects": [
-				"The territory within 5 miles of an elder brain is altered by the creature's psionic presence, which creates one or more of the following effects:",
+				"距離主腦5呎內的土地都被該生物的靈能立量所改變，並創造出以下其中一個或多個效應：",
 				{
 					"type": "list",
 					"items": [
-						"Creatures within 5 miles of an elder brain feel as if they are being followed, even when they are not.",
-						"The elder brain can overhear any telepathic conversation happening within 5 miles of it. The creature that initiated the telepathic conversation makes a DC 18 Wisdom (Insight) check when telepathic contact is first established. If the check succeeds, the creature is aware that something is eavesdropping on the conversation. The nature of the eavesdropper isn't revealed, and the elder brain can't participate in the telepathic conversation unless it has formed a psychic link with the creature that initiated it.",
-						"Any creature with which the elder brain has formed a psychic link hears faint, incomprehensible whispers in the deepest recesses of its mind. This psychic detritus consists of the elder brain's stray thoughts commingled with those of other creatures to which it is linked."
+						"距離主腦5哩內的生物都會感覺到自己正在被跟蹤，儘管實際上並沒有這回事。",
+						"主腦可以監聽任何在距離它5哩內發生的心靈感應溝通。啟動該心靈感應溝通的生物必須在該心靈聯繫第一次被建立時進行一次DC 18的睿知（{@skill 察言觀色}）檢定。若檢定成功，則該生物將意識到某種存在正在監聽這段溝通。這個檢定不會接露監聽者的本質，且除非主腦已經與該生物建立精神連結，否則主腦無法參與到這個心靈感應溝通中。",
+						"任何已經與主腦建立精神連結的生物都會在其內心深處聽見模糊、無法理解的低語。這種精神殘渣是由主腦和其他與之建立聯繫生物的雜念所混合而成的。"
 					]
 				},
-				"If the elder brain dies, these effects immediately end."
+				"若主腦死亡，這些效應都將立即消失。"
 			],
 			"source": "VGM"
 		},
@@ -1015,27 +1015,27 @@
 		{
 			"name": "Storm Giant Quintessent",
 			"lairActions": [
-				"A storm giant quintessent can use lair actions in giant form and while transformed into a storm. On initiative count 20 (losing initiative ties), the giant can take a lair action to cause one of the following effects; the giant can't use the same effect two rounds in a row:",
+				"風暴巨人昇華者可以在它處於巨人型態、以及轉化為暴風期間使用巢穴動作。在先攻順序輪到20時（先攻相等時則為後手），巨人可以採取一次巢穴動作以造成以下其中一個效果；巨人不能連續兩輪使用相同的效果：",
 				{
 					"type": "list",
 					"items": [
-						"The giant creates a thunderclap centered on a point anywhere in its lair. Each creature within 20 feet of that point must succeed on a DC 18 Constitution saving throw or be deafened until the end of its next turn.",
-						"The giant creates a 20-foot-radius sphere of fog (or murky water within water) centered on a point anywhere in its lair. The sphere spreads around corners, and its area is heavily obscured. The fog lasts until the giant disperses it (no action required), and it can't be dispersed by wind.",
-						"The giant creates a 60-foot-long, 10-foot-wide line of strong wind ( or strong current within water) originating from a point anywhere in its lair. Each creature in that line must succeed on a DC 18 Strength saving throw or be pushed 15 feet in the direction the wind is blowing. The gust disperses gas or vapor, and it extinguishes candles, torches, and similar unprotected flames in its area. Protected flames, such as those of lanterns, have a 50 percent chance of being extinguished."
+						"巨人以其巢穴內任意一點為中心創造出一陣迸發雷鳴。每個距離該點20尺內的生物都必須成功通過一次DC 18的體質豁免，否則將陷入{@condition 耳聾}直到它的下個回合結束。",
+						"巨人以其巢穴內任意一點為中心創造出一團20呎半徑的球體濃霧（或在水中則為一團濁水）。這陣濃霧會繞過轉角，且濃霧區域被重度遮蔽。這陣濃霧會持續存在直到巨人將其解消（無須動作），且它不會被風給吹散。",
+						"巨人以其巢穴內任意一點為源頭創造出一陣60呎長、10呎寬的直線強風（或在水中則為一陣激流）。每個在直線範圍內的生物都必須成功通過一次DC 18的力量豁免，否則將沿著風向被推動最多15呎距離。這陣強風會吹散氣體和水氣，且它會熄滅蠟燭、火炬、和區域內其他類似的未受保護的火焰。它會使受保護的火焰（例如提燈）有50%的機率熄滅。"
 					]
 				}
 			],
 			"regionalEffects": [
-				"The region containing a storm giant quintessent's lair is warped by the giant's presence, which creates one or more of the following effects:",
+				"這片坐落著風暴巨人昇華者巢穴的區域被該巨人的本質所扭曲，並創造出以下其中一個或多個效應：",
 				{
 					"type": "list",
 					"items": [
-						"High wind blows within 1 mile of the lair, making it impossible to light a fire unless the location where the fire is lit is protected from the wind.",
-						"Rain, snow, or blowing dust or sand (whichever is most appropriate) is constant within 1 mile of the lair. Rain causes rivers and streams to fill or overflow their banks; snow, dust, or sand form deep drifts or dunes.",
-						"Flashes of lightning and peals of thunder are continual, day and night, within 5 miles of the lair."
+						"距離它巢穴1哩內的區域將颳起劇烈強風，除非是在防風處點燃，否則火焰在這個區域內將因為強風而不可能被點燃。",
+						"距離它巢穴1哩內的區域將持續著降雨、降雪、或者颳動著揚塵或揚沙（選擇最適合其環境的效果）。持續的降雨將使河流溪水暴漲或溢出河岸；降雪、揚塵、或揚沙則會形成厚重的積雪或沙丘。",
+						"距離它巢穴5哩內的區域將日夜不斷地發生耀眼閃電和隆隆雷鳴。"
 					]
 				},
-				"If the giant dies, the lightning, thunder, and high wind regional effects end immediately. Rain, snow, and blowing dust abate gradually within {@dice 1d8} days."
+				"若巨人死亡，閃電、雷鳴、和強風的區域效應都將立即消失。降雨、降雪、以及揚塵都將在{@dice 1d8}天內逐漸減弱。"
 			],
 			"source": "VGM"
 		},
