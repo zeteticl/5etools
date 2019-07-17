@@ -1245,7 +1245,7 @@
 			]
 		},
 		{
-			"name": "Banderhobb",
+			"name": "綁匪怪蛙", "ENG_name": "Banderhobb",
 			"size": "L",
 			"type": "monstrosity",
 			"source": "VGM",
@@ -1284,19 +1284,19 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 12,
-			"languages": "understands Common and the languages of its creator, but can't speak",
+			"languages": "理解通用語和它創造者所掌握的語言，但不會說",
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Resonant Connection",
+					"name": "共鳴連結", "tENG_name": "Resonant Connection",
 					"entries": [
-						"If the banderhobb has even a tiny piece of a creature or an object in its possession, such as a lock of hair or a splinter of wood, it knows the most direct route to that creature or object if it is within 1 mile of the banderhobb."
+						"若綁匪怪蛙擁有某個生物或物體的一小部分，例如一縷頭髮或一小塊木片，且該生物或物品位於綁匪怪蛙的1哩範圍之內，則綁匪怪蛙將知曉通往該生物或物體最直接的路線。"
 					]
 				},
 				{
-					"name": "Shadow Stealth",
+					"name": "幽影隱匿", "tENG_name": "Shadow Stealth",
 					"entries": [
-						"While in dim light or darkness, the banderhobb can take the Hide action as a bonus action."
+						"當處於微光光照或黑暗環境時，綁匪怪蛙能夠以一個附贈動作採取躲藏動作。"
 					]
 				}
 			],
@@ -1304,26 +1304,26 @@
 				{
 					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}22 ({@damage 5d6 + 5}) piercing damage, and the target is {@condition 被擒} (escape DC 15) if it is a Large or smaller creature. Until this grapple ends, the target is {@condition 束縛}, and the banderhobb can't use its bite attack or tongue attack on another target."
+						"{@atk mw} 命中{@hit 8}，觸及5呎，單一目標。{@h}22 ({@damage 5d6 + 5})穿刺傷害，且若目標為一個體型為大型或更小的生物，則目標{@condition 被擒}(逃脫DC 15)。直到擒抱結束前，目標被{@condition 束縛}，且綁匪怪蛙不能對另一個目標使用它的啃咬攻擊或舌捲攻擊。"
 					]
 				},
 				{
-					"name": "Tongue",
+					"name": "舌捲", "tENG_name": "Tongue",
 					"entries": [
-						"{@atk mw} 命中{@hit 8}，觸及15呎，單一目標。{@h}10 ({@damage 3d6}) necrotic damage, and the target must make a DC 15 Strength saving throw. On a failed save, the target is pulled to a space within 5 feet of the banderhobb, which can use a bonus action to make a bite attack against the target."
+						"{@atk mw} 命中{@hit 8}，觸及15呎，單一目標。{@h}10 ({@damage 3d6})死靈傷害，且目標必須進行一次DC 15的力量豁免。若豁免失敗，目標將被拉進一處距離綁匪怪蛙5呎內的未被佔據空間，且綁匪怪蛙接著能夠以一個附贈動作對它進行一次啃咬攻擊。"
 					]
 				},
 				{
-					"name": "Swallow",
+					"name": "吞嚥", "tENG_name": "Swallow",
 					"entries": [
-						"The banderhobb makes a bite attack against a Medium or smaller creature it is grappling. If the attack hits, the target is swallowed, and the grapple ends. The swallowed creature is {@condition 目盲} and {@condition 束縛}, it has total cover against attacks and other effects outside the banderhobb and it takes 10 ({@damage 3d6}) necrotic damage at the start of each of the banderhobb's turns. A creature reduced to 0 hit points in this way stops taking necrotic damage and becomes stable.",
-						"The banderhobb can have only one target swallowed at a time. While the banderhobb isn't {@condition 無力}, it can regurgitate the creature at any time (no action required) in a space within 5 feet of it. The creature exits {@condition 伏地}. If the banderhobb dies, it likewise regurgitates a swallowed creature."
+						"綁匪怪蛙對一個它正擒抱的體型為中型或更小的目標進行一次啃咬攻擊。若該攻擊命中，則目標被吞嚥，且擒抱結束。被吞嚥的生物陷入{@condition 目盲}和{@condition 束縛}，它對綁匪怪蛙外的攻擊和其他效果有全掩護，且在每次綁匪怪蛙的回合開始時受到10 ({@damage 3d6})死靈傷害。一個因為這種方式而導致生命值被歸零的生物將停止受到死靈傷害，且傷勢變為穩定。",
+						"綁匪怪蛙同時吞嚥一個目標。當綁匪怪蛙並未陷入{@condition 無力}時，它可以在任何時候將該生物反胃嘔出（無須動作）至一處距離它5呎內的空間，使其以{@condition 伏地}狀態離開。若綁匪怪蛙死亡，它也會同樣嘔出被吞嚥的生物。"
 					]
 				},
 				{
-					"name": "Shadow Step",
+					"name": "暗影步", "tENG_name": "Shadow Step",
 					"entries": [
-						"The banderhobb magically teleports up to 30 feet to an unoccupied space of dim light or darkness that it can see. Before or after teleporting, it can make a bite or tongue attack."
+						"綁匪怪蛙用魔法傳送最多30呎距離到一處它所能看見的，處於微光光照或黑暗環境中的未被佔據空間。它可以在傳送之前或之後進行一次啃咬或舌捲攻擊。"
 					]
 				}
 			],
@@ -2627,7 +2627,7 @@
 			]
 		},
 		{
-			"name": "Cave Fisher",
+			"name": "穴釣蟹", "ENG_name": "Cave Fisher",
 			"size": "M",
 			"type": "monstrosity",
 			"source": "VGM",
@@ -2665,21 +2665,21 @@
 			"cr": "3",
 			"trait": [
 				{
-					"name": "Adhesive Filament",
+					"name": "黏性長絲", "tENG_name": "Adhesive Filament",
 					"entries": [
-						"The cave fisher can use its action to extend a sticky filament up to 60 feet, and the filament adheres to anything that touches it. A creature adhered to the filament is {@condition 被擒} by the cave fisher (escape DC 13), and ability checks made to escape this grapple have disadvantage. The filament can be attacked (AC 15; 5 hit points; immunity to poison and psychic damage), but a weapon that fails to sever it becomes stuck to it, requiring an action and a successful DC 13 Strength check to pull free. Destroying the filament causes no damage to the cave fisher, which can extrude a replacement filament on its next turn"
+						"穴釣蟹可以使用它的動作以將一條黏性長絲延展到最多60呎，且這條長絲將黏住任何它所碰觸到的事物。一個被長絲黏住的生物將{@condition 被擒}於穴釣蟹(逃脫DC 13)，且它用以逃脫這個擒抱所進行的屬性檢定將承受劣勢。這條長絲可以被攻擊（AC 15；5點生命值；免疫毒素和精神傷害），但沒能切斷它的武器將同樣被黏在長絲上，且需要消耗一個動作並成功通過一次DC 13的力量檢定才能將其拔起。摧毀這條長絲並不會對穴釣蟹造成任何傷害，且穴釣蟹可以在它的下個回合吐出一條替代用的長絲。"
 					]
 				},
 				{
-					"name": "Flammable Blood",
+					"name": "可燃血液", "tENG_name": "Flammable Blood",
 					"entries": [
-						"If the cave fisher drops to half its hit points or fewer, it gains vulnerability to fire damage."
+						"若穴釣蟹的生命值被降至一半或以下，它將獲得對火焰傷害的易傷。"
 					]
 				},
 				{
 					"name": "蛛行", "tENG_name": "Spider Climb",
 					"entries": [
-						"The cave fisher 可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
+						"穴釣蟹可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
 					]
 				}
 			],
@@ -2687,7 +2687,7 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The cave fisher makes two attacks with its claws."
+						"穴釣蟹進行二次爪抓攻擊。"
 					]
 				},
 				{
@@ -2697,9 +2697,9 @@
 					]
 				},
 				{
-					"name": "Filament",
+					"name": "長絲", "tENG_name": "Filament",
 					"entries": [
-						"One creature {@condition 被擒} by the cave fisher's adhesive filament must make a DC 13 Strength saving throw, provided that the target weighs 200 pounds or less. On a failure, the target is pulled into an unoccupied space within 5 feet of the cave fisher, and the cave fisher makes a claw attack against it as a bonus action. Reeling up the target releases anyone else who was attached to the filament. Until the grapple ends on the target, the cave fisher can't extrude another filament."
+						"若一個{@condition 被擒}於穴釣蟹黏性長絲的生物的重量為200磅或更輕，則它必須進行一次DC 13的力量豁免。若豁免失敗，目標將被拉進一處距離穴釣蟹5呎內的未被佔據空間，且穴釣蟹接著能夠以一個附贈動作對它進行一次爪抓攻擊。將該目標捲近的過程將會釋放任何其他被黏在長絲上的事物。直到作用於該目標的擒抱結束前，穴釣蟹都不能再吐出另一條長絲。"
 					]
 				}
 			],
@@ -5552,7 +5552,7 @@
 			]
 		},
 		{
-			"name": "Froghemoth",
+			"name": "沼喉怪", "ENG_name": "Froghemoth",
 			"size": "H",
 			"type": "monstrosity",
 			"source": "VGM",
@@ -5600,13 +5600,13 @@
 				{
 					"name": "兩棲", "tENG_name": "Amphibious",
 					"entries": [
-						"froghemoth可以在空氣和水中呼吸。"
+						"沼喉怪可以在空氣和水中呼吸。"
 					]
 				},
 				{
-					"name": "Shock Susceptibility",
+					"name": "電擊敏感", "tENG_name": "Shock Susceptibility",
 					"entries": [
-						"If the froghemoth takes lightning damage, it suffers several effects until the end of its next turn: its speed is halved, it takes a \u22122 penalty to AC and Dexterity saving throws, it can't use reactions or Multiattack, and on its turn, it can use either an action or a bonus action, not both."
+						"若沼喉怪受到閃電傷害，它將承受數個效果直到它的下個回合結束：它的移動速度減半，它的AC和敏捷豁免將承受\u22122罰值，它不能使用反應或多重攻擊，且它在它的回合中只能使用一個動作或一個附贈動作，而不能在同一回合使用兩者。"
 					]
 				}
 			],
@@ -5614,26 +5614,26 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The froghemoth makes two attacks with its tentacles. It can also use its tongue or bite."
+						"沼喉怪進行二次觸手攻擊。它也可以使用它的啃咬或舌捲。"
 					]
 				},
 				{
-					"name": "Tentacle",
+					"name": "觸手", "tENG_name": "Tentacle",
 					"entries": [
-						"{@atk mw} 命中{@hit 10}，觸及20呎，單一目標。{@h}19 ({@damage 3d8 + 6})鈍擊傷害, and the target is {@condition 被擒} (escape DC 16) if it is a Huge or smaller creature. Until the grapple ends, the froghemoth can't use this tentacle on another target. The froghemoth has four tentacles."
+						"{@atk mw} 命中{@hit 10}，觸及20呎，單一目標。{@h}19 ({@damage 3d8 + 6})鈍擊傷害，且若目標為一個巨型或更小的生物，則目標{@condition 被擒}(逃脫DC 16)。直到擒抱結束前，沼喉怪不能對另一個目標使用同一條觸手攻擊。沼喉怪擁有四條觸手。"
 					]
 				},
 				{
 					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}22 ({@damage 3d10 + 6}) piercing damage, and the target is swallowed if it is a Medium or smaller creature. A swallowed creature is {@condition 目盲} and {@condition 束縛}, has total cover against attacks and other effects outside the froghemoth, and takes 10 ({@damage 3d6}) acid damage at the start of each of the froghemoth's turns.",
-						"The froghemoth's gullet can hold up to two creatures at a time. If the Froghemoth takes 20 damage or more on a single turn from a creature inside it, the Froghemoth must succeed on a DC 20 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, each of which falls {@condition 伏地} in a space within 10 feet of the froghemoth. If the froghemoth dies, a swallowed creature is no longer {@condition 束縛} by it and can escape from the corpse using 10 feet of movement, exiting {@condition 伏地}."
+						"{@atk mw} 命中{@hit 10}，觸及5呎，單一目標。{@h}22 ({@damage 3d10 + 6})穿刺傷害，且若目標為一個體型為中型或更小的生物，則目標被吞嚥。被吞嚥的目標陷入{@condition 目盲}和{@condition 束縛}，它對沼喉怪外的攻擊和其他效果有全掩護，且在每次沼喉怪的回合開始時受到10 ({@damage 3d6})酸蝕傷害。",
+						"沼喉怪同時可以吞嚥最多二個生物。若沼喉怪在單一回合內受到超過20點來自體內生物所造成的傷害，沼喉怪必須在該回合結束時成功通過一次DC 20的體質豁免，否則將反胃嘔出所有被吞嚥的生物，並使它們以{@condition 伏地}狀態摔落至距離沼喉怪10呎內的空間。若沼喉怪死亡，被吞嚥的生物將不再被它{@condition 束縛}，且可以花費10呎的移動速度從屍體中逃脫，以{@condition 伏地}狀態離開。"
 					]
 				},
 				{
-					"name": "Tongue",
+					"name": "舌捲", "tENG_name": "Tongue",
 					"entries": [
-						"The Froghemoth targets one Medium or smaller creature that it can see within 20 feet of it. The target must make a DC 18 Strength saving throw. On a failed save, the target is pulled into an unoccupied space within 5 feet of the froghemoth, and the froghemoth can make a bite attack against it as a bonus action."
+						"沼喉怪選擇一個體型為中型或更小，距離它20呎內且它所能看見的生物做為目標。目標必須進行一次DC 18的力量豁免。若豁免失敗，目標將被拉進一處距離沼喉怪5呎內的未被佔據空間，且沼喉怪接著能夠以一個附贈動作對它進行一次啃咬攻擊。"
 					]
 				}
 			],
@@ -9275,7 +9275,7 @@
 			]
 		},
 		{
-			"name": "Morkoth",
+			"name": "莫客魚怪", "ENG_name": "Morkoth",
 			"size": "M",
 			"type": "aberration",
 			"source": "VGM",
@@ -9337,7 +9337,7 @@
 				{
 					"name": "兩棲", "tENG_name": "Amphibious",
 					"entries": [
-						"morkoth可以在空氣和水中呼吸。"
+						"莫客魚怪可以在空氣和水中呼吸。"
 					]
 				}
 			],
@@ -9345,7 +9345,7 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The morkoth makes three attacks: two with its bite and one with its tentacles or three with its bite."
+						"莫客魚怪進行三次攻擊：二次啃咬和一次觸手，或者三次啃咬。"
 					]
 				},
 				{
@@ -9355,23 +9355,23 @@
 					]
 				},
 				{
-					"name": "Tentacles",
+					"name": "觸手", "tENG_name": "Tentacles",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及15呎，單一目標。{@h}15 ({@damage 3d8 + 2})鈍擊傷害, and the target is {@condition 被擒} (escape DC 14) if it is a Large or smaller creature. Until this grapple ends. the target is {@condition 束縛} and takes 15 ({@damage 3d8 + 2})鈍擊傷害 at the start of each of the morkoth's turns. and the morkoth can't use its tentacles on another target."
+						"{@atk mw} 命中{@hit 6}，觸及15呎，單一目標。{@h}15 ({@damage 3d8 + 2})鈍擊傷害，且若目標為一個體型為大型或更小的生物，則目標{@condition 被擒}(逃脫DC 14)。直到擒抱結束前，目標被{@condition 束縛}，且會在莫客魚怪的每個回合開始時受到 15 ({@damage 3d8 + 2})鈍擊傷害，且莫客魚怪不能對另一個目標使用它的觸手。"
 					]
 				},
 				{
-					"name": "Hypnosis",
+					"name": "催眠", "tENG_name": "Hypnosis",
 					"entries": [
-						"The morkoth projects a 30-foot cone of magical energy. Each creature in that area must make a DC 17 Wisdom saving throw. On a failed save, the creature is {@condition 魅惑} by the morkoth for 1 minute. While {@condition 魅惑} in this way, the target tries to get as close to the morkoth as possible, using its actions to Dash until it is within 5 feet of the morkoth. A {@condition 魅惑} target can repeat the saving throw at the end of each of its turns and whenever it takes damage, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature has advantage on saving throws against the morkoth's Hypnosis for 24 hours."
+						"莫客魚怪投射出一道30呎錐形的魔法能量。每個在錐形範圍內的生物都必須進行一次DC 17的睿知豁免。若豁免失敗，該生物將被莫客魚怪給{@condition 魅惑}長達1分鐘。當被這個方式給{@condition 魅惑}時，目標將嘗試盡可能的靠近莫客魚怪，使用它的動作採取疾走直到它位於距離莫客魚怪5呎內的位置。被{@condition 魅惑}的目標可以在它的每個回合結束時，以及每當它受到傷害時重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。若一個生物豁免成功，或這個效果對它的影響結束，則該目標將在接下來24小時內在對抗該莫客魚怪的催眠的豁免檢定中具有優勢。"
 					]
 				}
 			],
 			"reaction": [
 				{
-					"name": "Spell Reflection",
+					"name": "法術反射", "tENG_name": "Spell Reflection",
 					"entries": [
-						"If the morkoth makes a successful saving throw against a spell, or a spell attack misses it, the morkoth can choose another creature (including the spellcaster) it can see within 120 feet of it. The spell targets the chosen creature instead of the morkoth. If the spell forced a saving throw, the chosen creature makes its own save. If the spell was an attack, the attack roll is rerolled against the chosen creature."
+						"若莫客魚怪成功通過一次對抗法術的豁免檢定，或者一次對它進行的法術攻擊失手，莫客魚怪可以選擇另一個距離它120呎內且它所能看見的生物（包括施法者）。該法術將改為以所選生物做為目標。若該法術會強迫目標進行豁免檢定，則所選生物必須再進行它自己的豁免檢定。若該法術為一次攻擊，則對所選生物重骰一次攻擊檢定。"
 					]
 				}
 			],
@@ -9380,7 +9380,7 @@
 				{
 					"name": "施法", "tENG_name": "Spellcasting",
 					"headerEntries": [
-						"The morkoth is an 11th-level spellcaster. Its spellcasting ability is Intelligence (save DC 17, {@hit 9} to hit with spell attacks). The morkoth has the following wizard spells prepared:"
+						"莫客魚怪是11級的施法者。它的施法屬性為智力（法術豁免DC 17，法術攻擊命中{@hit 9}）。莫客魚怪已準備了以下法師法術："
 					],
 					"spells": {
 						"0": {
@@ -9705,7 +9705,7 @@
 			]
 		},
 		{
-			"name": "Neogi",
+			"name": "紐吉怪", "ENG_name": "Neogi",
 			"size": "S",
 			"type": "aberration",
 			"source": "VGM",
@@ -9741,19 +9741,19 @@
 			},
 			"senses": "黑暗視覺60呎",
 			"passive": 13,
-			"languages": "Common, Deep Speech, Undercommon",
+			"languages": "通用語、深幽語、地底通用語",
 			"cr": "3",
 			"trait": [
 				{
-					"name": "Mental Fortitude",
+					"name": "心靈堅韌", "tENG_name": "Mental Fortitude",
 					"entries": [
-						"The neogi has advantage on saving throws against being {@condition 魅惑} or {@condition 恐懼}. and magic can't put the neogi to sleep."
+						"紐吉怪在對抗{@condition 魅惑}或{@condition 恐懼}的豁免檢定中具有優勢，且魔法無法使它入睡。"
 					]
 				},
 				{
 					"name": "蛛行", "tENG_name": "Spider Climb",
 					"entries": [
-						"The neogi 可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
+						"紐吉怪可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
 					]
 				}
 			],
@@ -9761,13 +9761,13 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The neogi makes two attacks: one with its bite and one with its claws."
+						"紐吉怪進行二次攻擊：一次啃咬，一次爪抓。"
 					]
 				},
 				{
 					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})穿刺傷害加 14 ({@damage 4d6})毒素傷害, and the target must succeed on a DC 12 Constitution saving throw or become {@condition 中毒} for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})穿刺傷害加 14 ({@damage 4d6})毒素傷害，且目標必須成功通過一次DC 12的體質豁免，否則將陷入{@condition 中毒}狀態長達1分鐘。目標可以在每次它的回合結束時重複這個豁免檢定，若豁免成功則結束這個效果對它的影響。"
 					]
 				},
 				{
@@ -9777,9 +9777,9 @@
 					]
 				},
 				{
-					"name": "Enslave (Recharges after a Short or Long Rest)",
+					"name": "奴役 (短休或長休之後充能)", "tENG_name": "Enslave (Recharges after a Short or Long Rest)",
 					"entries": [
-						"The neogi targets one creature it can see within 30 feet of it. The target must succeed on a DC 14 Wisdom saving throw or be magically {@condition 魅惑} by the neogi for 1 day, or until the neogi dies or is more than 1 mile from the target. The {@condition 魅惑} target obeys the neogi's commands and can't take reactions, and the neogi and the target can communicate telepathically with each other at a distance of up to 1 mile. Whenever the {@condition 魅惑} target takes damage, it can repeat the saving throw, ending the effect on itself on a success."
+						"紐吉怪選擇一個距離它30呎內且它所能看見的生物做為目標。目標必須成功通過一次DC 14的睿知豁免，否則將魔法性地被紐吉怪{@condition 魅惑}長達1天，或直到該紐吉怪死亡、或與該紐吉怪之間的距離超過1哩。被{@condition 魅惑}的目標將服從該紐吉怪的命令，且無法採取反應，且該紐吉怪和目標之間可以在最多1哩的距離內透過心靈感應溝通。每當被{@condition 魅惑}的目標受到傷害，它將可以重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。"
 					]
 				}
 			],
@@ -9810,7 +9810,7 @@
 			]
 		},
 		{
-			"name": "Neogi Hatchling",
+			"name": "紐吉怪幼體", "ENG_name": "Neogi Hatchling",
 			"size": "T",
 			"type": "aberration",
 			"source": "VGM",
@@ -9840,15 +9840,15 @@
 			"cr": "1/8",
 			"trait": [
 				{
-					"name": "Mental Fortitude",
+					"name": "心靈堅韌", "tENG_name": "Mental Fortitude",
 					"entries": [
-						"The hatchling has advantage on saving throws against being {@condition 魅惑} or {@condition 恐懼}, and magic can't put the hatchling to sleep."
+						"紐吉怪幼體在對抗{@condition 魅惑}或{@condition 恐懼}的豁免檢定中具有優勢，且魔法無法使它入睡。"
 					]
 				},
 				{
 					"name": "蛛行", "tENG_name": "Spider Climb",
 					"entries": [
-						"The hatchling 可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
+						"紐吉怪幼體可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
 					]
 				}
 			],
@@ -9856,7 +9856,7 @@
 				{
 					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}3 ({@damage 1d4 + 1})穿刺傷害加 7 ({@damage 2d6})毒素傷害, and the target must succeed on a DC 10 Constitution saving throw or become {@condition 中毒} for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。{@h}3 ({@damage 1d4 + 1})穿刺傷害加 7 ({@damage 2d6})毒素傷害，且目標必須成功通過一次DC 10的體質豁免，否則將陷入{@condition 中毒}狀態長達1分鐘。目標可以在每次它的回合結束時重複這個豁免檢定，若豁免成功則結束這個效果對它的影響。"
 					]
 				}
 			],
@@ -9878,7 +9878,7 @@
 			]
 		},
 		{
-			"name": "Neogi Master",
+			"name": "紐吉怪尊主", "ENG_name": "Neogi Master",
 			"size": "M",
 			"type": "aberration",
 			"source": "VGM",
@@ -9920,19 +9920,19 @@
 			},
 			"senses": "黑暗視覺120呎（看透魔法黑暗）",
 			"passive": 13,
-			"languages": "Common, 深幽語、地底通用語、心靈感應30呎",
+			"languages": "通用語、深幽語、地底通用語、心靈感應30呎",
 			"cr": "4",
 			"trait": [
 				{
-					"name": "Mental Fortitude",
+					"name": "心靈堅韌", "tENG_name": "Mental Fortitude",
 					"entries": [
-						"The neogi has advantage on saving throws against being {@condition 魅惑} or {@condition 恐懼}, and magic can't put the neogi to sleep."
+						"紐吉怪在對抗{@condition 魅惑}或{@condition 恐懼}的豁免檢定中具有優勢，且魔法無法使它入睡。"
 					]
 				},
 				{
 					"name": "蛛行", "tENG_name": "Spider Climb",
 					"entries": [
-						"The neogi 可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
+						"紐吉怪可以爬越困難表面，包括倒吊在天花板上，而無須進行屬性檢定。"
 					]
 				}
 			],
@@ -9940,13 +9940,13 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The neogi makes two attacks: one with its bite and one with its claws."
+						"紐吉怪進行二次攻擊：一次啃咬，一次爪抓。"
 					]
 				},
 				{
 					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})穿刺傷害加 14 ({@damage 4d6})毒素傷害, and the target must succeed on a DC 12 Constitution saving throw or become {@condition 中毒} for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})穿刺傷害加 14 ({@damage 4d6})毒素傷害，且目標必須成功通過一次DC 12的體質豁免，否則將陷入{@condition 中毒}狀態長達1分鐘。目標可以在每次它的回合結束時重複這個豁免檢定，若豁免成功則結束這個效果對它的影響。"
 					]
 				},
 				{
@@ -9956,9 +9956,9 @@
 					]
 				},
 				{
-					"name": "Enslave (Recharges after a Short or Long Rest)",
+					"name": "奴役 (短休或長休之後充能)", "tENG_name": "Enslave (Recharges after a Short or Long Rest)",
 					"entries": [
-						"The neogi targets one creature it can see within 30 feet of it. The target must succeed on a DC 14 Wisdom saving throw or be magically {@condition 魅惑} by the neogi for 1 day, or until the neogi dies or is more than 1 mile from the target. The {@condition 魅惑} target obeys the neogi's commands and can't take reactions, and the neogi and the target can communicate telepathically with each other at a distance of up to 1 mile. Whenever the {@condition 魅惑} target takes damage, it can repeat the saving throw, ending the effect on itself on a success."
+						"紐吉怪選擇一個距離它30呎內且它所能看見的生物做為目標。目標必須成功通過一次DC 14的睿知豁免，否則將魔法性地被紐吉怪{@condition 魅惑}長達1天，或直到該紐吉怪死亡、或與該紐吉怪之間的距離超過1哩。被{@condition 魅惑}的目標將服從該紐吉怪的命令，且無法採取反應，且該紐吉怪和目標之間可以在最多1哩的距離內透過心靈感應溝通。每當被{@condition 魅惑}的目標受到傷害，它將可以重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。"
 					]
 				}
 			],
@@ -9967,12 +9967,12 @@
 				{
 					"name": "施法", "tENG_name": "Spellcasting",
 					"headerEntries": [
-						"The neogi is a 7th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 14, {@hit 6} to hit with spell attacks). It regains its expended spell slots when it finishes a short or long rest. It knows the following warlock spells:"
+						"紐吉怪是7級的施法者。它的施法屬性為魅力（法術豁免DC 14，法術攻擊命中{@hit 6}）。它將在完成一次短休或長休時恢復它所有已消耗的法術位。它知曉以下契術師法術："
 					],
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell 魔能爆} (range 300 ft., +4 bonus to each damage roll)",
+								"{@spell 魔能爆}(射程300呎,每次傷害骰+4額外傷害)",
 								"{@spell 指導術}",
 								"{@spell 法師之手}",
 								"{@spell 次級幻象}",
@@ -11400,7 +11400,7 @@
 			]
 		},
 		{
-			"name": "Shadow Mastiff",
+			"name": "陰影獒犬", "ENG_name": "Shadow Mastiff",
 			"size": "M",
 			"type": "monstrosity",
 			"source": "VGM",
@@ -11435,7 +11435,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks while in dim light or darkness"
+					"preNote": "在微光光照或黑暗環境時由非魔法攻擊所造成的"
 				}
 			],
 			"senses": "黑暗視覺60呎",
@@ -11443,27 +11443,27 @@
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Ethereal Awareness",
+					"name": "乙太察覺", "tENG_name": "Ethereal Awareness",
 					"entries": [
-						"The shadow mastiff can see ethereal creatures and objects."
+						"陰影獒犬可以看見乙太生物和物體。"
 					]
 				},
 				{
-					"name": "Keen Hearing and Smell",
+					"name": "敏銳聽覺和嗅覺", "tENG_name": "Keen Hearing and Smell",
 					"entries": [
-						"The shadow mastiff has advantage on Wisdom ({@skill Perception}) checks that rely on hearing or smell."
+						"陰影獒犬在依賴聽覺或嗅覺的睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Shadow Blend",
+					"name": "融入陰影", "tENG_name": "Shadow Blend",
 					"entries": [
-						"While in dim light or darkness, the shadow mastiff can use a bonus action to become {@condition 隱形}, along with anything it is wearing or carrying. The invisibility lasts until the shadow mastiff uses a bonus action to end it or until the shadow mastiff attacks, is in bright light, or is {@condition 無力}."
+						"當處於微光光照或黑暗環境時，陰影獒犬可以使用一個附贈動作讓自己連同任何它所穿戴或攜帶的事物一起{@condition 隱形}。這個隱形狀態將持續直到陰影獒犬使用一個附贈動作將其中止、或直到陰影獒犬攻擊、處於明亮光照的環境、或陷入{@condition 無力}狀態。"
 					]
 				},
 				{
-					"name": "Sunlight Weakness",
+					"name": "日光弱點", "tENG_name": "Sunlight Weakness",
 					"entries": [
-						"While in bright light created by sunlight, the shadow mastiff has disadvantage on attack rolls, ability checks, and saving throws."
+						"當處於日光所創造的明亮光照時，陰影獒犬在攻擊檢定、屬性檢定、和豁免檢定中具有劣勢。"
 					]
 				}
 			],
@@ -11471,7 +11471,7 @@
 				{
 					"name": "啃咬", "tENG_name": "Bite",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}10 ({@damage 2d6 + 3}) piercing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked {@condition 伏地}."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}10 ({@damage 2d6 + 3})穿刺傷害。若目標為一個生物，則它必須成功通過一次DC 13的力量豁免，否則被擊倒{@condition 伏地}。"
 					]
 				}
 			],
@@ -11484,22 +11484,22 @@
 			"variant": [
 				{
 					"type": "variant",
-					"name": "Shadow Mastiff Alpha",
+					"name": "陰影獒犬菁英", "tENG_name": "Shadow Mastiff Alpha",
 					"entries": [
-						"A shadow mastiff alpha has the statistics of a normal shadow mastiff, with the following modifications:",
+						"陰影獒犬菁英具有普通陰影獒犬的數據，並以此為基礎做出以下改變：",
 						{
 							"type": "list",
 							"items": [
-								"The alpha has above average (42\u201354) hit points.",
-								"It has an Intelligence of 6 (-2).",
-								"It has the Terrifying Howl action option described below."
+								"陰影獒犬菁英擁有高於平均的生命值(42\u201354)。",
+								"它的智力值為6(-2)。",
+								"它具有下述的恐懼嚎叫動作項。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Terrifying Howl",
+							"name": "恐懼嚎叫", "tENG_name": "Terrifying Howl",
 							"entries": [
-								"The shadow mastiff howls. Any beast or humanoid within 300 feet of the mastiff and able to hear its howl must succeed on a DC 11 Wisdom saving throw or be {@condition 恐懼} for 1 minute. A {@condition 恐懼} target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to any shadow mastiff's Terrifying Howl for the next 24 hours."
+								"陰影獒犬發出嚎叫。任何距離該陰影獒犬300呎內且能夠聽見它的野獸和類人生物都必須成功通過一次DC 11的睿知豁免，否則將陷入{@condition 恐懼}狀態長達1分鐘。目標可以在每次它的回合結束時重複這個豁免檢定，若豁免成功則結束這個效果對它的影響。若一個目標成功通過該豁免檢定或結束這個效果對它的影響，則該目標將在接下來的24小時內免疫任何陰影獒犬的恐懼嚎叫。"
 							]
 						}
 					]
