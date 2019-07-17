@@ -2282,7 +2282,7 @@
 			]
 		},
 		{
-			"name": "Bodak",
+			"name": "波達屍", "ENG_name": "Bodak",
 			"size": "M",
 			"type": "undead",
 			"source": "VGM",
@@ -2339,26 +2339,26 @@
 			],
 			"senses": "黑暗視覺120呎",
 			"passive": 14,
-			"languages": "Abyssal, the languages it knew in life",
+			"languages": "深淵語、它生前所知的語言",
 			"cr": "6",
 			"trait": [
 				{
-					"name": "Aura of Annihilation",
+					"name": "湮滅靈光", "tENG_name": "Aura of Annihilation",
 					"entries": [
-						"The bodak can activate or deactivate this feature as a bonus action. While active, the aura deals 5 necrotic damage to any creature that ends its turn within 30 feet of the bodak. Undead and fiends ignore this effect."
+						"波達屍能夠以一個附贈動作啟動這個特性。當啟動時，這個靈光將對任何在距離波達屍30呎內位置結束它回合的生物造成5點死靈傷害。不死生物和邪魔免疫這個效果。"
 					]
 				},
 				{
-					"name": "Death Gaze",
+					"name": "死亡凝視", "tENG_name": "Death Gaze",
 					"entries": [
-						"When a creature that can see the bodak's eyes starts its turn within 30 feet of the bodak, the bodak can force it to make a DC 13 Constitution saving throw if the bodak isn't {@condition 無力} and can see the creature. If the saving throw fails by 5 or more, the creature is reduced to 0 hit points, unless it is immune to the {@condition 恐懼} condition. Otherwise, a creature takes 16 ({@damage 3d10}) psychic damage on a failed save.",
-						"Unless surprised, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so. it has disadvantage on attack rolls against the bodak until the start of its next turn. If the creature looks at the bodak in the meantime, it must immediately make the saving throw."
+						"當一個生物在距離波達屍30呎內，且能看見波達屍雙眼的位置開始它的回合，若波達屍未陷入{@condition 無力}狀態且可以看見該生物，則波達屍將可以強迫它進行一次DC 13的體質豁免。除非目標免疫於{@condition 恐懼}狀態，否則若此豁免檢定失敗且結果與目標值差距5點或更多，則目標的生命值將被歸零。除此之外的情況，豁免失敗的生物將陷入受到16 ({@damage 3d10})精神傷害。",
+						"除非被突襲，否則生物可以移開視線以避免在它的回合開始時進行豁免檢定。若該生物這麼做，則它直到它的下個回合開始前在對該波達屍所進行的攻擊檢定中將承受劣勢。在該生物看向波達屍的瞬間，它就必須立刻進行該豁免檢定。"
 					]
 				},
 				{
-					"name": "Sunlight Hypersensitivity",
+					"name": "日光過敏", "tENG_name": "Sunlight Hypersensitivity",
 					"entries": [
-						"The bodak takes 5 radiant damage when it starts its turn in sunlight. While in sunlight, it has disadvantage on attack rolls and ability checks."
+						"當它在日光照耀下開始它的回合時，波達屍將受到5點光耀傷害。當處於日光照耀下時，它在攻擊檢定和屬性檢定中具有劣勢。"
 					]
 				}
 			],
@@ -2366,13 +2366,13 @@
 				{
 					"name": "拳擊", "tENG_name": "Fist",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}4 ({@damage 1d4 + 2})鈍擊傷害 plus 9 ({@damage 2d8}) necrotic damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}4 ({@damage 1d4 + 2})鈍擊傷害加 9 ({@damage 2d8})死靈傷害。"
 					]
 				},
 				{
-					"name": "Withering Gaze",
+					"name": "凋零凝視", "tENG_name": "Withering Gaze",
 					"entries": [
-						"One creature that the bodak can see within 60 feet of it must make a DC 13 Constitution saving throw, taking 22 ({@damage 4d10}) necrotic damage on a failed save, or half as much damage on a successful one."
+						"一個距離波達屍60呎內且波達屍所能看見的生物必須進行一次DC 13的體質豁免，豁免失敗將受到 22 ({@damage 4d10})死靈傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
@@ -11776,7 +11776,7 @@
 			]
 		},
 		{
-			"name": "Spawn of Kyuss",
+			"name": "凱沃斯屍蟲眷族", "ENG_name": "Spawn of Kyuss",
 			"size": "M",
 			"type": "undead",
 			"source": "VGM",
@@ -11812,19 +11812,19 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 8,
-			"languages": "understands the languages it knew in life but can't speak",
+			"languages": "理解它生前所知的語言，但不會說",
 			"cr": "5",
 			"trait": [
 				{
 					"name": "再生", "tENG_name": "Regeneration",
 					"entries": [
-						"The spawn of Kyuss regains 10 hit points at the start of its turn if it has at least 1 hit point and isn't in sunlight or a body of running water. If the spawn takes acid, fire, or radiant damage, this trait doesn't function at the start of the spawn's next turn. The spawn is destroyed only if it starts its turn with 0 hit points and doesn't regenerate."
+						"凱沃斯屍蟲眷族在它的回合開始時擁有至少1點生命值且不處於日光照射或流水中，則它將回復10點生命值。若屍蟲眷族受到酸蝕、火焰、或光耀傷害，則這個特性在屍蟲眷族的下個回合開始時並不會發揮作用。屍蟲眷族只會在它以0點生命值開始它回合，且再生並未發揮效果時被摧毀。"
 					]
 				},
 				{
-					"name": "Worms",
+					"name": "蠕蟲", "tENG_name": "Worms",
 					"entries": [
-						"If the spawn of Kyuss is targeted by an effect that cures disease or removes a curse, all the worms infesting it wither away, and it loses its Burrowing Worm action."
+						"若凱沃斯屍蟲眷族成為一個能夠治癒疾病或移除詛咒的效果的目標，則所有寄生於它的蠕蟲都將枯萎死去，且它將失去其蠕蟲鑽噬的動作項。"
 					]
 				}
 			],
@@ -11832,19 +11832,19 @@
 				{
 					"name": "多重攻擊", "tENG_name": "Multiattack",
 					"entries": [
-						"The spawn of Kyuss makes two attacks with its claws and uses Burrowing Worm."
+						"凱沃斯屍蟲眷族進行二次爪抓攻擊，並使用蠕蟲鑽噬。"
 					]
 				},
 				{
-					"name": "Burrowing Worm",
+					"name": "蠕蟲鑽噬", "tENG_name": "Burrowing Worm",
 					"entries": [
-						"A worm launches from the spawn of Kyuss at one humanoid that the spawn can see within 10 feet of it. The worm latches onto the target's skin unless the target succeeds on a DC 11 Dexterity saving throw. The worm is a Tiny undead with AC 6, 1 hit point, a 2 (-4) in every ability score, and a speed of 1 foot. While on the target's skin, the worm can be killed by normal means or scraped off using an action (the spawn can use this action to launch a scraped-off worm at a humanoid it can see within 10 feet of the worm). Otherwise, the worm burrows under the target's skin at the end of the target's next turn, dealing l piercing damage to it. At the end of each of its turns thereafter, the target takes 7 ({@damage 2d6}) necrotic damage per worm infesting it (maximum of {@dice 10d6}). A worm-infested target dies if it drops to 0 hit points, then rises 10 minutes later as a spawn of Kyuss. If a worm-infested creature is targeted by an effect that cures disease or removes a curse, all the worms infesting it wither away."
+						"一條蠕蟲從凱沃斯屍蟲眷族射向一個距離屍蟲眷族10呎內且它所能看見的類人生物。除非目標成功通過一次DC 11的敏捷豁免，否則該蠕蟲將會落到目標的肌膚上。這條蠕蟲是一個微型的不死生物，具有AC 5，1點生命值，所有屬性值皆為2(-4)．且移動速度為1呎。當位於目標的肌膚時，該蠕蟲可以被正常手段殺死、或透過使用一個動作將其刮落（屍蟲眷族也可以使用此動作以將一個被刮除的蠕蟲射向一個它所能看見且距離該蠕蟲10呎內的類人生物）。若不這麼做，這條蠕蟲將在目標的下個回合結束時鑽進目標的肌膚下，並對目標造成1點穿刺傷害。此後，在目標的每個回合結束時，目標每被一條蠕蟲寄生，就會受到7 ({@damage 2d6})死靈傷害。一個被蠕蟲寄生的目標將會在它生命值歸零時死亡，並在10分鐘後做為凱沃斯屍蟲眷族復活。若一個被蠕蟲寄生的生物成為一個能夠治癒疾病或移除詛咒的效果的目標，則所有寄生於它的蠕蟲都將枯萎死去。"
 					]
 				},
 				{
 					"name": "爪抓", "tENG_name": "Claw",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})劈砍傷害 plus 7 ({@damage 2d6}) necrotic damage."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。{@h}6 ({@damage 1d6 + 3})劈砍傷害加 7 ({@damage 2d6})死靈傷害。"
 					]
 				}
 			],
