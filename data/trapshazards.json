@@ -30,24 +30,24 @@
 			"name": "噴火雕像", "ENG_name": "Fire-Breathing Statue",
 			"trapHazType": "MAG",
 			"entries": [
-				"This trap is activated when an intruder steps on a hidden pressure plate, releasing a magical gout of flame from a nearby statue. The statue can be of anything, including a dragon or a wizard casting a spell.",
-				"The DC is 15 to spot the pressure plate, as well as faint scorch marks on the floor and walls. A spell or other effect that can sense the presence of magic, such as detect magic, reveals an aura of evocation magic around the statue.",
-				"The trap activates when more than 20 pounds of weight is placed on the pressure plate, causing the statue to release a 30-foot cone of fire. Each creature in the fire must make a DC 13 Dexterity saving throw, taking 22 ({@dice 4d10}) fire damage on a failed save, or half as much damage on a successful one.",
-				"Wedging an iron spike or other object under the pressure plate prevents the trap from activating. A successful dispel magic (DC 13) cast on the statue destroys the trap."
+				"這個陷阱會在入侵者踩上一個隱藏的壓力板時被觸發，從一個附近的雕像釋放出一團魔法火焰。這個雕像可以是任何樣貌，包括一條龍或是正在施法的法師。",
+				"發現這個壓力板、以及地板和牆壁上的淡淡灼燒焦痕的DC為15。法術或其他能夠偵測到魔法存在的效果（例如{@spell 偵測魔法}），會在雕像周遭揭露出塑能系魔法的靈光。",
+				"這個陷阱會在超過20磅的重量被置於壓力板時被觸發，並使雕像釋放出一道30呎錐形的烈焰。每個在火焰範圍內的生物都必須進行一次DC 13的敏捷豁免，豁免失敗將受到22 ({@dice 4d10})火焰傷害，豁免成功則只受到一半的傷害。",
+				"將一個大鐵釘或其他物品卡在壓力板下，可以防止這個陷阱被觸發。一個成功施放於雕像的{@spell 解除魔法}法術(DC 13)也能夠摧毀這個陷阱。"
 			],
 			"source": "DMG",
 			"page": 122
 		},
 		{
-			"name": "Pits",
+			"name": "陷坑", "ENG_name": "Pits",
 			"trapHazType": "MECH",
 			"entries": [
 				{
 					"type": "entries",
-					"name": "Simple Pit",
+					"name": "簡易陷坑", "tENG_name": "Simple Pit",
 					"entries": [
-						"A simple pit trap is a hole dug in the ground. The hole is covered by a large cloth anchored on the pit's edge and camouflaged with dirt and debris.",
-						"The DC to spot the pit is 10. Anyone stepping on the cloth falls through and pulls the cloth down into the pit, taking damage based on the pit's depth (usually 10 feet, but some pits are deeper)."
+						"一個簡易陷坑陷阱就是一個在地上挖出的深坑。這個深坑會被大塊布料覆蓋並固定在深坑的邊緣，並使用泥土和雜物進行偽裝掩飾。",
+						"發現這個陷坑的DC為10。任何踩上陷坑布料上的人都將與布料一同摔入坑中，並受到基於陷坑深度的墜落傷害（通常為10呎深，但有些陷坑會更深）。"
 					]
 				},
 				{
@@ -118,12 +118,12 @@
 			"page": 123
 		},
 		{
-			"name": "Sphere of Annihilation",
-			"trapHazType": "MECH",
+			"name": "湮滅法球", "ENG_name": "Sphere of Annihilation",
+			"trapHazType": "MAG",
 			"entries": [
-				"Magical, impenetrable darkness fills the gaping mouth of a stone face carved into a wall. The mouth is 2 feet in diameter and roughly circular. No sound issues from it, no light can illuminate the inside of it, and any matter that enters it is instantly obliterated.",
-				"A successful DC 20 Intelligence (Arcana) check reveals that the mouth contains a sphere of annihilation that can't be controlled or moved. It is otherwise identical to a normal {@item sphere of annihilation}, as described in chapter 7, \"Treasure.\" Some versions of the trap include an enchantment placed on the stone face, such that specified creatures feel an overwhelming urge to approach it and crawl inside its mouth. This effect is otherwise like the sympathy aspect of the antipathy/sympathy spell.",
-				"A successful dispel magic (DC 18) removes this enchantment."
+				"一張雕刻在牆壁上石製臉孔咧開的口中充斥著魔法性、無法穿透的黑暗。這個石口是一個直徑2呎的粗糙圓形。沒有任何聲音從中發出，沒有任何光線能夠照亮內部，且任何進入其中的物質都將立即被消滅。",
+				"成功通過一次DC 20的智力（{@skill 奧秘}）檢定能夠揭露這個石口中安裝著一個{@item 湮滅法球}。除了無法被控制或移動之外，它將視同一個普通的{@item 湮滅法球}，其具體描述請參閱第七章的「寶藏」章節。這個陷阱的某些版本會在石製臉孔上設置一個惑控附魔，用以使生物湧起衝動去接近它並爬入口中。這個效果類似於{@spell 嫌惡/共感術}法術的共感效果。",
+				"一個成功施放的{@spell 解除魔法}法術(DC 18)能夠移除這個惑控附魔。"
 			],
 			"source": "DMG",
 			"page": 123
