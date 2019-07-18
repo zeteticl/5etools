@@ -44,12 +44,12 @@ function getPersonDetails (doRace, isParent) {
 	const occ = rollSuppOccupation().result;
 	const relate = rollSuppRelationship().result;
 	const out = [
-		`<b>Alignment:</b> ${align}`,
-		`<b>Occupation:</b> ${occ}`,
-		`<b>Relationship:</b> ${relate}`
+		`<b>陣營：</b> ${align}`,
+		`<b>工作職業：</b> ${occ}`,
+		`<b>關係：</b> ${relate}`
 	];
 	if (!isParent) {
-		out.push(`<b>Status:</b> ${status.result}`);
+		out.push(`<b>狀態：</b> ${status.result}`);
 	}
 	if (doRace) {
 		const race = rollSuppRace().result;
@@ -224,12 +224,12 @@ const CHILDHOOD_MEMORIES = [
 ];
 
 const LIFE_EVENTS_AGE = [
-	{min: 1, max: 20, "age": () => RNG(20), result: "20 years or younger", "events": 1},
-	{min: 21, max: 59, "age": () => RNG(10) + 20, result: "21\u201430 years", "events": () => RNG(4)},
-	{min: 60, max: 69, "age": () => RNG(10) + 30, result: "31\u201440 years", "events": () => RNG(6)},
-	{min: 70, max: 89, "age": () => RNG(10) + 40, result: "41\u201450 years", "events": () => RNG(8)},
-	{min: 90, max: 99, "age": () => RNG(10) + 50, result: "51\u201460 years", "events": () => RNG(10)},
-	{min: 100, "age": () => RNG(690) + 60, result: "61 years or older", "events": () => RNG(12)} // max age = 750; max elven age
+	{min: 1, max: 20, "age": () => RNG(20), result: "20歲或更年輕", "events": 1},
+	{min: 21, max: 59, "age": () => RNG(10) + 20, result: "21\u201430歲", "events": () => RNG(4)},
+	{min: 60, max: 69, "age": () => RNG(10) + 30, result: "31\u201440歲", "events": () => RNG(6)},
+	{min: 70, max: 89, "age": () => RNG(10) + 40, result: "41\u201450歲", "events": () => RNG(8)},
+	{min: 90, max: 99, "age": () => RNG(10) + 50, result: "51\u201460歲", "events": () => RNG(10)},
+	{min: 100, "age": () => RNG(690) + 60, result: "61歲或更老", "events": () => RNG(12)} // max age = 750; max elven age
 ];
 
 function _lifeEvtResult (title, rollResult) {
@@ -500,15 +500,15 @@ function onJsonLoad (data) {
 	$selBg = $(`#background`);
 	$selClass = $(`#class`);
 
-	$selRace.append(`<option value="Random" selected>Random</option>`);
-	$selRace.append(`<option value="Other">Other</option>`);
-	RACES_SELECTABLE.forEach(r => $selRace.append(`<option value="${r}">${r}</option>`));
+	$selRace.append(`<option value="Random" selected>隨機</option>`);
+	$selRace.append(`<option value="Other">其他</option>`);
+	RACES_SELECTABLE.forEach(r => $selRace.append(`<option value="${r}">${Parser.RaceToDisplay(r)}</option>`));
 	for (let i = -5; i <= 5; ++i) {
 		$selCha.append(`<option value="${i}" ${i === 0 ? "selected" : ""}>${i >= 0 ? "+" : ""}${i}</option>`)
 	}
-	$selBg.append(`<option value="-1" selected>Random</option>`);
+	$selBg.append(`<option value="-1" selected>隨機</option>`);
 	bgList.forEach((b, i) => $selBg.append(`<option value="${i}">${b.name}</option>`));
-	$selClass.append(`<option value="-1" selected>Random</option>`);
+	$selClass.append(`<option value="-1" selected>隨機</option>`);
 	classList.forEach((c, i) => $selClass.append(`<option value="${i}">${c.name}</option>`));
 }
 
@@ -556,35 +556,35 @@ function sectParents () {
 	})();
 
 	const $parents = $(`#parents`);
-	const knowParentsStr = knowParents ? "<b>Parents:</b> You know who your parents are or were." : "<b>Parents:</b> You do not know who your parents were.";
+	const knowParentsStr = knowParents ? "<b>雙親：</b>你知道你的雙親是誰。" : "<b>雙親：</b>你不曉得你的雙親是什麼人。";
 
 	let parentage = null;
 	if (knowParents) {
 		switch (race.toLowerCase()) {
 			case "half-elf":
-				parentage = `<b>${race} parents:</b> ${GenUtil.getFromTable(PARENTS_HALF_ELF, RNG(8)).result}`;
+				parentage = `<b>${Parser.RaceToDisplay(race)}雙親：</b> ${GenUtil.getFromTable(PARENTS_HALF_ELF, RNG(8)).result}`;
 				break;
 			case "half-orc":
-				parentage = `<b>${race} parents:</b> ${GenUtil.getFromTable(PARENTS_HALF_ORC, RNG(8)).result}`;
+				parentage = `<b>${Parser.RaceToDisplay(race)}雙親：</b> ${GenUtil.getFromTable(PARENTS_HALF_ORC, RNG(8)).result}`;
 				break;
 			case "tiefling":
-				parentage = `<b>${race} parents:</b> ${GenUtil.getFromTable(PARENTS_TIEFLING, RNG(8)).result}`;
+				parentage = `<b>${Parser.RaceToDisplay(race)}雙親：</b> ${GenUtil.getFromTable(PARENTS_TIEFLING, RNG(8)).result}`;
 				break;
 		}
 	}
 
 	if (selRace === "Other") {
-		$parents.html(concatSentences(`<b>Race:</b> Other ${fmtChoice(`${race}; generated using the {@table Supplemental Tables; Race|XGE|Supplemental Race} table`, true)}`, knowParentsStr, parentage));
+		$parents.html(concatSentences(`<b>種族：:</b> Other ${fmtChoice(`${race}; generated using the {@table Supplemental Tables; Race|XGE|Supplemental Race} table`, true)}`, knowParentsStr, parentage));
 	} else {
-		$parents.html(concatSentences(`<b>Race:</b> ${race}${selRace === "Random" ? ` ${fmtChoice("generated using the {@table Supplemental Tables; Race|XGE|Supplemental Race} table", true)}` : ""}`, knowParentsStr, parentage));
+		$parents.html(concatSentences(`<b>種族：</b> ${race}${selRace === "Random" ? ` ${fmtChoice("generated using the {@table Supplemental Tables; Race|XGE|Supplemental Race} table", true)}` : ""}`, knowParentsStr, parentage));
 	}
 
 	if (knowParents) {
 		const mum = getPersonDetails(false, true);
 		const dad = getPersonDetails(false, true);
-		$parents.append(`<h5>Mother</h5>`);
+		$parents.append(`<h5>母親</h5>`);
 		$parents.append(joinParaList(mum));
-		$parents.append(`<h5>Father</h5>`);
+		$parents.append(`<h5>父親</h5>`);
 		$parents.append(joinParaList(dad));
 	}
 }
@@ -593,7 +593,7 @@ function sectParents () {
 function sectBirthplace () {
 	const $birthplace = $(`#birthplace`);
 	const rollBirth = RNG(100);
-	const birth = `<b>Birthplace:</b> ${GenUtil.getFromTable(BIRTHPLACES, rollBirth).result}`;
+	const birth = `<b>出生場所：</b> ${GenUtil.getFromTable(BIRTHPLACES, rollBirth).result}`;
 
 	const strangeBirth = RNG(100) === 100 ? "A strange event coincided with your birth: the moon briefly turning red, all the milk within a mile spoiling, the water in the area freezing solid in midsummer, all the iron in the home rusting or turning to silver, or some other unusual event of your choice" : "";
 	$birthplace.html(concatSentences(birth, strangeBirth));
@@ -602,17 +602,24 @@ function sectBirthplace () {
 // SIBLINGS
 function sectSiblings () {
 	const $siblings = $(`#siblings`);
-	function getBirthOrder () {
-		const rollBirthOrder = RNG(6) + RNG(6);
+	function getBirthOrder (rollBirthOrder) {
 		if (rollBirthOrder < 3) {
-			return "Twin, triplet, or quadruplet"
+			return "雙、三、或四胞胎"
 		} else if (rollBirthOrder < 8) {
-			return "Older";
+			return "兄姊";
 		} else {
-			return "Younger";
+			return "弟妹";
 		}
 	}
-
+	function getBirthOrderAndGender (rollBirthOrder) {
+		if (rollBirthOrder < 3) {
+			return chooseRender("兄弟", "姊妹")
+		} else if (rollBirthOrder < 8) {
+			return chooseRender("哥哥", "姊姊");
+		} else {
+			return chooseRender("弟弟", "妹妹");
+		}
+	}
 	const rollSibCount = RNG(5);
 	let sibCount = 0;
 	switch (rollSibCount) {
@@ -635,13 +642,16 @@ function sectSiblings () {
 
 	if (sibCount > 0) {
 		$siblings.empty();
-		$siblings.append(`<p>You have ${sibCount} sibling${sibCount > 1 ? "s" : ""}.</p>`);
+		$siblings.append(`<p>你有 ${sibCount} 個兄弟姊妹。</p>`);
 		for (let i = 0; i < sibCount; ++i) {
-			$siblings.append(`<h5>${getBirthOrder()} sibling ${chooseRender("brother", "sister")}</h5>`);
+			let rollBirthOrder = RNG(6) + RNG(6);
+			let birth_order = getBirthOrder(rollBirthOrder);
+			let gender_order = getBirthOrderAndGender(rollBirthOrder);
+			$siblings.append(`<h5>${birth_order} ${gender_order}</h5>`);
 			$siblings.append(joinParaList(getPersonDetails()));
 		}
 	} else {
-		$siblings.html("You are an only child.");
+		$siblings.html("你是家中的獨生子。");
 	}
 }
 
@@ -649,7 +659,7 @@ function sectSiblings () {
 function sectFamily () {
 	const $family = $(`#family`);
 	$family.empty();
-	$family.append(`<b>Family:</b> ${GenUtil.getFromTable(FAMILY, RNG(100)).result}<br>`);
+	$family.append(`<b>家族：</b> ${GenUtil.getFromTable(FAMILY, RNG(100)).result}<br>`);
 	let famIndex = 1;
 	const $btnSuppFam = $(`<button class="btn btn-xs btn-default btn-supp-fam noprint"></button>`).on("click", () => {
 		const supDetails = getPersonDetails();
@@ -663,13 +673,13 @@ function sectFamily () {
 	$family.append($btnSuppFam);
 
 	const rollFamLifestyle = GenUtil.getFromTable(FAMILY_LIFESTYLE, RNG(6) + RNG(6) + RNG(6));
-	$family.append(`<b>Family lifestyle:</b> ${rollFamLifestyle.result}<br>`);
+	$family.append(`<b>家族生活風格：</b> ${rollFamLifestyle.result}<br>`);
 	const rollFamHome = Math.min(Math.max(RNG(100) + rollFamLifestyle.modifier, 0), 111);
 	const rollFamHomeRes = GenUtil.getFromTable(CHILDHOOD_HOME, rollFamHome).result;
-	$family.append(`<b>Childhood Home:</b> ${rollFamHomeRes}<br>`);
+	$family.append(`<b>童年家園：</b> ${rollFamHomeRes}<br>`);
 
 	const rollChildMems = Math.min(Math.max(RNG(6) + RNG(6) + RNG(6) + Number($selCha.val()), 3), 18);
-	$family.append(`<b>Childhood memories</b>: ${GenUtil.getFromTable(CHILDHOOD_MEMORIES, rollChildMems).result}`);
+	$family.append(`<b>童年回憶：</b> ${GenUtil.getFromTable(CHILDHOOD_MEMORIES, rollChildMems).result}`);
 }
 
 // PERSONAL DECISIONS
@@ -677,8 +687,8 @@ function sectPersonalDecisions () {
 	const $personal = $(`#personal`).empty();
 	const selBg = Number($selBg.val());
 	const myBg = selBg === -1 ? rollOnArray(bgList) : bgList[selBg];
-	$personal.append(`<b>Background:</b> ${myBg.name}<br>`);
-	$personal.append(`<b>I became a${addN(myBg.name)} ${myBg.name} because:</b> ${rollOnArray(myBg.reasons)}`);
+	$personal.append(`<b>背景：</b> ${myBg.name}<br>`);
+	$personal.append(`<b>我成為了一名${myBg.name}，因為：</b> ${rollOnArray(myBg.reasons)}`);
 }
 
 // CLASS TRAINING
@@ -686,8 +696,8 @@ function sectClassTraining () {
 	const $clss = $(`#clss`).empty();
 	const selClass = Number($selClass.val());
 	const myClass = selClass === -1 ? rollOnArray(classList) : classList[selClass];
-	$clss.append(`<b>Class:</b> ${myClass.name}<br>`);
-	$clss.append(`<b>I became a${addN(myClass.name)} ${myClass.name} because:</b> ${rollOnArray(myClass.reasons)}`);
+	$clss.append(`<b>職業：</b> ${myClass.name}<br>`);
+	$clss.append(`<b>我成為了一名${myClass.name}，因為：</b> ${rollOnArray(myClass.reasons)}`);
 }
 
 // LIFE EVENTS
@@ -696,9 +706,9 @@ function sectLifeEvents () {
 	marriageIndex = 0;
 	const $selAge = $(`#age`);
 	const age = GenUtil.getFromTable(LIFE_EVENTS_AGE, Number($selAge.val()) || RNG(100));
-	$events.append(`<b>Current age:</b> ${age.result} ${fmtChoice(`${age.age} year${age.age > 1 ? "s" : ""} old`, true)}`);
+	$events.append(`<b>現在年紀：</b> ${age.result} ${fmtChoice(`${age.age}歲`, true)}`);
 	for (let i = 0; i < age.events; ++i) {
-		$events.append(`<h5>Life Event ${i + 1}</h5>`);
+		$events.append(`<h5>人生大事 ${i + 1}</h5>`);
 		const evt = GenUtil.getFromTable(LIFE_EVENTS, RNG(100));
 		$events.append(`${evt.result}<br>`);
 		if (evt.nextRoll) {
