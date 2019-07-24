@@ -432,45 +432,45 @@ const SUPP_OCCUPATION = [
 	{min: 12, max: 26, result: () => `工匠 或 公會成員 ${choose("工匠", "公會成員")}`, display: "工匠 或 公會成員"},
 	{min: 27, max: 31, result: "罪犯"},
 	{min: 32, max: 36, result: "藝人"},
-	{min: 37, max: 38, result: () => `Exile, hermit, or refugee ${choose("exile", "hermit", "refugee")}`, display: "Exile, hermit, or refugee"},
-	{min: 39, max: 43, result: () => `Explorer or wanderer ${choose("explorer", "wanderer")}`, display: "Explorer or wanderer"},
-	{min: 44, max: 55, result: () => `Farmer or herder ${choose("farmer", "herder")}`, display: "Farmer or herder"},
-	{min: 56, max: 60, result: () => `Hunter or trapper ${choose("hunter", "trapper")}`, display: "Hunter or trapper"},
+	{min: 37, max: 38, result: () => `放逐者、隱士、或 難民 ${choose("放逐者", "隱士", "難民")}`, display: "放逐者、隱士、或 難民"},
+	{min: 39, max: 43, result: () => `探險家 或 浪人 ${choose("探險家", "浪人")}`, display: "探險家 或 浪人"},
+	{min: 44, max: 55, result: () => `農夫 或 牧人 ${choose("農夫", "牧人")}`, display: "農夫 或 牧人"},
+	{min: 56, max: 60, result: () => `獵人 或 陷阱捕獸者 ${choose("獵人", "陷阱捕獸者")}`, display: "獵人 或 陷阱捕獸者"},
 	{min: 61, max: 75, result: "勞工"},
 	{min: 76, max: 80, result: "商人"},
-	{min: 81, max: 85, result: () => `Politician or bureaucrat ${choose("politician", "bureaucrat")}`, display: "Politician or bureaucrat"},
+	{min: 81, max: 85, result: () => `政治家 或 官僚 ${choose("政治家", "官僚")}`, display: "政治家 或 官僚"},
 	{min: 86, max: 90, result: "祭司"},
 	{min: 91, max: 95, result: "水手"},
 	{min: 96, max: 100, result: "士兵"}
 ];
 
 const SUPP_RACE = [
-	{min: 1, max: 40, result: "Human"},
-	{min: 41, max: 50, result: "Dwarf"},
-	{min: 51, max: 60, result: "Elf"},
-	{min: 61, max: 70, result: "Halfling"},
-	{min: 71, max: 75, result: "Dragonborn"},
-	{min: 76, max: 80, result: "Gnome"},
-	{min: 81, max: 85, result: "Half-elf"},
-	{min: 86, max: 90, result: "Half-orc"},
-	{min: 91, max: 95, result: "Tiefling"},
-	{min: 96, max: 100, result: "DM’s choice"}
+	{min: 1, max: 40, result: "人類"},
+	{min: 41, max: 50, result: "矮人"},
+	{min: 51, max: 60, result: "精靈"},
+	{min: 61, max: 70, result: "半身人"},
+	{min: 71, max: 75, result: "龍裔"},
+	{min: 76, max: 80, result: "地侏"},
+	{min: 81, max: 85, result: "半精靈"},
+	{min: 86, max: 90, result: "半獸人"},
+	{min: 91, max: 95, result: "提夫林"},
+	{min: 96, max: 100, result: "由DM決定"}
 ];
 
 const SUPP_RELATIONSHIP = [
 	{min: 3, max: 4, result: "敵對"},
 	{min: 5, max: 10, result: "友善"},
-	{min: 11, max: 12, result: "漠不關心"}
+	{min: 11, max: 12, result: "冷淡"}
 ];
 
 const SUPP_STATUS = [
-	{min: 3, result: () => { return `Dead (${rollSuppDeath().result.lowercaseFirst()})` }, display: "Dead (roll on the Cause of Death table)", "dead": true},
-	{min: 4, max: 5, result: () => `Missing or status unknown ${choose("missing", "status unknown")}`, display: "Missing or status unknown"},
-	{min: 6, max: 8, result: () => `Alive, but doing poorly due to injury, financial trouble, or relationship difficulties ${choose("injury", "financial trouble", "relationship difficulties")}`, display: "Alive, but doing poorly due to injury, financial trouble, or relationship difficulties"},
-	{min: 9, max: 12, result: "Alive and well"},
-	{min: 13, max: 15, result: "Alive and quite successful"},
-	{min: 16, max: 17, result: "Alive and infamous"},
-	{min: 18, result: "Alive and famous"}
+	{min: 3, result: () => { return `死亡 (${rollSuppDeath().result.lowercaseFirst()})` }, display: "死亡 (從死因表中擲骰決定)", "dead": true},
+	{min: 4, max: 5, result: () => `失蹤 或 狀況不明 ${choose("失蹤", "狀況不明")}`, display: "失蹤 或 狀況不明"},
+	{min: 6, max: 8, result: () => `活著，但因為重傷、經濟困難、或人際難題${choose("重傷", "經濟困難", "人際難題")}而過得很糟糕`, display: "活著，但因為重傷、經濟困難、或人際難題而過得很糟糕"},
+	{min: 9, max: 12, result: "活著，且過得不錯"},
+	{min: 13, max: 15, result: "活著，且頗有成就"},
+	{min: 16, max: 17, result: "活著，且惡名昭彰"},
+	{min: 18, result: "活著，且享譽盛名"}
 ];
 
 window.onload = function load () {
@@ -748,5 +748,5 @@ window.addEventListener("load", () => {
 		}
 	});
 
-	$(`#xge_link`).replaceWith(Renderer.get().render(`{@book Xanathar's Guide to Everything|XGE|1|This Is Your Life}`));
+	$(`#xge_link`).replaceWith(Renderer.get().render(`《{@book 姍納薩的萬事指南|XGE|1|This Is Your Life}》`));
 });
