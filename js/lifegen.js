@@ -106,50 +106,50 @@ function rollOnArray (lst) {
 const RACES_SELECTABLE = ["Dwarf", "Elf", "Half-Elf", "Half-Orc", "Tiefling"];
 
 const PARENTS_HALF_ELF = [
-	{min: 1, max: 5, result: () => { const p = RNG(2); return `One parent ${fmtChoice(p === 1 ? "mother" : "father")} was an elf and the other ${fmtChoice(p === 1 ? "father" : "mother")} was a human.` }, display: "One parent was an elf and the other was a human."},
-	{min: 6, result: () => { const p = RNG(2); return `One parent ${fmtChoice(p === 1 ? "mother" : "father")} was an elf and the other ${fmtChoice(p === 1 ? "father" : "mother")} was a half-elf.` }, display: "One parent was an elf and the other was a half-elf."},
-	{min: 7, result: () => { const p = RNG(2); return `One parent ${fmtChoice(p === 1 ? "mother" : "father")} was a human and the other ${fmtChoice(p === 1 ? "father" : "mother")} was a half-elf.` }, display: "One parent was a human and the other was a half-elf."},
+	{min: 1, max: 5, result: () => { const p = RNG(2); return `父母其中一方是精靈 ${fmtChoice(p === 1 ? "母親" : "父親")}，另一方是人類 ${fmtChoice(p === 1 ? "父親" : "母親")}。` }, display: "父母其中一方是精靈，另一方是人類。"},
+	{min: 6, result: () => { const p = RNG(2); return `父母其中一方是精靈 ${fmtChoice(p === 1 ? "母親" : "父親")}，另一方是半精靈 ${fmtChoice(p === 1 ? "父親" : "母親")}。` }, display: "父母其中一方是精靈，另一方是半精靈。"},
+	{min: 7, result: () => { const p = RNG(2); return `父母其中一方是人類 ${fmtChoice(p === 1 ? "母親" : "父親")}，另一方是半精靈 ${fmtChoice(p === 1 ? "父親" : "母親")}。` }, display: "父母其中一方是人類，另一方是半精靈。"},
 	{min: 8, result: "雙親都是半精靈。"}
 ];
 
 const PARENTS_HALF_ORC = [
-	{min: 1, max: 3, result: () => { const p = RNG(2); return `One parent ${fmtChoice(p === 1 ? "mother" : "father")} was an orc and the other ${fmtChoice(p === 1 ? "father" : "mother")} was a human.` }, display: "One parent was an orc and the other was a human."},
-	{min: 4, max: 5, result: () => { const p = RNG(2); return `One parent ${fmtChoice(p === 1 ? "mother" : "father")} was an orc and the other ${fmtChoice(p === 1 ? "father" : "mother")} was a half-orc.` }, display: "One parent was an orc and the other was a half-orc."},
-	{min: 6, max: 7, result: () => { const p = RNG(2); return `One parent ${fmtChoice(p === 1 ? "mother" : "father")} was a human and the other ${fmtChoice(p === 1 ? "father" : "mother")} was a half-orc.` }, display: "One parent was a human and the other was a half-orc."},
+	{min: 1, max: 3, result: () => { const p = RNG(2); return `父母其中一方是獸人 ${fmtChoice(p === 1 ? "母親" : "父親")}，另一方是人類 ${fmtChoice(p === 1 ? "父親" : "母親")}。` }, display: "父母其中一方是獸人，另一方是人類。"},
+	{min: 4, max: 5, result: () => { const p = RNG(2); return `父母其中一方是獸人 ${fmtChoice(p === 1 ? "母親" : "父親")}，另一方是半獸人 ${fmtChoice(p === 1 ? "父親" : "母親")}。` }, display: "父母其中一方是獸人，另一方是半獸人。"},
+	{min: 6, max: 7, result: () => { const p = RNG(2); return `父母其中一方是人類 ${fmtChoice(p === 1 ? "母親" : "父親")}，另一方是半獸人 ${fmtChoice(p === 1 ? "父親" : "母親")}。` }, display: "父母其中一方是人類，另一方是半獸人。"},
 	{min: 8, display: "雙親都是半獸人。"}
 ];
 
 const PARENTS_TIEFLING = [
-	{min: 1, max: 4, display: "Both parents were humans, their infernal heritage dormant until you came along."},
-	{min: 5, max: 6, result: () => { const p = RNG(2); return `One parent ${fmtChoice(p === 1 ? "mother" : "father")} was a tiefling and the other ${fmtChoice(p === 1 ? "father" : "mother")} was a human.` }, display: "One parent was a tiefling and the other was a human."},
-	{min: 7, result: () => { const p = RNG(2); return `One parent ${fmtChoice(p === 1 ? "mother" : "father")} was a tiefling and the other ${fmtChoice(p === 1 ? "father" : "mother")} was a devil.` }, display: "One parent was a tiefling and the other was a devil."},
-	{min: 8, result: () => { const p = RNG(2); return `One parent ${fmtChoice(p === 1 ? "mother" : "father")} was a human and the other ${fmtChoice(p === 1 ? "father" : "mother")} was a devil.` }, display: "One parent was a human and the other was a devil."}
+	{min: 1, max: 4, display: "雙親都是人類，他們體內沉睡的煉獄血脈在你身上顯現。"},
+	{min: 5, max: 6, result: () => { const p = RNG(2); return `父母其中一方是提夫林 ${fmtChoice(p === 1 ? "母親" : "父親")}，另一方是人類 ${fmtChoice(p === 1 ? "父親" : "母親")}。` }, display: "父母其中一方是提夫林，另一方是人類。"},
+	{min: 7, result: () => { const p = RNG(2); return `父母其中一方是提夫林 ${fmtChoice(p === 1 ? "母親" : "父親")}，另一方是魔鬼 ${fmtChoice(p === 1 ? "父親" : "母親")}。` }, display: "父母其中一方是提夫林，另一方是魔鬼。"},
+	{min: 8, result: () => { const p = RNG(2); return `父母其中一方是人類 ${fmtChoice(p === 1 ? "母親" : "父親")}，另一方是魔鬼 ${fmtChoice(p === 1 ? "父親" : "母親")}。` }, display: "父母其中一方是人類，另一方是魔鬼。"}
 ];
 
 const BIRTHPLACES = [
 	{min: 1, max: 50, result: "家中"},
 	{min: 51, max: 55, result: "家族友人的家中"},
-	{min: 56, max: 63, result: () => `Home of a healer or midwife ${choose("healer", "midwife")}`, display: "Home of a healer or midwife"},
-	{min: 64, max: 65, result: () => `Carriage, cart, or wagon ${choose("carriage", "cart", "wagon")}`, display: "Carriage, cart, or wagon"},
-	{min: 66, max: 68, result: () => `Barn, shed, or other outbuilding ${choose("barn", "shed", "outbuilding")}`, display: "Barn, shed, or other outbuilding"},
+	{min: 56, max: 63, result: () => `醫者或產婆的家中 ${choose("醫者", "產婆")}`, display: "醫者或產婆的家中"},
+	{min: 64, max: 65, result: () => `四輪馬車、運貨車、或運貨馬車 ${choose("四輪馬車", "運貨車", "運貨馬車")}`, display: "四輪馬車、運貨車、或運貨馬車"},
+	{min: 66, max: 68, result: () => `穀倉、牲舍、或其他附屬建築 ${choose("穀倉", "牲舍", "附屬建築")}`, display: "穀倉、牲舍、或其他附屬建築"},
 	{min: 69, max: 70, result: "洞穴"},
 	{min: 71, max: 72, result: "原野"},
 	{min: 73, max: 74, result: "森林"},
-	{min: 75, max: 77, result: "Temple"},
+	{min: 75, max: 77, result: "神廟"},
 	{min: 78, result: "戰場"},
-	{min: 79, max: 80, result: () => `Alley or street ${choose("alley", "street")}`, display: "Alley or street"},
-	{min: 81, max: 82, result: () => `Brothel, tavern, or inn ${choose("brothel", "tavern", "inn")}`, display: "Brothel, tavern, or inn"},
-	{min: 83, max: 84, result: () => `Castle, keep, tower, or palace ${choose("castle", "keep", "tower", "palace")}`, display: "Castle, keep, tower, or palace"},
-	{min: 85, result: () => `Sewer or rubbish heap ${choose("sewer", "rubbish heap")}`, display: "Sewer or rubbish heap"},
-	{min: 86, max: 88, result: "Among people of a different race"},
-	{min: 89, max: 91, result: () => `On board a boat or a ship ${choose("boat", "ship")}`, display: "On board a boat or a ship"},
-	{min: 92, max: 93, result: () => `In a prison or in the headquarters of a secret organization ${choose("prison", "headquarters of a secret organization")}`, display: "In a prison or in the headquarters of a secret organization"},
-	{min: 94, max: 95, result: "In a sage's laboratory"},
+	{min: 79, max: 80, result: () => `巷弄或街道 ${choose("巷弄", "街道")}`, display: "巷弄或街道"},
+	{min: 81, max: 82, result: () => `妓院、酒館、或旅店 ${choose("妓院", "酒館", "旅店")}`, display: "妓院、酒館、或旅店"},
+	{min: 83, max: 84, result: () => `城堡、要塞、高塔、或宮殿 ${choose("城堡", "要塞", "高塔", "宮殿")}`, display: "城堡、要塞、高塔、或宮殿"},
+	{min: 85, result: () => `下水道或垃圾堆 ${choose("下水道", "垃圾堆")}`, display: "下水道或垃圾堆"},
+	{min: 86, max: 88, result: "在不同種族的人群之中"},
+	{min: 89, max: 91, result: () => `在舟艇或船艦上 ${choose("舟艇", "船艦")}`, display: "在舟艇或船艦上"},
+	{min: 92, max: 93, result: () => `在監獄或一個秘密組織的總部中 ${choose("監獄", "秘密組織的總部")}`, display: "在監獄或一個秘密組織的總部中"},
+	{min: 94, max: 95, result: "在一名學者的研究室"},
 	{min: 96, result: "在妖精荒野"},
 	{min: 97, result: "在墮影冥界"},
-	{min: 98, result: () => `On the Astral Plane or the Ethereal Plane ${choose("Astral Plane", "Ethereal Plane")}`, display: "On the Astral Plane or the Ethereal Plane"},
-	{min: 99, result: "On an Inner Plane of your choice"},
-	{min: 100, result: "On an Outer Plane of your choice"}
+	{min: 98, result: () => `在星界位面或乙太位面 ${choose("星界位面", "乙太位面")}`, display: "在星界位面或乙太位面"},
+	{min: 99, result: "在一個你所選擇的內層位面"},
+	{min: 100, result: "在一個你所選擇的外層位面"}
 ];
 
 function absentParent (parent) {
@@ -192,13 +192,13 @@ const ABSENT_PARENT = [
 ];
 
 const FAMILY_LIFESTYLE = [
-	{min: 3, result: "Wretched (-40)", "modifier": -40},
-	{min: 4, max: 5, result: "Squalid (-20)", "modifier": -20},
-	{min: 6, max: 8, result: "Poor (-10)", "modifier": -10},
-	{min: 9, max: 12, result: "Modest (+0)", "modifier": 0},
-	{min: 13, max: 15, result: "Comfortable (+10)", "modifier": 10},
-	{min: 16, max: 17, result: "Wealthy (+20)", "modifier": 20},
-	{min: 18, result: "Aristocratic (+40)", "modifier": 40}
+	{min: 3, result: "悲慘 (-40)", "modifier": -40},
+	{min: 4, max: 5, result: "困苦 (-20)", "modifier": -20},
+	{min: 6, max: 8, result: "貧窮 (-10)", "modifier": -10},
+	{min: 9, max: 12, result: "簡樸 (+0)", "modifier": 0},
+	{min: 13, max: 15, result: "舒適 (+10)", "modifier": 10},
+	{min: 16, max: 17, result: "富裕 (+20)", "modifier": 20},
+	{min: 18, result: "奢華 (+40)", "modifier": 40}
 ];
 
 const CHILDHOOD_HOME = [
@@ -397,9 +397,9 @@ const SUPP_ALIGNMENT = [
 ];
 
 const SUPP_DEATH = [
-	{min: 1, result: "Cause unknown"},
-	{min: 2, result: "Murdered"},
-	{min: 3, result: "Killed in battle"},
+	{min: 1, result: "死因不明"},
+	{min: 2, result: "被謀殺"},
+	{min: 3, result: "在戰鬥中被殺"},
 	{min: 4, result: "Accident related to class or occupation"},
 	{min: 5, result: "Accident unrelated to class or occupation"},
 	{min: 6, max: 7, result: "Natural causes, such as disease or old age"},
@@ -432,45 +432,45 @@ const SUPP_OCCUPATION = [
 	{min: 12, max: 26, result: () => `工匠 或 公會成員 ${choose("工匠", "公會成員")}`, display: "工匠 或 公會成員"},
 	{min: 27, max: 31, result: "罪犯"},
 	{min: 32, max: 36, result: "藝人"},
-	{min: 37, max: 38, result: () => `Exile, hermit, or refugee ${choose("exile", "hermit", "refugee")}`, display: "Exile, hermit, or refugee"},
-	{min: 39, max: 43, result: () => `Explorer or wanderer ${choose("explorer", "wanderer")}`, display: "Explorer or wanderer"},
-	{min: 44, max: 55, result: () => `Farmer or herder ${choose("farmer", "herder")}`, display: "Farmer or herder"},
-	{min: 56, max: 60, result: () => `Hunter or trapper ${choose("hunter", "trapper")}`, display: "Hunter or trapper"},
+	{min: 37, max: 38, result: () => `放逐者、隱士、或 難民 ${choose("放逐者", "隱士", "難民")}`, display: "放逐者、隱士、或 難民"},
+	{min: 39, max: 43, result: () => `探險家 或 浪人 ${choose("探險家", "浪人")}`, display: "探險家 或 浪人"},
+	{min: 44, max: 55, result: () => `農夫 或 牧人 ${choose("農夫", "牧人")}`, display: "農夫 或 牧人"},
+	{min: 56, max: 60, result: () => `獵人 或 陷阱捕獸者 ${choose("獵人", "陷阱捕獸者")}`, display: "獵人 或 陷阱捕獸者"},
 	{min: 61, max: 75, result: "勞工"},
 	{min: 76, max: 80, result: "商人"},
-	{min: 81, max: 85, result: () => `Politician or bureaucrat ${choose("politician", "bureaucrat")}`, display: "Politician or bureaucrat"},
+	{min: 81, max: 85, result: () => `政治家 或 官僚 ${choose("政治家", "官僚")}`, display: "政治家 或 官僚"},
 	{min: 86, max: 90, result: "祭司"},
 	{min: 91, max: 95, result: "水手"},
 	{min: 96, max: 100, result: "士兵"}
 ];
 
 const SUPP_RACE = [
-	{min: 1, max: 40, result: "Human"},
-	{min: 41, max: 50, result: "Dwarf"},
-	{min: 51, max: 60, result: "Elf"},
-	{min: 61, max: 70, result: "Halfling"},
-	{min: 71, max: 75, result: "Dragonborn"},
-	{min: 76, max: 80, result: "Gnome"},
-	{min: 81, max: 85, result: "Half-elf"},
-	{min: 86, max: 90, result: "Half-orc"},
-	{min: 91, max: 95, result: "Tiefling"},
-	{min: 96, max: 100, result: "DM’s choice"}
+	{min: 1, max: 40, result: "人類"},
+	{min: 41, max: 50, result: "矮人"},
+	{min: 51, max: 60, result: "精靈"},
+	{min: 61, max: 70, result: "半身人"},
+	{min: 71, max: 75, result: "龍裔"},
+	{min: 76, max: 80, result: "地侏"},
+	{min: 81, max: 85, result: "半精靈"},
+	{min: 86, max: 90, result: "半獸人"},
+	{min: 91, max: 95, result: "提夫林"},
+	{min: 96, max: 100, result: "由DM決定"}
 ];
 
 const SUPP_RELATIONSHIP = [
 	{min: 3, max: 4, result: "敵對"},
 	{min: 5, max: 10, result: "友善"},
-	{min: 11, max: 12, result: "漠不關心"}
+	{min: 11, max: 12, result: "冷淡"}
 ];
 
 const SUPP_STATUS = [
-	{min: 3, result: () => { return `Dead (${rollSuppDeath().result.lowercaseFirst()})` }, display: "Dead (roll on the Cause of Death table)", "dead": true},
-	{min: 4, max: 5, result: () => `Missing or status unknown ${choose("missing", "status unknown")}`, display: "Missing or status unknown"},
-	{min: 6, max: 8, result: () => `Alive, but doing poorly due to injury, financial trouble, or relationship difficulties ${choose("injury", "financial trouble", "relationship difficulties")}`, display: "Alive, but doing poorly due to injury, financial trouble, or relationship difficulties"},
-	{min: 9, max: 12, result: "Alive and well"},
-	{min: 13, max: 15, result: "Alive and quite successful"},
-	{min: 16, max: 17, result: "Alive and infamous"},
-	{min: 18, result: "Alive and famous"}
+	{min: 3, result: () => { return `死亡 (${rollSuppDeath().result.lowercaseFirst()})` }, display: "死亡 (從死因表中擲骰決定)", "dead": true},
+	{min: 4, max: 5, result: () => `失蹤 或 狀況不明 ${choose("失蹤", "狀況不明")}`, display: "失蹤 或 狀況不明"},
+	{min: 6, max: 8, result: () => `活著，但因為重傷、經濟困難、或人際難題${choose("重傷", "經濟困難", "人際難題")}而過得很糟糕`, display: "活著，但因為重傷、經濟困難、或人際難題而過得很糟糕"},
+	{min: 9, max: 12, result: "活著，且過得不錯"},
+	{min: 13, max: 15, result: "活著，且頗有成就"},
+	{min: 16, max: 17, result: "活著，且惡名昭彰"},
+	{min: 18, result: "活著，且享譽盛名"}
 ];
 
 window.onload = function load () {
@@ -636,6 +636,7 @@ function sectSiblings () {
 			sibCount = RNG(8) + 3;
 			break;
 	}
+	console.log(race);
 	if (race === "Elf" || race === "Dwarf") {
 		sibCount = Math.max(sibCount - 2, 0);
 	}
@@ -748,5 +749,5 @@ window.addEventListener("load", () => {
 		}
 	});
 
-	$(`#xge_link`).replaceWith(Renderer.get().render(`{@book Xanathar's Guide to Everything|XGE|1|This Is Your Life}`));
+	$(`#xge_link`).replaceWith(Renderer.get().render(`《{@book 姍納薩的萬事指南|XGE|1|This Is Your Life}》`));
 });
