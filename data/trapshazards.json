@@ -309,114 +309,114 @@
 			"page": 114
 		},
 		{
-			"name": "Path of Blades",
+			"name": "刀刃之路", "ENG_name": "Path of Blades",
 			"trapHazType": "CMPX",
 			"tier": 1,
 			"threat": 2,
 			"entries": [
-				"Hidden within a buried pyramid that marks the location of the Lost City of Cynidicea is the tomb of King Alexander and Queen Zenobia. The entrance to their tomb is a long hallway riddled with traps, accessible only by cunningly hidden secret doors. The hallway is 20 feet wide and 160 feet long. It is mostly clear. After 80 feet, the floor is broken and cracked, becoming difficult terrain until the 130-foot mark."
+				"深藏在一座標示著失落之城悉尼德西亞(Cynidicea)所在位置的地底金字塔中，這裡是亞歷山大國王與芝諾比阿女王(King Alexander and Queen Zenobia)的陵墓。通往他們長眠處的入口是一條充斥著陷阱的長廊，只有藉由一個巧妙隱藏起來的密門才能進入此處。這座走廊寬20呎，長160呎。這座走廊大部分非常整潔，但在80呎到130呎之間的地面已經毀損且破碎，並被視作困難地形。"
 			],
 			"trigger": [
-				"This trap activates as soon as a non-undead creature enters the hallway, and it remains active while any non-undead creature is within the hall."
+				"這個陷阱會在任何非不死生物進入走廊時被觸發，且會維持在任何非不死生物待在走廊期間維持啟動狀態。"
 			],
 			"initiative": 3,
 			"eActive": [
-				"The Path of Blades includes a set of whirling blades along the first 80 feet of the trap, crushing pillars that slam down from the ceiling to the floor before rising back up to the ceiling in the next 50 feet, and a rune of fear in its final 30 feet.",
+				"刀刃之路在走廊前80呎的部分佈置了一組迴旋刀刃；在接下來的50呎有著從天花板反覆升起並狠狠砸下的毀滅石柱；而在最後的30呎段落則設置著恐懼符文。",
 				{
 					"type": "list",
 					"style": "list-hang-notitle",
 					"items": [
 						{
 							"type": "item",
-							"name": "Whirling Blades (Initiative 20).",
-							"entry": "The blades attack each creature in the first 80 feet of the hallway, with a +5 bonus to the attack roll and dealing 11 ({@dice 2d10}) slashing damage on a hit."
+							"name": "迴旋刀刃 (先攻順序 20).",
+							"entry": "這組迴旋刀刃會攻擊每個位於走廊前80呎區域的生物，其攻擊檢定具有+5加值，且會在命中時造成11 ({@dice 2d10})劈砍傷害。"
 						},
 						{
 							"type": "item",
-							"name": "Crushing Pillars (Initiative 10).",
-							"entry": "Each creature in the 50-foot-long area beyond the first 80 feet of the hallway must make a DC 15 Dexterity saving throw. On a failed save, a creature takes 11 ({@dice 2d10}) bludgeoning damage and is knocked prone. On a successful save, the creature takes half as much damage and isn't knocked prone."
+							"name": "毀滅石柱 (先攻順序 10).",
+							"entry": "每個位於走廊80呎至130呎區域的生物都必須進行一次DC 15的敏捷豁免。若豁免失敗，該生物將受到11 ({@dice 2d10})鈍擊傷害，並被擊倒{@condition 伏地}。若豁免成功，該生物將只受到一半的傷害且不會被擊倒{@condition 伏地}。"
 						},
 						{
 							"type": "item",
-							"name": "Rune of Fear (Initiative 10).",
-							"entry": "Each creature in the 30-foot-long area beyond the Crushing Pillars must make a DC 15 Wisdom saving throw. On a failed saving throw, the creature becomes frightened by the rune, and it must immediately use its reaction to move its speed in the direction of the pillars. The frightened creature can't move closer to the far end of the hallway until it uses its action to make a DC 15 Wisdom saving throw, which ends the frightened condition on itself on a success."
+							"name": "恐懼符文 (先攻順序 10).",
+							"entry": "每個在毀滅石柱區塊之後30呎區域內的生物都必須進行一次DC 15的睿知豁免。若豁免失敗，該生物將因符文而陷入{@condition 恐懼}，且必須立即使用它的反應以向著石柱的方向移動等同於它移動速度的距離。直到陷入{@condition 恐懼}的生物使用它的動作以進行一次DC 15的睿知豁免，並成功通過以解除{@condition 恐懼}狀態之前，它將無法向著走廊的盡頭移動。"
 						}
 					]
 				}
 			],
 			"eDynamic": [
-				"The blades and the rune become more dangerous the longer the trap remains active.",
+				"這個陷阱維持啟動狀態越久，迴旋刀刃和恐懼符文就會變得更加危險。",
 				{
 					"type": "list",
 					"style": "list-hang-notitle",
 					"items": [
 						{
 							"type": "item",
-							"name": "Blades Accelerate.",
-							"entry": "The blades move with increasing speed, slowing only when they hit a target. Each time the blades miss with an attack, their next attack becomes harder to avoid. After each miss, the blades' attack bonus increases by 2, and their damage increases by 3 ({@dice 1d6}). These benefits apply until the blades hit a target, after which the values return to normal."
+							"name": "加速刀刃",
+							"entry": "刀刃的轉動速度將越來越快，且只會在命中目標時慢下來。每當迴旋刀刃在一次攻擊中T失手時，它的下一次攻擊將會變得更難以閃避。每次攻擊失手，迴旋刀刃的攻擊加值將會增加2，且它的傷害將會增加3 ({@dice 1d6})點。這些好處將持續直到刀刃命中一個目標，且它會在這之後回復原本的數值。"
 						},
 						{
 							"type": "item",
-							"name": "Rune's Defense.",
-							"entry": "Tampering with the Rune of Fear increases the trap's power. Each successful check on an attempt to disable the rune increases the damage of the blades and the crushing pillars by 5 ({@dice 1d10}) and increases the rune's saving throw DC by 1."
+							"name": "符文防護",
+							"entry": "解除恐懼符文的嘗試將會增強這個陷阱的力量。每當嘗試解除符文的檢定成功，迴旋刀刃和毀滅石柱都會因此各增加5 ({@dice 1d10})點傷害，且對抗恐懼符文的豁免DC將會增加1點。"
 						}
 					]
 				}
 			],
 			"eConstant": [
-				"The Whirling Blades and the Rune of Fear affect each creature that ends its turn in an area affected by these elements.",
+				"迴旋刀刃和恐懼符文會影響每個在它們影響區域內結束回合的生物。",
 				{
 					"type": "list",
 					"style": "list-hang-notitle",
 					"items": [
 						{
 							"type": "item",
-							"name": "Whirling Blades.",
-							"entry": "Any creature that ends its turn in the blades' area is targeted by an attack: +5 attack bonus; 5 (1d10) slashing damage on a hit."
+							"name": "迴旋刀刃",
+							"entry": "任何在刀刃區域內結束它回合的生物都會成為一次攻擊的目標：攻擊加值+5，若命中則造成5 ({@dice 1d10})劈砍傷害。"
 						},
 						{
 							"type": "item",
-							"name": "Rune of Fear.",
-							"entry": "Any creature that ends its turn within 30 feet of the far end of the corridor must make a saving throw against the Rune of Fear effect."
+							"name": "恐懼符文",
+							"entry": "任何在距離走廊盡頭30呎內區域結束它回合的生物都必須進行一次對抗恐懼符文效果的豁免檢定。"
 						}
 					]
 				}
 			],
 			"countermeasures": [
-				"Each of the trap's active elements can be thwarted by particular countermeasures.",
+				"這個陷阱的每個主動要素都可以被特定反制手段給阻撓。",
 				{
 					"type": "list",
 					"style": "list-hang-notitle",
 					"items": [
 						{
 							"type": "item",
-							"name": "Whirling Blades.",
+							"name": "迴旋刀刃：",
 							"entry": "Characters can smash the blades, damage their components, or discern how to avoid them. The blades are disabled if their attack bonus is reduced to -8. Ways to reduce it are described below."
 						},
 						{
 							"type": "itemSub",
-							"name": "Intelligence (Investigation), DC 15.",
-							"entry": "As an action, a creature that can see the blades can attempt an Intelligence (Investigation) check. A successful check means that the character has learned how to anticipate the blades' movement, imposing disadvantage on the blades' attacks against the creature while it isn't incapacitated."
+							"name": "智力 (調查), DC 15.",
+							"entry": "以一個動作，一個能夠看見迴旋刀刃的生物可以嘗試進行一次智力（調查）檢定。一次成功的檢定意味著角色已經得以預料刀刃的移動模式，在該生物尚未陷入{@condition 無力}狀態期間，迴旋刀刃對該生物的攻擊都將承受劣勢。"
 						},
 						{
 							"type": "itemSub",
-							"name": "Attack.",
-							"entry": "A creature in the area can ready an attack to strike at one of the blades as it goes by. The blade gains advantage on its attack against the creature. The creature then attacks. Each blade has AC 15 and 15 hit points. Destroying a blade reduces the Whirling Blades attack bonus by 2."
+							"name": "攻擊.",
+							"entry": "一個在區域內的生物可以預備一次攻擊，以在其中一片迴旋刀刃經過時對其展開打擊。該刀刃在對該生物進行的攻擊將具有優勢，該生物接著將對刀刃進行攻擊。每片迴旋刀刃具有AC 15和15點生命值。破壞一片刀刃將會使迴旋刀刃的攻擊加值減少2點。"
 						},
 						{
 							"type": "itemSub",
-							"name": "Dexterity check using thieves' tools, DC 15.",
-							"entry": "Creatures can use {@item thieves' tools|phb} in the area attacked by the blades to foil their mechanism. A successful check reduces the Whirling Blades attack bonus by 2."
+							"name": "使用盜賊工具進行敏捷檢定, DC 15.",
+							"entry": "生物可以在被迴旋刀刃攻擊的區域內使用{@item 盜賊工具|phb}以挫敗其運作機關。一次成功的檢定將會使迴旋刀刃的攻擊加值減少2點。"
 						},
 						{
 							"type": "item",
-							"name": "Crushing Pillars.",
-							"entry": "The pillars are not susceptible to countermeasures."
+							"name": "毀滅石柱：",
+							"entry": "毀滅石柱沒有任何有效的反制手段。"
 						},
 						{
 							"type": "item",
-							"name": "Rune of Fear.",
-							"entry": "The rune can be disabled with three successful DC 15 Intelligence (Arcana) checks. Each check requires an action. A creature must be at the end of the hallway to attempt the check, and only one creature can work on this task at once. Once a creature attempts a check for this purpose, no other character can do so until the end of that creature's next turn. Alternatively, the rune can be disabled with three successful castings of {@spell dispel magic} (DC 13) targeting the rune."
+							"name": "恐懼符文：",
+							"entry": "恐懼符文可以透過成功通過三次DC 15的智力（奧秘）檢定以解除。每次檢定都需要一個動作。一個生物必須要位於走廊的盡頭才能夠嘗試進行這個檢定，且同時只能有一個生物嘗試進行這項任務。一旦一個生物為了這項目的而嘗試進行這個檢定，則直到該生物的下個回合結束前，其他生物都不能嘗試這麼做。或者，藉由對這些符文成功施放三次{@spell 解除魔法}(DC 13)也能夠解除恐懼符文。"
 						}
 					]
 				}

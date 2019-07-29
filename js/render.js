@@ -2413,32 +2413,32 @@ Renderer.traphazard = {
 				entries: [
 					{
 						type: "entries",
-						name: "Trigger",
+						name: "觸發條件",
 						entries: it.trigger
 					},
 					{
 						type: "entries",
-						name: "Initiative",
-						entries: [`The trap acts on ${Parser.trapInitToFull(it.initiative)}${it.initiativeNote ? ` (${it.initiativeNote})` : ""}.`]
+						name: "先攻順序",
+						entries: [`這個陷阱會在${Parser.trapInitToFull(it.initiative)}${it.initiativeNote ? ` (${it.initiativeNote})` : ""} 時行動。`]
 					},
 					it.eActive ? {
 						type: "entries",
-						name: "Active Elements",
+						name: "主動要素",
 						entries: it.eActive
 					} : null,
 					it.eDynamic ? {
 						type: "entries",
-						name: "Dynamic Elements",
+						name: "動態要素",
 						entries: it.eDynamic
 					} : null,
 					it.eConstant ? {
 						type: "entries",
-						name: "Constant Elements",
+						name: "持續要素",
 						entries: it.eConstant
 					} : null,
 					{
 						type: "entries",
-						name: "Countermeasures",
+						name: "反制手段",
 						entries: it.countermeasures
 					}
 				].filter(it => it)
