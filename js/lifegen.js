@@ -153,7 +153,7 @@ const BIRTHPLACES = [
 ];
 
 function absentParent (parent) {
-	return GenUtil.getFromTable(ABSENT_PARENT, RNG(4)).result.replace("parent", `$& ${fmtChoice(parent)}</i>`);
+	return GenUtil.getFromTable(ABSENT_PARENT, RNG(4)).result.replace("父母", `$& ${fmtChoice(parent)}</i>`);
 }
 
 function absentBothParents () {
@@ -167,28 +167,28 @@ function otherParent (parent) {
 
 function singleParentOrStep (parent) {
 	const p = RNG(2);
-	return `Single ${parent} or step${parent} ${fmtChoice(p === 1 ? parent : `step${parent}`)}. ${p === 1 ? `${absentParent(otherParent(parent))}` : absentBothParents()}`
+	return `單親${parent} 或 繼${parent} ${fmtChoice(p === 1 ? parent : `繼${parent}`)}. ${p === 1 ? `${absentParent(otherParent(parent))}` : absentBothParents()}`
 }
 
 const FAMILY = [
-	{min: 1, result: () => `None. ${absentBothParents()}`, display: "None"},
-	{min: 2, result: () => `Institution, such as an asylum. ${absentBothParents()}`, display: "Institution, such as an asylum"},
-	{min: 3, result: () => `Temple. ${absentBothParents()}`, display: "Temple"},
-	{min: 4, max: 5, result: () => `Orphanage. ${absentBothParents()}`, display: "Orphanage"},
-	{min: 6, max: 7, result: () => `Guardian. ${absentBothParents()}`, display: "Guardian"},
-	{min: 8, max: 15, result: () => `Paternal or maternal aunt, uncle, or both; or extended family such as a tribe or clan ${choose("paternal uncle", "maternal aunt", "paternal uncle and maternal aunt", "extended family such as a tribe or clan")}. ${absentBothParents()}`, display: "Paternal or maternal aunt, uncle, or both; or extended family such as a tribe or clan"},
-	{min: 16, max: 25, result: () => `Paternal or maternal grandparent(s) ${choose("paternal grandfather", "maternal grandmother", "paternal grandfather and maternal grandmother")}. ${absentBothParents()}`, display: "Paternal or maternal grandparent(s)"},
-	{min: 26, max: 35, result: () => `Adoptive family (same or different race) ${choose("same race", "different race")}. ${absentBothParents()}`, display: "Adoptive family (same or different race)"},
-	{min: 36, max: 55, result: () => singleParentOrStep("父親"), display: "Single father or stepfather"},
-	{min: 56, max: 75, result: () => singleParentOrStep("母親"), display: "Single mother or stepmother"},
-	{min: 76, max: 100, result: "Mother and father"}
+	{min: 1, result: () => `無。 ${absentBothParents()}`, display: "無"},
+	{min: 2, result: () => `公共機構，例如收容所。 ${absentBothParents()}`, display: "公共機構，例如收容所"},
+	{min: 3, result: () => `神殿。 ${absentBothParents()}`, display: "神殿"},
+	{min: 4, max: 5, result: () => `孤兒院。 ${absentBothParents()}`, display: "孤兒院"},
+	{min: 6, max: 7, result: () => `監護人。 ${absentBothParents()}`, display: "監護人"},
+	{min: 8, max: 15, result: () => `父親或母親家族的姨母或叔父，或者兩者皆具；或者是如同部落或氏族的大家族 ${choose("叔父", "姨母", "叔父和姨母", "如同部落或氏族的大家族")}. ${absentBothParents()}`, display: "父親或母親家族的姨母或叔父，或者兩者皆具；或者是如同部落或氏族的大家族"},
+	{min: 16, max: 25, result: () => `祖父母或外祖父母 ${choose("祖父", "外祖母", "祖父和外祖母")}. ${absentBothParents()}`, display: "祖父母或外祖父母"},
+	{min: 26, max: 35, result: () => `領養家庭 (相同或不同種族) ${choose("相同種族", "不同種族")}. ${absentBothParents()}`, display: "領養家庭 (相同或不同種族)"},
+	{min: 36, max: 55, result: () => singleParentOrStep("父親"), display: "單親父親 或 繼父"},
+	{min: 56, max: 75, result: () => singleParentOrStep("母親"), display: "單親母親 或 繼母"},
+	{min: 76, max: 100, result: "父母親"}
 ];
 
 const ABSENT_PARENT = [
-	{min: 1, result: () => `Your parent died (${rollSuppDeath().result.lowercaseFirst()}).`, display: "Your parent died (roll on the {@table Supplemental Tables; Cause of Death|XGE|Cause of Death} supplemental table)."},
-	{min: 2, result: () => `Your parent was imprisoned, enslaved, or otherwise taken away ${choose("imprisoned", "enslaved", "otherwise taken away")}.`, display: "Your parent was imprisoned, enslaved, or otherwise taken away."},
-	{min: 3, result: "Your parent abandoned you."},
-	{min: 4, result: "Your parent disappeared to an unknown fate."}
+	{min: 1, result: () => `你父母雙亡 (${rollSuppDeath().result.lowercaseFirst()})。`, display: "你父母雙亡 (roll on the {@table Supplemental Tables; Cause of Death|XGE|Cause of Death} supplemental table)."},
+	{min: 2, result: () => `你的父母被監禁、奴役、或因為其他原因而被帶走 ${choose("監禁", "奴役", "其他原因")}。`, display: "你的父母被監禁、奴役、或因為其他原因而被帶走。"},
+	{min: 3, result: "你的父母遺棄了你。"},
+	{min: 4, result: "你的父母不知去向。Your parent disappeared to an unknown fate."}
 ];
 
 const FAMILY_LIFESTYLE = [
@@ -209,8 +209,8 @@ const CHILDHOOD_HOME = [
 	{min: 41, max: 50, result: "Apartment in a rundown neighborhood"},
 	{min: 51, max: 70, result: "Small house"},
 	{min: 71, max: 90, result: "Large house"},
-	{min: 91, max: 110, result: "Mansion"},
-	{min: 111, result: () => `Palace or castle ${choose("palace", "castle")}`, display: "Palace or castle"}
+	{min: 91, max: 110, result: "豪宅"},
+	{min: 111, result: () => `宮殿或城堡 ${choose("宮殿", "城堡")}`, display: "宮殿或城堡"}
 ];
 
 const CHILDHOOD_MEMORIES = [
@@ -665,12 +665,12 @@ function sectFamily () {
 	const $btnSuppFam = $(`<button class="btn btn-xs btn-default btn-supp-fam noprint"></button>`).on("click", () => {
 		const supDetails = getPersonDetails();
 		const $wrpRes = $(`<div class="output-wrp-border"/>`);
-		$wrpRes.append(`<h5>Family Member Roll ${famIndex++}</h5>`);
+		$wrpRes.append(`<h5>家族成員 擲骰結果${famIndex++}</h5>`);
 		$wrpRes.append(joinParaList(supDetails));
 		$btnSuppFam.css("margin-bottom", 5);
 		$btnSuppFam.after($wrpRes);
 	});
-	$family.append(`<span class="note">You can roll on the Relationship table to determine how your family members or other important figures in your life feel about you. You can also use the Race, Occupation, and Alignment tables to learn more about the family members or guardians who raised you.</span>`);
+	$family.append(`<span class="note">你可以從關係表中擲骰決定你的家族成員或其他你人生中的重要人物是如何看待你的。你也可以使用種族、工作職業、和陣營表以決定更多關於家族成員或撫養你長大的監護人的情報。</span>`);
 	$family.append($btnSuppFam);
 
 	const rollFamLifestyle = GenUtil.getFromTable(FAMILY_LIFESTYLE, RNG(6) + RNG(6) + RNG(6));
