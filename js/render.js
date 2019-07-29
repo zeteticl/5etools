@@ -2338,9 +2338,9 @@ Renderer.object = {
 				<table class="summary striped-even">
 					<tr>
 						<th colspan="3" class="text-align-center">Type</th>
-						<th colspan="2" class="text-align-center">AC</th>
-						<th colspan="2" class="text-align-center">HP</th>
-						<th colspan="5" class="text-align-center">Damage Imm.</th>
+						<th colspan="2" class="text-align-center">護甲等級</th>
+						<th colspan="2" class="text-align-center">生命值</th>
+						<th colspan="5" class="text-align-center">傷害免疫</th>
 					</tr>
 					<tr>
 						<td colspan="3" class="text-align-center">${Parser.sizeAbvToFull(obj.size)} object</td>					
@@ -2350,8 +2350,8 @@ Renderer.object = {
 					</tr>
 					${obj.resist || obj.vulnerable ? `
 					<tr>
-						${obj.resist ? `<th colspan="${row2Width}" class="text-align-center">Damage Res.</th>` : ""}
-						${obj.vulnerable ? `<th colspan="${row2Width}" class="text-align-center">Damage Vuln.</th>` : ""}
+						${obj.resist ? `<th colspan="${row2Width}" class="text-align-center">傷害抗性</th>` : ""}
+						${obj.vulnerable ? `<th colspan="${row2Width}" class="text-align-center">傷害易傷</th>` : ""}
 					</tr>
 					<tr>
 						${obj.resist ? `<td colspan="${row2Width}" class="text-align-center">${obj.resist}</td>` : ""}
@@ -2376,7 +2376,7 @@ Renderer.traphazard = {
 				return null;
 			case "SMPL":
 			case "CMPX":
-				return `${Parser.trapHazTypeToFull(type)} (${Parser.tierToFullLevel(it.tier)}, ${Parser.threatToFull(it.threat)} threat)`;
+				return `${Parser.trapHazTypeToFull(type)} (${Parser.tierToFullLevel(it.tier)}, ${Parser.threatToFull(it.threat)}威脅)`;
 			default:
 				return Parser.trapHazTypeToFull(type);
 		}
@@ -2388,17 +2388,17 @@ Renderer.traphazard = {
 				entries: [
 					{
 						type: "entries",
-						name: "Trigger",
+						name: "觸發條件",
 						entries: it.trigger
 					},
 					{
 						type: "entries",
-						name: "Effect",
+						name: "效果",
 						entries: it.effect
 					},
 					{
 						type: "entries",
-						name: "Countermeasures",
+						name: "反制手段",
 						entries: it.countermeasures
 					}
 				]

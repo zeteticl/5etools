@@ -157,12 +157,12 @@ function absentParent (parent) {
 }
 
 function absentBothParents () {
-	const p = ["mother", "father"][RNG(2) - 1];
+	const p = ["母親", "父親"][RNG(2) - 1];
 	return `${absentParent(p)} ${absentParent(otherParent(p))}`;
 }
 
 function otherParent (parent) {
-	return parent === "mother" ? "father" : "mother";
+	return parent === "母親" ? "父親" : "母親";
 }
 
 function singleParentOrStep (parent) {
@@ -179,8 +179,8 @@ const FAMILY = [
 	{min: 8, max: 15, result: () => `Paternal or maternal aunt, uncle, or both; or extended family such as a tribe or clan ${choose("paternal uncle", "maternal aunt", "paternal uncle and maternal aunt", "extended family such as a tribe or clan")}. ${absentBothParents()}`, display: "Paternal or maternal aunt, uncle, or both; or extended family such as a tribe or clan"},
 	{min: 16, max: 25, result: () => `Paternal or maternal grandparent(s) ${choose("paternal grandfather", "maternal grandmother", "paternal grandfather and maternal grandmother")}. ${absentBothParents()}`, display: "Paternal or maternal grandparent(s)"},
 	{min: 26, max: 35, result: () => `Adoptive family (same or different race) ${choose("same race", "different race")}. ${absentBothParents()}`, display: "Adoptive family (same or different race)"},
-	{min: 36, max: 55, result: () => singleParentOrStep("father"), display: "Single father or stepfather"},
-	{min: 56, max: 75, result: () => singleParentOrStep("mother"), display: "Single mother or stepmother"},
+	{min: 36, max: 55, result: () => singleParentOrStep("父親"), display: "Single father or stepfather"},
+	{min: 56, max: 75, result: () => singleParentOrStep("母親"), display: "Single mother or stepmother"},
 	{min: 76, max: 100, result: "Mother and father"}
 ];
 
@@ -426,9 +426,9 @@ const SUPP_CLASS = [
 ];
 
 const SUPP_OCCUPATION = [
-	{min: 1, max: 5, result: "Academic"},
+	{min: 1, max: 5, result: "學者"},
 	{min: 6, max: 10, result: () => `冒險者(${rollSuppClass().result})`, display: "冒險者 (從職業表中擲骰決定)"},
-	{min: 11, result: "Aristocrat"},
+	{min: 11, result: "貴族"},
 	{min: 12, max: 26, result: () => `工匠 或 公會成員 ${choose("工匠", "公會成員")}`, display: "工匠 或 公會成員"},
 	{min: 27, max: 31, result: "罪犯"},
 	{min: 32, max: 36, result: "藝人"},

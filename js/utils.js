@@ -1573,19 +1573,19 @@ Parser.tierToFullLevel = function (tier) {
 };
 
 Parser.TIER_TO_FULL_LEVEL = {};
-Parser.TIER_TO_FULL_LEVEL[1] = "level 1\u20144";
-Parser.TIER_TO_FULL_LEVEL[2] = "level 5\u201410";
-Parser.TIER_TO_FULL_LEVEL[3] = "level 11\u201416";
-Parser.TIER_TO_FULL_LEVEL[4] = "level 17\u201420";
+Parser.TIER_TO_FULL_LEVEL[1] = "1\u20144級";
+Parser.TIER_TO_FULL_LEVEL[2] = "5\u201410級";
+Parser.TIER_TO_FULL_LEVEL[3] = "11\u201416級";
+Parser.TIER_TO_FULL_LEVEL[4] = "17\u201420級";
 
 Parser.threatToFull = function (threat) {
 	return Parser._parse_aToB(Parser.THREAT_TO_FULL, threat);
 };
 
 Parser.THREAT_TO_FULL = {};
-Parser.THREAT_TO_FULL[1] = "moderate";
-Parser.THREAT_TO_FULL[2] = "dangerous";
-Parser.THREAT_TO_FULL[3] = "deadly";
+Parser.THREAT_TO_FULL[1] = "中等";
+Parser.THREAT_TO_FULL[2] = "危險";
+Parser.THREAT_TO_FULL[3] = "致命";
 
 Parser.trapInitToFull = function (init) {
 	return Parser._parse_aToB(Parser.TRAP_INIT_TO_FULL, init);

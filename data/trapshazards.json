@@ -52,27 +52,27 @@
 				},
 				{
 					"type": "entries",
-					"name": "Hidden Pit",
+					"name": "隱藏陷坑", "tENG_name": "Hidden Pit",
 					"entries": [
-						"A successful DC 15 Wisdom (Perception) check discerns an absence of foot traffic over the section of floor that forms the pit's cover. A successful DC 15 Intelligence (Investigation) check is necessary to confirm that the trapped section of floor is actually the cover of a pit.",
-						"When a creature steps on the cover, it swings open like a trapdoor, causing the intruder to spill into the pit below. The pit is usually 10 or 20 feet deep but can be deeper.",
-						"Once the pit trap is detected, an iron spike or similar object can be wedged between the pit's cover and the surrounding floor in such a way as to prevent the cover from opening, thereby making it safe to cross. The cover can also be magically held shut using the arcane lock spell or similar magic."
+						"透過成功通過一次DC 15的睿知（感知）檢定，能夠藉由這片地面區塊上消失的腳印痕跡發現這個陷坑蓋板的存在。而透過成功通過一次DC 15的智力（調查）檢定則能夠確定地面上的活版區塊確實是陷坑的蓋板。",
+						"當一個生物踩上陷坑蓋板時，蓋板將如同活板門一樣打開，並使入侵者摔入下方的陷坑中。這個陷坑通常為10呎或20呎深，但有些陷坑會更深。",
+						"一旦這個陷坑陷阱被發現後，就可以藉由將一根大鐵釘或類似物體楔入陷坑蓋板和周遭地面之間，以防止這個蓋板開啟並使他人能夠安全的通過它。使用{@spell 祕法鎖}或類似法術將這個蓋板魔法性的鎖閉也可以達到相同的效果。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Locking Pit",
+					"name": "鎖困陷坑", "tENG_name": "Locking Pit",
 					"entries": [
-						"This pit trap is identical to a hidden pit trap, with one key exception: the trap door that covers the pit is spring-loaded. After a creature falls into the pit, the cover snaps shut to trap its victim inside.",
-						"A successful DC 20 Strength check is necessary to pry the cover open. The cover can also be smashed open (determine the cover's statistics using the guidelines in chapter 8). A character in the pit can also attempt to disable the spring mechanism from the inside with a DC 15 Dexterity check using thieves' tools, provided that the mechanism can be reached and the character can see.",
-						"In some cases, a mechanism (usually hidden behind a secret door nearby) opens the pit."
+						"鎖困陷坑與隱藏陷坑大致相同，但有一個關鍵的差異：這個陷阱的蓋板裝載著彈簧結構。在一個生物摔入陷坑後，其蓋板將會猛然閉合，以將它的受害者關在裏頭。",
+						"成功通過一次DC 20的力量檢定能夠將這個蓋板給撬開。這個蓋板也可以被強行破壞（使用第八章的指引以決定蓋板的數據）。只要被困在陷坑中的角色能夠看見並觸及這個蓋板的彈簧機關，則它也可以嘗試使用{@item 盜賊工具|phb}並成功通過一次DC 15的敏捷檢定，以從內部解除其機關。",
+						"在某些情況中，一個相應的機關也能夠打開這個陷坑的蓋板（通常會藏在一個附近的暗門裡頭）。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Spiked Pit",
+					"name": "尖刺陷坑", "tENG_name": "Spiked Pit",
 					"entries": [
-						"This pit trap is a simple, hidden, or locking pit trap with sharpened wooden or iron spikes at the bottom. A creature falling into the pit takes 11 ({@dice 2d10}) piercing damage from the spikes, in addition to any falling damage. Even nastier versions have poison smeared on the spikes. In that case, anyone taking piercing damage from the spikes must also make a DC 13 Constitution saving throw, taking an 22 ({@dice 4d10}) poison damage on a failed save, or half as much damage on a successful one."
+						"這個陷坑陷阱是以一個簡易、隱藏、或鎖困陷阱為基底，並搭配設立在底部削尖木頭或鐵刺所組合而成。摔入這個陷坑的生物除了墜落傷害之外，也將因為這些尖刺而受到額外的11 ({@dice 2d10})穿刺傷害。更為惡毒的版本甚至會在這些尖刺上塗抹毒藥，在這種狀況下，任何受到來自尖刺所造成的穿刺傷害的生物也都必須進行一次DC 13的體質豁免，豁免失敗將受到22 ({@dice 4d10})毒素傷害，豁免成功則只受到一半的毒素傷害。"
 					]
 				}
 			],
@@ -80,39 +80,39 @@
 			"page": 122
 		},
 		{
-			"name": "Poison Darts",
+			"name": "毒鏢", "ENG_name": "Poison Darts",
 			"trapHazType": "MECH",
 			"entries": [
-				"When a creature steps on a hidden pressure plate, poison-tipped darts shoot from spring-loaded or pressurized tubes cleverly embedded in the surrounding walls. An area might include multiple pressure plates, each one rigged to its own set of darts.",
-				"The tiny holes in the walls are obscured by dust and cobwebs, or cleverly hidden amid bas-reliefs, murals, or frescoes that adorn the walls. The DC to spot them is 15. With a successful DC 15 Intelligence (Investigation) check, a character can deduce the presence of the pressure plate from variations in the mortar and stone used to create it, compared to the surrounding floor. Wedging an iron spike or other object under the pressure plate prevents the trap from activating. Stuffing the holes with cloth or wax prevents the darts contained within from launching.",
-				"The trap activates when more than 20 pounds of weight is placed on the pressure plate, releasing four darts. Each dart makes a ranged attack with a +8 bonus against a random target within 10 feet of the pressure plate (vision is irrelevant to this attack roll). (If there are no targets in the area, the darts don't hit anything.) A target that is hit takes 2 ({@dice 1d4}) piercing damage and must succeed on a DC 15 Constitution saving throw, taking 11 ({@dice 2d10}) poison damage on a failed save, or half as much damage on a successful one."
+				"當一個生物踩上寢藏的壓力板時，數個毒鏢將從巧妙鑲嵌在附近牆壁內的彈簧機關或加壓管線中射出。一個區域內可能包括著複數個壓力板，且每個壓力板都控制著相對應的一組毒鏢。",
+				"牆壁上的微小發射口被塵土和蜘蛛網所遮蔽，或者被精心隱蔽在裝飾著牆面的浮雕、牆飾、或壁畫之中。發現這些發射口的DC為15。透過成功通過一次DC 15的智力（調查）檢定，角色可以藉由比對地面上塗裝和石質材料的差異以察覺壓力板的存在。將大鐵釘或其他類似物品楔入壓力板下方可以防止這個陷阱被觸發，而用布料或蠟封住發射口則能夠阻止毒鏢從中射出。",
+				"這個陷阱會在超過20磅的重量置於壓力板上時被觸發，並發射出四發毒鏢。每一發毒鏢都會對一個距離壓力板10呎內的隨機目標進行一次命中加值為+8的遠程攻擊（這個攻擊檢定不會被視覺影響）。（若區域內沒有任何目標，則毒鏢不會命中任何事物。）一個被命中的目標將受到2 ({@dice 1d4})穿刺傷害，且必須成功通過一次DC 15的體質豁免，否則豁免失敗將受到11 ({@dice 2d10})毒素傷害，豁免成功則只受到一半的毒素傷害。"
 			],
 			"source": "DMG",
 			"page": 123
 		},
 		{
-			"name": "Poison Needle",
+			"name": "毒針", "ENG_name": "Poison Needle",
 			"trapHazType": "MECH",
 			"entries": [
-				"A poisoned needle is hidden within a treasure chest's lock, or in something else that a creature might open. Opening the chest without the proper key causes the needle to spring out, delivering a dose of poison.",
-				"When the trap is triggered, the needle extends 3 inches straight out from the lock. A creature within range takes 1 piercing damage and 11 ({@dice 2d10}) poison damage, and must succeed on a DC 15 Constitution saving throw or be {@condition poisoned} for 1 hour.",
-				"A successful DC 20 Intelligence (Investigation) check allows a character to deduce the trap's presence from alterations made to the lock to accommodate the needle.",
-				"A successful DC 15 Dexterity check using {@item thieves' tools|phb} disarms the trap, removing the needle from the lock. Unsuccessfully attempting to pick the lock triggers the trap."
+				"一根毒針隱藏在寶箱箱鎖內，或其他可能被生物打開的裝置中。未使用對應鑰匙而打開箱子將會使這根毒針彈出，向開鎖者注射一劑毒藥。",
+				"當這個陷阱被觸發，這根毒針將從鎖中伸出3吋距離。一個在射程內的生物將受到1點穿刺傷害以及11 ({@dice 2d10})毒素傷害，且必須成功通過一次DC 15的體質豁免，否則陷入{@condition 中毒}狀態長達1小時。",
+				"成功通過一次DC 20的智力（調查）檢定能夠讓角色注意到這個鎖為了容納毒針而做的修改痕跡，藉此發現這個陷阱的存在。",
+				"使用{@item 盜賊工具|phb}並成功通過一次DC 15的敏捷檢定，能夠解除這個陷阱，將毒針從鎖中移除。這個陷阱也會在開鎖失敗時被觸發。"
 			],
 			"source": "DMG",
 			"page": 123
 		},
 		{
-			"name": "Rolling Sphere",
+			"name": "滾石", "ENG_name": "Rolling Sphere",
 			"trapHazType": "MECH",
 			"entries": [
-				"When 20 or more pounds of pressure are placed on this trap's pressure plate, a hidden trapdoor in the ceiling opens, releasing a 10-foot-diameter rolling sphere of solid stone.",
-				"With a successful DC 15 Wisdom (Perception) check, a character can spot the trapdoor and pressure plate.",
-				"A search of the floor accompanied by a successful DC 15 Intelligence (Investigation) check reveals variations in the mortar and stone that betray the pressure plate's presence. The same check made while inspecting the ceiling notes variations in the stonework that reveal the trapdoor. Wedging an iron spike or other object under the pressure plate prevents the trap from activating.",
-				"Activation of the sphere requires all creatures present to roll initiative. The sphere rolls initiative with a {@hit +8} bonus. On its turn, it moves 60 feet in a straight line.",
-				"The sphere can move through creatures' spaces, and creatures can move through its space, treating it as difficult terrain. Whenever the sphere enters a creature's space or a creature enters its space while it's rolling, that creature must succeed on a DC 15 Dexterity saving throw or take 55 ({@dice 10d10}) bludgeoning damage and be knocked {@condition 伏地}.",
-				"The sphere stops when it hits a wall or similar barrier. It can't go around corners, but smart dungeon builders incorporate gentle, curving turns into nearby passages that allow the sphere to keep moving.",
-				"As an action, a creature within 5 feet of the sphere can attempt to slow it down with a DC 20 Strength check. On a successful check, the sphere's speed is reduced by 15 feet. If the sphere's speed drops to 0, it stops moving and is no longer a threat."
+				"當20磅或以上的重量被置於這個陷阱的壓力板時，天花板上的隱藏活板門將會打開，並釋放出一個10呎直徑的實心球狀滾石。",
+				"透過成功通過一次DC 15的睿知（感知）檢定，生物可以發現這個陷阱的活板門和壓力板。",
+				"搜索地面的行動將隨著成功通過一次DC 15的智力（調查）檢定以揭露出地面上塗裝和石質材料的差異，從而暴露出這個壓力板的存在。同樣的檢定也會在檢查天花板時被進行，成功則能藉由注意到石藝的不同而揭示出活板門的存在。將大鐵釘或其他類似物品楔入壓力板下方可以防止這個陷阱被觸發。",
+				"當滾石陷阱被啟動時，所有在場的生物都必須骰各自的先攻。而這個滾石也將以{@hit +8}加值進行自己的先攻檢定。在滾石的回合，它將直線移動60呎距離。",
+				"滾石可以移動穿過其他生物的所在空間，且其他生物也可以將其視為困難地形以移動穿過滾石的所在空間。每當滾石進入一個生物的所在空間、或一個生物在它滾動時進入它所在的空間，該生物必須成功通過一次DC 15的敏捷豁免，否則將受到55 ({@dice 10d10})鈍擊傷害，並被擊倒{@condition 伏地}。",
+				"這個滾石會在撞上牆壁或其他類似障礙物時停下。它無法繞過轉角，但某些聰明的地城建造者會設計緩變的曲道，以使滾石拐入附近的通道並持續前進。",
+				"以一個動作，一個距離滾石5呎內的生物可以嘗試進行一次DC 20的力量檢定以將其緩下。若檢定成功，該滾石的移動速度將會減少15呎。若滾石的移動速度歸零，它將停止移動，且不再被視為威脅。"
 			],
 			"source": "DMG",
 			"page": 123
@@ -129,181 +129,181 @@
 			"page": 123
 		},
 		{
-			"name": "Bear Trap",
+			"name": "捕熊陷阱", "ENG_name": "Bear Trap",
 			"trapHazType": "SMPL",
 			"tier": 1,
 			"threat": 2,
 			"entries": [
-				"A bear trap resembles a set of iron jaws that springs shut when stepped on, clamping down on a creature's leg. The trap is spiked in the ground, leaving the victim immobilized."
+				"捕熊陷阱看起來像是一副鋼鐵的利齒，會在被踩上時咬合，夾住生物的腿。這種陷阱被釘在地上，使受害者動彈不得。"
 			],
 			"trigger": [
-				"A creature that steps on the bear trap triggers it."
+				"踩上捕熊陷阱的生物將會觸發它。"
 			],
 			"effect": [
-				"Melee weapon attack: {@hit 8} to hit, triggering creature. Hit: 5 ({@dice 1d10}) piercing damage. This attack can't gain advantage or disadvantage. A creature hit by the trap has its speed reduced to 0. It can't move until it breaks free of the trap, which requires a successful DC 15 Strength check by the creature or another creature adjacent to the trap."
+				"近戰武器攻擊：命中{@hit 8}，觸發生物。若命中：5 ({@dice 1d10})穿刺傷害。這個攻擊不會承受任何優勢或劣勢。被這個陷阱命中的生物的移動速度將會歸零，且直到它從這個陷阱被釋放之前都無法移動，要從這個陷阱脫離，必須要該生物或其他鄰近該陷阱的生物成功通過一次DC 15的力量檢定。"
 			],
 			"countermeasures": [
-				"A successful DC 10 Wisdom (Perception) check reveals the trap. A successful DC 10 Dexterity check using {@item thieves' tools|phb} disables it."
+				"成功通過一次DC 10的睿知（感知）檢定能夠揭露這個陷阱的存在。使用{@item 盜賊工具|phb}並成功通過一次DC 10的敏捷檢定能夠將其解除。"
 			],
 			"source": "XGE",
 			"page": 113
 		},
 		{
-			"name": "Crossbow Trap",
+			"name": "強弩陷阱", "ENG_name": "Crossbow Trap",
 			"trapHazType": "SMPL",
 			"tier": 1,
 			"threat": 2,
 			"entries": [
-				"The crossbow trap is a favorite of kobolds and other creatures that rely on traps to defend their lairs. It consists of a trip wire strung across a hallway and connected to a pair of hidden heavy crossbows. The crossbows are aimed to fire down the hallway at anyone who disturbs the trip wire."
+				"強弩陷阱是狗頭人和其他依賴陷阱來保衛自己巢穴的生物們所偏愛的一種陷阱。它是由一條橫跨走廊並連接到一對被仔細藏起的重弩上的絆線所構成。這對重弩會向走廊中任何擾動絆線的對象進行射擊。"
 			],
 			"trigger": [
-				"A creature that walks through the trip wire triggers the trap."
+				"經過這條絆線的生物將會觸發這個陷阱。"
 			],
 			"effect": [
-				"The trap makes two attacks against the triggering creature. Ranged Weapon Attack +8 to hit, two attacks; Hit: 5 ({@dice 1d10}) piercing damage on a hit. This attack can't gain advantage or disadvantage."
+				"這個陷阱會對觸發生物進行二次攻擊。遠程武器攻擊：命中{@hit 8}，二次攻擊；若命中：5 ({@dice 1d10})穿刺傷害。這個攻擊不會承受任何優勢或劣勢。"
 			],
 			"countermeasures": [
-				"A successful DC 15 Wisdom (Perception) check reveals the trip wire. A successful DC 15 Dexterity check using {@item thieves' tools|phb} disables the trip wire, and a check with a total of 5 or lower triggers the trap."
+				"成功通過一次DC 15的睿知（感知）檢定能夠揭露這個陷阱的絆線。使用{@item 盜賊工具|phb}並成功通過一次DC 15的敏捷檢定能夠解除這個陷阱的絆線，若這個檢定在結果與目標值差距5點或更多的情況下失敗，則這個陷阱將被觸發。"
 			],
 			"source": "XGE",
 			"page": 113
 		},
 		{
-			"name": "Falling Portcullis",
+			"name": "斷龍閘", "ENG_name": "Falling Portcullis",
 			"trapHazType": "SMPL",
 			"tier": 1,
 			"threat": 1,
 			"entries": [
-				"Some folk who build dungeons, such as mad wizards in search of new victims, have no intention of allowing their visitors to make an easy escape. A falling portcullis trap can be especially devious if it causes a portcullis to drop some distance away from the pressure plate that activates the trap. Although the trap is deep in the dungeon, the portcullis closes off the dungeon entrance, which is hundreds of feet away, meaning that adventurers don't know they are trapped until they decide to head for the exit."
+				"對某些建造地下城的傢伙而言（例如尋求更多受害者的瘋狂法師），他們可不把算讓他們受害者們輕易逃脫。斷龍閘陷阱可以被設計地特別狡詐，在這個陷阱的壓力板被觸發時，使一道與壓力板有著相當距離的閘門落下。儘管這個陷阱的觸發點位於地城深處，這道閘門仍將封鎖位於百呎之外的地城出口，這意味著直到冒險者們決定打道回府時，才會意識到他們被深困其中。"
 			],
 			"trigger": [
-				"A creature that steps on the pressure plate triggers the trap."
+				"踩上壓力板的生物將會觸發這個陷阱。"
 			],
 			"effect": [
-				"An iron portcullis drops from the ceiling, blocking an exit or a passageway."
+				"一個鋼鐵閘門從天花板落下，擋住出口或是通道。"
 			],
 			"countermeasures": [
-				"A successful DC 20 Wisdom (Perception) check reveals the pressure plate. A successful DC 20 Dexterity check using {@item thieves' tools|phb} disables it, and a check with a total of 5 or lower triggers the trap."
+				"成功通過一次DC 20的睿知（感知）檢定能夠揭露這個陷阱的壓力板。使用{@item 盜賊工具|phb}並成功通過一次DC 20的敏捷檢定能夠解除這個陷阱，若這個檢定在結果與目標值差距5點或更多的情況下失敗，則這個陷阱將被觸發。"
 			],
 			"source": "XGE",
 			"page": 113
 		},
 		{
-			"name": "Fiery Blast Trap",
+			"name": "爆炎陷阱", "ENG_name": "Fiery Blast Trap",
 			"trapHazType": "SMPL",
 			"tier": 2,
 			"threat": 2,
 			"entries": [
-				"Anyone who steps on the mosaic causes fire to erupt from it. Those who openly wear holy symbols of Pyremius don't trigger this trap."
+				"火神皮雷謬思(Pyremius)的神廟總是承受著竊賊們的威脅。為了防止祭司們獻給他們神祇的火蛋白石不被竊走，通往聖殿內部的地面上裝飾著的馬賽克嵌畫將會對入侵者們降下烈焰的制裁。"
 			],
 			"trigger": [
-				"The temple of Pyremius, a god of fire, is threatened by thieves who seek to steal the fire opals displayed there by the priests in tribute to their god. A mosaic on the floor of the entryway to the inner sanctum delivers a fiery rebuke to intruders."
+				"任何踩上其馬賽克嵌畫的生物將會使烈焰從中湧出。那些公開配戴皮雷謬思聖徽的人們則不會觸發這個陷阱。"
 			],
 			"effect": [
-				"A 15-foot cube of fire erupts, covering the pressure plate and the area around it. Each creature in the area must make a DC 15 Dexterity saving throw, taking 24 ({@dice 7d6}) fire damage on a failed save, or half as much damage on a successful one."
+				"一道15呎邊長立方體的烈焰噴湧而出，覆蓋整個壓力板以及其周遭的區域。每個在範圍內的生物都必須進行一次DC 15的敏捷豁免，豁免失敗將受到24 ({@dice 7d6})火焰傷害，豁免成功則只受到一半的傷害。"
 			],
 			"countermeasures": [
-				"A successful DC 15 Wisdom (Perception) check reveals the presence of ash and faint burn marks in the area affected by this trap. A successful DC 15 Intelligence (Religion) check enables a creature to destroy the trap by defacing a key rune on the perimeter of the mosaic that is within reach; failing this check causes the trap to activate. A successful {@i dispel magic} (DC 15) cast on the runes destroys the trap."
+				"成功通過一次DC 15的睿知（感知）檢定能夠揭露出這個陷阱影響範圍內的灰燼和淡淡燒痕的存在。成功通過一次DC 15的智力（宗教）檢定能夠讓角色得以透過毀損馬賽克嵌畫外圍的關鍵符文以摧毀這個陷阱；若這個檢定在結果與目標值差距5點或更多的情況下失敗，則這個陷阱將被觸發。一個成功施放於符文的{@spell 解除魔法}法術(DC 15)也能夠摧毀這個陷阱。"
 			],
 			"source": "XGE",
 			"page": 113
 		},
 		{
-			"name": "Net Trap",
+			"name": "捕網陷阱", "ENG_name": "Net Trap",
 			"trapHazType": "SMPL",
 			"tier": 1,
 			"threat": 2,
 			"entries": [
-				"Goblins, with their propensity to enslave their enemies, prefer traps that leave intruders intact so the victims can be put to work in the mines or elsewhere."
+				"由於哥布林有著奴役他們敵人的習性，他們偏好使用這種能夠不傷害入侵者的陷阱，好讓其受害者能被用於他們的礦場或其他場所工作。"
 			],
 			"trigger": [
-				"A trip wire strung across a hallway is rigged to a large net. If the trip wire is broken, the net falls on intruders. An iron bell is also rigged to the trip wire. It rings when the trap activates, alerting nearby guards."
+				"一條橫跨走廊的絆線繫著一張大型捕網。若這條絆線被破壞，這張捕網將會落到入侵者身上。一個鐵製鈴鐺同樣被繫在絆線上，且它會在這個陷阱被觸發時叮鈴作響，警告附近的守衛。"
 			],
 			"effect": [
-				"A net covering a 10-foot-by-10-foot area centered on the trip wire falls to the floor as a bell rings. Any creature fully within this area must succeed on a DC 15 Dexterity saving throw or be restrained. A creature can use its action to make a DC 10 Strength check to try to free itself or another creature in the net. Dealing 5 slashing damage to the net (AC 10, 20hp) also frees a creature without harming the creature."
+				"一個覆蓋10呎x10呎的捕網將以絆線為中心落至地面，且鈴鐺將隨之作響。任何完全處於該範圍內的生物都必須成功通過一次DC 15的敏捷豁免，否則將被{@condition 束縛}。一個生物可以使用它的動作進行一次DC 10的力量檢定以嘗試釋放他自己或捕網內的另一個生物。對捕網（AC 10，20點生命值）造成5點劈砍傷害同樣可以釋放該生物而不會傷害到它。"
 			],
 			"countermeasures": [
-				"A successful DC 15 Wisdom (Perception) check reveals the trip wire and the net. A successful DC 15 Dexterity check using {@item thieves' tools|phb} disables the trip wire without causing the net to drop or the bell to ring; failing the check causes the trap to activate."
+				"成功通過一次DC 15的睿知（感知）檢定能夠揭露這個陷阱的絆線和捕網。使用{@item 盜賊工具|phb}並成功通過一次DC 15的敏捷檢定能夠解除這個陷阱的絆線而不會觸發捕網或鈴鐺；若這個檢定失敗，則這個陷阱將被觸發。"
 			],
 			"source": "XGE",
 			"page": 113
 		},
 		{
-			"name": "Pit Trap",
+			"name": "陷坑陷阱", "ENG_name": "Pit Trap",
 			"trapHazType": "SMPL",
 			"tier": 1,
 			"threat": 1,
 			"entries": [
-				"The simplest of pit traps consists of a 10-foot-deep hole in the floor, concealed by tattered canvas that's covered with leaves and dirt to look like solid ground. This type of trap is useful for blocking off the entrance to a monster lair, and usually has narrow ledges along its sides to allow for movement around it."
+				"最簡易的陷坑陷阱是由地面上一個10呎直徑的坑洞，以及一個將其隱藏起來的破爛帆布所構成，這個帆布上覆蓋著樹葉和泥土以使其看起來像是結實的地面。這種類型的陷阱在堵住怪物巢穴的入口時相當實用，且通常在邊緣有著狹窄的空隙以讓他人能夠繞過陷坑移動。"
 			],
 			"trigger": [
-				"Anyone who steps on the canvas might fall into the pit."
+				"任何踩上帆布的生物都可能因此墜入陷坑中。"
 			],
 			"effect": [
-				"The triggering creature must make a DC 10 Dexterity saving throw. On a successful save, the creature catches itself on the pit's edge or instinctively steps back. On a failed save, the creature falls into the pit and takes 3 ({@dice 1d6}) bludgeoning damage from the fall."
+				"觸發生物必須進行一次DC 10的敏捷豁免。若豁免成功，該生物將能夠抓住陷坑的邊緣或本能地後退。若豁免失敗，該生物將墜入陷坑中並受到源自墜落的3 ({@dice 1d6})鈍擊傷害。"
 			],
 			"countermeasures": [
-				"A successful DC 10 Wisdom (Perception) check reveals the presence of the canvas and the 1-foot-wide ledge around the edges of the pit where it is safe to travel."
+				"成功通過一次DC 10的睿知（感知）檢定能夠揭露這個陷阱帆布的存在，以及陷坑邊緣那能讓人安全通過的1呎寬邊道。"
 			],
 			"source": "XGE",
 			"page": 114
 		},
 		{
-			"name": "Poison Needle Trap",
+			"name": "毒針陷阱", "ENG_name": "Poison Needle Trap",
 			"trapHazType": "SMPL",
 			"tier": 1,
 			"threat": 3,
 			"entries": [
-				"A tiny, poisoned needle hidden in a lock is a good way to discourage thieves from plundering a hoard. Such a trap is usually put in a chest or in the door to a treasure chamber."
+				"埋藏在鎖頭中的一根微小的毒針是個讓掠奪財富的盜賊望而卻步的好方法。這類陷阱通常被安置在寶箱或是通往藏寶室的門上。"
 			],
 			"trigger": [
-				"Anyone attempting to pick or open the lock triggers the trap."
+				"任何嘗試開鎖的生物將會觸發這個陷阱。"
 			],
 			"effect": [
-				"The triggering creature must make a DC 20 Constitution saving throw. On a failed save, the creature takes 14 ({@dice 4d6}) poison damage and is poisoned for 10 minutes. While poisoned in this way, the creature is paralyzed. On a successful save, the creature takes half as much damage and isn't poisoned."
+				"觸發生物必須進行一次DC 20的體質豁免。若豁免失敗，該生物將受到14 ({@dice 4d6})毒素傷害，且陷入{@condition 中毒}狀態長達10分鐘。當因為這個方式而陷入{@condition 中毒}時，該生物將同時陷入{@condition 麻痺}狀態。若豁免成功，該生物將只受到一半的傷害且不會陷入{@condition 中毒}狀態。"
 			],
 			"countermeasures": [
-				"A successful DC 20 Wisdom (Perception) check reveals the needle, but only if a character inspects the lock. A successful DC 20 Dexterity check using {@item thieves' tools|phb} disables the needle, and a check with a total of 10 or lower triggers the trap."
+				"成功通過一次DC 20的睿知（感知）檢定能夠揭露出這個毒針的存在。使用{@item 盜賊工具|phb}並成功通過一次DC 20的敏捷檢定能夠解除這個毒針，若這個檢定在結果與目標值差距10點或更多的情況下失敗，則這個陷阱將被觸發。"
 			],
 			"source": "XGE",
 			"page": 114
 		},
 		{
-			"name": "Scything Blade Trap",
+			"name": "鐮刃陷阱", "ENG_name": "Scything Blade Trap",
 			"trapHazType": "SMPL",
 			"tier": 2,
 			"threat": 2,
 			"entries": [
-				"This trap uses moving blades that sweep down through a chamber, threatening anyone nearby. Typically, a scything blade trap is activated by manipulating a lever or some other simple device. Kobolds especially like this kind of trap, since it can take down bigger creatures."
+				"這個陷阱使用擺動的刀刃以掃過整個房間，威脅著所有附近的人們。通常來說，一個鐮刃陷阱會透過操作拉桿或是其他簡易裝置而被觸發。由於它可以擊敗大型的生物，因此狗頭人特別喜愛這類陷阱。"
 			],
 			"trigger": [
-				"When the lever is pulled, the trap activates."
+				"當其拉桿被拉下時，這個陷阱將被觸發。"
 			],
 			"effect": [
-				"Each Medium or larger creature in a 5-foot-wide, 20-foot-long area must make a DC 15 Dexterity saving throw, taking 14 ({@dice 4d6}) slashing damage on a failed save, or half as much damage on a successful one."
+				"每個處於一個5呎寬、20呎長的區域內的中型或大型生物都必須進行一次DC 15的敏捷豁免，豁免失敗將受到14 ({@dice 4d6})劈砍傷害，豁免成功則只受到一半的傷害。"
 			],
 			"countermeasures": [
-				"The lever isn't hidden. A successful DC 15 Wisdom (Perception) check involving the surfaces in the trap's area of effect reveals scrape marks and bloodstains on the walls and floor. A successful DC 15 Dexterity check using {@item thieves' tools|phb} disables the lever."
+				"這個拉桿並未被隱藏。成功通過一次DC 15的睿知（感知）檢定能夠在陷阱效果範圍內的表面上揭露出刃器劃痕以及牆壁和地面上的血跡。使用{@item 盜賊工具|phb}並成功通過一次DC 15的敏捷檢定能夠解除這個拉桿的作用。"
 			],
 			"source": "XGE",
 			"page": 114
 		},
 		{
-			"name": "Sleep of Ages Trap",
+			"name": "長眠陷阱", "ENG_name": "Sleep of Ages Trap",
 			"trapHazType": "SMPL",
 			"tier": 3,
 			"threat": 3,
 			"entries": [
-				"When a sleep of ages trap activates, a pressure plate unleashes a spell that threatens to send intruders into a deep slumber. The dungeon's guardians can then more easily dispose of the sleepers."
+				"當長眠陷阱被觸發，其壓力板將會釋放出法術，使入侵者們陷入深沉的睡眠中。這讓地城守衛們能夠更輕易地解決這些睡著的傢伙。"
 			],
 			"trigger": [
-				"Stepping on the pressure plate triggers this trap."
+				"踩上其壓力板將會觸發這個陷阱。"
 			],
 			"effect": [
-				"When activated, this trap casts a {@spell sleep} spell centered on the pressure plate, using a 9th-level spell slot."
+				"當被觸發時，這個陷阱將以壓力板為中心施放一個{@spell 睡眠術}法術，使用9環法術位。"
 			],
 			"countermeasures": [
-				"A successful DC 20 Wisdom (Perception) check reveals the pressure plate. A successful DC 20 Intelligence (Arcana) check made within 5 feet of the pressure plate disables the trap, and a check with a total of 10 or lower triggers it. A successful {@spell dispel magic} (DC 19) cast on the pressure plate destroys the trap."
+				"成功通過一次DC 20的睿知（感知）檢定能夠揭露出這個壓力板的存在。在距離壓力板5呎內成功通過一次DC 20的智力（奧秘）檢定能夠讓角色解除這個陷阱，而若這個檢定在結果與目標值差距10點或更多的情況下失敗，則這個陷阱將被觸發。一個成功施放於壓力板的{@spell 解除魔法}法術(DC 19)也能夠摧毀這個陷阱。"
 			],
 			"source": "XGE",
 			"page": 114
