@@ -353,7 +353,7 @@
 						{
 							"type": "item",
 							"name": "加速刀刃",
-							"entry": "刀刃的轉動速度將越來越快，且只會在命中目標時慢下來。每當迴旋刀刃在一次攻擊中T失手時，它的下一次攻擊將會變得更難以閃避。每次攻擊失手，迴旋刀刃的攻擊加值將會增加2，且它的傷害將會增加3 ({@dice 1d6})點。這些好處將持續直到刀刃命中一個目標，且它會在這之後回復原本的數值。"
+							"entry": "刀刃的轉動速度將越來越快，且只會在命中目標時慢下來。每當迴旋刀刃在一次攻擊中失手時，它的下一次攻擊將會變得更難以閃避。每次攻擊失手，迴旋刀刃的攻擊加值將會增加2，且它的傷害將會增加3 ({@dice 1d6})點。這些好處將持續直到刀刃命中一個目標，且它會在這之後回復原本的數值。"
 						},
 						{
 							"type": "item",
@@ -425,64 +425,64 @@
 			"page": 118
 		},
 		{
-			"name": "Sphere of Crushing Doom",
+			"name": "末日毀滅滾球", "ENG_name": "Sphere of Crushing Doom",
 			"trapHazType": "CMPX",
 			"tier": 2,
 			"threat": 3,
 			"entries": [
-				"The court jester devised a deadly trap to foil anyone who sought to steal his magic fool's cap. The jester's tomb is located at the end of a 10-foot-wide, 150-foot-long hallway that descends sharply from north to south. The entrance to the tomb is a door on the eastern wall at the bottom of the slope, at the south end of the hall."
+				"宮廷小丑設計了一個致命的陷阱，以阻止任何打算偷走他魔法愚者帽(magical fool's cap)的竊賊。小丑的墳墓位於一座走廊的盡頭，走廊寬10呎，長150呎，自北向南向下呈現一個陡峭的斜坡。墳墓的入口是一扇位於斜坡底部，走廊南端盡頭的門，鑲嵌在東側的牆面上。"
 			],
 			"trigger": [
-				"This trap activates as soon as the door leading to the jester's coffin is opened. A magic portal opens at the northern end of the hallway and disgorges an enormous steel sphere, which hurtles down the slope. When it reaches the bottom of the slope, a second portal briefly appears and teleports the sphere back to the top of the slope to begin the process again."
+				"這個陷阱會在通往小丑棺材房間的門被打開時觸發。一個魔法傳送門將會在走廊北端盡頭處開啟，並釋放出一個巨大的鐵球，沿著斜坡向下滾動。當鐵球抵達斜坡的底部時，第二個傳送門將會短暫地出現並將鐵球傳送至斜坡的頂部，再次重複同樣的過程。"
 			],
 			"initiative": 1,
-			"initiativeNote": "but see the dynamic element below",
+			"initiativeNote": "但請參照下述的動態要素",
 			"eActive": [
-				"Although the trap is complex in nature, it has a single active element. That's all it needs.",
+				"儘管這個陷阱在本質上相當複雜，但它僅具有一個主動要素。這對這個陷阱而言就相當足夠了。",
 				{
 					"type": "list",
 					"style": "list-hang-notitle",
 					"items": [
 						{
 							"type": "item",
-							"name": "Sphere of Crushing Doom (Initiative 10).",
-							"entry": "The trap's active element is a sphere of steel that almost fills the 10-foot width of the hallway and rolls to the bottom of the slope on its turn. Each creature in the sphere's path must make a DC 20 Strength saving throw. On a failed save, a creature takes 22 (4d10) bludgeoning damage and is knocked prone. On a successful save, a creature takes half as much damage and isn't knocked prone. Objects that block the sphere, such as a conjured wall, take maximum damage from the impact."
+							"name": "末日毀滅滾球 (先攻順序 20).",
+							"entry": "這個陷阱的主動要素是一顆幾乎佔滿整個10呎寬走廊的鋼鐵滾球，並會在它的回合時向著斜坡底部滾動。每個在滾球路徑上的生物都必須進行一次DC 20的力量豁免。若豁免失敗，該生物將受到22 ({@dice 4d10})鈍擊傷害，並被擊倒{@condition 伏地}。若豁免成功，該生物將只受到一半的傷害且不會被擊倒{@condition 伏地}。阻擋滾球的物體（例如一道咒法牆）則會在其衝擊下受到最大傷害。"
 						}
 					]
 				}
 			],
 			"eDynamic": [
-				"The longer it rolls, the more lethal the sphere becomes.",
+				"它滾的越久，滾球就會變得更加致命。",
 				{
 					"type": "list",
 					"style": "list-hang-notitle",
 					"items": [
 						{
 							"type": "item",
-							"name": "Speed Kills.",
-							"entry": "After its turn, the sphere gains speed, represented by its damage increasing by 11 ({@dice 2d10}). While its damage is 55 ({@dice 10d10}) or greater, it acts on initiative count 20 and 10."
+							"name": "高速輾殺.",
+							"entry": "在它的回合結束後，滾球的速度將會提升，表現為增加11 ({@dice 2d10})點傷害。當它的傷害變為55 ({@dice 10d10})或更高，則它將會在先攻順序20 和 先攻順序10 時行動。"
 						}
 					]
 				}
 			],
 			"countermeasures": [
-				"The trap can be neutralized either by stopping the sphere or preventing it from teleporting.",
+				"透過停下滾球或是防止它再次傳送，可以使這個陷阱被無效化。",
 				{
 					"type": "list",
 					"style": "list-hang-notitle",
 					"items": [
 						{
 							"type": "item",
-							"name": "Stop the Sphere.",
-							"entry": "Stopping the sphere is the easiest way to disrupt the trap. A wall of force can do so easily, as can any object placed in its path that has enough hit points to absorb damage from the sphere without being destroyed."
+							"name": "停止滾球.",
+							"entry": "將滾球停下是中斷這個陷阱最簡單的方法。一道{@spell 力牆術}創造的力場牆可以輕易達成這項任務，而任何被擺放在滾球移動路徑上，擁有足夠生命值以吸收滾球傷害而不至於被摧毀的物體也可以達到同樣的效果。"
 						},
 						{
 							"type": "item",
-							"name": "Disrupt the Portals.",
+							"name": "中斷傳送門.",
 							"entries": [
-								"Either portal can be neutralized with three successful DC 20 Intelligence (Arcana) checks, but the process of analyzing a portal to disrupt it takes time. Faint runes in the ceiling and floor at both ends of the hallway are involved in the functioning of the portals. A creature must first use an action to examine a set of runes, then use a subsequent action to attempt to vandalize the runes. Each successful check reduces the sphere's damage by 11 ({@dice 2d10}), as the disrupted sphere loses speed moving through the failing portal.",
-								"Alternatively, a set of runes can be disabled with three successful castings of dispel magic (DC 19) targeting any of the runes in the set.",
-								"If the southern portal is destroyed, the sphere slams into the south wall and comes to a halt. It blocks the door to the tomb, but the characters can escape."
+								"每個傳送門都可以透過成功通過三次DC 20的智力（奧秘）檢定以將其無效化，但為了中斷傳送門所進行的分析過程會需要花上一些時間。位於走廊兩端天花板和地面上的黯淡符文涉及了傳送門的運作。一個生物必須先使用一個動作以檢視這組符文，接著再使用一個動作以嘗試破壞這些符文。因為滾球在通過被削弱的傳送門時會導致速度減緩，每次成功的檢定都會使滾球減少11 ({@dice 2d10})點傷害。",
+								"或者，藉由對一組符文成功施放三次{@spell 解除魔法}(DC 19)也能夠解除一組符文。",
+								"若南端的傳送門被摧毀，則滾球將會猛烈撞上牆閉並停止下來。它會擋住通往小丑墳墓的門，但角色們可以逃脫了。"
 							]
 						}
 					]
@@ -492,70 +492,138 @@
 			"page": 119
 		},
 		{
-			"name": "Poisoned Tempest",
+			"name": "劇毒風暴", "ENG_name": "Poisoned Tempest",
 			"trapHazType": "CMPX",
 			"tier": 3,
 			"threat": 3,
 			"entries": [
-				"This fiendish trap was built to eliminate intruders who infiltrate a yuan-ti temple. The trap is a room, 60 feet on a side, with 5-foot-wide stone doors in the middle of each wall. In each corner of the room stands a 10-foot-tall statue of a great serpent, coiled and ready to strike. The eyes in each statue are rubies worth 200 gp apiece."
+				"這個殘忍的陷阱被建造於消滅那些膽敢潛入蛇人神廟的入侵者。這個陷阱是一個各邊60呎的方形房間，各牆壁的中央都設有一扇5呎寬的石門。在房間的四個角落各自座落著一尊10呎高的巨蛇雕像，盤旋呈進攻之勢。這些雕像的每隻眼睛都是價值200金幣的紅寶石。"
 			],
 			"trigger": [
-				"This trap activates when a ruby is pried from one of the statues. Each statue's mouth slides open, revealing a 1-foot-wide pipe that runs down its throat."
+				"這個陷阱會在一個紅寶石被從雕像中撬出時被觸發。每尊雕像的嘴巴將會滑開，露出一根延伸自其喉嚨的1呎寬管線。"
 			],
 			"initiative": 3,
 			"eActive": [
-				"The trap fills the room with poison and other deadly effects.",
+				"這個陷阱會使房間充斥著劇毒氣體以及其它致命效果。",
 				{
 					"type": "list",
 					"style": "list-hang-notitle",
 					"items": [
 						{
 							"type": "item",
-							"name": "Locked Doors (Initiative 20).",
-							"entry": "The four doors to this room slam shut and are locked in place by magic. This effect activates only once, the first time the trap is triggered."
+							"name": "閉鎖之門 (先攻順序 20).",
+							"entry": "房間的四扇門將會猛然關閉，並被魔法鎖住。這個效果只會被觸發一次，且只會在這個要素第一次被觸發時觸發。"
 						},
 						{
 							"type": "item",
-							"name": "Poison Gas (Initiative 20).",
-							"entry": "Poison gas floods the room. Each creature inside must make a DC 20 Constitution saving throw, taking 33 ({@dice 6d10}) poison damage on a failed save, or half as much damage on a successful one."
+							"name": "劇毒氣體 (先攻順序 20).",
+							"entry": "劇毒氣體將淹沒整個房間。每個房間內的生物都必須進行一次DC 20的體質豁免，豁免失敗將受到33 ({@dice 6d10})毒素傷害，豁免成功則只受到一半的傷害。"
 						},
 						{
 							"type": "item",
-							"name": "Tempest (Initiative 10).",
-							"entry": "Air and gas boils from the trap. Roll a d6, and consult the following table."
+							"name": "毒氣風暴 (先攻順序 10).",
+							"entry": "空氣和毒氣將從陷阱中翻湧而出。骰一顆d6，並查閱下列風暴表。"
+						},
+						{
+							"type": "table",
+							"caption": "風暴效果表",
+							"colLabels": [
+								"{@dice d6}",
+								"效果"
+							],
+							"colStyles": [
+								"col-1 text-align-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									{
+										"type": "cell",
+										"roll": {
+											"exact": 1
+										}
+									},
+									"致幻毒氣將擾亂精神與感官。直到毒氣風暴的主動要素再次被觸發之前，所有在房間內進行的智力和睿知檢定都將承受劣勢。"
+								],
+								[
+									{
+										"type": "cell",
+										"roll": {
+											"exact": 2
+										}
+									},
+									"爆炸性氣體充斥著整個房間。若有任何人帶著明火，它將會爆炸並對房間內的每個人造成22 ({@dice 4d10})火焰傷害（若成功通過DC 20的敏捷豁免只受到一半的傷害）。明火接著將會熄滅。"
+								],
+								[
+									{
+										"type": "cell",
+										"roll": {
+											"exact": 3
+										}
+									},
+									"衰弱毒氣斥著整個房間。直到毒氣風暴的主動要素再次被觸發之前，所有在房間內進行的力量和敏捷檢定都將承受劣勢。"
+								],
+								[
+									{
+										"type": "cell",
+										"roll": {
+											"exact": 4
+										}
+									},
+									"狂暴強風將迫使所有在房間內的人都必須成功通過一次DC 20的力量豁免，否則被擊倒{@condition 伏地}。。"
+								],
+								[
+									{
+										"type": "cell",
+										"roll": {
+											"exact": 5
+										}
+									},
+									"濃煙斥著整個房間。直到毒氣風暴的主動要素再次被觸發之前，房間內的能見度將被降低到1呎。"
+								],
+								[
+									{
+										"type": "cell",
+										"roll": {
+											"exact": 6
+										}
+									},
+									"額外的劇毒氣體湧入房間，效果如同劇毒氣體的主動要素。"
+								]
+							]
 						}
 					]
 				}
 			],
 			"eDynamic": [
-				"The longer the poison gas remains in the room, the more lethal it becomes.",
+				"毒氣在房間內滯留越久，它就會變得更加致命。",
 				{
 					"type": "list",
 					"style": "list-hang-notitle",
 					"items": [
 						{
 							"type": "item",
-							"name": "Increased Potency.",
-							"entry": "The damage from the Poison Gas element increases by 11 ({@dice 2d10}) each round after it activates, to a maximum of 55 ({@dice 10d10})."
+							"name": "毒性增強.",
+							"entry": "在它被啟動後每經過一輪，劇毒氣體要素的傷害都將再增加11 ({@dice 2d10})點，最高增加至 55 ({@dice 10d10})點傷害。"
 						}
 					]
 				}
 			],
 			"countermeasures": [
-				"There are a few ways that the trap can be overcome.",
+				"有一些手段能夠戰勝這個陷阱。",
 				{
 					"type": "list",
 					"style": "list-hang-notitle",
 					"items": [
 						{
 							"type": "item",
-							"name": "Open the Doors.",
-							"entry": "Opening the doors is the quickest way to circumvent the trap, but they are warded with magic. To open the doors, a character must first succeed on a DC 20 Wisdom (Perception) check to find the locking mechanism. A successful DC 20 Intelligence (Arcana) check is then required to disable the sphere of force that surrounds the lock (dispel magic is ineffective against it). Success on a DC 20 Dexterity check using thieves' tools picks the lock. Finally, a successful DC 20 Strength (Athletics) check is needed to push the door open. Each check requires an action."
+							"name": "開啟房門.",
+							"entry": "打開房門是逃離這個陷阱最快的手段，但這幾扇房門都被魔法給守護著。若要打開房門，角色必須先成功通過一次DC 20的睿知（感知）檢定以找尋門鎖機關。接著，角色需要成功通過一次DC 20的智力（奧秘）檢定已解除環繞在門鎖週遭的力場球體（{@spell 解除魔法}對其無效）。使用{@item 盜賊工具|phb}成功通過一次DC 20的敏捷檢定可以將門鎖打開。最後，還需要成功通過一次DC 20的力量（運動）檢定以推開房門。上述每個檢定都需要花費一個動作。"
 						},
 						{
 							"type": "item",
-							"name": "Disable the Statues.",
-							"entry": "A statue can be disabled by blocking the flow of gas from its mouth. Heavily damaging a statue is a bad idea, for doing so leaves the gas vents open. Reducing a statue to 0 hit points (AC 17; 20 hp; resistance to fire, piercing, and slashing damage; immune to poison and psychic damage) or making a successful DC 20 Strength check to break it cracks the statue and increases the Poison Gas damage by 5 ({@dice 1d10}). A successful DC 20 Dexterity check using thieves' tools, or a successful DC 15 Strength check made to block up the statue with a cloak or similar object, decreases the poison damage by 5 ({@dice 1d10}). Once a character succeeds on the check, someone must remain next to the statue to keep it blocked up. When all four statues are blocked in this manner, the trap deactivates."
+							"name": "關停雕像.",
+							"entry": "雕像的機關可以透過將其口中的管線堵塞而被解除。損壞雕像是一個糟糕的主意，因為這麼做將會使毒氣孔直接暴露敞開。將雕像的生命值歸零（AC 17；20點生命值；對火焰、穿刺、劈砍傷害具有抗性；免疫毒素和精神傷害）、或成功通過一次DC 20的力量檢定以破壞它將會使雕像裂損，並使劇毒氣體的傷害增加5 ({@dice 1d10})點。使用{@item 盜賊工具|phb}成功通過一次DC 20的敏捷檢定、或利用斗篷或類似物體成功通過一次DC 15的力量檢定以阻塞雕像的排氣，都會使劇毒氣體的傷害降低5 ({@dice 1d10})點。一旦角色成功通過該檢定，就必須有某個人站在雕像旁邊以維持其阻塞效果。當四個雕像都被這種方式阻塞時，這個陷阱將被解除。"
 						}
 					]
 				}
