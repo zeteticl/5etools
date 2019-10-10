@@ -3,35 +3,37 @@
 		{
 			"name": "Aboleth",
 			"lairActions": [
-				"When fighting inside its lair, an aboleth can invoke the ambient magic to take lair actions. On initiative count 20 (losing initiative ties), the aboleth takes a lair action to cause one of the following effects:",
+				"當底棲魔魚在其巢穴戰鬥時，它可以引發周圍環境的魔法以採取它的巢穴動作。在先攻順序輪到20時（先攻相等時則為後手），底棲魔魚可以採取一次巢穴動作以造成以下其中一個效果：",
 				{
 					"type": "list",
 					"items": [
-						"The aboleth casts {@spell phantasmal force} (no components required) on any number of creatures it can see within 60 feet of it. While maintaining concentration on this effect, the aboleth can't take other lair actions. If a target succeeds on the saving throw or if the effect ends for it, the target is immune to the aboleth's phantasmal force lair action for the next 24 hours, although such a creature can choose to be affected.",
-						"Pools of water within 90 feet of the aboleth surge outward in a grasping tide. Any creature on the ground within 20 feet of such a pool must succeed on a DC 14 Strength saving throw or be pulled up to 20 feet into the water and knocked prone. The aboleth can't use this lair action again until it has used a different one.",
-						"Water in the aboleth's lair magically becomes a conduit for the creature's rage. The aboleth can target any number of creatures it can see in such water within 90 feet of it. A target must succeed on a DC 14 Wisdom saving throw or take 7 ({@dice 2d6}) psychic damage. The aboleth can't use this lair action again until it has used a different one."
+						"底棲魔魚對距離它60呎內且它所能看見的任意數量個生物施放{@spell 魅影之力}(無須任何構材)。當專注於這個效果時，底棲魔魚不能採取其它的巢穴動作。 若目標成功通過此豁免檢定，或這個效果對它的影響結束，則目標將在接下來24小時內免疫於該底棲魔魚使用巢穴動作施放的{@spell 魅影之力}，然而該生物仍然可以選擇自願被影響。",
+						"距離底棲魔魚90呎內的水池將化作洶湧的攫抓浪潮向外湧出。任何在地面上且距離這類水池20呎內的生物都必須成功通過一次DC 14的力量豁免，否則被拉向水中最多20呎距離且被擊倒{@condition 伏地}。直到底棲魔魚使用了另一個巢穴動作之前，它都不能再使用此巢穴動作。",
+						"底棲魔魚巢穴內的水體將被魔法變成生物狂怒的導管。底棲魔魚可以選擇任意個距離它90呎內，它所能看見，且處於這類水體中的生物做為目標。目標必須成功通過一次DC 14的睿知豁免，否則受到 7 ({@dice 2d6})精神傷害。直到底棲魔魚使用了另一個巢穴動作之前，它都不能再使用此巢穴動作。"
 					]
 				}
 			],
 			"regionalEffects": [
-				"The region containing an aboleth's lair is warped by the creature's presence, which creates one or more of the following effects:",
+				"這片坐落著底棲魔魚巢穴的區域被該生物的本質所扭曲，並創造出以下其中一個或多個效應：",
 				{
 					"type": "list",
 					"items": [
-						"Underground surfaces within 1 mile of the aboleth's lair are slimy and wet and are difficult terrain.",
-						"Water sources within 1 mile of the lair are supernaturally fouled. Enemies of the aboleth that drink such water vomit it within minutes.",
-						"As an action, the aboleth can create an illusory image of itself within 1 mile of the lair. The copy can appear at any location the aboleth has seen before or in any location a creature charmed by the aboleth can currently see. Once created, the image lasts for as long as the aboleth maintains concentration, as if concentrating on a spell. Although the image is intangible, it looks, sounds, and can move like the aboleth. The aboleth can sense, speak, and use telepathy from the image's position as if present at that position. If the image takes any damage, it disappears."
+						"距離底棲魔魚巢穴1哩內的地底表面將變為黏滑而潮濕的困難地形。",
+						"距離巢穴1哩內的水源被超自然力量汙染。底棲魔魚的敵人在喝下這樣的水後將反胃長達數分鐘。",
+						"以一個動作，底棲魔魚可以在它巢穴1哩內創造一個自己的幻影。這個幻影可以出現在任何底棲魔魚曾經見過的地方，或在任何被底棲魔魚{@condition 魅惑}的生物當下所能看見的地方。一旦幻影被創造，只要底棲魔魚維持專注（如同專注於法術），這個幻影就將持續存在。儘管這個幻影沒有實體，但它的外觀、聲音，以及移動方式都跟底棲魔魚一樣。底棲魔魚可以透過該幻影的位置感知、說話、並使用它的心靈感應，就如同它存在於該處一樣。若這個幻影受到任何傷害，則它將消失。"
 					]
 				},
-				"If the aboleth dies, the first two effects fade over the course of {@dice 3d10} days."
-			]
+				"若底棲魔魚死亡，前兩個效應將在{@dice 3d10}天內逐漸消散。"
+			],
+			"source": "MM"
 		},
 		{
 			"name": "Aerisi Kalinoth",
 			"lairActions": [
 				"If Aerisi is in the air node while {@creature Yan-C-Bin|PotA} isn't, Aerisi can take lair actions. On initiative count 20 (losing initiative ties), Aerisi uses a lair action to cast one of her spells, up to 3rd level, without using components or a spell slot. She can't cast the same spell two rounds in a row, although she can continue to concentrate on a spell she previously cast using a lair action. Aerisi can take no other lair actions while concentrating on a spell cast as a lair action.",
 				"If Aerisi casts {@spell invisibility} using this lair action, she also draws the power of the air node into herself. By doing so, she regains 15 ({@dice 3d8+2}) hit points."
-			]
+			],
+			"source": "PotA"
 		},
 		{
 			"name": "Baphomet",
@@ -98,33 +100,35 @@
 						}
 					]
 				}
-			]
+			],
+			"source": "MTF"
 		},
 		{
 			"name": "Beholder",
 			"lairActions": [
-				"When fighting inside its lair, a beholder can invoke the ambient magic to take lair actions. On initiative count 20 (losing initiative ties), the beholder can take one lair action to cause one of the following effects:",
+				"當眼魔在其巢穴戰鬥時，它可以引發周圍環境的魔法以採取它的巢穴動作。在先攻順序輪到20時（先攻相等時則為後手），眼魔可以採取一次巢穴動作以造成以下其中一個效果：",
 				{
 					"type": "list",
 					"items": [
-						"A 50-foot-square area of ground within 120 feet of the beholder becomes slimy; that area is difficult terrain until initiative count 20 on the next round.",
-						"Walls within 120 feet of the beholder sprout grasping appendages until initiative count 20 on the round after next. Each creature of the beholder's choice that starts its turn within 10 feet of such a wall must succeed on a DC 15 Dexterity saving throw or be grappled. Escaping requires a successful DC 15 Strength (Athletics) or Dexterity (Acrobatics) check.",
-						"An eye opens on a solid surface within 60 feet of the beholder. One random eye ray of the beholder shoots from that eye at a target of the beholder's choice that it can see. The eye then closes and disappears."
+						"距離眼魔120呎內一處50呎平方的地表範圍將變得黏滑；該區域被變為困難地形直到下一輪的先攻順序輪到20。",
+						"距離眼魔120呎內的牆面將長出攫抓觸肢，持續直到下一輪之後，先攻順序再次輪到20。每個眼魔所選，且在這類牆面10呎內開始它回合的生物，都必須成功通過一次DC 15的敏捷豁免，否則將{@condition 被擒}。從中逃脫需要成功通過一次DC 15的力量（{@skill 運動}）或敏捷（{@skill 特技}）檢定。",
+						"距離眼魔60呎內的一處固體表面將張開一隻眼睛。一道眼魔的隨機眼波射線將從這隻眼睛射向一個眼魔所選擇且它所能看見的生物。這隻眼睛接著將閉上並消失。"
 					]
 				},
-				"The beholder can't repeat an effect until they have all been used, and it can't use the same effect two rounds in a row."
+				"在所有的效果都被使用過之前，眼魔不能使用已經用過的巢穴動作效果，且眼魔不能連續兩輪使用相同的效果。"
 			],
 			"regionalEffects": [
-				"A region containing a beholder's lair is warped by the creature's unnatural presence, which creates one or more of the following effects:",
+				"這片坐落著眼魔巢穴的區域被該生物的非自然本質所扭曲，並創造出以下其中一個或多個效應：",
 				{
 					"type": "list",
 					"items": [
-						"Creatures within 1 mile of the beholder's lair sometimes feel as if they're being watched when they aren't.",
-						"When the beholder sleeps, minor warps in reality occur within 1 mile of its lair and then vanish 24 hours later. Marks on cave walls might change subtly, an eerie trinket might appear where none existed before, harmless slime might coat a statue, and so on. These effects apply only to natural surfaces and to nonmagical objects that aren't on anyone's person."
+						"距離眼魔巢穴1哩內的生物偶爾會感覺到自己正在被注視，儘管實際上並沒有這回事。",
+						"當眼魔入睡時，輕微的現實扭曲將會發生在距離它巢穴1哩內的區域，並接著在24小時後消失。這些扭曲可能會是雕刻牆面上記號的微妙變化、怪異的飾品出現在它們先前不存在的地方、無害的黏液覆蓋於雕像表面，諸如此類。這些效應只會發生在自然表面和不屬於任何人的非魔法物體上。"
 					]
 				},
-				"If the beholder dies, these effects fade over the course of {@dice 1d10} days."
-			]
+				"若眼魔死亡，這些效應都將在{@dice 1d10}天內逐漸消散。"
+			],
+			"source": "MM"
 		},
 		{
 			"name": "Black Dragon",
@@ -140,170 +144,177 @@
 				}
 			],
 			"regionalEffects": [
-				"這片包含著傳奇黑龍巢穴的區域被龍的魔法所扭曲，並創造出以下其中一個或更多的效應：",
+				"這片坐落著傳奇黑龍巢穴的區域被龍的魔法所扭曲，並創造出以下其中一個或多個效應：",
 				{
 					"type": "list",
 					"items": [
 						"距離巢穴6哩內的陸地因為生長得茂密變形的植被，以及沼澤內滿佈的惡臭淤泥，而使得橫越所需的時間變為原本的兩倍。",
-						"距離巢穴1里內的水源被超自然力量汙染。黑龍的敵人在喝下這樣的水後將反胃長達數分鐘。",
-						"距離巢穴6里內的陸地將被霧氣給輕度遮蔽。"
+						"距離巢穴1哩內的水源被超自然力量汙染。黑龍的敵人在喝下這樣的水後將反胃長達數分鐘。",
+						"距離巢穴6哩內的陸地將被霧氣給輕度遮蔽。"
 					]
 				},
 				"若黑龍死亡，這片區域內的植被將維持它們生長的情況，但其他效果將在{@dice 1d10}天後消散。"
-			]
+			],
+			"source": "MM"
 		},
 		{
 			"name": "Blue Dragon",
 			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the dragon takes a lair action to cause one of the following effects; the dragon can't use the same effect two rounds in a row:",
+				"在先攻順序輪到20時（先攻相等時則為後手），藍龍可以採取一次巢穴動作以造成以下其中一個效果；藍龍不能連續兩輪使用相同的效果：",
 				{
 					"type": "list",
 					"items": [
-						"Part of the ceiling collapses above one creature that the dragon can see within 120 feet of it. The creature must succeed on a DC 15 Dexterity saving throw or take 10 ({@dice 3d6}) bludgeoning damage and be knocked prone and buried. The buried target is restrained and unable to breathe or stand up. A creature can take an action to make a DC 10 Strength check, ending the buried state on a success.",
-						"A cloud of sand swirls about in a 20-foot-radius sphere centered on a point the dragon can see within 120 feet of it. The cloud spreads around corners. Each creature in the cloud must succeed on a DC 15 Constitution saving throw or be blinded for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
-						"Lightning arcs, forming a 5-foot-wide line between two of the lair's solid surfaces that the dragon can see. They must be within 120 feet of the dragon and 120 feet of each other. Each creature in that line must succeed on a DC 15 Dexterity saving throw or take 10 ({@dice 3d6}) lightning damage."
+						"距離藍龍120呎內且它所能看見的一個生物上方一部分的天花板坍塌下來。該生物必須成功通過一次DC 15的敏捷豁免，否則受到10 ({@dice 3d6})鈍擊傷害，被擊倒{@condition 伏地}並被掩埋。被掩埋的目標將被{@condition 束縛}且無法呼吸或起身。一個生物可以採取一個動作以進行一次DC 10的力量檢定，成功則終止被掩埋的狀態。",
+						"一團沙塵旋轉卷起的雲團將以距離藍龍120呎內且它所能看見的一點為中心形成一個20呎半徑的球體區域。這團沙雲會繞過轉角。每個在這團沙雲內的生物都必須成功通過一次DC 15的體質豁免，否則將陷入{@condition 目盲}長達1分鐘。一個生物可以在它的每個回合結束時重複進行這個豁免檢定，成功則結束這個效果對它的影響。",
+						"閃電弧光在巢穴內藍龍所能看見的兩個固態表面之間形成一道5呎寬的直線區域。這兩個表面必須距離藍龍120呎內，且彼此相距120呎內。每個在直線區域內的生物必須成功通過一次DC 15的敏捷豁免，否則受到10 ({@dice 3d6})閃電傷害。"
 					]
 				}
 			],
 			"regionalEffects": [
-				"The region containing a legendary blue dragon's lair is warped by the dragon's magic, which creates one or more of the following effects:",
+				"這片坐落著傳奇藍龍巢穴的區域被龍的魔法所扭曲，並創造出以下其中一個或多個效應：",
 				{
 					"type": "list",
 					"items": [
-						"Thunderstorms rage within 6 miles of the lair.",
-						"Dust devils scour the land within 6 miles of the lair. A dust devil has the statistics of an air elemental, but it can't fly, has a speed of 50 feet, and has an Intelligence and Charisma of 1 (-5).",
-						"Hidden sinkholes form in and around the dragon's lair. A sinkhole can be spotted from a safe distance with a successful DC 20 Wisdom (Perception) check. Otherwise, the first creature to step on the thin crust covering the sinkhole must succeed on a DC 15 Dexterity saving throw or fall {@dice 1d6 × 10} feet into the sinkhole."
+						"距離巢穴6哩內的區域肆虐著雷鳴風暴。",
+						"距離巢穴6哩內的區域被塵捲風席捲著。塵捲風具有{@creature 氣元素}的數據，但它不會飛，具有50呎的移動速度，且智力和魅力只有1(-5)。",
+						"隱藏的陷落沙坑將在藍龍的巢穴內和巢穴周遭成形。透過成功通過一次DC 20的睿知（{@skill 感知}）檢定可以在安全距離外發現一個隱藏的陷落沙坑。除此之外，第一個踩上陷落沙坑上覆蓋的稀薄沙層的生物必須成功通過一次DC 15的敏捷豁免，否則將跌入陷落沙坑並墜落{@dice 1d6 × 10}呎的距離。"
 					]
 				},
-				"If the dragon dies, the dust devils disappear immediately, and the thunderstorms abate within {@dice 1d10} days. Any sinkholes remain where they are."
-			]
+				"若藍龍死亡，塵捲風將會立刻消失，且雷鳴風暴將在{@dice 1d10}天內消散。任何陷落沙坑都會維持它們所在的位置。"
+			],
+			"source": "MM"
 		},
 		{
 			"name": "Brass Dragon",
 			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the dragon takes a lair action to cause one of the following effects:",
+				"在先攻順序輪到20時（先攻相等時則為後手），黃銅龍可以採取一次巢穴動作以造成以下其中一個效果：",
 				{
 					"type": "list",
 					"items": [
-						"A strong wind blows around the dragon. Each creature within 60 feet of the dragon must succeed on a DC 15 Strength saving throw or be pushed 15 feet away from the dragon and knocked prone. Gases and vapors are dispersed by the wind, and unprotected flames are extinguished. Protected flames; such as lanterns, have a 50 percent chance of being extinguished.",
-						"A cloud of sand swirls about in a 20-foot-radius sphere centered on a point the dragon can see within 120 feet of it. The cloud spreads around corners. Each creature in it must succeed on a DC 15 Constitution saving throw or be blinded for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"一股強風呼嘯環繞在黃銅龍的周圍。每個距離黃銅龍60尺內的生物都必須成功通過一次DC 15的力量豁免，否則被推離黃銅龍15呎距離並被擊倒{@condition 伏地}。氣體和蒸氣都將被這股風吹散，且不受保護的火焰也將被熄滅。受保護的火焰；例如提燈，將有50%的機率被熄滅。",
+						"一團沙塵旋轉卷起的雲團將以距離黃銅龍120呎內且它所能看見的一點為中心形成一個20呎半徑的球體區域。這團沙雲會繞過轉角。每個在這團沙雲內的生物都必須成功通過一次DC 15的體質豁免，否則將陷入{@condition 目盲}長達1分鐘。一個生物可以在它的每個回合結束時重複進行這個豁免檢定，成功則結束這個效果對它的影響。"
 					]
 				}
 			],
 			"regionalEffects": [
-				"The region containing a legendary brass dragon's lair is warped by the dragon's magic, which creates one or more of the following effects:",
+				"這片坐落著傳奇黃銅龍巢穴的區域被龍的魔法所扭曲，並創造出以下其中一個或多個效應：",
 				{
 					"type": "list",
 					"items": [
-						"Tracks appear in the sand within 6 miles of the dragon's lair. The tracks lead to safe shelters and hidden water sources, while also leading away from areas that the dragon prefers to remain undisturbed.",
-						"Images of Large or smaller monsters haunt the desert sands within 1 mile of the dragon's lair. These illusions move and appear real, although they can do no harm. A creature that examines an image from a distance can tell it's an illusion with a successful DC 20 Intelligence (Investigation) check. Any physical interaction with an image reveals it to be an illusion, because objects pass through it.",
-						"Whenever a creature with an Intelligence of 3 or higher comes within 30 feet of a water source within 1 mile of the dragon's lair, the dragon becomes aware of the creature's presence and location."
+						"距離巢穴6哩內的沙地上出現數條小徑。這些小徑通往安全的避難所和隱蔽的水源處，同時也會引領其遠離黃銅龍不希望被打擾的區域。",
+						"距離巢穴1哩內的沙漠中遊蕩著體型為大型或更小的怪物幻影。這些幻象可以移動且看起來非常真實，但它們無法造成傷害。一個檢視這些幻影的生物可以藉由成功通過一次DC 20的智力（{@skill 調查}）檢定以辨識出其是否為幻象。由於東西會穿過幻影，任何與幻影的物理性互動都將暴露它是幻象的事實。",
+						"每當一個擁有3點或更高智力值的生物來到距離巢穴1哩內的水源處的30呎範圍內，黃銅龍將會意識到該生物的存在與位置。"
 					]
 				},
-				"If the dragon dies, the tracks fade in {@dice 1d10} days, but the other effects fade immediately."
-			]
+				"若黃銅龍死亡，小徑將會在{@dice 1d10}天內消散，而其他效應則會立即消失。"
+			],
+			"source": "MM"
 		},
 		{
 			"name": "Bronze Dragon",
 			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the dragon takes a lair action to cause one of the following effects:",
+				"在先攻順序輪到20時（先攻相等時則為後手），青銅龍可以採取一次巢穴動作以造成以下其中一個效果：",
 				{
 					"type": "list",
 					"items": [
-						"The dragon creates fog as though it had cast the {@spell fog cloud} spell. The fog lasts until initiative count 20 on the next round.",
-						"A thunderclap originates at a point the dragon can see within 120 feet of it. Each creature within a 20-foot radius centered on that point must make a DC 15 Constitution saving throw or take 5 ({@dice 1d10}) thunder damage and be deafened until the end of its next turn."
+						"青銅龍如同施放{@spell 雲霧術}法術一樣創造出一陣濃霧。這陣濃霧會持續存在直到下一輪的先攻順序輪到20。",
+						"一道雷鳴巨響以距離青銅龍120呎內且它所能看見的一點為源頭發出。每個在以該點為中心的20呎半徑範圍內的生物都必須進行一次DC 15的體質豁免，否則受到5 ({@dice 1d10})雷鳴傷害，且陷入{@condition 耳聾}狀態直到它的下個回合結束。"
 					]
 				}
 			],
 			"regionalEffects": [
-				"The region containing a legendary bronze dragon's lair is warped by the dragon's magic.",
+				"這片坐落著傳奇青銅龍巢穴的區域被龍的魔法所扭曲，並創造出以下其中一個或多個效應：",
 				{
 					"type": "list",
 					"items": [
-						"Once per day, the dragon can alter the weather in a 6-mile radius centered on its lair. The dragon doesn't need to be outdoors; otherwise the effect is identical to the {@spell control weather} spell.",
-						"Underwater plants within 6 miles of the dragon's lair take on dazzlingly brilliant hues.",
-						"Within its lair, the dragon can set illusory sounds, such as soft music and strange echoes, so that they can be heard in various parts of the lair."
+						"每天一次，青銅龍可以改變以它巢穴為中心的6哩半徑內區域的天氣。青銅龍並不需要在戶外；除此之外，此效應的效果與{@spell 操控天氣}法術相同。",
+						"距離巢穴6哩內區域中的水中植物都呈現出耀眼炫目的色澤。",
+						"在青銅龍的巢穴內，它可以設置幻象聲響，例如輕柔的音樂和詭異的迴聲，並讓它們可以在巢穴中的各個位置被聽見。"
 					]
 				},
-				"If the dragon dies, changed weather reverts to normal, as described in the spell, and the other effects fade in {@dice 1d10} days."
-			]
+				"若青銅龍死亡，被改變的天氣將如法術詳述中所記載的方式回復正常，且其他效應將在{@dice 1d10}天內逐漸消散。"
+			],
+			"source": "MM"
 		},
 		{
 			"name": "Copper Dragon",
 			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the dragon takes a lair action to cause one of the following effects:",
+				"在先攻順序輪到20時（先攻相等時則為後手），赤銅龍可以採取一次巢穴動作以造成以下其中一個效果：",
 				{
 					"type": "list",
 					"items": [
-						"The dragon chooses a point on the ground that it can see within 120 feet of it. Stone spikes sprout from the ground in a 20-foot radius centered on that point. The effect is otherwise identical to the spike growth spell and lasts until the dragon uses this lair action again or until the dragon dies.",
-						"The dragon chooses a 10-foot-square area on the ground that it can see within 120 feet of it. The ground in that area turns into 3-foot-deep mud. Each creature on the ground in that area when the mud appears must succeed on a DC 15 Dexterity saving throw or sink into the mud and become restrained. A creature can take an action to attempt a DC 15 Strength check, freeing itself or another creature within its reach and ending the restrained condition on a success. Moving 1 foot in the mud costs 2 feet of movement. On initiative count 20 on the next round, the mud hardens, and the Strength DC to work free increases to 20."
+						"赤銅龍選擇距離它120呎內且它所能看見地面上的一點。岩石棘刺將在以該點為中心的20呎半徑區域中從地面長出。除此之外，這個效果與{@spell 荊棘叢生}法術相同，且它將持續存在直到赤銅龍再次使用這個巢穴動作、或直到赤銅龍死亡。",
+						"赤銅龍選擇距離它120呎內且它所能看見地面上的一處10呎邊長的方形區域。這個區域內的地面將轉變為3呎深的淤泥。每個在淤泥出現時位於該區域地面上的生物都必須成功通過一次DC 15的敏捷豁免，否則將沉入淤泥並陷入{@condition 束縛}。一個生物可以採取一個動作以嘗試進行一次DC 15的力量檢定，若成功則將它自己或另一個在它觸及範圍內的生物從淤泥中逃脫，終止其{@condition 束縛}狀態。在淤泥中移動1呎距離將會消耗2呎的移動速度。在下一輪的先攻順序輪到20時，淤泥將會硬化，且嘗試從中逃脫的力量檢定DC將增加至20。"
 					]
 				}
 			],
 			"regionalEffects": [
-				"The region containing a legendary copper dragon's lair is warped by the dragon's magic, which creates one or more of the following effects:",
+				"這片坐落著傳奇赤銅龍巢穴的區域被龍的魔法所扭曲，並創造出以下其中一個或多個效應：",
 				{
 					"type": "list",
 					"items": [
-						"Magic carvings of the dragon's smiling visage can be seen worked into stone terrain and objects within 6 miles of the dragon's lair.",
-						"Tiny beasts such as rodents and birds that are normally unable to speak gain the magical ability to speak and understand Draconic while within 1 mile of the dragon's lair. These creatures speak well of the dragon, but can't divulge its whereabouts.",
-						"Intelligent creatures within 1 mile of the dragon's lair are prone to fits of giggling. Even serious matters suddenly seem amusing."
+						"距離巢穴6哩內區域中的岩石地形和物體上都可以看見用魔法雕刻出的微笑龍族臉龐。",
+						"原本不會說話的微型野獸，像是囓齒動物和鳥類，將在處於巢穴1哩內區域中時會獲得能夠說並理解龍語的魔法能力。這些生物會說赤銅龍的好話，但不會洩漏它的所在。",
+						"距離巢穴1哩內的智能生物會輕易的咯咯發笑。即使是嚴肅的事情也會頓時變得有趣起來。"
 					]
 				},
-				"If the dragon dies, the magic carvings fade over the course of {@dice 1d10} days. The other effects end immediately."
-			]
+				"若赤銅龍死亡，魔法浮雕將會在{@dice 1d10}天內逐漸消散。其他效應將會立即終止。"
+			],
+			"source": "MM"
 		},
 		{
 			"name": "Death Tyrant",
 			"lairActions": [
-				"When fighting inside its lair, a death tyrant can invoke the ambient magic to take lair actions. On initiative count 20 (losing initiative ties), the death tyrant can take one lair action to cause one of the following effects:",
+				"當亡眼暴君在其巢穴戰鬥時，它可以引發周圍環境的魔法以採取它的巢穴動作。在先攻順序輪到20時（先攻相等時則為後手），亡眼暴君可以採取一次巢穴動作以造成以下其中一個效果：",
 				{
 					"type": "list",
 					"items": [
-						"An area that is a 50-foot cube within 120 feet of the tyrant is filled with spectral eyes and tentacles. To creatures other than the death tyrant, that area is lightly obscured and difficult terrain until initiative count 20 on the next round.",
-						"Walls sprout spectral appendages until initiative count 20 on the round after next. Any creature, including one on the Ethereal Plane, that is hostile to the tyrant and starts its turn within 10 feet of a wall must succeed on a DC 17 Dexterity saving throw or be grappled. Escaping requires a successful DC 17 Strength (Athletics) or Dexterity (Acrobatics) check.",
-						"A spectral eye opens in the air at a point within 50 feet of the tyrant. One random eye ray of the tyrant shoots from that eye, which is considered to be an ethereal source, at a target of the tyrant's choice. The eye then closes and disappears."
+						"距離亡眼暴君120呎內一處50呎平方的區域將充滿幽靈般的眼珠和觸手。對亡眼暴君以外的生物而言，該區域被輕度遮蔽，且變為困難地形直到下一輪的先攻順序輪到20。",
+						"牆面將長出幽靈般的觸肢，持續直到下一輪之後，先攻順序再次輪到20。任何敵對於亡眼暴君且在牆面10呎內開始它回合的生物（包括位於乙太位面的生物），都必須成功通過一次DC 17的敏捷豁免，否則將{@condition 被擒}。從中逃脫需要成功通過一次DC 17的力量（{@skill 運動}）或敏捷（{@skill 特技}）檢定。",
+						"距離亡眼暴君50呎內的空中一點將張開一顆幽靈般的眼睛。一道亡眼暴君的隨機眼波射線將從這顆眼睛（被視作源自乙太位面）射向一個亡眼暴君所選擇的目標。這隻眼睛接著將閉上並消失。"
 					]
 				},
-				"The death tyrant can't repeat an effect until all three have been used, and it can't use the same effect on consecutive rounds."
+				"在所有的效果都被使用過之前，亡眼暴君不能使用已經用過的巢穴動作效果，且亡眼暴君不能連續兩輪使用相同的效果。"
 			],
 			"regionalEffects": [
-				"A region containing a death tyrant's lair is warped by the creature's unnatural presence, which creates one or more of the following effects:",
+				"這片坐落著亡眼暴君巢穴的區域被該生物的非自然本質所扭曲，並創造出以下其中一個或多個效應：",
 				{
 					"type": "list",
 					"items": [
-						"Creatures within 1 mile of the tyrant's lair sometimes feel as if they're being watched even when they aren't.",
-						"When a creature hostile to the tyrant and aware of its existence finishes a long rest within 1 mile of the tyrant's lair, roll a {@dice d20} for that creature. On a roll of 10 or lower, the creature is subjected to one random eye ray of the tyrant."
+						"距離亡眼暴君巢穴1哩內的生物偶爾會感覺到自己正在被注視，儘管實際上並沒有這回事。",
+						"當一個敵對於亡眼暴君並意識到其存在的生物在距離亡眼暴君巢穴1哩內的區域完成一次長休，則為該生物骰一顆{@dice d20}。若擲骰結果為10或更低，該生物將受到亡眼暴君一種隨機眼波射線的效果。"
 					]
 				},
-				"If the death tyrant dies, these effects fade over the course of {@dice 1d10} days."
-			]
+				"若亡眼暴君死亡，這些效應都將在{@dice 1d10}天內逐漸消散。"
+			],
+			"source": "MM"
 		},
 		{
 			"name": "Demilich",
 			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the demilich rolls a {@dice d20}. On a result of 11 or higher, the demilich takes a lair action to cause one of the following effects. It can't use the same effect two rounds in a row.",
+				"在先攻順序輪到20時（先攻相等時則為後手），半巫妖骰一顆{@dice d20}。若結果為11或更高，則半巫妖可以採取一次巢穴動作以造成以下其中一個效果。它不能連續兩輪使用相同的效果：",
 				{
 					"type": "list",
 					"items": [
-						"The tomb trembles violently for a moment. Each creature on the floor of the tomb must succeed on a DC 19 Dexterity saving throw or be knocked prone.",
-						"The demilich targets one creature it can see within 60 feet of it. An {@spell antimagic field} fills the space of the target, moving with it until initiative count 20 on the next round.",
-						"The demilich targets any number of creatures it can see within 30 feet of it. No target can regain hit points until initiative count 20 on the next round."
+						"整座陵墓將劇烈震動片刻。每個在陵墓中的地面上的生物必須成功通過一次DC 19的敏捷豁免，否則將被擊倒{@condition 伏地}。",
+						"半巫妖選擇一個距離它60呎內且它所能看見的生物做為目標。一道{@spell 反魔法結界}將充斥於目標所在的空間並隨著它移動，持續直到下一輪的先攻順序輪到20。",
+						"半巫妖選擇任意個距離它30呎內且它所能看見的生物做為目標。直到下一輪的先攻順序輪到20，這些目標都無法回復生命值。"
 					]
 				}
 			],
 			"regionalEffects": [
-				"A demilich's tomb might have any or all of the following effects in place:",
+				"半巫妖的陵墓可能會具有以下任意或全部的效應：",
 				{
 					"type": "list",
 					"items": [
-						"The first time a non-evil creature enters the tomb's area, the creature takes 16 ({@dice 3d10}) necrotic damage.",
-						"Monsters in the tomb have advantage on saving throws against being charmed or frightened, and against features that turn undead.",
-						"The tomb is warded against the magical travel of creatures the demilich hasn't authorized. Such creatures can't teleport into or out of the tomb's area or use planar travel to enter or leave it. Effects that allow teleportation or planar travel work within the tomb as long as they aren't used to leave or enter the tomb's area."
+						"當一個非邪惡的生物第一次進入陵墓區域時，該生物將受到16 ({@dice 3d10})死靈傷害。",
+						"陵墓中的怪物在對抗不被{@condition 魅惑}或{@condition 恐懼}，以及對抗驅散不死效果的豁免檢定中具有優勢。",
+						"陵墓將防止那些未經半巫妖許可的生物所進行的魔法旅行。這類生物無法傳送或使用位面旅行進入或離開陵墓區域。在陵墓區域內傳送或位面旅行的效果將正常運作，只要它們不被用來離開或進入陵墓區域。"
 					]
 				},
-				"If the demilich is destroyed, these effects fade over the course of 10 days."
-			]
+				"若半巫妖被摧毀，這些效應都將在10天內逐漸消散。"
+			],
+			"source": "MM"
 		},
 		{
 			"name": "Demogorgon",
@@ -369,33 +380,35 @@
 						}
 					]
 				}
-			]
+			],
+			"source": "MTF"
 		},
 		{
 			"name": "Elder Brain",
 			"lairActions": [
-				"When fighting inside its lair, an elder brain can use lair actions. On initiative count 20 (losing initiative ties), an elder brain can take one lair action to cause one of the following effects; the elder brain can't use the same lair action two rounds in a row:",
+				"當在其巢穴戰鬥時，主腦可以使用它的巢穴動作。在先攻順序輪到20時（先攻相等時則為後手），主腦可以採取一次巢穴動作以造成以下其中一個效果；主腦不能連續兩輪使用相同的效果：",
 				{
 					"type": "list",
 					"items": [
-						"The elder brain casts {@spell wall of force}.",
-						"The elder brain targets one friendly creature it can sense within 120 feet of it. The target has a flash of inspiration and gains advantage on one attack roll, ability check, or saving throw it makes before the end of its next turn. If the target doesn't or can't use this benefit in that time, the inspiration is lost.",
-						"The elder brain targets one creature it can sense within 120 feet of it and anchors it by sheer force of will. The target must succeed on a DC 18 Charisma saving throw or be unable to leave its current space. It can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"主腦施放{@spell 力牆術}法術。",
+						"主腦選擇一個距離它120呎內且它所能感知到的友善生物做為目標。目標將獲得一閃而過激勵，並在它的下個回合結束之前的一次攻擊檢定、屬性檢定、或豁免檢定中獲得優勢。若目標在時間內沒有使用或無法使用這個好處，則這個激勵將會消失。",
+						"主腦選擇一個距離它120呎內且它所能感知到的生物做為目標，並用純粹的意志力量將其固定住。目標必須成功通過一次DC 18的魅力豁免，否則將無法離開它當前所在的空間。目標可以在它的每個回合結束時重複這個豁免檢定，若豁免成功則結束這個效果對它的影響。"
 					]
 				}
 			],
 			"regionalEffects": [
-				"The territory within 5 miles of an elder brain is altered by the creature's psionic presence, which creates one or more of the following effects:",
+				"距離主腦5呎內的土地都被該生物的靈能立量所改變，並創造出以下其中一個或多個效應：",
 				{
 					"type": "list",
 					"items": [
-						"Creatures within 5 miles of an elder brain feel as if they are being followed, even when they are not.",
-						"The elder brain can overhear any telepathic conversation happening within 5 miles of it. The creature that initiated the telepathic conversation makes a DC 18 Wisdom (Insight) check when telepathic contact is first established. If the check succeeds, the creature is aware that something is eavesdropping on the conversation. The nature of the eavesdropper isn't revealed, and the elder brain can't participate in the telepathic conversation unless it has formed a psychic link with the creature that initiated it.",
-						"Any creature with which the elder brain has formed a psychic link hears faint, incomprehensible whispers in the deepest recesses of its mind. This psychic detritus consists of the elder brain's stray thoughts commingled with those of other creatures to which it is linked."
+						"距離主腦5哩內的生物都會感覺到自己正在被跟蹤，儘管實際上並沒有這回事。",
+						"主腦可以監聽任何在距離它5哩內發生的心靈感應溝通。啟動該心靈感應溝通的生物必須在該心靈聯繫第一次被建立時進行一次DC 18的睿知（{@skill 察言觀色}）檢定。若檢定成功，則該生物將意識到某種存在正在監聽這段溝通。這個檢定不會接露監聽者的本質，且除非主腦已經與該生物建立精神連結，否則主腦無法參與到這個心靈感應溝通中。",
+						"任何已經與主腦建立精神連結的生物都會在其內心深處聽見模糊、無法理解的低語。這種精神殘渣是由主腦和其他與之建立聯繫生物的雜念所混合而成的。"
 					]
 				},
-				"If the elder brain dies, these effects immediately end."
-			]
+				"若主腦死亡，這些效應都將立即消失。"
+			],
+			"source": "VGM"
 		},
 		{
 			"name": "Fraz-Urb'luu",
@@ -462,39 +475,42 @@
 						}
 					]
 				}
-			]
+			],
+			"source": "MTF"
 		},
 		{
 			"name": "Gar Shatterkeel",
 			"lairActions": [
 				"If Gar is in the water node while {@creature Olhydra|PotA} isn't, he can take lair actions. On initiative count 20 (losing initiative ties), Gar uses a lair action to use his Multiattack or cast one of his spells, up to 3rd level, without using components or a spell slot. He can't cast the same spell two rounds in a row, but he can continue to concentrate on a spell he previously cast using a lair action. He can take no other lair actions while concentrating on a spell cast as a lair action. His favorite use of this capability is casting {@spell inflict wounds} or {@spell call lightning}.",
 				"If Gar casts {@spell cure wounds} using this lair action, he regains the maximum number of hit points from the spell (28)."
-			]
+			],
+			"source": "PotA"
 		},
 		{
 			"name": "Gold Dragon",
 			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the dragon takes a lair action to cause one of the following effects; the dragon can't use the same effect two rounds in a row:",
+				"在先攻順序輪到20時（先攻相等時則為後手），金龍可以採取一次巢穴動作以造成以下其中一個效果；金龍不能連續兩輪使用相同的效果：",
 				{
 					"type": "list",
 					"items": [
-						"The dragon glimpses the future, so it has advantage on attack rolls, ability checks, and saving throws until initiative count 20 on the next round.",
-						"One creature the dragon can see within 120 feet of it must succeed on a DC 15 Charisma saving throw or be banished to a dream plane, a different plane of existence the dragon has imagined into being. To escape, the creature must use its action to make a Charisma check contested by the dragon's. If the creature wins, it escapes the dream plane. Otherwise, the effect ends on initiative count 20 on the next round. When the effect ends, the creature reappears in the space it left or in the nearest unoccupied space if that one is occupied."
+						"金龍瞥見一瞬的未來，因此它將在攻擊檢定、屬性檢定、和豁免檢定中具有優勢，直到下一輪的先攻順序輪到20。",
+						"一個距離金龍120呎內且它所能看見的生物必須成功通過一次DC 15的魅力豁免，否則將被放逐到一個夢境位面：一個誕生自金龍幻想的特殊存在位面。要從中逃離，該生物必須使用它的動作進行一次魅力檢定以對抗金龍的魅力檢定。若該生物勝出，則它將從夢境位面中逃離。除此之外，這個效果將在下一輪的先攻順序輪到20時結束。當這個效果結束時，該生物將重新出現在它離開時所在的空間，或若該空間已被佔據則出現在最近一處未被佔據空間。"
 					]
 				}
 			],
 			"regionalEffects": [
-				"The region containing a legendary gold dragon's lair is warped by the dragon's magic, which creates one or more of the following effects:",
+				"這片坐落著傳奇金龍巢穴的區域被龍的魔法所扭曲，並創造出以下其中一個或多個效應：",
 				{
 					"type": "list",
 					"items": [
-						"Whenever a creature that can understand a language sleeps or enters a state of trance or reverie within 6 miles of the dragon's lair, the dragon can establish telepathic contact with that creature and converse with it in its dreams. The creature remembers its conversation with the dragon upon waking.",
-						"Banks of beautiful, opalescent mist manifest within 6 miles of the dragon's lair. The mist doesn't obscure anything. It assumes haunting forms when evil creatures are near the dragon or other non-evil creatures in the mist, warning such creatures of the danger.",
-						"Gems and pearls within 1 mile of the dragon's lair sparkle and gleam, shedding dim light in a 5-foot radius."
+						"每當一個理解至少一種語言的生物在距離巢穴6哩內的區域進入冥想狀態或夢境時，金龍可以與該生物建立心靈感應，並在它的夢境中與之溝通。該生物在甦醒後仍將記得它與金龍的交談內容。",
+						"層層美麗的乳白色迷霧出現在距離巢穴6哩內的區域。這陣迷霧不會遮蔽任何事物。當邪惡生物接近在迷霧中的金龍或其他非邪惡生物時，迷霧將會環繞在他們身邊，警告他們危險的逼近。",
+						"距離巢穴1哩內的寶石和珍珠將閃爍發光，散發出5呎半徑的微光光照。"
 					]
 				},
-				"If the dragon dies, these effects end immediately."
-			]
+				"若金龍死亡，這些效應都將立即終止。"
+			],
+			"source": "MM"
 		},
 		{
 			"name": "Graz'zt",
@@ -564,34 +580,36 @@
 						}
 					]
 				}
-			]
+			],
+			"source": "MTF"
 		},
 		{
 			"name": "Green Dragon",
 			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the dragon takes a lair action to cause one of the following effects; the dragon can't use the same effect two rounds in a row:",
+				"在先攻順序輪到20時（先攻相等時則為後手），綠龍可以採取一次巢穴動作以造成以下其中一個效果；綠龍不能連續兩輪使用相同的效果：",
 				{
 					"type": "list",
 					"items": [
-						"Grasping roots and vines erupt in a 20-foot radius centered on a point on the ground that the dragon can see within 120 feet of it. That area becomes difficult terrain, and each creature there must succeed on a DC 15 Strength saving throw or be restrained by the roots and vines. A creature can be freed if it or another creature takes an action to make a DC 15 Strength check and succeeds. The roots and vines wilt away when the dragon uses this lair action again or when the dragon dies.",
-						"A wall of tangled brush bristling with thorns springs into existence on a solid surface within 120 feet of the dragon. The wall is up to 60 feet long, 10 feet high, and 5 feet thick, and it blocks line of sight. When the wall appears, each creature in its area must make a DC 15 Dexterity saving throw. A creature that fails the save takes 18 ({@dice 4d8}) piercing damage and is pushed 5 feet out of the wall's space, appearing on whichever side of the wall it wants. A creature can move through the wall, albeit slowly and painfully. For every 1 foot a creature travels through the wall, it must spend 4 feet of movement. Furthermore, a creature in the wall's space must make a DC 15 Dexterity saving throw once each round it's in contact with the wall, taking 18 ({@dice 4d8}) piercing damage on a failed save, or half as much damage on a successful one. Each 10-foot section of wall has AC 5, 15 hit points, vulnerability to fire damage, resistance to bludgeoning and piercing damage, and immunity to psychic damage. The wall sinks back into the ground when the dragon uses this lair action again or when the dragon dies.",
-						"Magical fog billows around one creature the dragon can see within 120 feet of it. The creature must succeed on a DC 15 Wisdom saving throw or be charmed by the dragon until initiative count 20 on the next round."
+						"糾纏的根鬚和藤蔓將以距離綠龍120呎內且它所能看見地面上的一點為中心湧出並覆蓋20呎半徑的區域。這片區域變為困難地形，且每個在該處的生物都必須成功通過一次DC 15的力量豁免，否則將被根鬚和藤蔓給{@condition 束縛}。一個生物可以藉由採取一個動作進行一次DC 15的力量檢定並成功，以將它自己或另一個生物給釋放。這些根鬚和藤蔓將在綠龍再次使用這個巢穴動作、或當綠龍死亡時枯萎消失。",
+						"一道纏繞著帶刺荊棘的灌木叢牆在距離綠龍120呎內的一處固態表面上生長湧現而出。這道牆最多60呎長，10呎高，5呎厚，且能夠遮蔽視線。當這道牆出現時，每個位於牆壁範圍內的生物都必須進行一次DC 15的敏捷豁免。一個豁免失敗的生物將受到18 ({@dice 4d8})穿刺傷害，且被往牆壁的空間外推離5呎距離，出現在牆壁的任意一側（由它決定）。一個生物可以移動穿過這道牆，儘管這個過程會緩慢而痛苦。一個生物每穿過這道牆1呎，它都必須消耗4呎的移動速度。除此之外，當一個生物在它接觸這道牆壁的每個回合中都必須進行一次DC 15的敏捷豁免，若豁免失敗將受到18 ({@dice 4d8})穿刺傷害，豁免成功則只受到一半的傷害。這道牆壁中每10呎的區塊都具有AC 5以及15點生命值，對火焰易傷，對鈍擊和穿刺傷害具有抗性，且免疫於精神傷害。這道牆會在綠龍再次使用這個巢穴動作、或當綠龍死亡時沉入地面。",
+						"魔法迷霧將環繞翻騰於一個距離綠龍120呎內且它所能看見的生物周遭。該生物必須成功通過一次DC 15的睿知豁免，否則被綠龍給{@condition 魅惑}，持續直到下一輪的先攻順序輪到20。"
 					]
 				}
 			],
 			"regionalEffects": [
-				"The region containing a legendary green dragon's lair is warped by the dragon's magic, which creates one or more of the following effects:",
+				"這片坐落著傳奇綠龍巢穴的區域被龍的魔法所扭曲，並創造出以下其中一個或多個效應：",
 				{
 					"type": "list",
 					"items": [
-						"Thickets form labyrinthine passages within 1 mile of the dragon's lair. The thickets act as 10-foot-high, 10-foot-thick walls that block line of sight. Creatures can move through the thickets, with every 1 foot a creature moves costing it 4 feet of movement. A creature in the thickets must make a DC 15 Dexterity saving throw once each round it's in contact with the 'thickets or take 3 ({@dice 1d6}) piercing damage from thorns.",
-						"Each 10-foot-cube of thickets has AC 5, 30 hit points, resistance to bludgeoning and piercing damage, vulnerability to fire damage, and immunity to psychic and thunder damage.",
-						"Within 1 mile of its lair, the dragon leaves no physical evidence of its passage unless it wishes to. Tracking it there is impossible except by magical means. In addition, it ignores movement impediments and damage from plants in this area that are neither magical nor creatures, including the thickets described above. The plants remove themselves from the dragon's path.",
-						"Rodents and birds within 1 mile of the dragon's lair serve as the dragon's eyes and ears. Deer and other large game are strangely absent, hinting at the presence of an unnaturally hungry predator."
+						"距離巢穴1哩內區域中的灌木叢將形成迷宮般的通道。這些灌木叢被視為10呎高，10呎厚，且能遮蔽視線的牆壁。生物可以移動穿過這些灌木叢，且生物每移動1呎，它都必須消耗4呎的移動速度。一個在灌木叢內的生物必須在它與灌木叢接觸時的每個回合進行一次DC 15的敏捷豁免，若豁免失敗將受到來自棘刺的3 ({@dice 1d6})穿刺傷害。",
+						"每10呎邊長立方體的灌木叢具有AC 5以及30點生命值，對鈍擊和穿刺傷害具有抗性，對火焰易傷，且免疫於精神和雷鳴傷害。",
+						"在距離它巢穴1哩內的區域，除非它刻意如此，否則綠龍可以選擇不留下任何它通過的物理痕跡。除非透過魔法手段，否則在該處追蹤它將是不可能的。此外，它將無視任何來自這片區域內非魔法或生物的植物所造成的阻礙移動效果或傷害，包括上述的灌木叢。這些植物將在綠龍通過時自行避讓。",
+						"距離巢穴1哩內區域中的囓齒動物和鳥類都將作為綠龍的耳目。詭異地，鹿和其他大型獵物並不存在，暗示著這名飢餓超自然獵食者的存在。"
 					]
 				},
-				"If the dragon dies, the rodents and birds lose their supernatural link to it. The thickets remain, but within {@dice 1d10} days, they become mundane plants and normal difficult terrain, losing their thorns."
-			]
+				"若綠龍死亡，囓齒動物和鳥類都將失去牠們與綠龍的超自然連結。灌木叢將維持存在，但在{@dice 1d10}天內，它們將失去它們的棘刺，變回尋常植物以及普通的困難地形。"
+			],
+			"source": "MM"
 		},
 		{
 			"name": "Imix",
@@ -618,7 +636,8 @@
 					]
 				},
 				"If Imix is destroyed or banished back to his home plane, the regional effects fade over the next {@dice 1d10} days."
-			]
+			],
+			"source": "PotA"
 		},
 		{
 			"name": "Juiblex",
@@ -684,140 +703,121 @@
 						}
 					]
 				}
-			]
+			],
+			"source": "MTF"
 		},
 		{
 			"name": "Ki-rin",
 			"lairActions": [
-				"Inside its lair, a ki-rin has the power to conjure objects up to three times per day, using each of the following versions of the power once. One version permanently creates enough objects made of soft, plant-based material - including manufactured objects such as cloth, pillows, rope, blankets, and clothing - to fill a cube 20 feet on a side. The second version enough objects made of wood, or similarly hard plant-based material, to fill a cube 10 feet on a side. The third version creates enough objects made of stone or metal to fill a cube 2 feet on a side, but any materials created in this way last for only 1 hour."
+				"在它的巢穴內，麒麟具有每天最多三次召喚出物體的能力，使用下列能力各一次。第一個能力為永久創造出足以充斥20呎邊長立方體其中一面，由柔軟、植物原料製成的物體──包括像是布匹、枕頭、繩索、毛毯、和衣服這類的加工物。第二個能力是永久創造出足以充斥10呎邊長立方體其中一面，由木材或其他類似硬質植物製成的物體。第三個能力是創造出足以充斥2呎邊長立方體其中一面，由石頭或金屬製成的物體，但透過這個方式創造的物體只能存在1小時。"
 			],
 			"regionalEffects": [
-				"The ki-rin's celestial nature transforms the region around its lair. Any of the following magical effects is possible for travelers to encounter in the vicinity:",
+				"麒麟的天界本質轉變了它巢穴周遭的區域。在鄰近的旅行者有可能會遭遇到下列任何的魔法效應：",
 				{
 					"type": "list",
 					"items": [
-						"Water flows pure within 3 miles of a ki-rin's lair. Any purposeful corruption of the water lasts for no longer than 3 minutes.",
-						"Animals, plants, and good creatures within 3 miles of the ki-rin's lair gain vigor as they evolve toward an idealized form. Such creatures are rarely aggressive toward others that aren't normally prey. Evil creatures can't tolerate the holy atmosphere within the same distance, and usually choose to live much farther from the domain of a ki-rin.",
-						"Curses, diseases, and poisons affecting good-aligned creatures are suppressed when those creatures are within 3 miles of the lair.",
-						"A ki-rin can cast {@spell control weather} while it is within 3 miles of its lair. The spell's point of origin is always the point outdoors closest to the center of its lair. The ki-rin doesn't need to maintain a clear path to the sky or to concentrate for the change in weather to persist.",
-						"Within 3 miles of the lair, winds buoy non-evil creatures that fall due to no act of the ki-rin or its allies. Such creatures descend at a rate of 60 feet per round and take no falling damage."
+						"距離麒麟巢穴3哩內的流水都是潔淨的。任何故意導致的水體腐壞都不會持續超過3分鐘。",
+						"距離麒麟巢穴3哩內的動物、植物、和善良生物都將向著理想型態的進化過程中而獲得生機。這類生物很少對其他並非獵物的生物展現出攻擊性。邪惡生物將無法忍受這片區域內的神聖氛圍，且通常會選擇在遠離麒麟巢穴的地方居住。",
+						"距離麒麟巢穴3哩內，影響著善良陣營生物的詛咒、疾病、和毒素都將被壓制。",
+						"當位於其巢穴3哩內時，麒麟可以施放{@spell 操控天氣}。這個法術的源點永遠位於戶外最接近其巢穴中央的位置。麒麟並不需要維持與天空該點之間的暢通路徑，也不需要維持專注，就能持續這個天氣改變的效果。",
+						"離麒麟巢穴3哩內，風將吹拂托起因為麒麟或其盟友的無作為而摔落的非邪惡生物。這類生物將以每輪60呎的速度下降，且不會受到任何墜落傷害。"
 					]
 				},
-				"When the ki-rin dies, all these effects disappear immediately, although the invigorating effect on flora and fauna remains for 3 years."
-			]
+				"若麒麟死亡，這些效應都將立即終止，然而其激發動植物生機的效果將持續長達3年。"
+			],
+			"source": "VGM"
 		},
 		{
 			"name": "Kraken",
 			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the kraken takes a lair action to cause one of the following magical effects:",
+				"在先攻順序輪到20時（先攻相等時則為後手），克拉肯可以採取一次巢穴動作以造成以下其中一個效果：",
 				{
 					"type": "list",
 					"items": [
-						"A strong current moves through the kraken's lair. Each creature within 60 feet of the kraken must succeed on a DC 23 Strength saving throw or be pushed up to 60 feet away from the kraken. On a success, the creature is pushed 10 feet away from the kraken.",
-						"Creatures in the water within 60 feet of the kraken have vulnerability to lightning damage until initiative count 20 on the next round.",
-						"The water in the kraken's lair becomes electrically charged. All creatures within 120 feet of the kraken must succeed on a DC 23 Constitution saving throw, taking 10 ({@dice 3d6}) lightning damage on a failed save, or half as much damage on a successful one."
+						"一陣強勁的水流穿過克拉肯的巢穴。每個距離克拉肯60呎內的生物都必須成功通過一次DC 23的力量豁免，否則將被推離克拉肯最多60呎距離。若豁免成功，則該生物將被推離克拉肯10呎距離。",
+						"距離克拉肯60呎內，且在水中的生物將獲得對閃電傷害的易傷，持續直到下一輪的先攻順序輪到20。",
+						"克拉肯巢穴中的水域將充滿電流。所有距離克拉肯120呎內的生物都必須成功通過一次DC 23的體質豁免，豁免失敗則受到10 ({@dice 3d6})閃電傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
 			"regionalEffects": [
-				"The region containing a kraken's lair is warped by the creature's blasphemous presence, creating the following magical effects:",
+				"這片坐落著克拉肯巢穴的區域被該生物的瀆神本質所扭曲，並創造出以下魔法效應：",
 				{
 					"type": "list",
 					"items": [
-						"The kraken can alter the weather at will in a 6-mile radius centered on its lair. The effect is identical to the {@spell control weather} spell.",
-						"Water elementals coalesce within 6 miles of the lair. These elementals can't leave the water and have Intelligence and Charisma scores of 1 (-5).",
-						"Aquatic creatures within 6 miles of the lair that have an Intelligence score of 2 or lower are charmed by the kraken and aggressive toward intruders in the area."
+						"克拉肯可以隨意改變以它巢穴為中心的6哩半徑內區域的天氣。此效應與{@spell 操控天氣}法術相同。",
+						"距離巢穴6哩內的區域凝聚出許多{@creature 水元素}。這些元素無法離開水域，且智力和魅力值為1(-5)。",
+						"距離巢穴6哩內，智力值為2或更低的水生生物將被克拉肯{@condition 魅惑}，並會對該區域的入侵者展開攻擊。"
 					]
 				},
-				"When the kraken dies, all of these regional effects fade immediately."
-			]
-		},
-		{
-			"name": "Larva Mage",
-			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the larva mage can take a lair action to cause one of the following magical effects; the larva mage can't use the same effect two rounds in a row:",
-				{
-					"type": "list",
-					"items": [
-						"The larva mage rolls a {@dice d8} and regains a spell slot of that level or lower. If it has no spent spell slots of that level or lower, nothing happens.",
-						"The larva mage fills its enemies' minds with visions of worms and maggots surging from cracks in the floor and walls and crawling up the targets legs, biting and burrowing into their skin. All enemies within 30 feet of the larva mage must succeed on a DC 18 Wisdom saving throw or take 24 ({@dice 7d6}) psychic damage on a failed save. The vermin then disappear into the cracks and recesses from whence they emerged.",
-						"The larva mage conjures masses of foul liquids and bloated vermin that ooze from the walls and floors that sicken creatures by merely looking at it. Creatures that can see the larva mage must succeed on a DC 18 Constitution saving throw or be poisoned for one round."
-					]
-				}
+				"若克拉肯死亡，這些效應都將立即消失。"
 			],
-			"regionalEffects": [
-				"A region containing a larva mage's lair is warped by the mage's magic, which creates one or more of the following effects:",
-				{
-					"type": "list",
-					"items": [
-						"Within 1 mile of the lair carrion eating creatures are much more aggressive and attack and try to consume living creatures.",
-						"Aberrations and undead creatures are abnormally frequently encountered within the region.",
-						"The stench of decay fills the air within 6 miles of the lair."
-					]
-				},
-				"If the larva mage dies, the first effect ends immediately, the second and third effects fade over the course of {@dice 2d10} days."
-			]
+			"source": "MM"
 		},
 		{
 			"name": "Lich",
 			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the lich can take a lair action to cause one of the following magical effects; the lich can't use the same effect two rounds in a row:",
+				"在先攻順序輪到20時（先攻相等時則為後手），巫妖可以採取一次巢穴動作以造成以下其中一個效果；巫妖不能連續兩輪使用相同的效果：",
 				{
 					"type": "list",
 					"items": [
-						"The lich rolls a {@dice d8} and regains a spell slot of that level or lower. If it has no spent spell slots of that level or lower, nothing happens.",
-						"The lich targets one creature it can see within 30 feet of it. A crackling cord of negative energy tethers the lich to the target. Whenever the lich takes damage, the target must make a DC 18 Constitution saving throw. On a failed save, the lich takes half the damage (rounded down), and the target takes the remaining damage. This tether lasts until initiative count 20 on the next round or until the lich or the target is no longer in the lich's lair.",
-						"The lich calls forth the spirits of creatures that died in its lair. These apparitions materialize and attack one creature that the lich can see within 60 feet of it. The target must succeed on a DC 18 Constitution saving throw, taking 52 ({@dice 15d6}) necrotic damage on a failed save, or half as much damage on a success. The apparitions then disappear."
+						"巫妖骰一顆{@dice d8}並恢復一個環階等同於該骰值或更低的法術位。若它沒有已消耗的法術位，則什麼事都不會發生。",
+						"巫妖選擇一個距離它30呎內且它所能看見的生物做為目標。一道帶著劈啪聲的負能量繫繩將連結著巫妖和目標。每當巫妖受到傷害，目標將必須進行一次DC 18的體質豁免。若豁免失敗，巫妖將只受到一半的傷害（向下取整），且目標將受到另一半的傷害。這道繫繩將持續直到下一輪的先攻順序輪到20，或直到目標或巫妖都不再位於巫妖的巢穴。",
+						"巫妖呼喚在它巢穴內死去的生物的精魂。這些亡魂將顯現並攻擊一個距離巫妖60呎內且它所能看見的生物。目標必須成功通過一次DC 18的體質豁免，豁免失敗將受到52 ({@dice 15d6})死靈傷害，豁免成功則只受到一半的傷害。這些亡魂接著將消失無蹤。"
 					]
 				}
-			]
+			],
+			"source": "MM"
 		},
 		{
 			"name": "Illithilich",
 			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the illithilich can take a lair action to cause one of the following magical effects; the illithilich can't use the same effect two rounds in a row:",
+				"在先攻順序輪到20時（先攻相等時則為後手），奪心魔巫妖可以採取一次巢穴動作以造成以下其中一個效果；奪心魔巫妖不能連續兩輪使用相同的效果：",
 				{
 					"type": "list",
 					"items": [
-						"The illithilich rolls a {@dice d8} and regains a spell slot of that level or lower. If it has no spent spell slots of that level or lower, nothing happens.",
-						"The illithilich targets one creature it can see within 30 feet of it. A crackling cord of negative energy tethers the illithilich to the target. Whenever the illithilich takes damage, the target must make a DC 18 Constitution saving throw. On a failed save, the illithilich takes half the damage (rounded down), and the target takes the remaining damage. This tether lasts until initiative count 20 on the next round or until the illithilich or the target is no longer in the illithilich's lair.",
-						"The illithilich calls forth the spirits of creatures that died in its lair. These apparitions materialize and attack one creature that the illithilich can see within 60 feet of it. The target must succeed on a DC 18 Constitution saving throw, taking 52 ({@dice 15d6}) necrotic damage on a failed save, or half as much damage on a success. The apparitions then disappear."
+						"奪心魔巫妖骰一顆{@dice d8}並恢復一個環階等同於該骰值或更低的法術位。若它沒有已消耗的法術位，則什麼事都不會發生。",
+						"奪心魔巫妖選擇一個距離它30呎內且它所能看見的生物做為目標。一道帶著劈啪聲的負能量繫繩將連結著奪心魔巫妖和目標。每當奪心魔巫妖受到傷害，目標將必須進行一次DC 18的體質豁免。若豁免失敗，奪心魔巫妖將只受到一半的傷害（向下取整），且目標將受到另一半的傷害。這道繫繩將持續直到下一輪的先攻順序輪到20，或直到目標或奪心魔巫妖都不再位於奪心魔巫妖的巢穴。",
+						"奪心魔巫妖呼喚在它巢穴內死去的生物的精魂。這些亡魂將顯現並攻擊一個距離奪心魔巫妖60呎內且它所能看見的生物。目標必須成功通過一次DC 18的體質豁免，豁免失敗將受到52 ({@dice 15d6})死靈傷害，豁免成功則只受到一半的傷害。這些亡魂接著將消失無蹤。"
 					]
 				}
-			]
+			],
+			"source": "VGM"
 		},
 		{
 			"name": "Marlos Urnrayle",
 			"lairActions": [
 				"If Marlos is in the earth node while {@creature Ogrémoch|PotA} isn't, the medusa can take lair actions. On initiative count 20 (losing initiative ties), Marlos uses a lair action to cast {@spell earthquake} without using components. As long as he maintains concentration on {@spell earthquake}, initiative count 20 is the start of Marlos's turn for the purpose of the spell. He can take no other lair actions while concentrating on {@spell earthquake}.",
 				"Marlos's second option for a lair action is to draw power from the earth node to heal. When he does so, he regains 30 ({@dice 6d8+3}) hit points."
-			]
+			],
+			"source": "PotA"
 		},
 		{
 			"name": "Mummy Lord",
 			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the mummy lord takes a lair action to cause one of the following effects; the mummy lord can't use the same effect two rounds in a row:",
+				"在先攻順序輪到20時（先攻相等時則為後手），木乃伊領主可以採取一次巢穴動作以造成以下其中一個效果；木乃伊領主不能連續兩輪使用相同的效果：",
 				{
 					"type": "list",
 					"items": [
-						"Each undead creature in the lair can pinpoint the location of each living creature within 120 feet of it until initiative count 20 on the next round.",
-						"Each undead in the lair has advantage on saving throws against effects that turn undead until initiative count 20 on the next round.",
-						"Until initiative count 20 on the next round, any non-undead creature that tries to cast a spell of 4th level or lower in the mummy lord's lair is wracked with pain. The creature can choose another action, but if it tries to cast the spell, it must make a DC 16 Constitution saving throw. On a failed save, it takes {@dice 1d6} necrotic damage per level of the spell, and the spell has no effect and is wasted."
+						"直到下一輪的先攻順序輪到20，每個巢穴內的不死生物都可以準確定位每個距離其120呎內的活體生物所在的確切位置。",
+						"直到下一輪的先攻順序輪到20，每個巢穴內的不死生物在對抗驅散不死的效果時所進行的豁免檢定中具有優勢。",
+						"直到下一輪的先攻順序輪到20，任何在木乃伊領主的巢穴內嘗試施放4環或以下法術的非不死生物都將被痛苦侵襲。該生物可以選擇進行其他動作，但若它仍嘗試施放法術，則它必須進行一次DC 16的體質豁免。若豁免失敗，則它將受到該法術每環階{@dice 1d6}的死靈傷害，且該法術不會發揮任何效果並被浪費。"
 					]
 				}
 			],
 			"regionalEffects": [
-				"A mummy lord's temple or tomb is warped in any of the following ways by the creature's dark presence:",
+				"一座木乃伊領主的神廟或陵墓將被該生物的黑暗本質以下列任何方式給扭曲：",
 				{
 					"type": "list",
 					"items": [
-						"Food instantly molders and water instantly evaporates when brought into the lair. Other non magical drinks are spoiled - wine turning to vinegar, for instance.",
-						"Divination spells cast within the lair by creatures other than the mummy lord have a 25 percent chance to provide misleading results, as determined by the DM. If a divination spell already has a chance to fail or become unreliable when cast multiple times, that chance increases by 25 percent.",
-						"A creature that takes treasure from the lair is cursed until the treasure is returned. The cursed target has disadvantage on all saving throws. The curse lasts until removed by a {@spell remove curse} spell or other magic."
+						"被帶進巢穴的食物將立即腐敗，且飲用水也將立即蒸發。其他非魔法的飲料也將變質－舉例來說，葡萄酒將被變成醋。",
+						"在巢穴中由木乃伊領主以外生物所施放的預言系法術，將有25％的機率呈現誤導性的結果，由DM決定。若該預言系法術已經存在失敗的機率或會在多次施放時變得不可靠，則該機率將會增加25％。",
+						"一個從巢穴內取走財寶的生物將被詛咒，直到該財寶被歸還。被詛咒的目標將在所有豁免檢定中承受劣勢。這個詛咒會持續直到被{@spell 移除詛咒}法術或其他魔法效果解除。"
 					]
 				},
-				"If the mummy lord is destroyed, these regional effects end immediately."
-			]
+				"若木乃伊領主被摧毀，這些效應都將立即消失。"
+			],
+			"source": "MM"
 		},
 		{
 			"name": "Ogrémoch",
@@ -844,7 +844,8 @@
 					]
 				},
 				"If Ogrémoch is destroyed or banished back to his home plane, the regional effects fade over the next {@dice 1d10} days."
-			]
+			],
+			"source": "PotA"
 		},
 		{
 			"name": "Olhydra",
@@ -871,7 +872,8 @@
 					]
 				},
 				"If Olhydra is destroyed or banished back to her home plane, the regional effects fade over the next {@dice 1d10} days."
-			]
+			],
+			"source": "PotA"
 		},
 		{
 			"name": "Orcus",
@@ -938,99 +940,104 @@
 						}
 					]
 				}
-			]
+			],
+			"source": "MTF"
 		},
 		{
 			"name": "Red Dragon",
 			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the dragon takes a lair action to cause one of the following effects; the dragon can't use the same effect two rounds in a row:",
+				"在先攻順序輪到20時（先攻相等時則為後手），紅龍可以採取一次巢穴動作以造成以下其中一個效果；紅龍不能連續兩輪使用相同的效果：",
 				{
 					"type": "list",
 					"items": [
-						"Magma erupts from a point on the ground the dragon can see within 120 feet of it, creating a 20-foot-high, 5-foot-radius geyser. Each creature in the geyser's area must make a DC 15 Dexterity saving throw, taking 21 ({@dice 6d6}) fire damage on a failed save, or half as much damage on a successful one.",
-						"A tremor shakes the lair in a 60-foot radius around the dragon. Each creature other than the dragon on the ground in that area must succeed on a DC 15 Dexterity saving throw or be knocked prone.",
-						"Volcanic gases form a cloud in a 20-foot-radius sphere centered on a point the dragon can see within 120 feet of it. The sphere spreads a round corners, and its area is lightly obscured. It lasts until initiative count 20 on the next round. Each creature that starts its turn in the cloud must succeed on a DC 13 Constitution saving throw or be poisoned until the end of its turn. While poisoned in this way, a creature is incapacitated."
+						"熔岩從距離紅龍120呎內且它所能看見的一點噴發，創造出一道20呎高、5呎半徑的湧泉。每個在湧泉範圍內的生物都必須進行一次DC 15的敏捷豁免，若豁免失敗將受到21 ({@dice 6d6})火焰傷害，豁免成功則只受到一半的傷害。",
+						"一陣劇烈震動搖晃著的紅龍周遭60呎半徑的巢穴。每個在區域內地面上除了紅龍以外的生物都必須成功通過一次DC 15的敏捷豁免，否則被擊倒{@condition 伏地}。",
+						"火山氣體形成的雲團將以距離紅龍120呎內且它所能看見的一點為中心形成一個20呎半徑的球體區域。這個雲團會繞過轉角，且它所在的區域將被輕度遮蔽。雲團將持續存在直到下一輪的先攻順序輪到20。每個在這個雲團內開始它回合的生物都必須成功通過一次DC 13的體質豁免，否則將陷入{@condition 中毒}狀態直到它回合結束。當因為這個方式而陷入{@condition 中毒}狀態，該生物將同時陷入{@condition 無力}狀態。"
 					]
 				}
 			],
 			"regionalEffects": [
-				"The region containing a legendary red dragon's lair is warped by the dragon's magic, which creates one or more of the following effects:",
+				"這片坐落著傳奇紅龍巢穴的區域被龍的魔法所扭曲，並創造出以下其中一個或多個效應：",
 				{
 					"type": "list",
 					"items": [
-						"Small earthquakes are common within 6 miles of the dragon's lair.",
-						"Water sources within 1 mile of the lair are supernaturally warm and tainted by sulfur.",
-						"Rocky fissures within 1 mile of the dragon's lair form portals to the Elemental Plane of Fire, allowing creatures of elemental fire into the world to dwell nearby."
+						"距離巢穴6哩內的區域經常會發生小型地震。",
+						"距離巢穴1哩內的水源將因超自然力量而變暖，且被硫磺汙染。",
+						"距離巢穴1哩內的岩石裂縫將形成通往火元素位面的傳送門，讓火元素生物得以進到這個世界並在附近棲息。"
 					]
 				},
-				"If the dragon dies, these effects fade over the course of {@dice 1d10} days."
-			]
+				"若紅龍死亡，這些效應都將在{@dice 1d10}天內逐漸消散。"
+			],
+			"source": "MM"
 		},
 		{
 			"name": "Silver Dragon",
 			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the dragon takes a lair action to cause one of the following effects:",
+				"在先攻順序輪到20時（先攻相等時則為後手），銀龍可以採取一次巢穴動作以造成以下其中一個效果：",
 				{
 					"type": "list",
 					"items": [
-						"The dragon creates fog as if it had cast the {@spell fog cloud} spell. The fog lasts until initiative count 20 on the next round.",
-						"A blisteringly cold wind blows through the lair near the dragon. Each creature within 120 feet of the dragon must succeed on a DC 15 Constitution saving throw or take 5 ({@dice 1d10}) cold damage. Gases and vapors are dispersed by the wind, and unprotected flames are extinguished. Protected flames, such as lanterns, have a 50 percent chance of being extinguished."
+						"銀龍如同施放{@spell 雲霧術}法術一樣創造出一陣濃霧。這陣濃霧會持續存在直到下一輪的先攻順序輪到20。",
+						"一陣猛烈的寒風在銀龍的附近呼嘯穿過整個巢穴。每個距離銀龍120呎內的生物都必須成功通過一次DC 15的體質豁免，否則受到5 ({@dice 1d10})寒冰傷害。氣體和蒸氣都將被這股風吹散，且不受保護的火焰也將被熄滅。受保護的火焰；例如提燈，將有50%的機率被熄滅。"
 					]
 				}
 			],
 			"regionalEffects": [
-				"The region containing a legendary silver dragon's lair is warped by the dragon's magic, which creates one or more of the following effects.",
+				"這片坐落著傳奇銀龍巢穴的區域被龍的魔法所扭曲，並創造出以下其中一個或多個效應：",
 				{
 					"type": "list",
 					"items": [
-						"Once per day, the dragon can alter the weather in a 6-mile radius centered on its lair. The dragon doesn't need to be outdoors; otherwise the effect is identical to the {@spell control weather} spell.",
-						"Within 1 mile of the lair, winds buoy non-evil creatures that fall due to no act of the dragon's or its allies. Such creatures descend at a rate of 60 feet per round and take no falling damage.",
-						"Given days or longer to work, the dragon can make clouds and fog within its lair as solid as stone, forming structures and other objects as it wishes."
+						"每天一次，銀龍可以改變以它巢穴為中心的6哩半徑內區域的天氣。銀龍並不需要在戶外；除此之外，此效應的效果與{@spell 操控天氣}法術相同。",
+						"在距離巢穴1哩內的區域，風將吹拂托起因為銀龍或其盟友的無作為而摔落的非邪惡生物。這類生物將以每輪60呎的速度下降，且不會受到任何墜落傷害。",
+						"透過數日或更長的時間，銀龍可以使它巢穴內的雲層和濃霧變得如石頭一般結實，形成建築物和其他銀龍所希望的物體。"
 					]
 				},
-				"If the dragon dies, changed weather reverts to normal, as described in the spell, and the other effects fade in {@dice 1d10} days."
-			]
+				"若銀龍死亡，被改變的天氣將如法術詳述中所記載的方式回復正常，且其他效應將在{@dice 1d10}天內逐漸消散。"
+			],
+			"source": "MM"
 		},
 		{
 			"name": "Sphinx",
 			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the sphinx can take a lair action to cause one of the following magical effects; the sphinx can't use an effect again until it finishes a short or long rest:",
+				"在先攻順序輪到20時（先攻相等時則為後手），斯芬克斯可以採取一次巢穴動作以造成以下其中一個效果；直到完成一次短休或長休之前，斯芬克斯不能再使用相同的效果：",
 				{
 					"type": "list",
 					"items": [
-						"The flow of time is altered such that every creature in the lair must reroll initiative. The sphinx can choose not to reroll.",
-						"The effects of time are altered such that every creature in the lair must succeed on a DC 15 Constitution saving throw or become {@dice 1d20} years older or younger (the sphinx's choice), but never any younger than 1 year old. A {@spell greater restoration} spell can restore a creature's age to normal.",
-						"The flow of time within the lair is altered such that everything within moves up to 10 years forward or backward (sphinx's choice). Only the sphinx is immediately aware of the time change. A {@spell wish} spell can return the caster and up to seven other creatures designated by the caster to their normal time.",
-						"The sphinx shifts itself and up to seven other creatures it can see within in its lair to another plane of existence. Once outside its lair, the sphinx can't use lair actions, but it can return to its lair as a bonus action on its turn, taking up to seven creatures with it."
+						"時間的流動被扭曲，因此每個在巢穴內的生物都必須重骰先攻。斯芬克斯可以選擇不重骰。",
+						"時間的效應被扭曲，因此每個在巢穴內的生物都必須成功通過一次DC 15的體質豁免，否則將變得衰老或年輕{@dice 1d20}歲（由斯芬克斯決定），但永遠不會變得低於1歲。{@spell 高等復原術}可以將該生物的年紀恢復正常。",
+						"巢穴內的時間的流動被扭曲，因此所有事物都將向過去或未來移動10年（由斯芬克斯決定）。只有斯芬克斯能夠立即意識到時間的變化。{@spell 祈願術}法術可以將施法者和最多七個由施法者指定的其他生物回到它們原本的時間。",
+						"斯芬克斯將自己和最多七個在它巢穴內且它所能看見的其他生物轉移到另一個存在位面。一旦離開它的巢穴，斯芬克斯將無法使用它的巢穴動作，但可以在它的回合以一個附贈動作帶著最多七個生物回到它自己的巢穴。"
 					]
 				}
-			]
+			],
+			"source": "MM"
 		},
 		{
 			"name": "Storm Giant Quintessent",
 			"lairActions": [
-				"A storm giant quintessent can use lair actions in giant form and while transformed into a storm. On initiative count 20 (losing initiative ties), the giant can take a lair action to cause one of the following effects; the giant can't use the same effect two rounds in a row:",
+				"風暴巨人昇華者可以在它處於巨人型態、以及轉化為暴風期間使用巢穴動作。在先攻順序輪到20時（先攻相等時則為後手），巨人可以採取一次巢穴動作以造成以下其中一個效果；巨人不能連續兩輪使用相同的效果：",
 				{
 					"type": "list",
 					"items": [
-						"The giant creates a thunderclap centered on a point anywhere in its lair. Each creature within 20 feet of that point must succeed on a DC 18 Constitution saving throw or be deafened until the end of its next turn.",
-						"The giant creates a 20-foot-radius sphere of fog (or murky water within water) centered on a point anywhere in its lair. The sphere spreads around corners, and its area is heavily obscured. The fog lasts until the giant disperses it (no action required), and it can't be dispersed by wind.",
-						"The giant creates a 60-foot-long, 10-foot-wide line of strong wind ( or strong current within water) originating from a point anywhere in its lair. Each creature in that line must succeed on a DC 18 Strength saving throw or be pushed 15 feet in the direction the wind is blowing. The gust disperses gas or vapor, and it extinguishes candles, torches, and similar unprotected flames in its area. Protected flames, such as those of lanterns, have a 50 percent chance of being extinguished."
+						"巨人以其巢穴內任意一點為中心創造出一陣迸發雷鳴。每個距離該點20尺內的生物都必須成功通過一次DC 18的體質豁免，否則將陷入{@condition 耳聾}直到它的下個回合結束。",
+						"巨人以其巢穴內任意一點為中心創造出一團20呎半徑的球體濃霧（或在水中則為一團濁水）。這陣濃霧會繞過轉角，且濃霧區域被重度遮蔽。這陣濃霧會持續存在直到巨人將其解消（無須動作），且它不會被風給吹散。",
+						"巨人以其巢穴內任意一點為源頭創造出一陣60呎長、10呎寬的直線強風（或在水中則為一陣激流）。每個在直線範圍內的生物都必須成功通過一次DC 18的力量豁免，否則將沿著風向被推動最多15呎距離。這陣強風會吹散氣體和水氣，且它會熄滅蠟燭、火炬、和區域內其他類似的未受保護的火焰。它會使受保護的火焰（例如提燈）有50%的機率熄滅。"
 					]
 				}
 			],
 			"regionalEffects": [
-				"The region containing a storm giant quintessent's lair is warped by the giant's presence, which creates one or more of the following effects:",
+				"這片坐落著風暴巨人昇華者巢穴的區域被該巨人的本質所扭曲，並創造出以下其中一個或多個效應：",
 				{
 					"type": "list",
 					"items": [
-						"High wind blows within 1 mile of the lair, making it impossible to light a fire unless the location where the fire is lit is protected from the wind.",
-						"Rain, snow, or blowing dust or sand (whichever is most appropriate) is constant within 1 mile of the lair. Rain causes rivers and streams to fill or overflow their banks; snow, dust, or sand form deep drifts or dunes.",
-						"Flashes of lightning and peals of thunder are continual, day and night, within 5 miles of the lair."
+						"距離它巢穴1哩內的區域將颳起劇烈強風，除非是在防風處點燃，否則火焰在這個區域內將因為強風而不可能被點燃。",
+						"距離它巢穴1哩內的區域將持續著降雨、降雪、或者颳動著揚塵或揚沙（選擇最適合其環境的效果）。持續的降雨將使河流溪水暴漲或溢出河岸；降雪、揚塵、或揚沙則會形成厚重的積雪或沙丘。",
+						"距離它巢穴5哩內的區域將日夜不斷地發生耀眼閃電和隆隆雷鳴。"
 					]
 				},
-				"If the giant dies, the lightning, thunder, and high wind regional effects end immediately. Rain, snow, and blowing dust abate gradually within {@dice 1d8} days."
-			]
+				"若巨人死亡，閃電、雷鳴、和強風的區域效應都將立即消失。降雨、降雪、以及揚塵都將在{@dice 1d8}天內逐漸減弱。"
+			],
+			"source": "VGM"
 		},
 		{
 			"name": "Strahd von Zarovich",
@@ -1046,73 +1053,78 @@
 						"Strahd targets one Medium or smaller creature that casts a shadow. The target's shadow must be visible to Strahd and within 30 feet of him. If the target fails a DC 17 Charisma saving throw, its shadow detaches from it and becomes a {@creature shadow} that obeys Strahd's commands, acting on initiative count 20. A {@spell greater restoration} spell or a {@spell remove curse} spell cast on the target restores its natural shadow, but only if its undead shadow has been destroyed."
 					]
 				}
-			]
+			],
+			"source": "CoS"
 		},
 		{
 			"name": "Unicorn",
 			"regionalEffects": [
-				"Transformed by the creature's celestial presence, the domain of a unicorn might include any of the following magical effects:",
+				"受到該生物的天界本質而轉變，獨角獸所在的領地可能會包含以下其中一個或多個效應：",
 				{
 					"type": "list",
 					"items": [
-						"Open flames of a non magical nature are extinguished within the unicorn's domain. Torches and campfires refuse to burn, but closed lanterns are unaffected.",
-						"Creatures native to the unicorn's domain have an easier time hiding; they have advantage on all Dexterity (Stealth) checks made to hide.",
-						"When a good-aligned creature casts a spell or uses a magical effect that causes another good-aligned creature to regain hit points, the target regains the maximum number of hit points possible for the spell or effect.",
-						"Curses affecting any good-aligned creature are suppressed."
+						"非魔法性質的未受保護火焰在獨角獸的領地內將會熄滅。火炬和營火將拒絕燃燒，但密封的提燈將不受影響。",
+						"原生於獨角獸領地的生物將更容易躲藏；牠們在所有為躲藏所進行的敏捷（{@skill 隱匿}）檢定中具有優勢。",
+						"當一個善良陣營的生物施放一個法術、或使用一個魔法效果以回復另一個善良陣營生物的生命值，目標將會回復該法術或效果最大可能數值的生命值。",
+						"影響任何善良陣營生物的詛咒將被抑制。"
 					]
 				},
-				"If the unicorn dies, these effects end immediately."
-			]
+				"若獨角獸死亡，這些效應都將立即終止。"
+			],
+			"source": "MM"
 		},
 		{
 			"name": "Vanifer",
 			"lairActions": [
 				"If Vanifer is in the fire node while {@creature Imix|PotA} isn't, the tiefling can take lair actions. On initiative count 20 (losing initiative ties), Vanifer uses a lair action to cast one of her spells, up to 3rd level, without using components or a spell slot. She can't cast the same spell two rounds in a row, although she can continue to concentrate on a spell she previously cast using a lair action. Vanifer can take no other lair actions while concentrating on a spell cast as a lair action. Her favorite use of this capability is casting {@spell fireball} or {@spell hypnotic pattern}.",
 				"If Vanifer casts {@spell misty step} using this lair action, she also draws the power of the fire node into herself. By doing so, she regains 15 ({@dice 3d8+2}) hit points."
-			]
+			],
+			"source": "PotA"
 		},
 		{
 			"name": "Vampire",
 			"regionalEffects": [
-				"The region surrounding a vampire's lair is warped by the creature's unnatural presence, creating any of the following effects:",
+				"這片環繞著吸血鬼巢穴的區域因該生物的非自然本質而扭曲，創造出以下任意效應：",
 				{
 					"type": "list",
 					"items": [
-						"There's a noticeable increase in the populations of bats, rats, and wolves in the region.",
-						"Plants within 500 feet of the lair wither, and their stems and branches become twisted and thorny.",
-						"Shadows cast within 500 feet of the lair seem abnormally gaunt and sometimes move as though alive.",
-						"A creeping fog clings to the ground within 500 feet of the vampire's lair. The fog occasionally takes eerie forms, such as grasping claws and writhing serpents."
+						"區域內蝙蝠、老鼠、和狼的數量將明顯增加。",
+						"距離巢穴500呎內的植物凋零枯萎，且它們的枝幹將扭曲並長滿棘刺。",
+						"距離巢穴500呎內投射出的陰影看起來將異常憔悴，且有時會像是活著一樣自行移動。",
+						"距離巢穴500呎內的地面上匍匐著濃霧。這些濃霧有時會呈現出怪異的型態，像是屈伸抓握的怪爪或是蜷曲的蛇。"
 					]
 				},
-				"If the vampire is destroyed, these effects end after {@dice 2d6} days."
-			]
+				"若吸血鬼死亡，這些效應都將在{@dice 2d6}天後終止。"
+			],
+			"source": "MM"
 		},
 		{
 			"name": "White Dragon",
 			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the dragon takes a lair action to cause one of the following effects; the dragon can't use the same effect two rounds in a row:",
+				"在先攻順序輪到20時（先攻相等時則為後手），白龍可以採取一次巢穴動作以造成以下其中一個效果；白龍不能連續兩輪使用相同的效果：",
 				{
 					"type": "list",
 					"items": [
-						"Freezing fog fills a 20-foot-radius sphere centered on a point the dragon can see within 120 feet of it. The fog spreads around corners, and its area is heavily obscured. Each creature in the fog when it appears must make a DC 10 Constitution saving throw, taking 10 ({@dice 3d6}) cold damage on a failed save, or half as much damage on a successful one. A creature that ends its turn in the fog takes 10 ({@dice 3d6}) cold damage. A wind of at least 20 miles per hour disperses the fog. The fog otherwise lasts until the dragon uses this lair action again or until the dragon dies.",
-						"Jagged ice shards fall from the ceiling, striking up to three creatures underneath that the dragon can see within 120 feet of it. The dragon makes one ranged attack roll ({@hit 7} to hit) against each target. On a hit, the target takes 10 ({@dice 3d6}) piercing damage.",
-						"The dragon creates an opaque wall of ice on a solid surface it can see within 120 feet of it. The wall can be up to 30 feet long, 30 feet high, and 1 foot thick. When the wall appears, each creature within its area is pushed 5 feet out of the wall's space; appearing on whichever side of the wall it wants. Each 10-foot section of the wall has AC 5, 30 hit points, vulnerability to fire damage, and immunity to acid, cold, necrotic, poison, and psychic damage. The wall disappears when the dragon uses this lair action again or when the dragon dies."
+						"寒冷濃霧將填滿以距離白龍120呎內且它所能看見的一點為中心的20呎半徑球型區域。這陣濃霧會繞過轉角，且它所在的區域將被重度遮蔽。每個在濃霧出現時處於範圍內的生物都必須進行一次DC 10的體質豁免，若豁免失敗將受到10 ({@dice 3d6})寒冰傷害，豁免成功則只受到一半的傷害。在這陣濃霧中結束它回合的生物將受到10 ({@dice 3d6})寒冰傷害。一道風速至少每小時20哩的風可以驅散這陣濃霧。除此之外這陣濃霧將會持續存在直到白龍再次使用這個巢穴動作、或直到白龍死亡。",
+						"尖錐碎冰將從天花板上墜落，襲向其下方距離白龍120呎內且它所能看見的最多三個生物。白龍對每個目標各自進行一次遠程攻擊檢定(命中{@hit 7})。若命中，目標將受到10 ({@dice 3d6})穿刺傷害。",
+						"白龍在距離它120呎內且它所能看見的一處固體表面上創造出一道透明的冰牆。這道冰牆可以最多30呎長，30呎高，且1呎厚。當這道牆出現時，每個在它範圍內的生物都將被往牆壁空間外推離5呎距離；出現在牆壁的任意一側（由它決定）。這道牆壁中每10呎邊長的區塊都具有AC 5以及30點生命值，對火焰易傷，且免疫於酸蝕、寒冰、死靈、毒素、和精神傷害。這道冰牆會在白龍再次使用這個巢穴動作、或當白龍死亡時消失。"
 					]
 				}
 			],
 			"regionalEffects": [
-				"The region containing a legendary white dragon's lair is warped by the dragon's magic, which creates one or more of the following effects:",
+				"這片坐落著傳奇白龍巢穴的區域被龍的魔法所扭曲，並創造出以下其中一個或多個效應：",
 				{
 					"type": "list",
 					"items": [
-						"Chilly fog lightly obscures the land within 6 miles of the dragon's lair.",
-						"Freezing precipitation falls within 6 miles of the dragon's lair, sometimes forming blizzard conditions when the dragon is at rest.",
-						"Icy walls block off areas in the dragon's lair. Each wall is 6 inches thick, and a 10-foot section has AC 5, 15 hit points, vulnerability to fire damage, and immunity to acid, cold, necrotic, poison, and psychic damage.",
-						"If the dragon wishes to move through a wall, it can do so without slowing down. The portion of the wall the dragon moves through is destroyed, however."
+						"刺骨濃霧輕度遮蔽著距離巢穴6哩內的區域。",
+						"距離巢穴6哩內的區域下著寒冷的雪雨，有時甚至會在白龍休息時形成暴風雪。",
+						"冰牆隔開了白龍巢穴內的空間。每道牆壁都有6吋厚，且每10呎邊長的區塊都具有AC 5以及15點生命值，對火焰易傷，且免疫於酸蝕、寒冰、死靈、毒素、和精神傷害。",
+						"若白龍希望移動穿過這些冰牆，它將可以這麼做而不會被阻礙。然而，白龍移動穿過冰牆的部分將會因此被摧毀。"
 					]
 				},
-				"If the dragon dies, the fog and precipitation fade within 1 day. The ice walls melt over the course of {@dice 1d10} days."
-			]
+				"若白龍死亡，濃霧和雪雨都將在1天內消散。冰牆將會在{@dice 1d10}天內逐漸消融。"
+			],
+			"source": "MM"
 		},
 		{
 			"name": "Yan-C-Bin",
@@ -1139,7 +1151,8 @@
 					]
 				},
 				"If Yan-C-Bin is destroyed or banished back to his home plane, the regional effects fade over the next {@dice 1d10} days."
-			]
+			],
+			"source": "PotA"
 		},
 		{
 			"name": "Yeenoghu",
@@ -1206,7 +1219,8 @@
 						}
 					]
 				}
-			]
+			],
+			"source": "MTF"
 		},
 		{
 			"name": "Zuggtmoy",
@@ -1273,33 +1287,35 @@
 						}
 					]
 				}
-			]
+			],
+			"source": "MTF"
 		},
 		{
 			"name": "Morkoth",
 			"lairActions": [
-				"On initiative count 20 (losing initiative ties), the morkoth takes a lair action to cause one of the effects described below:",
+				"在先攻順序輪到20時（先攻相等時則為後手），莫客魚怪可以採取一次巢穴動作以造成以下其中一個效果：",
 				{
 					"type": "list",
 					"items": [
-						"The morkoth uses its Hypnosis action, originating at a point within 120 feet of itself. It doesn't need to see the effect's point of origin.",
-						"The morkoth casts {@spell darkness}, {@spell dispel magic}, or {@spell misty step}, using Intelligence as its spellcasting ability and without expending a spell slot."
+						"莫客魚怪使用它的催眠動作，並以距離它120呎內的一點為源點。它並不需要看見這個效果的源點。",
+						"莫客魚怪施放{@spell 黑暗術}、{@spell 解除魔法}、或{@spell 迷蹤步}，使用智力做為它的施法屬性，且無須消耗法術位。"
 					]
 				}
 			],
 			"regionalEffects": [
-				"The island surrounding a morkoth's lair is warped by the creature's presence, creating the following effects:",
+				"莫客魚怪巢穴周遭的島嶼被該生物的存在本質所扭曲，並創造出以下效應：",
 				{
 					"type": "list",
 					"items": [
-						"The morkoth is aware of any new arrival, whether an object or a creature, on its island or in its sanctum. As an action, the morkoth can locate any one creature or object on the island. Visitors to the island feel as though they are being watched, even when they aren't.",
-						"Each time a creature that has been on the island for less than a year finishes a short or long rest, it must make a DC 10 Intelligence (Investigation) check. On a failure, the creature has misplaced one possession (chosen by the player, if the creature is that player's character). The possession remains nearby but concealed for a short time, so it can be recovered with a successful DC 15 Wisdom (Perception) check. An object that is misplaced but not recovered ends up in the morkoth's lair 1 hour later. If the creature later goes to the morkoth's lair, its lost possessions stand out in its perception and are easily recovered.",
-						"Entrances to the morkoth's lair have an enchantment that the morkoth can activate or suppress at any time while it's in its lair and not incapacitated. Any creature within 30 feet of such an entrance and able to see it must make a DC 15 Wisdom saving throw. On a failed save, the creature feels an intense urge to use its movement on each of its turns to enter the lair and to move toward the morkoth's location (the target doesn't realize it's heading toward a creature). The target moves toward the morkoth by the most direct route. As soon as it can see the morkoth, the target can repeat the saving throw, ending the effect on itself on a success. It can also repeat the saving throw at the end of each of its turns and every time it takes damage.",
-						"With a thought (no action required), the morkoth can initiate a change in the water within its lair that takes effect 1 minute later. The water can be as breathable and clear as air, or it can be normal water (ranging in clarity from murky to clear)."
+						"莫客魚怪能察覺到任何來到它島嶼或私室的物體或生物。以一個動作，莫客魚怪能夠定位任何位在其島嶼上的一個生物或物體的位置。這座島嶼的造訪者將會感覺到自己正在被注視，儘管實際上並沒有這回事。",
+						"每當一個在這座島嶼上待不足一年的生物完成一次短休或長休，它都必須進行一次DC 10的智力（{@skill 調查}）檢定。若檢定失敗，該生物將會隨意擱置並遺失一個所有物（若該生物為玩家角色，則由玩家決定遺失的物品）。這個所有物將在短時間內被隱蔽起來，但仍然遺留在附近，因此它可以透過成功通過一次DC 15的睿知（{@skill 觀察}）檢定以重新尋回。一個被遺失且未被找回的物體將在1小時之後出現在莫客魚怪的巢穴。若該生物在稍後前往莫客魚怪的巢穴，它遺失的所有物將會從中脫穎而出，且相當容易被尋回。",
+						"莫客魚怪巢穴的入口將附有一個惑控附魔，且莫客魚怪可以在它處於其巢穴且未陷入{@condition 無力}狀態時於任何時候啟動或壓制其效果。任何距離這類入口30呎內，且能夠看見入口的生物必須進行一次DC 15的睿知豁免。若豁免失敗，該生物將感受到一股強烈的渴望，並在它的每個回合使用其移動速度以進入該巢穴，並朝著莫客魚怪的所在移動（目標並不意識到它正朝著一個生物移動）。目標將以最直接的路線向著莫客魚怪移動。一旦它看見莫客魚怪，目標便可以重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。目標也可以在它的每個回合結束時，或是每當它受到傷害時重複進行這個豁免檢定。",
+						"以一個念頭（無須動作），莫客魚怪可以使它巢穴內的水體在1分鐘之後產生變化。這些水體可以變得如同空氣般清澈而可在其中呼吸，或者變成尋常水體（清澈度從汙濁到清澈皆可）。"
 					]
 				},
-				"If the morkoth dies, these regional effects end immediately."
-			]
+				"若莫客魚怪死亡，這些區域效應都將立即消失。"
+			],
+			"source": "VGM"
 		},
 		{
 			"name": "Balhannoth",
@@ -1324,7 +1340,8 @@
 					]
 				},
 				"If the balhannoth dies, these effects end immediately."
-			]
+			],
+			"source": "MTF"
 		},
 		{
 			"name": "Geryon",
@@ -1350,7 +1367,8 @@
 					]
 				},
 				"If Geryon dies, these effects fade over the course of {@dice 1d10} days."
-			]
+			],
+			"source": "MTF"
 		},
 		{
 			"name": "Zariel",
@@ -1375,7 +1393,8 @@
 					]
 				},
 				"If Zariel dies, these effects fade over the course of {@dice 1d10} days."
-			]
+			],
+			"source": "MTF"
 		},
 		{
 			"name": "Githzerai Anarch",
@@ -1400,7 +1419,8 @@
 					]
 				},
 				"If the anarch dies, these effects end after {@dice 1d6} rounds. All formed substance becomes a chaotic churn of energy and matter, unraveling into unformed substance that dissipates {@dice 1d6} rounds later."
-			]
+			],
+			"source": "MTF"
 		},
 		{
 			"name": "Merrenoloth",
@@ -1426,7 +1446,8 @@
 					]
 				},
 				"If the merrenoloth dies, these effects fade over the course of {@dice 1d6} hours."
-			]
+			],
+			"source": "MTF"
 		},
 		{
 			"name": "Halaster Blackcloak",
@@ -1451,7 +1472,8 @@
 						"Silent apparitions of dead adventurers drift through halls and rooms as though they are lost. An apparition can't be harmed, and it doesn't acknowledge creatures or objects in any way. It can't be dispelled but is suppressed within an antimagic field."
 					]
 				}
-			]
+			],
+			"source": "WDMM"
 		}
 	],
 	"language": {

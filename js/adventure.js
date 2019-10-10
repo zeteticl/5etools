@@ -5,9 +5,9 @@ const CONTENTS_URL = "data/adventures.json";
 window.onload = function load () {
 	BookUtil.renderArea = $(`#pagecontent`);
 
-	BookUtil.renderArea.append(EntryRenderer.utils.getBorderTr());
+	BookUtil.renderArea.append(Renderer.utils.getBorderTr());
 	BookUtil.renderArea.append(`<tr><td colspan="6" class="initial-message book-loading-message">Loading...</td></tr>`);
-	BookUtil.renderArea.append(EntryRenderer.utils.getBorderTr());
+	BookUtil.renderArea.append(Renderer.utils.getBorderTr());
 
 	ExcludeUtil.pInitialise(); // don't await, as this is only used for search
 	Omnisearch.addScrollTopFloat();
@@ -38,7 +38,7 @@ function onJsonLoad (data) {
 	window.onhashchange = BookUtil.booksHashChange;
 	BrewUtil.pAddBrewData()
 		.then(handleBrew)
-		.then(BrewUtil.pAddLocalBrewData)
+		.then(() => BrewUtil.pAddLocalBrewData())
 		.catch(BrewUtil.pPurgeBrew)
 		.then(() => {
 			if (window.location.hash.length) {
@@ -60,19 +60,14 @@ function addAdventures (data) {
 
 	adventures = adventures.concat(data.adventure);
 	BookUtil.bookIndex = adventures;
+	BookUtil.contentType = "adventure";
 
 	const adventuresList = $("ul.contents");
 	let tempString = "";
 	for (; adI < adventures.length; adI++) {
 		const adv = adventures[adI];
 
-		tempString +=
-			`<li class="contents-item" data-bookid="${UrlUtil.encodeForHash(adv.id)}" style="display: none;">
-				<a id="${adI}" href="#${adv.id},0" title="${adv.name}">
-					<span class='name'>${adv.name}</span>
-				</a>
-				${BookUtil.makeContentsBlock({book: adv, addOnclick: true, defaultHeadersHidden: true})}
-			</li>`;
+		tempString += BookUtil.getContentsItem(adI, adv, {book: adv, addOnclick: true, defaultHeadersHidden: true});
 	}
 	adventuresList.append(tempString);
 }

@@ -95,14 +95,15 @@ async function onJsonLoad (data) {
 	addDeities(data);
 	BrewUtil.pAddBrewData()
 		.then(handleBrew)
-		.then(BrewUtil.pAddLocalBrewData)
+		.then(() => BrewUtil.bind({list}))
+		.then(() => BrewUtil.pAddLocalBrewData())
 		.catch(BrewUtil.pPurgeBrew)
 		.then(async () => {
 			BrewUtil.makeBrewButton("manage-brew");
-			BrewUtil.bind({list, filterBox, sourceFilter});
+			BrewUtil.bind({filterBox, sourceFilter});
 			await ListUtil.pLoadState();
 			RollerUtil.addListRollButton();
-			addListShowHide();
+			ListUtil.addListShowHide();
 
 			History.init(true);
 			ExcludeUtil.checkShowAllExcluded(deitiesList, $(`#pagecontent`));
@@ -156,7 +157,7 @@ function addDeities (data) {
 	const lastSearch = ListUtil.getSearchTermAndReset(list);
 	$(`#deitiesList`).append(tempString);
 	// sort filters
-	sourceFilter.items.sort(SortUtil.ascSort);
+	sourceFilter.items.sort(SortUtil.srcSort_ch);
 	categoryFilter.items.sort();
 
 	list.reIndex();
@@ -171,7 +172,7 @@ function addDeities (data) {
 		primaryLists: [list]
 	});
 	ListUtil.bindPinButton();
-	EntryRenderer.hover.bindPopoutButton(deitiesList);
+	Renderer.hover.bindPopoutButton(deitiesList);
 	UrlUtil.bindLinkExportButton(filterBox);
 	ListUtil.bindDownloadButton();
 	ListUtil.bindUploadButton();
@@ -208,14 +209,14 @@ function getSublistItem (g, pinId) {
 	`;
 }
 
-const renderer = EntryRenderer.getDefaultRenderer();
+const renderer = Renderer.get();
 function loadhash (jsonIndex) {
 	renderer.setFirstSection(true);
 	const deity = deitiesList[jsonIndex];
 
 	function getDeityBody (deity, reprintIndex) {
 		const renderStack = [];
-		if (deity.entries) renderer.recursiveEntryRender({entries: deity.entries}, renderStack);
+		if (deity.entries) renderer.recursiveRender({entries: deity.entries}, renderStack);
 		return `
 		${reprintIndex ? `
 			<tr><td colspan="6">
@@ -225,25 +226,25 @@ function loadhash (jsonIndex) {
 			</td></tr>
 		` : ""}
 
-		${EntryRenderer.deity.getOrderedParts(deity, `<tr><td colspan="6">`, `</td></tr>`)}
+		${Renderer.deity.getOrderedParts(deity, `<tr><td colspan="6">`, `</td></tr>`)}
 		
-		${deity.symbolImg ? `<tr><td colspan="6">${renderer.renderEntry({entries: [deity.symbolImg]})}</td></tr>` : ""}
+		${deity.symbolImg ? `<tr><td colspan="6">${renderer.render({entries: [deity.symbolImg]})}</td></tr>` : ""}
 		${renderStack.length ? `<tr class="text"><td colspan="6">${renderStack.join("")}</td></tr>` : ""}
 		`;
 	}
 
 	const $content = $(`#pagecontent`).empty();
 	$content.append(`
-		${EntryRenderer.utils.getBorderTr()}
-		${EntryRenderer.utils.getNameTr(deity, false, deity.title ? `${deity.title.toTitleCase()}, ` : "", "")}
+		${Renderer.utils.getBorderTr()}
+		${Renderer.utils.getNameTr(deity, false, "", deity.title ? `, ${deity.title.toTitleCase()}` : "")}
 		${getDeityBody(deity)}
 		${deity.reprinted ? `<tr class="text"><td colspan="6"><i class="text-muted">註記：這個神祇已在更新的出版品中被再印。</i></td></tr>` : ""}
-		${EntryRenderer.utils.getPageTr(deity)}
+		${Renderer.utils.getPageTr(deity)}
 		${deity.previousVersions ? `
-		${EntryRenderer.utils.getDividerTr()}
-		${deity.previousVersions.map((d, i) => getDeityBody(d, i + 1)).join(EntryRenderer.utils.getDividerTr())}
+		${Renderer.utils.getDividerTr()}
+		${deity.previousVersions.map((d, i) => getDeityBody(d, i + 1)).join(Renderer.utils.getDividerTr())}
 		` : ""}
-		${EntryRenderer.utils.getBorderTr()}
+		${Renderer.utils.getBorderTr()}
 	`);
 
 	ListUtil.updateSelected();

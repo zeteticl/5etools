@@ -11,10 +11,16 @@ class GenTables {
 	}
 
 	loadBooks () {
-		const index = JSON.parse(fs.readFileSync(`./data/books.json`, "utf-8"));
+		/*
+		const temp = JSON.parse(fs.readFileSync(`path/to/some/file`, "utf-8"));
+		temp.book[0].bookData = temp.bookData[0];
+		return [temp.book[0]];
+		 */
+
+		const index = JSON.parse(fs.readFileSync(`../data/books.json`, "utf-8"));
 		return index.book.map(idx => {
 			if (!GenTables.BOOK_BLACKLIST[idx.id]) {
-				idx.bookData = JSON.parse(fs.readFileSync(`./data/book/book-${idx.id.toLowerCase()}.json`, "utf-8"));
+				idx.bookData = JSON.parse(fs.readFileSync(`../data/book/book-${idx.id.toLowerCase()}.json`, "utf-8"));
 				return idx;
 			}
 		}).filter(it => it);
@@ -110,7 +116,7 @@ class GenTables {
 				} else if (it.data && it.data.tableName) {
 					it.name = it.data.tableName;
 				} else if (it.caption) {
-					if (GenTables._isSectionInTitle(cleanSections, it.caption)) {
+					if (GenTables._isSectionInTitle(cleanSections, it.caption) || (it.data && it.data.skipSectionPrefix)) {
 						it.name = it.caption;
 					} else {
 						it.name = `${cleanSections.last()}; ${it.caption}`;
@@ -146,7 +152,7 @@ class GenTables {
 		});
 
 		const toSave = JSON.stringify({table: tables, tableGroup: tableGroups});
-		fs.writeFileSync(`./data/generated/gendata-tables.json`, toSave, "utf-8");
+		fs.writeFileSync(`../data/generated/gendata-tables.json`, toSave, "utf-8");
 	}
 }
 

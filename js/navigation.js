@@ -1,4 +1,5 @@
 "use strict";
+
 class NavBar {
 	static init () {
 		// render the visible elements ASAP
@@ -19,7 +20,7 @@ class NavBar {
 
 		const ulRules = addDropdown(navBar, "規則");
 		addLi(ulRules, "quickreference.html", "快速參照");
-		addLi(ulRules, "variantrules.html", "變體&選用規則");
+		addLi(ulRules, "variantrules.html", "變體&選用規則/雜項");
 		addLi(ulRules, "tables.html", "表格");
 		addDivider(ulRules);
 		addLi(ulRules, "book.html", "地下城主指南", false, "DMG");
@@ -37,11 +38,14 @@ class NavBar {
 		addLi(ulRules, "books.html", "查看所有/自製內容");
 
 		const ulPlayers = addDropdown(navBar, "玩家選項");
+		addLi(ulPlayers, "races.html", "種族");
 		addLi(ulPlayers, "classes.html", "職業");
 		addLi(ulPlayers, "optionalfeatures.html", "職業能力選項");
 		addLi(ulPlayers, "backgrounds.html", "背景");
 		addLi(ulPlayers, "feats.html", "專長");
-		addLi(ulPlayers, "races.html", "種族");
+		addDivider(ulPlayers);
+		addLi(ulPlayers, "statgen.html", "屬性生成器");
+		addDivider(ulPlayers);
 		addLi(ulPlayers, "lifegen.html", "這是你的人生");
 		addLi(ulPlayers, "names.html", "名稱");
 
@@ -49,11 +53,6 @@ class NavBar {
 		addLi(ulDms, "dmscreen.html", "DM屏幕");
 		addDivider(ulDms);
 		const ulAdventures = addDropdown(ulDms, "冒險模組", true);
-		addLi(ulAdventures, "adventures.html", "查看所有/自製內容");
-		addDivider(ulAdventures);
-		addLi(ulAdventures, "adventure.html", "Lost Mines of Phandelver", true, "LMoP");
-		addLi(ulAdventures, "adventure.html", "Hoard of the Dragon Queen", true, "HotDQ");
-		addLi(ulAdventures, "adventure.html", "Rise of Tiamat", true, "RoT");
 		addLi(ulAdventures, "adventure.html", "Lost Mines of Phandelver", true, "LMoP");
 		addLi(ulAdventures, "adventure.html", "Hoard of the Dragon Queen", true, "HotDQ");
 		addLi(ulAdventures, "adventure.html", "Rise of Tiamat", true, "RoT");
@@ -74,13 +73,16 @@ class NavBar {
 		addLi(ulAdventures, "adventure.html", "Lost Laboratory of Kwalish", true, "LLK");
 		addLi(ulAdventures, "adventure.html", "Waterdeep: Dungeon of the Mad Mage", true, "WDMM");
 		addLi(ulAdventures, "adventure.html", "Krenko's Way", true, "KKW");
-		addLi(ulDms, "crcalculator.html", "CR計算機");
+		addDivider(ulAdventures);
+		addLi(ulAdventures, "adventures.html", "查看所有/自製內容");
 		addLi(ulDms, "cultsboons.html", "異教&惡魔恩惠");
-		addLi(ulDms, "encountergen.html", "遭遇生成器");
-		addLi(ulDms, "lootgen.html", "戰利品生成器");
 		addLi(ulDms, "objects.html", "物件");
 		addLi(ulDms, "ships.html", "船隻");
 		addLi(ulDms, "trapshazards.html", "陷阱&危險");
+		addDivider(ulDms);
+		addLi(ulDms, "crcalculator.html", "CR計算機");
+		addLi(ulDms, "encountergen.html", "遭遇生成器");
+		addLi(ulDms, "lootgen.html", "戰利品生成器");
 
 		const ulReferences = addDropdown(navBar, "參照資料");
 		addLi(ulReferences, "bestiary.html", "怪物圖鑑");
@@ -91,21 +93,61 @@ class NavBar {
 		addLi(ulReferences, "psionics.html", "靈能");
 		addLi(ulReferences, "spells.html", "法術");
 
-		addLi(navBar, "statgen.html", "屬性生成器");
-
 		const ulUtils = addDropdown(navBar, "其他功能");
 		addLi(ulUtils, "blacklist.html", "內容黑名單");
+		addLi(ulUtils, "inittrackerplayerview.html", "先攻追蹤器:玩家檢視");
 		addLi(ulUtils, "managebrew.html", "管理所有自製內容");
 		addDivider(ulUtils);
+		addLi(ulUtils, "makebrew.html", "自製內容生成器");
 		addLi(ulUtils, "demo.html", "渲染器 Demo");
 		addLi(ulUtils, "converter.html", "文字轉換器");
 		addDivider(ulUtils);
 		addLi(ulUtils, "roll20.html", "Roll20腳本小幫手");
 		addLi(ulUtils, "makeshaped.html", "Roll20 Shaped Sheet JS Builder");
-		addDivider(ulUtils);
-		addLi(ulUtils, "donate.html", "捐獻");
 
-		addNightModeToggle(navBar);
+		// addLi(navBar, "donate.html", "捐獻");
+
+		const ulSettings = addDropdown(navBar, "設置");
+		addButton(
+			ulSettings,
+			{
+				html: styleSwitcher.getActiveStyleSheet() === StyleSwitcher.STYLE_DAY ? "夜晚模式" : "白晝模式",
+				click: (evt) => {
+					evt.preventDefault();
+					styleSwitcher.toggleActiveStyleSheet();
+				},
+				className: "nightModeToggle"
+			}
+		);
+		addButton(
+			ulSettings,
+			{
+				html: "儲存狀態至檔案",
+				click: async (evt) => {
+					evt.preventDefault();
+					const sync = StorageUtil.syncGetDump();
+					const async = await StorageUtil.pGetDump();
+					const dump = {sync, async};
+					DataUtil.userDownload("5etools", dump);
+				},
+				title: "Save any locally-stored data (loaded homebrew, active blacklists, DM Screen configuration,...) to a file."
+			}
+		);
+		addButton(
+			ulSettings,
+			{
+				html: "從檔案讀取狀態",
+				click: async (evt) => {
+					evt.preventDefault();
+					const dump = await DataUtil.pUserUpload();
+
+					StorageUtil.syncSetFromDump(dump.sync);
+					await StorageUtil.pSetFromDump(dump.async);
+					location.reload();
+				},
+				title: "Load previously-saved data (loaded homebrew, active blacklists, DM Screen configuration,...) from a file."
+			}
+		);
 
 		/**
 		 * Adds a new item to the navigation bar. Can be used either in root, or in a different UL.
@@ -125,7 +167,8 @@ class NavBar {
 			if (isSide) {
 				li.onmouseenter = function () { NavBar.handleSideItemMouseEnter(this) }
 			} else {
-				li.onmouseenter = function () { NavBar.handleItemMouseEnter(this) }
+				li.onmouseenter = function () { NavBar.handleItemMouseEnter(this) };
+				li.onclick = function () { NavBar._dropdowns.forEach(ele => ele.classList.remove("open")) }
 			}
 
 			const a = document.createElement("a");
@@ -153,7 +196,7 @@ class NavBar {
 		function addDropdown (appendTo, text, isSide = false) {
 			const li = document.createElement("li");
 			li.setAttribute("role", "presentation");
-			li.className = "dropdown";
+			li.className = "dropdown dropdown--navbar";
 			if (isSide) {
 				li.onmouseenter = function () { NavBar.handleSideItemMouseEnter(this); };
 			} else {
@@ -182,17 +225,25 @@ class NavBar {
 		}
 
 		/**
-		 * Special LI for the Day/Night Switcher
+		 * Special LI for buttong
+		 * @param appendTo The element to append to.
+		 * @param options Options.
+		 * @param options.html Button text.
+		 * @param options.click Button click handler.
+		 * @param options.title Button title.
+		 * @param options.className Additional button classes.
 		 */
-		function addNightModeToggle (appendTo) {
+		function addButton (appendTo, options) {
 			const li = document.createElement("li");
 			li.setAttribute("role", "presentation");
 
 			const a = document.createElement("a");
 			a.href = "#";
-			a.className = "nightModeToggle";
-			a.onclick = function (event) { event.preventDefault(); styleSwitcher.toggleActiveStyleSheet(); };
-			a.innerHTML = styleSwitcher.getActiveStyleSheet() === StyleSwitcher.STYLE_DAY ? "夜晚模式" : "白晝模式";
+			if (options.className) a.className = options.className;
+			a.onclick = options.click;
+			a.innerHTML = options.html;
+
+			if (options.title) li.setAttribute("title", options.title);
 
 			li.appendChild(a);
 			appendTo.appendChild(li);
@@ -208,16 +259,14 @@ class NavBar {
 		let isSecondLevel = false;
 		if (currentPage.toLowerCase() === "book.html" || currentPage.toLowerCase() === "adventure.html") {
 			const hashPart = window.location.hash.split(",")[0];
-			if (hashPart) {
-				if (currentPage.toLowerCase() === "adventure.html") isSecondLevel = true;
-				currentPage += hashPart.toLowerCase();
-			}
+			if (currentPage.toLowerCase() === "adventure.html") isSecondLevel = true;
+			currentPage += hashPart.toLowerCase();
 		}
 		if (currentPage.toLowerCase() === "adventures.html") isSecondLevel = true;
 
 		try {
 			let current = document.querySelector(`li[data-page="${currentPage}"]`);
-			if (current == null && currentPage.includes("#")) {
+			if (current == null) {
 				currentPage = currentPage.split("#")[0];
 				if (NavBar.ALT_CHILD_PAGES[currentPage]) currentPage = NavBar.ALT_CHILD_PAGES[currentPage];
 				current = document.querySelector(`li[data-page="${currentPage}"]`);
@@ -227,7 +276,7 @@ class NavBar {
 
 			let closestLi = current.parentNode;
 			const setNearestParentActive = () => {
-				while (closestLi !== null && closestLi.nodeName !== "LI") closestLi = closestLi.parentNode;
+				while (closestLi !== null && (closestLi.nodeName !== "LI" || !closestLi.classList.contains("dropdown"))) closestLi = closestLi.parentNode;
 				closestLi && closestLi.classList.add("active");
 			};
 			setNearestParentActive();
@@ -239,7 +288,7 @@ class NavBar {
 	}
 
 	static initHandlers () {
-		NavBar._dropdowns = [...document.getElementById("navbar").querySelectorAll(`li.dropdown`)];
+		NavBar._dropdowns = [...document.getElementById("navbar").querySelectorAll(`li.dropdown--navbar`)];
 		document.addEventListener("click", () => NavBar._dropdowns.forEach(ele => ele.classList.remove("open")));
 		document.addEventListener("mousemove", evt => {
 			NavBar._mouseX = evt.clientX;

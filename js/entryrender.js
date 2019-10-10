@@ -365,10 +365,7 @@ function EntryRenderer () {
 						$(ele).find('.dataCreature__name').toggle(); 
 						$(ele).find('.dataCreature__showHide').text($(ele).text().includes('+') ? '[\u2013]' : '[+]'); 
 						$(ele).closest('table').find('tbody').toggle()
-					})(this)">
-						<span style="display: none;" class="dataCreature__name">${entry.dataCreature.name}</span>
-						<span class="dataCreature__showHide">[\u2013]</span>
-					</th></tr></thead><tbody>`;
+					})(this)"><span style="display: none;" class="dataCreature__name">${entry.dataCreature.name}</span><span class="dataCreature__showHide">[\u2013]</span></th></tr></thead><tbody>`;
 					textStack[0] += EntryRenderer.monster.getCompactRenderedString(entry.dataCreature, this);
 					textStack[0] += `</tbody></table>`;
 					renderSuffix();
@@ -407,9 +404,7 @@ function EntryRenderer () {
 						} else {
 							markerText = "(See removed content)";
 						}
-						textStack[0] += `<span class="homebrew-old-content" href="#${window.location.hash}" ${mouseOver}>
-								${markerText}
-							</span>`;
+						textStack[0] += `<span class="homebrew-old-content" href="#${window.location.hash}" ${mouseOver}>${markerText}</span>`;
 					}
 
 					textStack[0] += `<span class="homebrew-notice"></span>`;
@@ -469,13 +464,7 @@ function EntryRenderer () {
 			} else if (entry.href.type === "external") {
 				href = entry.href.url;
 			}
-			textStack[0] += `
-					<div class="img__wrapper">
-						<a href="${href}" target='_blank' ${entry.title ? `title="${entry.title}"` : ""}>
-							<img src="${href}" onload="EntryRenderer._onImgLoad()" ${entry.altText ? `alt="${entry.altText}"` : ""}>
-						</a>
-					</div>
-			`;
+			textStack[0] += `<div class="img__wrapper"><a href="${href}" target="_blank" rel="noopener" ${entry.title ? `title="${entry.title}"` : ""}><img src="${href}" onload="EntryRenderer._onImgLoad()" ${entry.altText ? `alt="${entry.altText}"` : ""}></a></div>`;
 			if (entry.title) textStack[0] += `<div class="img-title"><span class="img-title__inner">${entry.title}</span></div>`;
 			textStack[0] += `</div>`;
 			renderSuffix();
@@ -505,24 +494,12 @@ function EntryRenderer () {
 			textStack[0] += "<thead>";
 			textStack[0] += "<tr>";
 
-			let autoMkRoller = false;
+			const autoMkRoller = EntryRenderer.isRollableTable(entry);
 			if (entry.colLabels) {
-				autoMkRoller = entry.colLabels.length >= 2 && RollerUtil.isRollCol(entry.colLabels[0]);
-				if (autoMkRoller) {
-					// scan the first column to ensure all rollable
-					const notRollable = entry.rows.find(it => {
-						try {
-							return !/\d+([-\u2013]\d+)?/.exec(it[0]);
-						} catch (e) {
-							return true;
-						}
-					});
-					if (notRollable) autoMkRoller = false;
-				}
-
 				for (let i = 0; i < entry.colLabels.length; ++i) {
+					const lbl = entry.colLabels[i];
 					textStack[0] += `<th ${getTableThClassText(i)}>`;
-					self._recursiveEntryRender(autoMkRoller && i === 0 && !entry.colLabels[i].includes("@dice") ? `{@dice ${entry.colLabels[i]}}` : entry.colLabels[i], textStack, depth);
+					self._recursiveEntryRender(autoMkRoller && i === 0 && !lbl.includes("@dice") ? `{@dice ${lbl}}` : lbl, textStack, depth);
 					textStack[0] += `</th>`;
 				}
 			}
@@ -537,28 +514,7 @@ function EntryRenderer () {
 				let roRender = r.type === "row" ? r.row : r;
 				for (let j = 0; j < roRender.length; ++j) {
 					// preconvert rollables
-					if (autoMkRoller && j === 0) {
-						roRender = JSON.parse(JSON.stringify(roRender));
-						const m = /(\d+)([-\u2013](\d+))?/.exec(roRender[j]); // should always match; validated earlier
-						if (m[1] && !m[2]) {
-							roRender[j] = {
-								type: "cell",
-								roll: {
-									exact: Number(m[1])
-								}
-							};
-							if (m[1][0] === "0") roRender[j].roll.pad = true;
-						} else {
-							roRender[j] = {
-								type: "cell",
-								roll: {
-									min: Number(m[1]),
-									max: Number(m[3])
-								}
-							};
-							if (m[1][0] === "0" || m[3][0] === "0") roRender[j].roll.pad = true;
-						}
-					}
+					if (autoMkRoller && j === 0) roRender = EntryRenderer.getRollableRow(roRender);
 
 					let toRenderCell;
 					if (roRender[j].type === "cell") {
@@ -570,7 +526,11 @@ function EntryRenderer () {
 							} else if (roRender[j].roll.exact !== undefined) {
 								toRenderCell = roRender[j].roll.pad ? StrUtil.padNumber(roRender[j].roll.exact, 2, "0") : roRender[j].roll.exact;
 							} else {
-								toRenderCell = roRender[j].roll.pad ? `${StrUtil.padNumber(roRender[j].roll.min, 2, "0")}-${StrUtil.padNumber(roRender[j].roll.max, 2, "0")}` : `${roRender[j].roll.min}-${roRender[j].roll.max}`
+								if (roRender[j].roll.max === EntryRenderer.dice.POS_INFINITE) {
+									toRenderCell = roRender[j].roll.pad ? `${StrUtil.padNumber(roRender[j].roll.min, 2, "0")}+` : `${roRender[j].roll.min}+`;
+								} else {
+									toRenderCell = roRender[j].roll.pad ? `${StrUtil.padNumber(roRender[j].roll.min, 2, "0")}-${StrUtil.padNumber(roRender[j].roll.max, 2, "0")}` : `${roRender[j].roll.min}-${roRender[j].roll.max}`;
+								}
 							}
 						}
 					} else {
@@ -626,7 +586,7 @@ function EntryRenderer () {
 
 		function handleOptions (self) {
 			if (entry.entries) {
-				entry.entries = entry.entries.sort((a, b) => a.name && b.name ? SortUtil.ascSort(a.name, b.name) : a.name ? -1 : b.name ? 1 : 0);
+				//entry.entries = entry.entries.sort((a, b) => a.name && b.name ? SortUtil.ascSort(a.name, b.name) : a.name ? -1 : b.name ? 1 : 0);
 				handleEntriesOptionsOptFeaturePatron(self, false);
 			}
 		}
@@ -647,11 +607,7 @@ function EntryRenderer () {
 			const dataString = getDataString();
 			const preReqText = getPreReqText(self);
 			if (entry.name != null) self._handleTrackTitles(entry.name);
-			const headerSpan = entry.name ? `
-				<span class="entry-title" data-title-index="${self._headerIndex++}" ${self._getEnumeratedTitleRel(entry.name)}>
-				<span class="entry-title-inner" book-idx="${entry.idx_name ? entry.idx_name : entry.name}">
-					${self.renderEntry({type: "inline", entries: [entry.name]})}${entry.ENG_name ? (" <st style='font-size:80%;'>"+entry.ENG_name+"<st>") : ""}${inlineTitle ? ":" : ""}
-				</span>${pagePart}</span> ` : "";
+			const headerSpan = entry.name ? `<span class="entry-title" data-title-index="${self._headerIndex++}" ${self._getEnumeratedTitleRel(entry.name)}> <span class="entry-title-inner" book-idx="${entry.idx_name ? entry.idx_name : entry.name}">${self.renderEntry({type: "inline", entries: [entry.name]})}${entry.ENG_name ? (" <st style='font-size:80%;'>"+entry.ENG_name+"<st>") : ""}${inlineTitle ? "." : ""}</span>${pagePart}</span> ` : "";
 
 			if (depth === -1) {
 				if (!self._firstSection) {
@@ -758,7 +714,7 @@ function EntryRenderer () {
 							type: "dice",
 							rollable: true
 						};
-						const [rollText, displayText, name] = text.split("|");
+						const [rollText, displayText, name, ...others] = text.split("|");
 						if (displayText) fauxEntry.displayText = displayText;
 						if (name) fauxEntry.name = name;
 
@@ -766,6 +722,8 @@ function EntryRenderer () {
 							case "@dice": {
 								// format: {@dice 1d2 + 3 + 4d5 - 6}
 								fauxEntry.toRoll = rollText;
+								if (!displayText && rollText.includes(";")) fauxEntry.displayText = rollText.replace(/;/g, "/");
+								if ((!fauxEntry.displayText && rollText.includes("#$")) || (fauxEntry.displayText && fauxEntry.displayText.includes("#$"))) fauxEntry.displayText = (fauxEntry.displayText || rollText).replace(/#\$prompt_number[^$]*\$#/g, "(n)");
 								self._recursiveEntryRender(fauxEntry, textStack, depth);
 								break;
 							}
@@ -808,7 +766,7 @@ function EntryRenderer () {
 							}
 						}
 					} else if (tag === "@scaledice") {
-						// format: {@scaledice 2d6|2-8,9|1d6}
+						// format: {@scaledice 2d6;3d6|2-8,9|1d6}
 						const [baseRoll, progression, addPerProgress] = text.split("|");
 						const progressionParse = MiscUtil.parseNumberRange(progression, 1, 9);
 						const baseLevel = Math.min(...progressionParse);
@@ -860,12 +818,19 @@ function EntryRenderer () {
 								path: `${page}.html`,
 								hash: HASH_BLANK,
 								subhashes: filters.map(f => {
-									const [fname, fvals] = f.split("=").map(s => s.trim()).filter(s => s);
-									return {
+									const [fname, fvals, fopts] = f.split("=").map(s => s.trim()).filter(s => s);
+									const out = {
 										key: `filter${fname}`,
 										value: fvals.split(";").map(s => s.trim()).filter(s => s).join(HASH_SUB_LIST_SEP)
+									};
+									if (fopts && fopts === "&") {
+										return [out, {
+											key: `flmeta${fname}`,
+											value: `and${HASH_SUB_LIST_SEP}or`
+										}];
 									}
-								})
+									return out;
+								}).flat()
 							}
 						};
 						self._recursiveEntryRender(fauxEntry, textStack, depth);
@@ -916,7 +881,9 @@ function EntryRenderer () {
 					} else if (tag === "@footnote") {
 						const [displayText, footnoteText, optTitle] = text.split("|");
 						const onMouseOver = EntryRenderer.hover.createOnMouseHover([footnoteText, optTitle ? `{@note ${optTitle}}` : ""].filter(Boolean));
-						textStack[0] += `<span class="help" ${onMouseOver}>${displayText}</span>`;
+						textStack[0] += `<span class="help" ${onMouseOver}>`;
+						self._recursiveEntryRender(displayText, textStack, depth);
+						textStack[0] += `</span>`
 					} else if (tag === "@homebrew") {
 						const [newText, oldText] = text.split("|");
 						const tooltip = [];
@@ -931,7 +898,9 @@ function EntryRenderer () {
 							tooltip.push(oldText);
 						}
 						const onMouseOver = EntryRenderer.hover.createOnMouseHover(tooltip);
-						textStack[0] += `<span class="homebrew-inline" ${onMouseOver}>${newText || "[...]"}</span>`;
+						textStack[0] += `<span class="homebrew-inline" ${onMouseOver}>`;
+						self._recursiveEntryRender(newText || "[...]", textStack, depth);
+						textStack[0] += `</span>`
 					} else if (tag === "@skill" || tag === "@action" || tag === "@sense") {
 						const expander = (() => {
 							switch (tag) {
@@ -952,7 +921,7 @@ function EntryRenderer () {
 						} else {
 							const area = BookUtil.curRender.headerMap[areaCode] || {entry: {name: ""}}; // default to prevent rendering crash on bad tag
 							const onMouseOver = EntryRenderer.hover.createOnMouseHoverEntry(area.entry, true);
-							textStack[0] += `<a href="#${BookUtil.curRender.curAdvId},${area.chapter},${UrlUtil.encodeForHash(area.entry.name)}" ${onMouseOver} onclick="BookUtil.handleReNav(this)">${renderText}</a>`;
+							textStack[0] += `<a href="#${BookUtil.curRender.curBookId},${area.chapter},${UrlUtil.encodeForHash(area.entry.name)}" ${onMouseOver} onclick="BookUtil.handleReNav(this)">${renderText}</a>`;
 						}
 					} else if (tag === "@deity") {
 						const [name, pantheon, source, displayText, ...others] = text.split("|");
@@ -1187,7 +1156,7 @@ function EntryRenderer () {
 					hash: procHash
 				};
 			}
-			return `onmouseover="EntryRenderer.hover.mouseOver(event, this, '${entry.href.hover.page}', '${entry.href.hover.source}', '${procHash}', false, ${entry.href.hover.prelodId ? `'${entry.href.hover.prelodId}'` : "null"})"`
+			return `onmouseover="EntryRenderer.hover.mouseOver(event, this, '${entry.href.hover.page}', '${entry.href.hover.source}', '${procHash}', false, ${entry.href.hover.prelodId ? `'${entry.href.hover.prelodId}'` : "null"})" ${EntryRenderer.hover._getPreventTouchString()}`;
 		}
 
 		let href;
@@ -1220,7 +1189,7 @@ function EntryRenderer () {
 				href = `http://journal.roll20.net/${id.type}/${id.roll20Id}`;
 			}
 		}
-		return `<a href="${href}" ${entry.href.type === "internal" ? "" : `target="_blank"`} ${getHoverString()}>${this.renderEntry(entry.text)}</a>`;
+		return `<a href="${href}" ${entry.href.type === "internal" ? "" : `target="_blank" rel="noopener"`} ${getHoverString()}>${this.renderEntry(entry.text)}</a>`;
 	};
 
 	/**
@@ -1405,7 +1374,7 @@ EntryRenderer.utils = {
 		return `<tr>
 					<th class="rnd-name name" colspan="6">
 						<div class="name-inner">
-							<span><b class="stats-name copyable" onmousedown="event.preventDefault()" onclick="EntryRenderer.utils._handleNameClick(this, '${it.source.escapeQuotes()}')">${prefix || ""}${it._displayName || it.name}${suffix || ""}</b>${it.ENG_name? " <st style='font-size:80%;'>"+it.ENG_name+"<st>": ""}</span>
+							<span><b class="stats-name copyable" onmousedown="event.preventDefault()" onclick="EntryRenderer.utils._pHandleNameClick(this, '${it.source.escapeQuotes()}')">${prefix || ""}${it._displayName || it.name}${suffix || ""}</b>${it.ENG_name? " <st style='font-size:80%;'>"+it.ENG_name+"<st>": ""}</span>
 							<span class="stats-source source${it.source}" title="${Parser.sourceJsonToFull(it.source)}${EntryRenderer.utils.getSourceSubText(it)}">
 								${Parser.sourceJsonToAbv(it.source)}${addPageNum && it.page ? ` p${it.page}` : ""}
 							</span>
@@ -1414,8 +1383,8 @@ EntryRenderer.utils = {
 				</tr>`;
 	},
 
-	_handleNameClick (ele) {
-		copyText($(ele).text());
+	async _pHandleNameClick (ele) {
+		await MiscUtil.pCopyTextToClipboard($(ele).text());
 		JqueryUtil.showCopiedEffect($(ele));
 	},
 
@@ -1503,6 +1472,49 @@ EntryRenderer.utils = {
 	},
 
 	/**
+	 * @param entry Data entry to search for fluff on, e.g. a monster
+	 * @param prop The fluff index reference prop, e.g. `"monsterFluff"`
+	 */
+	getPredefinedFluff (entry, prop) {
+		if (!entry.fluff) return null;
+
+		const mappedProp = `_${prop}`;
+		const mappedPropAppend = `_append${prop.uppercaseFirst()}`;
+		const fluff = {};
+
+		const assignPropsIfExist = (fromObj, ...props) => {
+			props.forEach(prop => {
+				if (fromObj[prop]) fluff[prop] = fromObj[prop];
+			});
+		};
+
+		assignPropsIfExist(entry.fluff, "name", "type", "entries", "images");
+
+		if (entry.fluff[mappedProp]) {
+			const fromList = (BrewUtil.homebrew[prop] || []).find(it => it.name === entry.fluff[mappedProp].name && it.source === entry.fluff[mappedProp].source);
+			if (fromList) {
+				assignPropsIfExist(fromList, "name", "type", "entries", "images");
+			}
+		}
+
+		if (entry.fluff[mappedPropAppend]) {
+			const fromList = (BrewUtil.homebrew[prop] || []).find(it => it.name === entry.fluff[mappedPropAppend].name && it.source === entry.fluff[mappedPropAppend].source);
+			if (fromList) {
+				if (fromList.entries) {
+					fluff.entries = MiscUtil.copy(fluff.entries || []);
+					fluff.entries.push(...fluff.entries);
+				}
+				if (fromList.images) {
+					fluff.images = MiscUtil.copy(fluff.images || []);
+					fluff.images.push(...fromList.images);
+				}
+			}
+		}
+
+		return fluff;
+	},
+
+	/**
 	 * @param isImageTab True if this is the "Images" tab, false otherwise
 	 * @param $content The statblock wrapper
 	 * @param record Item to build tab for (e.g. a monster; an item)
@@ -1519,9 +1531,9 @@ EntryRenderer.utils = {
 		$content.append($tr);
 		const $td = $(`<td colspan="6" class="text"/>`).appendTo($tr);
 		$content.append(EntryRenderer.utils.getBorderTr());
-		renderer.setFirstSection(true);
 
 		function renderFluff (data) {
+			renderer.setFirstSection(true);
 			const fluff = fnFluffBuilder(data);
 
 			if (!fluff) {
@@ -1726,14 +1738,14 @@ EntryRenderer.spell = {
 			<tr><td colspan="6">
 				<table class="summary striped-even">
 					<tr>
-						<th colspan="1">環位</th>
+						<th colspan="1">環階</th>
 						<th colspan="1">學派</th>
 						<th colspan="2">施法時間</th>
 						<th colspan="2">射程</th>
 					</tr>	
 					<tr>
 						<td colspan="1">${Parser.spLevelToFull(spell.level)}${Parser.spMetaToFull(spell.meta)}</td>
-						<td colspan="1">${Parser.spSchoolAbvToFull(spell.school)}</td>
+						<td colspan="1">${Parser.spSchoolAndSubschoolsAbvsToFull(spell.school, spell.subschools)}</td>
 						<td colspan="2">${Parser.spTimeListToFull(spell.time)}</td>
 						<td colspan="2">${Parser.spRangeToFull(spell.range)}</td>
 					</tr>
@@ -1768,7 +1780,7 @@ EntryRenderer.spell = {
 		renderStack.push(`
 			${EntryRenderer.utils.getBorderTr()}
 			${EntryRenderer.utils.getNameTr(spell)}
-			<tr><td class="levelschoolritual" colspan="6"><span>${Parser.spLevelSchoolMetaToFull(spell.level, spell.school, spell.meta)}</span></td></tr>
+			<tr><td class="levelschoolritual" colspan="6"><span>${Parser.spLevelSchoolMetaToFull(spell.level, spell.school, spell.meta, spell.subschools)}</span></td></tr>
 			<tr><td class="castingtime" colspan="6"><span class="bold">施法時間：</span>${Parser.spTimeListToFull(spell.time)}</td></tr>
 			<tr><td class="range" colspan="6"><span class="bold">射程：</span>${Parser.spRangeToFull(spell.range)}</td></tr>
 			<tr><td class="components" colspan="6"><span class="bold">構材：</span>${Parser.spComponentsToFull(spell.components)}</td></tr>
@@ -1833,21 +1845,13 @@ EntryRenderer.condition = {
 };
 
 EntryRenderer.background = {
-	getCompactRenderedString: (bg) => {
-		const renderer = EntryRenderer.getDefaultRenderer();
-		const renderStack = [];
-
-		renderStack.push(`
-			${EntryRenderer.utils.getNameTr(bg, true)}
-			<tr class="text"><td colspan="6">
-		`);
-		if (bg.skillProficiencies) {
-			renderer.recursiveEntryRender({name: "技能熟練", entries: [EntryRenderer.background.getSkillSummary(bg.skillProficiencies)]}, renderStack, 2);
-		}
-		renderer.recursiveEntryRender({entries: bg.entries.filter(it => it.data && it.data.isFeature)}, renderStack, 1);
-		renderStack.push(`</td></tr>`);
-
-		return renderStack.join("");
+	getCompactRenderedString (bg) {
+		return `
+		${EntryRenderer.utils.getNameTr(bg, true)}
+		<tr class="text"><td colspan="6">
+		${EntryRenderer.getDefaultRenderer().renderEntry({type: "entries", entries: bg.entries})}
+		</td></tr>
+		`;
 	},
 
 	getSkillSummary (skillProfsArr, short, collectIn) {
@@ -1866,7 +1870,8 @@ EntryRenderer.background = {
 		if (!profGroupArr) return "";
 
 		function getEntry (s) {
-			s = Parser.translateKeyToDisplay(s);
+			if (hoverTag === "skill") 	s = Parser.SkillToDisplay(s);
+			else 						s = Parser.translateKeyToDisplay(s);
 			return short ? s.toTitleCase() : hoverTag ? `{@${hoverTag} ${s.toTitleCase()}}` : s.toTitleCase();
 		}
 
@@ -1905,10 +1910,12 @@ EntryRenderer.optionalfeature = {
 		prereqPatron: 2,
 		prereqSpell: 3,
 		prereqFeature: 4,
-		[undefined]: 5
+		prereqItem: 5,
+		prereqSpecial: 6,
+		[undefined]: 7
 	},
 	getPrerequisiteText: (prerequisites, listMode) => {
-		if (!prerequisites) return STR_NONE;
+		if (!prerequisites) return listMode ? "\u2014" : STR_NONE;
 
 		prerequisites.sort((a, b) => {
 			if (a.type === b.type) return SortUtil.ascSortLower(a.name, b.name);
@@ -1925,21 +1932,32 @@ EntryRenderer.optionalfeature = {
 		const outList = prerequisites.map(it => {
 			switch (it.type) {
 				case "prereqLevel":
-					return `${it.level}級`;
+					return listMode ? false : `${it.level}級`;
 				case "prereqPact":
 					return Parser.prereqPactToFull(it.entry);
 				case "prereqPatron":
-					return listMode ? `${Parser.prereqPatronToShort(it.entry)} patron` : `${it.entry} patron`;
+					var short_patron = Parser.prereqPatronToShort(it.entry);
+					return `${short_patron}${short_patron.match(/宗主$/) ? "" : "宗主"}`;
+					// return listMode ? `${Parser.SubclassToDisplay(Parser.prereqPatronToShort(it.entry))}宗主` : `${it.entry}宗主`;
 				case "prereqSpell":
 					return listMode ? it.entries.map(x => parse_prereq_spell(x)).join("; ") : it.entries.map(sp => Parser.prereqSpellToFull(sp)).joinConjunct(", ", " 或 ");
 				case "prereqFeature":
 					return listMode ? it.entries.map(x => x.toTitleCase()).join("; ") : it.entries.joinConjunct(", ", " 或 ");
+				case "prereqItem":
+					return listMode ? it.entries.map(x => x.toTitleCase()).join("; ") : it.entries.joinConjunct(", ", " 或 ");
+				case "prereqSpecial":
+					return listMode ? (it.entrySummary || it.entry) : it.entry;
 				default: // string
 					return it;
 			}
 		});
 
-		return listMode ? outList.join(", ") : `先決條件：${outList.join(", ")}`;
+		return listMode ? outList.filter(Boolean).join(", ") : `先決條件：${outList.join(", ")}`;
+	},
+
+	getListPrerequisiteLevelText (prerequisites) {
+		if (!prerequisites || !prerequisites.some(it => it.type === "prereqLevel")) return "\u2014";
+		return prerequisites.find(it => it.type === "prereqLevel").level;
 	},
 
 	getPreviouslyPrintedText (it) {
@@ -2024,6 +2042,7 @@ EntryRenderer.race = {
 			srCopy.forEach(s => {
 				const cpy = JSON.parse(JSON.stringify(race));
 				cpy._baseName = cpy.name;
+				cpy._baseENG_name = cpy.ENG_name; // haz add
 				cpy._baseSource = cpy.source;
 				delete cpy.subraces;
 
@@ -2033,7 +2052,7 @@ EntryRenderer.race = {
 					delete s.name;
 				}
 				if (s.ENG_name) {
-					cpy.ENG_name = `${cpy.ENG_name?cpy.ENG_name:cpy.name}  <st style='font-size:80%;'>${s.ENG_name}<st>`;
+					cpy.ENG_name = `${cpy.ENG_name?cpy.ENG_name:cpy.name} (${s.ENG_name})`;
 					delete s.ENG_name;
 				}
 				if (s.ability) {
@@ -2124,7 +2143,7 @@ EntryRenderer.deity = {
 		return `
 			${EntryRenderer.utils.getNameTr(deity, true, "", deity.title ? `, ${deity.title.toTitleCase()}` : "")}
 			<tr><td colspan="6">
-				<div class="summary-flexer">${EntryRenderer.deity.getOrderedParts(deity, `<p>`, `</p>`)}</div>
+				<div class="rend__compact-stat">${EntryRenderer.deity.getOrderedParts(deity, `<p>`, `</p>`)}</div>
 			</td>
 			${deity.entries ? `<tr><td colspan="6"><div class="border"></div></td></tr><tr><td colspan="6">${renderer.renderEntry({entries: deity.entries}, 1)}</td></tr>` : ""}
 		`;
@@ -2335,71 +2354,183 @@ EntryRenderer.cultboon = {
 };
 
 EntryRenderer.monster = {
+	_MERGE_REQUIRES_PRESERVE: {
+		legendaryGroup: true,
+		environment: true,
+		soundClip: true,
+		page: true
+	},
 	_mergeCache: null,
-	mergeCopy (monList, mon) {
+	async pMergeCopy (monList, mon, options) {
 		function search () {
 			return monList.find(it => {
 				EntryRenderer.monster._mergeCache[UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_BESTIARY](it)] = it;
-				return it.name === mon._copy.name && it.source === mon._copy.source;
+				return (it.name === mon._copy.name || it.ENG_name === mon._copy.name) && it.source === mon._copy.source;
 			});
-		}
-
-		function applyCopy (copy) {
-			function handleProp (prop, re, replace) {
-				if (mon[prop]) {
-					mon[prop].forEach(it => {
-						if (it.entries) it.entries = JSON.parse(JSON.stringify(it.entries).replace(re, replace.with));
-						if (it.headerEntries) it.headerEntries = JSON.parse(JSON.stringify(it.headerEntries).replace(re, replace.with));
-					})
-				}
-			}
-
-			Object.keys(copy).forEach(k => {
-				if (mon[k] === null) return delete mon[k];
-				if (mon[k] == null) mon[k] = MiscUtil.copy(copy[k]);
-			});
-
-			if (mon._copy.replacers) {
-				mon._copy.replacers.forEach(r => {
-					const re = new RegExp(r.replace, `g${r.flags || ""}`);
-					handleProp("action", re, r);
-					handleProp("reaction", re, r);
-					handleProp("trait", re, r);
-					handleProp("legendary", re, r);
-					handleProp("variant", re, r);
-					handleProp("spellcasting", re, r);
-				});
-			}
-
-			if (mon._copy.arrayModifiers) {
-				Object.entries(mon._copy.arrayModifiers).forEach(([k, v]) => {
-					switch (v.mode) {
-						case "prepend": {
-							mon[k] = v.data.concat(mon[k]);
-							break;
-						}
-						case "append": {
-							mon[k] = mon[k].concat(v.data.concat);
-							break;
-						}
-						default: throw new Error(`Unhandled mode: ${v.mode}`);
-					}
-				});
-			}
-
-			delete mon._copy;
 		}
 
 		if (mon._copy) {
 			const hash = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_BESTIARY](mon._copy);
 			if (!EntryRenderer.monster._mergeCache) {
 				EntryRenderer.monster._mergeCache = {};
-				applyCopy(search());
+				return EntryRenderer.monster._pApplyCopy(search(), mon, options);
 			} else {
-				if (EntryRenderer.monster._mergeCache[hash]) applyCopy(EntryRenderer.monster._mergeCache[hash]);
-				else applyCopy(search());
+				if (EntryRenderer.monster._mergeCache[hash]) return EntryRenderer.monster._pApplyCopy(MiscUtil.copy(EntryRenderer.monster._mergeCache[hash]), mon, options);
+				else return EntryRenderer.monster._pApplyCopy(search(), mon, options);
 			}
 		}
+	},
+
+	async _pApplyCopy (copyFrom, copyTo, options = {}) {
+		if (options.doKeepCopy) copyTo.__copy = MiscUtil.copy(copyFrom);
+
+		// convert everything to arrays
+		function normaliseMods (obj) {
+			Object.entries(obj._mod).forEach(([k, v]) => {
+				if (!(v instanceof Array)) obj._mod[k] = [v];
+			});
+		}
+
+		const copyMeta = copyTo._copy || {};
+
+		if (copyMeta._mod) normaliseMods(copyMeta);
+
+		// fetch and apply any external traits -- append them to existing copy mods where available
+		if (copyMeta._trait) {
+			const traitData = await DataUtil.loadJSON("data/bestiary/traits.json");
+			const traits = traitData.trait.find(t => t.name.toLowerCase() === copyMeta._trait.name.toLowerCase() && t.source.toLowerCase() === copyMeta._trait.source.toLowerCase());
+			if (!traits) throw new Error(`Could not find traits to apply with name "${copyMeta._trait.name}" and source "${copyMeta._trait.source}"`);
+
+			const toApply = MiscUtil.copy(traits.apply);
+			if (toApply) {
+				if (toApply._root) Object.entries(toApply._root).forEach(([k, v]) => copyTo[k] = v);
+
+				if (toApply._mod) {
+					normaliseMods(toApply);
+
+					if (copyMeta._mod) {
+						Object.entries(toApply._mod).forEach(([k, v]) => {
+							if (copyMeta._mod[k]) copyMeta._mod[k] = copyMeta._mod[k].concat(v);
+							else copyMeta._mod[k] = v;
+						});
+					} else copyMeta._mod = toApply._mod;
+				}
+			}
+
+			delete copyMeta._trait;
+		}
+
+		// copy over required values
+		if(copyFrom == null) console.log(copyTo);
+		Object.keys(copyFrom).forEach(k => {
+			if (copyTo[k] === null) return delete copyTo[k];
+			if (copyTo[k] == null) {
+				if (EntryRenderer.monster._MERGE_REQUIRES_PRESERVE[k]) {
+					if (copyTo._copy._preserve && copyTo._copy._preserve[k]) copyTo[k] = copyFrom[k];
+				} else copyTo[k] = copyFrom[k];
+			}
+		});
+
+		// mod helpers /////////////////
+		function doEnsureArray (obj, prop) {
+			if (!(obj[prop] instanceof Array)) obj[prop] = [obj[prop]];
+		}
+
+		function doMod_appendStr (modInfo, prop) {
+			if (copyTo[prop]) copyTo[prop] = `${copyTo[prop]}${modInfo.joiner || ""}${modInfo.str}`;
+			else copyTo[prop] = modInfo.str;
+		}
+
+		function doMod_replaceTxt (modInfo, prop) {
+			const re = new RegExp(modInfo.replace, `g${modInfo.flags || ""}`);
+			if (copyTo[prop]) {
+				copyTo[prop].forEach(it => {
+					if (it.entries) it.entries = JSON.parse(JSON.stringify(it.entries).replace(re, modInfo.with));
+					if (it.headerEntries) it.headerEntries = JSON.parse(JSON.stringify(it.headerEntries).replace(re, modInfo.with));
+				})
+			}
+		}
+
+		function doMod_prependArr (modInfo, prop) {
+			doEnsureArray(modInfo, "items");
+			copyTo[prop] = copyTo[prop] ? modInfo.items.concat(copyTo[prop]) : modInfo.items
+		}
+
+		function doMod_appendArr (modInfo, prop) {
+			doEnsureArray(modInfo, "items");
+			copyTo[prop] = copyTo[prop] ? copyTo[prop].concat(modInfo.items) : modInfo.items
+		}
+
+		function doMod_replaceArr (modInfo, prop) {
+			doEnsureArray(modInfo, "with");
+			const ixOld = copyTo[prop].findIndex(it => (it.name === modInfo.replace || it.ENG_name === modInfo.replace));
+			if (~ixOld) {
+				copyTo[prop].splice(ixOld, 1, ...modInfo.with);
+			} else throw new Error(`Could not find "${prop}" item with name "${modInfo.replace}" to replace`);
+		}
+
+		function doMod_removeArr (modInfo, prop) {
+			doEnsureArray(modInfo, "names");
+			modInfo.names.forEach(nameToRemove => {
+				const ixOld = copyTo[prop].findIndex(it => it.name === nameToRemove);
+				if (~ixOld) copyTo[prop].splice(ixOld, 1);
+				else throw new Error(`Could not find "${prop}" item with name "${nameToRemove}" to remove`);
+			});
+		}
+
+		function doMod_calculateProp (modInfo, prop) {
+			copyTo[prop] = copyTo[prop] || {};
+			const toExec = modInfo.formula.replace(/<\$([^$]+)\$>/g, (...m) => {
+				switch (m[1]) {
+					case "prof_bonus": return Parser.crToPb(copyTo.cr);
+					case "dex_mod": return Parser.getAbilityModNumber(copyTo.dex);
+					default: throw new Error(`Unknown variable "${m[1]}"`);
+				}
+			});
+			// eslint-disable-next-line no-eval
+			copyTo[prop][modInfo.prop] = eval(toExec);
+		}
+
+		function doMod (modInfos, ...properties) {
+			properties.forEach(prop => {
+				modInfos.forEach(modInfo => {
+					if (typeof modInfo === "string") {
+						switch (modInfo) {
+							case "remove": return delete copyTo[prop];
+							default: throw new Error(`Unhandled mode: ${modInfo}`);
+						}
+					} else {
+						switch (modInfo.mode) {
+							case "appendStr": return doMod_appendStr(modInfo, prop);
+							case "replaceTxt": return doMod_replaceTxt(modInfo, prop);
+							case "prependArr": return doMod_prependArr(modInfo, prop);
+							case "appendArr": return doMod_appendArr(modInfo, prop);
+							case "replaceArr": return doMod_replaceArr(modInfo, prop);
+							case "removeArr": return doMod_removeArr(modInfo, prop);
+							case "calculateProp": return doMod_calculateProp(modInfo, prop);
+							default: throw new Error(`Unhandled mode: ${modInfo.mode}`);
+						}
+					}
+				});
+			});
+		}
+
+		// apply mods
+		if (copyMeta._mod) {
+			Object.entries(copyMeta._mod).forEach(([prop, modInfos]) => {
+				try {
+					if (prop === "*") doMod(modInfos, "action", "reaction", "trait", "legendary", "variant", "spellcasting");
+					else doMod(modInfos, prop);
+				} catch (e) {
+					console.log("============");
+					console.warn(copyMeta);
+					console.warn(e);
+				}
+			});
+		}
+
+		// cleanup
+		delete copyTo._copy;
 	},
 
 	getLegendaryActionIntro: (mon) => {
@@ -2411,7 +2542,7 @@ EntryRenderer.monster = {
 		}
 
 		if (mon.legendaryHeader) {
-			return mon.legendaryHeader.map(line => renderer.renderEntry(line)).join("</p><p>");
+			return mon.legendaryHeader.map(line => EntryRenderer.getDefaultRenderer().renderEntry(line)).join("</p><p>");
 		} else {
 			const legendaryActions = mon.legendaryActions || 3;
 			const legendaryName = getCleanName();
@@ -2481,13 +2612,13 @@ EntryRenderer.monster = {
 		const pb = Parser.crToPb(dragon.cr);
 		const maxSpellLevel = Math.floor(Parser.crToNumber(dragon.cr) / 3);
 		const exampleSpells = getExampleSpells(maxSpellLevel, dragon.dragonCastingColor);
-		const levelString = maxSpellLevel === 0 ? `${chaMod === 1 ? "這個" : "這些"}法術為戲法。` : `${chaMod === 1 ? "這個" : "每個"}法術的環位不能超過 ${Parser.spLevelToFull(maxSpellLevel)}。`;
+		const levelString = maxSpellLevel === 0 ? `${chaMod === 1 ? "這個" : "這些"}法術為戲法。` : `${chaMod === 1 ? "這個" : "每個"}法術的環階不能超過 ${Parser.spLevelToFull(maxSpellLevel)}。`;
 		const v = {
 			type: "variant",
 			name: "龍類天生施法者",
 			entries: [
 				"做為天生的魔法生物，使用這個變體的龍類可以隨著年齡增長而掌握一些法術。",
-				"一個少年龍或更年長的龍天生就能夠施放等同於它魅力調整值數量的法術。每個法術每日只能施放一次，無需任何材料構材，且法術環位不能超過該龍挑戰等級的三分之一（向下取整）。該龍使用法術攻擊的加值等同於它的熟練加值 + 它的魅力調整值。該龍的法術豁免DC等同於8 + 它的熟練加值 + 它的魅力調整值。",
+				"一個少年龍或更年長的龍天生就能夠施放等同於它魅力調整值數量的法術。每個法術每日只能施放一次，無需任何材料構材，且法術環階不能超過該龍挑戰等級的三分之一（向下取整）。該龍使用法術攻擊的加值等同於它的熟練加值 + 它的魅力調整值。該龍的法術豁免DC等同於8 + 它的熟練加值 + 它的魅力調整值。",
 				`{@i 此龍天生就能施放${Parser.numberToText(chaMod)}種法術，${chaMod === 1 ? "" : "各項"}每日一次，且無需任何材料構材。${levelString}此龍的法術豁免DC為${pb + chaMod + 8}，且它使用此法術攻擊的加值為{@hit ${pb + chaMod}}。參見{@filter 法術頁面|spells|level=${[...new Array(maxSpellLevel + 1)].map((it, i) => i).join(";")}}以查閱此龍得以施放的法術列表。${exampleSpells ? "以下列出一些範例組合：" : ""}`
 			]
 		};
@@ -2541,7 +2672,7 @@ EntryRenderer.monster = {
 
 	getCompactRenderedStringSection (mon, renderer, title, key, depth) {
 		return mon[key] ? `
-		<tr class="mon-sect-header"><td colspan="6"><span>${title}</span></td></tr>
+		<tr class="mon__stat-header-underline"><td colspan="6"><span class="mon__sect-header-inner">${title}</span></td></tr>
 		<tr class="text compact"><td colspan="6">
 		${key === "legendary" && mon.legendary ? `<p>${EntryRenderer.monster.getLegendaryActionIntro(mon)}</p>` : ""}
 		${mon[key].map(it => it.rendered || renderer.renderEntry(it, depth)).join("")}
@@ -2609,10 +2740,10 @@ EntryRenderer.monster = {
 			</td></tr>
 			<tr><td colspan="6"><div class="border"></div></td></tr>
 			<tr><td colspan="6">
-				<div class="summary-flexer">
+				<div class="rend__compact-stat">
 					${mon.save ? `<p><b>豁免：</b> ${Object.keys(mon.save).map(s => EntryRenderer.monster.getSave(renderer, s, mon.save[s])).join(", ")}</p>` : ""}
 					${mon.skill ? `<p><b>技能：</b> ${EntryRenderer.monster.getSkillsString(renderer, mon)}</p>` : ""}
-					<p><b>感官：</b> ${mon.senses ? `${mon.senses}, ` : ""}被動感知 ${mon.passive}</p>
+					<p><b>感官：</b> ${mon.senses ? `${EntryRenderer.monster.getRenderedSenses(mon.senses)}, ` : ""}被動感知 ${mon.passive}</p>
 					<p><b>語言：</b> ${mon.languages ? mon.languages : `\u2014`}</p>
 					${mon.vulnerable ? `<p><b>傷害易傷：</b> ${Parser.monImmResToFull(mon.vulnerable)}</p>` : ""}
 					${mon.resist ? `<p><b>傷害抗性：</b> ${Parser.monImmResToFull(mon.resist)}</p>` : ""}
@@ -2648,7 +2779,7 @@ EntryRenderer.monster = {
 				return `Maximum: ${(num * faces) + mod}`;
 			} else return "";
 		}
-		if (hp.special) return hp.special;
+		if (hp.special != null) return hp.special;
 		if (/^\d+d1$/.exec(hp.formula)) {
 			return hp.average;
 		} else {
@@ -2760,16 +2891,19 @@ EntryRenderer.monster = {
 	},
 
 	getFluff (mon, legendaryMeta, fluffJson) {
-		const fluff = mon.fluff || (fluffJson || {monster: []}).monster.find(it => (it.name === mon.name && it.source === mon.source));
+		const predefined = EntryRenderer.utils.getPredefinedFluff(mon, "monsterFluff");
+
+		const fluff = predefined || (fluffJson || {monster: []}).monster.find(it => (it.name === mon.name || it.name === mon.ENG_name) && it.source === mon.source);
 
 		if (!fluff) return null;
 
 		// TODO is this good enough? Need to check for lair blocks which are not the last, and tag them with
 		//   "data": {"lairRegionals": true}, and insert the lair/regional text there if available (do the current "append" otherwise)
 		function addLegendaryGroup () {
-			if (!fluff.appliedLegendaryGroups || !fluff.appliedLegendaryGroups[mon.legendaryGroup]) {
-				fluff.appliedLegendaryGroups = fluff.appliedLegendaryGroups || {[mon.legendaryGroup]: true};
-				const thisGroup = legendaryMeta[mon.legendaryGroup];
+			if (!fluff.appliedLegendaryGroups || !fluff.appliedLegendaryGroups[mon.legendaryGroup.source] || !fluff.appliedLegendaryGroups[mon.legendaryGroup.source][mon.legendaryGroup.name]) {
+				fluff.appliedLegendaryGroups = fluff.appliedLegendaryGroups || {[mon.legendaryGroup.source]: {}};
+				fluff.appliedLegendaryGroups[mon.legendaryGroup.source][mon.legendaryGroup.name] = true;
+				const thisGroup = legendaryMeta[mon.legendaryGroup.source][mon.legendaryGroup.name];
 				const handleProp = (prop, name) => {
 					if (thisGroup[prop]) {
 						fluff.type = "section";
@@ -2789,7 +2923,7 @@ EntryRenderer.monster = {
 			}
 		}
 
-		if (fluff.entries && mon.legendaryGroup && legendaryMeta[mon.legendaryGroup]) {
+		if (fluff.entries && mon.legendaryGroup && (legendaryMeta[mon.legendaryGroup.source] || {})[mon.legendaryGroup.name]) {
 			addLegendaryGroup(mon.legendaryGroup);
 		}
 
@@ -2811,7 +2945,7 @@ EntryRenderer.monster = {
 				fluff.source = src;
 				if (images) fluff.images = images;
 
-				if (fluff.entries && mon.legendaryGroup && legendaryMeta[mon.legendaryGroup]) {
+				if (fluff.entries && mon.legendaryGroup && (legendaryMeta[mon.legendaryGroup.source] || {})[mon.legendaryGroup.name]) {
 					addLegendaryGroup();
 				}
 
@@ -2837,7 +2971,7 @@ EntryRenderer.monster = {
 				fluff._copy = cpy._copy;
 				fluff._appendCopy = cpy._appendCopy;
 
-				if (fluff.entries && mon.legendaryGroup && legendaryMeta[mon.legendaryGroup]) {
+				if (fluff.entries && mon.legendaryGroup && (legendaryMeta[mon.legendaryGroup.source] || {})[mon.legendaryGroup.name]) {
 					addLegendaryGroup();
 				}
 
@@ -2850,9 +2984,13 @@ EntryRenderer.monster = {
 		}
 
 		return fluff;
+	},
+
+	getRenderedSenses (senses) {
+		console.log("OAO")
+		return EntryRenderer.getDefaultRenderer().renderEntry(senses.replace(/(^|)(震顫感知|盲視|真實視覺|黑暗視覺)(\d|$)/gi, (...m) => `${m[1]}{@sense ${m[2]}}${m[3]}`));
 	}
 };
-DataUtil.dependencyMergers[UrlUtil.PG_BESTIARY] = EntryRenderer.monster.mergeCopy;
 
 EntryRenderer.item = {
 	getDamageAndPropertiesText: function (item) {
@@ -2901,11 +3039,11 @@ EntryRenderer.item = {
 	},
 
 	getTypeRarityAndAttunementText (item) {
-		return [
+		const typeRarity = [
 			item.typeText === "Other" ? "" : item.typeText.trim(),
-			[Parser.ItemTierToDisplay(item.tier), (item.rarity && EntryRenderer.item.doRenderRarity(item.rarity) ? Parser.translateItemKeyToDisplay(item.rarity) : "")].map(it => (it || "").trim()).filter(it => it).join(", "),
-			(item.reqAttune || "").trim()
-		];
+			[Parser.ItemTierToDisplay(item.tier), (item.rarity && EntryRenderer.item.doRenderRarity(item.rarity) ? Parser.translateItemKeyToDisplay(item.rarity) : "")].map(it => (it || "").trim()).filter(it => it).join(", ")
+		].filter(Boolean).join(", ");
+		return item.reqAttune ? `${typeRarity} ${item.reqAttune}` : typeRarity
 	},
 
 	getCompactRenderedString: function (item) {
@@ -2915,8 +3053,7 @@ EntryRenderer.item = {
 
 		renderStack.push(EntryRenderer.utils.getNameTr(item, true));
 
-		const typeRarityAttunement = EntryRenderer.item.getTypeRarityAndAttunementText(item).filter(Boolean).join(", ");
-		renderStack.push(`<tr><td class="typerarityattunement" colspan="6">${typeRarityAttunement}</td>`);
+		renderStack.push(`<tr><td class="typerarityattunement" colspan="6">${EntryRenderer.item.getTypeRarityAndAttunementText(item)}</td>`);
 
 		const [damage, damageType, propertiesTxt] = EntryRenderer.item.getDamageAndPropertiesText(item);
 		renderStack.push(`<tr><td colspan="2">${item.value ? Parser.itemValueToDisplay(item.value) + (item.weight ? ", " : "") : ""}${Parser.itemWeightToFull(item)}</td><td class="damageproperties" colspan="4">${damage} ${damageType} ${propertiesTxt}</tr>`);
@@ -2990,8 +3127,8 @@ EntryRenderer.item = {
 		const magicVariantUrl = urls.magicvariants || `${EntryRenderer.getDefaultRenderer().baseUrl}data/magicvariants.json`;
 
 		const itemList = await pLoadItems();
-		const basicItems = await pAddBasicItemsAndTypes();
-		const genericVariants = await pAddGenericVariants();
+		const basicItems = await EntryRenderer.item._pGetAndProcBasicItems(await DataUtil.loadJSON(basicItemUrl));
+		const genericVariants = await EntryRenderer.item._pGetAndProcGenericVariants(await DataUtil.loadJSON(magicVariantUrl));
 		const genericAndSpecificVariants = EntryRenderer.item._createSpecificVariants(basicItems, genericVariants);
 		const allItems = itemList.concat(basicItems).concat(genericAndSpecificVariants);
 		EntryRenderer.item._enhanceItems(allItems);
@@ -3005,20 +3142,18 @@ EntryRenderer.item = {
 			itemData.itemGroup.forEach(it => it._isItemGroup = true);
 			return [...items, ...itemData.itemGroup];
 		}
+	},
 
-		async function pAddBasicItemsAndTypes () {
-			const basicItemData = await DataUtil.loadJSON(basicItemUrl);
-			EntryRenderer.item._addBasicPropertiesAndTypes(basicItemData);
-			await EntryRenderer.item._pAddBrewPropertiesAndTypes();
-			return basicItemData.basicitem;
-		}
+	async _pGetAndProcBasicItems (basicItemData) {
+		EntryRenderer.item._addBasicPropertiesAndTypes(basicItemData);
+		await EntryRenderer.item._pAddBrewPropertiesAndTypes();
+		return basicItemData.basicitem;
+	},
 
-		async function pAddGenericVariants () {
-			const variantData = await DataUtil.loadJSON(magicVariantUrl);
-			const genericVariants = variantData.variant;
-			genericVariants.forEach(EntryRenderer.item._genericVariants_addInheritedPropertiesToSelf);
-			return genericVariants;
-		}
+	async _pGetAndProcGenericVariants (variantData) {
+		const genericVariants = variantData.variant;
+		genericVariants.forEach(EntryRenderer.item._genericVariants_addInheritedPropertiesToSelf);
+		return genericVariants;
 	},
 
 	_createSpecificVariants (basicItems, genericVariants) {
@@ -3302,6 +3437,7 @@ EntryRenderer.item = {
 
 	_isRefPopulated: false,
 	populatePropertyAndTypeReference: () => {
+		if (EntryRenderer.item._isRefPopulated) return Promise.resolve();
 		return new Promise((resolve, reject) => {
 			DataUtil.loadJSON(`${EntryRenderer.getDefaultRenderer().baseUrl}data/basicitems.json`)
 				.then(data => {
@@ -3483,7 +3619,7 @@ EntryRenderer.ship = {
 		const renderer = EntryRenderer.getDefaultRenderer();
 
 		function getSectionTitle (title) {
-			return `<tr class="stat__header_underline"><td colspan="6"><span>${title}</span></td></tr>`
+			return `<tr class="mon__stat-header-underline"><td colspan="6"><span>${title}</span></td></tr>`
 		}
 
 		function getSectionHpPart (sect, each) {
@@ -3497,7 +3633,7 @@ EntryRenderer.ship = {
 		function getControlSection (control) {
 			if (!control) return "";
 			return `
-				<tr class="stat__header_underline"><td colspan="6"><span>Control: ${control.name}</span></td></tr>
+				<tr class="mon__stat-header-underline"><td colspan="6"><span>Control: ${control.name}</span></td></tr>
 				<tr><td colspan="6">
 				${getSectionHpPart(control)}
 				<div>${renderer.renderEntry({entries: control.entries})}</div>
@@ -3523,7 +3659,7 @@ EntryRenderer.ship = {
 			}
 
 			return `
-				<tr class="stat__header_underline"><td colspan="6"><span>${move.isControl ? `Control and ` : ""}Movement: ${move.name}</span></td></tr>
+				<tr class="mon__stat-header-underline"><td colspan="6"><span>${move.isControl ? `Control and ` : ""}Movement: ${move.name}</span></td></tr>
 				<tr><td colspan="6">
 				${getSectionHpPart(move)}
 				${move.locomotion.map(getLocomotionSection)}
@@ -3533,7 +3669,7 @@ EntryRenderer.ship = {
 
 		function getWeaponSection (weap) {
 			return `
-				<tr class="stat__header_underline"><td colspan="6"><span>Weapons: ${weap.name}${weap.count ? ` (${weap.count})` : ""}</span></td></tr>
+				<tr class="mon__stat-header-underline"><td colspan="6"><span>Weapons: ${weap.name}${weap.count ? ` (${weap.count})` : ""}</span></td></tr>
 				<tr><td colspan="6">
 				${getSectionHpPart(weap, !!weap.count)}
 				${renderer.renderEntry({entries: weap.entries})}
@@ -3543,7 +3679,7 @@ EntryRenderer.ship = {
 
 		function getOtherSection (oth) {
 			return `
-				<tr class="stat__header_underline"><td colspan="6"><span>${oth.name}</span></td></tr>
+				<tr class="mon__stat-header-underline"><td colspan="6"><span>${oth.name}</span></td></tr>
 				<tr><td colspan="6">
 				${getSectionHpPart(oth)}
 				${renderer.renderEntry({entries: oth.entries})}
@@ -3613,12 +3749,34 @@ EntryRenderer.hover = {
 	createOnMouseHover (entries, title = "Homebrew") {
 		const id = EntryRenderer.hover._lastMouseHoverId++;
 		EntryRenderer.hover._mouseHovers[id] = {data: {hoverTitle: title}, entries: MiscUtil.copy(entries)};
-		return `onmouseover="EntryRenderer.hover.mouseOverHoverTooltip(event, this, ${id})"`;
+		return `onmouseover="EntryRenderer.hover.mouseOverHoverTooltip(event, this, ${id})" ${EntryRenderer.hover._getPreventTouchString()}`;
 	},
 
 	createOnMouseHoverEntry (entry, isBookContent) {
 		const id = EntryRenderer.hover.__initOnMouseHoverEntry(entry);
-		return `onmouseover="EntryRenderer.hover.mouseOverHoverTooltip(event, this, ${id}, ${!!isBookContent})"`;
+		return `onmouseover="EntryRenderer.hover.mouseOverHoverTooltip(event, this, ${id}, ${!!isBookContent})" ${EntryRenderer.hover._getPreventTouchString()}`;
+	},
+
+	_getPreventTouchString () {
+		return `ontouchstart="EntryRenderer.hover.handleTouchStart(event, this)"`
+	},
+
+	handleTouchStart (evt, ele) {
+		// on large touchscreen devices only (e.g. iPads)
+		if (!EntryRenderer.hover._isSmallScreen()) {
+			// cache the link location and redirect it to void
+			$(ele).data("href", $(ele).data("href") || $(ele).attr("href"));
+			$(ele).attr("href", STR_VOID_LINK);
+			// restore the location after 100ms; if the user long-presses the link will be restored by the time they
+			//   e.g. attempt to open a new tab
+			setTimeout(() => {
+				const data = $(ele).data("href");
+				if (data) {
+					$(ele).attr("href", data);
+					$(ele).data("href", null);
+				}
+			}, 100);
+		}
 	},
 
 	__initOnMouseHoverEntry (entry) {
@@ -3706,21 +3864,8 @@ EntryRenderer.hover = {
 						if (officialSource) {
 							DataUtil.loadJSON(`${EntryRenderer.getDefaultRenderer().baseUrl}${baseUrl}${officialSource}`)
 								.then((data) => {
-									const dependencies = MiscUtil.getProperty(data, "_meta", "dependencies");
-									if (dependencies && dependencies.length) {
-										const dependencyUrls = dependencies.map(d => `${EntryRenderer.getDefaultRenderer().baseUrl}${baseUrl}${officialSources[d.toLowerCase()]}`);
-										Promise.all(dependencyUrls.map(url => DataUtil.loadJSON(url))).then(depDatas => {
-											depDatas.forEach(data => populate(data, listProp)); // might as well populate the hover cache for these...
-											const depList = depDatas.reduce((a, b) => ({[listProp]: a[listProp].concat(b[listProp])}), ({[listProp]: []}))[listProp];
-											const mergeFn = DataUtil.dependencyMergers[page];
-											data[listProp].forEach(it => mergeFn(depList, it));
-											populate(data, listProp);
-											callbackFn();
-										});
-									} else {
-										populate(data, listProp);
-										callbackFn();
-									}
+									populate(data, listProp);
+									callbackFn();
 								});
 						} else {
 							callbackFn(); // source to load is 3rd party, which was already handled
@@ -3945,7 +4090,8 @@ EntryRenderer.hover = {
 		const fromBottom = vpOffsetT > $(window).height() / 2;
 		const fromRight = vpOffsetL > $(window).width() / 2;
 
-		const $hov = $(`<div class="hoverbox" style="right: -600px"/>`);
+		const $hov = $(`<div class="hwin" style="right: -600px"/>`);
+		const $wrpStats = $(`<div class="hwin__wrp-table"/>`);
 
 		const $body = $(`body`);
 		const $ele = $(ele);
@@ -3994,73 +4140,178 @@ EntryRenderer.hover = {
 		});
 
 		let drag = {};
-		const $brdrTop = $(`<div class="hoverborder top ${isBookContent ? "hoverborder-book" : ""}" ${permanent ? `data-perm="true"` : ""} data-hover-id="${hoverId}"></div>`)
-			.on("mousedown", (evt) => {
-				$hov.css({
-					"z-index": 201, // temporarily display it on top
-					"animation": "initial"
-				});
-				drag.on = true;
-				drag.startX = evt.clientX;
-				drag.startY = evt.clientY;
-				drag.baseTop = parseFloat($hov.css("top"));
-				drag.baseLeft = parseFloat($hov.css("left"));
-			}).on("click", () => {
-				$hov.css("z-index", ""); // remove the temporary z-boost...
-				$hov.parent().append($hov); // ...and properly bring it to the front
-			}).on("contextmenu", (evt) => {
+		function handleDragMousedown (evt, type) {
+			if (evt.which === 0 || evt.which === 1) evt.preventDefault();
+			$hov.css({
+				"z-index": 201, // temporarily display it on top
+				"animation": "initial"
+			});
+			drag.type = type;
+			drag.startX = EntryRenderer.hover._getClientX(evt);
+			drag.startY = EntryRenderer.hover._getClientY(evt);
+			drag.baseTop = parseFloat($hov.css("top"));
+			drag.baseLeft = parseFloat($hov.css("left"));
+			drag.baseHeight = $wrpStats.height();
+			drag.baseWidth = $hov.width();
+			if (type < 9) {
+				$wrpStats.css("max-height", "initial");
+				$hov.css("max-width", "initial");
+			}
+		}
+		function handleDragClick () {
+			$hov.css("z-index", ""); // remove the temporary z-boost...
+			$hov.parent().append($hov); // ...and properly bring it to the front
+		}
+
+		const $brdrTopRightResize = $(`<div class="hoverborder__resize-ne"/>`)
+			.on("mousedown touchstart", (evt) => handleDragMousedown(evt, 1))
+			.on("click", handleDragClick);
+
+		const $brdrRightResize = $(`<div class="hoverborder__resize-e"/>`)
+			.on("mousedown touchstart", (evt) => handleDragMousedown(evt, 2))
+			.on("click", handleDragClick);
+
+		const $brdrBottomRightResize = $(`<div class="hoverborder__resize-se"/>`)
+			.on("mousedown touchstart", (evt) => handleDragMousedown(evt, 3))
+			.on("click", handleDragClick);
+
+		const $brdrBtm = $(`<div class="hoverborder hoverborder--btm ${isBookContent ? "hoverborder-book" : ""}"><div class="hoverborder__resize-s"/></div>`)
+			.on("mousedown touchstart", (evt) => handleDragMousedown(evt, 4))
+			.on("click", handleDragClick);
+
+		const $brdrBtmLeftResize = $(`<div class="hoverborder__resize-sw"/>`)
+			.on("mousedown touchstart", (evt) => handleDragMousedown(evt, 5))
+			.on("click", handleDragClick);
+
+		const $brdrLeftResize = $(`<div class="hoverborder__resize-w"/>`)
+			.on("mousedown touchstart", (evt) => handleDragMousedown(evt, 6))
+			.on("click", handleDragClick);
+
+		const $brdrTopLeftResize = $(`<div class="hoverborder__resize-nw"/>`)
+			.on("mousedown touchstart", (evt) => handleDragMousedown(evt, 7))
+			.on("click", handleDragClick);
+
+		const $brdrTopResize = $(`<div class="hoverborder__resize-n"/>`)
+			.on("mousedown touchstart", (evt) => handleDragMousedown(evt, 8))
+			.on("click", handleDragClick);
+
+		const $brdrTop = $(`<div class="hoverborder hoverborder--top ${isBookContent ? "hoverborder-book" : ""}" ${permanent ? `data-perm="true"` : ""} data-hover-id="${hoverId}"/>`)
+			.on("mousedown touchstart", (evt) => handleDragMousedown(evt, 9))
+			.on("click", handleDragClick)
+			.on("contextmenu", (evt) => {
 				if (!evt.ctrlKey) ContextUtil.handleOpenContextMenu(evt, ele, "hoverBorder");
 			});
-		const mouseUpId = `mouseup.${hoverId}`;
-		const mouseMoveId = `mousemove.${hoverId}`;
+
+		const mouseUpId = `mouseup.${hoverId} touchend.${hoverId}`;
+		const mouseMoveId = `mousemove.${hoverId} touchmove.${hoverId}`;
 		const resizeId = `resize.${hoverId}`;
 
 		function isOverHoverTarget (evt, target) {
-			return evt.clientX >= target.left && evt.clientX <= target.left + target.width && evt.clientY >= target.top && evt.clientY <= target.top + target.height;
+			return EntryRenderer.hover._getClientX(evt) >= target.left &&
+				EntryRenderer.hover._getClientX(evt) <= target.left + target.width &&
+				EntryRenderer.hover._getClientY(evt) >= target.top &&
+				EntryRenderer.hover._getClientY(evt) <= target.top + target.height;
+		}
+
+		function handleNorthDrag (evt) {
+			const diffY = Math.max(drag.startY - EntryRenderer.hover._getClientY(evt), 80 - drag.baseHeight); // prevent <80 height, as this will cause the box to move downwards
+			$wrpStats.css("height", drag.baseHeight + diffY);
+			$hov.css("top", drag.baseTop - diffY);
+			drag.startY = EntryRenderer.hover._getClientY(evt);
+			drag.baseHeight = $wrpStats.height();
+			drag.baseTop = parseFloat($hov.css("top"));
+		}
+
+		function handleEastDrag (evt) {
+			const diffX = drag.startX - EntryRenderer.hover._getClientX(evt);
+			$hov.css("width", drag.baseWidth - diffX);
+			drag.startX = EntryRenderer.hover._getClientX(evt);
+			drag.baseWidth = $hov.width();
+		}
+
+		function handleSouthDrag (evt) {
+			const diffY = drag.startY - EntryRenderer.hover._getClientY(evt);
+			$wrpStats.css("height", drag.baseHeight - diffY);
+			drag.startY = EntryRenderer.hover._getClientY(evt);
+			drag.baseHeight = $wrpStats.height();
+		}
+
+		function handleWestDrag (evt) {
+			const diffX = Math.max(drag.startX - EntryRenderer.hover._getClientX(evt), 150 - drag.baseWidth);
+			$hov.css("width", drag.baseWidth + diffX);
+			$hov.css("left", drag.baseLeft - diffX);
+			drag.startX = EntryRenderer.hover._getClientX(evt);
+			drag.baseWidth = $hov.width();
+			drag.baseLeft = parseFloat($hov.css("left"));
 		}
 
 		$(document)
 			.on(mouseUpId, (evt) => {
-				if (drag.on) {
-					drag.on = false;
+				if (drag.type) {
+					if (drag.type < 9) {
+						$wrpStats.css("max-height", "");
+						$hov.css("max-width", "");
+					}
 					adjustPosition();
 
-					// handle DM screen integration
-					if (this._dmScreen) {
-						const panel = this._dmScreen.getPanelPx(evt.clientX, evt.clientY);
-						if (!panel) return;
-						this._dmScreen.setHoveringPanel(panel);
-						const target = panel.getAddButtonPos();
-
-						if (isOverHoverTarget(evt, target)) {
-							if (preLoaded && preLoaded._isScaledCr != null) panel.doPopulate_StatsScaledCr(page, source, hash, preLoaded.cr.cr || preLoaded.cr);
-							else panel.doPopulate_Stats(page, source, hash);
-							altTeardown();
+					if (drag.type === 9) {
+						// handle mobile button touches
+						if (evt.target.classList.contains("hvr__close") || evt.target.classList.contains("hvr__popout")) {
+							evt.preventDefault();
+							drag.type = 0;
+							$(evt.target).click();
+							return;
 						}
-						this._dmScreen.resetHoveringButton();
+
+						// handle DM screen integration
+						if (this._dmScreen) {
+							const panel = this._dmScreen.getPanelPx(EntryRenderer.hover._getClientX(evt), EntryRenderer.hover._getClientY(evt));
+							if (!panel) return;
+							this._dmScreen.setHoveringPanel(panel);
+							const target = panel.getAddButtonPos();
+
+							if (isOverHoverTarget(evt, target)) {
+								if (preLoaded && preLoaded._isScaledCr != null) panel.doPopulate_StatsScaledCr(page, source, hash, preLoaded.cr.cr || preLoaded.cr);
+								else panel.doPopulate_Stats(page, source, hash);
+								altTeardown();
+							}
+							this._dmScreen.resetHoveringButton();
+						}
 					}
+					drag.type = 0;
 				}
 			})
 			.on(mouseMoveId, (evt) => {
-				if (drag.on) {
-					const diffX = drag.startX - evt.clientX;
-					const diffY = drag.startY - evt.clientY;
-					$hov.css("left", drag.baseLeft - diffX);
-					$hov.css("top", drag.baseTop - diffY);
-					drag.startX = evt.clientX;
-					drag.startY = evt.clientY;
-					drag.baseTop = parseFloat($hov.css("top"));
-					drag.baseLeft = parseFloat($hov.css("left"));
+				switch (drag.type) {
+					case 1: handleNorthDrag(evt); handleEastDrag(evt); break;
+					case 2: handleEastDrag(evt); break;
+					case 3: handleSouthDrag(evt); handleEastDrag(evt); break;
+					case 4: handleSouthDrag(evt); break;
+					case 5: handleSouthDrag(evt); handleWestDrag(evt); break;
+					case 6: handleWestDrag(evt); break;
+					case 7: handleNorthDrag(evt); handleWestDrag(evt); break;
+					case 8: handleNorthDrag(evt); break;
+					case 9: {
+						const diffX = drag.startX - EntryRenderer.hover._getClientX(evt);
+						const diffY = drag.startY - EntryRenderer.hover._getClientY(evt);
+						$hov.css("left", drag.baseLeft - diffX);
+						$hov.css("top", drag.baseTop - diffY);
+						drag.startX = EntryRenderer.hover._getClientX(evt);
+						drag.startY = EntryRenderer.hover._getClientY(evt);
+						drag.baseTop = parseFloat($hov.css("top"));
+						drag.baseLeft = parseFloat($hov.css("left"));
 
-					// handle DM screen integration
-					if (this._dmScreen) {
-						const panel = this._dmScreen.getPanelPx(evt.clientX, evt.clientY);
-						if (!panel) return;
-						this._dmScreen.setHoveringPanel(panel);
-						const target = panel.getAddButtonPos();
+						// handle DM screen integration
+						if (this._dmScreen) {
+							const panel = this._dmScreen.getPanelPx(EntryRenderer.hover._getClientX(evt), EntryRenderer.hover._getClientY(evt));
+							if (!panel) return;
+							this._dmScreen.setHoveringPanel(panel);
+							const target = panel.getAddButtonPos();
 
-						if (isOverHoverTarget(evt, target)) this._dmScreen.setHoveringButton(panel);
-						else this._dmScreen.resetHoveringButton();
+							if (isOverHoverTarget(evt, target)) this._dmScreen.setHoveringButton(panel);
+							else this._dmScreen.resetHoveringButton();
+						}
+						break;
 					}
 				}
 			});
@@ -4073,11 +4324,14 @@ EntryRenderer.hover = {
 			const curState = $brdrTop.attr("data-display-title");
 			$brdrTop.attr("data-display-title", curState === "false");
 			$brdrTop.attr("data-perm", true);
+			$hov.toggleClass("hwin--minified", curState === "false");
 			delete EntryRenderer.hover._active[hoverId];
 		});
 		$brdrTop.append($hovTitle);
 		const $brdTopRhs = $(`<div class="flex" style="margin-left: auto;"/>`).appendTo($brdrTop);
-		const $btnPopout = $(`<span class="top-border-icon glyphicon glyphicon-new-window" style="margin-right: 3px;"></span>`)
+		// TODO fix dice rollers?
+		// TODO fix hover links?
+		const $btnPopout = $(`<span class="top-border-icon glyphicon glyphicon-new-window hvr__popout" style="margin-right: 3px;" title="Open as Popup Window"></span>`)
 			.on("click", (evt) => {
 				evt.stopPropagation();
 				const h = $stats.height();
@@ -4087,30 +4341,41 @@ EntryRenderer.hover = {
 					`width=600,height=${h}location=0,menubar=0,status=0,titlebar=0,toolbar=0`
 				);
 				win.document.write(`
-					<html class="${styleSwitcher.getActiveStyleSheet() === StyleSwitcher.STYLE_NIGHT ? StyleSwitcher.NIGHT_CLASS : ""}"><head>
+					<!DOCTYPE html>
+					<html lang="en" class="${styleSwitcher.getActiveStyleSheet() === StyleSwitcher.STYLE_NIGHT ? StyleSwitcher.NIGHT_CLASS : ""}"><head>
+						<meta name="viewport" content="width=device-width, initial-scale=1">
 						<title>${toRender._displayName || toRender.name}</title>
 						<link rel="stylesheet" href="css/bootstrap.css">
 						<link rel="stylesheet" href="css/jquery-ui.css">
 						<link rel="stylesheet" href="css/jquery-ui-slider-pips.css">
 						<link rel="stylesheet" href="css/style.css">
 						<link rel="icon" href="favicon.png">
+						<style>
+							html, body { width: 100%; height: 100%; }
+							body { overflow-y: scroll; }
+						</style>
 					</head><body>
-					<div class="hoverbox hoverbox--popout" style="max-width: initial; max-height: initial; box-shadow: initial;">
+					<div class="hwin hoverbox--popout" style="max-width: initial; max-height: initial; box-shadow: initial;">
 					${$stats[0].outerHTML}
 					</div>
 					</body></html>
 				`);
 				altTeardown();
-			}); // .appendTo($brdTopRhs); // FIXME produces strange results
-		const $btnClose = $(`<span class="delete-icon glyphicon glyphicon-remove hvr__close"></span>`)
+			}).appendTo($brdTopRhs);
+		const $btnClose = $(`<span class="delete-icon glyphicon glyphicon-remove hvr__close" title="Close"></span>`)
 			.on("click", (evt) => {
 				evt.stopPropagation();
 				altTeardown();
 			}).appendTo($brdTopRhs);
-		const $wrpStats = $(`<div class="hoverbox__table_wrp"/>`).append($stats);
-		$hov.append($brdrTop)
+		$wrpStats.append($stats);
+
+		$hov
+			.append($brdrTopResize).append($brdrTopRightResize).append($brdrRightResize).append($brdrBottomRightResize)
+			.append($brdrBtmLeftResize).append($brdrLeftResize).append($brdrTopLeftResize)
+
+			.append($brdrTop)
 			.append($wrpStats)
-			.append(`<div class="hoverborder ${isBookContent ? "hoverborder-book" : ""}"></div>`);
+			.append($brdrBtm);
 
 		$body.append($hov);
 		if (!permanent) {
@@ -4123,11 +4388,11 @@ EntryRenderer.hover = {
 			};
 		}
 
-		if (fromBottom) $hov.css("top", vpOffsetT - $hov.height());
-		else $hov.css("top", vpOffsetT + $(ele).height() + 1);
+		if (fromBottom) $hov.css("top", vpOffsetT - ($hov.height() + 10));
+		else $hov.css("top", vpOffsetT + $(ele).height() + 10);
 
-		if (fromRight) $hov.css("left", (clientX || vpOffsetL) - ($hov.width() + 6));
-		else $hov.css("left", (clientX || (vpOffsetL + $(ele).width())) + 6);
+		if (fromRight) $hov.css("left", (clientX || vpOffsetL) - ($hov.width() + 10));
+		else $hov.css("left", (clientX || (vpOffsetL + $(ele).width())) + 10);
 
 		adjustPosition(true);
 
@@ -4226,6 +4491,7 @@ EntryRenderer.hover = {
 	// used in hover strings
 	mouseOverHoverTooltip (evt, ele, id, isBookContent) {
 		const data = EntryRenderer.hover._mouseHovers[id];
+		if (data == null) return setTimeout(() => { throw new Error(`No "data" found for hover ID ${id}`) }); // this should never occur, but does on other platforms
 		EntryRenderer.hover.show({evt, ele, page: "hover", source: data, hash: "", isBookContent});
 	},
 
@@ -4272,6 +4538,20 @@ EntryRenderer.hover = {
 		}
 	},
 
+	_isSmallScreen () {
+		const outerWindow = (() => {
+			let loops = 100;
+			let curr = window.top;
+			while (window.parent !== curr) {
+				curr = window.parent;
+				if (loops-- < 0) return window; // safety precaution
+			}
+			return curr;
+		})();
+
+		return $(outerWindow).width() <= 768;
+	},
+
 	_BAR_HEIGHT: 16,
 	_showInProgress: false,
 	_hoverId: 1,
@@ -4289,18 +4569,8 @@ EntryRenderer.hover = {
 
 		EntryRenderer.hover._doInit();
 
-		const outerWindow = (() => {
-			let loops = 100;
-			let curr = window.top;
-			while (window.parent !== curr) {
-				curr = window.parent;
-				if (loops-- < 0) return window; // safety precaution
-			}
-			return curr;
-		})();
-
 		// don't show on narrow screens
-		if ($(outerWindow).width() <= 768 && !evt.shiftKey) return;
+		if (EntryRenderer.hover._isSmallScreen() && !evt.shiftKey) return;
 
 		let hoverId;
 		if (isPopout) {
@@ -4332,7 +4602,7 @@ EntryRenderer.hover = {
 			cSource: source,
 			cHash: hash,
 			permanent: evt.shiftKey,
-			clientX: evt.clientX,
+			clientX: EntryRenderer.hover._getClientX(evt),
 			isBookContent
 		};
 
@@ -4402,13 +4672,18 @@ EntryRenderer.hover = {
 	doPopoutPreloaded ($btnPop, it, clientX) {
 		$btnPop.attr("data-hover-active", false);
 		EntryRenderer.hover.mouseOverPreloaded({shiftKey: true, clientX: clientX}, $btnPop.get(0), it, UrlUtil.getCurrentPage(), it.source, UrlUtil.autoEncodeHash(it), true);
-	}
+	},
+
+	// helpers to get clientX/Y on mobile
+	_getClientX (evt) { return evt.touches && evt.touches.length ? evt.touches[0].clientX : evt.clientX; },
+	_getClientY (evt) { return evt.touches && evt.touches.length ? evt.touches[0].clientY : evt.clientY; }
 };
 
 EntryRenderer.dice = {
 	SYSTEM_USER: {
 		name: "幸運女神 艾梵卓" // Avandra, goddess of luck
 	},
+	POS_INFINITE: 100000000000000000000, // larger than this, and we start to see "e" numbers appear
 
 	_$wrpRoll: null,
 	_$minRoll: null,
@@ -4421,13 +4696,13 @@ EntryRenderer.dice = {
 	_storage: null,
 
 	_panel: null,
-	bindDmScreenPanel (panel) {
+	bindDmScreenPanel (panel, title) {
 		if (EntryRenderer.dice._panel) { // there can only be one roller box
 			EntryRenderer.dice.unbindDmScreenPanel();
 		}
 		EntryRenderer.dice._showBox();
 		EntryRenderer.dice._panel = panel;
-		panel.doPopulate_Rollbox();
+		panel.doPopulate_Rollbox(title);
 	},
 
 	unbindDmScreenPanel () {
@@ -4450,6 +4725,19 @@ EntryRenderer.dice = {
 		if (tree) {
 			return tree.evl({});
 		} else return null;
+	},
+
+	parseAverage (str) {
+		if (!str || !str.trim()) return null;
+		const tree = EntryRenderer.dice._parse2(str);
+		if (tree) {
+			return tree.avg({});
+		} else return null;
+	},
+
+	parseToTree (str) {
+		if (!str || !str.trim()) return null;
+		return EntryRenderer.dice._parse2(str);
 	},
 
 	_showBox: () => {
@@ -4583,36 +4871,68 @@ EntryRenderer.dice = {
 			ContextUtil.handleOpenContextMenu(evt, ele, EntryRenderer.dice._contextRollLabel, (choseOption) => {
 				if (!choseOption) resolve();
 			});
-		}) : Promise.resolve(rollData)).then(chosenRollData => {
+		}) : Promise.resolve(rollData)).then(async chosenRollData => {
 			if (!chosenRollData) return;
 
+			const rePrompt = /#\$prompt_number:?([^$]*)\$#/g;
+			const results = [];
+			let m;
+			while ((m = rePrompt.exec(chosenRollData.toRoll))) {
+				const optionsRaw = m[1];
+				const opts = {};
+				if (optionsRaw) {
+					const spl = optionsRaw.split(",");
+					spl.map(it => it.trim()).forEach(part => {
+						const [k, v] = part.split("=").map(it => it.trim());
+						switch (k) {
+							case "min":
+							case "max":
+								opts[k] = Number(v); break;
+							default:
+								opts[k] = v; break;
+						}
+					});
+				}
+
+				if (opts.min == null) opts.min = 0;
+				if (opts.max == null) opts.max = EntryRenderer.dice.POS_INFINITE;
+				if (opts.default == null) opts.default = 0;
+
+				const input = await InputUiUtil.pGetUserNumber(opts);
+				if (input == null) return;
+				results.push(input);
+			}
+
+			const rollDataCpy = MiscUtil.copy(chosenRollData);
+			rePrompt.lastIndex = 0;
+			rollDataCpy.toRoll = rollDataCpy.toRoll.replace(rePrompt, () => results.shift());
+
 			(rollData.prompt ? new Promise(resolve => {
-				const sortedKeys = Object.keys(chosenRollData.prompt.options).sort(SortUtil.ascSortLower);
+				const sortedKeys = Object.keys(rollDataCpy.prompt.options).sort(SortUtil.ascSortLower);
 
 				ContextUtil.doInitContextMenu(EntryRenderer.dice._contextPromptLabel, (mostRecentEvt, _1, _2, _3, invokedOnId) => {
 					if (invokedOnId == null) resolve();
 
 					shiftKey = mostRecentEvt.shiftKey;
 					const k = sortedKeys[invokedOnId];
-					const fromScaling = chosenRollData.prompt.options[k];
-					const cpy = MiscUtil.copy(chosenRollData);
+					const fromScaling = rollDataCpy.prompt.options[k];
 					if (!fromScaling) {
 						name = "";
-						resolve(cpy);
+						resolve(rollDataCpy);
 					} else {
 						name = `${Parser.spLevelToFull(k)}-level cast`;
-						cpy.toRoll += `+${fromScaling}`;
-						resolve(cpy);
+						rollDataCpy.toRoll += `+${fromScaling}`;
+						resolve(rollDataCpy);
 					}
-				}, [{text: chosenRollData.prompt.entry, disabled: true}, null, ...sortedKeys.map(it => `${Parser.spLevelToFull(it)} level`)]);
+				}, [{text: rollDataCpy.prompt.entry, disabled: true}, null, ...sortedKeys.map(it => `${Parser.spLevelToFull(it)} level`)]);
 
 				ContextUtil.handleOpenContextMenu(evt, ele, EntryRenderer.dice._contextPromptLabel, (choseOption) => {
 					if (!choseOption) resolve();
 				});
-			}) : Promise.resolve(chosenRollData)).then((chosenRollData) => {
-				if (!chosenRollData) return;
+			}) : Promise.resolve(rollDataCpy)).then((rollDataCpy) => {
+				if (!rollDataCpy) return;
 
-				EntryRenderer.dice.rollerClick({shiftKey}, ele, JSON.stringify(chosenRollData), name);
+				EntryRenderer.dice.rollerClick({shiftKey}, ele, JSON.stringify(rollDataCpy), name);
 			});
 		});
 	},
@@ -4635,23 +4955,21 @@ EntryRenderer.dice = {
 		function attemptToGetTitle () {
 			// try use table caption
 			let titleMaybe = $(ele).closest(`table:not(.stats)`).children(`caption`).text();
-			if (titleMaybe) return titleMaybe;
+			if (titleMaybe) return titleMaybe.trim();
 			// ty use list item title
 			titleMaybe = $(ele).parent().children(`.list-item-title`).text();
-			if (titleMaybe) return titleMaybe;
+			if (titleMaybe) return titleMaybe.trim();
 			// try use stats table name row
 			titleMaybe = $(ele).closest(`table.stats`).children(`tbody`).first().children(`tr`).first().find(`th.name .stats-name`).text();
-			if (titleMaybe) return titleMaybe;
+			if (titleMaybe) return titleMaybe.trim();
 			// otherwise, use the section title, where applicable
 			titleMaybe = $(ele).closest(`div`).children(`.entry-title`).first().find(`.entry-title-inner`).text();
-			if (titleMaybe) {
-				titleMaybe = titleMaybe.replace(/[.,:]$/, "");
-			}
+			if (titleMaybe) titleMaybe = titleMaybe.trim().replace(/[.,:]\s*$/, "");
 			return titleMaybe;
 		}
 
 		function attemptToGetName () {
-			const $hov = $ele.closest(`.hoverbox`);
+			const $hov = $ele.closest(`.hwin`);
 			if ($hov.length) {
 				return $hov.find(`.stats-name`).first().text();
 			}
@@ -4767,10 +5085,15 @@ EntryRenderer.dice = {
 
 			$out.append(`
 				<div class="out-roll-item" title="${title}">
-					${lbl ? `<span class="roll-label">${lbl}: </span>` : ""}
-					${totalPart}
-					<span class="all-rolls text-muted">${fullText}</span>
-					${cbMessage ? `<span class="message">${cbMessage(result)}</span>` : ""}
+					<div>
+						${lbl ? `<span class="roll-label">${lbl}: </span>` : ""}
+						${totalPart}
+						<span class="all-rolls text-muted">${fullText}</span>
+						${cbMessage ? `<span class="message">${cbMessage(result)}</span>` : ""}
+					</div>
+					<div class="out-roll-item-button-wrp">
+						<button title="Copy to input" class="btn btn-xs btn-copy-roll" onclick="EntryRenderer.dice._$iptRoll.val('${tree._asString.replace(/\s+/g, "")}')"><span class="glyphicon glyphicon-pencil"></span></button>
+					</div>
 				</div>`);
 
 			return result;
@@ -4784,7 +5107,7 @@ EntryRenderer.dice = {
 		EntryRenderer.dice._showBox();
 		EntryRenderer.dice._checkHandleName(rolledBy.name);
 		const $out = EntryRenderer.dice._$lastRolledBy;
-		$out.append(`<div class="out-roll-item">${message}</div>`);
+		$out.append(`<div class="out-roll-item out-roll-item--message">${message}</div>`);
 		EntryRenderer.dice._scrollBottom();
 	},
 
@@ -5199,7 +5522,7 @@ EntryRenderer.dice = {
 				this.n = n;
 				this.pr = false;
 
-				this.evl = (meta) => {
+				this.evl = meta => {
 					prep(meta);
 
 					handlePrO(meta, this);
@@ -5207,7 +5530,12 @@ EntryRenderer.dice = {
 					meta.rawText.push(n);
 					handlePrC(meta, this);
 					return Number(n);
-				}
+				};
+
+				this.avg = meta => this.evl(meta);
+
+				this._nxt = function* () { yield Number(n); };
+				this.nxt = this._nxt.bind(this);
 			}
 
 			function Dice (num, faces, drop, dropType) {
@@ -5218,19 +5546,41 @@ EntryRenderer.dice = {
 				this.dropType = dropType;
 				this.pr = false;
 
-				this.evl = (meta) => {
+				this.evl = meta => this._get(meta, "evl");
+
+				this.avg = meta => this._get(meta, "avg");
+
+				// this ignore drops, and outputs each possible result only once
+				this._nxt = function* () {
+					const genNum = num.nxt();
+
+					let n, f;
+					while (!(n = genNum.next()).done) {
+						const genFaces = faces.nxt();
+						while (!(f = genFaces.next()).done) {
+							const maxRoll = n.value * f.value;
+							// minimum is "N," i.e. every roll was a 1
+							for (let roll = n.value; roll <= maxRoll; ++roll) {
+								yield roll;
+							}
+						}
+					}
+				};
+				this.nxt = this._nxt.bind(this);
+
+				this._get = (meta, nextFn) => {
 					prep(meta);
 
 					// N.B. this discards nested rolls, e.g. `3d20dl(1d2)` will never have the 1d2 result shown.
-					const numN = num.evl({});
-					const facesN = faces.evl({});
+					const numN = num[nextFn]({});
+					const facesN = faces[nextFn]({});
 
-					const rolls = [...new Array(numN)].map(it => RollerUtil.randomise(facesN));
+					const rolls = [...new Array(numN)].map(_ => nextFn === "avg" ? (facesN + 1) / 2 : RollerUtil.randomise(facesN));
 
 					const prOpen = rolls.length > 1 ? "(" : "";
 					const prClose = rolls.length > 1 ? ")" : "";
 					if (drop != null) {
-						const dropNum = Math.min(drop.evl({}), numN);
+						const dropNum = Math.min(drop[nextFn]({}), numN);
 						rolls.sort(SortUtil.ascSort).reverse();
 						if (dropType === "h") rolls.reverse();
 
@@ -5273,18 +5623,35 @@ EntryRenderer.dice = {
 				this.b = b;
 				this.pr = false;
 
-				this.evl = (meta) => {
+				this.evl = meta => this._get(meta, "evl");
+
+				this.avg = meta => this._get(meta, "avg");
+
+				this._nxt = function* () {
+					const genL = a.nxt();
+
+					let l, r;
+					while (!(l = genL.next()).done) {
+						const genR = b.nxt();
+						while (!(r = genR.next()).done) {
+							yield l.value + r.value;
+						}
+					}
+				};
+				this.nxt = this._nxt.bind(this);
+
+				this._get = (meta, nextFn) => {
 					prep(meta);
 
 					handlePrO(meta, this);
-					const l = a.evl(meta);
+					const l = a[nextFn](meta);
 					meta.text.push("+");
 					meta.rawText.push("+");
-					const r = b.evl(meta);
+					const r = b[nextFn](meta);
 					handlePrC(meta, this);
 
 					return l + r;
-				}
+				};
 			}
 
 			function Sub (a, b) {
@@ -5293,18 +5660,35 @@ EntryRenderer.dice = {
 				this.b = b;
 				this.pr = false;
 
-				this.evl = (meta) => {
+				this.evl = meta => this._get(meta, "evl");
+
+				this.avg = meta => this._get(meta, "avg");
+
+				this._nxt = function* () {
+					const genL = a.nxt();
+
+					let l, r;
+					while (!(l = genL.next()).done) {
+						const genR = b.nxt();
+						while (!(r = genR.next()).done) {
+							yield l.value - r.value;
+						}
+					}
+				};
+				this.nxt = this._nxt.bind(this);
+
+				this._get = (meta, nextFn) => {
 					prep(meta);
 
 					handlePrO(meta, this);
-					const l = a.evl(meta);
+					const l = a[nextFn](meta);
 					meta.text.push("-");
 					meta.rawText.push("-");
-					const r = b.evl(meta);
+					const r = b[nextFn](meta);
 					handlePrC(meta, this);
 
 					return l - r;
-				}
+				};
 			}
 
 			function Mult (a, b) {
@@ -5313,14 +5697,31 @@ EntryRenderer.dice = {
 				this.b = b;
 				this.pr = false;
 
-				this.evl = (meta) => {
+				this.evl = meta => this._get(meta, "evl");
+
+				this.avg = meta => this._get(meta, "avg");
+
+				this._nxt = function* () {
+					const genL = a.nxt();
+
+					let l, r;
+					while (!(l = genL.next()).done) {
+						const genR = b.nxt();
+						while (!(r = genR.next()).done) {
+							yield l.value * r.value;
+						}
+					}
+				};
+				this.nxt = this._nxt.bind(this);
+
+				this._get = (meta, nextFn) => {
 					prep(meta);
 
 					handlePrO(meta, this);
-					const l = a.evl(meta);
+					const l = a[nextFn](meta);
 					meta.text.push("×");
 					meta.rawText.push("×");
-					const r = b.evl(meta);
+					const r = b[nextFn](meta);
 					handlePrC(meta, this);
 
 					return l * r;
@@ -5333,14 +5734,32 @@ EntryRenderer.dice = {
 				this.b = b;
 				this.pr = false;
 
-				this.evl = (meta) => {
+				this.evl = meta => this._get(meta, "evl");
+
+				this.avg = meta => this._get(meta, "avg");
+
+				this._hasNext = true;
+				this._nxt = function* () {
+					const genL = a.nxt();
+
+					let l, r;
+					while (!(l = genL.next()).done) {
+						const genR = b.nxt();
+						while (!(r = genR.next()).done) {
+							yield l.value / r.value;
+						}
+					}
+				};
+				this.nxt = this._nxt.bind(this);
+
+				this._get = (meta, nextFn) => {
 					prep(meta);
 
 					handlePrO(meta, this);
-					const l = a.evl(meta);
+					const l = a[nextFn](meta);
 					meta.text.push("÷");
 					meta.rawText.push("÷");
-					const r = b.evl(meta);
+					const r = b[nextFn](meta);
 					handlePrC(meta, this);
 
 					return l / r;
@@ -5353,14 +5772,32 @@ EntryRenderer.dice = {
 				this.e = e;
 				this.pr = false;
 
-				this.evl = (meta) => {
+				this.evl = (meta) => this._get(meta, "evl");
+
+				this.avg = meta => this._get(meta, "avg");
+
+				this._hasNext = true;
+				this._nxt = function* () {
+					const genL = a.nxt();
+
+					let l, r;
+					while (!(l = genL.next()).done) {
+						const genR = b.nxt();
+						while (!(r = genR.next()).done) {
+							yield Math.pow(l.value, r.value);
+						}
+					}
+				};
+				this.nxt = this._nxt.bind(this);
+
+				this._get = (meta, nextFn) => {
 					prep(meta);
 
 					handlePrO(meta, this);
-					const nNum = n.evl(meta);
+					const nNum = n[nextFn](meta);
 					meta.text.push("<sup>");
 					meta.rawText.push("^");
-					const eNum = e.evl(meta);
+					const eNum = e[nextFn](meta);
 					meta.text.push("</sup>");
 					handlePrC(meta, this);
 
@@ -5532,7 +5969,7 @@ EntryRenderer.stripTags = function (str) {
 						switch (tag) {
 							case "@damage":
 							case "@dice": {
-								return displayText || rollText;
+								return displayText || rollText.replace(/;/g, "/");
 							}
 							case "@d20":
 							case "@hit": {
@@ -5622,6 +6059,65 @@ EntryRenderer.stripTags = function (str) {
 			} else return it;
 		}).join("");
 	} return str;
+};
+
+EntryRenderer.isRollableTable = function (table) {
+	let autoMkRoller = false;
+	if (table.colLabels) {
+		autoMkRoller = table.colLabels.length >= 2 && RollerUtil.isRollCol(table.colLabels[0]);
+		if (autoMkRoller) {
+			// scan the first column to ensure all rollable
+			const notRollable = table.rows.find(it => {
+				try {
+					return !/\d+([-\u2013]\d+)?/.exec(it[0]);
+				} catch (e) {
+					return true;
+				}
+			});
+			if (notRollable) autoMkRoller = false;
+		}
+	}
+	return autoMkRoller;
+};
+
+// assumes validation has been done in advance
+EntryRenderer.getRollableRow = function (row, cbErr) {
+	row = MiscUtil.copy(row);
+	try {
+		// format: "95-00" or "12"
+		const m = /^(\d+)([-\u2013](\d+))?$/.exec(String(row[0]).trim());
+		if (m) {
+			if (m[1] && !m[2]) {
+				row[0] = {
+					type: "cell",
+					roll: {
+						exact: Number(m[1])
+					}
+				};
+				if (m[1][0] === "0") row[0].roll.pad = true;
+			} else {
+				row[0] = {
+					type: "cell",
+					roll: {
+						min: Number(m[1]),
+						max: Number(m[3])
+					}
+				};
+				if (m[1][0] === "0" || m[3][0] === "0") row[0].roll.pad = true;
+			}
+		} else {
+			// format: "12+"
+			const m = /^(\d+)\+$/.exec(row[0]);
+			row[0] = {
+				type: "cell",
+				roll: {
+					min: Number(m[1]),
+					max: EntryRenderer.dice.POS_INFINITE
+				}
+			};
+		}
+	} catch (e) { if (cbErr) cbErr(row[0], e); }
+	return row;
 };
 
 EntryRenderer._onImgLoad = function () {

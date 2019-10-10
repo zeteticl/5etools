@@ -1,6 +1,6 @@
 "use strict";
+
 const JSON_URL = "data/races.json";
-const JSON_FLUFF_URL = "data/fluff-races.json";
 
 const ASI_SORT_POS = {
 	Strength: 0,
@@ -93,8 +93,8 @@ async function onJsonLoad (data) {
 		listClass: "races"
 	});
 
-	const jsonRaces = EntryRenderer.race.mergeSubraces(data.race);
-	const speedFilter = new Filter({header: "Speed", headerName: "速度", items: ["Climb", "Fly", "Swim", "Walk (Fast)", "Walk", "Walk (Slow)"], displayFn: Parser.SpeedToDisplay});
+	const jsonRaces = Renderer.race.mergeSubraces(data.race);
+	const speedFilter = new Filter({header: "Speed", headerName: "速度", items: ["Climb", "Fly", "Swim", "Walk (Fast)", "Walk", "Walk (Slow)"], displayFn:Parser.SpeedToDisplay});
 	const traitFilter = new Filter({
 		header: "Traits", headerName: "特性",
 		items: [
@@ -196,13 +196,15 @@ async function onJsonLoad (data) {
 	addRaces({race: jsonRaces});
 	BrewUtil.pAddBrewData()
 		.then(handleBrew)
-		.then(BrewUtil.pAddLocalBrewData)
+		.then(() => BrewUtil.bind({list}))
+		.then(() => BrewUtil.pAddLocalBrewData())
 		.catch(BrewUtil.pPurgeBrew)
 		.then(async () => {
 			BrewUtil.makeBrewButton("manage-brew");
-			BrewUtil.bind({list, filterBox, sourceFilter});
+			BrewUtil.bind({filterBox, sourceFilter});
 			await ListUtil.pLoadState();
 			RollerUtil.addListRollButton();
+			ListUtil.addListShowHide();
 
 			History.init(true);
 			ExcludeUtil.checkShowAllExcluded(raceList, $(`#pagecontent`));
@@ -270,7 +272,7 @@ function addRaces (data) {
 	racesTable.append(tempString);
 
 	// sort filters
-	sourceFilter.items.sort(SortUtil.ascSort);
+	sourceFilter.items.sort(SortUtil.srcSort_ch);
 	sizeFilter.items.sort(ascSortSize);
 	asiFilter.items.sort(ascSortAsi);
 
@@ -317,16 +319,12 @@ function addRaces (data) {
 		primaryLists: [list]
 	});
 	ListUtil.bindPinButton();
-	EntryRenderer.hover.bindPopoutButton(raceList);
+	Renderer.hover.bindPopoutButton(raceList);
 	UrlUtil.bindLinkExportButton(filterBox);
 	ListUtil.bindDownloadButton();
 	ListUtil.bindUploadButton();
 
-	$(`body`).on("click", ".btn-name-pronounce", function () {
-		const audio = $(this).find(`.name-pronounce`)[0];
-		audio.currentTime = 0;
-		audio.play();
-	});
+	Renderer.utils.bindPronounceButtons();
 }
 
 function handleFilterChange () {
@@ -359,7 +357,7 @@ function getSublistItem (race, pinId) {
 	`;
 }
 
-const renderer = EntryRenderer.getDefaultRenderer();
+const renderer = Renderer.get();
 function loadhash (id) {
 	renderer.setFirstSection(true);
 	const $pgContent = $("#pagecontent").empty();
@@ -378,9 +376,9 @@ function loadhash (id) {
 
 		$pgContent.append(`
 		<tbody>
-		${EntryRenderer.utils.getBorderTr()}
+		${Renderer.utils.getBorderTr()}
 		<tr><th class="name" colspan="6">
-		<span><b class="stats-name copyable" onclick="EntryRenderer.utils._handleNameClick(this, '${race.source.escapeQuotes()}')">${race.name}</b>${race.ENG_name? (" <st style='font-size:80%;'>"+race.ENG_name+"</st>"):""}</span>
+		<span><b class="stats-name copyable" onclick="Renderer.utils._pHandleNameClick(this, '${race.source.escapeQuotes()}')">${race.name}</b>${race.ENG_name? (" <st style='font-size:80%;'>"+race.ENG_name+"</st>"):""}</span>
 		${race.soundClip ? getPronunciationButton() : ""}
 		<span class="stats-source ${Parser.sourceJsonToColor(race.source)}" title="${Parser.sourceJsonToFull(race.source)}">${Parser.sourceJsonToAbv(race.source)}</span>
 		</th></tr>
@@ -388,115 +386,125 @@ function loadhash (id) {
 		<tr><td colspan="6"><b>體型：</b> ${Parser.sizeAbvToFull(race.size)}</td></tr>
 		<tr><td colspan="6"><b>速度：</b> ${Parser.getSpeedString(race)}</td></tr>
 		<tr id="traits"><td class="divider" colspan="6"><div></div></td></tr>
-		${EntryRenderer.utils.getBorderTr()}
+		${Renderer.utils.getBorderTr()}
 		</tbody>
 		`);
 
 		const renderStack = [];
 		renderStack.push("<tr class='text'><td colspan='6'>");
-		renderer.recursiveEntryRender({type: "entries", entries: race.entries}, renderStack, 1);
+		renderer.recursiveRender({type: "entries", entries: race.entries}, renderStack, {depth: 1});
 		renderStack.push("</td></tr>");
 		if (race.traitTags && race.traitTags.includes("NPC Race")) {
 			renderStack.push(`<tr class="text"><td colspan="6"><section class="text-muted">`);
-			renderer.recursiveEntryRender(
-				`{@i Note: This race is listed in the {@i Dungeon Master's Guide} as an option for creating NPCs. It is not designed for use as a playable race.}`
-				, renderStack, 2);
+			renderer.recursiveRender(
+				`{@i 註記： 這個種族被記載於{@i 《地下城主指南》}以做為創造非玩家角色的選項。它並非被設計做為玩家可用的種族。}`
+				, renderStack, {depth: 2});
 			renderStack.push(`</section></td></tr>`);
 		}
-		renderStack.push(EntryRenderer.utils.getPageTr(race));
+		renderStack.push(Renderer.utils.getPageTr(race));
 
 		$pgContent.find('tbody tr:last').before(renderStack.join(""));
 	}
 
-	const traitTab = EntryRenderer.utils.tabButton(
+	function buildFluffTab (isImageTab) {
+		return Renderer.utils.buildFluffTab(
+			isImageTab,
+			$pgContent,
+			race,
+			getFluff,
+			`data/fluff-races.json`,
+			() => true
+		);
+	}
+
+	function getFluff (fluffJson) {
+		const predefined = Renderer.utils.getPredefinedFluff(race, "raceFluff");
+		if (predefined) return predefined;
+
+		const subFluff = race._baseName && race.name.toLowerCase() === race._baseName.toLowerCase() ? "" : fluffJson.race.find(it => (isStringMatch(it.name, race.name) || isStringMatch(it.name, race.ENG_name)) && it.source.toLowerCase() === race.source.toLowerCase());
+
+		const baseFluff = fluffJson.race.find(it => race._baseName && (isStringMatch(it.name, race._baseName) /*|| isStringMatch(it.name, race.ENG_name)*/) && race._baseSource && it.source.toLowerCase() === race._baseSource.toLowerCase());
+
+		if (!subFluff && !baseFluff) return null;
+
+		const findFluff = (toFind) => fluffJson.race.find(it => isStringMatch(toFind.name, it.name) && toFind.source.toLowerCase() === it.source.toLowerCase());
+
+		const fluff = {type: "section"};
+
+		const addFluff = (fluffToAdd, isBase) => {
+			if (fluffToAdd.entries) {
+				fluff.entries = fluff.entries || [];
+				const toAdd = {type: "section", entries: MiscUtil.copy(fluffToAdd.entries)};
+				if (isBase && !fluffToAdd.entries.length) toAdd.name = race._baseName;
+				fluff.entries.push(toAdd);
+			}
+			if (fluffToAdd.images && !(isBase && subFluff && subFluff._excludeBaseImages)) {
+				fluff.images = fluff.images || [];
+				fluff.images.push(...MiscUtil.copy(fluffToAdd.images));
+			}
+			if (fluffToAdd._appendCopy) {
+				const toAppend = findFluff(fluffToAdd._appendCopy);
+				if (toAppend.entries) {
+					fluff.entries = fluff.entries || [];
+					const toAdd = {type: "section", entries: MiscUtil.copy(toAppend.entries)};
+					if (isBase && !fluffToAdd.entries.length) toAdd.name = race._baseName;
+					fluff.entries.push(toAdd);
+				}
+				if (toAppend.images) {
+					fluff.images = fluff.images || [];
+					fluff.images.push(...MiscUtil.copy(toAppend.images));
+				}
+			}
+		};
+
+		if (subFluff) addFluff(subFluff);
+		if (baseFluff) addFluff(baseFluff, true);
+
+		if ((subFluff && subFluff.uncommon) || (baseFluff && baseFluff.uncommon)) {
+			const entryUncommon = {type: "section", entries: [MiscUtil.copy(fluffJson.meta.uncommon)]};
+			if (fluff.entries) {
+				fluff.entries.push(entryUncommon);
+			} else {
+				fluff.entries = [HTML_NO_INFO];
+				fluff.entries.push(...entryUncommon.entries)
+			}
+		}
+
+		if ((subFluff && subFluff.monstrous) || (baseFluff && baseFluff.monstrous)) {
+			const entryMonstrous = {type: "section", entries: [MiscUtil.copy(fluffJson.meta.monstrous)]};
+			if (fluff.entries) {
+				fluff.entries.push(entryMonstrous);
+			} else {
+				fluff.entries = [HTML_NO_INFO];
+				fluff.entries.push(...entryMonstrous.entries)
+			}
+		}
+
+		if (fluff.entries.length && fluff.entries[0].type === "section") {
+			const firstSection = fluff.entries.splice(0, 1)[0];
+			fluff.entries.unshift(...firstSection.entries);
+		}
+
+		return fluff;
+	}
+
+	const traitTab = Renderer.utils.tabButton(
 		"特性",
 		() => {},
 		buildStatsTab
 	);
-	const infoTab = EntryRenderer.utils.tabButton(
-		"情報",
+	const infoTab = Renderer.utils.tabButton(
+		"資訊",
 		() => {},
-		() => {
-			function get$Tr () {
-				return $(`<tr class="text">`);
-			}
-			function get$Td () {
-				return $(`<td colspan="6" class="text">`);
-			}
-
-			$pgContent.append(EntryRenderer.utils.getBorderTr());
-			$pgContent.append(EntryRenderer.utils.getNameTr(race));
-			let $tr = get$Tr();
-			let $td = get$Td().appendTo($tr);
-			$pgContent.append($tr);
-			$pgContent.append(EntryRenderer.utils.getBorderTr());
-
-			DataUtil.loadJSON(JSON_FLUFF_URL).then((data) => {
-				function renderMeta (prop) {
-					let $tr2 = get$Tr();
-					let $td2 = get$Td().appendTo($tr2);
-					$tr.after($tr2);
-					$tr.after(EntryRenderer.utils.getDividerTr());
-					renderer.setFirstSection(true);
-					$td2.append(renderer.renderEntry(data.meta[prop]));
-					$tr = $tr2;
-					$td = $td2;
-				}
-
-				const findFluff = (appendCopy) => {
-					return data.race.find(it => it.name.toLowerCase() === appendCopy.name.toLowerCase() && it.source.toLowerCase() === appendCopy.source.toLowerCase());
-				};
-
-				const appendCopy = (fromFluff) => {
-					if (fromFluff && fromFluff._appendCopy) {
-						const appFluff = findFluff(fromFluff._appendCopy);
-						renderer.setFirstSection(true);
-						$td.append(renderer.renderEntry({type: "section", entries: appFluff.entries}));
-					}
-				};
-
-				const subFluff = race._baseName && race.name.toLowerCase() === race._baseName.toLowerCase() ? "" : data.race.find(it => it.name.toLowerCase() === race.name.toLowerCase() && it.source.toLowerCase() === race.source.toLowerCase());
-				const baseFluff = data.race.find(it => race._baseName && it.name.toLowerCase() === race._baseName.toLowerCase() && race._baseSource && it.source.toLowerCase() === race._baseSource.toLowerCase());
-				if (race.fluff && race.fluff.entries) { // override; for homebrew usage only
-					renderer.setFirstSection(true);
-					$td.append(renderer.renderEntry({type: "section", entries: race.fluff.entries}));
-				} else if (subFluff || baseFluff) {
-					if (subFluff && (subFluff.entries || subFluff._appendCopy) && !baseFluff) {
-						renderer.setFirstSection(true);
-						$td.append(renderer.renderEntry({type: "section", entries: subFluff.entries}));
-						appendCopy(subFluff);
-					} else if (subFluff && (subFluff.entries || subFluff._appendCopy) && baseFluff && (baseFluff.entries || baseFluff._appendCopy)) {
-						renderer.setFirstSection(true);
-						if (subFluff.entries) $td.append(renderer.renderEntry({type: "section", entries: subFluff.entries}));
-						appendCopy(subFluff);
-						let $tr2 = get$Tr();
-						let $td2 = get$Td().appendTo($tr2);
-						$tr.after($tr2);
-						$tr.after(EntryRenderer.utils.getDividerTr());
-						renderer.setFirstSection(true);
-						$td2.append(renderer.renderEntry({type: "section", name: race._baseName, entries: baseFluff.entries}));
-						appendCopy(baseFluff);
-						$tr = $tr2;
-						$td = $td2;
-					} else if (baseFluff && (baseFluff.entries || baseFluff._appendCopy)) {
-						renderer.setFirstSection(true);
-						$td.append(renderer.renderEntry({type: "section", entries: baseFluff.entries}));
-						appendCopy(baseFluff);
-					}
-					if ((subFluff && subFluff.uncommon) || (baseFluff && baseFluff.uncommon)) {
-						renderMeta("uncommon");
-					}
-					if ((subFluff && subFluff.monstrous) || (baseFluff && baseFluff.monstrous)) {
-						renderMeta("monstrous");
-					}
-				} else {
-					$td.empty();
-					$td.append(HTML_NO_INFO);
-				}
-			});
-		}
+		buildFluffTab
 	);
-	EntryRenderer.utils.bindTabButtons(traitTab, infoTab);
+	const picTab = Renderer.utils.tabButton(
+		"圖片",
+		() => {},
+		buildFluffTab.bind(null, true)
+	);
+
+	Renderer.utils.bindTabButtons(traitTab, infoTab, picTab);
 
 	ListUtil.updateSelected();
 }

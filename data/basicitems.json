@@ -496,6 +496,24 @@
 			]
 		},
 		{
+			"name": "Hooked Shortspear",
+			"type": "M",
+			"weapon": true,
+			"weaponCategory": "Martial",
+			"rarity": "Unknown",
+			"weight": "2",
+			"dmg1": "{@dice 1d4}",
+			"dmgType": "P",
+			"property": [
+				"L"
+			],
+			"source": "OotA",
+			"page": 224,
+			"entries": [
+				"On a hit with this weapon, the wielder can forgo dealing damage and attempt to trip the target, in which case the target must succeed on a Strength saving throw or fall {@condition prone}. The DC is 8 + the wielder's Strength modifier + the wielder's proficiency bonus."
+			]
+		},
+		{
 			"name": "獵槍", "ENG_name": "Hunting Rifle",
 			"type": "R",
 			"technology": "Firearm",
@@ -632,6 +650,26 @@
 			"range": "80/320",
 			"source": "PHB",
 			"page": 149
+		},
+		{
+			"name": "Light Repeating Crossbow",
+			"type": "R",
+			"weapon": true,
+			"weaponCategory": "Simple",
+			"rarity": "Unknown",
+			"weight": "5",
+			"dmg1": "{@dice 1d8}",
+			"dmgType": "P",
+			"property": [
+				"A",
+				"2H"
+			],
+			"range": "40/160",
+			"source": "OotA",
+			"page": 224,
+			"entries": [
+				"This crossbow is fitted with a cartridge that can hold up to six crossbow bolts. It automatically reloads after firing until the cartridge runs out of ammunition. Reloading the cartridge takes an action."
+			]
 		},
 		{
 			"name": "輕錘", "ENG_name": "Light Hammer",
@@ -903,7 +941,7 @@
 			"page": 149
 		},
 		{
-			"name": "Renaissance Bullets (10)",
+			"name": "文藝復興子彈(10)", "ENG_name": "Renaissance Bullets (10)",
 			"type": "AF",
 			"ammunition": true,
 			"age": "Renaissance",
@@ -1135,18 +1173,18 @@
 			"page": 149
 		},
 		{
-			"name": "帶刺護甲", "ENG_name": "Spiked Armor",
+			"name": "釘刺甲", "ENG_name": "Spiked Armor",
 			"type": "MA",
 			"armor": true,
 			"value": "75 gp",
 			"weight": "45",
 			"ac": 14,
 			"stealth": true,
-			"rarity": "Rare",
+			"rarity": "Unknown",
 			"source": "SCAG",
 			"page": 121,
 			"entries": [
-				"帶刺護甲是由矮人製造的一種稀有中甲。它是由被通常以金屬打造的尖刺覆蓋的皮製大衣所構成。"
+				"釘刺甲是由矮人製造的一種稀有中甲。它是由被通常以金屬打造的尖刺覆蓋的皮製大衣所構成。"
 			]
 		},
 		{
@@ -1328,9 +1366,9 @@
 			"entries": [
 				{
 					"type": "entries",
-					"name": "Burst Fire",
+					"name": "掃射", "tENG_name": "Burst Fire",
 					"entries": [
-						"A weapon that has the burst fire property can make a single-target attack, or it can spray a 10-foot-cube area within normal range with shots. Each creature in the area must succeed on a DC 15 Dexterity saving throw or take the weapon's normal damage. This action uses ten pieces of ammunition."
+						"具有掃射屬性的武器可以進行一次單一目標的攻擊，或可以在其正常射程內掃射覆蓋一個10呎錐形的範圍。每個在範圍內的生物都必須成功通過一次DC 15的敏捷豁免，否則受到該武器的正常傷害。這個動作將會消耗十發彈藥。"
 					]
 				}
 			]
@@ -1358,7 +1396,7 @@
 					"type": "entries",
 					"name": "重型",
 					"entries": [
-						"有些生物在使用重型武器進行攻擊時會承受劣勢。重型武器的尺寸和重量使它對小型生物而言太過龐大而無法有效使用。"
+						"小型生物在使用重型武器進行攻擊時會承受劣勢。重型武器的尺寸和重量使它對小型生物而言太過龐大而無法有效使用。"
 					]
 				}
 			]
@@ -1412,9 +1450,9 @@
 			"entries": [
 				{
 					"type": "entries",
-					"name": "Reload",
+					"name": "再裝填", "tENG_name": "Reload",
 					"entries": [
-						"A limited number of shots can be made with a weapon that has the reload property. A character must then reload it using an action or a bonus action (the character's choice)."
+						"具有再裝填屬性的武器只能夠進行有限次數的攻擊。一個生物必須接著使用一個動作或一個附贈動作（由角色決定）將之重新裝填。"
 					]
 				}
 			]
@@ -1537,7 +1575,7 @@
 					"type": "entries",
 					"name": "射程",
 					"entries": [
-						"可以被用來進行遠程攻擊的武器，都會在彈藥或投擲屬性後用括號標示射程。射程列有兩個數字。第一個是該武器的正常射程，第二個則代表著武器的最大射程。當攻擊處於正常射程之外的目標時，你在該攻擊檢定上承受劣勢。你不能攻擊處於武器長射程之外的目標。"
+						"可以被用來進行遠程攻擊的武器，都會在彈藥或投擲屬性後用括號標示射程。射程列有兩個數字。第一個是該武器的正常射程，第二個則代表著武器的長射程。當攻擊處於正常射程之外的目標時，你在該攻擊檢定上承受劣勢。你不能攻擊處於武器長射程之外的目標。"
 					]
 				}
 			]
@@ -1560,40 +1598,147 @@
 			"entries": [
 				{
 					"type": "entries",
-					"name": "Crew",
+					"name": "船員",
 					"entries": [
-						"A ship needs a crew of skilled hirelings to function. As per the Player's Handbook, one skilled hireling costs at least 2 gp per day. The minimum number of skilled hirelings needed to crew a ship depends on the type of vessel.",
-						"You can track the loyalty of individual crew members or the crew as a whole using the optional loyalty rules in chapter 4 of the Dungeon Master's Guide. If at least half the crew becomes disloyal during a voyage, the crew turns hostile and stages a mutiny. If the ship is berthed, disloyal crew members leave the ship and never return."
+						"一艘船需要一隊技藝純熟的僱工才能發揮它的功能。按照《玩家手冊》的記載，一名熟練的僱工需要花費至少每天2金幣的費用。而駕駛一艘船所需要最低數量的僱工則根據船艦的種類而有所不同。",
+						"你可以個別追蹤每個船員各自的忠誠度，或使用《地下城主指南》第四章的可選忠誠度規則將所有船員視作一個整體。若在航行期間，有至少一半的船員變得不再忠誠，則船員們將變為敵對並發起暴動。若這時船舶正在停泊期間，則不忠誠的船員們將離船，且永遠不會再回來。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Passengers",
+					"name": "乘客",
 					"entries": [
-						"The table indicates the number of Small and Medium passengers the ship can accommodate.",
-						"Accommodations consist of shared hammocks in tight quarters. A ship outfitted with private accommodations can carry one-fifth as many passengers.",
-						"A passenger is usually expected to pay 5 sp per day for a hammock, but prices can vary from ship to ship. A small private cabin usually costs 2 gp per day."
+						"表格顯示了船舶可以容納的，體型為小型或中型的乘客的數量。",
+						"住宿空間是由共用於狹小區域的數張吊床所構成。一艘配備著私人住宿空間的船舶只能承載原本五分之一的乘客。",
+						"一名乘客通常會預期為一張吊床支付每日5銀幣的費用，但實際價格因船而異。一個小型的個人客艙通常會收取每日2金幣的費用。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Cargo",
+					"name": "貨物",
 					"entries": [
-						"The maximum tonnage the ship can carry."
+						"船舶可以裝載貨物的最大噸數。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Damage Threshold",
+					"name": "傷害閾值",
 					"entries": [
-						"If a ship has a Damage Threshold, it has immunity to all damage unless it takes an amount of damage equal to or greater than its damage threshold, in which case it takes damage as normal. Any damage that fails to meet or exceed the damage threshold is considered superficial and doesn't reduce the ship's hit points"
+						"若一艘船具有傷害閾值，則它將免疫所有傷害，除非它受到等於或高於它傷害閾值的傷害量，而在這時，它將如常承受傷害。任何未達傷害閾值的傷害都將被視為表面損傷，且不會減少船舶的生命值。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Ship Repair",
+					"name": "船舶修理",
 					"entries": [
-						"Repairs to a damaged ship can be made while the vessel is berthed. Repairing 1 hit point of damage requires 1 day and costs 20 gp for materials and labor."
+						"受損的船舶的修理可以在其停泊期間進行。維修1點生命值的傷害需要花費1天的時間和20金幣的原物料和勞動成本。"
+					]
+				}
+			]
+		}
+	],
+	"itemTypeAdditionalEntries": [
+		{
+			"appliesTo": "INS",
+			"entries": [
+				"熟練於一項樂器代表著你熟悉於使用並演奏它的技巧。你同時也知曉一些常以該樂器演奏的經典曲目。",
+				{
+					"type": "entries",
+					"name": "歷史",
+					"entries": [
+						"你的專業有助你回想那些與你樂器有關的傳說。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "表演",
+					"entries": [
+						"當你將樂器融入你的演出時，你上演一齣優秀表演的能力將會因此提升。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "作曲",
+					"entries": [
+						"做為一次長休的一部份，你可以為你的樂器譜寫一段新的旋律和歌詞。你可能可以使用這項能力以這段琅琅上口的曲調驚艷一名貴族、或是散佈流言蜚語。"
+					]
+				},
+				{
+					"type": "table",
+					"caption": "樂器",
+					"colLabels": [
+						"用途",
+						"DC"
+					],
+					"colStyles": [
+						"col-10",
+						"col-2 text-align-center"
+					],
+					"rows": [
+						[
+							"辨識出一段旋律",
+							"10"
+						],
+						[
+							"即興演奏一段旋律",
+							"20"
+						]
+					]
+				}
+			]
+		},
+		{
+			"appliesTo": "GS",
+			"entries": [
+				"熟練於一項遊戲套組代表著精通於一種遊戲類型，像是三龍牌、或是使用骰子的機率遊戲。",
+				{
+					"type": "entries",
+					"name": "構成元件",
+					"entries": [
+						"一套遊戲套組內含遊玩某項特定遊戲或遊戲類型所需的所有材料，像是一副完整的牌組、或是一張棋盤和棋子。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "歷史",
+					"entries": [
+						"Y你對這項遊戲的精通也包括了瞭解關於它的歷史、與它有關的重要事件、以及牽涉到它的著名歷史人物。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "察言觀色",
+					"entries": [
+						"與某人一起玩遊戲是一個理解他們個人特質的好方法，這讓你可以更容易的分辨他們的謊言，並理解他們的情緒。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "手上把戲",
+					"entries": [
+						"手上把戲在你想要於遊戲中作弊時是一項相當有用的技能，它讓你可以讓棋子換位、在掌中藏牌、或改變擲骰的結果。或者，藉由靈巧的操作遊戲中的元件以使目標全神貫注於遊戲中，也能在嘗試趁機扒竊時起到很好的分心效果。"
+					]
+				},
+				{
+					"type": "table",
+					"caption": "遊戲套組",
+					"colLabels": [
+						"用途",
+						"DC"
+					],
+					"colStyles": [
+						"col-10",
+						"col-2 text-align-center"
+					],
+					"rows": [
+						[
+							"逮到玩家的作弊行為",
+							"15"
+						],
+						[
+							"了解一名對手的個人特質",
+							"15"
+						]
 					]
 				}
 			]

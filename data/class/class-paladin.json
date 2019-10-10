@@ -192,7 +192,7 @@
 				"additionalFromBackground": true,
 				"default": [
 					"(a)一把{@filter 軍用武器|items|source=phb|category=basic|type=martial weapon}和一面{@item 盾牌|phb} 或 (b)二把{@filter 軍用武器|items|source=phb|category=basic|type=martial weapon}",
-					"(a)五把{@item 標槍|phb} 或 (b)任意一把{@filter 簡易近戰武器|items|source=phb|category=basic|type=simple weapon;melee weapon}",
+					"(a)五把{@item 標槍|phb} 或 (b)任意一把{@filter 簡易近戰武器|items|source=phb|category=basic|type=simple weapon;melee weapon=&}",
 					"(a)一套{@item 祭司套裝|phb} 或 (b)一套{@item 探索者套裝|phb}",
 					"一件{@item 鎖子甲|phb}和一個{@item 聖徽|phb}"
 				],
@@ -312,10 +312,10 @@
 								"type": "entries",
 								"name": "準備及施放法術",
 								"entries": [
-									"聖騎士表中顯示了你有多少個法術位可以用來施放你一環或更高環的{@filter 聖騎士法術|spells|class=paladin}。要施放其中一個這些法術，你必須消耗一個與該法術環位相同或更高的法術位。你在完成一次長休後恢復所有你花費掉的法術位。",
-									"你準備一份你所能施放的聖騎士法術列表，從聖騎士法術列表中選擇。當你這麼做時，選擇數量等同於你魅力調整值 + 你聖騎士等級的一半（向下取整）的聖騎士法術（最少一個法術）。這些法術的環位都必須符合你所擁有法術位的環位。",
+									"聖騎士表中顯示了你有多少個法術位可以用來施放你一環或更高環的{@filter 聖騎士法術|spells|class=paladin}。要施放其中一個這些法術，你必須消耗一個與該法術環階相同或更高的法術位。你在完成一次長休後恢復所有你花費掉的法術位。",
+									"你準備一份你所能施放的聖騎士法術列表，從聖騎士法術列表中選擇。當你這麼做時，選擇數量等同於你魅力調整值 + 你聖騎士等級的一半（向下取整）的聖騎士法術（最少一個法術）。這些法術的環階都必須符合你所擁有法術位的環階。",
 									"舉例來說，如果你是一個5級的聖騎士，你擁有四個1環和二個2環的法術位。你的魅力為14，則你已準備法術的列表中可以包含總共四個1環或2環的法術。若你準備了1環法術{@spell 治療傷勢}，你可以使用1環和2環的法術位來施放它。施放法術並不會將它從你的準備法術列表中移除。",
-									"你可以在你完成一次長休時改變你的準備法術列表。準備一份新的聖騎士法術列表需要花費時間於祈禱和冥想：你需要為你列表上每個法術的每個環位都花費至少1分鐘的時間。"
+									"你可以在你完成一次長休時改變你的準備法術列表。準備一份新的聖騎士法術列表需要花費時間於祈禱和冥想：你需要為你列表上每個法術的每個環階都花費至少1分鐘的時間。"
 								]
 							},
 							{
@@ -393,7 +393,7 @@
 					{
 						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
-							"當你在此職業升至4級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"當你在此職業升至4級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					}
@@ -428,7 +428,7 @@
 					{
 						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
-							"當你在此職業升至8級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"當你在此職業升至8級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					}
@@ -455,7 +455,7 @@
 					{
 						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
-							"當你在此職業升至12級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"當你在此職業升至12級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					}
@@ -483,7 +483,7 @@
 					{
 						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
-							"當你在此職業升至16級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"當你在此職業升至16級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					}
@@ -501,7 +501,7 @@
 					{
 						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
-							"當你在此職業升至19級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"當你在此職業升至19級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					}
@@ -519,26 +519,26 @@
 			"subclassTitle": "Sacred Oath",
 			"subclasses": [
 				{
-					"name": "Oath of the Ancients",
+					"name": "遠古之誓", "ENG_name": "Oath of the Ancients",
 					"subclassFeatures": [
 						[
 							{
-								"name": "Oath of the Ancients",
+								"name": "遠古之誓", "ENG_name": "Oath of the Ancients",
 								"entries": [
-									"The Oath of the Ancients is as old as the race of elves and the rituals of the druids. Sometimes called fey knights, green knights, or horned knights, paladins who swear this oath cast their lot with the side of the light in the cosmic struggle against darkness because they love the beautiful and life-giving things of the world, not necessarily because they believe in principles of honor, courage, and justice. They adorn their armor and clothing with images of growing things\u2014leaves, antlers, or flowers\u2014to reflect their commitment to preserving life and light in the world.",
+									"遠古之誓就和精靈種族、以及德魯伊的教儀一樣古老。那些立下此聖誓的聖騎士們有時又被稱作「妖精騎士」、「綠之騎士」、「角冠騎士」，他們之所以在宇宙間的正邪之戰中投身於光明一方以對抗黑暗，是因為他們熱愛那存在於世界上的美以及生命，而並不一定是因為心懷榮耀、勇氣、和正直信念。他們在盔甲和服飾上飾以樹葉、鹿角、花朵等等生機勃勃物品的紋樣，以反映他們保護世界上的生命和光明的承諾。",
 									{
 										"type": "entries",
-										"name": "Tenets of the Ancients",
+										"name": "遠古之信條", "ENG_name": "Tenets of the Ancients",
 										"entries": [
-											"The tenets of the Oath of the Ancients have been preserved for uncounted centuries. This oath emphasizes the principles of good above any concerns of law or chaos. Its four central principles are simple.",
+											"遠古之誓的信條已經被傳承了無數個世紀。這個誓言強調善良的準則高於一切秩序和混亂。它的四個核心準則相當單純。",
 											{
 												"type": "entries",
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Kindle the Light",
+														"name": "點燃光明", "tENG_name": "Kindle the Light",
 														"entries": [
-															"Through your acts of mercy, kindness, and forgiveness, kindle the light of hope in the world, beating back despair."
+															"透過你慈憫、和善、和寬恕的行動，在世界中點燃希望之光，讓絕望在你面前退散。"
 														]
 													}
 												]
@@ -548,9 +548,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Shelter the Light",
+														"name": "守護明光", "tENG_name": "Shelter the Light",
 														"entries": [
-															"Where there is good, beauty, love, and laughter in the world, stand against the wickedness that would swallow it. Where life flourishes, stand against the forces that would render it barren."
+															"世界上何處有善、美、愛、和歡笑，你就起身對抗那將吞噬它們的邪惡。何處有繁盛興旺的生命，你就起身對抗那將使之歸於貧瘠的力量。"
 														]
 													}
 												]
@@ -560,9 +560,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Preserve Your Own Light",
+														"name": "維持己身光輝", "tENG_name": "Preserve Your Own Light",
 														"entries": [
-															"Delight in song and laughter, in beauty and art. If you allow the light to die in your own heart, you can't preserve it in the world."
+															"欣喜於歌聲和歡笑，悅樂於美和藝術。若你讓自己心中的光明殞落，你就無法保護世上的光明。"
 														]
 													}
 												]
@@ -572,9 +572,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Be the Light",
+														"name": "成為真光", "tENG_name": "Be the Light",
 														"entries": [
-															"Be a glorious beacon for all who live in despair. Let the light of your joy and courage shine forth in all your deeds."
+															"成為絕望者眼中的輝煌明燈。在你的所有行為中都閃耀出樂觀和勇氣的光輝。"
 														]
 													}
 												]
@@ -583,15 +583,15 @@
 									},
 									{
 										"type": "entries",
-										"name": "Oath Spells",
+										"name": "聖誓法術", "ENG_name": "Oath Spells",
 										"entries": [
-											"You gain oath spells at the paladin levels listed.",
+											"你在下列聖騎士等級時獲得相應的聖誓法術。",
 											{
 												"type": "table",
-												"caption": "Oath of the Ancients Spells",
+												"caption": "遠古之誓法術",
 												"colLabels": [
-													"Paladin Level",
-													"Spells"
+													"聖騎士等級",
+													"法術"
 												],
 												"colStyles": [
 													"col-3 text-align-center",
@@ -599,24 +599,24 @@
 												],
 												"rows": [
 													[
-														"3rd",
-														"{@spell ensnaring strike}, {@spell speak with animals}"
+														"3級",
+														"{@spell 誘捕打擊}, {@spell 動物交談術}"
 													],
 													[
-														"5th",
-														"{@spell moonbeam}, {@spell misty step}"
+														"5級",
+														"{@spell 月華之光}, {@spell 迷蹤步}"
 													],
 													[
-														"9th",
-														"{@spell plant growth}, {@spell protection from energy}"
+														"9級",
+														"{@spell 植物滋長}, {@spell 防護能量}"
 													],
 													[
-														"13th",
-														"{@spell ice storm}, {@spell stoneskin}"
+														"13級",
+														"{@spell 冰風暴}, {@spell 石膚術}"
 													],
 													[
-														"17th",
-														"{@spell commune with nature}, {@spell tree stride}"
+														"17級",
+														"{@spell 問道自然}, {@spell 樹躍術}"
 													]
 												]
 											}
@@ -624,18 +624,18 @@
 									},
 									{
 										"type": "entries",
-										"name": "Channel Divinity: Nature's Wrath",
+										"name": "引導神力：自然之怒", "ENG_name": "Channel Divinity: Nature's Wrath",
 										"entries": [
-											"You can use your Channel Divinity to invoke primeval forces to ensnare a foe. As an action, you can cause spectral vines to spring up and reach for a creature within 10 feet of you that you can see. The creature must succeed on a Strength or Dexterity saving throw (its choice) or be {@condition restrained}. While {@condition restrained} by the vines, the creature repeats the saving throw at the end of each of its turns. On a success, it frees itself and the vines vanish."
+											"你可以使用你的引導神力並喚起原初之力以捕縛一個敵人。以一個動作，你可以讓靈體藤蔓生長而出並纏向一個距離你10呎內，且你所能看見的生物。該生物必須成功通過一次力量或敏捷豁免（由它選擇），否則陷入{@condition 束縛}狀態。當被這些藤蔓{@condition 束縛}時，該生物將在每個它的回合結束時重複此豁免檢定。若豁免成功，則它將掙脫束縛，且這些藤蔓也將消失。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Channel Divinity: Turn the Faithless",
+										"name": "引導神力：驅散無信者", "ENG_name": "Channel Divinity: Turn the Faithless",
 										"entries": [
-											"You can use your Channel Divinity to utter ancient words that are painful for fey and fiends to hear. As an action, you present your holy symbol, and each fey or fiend within 30 feet of you that can hear you must make a Wisdom saving throw. On a failed save, the creature is turned for 1 minute or until it takes damage.",
-											"A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the {@action Dash} action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the {@action Dodge} action.",
-											"If the creature's true form is concealed by an illusion, shapeshifting, or other effect, that form is revealed while it is turned."
+											"你可以使用你的引導神力以喊出一句將讓聽到的精類和邪魔都感到痛苦的禱言。以一個動作，你展現你的聖徽，且每個距離你30呎內且能聽見你的精類或邪魔都必須進行一次睿知豁免。若豁免失敗，該生物將被驅散長達1分鐘或直到它受到傷害。",
+											"一個被驅散的不死生物必須用它的回合嘗試盡可能的遠離你，且它無法自願的移動到距離你30呎內的空間。它無法採取反應。它的動作只能使用{@action 疾走}動作或嘗試掙脫阻止它移動的效果。若它無法移動，則該生物將使用{@action 閃避}動作。",
+											"若該生物的真實型態因為幻象、變形、或其他效果而被遮蔽，則它的真實型態將在它被驅散時被揭露。"
 										]
 									}
 								]
@@ -646,10 +646,10 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Aura of Warding",
+										"name": "防護靈光", "ENG_name": "Aura of Warding",
 										"entries": [
-											"Beginning at 7th level, ancient magic lies so heavily upon you that it forms an eldritch ward. You and friendly creatures within 10 feet of you have resistance to damage from spells.",
-											"At 18th level, the range of this aura increases to 30 feet."
+											"從7級開始，眷顧著你的遠古魔法是如此強大，以至於在你身上形成了可畏的防護。你和距離你10呎內的友善生物都將獲得對法術傷害的抗性。",
+											"在18級時，這個靈光的範圍將增加至30呎。"
 										]
 									}
 								]
@@ -660,10 +660,10 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Undying Sentinel",
+										"name": "不朽衛士", "ENG_name": "Undying Sentinel",
 										"entries": [
-											"Starting at 15th level, when you are reduced to 0 hit points and are not killed outright, you can choose to drop to 1 hit point instead. Once you use this ability, you can't use it again until you finish a long rest.",
-											"Additionally, you suffer none of the drawbacks of old age, and you can't be aged magically."
+											"從15級開始，當你的生命值被歸零且沒有被當場殺死時，你可以選擇改為將生命值減少至1。一旦你使用此能力，直到你完成一次長休之前你都不能再使用它。",
+											"此外，你將免受任何衰老的弊害，且你不會被魔法變老。"
 										]
 									}
 								]
@@ -674,19 +674,19 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Elder Champion",
+										"name": "遠古鬥士", "ENG_name": "Elder Champion",
 										"entries": [
-											"At 20th level, you can assume the form of an ancient force of nature, taking on an appearance you choose. For example, your skin might turn green or take on a bark-like texture, your hair might become leafy or mosslike, or you might sprout antlers or a lion-like mane.",
-											"Using your action, you undergo a transformation. For 1 minute, you gain the following benefits:",
+											"在20級時，你可以變作大自然遠古力量化身的型態，獲得你所選擇的外貌特徵。舉例來說，你的肌膚可能會變成綠色或呈現樹皮般的質地、你的頭髮可能會變得如樹葉或青苔一般、或者你可能會長出鹿角或獅子般的鬃毛。",
+											"使用你的動作，你將經歷這個變化過程。在接下來1分鐘內，你將獲得下列好處：",
 											{
 												"type": "list",
 												"items": [
-													"At the start of each of your turns, you regain 10 hit points.",
-													"Whenever you cast a paladin spell that has a casting time of 1 action, you can cast it using your bonus action instead.",
-													"Enemy creatures within 10 feet of you have disadvantage on saving throws against your paladin spells and Channel Divinity options."
+													"在你的每個回合開始時，你回復10點生命值。",
+													"每當你施放一個施法時間為一個動作的聖騎士法術，你可以改為以你的附贈動作施放它。",
+													"距離你10呎內的敵對生物將在對抗你聖騎士法術和引導神力選項的豁免檢定中具有劣勢。"
 												]
 											},
-											"Once you use this feature, you can't use it again until you finish a long rest."
+											"一旦你使用此能力，直到你完成一次長休之前你都不能再使用它。"
 										]
 									}
 								]
@@ -694,29 +694,29 @@
 						]
 					],
 					"source": "PHB",
-					"shortName": "Ancients"
+					"shortName": "遠古"
 				},
 				{
-					"name": "Oath of Devotion",
+					"name": "奉獻之誓", "ENG_name": "Oath of Devotion",
 					"subclassFeatures": [
 						[
 							{
-								"name": "Oath of Devotion",
+								"name": "奉獻之誓", "ENG_name": "Oath of Devotion",
 								"entries": [
-									"The Oath of Devotion binds a paladin to the loftiest ideals of justice, virtue, and order. Sometimes called cavaliers, white knights, or holy warriors, these paladins meet the ideal of the knight in shining armor, acting with honor in pursuit of justice and the greater good. They hold themselves to the highest standards of conduct, and some, for better or worse, hold the rest of the world to the same standards. Many who swear this oath are devoted to gods of law and good and use their gods' tenets as the measure of their devotion. They hold angels\u2014the perfect servants of good\u2014as their ideals, and incorporate images of angelic wings into their helmets or coats of arms.",
+									"奉獻之誓約束著聖騎士遵從正義、美德、和秩序中最崇高的理念。那些立下此聖誓的聖騎士們有時又被稱作「騎兵」、「白騎士」、或「聖戰士」，他們的行為舉止符合騎士的完美典範：身著閃亮的盔甲、行為中帶著榮耀，並追尋著公正和大義。這些聖騎士用最高的道德標準要求自己，而其中一些人，無論好壞，也以相同的標準去要求其他人。許多立下此聖誓的聖騎士都獻身於守序和善良之神，並以他們神祇的戒律衡量他們奉獻的程度。他們將天使\u2014完美的至善侍從\u2014視作他們的理想，並在頭盔或盾徽上飾以天使羽翼的形象。",
 									{
 										"type": "entries",
-										"name": "Tenets of Devotion",
+										"name": "奉獻之信條", "ENG_name": "Tenets of Devotion",
 										"entries": [
-											"Though the exact words and strictures of the Oath of Devotion vary, paladins of this oath share these tenets.",
+											"儘管奉獻之誓的實際內容和限制各有不同，但立下此誓的聖騎士都共有以下這些信條。",
 											{
 												"type": "entries",
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Honesty",
+														"name": "誠實", "tENG_name": "Honesty",
 														"entries": [
-															"Don't lie or cheat. Let your word be your promise."
+															"不要說謊或欺詐。你言出必行。"
 														]
 													}
 												]
@@ -726,9 +726,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Courage",
+														"name": "勇氣", "tENG_name": "Courage",
 														"entries": [
-															"Never fear to act, though caution is wise."
+															"儘管謹慎是明智的，但絕不可畏懼行動。"
 														]
 													}
 												]
@@ -738,9 +738,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Compassion",
+														"name": "憐憫", "tENG_name": "Compassion",
 														"entries": [
-															"Aid others, protect the weak, and punish those who threaten them. Show mercy to your foes, but temper it with wisdom."
+															"援助他人，保護弱小，並懲罰恃強凌弱者。憐憫你的敵人，但要以智慧懲治他們。"
 														]
 													}
 												]
@@ -750,9 +750,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Honor",
+														"name": "榮譽", "tENG_name": "Honor",
 														"entries": [
-															"Treat others with fairness, and let your honorable deeds be an example to them. Do as much good as possible while causing the least amount of harm."
+															"以公平待人，讓你榮譽的行為成為他們的典範。盡力行善，避免造成不必要的傷害。"
 														]
 													}
 												]
@@ -762,9 +762,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Duty",
+														"name": "盡責", "tENG_name": "Duty",
 														"entries": [
-															"Be responsible for your actions and their consequences, protect those entrusted to your care, and obey those who have just authority over you."
+															"對你的行為和其後果負責，守護那些你負責照顧的人，並遵從你理應服從之人。"
 														]
 													}
 												]
@@ -773,15 +773,15 @@
 									},
 									{
 										"type": "entries",
-										"name": "Oath Spells",
+										"name": "聖誓法術", "ENG_name": "Oath Spells",
 										"entries": [
-											"You gain oath spells at the paladin levels listed.",
+											"你在下列聖騎士等級時獲得相應的聖誓法術。",
 											{
 												"type": "table",
-												"caption": "Oath of Devotion Spells",
+												"caption": "奉獻之誓法術",
 												"colLabels": [
-													"Paladin Level",
-													"Spells"
+													"聖騎士等級",
+													"法術"
 												],
 												"colStyles": [
 													"col-3 text-align-center",
@@ -789,24 +789,24 @@
 												],
 												"rows": [
 													[
-														"3rd",
-														"{@spell protection from evil and good}, {@spell sanctuary}"
+														"3級",
+														"{@spell 防護善惡}, {@spell 聖域術}"
 													],
 													[
-														"5th",
-														"{@spell lesser restoration}, {@spell zone of truth}"
+														"5級",
+														"{@spell 次級復原術}, {@spell 誠實之域}"
 													],
 													[
-														"9th",
-														"{@spell beacon of hope}, {@spell dispel magic}"
+														"9級",
+														"{@spell 希望信標}, {@spell 解除魔法}"
 													],
 													[
-														"13th",
-														"{@spell freedom of movement}, {@spell guardian of faith}"
+														"13級",
+														"{@spell 行動自如術}, {@spell 虔誠守衛}"
 													],
 													[
-														"17th",
-														"{@spell commune}, {@spell flame strike}"
+														"17級",
+														"{@spell 通神術}, {@spell 焰擊術}"
 													]
 												]
 											}
@@ -814,18 +814,18 @@
 									},
 									{
 										"type": "entries",
-										"name": "Channel Divinity: Sacred Weapon",
+										"name": "引導神力：至聖武器", "ENG_name": "Channel Divinity: Sacred Weapon",
 										"entries": [
-											"As an action, you can imbue one weapon that you are holding with positive energy, using your Channel Divinity. For 1 minute, you add your Charisma modifier to attack rolls made with that weapon (with a minimum bonus of +1). The weapon also emits bright light in a 20-foot radius and dim light 20 feet beyond that. If the weapon is not already magical, it becomes magical for the duration.",
-											"You can end this effect on your turn as part of any other action. If you are no longer holding or carrying this weapon, or if you fall {@condition unconscious}, this effect ends."
+											"以一個動作，你可以將正能量注入一把你正持握的武器，使用你的引導神力。在1分鐘內，你在使用該武器進行的攻擊檢定中加入你的魅力調整值（加值最低為+1）。該武器同時將散發出20呎半徑的明亮光照和再延伸20呎的微光光照。若該武器原本不是魔法武器，則它將在持續期間變成一把魔法武器。",
+											"你可以在你的回合做為任何其他動作的一部份結束這個效果。若你不再持握或攜帶該武器，或若你陷入{@condition 昏迷}狀態，則此效果結束。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Channel Divinity: Turn the Unholy",
+										"name": "引導神力：驅散不潔者", "ENG_name": "Channel Divinity: Turn the Unholy",
 										"entries": [
-											"As an action, you present your holy symbol and speak a prayer censuring fiends and undead, using your Channel Divinity. Each fiend or undead that can see or hear you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes damage.",
-											"A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the {@action Dash} action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the {@action Dodge} action."
+											"以一個動作，你展現你的聖徽並說出一句斥責邪魔和不死生物的禱詞，使用你的引導神力。每個距離你30呎內且可以看見或聽見你的邪魔和不死生物都必須進行一次睿知豁免。若豁免失敗，該生物將被驅散長達1分鐘或直到它受到傷害。",
+											"一個被驅散的不死生物必須用它的回合嘗試盡可能的遠離你，且它無法自願的移動到距離你30呎內的空間。它無法採取反應。它的動作只能使用{@action 疾走}動作或嘗試掙脫阻止它移動的效果。若它無法移動，則該生物將使用{@action 閃避}動作。"
 										]
 									}
 								]
@@ -836,10 +836,10 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Aura of Devotion",
+										"name": "奉獻靈光", "ENG_name": "Aura of Devotion",
 										"entries": [
-											"Starting at 7th level, you and friendly creatures within 10 feet of you can't be {@condition charmed} while you are conscious.",
-											"At 18th level, the range of this aura increases to 30 feet."
+											"從7級開始，你和距離你10呎內的友善生物都不會在你意識清醒的時候被{@condition 魅惑}。",
+											"在18級時，這個靈光的範圍將增加至30呎。"
 										]
 									}
 								]
@@ -850,9 +850,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Purity of Spirit",
+										"name": "純淨之魂", "ENG_name": "Purity of Spirit",
 										"entries": [
-											"Beginning at 15th level, you are always under the effects of a {@spell protection from evil and good} spell."
+											"從15級開始，你將永遠處於{@spell 防護善惡}法術的效果影響。"
 										]
 									}
 								]
@@ -863,12 +863,12 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Holy Nimbus",
+										"name": "神聖光輪", "ENG_name": "Holy Nimbus",
 										"entries": [
-											"At 20th level, as an action, you can emanate an aura of sunlight. For 1 minute, bright light shines from you in a 30-foot radius, and dim light shines 30 feet beyond that.",
-											"Whenever an enemy creature starts its turn in the bright light, the creature takes 10 radiant damage.",
-											"In addition, for the duration, you have advantage on saving throws against spells cast by fiends or undead.",
-											"Once you use this feature, you can't use it again until you finish a long rest."
+											"在20級時，以一個動作，你可以放射出一道日光靈光。在1分鐘內，你將散發出30呎半徑的明亮光照和再延伸30呎的微光光照。",
+											"每當一個敵對生物在此明亮光照的範圍內開始它的回合，該生物將受到10點光耀傷害。",
+											"此外，在持續期間內，你在對抗由邪魔或不死生物所施放法術的豁免檢定中具有優勢。",
+											"一旦你使用此能力，直到你完成一次長休之前你都不能再使用它。"
 										]
 									}
 								]
@@ -876,29 +876,29 @@
 						]
 					],
 					"source": "PHB",
-					"shortName": "Devotion"
+					"shortName": "奉獻"
 				},
 				{
-					"name": "Oath of Vengeance",
+					"name": "復仇之誓", "ENG_name": "Oath of Vengeance",
 					"subclassFeatures": [
 						[
 							{
-								"name": "Oath of Vengeance",
+								"name": "復仇之誓", "ENG_name": "Oath of Vengeance",
 								"entries": [
-									"The Oath of Vengeance is a solemn commitment to punish those who have committed a grievous sin. When evil forces slaughter helpless villagers, when an entire people turns against the will of the gods, when a thieves' guild grows too violent and powerful, when a dragon rampages through the countryside - at times like these, paladins arise and swear an Oath of Vengeance to set right that which has gone wrong. To these paladins\u2014sometimes called avengers or dark knights\u2014their own purity is not as important as delivering justice.",
+									"復仇之誓是個嚴肅的承諾，立誓於懲罰那些犯下嚴重罪行之人。當邪惡勢力屠殺無辜的百姓、當全體人民背離了神祇的旨意、當盜賊公會茁壯得太過殘暴和強大、或當巨龍橫行於鄉野\u2014在這種時刻，聖騎士們就會出現，並立下復仇之誓以彰顯他們撥亂反正的決心。對這些聖騎士\u2014有時又被稱作「復仇者」、或「黑暗騎士」\u2014而言，他們自身的純潔遠不如伸張正義來的重要。",
 									{
 										"type": "entries",
-										"name": "Tenets of Vengeance",
+										"name": "復仇之信條", "ENG_name": "Tenets of Vengeance",
 										"entries": [
-											"The tenets of the Oath of Vengeance vary by paladin, but all the tenets revolve around punishing wrongdoers by any means necessary. Paladins who uphold these tenets are willing to sacrifice even their own righteousness to mete out justice upon those who do evil, so the paladins are often neutral or lawful neutral in alignment. The core principles of the tenets are brutally simple.",
+											"復仇之誓的信條對每個聖騎士而言都各有不同，但這些信條全都圍繞著以任何必要手段懲罰有過者。高舉這些信條的聖騎士甚至願意犧牲他們的正直以讓正義降臨在惡者身上，也因此，這些聖騎士的陣營通常會是絕對中立或守序中立。這些信條的核心原則極其簡單。",
 											{
 												"type": "entries",
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Fight the Greater Evil",
+														"name": "追尋以迎戰大惡", "tENG_name": "Fight the Greater Evil",
 														"entries": [
-															"Faced with a choice of fighting my sworn foes or combating a lesser evil. I choose the greater evil."
+															"是要追獵誓敵？抑或驅逐小惡？我選擇迎戰那更大的邪惡。"
 														]
 													}
 												]
@@ -908,9 +908,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "No Mercy for the Wicked",
+														"name": "對惡徒不留慈悲", "tENG_name": "No Mercy for the Wicked",
 														"entries": [
-															"Ordinary foes might win my mercy, but my sworn enemies do not."
+															"尋常敵人可能贏得我的慈悲，但我的誓敵無可憐憫。"
 														]
 													}
 												]
@@ -920,9 +920,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "By Any Means Necessary",
+														"name": "為目的不擇手段", "tENG_name": "By Any Means Necessary",
 														"entries": [
-															"My qualms can't get in the way of exterminating my foes."
+															"我的擔憂疑慮永不會阻止我殲滅敵人。"
 														]
 													}
 												]
@@ -932,9 +932,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Restitution",
+														"name": "為惡行盡力補償", "tENG_name": "Restitution",
 														"entries": [
-															"If my foes wreak ruin on the world, it is because I failed to stop them. I must help those harmed by their misdeeds."
+															"若我的敵人在這世界上造成了破壞，那必是因我沒能成功阻止它。我必須幫助那些因其惡行而被傷害的人們。"
 														]
 													}
 												]
@@ -943,15 +943,15 @@
 									},
 									{
 										"type": "entries",
-										"name": "Oath Spells",
+										"name": "聖誓法術", "ENG_name": "Oath Spells",
 										"entries": [
-											"You gain oath spells at the paladin levels listed.",
+											"你在下列聖騎士等級時獲得相應的聖誓法術。",
 											{
 												"type": "table",
-												"caption": "Oath of Vengeance Spells",
+												"caption": "復仇之誓法術",
 												"colLabels": [
-													"Paladin Level",
-													"Spells"
+													"聖騎士等級",
+													"法術"
 												],
 												"colStyles": [
 													"col-3 text-align-center",
@@ -959,24 +959,24 @@
 												],
 												"rows": [
 													[
-														"3rd",
-														"{@spell bane}, {@spell hunter's mark}"
+														"3級",
+														"{@spell 災禍術}, {@spell 獵人印記}"
 													],
 													[
-														"5th",
-														"{@spell hold person}, {@spell misty step}"
+														"5級",
+														"{@spell 人類定身術}, {@spell 迷蹤步}"
 													],
 													[
-														"9th",
-														"{@spell haste}, {@spell protection from energy}"
+														"9級",
+														"{@spell 加速術}, {@spell 防護能量}"
 													],
 													[
-														"13th",
-														"{@spell banishment}, {@spell dimension door}"
+														"13級",
+														"{@spell 放逐術}, {@spell 次元門}"
 													],
 													[
-														"17th",
-														"{@spell hold monster}, {@spell scrying}"
+														"17級",
+														"{@spell 怪物定身術}, {@spell 探知}"
 													]
 												]
 											}
@@ -984,18 +984,18 @@
 									},
 									{
 										"type": "entries",
-										"name": "Channel Divinity: Abjure Enemy",
+										"name": "引導神力：誓絕仇敵", "ENG_name": "Channel Divinity: Abjure Enemy",
 										"entries": [
-											"As an action, you present your holy symbol and speak a prayer of denunciation, using your Channel Divinity. Choose one creature within 60 feet of you that you can see. That creature must make a Wisdom saving throw, unless it is immune to being {@condition frightened}. Fiends and undead have disadvantage on this saving throw.",
-											"On a failed save, the creature is {@condition frightened} for 1 minute or until it takes any damage. While {@condition frightened}, the creature's speed is 0, and it can't benefit from any bonus to its speed.",
-											"On a successful save, the creature's speed is halved for 1 minute or until the creature takes any damage."
+											"以一個動作，你展現你的聖徽並說出斥責的禱詞，使用你的引導神力。選擇一個距離你60呎內且你所能看見的生物。該生物必須進行一次睿知豁免，除非它免疫於{@condition 恐懼}。邪魔和不死生物將在此豁免檢定中具有劣勢。",
+											"若豁免失敗，該生物將陷入{@condition 恐懼}長達1分鐘，或直到它受到任何傷害。當處於{@condition 恐懼}時，該生物的移動速度歸零，且無法得益於任何對它移動速度的加值。",
+											"若豁免成功，該生物的移動速度被減半長達1分鐘，或直到該生物受到任何傷害。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Channel Divinity: Vow of Enmity",
+										"name": "引導神力：憎恨誓言", "ENG_name": "Channel Divinity: Vow of Enmity",
 										"entries": [
-											"As a bonus action, you can utter a vow of enmity against a creature you can see within 10 feet of you, using your Channel Divinity. You gain advantage on attack rolls against the creature for 1 minute or until it drops to 0 hit points or falls {@condition unconscious}."
+											"以一個附贈動作，你可以使用你的引導神力，對一個距離你10呎內且你所能看見的生物立下憎恨誓言。你對該生物所進行的攻擊檢定將具有優勢，持續1分鐘，或直到它的生命值歸零或陷入{@condition 昏迷}狀態。"
 										]
 									}
 								]
@@ -1006,9 +1006,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Relentless Avenger",
+										"name": "無盡復仇", "ENG_name": "Relentless Avenger",
 										"entries": [
-											"By 7th level, your supernatural focus helps you close off a foe's retreat. When you hit a creature with an opportunity attack, you can move up to half your speed immediately after the attack and as part of the same reaction. This movement doesn't provoke opportunity attacks."
+											"從7級起，你的超常專注將協助你阻止敵人撤退。當你以一次藉機攻擊命中一個生物時，你可以在攻擊之後做為該反應的一部份，立刻移動最多等同於你移動速度一半的距離。這個移動並不會引發藉機攻擊。"
 										]
 									}
 								]
@@ -1019,9 +1019,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Soul of Vengeance",
+										"name": "報復之魂", "ENG_name": "Soul of Vengeance",
 										"entries": [
-											"Starting at 15th level, the authority with which you speak your Vow of Enmity gives you greater power over your foe. When a creature under the effect of your Vow of Enmity makes an attack, you can use your reaction to make a melee weapon attack against that creature if it is within range."
+											"從15級開始，你立下憎恨誓言時所帶有的權威將賦予你更強的力量以對抗你的敵人。當一個處於你憎恨誓言效果下的生物進行一次攻擊，若該生物處於你的近戰武器攻擊範圍內，你可以使用你的反應以對它進行一次近戰武器攻擊。"
 										]
 									}
 								]
@@ -1032,17 +1032,17 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Avenging Angel",
+										"name": "復仇天使", "ENG_name": "Avenging Angel",
 										"entries": [
-											"At 20th level, you can assume the form of an angelic avenger. Using your action, you undergo a transformation. For 1 hour, you gain the following benefits:",
+											"在20級時，你可以變作天使般復仇者的型態。使用你的動作，你將經歷這個變化過程。在接下來1小時內，你將獲得下列好處：",
 											{
 												"type": "list",
 												"items": [
-													"Wings sprout from your back and grant you a flying speed of 60 feet.",
-													"You emanate an aura of menace in a 30-foot radius. The first time any enemy creature enters the aura or starts its turn there during a battle, the creature must succeed on a Wisdom saving throw or become {@condition frightened} of you for 1 minute or until it takes any damage. {@action Attack} rolls against the {@condition frightened} creature have advantage."
+													"你的背上將長出雙翼，並賦予你60呎的飛行速度。",
+													"你將散發出30呎半徑的威嚇靈光。任何敵對生物在第一次進入這道靈光、或在戰鬥期間於該處開始它回合時，該生物都必須成功通過一次睿知豁免，否則因你而陷入{@condition 恐懼}長達1分鐘，或直到它受到任何傷害。對該被{@condition 恐懼}生物所進行的攻擊檢定將具有優勢。"
 												]
 											},
-											"Once you use this feature, you can't use it again until you finish a long rest."
+											"一旦你使用此能力，直到你完成一次長休之前你都不能再使用它。"
 										]
 									}
 								]
@@ -1050,7 +1050,7 @@
 						]
 					],
 					"source": "PHB",
-					"shortName": "Vengeance"
+					"shortName": "復仇"
 				},
 				{
 					"name": "Oathbreaker",
@@ -1063,15 +1063,15 @@
 									"A paladin must be evil and at least 3rd level to become an Oathbreaker. The paladin replaces the features specific to his or her Sacred Oath with Oathbreaker features.",
 									{
 										"type": "entries",
-										"name": "Oathbreaker Spells",
+										"name": "破誓者法術", "ENG_name": "Oathbreaker Spells",
 										"entries": [
 											"You gain oathbreaker spells at the paladin levels listed.",
 											{
 												"type": "table",
-												"caption": "Oathbreaker Spells",
+												"caption": "破誓者法術",
 												"colLabels": [
-													"Paladin Level",
-													"Spells"
+													"聖騎士等級",
+													"法術"
 												],
 												"colStyles": [
 													"col-3 text-align-center",
@@ -1079,24 +1079,24 @@
 												],
 												"rows": [
 													[
-														"3rd",
-														"{@spell hellish rebuke}, {@spell inflict wounds}"
+														"3級",
+														"{@spell 煉獄叱喝}, {@spell 造成傷勢}"
 													],
 													[
-														"5th",
-														"{@spell crown of madness}, {@spell darkness}"
+														"5級",
+														"{@spell 瘋狂冠冕}, {@spell 黑暗術}"
 													],
 													[
-														"9th",
-														"{@spell animate dead}, {@spell bestow curse}"
+														"9級",
+														"{@spell 活化死屍}, {@spell 降咒}"
 													],
 													[
-														"13th",
-														"{@spell blight}, {@spell confusion}"
+														"13級",
+														"{@spell 枯萎術}, {@spell 困惑術}"
 													],
 													[
-														"17th",
-														"{@spell contagion}, {@spell dominate person}"
+														"17級",
+														"{@spell 疫病術}, {@spell 支配人類}"
 													]
 												]
 											}
@@ -1166,26 +1166,26 @@
 					"shortName": "Oathbreaker"
 				},
 				{
-					"name": "Oath of the Crown",
+					"name": "王冠之誓", "ENG_name": "Oath of the Crown",
 					"subclassFeatures": [
 						[
 							{
-								"name": "Oath of the Crown",
+								"name": "王冠之誓", "ENG_name": "Oath of the Crown",
 								"entries": [
-									"The Oath of the Crown is sworn to the ideals of civilization, be it the spirit of a nation, fealty to a sovereign, or service to a deity of law and rulership. The paladins who swear this oath dedicate themselves to serving society and, in particular, the laws that hold society together. These paladins are the watchful guardians on the walls, standing against the chaotic tides of barbarism that threaten to tear down all that civilization has built, and are commonly known as guardians, exemplars, or sentinels. Often, paladins who swear this oath are members of an order of knighthood in service to a nation or sovereign, and undergo their oath as part of their admission to the order's ranks.",
+									"王冠之誓是一種對於文明理想的宣誓，無論是對國家精神的認同、對君王的效忠、或是對律法和統治之神的奉侍。立下王冠之誓的聖武士們致力於服務社會，尤其是那維繫著社會的法律。這些聖騎士們是城牆上警醒的守衛，挺身對抗那威脅於摧毀文明世界的野蠻混亂浪潮；他們通常被稱作守護者、典範者、或是哨衛。通常，立下這個誓言的聖騎士會是效忠於國家或者君王的騎士團中的成員，而接受這個誓言也是他們加入騎士團階級的一部分條件。",
 									{
 										"type": "entries",
-										"name": "Tenets of the Crown",
+										"name": "王冠之信條", "ENG_name": "Tenets of the Crown",
 										"entries": [
-											"The tenets of the Oath of the Crown are often set by the sovereign to which their oath is sworn, but generally emphasize the following tenets.",
+											"王冠之誓的信條通常是由其宣誓效忠的君王所設立，但一般而言這些信條都會強調著下列幾項。",
 											{
 												"type": "entries",
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Law",
+														"name": "律法", "tENG_name": "Law",
 														"entries": [
-															"The law is paramount. It is the mortar that holds the stones of civilization together, and it must be respected."
+															"律法至上。它是文明的基石，且必須被敬重。"
 														]
 													}
 												]
@@ -1195,9 +1195,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Loyalty",
+														"name": "忠誠", "tENG_name": "Loyalty",
 														"entries": [
-															"Your word is your bond. Without loyalty, oaths and laws are meaningless."
+															"言出必行。失去了忠誠，誓言和律法將毫無意義。"
 														]
 													}
 												]
@@ -1207,9 +1207,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Courage",
+														"name": "勇氣", "tENG_name": "Courage",
 														"entries": [
-															"You must be willing to do what needs to be done for the sake of order, even in the face of overwhelming odds. If you don't act, then who will?"
+															"無所畏懼。你必須自願為了秩序挺身而出，即使勝算渺茫。如果你不行動，又有誰會呢？"
 														]
 													}
 												]
@@ -1219,9 +1219,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Responsibility",
+														"name": "責任", "tENG_name": "Responsibility",
 														"entries": [
-															"You must deal with the consequences of your actions, and you are responsible for fulfilling your duties and obligations."
+															"恪盡職守。你必須為你的行動承擔後果，且你有責任去實現你的使命和義務。"
 														]
 													}
 												]
@@ -1230,15 +1230,15 @@
 									},
 									{
 										"type": "entries",
-										"name": "Oath Spells",
+										"name": "聖誓法術", "ENG_name": "Oath Spells",
 										"entries": [
-											"You gain oath spells at the paladin levels listed.",
+											"你在下列聖騎士等級時獲得相應的聖誓法術。",
 											{
 												"type": "table",
-												"caption": "Oath of the Crown Spells",
+												"caption": "王冠之誓法術",
 												"colLabels": [
-													"Paladin Level",
-													"Spells"
+													"聖騎士等級",
+													"法術"
 												],
 												"colStyles": [
 													"col-3 text-align-center",
@@ -1246,24 +1246,24 @@
 												],
 												"rows": [
 													[
-														"3rd",
-														"{@spell command}, {@spell compelled duel}"
+														"3級",
+														"{@spell 命令術}, {@spell 強迫決鬥}"
 													],
 													[
-														"5th",
-														"{@spell warding bond}, {@spell zone of truth}"
+														"5級",
+														"{@spell 守護聯結}, {@spell 誠實之域}"
 													],
 													[
-														"9th",
-														"{@spell aura of vitality}, {@spell spirit guardians}"
+														"9級",
+														"{@spell 活力靈光}, {@spell 靈體守衛}"
 													],
 													[
-														"13th",
-														"{@spell banishment}, {@spell guardian of faith}"
+														"13級",
+														"{@spell 放逐術}, {@spell 虔誠守衛}"
 													],
 													[
-														"17th",
-														"{@spell circle of power}, {@spell geas}"
+														"17級",
+														"{@spell 威能法環}, {@spell 指使術}"
 													]
 												]
 											}
@@ -1271,16 +1271,16 @@
 									},
 									{
 										"type": "entries",
-										"name": "Channel Divinity: Champion Challenge",
+										"name": "引導神力：捍衛挑戰", "ENG_name": "Channel Divinity: Champion Challenge",
 										"entries": [
-											"As a bonus action, you issue a challenge that compels other creatures to do battle with you. Each creature of your choice that you can see within 30 feet of you must make a Wisdom saving throw. On a failed save, a creature can't willingly move more than 30 feet away from you. This effect ends on the creature if you are {@condition incapacitated} or die or if the creature is more than 30 feet away from you."
+											"以一個附贈動作，你發起一個挑戰以強迫其他生物與你戰鬥。每個距離你30呎內你所選且你能看見的生物必須進行一次睿知豁免。若豁免失敗，該生物將無法自願移動到距離你超過30呎範圍的位置。這個效果對該生物的影響會在你陷入{@condition 無力}狀態或死亡、或該生物距離你超過30呎時提早結束。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Channel Divinity: Turn the Tide",
+										"name": "引導神力：扭轉局勢", "ENG_name": "Channel Divinity: Turn the Tide",
 										"entries": [
-											"As a bonus action, you can bolster injured creatures with your Channel Divinity. Each creature of your choice that can hear you within 30 feet of you regains hit points equal to {@dice 1d6} + your Charisma modifier (minimum of 1) if it has no more than half of its hit points."
+											"以一個附贈動作，你可以用你的引導神力援助重傷的生物。每個距離你30呎內你所選且能聽見你的生物若只有不超過一半的生命值，則將回復等同於{@dice 1d6}+你的魅力調整值（至少為1）的生命值。"
 										]
 									}
 								]
@@ -1291,9 +1291,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Divine Allegiance",
+										"name": "神聖忠誠", "ENG_name": "Divine Allegiance",
 										"entries": [
-											"Starting at 7th level, when a creature within 5 feet of you takes damage, you can use your reaction to magically substitute your own health for that of the target creature, causing that creature not to take the damage. Instead, you take the damage. This damage to you can't be reduced or prevented in any way."
+											"從7級開始，當一個距離你5呎內的生物受到傷害，你可以使用你的反應以魔法性地讓你的生命值代替該目標生物，使該生物不受傷害。取而代之，你受到該傷害。這個對你造成的傷害無法被任何方式減輕或避免。"
 										]
 									}
 								]
@@ -1304,9 +1304,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Unyielding Spirit",
+										"name": "不屈之魂", "ENG_name": "Unyielding Spirit",
 										"entries": [
-											"Starting at 15th level, you have advantage on saving throws to avoid becoming {@condition paralyzed} or {@condition stunned}."
+											"從15級開始，你在用於避免被{@condition 麻痺}或{@condition 震懾}的豁免檢定中具有優勢。"
 										]
 									}
 								]
@@ -1317,18 +1317,18 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Exalted Champion",
+										"name": "崇高衛士", "ENG_name": "Exalted Champion",
 										"entries": [
-											"At 20th level, your presence on the field of battle is an inspiration to those dedicated to your cause. You can use your action to gain the following benefits for 1 hour:",
+											"在20級時，你在戰場上的姿態對那些致力於你事業的人們而言是一種強大的鼓舞。你可以使用你的動作以獲得下列好處長達1小時：",
 											{
 												"type": "list",
 												"items": [
-													"You have resistance to bludgeoning, piercing, and slashing damage from nonmagical weapons.",
-													"Your allies have advantage on death saving throws while within 30 feet of you.",
-													"You have advantage on Wisdom saving throws, as do your allies within 30 feet of you."
+													"你對非魔法武器所造成的鈍擊、穿刺、劈砍傷害具有抗性。",
+													"你的盟友在處於你30呎範圍內時在死亡豁免中具有優勢。",
+													"你以及距離你30呎內的盟友在睿知豁免中具有優勢。"
 												]
 											},
-											"This effect ends early if you are {@condition incapacitated} or die. Once you use this feature, you can't use it again until you finish a long rest."
+											"這個效果會在你陷入{@condition 無力}狀態或死亡時提早結束。一旦你使用此能力，直到你完成一次長休之前你都不能再使用它。"
 										]
 									}
 								]
@@ -1336,7 +1336,7 @@
 						]
 					],
 					"source": "SCAG",
-					"shortName": "Crown"
+					"shortName": "王冠"
 				},
 				{
 					"name": "Oath of Conquest (UA)",
@@ -1398,8 +1398,8 @@
 												"type": "table",
 												"caption": "Oath of Conquest Spells",
 												"colLabels": [
-													"Paladin Level",
-													"Spells"
+													"聖騎士等級",
+													"法術"
 												],
 												"colStyles": [
 													"col-3 text-align-center",
@@ -1407,24 +1407,24 @@
 												],
 												"rows": [
 													[
-														"3rd",
-														"{@spell armor of Agathys}, {@spell command}"
+														"3級",
+														"{@spell 艾嘉西斯之鎧}, {@spell 命令術}"
 													],
 													[
-														"5th",
-														"{@spell hold person}, {@spell spiritual weapon}"
+														"5級",
+														"{@spell 人類定身術}, {@spell 靈體武器}"
 													],
 													[
-														"9th",
-														"{@spell bestow curse}, {@spell fear}"
+														"9級",
+														"{@spell 降咒}, {@spell 恐懼術}"
 													],
 													[
-														"13th",
-														"{@spell blight}, {@spell dominate beast}"
+														"13級",
+														"{@spell 枯萎術}, {@spell 支配野獸}"
 													],
 													[
-														"17th",
-														"{@spell dominate person}, {@spell insect plague}"
+														"17級",
+														"{@spell 支配人類}, {@spell 疫病蟲群}"
 													]
 												]
 											}
@@ -1561,8 +1561,8 @@
 												"type": "table",
 												"caption": "Oath of Conquest Spells",
 												"colLabels": [
-													"Paladin Level",
-													"Spells"
+													"聖騎士等級",
+													"法術"
 												],
 												"colStyles": [
 													"col-3 text-align-center",
@@ -1570,24 +1570,24 @@
 												],
 												"rows": [
 													[
-														"3rd",
-														"{@spell armor of Agathys}, {@spell command}"
+														"3級",
+														"{@spell 艾嘉西斯之鎧}, {@spell 命令術}"
 													],
 													[
-														"5th",
-														"{@spell hold person}, {@spell spiritual weapon}"
+														"5級",
+														"{@spell 人類定身術}, {@spell 靈體武器}"
 													],
 													[
-														"9th",
-														"{@spell bestow curse}, {@spell fear}"
+														"9級",
+														"{@spell 降咒}, {@spell 恐懼術}"
 													],
 													[
-														"13th",
-														"{@spell dominate beast}, {@spell stoneskin}"
+														"13級",
+														"{@spell 支配野獸}, {@spell 石膚術}"
 													],
 													[
-														"17th",
-														"{@spell cloudkill}, {@spell dominate person}"
+														"17級",
+														"{@spell 死雲術}, {@spell 支配人類}"
 													]
 												]
 											}
@@ -1687,8 +1687,8 @@
 												"type": "table",
 												"caption": "Oath of Treachery Spells",
 												"colLabels": [
-													"Paladin Level",
-													"Spells"
+													"聖騎士等級",
+													"法術"
 												],
 												"colStyles": [
 													"col-3 text-align-center",
@@ -1696,24 +1696,24 @@
 												],
 												"rows": [
 													[
-														"3rd",
-														"{@spell charm person}, {@spell expeditious retreat}"
+														"3級",
+														"{@spell 魅惑人類}, {@spell 腳底抹油}"
 													],
 													[
-														"5th",
-														"{@spell invisibility}, {@spell mirror image}"
+														"5級",
+														"{@spell 隱形術}, {@spell 鏡影術}"
 													],
 													[
-														"9th",
-														"{@spell gaseous form}, {@spell haste}"
+														"9級",
+														"{@spell 氣化形體}, {@spell 加速術}"
 													],
 													[
-														"13th",
-														"{@spell confusion}, {@spell greater invisibility}"
+														"13級",
+														"{@spell 困惑術}, {@spell 高等隱形術}"
 													],
 													[
-														"17th",
-														"{@spell dominate person}, {@spell passwall}"
+														"17級",
+														"{@spell 支配人類}, {@spell 穿牆術}"
 													]
 												]
 											}
@@ -1887,8 +1887,8 @@
 												"type": "table",
 												"caption": "Oath of Redemption Spells",
 												"colLabels": [
-													"Paladin Level",
-													"Spells"
+													"聖騎士等級",
+													"法術"
 												],
 												"colStyles": [
 													"col-3 text-align-center",
@@ -1896,24 +1896,24 @@
 												],
 												"rows": [
 													[
-														"3rd",
-														"{@spell shield}, {@spell sleep}"
+														"3級",
+														"{@spell 護盾術}, {@spell 睡眠術}"
 													],
 													[
-														"5th",
-														"{@spell hold person}, {@spell ray of enfeeblement}"
+														"5級",
+														"{@spell 人類定身術}, {@spell 衰弱射線}"
 													],
 													[
-														"9th",
-														"{@spell counterspell}, {@spell hypnotic pattern}"
+														"9級",
+														"{@spell 反制法術}, {@spell 催眠圖紋}"
 													],
 													[
-														"13th",
-														"{@spell Otiluke's resilient sphere}, {@spell stoneskin}"
+														"13級",
+														"{@spell 歐提路克魔封法球}, {@spell 石膚術}"
 													],
 													[
-														"17th",
-														"{@spell hold monster}, {@spell wall of force}"
+														"17級",
+														"{@spell 怪物定身術}, {@spell 力牆術}"
 													]
 												]
 											}
@@ -2002,41 +2002,41 @@
 					"shortName": "Redemption (UA)"
 				},
 				{
-					"name": "Oath of Conquest",
+					"name": "征服之誓", "ENG_name": "Oath of Conquest",
 					"subclassFeatures": [
 						[
 							{
-								"name": "Oath of Conquest",
+								"name": "征服之誓", "ENG_name": "Oath of Conquest",
 								"entries": [
-									"The Oath of Conquest calls to paladins who seek glory in battle and the subjugation of their enemies. It isn't enough for these paladins to establish order. They must crush the forces of chaos. Sometimes called knight tyrants or iron mongers, those who swear this oath gather into grim orders that serve gods or philosophies of war and well-ordered might.",
-									"Some of these paladins go so far as to consort with the powers of the Nine Hells, valuing the rule of law over the balm of mercy. The archdevil Bel, warlord of Avernus, counts many of these paladins\u2014called hell knights\u2014as his most ardent supporters. Hell knights cover their armor with trophies taken from fallen enemies, a grim warning to any who dare oppose them and the decrees of their lords. These knights are often most fiercely resisted by other paladins of this oath, who believe that the hell knights have wandered too far into darkness.",
+									"征服之誓吸引著那些在戰鬥中尋求榮耀與征服的聖騎士們。對這些聖騎士而言僅僅建立秩序是不夠的，他們必須徹底粉碎混亂的勢力。有時候又被稱作暴君騎士或戰爭販子，他們集結成嚴酷的軍隊或組織，以服侍戰爭之神或哲學、以及秩序良好的力量。",
+									"其中一些這類聖騎士甚至會誤入歧途，與九獄同流合汙，重視律法規則更勝過仁慈慰藉。大惡魔巴爾，阿弗納斯地獄的軍閥，將許多這樣的聖騎士\u2014他們被稱為地獄騎士\u2014視為祂最忠誠的追隨者。地獄騎士用倒下的敵人身上的戰利品來裝飾他們的盔甲，做為對任何敢於反抗他們以及他們領主法令的人的可怕警告。這些騎士往往會受到其他征服之誓聖騎士的強烈抵制，他們認為地獄騎士已經在黑暗中走得太遠了。",
 									{
 										"type": "entries",
-										"name": "Tenets of Conquest",
+										"name": "征服之信條", "ENG_name": "Tenets of Conquest",
 										"entries": [
-											"A paladin who takes this oath has the tenets of conquest seared on the upper arm.",
+											"立下征服之誓的聖騎士會將征服之信條烙印在他們的上臂。",
 											{
 												"type": "entries",
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Douse the Flame of Hope",
+														"name": "熄滅希望之火", "tENG_name": "Douse the Flame of Hope",
 														"entries": [
-															"It is not enough to merely defeat an enemy in battle. Your victory must be so overwhelming that your enemies' will to fight is shattered forever. A blade can end a life. Fear can end an empire."
+															"僅僅在戰鬥中擊敗敵人是不夠的。你的壓倒性勝利必須顯著到足以永遠粉碎敵人的戰鬥意志。刀劍只能結束生命，恐懼卻能終結國家。"
 														]
 													},
 													{
 														"type": "entries",
-														"name": "Rule with an Iron Fist",
+														"name": "以鐵腕統治", "tENG_name": "Rule with an Iron Fist",
 														"entries": [
-															"Once you have conquered, tolerate no dissent. Your word is law. Those who obey it shall be favored. Those who defy it shall be punished as an example to all who might follow."
+															"一旦你完成征服，不要容忍任何異議。你的話語就是法律。那些遵循你的人將被優待，那些反抗你的人則會受到懲罰，以儆效尤。"
 														]
 													},
 													{
 														"type": "entries",
-														"name": "Strength Above All",
+														"name": "力量高於一切", "tENG_name": "Strength Above All",
 														"entries": [
-															"You shall rule until a stronger one arises. Then you must grow mightier and meet the challenge, or fall to your own ruin."
+															"你將維持統治直到更強的勢力崛起。那時你必須變得更強大以迎接挑戰，否則就會自取滅亡。"
 														]
 													}
 												]
@@ -2045,15 +2045,15 @@
 									},
 									{
 										"type": "entries",
-										"name": "Oath Spells",
+										"name": "聖誓法術", "ENG_name": "Oath Spells",
 										"entries": [
-											"You gain oath spells at the paladin levels listed.",
+											"你在下列聖騎士等級時獲得相應的聖誓法術。",
 											{
 												"type": "table",
-												"caption": "Oath of Conquest Spells",
+												"caption": "征服之誓法術",
 												"colLabels": [
-													"Paladin Level",
-													"Spells"
+													"聖騎士等級",
+													"法術"
 												],
 												"colStyles": [
 													"col-3 text-align-center",
@@ -2061,24 +2061,24 @@
 												],
 												"rows": [
 													[
-														"3rd",
-														"{@spell armor of Agathys}, {@spell command}"
+														"3級",
+														"{@spell 艾嘉西斯之鎧}, {@spell 命令術}"
 													],
 													[
-														"5th",
-														"{@spell hold person}, {@spell spiritual weapon}"
+														"5級",
+														"{@spell 人類定身術}, {@spell 靈體武器}"
 													],
 													[
-														"9th",
-														"{@spell bestow curse}, {@spell fear}"
+														"9級",
+														"{@spell 降咒}, {@spell 恐懼術}"
 													],
 													[
-														"13th",
-														"{@spell dominate beast}, {@spell stoneskin}"
+														"13級",
+														"{@spell 支配野獸}, {@spell 石膚術}"
 													],
 													[
-														"17th",
-														"{@spell cloudkill}, {@spell dominate person}"
+														"17級",
+														"{@spell 死雲術}, {@spell 支配人類}"
 													]
 												]
 											}
@@ -2086,16 +2086,16 @@
 									},
 									{
 										"type": "entries",
-										"name": "Channel Divinity: Conquering Presence",
+										"name": "引導神力：征服威儀", "ENG_name": "Channel Divinity: Conquering Presence",
 										"entries": [
-											"You can use your Channel Divinity to exude a terrifying presence. As an action, you force each creature of your choice that you can see within 30 feet of you to make a Wisdom saving throw. On a failed save, a creature becomes {@condition frightened} of you for 1 minute. The {@condition frightened} creature can repeat this saving throw at the end of each of its turns, ending the effect on itself on a success."
+											"你可以使用你的引導神力以展現出駭人的威儀。以一個動作，你強迫每個距離你30呎內你所選且你能看見的生物進行一次睿知豁免。若豁免失敗，該生物將因你而陷入{@condition 恐懼}長達1分鐘。陷入{@condition 恐懼}的生物可以在它的每個回合結束時重複此豁免，若豁免成功則結束這個效果對它的影響。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Channel Divinity: Guided Strike",
+										"name": "引導神力：神導打擊", "ENG_name": "Channel Divinity: Guided Strike",
 										"entries": [
-											"You can use your Channel Divinity to strike with supernatural accuracy. When you make an attack roll, you can use your Channel Divinity to gain a +10 bonus to the roll. You make this choice after you see the roll, but before the DM says whether the attack hits or misses."
+											"你可以使用你的引導神力以超常準確度進行打擊。當你進行一次攻擊檢定時，你可以使用你的引導神力以在該檢定中獲得+10的加值。你在看見擲骰結果之後，但DM說出攻擊是否命中之前決定是否使用此能力。"
 										]
 									}
 								]
@@ -2106,11 +2106,11 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Aura of Conquest",
+										"name": "征服靈光", "ENG_name": "Aura of Conquest",
 										"entries": [
-											"Starting at 7th level, you constantly emanate a menacing aura while you're not {@condition incapacitated}. The aura extends 10 feet from you in every direction, but not through total cover.",
-											"If a creature is {@condition frightened} of you, its speed is reduced to 0 while in the aura, and that creature takes psychic damage equal to half your paladin level if it starts its turn there.",
-											"At 18th level, the range of this aura increases to 30 feet."
+											"從7級開始，你將在不處於{@condition 無力}狀態時持續散發出威嚇靈光。這道靈光從你身上向各個方向延伸10呎，但並不會穿透全掩護。",
+											"若一個生物{@condition 恐懼}於你，則它的移動速度將在處於這道靈光時被歸零，且該生物將在它於該處開始它的回合時受到等同於你聖騎士等級一半的精神傷害。",
+											"在18級時，這個靈光的範圍將增加至30呎。"
 										]
 									}
 								]
@@ -2121,9 +2121,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Scornful Rebuke",
+										"name": "輕蔑斥喝", "ENG_name": "Scornful Rebuke",
 										"entries": [
-											"Starting at 15th level, those who dare to strike you are psychically punished for their audacity. Whenever a creature hits you with an attack, that creature takes psychic damage equal to your Charisma modifier (minimum of 1) if you're not {@condition incapacitated}."
+											"從15級開始，那些膽敢攻擊你的人們將因他們的放肆而遭受精神上的懲罰。每當一個生物以一次攻擊命中你時，若你並未{@condition 無力}，則該生物將受到等同於你魅力調整值（最少為1）的精神傷害。"
 										]
 									}
 								]
@@ -2134,18 +2134,18 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Invincible Conqueror",
+										"name": "無敵征服者", "ENG_name": "Invincible Conqueror",
 										"entries": [
-											"At 20th level, you gain the ability to harness extraordinary martial prowess. As an action, you can magically become an avatar of conquest, gaining the following benefits for 1 minute:",
+											"在20級時，你獲得駕馭卓越武藝的能力。以一個動作，你可以魔法性地變成征服的化身，在接下來1分鐘內獲得下列好處：",
 											{
 												"type": "list",
 												"items": [
-													"You have resistance to all damage.",
-													"When you take the {@action Attack} action on your turn, you can make one additional attack as part of that action.",
-													"Your melee weapon attacks score a critical hit on a roll of 19 or 20 on the {@dice d20}."
+													"你對所有傷害具有抗性。",
+													"當你在你的回合採取{@action 攻擊}動作時，你可以做為該動作的一部份額外再進行一次攻擊。",
+													"你的近戰武器攻擊將在{@dice d20}的結果骰出19或20時造成重擊。"
 												]
 											},
-											"Once you use this feature, you can't use it again until you finish a long rest."
+											"一旦你使用此能力，直到你完成一次長休之前你都不能再使用它。"
 										]
 									}
 								]
@@ -2153,30 +2153,30 @@
 						]
 					],
 					"source": "XGE",
-					"shortName": "Conquest"
+					"shortName": "征服"
 				},
 				{
-					"name": "Oath of Redemption",
+					"name": "救贖之誓", "ENG_name": "Oath of Redemption",
 					"subclassFeatures": [
 						[
 							{
-								"name": "Oath of Redemption",
+								"name": "救贖之誓", "ENG_name": "Oath of Redemption",
 								"entries": [
-									"The Oath of Redemption sets a paladin on a difficult path, one that requires a holy warrior to use violence only as a last resort. Paladins who dedicate themselves to this oath believe that any person can be redeemed and that the path of benevolence and justice is one that anyone can walk. These paladins face evil creatures in the hope of turning their foes to the light, and they slay their enemies only when such a deed will clearly save other lives. Paladins who follow this path are known as redeemers.",
-									"While redeemers are idealists, they are no fools. Redeemers know that undead, demons, devils, and other supernatural threats can be inherently evil. Against such foes, paladins who swear this oath bring the full wrath of their weapons and spells to bear. Yet the redeemers still pray that, one day, even creatures of wickedness will invite their own redemption.",
+									"救贖之誓為聖騎士設立了一條艱難的道路：要求這名神聖戰士只能在最後關頭使用暴力。獻身於救贖之誓的聖騎士們相信任何人都可以得到救贖，且所有人都可以走在仁慈與正義的道路上。這些聖騎士直面邪惡的生物，希望能使他們的敵人棄暗投明。且除非這麼做很明顯能拯救其他性命，否則他們絕不會殺死自己的敵人。遵循這條道路的聖騎士們也被稱作救贖者。",
+									"儘管救贖者身為理想主義者，他們也並不是傻瓜。救贖者也明白不死生物、惡魔、魔鬼、和其他超自然威脅天性邪惡。在面對這類敵人時，立下這個誓言的聖騎士們隨時準備用武器和法術來擊垮它們。盡管如此，救贖者們仍在心底祈禱著，希望總有一天，即使是這些邪惡生物也能得到它們的救贖。",
 									{
 										"type": "entries",
-										"name": "Tenets of Redemption",
+										"name": "救贖之信條", "ENG_name": "Tenets of Redemption",
 										"entries": [
-											"The tenets of the Oath of Redemption hold a paladin to a high standard of peace and justice.",
+											"救贖之誓的信條要求聖騎士維持著高標準的和平與正義。",
 											{
 												"type": "entries",
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Peace",
+														"name": "和平", "tENG_name": "Peace",
 														"entries": [
-															"Violence is a weapon of last resort. Diplomacy and understanding are the paths to long-lasting peace."
+															"暴力是最後的手段。交流和理解才是實現長久和平的途徑。"
 														]
 													}
 												]
@@ -2186,9 +2186,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Innocence",
+														"name": "無辜", "tENG_name": "Innocence",
 														"entries": [
-															"All people begin life in an innocent state, and it is their environment or the influence of dark forces that drives them to evil. By setting the proper example, and working to heal the wounds of a deeply flawed world, you can set anyone on a righteous path."
+															"所有人生來都是清白無罪的，而驅使他們走向邪惡的往往是他們周遭的環境或黑暗力量的影響。透過樹立正確的榜樣，並治癒這個殘缺世界的創傷，你可以令任何人走上正確的道路。"
 														]
 													}
 												]
@@ -2198,9 +2198,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Patience",
+														"name": "耐心", "tENG_name": "Patience",
 														"entries": [
-															"Change takes time. Those who have walked the path of the wicked must be given reminders to keep them honest and true. Once you have planted the seed of righteousness in a creature, you must work day after day to allow that seed to survive and flourish."
+															"改變需要時間。那些犯下罪行的人必須被時刻提醒保持誠實與真誠。一旦你在生物心中種下正義的種子，你就必須日復一日地為其努力，以讓它得以開花結果。"
 														]
 													}
 												]
@@ -2210,9 +2210,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Wisdom",
+														"name": "睿智", "tENG_name": "Wisdom",
 														"entries": [
-															"Your heart and mind must stay clear, for eventually you will be forced to admit defeat. While every creature can be redeemed, some are so far along the path of evil that you have no choice but to end their lives for the greater good. Any such action must be carefully weighed and the consequences fully understood, but once you have made the decision, follow through with it knowing your path is just."
+															"你的心靈必須時刻保持清醒，理解你最終也許會被迫承認失敗。儘管所有生物都可以得到救贖，那有些人卻已在邪惡的路上行走的太遠，以至於你別無選擇，只能為了大義將其剿滅。任何這類行動都應當經過仔細權衡．並考慮清楚其後果，然而你一旦做出決定，就得堅持下去。"
 														]
 													}
 												]
@@ -2221,15 +2221,15 @@
 									},
 									{
 										"type": "entries",
-										"name": "Oath Spells",
+										"name": "聖誓法術", "ENG_name": "Oath Spells",
 										"entries": [
-											"You gain oath spells at the paladin levels listed.",
+											"你在下列聖騎士等級時獲得相應的聖誓法術。",
 											{
 												"type": "table",
-												"caption": "Oath of Redemption Spells",
+												"caption": "救贖之誓法術",
 												"colLabels": [
-													"Paladin Level",
-													"Spells"
+													"聖騎士等級",
+													"法術"
 												],
 												"colStyles": [
 													"col-3 text-align-center",
@@ -2237,24 +2237,24 @@
 												],
 												"rows": [
 													[
-														"3rd",
-														"{@spell sanctuary}, {@spell sleep}"
+														"3級",
+														"{@spell 聖域術}, {@spell 睡眠術}"
 													],
 													[
-														"5th",
-														"{@spell calm emotions}, {@spell hold person}"
+														"5級",
+														"{@spell 安定心神}, {@spell 人類定身術}"
 													],
 													[
-														"9th",
-														"{@spell counterspell}, {@spell hypnotic pattern}"
+														"9級",
+														"{@spell 反制法術}, {@spell 催眠圖紋}"
 													],
 													[
-														"13th",
-														"{@spell Otiluke's resilient sphere}, {@spell stoneskin}"
+														"13級",
+														"{@spell 歐提路克魔封法球}, {@spell 石膚術}"
 													],
 													[
-														"17th",
-														"{@spell hold monster}, {@spell wall of force}"
+														"17級",
+														"{@spell 怪物定身術}, {@spell 力牆術}"
 													]
 												]
 											}
@@ -2262,16 +2262,16 @@
 									},
 									{
 										"type": "entries",
-										"name": "Channel Divinity: Emissary of Peace",
+										"name": "引導神力：和平使者", "ENG_name": "Channel Divinity: Emissary of Peace",
 										"entries": [
-											"You can use your Channel Divinity to augment your presence with divine power. As a bonus action, you grant yourself a +5 bonus to Charisma ({@skill Persuasion}) checks for the next 10 minutes."
+											"你可以使用你的引導神力以利用神性力量增強你的威儀。以一個附贈動作，你讓自己在接下來的10分鐘內所進行的魅力（{@skill 說服}）檢定獲得+5加值。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Channel Divinity: Rebuke the Violent",
+										"name": "引導神力：斥喝暴力", "ENG_name": "Channel Divinity: Rebuke the Violent",
 										"entries": [
-											"You can use your Channel Divinity to rebuke those who use violence. Immediately after an attacker within 30 feet of you deals damage with an attack against a creature other than you, you can use your reaction to force the attacker to make a Wisdom saving throw. On a failed save, the attacker takes radiant damage equal to the damage it just dealt. On a successful save, it takes half as much damage."
+											"你可以使用你的引導神力以斥喝那些使用暴力的人們。緊接在一個距離你30呎內的攻擊者以一次攻擊對你以外的生物造成傷害後，你可以使用你的反應以強迫該攻擊者進行一次睿知豁免。若豁免失敗，該攻擊者將受到等同於它剛才造成傷害數值的光耀傷害。若豁免成功，則它只受到一半的傷害。"
 										]
 									}
 								]
@@ -2282,10 +2282,10 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Aura of the Guardian",
+										"name": "護衛靈光", "ENG_name": "Aura of the Guardian",
 										"entries": [
-											"Starting at 7th level, you can shield others from harm at the cost of your own health. When a creature within 10 feet of you takes damage, you can use your reaction to magically take that damage, instead of that creature taking it. This feature doesn't transfer any other effects that might accompany the damage, and this damage can't be reduced in any way.",
-											"At 18th level, the range of this aura increases to 30 feet."
+											"從7級開始，你能夠以自己的健康為代價保護盟友不受傷害。當一個距離你10呎內的生物受到傷害，你可以使用你的反應以用魔法代替該生物承受該傷害。這個能力並不會轉移任何其他可能伴隨著傷害的效果，且這個傷害無法被任何方式減輕。",
+											"在18級時，這個靈光的範圍將增加至30呎。"
 										]
 									}
 								]
@@ -2296,9 +2296,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Protective Spirit",
+										"name": "守護之魂", "ENG_name": "Protective Spirit",
 										"entries": [
-											"Starting at 15th level, a holy presence mends your wounds in battle. You regain hit points equal to {@dice 1d6} + half your paladin level if you end your turn in combat with fewer than half of your hit points remaining and you aren't {@condition incapacitated}."
+											"從15級開始，神聖存在將在戰鬥中治癒你的傷勢。若你在戰鬥中以少於生命值一半的狀況結束你的回合，且不處於{@condition 無力}狀態，則你將回復等同於{@dice 1d6}+你聖騎士等級一半的生命值。"
 										]
 									}
 								]
@@ -2309,17 +2309,17 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Emissary of Redemption",
+										"name": "救贖使者", "ENG_name": "Emissary of Redemption",
 										"entries": [
-											"At 20th level, you become an avatar of peace, which gives you two benefits:",
+											"在20級時，你將成為和平的化身，並賦予你下列二個好處：",
 											{
 												"type": "list",
 												"items": [
-													"You have resistance to all damage dealt by other creatures (their attacks, spells, and other effects).",
-													"Whenever a creature hits you with an attack, it takes radiant damage equal to half the damage you take from the attack."
+													"你對所有其他生物所造成的傷害（它們的攻擊、法術、和其他效果）具有抗性。",
+													"每當一個生物以一次攻擊命中你，它將受到等同於你從該攻擊受到傷害的一半的光耀傷害。"
 												]
 											},
-											"If you attack a creature, cast a spell on it, or deal damage to it by any means but this feature, neither benefit works against that creature until you finish a long rest."
+											"若你攻擊一個生物、對它施放法術、或以任何這個能力以外的方式對它造成傷害，則直到你完成一次長休之前，這兩個好處對該生物都不會產生作用。"
 										]
 									}
 								]
@@ -2327,7 +2327,7 @@
 						]
 					],
 					"source": "XGE",
-					"shortName": "Redemption"
+					"shortName": "救贖"
 				}
 			],
 			"fluff": [

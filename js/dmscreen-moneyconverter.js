@@ -1,3 +1,5 @@
+"use strict";
+
 // a simple money converter, i.e.: input x electrum, y silver, z copper and get the total in gold, or in any other type of coin chosen.
 class MoneyConverter {
 	static make$Converter (board, state) {
@@ -71,7 +73,7 @@ class MoneyConverter {
 						else {
 							const ix = Number($e.find(`select`).val());
 							totals[ix] = (totals[ix] || 0) + asNum;
-							allowedCategories.add(CURRENCY[ix].cat);
+							allowedCategories.add(CURRENCY[ix]._cat);
 						}
 					}
 				});
@@ -169,18 +171,18 @@ class MoneyConverter {
 		const $btnSettings = $(`<button class="btn btn-default btn-sm" title="Settings"><span class="glyphicon glyphicon-cog"/></button>`)
 			.appendTo($wrpBtnAddSettings)
 			.click(() => {
-				const $modalInner = DmScreenUtil.getShow$Modal(
+				const $modalInner = UiUtil.getShow$Modal(
 					"Settings",
 					() => doUpdate()
 				);
 				[...CURRENCY_INDEXED].reverse().forEach(cx => {
-					DmScreenUtil.getAddModal$RowCb($modalInner, `Disable ${cx.n}`, disabledCurrency, cx.ix);
+					UiUtil.getAddModal$RowCb($modalInner, `Disable ${cx.n}`, disabledCurrency, cx.ix);
 				});
 			});
 		const $iptOut = $(`<input class="form-control input-sm dm_money__out" disabled/>`)
 			.appendTo($wrpCtrlLhs)
-			.mousedown(() => {
-				copyText($iptOut.val());
+			.mousedown(async () => {
+				await MiscUtil.pCopyTextToClipboard($iptOut.val());
 				JqueryUtil.showCopiedEffect($iptOut);
 			});
 

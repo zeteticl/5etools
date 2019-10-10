@@ -298,8 +298,8 @@
 						"name": "宿敵", "ENG_name": "Favored Enemy",
 						"entries": [
 							"從1級開始，你在對一個特定類型的敵人的研究、追跡、狩獵、和甚至交談上已相當具備充足的經驗。",
-							"選擇一個宿敵類型：{@filter 異怪|bestiary|type=aberration}、{@filter 野獸|bestiary|type=beast}、{@filter 天界生物|bestiary|type=celestial}、{@filter 構裝體|bestiary|type=construct}、{@filter 龍|bestiary|type=dragon}、{@filter 元素|bestiary|type=elemental}、{@filter 精類|bestiary|type=fey}、{@filter 邪魔|bestiary|type=fiend}、{@filter 巨人|bestiary|type=giant}、{@filter 怪物|bestiary|type=monstrosity}、{@filter 泥怪|bestiary|type=ooze}、{@filter 植物|bestiary|type=plant}、或{@filter 不死生物|bestiary|type=undead}。或者，你可以選擇二個{@filter 類人生物|bestiary|type=humanoid}種族（像是{@creature 豺狼人|mm}和{@creature 獸人|mm}）做為宿敵。",
-							"你在用於追蹤你宿敵的睿知（{@skill 生存}）檢定、以及用以回憶關於它們情報的智力檢定中具有優勢。",
+							"選擇一個宿敵類型：{@filter 異怪|bestiary|type=aberration}、{@filter 野獸|bestiary|type=beast}、{@filter 天界生物|bestiary|type=celestial}、{@filter 構裝體|bestiary|type=construct}、{@filter 龍|bestiary|type=dragon}、{@filter 元素|bestiary|type=elemental}、{@filter 精類|bestiary|type=fey}、{@filter 邪魔|bestiary|type=fiend}、{@filter 巨人|bestiary|type=giant}、{@filter 怪獸|bestiary|type=monstrosity}、{@filter 泥怪|bestiary|type=ooze}、{@filter 植物|bestiary|type=plant}、或{@filter 不死生物|bestiary|type=undead}。或者，你可以選擇二個{@filter 類人生物|bestiary|type=humanoid}種族（像是{@creature 豺狼人|mm}和{@creature 獸人|mm}）做為宿敵。",
+							"你在用於追蹤你宿敵的睿知（{@skill 求生}）檢定、以及用以回憶關於它們情報的智力檢定中具有優勢。",
 							"當你獲得此能力時，若你的宿敵擁有至少一種語言，你也選擇學會一種被它們所使用的語言。",
 							"你在6級和14級時選擇一種額外的宿敵以及一種關聯語言。隨著你提升等級，你的選擇必須反映你在你冒險中所遭遇過的怪物類型。"
 						]
@@ -313,7 +313,7 @@
 								"type": "list",
 								"items": [
 									"困難地形不會減慢你們團隊的旅行速度。",
-									"你們團隊不會迷路，除非是因為魔法的緣故。",
+									"除非是因為魔法的緣故，否則你們團隊不會迷路。",
 									"即使你在旅行途中正從事於其他行動（像是覓食、導航、或追跡），你仍保持對危險的警戒。",
 									"若你正獨自旅行，你能夠以正常步調隱匿移動。",
 									"當你覓食時，你能找到二倍你原本所能找到的食物。",
@@ -396,7 +396,7 @@
 								"type": "entries",
 								"name": "法術位",
 								"entries": [
-									"遊俠表中顯示了你有多少個法術位可以用來施放你一環或更高環的{@filter 遊俠法術|spells|class=ranger}。要施放其中一個法術，你必須消耗一個與該法術環位相同或更高的法術位。你在完成一次長休後恢復所有你花費掉的法術位。",
+									"遊俠表中顯示了你有多少個法術位可以用來施放你一環或更高環的{@filter 遊俠法術|spells|class=ranger}。要施放其中一個法術，你必須消耗一個與該法術環階相同或更高的法術位。你在完成一次長休後恢復所有你花費掉的法術位。",
 									"舉例來說，如果你知曉一個1環的{@spell 化獸為友}法術，且你擁有一個1環和一個2環的法術位，則你可以使用其中任意一個法術位來施放{@spell 化獸為友}。"
 								]
 							},
@@ -405,8 +405,8 @@
 								"name": "一環或更高環的已知法術",
 								"entries": [
 									"你知曉二個從遊俠法術列表中自選的1環法術。",
-									"遊俠表中的已知法術欄位顯示你將在何時學習到更多自選的遊俠法術。每個這些法術的環位都必須符合你所擁有法術位的環位。舉例來說，當你在此職業升至5級時，你可以學習一個新的1環或2環法術。",
-									"此外，當你提升這個職業的等級時，你可以從遊俠的法術列表中挑選一個法術來取代一個你目前已知的法術，而它的環位也必須符合你所擁有法術位的環位。"
+									"遊俠表中的已知法術欄位顯示你將在何時學習到更多自選的遊俠法術。每個這些法術的環階都必須符合你所擁有法術位的環階。舉例來說，當你在此職業升至5級時，你可以學習一個新的1環或2環法術。",
+									"此外，當你提升這個職業的等級時，你可以從遊俠的法術列表中挑選一個法術來取代一個你目前已知的法術，而它的環階也必須符合你所擁有法術位的環階。"
 								]
 							},
 							{
@@ -444,15 +444,15 @@
 					{
 						"name": "原初意識", "ENG_name": "Primeval Awareness",
 						"entries": [
-							"從3級開始，你可以使用你的動作並消耗一個遊俠法術位以集中你的意識於你周遭的區域。在為你所消耗法術位的每環位1分鐘內，你可以感知下列類型的生物是否存在於距離你1哩內的區域：異怪、天界生物、龍、元素、精類、邪魔、和不死生物。此能力無法揭露出該生物的位置和數量。"
+							"從3級開始，你可以使用你的動作並消耗一個遊俠法術位以集中你的意識於你周遭的區域。在為你所消耗法術位的每環階1分鐘內，你可以感知下列類型的生物是否存在於距離你1哩內的區域：異怪、天界生物、龍、元素、精類、邪魔、和不死生物。此能力無法揭露出該生物的位置和數量。"
 						]
 					}
 				],
 				[
 					{
-						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
+						"name": "屬性值提升", "ENG_name": "Ability Score Improvement", "ENG_name": "Ability Score Improvement",
 						"entries": [
-							"當你在此職業升至4級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"當你在此職業升至4級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					}
@@ -485,9 +485,9 @@
 				],
 				[
 					{
-						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
+						"name": "屬性值提升", "ENG_name": "Ability Score Improvement", "ENG_name": "Ability Score Improvement",
 						"entries": [
-							"當你在此職業升至8級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"當你在此職業升至8級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					},
@@ -526,9 +526,9 @@
 				],
 				[
 					{
-						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
+						"name": "屬性值提升", "ENG_name": "Ability Score Improvement", "ENG_name": "Ability Score Improvement",
 						"entries": [
-							"當你在此職業升至12級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"當你在此職業升至12級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					}
@@ -559,9 +559,9 @@
 				],
 				[
 					{
-						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
+						"name": "屬性值提升", "ENG_name": "Ability Score Improvement", "ENG_name": "Ability Score Improvement",
 						"entries": [
-							"當你在此職業升至16級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"當你在此職業升至16級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					}
@@ -571,15 +571,15 @@
 					{
 						"name": "野性感官", "ENG_name": "Feral Senses",
 						"entries": [
-							"在18級時，你獲得超自然的感官以幫助你對抗看不見的生物。當你攻擊一個你看不見的生物時，你並不會因為無法看見它而在你對它進行的攻擊檢定中承受劣勢。同時，你也能察覺到任何距離你30呎內{@condition 隱形}生物的位置，只要該生物沒有躲藏於你，且你不處於{@condition 目盲}或{@condition 耳聾}狀態。"
+							"在18級時，你獲得超自然的感官以幫助你對抗看不見的生物。當你攻擊一個你看不見的生物時，你並不會因為無法看見它而在你對它進行的攻擊檢定中承受劣勢。同時，只要該生物沒有躲藏於你，且你不處於{@condition 目盲}或{@condition 耳聾}狀態，則你也能察覺到任何距離你30呎內{@condition 隱形}生物的位置。"
 						]
 					}
 				],
 				[
 					{
-						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
+						"name": "屬性值提升", "ENG_name": "Ability Score Improvement", "ENG_name": "Ability Score Improvement",
 						"entries": [
-							"當你在此職業升至19級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"當你在此職業升至19級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					}
@@ -596,26 +596,26 @@
 			"subclassTitle": "Ranger Archetype",
 			"subclasses": [
 				{
-					"name": "Hunter",
+					"name": "獵人", "ENG_name": "Hunter",
 					"subclassFeatures": [
 						[
 							{
-								"name": "Hunter",
+								"name": "獵人", "ENG_name": "Hunter",
 								"entries": [
-									"Emulating the Hunter archetype means accepting your place as a bulwark between civilization and the terrors of the wilderness. As you walk the Hunter's path, you learn specialized techniques for fighting the threats you face, from rampaging ogres and hordes of orcs to towering giants and terrifying dragons.",
+									"仿效獵人範型意味著接受你做為文明和荒野恐懼間壁壘的身分。隨著你行走在獵人的道途上，你學會對抗迎面而來威脅的專業技巧，從狂暴的食人魔、成群的獸人、到巨人和恐怖的龍族們。",
 									{
 										"type": "entries",
-										"name": "Hunter's Prey",
+										"name": "狩者獵物", "ENG_name": "Hunter's Prey",
 										"entries": [
-											"At 3rd level, you gain one of the following features of your choice: Colossus Slayer, Giant Killer, or Horde Breaker.",
+											"在3級時，你獲得下列其中一個你所選擇的能力：巨怪獵者、巨人殺手、或滅族者。",
 											{
 												"type": "entries",
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Colossus Slayer",
+														"name": "巨怪獵者", "tENG_name": "Colossus Slayer",
 														"entries": [
-															"Your tenacity can wear down the most potent foes. When you hit a creature with a weapon attack, the creature takes an extra {@dice 1d8} damage if it's below its hit point maximum. You can deal this extra damage only once per turn."
+															"你的執著可以毀滅最強大的敵人。當你以一次武器攻擊命中一個生物，若它的生命值低於最大值，則該生物將受到額外的{@dice 1d8}傷害。你每回合只能造成一次這個額外傷害。"
 														]
 													}
 												]
@@ -625,9 +625,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Giant Killer",
+														"name": "巨人殺手", "tENG_name": "Giant Killer",
 														"entries": [
-															"When a Large or larger creature within 5 feet of you hits or misses you with an attack, you can use your reaction to attack that creature immediately after its attack, provided that you can see the creature."
+															"當一個距離你5呎內，體型為大型或更大的生物對你進行的一次攻擊命中或失手時，只要你可以看見該生物，你就可以使用你的反應以立刻在它的攻擊之後對它進行攻擊。"
 														]
 													}
 												]
@@ -637,9 +637,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Horde Breaker",
+														"name": "滅族者", "tENG_name": "Horde Breaker",
 														"entries": [
-															"Once on each of your turns when you make a weapon attack, you can make another attack with the same weapon against a different creature that is within 5 feet of the original target and within range of your weapon."
+															"在你的每個回合一次，當你進行一次武器攻擊時，你可以使用相同的武器對一個距離原本目標5呎內，且處於你武器射程內的另一個生物進行另一次攻擊。"
 														]
 													}
 												]
@@ -654,17 +654,17 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Defensive Tactics",
+										"name": "防禦性戰術", "ENG_name": "Defensive Tactics",
 										"entries": [
-											"At 7th level, you gain one of the following features of your choice: Escape the Horde, Multiattack Defense, or Steel Will.",
+											"在7級時，你獲得下列其中一個你所選擇的能力：逃離眾敵、防禦多重攻擊、或鋼鐵意志。",
 											{
 												"type": "entries",
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Escape the Horde",
+														"name": "逃離眾敵", "tENG_name": "Escape the Horde",
 														"entries": [
-															"Opportunity attacks against you are made with disadvantage."
+															"所有對你進行的藉機攻擊將具有劣勢。"
 														]
 													}
 												]
@@ -674,9 +674,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Multiattack Defense",
+														"name": "防禦多重攻擊", "tENG_name": "Multiattack Defense",
 														"entries": [
-															"When a creature hits you with an attack, you gain a +4 bonus to AC against all subsequent attacks made by that creature for the rest of the turn."
+															"當一個生物以一次攻擊命中你時，你的AC將對該生物在該回合中所進行的所有後續攻擊獲得+4的加值。"
 														]
 													}
 												]
@@ -686,9 +686,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Steel Will",
+														"name": "鋼鐵意志", "tENG_name": "Steel Will",
 														"entries": [
-															"You have advantage on saving throws against being {@condition frightened}."
+															"你在對抗{@condition 恐懼}的豁免檢定中具有優勢。"
 														]
 													}
 												]
@@ -703,17 +703,17 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Multiattack",
+										"name": "多重攻擊", "ENG_name": "Multiattack",
 										"entries": [
-											"At 11th level, you gain one of the following features of your choice: Volley or Whirlwind Attack.",
+											"在11級時，你獲得下列其中一個你所選擇的能力：箭雨、或劍刃風暴。",
 											{
 												"type": "entries",
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Volley",
+														"name": "箭雨", "tENG_name": "Volley",
 														"entries": [
-															"You can use your action to make a ranged attack against any number of creatures within 10 feet of a point you can see within your weapon's range. You must have ammunition for each target, as normal, and you make a separate attack roll for each target."
+															"你可以使用你的動作以進行一次遠程攻擊，並以處於你武器射程內你所能看見一點的周圍10呎範圍內的任意數量個生物做為目標。你必須有足夠的彈藥以攻擊每個目標，且你為每個目標進行各自的攻擊檢定。"
 														]
 													}
 												]
@@ -723,9 +723,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Whirlwind Attack",
+														"name": "劍刃風暴", "tENG_name": "Whirlwind Attack",
 														"entries": [
-															"You can use your action to make a melee attack against any number of creatures within 5 feet of you, with a separate attack roll for each target."
+															"你可以使用你的動作以進行一次近戰攻擊，並以距離你5呎內的任意數量個生物做為目標，為每個目標進行各自的攻擊檢定。"
 														]
 													}
 												]
@@ -740,17 +740,17 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Superior Hunter's Defense",
+										"name": "卓越獵人防禦", "ENG_name": "Superior Hunter's Defense",
 										"entries": [
-											"At 15th level, you gain one of the following features of your choice: Evasion, Stand Against the Tide, or Uncanny Dodge.",
+											"在15級時，你獲得下列其中一個你所選擇的能力：反射閃避、逆潮而立、或直覺閃避。",
 											{
 												"type": "entries",
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Evasion",
+														"name": "反射閃避", "tENG_name": "Evasion",
 														"entries": [
-															"You can nimbly dodge out of the way of certain area effects, such as a red dragon's fiery breath or a {@spell lightning bolt} spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail."
+															"你可以靈活地躲開某些範圍效果，像是紅龍的火焰吐息、或{@spell 閃電束}法術。當你成為一個允許你進行敏捷豁免以僅承受一半傷害的效果的目標時，你改為在豁免成功時不受任何傷害，且在豁免失敗時僅承受一半傷害。"
 														]
 													}
 												]
@@ -760,9 +760,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Stand Against the Tide",
+														"name": "逆潮而立", "tENG_name": "Stand Against the Tide",
 														"entries": [
-															"When a hostile creature misses you with a melee attack, you can use your reaction to force that creature to repeat the same attack against another creature (other than itself) of your choice."
+															"當一個敵對生物對你進行的一次近戰攻擊失手，你可以使用你的反應以強迫該生物對你所選擇的另一個生物（除了它自己以外）重複進行一次該攻擊。"
 														]
 													}
 												]
@@ -772,9 +772,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Uncanny Dodge",
+														"name": "直覺閃避", "tENG_name": "Uncanny Dodge",
 														"entries": [
-															"When an attacker that you can see hits you with an attack, you can use your reaction to halve the attack's damage against you."
+															"當一個你所能看見的攻擊者使用一次攻擊命中你，你可以使用你的反應以減半該次攻擊對你的傷害。"
 														]
 													}
 												]
@@ -786,26 +786,26 @@
 						]
 					],
 					"source": "PHB",
-					"shortName": "Hunter"
+					"shortName": "獵人"
 				},
 				{
-					"name": "Beast Master",
+					"name": "獸王", "ENG_name": "Beast Master",
 					"subclassFeatures": [
 						[
 							{
-								"name": "Beast Master",
+								"name": "獸王", "ENG_name": "Beast Master",
 								"entries": [
-									"The Beast Master archetype embodies a friendship between the civilized races and the beasts of the world. United in focus, beast and ranger work as one to fight the monstrous foes that threaten civilization and the wilderness alike. Emulating the Beast Master archetype means committing yourself to this ideal, working in partnership with an animal as its companion and friend.",
+									"獸王範型體現了文明種族和自然野獸之間的情誼。團結一致，野獸和游俠將共同對抗威脅著文明和自然世界的可怕敵人。仿效獸王範型意味著將自己奉獻給這個理念，與動物做為同伴和朋友一同奮鬥。",
 									{
 										"type": "entries",
-										"name": "Ranger's Companion",
+										"name": "遊俠動物夥伴", "ENG_name": "Ranger's Companion",
 										"entries": [
-											"You gain a beast companion that accompanies you on your adventures and is trained to fight alongside you. Choose a {@filter beast that is no larger than Medium and that has a challenge rating of 1/4 or lower|bestiary|cr=0;1/8;1/4|type=beast|size=f;d;t;s;m|miscellaneous=!swarm}. Add your proficiency bonus to the beast's AC, attack rolls, and damage rolls, as well as to any saving throws and skills it is proficient in. Its hit point maximum equals its normal maximum or four times your ranger level, whichever is higher.",
-											"The beast obeys your commands as best as it can. It takes its turn on your initiative, though it doesn't take an action unless you command it to. On your turn, you can verbally command the beast where to move (no action required by you). You can use your action to verbally command it to take the {@action Attack}, {@action Dash}, {@action Disengage}, {@action Dodge}, or {@action Help} action. Once you have the Extra Attack feature, you can make one weapon attack yourself when you command the beast to take the {@action Attack} action.",
-											"If you are {@condition incapacitated} or absent, your beast companion acts on its own, focusing on protecting you and itself. It never requires your command to use its reaction, such as when making an opportunity attack.",
-											"Like any creature, the beast can spend hit dice during a short rest.",
-											"While traveling through your favored terrain with only the beast, you can move stealthily at a normal pace.",
-											"If the beast dies, you can obtain another one by spending 8 hours magically bonding with another beast that isn't hostile to you, either the same type of beast as before or a different one."
+											"在3級時，你獲得一個動物夥伴，牠將陪伴你一起冒險，並受過訓練以與你一起戰鬥。選擇一個{@filter 體型不超過中型，且挑戰等級為1/4或更低的野獸|bestiary|challenge rating=0;1/8;1/4|type=beast|size=f;d;t;s;m|miscellaneous=!swarm}。將你的熟練加值加入該野獸的AC、攻擊檢定、傷害骰，以及任何牠所熟練的豁免檢定和技能中。牠的生命值最大值等同於牠正常的生命值最大值或你遊俠等級的四倍，兩者取高。",
+											"該野獸將盡其所能的服從你的命令。牠會在你的先攻順序採取牠的行動，儘管除非你命令牠，否則牠不會採取任何動作。在你的回合，你可以口頭命令該野獸移動到某處（你不需要花費動作）。你也可以使用你的動作以口頭命令牠採取{@action 攻擊}、{@action 疾走}、{@action 撤離}、{@action 閃避}、或{@action 協助}動作。一旦你獲得額外攻擊能力，則當你命令該野獸採取{@action 攻擊}動作時，你可以自己進行一次武器攻擊。",
+											"若你處於{@condition 無力}狀態或不在現場，你的動物夥伴將會自主行動，專注於保護你或牠自己。牠使用牠的反應時不需要你的命令，例如進行一次藉機攻擊。",
+											"跟其他生物一樣，野獸可以在短休期間消耗生命骰。",
+											"當你只和該野獸一起在你的偏好環境中旅行時，你們能夠以正常步調隱匿移動。",
+											"若該野獸死亡，你可以藉由花費8小時的時間以用魔法與另一個對你不具有敵意的野獸建立連結以再次獲得動物夥伴。該野獸可以是與之前那隻相同或不同類型的野獸。"
 										]
 									}
 								]
@@ -816,9 +816,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Exceptional Training",
+										"name": "超絕訓練", "ENG_name": "Exceptional Training",
 										"entries": [
-											"Beginning at 7th level, on any of your turns when your beast companion doesn't attack, you can use a bonus action to command the beast to take the {@action Dash}, {@action Disengage}, or {@action Help} action on its turn. In addition, the beast's attacks now count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage."
+											"從7級開始，在你的任何回合，只要你的動物夥伴沒有攻擊，你就可以使用一個附贈動作以命令該野獸在它的回合採取{@action 疾走}、{@action 撤離}、或{@action 協助}動作。此外，該野獸的攻擊現在起將在克服對非魔法攻擊和傷害的抗性和免疫能力時被視作魔法攻擊。"
 										]
 									}
 								]
@@ -829,9 +829,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Bestial Fury",
+										"name": "野性狂怒", "ENG_name": "Bestial Fury",
 										"entries": [
-											"Starting at 11th level, when you command your beast companion to take the {@action Attack} action, the beast can make two attacks, or it can take the Multiattack action if it has that action."
+											"從11級開始，當你命令你的動物夥伴採取{@action 攻擊}動作時，該野獸可以進行二次攻擊。"
 										]
 									}
 								]
@@ -842,9 +842,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Share Spells",
+										"name": "法術共享", "ENG_name": "Share Spells",
 										"entries": [
-											"Beginning at 15th level, when you cast a spell targeting yourself, you can also affect your beast companion with the spell if the beast is within 30 feet of you."
+											"從15級開始，當你施放以你自己為目標的法術時，若你的動物夥伴距離你30呎內，你也可以讓它受到該法術的影響。"
 										]
 									}
 								]
@@ -852,7 +852,7 @@
 						]
 					],
 					"source": "PHB",
-					"shortName": "Beast Master"
+					"shortName": "獸王"
 				},
 				{
 					"name": "Deep Stalker (UA)",
@@ -1295,24 +1295,24 @@
 					"shortName": "Monster Slayer (UA)"
 				},
 				{
-					"name": "Gloom Stalker",
+					"name": "幽域追蹤者", "ENG_name": "Gloom Stalker",
 					"subclassFeatures": [
 						[
 							{
-								"name": "Gloom Stalker",
+								"name": "幽域追蹤者", "ENG_name": "Gloom Stalker",
 								"entries": [
-									"Gloom Stalkers are at home in the darkest places: deep under the earth, in gloomy alleyways, in primeval forests, and wherever else the light dims. Most folk enter such places with trepidation, but a Gloom Stalker ventures boldly into the darkness, seeking to ambush threats before they can reach the broader world. Such rangers are often found in the Underdark, but they will go any place where evil lurks in the shadows.",
+									"幽域追蹤者居身於那些最黑暗的場所：地表深處、暗巷之間、太古叢林、和其他任何籠罩在昏暗微光的地方。大部分人們在進入這種場所時都會驚恐不安，但幽域追蹤者們卻能大膽於黑暗中冒險，試圖在威脅來到廣闊世界之前伏擊它們。這類遊俠經常出沒於幽暗地域，但是他們也會前往任何邪惡勢力蟄伏的所在。",
 									{
 										"type": "entries",
-										"name": "Gloom Stalker Magic",
+										"name": "幽域追蹤者魔法", "ENG_name": "Gloom Stalker Magic",
 										"entries": [
-											"Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the Gloom Stalker Spells table. The spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.",
+											"從3級開始，當你在本職業升至特定等級，你將學會額外的法術，如幽域追蹤者法術表所示。這些法術對你而言視作遊俠法術，但並不會計入你已知遊俠法術的數量中。",
 											{
 												"type": "table",
-												"caption": "Gloom Stalker Spells",
+												"caption": "幽域追蹤者法術",
 												"colLabels": [
-													"Ranger Level",
-													"Spells"
+													"遊俠等級",
+													"法術"
 												],
 												"colStyles": [
 													"col-3 text-align-center",
@@ -1320,24 +1320,24 @@
 												],
 												"rows": [
 													[
-														"3rd",
-														"{@spell disguise self}"
+														"3級",
+														"{@spell 易容術}"
 													],
 													[
-														"5th",
-														"{@spell rope trick}"
+														"5級",
+														"{@spell 通天繩}"
 													],
 													[
-														"9th",
-														"{@spell fear}"
+														"9級",
+														"{@spell 恐懼術}"
 													],
 													[
-														"13th",
-														"{@spell greater invisibility}"
+														"13級",
+														"{@spell 高等隱形術}"
 													],
 													[
-														"17th",
-														"{@spell seeming}"
+														"17級",
+														"{@spell 偽裝術}"
 													]
 												]
 											}
@@ -1345,18 +1345,18 @@
 									},
 									{
 										"type": "entries",
-										"name": "Dread Ambusher",
+										"name": "懼怖伏兵", "ENG_name": "Dread Ambusher",
 										"entries": [
-											"At 3rd level, you master the art of the ambush. You can give yourself a bonus to your initiative rolls equal to your Wisdom modifier.",
-											"At the start of your first turn of each combat, your walking speed increases by 10 feet, which lasts until the end of that turn. If you take the {@action Attack} action on that turn, you can make one additional weapon attack as part of that action. If that attack hits, the target takes an extra {@dice 1d8} damage of the weapon's damage type."
+											"在3級時，你精通於伏擊的藝術。你可以讓你先攻檢定獲得等同於你睿知調整值的加值。",
+											"在每個戰鬥的你的第一個回合開始時，你的步行速度增加10呎，持續直到該回合結束。若你在該回合採取{@action 攻擊}動作，做為該動作的一部份，你可以進行一次額外的武器攻擊。若該攻擊命中，則目標將受到額外{@dice 1d8}該武器傷害類型的傷害。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Umbral Sight",
+										"name": "幽影視覺", "ENG_name": "Umbral Sight",
 										"entries": [
-											"At 3rd level, you gain darkvision out to a range of 60 feet. If you already have darkvision from your race, its range increases by 30 feet.",
-											"You are also adept at evading creatures that rely on darkvision. While in darkness, you are {@condition invisible} to any creature that relies on darkvision to see you in that darkness."
+											"在3級時，你獲得60呎範圍的黑暗視覺。若你已經擁有來自你種族的黑暗視覺，則它的範圍將增加30呎。",
+											"你也擅長於避開依賴於黑暗視覺的生物。當處於黑暗環境時，你對任何嘗試依靠黑暗視覺以看見黑暗中的你的生物而言處於{@condition 隱形}狀態。"
 										]
 									}
 								]
@@ -1367,9 +1367,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Iron Mind",
+										"name": "鋼鐵心智", "ENG_name": "Iron Mind",
 										"entries": [
-											"By 7th level, you have honed your ability to resist the mind-altering powers of your prey. You gain proficiency in Wisdom saving throws. If you already have this proficiency, you instead gain proficiency in Intelligence or Charisma saving throws (your choice)."
+											"從7級起，你已磨練出用於抵抗來自於你獵物的精神影響力量的能力。你獲得睿知豁免的熟練。若你已經擁有此熟練，則你可以改為獲得智力豁免或魅力豁免的熟練（由你選擇）。"
 										]
 									}
 								]
@@ -1380,9 +1380,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Stalker's Flurry",
+										"name": "追獵如風", "ENG_name": "Stalker's Flurry",
 										"entries": [
-											"At 11th level, you learn to attack with such unexpected speed that you can turn a miss into another strike. Once on each of your turns when you miss with a weapon attack, you can make another weapon attack as part of the same action."
+											"在11級時，你學會以出人意料的高速進行攻擊，以讓你將一次失手轉變成另一次打擊。在你的每個回合一次，當你的一次武器攻擊失手時，你可以進行另一次武器攻擊以做為同個動作的一部份。"
 										]
 									}
 								]
@@ -1393,9 +1393,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Shadowy Dodge",
+										"name": "暗影閃避", "ENG_name": "Shadowy Dodge",
 										"entries": [
-											"Starting at 15th level, you can dodge in unforeseen ways, with wisps of supernatural shadow around you. Whenever a creature makes an attack roll against you and doesn't have advantage on the roll, you can use your reaction to impose disadvantage on it. You must use this feature before you know the outcome of the attack roll."
+											"從15級開始，隨著一縷環繞在你身邊的超自然陰影，你能夠以令人無法預料的方式閃躲。當一個生物對你進行一次攻擊檢定且該檢定不具有優勢，你可以使用你的反應以讓它承受劣勢。你必須在你知道該攻擊檢定的結果之前決定是否使用此能力。"
 										]
 									}
 								]
@@ -1403,27 +1403,27 @@
 						]
 					],
 					"source": "XGE",
-					"shortName": "Gloom Stalker"
+					"shortName": "幽域追蹤者"
 				},
 				{
-					"name": "Horizon Walker",
+					"name": "境界行者", "ENG_name": "Horizon Walker",
 					"subclassFeatures": [
 						[
 							{
-								"name": "Horizon Walker",
+								"name": "境界行者", "ENG_name": "Horizon Walker",
 								"entries": [
-									"Horizon Walkers guard the world against threats that originate from other planes or that seek to ravage the mortal realm with otherworldly magic. They seek out planar portals and keep watch over them, venturing to the Inner Planes and the Outer Planes as needed to pursue their foes. These rangers are also friends to any forces in the multiverse\u2014especially benevolent dragons, fey, and elementals\u2014that work to preserve life and the order of the planes.",
+									"境界行者守護著世界不受來自其他位面、或試圖以異界魔法摧毀凡界的威脅所侵害。他們尋找並看守著位面傳送門，為了追捕他們的敵人而冒險穿梭於內層位面和外層位面。這些遊俠也是多元宇宙中任何致力於守護位面中生靈和秩序的勢力的盟友\u2014尤其是那些善良龍族、精類、和元素生物。",
 									{
 										"type": "entries",
-										"name": "Horizon Walker Magic",
+										"name": "境界行者魔法", "ENG_name": "Horizon Walker Magic",
 										"entries": [
-											"Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the Horizon Walker Spells table. The spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.",
+											"從3級開始，當你在本職業升至特定等級，你將學會額外的法術，如境界行者法術表所示。這些法術對你而言視作遊俠法術，但並不會計入你已知遊俠法術的數量中。",
 											{
 												"type": "table",
-												"caption": " Spells",
+												"caption": "境界行者法術",
 												"colLabels": [
-													"Ranger Level",
-													"Spells"
+													"遊俠等級",
+													"法術"
 												],
 												"colStyles": [
 													"col-3 text-align-center",
@@ -1431,24 +1431,24 @@
 												],
 												"rows": [
 													[
-														"3rd",
-														"{@spell protection from evil and good}"
+														"3級",
+														"{@spell 防護善惡}"
 													],
 													[
-														"5th",
-														"{@spell misty step}"
+														"5級",
+														"{@spell 迷蹤步}"
 													],
 													[
-														"9th",
-														"{@spell haste}"
+														"9級",
+														"{@spell 加速術}"
 													],
 													[
-														"13th",
-														"{@spell banishment}"
+														"13級",
+														"{@spell 放逐術}"
 													],
 													[
-														"17th",
-														"{@spell teleportation circle}"
+														"17級",
+														"{@spell 傳送法陣}"
 													]
 												]
 											}
@@ -1456,19 +1456,19 @@
 									},
 									{
 										"type": "entries",
-										"name": "Detect Portal",
+										"name": "偵測傳送門", "ENG_name": "Detect Portal",
 										"entries": [
-											"At 3rd level, you gain the ability to magically sense the presence of a planar portal. As an action, you detect the distance and direction to the closest planar portal within 1 mile of you.",
-											"Once you use this feature, you can't use it again until you finish a short or long rest.",
-											"See the \"Planar Travel\" section in chapter 2 of the Dungeon Master's Guide for examples of planar portals."
+											"在3級時，你獲得以魔法感知位面傳送門存在的能力。以一個動作，你偵測出距離你1哩內最近的位面傳送門的距離以及方位。",
+											"一旦你使用此能力，直到你完成一次短休或長休之前你都不能再使用它。",
+											"參見《地下城主指南》第二章的「位面旅行」章節以查看關於位面傳送門的例子。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Planar Warrior",
+										"name": "位面戰士", "ENG_name": "Planar Warrior",
 										"entries": [
-											"At 3rd level, you learn to draw on the energy of the multiverse to augment your attacks.",
-											"As a bonus action, choose one creature you can see within 30 feet of you. The next time you hit that creature on this turn with a weapon attack, all damage dealt by the attack becomes force damage, and the creature takes an extra {@dice 1d8} force damage from the attack. When you reach 11th level in this class, the extra damage increases to {@dice 2d8}."
+											"在3級時，你學會汲取多元宇宙中的能量以增強你的攻擊。",
+											"以一個附贈動作，選擇一個距離你30呎內且你所能看見的生物。下一次你在該回合以一次武器攻擊命中該生物時，該攻擊所造成的所有傷害都將變成力場傷害，且該生物將受到來自該攻擊的額外{@dice 1d8}力場傷害。當你在本職業升至11級時，這個額外傷害將增加至{@dice 2d8}。"
 										]
 									}
 								]
@@ -1479,10 +1479,10 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Ethereal Step",
+										"name": "靈界漫步", "ENG_name": "Ethereal Step",
 										"entries": [
-											"At 7th level, you learn to step through the Ethereal Plane. As a bonus action, you can cast the {@spell etherealness} spell with this feature, without expending a spell slot, but the spell ends at the end of the current turn.",
-											"Once you use this feature, you can't use it again until you finish a short or long rest."
+											"在7級時，你學會跨入乙太位面。以一個附贈動作，你能夠以此能力施放{@spell 跨入乙太界}法術，無須消耗法術位。但此法術將在當回合結束時結束。",
+											"一旦你使用此能力，直到你完成一次短休或長休之前你都不能再使用它。"
 										]
 									}
 								]
@@ -1493,10 +1493,10 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Distant Strike",
+										"name": "閃現打擊", "ENG_name": "Distant Strike",
 										"entries": [
-											"At 11th level, you gain the ability to pass between the planes in the blink of an eye. When you take the {@action Attack} action, you can teleport up to 10 feet before each attack to an unoccupied space you can see.",
-											"If you attack at least two different creatures with the action, you can make one additional attack with it against a third creature."
+											"在11級時，你獲得在眨眼間穿梭於位面間的能力。當你採取{@action 攻擊}動作時，你可以在每次攻擊之前傳送最多10呎距離到一處你所能看見的未被佔據空間。",
+											"若你以該動作攻擊了至少二個不同的生物，你可以再額外對第三個生物進行一次攻擊。"
 										]
 									}
 								]
@@ -1507,9 +1507,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Spectral Defense",
+										"name": "虛體防禦", "ENG_name": "Spectral Defense",
 										"entries": [
-											"At 15th level, your ability to move between planes enables you to slip through the planar boundaries to lessen the harm done to you during battle. When you take damage from an attack, you can use your reaction to give yourself resistance to all of that attack's damage on this turn."
+											"在15級時，你穿梭在位面之間的能力讓你得以溜進位面邊界以減輕你在戰鬥中所受到的傷害。當你受到來自於一次攻擊的傷害時，你可以使用你的反應以讓你自己獲得所有對這回合該攻擊傷害的抗性。"
 										]
 									}
 								]
@@ -1517,27 +1517,27 @@
 						]
 					],
 					"source": "XGE",
-					"shortName": "Horizon Walker"
+					"shortName": "境界行者"
 				},
 				{
-					"name": "Monster Slayer",
+					"name": "怪物殺手", "ENG_name": "Monster Slayer",
 					"subclassFeatures": [
 						[
 							{
-								"name": "Monster Slayer",
+								"name": "怪物殺手", "ENG_name": "Monster Slayer",
 								"entries": [
-									"You have dedicated yourself to hunting down creatures of the night and wielders of grim magic. A Monster Slayer seeks out vampires, dragons, evil fey, fiends, and other magical threats. Trained in supernatural techniques to overcome such monsters, slayers are experts at unearthing and defeating mighty, mystical foes.",
+									"你致力於獵殺那些黑夜中的怪物和邪惡魔法的施行者。一名怪物殺手尋覓著吸血鬼、龍、邪惡精類、邪魔、以及其他魔法威脅。受過用以戰勝這類怪物的超自然技術訓練，怪物殺手精通於找出並擊敗那些強大且神秘的敵人。",
 									{
 										"type": "entries",
-										"name": "Monster Slayer Magic",
+										"name": "怪物殺手魔法", "ENG_name": "Monster Slayer Magic",
 										"entries": [
-											"Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the Monster Slayer Spells table. The spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.",
+											"從3級開始，當你在本職業升至特定等級，你將學會額外的法術，如怪物殺手法術表所示。這些法術對你而言視作遊俠法術，但並不會計入你已知遊俠法術的數量中。",
 											{
 												"type": "table",
-												"caption": " Spells",
+												"caption": "怪物殺手法術",
 												"colLabels": [
-													"Ranger Level",
-													"Spells"
+													"遊俠等級",
+													"法術"
 												],
 												"colStyles": [
 													"col-3 text-align-center",
@@ -1545,24 +1545,24 @@
 												],
 												"rows": [
 													[
-														"3rd",
-														"{@spell protection from evil and good}"
+														"3級",
+														"{@spell 防護善惡}"
 													],
 													[
-														"5th",
-														"{@spell zone of truth}"
+														"5級",
+														"{@spell 誠實之域}"
 													],
 													[
-														"9th",
-														"{@spell magic circle}"
+														"9級",
+														"{@spell 防護法陣}"
 													],
 													[
-														"13th",
-														"{@spell banishment}"
+														"13級",
+														"{@spell 放逐術}"
 													],
 													[
-														"17th",
-														"{@spell hold monster}"
+														"17級",
+														"{@spell 怪物定身術}"
 													]
 												]
 											}
@@ -1570,18 +1570,18 @@
 									},
 									{
 										"type": "entries",
-										"name": "Hunter's Sense",
+										"name": "獵人感知", "ENG_name": "Hunter's Sense",
 										"entries": [
-											"At 3rd level, you gain the ability to peer at a creature and magically discern how best to hurt it. As an action, choose one creature you can see within 60 feet of you. You immediately learn whether the creature has any damage immunities, resistances, or vulnerabilities and what they are. If the creature is hidden from divination magic, you sense that it has no damage immunities, resistances, or vulnerabilities.",
-											"You can use this feature a number of times equal to your Wisdom modifier (minimum of once). You regain all expended uses of it when you finish a long rest."
+											"在3級時，你獲得凝視一個生物並以魔法知悉傷害它最佳的方式的能力。以一個動作，選擇一個距離你60呎內且你所能看見的生物。你將立刻知道該生物是否擁有任何傷害免疫、抗性、或是易傷，以及它們的種類。若該生物不受預言系魔法影響，則你感知到的結果將會是它不具有任何傷害免疫、抗性、和易傷。",
+											"你可以使用此能力的次數等同於你的睿知調整值（最少一次）。你在完成一次長休後恢復所有你花費掉的次數。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Slayer's Prey",
+										"name": "殺手獵物", "ENG_name": "Slayer's Prey",
 										"entries": [
-											"Starting at 3rd level, you can focus your ire on one foe, increasing the harm you inflict on it. As a bonus action, you designate one creature you can see within 60 feet of you as the target of this feature. The first time each turn that you hit that target with a weapon attack, it takes an extra {@dice 1d6} damage from the weapon.",
-											"This benefit lasts until you finish a short or long rest. It ends early if you designate a different creature."
+											"從3級開始，你可以專注你的憤怒於單一敵人，增加你對它所造成的傷害。以一個附贈動作，你指定一個距離你60呎內且你所能看見的生物做為此能力的目標。每個回合當你第一次以武器攻擊命中目標時，它將額外受到來自該武器的{@dice 1d6}傷害。",
+											"這個好處將持續直到你完成一次短休或長休，或在你指定另一個不同生物做為目標時提早結束。"
 										]
 									}
 								]
@@ -1592,9 +1592,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Supernatural Defense",
+										"name": "超常防禦", "ENG_name": "Supernatural Defense",
 										"entries": [
-											"At 7th level, you gain extra resilience against your prey's assaults on your mind and body. Whenever the target of your Slayer's Prey forces you to make a saving throw and whenever you make an ability check to escape that target's grapple, add {@dice 1d6} to your roll."
+											"在7級時，你獲得額外的韌性以抵抗你獵物對你身體和精神所做出的侵襲。每當你殺手獵物所指定的目標強迫你進行一次豁免檢定，或每當你進行一次屬性檢定以嘗試脫離該目標的擒抱，骰{@dice 1d6}並將其加入你的擲骰結果中。"
 										]
 									}
 								]
@@ -1605,10 +1605,10 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Magic-User's Nemesis",
+										"name": "魔法剋星", "ENG_name": "Magic-User's Nemesis",
 										"entries": [
-											"At 11th level, you gain the ability to thwart someone else's magic. When you see a creature casting a spell or teleporting within 60 feet of you, you can use your reaction to try to magically foil it. The creature must succeed on a Wisdom saving throw against your spell save DC, or its spell or teleport fails and is wasted.",
-											"Once you use this feature, you can't use it again until you finish a short or long rest."
+											"在11級時，你獲得阻撓其他人魔法的能力。當你看見一個距離你60呎內的生物施放法術或傳送，你可以使用你的反應以嘗試以魔法挫敗它。該生物必須成功通過一次對抗你法術豁免DC的睿知豁免，否則它的法術或傳送將失敗並被浪費。",
+											"一旦你使用此能力，直到你完成一次短休或長休之前你都不能再使用它。"
 										]
 									}
 								]
@@ -1619,9 +1619,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Slayer's Counter",
+										"name": "殺手反制", "ENG_name": "Slayer's Counter",
 										"entries": [
-											"At 15th level, you gain the ability to counterattack when your prey tries to sabotage you. If the target of your Slayer's Prey forces you to make a saving throw, you can use your reaction to make one weapon attack against the quarry. You make this attack immediately before making the saving throw. If your attack hits, your save automatically succeeds, in addition to the attack's normal effects."
+											"在15級時，你獲得在你的獵物嘗試妨害你時展開反擊的能力。若你殺手獵物所指定的目標強迫你進行一次豁免檢定，你可以使用你的反應以對該獵物進行一次武器攻擊。你在進行該豁免檢定之前立刻進行此攻擊。若你的攻擊命中，則除了該攻擊原本的效果之外，你的豁免檢定也將自動成功。"
 										]
 									}
 								]
@@ -1629,7 +1629,7 @@
 						]
 					],
 					"source": "XGE",
-					"shortName": "Monster Slayer"
+					"shortName": "怪物殺手"
 				}
 			],
 			"fluff": [
@@ -1921,7 +1921,7 @@
 			]
 		},
 		{
-			"name": "Ranger (Revised)",
+			"name": "遊俠(修訂)", "ENG_name": "Ranger (Revised)",
 			"source": "UATheRangerRevised",
 			"hd": {
 				"number": 1,
@@ -1934,7 +1934,7 @@
 			"classTableGroups": [
 				{
 					"colLabels": [
-						"{@filter Spells Known|spells|class=ranger}"
+						"{@filter 已知法術|spells|class=ranger}"
 					],
 					"rows": [
 						[
@@ -2000,13 +2000,13 @@
 					]
 				},
 				{
-					"title": "Spell Slots per Spell Level",
+					"title": "法術位/每環",
 					"colLabels": [
-						"{@filter 1st|spells|level=1|class=Ranger}",
-						"{@filter 2nd|spells|level=2|class=Ranger}",
-						"{@filter 3rd|spells|level=3|class=Ranger}",
-						"{@filter 4th|spells|level=4|class=Ranger}",
-						"{@filter 5th|spells|level=5|class=Ranger}"
+						"{@filter 1環|spells|level=1|class=Ranger}",
+						"{@filter 2環|spells|level=2|class=Ranger}",
+						"{@filter 3環|spells|level=3|class=Ranger}",
+						"{@filter 4環|spells|level=4|class=Ranger}",
+						"{@filter 5環|spells|level=5|class=Ranger}"
 					],
 					"rows": [
 						[
@@ -2179,45 +2179,45 @@
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
-					"(a) {@item scale mail|phb} or (b) {@item leather armor|phb}",
-					"(a) two {@item shortsword|phb|shortswords} or (b) two {@filter simple melee weapons|items|source=phb|category=basic|type=simple weapon;melee weapon}",
-					"(a) a {@item dungeoneer's pack|phb} or (b) an {@item explorer's pack|phb}",
-					"A {@item longbow|phb} and a {@item quiver|phb} of {@item arrows (20)|phb|20 arrows}"
+					"(a)一件{@item 鱗甲|phb} 或 (b)一件{@item 皮甲|phb}",
+					"(a)二把{@item 短劍|phb} 或 (b)二把{@filter 簡易近戰武器|items|source=phb|category=basic|type=simple weapon;melee weapon}",
+					"(a)一套{@item 地城探險家套裝|phb} 或 (b)一套{@item 探索者套裝|phb}",
+					"一把{@item 長弓|phb}和一個裝有{@item 箭(20)|phb|20支箭}的{@item 箭袋|phb}"
 				],
-				"goldAlternative": "{@dice 5d4×10|5d4 × 10|Starting Gold}"
+				"goldAlternative": "{@dice 5d4×10|5d4 × 10|起始金錢}"
 			},
 			"classFeatures": [
 				[
 					{
-						"name": "Favored Enemy",
+						"name": "宿敵", "ENG_name": "Favored Enemy",
 						"entries": [
-							"Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy commonly encountered in the wilds.",
-							"Choose a type of favored enemy: {@filter beasts|bestiary|type=beast}, {@filter fey|bestiary|type=fey}, {@filter humanoids|bestiary|type=humanoid}, {@filter monstrosities|bestiary|type=monstrosity}, or {@filter undead|bestiary|type=undead}. You gain a +2 bonus to damage rolls with weapon attacks against creatures of the chosen type. Additionally, you have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.",
-							"When you gain this feature, you also learn one language of your choice, typically one spoken by your favored enemy or creatures associated with it. However, you are free to pick any language you wish to learn."
+							"從1級開始，你在對荒野中經常遭遇到的一個特定類型敵人的研究、追跡、狩獵、和甚至交談上已相當具備充足的經驗。",
+							"選擇一個宿敵類型：{@filter 野獸|bestiary|type=beast}、{@filter 精類|bestiary|type=fey}、{@filter 類人生物|bestiary|type=humanoid}、{@filter 怪獸|bestiary|type=monstrosity}、或{@filter 不死生物|bestiary|type=undead}。你對所選類型的生物所進行的武器攻擊的傷害骰獲得+2加值。此外，你在用於追蹤你宿敵的睿知（{@skill 求生}）檢定、以及用以回憶關於它們情報的智力檢定中具有優勢。",
+							"當你獲得此能力時，你同時學會一種你所選擇的語言，這個語言通常會是你的宿敵、或與之有關的生物所使用的語言。然而，你可以自由選擇任意一種你想要學會的語言。"
 						]
 					},
 					{
-						"name": "Natural Explorer",
+						"name": "自然探索者", "ENG_name": "Natural Explorer",
 						"entries": [
-							"You are a master of navigating the natural world, and you react with swift and decisive action when attacked. This grants you the following benefits:",
+							"你熟練於在自然世界中領航帶路，且你在被襲擊時也能迅速而果斷的做出反應。這賦予了你下列好處：",
 							{
 								"type": "list",
 								"items": [
-									"You ignore difficult terrain.",
-									"You have advantage on initiative rolls.",
-									"On your first turn during combat, you have advantage on attack rolls against creatures that have not yet acted."
+									"你無視困難地形。",
+									"你在先攻檢定中具有優勢。",
+									"在你戰鬥中的第一個回合，你在對任何尚未行動的生物所進行的攻擊檢定中具有優勢。"
 								]
 							},
-							"In addition, you are skilled at navigating the wilderness. You gain the following benefits when traveling for an hour or more:",
+							"此外，你精通於在荒野中領航。當旅行長達1個小時或更久，你將獲得下列好處：",
 							{
 								"type": "list",
 								"items": [
-									"Difficult terrain doesn't slow your group's travel.",
-									"Your group can't become lost except by magical means.",
-									"Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.",
-									"If you are traveling alone, you can move stealthily at a normal pace.",
-									"When you forage, you find twice as much food as you normally would.",
-									"While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area."
+									"困難地形不會減慢你們團隊的旅行速度。",
+									"除非是因為魔法的緣故，否則你們團隊不會迷路。",
+									"即使你在旅行途中正從事於其他行動（像是覓食、導航、或追跡），你仍保持對危險的警戒。",
+									"若你正獨自旅行，你能夠以正常步調隱匿移動。",
+									"當你覓食時，你能找到二倍你原本所能找到的食物。",
+									"當你追跡其他生物時，你也能得知它們確切的數量、它們的體型、以及它們在多久之前經過這片區域。"
 								]
 							}
 						]
@@ -2225,41 +2225,41 @@
 				],
 				[
 					{
-						"name": "Spellcasting",
+						"name": "施法", "ENG_name": "Spellcasting",
 						"entries": [
-							"By the time you reach 2nd level, you have learned to use the magical essence of nature to cast spells, much as a druid does. See {@book chapter 10|PHB|10} for the general rules of spellcasting and chapter 11 for the {@filter ranger spell list|spells|class=ranger}.",
+							"在你升至2級時，你學會如同德魯伊的方式使用大自然的精粹以施放法術。請參閱{@book 第十章|PHB|10}以了解關於施法的規則，以及第十一章以查閱{@filter 遊俠法術列表|spells|class=ranger}。",
 							{
 								"type": "entries",
-								"name": "Spell Slots",
+								"name": "法術位",
 								"entries": [
-									"The Ranger table shows how many spell slots you have to cast your {@filter ranger spells|spells|class=ranger} of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
-									"For example, if you know the 1st-level spell {@spell animal friendship} and have a 1st-level and a 2nd-level spell slot available, you can cast {@spell animal friendship} using either slot."
+									"遊俠表中顯示了你有多少個法術位可以用來施放你一環或更高環的{@filter 遊俠法術|spells|class=ranger}。要施放其中一個法術，你必須消耗一個與該法術環階相同或更高的法術位。你在完成一次長休後恢復所有你花費掉的法術位。",
+									"舉例來說，如果你知曉一個1環的{@spell 化獸為友}法術，且你擁有一個1環和一個2環的法術位，則你可以使用其中任意一個法術位來施放{@spell 化獸為友}。"
 								]
 							},
 							{
 								"type": "entries",
-								"name": "Spells Known of 1st Level and Higher",
+								"name": "一環或更高環的已知法術",
 								"entries": [
-									"You know two 1st-level spells of your choice from the ranger spell list.",
-									"The Spells Known column of the Ranger table shows when you learn more ranger spells of your choice. Each of these spells must be of a level for which you have spell slots. For instance, when you reach 5th level in this class, you can learn one new spell of 1st or 2nd level.",
-									"Additionally, when you gain a level in this class, you can choose one of the ranger spells you know and replace it with another spell from the ranger spell list, which also must be of a level for which you have spell slots."
+									"你知曉二個從遊俠法術列表中自選的1環法術。",
+									"遊俠表中的已知法術欄位顯示你將在何時學習到更多自選的遊俠法術。每個這些法術的環階都必須符合你所擁有法術位的環階。舉例來說，當你在此職業升至5級時，你可以學習一個新的1環或2環法術。",
+									"此外，當你提升這個職業的等級時，你可以從遊俠的法術列表中挑選一個法術來取代一個你目前已知的法術，而它的環階也必須符合你所擁有法術位的環階。"
 								]
 							},
 							{
 								"type": "entries",
-								"name": "Spellcasting Ability",
+								"name": "施法屬性",
 								"entries": [
-									"Wisdom is your spellcasting ability for your ranger spells, since your magic draws on your attunement to nature. You use your Wisdom whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a ranger spell you cast and when making an attack roll with one.",
+									"由於你的魔法是源自你與大自然的協調，睿知是你施展遊俠法術的施法屬性。每當法術提及你的施法屬性時，你將使用你的睿知。此外，當決定你遊俠法術的豁免DC、以及使用遊俠法術進行攻擊檢定時，你使用你的睿知調整值。",
 									{
 										"type": "abilityDc",
-										"name": "Spell",
+										"name": "法術",
 										"attributes": [
 											"wis"
 										]
 									},
 									{
 										"type": "abilityAttackMod",
-										"name": "Spell",
+										"name": "法術",
 										"attributes": [
 											"wis"
 										]
@@ -2269,62 +2269,62 @@
 						]
 					},
 					{
-						"name": "Fighting Style",
+						"name": "戰鬥風格", "ENG_name": "Fighting Style",
 						"entries": [
-							"At 2nd level, you adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again.",
+							"在2級時，你採用一種特殊的戰鬥風格以做為你的專業。從下列選項中選擇一種。你不能獲得相同的戰鬥風格選項超過一次，即使你有機會再選擇它也一樣。",
 							{
 								"type": "options",
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Archery",
+										"name": "弓道", "ENG_name": "Archery",
 										"entries": [
-											"You gain a +2 bonus to attack rolls you make with ranged weapons."
+											"你在使用遠程武器進行的攻擊檢定中獲得+2加值。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Close Quarters Shooter",
+										"name": "近身射手", "ENG_name": "Close Quarters Shooter",
 										"entries": [
-											"When making a ranged attack while you are within 5 feet of a hostile creature, you do not have disadvantage on the attack roll. Your ranged attacks ignore half cover and three-quarters cover against targets within 30 feet of you. You have a +1 bonus to attack rolls on ranged attacks."
+											"當你在距離一個敵意生物5呎以內時進行一次遠程攻擊，你在該攻擊檢定中並不會具有劣勢。你的遠程攻擊忽略距離你30呎內目標的半掩護和四分之三掩護。你在遠程攻擊的攻擊檢定中獲得+1加值。"
 										],
 										"source": "UALightDarkUnderdark"
 									},
 									{
 										"type": "entries",
-										"name": "Defense",
+										"name": "防禦", "ENG_name": "Defense",
 										"entries": [
-											"While you are wearing armor, you gain a +1 bonus to AC."
+											"當你穿戴護甲時，你的AC獲得+1加值。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Dueling",
+										"name": "決鬥", "ENG_name": "Dueling",
 										"entries": [
-											"When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon."
+											"當你單手持用一把近戰武器，且沒有持用其他武器時，你在使用該武器所進行的傷害骰中獲得+2加值。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Mariner",
+										"name": "水手", "ENG_name": "Mariner",
 										"entries": [
-											"As long as you are not wearing heavy armor or using a shield, you have a swimming speed and a climbing speed equal to your normal speed, and you gain a +1 bonus to AC."
+											"只要你未穿戴重甲或使用盾牌，你就擁有等同於你正常移動速度的游泳速度和攀爬速度，且你的AC獲得+1加值。"
 										],
 										"source": "UAWaterborneAdventures"
 									},
 									{
 										"type": "entries",
-										"name": "Tunnel Fighter",
+										"name": "坑道鬥士", "ENG_name": "Tunnel Fighter",
 										"entries": [
-											"As a bonus action, you can enter a defensive stance that lasts until the start of your next turn. While in your defensive stance, you can make opportunity attacks without using your reaction, and you can use your reaction to make a melee attack against a creature that moves more than 5 feet while within your reach."
+											"以一個附贈動作，你可以進入防禦架式並持續直到你的下個回合開始。當你處於防禦架式時，你可以進行藉機攻擊而無需使用你的反應，且你可以處於你觸及範圍內的生物移動超過5呎時使用你的反應對它進行一次近戰攻擊。"
 										],
 										"source": "UALightDarkUnderdark"
 									},
 									{
 										"type": "entries",
-										"name": "Two-Weapon Fighting",
+										"name": "雙武器戰鬥", "ENG_name": "Two-Weapon Fighting",
 										"entries": [
-											"When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack."
+											"當你進行雙武器戰鬥時，你可以將你的屬性調整值加入第二次攻擊的傷害中。"
 										]
 									}
 								]
@@ -2334,99 +2334,99 @@
 				],
 				[
 					{
-						"name": "Primeval Awareness",
+						"name": "原初意識", "ENG_name": "Primeval Awareness",
 						"entries": [
-							"Beginning at 3rd level, your mastery of ranger lore allows you to establish a powerful link to beasts and to the land around you.",
-							"You have an innate ability to communicate with beasts, and they recognize you as a kindred spirit. Through sounds and gestures, you can communicate simple ideas to a beast as an action, and can read its basic mood and intent. You learn its emotional state, whether it is affected by magic of any sort, its short-term needs (such as food or safety), and actions you can take (if any) to persuade it to not attack.",
-							"You cannot use this ability against a creature that you have attacked within the past 10 minutes.",
-							"Additionally, you can attune your senses to determine if any of your favored enemies lurk nearby. By spending 1 uninterrupted minute in concentration (as if you were concentrating on a spell), you can sense whether any of your favored enemies are present within 5 miles of you. This feature reveals which of your favored enemies are present, their numbers, and the creatures' general direction and distance (in miles) from you.",
-							"If there are multiple groups of your favored enemies within range, you learn this information for each group."
+							"從3級開始，你在遊俠學識上的專業讓你得以建立一道與你周圍野獸和環境之間的連結。",
+							"你具有一種與野獸交流的天賦能力，且它們將視你為精神上的同類。透過聲音和姿勢，你能夠以一個動作對一個野獸傳達簡單的想法，並可以理解它基本的情緒和意圖。你能得知它的情緒狀態、判斷它是否受到任何魔法的影響、它的短期需求（像是食物或安全的場所）、且你得知你要說服它不攻擊所應採取的行動（若有）。",
+							"你不能對一個你在最近10分鐘內曾經攻擊過的生物使用這個能力。",
+							"此外，你可以調整你的感官以判斷附近是否潛伏著你的宿敵。透過花費1分鐘不受干擾的專注（如同專注於法術），你可以感知到是否有任何宿敵存在於距離你5哩內的區域之中。這能力將揭露出你的宿敵是否存在、它們的數量、以及這些生物離你大致的方向和距離（以哩為單位）。",
+							"若範圍中有複數個宿敵群體，則你將得知它們各自的情報。"
 						]
 					},
 					{
-						"name": "Ranger Conclave",
+						"name": "遊俠密會", "ENG_name": "Ranger Conclave",
 						"entries": [
-							"At 3rd level, you choose to emulate the ideals and training of a ranger conclave from the list of available conclaves. Your choice grants you features at 3rd level and again at 5th, 7th, 11th, and 15th level."
+							"在3級時，你從可選密會列表中選擇一種你致力於達成的理想範型。你的選擇將在3級、5級、7級、11級、和15級時賦予你新的能力。"
 						],
 						"gainSubclassFeature": true
 					}
 				],
 				[
 					{
-						"name": "屬性值提升",
+						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
-							"當你在此職業升至4級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"當你在此職業升至4級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					}
 				],
 				[
 					{
-						"name": "Ranger Conclave feature",
+						"name": "遊俠密會能力", "ENG_name": "Ranger Conclave feature",
 						"entries": [
-							"At 5th level, you gain a feature granted to you by your Ranger Conclave."
+							"在5級時，你獲得一個由你遊俠密會所賦予的能力。"
 						],
 						"gainSubclassFeature": true
 					}
 				],
 				[
 					{
-						"name": "Greater Favored Enemy",
+						"name": "高等宿敵", "ENG_name": "Greater Favored Enemy",
 						"entries": [
-							"At 6th level, you are ready to hunt even deadlier game. Choose a type of greater favored enemy: {@filter aberrations|bestiary|type=aberration}, {@filter celestials|bestiary|type=celestial}, {@filter constructs|bestiary|type=construct}, {@filter dragons|bestiary|type=dragon}, {@filter elementals|bestiary|type=elemental}, {@filter fiends|bestiary|type=fiend}, or {@filter giants|bestiary|type=giant}. You gain all the benefits against this chosen enemy that you normally gain against your favored enemy, including an additional language. Your bonus to damage rolls against all your favored enemies increases to +4.",
-							"Additionally, you have advantage on saving throws against the spells and abilities used by a greater favored enemy."
+							"在6級時，你已經準備好狩獵更加致命的獵物。選擇一個高等宿敵類型：{@filter 異怪|bestiary|type=aberration}、{@filter 天界生物|bestiary|type=celestial}、{@filter 構裝|bestiary|type=construct}、{@filter 龍|bestiary|type=dragon}、{@filter 元素|bestiary|type=elemental}、{@filter 邪魔|bestiary|type=fiend}、或{@filter 巨人|bestiary|type=giant}。你獲得所有你在獲得宿敵能力時所會獲得的好處，包括一種額外語言。你對你所有宿敵的傷害骰加值提升至+4。",
+							"此外，你在對抗任何高等宿敵所使用的法術和能力時所進行豁免檢定中具有優勢。"
 						]
 					}
 				],
 				[
 					{
-						"name": "Ranger Conclave feature",
+						"name": "遊俠密會能力", "ENG_name": "Ranger Conclave feature",
 						"entries": [
-							"At 7th level, you gain a feature granted to you by your Ranger Conclave."
+							"在7級時，你獲得一個由你遊俠密會所賦予的能力。"
 						],
 						"gainSubclassFeature": true
 					}
 				],
 				[
 					{
-						"name": "屬性值提升",
+						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
-							"當你在此職業升至8級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"當你在此職業升至8級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					},
 					{
-						"name": "Fleet of Foot",
+						"name": "輕盈步伐", "ENG_name": "Fleet of Foot",
 						"entries": [
-							"Beginning at 8th level, you can use the {@action Dash} action as a bonus action on your turn."
+							"從8級開始，你可以在你的回合以一個附贈動作採取{@action 疾走}動作。"
 						]
 					}
 				],
 				[],
 				[
 					{
-						"name": "Hide in Plain Sight",
+						"name": "避人耳目", "ENG_name": "Hide in Plain Sight",
 						"entries": [
-							"Starting at 10th level, you can remain perfectly still for long periods of time to set up ambushes.",
-							"When you attempt to hide on your turn, you can opt to not move on that turn. If you avoid moving, creatures that attempt to detect you take a -10 penalty to their Wisdom ({@skill Perception}) checks until the start of your next turn. You lose this benefit if you move or fall {@condition prone}, either voluntarily or because of some external effect. You are still automatically detected if any effect or action causes you to no longer be hidden.",
-							"If you are still hidden on your next turn, you can continue to remain motionless and gain this benefit until you are detected."
+							"從10級開始，你可以長時間保持完美的靜止以發動伏擊。",
+							"當你嘗試在你的回合躲藏時，你可以選擇不在該回合進行移動。若你不進行移動，則直到你的下個回合開始，其他生物在嘗試察覺你所進行的睿知（{@skill 感知}）檢定中將承受-10的罰值。無論是自願或因為某些外部效果所致，一旦你移動或倒下{@condition 伏地}，則你將失去這個好處。若任何效果或動作使你不再躲藏，則你仍將自動被察覺。",
+							"若你在你的下個回合仍然保持躲藏，你可以持續維持不動以在被察覺之前繼續獲得這個好處。"
 						]
 					}
 				],
 				[
 					{
-						"name": "Ranger Conclave feature",
+						"name": "遊俠密會能力", "ENG_name": "Ranger Conclave feature",
 						"entries": [
-							"At 11th level, you gain a feature granted to you by your Ranger Conclave."
+							"在11級時，你獲得一個由你遊俠密會所賦予的能力。"
 						],
 						"gainSubclassFeature": true
 					}
 				],
 				[
 					{
-						"name": "屬性值提升",
+						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
-							"當你在此職業升至12級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"當你在此職業升至12級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					}
@@ -2434,26 +2434,26 @@
 				[],
 				[
 					{
-						"name": "Vanish",
+						"name": "無蹤步", "ENG_name": "Vanish",
 						"entries": [
-							"Starting at 14th level, you can use the {@action Hide} action as a bonus action on your turn. Also, you can't be tracked by nonmagical means, unless you choose to leave a trail."
+							"從14級開始，你可以在你的回合以一個附贈動作採取{@action 躲藏}動作。同時，你不會被非魔法的手段追蹤，除非你選擇留下蹤跡。"
 						]
 					}
 				],
 				[
 					{
-						"name": "Ranger Conclave feature",
+						"name": "遊俠密會能力", "ENG_name": "Ranger Conclave feature",
 						"entries": [
-							"At 15th level, you gain a feature granted to you by your Ranger Conclave."
+							"在15級時，你獲得一個由你遊俠密會所賦予的能力。"
 						],
 						"gainSubclassFeature": true
 					}
 				],
 				[
 					{
-						"name": "屬性值提升",
+						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
-							"當你在此職業升至16級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"當你在此職業升至16級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					}
@@ -2461,26 +2461,26 @@
 				[],
 				[
 					{
-						"name": "Feral Senses",
+						"name": "野性感官", "ENG_name": "Feral Senses",
 						"entries": [
-							"At 18th level, you gain preternatural senses that help you fight creatures you can't see. When you attack a creature you can't see, your inability to see it doesn't impose disadvantage on your attack rolls against it. You are also aware of the location of any {@condition invisible} creature within 30 feet of you, provided that the creature isn't hidden from you and you aren't {@condition blinded} or {@condition deafened}."
+							"在18級時，你獲得超自然的感官以幫助你對抗看不見的生物。當你攻擊一個你看不見的生物時，你並不會因為無法看見它而在你對它進行的攻擊檢定中承受劣勢。同時，只要該生物沒有躲藏於你，且你不處於{@condition 目盲}或{@condition 耳聾}狀態，則你也能察覺到任何距離你30呎內{@condition 隱形}生物的位置。"
 						]
 					}
 				],
 				[
 					{
-						"name": "屬性值提升",
+						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
-							"當你在此職業升至19級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"當你在此職業升至19級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					}
 				],
 				[
 					{
-						"name": "Foe Slayer",
+						"name": "眾敵屠戮", "ENG_name": "Foe Slayer",
 						"entries": [
-							"At 20th level, you become an unparalleled hunter. Once on each of your turns, you can add your Wisdom modifier to the attack roll or the damage roll of an attack you make. You can choose to use this feature before or after the roll, but before any effects of the roll are applied."
+							"在20級時，你成為了一名無可匹敵的獵手。在你的每個回合一次，你可以將你的睿知調整值加到你所進行的一次攻擊檢定或傷害骰中。你可以選擇在擲骰之前或之後使用此能力，但是必須在任何擲骰效果適用之前使用。"
 						]
 					}
 				]
@@ -2488,44 +2488,44 @@
 			"subclassTitle": "Ranger Conclave",
 			"subclasses": [
 				{
-					"name": "Beast Conclave",
+					"name": "野獸密會", "ENG_name": "Beast Conclave",
 					"subclassFeatures": [
 						[
 							{
-								"name": "Beast Conclave (UA)",
+								"name": "野獸密會(UA)", "ENG_name": "Beast Conclave (UA)",
 								"entries": [
-									"Many rangers are more at home in the wilds than in civilization, to the point where animals consider them kin. Rangers of the Beast Conclave develop a close bond with a beast, then further strengthen that bond through the use of magic.",
+									"許多遊俠在野外比在文明中會更加自在，以至於甚至動物們會將他們視為同類。野獸密會的遊俠們與一頭野獸建立起了緊密的聯繫，並透過魔法進一步強化了這種聯繫。",
 									{
 										"type": "entries",
-										"name": "Animal Companion",
+										"name": "動物夥伴", "ENG_name": "Animal Companion",
 										"entries": [
-											"At 3rd level, you learn to use your magic to create a powerful bond with a creature of the natural world.",
-											"With 8 hours of work and the expenditure of 50 gp worth of rare herbs and fine food, you call forth an animal from the wilderness to serve as your faithful companion. You normally select you companion from among the following animals: an {@creature ape}, a {@creature black bear}, a {@creature boar}, a {@creature giant badger}, a {@creature giant weasel}, a {@creature mule}, a {@creature panther}, or a {@creature wolf}. However, your DM might pick one of these animals for you, based on the surrounding terrain and on what types of creatures would logically be present in the area.",
-											"At the end of the 8 hours, your animal companion appears and gains all the benefits of your Companion's Bond ability. You can have only one animal companion at a time.",
-											"If your animal companion is ever slain, the magical bond you share allows you to return it to life. With 8 hours of work and the expenditure of 25 gp worth of rare herbs and fine food, you call forth your companion's spirit and use your magic to create a new body for it. You can return an animal companion to life in this manner even if you do not possess any part of its body.",
-											"If you use this ability to return a former animal companion to life while you have a current animal companion, your current companion leaves you and is replaced by the restored companion."
+											"在3級時，你習得使用你的魔法以和一頭自然世界中的生物建立一道強大的聯繫。",
+											"藉由8小時的作業以及消耗價值50金幣的稀有草藥和上好食物，你可以從荒野中喚來一頭野獸作為你忠實的夥伴。通常來說，你會從下列動物中選擇你的夥伴：{@creature 猿}、{@creature 黑熊}、{@creature 野豬}、{@creature 巨獾}、{@creature 巨鼬鼠}、{@creature 騾子}、{@creature 黑豹}、或{@creature 狼}。然而，你的DM可能會根據周遭地形環境、並考慮能夠在該區域中合理存在的動物類型，以從這些動物中為你挑選一種。",
+											"在這8小時的活動結束時，你的動物夥伴將會出現，並獲得所有你動物夥伴聯繫能力所賦予的好處。你同時只能擁有一個動物夥伴。",
+											"若你的動物夥伴被殺死，則你與牠之間的魔法聯繫將讓你得以使牠起死回生。藉由8小時的作業並消耗價值25金幣的稀有草藥和上好食物，你可以喚回你動物夥伴的靈魂並使用你的魔法為牠窗造一具新的身體。你可以透過這個方式將你的動物夥伴起死回生，即使你沒有任何牠的身體部位也一樣。",
+											"若你當下擁有一名動物夥伴，且使用這個能力將你的前一個動物夥伴起死回生，則你當下擁有的動物夥伴將離開你，且由被復活的動物夥伴取而代之。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Companion's Bond",
+										"name": "動物夥伴聯繫", "ENG_name": "Companion's Bond",
 										"entries": [
-											"Your animal companion gains a variety of benefits while it is linked to you.",
-											"The animal companion loses its Multiattack action, if it has one.",
-											"The companion obeys your commands as best it can. It rolls for initiative like any other creature, but you determine its actions, decisions, attitudes, and so on. If you are {@condition incapacitated} or absent, your companion acts on its own.",
-											"When using your Natural Explorer feature, you and your animal companion can both move stealthily at a normal pace.",
-											"Your animal companion has abilities and game statistics determined in part by your level. Your companion uses your proficiency bonus rather than its own. In addition to the areas where it normally uses its proficiency bonus, an animal companion also adds its proficiency bonus to its AC and to its damage rolls.",
-											"Your animal companion gains proficiency in two skills of your choice. It also becomes proficient with all saving throws.",
-											"For each level you gain after 3rd, your animal companion gains an additional hit die and increases its hit points accordingly.",
-											"Whenever you gain the 屬性值提升 class feature, your companion's abilities also improve. Your companion can increase one ability score of your choice by 2, or it can increase two ability scores of your choice by 1. As normal, your companion can't increase an ability score above 20 using this feature unless its description specifies otherwise.",
-											"Your companion shares your alignment, and has a personality trait and a flaw that you can roll for or select from the tables below. Your companion shares your ideal, and its bond is always, \"The ranger who travels with me is a beloved companion for whom I would gladly give my life.\"",
-											"Your animal companion gains the benefits of your Favored Enemy feature, and of your Greater Favored Enemy feature when you gain that feature at 6th level. It uses the favored enemies you selected for those features.",
+											"你的動物夥伴將因牠與你之間的聯繫而獲得許多的好處。",
+											"若動物夥伴具有多重攻擊的動作項，則牠將失去該動作項。",
+											"動物夥伴將盡其所能地服從你的命令。它將如同其他生物一樣骰自己的先攻，但由你決定牠的動作、選擇、態度，諸如此類。若你陷入{@condition 無力}或不在場，則你的動物夥伴將自己行動。",
+											"當你使用你的自然探索者能力時，你和你的動物夥伴都能夠以正常步調隱匿移動。",
+											"你動物夥伴的能力和遊戲數據將有一部份是由你的等級決定。你的動物夥伴使用你的熟練加值，而非牠自己的。除了原本會使用其熟練加值的部分之外，牠還會將其熟練加值加到牠的AC和傷害骰上。",
+											"你的動物夥伴將熟練於二個你所選擇的技能。牠同時將熟練於所有的豁免檢定。",
+											"在3級之後，你每提升一級，你的動物夥伴都將因此獲得一顆額外的生命骰，且增加牠相應的生命值。",
+											"每當你獲得屬性值提升的職業能力，你動物夥伴的屬性值也將獲得提升。你的動物夥伴可以將一項你所選擇的屬性值提升2點，或著你可以將二項你所選擇的屬性值各提升1點。如同平常一樣，除非另有說明，否則你的動物夥伴不能透過這個能力將一個屬性值提升至20或以上。",
+											"你的動物夥伴擁有與你相同的陣營，且它具有一個個性特質和缺點，你可以從下表中選擇或擲骰決定。你的動物夥伴擁有與你相同的理念，且牠的羈絆永遠是「和我同行的遊俠是我願意為之獻身的摯愛夥伴。」",
+											"你的動物夥伴獲得你的宿敵能力、以及你在6級時獲得的高等宿敵能力所賦予的好處。牠將使用你所選擇的宿敵做為牠的宿敵。",
 											{
 												"type": "table",
-												"caption": "Companion Trait",
+												"caption": "動物夥伴特質",
 												"colLabels": [
 													"d6",
-													"Trait"
+													"特質"
 												],
 												"colStyles": [
 													"col-1 text-align-center",
@@ -2534,36 +2534,36 @@
 												"rows": [
 													[
 														"1",
-														"I'm dauntless in the face of adversity."
+														"我在面對逆境時毫不畏懼。"
 													],
 													[
 														"2",
-														"Threaten my friends, threaten me."
+														"威脅我的朋友，就是威脅我。"
 													],
 													[
 														"3",
-														"I stay on alert so others can rest."
+														"我會保持警戒，讓其他人得以休息。"
 													],
 													[
 														"4",
-														"People see an animal and underestimate me."
+														"人們會將我視為動物並低估我。"
 													],
 													[
 														"5",
-														"I have a knack for showing up in the nick of time."
+														"我有著會在關鍵時刻現身登場的訣竅。"
 													],
 													[
 														"6",
-														"I put my friends' needs before my own in all things."
+														"對所有的一切，我將我朋友的需求擺在我自己之前。"
 													]
 												]
 											},
 											{
 												"type": "table",
-												"caption": "Companion Flaw",
+												"caption": "動物夥伴缺點",
 												"colLabels": [
 													"d6",
-													"Flaw"
+													"缺點"
 												],
 												"colStyles": [
 													"col-1 text-align-center",
@@ -2572,27 +2572,27 @@
 												"rows": [
 													[
 														"1",
-														"If there's food left unattended, I'll eat it."
+														"如果有無人看管的食物，我就會把它吃了。"
 													],
 													[
 														"2",
-														"I growl at strangers, and all people except my ranger are strangers to me."
+														"我會對陌生人低吼。而對我來說，除了我的遊俠夥伴之外，所有人都是陌生人。"
 													],
 													[
 														"3",
-														"Any time is a good time for a belly rub."
+														"任何時候都是撓肚子撒嬌的好時候。"
 													],
 													[
 														"4",
-														"I'm deathly afraid of water."
+														"我怕水怕得要死。"
 													],
 													[
 														"5",
-														"My idea of hello is a flurry of licks to the face."
+														"我對於招呼的認識就是不停地舔對方的臉。"
 													],
 													[
 														"6",
-														"I jump on creatures to tell them how much I love them."
+														"我會跳向一個生物以表示我有多愛他們！"
 													]
 												]
 											}
@@ -2606,9 +2606,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Coordinated Attack",
+										"name": "偕同攻擊", "ENG_name": "Coordinated Attack",
 										"entries": [
-											"Beginning at 5th level, you and your animal companion form a more potent fighting force. When you use the {@action Attack} action on your turn, if your companion can see you, it can use its reaction to make a melee attack."
+											"從5級開始，你和你的動物夥伴將組成更加強大的戰鬥之力。當你在你的回合採取{@action 攻擊}動作時，若你的動物夥伴可以看見你，則牠可以使用牠的反應以進行一次近戰攻擊。"
 										]
 									}
 								]
@@ -2619,9 +2619,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Beast's Defense",
+										"name": "野獸防禦", "ENG_name": "Beast's Defense",
 										"entries": [
-											"At 7th level, while your companion can see you, it has advantage on all saving throws."
+											"在7級時，若你的動物夥伴可以看見你，則牠所進行的所有豁免檢定都將具有優勢。"
 										]
 									}
 								]
@@ -2632,9 +2632,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Storm of Claw and Fangs",
+										"name": "爪牙風暴", "ENG_name": "Storm of Claw and Fangs",
 										"entries": [
-											"At 11th level, your companion can use its action to make a melee attack against each creature of its choice within 5 feet of it, with a separate attack roll for each target."
+											"在11級時，你的動物夥伴可以使用牠的動作對每個距離牠5呎內且牠選擇的生物進行一次近戰攻擊，為每個目標進行各自的攻擊檢定。"
 										]
 									}
 								]
@@ -2645,9 +2645,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Superior Beast's Defense",
+										"name": "卓越野獸防禦", "ENG_name": "Superior Beast's Defense",
 										"entries": [
-											"At 15th level, whenever an attacker that your companion can see hits it with an attack, it can use its reaction to halve the attack's damage against it."
+											"在15級時，每當一個你的動物夥伴可以看見的攻擊者以一次攻擊命中牠時，牠可以使用牠的反應已將該次攻擊對牠造成的傷害減半。"
 										]
 									}
 								]
@@ -2655,29 +2655,29 @@
 						]
 					],
 					"source": "UATheRangerRevised",
-					"shortName": "Beast Conclave"
+					"shortName": "野獸密會"
 				},
 				{
-					"name": "Hunter Conclave",
+					"name": "獵人密會", "ENG_name": "Hunter Conclave",
 					"subclassFeatures": [
 						[
 							{
-								"name": "Hunter Conclave (UA)",
+								"name": "獵人密會 (UA)", "ENG_name": "Hunter Conclave (UA)",
 								"entries": [
-									"Some rangers seek to master weapons to better protect civilization from the terrors of the wilderness. Members of the Hunter Conclave learn specialized fighting techniques for use against the most dire threats, from rampaging ogres and hordes of orcs to towering giants and terrifying dragons.",
+									"有些遊俠尋求透過精通武器以更好的從荒野的威脅中守護文明世界。獵人密會的成員學習了特化的戰鬥技巧，用以對抗最可怕的威脅：從狂怒的食人魔、成群的獸人、到高聳的巨人和可怖的巨龍。",
 									{
 										"type": "entries",
-										"name": "Hunter's Prey",
+										"name": "狩者獵物", "ENG_name": "Hunter's Prey",
 										"entries": [
-											"At 3rd level, you gain one of the following features of your choice: Colossus Slayer, Giant Killer, or Horde Breaker.",
+											"在3級時，你獲得下列其中一個你所選擇的能力：巨怪獵者、巨人殺手、或滅族者。",
 											{
 												"type": "entries",
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Colossus Slayer",
+														"name": "巨怪獵者", "tENG_name": "Colossus Slayer",
 														"entries": [
-															"Your tenacity can wear down the most potent foes. When you hit a creature with a weapon attack, the creature takes an extra 1d8 damage if it's below its hit point maximum. You can deal this extra damage only once per turn."
+															"你的執著可以毀滅最強大的敵人。當你以一次武器攻擊命中一個生物，若它的生命值低於最大值，則該生物將受到額外的{@dice 1d8}傷害。你每回合只能造成一次這個額外傷害。"
 														]
 													}
 												]
@@ -2687,9 +2687,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Giant Killer",
+														"name": "巨人殺手", "tENG_name": "Giant Killer",
 														"entries": [
-															"When a Large or larger creature within 5 feet of you hits or misses you with an attack, you can use your reaction to attack that creature immediately after its attack, provided that you can see the creature."
+															"當一個距離你5呎內，體型為大型或更大的生物對你進行的一次攻擊命中或失手時，只要你可以看見該生物，你就可以使用你的反應以立刻在它的攻擊之後對它進行攻擊。"
 														]
 													}
 												]
@@ -2699,9 +2699,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Horde Breaker",
+														"name": "滅族者", "tENG_name": "Horde Breaker",
 														"entries": [
-															"Once on each of your turns when you make a weapon attack, you can make another attack with the same weapon against a different creature that is within 5 feet of the original target and within range of your weapon."
+															"在你的每個回合一次，當你進行一次武器攻擊時，你可以使用相同的武器對一個距離原本目標5呎內，且處於你武器射程內的另一個生物進行另一次攻擊。"
 														]
 													}
 												]
@@ -2716,9 +2716,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Extra Attack",
+										"name": "額外攻擊", "ENG_name": "Extra Attack",
 										"entries": [
-											"Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
+											"從5級開始，每當你在你的回合採取{@action 攻擊}動作，你可以攻擊二次，而非一次。"
 										]
 									}
 								]
@@ -2729,17 +2729,17 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Defensive Tactics",
+										"name": "防禦性戰術", "ENG_name": "Defensive Tactics",
 										"entries": [
-											"At 7th level, you gain one of the following features of your choice: Escape the Horde, Multiattack Defense, or Steel Will.",
+											"在7級時，你獲得下列其中一個你所選擇的能力：逃離眾敵、防禦多重攻擊、或鋼鐵意志。",
 											{
 												"type": "entries",
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Escape the Horde",
+														"name": "逃離眾敵", "tENG_name": "Escape the Horde",
 														"entries": [
-															"Opportunity attacks against you are made with disadvantage."
+															"所有對你進行的藉機攻擊將具有劣勢。"
 														]
 													}
 												]
@@ -2749,9 +2749,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Multiattack Defense",
+														"name": "防禦多重攻擊", "tENG_name": "Multiattack Defense",
 														"entries": [
-															"When a creature hits you with an attack, you gain a +4 bonus to AC against all subsequent attacks made by that creature for the rest of the turn."
+															"當一個生物以一次攻擊命中你時，你的AC將對該生物在該回合中所進行的所有後續攻擊獲得+4的加值。"
 														]
 													}
 												]
@@ -2761,9 +2761,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Steel Will",
+														"name": "鋼鐵意志", "tENG_name": "Steel Will",
 														"entries": [
-															"You have advantage on saving throws against being {@condition frightened}."
+															"你在對抗{@condition 恐懼}的豁免檢定中具有優勢。"
 														]
 													}
 												]
@@ -2778,17 +2778,17 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Multiattack",
+										"name": "多重攻擊", "ENG_name": "Multiattack",
 										"entries": [
-											"At 11th level, you gain one of the following features of your choice: Volley or Whirlwind Attack.",
+											"在11級時，你獲得下列其中一個你所選擇的能力：箭雨、或劍刃風暴。",
 											{
 												"type": "entries",
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Volley",
+														"name": "箭雨", "tENG_name": "Volley",
 														"entries": [
-															"You can use your action to make a ranged attack against any number of creatures within 10 feet of a point you can see within your weapon's range. You must have ammunition for each target, as normal, and you make a separate attack roll for each target."
+															"你可以使用你的動作以進行一次遠程攻擊，並以處於你武器射程內你所能看見一點的周圍10呎範圍內的任意數量個生物做為目標。你必須有足夠的彈藥以攻擊每個目標，且你為每個目標進行各自的攻擊檢定。"
 														]
 													}
 												]
@@ -2798,9 +2798,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Whirlwind Attack",
+														"name": "劍刃風暴", "tENG_name": "Whirlwind Attack",
 														"entries": [
-															"You can use your action to make a melee attack against any number of creatures within 5 feet of you, with a separate attack roll for each target."
+															"你可以使用你的動作以進行一次近戰攻擊，並以距離你5呎內的任意數量個生物做為目標，為每個目標進行各自的攻擊檢定。"
 														]
 													}
 												]
@@ -2815,17 +2815,17 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Superior Hunter's Defense",
+										"name": "卓越獵人防禦", "ENG_name": "Superior Hunter's Defense",
 										"entries": [
-											"At 15th level, you gain one of the following features of your choice: Evasion, Stand Against the Tide, or Uncanny {@action Dodge}.",
+											"在15級時，你獲得下列其中一個你所選擇的能力：反射閃避、逆潮而立、或直覺閃避。",
 											{
 												"type": "entries",
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Evasion",
+														"name": "反射閃避", "tENG_name": "Evasion",
 														"entries": [
-															"When you are subjected to an effect, such as a red dragon's fiery breath or a {@spell lightning bolt} spell, that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on a saving throw, and only half damage if you fail"
+															"你可以靈活地躲開某些範圍效果，像是紅龍的火焰吐息、或{@spell 閃電束}法術。當你成為一個允許你進行敏捷豁免以僅承受一半傷害的效果的目標時，你改為在豁免成功時不受任何傷害，且在豁免失敗時僅承受一半傷害。"
 														]
 													}
 												]
@@ -2835,9 +2835,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Stand Against the Tide",
+														"name": "逆潮而立", "tENG_name": "Stand Against the Tide",
 														"entries": [
-															"When a hostile creature misses you with a melee attack, you can use your reaction to force that creature to repeat the same attack against another creature (other than itself) of your choice."
+															"當一個敵對生物對你進行的一次近戰攻擊失手，你可以使用你的反應以強迫該生物對你所選擇的另一個生物（除了它自己以外）重複進行一次該攻擊。"
 														]
 													}
 												]
@@ -2847,9 +2847,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Uncanny Dodge",
+														"name": "直覺閃避", "tENG_name": "Uncanny Dodge",
 														"entries": [
-															"When an attacker that you can see hits you with an attack, you can use your reaction to halve the attack's damage against you."
+															"當一個你所能看見的攻擊者使用一次攻擊命中你，你可以使用你的反應以減半該次攻擊對你的傷害。"
 														]
 													}
 												]
@@ -2861,27 +2861,27 @@
 						]
 					],
 					"source": "UATheRangerRevised",
-					"shortName": "Hunter Conclave"
+					"shortName": "獵人密會"
 				},
 				{
-					"name": "Deep Stalker Conclave",
+					"name": "深域追跡者密會", "ENG_name": "Deep Stalker Conclave",
 					"subclassFeatures": [
 						[
 							{
-								"name": "Deep Stalker Conclave (UA)",
+								"name": "深域追跡者密會 (UA)", "ENG_name": "Deep Stalker Conclave (UA)",
 								"entries": [
-									"Most folk descend into the depths of the Underdark only under the most pressing conditions, undertaking some desperate quest or following the promise of vast riches. All too often, evil festers beneath the earth unnoticed, and rangers of the Deep Stalker Conclave strive to uncover and defeat such threats before they can reach the surface.",
+									"大部分的人們只會在最急迫情況下，為了執行艱困絕望的任務或尋求巨大的財富，才會鋌而走險進入幽暗地域的深處。通常來說，邪惡總會在這地底深處悄悄滋生，而深域追跡者密會的遊俠們則致力於在這類威脅崛起到地表世界之前就發掘並摧毀它們。",
 									{
 										"type": "entries",
-										"name": "Deep Stalker Magic",
+										"name": "深域追蹤者魔法", "ENG_name": "Deep Stalker Magic",
 										"entries": [
-											"At 3rd level, you have darkvision out to a range of 90 feet. If you already have darkvision, you increase its range by 30 feet. You also gain access to additional spells at 3rd, 5th, 9th, 13th, and 15th level. Once you gain a deep stalker spell, it counts as a ranger spell for you but doesn't count against the number of rangers spells you know.",
+											"在3級時，你獲得90呎範圍的黑暗視覺。若你已經擁有黑暗視覺，則它的範圍將增加30呎。你也在本職業升至3級、5級、9級、13級、和15級時學會額外的法術。當你獲得一個深域追跡者法術時，它對你而言將被視作遊俠法術，但並不會計入你已知遊俠法術的數量中。",
 											{
 												"type": "table",
-												"caption": "Deep Stalker Spells",
+												"caption": "深域追跡者",
 												"colLabels": [
-													"Ranger Level",
-													"Spells"
+													"遊俠等級",
+													"法術"
 												],
 												"colStyles": [
 													"col-3 text-align-center",
@@ -2890,23 +2890,23 @@
 												"rows": [
 													[
 														"3rd",
-														"{@spell disguise self}"
+														"{@spell 易容術}"
 													],
 													[
 														"5th",
-														"{@spell rope trick}"
+														"{@spell 通天繩}"
 													],
 													[
 														"9th",
-														"{@spell glyph of warding}"
+														"{@spell 守衛銘文}"
 													],
 													[
 														"13th",
-														"{@spell greater invisibility}"
+														"{@spell 高等隱形術}"
 													],
 													[
 														"17th",
-														"{@spell seeming}"
+														"{@spell 偽裝術}"
 													]
 												]
 											}
@@ -2914,9 +2914,9 @@
 									},
 									{
 										"type": "entries",
-										"name": "Underdark Scout",
+										"name": "幽暗地域斥候", "ENG_name": "Underdark Scout",
 										"entries": [
-											"At 3rd level, you master the art of the ambush. On your first turn during combat, you gain a +10 bonus to your speed and if you use the attack action on that turn, you can make one additional attack. You are also adept at evading creatures that rely on darkvision. Such creatures gain no benefit when attempting to detect you in dark and dim conditions. Additionally, when the DM determines if you can hide from a creature, that creature gains no benefit from its darkvision."
+											"在3級時，你精通於伏擊的藝術。在戰鬥中你的第一個回合期間，你的移動速度獲得+10加值，且若你在該回合採取{@action 攻擊}動作，則你可以進行一次額外攻擊。你同時擅長於避開依賴於黑暗視覺的生物。當你處於微光光照或黑暗環境時，這類生物在嘗試察覺你的存在時並不會獲得任何好處。此外，當DM要判斷你是否可以對一個生物進行躲藏時，該生物不會獲得任何來自黑暗視覺的好處。"
 										]
 									}
 								]
@@ -2927,9 +2927,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Extra Attack",
+										"name": "額外攻擊", "ENG_name": "Extra Attack",
 										"entries": [
-											"Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
+											"從5級開始，每當你在你的回合採取{@action 攻擊}動作，你可以攻擊二次，而非一次。"
 										]
 									}
 								]
@@ -2940,9 +2940,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Iron Mind",
+										"name": "鋼鐵心智", "ENG_name": "Iron Mind",
 										"entries": [
-											"At 7th level, you gain proficiency in Wisdom saving throws."
+											"在7級時，你獲得睿知豁免的熟練。"
 										]
 									}
 								]
@@ -2953,9 +2953,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Stalker's Flurry",
+										"name": "追獵如風", "ENG_name": "Stalker's Flurry",
 										"entries": [
-											"Starting at 11th level, once on each of your turns when you miss with an attack, you can make another attack. You can gain one additional attack during your turn with this ability."
+											"從11級開始，在你的每個回合一次，當你的一次攻擊失手時，你可以進行另一次攻擊。你在使用次能力的回合期間獲得一次額外的攻擊。"
 										]
 									}
 								]
@@ -2966,9 +2966,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Stalker's Dodge",
+										"name": "追獵者閃避", "ENG_name": "Stalker's Dodge",
 										"entries": [
-											"At 15th level, whenever a creature attacks you and does not have advantage, you can use your reaction to impose disadvantage on the creature's attack roll against you. You can use this feature before or after the attack roll is made, but it must be used before the outcome of the roll is determined."
+											"在15級時，每當一個生物對你進行一次攻擊檢定且該檢定不具有優勢時，你可以使用你的反應以讓該生物對你進行的攻擊檢定承受劣勢。你可以在該攻擊檢定擲骰之前獲知後決定是否使用此能力，但必須在決定該次檢定的結果之前使用。"
 										]
 									}
 								]
@@ -2976,760 +2976,7 @@
 						]
 					],
 					"source": "UATheRangerRevised",
-					"shortName": "Deep Stalker Conclave"
-				},
-				{
-					"name": "Horizon Walker (UA)",
-					"subclassFeatures": [
-						[
-							{
-								"name": "Horizon Walker",
-								"entries": [
-									"Rangers of the Horizon Conclave guard the world against threats that originate from other planes. They seek out planar portals and keep watch over them, venturing to the outer and inner planes as needed to defeat threats.",
-									{
-										"type": "entries",
-										"name": "Planar Magic",
-										"entries": [
-											"Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the Horizon Walker Spells table. The spell counts as a ranger spell for you, and it doesn't count against the number of ranger spells you know.",
-											{
-												"type": "table",
-												"caption": "Horizon Walker Spells",
-												"colLabels": [
-													"Ranger Level",
-													"Spells"
-												],
-												"colStyles": [
-													"col-3 text-align-center",
-													"col-9"
-												],
-												"rows": [
-													[
-														"3rd",
-														"{@spell protection from evil and good}"
-													],
-													[
-														"5th",
-														"{@spell alter self}"
-													],
-													[
-														"9th",
-														"{@spell protection from energy}"
-													],
-													[
-														"13th",
-														"{@spell banishment}"
-													],
-													[
-														"17th",
-														"{@spell teleportation circle}"
-													]
-												]
-											}
-										]
-									},
-									{
-										"type": "entries",
-										"name": "Planar Warrior",
-										"entries": [
-											"At 3rd level, you learn to draw on the energy of the planes to augment your attacks.",
-											"As a bonus action, choose one creature you can see within 30 feet of you. Until the end of this turn, your attacks against that creature ignore its damage resistances, and the next time you hit it on this turn, it takes an additional 1d6 force damage."
-										]
-									},
-									{
-										"type": "entries",
-										"name": "Portal Lore",
-										"entries": [
-											"At 3rd level, you gain the ability to detect the presence of planar portals. As an action, you detect the distance and direction to any planar portals within 1,000 feet of you. You also sense which plane of existence each portal leads to. However, if magic obscures any details of a portal, this feature doesn't reveal them.",
-											"Once you use this feature, you can't use it again until you finish a short or long rest. Alternatively, you can use the feature again if you expend a spell slot of 2nd level or higher.",
-											"See the \"Planar Travel\" section in chapter 2 of the Dungeon Master's Guide for examples of planar portals."
-										]
-									}
-								]
-							}
-						],
-						[
-							{
-								"entries": [
-									{
-										"type": "entries",
-										"name": "Extra Attack",
-										"entries": [
-											"Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
-										]
-									}
-								]
-							}
-						],
-						[
-							{
-								"entries": [
-									{
-										"type": "entries",
-										"name": "Ethereal Step",
-										"entries": [
-											"At 7th level, you learn to step through the Ethereal Plane. As a bonus action on your turn, you can cast the {@spell etherealness} spell with this feature, but the spell ends at the end of the current turn. Once you use this feature, you can't use it again until you finish a short or long rest."
-										]
-									}
-								]
-							}
-						],
-						[
-							{
-								"entries": [
-									{
-										"type": "entries",
-										"name": "Distant Strike",
-										"entries": [
-											"At 11th level, you gain the ability to step between the planes in a blink of an eye. When you use the {@action Attack} action, you can teleport up to 10 feet before each attack. You must be able to see the destination of the teleportation.",
-											"If you attack at least two different creatures with the action, you can make one additional attack with it against a third creature."
-										]
-									}
-								]
-							}
-						],
-						[
-							{
-								"entries": [
-									{
-										"type": "entries",
-										"name": "Spectral Defense",
-										"entries": [
-											"At 15th level, your ability to move between planes becomes even more finely tuned. As a reaction when you take damage, you can halve that damage against you. For a moment, you slip into the planar boundary to lessen the harm."
-										]
-									}
-								]
-							}
-						]
-					],
-					"source": "UARangerAndRogue",
-					"shortName": "Horizon Walker (UA)"
-				},
-				{
-					"name": "Primeval Guardian (UA)",
-					"subclassFeatures": [
-						[
-							{
-								"name": "Primeval Guardian",
-								"entries": [
-									"Rangers of the Primeval Guardian Conclave follow an ancient tradition rooted in powerful druidic magic. These rangers learn to become one with nature, allowing them to channel the aspects of various beasts and plants in order to overcome their foes.",
-									"These rangers dwell in the elder forests of the world. They venture out only rarely, as they consider it their sacred duty to protect the druidic groves and ancient trees that saw the earliest days of the world.",
-									{
-										"type": "entries",
-										"name": "Guardian Magic",
-										"entries": [
-											"Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the Primeval Guardian Spells table. The spell counts as a ranger spell for you, and it doesn't count against the number of ranger spells you know.",
-											{
-												"type": "table",
-												"caption": "Primeval Guardian Spells",
-												"colLabels": [
-													"Ranger Level",
-													"Spells"
-												],
-												"colStyles": [
-													"col-3 text-align-center",
-													"col-9"
-												],
-												"rows": [
-													[
-														"3rd",
-														"{@spell entangle}"
-													],
-													[
-														"5th",
-														"{@spell enhance ability}"
-													],
-													[
-														"9th",
-														"{@spell conjure animals}"
-													],
-													[
-														"13th",
-														"{@spell giant insect}"
-													],
-													[
-														"17th",
-														"{@spell insect plague}"
-													]
-												]
-											}
-										]
-									},
-									{
-										"type": "entries",
-										"name": "Guardian Soul",
-										"entries": [
-											"Starting at 3rd level, you gain the ability to temporarily grow and take on the appearance of a treelike person, covered with leaves and bark. As a bonus action, you assume this guardian form, which lasts until you end it as a bonus action or until you are {@condition incapacitated}.",
-											"You undergo the following changes while in your guardian form:",
-											{
-												"type": "list",
-												"items": [
-													"Your size becomes Large, unless you were larger.",
-													"Any speed you have becomes 5 feet, unless the speed was lower.",
-													"Your reach increases by 5 feet.",
-													"You gain a number of temporary hit points at the start of each of your turns. The number equals half your ranger level. When the form ends, you lose any temporary hit points you have from it."
-												]
-											}
-										]
-									},
-									{
-										"type": "entries",
-										"name": "Piercing Thorns",
-										"entries": [
-											"At 3rd level, your command of primal magic allows you to enhance your attacks with thorns. Once during each of your turns, you can deal an additional 1d6 piercing damage to one creature you hit with a weapon attack."
-										]
-									}
-								]
-							}
-						],
-						[
-							{
-								"entries": [
-									{
-										"type": "entries",
-										"name": "Extra Attack",
-										"entries": [
-											"Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
-										]
-									}
-								]
-							}
-						],
-						[
-							{
-								"entries": [
-									{
-										"type": "entries",
-										"name": "Ancient Fortitude",
-										"entries": [
-											"At 7th level, you gain the endurance of the ancient forests. Your hit point maximum and current hit points increase by 2 per ranger level when you assume your guardian form. This increase lasts until you leave the form; your hit point maximum then returns to normal, but your current hit points remain the same, unless they must decrease to abide by your hit point maximum.",
-											"Once you use this feature, you can't use it again until you finish a short or long rest."
-										]
-									}
-								]
-							}
-						],
-						[
-							{
-								"entries": [
-									{
-										"type": "entries",
-										"name": "Rooted Defense",
-										"entries": [
-											"At 11th level, you gain the ability to twist and turn the ground beneath you. While you are in your guardian form, the ground within 30 feet of you is difficult terrain for your enemies."
-										]
-									}
-								]
-							}
-						],
-						[
-							{
-								"entries": [
-									{
-										"type": "entries",
-										"name": "Guardian Aura",
-										"entries": [
-											"Starting at 15th level, your guardian form emanates a magical aura that fortifies your injured allies. When any ally starts their turn within 30 feet of your guardian form, that ally regains a number of hit points equal to half your ranger level. This aura has no effect on a creature that has half or more of its hit points, and it has no effect on undead and constructs."
-										]
-									}
-								]
-							}
-						]
-					],
-					"source": "UARangerAndRogue",
-					"shortName": "Primeval Guardian (UA)"
-				},
-				{
-					"name": "Monster Slayer (UA)",
-					"subclassFeatures": [
-						[
-							{
-								"name": "Monster Slayer",
-								"entries": [
-									"Rangers of the Slayer Conclave seek out vampires, dragons, evil fey, fiends, and other powerful magical threats. Trained in a variety of arcane and divine techniques to overcome such monsters, slayers are experts at unearthing and defeating mighty foes.",
-									{
-										"type": "entries",
-										"name": "Slayer's Mysticism",
-										"entries": [
-											"You learn an additional spell when you reach certain levels in this class, as shown in the Slayer Spells table. The spell counts as a ranger spell for you but doesn't count against the number of ranger spells you know.",
-											{
-												"type": "table",
-												"caption": "Monster Slayer Spells",
-												"colLabels": [
-													"Ranger Level",
-													"Spells"
-												],
-												"colStyles": [
-													"col-3 text-align-center",
-													"col-9"
-												],
-												"rows": [
-													[
-														"3rd",
-														"{@spell protection from evil and good}"
-													],
-													[
-														"5th",
-														"{@spell zone of truth}"
-													],
-													[
-														"9th",
-														"{@spell magic circle}"
-													],
-													[
-														"13th",
-														"{@spell banishment}"
-													],
-													[
-														"17th",
-														"{@spell planar binding}"
-													]
-												]
-											}
-										]
-									},
-									{
-										"type": "entries",
-										"name": "Slayer's Eye",
-										"entries": [
-											"Starting at 3rd level, you gain the ability to study and unravel a creature's defenses. As a bonus action, choose one creature you can see within 120 feet of you. You immediately learn the target's vulnerabilities, immunities, and resistances. You also learn any special effects triggered when the target takes damage, such as fire damage halting its regeneration.",
-											"In addition, the first time each turn you hit the target with a weapon attack, the target takes an extra 1d6 damage from the weapon.",
-											"This benefit lasts until you target a different creature with this feature or until you finish a short or long rest."
-										]
-									}
-								]
-							}
-						],
-						[
-							{
-								"entries": [
-									{
-										"type": "entries",
-										"name": "Extra Attack",
-										"entries": [
-											"Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
-										]
-									}
-								]
-							}
-						],
-						[
-							{
-								"entries": [
-									{
-										"type": "entries",
-										"name": "Supernatural Defense",
-										"entries": [
-											"At 7th level, you gain extra resilience against your prey's assaults on your mind and body. Whenever the target of your Slayer's Eye forces you to make a saving throw, add 1d6 to your roll."
-										]
-									}
-								]
-							}
-						],
-						[
-							{
-								"entries": [
-									{
-										"type": "entries",
-										"name": "Relentless Slayer",
-										"entries": [
-											"At 11th level, you gain the ability to foil your foe's ability to escape. Your study of folklore and arcane knowledge gives you a key insight to keep your prey cornered. If the target of your Slayer's Eye attempts to teleport, change its shape, travel to another plane of existence, or turn gaseous, you can use your reaction to make a Wisdom check contested by a Wisdom check made by the target. To use this ability, you must be able to see the target and need to be within 30 feet of it. If you succeed, you foil its attempt, causing it to waste the action, bonus action, or reaction it used."
-										]
-									}
-								]
-							}
-						],
-						[
-							{
-								"entries": [
-									{
-										"type": "entries",
-										"name": "Slayer's Counter",
-										"entries": [
-											"At 15th level, you gain the ability to counterattack when your prey tries to sabotage you. If the target of your Slayer's Eye forces you to make a saving throw, you can use your reaction to make one weapon attack against it. You make this attack immediately before making the saving throw. If the attack hits, your save automatically succeeds, in addition to the attack's normal effects."
-										]
-									}
-								]
-							}
-						]
-					],
-					"source": "UAATrioOfSubclasses",
-					"shortName": "Monster Slayer (UA)"
-				},
-				{
-					"name": "Gloom Stalker",
-					"subclassFeatures": [
-						[
-							{
-								"name": "Gloom Stalker",
-								"entries": [
-									"Gloom Stalkers are at home in the darkest places: deep under the earth, in gloomy alleyways, in primeval forests, and wherever else the light dims. Most folk enter such places with trepidation, but a Gloom Stalker ventures boldly into the darkness, seeking to ambush threats before they can reach the broader world. Such rangers are often found in the Underdark, but they will go any place where evil lurks in the shadows.",
-									{
-										"type": "entries",
-										"name": "Gloom Stalker Magic",
-										"entries": [
-											"Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the Gloom Stalker Spells table. The spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.",
-											{
-												"type": "table",
-												"caption": "Gloom Stalker Spells",
-												"colLabels": [
-													"Ranger Level",
-													"Spells"
-												],
-												"colStyles": [
-													"col-3 text-align-center",
-													"col-9"
-												],
-												"rows": [
-													[
-														"3rd",
-														"{@spell disguise self}"
-													],
-													[
-														"5th",
-														"{@spell rope trick}"
-													],
-													[
-														"9th",
-														"{@spell fear}"
-													],
-													[
-														"13th",
-														"{@spell greater invisibility}"
-													],
-													[
-														"17th",
-														"{@spell seeming}"
-													]
-												]
-											}
-										]
-									},
-									{
-										"type": "entries",
-										"name": "Dread Ambusher",
-										"entries": [
-											"At 3rd level, you master the art of the ambush. You can give yourself a bonus to your initiative rolls equal to your Wisdom modifier.",
-											"At the start of your first turn of each combat, your walking speed increases by 10 feet, which lasts until the end of that turn. If you take the {@action Attack} action on that turn, you can make one additional weapon attack as part of that action. If that attack hits, the target takes an extra 1d8 damage of the weapon's damage type."
-										]
-									},
-									{
-										"type": "entries",
-										"name": "Umbral Sight",
-										"entries": [
-											"At 3rd level, you gain darkvision out to a range of 60 feet. If you already have darkvision from your race, its range increases by 30 feet.",
-											"You are also adept at evading creatures that rely on darkvision. While in darkness, you are {@condition invisible} to any creature that relies on darkvision to see you in that darkness."
-										]
-									}
-								]
-							}
-						],
-						[
-							{
-								"entries": [
-									{
-										"type": "entries",
-										"name": "Extra Attack",
-										"entries": [
-											"Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
-										]
-									}
-								]
-							}
-						],
-						[
-							{
-								"entries": [
-									{
-										"type": "entries",
-										"name": "Iron Mind",
-										"entries": [
-											"By 7th level, you have honed your ability to resist the mind-altering powers of your prey. You gain proficiency in Wisdom saving throws. If you already have this proficiency, you instead gain proficiency in Intelligence or Charisma saving throws (your choice)."
-										]
-									}
-								]
-							}
-						],
-						[
-							{
-								"entries": [
-									{
-										"type": "entries",
-										"name": "Stalker's Flurry",
-										"entries": [
-											"At 11th level, you learn to attack with such unexpected speed that you can turn a miss into another strike. Once on each of your turns when you miss with a weapon attack, you can make another weapon attack as part of the same action."
-										]
-									}
-								]
-							}
-						],
-						[
-							{
-								"entries": [
-									{
-										"type": "entries",
-										"name": "Shadowy Dodge",
-										"entries": [
-											"Starting at 15th level, you can dodge in unforeseen ways, with wisps of supernatural shadow around you. Whenever a creature makes an attack roll against you and doesn't have advantage on the roll, you can use your reaction to impose disadvantage on it. You must use this feature before you know the outcome of the attack roll."
-										]
-									}
-								]
-							}
-						]
-					],
-					"source": "XGE",
-					"shortName": "Gloom Stalker"
-				},
-				{
-					"name": "Horizon Walker",
-					"subclassFeatures": [
-						[
-							{
-								"name": "Horizon Walker",
-								"entries": [
-									"Horizon Walkers guard the world against threats that originate from other planes or that seek to ravage the mortal realm with otherworldly magic. They seek out planar portals and keep watch over them, venturing to the Inner Planes and the Outer Planes as needed to pursue their foes. These rangers are also friends to any forces in the multiverse\u2014especially benevolent dragons, fey, and elementals\u2014that work to preserve life and the order of the planes.",
-									{
-										"type": "entries",
-										"name": "Horizon Walker Magic",
-										"entries": [
-											"Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the Horizon Walker Spells table. The spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.",
-											{
-												"type": "table",
-												"caption": " Spells",
-												"colLabels": [
-													"Ranger Level",
-													"Spells"
-												],
-												"colStyles": [
-													"col-3 text-align-center",
-													"col-9"
-												],
-												"rows": [
-													[
-														"3rd",
-														"{@spell protection from evil and good}"
-													],
-													[
-														"5th",
-														"{@spell misty step}"
-													],
-													[
-														"9th",
-														"{@spell haste}"
-													],
-													[
-														"13th",
-														"{@spell banishment}"
-													],
-													[
-														"17th",
-														"{@spell teleportation circle}"
-													]
-												]
-											}
-										]
-									},
-									{
-										"type": "entries",
-										"name": "Detect Portal",
-										"entries": [
-											"At 3rd level, you gain the ability to magically sense the presence of a planar portal. As an action, you detect the distance and direction to the closest planar portal within 1 mile of you.",
-											"Once you use this feature, you can't use it again until you finish a short or long rest.",
-											"See the \"Planar Travel\" section in chapter 2 of the Dungeon Master's Guide for examples of planar portals."
-										]
-									},
-									{
-										"type": "entries",
-										"name": "Planar Warrior",
-										"entries": [
-											"At 3rd level, you learn to draw on the energy of the multiverse to augment your attacks.",
-											"As a bonus action, choose one creature you can see within 30 feet of you. The next time you hit that creature on this turn with a weapon attack, all damage dealt by the attack becomes force damage, and the creature takes an extra 1d8 force damage from the attack. When you reach 11th level in this class, the extra damage increases to 2d8."
-										]
-									}
-								]
-							}
-						],
-						[
-							{
-								"entries": [
-									{
-										"type": "entries",
-										"name": "Extra Attack",
-										"entries": [
-											"Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
-										]
-									}
-								]
-							}
-						],
-						[
-							{
-								"entries": [
-									{
-										"type": "entries",
-										"name": "Ethereal Step",
-										"entries": [
-											"At 7th level, you learn to step through the Ethereal Plane. As a bonus action, you can cast the {@spell etherealness} spell with this feature, without expending a spell slot, but the spell ends at the end of the current turn.",
-											"Once you use this feature, you can't use it again until you finish a short or long rest."
-										]
-									}
-								]
-							}
-						],
-						[
-							{
-								"entries": [
-									{
-										"type": "entries",
-										"name": "Distant Strike",
-										"entries": [
-											"At 11th level, you gain the ability to pass between the planes in the blink of an eye. When you take the {@action Attack} action, you can teleport up to 10 feet before each attack to an unoccupied space you can see.",
-											"If you attack at least two different creatures with the action, you can make one additional attack with it against a third creature."
-										]
-									}
-								]
-							}
-						],
-						[
-							{
-								"entries": [
-									{
-										"type": "entries",
-										"name": "Spectral Defense",
-										"entries": [
-											"At 15th level, your ability to move between planes enables you to slip through the planar boundaries to lessen the harm done to you during battle. When you take damage from an attack, you can use your reaction to give yourself resistance to all of that attack's damage on this turn."
-										]
-									}
-								]
-							}
-						]
-					],
-					"source": "XGE",
-					"shortName": "Horizon Walker"
-				},
-				{
-					"name": "Monster Slayer",
-					"subclassFeatures": [
-						[
-							{
-								"name": "Monster Slayer",
-								"entries": [
-									"You have dedicated yourself to hunting down creatures of the night and wielders of grim magic. A Monster Slayer seeks out vampires, dragons, evil fey, fiends, and other magical threats. Trained in supernatural techniques to overcome such monsters, slayers are experts at unearthing and defeating mighty, mystical foes.",
-									{
-										"type": "entries",
-										"name": "Monster Slayer Magic",
-										"entries": [
-											"Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the Monster Slayer Spells table. The spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.",
-											{
-												"type": "table",
-												"caption": " Spells",
-												"colLabels": [
-													"Ranger Level",
-													"Spells"
-												],
-												"colStyles": [
-													"col-3 text-align-center",
-													"col-9"
-												],
-												"rows": [
-													[
-														"3rd",
-														"{@spell protection from evil and good}"
-													],
-													[
-														"5th",
-														"{@spell zone of truth}"
-													],
-													[
-														"9th",
-														"{@spell magic circle}"
-													],
-													[
-														"13th",
-														"{@spell banishment}"
-													],
-													[
-														"17th",
-														"{@spell hold monster}"
-													]
-												]
-											}
-										]
-									},
-									{
-										"type": "entries",
-										"name": "Hunter's Sense",
-										"entries": [
-											"At 3rd level, you gain the ability to peer at a creature and magically discern how best to hurt it. As an action, choose one creature you can see within 60 feet of you. You immediately learn whether the creature has any damage immunities, resistances, or vulnerabilities and what they are. If the creature is hidden from divination magic, you sense that it has no damage immunities, resistances, or vulnerabilities.",
-											"You can use this feature a number of times equal to your Wisdom modifier (minimum of once). You regain all expended uses of it when you finish a long rest."
-										]
-									},
-									{
-										"type": "entries",
-										"name": "Slayer's Prey",
-										"entries": [
-											"Starting at 3rd level, you can focus your ire on one foe, increasing the harm you inflict on it. As a bonus action, you designate one creature you can see within 60 feet of you as the target of this feature. The first time each turn that you hit that target with a weapon attack, it takes an extra 1d6 damage from the weapon.",
-											"This benefit lasts until you finish a short or long rest. It ends early if you designate a different creature."
-										]
-									}
-								]
-							}
-						],
-						[
-							{
-								"entries": [
-									{
-										"type": "entries",
-										"name": "Extra Attack",
-										"entries": [
-											"Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
-										]
-									}
-								]
-							}
-						],
-						[
-							{
-								"entries": [
-									{
-										"type": "entries",
-										"name": "Supernatural Defense",
-										"entries": [
-											"At 7th level, you gain extra resilience against your prey's assaults on your mind and body. Whenever the target of your Slayer's Prey forces you to make a saving throw and whenever you make an ability check to escape that target's grapple, add 1d6 to your roll."
-										]
-									}
-								]
-							}
-						],
-						[
-							{
-								"entries": [
-									{
-										"type": "entries",
-										"name": "Magic-User's Nemesis",
-										"entries": [
-											"At 11th level, you gain the ability to thwart someone else's magic. When you see a creature casting a spell or teleporting within 60 feet of you, you can use your reaction to try to magically foil it. The creature must succeed on a Wisdom saving throw against your spell save DC, or its spell or teleport fails and is wasted.",
-											"Once you use this feature, you can't use it again until you finish a short or long rest."
-										]
-									}
-								]
-							}
-						],
-						[
-							{
-								"entries": [
-									{
-										"type": "entries",
-										"name": "Slayer's Counter",
-										"entries": [
-											"At 15th level, you gain the ability to counterattack when your prey tries to sabotage you. If the target of your Slayer's Prey forces you to make a saving throw, you can use your reaction to make one weapon attack against the quarry. You make this attack immediately before making the saving throw. If your attack hits, your save automatically succeeds, in addition to the attack's normal effects."
-										]
-									}
-								]
-							}
-						]
-					],
-					"source": "XGE",
-					"shortName": "Monster Slayer"
+					"shortName": "深域追跡者密會"
 				}
 			],
 			"fluff": [
@@ -4021,7 +3268,7 @@
 			]
 		},
 		{
-			"name": "Ranger (Spell-less)",
+			"name": "遊俠(無法術)", "ENG_name": "Ranger (Spell-less)",
 			"source": "UAModifyingClasses",
 			"hd": {
 				"number": 1,
@@ -4034,7 +3281,7 @@
 			"classTableGroups": [
 				{
 					"colLabels": [
-						"Maneuvers Known"
+						"已知戰技"
 					],
 					"rows": [
 						[
@@ -4127,103 +3374,103 @@
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
-					"(a) {@item scale mail|phb} or (b) {@item leather armor|phb}",
-					"(a) two {@item shortsword|phb|shortswords} or (b) two {@filter simple melee weapons|items|source=phb|category=basic|type=simple weapon;melee weapon}",
-					"(a) a {@item dungeoneer's pack|phb} or (b) an {@item explorer's pack|phb}",
-					"A {@item longbow|phb} and a {@item quiver|phb} of {@item arrows (20)|phb|20 arrows}"
+					"(a)一件{@item 鱗甲|phb} 或 (b)一件{@item 皮甲|phb}",
+					"(a)二把{@item 短劍|phb} 或 (b)二把{@filter 簡易近戰武器|items|source=phb|category=basic|type=simple weapon;melee weapon}",
+					"(a)一套{@item 地城探險家套裝|phb} 或 (b)一套{@item 探索者套裝|phb}",
+					"一把{@item 長弓|phb}和一個裝有{@item 箭(20)|phb|20支箭}的{@item 箭袋|phb}"
 				],
-				"goldAlternative": "{@dice 5d4×10|5d4 × 10|Starting Gold}"
+				"goldAlternative": "{@dice 5d4×10|5d4 × 10|起始金錢}"
 			},
 			"classFeatures": [
 				[
 					{
-						"name": "Favored Enemy",
+						"name": "宿敵", "ENG_name": "Favored Enemy",
 						"entries": [
-							"Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy.",
-							"Choose a type of favored enemy: {@filter aberrations|bestiary|type=aberration}, {@filter beasts|bestiary|type=beast}, {@filter celestials|bestiary|type=celestial}, {@filter constructs|bestiary|type=construct}, {@filter dragons|bestiary|type=dragon}, {@filter elementals|bestiary|type=elemental}, {@filter fey|bestiary|type=fey}, {@filter fiends|bestiary|type=fiend}, {@filter giants|bestiary|type=giant}, {@filter monstrosities|bestiary|type=monstrosity}, {@filter oozes|bestiary|type=ooze}, {@filter plants|bestiary|type=plant}, or {@filter undead|bestiary|type=undead}. Alternatively, you can select two races of {@filter humanoid|bestiary|type=humanoid} (such as {@creature gnoll|mm|gnolls} and {@creature orc|mm|orcs}) as favored enemies.",
-							"You have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.",
-							"When you gain this feature, you also learn one language of your choice that is spoken by your favored enemies, if they speak one at all.",
-							"You choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures."
+							"從1級開始，你在對一個特定類型敵人的研究、追跡、狩獵、和甚至交談上已相當具備充足的經驗。",
+							"選擇一個宿敵類型：{@filter 異怪|bestiary|type=aberration}、{@filter 野獸|bestiary|type=beast}、{@filter 天界生物|bestiary|type=celestial}、{@filter 構裝體|bestiary|type=construct}、{@filter 龍|bestiary|type=dragon}、{@filter 元素|bestiary|type=elemental}、{@filter 精類|bestiary|type=fey}、{@filter 邪魔|bestiary|type=fiend}、{@filter 巨人|bestiary|type=giant}、{@filter 怪獸|bestiary|type=monstrosity}、{@filter 泥怪|bestiary|type=ooze}、{@filter 植物|bestiary|type=plant}、或{@filter 不死生物|bestiary|type=undead}。或者，你可以選擇二個{@filter 類人生物|bestiary|type=humanoid}種族（像是{@creature 豺狼人|mm}和{@creature 獸人|mm}）做為宿敵。",
+							"你在用於追蹤你宿敵的睿知（{@skill 求生}）檢定、以及用以回憶關於它們情報的智力檢定中具有優勢。",
+							"當你獲得此能力時，若你的宿敵擁有至少一種語言，你也選擇學會一種被它們所使用的語言。",
+							"你在6級和14級時選擇一種額外的宿敵以及一種關聯語言。隨著你提升等級，你的選擇必須反映你在你冒險中所遭遇過的怪物類型。"
 						]
 					},
 					{
-						"name": "Natural Explorer",
+						"name": "自然探索者", "ENG_name": "Natural Explorer",
 						"entries": [
-							"You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. Choose one type of favored terrain: arctic, coast, desert, forest, grassland, mountain, swamp, or the Underdark. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you're proficient in.",
-							"While traveling for an hour or more in your favored terrain, you gain the following benefits:",
+							"你特別熟悉於一種自然環境，且熟稔在這類區域中旅行和生存的方式。選擇一種偏好環境：極地、海岸、沙漠、森林、草地、高山、沼澤、或幽暗地域。當你進行一次關聯於你偏好環境的智力或睿知檢定時，若你使用一個你所熟練的技能，則你的熟練加值變為二倍。",
+							"當在你的偏好環境中旅行長達1個小時或更久，你將獲得下列好處：",
 							{
 								"type": "list",
 								"items": [
-									"Difficult terrain doesn't slow your group's travel.",
-									"Your group can't become lost except by magical means.",
-									"Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.",
-									"If you are traveling alone, you can move stealthily at a normal pace.",
-									"When you forage, you find twice as much food as you normally would.",
-									"While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area."
+									"困難地形不會減慢你們團隊的旅行速度。",
+									"除非是因為魔法的緣故，否則你們團隊不會迷路。",
+									"即使你在旅行途中正從事於其他行動（像是覓食、導航、或追跡），你仍保持對危險的警戒。",
+									"若你正獨自旅行，你能夠以正常步調隱匿移動。",
+									"當你覓食時，你能找到二倍你原本所能找到的食物。",
+									"當你追跡其他生物時，你也能得知它們確切的數量、它們的體型、以及它們在多久之前經過這片區域。"
 								]
 							},
-							"You choose additional favored terrain types at 6th and 10th level."
+							"你在6級和10級時選擇一種額外的偏好環境。"
 						]
 					}
 				],
 				[
 					{
-						"name": "Fighting Style",
+						"name": "戰鬥風格", "ENG_name": "Fighting Style",
 						"entries": [
-							"At 2nd level, you adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again.",
+							"在2級時，你採用一種特殊的戰鬥風格以做為你的專業。從下列選項中選擇一種。你不能獲得相同的戰鬥風格選項超過一次，即使你有機會再選擇它也一樣。",
 							{
 								"type": "options",
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Archery",
+										"name": "弓道", "ENG_name": "Archery",
 										"entries": [
-											"You gain a +2 bonus to attack rolls you make with ranged weapons."
+											"你在使用遠程武器進行的攻擊檢定中獲得+2加值。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Close Quarters Shooter",
+										"name": "近身射手", "ENG_name": "Close Quarters Shooter",
 										"entries": [
-											"When making a ranged attack while you are within 5 feet of a hostile creature, you do not have disadvantage on the attack roll. Your ranged attacks ignore half cover and three-quarters cover against targets within 30 feet of you. You have a +1 bonus to attack rolls on ranged attacks."
+											"當你在距離一個敵意生物5呎以內時進行一次遠程攻擊，你在該攻擊檢定中並不會具有劣勢。你的遠程攻擊忽略距離你30呎內目標的半掩護和四分之三掩護。你在遠程攻擊的攻擊檢定中獲得+1加值。"
 										],
 										"source": "UALightDarkUnderdark"
 									},
 									{
 										"type": "entries",
-										"name": "Defense",
+										"name": "防禦", "ENG_name": "Defense",
 										"entries": [
-											"While you are wearing armor, you gain a +1 bonus to AC."
+											"當你穿戴護甲時，你的AC獲得+1加值。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Dueling",
+										"name": "決鬥", "ENG_name": "Dueling",
 										"entries": [
-											"When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon."
+											"當你單手持用一把近戰武器，且沒有持用其他武器時，你在使用該武器所進行的傷害骰中獲得+2加值。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Mariner",
+										"name": "水手", "ENG_name": "Mariner",
 										"entries": [
-											"As long as you are not wearing heavy armor or using a shield, you have a swimming speed and a climbing speed equal to your normal speed, and you gain a +1 bonus to AC."
+											"只要你未穿戴重甲或使用盾牌，你就擁有等同於你正常移動速度的游泳速度和攀爬速度，且你的AC獲得+1加值。"
 										],
 										"source": "UAWaterborneAdventures"
 									},
 									{
 										"type": "entries",
-										"name": "Tunnel Fighter",
+										"name": "坑道鬥士", "ENG_name": "Tunnel Fighter",
 										"entries": [
-											"As a bonus action, you can enter a defensive stance that lasts until the start of your next turn. While in your defensive stance, you can make opportunity attacks without using your reaction, and you can use your reaction to make a melee attack against a creature that moves more than 5 feet while within your reach."
+											"以一個附贈動作，你可以進入防禦架式並持續直到你的下個回合開始。當你處於防禦架式時，你可以進行藉機攻擊而無需使用你的反應，且你可以處於你觸及範圍內的生物移動超過5呎時使用你的反應對它進行一次近戰攻擊。"
 										],
 										"source": "UALightDarkUnderdark"
 									},
 									{
 										"type": "entries",
-										"name": "Two-Weapon Fighting",
+										"name": "雙武器戰鬥", "ENG_name": "Two-Weapon Fighting",
 										"entries": [
-											"When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack."
+											"當你進行雙武器戰鬥時，你可以將你的屬性調整值加入第二次攻擊的傷害中。"
 										]
 									}
 								]
@@ -4231,33 +3478,33 @@
 						]
 					},
 					{
-						"name": "Combat Superiority",
+						"name": "戰鬥卓越", "ENG_name": "Combat Superiority",
 						"entries": [
-							"At 2nd level, you learn maneuvers that are fueled by special dice called superiority dice.",
+							"在2級時，你學會各種戰技，並藉由被稱作卓越骰的特殊骰子驅動它們。",
 							{
 								"type": "entries",
-								"name": "Maneuvers",
+								"name": "戰技",
 								"entries": [
-									"You learn two maneuvers of your choice, which are chosen from the list of maneuvers available to fighters with the Battle Master archetype. Many maneuvers enhance an attack in some way. You can use only one maneuver per attack.",
-									"You learn one additional maneuver of your choice at 5th, 9th, 13th, and 17th levels. Each time you learn a new maneuver, you can also replace one maneuver you know with a different one."
+									"你學會二個自選戰技，從戰士的戰鬥大師範型的可選戰技列表中選擇。許多戰技將以某些方式強化一次攻擊。你只能為每次攻擊使用一種戰技。",
+									"你將在5級、9級、13級、和17級時學會一個額外的戰技。每次你學會新的戰技時，你也可以將一個你已知的戰技取代成另一個不同的戰技。"
 								]
 							},
 							{
 								"type": "entries",
-								"name": "Superiority Dice",
+								"name": "卓越骰",
 								"entries": [
-									"You have four superiority dice, which are d8s. A superiority die is expended when you use it. You regain all of your expended superiority dice when you finish a short or long rest.",
-									"You gain another superiority die at 9th level and one more at 17th level."
+									"你擁有四顆卓越骰，這四顆卓越骰為d8。卓越骰將在你使用戰技時被花費。你在完成一次短休或長休後恢復你花費掉的卓越骰。",
+									"你將在9級、和17級時再獲得一顆額外的卓越骰。"
 								]
 							},
 							{
 								"type": "entries",
-								"name": "Saving Throws",
+								"name": "豁免檢定",
 								"entries": [
-									"Some of your maneuvers require your target to make a saving throw to resist the maneuver's effects. The saving throw DC is calculated as follows:",
+									"你的部分戰技會要求你的目標進行一次豁免檢定以對抗戰技的效果。這個豁免檢定DC的計算方式如下：",
 									{
 										"type": "abilityDc",
-										"name": "Maneuver",
+										"name": "戰技",
 										"attributes": [
 											"str",
 											"dex"
@@ -4270,131 +3517,131 @@
 				],
 				[
 					{
-						"name": "Ranger Archetype",
+						"name": "遊俠範型", "ENG_name": "Ranger Archetype",
 						"entries": [
-							"At 3rd level, you choose an archetype that you strive to emulate from the list of available archetypes. Your choice grants features at 3rd level, and again at 7th, 11th, and 15th level."
+							"在3級時，你從可選範型列表中選擇一種你致力於達成的範型。你的選擇將在3級、7級、11級、和15級時賦予你新的能力。"
 						],
 						"gainSubclassFeature": true
 					},
 					{
-						"name": "Primeval Awareness",
+						"name": "原初意識", "ENG_name": "Primeval Awareness",
 						"entries": [
-							"Beginning at 3rd level, you can use your action to focus your awareness on the region around you. For the next minute, you can sense whether the following types of creatures are present within 1 mile of you (or within up to 6 miles if you are in your favored terrain): aberrations, celestials, dragons, elementals, fey, fiends, and undead. This feature doesn't reveal the creatures' location or number.",
-							"Once you use this feature, you must finish a short or long rest before you can use it again"
+							"從3級開始，你可以使用你的動作以集中你的意識於你周遭的區域。在接下來一分鐘內，你可以感知下列類型的生物是否存在於距離你1哩內的區域（或若處於你的偏好環境則為6哩內）：異怪、天界生物、龍、元素、精類、邪魔、和不死生物。此能力無法揭露出該生物的位置和數量。",
+							"一旦你使用這個能力，你將必須完成一次短休或長休才能再次使用它。"
 						]
 					},
 					{
 						"type": "entries",
-						"name": "Poultices",
+						"name": "草藥敷劑", "ENG_name": "Poultices",
 						"entries": [
-							"At 3rd level, you can create special herbal poultices that have healing power comparable to some potions. You can spend 1 hour gathering herbs and preparing herbal poultices using treated bandages to create a number of such poultices equal to your Wisdom modifier (minimum 1). You can carry a number of poultices at one time equal to your Wisdom modifier (minimum 1). The poultices you create cannot be applied by anyone but you. After 24 hours, any poultices that you have not used lose their potency.",
-							"If you spend 1 minute applying one of your poultices to a wounded humanoid creature, thereby expending its use, that creature regains 1d6 hit points for every two ranger levels you have (rounded up)."
+							"在3級時，你可以製造一種特殊的草藥敷劑，蘊含著可與某些藥水匹配的治癒能量。你可以花費1小時的時間收集藥草並預備醫護繃帶，以製造出數量等同於你睿知調整值(最少為1)的草藥敷劑。你同時可以攜帶最多等同於你睿知調整值(最少為1)數量的草藥敷劑。你所製造的這些敷劑無法由你以外的人塗抹使用。在24小時之後，所有你尚未使用的敷劑都將失去效力。",
+							"若你花費1分鐘的時間將你的其中一個敷劑塗抹在一個受傷的類人生物身上，則你每有兩級遊俠等級，該生物就會回復{@dice 1d6}的生命值。"
 						]
 					}
 				],
 				[
 					{
-						"name": "屬性值提升",
+						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
-							"當你在此職業升至4級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"當你在此職業升至4級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					}
 				],
 				[
 					{
-						"name": "Extra Attack",
+						"name": "額外攻擊", "ENG_name": "Extra Attack",
 						"entries": [
-							"Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
+							"從5級開始，每當你在你的回合採取{@action 攻擊}動作，你可以攻擊二次，而非一次。"
 						]
 					},
 					{
 						"type": "entries",
-						"name": "Additional Maneuvers",
+						"name": "額外戰技", "ENG_name": "Additional Maneuvers",
 						"entries": [
-							"At 5th level, you learn one additional maneuver of your choice, which is chosen from the list of maneuvers available to fighters with the Battle Master archetype."
+							"在5級時，你學會一個你所選擇的額外戰技，從戰士的戰鬥大師範型的可選戰技列表中選擇。"
 						]
 					}
 				],
 				[
 					{
-						"name": "Favored Enemy and Natural Explorer improvements",
+						"name": "宿敵和自然探索者強化", "ENG_name": "Favored Enemy and Natural Explorer improvements",
 						"entries": [
-							"At 6th level, you gain an additional favored terrain.",
-							"At 6th level, you choose one additional favored enemy, as well as an associated language. Your choice should reflect the types of monsters you have encountered on your adventures."
+							"在6級時，你獲得一種額外的偏好環境。",
+							"在6級時，你選擇一種額外的宿敵以及一種關聯語言。你的選擇必須反映你在你冒險中所遭遇過的怪物類型。"
 						]
 					}
 				],
 				[
 					{
-						"name": "Ranger Archetype feature",
+						"name": "遊俠範型能力", "ENG_name": "Ranger Archetype feature",
 						"entries": [
-							"At 7th level, you gain a feature granted to you by your Ranger Archetype."
+							"在7級時，你獲得一個由你遊俠範型所賦予的能力。"
 						],
 						"gainSubclassFeature": true
 					}
 				],
 				[
 					{
-						"name": "屬性值提升",
+						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
-							"當你在此職業升至8級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"當你在此職業升至8級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					},
 					{
-						"name": "Land's Stride",
+						"name": "大地行者", "ENG_name": "Land's Stride",
 						"entries": [
-							"Starting at 8th level, moving through nonmagical difficult terrain costs you no extra movement. You can also pass through nonmagical plants without being slowed by them and without taking damage from them if they have thorns, spines, or a similar hazard.",
-							"In addition, you have advantage on saving throws against plants that are magically created or manipulated to impede movement, such those created by the {@spell entangle} spell."
+							"從8級開始，移動穿過非魔法的困難地形並不會花費你額外的移動速度。你也可以穿越非魔法植物而不會被它們減緩速度，若它們是荊棘、棘刺、或其他類似危險，你也不會被它們的傷害。",
+							"此外，在對抗由魔法創造或控制的植物所造成的阻礙移動效果時（像是{@spell 糾纏術}法術創造出的植物），你所進行的豁免檢定具有優勢。"
 						]
 					}
 				],
 				[
 					{
 						"type": "entries",
-						"name": "Natural Antivenom",
+						"name": "天然血清", "ENG_name": "Natural Antivenom",
 						"entries": [
-							"Starting at 9th level, you have advantage on saving throws against poison and have resistance to poison damage. Additionally, you can use one of your poultices to cure one poison effect on the creature you are applying it to, in addition to restoring hit points."
+							"從9級開始，你在對抗毒素的豁免檢定中具有優勢，且具有對毒素傷害的抗性。此外，當你使用你的其中一個草藥敷劑塗抹在生物身上以回復它的生命值時，你也可以治療它身上的一種毒素效果。"
 						]
 					},
 					{
 						"type": "entries",
-						"name": "Additional Maneuvers",
+						"name": "額外戰技", "ENG_name": "Additional Maneuvers",
 						"entries": [
-							"At 9th level, you learn one additional maneuver of your choice, which is chosen from the list of maneuvers available to fighters with the Battle Master archetype."
+							"在9級時，你學會一個你所選擇的額外戰技，從戰士的戰鬥大師範型的可選戰技列表中選擇。"
 						]
 					}
 				],
 				[
 					{
-						"name": "Hide in Plain Sight",
+						"name": "避人耳目", "ENG_name": "Hide in Plain Sight",
 						"entries": [
-							"Starting at 10th level, you can spend 1 minute creating camouflage for yourself. You must have access to fresh mud, dirt, plants, soot, and other naturally occurring materials with which to create your camouflage.",
-							"Once you are camouflaged in this way, you can try to hide by pressing yourself up against a solid surface, such as a tree or wall, that is at least as tall and wide as you are. You gain a +10 bonus to Dexterity ({@skill Stealth}) checks as long as you remain there without moving or taking actions. Once you move or take an action or a reaction, you must camouflage yourself again to gain this benefit."
+							"從10級開始，你可以花費1分鐘的時間為自己創造一個偽裝。你必須要能取用新鮮的泥巴、土壤、植物、煙灰、和其他自然產出的材料以創造你的偽裝。",
+							"一旦你透過這個方式偽裝，你可以透過將自己貼合於一個高度和寬度至少與你一樣大的固體表面上，例如樹木或牆壁，以嘗試進行躲藏。只要你待於該處且不移動或採取動作，你就在敏捷（{@skill 隱匿}）檢定中獲得+10的加值。一旦你移動或採取動作或反應，你就必須再次偽裝自己以獲得這個好處。"
 						]
 					},
 					{
-						"name": "Natural Explorer improvement",
+						"name": "自然探索者強化", "ENG_name": "Natural Explorer improvement",
 						"entries": [
-							"You gain an additional favored terrain."
+							"在10級時，你獲得一種額外的偏好環境。"
 						]
 					}
 				],
 				[
 					{
-						"name": "Ranger Archetype feature",
+						"name": "遊俠範型能力", "ENG_name": "Ranger Archetype feature",
 						"entries": [
-							"At 11th level, you gain a feature granted to you by your Ranger Archetype."
+							"在11級時，你獲得一個由你遊俠範型所賦予的能力。"
 						],
 						"gainSubclassFeature": true
 					}
 				],
 				[
 					{
-						"name": "屬性值提升",
+						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
-							"當你在此職業升至12級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"當你在此職業升至12級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					}
@@ -4402,58 +3649,58 @@
 				[
 					{
 						"type": "entries",
-						"name": "Call Natural Allies",
+						"name": "呼喚自然盟友", "ENG_name": "Call Natural Allies",
 						"entries": [
-							"Starting at 13th level, when you are in an area of your favored terrain, you can call natural creatures from that terrain to fight on your behalf, using your attunement to the natural world to convince them to aid you. The DM chooses beasts appropriate to the terrain to come to your aid from among those that could hear you and that are within 1 mile of you, in one of the following groups:",
+							"從13級開始，當你處於你偏好環境的區域時，你可以從環境中呼喚自然生物為你而戰，利用你與自然世界的協調說服牠們協助你。由DM從那些距離你1哩內，能夠聽見你的野獸中，選擇適合生存於該環境中的野獸以出來協助你，牠們屬於下列其中一種組合：",
 							{
 								"type": "list",
 								"items": [
-									"One beast of challenge rating 2 or lower",
-									"Two beasts of challenge rating 1 or lower",
-									"Four beasts of challenge rating 1/2 or lower",
-									"Eight beasts of challenge rating 1/4 or lower"
+									"一隻{@filter 挑戰等級2或以下的野獸|bestiary|challenge rating=2|type=beast|miscellaneous=!swarm}",
+									"二隻{@filter 挑戰等級1或以下的野獸|bestiary|challenge rating=1|type=beast|miscellaneous=!swarm}",
+									"四隻{@filter 挑戰等級1/2或以下的野獸|bestiary|challenge rating=1/2|type=beast|miscellaneous=!swarm}",
+									"八隻{@filter 挑戰等級1/4或以下的野獸|bestiary|challenge rating=0;1/8;1/4|type=beast|miscellaneous=!swarm}"
 								]
 							},
-							"These beasts approach you from their current location, and will fight alongside you, attacking any creatures that are hostile to you. They are friendly to you and your comrades, and you roll initiative for the called creatures as a group, which takes its own turns. The DM has the creatures' statistics.",
-							"After 1 hour, these beasts return to their previous location. Once you use this feature, you cannot use it again in the same general area for 24 hours, since the same animals will not repeatedly heed your call."
+							"這些野獸將會從牠們當前所在的場所接近你，並會與你並肩作戰，攻擊任何與你敵對的生物。牠們對你和你的同伴友善，且牠們在骰先攻時作為一組擲骰，但有著各自的回合。這些生物的數據資料由DM掌控。",
+							"在1小時之後．這些野獸將會返回牠們先前的場所。一旦你使用這個能力，則因為同樣的動物不會再重複響應你的呼喚，你在24小時內將無法再在相同的區域內使用這個能力。"
 						]
 					},
 					{
 						"type": "entries",
-						"name": "Additional Maneuvers",
+						"name": "額外戰技", "ENG_name": "Additional Maneuvers",
 						"entries": [
-							"At 13th level, you learn one additional maneuver of your choice, which is chosen from the list of maneuvers available to fighters with the Battle Master archetype."
+							"在13級時，你學會一個你所選擇的額外戰技，從戰士的戰鬥大師範型的可選戰技列表中選擇。"
 						]
 					}
 				],
 				[
 					{
-						"name": "Vanish",
+						"name": "無蹤步", "ENG_name": "Vanish",
 						"entries": [
-							"Starting at 14th level, you can use the {@action Hide} action as a bonus action on your turn. Also, you can't be tracked by nonmagical means, unless you choose to leave a trail."
+							"從14級開始，你可以在你的回合以一個附贈動作採取{@action 躲藏}動作。同時，你不會被非魔法的手段追蹤，除非你選擇留下蹤跡。"
 						]
 					},
 					{
-						"name": "Favored Enemy improvement",
+						"name": "宿敵強化", "ENG_name": "Favored Enemy improvement",
 						"entries": [
-							"At 14th level, you choose one additional favored enemy, as well as an associated language. Your choice should reflect the types of monsters you have encountered on your adventures."
+							"在14級時，你選擇一種額外的宿敵以及一種關聯語言。你的選擇必須反映你在你冒險中所遭遇過的怪物類型。"
 						]
 					}
 				],
 				[
 					{
-						"name": "Ranger Archetype feature",
+						"name": "遊俠範型能力", "ENG_name": "Ranger Archetype feature",
 						"entries": [
-							"At 15th level, you gain a feature granted to you by your Ranger Archetype."
+							"在15級時，你獲得一個由你遊俠範型所賦予的能力。"
 						],
 						"gainSubclassFeature": true
 					}
 				],
 				[
 					{
-						"name": "屬性值提升",
+						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
-							"當你在此職業升至16級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"當你在此職業升至16級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					}
@@ -4461,41 +3708,41 @@
 				[
 					{
 						"type": "entries",
-						"name": "Relentless",
+						"name": "頑強", "ENG_name": "Relentless",
 						"entries": [
-							"Starting at 17th level, when you roll initiative and have no superiority dice remaining, you regain 1 superiority die."
+							"從17級開始，當你骰先攻時且已經沒有剩下的卓越骰時，你獲得一顆卓越骰。"
 						]
 					},
 					{
 						"type": "entries",
-						"name": "Additional Maneuvers",
+						"name": "額外戰技", "ENG_name": "Additional Maneuvers",
 						"entries": [
-							"At 17th level, you learn one additional maneuver of your choice, which is chosen from the list of maneuvers available to fighters with the Battle Master archetype."
+							"在17級時，你學會一個你所選擇的額外戰技，從戰士的戰鬥大師範型的可選戰技列表中選擇。"
 						]
 					}
 				],
 				[
 					{
-						"name": "Feral Senses",
+						"name": "野性感官", "ENG_name": "Feral Senses",
 						"entries": [
-							"At 18th level, you gain preternatural senses that help you fight creatures you can't see. When you attack a creature you can't see, your inability to see it doesn't impose disadvantage on your attack rolls against it. You are also aware of the location of any {@condition invisible} creature within 30 feet of you, provided that the creature isn't hidden from you and you aren't {@condition blinded} or {@condition deafened}."
+							"在18級時，你獲得超自然的感官以幫助你對抗看不見的生物。當你攻擊一個你看不見的生物時，你並不會因為無法看見它而在你對它進行的攻擊檢定中承受劣勢。同時，只要該生物沒有躲藏於你，且你不處於{@condition 目盲}或{@condition 耳聾}狀態，則你也能察覺到任何距離你30呎內{@condition 隱形}生物的位置。"
 						]
 					}
 				],
 				[
 					{
-						"name": "屬性值提升",
+						"name": "屬性值提升", "ENG_name": "Ability Score Improvement",
 						"entries": [
-							"當你在此職業升至19級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至20或以上。",
+							"當你在此職業升至19級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
 							"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 						]
 					}
 				],
 				[
 					{
-						"name": "Foe Slayer",
+						"name": "眾敵屠戮", "ENG_name": "Foe Slayer",
 						"entries": [
-							"At 20th level, you become an unparalleled hunter of your enemies. Once on each of your turns, you can add your Wisdom modifier to the attack roll or the damage roll of an attack you make against one of your favored enemies. You can choose to use this feature before or after the roll, but before any effects of the roll are applied."
+							"在20級時，你成為了一名針對你敵人的無雙獵手。在你的每個回合一次，你可以將你的睿知調整值加到你對你其中一個宿敵所進行的攻擊檢定或傷害骰中。你可以選擇在擲骰之前或之後使用此能力，但是必須在任何擲骰效果適用之前使用。"
 						]
 					}
 				]
@@ -4503,26 +3750,26 @@
 			"subclassTitle": "Ranger Archetype",
 			"subclasses": [
 				{
-					"name": "Hunter",
+					"name": "獵人", "ENG_name": "Hunter",
 					"subclassFeatures": [
 						[
 							{
-								"name": "Hunter",
+								"name": "獵人", "ENG_name": "Hunter",
 								"entries": [
-									"Emulating the Hunter archetype means accepting your place as a bulwark between civilization and the terrors of the wilderness. As you walk the Hunter's path, you learn specialized techniques for fighting the threats you face, from rampaging ogres and hordes of orcs to towering giants and terrifying dragons.",
+									"仿效獵人範型意味著接受你做為文明和荒野恐懼間壁壘的身分。隨著你行走在獵人的道途上，你學會對抗迎面而來威脅的專業技巧，從狂暴的食人魔、成群的獸人、到巨人和恐怖的龍族們。",
 									{
 										"type": "entries",
-										"name": "Hunter's Prey",
+										"name": "狩者獵物", "ENG_name": "Hunter's Prey",
 										"entries": [
-											"At 3rd level, you gain one of the following features of your choice: Colossus Slayer, Giant Killer, or Horde Breaker.",
+											"在3級時，你獲得下列其中一個你所選擇的能力：巨怪獵者、巨人殺手、或滅族者。",
 											{
 												"type": "entries",
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Colossus Slayer",
+														"name": "巨怪獵者", "tENG_name": "Colossus Slayer",
 														"entries": [
-															"Your tenacity can wear down the most potent foes. When you hit a creature with a weapon attack, the creature takes an extra 1d8 damage if it's below its hit point maximum. You can deal this extra damage only once per turn."
+															"你的執著可以毀滅最強大的敵人。當你以一次武器攻擊命中一個生物，若它的生命值低於最大值，則該生物將受到額外的{@dice 1d8}傷害。你每回合只能造成一次這個額外傷害。"
 														]
 													}
 												]
@@ -4532,9 +3779,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Giant Killer",
+														"name": "巨人殺手", "tENG_name": "Giant Killer",
 														"entries": [
-															"When a Large or larger creature within 5 feet of you hits or misses you with an attack, you can use your reaction to attack that creature immediately after its attack, provided that you can see the creature."
+															"當一個距離你5呎內，體型為大型或更大的生物對你進行的一次攻擊命中或失手時，只要你可以看見該生物，你就可以使用你的反應以立刻在它的攻擊之後對它進行攻擊。"
 														]
 													}
 												]
@@ -4544,9 +3791,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Horde Breaker",
+														"name": "滅族者", "tENG_name": "Horde Breaker",
 														"entries": [
-															"Once on each of your turns when you make a weapon attack, you can make another attack with the same weapon against a different creature that is within 5 feet of the original target and within range of your weapon."
+															"在你的每個回合一次，當你進行一次武器攻擊時，你可以使用相同的武器對一個距離原本目標5呎內，且處於你武器射程內的另一個生物進行另一次攻擊。"
 														]
 													}
 												]
@@ -4561,17 +3808,17 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Defensive Tactics",
+										"name": "防禦性戰術", "ENG_name": "Defensive Tactics",
 										"entries": [
-											"At 7th level, you gain one of the following features of your choice: Escape the Horde, Multiattack Defense, or Steel Will.",
+											"在7級時，你獲得下列其中一個你所選擇的能力：逃離眾敵、防禦多重攻擊、或鋼鐵意志。",
 											{
 												"type": "entries",
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Escape the Horde",
+														"name": "逃離眾敵", "tENG_name": "Escape the Horde",
 														"entries": [
-															"Opportunity attacks against you are made with disadvantage."
+															"所有對你進行的藉機攻擊將具有劣勢。"
 														]
 													}
 												]
@@ -4581,9 +3828,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Multiattack Defense",
+														"name": "防禦多重攻擊", "tENG_name": "Multiattack Defense",
 														"entries": [
-															"When a creature hits you with an attack, you gain a +4 bonus to AC against all subsequent attacks made by that creature for the rest of the turn."
+															"當一個生物以一次攻擊命中你時，你的AC將對該生物在該回合中所進行的所有後續攻擊獲得+4的加值。"
 														]
 													}
 												]
@@ -4593,9 +3840,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Steel Will",
+														"name": "鋼鐵意志", "tENG_name": "Steel Will",
 														"entries": [
-															"You have advantage on saving throws against being {@condition frightened}."
+															"你在對抗{@condition 恐懼}的豁免檢定中具有優勢。"
 														]
 													}
 												]
@@ -4610,17 +3857,17 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Multiattack",
+										"name": "多重攻擊", "ENG_name": "Multiattack",
 										"entries": [
-											"At 11th level, you gain one of the following features of your choice: Volley or Whirlwind Attack.",
+											"在11級時，你獲得下列其中一個你所選擇的能力：箭雨、或劍刃風暴。",
 											{
 												"type": "entries",
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Volley",
+														"name": "箭雨", "tENG_name": "Volley",
 														"entries": [
-															"You can use your action to make a ranged attack against any number of creatures within 10 feet of a point you can see within your weapon's range. You must have ammunition for each target, as normal, and you make a separate attack roll for each target."
+															"你可以使用你的動作以進行一次遠程攻擊，並以處於你武器射程內你所能看見一點的周圍10呎範圍內的任意數量個生物做為目標。你必須有足夠的彈藥以攻擊每個目標，且你為每個目標進行各自的攻擊檢定。"
 														]
 													}
 												]
@@ -4630,9 +3877,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Whirlwind Attack",
+														"name": "劍刃風暴", "tENG_name": "Whirlwind Attack",
 														"entries": [
-															"You can use your action to make a melee attack against any number of creatures within 5 feet of you, with a separate attack roll for each target."
+															"你可以使用你的動作以進行一次近戰攻擊，並以距離你5呎內的任意數量個生物做為目標，為每個目標進行各自的攻擊檢定。"
 														]
 													}
 												]
@@ -4647,17 +3894,17 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Superior Hunter's Defense",
+										"name": "卓越獵人防禦", "ENG_name": "Superior Hunter's Defense",
 										"entries": [
-											"At 15th level, you gain one of the following features of your choice: Evasion, Stand Against the Tide, or Uncanny {@action Dodge}.",
+											"在15級時，你獲得下列其中一個你所選擇的能力：反射閃避、逆潮而立、或直覺閃避。",
 											{
 												"type": "entries",
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Evasion",
+														"name": "反射閃避", "tENG_name": "Evasion",
 														"entries": [
-															"You can nimbly dodge out of the way of certain area effects, such as a red dragon's fiery breath or a {@spell lightning bolt} spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail."
+															"你可以靈活地躲開某些範圍效果，像是紅龍的火焰吐息、或{@spell 閃電束}法術。當你成為一個允許你進行敏捷豁免以僅承受一半傷害的效果的目標時，你改為在豁免成功時不受任何傷害，且在豁免失敗時僅承受一半傷害。"
 														]
 													}
 												]
@@ -4667,9 +3914,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Stand Against the Tide",
+														"name": "逆潮而立", "tENG_name": "Stand Against the Tide",
 														"entries": [
-															"When a hostile creature misses you with a melee attack, you can use your reaction to force that creature to repeat the same attack against another creature (other than itself) of your choice."
+															"當一個敵對生物對你進行的一次近戰攻擊失手，你可以使用你的反應以強迫該生物對你所選擇的另一個生物（除了它自己以外）重複進行一次該攻擊。"
 														]
 													}
 												]
@@ -4679,9 +3926,9 @@
 												"entries": [
 													{
 														"type": "entries",
-														"name": "Uncanny Dodge",
+														"name": "直覺閃避", "tENG_name": "Uncanny Dodge",
 														"entries": [
-															"When an attacker that you can see hits you with an attack, you can use your reaction to halve the attack's damage against you."
+															"當一個你所能看見的攻擊者使用一次攻擊命中你，你可以使用你的反應以減半該次攻擊對你的傷害。"
 														]
 													}
 												]
@@ -4693,27 +3940,26 @@
 						]
 					],
 					"source": "PHB",
-					"shortName": "Hunter"
+					"shortName": "獵人"
 				},
 				{
-					"name": "Beast Master",
+					"name": "獸王", "ENG_name": "Beast Master",
 					"subclassFeatures": [
 						[
 							{
-								"name": "Beast Master",
+								"name": "獸王", "ENG_name": "Beast Master",
 								"entries": [
-									"The Beast Master archetype embodies a friendship between the civilized races and the beasts of the world. United in focus, beast and ranger work as one to fight the monstrous foes that threaten civilization and the wilderness alike. Emulating the Beast Master archetype means committing yourself to this ideal, working in partnership with an animal as its companion and friend.",
+									"獸王範型體現了文明種族和自然野獸之間的情誼。團結一致，野獸和游俠將共同對抗威脅著文明和自然世界的可怕敵人。仿效獸王範型意味著將自己奉獻給這個理念，與動物做為同伴和朋友一同奮鬥。",
 									{
 										"type": "entries",
-										"name": "Ranger's Companion",
+										"name": "遊俠動物夥伴", "ENG_name": "Ranger's Companion",
 										"entries": [
-											"You gain a beast companion that accompanies you on your adventures and is trained to fight alongside you. Choose a {@filter beast that is no larger than Medium and that has a challenge rating of 1/4 or lower|bestiary|cr=0;1/8;1/4|type=beast|size=f;d;t;s;m|miscellaneous=!swarm}. Add your proficiency bonus to the beast's AC, attack rolls, and damage rolls, as well as to any saving throws and skills it is proficient in. Its hit point maximum equals its normal maximum or four times your ranger level, whichever is higher. Like any creature, the beast can spend Hit Dice during a short rest.",
-											"The beast obeys your commands as best as it can. It takes its turn on your initiative. On your turn, you can verbally command the beast where to move (no action required by you). You can use your action to verbally command it to take the {@action Attack}, {@action Dash}, {@action Disengage}, or {@action Help} action. If you don't issue a command, the beast takes the {@action Dodge} action. Once you have the Extra Attack feature, you can make one weapon attack yourself when you command the beast to take the {@action Attack} action.",
-											"If you are {@condition incapacitated} or absent, the beast acts on its own, focusing on protecting you and itself. The beast never requires your command to use its reaction, such as when making an opportunity attack.",
-											"If you are {@condition incapacitated} or absent, your beast companion acts on its own, focusing on protecting you and itself. It never requires your command to use its reaction, such as when making an opportunity attack.",
-											"Like any creature, the beast can spend hit dice during a short rest.",
-											"While traveling through your favored terrain with only the beast, you can move stealthily at a normal pace.",
-											"If the beast dies, you can obtain another one by spending 8 hours magically bonding with another beast that isn't hostile to you, either the same type of beast as before or a different one."
+											"在3級時，你獲得一個動物夥伴，牠將陪伴你一起冒險，並受過訓練以與你一起戰鬥。選擇一個{@filter 體型不超過中型，且挑戰等級為1/4或更低的野獸|bestiary|challenge rating=0;1/8;1/4|type=beast|size=f;d;t;s;m|miscellaneous=!swarm}。將你的熟練加值加入該野獸的AC、攻擊檢定、傷害骰，以及任何牠所熟練的豁免檢定和技能中。牠的生命值最大值等同於牠正常的生命值最大值或你遊俠等級的四倍，兩者取高。",
+											"該野獸將盡其所能的服從你的命令。牠會在你的先攻順序採取牠的行動，儘管除非你命令牠，否則牠不會採取任何動作。在你的回合，你可以口頭命令該野獸移動到某處（你不需要花費動作）。你也可以使用你的動作以口頭命令牠採取{@action 攻擊}、{@action 疾走}、{@action 撤離}、{@action 閃避}、或{@action 協助}動作。一旦你獲得額外攻擊能力，則當你命令該野獸採取{@action 攻擊}動作時，你可以自己進行一次武器攻擊。",
+											"若你處於{@condition 無力}狀態或不在現場，你的動物夥伴將會自主行動，專注於保護你或牠自己。牠使用牠的反應時不需要你的命令，例如進行一次藉機攻擊。",
+											"跟其他生物一樣，野獸可以在短休期間消耗生命骰。",
+											"當你只和該野獸一起在你的偏好環境中旅行時，你們能夠以正常步調隱匿移動。",
+											"若該野獸死亡，你可以藉由花費8小時的時間以用魔法與另一個對你不具有敵意的野獸建立連結以再次獲得動物夥伴。該野獸可以是與之前那隻相同或不同類型的野獸。"
 										]
 									}
 								]
@@ -4724,9 +3970,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Exceptional Training",
+										"name": "超絕訓練", "ENG_name": "Exceptional Training",
 										"entries": [
-											"Beginning at 7th level, on any of your turns when your beast companion doesn't attack, you can use a bonus action to command the beast to take the {@action Dash}, {@action Disengage}, or {@action Help} action on its turn. In addition, the beast's attacks now count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage."
+											"從7級開始，在你的任何回合，只要你的動物夥伴沒有攻擊，你就可以使用一個附贈動作以命令該野獸在它的回合採取{@action 疾走}、{@action 撤離}、或{@action 協助}動作。此外，該野獸的攻擊現在起將在克服對非魔法攻擊和傷害的抗性和免疫能力時被視作魔法攻擊。"
 										]
 									}
 								]
@@ -4737,9 +3983,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Bestial Fury",
+										"name": "野性狂怒", "ENG_name": "Bestial Fury",
 										"entries": [
-											"Starting at 11th level, when you command your beast companion to take the {@action Attack} action, the beast can make two attacks, or it can take the Multiattack action if it has that action."
+											"從11級開始，當你命令你的動物夥伴採取{@action 攻擊}動作時，該野獸可以進行二次攻擊。"
 										]
 									}
 								]
@@ -4750,9 +3996,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Beastly Coordination",
+										"name": "法術共享", "ENG_name": "Share Spells",
 										"entries": [
-											"Beginning at 15th level, when an attacker that you can see hits your beast companion with an attack, you can call out a warning. If your beast companion can hear you, it can use its reaction to halve the attack's damage against it."
+											"從15級開始，當你施放以你自己為目標的法術時，若你的動物夥伴距離你30呎內，你也可以讓它受到該法術的影響。"
 										]
 									}
 								]
@@ -4760,7 +4006,7 @@
 						]
 					],
 					"source": "PHB",
-					"shortName": "Beast Master"
+					"shortName": "獸王"
 				},
 				{
 					"name": "Deep Stalker (UA)",
@@ -4918,7 +4164,7 @@
 										"name": "Planar Warrior",
 										"entries": [
 											"At 3rd level, you learn to draw on the energy of the planes to augment your attacks.",
-											"As a bonus action, choose one creature you can see within 30 feet of you. Until the end of this turn, your attacks against that creature ignore its damage resistances, and the next time you hit it on this turn, it takes an additional 1d6 force damage."
+											"As a bonus action, choose one creature you can see within 30 feet of you. Until the end of this turn, your attacks against that creature ignore its damage resistances, and the next time you hit it on this turn, it takes an additional {@dice 1d6} force damage."
 										]
 									},
 									{
@@ -5048,7 +4294,7 @@
 										"type": "entries",
 										"name": "Piercing Thorns",
 										"entries": [
-											"At 3rd level, your command of primal magic allows you to enhance your attacks with thorns. Once during each of your turns, you can deal an additional 1d6 piercing damage to one creature you hit with a weapon attack."
+											"At 3rd level, your command of primal magic allows you to enhance your attacks with thorns. Once during each of your turns, you can deal an additional {@dice 1d6} piercing damage to one creature you hit with a weapon attack."
 										]
 									}
 								]
@@ -5152,7 +4398,7 @@
 										"name": "Slayer's Eye",
 										"entries": [
 											"Starting at 3rd level, you gain the ability to study and unravel a creature's defenses. As a bonus action, choose one creature you can see within 120 feet of you. You immediately learn the target's vulnerabilities, immunities, and resistances. You also learn any special effects triggered when the target takes damage, such as fire damage halting its regeneration.",
-											"In addition, the first time each turn you hit the target with a weapon attack, the target takes an extra 1d6 damage from the weapon.",
+											"In addition, the first time each turn you hit the target with a weapon attack, the target takes an extra {@dice 1d6} damage from the weapon.",
 											"This benefit lasts until you target a different creature with this feature or until you finish a short or long rest."
 										]
 									}
@@ -5166,7 +4412,7 @@
 										"type": "entries",
 										"name": "Supernatural Defense",
 										"entries": [
-											"At 7th level, you gain extra resilience against your prey's assaults on your mind and body. Whenever the target of your Slayer's Eye forces you to make a saving throw, add 1d6 to your roll."
+											"At 7th level, you gain extra resilience against your prey's assaults on your mind and body. Whenever the target of your Slayer's Eye forces you to make a saving throw, add {@dice 1d6} to your roll."
 										]
 									}
 								]
@@ -5203,24 +4449,24 @@
 					"shortName": "Monster Slayer (UA)"
 				},
 				{
-					"name": "Gloom Stalker",
+					"name": "幽域追蹤者", "ENG_name": "Gloom Stalker",
 					"subclassFeatures": [
 						[
 							{
-								"name": "Gloom Stalker",
+								"name": "幽域追蹤者", "ENG_name": "Gloom Stalker",
 								"entries": [
-									"Gloom Stalkers are at home in the darkest places: deep under the earth, in gloomy alleyways, in primeval forests, and wherever else the light dims. Most folk enter such places with trepidation, but a Gloom Stalker ventures boldly into the darkness, seeking to ambush threats before they can reach the broader world. Such rangers are often found in the Underdark, but they will go any place where evil lurks in the shadows.",
+									"幽域追蹤者居身於那些最黑暗的場所：地表深處、暗巷之間、太古叢林、和其他任何籠罩在昏暗微光的地方。大部分人們在進入這種場所時都會驚恐不安，但幽域追蹤者們卻能大膽於黑暗中冒險，試圖在威脅來到廣闊世界之前伏擊它們。這類遊俠經常出沒於幽暗地域，但是他們也會前往任何邪惡勢力蟄伏的所在。",
 									{
 										"type": "entries",
-										"name": "Gloom Stalker Magic",
+										"name": "幽域追蹤者魔法", "ENG_name": "Gloom Stalker Magic",
 										"entries": [
-											"Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the Gloom Stalker Spells table. The spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.",
+											"從3級開始，當你在本職業升至特定等級，你將學會額外的法術，如幽域追蹤者法術表所示。這些法術對你而言視作遊俠法術，但並不會計入你已知遊俠法術的數量中。",
 											{
 												"type": "table",
-												"caption": "Gloom Stalker Spells",
+												"caption": "幽域追蹤者法術",
 												"colLabels": [
-													"Ranger Level",
-													"Spells"
+													"遊俠等級",
+													"法術"
 												],
 												"colStyles": [
 													"col-3 text-align-center",
@@ -5228,24 +4474,24 @@
 												],
 												"rows": [
 													[
-														"3rd",
-														"{@spell disguise self}"
+														"3級",
+														"{@spell 易容術}"
 													],
 													[
-														"5th",
-														"{@spell rope trick}"
+														"5級",
+														"{@spell 通天繩}"
 													],
 													[
-														"9th",
-														"{@spell fear}"
+														"9級",
+														"{@spell 恐懼術}"
 													],
 													[
-														"13th",
-														"{@spell greater invisibility}"
+														"13級",
+														"{@spell 高等隱形術}"
 													],
 													[
-														"17th",
-														"{@spell seeming}"
+														"17級",
+														"{@spell 偽裝術}"
 													]
 												]
 											}
@@ -5253,18 +4499,18 @@
 									},
 									{
 										"type": "entries",
-										"name": "Dread Ambusher",
+										"name": "懼怖伏兵", "ENG_name": "Dread Ambusher",
 										"entries": [
-											"At 3rd level, you master the art of the ambush. You can give yourself a bonus to your initiative rolls equal to your Wisdom modifier.",
-											"At the start of your first turn of each combat, your walking speed increases by 10 feet, which lasts until the end of that turn. If you take the {@action Attack} action on that turn, you can make one additional weapon attack as part of that action. If that attack hits, the target takes an extra 1d8 damage of the weapon's damage type."
+											"在3級時，你精通於伏擊的藝術。你可以讓你先攻檢定獲得等同於你睿知調整值的加值。",
+											"在每個戰鬥的你的第一個回合開始時，你的步行速度增加10呎，持續直到該回合結束。若你在該回合採取{@action 攻擊}動作，做為該動作的一部份，你可以進行一次額外的武器攻擊。若該攻擊命中，則目標將受到額外{@dice 1d8}該武器傷害類型的傷害。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Umbral Sight",
+										"name": "幽影視覺", "ENG_name": "Umbral Sight",
 										"entries": [
-											"At 3rd level, you gain darkvision out to a range of 60 feet. If you already have darkvision from your race, its range increases by 30 feet.",
-											"You are also adept at evading creatures that rely on darkvision. While in darkness, you are {@condition invisible} to any creature that relies on darkvision to see you in that darkness."
+											"在3級時，你獲得60呎範圍的黑暗視覺。若你已經擁有來自你種族的黑暗視覺，則它的範圍將增加30呎。",
+											"你也擅長於避開依賴於黑暗視覺的生物。當處於黑暗環境時，你對任何嘗試依靠黑暗視覺以看見黑暗中的你的生物而言處於{@condition 隱形}狀態。"
 										]
 									}
 								]
@@ -5275,9 +4521,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Iron Mind",
+										"name": "鋼鐵心智", "ENG_name": "Iron Mind",
 										"entries": [
-											"By 7th level, you have honed your ability to resist the mind-altering powers of your prey. You gain proficiency in Wisdom saving throws. If you already have this proficiency, you instead gain proficiency in Intelligence or Charisma saving throws (your choice)."
+											"從7級起，你已磨練出用於抵抗來自於你獵物的精神影響力量的能力。你獲得睿知豁免的熟練。若你已經擁有此熟練，則你可以改為獲得智力豁免或魅力豁免的熟練（由你選擇）。"
 										]
 									}
 								]
@@ -5288,9 +4534,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Stalker's Flurry",
+										"name": "追獵如風", "ENG_name": "Stalker's Flurry",
 										"entries": [
-											"At 11th level, you learn to attack with such unexpected speed that you can turn a miss into another strike. Once on each of your turns when you miss with a weapon attack, you can make another weapon attack as part of the same action."
+											"在11級時，你學會以出人意料的高速進行攻擊，以讓你將一次失手轉變成另一次打擊。在你的每個回合一次，當你的一次武器攻擊失手時，你可以進行另一次武器攻擊以做為同個動作的一部份。"
 										]
 									}
 								]
@@ -5301,9 +4547,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Shadowy Dodge",
+										"name": "暗影閃避", "ENG_name": "Shadowy Dodge",
 										"entries": [
-											"Starting at 15th level, you can dodge in unforeseen ways, with wisps of supernatural shadow around you. Whenever a creature makes an attack roll against you and doesn't have advantage on the roll, you can use your reaction to impose disadvantage on it. You must use this feature before you know the outcome of the attack roll."
+											"從15級開始，隨著一縷環繞在你身邊的超自然陰影，你能夠以令人無法預料的方式閃躲。當一個生物對你進行一次攻擊檢定且該檢定不具有優勢，你可以使用你的反應以讓它承受劣勢。你必須在你知道該攻擊檢定的結果之前決定是否使用此能力。"
 										]
 									}
 								]
@@ -5311,27 +4557,27 @@
 						]
 					],
 					"source": "XGE",
-					"shortName": "Gloom Stalker"
+					"shortName": "幽域追蹤者"
 				},
 				{
-					"name": "Horizon Walker",
+					"name": "境界行者", "ENG_name": "Horizon Walker",
 					"subclassFeatures": [
 						[
 							{
-								"name": "Horizon Walker",
+								"name": "境界行者", "ENG_name": "Horizon Walker",
 								"entries": [
-									"Horizon Walkers guard the world against threats that originate from other planes or that seek to ravage the mortal realm with otherworldly magic. They seek out planar portals and keep watch over them, venturing to the Inner Planes and the Outer Planes as needed to pursue their foes. These rangers are also friends to any forces in the multiverse\u2014especially benevolent dragons, fey, and elementals\u2014that work to preserve life and the order of the planes.",
+									"境界行者守護著世界不受來自其他位面、或試圖以異界魔法摧毀凡界的威脅所侵害。他們尋找並看守著位面傳送門，為了追捕他們的敵人而冒險穿梭於內層位面和外層位面。這些遊俠也是多元宇宙中任何致力於守護位面中生靈和秩序的勢力的盟友\u2014尤其是那些善良龍族、精類、和元素生物。",
 									{
 										"type": "entries",
-										"name": "Horizon Walker Magic",
+										"name": "境界行者魔法", "ENG_name": "Horizon Walker Magic",
 										"entries": [
-											"Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the Horizon Walker Spells table. The spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.",
+											"從3級開始，當你在本職業升至特定等級，你將學會額外的法術，如境界行者法術表所示。這些法術對你而言視作遊俠法術，但並不會計入你已知遊俠法術的數量中。",
 											{
 												"type": "table",
-												"caption": " Spells",
+												"caption": "境界行者法術",
 												"colLabels": [
-													"Ranger Level",
-													"Spells"
+													"遊俠等級",
+													"法術"
 												],
 												"colStyles": [
 													"col-3 text-align-center",
@@ -5339,24 +4585,24 @@
 												],
 												"rows": [
 													[
-														"3rd",
-														"{@spell protection from evil and good}"
+														"3級",
+														"{@spell 防護善惡}"
 													],
 													[
-														"5th",
-														"{@spell misty step}"
+														"5級",
+														"{@spell 迷蹤步}"
 													],
 													[
-														"9th",
-														"{@spell haste}"
+														"9級",
+														"{@spell 加速術}"
 													],
 													[
-														"13th",
-														"{@spell banishment}"
+														"13級",
+														"{@spell 放逐術}"
 													],
 													[
-														"17th",
-														"{@spell teleportation circle}"
+														"17級",
+														"{@spell 傳送法陣}"
 													]
 												]
 											}
@@ -5364,19 +4610,19 @@
 									},
 									{
 										"type": "entries",
-										"name": "Detect Portal",
+										"name": "偵測傳送門", "ENG_name": "Detect Portal",
 										"entries": [
-											"At 3rd level, you gain the ability to magically sense the presence of a planar portal. As an action, you detect the distance and direction to the closest planar portal within 1 mile of you.",
-											"Once you use this feature, you can't use it again until you finish a short or long rest.",
-											"See the \"Planar Travel\" section in chapter 2 of the Dungeon Master's Guide for examples of planar portals."
+											"在3級時，你獲得以魔法感知位面傳送門存在的能力。以一個動作，你偵測出距離你1哩內最近的位面傳送門的距離以及方位。",
+											"一旦你使用此能力，直到你完成一次短休或長休之前你都不能再使用它。",
+											"參見《地下城主指南》第二章的「位面旅行」章節以查看關於位面傳送門的例子。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Planar Warrior",
+										"name": "位面戰士", "ENG_name": "Planar Warrior",
 										"entries": [
-											"At 3rd level, you learn to draw on the energy of the multiverse to augment your attacks.",
-											"As a bonus action, choose one creature you can see within 30 feet of you. The next time you hit that creature on this turn with a weapon attack, all damage dealt by the attack becomes force damage, and the creature takes an extra 1d8 force damage from the attack. When you reach 11th level in this class, the extra damage increases to 2d8."
+											"在3級時，你學會汲取多元宇宙中的能量以增強你的攻擊。",
+											"以一個附贈動作，選擇一個距離你30呎內且你所能看見的生物。下一次你在該回合以一次武器攻擊命中該生物時，該攻擊所造成的所有傷害都將變成力場傷害，且該生物將受到來自該攻擊的額外{@dice 1d8}力場傷害。當你在本職業升至11級時，這個額外傷害將增加至{@dice 2d8}。"
 										]
 									}
 								]
@@ -5387,10 +4633,10 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Ethereal Step",
+										"name": "靈界漫步", "ENG_name": "Ethereal Step",
 										"entries": [
-											"At 7th level, you learn to step through the Ethereal Plane. As a bonus action, you can cast the {@spell etherealness} spell with this feature, without expending a spell slot, but the spell ends at the end of the current turn.",
-											"Once you use this feature, you can't use it again until you finish a short or long rest."
+											"在7級時，你學會跨入乙太位面。以一個附贈動作，你能夠以此能力施放{@spell 跨入乙太界}法術，無須消耗法術位。但此法術將在當回合結束時結束。",
+											"一旦你使用此能力，直到你完成一次短休或長休之前你都不能再使用它。"
 										]
 									}
 								]
@@ -5401,10 +4647,10 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Distant Strike",
+										"name": "閃現打擊", "ENG_name": "Distant Strike",
 										"entries": [
-											"At 11th level, you gain the ability to pass between the planes in the blink of an eye. When you take the {@action Attack} action, you can teleport up to 10 feet before each attack to an unoccupied space you can see.",
-											"If you attack at least two different creatures with the action, you can make one additional attack with it against a third creature."
+											"在11級時，你獲得在眨眼間穿梭於位面間的能力。當你採取{@action 攻擊}動作時，你可以在每次攻擊之前傳送最多10呎距離到一處你所能看見的未被佔據空間。",
+											"若你以該動作攻擊了至少二個不同的生物，你可以再額外對第三個生物進行一次攻擊。"
 										]
 									}
 								]
@@ -5415,9 +4661,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Spectral Defense",
+										"name": "虛體防禦", "ENG_name": "Spectral Defense",
 										"entries": [
-											"At 15th level, your ability to move between planes enables you to slip through the planar boundaries to lessen the harm done to you during battle. When you take damage from an attack, you can use your reaction to give yourself resistance to all of that attack's damage on this turn."
+											"在15級時，你穿梭在位面之間的能力讓你得以溜進位面邊界以減輕你在戰鬥中所受到的傷害。當你受到來自於一次攻擊的傷害時，你可以使用你的反應以讓你自己獲得所有對這回合該攻擊傷害的抗性。"
 										]
 									}
 								]
@@ -5425,27 +4671,27 @@
 						]
 					],
 					"source": "XGE",
-					"shortName": "Horizon Walker"
+					"shortName": "境界行者"
 				},
 				{
-					"name": "Monster Slayer",
+					"name": "怪物殺手", "ENG_name": "Monster Slayer",
 					"subclassFeatures": [
 						[
 							{
-								"name": "Monster Slayer",
+								"name": "怪物殺手", "ENG_name": "Monster Slayer",
 								"entries": [
-									"You have dedicated yourself to hunting down creatures of the night and wielders of grim magic. A Monster Slayer seeks out vampires, dragons, evil fey, fiends, and other magical threats. Trained in supernatural techniques to overcome such monsters, slayers are experts at unearthing and defeating mighty, mystical foes.",
+									"你致力於獵殺那些黑夜中的怪物和邪惡魔法的施行者。一名怪物殺手尋覓著吸血鬼、龍、邪惡精類、邪魔、以及其他魔法威脅。受過用以戰勝這類怪物的超自然技術訓練，怪物殺手精通於找出並擊敗那些強大且神秘的敵人。",
 									{
 										"type": "entries",
-										"name": "Monster Slayer Magic",
+										"name": "怪物殺手魔法", "ENG_name": "Monster Slayer Magic",
 										"entries": [
-											"Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the Monster Slayer Spells table. The spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.",
+											"從3級開始，當你在本職業升至特定等級，你將學會額外的法術，如怪物殺手法術表所示。這些法術對你而言視作遊俠法術，但並不會計入你已知遊俠法術的數量中。",
 											{
 												"type": "table",
-												"caption": " Spells",
+												"caption": "怪物殺手法術",
 												"colLabels": [
-													"Ranger Level",
-													"Spells"
+													"遊俠等級",
+													"法術"
 												],
 												"colStyles": [
 													"col-3 text-align-center",
@@ -5453,24 +4699,24 @@
 												],
 												"rows": [
 													[
-														"3rd",
-														"{@spell protection from evil and good}"
+														"3級",
+														"{@spell 防護善惡}"
 													],
 													[
-														"5th",
-														"{@spell zone of truth}"
+														"5級",
+														"{@spell 誠實之域}"
 													],
 													[
-														"9th",
-														"{@spell magic circle}"
+														"9級",
+														"{@spell 防護法陣}"
 													],
 													[
-														"13th",
-														"{@spell banishment}"
+														"13級",
+														"{@spell 放逐術}"
 													],
 													[
-														"17th",
-														"{@spell hold monster}"
+														"17級",
+														"{@spell 怪物定身術}"
 													]
 												]
 											}
@@ -5478,18 +4724,18 @@
 									},
 									{
 										"type": "entries",
-										"name": "Hunter's Sense",
+										"name": "獵人感知", "ENG_name": "Hunter's Sense",
 										"entries": [
-											"At 3rd level, you gain the ability to peer at a creature and magically discern how best to hurt it. As an action, choose one creature you can see within 60 feet of you. You immediately learn whether the creature has any damage immunities, resistances, or vulnerabilities and what they are. If the creature is hidden from divination magic, you sense that it has no damage immunities, resistances, or vulnerabilities.",
-											"You can use this feature a number of times equal to your Wisdom modifier (minimum of once). You regain all expended uses of it when you finish a long rest."
+											"在3級時，你獲得凝視一個生物並以魔法知悉傷害它最佳的方式的能力。以一個動作，選擇一個距離你60呎內且你所能看見的生物。你將立刻知道該生物是否擁有任何傷害免疫、抗性、或是易傷，以及它們的種類。若該生物不受預言系魔法影響，則你感知到的結果將會是它不具有任何傷害免疫、抗性、和易傷。",
+											"你可以使用此能力的次數等同於你的睿知調整值（最少一次）。你在完成一次長休後恢復所有你花費掉的次數。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Slayer's Prey",
+										"name": "殺手獵物", "ENG_name": "Slayer's Prey",
 										"entries": [
-											"Starting at 3rd level, you can focus your ire on one foe, increasing the harm you inflict on it. As a bonus action, you designate one creature you can see within 60 feet of you as the target of this feature. The first time each turn that you hit that target with a weapon attack, it takes an extra 1d6 damage from the weapon.",
-											"This benefit lasts until you finish a short or long rest. It ends early if you designate a different creature."
+											"從3級開始，你可以專注你的憤怒於單一敵人，增加你對它所造成的傷害。以一個附贈動作，你指定一個距離你60呎內且你所能看見的生物做為此能力的目標。每個回合當你第一次以武器攻擊命中目標時，它將額外受到來自該武器的{@dice 1d6}傷害。",
+											"這個好處將持續直到你完成一次短休或長休，或在你指定另一個不同生物做為目標時提早結束。"
 										]
 									}
 								]
@@ -5500,9 +4746,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Supernatural Defense",
+										"name": "超常防禦", "ENG_name": "Supernatural Defense",
 										"entries": [
-											"At 7th level, you gain extra resilience against your prey's assaults on your mind and body. Whenever the target of your Slayer's Prey forces you to make a saving throw and whenever you make an ability check to escape that target's grapple, add 1d6 to your roll."
+											"在7級時，你獲得額外的韌性以抵抗你獵物對你身體和精神所做出的侵襲。每當你殺手獵物所指定的目標強迫你進行一次豁免檢定，或每當你進行一次屬性檢定以嘗試脫離該目標的擒抱，骰{@dice 1d6}並將其加入你的擲骰結果中。"
 										]
 									}
 								]
@@ -5513,10 +4759,10 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Magic-User's Nemesis",
+										"name": "魔法剋星", "ENG_name": "Magic-User's Nemesis",
 										"entries": [
-											"At 11th level, you gain the ability to thwart someone else's magic. When you see a creature casting a spell or teleporting within 60 feet of you, you can use your reaction to try to magically foil it. The creature must succeed on a Wisdom saving throw against your spell save DC, or its spell or teleport fails and is wasted.",
-											"Once you use this feature, you can't use it again until you finish a short or long rest."
+											"在11級時，你獲得阻撓其他人魔法的能力。當你看見一個距離你60呎內的生物施放法術或傳送，你可以使用你的反應以嘗試以魔法挫敗它。該生物必須成功通過一次對抗你法術豁免DC的睿知豁免，否則它的法術或傳送將失敗並被浪費。",
+											"一旦你使用此能力，直到你完成一次短休或長休之前你都不能再使用它。"
 										]
 									}
 								]
@@ -5527,9 +4773,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Slayer's Counter",
+										"name": "殺手反制", "ENG_name": "Slayer's Counter",
 										"entries": [
-											"At 15th level, you gain the ability to counterattack when your prey tries to sabotage you. If the target of your Slayer's Prey forces you to make a saving throw, you can use your reaction to make one weapon attack against the quarry. You make this attack immediately before making the saving throw. If your attack hits, your save automatically succeeds, in addition to the attack's normal effects."
+											"在15級時，你獲得在你的獵物嘗試妨害你時展開反擊的能力。若你殺手獵物所指定的目標強迫你進行一次豁免檢定，你可以使用你的反應以對該獵物進行一次武器攻擊。你在進行該豁免檢定之前立刻進行此攻擊。若你的攻擊命中，則除了該攻擊原本的效果之外，你的豁免檢定也將自動成功。"
 										]
 									}
 								]
@@ -5537,7 +4783,7 @@
 						]
 					],
 					"source": "XGE",
-					"shortName": "Monster Slayer"
+					"shortName": "怪物殺手"
 				}
 			],
 			"page": 5,

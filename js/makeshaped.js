@@ -40,7 +40,10 @@ class ShapedConverter {
 
 				data[4].spell.forEach(spell => inputs._additionalSpellData[spell.name] = Object.assign(spell.data, spell.shapedData));
 				inputs._legendaryGroup = {};
-				data[5].legendaryGroup.forEach(monsterDetails => inputs._legendaryGroup[monsterDetails.name] = monsterDetails);
+				data[5].legendaryGroup.forEach(monsterDetails => {
+					inputs._legendaryGroup[monsterDetails.source] = inputs._legendaryGroup[monsterDetails.source] || {};
+					inputs._legendaryGroup[monsterDetails.source][monsterDetails.name] = monsterDetails
+				});
 				Object.defineProperties(inputs, {
 					_srdMonsters: { writable: false, enumerable: false },
 					_srdSpells: { writable: false, enumerable: false },
@@ -83,8 +86,9 @@ class ShapedConverter {
 		}
 		if (data.legendaryGroup && data.legendaryGroup.length) {
 			data.legendaryGroup.forEach(legendary => {
-				if (!inputs._legendaryGroup[legendary.name]) {
-					inputs._legendaryGroup[legendary.name] = legendary;
+				inputs._legendaryGroup[legendary.source] = inputs._legendaryGroup[legendary.source] || {};
+				if (!inputs._legendaryGroup[legendary.source][legendary.name]) {
+					inputs._legendaryGroup[legendary.source][legendary.name] = legendary;
 				}
 			})
 		}
@@ -133,16 +137,6 @@ class ShapedConverter {
 							if (dataItem.monster) inputs[key].monsterInput = dataItem.monster;
 							if (sources[index].doNotConvert) inputs[key].doNotConvert = true;
 						});
-					},
-					(src) => {
-						// WARNING: this will break if there are dependencies in anything besides bestiary files
-						const out = {
-							key: src,
-							url: `${ShapedConverter.SOURCE_INFO.bestiary.dir}${ShapedConverter.bestiaryIndex[src]}`,
-							doNotConvert: true
-						};
-						sources.push(out);
-						return out;
 					}
 				);
 			} else {
@@ -250,7 +244,7 @@ class ShapedConverter {
 			.replace(/{@hit (\d+)}/g, '+$1')
 			.replace(/{@chance (\d+)[^}]+}/g, '$1 percent')
 			.replace(/{@recharge(?: (\d))?}/g, (m, lower) => `(Recharge ${lower ? `${Number(lower)}\u2013` : ""}6)`)
-			.replace(/{(@atk [A-Za-z,]+})/g, (m, p1) => EntryRenderer.attackTagToFull(p1))
+			.replace(/{(@atk [A-Za-z,]+})/g, (m, p1) => Renderer.attackTagToFull(p1))
 			.replace(/{@h}/g, "Hit: ")
 			.replace(/{@\w+ ((?:[^|}]+\|?){0,3})}/g, (m, p1) => {
 				const parts = p1.split('|');
@@ -502,7 +496,14 @@ class ShapedConverter {
 					const text = variant.entries.map(entry => {
 						if (isString(entry)) return entry;
 						else if (entry.type === "table") return this.processTable(entry);
-						else return entry.items.map(item => `${item.name} ${item.entry}`).join('\n');
+						else if (entry.type === "list") return entry.items.map(item => `${item.name} ${item.entry}`).join('\n');
+						else {
+							const recursiveFlatten = (ent) => {
+								if (ent.entries) return `${ent.name ? `${ent.name}. ` : ""}${ent.entries.map(it => recursiveFlatten(it)).join("\n")}`;
+								else if (isString(ent)) return ent;
+								else return JSON.stringify(ent);
+							};
+						}
 					}).join('\n');
 					addVariant(baseName, text, output);
 				} else if (variant.entries.find(entry => entry.type === 'entries')) {
@@ -553,8 +554,9 @@ class ShapedConverter {
 			}).filter(l => !!l);
 		}
 
-		if (legendaryGroup[monster.legendaryGroup]) {
-			const lairs = legendaryGroup[monster.legendaryGroup].lairActions;
+		if (monster.legendaryGroup && (legendaryGroup[monster.legendaryGroup.source] || {})[monster.legendaryGroup.name]) {
+			const lg = legendaryGroup[monster.legendaryGroup.source][monster.legendaryGroup.name];
+			const lairs = lg.lairActions;
 			if (lairs) {
 				if (lairs.every(isString)) {
 					output.lairActions = lairs.map(this.fixLinks);
@@ -562,9 +564,9 @@ class ShapedConverter {
 					output.lairActions = lairs.filter(isObject)[0].items.map(this.itemRenderer);
 				}
 			}
-			if (legendaryGroup[monster.legendaryGroup].regionalEffects) {
-				output.regionalEffects = legendaryGroup[monster.legendaryGroup].regionalEffects.filter(isObject)[0].items.map(this.itemRenderer);
-				output.regionalEffectsFade = this.fixLinks(legendaryGroup[monster.legendaryGroup].regionalEffects.filter(isString).last());
+			if (lg.regionalEffects) {
+				output.regionalEffects = lg.regionalEffects.filter(isObject)[0].items.map(this.itemRenderer);
+				output.regionalEffectsFade = this.fixLinks(lg.regionalEffects.filter(isString).last());
 			}
 		}
 
@@ -838,8 +840,8 @@ class ShapedConverter {
 	}
 
 	static processHigherLevel (entriesHigherLevel, newSpell) {
-		if (entriesHigherLevel) {
-			newSpell.higherLevel = this.fixLinks(entriesHigherLevel[0].entries.join('\n'));
+		if (entriesHigherLevel && entriesHigherLevel.length) {
+			newSpell.higherLevel = this.fixLinks((entriesHigherLevel[0].entries || entriesHigherLevel).join('\n'));
 		}
 	}
 
@@ -847,7 +849,7 @@ class ShapedConverter {
 		const newSpell = {
 			name: spell.name,
 			level: spell.level,
-			school: Parser.spSchoolAbvToFull(spell.school)
+			school: Parser.spSchoolAndSubschoolsAbvsToFull(spell.school, spell.subschools)
 		};
 
 		if (spell.meta && spell.meta.ritual) {
@@ -915,10 +917,10 @@ class ShapedConverter {
 		Object.values(inputs).forEach(data => {
 			if (data.monsterInput) monsterList = monsterList.concat(data.monsterInput);
 		});
-		monsterList.forEach(m => EntryRenderer.monster.mergeCopy(monsterList, m));
 
 		toProcess.forEach(data => {
 			if (data.monsterInput) {
+				// FIXME does this ever do anything?
 				if (data.monsterInput.legendaryGroup) {
 					data.monsterInput.legendaryGroup.forEach(monsterDetails => legendaryGroup[monsterDetails.name] = monsterDetails);
 				}
@@ -1103,9 +1105,7 @@ function rebuildShapedSources () {
 		});
 	}).catch(e => {
 		alert(`${e}\n${e.stack}`);
-		setTimeout(() => {
-			throw e;
-		}, 0);
+		setTimeout(() => { throw e; });
 	});
 }
 

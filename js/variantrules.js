@@ -1,4 +1,5 @@
 "use strict";
+
 const JSON_URL = "data/variantrules.json";
 
 window.onload = async function load () {
@@ -7,7 +8,7 @@ window.onload = async function load () {
 	DataUtil.loadJSON(JSON_URL).then(onJsonLoad);
 };
 
-const entryRenderer = EntryRenderer.getDefaultRenderer();
+const entryRenderer = Renderer.get();
 
 let list;
 const sourceFilter = getSourceFilter();
@@ -37,17 +38,17 @@ async function onJsonLoad (data) {
 	});
 	ListUtil.initGenericPinnable();
 
-	addListShowHide();
-
 	addVariantRules(data);
 	BrewUtil.pAddBrewData()
 		.then(handleBrew)
-		.then(BrewUtil.pAddLocalBrewData)
+		.then(() => BrewUtil.bind({list}))
+		.then(() => BrewUtil.pAddLocalBrewData())
 		.catch(BrewUtil.pPurgeBrew)
 		.then(async () => {
 			BrewUtil.makeBrewButton("manage-brew");
-			BrewUtil.bind({list, filterBox, sourceFilter});
+			BrewUtil.bind({filterBox, sourceFilter});
 			await ListUtil.pLoadState();
+			ListUtil.addListShowHide();
 
 			History.init(true);
 			ExcludeUtil.checkShowAllExcluded(rulesList, $(`#pagecontent`));
@@ -73,7 +74,7 @@ function addVariantRules (data) {
 
 		const searchStack = [];
 		for (const e1 of curRule.entries) {
-			EntryRenderer.getNames(searchStack, e1);
+			Renderer.getNames(searchStack, e1);
 		}
 
 		// populate table
@@ -92,7 +93,7 @@ function addVariantRules (data) {
 	const lastSearch = ListUtil.getSearchTermAndReset(list);
 	$("ul.variantRules").append(tempString);
 	// sort filters
-	sourceFilter.items.sort(SortUtil.ascSort);
+	sourceFilter.items.sort(SortUtil.srcSort_ch);
 
 	list.reIndex();
 	if (lastSearch) list.search(lastSearch);
@@ -106,7 +107,7 @@ function addVariantRules (data) {
 		primaryLists: [list]
 	});
 	ListUtil.bindPinButton();
-	EntryRenderer.hover.bindPopoutButton(rulesList);
+	Renderer.hover.bindPopoutButton(rulesList);
 }
 
 function getSublistItem (rule, pinId) {
@@ -135,12 +136,12 @@ function loadhash (id) {
 	entryRenderer.setFirstSection(true);
 	const textStack = [];
 	entryRenderer.resetHeaderIndex();
-	entryRenderer.recursiveEntryRender(curRule, textStack);
+	entryRenderer.recursiveRender(curRule, textStack);
 	$("#pagecontent").html(`
-		${EntryRenderer.utils.getBorderTr()}
+		${Renderer.utils.getBorderTr()}
 		<tr class="text"><td colspan="6">${textStack.join("")}</td></tr>
-		${EntryRenderer.utils.getPageTr(curRule)}
-		${EntryRenderer.utils.getBorderTr()}
+		${Renderer.utils.getPageTr(curRule)}
+		${Renderer.utils.getBorderTr()}
 	`);
 
 	loadsub([]);
@@ -151,6 +152,6 @@ function loadhash (id) {
 function loadsub (sub) {
 	if (!sub.length) return;
 
-	const $title = $(`.entry-title[data-title-index="${sub[0]}"]`);
+	const $title = $(`.rd__h[data-title-index="${sub[0]}"]`);
 	if ($title.length) $title[0].scrollIntoView();
 }

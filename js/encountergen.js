@@ -3,7 +3,7 @@
 const JSON_URL = "data/encounters.json";
 
 let encounterList;
-const renderer = EntryRenderer.getDefaultRenderer();
+const renderer = Renderer.get();
 
 function makeContentsBlock (i, loc) {
 	let out = "<ul>";
@@ -18,7 +18,7 @@ function makeContentsBlock (i, loc) {
 }
 
 function getTableName (loc, table) {
-	return `${loc.location} Encounters (Levels ${table.minlvl}\u2014${table.maxlvl})`;
+	return `${loc.location}遭遇 (等級 ${table.minlvl}\u2014${table.maxlvl})`;
 }
 
 window.onload = function load () {
@@ -74,7 +74,7 @@ function loadhash (id) {
 							<th class="col-2 text-align-center">
 								<span class="roller" onclick="rollAgainstTable('${iLoad}', '${jLoad}')">d100</span>
 							</th>
-							<th class="col-10">Encounter</th>
+							<th class="col-10">遭遇</th>
 						</tr>
 					</thead>`;
 
@@ -97,7 +97,7 @@ function pad (number) {
 function getRenderedText (rawText) {
 	if (rawText.indexOf("{@") !== -1) {
 		const stack = [];
-		renderer.recursiveEntryRender(rawText, stack);
+		renderer.recursiveRender(rawText, stack);
 		return stack.join("");
 	} else return rawText;
 }
@@ -109,7 +109,7 @@ function rollAgainstTable (iLoad, jLoad) {
 	const table = location.tables[jLoad];
 	const rollTable = table.table;
 
-	const roll = RollerUtil.randomise(100) - 1; // -1 since results are 1-100
+	const roll = RollerUtil.randomise(99, 0);
 
 	let result;
 	for (let i = 0; i < rollTable.length; i++) {
@@ -124,16 +124,16 @@ function rollAgainstTable (iLoad, jLoad) {
 
 	// add dice results
 	result = result.replace(RollerUtil.DICE_REGEX, function (match) {
-		const r = EntryRenderer.dice.parseRandomise2(match);
+		const r = Renderer.dice.parseRandomise2(match);
 		return `<span class="roller" onmousedown="event.preventDefault()" onclick="reroll(this)">${match}</span> (<span class="result">${r}</span>)`
 	});
 
-	EntryRenderer.dice.addRoll({name: `${location.location} (${table.minlvl}-${table.maxlvl})`}, `<span><strong>${pad(roll)}</strong> ${result}</span>`);
+	Renderer.dice.addRoll({name: `${location.location} (${table.minlvl}-${table.maxlvl})`}, `<span><strong>${pad(roll)}</strong> ${result}</span>`);
 }
 
 function reroll (ele) {
 	const $ele = $(ele);
-	const resultRoll = EntryRenderer.dice.parseRandomise2($ele.html());
+	const resultRoll = Renderer.dice.parseRandomise2($ele.html());
 	const $result = $ele.next(".result");
 	const oldText = $result.text().replace(/\(\)/g, "");
 	$result.html(resultRoll);

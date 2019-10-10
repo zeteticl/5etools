@@ -1,4 +1,5 @@
 "use strict";
+
 const HASH_HIDE_FEATURES = "hideclassfs:";
 const HASH_SHOW_FLUFF = "showfluff:";
 const HASH_SOURCES = "sources:";
@@ -110,7 +111,7 @@ class ClassList {
 			const id = i + previousClassAmount;
 			tempString += ClassList._renderClass(curClass, id);
 		}
-		sourceFilter.items.sort(SortUtil.ascSort);
+		sourceFilter.items.sort(SortUtil.srcSort_ch);
 		$classTable.append(tempString);
 	}
 
@@ -122,6 +123,7 @@ class ClassList {
 						${Parser.sourceJsonToAbv(classToRender.source)}
 					</span>
 					<span class="uniqueid hidden">${classToRender.uniqueId ? classToRender.uniqueId : id}</span>
+					<span class="eng_name hidden">${classToRender.ENG_name ? classToRender.ENG_name : classToRender.name}</span>
 				</a>
 			</li>`;
 	}
@@ -169,7 +171,10 @@ class ClassData {
 			// get the class
 			const c = ClassData.classes.find(c => c.name.toLowerCase() === subClass.class.toLowerCase() && (c.source.source || c.source).toLowerCase() === (subClass.classSource || SRC_PHB).toLowerCase());
 			if (!c) {
-				alert(`Could not add subclass; could not find class with name: ${subClass.class}`);
+				JqueryUtil.doToast({
+					content: `Could not add subclass; could not find class with name: ${subClass.class}`,
+					type: "danger"
+				});
 				return;
 			}
 
@@ -185,6 +190,7 @@ class ClassData {
 	 * @param classes an Array of classes
 	 */
 	static sortSubclasses (classes) {
+		return ; // haz: no, don't sort subclass
 		for (const c of classes) {
 			if (c.subclasses) c.subclasses = c.subclasses.sort((a, b) => SortUtil.ascSort(a.name, b.name));
 		}
@@ -259,9 +265,9 @@ class HashLoad {
 		if (ClassDisplay.curClass.hd) {
 			$("td#hp").show();
 			const hdEntry = {toRoll: `${ClassDisplay.curClass.hd.number}d${ClassDisplay.curClass.hd.faces}`, rollable: true};
-			$("td#hp div#hitdice span").html(EntryRenderer.getEntryDice(hdEntry, "Hit die"));
+			$("td#hp div#hitdice span").html(Renderer.getEntryDice(hdEntry, "Hit die"));
 			$("td#hp div#hp1stlevel span").html(ClassDisplay.curClass.hd.faces + " + 你的體質調整值");
-			$("td#hp div#hphigherlevels span").html(`一級之後每${ClassDisplay.curClass.name}等級 ${EntryRenderer.getEntryDice(hdEntry, "Hit die")} (or ${
+			$("td#hp div#hphigherlevels span").html(`一級之後每${ClassDisplay.curClass.name}等級 ${Renderer.getEntryDice(hdEntry, "Hit die")} (or ${
 				(ClassDisplay.curClass.hd.faces / 2 + 1)}) + 你的體質調整值`);
 		} else {
 			$("td#hp").hide();
@@ -273,7 +279,7 @@ class HashLoad {
 		}
 
 		// starting proficiencies
-		const renderArmorProfs = (armorProfs) => armorProfs.map(a => a === "light" || a === "medium" || a === "heavy" ? Parser.translateKeyToDisplay(a) + "甲" : Parser.translateKeyToDisplay(a)).join(", ");
+		const renderArmorProfs = (armorProfs) => armorProfs.map(a => a === "light" || a === "medium" || a === "heavy" ? Parser.ArmorToDisplay(a) + "甲" : Parser.ArmorToDisplay(a)).join(", ");
 		const renderWeaponsProfs = (weaponProfs) => weaponProfs.map(w => w === "simple" || w === "martial" ? Parser.translateKeyToDisplay(w) + "武器" : Parser.translateKeyToDisplay(w)).join(", ");
 		const renderToolsProfs = (toolProfs) => toolProfs.join(", ");
 		const renderSkillsProfs = (skillProfs) => getSkillProfString(skillProfs);
@@ -290,7 +296,7 @@ class HashLoad {
 
 		function getSkillProfString (skills) {
 			const numString = Parser.numberToString(skills.choose);
-			return skills.from.length === 18 ? `選擇任意${numString}個技能。` : `從 ${skills.from.map(it => EntryRenderer.getDefaultRenderer().renderEntry(`{@skill ${Parser.SkillToDisplay(it)}}`)).joinConjunct(", ", " 和 ")} 中選擇${numString}個。`
+			return skills.from.length === 18 ? `選擇任意${numString}個技能。` : `從${skills.from.map(it => Renderer.get().render(`{@skill ${Parser.SkillToDisplay(it)}}`)).joinConjunct(", ", " 和 ")} 中選擇${numString}個。`
 		}
 
 		// starting equipment
@@ -298,8 +304,8 @@ class HashLoad {
 			const $equipment = $("#equipment").show();
 			const sEquip = ClassDisplay.curClass.startingEquipment;
 			const fromBackground = sEquip.additionalFromBackground ? "<p>你起始攜帶下列物品，以及任何你背景所提供的東西。</p>" : "";
-			const defList = sEquip.default.length === 0 ? "" : `<ul><li>${sEquip.default.map(it => EntryRenderer.getDefaultRenderer().renderEntry(it)).join("</li><li>")}</ul>`;
-			const goldAlt = sEquip.goldAlternative === undefined ? "" : `<p>或者，你可以選擇起始擁有 ${EntryRenderer.getDefaultRenderer().renderEntry(sEquip.goldAlternative)} 金幣以自行購買裝備。</p>`;
+			const defList = sEquip.default.length === 0 ? "" : `<ul><li>${sEquip.default.map(it => Renderer.get().render(it)).join("</li><li>")}</ul>`;
+			const goldAlt = sEquip.goldAlternative === undefined ? "" : `<p>或者，你可以選擇起始擁有 ${Renderer.get().render(sEquip.goldAlternative)} 金幣以自行購買裝備。</p>`;
 			$equipment.find("div").html(`${fromBackground}${defList}${goldAlt}`);
 		} else {
 			$("#equipment").hide();
@@ -374,7 +380,28 @@ class HashLoad {
 
 		const groupHeaders = $("#groupHeaders");
 		const colHeaders = $("#colHeaders");
-		const levelTrs = [...new Array(20)].map((_, i) => $(`#level${i + 1}`));
+		const $levelTrs = [];
+
+		// support for more than (or less than) 20 levels
+		(() => {
+			let i = 0;
+			let $ele;
+			while (($ele = $(`#level${i++ + 1}`)).length) $levelTrs.push($ele);
+			const lenDiff = ClassDisplay.curClass.classFeatures.length - $levelTrs.length;
+			if (lenDiff > 0) {
+				let addCount = 1;
+				[...new Array(lenDiff)].forEach(() => {
+					const level = $levelTrs.length + addCount++;
+					$levelTrs.push($(`<tr id="level${level}">
+						<td class="level">${Parser.getOrdinalForm(level)}</td>
+						<td class="pb">+6</td>
+						<td class="features"></td>
+					</tr>`).insertAfter($levelTrs.last()));
+				});
+			} else if (lenDiff < 0) {
+				[...new Array(-lenDiff)].forEach(() => $levelTrs.pop().remove());
+			}
+		})();
 
 		if (tData) {
 			for (let i = 0; i < tData.length; i++) {
@@ -389,7 +416,7 @@ class HashLoad {
 				groupHeaders.append(`<th ${hasTitle ? `class="colGroupTitle"` : ""} colspan="${tGroup.colLabels.length}" ${subclassData}>${hasTitle ? tGroup.title : ""}</th>`);
 
 				for (let j = 0; j < tGroup.colLabels.length; j++) {
-					let lbl = renderer.renderEntry(tGroup.colLabels[j]);
+					let lbl = `<div class="cls__squash_header">${renderer.render(tGroup.colLabels[j])}</div>`;
 					colHeaders.append(`<th class="centred-col" ${subclassData}>${lbl}</th>`)
 				}
 
@@ -398,8 +425,8 @@ class HashLoad {
 						let entry = tGroup.rows[j][k];
 						if (entry === 0) entry = "\u2014";
 						const stack = [];
-						renderer.recursiveEntryRender(entry, stack);
-						levelTrs[j].append(`<td class="centred-col" ${subclassData}>${stack.join("")}</td>`)
+						renderer.recursiveRender(entry, stack);
+						$levelTrs[j].append(`<td class="centred-col" ${subclassData}>${stack.join("")}</td>`)
 					}
 				}
 			}
@@ -421,16 +448,16 @@ class HashLoad {
 					toRender.entries = MiscUtil.copy(toRender.entries);
 					toRender.entries.unshift(`{@note The following information is from ${Parser.sourceJsonToFull(f.source)}${f.page ? `, page ${f.page}` : ""}.}`)
 				}
-				renderer.recursiveEntryRender(toRender, renderStack, 0);
+				renderer.recursiveRender(toRender, renderStack);
 			});
 			renderStack.push(`</td></tr>`);
 		}
 
 		// FEATURE DESCRIPTIONS
 		let subclassIndex = 0; // the subclass array is not 20 elements
-		for (let i = 0; i < levelTrs.length; i++) {
+		for (let i = 0; i < $levelTrs.length; i++) {
 			// track class table feature names
-			const tblLvlFeatures = levelTrs[i].find(".features");
+			const tblLvlFeatures = $levelTrs[i].find(".features");
 			// used to build class table
 			const featureLinks = [];
 
@@ -459,7 +486,9 @@ class HashLoad {
 				const styleClasses = [CLSS_CLASS_FEATURE, "linked-titles--classes"];
 				if (feature.gainSubclassFeature) styleClasses.push(CLSS_GAIN_SUBCLASS_FEATURE);
 
-				renderer.recursiveEntryRender(feature, renderStack, 0, {prefix: `<tr id="${featureId}" class="${styleClasses.join(" ")}"><td colspan="6">`, suffix: `</td></tr>`, forcePrefixSuffix: true});
+				renderStack.push(`<tr id="${featureId}" class="${styleClasses.join(" ")}"><td colspan="6">`);
+				renderer.recursiveRender(feature, renderStack);
+				renderStack.push(`</td></tr>`);
 
 				// add subclass features to render stack if appropriate
 				if (feature.gainSubclassFeature) {
@@ -484,12 +513,9 @@ class HashLoad {
 							}
 
 							const styleClasses = FeatureDescription.getSubclassStyles(subClass);
-							renderer.recursiveEntryRender(subFeature, renderStack, 0, {
-								prefix: `<tr class="text ${styleClasses.join(" ")}" ${ATB_DATA_SC}="${subClass.name}" ${ATB_DATA_SRC}="${
-									ClassData.cleanScSource(subClass.source)}"><td colspan="6">`,
-								suffix: `</td></tr>`,
-								forcePrefixSuffix: true
-							});
+							renderStack.push(`<tr class="text ${styleClasses.join(" ")}" ${ATB_DATA_SC}="${subClass.name}" ${ATB_DATA_SRC}="${ClassData.cleanScSource(subClass.source)}"><td colspan="6">`);
+							renderer.recursiveRender(subFeature, renderStack);
+							renderStack.push(`</td></tr>`);
 						}
 					}
 					subclassIndex++;
@@ -518,7 +544,7 @@ class HashLoad {
 
 		// show/hide class features pill
 		HashLoad.makeGenericTogglePill("職業能力", CLSS_CLASS_FEATURES_ACTIVE, ID_CLASS_FEATURES_TOGGLE, HASH_HIDE_FEATURES, true, "開關職業能力");
-		if (ClassDisplay.curClass.fluff) HashLoad.makeGenericTogglePill("情報", CLSS_FLUFF_ACTIVE, ID_FLUFF_TOGGLE, HASH_SHOW_FLUFF, false, "開關職業詳細情報");
+		if (ClassDisplay.curClass.fluff) HashLoad.makeGenericTogglePill("資訊", CLSS_FLUFF_ACTIVE, ID_FLUFF_TOGGLE, HASH_SHOW_FLUFF, false, "開關職業詳細情報");
 
 		// show/hide UA/other sources
 		HashLoad.makeSourceCyclePill();
@@ -529,10 +555,10 @@ class HashLoad {
 		// subclass pills
 		const subClasses = ClassDisplay.curClass.subclasses
 			.filter(sc => !ExcludeUtil.isExcluded(sc.name, "subclass", sc.source))
-			.map(sc => ({name: sc.name, source: sc.source, shortName: sc.shortName}))
-			.sort(function (a, b) {
+			.map(sc => ({name: sc.name, source: sc.source, shortName: sc.shortName}));
+			/*.sort(function (a, b) {
 				return SortUtil.ascSort(a.shortName, b.shortName)
-			});
+			});*/
 		for (let i = 0; i < subClasses.length; i++) {
 			const subClass = subClasses[i];
 			const nonStandardSource = SourceUtil.isNonstandardSource(subClass.source) || SourceUtil.hasBeenReprinted(subClass.shortName, subClass.source) || (subClass.source.source || subClass.source) === SRC_DMG;
@@ -856,7 +882,7 @@ class SubClassLoader {
 				});
 
 				const $spicy_NotScFeature_NoSubclassNoSource = otherSrcSubFeat.not(`.${CLSS_SUBCLASS_FEATURE}`).filter(`:not([${ATB_DATA_SC}]):not([${ATB_DATA_SRC}])`);
-				const $spicy_NotScFeature_NoneSubclassNoneSource = otherSrcSubFeat.not(`.${CLSS_SUBCLASS_FEATURE}`).filter(`[${ATB_DATA_SC}="${EntryRenderer.DATA_NONE}"][${ATB_DATA_SRC}="${EntryRenderer.DATA_NONE}"]`);
+				const $spicy_NotScFeature_NoneSubclassNoneSource = otherSrcSubFeat.not(`.${CLSS_SUBCLASS_FEATURE}`).filter(`[${ATB_DATA_SC}="${Renderer.DATA_NONE}"][${ATB_DATA_SRC}="${Renderer.DATA_NONE}"]`);
 				if (hideAllSources) {
 					$spicy_NotScFeature_NoSubclassNoSource.hide();
 					$spicy_NotScFeature_NoneSubclassNoneSource.hide();
@@ -1034,13 +1060,13 @@ class SubClassLoader {
 		function makeScroller ($nav, idTr, parentTr, idClass, displayText, scrollTo) {
 			let navClass;
 			switch (idClass) {
-				case "statsBlockSectionHead":
+				case Renderer.HEAD_NEG_1:
 					navClass = "n1";
 					break;
-				case "statsBlockHead":
+				case Renderer.HEAD_0:
 					navClass = "n2";
 					break;
-				case "statsBlockSubHead":
+				case Renderer.HEAD_1:
 					navClass = "n3";
 					break;
 			}
@@ -1059,7 +1085,7 @@ class SubClassLoader {
 			}
 		}
 
-		if (!CollectionUtil.arrayEq(SubClassLoader.prevSub, sub)) { // checking array equality is faster than hitting the DOM
+		if (!(SubClassLoader.prevSub === sub && SubClassLoader.prevSub.equals(sub))) { // checking array equality is faster than hitting the DOM
 			setTimeout(() => {
 				const $nav = $(`#sticky-nav`);
 				const $hr = $nav.find(`hr`);
@@ -1071,11 +1097,11 @@ class SubClassLoader {
 					const nextState = Number(!Number($navHead.attr("data-state")));
 					$navHead.attr("data-state", nextState);
 				});
-				const $titles = $(`.entry-title`);
+				const $titles = $(`.rd__h`);
 				$titles.each((i, e) => {
 					const $e = $(e);
 					const pClass = $e.parent().attr("class").trim();
-					if (pClass === "statsInlineHead") return; // consider enabling these for e.g. maneuvers?
+					if (pClass === Renderer.HEAD_2) return; // consider enabling these for e.g. maneuvers?
 					if (!$e.is(":visible")) return;
 					const idTr = $e.closest(`tr[id]`);
 					const pTr = $e.closest(`tr`);
@@ -1107,7 +1133,7 @@ function initCompareMode () {
 				ClassDisplay.curClass.subclasses.filter(sc => !ExcludeUtil.isExcluded(sc.name, "subclass", sc.source)).forEach((sc, j) => {
 					renderStack.push(`<td class="subclass-features-${j} ${FeatureDescription.getSubclassStyles(sc).join(" ")}">`);
 					sc.subclassFeatures[i].forEach(f => {
-						renderer.recursiveEntryRender(f, renderStack);
+						renderer.recursiveRender(f, renderStack);
 					});
 					renderStack.push(`</td>`);
 				});
@@ -1171,12 +1197,14 @@ class ClassBookView {
 
 		const renderStack = [];
 		renderer.setFirstSection(true);
-		renderer.recursiveEntryRender({type: "section", name: ClassDisplay.curClass.name}, renderStack, 0, {prefix: `<tr><td colspan="6">`, suffix: `</td></tr>`, forcePrefixSuffix: true});
+		renderStack.push(`<tr><td colspan="6">`);
+		renderer.recursiveRender({type: "section", name: ClassDisplay.curClass.name}, renderStack);
+		renderStack.push(`</td></tr>`)
 
 		renderStack.push(`<tr class="text class-features"><td colspan="6">`);
 		ClassDisplay.curClass.classFeatures.forEach(lvl => {
 			lvl.forEach(cf => {
-				renderer.recursiveEntryRender(cf, renderStack);
+				renderer.recursiveRender(cf, renderStack);
 			});
 		});
 		renderStack.push(`</td></tr>`);
@@ -1185,12 +1213,12 @@ class ClassBookView {
 			renderStack.push(`<tr class="subclass-features-${i} ${FeatureDescription.getSubclassStyles(sc).join(" ")}"><td colspan="6">`);
 			sc.subclassFeatures.forEach(lvl => {
 				lvl.forEach(f => {
-					renderer.recursiveEntryRender(f, renderStack);
+					renderer.recursiveRender(f, renderStack);
 				});
 			});
 			renderStack.push(`</td></tr>`);
 		});
-		renderStack.push(EntryRenderer.utils.getBorderTr());
+		renderStack.push(Renderer.utils.getBorderTr());
 		$bkTbl.append(renderStack.join(""));
 		$pnlContent.append($bkTbl);
 
@@ -1297,12 +1325,12 @@ ClassBookView._$scToggles = {};
 
 function initLinkGrabbers () {
 	const $body = $(`body`);
-	$body.on(`mousedown`, `.linked-titles--classes > td > * > .entry-title .entry-title-inner`, (evt) => evt.preventDefault());
-	$body.on(`click`, `.linked-titles--classes > td > * > .entry-title .entry-title-inner`, function (evt) {
+	$body.on(`mousedown`, `.linked-titles--classes > td > * > .rd__h .entry-title-inner`, (evt) => evt.preventDefault());
+	$body.on(`click`, `.linked-titles--classes > td > * > .rd__h .entry-title-inner`, async function (evt) {
 		const $this = $(this);
 
 		if (evt.shiftKey) {
-			copyText($this.text().replace(/\.$/, ""));
+			await MiscUtil.pCopyTextToClipboard($this.text().replace(/\.$/, ""));
 			JqueryUtil.showCopiedEffect($this);
 		} else {
 			const fTag = $this.closest(`tr`).attr("id");
@@ -1310,13 +1338,13 @@ function initLinkGrabbers () {
 			const hash = `${window.location.hash.slice(1).split(HASH_PART_SEP)
 				.filter(it => !it.startsWith(CLSS_HASH_FEATURE)).join(HASH_PART_SEP)}${HASH_PART_SEP}${fTag}`;
 
-			copyText(`${window.location.href.split("#")[0]}#${hash}`);
+			await MiscUtil.pCopyTextToClipboard(`${window.location.href.split("#")[0]}#${hash}`);
 			JqueryUtil.showCopiedEffect($this, "Copied link!");
 		}
 	});
 }
 
-const renderer = EntryRenderer.getDefaultRenderer();
+const renderer = Renderer.get();
 
 const sourceFilter = new Filter({
 	header: FilterBox.SOURCE_HEADER,
@@ -1345,7 +1373,7 @@ async function doPageInit () {
 	);
 
 	ClassList.classList = ListUtil.search({
-		valueNames: ['name', 'source', 'uniqueid'],
+		valueNames: ['name', 'source', 'uniqueid', 'eng_name'],
 		listClass: "classes"
 	});
 
@@ -1364,7 +1392,7 @@ async function doPageInit () {
 
 		BrewUtil.pAddBrewData()
 			.then(handleBrew)
-			.then(BrewUtil.pAddLocalBrewData)
+			.then(() => BrewUtil.pAddLocalBrewData())
 			.catch(BrewUtil.pPurgeBrew)
 			.then(() => {
 				RollerUtil.addListRollButton();
@@ -1374,4 +1402,4 @@ async function doPageInit () {
 	});
 }
 
-doPageInit();
+window.addEventListener("load", () => doPageInit());

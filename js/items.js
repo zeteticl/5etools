@@ -2,7 +2,7 @@
 
 window.onload = async function load () {
 	await ExcludeUtil.pInitialise();
-	EntryRenderer.item.buildList((incItemList) => {
+	Renderer.item.buildList((incItemList) => {
 		populateTablesAndFilters({item: incItemList});
 	}, {}, true);
 };
@@ -10,14 +10,14 @@ window.onload = async function load () {
 function rarityValue (rarity) {
 	switch (rarity) {
 		case "None": return 0;
-		case "Common": return 1;
-		case "Uncommon": return 2;
-		case "Rare": return 3;
-		case "Very Rare": return 4;
-		case "Legendary": return 5;
-		case "Artifact": return 6;
+		case "Common": case "常見": return 1;
+		case "Uncommon":case "非常見": return 2;
+		case "Rare": case "珍稀": return 3;
+		case "Very Rare":case "非常珍稀": return 4;
+		case "Legendary": case "傳說": return 5;
+		case "Artifact": case "神器": return 6;
 		case "Other": return 7;
-		case "Varies": return 8;
+		case "Varies": case "可變": 	return 8;
 		case "Unknown (Magic)": return 9;
 		case "Unknown": return 10;
 		default: return 11;
@@ -48,12 +48,15 @@ let mundanelist;
 let magiclist;
 const sourceFilter = getSourceFilter();
 const DEFAULT_HIDDEN_TYPES = new Set(["$", "Futuristic", "Modern", "Renaissance"]);
-const typeFilter = new Filter({header: "Type", headerName: "類型", deselFn: (it) => DEFAULT_HIDDEN_TYPES.has(it), 
+const typeFilter = new Filter({header: "Type", headerName: "類型", deselFn: (it) => DEFAULT_HIDDEN_TYPES.has(it),
 	items:["$","Trade Good","Adventuring Gear","Light Armor","Medium Armor","Heavy Armor","Shield","Simple Weapon","Martial Weapon","Melee Weapon","Ranged Weapon","Firearm","Ammunition","Explosive","Tool","Artisan Tool","Instrument","Gaming Set","Spellcasting Focus","Rod","Staff","Wand","Scroll","Ring","Wondrous Item","Potion","Poison","Mount","Vehicle","Tack and Harness","Renaissance","Modern","Futuristic"], displayFn: Parser.ItemTypeToDisplay});
 const tierFilter = new Filter({header: "Tier", headerName: "階級", items: ["None", "Minor", "Major"], displayFn:Parser.ItemTierToDisplay });
 const propertyFilter = new Filter({header: "Property", headerName: "物品屬性", displayFn: StrUtil.uppercaseFirst});
 const costFilter = new RangeFilter({header: "Cost", headerName: "價值", min: 0, max: 100, allowGreater: true, suffix: "金幣"});
+const focusFilter = new Filter({header: "Spellcasting Focus", headerName: "施法法器", items: ["Bard", "Cleric", "Druid", "Paladin", "Sorcerer", "Warlock", "Wizard"], displayFn: Parser.ClassToDisplay});
 const attachedSpellsFilter = new Filter({header: "Attached Spells", headerName: "附加法術", displayFn: (it) => it.split("|")[0].toTitleCase()});
+const lootTableFilter = new Filter({header: "Found On", headerName: "列於魔法物品表", items: ["魔法物品表A", "魔法物品表B", "魔法物品表C", "魔法物品表D", "魔法物品表E", "魔法物品表F", "魔法物品表G", "魔法物品表H", "魔法物品表I"]});
+
 let filterBox;
 async function populateTablesAndFilters (data) {
 	const rarityFilter = new Filter({
@@ -72,9 +75,18 @@ async function populateTablesAndFilters (data) {
 	const categoryFilter = new Filter({
 		header: "Category", headerName: "分類",
 		items: ["Basic", "Generic Variant", "Specific Variant", "Other"],
-		deselFn: (it) => it === "Specific Variant"
+		deselFn: (it) => it === "Specific Variant",
+		displayFn: function(str){
+			switch(str){
+			case "Basic": return "基本";
+			case "Generic Variant": return "通用變體";
+			case "Specific Variant": return "特定變體";
+			case "Other": return "其他";
+			default: return str;
+		};}
 	});
-	const miscFilter = new Filter({header: "Miscellaneous", headerName: "雜項", items: ["Charges", "Cursed", "Magic", "Mundane", "Sentient"], displayFn:function(str){switch(str){
+	const miscFilter = new Filter({header: "Miscellaneous", headerName: "雜項", items: ["Ability Score Adjustment", "Charges", "Cursed", "Magic", "Mundane", "Sentient"], displayFn:function(str){switch(str){
+		case "Ability Score Adjustment": return "屬性值調整";
 		case "Magic": return "魔法物品";
 		case "Mundane": return "尋常物品";
 		case "Cursed": return "詛咒";
@@ -83,7 +95,7 @@ async function populateTablesAndFilters (data) {
 		default: return str;
 		}}});
 
-	filterBox = await pInitFilterBox(sourceFilter, typeFilter, tierFilter, rarityFilter, propertyFilter, attunementFilter, categoryFilter, costFilter, miscFilter, attachedSpellsFilter);
+	filterBox = await pInitFilterBox(sourceFilter, typeFilter, tierFilter, rarityFilter, propertyFilter, attunementFilter, categoryFilter, costFilter, focusFilter, miscFilter, lootTableFilter, attachedSpellsFilter);
 
 	const mundaneOptions = {
 		valueNames: ["name", "type", "cost", "weight", "source", "uniqueid", "eng_name"],
@@ -175,9 +187,6 @@ async function populateTablesAndFilters (data) {
 		});
 	});
 
-	RollerUtil.addListRollButton();
-	addListShowHide();
-
 	const subList = ListUtil.initSublist(
 		{
 			valueNames: ["name", "weight", "price", "count", "id"],
@@ -192,12 +201,15 @@ async function populateTablesAndFilters (data) {
 	addItems(data);
 	BrewUtil.pAddBrewData()
 		.then(handleBrew)
-		.then(BrewUtil.pAddLocalBrewData)
+		.then(() => BrewUtil.bind({list}))
+		.then(() => BrewUtil.pAddLocalBrewData())
 		.catch(BrewUtil.pPurgeBrew)
 		.then(async () => {
 			BrewUtil.makeBrewButton("manage-brew");
 			BrewUtil.bind({lists: [mundanelist, magiclist], filterBox, sourceFilter});
 			await ListUtil.pLoadState();
+			RollerUtil.addListRollButton();
+			ListUtil.addListShowHide();
 
 			History.init(true);
 			ExcludeUtil.checkShowAllExcluded(itemList, $(`#pagecontent`));
@@ -205,7 +217,7 @@ async function populateTablesAndFilters (data) {
 }
 
 async function handleBrew (homebrew) {
-	const itemList = await EntryRenderer.item.getItemsFromHomebrew(homebrew);
+	const itemList = await Renderer.item.getItemsFromHomebrew(homebrew);
 	addItems({item: itemList});
 }
 
@@ -221,7 +233,7 @@ function addItems (data) {
 		const curitem = itemList[itI];
 		if (ExcludeUtil.isExcluded(curitem.name, "item", curitem.source)) continue;
 		if (curitem.noDisplay) continue;
-		EntryRenderer.item.enhanceItem(curitem);
+		Renderer.item.enhanceItem(curitem);
 
 		const name = curitem.name;
 		const rarity = curitem.rarity;
@@ -239,8 +251,32 @@ function addItems (data) {
 		if (curitem.curse) curitem._fMisc.push("Cursed");
 		const isMundane = rarity === "None" || rarity === "Unknown" || category === "Basic";
 		curitem._fMisc.push(isMundane ? "Mundane" : "Magic");
+		if (curitem.ability) curitem._fMisc.push("Ability Score Adjustment");
 		if (curitem.charges) curitem._fMisc.push("Charges");
 		curitem._fCost = Parser.coinValueToNumber(curitem.value);
+		if (curitem.focus || curitem.type === "INS" || curitem.type === "SCF") {
+			curitem._fFocus = curitem.focus ? curitem.focus === true ? ["Bard", "Cleric", "Druid", "Paladin", "Sorcerer", "Warlock", "Wizard"] : [...curitem.focus] : [];
+			if (curitem.type === "INS" && !curitem._fFocus.includes("Bard")) curitem._fFocus.push("Bard");
+			if (curitem.type === "SCF") {
+				switch (curitem.scfType) {
+					case "arcane": {
+						if (!curitem._fFocus.includes("Sorcerer")) curitem._fFocus.push("Sorcerer");
+						if (!curitem._fFocus.includes("Warlock")) curitem._fFocus.push("Warlock");
+						if (!curitem._fFocus.includes("Wizard")) curitem._fFocus.push("Wizard");
+						break;
+					}
+					case "druid": {
+						if (!curitem._fFocus.includes("Druid")) curitem._fFocus.push("Druid");
+						break;
+					}
+					case "holy":
+						if (!curitem._fFocus.includes("Cleric")) curitem._fFocus.push("Cleric");
+						if (!curitem._fFocus.includes("Paladin")) curitem._fFocus.push("Paladin");
+						break;
+				}
+			}
+		}
+
 		if (isMundane) {
 			liList["mundane"] += `
 			<li class="row" ${FLTR_ID}=${itI} onclick="ListUtil.toggleSelected(event, this)" oncontextmenu="ListUtil.openContextMenu(event, this)">
@@ -280,6 +316,7 @@ function addItems (data) {
 		tierTags.forEach(tt => tierFilter.addIfAbsent(tt));
 		curitem._fProperties.forEach(p => propertyFilter.addIfAbsent(p));
 		attachedSpellsFilter.addIfAbsent(curitem.attachedSpells);
+		lootTableFilter.addIfAbsent(curitem.lootTables);
 	}
 	const lastSearch = ListUtil.getSearchTermAndReset(mundanelist, magiclist);
 	// populate table
@@ -289,7 +326,7 @@ function addItems (data) {
 	$(`h3.ele-mundane span.side-label`).text("尋常物品");
 	$(`h3.ele-magic span.side-label`).text("魔法物品");
 	// sort filters
-	sourceFilter.items.sort(SortUtil.ascSort);
+	sourceFilter.items.sort(SortUtil.srcSort_ch);
 	//typeFilter.items.sort(SortUtil.ascSort);
 	attachedSpellsFilter.items.sort(SortUtil.ascSortLower);
 
@@ -311,7 +348,7 @@ function addItems (data) {
 	});
 	ListUtil.bindAddButton();
 	ListUtil.bindSubtractButton();
-	EntryRenderer.hover.bindPopoutButton(itemList);
+	Renderer.hover.bindPopoutButton(itemList);
 	UrlUtil.bindLinkExportButton(filterBox);
 	ListUtil.bindDownloadButton();
 	ListUtil.bindUploadButton();
@@ -331,7 +368,9 @@ function handleFilterChange () {
 			i.attunementCategory,
 			i.category,
 			i._fCost,
+			i._fFocus,
 			i._fMisc,
+			i.lootTables,
 			i.attachedSpells
 		);
 	}
@@ -370,7 +409,7 @@ function getSublistItem (item, pinId, addCount) {
 	`;
 }
 
-const renderer = EntryRenderer.getDefaultRenderer();
+const renderer = Renderer.get();
 function loadhash (id) {
 	renderer.setFirstSection(true);
 	const $content = $(`#pagecontent`).empty();
@@ -378,21 +417,16 @@ function loadhash (id) {
 
 	function buildStatsTab () {
 		const $toAppend = $(`
-		${EntryRenderer.utils.getBorderTr()}
-		${EntryRenderer.utils.getNameTr(item)}
-		<tr>
-			<td id="typerarityattunement" class="typerarityattunement" colspan="6">
-				<span id="type">Type</span><span id="rarity">, rarity</span>
-				<span id="attunement">(requires attunement)</span>
-			</td>
-		</tr>
+		${Renderer.utils.getBorderTr()}
+		${Renderer.utils.getNameTr(item)}
+		<tr><td class="typerarityattunement" colspan="6">${Renderer.item.getTypeRarityAndAttunementText(item)}</td></tr>
 		<tr>
 			<td id="valueweight" colspan="2"><span id="value">10gp</span> <span id="weight">45 lbs.</span></td>
 			<td id="damageproperties" class="damageproperties" colspan="4"><span id="damage">Damage</span> <span id="damagetype">type</span> <span id="properties">(versatile)</span></td>
 		</tr>
 		<tr id="text"><td class="divider" colspan="6"><div></div></td></tr>
-		${EntryRenderer.utils.getPageTr(item)}
-		${EntryRenderer.utils.getBorderTr()}
+		${Renderer.utils.getPageTr(item)}
+		${Renderer.utils.getBorderTr()}
 	`);
 		$content.append($toAppend);
 
@@ -412,35 +446,25 @@ function loadhash (id) {
 		$content.find("td span#value").html(item.value ? Parser.itemValueToDisplay(item.value) + (item.weight ? "、" : "") : "");
 		$content.find("td span#weight").html(item.weight ? item.weight + (Number(item.weight) === 1 ? "磅" : "磅") + (item.weightNote ? ` ${item.weightNote}` : "") : "");
 
-		const [damage, damageType, propertiesTxt] = EntryRenderer.item.getDamageAndPropertiesText(item);
+		const [damage, damageType, propertiesTxt] = Renderer.item.getDamageAndPropertiesText(item);
 		$content.find("span#damage").html(damage);
 		$content.find("span#damagetype").html(damageType);
 		$content.find("span#properties").html(propertiesTxt);
-
-		const typeRarityAttunement = EntryRenderer.item.getTypeRarityAndAttunementText(item).filter(Boolean).join(", ");
-		$content.find("#typerarityattunement").html(typeRarityAttunement);
 
 		$content.find("tr.text").remove();
 		const renderStack = [];
 		if (item.entries && item.entries.length) {
 			const entryList = {type: "entries", entries: item.entries};
-			renderer.recursiveEntryRender(entryList, renderStack, 1);
+			renderer.recursiveRender(entryList, renderStack, {depth: 1});
 		}
 
-		// tools, artisan tools, instruments, gaming sets
-		if (type === "T" || type === "AT" || type === "INS" || type === "GS") {
-			renderStack.push(`<p class="text-align-center"><i>參見「變體與可選規則」頁面的 <a href="${renderer.baseUrl}variantrules.html#${UrlUtil.encodeForHash(["Tool Proficiencies", "XGE"])}" target="_blank">工具熟練</a> 條目以瞭解更多情報。</i></p>`);
-			if (type === "INS") {
-				const additionEntriesList = {type: "entries", entries: TOOL_INS_ADDITIONAL_ENTRIES};
-				renderer.recursiveEntryRender(additionEntriesList, renderStack, 1);
-			} else if (type === "GS") {
-				const additionEntriesList = {type: "entries", entries: TOOL_GS_ADDITIONAL_ENTRIES};
-				renderer.recursiveEntryRender(additionEntriesList, renderStack, 1);
-			}
-		}
 		if (item.additionalEntries) {
 			const additionEntriesList = {type: "entries", entries: item.additionalEntries};
-			renderer.recursiveEntryRender(additionEntriesList, renderStack, 1);
+			renderer.recursiveRender(additionEntriesList, renderStack, {depth: 1});
+		}
+
+		if (item.lootTables) {
+			renderStack.push(`<div><span class="bold">列於：</span>${item.lootTables.sort(SortUtil.ascSortLower).map(tbl => renderer.render(`{@table ${tbl}}`)).join(", ")}</div>`);
 		}
 
 		const renderedText = renderStack.join("")
@@ -460,35 +484,35 @@ function loadhash (id) {
 	}
 
 	function buildFluffTab (isImageTab) {
-		return EntryRenderer.utils.buildFluffTab(
+		return Renderer.utils.buildFluffTab(
 			isImageTab,
 			$content,
 			item,
-			(fluffJson) => item.fluff || fluffJson.item.find(it => it.name === item.name && it.source === item.source),
+			(fluffJson) => item.fluff || fluffJson.item.find(it => (it.name === item.name || it.name === item.ENG_name) && it.source === item.source),
 			`data/fluff-items.json`,
 			() => true
 		);
 	}
 
-	const statTab = EntryRenderer.utils.tabButton(
+	const statTab = Renderer.utils.tabButton(
 		"物品",
 		() => {},
 		buildStatsTab
 	);
-	const infoTab = EntryRenderer.utils.tabButton(
-		"情報",
+	const infoTab = Renderer.utils.tabButton(
+		"資訊",
 		() => {},
 		buildFluffTab
 	);
-	const picTab = EntryRenderer.utils.tabButton(
+	const picTab = Renderer.utils.tabButton(
 		"圖片",
 		() => {},
 		() => buildFluffTab(true)
 	);
 
 	// only display the "Info" tab if there's some fluff info--currently (2018-12-13), no official item has text fluff
-	if (item.fluff) EntryRenderer.utils.bindTabButtons(statTab, infoTab, picTab);
-	else EntryRenderer.utils.bindTabButtons(statTab, picTab);
+	if (item.fluff && item.fluff.entries) Renderer.utils.bindTabButtons(statTab, infoTab, picTab);
+	else Renderer.utils.bindTabButtons(statTab, picTab);
 
 	ListUtil.updateSelected();
 }
@@ -499,88 +523,9 @@ function loadsub (sub) {
 }
 
 const TOOL_INS_ADDITIONAL_ENTRIES = [
-	"熟練於一項樂器代表著你熟悉於使用並演奏它的技巧。你同時也知曉一些常以該樂器演奏的經典曲目。",
-	{
-		"type": "entries",
-		"name": "歷史",
-		"entries": [
-			"你的專業有助你回想那些與你樂器有關的傳說。"
-		]
-	},
-	{
-		"type": "entries",
-		"name": "表演",
-		"entries": [
-			"當你將樂器融入你的演出時，你上演一齣優秀表演的能力將會因此提升。"
-		]
-	},
-	{
-		"type": "entries",
-		"name": "作曲",
-		"entries": [
-			"做為一次長休的一部份，你可以為你的樂器譜寫一段新的旋律和歌詞。你可能可以使用這項能力以這段琅琅上口的曲調驚艷一名貴族、或是散佈流言蜚語。"
-		]
-	},
-	{
-		"type": "table",
-		"caption": "樂器",
-		"colLabels": [
-			"用途", "DC"
-		],
-		"colStyles": [
-			"col-10",
-			"col-2 text-align-center"
-		],
-		"rows": [
-			["辨識出一段旋律", "10"],
-			["即興演奏一段旋律", "20"]
-		]
-	}
+
 ];
 
 const TOOL_GS_ADDITIONAL_ENTRIES = [
-	"熟練於一項遊戲套組代表著精通於一種遊戲類型，像是三龍牌、或是使用骰子的機率遊戲。",
-	{
-		"type": "entries",
-		"name": "構成元件",
-		"entries": [
-			"一套遊戲套組內含遊玩某項特定遊戲或遊戲類型所需的所有材料，像是一副完整的牌組、或是一張棋盤和棋子。"
-		]
-	},
-	{
-		"type": "entries",
-		"name": "歷史",
-		"entries": [
-			"你對這項遊戲的精通也包括了瞭解關於它的歷史、與它有關的重要事件、以及牽涉到它的著名歷史人物。"
-		]
-	},
-	{
-		"type": "entries",
-		"name": "察言觀色",
-		"entries": [
-			"與某人一起玩遊戲是一個理解他們個人特質的好方法，這讓你可以更容易的分辨他們的謊言，並理解他們的情緒。"
-		]
-	},
-	{
-		"type": "entries",
-		"name": "手上把戲",
-		"entries": [
-			"手上把戲在你想要於遊戲中作弊時是一項相當有用的技能，它讓你可以讓棋子換位、在掌中藏牌、或改變擲骰的結果。或者，藉由靈巧的操作遊戲中的元件以使目標全神貫注於遊戲中，也能在嘗試趁機扒竊時起到很好的分心效果。"
-		]
-	},
-	{
-		"type": "table",
-		"caption": "遊戲套組",
-		"colLabels": [
-			"用途", "DC"
-		],
-		"colStyles": [
-			"col-10",
-			"col-2 text-align-center"
-		],
-		"rows": [
-			["逮到玩家的作弊行為", "15"],
-			["了解一名對手的個人特質", "15"]
-		]
-	}
+
 ];

@@ -67,18 +67,21 @@ class FilterBox {
 		this.modeAndOr = "AND";
 		this.$txtCount = $(`<span style="margin-left: auto"/>`);
 		this.$filterButton = null;
+		this._$outer = null;
 
 		this._doSaveStateDebounced = MiscUtil.debounce(() => this.__pDoSaveState(), 50);
 	}
 
 	async pDoLoadState () {
 		try {
+			this.storedMeta = await StorageUtil.pGetForPage(FilterBox._STORAGE_NAME_META);
 			this.storedValues = await StorageUtil.pGetForPage(FilterBox._STORAGE_NAME);
 			this.storedVisible = await StorageUtil.pGetForPage(FilterBox._STORAGE_NAME_VISIBLE);
 			this.storedGroupState = await StorageUtil.pGetForPage(FilterBox._STORAGE_NAME_GROUP_STATE);
 			this.storedNestState = await StorageUtil.pGetForPage(FilterBox._STORAGE_NAME_NEST_STATE);
 		} catch (e) {
 			setTimeout(() => { throw e });
+			this.storedMeta = null;
 			this.storedValues = null;
 			this.storedVisible = null;
 			this.storedGroupState = null;
@@ -88,11 +91,16 @@ class FilterBox {
 
 	__pDoSaveState () {
 		return Promise.all([
+			StorageUtil.pSetForPage(FilterBox._STORAGE_NAME_META, this._getMeta()),
 			StorageUtil.pSetForPage(FilterBox._STORAGE_NAME, this.getValues()),
 			StorageUtil.pSetForPage(FilterBox._STORAGE_NAME_VISIBLE, this._getVisible()),
 			StorageUtil.pSetForPage(FilterBox._STORAGE_NAME_GROUP_STATE, this._getGroupState()),
 			StorageUtil.pSetForPage(FilterBox._STORAGE_NAME_NEST_STATE, this._getNestState())
 		]);
+	}
+
+	_getMeta () {
+		return {modeAndOr: this.modeAndOr};
 	}
 
 	/**
@@ -101,78 +109,91 @@ class FilterBox {
 	render () {
 		const firstRender = this.$rendered.length === 0 || History.initialLoad;
 		// save the current values to re-apply if we're re-rendering
-		const curValues = firstRender ? null : this.getValues();
-		const curVisible = firstRender ? null : this._getVisible();
-		const curGroupState = firstRender ? null : this._getGroupState();
-		const curNestState = firstRender ? null : this._getNestState();
+		this._curState = {
+			values: firstRender ? null : this.getValues(),
+			visible: firstRender ? null : this._getVisible(),
+			groupState: firstRender ? null : this._getGroupState(),
+			nestState: firstRender ? null : this._getNestState()
+		};
+
+		// if first render and stored values, apply saved metadata
+		if (firstRender && this.storedMeta) {
+			this.modeAndOr = this.storedMeta.modeAndOr || "AND";
+		}
+
 		// remove any previously rendered elements
 		this._wipeRendered();
 
-		const $body = $(`body`);
 		this.$list = $(`#listcontainer`).find(`.list`);
 
-		const $filterButton = this.$filterButton = getFilterButton();
+		const $filterButton = this.$filterButton = this._getFilterButton();
 		this.$miniView = $(`<div class="mini-view btn-group"/>`);
 		const $inputGroup = $(this.inputGroup);
 
-		const $outer = $(`<div class="dropdown-menu ${FilterBox.CLS_DROPDOWN_MENU_FILTER} homebrew-window">
+		const $btnShowAll = $(`<button id="fltr-show-all" class="btn btn-xs btn-default">顯示全部</button>`).click(() => this.showAll());
+		const $btnHideAll = $(`<button id="fltr-hide-all" class="btn btn-xs btn-default">隱藏全部</button>`).click(() => this.hideAll());
+		const $btnReset = $(`<button id="fltr-reset" class="btn btn-xs btn-default">重置</button>`).click((evt) => this.reset(evt.shiftKey));
+
+		this._$outer = $(`<div class="dropdown-menu ${FilterBox.CLS_DROPDOWN_MENU_FILTER} homebrew-window">
 			<h4 class="title">
 				<span>篩選</span>
 				<div>
 					<div class="btn-group">
-						<button id="fltr-show-all" class="btn btn-xs btn-default">顯示全部</button>
-						<button id="fltr-hide-all" class="btn btn-xs btn-default">隱藏全部</button>
+						<div data-r="$btnShowAll"/>
+						<div data-r="$btnHideAll"/>
 					</div>
-					<button id="fltr-reset" class="btn btn-xs btn-default">重置</button>
+					<div data-r="$btnReset"/>
 				</div>
 			</h4>
 			<hr style="margin-top: 0; margin-bottom: 7px;">
-		</div>`).hide();
+		</div>`).swap({$btnShowAll, $btnHideAll, $btnReset}).hide();
 
 		this._showAll = () => {
-			const $btns = $outer.find(`.show-hide-button`);
+			const $btns = this._$outer.find(`.show-hide-button`);
 			$btns.each((i, e) => {
 				if ($(e).text() === "顯示") $(e).click();
 			});
 		};
 		this._hideAll = () => {
-			const $btns = $outer.find(`.show-hide-button`);
+			const $btns = this._$outer.find(`.show-hide-button`);
 			$btns.each((i, e) => {
 				if ($(e).text() === "隱藏") $(e).click();
 			});
 		};
-		$outer.find(`#fltr-show-all`).click(() => this.showAll());
-		$outer.find(`#fltr-hide-all`).click(() => this.hideAll());
-		$outer.find(`#fltr-reset`).click((evt) => this.reset(evt.shiftKey));
 
-		const self = this;
 		const $hdrLine = $(`<li class="filter-item"/>`);
-		const $hdrLineInner = $(`<div class="h-wrap"/>`).appendTo($hdrLine);
+		const $hdrLineInner = $(`<div class="fltr__h"/>`).appendTo($hdrLine);
 		if (this.filterList.length > 1) {
 			const $btnAndOr = $(`<button class="btn btn-default btn-xs" style="width: 3em;">${this.modeAndOr}</button>`)
 				.data("andor", this.modeAndOr)
-				.on(EVNT_CLICK, () => {
+				.click(() => {
 					const nxt = $btnAndOr.data("andor") === "OR" ? "AND" : "OR";
-					self.modeAndOr = nxt;
+					this.modeAndOr = nxt;
 					$btnAndOr.text(nxt);
 					$btnAndOr.data("andor", nxt);
 				});
 			$hdrLineInner.append(`結合篩選器為... `).append(`<div style="display: inline-block; width: 10px;"/>`).append($btnAndOr);
 		}
 		$hdrLineInner.append(this.$txtCount);
-		if (!this.filterList[0].minimalUI) $outer.append($hdrLine).append(makeDivider());
-		for (let i = 0; i < this.filterList.length; ++i) {
-			$outer.append(makeOuterItem(this, i, this.filterList[i], this.$miniView));
-			if (i < this.filterList.length - 1) $outer.append(makeDivider());
-		}
+		if (!this.filterList[0].minimalUI) this._$outer.append($hdrLine).append(this._get$divider());
+
+		this.filterList.forEach((f, i) => {
+			// skip rendering any not-yet-used filters
+			if (f instanceof Filter && f.items.length === 0) return;
+
+			this._$outer.append(this._get$outerItem(i, f, this.$miniView));
+			if (i < this.filterList.length - 1) this._$outer.append(this._get$divider());
+		});
+
 		$inputGroup.prepend($filterButton);
 		this.$rendered.push($filterButton);
-		this.$disabledOverlay.append($outer);
-		this.$rendered.push($outer);
+		this.$disabledOverlay.append(this._$outer);
+		this.$list.parent().append(this.$disabledOverlay.hide());
+		this.$rendered.push(this._$outer);
 		$inputGroup.after(this.$miniView);
 		this.$rendered.push(this.$miniView);
 
-		addShowHideHandlers(this);
+		this._doBindShowHideHandlers();
 
 		const addResetHandler = () => {
 			if (this.resetButton !== null && this.resetButton !== undefined) {
@@ -186,863 +207,879 @@ class FilterBox {
 
 		if (this.dropdownVisible) $filterButton.find("button").click();
 		this._doSaveStateDebounced();
+	}
 
-		function getFilterButton () {
-			const $buttonWrapper = $(`<div id="filter-toggle-btn"/>`);
-			$buttonWrapper.addClass(FilterBox.CLS_INPUT_GROUP_BUTTON);
+	_getFilterButton () {
+		const $buttonWrapper = $(`<div id="filter-toggle-btn"/>`);
+		$buttonWrapper.addClass(FilterBox.CLS_INPUT_GROUP_BUTTON);
 
-			const $filterButton = $(`<button class="btn btn-default btn-filter">篩選<span/></button>`);
-			$buttonWrapper.append($filterButton);
-			return $buttonWrapper;
-		}
+		const $filterButton = $(`<button class="btn btn-default btn-filter">篩選<span/></button>`);
+		$buttonWrapper.append($filterButton);
+		return $buttonWrapper;
+	}
 
-		function makeOuterItem (self, idx, filter, $miniView, namePrefix, parent) {
-			if (filter instanceof MultiFilter) {
-				filter.eles = [];
-				const $parent = $(`<div class="wrp-multifilter ${filter.compact ? "wrp-multi-compact" : ""}"/>`);
+	_get$outerItem (idx, filter, $miniView, namePrefix, parent) {
+		if (filter instanceof MultiFilter) {
+			filter.eles = [];
+			const $parent = $(`<div class="wrp-multifilter ${filter.compact ? "wrp-multi-compact" : ""}"/>`);
 
-				const getChildren = () => filter.filters.map(it => self.headers[it.header]);
+			const getChildren = () => filter.filters.map(it => this.headers[it.header]);
 
-				const $hdrCompact = $(`<div class="multi-compact-visible-f split">
+			const $hdrCompact = $(`<div class="multi-compact-visible-f split">
 						<div>${filter.categoryName} <span class="group-comb-toggle text-muted">(群組 ${filter.mode.toUpperCase()})</span></div>
 					</div>`).appendTo($parent);
-				const $btnToggleComb = $hdrCompact.find(`.group-comb-toggle`);
-				const setCombineAnd = () => {
-					filter.setModeAnd();
-					$btnToggleComb.text("(群組 AND)");
-					getChildren().forEach(ch => ch.ele.data("handleUpdateCombiner")(filter.mode));
-				};
-				const setCombineOr = () => {
-					filter.setModeOr();
-					$btnToggleComb.text("(群組 OR)");
-					getChildren().forEach(ch => ch.ele.data("handleUpdateCombiner")(filter.mode));
-				};
-				$hdrCompact.find(`.group-comb-toggle`).click(() => {
-					if ($btnToggleComb.text() === "(群組 AND)") setCombineOr();
-					else setCombineAnd();
-				});
+			const $btnToggleComb = $hdrCompact.find(`.group-comb-toggle`);
+			const setCombineAnd = () => {
+				filter.setModeAnd();
+				$btnToggleComb.text("(群組 AND)");
+				getChildren().forEach(ch => ch.ele.data("handleUpdateCombiner")(filter.mode));
+			};
+			const setCombineOr = () => {
+				filter.setModeOr();
+				$btnToggleComb.text("(群組 OR)");
+				getChildren().forEach(ch => ch.ele.data("handleUpdateCombiner")(filter.mode));
+			};
+			$hdrCompact.find(`.group-comb-toggle`).click(() => {
+				if ($btnToggleComb.text() === "(群組 AND)") setCombineOr();
+				else setCombineAnd();
+			});
 
-				const $wrpButtons = $(`<div/>`).appendTo($hdrCompact);
-				const $groupSummary = $(`<span class="summary" style="margin-right: 5px;">`).appendTo($wrpButtons);
-				const $groupSummaryVal = $(`<span class="filtering" title="Hidden active filters"/>`).appendTo($groupSummary);
-				const updateSummary = () => {
-					const numFiltering = getChildren().filter(it => {
-						return it.ele.data("isFiltering")();
-					}).length;
-					$groupSummaryVal.text(numFiltering);
-					numFiltering ? $groupSummary.show() : $groupSummary.hide();
-				};
-				$(`<button class="btn btn-default btn-xs multi-compact-visible btn-meta" style="border-radius: 3px;">重置</button>`)
-					.appendTo($wrpButtons)
-					.click(() => {
-						filter.eles.forEach($e => $e.data("resetValues")());
-					});
-				const $btnShowHideGroup = $(`<button class="btn btn-default btn-xs show-hide-button multi-compact-visible btn-meta" style="margin-left: 5px;">隱藏</button>`)
-					.appendTo($wrpButtons)
-					.click(function () {
-						const $this = $(this);
-						if ($this.text() === "隱藏") {
-							filter.eles.forEach($e => $e.data("hideFilter")());
-							$this.text("顯示");
-						} else {
-							filter.eles.forEach($e => $e.data("showFilter")());
-							$this.text("隱藏");
-						}
-						updateSummary();
-					});
-
-				filter.filters.forEach((child, i) => {
-					const $ch = makeOuterItem(self, i, child, $miniView, filter.categoryName, filter);
-					$parent.append($ch);
-				});
-
-				const numHidden = filter.filters.map(it => it.header).filter(it => {
-					if (curVisible) {
-						return curVisible[it] === false
-					} else if (self.storedVisible) {
-						return self.storedVisible[it] === false;
-					}
+			const $wrpButtons = $(`<div/>`).appendTo($hdrCompact);
+			const $groupSummary = $(`<span class="summary" style="margin-right: 5px;">`).appendTo($wrpButtons);
+			const $groupSummaryVal = $(`<span class="filtering" title="Hidden active filters"/>`).appendTo($groupSummary);
+			const updateSummary = () => {
+				const numFiltering = getChildren().filter(it => {
+					return it.ele.data("isFiltering")();
 				}).length;
-				if (numHidden) $btnShowHideGroup.text("顯示");
-				updateSummary();
-
-				$parent.data(
-					"resetCombiner",
-					function () {
-						filter._originalMode === "or" ? setCombineOr() : setCombineAnd();
-					}
-				);
-
-				$parent.data(
-					"setCombiner",
-					function (mode) {
-						mode === "or" ? setCombineOr() : setCombineAnd();
-					}
-				);
-
-				if (curGroupState) {
-					const state = curGroupState[filter.categoryName];
-					if (state && state.mode) {
-						$parent.data("setCombiner")(state.mode);
-					}
-				} else if (self.storedGroupState) {
-					const state = self.storedGroupState[filter.categoryName];
-					if (state && state.mode) {
-						$parent.data("setCombiner")(state.mode);
-					}
-				}
-
-				filter.$ele = $parent;
-				self.multiHeaders[filter.categoryName] = {ele: $parent, filter: filter};
-				return $parent;
-			} else if (filter instanceof RangeFilter) {
-				const $outI = $(`<li class="filter-item"/>`);
-
-				self.headers[filter.header] = {outer: $outI, filter: filter};
-				const $wrpSlider = makeSliderWrapper(filter.header);
-				self.headers[filter.header].ele = $wrpSlider;
-				if (parent) parent.eles.push($wrpSlider);
-
-				const $headerLine = makeSliderHeaderLine(idx, $wrpSlider);
-				self.headers[filter.header].$header = $headerLine;
-
-				$outI.append($headerLine);
-				$outI.append($wrpSlider);
-
-				return $outI;
-			} else if (filter instanceof GroupedFilter || filter instanceof Filter) {
-				const isGrouped = filter instanceof GroupedFilter;
-				const $outI = $(`<li class="filter-item"/>`);
-
-				self.headers[filter.header] = {outer: $outI, filter: filter};
-				const $grid = makePillGrid(isGrouped);
-				self.headers[filter.header].ele = $grid;
-				if (parent) parent.eles.push($grid);
-
-				const $headerLine = makeHeaderLine(idx, $grid);
-				self.headers[filter.header].$header = $headerLine;
-
-				$outI.append($headerLine);
-				$outI.append($grid);
-
-				return $outI;
-			}
-
-			function _addGroupLabel (idx, $line) {
-				$(`
-					<div class="multi-compact-hidden">${namePrefix ? `<span class="text-muted">${namePrefix} <span class="group-comb-toggle">(群組 ${parent.mode.toUpperCase()})</span>: </span>` : ""}<span>${filter.headerName? filter.headerName: filter.header}</span></div>
-				`).appendTo($line);
-				$line.find(`.group-comb-toggle`).click(function () {
+				$groupSummaryVal.text(numFiltering);
+				numFiltering ? $groupSummary.show() : $groupSummary.hide();
+			};
+			$(`<button class="btn btn-default btn-xs multi-compact-visible btn-meta" style="border-radius: 3px;">重置</button>`)
+				.appendTo($wrpButtons)
+				.click(() => {
+					filter.eles.forEach($e => {
+						$e.data("resetValues")();
+						$e.data("resetMeta") && $e.data("resetMeta")();
+					});
+				});
+			const $btnShowHideGroup = $(`<button class="btn btn-default btn-xs show-hide-button multi-compact-visible btn-meta" style="margin-left: 5px;">隱藏</button>`)
+				.appendTo($wrpButtons)
+				.click(function () {
 					const $this = $(this);
-					if ($this.text() === "(群組 AND)") {
-						parent.$ele.data("setCombiner")("or");
+					if ($this.text() === "隱藏") {
+						filter.eles.forEach($e => $e.data("hideFilter")());
+						$this.text("顯示");
 					} else {
-						parent.$ele.data("setCombiner")("and");
+						filter.eles.forEach($e => $e.data("showFilter")());
+						$this.text("隱藏");
 					}
-				});
-			}
-
-			function makeHeaderLine (idx, $grid) {
-				const minimalClass = filter.minimalUI ? "filter-minimal" : "";
-				const $line = $(`<div class="h-wrap ${minimalClass} multi-compact-hidden"/>`);
-				_addGroupLabel(idx, $line);
-
-				function makeAndOrBtn (defState, tooltip) {
-					const $btn = $(` <button class="btn btn-default btn-xs ${minimalClass} btn-meta" style="width: 3em;" title="${tooltip}">${defState}</button>`)
-						.data("andor", defState);
-					return $btn
-						.on(EVNT_CLICK, () => {
-							const nxt = $btn.data("andor") === "OR" ? "AND" : "OR";
-							$btn.data("andor", nxt);
-							$btn.text(nxt);
-						});
-				}
-
-				const $btnAndOrBlue = makeAndOrBtn("OR", "Positive matches mode for this filter. AND requires all blues to match, OR requires at least one blue to match.");
-				self.headers[filter.header].getAndOrBlue = () => {
-					return $btnAndOrBlue.data("andor");
-				};
-				const $btnAndOrRed = makeAndOrBtn("OR", "Negative match mode for this filter. AND requires all reds to match, OR requires at least one red to match.");
-				self.headers[filter.header].getAndOrRed = () => {
-					return $btnAndOrRed.data("andor");
-				};
-
-				const $quickBtns = $(`<span class="btn-group quick-btns" style="margin-left: auto;"/>`).appendTo($line);
-				const $all = $(`<button class="btn btn-default btn-xs btn-meta ${minimalClass}">全選</button>`).appendTo($quickBtns);
-				const $clear = $(`<button class="btn btn-default btn-xs btn-meta ${minimalClass}">清除</button>`).appendTo($quickBtns);
-				const $none = $(`<button class="btn btn-default btn-xs btn-meta ${minimalClass}">全無</button>`).appendTo($quickBtns);
-				const $default = $(`<button class="btn btn-default btn-xs btn-meta ${minimalClass}">預設</button>`).appendTo($quickBtns);
-
-				const $summary = $(`<span class="summary"/>`).appendTo($line);
-				const $summaryInclude = $(`<span class="filter__summary_item filter__summary_item--include" title="Hidden includes"/>`).appendTo($summary);
-				const $summarySpacer = $(`<span class="filter__summary_item_spacer"/>`).appendTo($summary);
-				const $summaryExclude = $(`<span class="filter__summary_item filter__summary_item--exclude" title="Hidden excludes"/>`).appendTo($summary);
-				$summary.hide();
-
-				const $logicBtns = $(`<span class="btn-group andor-btns" style="margin-left: 5px;"/>`).append($btnAndOrBlue).append($btnAndOrRed).appendTo($line);
-
-				const $showHide = $(`<button class="btn btn-default btn-xs btn-meta show-hide-button ${minimalClass}" style="margin-left: 5px;">隱藏</button>`).appendTo($line);
-
-				const doShow = () => {
-					$showHide.text("隱藏");
-					$grid.show();
-					$quickBtns.show();
-					$logicBtns.css("margin-left", "5px");
-					$summary.hide();
-				};
-				const doHide = () => {
-					$showHide.text("顯示");
-					$grid.hide();
-					$quickBtns.hide();
 					updateSummary();
-				};
-				const updateSummary = () => {
-					const counts = $grid.data("getCounts")();
-					if (counts.yes > 0 || counts.no > 0) {
-						if (counts.yes > 0) {
-							$summaryInclude.prop("title", `${counts.yes} hidden 'required' tag${counts.yes > 1 ? "s" : ""}`);
-							$summaryInclude.text(counts.yes);
-							$summaryInclude.show();
-						} else {
-							$summaryInclude.hide();
-						}
-						if (counts.yes > 0 && counts.no > 0) {
-							$summarySpacer.show();
-						} else {
-							$summarySpacer.hide();
-						}
-						if (counts.no > 0) {
-							$summaryExclude.prop("title", `${counts.no} hidden 'excluded' tag${counts.no > 1 ? "s" : ""}`);
-							$summaryExclude.text(counts.no);
-							$summaryExclude.show();
-						} else {
-							$summaryExclude.hide();
-						}
-						$logicBtns.css("margin-left", "5px");
-						$summary.show();
-					} else {
-						$logicBtns.css("margin-left", "auto");
-						$summary.hide();
-					}
-				};
-				$grid.data("showFilter", doShow);
-				$grid.data("hideFilter", doHide);
-				$grid.data("updateSummary", updateSummary);
-
-				if (curVisible && curVisible[filter.header] === false) doHide();
-				else if (self.storedVisible && self.storedVisible[filter.header] === false) doHide();
-
-				$showHide.on(EVNT_CLICK, function () {
-					if ($grid.is(":hidden")) {
-						doShow();
-					} else {
-						doHide();
-					}
 				});
 
-				$none.on(EVNT_CLICK, function () {
-					$grid.find(".filter-pill").each(function () {
-						$(this).data("setter")(FilterBox._PILL_STATES[2]);
-					});
-					if ($grid.data("doUpdateNestSummary")) $grid.data("doUpdateNestSummary")();
-				});
+			filter.filters.forEach((child, i) => {
+				const $ch = this._get$outerItem(i, child, $miniView, filter.categoryName, filter);
+				$parent.append($ch);
+			});
 
-				$all.on(EVNT_CLICK, function () {
-					$grid.find(".filter-pill").each(function () {
-						$(this).data("setter")(FilterBox._PILL_STATES[1]);
-					});
-					if ($grid.data("doUpdateNestSummary")) $grid.data("doUpdateNestSummary")();
-				});
+			const numHidden = filter.filters.map(it => it.header).filter(it => {
+				if (this._curState.visible) {
+					return this._curState.visible[it] === false
+				} else if (this.storedVisible) {
+					return this.storedVisible[it] === false;
+				}
+			}).length;
+			if (numHidden) $btnShowHideGroup.text("顯示");
+			updateSummary();
 
-				$clear.on(EVNT_CLICK, function () {
-					$grid.find(".filter-pill").each(function () {
-						$(this).data("setter")(FilterBox._PILL_STATES[0]);
-					});
-					if ($grid.data("doUpdateNestSummary")) $grid.data("doUpdateNestSummary")();
-				});
+			$parent.data(
+				"resetCombiner",
+				function () {
+					filter._originalMode === "or" ? setCombineOr() : setCombineAnd();
+				}
+			);
 
-				$default.on(EVNT_CLICK, function () {
-					self._reset(filter.header);
-					if ($grid.data("doUpdateNestSummary")) $grid.data("doUpdateNestSummary")();
-				});
+			$parent.data(
+				"setCombiner",
+				function (mode) {
+					mode === "or" ? setCombineOr() : setCombineAnd();
+				}
+			);
 
-				return $line;
+			if (this._curState.groupState) {
+				const state = this._curState.groupState[filter.categoryName];
+				if (state && state.mode) {
+					$parent.data("setCombiner")(state.mode);
+				}
+			} else if (this.storedGroupState) {
+				const state = this.storedGroupState[filter.categoryName];
+				if (state && state.mode) {
+					$parent.data("setCombiner")(state.mode);
+				}
 			}
 
-			function makePillGrid (isGrouped) {
-				const $pills = [];
-				const $grid = $(`<div class="pill-grid"/>`);
-				const $subGrids = [];
-				const $subGridDividers = [];
-				let gridIndex = 0;
+			filter.$ele = $parent;
+			this.multiHeaders[filter.categoryName] = {ele: $parent, filter: filter};
+			return $parent;
+		} else if (filter instanceof RangeFilter) {
+			const $outI = $(`<li class="filter-item"/>`);
 
-				function addDivider () {
-					const $hr = $(`<hr class="pill-grid-subs-divider">`).appendTo($grid);
-					$subGridDividers.push($hr);
+			this.headers[filter.header] = {outer: $outI, filter: filter};
+			const $wrpSlider = makeSliderWrapper.bind(this)(filter.headerName? filter.headerName: filter.header);
+			this.headers[filter.header].ele = $wrpSlider;
+			if (parent) parent.eles.push($wrpSlider);
+
+			const $headerLine = makeSliderHeaderLine.bind(this)(idx, $wrpSlider);
+			this.headers[filter.header].$header = $headerLine;
+
+			$outI.append($headerLine);
+			$outI.append($wrpSlider);
+
+			return $outI;
+		} else if (filter instanceof GroupedFilter || filter instanceof Filter) {
+			const isGrouped = filter instanceof GroupedFilter;
+			const $outI = $(`<li class="filter-item"/>`);
+
+			this.headers[filter.header] = {outer: $outI, filter: filter};
+			const $grid = makePillGrid.bind(this)(isGrouped);
+			this.headers[filter.header].ele = $grid;
+			if (parent) parent.eles.push($grid);
+
+			const $headerLine = makeHeaderLine.bind(this)(idx, $grid);
+			this.headers[filter.header].$header = $headerLine;
+
+			$outI.append($headerLine);
+			$outI.append($grid);
+
+			return $outI;
+		}
+
+		function _addGroupLabel (idx, $line) {
+			$(`
+					<div class="multi-compact-hidden">${namePrefix ? `<span class="text-muted">${namePrefix} <span class="group-comb-toggle">(群組 ${parent.mode.toUpperCase()})</span>: </span>` : ""}<span>${filter.headerName ? filter.headerName : filter.header}</span></div>
+				`).appendTo($line);
+
+			$line.find(`.group-comb-toggle`).click(function () {
+				const $this = $(this);
+				if ($this.text() === "(群組 AND)") {
+					parent.$ele.data("setCombiner")("or");
+				} else {
+					parent.$ele.data("setCombiner")("and");
 				}
+			});
+		}
 
-				function addGroup (bump) {
-					if (bump) {
-						filter.numGroups++;
-						addDivider();
+		function makeHeaderLine (idx, $grid) {
+			const minimalClass = filter.minimalUI ? "fltr__minimal-hide" : "";
+			const $line = $(`<div class="fltr__h ${minimalClass} multi-compact-hidden"/>`);
+			_addGroupLabel(idx, $line);
+
+			function makeAndOrBtn (defState, tooltip) {
+				const state = {mode: defState};
+				const $btn = $(`<button class="btn btn-default btn-xs ${minimalClass} btn-meta" style="width: 3em;" title="${tooltip}">${defState}</button>`)
+					.click(() => setState(state.mode === "OR" ? "AND" : "OR"));
+				const setState = (val) => {
+					val = (val || "OR").toUpperCase();
+					state.mode = val;
+					$btn.text(val);
+				};
+				const getState = () => state.mode;
+				return [$btn, setState, getState];
+			}
+
+			const [$btnAndOrBlue, setStateBlue, getStateBlue] = makeAndOrBtn("OR", "Positive matches mode for this filter. AND requires all blues to match, OR requires at least one blue to match.");
+			this.headers[filter.header].getAndOrBlue = getStateBlue;
+			this.headers[filter.header].setAndOrBlue = setStateBlue;
+
+			const [$btnAndOrRed, setStateRed, getStateRed] = makeAndOrBtn("OR", "Negative match mode for this filter. AND requires all reds to match, OR requires at least one red to match.");
+			this.headers[filter.header].getAndOrRed = getStateRed;
+			this.headers[filter.header].setAndOrRed = setStateRed;
+
+			// set AND/OR state
+			// If re-render, use previous values. Otherwise, if there's stored values, stored values. Otherwise, do nothing (use the default OR/OR)
+			if (this._curState.values && this._curState.values[filter.header]) {
+				const andOr = this._curState.values[filter.header]._andOr || {blue: "OR", red: "OR"};
+				setStateBlue(andOr.blue);
+				setStateRed(andOr.red);
+			} else if (this.storedValues && this.storedValues[filter.header] && this.storedValues[filter.header]._andOr !== undefined) {
+				const andOr = this.storedValues[filter.header]._andOr || {blue: "OR", red: "OR"};
+				setStateBlue(andOr.blue);
+				setStateRed(andOr.red);
+			}
+
+			$grid.data("resetMeta", () => {
+				setStateBlue("OR");
+				setStateRed("OR");
+			});
+
+			const $wrpRhs = $(`<div class="flex-v-center"/>`).appendTo($line);
+
+			const $quickBtns = $(`<span class="btn-group quick-btns ml-2"/>`).appendTo($wrpRhs);
+			const $all = $(`<button class="btn btn-default btn-xs btn-meta ${minimalClass}">全選</button>`).appendTo($quickBtns);
+			const $clear = $(`<button class="btn btn-default btn-xs btn-meta ${minimalClass}">清除</button>`).appendTo($quickBtns);
+			const $none = $(`<button class="btn btn-default btn-xs btn-meta ${minimalClass}">全無</button>`).appendTo($quickBtns);
+			const $default = $(`<button class="btn btn-default btn-xs btn-meta ${minimalClass}">預設</button>`).appendTo($quickBtns);
+
+			const $summary = $(`<span class="summary ml-2"/>`).appendTo($wrpRhs);
+			const $summaryInclude = $(`<span class="filter__summary_item filter__summary_item--include" title="Hidden includes"/>`).appendTo($summary);
+			const $summarySpacer = $(`<span class="filter__summary_item_spacer"/>`).appendTo($summary);
+			const $summaryExclude = $(`<span class="filter__summary_item filter__summary_item--exclude" title="Hidden excludes"/>`).appendTo($summary);
+			$summary.hide();
+
+			const $logicBtns = $(`<span class="btn-group andor-btns ml-2"/>`).append($btnAndOrBlue).append($btnAndOrRed).appendTo($wrpRhs);
+
+			const $showHide = $(`<button class="btn btn-default btn-xs btn-meta show-hide-button ${minimalClass} ml-2">隱藏</button>`).appendTo($wrpRhs);
+
+			// FIXME this bugs out in some unknown cases
+			const doShow = () => {
+				$showHide.text("隱藏");
+				$grid.show();
+				$quickBtns.show();
+				$summary.hide();
+			};
+			const doHide = () => {
+				$showHide.text("顯示");
+				$grid.hide();
+				$quickBtns.hide();
+				updateSummary();
+			};
+			const updateSummary = () => {
+				return null; // HZ: Don't need summary, it is ugly
+				const counts = $grid.data("getCounts")();
+				if (counts.yes > 0 || counts.no > 0) {
+					if (counts.yes > 0) {
+						$summaryInclude.prop("title", `${counts.yes} hidden 'required' tag${counts.yes > 1 ? "s" : ""}`);
+						$summaryInclude.text(counts.yes);
+						$summaryInclude.show();
+					} else {
+						$summaryInclude.hide();
 					}
-					$subGrids[gridIndex] = $(`<div class="pill-grid-sub"/>`).appendTo($grid);
-					if (gridIndex + 1 < filter.numGroups) addDivider();
-					if (bump) gridIndex++;
+					if (counts.yes > 0 && counts.no > 0) {
+						$summarySpacer.show();
+					} else {
+						$summarySpacer.hide();
+					}
+					if (counts.no > 0) {
+						$summaryExclude.prop("title", `${counts.no} hidden 'excluded' tag${counts.no > 1 ? "s" : ""}`);
+						$summaryExclude.text(counts.no);
+						$summaryExclude.show();
+					} else {
+						$summaryExclude.hide();
+					}
+					$summary.show();
+				} else {
+					$summary.hide();
 				}
+			};
+			$grid.data("showFilter", doShow);
+			$grid.data("hideFilter", doHide);
+			$grid.data("updateSummary", updateSummary);
 
-				function cycleState ($pill, $miniPill, forward) {
-					const curIndex = FilterBox._PILL_STATES.indexOf($pill.attr("state"));
+			if (this._curState.visible && this._curState.visible[filter.header] === false) doHide();
+			else if (this.storedVisible && this.storedVisible[filter.header] === false) doHide();
 
-					let newIndex = forward ? curIndex + 1 : curIndex - 1;
-					if (newIndex >= FilterBox._PILL_STATES.length) newIndex = 0;
-					else if (newIndex < 0) newIndex = FilterBox._PILL_STATES.length - 1;
-					$pill.attr("state", FilterBox._PILL_STATES[newIndex]);
-					$miniPill.attr("state", FilterBox._PILL_STATES[newIndex]);
+			$showHide.click(function () {
+				if ($grid.is(":hidden")) {
+					doShow();
+				} else {
+					doHide();
 				}
+			});
 
-				const nests = {};
-				const nested = filter.items.filter(it => it instanceof FilterItem && it.nest).map(it => ({nest: it.nest, nestHidden: !!it.nestHidden})).sort((a, b) => SortUtil.ascSortLower(a.nest, b.nest));
-				let updateNestStats = null;
-				if (nested.length) {
-					const $subGrid = $(`<div class="pill-grid-sub"/>`).appendTo($grid);
-					nested.forEach(nestObj => {
-						const nest = nestObj.nest
-						if (!nests[nest]) {
-							const $nest = $(`<div class="filter__btn_nest">${filter.displayNestFn(nest)} [${nestObj.nestHidden ? "\u2212" : "+"}]</div>`).click(() => {
-								$nest.html($nest.html().replace(/\[[\u2212+]]$/, (it) => it === "[+]" ? "[\u2212]" : "[+]"))
-								const self = nests[nest];
-								self.$children.forEach($e => $e.toggle());
-								$subGrids.forEach(($sg, i) => {
-									$subGridDividers[i].toggle(!!$sg.find(`.filter-pill:visible`).length);
-								});
-								updateNestStats();
-							}).appendTo($grid);
+			$none.click(function () {
+				$grid.find(".filter-pill").each(function () {
+					$(this).data("setter")(FilterBox._PILL_STATES[2]);
+				});
+				if ($grid.data("doUpdateNestSummary")) $grid.data("doUpdateNestSummary")();
+			});
 
-							nests[nest] = {
-								_key: nest,
-								$nest,
-								$children: [],
-								nestHidden: nestObj.nestHidden
-							};
+			$all.click(function () {
+				$grid.find(".filter-pill").each(function () {
+					$(this).data("setter")(FilterBox._PILL_STATES[1]);
+				});
+				if ($grid.data("doUpdateNestSummary")) $grid.data("doUpdateNestSummary")();
+			});
 
-							$subGrid.append($nest);
-						}
-					});
+			$clear.click(function () {
+				$grid.find(".filter-pill").each(function () {
+					$(this).data("setter")(FilterBox._PILL_STATES[0]);
+				});
+				if ($grid.data("doUpdateNestSummary")) $grid.data("doUpdateNestSummary")();
+			});
 
-					const $nestStats = $(`<div class="filter__summary_nest"/>`).appendTo($subGrid);
+			$default.click(() => {
+				this._reset(filter.header);
+				if ($grid.data("doUpdateNestSummary")) $grid.data("doUpdateNestSummary")();
+			});
 
-					updateNestStats = () => {
-						let hiddenHigh = 0;
-						let hiddenLow = 0;
-						Object.keys(nests).forEach(k => {
-							const nest = nests[k];
-							const nestStats = {high: 0, low: 0, total: 0};
+			return $line;
+		}
 
-							nest.$children.forEach($c => {
-								const state = $c.attr("state");
-								nestStats.total++;
+		function makePillGrid (isGrouped) {
+			const $pills = [];
+			const $grid = $(`<div class="pill-grid"/>`);
+			const $subGrids = [];
+			const $subGridDividers = [];
+			let gridIndex = 0;
 
-								if (state === FilterBox._PILL_STATES[1]) {
-									if ($c.is(":hidden")) {
-										hiddenHigh++;
-										nestStats.high++;
-									}
-								} else if (state === FilterBox._PILL_STATES[2]) {
-									if ($c.is(":hidden")) {
-										hiddenLow++;
-										nestStats.low++;
-									}
-								}
+			function addDivider () {
+				const $hr = $(`<hr class="pill-grid-subs-divider">`).appendTo($grid);
+				$subGridDividers.push($hr);
+			}
+
+			function addGroup (bump) {
+				if (bump) {
+					filter.numGroups++;
+					addDivider();
+				}
+				$subGrids[gridIndex] = $(`<div class="pill-grid-sub"/>`).appendTo($grid);
+				if (gridIndex + 1 < filter.numGroups) addDivider();
+				if (bump) gridIndex++;
+			}
+
+			function cycleState ($pill, $miniPill, forward) {
+				const curIndex = FilterBox._PILL_STATES.indexOf($pill.attr("state"));
+
+				let newIndex = forward ? curIndex + 1 : curIndex - 1;
+				if (newIndex >= FilterBox._PILL_STATES.length) newIndex = 0;
+				else if (newIndex < 0) newIndex = FilterBox._PILL_STATES.length - 1;
+				$pill.attr("state", FilterBox._PILL_STATES[newIndex]);
+				$miniPill.attr("state", FilterBox._PILL_STATES[newIndex]);
+			}
+
+			const nests = {};
+			const nested = filter.items.filter(it => it instanceof FilterItem && it.nest).map(it => ({nest: it.nest, nestHidden: !!it.nestHidden})).sort((a, b) => SortUtil.ascSortLower(a.nest, b.nest));
+			let updateNestStats = null;
+			if (nested.length) {
+				const $subGrid = $(`<div class="pill-grid-sub"/>`).appendTo($grid);
+				nested.forEach(nestObj => {
+					const nest = nestObj.nest
+					if (!nests[nest]) {
+						const $nest = $(`<div class="filter__btn_nest">${filter.displayNestFn(nest)} [${nestObj.nestHidden ? "\u2212" : "+"}]</div>`).click(() => {
+							$nest.html($nest.html().replace(/\[[\u2212+]]$/, (it) => it === "[+]" ? "[\u2212]" : "[+]"))
+							const myNest = nests[nest];
+							myNest.$children.forEach($e => $e.toggle());
+							$subGrids.forEach(($sg, i) => {
+								$subGridDividers[i].toggle(!!$sg.find(`.filter-pill:visible`).length);
 							});
+							updateNestStats();
+						}).appendTo($grid);
 
-							const allHigh = nestStats.total === nestStats.high;
-							const allLow = nestStats.total === nestStats.low
-							nest.$nest.toggleClass("filter__btn_nest--include-all", allHigh)
-								.toggleClass("filter__btn_nest--exclude-all", allLow)
-								.toggleClass("filter__btn_nest--include", !!(!allHigh && !allLow && nestStats.high && !nestStats.low))
-								.toggleClass("filter__btn_nest--exclude", !!(!allHigh && !allLow && !nestStats.high && nestStats.low))
-								.toggleClass("filter__btn_nest--both", !!(!allHigh && !allLow && nestStats.high && nestStats.low));
+						nests[nest] = {
+							_key: nest,
+							$nest,
+							$children: [],
+							nestHidden: nestObj.nestHidden
+						};
+
+						$subGrid.append($nest);
+					}
+				});
+
+				const $nestStats = $(`<div class="filter__summary_nest"/>`).appendTo($subGrid);
+
+				updateNestStats = () => {
+					let hiddenHigh = 0;
+					let hiddenLow = 0;
+					Object.keys(nests).forEach(k => {
+						const nest = nests[k];
+						const nestStats = {high: 0, low: 0, total: 0};
+
+						nest.$children.forEach($c => {
+							const state = $c.attr("state");
+							nestStats.total++;
+
+							if (state === FilterBox._PILL_STATES[1]) {
+								if ($c.is(":hidden")) {
+									hiddenHigh++;
+									nestStats.high++;
+								}
+							} else if (state === FilterBox._PILL_STATES[2]) {
+								if ($c.is(":hidden")) {
+									hiddenLow++;
+									nestStats.low++;
+								}
+							}
 						});
 
-						$nestStats.html(`
+						const allHigh = nestStats.total === nestStats.high;
+						const allLow = nestStats.total === nestStats.low
+						nest.$nest.toggleClass("filter__btn_nest--include-all", allHigh)
+							.toggleClass("filter__btn_nest--exclude-all", allLow)
+							.toggleClass("filter__btn_nest--include", !!(!allHigh && !allLow && nestStats.high && !nestStats.low))
+							.toggleClass("filter__btn_nest--exclude", !!(!allHigh && !allLow && !nestStats.high && nestStats.low))
+							.toggleClass("filter__btn_nest--both", !!(!allHigh && !allLow && nestStats.high && nestStats.low));
+					});
+
+					$nestStats.html(`
 							${hiddenHigh ? `<span class="filter__summary_item filter__summary_item--include" title="${hiddenHigh} hidden 'required' tag${hiddenHigh === 1 ? "" : "s"}">${hiddenHigh}</span>` : ""}
 							${hiddenHigh && hiddenLow ? `<span class="filter__summary_item_spacer"></span>` : ""}
 							${hiddenLow ? `<span class="filter__summary_item filter__summary_item--exclude" title="${hiddenLow} hidden 'excluded' tag${hiddenHigh === 1 ? "" : "s"}">${hiddenLow}</span>` : ""}
 						`);
-					};
+				};
 
-					$grid.data("doUpdateNestSummary", updateNestStats);
+				$grid.data("doUpdateNestSummary", updateNestStats);
 
-					addDivider();
-					self.headers[filter.header].getNestVisibility = () => {
-						const outObj = {};
-						Object.values(nests).forEach(nObj => {
-							const hidden = nObj.$nest.text().includes("[+]");
-							outObj[nObj._key] = hidden;
-						});
-						return outObj;
-					};
+				addDivider();
+				this.headers[filter.header].getNestVisibility = () => {
+					const outObj = {};
+					Object.values(nests).forEach(nObj => {
+						const hidden = nObj.$nest.text().includes("[+]");
+						outObj[nObj._key] = hidden;
+					});
+					return outObj;
+				};
+			}
+
+			if (isGrouped) {
+				$grid.addClass(`pill-grid-subs`);
+				for (; gridIndex < filter.numGroups; ++gridIndex) addGroup();
+			}
+
+			for (const item of filter.items) {
+				const iText = item instanceof FilterItem ? item.item : item;
+				const iChangeFn = item instanceof FilterItem ? item.changeFn : null;
+				const display = filter.displayFn ? filter.displayFn(item) : iText;
+
+				const $pill = $(`<div class="filter-pill">${display}</div>`).data("value", iText).attr("state", FilterBox._PILL_STATES[0]);
+				const $miniPill = $(`<div class="mini-pill">${display}</div>`).attr("state", FilterBox._PILL_STATES[0]);
+
+				$miniPill.click(() => {
+					$pill.attr("state", FilterBox._PILL_STATES[0]);
+					$miniPill.attr("state", FilterBox._PILL_STATES[0]);
+					handlePillChange(iText, iChangeFn, FilterBox._PILL_STATES[0]);
+					$grid.data("updateSummary")();
+					this._fireValChangeEvent();
+				});
+
+				$pill.click(function () {
+					cycleState($pill, $miniPill, true);
+					handlePillChange(iText, iChangeFn, $pill.attr("state"));
+				});
+
+				$pill.on("contextmenu", function (e) {
+					if (e.ctrlKey) return true;
+					e.preventDefault();
+					cycleState($pill, $miniPill, false);
+					handlePillChange(iText, iChangeFn, $pill.attr("state"));
+				});
+
+				// bind getters and resetters
+				$pill.data(
+					"setter",
+					function (toVal) {
+						_setter($pill, $miniPill, toVal, iText, iChangeFn, false);
+					}
+				);
+				$pill.data("resetter",
+					function () {
+						_resetter($pill, $miniPill, iText, iChangeFn, false);
+					}
+				);
+
+				// set pill state
+				// If re-render, use previous values. Otherwise, if there's stored values, stored values. Otherwise, default the pills
+				if (this._curState.values && this._curState.values[filter.header]) {
+					let valNum = this._curState.values[filter.header][iText];
+					if (valNum < 0) valNum = 2;
+					_setter($pill, $miniPill, FilterBox._PILL_STATES[valNum], iText, iChangeFn, true);
+				} else if (this.storedValues && this.storedValues[filter.header] && this.storedValues[filter.header][iText] !== undefined) {
+					let valNum = this.storedValues[filter.header][iText];
+					if (valNum < 0) valNum = 2;
+					_setter($pill, $miniPill, FilterBox._PILL_STATES[valNum], iText, iChangeFn, true);
+				} else {
+					_resetter($pill, $miniPill, iText, iChangeFn, true);
 				}
+
+				// add a class to mark any items that are default deselected (used to add visual difference)
+				tagDefaults($miniPill, iText);
+
+				const nest = item instanceof FilterItem ? item.nest : null;
+				const handleNest = () => {
+					if (nest) nests[nest].$children.push($pill);
+				};
 
 				if (isGrouped) {
-					$grid.addClass(`pill-grid-subs`);
-					for (; gridIndex < filter.numGroups; ++gridIndex) addGroup();
-				}
-
-				for (const item of filter.items) {
-					const iText = item instanceof FilterItem ? item.item : item;
-					const iChangeFn = item instanceof FilterItem ? item.changeFn : null;
-					const display = filter.displayFn ? filter.displayFn(item) : Parser.translateKeyToDisplay(iText);
-
-					const $pill = $(`<div class="filter-pill">${display}</div>`).data("value", iText).attr("state", FilterBox._PILL_STATES[0]);
-					const $miniPill = $(`<div class="mini-pill">${display}</div>`).attr("state", FilterBox._PILL_STATES[0]);
-
-					$miniPill.on(EVNT_CLICK, function () {
-						$pill.attr("state", FilterBox._PILL_STATES[0]);
-						$miniPill.attr("state", FilterBox._PILL_STATES[0]);
-						handlePillChange(iText, iChangeFn, FilterBox._PILL_STATES[0]);
-						$grid.data("updateSummary")();
-						self._fireValChangeEvent();
-					});
-
-					$pill.on(EVNT_CLICK, function () {
-						cycleState($pill, $miniPill, true);
-						handlePillChange(iText, iChangeFn, $pill.attr("state"));
-					});
-
-					$pill.on("contextmenu", function (e) {
-						if (e.ctrlKey) return true;
-						e.preventDefault();
-						cycleState($pill, $miniPill, false);
-						handlePillChange(iText, iChangeFn, $pill.attr("state"));
-					});
-
-					// bind getters and resetters
-					$pill.data(
-						"setter",
-						function (toVal) {
-							_setter($pill, $miniPill, toVal, iText, iChangeFn, false);
-						}
-					);
-					$pill.data("resetter",
-						function () {
-							_resetter($pill, $miniPill, iText, iChangeFn, false);
-						}
-					);
-
-					// If re-render, use previous values. Otherwise, if there's stored values, stored values. Otherwise, default the pills
-					if (curValues) {
-						let valNum = curValues[filter.header][iText];
-						if (valNum < 0) valNum = 2;
-						_setter($pill, $miniPill, FilterBox._PILL_STATES[valNum], iText, iChangeFn, true);
-					} else if (self.storedValues && self.storedValues[filter.header] && self.storedValues[filter.header][iText] !== undefined) {
-						let valNum = self.storedValues[filter.header][iText];
-						if (valNum < 0) valNum = 2;
-						_setter($pill, $miniPill, FilterBox._PILL_STATES[valNum], iText, iChangeFn, true);
-					} else {
-						_resetter($pill, $miniPill, iText, iChangeFn, true);
-					}
-
-					// add a class to mark any items that are default deselected (used to add visual difference)
-					tagDefaults($miniPill, iText);
-
-					const nest = item instanceof FilterItem ? item.nest : null;
-					const handleNest = () => {
-						if (nest) nests[nest].$children.push($pill);
-					};
-
-					if (isGrouped) {
-						const group = Number(item instanceof FilterItem && item.group != null ? item.group : filter.groupFn(iText));
-						while (group > $subGrids.length - 1) addGroup(true);
-						handleNest();
-						$subGrids[group].append($pill)
-					} else {
-						handleNest();
-						$grid.append($pill);
-					}
-
-					$miniView.append($miniPill);
-					$pills.push($pill);
-				}
-
-				Object.values(nests).forEach(nest => {
-					if (curNestState) {
-						const isHidden = MiscUtil.getProperty(curNestState, filter.header, nest._key);
-						if (isHidden) nest.$nest.trigger("click");
-					} else if (self.storedNestState) {
-						const isHidden = MiscUtil.getProperty(self.storedNestState, filter.header, nest._key);
-						if (isHidden) nest.$nest.trigger("click");
-					} else if (nest.nestHidden) nest.$nest.trigger("click");
-				});
-
-				function tagDefaults ($miniPill, iText) {
-					if (filter.deselFn && filter.deselFn(iText)) {
-						$miniPill.addClass("default-desel");
-					} else if (filter.selFn && filter.selFn(iText)) {
-						$miniPill.addClass("default-sel");
-					}
-				}
-
-				// allows silent (pill change function not triggered) sets
-				function _setter ($pill, $miniPill, toVal, iText, iChangeFn, silent) {
-					$pill.attr("state", toVal);
-					$miniPill.attr("state", toVal);
-					if (!silent) {
-						handlePillChange(iText, iChangeFn, toVal);
-					}
-				}
-
-				// allows silent (pill change function not triggered) resets
-				function _resetter ($pill, $miniPill, iText, iChangeFn, silent) {
-					if (filter.deselFn && filter.deselFn(iText)) {
-						$pill.attr("state", "no");
-						$miniPill.attr("state", "no");
-					} else if (filter.selFn && filter.selFn(iText)) {
-						$pill.attr("state", "yes");
-						$miniPill.attr("state", "yes");
-					} else {
-						$pill.attr("state", "ignore");
-						$miniPill.attr("state", "ignore");
-					}
-					if (!silent) {
-						handlePillChange(iText, iChangeFn, $pill.attr("state"));
-					}
-				}
-
-				function handlePillChange (iText, iChangeFn, val) {
-					if (iChangeFn) {
-						iChangeFn(iText, val);
-					}
-				}
-
-				$grid.data(
-					"getValues",
-					function () {
-						const out = {};
-						const _totals = {yes: 0, no: 0, ignored: 0};
-						$pills.forEach(function (p) {
-							const state = p.attr("state");
-							out[p.data("value")] = state === "yes" ? 1 : state === "no" ? -1 : 0;
-							const countName = state === "yes" ? "yes" : state === "no" ? "no" : "ignored";
-							_totals[countName] = _totals[countName] + 1;
-						});
-						out._totals = _totals;
-						out._andOr = {
-							blue: self.headers[filter.header].getAndOrBlue(),
-							red: self.headers[filter.header].getAndOrRed()
-						};
-						return out;
-					}
-				);
-
-				$grid.data(
-					"isVisible",
-					function () {
-						return $grid.css("display") !== "none";
-					}
-				);
-
-				$grid.data(
-					"isFiltering",
-					function () {
-						const counts = $grid.data("getCounts")();
-						return counts.yes || counts.no;
-					}
-				);
-
-				$grid.data(
-					"handleUpdateCombiner",
-					function (mode) {
-						if (parent) {
-							self.headers[filter.header].$header.find(`.group-comb-toggle`).each((i, e) => {
-								$(e).text(`(group ${mode.toUpperCase()})`);
-							});
-						}
-					}
-				);
-
-				$grid.data(
-					"setValues",
-					function (toVal) {
-						const toNo = toVal.filter(it => it[0] === "!").map(it => it.slice(1));
-						const toYes = toVal.filter(it => it[0] !== "!");
-						$pills.forEach((p) => {
-							if (toYes.includes(String(p.data("value")).toLowerCase())) {
-								$(p).data("setter")(FilterBox._PILL_STATES[1])
-							} else if (toNo.includes(String(p.data("value")).toLowerCase())) {
-								$(p).data("setter")(FilterBox._PILL_STATES[2])
-							} else {
-								$(p).data("setter")(FilterBox._PILL_STATES[0])
-							}
-						});
-						if ($grid.data("doUpdateNestSummary")) $grid.data("doUpdateNestSummary")();
-					}
-				);
-
-				$grid.data(
-					"getCounts",
-					function () {
-						const out = {"yes": 0, "no": 0};
-						$pills.forEach(function (p) {
-							const state = p.attr("state");
-							if (out[state] !== undefined) out[state] = out[state] + 1;
-						});
-						return out;
-					}
-				);
-
-				$grid.data(
-					"resetValues",
-					function () {
-						$pills.forEach(function (p) {
-							p.data("resetter")();
-						});
-						if ($grid.data("doUpdateNestSummary")) $grid.data("doUpdateNestSummary")();
-					}
-				);
-
-				return $grid;
-			}
-
-			function makeSliderHeaderLine (idx, $wrpSlide) {
-				const $line = $(`<div class="h-wrap multi-compact-hidden"/>`);
-				_addGroupLabel(idx, $line);
-
-				const $quickBtns = $(`<span class="btn-group quick-btns" style="margin-left: auto;"/>`).appendTo($line);
-				$(`<button class="btn btn-default btn-xs multi-compact-hidden btn-meta" style="border-radius: 3px;">重置</button>`)
-					.appendTo($quickBtns)
-					.click(() => {
-						$wrpSlide.data("resetValues")();
-					});
-
-				const $summary = $(`<span class="summary" style="margin-left: auto;"/>`).appendTo($line);
-				const $summaryRange = $(`<span class="filter__summary_item filter__summary_item--include multi-compact-hidden" title="Selected range"/>`).appendTo($summary);
-				$summary.hide();
-
-				const $showHide = $(`<button class="btn btn-default btn-xs show-hide-button multi-compact-hidden btn-meta" style="margin-left: 5px;">隱藏</button>`).appendTo($line);
-
-				const doHide = () => {
-					$showHide.text("顯示");
-					$wrpSlide.hide();
-					$quickBtns.hide();
-					updateSummary();
-					$summary.show();
-				};
-				const doShow = () => {
-					$showHide.text("隱藏");
-					$wrpSlide.show();
-					$quickBtns.show();
-					$summary.hide();
-				};
-				const updateSummary = () => {
-					const vals = $wrpSlide.data("getValues")();
-					const dispMax = () => filter.labels ? filter.items[vals.max] : vals.max;
-					const dispMin = () => filter.labels ? filter.items[vals.min] : vals.min;
-					$summaryRange.text(vals.min === filter.min && vals.max === filter.max ? "" : vals.min === filter.min ? `≤ ${dispMax()}` : vals.max === filter.max ? `≥ ${dispMin()}` : `${dispMin()}-${dispMax()}`);
-				};
-				$wrpSlide.data("showFilter", doShow);
-				$wrpSlide.data("hideFilter", doHide);
-				$wrpSlide.data("updateSummary", updateSummary);
-
-				if (curVisible && curVisible[filter.header] === false) doHide();
-				else if (self.storedVisible && self.storedVisible[filter.header] === false) doHide();
-
-				$showHide.on(EVNT_CLICK, function () {
-					if ($wrpSlide.is(":hidden")) doShow();
-					else doHide();
-				});
-
-				return $line;
-			}
-
-			function makeSliderWrapper () {
-				const $wrp = $(`<div class="pill-grid pill-grid--flex"/>`);
-
-				const $lblInline = $(`<div class="multi-compact-visible range-inline-label">${filter.header}</div>`).appendTo($wrp);
-				const $sld = $(`<div class="filter-slider"/>`).appendTo($wrp);
-				const subSliderOpts = {};
-				if (filter.labels) {
-					subSliderOpts.labels = filter.items
-				} else if (filter.allowGreater) {
-					subSliderOpts.labels = {
-						last: `${filter.max}+`
-					}
-				}
-				if (filter.suffix) {
-					subSliderOpts.suffix = filter.suffix;
-				}
-				$sld.slider({
-					min: filter.min,
-					max: filter.max,
-					range: true,
-					values: [filter.min, filter.max]
-				}).slider("pips", subSliderOpts).slider("float", subSliderOpts);
-				filter.$slider = $sld;
-
-				const $miniPillMin = $(`<div class="mini-pill" state="ignore"/>`);
-				const $miniPillMax = $(`<div class="mini-pill" state="ignore"/>`);
-
-				function checkUpdateMiniPills () {
-					const [min, max] = $sld.slider("values");
-
-					if (min === max && filter.min !== filter.max) {
-						$miniPillMin.attr("state", FilterBox._PILL_STATES[1]).text(`${filter.header} = ${filter.labels ? filter.items[min] : min}`);
-						$miniPillMax.attr("state", FilterBox._PILL_STATES[0]);
-					} else {
-						if (min > filter.min) $miniPillMin.attr("state", FilterBox._PILL_STATES[1]).text(`${filter.header} ≥ ${filter.labels ? filter.items[min] : min}`);
-						else $miniPillMin.attr("state", FilterBox._PILL_STATES[0]);
-
-						if (max < filter.max) $miniPillMax.attr("state", FilterBox._PILL_STATES[1]).text(`${filter.header} ≤ ${filter.labels ? filter.items[max] : max}`);
-						else $miniPillMax.attr("state", FilterBox._PILL_STATES[0]);
-					}
-				}
-
-				$sld.slider().on("slidechange", checkUpdateMiniPills);
-
-				$miniPillMin.on(EVNT_CLICK, function () {
-					$miniPillMin.attr("state", FilterBox._PILL_STATES[0]);
-					const [min, max] = $sld.slider("values");
-					$sld.slider("values", [filter.min, max]);
-					$wrp.data("updateSummary")();
-					self._fireValChangeEvent();
-				}).appendTo($miniView);
-				$miniPillMax.on(EVNT_CLICK, function () {
-					$miniPillMax.attr("state", FilterBox._PILL_STATES[0]);
-					const [min, max] = $sld.slider("values");
-					$sld.slider("values", [min, filter.max]);
-					self._fireValChangeEvent();
-				}).appendTo($miniView);
-
-				$wrp.data(
-					"resetValues",
-					function () {
-						$sld.slider("values", [filter.min, filter.max]);
-						checkUpdateMiniPills();
-					}
-				);
-
-				$wrp.data(
-					"getValues",
-					function () {
-						const out = {};
-						const [min, max] = $sld.slider("values");
-						out.min = min;
-						out.max = max;
-						out.isMinVal = min === filter.min;
-						out.isMaxVal = max === filter.max;
-						return out;
-					}
-				);
-
-				$wrp.data(
-					"isVisible",
-					function () {
-						return $wrp.css("display") !== "none";
-					}
-				);
-
-				$wrp.data(
-					"isFiltering",
-					function () {
-						const values = $wrp.data("getValues")();
-						return values.min !== filter.min || values.max !== filter.max;
-					}
-				);
-
-				$wrp.data(
-					"handleUpdateCombiner",
-					function (mode) {
-						if (parent) {
-							self.headers[filter.header].$header.find(`.group-comb-toggle`).each((i, e) => {
-								$(e).text(`(group ${mode.toUpperCase()})`);
-							});
-						}
-					}
-				);
-
-				$wrp.data(
-					"setValues",
-					function (toVal) {
-						if (filter.labels) {
-							const idxs = toVal.map(it => {
-								const idx = filter.items.indexOf(it);
-								return ~idx ? idx : 0;
-							});
-							const min = Math.min(...idxs);
-							const max = Math.max(...idxs);
-							$sld.slider("values", [min, max]);
-						} else {
-							const min = toVal.filter(it => it.startsWith("min")).map(it => it.slice(3));
-							const max = toVal.filter(it => it.startsWith("max")).map(it => it.slice(3));
-							$sld.slider(
-								"values",
-								[
-									min.length ? Math.max(min[0], filter.min) : filter.min,
-									max.length ? Math.min(max[0], filter.max) : filter.max
-								]
-							);
-						}
-						checkUpdateMiniPills();
-					}
-				);
-
-				// If re-render, use previous values. Otherwise, if there's stored values, stored values. Otherwise, default the pills
-				if (curValues) {
-					const min = curValues[filter.header].min;
-					const max = curValues[filter.header].max;
-					$sld.slider("values", [min, max]);
-					checkUpdateMiniPills();
-				} else if (self.storedValues && self.storedValues[filter.header]) {
-					const stored = self.storedValues[filter.header];
-					const min = stored.isMinVal ? filter.min : stored.min || filter.min;
-					const max = stored.isMaxVal ? filter.max : stored.max || filter.max;
-					$sld.slider("values", [min, max]);
-					checkUpdateMiniPills();
+					const group = Number(item instanceof FilterItem && item.group != null ? item.group : filter.groupFn(iText));
+					while (group > $subGrids.length - 1) addGroup(true);
+					handleNest();
+					$subGrids[group].append($pill)
 				} else {
-					$wrp.data("resetValues")();
+					handleNest();
+					$grid.append($pill);
 				}
 
-				return $wrp;
+				$miniView.append($miniPill);
+				$pills.push($pill);
 			}
-		}
 
-		function makeDivider () {
-			return $(`<div class="pill-grid-divider"/>`);
-		}
-
-		function open (self) {
-			$body.css("overflow", "hidden");
-			self.$list.parent().append(self.$disabledOverlay);
-			$outer.show();
-			self.dropdownVisible = true;
-		}
-
-		function close (self) {
-			$body.css("overflow", "");
-			self.$disabledOverlay.detach();
-			self.dropdownVisible = false;
-			$outer.hide();
-			// fire an event when the form is closed
-			self._fireValChangeEvent();
-		}
-
-		function addShowHideHandlers (self) {
-			// watch for the button changing to "open"
-			const $filterToggleButton = $("#filter-toggle-btn");
-			$filterToggleButton.click(() => {
-				open(self);
+			Object.values(nests).forEach(nest => {
+				if (this._curState.nestState) {
+					const isHidden = MiscUtil.getProperty(this._curState.nestState, filter.header, nest._key);
+					if (isHidden) nest.$nest.trigger("click");
+				} else if (this.storedNestState) {
+					const isHidden = MiscUtil.getProperty(this.storedNestState, filter.header, nest._key);
+					if (isHidden) nest.$nest.trigger("click");
+				} else if (nest.nestHidden) nest.$nest.trigger("click");
 			});
 
-			self.$disabledOverlay.off("click").click(() => {
-				close(self);
+			function tagDefaults ($miniPill, iText) {
+				if (filter.deselFn && filter.deselFn(iText)) {
+					$miniPill.addClass("default-desel");
+				} else if (filter.selFn && filter.selFn(iText)) {
+					$miniPill.addClass("default-sel");
+				}
+			}
+
+			// allows silent (pill change function not triggered) sets
+			function _setter ($pill, $miniPill, toVal, iText, iChangeFn, silent) {
+				$pill.attr("state", toVal);
+				$miniPill.attr("state", toVal);
+				if (!silent) {
+					handlePillChange(iText, iChangeFn, toVal);
+				}
+			}
+
+			// allows silent (pill change function not triggered) resets
+			function _resetter ($pill, $miniPill, iText, iChangeFn, silent) {
+				if (filter.deselFn && filter.deselFn(iText)) {
+					$pill.attr("state", "no");
+					$miniPill.attr("state", "no");
+				} else if (filter.selFn && filter.selFn(iText)) {
+					$pill.attr("state", "yes");
+					$miniPill.attr("state", "yes");
+				} else {
+					$pill.attr("state", "ignore");
+					$miniPill.attr("state", "ignore");
+				}
+				if (!silent) {
+					handlePillChange(iText, iChangeFn, $pill.attr("state"));
+				}
+			}
+
+			function handlePillChange (iText, iChangeFn, val) {
+				if (iChangeFn) {
+					iChangeFn(iText, val);
+				}
+			}
+
+			$grid.data(
+				"getValues",
+				() => {
+					const out = {};
+					const _totals = {yes: 0, no: 0, ignored: 0};
+					$pills.forEach(function (p) {
+						const state = p.attr("state");
+						out[p.data("value")] = state === "yes" ? 1 : state === "no" ? -1 : 0;
+						const countName = state === "yes" ? "yes" : state === "no" ? "no" : "ignored";
+						_totals[countName] = _totals[countName] + 1;
+					});
+					out._totals = _totals;
+					out._andOr = {
+						blue: this.headers[filter.header].getAndOrBlue(),
+						red: this.headers[filter.header].getAndOrRed()
+					};
+					// if there's any items selected/deselected
+					out._isActive = out._totals.yes + out._totals.no > 0;
+					return out;
+				}
+			);
+
+			$grid.data("isVisible", () => $grid.css("display") !== "none");
+
+			$grid.data(
+				"isFiltering",
+				function () {
+					const counts = $grid.data("getCounts")();
+					return counts.yes || counts.no;
+				}
+			);
+
+			$grid.data(
+				"handleUpdateCombiner",
+				(mode) => {
+					if (parent) {
+						this.headers[filter.header].$header.find(`.group-comb-toggle`).each((i, e) => {
+							$(e).text(`(群組 ${mode.toUpperCase()})`);
+						});
+					}
+				}
+			);
+
+			$grid.data(
+				"setValues",
+				function (toVal) {
+					const toNo = toVal.filter(it => it[0] === "!").map(it => it.slice(1));
+					const toYes = toVal.filter(it => it[0] !== "!");
+					$pills.forEach((p) => {
+						if (toYes.includes(String(p.data("value")).toLowerCase())) {
+							$(p).data("setter")(FilterBox._PILL_STATES[1])
+						} else if (toNo.includes(String(p.data("value")).toLowerCase())) {
+							$(p).data("setter")(FilterBox._PILL_STATES[2])
+						} else {
+							$(p).data("setter")(FilterBox._PILL_STATES[0])
+						}
+					});
+					if ($grid.data("doUpdateNestSummary")) $grid.data("doUpdateNestSummary")();
+				}
+			);
+
+			$grid.data(
+				"getCounts",
+				function () {
+					const out = {"yes": 0, "no": 0};
+					$pills.forEach(function (p) {
+						const state = p.attr("state");
+						if (out[state] !== undefined) out[state] = out[state] + 1;
+					});
+					return out;
+				}
+			);
+
+			$grid.data(
+				"resetValues",
+				function () {
+					$pills.forEach(function (p) {
+						p.data("resetter")();
+					});
+					if ($grid.data("doUpdateNestSummary")) $grid.data("doUpdateNestSummary")();
+				}
+			);
+
+			return $grid;
+		}
+
+		function makeSliderHeaderLine (idx, $wrpSlide) {
+			const $line = $(`<div class="fltr__h multi-compact-hidden"/>`);
+			_addGroupLabel(idx, $line);
+
+			const $quickBtns = $(`<span class="btn-group quick-btns" style="margin-left: auto;"/>`).appendTo($line);
+			$(`<button class="btn btn-default btn-xs multi-compact-hidden btn-meta" style="border-radius: 3px;">重置</button>`)
+				.appendTo($quickBtns)
+				.click(() => {
+					$wrpSlide.data("resetValues")();
+				});
+
+			const $summary = $(`<span class="summary" style="margin-left: auto;"/>`).appendTo($line);
+			const $summaryRange = $(`<span class="filter__summary_item filter__summary_item--include multi-compact-hidden" title="Selected range"/>`).appendTo($summary);
+			$summary.hide();
+
+			const $showHide = $(`<button class="btn btn-default btn-xs show-hide-button multi-compact-hidden btn-meta" style="margin-left: 5px;">隱藏</button>`).appendTo($line);
+
+			const doHide = () => {
+				$showHide.text("顯示");
+				$wrpSlide.hide();
+				$quickBtns.hide();
+				updateSummary();
+				$summary.show();
+			};
+			const doShow = () => {
+				$showHide.text("隱藏");
+				$wrpSlide.show();
+				$quickBtns.show();
+				$summary.hide();
+			};
+			const updateSummary = () => {
+				const vals = $wrpSlide.data("getValues")();
+				const dispMax = () => filter.labels ? filter.items[vals.max] : vals.max;
+				const dispMin = () => filter.labels ? filter.items[vals.min] : vals.min;
+				$summaryRange.text(vals.min === filter.min && vals.max === filter.max ? "" : vals.min === filter.min ? `≤ ${dispMax()}` : vals.max === filter.max ? `≥ ${dispMin()}` : `${dispMin()}-${dispMax()}`);
+			};
+			$wrpSlide.data("showFilter", doShow);
+			$wrpSlide.data("hideFilter", doHide);
+			$wrpSlide.data("updateSummary", updateSummary);
+
+			if (this._curState.visible && this._curState.visible[filter.header] === false) doHide();
+			else if (this.storedVisible && this.storedVisible[filter.header] === false) doHide();
+
+			$showHide.click(function () {
+				if ($wrpSlide.is(":hidden")) doShow();
+				else doHide();
 			});
 
-			// squash events from the menu, otherwise the dropdown gets hidden when we click inside it
-			$outer.on(EVNT_CLICK, function (e) {
-				e.stopPropagation();
-			});
+			return $line;
 		}
+
+		function makeSliderWrapper () {
+			const $wrp = $(`<div class="pill-grid pill-grid--flex"/>`);
+
+			const $lblInline = $(`<div class="multi-compact-visible range-inline-label">${filter.headerName? filter.headerName: filter.header}</div>`).appendTo($wrp);
+			const $sld = $(`<div class="filter-slider"/>`).appendTo($wrp);
+			const subSliderOpts = {};
+			if (filter.labels) {
+				subSliderOpts.labels = filter.items
+			} else if (filter.allowGreater) {
+				subSliderOpts.labels = {
+					last: `${filter.max}+`
+				}
+			}
+			if (filter.suffix) {
+				subSliderOpts.suffix = filter.suffix;
+			}
+			$sld.slider({
+				min: filter.min,
+				max: filter.max,
+				range: true,
+				values: [filter.min, filter.max]
+			}).slider("pips", subSliderOpts).slider("float", subSliderOpts);
+			filter.$slider = $sld;
+
+			const $miniPillMin = $(`<div class="mini-pill" state="ignore"/>`);
+			const $miniPillMax = $(`<div class="mini-pill" state="ignore"/>`);
+
+			function checkUpdateMiniPills () {
+				const [min, max] = $sld.slider("values");
+
+				if (min === max && filter.min !== filter.max) {
+					$miniPillMin.attr("state", FilterBox._PILL_STATES[1]).text(`${filter.headerName? filter.headerName: filter.header} = ${filter.labels ? filter.items[min] : min}`);
+					$miniPillMax.attr("state", FilterBox._PILL_STATES[0]);
+				} else {
+					if (min > filter.min) $miniPillMin.attr("state", FilterBox._PILL_STATES[1]).text(`${filter.headerName? filter.headerName: filter.header} ≥ ${filter.labels ? filter.items[min] : min}`);
+					else $miniPillMin.attr("state", FilterBox._PILL_STATES[0]);
+
+					if (max < filter.max) $miniPillMax.attr("state", FilterBox._PILL_STATES[1]).text(`${filter.headerName? filter.headerName: filter.header} ≤ ${filter.labels ? filter.items[max] : max}`);
+					else $miniPillMax.attr("state", FilterBox._PILL_STATES[0]);
+				}
+			}
+
+			$sld.slider().on("slidechange", checkUpdateMiniPills);
+
+			$miniPillMin.click(() => {
+				$miniPillMin.attr("state", FilterBox._PILL_STATES[0]);
+				const [min, max] = $sld.slider("values");
+				$sld.slider("values", [filter.min, max]);
+				$wrp.data("updateSummary")();
+				this._fireValChangeEvent();
+			}).appendTo($miniView);
+			$miniPillMax.click(() => {
+				$miniPillMax.attr("state", FilterBox._PILL_STATES[0]);
+				const [min, max] = $sld.slider("values");
+				$sld.slider("values", [min, filter.max]);
+				this._fireValChangeEvent();
+			}).appendTo($miniView);
+
+			$wrp.data(
+				"resetValues",
+				function () {
+					$sld.slider("values", [filter.min, filter.max]);
+					checkUpdateMiniPills();
+				}
+			);
+
+			$wrp.data(
+				"getValues",
+				function () {
+					const out = {};
+					const [min, max] = $sld.slider("values");
+					out.min = min;
+					out.max = max;
+					out.isMinVal = min === filter.min;
+					out.isMaxVal = max === filter.max;
+					out._isActive = !(out.isMinVal && out.isMaxVal)
+					return out;
+				}
+			);
+
+			$wrp.data(
+				"isVisible",
+				function () {
+					return $wrp.css("display") !== "none";
+				}
+			);
+
+			$wrp.data(
+				"isFiltering",
+				function () {
+					const values = $wrp.data("getValues")();
+					return values.min !== filter.min || values.max !== filter.max;
+				}
+			);
+
+			$wrp.data(
+				"handleUpdateCombiner",
+				(mode) => {
+					if (parent) {
+						this.headers[filter.header].$header.find(`.group-comb-toggle`).each((i, e) => {
+							$(e).text(`(群組 ${mode.toUpperCase()})`);
+						});
+					}
+				}
+			);
+
+			$wrp.data(
+				"setValues",
+				function (toVal) {
+					// labelled values generally come from @filter tags
+					if (filter.labels && !(toVal.some(it => it.startsWith(`min@`) || it.startsWith(`max@`)))) {
+						const idxs = toVal.map(it => {
+							const idx = filter.items.indexOf(it);
+							return ~idx ? idx : 0;
+						});
+						const min = Math.min(...idxs);
+						const max = Math.max(...idxs);
+						$sld.slider("values", [min, max]);
+					} else {
+						const min = toVal.filter(it => it.startsWith("min@")).map(it => it.slice(4));
+						const max = toVal.filter(it => it.startsWith("max@")).map(it => it.slice(4));
+						$sld.slider(
+							"values",
+							[
+								min.length ? Math.max(min[0], filter.min) : filter.min,
+								max.length ? Math.min(max[0], filter.max) : filter.max
+							]
+						);
+					}
+					checkUpdateMiniPills();
+				}
+			);
+
+			// If re-render, use previous values. Otherwise, if there's stored values, stored values. Otherwise, default the pills
+			if (this._curState.values) {
+				const min = this._curState.values[filter.header].min;
+				const max = this._curState.values[filter.header].max;
+				$sld.slider("values", [min, max]);
+				checkUpdateMiniPills();
+			} else if (this.storedValues && this.storedValues[filter.header]) {
+				const stored = this.storedValues[filter.header];
+				const min = stored.isMinVal ? filter.min : stored.min || filter.min;
+				const max = stored.isMaxVal ? filter.max : stored.max || filter.max;
+				$sld.slider("values", [min, max]);
+				checkUpdateMiniPills();
+			} else {
+				$wrp.data("resetValues")();
+			}
+
+			return $wrp;
+		}
+	}
+
+	_get$divider () {
+		return $(`<div class="pill-grid-divider"/>`);
+	}
+
+	_doOpen () {
+		$(`body`).css("overflow", "hidden");
+		this.$disabledOverlay.show();
+		this._$outer.show();
+		this.dropdownVisible = true;
+	}
+
+	_doClose () {
+		$(`body`).css("overflow", "");
+		this.$disabledOverlay.hide();
+		this.dropdownVisible = false;
+		this._$outer.hide();
+		// fire an event when the form is closed
+		this._fireValChangeEvent();
+	}
+
+	_doBindShowHideHandlers () {
+		// watch for the button changing to "open"
+		$("#filter-toggle-btn").click(() => this._doOpen());
+
+		this.$disabledOverlay.off("click").click(() => this._doClose());
+
+		// squash events from the menu, otherwise the dropdown gets hidden when we click inside it
+		this._$outer.click((e) => e.stopPropagation());
 	}
 
 	/**
@@ -1062,10 +1099,7 @@ class FilterBox {
 	 */
 	getValues () {
 		const outObj = {};
-		for (const header in this.headers) {
-			if (!this.headers.hasOwnProperty(header)) continue;
-			outObj[header] = this.headers[header].ele.data("getValues")();
-		}
+		Object.keys(this.headers).forEach(header => outObj[header] = this.headers[header].ele.data("getValues")());
 		return outObj;
 	}
 
@@ -1137,32 +1171,59 @@ class FilterBox {
 	setFromSubHashes (subHashes) {
 		const unpacked = {};
 		subHashes.forEach(s => Object.assign(unpacked, UrlUtil.unpackSubHash(s, true)));
-		const toMatch = {};
-		Object.keys(this.headers).forEach(hk => {
-			toMatch[hk.toLowerCase()] = this.headers[hk];
-		});
+		const nameToHeader = {};
+		Object.keys(this.headers).forEach(hk => nameToHeader[hk.toLowerCase()] = this.headers[hk]);
 		const consumed = new Set();
 		const consumedClean = new Set();
+
+		// filter values
 		Object.keys(unpacked)
 			.filter(k => k.startsWith(FilterBox._SUB_HASH_PREFIX))
 			.forEach(rawSubhash => {
-				const header = rawSubhash.substring(6);
+				const header = rawSubhash.substring(FilterBox._SUB_HASH_PREFIX.length);
 
-				if (toMatch[header]) {
+				if (nameToHeader[header]) {
 					consumed.add(rawSubhash);
 					consumedClean.add(header);
-					toMatch[header].ele.data("setValues")(unpacked[rawSubhash])
-				} else {
-					throw new Error(`Could not find filter with header ${header} for subhash ${rawSubhash}`)
+					nameToHeader[header].ele.data("setValues")(unpacked[rawSubhash])
+				} else throw new Error(`Could not find filter with header ${header} for subhash ${rawSubhash}`);
+			});
+
+		// filter metadata
+		Object.keys(unpacked)
+			.filter(k => k.startsWith(FilterBox._SUB_HASH_META_PREFIX))
+			.forEach(rawSubhash => {
+				const header = rawSubhash.substring(FilterBox._SUB_HASH_META_PREFIX.length);
+
+				if (nameToHeader[header]) {
+					consumed.add(rawSubhash);
+					consumedClean.add(header);
+					const vals = unpacked[rawSubhash];
+					nameToHeader[header].setAndOrBlue(vals[0]);
+					nameToHeader[header].setAndOrRed(vals[1]);
+				} else throw new Error(`Could not find filter with header ${header} for subhash ${rawSubhash}`);
+			});
+
+		// box metadata
+		Object.keys(unpacked)
+			.filter(k => k.startsWith(FilterBox._SUB_HASH_BOX_META_PREFIX))
+			.forEach(rawSubhash => {
+				const header = rawSubhash.substring(FilterBox._SUB_HASH_BOX_META_PREFIX.length);
+
+				if (header === "modeandor") {
+					consumed.add(rawSubhash);
+					consumedClean.add(header);
+					this.modeAndOr = !!Number(unpacked[rawSubhash][0])
 				}
 			});
 
 		if (consumed.size) {
 			// reset any other fields
-			Object.keys(toMatch)
+			Object.keys(nameToHeader)
 				.filter(k => !consumedClean.has(k))
 				.forEach(k => {
-					toMatch[k].ele.data("resetValues")();
+					nameToHeader[k].ele.data("resetValues")();
+					nameToHeader[k].ele.data("resetMeta") && nameToHeader[k].ele.data("resetMeta")();
 				});
 
 			const [link, ...sub] = History._getHashParts();
@@ -1202,49 +1263,69 @@ class FilterBox {
 		Object.keys(cur).forEach(name => {
 			const vals = cur[name];
 			const filter = this.headers[name].filter;
-			let isDefault = true;
+			let isDefaultVals = true;
 			if (filter.selFn || filter.deselFn) {
 				const notDefault = Object.keys(vals).filter(it => !it.startsWith("_")).find(vK => {
 					const val = vals[vK];
 					return (filter.selFn && Number(filter.selFn(vK)) !== val) || (filter.deselFn && Number(filter.deselFn(vK)) !== (-val));
 				});
-				if (notDefault) isDefault = false;
+				if (notDefault) isDefaultVals = false;
 			} else {
 				if (filter instanceof RangeFilter) {
-					isDefault = filter.min === vals.min && filter.max === vals.max;
+					isDefaultVals = filter.min === vals.min && filter.max === vals.max;
 				} else {
-					isDefault = vals._totals.yes === 0 && vals._totals.no === 0
+					isDefaultVals = vals._totals.yes === 0 && vals._totals.no === 0
 				}
 			}
-			if (isDefault) return;
 
 			const outName = `${FilterBox._SUB_HASH_PREFIX}${name}`;
+			const outMetaName = `${FilterBox._SUB_HASH_META_PREFIX}${name}`;
 
 			if (vals.min != null && vals.max != null) {
+				if (isDefaultVals) return;
 				out[outName] = [
-					`min${vals.min}`,
-					`max${vals.max}`
+					`min@${vals.min}`,
+					`max@${vals.max}`
 				];
 			} else if (vals._totals.yes || vals._totals.no) {
 				out[outName] = [];
 				Object.keys(vals).forEach(vK => {
-					if (vK.startsWith("_")) return;
-					const vV = vals[vK];
-					if (!vV) return;
-					out[outName].push(`${vV < 0 ? "!" : ""}${vK}`);
+					if (vK.startsWith("_")) {
+						if (vK.startsWith("_andOr")) {
+							const vV = vals[vK];
+							if (vV.blue !== "OR" || vV.red !== "OR") out[outMetaName] = [vV.blue, vV.red]
+						}
+					} else {
+						if (isDefaultVals) return;
+
+						const vV = vals[vK];
+						if (!vV) return;
+						out[outName].push(`${vV < 0 ? "!" : ""}${vK}`);
+					}
 				});
 			} else {
+				if (isDefaultVals) return;
 				out[outName] = [HASH_SUB_NONE];
 			}
 		});
+
+		const meta = this._getMeta();
+		if (meta.modeAndOr !== "AND") out[`${FilterBox._SUB_HASH_BOX_META_PREFIX}modeAndOr`] = [meta.modeAndOr];
+
 		return out;
 	}
 
 	toDisplay (curr, ...vals) {
-		const res = this.filterList.map((f, i) => {
-			return f._isMulti ? f.toDisplay(curr, ...vals[i]) : f.toDisplay(curr, vals[i])
-		});
-		return this.modeAndOr === "AND" ? res.every(it => it) : res.find(it => it);
+		if (this.modeAndOr === "AND") {
+			const res = this.filterList.map((f, i) => f._isMulti ? f.toDisplay(curr, ...vals[i]) : f.toDisplay(curr, vals[i]));
+			return res.every(it => it);
+		} else {
+			const res = this.filterList.map((f, i) => {
+				if (!curr[f.header] || !curr[f.header]._isActive) return false; // filter out "ignored" filter (i.e. all white)
+				return f._isMulti ? f.toDisplay(curr, ...vals[i]) : f.toDisplay(curr, vals[i]);
+			});
+			return res.find(it => it);
+		}
 	}
 
 	/**
@@ -1264,6 +1345,7 @@ class FilterBox {
 	_reset (header) {
 		const cur = this.headers[header];
 		cur.ele.data("resetValues")();
+		cur.ele.data("resetMeta") && cur.ele.data("resetMeta")();
 	}
 
 	/**
@@ -1309,12 +1391,15 @@ FilterBox.SOURCE_HEADER = "Source";
 FilterBox.SOURCE_HEADER_NAME = "資源";
 FilterBox._PILL_STATES = ["ignore", "yes", "no"];
 FilterBox._STORAGE_NAME = "filterState";
+FilterBox._STORAGE_NAME_META = "filterMetaState";
 FilterBox._STORAGE_NAME_VISIBLE = "filterStateVisible";
 FilterBox._STORAGE_NAME_GROUP_STATE = "filterStateGroupState";
 FilterBox._STORAGE_NAME_NEST_STATE = "filterStateNestState";
 FilterBox._SUB_HASH_PREFIX = "filter";
+FilterBox._SUB_HASH_META_PREFIX = "flmeta";
+FilterBox._SUB_HASH_BOX_META_PREFIX = "fbmeta";
 
-class Filter {
+class FilterBase {
 	/**
 	 * A single filter category
 	 *
@@ -1394,6 +1479,8 @@ class Filter {
 	 */
 	toDisplay (valObj, toCheck) {
 		const map = valObj[this.header];
+		if (!map) return true; // discount any filters which were not rendered
+
 		const totals = map._totals;
 
 		function toCheckVal (tc) {
@@ -1488,6 +1575,8 @@ class Filter {
 	}
 }
 
+class Filter extends FilterBase {}
+
 class FilterItem {
 	/**
 	 * An alternative to string `Filter.items` with a change-handling function
@@ -1507,7 +1596,7 @@ class FilterItem {
 	}
 }
 
-class RangeFilter extends Filter {
+class RangeFilter extends FilterBase {
 	constructor (options) {
 		super(options);
 		this.min = options.min;
@@ -1552,6 +1641,7 @@ class RangeFilter extends Filter {
 
 	toDisplay (valObj, toCheck) {
 		const range = valObj[this.header];
+		if (!range) return true; // discount any filters which were not rendered
 
 		// match everything if filter is set to complete range
 		if (toCheck == null) return range.min === this.min && range.max === this.max;
@@ -1572,11 +1662,11 @@ class RangeFilter extends Filter {
 	}
 }
 
-class SearchFilter extends Filter {
+class SearchFilter extends FilterBase {
 
 }
 
-class GroupedFilter extends Filter {
+class GroupedFilter extends FilterBase {
 	/**
 	 * An extension of the basic filter, which enables visual grouping of elements.
 	 * @param options As with `Filter`, with two extra fields:
@@ -1600,7 +1690,7 @@ class MultiFilter {
 	 * @param filters the list of filters
 	 */
 	constructor (options, ...filters) {
-		this.categoryName = options.name;
+		this.categoryName = (options.headerName)? options.headerName: options.name;
 		// designed to be toggle-able: to switch, toggle class `wrp-multi-compact` on the wrapper
 		// warning: only fully implemented for RangeFilter; currently only used there
 		this.compact = !!options.compact;

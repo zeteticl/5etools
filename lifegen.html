@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="tw">
 
 <head>
 	<!--5ETOOLS_VERSION-->
@@ -66,24 +66,35 @@
 		}
 
 		.btn-reroll::before {
-			content: "Reroll";
+			content: "重骰";
+		}
+
+		.output {
+			margin: 1em 0;
+			padding: 0.2em 0.7em;
+			border-radius: 0.2em;
+			display: none;
 		}
 	</style>
 </head>
 
 <body>
-<header class="hidden-xs hidden-sm">
+<header class="hidden-xs hidden-sm page__header">
 	<div class="container">
 
-		<h1>這是你的人生</h1>
-		<p>選擇選項，然後點擊生成。</p>
+		<h1 class="page__title">這是你的人生</h1>
+		<p class="page__subtitle">選擇選項，然後點擊生成。</p>
 	</div>
 </header>
-<nav class="container" id="navigation">
+<nav class="container page__nav" id="navigation">
 	<ul class="nav nav-pills" id="navbar">
 	</ul>
 </nav>
-<main class="container bodyContent">
+
+<div class="cancer__wrp-leaderboard"><!--5ETOOLS_AD_LEADERBOARD--></div>
+<div class="cancer__wrp-sidebar-rhs"><!--5ETOOLS_AD_RIGHT_1--><!--5ETOOLS_AD_RIGHT_2--></div>
+
+<main class="container">
 
 	<div class="row noprint">
 		<div class="form-group col-2-4">
@@ -126,8 +137,8 @@
 	</div>
 
 	<div class="row noprint" style="padding: 0 3em;">
-		<p>這個生成器是基於《姍納薩的萬事指南》第61-73頁的規則和表格。</p>
-		<p><i>注意： Rolls or options displayed in italics exist for the sake of speed and ease of use. They do not correspond to rolls on any table, nor do they have officially associated weightings or chances. Ignore or use them as you see fit.</i></p>
+		<p>這個生成器是基於<a href="#" id="xge_link">《姍納薩的萬事指南》</a>第61-73頁的規則和表格。</p>
+		<p><i>注意：以斜體顯示所產生的文字內容是為了讓使用變得更容易和快速，它們並不對應原本生成器中的任何表格。隨你喜好忽視它們。</i></p>
 	</div>
 
 	<hr class="output" style="display: none;">
@@ -160,15 +171,14 @@
 		<p id="events"></p>
 	</div>
 </main>
-<footer class="container">
-
-</footer>    <!--5ETOOLS_SCRIPT_ANCHOR-->
+<!--5ETOOLS_SCRIPT_ANCHOR-->
 <script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/utils-ui.js"></script>
 <script type="text/javascript" src="lib/localforage.js"></script>
 <script type="text/javascript" src="js/genutils.js"></script>
 <script type="text/javascript" src="js/omnidexer.js"></script>
 <script type="text/javascript" src="js/omnisearch.js"></script>
-<script type="text/javascript" src="js/entryrender.js"></script>
+<script type="text/javascript" src="js/render.js"></script>
 <script type="text/javascript" src="js/scalecreature.js"></script>
 <script type="text/javascript" src="js/lifegen.js"></script>
 <script type="text/javascript" src="lib/list.js"></script>

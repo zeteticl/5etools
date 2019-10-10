@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tw">
 
 <head>
 	<!--5ETOOLS_VERSION-->
@@ -38,20 +38,41 @@
 	</style>
 </head>
 <body>
-<header class="hidden-xs hidden-sm">
+<header class="hidden-xs hidden-sm page__header">
 	<div class="container">
-
-		<h1 class="header-tools">5e<span>tools</span></h1>
-		<p>一套為了《龍與地下城5E》玩家和地下城主而存在的工具</p>
+		<h1 class="page__title page__title--home">5e<span>tools</span></h1>
+		<p class="page__subtitle">一套為了《龍與地下城5E》玩家和地下城主而存在的工具</p>
 	</div>
 </header>
-<nav class="container" id="navigation">
+<nav class="container page__nav" id="navigation">
 	<ul class="nav nav-pills" id="navbar">
 	</ul>
 </nav>
-<main class="container bodyContent">
-	<div class="alert alert-warning"><p><strong>注意：</strong>本站為非官方/個人的翻譯，且並不保證資料為最新版。5etools開發團隊並不支援本站。請自行承擔使用風險。除非你沒有其他選擇，否則請使用位於<a class="alert-link" href="https://5e.tools/" target="_blank">5e.tools</a>的官方網站</p></div>
 
+<div class="cancer__wrp-leaderboard"><!--5ETOOLS_AD_LEADERBOARD--></div>
+<div class="cancer__wrp-sidebar-rhs"><!--5ETOOLS_AD_RIGHT_1--><!--5ETOOLS_AD_RIGHT_2--></div>
+
+<main class="container">
+	<div class="alert alert-warning"><p><strong>注意：</strong>本站為非官方/個人的翻譯，且並不保證資料為最新版。5etools開發團隊並不支援本站。請自行承擔使用風險。除非你沒有其他選擇，否則請使用位於<a class="alert-link" href="https://5e.tools/" target="_blank">5e.tools</a>的官方網站。</p></div>
+	<!--<div class="alert alert-warning">-->
+		<!--<p><strong>Discord update:</strong> A recent bot-hijack resulted in many accounts being banned from our Discord server, along with a general server reset. Besides bans, no user accounts were affected, and the server has largely been restored to its former state. <a class="alert-link" href="https://discord.gg/AzyBjtQ" target="_blank" rel="noopener">You can rejoin here.</a></p>-->
+	<!--</div>-->
+	<!--
+	<div id="don-wrapper" class="alert alert-info" style="display: none">
+		<div class="split" style="align-items: center">
+			<div class="text-align-center" style="max-width: 260px; padding-right: 10px;">For those with an abundance of gold, we accept <a href="donate.html">donations</a>.</div>
+			<div style="width: 100%">
+				<div class="don__bar don__bar--home">
+					<div class="don__bar_inner"></div>
+				</div>
+				<div class="split">
+					<span>€0.00</span>
+					<span id="don-total">Loading...</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	-->
 	<div class="row">
 		<table class="home-table">
 			<tr>
@@ -59,7 +80,7 @@
 					<p>這是一套為了《龍與地下城5E》玩家和地下城主而存在的瀏覽器工具。
 						這整個計畫都可以從<a href="https://get.5e.tools">get.5e.tools</a>被下載。
 						若要運行在地（離線）的副本，只要
-						<span class="help" title="這在Firefox中可以正常運行。至於Chrome/其他瀏覽器，你需要使用'--allow-file-access-from-files' (詳情請自行Google)">簡單的</span>
+						<span class="help" title="這在Firefox中可以正常運行。至於Chrome/其他瀏覽器，你需要使用'--allow-file-access-from-files' (詳情請自行Google)">簡單地</span>
 						下載這份計畫，解壓縮，並在瀏覽器打開<span class="code">.html</span>檔即可。
 						你可以自由地主持自己的鏡像副本，或透過<a href="https://github.com/TheGiddyLimit/TheGiddyLimit.github.io">Github</a>回饋給這份計畫（或回饋給中文版的<a href="https://github.com/hazmole/TheGiddyLimit.github.io">Github</a>）。
 						此外，我們有一個社群經營的<a href="https://5etools.wikia.com/wiki/5eTool_Wiki">維基</a>，還請各位多多利用。</p>
@@ -174,7 +195,7 @@
 			<p>Beyond importing, the script features a custom initiative tracker; the ability to add custom map/token images by URL; enhanced journal functionality; and more.</p>
 			<p><b>FAQ: Check the <a href="roll20.html">Help page</a> for some basic pointers on how to use the script.</b></p>
 			<h3>Use Discord?</h3>
-			<p>Now you can join our server using this <a href="https://discord.gg/AzyBjtQ" target="_blank">link!</a></p>
+			<p>Now you can join our server using this <a href="https://discord.gg/AzyBjtQ" target="_blank" rel="noopener">link!</a></p>
 			<h3>FAQ / Help</h3>
 			<p><b>Wiki.</b> We have a <a href="https://5etools.wikia.com/wiki/5eTool_Wiki">community-run wiki</a> which
 				you can browse for specific help on various topics, including
@@ -205,8 +226,6 @@
 				may look like links but they're often die-rollers, e.g. click on a <span id="demo_roller">1d4+2</span>
 				and we'll do the dice rolling for you and the results appear at the bottom of the screen. If in doubt,
 				give it a click and see what it does!</p>
-			<p><b>Day/Night Mode.</b> Night Mode, with a dark background and lighter text, is a relatively recent new
-				feature and we're still putting the finishing touches to its look-and-feel.</p>
 			<p><b>Sorting.</b> If you click on the column name in a table then the data in that column is sorted;
 				clicking on it again will reverse the sort direction. Where possible, we've tried to be logical about
 				the sorting, e.g. Self then touch then various distances then Unlimited and Special at the far end; some
@@ -221,16 +240,19 @@
 <footer class="container">
 	<p class="text-align-center">
 		Version
-		<!--5ETOOLS_VERSION__FOOTER_OPEN-->1.68.1<!--5ETOOLS_VERSION__FOOTER_CLOSE-->
-		| <span style="text-decoration: red line-through">&nbsp;&copy;&nbsp;</span>2018 5etools
+		<!--5ETOOLS_VERSION__FOOTER_OPEN-->1.73.5<!--5ETOOLS_VERSION__FOOTER_CLOSE-->
+		| <span style="text-decoration: red line-through">&nbsp;&copy;&nbsp;</span><span id="current_year">2019</span> 5etools
+		<br>
+		<i>5etools&reg; is a Registered Trademark of The Norr Group, LLC. All rights reserved.</i>
 	</p>
 </footer>
 <!--5ETOOLS_SCRIPT_ANCHOR-->
 <script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/utils-ui.js"></script>
 <script type="text/javascript" src="lib/localforage.js"></script>
 <script type="text/javascript" src="js/omnidexer.js"></script>
 <script type="text/javascript" src="js/omnisearch.js"></script>
-<script type="text/javascript" src="js/entryrender.js"></script>
+<script type="text/javascript" src="js/render.js"></script>
 <script type="text/javascript" src="js/scalecreature.js"></script>
 <script type="text/javascript" src="lib/jquery.js"></script>
 <script type="text/javascript" src="lib/jquery-ui.js"></script>
@@ -240,8 +262,12 @@
 	ExcludeUtil.pInitialise();
 
 	const $demoRoller = $(`#demo_roller`);
-	$demoRoller.html(EntryRenderer.getDefaultRenderer().renderEntry(`{@dice ${$demoRoller.html()}}`));
+	$demoRoller.html(Renderer.get().render(`{@dice ${$demoRoller.html()}}`));
 
+	$(`#current_year`).text((new Date).getFullYear());
+
+	// TAG Disabled until further notice
+	/*
 	(async () => {
 		if (!await _Donate.pNotDonating()) {
 			const $wrpDon = $(`#don-wrapper`).show();
@@ -257,6 +283,7 @@
 			_Donate.init();
 		}
 	})();
+	*/
 </script>
 </body>
 </html>

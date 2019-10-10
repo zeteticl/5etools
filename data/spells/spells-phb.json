@@ -35,6 +35,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -50,7 +54,17 @@
 			"savingThrow": [
 				"dexterity"
 			],
-			"scalingEffects": true
+			"scalingEffects": true,
+			"areaTags": [
+				"ST",
+				"MT"
+			],
+			"backgrounds": [
+				{
+					"name": "Simic Scientist",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "援助術", "ENG_name": "Aid",
@@ -96,6 +110,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -134,7 +152,20 @@
 					]
 				}
 			],
-			"page": 211
+			"page": 211,
+			"areaTags": [
+				"MT"
+			],
+			"backgrounds": [
+				{
+					"name": "Boros Legionnaire",
+					"source": "GGR"
+				},
+				{
+					"name": "Selesnya Initiate",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "警報術", "ENG_name": "Alarm",
@@ -180,6 +211,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -189,10 +224,13 @@
 			},
 			"entries": [
 				"你設置一個警報以對付不速之客。選擇射程內的一扇門、一扇窗、或是不超過20呎邊長立方體的區域。直到法術結束之前，每當體型為微型或更大的生物碰觸或進入被守護的區域，警報都會警告你。當你施放此法術時，你可以決定哪些生物不會觸發警報。你也決定該警報是精神警報的還是聲音警報。",
-				"若你距離守護區域1里內，精神警報會透過在你的意識中發出的尖銳聲響來警告你。若你正在沉睡，這個聲響將會把你叫醒。",
+				"若你距離守護區域1哩內，精神警報會透過在你的意識中發出的尖銳聲響來警告你。若你正在沉睡，這個聲響將會把你叫醒。",
 				"聲音警報會在60呎範圍內製造出搖鈴的聲響，持續10秒鐘。"
 			],
-			"page": 211
+			"page": 211,
+			"areaTags": [
+				"C"
+			]
 		},
 		{
 			"name": "變造自身", "ENG_name": "Alter Self",
@@ -237,6 +275,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -299,6 +341,12 @@
 					"source": "UAThatOldBlackMagic",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				}
+			],
+			"backgrounds": [
+				{
+					"name": "Simic Scientist",
+					"source": "GGR"
 				}
 			]
 		},
@@ -386,6 +434,15 @@
 			],
 			"conditionInflict": [
 				"charmed"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Selesnya Initiate",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -452,7 +509,16 @@
 					]
 				}
 			],
-			"page": 212
+			"page": 212,
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Selesnya Initiate",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "動物化形", "ENG_name": "Animal Shapes",
@@ -499,7 +565,10 @@
 				"每個目標的轉變都將在法術持續期間內持續生效，或直到目標的生命值歸零或死亡。你可以為每個目標各自選擇不同的型態。目標的遊戲數據將被所選野獸的數據資料給取代，但目標保留它的陣營、智力、睿知、和魅力值。目標取用它新型態的生命值，且當它回復它原本的型態時，該生物將取回它轉變之前的生命值。若它是因為生命值歸零而回復，則任何溢出傷害都將被帶到它原本的型態，扣減它原本的生命值。只要這個溢出傷害沒有讓該生物原本型態的生命值歸零，它就不會被擊倒{@condition 昏迷}。該生物被限制只能進行它新型態天生所能進行的動作，且它無法說話、施放法術、或採取任何其他需要雙手或語言的動作。",
 				"目標的裝備將被融入新形態之中。目標無法啟動、使用、揮舞、或透過其他方式來從它的裝備獲得好處。"
 			],
-			"page": 212
+			"page": 212,
+			"areaTags": [
+				"MT"
+			]
 		},
 		{
 			"name": "活化死屍", "ENG_name": "Animate Dead",
@@ -578,7 +647,14 @@
 				}
 			],
 			"page": 212,
-			"permanentEffects": true
+			"permanentEffects": true,
+			"isSummon": true,
+			"backgrounds": [
+				{
+					"name": "Golgari Agent",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "活化物體", "ENG_name": "Animate Objects",
@@ -624,6 +700,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -678,40 +758,40 @@
 							"20",
 							"18",
 							"命中{@hit +8}，{@damage 1d4 + 4}傷害",
-							"{@dice 1d20+4|4}",
-							"{@dice 1d20+18|18}"
+							"{@dice 1d20-3|4}",
+							"{@dice 1d20+4|18}"
 						],
 						[
 							"{@creature 活化物體(小型)|phb|小型}",
 							"25",
 							"16",
 							"命中{@hit +6}，{@damage 1d8 + 2}傷害",
-							"{@dice 1d20+6|6}",
-							"{@dice 1d20+14|14}"
+							"{@dice 1d20-2|6}",
+							"{@dice 1d20+2|14}"
 						],
 						[
 							"{@creature 活化物體(中型)|phb|中型}",
 							"40",
 							"13",
 							"命中{@hit +5}，{@damage 2d6 + 1}傷害",
-							"{@dice 1d20+10|10}",
-							"{@dice 1d20+12|12}"
+							"{@dice 1d20|10}",
+							"{@dice 1d20+1|12}"
 						],
 						[
 							"{@creature 活化物體(大型)|phb|大型}",
 							"50",
 							"10",
 							"命中{@hit +6}，{@damage 2d10 + 2}傷害",
-							"{@dice 1d20+14|14}",
-							"{@dice 1d20+10|10}"
+							"{@dice 1d20+2|14}",
+							"{@dice 1d20|10}"
 						],
 						[
 							"{@creature 活化物體(巨型)|phb|巨型}",
 							"80",
 							"10",
 							"命中{@hit +8}，{@damage 2d12 + 4}傷害",
-							"{@dice 1d20+18|18}",
-							"{@dice 1d20+6|6}"
+							"{@dice 1d20+4|18}",
+							"{@dice 1d20-3|6}"
 						]
 					]
 				},
@@ -732,6 +812,16 @@
 				"bludgeoning",
 				"piercing",
 				"slashing"
+			],
+			"areaTags": [
+				"MT"
+			],
+			"isSummon": true,
+			"backgrounds": [
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -922,7 +1012,10 @@
 					]
 				}
 			],
-			"page": 213
+			"page": 213,
+			"areaTags": [
+				"S"
+			]
 		},
 		{
 			"name": "嫌惡/共感術", "ENG_name": "Antipathy/Sympathy",
@@ -1000,6 +1093,9 @@
 			],
 			"conditionInflict": [
 				"frightened"
+			],
+			"areaTags": [
+				"C"
 			]
 		},
 		{
@@ -1043,6 +1139,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -1094,7 +1194,13 @@
 				"你透過心靈接收來自這個眼睛的視覺情報，它具有正常視覺和30呎的黑暗視覺。這個眼睛可以看向任何方向。",
 				"以一個動作，你可以使這個眼睛向任何方向移動最多30呎距離。眼睛與你之間的距離沒有限制，但它不能進入另一個存在位面。一道固體屏障可以阻擋眼睛的移動，但這個眼睛可以穿過直徑最少1吋的開口。"
 			],
-			"page": 214
+			"page": 214,
+			"backgrounds": [
+				{
+					"name": "Dimir Operative",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "祕法之門", "ENG_name": "Arcane Gate",
@@ -1193,6 +1299,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -1214,6 +1324,12 @@
 					"source": "MTF",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				}
+			],
+			"backgrounds": [
+				{
+					"name": "Azorius Functionary",
+					"source": "GGR"
 				}
 			]
 		},
@@ -1395,6 +1511,9 @@
 			],
 			"savingThrow": [
 				"strength"
+			],
+			"areaTags": [
+				"R"
 			]
 		},
 		{
@@ -1456,6 +1575,9 @@
 			"page": 215,
 			"conditionInflict": [
 				"unconscious"
+			],
+			"areaTags": [
+				"MT"
 			]
 		},
 		{
@@ -1523,6 +1645,16 @@
 						"subclass": {
 							"name": "Kraken (Stream)",
 							"source": "Stream"
+						}
+					},
+					{
+						"class": {
+							"name": "Barbarian",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Ancestral Guardian",
+							"source": "XGE"
 						}
 					}
 				]
@@ -1615,7 +1747,16 @@
 			"damageResist": [
 				"necrotic"
 			],
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"R"
+			],
+			"backgrounds": [
+				{
+					"name": "Selesnya Initiate",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "淨化靈光", "ENG_name": "Aura of Purity",
@@ -1662,6 +1803,9 @@
 			"page": 216,
 			"damageResist": [
 				"poison"
+			],
+			"areaTags": [
+				"R"
 			]
 		},
 		{
@@ -1719,7 +1863,10 @@
 				"治癒能量從你身上散發形成一個30呎半徑的靈光。直到此法術結束前，該靈光將會跟隨你移動，並以你為中心。你可以使用一個附贈動作以使靈光內的一個生物（包括你）回復{@dice 2d6}點生命值。"
 			],
 			"page": 216,
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"R"
+			]
 		},
 		{
 			"name": "啟蒙術", "ENG_name": "Awaken",
@@ -1772,6 +1919,15 @@
 			"permanentEffects": true,
 			"conditionInflict": [
 				"charmed"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Selesnya Initiate",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -1886,6 +2042,9 @@
 			"page": 216,
 			"savingThrow": [
 				"charisma"
+			],
+			"areaTags": [
+				"MT"
 			]
 		},
 		{
@@ -2128,6 +2287,9 @@
 			],
 			"conditionInflict": [
 				"incapacitated"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -2200,7 +2362,10 @@
 			"entries": [
 				"你碰觸一個自願生物。直到法術結束前，目標的肌膚將呈現粗糙、樹皮狀的外表，且無論目標穿著什麼樣的護甲，它的AC都不會低於16。"
 			],
-			"page": 217
+			"page": 217,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "希望信標", "ENG_name": "Beacon of Hope",
@@ -2288,7 +2453,16 @@
 				"此法術將賦予希望和活力。選擇射程內任意數量的生物。在法術持續期間，每個目標在睿知豁免和死亡豁免中具有優勢，且在受到任何治療時會回復最大可能數值的生命值。"
 			],
 			"page": 217,
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"MT"
+			],
+			"backgrounds": [
+				{
+					"name": "Boros Legionnaire",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "野獸知覺", "ENG_name": "Beast Sense",
@@ -2350,7 +2524,16 @@
 			"entries": [
 				"你觸碰一個自願野獸。在此法術的持續期間，你可以使用你的動作以透過該野獸的眼睛視物並聽到它所聽見的聲音，且持續直到你使用你的動作以返回你原本的知覺。當透過野獸的知覺感知時，你獲得任何該生物所擁有的特殊感知的好處，儘管你對你自己的感官而言視作{@condition 耳聾}和{@condition 目盲}。"
 			],
-			"page": 217
+			"page": 217,
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Gruul Anarch",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "降咒", "ENG_name": "Bestow Curse",
@@ -2479,6 +2662,15 @@
 			],
 			"savingThrow": [
 				"wisdom"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Orzhov Representative",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -2518,6 +2710,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -2626,6 +2822,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"W"
 			]
 		},
 		{
@@ -2777,7 +2976,10 @@
 					]
 				}
 			],
-			"page": 219
+			"page": 219,
+			"areaTags": [
+				"MT"
+			]
 		},
 		{
 			"name": "枯萎術", "ENG_name": "Blight",
@@ -2919,6 +3121,15 @@
 			],
 			"savingThrow": [
 				"constitution"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Orzhov Representative",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -2984,6 +3195,12 @@
 			],
 			"conditionInflict": [
 				"blinded"
+			],
+			"backgrounds": [
+				{
+					"name": "Boros Legionnaire",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -3097,6 +3314,9 @@
 			"conditionInflict": [
 				"blinded",
 				"deafened"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -3141,6 +3361,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -3235,6 +3459,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -3505,6 +3733,15 @@
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
 				}
+			],
+			"areaTags": [
+				"N"
+			],
+			"backgrounds": [
+				{
+					"name": "Rakdos Cultist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -3600,6 +3837,15 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"S"
+			],
+			"backgrounds": [
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -3676,6 +3922,19 @@
 			"page": 221,
 			"savingThrow": [
 				"charisma"
+			],
+			"areaTags": [
+				"S"
+			],
+			"backgrounds": [
+				{
+					"name": "Azorius Functionary",
+					"source": "GGR"
+				},
+				{
+					"name": "Selesnya Initiate",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -3737,6 +3996,10 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"ST",
+				"MT"
 			]
 		},
 		{
@@ -3870,6 +4133,15 @@
 			],
 			"conditionInflict": [
 				"charmed"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Selesnya Initiate",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -3951,6 +4223,9 @@
 					"baseName": "Elf (Zendikar)",
 					"baseSource": "PSZ"
 				}
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -4019,6 +4294,9 @@
 			],
 			"spellAttack": [
 				"R"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -4086,6 +4364,9 @@
 			],
 			"savingThrow": [
 				"constitution"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -4152,7 +4433,11 @@
 			"entries": [
 				"神性能量自你身上散發而出，扭曲並發散距離你30呎內的魔法能量。直到此法術結束前，這個球體範圍將跟隨你移動，並以你為中心。在法術持續期間，每個範圍內的友善生物（包括你）在對抗法術或其他魔法效果的豁免檢定中具有優勢。此外，當一個受影響生物成功通過一次對抗法術或魔法效果以讓它在豁免成功時減半傷害的豁免檢定時，則當它改為在豁免成功時不受到任何傷害。"
 			],
-			"page": 221
+			"page": 221,
+			"areaTags": [
+				"S",
+				"R"
+			]
 		},
 		{
 			"name": "銳眼術", "ENG_name": "Clairvoyance",
@@ -4228,6 +4513,16 @@
 							"name": "Seeker (UA)",
 							"source": "UATheFaithful"
 						}
+					},
+					{
+						"class": {
+							"name": "Barbarian",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Ancestral Guardian",
+							"source": "XGE"
+						}
 					}
 				]
 			},
@@ -4237,7 +4532,13 @@
 				"當你施放此法術時，你選擇視覺或是聽覺。你可以透過該感應器使用所選的感官，就如同你位於該空間。以一個動作，你可以在視覺和聽覺間切換。",
 				"一個可以看見感應器的生物（例如得益於{@spell 識破隱形}法術或真實視覺的生物）會看見一個約為你拳頭大小，發著光的無形球體。"
 			],
-			"page": 222
+			"page": 222,
+			"backgrounds": [
+				{
+					"name": "Azorius Functionary",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "克隆術", "ENG_name": "Clone",
@@ -4279,7 +4580,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"此法術將培養一個活著生物的無活性複製體做為對抗死亡的防護措施。這個克隆體將在密封容器內成形，並在120天後長成完整體型並生長成熟；你也可以選擇讓這個克隆體成為該生物的年輕版本。只要它的容器保持不受擾動，克隆體將維持無活性的狀態並永久存在。",
+				"此法術將培養一個活著，且體型為中型的生物的無活性複製體做為對抗死亡的防護措施。這個克隆體將在密封容器內成形，並在120天後長成完整體型並生長成熟；你也可以選擇讓這個克隆體成為該生物的年輕版本。只要它的容器保持不受擾動，克隆體將維持無活性的狀態並永久存在。",
 				"在克隆體成熟後的任何時候，若原本的生物死亡，只要它的靈魂不受束縛且自願返回，則它的靈魂將轉移到克隆體身上。這個克隆體在生理上與原本的生物相同，且具有相同的個性、記憶、以及能力，但並沒有它原本的裝備。原本生物的身體殘骸若仍然存在，將因此失去活性，且因為該生物的靈魂已經在別處而無法被復活。"
 			],
 			"page": 222,
@@ -4353,6 +4654,9 @@
 			"page": 222,
 			"damageInflict": [
 				"slashing"
+			],
+			"areaTags": [
+				"C"
 			]
 		},
 		{
@@ -4482,6 +4786,15 @@
 			],
 			"savingThrow": [
 				"constitution"
+			],
+			"areaTags": [
+				"S"
+			],
+			"backgrounds": [
+				{
+					"name": "Golgari Agent",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -4544,6 +4857,9 @@
 			"page": 222,
 			"conditionInflict": [
 				"blinded"
+			],
+			"areaTags": [
+				"N"
 			]
 		},
 		{
@@ -4666,6 +4982,16 @@
 							"name": "Order (UA)",
 							"source": "UAOrderDomain"
 						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Order",
+							"source": "GGR"
+						}
 					}
 				]
 			},
@@ -4724,6 +5050,19 @@
 			],
 			"conditionInflict": [
 				"prone"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Azorius Functionary",
+					"source": "GGR"
+				},
+				{
+					"name": "Orzhov Representative",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -4792,6 +5131,16 @@
 						"subclass": {
 							"name": "Order (UA)",
 							"source": "UAOrderDomain"
+						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Order",
+							"source": "GGR"
 						}
 					}
 				]
@@ -4907,7 +5256,13 @@
 				},
 				"舉例來說，你可以判斷出該區域內強大不死生物的位置、可安全飲用的主水源的位置、以及任何附近城鎮的位置。"
 			],
-			"page": 224
+			"page": 224,
+			"backgrounds": [
+				{
+					"name": "Selesnya Initiate",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "強迫決鬥", "ENG_name": "Compelled Duel",
@@ -4987,6 +5342,15 @@
 			"page": 224,
 			"savingThrow": [
 				"wisdom"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Gruul Anarch",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -5119,6 +5483,16 @@
 							"name": "Beauty (Stream)",
 							"source": "Twitter"
 						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Order",
+							"source": "GGR"
+						}
 					}
 				]
 			},
@@ -5130,6 +5504,15 @@
 			"page": 224,
 			"savingThrow": [
 				"wisdom"
+			],
+			"areaTags": [
+				"MT"
+			],
+			"backgrounds": [
+				{
+					"name": "Azorius Functionary",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -5234,6 +5617,9 @@
 			],
 			"savingThrow": [
 				"constitution"
+			],
+			"areaTags": [
+				"N"
 			]
 		},
 		{
@@ -5401,6 +5787,15 @@
 			"page": 224,
 			"savingThrow": [
 				"wisdom"
+			],
+			"areaTags": [
+				"S"
+			],
+			"backgrounds": [
+				{
+					"name": "Rakdos Cultist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -5474,10 +5869,10 @@
 				{
 					"type": "list",
 					"items": [
-						"一隻{@filter 挑戰等級2或以下的野獸|bestiary|cr=2|type=beast|miscellaneous=!swarm}",
-						"二隻{@filter 挑戰等級1或以下的野獸|bestiary|cr=1|type=beast|miscellaneous=!swarm}",
-						"四隻{@filter 挑戰等級1/2或以下的野獸|bestiary|cr=1/2|type=beast|miscellaneous=!swarm}",
-						"八隻{@filter 挑戰等級1/4或以下的野獸|bestiary|cr=0;1/8;1/4|type=beast|miscellaneous=!swarm}"
+						"一隻{@filter 挑戰等級2或以下的野獸|bestiary|challenge rating=2|type=beast|miscellaneous=!swarm}",
+						"二隻{@filter 挑戰等級1或以下的野獸|bestiary|challenge rating=1|type=beast|miscellaneous=!swarm}",
+						"四隻{@filter 挑戰等級1/2或以下的野獸|bestiary|challenge rating=1/2|type=beast|miscellaneous=!swarm}",
+						"八隻{@filter 挑戰等級1/4或以下的野獸|bestiary|challenge rating=0;1/8;1/4|type=beast|miscellaneous=!swarm}"
 					]
 				},
 				"每隻野獸同時也被視作精類生物，且它會在它生命值歸零或此法術結束時消失。",
@@ -5489,11 +5884,18 @@
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"當你使用特定更高環位的法術位施放此法術時，你從上述召喚選項中選擇一項，並讓更多生物出現：使用5環法術位時出現兩倍、7環法術位時出現三倍、使用9環法術位時出現四倍。"
+						"當你使用特定更高環階的法術位施放此法術時，你從上述召喚選項中選擇一項，並讓更多生物出現：使用5環法術位時出現兩倍、7環法術位時出現三倍、使用9環法術位時出現四倍。"
 					]
 				}
 			],
-			"page": 225
+			"page": 225,
+			"isSummon": true,
+			"backgrounds": [
+				{
+					"name": "Gruul Anarch",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "召喚箭幕", "ENG_name": "Conjure Barrage",
@@ -5537,6 +5939,15 @@
 			"page": 225,
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"N"
+			],
+			"backgrounds": [
+				{
+					"name": "Gruul Anarch",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -5580,7 +5991,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"你召喚出一個{@filter 挑戰等級4或以下的天界生物|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4|type=celestial|miscellaneous=!swarm}，且它將出現在射程內一處你所能看見的未被佔據空間。該天界生物會在它生命值歸零或此法術結束時消失。",
+				"你召喚出一個{@filter 挑戰等級4或以下的天界生物|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3;4|type=celestial|miscellaneous=!swarm}，且它將出現在射程內一處你所能看見的未被佔據空間。該天界生物會在它生命值歸零或此法術結束時消失。",
 				"該天界生物在法術持續期間對你和你的同伴友善。為該天界生物骰先攻，且它擁有自己的回合。它會服從任何你交代它的口頭指令（你不需要花費動作），只要這不會因此違反它的陣營。若你不對該生物交代任何指令，則它將在面對敵對生物時自我防衛，除此之外不採取其他動作。",
 				"這個天界生物的數據資料由DM掌控。"
 			],
@@ -5589,10 +6000,11 @@
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"當你使用9環法術位施放此法術時，你可以改為召喚一個{@filter 挑戰等級5或以下的天界生物|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4;5|type=celestial|miscellaneous=!swarm}。"
+						"當你使用9環法術位施放此法術時，你可以改為召喚一個{@filter 挑戰等級5或以下的天界生物|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3;4;5|type=celestial|miscellaneous=!swarm}."
 					]
 				}
 			],
+			"isSummon": true,
 			"page": 225
 		},
 		{
@@ -5654,7 +6066,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"你呼喚出一個元素僕役。選擇射程內一處在10呎邊長立方體內充滿氣、土、火、或水的區域。一個對應你所選區域的{@filter 挑戰等級5或以下的元素生物|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4;5|type=elemental|miscellaneous=!swarm}將會出現在距離該處10呎內的一處未被佔據空間。舉例來說，一個{@creature 火元素}會從一團篝火中浮現，而一個{@creature 土元素}會從大地中升起。該元素生物會在它生命值歸零或此法術結束時消失。",
+				"你呼喚出一個元素僕役。選擇射程內一處在10呎邊長立方體內充滿氣、土、火、或水的區域。一個對應你所選區域的{@filter 挑戰等級5或以下的元素生物|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3;4;5|type=elemental|miscellaneous=!swarm}將會出現在距離該處10呎內的一處未被佔據空間。舉例來說，一個{@creature 火元素}會從一團篝火中浮現，而一個{@creature 土元素}會從大地中升起。該元素生物會在它生命值歸零或此法術結束時消失。",
 				"該元素生物對你和你的同伴友善。為該元素生物骰先攻，且它擁有自己的回合。它會服從任何你交代它的口頭指令（你不需要花費動作）。若你不對該生物交代任何指令，則它將在面對敵對生物時自我防衛，除此之外不採取其他動作。",
 				"若你的專注被中斷，該元素生物並不會消失。取而代之，你將失去對該元素生物的控制，它將會對你和你的同伴具有敵意，且可能會展開攻擊。一個失去控制的元素生物無法被你解消，且它會在你召喚它之後1小時後消失。",
 				"這個元素生物的數據資料由DM掌控。"
@@ -5668,7 +6080,14 @@
 					]
 				}
 			],
-			"page": 225
+			"isSummon": true,
+			"page": 225,
+			"backgrounds": [
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "召喚精類生物", "ENG_name": "Conjure Fey",
@@ -5715,7 +6134,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"你召喚出一個{@filter 挑戰等級6或以下的精類生物|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4;5;6|type=fey|miscellaneous=!swarm}、或一個呈現{@filter 挑戰等級6或以下的野獸|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4;5;6|type=beast|miscellaneous=!swarm}型態的精類精魂。它將出現在射程內一處你所能看見的未被佔據空間。該精類生物會在它生命值歸零或此法術結束時消失。",
+				"你召喚出一個{@filter 挑戰等級6或以下的精類生物|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3;4;5;6|type=fey|miscellaneous=!swarm}、或一個呈現{@filter 挑戰等級6或以下的野獸|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3;4;5;6|type=beast|miscellaneous=!swarm}型態的精類精魂。它將出現在射程內一處你所能看見的未被佔據空間。該精類生物會在它生命值歸零或此法術結束時消失。",
 				"該精類生物在法術持續期間對你和你的同伴友善。為該精類生物骰先攻，且它擁有自己的回合。它會服從任何你交代它的口頭指令（你不需要花費動作），只要這不會因此違反它的陣營。若你不對該生物交代任何指令，則它將在面對敵對生物時自我防衛，除此之外不採取其他動作。",
 				"若你的專注被中斷，該精類生物並不會消失。取而代之，你將失去對該精類生物的控制，它將會對你和你的同伴具有敵意，且可能會展開攻擊。一個失去控制的精類生物無法被你解消，且它會在你召喚它之後1小時後消失。",
 				"這個精類生物的數據資料由DM掌控。"
@@ -5729,6 +6148,7 @@
 					]
 				}
 			],
+			"isSummon": true,
 			"page": 226
 		},
 		{
@@ -5780,10 +6200,10 @@
 				{
 					"type": "list",
 					"items": [
-						"一個{@filter 挑戰等級2或以下的元素生物|bestiary|cr=2|type=elemental|miscellaneous=!swarm}",
-						"二個{@filter 挑戰等級1或以下的元素生物|bestiary|cr=1|type=elemental|miscellaneous=!swarm}",
-						"四個{@filter 挑戰等級1/2或以下的元素生物|bestiary|cr=1/2|type=elemental|miscellaneous=!swarm}",
-						"八個{@filter 挑戰等級1/4或以下的元素生物|bestiary|cr=0;1/8;1/4|type=elemental|miscellaneous=!swarm}."
+						"一個{@filter 挑戰等級2或以下的元素生物|bestiary|challenge rating=2|type=elemental|miscellaneous=!swarm}",
+						"二個{@filter 挑戰等級1或以下的元素生物|bestiary|challenge rating=1|type=elemental|miscellaneous=!swarm}",
+						"四個{@filter 挑戰等級1/2或以下的元素生物|bestiary|challenge rating=1/2|type=elemental|miscellaneous=!swarm}",
+						"八個{@filter 挑戰等級1/4或以下的元素生物|bestiary|challenge rating=0;1/8;1/4|type=elemental|miscellaneous=!swarm}."
 					]
 				},
 				"一個被此法術召喚的元素生物會在它生命值歸零或此法術結束時消失。",
@@ -5795,11 +6215,22 @@
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"當你使用特定更高環位的法術位施放此法術時，你從上述召喚選項中選擇一項，並讓更多生物出現：使用6環法術位時出現兩倍、8環法術位時出現三倍。"
+						"當你使用特定更高環階的法術位施放此法術時，你從上述召喚選項中選擇一項，並讓更多生物出現：使用6環法術位時出現兩倍、8環法術位時出現三倍。"
 					]
 				}
 			],
-			"page": 226
+			"isSummon": true,
+			"page": 226,
+			"backgrounds": [
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
+				},
+				{
+					"name": "Selesnya Initiate",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "召喚箭雨", "ENG_name": "Conjure Volley",
@@ -5843,6 +6274,9 @@
 			"page": 226,
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"Y"
 			]
 		},
 		{
@@ -5895,10 +6329,10 @@
 				{
 					"type": "list",
 					"items": [
-						"一個{@filter 挑戰等級2或以下的精類生物|bestiary|cr=2|type=fey|miscellaneous=!swarm}",
-						"二個{@filter 挑戰等級1或以下的精類生物|bestiary|cr=1|type=fey|miscellaneous=!swarm}",
-						"四個{@filter 挑戰等級1/2或以下的精類生物|bestiary|cr=1/2|type=fey|miscellaneous=!swarm}",
-						"八個{@filter 挑戰等級1/4或以下的精類生物|bestiary|cr=0;1/8;1/4|type=fey|miscellaneous=!swarm}"
+						"一個{@filter 挑戰等級2或以下的精類生物|bestiary|challenge rating=2|type=fey|miscellaneous=!swarm}",
+						"二個{@filter 挑戰等級1或以下的精類生物|bestiary|challenge rating=1|type=fey|miscellaneous=!swarm}",
+						"四個{@filter 挑戰等級1/2或以下的精類生物|bestiary|challenge rating=1/2|type=fey|miscellaneous=!swarm}",
+						"八個{@filter 挑戰等級1/4或以下的精類生物|bestiary|challenge rating=0;1/8;1/4|type=fey|miscellaneous=!swarm}"
 					]
 				},
 				"一個被召喚的生物會在它生命值歸零或此法術結束時消失。",
@@ -5910,10 +6344,11 @@
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"當你使用特定更高環位的法術位施放此法術時，你從上述召喚選項中選擇一項，並讓更多生物出現：使用6環法術位時出現兩倍、8環法術位時出現三倍。"
+						"當你使用特定更高環階的法術位施放此法術時，你從上述召喚選項中選擇一項，並讓更多生物出現：使用6環法術位時出現兩倍、8環法術位時出現三倍。"
 					]
 				}
 			],
+			"isSummon": true,
 			"page": 226
 		},
 		{
@@ -6104,6 +6539,9 @@
 				"blinded",
 				"stunned",
 				"poisoned"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -6149,7 +6587,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"選擇一個你所能施放的環位為5環或更低，施法時間為1個動作，且能以你自己為目標的法術。作為施放觸發術的一部份，你施放該法術\u2014以下稱其為併發法術\u2014，為這兩個法術消耗各自的法術位，但併發法術並不會馬上產生效果，而是在特定狀況發生時發揮效果。你在施放這兩個法術時描述一個狀況。舉例來說，一個和{@spell 水下呼吸}法術一同被施放的觸發術可能會設定在你被水或類似液體吞沒時讓{@spell 水下呼吸發揮效果。",
+				"選擇一個你所能施放，環階為5環或更低，施法時間為1個動作，且能以你自己為目標的法術。作為施放觸發術的一部份，你施放該法術\u2014以下稱其為併發法術\u2014，為這兩個法術消耗各自的法術位，但併發法術並不會馬上產生效果，而是在特定狀況發生時發揮效果。你在施放這兩個法術時描述一個狀況。舉例來說，一個和{@spell 水下呼吸}法術一同被施放的觸發術可能會設定在你被水或類似液體吞沒時讓{@spell 水下呼吸發揮效果。",
 				"併發法術會緊接在第一次遭遇該狀況時立刻發揮效果，無論你是否希望如此，且觸發術結束。",
 				"併發法術只會對你發揮效果，即使它原本可以指定其他目標也一樣。你同時只能使用一個觸發術。若你再次施放此法術，則另一個作用在你身上的觸發術將被中止。觸發術也會在你不再擁有它的材料構材時結束。"
 			],
@@ -6201,6 +6639,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -6336,6 +6778,9 @@
 			],
 			"opposedCheck": [
 				"strength"
+			],
+			"areaTags": [
+				"N"
 			]
 		},
 		{
@@ -6541,7 +6986,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"你在射程內的地表上插下四枝非魔法彈藥\u2014箭或弩矢\u2014並在其上施加魔法以保護這個區域。直到法術結束前，每當一個你以外的生物在一個回合中第一次進入距離彈藥30呎內的範圍，或在該處結束它的回合，其中一枝彈藥將會飛起並擊向它。該生物必須成功通過一次敏捷豁免，否則受到{@dice 1d6}穿刺傷害。該枝彈藥將會損毀。當沒有剩餘的彈藥時，此法術結束。",
+				"你在射程內的地表上插下四枝非魔法彈藥\u2014{@item 箭|phb}或{@item 弩矢|phb}\u2014並在其上施加魔法以保護這個區域。直到法術結束前，每當一個你以外的生物在一個回合中第一次進入距離彈藥30呎內的範圍，或在該處結束它的回合，其中一枝彈藥將會飛起並擊向它。該生物必須成功通過一次敏捷豁免，否則受到{@dice 1d6}穿刺傷害。該枝彈藥將會損毀。當沒有剩餘的彈藥時，此法術結束。",
 				"當你施放此法術時，你可以指定任何你所選擇的生物，此法術將無視它們。"
 			],
 			"entriesHigherLevel": [
@@ -6559,6 +7004,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -6627,18 +7075,24 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"你嘗試中斷一個生物施展法術的過程。若該生物所施放的法術的環位為3環或以下，則該法術將失敗且不會產生任何效果。若它施放的法術的環位為4環或更高，則使用你的施法屬性進行一次屬性檢定。DC等同於10+該法術的環位。若檢定成功，該生物的法術失敗且不會產生任何效果。"
+				"你嘗試中斷一個生物施展法術的過程。若該生物所施放的法術的環階為3環或以下，則該法術將失敗且不會產生任何效果。若它施放的法術的環階為4環或更高，則使用你的施法屬性進行一次屬性檢定。DC等同於10+該法術的環階。若檢定成功，該生物的法術失敗且不會產生任何效果。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"當你使用4環或更高的法術位施放此法術時，如果被中斷法術的環位等於或低於你所使用的法術位，則該法術不會產生任何效果。"
+						"當你使用4環或更高的法術位施放此法術時，如果被中斷法術的環階等於或低於你所使用的法術位，則該法術不會產生任何效果。"
 					]
 				}
 			],
-			"page": 228
+			"page": 228,
+			"backgrounds": [
+				{
+					"name": "Azorius Functionary",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "創造飲食", "ENG_name": "Create Food and Water",
@@ -6759,6 +7213,7 @@
 				}
 			],
 			"page": 229,
+			"isSummon": true,
 			"permanentEffects": true
 		},
 		{
@@ -6848,6 +7303,15 @@
 					"baseName": "Genasi",
 					"baseSource": "EEPC"
 				}
+			],
+			"areaTags": [
+				"C"
+			],
+			"backgrounds": [
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -6886,6 +7350,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -6960,7 +7428,13 @@
 					]
 				}
 			],
-			"page": 229
+			"page": 229,
+			"backgrounds": [
+				{
+					"name": "Simic Scientist",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "瘋狂冠冕", "ENG_name": "Crown of Madness",
@@ -7051,6 +7525,15 @@
 			],
 			"conditionInflict": [
 				"charmed"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Rakdos Cultist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -7120,6 +7603,9 @@
 			"page": 230,
 			"damageInflict": [
 				"radiant"
+			],
+			"areaTags": [
+				"R"
 			]
 		},
 		{
@@ -7172,6 +7658,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -7239,7 +7729,10 @@
 					"baseSource": "PHB"
 				}
 			],
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "舞光術", "ENG_name": "Dancing Lights",
@@ -7286,6 +7779,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -7313,6 +7810,12 @@
 					"source": "UAThatOldBlackMagic",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				}
+			],
+			"backgrounds": [
+				{
+					"name": "Golgari Agent",
+					"source": "GGR"
 				}
 			]
 		},
@@ -7480,6 +7983,9 @@
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
 				}
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -7533,6 +8039,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -7540,7 +8050,10 @@
 			"entries": [
 				"你觸碰一個自願生物以賦予它能在黑暗中視物的能力。在法術持續期間，該生物獲得60呎黑暗視覺。"
 			],
-			"page": 230
+			"page": 230,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "晝明術", "ENG_name": "Daylight",
@@ -7661,6 +8174,9 @@
 					"name": "Aasimar",
 					"source": "DMG"
 				}
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -7776,7 +8292,20 @@
 				"當目標第一次因為受到傷害而導致生命值歸零時，目標改為使生命值減少至1，且此法術結束。",
 				"若此法術在目標受到不造成傷害而導致它立刻死亡的效果時仍然作用著，則其對目標的即死效果將被抵銷，且此法術結束。"
 			],
-			"page": 230
+			"page": 230,
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Boros Legionnaire",
+					"source": "GGR"
+				},
+				{
+					"name": "Orzhov Representative",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "延遲爆裂火球", "ENG_name": "Delayed Blast Fireball",
@@ -7844,6 +8373,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -7995,6 +8527,16 @@
 			],
 			"conditionInflict": [
 				"prone"
+			],
+			"areaTags": [
+				"MT",
+				"R"
+			],
+			"backgrounds": [
+				{
+					"name": "Gruul Anarch",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -8105,6 +8647,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -8195,7 +8741,13 @@
 				"在法術持續期間，你可以察覺距離你30呎範圍內任何毒素、有毒生物、疾病的存在和位置。你同時能夠辨識出各毒素、有毒生物、或疾病的種類。",
 				"此法術可以穿透大部分的障礙物，但會被1呎厚的石頭、1吋厚的尋常金屬、一層薄薄的鉛、或3呎的木頭或泥土給阻擋。"
 			],
-			"page": 231
+			"page": 231,
+			"backgrounds": [
+				{
+					"name": "Simic Scientist",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "偵測思想", "ENG_name": "Detect Thoughts",
@@ -8289,6 +8841,12 @@
 					"source": "MTF",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				}
+			],
+			"backgrounds": [
+				{
+					"name": "Dimir Operative",
+					"source": "GGR"
 				}
 			]
 		},
@@ -8436,6 +8994,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -8517,10 +9079,6 @@
 					"source": "VGM"
 				},
 				{
-					"name": "Firbolg",
-					"source": "VGM"
-				},
-				{
 					"name": "Tiefling (Dispater)",
 					"source": "UAFiendishOptions",
 					"baseName": "Tiefling",
@@ -8543,6 +9101,12 @@
 					"source": "MTF",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				}
+			],
+			"backgrounds": [
+				{
+					"name": "Dimir Operative",
+					"source": "GGR"
 				}
 			]
 		},
@@ -8607,6 +9171,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -8677,6 +9244,9 @@
 			],
 			"spellAttack": [
 				"M"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -8734,6 +9304,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -8771,18 +9345,21 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"選擇射程內的一個生物、物體、或魔法效果。任何目標上3環或以下的法術將立刻結束。至於每個目標上4環或更高的法術，則使用你的施法屬性進行一次屬性檢定。DC等同於10+該法術的環位。若檢定成功，則結束該法術。"
+				"選擇射程內的一個生物、物體、或魔法效果。任何目標上3環或以下的法術將立刻結束。至於每個目標上4環或更高的法術，則使用你的施法屬性進行一次屬性檢定。DC等同於10+該法術的環階。若檢定成功，則結束該法術。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"當你使用4環或更高的法術位施放此法術時，如果作用於目標上的法術的環位等於或低於你所使用的法術位，則你將自動結束該法術的效果。"
+						"當你使用4環或更高的法術位施放此法術時，如果作用於目標上的法術的環階等於或低於你所使用的法術位，則你將自動結束該法術的效果。"
 					]
 				}
 			],
-			"page": 234
+			"page": 234,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "噪音暗語", "ENG_name": "Dissonant Whispers",
@@ -8848,6 +9425,15 @@
 			],
 			"savingThrow": [
 				"wisdom"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Rakdos Cultist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -8921,7 +9507,17 @@
 				"此法術並不會將任何可能改變結果的潛在環境因素納入考量，像是施展額外的法術或者同伴的加入或離去。",
 				"若你在完成下一次長休之前施放此法術兩次或以上，則第一次之後的每次施放都會有累積25%的機率導致隨機的結果。DM將暗自擲骰決定。"
 			],
-			"page": 234
+			"page": 234,
+			"backgrounds": [
+				{
+					"name": "Azorius Functionary",
+					"source": "GGR"
+				},
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "神恩術", "ENG_name": "Divine Favor",
@@ -9047,6 +9643,9 @@
 				"blinded",
 				"deafened",
 				"stunned"
+			],
+			"areaTags": [
+				"MT"
 			]
 		},
 		{
@@ -9186,6 +9785,15 @@
 			],
 			"conditionInflict": [
 				"charmed"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Gruul Anarch",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -9261,6 +9869,9 @@
 			],
 			"conditionInflict": [
 				"charmed"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -9419,6 +10030,16 @@
 							"name": "Beauty (Stream)",
 							"source": "Twitter"
 						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Order",
+							"source": "GGR"
+						}
 					}
 				]
 			},
@@ -9444,6 +10065,19 @@
 			],
 			"conditionInflict": [
 				"charmed"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Azorius Functionary",
+					"source": "GGR"
+				},
+				{
+					"name": "Rakdos Cultist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -9567,6 +10201,9 @@
 			],
 			"savingThrow": [
 				"wisdom"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -9628,7 +10265,17 @@
 					]
 				}
 			],
-			"page": 236
+			"page": 236,
+			"backgrounds": [
+				{
+					"name": "Selesnya Initiate",
+					"source": "GGR"
+				},
+				{
+					"name": "Simic Scientist",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "地震術", "ENG_name": "Earthquake",
@@ -9713,6 +10360,9 @@
 			],
 			"conditionInflict": [
 				"prone"
+			],
+			"areaTags": [
+				"R"
 			]
 		},
 		{
@@ -9761,7 +10411,11 @@
 			"spellAttack": [
 				"R"
 			],
-			"scalingEffects": true
+			"scalingEffects": true,
+			"areaTags": [
+				"ST",
+				"MT"
+			]
 		},
 		{
 			"name": "元素武器", "ENG_name": "Elemental Weapon",
@@ -9798,6 +10452,10 @@
 					{
 						"name": "Paladin",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -9883,6 +10541,12 @@
 				"fire",
 				"lightning",
 				"thunder"
+			],
+			"backgrounds": [
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -9937,6 +10601,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -10037,7 +10705,16 @@
 					]
 				}
 			],
-			"page": 237
+			"page": 237,
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Simic Scientist",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "變巨/縮小術", "ENG_name": "Enlarge/Reduce",
@@ -10084,6 +10761,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -10146,6 +10827,15 @@
 					"source": "MTF",
 					"baseName": "Dwarf",
 					"baseSource": "PHB"
+				}
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Simic Scientist",
+					"source": "GGR"
 				}
 			]
 		},
@@ -10224,6 +10914,16 @@
 			],
 			"conditionInflict": [
 				"restrained"
+			],
+			"backgrounds": [
+				{
+					"name": "Azorius Functionary",
+					"source": "GGR"
+				},
+				{
+					"name": "Azorius Functionary",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -10313,6 +11013,15 @@
 			],
 			"conditionInflict": [
 				"restrained"
+			],
+			"areaTags": [
+				"Q"
+			],
+			"backgrounds": [
+				{
+					"name": "Golgari Agent",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -10383,6 +11092,19 @@
 					"source": "SCAG",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				}
+			],
+			"areaTags": [
+				"MT"
+			],
+			"backgrounds": [
+				{
+					"name": "Orzhov Representative",
+					"source": "GGR"
+				},
+				{
+					"name": "Rakdos Cultist",
+					"source": "GGR"
 				}
 			]
 		},
@@ -10553,6 +11275,9 @@
 			],
 			"conditionInflict": [
 				"restrained"
+			],
+			"areaTags": [
+				"Q"
 			]
 		},
 		{
@@ -10602,6 +11327,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -10621,7 +11350,13 @@
 			"entries": [
 				"此法術讓你能以驚人的速度移動。當你施放此法術時，你接著直到法術結束前的每個回合都能夠以一個附贈動作採取{@action 疾走}動作。"
 			],
-			"page": 238
+			"page": 238,
+			"backgrounds": [
+				{
+					"name": "Simic Scientist",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "攝心目光", "ENG_name": "Eyebite",
@@ -10705,6 +11440,9 @@
 			"conditionInflict": [
 				"frightened",
 				"unconscious"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -10742,6 +11480,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -10872,6 +11614,9 @@
 					"baseName": "Half-Elf",
 					"baseSource": "PHB"
 				}
+			],
+			"areaTags": [
+				"C"
 			]
 		},
 		{
@@ -10917,6 +11662,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -11122,6 +11871,15 @@
 			],
 			"conditionInflict": [
 				"frightened"
+			],
+			"areaTags": [
+				"N"
+			],
+			"backgrounds": [
+				{
+					"name": "Rakdos Cultist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -11187,7 +11945,10 @@
 			"entries": [
 				"選擇最多五個射程內的生物。直到法術結束前，墜落中生物的下降速率降至每輪60呎。若該生物在法術結束之前落地，則它不會承受任何墜落傷害且能用它的腳著地，接著結束這個法術對該生物的效果。"
 			],
-			"page": 239
+			"page": 239,
+			"areaTags": [
+				"MT"
+			]
 		},
 		{
 			"name": "弱智術", "ENG_name": "Feeblemind",
@@ -11249,6 +12010,9 @@
 			],
 			"savingThrow": [
 				"intelligence"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -11349,6 +12113,9 @@
 			"conditionInflict": [
 				"blinded",
 				"incapacitated"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -11404,6 +12171,7 @@
 				"最後，當你施放一個射程為觸碰的法術時，你的魔寵可以傳遞該法術就彷彿它施放了該法術一樣。你的魔寵必須位於你100呎範圍內，且它必須在你施放時使用它的反應以傳遞法術。如果該法術要求一次攻擊檢定，則你在該檢定中使用你的攻擊調整值。"
 			],
 			"page": 240,
+			"isSummon": true,
 			"permanentEffects": true
 		},
 		{
@@ -11448,6 +12216,7 @@
 				"當你的坐騎距離你1哩內，你可以與它藉由心靈感應溝通。",
 				"你不能同時擁有超過一隻透過此法術連結的坐騎。以一個動作，你可以在任何時候將該坐騎從它與你的連結中釋放，使它憑空消失。"
 			],
+			"isSummon": true,
 			"page": 240
 		},
 		{
@@ -11610,7 +12379,10 @@
 			"savingThrow": [
 				"constitution"
 			],
-			"permanentEffects": true
+			"permanentEffects": true,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "火焰箭", "ENG_name": "Fire Bolt",
@@ -11647,6 +12419,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -11682,6 +12458,23 @@
 					"source": "UAEladrinAndGith",
 					"baseName": "Elf",
 					"baseSource": "PHB"
+				}
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Boros Legionnaire",
+					"source": "GGR"
+				},
+				{
+					"name": "Gruul Anarch",
+					"source": "GGR"
+				},
+				{
+					"name": "Rakdos Cultist",
+					"source": "GGR"
 				}
 			]
 		},
@@ -11824,6 +12617,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"C"
 			]
 		},
 		{
@@ -11927,6 +12723,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -11948,7 +12747,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "leaf of sumac"
+				"m": "漆樹的樹葉"
 			},
 			"duration": [
 				{
@@ -11997,6 +12796,9 @@
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
 				}
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -12136,6 +12938,15 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"Y"
+			],
+			"backgrounds": [
+				{
+					"name": "Boros Legionnaire",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -12256,6 +13067,15 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"S"
+			],
+			"backgrounds": [
+				{
+					"name": "Rakdos Cultist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -12316,6 +13136,9 @@
 			"conditionInflict": [
 				"petrified",
 				"restrained"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -12366,6 +13189,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -12382,7 +13209,10 @@
 					]
 				}
 			],
-			"page": 243
+			"page": 243,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "雲霧術", "ENG_name": "Fog Cloud",
@@ -12460,7 +13290,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"你以射程內一點為中心創造出一個20呎半徑的霧氣球體。這片霧球會繞過轉角，且它籠罩的範圍為重度遮蔽。它在法術持續時間內維持存在、或直到一陣有著中等或更強速度的風（至少時速10里）將它吹散。"
+				"你以射程內一點為中心創造出一個20呎半徑的霧氣球體。這片霧球會繞過轉角，且它籠罩的範圍為重度遮蔽。它在法術持續時間內維持存在、或直到一陣有著中等或更強速度的風（至少時速10哩）將它吹散。"
 			],
 			"entriesHigherLevel": [
 				{
@@ -12477,6 +13307,9 @@
 					"name": "Triton",
 					"source": "VGM"
 				}
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -12599,6 +13432,9 @@
 			"page": 243,
 			"savingThrow": [
 				"charisma"
+			],
+			"areaTags": [
+				"C"
 			]
 		},
 		{
@@ -12656,7 +13492,10 @@
 				"你觸碰一個自願生物並賜予它能夠看見當前未來的有限能力。在法術持續期間，目標不會被突襲，且在所有攻擊檢定、屬性檢定、豁免檢定中具有優勢。此外，在法術持續期間，其他生物對目標進行的攻擊檢定將具有劣勢。",
 				"若你在持續時間結束前再次施放此它，則此法術立刻結束。"
 			],
-			"page": 244
+			"page": 244,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "行動自如術", "ENG_name": "Freedom of Movement",
@@ -12709,6 +13548,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -12804,7 +13647,20 @@
 				"你觸碰一個自願生物。在法術持續期間，目標的移動不會受到困難地形的影響，且法術和其他魔法效果無法降低目標的移動速度、也無法使它被{@condition 麻痺}或{@condition 束縛}。",
 				"目標也可以花費5呎移動速度以自動從非魔法束縛中逃脫，像是{@item 鐐銬|phb}或一個使它{@condition 被擒}的生物。最後，處於水下並不會對目標的移動和攻擊產生任何懲罰。"
 			],
-			"page": 244
+			"page": 244,
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Dimir Operative",
+					"source": "GGR"
+				},
+				{
+					"name": "Simic Scientist",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "交友術", "ENG_name": "Friends",
@@ -12884,6 +13740,23 @@
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
 				}
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Azorius Functionary",
+					"source": "GGR"
+				},
+				{
+					"name": "Orzhov Representative",
+					"source": "GGR"
+				},
+				{
+					"name": "Selesnya Initiate",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -12934,6 +13807,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -12966,7 +13843,20 @@
 				"當處於這個形態時，目標唯一的移動手段為10呎的飛行速度。目標可以可以進入並佔據其他生物所在的空間。目標具有對非魔法傷害的抗性，且它在力量、敏捷、和體質豁免中具有優勢。目標可以穿過小孔洞、狹窄的開口、甚至裂縫，但它將視液體如同其為固體表面。目標即使在陷入{@condition 震懾}或{@condition 無力}狀態時也不會墜落，且會懸浮在空中。",
 				"當處於這個朦朧雲霧的形態時，目標無法說話或操縱物體，且任何它所攜帶或持握的物體不會掉落、被使用或互動。目標無法攻擊或施放法術。"
 			],
-			"page": 244
+			"page": 244,
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Dimir Operative",
+					"source": "GGR"
+				},
+				{
+					"name": "Simic Scientist",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "異界之門", "ENG_name": "Gate",
@@ -13117,6 +14007,15 @@
 			],
 			"conditionInflict": [
 				"charmed"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Orzhov Representative",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -13271,7 +14170,17 @@
 				"一個生物會在法術持續期間維持它的巨大體型，直到它生命值歸零，或你使用一個動作解消它身上的效果。",
 				"DM可能會允許你選擇不同的目標。舉例來說，若你轉變一隻蜜蜂，則牠的巨大版本可能會擁有與{@creature 巨黃蜂}相同的數據資料。"
 			],
-			"page": 245
+			"isSummon": true,
+			"page": 245,
+			"areaTags": [
+				"MT"
+			],
+			"backgrounds": [
+				{
+					"name": "Golgari Agent",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "花言巧語", "ENG_name": "Glibness",
@@ -13373,11 +14282,14 @@
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"當你使用7環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，屏障所能阻擋的法術環位便會再提升一環。"
+						"當你使用7環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，屏障所能阻擋的法術環階便會再提升一環。"
 					]
 				}
 			],
-			"page": 245
+			"page": 245,
+			"areaTags": [
+				"S"
+			]
 		},
 		{
 			"name": "守衛銘文", "ENG_name": "Glyph of Warding",
@@ -13430,6 +14342,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -13482,7 +14398,7 @@
 					"type": "entries",
 					"name": "升環效果",
 					"entries": [
-						"當你使用4環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，爆炸符文的傷害便會再增加{@scaledice 5d8|3-9|1d8}。如果你選擇創造法術銘文，你可以儲存任何環位最高等同於你用於施放守衛銘文的法術環位的法術。"
+						"當你使用4環或更高的法術位施放此法術時，你使用的法術位每比原本高一環，爆炸符文的傷害便會再增加{@scaledice 5d8|3-9|1d8}。如果你選擇創造法術銘文，你可以儲存任何環階最高等同於你用於施放守衛銘文的法術位的法術。"
 					]
 				}
 			],
@@ -13499,6 +14415,15 @@
 			],
 			"opposedCheck": [
 				"intelligence"
+			],
+			"areaTags": [
+				"S"
+			],
+			"backgrounds": [
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -13610,6 +14535,15 @@
 			"page": 246,
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Golgari Agent",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -13648,6 +14582,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -13662,6 +14600,9 @@
 			],
 			"conditionInflict": [
 				"prone"
+			],
+			"areaTags": [
+				"Q"
 			]
 		},
 		{
@@ -13790,6 +14731,9 @@
 			"page": 246,
 			"conditionInflict": [
 				"invisible"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -13835,6 +14779,10 @@
 					{
 						"name": "Druid",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -13873,7 +14821,10 @@
 					]
 				}
 			],
-			"page": 246
+			"page": 246,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "虔誠守衛", "ENG_name": "Guardian of Faith",
@@ -14099,7 +15050,10 @@
 				"你可以透過每天施展此法術一整年，來創造出受到銅牆鐵壁效果永久保護的建築物。"
 			],
 			"page": 248,
-			"permanentEffects": true
+			"permanentEffects": true,
+			"areaTags": [
+				"Q"
+			]
 		},
 		{
 			"name": "指導術", "ENG_name": "Guidance",
@@ -14140,6 +15094,10 @@
 					{
 						"name": "Druid",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -14147,7 +15105,16 @@
 			"entries": [
 				"你觸碰一個自願生物。在法術結束前一次，目標可以擲一顆{@dice d4}，並將骰出的數字加到它所選的一次屬性檢定中。它可以在進行該屬性檢定之前或之後擲這顆骰。然後法術將會結束。"
 			],
-			"page": 248
+			"page": 248,
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Orzhov Representative",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "光導箭", "ENG_name": "Guiding Bolt",
@@ -14228,6 +15195,15 @@
 			],
 			"spellAttack": [
 				"R"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Boros Legionnaire",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -14250,7 +15226,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a legume seed"
+				"m": "一粒豆科植物的種子"
 			},
 			"duration": [
 				{
@@ -14327,6 +15303,9 @@
 					"name": "Triton",
 					"source": "VGM"
 				}
+			],
+			"areaTags": [
+				"L"
 			]
 		},
 		{
@@ -14385,6 +15364,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -14456,14 +15438,14 @@
 					"type": "entries",
 					"name": "黑暗",
 					"entries": [
-						"黑暗充斥著這片區域。尋常光源，以及利用環位比你施放此法術所用法術環位更低的法術所創造的魔法光源，無法照亮這個區域。"
+						"黑暗充斥著這片區域。尋常光源，以及透過環階比你施放此法術所用法術位更低的法術所創造的魔法光源，無法照亮這個區域。"
 					]
 				},
 				{
 					"type": "entries",
 					"name": "晝明",
 					"entries": [
-						"明亮光罩充斥著這片區域。利用環位比你施放此法術所用法術環位更低的法術所創造的魔法黑暗，無法熄滅這片光照。"
+						"明亮光罩充斥著這片區域。透過環階比你施放此法術所用法術位更低的法術所創造的魔法黑暗，無法熄滅這片光照。"
 					]
 				},
 				{
@@ -14617,6 +15599,9 @@
 			"page": 249,
 			"opposedCheck": [
 				"intelligence"
+			],
+			"areaTags": [
+				"C"
 			]
 		},
 		{
@@ -14663,6 +15648,9 @@
 			],
 			"savingThrow": [
 				"constitution"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -14710,6 +15698,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -14791,7 +15783,16 @@
 				"選擇一個射程內你所能看見的自願生物。直到此法術結束前，目標的移動速度變為兩倍，它的AC獲得+2加值，在敏捷豁免中具有優勢，且在它的每個回合中獲得一個額外的動作。這個動作只能被用來採取{@action 攻擊}（僅有一次武器攻擊）、{@action 疾走}、{@action 撤離}、{@action 躲藏}、或{@action 使用物件}動作。",
 				"當此法術結束時，一陣無力感襲向目標，直到它的下個回合結束前，它都無法移動或採取動作。"
 			],
-			"page": 250
+			"page": 250,
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Rakdos Cultist",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "治癒術", "ENG_name": "Heal",
@@ -14845,7 +15846,10 @@
 				}
 			],
 			"page": 250,
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "治癒真言", "ENG_name": "Healing Word",
@@ -14902,7 +15906,10 @@
 				}
 			],
 			"page": 250,
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "灼熱金屬", "ENG_name": "Heat Metal",
@@ -14945,6 +15952,10 @@
 					{
 						"name": "Druid",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -15000,6 +16011,15 @@
 			],
 			"savingThrow": [
 				"constitution"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -15094,6 +16114,15 @@
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
 				}
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Rakdos Cultist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -15147,6 +16176,9 @@
 			"page": 250,
 			"damageImmune": [
 				"poison"
+			],
+			"areaTags": [
+				"MT"
 			]
 		},
 		{
@@ -15221,6 +16253,16 @@
 							"name": "Beauty (Stream)",
 							"source": "Twitter"
 						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Order",
+							"source": "GGR"
+						}
 					}
 				]
 			},
@@ -15237,7 +16279,16 @@
 					]
 				}
 			],
-			"page": 250
+			"page": 250,
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Boros Legionnaire",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "脆弱詛咒", "ENG_name": "Hex",
@@ -15317,6 +16368,9 @@
 					"baseName": "Elf (Zendikar)",
 					"baseSource": "PSZ"
 				}
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -15452,6 +16506,9 @@
 			],
 			"conditionInflict": [
 				"paralyzed"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -15605,6 +16662,16 @@
 							"source": "UAGiantSoulSorcerer",
 							"subSubclass": "Frost"
 						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Order",
+							"source": "GGR"
+						}
 					}
 				]
 			},
@@ -15627,6 +16694,15 @@
 			],
 			"conditionInflict": [
 				"paralyzed"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Azorius Functionary",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -15681,6 +16757,9 @@
 			],
 			"conditionInflict": [
 				"blinded"
+			],
+			"areaTags": [
+				"R"
 			]
 		},
 		{
@@ -15738,6 +16817,9 @@
 			],
 			"conditionInflict": [
 				"blinded"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -15806,6 +16888,9 @@
 			"page": 251,
 			"opposedCheck": [
 				"wisdom"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -15903,6 +16988,9 @@
 			"conditionInflict": [
 				"charmed",
 				"incapacitated"
+			],
+			"areaTags": [
+				"C"
 			]
 		},
 		{
@@ -16022,6 +17110,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"Y"
 			]
 		},
 		{
@@ -16062,6 +17153,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -16105,7 +17200,10 @@
 				"你選擇一個你必須在施放此法術時始終觸碰著的物體。如果它是一件魔法物品或含有魔法的物品，你將得知它的特性、該如何使用它們、它是否需要同調才能使用、以及它還剩下幾次充能（若有）。你得知是否有任何法術正在作用這個物品，若有則你也以知道那是什麼法術。如果該物品是被某個法術所創造的，你也得知是什麼法術創造了它。",
 				"如果你在施法時觸碰的是一個生物而非物體，則你得知現在有什麼法術正在影響它（若有）。"
 			],
-			"page": 252
+			"page": 252,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "迷幻手稿", "ENG_name": "Illusory Script",
@@ -16166,7 +17264,13 @@
 				"一旦此法術被解除，原始手稿和幻象將一起消失。",
 				"一個擁有真實視覺的生物可以讀出被隱藏的訊息。"
 			],
-			"page": 252
+			"page": 252,
+			"backgrounds": [
+				{
+					"name": "Orzhov Representative",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "禁錮術", "ENG_name": "Imprisonment",
@@ -16273,6 +17377,9 @@
 			],
 			"conditionInflict": [
 				"restrained"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -16330,6 +17437,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -16416,6 +17526,9 @@
 			],
 			"spellAttack": [
 				"M"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -16592,6 +17705,15 @@
 			],
 			"savingThrow": [
 				"constitution"
+			],
+			"areaTags": [
+				"S"
+			],
+			"backgrounds": [
+				{
+					"name": "Golgari Agent",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -16646,6 +17768,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -16737,6 +17863,9 @@
 			],
 			"conditionInflict": [
 				"invisible"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -16790,6 +17919,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -16832,6 +17965,15 @@
 					"source": "MTF",
 					"baseName": "Gith",
 					"baseSource": "MTF"
+				}
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Simic Scientist",
+					"source": "GGR"
 				}
 			]
 		},
@@ -17018,6 +18160,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -17040,7 +18186,13 @@
 				"在60天後，每一天此法術的效果都會有累積5%的機率就此結束。此法術會在你再次施放此法術時、箱子的小複製品被摧毀時、或是你選擇以一個動作結束此法術時結束。若此法術結束時那個較大的那個箱子仍處在乙太位面，則它將就此遺失，無法挽回。"
 			],
 			"page": 254,
-			"permanentEffects": true
+			"permanentEffects": true,
+			"backgrounds": [
+				{
+					"name": "Orzhov Representative",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "李歐蒙小屋", "ENG_name": "Leomund's Tiny Hut",
@@ -17094,7 +18246,10 @@
 				"這個半球可以容納你和九個體型為中型或更小的生物。若該區域內包括了一個大型生物或超過九個生物，則此法術失敗。在你施放此法術時就處於半球內的生物和物體可以自由地移動穿過此半球。所有其他生物和物體都將被阻擋而無法穿過半球。法術和其他魔法效果無法延伸或被施放穿過半球。無論外側的天候如何，半球內的空氣永遠舒適而乾燥。",
 				"直到此法術結束前，你可以控制半球內部的照明變為微光或黑暗。從外側看，這個半球是不透明且呈現任何你所選的顏色，但它從內側看出去則是透明的。"
 			],
-			"page": 255
+			"page": 255,
+			"areaTags": [
+				"H"
+			]
 		},
 		{
 			"name": "次級復原術", "ENG_name": "Lesser Restoration",
@@ -17146,6 +18301,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -17201,6 +18360,9 @@
 					"name": "Aasimar",
 					"source": "DMG"
 				}
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -17244,6 +18406,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -17282,6 +18448,9 @@
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
 				}
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -17330,6 +18499,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -17454,6 +18627,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -17548,6 +18724,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"L"
 			]
 		},
 		{
@@ -17710,6 +18889,16 @@
 							"name": "Order (UA)",
 							"source": "UAOrderDomain"
 						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Order",
+							"source": "GGR"
+						}
 					}
 				]
 			},
@@ -17851,6 +19040,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -17867,7 +19060,10 @@
 					]
 				}
 			],
-			"page": 256
+			"page": 256,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "法師護甲", "ENG_name": "Mage Armor",
@@ -17915,7 +19111,10 @@
 			"entries": [
 				"你觸碰一個沒有穿戴護甲的自願生物，直到法術結束前，一道防護性的魔法力場將環繞在它身邊。目標的基本AC變為13+它的敏捷調整值。此法術將在目標穿戴護甲或你以一個動作解消此法術時結束。"
 			],
-			"page": 256
+			"page": 256,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "法師之手", "ENG_name": "Mage Hand",
@@ -17964,6 +19163,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -18022,6 +19225,12 @@
 					"source": "MTF",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				}
+			],
+			"backgrounds": [
+				{
+					"name": "Dimir Operative",
+					"source": "GGR"
 				}
 			]
 		},
@@ -18158,6 +19367,9 @@
 			"page": 256,
 			"savingThrow": [
 				"charisma"
+			],
+			"areaTags": [
+				"Y"
 			]
 		},
 		{
@@ -18295,6 +19507,10 @@
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
 				}
+			],
+			"areaTags": [
+				"ST",
+				"MT"
 			]
 		},
 		{
@@ -18340,6 +19556,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -18397,6 +19617,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -18637,7 +19861,11 @@
 				}
 			],
 			"page": 258,
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"MT",
+				"S"
+			]
 		},
 		{
 			"name": "群體治癒術", "ENG_name": "Mass Heal",
@@ -18678,7 +19906,10 @@
 				"一陣治癒能量洪流從你流至你周圍的重傷生物體內。你回復最多700點生命值，由你決定如何分配給射程內任意數量你所能看見的生物。且此法術所治癒的生物身上所有的疾病、以及任何使它們{@condition 目盲}或{@condition 耳聾}的效果都將被痊癒。此法術對不死生物或構裝體沒有任何效果。"
 			],
 			"page": 258,
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"MT"
+			]
 		},
 		{
 			"name": "群體治癒真言", "ENG_name": "Mass Healing Word",
@@ -18739,7 +19970,10 @@
 				}
 			],
 			"page": 258,
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"MT"
+			]
 		},
 		{
 			"name": "群體暗示術", "ENG_name": "Mass Suggestion",
@@ -18789,6 +20023,18 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Order",
+							"source": "GGR"
+						}
+					}
 				]
 			},
 			"source": "PHB",
@@ -18813,6 +20059,9 @@
 			],
 			"conditionInflict": [
 				"charmed"
+			],
+			"areaTags": [
+				"MT"
 			]
 		},
 		{
@@ -18860,7 +20109,10 @@
 				"目標可以使用它的動作以嘗試逃脫。當它這麼做時，它進行一次DC 20的智力檢定。若它檢定成功，則它成功逃脫，且此法術結束（{@creature 米諾陶}或{@creature 巨牛魔}將自動通過此檢定）。",
 				"當此法術結束時，目標將重新出現在它離開時所在的空間，或若該空間已被佔據，則出現在最近的一處未被佔據空間。"
 			],
-			"page": 258
+			"page": 258,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "融身入石", "ENG_name": "Meld into Stone",
@@ -18931,6 +20183,12 @@
 			],
 			"conditionInflict": [
 				"prone"
+			],
+			"backgrounds": [
+				{
+					"name": "Dimir Operative",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -19000,6 +20258,9 @@
 			],
 			"spellAttack": [
 				"R"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -19049,6 +20310,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -19103,6 +20368,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -19118,6 +20387,15 @@
 					"source": "UAThatOldBlackMagic",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				}
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Azorius Functionary",
+					"source": "GGR"
 				}
 			]
 		},
@@ -19171,6 +20449,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -19641,7 +20922,7 @@
 			"page": 260,
 			"races": [
 				{
-					"name": "Elf (Eladrin; DMG)",
+					"name": "Elf (Eladrin)",
 					"source": "DMG",
 					"baseName": "Elf",
 					"baseSource": "PHB"
@@ -19750,6 +21031,15 @@
 			"conditionInflict": [
 				"charmed",
 				"incapacitated"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Dimir Operative",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -19826,6 +21116,9 @@
 			],
 			"savingThrow": [
 				"constitution"
+			],
+			"areaTags": [
+				"Y"
 			]
 		},
 		{
@@ -19868,6 +21161,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -19976,6 +21273,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -20066,6 +21367,9 @@
 			],
 			"spellAttack": [
 				"M"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -20124,7 +21428,10 @@
 				"此法術無法改變天然岩石或石製建築。岩石和建築物會被搬移以適應新的地形。若你重塑地形的方式可能會導致建築結構不穩定，則它可能會因此崩塌。",
 				"同樣的，此法術無法直接影響植物的生長。被影響的土壤會帶著任何生長在上面的植物一起移動。"
 			],
-			"page": 263
+			"page": 263,
+			"areaTags": [
+				"Q"
+			]
 		},
 		{
 			"name": "迴避偵測", "ENG_name": "Nondetection",
@@ -20202,7 +21509,16 @@
 			"entries": [
 				"在法術持續期間，你隱藏你所觸碰的目標不受預言系法術偵測。目標可以是一個自願生物、一個地方、或一個各邊不超過10呎的物體。目標將無法成為任何預言系法術的目標，也無法透過魔法占卜偵測等手段被察覺。"
 			],
-			"page": 263
+			"page": 263,
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Dimir Operative",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "涅斯圖魔法靈光", "ENG_name": "Nystul's Magic Aura",
@@ -20269,12 +21585,15 @@
 					"type": "entries",
 					"name": "偽裝",
 					"entries": [
-						"你改變目標在那些偵測生物類型的法術和魔法效果下的表現方式，例如聖騎士的神聖感知或{@spell symbol}的觸發條件。你選擇一種生物類型，且其它法術和魔法效果將視目標如同它是該類型或該陣營。"
+						"你改變目標在那些偵測生物類型的法術和魔法效果下的表現方式，例如聖騎士的神聖感知或{@spell 徽記術}的觸發條件。你選擇一種生物類型，且其它法術和魔法效果將視目標如同它是該類型或該陣營。"
 					]
 				}
 			],
 			"page": 263,
-			"permanentEffects": true
+			"permanentEffects": true,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "歐提路克冰凍法球", "ENG_name": "Otiluke's Freezing Sphere",
@@ -20335,6 +21654,9 @@
 			],
 			"opposedCheck": [
 				"strength"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -20378,6 +21700,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -20438,6 +21764,15 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -20490,6 +21825,9 @@
 			"page": 264,
 			"savingThrow": [
 				"wisdom"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -20569,6 +21907,15 @@
 					"source": "EEPC",
 					"baseName": "Genasi",
 					"baseSource": "EEPC"
+				}
+			],
+			"areaTags": [
+				"MT"
+			],
+			"backgrounds": [
+				{
+					"name": "Dimir Operative",
+					"source": "GGR"
 				}
 			]
 		},
@@ -20823,6 +22170,9 @@
 			],
 			"conditionInflict": [
 				"frightened"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -20916,6 +22266,7 @@
 				"在該生物完成任務後，或超過了服務所商議的持續時間，則該生物將回到它的原生位面。若符合任務且可能達成的話，則它將在此之前回到你身邊並回報結果。若你不能同意該生物服務所需的報酬，則該生物將立刻返回它的原生位面。",
 				"一個被招募加入你隊伍的生物將被視作隊伍的一名成員，且會正常分享隊伍所獲得的經驗值。"
 			],
+			"isSummon": true,
 			"page": 265
 		},
 		{
@@ -21042,6 +22393,10 @@
 			"page": 265,
 			"savingThrow": [
 				"charisma"
+			],
+			"isSummon": true,
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -21109,6 +22464,10 @@
 			],
 			"spellAttack": [
 				"M"
+			],
+			"areaTags": [
+				"ST",
+				"MT"
 			]
 		},
 		{
@@ -21207,7 +22566,17 @@
 				"你可以從此法術區域內排除一個或更多任意大小的區域不受此法術影響。",
 				"若你以超過8小時的時間施放此法術，則你使這片土地變得肥沃。以射程內一點為中心半哩半徑範圍內的所有植物都會變得豐饒持續整整1年。這些植物在收穫時將產出原本兩倍數量的食物。"
 			],
-			"page": 266
+			"page": 266,
+			"backgrounds": [
+				{
+					"name": "Golgari Agent",
+					"source": "GGR"
+				},
+				{
+					"name": "Selesnya Initiate",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "毒氣噴灑", "ENG_name": "Poison Spray",
@@ -21252,6 +22621,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -21273,6 +22646,9 @@
 					"name": "Yuan-ti Pureblood",
 					"source": "VGM"
 				}
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -21350,6 +22726,15 @@
 			"page": 266,
 			"savingThrow": [
 				"wisdom"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Simic Scientist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -21390,7 +22775,10 @@
 				"一波治癒能量沖刷你所碰觸的生物。目標回復它所有的生命值。若該生物被{@condition 魅惑}、{@condition 恐懼}、{@condition 麻痺}、或{@condition 震懾}，則該狀態結束。若該生物處於{@condition 伏地}狀態，則它可以使用它的反應起身。此法術對不死生物或構裝體沒有任何效果。"
 			],
 			"page": 266,
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "律令死亡", "ENG_name": "Power Word Kill",
@@ -21441,7 +22829,10 @@
 			"entries": [
 				"你說出一句律令真言，強迫一個射程內你所能看見的生物立即死亡。若你所選的該生物擁有100點生命值或更少，則它立刻死亡。否則此法術不會產生任何效果。"
 			],
-			"page": 266
+			"page": 266,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "律令震懾", "ENG_name": "Power Word Stun",
@@ -21499,6 +22890,9 @@
 			],
 			"conditionInflict": [
 				"stunned"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -21548,7 +22942,10 @@
 				}
 			],
 			"page": 267,
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"MT"
+			]
 		},
 		{
 			"name": "魔法技倆", "ENG_name": "Prestidigitation",
@@ -21598,6 +22995,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -21755,6 +23156,9 @@
 				"blinded",
 				"petrified",
 				"restrained"
+			],
+			"areaTags": [
+				"N"
 			]
 		},
 		{
@@ -21826,7 +23230,7 @@
 					"type": "entries",
 					"name": "綠色",
 					"entries": [
-						"生物若豁免失敗則受到{@dice 10d6}毒素傷害，豁免成功則只受到一半的傷害。{@spell 穿牆術}、或其他相同或更高環位且可以在固體表面上開啟通道的法術可以摧毀此光層。"
+						"生物若豁免失敗則受到{@dice 10d6}毒素傷害，豁免成功則只受到一半的傷害。{@spell 穿牆術}、或其他相同或更高環階且可以在固體表面上開啟通道的法術可以摧毀此光層。"
 					]
 				},
 				{
@@ -21841,14 +23245,14 @@
 					"name": "靛色",
 					"entries": [
 						"若豁免失敗，生物將陷入{@condition 束縛}狀態。它接著必須在它的每個回合結束時進行一次體質豁免。若它成功通過三次豁免，則此法術結束。若它豁免失敗三次，則它將永久地被變成石頭並陷入{@condition 石化}狀態。這些豁免檢定的成功和失敗並不需要是連續的；記錄這兩者的次數直到目標集齊其中一邊三次。",
-						"當此光層存在時，法術無法穿透這道牆。此光層可以透過{@spell 晝明術}法術、或其他相同或更高環位的類似法術所散發的明亮光照來摧毀。"
+						"當此光層存在時，法術無法穿透這道牆。此光層可以透過{@spell 晝明術}法術、或其他相同或更高環階的類似法術所散發的明亮光照來摧毀。"
 					]
 				},
 				{
 					"type": "entries",
 					"name": "紫色",
 					"entries": [
-						"若豁免失敗，生物將陷入{@condition 目盲}狀態。它接著必須在你的下個回合開始時進行一次睿知豁免。若豁免成功則結束{@condition 目盲}狀態。若它豁免失敗，則該生物將被傳送到另一個由DM所選擇的存在位面，且不再{@condition 目盲}。（通常，一個不在它原生位面的生物將被驅逐回它的原生位面，而其他生物則通常會被傳送到星界或乙太位面。)此光層可以透過{@spell 解除魔法}法術、或其他相同或更高環位且的結束法術和魔法效果的類似法術來摧毀。"
+						"若豁免失敗，生物將陷入{@condition 目盲}狀態。它接著必須在你的下個回合開始時進行一次睿知豁免。若豁免成功則結束{@condition 目盲}狀態。若它豁免失敗，則該生物將被傳送到另一個由DM所選擇的存在位面，且不再{@condition 目盲}。（通常，一個不在它原生位面的生物將被驅逐回它的原生位面，而其他生物則通常會被傳送到星界或乙太位面。)此光層可以透過{@spell 解除魔法}法術、或其他相同或更高環階且的結束法術和魔法效果的類似法術來摧毀。"
 					]
 				}
 			],
@@ -21871,6 +23275,9 @@
 				"blinded",
 				"petrified",
 				"restrained"
+			],
+			"areaTags": [
+				"W"
 			]
 		},
 		{
@@ -21930,6 +23337,19 @@
 					"source": "EEPC",
 					"baseName": "Genasi",
 					"baseSource": "EEPC"
+				}
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Gruul Anarch",
+					"source": "GGR"
+				},
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
 				}
 			]
 		},
@@ -22108,6 +23528,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -22215,6 +23639,9 @@
 				"fire",
 				"lightning",
 				"thunder"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -22388,7 +23815,10 @@
 				"直到法術結束前，一個你觸碰的自願生物在對抗特定類型的生物時受到保護：天界、異怪、元素、精類、邪魔、和不死生物。",
 				"這項保護提供了數個好處：這些類別的生物在對目標進行的攻擊檢定具有劣勢。目標也不會被它們{@condition 魅惑}、{@condition 恐懼}、或附身。如果目標已經被這類生物{@condition 魅惑}、{@condition 恐懼}、或附身，則目標將在之後任何對抗相關效果的豁免檢定中具有優勢。"
 			],
-			"page": 270
+			"page": 270,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "防護毒素", "ENG_name": "Protection from Poison",
@@ -22440,6 +23870,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -22473,6 +23907,15 @@
 			"page": 270,
 			"damageResist": [
 				"poison"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Golgari Agent",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -22524,7 +23967,10 @@
 			"entries": [
 				"以你在射程內所選一點為中心，5呎半徑球體內的所有非魔法的食物和飲料被淨化，且變得沒有毒素和疾病。"
 			],
-			"page": 270
+			"page": 270,
+			"areaTags": [
+				"S"
+			]
 		},
 		{
 			"name": "喚醒死者", "ENG_name": "Raise Dead",
@@ -22661,7 +24107,10 @@
 				"你在射程內最多八個你所選擇的自願生物之間創造一道心靈連結，在法術持續期間使每個生物在精神上與所有其他生物聯繫在一起。智力為2或更低的生物不會受到此法術的影響。",
 				"直到此法術結束前，無論目標之間有沒有共通的語言，它們都可以透過這道連結用心靈溝通。這個溝通方式可以跨越任何距離，但不能跨越不同的存在位面。"
 			],
-			"page": 270
+			"page": 270,
+			"areaTags": [
+				"MT"
+			]
 		},
 		{
 			"name": "衰弱射線", "ENG_name": "Ray of Enfeeblement",
@@ -22769,6 +24218,19 @@
 			],
 			"spellAttack": [
 				"R"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Golgari Agent",
+					"source": "GGR"
+				},
+				{
+					"name": "Orzhov Representative",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -22806,6 +24268,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -22848,6 +24314,9 @@
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
 				}
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -22949,6 +24418,15 @@
 			],
 			"conditionInflict": [
 				"poisoned"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Golgari Agent",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -23003,7 +24481,10 @@
 				"若目標有任何殘缺的身體部位（手指、腿、尾巴、諸如此類），則這些身體部位將在2分鐘後回復。若你持有這些被斷開的肢體並將之按在斷口上，則此法術將瞬間使該肢體與斷口接合。"
 			],
 			"page": 271,
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "轉生術", "ENG_name": "Reincarnate",
@@ -23079,7 +24560,7 @@
 									"pad": true
 								}
 							},
-							"{@race 矮人(Hill)|phb|Dwarf, hill}"
+							"{@race 矮人(丘陵)|phb|丘陵矮人}"
 						],
 						[
 							{
@@ -23089,7 +24570,7 @@
 									"max": 21
 								}
 							},
-							"{@race 矮人(Mountain)|phb|Dwarf, mountain}"
+							"{@race 矮人(高山)|phb|高山矮人}"
 						],
 						[
 							{
@@ -23129,7 +24610,7 @@
 									"max": 46
 								}
 							},
-							"{@race 地侏(forest)|phb|Gnome, forest}"
+							"{@race 地侏(林)|phb|林地侏}"
 						],
 						[
 							{
@@ -23139,7 +24620,7 @@
 									"max": 52
 								}
 							},
-							"{@race 地侏(rock)|phb|Gnome, rock}"
+							"{@race 地侏(岩)|phb|岩地侏}"
 						],
 						[
 							{
@@ -23169,7 +24650,7 @@
 									"max": 68
 								}
 							},
-							"{@race 半身人(lightfoot)|phb|Halfling, lightfoot}"
+							"{@race 半身人(輕足)|phb|輕足半身人}"
 						],
 						[
 							{
@@ -23179,7 +24660,7 @@
 									"max": 76
 								}
 							},
-							"{@race 半身人(stout)|phb|Halfling, stout}"
+							"{@race 半身人(強魄)|phb|強魄半身人}"
 						],
 						[
 							{
@@ -23257,7 +24738,10 @@
 			"entries": [
 				"隨著你的觸碰，所有正影響著一個生物或物體的詛咒都將結束。如果該物體是被詛咒的魔法物品，它的詛咒仍會存在，但此法術會破壞它擁有者和該物體的同調，並因此可以將它脫下或丟棄。"
 			],
-			"page": 271
+			"page": 271,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "提升抗力", "ENG_name": "Resistance",
@@ -23299,6 +24783,10 @@
 					{
 						"name": "Druid",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -23319,7 +24807,10 @@
 			"entries": [
 				"你觸碰一個自願生物。在法術結束前一次，目標可以擲一顆{@dice d4}，並將骰出的數字加到它所選的一次豁免檢定中。它可以在進行該豁免檢定之前或之後擲這顆骰。然後法術將會結束。"
 			],
-			"page": 272
+			"page": 272,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "復活術", "ENG_name": "Resurrection",
@@ -23431,6 +24922,9 @@
 			"page": 272,
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"Y"
 			]
 		},
 		{
@@ -23476,6 +24970,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -23536,7 +25034,10 @@
 				"你觸碰一個在過去一分鐘內死去的生物。該生物將以1點生命值的狀態復活。此法術無法復活因年老而死去的生物，也無法恢復它任何失去的身體部位。"
 			],
 			"page": 272,
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "通天繩", "ENG_name": "Rope Trick",
@@ -23577,6 +25078,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -23629,7 +25134,17 @@
 				"攻擊和法術無法穿出或穿入異位面的入口，但在異位面內的人可以透過入口看到外面的景象，就彷彿以繩子為中心的位置有著一扇3呎x5呎大小的窗戶一樣。",
 				"當此法術結束時，任何在異位面內的東西都會掉出來。"
 			],
-			"page": 272
+			"page": 272,
+			"backgrounds": [
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
+				},
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "聖焰", "ENG_name": "Sacred Flame",
@@ -23699,7 +25214,16 @@
 			"savingThrow": [
 				"dexterity"
 			],
-			"scalingEffects": true
+			"scalingEffects": true,
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Boros Legionnaire",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "聖域術", "ENG_name": "Sanctuary",
@@ -23741,6 +25265,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -23784,6 +25312,9 @@
 			"page": 272,
 			"savingThrow": [
 				"wisdom"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -23866,6 +25397,16 @@
 			],
 			"spellAttack": [
 				"R"
+			],
+			"areaTags": [
+				"ST",
+				"MT"
+			],
+			"backgrounds": [
+				{
+					"name": "Boros Legionnaire",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -24211,6 +25752,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -24331,6 +25876,9 @@
 			],
 			"opposedCheck": [
 				"intelligence"
+			],
+			"areaTags": [
+				"MT"
 			]
 		},
 		{
@@ -24458,6 +26006,9 @@
 			"page": 274,
 			"conditionInflict": [
 				"invisible"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -24616,6 +26167,15 @@
 			],
 			"savingThrow": [
 				"constitution"
+			],
+			"areaTags": [
+				"S"
+			],
+			"backgrounds": [
+				{
+					"name": "Gruul Anarch",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -24767,6 +26327,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -24796,7 +26360,10 @@
 			"entries": [
 				"一道閃爍著微光的力場出現並環繞在射程內你所選擇的一個生物身邊，使它在法術持續時間內的AC獲得+2加值。"
 			],
-			"page": 275
+			"page": 275,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "橡棍術", "ENG_name": "Shillelagh",
@@ -24889,6 +26456,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -24907,7 +26478,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"Lightning springs from your hand to deliver a shock to a creature you try to touch. Make a melee spell attack against the target. You have advantage on the attack roll if the target is wearing armor made of metal. On a hit, the target takes {@dice 1d8} lightning damage, and it can't take reactions until the start of its next turn.",
+				"閃電從你的手中躍出以電擊你嘗試碰觸的一個生物。對目標進行一次近戰法術攻擊。若目標正穿戴著金屬製成的護甲，則你在該攻擊檢定中具有優勢。若命中，目標將受到{@dice 1d8}閃電傷害，且它直到它的下個回合開始前都不能採取反應。",
 				"此法術的傷害將在你的等級升至5級時增加至{@dice 2d8}，11級時{@dice 3d8}，17級時{@dice 4d8}。"
 			],
 			"page": 275,
@@ -24917,7 +26488,16 @@
 			"spellAttack": [
 				"M"
 			],
-			"scalingEffects": true
+			"scalingEffects": true,
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "沉默術", "ENG_name": "Silence",
@@ -25009,6 +26589,9 @@
 			"page": 275,
 			"conditionInflict": [
 				"deafened"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -25217,6 +26800,15 @@
 			"page": 276,
 			"conditionInflict": [
 				"unconscious"
+			],
+			"areaTags": [
+				"S"
+			],
+			"backgrounds": [
+				{
+					"name": "Dimir Operative",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -25303,6 +26895,9 @@
 			],
 			"conditionInflict": [
 				"prone"
+			],
+			"areaTags": [
+				"Y"
 			]
 		},
 		{
@@ -25379,6 +26974,16 @@
 							"name": "Order (UA)",
 							"source": "UAOrderDomain"
 						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Order",
+							"source": "GGR"
+						}
 					}
 				]
 			},
@@ -25393,6 +26998,10 @@
 			"savingThrow": [
 				"wisdom",
 				"dexterity"
+			],
+			"areaTags": [
+				"MT",
+				"C"
 			]
 		},
 		{
@@ -25425,6 +27034,10 @@
 					{
 						"name": "Cleric",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -25445,6 +27058,15 @@
 					"source": "UAThatOldBlackMagic",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				}
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Golgari Agent",
+					"source": "GGR"
 				}
 			]
 		},
@@ -25542,7 +27164,13 @@
 			"entries": [
 				"你在法術持續期間獲得能夠理解且與野獸透過言語溝通的能力。許多野獸的知識和認知能力受限於他們的智力，但至少，牠們都能提供你關於周遭地域和怪物的情報，包括任何牠們能察覺或在過去幾天內察覺到的事物。你也許可以說服也受幫你一個小忙，由DM決定。"
 			],
-			"page": 277
+			"page": 277,
+			"backgrounds": [
+				{
+					"name": "Gruul Anarch",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "死者交談術", "ENG_name": "Speak with Dead",
@@ -25634,7 +27262,13 @@
 				"你賦予射程內一個你選擇的屍體虛假的生命和智力，讓它能回答你所提出的問題。這具屍體必須仍擁有嘴巴，且不能是不死生物。若這具屍體在最近10天內曾做為此法術的目標,則此法術失敗。",
 				"直到此法術結束前，你可以詢問屍體最多五個問題。這具屍體只會知曉它生前所知的事情，包括語言。它的回答通常會是簡短的、晦澀的、或重覆的。若你對它有敵意、或它將你認做敵人，這具屍體不會被強迫提供誠實的回答。此法術並不會讓該生物的靈魂回到它的身體，而只會帶回它的精魄。因此，這具屍體無法得知新的情報、無法理解任何它在死後發生的事情、也無法推測關於未來的事件。"
 			],
-			"page": 277
+			"page": 277,
+			"backgrounds": [
+				{
+					"name": "Orzhov Representative",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "植物交談術", "ENG_name": "Speak with Plants",
@@ -25690,7 +27324,13 @@
 				"如果一個植物生物在該區域內，你可以如同你和它之間有著共通語言一般與之交談，但你不會因此獲得影響它的魔法能力。",
 				"此法術可以讓{@spell 糾纏術}創造出的植物釋放一個被{@condition 束縛}的生物。"
 			],
-			"page": 277
+			"page": 277,
+			"backgrounds": [
+				{
+					"name": "Selesnya Initiate",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "蛛行術", "ENG_name": "Spider Climb",
@@ -25740,6 +27380,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -25789,6 +27433,12 @@
 					"source": "UAThatOldBlackMagic",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				}
+			],
+			"backgrounds": [
+				{
+					"name": "Golgari Agent",
+					"source": "GGR"
 				}
 			]
 		},
@@ -25884,7 +27534,7 @@
 			"source": "PHB",
 			"entries": [
 				"以射程內一點為中心20呎半徑的地表扭曲變形，並長出堅硬的棘刺。在法術持續期間，這個區域變為困難地形。當一個生物移進或在該區域內移動，則它每移動5呎變會受到{@dice 2d4}穿刺傷害。",
-				"地表的這個變化被偽裝且看起來相當自然。任何在此法術被施放時沒有看見該區域的生物必須成功通過一次對抗你法術豁免DC的睿知（@skill 感知）檢定，才能在進入前發現該地形的危險。"
+				"地表的這個變化被偽裝且看起來相當自然。任何在此法術被施放時沒有看見該區域的生物必須成功通過一次對抗你法術豁免DC的睿知（{@skill 感知}）檢定，才能在進入前發現該地形的危險。"
 			],
 			"page": 277,
 			"damageInflict": [
@@ -25892,6 +27542,9 @@
 			],
 			"opposedCheck": [
 				"wisdom"
+			],
+			"areaTags": [
+				"R"
 			]
 		},
 		{
@@ -25977,6 +27630,15 @@
 			],
 			"savingThrow": [
 				"wisdom"
+			],
+			"areaTags": [
+				"S"
+			],
+			"backgrounds": [
+				{
+					"name": "Orzhov Representative",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -26100,6 +27762,9 @@
 			],
 			"spellAttack": [
 				"M"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -26284,6 +27949,9 @@
 			"page": 278,
 			"savingThrow": [
 				"constitution"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -26329,6 +27997,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -26418,6 +28090,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -26512,6 +28188,15 @@
 				"bludgeoning",
 				"piercing",
 				"slashing"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Gruul Anarch",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -26599,6 +28284,9 @@
 			],
 			"conditionInflict": [
 				"deafened"
+			],
+			"areaTags": [
+				"Y"
 			]
 		},
 		{
@@ -26712,6 +28400,9 @@
 					"name": "Yuan-ti Pureblood",
 					"source": "VGM"
 				}
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -26777,6 +28468,9 @@
 			],
 			"conditionInflict": [
 				"blinded"
+			],
+			"areaTags": [
+				"L"
 			]
 		},
 		{
@@ -26837,6 +28531,9 @@
 			],
 			"conditionInflict": [
 				"blinded"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -26975,7 +28672,7 @@
 					"type": "entries",
 					"name": "瘋狂",
 					"entries": [
-						"每個目標都必須進行一次致力豁免。若豁免失敗，目標將陷入瘋狂長達1分鐘。一個瘋狂的生物無法採取動作、無法理解其他生物在說什麼，無法閱讀，且只能說出無意義的胡言亂語。DM將控制它的移動，且它的移動將會變得古怪而無規律。"
+						"每個目標都必須進行一次智力豁免。若豁免失敗，目標將陷入瘋狂長達1分鐘。一個瘋狂的生物無法採取動作、無法理解其他生物在說什麼，無法閱讀，且只能說出無意義的胡言亂語。DM將控制它的移動，且它的移動將會變得古怪而無規律。"
 					]
 				},
 				{
@@ -27018,6 +28715,9 @@
 				"incapacitated",
 				"stunned",
 				"unconscious"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -27096,6 +28796,9 @@
 			"conditionInflict": [
 				"incapacitated",
 				"prone"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -27177,6 +28880,9 @@
 			"page": 280,
 			"conditionInflict": [
 				"restrained"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -27222,7 +28928,10 @@
 				"你在你自己和一個你所熟悉的自願生物之間創造一道心靈連結。該生物可以位於你所在存在位面上的任何地方。若你或目標不再處於相同的位面，則此法術結束。",
 				"直到此法術結束前，你和目標可以透過這道連結與對方即時分享話語、影像、聲音、和其他感官信息，且目標將會認出與它交流的生物是你。此法術能夠讓一個智力至少為1的生物理解你話語的意義以及任何你傳給它的感官信息。"
 			],
-			"page": 281
+			"page": 281,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "傳送術", "ENG_name": "Teleport",
@@ -27716,6 +29425,10 @@
 					{
 						"name": "Druid",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				]
 			},
@@ -27731,7 +29444,10 @@
 			"spellAttack": [
 				"M"
 			],
-			"scalingEffects": true
+			"scalingEffects": true,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "雷霆斬", "ENG_name": "Thunderous Smite",
@@ -27888,7 +29604,7 @@
 			},
 			"source": "PHB",
 			"entries": [
-				"一波雷鳴力場從你身上橫掃而出。處於以你為中心的15呎邊長立方體空間內的每個生物都必須進行一次體質豁免。若豁免失敗，則該生物受到{@dice 2d8}雷鳴傷害且被推離你10呎距離。若豁免成功，該生物只受到一半的傷害，且不會被推離。",
+				"一波雷鳴力場從你身上橫掃而出。處於以你為源頭的15呎邊長立方體空間內的每個生物都必須進行一次體質豁免。若豁免失敗，則該生物受到{@dice 2d8}雷鳴傷害且被推離你10呎距離。若豁免成功，該生物只受到一半的傷害，且不會被推離。",
 				"除此之外，完整處於效果範圍內且未被固定的物體將會被法術的效果自動推離你10呎距離，且此法術會發出一陣距離你300呎內都能聽見的雷鳴巨響。"
 			],
 			"entriesHigherLevel": [
@@ -27913,6 +29629,15 @@
 					"source": "UAThatOldBlackMagic",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				}
+			],
+			"areaTags": [
+				"C"
+			],
+			"backgrounds": [
+				{
+					"name": "Gruul Anarch",
+					"source": "GGR"
 				}
 			]
 		},
@@ -28203,13 +29928,13 @@
 					]
 				},
 				"目標取用它新型態的生命值，且當它回復它原本的型態時，該生物將取回它轉變之前的生命值。若它是因為生命值歸零而回復，則任何溢出傷害都將被帶到它原本的型態，扣減它原本的生命值。只要這個溢出傷害沒有讓該生物原本型態的生命值歸零，它就不會被擊倒{@condition 昏迷}。",
-				"該生物被限制只能進行它新型態天生所能進行的動作，且它無法說話、施放法術、或採取任何其他需要雙手或語言的動作。",
+				"該生物被限制只能進行它新型態天生所能進行的動作，且它無法說話、施放法術、或採取任何其他需要雙手或語言的動作，除非它的新型態能夠做出這類動作。",
 				"目標的裝備將被融入新形態之中。目標無法啟動、使用、揮舞、或透過其他方式來從它的裝備獲得好處。",
 				{
 					"type": "entries",
 					"name": "物體變成生物",
 					"entries": [
-						"你可以將一個物體變成一個任意種類的生物，只要該生物的體型不超過該物體的尺寸，且該生物的{@filter 挑戰等級不大於9或更低|bestiary|cr=0;1/8;1/4;1/2;1;2;3;4;5;67;8;9|miscellaneous=!swarm}。該生物對你和你的同伴友善。它在每個你的回合行動。你決定它將採取什麼動作以及它如何移動。這個生物的數據資料由DM掌控，且由DM處理它所有的動作和移動。"
+						"你可以將一個物體變成一個任意種類的生物，只要該生物的體型不超過該物體的尺寸，且該生物的{@filter 挑戰等級不大於9或更低|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3;4;5;67;8;9|miscellaneous=!swarm}。該生物對你和你的同伴友善。它在每個你的回合行動。你決定它將採取什麼動作以及它如何移動。這個生物的數據資料由DM掌控，且由DM處理它所有的動作和移動。"
 					]
 				},
 				"若此法術變為永久有效，你將不再能控制該生物。根據你對待它的方式，它可能會維持對你的友善態度。",
@@ -28225,7 +29950,11 @@
 			"savingThrow": [
 				"wisdom"
 			],
-			"permanentEffects": true
+			"permanentEffects": true,
+			"isSummon": true,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "完全復活術", "ENG_name": "True Resurrection",
@@ -28276,7 +30005,10 @@
 				"若原本的身體已經不復存在，此法術甚至可以提供一具新的身體，但在這個情況下你必須說出該生物的名字。該生物接著將會出現在距離你10呎內一處你所選擇的未被佔據空間。"
 			],
 			"page": 284,
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "真知術", "ENG_name": "True Seeing",
@@ -28460,6 +30192,9 @@
 			],
 			"opposedCheck": [
 				"strength"
+			],
+			"areaTags": [
+				"W"
 			]
 		},
 		{
@@ -28518,7 +30253,13 @@
 				"你的每個回合一次，以一次附贈動作，你可以用精神命令這個僕役移動最多15呎並與一個物件互動。這個僕役可以執行人類僕從可以進行的簡單工作，像是拿取東西、打掃、縫補、摺衣服、點火、上菜、和倒酒等等。一旦你下達了命令，這個僕役將會盡它的全力去執行任務，直到工作完成，並接著等候你的下一個命令。",
 				"如果你命令僕役去執行一項會讓它離你超過60呎距離的工作，則此法術結束。"
 			],
-			"page": 284
+			"page": 284,
+			"backgrounds": [
+				{
+					"name": "Izzet Engineer",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "吸血鬼之觸", "ENG_name": "Vampiric Touch",
@@ -28644,7 +30385,10 @@
 			"spellAttack": [
 				"M"
 			],
-			"isHeal": true
+			"isHeal": true,
+			"areaTags": [
+				"ST"
+			]
 		},
 		{
 			"name": "惡毒嘲笑", "ENG_name": "Vicious Mockery",
@@ -28698,6 +30442,15 @@
 					"source": "SCAG",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				}
+			],
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Rakdos Cultist",
+					"source": "GGR"
 				}
 			]
 		},
@@ -28832,6 +30585,19 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"W"
+			],
+			"backgrounds": [
+				{
+					"name": "Boros Legionnaire",
+					"source": "GGR"
+				},
+				{
+					"name": "Rakdos Cultist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -28914,6 +30680,9 @@
 			"page": 285,
 			"damageImmune": [
 				"force"
+			],
+			"areaTags": [
+				"W"
 			]
 		},
 		{
@@ -28978,6 +30747,9 @@
 			"savingThrow": [
 				"dexterity",
 				"constitution"
+			],
+			"areaTags": [
+				"W"
 			]
 		},
 		{
@@ -29025,6 +30797,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -29065,7 +30841,10 @@
 			"savingThrow": [
 				"dexterity"
 			],
-			"permanentEffects": true
+			"permanentEffects": true,
+			"areaTags": [
+				"W"
+			]
 		},
 		{
 			"name": "棘牆術", "ENG_name": "Wall of Thorns",
@@ -29129,6 +30908,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"areaTags": [
+				"W"
 			]
 		},
 		{
@@ -29199,7 +30981,16 @@
 				"此法術守護著你觸碰的一個自願生物，且在你和目標之間創造一道神祕的連結直到法術結束。當目標處於你60呎範圍內，它的AC和豁免檢定將獲得+1加值，且它獲得對所有傷害的抗性。同時，每當它受到傷害，你也將承受等量的傷害。",
 				"此法術將在你的生命值歸零、或你與目標分開距離超過60呎時結束。它也會在此法術被重複施放於任一個被連結生物時結束。你也可以以一個動作解消此法術。"
 			],
-			"page": 287
+			"page": 287,
+			"areaTags": [
+				"ST"
+			],
+			"backgrounds": [
+				{
+					"name": "Selesnya Initiate",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "水下呼吸", "ENG_name": "Water Breathing",
@@ -29253,6 +31044,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -29286,7 +31081,16 @@
 			"entries": [
 				"直到此法術結束前，此法術能賦予射程內最多十個你所能看見的自願生物在水下呼吸的能力。受影響的生物同時也保留它們正常的呼吸模式。"
 			],
-			"page": 287
+			"page": 287,
+			"areaTags": [
+				"MT"
+			],
+			"backgrounds": [
+				{
+					"name": "Simic Scientist",
+					"source": "GGR"
+				}
+			]
 		},
 		{
 			"name": "水面行走", "ENG_name": "Water Walk",
@@ -29340,6 +31144,10 @@
 					{
 						"name": "Artificer",
 						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer Revisited",
+						"source": "UAArtificerRevisited"
 					}
 				],
 				"fromSubclass": [
@@ -29375,7 +31183,10 @@
 				"此法術將給予在任何液體表面上行走的能力\u2014像是水、酸液、泥漿、雪、流沙、或岩漿\u2014就如同它們是無害的固體表面一樣（走過熔岩的生物仍可能會因為高溫而受到傷害）。射程內最多十個你所能看見的生物將在法術持續期間獲得這個能力。",
 				"若你以一個被液體淹沒的生物為目標，此法術將以每輪60呎的速率將目標帶到液體表面。"
 			],
-			"page": 287
+			"page": 287,
+			"areaTags": [
+				"MT"
+			]
 		},
 		{
 			"name": "蛛網術", "ENG_name": "Web",
@@ -29472,6 +31283,9 @@
 			],
 			"conditionInflict": [
 				"restrained"
+			],
+			"areaTags": [
+				"C"
 			]
 		},
 		{
@@ -29526,6 +31340,9 @@
 			],
 			"conditionInflict": [
 				"frightened"
+			],
+			"areaTags": [
+				"S"
 			]
 		},
 		{
@@ -29575,6 +31392,9 @@
 			"page": 288,
 			"conditionInflict": [
 				"incapacitated"
+			],
+			"areaTags": [
+				"MT"
 			]
 		},
 		{
@@ -29645,6 +31465,15 @@
 			],
 			"savingThrow": [
 				"strength"
+			],
+			"areaTags": [
+				"W"
+			],
+			"backgrounds": [
+				{
+					"name": "Simic Scientist",
+					"source": "GGR"
+				}
 			]
 		},
 		{
@@ -29698,7 +31527,7 @@
 					]
 				},
 				"你也可以藉由此法術達成某件不在上述範例的結果。盡可能精準地向DM敘述你的願望。DM擁有充分的自由去裁定這個願望會導致什麼樣的結果；願望越大，結果就越有可能出錯。此法術可能會單純的失敗、你所想要的效果可能會被部分達成、或者你可能會因為你措辭表達願望的方式而承受某些無法預期的後果做為結果。舉例來說，許願讓一個反派死亡可能會讓你穿越到未來該反派已經死亡的時間段，將你實質意義上被從遊戲中除外。同樣的，許願獲得一個傳奇魔法物品或神器可能會立刻將你傳送到該物品當前持有者的面前。",
-				"施放此法術以產生任何複製其它法術以外的效果都將對你造成極大的負擔。在承受此負擔後，直到完成一次長休之前，你每施放一次法術，都會使你受到每環位{@dice 1d10}的死靈傷害。這個傷害無法被任何方式減少或避免。此外，若你的力量不為3或更低，則你的力量將減少至3，持續{@dice 2d4}天。在這幾天內，你每花費一整天休息且不進行任何除了輕省活動以外的事情，則你剩餘的回復時間將減少2天。最後，若你承受此負擔，則你將有{@chance 33}的機率再也無法施放祈願術。"
+				"施放此法術以產生任何複製其它法術以外的效果都將對你造成極大的負擔。在承受此負擔後，直到完成一次長休之前，你每施放一次法術，都會使你受到每環階{@dice 1d10}的死靈傷害。這個傷害無法被任何方式減少或避免。此外，若你的力量不為3或更低，則你的力量將減少至3，持續{@dice 2d4}天。在這幾天內，你每花費一整天休息且不進行任何除了輕省活動以外的事情，則你剩餘的回復時間將減少2天。最後，若你承受此負擔，則你將有{@chance 33}的機率再也無法施放祈願術。"
 			],
 			"page": 288,
 			"damageInflict": [
@@ -29788,6 +31617,9 @@
 			],
 			"spellAttack": [
 				"R"
+			],
+			"areaTags": [
+				"ST"
 			]
 		},
 		{
@@ -30032,6 +31864,16 @@
 							"name": "Monster Slayer",
 							"source": "XGE"
 						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Order",
+							"source": "GGR"
+						}
 					}
 				]
 			},
@@ -30043,6 +31885,15 @@
 			"page": 289,
 			"savingThrow": [
 				"charisma"
+			],
+			"areaTags": [
+				"S"
+			],
+			"backgrounds": [
+				{
+					"name": "Orzhov Representative",
+					"source": "GGR"
+				}
 			]
 		}
 	]

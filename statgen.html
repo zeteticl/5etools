@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="tw">
 
 <head>
 	<!--5ETOOLS_VERSION-->
@@ -64,6 +64,7 @@
 
 		.pbuy__split {
 			display: flex;
+			justify-content: space-between;
 		}
 
 		.pbuy__split_item:not(:last-of-type) {
@@ -91,7 +92,8 @@
 			text-align: center;
 		}
 
-		.pbuy__adv--visible {
+		.pbuy__adv--visible,
+		table th.pbuy__adv--visible{
 			display: none;
 		}
 
@@ -103,36 +105,94 @@
 			display: none;
 		}
 
+		#pointbuy.pbuy__advanced_active .pbuy__adv-col-3 {
+			width: 25%;
+		}
+
 		.pbuy__add_row_btn_wrap {
-			text-align: center;
 			width: 100%;
-			margin: 2rem 7px 0;
+			margin: 0 7px 1rem;
 		}
 
 		.pbuy__save_wrp {
-			text-align: center;
 			width: 100%;
-			margin: 2rem 7px 0;
+			margin: 1rem 7px 0;
 		}
 
 		.choose {
 			text-align: center;
 		}
+
+		#pointbuy input {
+			border: 1px solid #ccc;
+		}
+
+		#pointbuy input:not(.form-control)[readonly] {
+			background-color: #eee;
+			cursor: default;
+			text-align: center;
+		}
+
+		.night-mode #pointbuy input[readonly] {
+			background-color: #3a3a3a;
+		}
+
+		.choose_head {
+			padding: 0 3px;
+		}
+
+		.pbuy__divider {
+			width: 1px;
+			background: #ccc;
+			flex-shrink: 0;
+			flex-grow: 0;
+			margin: 30px 0;
+		}
+
+		.pbuy__wrp-btn-rem {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			height: 28px;
+			justify-content: center;
+		}
+
+		.pbuy__table {
+			margin-left: -35px;
+		}
+
+		@media (max-width: 991px) {
+			.pbuy__divider {
+				display: none;
+			}
+
+			.pbuy__split {
+				flex-direction: column;
+			}
+
+			.pbuy__table {
+				margin-left: 0;
+			}
+		}
 	</style>
 </head>
 
 <body>
-<header class="hidden-xs hidden-sm">
+<header class="hidden-xs hidden-sm page__header">
 	<div class="container">
-		<h1>屬性生成器</h1>
-		<p>於左側變更生成方式，參照之生成方式將顯示於右側。</p>
+		<h1 class="page__title">屬性生成器</h1>
+		<p class="page__subtitle">於左側變更生成方式，參照之生成方式將顯示於右側。</p>
 	</div>
 </header>
-<nav class="container" id="navigation">
+<nav class="container page__nav" id="navigation">
 	<ul class="nav nav-pills" id="navbar">
 	</ul>
 </nav>
-<main class="container bodyContent">
+
+<div class="cancer__wrp-leaderboard"><!--5ETOOLS_AD_LEADERBOARD--></div>
+<div class="cancer__wrp-sidebar-rhs"><!--5ETOOLS_AD_RIGHT_1--><!--5ETOOLS_AD_RIGHT_2--></div>
+
+<main class="container">
 
 	<div class="row">
 		<div class="col-sm-3">
@@ -177,82 +237,96 @@
 						<button id="reset" class="btn btn-default" style="margin: auto auto 7px 2px;">重置</button>
 					</div>
 
-					<table>
+					<table class="pbuy__table">
 						<tr>
 							<td></td>
 							<td class="text-align-center">基本</td>
 							<td class="text-align-center">種族</td>
 							<td class="choose choose_head"></td>
-							<td title="在這裡輸入所有額外／自定義的加值" class="text-align-center help">使用者</td>
+							<td title="在這裡輸入所有額外／自定義的加值" class="text-align-center help">額外</td>
+
+							<td style="width: 18px;"></td>
 
 							<td class="text-align-center">總和</td>
 							<td class="text-align-center">調整值</td>
 						</tr>
 						<tr id="str">
 							<td><b>力量</b></td>
-							<td><input type="number" value="8" class="base"></td>
-							<td><input type="number" class="racial" readonly></td>
+							<td><input type="number" value="8" class="base" data-select="number"></td>
+							<td><input class="racial" readonly data-select="number"></td>
 							<td class="choose"><input type="checkbox" class="choose pbuy__cb_choose"></td>
 							<td class="pbuy__choose_dummy"></td>
-							<td><input type="number" class="pbuy__user_add" value="0"></td>
+							<td><input type="number" class="pbuy__user_add" value="0" data-select="number"></td>
 
-							<td><input type="number" readonly class="bold"></td>
-							<td><input type="number" readonly class="bold"></td>
+							<td class="text-align-center">=</td>
+
+							<td><input readonly class="bold" data-select="number"></td>
+							<td><input readonly class="bold" data-select="number"></td>
 						</tr>
 						<tr id="dex">
 							<td><b>敏捷</b></td>
-							<td><input type="number" value="8" class="base"></td>
-							<td><input type="number" class="racial" readonly></td>
+							<td><input type="number" value="8" class="base" data-select="number"></td>
+							<td><input class="racial" readonly data-select="number"></td>
 							<td class="choose"><input type="checkbox" class="choose pbuy__cb_choose"></td>
 							<td class="pbuy__choose_dummy"></td>
-							<td><input type="number" class="pbuy__user_add" value="0"></td>
+							<td><input type="number" class="pbuy__user_add" value="0" data-select="number"></td>
 
-							<td><input type="number" readonly class="bold"></td>
-							<td><input type="number" readonly class="bold"></td>
+							<td class="text-align-center">=</td>
+
+							<td><input readonly class="bold" data-select="number"></td>
+							<td><input readonly class="bold" data-select="number"></td>
 						</tr>
 						<tr id="con">
 							<td><b>體質</b></td>
-							<td><input type="number" value="8" class="base"></td>
-							<td><input type="number" class="racial" readonly></td>
+							<td><input type="number" value="8" class="base" data-select="number"></td>
+							<td><input class="racial" readonly data-select="number"></td>
 							<td class="choose"><input type="checkbox" class="choose pbuy__cb_choose"></td>
 							<td class="pbuy__choose_dummy"></td>
-							<td><input type="number" class="pbuy__user_add" value="0"></td>
+							<td><input type="number" class="pbuy__user_add" value="0" data-select="number"></td>
 
-							<td><input type="number" readonly class="bold"></td>
-							<td><input type="number" readonly class="bold"></td>
+							<td class="text-align-center">=</td>
+
+							<td><input readonly class="bold" data-select="number"></td>
+							<td><input readonly class="bold" data-select="number"></td>
 						</tr>
 						<tr id="int">
 							<td><b>智力</b></td>
-							<td><input type="number" value="8" class="base"></td>
-							<td><input type="number" class="racial" readonly></td>
+							<td><input type="number" value="8" class="base" data-select="number"></td>
+							<td><input class="racial" readonly data-select="number"></td>
 							<td class="choose"><input type="checkbox" class="choose pbuy__cb_choose"></td>
 							<td class="pbuy__choose_dummy"></td>
-							<td><input type="number" class="pbuy__user_add" value="0"></td>
+							<td><input type="number" class="pbuy__user_add" value="0" data-select="number"></td>
 
-							<td><input type="number" readonly class="bold"></td>
-							<td><input type="number" readonly class="bold"></td>
+							<td class="text-align-center">=</td>
+
+							<td><input readonly class="bold" data-select="number"></td>
+							<td><input readonly class="bold" data-select="number"></td>
 						</tr>
 						<tr id="wis">
 							<td><b>睿知</b></td>
-							<td><input type="number" value="8" class="base"></td>
-							<td><input type="number" class="racial" readonly></td>
+							<td><input type="number" value="8" class="base" data-select="number"></td>
+							<td><input class="racial" readonly data-select="number"></td>
 							<td class="choose"><input type="checkbox" class="choose pbuy__cb_choose"></td>
 							<td class="pbuy__choose_dummy"></td>
-							<td><input type="number" class="pbuy__user_add" value="0"></td>
+							<td><input type="number" class="pbuy__user_add" value="0" data-select="number"></td>
 
-							<td><input type="number" readonly class="bold"></td>
-							<td><input type="number" readonly class="bold"></td>
+							<td class="text-align-center">=</td>
+
+							<td><input readonly class="bold" data-select="number"></td>
+							<td><input readonly class="bold" data-select="number"></td>
 						</tr>
 						<tr id="cha">
 							<td><b>魅力</b></td>
-							<td><input type="number" value="8" class="base"></td>
-							<td><input type="number" class="racial" readonly></td>
+							<td><input type="number" value="8" class="base" data-select="number"></td>
+							<td><input class="racial" readonly data-select="number"></td>
 							<td class="choose"><input type="checkbox" class="choose pbuy__cb_choose"></td>
 							<td class="pbuy__choose_dummy"></td>
-							<td><input type="number" class="pbuy__user_add" value="0"></td>
+							<td><input type="number" class="pbuy__user_add" value="0" data-select="number"></td>
 
-							<td><input type="number" readonly class="bold"></td>
-							<td><input type="number" readonly class="bold"></td>
+							<td class="text-align-center">=</td>
+
+							<td><input readonly class="bold" data-select="number"></td>
+							<td><input readonly class="bold" data-select="number"></td>
 						</tr>
 					</table>
 
@@ -269,25 +343,33 @@
 					</table>
 				</div>
 
-				<div class="pbuy__split_item">
-					<label><input id="advanced" type="checkbox">自定義規則</label>
-					<table id="costs" class="pbuy__tbl_cost"></table>
+				<div class="pbuy__divider"></div>
 
-					<div class="pbuy__save_wrp">
-						<button id="pbuy__save_file" class="btn btn-xs btn-primary" style="margin-right: 7px;">儲存檔案</button>
-						<button id="pbuy__load_file" class="btn btn-xs btn-primary" style="margin-right: 14px;">讀取檔案</button>
-						<button id="pbuy__save_url" class="btn btn-xs btn-primary">儲存至URL</button>
+				<div class="pbuy__split_item">
+					<div class="flex-col">
+						<h4>屬性值購點花費</h4>
+						<label><input id="advanced" type="checkbox">自定義規則</label>
+						<table id="costs" class="pbuy__tbl_cost"></table>
 					</div>
 				</div>
+			</div>
+
+			<hr>
+
+			<div class="pbuy__save_wrp">
+				<button id="pbuy__save_file" class="btn btn-xs btn-primary" style="margin-right: 7px;">儲存檔案</button>
+				<button id="pbuy__load_file" class="btn btn-xs btn-primary" style="margin-right: 14px;">讀取檔案</button>
+				<button id="pbuy__save_url" class="btn btn-xs btn-primary">儲存至URL</button>
 			</div>
 		</div>
 	</div>
 </main>    <!--5ETOOLS_SCRIPT_ANCHOR-->
 <script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/utils-ui.js"></script>
 <script type="text/javascript" src="lib/localforage.js"></script>
 <script type="text/javascript" src="js/omnidexer.js"></script>
 <script type="text/javascript" src="js/omnisearch.js"></script>
-<script type="text/javascript" src="js/entryrender.js"></script>
+<script type="text/javascript" src="js/render.js"></script>
 <script type="text/javascript" src="js/scalecreature.js"></script>
 <script type="text/javascript" src="js/statgen.js"></script>
 <script type="text/javascript" src="lib/jquery.js"></script>

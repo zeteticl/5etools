@@ -1,7 +1,6 @@
 "use strict";
 
 const JSON_URL = "data/optionalfeatures.json";
-const CLS_NONE = "list-entry-none";
 
 window.onload = async function load () {
 	await ExcludeUtil.pInitialise();
@@ -9,37 +8,28 @@ window.onload = async function load () {
 	DataUtil.loadJSON(JSON_URL).then(onJsonLoad);
 };
 
-const SORT_VALUES = {
-	"-1": 0,
-	"-2": Number.MIN_SAFE_INTEGER
-};
-function listSortOptFeatures (a, b, o) {
-	function sortByLevel (a, b) {
-		a = SORT_VALUES[a] || a;
-		b = SORT_VALUES[b] || b;
-		return Number(b) - Number(a);
-	}
-
-	if (o.valueName === "prerequisite") {
-		const comp = sortByLevel(a.values()["sortIndex"], b.values()["sortIndex"]);
-		if (comp !== 0) return comp;
-	}
-	return SortUtil.listSort(a, b, o);
-}
-
 function getLevelFilterNestedItem (prereqLevel) {
 	return new FilterItem({
-		item: `${prereqLevel.class.name} Level ${prereqLevel.level}`,
+		item: `${prereqLevel.class.name}${prereqLevel.subclass ? ` (${prereqLevel.subclass.name})` : ""} Level ${prereqLevel.level}`,
 		nest: prereqLevel.class.name,
 		nestHidden: true
 	})
+}
+
+function optFeatSort (itemA, itemB, options) {
+	if (options.valueName === "level") {
+		const aValue = Number(itemA.values().level.toLowerCase()) || 0;
+		const bValue = Number(itemB.values().level.toLowerCase()) || 0;
+		return SortUtil.ascSort(aValue, bValue) || SortUtil.listSort(itemA, itemB, options);
+	}
+	return SortUtil.listSort(itemA, itemB, options);
 }
 
 let list;
 const sourceFilter = getSourceFilter();
 const typeFilter = new Filter({
 	header: "Feature Type", headerName: "能力類型",
-	items: ["EI", "MM", "MV:B", "OTH", "FS:F", "FS:B", "FS:P", "FS:R"],
+	items: ["AI", "ED", "EI", "MM", "MV:B", "OTH", "FS:F", "FS:B", "FS:P", "FS:R", "PB"],
 	displayFn: Parser.optFeatureTypeToFull
 });
 const pactFilter = new Filter({
@@ -75,9 +65,9 @@ async function onJsonLoad (data) {
 	filterBox = await pInitFilterBox(sourceFilter, typeFilter, prerequisiteFilter);
 
 	list = ListUtil.search({
-		valueNames: ["name", "source", "prerequisite", "type", "sortIndex", "uniqueid"],
+		valueNames: ["name", "source", "prerequisite", "level", "type", "uniqueid"],
 		listClass: "optfeatures",
-		sortFunction: listSortOptFeatures
+		sortFunction: optFeatSort
 	});
 	list.on("updated", () => {
 		filterBox.setCount(list.visibleItems.length, list.items.length);
@@ -90,23 +80,25 @@ async function onJsonLoad (data) {
 	);
 
 	const subList = ListUtil.initSublist({
-		valueNames: ["name", "ability", "prerequisite", "id", "sortIndex", "eng_name"],
+		valueNames: ["name", "ability", "prerequisite", "level", "id", "eng_name"],
 		listClass: "suboptfeatures",
 		getSublistRow: getSublistItem,
-		sortFunction: listSortOptFeatures
+		sortFunction: optFeatSort
 	});
 	ListUtil.initGenericPinnable();
 
 	addOptionalfeatures(data);
 	BrewUtil.pAddBrewData()
 		.then(handleBrew)
-		.then(BrewUtil.pAddLocalBrewData)
+		.then(() => BrewUtil.bind({list}))
+		.then(() => BrewUtil.pAddLocalBrewData())
 		.catch(BrewUtil.pPurgeBrew)
 		.then(async () => {
 			BrewUtil.makeBrewButton("manage-brew");
-			BrewUtil.bind({list, filterBox, sourceFilter});
+			BrewUtil.bind({filterBox, sourceFilter});
 			await ListUtil.pLoadState();
 			RollerUtil.addListRollButton();
+			ListUtil.addListShowHide();
 
 			History.init(true);
 			ExcludeUtil.checkShowAllExcluded(optfList, $(`#pagecontent`));
@@ -151,7 +143,6 @@ function addOptionalfeatures (data) {
 			});
 			it._fPrereqLevel = it.prerequisite.filter(it => it.type === "prereqLevel").map(lvl => {
 				const item = getLevelFilterNestedItem(lvl);
-				it._sLevel = it._sLevel || lvl.level;
 				levelFilter.addIfAbsent(item);
 				return item;
 			});
@@ -170,10 +161,10 @@ function addOptionalfeatures (data) {
 			<li class="row" ${FLTR_ID}="${ivI}" onclick="ListUtil.toggleSelected(event, this)" oncontextmenu="ListUtil.openContextMenu(event, this)">
 				<a id="${ivI}" href="#${UrlUtil.autoEncodeHash(it)}" title="${it.name}">
 					<span class="name col-3-2">${it.name}</span>
+					<span class="type col-1-5 text-align-center type" title="${it._dFeatureType}">${it._lFeatureType}</span>
+					<span class="prerequisite col-4-8">${Renderer.optionalfeature.getPrerequisiteText(it.prerequisite, true)}</span>
+					<span class="level col-1 text-align-center">${Renderer.optionalfeature.getListPrerequisiteLevelText(it.prerequisite)}</span>
 					<span class="source col-1-5 ${Parser.sourceJsonToColor(it.source)} text-align-center" title="${Parser.sourceJsonToFull(it.source)}">${Parser.sourceJsonToAbv(it.source)}</span>
-					<span class="source col-1-5 text-align-center type" title="${it._dFeatureType}">${it._lFeatureType}</span>
-					<span class="prerequisite col-5-8 ${it.prerequisite == null ? CLS_NONE : ""}">${EntryRenderer.optionalfeature.getPrerequisiteText(it.prerequisite, true)}</span>
-					<span class="hidden sortIndex">${it._sLevel ? it._sLevel : it._sPrereq ? -1 : -2}</span>
 					
 					<span class="uniqueid hidden">${it.uniqueId ? it.uniqueId : ivI}</span>
 					<span class="eng_name hidden">${it.ENG_name ? it.ENG_name : it.name}</span>
@@ -189,7 +180,7 @@ function addOptionalfeatures (data) {
 	$(`#optfeaturesList`).append(tempString);
 
 	// sort filters
-	sourceFilter.items.sort(SortUtil.ascSort);
+	sourceFilter.items.sort(SortUtil.srcSort_ch);
 	spellFilter.items.sort(SortUtil.ascSort);
 	levelFilter.items.sort(SortUtil.ascSortNumericalSuffix);
 	typeFilter.items.sort((a, b) => SortUtil.ascSort(Parser.optFeatureTypeToFull(a), Parser.optFeatureTypeToFull(b)));
@@ -206,7 +197,7 @@ function addOptionalfeatures (data) {
 		primaryLists: [list]
 	});
 	ListUtil.bindPinButton();
-	EntryRenderer.hover.bindPopoutButton(optfList);
+	Renderer.hover.bindPopoutButton(optfList);
 	UrlUtil.bindLinkExportButton(filterBox);
 	ListUtil.bindDownloadButton();
 	ListUtil.bindUploadButton();
@@ -238,16 +229,16 @@ function getSublistItem (it, pinId) {
 			<a href="#${UrlUtil.autoEncodeHash(it)}" title="${it.name}">
 				<span class="name col-4">${it.name}</span>
 				<span class="source col-2 text-align-center type" title="${Parser.optFeatureTypeToFull(it.featureType)}">${it.featureType}</span>
-				<span class="prerequisite col-6 ${it.prerequisite == null ? CLS_NONE : ""}">${EntryRenderer.optionalfeature.getPrerequisiteText(it.prerequisite, true)}</span>
+				<span class="prerequisite col-4-5">${Renderer.optionalfeature.getPrerequisiteText(it.prerequisite, true)}</span>
+				<span class="level col-1-5">${Renderer.optionalfeature.getListPrerequisiteLevelText(it.prerequisite)}</span>
 				<span class="id hidden">${pinId}</span>
-				<span class="hidden">${it._fPrereqLevel ? it._fPrereqLevel[0] : -1}</span>
 			</a>
 		</li>
 	`;
 }
 
 function loadhash (jsonIndex) {
-	EntryRenderer.getDefaultRenderer().setFirstSection(true);
+	Renderer.get().setFirstSection(true);
 	const $content = $(`#pagecontent`).empty();
 	const it = optfList[jsonIndex];
 
@@ -276,14 +267,14 @@ function loadhash (jsonIndex) {
 	}
 
 	$content.append(`
-		${EntryRenderer.utils.getBorderTr()}
-		${EntryRenderer.utils.getNameTr(it)}
-		${it.prerequisite ? `<tr><td colspan="6"><i>${EntryRenderer.optionalfeature.getPrerequisiteText(it.prerequisite)}</i></td></tr>` : ""}
+		${Renderer.utils.getBorderTr()}
+		${Renderer.utils.getNameTr(it)}
+		${it.prerequisite ? `<tr><td colspan="6"><i>${Renderer.optionalfeature.getPrerequisiteText(it.prerequisite)}</i></td></tr>` : ""}
 		<tr><td class="divider" colspan="6"><div></div></td></tr>
-		<tr><td colspan="6">${EntryRenderer.getDefaultRenderer().renderEntry({entries: it.entries}, 1)}</td></tr>
-		${EntryRenderer.optionalfeature.getPreviouslyPrintedText(it)}
-		${EntryRenderer.utils.getPageTr(it)}
-		${EntryRenderer.utils.getBorderTr()}
+		<tr><td colspan="6">${Renderer.get().render({entries: it.entries}, 1)}</td></tr>
+		${Renderer.optionalfeature.getPreviouslyPrintedText(it)}
+		${Renderer.utils.getPageTr(it)}
+		${Renderer.utils.getBorderTr()}
 	`);
 
 	ListUtil.updateSelected();

@@ -25,12 +25,12 @@ window.onload = async function load () {
 let list;
 function onJsonLoad (data) {
 	list = ListUtil.search({
-		valueNames: ["name", "size", "source", "uniqueid"],
+		valueNames: ["name", "size", "source", "uniqueid", "eng_name"],
 		listClass: "objects",
 		sortFunction: SortUtil.listSort
 	});
 
-	EntryRenderer.hover.bindPopoutButton(objectsList);
+	Renderer.hover.bindPopoutButton(objectsList);
 
 	const subList = ListUtil.initSublist({
 		valueNames: ["name", "size", "id"],
@@ -44,12 +44,14 @@ function onJsonLoad (data) {
 	addObjects(data);
 	BrewUtil.pAddBrewData()
 		.then(handleBrew)
-		.then(BrewUtil.pAddLocalBrewData)
+		.then(() => BrewUtil.bind({list}))
+		.then(() => BrewUtil.pAddLocalBrewData())
 		.catch(BrewUtil.pPurgeBrew)
 		.then(async () => {
 			BrewUtil.makeBrewButton("manage-brew");
 			BrewUtil.bind({list});
 			await ListUtil.pLoadState();
+			ListUtil.addListShowHide();
 
 			History.init(true);
 			ExcludeUtil.checkShowAllExcluded(objectsList, $(`#pagecontent`));
@@ -82,6 +84,7 @@ function addObjects (data) {
 					<span class="source col-2 text-align-center ${Parser.sourceJsonToColor(obj.source)}" title="${Parser.sourceJsonToFull(obj.source)}">${abvSource}</span>
 					
 					<span class="uniqueid hidden">${obj.uniqueId ? obj.uniqueId : obI}</span>
+					<span class="eng_name hidden">${obj.ENG_name ? obj.ENG_name : obj.name}</span>
 				</a>
 			</li>
 		`;
@@ -91,7 +94,7 @@ function addObjects (data) {
 
 	list.reIndex();
 	if (lastSearch) list.search(lastSearch);
-	list.sort("name");
+	list.sort("size");
 
 	ListUtil.setOptions({
 		itemList: objectsList,
@@ -99,7 +102,7 @@ function addObjects (data) {
 		primaryLists: [list]
 	});
 	ListUtil.bindPinButton();
-	EntryRenderer.hover.bindPopoutButton(objectsList);
+	Renderer.hover.bindPopoutButton(objectsList);
 	ListUtil.bindDownloadButton();
 	ListUtil.bindUploadButton();
 }
@@ -116,7 +119,7 @@ function getSublistItem (obj, pinId) {
 	`;
 }
 
-const renderer = EntryRenderer.getDefaultRenderer();
+const renderer = Renderer.get();
 function loadhash (jsonIndex) {
 	renderer.setFirstSection(true);
 
@@ -124,31 +127,33 @@ function loadhash (jsonIndex) {
 
 	const renderStack = [];
 
-	if (obj.entries) renderer.recursiveEntryRender({entries: obj.entries}, renderStack, 2);
-	if (obj.actionEntries) renderer.recursiveEntryRender({entries: obj.actionEntries}, renderStack, 2);
+	if (obj.entries) renderer.recursiveRender({entries: obj.entries}, renderStack, {depth: 2});
+	if (obj.actionEntries) renderer.recursiveRender({entries: obj.actionEntries}, renderStack, {depth: 2});
 
 	const $content = $(`#pagecontent`).empty();
+
+	console.log(obj);
 	$content.append(`
-		${EntryRenderer.utils.getBorderTr()}
-		${EntryRenderer.utils.getNameTr(obj)}
-		<tr class="text"><td colspan="6"><i>${obj.type !== "GEN" ? `${Parser.sizeAbvToFull(obj.size)} object` : `Variable size object`}</i><br></td></tr>
+		${Renderer.utils.getBorderTr()}
+		${Renderer.utils.getNameTr(obj)}
+		<tr class="text"><td colspan="6"><i>${obj.type !== "GEN" ? `${Parser.sizeAbvToFull(obj.size)} 物體` : `可變尺寸 物體`}</i><br></td></tr>
 		<tr class="text"><td colspan="6">
-			<b>Armor Class:</b> ${obj.ac}<br>
-			<b>Hit Points:</b> ${obj.hp}<br>
-			<b>Damage Immunities:</b> ${obj.immune}<br>
-			${obj.resist ? `<b>Damage Resistances:</b> ${obj.resist}<br>` : ""}
-			${obj.vulnerable ? `<b>Damage Vulnerabilities:</b> ${obj.vulnerable}<br>` : ""}
+			<b>護甲等級：</b> ${obj.ac}<br>
+			<b>生命值：</b> ${obj.hp}<br>
+			<b>傷害免疫：</b> ${obj.immune=="Varies (see below)"?"可變(見下)":Parser.monImmResToFull(obj.immune.split(", "))}<br>
+			${obj.resist ? `<b>傷害抗性：</b> ${Parser.monImmResToFull(obj.resist.split(", "))}<br>` : ""}
+			${obj.vulnerable ? `<b>傷害易傷：</b> ${Parser.monImmResToFull(obj.vulnerable.split(", "))}<br>` : ""}
 		</td></tr>
 		<tr class="text"><td colspan="6">${renderStack.join("")}</td></tr>
-		${EntryRenderer.utils.getPageTr(obj)}
-		${EntryRenderer.utils.getBorderTr()}
+		${Renderer.utils.getPageTr(obj)}
+		${Renderer.utils.getBorderTr()}
 	`);
 
 	const $floatToken = $(`#float-token`).empty();
-	if (obj.tokenURL || !obj.uniqueId) {
-		const imgLink = obj.tokenURL || UrlUtil.link(`img/objects/${obj.name.replace(/"/g, "")}.png`);
+	if (obj.tokenUrl || !obj.uniqueId) {
+		const imgLink = obj.tokenUrl || UrlUtil.link(`img/objects/${obj.name.replace(/"/g, "")}.png`);
 		$floatToken.append(`
-			<a href="${imgLink}" target="_blank">
+			<a href="${imgLink}" target="_blank" rel="noopener">
 				<img src="${imgLink}" id="token_image" class="token" onerror="imgError(this)" alt="${obj.name}">
 			</a>`
 		);

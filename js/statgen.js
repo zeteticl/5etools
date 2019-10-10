@@ -1,4 +1,5 @@
 "use strict";
+
 const RACE_JSON_URL = "data/races.json";
 
 class StatGen {
@@ -58,20 +59,24 @@ class StatGen {
 			.click(() => DataUtil.userDownload(`statgen-pointbuy`, this.getSaveableState()));
 
 		$(`#pbuy__load_file`)
-			.click(() => {
-				DataUtil.userUpload((json) => {
-					if (StatGen.isValidState(json)) {
-						this.doLoadStateFrom(json);
-						this.doSaveDebounced();
-						this.handleCostChanges();
-					} else return alert("Invalid save!");
-				});
+			.click(async () => {
+				const json = await DataUtil.pUserUpload();
+				if (StatGen.isValidState(json)) {
+					this.doLoadStateFrom(json);
+					this.doSaveDebounced();
+					this.handleCostChanges();
+				} else {
+					return JqueryUtil.doToast({
+						content: `Invalid save file!`,
+						type: "danger"
+					});
+				}
 			});
 
 		const $btnSaveUrl = $(`#pbuy__save_url`)
-			.click(() => {
+			.click(async () => {
 				const encoded = `${window.location.href.split("#")[0]}#pointbuy${HASH_PART_SEP}${encodeURIComponent(JSON.stringify(this.getSaveableState()))}`;
-				copyText(encoded);
+				await MiscUtil.pCopyTextToClipboard(encoded);
 				JqueryUtil.showCopiedEffect($btnSaveUrl);
 			});
 
@@ -151,7 +156,7 @@ class StatGen {
 			return BrewUtil.pPurgeBrew();
 		}
 
-		this.raceData = EntryRenderer.race.mergeSubraces(data.race);
+		this.raceData = Renderer.race.mergeSubraces(data.race);
 		if (brew.race) this.raceData = this.raceData.concat(brew.race);
 		this.raceData = this.raceData.filter(it => !ExcludeUtil.isExcluded(it.name, "race", it.source));
 
@@ -186,7 +191,12 @@ class StatGen {
 		const $table = $(`#costs`);
 		$table.empty().append(`
 			<thead>
-				<tr><th>屬性值</th><th>調整值</th><th>每點數花費</th><th class="pbuy__adv--visible"></th></tr>
+				<tr>
+					<th class="col-4 pbuy__adv-col-3">屬性值</th>
+					<th class="col-4 pbuy__adv-col-3">調整值</th>
+					<th class="col-4 pbuy__adv-col-3">點數花費</th>
+					<th class="col-3 pbuy__adv--visible"></th>
+				</tr>
 			</thead>
 		`);
 		const $tbody = $(`<tbody/>`).appendTo($table);
@@ -222,7 +232,8 @@ class StatGen {
 
 						this.renderCostsTable();
 						this.handleCostChanges();
-					}).appendTo($row.find(`td`).last());
+					});
+					$(`<div class="pbuy__wrp-btn-rem">`).append($btnRm).appendTo($row.find(`td`).last());
 				}
 			}
 		};
@@ -232,10 +243,15 @@ class StatGen {
 
 			const $wrpBtnsTop = $(`<div class="pbuy__add_row_btn_wrap"/>`).insertBefore($table);
 
-			const $btnAddLow = $(`<button class="btn btn-xs btn-primary" style="margin-right: 7px;">加入更低</button>`)
+			const $btnAddLow = $(`<button class="btn btn-xs btn-primary" style="margin-right: 7px;">加入更低數值</button>`)
 				.click(() => {
 					const lowest = Object.keys(this.savedState).map(Number).sort(SortUtil.ascSort)[0];
-					if (lowest === 0) return alert("Can't go any lower!");
+					if (lowest === 0) {
+						return JqueryUtil.doToast({
+							content: "Can't go any lower!",
+							type: "danger"
+						});
+					}
 
 					this.savedState[lowest - 1] = this.savedState[lowest];
 					this.doSaveDebounced();
@@ -243,7 +259,7 @@ class StatGen {
 					this.renderCostsTable();
 				}).appendTo($wrpBtnsTop);
 
-			const $btnAddHigh = $(`<button class="btn btn-xs btn-primary" style="margin-right: 14px;">加入更高</button>`)
+			const $btnAddHigh = $(`<button class="btn btn-xs btn-primary" style="margin-right: 14px;">加入更高數值</button>`)
 				.click(() => {
 					const highest = Object.keys(this.savedState).map(Number).sort(SortUtil.ascSort).reverse()[0];
 
@@ -330,6 +346,7 @@ class StatGen {
 	}
 
 	chooseRacialBonus (ele, updateTotal = true) {
+		if (this.raceChoiceAmount == null) return;
 		if ($("input.choose:checked").length > this.raceChoiceCount) return ele.checked = false;
 
 		$(".racial", ele.parentNode.parentNode)
@@ -347,7 +364,11 @@ class StatGen {
 			$(".choose").hide().prop("checked", false);
 			$(".pbuy__choose_dummy").hide();
 
-			if (!stats.choose) return;
+			if (!stats.choose) {
+				this.raceChoiceAmount = null;
+				this.raceChoiceCount = null;
+				return;
+			}
 
 			const {from} = stats.choose[0];
 			this.raceChoiceAmount = stats.choose[0].amount || 1;
@@ -400,9 +421,10 @@ class StatGen {
 
 	changeTotal () {
 		$("#pointbuy tr[id]").each((i, el) => {
-			const [base, racial, user, total, mod] = $(`input[type="number"]`, el).get();
+			const [base, racial, user, total, mod] = $(`input[data-select="number"]`, el).get();
 			const raw = total.value = Number(base.value) + Number(racial.value) + Number(user.value);
-			mod.value = Math.floor((raw - 10) / 2)
+			const modValue = Math.floor((raw - 10) / 2);
+			mod.value = modValue >= 0 ? `+${modValue}` : modValue;
 		});
 
 		this.doSaveDebounced();
@@ -411,7 +433,7 @@ class StatGen {
 	rollStats () {
 		const formula = $(`#stats-formula`).val();
 
-		const tree = EntryRenderer.dice._parse2(formula);
+		const tree = Renderer.dice._parse2(formula);
 
 		const $rolled = $("#rolled");
 		if (!tree) {

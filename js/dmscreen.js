@@ -24,6 +24,9 @@ const PANEL_TYP_MONEY_CONVERTER = 9;
 const PANEL_TYP_TUBE = 10;
 const PANEL_TYP_TWITCH = 11;
 const PANEL_TYP_TWITCH_CHAT = 12;
+const PANEL_TYP_ADVENTURES = 13;
+const PANEL_TYP_BOOKS = 14;
+const PANEL_TYP_INITIATIVE_TRACKER_PLAYER = 15;
 const PANEL_TYP_IMAGE = 20;
 const PANEL_TYP_GENERIC_EMBED = 90;
 
@@ -39,11 +42,14 @@ class Board {
 		this.isFullscreen = false;
 		this.isLocked = false;
 		this.reactor = new Reactor();
+		this.isAlertOnNav = false;
 
 		this.nextId = 1;
 		this.hoveringPanel = null;
 		this.availContent = {};
 		this.availRules = {};
+		this.availAdventures = {};
+		this.availBooks = {};
 
 		this.$cbConfirmTabClose = null;
 		this.$btnFullscreen = null;
@@ -181,104 +187,102 @@ class Board {
 		$(window).resize(() => this.reactor.fire("panelResize"));
 	}
 
-	pLoadIndex () {
-		return new Promise(resolve => {
-			elasticlunr.clearStopWords();
-			EntryRenderer.item.populatePropertyAndTypeReference().then(() => DataUtil.loadJSON("data/generated/bookref-dmscreen-index.json")).then((data) => {
-				this.availRules.ALL = elasticlunr(function () {
-					this.addField("b");
-					this.addField("s");
+	async pLoadIndex () {
+		await SearchUiUtil.pDoGlobalInit();
+
+		// rules
+		await (async () => {
+			const data = await DataUtil.loadJSON("data/generated/bookref-dmscreen-index.json");
+			this.availRules.ALL = elasticlunr(function () {
+				this.addField("b");
+				this.addField("s");
+				this.addField("p");
+				this.addField("n");
+				this.addField("h");
+				this.setRef("id");
+			});
+			SearchUtil.removeStemmer(this.availRules.ALL);
+
+			data.data.forEach(d => {
+				d.n = data._meta.name[d.b];
+				d.b = data._meta.id[d.b];
+				d.s = data._meta.section[d.s];
+				this.availRules.ALL.addDoc(d);
+			});
+		})();
+
+		async function pDoBuildAdvantureOrAdventureIndex (dataPath, dataProp, indexStorage, indexIdField) {
+			const data = await DataUtil.loadJSON(dataPath);
+			indexStorage.ALL = elasticlunr(function () {
+				this.addField(indexIdField);
+				this.addField("c");
+				this.addField("n");
+				this.addField("p");
+				this.addField("o");
+				this.setRef("id");
+			});
+			SearchUtil.removeStemmer(indexStorage.ALL);
+
+			let bookOrAdventureId = 0;
+			data[dataProp].forEach(adventureOrBook => {
+				indexStorage[adventureOrBook.id] = elasticlunr(function () {
+					this.addField(indexIdField);
+					this.addField("c");
+					this.addField("n");
 					this.addField("p");
-					this.addField("n");
-					this.addField("h");
+					this.addField("o");
 					this.setRef("id");
 				});
-				SearchUtil.removeStemmer(this.availRules.ALL);
+				SearchUtil.removeStemmer(indexStorage[adventureOrBook.id]);
 
-				data.data.forEach(d => {
-					d.n = data._meta.name[d.b];
-					d.b = data._meta.id[d.b];
-					d.s = data._meta.section[d.s];
-					d.cf = d.n+":"+d.s;
-					if (!this.availRules[d.cf]) {
-						this.availRules[d.cf] = elasticlunr(function () {
-							this.addField("b");
-							this.addField("s");
-							this.addField("p");
-							this.addField("n");
-							this.addField("h");
-							this.setRef("id");
-						});
-						SearchUtil.removeStemmer(this.availRules[d.cf]);
-					}
-					this.availRules.ALL.addDoc(d);
-					this.availRules[d.cf].addDoc(d);
-				});
+				adventureOrBook.contents.forEach((chap, i) => {
+					const chapDoc = {
+						[indexIdField]: adventureOrBook.id,
+						n: adventureOrBook.name,
+						c: chap.name,
+						p: i,
+						id: bookOrAdventureId++
+					};
+					if (chap.ordinal) chapDoc.o = Parser.bookOrdinalToAbv(chap.ordinal, true);
 
-				return DataUtil.loadJSON("search/index.json");
-			}).then((data) => {
-				function hasBadCat (d) {
-					return d.c === Parser.CAT_ID_ADVENTURE || d.c === Parser.CAT_ID_CLASS || d.c === Parser.CAT_ID_QUICKREF || d.c === Parser.CAT_ID_CLASS_FEATURE;
-				}
-
-				function fromDeepIndex (d) {
-					return d.d; // flag for "deep indexed" content that refers to the same item
-				}
-
-				this.availContent.ALL = elasticlunr(function () {
-					this.addField("n");
-					this.addField("s");
-					this.setRef("id");
-				});
-				SearchUtil.removeStemmer(this.availContent.ALL);
-				// Add main site index
-				let ixMax = 0;
-				data.forEach(d => {
-					if (hasBadCat(d) || fromDeepIndex(d)) return;
-					d.cf = d.c === Parser.CAT_ID_CREATURE ? "生物(Creature)" : Parser.pageCategoryToFull(d.c);
-					if (!this.availContent[d.cf]) {
-						this.availContent[d.cf] = elasticlunr(function () {
-							this.addField("n");
-							this.addField("s");
-							this.setRef("id");
-						});
-						SearchUtil.removeStemmer(this.availContent[d.cf]);
-					}
-					this.availContent.ALL.addDoc(d);
-					this.availContent[d.cf].addDoc(d);
-					ixMax = Math.max(ixMax, d.id);
-				});
-
-				// Add homebrew
-				Omnisearch.highestId = Math.max(ixMax, Omnisearch.highestId);
-				BrewUtil.pGetSearchIndex().then(index => {
-					index.forEach(d => {
-						if (hasBadCat(d) || fromDeepIndex(d)) return;
-						d.cf = Parser.pageCategoryToFull(d.c);
-						d.cf = d.c === Parser.CAT_ID_CREATURE ? "生物(Creature)" : Parser.pageCategoryToFull(d.c);
-						this.availContent.ALL.addDoc(d);
-						this.availContent[d.cf].addDoc(d);
-					});
-
-					// add tabs
-					const omniTab = new AddMenuSearchTab(this.availContent);
-					omniTab.setSpotlight(true);
-					const ruleTab = new AddMenuSearchTab(this.availRules, "rules");
-					const embedTab = new AddMenuVideoTab();
-					const imageTab = new AddMenuImageTab();
-					const specialTab = new AddMenuSpecialTab();
-
-					this.menu.addTab(omniTab).addTab(ruleTab).addTab(imageTab).addTab(embedTab).addTab(specialTab);
-
-					this.menu.render();
-
-					this.sideMenu.render();
-
-					resolve();
-					this.doHideLoading();
+					indexStorage.ALL.addDoc(chapDoc);
+					indexStorage[adventureOrBook.id].addDoc(chapDoc);
 				});
 			});
-		});
+		}
+
+		// adventures
+		await pDoBuildAdvantureOrAdventureIndex(`data/adventures.json`, "adventure", this.availAdventures, "a");
+
+		// books
+		await pDoBuildAdvantureOrAdventureIndex(`data/books.json`, "book", this.availBooks, "b");
+
+		// search
+		this.availContent = await SearchUiUtil.pGetContentIndices();
+
+		// add tabs
+		const omniTab = new AddMenuSearchTab(this.availContent);
+		const ruleTab = new AddMenuSearchTab(this.availRules, "rules");
+		const adventureTab = new AddMenuSearchTab(this.availAdventures, "adventures");
+		const bookTab = new AddMenuSearchTab(this.availBooks, "books");
+		const embedTab = new AddMenuVideoTab();
+		const imageTab = new AddMenuImageTab();
+		const specialTab = new AddMenuSpecialTab();
+
+		this.menu
+			.addTab(omniTab)
+			.addTab(ruleTab)
+			.addTab(adventureTab)
+			.addTab(bookTab)
+			.addTab(imageTab)
+			.addTab(embedTab)
+			.addTab(specialTab);
+
+		this.menu.render();
+
+		this.sideMenu.render();
+
+		this.doHideLoading();
 	}
 
 	getPanel (x, y) {
@@ -417,11 +421,12 @@ class Board {
 			this.doLoadStateFrom(toLoad);
 		} catch (e) {
 			// on error, purge saved data and reset
-			window.alert("Error when loading DM screen! Purging saved data...");
-			await StorageUtil.pRemove(DMSCREEN_STORAGE);
-			setTimeout(() => {
-				throw e
+			JqueryUtil.doToast({
+				content: "Error when loading DM screen! Purged saved data. (See the log for more information.)",
+				type: "danger"
 			});
+			await StorageUtil.pRemove(DMSCREEN_STORAGE);
+			setTimeout(() => { throw e; });
 		}
 	}
 
@@ -452,8 +457,22 @@ class Board {
 		this.doSaveStateDebounced();
 	}
 
-	doStopMovingPanels () {
-		Object.values(this.panels).forEach(p => p.toggleMoving(false));
+	disablePanelMoves () {
+		Object.values(this.panels).forEach(p => p.toggleMovable(false));
+	}
+
+	doBindAlertOnNavigation () {
+		if (this.isAlertOnNav) return;
+		this.isAlertOnNav = true;
+		$(window).on("beforeunload", evt => {
+			const message = `Temporary data and connections will be lost.`;
+			(evt || window.event).message = message;
+			return message;
+		});
+	}
+
+	getPanelsByType (type) {
+		return Object.values(this.panels).filter(p => p.tabDatas.length && p.tabDatas.find(td => td.type === type));
 	}
 }
 
@@ -476,13 +495,13 @@ class SideMenu {
 	render () {
 		const renderDivider = () => this.$mnu.append(`<hr class="sidemenu__row__divider">`);
 
-		const $wrpResizeW = $(`<div class="sidemenu__row"><div class="sidemenu__row__label">寬度</div></div>`).appendTo(this.$mnu);
+		const $wrpResizeW = $(`<div class="sidemenu__row split-v-center"><div class="sidemenu__row__label">寬度</div></div>`).appendTo(this.$mnu);
 		const $iptWidth = $(`<input class="form-control" type="number" value="${this.board.width}">`).appendTo($wrpResizeW);
 		this.$iptWidth = $iptWidth;
-		const $wrpResizeH = $(`<div class="sidemenu__row"><div class="sidemenu__row__label">高度</div></div>`).appendTo(this.$mnu);
+		const $wrpResizeH = $(`<div class="sidemenu__row split-v-center"><div class="sidemenu__row__label">高度</div></div>`).appendTo(this.$mnu);
 		const $iptHeight = $(`<input class="form-control" type="number" value="${this.board.height}">`).appendTo($wrpResizeH);
 		this.$iptHeight = $iptHeight;
-		const $wrpSetDim = $(`<div class="sidemenu__row"/>`).appendTo(this.$mnu);
+		const $wrpSetDim = $(`<div class="sidemenu__row split-v-center"/>`).appendTo(this.$mnu);
 		const $btnSetDim = $(`<button class="btn btn-primary" style="width: 100%;">設定分層</div>`).appendTo($wrpSetDim);
 		$btnSetDim.on("click", () => {
 			const w = Number($iptWidth.val());
@@ -492,13 +511,13 @@ class SideMenu {
 		});
 		renderDivider();
 
-		const $wrpFullscreen = $(`<div class="sidemenu__row--alt"></div>`).appendTo(this.$mnu);
+		const $wrpFullscreen = $(`<div class="sidemenu__row flex-vh-center-around"></div>`).appendTo(this.$mnu);
 		const $btnFullscreen = $(`<button class="btn btn-primary">開關全螢幕</button>`).appendTo($wrpFullscreen);
 		this.board.$btnFullscreen = $btnFullscreen;
 		$btnFullscreen.on("click", () => {
 			this.board.isFullscreen = !this.board.isFullscreen;
-			if (this.board.isFullscreen) $(`body`).addClass(`dm-screen-fullscreen`);
-			else $(`body`).removeClass(`dm-screen-fullscreen`);
+			if (this.board.isFullscreen) $(`body`).addClass(`is-fullscreen`);
+			else $(`body`).removeClass(`is-fullscreen`);
 			this.board.doAdjust$creenCss();
 			this.board.doSaveStateDebounced();
 			this.board.reactor.fire("panelResize")
@@ -508,9 +527,9 @@ class SideMenu {
 		$btnLockPanels.on("click", () => {
 			this.board.isLocked = !this.board.isLocked;
 			if (this.board.isLocked) {
+				this.board.disablePanelMoves();
 				$(`body`).addClass(`dm-screen-locked`);
 				$btnLockPanels.removeClass(`btn-danger`).addClass(`btn-success`);
-				this.board.doStopMovingPanels();
 			} else {
 				$(`body`).removeClass(`dm-screen-locked`);
 				$btnLockPanels.addClass(`btn-danger`).removeClass(`btn-success`);
@@ -520,33 +539,32 @@ class SideMenu {
 		renderDivider();
 
 		const $wrpSaveLoad = $(`<div class="sidemenu__row--vert"/>`).appendTo(this.$mnu);
-		const $wrpSaveLoadFile = $(`<div class="sidemenu__row--alt"/>`).appendTo($wrpSaveLoad);
+		const $wrpSaveLoadFile = $(`<div class="sidemenu__row flex-vh-center-around"/>`).appendTo($wrpSaveLoad);
 		const $btnSaveFile = $(`<button class="btn btn-primary">儲存檔案</button>`).appendTo($wrpSaveLoadFile);
 		$btnSaveFile.on("click", () => {
 			DataUtil.userDownload(`dm-screen`, this.board.getSaveableState());
 		});
 		const $btnLoadFile = $(`<button class="btn btn-primary">讀取檔案</button>`).appendTo($wrpSaveLoadFile);
-		$btnLoadFile.on("click", () => {
-			DataUtil.userUpload((json) => {
-				this.board.doReset();
-				this.board.doLoadStateFrom(json);
-			});
+		$btnLoadFile.on("click", async () => {
+			const json = await DataUtil.pUserUpload();
+			this.board.doReset();
+			this.board.doLoadStateFrom(json);
 		});
-		const $wrpSaveLoadUrl = $(`<div class="sidemenu__row--alt"/>`).appendTo($wrpSaveLoad);
+		const $wrpSaveLoadUrl = $(`<div class="sidemenu__row flex-vh-center-around"/>`).appendTo($wrpSaveLoad);
 		const $btnSaveLink = $(`<button class="btn btn-primary">儲存至URL</button>`).appendTo($wrpSaveLoadUrl);
-		$btnSaveLink.on("click", () => {
+		$btnSaveLink.on("click", async () => {
 			const encoded = `${window.location.href.split("#")[0]}#${encodeURIComponent(JSON.stringify(this.board.getSaveableState()))}`;
-			copyText(encoded);
+			await MiscUtil.pCopyTextToClipboard(encoded);
 			JqueryUtil.showCopiedEffect($btnSaveLink);
 		});
 		renderDivider();
 
-		const $wrpCbConfirm = $(`<div class="sidemenu__row"><label class="sidemenu__row__label sidemenu__row__label--cb-label"><span>Confirm on Tab Close</span></label></div>`).appendTo(this.$mnu);
+		const $wrpCbConfirm = $(`<div class="sidemenu__row split-v-center"><label class="sidemenu__row__label sidemenu__row__label--cb-label"><span>Confirm on Tab Close</span></label></div>`).appendTo(this.$mnu);
 		this.board.$cbConfirmTabClose = $(`<input type="checkbox" class="sidemenu__row__label__cb">`).appendTo($wrpCbConfirm.find(`label`));
 		renderDivider();
 
-		const $wrpReset = $(`<div class="sidemenu__row"/>`).appendTo(this.$mnu);
-		const $btnReset = $(`<button class="btn btn-danger" style="width: 100%;">重置DM屏幕</button>`).appendTo($wrpReset);
+		const $wrpReset = $(`<div class="sidemenu__row split-v-center"/>`).appendTo(this.$mnu);
+		const $btnReset = $(`<button class="btn btn-danger" style="width: 100%;">重置屏幕</button>`).appendTo($wrpReset);
 		$btnReset.on("click", () => {
 			if (window.confirm("Are you sure?")) {
 				this.board.doReset();
@@ -566,7 +584,7 @@ class SideMenu {
 		this.board.exiledPanels.forEach(p => p.get$ContentWrapper().detach());
 		this.$wrpHistory.children().remove();
 		if (this.board.exiledPanels.length) {
-			const $wrpHistHeader = $(`<div class="sidemenu__row"><span style="font-variant: small-caps;">最近移除</span></div>`).appendTo(this.$wrpHistory);
+			const $wrpHistHeader = $(`<div class="sidemenu__row split-v-center"><span style="font-variant: small-caps;">最近移除</span></div>`).appendTo(this.$wrpHistory);
 			const $btnHistClear = $(`<button class="btn btn-danger">清除</button>`).appendTo($wrpHistHeader);
 			$btnHistClear.on("click", () => {
 				this.board.exiledPanels = [];
@@ -704,7 +722,8 @@ class Panel {
 					const page = saved.c.p;
 					const source = saved.c.s;
 					const hash = saved.c.u;
-					p.doPopulate_Stats(page, source, hash, skipSetTab);
+					p.doPopulate_Stats(page, source, hash, skipSetTab, saved.r);
+					handleTabRenamed(p);
 					return p;
 				}
 				case PANEL_TYP_CREATURE_SCALED_CR: {
@@ -712,34 +731,59 @@ class Panel {
 					const source = saved.c.s;
 					const hash = saved.c.u;
 					const cr = saved.c.cr;
-					p.doPopulate_StatsScaledCr(page, source, hash, cr, skipSetTab);
+					p.doPopulate_StatsScaledCr(page, source, hash, cr, skipSetTab, saved.r);
+					handleTabRenamed(p);
 					return p;
 				}
 				case PANEL_TYP_RULES: {
 					const book = saved.c.b;
 					const chapter = saved.c.c;
 					const header = saved.c.h;
-					p.doPopulate_Rules(book, chapter, header, skipSetTab);
+					p.doPopulate_Rules(book, chapter, header, skipSetTab, saved.r);
+					handleTabRenamed(p);
+					return p;
+				}
+				case PANEL_TYP_ADVENTURES: {
+					const adventure = saved.c.a;
+					const chapter = saved.c.c;
+					p.doPopulate_Adventures(adventure, chapter, skipSetTab, saved.r);
+					handleTabRenamed(p);
+					return p;
+				}
+				case PANEL_TYP_BOOKS: {
+					const book = saved.c.b;
+					const chapter = saved.c.c;
+					p.doPopulate_Books(book, chapter, skipSetTab, saved.r);
+					handleTabRenamed(p);
 					return p;
 				}
 				case PANEL_TYP_ROLLBOX:
-					EntryRenderer.dice.bindDmScreenPanel(p);
+					Renderer.dice.bindDmScreenPanel(p, saved.r);
+					handleTabRenamed(p);
 					return p;
 				case PANEL_TYP_TEXTBOX:
 					p.doPopulate_TextBox(saved.s.x, saved.r);
 					handleTabRenamed(p);
 					return p;
 				case PANEL_TYP_INITIATIVE_TRACKER:
-					p.doPopulate_InitiativeTracker(saved.s);
+					p.doPopulate_InitiativeTracker(saved.s, saved.r);
+					handleTabRenamed(p);
+					return p;
+				case PANEL_TYP_INITIATIVE_TRACKER_PLAYER:
+					p.doPopulate_InitiativeTrackerPlayer(saved.s, saved.r);
+					handleTabRenamed(p);
 					return p;
 				case PANEL_TYP_UNIT_CONVERTER:
-					p.doPopulate_UnitConverter(saved.s);
+					p.doPopulate_UnitConverter(saved.s, saved.r);
+					handleTabRenamed(p);
 					return p;
 				case PANEL_TYP_MONEY_CONVERTER:
-					p.doPopulate_MoneyConverter(saved.s);
+					p.doPopulate_MoneyConverter(saved.s, saved.r);
+					handleTabRenamed(p);
 					return p;
 				case PANEL_TYP_SUNDIAL:
-					p.doPopulate_Sundial(saved.s);
+					p.doPopulate_Sundial(saved.s, saved.r);
+					handleTabRenamed(p);
 					return p;
 				case PANEL_TYP_TUBE:
 					p.doPopulate_YouTube(saved.c.u, saved.r);
@@ -778,7 +822,7 @@ class Panel {
 	}
 
 	static _get$eleLoading (message = "Loading") {
-		return $(`<div class="panel-content-wrapper-inner"><div class="panel-tab-message loading-spinner"><i>${message}...</i></div></div>`);
+		return $(`<div class="panel-content-wrapper-inner"><div class="ui-search__message loading-spinner"><i>${message}...</i></div></div>`);
 	}
 
 	static setMovingCss (evt, $ele, w, h, offsetX, offsetY, zIndex) {
@@ -837,20 +881,19 @@ class Panel {
 		);
 	}
 
-	doPopulate_Stats (page, source, hash) {
-		hash = UrlUtil.encodeForHash(decodeURIComponent(hash));
+	doPopulate_Stats (page, source, hash, skipSetTab, title) { // FIXME skipSetTab is never used
 		const meta = {p: page, s: source, u: hash};
 		const ix = this.set$TabLoading(
 			PANEL_TYP_STATS,
 			meta
 		);
-		EntryRenderer.hover._doFillThenCall(
+		Renderer.hover._doFillThenCall(
 			page,
 			source,
 			hash,
 			() => {
-				const fn = EntryRenderer.hover._pageToRenderFn(page);
-				const it = EntryRenderer.hover._getFromCache(page, source, hash);
+				const fn = Renderer.hover._pageToRenderFn(page);
+				const it = Renderer.hover._getFromCache(page, source, hash);
 				const $contentInner = $(`<div class="panel-content-wrapper-inner"/>`);
 				const $contentStats = $(`<table class="stats"/>`).appendTo($contentInner);
 				$contentStats.append(fn(it));
@@ -862,7 +905,8 @@ class Panel {
 					PANEL_TYP_STATS,
 					meta,
 					$contentInner,
-					it.name
+					title || it.name,
+					true
 				);
 			}
 		);
@@ -875,11 +919,11 @@ class Panel {
 			const $this = $(this);
 			const lastCr = self.contentMeta.cr != null ? Parser.numberToCr(self.contentMeta.cr) : mon.cr.cr || mon.cr;
 
-			EntryRenderer.monster.getCrScaleTarget($this, lastCr, (targetCr) => {
+			Renderer.monster.getCrScaleTarget($this, lastCr, (targetCr) => {
 				const originalCr = Parser.crToNumber(mon.cr.cr || mon.cr) === targetCr;
 
 				const doRender = (toRender) => {
-					$contentStats.empty().append(EntryRenderer.monster.getCompactRenderedString(toRender, null, {showScaler: true, isScaled: !originalCr}));
+					$contentStats.empty().append(Renderer.monster.getCompactRenderedString(toRender, null, {showScaler: true, isScaled: !originalCr}));
 
 					const nxtMeta = {
 						...meta,
@@ -892,7 +936,8 @@ class Panel {
 						originalCr ? PANEL_TYP_STATS : PANEL_TYP_CREATURE_SCALED_CR,
 						nxtMeta,
 						$contentInner,
-						toRender._displayName || toRender.name
+						toRender._displayName || toRender.name,
+						true
 					);
 				};
 
@@ -904,33 +949,34 @@ class Panel {
 			}, true);
 		});
 		$contentStats.off("click", ".mon__btn-reset-cr").on("click", ".mon__btn-reset-cr", function () {
-			$contentStats.empty().append(EntryRenderer.monster.getCompactRenderedString(mon, null, {showScaler: true, isScaled: false}));
+			$contentStats.empty().append(Renderer.monster.getCompactRenderedString(mon, null, {showScaler: true, isScaled: false}));
 			self.set$Tab(
 				self.tabIndex,
 				PANEL_TYP_STATS,
 				meta,
 				$contentInner,
-				mon.name
+				mon.name,
+				true
 			);
 		});
 	}
 
-	doPopulate_StatsScaledCr (page, source, hash, targetCr) {
+	doPopulate_StatsScaledCr (page, source, hash, targetCr, skipSetTab, title) { // FIXME skipSetTab is never used
 		const meta = {p: page, s: source, u: hash, cr: targetCr};
 		const ix = this.set$TabLoading(
 			PANEL_TYP_CREATURE_SCALED_CR,
 			meta
 		);
-		EntryRenderer.hover._doFillThenCall(
+		Renderer.hover._doFillThenCall(
 			page,
 			source,
 			hash,
 			() => {
-				const it = EntryRenderer.hover._getFromCache(page, source, hash);
+				const it = Renderer.hover._getFromCache(page, source, hash);
 				ScaleCreature.scale(it, targetCr).then(initialRender => {
 					const $contentInner = $(`<div class="panel-content-wrapper-inner"/>`);
 					const $contentStats = $(`<table class="stats"/>`).appendTo($contentInner);
-					$contentStats.append(EntryRenderer.monster.getCompactRenderedString(initialRender, null, {showScaler: true, isScaled: true}));
+					$contentStats.append(Renderer.monster.getCompactRenderedString(initialRender, null, {showScaler: true, isScaled: true}));
 
 					this._stats_bindCrScaleClickHandler(it, meta, $contentInner, $contentStats);
 
@@ -939,14 +985,15 @@ class Panel {
 						PANEL_TYP_CREATURE_SCALED_CR,
 						meta,
 						$contentInner,
-						initialRender._displayName || initialRender.name
+						title || initialRender._displayName || initialRender.name,
+						true
 					);
 				});
 			}
 		);
 	}
 
-	doPopulate_Rules (book, chapter, header) {
+	doPopulate_Rules (book, chapter, header, skipSetTab, title) { // FIXME skipSetTab is never used
 		const meta = {b: book, c: chapter, h: header};
 		const ix = this.set$TabLoading(
 			PANEL_TYP_RULES,
@@ -954,13 +1001,54 @@ class Panel {
 		);
 		RuleLoader.pFill(book).then(() => {
 			const rule = RuleLoader.getFromCache(book, chapter, header);
-			const it = EntryRenderer.rule.getCompactRenderedString(rule);
+			const it = Renderer.rule.getCompactRenderedString(rule);
 			this.set$Tab(
 				ix,
 				PANEL_TYP_RULES,
 				meta,
 				$(`<div class="panel-content-wrapper-inner"><table class="stats">${it}</table></div>`),
-				rule.name || ""
+				title || rule.name || "",
+				true
+			);
+		});
+	}
+
+	doPopulate_Adventures (adventure, chapter, skipSetTab, title) { // FIXME skipSetTab is never used
+		const meta = {a: adventure, c: chapter};
+		const ix = this.set$TabLoading(
+			PANEL_TYP_ADVENTURES,
+			meta
+		);
+		adventureLoader.pFill(adventure).then(() => {
+			const data = adventureLoader.getFromCache(adventure, chapter);
+			const view = new AdventureOrBookView("adventure", this, adventureLoader, ix, {adventure, chapter});
+			this.set$Tab(
+				ix,
+				PANEL_TYP_ADVENTURES,
+				meta,
+				$(`<div class="panel-content-wrapper-inner"></div>`).append(view.$getEle()),
+				title || data.name || "",
+				true
+			);
+		});
+	}
+
+	doPopulate_Books (book, chapter, skipSetTab, title) { // FIXME skipSetTab is never used
+		const meta = {b: book, c: chapter};
+		const ix = this.set$TabLoading(
+			PANEL_TYP_BOOKS,
+			meta
+		);
+		bookLoader.pFill(book).then(() => {
+			const data = bookLoader.getFromCache(book, chapter);
+			const view = new AdventureOrBookView("book", this, bookLoader, ix, {book, chapter});
+			this.set$Tab(
+				ix,
+				PANEL_TYP_BOOKS,
+				meta,
+				$(`<div class="panel-content-wrapper-inner"></div>`).append(view.$getEle()),
+				title || data.name || "",
+				true
 			);
 		});
 	}
@@ -970,48 +1058,63 @@ class Panel {
 		return this.set$Tab(ix, type, contentMeta, $content, title, tabCanRename, tabRenamed);
 	}
 
-	doPopulate_Rollbox () {
+	doPopulate_Rollbox (title) {
 		this.set$ContentTab(
 			PANEL_TYP_ROLLBOX,
 			null,
-			$(`<div class="panel-content-wrapper-inner"/>`).append(EntryRenderer.dice.get$Roller().addClass("rollbox-panel")),
-			"Dice Roller"
+			$(`<div class="panel-content-wrapper-inner"/>`).append(Renderer.dice.get$Roller().addClass("rollbox-panel")),
+			title || "Dice Roller",
+			true
 		);
 	}
 
-	doPopulate_InitiativeTracker (state = {}) {
+	doPopulate_InitiativeTracker (state = {}, title) {
 		this.set$ContentTab(
 			PANEL_TYP_INITIATIVE_TRACKER,
 			state,
 			$(`<div class="panel-content-wrapper-inner"/>`).append(InitiativeTracker.make$Tracker(this.board, state)),
-			"Initiative Tracker"
+			title || "Initiative Tracker",
+			true
 		);
 	}
 
-	doPopulate_UnitConverter (state = {}) {
+	doPopulate_InitiativeTrackerPlayer (state = {}, title) {
+		this.set$ContentTab(
+			PANEL_TYP_INITIATIVE_TRACKER_PLAYER,
+			state,
+			$(`<div class="panel-content-wrapper-inner"/>`).append(InitiativeTrackerPlayer.make$tracker(this.board, state)),
+			title || "Initiative Tracker",
+			true
+		);
+	}
+
+	doPopulate_UnitConverter (state = {}, title) {
 		this.set$ContentTab(
 			PANEL_TYP_UNIT_CONVERTER,
 			state,
 			$(`<div class="panel-content-wrapper-inner"/>`).append(UnitConverter.make$Converter(this.board, state)),
-			"Unit Converter"
+			title || "Unit Converter",
+			true
 		);
 	}
 
-	doPopulate_MoneyConverter (state = {}) {
+	doPopulate_MoneyConverter (state = {}, title) {
 		this.set$ContentTab(
 			PANEL_TYP_MONEY_CONVERTER,
 			state,
 			$(`<div class="panel-content-wrapper-inner"/>`).append(MoneyConverter.make$Converter(this.board, state)),
-			"Money Converter"
+			title || "Money Converter",
+			true
 		);
 	}
 
-	doPopulate_Sundial (state = {}) {
+	doPopulate_Sundial (state = {}, title) {
 		this.set$ContentTab(
 			PANEL_TYP_SUNDIAL,
 			state,
 			$(`<div class="panel-content-wrapper-inner"/>`).append(Sundial.make$Sundail(this.board, state)),
-			"Sundial"
+			title || "Sundial",
+			true
 		);
 	}
 
@@ -1313,7 +1416,7 @@ class Panel {
 
 	doRenderTitle () {
 		const displayText = this.title !== TITLE_LOADING &&
-			(this.type === PANEL_TYP_STATS || this.type === PANEL_TYP_CREATURE_SCALED_CR || this.type === PANEL_TYP_RULES) ? this.title : "";
+			(this.type === PANEL_TYP_STATS || this.type === PANEL_TYP_CREATURE_SCALED_CR || this.type === PANEL_TYP_RULES || this.type === PANEL_TYP_ADVENTURES || this.type === PANEL_TYP_BOOKS) ? this.title : "";
 
 		this.$pnlTitle.text(displayText);
 		if (!displayText) this.$pnlTitle.addClass("hidden");
@@ -1344,7 +1447,7 @@ class Panel {
 
 			this.tabDatas.filter(it => it.type === PANEL_TYP_ROLLBOX).forEach(it => {
 				it.isDeleted = true;
-				EntryRenderer.dice.unbindDmScreenPanel();
+				Renderer.dice.unbindDmScreenPanel();
 			});
 		}
 
@@ -1354,9 +1457,8 @@ class Panel {
 		return replacement;
 	}
 
-	toggleMoving (val) {
+	toggleMovable (val) {
 		this.$pnl.find(`.panel-control`).toggle(val);
-		this.$pnl.find(`.btn-panel-add`).toggle(val);
 		this.$pnl.toggleClass(`panel-mode-move`, val);
 	}
 
@@ -1393,9 +1495,9 @@ class Panel {
 
 			const $ctrlMove = $(`<div class="panel-control-icon glyphicon glyphicon-move" title="Move"/>`).appendTo($ctrlBar);
 			$ctrlMove.on("click", () => {
-				this.toggleMoving();
+				this.toggleMovable();
 			});
-			const $ctrlEmpty = $(`<div class="panel-control-icon glyphicon glyphicon-remove" title="Empty"/>`).appendTo($ctrlBar);
+			const $ctrlEmpty = $(`<div class="panel-control-icon glyphicon glyphicon-remove" title="Close"/>`).appendTo($ctrlBar);
 			$ctrlEmpty.on("click", () => {
 				this.getReplacementPanel();
 			});
@@ -1472,8 +1574,12 @@ class Panel {
 			this.close$TabContent(ixOpt);
 		}
 
-		// closing the last tab flips this, so we may need to do it in either case
-		if (!this.isTabs) {
+		const activeTabs = this.tabDatas.filter(it => !it.isDeleted).length;
+
+		if (activeTabs === 1) { // if there is only one active tab remaining, remove the tab bar
+			this.isTabs = false;
+			this.doRenderTabs();
+		} else if (activeTabs === 0) {
 			const replacement = new Panel(this.board, this.x, this.y, this.width, this.height);
 			this.exile();
 			this.board.addPanel(replacement);
@@ -1493,9 +1599,17 @@ class Panel {
 		this.tabCanRename = tabCanRename;
 		this.tabRenamed = tabRenamed;
 
-		this.$pnlWrpContent.children().detach();
-		if ($content === null) this.$pnlWrpContent.append(this.$btnAdd);
-		else this.$pnlWrpContent.append($content);
+		if ($content === null) {
+			this.$pnlWrpContent.children().detach();
+			this.$pnlWrpContent.append(this.$btnAdd);
+		} else {
+			this.$pnlWrpContent.find(`.panel-add`).remove(); // clean up any "add panel" wrappers
+			this.$pnlWrpContent.find(`.ui-search__message.loading-spinner`).remove(); // clean up any temp "loading" panels
+			this.$pnlWrpContent.children().addClass("dms__tab_hidden");
+			$content.removeClass("dms__tab_hidden");
+			if (!this.$pnlWrpContent.has($content[0]).length) this.$pnlWrpContent.append($content);
+		}
+
 		this.$pnl.attr("empty", !$content);
 		this.doRenderTitle();
 		this.doRenderTabs();
@@ -1535,7 +1649,7 @@ class Panel {
 
 	_get$BtnSelTab (ix, title, tabCanRename) {
 		title = title || "[Untitled]";
-		const $btnSelTab = $(`<button class="btn btn-default content-tab ${tabCanRename ? "content-tab-can-rename" : ""}"><span class="content-tab-title">${title}</span></button>`)
+		const $btnSelTab = $(`<span class="btn btn-default content-tab ${tabCanRename ? "content-tab-can-rename" : ""}"><span class="content-tab-title">${title}</span></span>`)
 			.on("mousedown", (evt) => {
 				if (evt.which === 1) {
 					this.setActiveTab(ix);
@@ -1547,14 +1661,7 @@ class Panel {
 				if (!evt.ctrlKey && $btnSelTab.hasClass("content-tab-can-rename")) {
 					const nuTitle = prompt("Rename tab to:");
 					if (nuTitle && nuTitle.trim()) {
-						$btnSelTab.find(`.content-tab-title`).text(nuTitle);
-						const x = this.tabDatas[ix];
-						x.title = nuTitle;
-						x.tabRenamed = true;
-						if (this.tabIndex === ix) {
-							this.title = nuTitle;
-							this.tabRenamed = true;
-						}
+						this.setTabTitle(ix, nuTitle);
 					}
 					evt.stopPropagation();
 					evt.preventDefault();
@@ -1568,6 +1675,21 @@ class Panel {
 				}
 			}).appendTo($btnSelTab);
 		return $btnSelTab;
+	}
+
+	setTabTitle (ix, nuTitle) {
+		const tabData = this.tabDatas[ix];
+
+		tabData.$tabButton.find(`.content-tab-title`).text(nuTitle);
+		this.$pnlTitle.text(nuTitle);
+		const x = this.tabDatas[ix];
+		x.title = nuTitle;
+		x.tabRenamed = true;
+		if (this.tabIndex === ix) {
+			this.title = nuTitle;
+			this.tabRenamed = true;
+		}
+		this.board.doSaveStateDebounced();
 	}
 
 	set$Tab (ix, type, contentMeta, $content, title, tabCanRename, tabRenamed) {
@@ -1648,7 +1770,7 @@ class Panel {
 	}
 
 	destroy () {
-		if (this.type === PANEL_TYP_ROLLBOX) EntryRenderer.dice.unbindDmScreenPanel();
+		if (this.type === PANEL_TYP_ROLLBOX) Renderer.dice.unbindDmScreenPanel();
 		if (this.$pnl) this.$pnl.remove();
 		this.board.destroyPanel(this.id);
 	}
@@ -1712,6 +1834,24 @@ class Panel {
 							h: contentMeta.h
 						}
 					};
+				case PANEL_TYP_ADVENTURES:
+					return {
+						t: type,
+						r: toSaveTitle,
+						c: {
+							a: contentMeta.a,
+							c: contentMeta.c
+						}
+					};
+				case PANEL_TYP_BOOKS:
+					return {
+						t: type,
+						r: toSaveTitle,
+						c: {
+							b: contentMeta.b,
+							c: contentMeta.c
+						}
+					};
 				case PANEL_TYP_TEXTBOX:
 					return {
 						t: type,
@@ -1725,6 +1865,13 @@ class Panel {
 						t: type,
 						r: toSaveTitle,
 						s: $content.find(`.dm-init`).data("getState")()
+					};
+				}
+				case PANEL_TYP_INITIATIVE_TRACKER_PLAYER: {
+					return {
+						t: type,
+						r: toSaveTitle,
+						s: {}
 					};
 				}
 				case PANEL_TYP_UNIT_CONVERTER: {
@@ -2125,17 +2272,15 @@ class AddMenu {
 
 	render () {
 		if (!this.$menu) {
-			const $menu = $(`<div class="panel-addmenu">`);
+			const $menu = $(`<div class="ui-modal__overlay">`);
 			this.$menu = $menu;
-			const $menuInner = $(`<div class="panel-addmenu-inner dropdown-menu">`).appendTo($menu);
+			const $menuInner = $(`<div class="ui-modal__inner dropdown-menu">`).appendTo($menu);
 			const $tabBar = $(`<div class="panel-addmenu-bar"/>`).appendTo($menuInner);
-			const $tabView = $(`<div class="panel-addmenu-view"/>`).appendTo($menuInner);
-			this.$tabView = $tabView;
+			this.$tabView = $(`<div class="panel-addmenu-view"/>`).appendTo($menuInner);
 
 			this.tabs.forEach(t => {
 				t.render();
 				const $head = $(`<button class="btn btn-default panel-addmenu-tab-head">${t.label}</button>`).appendTo($tabBar);
-				if (t.getSpotlight()) $head.addClass("btn-spotlight");
 				const $body = $(`<div class="panel-addmenu-tab-body"/>`).appendTo($tabBar);
 				$body.append(t.get$Tab);
 				t.$head = $head;
@@ -2143,17 +2288,21 @@ class AddMenu {
 				$head.on("click", () => this.setActiveTab(t));
 			});
 
-			$menu.on("click", () => this.doClose());
+			$menu.on("click", () => {
+				this.doClose();
+
+				// undo entering "tabbed mode" if we close without adding a tab
+				if (this.pnl.isTabs && this.pnl.tabDatas.filter(it => !it.isDeleted).length === 1) {
+					this.pnl.isTabs = false;
+					this.pnl.doRenderTabs();
+				}
+			});
 			$menuInner.on("click", (e) => e.stopPropagation());
 		}
 	}
 
 	setPanel (pnl) {
 		this.pnl = pnl;
-	}
-
-	getPanel () {
-		return this.pnl;
 	}
 
 	doClose () {
@@ -2168,7 +2317,6 @@ class AddMenu {
 class AddMenuTab {
 	constructor (label) {
 		this.label = label;
-		this.spotlight = false;
 
 		this.$tab = null;
 		this.menu = null;
@@ -2185,14 +2333,6 @@ class AddMenuTab {
 	setMenu (menu) {
 		this.menu = menu;
 	}
-
-	setSpotlight (spotlight) {
-		this.spotlight = spotlight;
-	}
-
-	getSpotlight () {
-		return this.spotlight;
-	}
 }
 
 class AddMenuVideoTab extends AddMenuTab {
@@ -2203,9 +2343,9 @@ class AddMenuVideoTab extends AddMenuTab {
 
 	render () {
 		if (!this.$tab) {
-			const $tab = $(`<div class="panel-tab-list-wrapper underline-tabs" id="${this.tabId}"/>`);
+			const $tab = $(`<div class="ui-search__wrp-output underline-tabs" id="${this.tabId}"/>`);
 
-			const $wrpYT = $(`<div class="tab-body-row"/>`).appendTo($tab);
+			const $wrpYT = $(`<div class="ui-modal__row"/>`).appendTo($tab);
 			const $iptUrlYT = $(`<input class="form-control" placeholder="貼上YouTube URL">`)
 				.on("keydown", (e) => {
 					if (e.which === 13) $btnAddYT.click();
@@ -2221,11 +2361,14 @@ class AddMenuVideoTab extends AddMenuTab {
 					this.menu.doClose();
 					$iptUrlYT.val("");
 				} else {
-					alert(`請輸入一個URL，格式為："https://www.youtube.com/watch?v=XXXXXXX"`);
+					JqueryUtil.doToast({
+						content: `請輸入一個URL，格式為："https://www.youtube.com/watch?v=XXXXXXX"`,
+						type: "danger"
+					});
 				}
 			});
 
-			const $wrpTwitch = $(`<div class="tab-body-row"/>`).appendTo($tab);
+			const $wrpTwitch = $(`<div class="ui-modal__row"/>`).appendTo($tab);
 			const $iptUrlTwitch = $(`<input class="form-control" placeholder="貼上Twitch URL">`)
 				.on("keydown", (e) => {
 					if (e.which === 13) $btnAddTwitch.click();
@@ -2245,7 +2388,10 @@ class AddMenuVideoTab extends AddMenuTab {
 					this.menu.doClose();
 					$iptUrlTwitch.val("");
 				} else {
-					alert(`請輸入一個URL，格式為："https://www.twitch.tv/XXXXXX"`);
+					JqueryUtil.doToast({
+						content: `請輸入一個URL，格式為："https://www.twitch.tv/XXXXXX"`,
+						type: "danger"
+					});
 				}
 			});
 
@@ -2258,11 +2404,14 @@ class AddMenuVideoTab extends AddMenuTab {
 					this.menu.doClose();
 					$iptUrlTwitch.val("");
 				} else {
-					alert(`請輸入一個URL，格式為："https://www.twitch.tv/XXXXXX"`);
+					JqueryUtil.doToast({
+						content: `請輸入一個URL，格式為："https://www.twitch.tv/XXXXXX"`,
+						type: "danger"
+					});
 				}
 			});
 
-			const $wrpGeneric = $(`<div class="tab-body-row"/>`).appendTo($tab);
+			const $wrpGeneric = $(`<div class="ui-modal__row"/>`).appendTo($tab);
 			const $iptUrlGeneric = $(`<input class="form-control" placeholder="貼上任何URL">`)
 				.on("keydown", (e) => {
 					if (e.which === 13) $iptUrlGeneric.click();
@@ -2275,7 +2424,10 @@ class AddMenuVideoTab extends AddMenuTab {
 					this.menu.pnl.doPopulate_GenericEmbed(url);
 					this.menu.doClose();
 				} else {
-					alert(`請輸入一個URL`);
+					JqueryUtil.doToast({
+						content: `請輸入一個URL！`,
+						type: "danger"
+					});
 				}
 			});
 
@@ -2292,10 +2444,10 @@ class AddMenuImageTab extends AddMenuTab {
 
 	render () {
 		if (!this.$tab) {
-			const $tab = $(`<div class="panel-tab-list-wrapper underline-tabs" id="${this.tabId}"/>`);
-/*.
-			const $wrpImgur = $(`<div class="tab-body-row"/>`)appendTo($tab);
-			$(`<span>Imgur (Anonymous Upload) <i class="text-muted">(accepts <a href="https://help.imgur.com/hc/articles/115000083326" target="_blank">imgur-friendly formats</a>)</i></span>`).appendTo($wrpImgur);
+			const $tab = $(`<div class="ui-search__wrp-output underline-tabs" id="${this.tabId}"/>`);
+/*
+			const $wrpImgur = $(`<div class="ui-modal__row"/>`).appendTo($tab);
+			$(`<span>Imgur (Anonymous Upload) <i class="text-muted">(accepts <a href="https://help.imgur.com/hc/articles/115000083326" target="_blank" rel="noopener">imgur-friendly formats</a>)</i></span>`).appendTo($wrpImgur);
 			const $iptFile = $(`<input type="file" class="hidden">`).on("change", (evt) => {
 				const input = evt.target;
 				const reader = new FileReader();
@@ -2317,12 +2469,16 @@ class AddMenuImageTab extends AddMenuTab {
 						},
 						error: (error) => {
 							try {
-								alert(`Failed to upload: ${JSON.parse(error.responseText).data.error}`);
-							} catch (e) {
-								alert("Failed to upload: Unknown error");
-								setTimeout(() => {
-									throw e
+								JqueryUtil.doToast({
+									content: `Failed to upload: ${JSON.parse(error.responseText).data.error}`,
+									type: "danger"
 								});
+							} catch (e) {
+								JqueryUtil.doToast({
+									content: "Failed to upload: Unknown error",
+									type: "danger"
+								});
+								setTimeout(() => { throw e });
 							}
 							this.menu.pnl.doPopulate_Empty(ix);
 						}
@@ -2340,10 +2496,10 @@ class AddMenuImageTab extends AddMenuTab {
 			$btnAdd.on("click", () => {
 				$iptFile.click();
 			});
-			$(`<hr class="tab-body-row-sep"/>`).appendTo($tab);
+			$(`<hr class="ui-modal__row-sep"/>`).appendTo($tab);
 */
-			const $wrpUtl = $(`<div class="tab-body-row"/>`).appendTo($tab);
-			const $iptUrl = $(`<input class="form-control" placeholder="貼上圖片URL">`)
+			const $wrpUtl = $(`<div class="ui-modal__row"/>`).appendTo($tab);
+			const $iptUrl = $(`<input class="form-control" placeholder="Paste image URL">`)
 				.on("keydown", (e) => {
 					if (e.which === 13) $btnAddUrl.click();
 				})
@@ -2355,7 +2511,10 @@ class AddMenuImageTab extends AddMenuTab {
 					this.menu.pnl.doPopulate_Image(url);
 					this.menu.doClose();
 				} else {
-					alert(`請輸入URL`);
+					JqueryUtil.doToast({
+						content: `請輸入URL！`,
+						type: "danger"
+					});
 				}
 			});
 
@@ -2372,40 +2531,51 @@ class AddMenuSpecialTab extends AddMenuTab {
 
 	render () {
 		if (!this.$tab) {
-			const $tab = $(`<div class="panel-tab-list-wrapper underline-tabs" id="${this.tabId}"/>`);
+			const $tab = $(`<div class="ui-search__wrp-output underline-tabs" id="${this.tabId}"/>`);
 
-			const $wrpRoller = $(`<div class="tab-body-row"><span>擲骰工具<i class="text-muted">(將擲骰工具釘到面板上)</i></span></div>`).appendTo($tab);
+			const $wrpRoller = $(`<div class="ui-modal__row"><span>擲骰工具<i class="text-muted">(將擲骰工具釘到面板上)</i></span></div>`).appendTo($tab);
 			const $btnRoller = $(`<button class="btn btn-primary">釘上</button>`).appendTo($wrpRoller);
 			$btnRoller.on("click", () => {
-				EntryRenderer.dice.bindDmScreenPanel(this.menu.pnl);
+				Renderer.dice.bindDmScreenPanel(this.menu.pnl);
 				this.menu.doClose();
 			});
-			$(`<hr class="tab-body-row-sep"/>`).appendTo($tab);
+			$(`<hr class="ui-modal__row-sep"/>`).appendTo($tab);
 
-			const $wrpTracker = $(`<div class="tab-body-row"><span>先攻追蹤器</span></div>`).appendTo($tab);
+			const $wrpTracker = $(`<div class="ui-modal__row"><span>先攻追蹤器</span></div>`).appendTo($tab);
 			const $btnTracker = $(`<button class="btn btn-primary">加入</button>`).appendTo($wrpTracker);
 			$btnTracker.on("click", () => {
 				this.menu.pnl.doPopulate_InitiativeTracker();
 				this.menu.doClose();
 			});
-			$(`<hr class="tab-body-row-sep"/>`).appendTo($tab);
 
-			const $wrpText = $(`<div class="tab-body-row"><span>基礎文字方塊<i class="text-muted">(for a feature-rich editor, embed a Google Doc or similar)</i></span></div>`).appendTo($tab);
+			$(`<div class="ui-modal__row"><span>先攻追蹤器:玩家檢視頁</span><div data-r="$btnTrackerPlayer"/></div>`)
+				.swap({
+					$btnTrackerPlayer: $(`<button class="btn btn-primary">加入</button>`)
+						.click(() => {
+							this.menu.pnl.doPopulate_InitiativeTrackerPlayer();
+							this.menu.doClose();
+						})
+				})
+				.appendTo($tab);
+
+			$(`<hr class="ui-modal__row-sep"/>`).appendTo($tab);
+
+			const $wrpText = $(`<div class="ui-modal__row"><span>基礎文字方塊<i class="text-muted">(for a feature-rich editor, embed a Google Doc or similar)</i></span></div>`).appendTo($tab);
 			const $btnText = $(`<button class="btn btn-primary">加入</button>`).appendTo($wrpText);
 			$btnText.on("click", () => {
 				this.menu.pnl.doPopulate_TextBox();
 				this.menu.doClose();
 			});
-			$(`<hr class="tab-body-row-sep"/>`).appendTo($tab);
+			$(`<hr class="ui-modal__row-sep"/>`).appendTo($tab);
 
-			const $wrpUnitConverter = $(`<div class="tab-body-row"><span>英制-公制單位轉換器</span></div>`).appendTo($tab);
+			const $wrpUnitConverter = $(`<div class="ui-modal__row"><span>英制-公制單位轉換器</span></div>`).appendTo($tab);
 			const $btnUnitConverter = $(`<button class="btn btn-primary">加入</button>`).appendTo($wrpUnitConverter);
 			$btnUnitConverter.on("click", () => {
 				this.menu.pnl.doPopulate_UnitConverter();
 				this.menu.doClose();
 			});
 
-			const $wrpMoneyConverter = $(`<div class="tab-body-row"><span>貨幣轉換器</span></div>`).appendTo($tab);
+			const $wrpMoneyConverter = $(`<div class="ui-modal__row"><span>貨幣轉換器</span></div>`).appendTo($tab);
 			const $btnMoneyConverter = $(`<button class="btn btn-primary">加入</button>`).appendTo($wrpMoneyConverter);
 			$btnMoneyConverter.on("click", () => {
 				this.menu.pnl.doPopulate_MoneyConverter();
@@ -2414,9 +2584,9 @@ class AddMenuSpecialTab extends AddMenuTab {
 
 			// TODO enable this
 			/*
-			$(`<hr class="tab-body-row-sep"/>`).appendTo($tab);
+			$(`<hr class="ui-modal__row-sep"/>`).appendTo($tab);
 
-			const $wrpSundial = $(`<div class="tab-body-row"><span>In-Game Clock</span></div>`).appendTo($tab);
+			const $wrpSundial = $(`<div class="ui-modal__row"><span>In-Game Clock</span></div>`).appendTo($tab);
 			const $btnSundial = $(`<button class="btn btn-primary">Add</button>`).appendTo($wrpSundial);
 			$btnSundial.on("click", () => {
 				this.menu.pnl.doPopulate_Sundial();
@@ -2440,8 +2610,8 @@ class AddMenuListTab extends AddMenuTab {
 
 	render () {
 		if (!this.$tab) {
-			const $tab = $(`<div class="panel-tab-list-wrapper" id="${this.tabId}"/>`);
-			const $srch = $(`<input class="panel-tab-search search form-control" autocomplete="off" placeholder="Search list...">`).appendTo($tab);
+			const $tab = $(`<div class="ui-search__wrp-output" id="${this.tabId}"/>`);
+			const $srch = $(`<input class="ui-search__ipt-search search form-control" autocomplete="off" placeholder="Search list...">`).appendTo($tab);
 			const $list = $(`<div class="list panel-tab-list"/>`).appendTo($tab);
 			let temp = "";
 			this.content.forEach(d => {
@@ -2468,9 +2638,19 @@ class AddMenuListTab extends AddMenuTab {
 }
 
 class AddMenuSearchTab extends AddMenuTab {
+	static _getTitle (subType) {
+		switch (subType) {
+			case "content": return "內容";
+			case "rules": return "規則";
+			case "adventures": return "冒險模組";
+			case "books": return "書籍";
+			default: throw new Error(`Unhandled search tab subtype: "${subType}"`);
+		}
+	}
+
 	constructor (indexes, subType = "content") {
-		super(subType === "content" ? "內容" : "規則");
-		this.tabId = this.genTabId(subType === "content" ? "content" : "rules");
+		super(AddMenuSearchTab._getTitle(subType));
+		this.tabId = this.genTabId(subType);
 		this.indexes = indexes;
 		this.cat = "ALL";
 		this.subType = subType;
@@ -2482,6 +2662,82 @@ class AddMenuSearchTab extends AddMenuTab {
 		this.doSearch = null;
 	}
 
+	_getSearchOptions () {
+		switch (this.subType) {
+			case "content": return {
+				fields: {
+					n: {boost: 5, expand: true},
+					s: {expand: true}
+				},
+				bool: "AND",
+				expand: true
+			};
+			case "rules": return {
+				fields: {
+					h: {boost: 5, expand: true},
+					s: {expand: true}
+				},
+				bool: "AND",
+				expand: true
+			};
+			case "adventures":
+			case "books": return {
+				fields: {
+					c: {boost: 5, expand: true},
+					n: {expand: true}
+				},
+				bool: "AND",
+				expand: true
+			};
+			default: throw new Error(`Unhandled search tab subtype: "${this.subType}"`);
+		}
+	}
+
+	_get$Row (r) {
+		switch (this.subType) {
+			case "content": return $(`
+				<div class="ui-search__row">
+					<span>${r.doc.cn? (r.doc.cn+"("+r.doc.n+")") : r.doc.n}</span>
+					<span>${r.doc.s ? `<i title="${Parser.sourceJsonToFull(r.doc.s)}">${Parser.sourceJsonToAbv(r.doc.s)}${r.doc.p ? ` p${r.doc.p}` : ""}</i>` : ""}</span>
+				</div>
+			`);
+			case "rules": return $(`
+				<div class="ui-search__row">
+					<span>${r.doc.h}</span>
+					<span><i>${r.doc.n}, ${r.doc.s}</i></span>
+				</div>
+			`);
+			case "adventures":
+			case "books": return $(`
+				<div class="ui-search__row">
+					<span>${r.doc.c}</span>
+					<span><i>${r.doc.n}${r.doc.o ? `, ${r.doc.o}` : ""}</i></span>
+				</div>
+			`);
+			default: throw new Error(`Unhandled search tab subtype: "${this.subType}"`);
+		}
+	}
+
+	_getAllTitle () {
+		switch (this.subType) {
+			case "content": return "所有類別";
+			case "rules": return "所有類別";
+			case "adventures": return "所有冒險模組";
+			case "books": return "所有書籍";
+			default: throw new Error(`Unhandled search tab subtype: "${this.subType}"`);
+		}
+	}
+
+	_getCatOptionText (it) {
+		switch (this.subType) {
+			case "content": return it;
+			case "rules": return it;
+			case "adventures":
+			case "books": return Parser.sourceJsonToFull(it);
+			default: throw new Error(`Unhandled search tab subtype: "${this.subType}"`);
+		}
+	}
+
 	render () {
 		const flags = {
 			doClickFirst: false,
@@ -2490,80 +2746,54 @@ class AddMenuSearchTab extends AddMenuTab {
 
 		this.showMsgIpt = () => {
 			flags.isWait = true;
-			this.$results.empty().append(DmScreenUtil.getSearchEnter());
+			this.$results.empty().append(UiUtil.getSearchEnter());
 		};
 
 		const showMsgDots = () => {
-			this.$results.empty().append(DmScreenUtil.getSearchLoading());
+			this.$results.empty().append(UiUtil.getSearchLoading());
 		};
 
 		const showNoResults = () => {
 			flags.isWait = true;
-			this.$results.empty().append(DmScreenUtil.getSearchEnter());
+			this.$results.empty().append(UiUtil.getSearchEnter());
 		};
 
 		this.doSearch = () => {
 			const srch = this.$srch.val().trim();
-			const MAX_RESULTS = 75; // hard cap results
 
-			const searchOptions = this.subType === "content"
-				? {
-					fields: {
-						n: {boost: 5, expand: true},
-						s: {expand: true}
-					},
-					bool: "AND",
-					expand: true
-				}
-				: {
-					fields: {
-						h: {boost: 5, expand: true},
-						s: {expand: true}
-					},
-					bool: "AND",
-					expand: true
-				};
-
+			const searchOptions = this._getSearchOptions();
 			const index = this.indexes[this.cat];
 			const results = index.search(srch, searchOptions);
 			const resultCount = results.length ? results.length : index.documentStore.length;
-			const toProcess = results.length ? results : Object.values(index.documentStore.docs).slice(0, 75).map(it => ({doc: it}));
+			const toProcess = results.length ? results : Object.values(index.documentStore.docs).slice(0, UiUtil.SEARCH_RESULTS_CAP).map(it => ({doc: it}));
 
 			this.$results.empty();
 			if (toProcess.length) {
 				const handleClick = (r) => {
-					if (this.subType === "content") {
-						const page = UrlUtil.categoryToPage(r.doc.c);
-						const source = r.doc.s;
-						const hash = r.doc.u;//$T.translate_uri(r.doc.c,r.doc.u);
+					switch (this.subType) {
+						case "content": {
+							const page = UrlUtil.categoryToPage(r.doc.c);
+							const source = r.doc.s;
+							const hash = r.doc.u;
 
-						this.menu.pnl.doPopulate_Stats(page, source, hash);
-					} else {
-						this.menu.pnl.doPopulate_Rules(r.doc.b, r.doc.p, (r.doc.ch)? r.doc.ch: r.doc.h);
+							this.menu.pnl.doPopulate_Stats(page, source, hash);
+							break;
+						}
+						case "rules": {
+							this.menu.pnl.doPopulate_Rules(r.doc.b, r.doc.p, r.doc.h);
+							break;
+						}
+						case "adventures": {
+							this.menu.pnl.doPopulate_Adventures(r.doc.a, r.doc.p);
+							break;
+						}
+						case "books": {
+							this.menu.pnl.doPopulate_Books(r.doc.b, r.doc.p);
+							break;
+						}
+						default: throw new Error(`Unhandled search tab subtype: "${this.subType}"`);
 					}
 					this.menu.doClose();
-				};
-
-				const get$Row = (r) => {
-					if (this.subType === "content") {
-						var full_name = r.doc.cn;//$T.translate_name(r.doc.c,r.doc.n);
-						if(full_name==null) 	full_name=r.doc.n;
-						else					full_name+=`(${r.doc.n})`;
-						
-						return $(`
-							<div class="panel-tab-results-row">
-								<span>${full_name}</span>
-								<span>${r.doc.s ? `<i title="${Parser.sourceJsonToFull(r.doc.s)}">${Parser.sourceJsonToAbv(r.doc.s)}${r.doc.p ? ` p${r.doc.p}` : ""}</i>` : ""}</span>
-							</div>
-						`);
-					} else {
-						return $(`
-							<div class="panel-tab-results-row">
-								<span>${r.doc.ch? (r.doc.ch+"("+r.doc.h+")"): r.doc.h}</span>
-								<span><i>${r.doc.n}, ${r.doc.s}</i></span>
-							</div>
-						`);
-					}
 				};
 
 				if (flags.doClickFirst) {
@@ -2572,15 +2802,15 @@ class AddMenuSearchTab extends AddMenuTab {
 					return;
 				}
 
-				const res = toProcess.slice(0, MAX_RESULTS); // hard cap at 75 results
+				const res = toProcess.slice(0, UiUtil.SEARCH_RESULTS_CAP);
 
 				res.forEach(r => {
-					get$Row(r).on("click", () => handleClick(r)).appendTo(this.$results);
+					this._get$Row(r).on("click", () => handleClick(r)).appendTo(this.$results);
 				});
 
-				if (resultCount > MAX_RESULTS) {
-					const diff = resultCount - MAX_RESULTS;
-					this.$results.append(`<div class="panel-tab-results-row panel-tab-results-row-display-only">...${diff} more result${diff === 1 ? " was" : "s were"} hidden. Refine your search!</div>`);
+				if (resultCount > UiUtil.SEARCH_RESULTS_CAP) {
+					const diff = resultCount - UiUtil.SEARCH_RESULTS_CAP;
+					this.$results.append(`<div class="ui-search__row ui-search__row--readonly">...${diff} more result${diff === 1 ? " was" : "s were"} hidden. Refine your search!</div>`);
 				}
 			} else {
 				if (!srch.trim()) this.showMsgIpt();
@@ -2589,24 +2819,26 @@ class AddMenuSearchTab extends AddMenuTab {
 		};
 
 		if (!this.$tab) {
-			const $tab = $(`<div class="panel-tab-list-wrapper" id="${this.tabId}"/>`);
-			const $wrpCtrls = $(`<div class="panel-tab-controls"/>`).appendTo($tab);
+			const $tab = $(`<div class="ui-search__wrp-output" id="${this.tabId}"/>`);
+			const $wrpCtrls = $(`<div class="ui-search__wrp-controls ui-search__wrp-controls--in-tabs"/>`).appendTo($tab);
 
 			const $selCat = $(`
-				<select class="form-control panel-tab-cat">
-					<option value="ALL">所有類別</option>
+				<select class="form-control ui-search__sel-category">
+					<option value="ALL">${this._getAllTitle()}</option>
 				</select>
-			`).appendTo($wrpCtrls);
-			Object.keys(this.indexes).sort().filter(it => it !== "ALL").forEach(it => $selCat.append(`<option value="${it}">${it}</option>`));
+			`).appendTo($wrpCtrls).toggle(Object.keys(this.indexes).length !== 1);
+			Object.keys(this.indexes).sort().filter(it => it !== "ALL").forEach(it => {
+				$selCat.append(`<option value="${it}">${this._getCatOptionText(it)}</option>`)
+			});
 			$selCat.on("change", () => {
 				this.cat = $selCat.val();
 				this.doSearch();
 			});
 
-			const $srch = $(`<input class="panel-tab-search search form-control" autocomplete="off" placeholder="搜尋...(只能搜尋英文)">`).appendTo($wrpCtrls);
-			const $results = $(`<div class="panel-tab-results"/>`).appendTo($tab);
+			const $srch = $(`<input class="ui-search__ipt-search search form-control" autocomplete="off" placeholder="搜尋...(只能搜尋英文)">`).appendTo($wrpCtrls);
+			const $results = $(`<div class="ui-search__wrp-results"/>`).appendTo($tab);
 
-			DmScreenUtil.bindAutoSearch($srch, {
+			UiUtil.bindAutoSearch($srch, {
 				flags: flags,
 				search: this.doSearch,
 				showWait: showMsgDots
@@ -2628,23 +2860,21 @@ class AddMenuSearchTab extends AddMenuTab {
 }
 
 class RuleLoader {
-	static pFill (book) {
-		return DataUtil.loadJSON(`data/generated/${book}.json`).then(data => new Promise((resolve) => {
-			const $$$ = RuleLoader.cache;
+	static async pFill (book) {
+		const $$$ = RuleLoader.cache;
+		if ($$$[book]) return $$$[book];
 
-			Object.keys(data.data).forEach(b => {
-				const ref = data.data[b];
-				if (!$$$[b]) $$$[b] = {};
-				ref.forEach((c, i) => {
-					if (!$$$[b][i]) $$$[b][i] = {};
-					c.entries.forEach(s => {
-						$$$[b][i][s.name] = s;
-					});
-				})
+		const data = await DataUtil.loadJSON(`data/generated/${book}.json`);
+		Object.keys(data.data).forEach(b => {
+			const ref = data.data[b];
+			if (!$$$[b]) $$$[b] = {};
+			ref.forEach((c, i) => {
+				if (!$$$[b][i]) $$$[b][i] = {};
+				c.entries.forEach(s => {
+					$$$[b][i][s.name] = s;
+				});
 			});
-
-			resolve();
-		}));
+		});
 	}
 
 	static getFromCache (book, chapter, header) {
@@ -2652,6 +2882,39 @@ class RuleLoader {
 	}
 }
 RuleLoader.cache = {};
+
+class AdventureOrBookLoader {
+	constructor (type) {
+		this._type = type;
+		this._cache = {};
+	}
+
+	_getJsonPath (bookOrAdventure) {
+		switch (this._type) {
+			case "adventure": return `data/adventure/adventure-${bookOrAdventure.toLowerCase()}.json`
+			case "book": return `data/book/book-${bookOrAdventure.toLowerCase()}.json`
+			default: throw new Error(`Unknown loader type "${this._type}"`)
+		}
+	}
+
+	async pFill (bookOrAdventure) {
+		if (this._cache[bookOrAdventure]) return this._cache[bookOrAdventure];
+
+		const data = await DataUtil.loadJSON(this._getJsonPath(bookOrAdventure));
+		this._cache[bookOrAdventure] = {};
+		data.data.forEach((chap, i) => this._cache[bookOrAdventure][i] = chap);
+	}
+
+	getFromCache (adventure, chapter) {
+		return this._cache[adventure][chapter];
+	}
+}
+
+class AdventureLoader extends AdventureOrBookLoader { constructor () { super("adventure"); } }
+class BookLoader extends AdventureOrBookLoader { constructor () { super("book"); } }
+
+const adventureLoader = new AdventureLoader();
+const bookLoader = new BookLoader();
 
 class NoteBox {
 	static make$Notebox (board, content) {
@@ -2720,7 +2983,7 @@ class NoteBox {
 							if (beltsAtPos === 2 && belts === 0) {
 								const str = beltStack.join("");
 								if (/^([1-9]\d*)?d([1-9]\d*)(\s?[+-]\s?\d+)?$/i.exec(str)) {
-									EntryRenderer.dice.roll2(str.replace(`[[`, "").replace(`]]`, ""), {
+									Renderer.dice.roll2(str.replace(`[[`, "").replace(`]]`, ""), {
 										user: false,
 										name: "DM Screen"
 									});
@@ -2729,8 +2992,8 @@ class NoteBox {
 							} else if (bracesAtPos === 1 && braces === 0) {
 								const str = braceStack.join("");
 								const tag = str.split(" ")[0].replace(/^@/, "");
-								if (EntryRenderer.HOVER_TAG_TO_PAGE[tag]) {
-									const r = EntryRenderer.getDefaultRenderer().renderEntry(`{${str}`);
+								if (Renderer.HOVER_TAG_TO_PAGE[tag]) {
+									const r = Renderer.get().render(`{${str}`);
 									evt.type = "mouseover";
 									evt.shiftKey = true;
 									$(r).trigger(evt);
@@ -2835,7 +3098,7 @@ class UnitConverter {
 			board.doSaveStateDebounced();
 		};
 
-		DmScreenUtil.bindTypingEnd($iptLeft, handleInput);
+		UiUtil.bindTypingEnd($iptLeft, handleInput);
 
 		updateDisplay();
 
@@ -2874,109 +3137,64 @@ class Sundial {
 	}
 }
 
-class DmScreenUtil {
-	static getSearchNoResults () {
-		return `<div class="panel-tab-message"><i>No results.</i></div>`;
+class AdventureOrBookView {
+	constructor (type, panel, loader, tabIx, state) {
+		this._type = type;
+		this._panel = panel;
+		this._loader = loader;
+		this._tabIx = tabIx;
+		this._state = state;
+
+		this._$wrpContent = null;
+		this._$wrpContentOuter = null;
 	}
 
-	static getSearchLoading () {
-		return `<div class="panel-tab-message"><i>\u2022\u2022\u2022</i></div>`;
+	$getEle () {
+		const $btnPrev = $(`<button class="btn btn-xs btn-default mr-2" title="Previous Chapter"><span class="glyphicon glyphicon-chevron-left"/></button>`)
+			.click(() => this._handleButtonClick(-1));
+		const $btnNext = $(`<button class="btn btn-xs btn-default" title="Next Chapter"><span class="glyphicon glyphicon-chevron-right"/></button>`)
+			.click(() => this._handleButtonClick(1));
+
+		this._$wrpContent = $(`<div class="full-height"/>`);
+		this._$wrpContentOuter = $$`<div class="full-height dm-book__wrp-content">
+			<table class="stats stats-book--hover"><tr class="text"><td colspan="6">${this._$wrpContent}</td></tr></table>
+		</div>`;
+
+		const $wrp = $$`<div class="flex-col full-height">
+		${this._$wrpContentOuter}
+		<div class="flex no-shrink dm-book__wrp-controls">${$btnPrev}${$btnNext}</div>
+		</div>`;
+
+		// assumes the data has already been loaded/cached
+		this._render();
+
+		$wrp.data("getState", () => this._state);
+
+		return $wrp;
 	}
 
-	static getSearchEnter () {
-		return `<div class="panel-tab-message"><i>Enter a search.</i></div>`;
+	_handleButtonClick (direction) {
+		this._state.chapter += direction;
+		const renderedData = this._render();
+		if (!renderedData) this._state.chapter -= direction;
+		else {
+			this._$wrpContentOuter.scrollTop(0);
+			this._panel.setTabTitle(this._tabIx, renderedData.name);
+		}
 	}
 
-	/**
-	 * @param $srch input element
-	 * @param opt should contain:
-	 *  `search` -- function which runs search
-	 *  `flags` -- object which contains:
-	 *    `isWait` -- flag tracking "waiting for user to stop typing"
-	 *    `doClickFirst` -- flag tracking "should first result get clicked"
-	 *  `showWait` -- function which displays loading dots
-	 */
-	static bindAutoSearch ($srch, opt) {
-		DmScreenUtil.bindTypingEnd(
-			$srch,
-			() => {
-				opt.search();
-			},
-			(e) => {
-				if (e.which === 13) {
-					opt.flags.doClickFirst = true;
-					opt.search();
-				}
-			},
-			() => {
-				if (opt.flags.isWait) {
-					opt.flags.isWait = false;
-					opt.showWait();
-				}
-			},
-			() => {
-				if ($srch.val() && $srch.val().trim().length) opt.search();
-			}
-		);
-	}
-
-	static bindTypingEnd ($ipt, fnKeyup, fnKeypress, fnKeydown, fnClick) {
-		let typeTimer;
-		$ipt.on("keyup", (e) => {
-			clearTimeout(typeTimer);
-			typeTimer = setTimeout(() => {
-				fnKeyup(e);
-			}, DmScreenUtil.TYPE_TIMEOUT_MS);
-		});
-		$ipt.on("keypress", (e) => {
-			if (fnKeypress) fnKeypress(e);
-		});
-		$ipt.on("keydown", (e) => {
-			if (fnKeydown) fnKeydown(e);
-			clearTimeout(typeTimer);
-		});
-		$ipt.on("click", () => {
-			if (fnClick) fnClick();
-		});
-	}
-
-	static getShow$Modal (title, cbClose) {
-		const $modal = $(`<div class="panel-addmenu">`);
-		const $scroller = $(`<div class="panel-addmenu-inner--modal-scroller"/>`);
-		const $modalInner = $(`<div class="panel-addmenu-inner panel-addmenu-inner--modal dropdown-menu"><h4>${title}</h4><div data-r/></div>`).swap($scroller)
-			.appendTo($modal).click(e => e.stopPropagation());
-		const doClose = () => $modal.remove();
-		$modal.click(() => {
-			cbClose();
-			doClose();
-		});
-		$(`body`).append($modal);
-		return $scroller;
-	}
-
-	static addModal$Sep ($modalInner) {
-		$modalInner.append(`<hr class="tab-body-row-sep">`);
-	}
-
-	static _getAdd$Row ($modalInner, tag = "div") {
-		return $(`<${tag} class="tab-body-row"/>`).appendTo($modalInner);
-	}
-
-	static getAddModal$RowCb ($modalInner, labelText, objectWithProp, propName) {
-		const $row = DmScreenUtil._getAdd$Row($modalInner, "label").addClass(`tab-body-row--cb`);
-		$row.append(`<span>${labelText}</span>`);
-		const $cb = $(`<input type="checkbox">`).appendTo($row)
-			.prop("checked", objectWithProp[propName])
-			.on("change", () => objectWithProp[propName] = $cb.prop("checked"));
-		return $cb;
+	_render () {
+		const data = this._loader.getFromCache(this._state[this._type], this._state.chapter);
+		if (!data) return null;
+		this._$wrpContent.empty().append(Renderer.get().setFirstSection(true).render(data));
+		return data;
 	}
 }
-DmScreenUtil.TYPE_TIMEOUT_MS = 100; // auto-search after 100ms
 
 window.addEventListener("load", () => {
 	ExcludeUtil.pInitialise(); // don't await, as this is only used for search
 	// expose it for dbg purposes
 	window.DM_SCREEN = new Board();
-	EntryRenderer.hover.bindDmScreen(window.DM_SCREEN);
+	Renderer.hover.bindDmScreen(window.DM_SCREEN);
 	window.DM_SCREEN.pInitialise();
 });

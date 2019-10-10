@@ -26,8 +26,8 @@ STR_VOID_LINK = "javascript:void(0)";
 STR_SLUG_DASH = "-";
 STR_APOSTROPHE = "\u2019";
 
-HTML_NO_INFO = "<i>No information available.</i>";
-HTML_NO_IMAGES = "<i>No images available.</i>";
+HTML_NO_INFO = "<i>沒有可用的資訊。</i>";
+HTML_NO_IMAGES = "<i>沒有可用的圖片。</i>";
 
 ID_SEARCH_BAR = "filter-search-input-group";
 ID_RESET_BUTTON = "reset";
@@ -45,7 +45,6 @@ EVNT_MOUSEOVER = "mouseover";
 EVNT_MOUSEOUT = "mouseout";
 EVNT_MOUSELEAVE = "mouseleave";
 EVNT_MOUSEENTER = "mouseenter";
-EVNT_CLICK = "click";
 
 ATB_ID = "id";
 ATB_CLASS = "class";
@@ -88,6 +87,7 @@ RNG_CONE = "cone";
 RNG_RADIUS = "radius";
 RNG_SPHERE = "sphere";
 RNG_HEMISPHERE = "hemisphere";
+RNG_CYLINDER = "cylinder"; // homebrew only
 RNG_SELF = "self";
 RNG_SIGHT = "sight";
 RNG_UNLIMITED = "unlimited";
@@ -165,6 +165,20 @@ String.prototype.toTitleCase = String.prototype.toTitleCase ||
 		return str;
 	};
 
+String.prototype.toSentenceCase = String.prototype.toSentenceCase ||
+	function () {
+		const out = [];
+		const re = /([^.!?]+)([.!?]\s*|$)/gi;
+		let m;
+		do {
+			m = re.exec(this);
+			if (m) {
+				out.push(m[0].toLowerCase().uppercaseFirst());
+			}
+		} while (m);
+		return out.join("");
+	};
+
 String.prototype.toSpellCase = String.prototype.toSpellCase ||
 	function () {
 		return this.toLowerCase().replace(/(^|of )(bigby|otiluke|mordenkainen|evard|hadar|agatys|abi-dalzim|aganazzar|drawmij|leomund|maximilian|melf|nystul|otto|rary|snilloc|tasha|tenser)('s|$| )/g, (...m) => `${m[1]}${m[2].toTitleCase()}${m[3]}`);
@@ -176,18 +190,6 @@ String.prototype.toCamelCase = String.prototype.toCamelCase ||
 			if (index === 0) return word.toLowerCase();
 			return `${word.charAt(0).toUpperCase()}${word.slice(1).toLowerCase()}`;
 		}).join("");
-	};
-
-// FIXME remove polyfill at ~the end of October 2018
-String.prototype.trimStart = String.prototype.trimStart ||
-	function () {
-		return this.replace(/^\s+/, "");
-	};
-
-// FIXME remove polyfill at ~the end of October 2018
-String.prototype.trimEnd = String.prototype.trimEnd ||
-	function () {
-		return this.replace(/\s+$/, "");
 	};
 
 String.prototype.escapeQuotes = String.prototype.escapeQuotes ||
@@ -273,7 +275,7 @@ Array.prototype.peek = Array.prototype.peek ||
 	};
 
 StrUtil = {
-	NAME_REGEX: /^(([A-Z0-9ota][a-z0-9'’`]+|[aI])( \(.*\)| |-)?)+([.!])+/g,
+	COMMAS_NOT_IN_PARENTHESES_REGEX: /,\s?(?![^(]*\))/g,
 
 	uppercaseFirst: function (string) {
 		return string.uppercaseFirst();
@@ -552,7 +554,7 @@ Parser.getSpeedString = (it) => {
 	}
 
 	function getCond (speedProp) {
-		return speedProp.condition ? ` ${speedProp.condition}` : "";
+		return speedProp.condition ? ` ${Renderer.get().render(speedProp.condition)}` : "";
 	}
 
 	const stack = [];
@@ -578,7 +580,7 @@ Parser._addCommas = function (intNum) {
 };
 
 Parser.crToXp = function (cr) {
-	if (cr === "Unknown" || cr === undefined) return "Unknown";
+	if (cr === "Unknown" || cr === undefined) return "不明";
 	if (cr === "0") return "0 或 10";
 	if (cr === "1/8") return "25";
 	if (cr === "1/4") return "50";
@@ -620,7 +622,11 @@ Parser._greatestCommonDivisor = function (a, b) {
 	if (b < Number.EPSILON) return a;
 	return Parser._greatestCommonDivisor(b, Math.floor(a % b));
 };
-Parser.numberToCr = function (number) {
+Parser.numberToCr = function (number, safe) {
+	// avoid dying if already-converted number is passed in
+	if (safe && typeof number === "string" && Parser.CRS.includes(number)) return number;
+	if (isNaN(number)) return 0;
+
 	const len = number.toString().length - 2;
 	let denominator = Math.pow(10, len);
 	let numerator = number * denominator;
@@ -689,10 +695,10 @@ Parser.skillToShort = function (skill) {
 };
 
 Parser.dragonColorToFull = function (c) {
-	return Parser._parse_aToB(DRAGON_COLOR_TO_FULL, c);
+	return Parser._parse_aToB(Parser.DRAGON_COLOR_TO_FULL, c);
 };
 
-DRAGON_COLOR_TO_FULL = {
+Parser.DRAGON_COLOR_TO_FULL = {
 	B: "black",
 	U: "blue",
 	G: "green",
@@ -708,16 +714,17 @@ DRAGON_COLOR_TO_FULL = {
 Parser.acToFull = function (ac) {
 	if (typeof ac === "string") return ac; // handle classic format
 
-	const renderer = EntryRenderer.getDefaultRenderer();
+	const renderer = Renderer.get();
 	let stack = "";
 	for (let i = 0; i < ac.length; ++i) {
 		const cur = ac[i];
 		const nxt = ac[i + 1];
 
 		if (cur.ac) {
+			if (i === 0 && cur.braces) stack += "(";
 			stack += cur.ac;
-			if (cur.from) stack += ` (${cur.from.map(it => renderer.renderEntry(it)).join(", ")})`;
-			if (cur.condition) stack += ` ${renderer.renderEntry(cur.condition)}`;
+			if (cur.from) stack += ` (${cur.from.map(it => renderer.render(it)).join(", ")})`;
+			if (cur.condition) stack += ` ${renderer.render(cur.condition)}`;
 			if (cur.braces) stack += ")";
 		} else {
 			stack += cur;
@@ -783,7 +790,7 @@ Parser.sourceJsonToColor = function (source) {
 };
 
 Parser.stringToSlug = function (str) {
-	return str.toLowerCase().replace(/[^\w ]+/g, STR_EMPTY).replace(/ +/g, STR_SLUG_DASH);
+	return str.trim().toLowerCase().replace(/[^\w ]+/g, STR_EMPTY).replace(/ +/g, STR_SLUG_DASH);
 };
 
 Parser.stringToCasedSlug = function (str) {
@@ -875,11 +882,21 @@ Parser.numberToString = function (num) {
 };
 
 // sp-prefix functions are for parsing spell data, and shared with the roll20 script
-Parser.spSchoolAbvToFull = function (school) {
-	const out = Parser._parse_aToB(Parser.SP_SCHOOL_ABV_TO_FULL, school);
-	if (Parser.SP_SCHOOL_ABV_TO_FULL[school]) return out;
-	if (BrewUtil.homebrewMeta && BrewUtil.homebrewMeta.spellSchools && BrewUtil.homebrewMeta.spellSchools[school]) return BrewUtil.homebrewMeta.spellSchools[school].full;
+Parser.spSchoolAndSubschoolsAbvsToFull = function (school, subschools) {
+	if (!subschools || !subschools.length) return Parser.spSchoolAbvToFull(school);
+	else return `${Parser.spSchoolAbvToFull(school)} (${subschools.map(sub => Parser.spSchoolAbvToFull(sub)).join(", ")})`;
+};
+
+Parser.spSchoolAbvToFull = function (schoolOrSubschool) {
+	const out = Parser._parse_aToB(Parser.SP_SCHOOL_ABV_TO_FULL, schoolOrSubschool);
+	if (Parser.SP_SCHOOL_ABV_TO_FULL[schoolOrSubschool]) return out;
+	if (BrewUtil.homebrewMeta && BrewUtil.homebrewMeta.spellSchools && BrewUtil.homebrewMeta.spellSchools[schoolOrSubschool]) return BrewUtil.homebrewMeta.spellSchools[schoolOrSubschool].full;
 	return out;
+};
+
+Parser.spSchoolAndSubschoolsAbvsShort = function (school, subschools) {
+	if (!subschools || !subschools.length) return Parser.spSchoolAbvToShort(school);
+	else return `${Parser.spSchoolAbvToShort(school)} (${subschools.map(sub => Parser.spSchoolAbvToShort(sub)).join(", ")})`;
 };
 
 Parser.spSchoolAbvToShort = function (school) {
@@ -889,12 +906,17 @@ Parser.spSchoolAbvToShort = function (school) {
 	return out;
 };
 
+Parser.getOrdinalForm = function (i) {
+	const j = i % 10; const k = i % 100;
+	if (j === 1 && k !== 11) return `${i}st`;
+	if (j === 2 && k !== 12) return `${i}nd`;
+	if (j === 3 && k !== 13) return `${i}rd`;
+	return `${i}th`;
+};
+
 Parser.spLevelToFull = function (level) {
 	switch (level) {
 		case 0: return STR_CANTRIP;
-		case 1: return `${level}環`;
-		case 2: return `${level}環`;
-		case 3: return `${level}環`;
 		default: return `${level}環`;
 	}
 };
@@ -904,7 +926,7 @@ Parser.spellLevelToArticle = function (level) {
 };
 
 Parser.spLevelToFullLevelText = function (level, dash) {
-	return `${Parser.spLevelToFull(level)}${(level === 0 ? "s" : `${dash ? "-" : " "}level`)}`;
+	return `${Parser.spLevelToFull(level)}`;
 };
 
 Parser.spMetaToFull = function (meta) {
@@ -914,14 +936,14 @@ Parser.spMetaToFull = function (meta) {
 	return "";
 };
 
-Parser.spLevelSchoolMetaToFull = function (level, school, meta) {
-	const levelPart = level === 0 ? Parser.spLevelToFull(level).toLowerCase() : level + "環";
-	let levelSchoolStr = level === 0 ? `${Parser.spSchoolAbvToFull(school)}系 ${levelPart}` : `${levelPart} ${Parser.spSchoolAbvToFull(school).toLowerCase()}系`;
+Parser.spLevelSchoolMetaToFull = function (level, school, meta, subschools) {
+	const levelPart = level === 0 ? Parser.spLevelToFull(level).toLowerCase() : Parser.spLevelToFull(level);
+	let levelSchoolStr = level === 0 ? `${Parser.spSchoolAndSubschoolsAbvsToFull(school, subschools)}系 ${levelPart}` : `${levelPart} ${Parser.spSchoolAndSubschoolsAbvsToFull(school, subschools).toLowerCase()}系`;
 	return levelSchoolStr + Parser.spMetaToFull(meta);
 };
 
 Parser.spTimeListToFull = function (times) {
-	return times.map(t => `${Parser.getTimeToFull(t)}${t.condition ? `，${EntryRenderer.getDefaultRenderer().renderEntry(t.condition)}` : ""}`).join(" 或 ");
+	return times.map(t => `${Parser.getTimeToFull(t)}${t.condition ? `, ${Renderer.get().render(t.condition)}` : ""}`).join(" 或 ");
 };
 
 Parser.getTimeToFull = function (time) {
@@ -941,6 +963,7 @@ Parser.spRangeToFull = function (range) {
 		case RNG_RADIUS:
 		case RNG_SPHERE:
 		case RNG_HEMISPHERE:
+		case RNG_CYLINDER:
 			return renderArea();
 	}
 
@@ -966,7 +989,7 @@ Parser.spRangeToFull = function (range) {
 
 	function renderArea () {
 		const size = range.distance;
-		return `自身(${size.amount}${Parser.getSingletonUnit(size.type)}${getAreaStyleStr()})`;
+		return `自身(${size.amount}${Parser.getSingletonUnit(size.type)}${getAreaStyleStr()}${range.type === RNG_CYLINDER ? `, ${size.amountSecondary}-${Parser.getSingletonUnit(size.typeSecondary)}-high cylinder` : ""})`;
 
 		function getAreaStyleStr () {
 			switch (range.type) {
@@ -974,6 +997,8 @@ Parser.spRangeToFull = function (range) {
 					return "半徑";
 				case RNG_HEMISPHERE:
 					return "半徑半球";
+				case RNG_CYLINDER:
+					return "半徑";
 				default:
 					return `${Parser.translateKeyToDisplay(range.type)}`;
 			}
@@ -986,7 +1011,7 @@ Parser.getSingletonUnit = function (unit) {
 		case UNT_FEET:
 			return "呎";
 		case UNT_MILES:
-			return "里";
+			return "哩";
 		default: {
 			const fromBrew = MiscUtil.getProperty(BrewUtil.homebrewMeta, "spellDistanceUnits", unit, "singular");
 			if (fromBrew) return fromBrew;
@@ -1062,6 +1087,23 @@ Parser.spAttackTypeToFull = function (type) {
 	return Parser._parse_aToB(Parser.SPELL_ATTACK_TYPE_TO_FULL, type);
 };
 
+Parser.SPELL_AREA_TYPE_TO_FULL = {
+	ST: "Single Target",
+	MT: "Multiple Targets",
+	C: "Cube",
+	N: "Cone",
+	Y: "Cylinder",
+	S: "Sphere",
+	R: "Circle",
+	Q: "Square",
+	L: "Line",
+	H: "Hemisphere",
+	W: "Wall"
+};
+Parser.spAreaTypeToFull = function (type) {
+	return Parser._parse_aToB(Parser.SPELL_AREA_TYPE_TO_FULL, type);
+};
+
 // mon-prefix functions are for parsing monster data, and shared with the roll20 script
 Parser.monTypeToFullObj = function (type) {
 	const out = {type: "", tags: [], asText: ""};
@@ -1103,11 +1145,14 @@ Parser.monTypeToPlural = function (type) {
 };
 
 Parser.monCrToFull = function (cr) {
-	if (typeof cr === "string" || !cr) return `${cr || "Unknown"} (${Parser.crToXp(cr)} XP)`;
+	if (typeof cr === "string" || !cr){
+		if(cr === "Unknown") return `不明`;
+		else 			     return `${cr || "不明"} (${Parser.crToXp(cr)} XP)`;
+	}
 	else {
 		const stack = [Parser.monCrToFull(cr.cr)];
-		if (cr.lair) stack.push(`${Parser.monCrToFull(cr.lair)} when encountered in lair`);
-		if (cr.coven) stack.push(`${Parser.monCrToFull(cr.coven)} when part of a coven`);
+		if (cr.lair) stack.push(`當遭遇於巢穴時 ${Parser.monCrToFull(cr.lair)}`);
+		if (cr.coven) stack.push(`當做為鬼婆集會一員時 ${Parser.monCrToFull(cr.coven)}`);
 		return stack.join(" 或 ");
 	}
 };
@@ -1156,7 +1201,7 @@ Parser.monImmResToFull = function (toParse) {
 
 Parser.monCondImmToFull = function (condImm) {
 	function render (condition) {
-		return EntryRenderer.getDefaultRenderer().renderEntry(`{@condition ${Parser.ConditionToDisplay(condition)}}`);
+		return Renderer.get().render(`{@condition ${Parser.ConditionToDisplay(condition)}}`);
 	}
 	return condImm.map(it => {
 		if (it.special) return it.special;
@@ -1175,6 +1220,26 @@ Parser.MON_SENSE_TAG_TO_FULL = {
 Parser.monSenseTagToFull = function (tag) {
 	return Parser._parse_aToB(Parser.MON_SENSE_TAG_TO_FULL, tag);
 };
+
+Parser.MON_SPELLCASTING_TAG_TO_FULL = {
+	"P": "靈能",
+	"I": "天生",
+	"F": "限定型態",
+	"S": "共享",
+	"CB": "職業, 吟遊詩人",
+	"CC": "職業, 牧師",
+	"CD": "職業, 德魯伊",
+	"CP": "職業, 聖騎士",
+	"CR": "職業, 遊俠",
+	"CS": "職業, 術士",
+	"CL": "職業, 契術師",
+	"CW": "職業, 法師"
+};
+Parser.monSpellcastingTagToFull = function (tag) {
+	return Parser._parse_aToB(Parser.MON_SPELLCASTING_TAG_TO_FULL, tag);
+};
+
+Parser.ENVIRONMENTS = ["arctic", "coastal", "desert", "forest", "grassland", "hill", "mountain", "swamp", "underdark", "underwater", "urban"];
 
 // psi-prefix functions are for parsing psionic data, and shared with the roll20 script
 Parser.PSI_ABV_TYPE_TALENT = "T";
@@ -1199,9 +1264,9 @@ Parser.levelToFull = function (level) {
 };
 
 Parser.prereqSpellToFull = function (spell) {
-	if (spell === "eldritch blast") return EntryRenderer.getDefaultRenderer().renderEntry(`{@spell 魔能爆}戲法`);
-	else if (spell === "hex/curse") return EntryRenderer.getDefaultRenderer().renderEntry("{@spell 脆弱詛咒}法術 或 能施加詛咒的契術師能力");
-	else if (spell) return EntryRenderer.getDefaultRenderer().renderEntry(`{@spell ${spell}}`);
+	if (spell === "eldritch blast") return Renderer.get().render("{@spell 魔能爆}戲法");
+	else if (spell === "hex/curse") return Renderer.get().render("{@spell 脆弱詛咒}法術 或 能施加詛咒的契術師能力");
+	else if (spell) return Renderer.get().render(`{@spell ${spell}}`);
 	return STR_NONE;
 };
 
@@ -1215,12 +1280,14 @@ Parser.prereqPactToFull = function (pact) {
 Parser.prereqPatronToShort = function (patron) {
 	if (patron === STR_ANY) return STR_ANY;
 	const mThe = /^The (.*?)$/.exec(patron);
-	if (mThe) return mThe[1];
+	if (mThe) return Parser.SubclassToDisplay(mThe[1]);
 	return patron;
 };
 
 // NOTE: These need to be reflected in omnidexer.js to be indexed
 Parser.OPT_FEATURE_TYPE_TO_FULL = {
+	AI: "奇械師注法",
+	ED: "四象法門",
 	EI: "魔能祈喚",
 	MM: "超魔法",
 	"MV:B": "戰技, 戰鬥大師",
@@ -1232,7 +1299,8 @@ Parser.OPT_FEATURE_TYPE_TO_FULL = {
 	"FS:F": "戰鬥風格; 戰士",
 	"FS:B": "戰鬥風格; 吟遊詩人",
 	"FS:P": "戰鬥風格; 聖騎士",
-	"FS:R": "戰鬥風格; 遊俠"
+	"FS:R": "戰鬥風格; 遊俠",
+	"PB": "契約恩賜"
 };
 
 Parser.optFeatureTypeToFull = function (type) {
@@ -1243,7 +1311,7 @@ Parser.optFeatureTypeToFull = function (type) {
 
 Parser.alignmentAbvToFull = function (alignment) {
 	if (typeof alignment === "object") {
-		if (alignment.special) {
+		if (alignment.special != null) {
 			// use in MTF Sacred Statue
 			return alignment.special;
 		} else {
@@ -1278,31 +1346,34 @@ Parser.alignmentAbvToFull = function (alignment) {
 };
 
 Parser.alignmentListToFull = function (alignList) {
-	// assume all single-length arrays can be simply parsed
-	if (alignList.length === 1) return Parser.alignmentAbvToFull(alignList[0]);
-	// two-length arrays can be:
-	// 1. "[object] or [object]"
-	// 2. a pair of abv's, e.g. "L" "G"
-	if (alignList.length === 2) {
-		if (typeof alignList[0] === "object" && typeof alignList[1] === "object") return `${Parser.alignmentAbvToFull(alignList[0])} 或 ${Parser.alignmentAbvToFull(alignList[1]).toLowerCase()}`;
-		else if (typeof alignList[0] === "string" && typeof alignList[1] === "string") return alignList.map(a => Parser.alignmentAbvToFull(a)).join("");
-		else throw new Error(`Malformed alignment pair: ${JSON.stringify(alignList)}`);
+	if (alignList.some(it => typeof it !== "string")) {
+		if (alignList.some(it => typeof it === "string")) throw new Error(`Mixed alignment types: ${JSON.stringify(alignList)}`);
+		return alignList.map(it => it.special != null || it.chance != null ? Parser.alignmentAbvToFull(it) : Parser.alignmentListToFull(it.alignment)).join(" 或 ");
+	} else {
+		// assume all single-length arrays can be simply parsed
+		if (alignList.length === 1) return Parser.alignmentAbvToFull(alignList[0]);
+		// a pair of abv's, e.g. "L" "G"
+		if (alignList.length === 2) {
+			return alignList.map(a => Parser.alignmentAbvToFull(a)).join("");
+		}
+		if (alignList.length === 3) {
+			if (alignList.includes("NX") && alignList.includes("NY") && alignList.includes("N")) return "任意中立陣營";
+		}
+		// longer arrays should have a custom mapping
+		if (alignList.length === 5) {
+			if (!alignList.includes("G")) return "任意非善良陣營";
+			if (!alignList.includes("E")) return "任意非邪惡陣營";
+			if (!alignList.includes("L")) return "任意非守序陣營";
+			if (!alignList.includes("C")) return "任意非混亂陣營";
+		}
+		if (alignList.length === 4) {
+			if (!alignList.includes("L") && !alignList.includes("NX")) return "任意混亂陣營";
+			if (!alignList.includes("G") && !alignList.includes("NY")) return "任意邪惡陣營";
+			if (!alignList.includes("C") && !alignList.includes("NX")) return "任意守序陣營";
+			if (!alignList.includes("E") && !alignList.includes("NY")) return "任意善良陣營";
+		}
+		throw new Error(`Unmapped alignment: ${JSON.stringify(alignList)}`);
 	}
-	// longer arrays should have a custom mapping
-	// available options are:
-	// "L", "NX", "C" ("NX" = "neutral X" = neutral law/chaos axis)
-	// "G", "NY", "E" ("NY" = "neutral Y" = neutral good/evil axis)
-	if (alignList.length === 5) {
-		if (!alignList.includes("G")) return "任意非善良陣營";
-		if (!alignList.includes("L")) return "任意非守序陣營";
-	}
-	if (alignList.length === 4) {
-		if (!alignList.includes("L") && !alignList.includes("NX")) return "任意混亂陣營";
-		if (!alignList.includes("G") && !alignList.includes("NY")) return "任意邪惡陣營";
-		if (!alignList.includes("C") && !alignList.includes("NX")) return "任意守序陣營";
-		if (!alignList.includes("E") && !alignList.includes("NY")) return "任意善良陣營";
-	}
-	throw new Error(`Unmapped alignment: ${JSON.stringify(alignList)}`);
 };
 
 
@@ -1340,18 +1411,19 @@ Parser.CAT_ID_CLASS_FEATURE = 30;
 Parser.CAT_ID_SHIP = 31;
 Parser.CAT_ID_PACT_BOON = 32;
 Parser.CAT_ID_ELEMENTAL_DISCIPLINE = 33;
+Parser.CAT_ID_ARTIFICER_INFUSION = 34;
 
 Parser.CAT_ID_TO_FULL = {};
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_CREATURE] = "Bestiary";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_SPELL] = "法術(Spell)";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_BACKGROUND] = "Background";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_BACKGROUND] = "背景(Background)";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ITEM] = "物品(Item)";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_CLASS] = "Class";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_CONDITION] = "狀態(Condition)";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_FEAT] = "Feat";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ELDRITCH_INVOCATION] = "Eldritch Invocation";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_FEAT] = "專長(Feat)";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ELDRITCH_INVOCATION] = "魔能祈喚(Eldritch Invocation)";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_PSIONIC] = "Psionic";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_RACE] = "Race";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_RACE] = "種族(Race)";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_OTHER_REWARD] = "其他獎勵(Other Reward)";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_VARIANT_OPTIONAL_RULE] = "Variant/Optional Rule";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ADVENTURE] = "Adventure";
@@ -1363,18 +1435,19 @@ Parser.CAT_ID_TO_FULL[Parser.CAT_ID_QUICKREF] = "Quick Reference";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_CULT] = "Cult";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_BOON] = "Boon";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_DISEASE] = "疾病(Disease)";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_METAMAGIC] = "Metamagic";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_METAMAGIC] = "超魔法(Metamagic)";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_MANEUVER_BATTLEMASTER] = "Maneuver; Battlemaster";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_TABLE] = "Table";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_TABLE_GROUP] = "Table";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_MANEUVER_CAVALIER] = "Maneuver; Cavalier";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ARCANE_SHOT] = "Arcane Shot";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ARCANE_SHOT] = "祕法射擊(Arcane Shot)";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_OPTIONAL_FEATURE_OTHER] = "Optional Feature";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_FIGHTING_STYLE] = "Fighting Style";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_FIGHTING_STYLE] = "戰鬥風格(Fighting Style)";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_CLASS_FEATURE] = "Class Feature";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_SHIP] = "Ship";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_PACT_BOON] = "Pact Boon(?)";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ELEMENTAL_DISCIPLINE] = "Elemental Discipline(?)";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_PACT_BOON] = "契約恩賜(Pact Boon)";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ELEMENTAL_DISCIPLINE] = "四象法門(Elemental Discipline)";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ARTIFICER_INFUSION] = "Infusion";
 
 Parser.pageCategoryToFull = function (catId) {
 	return Parser._parse_aToB(Parser.CAT_ID_TO_FULL, catId);
@@ -1409,6 +1482,9 @@ Parser.CAT_ID_TO_PROP[Parser.CAT_ID_OPTIONAL_FEATURE_OTHER] = "optionalfeature";
 Parser.CAT_ID_TO_PROP[Parser.CAT_ID_FIGHTING_STYLE] = "optionalfeature";
 Parser.CAT_ID_TO_PROP[Parser.CAT_ID_METAMAGIC] = "optionalfeature";
 Parser.CAT_ID_TO_PROP[Parser.CAT_ID_MANEUVER_BATTLEMASTER] = "optionalfeature";
+Parser.CAT_ID_TO_PROP[Parser.CAT_ID_PACT_BOON] = "optionalfeature";
+Parser.CAT_ID_TO_PROP[Parser.CAT_ID_ELEMENTAL_DISCIPLINE] = "optionalfeature";
+Parser.CAT_ID_TO_PROP[Parser.CAT_ID_ARTIFICER_INFUSION] = "optionalfeature";
 
 Parser.pageCategoryToProp = function (catId) {
 	return Parser._parse_aToB(Parser.CAT_ID_TO_PROP, catId);
@@ -1439,7 +1515,7 @@ Parser.spSubclassesToCurrentAndLegacyFull = function (classes) {
 			const toAdd = Parser._spSubclassItem(c);
 			if (SourceUtil.hasBeenReprinted(nm, src)) {
 				out[1].push(toAdd);
-			} else if (Parser.sourceJsonToFull(src).startsWith(UA_PREFIX) || Parser.sourceJsonToFull(src).startsWith(PS_PREFIX)) {
+			} else if (Parser.sourceJsonToFull(src).startsWith(UA_PREFIX) || Parser.sourceJsonToFull(src).startsWith(PS_PREFIX)  || Parser.sourceJsonToFull(src).startsWith("Twitter")) {
 				const cleanName = mapClassShortNameToMostRecent(nm.split("(")[0].trim().split(/v\d+/)[0].trim());
 				toCheck.push({"name": cleanName, "ele": toAdd});
 			} else {
@@ -1481,15 +1557,15 @@ Parser.trapHazTypeToFull = function (type) {
 };
 
 Parser.TRAP_HAZARD_TYPE_TO_FULL = {
-	MECH: "Mechanical trap",
-	MAG: "Magical trap",
-	SMPL: "Simple trap",
-	CMPX: "Complex trap",
-	HAZ: "Hazard",
-	WTH: "Weather",
-	ENV: "Environmental Hazard",
-	WLD: "Wilderness Hazard",
-	GEN: "Generic"
+	MECH: "機械陷阱",
+	MAG: "魔法陷阱",
+	SMPL: "簡易陷阱",
+	CMPX: "複雜陷阱",
+	HAZ: "危害物",
+	WTH: "天氣",
+	ENV: "環境危害",
+	WLD: "野外危害",
+	GEN: "通用"
 };
 
 Parser.tierToFullLevel = function (tier) {
@@ -1497,28 +1573,28 @@ Parser.tierToFullLevel = function (tier) {
 };
 
 Parser.TIER_TO_FULL_LEVEL = {};
-Parser.TIER_TO_FULL_LEVEL[1] = "level 1\u20144";
-Parser.TIER_TO_FULL_LEVEL[2] = "level 5\u201410";
-Parser.TIER_TO_FULL_LEVEL[3] = "level 11\u201416";
-Parser.TIER_TO_FULL_LEVEL[4] = "level 17\u201420";
+Parser.TIER_TO_FULL_LEVEL[1] = "1\u20144級";
+Parser.TIER_TO_FULL_LEVEL[2] = "5\u201410級";
+Parser.TIER_TO_FULL_LEVEL[3] = "11\u201416級";
+Parser.TIER_TO_FULL_LEVEL[4] = "17\u201420級";
 
 Parser.threatToFull = function (threat) {
 	return Parser._parse_aToB(Parser.THREAT_TO_FULL, threat);
 };
 
 Parser.THREAT_TO_FULL = {};
-Parser.THREAT_TO_FULL[1] = "moderate";
-Parser.THREAT_TO_FULL[2] = "dangerous";
-Parser.THREAT_TO_FULL[3] = "deadly";
+Parser.THREAT_TO_FULL[1] = "中等";
+Parser.THREAT_TO_FULL[2] = "危險";
+Parser.THREAT_TO_FULL[3] = "致命";
 
 Parser.trapInitToFull = function (init) {
 	return Parser._parse_aToB(Parser.TRAP_INIT_TO_FULL, init);
 };
 
 Parser.TRAP_INIT_TO_FULL = {};
-Parser.TRAP_INIT_TO_FULL[1] = "initiative count 10";
-Parser.TRAP_INIT_TO_FULL[2] = "initiative count 20";
-Parser.TRAP_INIT_TO_FULL[3] = "initiative count 20 and initiative count 10";
+Parser.TRAP_INIT_TO_FULL[1] = "先攻順序10";
+Parser.TRAP_INIT_TO_FULL[2] = "先攻順序20";
+Parser.TRAP_INIT_TO_FULL[3] = "先攻順序20 和 先攻順序10";
 
 Parser.ATK_TYPE_TO_FULL = {};
 Parser.ATK_TYPE_TO_FULL["MW"] = "近戰武器攻擊";
@@ -1601,6 +1677,7 @@ TP_MONSTROSITY = "monstrosity";
 TP_OOZE = "ooze";
 TP_PLANT = "plant";
 TP_UNDEAD = "undead";
+Parser.MON_TYPES = [TP_ABERRATION, TP_BEAST, TP_CELESTIAL, TP_CONSTRUCT, TP_DRAGON, TP_ELEMENTAL, TP_FEY, TP_FIEND, TP_GIANT, TP_HUMANOID, TP_MONSTROSITY, TP_OOZE, TP_PLANT, TP_UNDEAD];
 Parser.MON_TYPE_TO_PLURAL = {};
 Parser.MON_TYPE_TO_PLURAL[TP_ABERRATION] = "異怪";
 Parser.MON_TYPE_TO_PLURAL[TP_BEAST] = "野獸";
@@ -1627,6 +1704,7 @@ SZ_HUGE = "H";
 SZ_GARGANTUAN = "G";
 SZ_COLOSSAL = "C";
 SZ_VARIES = "V";
+Parser.SIZE_ABVS = [SZ_TINY, SZ_SMALL, SZ_MEDIUM, SZ_LARGE, SZ_HUGE, SZ_GARGANTUAN, SZ_VARIES];
 Parser.SIZE_ABV_TO_FULL = {};
 Parser.SIZE_ABV_TO_FULL[SZ_FINE] = "Fine";
 Parser.SIZE_ABV_TO_FULL[SZ_DIMINUTIVE] = "Diminutive";
@@ -1783,6 +1861,7 @@ SRC_UARoR = SRC_UA_PREFIX + "RacesOfRavnica";
 SRC_UAWGE = SRC_UA_PREFIX + "WGE";
 SRC_UAOSS = SRC_UA_PREFIX + "OfShipsAndSea";
 SRC_UASIK = SRC_UA_PREFIX + "Sidekicks";
+SRC_UAAR = SRC_UA_PREFIX + "ArtificerRevisited";
 
 SRC_3PP_SUFFIX = " 3pp";
 SRC_STREAM = "Stream";
@@ -1794,7 +1873,7 @@ PS_PREFIX = "Plane Shift: ";
 PS_PREFIX_SHORT = "PS: ";
 UA_PREFIX = "Unearthed Arcana: ";
 UA_PREFIX_SHORT = "UA: ";
-TftYP_NAME = "Tales from the Yawning Portal";
+TftYP_NAME = "大口亭奇譚";
 
 Parser.SOURCE_JSON_TO_FULL = {};
 Parser.SOURCE_JSON_TO_FULL[SRC_CoS] = "斯特拉德的詛咒";
@@ -1803,11 +1882,11 @@ Parser.SOURCE_JSON_TO_FULL[SRC_EEPC] = "邪惡元素玩家指南";
 Parser.SOURCE_JSON_TO_FULL[SRC_EET] = "邪惡元素：飾品";
 Parser.SOURCE_JSON_TO_FULL[SRC_HotDQ] = "龍后的寶藏";
 Parser.SOURCE_JSON_TO_FULL[SRC_LMoP] = "凡戴爾的失落礦坑";
-Parser.SOURCE_JSON_TO_FULL[SRC_Mag] = "Dragon Magazine";
+Parser.SOURCE_JSON_TO_FULL[SRC_Mag] = "龍雜誌";
 Parser.SOURCE_JSON_TO_FULL[SRC_MM] = "怪物圖鑑";
 Parser.SOURCE_JSON_TO_FULL[SRC_OotA] = "逃離深淵";
 Parser.SOURCE_JSON_TO_FULL[SRC_PHB] = "玩家手冊";
-Parser.SOURCE_JSON_TO_FULL[SRC_PotA] = "Princes of the Apocalypse";
+Parser.SOURCE_JSON_TO_FULL[SRC_PotA] = "毀滅親王";
 Parser.SOURCE_JSON_TO_FULL[SRC_RoT] = "提亞瑪特的崛起";
 Parser.SOURCE_JSON_TO_FULL[SRC_RoTOS] = "提亞瑪特的崛起 線上增刊";
 Parser.SOURCE_JSON_TO_FULL[SRC_SCAG] = "劍灣冒險指南";
@@ -1825,10 +1904,10 @@ Parser.SOURCE_JSON_TO_FULL[SRC_TYP_ToH] = TftYP_NAME;
 Parser.SOURCE_JSON_TO_FULL[SRC_TYP_WPM] = TftYP_NAME;
 Parser.SOURCE_JSON_TO_FULL[SRC_VGM] = "瓦羅的怪物指南";
 Parser.SOURCE_JSON_TO_FULL[SRC_XGE] = "姍納薩的萬事指南";
-Parser.SOURCE_JSON_TO_FULL[SRC_OGA] = "One Grung Above";
+Parser.SOURCE_JSON_TO_FULL[SRC_OGA] = "一蛙之上";
 Parser.SOURCE_JSON_TO_FULL[SRC_MTF] = "魔鄧肯的眾敵卷冊";
-Parser.SOURCE_JSON_TO_FULL[SRC_WDH] = "深水城：龍幣飛劫";
-Parser.SOURCE_JSON_TO_FULL[SRC_WDMM] = "深水城：Dungeon of the Mad Mage";
+Parser.SOURCE_JSON_TO_FULL[SRC_WDH] = "深水城：龍金飛劫";
+Parser.SOURCE_JSON_TO_FULL[SRC_WDMM] = "深水城：瘋法師的地下城";
 Parser.SOURCE_JSON_TO_FULL[SRC_GGR] = "拉尼卡的公會長指南";
 Parser.SOURCE_JSON_TO_FULL[SRC_KKW] = "Krenko's Way";
 Parser.SOURCE_JSON_TO_FULL[SRC_LLK] = "夸力許的失落實驗室";
@@ -1836,14 +1915,14 @@ Parser.SOURCE_JSON_TO_FULL[SRC_AL] = "冒險者聯盟";
 Parser.SOURCE_JSON_TO_FULL[SRC_SCREEN] = "地下城主屏幕";
 Parser.SOURCE_JSON_TO_FULL[SRC_ALCoS] = AL_PREFIX + "斯特拉德的詛咒";
 Parser.SOURCE_JSON_TO_FULL[SRC_ALEE] = AL_PREFIX + "邪惡元素";
-Parser.SOURCE_JSON_TO_FULL[SRC_ALRoD] = AL_PREFIX + "Rage of Demons";
-Parser.SOURCE_JSON_TO_FULL[SRC_PSA] = PS_PREFIX + "Amonkhet";
-Parser.SOURCE_JSON_TO_FULL[SRC_PSI] = PS_PREFIX + "Innistrad";
-Parser.SOURCE_JSON_TO_FULL[SRC_PSK] = PS_PREFIX + "Kaladesh";
-Parser.SOURCE_JSON_TO_FULL[SRC_PSZ] = PS_PREFIX + "Zendikar";
-Parser.SOURCE_JSON_TO_FULL[SRC_PSX] = PS_PREFIX + "Ixalan";
-Parser.SOURCE_JSON_TO_FULL[SRC_PSD] = PS_PREFIX + "Dominaria";
-Parser.SOURCE_JSON_TO_FULL[SRC_UAA] = UA_PREFIX + "Artificer";
+Parser.SOURCE_JSON_TO_FULL[SRC_ALRoD] = AL_PREFIX + "惡魔狂怒";
+Parser.SOURCE_JSON_TO_FULL[SRC_PSA] = PS_PREFIX + "阿芒凱";
+Parser.SOURCE_JSON_TO_FULL[SRC_PSI] = PS_PREFIX + "依尼翠";
+Parser.SOURCE_JSON_TO_FULL[SRC_PSK] = PS_PREFIX + "卡拉德許";
+Parser.SOURCE_JSON_TO_FULL[SRC_PSZ] = PS_PREFIX + "贊迪卡";
+Parser.SOURCE_JSON_TO_FULL[SRC_PSX] = PS_PREFIX + "依夏蘭";
+Parser.SOURCE_JSON_TO_FULL[SRC_PSD] = PS_PREFIX + "多明納里亞";
+Parser.SOURCE_JSON_TO_FULL[SRC_UAA] = UA_PREFIX + "奇械師";
 Parser.SOURCE_JSON_TO_FULL[SRC_UAEAG] = UA_PREFIX + "Eladrin and Gith";
 Parser.SOURCE_JSON_TO_FULL[SRC_UAEBB] = UA_PREFIX + "Eberron";
 Parser.SOURCE_JSON_TO_FULL[SRC_UAFFR] = UA_PREFIX + "Feats for Races";
@@ -1889,6 +1968,7 @@ Parser.SOURCE_JSON_TO_FULL[SRC_UARoR] = UA_PREFIX + "Races of Ravnica";
 Parser.SOURCE_JSON_TO_FULL[SRC_UAWGE] = "Wayfinder's Guide to Eberron";
 Parser.SOURCE_JSON_TO_FULL[SRC_UAOSS] = UA_PREFIX + "Of Ships and the Sea";
 Parser.SOURCE_JSON_TO_FULL[SRC_UASIK] = UA_PREFIX + "Sidekicks";
+Parser.SOURCE_JSON_TO_FULL[SRC_UAAR] = UA_PREFIX + "奇械師再製";
 Parser.SOURCE_JSON_TO_FULL[SRC_STREAM] = "Livestream";
 Parser.SOURCE_JSON_TO_FULL[SRC_TWITTER] = "Twitter";
 
@@ -1985,6 +2065,7 @@ Parser.SOURCE_JSON_TO_ABV[SRC_UARoR] = "UARoR";
 Parser.SOURCE_JSON_TO_ABV[SRC_UAWGE] = "WGE";
 Parser.SOURCE_JSON_TO_ABV[SRC_UAOSS] = "UAOSS";
 Parser.SOURCE_JSON_TO_ABV[SRC_UASIK] = "UASIK";
+Parser.SOURCE_JSON_TO_ABV[SRC_UAAR] = "UAAR";
 Parser.SOURCE_JSON_TO_ABV[SRC_STREAM] = "Stream";
 Parser.SOURCE_JSON_TO_ABV[SRC_TWITTER] = "Twitter";
 
@@ -2020,12 +2101,23 @@ Parser.ITEM_TYPE_JSON_TO_ABV = {
 };
 
 Parser.DMGTYPE_JSON_TO_FULL = {
+	"A": "酸蝕",
 	"B": "鈍擊",
+	"C": "寒冰",
+	"F": "火焰",
+	"O": "力場",
+	"L": "閃電",
 	"N": "死靈",
 	"P": "穿刺",
+	"I": "毒素",
+	"Y": "精神",
 	"R": "光耀",
-	"S": "劈砍"
+	"S": "劈砍",
+	"T": "雷鳴"
 };
+
+Parser.DMG_TYPES = ["acid", "bludgeoning", "cold", "fire", "force", "lightning", "necrotic", "piercing", "poison", "psychic", "radiant", "slashing", "thunder"];
+Parser.CONDITIONS = ["blinded", "charmed", "deafened", "exhaustion", "frightened", "grappled", "incapacitated", "invisible", "paralyzed", "petrified", "poisoned", "prone", "restrained", "stunned", "unconscious"];
 
 Parser.SKILL_JSON_TO_FULL = {
 	"特技": [
@@ -2061,7 +2153,7 @@ Parser.SKILL_JSON_TO_FULL = {
 		"當你嘗試透過威脅、敵意行為、肉體暴力來影響他人時，DM可能會要求你進行一次魅力（威嚇）檢定。例子包括從囚犯口中逼供情報、迫使街頭混混從衝突中退讓、或者使用破瓶的利口讓某個正輕蔑冷笑著的大臣相信自己該重新考慮一下。"
 	],
 	"調查": [
-		"當你四處查探線索並基於這些線索進行推理時，你進行一次智力（調查）檢定。你可能會因此推斷出某個隱藏物體的位置、從傷口的外觀判斷它是什麼武器造成的、或找出某個隧道中可能導致坍方的結構性弱點。為了尋找隱藏的知片段而鑽研古卷也可能會需要一次智力（調查）檢定。"
+		"當你四處查探線索並基於這些線索進行推理時，你進行一次智力（調查）檢定。你可能會因此推斷出某個隱藏物體的位置、從傷口的外觀判斷它是什麼武器造成的、或找出某個隧道中可能導致坍方的結構性弱點。為了尋找隱藏的知識片段而鑽研古卷也可能會需要一次智力（調查）檢定。"
 	],
 	"醫藥": [
 		"一次睿知（醫藥）檢定能讓你嘗試穩定一個瀕死同伴的傷勢或者診斷疾病。"
@@ -2094,54 +2186,54 @@ Parser.SKILL_JSON_TO_FULL = {
 
 Parser.ACTION_JSON_TO_FULL = {
 	"攻擊": [
-		"The most common action to take in combat is the Attack action, whether you are swinging a sword, firing an arrow from a bow, or brawling with your fists.",
-		"With this action, you make one melee or ranged attack. See the \"{@book Making an Attack|phb|9|making an attack}\" section for the rules that govern attacks.",
-		"Certain features, such as the Extra Attack feature of the fighter, allow you to make more than one attack with this action."
+		"攻擊動作是戰鬥中最常被採取的動作，包括了揮劍劈砍、彎弓射箭、或徒手揮拳等行動。",
+		"透過這個動作，你進行一次近戰或遠程攻擊。參見「{@book Making an Attack|phb|9|發動攻擊}」章節以查閱關於攻擊規則的詳細描述。",
+		"某些能力，例如戰士的額外攻擊能力，能讓你透過這個動作進行超過一次的攻擊。"
 	],
 	"疾走": [
-		"When you take the Dash action, you gain extra movement for the current turn. The increase equals your speed, after applying any modifiers. With a speed of 30 feet, for example, you can move up to 60 feet on your turn if you dash.",
-		"Any increase or decrease to your speed changes this additional movement by the same amount. If your speed of 30 feet is reduced to 15 feet, for instance, you can move up to 30 feet this turn if you dash."
+		"當你採取疾走動作時，你在當回合獲得額外的移動力。其增加的移動力等同於你應用任何適用加值後的移動速度。舉例來說，若你的移動速度為30呎，則當你採取疾走動作後，你可以在你的回合移動最多60呎距離。",
+		"任何對你移動速度的增減都會使這個額外的移動力改變相同的數值。舉例來說，若你的30呎移動速度被減少至15呎，則當你採取疾走動作後，你在該回合就只能移動最多30呎距離。"
 	],
 	"撤離": [
-		"If you take the Disengage action, your movement doesn't provoke opportunity attacks for the rest of the turn."
+		"若你採取撤離動作，則你在該回合內接下來進行的移動將不會引發藉機攻擊。"
 	],
 	"閃避": [
-		"When you take the Dodge action, you focus entirely on avoiding attacks. Until the start of your next turn, any attack roll made against you has disadvantage if you can see the attacker, and you make Dexterity saving throws with advantage. You lose this benefit if you are incapacitated (as explained in the appendix) or if your speed drops to 0."
+		"當你採取閃避動作，你將全神專注於閃躲攻擊。直到你的下個回合開始前，若你可以看見攻擊者，則任何對你所進行的攻擊檢定都將具有劣勢，且你在敏捷豁免檢定中具有優勢。若你陷入無力狀態（見附錄說明）、或若你的移動速度歸零，則你將失去這些好處。"
 	],
 	"協助": [
-		"You can lend your aid to another creature in the completion of a task. When you take the Help action, the creature you aid gains advantage on the next ability check it makes to perform the task you are helping with, provided that it makes the check before the start of your next turn.",
-		"Alternatively, you can aid a friendly creature in attacking a creature within 5 feet of you. You feint, distract the target, or in some other way team up to make your ally's attack more effective. If your ally attacks the target before your next turn, the first attack roll is made with advantage."
+		"你可以伸出援手以協助另一個生物達成其行動。當你採取協助動作，你所協助的生物將在下一次它為了執行你所幫助事項而進行的屬性檢定中具有優勢，但該檢定必須在你的下個回合開始前進行才能獲得這個好處。",
+		"或者，你可以協助一個友善生物攻擊一個距離你5呎內的生物。你做出佯攻、使目標分心、或用其他某些方式合作已使你盟友的攻擊更有效果。若你的盟友在你的下個回合前攻擊該目標，則其進行的第一次攻擊檢定將具有優勢。"
 	],
 	"躲藏": [
-		"When you take the Hide action, you make a Dexterity (Stealth) check in an attempt to hide, following the rules in chapter 7 for hiding. If you succeed, you gain certain benefits, as described in the \"{@book Unseen Attackers and Targets|PHB|9|unseen attackers and targets}\" section in the Player's Handbook."
+		"當你採取躲藏動作，你進行一次敏捷（隱匿）檢定以嘗試躲藏，遵循第七章關於躲藏的規則。若你檢定成功，則你將獲得某些好處，詳情參照《玩家手冊》中的「{@book 看不見的攻擊者和目標|PHB|9|看不見的攻擊者和目標}」章節中的描述。"
 	],
 	"預備": [
-		"Sometimes you want to get the jump on a foe or wait for a particular circumstance before you act. To do so, you can take the Ready action on your turn so that you can act later in the round using your reaction.",
-		"First, you decide what perceivable circumstance will trigger your reaction. Then, you choose the action you will take in response to that trigger, or you choose to move up to your speed in response to it. Examples include \"If the cultist steps on the trapdoor, I'll pull the lever that opens it,\" and \"If the goblin steps next to me, I move away.\"",
-		"When the trigger occurs, you can either take your reaction right after the trigger finishes or ignore the trigger. Remember that you can take only one reaction per round.",
-		"When you ready a spell, you cast it as normal but hold its energy, which you release with your reaction when the trigger occurs. To be readied, a spell must have a casting time of 1 action, and holding onto the spell's magic requires concentration (explained in chapter 10). If your concentration is broken, the spell dissipates without taking effect. For example, if you are concentrating on the web spell and ready magic missile, your web spell ends, and if you take damage before you release magic missile with your reaction, your concentration might be broken.",
-		"You have until the start of your next turn to use a readied action."
+		"有時候你想要搶在敵人之前、或者等到特定情況發生後立即行動。若要這麼做，你可以在你的回合採取預備動作，好讓你可以在該輪稍後的時機使用你的反應以採取行動。",
+		"首先，你決定什麼樣的情況將會觸發你的反應，這個情況必須是可以被觀測的。接著，你選擇你在回應其觸發時所要採取的動作，或者你選擇移動最多等同於你移動速度的距離以回應其觸發。一些例子包括「如果那名邪教徒踩上陷阱門，我就要拉下拉桿以打開它」、和「如果那隻哥不林走到我面前，我就立刻移開。」",
+		"當觸發事件發生時，你可以選擇在觸發事件結束後緊接著採取你的反應，或者選擇忽略該觸發事件。記住，你在每輪中只能採取一個反應。",
+		"當你預備一個法術時，你仍如常施放它但扣住其能量，好讓你在觸發事件發生時能夠以你的反應釋放它。一個法術必須具有1個動作的施法時間才能被預備，且扣住該法術的魔法需要專注（參見第十章的說明）。若你的專注被打斷，則該法術將消散且不會發揮任何效果。舉例來說，若你正專注於蛛網術法術，並預備施放了魔法飛彈，則你的蛛網術法術將結束，且若你在以你的反應釋放魔法飛彈之前承受傷害，則你的專注可能會因此被打斷。",
+		"你預備好的動作只能在你的下個回合開始之前被使用。"
 	],
 	"搜尋": [
-		"When you take the Search action, you devote your attention to finding something. Depending on the nature of your search, the DM might have you make a Wisdom ({@skill Perception}) check or an Intelligence ({@skill Investigation}) check."
+		"當你採取搜尋動作，你將全神投入於找尋某個事物。根據你搜尋方式的性質，DM可能會要求你進行一次睿知（感知）檢定或一次智力（調查）檢定。"
 	],
 	"使用物件": [
-		"You normally interact with an object while doing something else, such as when you draw a sword as part of an attack. When an object requires your action for its use, you take the Use an Object action. This action is also useful when you want to interact with more than one object on your turn."
+		"你通常會在做其他事的同時與一個物體互動，例如在攻擊的同時抽出長劍。當某個物體要求你使用你的動作以使用它時，你採取使用物件的動作。這個動作在你想要於你的回合中與超過一個物體互動時也能派上用場。"
 	]
 };
 
 Parser.SENSE_JSON_TO_FULL = {
-	"blindsight": [
-		"A creature with blindsight can perceive its surroundings without relying on sight, within a specific radius. Creatures without eyes, such as oozes, and creatures with echolocation or heightened senses, such as bats and true dragons, have this sense."
+	"盲視": [
+		"具有盲視的生物即使不依賴視覺也可以感知其周遭特定半徑範圍內的環境。沒有眼睛的生物（像是泥怪）、以及具有回聲定位或高敏感官的生物（像是蝙蝠和真龍）都具有這種感官。"
 	],
-	"darkvision": [
-		"Many creatures in fantasy gaming worlds, especially those that dwell underground, have darkvision. Within a specified range, a creature with darkvision can see in dim light as if it were bright light and in darkness as if it were dim light, so areas of darkness are only lightly obscured as far as that creature is concerned. However, the creature can't discern color in that darkness, only shades of gray."
+	"黑暗視覺": [
+		"奇幻遊戲世界中的許多生物，特別是那些居住於地底的生物，都具有黑暗視覺。在特定半徑範圍內，具有黑暗視覺的生物可以將微光光照視作明亮光照，並將黑暗環境視作微光光照，因此黑暗環境對於這些生物而言僅會被輕度遮蔽。然而，這些生物無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
 	],
-	"tremorsense": [
-		"A creature with tremorsense can detect and pinpoint the origin of vibrations within a specific radius, provided that the creature and the source of the vibrations are in contact with the same ground or substance. Tremorsense can't be used to detect flying or incorporeal creatures. Many burrowing creatures, such as ankhegs and umber hulks, have this special sense."
+	"震顫感知": [
+		"只要具有震顫感知的生物與震動來源都接觸著相同的地表或物質，該生物可以感知並精準定位其特定半徑範圍內的震動來源。震顫感知並不能被用以偵測飛行或虛體生物。許多掘穴生物，像是掘地蟲和土巨怪，都具有這種特殊的感官。"
 	],
-	"truesight": [
-		"A creature with truesight can, out to a specific range, see in normal and magical darkness, see invisible creatures and objects, automatically detect visual illusions and succeed on saving throws against them, and perceives the original form of a shapechanger or a creature that is transformed by magic. Furthermore, the creature can see into the Ethereal Plane."
+	"真實視覺": [
+		"具有真實視覺的生物在特定半徑範圍內，可以看透普通或魔法黑暗、看見隱形的生物和物體、自動偵測出視覺幻象並成功通過對抗它們的豁免檢定、並看穿變形者或被魔法變形的生物的原始型態。此外，這些生物也可以看見位於乙太位面的事物。"
 	]
 };
 
@@ -2164,8 +2256,7 @@ SourceUtil = {
 				(shortName === "Sun Soul" && source === SRC_SCAG) ||
 				(shortName === "Mastermind" && source === SRC_SCAG) ||
 				(shortName === "Swashbuckler" && source === SRC_SCAG) ||
-				(shortName === "Storm" && source === SRC_SCAG) ||
-				(shortName === "Deep Stalker Conclave" && source === SRC_UATRR)
+				(shortName === "Storm" && source === SRC_SCAG)
 			);
 	},
 
@@ -2264,6 +2355,38 @@ JqueryUtil = {
 	initEnhancements () {
 		JqueryUtil.addSelectors();
 
+		/**
+		 * Template strings which can contain jQuery objects.
+		 * Usage: $$`<div>Press this button: ${$btn}</div>`
+		 */
+		window.$$ = function (parts, ...args) { // TODO use this instead of .swap()
+			const $eles = [];
+			let ixArg = 0;
+
+			const handleArg = (arg) => {
+				if (arg instanceof $) {
+					// TODO inject appropriate elements for the parent and remove "slot" specifier on replace selector
+					// the places where these would be inserted usually can't support <slot>
+					// TODO also doesn't work inside <select>
+					if (arg.is("tr") || arg.is("td") || arg.is("th")) throw new Error(`Unsupported element type "${arg[0].tagName}"!`);
+					$eles.push(arg);
+					return `<slot data-r=true></slot>`;
+				} else if (arg instanceof HTMLElement) {
+					return handleArg($(arg));
+				} else return arg
+			};
+
+			const raw = parts.reduce((html, p) => {
+				const myIxArg = ixArg++;
+				if (args[myIxArg] == null) return `${html}${p}`;
+				if (args[myIxArg] instanceof Array) return `${html}${args[myIxArg].map(arg => handleArg(arg)).join("")}${p}`;
+				else return `${html}${handleArg(args[myIxArg])}${p}`;
+			});
+			const $res = $(raw);
+			$res.find(`slot[data-r=true]`).replaceWith(i => $eles[i]);
+			return $res;
+		};
+
 		$.fn.extend({
 			/**
 			 * Has two modes; either:
@@ -2286,6 +2409,11 @@ JqueryUtil = {
 				}
 
 				return this;
+			},
+
+			disableSpellcheck: function () {
+				this.attr("autocomplete", "off").attr("autocapitalize", "off").attr("spellcheck", "false");
+				return this;
 			}
 		});
 
@@ -2300,7 +2428,7 @@ JqueryUtil = {
 		// Add a selector to match exact text (case insensitive) to jQuery's arsenal
 		$.expr[':'].textEquals = (el, i, m) => {
 			const searchText = m[3];
-			const match = $(el).text().toLowerCase().trim().match(`^${RegExp.escape(searchText.toLowerCase().trim())}$`);
+			const match = $(el).text().toLowerCase().trim().match(`^${RegExp.escape(searchText.toLowerCase().trim())}( [a-z0-9, ]+$)?$`);
 			return match && match.length > 0;
 		};
 
@@ -2350,18 +2478,67 @@ JqueryUtil = {
 				}
 			}
 		);
+	},
+
+	_dropdownInit: false,
+	bindDropdownButton ($ele) {
+		if (!JqueryUtil._dropdownInit) {
+			JqueryUtil._dropdownInit = true;
+			document.addEventListener("click", () => [...document.querySelectorAll(`.open`)].filter(ele => !(ele.className || "").split(" ").includes(`dropdown--navbar`)).forEach(ele => ele.classList.remove("open")));
+		}
+		$ele.click(() => setTimeout(() => $ele.parent().addClass("open"), 1)); // defer to allow the above to complete
+	},
+
+	_activeToast: [],
+	/**
+	 * @param {Object} options
+	 * @param {(jQuery|string)} options.content Toast contents. Support jQuery objects.
+	 * @param {string} options.type Toast type. Can be any Bootstrap alert type ("success", "info", "warning", or "danger")
+	 */
+	doToast (options) {
+		if (typeof options === "string") {
+			options = {
+				content: options,
+				type: "info"
+			};
+		}
+		options.type = options.type || "info";
+
+		const doCleanup = ($toast) => {
+			$toast.removeClass("toast--animate");
+			setTimeout(() => $toast.remove(), 85);
+			JqueryUtil._activeToast.splice(JqueryUtil._activeToast.indexOf($toast), 1);
+		};
+
+		const $btnToastDismiss = $(`<button class="btn toast__btn-close"><span class="glyphicon glyphicon-remove"/></button>`)
+			.click(() => doCleanup($toast));
+
+		const $toast = $(`
+				<div class="toast alert-${options.type}">
+					<div class="toast__wrp-content"><div data-r="$content"/></div>
+					<div class="toast__wrp-control"><div data-r="$btnToastDismiss"/></div>
+				</div>
+			`)
+			.swap({$content: options.content, $btnToastDismiss})
+			.prependTo($(`body`))
+			.data("pos", 0);
+
+		setTimeout(() => $toast.addClass(`toast--animate`), 5);
+		setTimeout(() => doCleanup($toast), 5000);
+
+		if (JqueryUtil._activeToast.length) {
+			JqueryUtil._activeToast.forEach($oldToast => {
+				const pos = $oldToast.data("pos");
+				$oldToast.data("pos", pos + 1);
+				if (pos === 2) doCleanup($oldToast);
+			});
+		}
+
+		JqueryUtil._activeToast.push($toast);
 	}
 };
 
 if (typeof window !== "undefined") window.addEventListener("load", JqueryUtil.initEnhancements);
-
-function copyText (text) {
-	const $temp = $(`<textarea id="copy-temp" style="position: fixed; top: -1000px; left: -1000px; width: 1px; height: 1px;">${text}</textarea>`);
-	$(`body`).append($temp);
-	$temp.select();
-	document.execCommand("Copy");
-	$temp.remove();
-}
 
 ObjUtil = {
 	mergeWith (source, target, fnMerge, options = {depth: 1}) {
@@ -2399,6 +2576,25 @@ ObjUtil = {
 MiscUtil = {
 	copy (obj) {
 		return JSON.parse(JSON.stringify(obj));
+	},
+
+	async pCopyTextToClipboard (text) {
+		function doCompatabilityCopy () {
+			const $temp = $(`<textarea id="copy-temp" style="position: fixed; top: -1000px; left: -1000px; width: 1px; height: 1px;">${text}</textarea>`);
+			$(`body`).append($temp);
+			$temp.select();
+			document.execCommand("Copy");
+			$temp.remove();
+		}
+
+		if (navigator && navigator.permissions) {
+			try {
+				const access = await navigator.permissions.query({name: "clipboard-write"});
+				if (access.state === "granted" || access.state === "prompt") {
+					await navigator.clipboard.writeText(text);
+				} else doCompatabilityCopy();
+			} catch (e) { doCompatabilityCopy(); }
+		} else doCompatabilityCopy();
 	},
 
 	getProperty (object, ...path) {
@@ -2562,16 +2758,21 @@ MiscUtil = {
 		return function () {
 			const context = this;
 			const args = arguments;
+
 			const later = function () {
 				timeout = null;
-				func.apply(context, args);
 				if (!immediate) func.apply(context, args);
 			};
+
 			const callNow = immediate && !timeout;
 			clearTimeout(timeout);
 			timeout = setTimeout(later, waitTime);
 			if (callNow) func.apply(context, args);
 		};
+	},
+
+	pDelay (msecs) {
+		return new Promise(resolve => setTimeout(() => resolve(), msecs));
 	}
 };
 
@@ -2606,6 +2807,9 @@ ContextUtil = {
 		return position;
 	},
 
+	_lastMenuId: 1,
+	getNextGenericMenuId () { return `contextMenu_${ContextUtil._lastMenuId++}`; },
+
 	doInitContextMenu: (menuId, clickFn, labels) => {
 		ContextUtil._ctxClick[menuId] = clickFn;
 		ContextUtil._handlePreInitContextMenu(menuId);
@@ -2623,6 +2827,13 @@ ContextUtil = {
 		tempString += `</ul>`;
 		$(`#${menuId}`).remove();
 		$("body").append(tempString);
+	},
+
+	doTeardownContextMenu (menuId) {
+		delete ContextUtil._ctxInit[menuId];
+		delete ContextUtil._ctxClick[menuId];
+		delete ContextUtil._ctxOpenRefs[menuId];
+		$(`#${menuId}`).remove();
 	},
 
 	handleOpenContextMenu: (evt, ele, menuId, closeHandler) => {
@@ -2919,18 +3130,18 @@ ListUtil = {
 		}
 
 		$ele.on("mousedown", (evt) => {
-			if (evt.which === 1) {
+			if (evt.which === 1 && evt.target === $ele[0]) {
 				evt.preventDefault();
 				if (evt.offsetY > $ele.height() - BORDER_SIZE) {
 					mousePos = evt.clientY;
-					$doc.on(`mousemove.sublist_resize_${MOUSE_MOVE_ID}`, resize);
+					$doc.on(`mousemove.sublist_resize-${MOUSE_MOVE_ID}`, resize);
 				}
 			}
 		});
 
 		$doc.on("mouseup", (evt) => {
 			if (evt.which === 1) {
-				$(document).off(`mousemove.sublist_resize_${MOUSE_MOVE_ID}`);
+				$(document).off(`mousemove.sublist_resize-${MOUSE_MOVE_ID}`);
 				StorageUtil.pSetForPage(STORAGE_KEY, $ele.css("height"));
 			}
 		});
@@ -2966,7 +3177,7 @@ ListUtil = {
 			.attr("title", "釘選(開/關)");
 	},
 
-	_genericAddButtonHandler (evt, options = {}) {
+	genericAddButtonHandler (evt, options = {}) {
 		if (evt.shiftKey) ListUtil.pDoSublistAdd(History.lastLoadedId, true, options.shiftCount || 20);
 		else ListUtil.pDoSublistAdd(History.lastLoadedId, true);
 	},
@@ -2974,10 +3185,10 @@ ListUtil = {
 		ListUtil.getOrTabRightButton(`btn-sublist-add`, `plus`)
 			.off("click")
 			.attr("title", `Add (SHIFT for ${options.shiftCount || 20})`)
-			.on("click", handlerGenerator ? handlerGenerator() : ListUtil._genericAddButtonHandler);
+			.on("click", handlerGenerator ? handlerGenerator() : ListUtil.genericAddButtonHandler);
 	},
 
-	_genericSubtractButtonHandler (evt, options = {}) {
+	genericSubtractButtonHandler (evt, options = {}) {
 		if (evt.shiftKey) ListUtil.pDoSublistSubtract(History.lastLoadedId, options.shiftCount || 20);
 		else ListUtil.pDoSublistSubtract(History.lastLoadedId);
 	},
@@ -2985,20 +3196,20 @@ ListUtil = {
 		ListUtil.getOrTabRightButton(`btn-sublist-subtract`, `minus`)
 			.off("click")
 			.attr("title", `Subtract (SHIFT for ${options.shiftCount || 20})`)
-			.on("click", handlerGenerator ? handlerGenerator() : ListUtil._genericSubtractButtonHandler);
+			.on("click", handlerGenerator ? handlerGenerator() : ListUtil.genericSubtractButtonHandler);
 	},
 
 	bindDownloadButton: () => {
 		const $btn = ListUtil.getOrTabRightButton(`btn-sublist-download`, `download`);
 		$btn.off("click")
-			.on("click", (evt) => {
+			.on("click", async evt => {
 				if (evt.shiftKey) {
-					const toEncode = JSON.stringify(ListUtil._getExportableSublist());
+					const toEncode = JSON.stringify(ListUtil.getExportableSublist());
 					const parts = [window.location.href, (UrlUtil.packSubHash(ListUtil.SUB_HASH_PREFIX, [toEncode], true))];
-					copyText(parts.join(HASH_PART_SEP));
+					await MiscUtil.pCopyTextToClipboard(parts.join(HASH_PART_SEP));
 					JqueryUtil.showCopiedEffect($btn);
 				} else {
-					DataUtil.userDownload(ListUtil._getDownloadName(), JSON.stringify(ListUtil._getExportableSublist(), null, "\t"));
+					DataUtil.userDownload(ListUtil._getDownloadName(), JSON.stringify(ListUtil.getExportableSublist(), null, "\t"));
 				}
 			})
 			.attr("title", "下載列表（SHIFT for Link）");
@@ -3071,13 +3282,13 @@ ListUtil = {
 	_getPinnedCount (index, data) {
 		const base = ListUtil._pinned[index];
 		if (!base) return null;
-		if (data) return base[data.uid];
+		if (data && data.uid) return base[data.uid];
 		return base._;
 	},
 
 	_setPinnedCount (index, count, data) {
 		const base = ListUtil._pinned[index];
-		const key = data ? data.uid : "_";
+		const key = data && data.uid ? data.uid : "_";
 		if (base) base[key] = count;
 		else (ListUtil._pinned[index] = {})[key] = count;
 	},
@@ -3085,13 +3296,18 @@ ListUtil = {
 	_deletePinnedCount (index, data) {
 		const base = ListUtil._pinned[index];
 		if (base) {
-			if (data) delete base[data.uid];
+			if (data && data.uid) delete base[data.uid];
 			else delete base._;
 		}
 	},
 
 	async pDoSublistAdd (index, doFinalise, addCount, data) {
-		if (index == null) return alert("Please first view something from the list");
+		if (index == null) {
+			return JqueryUtil.doToast({
+				content: "Please first view something from the list.",
+				type: "danger"
+			});
+		}
 
 		const count = ListUtil._getPinnedCount(index, data) || 0;
 		addCount = addCount || 1;
@@ -3120,6 +3336,8 @@ ListUtil = {
 		if (count > subtractCount) {
 			ListUtil._setPinnedCount(index, count - subtractCount, data);
 			ListUtil._setViewCount(index, count - subtractCount, data);
+			ListUtil.sublist.reIndex();
+			await ListUtil._pSaveSublist();
 			ListUtil._handleCallUpdateFn();
 		} else if (count) await ListUtil.pDoSublistRemove(index, data);
 	},
@@ -3133,7 +3351,7 @@ ListUtil = {
 	},
 
 	_setViewCount: (index, newCount, data) => {
-		const $cnt = $(ListUtil.sublist.get(data ? "uid" : "id", data ? data.uid : index)[0].elm).find(".count");
+		const $cnt = $(ListUtil.sublist.get(data && data.uid ? "uid" : "id", data && data.uid ? data.uid : index)[0].elm).find(".count");
 		if ($cnt.find("input").length) $cnt.find("input").val(newCount);
 		else $cnt.text(newCount);
 	},
@@ -3145,19 +3363,19 @@ ListUtil = {
 		ListUtil._handleCallUpdateFn();
 	},
 
-	_getExportableSublist: () => {
+	getExportableSublist: () => {
 		const sources = new Set();
 		const toSave = ListUtil.sublist.items
 			.map(it => {
 				const $elm = $(it.elm);
 				sources.add(ListUtil._allItems[Number($elm.attr(FLTR_ID))].source);
-				return {h: $elm.find(`a`).prop("hash").slice(1).split(HASH_PART_SEP)[0], c: $elm.find(".count").text() || undefined, uid: $elm.find(`.uid`).text() || undefined};
+				return {h: $elm.find(`a`).prop("hash").slice(1).split(HASH_PART_SEP)[0], c: $elm.find(".count").first().text() || undefined, uid: $elm.find(`.uid`).text() || undefined};
 			});
 		return {items: toSave, sources: Array.from(sources)};
 	},
 
 	async _pSaveSublist () {
-		await StorageUtil.pSetForPage("sublist", ListUtil._getExportableSublist());
+		await StorageUtil.pSetForPage("sublist", ListUtil.getExportableSublist());
 	},
 
 	_updateSublistVisibility: () => {
@@ -3252,7 +3470,7 @@ ListUtil = {
 		}).filter(it => it);
 
 		const promises = toLoad.map(it => ListUtil.pDoSublistAdd(it.index, false, it.addCount, it.data));
-		return Promise.all(promises).then(async resolved => {
+		return Promise.all(promises).then(async () => {
 			await ListUtil._pFinaliseSublist(true);
 		});
 	},
@@ -3276,7 +3494,7 @@ ListUtil = {
 		const itId = Number($invokedOn.attr(FLTR_ID));
 		switch (Number($selectedMenu.data("ctx-id"))) {
 			case 0:
-				EntryRenderer.hover.doPopout($invokedOn, ListUtil._allItems, itId, evt.clientX);
+				Renderer.hover.doPopout($invokedOn, ListUtil._allItems, itId, evt.clientX);
 				break;
 			case 1:
 				Promise.all(ListUtil._primaryLists.map(l => Promise.all(ListUtil.mapSelected(l, (it) => ListUtil.isSublisted(it) ? Promise.resolve() : ListUtil.pDoSublistAdd(it)))))
@@ -3310,7 +3528,10 @@ ListUtil = {
 				.map(it => $(it.elm).find(`a`));
 
 			if ($eles.length <= 1) {
-				alert("Not enough entries to roll!");
+				JqueryUtil.doToast({
+					content: "Not enough entries to roll!",
+					type: "danger"
+				});
 				return ListUtil._isRolling = false;
 			}
 
@@ -3331,7 +3552,7 @@ ListUtil = {
 		const itId = Number($invokedOn.attr(FLTR_ID));
 		switch (Number($selectedMenu.data("ctx-id"))) {
 			case 0:
-				EntryRenderer.hover.doPopout($invokedOn, ListUtil._allItems, itId, evt.clientX);
+				Renderer.hover.doPopout($invokedOn, ListUtil._allItems, itId, evt.clientX);
 				break;
 			case 1:
 				ListUtil.pDoSublistRemove(itId);
@@ -3357,7 +3578,7 @@ ListUtil = {
 		const itId = Number($invokedOn.attr(FLTR_ID));
 		switch (Number($selectedMenu.data("ctx-id"))) {
 			case 0:
-				EntryRenderer.hover.doPopout($invokedOn, ListUtil._allItems, itId, evt.clientX);
+				Renderer.hover.doPopout($invokedOn, ListUtil._allItems, itId, evt.clientX);
 				break;
 			case 1:
 				Promise.all(ListUtil._primaryLists.map(l => Promise.all(ListUtil.mapSelected(l, (it) => ListUtil.pDoSublistAdd(it)))))
@@ -3374,7 +3595,7 @@ ListUtil = {
 		const uid = $invokedOn.find(`.uid`).text();
 		switch (Number($selectedMenu.data("ctx-id"))) {
 			case 0:
-				EntryRenderer.hover.doPopout($invokedOn, ListUtil._allItems, itId, evt.clientX);
+				Renderer.hover.doPopout($invokedOn, ListUtil._allItems, itId, evt.clientX);
 				break;
 			case 1:
 				if (uid) ListUtil.pDoSublistRemove(itId, {uid: uid});
@@ -3396,7 +3617,7 @@ ListUtil = {
 		return `${UrlUtil.getCurrentPage().replace(".html", "")}-sublist`;
 	},
 
-	_genericPinKeyMapper (pMapUid = ListUtil._pUidHandler) {
+	genericPinKeyMapper (pMapUid = ListUtil._pUidHandler) {
 		return Object.entries(ListUtil.getSublisted()).map(([id, it]) => {
 			return Object.keys(it).map(k => {
 				const it = ListUtil._allItems[id];
@@ -3407,7 +3628,7 @@ ListUtil = {
 
 	_handleJsonDownload () {
 		if (ListUtil._pUidHandler) {
-			const promises = ListUtil._genericPinKeyMapper();
+			const promises = ListUtil.genericPinKeyMapper();
 
 			Promise.all(promises).then(data => {
 				data.forEach(cpy => DataUtil.cleanJson(cpy));
@@ -3467,10 +3688,10 @@ ListUtil = {
 	},
 
 	showTable (title, dataList, colTransforms, filter, sorter) {
-		const $modal = $(`<div class="modal-outer dropdown-menu"/>`);
-		const $wrpModal = $(`<div class="modal-wrapper">`).appendTo($(`body`)).click(() => $wrpModal.remove());
+		const $modal = $(`<div class="modal__outer dropdown-menu"/>`);
+		const $wrpModal = $(`<div class="modal__wrp">`).appendTo($(`body`)).click(() => $wrpModal.remove());
 		$modal.appendTo($wrpModal);
-		const $modalInner = $(`<div class="modal-inner"/>`).appendTo($modal).click((evt) => evt.stopPropagation());
+		const $modalInner = $(`<div class="modal__inner"/>`).appendTo($modal).click((evt) => evt.stopPropagation());
 
 		const $pnlControl = $(`<div class="split my-3"/>`).appendTo($modalInner);
 		const $pnlCols = $(`<div class="flex" style="align-items: center;"/>`).appendTo($pnlControl);
@@ -3498,8 +3719,8 @@ ListUtil = {
 		const $btnCsv = $(`<button class="btn btn-primary mr-3">Download CSV</button>`).click(() => {
 			DataUtil.userDownloadText(`${title}.csv`, getAsCsv());
 		}).appendTo($pnlBtns);
-		const $btnCopy = $(`<button class="btn btn-primary">Copy CSV to Clipboard</button>`).click(() => {
-			copyText(getAsCsv());
+		const $btnCopy = $(`<button class="btn btn-primary">Copy CSV to Clipboard</button>`).click(async () => {
+			await MiscUtil.pCopyTextToClipboard(getAsCsv());
 			JqueryUtil.showCopiedEffect($btnCopy);
 		}).appendTo($pnlBtns);
 		$modalInner.append(`<hr>`);
@@ -3519,6 +3740,37 @@ ListUtil = {
 		});
 		temp += `</tbody></table>`;
 		$modalInner.append(temp);
+	},
+
+	addListShowHide () {
+		const toInjectShow = `
+			<div class="col-12" id="showsearch">
+				<button class="btn btn-block btn-default btn-xs" type="button">顯示搜尋</button>
+				<br>
+			</div>
+		`;
+
+		const toInjectHide = `
+			<button class="btn btn-default" id="hidesearch">隱藏</button>
+		`;
+
+		$(`#filter-search-input-group`).find(`#reset`).before(toInjectHide);
+		$(`#contentwrapper`).prepend(toInjectShow);
+
+		const listContainer = $(`#listcontainer`);
+		const showSearchWrpr = $("div#showsearch");
+		const hideSearchBtn = $("button#hidesearch");
+		// collapse/expand search button
+		hideSearchBtn.click(function () {
+			listContainer.hide();
+			showSearchWrpr.show();
+			hideSearchBtn.hide();
+		});
+		showSearchWrpr.find("button").click(function () {
+			listContainer.show();
+			showSearchWrpr.hide();
+			hideSearchBtn.show();
+		});
 	}
 };
 
@@ -3545,6 +3797,9 @@ function defaultSourceDeselFn (val) {
 }
 
 function defaultSourceSelFn (val) {
+	var standard = ["PHB", "DMG", "MM", "SCAG", "VGM", "XGE", "MTF", "EEPC", "TTP"];
+	return standard.includes(val);
+	// Haz Edit
 	return !defaultSourceDeselFn(val);
 }
 
@@ -3652,22 +3907,22 @@ UrlUtil = {
 		const $btn = ListUtil.getOrTabRightButton(`btn-link-export`, `magnet`);
 		$btn.addClass("btn-copy-effect")
 			.off("click")
-			.on("click", (evt) => {
+			.on("click", async evt => {
 				let url = window.location.href;
 
 				const toHash = filterBox.getAsSubHashes();
-				parts = Object.keys(toHash).map(hK => {
+				let parts = Object.keys(toHash).map(hK => {
 					const hV = toHash[hK];
 					return UrlUtil.packSubHash(hK, hV, true);
 				});
 				if (evt.shiftKey) {
-					const toEncode = JSON.stringify(ListUtil._getExportableSublist());
+					const toEncode = JSON.stringify(ListUtil.getExportableSublist());
 					const part2 = UrlUtil.packSubHash(ListUtil.SUB_HASH_PREFIX, [toEncode], true);
 					parts = parts.concat(part2);
 				}
 				parts.unshift(url);
 
-				copyText(parts.join(HASH_PART_SEP));
+				await MiscUtil.pCopyTextToClipboard(parts.join(HASH_PART_SEP));
 				JqueryUtil.showCopiedEffect($btn);
 			})
 			.attr("title", "複製篩選器連結（SHIFT以加入列表）")
@@ -3754,6 +4009,9 @@ UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_DISEASE] = UrlUtil.PG_CONDITIONS_DISEASES;
 UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_TABLE] = UrlUtil.PG_TABLES;
 UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_TABLE_GROUP] = UrlUtil.PG_TABLES;
 UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_SHIP] = UrlUtil.PG_SHIPS;
+UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_PACT_BOON] = UrlUtil.PG_OPT_FEATURES;
+UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_ELEMENTAL_DISCIPLINE] = UrlUtil.PG_OPT_FEATURES;
+UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_ARTIFICER_INFUSION] = UrlUtil.PG_OPT_FEATURES;
 
 if (!IS_DEPLOYED && !IS_ROLL20 && typeof window !== "undefined") {
 	// for local testing, hotkey to get a link to the current page on the main site
@@ -3832,7 +4090,7 @@ SortUtil = {
 		if (!b) return 1;
 		if (a.toLowerCase().trim() === "special equipment") return -1;
 		if (b.toLowerCase().trim() === "special equipment") return 1;
-		return SortUtil.ascSort(a, b);
+		return 0;//SortUtil.ascSortLower(a, b);
 	},
 
 	_alignFirst: ["L", "C"],
@@ -3878,6 +4136,35 @@ SortUtil = {
 
 		$(target).find(".caret").removeClass("caret");
 		$this.find(".caret_wrp").addClass("caret").toggleClass("caret--reverse", direction === "asc");
+	},
+
+	srcSort_ch (a,b){
+		if (a.hasOwnProperty("item") && b.hasOwnProperty("item")) {
+			return SortUtil._srcSort_ch(a.item, b.item);
+		}
+		return SortUtil._srcSort_ch(a, b);
+	},
+
+	_srcSort_ch (a,b){
+		let weight_cmp = SortUtil._getSourceWeight(a) - SortUtil._getSourceWeight(b);
+		if (weight_cmp != 0) return weight_cmp;
+		return SortUtil._ascSort(a, b);
+	},
+	_getSourceWeight(src){
+		switch(src){
+			case SRC_PHB: return 0;
+			case SRC_DMG: return 1;
+			case SRC_MM: return 2;
+			case SRC_EEPC: return 10;
+			case SRC_SCAG: return 11;
+			case SRC_VGM: return 12;
+			case SRC_TTP: return 13;
+			case SRC_XGE: return 14;
+			case SRC_MTF: return 15;
+			case SRC_GGR: return 16;
+			default:
+				return 100;
+		}
 	}
 };
 
@@ -3885,32 +4172,14 @@ SortUtil = {
 DataUtil = {
 	_loaded: {},
 
-	loadJSON: function (url, ...otherData) { // FIXME otherData doesn't get returned, as resolve() can only return a single value
-		return new Promise((resolve, reject) => {
-			function handleAlreadyLoaded (url) {
-				resolve(DataUtil._loaded[url], otherData);
-			}
+	async loadJSON (url, ...otherData) { // FIXME otherData doesn't get returned, as resolve() can only return a single value
+		const procUrl = UrlUtil.link(url);
 
-			if (this._loaded[url]) {
-				handleAlreadyLoaded(url);
-				return;
-			}
+		if (DataUtil._loaded[url]) {
+			return DataUtil._loaded[url] // , otherData
+		}
 
-			const procUrl = UrlUtil.link(url);
-			if (this._loaded[procUrl]) {
-				handleAlreadyLoaded(procUrl);
-				return;
-			}
-
-			const request = getRequest(procUrl);
-			if (procUrl !== url) {
-				request.onerror = function () {
-					const fallbackRequest = getRequest(url);
-					fallbackRequest.send();
-				};
-			}
-			request.send();
-
+		const data = await new Promise((resolve, reject) => {
 			function getRequest (toUrl) {
 				const request = new XMLHttpRequest();
 				request.open("GET", toUrl, true);
@@ -3921,37 +4190,78 @@ DataUtil = {
 						DataUtil._loaded[toUrl] = data;
 						resolve(data, otherData);
 					} catch (e) {
-						reject(new Error(`Could not parse JSON from ${toUrl}: ${e}`));
+						reject(new Error(`Could not parse JSON from ${toUrl}: ${e.message}`));
 					}
 				};
-				request.onerror = (e) => reject(new Error(`Error during JSON request: ${e}`));
+				request.onerror = (e) => reject(new Error(`Error during JSON request: ${e.target.status}`));
 				return request;
 			}
+
+			const request = getRequest(procUrl);
+			if (procUrl !== url) {
+				request.onerror = function () {
+					const fallbackRequest = getRequest(url);
+					fallbackRequest.send();
+				};
+			}
+			request.send();
 		});
+
+		await DataUtil.pDoMetaMerge(data);
+
+		return data;
 	},
 
-	multiLoadJSON: function (toLoads, onEachLoadFunction, onFinalLoadFunction, getDependencyLoadable) {
-		if (!toLoads.length) onFinalLoadFunction([]);
-		return Promise.all(toLoads.map(tl => this.loadJSON(tl.url))).then(datas => {
-			let dependencies = [];
-			datas.forEach((data, i) => {
-				const deps = MiscUtil.getProperty(data, "_meta", "dependencies");
-				if (deps) deps.forEach(d => dependencies.push(getDependencyLoadable(d)));
-				if (onEachLoadFunction) onEachLoadFunction(toLoads[i], data);
-			});
-			// avoid double-loading dependencies
-			if (dependencies.length) dependencies = dependencies.filter(it => !toLoads.find(({url}) => url === it.url));
-			if (dependencies.length) {
-				// does this need to handle arbitrary dependency nesting? Because it doesn't
-				return Promise.all(dependencies.map(tl => this.loadJSON(tl.url, tl.url))).then(depDatas => {
-					depDatas.forEach((data, i) => {
-						if (onEachLoadFunction) onEachLoadFunction(dependencies[i], data);
-					});
-					datas = datas.concat(depDatas);
-					return Promise.resolve(onFinalLoadFunction(datas));
+	async pDoMetaMerge (data, options) {
+		if (data._meta && data._meta.dependencies) {
+			await Promise.all(Object.entries(data._meta.dependencies).map(async ([prop, sources]) => {
+				if (!data[prop]) return; // if e.g. monster dependencies are declared, but there are no monsters to merge with, bail out
+
+				const toLoads = await Promise.all(sources.map(async source => DataUtil.pGetLoadableByMeta(prop, source)));
+				const dependencyData = await Promise.all(toLoads.map(toLoad => DataUtil.loadJSON(toLoad)));
+				const flatDependencyData = dependencyData.map(dd => dd[prop]).flat();
+				await Promise.all(data[prop].map(async entry => {
+					if (entry._copy) {
+						switch (prop) {
+							case "monster": {
+								return Renderer.monster.pMergeCopy(flatDependencyData, entry, options);
+							}
+							default: throw new Error(`No _copy merge strategy specified for property "${prop}"`);
+						}
+					}
+				}));
+			}));
+			delete data._meta.dependencies;
+		}
+
+		if (data._meta && data._meta.otherSources) {
+			await Promise.all(Object.entries(data._meta.otherSources).map(async ([prop, sources]) => {
+				const toLoads = await Promise.all(Object.entries(sources).map(async ([source, findWith]) => ({
+					findWith,
+					url: await DataUtil.pGetLoadableByMeta(prop, source)
+				})));
+
+				const additionalData = await Promise.all(toLoads.map(async ({findWith, url}) => ({findWith, sourceData: await DataUtil.loadJSON(url)})));
+
+				additionalData.forEach(dataAndSource => {
+					const findWith = dataAndSource.findWith;
+					const ad = dataAndSource.sourceData;
+					const toAppend = ad[prop].filter(it => it.otherSources && it.otherSources.find(os => os.source === findWith));
+					if (toAppend.length) data[prop] = (data[prop] || []).concat(toAppend);
 				});
-			} else return Promise.resolve(onFinalLoadFunction(datas));
-		});
+			}));
+			delete data._meta.otherSources;
+		}
+	},
+
+	async multiLoadJSON (toLoads, onEachLoadFunction, onFinalLoadFunction) {
+		if (!toLoads.length) onFinalLoadFunction([]);
+
+		const datas = await Promise.all(toLoads.map(tl => DataUtil.loadJSON(tl.url)));
+		if (onEachLoadFunction) {
+			datas.forEach((data, i) => onEachLoadFunction(toLoads[i], data));
+		}
+		return onFinalLoadFunction(datas);
 	},
 
 	userDownload: function (filename, data) {
@@ -3962,9 +4272,13 @@ DataUtil = {
 		$a.remove();
 	},
 
+	getCleanFilename (filename) {
+		return filename.replace(/[^-_a-zA-Z0-9]/g, "_");
+	},
+
 	getCsv (headers, rows) {
 		function escapeCsv (str) {
-			return `"${str.replace(/"/g, `""`)}"`;
+			return `"${str.replace(/"/g, `""`).replace(/ +/g, " ").replace(/\n\n+/gi, "\n\n")}"`;
 		}
 
 		function toCsv (row) {
@@ -3981,32 +4295,54 @@ DataUtil = {
 		$a.remove();
 	},
 
-	userUpload (fnCallback) {
-		function loadSaved (event) {
-			const input = event.target;
+	pUserUpload () {
+		return new Promise(resolve => {
+			const $iptAdd = $(`<input type="file" accept=".json" style="position: fixed; top: -100px; left: -100px; display: none;">`).on("change", (evt) => {
+				const input = evt.target;
 
-			const reader = new FileReader();
-			reader.onload = () => {
-				const text = reader.result;
-				const json = JSON.parse(text);
-				fnCallback(json);
-			};
-			reader.readAsText(input.files[0]);
-		}
+				const reader = new FileReader();
+				reader.onload = () => {
+					const text = reader.result;
+					const json = JSON.parse(text);
+					resolve(json);
+				};
 
-		const $iptAdd = $(`<input type="file" accept=".json" style="position: fixed; top: -100px; left: -100px; display: none;">`).on("change", (evt) => {
-			loadSaved(evt);
-		}).appendTo($(`body`));
-		$iptAdd.click();
+				reader.readAsText(input.files[0]);
+			}).appendTo($(`body`));
+			$iptAdd.click();
+		});
 	},
 
 	cleanJson (cpy) {
 		cpy.name = cpy._displayName || cpy.name;
-		Object.keys(cpy).filter(k => k.startsWith("_") || !cpy[k] || (cpy[k] instanceof Array && !cpy[k].length)).forEach(k => delete cpy[k]);
+		DataUtil.__cleanJsonObject(cpy);
 		return cpy;
 	},
 
-	dependencyMergers: {},
+	__cleanJsonObject (obj) {
+		if (typeof obj === "object") {
+			if (obj instanceof Array) {
+				obj.forEach(it => DataUtil.__cleanJsonObject(it));
+			} else {
+				Object.entries(obj).forEach(([k, v]) => {
+					if (k.startsWith("_") || k === "uniqueId") delete obj[k];
+					else DataUtil.__cleanJsonObject(v);
+				});
+			}
+		}
+	},
+
+	async pGetLoadableByMeta (key, value) {
+		// TODO in future, allow value to be e.g. a string (assumed to be an official data's source); an object e.g. `{type: external, url: <>}`,...
+		switch (key) {
+			case "monster": {
+				const index = await DataUtil.loadJSON(`data/bestiary/index.json`);
+				if (!index[value]) throw new Error(`Bestiary index did not contain source "${value}"`);
+				return `data/bestiary/${index[value]}`;
+			}
+			default: throw new Error(`Could not get loadable URL for \`${JSON.stringify({key, value})}\``);
+		}
+	},
 
 	class: {
 		loadJSON: function (baseUrl = "") {
@@ -4021,7 +4357,7 @@ DataUtil = {
 	},
 
 	deity: {
-		doPostLoad: function (data, callbackFn) {
+		doPostLoad: function (data) {
 			const PRINT_ORDER = [
 				SRC_PHB,
 				SRC_DMG,
@@ -4054,16 +4390,12 @@ DataUtil = {
 				laterPrinting.push(src);
 			});
 			data.deity.forEach(g => g._isEnhanced = true);
-
-			callbackFn(data);
 		},
 
-		loadJSON: function (baseUrl = "") {
-			return new Promise((resolve) => {
-				DataUtil.loadJSON(`${baseUrl}data/deities.json`).then((data) => {
-					DataUtil.deity.doPostLoad(data, resolve);
-				});
-			});
+		loadJSON: async function (baseUrl = "") {
+			const data = await DataUtil.loadJSON(`${baseUrl}data/deities.json`);
+			DataUtil.deity.doPostLoad(data);
+			return data;
 		}
 	},
 
@@ -4082,38 +4414,6 @@ DataUtil = {
 	}
 };
 
-// SHOW/HIDE SEARCH ====================================================================================================
-function addListShowHide () {
-	const toInjectShow = `
-		<div class="col-12" id="showsearch">
-			<button class="btn btn-block btn-default btn-xs" type="button">顯示搜尋視窗</button>
-			<br>
-		</div>
-	`;
-
-	const toInjectHide = `
-		<button class="btn btn-default" id="hidesearch">隱藏</button>
-	`;
-
-	$(`#filter-search-input-group`).find(`#reset`).before(toInjectHide);
-	$(`#contentwrapper`).prepend(toInjectShow);
-
-	const listContainer = $(`#listcontainer`);
-	const showSearchWrpr = $("div#showsearch");
-	const hideSearchBtn = $("button#hidesearch");
-	// collapse/expand search button
-	hideSearchBtn.click(function () {
-		listContainer.hide();
-		showSearchWrpr.show();
-		hideSearchBtn.hide();
-	});
-	showSearchWrpr.find("button").click(function () {
-		listContainer.show();
-		showSearchWrpr.hide();
-		hideSearchBtn.show();
-	});
-}
-
 // ROLLING =============================================================================================================
 RollerUtil = {
 	isCrypto: () => {
@@ -4121,9 +4421,10 @@ RollerUtil = {
 	},
 
 	randomise: (max, min = 1) => {
+		if (min > max) return 0;
 		if (max === min) return max;
 		if (RollerUtil.isCrypto()) {
-			return RollerUtil._randomise(min, max + min);
+			return RollerUtil._randomise(min, max + 1);
 		} else {
 			return RollerUtil.roll(max) + min;
 		}
@@ -4188,14 +4489,17 @@ RollerUtil = {
 		$(`#filter-search-input-group`).find(`#reset`).before($btnRoll);
 	},
 
-	isRollCol (string) {
-		if (typeof string !== "string") return false;
-		return !!/^({@dice )?(\d+)?d\d+(\s*[+-]\s*(\d+)?d\d+)*(\s*[-+]\s*\d+)?(})?$/.exec(string.trim());
+	isRollCol (colLabel) {
+		if (typeof colLabel !== "string") return false;
+		if (/^{@dice [^}]+}$/.test(colLabel.trim())) return true;
+		return !!Renderer.dice.parseToTree(colLabel);
 	},
 
 	_DICE_REGEX_STR: "((([1-9]\\d*)?d([1-9]\\d*)(\\s*?[-+×x*]\\s*?(\\d,\\d|\\d)+)?))+?"
 };
 RollerUtil.DICE_REGEX = new RegExp(RollerUtil._DICE_REGEX_STR, "g");
+RollerUtil.REGEX_DAMAGE_DICE = /(\d+)( \((?:{@dice |{@damage ))([-+0-9d ]*)(}\) [a-z]+( \([-a-zA-Z0-9 ]+\))?( or [a-z]+( \([-a-zA-Z0-9 ]+\))?)? damage)/gi;
+RollerUtil.REGEX_DAMAGE_FLAT = /(Hit: |{@h})([0-9]+)( [a-z]+( \([-a-zA-Z0-9 ]+\))?( or [a-z]+( \([-a-zA-Z0-9 ]+\))?)? damage)/gi;
 
 // STORAGE =============================================================================================================
 // Dependency: localforage
@@ -4277,6 +4581,7 @@ StorageUtil = {
 
 	syncSet (key, value) {
 		StorageUtil.getSyncStorage().setItem(key, JSON.stringify(value));
+		StorageUtil._syncTrackKey(key)
 	},
 
 	syncSetForPage (key, value) {
@@ -4285,12 +4590,31 @@ StorageUtil = {
 
 	syncRemove (key) {
 		StorageUtil.getSyncStorage().removeItem(key);
+		StorageUtil._syncTrackKey(key, true);
 	},
 
 	isSyncFake () {
 		return !!StorageUtil.getSyncStorage().isSyncFake
 	},
-	// END SYNC METHOD /////////////////////////////////////////////////////////////////////////////////////////////////
+
+	_syncTrackKey (key, isRemove) {
+		const meta = StorageUtil.syncGet(StorageUtil._META_KEY) || {};
+		if (isRemove) delete meta[key];
+		else meta[key] = 1;
+		StorageUtil.getSyncStorage().setItem(StorageUtil._META_KEY, JSON.stringify(meta));
+	},
+
+	syncGetDump () {
+		const out = {};
+		const meta = StorageUtil.syncGet(StorageUtil._META_KEY) || {};
+		Object.entries(meta).filter(([key, isPresent]) => isPresent).forEach(([key]) => out[key] = StorageUtil.syncGet(key));
+		return out;
+	},
+
+	syncSetFromDump (dump) {
+		Object.entries(dump).forEach(([k, v]) => StorageUtil.syncSet(k, v));
+	},
+	// END SYNC METHODS ////////////////////////////////////////////////////////////////////////////////////////////////
 
 	async pIsAsyncFake () {
 		const storage = await StorageUtil.getAsyncStorage();
@@ -4303,6 +4627,7 @@ StorageUtil = {
 	},
 
 	async pSet (key, value) {
+		StorageUtil._pTrackKey(key);
 		const storage = await StorageUtil.getAsyncStorage();
 		return storage.setItem(key, value);
 	},
@@ -4323,10 +4648,31 @@ StorageUtil = {
 	},
 
 	async pRemove (key) {
+		StorageUtil._pTrackKey(key, true);
 		const storage = await StorageUtil.getAsyncStorage();
 		return storage.removeItem(key);
+	},
+
+	async _pTrackKey (key, isRemove) {
+		const storage = await StorageUtil.getAsyncStorage();
+		const meta = (await StorageUtil.pGet(StorageUtil._META_KEY)) || {};
+		if (isRemove) delete meta[key];
+		else meta[key] = 1;
+		storage.setItem(StorageUtil._META_KEY, meta);
+	},
+
+	async pGetDump () {
+		const out = {};
+		const meta = (await StorageUtil.pGet(StorageUtil._META_KEY)) || {};
+		await Promise.all(Object.entries(meta).filter(([key, isPresent]) => isPresent).map(async ([key]) => out[key] = await StorageUtil.pGet(key)));
+		return out;
+	},
+
+	async pSetFromDump (dump) {
+		return Promise.all(Object.entries(dump).map(([k, v]) => StorageUtil.pSet(k, v)));
 	}
 };
+StorageUtil._META_KEY = "_STORAGE_META_STORAGE";
 
 // TODO transition cookie-like storage items over to this
 SessionStorageUtil = {
@@ -4421,21 +4767,22 @@ BrewUtil = {
 	},
 
 	async pPurgeBrew (error) {
-		window.alert("Error when loading homebrew! Purging corrupt data...");
+		JqueryUtil.doToast({
+			content: "Error when loading homebrew! Purged homebrew data. (See the log for more information.)",
+			type: "danger"
+		});
 		await StorageUtil.pRemove(HOMEBREW_STORAGE);
 		StorageUtil.syncRemove(HOMEBREW_META_STORAGE);
 		BrewUtil.homebrew = null;
 		window.location.hash = "";
 		if (error) {
-			setTimeout(() => {
-				throw error;
-			}, 1);
+			setTimeout(() => { throw error; });
 		}
 	},
 
 	async pAddLocalBrewData (callbackFn = async (d, page) => BrewUtil.pDoHandleBrewJson(d, page, null)) {
 		if (!IS_ROLL20 && !IS_DEPLOYED) {
-			return DataUtil.loadJSON(`${EntryRenderer.getDefaultRenderer().baseUrl}${JSON_HOMEBREW_INDEX}`).then(async (data) => {
+			return DataUtil.loadJSON(`${Renderer.get().baseUrl}${JSON_HOMEBREW_INDEX}`).then(async (data) => {
 				// auto-load from `homebrew/`, for custom versions of the site
 				if (data.toImport.length) {
 					const page = UrlUtil.getCurrentPage();
@@ -4471,6 +4818,7 @@ BrewUtil = {
 		if (cat === "bookData") return "Book Text";
 		if (cat === "itemProperty") return "Item Property";
 		if (cat === "variant") return "Magic Item Variant";
+		if (cat === "monsterFluff") return "Monster Fluff";
 		return cat.uppercaseFirst();
 	},
 	async _pRenderBrewScreen ($appendTo, $overlay, $window, isModal, getBrewOnClose) {
@@ -4513,11 +4861,17 @@ BrewUtil = {
 			try {
 				parsedUrl = new URL(enteredUrl);
 			} catch (e) {
-				window.alert('The entered URL does not seem to be valid.');
+				JqueryUtil.doToast({
+					content: `The provided URL does not appear to be valid.`,
+					type: "danger"
+				});
 				return;
 			}
 			BrewUtil.addBrewRemote(null, parsedUrl.href).catch(() => {
-				window.alert('Could not load homebrew from the given URL.');
+				JqueryUtil.doToast({
+					content: "Could not load homebrew from the provided URL.",
+					type: "danger"
+				});
 			});
 		});
 
@@ -4527,7 +4881,7 @@ BrewUtil = {
 				<div id="brewlistcontainer" class="listcontainer homebrew-window dropdown-menu">
 					<h4><span>Get Homebrew</span></h4>
 					<p><i>A list of homebrew available in the public repository. Click a name to load the homebrew, or view the source directly.<br>
-					Contributions are welcome; see the <a href="https://github.com/TheGiddyLimit/homebrew/blob/master/README.md" target="_blank">README</a>, or stop by our <a href="https://discord.gg/WH6kdUn" target="_blank">Discord</a>.</i></p>
+					Contributions are welcome; see the <a href="https://github.com/TheGiddyLimit/homebrew/blob/master/README.md" target="_blank" rel="noopener">README</a>, or stop by our <a href="https://discord.gg/WH6kdUn" target="_blank" rel="noopener">Discord</a>.</i></p>
 					<hr class="manbrew__hr">
 					<div class="manbrew__load_all_wrp">
 						<button class="btn btn-default btn-xs manbrew__load_all" disabled title="(Excluding samples)">Add All</button>
@@ -4645,7 +4999,7 @@ BrewUtil = {
 										<span class="col-3 author">${it._brewAuthor}</span>
 										<span class="col-2 category text-align-center">${it._brewCat}</span>
 										<span class="col-2 timestamp text-align-center">${it._brewAdded ? MiscUtil.dateToStr(new Date(it._brewAdded * 1000), true) : ""}</span>
-										<span class="col-1 source manbrew__source"><a href="${it.download_url}" target="_blank">View Raw</a></span>
+										<span class="col-1 source manbrew__source"><a href="${it.download_url}" target="_blank" rel="noopener">View Raw</a></span>
 									</section>
 								</li>`;
 						});
@@ -4674,7 +5028,7 @@ BrewUtil = {
 			.append(" ")
 			.append($btnLoadFromUrl)
 			.append(" ")
-			.append(`<a href="https://github.com/TheGiddyLimit/homebrew" target="_blank"><button class="btn btn-default btn-sm btn-file">Browse Source Repository</button></a>`);
+			.append(`<a href="https://github.com/TheGiddyLimit/homebrew" target="_blank" rel="noopener"><button class="btn btn-default btn-sm btn-file">Browse Source Repository</button></a>`);
 		if (!isModal) $btnWrp.append(" ").append($btnDelAll);
 
 		$overlay.append($window);
@@ -4717,7 +5071,7 @@ BrewUtil = {
 								out.extraInfo = ` (${Parser.psiTypeToFull(bru.type)})`;
 								break;
 							case "itemProperty": {
-								if (bru.entries) out.name = EntryRenderer.findName(bru.entries)
+								if (bru.entries) out.name = Renderer.findName(bru.entries);
 								if (!out.name) out.name = bru.abbreviation;
 								break;
 							}
@@ -4832,7 +5186,7 @@ BrewUtil = {
 						switch (page) {
 							case UrlUtil.PG_SPELLS: return ["spell"];
 							case UrlUtil.PG_CLASSES: return ["class", "subclass"];
-							case UrlUtil.PG_BESTIARY: return ["monster", "legendaryGroup"];
+							case UrlUtil.PG_BESTIARY: return ["monster", "legendaryGroup", "monsterFluff"];
 							case UrlUtil.PG_BACKGROUNDS: return ["background"];
 							case UrlUtil.PG_FEATS: return ["feat"];
 							case UrlUtil.PG_OPT_FEATURES: return ["optionalfeature"];
@@ -4868,7 +5222,7 @@ BrewUtil = {
 					const $row = $(`<li class="row manbrew__row">
 						<span class="col-5 manbrew__col--tall source manbrew__source">${isGroup ? "<i>" : ""}${src.full}${isGroup ? "</i>" : ""}</span>
 						<span class="col-4 manbrew__col--tall authors">${validAuthors}</span>
-						<${src.url ? "a" : "span"} class="col-1 manbrew__col--tall text-align-center" ${src.url ? `href="${src.url}" target="_blank"` : ""}>${src.url ? "View Source" : ""}</${src.url ? "a" : "span"}>
+						<${src.url ? "a" : "span"} class="col-1 manbrew__col--tall text-align-center" ${src.url ? `href="${src.url}" target="_blank" rel="noopener"` : ""}>${src.url ? "View Source" : ""}</${src.url ? "a" : "span"}>
 					</li>`);
 					createButtons(src, $row);
 					$ul.append($row);
@@ -4924,6 +5278,8 @@ BrewUtil = {
 			reader.onload = async () => {
 				const text = reader.result;
 				const json = JSON.parse(text);
+
+				await DataUtil.pDoMetaMerge(json);
 
 				await BrewUtil.pDoHandleBrewJson(json, page, pRefreshBrewList);
 				await ExcludeUtil.pSetList(json.blacklist || []);
@@ -4984,6 +5340,7 @@ BrewUtil = {
 		switch (category) {
 			case "spell":
 			case "monster":
+			case "monsterFluff":
 			case "background":
 			case "feat":
 			case "optionalfeature":
@@ -5073,19 +5430,49 @@ BrewUtil = {
 		BrewUtil._pRenderBrewScreen($body, $overlay, $window, true);
 	},
 
+	async pAddEntry (prop, obj) {
+		BrewUtil._mutUniqueId(obj);
+		(BrewUtil.homebrew[prop] = BrewUtil.homebrew[prop] || []).push(obj);
+		await StorageUtil.pSet(HOMEBREW_STORAGE, BrewUtil.homebrew);
+		return BrewUtil.homebrew[prop].length - 1;
+	},
+
+	async pRemoveEntry (prop, obj) {
+		const ix = (BrewUtil.homebrew[prop] = BrewUtil.homebrew[prop] || []).findIndex(it => it.uniqueId === obj.uniqueId);
+		if (~ix) {
+			BrewUtil.homebrew[prop].splice(ix, 1);
+			return StorageUtil.pSet(HOMEBREW_STORAGE, BrewUtil.homebrew);
+		} else throw new Error(`Could not find object with ID "${obj.uniqueId}" in "${prop}" list`);
+	},
+
+	getEntryIxByName (prop, obj) {
+		return (BrewUtil.homebrew[prop] = BrewUtil.homebrew[prop] || []).findIndex(it => it.name === obj.name && it.source === obj.source);
+	},
+
+	async pUpdateEntryByIx (prop, ix, obj) {
+		if (~ix && ix < BrewUtil.homebrew[prop].length) {
+			BrewUtil._mutUniqueId(obj);
+			BrewUtil.homebrew[prop].splice(ix, 1, obj);
+			return StorageUtil.pSet(HOMEBREW_STORAGE, BrewUtil.homebrew);
+		} else throw new Error(`Index "${ix}" was not valid!`);
+	},
+
+	_mutUniqueId (obj) {
+		delete obj.uniqueId; // avoid basing the hash on the previous hash
+		obj.uniqueId = CryptUtil.md5(JSON.stringify(obj));
+	},
+
 	_DIRS: ["spell", "class", "subclass", "creature", "background", "feat", "optionalfeature", "race", "object", "trap", "hazard", "deity", "item", "reward", "psionic", "variantrule", "condition", "disease", "adventure", "book", "ship", "magicvariant"],
-	_STORABLE: ["class", "subclass", "spell", "monster", "legendaryGroup", "background", "feat", "optionalfeature", "race", "deity", "item", "variant", "itemProperty", "itemType", "psionic", "reward", "object", "trap", "hazard", "variantrule", "condition", "disease", "adventure", "adventureData", "book", "bookData", "table", "tableGroup", "ship"],
+	_STORABLE: ["class", "subclass", "spell", "monster", "legendaryGroup", "monsterFluff", "background", "feat", "optionalfeature", "race", "deity", "item", "variant", "itemProperty", "itemType", "psionic", "reward", "object", "trap", "hazard", "variantrule", "condition", "disease", "adventure", "adventureData", "book", "bookData", "table", "tableGroup", "ship"],
 	async pDoHandleBrewJson (json, page, pFuncRefresh) {
 		function storePrep (arrName) {
 			if (json[arrName]) {
-				json[arrName].forEach(it => {
-					it.uniqueId = CryptUtil.md5(JSON.stringify(it));
-				});
+				json[arrName].forEach(it => BrewUtil._mutUniqueId(it));
 			} else json[arrName] = [];
 		}
 
 		// prepare for storage
-		if (json.race && json.race.length) json.race = EntryRenderer.race.mergeSubraces(json.race);
+		if (json.race && json.race.length) json.race = Renderer.race.mergeSubraces(json.race);
 		BrewUtil._STORABLE.forEach(storePrep);
 
 		const bookPairs = [
@@ -5241,7 +5628,7 @@ BrewUtil = {
 	_buildSourceCache () {
 		function doBuild () {
 			if (BrewUtil.homebrewMeta && BrewUtil.homebrewMeta.sources) {
-				BrewUtil.homebrewMeta.sources.forEach(src => BrewUtil._sourceCache[src.json] = ({abbreviation: src.abbreviation, full: src.full}));
+				BrewUtil.homebrewMeta.sources.forEach(src => BrewUtil._sourceCache[src.json] = ({...src}));
 			}
 		}
 
@@ -5288,6 +5675,31 @@ BrewUtil = {
 	sourceJsonToAbv (source) {
 		BrewUtil._buildSourceCache();
 		return BrewUtil._sourceCache[source] ? BrewUtil._sourceCache[source].abbreviation || source : source;
+	},
+
+	sourceJsonToSource (source) {
+		BrewUtil._buildSourceCache();
+		return BrewUtil._sourceCache[source] ? BrewUtil._sourceCache[source] : null;
+	},
+
+	addSource (source) {
+		BrewUtil._resetSourceCache();
+		const exists = BrewUtil.homebrewMeta.sources.some(it => it.json === source.json);
+		if (exists) throw new Error(`Source "${source.json}" already exists!`);
+		(BrewUtil.homebrewMeta.sources = BrewUtil.homebrewMeta.sources || []).push(source);
+		StorageUtil.syncSet(HOMEBREW_META_STORAGE, BrewUtil.homebrewMeta);
+	},
+
+	updateSource (source) {
+		BrewUtil._resetSourceCache();
+		const ix = BrewUtil.homebrewMeta.sources.findIndex(it => it.json === source.json);
+		if (!~ix) throw new Error(`Source "${source.json}" does not exist!`);
+		const json = BrewUtil.homebrewMeta.sources[ix].json;
+		BrewUtil.homebrewMeta.sources[ix] = {
+			...source,
+			json
+		};
+		StorageUtil.syncSet(HOMEBREW_META_STORAGE, BrewUtil.homebrewMeta);
 	},
 
 	/**
@@ -5517,31 +5929,6 @@ CollectionUtil = {
 		}
 	},
 
-	arrayEq (array1, array2) {
-		if (!array1 && !array2) return true;
-		else if ((!array1 && array2) || (array1 && !array2)) return false;
-
-		let temp = [];
-		if ((!array1[0]) || (!array2[0])) return false;
-		if (array1.length !== array2.length) return false;
-		let key;
-		// Put all the elements from array1 into a "tagged" array
-		for (let i = 0; i < array1.length; i++) {
-			key = (typeof array1[i]) + "~" + array1[i]; // Use "typeof" so a number 1 isn't equal to a string "1".
-			if (temp[key]) temp[key]++;
-			else temp[key] = 1;
-		}
-		// Go through array2 - if same tag missing in "tagged" array, not equal
-		for (let i = 0; i < array2.length; i++) {
-			key = (typeof array2[i]) + "~" + array2[i];
-			if (temp[key]) {
-				if (temp[key] === 0) return false;
-				else temp[key]--;
-			} else return false;
-		}
-		return true;
-	},
-
 	setEq (set1, set2) {
 		if (set1.size !== set2.size) return false;
 		for (const a of set1) if (!set2.has(a)) return false;
@@ -5565,6 +5952,31 @@ Array.prototype.filterIndex = Array.prototype.filterIndex ||
 			if (fnCheck(it)) out.push(i);
 		});
 		return out;
+	};
+
+Array.prototype.equals = Array.prototype.equals ||
+	function (that) {
+		if (!that) return false;
+		const len = this.length;
+		if (len !== that.length) return false;
+		for (let i = 0; i < len; ++i) {
+			if (this[i] !== that[i]) return false;
+		}
+		return true;
+	};
+
+Array.prototype.partition = Array.prototype.partition ||
+	function (fnIsValid) {
+		return this.reduce(([pass, fail], elem) => fnIsValid(elem) ? [[...pass, elem], fail] : [pass, [...fail, elem]], [[], []]);
+	};
+
+// FIXME remove polyfill after ~March 2019
+Array.prototype.flat = Array.prototype.flat ||
+	function () {
+		function flattenDeep (arr) {
+			return arr.reduce((acc, val) => Array.isArray(val) ? acc.concat(flattenDeep(val)) : acc.concat(val), []);
+		}
+		return flattenDeep(this);
 	};
 
 // OVERLAY VIEW ========================================================================================================
@@ -5635,7 +6047,7 @@ function BookModeView (hashKey, $openBtn, noneVisibleMsg, popTblGetNumShown, doS
 			$msgRow.find(`td`).append($(`<button class="btn btn-default">Close</button>`).on("click", () => {
 				hashTeardown();
 			}));
-			$bkTbl.append($tblRow).append($msgRow).append(EntryRenderer.utils.getBorderTr());
+			$bkTbl.append($tblRow).append($msgRow).append(Renderer.utils.getBorderTr());
 
 			$wrpBook.append($bkTbl);
 			$body.append($wrpBook);
@@ -5669,7 +6081,10 @@ ExcludeUtil = {
 		try {
 			ExcludeUtil._excludes = await StorageUtil.pGet(EXCLUDES_STORAGE) || [];
 		} catch (e) {
-			window.alert("Error when loading content blacklist! Purging corrupt data...");
+			JqueryUtil.doToast({
+				content: "Error when loading content blacklist! Purged blacklist data. (See the log for more information.)",
+				type: "danger"
+			});
 			try {
 				await StorageUtil.pRemove(EXCLUDES_STORAGE);
 			} catch (e) {
@@ -5738,14 +6153,20 @@ ExcludeUtil = {
 
 // ENCOUNTERS ==========================================================================================================
 EncounterUtil = {
-	pGetSavedState () {
-		return new Promise(resolve => {
-			EncounterUtil._pHasSavedStateLocal().then(hasLocal => {
-				if (EncounterUtil._hasSavedStateUrl()) resolve(EncounterUtil._getSavedStateUrl());
-				else if (hasLocal) EncounterUtil._pGetSavedStateLocal().then(local => resolve(local));
-				else resolve(null);
-			});
-		});
+	async pGetSavedState () {
+		if (await EncounterUtil._pHasSavedStateLocal()) {
+			if (await EncounterUtil._hasSavedStateUrl()) {
+				return {
+					type: "url",
+					data: EncounterUtil._getSavedStateUrl()
+				};
+			} else {
+				return {
+					type: "local",
+					data: await EncounterUtil._pGetSavedStateLocal()
+				};
+			}
+		} else return null;
 	},
 
 	_hasSavedStateUrl () {
@@ -5773,19 +6194,26 @@ EncounterUtil = {
 		try {
 			return await StorageUtil.pGet(ENCOUNTER_STORAGE);
 		} catch (e) {
-			alert("Error when loading encounters! Purging saved data...");
-			await StorageUtil.pRemove(ENCOUNTER_STORAGE);
-			setTimeout(() => {
-				throw e;
+			JqueryUtil.doToast({
+				content: "Error when loading encounters! Purged encounter data. (See the log for more information.)",
+				type: "danger"
 			});
+			await StorageUtil.pRemove(ENCOUNTER_STORAGE);
+			setTimeout(() => { throw e; });
 		}
 	},
 
 	async pDoSaveState (toSave) {
 		StorageUtil.pSet(ENCOUNTER_STORAGE, toSave);
+	},
+
+	async pGetAllSaves () {
+		const saved = await StorageUtil.pGet(EncounterUtil.SAVED_ENCOUNTER_SAVE_LOCATION);
+		return saved || {};
 	}
 };
 EncounterUtil.SUB_HASH_PREFIX = "encounter";
+EncounterUtil.SAVED_ENCOUNTER_SAVE_LOCATION = "ENCOUNTER_SAVED_STORAGE";
 
 // REACTOR =============================================================================================================
 class Reactor {
@@ -5831,11 +6259,9 @@ class ReactorEvent {
 // LEGAL NOTICE ========================================================================================================
 if (!IS_ROLL20 && typeof window !== "undefined") {
 	// add an obnoxious banner
+	// FIXME is this something we want? If so, uncomment
+	/*
 	window.addEventListener("load", async () => {
-		// FIXME is this something we want? If so, delete this
-		/* eslint-disable */
-		return;
-
 		if (!StorageUtil.isSyncFake() && await StorageUtil.pGet("seenLegal")) return;
 		const $wrpBanner = $(`<div id="legal-notice"><span>不要把這東西貼到Reddit！</span></div>`);
 		$(`<button class="btn btn-sm btn-default">Whatever, kid</button>`).on("click", () => {
@@ -5843,11 +6269,13 @@ if (!IS_ROLL20 && typeof window !== "undefined") {
 			$wrpBanner.remove();
 		}).appendTo($wrpBanner);
 		$(`body`).append($wrpBanner);
-		/* eslint-enable */
 	});
+	*/
 }
 
 _Donate = {
+	// TAG Disabled until further notice
+	/*
 	init () {
 		if (IS_DEPLOYED) {
 			DataUtil.loadJSON(`https://get.5etools.com/money.php`).then(dosh => {
@@ -5871,7 +6299,29 @@ _Donate = {
 		const isFake = await StorageUtil.pIsAsyncFake();
 		const isNotDonating = await StorageUtil.pGet("notDonating");
 		return isFake || isNotDonating;
+	},
+	*/
+
+	// region Test code, please ignore
+	cycleLeader (ele) {
+		const modes = [{width: 970, height: 90}, {width: 970, height: 250}, {width: 320, height: 50}, {width: 728, height: 90}];
+		_Donate._cycleMode(ele, modes);
+	},
+
+	cycleSide (ele) {
+		const modes = [{width: 300, height: 250}, {width: 300, height: 600}];
+		_Donate._cycleMode(ele, modes);
+	},
+
+	_cycleMode (ele, modes) {
+		const $e = $(ele);
+		const pos = $e.data("pos") || 0;
+		const mode = modes[pos];
+		$e.css(mode);
+		$e.text(`${mode.width}*${mode.height}`);
+		$e.data("pos", (pos + 1) % modes.length)
 	}
+	// endregion
 };
 
 //==================
@@ -5930,11 +6380,11 @@ Parser.raceKeyToDisplay["elf (zendikar)"]	= "精靈(贊迪卡)";
 
 //Subrace
 Parser.subraceKeyToDisplay = {};
-Parser.subraceKeyToDisplay["earth"] = "土";
+Parser.subraceKeyToDisplay["earth"] = "土"; // 元素裔
 Parser.subraceKeyToDisplay["air"]   = "氣";
 Parser.subraceKeyToDisplay["water"] = "水";
 Parser.subraceKeyToDisplay["fire"]  = "火";
-Parser.subraceKeyToDisplay["drow"]  = "卓爾";
+Parser.subraceKeyToDisplay["drow"]  = "卓爾"; // 精靈
 Parser.subraceKeyToDisplay["eladrin"]= "雅靈";
 Parser.subraceKeyToDisplay["high"]  = "高等";
 Parser.subraceKeyToDisplay["wood"]  = "木";
@@ -5945,20 +6395,43 @@ Parser.subraceKeyToDisplay["shadar-kai"]= "影靈";
 Parser.subraceKeyToDisplay["aereni"]    = "艾瑞尼";
 Parser.subraceKeyToDisplay["Valenar"]   = "維歐諾爾";
 Parser.subraceKeyToDisplay["mark of shadow"]= "影龍紋";
-
-Parser.subraceKeyToDisplay["forest"]= "林";
+Parser.subraceKeyToDisplay["mul daya nation"]  = "慕達雅族"; // 精靈贊迪卡
+Parser.subraceKeyToDisplay["forest"]= "林"; // 地侏
 Parser.subraceKeyToDisplay["rock"]  = "岩";
 Parser.subraceKeyToDisplay["deep"]  = "地底";
+Parser.subraceKeyToDisplay["fallen"]= "墮落"; // 阿斯莫
+Parser.subraceKeyToDisplay["scourge"]= "天譴";
+Parser.subraceKeyToDisplay["protector"]= "守護者";
+Parser.subraceKeyToDisplay["duergar"]= "灰"; // 矮人
+Parser.subraceKeyToDisplay["githyanki"]= "吉斯洋基"; // 吉斯人
+Parser.subraceKeyToDisplay["githzerai"]= "吉斯澤萊";
+Parser.subraceKeyToDisplay["drow descent"]= "卓爾血統"; // 半精靈
+Parser.subraceKeyToDisplay["variant"]= "變體"; // 提夫林
+Parser.subraceKeyToDisplay["asmodeus"]= "阿斯莫德";
+Parser.subraceKeyToDisplay["levistus"]= "萊維斯圖斯";
+Parser.subraceKeyToDisplay["fierna"]= "菲爾娜";
+Parser.subraceKeyToDisplay["mammon"]= "瑪門";
+Parser.subraceKeyToDisplay["dispater"]= "狄斯帕特";
+Parser.subraceKeyToDisplay["mephistopheles"]= "梅菲斯托費勒斯";
+Parser.subraceKeyToDisplay["glasya"]= "格萊希亞";
+Parser.subraceKeyToDisplay["zariel"]= "扎瑞爾";
+Parser.subraceKeyToDisplay["baalzebul"]= "巴力西卜";
+Parser.subraceKeyToDisplay[""]= "";
 
 Parser.RaceToDisplay = function(race){
-	race = Parser.translateKeyInMapToDisplay(Parser.raceKeyToDisplay, race);
-	let r_match = race.match(/([^()]*)( ?\((.*)\))?/);
-	if(r_match && r_match[2]){
-		let main_race = Parser.translateKeyInMapToDisplay(Parser.raceKeyToDisplay, r_match[1].replace(/ *$/,""));
-		let sub_race  = Parser.translateKeyInMapToDisplay(Parser.subraceKeyToDisplay, r_match[3]);
-		return main_race + "(" + sub_race + ")";
+	let trans_race = Parser.translateKeyInMapToDisplay(Parser.raceKeyToDisplay, race);
+	if(race===trans_race){
+		let r_match = race.match(/(.*)( ?\(([^(]*)\))$/);
+		if(r_match && r_match[2]){
+			let main_race = Parser.translateKeyInMapToDisplay(Parser.raceKeyToDisplay, r_match[1].replace(/ *$/,""));
+			let sub_race  = Parser.translateKeyInMapToDisplay(Parser.subraceKeyToDisplay, r_match[3]);
+			return main_race + "(" + sub_race + ")";
+		}
+		return race;
 	}
-	return race;
+	else{
+		return trans_race;
+	}
 }
 Parser.SubraceToDisplay = function(sub_race){
 	return Parser.translateKeyInMapToDisplay(Parser.subraceKeyToDisplay, sub_race);
@@ -5976,8 +6449,9 @@ Parser.classKeyToDisplay["bard"]     = "吟遊詩人";
 Parser.classKeyToDisplay["barbarian"]= "野蠻人";
 Parser.classKeyToDisplay["fighter"]  = "戰士";
 Parser.classKeyToDisplay["rogue"]    = "遊蕩者";
-Parser.classKeyToDisplay["artificer"]= "機關術士";
+Parser.classKeyToDisplay["artificer"]= "奇械師";
 Parser.classKeyToDisplay["ranger (revised)"]   = "遊俠(修訂)";
+Parser.classKeyToDisplay["artificer revisited"]= "奇械師(再製)";
 Parser.ClassToDisplay = function(c){
 	let c_match = c.match(/([^()]*)( ?\((.*)\))?/);
 	if(c_match && c_match[2]){
@@ -6000,6 +6474,9 @@ Parser.subclassKeyToDisplay["fiend"] = "邪魔宗主";
 Parser.subclassKeyToDisplay["great old one"] = "舊日支配者";
 Parser.subclassKeyToDisplay["archfey"] = "至高妖精";
 Parser.subclassKeyToDisplay["hexblade"] = "咒劍士";
+Parser.subclassKeyToDisplay["kraken"] = "克拉肯";
+Parser.subclassKeyToDisplay["raven queen"] = "鴉后";
+Parser.subclassKeyToDisplay["seeker"] = "探求者";
 Parser.subclassKeyToDisplay["land"] = "大地結社";
 Parser.subclassKeyToDisplay["knowledge"]  = "知識";
 Parser.subclassKeyToDisplay["life"]       = "生命";
@@ -6016,6 +6493,16 @@ Parser.subclassKeyToDisplay["beauty"]     = "美麗";
 Parser.subclassKeyToDisplay["darkness"]   = "黑暗";
 Parser.subclassKeyToDisplay["destruction"]= "毀滅";
 Parser.subclassKeyToDisplay["order"]      = "秩序";
+Parser.subclassKeyToDisplay["gloom stalker"] = "幽域追蹤者";
+Parser.subclassKeyToDisplay["horizon walker"] = "境界行者";
+Parser.subclassKeyToDisplay["monster slayer"] = "怪物殺手";
+Parser.subclassKeyToDisplay["ancients"] = "遠古";
+Parser.subclassKeyToDisplay["devotion"] = "奉獻";
+Parser.subclassKeyToDisplay["vengeance"] = "復仇";
+Parser.subclassKeyToDisplay["oathbreaker"] = "破誓者";
+Parser.subclassKeyToDisplay["crown"] = "王冠";
+Parser.subclassKeyToDisplay["conquest"] = "征服";
+Parser.subclassKeyToDisplay["redemption"] = "救贖";
 Parser.SubclassToDisplay = function(sc){
 	let sc_match = sc.match(/([^()]*)( ?\((.*)\))?/);
 	if(sc_match && sc_match[2]){
@@ -6106,19 +6593,20 @@ Parser.ConditionToDisplay = function(c){
 }
 
 //Armor
-Parser.keyToDisplay["light"]  = "輕";
-Parser.keyToDisplay["medium"] = "中";
-Parser.keyToDisplay["heavy"]  = "重";
-Parser.keyToDisplay["shields"]  = "盾牌";
+Parser.armorKeyToDisplay = {};
+Parser.armorKeyToDisplay["light"]  = "輕";
+Parser.armorKeyToDisplay["medium"] = "中";
+Parser.armorKeyToDisplay["heavy"]  = "重";
+Parser.armorKeyToDisplay["shields"]  = "盾牌";
 Parser.ArmorToDisplay = function(armor){
-	return Parser.translateKeyToDisplay(armor);
+	return Parser.translateKeyInMapToDisplay(Parser.armorKeyToDisplay, armor);
 }
 
 //Weapon
 Parser.keyToDisplay["simple"]  = "簡易";
 Parser.keyToDisplay["martial"] = "軍用";
 //Tools
-Parser.keyToDisplay["alchemist's supplies"] 	= "煉金術士設備";
+Parser.keyToDisplay["alchemist's supplies"] 	= "煉金師設備";
 Parser.keyToDisplay["artisan's tools"]  		= "工匠工具";
 Parser.keyToDisplay["brewer's supplies"]  		= "釀酒設備";
 Parser.keyToDisplay["calligrapher's supplies"]  = "書寫設備";
@@ -6144,9 +6632,6 @@ Parser.keyToDisplay["cone"]= "錐形";
 Parser.keyToDisplay["cylinder"]= "圓柱";
 Parser.keyToDisplay["radius"]= "半徑";
 
-
-
-
 //Spell
 Parser.keyToDisplay["action"] = "動作";
 Parser.keyToDisplay["bonus"] = "附贈";
@@ -6165,6 +6650,7 @@ Parser.itemKeyToDisplay["very rare"]= "非常珍稀";
 Parser.itemKeyToDisplay["legendary"]= "傳說";
 Parser.itemKeyToDisplay["artifact"] = "神器";
 Parser.itemKeyToDisplay["unknown"] 	= "不明";
+Parser.itemKeyToDisplay["unknown (magic)"] 	= "不明(魔法)";
 Parser.itemKeyToDisplay["other"] 	= "其他";
 Parser.itemKeyToDisplay["varies"] 	= "可變";
 
@@ -6207,11 +6693,17 @@ Parser.itemTypeKeyToDisplay["futuristic"] = "未來";
 Parser.itemTypeKeyToDisplay["staff"] 	= "法杖";
 Parser.itemTypeKeyToDisplay["firearm"] 	= "槍械";
 Parser.ItemTypeToDisplay = function(i){
+	let item_match = i.match(/([^()]*) (\((.*)\))?/);
+	if(item_match && item_match[2]){
+		var type = Parser.translateKeyInMapToDisplay(Parser.itemTypeKeyToDisplay, item_match[1]);
+		return type+" "+item_match[2]
+	}
 	return Parser.translateKeyInMapToDisplay(Parser.itemTypeKeyToDisplay, i);
 }
 //Item Tier
 Parser.itemTierKeyToDisplay = {};
 Parser.itemTierKeyToDisplay["none"] = "無";
+Parser.itemTierKeyToDisplay["other"] = "其他";
 Parser.itemTierKeyToDisplay["minor"] = "弱效";
 Parser.itemTierKeyToDisplay["major"] = "強效";
 Parser.ItemTierToDisplay = function(t){
@@ -6220,8 +6712,12 @@ Parser.ItemTierToDisplay = function(t){
 
 //Language
 Parser.languageKeyToDisplay["any"] 	 = "任意";
+Parser.languageKeyToDisplay["any (choose)"]  = "任意(選擇)";
+Parser.languageKeyToDisplay["all"] 	 = "全部語言";
 Parser.languageKeyToDisplay["other"] = "其他";
 Parser.languageKeyToDisplay["choose"]= "自選";
+Parser.languageKeyToDisplay["can't speak known languages"]= "理解但不會說";
+Parser.languageKeyToDisplay["telepathy"]= "心靈感應";
 Parser.languageKeyToDisplay["thieves' cant"]= "竊賊黑話";
 Parser.languageKeyToDisplay["druidic"] 		= "德魯伊語";
 Parser.languageKeyToDisplay["common"] 	  = "通用語";
@@ -6261,16 +6757,29 @@ Parser.monsterTagKeyToDisplay["devil"] = "魔鬼";
 Parser.monsterTagKeyToDisplay["titan"] = "泰坦";
 Parser.monsterTagKeyToDisplay["aarakocra"] = "阿蘭寇拉鷹人";
 Parser.monsterTagKeyToDisplay["gnoll"] = "豺狼人";
+Parser.monsterTagKeyToDisplay["goblinoid"] = "類哥布林";
 Parser.monsterTagKeyToDisplay["merfolk"] = "人魚";
 Parser.monsterTagKeyToDisplay["bullywug"] = "狂蛙人";
+Parser.monsterTagKeyToDisplay["kenku"] = "天狗";
+Parser.monsterTagKeyToDisplay["kuo-toa"] = "寇濤魚人";
 Parser.monsterTagKeyToDisplay["sahuagin"] = "沙華魚人";
-Parser.monsterTagKeyToDisplay["goblinoid"] = "類哥布林";
-Parser.monsterTagKeyToDisplay["cloud giant"] = "雲巨人";
+Parser.monsterTagKeyToDisplay["lizardfolk"] = "蜥蜴人"
+Parser.monsterTagKeyToDisplay["troglodyte"] = "戰蜴人"
+Parser.monsterTagKeyToDisplay["thri-kreen"] = "斯里克林螳螂人"
 Parser.monsterTagKeyToDisplay["quaggoth"] = "澤地熊人";
 Parser.monsterTagKeyToDisplay["grimlock"] = "石盲蠻族";
 Parser.monsterTagKeyToDisplay["yuan-ti"] = "蛇人";
 Parser.monsterTagKeyToDisplay["yugoloth"] = "尤格羅斯魔";
 Parser.monsterTagKeyToDisplay["simic hybrid"] = "析米克混合體";
+Parser.monsterTagKeyToDisplay["firenewt"] = "火蠑螈";
+Parser.monsterTagKeyToDisplay["grung"] = "格龍蛙人";
+Parser.monsterTagKeyToDisplay["xvart"] = "法特怪";
+Parser.monsterTagKeyToDisplay["cloud giant"] = "雲巨人";
+Parser.monsterTagKeyToDisplay["fire giant"] = "火巨人";
+Parser.monsterTagKeyToDisplay["frost giant"] = "霜巨人";
+Parser.monsterTagKeyToDisplay["hill giant"] = "山丘巨人";
+Parser.monsterTagKeyToDisplay["stone giant"] = "石巨人";
+Parser.monsterTagKeyToDisplay["storm giant"] = "風暴巨人";
 Parser.MonsterTagToDisplay = function(e){
 	var race_e = Parser.RaceToDisplay(e)
 	return Parser.translateKeyInMapToDisplay(Parser.monsterTagKeyToDisplay, race_e);
@@ -6334,5 +6843,11 @@ Parser.itemValueToDisplay = function(value){
 }
 
 
+function isStringMatch (a, b, case_sensitive) {
+	if ((typeof a) !== 'string' || (typeof b) !== 'string')	return false;
+	if (case_sensitive) return a === b;
+	else 				return a.toUpperCase() === b.toUpperCase();
+}
+
 // Haz code
-//==================
+// ==================

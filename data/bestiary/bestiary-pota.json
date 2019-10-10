@@ -2,7 +2,7 @@
 	"monster": [
 		{
 			"name": "Aerisi Kalinoth",
-			"isNPC": true,
+			"isNpc": true,
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -76,7 +76,10 @@
 					]
 				}
 			],
-			"legendaryGroup": "Aerisi Kalinoth",
+			"legendaryGroup": {
+				"name": "Aerisi Kalinoth",
+				"source": "PotA"
+			},
 			"page": 192,
 			"spellcasting": [
 				{
@@ -155,6 +158,13 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"damageTags": [
+				"P",
+				"L"
 			]
 		},
 		{
@@ -253,11 +263,15 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"damageTags": [
+				"B",
+				"L"
 			]
 		},
 		{
 			"name": "Bastian Thermandar",
-			"isNPC": true,
+			"isNpc": true,
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -387,6 +401,13 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"spellcastingTags": [
+				"I",
+				"CS"
+			],
+			"damageTags": [
+				"P"
 			]
 		},
 		{
@@ -459,6 +480,9 @@
 			],
 			"languageTags": [
 				"C"
+			],
+			"damageTags": [
+				"P"
 			]
 		},
 		{
@@ -574,6 +598,12 @@
 			"languageTags": [
 				"C",
 				"T"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"damageTags": [
+				"S"
 			]
 		},
 		{
@@ -656,6 +686,9 @@
 			],
 			"languageTags": [
 				"C"
+			],
+			"damageTags": [
+				"P"
 			]
 		},
 		{
@@ -755,6 +788,12 @@
 			"languageTags": [
 				"AQ",
 				"C"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B"
 			]
 		},
 		{
@@ -816,6 +855,10 @@
 			"page": 205,
 			"languageTags": [
 				"C"
+			],
+			"damageTags": [
+				"S",
+				"P"
 			]
 		},
 		{
@@ -906,11 +949,14 @@
 			],
 			"languageTags": [
 				"C"
+			],
+			"damageTags": [
+				"P"
 			]
 		},
 		{
 			"name": "Drannin Splithelm",
-			"isNPC": true,
+			"isNpc": true,
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -1021,6 +1067,9 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"damageTags": [
+				"S"
 			]
 		},
 		{
@@ -1116,11 +1165,15 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"damageTags": [
+				"B",
+				"T"
 			]
 		},
 		{
 			"name": "Elizar Dryflagon",
-			"isNPC": true,
+			"isNpc": true,
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -1231,6 +1284,12 @@
 			"languageTags": [
 				"C",
 				"DU"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"damageTags": [
+				"P"
 			]
 		},
 		{
@@ -1317,6 +1376,11 @@
 			],
 			"languageTags": [
 				"C"
+			],
+			"damageTags": [
+				"S",
+				"P",
+				"F"
 			]
 		},
 		{
@@ -1418,6 +1482,12 @@
 			"languageTags": [
 				"C",
 				"IG"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"damageTags": [
+				"P"
 			]
 		},
 		{
@@ -1534,6 +1604,14 @@
 			"languageTags": [
 				"AQ",
 				"C"
+			],
+			"spellcastingTags": [
+				"F",
+				"CL"
+			],
+			"damageTags": [
+				"B",
+				"P"
 			]
 		},
 		{
@@ -1631,6 +1709,13 @@
 			"languageTags": [
 				"AU",
 				"C"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"damageTags": [
+				"S",
+				"P"
 			]
 		},
 		{
@@ -1740,6 +1825,11 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"damageTags": [
+				"S",
+				"F",
+				"C"
 			]
 		},
 		{
@@ -1855,11 +1945,17 @@
 			"languageTags": [
 				"C",
 				"IG"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"damageTags": [
+				"P"
 			]
 		},
 		{
 			"name": "Gar Shatterkeel",
-			"isNPC": true,
+			"isNpc": true,
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -1950,7 +2046,10 @@
 					]
 				}
 			],
-			"legendaryGroup": "Gar Shatterkeel",
+			"legendaryGroup": {
+				"name": "Gar Shatterkeel",
+				"source": "PotA"
+			},
 			"page": 208,
 			"spellcasting": [
 				{
@@ -2018,11 +2117,19 @@
 			"languageTags": [
 				"AQ",
 				"C"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"damageTags": [
+				"B",
+				"P",
+				"C"
 			]
 		},
 		{
 			"name": "Ghald",
-			"isNPC": true,
+			"isNpc": true,
 			"size": "L",
 			"type": {
 				"type": "humanoid",
@@ -2136,11 +2243,15 @@
 			],
 			"senseTags": [
 				"SD"
+			],
+			"damageTags": [
+				"P",
+				"B"
 			]
 		},
 		{
 			"name": "Hellenrae",
-			"isNPC": true,
+			"isNpc": true,
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -2244,6 +2355,9 @@
 			],
 			"senseTags": [
 				"B"
+			],
+			"damageTags": [
+				"B"
 			]
 		},
 		{
@@ -2317,6 +2431,9 @@
 			],
 			"languageTags": [
 				"C"
+			],
+			"damageTags": [
+				"P"
 			]
 		},
 		{
@@ -2441,6 +2558,13 @@
 			"languageTags": [
 				"AU",
 				"C"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"damageTags": [
+				"S",
+				"P"
 			]
 		},
 		{
@@ -2555,6 +2679,12 @@
 			"languageTags": [
 				"AU",
 				"C"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B"
 			]
 		},
 		{
@@ -2699,7 +2829,10 @@
 					]
 				}
 			],
-			"legendaryGroup": "Imix",
+			"legendaryGroup": {
+				"name": "Imix",
+				"source": "PotA"
+			},
 			"page": 214,
 			"spellcasting": [
 				{
@@ -2736,11 +2869,18 @@
 			],
 			"senseTags": [
 				"B"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"damageTags": [
+				"B",
+				"F"
 			]
 		},
 		{
 			"name": "Marlos Urnrayle",
-			"isNPC": true,
+			"isNpc": true,
 			"size": "M",
 			"type": "monstrosity",
 			"source": "PotA",
@@ -2829,7 +2969,10 @@
 					]
 				}
 			],
-			"legendaryGroup": "Marlos Urnrayle",
+			"legendaryGroup": {
+				"name": "Marlos Urnrayle",
+				"source": "PotA"
+			},
 			"page": 199,
 			"traitTags": [
 				"Legendary Resistances"
@@ -2844,11 +2987,16 @@
 			"senseTags": [
 				"D",
 				"T"
+			],
+			"damageTags": [
+				"P",
+				"I",
+				"T"
 			]
 		},
 		{
 			"name": "Miraj Vizann",
-			"isNPC": true,
+			"isNpc": true,
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -2984,6 +3132,13 @@
 			"languageTags": [
 				"C",
 				"P"
+			],
+			"spellcastingTags": [
+				"I",
+				"CS"
+			],
+			"damageTags": [
+				"B"
 			]
 		},
 		{
@@ -3119,7 +3274,10 @@
 					]
 				}
 			],
-			"legendaryGroup": "Ogrémoch",
+			"legendaryGroup": {
+				"name": "Ogrémoch",
+				"source": "PotA"
+			},
 			"page": 216,
 			"spellcasting": [
 				{
@@ -3151,6 +3309,12 @@
 			"senseTags": [
 				"B",
 				"T"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"damageTags": [
+				"B"
 			]
 		},
 		{
@@ -3290,7 +3454,10 @@
 					]
 				}
 			],
-			"legendaryGroup": "Olhydra",
+			"legendaryGroup": {
+				"name": "Olhydra",
+				"source": "PotA"
+			},
 			"page": 218,
 			"spellcasting": [
 				{
@@ -3325,6 +3492,13 @@
 			],
 			"senseTags": [
 				"B"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"damageTags": [
+				"B",
+				"A"
 			]
 		},
 		{
@@ -3436,11 +3610,18 @@
 			],
 			"languageTags": [
 				"C"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"damageTags": [
+				"P",
+				"C"
 			]
 		},
 		{
 			"name": "Oreioth",
-			"isNPC": true,
+			"isNpc": true,
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -3553,6 +3734,12 @@
 			"languageTags": [
 				"AB",
 				"C"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"damageTags": [
+				"P"
 			]
 		},
 		{
@@ -3635,6 +3822,10 @@
 			"languageTags": [
 				"C",
 				"IG"
+			],
+			"damageTags": [
+				"P",
+				"F"
 			]
 		},
 		{
@@ -3722,11 +3913,14 @@
 			],
 			"senseTags": [
 				"T"
+			],
+			"damageTags": [
+				"B"
 			]
 		},
 		{
 			"name": "Shoalar Quanderil",
-			"isNPC": true,
+			"isNpc": true,
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -3852,6 +4046,13 @@
 			"languageTags": [
 				"AQ",
 				"C"
+			],
+			"spellcastingTags": [
+				"I",
+				"CS"
+			],
+			"damageTags": [
+				"P"
 			]
 		},
 		{
@@ -3950,6 +4151,12 @@
 			"languageTags": [
 				"AU",
 				"C"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"damageTags": [
+				"P"
 			]
 		},
 		{
@@ -4069,11 +4276,17 @@
 			],
 			"senseTags": [
 				"T"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B"
 			]
 		},
 		{
 			"name": "Thurl Merosska",
-			"isNPC": true,
+			"isNpc": true,
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -4193,11 +4406,18 @@
 			"languageTags": [
 				"AU",
 				"C"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"damageTags": [
+				"S",
+				"P"
 			]
 		},
 		{
 			"name": "Vanifer",
-			"isNPC": true,
+			"isNpc": true,
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -4271,7 +4491,10 @@
 					]
 				}
 			],
-			"legendaryGroup": "Vanifer",
+			"legendaryGroup": {
+				"name": "Vanifer",
+				"source": "PotA"
+			},
 			"page": 203,
 			"spellcasting": [
 				{
@@ -4346,6 +4569,13 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"damageTags": [
+				"P",
+				"F"
 			]
 		},
 		{
@@ -4443,11 +4673,15 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"damageTags": [
+				"P",
+				"C"
 			]
 		},
 		{
 			"name": "Wiggan Nettlebee",
-			"isNPC": true,
+			"isNpc": true,
 			"size": "S",
 			"type": {
 				"type": "humanoid",
@@ -4555,11 +4789,17 @@
 			"languageTags": [
 				"C",
 				"H"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"damageTags": [
+				"B"
 			]
 		},
 		{
 			"name": "Windharrow",
-			"isNPC": true,
+			"isNpc": true,
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -4689,6 +4929,12 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"spellcastingTags": [
+				"CB"
+			],
+			"damageTags": [
+				"P"
 			]
 		},
 		{
@@ -4835,7 +5081,10 @@
 					]
 				}
 			],
-			"legendaryGroup": "Yan-C-Bin",
+			"legendaryGroup": {
+				"name": "Yan-C-Bin",
+				"source": "PotA"
+			},
 			"page": 221,
 			"spellcasting": [
 				{
@@ -4871,6 +5120,14 @@
 			],
 			"senseTags": [
 				"B"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"damageTags": [
+				"O",
+				"L",
+				"T"
 			]
 		}
 	]

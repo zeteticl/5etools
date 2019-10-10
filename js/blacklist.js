@@ -1,3 +1,5 @@
+"use strict";
+
 class Blacklist {
 	static getDisplayCategory (cat) {
 		if (cat === "variantrule") return "Variant Rule";
@@ -69,17 +71,17 @@ class Blacklist {
 				Promise.resolve();
 			}).then(() => DataUtil.class.loadJSON())
 			.then(classData => {
-				classData.class.forEach(c => c.subclasses.forEach(sc => sc.class = c.name));
+				classData.class.forEach(c => (c.subclasses || []).forEach(sc => sc.class = c.name));
 				classData.subclass = classData.subclass || [];
-				classData.class.forEach(c => classData.subclass = classData.subclass.concat(c.subclasses));
+				classData.class.forEach(c => classData.subclass = classData.subclass.concat(c.subclasses || []));
 				mergeData(classData);
 				Promise.resolve();
 			}).then(() => {
 				const promises = FILES.map(url => DataUtil.loadJSON(`data/${url}`));
-				promises.push(EntryRenderer.item.promiseData({}, true));
+				promises.push(Renderer.item.promiseData({}, true));
 				return Promise.all(promises).then(retData => {
 					retData.forEach(d => {
-						if (d.race) d.race = EntryRenderer.race.mergeSubraces(d.race);
+						if (d.race) d.race = Renderer.race.mergeSubraces(d.race);
 						mergeData(d);
 					});
 					const sourceSet = new Set();
@@ -127,7 +129,7 @@ class Blacklist {
 
 					Blacklist._renderList();
 
-					const $page = $(`.bodyContent`);
+					const $page = $(`#main_content`);
 					$page.find(`.loading`).prop("disabled", false);
 					$page.find(`.loading-temp`).remove();
 				})

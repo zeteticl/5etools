@@ -1,4 +1,5 @@
 "use strict";
+
 const JSON_URL = "data/feats.json";
 let list;
 
@@ -57,13 +58,15 @@ async function onJsonLoad (data) {
 	addFeats(data);
 	BrewUtil.pAddBrewData()
 		.then(handleBrew)
-		.then(BrewUtil.pAddLocalBrewData)
+		.then(() => BrewUtil.bind({list}))
+		.then(() => BrewUtil.pAddLocalBrewData())
 		.catch(BrewUtil.pPurgeBrew)
 		.then(async () => {
 			BrewUtil.makeBrewButton("manage-brew");
-			BrewUtil.bind({list, filterBox, sourceFilter});
+			BrewUtil.bind({filterBox, sourceFilter});
 			await ListUtil.pLoadState();
 			RollerUtil.addListRollButton();
+			ListUtil.addListShowHide();
 
 			History.init(true);
 			ExcludeUtil.checkShowAllExcluded(featList, $(`#pagecontent`));
@@ -91,7 +94,7 @@ function addFeats (data) {
 		const ability = utils_getAbilityData(feat.ability);
 		if (!ability.asText) ability.asText = STR_NONE;
 		feat._fAbility = ability.asCollection.filter(a => !ability.areNegative.includes(a)); // used for filtering
-		let prereqText = EntryRenderer.feat.getPrerequisiteText(feat.prerequisite, true);
+		let prereqText = Renderer.feat.getPrerequisiteText(feat.prerequisite, true);
 		if (!prereqText) prereqText = STR_NONE;
 
 		const preSet = new Set();
@@ -105,9 +108,9 @@ function addFeats (data) {
 			<li class="row" ${FLTR_ID}="${ftI}" onclick="ListUtil.toggleSelected(event, this)" oncontextmenu="ListUtil.openContextMenu(event, this)">
 				<a id="${ftI}" href="#${UrlUtil.autoEncodeHash(feat)}" title="${name}">
 					<span class="name col-3-8">${name}</span>
-					<span class="source col-1-7 text-align-center ${Parser.sourceJsonToColor(feat.source)}" title="${Parser.sourceJsonToFull(feat.source)}">${Parser.sourceJsonToAbv(feat.source)}</span>
 					<span class="ability col-3-5 ${ability.asText === STR_NONE ? "list-entry-none " : ""}">${ability.asText}</span>
 					<span class="prerequisite col-3 ${(prereqText === STR_NONE ? "list-entry-none " : "")}">${prereqText}</span>
+					<span class="source col-1-7 text-align-center ${Parser.sourceJsonToColor(feat.source)}" title="${Parser.sourceJsonToFull(feat.source)}">${Parser.sourceJsonToAbv(feat.source)}</span>
 					
 					<span class="uniqueid hidden">${feat.uniqueId ? feat.uniqueId : ftI}</span>
 					<span class="eng_name hidden">${feat.ENG_name ? feat.ENG_name : feat.name}</span>
@@ -121,7 +124,7 @@ function addFeats (data) {
 	featTable.append(tempString);
 
 	// sort filters
-	sourceFilter.items.sort(SortUtil.ascSort);
+	sourceFilter.items.sort(SortUtil.srcSort_ch);
 
 	list.reIndex();
 	if (lastSearch) list.search(lastSearch);
@@ -135,7 +138,7 @@ function addFeats (data) {
 		primaryLists: [list]
 	});
 	ListUtil.bindPinButton();
-	EntryRenderer.hover.bindPopoutButton(featList);
+	Renderer.hover.bindPopoutButton(featList);
 	UrlUtil.bindLinkExportButton(filterBox);
 	ListUtil.bindDownloadButton();
 	ListUtil.bindUploadButton();
@@ -169,7 +172,7 @@ function getSublistItem (feat, pinId) {
 	`;
 }
 
-const renderer = EntryRenderer.getDefaultRenderer();
+const renderer = Renderer.get();
 function loadhash (id) {
 	renderer.setFirstSection(true);
 
@@ -177,19 +180,19 @@ function loadhash (id) {
 
 	const feat = featList[id];
 
-	const prerequisite = EntryRenderer.feat.getPrerequisiteText(feat.prerequisite);
-	EntryRenderer.feat.mergeAbilityIncrease(feat);
+	const prerequisite = Renderer.feat.getPrerequisiteText(feat.prerequisite);
+	Renderer.feat.mergeAbilityIncrease(feat);
 	const renderStack = [];
-	renderer.recursiveEntryRender({entries: feat.entries}, renderStack, 2);
+	renderer.recursiveRender({entries: feat.entries}, renderStack, {depth: 2});
 
 	$content.append(`
-		${EntryRenderer.utils.getBorderTr()}
-		${EntryRenderer.utils.getNameTr(feat)}
+		${Renderer.utils.getBorderTr()}
+		${Renderer.utils.getNameTr(feat)}
 		${prerequisite ? `<tr><td colspan="6"><span class="prerequisite">先決條件：${prerequisite}</span></td></tr>` : ""}
 		<tr><td class="divider" colspan="6"><div></div></td></tr>
 		<tr class='text'><td colspan='6'>${renderStack.join("")}</td></tr>
-		${EntryRenderer.utils.getPageTr(feat)}
-		${EntryRenderer.utils.getBorderTr()}
+		${Renderer.utils.getPageTr(feat)}
+		${Renderer.utils.getBorderTr()}
 	`);
 
 	ListUtil.updateSelected();

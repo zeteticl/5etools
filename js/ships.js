@@ -42,13 +42,15 @@ async function onJsonLoad (data) {
 	addShips(data);
 	BrewUtil.pAddBrewData()
 		.then(handleBrew)
-		.then(BrewUtil.pAddLocalBrewData)
+		.then(() => BrewUtil.bind({list}))
+		.then(() => BrewUtil.pAddLocalBrewData())
 		.catch(BrewUtil.pPurgeBrew)
 		.then(async () => {
 			BrewUtil.makeBrewButton("manage-brew");
-			BrewUtil.bind({list, filterBox, sourceFilter});
+			BrewUtil.bind({filterBox, sourceFilter});
 			await ListUtil.pLoadState();
 			RollerUtil.addListRollButton();
+			ListUtil.addListShowHide();
 
 			History.init(true);
 			ExcludeUtil.checkShowAllExcluded(shipList, $(`#pagecontent`));
@@ -91,7 +93,7 @@ function addShips (data) {
 	$(`#shipList`).append(tempString);
 
 	// sort filters
-	sourceFilter.items.sort(SortUtil.ascSort);
+	sourceFilter.items.sort(SortUtil.srcSort_ch);
 
 	list.reIndex();
 	if (lastSearch) list.search(lastSearch);
@@ -105,7 +107,7 @@ function addShips (data) {
 		primaryLists: [list]
 	});
 	ListUtil.bindPinButton();
-	EntryRenderer.hover.bindPopoutButton(shipList);
+	Renderer.hover.bindPopoutButton(shipList);
 	UrlUtil.bindLinkExportButton(filterBox);
 	ListUtil.bindDownloadButton();
 	ListUtil.bindUploadButton();
@@ -136,9 +138,9 @@ function getSublistItem (it, pinId) {
 }
 
 function loadhash (jsonIndex) {
-	EntryRenderer.getDefaultRenderer().setFirstSection(true);
+	Renderer.get().setFirstSection(true);
 	const it = shipList[jsonIndex];
 	const $content = $(`#pagecontent`).empty();
-	$content.append(EntryRenderer.ship.getRenderedString(it));
+	$content.append(Renderer.ship.getRenderedString(it));
 	ListUtil.updateSelected();
 }

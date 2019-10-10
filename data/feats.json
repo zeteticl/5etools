@@ -1068,6 +1068,16 @@
 			]
 		},
 		{
+			"name": "Warhammer Master",
+			"source": "UAFeats",
+			"page": 2,
+			"entries": [
+				"{@note This feat is presented as an illustrative example of a poorly-designed feat, and is not intended to be used in play. The {@feat Fell Handed|UAFeats} feat is presented as a well-designed implementation of the same ideas, and should be used instead.}",
+				"When you hit a creature with a warhammer, the  creature must succeed on a Strength saving  throw (DC 8 + your proficiency bonus + your  Strength modifier) or be knocked prone.",
+				"In addition, you can use your warhammer to  knock away a foe's shield. If you hit a creature  that's using a shield, you can have the attack deal  no damage and force the creature to drop its  shield."
+			]
+		},
+		{
 			"name": "Flail Mastery",
 			"source": "UAFeats",
 			"page": 3,
@@ -1240,7 +1250,7 @@
 			"page": 165,
 			"entries": [
 				"當你使用動作進行疾走時，你可以使用附贈動作來進行一次近戰武器攻擊或推撞一個生物。",
-				"若你直線行走至少10呎後馬上進行該附贈動作，則（若你選擇近戰攻擊且命中）該攻擊的傷害獲得+5加值，或（若你選擇推撞且成功）目標被推離你最多10呎。"
+				"若你直線移動至少10呎後馬上進行該附贈動作，則（若你選擇近戰攻擊且命中）該攻擊的傷害獲得+5加值，或（若你選擇推撞且成功）目標被推離你最多10呎。"
 			]
 		},
 		{
@@ -1860,8 +1870,8 @@
 				{
 					"type": "list",
 					"items": [
-						"當你使用{@item healer's kit|phb}穩定瀕死生物的傷勢時，該生物同時恢復1點生命值。",
-						"以一個動作，你可以消耗1個{@item healer's kit|phb}照顧一個生物，並恢復他{@dice 1d6+4}加上等同該生物最大生命骰數量的生命值。直到完成短休或長休之前，該生物都不能再透過此專長恢復生命值。"
+						"當你使用{@item 醫療工具組|phb}穩定瀕死生物的傷勢時，該生物同時恢復1點生命值。",
+						"以一個動作，你可以消耗醫療工具組的一次使用額度照顧一個生物，並恢復他{@dice 1d6+4}加上等同該生物最大生命骰數量的生命值。直到完成短休或長休之前，該生物都不能再透過此專長恢復生命值。"
 					]
 				}
 			]
@@ -2030,7 +2040,7 @@
 			"page": 168,
 			"entries": [
 				"選擇一個職業：{@filter 吟遊詩人|spells|level=0;1|class=bard}、 {@filter 牧師|spells|level=0;1|class=cleric}、{@filter 德魯伊|spells|level=0;1|class=druid}、{@filter 術士|spells|level=0;1|class=sorcerer}、{@filter 契術師|spells|level=0;1|class=warlock}、或{@filter 法師|spells|level=0;1|class=wizard}。你從你所選職業的法術列表中習得兩個戲法。",
-				"此外，從同一個列表中選擇一個1環法術。你習得該法術，並可以用最低環位來施展它。一旦你施展它，則直到你完成一次長休之前，你都無法再藉由這個專長來施展它。",
+				"此外，從同一個列表中選擇一個1環法術。你習得該法術，並可以用最低環階來施展它。一旦你施展它，則直到你完成一次長休之前，你都無法再藉由這個專長來施展它。",
 				"這些法術的施法屬性取決於你所選的職業：{@filter 吟遊詩人|spells|level=0;1|class=bard}、{@filter 術士|spells|level=0;1|class=sorcerer}、{@filter 契術師|spells|level=0;1|class=warlock}使用魅力；{@filter 牧師|spells|level=0;1|class=cleric}、{@filter 德魯伊|spells|level=0;1|class=druid}使用睿知；{@filter 法師|spells|level=0;1|class=wizard}則使用智力。"
 			]
 		},
@@ -2043,7 +2053,7 @@
 				{
 					"type": "list",
 					"items": [
-						"你習得二個{@filter 戰技|optionalfeatures|feature type=MAB}，從戰士{@class 戰士|phb|Battle Master|Battle Master|phb|Martial Archetype 3}範型的戰技列表中選擇。若你使用的戰技要求你的目標進行一次豁免檢定以抵抗戰技的效果，則豁免檢定的DC等同8+你的熟練加值+你的力量或敏捷調整值（由你選擇）。",
+						"你習得二個{@filter 戰技|optionalfeatures|feature type=MV:B}，從戰士{@class 戰士|phb|戰鬥大師|戰鬥大師|phb|武術範型 3}範型的戰技列表中選擇。若你使用的戰技要求你的目標進行一次豁免檢定以抵抗戰技的效果，則豁免檢定的DC等同8+你的熟練加值+你的力量或敏捷調整值（由你選擇）。",
 						"你獲得一顆卓越骰（這顆骰將被加到任何你從其他來源獲得的卓越骰池中），若你沒有其他卓越骰，則這顆卓越骰為d6。這顆骰被用來啟動你的戰技。卓越骰將在你使用戰技時被花費。你在完成一次短休或長休後恢復你花費掉的卓越骰。"
 					]
 				}
@@ -2229,7 +2239,7 @@
 			"entries": [
 				"你已學會一些能夠以儀式施放的法術。這些法術被寫在一本儀式書中，當你施展其中一個法術時你必須將儀式書拿在手中。",
 				"當你選擇此專長時，你獲得一本記載著兩個自選1環法術的儀式書。從以下職業中選擇一個：{@filter 吟遊詩人|spells|level=1|class=bard|components & miscellaneous=ritual}、{@filter 牧師|spells|level=1|class=cleric|components & miscellaneous=ritual}、{@filter 德魯伊|spells|level=1|class=druid|components & miscellaneous=ritual}、{@filter 術士|spells|level=1|class=sorcerer|components & miscellaneous=ritual}、{@filter 契術師|spells|level=1|class=warlock|components & miscellaneous=ritual}、或{@filter 法師|spells|level=1|class=wizard|components & miscellaneous=ritual}。你必須從該職業的法術列表中選擇你的法術，且你所選的法術必須要具有儀式標籤。你所選的職業同時會決定你在使用這些法術時的施法屬性：吟遊詩人、術士、契術師使用魅力；牧師、德魯伊使用睿知；法師則使用智力。",
-				"若你遇到某個以書寫形式存在的法術，像是魔法法術卷軸或法師的法術書，你就有可能可以將它加到你的儀式書中。該法術必須要在你所選職業的法術列表上，該法術的環位不能超過你等級的一半（小數點進位），且它必須要具有儀式標籤。將法術抄寫到你的儀式書的過程需要耗費每環2小時的時間、以及每環50金幣的代價。這個代價代表了你在研究如何掌握該法術時所消耗的材料構材、以及你在抄寫時所需要的優質墨水。"
+				"若你遇到某個以書寫形式存在的法術，像是魔法法術卷軸或法師的法術書，你就有可能可以將它加到你的儀式書中。該法術必須要在你所選職業的法術列表上，該法術的環階不能超過你等級的一半（小數點進位），且它必須要具有儀式標籤。將法術抄寫到你的儀式書的過程需要耗費每環2小時的時間、以及每環50金幣的代價。這個代價代表了你在研究如何掌握該法術時所消耗的材料構材、以及你在抄寫時所需要的優質墨水。"
 			]
 		},
 		{
@@ -2265,7 +2275,7 @@
 				{
 					"type": "list",
 					"items": [
-						"在長射程範圍中攻擊並不會讓你的遠程武器攻擊檢定獲得劣勢。",
+						"攻擊長射程範圍中的目標並不會讓你的遠程武器攻擊檢定因此獲得劣勢。",
 						"你的遠程武器攻擊忽略半掩護和四分之三掩護。",
 						"在你以所熟練的遠程武器進行攻擊之前，你可以選擇讓該次攻擊檢定承受-5的減值。若該次攻擊命中，該次攻擊的傷害+10。"
 					]
@@ -2358,7 +2368,7 @@
 			],
 			"entries": [
 				"你繼承了來自你先祖的天生施法能力。此能力允許你對自己隨意施放{@spell 迴避偵測}，且無須材料構材。你也可以透過此能力各自施放下列法術一次：{@spell 目盲/耳聾術}、{@spell 朦朧術}、和{@spell 易容術}。當你完成一次長休，你將重新獲得施放這些法術的能力。",
-				"這些法術的施法屬性是智力，你只能以它們的最低環位施放它們。"
+				"這些法術的施法屬性是智力，你只能以它們的最低環階施放它們。"
 			],
 			"additionalSources": [
 				{
@@ -2935,7 +2945,7 @@
 				{
 					"type": "list",
 					"items": [
-						"你的行走速度增加5呎。",
+						"你的步行速度增加5呎。",
 						"你獲得{@skill 特技}或{@skill 運動}其中之一的熟練（由你選擇）。",
 						"你在掙脫{@condition 被擒}時所進行的力量（運動）或敏捷（特技）檢定有優勢。"
 					]
