@@ -91,7 +91,7 @@
 							"page": 7,
 							"entries": [
 								"冒險者的劍有沒有砍傷巨龍，還是砍不破它那鋼鐵般的龍鱗？那名食人魔會不會相信一個彌天大謊？一名角色能不能游過波濤兇湧的河流？這位冒險者可不可以避過火球的爆炸，還是首當其衝？當行動的結果無法被確定時，DM 就要使用一枚二十面骰，即 d20 來決定成敗。",
-								"遊戲中每個角色或怪物都由六項 {@b 屬性值(ability scores)} 來定義其能力。這些屬性值分別是力量、敏捷、體質、智力、感知和魅力。大部分冒險者的屬性值範圍是 3 到 18（怪物的範圍則是 1 到 30）。這些屬性值，以及它們所衍生出的 {@b 屬性調整值(ability modifiers)} ，是玩家們每次為任務或怪物而投擲 d20 的基礎。",
+								"遊戲中每個角色或怪物都由六項 {@b 屬性值(ability scores)} 來定義其能力。這些屬性值分別是力量、敏捷、體質、智力、睿知和魅力。大部分冒險者的屬性值範圍是 3 到 18（怪物的範圍則是 1 到 30）。這些屬性值，以及它們所衍生出的 {@b 屬性調整值(ability modifiers)} ，是玩家們每次為任務或怪物而投擲 d20 的基礎。",
 								"屬性檢定、攻擊檢定和豁免檢定是三種最主要的 d20 擲骰，它們組成了本遊戲規則的核心。三種擲骰都遵照以下的簡單步驟進行。",
 								"{@b 1. 擲骰並加上調整值.} 擲一枚 d20 並加上相應的調整值。調整值通常包括由六項屬性值其中之一衍生而來的屬性調整值，而有時還要加上反映角色才能的熟練加值（關於每項屬性以及如何計算調整值詳見第 1 章）。",
 								"{@b 2. 視情況加入加值和減值.} 職業特性、法術、特殊情況以及一些其他的效應都可能帶來加值或減值。",
@@ -196,28 +196,38 @@
 					"name": "1. 選擇種族", "ENG_name": "Choose a Race",
 					"page": 11,
 					"entries": [
-						"Every character belongs to a race, one of the many intelligent humanoid species in the D&D world. The most common player character races are dwarves, elves, halflings, and humans. Some races also have {@b subraces}, such as mountain dwarf or wood elf. Chapter 2 provides more information about these races.",
-						"The race you choose contributes to your character's identity in an important way, by establishing a general appearance and the natural talents gained from culture and ancestry. Your character's race grants particular racial traits, such as special senses, proficiency with certain weapons or tools, proficiency in one or more skills, or the ability to use minor spells. These traits sometimes dovetail with the capabilities of certain classes (see step 2). For example, the racial traits of lightfoot halflings make them exceptional rogues, and high elves tend to be powerful wizards. Sometimes playing against type can be fun, too. Halfling paladins and mountain dwarf wizards, for example, can be unusual but memorable characters.",
-						"Your race also increases one or more of your ability scores, which you determine in step 3. Note these increases and remember to apply them later.",
-						"Record the traits granted by your race on your character sheet. Be sure to note your starting languages and your base speed as well."
+						"每個角色都有其所屬種族，即生為 D&D 世界中眾多智慧類人種族中的一員。玩家角色裡最常見的角色種族是矮人，精靈，半身人和人類。某些種族還包括了相應的 {@b 亞種(subraces)} ，如高山矮人或木精靈。第 2 章提供了關於這些種族的更多信息，以及一些少見的種族包括龍裔，地侏，半精靈，半獸人和提夫林。",
+						"你所選的種族還包含一些源於其文化和先祖的基本外貌與天賦特質，因而有助於你定義角色的身份。角色種族所提供的種族特質包括有：特殊的感官，特定武器或工具的熟練項，某個或某幾個技能的熟練項，使用某個戲法的能力，等。這些特性有時候可以契合特定的職業能力（見第 2 步）。例如，輕足半身人的種族特質使他們能成為特別傑出的盜賊，而高等精靈則傾向於成為強力的法師。不過有時扮演反其道而行同樣很有趣。一名半獸人聖騎士或高山矮人法師可以是一個不尋常但使人印象深刻的角色。",
+						"你所選的種族還可以為你提升一個或多個屬性值（這點將在第 3 步決定）。務必將這些增量記錄下來以便應用。",
+						"你的角色卡還要記下所選種族給予的特質，以及你的起始語言和基本速度。",
+						{
+							"type": "entries",
+							"name": "創建布魯諾，步驟 1","ENG_name": "Building Bruenor, Step 1",
+							"page": 11,
+							"entries": [
+								"鮑勃坐下來創造他的角色。他決定用一個粗野的高山矮人來扮演他心目中的人物。於是，他在自己的角色卡上記下了所有矮人的種族特質，以及 25 尺速度和角色知曉的語言：通用語與矮人語。"
+							]
+						}
 					]
+
 				},
+
 				{
 					"type": "entries",
 					"name": "2. 選擇職業", "ENG_name": "Choose a Class",
 					"page": 11,
 					"entries": [
-						"Every adventurer is a member of a class. Class broadly describes a character's vocation, what special talents he or she possesses, and the tactics he or she is most likely to employ when exploring a dungeon, fighting monsters, or engaging in a tense negotiation. The character classes are described in chapter 3.",
-						"Your character receives a number of benefits from your choice of class. Many of these benefits are {@b class features}-capabilities (including spellcasting) that set your character apart from members of other classes. You also gain a number of {@b proficiencies:} armor, weapons, skills, saving throws, and sometimes tools. Your proficiencies define many of the things your character can do particularly well, from using certain weapons to telling a convincing lie.",
-						"On your character sheet, record all the features that your class gives you at 1st level.",
+						"每個冒險者都是某職業中的一員。而職業則寬泛地描述了該角色的工作能力，其擁有的特殊天賦，以及其是否能勝任地城探險與怪物戰鬥，或進行緊張談判等狀況。關於職業的內容在本書第 3 章。",
+						"你的角色會從所選的職業中獲得大量的增益。許多這類增益屬於 {@b 職業特性(class features)} ，即那些使你的角色與其他職業成員有所區別的能力（包括施法）。你還可以獲得一系列的 {@b 熟練項(proficiencies)}：護甲，武器，技能，豁免，以及某些工具。你的熟練項定義了你特別擅長的一系列事情，諸如使用特定武器，或講一個令人信服的謊言。",
+						"在你的角色卡上記下所有所選職業在第 1 級給予的特性。",
 						{
 							"type": "entries",
 							"name": "等級", "ENG_name": "Level",
 							"page": 11,
 							"entries": [
-								"Typically, a character starts at 1st level and advances in level by adventuring and gaining {@b experience points} (XP). A 1st-level character is inexperienced in the adventuring world, although he or she might have been a soldier or a pirate and done dangerous things before.",
-								"Starting off at 1st level marks your character's entry into the adventuring life. If you're already familiar with the game, or if you are joining an existing D&D campaign, your DM might decide to have you begin at a higher level, on the assumption that your character has already survived a few harrowing adventures.",
-								"Record your level on your character sheet. If you're starting at a higher level, record the additional elements your class gives you for your levels past 1st. Also record your experience points. A 1st-level character has 0 XP. A higher-level character typically begins with the minimum amount of XP required to reach that level (see \"Beyond 1st Level\" later in this chapter)."
+								"一般情況下，一個角色會在第 1 級開始冒險，並在按照所完成的冒險獲得相應的經驗值(experience points)（XP）。一個 1 級的角色可能曾經作為一名士兵或海盜經歷過許多驚險的體驗，但在冒險世界中他仍是個缺乏經驗的新手。",
+								"第 1 級開始的冒險意味著這是你角色冒險生涯的開端。如果你已經熟悉了這遊戲，或是你參加進了一個正在進行的 D&D 戰役，則你的 DM 可能會允許你從一個較高的等級開始，並假定你的角色已經在數個可怕的冒險中倖存下來。",
+								"在你的角色卡上記下你的等級。如果你從較高等級開始，則還要記下你的職業在 1 級之後的等級提升時所獲的其他元素。一個 1 級角色擁有 0 XP。而通常一個高等級角色開始時擁有達到當前等級所需最小值的 XP（見本章之後的“高於 1 級”）。"
 							]
 						},
 						{
@@ -225,7 +235,7 @@
 							"name": "快速建卡", "ENG_name": "Quick Build",
 							"page": 11,
 							"entries": [
-								"Each class description in chapter 3 includes a section offering suggestions to quickly build a character of that class, including how to assign your highest ability scores, a background suitable to the class, and starting spells."
+								"第 3 章中的每個職業描述中都提供了快速創建一個該職業角色的建議，包括如何分配你的最高屬性值，適合該職業的合適背景，以及起始法術。"
 							]
 						},
 						{
@@ -233,9 +243,9 @@
 							"name": "生命值與生命骰", "ENG_name": "Hit Points and Hit Dice",
 							"page": 12,
 							"entries": [
-								"Your character's hit points define how tough your character is in combat and other dangerous situations. Your hit points are determined by your Hit Dice (short for Hit Point Dice).",
-								"At 1st level, your character has 1 Hit Die, and the die type is determined by your class. You start with hit points equal to the highest roll of that die, as indicated in your class description. (You also add your Constitution modifier, which you'll determine in step 3.) This is also your {@b hit point maximum}.",
-								"Record your character's hit points on your character sheet. Also record the type of Hit Die your character uses and the number of Hit Dice you have. After you rest, you can spend Hit Dice to regain hit points (see \"Resting\" in chapter 8)."
+								"角色的生命值定義了其面對戰鬥和其它危險狀況時有多堅韌。你的生命值由你的 {@b 生命骰(Hit Dice)} （生命值骰 (Hit Point Dice) 的簡稱）所決定。",
+								"第 1 級時，你的角色擁有 1 個生命骰，而該骰的類型由其職業決定。你開始時的生命值等於該骰的最高骰值，正如在相應職業的說明內容中所述（你還要在第3 步時加上你的體質調整值），而這也是你的 {@b 生命值上限(hit point maximum)} 。",
+								"在你的角色卡上記下角色的生命值。同時記下角色使用的生命骰類型和相應的生命骰數量。你每次完成休息後，都可以使用生命骰來恢復生命值（見第 8 章的“休息”）。"
 							]
 						},
 						{
@@ -243,60 +253,60 @@
 							"name": "熟練加值", "ENG_name": "Proficiency Bonus",
 							"page": 12,
 							"entries": [
-								"The table that appears in your class description shows your proficiency bonus, which is +2 for a 1st-level character. Your proficiency bonus applies to many of the numbers you'll be recording on your character sheet:",
+								"你所選的職業其職業表中記錄了相應等級對應的熟練加值，該加值在角色 1 級時為 +2。你的熟練加值適用於許多你將記錄在角色卡上的事項。",
 								{
 									"type": "list",
 									"items": [
-										"Attack rolls using weapons you're proficient with",
-										"Attack rolls with spells you cast",
-										"Ability checks using skills you're proficient in",
-										"Ability checks using tools you're proficient with",
-										"Saving throws you're proficient in",
-										"Saving throw DCs for spells you cast (explained in each spellcasting class)"
+										"你使用擁有熟練項的武器發動攻擊檢定時",
+										"你施展的法術發動攻擊檢定時",
+										"你使用擁有熟練項的技能進行屬性檢定時",
+										"你使用擁有熟練項的工具進行屬性檢定時",
+										"你使用擁有熟練項的豁免屬性進行豁免檢定時",
+										"你施展的法術的豁免 DC（將在每個施法職業中解釋）"
 									]
 								},
-								"Your class determines your weapon proficiencies, your saving throw proficiencies, and some of your skill and tool proficiencies. (Skills are described in chapter 7, tools in chapter 5.) Your background gives you additional skill and tool proficiencies, and some races give you more proficiencies. Be sure to note all of these proficiencies, as well as your proficiency bonus, on your character sheet.",
-								"Your proficiency bonus can't be added to a single die roll or other number more than once. Occasionally, your proficiency bonus might be modified (doubled or halved, for example) before you apply it. If a circumstance suggests that your proficiency bonus applies more than once to the same roll or that it should be multiplied more than once, you nevertheless add it only once, multiply it only once, and halve it only once."
+								"你所選的職業決定了你所擁有的武器、豁免以及一部分技能和工具熟練項。 （技能在第 7 章中描述，工具在第 5 章）而你的背景則可以為你提供額外的技能和工具熟練項。此外，某些種族也可以為你提供更多的熟練項。確保你的角色卡上記下這所有的熟練項目以及你的熟練加值。",
+								"你的熟練加值不能在同一次擲骰或同一數值上應用多於一次。有時候，你的熟練加值會在進行乘除運算後（比如加倍或減半）再作應用。如果有情況允許你在一次擲骰中多次使用熟練加值，則你依然只使用一次加值，也只做一次倍率運算。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Building Bruenor, Step 2",
+							"name": "創建布魯諾，步驟 2","ENG_name": "Building Bruenor, Step 2",
 							"page": 12,
 							"entries": [
-								"Bob imagines Bruenor charging into battle with an axe, one horn on his helmet broken off. He makes Bruenor a fighter and notes the fighter's proficiencies and 1st-level class features on his character sheet.",
-								"As a 1st-level fighter, Bruenor has 1 Hit Die\u2014a d10 and starts with hit points equal to 10 + his Constitution modifier. Bob notes this, and will record the final number after he determines Bruenor's Constitution score (see step 3). Bob also notes the proficiency bonus for a 1st-level character, which is +2."
+								"鮑勃設想布魯諾會帶著一把戰斧，一個折斷了一隻角的頭盔衝進戰鬥。他使布魯諾成為了一名戰士，並將戰士的熟練項和 1 級職業特性記錄在其角色卡上。",
+								"作為一名 1 級戰士，布魯諾擁有 1 枚生命骰—— 即一枚 d10，而其開始時的生命值數值為 10 ＋其體質調整值。鮑勃將這些信息記下，並準備好將其加至布魯諾的體質最終值中（見第 3 步）。鮑勃還記下了其 1 級角色的熟練加值，即 +2。"
 							]
 						}
 					]
 				},
 				{
 					"type": "entries",
-					"name": "3. Determine Ability Scores",
+					"name": "3. 決定屬性值","ENG_name": "3. Determine Ability Scores",
 					"page": 12,
 					"entries": [
-						"Much of what your character does in the game depends on his or her six abilities: {@b Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma.} Each ability has a score, which is a number you record on your character sheet.",
-						"The six abilities and their use in the game are described in chapter 7. The Ability Score Summary table provides a quick reference for what qualities are measured by each ability, what races increases which abilities, and what classes consider each ability particularly important.",
-						"You generate your character's six {@b ability scores} randomly. Roll four 6-sided dice and record the total of the highest three dice on a piece of scratch paper. Do this five more times, so that you have six numbers. If you want to save time or don't like the idea of randomly determining ability scores, you can use the following scores instead: 15, 14, 13, 12, 10, 8.",
-						"Now take your six numbers and write each number beside one of your character's six abilities to assign scores to Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma. Afterward, make any changes to your ability scores as a result of your race choice.",
-						"After assigning your ability scores, determine your {@b ability modifiers} using the Ability Scores and Modifiers table. To determine an ability modifier without consulting the table, subtract 10 from the ability score and then divide the result by 2 (round down). Write the modifier next to each of your scores.",
+						"你的角色在遊戲中所能做的事情大都取決於其六項屬性：{@b 力量(Strength)，敏捷(Dexterity)，體質(Constitution)，智力(Intelligence)，睿知(Wisdom)和魅力(Charisma)}。每項屬性對應一個數值，即你記錄在你的角色卡上的數值。",
+						"六項屬性值在遊戲中的方法將在第 7 章中說明。 “屬性值摘要表” 則提供了一個方便概述，其中包含了各屬性分別衡量了哪些素質，而各屬性又分別因屬於哪個種族而有所提升，以及各職業特別看重哪些屬性。",
+						"隨機產生你角色的六項 {@b 屬性值(Ability scores)}。骰四次 6 面骰並在草稿紙上記下最高三個骰值之和。重複五次該過程後，你將得到六項數值。若要節約時間或不喜歡隨機決定屬性值，你還可以使用以下數值作替代：15、14、13、12、10、8。",
+						"現在將所得的六項數值分別記在你角色的六項屬性值旁，以將各值分配給力量，敏捷，體質，智力，睿知和魅力。之後根據你選擇種族的結果對你的屬性值做出任何調整。",
+						"在分配完屬性後，使用表格 “屬性值和調整值” 查出你各屬性值所對應的 {@b 屬性調整值(ability modifiers)}。決定某個屬性數值未包含在表中範圍的屬性值其調整值時，你可以將該項屬性值減去 10 在將結果除以2（向下取整）。隨後在你每個屬性值旁記下相應的調整值。",
 						{
 							"type": "table",
-							"caption": "Ability Score Summary",
+							"caption": "屬性值摘要",
 							"colStyles": [
 								"col-12"
 							],
 							"rows": [
 								[
-									"{@b Strength}"
+									"{@b 力量 Strength}"
 								],
 								[
 									{
 										"type": "entries",
 										"entries": [
-											"{@i Measures:} Natural athleticism, bodily power",
-											"{@i Important for:} Barbarian, fighter, paladin",
-											"{@filter Races that have a bonus to Strength|races|Ability Bonus (Including Subrace)=Strength +2;Strength +1}"
+											"{@i 衡量:} 運動和肉體基本力量。",
+											"{@i 對以下重要:} 野蠻人，戰士，聖騎士。",
+											"{@filter 有力量加值的種族|races|Ability Bonus (Including Subrace)=力量+2;力量+1}"
 										]
 									}
 								]
@@ -307,21 +317,21 @@
 						},
 						{
 							"type": "table",
-							"caption": "Ability Score Summary",
+							"caption": "屬性值摘要",
 							"colStyles": [
 								"col-12"
 							],
 							"rows": [
 								[
-									"{@b Dexterity}"
+									"{@b 敏捷 Dexterity}"
 								],
 								[
 									{
 										"type": "entries",
 										"entries": [
-											"{@i Measures:} Physical agility, reflexes, balance, poise",
-											"{@i Important for:} Monk, ranger, rogue",
-											"{@filter Races that have a bonus to Dexterity|races|Ability Bonus (Including Subrace)=Dexterity +2;Dexterity +1}"
+											"{@i 衡量:} 物理靈活性，反射，平衡和穩定性。",
+											"{@i 對以下重要:} 武僧，遊俠，盜賊。",
+											"{@filter 有敏捷加值的種族|races|Ability Bonus (Including Subrace)=敏捷+2;敏捷+1}"
 										]
 									}
 								]
@@ -332,21 +342,21 @@
 						},
 						{
 							"type": "table",
-							"caption": "Ability Score Summary",
+							"caption": "屬性值摘要",
 							"colStyles": [
 								"col-12"
 							],
 							"rows": [
 								[
-									"{@b Constitution}"
+									"{@b 體質 Constitution}"
 								],
 								[
 									{
 										"type": "entries",
 										"entries": [
-											"{@i Measures:} Health, stamina, vital force",
-											"{@i Important for:} Everyone",
-											"{@filter Races that have a bonus to Constitution|races|Ability Bonus (Including Subrace)=Constitution +2;Constitution +1}"
+											"{@i 衡量:} 健康，耐力和生命力。",
+											"{@i 對以下重要:} 所有。",
+											"{@filter 有體質加值的種族|races|Ability Bonus (Including Subrace)=體質+2;體質+1}"
 										]
 									}
 								]
@@ -357,21 +367,21 @@
 						},
 						{
 							"type": "table",
-							"caption": "Ability Score Summary",
+							"caption": "屬性值摘要",
 							"colStyles": [
 								"col-12"
 							],
 							"rows": [
 								[
-									"{@b Intelligence}"
+									"{@b 智力 Intelligence}"
 								],
 								[
 									{
 										"type": "entries",
 										"entries": [
-											"{@i Measures:} Mental acuity, information recall, analytical skill",
-											"{@i Important for:} Wizard",
-											"{@filter Races that have a bonus to Intelligence|races|Ability Bonus (Including Subrace)=Intelligence +2;Intelligence +1}"
+											"{@i 衡量:} 精神敏銳度，回憶信息，分析能力。",
+											"{@i 對以下重要:} 法師",
+											"{@filter 有智力加值的種族|races|Ability Bonus (Including Subrace)=智力+2;智力+1}"
 										]
 									}
 								]
@@ -382,21 +392,21 @@
 						},
 						{
 							"type": "table",
-							"caption": "Ability Score Summary",
+							"caption": "屬性值摘要",
 							"colStyles": [
 								"col-12"
 							],
 							"rows": [
 								[
-									"{@b Wisdom}"
+									"{@b 睿知 Wisdom}"
 								],
 								[
 									{
 										"type": "entries",
 										"entries": [
-											"{@i Measures:} Awareness, intuition, insight",
-											"{@i Important for:} Cleric, druid",
-											"{@filter Races that have a bonus to Wisdom|races|Ability Bonus (Including Subrace)=Wisdom +2;Wisdom +1}"
+											"{@i 衡量:} 警惕性，直覺和洞察力。",
+											"{@i 對以下重要:} 牧師，德魯伊。",
+											"{@filter 有睿知加值的種族|races|Ability Bonus (Including Subrace)=睿知+2;睿知+1}"
 										]
 									}
 								]
@@ -407,21 +417,21 @@
 						},
 						{
 							"type": "table",
-							"caption": "Ability Score Summary",
+							"caption": "屬性值摘要",
 							"colStyles": [
 								"col-12"
 							],
 							"rows": [
 								[
-									"{@b Charisma}"
+									"{@b 魅力 Charisma}"
 								],
 								[
 									{
 										"type": "entries",
 										"entries": [
-											"{@i Measures:} Confidence, eloquence, leadership",
-											"{@i Important for:} Bard, sorcerer, warlock",
-											"{@filter Races that have a bonus to Charisma|races|Ability Bonus (Including Subrace)=Charisma +2;Charisma +1}"
+											"{@i 衡量:} 自信，口才和領導力。",
+											"{@i 對以下重要:} 吟遊詩人，術士，契術師。",
+											"{@filter 有魅力加值的種族|races|Ability Bonus (Including Subrace)=魅力+2;魅力+1}"
 										]
 									}
 								]
@@ -432,29 +442,29 @@
 						},
 						{
 							"type": "entries",
-							"name": "Building Bruenor, Step 3",
+							"name": "創建布魯諾，步驟 3","ENG_name": "Building Bruenor, Step 3",
 							"page": 13,
 							"entries": [
-								"Bob decides to use the standard set of scores (15, 14, 13, 12, 10, 8) for Bruenor's abilities. Since he's a fighter, he puts his highest score, 15, in Strength. His next highest, 14, goes in Constitution. Bruenor might be a brash fighter, but Bob decides he wants the dwarf to be older, wiser, and a good leader, so he puts decent scores in Wisdom and Charisma. After applying his racial benefits (increasing Bruenor's Constitution by 2 and his Strength by 2), Bruenor's ability scores and modifiers look like this: Strength 17 (+3), Dexterity 10 (+0), Constitution 16 (+3), Intelligence 8 (-1), Wisdom 13 (+1), Charisma 12 (+1).",
-								"Bob fills in Bruenor's final hit points: 10 + his Constitution modifier of +3, for a total of 13 hit points."
+								"鮑勃決定使用標準的屬性值設定（15、14、13、12、10、8）來決定布魯諾的屬性值。由於他是一名戰士，於是他將最高的數值15 分配給力量，次高值14 分配給體質。布魯諾可能會成為一個粗魯的戰士，但鮑勃決定讓矮人顯得更年長而睿智並顯得更有領導力，所以他決定將適中的屬性分配給睿知和魅力。算上其種族增益後（為布魯諾提升2 點體質值和2 點力量值），布魯諾的屬性值和調整值如下：力量17（+3），敏捷10（+0），體質16（+3） ，智力8（-1），睿知13（+1），魅力12（+1）。",
+								"然後，鮑勃算出布魯諾最終的生命值並填上表格，即 10＋其體質調整值（即 +3），總計 13 點生命值。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Variant: Customizing Ability Scores",
+							"name": "變體：自定義屬性值","ENG_name": "Variant: Customizing Ability Scores",
 							"page": 13,
 							"entries": [
-								"At your Dungeon Master's option, you can use this variant for determining your ability scores. The method described here allows you to build a character with a set of ability scores you choose individually.",
-								"You have 27 points to spend on your ability scores. The cost of each score is shown on the Ability Score Point Cost table. For example, a score of 14 costs 7 points. Using this method, 15 is the highest ability score you can end up with, before applying racial increases. You can't have a score lower than 8.",
-								"This method of determining ability scores enables you to create a set of three high numbers and three low ones (15, 15, 15, 8, 8, 8), a set of numbers that are above average and nearly equal (13, 13, 13, 12, 12, 12), or any set of numbers between those extremes.",
+								"你的地下城主可以選擇啟用該變體規則，使你可以選用另一種方​​式分別選擇你所創建角色的屬性值。",
+								"你獲得總計 27 點可花費的點數用於兌換各屬性值，每個屬性值的花費在 “屬性值花費點數” 表中顯示。例如，一個屬性值 14 需要花費 7 點進行兌換。以該方式能兌換到的屬性值在加入種族增益前其最值為 15。而你也不能擁有低於 8 的屬性值。",
+								"這種決定屬性值的方式可讓你得到三個相等的高數值和三個相等的低數值組成的組合（15、15、15、8、8、8），或一個平均值更高但各數值幾乎相等的數值組合（13、13、13、12、12、12），或是任何這兩個極端之間的數值集合。",
 								{
 									"type": "table",
-									"caption": "Ability Score Point Cost",
+									"caption": "屬性值花費點數", "ENG_name": "Ability Score Point Cost",
 									"colLabels": [
-										"Score",
-										"Cost",
-										"Score",
-										"Cost"
+										"屬性值",
+										"花費",
+										"屬性值",
+										"花費"
 									],
 									"colStyles": [
 										"col-3 text-align-center",
@@ -561,97 +571,97 @@
 				},
 				{
 					"type": "entries",
-					"name": "4. Describe Your Character",
+					"name": "4. 描述你的角色", "ENG_name": "Describe Your Character",
 					"page": 13,
 					"entries": [
-						"Once you know the basic game aspects of your character, it's time to flesh him or her out as a person. Your character needs a name. Spend a few minutes thinking about what he or she looks like and how he or she behaves in general terms.",
-						"Using the information in chapter 4, you can flesh out your character's physical appearance and personality traits. Choose your character's {@b alignment} (the moral compass that guides his or her decisions) and {@b ideals}. Chapter 4 also helps you identify the things your character holds most dear, called {@b bonds}, and the {@b flaws} that could one day undermine him or her.",
-						"Your character's {@b background} describes where he or she came from, his or her original occupation, and the character's place in the D&D world.",
-						"Your DM might offer additional backgrounds beyond the ones included in chapter 4, and might be willing to work with you to craft a background that's a more precise fit for your character concept.",
-						"A background gives your character a background feature (a general benefit) and proficiency in two skills, and it might also give you additional languages or proficiency with certain kinds of tools. Record this information, along with the personality information you develop, on your character sheet.",
+						"完成角色的在遊戲中的基本樣子後，你就可以為其捏上血肉使其成為更生動的角色。你的角色需要一個名字。然後再花幾分鐘想一想其模樣以及平時的行為習慣。",
+						"你可以用第 4 章的資料塑造角色的外表和個人特徵。選擇角色的 {@b 陣營(alignment)} （引導其做決定的道德指標）以及 {@b 理念(ideals)} 。第 4 章還可以幫助你確認那些你的角色視若珍寶之事物，它們被稱為 {@b 羈絆(bonds)}，以及那些有朝一日可能使其葬送自己的 {@b 缺點(flaws)}。",
+						"角色的 {@b 背景(background)} 則描述了其來歷，其原本的工作，以及該角色在 D&D 世界中的地位。",
+						"除第 4 章所提供的背景選項外，你的 DM 也可能會讓你選擇其他的額外背景，甚至可以允許你與其一同創作一個更加符合該角色構思的背景。",
+						"背景項可能為你的角色提供一個背景特性（一個比較泛用的增益）和兩個技能的熟練項，還可以為其提供某些額外的語言或特定工具的熟練項。這些信息以及你設定好的個性信息將一同記錄在你的角色卡上。",
 						{
 							"type": "entries",
-							"name": "Your Character's Abilities",
+							"name": "角色各屬性", "ENG_name": "Your Character's Abilities",
 							"page": 14,
 							"entries": [
-								"Take your character's ability scores and race into account as you flesh out his or her appearance and personality. A very strong character with low Intelligence might think and behave very differently from a very smart character with low Strength.",
-								"For example, high {@b Strength} usually corresponds with a burly or athletic body, while a character with low Strength might be scrawny or plump.",
-								"A character with high {@b Dexterity} is probably lithe and slim, while a character with low Dexterity might be either gangly and awkward or heavy and thick-fingered.",
-								"A character with high {@b Constitution} usually looks healthy, with bright eyes and abundant energy. A character with low Constitution might be sickly or frail.",
-								"A character with high {@b Intelligence} might be highly inquisitive and studious, while a character with low Intelligence might speak simply or easily forget details.",
-								"A character with high {@b Wisdom} has good judgment, empathy, and a general awareness of what's going on. A character with low Wisdom might be absent-minded, foolhardy, or oblivious.",
-								"A character with high {@b Charisma} exudes confidence, which is usually mixed with a graceful or intimidating presence. A character with a low Charisma might come across as abrasive, inarticulate, or timid."
+								"角色的屬性值和種族還可以作為你塑造其外表和個性的參考因素。一個非常強壯卻有著低智力值的角色，與一個非常聰明卻有著低力量值的角色，其想法和表現都大有不同。",
+								"例如，高 {@b 力量值} 通常表示角色長著魁梧健美的身形，而低力量值角色則可能瘦得皮包骨或是肥得滾圓。",
+								"高 {@b 敏捷值} 的角色很可能身體柔軟苗條，而低敏捷值的角色則可能消瘦笨拙或是笨重而遲鈍。",
+								"高 {@b 體質值} 的角色往往外表十分健康，比如長著明亮的眼睛且時刻充滿活力。一個低體質值的角色則可能顯得病怏怏或身體虛弱。",
+								"高 {@b 智力值} 的角色可能勤學好問，而低智力值的角色則可能說話簡單直接或是大大咧咧。",
+								"高 {@b 睿知值} 的角色對事物有著良好的判斷力和敏感的感受力，並且時常保持警惕。低感知值的角色則可能會心不在焉，魯莽或是對周圍事物毫不在意。",
+								"高 {@b 魅力值} 的角色透露著自信，舉止間會不時的混雜著禮貌或恫嚇。低魅力角色形象可能是粗魯，口齒不清或膽小怕事。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Building Bruenor, Step 4",
+							"name": "創建布魯諾，步驟 4", "ENG_name": "Building Bruenor, Step 4",
 							"page": 14,
 							"entries": [
-								"Bob fills in some of Bruenor's basic details: his name, his sex (male), his height and weight, and his alignment (lawful good). His high Strength and Constitution suggest a healthy, athletic body, and his low Intelligence suggests a degree of forgetfulness.",
-								"Bob decides that Bruenor comes from a noble line, but his clan was expelled from its homeland when Bruenor was very young. He grew up working as a smith in the remote villages of Icewind Dale. But Bruenor has a heroic destiny\u2014to reclaim his homeland\u2014so Bob chooses the folk hero background for his dwarf. He notes the proficiencies and special feature this background gives him.",
-								"Bob has a pretty clear picture of Bruenor's personality in mind, so he skips the personality traits suggested in the folk hero background, noting instead that Bruenor is a caring, sensitive dwarf who genuinely loves his friends and allies, but he hides this soft heart behind a gruff, snarling demeanor. He chooses the ideal of fairness from the list in his background, noting that Bruenor believes that no one is above the law.",
-								"Given his history, Bruenor's bond is obvious: he aspires to someday reclaim Mithral Hall, his homeland, from the shadow dragon that drove the dwarves out.",
-								"His flaw is tied to his caring, sensitive nature\u2014he has a soft spot for orphans and wayward souls, leading him to show mercy even when it might not be warranted."
+								"鮑勃填上了一些布魯諾的基本細節：他的名字，他的性別（男），他的身高和體重，以及他的陣營（守序善良）。其高力量和高體質體現了一個健康而善於運動的身體，而他的低智力則表現為某種程度的健忘。",
+								"鮑勃決定設定布魯諾生有貴族血統，但其氏族在他很小時候就被驅逐出家園。而他長大後則成了冰風谷一偏僻小村的鐵匠。但布魯諾有著英雄的使命——收復他的家鄉，所以鮑勃為他的矮人選擇了平民英雄這一背景，並記下該背景為角色提供的熟練項和特性。",
+								"鮑勃在腦海中對布魯諾的個性有個清晰的印象，所以他略過了平民英雄背景中提到的個人特徵，而換成自己的想法：布魯諾是一個謹慎而敏感的矮人。他真誠地愛著自己的朋友和同伴，卻用粗野的舉止和大嗓門將自己柔軟的心隱藏起來。記下這些背景信息後，他選擇了背景項所提供清單中的公平的理念，並記下：布魯諾相信沒人可以凌駕於法律之上。",
+								"布魯諾的牽絆在其背景故事中顯而易見：他渴望有朝一日能從驅逐矮人們離開的影龍手上收復秘銀廳，也即其故鄉。",
+								"他的缺陷與他謹慎敏感的天性聯繫在一起——他對孤兒和迷途之人特別溫柔，這使他可能即便在毫無得益時仍會對這類人網開一面。"
 							]
 						}
 					]
 				},
 				{
 					"type": "entries",
-					"name": "5. Choose Equipment",
+					"name": "5. 選擇裝備", "ENG_name": "Choose Equipment",
 					"page": 14,
 					"entries": [
-						"Your class and background determine your character's {@b starting equipment}, including weapons, armor, and other adventuring gear. Record this equipment on your character sheet. All such items are detailed in chapter 5.",
-						"Instead of taking the gear given to you by your class and background, you can purchase your starting equipment. You have a number of {@b gold pieces} (gp) to spend based on your class, as shown in chapter 5. Extensive lists of equipment, with prices, also appear in that chapter.",
-						"If you wish, you can also have one trinket at no cost (see the Trinkets table at the end of chapter 5).",
-						"Your Strength score limits the amount of gear you can carry. Try not to purchase equipment with a total weight (in pounds) exceeding your Strength score times 15. Chapter 7 has more information on carrying capacity.",
+						"角色的 {@b 起始裝備(starting equipment)} 取決於其職業和背景，其內容包括有武器、護甲以及其他冒險用品。在你的角色卡上記下這些裝備。所有這類裝備的細節信息都列在第 5 章的內容中。",
+						"而另一種作為替代的方案，則是以購買的方式決定你的起始裝備。你基於所選擇的職業獲得一定數量的 {@b 金幣(gold pieces)}（gp）用以購買裝備，其具體數額將在第 5 章中列明。大量附有價格的裝備列表也將在該章列出。",
+						"若你願意，你還可以免費擁有一件飾品（參見第 5 章末尾的飾品列表）。",
+						"你的力量值限制了你能攜帶的用品量。不要試圖購買總重量（以磅計量）超過你力量值乘以 15 的裝備。關於負重限制的更多內容可參見第 7 章。",
 						{
 							"type": "entries",
-							"name": "Armor Class",
+							"name": "護甲等級", "ENG_name": "Armor Class",
 							"page": 14,
 							"entries": [
-								"Your {@b Armor Class} (AC) represents how well your character avoids being wounded in battle. Things that contribute to your AC include the armor you wear, the shield you carry, and your Dexterity modifier. Not all characters wear armor or carry shields, however.",
-								"Without armor or a shield, your character's AC equals 10 + his or her Dexterity modifier. If your character wears armor, carries a shield, or both, calculate your AC using the rules in chapter 5. Record your AC on your character sheet.",
-								"Your character needs to be proficient with armor and shields to wear and use them effectively, and your armor and shield proficiencies are determined by your class.",
-								"There are drawbacks to wearing armor or carrying a shield if you lack the required proficiency, as explained in chapter 5.",
-								"Some spells and class features give you a different way to calculate your AC. If you have multiple features that give you different ways to calculate your AC, you choose which one to use."
+								"角色的 {@b 護甲等級(Armor Class)}（AC）代表其在戰鬥中避免受傷的能力。你著裝的護甲，手持的盾牌，以及你的敏捷調整值都會對你的 AC 有所貢獻。只是並非所有的角色都會身穿護甲或手持盾牌。",
+								"在沒有護甲與盾牌時，你角色的 AC 等於 10 +其敏捷調整值。若你的角色著裝護甲或手持盾牌，或者二者兼有，則你的 AC 必須遵循第 5 章中給出的規則進行計算。將你的 AC 值記載到你的角色卡上。",
+								"你的角色需要擁有相應的熟練項才能有效的使用護甲與盾牌，而是否擁有這些熟練項則由你的職業所決定。",
+								"你著裝不具有熟練項的護甲或盾牌時會承受一系列的障礙，其具體細節將在第 5 章進行說明。",
+								"某些法術和職業特性會讓你可以用另一種不同的方式計算你的 AC。你有多個特性分別給予你不同的 AC 結算方式時，你可以從中選用其中之一。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Weapons",
+							"name": "武器", "ENG_name": "Weapons",
 							"page": 14,
 							"entries": [
-								"For each weapon your character wields, calculate the modifier you use when you attack with the weapon and the damage you deal when you hit.",
-								"When you make an attack with a weapon, you roll a d20 and add your proficiency bonus (but only if you are proficient with the weapon) and the appropriate ability modifier.",
+								"給角色持用的每把武器分別計算使用其發動攻擊時，以及用其命中造成傷害時所應用的調整值。",
+								"你用一把武器發動攻擊時，必須投一次 d20 再加上你的熟練加值（僅當你擁有該武器熟練項時），然後再應用屬性調整值。",
 								{
 									"type": "list",
 									"items": [
-										"For attacks with {@b melee weapons,} use your Strength modifier for attack and damage rolls. A weapon that has the finesse property, such as a {@item rapier|phb}, can use your Dexterity modifier instead.",
-										"For attacks with {@b ranged weapons,} use your Dexterity modifier for attack and damage rolls. A melee weapon that has the thrown property, such as a {@item handaxe|phb}, can use your Strength modifier instead.."
+										"使用 {@b 近戰武器(melee weapons)} 的攻擊，其攻擊檢定和傷害擲骰使用力量調整值。具有靈巧屬性的近戰武器（例如一把{@item 刺劍|phb}）可以用敏捷調整值代替力量調整值。",
+										"使用 {@b 遠程武器(ranged weapons)} 的攻擊，其攻擊檢定和傷害擲骰使用敏捷調整值。具有投擲屬性的武器（例如一把{@item 手斧|phb}）可以用力量調整值代替敏捷調整值。"
 									]
 								}
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Building Bruenor, Step 5",
+							"name": "創建布魯諾，步驟 5", "ENG_name": "Building Bruenor, Step 5",
 							"page": 15,
 							"entries": [
-								"Bob writes down the starting equipment from the fighter class and the folk hero background. His starting equipment includes chain mail and a shield, which combine to give Bruenor an Armor Class of 18.",
-								"For Bruenor's weapons, Bob chooses a battleaxe and two handaxes. His battleaxe is a melee weapon, so Bruenor uses his Strength modifier for his attacks and damage. His attack bonus is his Strength modifier (+3) plus his proficiency bonus (+2), for a total of +5.",
-								"The battleaxe deals 1d8 slashing damage, and Bruenor adds his Strength modifier to the damage when he hits, for a total of 1d8 + 3 slashing damage. When throwing a handaxe, Bruenor has the same attack bonus (handaxes, as thrown weapons, use Strength for attacks and damage), and the weapon deals 1d6 + 3 slashing damage when it hits."
+								"鮑勃寫下了從戰士職業和平民英雄背景中得到的起始裝備，具體包括{@item 鎖子甲|phb}和一面{@item 盾牌|phb}，而這一組合使布魯諾的護甲等級為 18。",
+								"鮑勃選擇了一把{@item 戰斧|phb}和兩把{@item 手斧|phb}作為布魯諾的武器。他的戰斧是一把近戰武器，所以布魯諾以該武器發動攻擊所進行的攻擊檢定和傷害擲骰使用其力量調整值。此時他的攻擊加值為其力量調整值（+3）加上其熟練加值（+2），總計為 +5。",
+								"戰斧造成 1d8 點揮砍傷害，並且布魯諾在命中時將其力量調整值加到傷害中，總計為 1d8+3 點揮砍傷害。布魯諾擲出一把手斧時可以使用同樣的攻擊加值（作為投擲武器時，手斧的攻擊檢定和傷害擲骰使用力量調整值），而該武器在命中時造成 1d6+3 點揮砍傷害。"
 							]
 						}
 					]
 				},
 				{
 					"type": "entries",
-					"name": "6. Come Together",
+					"name": "6. 集结", "ENG_name": "Come Together",
 					"page": 15,
 					"entries": [
-						"Most D&D characters don't work alone. Each character plays a role within a {@b party,} a group of adventurers working together for a common purpose. Teamwork and cooperation greatly improve your party's chances to survive the many perils in the worlds of Dungeons & Dragons. Talk to your fellow players and your DM to decide whether your characters know one another, how they met, and what sorts of quests the group might undertake."
+						"大多 D&D 中的角色都不是獨行俠。一個為了同一目標而通力合作的冒險者團體中，或者說一支 {@b 隊伍(party)} 中，都是由各個角色各司其職。而團隊間的協作與配合可以讓隊伍在龍與地下城世界的眾多危險中獲得更高的存活率。與你的玩傢伙伴和 DM 一同討論決定你們的角色是否互相認識，他們怎麼聚在一起以及這個群體可能承擔著何種使命。"
 					]
 				},
 				{
@@ -659,7 +669,7 @@
 					"data": {
 						"quickref": 1
 					},
-					"name": "高於1級的角色", "ENG_name": "Beyond 1st Level",
+					"name": "高於 1 級的角色", "ENG_name": "Beyond 1st Level",
 					"page": 15,
 					"entries": [
 						"隨著你的角色持續冒險並克服一個個的挑戰，他或她將從中獲得各種經驗，而這些經驗將以經驗值的形式呈現。一名總經驗值累積到特定數值的角色將能夠發展出新的能力。這種能力的發展被稱作{@b 升級}。",
