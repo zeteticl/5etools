@@ -1053,19 +1053,19 @@
 					"shortName": "復仇"
 				},
 				{
-					"name": "Oathbreaker",
+					"name": "破誓者","ENG_name": "Oathbreaker",
 					"subclassFeatures": [
 						[
 							{
-								"name": "Oathbreaker",
+								"name": "破誓者","ENG_name": "Oathbreaker",
 								"entries": [
-									"An Oathbreaker is a paladin who breaks his or her sacred oaths to pursue some dark ambition or serve an evil power. Whatever light burned in the paladin's heart has been extinguished. Only darkness remains.",
-									"A paladin must be evil and at least 3rd level to become an Oathbreaker. The paladin replaces the features specific to his or her Sacred Oath with Oathbreaker features.",
+									"成為破誓者的聖騎士打破了自己的神聖誓言，而去追求黑暗的野心或為邪惡力量服務。聖騎士心中燃燒的光耀已經熄滅，只剩下一片黑暗。",
+									"只有至少達到3級的邪惡聖騎士才能成為一名破誓者。該聖騎士將用破誓者特性替換其所有對應神聖哲言的特性。",
 									{
 										"type": "entries",
 										"name": "破誓者法術", "ENG_name": "Oathbreaker Spells",
 										"entries": [
-											"You gain oathbreaker spells at the paladin levels listed.",
+											"你會在列出的聖騎士等級獲得破誓者法術。",
 											{
 												"type": "table",
 												"caption": "破誓者法術",
@@ -1104,16 +1104,16 @@
 									},
 									{
 										"type": "entries",
-										"name": "Oathbreaker Channel Divinity: Control Undead",
+										"name": "破誓者引導神力：控制亡靈","ENG_name": "Oathbreaker Channel Divinity: Control Undead",
 										"entries": [
-											"As an action, the paladin targets one undead creature he or she can see within 30 feet of him or her. The target must make a Wisdom saving throw. On a failed save, the target must obey the paladin's commands for the next 24 hours, or until the paladin uses this Channel Divinity option again. An undead whose challenge rating is equal to or greater than the paladin's level is immune to this effect."
+											"以一個動作，該聖騎士指定其身邊30尺內一個他能看見的不死生物。該目標必須進程一次睿知豁免。豁免失敗時，該目標必須在隨後的24小時裡遵從該聖騎士的命令，或者直至該聖騎士在此使用該引導神力選項為止。挑戰等級等於或高於該聖騎士等級的不死生物免疫該效應。"
 										]
 									},
 									{
 										"type": "entries",
-										"name": "Oathbreaker Channel Divinity: Dreadful Aspect",
+										"name": "破誓者引導神力：恐怖顯現","ENG_name": "Oathbreaker Channel Divinity: Dreadful Aspect",
 										"entries": [
-											"As an action, the paladin channels the darkest emotions and focuses them into a burst of magical menace. Each creature of the paladin's choice within 30 feet of the paladin must make a Wisdom saving throw if it can see the paladin. On a failed save, the target is {@condition frightened} of the paladin for 1 minute. If a creature {@condition frightened} by this effect ends its turn more than 30 feet away from the paladin, it can attempt another Wisdom saving throw to end the effect on it."
+											"以一個動作，該聖騎士引導最黑暗的情感並將其凝聚爆發為一場魔法的脅迫之息。該聖騎士周邊30尺內，其指定的每個能看到該聖騎士的生物必須進行一次睿知豁免。豁免失敗的目標將陷入1分鐘對該聖騎士恐慌的狀態。因該效應陷入恐慌的生物如果在距離該聖騎士30尺外的位置結束其自己回合，則其可以嘗試再進行一次該睿知豁免，豁免成功則終止其自己身上的該效應。"
 										]
 									}
 								]
@@ -1124,10 +1124,10 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Aura of Hate",
+										"name": "憎恨靈光","ENG_name": "Aura of Hate",
 										"entries": [
-											"Starting at 7th level, the paladin, as well any fiends and undead within 10 feet of the paladin, gains a bonus to melee weapon damage rolls equal to the paladin's Charisma modifier (minimum of +1). A creature can benefit from this feature from only one paladin at a time.",
-											"At 18th level, the range of this aura increases to 30 feet."
+											"第7級起，該聖騎士本身，以及其身邊10尺內的所有邪魔和不死生物，都將獲的與該聖騎士魅力調整值相同(至少為+1)的近戰武器傷害擲般加值。一個生物一次只能從一名聖騎士的該特性中獲益。",
+											"第18級時，該靈光的覆蓋範圍增加至30尺。"
 										]
 									}
 								]
@@ -1138,9 +1138,9 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Supernatural Resistance",
+										"name": "超然抗性","ENG_name": "Supernatural Resistance",
 										"entries": [
-											"At 15th level, the paladin gains resistance to bludgeoning, piercing, and slashing damage from nonmagical weapons."
+											"第15級時，該聖騎士獲得對非魔法武器的鈍擊、刺穿、揮砍傷害的抗性。"
 										]
 									}
 								]
@@ -1151,11 +1151,11 @@
 								"entries": [
 									{
 										"type": "entries",
-										"name": "Dread Lord",
+										"name": "恐懼之王","ENG_name": "Dread Lord",
 										"entries": [
-											"At 20th level, the paladin can, as an action, surround himself or herself with an aura of gloom that lasts for 1 minute. The aura reduces any bright light in a 30-foot radius around the paladin to dim light. Whenever an enemy that is {@condition frightened} by the paladin starts its turn in the aura, it takes {@dice 4d10} psychic damage. Additionally, the paladin and creatures he or she chooses in the aura are draped in deeper shadow. Creatures that rely on sight have disadvantage on attack rolls against creatures draped in this shadow.",
-											"While the aura lasts, the paladin can use a bonus action on his or her turn to cause the shadows in the aura to attack one creature. The paladin makes a melee spell attack against the target. If the attack hits, the target takes necrotic damage equal to {@dice 3d10} + the paladin's Charisma modifier.",
-											"After activating the aura, the paladin can't do so again until he or she finishes a long rest."
+											"第20級時，以一個動作，該聖騎士可以使自己在1分鐘內環繞於陰鬱的靈光中。該靈光可以將該聖騎士周邊30尺半徑的亮光光照減弱為微光光照。任何受該聖騎士恐慌的敵人在該靈光內開始其自己回合時將受到4d10的心靈傷害。此外，該聖騎士以及由其指定的身處靈光中的生物都將籠罩於更深的幽影中。依賴視覺的生物對籠罩於該幽影中的生物發動攻擊檢定時具有劣勢。",
+											"靈光持續時，該聖騎士可以在其自己回合內用一個附贈動作令該靈光內的幽影攻擊一個生物。該聖騎士對該目標發動一次近戰法術攻擊。若攻擊命中，則該目標受到的黯蝕傷害等於3d10+該聖騎士的魅力調整值。",
+											"激活該靈光後，該聖騎士必須完成一次長休才能再次使用該特性。"
 										]
 									}
 								]
@@ -1163,7 +1163,7 @@
 						]
 					],
 					"source": "DMG",
-					"shortName": "Oathbreaker"
+					"shortName": "破誓者"
 				},
 				{
 					"name": "王冠之誓", "ENG_name": "Oath of the Crown",
