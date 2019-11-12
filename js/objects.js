@@ -82,7 +82,7 @@ function addObjects (data) {
 					<span class="name col-8">${obj.name}</span>
 					<span class="size col-2">${Parser.sizeAbvToFull(obj.size)}</span>
 					<span class="source col-2 text-align-center ${Parser.sourceJsonToColor(obj.source)}" title="${Parser.sourceJsonToFull(obj.source)}">${abvSource}</span>
-					
+
 					<span class="uniqueid hidden">${obj.uniqueId ? obj.uniqueId : obI}</span>
 					<span class="eng_name hidden">${obj.ENG_name ? obj.ENG_name : obj.name}</span>
 				</a>
@@ -151,7 +151,7 @@ function loadhash (jsonIndex) {
 
 	const $floatToken = $(`#float-token`).empty();
 	if (obj.tokenUrl || !obj.uniqueId) {
-		const imgLink = obj.tokenUrl || UrlUtil.link(`img/objects/${obj.name.replace(/"/g, "")}.png`);
+		const imgLink = obj.tokenUrl || UrlUtil.link(`img/objects/${obj.ENG_name.replace(/"/g, "")}.png`);
 		$floatToken.append(`
 			<a href="${imgLink}" target="_blank" rel="noopener">
 				<img src="${imgLink}" id="token_image" class="token" onerror="imgError(this)" alt="${obj.name}">
