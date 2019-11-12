@@ -662,7 +662,7 @@ function Renderer () {
 		textStack[0] += `<i>${Parser.attackTypeToFull(entry.attackType)}:</i> `;
 		const len = entry.attackEntries.length;
 		for (let i = 0; i < len; ++i) this._recursiveRender(entry.attackEntries[i], textStack, meta);
-		textStack[0] += ` <i>Hit:</i> `;
+		textStack[0] += ` <i>若命中:</i> `;
 		const len2 = entry.hitEntries.length;
 		for (let i = 0; i < len2; ++i) this._recursiveRender(entry.hitEntries[i], textStack, meta);
 		this._renderSuffix(entry, textStack, meta, options);
@@ -696,8 +696,8 @@ function Renderer () {
 		this._renderPrefix(entry, textStack, meta, options);
 		textStack[0] += `<table class="rd__b-data">`;
 		textStack[0] += `<thead><tr><th class="rd__data-embed-header" colspan="6" onclick="((ele) => {
-						$(ele).find('.rd__data-embed-name').toggle(); 
-						$(ele).find('.rd__data-embed-toggle').text($(ele).text().includes('+') ? '[\u2013]' : '[+]'); 
+						$(ele).find('.rd__data-embed-name').toggle();
+						$(ele).find('.rd__data-embed-toggle').text($(ele).text().includes('+') ? '[\u2013]' : '[+]');
 						$(ele).closest('table').find('tbody').toggle()
 					})(this)"><span style="display: none;" class="rd__data-embed-name">${entry.dataCreature.name}</span><span class="rd__data-embed-toggle">[\u2013]</span></th></tr></thead><tbody>`;
 		textStack[0] += Renderer.monster.getCompactRenderedString(entry.dataCreature, this);
@@ -709,8 +709,8 @@ function Renderer () {
 		this._renderPrefix(entry, textStack, meta, options);
 		textStack[0] += `<table class="rd__b-data">`;
 		textStack[0] += `<thead><tr><th class="rd__data-embed-header" colspan="6" onclick="((ele) => {
-						$(ele).find('.rd__data-embed-name').toggle(); 
-						$(ele).find('.rd__data-embed-toggle').text($(ele).text().includes('+') ? '[\u2013]' : '[+]'); 
+						$(ele).find('.rd__data-embed-name').toggle();
+						$(ele).find('.rd__data-embed-toggle').text($(ele).text().includes('+') ? '[\u2013]' : '[+]');
 						$(ele).closest('table').find('tbody').toggle()
 					})(this)"><span style="display: none;" class="rd__data-embed-name">${entry.dataSpell.name}</span><span class="rd__data-embed-toggle">[\u2013]</span></th></tr></thead><tbody>`;
 		textStack[0] += Renderer.spell.getCompactRenderedString(entry.dataSpell, this);
@@ -1717,7 +1717,7 @@ Renderer.utils = {
 		function renderFluff (data) {
 			renderer.setFirstSection(true);
 			const fluff = fnFluffBuilder(data);
-			
+
 			if (!fluff) {
 				$td.empty().append(HTML_NO_INFO);
 				return;
@@ -1922,7 +1922,7 @@ Renderer.spell = {
 						<th colspan="1">學派</th>
 						<th colspan="2">施法時間</th>
 						<th colspan="2">射程</th>
-					</tr>	
+					</tr>
 					<tr>
 						<td colspan="1">${Parser.spLevelToFull(spell.level)}${Parser.spMetaToFull(spell.meta)}</td>
 						<td colspan="1">${Parser.spSchoolAndSubschoolsAbvsToFull(spell.school, spell.subschools)}</td>
@@ -1932,7 +1932,7 @@ Renderer.spell = {
 					<tr>
 						<th colspan="4">構材</th>
 						<th colspan="2">持續時間</th>
-					</tr>	
+					</tr>
 					<tr>
 						<td colspan="4">${Parser.spComponentsToFull(spell.components)}</td>
 						<td colspan="2">${Parser.spDurationToFull(spell.duration)}</td>
@@ -2343,7 +2343,7 @@ Renderer.object = {
 						<th colspan="5" class="text-align-center">傷害免疫</th>
 					</tr>
 					<tr>
-						<td colspan="3" class="text-align-center">${Parser.sizeAbvToFull(obj.size)} object</td>					
+						<td colspan="3" class="text-align-center">${Parser.sizeAbvToFull(obj.size)} object</td>
 						<td colspan="2" class="text-align-center">${obj.ac}</td>
 						<td colspan="2" class="text-align-center">${obj.hp}</td>
 						<td colspan="5" class="text-align-center">${obj.immune}</td>
@@ -2358,7 +2358,7 @@ Renderer.object = {
 						${obj.vulnerable ? `<td colspan="${row2Width}" class="text-align-center">${obj.vulnerable}</td>` : ""}
 					</tr>
 					` : ""}
-				</table>			
+				</table>
 			</td></tr>
 			<tr class="text"><td colspan="6">
 			${obj.entries ? renderer.render({entries: obj.entries}, 2) : ""}
@@ -2877,9 +2877,9 @@ Renderer.monster = {
 						<th>挑戰等級</th>
 					</tr>
 					<tr>
-						<td>${Parser.acToFull(mon.ac)}</td>					
-						<td>${Renderer.monster.getRenderedHp(mon.hp)}</td>					
-						<td>${Parser.getSpeedString(mon)}</td>					
+						<td>${Parser.acToFull(mon.ac)}</td>
+						<td>${Renderer.monster.getRenderedHp(mon.hp)}</td>
+						<td>${Parser.getSpeedString(mon)}</td>
 						<td>
 							${Parser.monCrToFull(mon.cr)}
 							${options.showScaler && Parser.isValidCr(mon.cr.cr || mon.cr) ? `
@@ -2892,9 +2892,9 @@ Renderer.monster = {
 								<span class="glyphicon glyphicon-refresh"></span>
 							</button>
 							` : ""}
-						</td>					
+						</td>
 					</tr>
-				</table>			
+				</table>
 			</td></tr>
 			<tr><td colspan="6"><div class="border"></div></td></tr>
 			<tr><td colspan="6">
@@ -2906,7 +2906,7 @@ Renderer.monster = {
 						<th class="col-2 text-align-center">智力</th>
 						<th class="col-2 text-align-center">睿知</th>
 						<th class="col-2 text-align-center">魅力</th>
-					</tr>	
+					</tr>
 					<tr>
 						<td class="text-align-center">${Renderer.utils.getAbilityRoller(mon, "str")}</td>
 						<td class="text-align-center">${Renderer.utils.getAbilityRoller(mon, "dex")}</td>
@@ -3920,7 +3920,7 @@ Renderer.ship = {
 						<th class="col-2 text-align-center">INT</th>
 						<th class="col-2 text-align-center">WIS</th>
 						<th class="col-2 text-align-center">CHA</th>
-					</tr>	
+					</tr>
 					<tr>
 						<td class="text-align-center">${Renderer.utils.getAbilityRoller(ship, "str")}</td>
 						<td class="text-align-center">${Renderer.utils.getAbilityRoller(ship, "dex")}</td>
@@ -6180,7 +6180,7 @@ Renderer.stripTags = function (str) {
 					case "@strike":
 						return text.replace(/^{@(i|italic|b|bold|s|strike) (.*?)}$/, "$1");
 
-					case "@h": return "Hit: ";
+					case "@h": return "若命中: ";
 
 					case "@atk": return Renderer.attackTagToFull(text);
 

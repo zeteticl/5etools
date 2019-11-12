@@ -330,7 +330,7 @@ function EntryRenderer () {
 					for (let i = 0; i < entry.attackEntries.length; i++) {
 						this._recursiveEntryRender(entry.attackEntries[i], textStack, depth);
 					}
-					textStack[0] += ` <i>Hit:</i> `;
+					textStack[0] += ` <i>若命中:</i> `;
 					for (let i = 0; i < entry.hitEntries.length; i++) {
 						this._recursiveEntryRender(entry.hitEntries[i], textStack, depth);
 					}
@@ -362,8 +362,8 @@ function EntryRenderer () {
 					renderPrefix();
 					textStack[0] += `<table class="statsDataInset">`;
 					textStack[0] += `<thead><tr><th class="dataCreature__header" colspan="6" onclick="((ele) => {
-						$(ele).find('.dataCreature__name').toggle(); 
-						$(ele).find('.dataCreature__showHide').text($(ele).text().includes('+') ? '[\u2013]' : '[+]'); 
+						$(ele).find('.dataCreature__name').toggle();
+						$(ele).find('.dataCreature__showHide').text($(ele).text().includes('+') ? '[\u2013]' : '[+]');
 						$(ele).closest('table').find('tbody').toggle()
 					})(this)"><span style="display: none;" class="dataCreature__name">${entry.dataCreature.name}</span><span class="dataCreature__showHide">[\u2013]</span></th></tr></thead><tbody>`;
 					textStack[0] += EntryRenderer.monster.getCompactRenderedString(entry.dataCreature, this);
@@ -1742,7 +1742,7 @@ EntryRenderer.spell = {
 						<th colspan="1">學派</th>
 						<th colspan="2">施法時間</th>
 						<th colspan="2">射程</th>
-					</tr>	
+					</tr>
 					<tr>
 						<td colspan="1">${Parser.spLevelToFull(spell.level)}${Parser.spMetaToFull(spell.meta)}</td>
 						<td colspan="1">${Parser.spSchoolAndSubschoolsAbvsToFull(spell.school, spell.subschools)}</td>
@@ -1752,7 +1752,7 @@ EntryRenderer.spell = {
 					<tr>
 						<th colspan="4">構材</th>
 						<th colspan="2">持續時間</th>
-					</tr>	
+					</tr>
 					<tr>
 						<td colspan="4">${Parser.spComponentsToFull(spell.components)}</td>
 						<td colspan="2">${Parser.spDurationToFull(spell.duration)}</td>
@@ -2165,7 +2165,7 @@ EntryRenderer.object = {
 						<th colspan="5" class="text-align-center">Damage Imm.</th>
 					</tr>
 					<tr>
-						<td colspan="3" class="text-align-center">${Parser.sizeAbvToFull(obj.size)} object</td>					
+						<td colspan="3" class="text-align-center">${Parser.sizeAbvToFull(obj.size)} object</td>
 						<td colspan="2" class="text-align-center">${obj.ac}</td>
 						<td colspan="2" class="text-align-center">${obj.hp}</td>
 						<td colspan="5" class="text-align-center">${obj.immune}</td>
@@ -2180,7 +2180,7 @@ EntryRenderer.object = {
 						${obj.vulnerable ? `<td colspan="${row2Width}" class="text-align-center">${obj.vulnerable}</td>` : ""}
 					</tr>
 					` : ""}
-				</table>			
+				</table>
 			</td></tr>
 			<tr class="text"><td colspan="6">
 			${obj.entries ? renderer.renderEntry({entries: obj.entries}, 2) : ""}
@@ -2698,9 +2698,9 @@ EntryRenderer.monster = {
 						<th>挑戰等級</th>
 					</tr>
 					<tr>
-						<td>${Parser.acToFull(mon.ac)}</td>					
-						<td>${EntryRenderer.monster.getRenderedHp(mon.hp)}</td>					
-						<td>${Parser.getSpeedString(mon)}</td>					
+						<td>${Parser.acToFull(mon.ac)}</td>
+						<td>${EntryRenderer.monster.getRenderedHp(mon.hp)}</td>
+						<td>${Parser.getSpeedString(mon)}</td>
 						<td>
 							${Parser.monCrToFull(mon.cr)}
 							${options.showScaler && Parser.isValidCr(mon.cr.cr || mon.cr) ? `
@@ -2713,9 +2713,9 @@ EntryRenderer.monster = {
 								<span class="glyphicon glyphicon-refresh"></span>
 							</button>
 							` : ""}
-						</td>					
+						</td>
 					</tr>
-				</table>			
+				</table>
 			</td></tr>
 			<tr><td colspan="6"><div class="border"></div></td></tr>
 			<tr><td colspan="6">
@@ -2727,7 +2727,7 @@ EntryRenderer.monster = {
 						<th class="col-2 text-align-center">智力</th>
 						<th class="col-2 text-align-center">睿知</th>
 						<th class="col-2 text-align-center">魅力</th>
-					</tr>	
+					</tr>
 					<tr>
 						<td class="text-align-center">${EntryRenderer.utils.getAbilityRoller(mon, "str")}</td>
 						<td class="text-align-center">${EntryRenderer.utils.getAbilityRoller(mon, "dex")}</td>
@@ -3705,7 +3705,7 @@ EntryRenderer.ship = {
 						<th class="col-2 text-align-center">INT</th>
 						<th class="col-2 text-align-center">WIS</th>
 						<th class="col-2 text-align-center">CHA</th>
-					</tr>	
+					</tr>
 					<tr>
 						<td class="text-align-center">${EntryRenderer.utils.getAbilityRoller(ship, "str")}</td>
 						<td class="text-align-center">${EntryRenderer.utils.getAbilityRoller(ship, "dex")}</td>
