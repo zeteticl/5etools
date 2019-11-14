@@ -1184,15 +1184,15 @@
 			]
 		},
 		{
-			"name": "Balloon Pack",
+			"name": "氣球背包","ENG_name": "Balloon Pack",
 			"wondrous": true,
 			"rarity": "Uncommon",
 			"source": "PotA",
 			"page": 222,
 			"entries": [
-				"This backpack contains the spirit of an {@creature air elemental} and a compact leather balloon. While you're wearing the backpack, you can deploy the balloon as an action and gain the effect of the {@spell levitate} spell for 10 minutes, targeting yourself and requiring no concentration. Alternatively, you can use a reaction to deploy the balloon when you're falling and gain the effect of the {@spell feather fall} spell for yourself.",
-				"When either spell ends, the balloon slowly deflates as the elemental spirit escapes and returns to the Elemental Plane of Air. As the balloon deflates, you descend gently toward the ground for up to 60 feet. IF you are still in the air at the end of this distance, you fall if you have no other means of staying aloft.",
-				"After the spirit departs, the backpack's property is unusable unless the backpack is recharged for 1 hour in an elemental air node, which binds another spirit to the backpack."
+				"這個背包裡裝填了 {@creature 氣元素} 的精魂和一個壓縮的皮革氣球。當你背著背包的時候，你可以將氣球以一個動作展開，並獲得10分鐘的 {@spell 浮空術}效果，目標只能是你自己，不需要專注。或者，你也可以在下降的時候，使用一個反應來展開氣球，你獲得 {@spell 羽落術} 的效果。",
+				"當任一法術結束時，元素精魂便會逃逸並返回到風元素位面，氣球會慢慢地放氣。當氣球放氣時，你向地面徐徐下降60英尺。如果你在這段距離結束時仍然處於半空中，且沒有其他方法保持滯空，你就會墜落。",
+				"當精魂逃逸後，背包效果便無法使用，除非背包在一個風元素節點充能1小時，該節點將另一個精魂裝填到背包內。"
 			],
 			"attachedSpells": [
 				"levitate",
@@ -2117,7 +2117,7 @@
 			"name": "Bookmark",
 			"type": "M",
 			"weaponCategory": "Simple",
-			"baseItem": "dagger|phb",
+			"baseItem": "匕首|phb",
 			"weight": "1",
 			"dmg1": "{@dice 1d4}",
 			"dmgType": "P",
@@ -2254,15 +2254,15 @@
 			"page": 135
 		},
 		{
-			"name": "Bottled Breath",
+			"name": "壓縮空氣","ENG_name": "Bottled Breath",
 			"type": "P",
 			"weight": "0.5",
 			"rarity": "Uncommon",
 			"source": "PotA",
 			"page": 222,
 			"entries": [
-				"This bottle contains a breath of elemental air. When you inhale it, you either exhale it or hold it.",
-				"If you exhale the breath, you gain the effect of the {@spell gust of wind} spell. If you hold the breath, you don't need to breathe for 1 hour, though you can end this benefit early (for example, to speak). Ending it early doesn't give you the benefit of exhaling the breath."
+				"這個瓶子裡存有一股來自風元素的氣流。當你吸氣時，你可以選擇呼出它，或者屏住它。",
+				"如果你選擇呼氣，你得到  {@spell 造風術} 的效果。如果你選擇屏住呼吸，你不需要呼吸至多1個小時，你可以提前結束這個好處（例如，開口說話）。提前結束並不會給你帶來呼氣的好處。"
 			],
 			"attachedSpells": [
 				"gust of wind"
@@ -3362,16 +3362,16 @@
 			]
 		},
 		{
-			"name": "Claws of the Umber Hulk",
+			"name": "土巨怪的爪子","ENG_name": "Claws of the Umber Hulk",
 			"wondrous": true,
 			"rarity": "Rare",
 			"source": "PotA",
 			"page": 222,
 			"reqAttune": true,
 			"entries": [
-				"These heavy gauntlets of brown iron are forged in the shape an {@creature umber hulk|mm|umber hulk's} claws, and they fit the wearer's hands and forearms all the way up to the elbow. While wearing both claws, you gain a burrowing speed of 20 feet, and you can tunnel through solid rock at a rate of 1 foot per round.",
-				"You can use a claw as a melee weapon while wearing it. You have proficiency with it, and it deals {@dice 1d8} slashing damage on a hit (your Strength modifier applies to the attack and damage rolls, as normal)",
-				"While wearing the claws, you can't manipulate objects or cast spells with somatic components"
+				"這些沉重的棕色鐵護手被鍛造成一個 {@creature 土巨怪} 的爪子形狀，戴著它的人可以套在手和前臂上，一直戴到肘部。當你戴上兩個爪子時，你可以獲得20英尺的挖掘速度，你可以以每輪1英尺的速度挖穿堅硬的岩石。",
+				"此外，你可以戴著爪子作為近戰武器。你熟練於使用它，它可以在一次攻擊中造成 {@dice 1d8} 的揮砍傷害（你的力量調整可以正常作用於攻擊檢定和傷害檢定）。",
+				"當你戴著爪子的時候，你不能操縱物體或施放帶有軀體成分的法術。"
 			]
 		},
 		{
@@ -4915,81 +4915,81 @@
 			]
 		},
 		{
-			"name": "Devastation Orb of Air",
+			"name": "毀滅法球(氣)","ENG_name": "Devastation Orb of Air",
 			"wondrous": true,
 			"rarity": "Very Rare",
 			"source": "PotA",
 			"page": 222,
 			"entries": [
-				"A devastation orb is an elemental bomb that can be created at the site of an elemental node by performing a ritual with an elemental weapon. The type of orb created depends on the node used. For example, an air node creates a devastation orb of air. The ritual takes 1 hour to complete and requires 2,000 gp worth of special components, which are consumed.",
-				"A devastation orb measures 12 inches in diameter, weighs 10 pounds, and has a solid outer shell. The orb detonates {@dice 1d100} hours after its creation, releasing the elemental energy it contains. The orb gives no outward sign of how much time remains before it will detonate. Spells such as {@spell identify} and {@spell divination} can be used to ascertain when the orb will explode. An orb has AC 10, 15 hit points, and immunity to poison and psychic damage. Reducing it to 0 hit points causes it to explode instantly.",
-				"A special container can be crafted to contain a devastation orb and prevent it from detonating. The container must be inscribed with symbols of the orb's opposing element. For example, a case inscribed with earth symbols can be used to contain a devastation orb of air and keep it from detonating. While in the container, the orb thrums. If it is removed from the container after the time when it was supposed to detonate, it explodes {@dice 1d6} rounds later, unless it is returned to the container.",
-				"Regardless of the type of orb, its effect is contained within a sphere with a 1 mile radius. The orb is the sphere's point of origin. The orb is destroyed after one use.",
+				"毀滅法球是一種元素炸彈，可以在元素節點上通過使用邪惡元素武器進行儀式來製造。創建的法球類型取決於製造所使用的節點。例如，一個風元素節點會產生一個風之毀滅法球。這個儀式需要1個小時完成，需要2,000gp的特殊材料，這些成分將會被消耗掉。",
+				"毀滅法球直徑12英寸，重10磅，外殼堅固。這個球體在誕生後  {@dice 1d100} 小時將會爆炸，釋放出它所包含的元素能量。這個球體沒有任何跡象顯示它還需要多久才會爆炸。諸如 {@spell 鑑定術} 和 {@spell 預言術} 之類的法術可以用來確定球體爆炸的時間。一個球體有 AC 10 ，15點生命值，對毒素和心靈傷害有免疫。降低到0點生命值會導致法球立刻爆炸。",
+				"可以製作一個特殊的容器來存放一個毀滅法球，以此防止它一言不合就爆炸。容器必須刻有球體相反元素的符號。例如，一個刻有大地符號的盒子可以用來封存一個風之毀滅法球。在容器中，球體會緩緩旋轉。如果在本應引爆的時間之後將其從容器中取出，則法球會在 {@dice 1d6} 輪之後爆炸，除非將其放回容器。",
+				"無論法球的類型如何，它的作用範圍都是一個半徑為1英里的球型區域。區域的中心是法球所在位置。一次使用後球體會被摧毀。",
 				{
-					"name": "Air Orb",
+					"name": "狂風法球",
 					"type": "entries",
 					"entries": [
-						"When this orb detonates, it creates a powerful windstorm that lasts for 1 hour. Whenever a creature ends its turn exposed to the wind, the creature must succeed on a DC 18 Constitution saving throw or take {@dice 1d4} bludgeoning damage, as the wind and debris batter it. The wind is strong enough to uproot weak trees and destroy light structures after at least 10 minutes of exposure. Otherwise, the rules for strong wind apply, as detailed in chapter 5 of the Dungeon Master's Guide."
+						"當這個法球爆炸時，它會產生持續1小時的強大風暴。當一個生物暴露在風中結束它的回合時，該生物必須通過DC18體質豁免或承受1d4鈍擊傷害，這是因為風和碎石會對其進行沖擊。在風中暴露超過10分鐘後，脆弱的樹木將會被連根拔起，輕型建築物也會被強風摧毀。除此之外，《地下城主指南》第五章詳細介紹了強風的規則。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Devastation Orb of Earth",
+			"name": "毀滅法球(土)","ENG_name": "Devastation Orb of Earth",
 			"wondrous": true,
 			"rarity": "Very Rare",
 			"source": "PotA",
 			"page": 222,
 			"entries": [
-				"A devastation orb is an elemental bomb that can be created at the site of an elemental node by performing a ritual with an elemental weapon. The type of orb created depends on the node used. For example, an air node creates a {@item devastation orb of air|PotA}. The ritual takes 1 hour to complete and requires 2,000 gp worth of special components, which are consumed.",
-				"A devastation orb measures 12 inches in diameter, weighs 10 pounds, and has a solid outer shell. The orb detonates {@dice 1d100} hours after its creation, releasing the elemental energy it contains. The orb gives no outward sign of how much time remains before it will detonate. Spells such as {@spell identify} and {@spell divination} can be used to ascertain when the orb will explode. An orb has AC 10, 15 hit points, and immunity to poison and psychic damage. Reducing it to 0 hit points causes it to explode instantly.",
-				"A special container can be crafted to contain a devastation orb and prevent it from detonating. The container must be inscribed with symbols of the orb's opposing element. For example, a case inscribed with earth symbols can be used to contain a {@item devastation orb of air|PotA} and keep it from detonating. While in the container, the orb thrums. If it is removed from the container after the time when it was supposed to detonate, it explodes {@dice 1d6} rounds later, unless it is returned to the container.",
-				"Regardless of the type of orb, its effect is contained within a sphere with a 1 mile radius. The orb is the sphere's point of origin. The orb is destroyed after one use.",
+				"毀滅法球是一種元素炸彈，可以在元素節點上通過使用邪惡元素武器進行儀式來製造。創建的法球類型取決於製造所使用的節點。例如，一個風元素節點會產生一個風之毀滅法球。這個儀式需要1個小時完成，需要2,000gp的特殊材料，這些成分將會被消耗掉。",
+				"毀滅法球直徑12英寸，重10磅，外殼堅固。這個球體在誕生後  {@dice 1d100} 小時將會爆炸，釋放出它所包含的元素能量。這個球體沒有任何跡象顯示它還需要多久才會爆炸。諸如 {@spell 鑑定術} 和 {@spell 預言術} 之類的法術可以用來確定球體爆炸的時間。一個球體有 AC 10 ，15點生命值，對毒素和心靈傷害有免疫。降低到0點生命值會導致法球立刻爆炸。",
+				"可以製作一個特殊的容器來存放一個毀滅法球，以此防止它一言不合就爆炸。容器必須刻有球體相反元素的符號。例如，一個刻有大地符號的盒子可以用來封存一個風之毀滅法球。在容器中，球體會緩緩旋轉。如果在本應引爆的時間之後將其從容器中取出，則法球會在 {@dice 1d6} 輪之後爆炸，除非將其放回容器。",
+				"無論法球的類型如何，它的作用範圍都是一個半徑為1英里的球型區域。區域的中心是法球所在位置。一次使用後球體會被摧毀。",
 				{
-					"name": "Earth Orb",
+					"name": "大地法球",
 					"type": "entries",
 					"entries": [
-						"When this orb detonates, it subjects the area to the effects of the {@spell earthquake} spell for 1 minute (spell save DC 18). For the purpose of the spell's effects, the spell is cast on the turn that the orb explodes."
+						"當這個法球爆炸時，它使該區域受到 {@spell 地震術} 的影響直至1分鐘（法術豁免DC18）。該法術在球體爆炸的回合中施放。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Devastation Orb of Fire",
+			"name": "毀滅法球(火)","ENG_name": "Devastation Orb of Fire",
 			"wondrous": true,
 			"rarity": "Very Rare",
 			"source": "PotA",
 			"page": 222,
 			"entries": [
-				"A devastation orb is an elemental bomb that can be created at the site of an elemental node by performing a ritual with an elemental weapon. The type of orb created depends on the node used. For example, an air node creates a {@item devastation orb of air|PotA}. The ritual takes 1 hour to complete and requires 2,000 gp worth of special components, which are consumed.",
-				"A devastation orb measures 12 inches in diameter, weighs 10 pounds, and has a solid outer shell. The orb detonates {@dice 1d100} hours after its creation, releasing the elemental energy it contains. The orb gives no outward sign of how much time remains before it will detonate. Spells such as {@spell identify} and {@spell divination} can be used to ascertain when the orb will explode. An orb has AC 10, 15 hit points, and immunity to poison and psychic damage. Reducing it to 0 hit points causes it to explode instantly.",
-				"A special container can be crafted to contain a devastation orb and prevent it from detonating. The container must be inscribed with symbols of the orb's opposing element. For example, a case inscribed with earth symbols can be used to contain a {@item devastation orb of air|PotA} and keep it from detonating. While in the container, the orb thrums. If it is removed from the container after the time when it was supposed to detonate, it explodes {@dice 1d6} rounds later, unless it is returned to the container.",
-				"Regardless of the type of orb, its effect is contained within a sphere with a 1 mile radius. The orb is the sphere's point of origin. The orb is destroyed after one use.",
+				"毀滅法球是一種元素炸彈，可以在元素節點上通過使用邪惡元素武器進行儀式來製造。創建的法球類型取決於製造所使用的節點。例如，一個風元素節點會產生一個風之毀滅法球。這個儀式需要1個小時完成，需要2,000gp的特殊材料，這些成分將會被消耗掉。",
+				"毀滅法球直徑12英寸，重10磅，外殼堅固。這個球體在誕生後  {@dice 1d100} 小時將會爆炸，釋放出它所包含的元素能量。這個球體沒有任何跡象顯示它還需要多久才會爆炸。諸如 {@spell 鑑定術} 和 {@spell 預言術} 之類的法術可以用來確定球體爆炸的時間。一個球體有 AC 10 ，15點生命值，對毒素和心靈傷害有免疫。降低到0點生命值會導致法球立刻爆炸。",
+				"可以製作一個特殊的容器來存放一個毀滅法球，以此防止它一言不合就爆炸。容器必須刻有球體相反元素的符號。例如，一個刻有大地符號的盒子可以用來封存一個風之毀滅法球。在容器中，球體會緩緩旋轉。如果在本應引爆的時間之後將其從容器中取出，則法球會在 {@dice 1d6} 輪之後爆炸，除非將其放回容器。",
+				"無論法球的類型如何，它的作用範圍都是一個半徑為1英里的球型區域。區域的中心是法球所在位置。一次使用後球體會被摧毀。",
 				{
-					"name": "Fire Orb",
+					"name": "烈焰法球",
 					"type": "entries",
 					"entries": [
-						"When this orb detonates, it creates a dry heat wave that lasts for 24 hours. Within the area of effect, the rules for extreme heat apply, as detailed in chapter 5 of the Dungeon Master's Guide. At the end of each hour, there is a ten percent chance that the heat wave starts a wildfire in a random location within the area of effect. The wildfire covers a 10-foot-square area initially but expands to fill another 10-foot square each round until the fire is extinguished or burns itself out. A creature that comes within 10 feet of a wildfire for the first time on a turn or starts its turn there takes {@dice 3d6} fire damage."
+						"當這個法球爆炸時，它會產生一道持續24小時的干燥熱浪。在有效區域內，適用《地下城主指南》第5章中詳細介紹的極端高溫規則。在每個小時結束的時候，有10%的機率熱浪會在影響區域內的隨機地點引發野火。大火最初覆蓋了10平方英尺的區域，但隨後每一輪都擴大到10平方英尺，直到大火被撲滅或自行熄滅。當一個生物在一個回合內第一次進入野火臨近10尺內，或者在該範圍內開始它的回合時，將受到 {@dice 3d6} 火焰傷害。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Devastation Orb of Water",
+			"name": "毀滅法球(水)","ENG_name": "Devastation Orb of Water",
 			"wondrous": true,
 			"rarity": "Very Rare",
 			"source": "PotA",
 			"page": 222,
 			"entries": [
-				"A devastation orb is an elemental bomb that can be created at the site of an elemental node by performing a ritual with an elemental weapon. The type of orb created depends on the node used. For example, an air node creates a {@item devastation orb of air|PotA}. The ritual takes 1 hour to complete and requires 2,000 gp worth of special components, which are consumed.",
-				"A devastation orb measures 12 inches in diameter, weighs 10 pounds, and has a solid outer shell. The orb detonates {@dice 1d100} hours after its creation, releasing the elemental energy it contains. The orb gives no outward sign of how much time remains before it will detonate. Spells such as {@spell identify} and {@spell divination} can be used to ascertain when the orb will explode. An orb has AC 10, 15 hit points, and immunity to poison and psychic damage. Reducing it to 0 hit points causes it to explode instantly.",
-				"A special container can be crafted to contain a devastation orb and prevent it from detonating. The container must be inscribed with symbols of the orb's opposing element. For example, a case inscribed with earth symbols can be used to contain a {@item devastation orb of air|PotA} and keep it from detonating. While in the container, the orb thrums. If it is removed from the container after the time when it was supposed to detonate, it explodes {@dice 1d6} rounds later, unless it is returned to the container.",
-				"Regardless of the type of orb, its effect is contained within a sphere with a 1 mile radius. The orb is the sphere's point of origin. The orb is destroyed after one use.",
+				"毀滅法球是一種元素炸彈，可以在元素節點上通過使用邪惡元素武器進行儀式來製造。創建的法球類型取決於製造所使用的節點。例如，一個風元素節點會產生一個風之毀滅法球。這個儀式需要1個小時完成，需要2,000gp的特殊材料，這些成分將會被消耗掉。",
+				"毀滅法球直徑12英寸，重10磅，外殼堅固。這個球體在誕生後  {@dice 1d100} 小時將會爆炸，釋放出它所包含的元素能量。這個球體沒有任何跡象顯示它還需要多久才會爆炸。諸如 {@spell 鑑定術} 和 {@spell 預言術} 之類的法術可以用來確定球體爆炸的時間。一個球體有 AC 10 ，15點生命值，對毒素和心靈傷害有免疫。降低到0點生命值會導致法球立刻爆炸。",
+				"可以製作一個特殊的容器來存放一個毀滅法球，以此防止它一言不合就爆炸。容器必須刻有球體相反元素的符號。例如，一個刻有大地符號的盒子可以用來封存一個風之毀滅法球。在容器中，球體會緩緩旋轉。如果在本應引爆的時間之後將其從容器中取出，則法球會在 {@dice 1d6} 輪之後爆炸，除非將其放回容器。",
+				"無論法球的類型如何，它的作用範圍都是一個半徑為1英里的球型區域。區域的中心是法球所在位置。一次使用後球體會被摧毀。",
 				{
-					"name": "Water Orb",
+					"name": "激雨法球",
 					"type": "entries",
 					"entries": [
-						"When this orb detonates, it creates a torrential rainstorm that lasts for 24 hours. Within the area of effect, the rules for heavy precipitation apply, as detailed in chapter 5 of the Dungeon Master's Guide. If there is a substantial body of water in the area, it floods after {@dice 2d10} hours of heavy rain, rising 10 feet above its banks and inundating the surrounding area. The flood advances at a rate of 100 feet per round, moving away from the body of water where it began until it reaches the edge of the area of effect: at that point, the water flows downhill (and possibly recedes back to its origin). Light structures collapse and wash away. Any Large or smaller creature caught in the flood's path is swept away. The flooding destroys crops and might trigger mudslides, depending on the terrain."
+						"當這個法球爆炸時，它會產生持續24小時的暴雨。在有效區域內，適用《地下城主指南》第5章中詳細介紹的強降雨規則。如果有大量的雨水滯留在該地區，會在 {@dice 2d10} 小時的大雨後導致洪水氾濫，洪水超過河岸10英尺，淹沒周圍地區。此後，洪水以每輪100英尺的速度向前推進，以河道水體為起點，直到到達影響區域的邊緣：抵達該位置後，水向低處流動（可能會退回到它的源頭）。輕型建築倒塌並被沖走。任何位於洪水的路徑上的大型或更小的生物都將被沖走。洪水毀壞莊稼，並可能引發泥石流，效果取決於地形。"
 					]
 				}
 			]
@@ -5256,7 +5256,7 @@
 			"name": "Dragontooth Dagger",
 			"type": "M",
 			"weaponCategory": "Simple",
-			"baseItem": "dagger|phb",
+			"baseItem": "匕首|phb",
 			"weight": "1",
 			"rarity": "Rare",
 			"dmg1": "{@dice 1d4}",
@@ -5326,10 +5326,10 @@
 			"poison": true
 		},
 		{
-			"name": "Drown",
+			"name": "水溺","ENG_name": "Drown",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "trident|phb",
+			"baseItem": "三叉戟|phb",
 			"weight": "4",
 			"dmg1": "{@dice 1d6}",
 			"dmg2": "{@dice 1d8}",
@@ -5344,35 +5344,35 @@
 			"page": 224,
 			"reqAttune": true,
 			"entries": [
-				"A steel trident decorated with bronze barnacles along the upper part of its haft, Drown has a sea-green jewel just below the tines and a silver shell at the end of its haft. It floats on the surface if dropped onto water, and it floats in place if it is released underwater. The trident is always cool to the touch, and it is immune to any damage due to exposure to water. Drown contains a spark of {@creature Olhydra|pota}, the Princess of Evil Water.",
-				"你在使用這把魔法武器進行的攻擊檢定和傷害骰上具有+1加值。 When you hit with it, the targets take an extra {@dice 1d8} cold damage.",
+				"這是一把鋼製三叉戟，在它柄的上部裝飾有青銅藤壺，柄的末端有一顆海綠色的寶石和一個銀色的貝殼。如果它掉到水面上，它會浮在水面上而非沉下去；如果它被留在水下，它會懸浮在原地。三叉戟的觸感總是冰涼的，而且它不會因為暴露在水中而受到任何傷害。水溺內部融入 {@creature Olhydra|pota|奧海卓} ——邪惡的水元素女親王——的一個火花。",
+				"你用這個魔法武器進行的攻擊和傷害檢定有+1加值。當你用它造成傷害時，目標會受到額外的{@dice 1d8}寒冷傷害。",
 				{
-					"name": "Water Mastery",
+					"name": "水元素掌控",
 					"type": "entries",
 					"entries": [
-						"You gain the following benefits while you hold Drown:"
+						"當你持握水溺時，你會得到以下好處:"
 					]
 				},
 				{
 					"type": "list",
 					"items": [
-						"You can speak Aquan fluently.",
-						"You have resistance to cold damage.",
-						"You can cast {@spell 支配怪物} (save DC 17) on a {@creature water elemental}. Once you have done so, Drown can't be used this way again until the next dawn."
+						"你能流利地說水族語。",
+						"你對寒冷傷害有抗性。",
+						"你可以對 {@creature 水元素} 施放{@spell 支配怪物}(DC17)。一旦你如此做，水溺不能再次使用此能力，直到第二天黎明。"
 					]
 				},
 				{
-					"name": "Tears of Endless Anguish",
+					"name": "無盡痛苦之淚",
 					"type": "entries",
 					"entries": [
-						"While inside a water node, you can perform a ritual called the Tears of Endless Anguish, using Drown to create a {@item devastation orb of water|PotA}. Once you perform the ritual, Drown can't be used to perform the ritual again until the next dawn."
+						"當位於一個水元素節點內時，你可以執行一個名為“無盡痛苦之淚”的儀式，使用水溺來創建一個 {@item 毀滅法球(水)|PotA}。一旦你執行了這個儀式，水溺就不能再被用來再次執行這個儀式，直到第二天黎明。"
 					]
 				},
 				{
-					"name": "Flaw",
+					"name": "缺陷",
 					"type": "entries",
 					"entries": [
-						"Drown makes its wielder covetous. While attuned to the weapon, you gain the following flaw: \"I demand and deserve the largest share of the spoils, and I refuse to part with anything that's mine.\" In addition, if you are attuned to Drown for 24 consecutive hours, barnacles form on your skin. The barnacles can be removed with a {@spell greater restoration} spell or similar magic, but not while you are attuned to the weapon."
+						"水溺使持用者貪婪。當你同調該武器，你得到以下缺陷：“我要求而且理應得到最大份額的戰利品，我拒絕放棄我的任何東西。”此外，如果你同調水溺連續24小時以上，藤壺就會在你的皮膚上形成。藤壺可以用一個 {@spell 高等復原術} 或類似的魔法移除，但不能在你同調武器的狀態下移除。"
 					]
 				}
 			],
@@ -8771,10 +8771,10 @@
 			"page": 150
 		},
 		{
-			"name": "Ironfang",
+			"name": "鐵牙","ENG_name": "Ironfang",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "war pick|phb",
+			"baseItem": "戰鎬|phb",
 			"weight": "2",
 			"dmg1": "{@dice 1d8}",
 			"dmgType": "P",
@@ -8783,44 +8783,43 @@
 			"page": 224,
 			"reqAttune": true,
 			"entries": [
-				"A {@item war pick|phb} forged from a single piece of iron, Ironfang has a fang-like head inscribed with ancient runes. The pick is heavy in the hand, but when the wielder swings the pick in anger, the weapon seems almost weightless. This weapon is immune to any form of rust, acid, or corrosion\u2014nothing seems to mark it. Ironfang contains a spark of {@creature Ogrémoch|pota}, the Prince of Evil Earth.",
-				"You gain a +2 bonus to attack and damage rolls made with this magic weapon. When you hit with it, the target takes an extra {@dice 1d8} thunder damage.",
+				"這把{@item 戰鎬|phb}是用一整塊鐵鍛造而成，其尖牙狀的頭部刻有古代符文。鎬掂在手裡時很重，但是當持用者憤怒地揮舞著戰鎬時，卻幾乎感覺不到它的重量。該武器免疫任何形式的鏽蝕、強酸或腐蝕——似乎沒有任何東西能在它上面留下痕跡。鐵牙中包含著邪惡土元素親王 {@creature Ogrémoch|pota|歐格莫克}的火花。",
+				"你用這個魔法武器進行的攻擊和傷害檢定有+2加值。當你用它造成傷害時，目標會受到額外的{@dice 1d8}雷鳴傷害。",
 				{
 					"type": "entries",
-					"name": "Earth Mastery",
+					"name": "土元素掌控",
 					"entries": [
-						"You gain the following benefits while you hold Ironfang:",
+						"當你持有鐵牙時，你將獲得以下好處：",
 						{
 							"type": "list",
 							"items": [
-								"You can speak Terran fluently.",
-								"You have resistance to acid damage.",
-								"You have tremorsense out to a range of 60 feet.",
-								"You can sense the presence of precious metals and stones within 60 feet of you, but not their exact location.",
-								"You can cast {@spell 支配怪物} (save DC 17) on an {@creature earth elemental}. Once you have done so, Ironfang can't be used this way again until the next dawn."
+								"你可以流利地說土族語。",
+								"你對強酸傷害有抗性。",
+								"你可以在60英尺的範圍內進行震顫感知。在你周圍60英尺的範圍內，你可以感覺到貴金屬和寶石的存在，但無法掌握它們的確切位置。",
+								"你可以對{@creature 土元素}施放{@spell 支配怪物}(DC17)。一旦你如此做，鐵牙就不能再次使用此能力，直到第二天黎明。"
 							]
 						}
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Shatter",
+					"name": "粉碎",
 					"entries": [
-						"Ironfang has 3 charges. You can use your action to expend 1 charge and cast the 2nd-level version of {@spell shatter} (DC 17). Ironfang regains {@dice 1d3} expended charges daily at dawn."
+						"鐵牙有3發充能。你可以使用你的動作來消耗1發充能並施放2環的{@spell 粉碎音波}(DC17)。鐵牙每天黎明恢復{@dice 1d3}充能。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "The Rumbling",
+					"name": "穿雲裂石之音",
 					"entries": [
-						"While inside an earth node, you can perform a ritual called the Rumbling, using Ironfang to create a {@item devastation orb of earth|PotA}. Once you perform the ritual, Ironfang can't be used to perform the ritual again until the next dawn."
+						"當位於一個土元素節點內時，你可以執行一個名為“穿雲裂石之音”的儀式，使用鐵牙製造一個{@item 毀滅法球(土)|PotA}。一旦你執行了這個儀式，鐵牙就不能再被用於執行這個儀式，直到第二天黎明。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Flaw",
+					"name": "缺陷",
 					"entries": [
-						"Ironfang heightens its wielder's destructive nature. While attuned to the weapon, you gain the following flaw: \"I like to break things and cause ruin.\""
+						"鐵牙放大了持用者的破壞衝動。當你與這把武器同調，你就會得到以下的缺點：“我喜歡破壞東西，以及造成破壞。”"
 					]
 				}
 			],
@@ -9335,20 +9334,20 @@
 			"page": 119
 		},
 		{
-			"name": "Lost Crown of Besilmer",
+			"name": "貝希默之失落王冠","ENG_name": "Lost Crown of Besilmer",
 			"wondrous": true,
 			"rarity": "Legendary",
 			"source": "PotA",
 			"page": 223,
 			"reqAttune": true,
 			"entries": [
-				"This dwarven battle-helm consists of a sturdy open-faced steel helmet, decorated with a golden circlet above the brow from which seven small gold spikes project upward. You gain the following benefits while wearing the crown:",
+				"這頂矮人戰盔的主體是一頂堅固的鋼盔，頭盔的正面開敞著，額頭上方裝飾著一個金色的圓環，上面有七根金色的小尖頭。當你戴上王冠時，你會得到以下好處：",
 				{
 					"type": "list",
 					"items": [
-						"You have resistance to psychic damage.",
-						"You have advantage on saving throws against effects that would charm you.",
-						"You can use a bonus action to inspire one creature you can see that is within 60 feet of you and that can see or hear you. Once before the end of your next turn, the inspired creature can roll a {@dice d6} and add the number rolled to one ability check, attack roll, or saving throw it makes. This uses 1 charge from the crown. It has 3 charges, and it regains {@dice 1d3} expended charges daily at dawn."
+						"你對心靈傷害具有抗性。",
+						"你在對抗魅惑的豁免檢定上具有優勢。",
+						"你可以使用一個附贈動作來激勵一個你能看見的、離你60英尺以內的、能看見或聽見你的生物。在你下一次回合結束前，受激勵的生物可以擲出一個 {@dice d6}，並將擲出的數字加到它所做的一個屬性檢定、攻擊檢定或豁免檢定中。這將消耗王冠的1發充能。它有3發充能，並且在每天黎明恢復 {@dice 1d3} 發。"
 					]
 				}
 			],
@@ -10681,10 +10680,10 @@
 			]
 		},
 		{
-			"name": "Orcsplitter",
+			"name": "獸人肢解者","ENG_name": "Orcsplitter",
 			"type": "M",
 			"weaponCategory": "Martial",
-			"baseItem": "greataxe|phb",
+			"baseItem": "巨斧|phb",
 			"weight": "7",
 			"dmg1": "{@dice 1d12}",
 			"dmgType": "S",
@@ -10695,32 +10694,32 @@
 			"rarity": "Legendary",
 			"source": "PotA",
 			"page": 224,
-			"reqAttune": "by a Dwarf, Fighter, or Paladin of Good Alignment",
+			"reqAttune": "矮人、戰士或善良陣營聖騎士",
 			"sentient": true,
 			"entries": [
-				"A mighty axe wielded long ago by the dwarf king Torhild Flametongue, Orcsplitter is a battered weapon that appears unremarkable at first glance. Its head is graven with the Dwarvish runes for \"orc,\" but the runes are depicted with a gap or slash through the markings; the word \"orc\" is literally split in two.",
-				"You gain the following benefits while holding this magic weapon:",
+				"獸人肢解者是矮人國王托希爾德·火舌（Torhild Flametongue）很久以前揮舞的一把威力巨大的斧頭。乍一看，它是一件看起來不起眼的武器。它的頭上用矮人符文雕刻著“獸人”（ORC）字樣，但符文上有一個缺口或一條斜線，使得獸人這個詞從字面上被分成了兩部分。",
+				"當你持有此魔法武器時，你將獲得以下好處：",
 				{
 					"type": "list",
 					"items": [
-						"You gain a +2 bonus to attack and damage rolls made with it.",
-						"When you roll a 20 on an attack roll with this weapon against an {@creature orc}, that {@creature orc} must succeed on a DC 17 Constitution saving throw or drop to 0 hit points.",
-						"You can't be surprised by {@creature orc|mm|orcs} while you're not {@condition 無力}. You are also aware when {@creature orc|mm|orcs} are within 120 feet of you and aren't behind total cover, although you don't know their location.",
-						"You and any of your friends within 30 feet of you can't be {@condition 恐懼} while you're not {@condition 無力}."
+						"你將獲得+2的攻擊檢定和傷害檢定加值。",
+						"當你用此武器對 {@creature 獸人} 進行攻擊並且骰出20時，該獸人必須通過DC17的體質豁免，或者生命值降低至0。",
+						"當你未處於{@condition 無力}狀態時，你不會被獸人突襲。當獸人距離你不到120英尺的時候，你能夠意識到這點，雖然你不知道他們的位置。",
+						"你和你周圍30英尺內的任何盟友在你未{@condition 無力}時都不會被{@condition 恐懼}。"
 					]
 				},
 				{
 					"name": "智能", "tENG_name": "Sentience",
 					"type": "entries",
 					"entries": [
-						"Orcsplitter is a sentient, lawful good weapon with an Intelligence of 6, a Wisdom of 15, and a Charisma of 10. It can see and hear out to 120 feet and has darkvision. It communicates by transmitting emotions to its wielder, although on rare occasions it uses a limited form of telepathy to bring to the wielder's mind a couplet or stanza of ancient Dwarvish verse."
+						"獸人肢解者是一種有知覺的，守序善良的武器，它擁有智力6，感知15，魅力10。它能在120英尺外看到和聽到聲音，黑暗視覺。它通過向持用者傳遞情感來進行交流，儘管在極少數情況下，它會使用一種有限的心靈感應，給持用者的心靈帶來一段古代矮人詩歌的對句或者小節。"
 					]
 				},
 				{
 					"name": "個性", "tENG_name": "Personality",
 					"type": "entries",
 					"entries": [
-						"Orcsplitter is grim, taciturn, and inflexible. It knows little more than the desire to face {@creature orc|mm|orcs} in battle and serve a courageous, just wielder. It disdains cowards and any form of duplicity, deception, or disloyalty. The weapon's purpose is to defend dwarves and to serve as a symbol of dwarven resolve. It hates the traditional foes of dwarves\u2014giants, goblins, and, most of all, {@creature orc|mm|orcs}\u2014and silently urges its possessor to meet such creatures in battle."
+						"獸人肢解者冷酷、沉默、頑固。它只懷有一個小小的願望，就是在戰鬥中面對獸人並為勇敢、正義的持用者服務。它蔑視懦夫和任何形式的口是心非、欺騙或不忠。該武器的目的是保護矮人，並作為矮人決心的象徵。它憎恨所有的矮人仇敵——巨人、哥布林、以及其中最重要的，獸人，並在戰鬥中無聲地敦促它的主人與這些生物相遇。"
 					]
 				}
 			]
@@ -12436,10 +12435,10 @@
 			"page": 151
 		},
 		{
-			"name": "Reszur",
+			"name": "雷祖爾之匕","ENG_name": "Reszur",
 			"type": "M",
 			"weaponCategory": "Simple",
-			"baseItem": "dagger|phb",
+			"baseItem": "匕首|phb",
 			"rarity": "Uncommon",
 			"value": "2 gp",
 			"weight": "1",
@@ -12454,8 +12453,8 @@
 			"source": "PotA",
 			"page": 157,
 			"entries": [
-				"You have a +1 bonus to attack and damage rolls made with this weapon, which doesn't make noise when it hits or cuts something.",
-				"The name \"Reszur\" is graven on the dagger's pommel. If the wielder speaks the name, the blade gives off a faint, cold glow, shedding dim light in a 10-foot radius until the wielder speaks the name again."
+				"你在使用這把武器進行的攻擊檢定和傷害骰上具有+1加值，且此武器的命中及切割不會發出噪音。",
+				"匕首的鞍上刻有名稱 “雷祖爾”。 如果持有者說出了名字，那麼刀刃會散發出淡淡的冷光，在 10 英尺半徑內散發出微亮光線，直到持有者再次說出名字來解除。"
 			]
 		},
 		{
@@ -14118,10 +14117,10 @@
 			"page": 150
 		},
 		{
-			"name": "Seeker Dart",
+			"name": "索敵飛鏢","ENG_name": "Seeker Dart",
 			"type": "R",
 			"weaponCategory": "Simple",
-			"baseItem": "dart|phb",
+			"baseItem": "飛鏢|phb",
 			"weight": "0.25",
 			"dmg1": "{@dice 1d4}",
 			"dmgType": "P",
@@ -14134,9 +14133,9 @@
 			"source": "PotA",
 			"page": 223,
 			"entries": [
-				"This small dart is decorated with designs like windy spirals that span the length of its shaft.",
-				"When you whisper the word \"seek\" and hurl this dart, it seeks out a target of your choice within 120 feet of you. You must have seen the target before, but you don't need to see it now. If the target isn't within range or if there is no clear path to it, the dart falls to the ground, its magic spent and wasted. Otherwise, elemental winds guide the dart instantly through the air to the target. The dart can pass though openings as narrow as 1 inch wide and can change direction to fly around corners.",
-				"When the dart reaches its target, the target must succeed on a DC 16 Dexterity saving throw or take {@dice 1d4} piercing damage and {@dice 3d4} lightning damage. The dart's magic is then spent, and it becomes an ordinary dart."
+				"這款小飛鏢飾有像風一樣的螺旋形設計，橫跨其軸的長度。",
+				"當你低聲說“搜索”並投擲這個飛鏢時，它會在你120英尺的範圍內尋找你選擇的目標。你必須在此前見過該目標，但你不需要現在看到它。如果目標不在射程之內，或者沒有清晰的路徑，飛鏢就會掉到地上，它的魔法也會消耗殆盡。否則，風元素之力會立即引導飛鏢穿過空氣直達目標。飛鏢可以通過1英寸寬的開口，並且可以改變飛行方向來繞過拐角。",
+				"當飛鏢抵達目標時，目標必須通過DC16的敏捷豁免，否則將受到 {@dice 1d4} 穿刺傷害和 {@dice 1d4} 閃電傷害。此後，飛鏢的魔法被消耗，變成一個普通的飛鏢。"
 			]
 		},
 		{
@@ -15946,7 +15945,7 @@
 			]
 		},
 		{
-			"name": "Storm Boomerang",
+			"name": "風暴迴力標","ENG_name": "Storm Boomerang",
 			"type": "R",
 			"weaponCategory": "Simple",
 			"dmg1": "{@dice 1d4}",
@@ -15956,8 +15955,8 @@
 			"source": "PotA",
 			"page": 223,
 			"entries": [
-				"This boomerang is a ranged weapon carved from {@creature griffon} bone and etched with the symbol of elemental air. When thrown, it has a range of 60/120 feet, and any creature that is proficient with the javelin is also proficient with this weapon. On a hit, the boomerang deals {@dice 1d4} bludgeoning damage and {@dice 3d4} thunder damage, and the target must succeed on a DC 10 Constitution saving throw or be {@condition 震懾} until the end of its next turn. On a miss, the boomerang returns to the thrower's hand.",
-				"Once the boomerang deals thunder damage to a target, the weapon loses its ability to deal thunder damage and its ability to stun a target. These properties return after the boomerang spends at least 1 hour inside an elemental air node."
+				"這個迴力標是由{@creature 獅鷲}骨雕成的遠程武器，刻有風之元素的符號。投擲時，射程為60/120英尺，任何熟練於標槍的生物也熟練此武器。被擊中時，迴力標造成 {@dice 1d4} 鈍擊傷害和 {@dice 3d4} 雷鳴傷害，目標必須通過DC10體質豁免，否則將被{@condition 震懾}，直到其下一回合結束。一旦攻擊失手，迴力標就會回到投擲者手中。",
+				"一旦迴力標對目標造成雷鳴傷害，該武器將失去雷鳴傷害和震懾目標的能力。這些能力會在迴力標在風元素節點內停留至少1小時後恢復。"
 			]
 		},
 		{
@@ -16595,10 +16594,10 @@
 			]
 		},
 		{
-			"name": "Tinderstrike",
+			"name": "焰襲","ENG_name": "Tinderstrike",
 			"type": "M",
 			"weaponCategory": "Simple",
-			"baseItem": "dagger|phb",
+			"baseItem": "匕首|phb",
 			"weight": "1",
 			"dmg1": "{@dice 1d4}",
 			"dmgType": "P",
@@ -16613,29 +16612,35 @@
 			"page": 224,
 			"reqAttune": true,
 			"entries": [
-				"A flint dagger, Tinderstrike is uncommonly sharp, and sparks cascade off its edge whenever it strikes something solid. Its handle is always warm to the touch, and the blade smolders for {@dice 1d4} minutes after it is used to deal damage. It contains a spark of {@creature Imix|PotA}, Prince of Evil Fire.",
-				"You gain a +2 bonus to attack and damage rolls made with this magic weapon. When you hit with it, the target takes an extra {@dice 2d6} fire damage.",
+				"作為一把燧石匕首，焰襲有著極為奇特的形狀，它的刀刃異常鋒利，當它擊中堅硬的物體時，它的邊緣就會迸發出火花。刀柄摸上去總是很溫暖，刀刃在使用後會悶燒 {@dice 1d4} 分鐘。它融入了邪惡的火元素親王{@creature Imix|PotA|埃米克斯}的火花。",
+				"你用這個魔法武器進行的攻擊和傷害檢定有+2加值。當你用它造成傷害時，目標會受到額外的 {@dice 2d6} 火焰傷害。",
 				{
-					"name": "Fire Mastery",
+					"name": "火元素掌控",
 					"type": "entries",
 					"entries": [
-						"You gain the following benefits while you hold Tinderstrike:"
+						"當你持握焰襲時，你可以獲得以下好處："
 					]
 				},
 				{
 					"type": "list",
 					"items": [
-						"You can speak Ignan fluently.",
-						"You have resistance to fire damage.",
-						"You can cast {@spell 支配怪物} (save DC 17) on a {@creature fire elemental}. Once you have done so, Tinderstrike can't be used this way again until the next dawn."
+						"你可以流利地使用火族語。",
+						"你對火焰傷害有抗性。",
+						"你可以對{@creature 火元素}施放{@spell 支配怪物}(DC17)。一旦你如此做，焰襲就不能再次使用此能力，直到第二天黎明。"
 					]
 				},
-				"Dance of the All-Consuming Fire: While inside a fire node, you can perform a ritual called the Dance of the All-Consuming Fire, using Tinderstrike to create a {@item devastation orb of fire|PotA}. Once you perform the ritual, Tinderstrike can't be used to perform the ritual again until the next dawn.",
 				{
-					"name": "Flaw",
+					"name": "焚世烈焰之舞",
 					"type": "entries",
 					"entries": [
-						"Tinderstrike makes its wielder impatient and rash. While attuned to the weapon, you gain the following flaw: \"I act without thinking and take risks without weighing the consequences.\""
+						"當位於一個火元素節點內時，你可以執行一個名為“焚世烈焰之舞”的儀式，使用焰襲製造一個{@item 毀滅法球(火)|PotA}。一旦你執行了這個儀式，焰襲就不能再被用於執行這個儀式，直到第二天黎明。"
+					]
+				},
+				{
+					"name": "缺陷",
+					"type": "entries",
+					"entries": [
+						"焰襲讓持用者急躁和魯莽。當你與這把武器同調，你就會有以下缺點：“我做事不加思考，冒險不考慮後果。”"
 					]
 				}
 			],
@@ -18952,17 +18957,16 @@
 			]
 		},
 		{
-			"name": "Weird Tank",
+			"name": "詭異水罐","ENG_name": "Weird Tank",
 			"wondrous": true,
 			"rarity": "Rare",
 			"source": "PotA",
 			"page": 223,
 			"reqAttune": true,
 			"entries": [
-				"A weird tank is a ten-gallon tank of blown glass and sculpted bronze with a backpack-like carrying harness fashioned from tough leather. A {@creature water weird} is contained within the tank. While wearing the tank, you can use an action to open it, allowing the {@creature water weird} to emerge. The {@creature water weird} acts immediately after you in the initiative order, and it is bound to the tank.",
-				"You can command the {@creature water weird} telepathically (no action required) while you wear the tank. You can close the tank as an action only if you have first commanded the {@creature water weird} to retract into it or if the {@creature water weird} is dead.",
-				"If the {@creature water weird} is killed, the tank loses its magical containment property until it spends at least 24 hours inside an elemental water node. When the tank is recharged, a new {@creature water weird} forms inside it.",
-				"The tank has AC 15, 50 hit points, vulnerability to bludgeoning damage, and immunity to poison and psychic damage. Reducing the tank to 0 hit points destroys it and the {@creature water weird} contained within it."
+				"詭異水罐是一個 10 加侖的吹製玻璃水罐，以及帶有雙肩背帶的青銅雕刻組成，背帶用堅韌的皮革縫製而成。一個{@creature 水詭}被封存在水罐內。當你裝備著水罐時，你可以用一個動作打開它，讓水詭出現。水詭的行動在你先攻順序之後立即進行，它被水罐所束縛。",
+				"當你裝備著水罐時，你可以用心靈感應的方式控制水詭（不需要任何動作）。只有當你命令水詭返回罐中，或如果水詭死亡後，你才可以用一個動作關閉水罐。如果水詭被殺死，這個容器將失去它的魔法容器屬性，直到它在一個水元素節點中停留至少24小時。當水罐恢復能量時，裡面會形成一隻新的水詭。",
+				"水罐有AC 15，50 點生命值，鈍擊易傷，對毒素和心靈傷害免疫。將水罐的生命值降低到0會摧毀它和裡面的水詭。"
 			]
 		},
 		{
@@ -19189,10 +19193,10 @@
 			]
 		},
 		{
-			"name": "Windvane",
+			"name": "風標", "ENG_name": "Windvane",
 			"type": "M",
 			"weaponCategory": "Simple",
-			"baseItem": "spear|phb",
+			"baseItem": "矛|phb",
 			"weight": "3",
 			"dmg1": "{@dice 1d6}",
 			"dmg2": "{@dice 1d8}",
@@ -19208,35 +19212,35 @@
 			"page": 224,
 			"reqAttune": true,
 			"entries": [
-				"A silver spear, Windvane has dark sapphires on the filigreed surface of its polished head. Held by its shining haft, the weapon feels insubstantial, as if clutching a cool, gently flowing breeze. The spear contains a spark of {@creature Yan-C-Bin|PotA}, the Prince of Evil Air.",
-				"You have a +2 bonus to attack and damage rolls made with this magic weapon, which has the finesse weapon property. When you hit with it, the target takes an extra {@dice 1d6} lightning damage.",
+				"風標是一把銀色長矛，一顆黑暗藍寶石鑲嵌在它鋒利尖端上纏繞著金銀絲的表面。握著它閃亮的柄，這把武器給人以不真實的感覺，就像抓住了涼爽的、輕輕流動的微風。然而，這支矛上寄宿著邪惡風元素親王{@creature Yan-C-Bin|PotA|延希丙}的火花。",
+				"你用這個魔法武器進行的攻擊和傷害檢定有+2加值。當你用它造成傷害時，目標會受到額外的 {@dice 1d6}閃電傷害。",
 				{
-					"name": "Air Mastery",
+					"name": "風元素掌控",
 					"type": "entries",
 					"entries": [
-						"You gain the following benefits while you hold Windvane:"
+						"當你持握風標時，你可以獲得以下好處："
 					]
 				},
 				{
 					"type": "list",
 					"items": [
-						"You can speak Auran fluently.",
-						"You have resistance to lightning damage.",
-						"You can cast {@spell 支配怪物} (save DC 17) on an {@creature air elemental}. Once you have done so, Windvane can't be used this way again until the next dawn."
+						"你可以流利地使用風族語。",
+						"你對閃電傷害有抗性。",
+						"你可以對{@creature 風元素}施放{@spell 支配怪物}(DC17)。一旦你如此做，風標就不能再次使用此能力，直到第二天黎明。"
 					]
 				},
 				{
-					"name": "Song of the Four Winds",
+					"name": "四重龍捲之歌",
 					"type": "entries",
 					"entries": [
-						"While inside an air node, you can perform a ritual called the Song of the Four Winds, using Windvane to create a {@item devastation orb of air|PotA}. Once you perform the ritual, Windvane can't be used to perform the ritual again until the next dawn."
+						"當位於一個風元素節點內時，你可以執行一個名為“四重龍捲之歌”的儀式，使用風標製造一個{@item 毀滅法球(氣))|PotA}。一旦你執行了這個儀式，風標就不能再被用於執行這個儀式，直到第二天黎明。"
 					]
 				},
 				{
-					"name": "Flaw",
+					"name": "缺陷",
 					"type": "entries",
 					"entries": [
-						"Windvane makes its wielder mercurial and unreliable. While attuned to the weapon, you gain the following flaw: \"I break my vows and plans. Duty and honor mean nothing to me.\""
+						"風標使它的持用者變得反复無常和捉摸不定。當你與這把武器同調，你得到以下缺點：“我違背我的誓言和計劃。責任和榮譽對我來說毫無意義。”"
 					]
 				}
 			],
@@ -19276,15 +19280,15 @@
 			]
 		},
 		{
-			"name": "Wingwear",
+			"name": "飛翼服","ENG_name": "Wingwear",
 			"wondrous": true,
 			"rarity": "Uncommon",
 			"source": "PotA",
 			"page": 223,
 			"reqAttune": true,
 			"entries": [
-				"This snug uniform has symbols of air stitched into it and leathery flaps that stretch along the arms, waist, and legs to create wings for gliding. A suit of wingwear has 3 charges. While you wear the suit, you can use a bonus action and expend 1 charge to gain a flying speed of 30 feet until you land. At the end of each of your turns, your altitude drops by 5 feet. Your altitude drops instantly to 0 feet at the end of your turn if you didn't fly at least 30 feet horizontally on that turn. When your altitude drops to 0 feet, you land (or fall), and you must expend another charge to use the suit again.",
-				"The suit regains all of its expended charges after spending at least 1 hour in an elemental air node."
+				"這種舒適的製服在內側縫製著風之符文和皮革一樣的襟翼，可以沿著手臂、腰部和腿部伸展，創造出滑翔的翅膀。一套飛翼服有3發充能。當你穿套裝的時候，你可以使用一個附贈動作和消耗1發充能來獲得30英尺的飛行速度，直到你著陸為止。每次你的回合結束時，你的高度都會下降5英尺。如果你在你的回合裡沒有水平飛行至少30英尺，你的高度會在回合結束時立即下降到0英尺。當你的高度下降到0英尺時，意味著你著陸（或著直接摔在地上），你必須再次消耗充能才能使用這套衣服。",
+				"在風元素節點停留至少1小時後，套裝將恢復所有已消耗的充能。"
 			],
 			"charges": 3
 		},
@@ -20367,7 +20371,7 @@
 			"name": "Dagger of Blindsight",
 			"type": "M",
 			"weaponCategory": "Simple",
-			"baseItem": "dagger|phb",
+			"baseItem": "匕首|phb",
 			"weight": "1",
 			"dmg1": "{@dice 1d4}",
 			"dmgType": "P",
@@ -21195,7 +21199,7 @@
 			"name": "Rakdos Riteknife",
 			"type": "M",
 			"weaponCategory": "Simple",
-			"baseItem": "dagger|phb",
+			"baseItem": "匕首|phb",
 			"weight": "1",
 			"dmg1": "{@dice 1d4}",
 			"dmgType": "P",
