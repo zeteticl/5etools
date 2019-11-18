@@ -1,7 +1,7 @@
 {
 	"monster": [
 		{
-			"name": "Aerisi Kalinoth",
+			"name": "阿莉希．卡蘿娜斯", "ENG_name": "Aerisi Kalinoth",
 			"isNpc": true,
 			"size": "M",
 			"type": {
@@ -19,7 +19,7 @@
 				13,
 				{
 					"ac": 16,
-					"condition": "with {@spell 法師護甲}",
+					"condition": "使用{@spell 法師護甲}時",
 					"braces": true
 				}
 			],
@@ -44,35 +44,35 @@
 			"resist": [
 				"lightning"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 13,
-			"languages": "Auran, Common, Elvish",
+			"languages": "氣族語、通用語、精靈語",
 			"cr": "7",
 			"trait": [
 				{
-					"name": "Fey Ancestry",
+					"name": "精類血統", "tENG_name": "Fey Ancestry",
 					"entries": [
-						"Aerisi has advantage on saving throws against being {@condition charmed}, and magic can't put her to sleep."
+						"阿莉希在對抗{@condition 魅惑}的豁免檢定中具有優勢，且魔法無法使她入睡。"
 					]
 				},
 				{
-					"name": "Howling Defeat",
+					"name": "哀嚎敗退", "tENG_name": "Howling Defeat",
 					"entries": [
-						"When Aerisi drops to 0 hit points, her body disappears in a howling whirlwind that disperses quickly and harmlessly. Anything she is wearing or carrying is left behind."
+						"當阿莉希的生命值歸零時，她的身體將在一陣呼嘯著的旋風中消失，且這陣旋風將迅速而無害地消散。任何她所穿戴或攜帶的東西都將被留在原地。"
 					]
 				},
 				{
 					"name": "傳奇抗性 (2/日)",
 					"entries": [
-						"If Aerisi fails a saving throw, she can choose to succeed instead."
+						"若阿莉希在一次豁免檢定中失敗，她可以選擇改為使其成功。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Windvane",
+					"name": "風向矛標", "tENG_name": "Windvane",
 					"entries": [
-						"{@atk mw,rw} {@hit 9} 命中, 觸及 5 呎. 或射程 20/60 呎, 單一目標. {@h}9 ({@damage 1d6 + 6}) piercing damage, or 10 ({@damage 1d8 + 6}) piercing damage if used with two hands to make a melee attack, plus 3 ({@damage 1d6}) lightning damage."
+						"{@atk mw,rw} 命中{@hit 9}，觸及5呎 或 射程20/60呎，單一目標。{@h}9 ({@damage 1d6 + 6})穿刺傷害，或若雙手使用以進行一次近戰攻擊時則造成 10 ({@damage 1d8 + 6})穿刺傷害，再額外加上 3 ({@damage 1d6})閃電傷害。"
 					]
 				}
 			],
@@ -85,7 +85,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"Aerisi is a 12th-level spellcaster. Her spellcasting ability is Intelligence (spell save DC 14, {@hit 6} to hit with spell attacks). Aerisi has the following wizard spells prepared:"
+						"阿莉希是12級的施法者。她的施法屬性為智力（法術豁免DC 14，法術攻擊命中{@hit 6}）。阿莉希已準備了以下法師法術："
 					],
 					"spells": {
 						"0": {
@@ -101,7 +101,7 @@
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell charm person}",
+								"{@spell 魅惑人類}",
 								"{@spell 羽落術}",
 								"{@spell 法師護甲}",
 								"{@spell 雷鳴波}"
@@ -118,29 +118,29 @@
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell fly}",
+								"{@spell 飛行術}",
 								"{@spell 氣化形體}",
-								"{@spell lightning bolt}"
+								"{@spell 閃電束}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
 								"{@spell 冰風暴}",
-								"{@spell storm sphere|xge}"
+								"{@spell 暴風法球|xge}"
 							]
 						},
 						"5": {
 							"slots": 2,
 							"spells": [
-								"{@spell cloudkill}",
-								"{@spell seeming} (cast each day)"
+								"{@spell 死雲術}",
+								"{@spell 偽裝術} (每日施放一次)"
 							]
 						},
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell chain lightning}"
+								"{@spell 連環閃電}"
 							]
 						}
 					},
@@ -168,7 +168,7 @@
 			]
 		},
 		{
-			"name": "氣元素追隨者","ENG_name": "Air Elemental Myrmidon",
+			"name": "氣元素追隨者", "ENG_name": "Air Elemental Myrmidon",
 			"size": "M",
 			"type": "elemental",
 			"source": "PotA",
@@ -179,7 +179,7 @@
 				{
 					"ac": 18,
 					"from": [
-						"{@item plate armor|phb}"
+						"{@item 全身板甲|phb}"
 					]
 				}
 			],
@@ -206,7 +206,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -218,15 +218,15 @@
 				"poisoned",
 				"prone"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 10,
-			"languages": "Auran, one language of its creator's choice",
+			"languages": "氣族語、一種它創造者所選擇的語言",
 			"cr": "7",
 			"trait": [
 				{
-					"name": "Magic Weapons",
+					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The myrmidon's weapon attacks are magical."
+						"追隨者的武器攻擊視作魔法攻擊。"
 					]
 				}
 			],
@@ -234,19 +234,19 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The myrmidon makes three flail attacks."
+						"追隨者進行三次連枷攻擊。"
 					]
 				},
 				{
-					"name": "Flail",
+					"name": "連枷", "tENG_name": "Flail",
 					"entries": [
-						"{@atk mw} {@hit 7} 命中, 觸及 5 呎, 單一目標. {@h}8 ({@damage 1d8 + 4}) 鈍擊傷害."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。{@h}8 ({@damage 1d8 + 4}) 鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Lightning Strike {@recharge}",
+					"name": "閃電猛擊{@recharge}", "tENG_name": "Lightning Strike {@recharge}",
 					"entries": [
-						"The myrmidon makes one flail attack. If the attack hits, it deals an extra 18 ({@damage 4d8}) lightning damage, and the target must succeed on a DC 14 Constitution saving throw or be {@condition stunned} until the end of the myrmidon's next turn."
+						"追隨者進行一次連枷攻擊。若該攻擊命中，則它將額外造成 18 ({@damage 4d8})閃電傷害，且目標必須成功通過一次DC 14的體質豁免，否則將被{@condition 震懾}直到該追隨者的下個回合結束。"
 					]
 				}
 			],
@@ -270,7 +270,7 @@
 			]
 		},
 		{
-			"name": "Bastian Thermandar",
+			"name": "巴斯汀．薩曼德", "ENG_name": "Bastian Thermandar",
 			"isNpc": true,
 			"size": "M",
 			"type": {
@@ -288,7 +288,7 @@
 				12,
 				{
 					"ac": 15,
-					"condition": "with {@spell 法師護甲}",
+					"condition": "使用{@spell 法師護甲}時",
 					"braces": true
 				}
 			],
@@ -312,31 +312,31 @@
 			"resist": [
 				"fire"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 9,
-			"languages": "Common, Ignan",
+			"languages": "通用語、火族語",
 			"cr": "8",
 			"action": [
 				{
 					"name": "匕首",
 					"entries": [
-						"{@atk mw,rw} {@hit 5} 命中, 觸及 5 呎. 或射程 20/60 呎, 單一目標. {@h}4 ({@damage 1d4 + 2}) 穿刺傷害."
+						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d4 + 2}) 穿刺傷害。"
 					]
 				}
 			],
 			"page": 201,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting",
+					"name": "天生施法",
 					"headerEntries": [
-						"Bastian's innate spellcasting ability is Constitution (spell save DC 13, {@hit 5} to hit with spell attacks). He can innately cast the following spells:"
+						"巴斯汀的天生施法屬性為體質（法術豁免DC 13，法術攻擊命中{@hit 5}）。他天生就可以施展以下法術："
 					],
 					"will": [
-						"{@spell produce flame}"
+						"{@spell 燃火術}"
 					],
 					"daily": {
 						"1": [
-							"{@spell burning hands}"
+							"{@spell 燃燒之手}"
 						]
 					},
 					"ability": "con"
@@ -344,7 +344,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"Bastian is a 9th-level spellcaster. His spellcasting ability is Charisma (spell save DC 15, {@hit 7} to hit with spell attacks). Bastian knows the following sorcerer spells:"
+						"巴斯汀是9級的施法者。它的施法屬性為魅力（法術豁免DC 15，法術攻擊命中{@hit 7}）。巴斯汀知曉以下術士法術："
 					],
 					"spells": {
 						"0": {
@@ -360,35 +360,35 @@
 							"slots": 4,
 							"spells": [
 								"{@spell 法師護甲}",
-								"{@spell magic missile}",
+								"{@spell 魔法飛彈}",
 								"{@spell 護盾術}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell misty step}",
+								"{@spell 迷蹤步}",
 								"{@spell 灼熱射線}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell counterspell}",
+								"{@spell 反制法術}",
 								"{@spell 火球術}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell dimension door}",
-								"{@spell wall of fire}"
+								"{@spell 次元門}",
+								"{@spell 火牆術}"
 							]
 						},
 						"5": {
 							"slots": 1,
 							"spells": [
-								"{@spell hold monster}"
+								"{@spell 怪物定身術}"
 							]
 						}
 					},
@@ -428,7 +428,7 @@
 				{
 					"ac": 18,
 					"from": [
-						"{@item plate armor|phb}"
+						"{@item 全身板甲|phb}"
 					]
 				}
 			],
@@ -450,27 +450,27 @@
 				"perception": "+2"
 			},
 			"passive": 12,
-			"languages": "Common",
+			"languages": "通用語",
 			"cr": "2",
 			"action": [
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"可以進行兩次近戰攻擊"
+						"守衛進行二次近戰攻擊。"
 					]
 				},
 				{
-					"name": "Morningstar",
+					"name": "釘頭錘",
 					"entries": [
-						"{@atk mw} {@hit 5} 命中, 觸及 5 呎, 單一目標. {@h}7 ({@damage 1d8 + 3}) 穿刺傷害."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3}) 穿刺傷害。"
 					]
 				}
 			],
 			"reaction": [
 				{
-					"name": "Unyielding",
+					"name": "堅定不移", "tENG_name": "Unyielding",
 					"entries": [
-						"When the guard is subjected to an effect that would move it, knock it {@condition prone}, or both, it can use its reaction to be neither moved nor knocked {@condition prone}."
+						"當守衛成為一個會強迫他移動或將他擊倒{@condition 伏地}的效果的目標，他可以使用他的反應以避免被強迫移動和擊倒{@condition 伏地}。"
 					]
 				}
 			],
@@ -503,7 +503,7 @@
 				{
 					"ac": 17,
 					"from": [
-						"{@item splint armor|phb}"
+						"{@item 條板甲|phb}"
 					]
 				}
 			],
@@ -526,27 +526,27 @@
 				"persuasion": "+5"
 			},
 			"passive": 10,
-			"languages": "Common, Terran",
+			"languages": "通用語、土族語",
 			"cr": "3",
 			"action": [
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"可以進行兩次近戰攻擊"
+						"祭司進行二次近戰攻擊。"
 					]
 				},
 				{
-					"name": "Glaive",
+					"name": "長柄刀",
 					"entries": [
-						"{@atk mw} {@hit 4} 命中, 觸及 10 呎, 單一目標. {@h}7 ({@damage 1d10 + 2}) 揮砍傷害."
+						"{@atk mw} 命中{@hit 4}，觸及10呎，單一目標。{@h}7 ({@damage 1d10 + 2}) 劈砍傷害。"
 					]
 				}
 			],
 			"reaction": [
 				{
-					"name": "Unyielding",
+					"name": "堅定不移", "tENG_name": "Unyielding",
 					"entries": [
-						"When the priest is subjected to an effect that would move it, knock it {@condition prone}, or both, it can use its reaction to be neither moved nor knocked {@condition prone}."
+						"當祭司成為一個會強迫他移動或將他擊倒{@condition 伏地}的效果的目標，他可以使用他的反應以避免被強迫移動和擊倒{@condition 伏地}。"
 					]
 				}
 			],
@@ -555,7 +555,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"The priest is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, {@hit 5} to hit with spell attacks). It knows the following sorcerer spells:"
+						"祭司是5級的施法者。它的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。它知曉以下術士法術："
 					],
 					"spells": {
 						"0": {
@@ -570,7 +570,7 @@
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell earth tremor|xge}",
+								"{@spell 大地震顫|xge}",
 								"{@spell 腳底抹油}",
 								"{@spell 護盾術}"
 							]
@@ -579,13 +579,13 @@
 							"slots": 3,
 							"spells": [
 								"{@spell 粉碎音波}",
-								"{@spell spider climb}"
+								"{@spell 蛛行術}"
 							]
 						},
 						"3": {
 							"slots": 2,
 							"spells": [
-								"{@spell slow}"
+								"{@spell 緩速術}"
 							]
 						}
 					},
@@ -607,7 +607,7 @@
 			]
 		},
 		{
-			"name": "穴居鯊魚","ENG_name": "Burrowshark",
+			"name": "穴居鯊衛","ENG_name": "Burrowshark",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -624,7 +624,7 @@
 				{
 					"ac": 18,
 					"from": [
-						"{@item plate armor|phb}"
+						"{@item 全身板甲|phb}"
 					]
 				}
 			],
@@ -648,13 +648,13 @@
 				"perception": "+2"
 			},
 			"passive": 12,
-			"languages": "Common",
+			"languages": "通用語",
 			"cr": "4",
 			"trait": [
 				{
-					"name": "Bond of the Black Earth",
+					"name": "黑土之繫", "tENG_name": "Bond of the Black Earth",
 					"entries": [
-						"The burrowshark is magically bound to a bulette trained to serve as its mount. While mounted on its bulette, the burrowshark shares the bulette's senses and can ride the bulette while it burrows. The bonded bulette obeys the burrowshark's commands. If its mount dies, the burrowshark can train a new bulette to serve as its bonded mount, a process requiring a month."
+						"穴居鯊衛藉著魔法與一只經過訓練的{@creature 鯊蜥獸}聯繫在一起，並將其做為坐騎。當騎乘於它的{@creature 鯊蜥獸}時，穴居鯊衛將共享鯊蜥獸的感官，並可以在其掘地的同時維持騎乘。該鯊蜥獸服從穴居鯊衛的命令。若它的坐騎死亡，穴居鯊衛可以訓練一只新的鯊蜥獸做為其相繫的坐騎，這個過程將花費一個月的時間。"
 					]
 				}
 			],
@@ -662,21 +662,21 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"可以進行三次近戰攻擊"
+						"穴居鯊衛進行三次近戰攻擊。"
 					]
 				},
 				{
 					"name": "矛",
 					"entries": [
-						"{@atk mw,rw} {@hit 6} 命中, 觸及 5 呎. 或射程 20/60 呎, 單一目標. {@h}7 ({@damage 1d6 + 4}) piercing damage, or 8 ({@damage 1d8 + 4}) piercing damage if used with two hands to make a melee attack."
+						"{@atk mw,rw} 命中{@hit 6}，觸及5呎 或射程20/60呎，單一目標。{@h}7 ({@damage 1d6 + 4}) 穿刺傷害，或若雙手使用以進行一次近戰攻擊時則造成 8 ({@damage 1d8 + 4}) 穿刺傷害。"
 					]
 				}
 			],
 			"reaction": [
 				{
-					"name": "Unyielding",
+					"name": "堅定不移", "tENG_name": "Unyielding",
 					"entries": [
-						"When the burrowshark is subjected to an effect that would move it, knock it {@condition prone}, or both, it can use its reaction to be neither moved nor knocked {@condition prone}."
+						"當穴居鯊衛成為一個會強迫它移動或將它擊倒{@condition 伏地}的效果的目標，它可以使用它的反應以避免被強迫移動和擊倒{@condition 伏地}。"
 					]
 				}
 			],
@@ -709,7 +709,7 @@
 				{
 					"ac": 13,
 					"from": [
-						"{@item chain shirt|phb}"
+						"{@item 鏈甲衫|phb}"
 					]
 				}
 			],
@@ -732,13 +732,13 @@
 				"stealth": "+2"
 			},
 			"passive": 10,
-			"languages": "Aquan, Common",
+			"languages": "水族語、通用語",
 			"cr": "2",
 			"action": [
 				{
-					"name": "Quarterstaff",
+					"name": "長棍", "tENG_name": "Quarterstaff",
 					"entries": [
-						"{@atk mw} {@hit 4} 命中, 觸及 5 呎, 單一目標. {@h}6 ({@damage 1d8 + 2}) 鈍擊傷害."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。 {@h}6 ({@damage 1d8 + 2}) 鈍擊傷害。"
 					]
 				}
 			],
@@ -747,7 +747,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"The priest is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, {@hit 5} to hit with spell attacks). It knows the following sorcerer spells:"
+						"祭司是5級的施法者。它的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。祭司知曉以下術士法術："
 					],
 					"spells": {
 						"0": {
@@ -763,8 +763,8 @@
 							"slots": 4,
 							"spells": [
 								"{@spell 腳底抹油}",
-								"{@spell ice knife|xge}",
-								"{@spell magic missile}",
+								"{@spell 冰刃|xge}",
+								"{@spell 魔法飛彈}",
 								"{@spell 護盾術}"
 							]
 						},
@@ -772,13 +772,13 @@
 							"slots": 3,
 							"spells": [
 								"{@spell 朦朧術}",
-								"{@spell hold person}"
+								"{@spell 人類定身術}"
 							]
 						},
 						"3": {
 							"slots": 2,
 							"spells": [
-								"{@spell sleet storm}"
+								"{@spell 雪雨暴}"
 							]
 						}
 					},
@@ -814,7 +814,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"{@item shield|phb}"
+						"{@item 盾牌|phb}"
 					]
 				}
 			],
@@ -836,19 +836,19 @@
 				"stealth": "+4"
 			},
 			"passive": 10,
-			"languages": "Common",
+			"languages": "通用語",
 			"cr": "1/2",
 			"action": [
 				{
-					"name": "Sharktoothed Longsword",
+					"name": "鯊齒長劍","tENG_name": "Sharktoothed Longsword",
 					"entries": [
-						"{@atk mw} {@hit 4} 命中, 觸及 5 呎, 單一目標. {@h}6 ({@damage 1d8 + 2}) slashing damage, or 7 ({@damage 1d10 + 2}) slashing damage if used with two hands. Against a target is wearing no armor, the reaver deals an extra die of damage with this sword."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。 {@h}6 ({@damage 1d8 + 2}) 劈砍傷害，或若以雙手使用時則造成 7 ({@damage 1d10 + 2}) 劈砍傷害。若目標沒有穿戴護甲，則掠奪者將對其額外造成一顆這把劍的傷害骰的傷害。"
 					]
 				},
 				{
-					"name": "Javelin",
+					"name": "標槍","tENG_name": "Javelin",
 					"entries": [
-						"{@atk mw,rw} {@hit 4} 命中, 觸及 5 呎. 或射程 30/120 呎, 單一目標. {@h}5 ({@damage 1d6 + 2}) 穿刺傷害."
+						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或 射程30/120呎, 單一目標。{@h}5 ({@damage 1d6 + 2}) 穿刺傷害。"
 					]
 				}
 			],
@@ -896,7 +896,7 @@
 				"stealth": "+7"
 			},
 			"passive": 10,
-			"languages": "Common",
+			"languages": "通用語",
 			"cr": "3",
 			"trait": [
 				{
@@ -916,19 +916,19 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"可以進行兩次短劍攻擊."
+						"暗潮騎士進行二次短劍攻擊."
 					]
 				},
 				{
 					"name": "短劍",
 					"entries": [
-						"{@atk mw} {@hit 5} 命中, 觸及 5 呎, 單一目標. {@h}6 ({@damage 1d6 + 3}) 穿刺傷害."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。 {@h}6 ({@damage 1d6 + 3}) 穿刺傷害。"
 					]
 				},
 				{
 					"name": "Lance",
 					"entries": [
-						"{@atk mw} {@hit 5} 命中, 觸及 10 呎, 單一目標. {@h}9 ({@damage 1d12 + 3}) 穿刺傷害."
+						"{@atk mw} 命中{@hit 5}，觸及10呎，單一目標。 {@h}9 ({@damage 1d12 + 3}) 穿刺傷害。"
 					]
 				}
 			],
@@ -973,7 +973,7 @@
 				{
 					"ac": 18,
 					"from": [
-						"{@item plate armor|phb}"
+						"{@item 全身板甲|phb}"
 					]
 				}
 			],
@@ -998,9 +998,9 @@
 				"cold",
 				"poison"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 9,
-			"languages": "Common, Dwarvish",
+			"languages": "通用語、矮人語",
 			"cr": "7",
 			"trait": [
 				{
@@ -1050,7 +1050,7 @@
 				{
 					"name": "巨斧",
 					"entries": [
-						"{@atk mw} {@hit 7} 命中, 觸及 5 呎, 單一目標. {@h}17 ({@damage 2d12 + 4}) 揮砍傷害."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。 {@h}17 ({@damage 2d12 + 4}) 劈砍傷害。"
 					]
 				}
 			],
@@ -1084,7 +1084,7 @@
 				{
 					"ac": 18,
 					"from": [
-						"{@item plate armor|phb}"
+						"{@item 全身板甲|phb}"
 					]
 				}
 			],
@@ -1108,7 +1108,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -1120,15 +1120,15 @@
 				"poisoned",
 				"prone"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 10,
-			"languages": "Terran, one language of its creator's choice",
+			"languages": "土族語、一種它創造者所選擇的語言",
 			"cr": "7",
 			"trait": [
 				{
-					"name": "Magic Weapons",
+					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The myrmidon's weapon attacks are magical."
+						"追隨者的武器攻擊視作魔法攻擊。"
 					]
 				}
 			],
@@ -1136,13 +1136,13 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The myrmidon makes two maul attacks."
+						"追隨者進行二次巨鎚攻擊。"
 					]
 				},
 				{
-					"name": "Maul",
+					"name": "巨鎚", "tENG_name": "Maul",
 					"entries": [
-						"{@atk mw} {@hit 7} 命中, 觸及 5 呎, 單一目標. {@h}11 ({@damage 2d6 + 4}) 鈍擊傷害."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。 {@h}11 ({@damage 2d6 + 4}) 鈍擊傷害。"
 					]
 				},
 				{
@@ -1226,7 +1226,7 @@
 				{
 					"name": "Dagger +1",
 					"entries": [
-						"{@atk mw,rw} {@hit 6} 命中, 觸及 5 呎. 或射程 20/60 呎, 單一目標. {@h}5 ({@damage 1d4 + 3}) 穿刺傷害."
+						"{@atk mw,rw} 命中{@hit 6}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}5 ({@damage 1d4 + 3}) 穿刺傷害。"
 					]
 				}
 			],
@@ -1240,18 +1240,18 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell druidcraft}",
-								"{@spell guidance}",
-								"{@spell poison spray}",
-								"{@spell produce flame}"
+								"{@spell 德魯伊伎倆}",
+								"{@spell 指導術}",
+								"{@spell 毒氣噴灑}",
+								"{@spell 燃火術}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell animal friendship}",
-								"{@spell faerie fire}",
-								"{@spell healing word}",
+								"{@spell 化獸為友}",
+								"{@spell 妖火術}",
+								"{@spell 治癒真言}",
 								"{@spell 跳躍術}",
 								"{@spell 雷鳴波}"
 							]
@@ -1259,22 +1259,22 @@
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell flame blade}",
-								"{@spell spike growth}"
+								"{@spell 火焰刀}",
+								"{@spell 荊棘叢生}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell dispel magic}",
-								"{@spell stinking cloud}"
+								"{@spell 解除魔法}",
+								"{@spell 臭雲術}"
 							]
 						},
 						"4": {
 							"slots": 2,
 							"spells": [
-								"{@spell blight}",
-								"{@spell wall of fire}"
+								"{@spell 枯萎術}",
+								"{@spell 火牆術}"
 							]
 						}
 					},
@@ -1310,8 +1310,8 @@
 				{
 					"ac": 17,
 					"from": [
-						"{@item breastplate|phb}",
-						"{@item shield|phb}"
+						"{@item 護胸甲|phb}",
+						"{@item 盾牌|phb}"
 					]
 				},
 				{
@@ -1340,7 +1340,7 @@
 				"fire"
 			],
 			"passive": 12,
-			"languages": "Common",
+			"languages": "通用語",
 			"cr": "2",
 			"trait": [
 				{
@@ -1360,13 +1360,13 @@
 				{
 					"name": "長劍",
 					"entries": [
-						"{@atk mw} {@hit 4} 命中, 觸及 5 呎, 單一目標. {@h}6 ({@damage 1d8 + 2}) 揮砍傷害."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。 {@h}6 ({@damage 1d8 + 2}) 劈砍傷害。"
 					]
 				},
 				{
 					"name": "重弩",
 					"entries": [
-						"{@atk rw} {@hit 3} 命中, 射程 100/400 呎, 單一目標. {@h}6 ({@damage 1d10 + 1}) 穿刺傷害."
+						"{@atk rw} 命中{@hit 3}，射程 100/400 呎, 單一目標。 {@h}6 ({@damage 1d10 + 1}) 穿刺傷害。"
 					]
 				}
 			],
@@ -1401,7 +1401,7 @@
 				12,
 				{
 					"ac": 15,
-					"condition": "with {@spell 法師護甲}",
+					"condition": "使用{@spell 法師護甲}時",
 					"braces": true
 				}
 			],
@@ -1427,13 +1427,13 @@
 				"fire"
 			],
 			"passive": 10,
-			"languages": "Common, Ignan",
+			"languages": "通用語、火族語",
 			"cr": "3",
 			"action": [
 				{
 					"name": "匕首",
 					"entries": [
-						"{@atk mw,rw} {@hit 4} 命中, 觸及 5 呎. 或射程 20/60 呎, 單一目標. {@h}4 ({@damage 1d4 + 2}) 穿刺傷害."
+						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}4 ({@damage 1d4 + 2}) 穿刺傷害。"
 					]
 				}
 			],
@@ -1442,7 +1442,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"The priest is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, {@hit 5} to hit with spell attacks). It knows the following sorcerer spells:"
+						"The priest is a 5th-level spellcaster. Its 的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。 It knows the following sorcerer spells:"
 					],
 					"spells": {
 						"0": {
@@ -1508,7 +1508,7 @@
 				10,
 				{
 					"ac": 13,
-					"condition": "with {@spell 法師護甲}",
+					"condition": "使用{@spell 法師護甲}時",
 					"braces": true
 				}
 			],
@@ -1531,7 +1531,7 @@
 				"stealth": "+4"
 			},
 			"passive": 14,
-			"languages": "Aquan, Common",
+			"languages": "水族語、通用語",
 			"cr": "2",
 			"trait": [
 				{
@@ -1552,13 +1552,13 @@
 				{
 					"name": "Constrict (Serpent Form Only)",
 					"entries": [
-						"{@atk mw} {@hit 4} 命中, 觸及 5 呎, 單一目標. {@h}9 ({@damage 2d6 + 2}) 鈍擊傷害. If the target is Medium or smaller, it is {@condition grappled} (escape DC 12). Until the grapple ends, the target is {@condition restrained}, and the fathomer can't constrict another target."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。 {@h}9 ({@damage 2d6 + 2}) 鈍擊傷害。 If the target is Medium or smaller, it is {@condition grappled} (escape DC 12). Until the grapple ends, the target is {@condition restrained}, and the fathomer can't constrict another target."
 					]
 				},
 				{
 					"name": "Dagger (Human Form Only)",
 					"entries": [
-						"{@atk mw,rw} {@hit 4} 命中, 觸及 5 呎. 或射程 20/60 呎, 單一目標. {@h}4 ({@damage 1d4 + 2}) 穿刺傷害."
+						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}4 ({@damage 1d4 + 2}) 穿刺傷害。"
 					]
 				}
 			],
@@ -1567,7 +1567,7 @@
 				{
 					"name": "Spellcasting (Human Form Only)",
 					"headerEntries": [
-						"The fathomer is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 12, {@hit 4} to hit with spell attacks). It has two 3rd-level spell slots, which it regains after finishing a short or long rest, and knows the following warlock spells:"
+						"The fathomer is a 5th-level spellcaster. Its 的施法屬性為魅力（法術豁免DC 12，法術攻擊命中{@hit 4}）。 It has two 3rd-level spell slots, which it regains after finishing a short or long rest, and knows the following warlock spells:"
 					],
 					"spells": {
 						"0": {
@@ -1666,13 +1666,13 @@
 				{
 					"name": "長劍",
 					"entries": [
-						"{@atk mw} {@hit 4} 命中, 觸及 5 呎, 單一目標. {@h}6 ({@damage 1d8 + 2}) slashing damage, or 7 ({@damage 1d10 + 2}) slashing damage if used with two hands."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。 {@h}6 ({@damage 1d8 + 2}) slashing damage, or 7 ({@damage 1d10 + 2}) slashing damage if used with two hands."
 					]
 				},
 				{
 					"name": "矛",
 					"entries": [
-						"{@atk mw,rw} {@hit 4} 命中, 觸及 5 呎. 或射程 20/60 呎, 單一目標. {@h}5 ({@damage 1d6 + 2}) piercing damage, or 6 ({@damage 1d8 + 2}) piercing damage if used with two hands to make a melee attack."
+						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}5 ({@damage 1d6 + 2}) piercing damage, or 6 ({@damage 1d8 + 2}) piercing damage if used with two hands to make a melee attack."
 					]
 				}
 			],
@@ -1681,7 +1681,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"The knight is a 1st-level spellcaster. Its spellcasting ability is Charisma (spell save DC 12, {@hit 4} to hit with spell attacks). It knows the following sorcerer spell:"
+						"The knight is a 1st-level spellcaster. Its 的施法屬性為魅力（法術豁免DC 12，法術攻擊命中{@hit 4}）。 It knows the following sorcerer spell:"
 					],
 					"spells": {
 						"0": {
@@ -1730,7 +1730,7 @@
 				{
 					"ac": 18,
 					"from": [
-						"{@item plate armor|phb}"
+						"{@item 全身板甲|phb}"
 					]
 				}
 			],
@@ -1754,7 +1754,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -1767,7 +1767,7 @@
 				"poisoned",
 				"prone"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 10,
 			"languages": "Ignan, one language of its creator's choice",
 			"cr": "7",
@@ -1779,9 +1779,9 @@
 					]
 				},
 				{
-					"name": "Magic Weapons",
+					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The myrmidon's weapon attacks are magical."
+						"追隨者的武器攻擊視作魔法攻擊。"
 					]
 				},
 				{
@@ -1801,7 +1801,7 @@
 				{
 					"name": "彎刀",
 					"entries": [
-						"{@atk mw} {@hit 7} 命中, 觸及 5 呎, 單一目標. {@h}7 ({@damage 1d6 + 4}) 揮砍傷害."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。 {@h}7 ({@damage 1d6 + 4}) 劈砍傷害。"
 					]
 				},
 				{
@@ -1850,7 +1850,7 @@
 				12,
 				{
 					"ac": 15,
-					"condition": "with {@spell 法師護甲}",
+					"condition": "使用{@spell 法師護甲}時",
 					"braces": true
 				}
 			],
@@ -1875,7 +1875,7 @@
 				"fire"
 			],
 			"passive": 10,
-			"languages": "Common, Ignan",
+			"languages": "通用語、火族語",
 			"cr": "6",
 			"trait": [
 				{
@@ -1889,7 +1889,7 @@
 				{
 					"name": "匕首",
 					"entries": [
-						"{@atk mw,rw} {@hit 5} 命中, 觸及 5 呎. 或射程 20/60 呎, 單一目標. {@h}4 ({@damage 1d4 + 2}) 穿刺傷害."
+						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}4 ({@damage 1d4 + 2}) 穿刺傷害。"
 					]
 				}
 			],
@@ -1898,7 +1898,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"The flamewrath is a 7th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 14, {@hit 6} to hit with spell attacks). It knows the following sorcerer spells:"
+						"The flamewrath is a 7th-level spellcaster. Its 的施法屬性為魅力（法術豁免DC 14，法術攻擊命中{@hit 6}）。 It knows the following sorcerer spells:"
 					],
 					"spells": {
 						"0": {
@@ -1972,7 +1972,7 @@
 				{
 					"ac": 16,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -1998,7 +1998,7 @@
 				"cold"
 			],
 			"passive": 14,
-			"languages": "Aquan, Common",
+			"languages": "水族語、通用語",
 			"cr": "9",
 			"trait": [
 				{
@@ -2036,13 +2036,13 @@
 				{
 					"name": "Claw",
 					"entries": [
-						"{@atk mw} {@hit 6} 命中, 觸及 5 呎, 單一目標. {@h}9 ({@damage 2d6 + 2}) bludgeoning damage, and the target is {@condition grappled} (escape DC 13). Until the grapple ends, Gar can't attack other creatures with his claw."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。 {@h}9 ({@damage 2d6 + 2}) bludgeoning damage, and the target is {@condition grappled} (escape DC 13). Until the grapple ends, Gar can't attack other creatures with his claw."
 					]
 				},
 				{
 					"name": "Drown",
 					"entries": [
-						"{@atk mw,rw} {@hit 7} 命中, 觸及 5 呎. 或射程 20/60 呎, 單一目標. {@h}6 ({@damage 1d6 + 3}) piercing damage plus 4 ({@damage 1d8}) cold damage."
+						"{@atk mw,rw} 命中{@hit 7}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}6 ({@damage 1d6 + 3}) piercing damage plus 4 ({@damage 1d8}) cold damage."
 					]
 				}
 			],
@@ -2146,7 +2146,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -2174,7 +2174,7 @@
 				"insight": "+4",
 				"perception": "+7"
 			},
-			"senses": "darkvision 120 ft.",
+			"senses": "黑暗視覺120呎",
 			"passive": 17,
 			"languages": "Common, Sahuagin",
 			"cr": "7",
@@ -2214,19 +2214,19 @@
 				{
 					"name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 7} 命中, 觸及 5 ft., one creature. {@h}9 ({@damage 2d4 + 4}) 穿刺傷害."
+						"{@atk mw} 命中{@hit 7}，觸及 5 ft., one creature. {@h}9 ({@damage 2d4 + 4}) 穿刺傷害。"
 					]
 				},
 				{
 					"name": "短劍",
 					"entries": [
-						"{@atk mw} {@hit 7} 命中, 觸及 5 ft., one creature. {@h}11 ({@damage 2d6 + 4}) 穿刺傷害."
+						"{@atk mw} 命中{@hit 7}，觸及 5 ft., one creature. {@h}11 ({@damage 2d6 + 4}) 穿刺傷害。"
 					]
 				},
 				{
 					"name": "Garrote",
 					"entries": [
-						"{@atk mw} {@hit 7} 命中, 觸及 5 ft., one Medium or Small creature against which Ghald has advantage on the attack roll. {@h}9 ({@damage 2d4 + 4}) bludgeoning damage, and the target is {@condition grappled} (escape DC 15). Until the grapple ends, the target can't breathe, and Ghald has advantage on attack rolls against it."
+						"{@atk mw} 命中{@hit 7}，觸及 5 ft., one Medium or Small creature against which Ghald has advantage on the attack roll. {@h}9 ({@damage 2d4 + 4}) bludgeoning damage, and the target is {@condition grappled} (escape DC 15). Until the grapple ends, the target can't breathe, and Ghald has advantage on attack rolls against it."
 					]
 				}
 			],
@@ -2295,7 +2295,7 @@
 			],
 			"senses": "blindsight 60 ft. (blind beyond this radius)",
 			"passive": 15,
-			"languages": "Common, Terran",
+			"languages": "通用語、土族語",
 			"cr": "5",
 			"trait": [
 				{
@@ -2333,7 +2333,7 @@
 				{
 					"name": "徒手打擊",
 					"entries": [
-						"{@atk mw} {@hit 7} 命中, 觸及 5 呎, 單一目標. {@h}9 ({@damage 1d10 + 4}) 鈍擊傷害."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。 {@h}9 ({@damage 1d10 + 4}) 鈍擊傷害。"
 					]
 				}
 			],
@@ -2378,7 +2378,7 @@
 				{
 					"ac": 13,
 					"from": [
-						"{@item leather armor|phb}"
+						"{@item 皮甲|phb}"
 					]
 				}
 			],
@@ -2401,7 +2401,7 @@
 				"stealth": "+4"
 			},
 			"passive": 9,
-			"languages": "Common",
+			"languages": "通用語",
 			"cr": "1/8",
 			"trait": [
 				{
@@ -2421,7 +2421,7 @@
 				{
 					"name": "匕首",
 					"entries": [
-						"{@atk mw,rw} {@hit 4} 命中, 觸及 5 呎. 或射程 20/60 呎, 單一目標. {@h}4 ({@damage 1d4 + 2}) 穿刺傷害."
+						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}4 ({@damage 1d4 + 2}) 穿刺傷害。"
 					]
 				}
 			],
@@ -2454,7 +2454,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item 鑲釘皮甲|phb}"
 					]
 				}
 			],
@@ -2497,13 +2497,13 @@
 				{
 					"name": "彎刀",
 					"entries": [
-						"{@atk mw} {@hit 5} 命中, 觸及 5 呎, 單一目標. {@h}6 ({@damage 1d6 + 3}) 揮砍傷害."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。 {@h}6 ({@damage 1d6 + 3}) 劈砍傷害。"
 					]
 				},
 				{
 					"name": "匕首",
 					"entries": [
-						"{@atk mw,rw} {@hit 5} 命中, 觸及 5 呎. 或射程 20/60 呎, 單一目標. {@h}5 ({@damage 1d4 + 3}) 穿刺傷害."
+						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}5 ({@damage 1d4 + 3}) 穿刺傷害。"
 					]
 				}
 			],
@@ -2512,7 +2512,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"The priest is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 12, {@hit 4} to hit with spell attacks). It knows the following sorcerer spells:"
+						"The priest is a 5th-level spellcaster. Its 的施法屬性為魅力（法術豁免DC 12，法術攻擊命中{@hit 4}）。 It knows the following sorcerer spells:"
 					],
 					"spells": {
 						"0": {
@@ -2627,7 +2627,7 @@
 				{
 					"name": "徒手打擊",
 					"entries": [
-						"{@atk mw} {@hit 5} 命中, 觸及 5 呎, 單一目標. {@h}6 ({@damage 1d6 + 3}) 鈍擊傷害."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。 {@h}6 ({@damage 1d6 + 3}) 鈍擊傷害。"
 					]
 				}
 			],
@@ -2688,7 +2688,7 @@
 			]
 		},
 		{
-			"name": "埃米克斯","ENG_name": "Imix",
+			"name": "伊密克斯","ENG_name": "Imix",
 			"size": "H",
 			"type": "elemental",
 			"source": "PotA",
@@ -2725,7 +2725,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -2743,7 +2743,7 @@
 			],
 			"senses": "blindsight 120 ft.",
 			"passive": 13,
-			"languages": "Common, Ignan",
+			"languages": "通用語、火族語",
 			"cr": "19",
 			"trait": [
 				{
@@ -2791,15 +2791,15 @@
 					]
 				},
 				{
-					"name": "Slam",
+					"name": "猛擊", "tENG_name": "Slam",
 					"entries": [
-						"{@atk mw} {@hit 12} 命中, 觸及 10 呎, 單一目標. {@h}18 ({@damage 2d10 + 7}) bludgeoning damage plus 18 ({@damage 5d6}) fire damage."
+						"{@atk mw} 命中{@hit 12}，觸及10呎，單一目標。 {@h}18 ({@damage 2d10 + 7}) bludgeoning damage plus 18 ({@damage 5d6}) fire damage."
 					]
 				},
 				{
 					"name": "Flame Blast",
 					"entries": [
-						"{@atk rs} {@hit 12} 命中, 射程 250 呎, 單一目標. {@h}35 ({@damage 10d6}) fire damage."
+						"{@atk rs} 命中{@hit 12}，射程 250 呎, 單一目標。 {@h}35 ({@damage 10d6}) fire damage."
 					]
 				},
 				{
@@ -2836,19 +2836,19 @@
 			"page": 214,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting",
+					"name": "天生施法",
 					"headerEntries": [
-						"Imix's innate spellcasting ability is Charisma (spell save DC 20, {@hit 12} to hit with spell attacks). He can innately cast the following spells, requiring no material components:"
+						"伊密克斯的天生施法屬性為魅力（法術豁免DC 20，法術攻擊命中{@hit 12}）。他天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 火球術}",
-						"{@spell wall of fire}"
+						"{@spell 火牆術}"
 					],
 					"daily": {
 						"3e": [
-							"{@spell fire storm}",
-							"{@spell haste}",
-							"{@spell teleport}"
+							"{@spell 火焰風暴}",
+							"{@spell 加速術}",
+							"{@spell 傳送術}"
 						]
 					},
 					"ability": "cha"
@@ -2892,7 +2892,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -2919,7 +2919,7 @@
 			],
 			"senses": "darkvision 60 ft., tremorsense 60 ft.",
 			"passive": 14,
-			"languages": "Common, Terran",
+			"languages": "通用語、土族語",
 			"cr": "8",
 			"trait": [
 				{
@@ -2959,13 +2959,13 @@
 				{
 					"name": "Snake Hair",
 					"entries": [
-						"{@atk mw} {@hit 6} 命中, 觸及 5 呎, 單一目標. {@h}7 ({@damage 1d8 + 3}) piercing damage plus 14 ({@damage 4d6}) poison damage."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。 {@h}7 ({@damage 1d8 + 3}) piercing damage plus 14 ({@damage 4d6}) poison damage."
 					]
 				},
 				{
 					"name": "Ironfang",
 					"entries": [
-						"{@atk mw} {@hit 9} 命中, 觸及 5 呎, 單一目標. {@h}7 ({@damage 1d8 + 3}) piercing damage plus 4 ({@damage 1d8}) thunder damage."
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。 {@h}7 ({@damage 1d8 + 3}) piercing damage plus 4 ({@damage 1d8}) thunder damage."
 					]
 				}
 			],
@@ -3013,7 +3013,7 @@
 				10,
 				{
 					"ac": 13,
-					"condition": "with {@spell 法師護甲}",
+					"condition": "使用{@spell 法師護甲}時",
 					"braces": true
 				}
 			],
@@ -3049,20 +3049,20 @@
 				{
 					"name": "Staff",
 					"entries": [
-						"{@atk mw} {@hit 4} 命中, 觸及 5 呎, 單一目標. {@h}4 ({@damage 1d6 + 1}) bludgeoning damage, or 5 ({@damage 1d8 + 1}) bludgeoning damage when used with two hands."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。 {@h}4 ({@damage 1d6 + 1}) bludgeoning damage, or 5 ({@damage 1d8 + 1}) bludgeoning damage when used with two hands."
 					]
 				}
 			],
 			"page": 198,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting",
+					"name": "天生施法",
 					"headerEntries": [
 						"Miraj's innate spellcasting ability is Constitution (spell save DC 14). He can innately cast the following spell, requiring no material components:"
 					],
 					"daily": {
 						"1": [
-							"{@spell pass without trace}"
+							"{@spell 行蹤無跡}"
 						]
 					},
 					"ability": "con"
@@ -3070,7 +3070,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"Miraj is an 11th-level spellcaster. His spellcasting ability is Charisma (spell save DC 15, {@hit 7} to hit with spell attacks). He knows the following sorcerer spells:"
+						"Miraj 是11級的施法者。His 的施法屬性為魅力（法術豁免DC 15，法術攻擊命中{@hit 7}）。 He knows the following sorcerer spells:"
 					],
 					"spells": {
 						"0": {
@@ -3086,9 +3086,9 @@
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell chromatic orb}",
+								"{@spell 幻色法球}",
 								"{@spell 法師護甲}",
-								"{@spell magic missile}"
+								"{@spell 魔法飛彈}"
 							]
 						},
 						"2": {
@@ -3102,27 +3102,27 @@
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell counterspell}",
-								"{@spell erupting earth|xge}"
+								"{@spell 反制法術}",
+								"{@spell 土石爆發|xge}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell polymorph}",
+								"{@spell 變形術}",
 								"{@spell 石膚術}"
 							]
 						},
 						"5": {
 							"slots": 2,
 							"spells": [
-								"{@spell wall of stone}"
+								"{@spell 石牆術}"
 							]
 						},
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell move earth}"
+								"{@spell 地動術}"
 							]
 						}
 					},
@@ -3154,7 +3154,7 @@
 				{
 					"ac": 20,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -3184,7 +3184,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -3200,7 +3200,7 @@
 			],
 			"senses": "blindsight 120 ft., tremorsense 120 ft.",
 			"passive": 12,
-			"languages": "Common, Terran",
+			"languages": "通用語、土族語",
 			"cr": "20",
 			"trait": [
 				{
@@ -3236,15 +3236,15 @@
 					]
 				},
 				{
-					"name": "Slam",
+					"name": "猛擊", "tENG_name": "Slam",
 					"entries": [
-						"{@atk mw} {@hit 14} 命中, 觸及 15 呎, 單一目標. {@h}30 ({@damage 4d10 + 8}) 鈍擊傷害."
+						"{@atk mw} 命中{@hit 14}，觸及15呎，單一目標。 {@h}30 ({@damage 4d10 + 8}) 鈍擊傷害。"
 					]
 				},
 				{
 					"name": "Boulder",
 					"entries": [
-						"{@atk rw} {@hit 6} 命中, 射程 500 呎, 單一目標. {@h}46 ({@damage 7d10 + 8}) 鈍擊傷害. If the target is a creature, it must succeed on a DC 23 Strength saving throw or be knocked {@condition prone}."
+						"{@atk rw} 命中{@hit 6}，射程 500 呎, 單一目標。 {@h}46 ({@damage 7d10 + 8}) 鈍擊傷害。 If the target is a creature, it must succeed on a DC 23 Strength saving throw or be knocked {@condition prone}."
 					]
 				},
 				{
@@ -3281,14 +3281,14 @@
 			"page": 216,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting",
+					"name": "天生施法",
 					"headerEntries": [
-						"Ogrémoch's innate spellcasting ability is Charisma (spell save DC 20, {@hit 12} to hit with spell attacks). He can innately cast the following spells, requiring no material components:"
+						"Ogrémoch's innate 的施法屬性為魅力（法術豁免DC 20，法術攻擊命中{@hit 12}）。 He can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
 						"{@spell 融身入石}",
-						"{@spell move earth}",
-						"{@spell wall of stone}"
+						"{@spell 地動術}",
+						"{@spell 石牆術}"
 					],
 					"ability": "cha"
 				}
@@ -3318,7 +3318,7 @@
 			]
 		},
 		{
-			"name": "奧海卓","ENG_name": "Olhydra",
+			"name": "奥利德拉","ENG_name": "Olhydra",
 			"size": "H",
 			"type": "elemental",
 			"source": "PotA",
@@ -3330,7 +3330,7 @@
 				{
 					"ac": 18,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -3361,7 +3361,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -3416,15 +3416,15 @@
 					]
 				},
 				{
-					"name": "Slam",
+					"name": "猛擊", "tENG_name": "Slam",
 					"entries": [
-						"{@atk mw} {@hit 11} 命中, 觸及 10 呎, 單一目標. {@h}21 ({@damage 3d10 + 5}) bludgeoning damage, and the target is {@condition grappled} (escape DC 19). Olhydra can grapple up to four targets. When Olhydra moves, all creatures she is grappling move with her."
+						"{@atk mw} 命中{@hit 11}，觸及10呎，單一目標。 {@h}21 ({@damage 3d10 + 5}) bludgeoning damage, and the target is {@condition grappled} (escape DC 19). Olhydra can grapple up to four targets. When Olhydra moves, all creatures she is grappling move with her."
 					]
 				},
 				{
 					"name": "Water Jet",
 					"entries": [
-						"{@atk rw} {@hit 12} 命中, 射程 120 呎, 單一目標. {@h}21 ({@damage 6d6}) bludgeoning damage, and the target is knocked {@condition prone} if it fails a DC 19 Strength saving throw."
+						"{@atk rw} 命中{@hit 12}，射程 120 呎, 單一目標。 {@h}21 ({@damage 6d6}) bludgeoning damage, and the target is knocked {@condition prone} if it fails a DC 19 Strength saving throw."
 					]
 				},
 				{
@@ -3438,7 +3438,7 @@
 				{
 					"name": "Crush",
 					"entries": [
-						"One creature that Olhydra is grappling is crushed for 21 ({@damage 3d10 + 5}) 鈍擊傷害."
+						"One creature that Olhydra is grappling is crushed for 21 ({@damage 3d10 + 5}) 鈍擊傷害。"
 					]
 				},
 				{
@@ -3461,16 +3461,16 @@
 			"page": 218,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting",
+					"name": "天生施法",
 					"headerEntries": [
-						"Olhydra's innate spellcasting ability is Charisma (spell save DC 20, {@hit 12} to hit with spell attacks). She can innately cast the following spells, requiring no material components:"
+						"Olhydra's innate 的施法屬性為魅力（法術豁免DC 20，法術攻擊命中{@hit 12}）。 She can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell wall of ice}"
+						"{@spell 冰牆術}"
 					],
 					"daily": {
 						"1": [
-							"{@spell storm of vengeance}"
+							"{@spell 復仇風暴}"
 						],
 						"3": [
 							"{@spell 冰風暴}"
@@ -3519,7 +3519,7 @@
 				12,
 				{
 					"ac": 15,
-					"condition": "with {@spell 法師護甲}",
+					"condition": "使用{@spell 法師護甲}時",
 					"braces": true
 				}
 			],
@@ -3545,7 +3545,7 @@
 				"cold"
 			],
 			"passive": 13,
-			"languages": "Common",
+			"languages": "通用語",
 			"cr": "3",
 			"trait": [
 				{
@@ -3559,7 +3559,7 @@
 				{
 					"name": "匕首",
 					"entries": [
-						"{@atk mw} {@hit 4} 命中, 觸及 5 呎. 或射程 20/60 呎, 單一目標. {@h}4 ({@damage 1d4 + 2}) 穿刺傷害."
+						"{@atk mw} 命中{@hit 4}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}4 ({@damage 1d4 + 2}) 穿刺傷害。"
 					]
 				},
 				{
@@ -3574,7 +3574,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"The one-eyed shiver is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, {@hit 5} to hit with spell attacks). It knows the following sorcerer spells:"
+						"The one-eyed shiver is a 5th-level spellcaster. Its 的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。 It knows the following sorcerer spells:"
 					],
 					"spells": {
 						"0": {
@@ -3594,14 +3594,14 @@
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell mirror image}",
-								"{@spell misty step}"
+								"{@spell 鏡影術}",
+								"{@spell 迷蹤步}"
 							]
 						},
 						"3": {
 							"slots": 2,
 							"spells": [
-								"{@spell fear}"
+								"{@spell 恐懼術}"
 							]
 						}
 					},
@@ -3638,7 +3638,7 @@
 				11,
 				{
 					"ac": 14,
-					"condition": "with {@spell 法師護甲}",
+					"condition": "使用{@spell 法師護甲}時",
 					"braces": true
 				}
 			],
@@ -3676,7 +3676,7 @@
 				{
 					"name": "Swift Animation (Recharges after a Long Rest)",
 					"entries": [
-						"When a living Medium or Small humanoid within 30 feet of Oreioth dies, he can use an action on his next turn to cast {@spell animate dead} on that humanoid's corpse, instead of using the spell's normal casting time."
+						"When a living Medium or Small humanoid within 30 feet of Oreioth dies, he can use an action on his next turn to cast {@spell 活化死屍} on that humanoid's corpse, instead of using the spell's normal casting time."
 					]
 				}
 			],
@@ -3684,7 +3684,7 @@
 				{
 					"name": "匕首",
 					"entries": [
-						"{@atk mw} {@hit 3} 命中, 觸及 5 呎, 單一目標. {@h}3 ({@damage 1d4 + 1}) 穿刺傷害."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。 {@h}3 ({@damage 1d4 + 1}) 穿刺傷害。"
 					]
 				}
 			],
@@ -3709,21 +3709,21 @@
 							"spells": [
 								"{@spell 摹造生命}",
 								"{@spell 法師護甲}",
-								"{@spell magic missile}",
-								"{@spell ray of sickness}"
+								"{@spell 魔法飛彈}",
+								"{@spell 致病射線}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell crown of madness}",
-								"{@spell misty step}"
+								"{@spell 瘋狂冠冕}",
+								"{@spell 迷蹤步}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell animate dead}",
+								"{@spell 活化死屍}",
 								"{@spell 吸血鬼之觸}"
 							]
 						}
@@ -3760,7 +3760,7 @@
 				{
 					"ac": 17,
 					"from": [
-						"{@item splint armor|phb}"
+						"{@item 條板甲|phb}"
 					]
 				}
 			],
@@ -3785,7 +3785,7 @@
 				"fire"
 			],
 			"passive": 13,
-			"languages": "Common, Ignan",
+			"languages": "通用語、火族語",
 			"cr": "5",
 			"trait": [
 				{
@@ -3811,7 +3811,7 @@
 				{
 					"name": "矛",
 					"entries": [
-						"{@atk mw,rw} {@hit 6} 命中, 觸及 5 呎. 或射程 20/60 呎, 單一目標. {@h}6 ({@damage 1d6 + 3}) piercing damage, or 7 ({@damage 1d8 + 3}) piercing damage if used with two hands to make a melee attack, plus 3 ({@damage 1d6}) fire damage."
+						"{@atk mw,rw} 命中{@hit 6}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}6 ({@damage 1d6 + 3}) piercing damage, or 7 ({@damage 1d8 + 3}) piercing damage if used with two hands to make a melee attack, plus 3 ({@damage 1d6}) fire damage."
 					]
 				}
 			],
@@ -3865,7 +3865,7 @@
 			},
 			"senses": "tremorsense 10 ft.",
 			"passive": 14,
-			"languages": "Common",
+			"languages": "通用語",
 			"cr": "1/2",
 			"trait": [
 				{
@@ -3891,7 +3891,7 @@
 				{
 					"name": "徒手打擊",
 					"entries": [
-						"{@atk mw} {@hit 4} 命中, 觸及 5 呎, 單一目標. {@h}5 ({@damage 1d6 + 2}) 鈍擊傷害."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。 {@h}5 ({@damage 1d6 + 2}) 鈍擊傷害。"
 					]
 				}
 			],
@@ -3937,7 +3937,7 @@
 				10,
 				{
 					"ac": 13,
-					"condition": "with {@spell 法師護甲}",
+					"condition": "使用{@spell 法師護甲}時",
 					"braces": true
 				}
 			],
@@ -3965,7 +3965,7 @@
 				"acid"
 			],
 			"passive": 10,
-			"languages": "Aquan, Common",
+			"languages": "水族語、通用語",
 			"cr": "4",
 			"trait": [
 				{
@@ -3979,14 +3979,14 @@
 				{
 					"name": "匕首",
 					"entries": [
-						"{@atk mw,rw} {@hit 3} 命中, 觸及 5 呎. 或射程d 20/60 呎, 單一目標. {@h}3 ({@damage 1d4 + 1}) 穿刺傷害."
+						"{@atk mw,rw} 命中{@hit 3}，觸及5呎 或射程d 20/60 呎, 單一目標。 {@h}3 ({@damage 1d4 + 1}) 穿刺傷害。"
 					]
 				}
 			],
 			"page": 208,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting",
+					"name": "天生施法",
 					"headerEntries": [
 						"Shoalar's innate spellcasting ability is Constitution (spell save DC 13, {@hit 5} to hit with spell attacks). He can innately cast the following spells:"
 					],
@@ -4003,7 +4003,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"Shoalar is a 5th-level spellcaster. His spellcasting ability is Charisma (spell save DC 13, {@hit 5} to hit with spell attacks). He knows the following sorcerer spells:"
+						"Shoalar is a 5th-level spellcaster. His 的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。 He knows the following sorcerer spells:"
 					],
 					"spells": {
 						"0": {
@@ -4018,16 +4018,16 @@
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell disguise self}",
+								"{@spell 易容術}",
 								"{@spell 法師護甲}",
-								"{@spell magic missile}"
+								"{@spell 魔法飛彈}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
 								"{@spell 人類定身術}",
-								"{@spell misty step}"
+								"{@spell 迷蹤步}"
 							]
 						},
 						"3": {
@@ -4073,7 +4073,7 @@
 				12,
 				{
 					"ac": 15,
-					"condition": "with {@spell 法師護甲}",
+					"condition": "使用{@spell 法師護甲}時",
 					"braces": true
 				}
 			],
@@ -4101,7 +4101,7 @@
 				{
 					"name": "匕首",
 					"entries": [
-						"{@atk mw,rw} {@hit 4} 命中, 觸及 5 呎. 或射程 20/60 呎, 單一目標. {@h}3 ({@damage 1d4 + 1}) 穿刺傷害."
+						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}3 ({@damage 1d4 + 1}) 穿刺傷害。"
 					]
 				}
 			],
@@ -4110,7 +4110,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"The Skyweaver is a 6th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, {@hit 5} to hit with spell attacks). It knows the following sorcerer spells:"
+						"The Skyweaver is a 6th-level spellcaster. Its 的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。 It knows the following sorcerer spells:"
 					],
 					"spells": {
 						"0": {
@@ -4140,8 +4140,8 @@
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell fly}",
-								"{@spell lightning bolt}"
+								"{@spell 飛行術}",
+								"{@spell 閃電束}"
 							]
 						}
 					},
@@ -4177,7 +4177,7 @@
 				{
 					"ac": 17,
 					"from": [
-						"{@item splint armor|phb}"
+						"{@item 條板甲|phb}"
 					]
 				}
 			],
@@ -4200,7 +4200,7 @@
 			},
 			"senses": "tremorsense 30 ft.",
 			"passive": 12,
-			"languages": "Common, Terran",
+			"languages": "通用語、土族語",
 			"cr": "4",
 			"trait": [
 				{
@@ -4214,7 +4214,7 @@
 				{
 					"name": "Black Earth Rod",
 					"entries": [
-						"{@atk mw} {@hit 5} 命中, 觸及 5 呎, 單一目標. {@h}5 ({@damage 1d6 + 2}) 鈍擊傷害. The Stonemelder can also expend a spell slot to deal extra damage, dealing {@dice 2d8} bludgeoning damage for a 1st level slot, plus an additional {@dice 1d8} for each level of the slot above 1st."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。 {@h}5 ({@damage 1d6 + 2}) 鈍擊傷害。 The Stonemelder can also expend a spell slot to deal extra damage, dealing {@dice 2d8} bludgeoning damage for a 1st level slot, plus an additional {@dice 1d8} for each level of the slot above 1st."
 					]
 				}
 			],
@@ -4223,7 +4223,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"The Stonemelder is a 7th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, {@hit 5} to hit with spell attacks). It knows the following sorcerer spells:"
+						"The Stonemelder is a 7th-level spellcaster. Its 的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。 It knows the following sorcerer spells:"
 					],
 					"spells": {
 						"0": {
@@ -4303,7 +4303,7 @@
 				{
 					"ac": 16,
 					"from": [
-						"{@item breastplate|phb}"
+						"{@item 護胸甲|phb}"
 					]
 				}
 			],
@@ -4339,13 +4339,13 @@
 				{
 					"name": "Greatsword",
 					"entries": [
-						"{@atk mw} {@hit 5} 命中, 觸及 5 呎, 單一目標. {@h}10 ({@damage 2d6 + 3}) 揮砍傷害."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。 {@h}10 ({@damage 2d6 + 3}) 劈砍傷害。"
 					]
 				},
 				{
 					"name": "Lance",
 					"entries": [
-						"{@atk mw} {@hit 5} 命中, 觸及 10 呎, 單一目標. {@h}9 ({@damage 1d12 + 3}) 穿刺傷害."
+						"{@atk mw} 命中{@hit 5}，觸及10呎，單一目標。 {@h}9 ({@damage 1d12 + 3}) 穿刺傷害。"
 					]
 				}
 			],
@@ -4362,7 +4362,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"Thurl is a 5th-level spellcaster. His spellcasting ability is Charisma (spell save DC 12, {@hit 4} to hit with spell attacks). Thurl knows the following sorcerer spells:"
+						"Thurl is a 5th-level spellcaster. His 的施法屬性為魅力（法術豁免DC 12，法術攻擊命中{@hit 4}）。 Thurl knows the following sorcerer spells:"
 					],
 					"spells": {
 						"0": {
@@ -4385,14 +4385,14 @@
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell levitate}",
-								"{@spell misty step}"
+								"{@spell 浮空術}",
+								"{@spell 迷蹤步}"
 							]
 						},
 						"3": {
 							"slots": 2,
 							"spells": [
-								"{@spell haste}"
+								"{@spell 加速術}"
 							]
 						}
 					},
@@ -4434,7 +4434,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item 鑲釘皮甲|phb}"
 					]
 				}
 			],
@@ -4459,7 +4459,7 @@
 			"immune": [
 				"fire"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 11,
 			"languages": "Common, Ignan, Infernal",
 			"cr": "9",
@@ -4487,7 +4487,7 @@
 				{
 					"name": "Tinderstrike",
 					"entries": [
-						"{@atk mw,rw} {@hit 9} 命中, 觸及 5 呎. 或射程 20/60 呎, 單一目標. {@h}7 ({@damage 1d4 + 5}) piercing damage plus 7 ({@damage 2d6}) fire damage."
+						"{@atk mw,rw} 命中{@hit 9}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}7 ({@damage 1d4 + 5}) piercing damage plus 7 ({@damage 2d6}) fire damage."
 					]
 				}
 			],
@@ -4500,7 +4500,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"Vanifer is a 10th-level spellcaster. Her spellcasting ability is Charisma (spell save DC 16, {@hit 8} to hit with spell attacks). Vanifer knows the following sorcerer spells:"
+						"Vanifer is a 10th-level spellcaster. 她的施法屬性為魅力（法術豁免DC 16，法術攻擊命中{@hit 8}）。 Vanifer knows the following sorcerer spells:"
 					],
 					"spells": {
 						"0": {
@@ -4510,32 +4510,32 @@
 								"{@spell 交友術}",
 								"{@spell 法師之手}",
 								"{@spell 傳訊術}",
-								"{@spell produce flame}",
-								"{@spell thaumaturgy}"
+								"{@spell 燃火術}",
+								"{@spell 奇術}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
 								"{@spell 燃燒之手}",
-								"{@spell chromatic orb}",
-								"{@spell hellish rebuke}",
+								"{@spell 幻色法球}",
+								"{@spell 煉獄叱喝}",
 								"{@spell 護盾術}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell darkness}",
-								"{@spell detect thoughts}",
-								"{@spell misty step}",
+								"{@spell 黑暗術}",
+								"{@spell 偵測思想}",
+								"{@spell 迷蹤步}",
 								"{@spell 灼熱射線}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell counterspell}",
+								"{@spell 反制法術}",
 								"{@spell 火球術}",
 								"{@spell 催眠圖紋}"
 							]
@@ -4543,13 +4543,13 @@
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell wall of fire}"
+								"{@spell 火牆術}"
 							]
 						},
 						"5": {
 							"slots": 2,
 							"spells": [
-								"{@spell dominate person}"
+								"{@spell 支配人類}"
 							]
 						}
 					},
@@ -4590,7 +4590,7 @@
 				{
 					"ac": 18,
 					"from": [
-						"{@item plate armor|phb}"
+						"{@item 全身板甲|phb}"
 					]
 				}
 			],
@@ -4616,7 +4616,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -4628,15 +4628,15 @@
 				"poisoned",
 				"prone"
 			],
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 10,
 			"languages": "Aquan, one language of its creator's choice",
 			"cr": "7",
 			"trait": [
 				{
-					"name": "Magic Weapons",
+					"name": "魔法武器", "tENG_name": "Magic Weapons",
 					"entries": [
-						"The myrmidon's weapon attacks are magical."
+						"追隨者的武器攻擊視作魔法攻擊。"
 					]
 				}
 			],
@@ -4650,7 +4650,7 @@
 				{
 					"name": "Trident",
 					"entries": [
-						"{@atk mw} {@hit 7} 命中, 觸及 5 呎, 單一目標. {@h}7 ({@damage 1d6 + 4}) 穿刺傷害."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。 {@h}7 ({@damage 1d6 + 4}) 穿刺傷害。"
 					]
 				},
 				{
@@ -4698,7 +4698,7 @@
 				11,
 				{
 					"ac": 16,
-					"condition": "with {@spell barkskin}",
+					"condition": "使用{@spell 樹膚術}時",
 					"braces": true
 				}
 			],
@@ -4740,7 +4740,7 @@
 				{
 					"name": "Wooden Cane",
 					"entries": [
-						"{@atk mw} {@hit 0} to hit ({@hit 4} to hit with shillelagh), reach 5 呎, 單一目標. {@h}1 ({@damage 1d4 - 1}) bludgeoning damage, or 6 ({@damage 1d8 + 2}) bludgeoning damage with shillelagh."
+						"{@atk mw} {@hit 0} to hit ({@hit 4} to hit with shillelagh), reach 5 呎, 單一目標。 {@h}1 ({@damage 1d4 - 1}) bludgeoning damage, or 6 ({@damage 1d8 + 2}) bludgeoning damage with shillelagh."
 					]
 				}
 			],
@@ -4754,29 +4754,29 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell guidance}",
+								"{@spell 指導術}",
 								"{@spell 光亮術}",
 								"{@spell 修復術}",
-								"{@spell shillelagh}",
-								"{@spell thaumaturgy}"
+								"{@spell 橡棍術}",
+								"{@spell 奇術}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell animal friendship}",
+								"{@spell 化獸為友}",
 								"{@spell 治療傷勢}",
-								"{@spell healing word}",
-								"{@spell inflict wounds}",
-								"{@spell speak with animals}"
+								"{@spell 治癒真言}",
+								"{@spell 造成傷勢}",
+								"{@spell 動物交談術}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell barkskin}",
-								"{@spell spike growth}",
-								"{@spell spiritual weapon}"
+								"{@spell 樹膚術}",
+								"{@spell 荊棘叢生}",
+								"{@spell 靈體武器}"
 							]
 						}
 					},
@@ -4816,7 +4816,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item 鑲釘皮甲|phb}"
 					]
 				}
 			],
@@ -4840,13 +4840,13 @@
 				"performance": "+7",
 				"stealth": "+5"
 			},
-			"senses": "darkvision 60 ft.",
+			"senses": "黑暗視覺60呎",
 			"passive": 10,
-			"languages": "Auran, Common, Elvish",
+			"languages": "氣族語、通用語、精靈語",
 			"cr": "3",
 			"trait": [
 				{
-					"name": "Fey Ancestry",
+					"name": "精類血統", "tENG_name": "Fey Ancestry",
 					"entries": [
 						"Windharrow has advantage on saving throws against being {@condition charmed}, and magic can't put him to sleep."
 					]
@@ -4862,7 +4862,7 @@
 				{
 					"name": "Rapier",
 					"entries": [
-						"{@atk mw} {@hit 5} 命中, 觸及 5 ft., one creature. {@h}7 ({@damage 1d8 + 3}) 穿刺傷害."
+						"{@atk mw} 命中{@hit 5}，觸及 5 ft., one creature. {@h}7 ({@damage 1d8 + 3}) 穿刺傷害。"
 					]
 				}
 			],
@@ -4871,21 +4871,21 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"Windharrow is an 8th-level spellcaster. His spellcasting ability is Charisma (spell save DC 13, {@hit 5} to hit with spell attacks). Windharrow knows the following bard spells:"
+						"Windharrow 是8級的施法者。他的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。 Windharrow知曉以下吟遊詩人法術："
 					],
 					"spells": {
 						"0": {
 							"spells": [
 								"{@spell 交友術}",
 								"{@spell 魔法技倆}",
-								"{@spell vicious mockery}"
+								"{@spell 惡毒嘲笑}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell disguise self}",
-								"{@spell dissonant whispers}",
+								"{@spell 易容術}",
+								"{@spell 噪音暗語}",
 								"{@spell 雷鳴波}"
 							]
 						},
@@ -4894,22 +4894,22 @@
 							"spells": [
 								"{@spell 隱形術}",
 								"{@spell 粉碎音波}",
-								"{@spell silence}"
+								"{@spell 沉默術}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell nondetection}",
-								"{@spell sending}",
-								"{@spell tongues}"
+								"{@spell 迴避偵測}",
+								"{@spell 短訊術}",
+								"{@spell 巧舌術}"
 							]
 						},
 						"4": {
 							"slots": 2,
 							"spells": [
-								"{@spell confusion}",
-								"{@spell dimension door}"
+								"{@spell 困惑術}",
+								"{@spell 次元門}"
 							]
 						}
 					},
@@ -4938,7 +4938,7 @@
 			]
 		},
 		{
-			"name": "延希丙","ENG_name": "Yan-C-Bin",
+			"name": "延希賓","ENG_name": "Yan-C-Bin",
 			"size": "H",
 			"type": "elemental",
 			"source": "PotA",
@@ -4950,7 +4950,7 @@
 				{
 					"ac": 22,
 					"from": [
-						"natural armor"
+						"天生護甲"
 					]
 				}
 			],
@@ -4982,7 +4982,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"preNote": "非魔法攻擊所造成的"
 				}
 			],
 			"immune": [
@@ -5001,7 +5001,7 @@
 			],
 			"senses": "blindsight 120 ft.",
 			"passive": 15,
-			"languages": "Auran",
+			"languages": "氣族語",
 			"cr": "18",
 			"trait": [
 				{
@@ -5019,7 +5019,7 @@
 				{
 					"name": "傳奇抗性 (3/日)",
 					"entries": [
-						"豁免失敗時，可以取代為成功的結果。"
+						"若延希賓在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				},
 				{
@@ -5033,13 +5033,13 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"Yan-C-Bin makes two slam attacks."
+						"延希賓進行二次猛擊攻擊。"
 					]
 				},
 				{
-					"name": "Slam",
+					"name": "猛擊", "tENG_name": "Slam",
 					"entries": [
-						"{@atk mw} {@hit 14} 命中, 觸及 10 呎, 單一目標. {@h}20 ({@damage 3d8 + 7}) force damage plus 10 ({@damage 3d6}) lightning damage."
+						"{@atk mw} 命中{@hit 14}，觸及10呎，單一目標。 {@h}20 ({@damage 3d8 + 7}) 力場傷害加 10 ({@damage 3d6})閃電傷害。"
 					]
 				},
 				{
@@ -5088,20 +5088,20 @@
 			"page": 221,
 			"spellcasting": [
 				{
-					"name": "Innate Spellcasting",
+					"name": "天生施法",
 					"headerEntries": [
-						"Yan-C-Bin's innate spellcasting ability is Charisma (spell save DC 20, {@hit 12} to hit with spell attacks). He can innately cast the following spells, requiring no material components:"
+						"Yan-C-Bin's innate 的施法屬性為魅力（法術豁免DC 20，法術攻擊命中{@hit 12}）。 He can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
 						"{@spell 造風術}",
 						"{@spell 隱形術}",
-						"{@spell lightning bolt}"
+						"{@spell 閃電束}"
 					],
 					"daily": {
 						"2e": [
-							"{@spell chain lightning}",
-							"{@spell cloudkill}",
-							"{@spell haste}"
+							"{@spell 連環閃電}",
+							"{@spell 死雲術}",
+							"{@spell 加速術}"
 						]
 					},
 					"ability": "cha"

@@ -6774,12 +6774,17 @@ Parser.monsterTagKeyToDisplay["simic hybrid"] = "析米克混合體";
 Parser.monsterTagKeyToDisplay["firenewt"] = "火蠑螈";
 Parser.monsterTagKeyToDisplay["grung"] = "格龍蛙人";
 Parser.monsterTagKeyToDisplay["xvart"] = "法特怪";
+Parser.monsterTagKeyToDisplay["shield dwarf"] = "盾矮人";
 Parser.monsterTagKeyToDisplay["cloud giant"] = "雲巨人";
 Parser.monsterTagKeyToDisplay["fire giant"] = "火巨人";
 Parser.monsterTagKeyToDisplay["frost giant"] = "霜巨人";
 Parser.monsterTagKeyToDisplay["hill giant"] = "山丘巨人";
 Parser.monsterTagKeyToDisplay["stone giant"] = "石巨人";
 Parser.monsterTagKeyToDisplay["storm giant"] = "風暴巨人";
+Parser.monsterTagKeyToDisplay["earth genasi"] = "土元素裔";
+Parser.monsterTagKeyToDisplay["fire genasi"] = "火元素裔";
+Parser.monsterTagKeyToDisplay["water genasi"] = "水元素裔";
+Parser.monsterTagKeyToDisplay["air genasi"] = "氣元素裔";
 Parser.MonsterTagToDisplay = function(e){
 	var race_e = Parser.RaceToDisplay(e)
 	return Parser.translateKeyInMapToDisplay(Parser.monsterTagKeyToDisplay, race_e);

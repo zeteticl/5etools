@@ -300,7 +300,7 @@ const BookUtil = {
 
 				const showPrev = ~chapter && chapter > 0;
 				(BookUtil.curRender.controls.$btnsPrv = BookUtil.curRender.controls.$btnsPrv || [])
-					.push($(`<button class="btn btn-xs btn-default bk__nav-head-foot-item"><span class="glyphicon glyphicon-chevron-left"></span>Previous</button>`)
+					.push($(`<button class="btn btn-xs btn-default bk__nav-head-foot-item"><span class="glyphicon glyphicon-chevron-left"></span>上一頁</button>`)
 						.click(() => goToPage(-1))
 						.toggle(showPrev)
 						.appendTo($wrpControls));
@@ -313,11 +313,11 @@ const BookUtil = {
 					$(`<button class="btn btn-xs btn-default ${~BookUtil.curRender.chapter ? "" : "active"}" title="Warning: Slow">View Entire ${BookUtil.contentType.uppercaseFirst()}</button>`).click(() => {
 						window.location.href = (~BookUtil.curRender.chapter ? BookUtil.thisContents.find(`.bk__contents_show_all`) : BookUtil.thisContents.find(`.bk__contents_header_link`)).attr("href");
 					}).appendTo($wrpControls);
-				} else $(`<button class="btn btn-xs btn-default">Back to Top</button>`).click(() => MiscUtil.scrollPageTop()).appendTo($wrpControls);
+				} else $(`<button class="btn btn-xs btn-default">回到最頂</button>`).click(() => MiscUtil.scrollPageTop()).appendTo($wrpControls);
 
 				const showNxt = ~chapter && chapter < data.length - 1;
 				(BookUtil.curRender.controls.$btnsNxt = BookUtil.curRender.controls.$btnsNxt || [])
-					.push($(`<button class="btn btn-xs btn-default bk__nav-head-foot-item">Next<span class="glyphicon glyphicon-chevron-right"></span></button>`)
+					.push($(`<button class="btn btn-xs btn-default bk__nav-head-foot-item">下一頁<span class="glyphicon glyphicon-chevron-right"></span></button>`)
 						.click(() => goToPage(1))
 						.toggle(showNxt)
 						.appendTo($wrpControls));
