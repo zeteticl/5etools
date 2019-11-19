@@ -70,7 +70,7 @@
 			],
 			"action": [
 				{
-					"name": "風向矛標", "tENG_name": "Windvane",
+					"name": "風標", "tENG_name": "Windvane",
 					"entries": [
 						"{@atk mw,rw} 命中{@hit 9}，觸及5呎 或 射程20/60呎，單一目標。{@h}9 ({@damage 1d6 + 6})穿刺傷害，或若雙手使用以進行一次近戰攻擊時則造成 10 ({@damage 1d8 + 6})穿刺傷害，再額外加上 3 ({@damage 1d6})閃電傷害。"
 					]
@@ -411,7 +411,7 @@
 			]
 		},
 		{
-			"name": "黑土守衛","ENG_name": "Black Earth Guard",
+			"name": "黑土守衛", "ENG_name": "Black Earth Guard",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -486,7 +486,7 @@
 			]
 		},
 		{
-			"name": "黑土祭司","ENG_name": "Black Earth Priest",
+			"name": "黑土祭司", "ENG_name": "Black Earth Priest",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -607,7 +607,7 @@
 			]
 		},
 		{
-			"name": "穴居鯊衛","ENG_name": "Burrowshark",
+			"name": "穴居鯊衛", "ENG_name": "Burrowshark",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -692,7 +692,7 @@
 			]
 		},
 		{
-			"name": "粉碎浪潮祭司","ENG_name": "Crushing Wave Priest",
+			"name": "粉碎浪潮祭司", "ENG_name": "Crushing Wave Priest",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -797,7 +797,7 @@
 			]
 		},
 		{
-			"name": "粉碎浪潮掠奪者","ENG_name": "Crushing Wave Reaver",
+			"name": "粉碎浪潮掠奪者", "ENG_name": "Crushing Wave Reaver",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -862,7 +862,7 @@
 			]
 		},
 		{
-			"name": "暗潮騎士","ENG_name": "Dark Tide Knight",
+			"name": "暗潮騎士", "ENG_name": "Dark Tide Knight",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -900,15 +900,15 @@
 			"cr": "3",
 			"trait": [
 				{
-					"name": "Bonded Mount",
+					"name": "聯結坐騎","tENG_name": "Bonded Mount",
 					"entries": [
-						"The knight is magically bound to a beast with an innate swimming speed trained to serve as its mount. While mounted on this beast, the knight gains the beast's senses and ability to breathe underwater. The bonded mount obeys the knight's commands. If its mount dies, the knight can train a new beast to serve as its bonded mount, a process requiring a month."
+						"暗潮騎士藉著魔法與一個具有天生游泳速度，且受過訓練的野獸聯繫在一起，並將其做為自己的坐騎。當騎乘於該野獸時，暗潮騎士將共享該野獸的感官，且獲得在水下呼吸的能力。這個被聯繫的坐騎服從暗潮騎士的命令。若它的坐騎死亡，暗潮騎士可以訓練一只新的野獸做為其相繫的坐騎，這個過程將花費一個月的時間。"
 					]
 				},
 				{
-					"name": "Sneak Attack",
+					"name": "偷襲","tENG_name": "Sneak Attack",
 					"entries": [
-						"The knight deals an extra 7 ({@dice 2d6}) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the knight that isn't {@condition incapacitated} and the knight doesn't have disadvantage on the attack roll."
+						"當暗潮騎士以武器攻擊命中一個目標時，若該攻擊檢定具有優勢，或者該攻擊檢定沒有劣勢且暗潮騎士有一個未{@condition 無力}的隊友距離目標5呎內，則暗潮騎士造成額外的7 ({@dice 2d6})傷害。"
 					]
 				}
 			],
@@ -916,7 +916,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"暗潮騎士進行二次短劍攻擊."
+						"暗潮騎士進行二次短劍攻擊。"
 					]
 				},
 				{
@@ -934,9 +934,9 @@
 			],
 			"reaction": [
 				{
-					"name": "Uncanny Dodge",
+					"name": "直覺閃避","tENG_name": "Uncanny Dodge",
 					"entries": [
-						"When an attacker the knight can see hits it with an attack, the knight can halve the damage against it."
+						"當一個暗潮騎士所能看見的攻擊者以一次攻擊命中它時，暗潮騎士可以將該攻擊所造成的傷害減半。"
 					]
 				}
 			],
@@ -955,7 +955,7 @@
 			]
 		},
 		{
-			"name": "德蘭尼．裂盔","ENG_name": "Drannin Splithelm",
+			"name": "德蘭尼．裂盔", "ENG_name": "Drannin Splithelm",
 			"isNpc": true,
 			"size": "M",
 			"type": {
@@ -1004,39 +1004,39 @@
 			"cr": "7",
 			"trait": [
 				{
-					"name": "Action Surge (Recharges after a Short or Long Rest)",
+					"name": "動作如潮 (短休或長休之後充能)", "tENG_name": "Action Surge (Recharges after a Short or Long Rest)",
 					"entries": [
-						"Drannin takes an additional action on his turn."
+						"德蘭尼在他的回合採取一個額外的動作。"
 					]
 				},
 				{
-					"name": "Brute",
+					"name": "殘暴", "tENG_name": "Brute",
 					"entries": [
-						"A melee weapon deals one extra die of its damage when Drannin hits with it (included in the attack)."
+						"德蘭尼在用一把近戰武器命中目標時會造成一顆額外的傷害骰（已包含在攻擊條目）。"
 					]
 				},
 				{
-					"name": "Dwarven Resilience",
+					"name": "矮人韌性", "tENG_name": "Dwarven Resilience",
 					"entries": [
-						"Drannin has advantage on saving throws against poison."
+						"德蘭尼在對抗毒素的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Indomitable (Recharges after a Short or Long Rest)",
+					"name": "不屈 (短休或長休之後充能)", "tENG_name": "Indomitable (Recharges after a Short or Long Rest)",
 					"entries": [
-						"Drannin can reroll a saving throw that he fails. He must use the new roll."
+						"德蘭尼可以重骰他失敗的豁免檢定。若他這麼做，則他必須使用新的擲骰結果。"
 					]
 				},
 				{
-					"name": "Second Wind (Recharges after a Short or Long Rest)",
+					"name": "回氣 (短休或長休之後充能)", "tENG_name": "Second Wind (Recharges after a Short or Long Rest)",
 					"entries": [
-						"Drannin can use a bonus action to regain 16 ({@dice 1d10 + 11}) hit points."
+						"德蘭尼能夠以一個附贈動作回復16 ({@dice 1d10 + 11})點生命值。"
 					]
 				},
 				{
-					"name": "Special Equipment",
+					"name": "特殊裝備", "tENG_name": "Special Equipment",
 					"entries": [
-						"Drannin wears a control amulet for his {@creature shield guardian} (see the Monster Manual) and a {@item ring of cold resistance}. He also carries a {@item potion of frost giant strength}."
+						"德蘭尼穿戴了一個用以控制他{@creature 構裝盾衛}的控制護符，以及一枚{@item 寒冰抗性戒指}。他同時攜帶了一瓶{@item 霜巨人之力藥水}。"
 					]
 				}
 			],
@@ -1044,7 +1044,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"Drannin makes three attacks with his greataxe."
+						"德蘭尼進行三次巨斧攻擊。"
 					]
 				},
 				{
@@ -1073,7 +1073,7 @@
 			]
 		},
 		{
-			"name": "土元素追隨者","ENG_name": "Earth Elemental Myrmidon",
+			"name": "土元素追隨者", "ENG_name": "Earth Elemental Myrmidon",
 			"size": "M",
 			"type": "elemental",
 			"source": "PotA",
@@ -1146,9 +1146,9 @@
 					]
 				},
 				{
-					"name": "Thunderous Strike {@recharge}",
+					"name": "雷霆猛擊{@recharge}", "tENG_name": "Thunderous Strike {@recharge}",
 					"entries": [
-						"The myrmidon makes one maul attack. If the attack hits, it deals an extra 16 ({@damage 3d10}) thunder damage, and the target must succeed on a DC 14 Strength saving throw or be knocked {@condition prone}."
+						"追隨者進行一次巨鎚攻擊。若該攻擊命中，則它將額外造成 16 ({@damage 3d10})雷鳴傷害，且目標必須成功通過一次DC 14的力量豁免，否則將被擊倒{@condition 伏地}。"
 					]
 				}
 			],
@@ -1172,7 +1172,7 @@
 			]
 		},
 		{
-			"name": "艾利札．乾壺","tENG_name": "Elizar Dryflagon",
+			"name": "艾利札．乾壺", "ENG_name": "Elizar Dryflagon",
 			"isNpc": true,
 			"size": "M",
 			"type": {
@@ -1190,7 +1190,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"{@item hide armor|phb}"
+						"{@item 生皮甲|phb}"
 					]
 				}
 			],
@@ -1212,19 +1212,19 @@
 				"deception": "+3"
 			},
 			"passive": 14,
-			"languages": "Common, Druidic",
+			"languages": "通用語、德魯伊語",
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Summon Mephits (Recharges after a Long Rest)",
+					"name": "召喚魔蝠 (長休之後充能)", "tENG_name": "Summon Mephits (Recharges after a Long Rest)",
 					"entries": [
-						"By puffing on his pipe, Elizar can use an action to cast {@spell conjure minor elementals}. If he does so, he summons four smoke mephits."
+						"藉由從煙斗噴吐煙霧，艾利札可以使用一個動作來施放{@spell 召喚次級元素生物}。若他這麼做，則他將召喚出四個{@creature 煙魔蝠}。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Dagger +1",
+					"name": "匕首+1",
 					"entries": [
 						"{@atk mw,rw} 命中{@hit 6}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}5 ({@damage 1d4 + 3}) 穿刺傷害。"
 					]
@@ -1235,7 +1235,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"Elizar is a 7th-level spellcaster. His spellcasting ability is Wisdom (spell save DC 15, {@hit 7} to hit with spell attacks). Elizar has the following druid spells prepared:"
+						"艾利札是7級的施法者。他的施法屬性為睿知（法術豁免DC 15，法術攻擊命中{@hit 7}）。艾利札已準備了以下德魯伊法術："
 					],
 					"spells": {
 						"0": {
@@ -1293,7 +1293,7 @@
 			]
 		},
 		{
-			"name": "永焰守護者","ENG_name": "Eternal Flame Guardian",
+			"name": "永焰守護者", "ENG_name": "Eternal Flame Guardian",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -1316,7 +1316,7 @@
 				},
 				{
 					"ac": 15,
-					"condition": "while using a crossbow"
+					"condition": "(使用弩時)"
 				}
 			],
 			"hp": {
@@ -1344,9 +1344,9 @@
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Flaming Weapon (Recharges after a Short or Long Rest)",
+					"name": "烈焰武器 (短休或長休之後充能)", "tENG_name": "Flaming Weapon (Recharges after a Short or Long Rest)",
 					"entries": [
-						"As a bonus action, the guard can wreath one melee weapon it is wielding in flame. The guard is unharmed by this fire, which lasts until the end of the guard's next turn. While wreathed in flame, the weapon deals an extra 3 ({@damage 1d6}) fire damage on a hit."
+						"以一個附贈動作，永焰守護者可以使它所持握的一把近戰武器被烈焰纏繞。永焰守護者並不會被這陣火焰所傷害，且這陣烈焰將持續直到該永焰守護者的下個回合結束。當被烈焰纏繞時，這把武器將在命中時額外造成 3 ({@damage 1d6})火焰傷害。"
 					]
 				}
 			],
@@ -1354,7 +1354,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"可以進行兩次近戰攻擊"
+						"永焰守護者進行二次近戰攻擊。"
 					]
 				},
 				{
@@ -1384,7 +1384,7 @@
 			]
 		},
 		{
-			"name": "永焰祭司","ENG_name": "Eternal Flame Priest",
+			"name": "永焰祭司", "ENG_name": "Eternal Flame Priest",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -1442,7 +1442,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"The priest is a 5th-level spellcaster. Its 的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。 It knows the following sorcerer spells:"
+						"祭司是5級的施法者。它的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。它知曉以下術士法術："
 					],
 					"spells": {
 						"0": {
@@ -1491,7 +1491,7 @@
 			]
 		},
 		{
-			"name": "深測者","ENG_name": "Fathomer",
+			"name": "深測者", "ENG_name": "Fathomer",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -1632,7 +1632,7 @@
 				{
 					"ac": 16,
 					"from": [
-						"{@item scale mail|phb}"
+						"{@item 鱗甲|phb}"
 					]
 				}
 			],
@@ -1654,25 +1654,25 @@
 				"history": "+2"
 			},
 			"passive": 10,
-			"languages": "Auran, Common",
+			"languages": "氣族語、通用語",
 			"cr": "1",
 			"action": [
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"可以進行兩次近戰攻擊"
+						"羽風騎士進行二次近戰攻擊。"
 					]
 				},
 				{
 					"name": "長劍",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。 {@h}6 ({@damage 1d8 + 2}) slashing damage, or 7 ({@damage 1d10 + 2}) slashing damage if used with two hands."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。 {@h}6 ({@damage 1d8 + 2})劈砍傷害，或若以雙手使用時則造成 7 ({@damage 1d10 + 2})劈砍傷害。"
 					]
 				},
 				{
 					"name": "矛",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}5 ({@damage 1d6 + 2}) piercing damage, or 6 ({@damage 1d8 + 2}) piercing damage if used with two hands to make a melee attack."
+						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}5 ({@damage 1d6 + 2})穿刺傷害，或若雙手使用以進行一次近戰攻擊時則造成 6 ({@damage 1d8 + 2})穿刺傷害。"
 					]
 				}
 			],
@@ -1681,7 +1681,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"The knight is a 1st-level spellcaster. Its 的施法屬性為魅力（法術豁免DC 12，法術攻擊命中{@hit 4}）。 It knows the following sorcerer spell:"
+						"羽風騎士是1級的施法者。它的施法屬性為魅力（法術豁免DC 12，法術攻擊命中{@hit 4}）。它知曉以下術士法術："
 					],
 					"spells": {
 						"0": {
@@ -1719,7 +1719,7 @@
 			]
 		},
 		{
-			"name": "火元素追隨者","ENG_name": "Fire Elemental Myrmidon",
+			"name": "火元素追隨者", "ENG_name": "Fire Elemental Myrmidon",
 			"size": "M",
 			"type": "elemental",
 			"source": "PotA",
@@ -1769,13 +1769,13 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 10,
-			"languages": "Ignan, one language of its creator's choice",
+			"languages": "火族語、一種它創造者所選擇的語言",
 			"cr": "7",
 			"trait": [
 				{
-					"name": "Illumination",
+					"name": "照明", "tENG_name": "Illumination",
 					"entries": [
-						"The myrmidon sheds bright light in a 20-foot radius and dim light in a 40-foot radius."
+						"追隨者會散發出20呎半徑的明亮光照和40呎的微光光照。"
 					]
 				},
 				{
@@ -1785,9 +1785,9 @@
 					]
 				},
 				{
-					"name": "Water Susceptibility",
+					"name": "水體敏感", "tENG_name": "Water Susceptibility",
 					"entries": [
-						"For every 5 feet the myrmidon moves in water, it takes 2 ({@damage 1d4}) cold damage."
+						"追隨者每在水中移動5呎，它就會受到 2 ({@damage 1d4})寒冰傷害。"
 					]
 				}
 			],
@@ -1805,9 +1805,9 @@
 					]
 				},
 				{
-					"name": "Fiery Strikes {@recharge}",
+					"name": "烈焰猛擊{@recharge}", "tENG_name": "Fiery Strikes {@recharge}",
 					"entries": [
-						"The myrmidon uses Multiattack. Each attack that hits deals an extra 5 ({@damage 1d10}) fire damage."
+						"追隨者使用多重攻擊。每次命中的攻擊都將額外造成 5 ({@damage 1d10})火焰傷害。"
 					]
 				}
 			],
@@ -1833,7 +1833,7 @@
 			]
 		},
 		{
-			"name": "怒火者","ENG_name": "Flamewrath",
+			"name": "怒火者", "ENG_name": "Flamewrath",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -1879,9 +1879,9 @@
 			"cr": "6",
 			"trait": [
 				{
-					"name": "Wreathed in Flame",
+					"name": "烈焰纏身", "tENG_name": "Wreathed in Flame",
 					"entries": [
-						"For the flamewrath, the warm version of the {@spell 火焰護盾} spell has a duration of \"until dispelled.\" The fire shield burns for 10 minutes after the flamewrath dies, consuming its body."
+						"對於怒火者而言，溫暖版本的{@spell 火焰護盾}法術的持續時間變更為「直到解消」。在怒火者死亡之後，該火焰護盾仍會持續燃燒長達10分鐘，將其軀體焚燒殆盡。"
 					]
 				}
 			],
@@ -1898,7 +1898,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"The flamewrath is a 7th-level spellcaster. Its 的施法屬性為魅力（法術豁免DC 14，法術攻擊命中{@hit 6}）。 It knows the following sorcerer spells:"
+						"怒火者是7級的施法者。它的施法屬性為魅力（法術豁免DC 14，法術攻擊命中{@hit 6}）。它知曉以下術士法術："
 					],
 					"spells": {
 						"0": {
@@ -1935,7 +1935,7 @@
 						"4": {
 							"slots": 1,
 							"spells": [
-								"{@spell 火焰護盾} (see Wreathed in Flame)"
+								"{@spell 火焰護盾} (參見烈焰纏身)"
 							]
 						}
 					},
@@ -1954,7 +1954,7 @@
 			]
 		},
 		{
-			"name": "加爾．碎骨","ENG_name": "Gar Shatterkeel",
+			"name": "加爾．碎骨", "ENG_name": "Gar Shatterkeel",
 			"isNpc": true,
 			"size": "M",
 			"type": {
@@ -2002,27 +2002,27 @@
 			"cr": "9",
 			"trait": [
 				{
-					"name": "Amphibious",
+					"name": "兩棲", "tENG_name": "Amphibious",
 					"entries": [
-						"Gar can breathe air and water."
+						"加爾可以在空氣和水中呼吸。"
 					]
 				},
 				{
 					"name": "傳奇抗性 (2/日)",
 					"entries": [
-						"豁免失敗時，可以取代為成功的結果。"
+						"若加爾在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				},
 				{
-					"name": "Water Walk",
+					"name": "水面行走", "tENG_name": "Water Walk",
 					"entries": [
-						"Gar can stand and move on liquid surfaces as if they were solid ground."
+						"加爾可以在液態表面上站立並行走，就如同它們是固體表面一樣。"
 					]
 				},
 				{
-					"name": "Watery Fall",
+					"name": "化水落", "tENG_name": "Watery Fall",
 					"entries": [
-						"When Gar drops to 0 hit points, his body collapses into a pool of inky water that rapidly disperses. Anything he was wearing or carrying is left behind."
+						"當加爾的生命值歸零時，他的身體將潰散成一池墨水，並迅速蒸發消散。任何他所穿戴或攜帶的東西都將被留在原地。"
 					]
 				}
 			],
@@ -2030,19 +2030,19 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"Gar makes two melee attacks, one with his claw and one with Drown."
+						"加爾進行二次近戰攻擊，一次爪抓、一次使用魔法武器{@item 水溺|pota}。"
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "鉗擊", "tENG_name": "Claw",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。 {@h}9 ({@damage 2d6 + 2}) bludgeoning damage, and the target is {@condition grappled} (escape DC 13). Until the grapple ends, Gar can't attack other creatures with his claw."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。 {@h}9 ({@damage 2d6 + 2})鈍擊傷害，且目標{@condition 被擒}(逃脫DC 13)。直到擒抱結束前，加爾不能對另一個生物使用鉗擊。"
 					]
 				},
 				{
-					"name": "Drown",
+					"name": "水溺", "tENG_name": "Drown",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 7}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}6 ({@damage 1d6 + 3}) piercing damage plus 4 ({@damage 1d8}) cold damage."
+						"{@atk mw,rw} 命中{@hit 7}，觸及5呎 或射程20/60呎, 單一目標。 {@h}6 ({@damage 1d6 + 3})穿刺傷害加 4 ({@damage 1d8})寒冰傷害。"
 					]
 				}
 			],
@@ -2055,7 +2055,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"Gar is a 9th-level spellcaster. His spellcasting ability is Wisdom (spell save DC 16, {@hit 8} to hit with spell attacks). He has the following druid spells prepared:"
+						"加爾是一名9級的施法者。他的施法屬性為睿知（法術豁免DC 16，法術攻擊命中{@hit 8}）。他已準備了以下德魯伊法術："
 					],
 					"spells": {
 						"0": {
@@ -2128,7 +2128,7 @@
 			]
 		},
 		{
-			"name": "葛哈德","ENG_name": "Ghald",
+			"name": "葛哈德", "ENG_name": "Ghald",
 			"isNpc": true,
 			"size": "L",
 			"type": {
@@ -2176,7 +2176,7 @@
 			},
 			"senses": "黑暗視覺120呎",
 			"passive": 17,
-			"languages": "Common, Sahuagin",
+			"languages": "通用語、沙華魚人語",
 			"cr": "7",
 			"trait": [
 				{
@@ -2208,19 +2208,19 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"Ghald makes three attacks, one with his bite and two with his shortswords."
+						"葛哈德進行三次攻擊，一次啃咬，二次短劍。"
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬",
 					"entries": [
-						"{@atk mw} 命中{@hit 7}，觸及 5 ft., one creature. {@h}9 ({@damage 2d4 + 4}) 穿刺傷害。"
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一生物。 {@h}9 ({@damage 2d4 + 4}) 穿刺傷害。"
 					]
 				},
 				{
 					"name": "短劍",
 					"entries": [
-						"{@atk mw} 命中{@hit 7}，觸及 5 ft., one creature. {@h}11 ({@damage 2d6 + 4}) 穿刺傷害。"
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一生物。  {@h}11 ({@damage 2d6 + 4}) 穿刺傷害。"
 					]
 				},
 				{
@@ -2250,7 +2250,7 @@
 			]
 		},
 		{
-			"name": "海倫芮","ENG_name": "Hellenrae",
+			"name": "海倫芮", "ENG_name": "Hellenrae",
 			"isNpc": true,
 			"size": "M",
 			"type": {
@@ -2361,7 +2361,7 @@
 			]
 		},
 		{
-			"name": "嘯怨新晉者","ENG_name": "Howling Hatred Initiate",
+			"name": "嘯怨新晉者", "ENG_name": "Howling Hatred Initiate",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -2405,15 +2405,15 @@
 			"cr": "1/8",
 			"trait": [
 				{
-					"name": "Guiding Wind (Recharges after a Short or Long Rest)",
+					"name": "導引之風 (短休或長休之後充能)", "tENG_name": "Guiding Wind (Recharges after a Short or Long Rest)",
 					"entries": [
-						"As a bonus action, the initiate gains advantage on the next ranged attack roll it makes before the end of its next turn."
+						"以一個附贈動作，在它的下個回合結束，嘯怨新晉者將在它的下一次遠程攻擊檢定中獲得優勢。"
 					]
 				},
 				{
-					"name": "Hold Breath",
+					"name": "屏息", "tENG_name": "Hold Breath",
 					"entries": [
-						"The initiate can hold its breath for 30 minutes."
+						"嘯怨新晉者可以屏住它的呼吸長達30分鐘。"
 					]
 				}
 			],
@@ -2437,7 +2437,7 @@
 			]
 		},
 		{
-			"name": "嘯恨祭司","ENG_name": "Howling Hatred Priest",
+			"name": "嘯怨祭司", "ENG_name": "Howling Hatred Priest",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -2477,13 +2477,13 @@
 				"religion": "+4"
 			},
 			"passive": 10,
-			"languages": "Auran, Common",
+			"languages": "氣族語、通用語",
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Hold Breath",
+					"name": "屏息", "tENG_name": "Hold Breath",
 					"entries": [
-						"The priest can hold its breath for 30 minutes."
+						"嘯怨祭司可以屏住它的呼吸長達30分鐘。"
 					]
 				}
 			],
@@ -2491,7 +2491,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"可以進行兩次近戰攻擊或是兩次遠程攻擊."
+						"嘯怨祭司進行二次近戰攻擊、或是二次遠程攻擊."
 					]
 				},
 				{
@@ -2512,7 +2512,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"The priest is a 5th-level spellcaster. Its 的施法屬性為魅力（法術豁免DC 12，法術攻擊命中{@hit 4}）。 It knows the following sorcerer spells:"
+						"嘯怨祭司是5級的施法者。它的施法屬性為魅力（法術豁免DC 12，法術攻擊命中{@hit 4}）。它知曉以下術士法術："
 					],
 					"spells": {
 						"0": {
@@ -2568,7 +2568,7 @@
 			]
 		},
 		{
-			"name": "颶風","ENG_name": "Windvane",
+			"name": "颶風", "ENG_name": "Windvane",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -2601,7 +2601,7 @@
 				"acrobatics": "+5"
 			},
 			"passive": 11,
-			"languages": "Auran, Common",
+			"languages": "氣族語、通用語",
 			"cr": "2",
 			"trait": [
 				{
@@ -2644,7 +2644,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"The hurricane is a 3rd-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 11, {@hit 3} to hit with spell attacks). It knows the following sorcerer spells:"
+						"The hurricane is a 3rd-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 11, {@hit 3} to hit with spell attacks).它知曉以下術士法術："
 					],
 					"spells": {
 						"0": {
@@ -2765,7 +2765,7 @@
 					]
 				},
 				{
-					"name": "Illumination",
+					"name": "照明", "tENG_name": "Illumination",
 					"entries": [
 						"Imix sheds bright light in a 60-foot radius and dim light for an additional 60 feet."
 					]
@@ -3502,7 +3502,7 @@
 			]
 		},
 		{
-			"name": "獨眼戰慄","ENG_name": "One-Eyed Shiver",
+			"name": "獨眼顫慄","ENG_name": "One-Eyed Shiver",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -3574,7 +3574,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"The one-eyed shiver is a 5th-level spellcaster. Its 的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。 It knows the following sorcerer spells:"
+						"The one-eyed shiver is a 5th-level spellcaster. Its 的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。它知曉以下術士法術："
 					],
 					"spells": {
 						"0": {
@@ -3969,7 +3969,7 @@
 			"cr": "4",
 			"trait": [
 				{
-					"name": "Amphibious",
+					"name": "兩棲", "tENG_name": "Amphibious",
 					"entries": [
 						"Shoalar can breathe air and water."
 					]
@@ -4095,7 +4095,7 @@
 				"persuasion": "+5"
 			},
 			"passive": 10,
-			"languages": "Auran, Common",
+			"languages": "氣族語、通用語",
 			"cr": "3",
 			"action": [
 				{
@@ -4110,7 +4110,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"The Skyweaver is a 6th-level spellcaster. Its 的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。 It knows the following sorcerer spells:"
+						"The Skyweaver is a 6th-level spellcaster. Its 的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。它知曉以下術士法術："
 					],
 					"spells": {
 						"0": {
@@ -4223,7 +4223,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"The Stonemelder is a 7th-level spellcaster. Its 的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。 It knows the following sorcerer spells:"
+						"The Stonemelder is a 7th-level spellcaster. Its 的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。它知曉以下術士法術："
 					],
 					"spells": {
 						"0": {
@@ -4327,7 +4327,7 @@
 				"persuasion": "+4"
 			},
 			"passive": 10,
-			"languages": "Auran, Common",
+			"languages": "氣族語、通用語",
 			"cr": "3",
 			"action": [
 				{
@@ -4416,7 +4416,7 @@
 			]
 		},
 		{
-			"name": "凡妮弗","ENG_name": "Vanifer",
+			"name": "凡妮弗", "ENG_name": "Vanifer",
 			"isNpc": true,
 			"size": "M",
 			"type": {
@@ -4461,19 +4461,19 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 11,
-			"languages": "Common, Ignan, Infernal",
+			"languages": "通用語、火族語、煉獄語",
 			"cr": "9",
 			"trait": [
 				{
-					"name": "Funeral Pyre",
+					"name": "火葬", "tENG_name": "Funeral Pyre",
 					"entries": [
-						"When Vanifer drops to 0 hit points, her body is consumed in a flash of fire and smoke. Anything she was wearing or carrying is left behind among ashes."
+						"當凡妮弗的生命值歸零時，她的身體將在瞬間被火焰和煙霧給吞噬殆盡。任何她所穿戴或攜帶的東西都將被留在原地。"
 					]
 				},
 				{
 					"name": "傳奇抗性 (2/日)",
 					"entries": [
-						"If Vanifer fails a saving throw, she can choose to succeed instead."
+						"若凡妮弗在一次豁免檢定中失敗，她可以選擇改為使其成功。"
 					]
 				}
 			],
@@ -4481,13 +4481,13 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"Vanifer makes two attacks."
+						"凡妮弗進行二次攻擊。"
 					]
 				},
 				{
-					"name": "Tinderstrike",
+					"name": "焰襲",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 9}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}7 ({@damage 1d4 + 5}) piercing damage plus 7 ({@damage 2d6}) fire damage."
+						"{@atk mw,rw} 命中{@hit 9}，觸及5呎 或 射程20/60呎, 單一目標。 {@h}7 ({@damage 1d4 + 5})穿刺傷害加 7 ({@damage 2d6})火焰傷害。"
 					]
 				}
 			],
@@ -4500,7 +4500,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"Vanifer is a 10th-level spellcaster. 她的施法屬性為魅力（法術豁免DC 16，法術攻擊命中{@hit 8}）。 Vanifer knows the following sorcerer spells:"
+						"凡妮弗是10級的施法者。她的施法屬性為魅力（法術豁免DC 16，法術攻擊命中{@hit 8}）。凡妮弗知曉以下術士法術："
 					],
 					"spells": {
 						"0": {
@@ -4579,7 +4579,7 @@
 			]
 		},
 		{
-			"name": "水元素追隨者","ENG_name": "Water Elemental Myrmidon",
+			"name": "水元素追隨者", "ENG_name": "Water Elemental Myrmidon",
 			"size": "M",
 			"type": "elemental",
 			"source": "PotA",
@@ -4630,7 +4630,7 @@
 			],
 			"senses": "黑暗視覺60呎",
 			"passive": 10,
-			"languages": "Aquan, one language of its creator's choice",
+			"languages": "水族語、一種它創造者所選擇的語言",
 			"cr": "7",
 			"trait": [
 				{
@@ -4644,19 +4644,19 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"The myrmidon makes three trident attacks."
+						"追隨者進行三次三叉戟攻擊。"
 					]
 				},
 				{
-					"name": "Trident",
+					"name": "三叉戟",
 					"entries": [
 						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。 {@h}7 ({@damage 1d6 + 4}) 穿刺傷害。"
 					]
 				},
 				{
-					"name": "Freezing Strikes {@recharge}",
+					"name": "寒凍猛擊{@recharge}", "tENG_name": "Freezing Strikes {@recharge}",
 					"entries": [
-						"The myrmidon uses Multiattack. Each attack that hits deals an extra 5 ({@damage 1d10}) cold damage, and the target's speed is reduced by 10 feet until the end of the myrmidon's next turn."
+						"追隨者使用多重攻擊。每次命中的攻擊都將額外造成 5 ({@damage 1d10})寒冰傷害，且目標的速度將被降低10呎，持續直到該追隨者的下個回合結束。"
 					]
 				}
 			],
@@ -4680,7 +4680,7 @@
 			]
 		},
 		{
-			"name": "威甘．怒蜂","ENG_name": "Wiggan Nettlebee",
+			"name": "威甘．怒蜂", "ENG_name": "Wiggan Nettlebee",
 			"isNpc": true,
 			"size": "S",
 			"type": {
@@ -4720,13 +4720,13 @@
 				"insight": "+4"
 			},
 			"passive": 12,
-			"languages": "Common, Halfling",
+			"languages": "通用語、半身人語",
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Brave Devotion",
+					"name": "英勇奉獻", "tENG_name": "Brave Devotion",
 					"entries": [
-						"Wiggan has advantage on saving throws against being {@condition charmed} or {@condition frightened}."
+						"威甘在對抗{@condition 魅惑}和{@condition 恐懼}的豁免檢定中具有優勢。"
 					]
 				}
 			],
@@ -4734,13 +4734,13 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"Wiggan makes two attacks with his wooden cane."
+						"威甘使用他的木拐杖進行二次攻擊。"
 					]
 				},
 				{
-					"name": "Wooden Cane",
+					"name": "木拐杖", "tENG_name": "Wooden Cane",
 					"entries": [
-						"{@atk mw} {@hit 0} to hit ({@hit 4} to hit with shillelagh), reach 5 呎, 單一目標。 {@h}1 ({@damage 1d4 - 1}) bludgeoning damage, or 6 ({@damage 1d8 + 2}) bludgeoning damage with shillelagh."
+						"{@atk mw} 命中{@hit 0} ({@spell 橡棍術}時命中{@hit 4})，觸及5呎，單一目標。 {@h}1 ({@damage 1d4 - 1})鈍擊傷害，或若使用橡棍術時 6 ({@damage 1d8 + 2}) 鈍擊傷害。"
 					]
 				}
 			],
@@ -4749,7 +4749,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"Wiggan is a 4th-level spellcaster. His spellcasting ability is Wisdom (spell save DC 12, {@hit 4} to hit with spell attacks). He has the following cleric spells prepared:"
+						"威甘是4級的施法者。他的施法屬性為睿知（法術豁免DC 12，法術攻擊命中{@hit 4}）。他已準備了以下牧師法術："
 					],
 					"spells": {
 						"0": {
@@ -4848,7 +4848,7 @@
 				{
 					"name": "精類血統", "tENG_name": "Fey Ancestry",
 					"entries": [
-						"Windharrow has advantage on saving throws against being {@condition charmed}, and magic can't put him to sleep."
+						"溫德哈羅在對抗{@condition 魅惑}的豁免檢定中具有優勢，且魔法無法使她入睡。"
 					]
 				}
 			],
@@ -4856,13 +4856,13 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"可以進行兩次近戰攻擊"
+						"溫德哈羅進行二次近戰攻擊。"
 					]
 				},
 				{
-					"name": "Rapier",
+					"name": "刺劍",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及 5 ft., one creature. {@h}7 ({@damage 1d8 + 3}) 穿刺傷害。"
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。 {@h}7 ({@damage 1d8 + 3}) 穿刺傷害。"
 					]
 				}
 			],
@@ -4871,7 +4871,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"Windharrow 是8級的施法者。他的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。 Windharrow知曉以下吟遊詩人法術："
+						"溫德哈羅是8級的施法者。他的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。 溫德哈羅知曉以下吟遊詩人法術："
 					],
 					"spells": {
 						"0": {
@@ -4938,7 +4938,7 @@
 			]
 		},
 		{
-			"name": "延希賓","ENG_name": "Yan-C-Bin",
+			"name": "延希賓", "ENG_name": "Yan-C-Bin",
 			"size": "H",
 			"type": "elemental",
 			"source": "PotA",
@@ -5090,7 +5090,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"Yan-C-Bin's innate 的施法屬性為魅力（法術豁免DC 20，法術攻擊命中{@hit 12}）。 He can innately cast the following spells, requiring no material components:"
+						"延希賓的天生施法屬性為魅力（法術豁免DC 20，法術攻擊命中{@hit 12}）。他天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 造風術}",
