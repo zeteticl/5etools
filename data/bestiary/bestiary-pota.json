@@ -56,7 +56,7 @@
 					]
 				},
 				{
-					"name": "哀嚎敗退", "tENG_name": "Howling Defeat",
+					"name": "哀嚎敗亡", "tENG_name": "Howling Defeat",
 					"entries": [
 						"當阿莉希的生命值歸零時，她的身體將在一陣呼嘯著的旋風中消失，且這陣旋風將迅速而無害地消散。任何她所穿戴或攜帶的東西都將被留在原地。"
 					]
@@ -1442,7 +1442,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"祭司是5級的施法者。它的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。它知曉以下術士法術："
+						"永焰祭司是5級的施法者。它的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。它知曉以下術士法術："
 					],
 					"spells": {
 						"0": {
@@ -1535,28 +1535,28 @@
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Shapechanger (2/Day)",
+					"name": "變形者 (2/日)", "tENG_name": "Shapechanger (2/Day)",
 					"entries": [
-						"The fathomer can use its action to polymorph into a Medium serpent composed of water, or back into its true form. Anything the fathomer is wearing or carrying is subsumed into the serpent form during the change, inaccessible until the fathomer returns to its true form. The fathomer reverts to its true form after 4 hours, unless it can expend another use of this trait. If the fathomer is knocked {@condition unconscious} or dies, it also reverts to its true form.",
-						"While in serpent form, the fathomer gains a swimming speed of 40 feet, the ability to breathe underwater, immunity to poison damage, as well as resistance to fire damage and bludgeoning, piercing, and slashing damage from nonmagical attacks. It also has immunity to the following conditions: {@condition exhaustion}, {@condition grappled}, {@condition paralyzed}, {@condition poisoned}, {@condition restrained}, {@condition prone}, {@condition unconscious}. The serpent form can enter a hostile creature's space and stop there. In addition, if water can pass through a space, the serpent can do so without squeezing."
+						"深測者可以使用它的動作以變形成一個中型，由水構成的蛇，或變回它的真實型態。任何深測者所穿戴或攜帶的裝備將會在變形期間融入蛇型態之中，且直到它變為真實型態之前都無法使用。深測者會在4小時之後變回它的真實型態，除非它在這之前再一次消耗這個特性的使用次數。當深測者被擊暈{@condition 昏迷}或死亡時，它也將變回它的真實型態。",
+						"當處於蛇型態時，深測者將獲得40呎的游泳速度，能夠在水下呼吸的能力，免疫於毒素傷害，且對於火焰傷害和非魔法攻擊所造成的鈍擊、穿刺、劈砍傷害具有抗性。它同時免疫於以下狀態：{@condition 力竭}、{@condition 被擒}、{@condition 麻痺}、{@condition 中毒}、{@condition 束縛}、{@condition 伏地}、{@condition 昏迷}。蛇型態可以進入敵對生物所在的空間，並停留在該處。此外，若某處空間足以讓水通過，則蛇型態就不用擠縮身體而能夠通過該空間。"
 					]
 				},
 				{
-					"name": "Olhydra's Armor (Human Form Only)",
+					"name": "奧莉德拉之護甲 (限定人類型態)", "tENG_name": "Olhydra's Armor (Human Form Only)",
 					"entries": [
-						"The fathomer can cast {@spell 法師護甲} at will, without expending material components."
+						"深測者可以隨意施放{@spell 法師護甲}，且無須消耗任何材料構材。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Constrict (Serpent Form Only)",
+					"name": "絞纏 (限定蛇型態)", "tENG_name": "Constrict (Serpent Form Only)",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。 {@h}9 ({@damage 2d6 + 2}) 鈍擊傷害。 If the target is Medium or smaller, it is {@condition grappled} (escape DC 12). Until the grapple ends, the target is {@condition restrained}, and the fathomer can't constrict another target."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。 {@h}9 ({@damage 2d6 + 2}) 鈍擊傷害。若目標的體型為中型或更小，則它將{@condition 被擒}(逃脫DC 12)。直到擒抱結束前，目標被{@condition 束縛}，且深測者不能絞纏另一個目標。"
 					]
 				},
 				{
-					"name": "Dagger (Human Form Only)",
+					"name": "匕首 (限定人類型態)", "tENG_name": "Dagger (Human Form Only)",
 					"entries": [
 						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}4 ({@damage 1d4 + 2}) 穿刺傷害。"
 					]
@@ -1565,9 +1565,9 @@
 			"page": 207,
 			"spellcasting": [
 				{
-					"name": "Spellcasting (Human Form Only)",
+					"name": "施法 (限定人類型態)", "tENG_name": "Spellcasting (Human Form Only)",
 					"headerEntries": [
-						"The fathomer is a 5th-level spellcaster. Its 的施法屬性為魅力（法術豁免DC 12，法術攻擊命中{@hit 4}）。 It has two 3rd-level spell slots, which it regains after finishing a short or long rest, and knows the following warlock spells:"
+						"深測者是5級的施法者。它的施法屬性為魅力（法術豁免DC 12，法術攻擊命中{@hit 4}）。它擁有二個3環法術位，且會在完成一次短休或長休時恢復它所有的法術位。它知曉以下契術師法術："
 					],
 					"spells": {
 						"0": {
@@ -2010,7 +2010,7 @@
 				{
 					"name": "傳奇抗性 (2/日)",
 					"entries": [
-						"若加爾在一次豁免檢定中失敗，它可以選擇改為使其成功。"
+						"若加爾在一次豁免檢定中失敗，他可以選擇改為使其成功。"
 					]
 				},
 				{
@@ -2180,27 +2180,27 @@
 			"cr": "7",
 			"trait": [
 				{
-					"name": "Assassinate",
+					"name": "刺殺", "tENG_name": "Assassinate",
 					"entries": [
-						"During its first turn, Ghald has advantage on attack rolls against any creature that hasn't taken a turn. Any hit Ghald scores against a surprised creature is a critical hit."
+						"在他的第一個回合期間，葛哈德對任何尚未採取過回合的生物所進行的攻擊檢定具有優勢。且葛哈德命中任何被突襲生物的攻擊都視為暴擊。"
 					]
 				},
 				{
-					"name": "Limited Amphibiousness",
+					"name": "有限兩棲", "tENG_name": "Limited Amphibiousness",
 					"entries": [
-						"Ghald can breathe air and water, but he needs to be submerged at least once every 4 hours to avoid suffocating."
+						"葛哈德可以在空氣和水中呼吸，但他每4小時必須至少回到水中一次以避免窒息。"
 					]
 				},
 				{
-					"name": "Shark Telepathy",
+					"name": "鯊心感應", "tENG_name": "Shark Telepathy",
 					"entries": [
-						"Ghald can magically command any shark within 120 feet of him, using a limited telepathy."
+						"藉由有限的心靈感應，葛哈德可以用魔法對任何距離它120呎內的鯊魚下達命令。"
 					]
 				},
 				{
-					"name": "Sneak Attack",
+					"name": "偷襲", "tENG_name": "Sneak Attack",
 					"entries": [
-						"Ghald deals an extra 14 ({@dice 4d6}) damage when he hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of Ghald's that isn't {@condition incapacitated} and Ghald doesn't have disadvantage on the attack roll."
+						"當葛哈德以武器攻擊命中一個目標時，若該攻擊檢定具有優勢，或者該攻擊檢定沒有劣勢且葛哈德有一個未{@condition 無力}的隊友距離目標5呎內，則葛哈德造成額外的14 ({@dice 4d6})傷害。"
 					]
 				}
 			],
@@ -2224,9 +2224,9 @@
 					]
 				},
 				{
-					"name": "Garrote",
+					"name": "絞刑具", "tENG_name": "Garrote",
 					"entries": [
-						"{@atk mw} 命中{@hit 7}，觸及 5 ft., one Medium or Small creature against which Ghald has advantage on the attack roll. {@h}9 ({@damage 2d4 + 4}) bludgeoning damage, and the target is {@condition grappled} (escape DC 15). Until the grapple ends, the target can't breathe, and Ghald has advantage on attack rolls against it."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一體型為中型或小型且葛哈德對其攻擊檢定有優勢的生物。 {@h}9 ({@damage 2d4 + 4}) 鈍擊傷害，且目標{@condition 被擒}(逃脫DC 15)。直到擒抱結束前，目標將無法呼吸，且葛哈德對它所進行的攻擊檢定都將帶有優勢。"
 					]
 				}
 			],
@@ -2293,33 +2293,33 @@
 				"blinded",
 				"poisoned"
 			],
-			"senses": "blindsight 60 ft. (blind beyond this radius)",
+			"senses": "盲視60呎（超過半徑範圍則視作目盲）",
 			"passive": 15,
 			"languages": "通用語、土族語",
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Evasion",
+					"name": "反射閃避", "tENG_name": "Evasion",
 					"entries": [
-						"If Hellenrae is subjected to an effect that allows her to make a Dexterity saving throw to take only half damage, she instead takes no damage if she succeeds on the saving throw, and only half damage if she fails."
+						"若海倫芮成為一個允許她進行敏捷豁免以僅承受一半傷害的效果的目標，則海倫芮可以改為在豁免成功時不受任何傷害，且在豁免失敗時僅承受一半傷害。"
 					]
 				},
 				{
-					"name": "Stunning Strike {@recharge 5}",
+					"name": "震懾擊{@recharge 5}", "tENG_name": "Stunning Strike {@recharge 5}",
 					"entries": [
-						"When Hellenrae hits a target with a melee weapon attack, the target must succeed on a DC 13 Constitution saving throw or be {@condition stunned} until the end of Hellenrae's next turn."
+						"當海倫芮以一次近戰武器攻擊命中目標時，目標必須成功通過一次DC 13的體質豁免，否則將被{@condition 震懾}直到海倫芮的下個回合結束。"
 					]
 				},
 				{
-					"name": "Unarmored Defense",
+					"name": "無甲防禦", "tENG_name": "Unarmored Defense",
 					"entries": [
-						"While Hellenrae is wearing no armor and wielding no shield, her AC includes her Wisdom modifier."
+						"當海倫芮未穿戴任何護甲且未持用盾牌時，她的AC將加上她的睿知調整值。"
 					]
 				},
 				{
-					"name": "Unarmored Movement",
+					"name": "無甲移動", "tENG_name": "Unarmored Movement",
 					"entries": [
-						"While Hellenrae is wearing no armor and wielding no shield, her speed increases by 20 feet (included in her speed)."
+						"當海倫芮未穿戴任何護甲且未持用盾牌時，她的移動速度將增加20呎（已包含在移動速度）。"
 					]
 				}
 			],
@@ -2327,7 +2327,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"可以進行三次近戰攻擊"
+						"海倫芮進行三次近戰攻擊。"
 					]
 				},
 				{
@@ -2339,9 +2339,9 @@
 			],
 			"reaction": [
 				{
-					"name": "Parry and Counter",
+					"name": "格擋反擊", "tENG_name": "Parry and Counter",
 					"entries": [
-						"Hellenrae adds 3 to her AC against one melee or ranged weapon attack that would hit her. To do so, she must be able to sense the attacker with her blindsight. If the attack misses, Hellenrae can make one melee attack against the attacker if it is within her reach."
+						"海倫芮在一次遠程或近戰武器攻擊將要命中她時可以針對該次攻擊使她的AC增加3點。若要這麼做，海倫芮必須要能看藉由她的盲視感知到攻擊者。若該攻擊因此失手，且若攻擊者處於海倫芮的觸及範圍內，則她可以對攻擊者進行一次近戰攻擊。"
 					]
 				}
 			],
@@ -2568,7 +2568,7 @@
 			]
 		},
 		{
-			"name": "颶風", "ENG_name": "Windvane",
+			"name": "颶風", "ENG_name": "Hurricane",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -2605,15 +2605,15 @@
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Unarmored Defense",
+					"name": "無甲防禦", "tENG_name": "Unarmored Defense",
 					"entries": [
-						"While the hurricane is wearing no armor and wielding no shield, its AC includes its Wisdom modifier."
+						"當颶風未穿戴任何護甲且未持用盾牌時，它的AC將加上它的睿知調整值。"
 					]
 				},
 				{
-					"name": "Unarmored Movement",
+					"name": "無甲移動", "tENG_name": "Unarmored Movement",
 					"entries": [
-						"While the hurricane is wearing no armor and wielding no shield, its walking speed increases by 15 feet (included in its speed)."
+						"當颶風未穿戴任何護甲且未持用盾牌時，它的移動速度將增加15呎（已包含在移動速度）。"
 					]
 				}
 			],
@@ -2621,7 +2621,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"可以進行兩次近戰攻擊"
+						"颶風進行兩次近戰攻擊。"
 					]
 				},
 				{
@@ -2633,9 +2633,9 @@
 			],
 			"reaction": [
 				{
-					"name": "Deflect Missiles",
+					"name": "撥擋飛彈", "tENG_name": "Deflect Missiles",
 					"entries": [
-						"When the hurricane is hit by a ranged weapon attack, it reduces the damage from the attack by {@dice 1d10 + 9}. If the damage is reduced to 0, the hurricane can catch the missile if it is small enough to hold in one hand and the hurricane has at least one hand free."
+						"當被一次遠程武器攻擊命中時，颶風可以撥檔該投射物。它從該攻擊所受到的傷害將被減少{@dice 1d10 + 9}點。若該傷害被降低至零，且若該投射物的大小能夠被單手抓住且颶風有至少一隻空手，則颶風將抓住該投射物。"
 					]
 				}
 			],
@@ -2644,7 +2644,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"The hurricane is a 3rd-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 11, {@hit 3} to hit with spell attacks).它知曉以下術士法術："
+						"颶風是3級的施法者。它的施法屬性為睿知（法術豁免DC 11，法術攻擊命中{@hit 3}）。它知曉以下術士法術："
 					],
 					"spells": {
 						"0": {
@@ -2688,7 +2688,7 @@
 			]
 		},
 		{
-			"name": "伊密克斯","ENG_name": "Imix",
+			"name": "伊密克斯", "ENG_name": "Imix",
 			"size": "H",
 			"type": "elemental",
 			"source": "PotA",
@@ -2879,7 +2879,7 @@
 			]
 		},
 		{
-			"name": "馬洛斯．沃雷","ENG_name": "Marlos Urnrayle",
+			"name": "馬洛斯．沃雷", "ENG_name": "Marlos Urnrayle",
 			"isNpc": true,
 			"size": "M",
 			"type": "monstrosity",
@@ -2917,35 +2917,35 @@
 			"resist": [
 				"acid"
 			],
-			"senses": "darkvision 60 ft., tremorsense 60 ft.",
+			"senses": "黑暗視覺60呎, 震顫感知60呎",
 			"passive": 14,
 			"languages": "通用語、土族語",
 			"cr": "8",
 			"trait": [
 				{
-					"name": "Earthen Defeat",
+					"name": "化土敗亡", "tENG_name": "Earthen Defeat",
 					"entries": [
-						"When Marlos drops to 0 hit points, his body transforms into mud and collapses into a pool. Anything he is wearing or carrying is left behind."
+						"當馬洛斯的生命值歸零時，他的身體將轉變成一攤泥濘並潰散成池。任何他所穿戴或攜帶的東西都將被留在原地。"
 					]
 				},
 				{
-					"name": "Earth Passage",
+					"name": "地土穿行", "tENG_name": "Earth Passage",
 					"entries": [
-						"Marlos can move in difficult terrain composed of anything made from earth or stone as if it were normal terrain. He can move through solid earth and rock as if it were difficult terrain. If he ends his turn there, he is shunted into the nearest space he last occupied."
+						"馬洛斯可以在任何由泥土或石頭構成的困難地形上移動時將其視為普通地形。他也可以移動穿過堅硬的土壤或岩石，就如同它們是困難地形一樣。若他在土壤或岩石內部結束他的回合，則他將被彈到距離他之前佔據空間最近的位置。"
 					]
 				},
 				{
 					"name": "傳奇抗性 (2/日)",
 					"entries": [
-						"豁免失敗時，可以取代為成功的結果。"
+						"若馬洛斯在一次豁免檢定中失敗，他可以選擇改為使其成功。"
 					]
 				},
 				{
-					"name": "Petrifying Gaze",
+					"name": "石化凝視", "tENG_name": "Petrifying Gaze",
 					"entries": [
-						"When a creature that can see Marlos's eyes starts its turn within 30 feet of him, Marlos can force it to make a DC 14 Constitution saving throw if Marlos isn't {@condition incapacitated} and can see the creature. If the saving throw fails by 5 or more, the creature is instantly {@condition petrified}. Otherwise, a creature that fails the save begins to turn to stone and is {@condition restrained}. The {@condition restrained} creature must repeat the saving throw at the end of its next turn, becoming {@condition petrified} on a failure or ending the effect on a success. The petrification lasts until the creature is freed by the {@spell greater restoration} spell or other magic.",
-						"Unless surprised, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can't see Marlos until the start of its next turn, when it can decide to avert its eyes again. If the creature looks at Marlos in the meantime, it must immediately make the save.",
-						"If Marlos sees himself reflected on a polished surface within 30 feet of him and in an area of bright light, Marlos is, due to his curse, affected by his own gaze."
+						"當一個可以看見馬洛斯雙眼的生物在距離馬洛斯30呎內的位置開始它的回合，且若馬洛斯不處於{@condition 無力}並可以看見該生物，馬洛斯就可以強迫它進行一次DC 14的體質豁免。若此豁免失敗且檢定結果與目標值差距5點或更多，則該生物將瞬間被{@condition 石化}。除此之外，一個豁免失敗的生物將會開始轉變成石頭並因此被{@condition 束縛}。被{@condition 束縛}的生物必須在它的下個回合結束時重複進行這個豁免檢定。若豁免成功則此效果結束。若豁免失敗則該生物將被{@condition 石化}。這個石化狀態將持續直到該生物被{@spell 高等復原術}法術或其他魔法給解放。",
+						"除非被突襲，否則一個生物可以移開視線以避免在它的回合開始時進行豁免檢定。若該生物這麼做，則它直到它的下個回合開始前都將無法看見馬洛斯，且它可以在下個回合開始時再次選擇移開視線。在該生物看向馬洛斯的同時，它必須立刻進行該豁免檢定。",
+						"若馬洛斯在明亮光照的區域中看見距離他30呎內自己位於磨光表面的倒影，由於他所遭受的詛咒，他將被自己石化凝視的效果給影響。"
 					]
 				}
 			],
@@ -2953,19 +2953,19 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"Marlos makes three melee attacks, one with his snake hair and two with Ironfang."
+						"馬洛斯進行三次攻擊，一次蛇髮，二次使用魔法武器{@item 鐵牙|pota}。"
 					]
 				},
 				{
-					"name": "Snake Hair",
+					"name": "蛇髮", "tENG_name": "Snake Hair",
 					"entries": [
-						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。 {@h}7 ({@damage 1d8 + 3}) piercing damage plus 14 ({@damage 4d6}) poison damage."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。 {@h}7 ({@damage 1d8 + 3})穿刺傷害加 14 ({@damage 4d6}) 毒素傷害。"
 					]
 				},
 				{
-					"name": "Ironfang",
+					"name": "鐵牙", "tENG_name": "Ironfang",
 					"entries": [
-						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。 {@h}7 ({@damage 1d8 + 3}) piercing damage plus 4 ({@damage 1d8}) thunder damage."
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。 {@h}7 ({@damage 1d8 + 3})穿刺傷害加 4 ({@damage 1d8}) 雷鳴傷害。"
 					]
 				}
 			],
@@ -2995,7 +2995,7 @@
 			]
 		},
 		{
-			"name": "莫拉．維贊","ENG_name": "Miraj Vizann",
+			"name": "莫拉．維贊", "ENG_name": "Miraj Vizann",
 			"isNpc": true,
 			"size": "M",
 			"type": {
@@ -3035,21 +3035,21 @@
 				"deception": "+7"
 			},
 			"passive": 10,
-			"languages": "Common, Primordial",
+			"languages": "通用語、原初語",
 			"cr": "6",
 			"trait": [
 				{
-					"name": "Earth Walk",
+					"name": "地面行走", "tENG_name": "Earth Walk",
 					"entries": [
-						"Moving through difficult terrain made of earth or stone costs Miraj no extra movement."
+						"移動穿過泥土或石頭構成的困難地形不會使莫拉消耗額外的移動速度。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Staff",
+					"name": "法杖", "tENG_name": "Staff",
 					"entries": [
-						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。 {@h}4 ({@damage 1d6 + 1}) bludgeoning damage, or 5 ({@damage 1d8 + 1}) bludgeoning damage when used with two hands."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。 {@h}4 ({@damage 1d6 + 1})鈍擊傷害，或若以雙手使用時則造成 5 ({@damage 1d8 + 1}) 鈍擊傷害。"
 					]
 				}
 			],
@@ -3058,7 +3058,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"Miraj's innate spellcasting ability is Constitution (spell save DC 14). He can innately cast the following spell, requiring no material components:"
+						"莫拉的天生施法屬性為體質（法術豁免DC 14）。他天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"daily": {
 						"1": [
@@ -3070,7 +3070,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"Miraj 是11級的施法者。His 的施法屬性為魅力（法術豁免DC 15，法術攻擊命中{@hit 7}）。 He knows the following sorcerer spells:"
+						"莫拉是11級的施法者。他的施法屬性為魅力（法術豁免DC 15，法術攻擊命中{@hit 7}）。他知曉以下術士法術："
 					],
 					"spells": {
 						"0": {
@@ -3142,7 +3142,7 @@
 			]
 		},
 		{
-			"name": "歐格莫克","ENG_name": "Ogrémoch",
+			"name": "歐格莫克", "ENG_name": "Ogrémoch",
 			"size": "G",
 			"type": "elemental",
 			"source": "PotA",
@@ -3198,7 +3198,7 @@
 				"poisoned",
 				"prone"
 			],
-			"senses": "blindsight 120 ft., tremorsense 120 ft.",
+			"senses": "盲視120呎, 震顫感知120呎",
 			"passive": 12,
 			"languages": "通用語、土族語",
 			"cr": "20",
@@ -3283,7 +3283,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"Ogrémoch's innate 的施法屬性為魅力（法術豁免DC 20，法術攻擊命中{@hit 12}）。 He can innately cast the following spells, requiring no material components:"
+						"歐格莫克的天生施法屬性為魅力（法術豁免DC 20，法術攻擊命中{@hit 12}）。他天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 融身入石}",
@@ -3318,7 +3318,7 @@
 			]
 		},
 		{
-			"name": "奥利德拉","ENG_name": "Olhydra",
+			"name": "奧莉德拉", "ENG_name": "Olhydra",
 			"size": "H",
 			"type": "elemental",
 			"source": "PotA",
@@ -3463,7 +3463,7 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"Olhydra's innate 的施法屬性為魅力（法術豁免DC 20，法術攻擊命中{@hit 12}）。 She can innately cast the following spells, requiring no material components:"
+						"奧莉德拉的天生施法屬性為魅力（法術豁免DC 20，法術攻擊命中{@hit 12}）。她天生就可以施展以下法術，且無需任何材料構材："
 					],
 					"will": [
 						"{@spell 冰牆術}"
@@ -3502,7 +3502,7 @@
 			]
 		},
 		{
-			"name": "獨眼顫慄","ENG_name": "One-Eyed Shiver",
+			"name": "獨眼顫慄者", "ENG_name": "One-Eyed Shiver",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -3549,9 +3549,9 @@
 			"cr": "3",
 			"trait": [
 				{
-					"name": "Chilling Mist",
+					"name": "寒顫迷霧", "tENG_name": "Chilling Mist",
 					"entries": [
-						"While it is alive, the one-eyed shiver projects an aura of cold mist within 10 feet of itself. If the one-eyed shiver deals damage to a creature in this area, the creature also takes 5 ({@damage 1d10}) cold damage."
+						"當它活著的時候，獨眼顫慄者會在它周圍10呎內的範圍內投射出一股寒冷的迷霧。如果獨眼顫慄者對該區域內的生物造成了傷害，則該生物將額外受到5 ({@damage 1d10})寒冰傷害。"
 					]
 				}
 			],
@@ -3563,9 +3563,9 @@
 					]
 				},
 				{
-					"name": "Eye of Frost",
+					"name": "霜凍之眼", "tENG_name": "Eye of Frost",
 					"entries": [
-						"The one-eyed shiver casts ray of frost from its missing eye. If it hits, the target is also {@condition restrained}. A target {@condition restrained} in this way can end the condition by using an action, succeeding on a DC 13 Strength check."
+						"獨眼顫慄者從它空洞的眼眶中施放{@spell 冷凍射線}。若它命中，則目標將同時被{@condition 束縛}。被這個方式{@condition 束縛}的目標可以藉由採取一個動作，並成功通過一次DC 13的力量豁免以解除這個狀態。"
 					]
 				}
 			],
@@ -3574,7 +3574,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"The one-eyed shiver is a 5th-level spellcaster. Its 的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。它知曉以下術士法術："
+						"獨眼顫慄者是5級的施法者。 它的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。它知曉以下術士法術："
 					],
 					"spells": {
 						"0": {
@@ -3620,7 +3620,7 @@
 			]
 		},
 		{
-			"name": "歐雷斯","ENG_name": "Oreioth",
+			"name": "奧瑞歐斯", "ENG_name": "Oreioth",
 			"isNpc": true,
 			"size": "M",
 			"type": {
@@ -3664,19 +3664,19 @@
 				"medicine": "+1"
 			},
 			"passive": 9,
-			"languages": "Abyssal, Common",
+			"languages": "深淵語、通用語",
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Grim Harvest",
+					"name": "殘怖收割", "tENG_name": "Grim Harvest",
 					"entries": [
-						"Once per turn when Oreioth kills one or more creatures with a spell of 1st level or higher, he regains hit points equal to twice the spell's level."
+						"每回合一次，當奧瑞歐斯以1環或更高環的法術殺死一個或更多的生物時，他將回復等同於該法術環階二倍的生命值。"
 					]
 				},
 				{
-					"name": "Swift Animation (Recharges after a Long Rest)",
+					"name": "迅捷活化 (長休之後充能)", "tENG_name": "Swift Animation (Recharges after a Long Rest)",
 					"entries": [
-						"When a living Medium or Small humanoid within 30 feet of Oreioth dies, he can use an action on his next turn to cast {@spell 活化死屍} on that humanoid's corpse, instead of using the spell's normal casting time."
+						"當一個活著且體型為中型或小型的類人生物在距離奧瑞歐斯30呎內時死亡，則他將可以在他的下個回合以一個動作對該類人生物的屍體施放{@spell 活化死屍}，而非以該法術原本的施法時間施放。"
 					]
 				}
 			],
@@ -3693,7 +3693,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"Oreioth is a 6th-level spellcaster. His spellcasting ability is Intelligence (spell save DC 13, {@hit 5} to hit with spell attacks). He has the following wizard spells prepared:"
+						"奧瑞歐斯是6級的施法者。他的施法屬性為智力（法術豁免DC 13，法術攻擊命中{@hit 5}）。他已準備了以下法師法術："
 					],
 					"spells": {
 						"0": {
@@ -3789,15 +3789,15 @@
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Searing Armor",
+					"name": "熾灼盔甲", "tENG_name": "Searing Armor",
 					"entries": [
-						"The razerblast's armor is hot. Any creature grappling the razerblast or {@condition grappled} by it takes 5 ({@damage 1d10}) fire damage at the end of that creature's turn."
+						"爆刃的護甲相當熾熱。任何擒抱爆刃、或{@condition 被擒}於爆刃的生物都將在該生物的回合結束時受到5 ({@damage 1d10})火焰傷害。"
 					]
 				},
 				{
-					"name": "Shrapnel Explosion",
+					"name": "碎鎧爆裂", "tENG_name": "Shrapnel Explosion",
 					"entries": [
-						"When the razerblast drops to 0 hit points, a flaming orb in its chest explodes, destroying the razerblast's body and scattering its armor as shrapnel. Creatures within 10 feet of the razerblast when it explodes must succeed on a DC 12 Dexterity saving throw, taking 21 ({@damage 6d6}) piercing damage on a failed save, or half as much damage on a successful one."
+						"當爆刃的生命值歸零時，它胸中的熾焰法球將會爆炸，摧毀爆刃的身體並使它的盔甲爆裂成破片。每個在爆刃爆炸時距離它10呎內的生物都必須成功通過一次DC 12的敏捷豁免，豁免失敗將受到21 ({@damage 6d6})穿刺傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
@@ -3805,13 +3805,13 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"可以進行三次近戰攻擊"
+						"爆刃進行三次近戰攻擊。"
 					]
 				},
 				{
 					"name": "矛",
 					"entries": [
-						"{@atk mw,rw} 命中{@hit 6}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}6 ({@damage 1d6 + 3}) piercing damage, or 7 ({@damage 1d8 + 3}) piercing damage if used with two hands to make a melee attack, plus 3 ({@damage 1d6}) fire damage."
+						"{@atk mw,rw} 命中{@hit 6}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}6 ({@damage 1d6 + 3})穿刺傷害，或若雙手使用以進行一次近戰攻擊時則造成 7 ({@damage 1d8 + 3}) 穿刺傷害，再加上 3 ({@damage 1d6})火焰傷害。"
 					]
 				}
 			],
@@ -3829,7 +3829,7 @@
 			]
 		},
 		{
-			"name": "聖石僧","ENG_name": "Sacred Stone Monk",
+			"name": "聖石僧", "ENG_name": "Sacred Stone Monk",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -3863,21 +3863,21 @@
 				"athletics": "+3",
 				"perception": "+4"
 			},
-			"senses": "tremorsense 10 ft.",
+			"senses": "震顫感知10呎",
 			"passive": 14,
 			"languages": "通用語",
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Unarmored Defense",
+					"name": "無甲防禦", "tENG_name": "Unarmored Defense",
 					"entries": [
-						"While the monk is wearing no armor and wielding no shield, its AC includes its Wisdom modifier."
+						"當聖石僧未穿戴任何護甲且未持用盾牌時，它的AC將加上它的睿知調整值。"
 					]
 				},
 				{
-					"name": "Unarmored Movement",
+					"name": "無甲移動", "tENG_name": "Unarmored Movement",
 					"entries": [
-						"While the monk is wearing no armor and wielding no shield, its walking speed increases by 10 feet (included in its speed)."
+						"當聖石僧未穿戴任何護甲且未持用盾牌時，它的移動速度將增加10呎（已包含在移動速度）。"
 					]
 				}
 			],
@@ -3885,7 +3885,7 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"可以進行兩次近戰攻擊"
+						"聖石僧進行二次近戰攻擊。"
 					]
 				},
 				{
@@ -3897,9 +3897,9 @@
 			],
 			"reaction": [
 				{
-					"name": "Parry",
+					"name": "格擋", "tENG_name": "Parry",
 					"entries": [
-						"The monk adds 2 to its AC against one melee or ranged weapon attack that would hit it. To do so, the monk must see the attacker."
+						"聖石僧在一次遠程或近戰武器攻擊將要命中它時可以針對該次攻擊使它的AC增加2點。若要這麼做，聖石僧必須要能看見攻擊者。"
 					]
 				}
 			],
@@ -3919,7 +3919,7 @@
 			]
 		},
 		{
-			"name": "索勒．剛卓","ENG_name": "Shoalar Quanderil",
+			"name": "索勒．剛卓", "ENG_name": "Shoalar Quanderil",
 			"isNpc": true,
 			"size": "M",
 			"type": {
@@ -3971,7 +3971,7 @@
 				{
 					"name": "兩棲", "tENG_name": "Amphibious",
 					"entries": [
-						"Shoalar can breathe air and water."
+						"索勒可以在空氣和水中呼吸。"
 					]
 				}
 			],
@@ -3988,14 +3988,14 @@
 				{
 					"name": "天生施法",
 					"headerEntries": [
-						"Shoalar's innate spellcasting ability is Constitution (spell save DC 13, {@hit 5} to hit with spell attacks). He can innately cast the following spells:"
+						"索勒的天生施法屬性為體質（法術豁免DC 13，法術攻擊命中{@hit 5}）。他天生就可以施展以下法術："
 					],
 					"will": [
 						"{@spell 塑水|xge}"
 					],
 					"daily": {
 						"1": [
-							"{@spell create or destroy water}"
+							"{@spell 造水/枯水術}"
 						]
 					},
 					"ability": "con"
@@ -4003,7 +4003,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"Shoalar is a 5th-level spellcaster. His 的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。 He knows the following sorcerer spells:"
+						"索勒是5級的施法者。他的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。他知曉以下術士法術："
 					],
 					"spells": {
 						"0": {
@@ -4056,7 +4056,7 @@
 			]
 		},
 		{
-			"name": "空織匠","ENG_name": "Skyweaver",
+			"name": "空織匠", "ENG_name": "Skyweaver",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -4110,7 +4110,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"The Skyweaver is a 6th-level spellcaster. Its 的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。它知曉以下術士法術："
+						"空織匠是6級的施法者。它的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。它知曉以下術士法術："
 					],
 					"spells": {
 						"0": {
@@ -4160,7 +4160,7 @@
 			]
 		},
 		{
-			"name": "融石者","ENG_name": "Stonemelder",
+			"name": "融石者", "ENG_name": "Stonemelder",
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -4198,23 +4198,23 @@
 				"intimidation": "+5",
 				"perception": "+2"
 			},
-			"senses": "tremorsense 30 ft.",
+			"senses": "震顫感知30呎",
 			"passive": 12,
 			"languages": "通用語、土族語",
 			"cr": "4",
 			"trait": [
 				{
-					"name": "Death Burst",
+					"name": "死亡自爆", "tENG_name": "Death Burst",
 					"entries": [
-						"When the Stonemelder dies, it turns to stone and explodes in a burst of rock shards, becoming a smoking pile of rubble. Each creature within 10 feet of the exploding Stonemelder must make a DC 14 Dexterity saving throw, taking 11 ({@damage 2d10}) bludgeoning damage on a failed save, or half as much damage on a successful one."
+						"當融石者死亡時，它將化作岩石並爆裂成碎塊，變成一堆冒著煙的石礫。每個在融石者爆炸時距離它10呎內的生物都必須進行一次DC 14的敏捷豁免，豁免失敗則受到11 ({@damage 2d10})鈍擊傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Black Earth Rod",
+					"name": "黑土權杖", "tENG_name": "Black Earth Rod",
 					"entries": [
-						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。 {@h}5 ({@damage 1d6 + 2}) 鈍擊傷害。 The Stonemelder can also expend a spell slot to deal extra damage, dealing {@dice 2d8} bludgeoning damage for a 1st level slot, plus an additional {@dice 1d8} for each level of the slot above 1st."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。 {@h}5 ({@damage 1d6 + 2}) 鈍擊傷害。融石者也可以消耗一個法術位以造成額外傷害，1環法術位將造成{@dice 2d8}鈍擊傷害，每比1環高一環則再額外造成{@dice 1d8}點傷害。"
 					]
 				}
 			],
@@ -4223,7 +4223,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"The Stonemelder is a 7th-level spellcaster. Its 的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。它知曉以下術士法術："
+						"融石者是7級的施法者。它的施法屬性為魅力（法術豁免DC 13，法術攻擊命中{@hit 5}）。它知曉以下術士法術："
 					],
 					"spells": {
 						"0": {
@@ -4285,7 +4285,7 @@
 			]
 		},
 		{
-			"name": "圖爾．莫羅斯卡","ENG_name": "Thurl Merosska",
+			"name": "圖爾．莫羅斯卡", "ENG_name": "Thurl Merosska",
 			"isNpc": true,
 			"size": "M",
 			"type": {
@@ -4333,17 +4333,17 @@
 				{
 					"name": "多重攻擊",
 					"entries": [
-						"可以進行兩次近戰攻擊"
+						"圖爾進行二次近戰攻擊。"
 					]
 				},
 				{
-					"name": "Greatsword",
+					"name": "巨劍", "tENG_name": "Greatsword",
 					"entries": [
 						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。 {@h}10 ({@damage 2d6 + 3}) 劈砍傷害。"
 					]
 				},
 				{
-					"name": "Lance",
+					"name": "騎槍", "tENG_name": "Lance",
 					"entries": [
 						"{@atk mw} 命中{@hit 5}，觸及10呎，單一目標。 {@h}9 ({@damage 1d12 + 3}) 穿刺傷害。"
 					]
@@ -4351,9 +4351,9 @@
 			],
 			"reaction": [
 				{
-					"name": "Parry",
+					"name": "格擋", "tENG_name": "Parry",
 					"entries": [
-						"Thurl adds 2 to his AC against one melee attack that would hit him. To do so, Thurl must see the attacker and be wielding a melee weapon."
+						"圖爾在一次近戰攻擊將要命中他時可以針對該次攻擊使他的AC增加2點。若要這麼做，圖爾必須要能看見攻擊者且正持用一把近戰武器。"
 					]
 				}
 			],
@@ -4362,7 +4362,7 @@
 				{
 					"name": "施法",
 					"headerEntries": [
-						"Thurl is a 5th-level spellcaster. His 的施法屬性為魅力（法術豁免DC 12，法術攻擊命中{@hit 4}）。 Thurl knows the following sorcerer spells:"
+						"圖爾是5級的施法者。他的施法屬性為魅力（法術豁免DC 12，法術攻擊命中{@hit 4}）。圖爾知曉以下術士法術："
 					],
 					"spells": {
 						"0": {
