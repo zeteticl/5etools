@@ -901,7 +901,7 @@ class ClassesPage extends BaseComponent {
 
 		// region Starting proficiencies
 		const renderArmorProfs = armorProfs => armorProfs.map(a => a.full ? a.full : a === "light" || a === "medium" || a === "heavy" ? `${Parser.ArmorToDisplay(a)}甲` : Parser.ArmorToDisplay(a)).join(", ");
-		const renderWeaponsProfs = weaponProfs => weaponProfs.map(w => w === "simple" || w === "martial" ? `${Parser.translateKeyToDisplay(w) }武器` : w).join(", ");
+		const renderWeaponsProfs = weaponProfs => weaponProfs.map(w => w === "simple" || w === "martial" ? `${Parser.translateKeyToDisplay(w)}武器` : w).join(", ");
 		const renderToolProfs = toolProfs => toolProfs.map(it => Renderer.get().render(it)).join(", ")
 		const renderSkillsProfs = skills => `${Parser.skillProficienciesToFull(skills).uppercaseFirst()}.`;
 
