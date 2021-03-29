@@ -1271,17 +1271,17 @@
 					"rows": [
 						[
 							"{@b 魔术师} Mage",
-							"{@filter Wizard|spells|class=Wizard}",
+							"{@filter 法师|spells|class=Wizard}",
 							"智力"
 						],
 						[
 							"{@b 治疗者} Healer",
-							"{@filter Cleric and Druid|spells|class=Cleric;Druid}",
+							"{@filter 牧师和德鲁伊|spells|class=Cleric;Druid}",
 							"感知"
 						],
 						[
 							"{@b 奇才} Prodigy",
-							"{@filter Bard and Warlock|spells|class=Bard;Warlock}",
+							"{@filter 吟游诗人和契术士|spells|class=Bard;Warlock}",
 							"魅力"
 						]
 					]
@@ -1342,14 +1342,14 @@
 									"type": "abilityDc",
 									"name": "法术",
 									"attributes": [
-										"spellcasting"
+										"施法属性"
 									]
 								},
 								{
 									"type": "abilityAttackMod",
 									"name": "法术",
 									"attributes": [
-										"spellcasting"
+										"施法属性"
 									]
 								}
 							]
@@ -1359,7 +1359,7 @@
 							"name": "施法法器",
 							"ENG_name": "Spellcasting Focus",
 							"entries": [
-								"协力者可以根据“施法表格”的选择来为它的法术使用一件法器。一位魔术师能够使用一件奥术法器，一位治疗者能够使用一面圣徽，而一位奇才能够使用一件奥术法器或一样{@item musical instrument|PHB}。"
+								"协力者可以根据“施法表格”的选择来为它的法术使用一件法器。一位魔术师能够使用一件奥术法器，一位治疗者能够使用一面圣徽，而一位奇才能够使用一件奥术法器或一样{@item 乐器|PHB}。"
 							]
 						}
 					]
