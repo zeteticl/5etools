@@ -124,7 +124,7 @@ class NavBar {
 		addLi(ulDms, "objects.html", "对象");
 		addLi(ulDms, "trapshazards.html", "陷阱&危险");
 		addDivider(ulDms);
-		addLi(ulDms, "crcalculator.html", "CR计算机");
+		addLi(ulDms, "crcalculator.html", "CR 计算器");
 		addLi(ulDms, "encountergen.html", "遭遇生成器");
 		addLi(ulDms, "lootgen.html", "战利品生成器");
 

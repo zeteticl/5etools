@@ -830,8 +830,8 @@ class ClassesPage extends BaseComponent {
 				${$tblGroupHeaders}
 			</tr>
 			<tr>
-				<th class="cls-tbl__col-level">等级</th>
-				<th class="cls-tbl__col-prof-bonus">熟练加值</th>
+				<th class="cls-tbl__col-level" style="white-space:nowrap;">等级</th>
+				<th class="cls-tbl__col-prof-bonus" style="white-space:nowrap;">熟练加值</th>
 				<th>能力</th>
 				${$tblHeaders}
 			</tr>
