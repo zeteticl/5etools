@@ -524,7 +524,7 @@
 				"Spell Versatility|Bard||1|UAClassFeatureVariants",
 				"全能高手|Bard||2",
 				"纾压曲(d6)|Bard||2",
-				"Magical Inspiration|Bard||2|TCE",
+				"魔法激励|Bard||2|TCE",
 				{
 					"classFeature": "吟游学院|Bard||3",
 					"gainSubclassFeature": true
@@ -532,7 +532,7 @@
 				"专精|Bard||3",
 				"属性值提升|Bard||4",
 				"Proficiency Versatility|Bard||4|UAClassFeatureVariants",
-				"Bardic Versatility|Bard||4|TCE",
+				"多才诗人|Bard||4|TCE",
 				"吟游激励(d8)|Bard||5",
 				"激励涌泉|Bard||5",
 				"反制迷惑|Bard||6",
@@ -767,7 +767,8 @@
 			],
 			"fluff": [
 				{
-					"name": "Bard",
+					"name": "吟游诗人",
+					"ENG_name": "Bard",
 					"type": "section",
 					"entries": [
 						"Humming as she traces her fingers over an ancient monument in a long-forgotten ruin, a half-elf in rugged leathers finds knowledge springing into her mind, conjured forth by the magic of her song\u2014knowledge of the people who constructed the monument and the mythic saga it depicts.",
@@ -1223,7 +1224,8 @@
 			]
 		},
 		{
-			"name": "Magical Inspiration",
+			"name": "魔法激励",
+			"ENG_name": "Magical Inspiration",
 			"source": "TCE",
 			"page": 27,
 			"className": "Bard",
@@ -1231,8 +1233,8 @@
 			"level": 2,
 			"isClassFeatureVariant": true,
 			"entries": [
-				"{@i 2nd-level bard {@variantrule optional class features|tce|optional feature}}",
-				"If a creature has a Bardic Inspiration die from you and casts a spell that restores hit points or deals damage, the creature can roll that die and choose a target affected by the spell. Add the number rolled as a bonus to the hit points regained or the damage dealt. The Bardic Inspiration die is then lost."
+				"{@i 2级诗人 {@variantrule optional class features|tce|可选特性}}",
+				"如果一个生物拥有来自于你的吟游激励骰，当他施放一个回复生命值或者造成伤害的法术时，该生物可以掷出激励骰并选择受此法术影响的一名目标，在目标回复的生命值或者造成的伤害上加上掷出的数值。然后失去这颗吟游激励骰。"
 			]
 		},
 		{
@@ -1291,7 +1293,8 @@
 			]
 		},
 		{
-			"name": "Bardic Versatility",
+			"name": "多才诗人",
+			"ENG_name": "Bardic Versatility",
 			"source": "TCE",
 			"page": 27,
 			"className": "Bard",
@@ -1299,13 +1302,13 @@
 			"level": 4,
 			"isClassFeatureVariant": true,
 			"entries": [
-				"{@i 4th-level bard {@variantrule optional class features|tce|optional feature}}",
-				"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing a change in focus as you use your skills and magic:",
+				"{@i 4级吟游诗人 {@variantrule optional class features|tce|可选特性}}",
+				"每当你在该职业到达获得属性值提升特性的等级时，你可以选择以下一种效果执行，这种效果代表了你改变了你使用技能和魔法的重心：",
 				{
 					"type": "list",
 					"items": [
-						"Replace one of the skills you chose for the Expertise feature with one of your other skill proficiencies that isn't benefiting from Expertise.",
-						"Replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the {@filter bard spell list|spells|level=0|class=bard}."
+						"将一个你以“专精”特性选择的技能替换为一个尚未从“专精”特性中获益的已熟练的其他技能。",
+						"将一个你从该职业的施法特性中习得的戏法替换为{@filter吟游诗人法术列表|spells|level=0|class=bard}中的另一个戏法。"
 					]
 				}
 			]
