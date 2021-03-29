@@ -2791,7 +2791,7 @@
 				{
 					"name": "Constrict",
 					"entries": [
-						"{@atk mw} {@hit 11} to hit, reach 15 ft., one Large or smaller creature. {@h}16 ({@damage 2d10 + 5}) bludgeoning damage, and the target is {@condition grappled} (escape {@dc 19}). Until this grapple ends, the target is {@condition restrained} and takes 15 ({@damage 3d6 + 5}) bludgeoning damage at the start of each of its turns, and Hythonia can't constrict another target."
+						"{@atk mw} {@hit 11} to hit, reach 15 ft., one Large or smaller creature. {@h}16 ({@damage 2d10 + 5}) bludgeoning damage, and the target is {@condition 被擒} (escape {@dc 19}). Until this grapple ends, the target is {@condition restrained} and takes 15 ({@damage 3d6 + 5}) bludgeoning damage at the start of each of its turns, and Hythonia can't constrict another target."
 					]
 				},
 				{
@@ -2834,7 +2834,7 @@
 				{
 					"name": "Look at Me (Costs 3 Actions)",
 					"entries": [
-						"Hythonia can force a sighted creature she has {@condition grappled} to see her eyes and be affected by her gaze."
+						"Hythonia can force a sighted creature she has {@condition 被擒} to see her eyes and be affected by her gaze."
 					]
 				}
 			],
@@ -3262,7 +3262,7 @@
 							"items": {
 								"name": "Constrict",
 								"entries": [
-									"{@atk mw} {@hit 3} to hit, reach 10 ft., one target. {@h}7 ({@damage 2d6}) bludgeoning damage, and the target is {@condition grappled} (escape {@dc 11}). Until this grapple ends, the target is {@condition restrained}, and the medusa can't constrict another target."
+									"{@atk mw} {@hit 3} to hit, reach 10 ft., one target. {@h}7 ({@damage 2d6}) bludgeoning damage, and the target is {@condition 被擒} (escape {@dc 11}). Until this grapple ends, the target is {@condition restrained}, and the medusa can't constrict another target."
 								]
 							}
 						}
@@ -5502,7 +5502,7 @@
 				{
 					"name": "Pincer",
 					"entries": [
-						"{@atk mw} {@hit 18} to hit, reach 20 ft., one target. {@h}20 ({@damage 3d6 + 10}) bludgeoning damage, and if the target is a creature, it is {@condition grappled} (escape {@dc 26}). Until the grapple ends, the target is {@condition restrained}, and Tromokratis can't use this attack on anyone else."
+						"{@atk mw} {@hit 18} to hit, reach 20 ft., one target. {@h}20 ({@damage 3d6 + 10}) bludgeoning damage, and if the target is a creature, it is {@condition 被擒} (escape {@dc 26}). Until the grapple ends, the target is {@condition restrained}, and Tromokratis can't use this attack on anyone else."
 					]
 				},
 				{
@@ -5514,13 +5514,13 @@
 				{
 					"name": "Tentacle Grasp",
 					"entries": [
-						"{@atk mw} {@hit 18} to hit, reach 20 ft., one creature. {@h}20 ({@damage 3d6 + 10}) bludgeoning damage, and the target is {@condition grappled} (escape {@dc 26}). If the target doesn't escape by the end of its next turn, Tromokratis throws the target up to 60 feet in a straight line. The target lands {@condition prone} and takes 21 ({@damage 6d6}) bludgeoning damage."
+						"{@atk mw} {@hit 18} to hit, reach 20 ft., one creature. {@h}20 ({@damage 3d6 + 10}) bludgeoning damage, and the target is {@condition 被擒} (escape {@dc 26}). If the target doesn't escape by the end of its next turn, Tromokratis throws the target up to 60 feet in a straight line. The target lands {@condition prone} and takes 21 ({@damage 6d6}) bludgeoning damage."
 					]
 				},
 				{
 					"name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 18} to hit, reach 5 ft., one target. {@h}29 ({@damage 3d12 + 10}) piercing damage. If the target is a Large or smaller creature {@condition grappled} by Tromokratis, that creature is swallowed, and the grapple ends. While swallowed, the creature is {@condition blinded} and {@condition restrained}, it has total cover against attacks and other effects outside Tromokratis, and it takes 42 ({@damage 12d6}) acid damage at the start of each of Tromokratis's turns. If Tromokratis takes 50 damage or more on a single turn from a creature inside it, Tromokratis must succeed on a {@dc 20} Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition prone} in a space within 10 feet of Tromokratis. If Tromokratis dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse by using 15 feet of movement, exiting {@condition prone}."
+						"{@atk mw} {@hit 18} to hit, reach 5 ft., one target. {@h}29 ({@damage 3d12 + 10}) piercing damage. If the target is a Large or smaller creature {@condition 被擒} by Tromokratis, that creature is swallowed, and the grapple ends. While swallowed, the creature is {@condition blinded} and {@condition restrained}, it has total cover against attacks and other effects outside Tromokratis, and it takes 42 ({@damage 12d6}) acid damage at the start of each of Tromokratis's turns. If Tromokratis takes 50 damage or more on a single turn from a creature inside it, Tromokratis must succeed on a {@dc 20} Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition prone} in a space within 10 feet of Tromokratis. If Tromokratis dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse by using 15 feet of movement, exiting {@condition prone}."
 					]
 				}
 			],
@@ -5786,7 +5786,7 @@
 				{
 					"name": "Constrict",
 					"entries": [
-						"{@atk mw} {@hit 12} to hit, reach 15 ft., one Large or smaller creature. {@h}17 ({@damage 3d6 + 7}) bludgeoning damage, and the target is {@condition grappled} (escape {@dc 19}). Until this grapple ends, the target is {@condition restrained} and takes 17 ({@damage 3d6 + 7}) bludgeoning damage at the start of each of its turns. The typhon can have up to two creatures constricted."
+						"{@atk mw} {@hit 12} to hit, reach 15 ft., one Large or smaller creature. {@h}17 ({@damage 3d6 + 7}) bludgeoning damage, and the target is {@condition 被擒} (escape {@dc 19}). Until this grapple ends, the target is {@condition restrained} and takes 17 ({@damage 3d6 + 7}) bludgeoning damage at the start of each of its turns. The typhon can have up to two creatures constricted."
 					]
 				},
 				{
@@ -6146,7 +6146,7 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"The woe strider makes two claw attacks and one bite attack. If both claws hit the same creature, the target is {@condition grappled} (escape {@dc 14})."
+						"The woe strider makes two claw attacks and one bite attack. If both claws hit the same creature, the target is {@condition 被擒} (escape {@dc 14})."
 					]
 				},
 				{
@@ -6158,7 +6158,7 @@
 				{
 					"name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one creature that is {@condition grappled}, {@condition incapacitated}, or {@condition restrained}. {@h}13 ({@damage 2d8 + 4}) piercing damage plus 16 ({@damage 3d10}) psychic damage. In addition, each magic item the creature is carrying that isn't an artifact has its magical properties suppressed for 1 minute."
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one creature that is {@condition 被擒}, {@condition incapacitated}, or {@condition restrained}. {@h}13 ({@damage 2d8 + 4}) piercing damage plus 16 ({@damage 3d10}) psychic damage. In addition, each magic item the creature is carrying that isn't an artifact has its magical properties suppressed for 1 minute."
 					]
 				}
 			],

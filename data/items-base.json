@@ -1856,30 +1856,33 @@
 			]
 		},
 		{
-			"name": "Absorbing Tattoo",
+			"name": "吸收刺青",
 			"source": "TCE",
 			"entriesTemplate": [
-				"Produced by a special needle, this magic tattoo features designs that emphasize one color ({{item.detail1}}).",
+				"该魔法刺青用一根特殊的针制作，且其图案特别突出了一种颜色 ({{item.detail1}})。",
 				{
 					"type": "entries",
-					"name": "Tattoo Attunement",
+					"name": "刺青同调",
+					"ENG_name": "Tattoo Attunement",
 					"entries": [
-						"To attune to this item, you hold the needle to your skin where you want the tattoo to appear, pressing the needle there throughout the attunement process. When the attunement is complete, the needle turns into the ink that becomes the tattoo, which appears on the skin.",
-						"If your attunement to the tattoo ends, the tattoo vanishes, and the needle reappears in your space."
+						"同调此物品时，你需要将针持握，并抵在你想要让刺青出现的那处皮肤上。当同调完成时，针头会化为墨水再变成刺青。",
+						"若你与刺青的同调结束，刺青会消失，针头会再次出现在你的位置中。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Damage Resistance",
+					"name": "伤害抗性",
+					"ENG_name": "Damage Resistance",
 					"entries": [
-						"While the tattoo is on your skin, you have resistance to {{item.resist}} damage."
+						"当刺青在你的皮肤上时，你拥有对 {{item.resist}} 伤害的抗性。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Damage Absorption",
+					"name": "伤害吸收",
+					"ENG_name": "Damage Absorption",
 					"entries": [
-						"When you take {{item.resist}} damage, you can use your reaction to gain immunity against that instance of the damage, and you regain a number of hit points equal to half the damage you would have taken. Once this reaction is used, it can't be used again until the next dawn."
+						"当你受到 {{item.resist}} 伤害时，你可以用你的反应获得对该次伤害的免疫，而后你回复等同于你原先要受到伤害数值一半的生命值。使用后，直到下次黎明前，这个反应不能再次使用。"
 					]
 				}
 			]

@@ -1827,7 +1827,7 @@
 				{
 					"name": "Tentacle",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 10 ft., one target. {@h}10 ({@damage 2d6 + 3}) bludgeoning damage, and the target is {@condition grappled} (escape {@dc 15}) and is moved up to 5 feet toward the balhannoth. Until this grapple ends, the target is {@condition restrained}, and the balhannoth can't use this tentacle against other targets. The balhannoth has four tentacles."
+						"{@atk mw} {@hit 7} to hit, reach 10 ft., one target. {@h}10 ({@damage 2d6 + 3}) bludgeoning damage, and the target is {@condition 被擒} (escape {@dc 15}) and is moved up to 5 feet toward the balhannoth. Until this grapple ends, the target is {@condition restrained}, and the balhannoth can't use this tentacle against other targets. The balhannoth has four tentacles."
 					]
 				}
 			],
@@ -1835,13 +1835,13 @@
 				{
 					"name": "Bite Attack",
 					"entries": [
-						"The balhannoth makes one bite attack against one creature it has {@condition grappled}."
+						"The balhannoth makes one bite attack against one creature it has {@condition 被擒}."
 					]
 				},
 				{
 					"name": "Teleport",
 					"entries": [
-						"The balhannoth magically teleports, along with any equipment it is wearing or carrying and any creatures it has {@condition grappled}, up to 60 feet to an unoccupied space it can see."
+						"The balhannoth magically teleports, along with any equipment it is wearing or carrying and any creatures it has {@condition 被擒}, up to 60 feet to an unoccupied space it can see."
 					]
 				},
 				{
@@ -2753,7 +2753,7 @@
 				{
 					"name": "Piercing Claw",
 					"entries": [
-						"{@atk mw} {@hit 8} to hit, reach 15 ft., one target. {@h}20 ({@damage 3d10 + 4}) piercing damage. If the target is a creature, the boneclaw can pull the target up to 10 feet toward itself, and the target is {@condition grappled} (escape {@dc 14}). The boneclaw has two claws. While a claw grapples a target, the claw can attack only that target."
+						"{@atk mw} {@hit 8} to hit, reach 15 ft., one target. {@h}20 ({@damage 3d10 + 4}) piercing damage. If the target is a creature, the boneclaw can pull the target up to 10 feet toward itself, and the target is {@condition 被擒} (escape {@dc 14}). The boneclaw has two claws. While a claw grapples a target, the claw can attack only that target."
 					]
 				},
 				{
@@ -3290,7 +3290,7 @@
 				{
 					"name": "Tongue",
 					"entries": [
-						"{@atk rw} {@hit 7} to hit, range 30 ft., one target. {@h}17 ({@damage 2d12 + 4}) piercing damage. If the target is Medium or smaller, it is {@condition grappled} (escape {@dc 15}), pulled up to 30 feet toward the canoloth, and is {@condition restrained} until the grapple ends. The canoloth can grapple one target at a time with its tongue."
+						"{@atk rw} {@hit 7} to hit, range 30 ft., one target. {@h}17 ({@damage 2d12 + 4}) piercing damage. If the target is Medium or smaller, it is {@condition 被擒} (escape {@dc 15}), pulled up to 30 feet toward the canoloth, and is {@condition restrained} until the grapple ends. The canoloth can grapple one target at a time with its tongue."
 					]
 				}
 			],
@@ -3413,7 +3413,7 @@
 				{
 					"name": "Tentacle",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 10 ft., one target. {@h}5 ({@damage 1d4 + 3}) bludgeoning damage plus 3 ({@damage 1d6}) piercing damage. If the target is a Large or smaller creature, it is {@condition grappled} (escape {@dc 15}). Until this grapple ends, the target is {@condition restrained}, and the choker can't use this tentacle on another target. The choker has two tentacles. If this attack is a critical hit, the target also can't breathe or speak until the grapple ends."
+						"{@atk mw} {@hit 5} to hit, reach 10 ft., one target. {@h}5 ({@damage 1d4 + 3}) bludgeoning damage plus 3 ({@damage 1d6}) piercing damage. If the target is a Large or smaller creature, it is {@condition 被擒} (escape {@dc 15}). Until this grapple ends, the target is {@condition restrained}, and the choker can't use this tentacle on another target. The choker has two tentacles. If this attack is a critical hit, the target also can't breathe or speak until the grapple ends."
 					]
 				}
 			],
@@ -8301,7 +8301,7 @@
 				{
 					"name": "Sticky Leg",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one Medium or smaller creature. {@h}The target is stuck to the steeder's leg and is {@condition grappled} until it escapes (escape {@dc 12}). The steeder can have only one creature {@condition grappled} at a time."
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one Medium or smaller creature. {@h}The target is stuck to the steeder's leg and is {@condition 被擒} until it escapes (escape {@dc 12}). The steeder can have only one creature {@condition 被擒} at a time."
 					]
 				}
 			],
@@ -8636,7 +8636,7 @@
 				{
 					"name": "Tail",
 					"entries": [
-						"{@atk mw} {@hit 16} to hit, reach 15 ft., one target. {@h}20 ({@damage 2d10 + 9}) bludgeoning damage. If the target is a Large or smaller creature, it is also {@condition grappled} (escape {@dc 24}). The {@condition grappled} target is also {@condition restrained}. Fraz-Urb'luu can grapple only one creature with his tail at a time."
+						"{@atk mw} {@hit 16} to hit, reach 15 ft., one target. {@h}20 ({@damage 2d10 + 9}) bludgeoning damage. If the target is a Large or smaller creature, it is also {@condition 被擒} (escape {@dc 24}). The {@condition 被擒} target is also {@condition restrained}. Fraz-Urb'luu can grapple only one creature with his tail at a time."
 					]
 				},
 				{
@@ -8950,7 +8950,7 @@
 				{
 					"name": "Claws",
 					"entries": [
-						"{@atk mw} {@hit 16} to hit, reach 15 ft., one target. {@h}23 ({@damage 4d6 + 9}) slashing damage. If the target is Large or smaller, it is {@condition grappled} ({@dc 24}) and is {@condition restrained} until the grapple ends. Geryon can grapple one creature at a time. If the target is already {@condition grappled} by Geryon, the target takes an extra 27 ({@damage 6d8}) slashing damage."
+						"{@atk mw} {@hit 16} to hit, reach 15 ft., one target. {@h}23 ({@damage 4d6 + 9}) slashing damage. If the target is Large or smaller, it is {@condition 被擒} ({@dc 24}) and is {@condition restrained} until the grapple ends. Geryon can grapple one creature at a time. If the target is already {@condition 被擒} by Geryon, the target takes an extra 27 ({@damage 6d8}) slashing damage."
 					]
 				},
 				{
@@ -12070,7 +12070,7 @@
 				{
 					"name": "Sticky Leg",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one Small or Tiny creature. {@h}The target is stuck to the steeder's leg and is {@condition grappled} until it escapes (escape {@dc 12}). The steeder can have only one creature {@condition grappled} at a time."
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one Small or Tiny creature. {@h}The target is stuck to the steeder's leg and is {@condition 被擒} until it escapes (escape {@dc 12}). The steeder can have only one creature {@condition 被擒} at a time."
 					]
 				}
 			],
@@ -12477,7 +12477,7 @@
 				{
 					"name": "Garrote",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target of the meazel's size or smaller. {@h}6 ({@damage 1d6 + 3}) bludgeoning damage, and the target is {@condition grappled} (escape {@dc 13} with disadvantage). Until the grapple ends, the target takes 10 ({@damage 2d6 + 3}) bludgeoning damage at the start of each of the meazel's turns. The meazel can't make weapon attacks while grappling a creature in this way."
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target of the meazel's size or smaller. {@h}6 ({@damage 1d6 + 3}) bludgeoning damage, and the target is {@condition 被擒} (escape {@dc 13} with disadvantage). Until the grapple ends, the target takes 10 ({@damage 2d6 + 3}) bludgeoning damage at the start of each of the meazel's turns. The meazel can't make weapon attacks while grappling a creature in this way."
 					]
 				},
 				{
@@ -14179,7 +14179,7 @@
 				{
 					"name": "Harpoon",
 					"entries": [
-						"{@atk rw} {@hit 7} to hit, range 50/200 ft., one target. {@h}9 ({@damage 1d10 + 4}) piercing damage, and the target is {@condition grappled} (escape {@dc 12}). While {@condition grappled} in this way, a creature's speed isn't reduced, but it can move only in directions that bring it closer to the oaken bolter. A creature takes 5 ({@damage 1d10}) slashing damage if it escapes from the grapple or if it tries and fails. As a bonus action, the oaken bolter can pull a creature {@condition grappled} by it 20 feet closer. The oaken bolter can grapple only one creature at a time."
+						"{@atk rw} {@hit 7} to hit, range 50/200 ft., one target. {@h}9 ({@damage 1d10 + 4}) piercing damage, and the target is {@condition 被擒} (escape {@dc 12}). While {@condition 被擒} in this way, a creature's speed isn't reduced, but it can move only in directions that bring it closer to the oaken bolter. A creature takes 5 ({@damage 1d10}) slashing damage if it escapes from the grapple or if it tries and fails. As a bonus action, the oaken bolter can pull a creature {@condition 被擒} by it 20 feet closer. The oaken bolter can grapple only one creature at a time."
 					]
 				},
 				{
@@ -16245,7 +16245,7 @@
 						{
 							"type": "list",
 							"items": [
-								"The target is {@condition grappled} (escape {@dc 14}) if it is a Medium or smaller creature. Until the grapple ends, the target is {@condition restrained}, and the shadow dancer can't grapple another target.",
+								"The target is {@condition 被擒} (escape {@dc 14}) if it is a Medium or smaller creature. Until the grapple ends, the target is {@condition restrained}, and the shadow dancer can't grapple another target.",
 								"The target is knocked {@condition prone}.",
 								"The target takes 22 ({@damage 4d10}) necrotic damage."
 							]
@@ -19083,7 +19083,7 @@
 				{
 					"name": "Claws",
 					"entries": [
-						"{@atk mw} {@hit 8} to hit, reach 10 ft., one target. {@h}18 ({@damage 4d6 + 4}) slashing damage. If the target is Medium or smaller, it is {@condition grappled} (escape {@dc 16}) and is {@condition restrained} until the grapple ends. While grappling a creature, the Hungry can't attack with its claws."
+						"{@atk mw} {@hit 8} to hit, reach 10 ft., one target. {@h}18 ({@damage 4d6 + 4}) slashing damage. If the target is Medium or smaller, it is {@condition 被擒} (escape {@dc 16}) and is {@condition restrained} until the grapple ends. While grappling a creature, the Hungry can't attack with its claws."
 					]
 				}
 			],
@@ -19196,14 +19196,14 @@
 				{
 					"name": "Harpoon Arm",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 60 ft., one target. {@h}21 ({@damage 4d8 + 3}) piercing damage, and the target is {@condition grappled} (escape {@dc 15}) if it is a Large or smaller creature.",
+						"{@atk mw} {@hit 7} to hit, reach 60 ft., one target. {@h}21 ({@damage 4d8 + 3}) piercing damage, and the target is {@condition 被擒} (escape {@dc 15}) if it is a Large or smaller creature.",
 						"The Lonely has two harpoon arms and can grapple up to two creatures at once."
 					]
 				},
 				{
 					"name": "Sorrowful Embrace",
 					"entries": [
-						"Each creature {@condition grappled} by the Lonely must make a {@dc 15} Wisdom saving throw. A creature takes 18 ({@damage 4d8}) psychic damage on a failed save, or half as much damage on a successful one. In either case, the Lonely pulls each creature {@condition grappled} by it up to 30 feet straight toward it."
+						"Each creature {@condition 被擒} by the Lonely must make a {@dc 15} Wisdom saving throw. A creature takes 18 ({@damage 4d8}) psychic damage on a failed save, or half as much damage on a successful one. In either case, the Lonely pulls each creature {@condition 被擒} by it up to 30 feet straight toward it."
 					]
 				}
 			],
@@ -19311,7 +19311,7 @@
 				{
 					"name": "Embrace",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}25 ({@damage 4d10 + 3}) piercing damage, and the target is {@condition grappled} (escape {@dc 14}) if it is a Medium or smaller creature. Until the grapple ends, the target is {@condition frightened}, and it takes 27 ({@damage 6d8}) psychic damage at the end of each of its turns. The Lost can embrace only one creature at a time."
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}25 ({@damage 4d10 + 3}) piercing damage, and the target is {@condition 被擒} (escape {@dc 14}) if it is a Medium or smaller creature. Until the grapple ends, the target is {@condition frightened}, and it takes 27 ({@damage 6d8}) psychic damage at the end of each of its turns. The Lost can embrace only one creature at a time."
 					]
 				}
 			],
@@ -19319,7 +19319,7 @@
 				{
 					"name": "Tightening Embrace",
 					"entries": [
-						"If the Lost takes damage while it has a creature {@condition grappled}, that creature takes 18 ({@damage 4d8}) psychic damage."
+						"If the Lost takes damage while it has a creature {@condition 被擒}, that creature takes 18 ({@damage 4d8}) psychic damage."
 					]
 				}
 			],

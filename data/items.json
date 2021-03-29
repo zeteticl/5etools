@@ -6,18 +6,19 @@
 	},
 	"item": [
 		{
-			"name": "+1 All-Purpose Tool",
+			"name": "+1 万能工具",
+			"ENG_name": "+1 All-Purpose Tool",
 			"source": "TCE",
 			"page": 119,
 			"rarity": "uncommon",
-			"reqAttune": "by an artificer",
+			"reqAttune": "奇械师",
 			"wondrous": true,
 			"bonusSpellAttack": "+1",
 			"bonusSpellSaveDc": "+1",
 			"entries": [
-				"This simple screwdriver can transform into a variety of tools; as an action, you can touch the item and transform it into any type of artisan's tool of your choice (see the \"Equipment\" chapter in the {@book Player's Handbook|PHB} for a list of {@item 工匠工具|phb}). Whatever form the tool takes, you are proficient with it.",
-				"While holding this tool, you gain a +1 bonus to the spell attack rolls and the saving throw DCs of your artificer spells.",
-				"As an action, you can focus on the tool to channel your creative forces. Choose a cantrip that you don't know from any class list. For 8 hours, you can cast that cantrip, and it counts as an artificer cantrip for you. Once this property is used, it can't be used again until the next dawn."
+				"这件简单的螺丝刀可以转换为许多种工具:以一个动作，你可以触摸这件物品，而后它会转换为一件由你选择的工匠工具(见{@book 《玩家手册》|PHB}的\"装备\"章节以查看{@item 工匠工具|PHB}的表格)。无论这件工具采取什么样的外貌，你对它都拥有熟练。",
+				"在持握这件工具时，你的奇械师法术攻击加值与法术豁免DC获得加值。加值的大小由该物件的珍稀度决定。",
+				"以一个动作，你可以凝神于这件工具以引导你的创造力。选择一项你不知道的来自任何职业的戏法。在8小时内，你可以施展那道戏法如同那是一个奇械师戏法。一旦这项特性被使用，那么在下个黎明到来之前它无法再次被使用。"
 			]
 		},
 		{
@@ -37,11 +38,12 @@
 			]
 		},
 		{
-			"name": "+1 Arcane Grimoire",
+			"name": "+1 奥法秘书",
+			"ENG_name": "+1 Arcane Grimoire",
 			"source": "TCE",
 			"page": 120,
 			"rarity": "uncommon",
-			"reqAttune": "by a wizard",
+			"reqAttune": "法师",
 			"wondrous": true,
 			"weight": 3,
 			"bonusSpellAttack": "+1",
@@ -50,16 +52,17 @@
 				"Wizard"
 			],
 			"entries": [
-				"While you are holding this leather-bound book, you can use it as a spellcasting focus for your wizard spells, and you gain a +1 bonus to spell attack rolls and to the saving throw DCs of your wizard spells.",
-				"You can use this book as a spellbook. In addition, when you use your Arcane Recovery feature, you can increase the number of spell slot levels you regain by 1."
+				"当你持握着这件皮革封皮的书籍时，你可以将它作为你法师法术的法器，且你在你的法师法术攻击加值与法术豁免DC上获得加值。加值的大小由该书的珍稀度决定。",
+				" 你可以将此书当做一本法术书。另外，当你在使用你的奥术回想特性时，你能够多恢复一环法术位。"
 			]
 		},
 		{
-			"name": "+1 Bloodwell Vial",
+			"name": "+1 血清小瓶",
+			"ENG_name": "+1 Bloodwell Vial",
 			"source": "TCE",
 			"page": 122,
 			"rarity": "uncommon",
-			"reqAttune": "by a sorcerer",
+			"reqAttune": "术士",
 			"wondrous": true,
 			"weight": 0.01,
 			"bonusSpellAttack": "+1",
@@ -68,18 +71,19 @@
 				"Sorcerer"
 			],
 			"entries": [
-				"To attune to this vial, you must place a few drops of your blood into it. The vial can't be opened while your attunement to it lasts. If your attunement to the vial ends, the contained blood turns to ash. You can use the vial as a spellcasting focus for your spells while wearing or holding it, and you gain a +1 bonus to spell attack rolls and to the saving throw DCs of your sorcerer spells.",
-				"In addition, when you roll any Hit Dice to recover hit points while you are carrying the vial, you can regain 5 sorcery points. This property of the vial can't be used again until the next dawn."
+				"为了与这个小瓶同调，你需要将你的一些鲜血滴入其中。直到你与它的同调终止之前，小瓶无法再次被开启。若你与小瓶的同调结束，瓶中之血将化为灰烬。你可以在持握或穿着这个小瓶时将它作为一件法器，同时你的术士法术攻击加值与法术豁免DC获得加值。加值由小瓶的珍稀度决定。",
+				"另外，当你使用任意数量的生命骰以恢复生命值时，你可以恢复5点术法点。该特性到下个黎明前无法再次被使用。"
 			]
 		},
 		{
-			"name": "+1 Moon Sickle",
+			"name": "+1 月镰",
+			"ENG_name": "+1 Moon Sickle",
 			"source": "TCE",
 			"page": 133,
 			"baseItem": "sickle|PHB",
 			"type": "M",
 			"rarity": "uncommon",
-			"reqAttune": "by a druid or ranger",
+			"reqAttune": "德鲁伊或游侠",
 			"weight": 2,
 			"weaponCategory": "simple",
 			"property": [
@@ -96,25 +100,26 @@
 			],
 			"weapon": true,
 			"entries": [
-				"This silver-bladed sickle glimmers softly with moonlight. While holding this magic weapon, you gain a bonus to attack and damage rolls made with it, and you gain a +1 bonus to spell attack rolls and the saving throw DCs of your druid and ranger spells. In addition, you can use the sickle as a spellcasting focus for your druid and ranger spells.",
-				"When you cast a spell that restores hit points, you can roll a {@dice d4} and add the number rolled to the amount of hit points restored, provided you are holding the sickle."
+				"这把银刃镰刀闪烁着柔和的月光。当持握这把魔法武器时，你用其发动的攻击检定和伤害掷骰，与你德鲁伊或游侠法术的法术攻击检定与法术豁免DC上具有加值。加值取决于武器的稀有度。此外，你可以用镰刀作为你施展德鲁伊或游侠法术的法器。",
+				"当你持握这把镰刀，施展一道恢复生命值的法术时，你可以骰一枚{@dice d4}并将所得结果加入回复的生命值中。"
 			]
 		},
 		{
-			"name": "+1 Rhythm-Maker's Drum",
+			"name": "+1 调律者之鼓",
+			"ENG_name": "+1 Rhythm-Maker's Drum",
 			"source": "TCE",
 			"page": 134,
 			"type": "INS",
 			"rarity": "uncommon",
-			"reqAttune": "by a bard",
+			"reqAttune": "吟游诗人",
 			"wondrous": true,
 			"weight": 3,
 			"grantsProficiency": true,
 			"bonusSpellAttack": "+1",
 			"bonusSpellSaveDc": "+1",
 			"entries": [
-				"While holding this {@item drum|PHB}, you gain a +1 bonus to spell attack rolls and to the saving throw DCs of your bard spells.",
-				"As an action, you can play the {@item drum|PHB} to regain one use of your Bardic Inspiration feature. This property of the {@item drum|PHB} can't be used again until the next dawn."
+				"当持握这张{@item drum|PHB}时，你在你诗人法术的法术攻击骰和法术豁免DC上获得加值。加值取决于鼓的稀有度。",
+				"作为一个动作，你可以演奏这张{@item drum|PHB}以恢复一次你诗人激励特性的使用次数。{@item drum|PHB}的此项属性，直到下次黎明前，不能再次使用。"
 			]
 		},
 		{
@@ -157,73 +162,78 @@
 			]
 		},
 		{
-			"name": "+2 All-Purpose Tool",
+			"name": "+2 万能工具",
+			"ENG_name": "+2 All-Purpose Tool",
 			"source": "TCE",
 			"page": 119,
 			"rarity": "rare",
-			"reqAttune": "by an artificer",
+			"reqAttune": "奇械师",
 			"wondrous": true,
 			"bonusSpellAttack": "+2",
 			"bonusSpellSaveDc": "+2",
 			"entries": [
-				"This simple screwdriver can transform into a variety of tools; as an action, you can touch the item and transform it into any type of artisan's tool of your choice (see the \"Equipment\" chapter in the {@book Player's Handbook|PHB} for a list of {@item 工匠工具|phb}). Whatever form the tool takes, you are proficient with it.",
-				"While holding this tool, you gain a +2 bonus to the spell attack rolls and the saving throw DCs of your artificer spells.",
-				"As an action, you can focus on the tool to channel your creative forces. Choose a cantrip that you don't know from any class list. For 8 hours, you can cast that cantrip, and it counts as an artificer cantrip for you. Once this property is used, it can't be used again until the next dawn."
+				"这件简单的螺丝刀可以转换为许多种工具:以一个动作，你可以触摸这件物品，而后它会转换为一件由你选择的工匠工具(见{@book 《玩家手册》|PHB}的\"装备\"章节以查看{@item 工匠工具|PHB}的表格)。无论这件工具采取什么样的外貌，你对它都拥有熟练。",
+				"在持握这件工具时，你的奇械师法术攻击加值与法术豁免DC获得加值。加值的大小由该物件的珍稀度决定。",
+				"以一个动作，你可以凝神于这件工具以引导你的创造力。选择一项你不知道的来自任何职业的戏法。在8小时内，你可以施展那道戏法如同那是一个奇械师戏法。一旦这项特性被使用，那么在下个黎明到来之前它无法再次被使用。"
 			]
 		},
 		{
-			"name": "+2 Amulet of the Devout",
+			"name": "+2 虔信护符",
+			"ENG_name": "+2 Amulet of the Devout",
 			"source": "TCE",
 			"page": 119,
 			"rarity": "rare",
-			"reqAttune": "by a cleric or paladin",
+			"reqAttune": "牧师或圣武士",
 			"wondrous": true,
 			"weight": 1,
 			"bonusSpellAttack": "+2",
 			"bonusSpellSaveDc": "+2",
 			"entries": [
-				"This amulet bears the symbol of a deity inlaid with precious stones or metals. While you wear the holy symbol, you gain a +2 bonus to spell attack rolls and the saving throw DCs of your spells.",
-				"While you wear this amulet, you can use your Channel Divinity feature without expending one of the feature's uses. Once this property is used, it can't be used again until the next dawn."
+				"这件护符载有一位神祇的圣徽，由珍稀石料或金属雕刻。当持握这枚护符时，你在你法术的法术攻击骰和法术豁免DC上获得加值，加值取决于护符的稀有度。",
+				"当你穿戴这枚护符时，你可以使用一次你的引导神力而不消耗使用次数。此属性使用后，直到下次黎明前，不能再次使用。"
 			]
 		},
 		{
-			"name": "+2 Arcane Grimoire",
+			"name": "+2 奥法秘书",
+			"ENG_name": "+2 Arcane Grimoire",
 			"source": "TCE",
 			"page": 120,
 			"rarity": "rare",
-			"reqAttune": "by a wizard",
+			"reqAttune": "法师",
 			"wondrous": true,
 			"weight": 3,
 			"bonusSpellAttack": "+2",
 			"bonusSpellSaveDc": "+2",
 			"entries": [
-				"While you are holding this leather-bound book, you can use it as a spellcasting focus for your wizard spells, and you gain a +2 bonus to spell attack rolls and to the saving throw DCs of your wizard spells.",
-				"You can use this book as a spellbook. In addition, when you use your Arcane Recovery feature, you can increase the number of spell slot levels you regain by 1."
+				"当你持握着这件皮革封皮的书籍时，你可以将它作为你法师法术的法器，且你在你的法师法术攻击加值与法术豁免DC上获得加值。加值的大小由该书的珍稀度决定。",
+				"你可以将此书当做一本法术书。另外，当你在使用你的奥术回想特性时，你能够多恢复一环法术位。"
 			]
 		},
 		{
-			"name": "+2 Bloodwell Vial",
+			"name": "+2 血清小瓶",
+			"ENG_name": "+2 Bloodwell Vial",
 			"source": "TCE",
 			"page": 122,
 			"rarity": "rare",
-			"reqAttune": "by a sorcerer",
+			"reqAttune": "术士",
 			"wondrous": true,
 			"weight": 0.01,
 			"bonusSpellAttack": "+2",
 			"bonusSpellSaveDc": "+2",
 			"entries": [
-				"To attune to this vial, you must place a few drops of your blood into it. The vial can't be opened while your attunement to it lasts. If your attunement to the vial ends, the contained blood turns to ash. You can use the vial as a spellcasting focus for your spells while wearing or holding it, and you gain a +2 bonus to spell attack rolls and to the saving throw DCs of your sorcerer spells.",
-				"In addition, when you roll any Hit Dice to recover hit points while you are carrying the vial, you can regain 5 sorcery points. This property of the vial can't be used again until the next dawn."
+				"为了与这个小瓶同调，你需要将你的一些鲜血滴入其中。直到你与它的同调终止之前，小瓶无法再次被开启。若你与小瓶的同调结束，瓶中之血将化为灰烬。你可以在持握或穿着这个小瓶时将它作为一件法器，同时你的术士法术攻击加值与法术豁免DC获得加值。加值由小瓶的珍稀度决定。",
+				"另外，当你使用任意数量的生命骰以恢复生命值时，你可以恢复5点术法点。该特性到下个黎明前无法再次被使用。"
 			]
 		},
 		{
-			"name": "+2 Moon Sickle",
+			"name": "+2 月镰",
+			"ENG_name": "+2 Moon Sickle",
 			"source": "TCE",
 			"page": 133,
 			"baseItem": "sickle|PHB",
 			"type": "M",
 			"rarity": "rare",
-			"reqAttune": "by a druid or ranger",
+			"reqAttune": "德鲁伊或游侠",
 			"weight": 2,
 			"weaponCategory": "simple",
 			"property": [
@@ -236,25 +246,26 @@
 			"bonusSpellSaveDc": "+2",
 			"weapon": true,
 			"entries": [
-				"This silver-bladed sickle glimmers softly with moonlight. While holding this magic weapon, you gain a bonus to attack and damage rolls made with it, and you gain a +2 bonus to spell attack rolls and the saving throw DCs of your druid and ranger spells. In addition, you can use the sickle as a spellcasting focus for your druid and ranger spells.",
-				"When you cast a spell that restores hit points, you can roll a {@dice d4} and add the number rolled to the amount of hit points restored, provided you are holding the sickle."
+				"这把银刃镰刀闪烁着柔和的月光。当持握这把魔法武器时，你用其发动的攻击检定和伤害掷骰，与你德鲁伊或游侠法术的法术攻击检定与法术豁免DC上具有加值。加值取决于武器的稀有度。此外，你可以用镰刀作为你施展德鲁伊或游侠法术的法器。",
+				"当你持握这把镰刀，施展一道恢复生命值的法术时，你可以骰一枚{@dice d4}并将所得结果加入回复的生命值中。"
 			]
 		},
 		{
-			"name": "+2 Rhythm-Maker's Drum",
+			"name": "+2 调律者之鼓",
+			"ENG_name": "+2 Rhythm-Maker's Drum",
 			"source": "TCE",
 			"page": 134,
 			"type": "INS",
 			"rarity": "rare",
-			"reqAttune": "by a bard",
+			"reqAttune": "吟游诗人",
 			"wondrous": true,
 			"weight": 3,
 			"grantsProficiency": true,
 			"bonusSpellAttack": "+2",
 			"bonusSpellSaveDc": "+2",
 			"entries": [
-				"While holding this {@item drum|PHB}, you gain a +2 bonus to spell attack rolls and to the saving throw DCs of your bard spells.",
-				"As an action, you can play the {@item drum|PHB} to regain one use of your Bardic Inspiration feature. This property of the {@item drum|PHB} can't be used again until the next dawn."
+				"当持握这张{@item drum|PHB}时，你在你诗人法术的法术攻击骰和法术豁免DC上获得加值。加值取决于鼓的稀有度。",
+				"作为一个动作，你可以演奏这张{@item drum|PHB} 以恢复一次你诗人激励特性的使用次数。{@item drum|PHB}的此项属性，直到下次黎明前，不能再次使用。"
 			]
 		},
 		{
@@ -278,91 +289,97 @@
 			]
 		},
 		{
-			"name": "+2 Wand of the War Mage",
+			"name": "+2 战法师魔杖",
+			"ENG_name": "+2 Wand of the War Mage",
 			"source": "DMG",
 			"page": 212,
 			"srd": true,
 			"type": "WD",
 			"tier": "major",
 			"rarity": "rare",
-			"reqAttune": "by a spellcaster",
+			"reqAttune": "施法者",
 			"weight": 1,
 			"bonusSpellAttack": "+2",
 			"entries": [
-				"While you are holding this wand, you gain a +2 bonus to spell attack rolls. In addition, you ignore half cover when making a spell attack."
+				"当你持握这把魔杖时，你在法术攻击检定中获得+2加值。此外，你在进行法术攻击时忽视半掩护。"
 			],
 			"lootTables": [
 				"魔法物品表G"
 			]
 		},
 		{
-			"name": "+3 All-Purpose Tool",
+			"name": "+3 万能工具",
+			"ENG_name": "+3 All-Purpose Tool",
 			"source": "TCE",
 			"page": 119,
 			"rarity": "very rare",
-			"reqAttune": "by an artificer",
+			"reqAttune": "奇械师",
 			"wondrous": true,
 			"bonusSpellAttack": "+3",
 			"bonusSpellSaveDc": "+3",
 			"entries": [
-				"This simple screwdriver can transform into a variety of tools; as an action, you can touch the item and transform it into any type of artisan's tool of your choice (see the \"Equipment\" chapter in the {@book Player's Handbook|PHB} for a list of {@item 工匠工具|phb}). Whatever form the tool takes, you are proficient with it.",
-				"While holding this tool, you gain a +3 bonus to the spell attack rolls and the saving throw DCs of your artificer spells.",
-				"As an action, you can focus on the tool to channel your creative forces. Choose a cantrip that you don't know from any class list. For 8 hours, you can cast that cantrip, and it counts as an artificer cantrip for you. Once this property is used, it can't be used again until the next dawn."
+				"这件简单的螺丝刀可以转换为许多种工具:以一个动作，你可以触摸这件物品，而后它会转换为一件由你选择的工匠工具(见{@book 《玩家手册》|PHB}的\"装备\"章节以查看{@item 工匠工具|PHB}的表格)。无论这件工具采取什么样的外貌，你对它都拥有熟练。",
+				"在持握这件工具时，你的奇械师法术攻击加值与法术豁免DC获得加值。加值的大小由该物件的珍稀度决定。",
+				"以一个动作，你可以凝神于这件工具以引导你的创造力。选择一项你不知道的来自任何职业的戏法。在8小时内，你可以施展那道戏法如同那是一个奇械师戏法。一旦这项特性被使用，那么在下个黎明到来之前它无法再次被使用。"
 			]
 		},
 		{
-			"name": "+3 Amulet of the Devout",
+			"name": "+3 虔信护符",
+			"ENG_name": "+3 Amulet of the Devout",
 			"source": "TCE",
 			"page": 119,
 			"rarity": "very rare",
-			"reqAttune": "by a cleric or paladin",
+			"reqAttune": "牧师或圣武士",
 			"wondrous": true,
 			"weight": 1,
 			"bonusSpellAttack": "+3",
 			"bonusSpellSaveDc": "+3",
 			"entries": [
-				"This amulet bears the symbol of a deity inlaid with precious stones or metals. While you wear the holy symbol, you gain a +3 bonus to spell attack rolls and the saving throw DCs of your spells.",
-				"While you wear this amulet, you can use your Channel Divinity feature without expending one of the feature's uses. Once this property is used, it can't be used again until the next dawn."
+				"这件护符载有一位神祇的圣徽，由珍稀石料或金属雕刻。当持握这枚护符时，你在你法术的法术攻击骰和法术豁免DC上获得加值，加值取决于护符的稀有度。",
+				"当你穿戴这枚护符时，你可以使用一次你的引导神力而不消耗使用次数。此属性使用后，直到下次黎明前，不能再次使用。"
 			]
 		},
 		{
-			"name": "+3 Arcane Grimoire",
+			"name": "+3 奥法秘书",
+			"ENG_name": "+3 Arcane Grimoire",
 			"source": "TCE",
 			"page": 120,
 			"rarity": "very rare",
-			"reqAttune": "by a wizard",
+			"reqAttune": "法师",
 			"wondrous": true,
 			"weight": 3,
 			"bonusSpellAttack": "+3",
 			"bonusSpellSaveDc": "+3",
 			"entries": [
-				"While you are holding this leather-bound book, you can use it as a spellcasting focus for your wizard spells, and you gain a +3 bonus to spell attack rolls and to the saving throw DCs of your wizard spells.",
-				"You can use this book as a spellbook. In addition, when you use your Arcane Recovery feature, you can increase the number of spell slot levels you regain by 1."
+				"当你持握着这件皮革封皮的书籍时，你可以将它作为你法师法术的法器，且你在你的法师法术攻击加值与法术豁免DC上获得加值。加值的大小由该书的珍稀度决定。",
+				"你可以将此书当做一本法术书。另外，当你在使用你的奥术回想特性时，你能够多恢复一环法术位。"
 			]
 		},
 		{
-			"name": "+3 Bloodwell Vial",
+			"name": "+3 血清小瓶",
+			"ENG_name": "+3 Bloodwell Vial",
 			"source": "TCE",
 			"page": 122,
 			"rarity": "very rare",
-			"reqAttune": "by a sorcerer",
+			"reqAttune": "术士",
 			"wondrous": true,
 			"weight": 0.01,
 			"bonusSpellAttack": "+3",
 			"bonusSpellSaveDc": "+3",
 			"entries": [
-				"To attune to this vial, you must place a few drops of your blood into it. The vial can't be opened while your attunement to it lasts. If your attunement to the vial ends, the contained blood turns to ash. You can use the vial as a spellcasting focus for your spells while wearing or holding it, and you gain a +3 bonus to spell attack rolls and to the saving throw DCs of your sorcerer spells.",
-				"In addition, when you roll any Hit Dice to recover hit points while you are carrying the vial, you can regain 5 sorcery points. This property of the vial can't be used again until the next dawn."
+				"为了与这个小瓶同调，你需要将你的一些鲜血滴入其中。直到你与它的同调终止之前，小瓶无法再次被开启。若你与小瓶的同调结束，瓶中之血将化为灰烬。你可以在持握或穿着这个小瓶时将它作为一件法器，同时你的术士法术攻击加值与法术豁免DC获得加值。加值由小瓶的珍稀度决定。",
+				"另外，当你使用任意数量的生命骰以恢复生命值时，你可以恢复5点术法点。该特性到下个黎明前无法再次被使用。"
 			]
 		},
 		{
-			"name": "+3 Moon Sickle",
+			"name": "+3 月镰",
+			"ENG_name": "+3 Moon Sickle",
 			"source": "TCE",
 			"page": 133,
 			"baseItem": "sickle|PHB",
 			"type": "M",
 			"rarity": "very rare",
-			"reqAttune": "by a druid or ranger",
+			"reqAttune": "德鲁伊或游侠",
 			"weight": 2,
 			"weaponCategory": "simple",
 			"property": [
@@ -375,25 +392,26 @@
 			"bonusSpellSaveDc": "+3",
 			"weapon": true,
 			"entries": [
-				"This silver-bladed sickle glimmers softly with moonlight. While holding this magic weapon, you gain a bonus to attack and damage rolls made with it, and you gain a +3 bonus to spell attack rolls and the saving throw DCs of your druid and ranger spells. In addition, you can use the sickle as a spellcasting focus for your druid and ranger spells.",
-				"When you cast a spell that restores hit points, you can roll a {@dice d4} and add the number rolled to the amount of hit points restored, provided you are holding the sickle."
+				"这把银刃镰刀闪烁着柔和的月光。当持握这把魔法武器时，你用其发动的攻击检定和伤害掷骰，与你德鲁伊或游侠法术的法术攻击检定与法术豁免DC上具有加值。加值取决于武器的稀有度。此外，你可以用镰刀作为你施展德鲁伊或游侠法术的法器。",
+				"当你持握这把镰刀，施展一道恢复生命值的法术时，你可以骰一枚{@dice d4}并将所得结果加入回复的生命值中。"
 			]
 		},
 		{
-			"name": "+3 Rhythm-Maker's Drum",
+			"name": "+3 调律者之鼓",
+			"ENG_name": "+3 Rhythm-Maker's Drum",
 			"source": "TCE",
 			"page": 134,
 			"type": "INS",
 			"rarity": "very rare",
-			"reqAttune": "by a bard",
+			"reqAttune": "吟游诗人",
 			"wondrous": true,
 			"weight": 3,
 			"grantsProficiency": true,
 			"bonusSpellAttack": "+3",
 			"bonusSpellSaveDc": "+3",
 			"entries": [
-				"While holding this {@item drum|PHB}, you gain a +3 bonus to spell attack rolls and to the saving throw DCs of your bard spells.",
-				"As an action, you can play the {@item drum|PHB} to regain one use of your Bardic Inspiration feature. This property of the {@item drum|PHB} can't be used again until the next dawn."
+				"当持握这张{@item drum|PHB}时，你在你诗人法术的法术攻击骰和法术豁免DC上获得加值。加值取决于鼓的稀有度。",
+				"作为一个动作，你可以演奏这张{@item drum|PHB}以恢复一次你诗人激励特性的使用次数。{@item drum|PHB}的此项属性，直到下次黎明前，不能再次使用。"
 			]
 		},
 		{
@@ -425,7 +443,7 @@
 			"type": "WD",
 			"tier": "major",
 			"rarity": "very rare",
-			"reqAttune": "by a spellcaster",
+			"reqAttune": "施法者",
 			"weight": 1,
 			"bonusSpellAttack": "+3",
 			"entries": [
@@ -569,20 +587,21 @@
 			"ENG_name": "Acid (vial)"
 		},
 		{
-			"name": "Acid Absorbing Tattoo",
+			"name": "强酸吸收刺青",
+			"ENG_name": "Acid Absorbing Tattoo",
 			"source": "TCE",
 			"page": 119,
 			"resist": [
-				"acid"
+				"强酸"
 			],
-			"detail1": "green",
+			"detail1": "绿色",
 			"rarity": "very rare",
 			"reqAttune": true,
 			"wondrous": true,
 			"tattoo": true,
 			"hasRefs": true,
 			"entries": [
-				"{#itemEntry Absorbing Tattoo|TCE}"
+				"{#itemEntry 吸收刺青|TCE}"
 			]
 		},
 		{
@@ -717,11 +736,12 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Alchemical Compendium",
+			"name": "炼金总纲",
+			"ENG_name": "Alchemical Compendium",
 			"source": "TCE",
 			"page": 119,
 			"rarity": "rare",
-			"reqAttune": "by a wizard",
+			"reqAttune": "法师",
 			"wondrous": true,
 			"weight": 3,
 			"recharge": "dawn",
@@ -730,14 +750,14 @@
 				"Wizard"
 			],
 			"entries": [
-				"Acrid odors cling to this stained, heavy volume. The book's metal fittings are copper, iron, lead, silver, and gold, some frozen mid-transition from one metal to another. When found, the book contains the following spells: {@spell 变巨/缩小术}, {@spell 羽落术}, {@spell 石化术}, {@spell 气化形体}, {@spell 魔化武器}, and {@spell 变形术}. It functions as a spellbook for you.",
-				"While you are holding the book, you can use it as a spellcasting focus for your wizard spells.",
-				"The book has 3 charges, and it regains {@dice 1d3} expended charges daily at dawn. You can use the charges in the following ways while holding it:",
+				"这本褪色、厚重的订本上附着有辛辣的刺鼻气息。这本书的金属拟合件由能够在铜、铁、铅、银与金子这些金属间转换的的凝固中间物质组成。这本书在被找到时，包含了以下法术： {@spell 变巨/缩小术}, {@spell 羽落术}, {@spell 石化术}, {@spell 气化形体}, {@spell 魔化武器} 和 {@spell 变形术}。你可以将其作为法术书。",
+				"当你持握这本书时，你可以将其作为你法师法术的法器。",
+				"书具有3发充能，且每天黎明时恢复 {@dice 1d3} 发已消耗的充能。你持握它时，可以通过以下方式消耗充能：",
 				{
 					"type": "list",
 					"items": [
-						"If you spend 1 minute studying the book, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book. The new spell must be of the transmutation school.",
-						"As an action, you can touch a nonmagical object that isn't being worn or carried and spend a number of charges to transform the target into another object. For 1 charge, the object can be no larger than 1 foot on a side. You can spend additional charges to increase the maximum dimensions by 2 feet per charge. The new object must have a gold value equal to or less than the original."
+						"如果你花费1分钟时间研究这本书，你可以消耗1发充能来将你的一道已准备法术替换为书中的另一道法术。新法术必须是变化学派的法术。",
+						"作为一个动作，你可以触摸一件未被着装或携带的非魔法物件，并消耗一定数量的充能将其转换为另一个物件。以1发充能变化时，该物件的边长不能超过1尺。你可以使用更多的充能来使其上限尺寸增加每充能2英尺。新物件的价值必须比原物件低或者相等。"
 					]
 				}
 			],
@@ -1539,27 +1559,29 @@
 			]
 		},
 		{
-			"name": "Astral Shard",
+			"name": "星界碎晶",
+			"ENG_name": "Astral Shard",
 			"source": "TCE",
 			"page": 120,
 			"rarity": "rare",
-			"reqAttune": "by a sorcerer",
+			"reqAttune": "术士",
 			"wondrous": true,
 			"weight": 1,
 			"focus": [
 				"Sorcerer"
 			],
 			"entries": [
-				"This crystal is a solidified shard of the Astral Plane, swirling with silver mist. As an action, you can attach the shard to a Tiny object (such as a weapon or a piece of jewelry) or detach it. It falls off if your attunement to it ends. You can use the shard as a spellcasting focus for your sorcerer spells while you hold or wear it.",
-				"When you use a Metamagic option on a spell while you are holding or wearing the shard, immediately after casting the spell you can teleport to an unoccupied space you can see within 30 feet of you."
+				"这块水晶是一块来自星界位面的坚硬碎晶，银色的迷雾在其表面上流转。作为一个动作，你可以将碎晶附上一件微型物件（如一把武器或一块珠宝）或摘下。当同调结束时它会掉落下来。当你持握或穿戴碎晶时，你可以将其作为施展术士法术的法器使用。",
+				"当你持握或穿戴碎晶，并在一道法术上应用一种超魔法选项时，可以在施展法术后立即传送到至多30尺内一个你能看见且未被占据的位置。"
 			]
 		},
 		{
-			"name": "Astromancy Archive",
+			"name": "星卜编集",
+			"ENG_name": "Astromancy Archive",
 			"source": "TCE",
 			"page": 120,
 			"rarity": "rare",
-			"reqAttune": "by a wizard",
+			"reqAttune": "法师",
 			"wondrous": true,
 			"weight": 3,
 			"recharge": "dawn",
@@ -1568,14 +1590,14 @@
 				"Wizard"
 			],
 			"entries": [
-				"This brass disc of articulated, concentric rings unfolds into an armillary sphere. As a bonus action, you can unfold it into the sphere or back into a disc. When found, it contains the following spells, which are wizard spells for you while you are attuned to it: {@spell 卜筮}, {@spell 预言术}, {@spell 寻找捷径}, {@spell 预视术}, {@spell 生物定位术}, and {@spell 物品定位术}. It functions as a spellbook for you, with spells encoded on the rings.",
-				"While you are holding the archive, you can use it as a spellcasting focus for your wizard spells.",
-				"The archive has 3 charges, and it regains {@dice 1d3} expended charges daily at dawn. You can use the charges in the following ways while holding it:",
+				"这个以铜圆盘为铰接件的同心环能够展开为一只浑天仪。以一个附赠动作，你可以将其展开为浑天仪或使其收回成一个圆盘。这本书在被找到时，包含了以下法术，且在你与其同调后对你视为法师法术： {@spell 卜筮}, {@spell 预言术}, {@spell 寻找捷径}, {@spell 预视术}, {@spell 生物定位术} 和 {@spell 物品定位术}。你可以将其作为法术书，法术被编刻在其圆环上。",
+				"当你持握编集时，你可以将其作为你法师法术的法器。",
+				"编集具有3发充能，且每天黎明时恢复 {@dice 1d3} 发已消耗的充能。你持握它时，可以通过以下方式消耗充能：",
 				{
 					"type": "list",
 					"items": [
-						"If you spend 1 minute studying the archive, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the archive. The new spell must be of the divination school.",
-						"When a creature you can see within 30 feet of you makes an attack roll, an ability check, or a saving throw, you can use your reaction to expend 1 charge and force the creature to roll a {@dice d4} and apply the number rolled as a bonus or penalty (your choice) to the original roll. You can do this after you see the roll but before its effects are applied."
+						"如果你花费1分钟时间研究此编集，你可以消耗1发充能来将你的一道已准备法术替换为编集中的另一道法术。新法术必须是预言学派的法术。",
+						"当一个30内你可见的生物进行一次攻击检定、属性检定或豁免检定时，你可以使用你的反应并消耗1发充能使那个生物骰一个d4并将其数值作为原掷骰的加值或减值（由你选择）。你可以在看见掷骰结束，但在宣布结果之前使用该反应。"
 					]
 				}
 			],
@@ -1589,11 +1611,12 @@
 			]
 		},
 		{
-			"name": "Atlas of Endless Horizons",
+			"name": "寰宇图纂",
+			"ENG_name": "Atlas of Endless Horizons",
 			"source": "TCE",
 			"page": 120,
 			"rarity": "rare",
-			"reqAttune": "by a wizard",
+			"reqAttune": "法师",
 			"wondrous": true,
 			"weight": 3,
 			"recharge": "dawn",
@@ -1602,14 +1625,14 @@
 				"Wizard"
 			],
 			"entries": [
-				"This thick book is bound in dark leather, crisscrossed with inlaid silver lines suggesting a map or chart. When found, the book contains the following spells, which are wizard spells for you while you are attuned to the book: {@spell 秘法之门}, {@spell 次元门}, {@spell 异界之门}, {@spell 迷踪步}, {@spell 异界发送}, {@spell 发送法阵}, and {@spell 回返真言}. It functions as a spellbook for you.",
-				"While you are holding the book, you can use it as a spellcasting focus for your wizard spells.",
-				"The book has 3 charges, and it regains {@dice 1d3} expended charges daily at dawn. You can use the charges in the following ways while holding it:",
+				"这本厚重的书被包在暗色的皮革中，皮革上纹有描绘了一张地图或海图的交错银线。这本书在被找到时，包含了以下法术，且在你与其同调后对你视为法师法术： {@spell 秘法之门}, {@spell 次元门}, {@spell 异界之门}, {@spell 迷踪步}, {@spell 异界发送}, {@spell 发送法阵} 和 {@spell 回返真言}。你可以将其作为法术书。",
+				"当你持握这本书时，你可以将其作为你法师法术的法器。",
+				"该书具有3发充能，且每天黎明时恢复 {@dice 1d3} 发已消耗的充能。你持握它时，可以通过以下方式消耗充能：",
 				{
 					"type": "list",
 					"items": [
-						"If you spend 1 minute studying the book, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book. The new spell must be of the conjuration school.",
-						"When you are hit by an attack, you can use your reaction to expend 1 charge to teleport up to 10 feet to an unoccupied space you can see. If your new position is out of range of the attack, it misses you."
+						"如果你花费1分钟时间研究这本书，你可以消耗1发充能来将你的一道已准备法术替换为书中的另一道法术。新法术必须是咒法学派的法术。",
+						"当你被一次攻击命中时，你可以使用你的反应并消耗1发充能，传送到10尺内一个你能看见且未被占据的位置。若你的新位置在攻击的攻击距离以外，那么此次攻击失手。"
 					]
 				}
 			],
@@ -1842,7 +1865,8 @@
 			"ENG_name": "Azurite"
 		},
 		{
-			"name": "Baba Yaga's Mortar and Pestle",
+			"name": "芭芭·雅嘎的臼与杵",
+			"ENG_name": "Baba Yaga's Mortar and Pestle",
 			"source": "TCE",
 			"page": 121,
 			"rarity": "artifact",
@@ -1852,79 +1876,88 @@
 			"recharge": "dawn",
 			"charges": 12,
 			"entries": [
-				"The creations of the immortal hag Baba Yaga defy the laws of mortal magic. Among the notorious implements that cement her legend on countless worlds are the artifacts that propel her through the planes: Baba Yaga's Mortar and Pestle. These signature tools of Baba Yaga are a single artifact for purposes of attunement. Should the two objects become separated, the pestle appears next to the mortar at the next dawn.",
+				"不朽鬼婆芭芭·雅嘎的造物违逆了凡间魔法的法则。在她所有臭名昭著的劳什子里，让她在无尽的诸界中巩固传奇恶名的神器乃是能够助她穿越位面的：芭芭·雅嘎的臼与杵。这两件芭芭·雅嘎特色鲜明的工具各是一件需要同调的单一神器。若两物件分开，那么杵会在下一个黎明出现在臼旁边。",
 				{
 					"type": "entries",
-					"name": "Random Properties",
+					"name": "随机属性",
+					"ENG_name": "Random Properties",
 					"entries": [
-						"This artifact has the following random properties, which you can determine by rolling on the tables in the \"Artifacts\" section of the {@book Dungeon Master's Guide|DMG}:",
+						"这件神器具有以下随机属性，你可以通过对着{@book 《城主指南》|DMG}中的\"神器\"章节掷骰以决定它们:",
 						{
 							"type": "list",
 							"items": [
-								"2 {@table Artifact Properties; Minor Beneficial Properties|dmg|minor beneficial} properties",
-								"1 {@table Artifact Properties; Major Beneficial Properties|dmg|major beneficial} property",
-								"1 {@table Artifact Properties; Minor Detrimental Properties|dmg|minor detrimental} property"
+								"两项 {@table 神器属性; 弱效增益属性|dmg|弱效增益} 属性",
+								"一项 {@table 神器属性; 弱效减益属性|dmg|弱效减益} 属性",
+								"一项 {@table 神器属性; 强效减益属性|dmg|强效减益} 属性"
 							]
 						}
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Properties of the Mortar",
+					"name": "臼的属性",
+					"ENG_name": "Properties of the Mortar",
 					"entries": [
-						"The mortar is a Tiny wooden bowl. However, the mortar increases in size to accommodate anything you place inside, expanding-if there's enough space-up to Large size, meaning it can hold even a Large creature."
+						"臼是一个微型的小木碗。然而，臼的大小会随着你放进去的任何需要它容纳的东西而扩展、增大至其上限大型——如果它周围的空间足够的话。这意味着它甚至装得下一个大型生物。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Properties of the Pestle",
+					"name": "杵的属性",
+					"ENG_name": "Properties of the Pestle",
 					"entries": [
-						"The pestle is a 6-inch-long, worn wooden tool. Once during your turn while you are holding the pestle, you can extend it into a quarterstaff or shrink it back into a pestle (no action required). As a quarterstaff, the pestle is a magic weapon that grants a +3 bonus to attack and damage rolls made with it.",
-						"The pestle has 12 charges. When you hit with a melee attack using the pestle, you can expend up to 3 of its charges to deal an extra {@damage 1d8} force damage for each charge expended. The pestle regains all expended charges daily at dawn."
+						"杵是一根六英尺长的破木棍。每回合一次，当你持握着杵时，你可以使其伸长至一根长棍或使其缩回一根杵（无需动作）。作为长棍时，杵是一个在攻击掷骰与伤害掷骰上有+3加值的魔法武器。",
+						"杵有12发充能。当你使用杵并以一次近战攻击命中时，你可以消耗至多3发充能以额外造成每发充能 {@damage 1d8} 力场伤害。杵在每天黎明时恢复所有已消耗的充能。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Perfect Tools",
+					"name": "完美工具",
+					"ENG_name": "Perfect Tools",
 					"entries": [
-						"While holding the mortar and pestle, you can use your action to say the name of any nonmagical plant, mineral, or fluid and an amount of the material worth 10 gp or less. The mortar instantly fills with the desired amount of that material. Once you use this action, you can't do so again until you finish a short or long rest.",
-						"You can also use the artifact as {@item 炼金工具|PHB}, {@item 酿酒工具|PHB}, {@item 厨师工具|PHB}, an {@item 草药工具|PHB}, and a {@item 制毒工具|PHB}. You have advantage on any check you make using the artifact as one of these tools."
+						"当你同时持握着杵与臼时，你可以用动作来说出任何一种非魔法的植物、矿物或液体的名字，这些材料的价格需为10gp或更低。臼立刻会充满指定价格数的那种材料。使用后，直到完成一次长休前，你无法再次使用这个动作。",
+						"你还可以将这件神器作为 {@item 炼金工具|PHB}, {@item 酿酒工具|PHB}, {@item 厨师工具|PHB}, {@item 草药工具|PHB}和 {@item 制毒工具|PHB}.你在将这件神器作为以上几种工具使用时所进行的任何检定上具有优势。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Primal Parts",
+					"name": "原初分解",
+					"ENG_name": "Primal Parts",
 					"entries": [
-						"As an action while the pestle and the mortar is within 5 feet of you, you can command the pestle to grind. For the next minute, or until you use your action to verbally command it to stop, the pestle moves on its own, grinding the contents of the mortar into a mush or fine powder that's equally useful for cooking or alchemy. At the start of each of your turns, whatever is in the mortar takes {@damage 4d10} force damage. If this reduces the target's hit points to 0, the target is reduced to powder, pulp, or paste, as appropriate. Only magic items are unaffected. If you wish, when the pestle stops, you can have the mortar separate its contents-like powdered bone, crushed herbs, pulped organs-into separate piles."
+						"当杵和臼都在你的5尺之内时，作为一个动作，你可以命令杵开始捣碎作业。杵会自行行动，将臼中容纳的物品捣成均能够同等用于烹调或炼金的浆糊或精细粉末，持续1分钟或你用一个动作来口头命令它停止。在你的回合开始时，任何处于臼内的东西会受到{@damage 4d10}力场伤害。若目标生命值因此降至0，则其会被捣成适宜的粉末、肉浆或者浆糊。只有魔法物品不受影响。若你愿意，你可以在杵停止工作时让臼把它的内容物分开成不同堆，比如骨粉和骨粉放在一起，药末与药末堆在一起，尚在搏动的机体器官堆在一起。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Traverse the Night",
+					"name": "黑夜穿梭",
+					"ENG_name": "Traverse the Night",
 					"entries": [
-						"If you are holding the pestle while you are inside the mortar, you can use your action to verbally command the mortar to travel to a specific place or creature.",
-						"You don't need to know where your destination is, but it must be a specific destination-not just the nearest river or a red dragon's lair. If the stated destination is within 1,000 miles of you, the mortar lifts into the air and vanishes. You and any creatures in the mortar travel through a dreamlike sky, with hazy reflections of the world passing by below. Creatures might see images of you streaking through the sky between your point of origin and the destination. You arrive at the location 1 hour later or, if it is night, 1 minute later."
+						"若你在臼内持握着杵，你可以用动作发出口头命令，让臼穿穿梭到一处特定的地点或一个特定的生物处。",
+						"你不需要知道你的目标在什么位置，但你的目标必须是一个特定的位置——不可以仅仅是“最近的河流”或“一条红龙的巢穴”。若被选定的目标在你的1000英里内，臼就会飞向空中而后消失。你与任何处于臼内的生物会穿过一道梦境般的天穹，朦胧的世界映像在你的下方闪过。其他生物可能看见你在夜空中穿梭于你的原点与目标位置之间的影像。你会在1小时后，或在夜间1分钟后到达目的地。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Bones Know Their Home",
+					"name": "死马识途",
+					"ENG_name": "Bones Know Their Home",
 					"entries": [
-						"When you command the mortar to travel, you can instead throw out the dust or paste of something ground by the mortar and name a location on a different plane of existence or a different world on the Material Plane. If that material came from a creature native to the named plane or world, the mortar travels through an empty night sky to an unoccupied space at that destination, arriving in 1 minute."
+						"当你在命令臼穿行之时，你可以转而掷出一把附着在臼底的粉末或肉浆，然后说出一个其他存在位面的位置或物质位面的一个其他世界。若那材料来自于那个位面或世界的一个生物，那么臼上的旅行者会穿过一道纯净的夜空，而后在一分钟内出现在目标位置的一处未被占据的位置。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Destroying the Mortar and Pestle",
+					"name": "摧毁臼和杵",
+					"ENG_name": "Destroying the Mortar and Pestle",
 					"entries": [
-						"The mortar and pestle are destroyed if they are crushed underfoot by the {@i Dancing Hut of Baba Yaga} or by Baba Yaga herself."
+						"若杵和臼被 {@i Dancing Hut of Baba Yaga} 或本鬼婆踩在底下并被挤压，它们会被摧毁。"
 					]
 				}
 			],
 			"hasFluffImages": true
 		},
 		{
-			"name": "Baba Yaga's Pestle",
+			"name": "芭芭·雅嘎的杵",
+			"ENG_name": "Baba Yaga's Pestle",
 			"source": "TCE",
 			"page": 121,
 			"baseItem": "quarterstaff|PHB",
@@ -1944,8 +1977,8 @@
 			"charges": 12,
 			"weapon": true,
 			"entries": [
-				"The pestle is a 6-inch-long, worn wooden tool. Once during your turn while you are holding the pestle, you can extend it into a quarterstaff or shrink it back into a pestle (no action required). As a quarterstaff, the pestle is a magic weapon that grants a +3 bonus to attack and damage rolls made with it.",
-				"The pestle has 12 charges. When you hit with a melee attack using the pestle, you can expend up to 3 of its charges to deal an extra {@damage 1d8} force damage for each charge expended. The pestle regains all expended charges daily at dawn."
+				"杵是一根六英尺长的破木棍。每回合一次，当你持握着杵时，你可以使其伸长至一根长棍或使其缩回一根杵（无需动作）。作为长棍时，杵是一个在攻击掷骰与伤害掷骰上有+3加值的魔法武器。",
+				"杵有12发充能。当你使用杵并以一次近战攻击命中时，你可以消耗至多3发充能以额外造成每发充能{@damage 1d8}力场伤害。杵在每天黎明时恢复所有已消耗的充能。"
 			]
 		},
 		{
@@ -2753,7 +2786,8 @@
 			]
 		},
 		{
-			"name": "Barrier Tattoo (Large)",
+			"name": "屏障刺青（大）",
+			"ENG_name": "Barrier Tattoo (Large)",
 			"source": "TCE",
 			"page": 122,
 			"rarity": "very rare",
@@ -2761,26 +2795,28 @@
 			"wondrous": true,
 			"tattoo": true,
 			"entries": [
-				"Produced by a special needle, this magic tattoo depicts protective imagery and uses ink that resembles liquid metal.",
+				"该魔法刺青用一根特殊的针制作，用液态金属般的墨水绘有代表防护的图案。",
 				{
 					"type": "entries",
-					"name": "Tattoo Attunement",
+					"name": "刺青同调",
+					"ENG_name": "Tattoo Attunement",
 					"entries": [
-						"To attune to this item, you hold the needle to your skin where you want the tattoo to appear, pressing the needle there throughout the attunement process. When the attunement is complete, the needle turns into the ink that becomes the tattoo, which appears on the skin.",
-						"If your attunement to the tattoo ends, the tattoo vanishes, and the needle reappears in your space."
+						"同调此物品时，你需要将针持握，并抵在你想要让刺青出现的那处皮肤上。当同调完成时，针头会化为墨水再变成刺青。若你与刺青的同调结束，刺青会消失，针头会再次出现在你的位置中。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Protection",
+					"name": "防护",
+					"ENG_name": "Protection",
 					"entries": [
-						"While you aren't wearing armor, the tattoo grants you an Armor Class of 18. You can use a shield and still gain this benefit."
+						"当你没有穿戴护甲的时候，刺青会给予你18的护甲等级。你装备盾牌时，仍可以获得刺青的增益。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Barrier Tattoo (Medium)",
+			"name": "屏障刺青（中）",
+			"ENG_name": "Barrier Tattoo (Medium)",
 			"source": "TCE",
 			"page": 122,
 			"rarity": "rare",
@@ -2788,26 +2824,28 @@
 			"wondrous": true,
 			"tattoo": true,
 			"entries": [
-				"Produced by a special needle, this magic tattoo depicts protective imagery and uses ink that resembles liquid metal.",
+				"该魔法刺青用一根特殊的针制作，用液态金属般的墨水绘有代表防护的图案。",
 				{
 					"type": "entries",
-					"name": "Tattoo Attunement",
+					"name": "刺青同调",
+					"ENG_name": "Tattoo Attunement",
 					"entries": [
-						"To attune to this item, you hold the needle to your skin where you want the tattoo to appear, pressing the needle there throughout the attunement process. When the attunement is complete, the needle turns into the ink that becomes the tattoo, which appears on the skin.",
-						"If your attunement to the tattoo ends, the tattoo vanishes, and the needle reappears in your space."
+						"同调此物品时，你需要将针持握，并抵在你想要让刺青出现的那处皮肤上。当同调完成时，针头会化为墨水再变成刺青。若你与刺青的同调结束，刺青会消失，针头会再次出现在你的位置中。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Protection",
+					"name": "防护",
+					"ENG_name": "Protection",
 					"entries": [
-						"While you aren't wearing armor, the tattoo grants you an Armor Class of 15 + your Dexterity modifier (maximum of +2). You can use a shield and still gain this benefit."
+						"当你没有穿戴护甲的时候，刺青会给予你15+敏捷调整值（最大2）的护甲等级。你装备盾牌时，仍可以获得刺青的增益。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Barrier Tattoo (Rare)",
+			"name": "屏障刺青（珍惜）",
+			"ENG_name": "Barrier Tattoo (Rare)",
 			"source": "UA2020SpellsAndMagicTattoos",
 			"page": 9,
 			"rarity": "rare",
@@ -2815,19 +2853,20 @@
 			"wondrous": true,
 			"tattoo": true,
 			"entries": [
-				"This tattoo depicts protective imagery and uses ink that resembles liquid metal. While you aren't wearing armor, the tattoo grants you an Armor Class of 15 + your Dexterity modifier (maximum of +2). You can use a shield and still gain this benefit.",
+				"该魔法刺青用一根特殊的针制作，用液态金属般的墨水绘有代表防护的图案。当你没有穿戴护甲的时候，刺青会给予你15+敏捷调整值（最大2）的护甲等级。你装备盾牌时，仍可以获得刺青的增益。",
 				{
 					"type": "entries",
-					"name": "Tattoo Attunement",
+					"name": "刺青同调",
+					"ENG_name": "Tattoo Attunement",
 					"entries": [
-						"To attune to this item, you hold the needle to your skin where you want the tattoo to appear, pressing the needle there throughout the attunement process. When the attunement is complete, the needle turns into the ink that becomes the tattoo, which appears on the skin. If you have multiple magic tattoos, they count as a single magic item with regard to the number of magic items you can attune to.",
-						"If your attunement to the tattoo ends, the tattoo vanishes, and the needle reappears in the closest unoccupied space to you."
+						"同调此物品时，你需要将针持握，并抵在你想要让刺青出现的那处皮肤上。当同调完成时，针头会化为墨水再变成刺青。若你与刺青的同调结束，刺青会消失，针头会再次出现在你的位置中。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Barrier Tattoo (Small)",
+			"name": "屏障刺青（小）",
+			"ENG_name": "Barrier Tattoo (Small)",
 			"source": "TCE",
 			"page": 122,
 			"rarity": "uncommon",
@@ -2835,26 +2874,28 @@
 			"wondrous": true,
 			"tattoo": true,
 			"entries": [
-				"Produced by a special needle, this magic tattoo depicts protective imagery and uses ink that resembles liquid metal.",
+				"该魔法刺青用一根特殊的针制作，用液态金属般的墨水绘有代表防护的图案。",
 				{
 					"type": "entries",
-					"name": "Tattoo Attunement",
+					"name": "刺青同调",
+					"ENG_name": "Tattoo Attunement",
 					"entries": [
-						"To attune to this item, you hold the needle to your skin where you want the tattoo to appear, pressing the needle there throughout the attunement process. When the attunement is complete, the needle turns into the ink that becomes the tattoo, which appears on the skin.",
-						"If your attunement to the tattoo ends, the tattoo vanishes, and the needle reappears in your space."
+						"同调此物品时，你需要将针持握，并抵在你想要让刺青出现的那处皮肤上。当同调完成时，针头会化为墨水再变成刺青。若你与刺青的同调结束，刺青会消失，针头会再次出现在你的位置中。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Protection",
+					"name": "防护",
+					"ENG_name": "Protection",
 					"entries": [
-						"While you aren't wearing armor, the tattoo grants you an Armor Class of 12 + your dexterity bonus. You can use a shield and still gain this benefit."
+						"当你没有穿戴护甲的时候，刺青会给予你12+敏捷调整值的护甲等级。你装备盾牌时，仍可以获得刺青的增益。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Barrier Tattoo (Uncommon)",
+			"name": "屏障刺青（非常见）",
+			"ENG_name": "Barrier Tattoo (Uncommon)",
 			"source": "UA2020SpellsAndMagicTattoos",
 			"page": 9,
 			"rarity": "uncommon",
@@ -2862,19 +2903,20 @@
 			"wondrous": true,
 			"tattoo": true,
 			"entries": [
-				"This tattoo depicts protective imagery and uses ink that resembles liquid metal. While you aren't wearing armor, the tattoo grants you an Armor Class of 12 + your Dexterity modifier. You can use a shield and still gain this benefit.",
+				"该魔法刺青用一根特殊的针制作，用液态金属般的墨水绘有代表防护的图案。当你没有穿戴护甲的时候，刺青会给予你12+敏捷调整值的护甲等级。你装备盾牌时，仍可以获得刺青的增益。",
 				{
 					"type": "entries",
-					"name": "Tattoo Attunement",
+					"name": "刺青同调",
+					"ENG_name": "Tattoo Attunement",
 					"entries": [
-						"To attune to this item, you hold the needle to your skin where you want the tattoo to appear, pressing the needle there throughout the attunement process. When the attunement is complete, the needle turns into the ink that becomes the tattoo, which appears on the skin. If you have multiple magic tattoos, they count as a single magic item with regard to the number of magic items you can attune to.",
-						"If your attunement to the tattoo ends, the tattoo vanishes, and the needle reappears in the closest unoccupied space to you."
+						"同调此物品时，你需要将针持握，并抵在你想要让刺青出现的那处皮肤上。当同调完成时，针头会化为墨水再变成刺青。若你与刺青的同调结束，刺青会消失，针头会再次出现在你的位置中。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Barrier Tattoo (Very Rare)",
+			"name": "屏障刺青（极珍惜）",
+			"ENG_name": "Barrier Tattoo (Very Rare)",
 			"source": "UA2020SpellsAndMagicTattoos",
 			"page": 9,
 			"rarity": "very rare",
@@ -2882,13 +2924,13 @@
 			"wondrous": true,
 			"tattoo": true,
 			"entries": [
-				"This tattoo depicts protective imagery and uses ink that resembles liquid metal. While you aren't wearing armor, the tattoo grants you an Armor Class of 18. You can use a shield and still gain this benefit.",
+				"该魔法刺青用一根特殊的针制作，用液态金属般的墨水绘有代表防护的图案。当你没有穿戴护甲的时候，刺青会给予你18的护甲等级。你装备盾牌时，仍可以获得刺青的增益。",
 				{
 					"type": "entries",
-					"name": "Tattoo Attunement",
+					"name": "刺青同调",
+					"ENG_name": "Tattoo Attunement",
 					"entries": [
-						"To attune to this item, you hold the needle to your skin where you want the tattoo to appear, pressing the needle there throughout the attunement process. When the attunement is complete, the needle turns into the ink that becomes the tattoo, which appears on the skin. If you have multiple magic tattoos, they count as a single magic item with regard to the number of magic items you can attune to.",
-						"If your attunement to the tattoo ends, the tattoo vanishes, and the needle reappears in the closest unoccupied space to you."
+						"同调此物品时，你需要将针持握，并抵在你想要让刺青出现的那处皮肤上。当同调完成时，针头会化为墨水再变成刺青。若你与刺青的同调结束，刺青会消失，针头会再次出现在你的位置中。"
 					]
 				}
 			]
@@ -3081,11 +3123,12 @@
 			"ENG_name": "Bell"
 		},
 		{
-			"name": "Bell Branch",
+			"name": "钟铃圣枝",
+			"ENG_name": "Bell Branch",
 			"source": "TCE",
 			"page": 122,
 			"rarity": "rare",
-			"reqAttune": "by a druid or warlock",
+			"reqAttune": "德鲁伊或邪术师",
 			"wondrous": true,
 			"weight": 0.01,
 			"recharge": "dawn",
@@ -3095,13 +3138,13 @@
 				"Warlock"
 			],
 			"entries": [
-				"This silver implement is shaped like a tree branch and is strung with small golden bells. The branch is a spellcasting focus for your spells while you hold it.",
-				"The branch has 3 charges, and it regains {@dice 1d3} expended charges daily at dawn. You can use the charges in the following ways while holding it:",
+				"这个银色的小物件看起来就像一根树枝，上面正挂着许多金色的小铃铛。你持握着它时可以将其作为法器。",
+				"树枝具有3发充能，且每天黎明时恢复 {@dice 1d3} 发已消耗的充能。你持握它时，可以通过以下方式消耗充能：",
 				{
 					"type": "list",
 					"items": [
-						"As a bonus action, you can expend 1 charge to detect the presence of aberrations, celestials, constructs, elementals, fey, fiends, or undead within 60 feet of you. If such creatures are present and don't have total cover from you, the bells ring softly, their tone indicating the creature types present.",
-						"As an action, you can expend 1 charge to cast {@spell 防护善恶}."
+						"作为一个附赠动作，你可以消耗1发充能以侦测距离你60尺内的异怪、天界生物、构装体、元素、精类、邪魔与不死生物。若这些生物存在在60尺内且对你没有处于全身掩护，那么金铃便会轻声作响，它们的音调揭示了所存在生物的种类。",
+						"以一个动作，你可以消耗1发充能施展 {@spell 防护善恶}."
 					]
 				}
 			],
@@ -3910,7 +3953,8 @@
 			"ENG_name": "Blod Stone"
 		},
 		{
-			"name": "Blood Fury Tattoo",
+			"name": "血怒刺青",
+			"ENG_name": "Blood Fury Tattoo",
 			"source": "TCE",
 			"page": 122,
 			"rarity": "legendary",
@@ -3920,25 +3964,26 @@
 			"recharge": "dawn",
 			"charges": 10,
 			"entries": [
-				"Produced by a special needle, this magic tattoo evokes fury in its form and colors.",
+				"该魔法刺青用一根特殊的针制作，该刺青的形状与颜色能够唤起愤怒。",
 				{
 					"type": "entries",
-					"name": "Tattoo Attunement",
+					"name": "刺青同调",
+					"ENG_name": "Tattoo Attunement",
 					"entries": [
-						"To attune to this item, you hold the needle to your skin where you want the tattoo to appear, pressing the needle there throughout the attunement process. When the attunement is complete, the needle turns into the ink that becomes the tattoo, which appears on the skin.",
-						"If your attunement to the tattoo ends, the tattoo vanishes, and the needle reappears in your space."
+						"同调此物品时，你需要将针持握，并抵在你想要让刺青出现的那处皮肤上。当同调完成时，针头会化为墨水再变成刺青。若你与刺青的同调结束，刺青会消失，针头会再次出现在你的位置中。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Bloodthirsty Strikes",
+					"name": "嗜血狂袭",
+					"ENG_name": "Bloodthirsty Strikes",
 					"entries": [
-						"The tattoo has 10 charges, and it regains all expended charges daily at dawn. While this tattoo is on your skin, you gain the following benefits:",
+						"刺青具有10发充能，其在每天黎明时恢复所有已消耗的充能。当刺青在你的皮肤上时，你获得以下增益：",
 						{
 							"type": "list",
 							"items": [
-								"When you hit a creature with a weapon attack, you can expend a charge to deal an extra {@damage 4d6} necrotic damage to the target, and you regain a number of hit points equal to the necrotic damage dealt.",
-								"When a creature you can see damages you, you can expend a charge and use your reaction to make a melee attack against that creature, with advantage on your attack roll."
+								"当你以武器攻击命中一个生物时，你可以消耗1发充能对目标造成额外的 {@damage 4d6} 黯蚀伤害，同时你恢复数值等于所造成黯蚀伤害的生命值。",
+								"当一个你可见的生物对你造成伤害时，你可以消耗1发充能并使用你的反应对那个生物发动一次近战攻击，这次攻击的攻击检定具有优势。"
 							]
 						}
 					]
@@ -5833,17 +5878,18 @@
 			]
 		},
 		{
-			"name": "Cauldron of Rebirth",
+			"name": "重生坩埚",
+			"ENG_name": "Cauldron of Rebirth",
 			"source": "TCE",
 			"page": 122,
 			"rarity": "very rare",
-			"reqAttune": "by a druid or warlock",
+			"reqAttune": "德鲁伊或邪术师",
 			"wondrous": true,
 			"weight": 0.01,
 			"entries": [
-				"This Tiny pot bears relief scenes of heroes on its cast iron sides. You can use the cauldron as a spellcasting focus for your druid spells, and it functions as a suitable component for the {@spell 探知} spell. When you finish a long rest, you can use the cauldron to create a {@item potion of greater healing}. The potion lasts for 24 hours, then loses its magic if not consumed.",
-				"As an action, you can cause the cauldron to grow large enough for a Medium creature to crouch within. You can revert the cauldron to its normal size as an action, harmlessly shunting anything that can't fit inside to the nearest unoccupied space.",
-				"If you place the corpse of a humanoid into the cauldron and cover the corpse with 200 pounds of salt (which costs 10 gp) for at least 8 hours, the salt is consumed and the creature returns to life as if by {@spell 唤醒死者} at the next dawn. Once used, this property can't be used again for 7 days."
+				"这只微型小锅的铸铁侧边上刻有英雄群像的浮雕。你可以将这件坩埚作为你德鲁伊法术的法器，且其可以作为 {@spell 探知} 法术的代替材料。当你完成一次长休时，你可以使用坩埚制造一瓶 {@item potion of greater healing}。药水持续24个小时，若其没有被使用，则它失去魔力。",
+				"作为一个动作，你可以让坩埚增大至足以容纳一个中型生物。你可以用一个动作让坩埚恢复其普通大小，并且无害地将任何它无法容纳的东西转出到最近未被占据的位置。",
+				"如果你将一个类人生物的尸体放入坩埚之中并将200磅的盐（耗费10金币）复盖到坩埚之上持续八小时，那么盐会被消耗，而那个生物会在下一个黎明时复活，如同 {@spell 唤醒死者} 法术。使用后七日之内，坩埚的此项属性无法再次使用。"
 			],
 			"attachedSpells": [
 				"raise dead",
@@ -6569,7 +6615,8 @@
 			"ENG_name": "Cobbler's Tools"
 		},
 		{
-			"name": "Coiling Grasp Tattoo",
+			"name": "缠爪刺青",
+			"ENG_name": "Coiling Grasp Tattoo",
 			"source": "TCE",
 			"page": 123,
 			"rarity": "uncommon",
@@ -6577,20 +6624,21 @@
 			"wondrous": true,
 			"tattoo": true,
 			"entries": [
-				"Produced by a special needle, this magic tattoo has long intertwining designs.",
+				"该魔法刺青用一根特殊的针制作，绘有错杂盘虬的图案。",
 				{
 					"type": "entries",
-					"name": "Tattoo Attunement",
+					"name": "刺青同调",
+					"ENG_name": "Tattoo Attunement",
 					"entries": [
-						"To attune to this item, you hold the needle to your skin where you want the tattoo to appear, pressing the needle there throughout the attunement process. When the attunement is complete, the needle turns into the ink that becomes the tattoo, which appears on the skin.",
-						"If your attunement to the tattoo ends, the tattoo vanishes, and the needle reappears in your space."
+						"同调此物品时，你需要将针持握，并抵在你想要让刺青出现的那处皮肤上。当同调完成时，针头会化为墨水再变成刺青。若你与刺青的同调结束，刺青会消失，针头会再次出现在你的位置中。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Grasping Tendrils",
+					"name": "缠握触须",
+					"ENG_name": "Grasping Tendrils",
 					"entries": [
-						"While the tattoo is on your skin, you can, as an action, cause the tattoo to extrude into inky tendrils, which reach for a creature you can see within 15 feet of you. The creature must succeed on a DC 14 Strength saving throw or take {@damage 3d6} force damage and be {@condition grappled} by you. As an action, the creature can escape the grapple by succeeding on a DC 14 Strength ({@skill 运动}) or Dexterity ({@skill 体操}) check. The grapple also ends if you halt it (no action required), if the creature is ever more than 15 feet away from you, or if you use this tattoo on a different creature."
+						"当刺青在你的皮肤上时，你可以用一个动作让刺青伸缩出一团能够触及一个15尺内你可见生物的墨黑色触须。目标生物需要进行一次DC14的力量豁免，豁免失败则受到{@damage 3d6}力场伤害并{@condition 被擒}于你。作为一个动作，被擒的生物可以通过DC14的力量 ({@skill 运动}) 或敏捷 ({@skill 体操}) 检定. 检定以摆脱擒抱。在你使触手停止（无需动作），或生物与你相距15尺以上或你对另一个生物使用此刺青时，擒抱也会结束。"
 					]
 				}
 			]
@@ -6604,7 +6652,7 @@
 			"wondrous": true,
 			"tattoo": true,
 			"entries": [
-				"This tattoo has long intertwining designs. While the tattoo is on your skin, you can, as an action, cause the tattoo to extrude into inky tendrils, which reach for a creature you can see within 15 feet of you. The creature must succeed on a DC 14 Strength saving throw or take {@damage 3d6} force damage and be {@condition grappled} by you. As an action, the creature can escape the grapple by succeeding on a DC 14 Strength ({@skill 运动}) or Dexterity ({@skill 体操}) check. The grapple also ends if you halt it (no action required), if the creature is ever more than 15 feet away from you, or if you use this tattoo on a different creature.",
+				"This tattoo has long intertwining designs. While the tattoo is on your skin, you can, as an action, cause the tattoo to extrude into inky tendrils, which reach for a creature you can see within 15 feet of you. The creature must succeed on a DC 14 Strength saving throw or take {@damage 3d6} force damage and be {@condition 被擒} by you. As an action, the creature can escape the grapple by succeeding on a DC 14 Strength ({@skill 运动}) or Dexterity ({@skill 体操}) check. The grapple also ends if you halt it (no action required), if the creature is ever more than 15 feet away from you, or if you use this tattoo on a different creature.",
 				{
 					"type": "entries",
 					"name": "Tattoo Attunement",
@@ -6674,20 +6722,21 @@
 			]
 		},
 		{
-			"name": "Cold Absorbing Tattoo",
+			"name": "冷冻吸收刺青",
+			"ENG_name": "Cold Absorbing Tattoo",
 			"source": "TCE",
 			"page": 119,
 			"resist": [
-				"cold"
+				"冷冻"
 			],
-			"detail1": "blue",
+			"detail1": "蓝色",
 			"rarity": "very rare",
 			"reqAttune": true,
 			"wondrous": true,
 			"tattoo": true,
 			"hasRefs": true,
 			"entries": [
-				"{#itemEntry Absorbing Tattoo|TCE}"
+				"{#itemEntry 吸收刺青|TCE}"
 			]
 		},
 		{
@@ -6887,7 +6936,7 @@
 			"value": 1,
 			"entries": [
 				"一般的货币会有数个不同的币值单位在市面上流通，且其面额会根据铸造它们所使用的金属的相对价值来决定。三种最常见的货币是金币(gp)、银币(sp)、和铜币(cp)。",
-				"一枚金币，可以让一个角色购买一个腰包、50呎的优质绳索、或一头山羊。一名纯熟（但并不杰出）的工匠每天可以赚取一枚金币。尽管金币本身并不常被直接使用，但黄金仍然是衡量财富的标准单位。当商人们商谈着的交易涉及价值千百金币的货物或服务，其交易本身通常不会涉及货币的交换。更确切的说，金币只是衡量价值的标准，而实际交易中使用的则是金条、信用状、或其他值钱的商品。",
+				"一枚金币，可以让一个角色购买一个腰包、50呎的优质绳索、或一头山羊。一名纯熟（但并不杰出）的工匠每天可以赚取一枚金币。尽管金币本身并不常被直接使用，但黄金仍然是衡量财富的标准单位。当商人们商谈着的交易涉及价值千百金币的货物或服务，其交易本身通常不会涉及货币的交换。更确切的说，金币只是衡量价值的标准，而实际交易中使用的则是金条、信用状、或其他值钱的商���。",
 				"一枚金币值十枚银币，银币是普通人之间最盛行的货币。一枚银币可以雇佣一名劳动者工作一整天、购买一扁瓶的灯油、或是在简陋旅馆的一夜休眠。",
 				"一枚银币值十枚铜币，铜币则常见于劳动者和乞丐之间。一枚铜币能买一根蜡烛、一支火炬、或是一支粉笔。",
 				"除此之外，使用其他贵重金属铸造的罕见货币有时也会出现在宝藏中。珀金币(ep)和铂金币(pp)源自于衰落帝国和失落的王国，且当它们被用于交易时也偶尔会引起猜忌与怀疑。一枚珀金币价值五枚银币，而一枚铂金币则价值十枚金币。",
@@ -7008,7 +7057,8 @@
 			]
 		},
 		{
-			"name": "Crook of Rao",
+			"name": "拉奥圣杖",
+			"ENG_name": "Crook of Rao",
 			"source": "TCE",
 			"page": 123,
 			"rarity": "artifact",
@@ -7017,54 +7067,59 @@
 			"recharge": "dawn",
 			"charges": 6,
 			"entries": [
-				"Ages ago, the serene god Rao created a tool to shield his fledgling faithful against the evils of the Lower Planes. Yet, as eons passed, mortals developed their own methods of dealing with existential threats, and the crook was largely forgotten. In recent ages, though, the Crook of Rao was rediscovered and leveraged against the rising power of the Witch Queen Iggwilv (one of the names of the wizard Tasha). Although she was defeated, Iggwilv managed to damage the crook during the battle, infecting it with an insidious curse-and the potential for future victory. In the aftermath, the crook was again lost. Occasionally it reappears, but the famed artifact is not what it was. Whether or not the artifact's bearers realize its full threat, few risk using the Crook of Rao -potentially for the final time.",
+				"数个世纪以先，沉静之神拉奥创造了一件工具以保护祂那些尚未成熟的信徒们免受下层位面的邪恶侵扰。随着时光飞逝，凡人们已经自己找到了抵抗相关威胁的方法，而圣杖也接近被人遗忘。而在近几世纪，拉奥圣杖重现于世并被用于对抗巫后伊格薇尔伏（法师塔莎的一个别名）。虽然巫后被击败了，但伊格薇尔伏，成功地在战斗中给圣杖造成了伤害，她用一个隐秘的诅咒污染了圣杖——作为在未来战胜圣杖的可能性。而后，圣杖再次失落于世。有时，圣杖会再次现身，但是这件著名的神器已不再是它曾是之物了。无论神器的持有者有没有意识到它全部的威胁，都很少会冒险使用拉奥圣杖——说不定就会是最后一次。",
 				{
 					"type": "entries",
-					"name": "Random Properties",
+					"name": "随机属性",
+					"ENG_name": "Random Properties",
 					"entries": [
-						"The artifact has the following random properties, which you can determine by rolling on the tables in the \"Artifacts\" section of the {@book Dungeon Master's Guide|DMG}:",
+						"这件神器具有以下随机属性，你可以通过对着{@book 《城主指南》|DMG}中的“神器”章节掷骰以决定它们:",
 						{
 							"type": "list",
 							"items": [
-								"2 {@table Artifact Properties; Minor Beneficial Properties|dmg|minor beneficial} properties",
-								"1 {@table Artifact Properties; Major Beneficial Properties|dmg|major beneficial} property",
-								"1 {@table Artifact Properties; Minor Detrimental Properties|dmg|minor detrimental} property"
+								"两项 {@table 神器属性; 弱效增益属性|dmg|弱效增益} 属性",
+								"一项 {@table 神器属性; 弱效减益属性|dmg|弱效减益} 属性",
+								"一项 {@table 神器属性; 强效减益属性|dmg|强效减益} 属性"
 							]
 						}
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Spells",
+					"name": "法术",
+					"ENG_name": "Spells",
 					"entries": [
-						"The crook has 6 charges. While holding it, you can use an action to expend 1 or more of its charges to cast one of the following spells (save DC 18) from it: {@spell 生命灵光} (2 charges), {@spell 净化灵光} (2 charges), {@spell 放逐术} (1 charge), {@spell 希望信标} (1 charge), {@spell 群体治疗伤势} (3 charges). The crook regains {@dice 1d6} expended charges daily at dawn."
+						"圣杖拥有6发充能。当你持握它时，可以用一个动作消耗1发或更多充能施展下列法术（豁免DC18）： {@spell 生命灵光} (2 充能), {@spell 净化灵光} (2 充能), {@spell 放逐术} (1 充能), {@spell 希望信标} (1 充能), {@spell 群体治疗伤势} (3 充能). 圣杖在每天黎明时恢复 {@dice 1d6} 发已消耗的充能"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Absolute Banishment",
+					"name": "绝对放逐",
+					"ENG_name": "Absolute Banishment",
 					"entries": [
-						"While you are attuned to the crook and holding it, you can spend 10 minutes to banish all but the mightiest fiends within 1 mile of you. Any fiend with a challenge rating of 19 or higher is unaffected. Each banished fiend is sent back to its home plane and can't return to the plane the Crook of Rao banished it from for 100 years."
+						"当你正与圣杖同调且持握着它时，你可以花费10分钟以放逐你一英里内除了那些最强大的邪魔以外的任何邪魔。任何挑战等级大于等于19的邪魔不受影响。每个被放逐的邪魔会被送回其家园位面且在100年内无法再次回到拉奥圣杖将其放逐的位面。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Failing Matrix",
+					"name": "堕群本质",
+					"ENG_name": "Failing Matrix",
 					"entries": [
-						"Whenever the Crook of Rao 's Absolute Banishment property is used, or when its last charge is expended, roll on the Extraplanar Reversal table. Any creatures conjured as a result of this effect appear in random unoccupied spaces within 60 feet of you and are not under your control."
+						"每当使用拉奥圣杖的绝对放逐能力或其最后一发充能被消耗时，骰一次下方的超界逆转表格。任何被此效果召唤而来的生物会出现在你60尺内的随机一处未被占据的位置，且不受你的控制。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Iggwilv's Curse",
+					"name": "伊格薇尔伏的诅咒",
+					"ENG_name": "Iggwilv's Curse",
 					"entries": [
-						"When the Crook was last used against Iggwilv, the Witch Queen lashed out at the artifact, infecting its magical matrix. Over the years, this curse has spread within the crook, threatening to violently pervert its ancient magic. If this occurs, the Crook of Rao, as it is currently known, is destroyed, its magical matrix inverting and exploding into a 50-foot-diameter portal. This portal functions as a permanent {@spell 异界之门} spell cast by Iggwilv. The gate then, once per round on initiative count 20, audibly speaks a fiend's name in Iggwilv's voice, doing so until the gate calls on every fiend ever banished by the Crook of Rao. If the fiend still exists, it is drawn through the gate. This process takes eighteen years to complete, at the end of which the gate becomes a permanent portal to Pazunia, the first layer of the Abyss.",
+						"当圣杖最后一次用于对抗伊格薇尔伏时，巫后污染了这件神器的魔法本质。随着时光流逝，这项诅咒在圣杖之中蔓延，用狂暴的侵蚀威胁着圣杖的古老魔法。若伊格薇尔伏的诅咒发生，那么拉奥圣杖，正如它最近被人所知的那样——会被摧毁，它的魔法本质会逆转、爆发为一个直径50尺的传送门。这个传送门视作一道由伊格薇尔伏施展，永久存在的 {@spell 异界之门} 法术。这道异界之门会在随后每一轮的先攻20时，可以听见其用伊格薇尔伏的声音说出一只邪魔的名字，直到每一只被拉奥圣杖放逐的邪魔回归。若那只邪魔仍然存在，那么它就会被从传送门中拖出。这一过程会持续18年，随后，传送门会变为一道永久的通往无底深渊第一层级帕祖尼亚的传送门。",
 						{
 							"type": "table",
-							"caption": "Extraplanar Reversal",
+							"caption": "超界逆转",
 							"colLabels": [
 								"d100",
-								"Effect"
+								"效应"
 							],
 							"colStyles": [
 								"col-2 text-center",
@@ -7073,35 +7128,35 @@
 							"rows": [
 								[
 									"1-25",
-									"A portal to a random plane opens. The portal closes after 5 minutes."
+									"打开通往一个随机位面的传送门，传送门会在5分钟内关闭。"
 								],
 								[
 									"26-45",
-									"{@dice 2d4} imps and {@dice 2d4} quasits appear."
+									"出现{@dice 2d4} 只小魔鬼Imps 和 {@dice 2d4} 只夸塞魔Quasits。"
 								],
 								[
 									"46-60",
-									"{@dice 1d8} succubi/incubi appear."
+									"出现{@dice 1d8} 只魅魔Succubi/梦魔incubi。"
 								],
 								[
 									"61-70",
-									"{@dice 1d10} barbed devils and {@dice 1d10} vrocks appear."
+									"出现{@dice 1d10} 只猬魔Barbed devils与{@dice 1d10} 只弗洛魔Vrocks"
 								],
 								[
 									"71-80",
-									"1 arcanoloth, 1 night hag, and 1 rakshasa appear."
+									"出现一只只奥登罗斯魔Arcanaloth，1只夜鬼婆Night Hag，与1只罗刹Rakshasa。"
 								],
 								[
 									"81-85",
-									"1 ice devil and 1 marilith appear."
+									"出现1只冰魔Ice devil与1只六臂蛇魔Marilith。"
 								],
 								[
 									"86-90",
-									"1 balor and 1 pit fiend appear. At the DM's discretion, a portal opens into the presence of an archdevil or demon lord instead, then closes after 5 minutes."
+									"出现1只巴洛炎魔Balor与1只深狱炼魔Pit Fiend。取决于DM的意愿，可以用打开一扇通往某一位大魔鬼或恶魔领主所在的传送门作为替代，传送门会在5分钟内关闭。"
 								],
 								[
 									"91-00",
-									"Iggwilv's Curse (see the Iggwilv's Curse property)."
+									"伊格薇尔伏的诅咒（见伊格薇尔伏的诅咒特性）。"
 								]
 							]
 						}
@@ -7109,9 +7164,10 @@
 				},
 				{
 					"type": "entries",
-					"name": "Destroying or Repairing the Crook",
+					"name": "摧毁或修复圣杖",
+					"ENG_name": "Destroying or Repairing the Crook",
 					"entries": [
-						"The Crook of Rao can either be destroyed or repaired by journeying to Mount Celestia and obtaining a tear from the eternally serene god Rao. One way to make the emotionless god cry would be to reunite Rao with the spirit of his first worshiper who sought revelations beyond the multiverse long ago. The Crook dissolves if immersed in the god's tear for a year and a day. If washed in the tear daily for 30 days, the Crook loses its Failing Matrix property."
+						"拉奥圣杖能够被天堂山上永恒沉静之神拉奥的一滴眼泪修复或摧毁。让无感无欲之神拉奥流下眼泪的方法之一是让拉奥与祂那在很久以前便前往搜寻多元宇宙之天启的，他第一位信徒的精魂重聚。圣杖会在浸透于这位神明的眼泪之中一年又一日后溶解；若其被神泪洗濯30日，圣杖便会失去堕群本质特性。"
 					]
 				}
 			],
@@ -7258,11 +7314,12 @@
 			"ENG_name": "Crystal Ball of True Seeing"
 		},
 		{
-			"name": "Crystalline Chronicle",
+			"name": "凝晶年纪",
+			"ENG_name": "Crystalline Chronicle",
 			"source": "TCE",
 			"page": 124,
 			"rarity": "very rare",
-			"reqAttune": "by a wizard",
+			"reqAttune": "法师",
 			"wondrous": true,
 			"weight": 3,
 			"recharge": "dawn",
@@ -7271,14 +7328,14 @@
 				"Wizard"
 			],
 			"entries": [
-				"An etched crystal sphere the size of a grapefruit hums faintly and pulses with irregular flares of inner light. While you are touching the crystal, you can retrieve and store information and spells within the crystal at the same rate as reading and writing. When found, the crystal contains the following spells: {@spell 侦测思想}, {@spell intellect fortress|TCE},* {@spell 拉瑞心灵联结}, {@spell 短讯术}, {@spell 心灵遥控}, {@spell Tasha's mind whip|TCE},* and {@spell 谭森浮碟术} (spells with an asterisk appear in this book). It functions as a spellbook for you, with its spells and other writing psychically encoded within it.",
-				"While you are holding the crystal, you can use it as a spellcasting focus for your wizard spells, and you know the {@spell 法师之手}, {@spell mind sliver|TCE} (appears in this book), and {@spell 传讯术} cantrips if you don't already know them.",
-				"The crystal has 3 charges, and it regains {@dice 1d3} expended charges daily at dawn. You can use the charges in the following ways while holding it:",
+				"这颗蚀刻水晶球有柚子大小，随着内部杂乱的耀斑辐射不断轻声鸣响着。当你触摸水晶球时，你可以以与读写相同的速率往水晶球中储存信息或法术。水晶球在被找到时，包含了以下法术： {@spell 侦测思想}, {@spell intellect fortress|TCE},* {@spell 拉瑞心灵联结}, {@spell 短讯术}, {@spell 心灵遥控}, {@spell Tasha's mind whip|TCE},* 和 {@spell 谭森浮碟术} （带星号的法术出现于本书）。你可以将其作为法术书，其法术与其他文字通过精神编排在水晶之中。",
+				"当你持握水晶球时，你可以将其作为你法师法术的法器。如果 {@spell 法师之手}, {@spell mind sliver|TCE} （出现于本书）, 和 {@spell 传讯术} 戏法并非你的已知戏法，那么你将它们加入你的已知法术。",
+				"水晶具有3发充能，且每天黎明时恢复 {@dice 1d3} 发已消耗的充能。你持握它时，可以通过以下方式消耗充能：",
 				{
 					"type": "list",
 					"items": [
-						"If you spend 1 minute studying the information within the crystal, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book.",
-						"When you cast a wizard spell, you can expend 1 charge to cast the spell without verbal, somatic, or material components of up to 100 gp value."
+						"如果你花费1分钟时间研究水晶球中的信息，你可以消耗1发充能来将你的一道已准备法术替换为书中的另一道法术。",
+						"当你施展一道法师法术时，你可以消耗1发充能施展这道法术并无视语言成分、姿势成分和至多100gp的材料成分。"
 					]
 				}
 			],
@@ -8903,7 +8960,8 @@
 			"ENG_name": "Demon Armor"
 		},
 		{
-			"name": "Demonomicon of Iggwilv",
+			"name": "伊格薇尔伏恶魔志",
+			"ENG_name": "Demonomicon of Iggwilv",
 			"source": "TCE",
 			"page": 125,
 			"rarity": "artifact",
@@ -8912,64 +8970,71 @@
 			"recharge": "dawn",
 			"charges": 8,
 			"entries": [
-				"An expansive treatise documenting the Abyss's infinite layers and inhabitants, the Demonomicon of Iggwilv is the most thorough and blasphemous tome of demonology in the multiverse. The tome recounts both the oldest and most current profanities of the Abyss and demons. Demons have attempted to censor the text, and while sections have been ripped from the book's spine, the general chapters remain, ever revealing demonic secrets. And the book holds more than blasphemies. Caged behind lines of script roils a secret piece of the Abyss itself, which keeps the book up-to-date, no matter how many pages are removed, and it longs to be more than mere reference material.",
+				"作为一份关于深渊之无限层级及其居民的宏大论文，伊格薇尔伏恶魔志Demonomicon of Iggwilv是多元宇宙中最详细而最为亵渎的关于恶魔学识的记载。这卷书记载了从亘古到现在关于深渊与恶魔的所有渎神之物。恶魔们尝试过删减其中的文本，而虽有的部分被从书本的脊页上撕下，但大部分章节仍存，而且较之前更能揭示恶魔的秘密。这书所含之物已非亵渎二字所能形容。一小片不为人知的，无底深渊本身的碎片被囚禁于字字句句之后，使得无论有多少页被撕下，也能让书时刻保持着更新，这本书也不仅仅只是想要成为一本参考材料。",
 				{
 					"type": "entries",
-					"name": "Random Properties",
+					"name": "随机属性",
+					"ENG_name": "Random Properties",
 					"entries": [
-						"The artifact has the follow random properties, which you can determine by rolling on the tables in the \"Artifacts\" section of the {@book Dungeon Master's Guide|DMG}:",
+						"这件神器具有以下随机属性，你可以通过对着{@book 《城主指南》|DMG}中的“神器”章节掷骰以决定它们:",
 						{
 							"type": "list",
 							"items": [
-								"2 {@table Artifact Properties; Minor Beneficial Properties|dmg|minor beneficial} properties",
-								"1 {@table Artifact Properties; Minor Detrimental Properties|dmg|minor detrimental} property",
-								"1 {@table Artifact Properties; Major Detrimental Properties|dmg|major detrimental} property"
+								"两项 {@table 神器属性; 弱效增益属性|dmg|弱效增益} 属性",
+								"一项 {@table 神器属性; 弱效减益属性|dmg|弱效减益} 属性",
+								"一项 {@table 神器属性; 强效减益属性|dmg|强效减益} 属性"
 							]
 						}
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Spells",
+					"name": "法术",
+					"ENG_name": "Spells",
 					"entries": [
-						"The book has 8 charges. It regains {@dice 1d8} expended charges daily at dawn. While holding it, you can use an action to cast {@spell 塔莎狂笑术} from it or to expend 1 or more of its charges to cast one of the following spells (save DC 20) from it: {@spell 防护法阵} (1 charge), {@spell 魔魂壶} (3 charges), {@spell 异界盟友} (3 charges), {@spell 异界誓缚} (2 charges), {@spell 异界发送} (to layers of the Abyss only; 3 charges), {@spell summon fiend|TCE} (3 charges)."
+						"这本书具有8发充能，且每天黎明时恢复 {@dice 1d8} 发已消耗的充能。当你持握它时，你可以用一个动作随意施展 {@spell 塔莎狂笑术} 或消耗1发或更多的充能施展以下法术（DC20）： {@spell 防护法阵} (1 充能), {@spell 魔魂壶} (3 充能), {@spell 异界盟友} (3 充能), {@spell 异界誓缚} (2 充能), {@spell 异界发送} （仅限深渊层级；3发充能）, {@spell summon fiend|TCE} (3 充能)."
 					]
 				},
 				{
 					"type": "entries",
+					"深渊学识": "深渊学识",
 					"name": "Abyssal Reference",
 					"entries": [
-						"You can reference the {@i Demonomicon} whenever you make an Intelligence check to discern information about demons or a Wisdom ({@skill 生存}) check related to the Abyss. When you do so, you can add double your proficiency bonus to the check."
+						"你可以在你每次进行辨认关于 {@i Demonomicon} 的消息的智力检定或关于深渊的感知 ({@skill 生存}) 检定时查阅恶魔志。若如此做，你的检定使用双倍的熟练加值。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Fiendish Scourging",
+					"name": "鞭笞邪魔",
+					"ENG_name": "Fiendish Scourging",
 					"entries": [
-						"Your magic causes pain to fiends. While carrying the book, when you make a damage roll for a spell you cast against a fiend, you use the maximum possible result instead of rolling."
+						"你的魔法会为邪魔带来痛苦。当你携带书，并为自己所施展的法术对一个邪魔进行伤害掷骰时，直接取满值而无须掷骰。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Ensnarement",
+					"name": "迷惑",
+					"ENG_name": "Ensnarement",
 					"entries": [
-						"While carrying the book, whenever you cast the {@spell 防护法阵} spell naming only fiends, or the {@spell 异界誓缚} spell targeting a fiend, the spell is cast at 9th level, regardless of what level spell slot you used, if any. Additionally, the fiend has disadvantage on its saving throw against the spell."
+						"当你携带着书，每次你施展对邪魔的 {@spell 防护法阵} 或 {@spell 异界誓缚} 时，无论你使用了哪个等级的法术位，都视为以9环施展。此外，邪魔在对抗这些法术的豁免检定上具有劣势。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Containment",
+					"name": "封印",
+					"ENG_name": "Containment",
 					"entries": [
-						"The first 10 pages of the {@i Demonomicon} are blank. As an action while holding the book, you can target a fiend that you can see that is trapped within a {@spell 防护法阵}. The fiend must succeed on a DC 20 Charisma saving throw with disadvantage or become trapped within one of the {@i Demonomicon's} empty blank pages, which fills with writing detailing the trapped creature's widely known name and depravities. Once used, this action can't be used again until the next dawn.",
-						"When you finish a long rest, if you and the {@i Demonomicon} are on the same plane of existence, the trapped creature of the highest challenge rating within the book can attempt to possess you. You must make a DC 20 Charisma saving throw. On a failure, you are possessed by the creature, which controls you like a puppet. The possessing creature can release you as an action, appearing in the closest unoccupied space. On a successful save, the fiend can't try to possess you again for 7 days.",
-						"When the tome is discovered, it has {@dice 1d4} fiends occupying its pages, typically an assortment of demons."
+						"{@i Demonomicon} 前10页是空白的。持握这本书时，作为一个动作，你可以选择一个你可见且被困在 {@spell 防护法阵}中的邪魔。该邪魔必须以劣势进行一次DC20的魅力豁免，豁免失败则被困在恶魔志的一张空白页中。并且会附上受困生物广为人知的名字与堕落内容的详细文字。使用后，直到下次黎明前，这项动作不能再次使用。",
+						"当你结束了一次长休时，如果你和恶魔志存在于同一位面，则书中所困挑战等级最高的生物可以尝试附身你。你必须进行一次DC20的魅力豁免。若豁免失败，则你如同一具提线玩偶般被该生物附身。附身你的生物可以用一个动作释放你，并在最近的一处未占据空间出现。若豁免成功，则尝试附身你的邪魔在未来7天内都不能再次尝试附身你。",
+						"在这本魔典被发现时，已经有了 {@dice 1d4} 张书页被占据，一般是各种恶魔。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Destroying the Demonomicon",
+					"name": "破坏恶魔志",
+					"ENG_name": "Destroying the Demonomicon",
 					"entries": [
-						"To destroy the book, six different demon lords must each tear out a sixth of the book's pages. If this occurs, the pages reappear after 24 hours. Before all those hours pass, anyone who opens the book's remaining binding is transported to a nascent layer of the Abyss that lies hidden within the book. At the heart of this deadly, semi-sentient domain lies a long-lost artifact, {@i Fraz-Urb'luu's Staff}. If the staff is dragged from the pocket plane, the tome is reduced to a mundane and quite out-of-date copy of the {@i Tome of Zyx}, the work that served as the foundation for the {@i Demonomicon}. Once the staff emerges, the demon lord Fraz-Urb'luu instantly knows."
+						"要摧毁这本书，必须有六位不同的恶魔领主分别撕下书的一页。如果这种情况发生，书页会在24小时内恢复。在这段时间过去之前，任何打开书的人都会被传送到一处隐藏在书中的新生深渊层级。在这致命、的半智能领域中心，有一件遗失许久的神器，弗拉兹-厄鲁之杖。如果法杖被带离这处口袋位面，魔典会立刻变成一本《反序古典Tome of Zyx》普通而老旧的复制品，这本书是创造恶魔志的基底。法杖一旦出现，恶魔领主弗拉兹-厄鲁会立刻知道这件事。"
 					]
 				}
 			],
@@ -9085,21 +9150,22 @@
 			"curse": true
 		},
 		{
-			"name": "Devotee's Censer",
+			"name": "奉献香炉",
+			"ENG_name": "Devotee's Censer",
 			"source": "TCE",
 			"page": 126,
 			"baseItem": "flail|PHB",
 			"type": "M",
 			"rarity": "rare",
-			"reqAttune": "by a cleric or paladin",
+			"reqAttune": "牧师或圣武士",
 			"weight": 2,
 			"weaponCategory": "martial",
 			"dmg1": "1d8",
 			"dmgType": "B",
 			"weapon": true,
 			"entries": [
-				"The rounded head of this flail is perforated with tiny holes, arranged in symbols and patterns. The flail counts as a holy symbol for you. When you hit with an attack using this magic flail, the target takes an extra {@damage 1d8} radiant damage.",
-				"As a bonus action, you can speak the command word to cause the flail to emanate a thin cloud of incense out to 10 feet for 1 minute. At the start of each of your turns, you and any other creatures in the incense each regain {@dice 1d4} hit points. This property can't be used again until the next dawn."
+				"这把链枷的圆形头部开有一些小孔，成徽记或图纹状排列。你可以将这把链枷视为圣徽。当你使用这把链枷进行攻击命中时，目标受到额外 {@damage 1d8} 光耀伤害。",
+				"作为一个附赠动作，你可以说出命令语并使链枷散发出半径10尺的微弱熏香云，持续1分钟。在你的每个回合开始时，你和其他在熏香中的生物恢复 {@dice 1d4} 生命值。直到下次黎明前，此属性都不能再使用。"
 			],
 			"hasFluffImages": true
 		},
@@ -9939,11 +10005,12 @@
 			"ENG_name": "Dungeoneer's Pack"
 		},
 		{
-			"name": "Duplicitous Manuscript",
+			"name": "两面花言",
+			"ENG_name": "Duplicitous Manuscript",
 			"source": "TCE",
 			"page": 126,
 			"rarity": "rare",
-			"reqAttune": "by a wizard",
+			"reqAttune": "法师",
 			"wondrous": true,
 			"weight": 3,
 			"recharge": "dawn",
@@ -9952,15 +10019,15 @@
 				"Wizard"
 			],
 			"entries": [
-				"To you, this book is a magical spellbook. To anyone else, the book appears to be a volume of verbose romance fiction. As an action, you can change the book's appearance and alter the plot of the romance.",
-				"When found, the book contains the following spells: {@spell 幻景}, {@spell 强效幻影}, {@spell 镜影术}, {@spell 假象术}, {@spell 涅斯图魔法灵光}, {@spell 魅影之力}, and {@spell 无声幻影}. It functions as a spellbook for you.",
-				"While you are holding the book, you can use it as a spellcasting focus for your wizard spells.",
-				"The book has 3 charges, and it regains {@dice 1d3} expended charges daily at dawn. You can use the charges in the following ways while holding it:",
+				"这本书对你来说是一本魔法法术书。对其他人而言，这本书看起来只是一本冗长的浪漫小说。作为一个动作，你可以改变书籍的外观和其中的浪漫故事。",
+				"这本书在被找到时，包含了以下法术：{@spell 幻景}, {@spell 强效幻影}, {@spell 镜影术}, {@spell 假象术}, {@spell 涅斯图魔法灵光}, {@spell 魅影之力}, 和 {@spell 无声幻影}。你可以将其作为法术书。",
+				"当你持握这本书时，你可以将其作为你法师法术的法器。",
+				"书具有3发充能，且每天黎明时恢复 {@dice 1d3} 发已消耗的充能。你持握它时，可以通过以下方式消耗充能：",
 				{
 					"type": "list",
 					"items": [
-						"If you spend 1 minute studying the book, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book. The new spell must be of the illusion school.",
-						"When a creature you can see makes an Intelligence ({@skill 调查}) check to discern the true nature of an illusion spell you cast, or makes a saving throw against an illusion spell you cast, you can use your reaction and expend 1 charge to impose disadvantage on the roll."
+						"如果你花费1分钟时间研究这本书，你可以消耗1发充能来将你的一道已准备法术替换为书中的另一道法术。新法术必须是幻术学派的法术。",
+						"当一个你可见的生物进行一次智力 ({@skill 调查}) 检定来看穿你所施展幻术系法术的本质，或对你施展的一道幻术系法术进行豁免时，你可以用一个反应并消耗1发充能使其在这次检定中具有劣势。"
 					]
 				}
 			],
@@ -10315,7 +10382,8 @@
 			]
 		},
 		{
-			"name": "Eldritch Claw Tattoo",
+			"name": "魔能爪刺青",
+			"ENG_name": "Eldritch Claw Tattoo",
 			"source": "TCE",
 			"page": 126,
 			"rarity": "uncommon",
@@ -10324,27 +10392,29 @@
 			"tattoo": true,
 			"bonusWeapon": "+1",
 			"entries": [
-				"Produced by a special needle, this magic tattoo depicts clawlike forms and other jagged shapes.",
+				"这个绘有爪型或其他锯齿型图案的刺青需要用一根特殊的针制作。",
 				{
 					"type": "entries",
-					"name": "Tattoo Attunement",
+					"name": "刺青同调",
+					"ENG_name": "Tattoo Attunement",
 					"entries": [
-						"To attune to this item, you hold the needle to your skin where you want the tattoo to appear, pressing the needle there throughout the attunement process. When the attunement is complete, the needle turns into the ink that becomes the tattoo, which appears on the skin.",
-						"If your attunement to the tattoo ends, the tattoo vanishes, and the needle reappears in your space."
+						"同调此物品时，你需要将针持握，并抵在你想要让刺青出现的那处皮肤上。当同调完成时，针头会化为墨水再变成刺青。若你与刺青的同调结束，刺青会消失，针头会再次出现在你的位置中。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Magical Strikes",
+					"name": "魔法打击",
+					"ENG_name": "Magical Strikes",
 					"entries": [
-						"While the tattoo is on your skin, your unarmed strikes are considered magical for the purpose of overcoming immunity and resistance to nonmagical attacks, and you gain a +1 bonus to attack and damage rolls with unarmed strikes."
+						"只要该刺青在你的皮肤上，攻击对非魔法攻击具有抗性或免疫的目标时，你的徒手打击视为魔法攻击，并且你以徒手打击发动的攻击检定和伤害掷骰获得+1加值。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Eldritch Maul",
+					"name": "魔能巨锤",
+					"ENG_name": "Eldritch Maul",
 					"entries": [
-						"As a bonus action, you can empower the tattoo for 1 minute. For the duration, each of your melee attacks with a weapon or an unarmed strike can reach a target up to 15 feet away from you, as inky tendrils launch toward the target. In addition, your melee attacks deal an extra {@damage 1d6} force damage on a hit. Once used, this bonus action can't be used again until the next dawn."
+						"作为一个附赠动作，你可以增强刺青1分钟。持续时间内，你每次以武器或徒手打击发动近战攻击时，墨水触须会朝着对方喷射而去，使你可以触及距离你最远15尺的目标。此外，你的近战攻击命中时会造成额外 {@damage 1d6} 力场伤害。使用后，直到下次黎明前，此附赠动作不能再次使用。"
 					]
 				}
 			]
@@ -10405,23 +10475,24 @@
 			"value": 50
 		},
 		{
-			"name": "Elemental Essence Shard",
+			"name": "元素精粹碎晶",
+			"ENG_name": "Elemental Essence Shard",
 			"source": "TCE",
 			"page": 127,
 			"rarity": "rare",
-			"reqAttune": "by a sorcerer",
+			"reqAttune": "术士",
 			"wondrous": true,
 			"weight": 1,
 			"entries": [
-				"This crackling crystal contains the essence of an elemental plane. As an action, you can attach the shard to a Tiny object (such as a weapon or a piece of jewelry) or detach it. It falls off if your attunement to it ends. You can use the shard as a spellcasting focus while you hold or wear it.",
-				"Roll a {@dice d4} and consult the Elemental Essence Shards table to determine the shard's essence and property. When you use a Metamagic option on a spell while you are holding or wearing the shard, you can use that property.",
+				"这块碎裂的水晶含有着一个元素位面的精粹。作为一个动作，你可以将碎晶附上一件微型物件（如一把武器或一块珠宝）或摘下。当同调结束时它会掉落下来。当你持握或穿戴碎晶时，你可以将其作为法器使用。",
+				"骰一个{@dice d4}并根据元素精粹碎晶表格来决定碎晶的精粹类型和属性。当你持握或穿戴碎晶，并在一道法术上应用一种超魔法选项时，你可以应用该属性。",
 				{
 					"type": "table",
-					"caption": "Elemental Essence Shards",
+					"caption": "元素精粹碎晶",
 					"colLabels": [
 						"d4",
-						"Element",
-						"Shard"
+						"元素",
+						"碎晶"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -10431,116 +10502,120 @@
 					"rows": [
 						[
 							"1",
-							"Air",
-							"{@item Elemental Essence Shard (Air)|TCE}"
+							"气",
+							"{@item 元素精粹碎晶（气）|TCE}"
 						],
 						[
 							"2",
-							"Earth",
-							"{@item Elemental Essence Shard (Earth)|TCE}"
+							"土",
+							"{@item 元素精粹碎晶（土）|TCE}"
 						],
 						[
 							"3",
-							"Fire",
-							"{@item Elemental Essence Shard (Fire)|TCE}"
+							"火",
+							"{@item 元素精粹碎晶（火）|TCE}"
 						],
 						[
 							"4",
-							"Water",
-							"{@item Elemental Essence Shard (Water)|TCE}"
+							"水",
+							"{@item 元素精粹碎晶（水）|TCE}"
 						]
 					]
 				}
 			]
 		},
 		{
-			"name": "Elemental Essence Shard (Air)",
+			"name": "元素精粹碎晶（气）",
+			"ENG_name": "Elemental Essence Shard (Air)",
 			"source": "TCE",
 			"page": 127,
 			"rarity": "rare",
-			"reqAttune": "by a sorcerer",
+			"reqAttune": "术士",
 			"wondrous": true,
 			"weight": 1,
 			"focus": [
 				"Sorcerer"
 			],
 			"entries": [
-				"This crackling crystal contains the essence of an elemental plane. As an action, you can attach the shard to a Tiny object (such as a weapon or a piece of jewelry) or detach it. It falls off if your attunement to it ends. You can use the shard as a spellcasting focus while you hold or wear it.",
-				"When you use a Metamagic option on a spell while you are holding or wearing the shard, you can use the following property:",
+				"这块碎裂的水晶含有着一个元素位面的精粹。作为一个动作，你可以将碎晶附上一件微型物件（如一把武器或一块珠宝）或摘下。当同调结束时它会掉落下来。当你持握或穿戴碎晶时，你可以将其作为法器使用。",
 				{
 					"type": "entries",
-					"name": "Property",
+					"name": "属性",
+					"ENG_name": "Property",
 					"entries": [
-						"You can immediately fly up to 60 feet without provoking opportunity attacks."
+						"你可以立即飞行最多60尺的距离，并且不会引发借机攻击。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Elemental Essence Shard (Earth)",
+			"name": "元素精粹碎晶（土）",
+			"ENG_name": "Elemental Essence Shard (Earth)",
 			"source": "TCE",
 			"page": 127,
 			"rarity": "rare",
-			"reqAttune": "by a sorcerer",
+			"reqAttune": "术士",
 			"wondrous": true,
 			"weight": 1,
 			"focus": [
 				"Sorcerer"
 			],
 			"entries": [
-				"This crackling crystal contains the essence of an elemental plane. As an action, you can attach the shard to a Tiny object (such as a weapon or a piece of jewelry) or detach it. It falls off if your attunement to it ends. You can use the shard as a spellcasting focus while you hold or wear it.",
-				"When you use a Metamagic option on a spell while you are holding or wearing the shard, you can use the following property:",
+				"这块碎裂的水晶含有着一个元素位面的精粹。作为一个动作，你可以将碎晶附上一件微型物件（如一把武器或一块珠宝）或摘下。当同调结束时它会掉落下来。当你持握或穿戴碎晶时，你可以将其作为法器使用。",
 				{
 					"type": "entries",
-					"name": "Property",
+					"name": "属性",
+					"ENG_name": "Property",
 					"entries": [
-						"You gain resistance to a damage type of your choice until the start of your next turn."
+						"你获得对于你选择的一种伤害类型的抗性，直到你的下个回合开始。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Elemental Essence Shard (Fire)",
+			"name": "元素精粹碎晶（火）",
+			"ENG_name": "Elemental Essence Shard (Fire)",
 			"source": "TCE",
 			"page": 127,
 			"rarity": "rare",
-			"reqAttune": "by a sorcerer",
+			"reqAttune": "术士",
 			"wondrous": true,
 			"weight": 1,
 			"focus": [
 				"Sorcerer"
 			],
 			"entries": [
-				"This crackling crystal contains the essence of an elemental plane. As an action, you can attach the shard to a Tiny object (such as a weapon or a piece of jewelry) or detach it. It falls off if your attunement to it ends. You can use the shard as a spellcasting focus while you hold or wear it.",
-				"When you use a Metamagic option on a spell while you are holding or wearing the shard, you can use the following property:",
+				"这块碎裂的水晶含有着一个元素位面的精粹。作为一个动作，你可以将碎晶附上一件微型物件（如一把武器或一块珠宝）或摘下。当同调结束时它会掉落下来。当你持握或穿戴碎晶时，你可以将其作为法器使用。",
 				{
 					"type": "entries",
-					"name": "Property",
+					"name": "属性",
+					"ENG_name": "Property",
 					"entries": [
-						"One target of the spell that you can see catches fire. The burning target takes {@damage 2d10} fire damage at the start of its next turn, and then the flames go out."
+						"你所看见的法术的一个目标着了火。燃烧中的目标在它的下个回合开始时，受到{@damage 2d10}火焰伤害，然后火焰熄灭。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Elemental Essence Shard (Water)",
+			"name": "元素精粹碎晶（水）",
+			"ENG_name": "Elemental Essence Shard (Water)",
 			"source": "TCE",
 			"page": 127,
 			"rarity": "rare",
-			"reqAttune": "by a sorcerer",
+			"reqAttune": "术士",
 			"wondrous": true,
 			"weight": 1,
 			"focus": [
 				"Sorcerer"
 			],
 			"entries": [
-				"This crackling crystal contains the essence of an elemental plane. As an action, you can attach the shard to a Tiny object (such as a weapon or a piece of jewelry) or detach it. It falls off if your attunement to it ends. You can use the shard as a spellcasting focus while you hold or wear it.",
-				"When you use a Metamagic option on a spell while you are holding or wearing the shard, you can use the following property:",
+				"这块碎裂的水晶含有着一个元素位面的精粹。作为一个动作，你可以将碎晶附上一件微型物件（如一把武器或一块珠宝）或摘下。当同调结束时它会掉落下来。当你持握或穿戴碎晶时，你可以将其作为法器使用。",
 				{
 					"type": "entries",
-					"name": "Property",
+					"name": "属性",
+					"ENG_name": "Property",
 					"entries": [
-						"You create a wave of water that bursts out from you in a 10-foot radius. Each creature of your choice that you can see in that area takes {@damage 2d6} cold damage and must succeed on a Strength saving throw against your spell save DC or be pushed 10 feet away from you and fall {@condition prone}."
+						"你创造一道从你自身迸发出的一道10尺半径的水波。每个该区域内的你所选择的生物受到{@damage 2d6}冷冻伤害，并且必须成功通过一次对抗你施法豁免DC的力量豁免，否则被推离你10尺并且被击{@condition 伏地}。"
 					]
 				}
 			]
@@ -11325,19 +11400,19 @@
 			]
 		},
 		{
-			"name": "Far Realm Shard",
+			"name": "遥远国度碎晶",
+			"ENG_name": "Far Realm Shard",
 			"source": "TCE",
 			"page": 127,
 			"rarity": "rare",
-			"reqAttune": "by a sorcerer",
+			"reqAttune": "术士",
 			"wondrous": true,
 			"weight": 1,
 			"focus": [
 				"Sorcerer"
 			],
 			"entries": [
-				"This writhing crystal is steeped in the warped essence of the Far Realm. As an action, you can attach the shard to a Tiny object (such as a weapon or a piece of jewelry) or detach it. It falls off if your attunement to it ends. You can use the shard as a spellcasting focus while you hold or wear it.",
-				"When you use a Metamagic option on a spell while you are holding or wearing the shard, you can cause a slimy tentacle to rip through the fabric of reality and strike one creature you can see within 30 feet of you. The creature must succeed on a Charisma saving throw against your spell save DC or take {@damage 3d6} psychic damage and become {@condition frightened} of you until the start of your next turn."
+				"这块蠕动着的水晶充斥着来自遥远国度的扭曲精粹。作为一个动作，你可以将碎晶附上一件微型物件（如一把武器或一块珠宝）或摘下。当同调结束时它会掉落下来。当你持握或穿戴碎晶时，你可以将其作为法器使用。当你持握或穿戴碎晶，并在一道法术上应用一种超魔法选项时，你可以召唤一条黏滑的触手撕裂现实的织物，并对你30尺内可见的一个生物进行打击。该生物必须进行一次魅力豁免检定对抗你的法术豁免DC，豁免失败则受到 {@damage 3d6} 心灵伤害并对你 {@condition 恐惧}，直到你的下个回合开始。"
 			],
 			"hasFluffImages": true
 		},
@@ -11390,20 +11465,21 @@
 			"ENG_name": "Feed (per day)"
 		},
 		{
-			"name": "Feywild Shard",
+			"name": "妖精荒野碎晶",
+			"ENG_name": "Feywild Shard",
 			"source": "TCE",
 			"page": 127,
 			"rarity": "uncommon",
-			"reqAttune": "by a sorcerer",
+			"reqAttune": "术士",
 			"wondrous": true,
 			"weight": 1,
 			"focus": [
 				"Sorcerer"
 			],
 			"entries": [
-				"This warm crystal glints with the sunset colors of the Feywild sky and evokes whispers of emotional memory. As an action, you can attach the shard to a Tiny object (such as a weapon or a piece of jewelry) or detach it. It falls off if your attunement to it ends. You can use the shard as a spellcasting focus while you hold or wear it.",
-				"When you use a Metamagic option on a spell while you are holding or wearing the shard, you can roll on the {@table Wild Magic Surge|PHB} table in the {@book Player's Handbook|PHB}. If the result is a spell, it is too wild to be affected by your Metamagic, and if it normally requires concentration, it doesn't require concentration in this case; the spell lasts for its full duration.",
-				"If you don't have the Wild Magic Sorcerous Origin, once this property is used to roll on the {@table Wild Magic Surge|PHB} table, it can't be used again until the next dawn."
+				"这块温暖的水晶闪烁着妖精荒野天空的暮色,并带有着唤醒情感记忆的低语。作为一个动作，你可以将碎晶附上一件微型物件（如一把武器或一块珠宝）或摘下。当同调结束时它会掉落下来。当你持握或穿戴碎晶时，你可以将其作为法器使用",
+				"当你持握或穿戴碎晶，并在一道法术上应用一种超魔法选项时，你可以骰一次 {@book 《玩家手册》|PHB}中的 {@table 狂野魔法浪涌|PHB}，如果结果是一道法术，则其因为过于狂野而不会受到你的超魔法效应影响，若其一般需要专注，则其不需要专注；该法术维持完整的持续时间。",
+				"如果你没有狂野魔法术法起源，则在投掷狂野魔法浪涌表格后，直到下次黎明前，不能再次使用该属性。"
 			],
 			"hasFluffImages": true
 		},
@@ -11692,20 +11768,21 @@
 			"value": 250000
 		},
 		{
-			"name": "Fire Absorbing Tattoo",
+			"name": "火焰吸收刺青",
+			"ENG_name": "Fire Absorbing Tattoo",
 			"source": "TCE",
 			"page": 119,
 			"resist": [
-				"fire"
+				"火焰"
 			],
-			"detail1": "red",
+			"detail1": "红色",
 			"rarity": "very rare",
 			"reqAttune": true,
 			"wondrous": true,
 			"tattoo": true,
 			"hasRefs": true,
 			"entries": [
-				"{#itemEntry Absorbing Tattoo|TCE}"
+				"{#itemEntry 吸收刺青|TCE}"
 			]
 		},
 		{
@@ -11897,20 +11974,21 @@
 			"ENG_name": "Folding Boat"
 		},
 		{
-			"name": "Force Absorbing Tattoo",
+			"name": "力场吸收刺青",
+			"ENG_name": "Force Absorbing Tattoo",
 			"source": "TCE",
 			"page": 119,
 			"resist": [
-				"force"
+				"力场"
 			],
-			"detail1": "white",
+			"detail1": "白色",
 			"rarity": "very rare",
 			"reqAttune": true,
 			"wondrous": true,
 			"tattoo": true,
 			"hasRefs": true,
 			"entries": [
-				"{#itemEntry Absorbing Tattoo|TCE}"
+				"{#itemEntry 吸收刺青|TCE}"
 			]
 		},
 		{
@@ -12022,11 +12100,12 @@
 			"ENG_name": "Fragmentation Grenade"
 		},
 		{
-			"name": "Fulminating Treatise",
+			"name": "爆鸣专论",
+			"ENG_name": "Fulminating Treatise",
 			"source": "TCE",
 			"page": 128,
 			"rarity": "rare",
-			"reqAttune": "by a wizard",
+			"reqAttune": "法师",
 			"wondrous": true,
 			"weight": 3,
 			"recharge": "dawn",
@@ -12035,14 +12114,14 @@
 				"Wizard"
 			],
 			"entries": [
-				"This thick, scorched spellbook reeks of smoke and ozone, and sparks of energy crackles along the edges of its pages. When found, the book contains the following spells: {@spell 触发术}, {@spell 火球术}, {@spell 造风术}, {@spell 李欧蒙小屋}, {@spell 魔法飞弹}, {@spell 雷鸣波}, and {@spell 力墙术}. It functions as a spellbook for you.",
-				"While you are holding the book, you can use it as a spellcasting focus for your wizard spells.",
-				"The book has 3 charges, and it regains {@dice 1d3} expended charges daily at dawn. You can use the charges in the following ways while holding it:",
+				"这本书被烧焦的厚实法术书散发着烟雾和臭氧的气味，书页的边缘闪烁着能量的火花。这本书在被找到时，包含了以下法术： {@spell 触发术}, {@spell 火球术}, {@spell 造风术}, {@spell 李欧蒙小屋}, {@spell 魔法飞弹}, {@spell 雷鸣波} 和 {@spell 力墙术}。你可以将其作为法术书。",
+				"当你持握这本书时，你可以将其作为你法师法术的法器。",
+				"书具有3发充能，且每天黎明时恢复 {@dice 1d3} 发已消耗的充能。你持握它时，可以通过以下方式消耗充能：",
 				{
 					"type": "list",
 					"items": [
-						"If you spend 1 minute studying the book, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book. The new spell must be of the evocation school.",
-						"When one creature you can see takes damage from an evocation spell you cast, you can use your reaction and expend 1 charge to deal an extra {@damage 2d6} force damage to the creature and knock the creature {@condition prone} if it is Large or smaller."
+						"如果你花费1分钟时间研究这本书，你可以消耗1发充能来将你的一道已准备法术替换为书中的另一道法术。新法术必须是塑能学派的法术。",
+						"当一个你可见的生物被你所施展的塑能系法术伤害时，你可以用一个反应并消耗1发充能对该生物造成一次额外的 {@damage 2d6} 力场伤害，如果该生物为大型或更小，还会使其 {@condition prone} 。"
 					]
 				}
 			],
@@ -12242,7 +12321,8 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Ghost Step Tattoo",
+			"name": "鬼步刺青",
+			"ENG_name": "Ghost Step Tattoo",
 			"source": "TCE",
 			"page": 128,
 			"rarity": "very rare",
@@ -12252,26 +12332,27 @@
 			"recharge": "dawn",
 			"charges": 3,
 			"entries": [
-				"Produced by a special needle, this tattoo shifts and wavers on the skin, parts of it appearing blurred.",
+				"该魔法刺青用一根特殊的针制作，图案于你身上各处闪烁、模糊不清。",
 				{
 					"type": "entries",
-					"name": "Tattoo Attunement",
+					"name":"刺青同调",
+					"ENG_name": "Tattoo Attunement",
 					"entries": [
-						"To attune to this item, you hold the needle to your skin where you want the tattoo to appear, pressing the needle there throughout the attunement process. When the attunement is complete, the needle turns into the ink that becomes the tattoo, which appears on the skin.",
-						"If your attunement to the tattoo ends, the tattoo vanishes, and the needle reappears in your space."
+						"同调此物品时，你需要将针持握，并抵在你想要让刺青出现的那处皮肤上。当同调完成时，针头会化为墨水再变成刺青。若你与刺青的同调结束，刺青会消失，针头会再次出现在你的位置中。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Ghostly Form",
+					"name":"鬼灵形态",
+					"ENG_name": "Ghostly Form",
 					"entries": [
-						"The tattoo has 3 charges, and it regains all expended charges daily at dawn. As a bonus action while the tattoo is on your skin, you can expend 1 of the tattoo's charges to become incorporeal until the end of your next turn. For the duration, you gain the following benefits:",
+						"刺青具有3发充能，且每天黎明时恢复所有已消耗的充能。刺青在你的皮肤上时，作为一个附赠动作，你可以消耗1发刺青的充能变为虚体，直到你的下个回合开始。在持续时间内，你获得以下增益：",
 						{
 							"type": "list",
 							"items": [
-								"You have resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks.",
-								"You can't be {@condition grappled} or {@condition restrained}.",
-								"You can move through creatures and solid objects as if they were difficult terrain. If you end your turn in a solid object, you take {@damage 1d10} force damage. If the effect ends while you are inside a solid object, you instead are shunted to the nearest unoccupied space, and you take {@damage 1d10} force damage for every 5 feet traveled."
+								"你获得对非魔法武器的钝击、穿刺和挥砍抗性。",
+								"你不会被{@condition 被擒}或{@condition 束缚}.",
+								"你可以像穿过困难地形那样穿过其他生物或物件。如果你在回合结束时处于固体物件内则受到 {@damage 1d10} 力场伤害。如果效果结束时你处于固体物件内，你会被排出到最近一处未被占据的空间，并且每移动5尺就受到 {@damage 1d10} 力场伤害。"
 							]
 						}
 					]
@@ -12295,7 +12376,7 @@
 					"type": "list",
 					"items": [
 						"You have resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks.",
-						"You can't be {@condition grappled} or {@condition restrained}.",
+						"You can't be {@condition 被擒} or {@condition restrained}.",
 						"You can move through creatures and solid objects as if they were difficult terrain. If you end your turn in a solid object, you take {@damage 1d10} force damage. If the effect ends while you are inside a solid object, you instead are shunted to the nearest unoccupied space, and you take {@damage 1d10} force damage for every 5 feet traveled."
 					]
 				},
@@ -13133,19 +13214,20 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Guardian Emblem",
+			"name": "守护者纹章",
+			"ENG_name": "Guardian Emblem",
 			"source": "TCE",
 			"page": 128,
 			"rarity": "uncommon",
-			"reqAttune": "by a cleric or paladin",
+			"reqAttune": "牧师或圣武士",
 			"wondrous": true,
 			"weight": 0.02,
 			"recharge": "dawn",
 			"charges": 3,
 			"entries": [
-				"This emblem is the symbol of a deity or a spiritual tradition. As an action, you can attach the emblem to a suit of armor or a shield or remove it.",
-				"The emblem has 3 charges. When you or a creature you can see within 30 feet of you suffers a critical hit while you're wearing the armor or wielding the shield that bears the emblem, you can use your reaction to expend 1 charge to turn the critical hit into a normal hit instead.",
-				"The emblem regains all expended charges daily at dawn."
+				"这枚纹章是一位神祇或一种超自然传承的徽章。作为一个动作，你可以将徽章附上一套护甲或一面盾牌或移下。",
+				"徽章具有3发充能。当你穿戴着附有徽章的护甲或装备着附有徽章的盾牌，且你或一个距离你30尺内且你可见的生物受到一次重击时，你可以用一个反应并消耗1发充能将重击命中改为普通命中。",
+				"徽章在每天黎明时恢复所有已消耗的充能。"
 			]
 		},
 		{
@@ -13571,11 +13653,12 @@
 			"ENG_name": "Healer's Kit"
 		},
 		{
-			"name": "Heart Weaver's Primer",
+			"name": "织心入门",
+			"ENG_name": "Heart Weaver's Primer",
 			"source": "TCE",
 			"page": 128,
 			"rarity": "rare",
-			"reqAttune": "by a wizard",
+			"reqAttune": "法师",
 			"wondrous": true,
 			"weight": 3,
 			"recharge": "dawn",
@@ -13584,14 +13667,14 @@
 				"Wizard"
 			],
 			"entries": [
-				"This pristine book smells faintly of a random scent you find pleasing. When found, the book contains the following spells: {@spell 嫌恶/共感术}, {@spell 魅惑人类}, {@spell 支配人类}, {@spell 注目术}, {@spell 催眠图纹}, {@spell 修改记忆}, and {@spell 暗示术}. It functions as a spellbook for you.",
-				"While you are holding the book, you can use it as a spellcasting focus for your wizard spells.",
-				"The book has 3 charges, and it regains {@dice 1d3} expended charges daily at dawn. You can use the charges in the following ways while holding it:",
+				"这本书朴实无华，闻起来时有随机一种你喜欢的气味。 这本书在被找到时，包含了以下法术： {@spell 嫌恶/共感术}, {@spell 魅惑人类}, {@spell 支配人类}, {@spell 注目术}, {@spell 催眠图纹}, {@spell 修改记忆} 和 {@spell 暗示术}。你可以将其作为法术书。",
+				"当你持握这本书时，你可以将其作为你法师法术的法器。",
+				"这本书具有3发充能，且每天黎明时恢复 {@dice 1d3} 发已消耗的充能。你持握它时，可以通过以下方式消耗充能：",
 				{
 					"type": "list",
 					"items": [
-						"If you spend 1 minute studying the book, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book. The new spell must be of the enchantment school.",
-						"When you cast an enchantment spell, you can expend 1 charge to impose disadvantage on the first saving throw one target makes against the spell."
+						"如果你花费1分钟时间研究这本书，你可以消耗1发充能来将你的一道已准备法术替换为书中的另一道法术。新法术必须是惑控学派的法术。",
+						"当你施展一道附魔系法术时，你可以消耗1发充能让目标在对抗法术的第一个豁免检定上具有劣势。"
 					]
 				}
 			],
@@ -14692,7 +14775,8 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Illuminator's Tattoo",
+			"name": "解文刺青",
+			"ENg_name": "Illuminator's Tattoo",
 			"source": "TCE",
 			"page": 129,
 			"rarity": "common",
@@ -14700,21 +14784,22 @@
 			"wondrous": true,
 			"tattoo": true,
 			"entries": [
-				"Produced by a special needle, this magic tattoo features beautiful calligraphy, images of writing implements, and the like.",
+				"该魔法刺青用一根特殊的针制作，呈现为优美书法或者书写工具的图案。",
 				{
 					"type": "entries",
-					"name": "Tattoo Attunement",
+					"name": "刺青同调",
+					"ENG_name": "Tattoo Attunement",
 					"entries": [
-						"To attune to this item, you hold the needle to your skin where you want the tattoo to appear, pressing the needle there throughout the attunement process. When the attunement is complete, the needle turns into the ink that becomes the tattoo, which appears on the skin.",
-						"If your attunement to the tattoo ends, the tattoo vanishes, and the needle reappears in your space."
+						"同调此物品时，你需要将针持握，并抵在你想要让刺青出现的那处皮肤上。当同调完成时，针头会化为墨水再变成刺青。若你与刺青的同调结束，刺青会消失，针头会再次出现在你的位置中。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Magical Scribing",
+					"name": "魔法书写",
+					"ENG_name": "Magical Scribing",
 					"entries": [
-						"While this tattoo is on your skin, you can write with your fingertip as if it were an ink pen that never runs out of ink.",
-						"As an action, you can touch a piece of writing up to one page in length and speak a creature's name. The writing becomes {@condition invisible} to everyone other than you and the named creature for the next 24 hours. Either of you can dismiss the invisibility by touching the script (no action required). Once used, this action can't be used again until the next dawn."
+						"当这个刺青在你的皮肤上时，你可以用你的指尖写字，就如同一支永远不会断墨的墨水笔。",
+						"作为一个动作，你可以触摸一段至多长达一页的文字，然后说出一个生物的名字。在接下来的24小时内，你所触摸的文字变为对除你和你所说出名字的生物以外所有人隐形。你们中的一个可以通过触碰文字来解除隐形（无需动作）。使用后，直到下次黎明前，此动作不能再次使用。"
 					]
 				}
 			]
@@ -16960,11 +17045,12 @@
 			"ENG_name": "Leatherworker's Tools"
 		},
 		{
-			"name": "Libram of Souls and Flesh",
+			"name": "灵肉圣契",
+			"ENG_name": "Libram of Souls and Flesh",
 			"source": "TCE",
 			"page": 129,
 			"rarity": "rare",
-			"reqAttune": "by a wizard",
+			"reqAttune": "法师",
 			"wondrous": true,
 			"weight": 3,
 			"recharge": "dawn",
@@ -16973,14 +17059,14 @@
 				"Wizard"
 			],
 			"entries": [
-				"With covers made of skin and fittings of bone, this tome is cold to the touch, and it whispers faintly. When found, the book contains the following spells, which are wizard spells for you while you are attuned to the book: {@spell 活化死尸}, {@spell 死亡之环}, {@spell 摹造生命}, {@spell 死亡一指}, {@spell 死者交谈术}, {@spell summon undead|TCE}, and {@spell 吸血鬼之触}. It functions as a spellbook for you.",
-				"While you are holding the book, you can use it as a spellcasting focus for your wizard spells.",
-				"The book has 3 charges, and it regains {@dice 1d3} expended charges daily at dawn. You can use the charges in the following ways while holding it:",
+				"这本书的封面制以人皮，饰以白骨，触摸时手感冰凉，并发出微微低语。这本书在被找到时，包含了以下法术： {@spell 活化死尸}, {@spell 死亡之环}, {@spell 摹造生命}, {@spell 死亡一指}, {@spell 死者交谈术}, {@spell summon undead|TCE} 和 {@spell 吸血鬼之触}。你可以将其作为法术书。",
+				"当你持握这本书时，你可以将其作为你法师法术的法器。",
+				"书具有3发充能，且每天黎明时恢复 {@dice 1d3} 发已消耗的充能。你持握它时，可以通过以下方式消耗充能：",
 				{
 					"type": "list",
 					"items": [
-						"If you spend 1 minute studying the book, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book. The new spell must be of the necromancy school.",
-						"As an action, you can expend 1 charge to take on a semblance of undeath for 10 minutes. For the duration, you take on a deathly appearance, and undead creatures are indifferent to you, unless you have damaged them. You also appear undead to all outward inspection and to spells used to determine the target's status. The effect ends if you deal damage or force a creature to make a saving throw."
+						"如果你花费1分钟时间研究这本书，你可以消耗1发充能来将你的一道已准备法术替换为书中的另一道法术。新法术必须是死灵学派的法术。",
+						"作为一个动作，你可以消耗1发充能并伪装成亡灵10分钟。在持续时间内，你外表上如同死者，并且不死生物会忽略你，除非你伤害它们。面对所有的外部检查和侦测法术时，你也只会被显示为不死生物。此效应在你造成伤害或使一个生物进行豁免检定时结束。"
 					]
 				}
 			],
@@ -16995,7 +17081,8 @@
 			]
 		},
 		{
-			"name": "Lifewell Tattoo",
+			"name": "命源刺青",
+			"ENG_name": "Lifewell Tattoo",
 			"source": "TCE",
 			"page": 129,
 			"resist": [
@@ -17006,27 +17093,29 @@
 			"wondrous": true,
 			"tattoo": true,
 			"entries": [
-				"Produced by a special needle, this magic tattoo features symbols of life and rebirth.",
+				"该魔法刺青用一根特殊的针制作，绘有生命与重生的符号。",
 				{
 					"type": "entries",
-					"name": "Tattoo Attunement",
+					"name":"刺青同调",
+					"ENG_name": "Tattoo Attunement",
 					"entries": [
-						"To attune to this item, you hold the needle to your skin where you want the tattoo to appear, pressing the needle there throughout the attunement process. When the attunement is complete, the needle turns into the ink that becomes the tattoo, which appears on the skin.",
-						"If your attunement to the tattoo ends, the tattoo vanishes, and the needle reappears in your space."
+						"同调此物品时，你需要将针持握，并抵在你想要让刺青出现的那处皮肤上。当同调完成时，针头会化为墨水再变成刺青。若你与刺青的同调结束，刺青会消失，针头会再次出现在你的位置中。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Necrotic Resistance",
+					"name": "黯蚀抗性",
+					"ENG_name": "Necrotic Resistance",
 					"entries": [
-						"You have resistance to necrotic damage."
+						"你获得对黯蚀伤害的抗性。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Life Ward",
+					"name":"生命结界",
+					"ENG_name": "Life Ward",
 					"entries": [
-						"When you would be reduced to 0 hit points, you drop to 1 hit point instead. Once used, this property can't be used again until the next dawn."
+						"当你生命值降至0时，改为生命值降至1。使用后，直到下次黎明前，此属性不能再次使用。"
 					]
 				}
 			]
@@ -17078,20 +17167,21 @@
 			]
 		},
 		{
-			"name": "Lightning Absorbing Tattoo",
+			"name": "闪电吸收刺青",
+			"ENG_name": "Lightning Absorbing Tattoo",
 			"source": "TCE",
 			"page": 119,
 			"resist": [
-				"lightning"
+				"闪电"
 			],
-			"detail1": "yellow",
+			"detail1": "黄色",
 			"rarity": "very rare",
 			"reqAttune": true,
 			"wondrous": true,
 			"tattoo": true,
 			"hasRefs": true,
 			"entries": [
-				"{#itemEntry Absorbing Tattoo|TCE}"
+				"{#itemEntry 吸收刺青|TCE}"
 			]
 		},
 		{
@@ -17408,80 +17498,88 @@
 			]
 		},
 		{
-			"name": "Luba's Tarokka of Souls",
+			"name": "鲁芭的灵魂塔罗卡",
+			"ENG_name": "Luba's Tarokka of Souls",
 			"source": "TCE",
 			"page": 129,
 			"rarity": "artifact",
 			"reqAttune": true,
 			"wondrous": true,
 			"entries": [
-				"Not all lingering spirits are tragic souls, lost on their way to the hereafter. Some languish as prisoners, souls so wicked mortals dare not free them upon an unsuspecting afterlife.",
-				"Created by a figure of Vistani legend, Luba's Tarokka of Souls shaped the destiny of countless heroes. The prophecies of this deck of cards also revealed great evils and guided its creator into the path of nefarious forces. Untold times the deck's creator, Mother Luba, narrowly escaped doom, spared only by her keen insights. But even for her, not all wickedness could be escaped. In the most dire cases, Mother Luba managed to ensnare beings of pure evil amid the strands of fate, imprisoning them within her tarroka deck. There these foul spirits dwell still, trapped within a nether-realm hidden amid shuffling cards, waiting for fate to turn foul\u2014as it inevitably will.",
-				"Like all tarokka decks, the {@i Tarokka of Souls} is a lavishly illustrated collection of fifty-four cards, comprising the fourteen cards of the high deck and forty other cards divided into four suits: coins, glyphs, stars, and swords.",
+				"并非所有逗留于世的灵魂都是迷失在通往死后国度之路上的悲惨灵魂。有些灵魂失去活力，成为了囚徒；它们是如此邪恶，以至于凡人不敢将它们释放到那毫无戒心的来世。",
+				"作为由维斯塔尼传说中的人物创造的物品，{@i 鲁芭的灵魂塔罗卡}塑造了无数英雄的命运。这套牌作出的预言也揭示了巨大的邪恶，引导它的创造者走入邪恶势力的道路。牌组的创造者，鲁芭夫人，依靠着她敏锐的直觉无数次侥幸逃离了自己的毁灭。但就算是她也无法躲过所有的邪恶。在最危急的关头，鲁芭夫人设法用命运的丝线封印住这些至恶的存在，将它们囚禁在了这套塔罗卡中。这些邪恶的灵魂被困于隐藏在卡牌洗混翻转之中的下界空间内，静静地等待着命运本身也被玷污的那一天——这一天绝对会到来的。",
+				"和所有的 {@i Tarokka of Souls} 一样，灵魂塔罗卡是由五十四张插画精美的卡片组成的，包含十四张至高牌以及四十张被分为钱币，雕文，星星和宝剑四个套组的其他卡牌。",
 				{
 					"type": "entries",
-					"name": "Random Properties",
+					"name": "随机属性",
+					"ENG_name": "Random Properties",
 					"entries": [
-						"The artifact has the following random properties, which you can determine by rolling on the tables in the \"Artifacts\" section of the {@book Dungeon Master's Guide|DMG}:",
+						"这件神器具有以下随机属性，你可以通过对着{@book 《城主指南》|DMG}中的“神器”章节掷骰以决定它们:",
 						{
 							"type": "list",
 							"items": [
-								"2 {@table Artifact Properties; Minor Detrimental Properties|dmg|minor detrimental} properties",
-								"2 {@table Artifact Properties; Minor Beneficial Properties|dmg|minor beneficial} properties"
+								"两项 {@table 神器属性; 弱效减益属性|dmg|弱效减益} 属性",
+								"两项 {@table 神器属性; 弱效增益属性|dmg|弱效增益} 属性"
 							]
 						}
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Spells",
+					"name": "法术",
+					"ENG_name": "Spells",
 					"entries": [
-						"While holding the deck, you can use an action to cast one of the following spells (save DC 18) from it: {@spell 通晓语言}, {@spell 侦测善恶}, {@spell 侦测魔法}, {@spell 侦测毒素或疾病}, {@spell 物品定位术}, or {@spell 探知}. Once you use the deck to cast a spell, you can't cast that spell again from it until the next dawn."
+						"持握牌组时，你可以用一个动作用牌组施展以下法术（豁免DC18）： {@spell 通晓语言}, {@spell 侦测善恶}, {@spell 侦测魔法}, {@spell 侦测毒素或疾病}, {@spell 物品定位术} 或 {@spell 探知}。一旦你用牌组施展了某个法术，你在下一个黎明前不能再次施展该法术。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Enduring Vision",
+					"name": "持久之视",
+					"ENG_name": "Enduring Vision",
 					"entries": [
-						"While holding the deck, you automatically succeed on Constitution saving throws made to maintain your concentration on {@spell 预言术} spells."
+						"持握牌组时，你为维持 {@spell 预言术} 的专注所作的体质豁免检定自动成功。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Twist of Fate",
+					"name": "编织命运",
+					"ENG_name": "Twist of Fate",
 					"entries": [
-						"As an action, you can draw a card from the deck and twist the fortune of another creature you can see within 15 feet of you. Choose one of the following effects:",
+						"以一个动作，你可以从牌组中抽出一张卡，从而编织15尺内你能看见的另一个生物的命运。从以下效应中选择一项：",
 						{
 							"type": "list",
 							"style": "list-hang-notitle",
 							"items": [
 								{
 									"type": "item",
-									"name": "Weal.",
-									"entry": "The creature has advantage on attack rolls, ability checks, and saving throws for the next hour."
+									"name": "幸福",
+									"ENG_name": "Weal.",
+									"entry": "在接下来的一小时内，该生物在攻击检定，属性检定和豁免检定上具有优势。"
 								},
 								{
 									"type": "item",
-									"name": "Woe.",
-									"entry": "The creature has disadvantage on attack rolls, ability checks, and saving throws for the next hour."
+									"name": "灾祸",
+									"ENG_name": "Woe.",
+									"entry": "在接下来的一小时内，该生物在攻击检定，属性检定和豁免检定上具有劣势。"
 								},
-								"The deck can be used in this way twice, and you regain all expended uses at the next dawn."
+								"牌组可以如此被使用两次，你在下一个黎明时分重获所有已使用的次数。"
 							]
 						}
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Prisoners of Fate",
+					"name": "命运的囚徒",
+					"ENG_name": "Prisoners of Fate",
 					"entries": [
-						"Whenever you use the Twist of Fate property, there is a chance that one of the souls trapped in the deck escapes. Roll {@dice d100} and consult the Souls of the Tarokka table. If you roll one of the high cards, the soul associated with it escapes. You can find its statistics in the {@book Monster Manual|MM}. If you roll a soul that has already escaped, roll again.",
+						"每当你使用编织命运特性时，都有可能导致被囚禁的灵魂之一逃脱。骰一次 {@dice d100} 来对照塔罗卡中的灵魂表格。如果你骰出了至高牌之一，和它相关的灵魂就会逃脱。你可以在怪物图鉴中找到它的数据。如果你骰出的灵魂已经逃脱了，则重骰。",
 						{
 							"type": "table",
-							"caption": "Souls of the Tarokka",
+							"caption": "灵魂塔罗卡",
 							"colLabels": [
 								"d100",
-								"Card",
-								"Soul"
+								"卡片",
+								"灵魂"
 							],
 							"colStyles": [
 								"col-2 text-center",
@@ -17491,73 +17589,73 @@
 							"rows": [
 								[
 									"1",
-									"Artifact",
+									"神器Artifact",
 									"{@creature Flameskull}"
 								],
 								[
 									"2",
-									"Beast",
-									"{@creature Wraith}"
+									"野兽Beast",
+									"{@creature 缚灵}"
 								],
 								[
 									"3",
-									"Broken",
-									"{@creature Banshee}"
+									"崩毁之人Broken one",
+									"{@creature 女妖}"
 								],
 								[
 									"4",
-									"Darklord",
-									"{@creature Vampire}"
+									"黑暗领主Dark lord",
+									"{@creature 吸血鬼}"
 								],
 								[
 									"5",
-									"Donjon",
-									"{@creature Mummy}"
+									"塔楼Donjon",
+									"{@creature 木乃伊}"
 								],
 								[
 									"6",
-									"Executioner",
-									"{@creature Death knight}"
+									"刽子手Executioner",
+									"{@creature 死亡骑士}"
 								],
 								[
 									"7",
-									"Ghost",
-									"{@creature Ghost}"
+									"幽魂Ghost",
+									"{@creature 幽魂}"
 								],
 								[
 									"8",
-									"Horseman",
-									"{@creature Mummy lord}"
+									"骑手Horeseman",
+									"{@creature 木乃伊领主}"
 								],
 								[
 									"9",
-									"Innocent",
-									"{@creature Ghost}"
+									"无辜者Innocent",
+									"{@creature 幽魂}"
 								],
 								[
 									"10",
-									"Marionette",
-									"{@creature Mummy}"
+									"提线木偶Marionette",
+									"{@creature 木乃伊}"
 								],
 								[
 									"11",
-									"Mists",
-									"{@creature Wraith}"
+									"迷雾Mists",
+									"{@creature 缚灵}"
 								],
 								[
 									"12",
-									"Raven",
-									"{@creature Vampire spawn}"
+									"渡鸦Raven",
+									"{@creature 吸血鬼眷族}"
 								],
 								[
 									"13",
-									"Seer",
-									"{@creature Vampire}"
+									"先知Seer",
+									"{@creature 吸血鬼}"
 								],
 								[
 									"14",
-									"Tempter",
-									"{@creature Vampire spawn}"
+									"引诱者Tempter",
+									"{@creature 吸血鬼眷族}"
 								],
 								[
 									"15-100",
@@ -17566,28 +17664,31 @@
 								]
 							]
 						},
-						"The released soul appears at a random location within {@dice 10d10} miles of you and terrorizes the living. Until the released soul is destroyed, it gains the benefit of a weal from the deck's Twist of Fate property, and both you and the original target of Twist of Fate suffer the effect of woe."
+						"被释放的灵魂出现在距离你{@dice 10d10}里以内的一个随机地点，并开始恐吓活着的生物。直至逃脱的灵魂被摧毁之前，它获得牌组的编织命运特性中的幸福的效应，并且你和编织命运的原本的目标都获得编织命运特性中的灾祸的效应。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Shuffling Fate",
+					"name": "重洗命运",
+					"ENG_name": "Shuffling Fate",
 					"entries": [
-						"If you go 7 days without using the Twist of Fate property, your attunement to Luba's Tarroka of Souls ends, and you can't attune to it again until after another creature uses Twist of Fate on you."
+						"如果你在七日内没有使用编织命运特性，你与{@i 鲁芭的灵魂塔罗卡}的同调结束，并且你不能再次与之同调，直至另一个生物对你使用牌组的编织命运特性。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Destroying the Deck",
+					"name": "摧毁牌组",
+					"ENG_name": "Destroying the Deck",
 					"entries": [
-						"Luba's Tarokka of Souls can be destroyed only if all fourteen souls within are released and destroyed. This reveals a fifteenth soul, a lich, that inhabits the Nether card, which appears only when the fourteen souls are defeated. If this ancient entity is destroyed, the Nether card vanishes and the deck becomes a normal tarokka deck, with no special properties, but it includes a new card of the DM's design.",
+						"{@i 鲁芭的灵魂塔罗卡可以被摧毁}，前提是所有被囚禁的灵魂都被释放并摧毁。这会揭示第十五个灵魂——一位巫妖的存在。它居住在下界卡之中，这张卡只有在其他十四个灵魂都被摧毁后才会出现。如果巫妖被摧毁，下界卡随之消失，灵魂塔罗卡变为一套普通的塔罗卡，不再具有任何特性，不过其中包含了一张由DM设计的新卡。",
 						{
 							"type": "entries",
-							"name": "Mother Luba and the Vistani",
+							"name": "鲁芭夫人与维斯塔尼人",
+							"ENG_name": "Mother Luba and the Vistani",
 							"entries": [
-								"The creator of the Tarokka of Souls, Mother Luba was one of the most influential leaders of the Vistani. For untold generations, the Vistani have wandered the Shadowfell, which includes terrifying demiplanes like the vampire-haunted realm of Barovia. These travelers have learned many secrets of these domains and encountered countless others wandering amid the Shadowfell's horrors. Most Vistani bands accept well-intentioned wayfarers from diverse walks and of disparate origins, embracing any who seek to find a home amid the endless roads and vistas hidden amid the mists.",
-								"A halfling Vistani, Mother Luba led one of the largest groups of Vistani in the Shadowfell. She hailed from the same world that Count Strahd von Zarovich and Madam Eva came from, and she created a community of kindness and resilience-ever rare to find in the Plane of Shadow. She led her people in welcoming strangers, feeding the hungry, and defying the cruel. She and Madam Eva were once friends, until Madam Eva began bargaining with the creatures of the night. \"We may wander amid the shadows,\" Mother Luba said. \"But we must ever serve as a light to our fellow travelers.\"",
-								"Some years ago, Mother Luba disappeared into the mists, leaving behind only the Tarokka of Souls. It is said that if you draw the Mists card from it, you can hear the whispers of her kind voice."
+								"魂之塔罗卡的创造者鲁芭夫人曾是维斯塔尼人中最有影响力的领导者之一。在无数个时代里，维斯塔尼人游荡于堕影冥界之中，其中包括了如同被吸血鬼所困扰的领域——巴洛维亚之类的恐惧半位面。这些旅行者们知晓关于这些领域的许多秘密，遭遇过无数其他游荡于堕影冥界之惊惧中的事物。绝大多数维斯塔尼部族接受以不同方式旅行、不同出身的善意旅行者，他们欢迎那些想要在无尽路途中，在迷雾之后的朦胧幻象中觅得一处家园的人。",
+								"作为一名半身人维斯塔尼人，鲁芭夫人领导着堕影冥界中最大的一支维斯塔尼部族。她来自施特拉德伯爵与伊娃夫人所来自的相同的世界，而她创造了一个善良的、坚韧的社区——在阴影位面之中极为少见。她带着她的族人欢迎着旅行者，为饥饿者提供食物，反抗着残忍之人。她与伊娃夫人曾是友人，直到伊娃夫人与那些属于黑夜的生物做起了交易。“我们或许会与阴影之中游荡，”鲁芭夫人说，“但我们必须成为那些与我们同样在阴影中游荡的旅行者们的希望之光。”",
+								"数年之前，鲁芭夫人消失在了迷雾之中，仅仅留下了魂之塔罗卡。有人说若你抽出了“迷雾”之卡，你就能听到她善意的耳语声。"
 							]
 						}
 					]
@@ -17661,18 +17762,19 @@
 			"ENG_name": "Lyre"
 		},
 		{
-			"name": "Lyre of Building",
+			"name": "建筑里拉琴",
+			"ENG_name": "Lyre of Building",
 			"source": "TCE",
 			"page": 131,
 			"type": "INS",
 			"rarity": "rare",
-			"reqAttune": "by a bard",
+			"reqAttune": "吟游诗人",
 			"wondrous": true,
 			"weight": 2,
 			"grantsProficiency": true,
 			"entries": [
-				"While holding this {@item lyre|PHB}, you can cast {@spell 修复术} as an action. You can also play the {@item lyre|PHB} as a reaction when an object or a structure you can see within 300 feet of you takes damage, causing it to be immune to that damage and any further damage of the same type until the start of your next turn.",
-				"In addition, you can play the {@item lyre|PHB} as an action to cast {@spell 鬼斧神工}, {@spell 地动术}, {@spell 穿墙术}, or {@spell summon construct|TCE}, and that spell can't be cast from it again until the next dawn."
+				"当持握这把{@item lyre|PHB}时，你可以用一个动作施展 {@spell 修复术}。当一个距离你300尺内的{@item lyre|PHB}或建筑受到伤害时，你也可以用一个反应弹奏这把里拉琴，使其免疫该此次伤害以及其他同类型伤害，直到你的下个回合开始。",
+				"此外，你可以用一个动作弹奏这把{@item lyre|PHB}以施展 {@spell 鬼斧神工}, {@spell 地动术}, {@spell 穿墙术} 或 {@spell summon construct|TCE}，直到下次黎明前，这个法术不能再以此法施展。"
 			],
 			"attachedSpells": [
 				"fabricate",
@@ -18220,7 +18322,8 @@
 			"ENG_name": "Mason's Tools"
 		},
 		{
-			"name": "Masquerade Tattoo",
+			"name": "伪装刺青",
+			"ENG_name": "Masquerade Tattoo",
 			"source": "TCE",
 			"page": 131,
 			"rarity": "common",
@@ -18228,27 +18331,29 @@
 			"wondrous": true,
 			"tattoo": true,
 			"entries": [
-				"Produced by a special needle, this magic tattoo appears on your body as whatever you desire.",
+				"该魔法刺青用一根特殊的针制作，显现为你所想要的样子。",
 				{
 					"type": "entries",
-					"name": "Tattoo Attunement",
+					"name":"刺青同调",
+					"ENG_name": "Tattoo Attunement",
 					"entries": [
-						"To attune to this item, you hold the needle to your skin where you want the tattoo to appear, pressing the needle there throughout the attunement process. When the attunement is complete, the needle turns into the ink that becomes the tattoo, which appears on the skin.",
-						"If your attunement to the tattoo ends, the tattoo vanishes, and the needle reappears in your space."
+						"同调此物品时，你需要将针持握，并抵在你想要让刺青出现的那处皮肤上。当同调完成时，针头会化为墨水再变成刺青。若你与刺青的同调结束，刺青会消失，针头会再次出现在你的位置中。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Fluid Ink",
+					"name": "液态油墨",
+					"ENG_name": "Fluid Ink",
 					"entries": [
-						"As a bonus action, you can shape the tattoo into any color or pattern and move it to any area of your skin. Whatever form it takes, it is always obviously a tattoo. It can range in size from no smaller than a copper piece to an intricate work of art that covers all your skin."
+						"作为一个附赠动作，你可以将刺青变为任意颜色或图纹，并移动到你皮肤上的任意区域。无论其有着什么形态，它看起来总是一个刺青。它的尺寸最小可为一枚铜币，大则可复盖你的全身。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Disguise Self",
+					"name": "易容自我",
+					"ENG_name": "Disguise Self",
 					"entries": [
-						"As an action, you can use the tattoo to cast the {@spell 易容术} spell (DC 13 to discern the disguise). Once the spell is cast from the tattoo, it can't be cast from the tattoo again until the next dawn."
+						"作为一个动作，你可以使用刺青施展 {@spell 易容术} 法术（识破DC13）。使用刺青施展这道法术后，直到下次黎明前，不能再次用刺青施展。"
 					]
 				}
 			],
@@ -18500,65 +18605,71 @@
 			]
 		},
 		{
-			"name": "Mighty Servant of Leuk-o",
+			"name": "琉克欧的非凡机仆",
+			"ENG_name": "Mighty Servant of Leuk-o",
 			"source": "TCE",
 			"page": 131,
 			"rarity": "artifact",
 			"reqAttune": true,
 			"wondrous": true,
 			"entries": [
-				"Named for the warlord who infamously employed it, the {@creature Mighty Servant of Leuk-o|TCE} is a fantastically powerful, 10-foot-tall machine that turns into an animate construct when piloted. Crafted of a gleaming black alloy of unknown origin, the servant is often described as a combination of a disproportioned dwarf and an oversized beetle. The servant contains enough space for 1 ton of cargo and a crew compartment within, from which up to two Medium creatures can control it-and potentially execute a spree of unstoppable destruction.",
-				"Tales of the servant's origins involve more conjecture than fact, often referring to otherworldly beings, the mysterious Barrier Peaks in Oerth, and the supposedly related device known as the {@i Machine of Lum the Mad}. The best details on the device's origins and operation can be found in the {@i Mind of Metal}, a tome of artificer's secrets that connects the device to the traditions of the lost Olman people, and which was written by Lum the Mad's several times over granddaughter, Lum the Maestro, while she reconstructed the long disassembled Mighty Servant of Leuk-o.",
+				"{@creature Mighty Servant of Leuk-o|TCE} 是一台具有非凡的力量，身高10尺的机器，以使用它的那位臭名昭著的军阀命名，当有人驾驶时，它会变成一个活化的构装生物。它的身躯由一种来历不明的黑色合金打造，在常见的描述中，它就像一个比例失调的矮人和一只巨型甲虫的结合。机仆内部的空间足够容纳1吨的载重和一个内置的舱室，两个中型生物能够从这里控制它——并带来一场势不可挡的毁灭。",
+				"关于机仆来历的传说更多仅是猜测而非事实，其中通常会提及异界的存在，奥斯世界神秘的屏障峰，以及被称为“{@i Machine of Lum the Mad}）”的相关装置。关于这台装置的起源和操作的细节能够在一本名为《金属意志》的书中寻得。这本书是一本奇械师的秘卷，由疯子卢姆的后代卢姆大师（Lum the Maestro）撰写，当时她正在试图重组被拆散已久的{@i 琉克欧的非凡机仆}。",
 				{
 					"type": "entries",
-					"name": "Dangerous Attunement",
+					"name": "危险同调",
+					"ENG_name": "Dangerous Attunement",
 					"entries": [
-						"Two creatures can be attuned to the servant at a time. If a third creature tries to attune to it, nothing happens.",
-						"The servant's controls are accessed by a hatch in its upper back, which is easily opened while there are no creatures attuned to the artifact.",
-						"Attuning to the artifact requires two hours, which can be undertaken as part of a long rest, during which time you must be inside the servant, interacting with its controls. While crew members are attuning themselves, any creature or structure outside and within 50 feet of the servant has a 25 percent chance of being accidentally targeted by one of its Destructive Fist attacks once during the attunement. This process must be undergone every time a creature attunes itself to the artifact."
+						"两个生物能同时与机仆进行同调。如果第三个人试图和机仆同调，则无事发生。",
+						"机仆的控制舱室可以通过其背部的一扇舱门进入，当没有生物与之同调时，这扇舱门很容易开启。与这件神器同调需要两个小时，可以作为长休的一部分进行。",
+						"在此期间，你必须进入机仆的内部，调试它的控制设备。当驾驶员进行同调时，任何在机仆外部和其50尺内的生物或建筑都有50%可能在同调过程中被其毁灭铁拳攻击意外击中一次。每当有一个生物试图将自己与之同调时，都会发生这一过程。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Controlling the Servant",
+					"name": "控制机仆",
+					"ENG_name": "Controlling the Servant",
 					"entries": [
-						"While any creatures are attuned to the artifact, attuned creatures can open the hatch as easily as any other door. Other creatures can open the hatch as an action with a successful DC 25 Dexterity check using {@item 盗贼工具|phb}. A {@spell 敲击术} spell cast on the hatch also opens it until the start of the caster's next turn.",
-						"A creature can enter or exit through the hatch by spending 10 feet of movement. Those inside the servant have total cover from effects originating outside it. The controls within it allow creatures to see outside without obstruction.",
-						"While you are inside the servant, you can command it by using the controls. During your turn (for either attuned creature), you can command it in the following ways:",
+						"当有任何生物与神器同调时，同调的生物能够像打开其他们一样轻松地打开舱门。其他生物则需要通过DC25的{@item 盗贼工具|PHB}检定才能打开舱门。一道对舱门施展的 {@spell 敲击术} 法术能够让舱门在施法者下个回合开始之前开启。",
+						"一个生物能够以10尺移动力进出舱门。在机仆内部的生物和物件对源自外部的效应具有全掩护。内部的控制舱能够让内部的生物毫无阻挡地看到外面的景象。",
+						"当你在机仆内部时，你能通过控制系统控制其行动。在你（每一个与之同调的生物）的回合中，你能以以下方式命令机仆：",
 						{
 							"type": "list",
 							"items": [
-								"Open or close the hatch (no action required, once per turn)",
-								"Move the servant up to its speed (no action required)",
-								"As an action, you can command the servant to take one of the actions in its stat block or some other action.",
-								"When a creature provokes an opportunity attack from the servant, you can use your reaction to command the servant to make one Destructive Fist attack against that creature."
+								"打开或关闭舱门（不需要动作，一回合一次）",
+								"让机仆移动最大为其速度的距离（不需要动作）",
+								"以一个动作，你能命令机仆执行其数据版中的动作或之外的其他动作。",
+								"当一个生物触发来自机仆的借机攻击时，你能以你的反应动作命令机仆对该生物进行一次毁灭铁拳攻击。"
 							]
 						},
-						"While there are no attuned creatures inside the servant, it is an inert object."
+						"当没有生物与之同调时，神器只是一件不会活动的物件。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Ghost in the Machine",
+					"name": "械中幽灵",
+					"ENG_name": "Ghost in the Machine",
 					"entries": [
-						"Upon his death, the soul of the mighty warlord Leuk-o was drawn into the artifact and has become its animating force. The servant has been known to attack or move of its own accord, particularly if doing so will cause destruction. Once every 24 hours, the servant, at the DM's discretion, takes one action while uncrewed.",
-						"If the servant loses half of its hit points or more, each creature attuned to it must succeed on a DC 20 Wisdom saving throw or be {@condition charmed} for 24 hours. While {@condition charmed} in this way, the creature goes on a destructive spree, seeking to destroy structures and attack any unattuned creatures within sight of the servant, starting with those threatening the artifact-preferably using the servant, if possible."
+						"在迎来死亡时，强大的军阀琉克欧的灵魂被吸入这台神器之中，并成为能让它活化的力量。机仆会采取特别是能造成破坏自行攻击和移动。每24小时一次，由DM决定，无人驾驶的机仆会进行一次这样的动作。",
+						"如果机仆失去其一半或一半以上的生命值，每个与之同调的生物必须成功通过DC20的感知豁免，否则被 {@condition 魅惑} 长达24小时。当因此被 {@condition 魅惑} 时, 生物会纵情破坏，试图毁灭一切建筑并攻击一切机仆视野中未与之同调的生物。如果可能的话，它会尽量操作机仆，并从那些威胁到神器的生物开始攻击。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Self-Destruct",
+					"name": "自毁",
+					"ENG_name": "Self-Destruct",
 					"entries": [
-						"By inputting a specific series of lever pulls and button presses, the servant's two crew members can cause it to explode. The self-destruct code is not revealed to crew members when they attune to the artifact. If the code is discovered (the DM determines how), it requires two attuned crew members to be inside the servant and spend their actions on 3 consecutive rounds performing the command. Should the crew members begin the process of entering the code, though, the servant uses its Ghost in the Machine property and turns the crew members against each other.",
-						"If the crew members successfully implement the code, at the end of the third round, the servant explodes. Every creature in a 100-foot-radius sphere centered on the servant must make a DC 25 Dexterity saving throw. On a failed save, a creature takes 87 ({@damage 25d6}) force damage, 87 ({@damage 25d6}) lightning damage, and 87 ({@damage 25d6}) thunder damage. On a successful save, a creature takes half as much damage. Objects and structures in the area take triple damage. Creatures inside the servant are slain instantly and leave behind no remains.",
-						"This does not destroy the servant permanently. Rather, {@dice 2d6} days later, its parts\u2014left arm, left leg, right arm, right leg, lower torso, and upper torso\u2014drop from the sky in random places within 1,000 miles of the explosion. If brought within 5 feet of one another, the pieces reconnect and reform the servant."
+						"通过拉动一系列的杠杆并按下按钮，机仆的两位驾驶员能够令它自爆。当机仆的驾驶员与之同调时，自毁密码并不会被透露给他们。如果密码被找到（由DM决定如何发现），则需要与之同调的驾驶员从机仆内部，在连续三回合耗费他们的动作输入密码。但是，如果驾驶员们开始输入自毁密码的过程，机仆会使用其械中幽灵特性并令两位驾驶员相互对立。",
+						"如果船员们成功输入了密码，第三轮结束时，机仆会自爆。以机仆为中心半径100尺球状区域内每个生物必须进行DC25敏捷豁免检定。豁免失败的情况下，生物会受到87 ({@damage 25d6}) 力场伤害, 87 ({@damage 25d6}) 闪电伤害和 87 ({@damage 25d6}) 雷鸣伤害。 豁免成功的情况下，该生物受到一半的伤害。范围内的物件和建筑受到三倍伤害，机仆体内的生物会立即被杀死，并不会留下任何遗骸。",
+						"自毁不会立即破坏机仆。相反， {@dice 2d6} 日后， 它的部分\u2014：左臂，左腿，右臂，右腿，上部躯干和下部躯干会在爆炸1000英里内的随机地点从天空落下。如果这些部分被带到彼此的5尺内，它们会重新连接并再度组装成机仆。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Destroying the Servant",
+					"name": "破坏机仆",
+					"ENG_name": "Destroying the Servant",
 					"entries": [
-						"The servant can be destroyed in two ways. After it has self-destructed, its disconnected pieces can be melted down in one of the forge-temples of its ancient Olman creators. Alternatively, if the servant strikes the Machine of Lum the Mad, both artifacts explode in an eruption that is three times the size and three times the damage as the servant's self-destruct property."
+						"机仆能够被两种方式破坏。在其自毁之后，它散落的碎片能够在它古代奥尔曼人创造者的一座锻造神庙中被融化。如果机仆与卢姆的机器相撞，两件神器都会在规模范围和伤害是机仆自毁的三倍的爆炸中毁灭。"
 					]
 				}
 			],
@@ -19189,11 +19300,12 @@
 			"ENG_name": "Mystery Key"
 		},
 		{
-			"name": "Nature's Mantle",
+			"name": "自然斗篷",
+			"ENG_name": "Nature's Mantle",
 			"source": "TCE",
 			"page": 133,
 			"rarity": "uncommon",
-			"reqAttune": "by a druid or ranger",
+			"reqAttune": "德鲁伊或游侠",
 			"wondrous": true,
 			"weight": 2,
 			"focus": [
@@ -19201,8 +19313,8 @@
 				"Ranger"
 			],
 			"entries": [
-				"This cloak shifts color and texture to blend with the terrain surrounding you. While wearing the cloak, you can use it as a spellcasting focus for your druid and ranger spells.",
-				"While you are in an area that is lightly obscured, you can {@action Hide} as a bonus action even if you are being directly observed."
+				"这件斗篷能随着你周围的环境改变颜色和材质。当穿戴着斗篷时，你可以使用其作为你施展德鲁伊和游侠法术的法器。",
+				"当你处于一处有着轻度遮蔽的区域时，你可以用一个附赠动作进行 {@action Hide} 即便你能被直接观察到。"
 			],
 			"hasFluffImages": true
 		},
@@ -19429,20 +19541,21 @@
 			"ENG_name": "Necklace string of small pink pearls"
 		},
 		{
-			"name": "Necrotic Absorbing Tattoo",
+			"name": "黯蚀吸收刺青",
+			"ENG_name": "Necrotic Absorbing Tattoo",
 			"source": "TCE",
 			"page": 119,
 			"resist": [
-				"necrotic"
+				"黯蚀"
 			],
-			"detail1": "black",
+			"detail1": "黑色",
 			"rarity": "very rare",
 			"reqAttune": true,
 			"wondrous": true,
 			"tattoo": true,
 			"hasRefs": true,
 			"entries": [
-				"{#itemEntry Absorbing Tattoo|TCE}"
+				"{#itemEntry 吸收刺青|TCE}"
 			]
 		},
 		{
@@ -19601,7 +19714,7 @@
 			"bonusAc": "+2",
 			"stealth": true,
 			"entries": [
-				"You gain a +2 bonus to AC and resistance to poison damage while you wear this armor. In addition, you gain advantage on ability checks and saving throws made to avoid or end the {@condition grappled} condition on yourself."
+				"You gain a +2 bonus to AC and resistance to poison damage while you wear this armor. In addition, you gain advantage on ability checks and saving throws made to avoid or end the {@condition 被擒} condition on yourself."
 			]
 		},
 		{
@@ -20407,26 +20520,27 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Outer Essence Shard",
+			"name": "外界精粹碎晶",
+			"ENG_name": "Outer Essence Shard",
 			"source": "TCE",
 			"page": 133,
 			"rarity": "rare",
-			"reqAttune": "by a sorcerer",
+			"reqAttune": "术士",
 			"wondrous": true,
 			"weight": 1,
 			"focus": [
 				"Sorcerer"
 			],
 			"entries": [
-				"This flickering crystal holds the essence of an Outer Plane. As an action, you can attach the shard to a Tiny object (such as a weapon or a piece of jewelry) or detach it. It falls off if your attunement to it ends. You can use the shard as a spellcasting focus while you hold or wear it.",
-				"Roll a {@dice d4} and consult the Outer Essence Shards table to determine the shard's essence and property. When you use a Metamagic option on a spell while you are holding or wearing the shard, you can use that property.",
+				"这块闪烁着的水晶蕴含着一处外层位面的精粹。作为一个动作，你可以将碎晶附上一件微型物件（如一把武器或一块珠宝）或摘下。当同调结束时它会掉落下来。当你持握或穿戴碎晶时，你可以将其作为法器使用。",
+				"骰一个 {@dice d4} 并根据外界精粹碎晶晶表格来决定碎晶的精粹类型和属性。当你持握或穿戴碎晶，并在一道法术上应用一种超魔法选项时，你可以应用该属性。",
 				{
 					"type": "table",
-					"caption": "Outer Essence Shards",
+					"caption": "外界精粹碎晶",
 					"colLabels": [
 						"d4",
-						"Property",
-						"Shard"
+						"属性",
+						"碎晶"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -20436,116 +20550,124 @@
 					"rows": [
 						[
 							"1",
-							"Lawful",
-							"{@item Outer Essence Shard (Lawful)|TCE}"
+							"守序",
+							"{@item 外界精粹碎晶（守序）|TCE}"
 						],
 						[
 							"2",
-							"Chaotic",
-							"{@item Outer Essence Shard (Chaotic)|TCE}"
+							"混乱",
+							"{@item 外界精粹碎晶（混乱）|TCE}"
 						],
 						[
 							"3",
-							"Good",
-							"{@item Outer Essence Shard (Good)|TCE}"
+							"善良",
+							"{@item 外界精粹碎晶（善良）|TCE}"
 						],
 						[
 							"4",
-							"Evil",
-							"{@item Outer Essence Shard (Evil)|TCE}"
+							"邪恶",
+							"{@item 外界精粹碎晶（邪恶）|TCE}"
 						]
 					]
 				}
 			]
 		},
 		{
-			"name": "Outer Essence Shard (Chaotic)",
+			"name": "外界精粹碎晶（混乱）",
+			"ENG_name": "Outer Essence Shard (Chaotic)",
 			"source": "TCE",
 			"page": 133,
 			"rarity": "rare",
-			"reqAttune": "by a sorcerer",
+			"reqAttune": "术士",
 			"wondrous": true,
 			"weight": 1,
 			"focus": [
 				"Sorcerer"
 			],
 			"entries": [
-				"This flickering crystal holds the essence of an Outer Plane. As an action, you can attach the shard to a Tiny object (such as a weapon or a piece of jewelry) or detach it. It falls off if your attunement to it ends. You can use the shard as a spellcasting focus while you hold or wear it.",
-				"When you use a Metamagic option on a spell while you are holding or wearing the shard, you can use that property.",
+				"这块闪烁着的水晶蕴含着一处外层位面的精粹。作为一个动作，你可以将碎晶附上一件微型物件（如一把武器或一块珠宝）或摘下。当同调结束时它会掉落下来。当你持握或穿戴碎晶时，你可以将其作为法器使用。",
+				"当你持握或穿戴碎晶，并在一道法术上应用一种超魔法选项时，你可以应用该属性。",
 				{
 					"type": "entries",
-					"name": "Property",
+					"name": "属性",
+					"ENG_name": "Property",
 					"entries": [
-						"Choose one creature who takes damage from the spell. That target has disadvantage on attack rolls and ability checks made before the start of your next turn."
+						"选择一个受到此法术伤害的生物。目标在你的下个回合开始前进行的攻击检定、属性检定具有劣势。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Outer Essence Shard (Evil)",
+			"name": "外界精粹碎晶（邪恶）",
+			"ENG_name": "Outer Essence Shard (Evil)",
 			"source": "TCE",
 			"page": 133,
 			"rarity": "rare",
-			"reqAttune": "by a sorcerer",
+			"reqAttune": "术士",
 			"wondrous": true,
 			"weight": 1,
 			"focus": [
 				"Sorcerer"
 			],
 			"entries": [
-				"This flickering crystal holds the essence of an Outer Plane. As an action, you can attach the shard to a Tiny object (such as a weapon or a piece of jewelry) or detach it. It falls off if your attunement to it ends. You can use the shard as a spellcasting focus while you hold or wear it.",
-				"When you use a Metamagic option on a spell while you are holding or wearing the shard, you can use that property.",
+				"这块闪烁着的水晶蕴含着一处外层位面的精粹。作为一个动作，你可以将碎晶附上一件微型物件（如一把武器或一块珠宝）或摘下。当同调结束时它会掉落下来。当你持握或穿戴碎晶时，你可以将其作为法器使用。",
+				"当你持握或穿戴碎晶，并在一道法术上应用一种超魔法选项时，你可以应用该属性。",
 				{
 					"type": "entries",
-					"name": "Property",
+					"name": "属性",
+					"ENG_name": "Property",
 					"entries": [
-						"Choose one creature who takes damage from the spell. That target takes an extra {@damage 3d6} necrotic damage."
+						"选择一个受到此法术伤害的生物。目标受到额外 {@damage 3d6} 黯蚀伤害。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Outer Essence Shard (Good)",
+			"name": "外界精粹碎晶（善良）",
+			"ENG_name": "Outer Essence Shard (Good)",
 			"source": "TCE",
 			"page": 133,
 			"rarity": "rare",
-			"reqAttune": "by a sorcerer",
+			"reqAttune": "术士",
 			"wondrous": true,
 			"weight": 1,
 			"focus": [
 				"Sorcerer"
 			],
 			"entries": [
-				"This flickering crystal holds the essence of an Outer Plane. As an action, you can attach the shard to a Tiny object (such as a weapon or a piece of jewelry) or detach it. It falls off if your attunement to it ends. You can use the shard as a spellcasting focus while you hold or wear it.",
-				"When you use a Metamagic option on a spell while you are holding or wearing the shard, you can use that property.",
+				"这块闪烁着的水晶蕴含着一处外层位面的精粹。作为一个动作，你可以将碎晶附上一件微型物件（如一把武器或一块珠宝）或摘下。当同调结束时它会掉落下来。当你持握或穿戴碎晶时，你可以将其作为法器使用。",
+				"当你持握或穿戴碎晶，并在一道法术上应用一种超魔法选项时，你可以应用该属性。",
 				{
 					"type": "entries",
-					"name": "Property",
+					"name": "属性",
+					"ENG_name": "Property",
 					"entries": [
-						"You or one creature of your choice that you can see within 30 feet of you gains {@dice 3d6} temporary hit points."
+						"你或一个你选择的一个距离你30尺内且你可见的生物获得 {@dice 3d6} 临时生命值。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Outer Essence Shard (Lawful)",
+			"name": "外界精粹碎晶（守序）",
+			"ENG_name": "Outer Essence Shard (Lawful)",
 			"source": "TCE",
 			"page": 133,
 			"rarity": "rare",
-			"reqAttune": "by a sorcerer",
+			"reqAttune": "术士",
 			"wondrous": true,
 			"weight": 1,
 			"focus": [
 				"Sorcerer"
 			],
 			"entries": [
-				"This flickering crystal holds the essence of an Outer Plane. As an action, you can attach the shard to a Tiny object (such as a weapon or a piece of jewelry) or detach it. It falls off if your attunement to it ends. You can use the shard as a spellcasting focus while you hold or wear it.",
-				"When you use a Metamagic option on a spell while you are holding or wearing the shard, you can use that property.",
+				"这块闪烁着的水晶蕴含着一处外层位面的精粹。作为一个动作，你可以将碎晶附上一件微型物件（如一把武器或一块珠宝）或摘下。当同调结束时它会掉落下来。当你持握或穿戴碎晶时，你可以将其作为法器使用。",
+				"当你持握或穿戴碎晶，并在一道法术上应用一种超魔法选项时，你可以应用该属性。",
 				{
 					"type": "entries",
-					"name": "Property",
+					"name": "属性",
+					"ENG_name": "Property",
 					"entries": [
-						"You can end one of the following conditions affecting yourself or one creature you can see within 30 feet of you: {@condition charmed}, {@condition blinded}, {@condition deafened}, {@condition frightened}, {@condition poisoned}, or {@condition stunned}."
+						"你可以终止正影响你或距离你30尺内且你可见的一个生物的下列状态之一：{@condition 魅惑}, {@condition 目盲}, {@condition 耳聋}, {@condition 恐惧}, {@condition 中毒}, 或 {@condition 震慑}。"
 					]
 				}
 			]
@@ -21313,11 +21435,12 @@
 			]
 		},
 		{
-			"name": "Planecaller's Codex",
+			"name": "异界行访录",
+			"ENG_name": "Planecaller's Codex",
 			"source": "TCE",
 			"page": 134,
 			"rarity": "rare",
-			"reqAttune": "by a wizard",
+			"reqAttune": "法师",
 			"wondrous": true,
 			"weight": 3,
 			"recharge": "dawn",
@@ -21326,14 +21449,14 @@
 				"Wizard"
 			],
 			"entries": [
-				"The pages of this book are bound in fiend hide, and its cover is embossed with a diagram of the Great Wheel of the multiverse. When found, the book contains the following spells: {@spell 放逐术}, {@spell 寻获魔宠}, {@spell 异界之门}, {@spell 防护法阵}, {@spell 异界誓缚}, and {@spell summon elemental|TCE}. It functions as a spellbook for you.",
-				"While you are holding the book, you can use it as a spellcasting focus for your wizard spells.",
-				"The book has 3 charges, and it regains {@dice 1d3} expended charges daily at dawn. You can use the charges in the following ways while holding it:",
+				"这本书的书页由邪魔的皮革装订，封面上绘制着多元宇宙巨轮的图样。 这本书在被找到时，包含了以下法术： {@spell 放逐术}, {@spell 寻获魔宠}, {@spell 异界之门}, {@spell 防护法阵}, {@spell 异界誓缚}, 和 {@spell summon elemental|TCE}。你可以将其作为法术书。",
+				"当你持握这本书时，你可以将其作为你法师法术的法器。",
+				"书具有3发充能，且每天黎明时恢复 {@dice 1d3} 发已消耗的充能。你持握它时，可以通过以下方式消耗充能：",
 				{
 					"type": "list",
 					"items": [
-						"If you spend 1 minute studying the book, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book. The new spell must be of the conjuration school.",
-						"When you cast a conjuration spell that summons or creates one creature, you can expend 1 charge to grant that creature advantage on attack rolls for 1 minute."
+						"如果你花费1分钟时间研究这本书，你可以消耗1发充能来将你的一道已准备法术替换为书中的另一道法术。新法术必须是咒法学派的法术。",
+						"当你施展一道召唤或创造一个生物的咒法系法术时，你可以消耗1发充能使该生物在攻击检定时具有优势，持续1分钟。"
 					]
 				}
 			],
@@ -21461,20 +21584,21 @@
 			"ENG_name": "Playing Card Set"
 		},
 		{
-			"name": "Poison Absorbing Tattoo",
+			"name": "毒素吸收刺青",
+			"ENG_name": "Poison Absorbing Tattoo",
 			"source": "TCE",
 			"page": 119,
 			"resist": [
-				"poison"
+				"毒素"
 			],
-			"detail1": "violet",
+			"detail1": "紫罗兰色",
 			"rarity": "very rare",
 			"reqAttune": true,
 			"wondrous": true,
 			"tattoo": true,
 			"hasRefs": true,
 			"entries": [
-				"{#itemEntry Absorbing Tattoo|TCE}"
+				"{#itemEntry 吸收刺青|TCE}"
 			]
 		},
 		{
@@ -22810,22 +22934,24 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Prosthetic Limb",
+			"name": "假肢",
+			"ENG_name": "Prosthetic Limb",
 			"source": "TCE",
 			"page": 134,
 			"rarity": "common",
 			"wondrous": true,
 			"entries": [
-				"This item replaces a lost limb-a hand, an arm, a foot, a leg, or a similar body part. While the prosthetic is attached, it functions identically to the part it replaces. You can detach or reattach it as an action, and it can't be removed against your will. It detaches if you die."
+				"这件物品替代了一处缺失的肢体——一只手，一只臂，一条腿或类似的身体部分。肢体安装后，其功能与被替换的肢体相同。你可以用一个动作将其着装或者卸装，它不能在你非自愿的情况下被移除。它会在你死的时候脱落。"
 			],
 			"hasFluffImages": true
 		},
 		{
-			"name": "Protective Verses",
+			"name": "守御诗篇",
+			"ENG_name": "Protective Verses",
 			"source": "TCE",
 			"page": 134,
 			"rarity": "rare",
-			"reqAttune": "by a wizard",
+			"reqAttune": "法师",
 			"wondrous": true,
 			"weight": 3,
 			"recharge": "dawn",
@@ -22834,14 +22960,14 @@
 				"Wizard"
 			],
 			"entries": [
-				"This leather-bound spellbook is reinforced with iron and silver fittings and an iron lock (DC 20 to open). As an action, you can touch the book's cover and cause it to lock as if you cast {@spell 秘法锁} on it. When found, the book contains the following spells: {@spell 秘法锁}, {@spell 解除魔法}, {@spell 法术无效结界}, {@spell 守卫铭文}, {@spell 魔邓肯私人密室}, {@spell protection from evil and good||protection from evil}, and {@spell 徽记术}. It functions as a spellbook for you.",
-				"While you are holding the book, you can use it as a spellcasting focus for your wizard spells.",
-				"The book has 3 charges, and it regains {@dice 1d3} expended charges daily at dawn. You can use the charges in the following ways while holding it:",
+				"这本书由皮革装订，用钢铁和银加固，带有钢锁（开锁DC20）。作为一个动作，你可以触碰书的封面并将其上锁，如同你施展了 {@spell 秘法锁}法术一般。 这本书在被找到时，包含了以下法术： {@spell 秘法锁}, {@spell 解除魔法}, {@spell 法术无效结界}, {@spell 守卫铭文}, {@spell 魔邓肯私人密室}, {@spell protection from evil and good||protection from evil}, 和 {@spell 徽记术}。你可以将其作为法术书。",
+				"当你持握这本书时，你可以将其作为你法师法术的法器。当你持握这本书时，你可以将其作为你法师法术的法器。",
+				"书具有3发充能，且每天黎明时恢复 {@dice 1d3} 发已消耗的充能。你持握它时，可以通过以下方式消耗充能：",
 				{
 					"type": "list",
 					"items": [
-						"If you spend 1 minute studying the book, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book. The new spell must be of the abjuration school.",
-						"When you cast an abjuration spell, you can expend 1 charge to grant a creature you can see within 30 feet of you {@dice 2d10} temporary hit points."
+						"如果你花费1分钟时间研究这本书，你可以消耗1发充能来将你的一道已准备法术替换为书中的另一道法术。新法术必须是防护学派的法术。",
+						"当你施展一道防护系法术时，你可以消耗1发充能，给予距离你30尺内且你可见的一个生物 {@dice 2d10} 临时生命值。"
 					]
 				}
 			],
@@ -22906,20 +23032,21 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Psychic Absorbing Tattoo",
+			"name": "心灵吸收刺青",
+			"ENG_name": "Psychic Absorbing Tattoo",
 			"source": "TCE",
 			"page": 119,
 			"resist": [
-				"psychic"
+				"心灵"
 			],
-			"detail1": "silver",
+			"detail1": "银色",
 			"rarity": "very rare",
 			"reqAttune": true,
 			"wondrous": true,
 			"tattoo": true,
 			"hasRefs": true,
 			"entries": [
-				"{#itemEntry Absorbing Tattoo|TCE}"
+				"{#itemEntry 吸收刺青|TCE}"
 			]
 		},
 		{
@@ -23214,20 +23341,21 @@
 			"ENG_name": "Quiver of Ehlonna"
 		},
 		{
-			"name": "Radiant Absorbing Tattoo",
+			"name": "光耀吸收刺青",
+			"ENG_name": "Radiant Absorbing Tattoo",
 			"source": "TCE",
 			"page": 119,
 			"resist": [
-				"radiant"
+				"光耀"
 			],
-			"detail1": "gold",
+			"detail1": "金色",
 			"rarity": "very rare",
 			"reqAttune": true,
 			"wondrous": true,
 			"tattoo": true,
 			"hasRefs": true,
 			"entries": [
-				"{#itemEntry Absorbing Tattoo|TCE}"
+				"{#itemEntry 吸收刺青|TCE}"
 			]
 		},
 		{
@@ -23464,16 +23592,17 @@
 			"ENG_name": "Reszur"
 		},
 		{
-			"name": "Reveler's Concertina",
+			"name": "狂宴手风琴",
+			"ENG_name": "Reveler's Concertina",
 			"source": "TCE",
 			"page": 134,
 			"type": "INS",
 			"rarity": "rare",
-			"reqAttune": "by a bard",
+			"reqAttune": "吟游诗人",
 			"wondrous": true,
 			"entries": [
-				"While holding this concertina, you gain a +2 bonus to the saving throw DC of your bard spells.",
-				"As an action, you can use the concertina to cast {@spell 奥图狂舞术} from the item. This property of the concertina can't be used again until the next dawn."
+				"当持握这把手风琴时，你的吟游诗人法术豁免DC获得+2加值。",
+				"作为一个动作，你可以用手风琴施展 {@spell 奥图狂舞术} 法术。手风琴的此项属性直到下次黎明前，不能再次使用。"
 			],
 			"attachedSpells": [
 				"otto's irresistible dance"
@@ -25743,7 +25872,8 @@
 			]
 		},
 		{
-			"name": "Shadowfell Brand Tattoo",
+			"name": "堕影冥界印记刺青",
+			"ENG_name": "Shadowfell Brand Tattoo",
 			"source": "TCE",
 			"page": 134,
 			"rarity": "rare",
@@ -25751,27 +25881,29 @@
 			"wondrous": true,
 			"tattoo": true,
 			"entries": [
-				"Produced by a special needle, this magic tattoo is dark in color and abstract.",
+				"该魔法刺青用一根特殊的针制作，绘有深色的抽象图案。",
 				{
 					"type": "entries",
-					"name": "Tattoo Attunement",
+					"name":"刺青同调",
+					"ENG_name": "Tattoo Attunement",
 					"entries": [
-						"To attune to this item, you hold the needle to your skin where you want the tattoo to appear, pressing the needle there throughout the attunement process. When the attunement is complete, the needle turns into the ink that becomes the tattoo, which appears on the skin.",
-						"If your attunement to the tattoo ends, the tattoo vanishes, and the needle reappears in your space."
+						"同调此物品时，你需要将针持握，并抵在你想要让刺青出现的那处皮肤上。当同调完成时，针头会化为墨水再变成刺青。若你与刺青的同调结束，刺青会消失，针头会再次出现在你的位置中。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Shadow Essence",
+					"name": "阴影精粹",
+					"ENG_name": "Shadow Essence",
 					"entries": [
-						"You gain {@sense darkvision} with a range of 60 feet, and you have advantage on Dexterity ({@skill 隐匿}) checks."
+						"你获得60尺 {@sense darkvision} , 并且你在敏捷 ({@skill 隐匿}) 检定上具有优势。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Shadowy Defense",
+					"name": "幽影防御",
+					"ENG_name": "Shadowy Defense",
 					"entries": [
-						"When you take damage, you can use your reaction to become insubstantial for a moment, halving the damage you take. Then the reaction can't be used again until the next sunset."
+						"当你受到伤害时，你可以用一个反应变为非实体形态，将受到的伤害减半。直到下次日落前，这个反应不能再次使用。"
 					]
 				}
 			]
@@ -25804,19 +25936,20 @@
 			]
 		},
 		{
-			"name": "Shadowfell Shard",
+			"name": "堕影冥界碎晶",
+			"ENG_name": "Shadowfell Shard",
 			"source": "TCE",
 			"page": 135,
 			"rarity": "rare",
-			"reqAttune": "by a sorcerer",
+			"reqAttune": "术士",
 			"wondrous": true,
 			"weight": 1,
 			"focus": [
 				"Sorcerer"
 			],
 			"entries": [
-				"This dull, cold crystal sits heavy and leaden, saturated by the Shadowfell's despair. As an action, you can attach the shard to a Tiny object (such as a weapon or a piece of jewelry) or detach it. It falls off if your attunement to it ends. You can use the shard as a spellcasting focus while you hold or wear it.",
-				"When you use a Metamagic option on a spell while you are holding or wearing the shard, you can momentarily curse one creature targeted by the spell; choose one ability score, and until the end of your next turn, the creature has disadvantage on ability checks and saving throws that use that ability."
+				"这块黯淡冰冷的水晶摸起来如铅般沉重，满溢着堕影冥界的绝望。作为一个动作，你可以将碎晶附上一件微型物件（如一把武器或一块珠宝）或摘下。当同调结束时它会掉落下来。当你持握或穿戴碎晶时，你可以将其作为法器使用。",
+				"当你持握或穿戴碎晶，并在一道法术上应用一种超魔法选项时，你可以暂时诅咒一个该法术的目标生物：选择一项属性，直到你的下个回合结束前，目标生物在该属性的属性检定和豁免检定上具有劣势。"
 			],
 			"hasFluffImages": true
 		},
@@ -27358,7 +27491,7 @@
 			"rarity": "rare",
 			"entries": [
 				"一张法术卷轴上以神秘暗语记载了一个法术。如果该法术在你的职业法术列表上，则你可以阅读此卷轴并施放该法术且无需提供任何法术构材。不然的话，你无法理解此卷轴的内容。借由阅读卷轴来施放法术的过程需要花费该法术原本的施法时间。一旦该法术被施放，此卷轴上的文本将随之消散，卷轴本身也将粉碎成尘。若施法过程被中断，则此卷轴不会因此消失。",
-				"若卷轴上的法术在你的职业法术列表上，但其环阶高于你目前所能施展的等级，则你必须进行一次使用你施法属性的属性检定以决定你是否施放成功。检定DC为15。若检定失败，此法术将从卷轴上消失而没有任何其他效果。",
+				"若卷轴上的法术在你的职业法术列表上，但其环阶��于你目前所能施展的等级，则你必须进行一次使用你施法属性的属性检定以决定你是否施放成功。检定DC为15。若检定失败，此法术将从卷轴上消失而没有任何其他效果。",
 				"一旦卷轴上的法术被施放，卷轴上的文本将随之消散，卷轴本身也将粉碎成尘。",
 				"由此卷轴施放的法术具有17的豁免DC，以及{@hit 9}的攻击加值。",
 				"一个记载于法术卷轴上的法师法术可以如同其记载于法术书上一样被抄写。当一个法术被从卷轴上抄写时，抄写者必须成功通过一次DC 15的智力（{@skill 奥秘}）检定。若检定成功，则该法术被成功抄写。无论检定成功与否，此法术卷轴都将因此毁坏。"
@@ -27520,147 +27653,158 @@
 			]
 		},
 		{
-			"name": "Spellwrought Tattoo (1st Level)",
+			"name": "蕴法刺青（1环）",
+			"ENG_name": "Spellwrought Tattoo (1st Level)",
 			"source": "TCE",
 			"page": 135,
 			"rarity": "common",
 			"wondrous": true,
 			"tattoo": true,
 			"entries": [
-				"Produced by a special needle, this magic tattoo contains a single {@filter 1st level spell|spells|level=1}, wrought on your skin by a magic needle. To use the tattoo, you must hold the needle against your skin and speak the command word. The needle turns into ink that becomes the tattoo, which appears on the skin in whatever design you like. Once the tattoo is there, you can cast its spell, requiring no material components. The tattoo glows faintly while you cast the spell and for the spell's duration. Once the spell ends, the tattoo vanishes from your skin.",
-				"The Ability modifier for this spell is +3; the Save DC is 13 and the attack bonus is +5."
+				"该魔法刺青用一根特殊的针制作，包含着一道 {@filter 1环法术|spells|level=1}, 用魔法针纹在你的身上。为了使用此刺青，你必须持针抵住你的皮肤，并说出命令语。针会变为墨水，化为刺青，在你的皮肤上显现为你喜欢的样子。刺青在你身上时，你可以施展那道法术而不需要材料成分。在你施展这道法术时，刺青会在法术的持续时间内发出微光。法术结束时，刺青会从你的皮肤上消失。",
+				"此法术的施法属性调整值 +3; 豁免DC 13 ；攻击加值 +5。"
 			]
 		},
 		{
-			"name": "Spellwrought Tattoo (1st Level)",
+			"name": "蕴法刺青(1st Level)",
+			"ENG_name": "Spellwrought Tattoo (1st Level)",
 			"source": "UA2020SpellsAndMagicTattoos",
 			"page": 11,
 			"rarity": "common",
 			"wondrous": true,
 			"tattoo": true,
 			"entries": [
-				"This tattoo contains a single spell, wrought on your skin by a magic needle. To use the tattoo, you must hold the needle against your skin where you want the tattoo to appear and speak the command word. The needle turns into the ink that becomes the tattoo, which appears on your skin. Once the tattoo is on your skin, you can cast its spell, requiring no material components. The tattoo glows faintly while you cast the spell and for the spell's duration. Once the spell ends, the tattoo vanishes from your skin.",
-				"A spell cast from this tattoo has a spellcasting ability modifier of +3, a save DC of 13 and an attack bonus of +5."
+				"该魔法刺青用一根特殊的针制作，包含着一道最高5环的法术，用魔法针纹在你的身上。为了使用此刺青，你必须持针抵住你的皮肤，并说出命令语。针会变为墨水，化为刺青，在你的皮肤上显现为你喜欢的样子。刺青在你身上时，你可以施展那道法术而不需要材料成分。在你施展这道法术时，刺青会在法术的持续时间内发出微光。法术结束时，刺青会从你的皮肤上消失。",
+				"此法术的施法属性调整值 +3; 豁免DC 13 ；攻击加值 +5。"
 			]
 		},
 		{
-			"name": "Spellwrought Tattoo (2nd Level)",
+			"name": "蕴法刺青（2环）",
+			"ENG_name": "Spellwrought Tattoo (2nd Level)",
 			"source": "TCE",
 			"page": 135,
 			"rarity": "uncommon",
 			"wondrous": true,
 			"tattoo": true,
 			"entries": [
-				"Produced by a special needle, this magic tattoo contains a single {@filter 2nd level spell|spells|level=2}, wrought on your skin by a magic needle. To use the tattoo, you must hold the needle against your skin and speak the command word. The needle turns into ink that becomes the tattoo, which appears on the skin in whatever design you like. Once the tattoo is there, you can cast its spell, requiring no material components. The tattoo glows faintly while you cast the spell and for the spell's duration. Once the spell ends, the tattoo vanishes from your skin.",
-				"The Ability modifier for this spell is +3; the Save DC is 13 and the attack bonus is +5."
+				"该魔法刺青用一根特殊的针制作，包含着一道 {@filter 2环法术|spells|level=2} , 用魔法针纹在你的身上。为了使用此刺青，你必须持针抵住你的皮肤，并说出命令语。针会变为墨水，化为刺青，在你的皮肤上显现为你喜欢的样子。刺青在你身上时，你可以施展那道法术而不需要材料成分。在你施展这道法术时，刺青会在法术的持续时间内发出微光。法术结束时，刺青会从你的皮肤上消失。",
+				"此法术的施法属性调整值 +3; 豁免DC 13 ；攻击加值 +5。"
 			]
 		},
 		{
-			"name": "Spellwrought Tattoo (2nd Level)",
+			"name": "蕴法刺青（2环）",
+			"ENG_name": "Spellwrought Tattoo (2nd Level)",
 			"source": "UA2020SpellsAndMagicTattoos",
 			"page": 11,
 			"rarity": "uncommon",
 			"wondrous": true,
 			"tattoo": true,
 			"entries": [
-				"This tattoo contains a single spell, wrought on your skin by a magic needle. To use the tattoo, you must hold the needle against your skin where you want the tattoo to appear and speak the command word. The needle turns into the ink that becomes the tattoo, which appears on your skin. Once the tattoo is on your skin, you can cast its spell, requiring no material components. The tattoo glows faintly while you cast the spell and for the spell's duration. Once the spell ends, the tattoo vanishes from your skin.",
-				"A spell cast from this tattoo has a spellcasting ability modifier of +3, a save DC of 13 and an attack bonus of +5."
+				"该魔法刺青用一根特殊的针制作，包含着一道最高5环的法术，用魔法针纹在你的身上。为了使用此刺青，你必须持针抵住你的皮肤，并说出命令语。针会变为墨水，化为刺青，在你的皮肤上显现为你喜欢的样子。刺青在你身上时，你可以施展那道法术而不需要材料成分。在你施展这道法术时，刺青会在法术的持续时间内发出微光。法术结束时，刺青会从你的皮肤上消失。",
+				"此法术的施法属性调整值 +3; 豁免DC 13 ；攻击加值 +5。"
 			]
 		},
 		{
-			"name": "Spellwrought Tattoo (3rd Level)",
+			"name": "蕴法刺青（3环）",
+			"ENG_name": "Spellwrought Tattoo (3rd Level)",
 			"source": "TCE",
 			"page": 135,
 			"rarity": "uncommon",
 			"wondrous": true,
 			"tattoo": true,
 			"entries": [
-				"Produced by a special needle, this magic tattoo contains a single {@filter 3rd level spell|spells|level=3}, wrought on your skin by a magic needle. To use the tattoo, you must hold the needle against your skin and speak the command word. The needle turns into ink that becomes the tattoo, which appears on the skin in whatever design you like. Once the tattoo is there, you can cast its spell, requiring no material components. The tattoo glows faintly while you cast the spell and for the spell's duration. Once the spell ends, the tattoo vanishes from your skin.",
-				"The Ability modifier for this spell is +4; the Save DC is 15 and the attack bonus is +7."
+				"该魔法刺青用一根特殊的针制作，包含着一道 {@filter 3环法术|spells|level=3}, 用魔法针纹在你的身上。为了使用此刺青，你必须持针抵住你的皮肤，并说出命令语。针会变为墨水，化为刺青，在你的皮肤上显现为你喜欢的样子。刺青在你身上时，你可以施展那道法术而不需要材料成分。在你施展这道法术时，刺青会在法术的持续时间内发出微光。法术结束时，刺青会从你的皮肤上消失。",
+				"此法术的施法属性调整值 +4; 豁免DC 15 ；攻击加值 +7。"
 			]
 		},
 		{
-			"name": "Spellwrought Tattoo (3rd Level)",
+			"name": "蕴法刺青(3rd Level)",
+			"ENG_name": "Spellwrought Tattoo (3rd Level)",
 			"source": "UA2020SpellsAndMagicTattoos",
 			"page": 11,
 			"rarity": "uncommon",
 			"wondrous": true,
 			"tattoo": true,
 			"entries": [
-				"This tattoo contains a single spell, wrought on your skin by a magic needle. To use the tattoo, you must hold the needle against your skin where you want the tattoo to appear and speak the command word. The needle turns into the ink that becomes the tattoo, which appears on your skin. Once the tattoo is on your skin, you can cast its spell, requiring no material components. The tattoo glows faintly while you cast the spell and for the spell's duration. Once the spell ends, the tattoo vanishes from your skin.",
-				"A spell cast from this tattoo has a spellcasting ability modifier of +4, a save DC of 15 and an attack bonus of +7."
+				"该魔法刺青用一根特殊的针制作，包含着一道最高5环的法术，用魔法针纹在你的身上。为了使用此刺青，你必须持针抵住你的皮肤，并说出命令语。针会变为墨水，化为刺青，在你的皮肤上显现为你喜欢的样子。刺青在你身上时，你可以施展那道法术而不需要材料成分。在你施展这道法术时，刺青会在法术的持续时间内发出微光。法术结束时，刺青会从你的皮肤上消失。",
+				"此法术的施法属性调整值 +4; 豁免DC 15 ；攻击加值 +7。"
 			]
 		},
 		{
-			"name": "Spellwrought Tattoo (4th Level)",
+			"name": "蕴法刺青（4环）",
+			"ENG_name": "Spellwrought Tattoo (4th Level)",
 			"source": "TCE",
 			"page": 135,
 			"rarity": "rare",
 			"wondrous": true,
 			"tattoo": true,
 			"entries": [
-				"Produced by a special needle, this magic tattoo contains a single {@filter 4th level spell|spells|level=4}, wrought on your skin by a magic needle. To use the tattoo, you must hold the needle against your skin and speak the command word. The needle turns into ink that becomes the tattoo, which appears on the skin in whatever design you like. Once the tattoo is there, you can cast its spell, requiring no material components. The tattoo glows faintly while you cast the spell and for the spell's duration. Once the spell ends, the tattoo vanishes from your skin.",
-				"The Ability modifier for this spell is +4; the Save DC is 15 and the attack bonus is +7."
+				"该魔法刺青用一根特殊的针制作，包含着一道 {@filter 4环法术|spells|level=4}, 用魔法针纹在你的身上。为了使用此刺青，你必须持针抵住你的皮肤，并说出命令语。针会变为墨水，化为刺青，在你的皮肤上显现为你喜欢的样子。刺青在你身上时，你可以施展那道法术而不需要材料成分。在你施展这道法术时，刺青会在法术的持续时间内发出微光。法术结束时，刺青会从你的皮肤上消失。",
+				"此法术的施法属性调整值 +4; 豁免DC 15 ；攻击加值 +7。"
 			]
 		},
 		{
-			"name": "Spellwrought Tattoo (4th Level)",
+			"name": "蕴法刺青(4th Level)",
+			"ENG_name": "Spellwrought Tattoo (4th Level)",
 			"source": "UA2020SpellsAndMagicTattoos",
 			"page": 11,
 			"rarity": "rare",
 			"wondrous": true,
 			"tattoo": true,
 			"entries": [
-				"This tattoo contains a single spell, wrought on your skin by a magic needle. To use the tattoo, you must hold the needle against your skin where you want the tattoo to appear and speak the command word. The needle turns into the ink that becomes the tattoo, which appears on your skin. Once the tattoo is on your skin, you can cast its spell, requiring no material components. The tattoo glows faintly while you cast the spell and for the spell's duration. Once the spell ends, the tattoo vanishes from your skin.",
-				"A spell cast from this tattoo has a spellcasting ability modifier of +4, a save DC of 15 and an attack bonus of +7."
+				"该魔法刺青用一根特殊的针制作，包含着一道最高5环的法术，用魔法针纹在你的身上。为了使用此刺青，你必须持针抵住你的皮肤，并说出命令语。针会变为墨水，化为刺青，在你的皮肤上显现为你喜欢的样子。刺青在你身上时，你可以施展那道法术而不需要材料成分。在你施展这道法术时，刺青会在法术的持续时间内发出微光。法术结束时，刺青会从你的皮肤上消失。",
+				"此法术的施法属性调整值 +4; 豁免DC 15 ；攻击加值 +7。"
 			]
 		},
 		{
-			"name": "Spellwrought Tattoo (5th Level)",
+			"name": "蕴法刺青（5环）",
+			"ENG_name": "Spellwrought Tattoo (5th Level)",
 			"source": "TCE",
 			"page": 135,
 			"rarity": "rare",
 			"wondrous": true,
 			"tattoo": true,
 			"entries": [
-				"Produced by a special needle, this magic tattoo contains a single {@filter 5th level spell|spells|level=5}, wrought on your skin by a magic needle. To use the tattoo, you must hold the needle against your skin and speak the command word. The needle turns into ink that becomes the tattoo, which appears on the skin in whatever design you like. Once the tattoo is there, you can cast its spell, requiring no material components. The tattoo glows faintly while you cast the spell and for the spell's duration. Once the spell ends, the tattoo vanishes from your skin.",
-				"The Ability modifier for this spell is +5; the Save DC is 17 and the attack bonus is +9."
+				"该魔法刺青用一根特殊的针制作，包含着一道 {@filter 5环法术|spells|level=5}, 用魔法针纹在你的身上。为了使用此刺青，你必须持针抵住你的皮肤，并说出命令语。针会变为墨水，化为刺青，在你的皮肤上显现为你喜欢的样子。刺青在你身上时，你可以施展那道法术而不需要材料成分。在你施展这道法术时，刺青会在法术的持续时间内发出微光。法术结束时，刺青会从你的皮肤上消失。",
+				"此法术的施法属性调整值 +5; 豁免DC 17 ；攻击加值 +9。"
 			]
 		},
 		{
-			"name": "Spellwrought Tattoo (5th Level)",
+			"name": "蕴法刺青(5th Level)",
+			"ENG_name": "Spellwrought Tattoo (5th Level)",
 			"source": "UA2020SpellsAndMagicTattoos",
 			"page": 11,
 			"rarity": "rare",
 			"wondrous": true,
 			"tattoo": true,
 			"entries": [
-				"This tattoo contains a single spell, wrought on your skin by a magic needle. To use the tattoo, you must hold the needle against your skin where you want the tattoo to appear and speak the command word. The needle turns into the ink that becomes the tattoo, which appears on your skin. Once the tattoo is on your skin, you can cast its spell, requiring no material components. The tattoo glows faintly while you cast the spell and for the spell's duration. Once the spell ends, the tattoo vanishes from your skin.",
-				"A spell cast from this tattoo has a spellcasting ability modifier of +5, a save DC of 17 and an attack bonus of +9."
+				"该魔法刺青用一根特殊的针制作，包含着一道最高5环的法术，用魔法针纹在你的身上。为了使用此刺青，你必须持针抵住你的皮肤，并说出命令语。针会变为墨水，化为刺青，在你的皮肤上显现为你喜欢的样子。刺青在你身上时，你可以施展那道法术而不需要材料成分。在你施展这道法术时，刺青会在法术的持续时间内发出微光。法术结束时，刺青会从你的皮肤上消失。",
+				"此法术的施法属性调整值 +5; 豁免DC 17 ；攻击加值 +9。"
+			]
+		},
+		{
+			"name": "蕴法刺青（戏法）",
+			"ENG_name": "Spellwrought Tattoo (Cantrip)",
+			"source": "TCE",
+			"page": 135,
+			"rarity": "common",
+			"wondrous": true,
+			"tattoo": true,
+			"entries": [
+				"该魔法刺青用一根特殊的针制作，包含着一道 {@filter 戏法|spells|level=0}, 用魔法针纹在你的身上。为了使用此刺青，你必须持针抵住你的皮肤，并说出命令语。针会变为墨水，化为刺青，在你的皮肤上显现为你喜欢的样子。刺青在你身上时，你可以施展那道法术而不需要材料成分。在你施展这道法术时，刺青会在法术的持续时间内发出微光。法术结束时，刺青会从你的皮肤上消失。",
+				"此法术的施法属性调整值 +3; 豁免DC 13 ；攻击加值 +5。"
 			]
 		},
 		{
 			"name": "Spellwrought Tattoo (Cantrip)",
-			"source": "TCE",
-			"page": 135,
-			"rarity": "common",
-			"wondrous": true,
-			"tattoo": true,
-			"entries": [
-				"Produced by a special needle, this magic tattoo contains a single {@filter cantrip|spells|level=0}, wrought on your skin by a magic needle. To use the tattoo, you must hold the needle against your skin and speak the command word. The needle turns into ink that becomes the tattoo, which appears on the skin in whatever design you like. Once the tattoo is there, you can cast its spell, requiring no material components. The tattoo glows faintly while you cast the spell and for the spell's duration. Once the spell ends, the tattoo vanishes from your skin.",
-				"The Ability modifier for this spell is +3; the Save DC is 13 and the attack bonus is +5."
-			]
-		},
-		{
-			"name": "Spellwrought Tattoo (Cantrip)",
 			"source": "UA2020SpellsAndMagicTattoos",
 			"page": 11,
 			"rarity": "common",
 			"wondrous": true,
 			"tattoo": true,
 			"entries": [
-				"This tattoo contains a single spell, wrought on your skin by a magic needle. To use the tattoo, you must hold the needle against your skin where you want the tattoo to appear and speak the command word. The needle turns into the ink that becomes the tattoo, which appears on your skin. Once the tattoo is on your skin, you can cast its spell, requiring no material components. The tattoo glows faintly while you cast the spell and for the spell's duration. Once the spell ends, the tattoo vanishes from your skin.",
-				"A spell cast from this tattoo has a spellcasting ability modifier of +3, a save DC of 13, and an attack bonus of +5."
+				"该魔法刺青用一根特殊的针制作，包含着一道最高5环的法术，用魔法针纹在你的身上。为了使用此刺青，你必须持针抵住你的皮肤，并说出命令语。针会变为墨水，化为刺青，在你的皮肤上显现为你喜欢的样子。刺青在你身上时，你可以施展那道法术而不需要材料成分。在你施展这道法术时，刺青会在法术的持续时间内发出微光。法术结束时，刺青会从你的皮肤上消失。",
+				"此法术的施法属性调整值 +3; 豁免DC 13 ；攻击加值 +5。"
 			]
 		},
 		{
@@ -29886,7 +30030,8 @@
 			]
 		},
 		{
-			"name": "Teeth of Dahlver-Nar",
+			"name" :"达文-纳之牙",
+			"ENG_name": "Teeth of Dahlver-Nar",
 			"source": "TCE",
 			"page": 135,
 			"rarity": "artifact",
@@ -29896,22 +30041,23 @@
 			"recharge": "dawn",
 			"charges": 8,
 			"entries": [
-				"The Teeth of Dahlver-Nar are stories given form. They are a collection of teeth, each suggestive of wildly different origins and made from various materials. The collection rests within a leather pouch, stitched with images of heroes and whimsical creatures. Where the teeth fall, they bring legends to life.",
+				"达文-纳之牙是多个故事的具现。它们是成套的牙齿，每一颗都代表着各自大不相同的起源，并且由多种多样的材料制成。整套牙齿被收藏在一个小皮袋中，皮袋上缝着英雄和幻想生物的图案。牙齿在哪里落下，传说就会在哪里化为真实。",
 				{
 					"type": "entries",
-					"name": "Using the Teeth",
+					"name": "使用牙齿",
+					"ENG_name": "Using the Teeth",
 					"entries": [
-						"While you are holding the pouch, you can use an action to draw one tooth. Roll on the Teeth of Dahlver-Nar table to determine which tooth you draw, and you can either sow the tooth or implant it (both of which are described later).",
-						"If you don't sow or implant the tooth, roll a die at the end of your turn. On an even number, the tooth vanishes, and creatures appear as if you sowed the tooth, but they are hostile to you and your allies. On an odd number, the tooth replaces one of your teeth as if you implanted it (potentially replacing another implanted tooth, see below).",
-						"Each tooth can only be used once. Track which teeth have been used. If a tooth's result is rolled after it's been used, you draw the next lowest unused tooth on the table.",
+						"当持握小皮袋时，你可以使用一个动作从中取出某一颗牙齿。在达文-纳之牙表格中掷骰以决定被取出的是哪颗牙齿，你可以选择将其播种或者进行植牙。（这两种行为会在之后进行说明）",
+						"如果你不进行播种也不植牙，则在你的回合结束时投一个骰子。投出偶数时，牙齿会消失，对应的生物会如同你播种了牙齿一样出现，并且与你和你的盟友敌对。投出奇数时，该牙齿会取代你的一颗牙齿，就如同你进行了植牙一样（有可能取代另一颗被植入的牙齿，见下文）。",
+						"每颗牙齿只能被使用一次。记录有哪些牙齿被使用了。如果在某颗牙齿已经被使用后再次投出对应的骰值，你会取出表格中位于最底下的未被使用的牙齿。",
 						{
 							"type": "table",
-							"caption": "Teeth of Dahlver-Nar",
+							"caption": "达文-纳之牙",
 							"colLabels": [
 								"d20",
-								"Tale and Tooth",
-								"Creatures Summoned",
-								"Implanted Effect"
+								"传说与牙齿",
+								"召唤生物",
+								"植入效果"
 							],
 							"colStyles": [
 								"col-2 text-center",
@@ -29922,123 +30068,123 @@
 							"rows": [
 								[
 									"1",
-									"The Staring Cats of Uldun-dar (ivory cat molar)",
-									"9 {@creature cat||cats}",
-									"The tooth has 8 charges. As an action, you can expend 1 charge to cast the {@spell 回生术} spell from the tooth. If you are dead at the start of your turn, the tooth expends 1 charge and casts revivify on you."
+									"乌尔敦达之猫在凝视The staring cats of Uldundar（象牙制猫臼齿）",
+									"9只 {@creature 猫}",
+									"此牙齿具有8发充能，你可以消耗1发充能以施展 {@spell 回生术} 。如果你死亡，牙齿会在你的回合开始时消耗1发充能以对你施展 {@spell 回生术}。"
 								],
 								[
 									"2",
-									"Duggle's Surprising Day (human molar)",
-									"1 {@creature commoner}",
-									"When you finish a long rest, the tooth casts sanctuary (DC 18) on you, and the spell lasts for 24 hours or until you break it."
+									"道格的惊奇一日Duggle’s Surprising Day（人类臼齿）",
+									"1位 {@creature 平民}",
+									"完成长休后，牙齿对你施展 {@spell 庇护术} (DC 18) , 持续24小时或直至你打破该效应。"
 								],
 								[
 									"3",
-									"The Golden Age of Dhakaan (golden goblin bicuspid)",
-									"10 {@creature goblin||goblins}, 1 {@creature goblin boss}",
-									"When you are hit by an attack and an ally is within 5 feet of you, you can use your reaction to cause them to be hit instead. You can't use this reaction again until you finish a short or long rest."
+									"达坎的黄金时代The Golden Age of Dhakaan（金制地精前臼齿）",
+									"10位 {@creature 地精}, 1位 {@creature 地精头目}",
+									"当你被攻击命中并且你5尺内存在你的盟友时，你可以用你的反应使该攻击改为命中你的盟友。你不能再使用此反应，直至你完成一次短休或长休。"
 								],
 								[
 									"4",
-									"The Mill Road Murders (halfling canine)",
-									"3 {@creature green hag||green hags} in a coven",
-									"When you damage a target that hasn't taken a turn in this combat, the target takes an extra {@damage 3d10} slashing damage from ghostly blades."
+									"磨坊路谋杀案The Mill Road Murders（半身人犬齿）",
+									"3位组成集会的 {@creature 绿鬼婆} ",
+									"当你对一个在战斗中尚未执行过自己回合的目标造成伤害时，目标额外受到来自鬼灵剑刃的 {@damage 3d10} 点挥砍伤害。"
 								],
 								[
 									"5",
-									"Dooms of the Malpheggi (emerald lizardfolk fang)",
-									"1 {@creature lizard queen||lizardfolk queen} and 4 {@creature lizardfolk}",
-									"You gain reptilian scales, granting you a +2 bonus to your AC. Additionally, when you finish a long rest, you must succeed on a DC 15 Constitution saving throw or gain 1 level of {@condition exhaustion}."
+									"马尔费吉的末日Dooms of the Malpheggi（翡翠蜥蜴人尖牙）",
+									"1位 {@creature 蜥蜴女王||蜥蜴人女王} 和 4位 {@creature 蜥蜴人}",
+									"你长出爬行动物的鳞片，使你的ac获得+2加值。此外，每当你完成一次长休，你必须进行一次DC15的体质豁免，豁免失败则提升1级{@condition 力竭}."
 								],
 								[
 									"6",
-									"The Stable Hand's Secret (sweet-tasting human canine)",
-									"2 {@creature Incubus||incubi}",
-									"When you make a Charisma check against a humanoid, you can roll a {@dice d10} and add the number rolled as a bonus to the result. The creature then becomes hostile to you at the next dawn."
+									"马夫的秘密The Stable Hand’s Secret（甜味的人类犬齿）",
+									"2只 {@creature 梦魔}",
+									"当你对一个类人生物进行一次魅力检定时，你可以使该检定获得 {@dice d10} 加值，该生物在第二天黎明起会变得与你敌对。"
 								],
 								[
 									"7",
-									"The Donkey's Dream (rainbow-colored donkey molar)",
-									"1 {@creature unicorn}",
-									"The tooth has 3 charges. As an action, you can expend 1 charge to touch a creature. The target regains {@dice 2d8 + 2} hit points, and all diseases and poisons affecting it are removed. When you use this action, a shimmering image of a unicorn's {@item horn|PHB} appears until the end of your turn, sprouting from your forehead. The tooth regains all expended charges daily at dawn. You gain the following flaw: \"When I see wickedness in action, I must oppose it.\""
+									"驴之梦The Donkey’s Dream （彩虹色的驴臼齿）",
+									"1匹 {@creature 独角兽}",
+									"此牙齿具有3发充能。作为一个动作，你可以消耗一发充能并触碰一个生物。该生物恢复 {@dice 2d8 + 2} 生命值，并且解除所有影响它的疾病和毒素。使用该动作时，你前额会出现一个闪闪发光的独角兽之角幻象，持续至你的回合结束。你获得以下缺陷：“当我看见邪恶在行动时，我必须去对抗它。”"
 								],
 								[
 									"8",
-									"Beyond the Rock of Bral (silver mind flayer tooth)",
-									"2 {@creature mind flayer||mind flayers}",
-									"You gain telepathy out to 120 feet as described in the Monster Manual, and you can cast the {@spell 侦测思想} spell at will, requiring no components. You also have disadvantage on Wisdom ({@skill 洞悉}) and Wisdom ({@skill 察觉}) checks from constant whispers of memories and nearby minds."
+									"跨越布拉之岩Beyond the Rock of Bral（银制夺心魔牙齿）",
+									"2只 {@creature 夺心魔}",
+									"你获得120尺心灵感应，描述见怪物图鉴。你可以随意施展 {@spell 侦测思想} 法术，而无需任何法术成分。由于来自记忆和周围的心灵的絮叨低语，你在感知 ({@skill 洞悉}) 和感知 ({@skill 察觉}) 检定中获得劣势。"
 								],
 								[
 									"9",
-									"The Disappearances of Half Hollow (vomerine tooth of a Large toad)",
-									"4 {@creature giant toad||giant toads}",
-									"Your long jump is up to 30 feet and your high jump is up to 15 feet, with or without a running start."
+									"半幽魂的消失The Disappearances of Half Hollow（大蟾蜍的犁齿）",
+									"4只 {@creature 巨蟾蜍}",
+									"无论是否助跑，你都能跳至多30尺远，15尺高。"
 								],
 								[
 									"10",
-									"Legendry of Phantoms and Ghosts (obsidian human molar)",
-									"1 {@creature giant octopus}, 1 {@creature mage}, 1 {@creature specter}",
-									"As an action, you can use the tooth to cast the {@spell 艾伐黑触手} spell (DC 18). Once this property is used, it can't be used again until the next dawn."
+									"魅影与幽魂的传奇Legendry of Phantoms and Ghosts（黑曜石制人类臼齿）",
+									"1只 {@creature 巨章鱼}, 1位 {@creature 魔法师}, 1只 {@creature 幽灵}",
+									"作为一个动作，你可以用牙齿施展 {@spell 艾伐黑触手} 法术 (DC 18)。该属性被使用后，直至下个黎明前，不能再次使用。"
 								],
 								[
 									"11",
-									"The Thousand Deaths of Jander Sunstar (yellowed vampire fang)",
-									"1 {@creature vampire}",
-									"You can make a bite attack as an unarmed strike. On a hit, it deals {@damage 1d6} piercing damage plus {@damage 3d6} necrotic damage. You regain a number of hit points equal to the necrotic damage dealt. While you are in sunlight, you can't regain hit points."
+									"詹德·阳星的永劫The Thousand Deaths of Jander Sunstar（泛黄的吸血鬼尖牙）",
+									"1位 {@creature 吸血鬼}",
+									"你可以进行啃咬攻击，作为一种徒手打击。命中时，造成 {@damage 1d6} 穿刺伤害外加 {@damage 3d6} 黯蚀伤害。你恢复等同于所造成黯蚀伤害的生命值。当你处于阳光下时，你无法恢复生命值。"
 								],
 								[
 									"12",
-									"Nightmares of Kaggash (twisted beholder tooth)",
-									"1 {@creature beholder}",
-									"As an action, you can cast the {@spell 摄心目光} spell from the tooth. Once you use this action, it can't be used again until the next dawn. Whenever you finish a long rest, roll a {@dice d20}. On a 20, an aberration chosen by the DM appears within 30 feet of you and attacks."
+									"卡伽什的梦魇Nightmares of Kaggash（扭曲的眼魔牙齿）",
+									"1只 {@creature 眼魔}",
+									"作为一个动作，你可以用牙齿施展 {@spell 摄心目光} 法术。使用该动作后，直到下次黎明前，不能再次使用该动作。当你完成一次长休时，骰一个 {@dice d20}。得出20时，一只由DM选择的异怪出现在你30尺内并开始攻击。"
 								],
 								[
 									"13",
-									"Three Bridges to the Sky (lapis lazuli oni fang)",
-									"3 {@creature oni}",
-									"You gain a flying speed of 30 feet, and you can use the tooth to cast the {@spell 侦测魔法} spell at will. While you are attuned to fewer than 3 magic items, you gain 1 level of {@condition exhaustion} that can't be removed until you are attuned to three or more magic items."
+									"通天三桥Three Bridges to the Sky（青金石制恶鬼尖牙）",
+									"3位 {@creature 恶鬼}",
+									"你获得30尺飞行速度，并且你可以用牙齿随意施展 {@spell 侦测魔法} 法术。当你同调的魔法物品数量少于三件时，你提升1级 {@condition 力竭} ，该状态无法被移除，直至你同调至少三件魔法物品。"
 								],
 								[
 									"14",
-									"The Claws of Dragotha (broken translucent fang)",
-									"1 {@creature adult red dracolich|tce}",
-									"You can use the tooth to cast the {@spell 创造不死生物} spell. Once this property is used, it can't be used again until the next dawn. Each time you create an undead creature using the tooth, a skeleton, zombie, or ghoul also appears at a random location within 5 miles of you, searching for the living to kill. A humanoid killed by these undead rises as the same type of undead at the next midnight."
+									"卓戈萨之爪The Claws of Dragotha（破碎的半透明尖牙）",
+									"1条 {@creature adult red dracolich|tce}",
+									"你可以用牙齿施展 {@spell 创造不死生物} 法术。该属性被使用后，直到下次黎明前，不能再次使用。每当你用牙齿创造一只不死生物时，一只{@creature 骷髅}，{@creature 僵尸}或{@creature 食尸鬼}会同时出现在你5里内一个随机的位置，开始寻找并猎杀活物。被这些不死生物杀死的类人生物在下一个午夜被唤起为同种类型的不死生物。"
 								],
 								[
 									"15",
-									"Ashes of the Ages and Eternal Fire (jade humanoid bicuspid)",
-									"1 {@creature dao}, 1 {@creature djinni}, 1 {@creature efreeti}, 1 {@creature marid}",
-									"You can use the tooth to cast counterspell at 9th level. Once you use this property, it can't be used again until the next dawn. Whenever you finish a long rest, if you haven't used the tooth to counter a spell since your last long rest, your hit point maximum is reduced by {@dice 2d10}. If this reduces your hit point maximum to 0, you die."
+									"岁月之灰与永恒之火Ashes of the Ages and Eternal Fire（玉制类人前臼齿）",
+									"1只 {@creature 土巨灵(达奥)}, 1只 {@creature 气巨灵(镇尼)}, 1只 {@creature 火巨灵(伊夫利特)}, 1只 {@creature 水巨灵(玛利德)}",
+									"你可以用牙齿施展9环的 {@spell 法术反制}法术。该属性被使用后，直到下次黎明前，不能再次使用。每当你完成一次长休时，如果你从上一次长休结束直到现在都没有用牙齿反制一个法术，你的最大生命值将减少 {@dice 2d10}。如果该效应将你的最大生命值降至0，你死亡。"
 								],
 								[
 									"16",
-									"Daughters of Bel (green steel pit fiend fang)",
-									"1 {@creature pit fiend}",
-									"You can use the tooth to cast dominate monster (DC 18). Once you use this property, it can't be used again until the next dawn. You smell strongly of burning sulfur."
+									"拜尔之女Daughter of Bel（绿钢制深渊炼魔尖牙）",
+									"1只 {@creature 深狱炼魔}",
+									"你可以用牙齿施展 {@spell 支配怪物} (DC 18)法术。该属性被使用后，直到下次黎明前，不能再次使用。你闻起来有很重的硫磺味。"
 								],
 								[
 									"17",
-									"Why the Sky Screams (blue dragon fang)",
-									"1 {@creature ancient blue dragon}",
-									"You gain immunity to lightning damage and vulnerability to thunder damage."
+									"蓝天为何长啸Why the Sky Screams（蓝龙尖牙）",
+									"1条 {@creature 远古蓝龙}",
+									"你获得闪电伤害的免疫以及雷鸣伤害的易伤。"
 								],
 								[
 									"18",
-									"The Last Tarrasque (jagged sliver of tarrasque tooth)",
-									"1 {@creature tarrasque} (ignores you and your commands appears for {@dice 1d4} rounds then vanishes)",
-									"You deal double damage to objects and structures. If you take 20 or more damage in one turn, you must succeed on a DC 18 Wisdom saving throw or spend your next turn in a murderous fury. During this rage, you must use your action to make an unarmed strike against a creature that damaged you, or a random creature you can see if you weren't damaged by a creature, moving as close as you can to the target if necessary."
+									"最后的泰拉斯奎巨兽The Last Tarrasque（泰拉斯奎巨兽牙齿的锯齿状小片）",
+									"1头 {@creature 泰拉斯奎巨兽} (无视你以及你的命令，在 {@dice 1d4} 轮后消失)",
+									"你对物件和建筑造成双倍伤害。如果你在一回合内受到至少20点伤害，你必须成功通过一个DC18的感知豁免，否则将在你的下回合内陷入残暴的愤怒中。处于这种愤怒中时，你必须尽可能地移动靠近伤害你的生物，并用你的动作对它进行一次徒手攻击。如果你不是被生物所伤害，则选择一个随机的可见生物。"
 								],
 								[
 									"19",
-									"Incendax's Tooth (ruby-veined red dragon fang)",
-									"1 {@creature ancient red dragon}",
-									"You gain immunity to fire damage, and as an action, you can exhale fire in a 90-foot cone. Each creature in that area must make a DC 24 Dexterity saving throw, taking {@damage 26d6} fire damage on a failed save, or half as much damage on a successful one. After using the breath weapon, you gain 2 levels of {@condition exhaustion}."
+									"因森达克斯之牙Incendax’s Tooth（红宝石纹路的红龙牙齿）",
+									"1条 {@creature 远古红龙}",
+									"你获得火焰伤害的免疫。作为一个动作，你可以喷出90尺锥形的火焰。在范围的生物必须进行一次DC24的敏捷豁免，豁免失败者受到 {@damage 26d6} 点火焰伤害，成功则伤害减半。使用该吐息武器后，你提升2级 {@condition 力竭}."
 								],
 								[
 									"20",
-									"Dahlver-Nar's Tooth (dusty human molar)",
-									"1 {@creature priest}",
-									"As an action you can call on a divine force to come to your aid. Describe the assistance you seek, and the DM decides the nature of the intervention (the effect of any cleric spell would be appropriate). Once this property is used, it can't be used again for 7 days."
+									"达文-纳之牙Dahlver-Nar’s Tooth（蒙灰的人类臼齿）",
+									"1位 {@creature 祭司}",
+									"作为一个动作，你可以呼唤神圣力量援助你。描述你需要的帮助，回应的结果由DM决定；此时通常请求任何牧师法术的效应都在可接受范围内。该属性被使用后，七天内不能再次使用。"
 								]
 							]
 						}
@@ -30046,30 +30192,34 @@
 				},
 				{
 					"type": "entries",
-					"name": "Sowing Teeth",
+					"name": "播种牙齿",
+					"ENG_name": "Sowing Teeth",
 					"entries": [
-						"To sow the tooth, you place it on the ground in an unoccupied space within your reach, or you throw it into an unoccupied space within 10 feet of you in a body of water that is at least 50 feet wide and 50 feet long. Upon doing so, the tooth burrows into the ground and vanishes, leaving no hole behind, or it vanishes into the water. The creatures noted in the Creatures Summoned column appear in an unoccupied space as close to where the tooth was sown as possible. The creatures are allies to you, speak all languages you speak, and linger for 10 minutes before disappearing, unless otherwise noted."
+						"为了播种牙齿，你将它放置在你触及内一个未被占据的空间的地面上，或者你可以将它或者你可以将它投掷到10尺内一处未被占据的空间，使其落入一片至少50尺宽，50尺长的水体中。这样做时，牙齿不留痕迹地钻入地面，或者消失在水中。列在召唤的生物一栏中的生物将出现在尽可能靠近牙齿播种处的一个未被占据的空间。该生物视你为盟友，能说你所知的一切语言，并且在消失前存在10分钟，除非另有说明。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Implanting Teeth",
+					"name": "植入牙齿",
+					"ENG_name": "Implanting Teeth",
 					"entries": [
-						"To implant the tooth, you place it in your mouth, whereupon one of your own teeth falls out, and the drawn tooth takes its place, resizing to fit in your mouth. Once the tooth is implanted, you gain the effect noted in the Implanted Effect column. The tooth can't be removed while you are attuned to the teeth, and you can't voluntarily end your attunement to them. If removed after your death, the tooth vanishes. You can have a maximum number of the teeth implanted at one time equal to 1 + your Constitution modifier (minimum of 2 teeth total). If you try to implant more teeth, the newly implanted tooth replaces one of the previous teeth, determined randomly. The replaced tooth vanishes, and you lose the implanted effect."
+						"要植入牙齿，你将它放在你的口中，你自己的一颗牙齿将掉落，而被取出的牙齿将取代它的位置，这颗牙齿会调整大小来适应你的口腔。牙齿被植入后，你获得写在植牙效应一栏的效应。该牙齿在你和牙齿调谐时无法被移除，并且你无法自愿解除和它们的调谐。如果牙齿在你死亡后被移除，该牙齿将消失。你最多可以植入牙齿的数量等同于1+你的体质调整值（至少可以植入两颗牙齿）。如果你尝试植入更多的牙齿，新植入的牙齿会取代一枚已经被植入的牙齿，随机决定。被取代的牙齿将消失，你将失去它的植牙效应。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Recovering Teeth",
+					"name": "恢复牙齿",
+					"ENG_name": "Recovering Teeth",
 					"entries": [
-						"Once all the teeth have vanished, their pouch also vanishes. The pouch with all the teeth then appears in a random destination, which could be on a different world of the Material Plane."
+						"当所有牙齿都消失后，放置它们的小皮袋也会消失。小皮袋和全部的牙齿随后将出现在一个随机的位置，有可能是在物质位面内的另一个世界。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Destroying the Teeth",
+					"name": "摧毁牙齿",
+					"ENG_name": "Destroying the Teeth",
 					"entries": [
-						"Each tooth must be destroyed individually by sowing it in the area where the tooth's story originated, with the intention to destroy it. When planted in this way, creatures summoned are not friendly to you and do not vanish. Some of the creatures summoned merely head off in search of home, while others act as their tales dictate. In either case, the tooth is gone forever."
+						"每一颗牙齿必须分别摧毁，方法是怀着摧毁它的意图，将它播种在该牙齿的故事发源的地方。当以这种方式被播种时，被召唤出的生物并不对你友好，也不会消失。一些被召唤出的生物仅仅会前去寻找一个栖息的地方，另一些则会像自己的传说里那样行事。不管是哪种情况，该牙齿都会永远消失。"
 					]
 				}
 			],
@@ -31009,20 +31159,21 @@
 			]
 		},
 		{
-			"name": "Thunder Absorbing Tattoo",
+			"name": "雷鸣吸收刺青",
+			"ENG_name": "Thunder Absorbing Tattoo",
 			"source": "TCE",
 			"page": 119,
 			"resist": [
-				"thunder"
+				"雷鸣"
 			],
-			"detail1": "orange",
+			"detail1": "橙色",
 			"rarity": "very rare",
 			"reqAttune": true,
 			"wondrous": true,
 			"tattoo": true,
 			"hasRefs": true,
 			"entries": [
-				"{#itemEntry Absorbing Tattoo|TCE}"
+				"{#itemEntry 吸收刺青|TCE}"
 			]
 		},
 		{
@@ -35237,7 +35388,8 @@
 	],
 	"itemGroup": [
 		{
-			"name": "Absorbing Tattoo",
+			"name": "吸收刺青",
+			"ENG_name": "Absorbing Tattoo",
 			"source": "TCE",
 			"page": 119,
 			"rarity": "very rare",
@@ -35245,27 +35397,28 @@
 			"wondrous": true,
 			"tattoo": true,
 			"entries": [
-				"Produced by a special needle, this magic tattoo features designs that emphasize one color.",
+				"该魔法刺青用一根特殊的针制作，且其图案特别突出了一种颜色。",
 				{
 					"type": "entries",
-					"name": "Tattoo Attunement",
+					"name": "刺青同调",
+					"ENG_name": "Tattoo Attunement",
 					"entries": [
-						"To attune to this item, you hold the needle to your skin where you want the tattoo to appear, pressing the needle there throughout the attunement process. When the attunement is complete, the needle turns into the ink that becomes the tattoo, which appears on the skin.",
-						"If your attunement to the tattoo ends, the tattoo vanishes, and the needle reappears in your space."
+						"同调此物品时，你需要将针持握，并抵在你想要让刺青出现的那处皮肤上。当同调完成时，针头会化为墨水再变成刺青。若你与刺青的同调结束，刺青会消失，针头会再次出现在你的位置中。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Damage Resistance",
+					"name": "伤害抗性",
+					"ENG_name": "Damage Resistance",
 					"entries": [
-						"While the tattoo is on your skin, you have resistance to a type of damage associated with that color, as shown on the table below. The DM chooses the color or determines it randomly.",
+						"当刺青在你的皮肤上时，你拥有与刺青颜色相联系的一种伤害抗性，如下方表格所示。DM可以自己选择或随机决定刺青颜色。",
 						{
 							"type": "table",
-							"caption": "Absorbing Tattoo",
+							"caption": "吸收刺青",
 							"colLabels": [
 								"d10",
-								"Color",
-								"Tattoo"
+								"颜色",
+								"刺青"
 							],
 							"colStyles": [
 								"col-2 text-center",
@@ -35275,53 +35428,53 @@
 							"rows": [
 								[
 									"1",
-									"Green",
-									"{@item Acid Absorbing Tattoo|TCE}"
+									"绿色",
+									"{@item 强酸吸收刺青|TCE}"
 								],
 								[
 									"2",
-									"Blue",
-									"{@item Cold Absorbing Tattoo|TCE}"
+									"蓝色",
+									"{@item 冷冻吸收刺青|TCE}"
 								],
 								[
 									"3",
-									"Red",
-									"{@item Fire Absorbing Tattoo|TCE}"
+									"红色",
+									"{@item 火焰吸收刺青|TCE}"
 								],
 								[
 									"4",
-									"White",
-									"{@item Force Absorbing Tattoo|TCE}"
+									"白色",
+									"{@item 力场吸收刺青|TCE}"
 								],
 								[
 									"5",
-									"Yellow",
-									"{@item Lightning Absorbing Tattoo|TCE}"
+									"黄色",
+									"{@item 闪电吸收刺青|TCE}"
 								],
 								[
 									"6",
-									"Black",
-									"{@item Necrotic Absorbing Tattoo|TCE}"
+									"黑色",
+									"{@item 黯蚀吸收刺青|TCE}"
 								],
 								[
 									"7",
-									"Violet",
-									"{@item Poison Absorbing Tattoo|TCE}"
+									"紫罗兰色",
+									"{@item 毒素吸收刺青|TCE}"
 								],
 								[
 									"8",
-									"Silver",
-									"{@item Psychic Absorbing Tattoo|TCE}"
+									"银色",
+									"{@item 心灵吸收刺青|TCE}"
 								],
 								[
 									"9",
-									"Gold",
-									"{@item Radiant Absorbing Tattoo|TCE}"
+									"金色",
+									"{@item 光耀吸收刺青|TCE}"
 								],
 								[
 									"10",
-									"Orange",
-									"{@item Thunder Absorbing Tattoo|TCE}"
+									"橙色",
+									"{@item 雷鸣吸收刺青|TCE}"
 								]
 							]
 						}
@@ -35329,23 +35482,24 @@
 				},
 				{
 					"type": "entries",
-					"name": "Damage Absorption",
+					"name": "伤害吸收",
+					"ENG_name": "Damage Absorption",
 					"entries": [
-						"When you take damage of the chosen type, you can use your reaction to gain immunity against that instance of the damage, and you regain a number of hit points equal to half the damage you would have taken. Once this reaction is used, it can't be used again until the next dawn."
+						"当你受到与刺青所选伤害种类一致的伤害时，你可以用你的反应获得对该次伤害的免疫，而后你回复等同于你原先要受到伤害数值一半的生命值。使用后，直到下次黎明前，这个反应不能再次使用。"
 					]
 				}
 			],
 			"items": [
-				"Acid Absorbing Tattoo|TCE",
-				"Cold Absorbing Tattoo|TCE",
-				"Fire Absorbing Tattoo|TCE",
-				"Force Absorbing Tattoo|TCE",
-				"Lightning Absorbing Tattoo|TCE",
-				"Necrotic Absorbing Tattoo|TCE",
-				"Poison Absorbing Tattoo|TCE",
-				"Psychic Absorbing Tattoo|TCE",
-				"Radiant Absorbing Tattoo|TCE",
-				"Thunder Absorbing Tattoo|TCE"
+				"强酸吸收刺青|TCE",
+				"冷冻吸收刺青|TCE",
+				"火焰吸收刺青|TCE",
+				"力场吸收刺青|TCE",
+				"闪电吸收刺青|TCE",
+				"黯蚀吸收刺青|TCE",
+				"毒素吸收刺青|TCE",
+				"心灵吸收刺青|TCE",
+				"光耀吸收刺青|TCE",
+				"雷鸣吸收刺青|TCE"
 			]
 		},
 		{
@@ -36365,23 +36519,25 @@
 			"ENG_name": "Spell Scroll"
 		},
 		{
-			"name": "Spellwrought Tattoo",
+			"name": "蕴法刺青",
+			"ENG_name": "Spellwrought Tattoo",
 			"source": "TCE",
 			"page": 135,
 			"rarity": "varies",
 			"wondrous": true,
 			"tattoo": true,
 			"items": [
-				"Spellwrought Tattoo (Cantrip)|TCE",
-				"Spellwrought Tattoo (1st Level)|TCE",
-				"Spellwrought Tattoo (2nd Level)|TCE",
-				"Spellwrought Tattoo (3rd Level)|TCE",
-				"Spellwrought Tattoo (4th Level)|TCE",
-				"Spellwrought Tattoo (5th Level)|TCE"
+				"蕴法刺青（戏法）|TCE",
+				"蕴法刺青（1环）|TCE",
+				"蕴法刺青（2环）|TCE",
+				"蕴法刺青（3环）|TCE",
+				"蕴法刺青（4环）|TCE",
+				"蕴法刺青（5环）|TCE"
 			]
 		},
 		{
-			"name": "Spellwrought Tattoo",
+			"name": "蕴法刺青",
+			"ENG_name": "Spellwrought Tattoo",
 			"source": "UA2020SpellsAndMagicTattoos",
 			"page": 11,
 			"rarity": "varies",
