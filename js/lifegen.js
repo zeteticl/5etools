@@ -527,7 +527,7 @@ const SUPP_RACE = [
 	{min: 51, max: 60, result: "精灵"},
 	{min: 61, max: 70, result: "半身人"},
 	{min: 71, max: 75, result: "龙裔"},
-	{min: 76, max: 80, result: "地侏"},
+	{min: 76, max: 80, result: "侏儒"},
 	{min: 81, max: 85, result: "半精灵"},
 	{min: 86, max: 90, result: "半兽人"},
 	{min: 91, max: 95, result: "提夫林"},
