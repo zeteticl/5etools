@@ -8,14 +8,14 @@ class RenderRaces {
 		${Renderer.utils.getBorderTr()}
 		${Renderer.utils.getExcludedTr(race, "race")}
 		${Renderer.utils.getNameTr(race, {controlRhs: race.soundClip ? RenderRaces._getPronunciationButton(race) : "", page: UrlUtil.PG_RACES})}
-		<tr><td colspan="6"><b>屬性值：</b> ${(race.ability ? Renderer.getAbilityData(race.ability) : {asText: "無"}).asText}</td></tr>
-		<tr><td colspan="6"><b>體型：</b> ${Parser.sizeAbvToFull(race.size || SZ_VARIES)}</td></tr>
+		<tr><td colspan="6"><b>属性值：</b> ${(race.ability ? Renderer.getAbilityData(race.ability) : {asText: "无"}).asText}</td></tr>
+		<tr><td colspan="6"><b>体型：</b> ${Parser.sizeAbvToFull(race.size || SZ_VARIES)}</td></tr>
 		<tr><td colspan="6"><b>速度：</b> ${Parser.getSpeedString(race)}</td></tr>
 		<tr><td class="divider" colspan="6"><div></div></td></tr>
 		${race._isBaseRace ? `<tr class="text"><td colspan="6">${renderer.render({type: "entries", entries: race._baseRaceEntries}, 1)}</td></tr>` : `<tr class="text"><td colspan="6">${renderer.render({type: "entries", entries: race.entries}, 1)}</td></tr>`}
 
 		${race.traitTags && race.traitTags.includes("NPC Race") ? `<tr class="text"><td colspan="6"><section class="text-muted">
-			${renderer.render(`{@i 註記： 這個種族被記載於{@i 《地下城主指南》}以做為創造非玩家角色的選項。它並非被設計做為玩家可用的種族。}`, 2)}
+			${renderer.render(`{@i 注记： 这个种族被记载于{@i 《地下城主指南》}以做为创造非玩家角色的选项。它并非被设计做为玩家可用的种族。}`, 2)}
 		 </section></td></tr>` : ""}
 
 		${$ptHeightWeight ? $$`<tr class="text"><td colspan="6"><hr class="rd__hr">${$ptHeightWeight}</td></tr>` : ""}

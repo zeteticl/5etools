@@ -7,7 +7,7 @@ class PageFilterCultsBoons extends PageFilter {
 		this._sourceFilter = new SourceFilter();
 		this._typeFilter = new Filter({
 			header: "Type",
-			headerName: "類型",
+			headerName: "类型",
 			items: ["Boon, Demonic", "Cult"],
 		});
 	}

@@ -438,7 +438,7 @@ class FilterBox extends ProxyBase {
 		summaryHiddenHook();
 
 		if (!this._$btnOpen) {
-			this._$btnOpen = $(`<button class="btn btn-default ${this._isCompact ? "px-2" : ""}">篩選</button>`)
+			this._$btnOpen = $(`<button class="btn btn-default ${this._isCompact ? "px-2" : ""}">筛选</button>`)
 				.prependTo(this._$wrpFormTop);
 		} else if (!this._$btnOpen.parent().length) {
 			this._$btnOpen.prependTo(this._$wrpFormTop);
@@ -484,9 +484,9 @@ class FilterBox extends ProxyBase {
 			this._filters.forEach(f => f.handleSearch(searchTerm));
 		});
 
-		const $btnShowAllFilters = $(`<button class="btn btn-xs btn-default">顯示全部</button>`)
+		const $btnShowAllFilters = $(`<button class="btn btn-xs btn-default">显示全部</button>`)
 			.click(() => this.showAllFilters());
-		const $btnHideAllFilters = $(`<button class="btn btn-xs btn-default">隱藏全部</button>`)
+		const $btnHideAllFilters = $(`<button class="btn btn-xs btn-default">隐藏全部</button>`)
 			.click(() => this.hideAllFilters());
 
 		const $btnReset = $(`<button class="btn btn-xs btn-default mr-3" title="Reset filters. SHIFT to reset everything.">重置</button>`)
@@ -514,7 +514,7 @@ class FilterBox extends ProxyBase {
 		this._addHook("meta", "modeCombineFilters", hook);
 		hook();
 
-		const $btnSave = $(`<button class="btn btn-primary fltr__btn-close mr-2">儲存</button>`)
+		const $btnSave = $(`<button class="btn btn-primary fltr__btn-close mr-2">保存</button>`)
 			.click(() => this._modalMeta.doClose(true));
 
 		const $btnCancel = $(`<button class="btn btn-default fltr__btn-close">取消</button>`)
@@ -522,7 +522,7 @@ class FilterBox extends ProxyBase {
 
 		$$(this._modalMeta.$modal)`<div class="split mb-2 mt-2 flex-v-center mobile__flex-col">
 			<div class="flex-v-baseline mobile__flex-col">
-				<h4 class="m-0 mr-2 mobile__mb-2">篩選</h4>
+				<h4 class="m-0 mr-2 mobile__mb-2">筛选</h4>
 				${metaIptSearch.$wrp.addClass("mobile__mb-2")}
 			</div>
 			<div class="flex-v-center mobile__flex-col">
@@ -894,7 +894,7 @@ class FilterBox extends ProxyBase {
 }
 FilterBox.EVNT_VALCHANGE = "valchange";
 FilterBox.SOURCE_HEADER = "Source";
-FilterBox.SOURCE_HEADER_NAME = "資源";
+FilterBox.SOURCE_HEADER_NAME = "资源";
 FilterBox._PILL_STATES = ["ignore", "yes", "no"];
 FilterBox._COMBINE_MODES = ["and", "or", "custom"];
 FilterBox._STORAGE_KEY = "filterBoxState";
@@ -1407,7 +1407,7 @@ class Filter extends FilterBase {
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} fltr__h-btn--all w-100`,
 			click: () => this._doSetPillsAll(),
-			html: "全選",
+			html: "全选",
 		});
 		const btnClear = e_({
 			tag: "button",
@@ -1419,13 +1419,13 @@ class Filter extends FilterBase {
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} fltr__h-btn--none w-100`,
 			click: () => this._doSetPillsNone(),
-			html: "全無",
+			html: "全无",
 		});
 		const btnDefault = e_({
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} w-100`,
 			click: () => this._doSetPinsDefault(),
-			html: "預設",
+			html: "缺省",
 		});
 
 		const wrpStateBtnsOuter = e_({
@@ -1472,7 +1472,7 @@ class Filter extends FilterBase {
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} ml-2`,
 			click: () => this._meta.isHidden = !this._meta.isHidden,
-			html: "隱藏",
+			html: "隐藏",
 		});
 		const hookShowHide = () => {
 			e_({ele: btnShowHide}).toggleClass("active", this._meta.isHidden);
@@ -3089,7 +3089,7 @@ class OptionsFilter extends FilterBase {
 
 		const $wrpSummary = $(`<div class="flex-v-center fltr__summary_item fltr__summary_item--include"></div>`).hideVe();
 
-		const $btnShowHide = $(`<button class="btn btn-default btn-xs ml-2 ${this._meta.isHidden ? "active" : ""}">隱藏</button>`)
+		const $btnShowHide = $(`<button class="btn btn-default btn-xs ml-2 ${this._meta.isHidden ? "active" : ""}">隐藏</button>`)
 			.click(() => this._meta.isHidden = !this._meta.isHidden);
 		const hkIsHidden = () => {
 			$btnShowHide.toggleClass("active", this._meta.isHidden);

@@ -33,7 +33,7 @@ const ListUtil = {
 		if (ListUtil._firstInit) {
 			ListUtil._firstInit = false;
 			const $headDesc = $(`.page__subtitle`);
-			$headDesc.html(`${$headDesc.html()} 按下J/K以巡覽列${ListUtil._isPreviewable ? `, M to expand` : ""}.`);
+			$headDesc.html(`${$headDesc.html()} 按下J/K以巡览列${ListUtil._isPreviewable ? `, M to expand` : ""}.`);
 			ListUtil._initList_bindWindowHandlers();
 		}
 
@@ -263,7 +263,7 @@ const ListUtil = {
 				if (!ListUtil.isSublisted(Hist.lastLoadedId, data)) ListUtil.pDoSublistAdd(Hist.lastLoadedId, {doFinalize: true, data});
 				else ListUtil.pDoSublistRemove(Hist.lastLoadedId, {doFinalize: true, data});
 			})
-			.title("釘選(開/關)");
+			.title("钉选(开/关)");
 	},
 
 	genericAddButtonHandler (evt, options = {}) {
@@ -947,7 +947,7 @@ const ListUtil = {
 	},
 
 	addListShowHide () {
-		$(`#filter-search-group`).find(`#reset`).before(`<button class="btn btn-default" id="hidesearch">隱藏</button>`);
+		$(`#filter-search-group`).find(`#reset`).before(`<button class="btn btn-default" id="hidesearch">隐藏</button>`);
 		$(`#contentwrapper`).prepend(`<div class="col-12" id="showsearch"><button class="btn btn-block btn-default btn-xs" type="button">Show Filter</button><br></div>`);
 
 		const $wrpList = $(`#listcontainer`);

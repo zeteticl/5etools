@@ -531,7 +531,7 @@ class BookUtil {
 	static async _booksHashChange_pHandleFound ({fromIndex, homebrewData, bookId, hashParts, $contents}) {
 		document.title = `${fromIndex.name} - 5etools`;
 		$(`.book-head-header`).html(this._booksHashChange_getCleanName(fromIndex.name));
-		$(`.book-head-message`).html("瀏覽內容。按下F以搜尋，按下G以前往指定頁數。");
+		$(`.book-head-message`).html("浏览内容。按下F以搜索，按下G以前往指定页数。");
 		await this._pLoadChapter(fromIndex, bookId, hashParts, homebrewData, $contents);
 		NavBar.highlightCurrentPage();
 	}

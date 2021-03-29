@@ -37,7 +37,7 @@ class RenderDeities {
 			${reprintIndex ? `
 				<tr><td colspan="6">
 				<i class="text-muted">
-				${reprintIndex === 1 ? `這個神祇是再印版本。` : ""} 以下版本被印於較舊的出版品中 (${Parser.sourceJsonToFull(deity.source)}${Renderer.utils.isDisplayPage(deity.page) ? `-第${deity.page}頁` : ""}).
+				${reprintIndex === 1 ? `这个神祇是再印版本。` : ""} 以下版本被印于较旧的出版品中 (${Parser.sourceJsonToFull(deity.source)}${Renderer.utils.isDisplayPage(deity.page) ? `-第${deity.page}页` : ""}).
 				</i>
 				</td></tr>
 			` : ""}

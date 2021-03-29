@@ -306,7 +306,7 @@ async function pPageInit (loadedSources) {
 	spellBookView = new BookModeView({
 		hashKey: "bookview",
 		$openBtn: $(`#btn-spellbook`),
-		$eleNoneVisible: $(`<span class="initial-message">如果你想要一次檢視多個法術，請先創造一份清單</span>`),
+		$eleNoneVisible: $(`<span class="initial-message">如果你想要一次查看多个法术，请先创造一份清单</span>`),
 		pageTitle: "Spells Book View",
 		popTblGetNumShown: ($wrpContent, $dispName, $wrpControls) => {
 			const toShow = ListUtil.getSublistedIds().map(id => spellList[id])

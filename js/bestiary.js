@@ -1009,7 +1009,7 @@ function renderStatblock (mon, isScaled) {
 	// reset tabs
 	const tabMetas = [
 		new Renderer.utils.TabButton({
-			label: "資料卡",
+			label: "数据卡",
 			fnChange: () => {
 				$wrpBtnProf.append($btnProf);
 				$(`#float-token`).show();
@@ -1018,7 +1018,7 @@ function renderStatblock (mon, isScaled) {
 			isVisible: true,
 		}),
 		new Renderer.utils.TabButton({
-			label: "資訊",
+			label: "信息",
 			fnChange: () => {
 				$btnProf = $wrpBtnProf.children().length ? $wrpBtnProf.children().detach() : $btnProf;
 				$(`#float-token`).hide();
@@ -1027,7 +1027,7 @@ function renderStatblock (mon, isScaled) {
 			isVisible: Renderer.utils.hasFluffText(mon),
 		}),
 		new Renderer.utils.TabButton({
-			label: "圖片",
+			label: "图片",
 			fnChange: () => {
 				$btnProf = $wrpBtnProf.children().length ? $wrpBtnProf.children().detach() : $btnProf;
 				$(`#float-token`).hide();

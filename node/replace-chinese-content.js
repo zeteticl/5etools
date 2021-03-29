@@ -1,12 +1,12 @@
 // rugini code
-// 無法直接執行，只是記錄程式碼以後用
+// 无法直接运行，只是记录代码以后用
 
 var data2 = [
 ]
 var data1 = [
 ]
 
-// 替代內容，一般為替代中文的部分
+// 替代内容，一般为替代中文的部分
 var data1 = data1.map((k, index, array) => {
     var ch = data2
         .find((i, index, array) => {
@@ -41,7 +41,7 @@ var data1 = data1.map((k, index, array) => {
 });
 JSON.stringify(data1);
 
-// 尋找中文有但英文沒有的內容，可能是ENG_name換名子或打錯
+// 寻找中文有但英文没有的内容，可能是ENG_name换名子或打错
 var data2 = data2.filter((k) => {
     if (k.ENG_name == undefined) {
         return false;

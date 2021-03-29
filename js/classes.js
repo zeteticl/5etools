@@ -830,8 +830,8 @@ class ClassesPage extends BaseComponent {
 				${$tblGroupHeaders}
 			</tr>
 			<tr>
-				<th class="cls-tbl__col-level">等級</th>
-				<th class="cls-tbl__col-prof-bonus">熟練加值</th>
+				<th class="cls-tbl__col-level">等级</th>
+				<th class="cls-tbl__col-prof-bonus">熟练加值</th>
 				<th>能力</th>
 				${$tblHeaders}
 			</tr>
@@ -863,7 +863,7 @@ class ClassesPage extends BaseComponent {
 			const abilityPart = [orPart, basePart].filter(Boolean).join("; ");
 
 			const allEntries = [
-				abilityPart ? `{@b 最低屬性值: } ${abilityPart}` : null,
+				abilityPart ? `{@b 最低属性值: } ${abilityPart}` : null,
 				...requirements.entries || [],
 			].filter(Boolean);
 
@@ -892,8 +892,8 @@ class ClassesPage extends BaseComponent {
 				<td colspan="6" class="cls-side__section">
 					<h5 class="cls-side__section-head">生命值</h5>
 					<div><strong>生命骰：</strong> ${Renderer.getEntryDice(hdEntry, "Hit die")}</div>
-					<div><strong>首級生命值：</strong> ${cls.hd.number * cls.hd.faces} + 你的體質調整值</div>
-					<div><strong>其後生命值：</strong> ${Renderer.getEntryDice(hdEntry, "Hit die")} (or ${((cls.hd.number * cls.hd.faces) / 2 + 1)}) + 你的體質調整值， 一級之後每 ${cls.name} 等級</div>
+					<div><strong>首级生命值：</strong> ${cls.hd.number * cls.hd.faces} + 你的体质调整值</div>
+					<div><strong>其后生命值：</strong> ${Renderer.getEntryDice(hdEntry, "Hit die")} (or ${((cls.hd.number * cls.hd.faces) / 2 + 1)}) + 你的体质调整值， 一级之后每 ${cls.name} 等级</div>
 				</td>
 			</tr>`
 		}
@@ -913,15 +913,15 @@ class ClassesPage extends BaseComponent {
 		if (cls.startingEquipment) {
 			const equip = cls.startingEquipment;
 			const rendered = [
-				equip.additionalFromBackground ? "<p>你起始攜帶下列物品，以及任何你背景所提供的東西。</p>" : "",
+				equip.additionalFromBackground ? "<p>你起始携带下列物品，以及任何你背景所提供的东西。</p>" : "",
 				equip.default && equip.default.length ? `<ul class="pl-4"><li>${equip.default.map(it => Renderer.get().render(it)).join("</li><li>")}</ul>` : "",
-				equip.goldAlternative != null ? `<p>或者，你可以選擇起始擁有 ${Renderer.get().render(equip.goldAlternative)} 金幣以自行購買裝備。</p>` : "",
+				equip.goldAlternative != null ? `<p>或者，你可以选择起始拥有 ${Renderer.get().render(equip.goldAlternative)} 金币以自行购买装备。</p>` : "",
 			].filter(Boolean).join("");
 			const $dispRendered = $(`<div/>`);
 
 			$ptEquipment = $$`<tr class="cls-side__show-hide">
 				<td class="cls-side__section" colspan="6">
-					<h5 class="cls-side__section-head">起始裝備</h5>
+					<h5 class="cls-side__section-head">起始装备</h5>
 					<div>${$dispRendered}</div>
 				</td>
 			</tr>`;
@@ -954,9 +954,9 @@ class ClassesPage extends BaseComponent {
 			let $ptMcProfsTools = null;
 			let $ptMcProfsSkills = null;
 			if (mc.proficienciesGained) {
-				$ptMcProfsIntro = $(`<div ${mc.requirements || mc.requirementsSpecial ? `class="cls-side__mc-prof-intro--requirements"` : ""}>當你不是以起始等級獲得新職業的等級，你只會獲得該職業一部分的起始熟練項目。</div>`);
+				$ptMcProfsIntro = $(`<div ${mc.requirements || mc.requirementsSpecial ? `class="cls-side__mc-prof-intro--requirements"` : ""}>当你不是以起始等级获得新职业的等级，你只会获得该职业一部分的起始熟练项目。</div>`);
 
-				if (mc.proficienciesGained.armor) $ptMcProfsArmor = $(`<div><b>護甲：</b> ${Parser.ItemTypeToDisplay(renderArmorProfs(mc.proficienciesGained.armor))}</div>`);
+				if (mc.proficienciesGained.armor) $ptMcProfsArmor = $(`<div><b>护甲：</b> ${Parser.ItemTypeToDisplay(renderArmorProfs(mc.proficienciesGained.armor))}</div>`);
 
 				if (mc.proficienciesGained.weapons) $ptMcProfsWeapons = $(`<div><b>武器：</b> ${renderWeaponsProfs(mc.proficienciesGained.weapons)}</div>`);
 
@@ -972,7 +972,7 @@ class ClassesPage extends BaseComponent {
 
 			$ptMulticlassing = $$`<tr class="cls-side__show-hide">
 				<td class="cls-side__section" colspan="6">
-					<h5 class="cls-side__section-head">兼職</h5>
+					<h5 class="cls-side__section-head">兼职</h5>
 					${$ptMcPrereq}
 					${$ptMcPrereqSpecial}
 					${$ptMcEntries}
@@ -997,12 +997,12 @@ class ClassesPage extends BaseComponent {
 
 			<tr class="cls-side__show-hide">
 				<td colspan="6" class="cls-side__section">
-					<h5 class="cls-side__section-head">熟練</h5>
-					<div><b>護甲：</b> <span>${profs.armor ? renderArmorProfs(profs.armor) : "無"}</span></div>
-					<div><b>武器： </b> <span>${profs.weapons ? renderWeaponsProfs(profs.weapons) : "無"}</span></div>
-					<div><b>工具：</b> <span>${profs.tools ? renderToolProfs(profs.tools) : "無"}</span></div>
-					<div><b>豁免：</b> <span>${cls.proficiency ? cls.proficiency.map(p => Parser.attAbvToFull(p)).join(", ") : "無"}</span></div>
-					<div><b>技能：</b> <span>${profs.skills ? renderSkillsProfs(profs.skills) : "無"}</span></div>
+					<h5 class="cls-side__section-head">熟练</h5>
+					<div><b>护甲：</b> <span>${profs.armor ? renderArmorProfs(profs.armor) : "无"}</span></div>
+					<div><b>武器： </b> <span>${profs.weapons ? renderWeaponsProfs(profs.weapons) : "无"}</span></div>
+					<div><b>工具：</b> <span>${profs.tools ? renderToolProfs(profs.tools) : "无"}</span></div>
+					<div><b>豁免：</b> <span>${cls.proficiency ? cls.proficiency.map(p => Parser.attAbvToFull(p)).join(", ") : "无"}</span></div>
+					<div><b>技能：</b> <span>${profs.skills ? renderSkillsProfs(profs.skills) : "无"}</span></div>
 				</td>
 			</tr>
 

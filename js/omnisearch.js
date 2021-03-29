@@ -6,7 +6,7 @@ class Omnisearch {
 
 		const $nav = $(`#navbar`);
 
-		this._$iptSearch = $(`<input class="form-control search omni__input" placeholder="${this._PLACEHOLDER_TEXT}" title="Hotkey: F. 免責聲明：不一定真的達到全域搜尋，請謹慎使用。">`).disableSpellcheck();
+		this._$iptSearch = $(`<input class="form-control search omni__input" placeholder="${this._PLACEHOLDER_TEXT}" title="Hotkey: F. 免责声明：不一定真的达到全域搜索，请谨慎使用。">`).disableSpellcheck();
 		const $searchSubmit = $(`<button class="btn btn-default omni__submit" tabindex="-1"><span class="glyphicon glyphicon-search"></span></button>`);
 
 		this._$searchInputWrapper = $$`
@@ -493,7 +493,7 @@ class Omnisearch {
 		`);
 	}
 }
-Omnisearch._PLACEHOLDER_TEXT = "全域搜尋...";
+Omnisearch._PLACEHOLDER_TEXT = "全域搜索...";
 Omnisearch._searchIndex = null;
 Omnisearch._adventureBookLookup = null; // A map of `<sourceLower>: (adventureCatId|bookCatId)`
 Omnisearch._pLoadSearch = null;

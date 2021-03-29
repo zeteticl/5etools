@@ -523,8 +523,8 @@ class MakeCards extends BaseComponent {
 
 	static _getCardContents_race (race) {
 		return [
-			this._ct_property("屬性值", Renderer.getAbilityData(race.ability).asText),
-			this._ct_property("體型", Parser.sizeAbvToFull(race.size)),
+			this._ct_property("属性值", Renderer.getAbilityData(race.ability).asText),
+			this._ct_property("体型", Parser.sizeAbvToFull(race.size)),
 			this._ct_property("速度", Parser.getSpeedString(race)),
 			this._ct_rule(),
 			...this._ct_renderEntries(race.entries, 2),

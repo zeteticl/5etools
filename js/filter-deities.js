@@ -19,19 +19,19 @@ class PageFilterDeities extends PageFilter {
 		this._categoryFilter = new Filter({header: "Category", items: [VeCt.STR_NONE]});
 		this._alignmentFilter = new Filter({
 			header: "Alignment",
-			headerName: "陣營",
+			headerName: "阵营",
 			items: ["L", "NX", "C", "G", "NY", "E", "N"],
 			displayFn: Parser.alignmentAbvToFull,
 			itemSortFn: null,
 		});
 		this._domainFilter = new Filter({
 			header: "Domain",
-			headerName: "領域",
+			headerName: "领域",
 			items: ["Death", "Knowledge", "Life", "Light", "Nature", VeCt.STR_NONE, "Tempest", "Trickery", "War"],
 		});
 		this._miscFilter = new Filter({
 			header: "Miscellaneous",
-			headerName: "雜項",
+			headerName: "杂项",
 			items: ["Grants Piety Features", "Has Info", PageFilterDeities._STR_REPRINTED, "SRD"],
 			displayFn: StrUtil.uppercaseFirst,
 			deselFn: (it) => { return it === PageFilterDeities._STR_REPRINTED },

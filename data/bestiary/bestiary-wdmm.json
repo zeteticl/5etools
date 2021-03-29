@@ -171,7 +171,7 @@
 					"name": "Wielder Domination",
 					"entries": [
 						"A creature can grab the staff out of the air with a successful grapple check against the staff, and grappling the staff does not reduce the creature's speed. Any creature that successfully grapples the staff must succeed on a {@dc 12} Charisma saving throw or be {@condition charmed} by the staff until the staff is no longer in its grasp. While the creature is {@condition charmed}, the staff can issue commands to it, which the creature does its best to obey. The creature can repeat the saving throw each time it takes damage, ending the effect on itself on a success. A creature that successfully resists the staff's control can't be {@condition charmed} by it for 24 hours.",
-						"A creature holding the staff that isn't {@condition charmed} by it can use an action to attempt to break the staff over a knee or against a solid surface, doing so with a successful {@dc 17} Strength ({@skill Athletics}) check. Breaking the staff in this manner destroys it."
+						"A creature holding the staff that isn't {@condition charmed} by it can use an action to attempt to break the staff over a knee or against a solid surface, doing so with a successful {@dc 17} Strength ({@skill 运动}) check. Breaking the staff in this manner destroys it."
 					]
 				}
 			],
@@ -179,7 +179,7 @@
 				{
 					"name": "Staff of Frost",
 					"entries": [
-						"The staff has 10 charges. It can expend 1 or more of its charges to cast one of the following spells (save {@dc 12}): {@spell 寒冰錐} (5 charges), {@spell 雲霧術} (1 charge), {@spell 冰風暴} (4 charges), or {@spell 冰牆術} (4 charges). It regains {@dice 1d6 + 4} expended charges daily at dawn. If the staff expends its last charge, roll a {@dice d20}. On a 1, the staff turns to water and is destroyed."
+						"The staff has 10 charges. It can expend 1 or more of its charges to cast one of the following spells (save {@dc 12}): {@spell 寒冰锥} (5 charges), {@spell 云雾术} (1 charge), {@spell 冰风暴} (4 charges), or {@spell 冰墙术} (4 charges). It regains {@dice 1d6 + 4} expended charges daily at dawn. If the staff expends its last charge, roll a {@dice d20}. On a 1, the staff turns to water and is destroyed."
 					]
 				},
 				{
@@ -365,87 +365,87 @@
 				{
 					"name": "Spellcasting",
 					"headerEntries": [
-						"Arcturia is an 18th-level spellcaster. Her spellcasting ability is Intelligence (spell save {@dc 20}, {@hit 12} to hit with spell attacks). Arcturia can cast {@spell 變造自身} at will and has the following wizard spells prepared:"
+						"Arcturia is an 18th-level spellcaster. Her spellcasting ability is Intelligence (spell save {@dc 20}, {@hit 12} to hit with spell attacks). Arcturia can cast {@spell 变造自身} at will and has the following wizard spells prepared:"
 					],
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell 法師之手}",
-								"{@spell 魔法技倆}",
-								"{@spell 冷凍射線}"
+								"{@spell 法师之手}",
+								"{@spell 魔法技俩}",
+								"{@spell 冷冻射线}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell 偵測魔法}",
-								"{@spell 魔法飛彈}",
-								"{@spell 護盾術}",
-								"{@spell 雷鳴波}"
+								"{@spell 侦测魔法}",
+								"{@spell 魔法飞弹}",
+								"{@spell 护盾术}",
+								"{@spell 雷鸣波}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell 偵測思想}",
-								"{@spell 變巨/縮小術}",
-								"{@spell 馬友夫強酸箭}",
-								"{@spell 鏡影術}"
+								"{@spell 侦测思想}",
+								"{@spell 变巨/缩小术}",
+								"{@spell 马友夫强酸箭}",
+								"{@spell 镜影术}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell 反制法術}",
+								"{@spell 反制法术}",
 								"{@spell 解除魔法}",
-								"{@spell 火球術}",
-								"{@spell 緩速術}"
+								"{@spell 火球术}",
+								"{@spell 缓速术}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell 枯萎術}",
-								"{@spell 變形術}"
+								"{@spell 枯萎术}",
+								"{@spell 变形术}"
 							]
 						},
 						"5": {
 							"slots": 3,
 							"spells": [
-								"{@spell 活化物體}",
-								"{@spell 心靈遙控}"
+								"{@spell 活化物体}",
+								"{@spell 心灵遥控}"
 							]
 						},
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell 解離術}",
-								"{@spell 石化術}"
+								"{@spell 解离术}",
+								"{@spell 石化术}"
 							]
 						},
 						"7": {
 							"slots": 1,
 							"spells": [
-								"{@spell 重力反轉}",
-								"{@spell 傳送術}"
+								"{@spell 重力反转}",
+								"{@spell 发送术}"
 							]
 						},
 						"8": {
 							"slots": 1,
 							"spells": [
-								"{@spell 弱智術}",
-								"{@spell 迷宮術}"
+								"{@spell 弱智术}",
+								"{@spell 迷宫术}"
 							]
 						},
 						"9": {
 							"slots": 1,
 							"spells": [
-								"{@spell 完全變形術}"
+								"{@spell 完全变形术}"
 							]
 						}
 					},
 					"will": [
-						"{@spell 變造自身}"
+						"{@spell 变造自身}"
 					],
 					"hidden": [
 						"will"
@@ -483,12 +483,12 @@
 					],
 					"daily": {
 						"1e": [
-							"{@spell 警報術}",
-							"{@spell 偵測魔法}",
-							"{@spell 氣化形體}",
-							"{@spell 迷蹤步}",
-							"{@spell 穿牆術}",
-							"{@spell 識破隱形}"
+							"{@spell 警报术}",
+							"{@spell 侦测魔法}",
+							"{@spell 气化形体}",
+							"{@spell 迷踪步}",
+							"{@spell 穿墙术}",
+							"{@spell 识破隐形}"
 						]
 					},
 					"ability": "cha"
@@ -588,75 +588,75 @@
 						"0": {
 							"spells": [
 								"{@spell 火焰箭}",
-								"{@spell 光亮術}",
-								"{@spell 法師之手}",
-								"{@spell 魔法技倆}",
-								"{@spell 電爪}"
+								"{@spell 光亮术}",
+								"{@spell 法师之手}",
+								"{@spell 魔法技俩}",
+								"{@spell 电爪}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell 偵測魔法}",
-								"{@spell 鑑定術}",
-								"{@spell 法師護甲}*",
-								"{@spell 魔法飛彈}"
+								"{@spell 侦测魔法}",
+								"{@spell 鉴定术}",
+								"{@spell 法师护甲}*",
+								"{@spell 魔法飞弹}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell 偵測思想}",
-								"{@spell 鏡影術}",
-								"{@spell 迷蹤步}"
+								"{@spell 侦测思想}",
+								"{@spell 镜影术}",
+								"{@spell 迷踪步}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell 反制法術}",
-								"{@spell 飛行術}",
-								"{@spell 閃電束}"
+								"{@spell 反制法术}",
+								"{@spell 飞行术}",
+								"{@spell 闪电束}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell 變形術}",
-								"{@spell 火焰護盾}",
-								"{@spell 石膚術}*"
+								"{@spell 变形术}",
+								"{@spell 火焰护盾}",
+								"{@spell 石肤术}*"
 							]
 						},
 						"5": {
 							"slots": 3,
 							"spells": [
-								"{@spell 寒冰錐}",
+								"{@spell 寒冰锥}",
 								"{@spell 探知}",
-								"{@spell 力牆術}"
+								"{@spell 力墙术}"
 							]
 						},
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell 法術無效結界}"
+								"{@spell 法术无效结界}"
 							]
 						},
 						"7": {
 							"slots": 1,
 							"spells": [
-								"{@spell 傳送術}"
+								"{@spell 发送术}"
 							]
 						},
 						"8": {
 							"slots": 1,
 							"spells": [
-								"{@spell 心靈屏障}*"
+								"{@spell 心灵屏障}*"
 							]
 						},
 						"9": {
 							"slots": 1,
 							"spells": [
-								"{@spell 時間停止}"
+								"{@spell 时间停止}"
 							]
 						}
 					},
@@ -957,7 +957,7 @@
 				14,
 				{
 					"ac": 17,
-					"condition": "with {@spell 法師護甲}",
+					"condition": "with {@spell 法师护甲}",
 					"braces": true
 				}
 			],
@@ -985,75 +985,75 @@
 						"0": {
 							"spells": [
 								"{@spell 火焰箭}",
-								"{@spell 光亮術}",
-								"{@spell 法師之手}",
-								"{@spell 魔法技倆}",
-								"{@spell 電爪}"
+								"{@spell 光亮术}",
+								"{@spell 法师之手}",
+								"{@spell 魔法技俩}",
+								"{@spell 电爪}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell 偵測魔法}",
-								"{@spell 鑑定術}",
-								"{@spell 法師護甲}*",
-								"{@spell 魔法飛彈}"
+								"{@spell 侦测魔法}",
+								"{@spell 鉴定术}",
+								"{@spell 法师护甲}*",
+								"{@spell 魔法飞弹}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell 偵測思想}",
-								"{@spell 鏡影術}",
-								"{@spell 迷蹤步}"
+								"{@spell 侦测思想}",
+								"{@spell 镜影术}",
+								"{@spell 迷踪步}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell 反制法術}",
-								"{@spell 飛行術}",
-								"{@spell 閃電束}"
+								"{@spell 反制法术}",
+								"{@spell 飞行术}",
+								"{@spell 闪电束}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell 魅影殺手}",
-								"{@spell 火焰護盾}",
-								"{@spell 石膚術}*"
+								"{@spell 魅影杀手}",
+								"{@spell 火焰护盾}",
+								"{@spell 石肤术}*"
 							]
 						},
 						"5": {
 							"slots": 3,
 							"spells": [
-								"{@spell 寒冰錐}",
+								"{@spell 寒冰锥}",
 								"{@spell 探知}",
-								"{@spell 力牆術}"
+								"{@spell 力墙术}"
 							]
 						},
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell 法術無效結界}"
+								"{@spell 法术无效结界}"
 							]
 						},
 						"7": {
 							"slots": 1,
 							"spells": [
-								"{@spell 傳送術}"
+								"{@spell 发送术}"
 							]
 						},
 						"8": {
 							"slots": 1,
 							"spells": [
-								"{@spell 心靈屏障}*"
+								"{@spell 心灵屏障}*"
 							]
 						},
 						"9": {
 							"slots": 1,
 							"spells": [
-								"{@spell 時間停止}"
+								"{@spell 时间停止}"
 							]
 						}
 					},
@@ -1215,7 +1215,7 @@
 							{
 								"name": "Merged Heads",
 								"entries": [
-									"The duergar has advantage on Wisdom ({@skill Perception}) checks and on saving throws against being {@condition charmed}, {@condition frightened}, {@condition stunned}, and knocked {@condition unconscious}."
+									"The duergar has advantage on Wisdom ({@skill 察觉}) checks and on saving throws against being {@condition charmed}, {@condition frightened}, {@condition stunned}, and knocked {@condition unconscious}."
 								]
 							}
 						]
@@ -1273,15 +1273,15 @@
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell 命令術}",
-								"{@spell 強迫決鬥}",
-								"{@spell 熾炎斬}"
+								"{@spell 命令术}",
+								"{@spell 强迫决斗}",
+								"{@spell 炽炎斩}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell 人類定身術}",
+								"{@spell 人类定身术}",
 								"{@spell 魔化武器}"
 							]
 						},
@@ -1295,14 +1295,14 @@
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell 生物定位術}",
-								"{@spell 驚震斬}"
+								"{@spell 生物定位术}",
+								"{@spell 惊震斩}"
 							]
 						},
 						"5": {
 							"slots": 2,
 							"spells": [
-								"{@spell 湮滅波} (necrotic)"
+								"{@spell 湮灭波} (necrotic)"
 							]
 						}
 					},
@@ -1449,71 +1449,71 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell 法師之手}",
-								"{@spell 魔法技倆}",
-								"{@spell 冷凍射線}"
+								"{@spell 法师之手}",
+								"{@spell 魔法技俩}",
+								"{@spell 冷冻射线}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell 偵測魔法}",
-								"{@spell 魔法飛彈}",
-								"{@spell 護盾術}",
-								"{@spell 雷鳴波}"
+								"{@spell 侦测魔法}",
+								"{@spell 魔法飞弹}",
+								"{@spell 护盾术}",
+								"{@spell 雷鸣波}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell 偵測思想}",
-								"{@spell 隱形術}",
-								"{@spell 馬友夫強酸箭}",
-								"{@spell 鏡影術}"
+								"{@spell 侦测思想}",
+								"{@spell 隐形术}",
+								"{@spell 马友夫强酸箭}",
+								"{@spell 镜影术}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell 活化死屍}",
-								"{@spell 反制法術}",
+								"{@spell 活化死尸}",
+								"{@spell 反制法术}",
 								"{@spell 解除魔法}",
-								"{@spell 火球術}"
+								"{@spell 火球术}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell 枯萎術}",
-								"{@spell 次元門}"
+								"{@spell 枯萎术}",
+								"{@spell 次元门}"
 							]
 						},
 						"5": {
 							"slots": 3,
 							"spells": [
-								"{@spell 死雲術}",
+								"{@spell 死云术}",
 								"{@spell 探知}"
 							]
 						},
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell 解離術}",
-								"{@spell 法術無效結界}"
+								"{@spell 解离术}",
+								"{@spell 法术无效结界}"
 							]
 						},
 						"7": {
 							"slots": 1,
 							"spells": [
 								"{@spell 死亡一指}",
-								"{@spell 力場監牢}"
+								"{@spell 力场监牢}"
 							]
 						},
 						"8": {
 							"slots": 1,
 							"spells": [
 								"{@spell 支配怪物}",
-								"{@spell 律令震懾}"
+								"{@spell 律令震慑}"
 							]
 						},
 						"9": {
@@ -1751,7 +1751,7 @@
 								"name": "Invisibility (Recharges after a Short or Long Rest)",
 								"entries": [
 									"The mummy lord magically turns {@condition invisible} for up to 1 hour or until it attacks, it casts a spell, it uses its Enlarge, or its concentration is broken (as if concentrating on a spell). Any equipment the mummy lord wears or carries is {@condition invisible} with it.",
-									"The stalagmite in the northwest alcove is hollow and serves as Gorka Tharn's sarcophagus. The mummy lord is lodged inside the stalagmite's funnel-shaped interior. When it awakens, the mummy lord uses a {@spell 塑石術} spell to create an opening large enough for it to emerge. It destroys any intruders in its lair, then returns to its sarcophagus and its slumber.",
+									"The stalagmite in the northwest alcove is hollow and serves as Gorka Tharn's sarcophagus. The mummy lord is lodged inside the stalagmite's funnel-shaped interior. When it awakens, the mummy lord uses a {@spell 塑石术} spell to create an opening large enough for it to emerge. It destroys any intruders in its lair, then returns to its sarcophagus and its slumber.",
 									"At the bottom of the stalagmite's hollow cavity, four 1-foot-tall clay urns contain Gorka Tharn's preserved internal organs, including the mummy lord's shriveled heart. Only by destroying the heart can the characters prevent the mummy lord from rejuvenating. The heart is a Tiny object with AC 5, 25 hit points, and immunity to all damage except fire."
 								]
 							}
@@ -1772,51 +1772,51 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell 聖焰}",
-								"{@spell 奇術}"
+								"{@spell 圣焰}",
+								"{@spell 奇术}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell 命令術}",
-								"{@spell 光導箭}",
-								"{@spell 虔誠護盾}"
+								"{@spell 命令术}",
+								"{@spell 光导箭}",
+								"{@spell 虔诚护盾}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell 人類定身術}",
-								"{@spell 沉默術}",
-								"{@spell 靈體武器}"
+								"{@spell 人类定身术}",
+								"{@spell 沉默术}",
+								"{@spell 灵体武器}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell 活化死屍}",
+								"{@spell 活化死尸}",
 								"{@spell 解除魔法}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell 塑石術}",
-								"{@spell 虔誠守衛}"
+								"{@spell 塑石术}",
+								"{@spell 虔诚守卫}"
 							]
 						},
 						"5": {
 							"slots": 2,
 							"spells": [
-								"{@spell 疫病術}",
-								"{@spell 疫病蟲群}"
+								"{@spell 疫病术}",
+								"{@spell 疫病虫群}"
 							]
 						},
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell 傷害術}"
+								"{@spell 伤害术}"
 							]
 						}
 					},
@@ -1900,7 +1900,7 @@
 				14,
 				{
 					"ac": 17,
-					"condition": "with {@spell 法師護甲}",
+					"condition": "with {@spell 法师护甲}",
 					"braces": true
 				}
 			],
@@ -1954,99 +1954,99 @@
 				{
 					"name": "Spellcasting",
 					"headerEntries": [
-						"Halaster is a 20th-level spellcaster. His spellcasting ability is Intelligence (spell save {@dc 22}, {@hit 14} to hit with spell attacks). He can cast {@spell 易容術} and {@spell 隱形術} at will. He can cast {@spell 飛行術} and {@spell 閃電束} once each without expending a spell slot, but can't do so again until he finishes a short or long rest. Halaster has the following wizard spells prepared:"
+						"Halaster is a 20th-level spellcaster. His spellcasting ability is Intelligence (spell save {@dc 22}, {@hit 14} to hit with spell attacks). He can cast {@spell 易容术} and {@spell 隐形术} at will. He can cast {@spell 飞行术} and {@spell 闪电束} once each without expending a spell slot, but can't do so again until he finishes a short or long rest. Halaster has the following wizard spells prepared:"
 					],
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell 舞光術}",
+								"{@spell 舞光术}",
 								"{@spell 火焰箭}",
-								"{@spell 光亮術}",
-								"{@spell 法師之手}",
-								"{@spell 魔法技倆}"
+								"{@spell 光亮术}",
+								"{@spell 法师之手}",
+								"{@spell 魔法技俩}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell 法師護甲}",
-								"{@spell 魔法飛彈}",
-								"{@spell 護盾術}",
-								"{@spell 無聲幻影}"
+								"{@spell 法师护甲}",
+								"{@spell 魔法飞弹}",
+								"{@spell 护盾术}",
+								"{@spell 无声幻影}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell 祕法鎖}",
-								"{@spell 匕首之雲}",
-								"{@spell 黑暗視覺}",
-								"{@spell 敲擊術}"
+								"{@spell 秘法锁}",
+								"{@spell 匕首之云}",
+								"{@spell 黑暗视觉}",
+								"{@spell 敲击术}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell 反制法術}",
+								"{@spell 反制法术}",
 								"{@spell 解除魔法}",
-								"{@spell 火球術}"
+								"{@spell 火球术}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell 困惑術}",
+								"{@spell 困惑术}",
 								"{@spell 幻景}",
-								"{@spell 變形術}"
+								"{@spell 变形术}"
 							]
 						},
 						"5": {
 							"slots": 3,
 							"spells": [
-								"{@spell 畢格比之掌}",
-								"{@spell 指使術}",
-								"{@spell 力牆術}"
+								"{@spell 毕格比之掌}",
+								"{@spell 指使术}",
+								"{@spell 力墙术}"
 							]
 						},
 						"6": {
 							"slots": 2,
 							"spells": [
-								"{@spell 連環閃電}",
-								"{@spell 法術無效結界}",
-								"{@spell 預置幻象}"
+								"{@spell 连环闪电}",
+								"{@spell 法术无效结界}",
+								"{@spell 预置幻象}"
 							]
 						},
 						"7": {
 							"slots": 2,
 							"spells": [
 								"{@spell 死亡一指}",
-								"{@spell 徽記術}",
-								"{@spell 傳送術}"
+								"{@spell 徽记术}",
+								"{@spell 发送术}"
 							]
 						},
 						"8": {
 							"slots": 1,
 							"spells": [
-								"{@spell 迷宮術}",
-								"{@spell 心靈屏障}"
+								"{@spell 迷宫术}",
+								"{@spell 心灵屏障}"
 							]
 						},
 						"9": {
 							"slots": 1,
 							"spells": [
 								"{@spell 流星爆}",
-								"{@spell 祈願術}"
+								"{@spell 祈愿术}"
 							]
 						}
 					},
 					"will": [
-						"{@spell 易容術}",
-						"{@spell 隱形術}"
+						"{@spell 易容术}",
+						"{@spell 隐形术}"
 					],
 					"daily": {
 						"1": [
-							"{@spell 飛行術}",
-							"{@spell 閃電束}"
+							"{@spell 飞行术}",
+							"{@spell 闪电束}"
 						]
 					},
 					"hidden": [
@@ -2168,7 +2168,7 @@
 						"items": {
 							"name": "Spell Immunity",
 							"entries": [
-								"The Halaster horror is immune to the {@spell 寒冰錐}, {@spell 解離術}, and {@spell 火球術} spells."
+								"The Halaster horror is immune to the {@spell 寒冰锥}, {@spell 解离术}, and {@spell 火球术} spells."
 							]
 						}
 					}
@@ -2285,7 +2285,7 @@
 				{
 					"name": "Magical Properties",
 					"entries": [
-						"A creature that uses an action to touch the living snail gains 6 temporary hit points that last for 24 hours. Any creature or object that touches the living snail also gains the benefit of a {@spell 移除詛咒} spell. The snail loses these magical properties if it dies."
+						"A creature that uses an action to touch the living snail gains 6 temporary hit points that last for 24 hours. Any creature or object that touches the living snail also gains the benefit of a {@spell 移除诅咒} spell. The snail loses these magical properties if it dies."
 					]
 				},
 				{
@@ -2413,17 +2413,17 @@
 						"The pudding's spellcasting ability is Intelligence (spell save {@dc 12}, {@hit 4} to hit with spell attacks). It can cast the following spells, requiring no components:"
 					],
 					"will": [
-						"{@spell 舞光術}",
-						"{@spell 法師之手}"
+						"{@spell 舞光术}",
+						"{@spell 法师之手}"
 					],
 					"daily": {
 						"1": [
-							"{@spell 馬友夫強酸箭}"
+							"{@spell 马友夫强酸箭}"
 						],
 						"3e": [
-							"{@spell 黑暗術}",
-							"{@spell 妖火術}",
-							"{@spell 護盾術}"
+							"{@spell 黑暗术}",
+							"{@spell 妖火术}",
+							"{@spell 护盾术}"
 						]
 					},
 					"ability": "int"
@@ -2603,51 +2603,51 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell 指導術}",
-								"{@spell 修復術}",
+								"{@spell 指导术}",
+								"{@spell 修复术}",
 								"{@spell 提升抗力}",
-								"{@spell 奇術}"
+								"{@spell 奇术}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell 災禍術}",
-								"{@spell 命令術}",
-								"{@spell 造成傷勢}",
-								"{@spell 致病射線}"
+								"{@spell 灾祸术}",
+								"{@spell 命令术}",
+								"{@spell 造成伤势}",
+								"{@spell 致病射线}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell 目盲/耳聾術}",
-								"{@spell 衰弱射線}",
-								"{@spell 靈體武器}"
+								"{@spell 目盲/耳聋术}",
+								"{@spell 衰弱射线}",
+								"{@spell 灵体武器}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell 活化死屍}",
+								"{@spell 活化死尸}",
 								"{@spell 降咒}",
 								"{@spell 解除魔法}",
-								"{@spell 靈體守衛}"
+								"{@spell 灵体守卫}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell 枯萎術}",
-								"{@spell 防死護咒}",
-								"{@spell 預言術}"
+								"{@spell 枯萎术}",
+								"{@spell 防死护咒}",
+								"{@spell 预言术}"
 							]
 						},
 						"5": {
 							"slots": 1,
 							"spells": [
-								"{@spell 反活物護罩}",
-								"{@spell 湮滅波}"
+								"{@spell 反活物护罩}",
+								"{@spell 湮灭波}"
 							]
 						}
 					},
@@ -3034,7 +3034,7 @@
 						"spells": {
 							"0": {
 								"spells": [
-									"{@spell 冷凍射線}"
+									"{@spell 冷冻射线}"
 								]
 							}
 						}
@@ -3094,8 +3094,8 @@
 						"spells": {
 							"4": [
 								{
-									"replace": "{@spell 放逐術}",
-									"with": "{@spell 次元門}"
+									"replace": "{@spell 放逐术}",
+									"with": "{@spell 次元门}"
 								}
 							]
 						}
@@ -3257,58 +3257,58 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell 舞光術}",
-								"{@spell 法師之手}",
-								"{@spell 魔法技倆}",
-								"{@spell 冷凍射線}",
-								"{@spell 電爪}"
+								"{@spell 舞光术}",
+								"{@spell 法师之手}",
+								"{@spell 魔法技俩}",
+								"{@spell 冷冻射线}",
+								"{@spell 电爪}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell 腳底抹油}",
-								"{@spell 雲霧術}",
-								"{@spell 魔法飛彈}",
-								"{@spell 護盾術}"
+								"{@spell 脚底抹油}",
+								"{@spell 云雾术}",
+								"{@spell 魔法飞弹}",
+								"{@spell 护盾术}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell 黑暗術}",
-								"{@spell 敲擊術}",
-								"{@spell 識破隱形}",
-								"{@spell 蛛行術}"
+								"{@spell 黑暗术}",
+								"{@spell 敲击术}",
+								"{@spell 识破隐形}",
+								"{@spell 蛛行术}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell 活化死屍}",
-								"{@spell 反制法術}",
-								"{@spell 閃電束}"
+								"{@spell 活化死尸}",
+								"{@spell 反制法术}",
+								"{@spell 闪电束}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell 高等隱形術}",
-								"{@spell 變形術}"
+								"{@spell 高等隐形术}",
+								"{@spell 变形术}"
 							]
 						},
 						"5": {
 							"slots": 2,
 							"spells": [
-								"{@spell 活化物體}",
-								"{@spell 力牆術}"
+								"{@spell 活化物体}",
+								"{@spell 力墙术}"
 							]
 						},
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell 創造不死生物}",
-								"{@spell 石化術}"
+								"{@spell 创造不死生物}",
+								"{@spell 石化术}"
 							]
 						},
 						"7": {
@@ -3487,20 +3487,20 @@
 						"spells": {
 							"3": [
 								{
-									"replace": "{@spell 飛行術}",
-									"with": "{@spell 活化死屍}"
+									"replace": "{@spell 飞行术}",
+									"with": "{@spell 活化死尸}"
 								}
 							],
 							"4": [
 								{
-									"replace": "{@spell 放逐術}",
-									"with": "{@spell 枯萎術}"
+									"replace": "{@spell 放逐术}",
+									"with": "{@spell 枯萎术}"
 								}
 							],
 							"5": [
 								{
 									"replace": "{@spell 探知}",
-									"with": "{@spell 拉瑞心靈聯結}"
+									"with": "{@spell 拉瑞心灵联结}"
 								}
 							]
 						}
@@ -3682,7 +3682,7 @@
 				{
 					"name": "Brew Bound",
 					"entries": [
-						"The weird dies if forced to leave the basin of toxic brew it inhabits, or if a {@spell 淨化飲食} spell is cast on the brew."
+						"The weird dies if forced to leave the basin of toxic brew it inhabits, or if a {@spell 净化饮食} spell is cast on the brew."
 					]
 				},
 				{
@@ -3863,13 +3863,13 @@
 				{
 					"name": "Lesser Magic",
 					"entries": [
-						"The behir casts {@spell 七彩噴射} or {@spell 睡眠術}, requiring no components."
+						"The behir casts {@spell 七彩喷射} or {@spell 睡眠术}, requiring no components."
 					]
 				},
 				{
 					"name": "Greater Magic (Costs 2 Actions)",
 					"entries": [
-						"The behir casts {@spell 隱形術} or {@spell 迷蹤步}, requiring no components."
+						"The behir casts {@spell 隐形术} or {@spell 迷踪步}, requiring no components."
 					]
 				}
 			],
@@ -4221,7 +4221,7 @@
 				{
 					"name": "Lightning Turret",
 					"entries": [
-						"A character can try to plug the nozzle of a lightning turret with a 10-pound rock or similar object, doing so with a successful {@dc 15} Strength (Athletics) check. A plugged turret can't shoot lightning until a creature uses an action to try to clear the obstruction, which requires another successful {@dc 15} Strength ({@skill Athletics}) check. Shockerstomper has no ability to clear an obstruction itself."
+						"A character can try to plug the nozzle of a lightning turret with a 10-pound rock or similar object, doing so with a successful {@dc 15} Strength (Athletics) check. A plugged turret can't shoot lightning until a creature uses an action to try to clear the obstruction, which requires another successful {@dc 15} Strength ({@skill 运动}) check. Shockerstomper has no ability to clear an obstruction itself."
 					]
 				}
 			],
@@ -4653,27 +4653,27 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell 法師之手}"
+								"{@spell 法师之手}"
 							]
 						},
 						"1": {
 							"slots": 3,
 							"spells": [
-								"{@spell 魔法飛彈}",
-								"{@spell 護盾術}"
+								"{@spell 魔法飞弹}",
+								"{@spell 护盾术}"
 							]
 						},
 						"2": {
 							"slots": 2,
 							"spells": [
-								"{@spell 朦朧術}",
-								"{@spell 熾焰法球}"
+								"{@spell 朦胧术}",
+								"{@spell 炽焰法球}"
 							]
 						},
 						"3": {
 							"slots": 1,
 							"spells": [
-								"{@spell 閃電束}"
+								"{@spell 闪电束}"
 							]
 						}
 					},
@@ -4729,70 +4729,70 @@
 						"0": {
 							"spells": [
 								"{@spell 火焰箭}",
-								"{@spell 法師之手}",
-								"{@spell 魔法技倆}"
+								"{@spell 法师之手}",
+								"{@spell 魔法技俩}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell 偵測魔法}",
-								"{@spell 魔法飛彈}",
-								"{@spell 護盾術}"
+								"{@spell 侦测魔法}",
+								"{@spell 魔法飞弹}",
+								"{@spell 护盾术}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell 朦朧術}",
-								"{@spell 偵測思想}",
-								"{@spell 迷蹤步}",
+								"{@spell 朦胧术}",
+								"{@spell 侦测思想}",
+								"{@spell 迷踪步}",
 								"{@spell 粉碎音波}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell 反制法術}",
+								"{@spell 反制法术}",
 								"{@spell 解除魔法}",
-								"{@spell 火球術}",
-								"{@spell 加速術}"
+								"{@spell 火球术}",
+								"{@spell 加速术}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell 枯萎術}",
-								"{@spell 高等隱形術}"
+								"{@spell 枯萎术}",
+								"{@spell 高等隐形术}"
 							]
 						},
 						"5": {
 							"slots": 3,
 							"spells": [
-								"{@spell 活化物體}",
-								"{@spell 畢格比之掌}",
+								"{@spell 活化物体}",
+								"{@spell 毕格比之掌}",
 								"{@spell 探知}"
 							]
 						},
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell 連環閃電}",
-								"{@spell 法術無效結界}"
+								"{@spell 连环闪电}",
+								"{@spell 法术无效结界}"
 							]
 						},
 						"7": {
 							"slots": 1,
 							"spells": [
 								"{@spell 死亡一指}",
-								"{@spell 力場監牢}"
+								"{@spell 力场监牢}"
 							]
 						},
 						"8": {
 							"slots": 1,
 							"spells": [
-								"{@spell 焚雲術}",
-								"{@spell 律令震懾}"
+								"{@spell 焚云术}",
+								"{@spell 律令震慑}"
 							]
 						},
 						"9": {
@@ -4923,8 +4923,8 @@
 						"spells": {
 							"4": [
 								{
-									"replace": "{@spell 放逐術}",
-									"with": "{@spell 歐提路克魔封法球}"
+									"replace": "{@spell 放逐术}",
+									"with": "{@spell 欧提路克魔封法球}"
 								}
 							]
 						}
@@ -4977,8 +4977,8 @@
 						"spells": {
 							"4": [
 								{
-									"replace": "{@spell 放逐術}",
-									"with": "{@spell 困惑術}"
+									"replace": "{@spell 放逐术}",
+									"with": "{@spell 困惑术}"
 								}
 							]
 						}
@@ -5261,8 +5261,8 @@
 						"spells": {
 							"4": [
 								{
-									"replace": "{@spell 放逐術}",
-									"with": "{@spell 生物定位術}"
+									"replace": "{@spell 放逐术}",
+									"with": "{@spell 生物定位术}"
 								}
 							]
 						}
@@ -5543,8 +5543,8 @@
 						"spells": {
 							"4": [
 								{
-									"replace": "{@spell 放逐術}",
-									"with": "{@spell 困惑術}"
+									"replace": "{@spell 放逐术}",
+									"with": "{@spell 困惑术}"
 								}
 							]
 						}

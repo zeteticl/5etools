@@ -163,12 +163,12 @@ class ItemsPage {
 				isVisible: true,
 			}),
 			new Renderer.utils.TabButton({
-				label: "資訊",
+				label: "信息",
 				fnPopulate: buildFluffTab,
 				isVisible: Renderer.utils.hasFluffText(item),
 			}),
 			new Renderer.utils.TabButton({
-				label: "圖片",
+				label: "图片",
 				fnPopulate: buildFluffTab.bind(null, true),
 				isVisible: Renderer.utils.hasFluffImages(item),
 			}),
@@ -422,7 +422,7 @@ class ItemsPage {
 		}
 
 		// populate table labels
-		$(`h3.ele-mundane span.side-label`).text("尋常物品");
+		$(`h3.ele-mundane span.side-label`).text("寻常物品");
 		$(`h3.ele-magic span.side-label`).text("魔法物品");
 
 		this._mundaneList.update();
