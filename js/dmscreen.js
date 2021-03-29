@@ -9,7 +9,7 @@ const AX_Y = "AXIS_Y";
 
 const EVT_NAMESPACE = ".dm_screen";
 
-const TITLE_LOADING = "Loading...";
+const TITLE_LOADING = "讀取中...";
 
 const PANEL_TYP_EMPTY = 0;
 const PANEL_TYP_STATS = 1;
@@ -167,7 +167,7 @@ class Board {
 	}
 
 	doShowLoading () {
-		$(`<div class="dm-screen-loading"><span class="initial-message initial-message--large">Loading...</span></div>`).css({
+		$(`<div class="dm-screen-loading"><span class="initial-message initial-message--large">讀取中...</span></div>`).css({
 			gridColumnStart: "1",
 			gridColumnEnd: String(this.width + 1),
 			gridRowStart: "1",
@@ -558,14 +558,14 @@ class SideMenu {
 	render () {
 		const renderDivider = () => this.$mnu.append(`<hr class="sidemenu__row__divider">`);
 
-		const $wrpResizeW = $(`<div class="sidemenu__row split-v-center"><div class="sidemenu__row__label">Width</div></div>`).appendTo(this.$mnu);
+		const $wrpResizeW = $(`<div class="sidemenu__row split-v-center"><div class="sidemenu__row__label">寬度</div></div>`).appendTo(this.$mnu);
 		const $iptWidth = $(`<input class="form-control" type="number" value="${this.board.width}">`).appendTo($wrpResizeW);
 		this.$iptWidth = $iptWidth;
-		const $wrpResizeH = $(`<div class="sidemenu__row split-v-center"><div class="sidemenu__row__label">Height</div></div>`).appendTo(this.$mnu);
+		const $wrpResizeH = $(`<div class="sidemenu__row split-v-center"><div class="sidemenu__row__label">高度</div></div>`).appendTo(this.$mnu);
 		const $iptHeight = $(`<input class="form-control" type="number" value="${this.board.height}">`).appendTo($wrpResizeH);
 		this.$iptHeight = $iptHeight;
 		const $wrpSetDim = $(`<div class="sidemenu__row split-v-center"/>`).appendTo(this.$mnu);
-		const $btnSetDim = $(`<button class="btn btn-primary" style="width: 100%;">Set Dimensions</div>`).appendTo($wrpSetDim);
+		const $btnSetDim = $(`<button class="btn btn-primary" style="width: 100%;">設定分層</div>`).appendTo($wrpSetDim);
 		$btnSetDim.on("click", () => {
 			const w = Number($iptWidth.val());
 			const h = Number($iptHeight.val());
@@ -575,7 +575,7 @@ class SideMenu {
 		renderDivider();
 
 		const $wrpFullscreen = $(`<div class="sidemenu__row flex-vh-center-around"></div>`).appendTo(this.$mnu);
-		const $btnFullscreen = $(`<button class="btn btn-primary">Toggle Fullscreen</button>`).appendTo($wrpFullscreen);
+		const $btnFullscreen = $(`<button class="btn btn-primary">開關全螢幕</button>`).appendTo($wrpFullscreen);
 		this.board.$btnFullscreen = $btnFullscreen;
 		$btnFullscreen.on("click", () => {
 			this.board.isFullscreen = !this.board.isFullscreen;
@@ -585,7 +585,7 @@ class SideMenu {
 			this.board.doSaveStateDebounced();
 			this.board.$creen.trigger("panelResize");
 		});
-		const $btnLockPanels = $(`<button class="btn btn-danger" title="Lock Panels"><span class="glyphicon glyphicon-lock"/></button>`).appendTo($wrpFullscreen);
+		const $btnLockPanels = $(`<button class="btn btn-danger" title="鎖定面板"><span class="glyphicon glyphicon-lock"/></button>`).appendTo($wrpFullscreen);
 		this.board.$btnLockPanels = $btnLockPanels;
 		$btnLockPanels.on("click", () => {
 			this.board.isLocked = !this.board.isLocked;
@@ -603,18 +603,18 @@ class SideMenu {
 
 		const $wrpSaveLoad = $(`<div class="sidemenu__row--vert"/>`).appendTo(this.$mnu);
 		const $wrpSaveLoadFile = $(`<div class="sidemenu__row flex-vh-center-around"/>`).appendTo($wrpSaveLoad);
-		const $btnSaveFile = $(`<button class="btn btn-primary">Save to File</button>`).appendTo($wrpSaveLoadFile);
+		const $btnSaveFile = $(`<button class="btn btn-primary">儲存檔案</button>`).appendTo($wrpSaveLoadFile);
 		$btnSaveFile.on("click", () => {
 			DataUtil.userDownload(`dm-screen`, this.board.getSaveableState());
 		});
-		const $btnLoadFile = $(`<button class="btn btn-primary">Load from File</button>`).appendTo($wrpSaveLoadFile);
+		const $btnLoadFile = $(`<button class="btn btn-primary">讀取檔案</button>`).appendTo($wrpSaveLoadFile);
 		$btnLoadFile.on("click", async () => {
 			const json = await DataUtil.pUserUpload();
 			this.board.doReset();
 			await this.board.pDoLoadStateFrom(json);
 		});
 		const $wrpSaveLoadUrl = $(`<div class="sidemenu__row flex-vh-center-around"/>`).appendTo($wrpSaveLoad);
-		const $btnSaveLink = $(`<button class="btn btn-primary">Save to URL</button>`).appendTo($wrpSaveLoadUrl);
+		const $btnSaveLink = $(`<button class="btn btn-primary">儲存至URL</button>`).appendTo($wrpSaveLoadUrl);
 		$btnSaveLink.on("click", async () => {
 			const encoded = `${window.location.href.split("#")[0]}#${encodeURIComponent(JSON.stringify(this.board.getSaveableState()))}`;
 			await MiscUtil.pCopyTextToClipboard(encoded);
@@ -627,7 +627,7 @@ class SideMenu {
 		renderDivider();
 
 		const $wrpReset = $(`<div class="sidemenu__row split-v-center"/>`).appendTo(this.$mnu);
-		const $btnReset = $(`<button class="btn btn-danger" style="width: 100%;">Reset Screen</button>`).appendTo($wrpReset);
+		const $btnReset = $(`<button class="btn btn-danger" style="width: 100%;">重置屏幕</button>`).appendTo($wrpReset);
 		$btnReset.on("click", () => {
 			if (window.confirm("Are you sure?")) {
 				this.board.doReset();
@@ -647,8 +647,8 @@ class SideMenu {
 		this.board.exiledPanels.forEach(p => p.get$ContentWrapper().detach());
 		this.$wrpHistory.children().remove();
 		if (this.board.exiledPanels.length) {
-			const $wrpHistHeader = $(`<div class="sidemenu__row split-v-center"><span style="font-variant: small-caps;">Recently Removed</span></div>`).appendTo(this.$wrpHistory);
-			const $btnHistClear = $(`<button class="btn btn-danger">Clear</button>`).appendTo($wrpHistHeader);
+			const $wrpHistHeader = $(`<div class="sidemenu__row split-v-center"><span style="font-variant: small-caps;">最近移除</span></div>`).appendTo(this.$wrpHistory);
+			const $btnHistClear = $(`<button class="btn btn-danger">清除</button>`).appendTo($wrpHistHeader);
 			$btnHistClear.on("click", () => {
 				this.board.exiledPanels.forEach(p => p.destroy());
 				this.board.exiledPanels = [];
@@ -2479,7 +2479,7 @@ class AddMenuTab {
 
 class AddMenuVideoTab extends AddMenuTab {
 	constructor () {
-		super("Embed");
+		super("嵌入");
 		this.tabId = this.genTabId("tube");
 	}
 
@@ -2488,12 +2488,12 @@ class AddMenuVideoTab extends AddMenuTab {
 			const $tab = $(`<div class="ui-search__wrp-output underline-tabs" id="${this.tabId}"/>`);
 
 			const $wrpYT = $(`<div class="ui-modal__row"/>`).appendTo($tab);
-			const $iptUrlYT = $(`<input class="form-control" placeholder="Paste YouTube URL">`)
+			const $iptUrlYT = $(`<input class="form-control" placeholder="貼上YouTube URL">`)
 				.on("keydown", (e) => {
 					if (e.which === 13) $btnAddYT.click();
 				})
 				.appendTo($wrpYT);
-			const $btnAddYT = $(`<button class="btn btn-primary btn-sm">Embed</button>`).appendTo($wrpYT);
+			const $btnAddYT = $(`<button class="btn btn-primary btn-sm">嵌入</button>`).appendTo($wrpYT);
 			$btnAddYT.on("click", () => {
 				let url = $iptUrlYT.val().trim();
 				const m = /https?:\/\/(www\.)?youtube\.com\/watch\?v=(.*?)(&.*$|$)/.exec(url);
@@ -2504,20 +2504,20 @@ class AddMenuVideoTab extends AddMenuTab {
 					$iptUrlYT.val("");
 				} else {
 					JqueryUtil.doToast({
-						content: `Please enter a URL of the form: "https://www.youtube.com/watch?v=XXXXXXX"`,
+						content: `請輸入一個URL，格式為： "https://www.youtube.com/watch?v=XXXXXXX"`,
 						type: "danger",
 					});
 				}
 			});
 
 			const $wrpTwitch = $(`<div class="ui-modal__row"/>`).appendTo($tab);
-			const $iptUrlTwitch = $(`<input class="form-control" placeholder="Paste Twitch URL">`)
+			const $iptUrlTwitch = $(`<input class="form-control" placeholder="貼上Twitch URL">`)
 				.on("keydown", (e) => {
 					if (e.which === 13) $btnAddTwitch.click();
 				})
 				.appendTo($wrpTwitch);
-			const $btnAddTwitch = $(`<button class="btn btn-primary btn-sm">Embed</button>`).appendTo($wrpTwitch);
-			const $btnAddTwitchChat = $(`<button class="btn btn-primary btn-sm">Embed Chat</button>`).appendTo($wrpTwitch);
+			const $btnAddTwitch = $(`<button class="btn btn-primary btn-sm">嵌入</button>`).appendTo($wrpTwitch);
+			const $btnAddTwitchChat = $(`<button class="btn btn-primary btn-sm">嵌入聊天室</button>`).appendTo($wrpTwitch);
 			const getTwitchM = (url) => {
 				return /https?:\/\/(www\.)?twitch\.tv\/(.*?)(\?.*$|$)/.exec(url);
 			};
@@ -2531,7 +2531,7 @@ class AddMenuVideoTab extends AddMenuTab {
 					$iptUrlTwitch.val("");
 				} else {
 					JqueryUtil.doToast({
-						content: `Please enter a URL of the form: "https://www.twitch.tv/XXXXXX"`,
+						content: `請輸入一個URL，格式為："https://www.twitch.tv/XXXXXX"`,
 						type: "danger",
 					});
 				}
@@ -2547,19 +2547,19 @@ class AddMenuVideoTab extends AddMenuTab {
 					$iptUrlTwitch.val("");
 				} else {
 					JqueryUtil.doToast({
-						content: `Please enter a URL of the form: "https://www.twitch.tv/XXXXXX"`,
+						content: `請輸入一個URL，格式為："https://www.twitch.tv/XXXXXX"`,
 						type: "danger",
 					});
 				}
 			});
 
 			const $wrpGeneric = $(`<div class="ui-modal__row"/>`).appendTo($tab);
-			const $iptUrlGeneric = $(`<input class="form-control" placeholder="Paste any URL">`)
+			const $iptUrlGeneric = $(`<input class="form-control" placeholder="貼上任何URL">`)
 				.on("keydown", (e) => {
 					if (e.which === 13) $iptUrlGeneric.click();
 				})
 				.appendTo($wrpGeneric);
-			const $btnAddGeneric = $(`<button class="btn btn-primary btn-sm">Embed</button>`).appendTo($wrpGeneric);
+			const $btnAddGeneric = $(`<button class="btn btn-primary btn-sm">嵌入</button>`).appendTo($wrpGeneric);
 			$btnAddGeneric.on("click", () => {
 				let url = $iptUrlGeneric.val().trim();
 				if (url) {
@@ -2567,7 +2567,7 @@ class AddMenuVideoTab extends AddMenuTab {
 					this.menu.doClose();
 				} else {
 					JqueryUtil.doToast({
-						content: `Please enter a URL!`,
+						content: `請輸入一個URL！`,
 						type: "danger",
 					});
 				}
@@ -2580,7 +2580,7 @@ class AddMenuVideoTab extends AddMenuTab {
 
 class AddMenuImageTab extends AddMenuTab {
 	constructor () {
-		super("Image");
+		super("圖片");
 		this.tabId = this.genTabId("image");
 	}
 
@@ -2648,7 +2648,7 @@ class AddMenuImageTab extends AddMenuTab {
 					if (e.which === 13) $btnAddUrl.click();
 				})
 				.appendTo($wrpUtl);
-			const $btnAddUrl = $(`<button class="btn btn-primary btn-sm">Add</button>`).appendTo($wrpUtl);
+			const $btnAddUrl = $(`<button class="btn btn-primary btn-sm">加入</button>`).appendTo($wrpUtl);
 			$btnAddUrl.on("click", () => {
 				let url = $iptUrl.val().trim();
 				if (url) {
@@ -2656,7 +2656,7 @@ class AddMenuImageTab extends AddMenuTab {
 					this.menu.doClose();
 				} else {
 					JqueryUtil.doToast({
-						content: `Please enter a URL!`,
+						content: `請輸入URL！`,
 						type: "danger",
 					});
 				}
@@ -2682,7 +2682,7 @@ class AddMenuImageTab extends AddMenuTab {
 
 class AddMenuSpecialTab extends AddMenuTab {
 	constructor () {
-		super("Special");
+		super("特殊");
 		this.tabId = this.genTabId("special");
 	}
 
@@ -2690,7 +2690,7 @@ class AddMenuSpecialTab extends AddMenuTab {
 		if (!this.$tab) {
 			const $tab = $(`<div class="ui-search__wrp-output underline-tabs overflow-y-auto pr-1" id="${this.tabId}"/>`);
 
-			const $wrpRoller = $(`<div class="ui-modal__row"><span>Dice Roller <i class="text-muted">(pins the existing dice roller to a panel)</i></span></div>`).appendTo($tab);
+			const $wrpRoller = $(`<div class="ui-modal__row"><span>擲骰工具<i class="text-muted">(將擲骰工具釘到面板上)</i></span></div>`).appendTo($tab);
 			const $btnRoller = $(`<button class="btn btn-primary btn-sm">Pin</button>`).appendTo($wrpRoller);
 			$btnRoller.on("click", () => {
 				Renderer.dice.bindDmScreenPanel(this.menu.pnl);
@@ -2698,8 +2698,8 @@ class AddMenuSpecialTab extends AddMenuTab {
 			});
 			$(`<hr class="ui-modal__row-sep"/>`).appendTo($tab);
 
-			const $wrpTracker = $(`<div class="ui-modal__row"><span>Initiative Tracker</span></div>`).appendTo($tab);
-			const $btnTracker = $(`<button class="btn btn-primary btn-sm">Add</button>`).appendTo($wrpTracker);
+			const $wrpTracker = $(`<div class="ui-modal__row"><span>先攻追蹤器</span></div>`).appendTo($tab);
+			const $btnTracker = $(`<button class="btn btn-primary btn-sm">加入</button>`).appendTo($wrpTracker);
 			$btnTracker.on("click", () => {
 				this.menu.pnl.doPopulate_InitiativeTracker();
 				this.menu.doClose();
@@ -2712,13 +2712,13 @@ class AddMenuSpecialTab extends AddMenuTab {
 				});
 
 			$$`<div class="ui-modal__row">
-			<span>Initiative Tracker Player View</span>
+			<span>先攻追蹤器:玩家檢視頁</span>
 			${$btnPlayertracker}
 			</div>`.appendTo($tab);
 
 			$(`<hr class="ui-modal__row-sep"/>`).appendTo($tab);
 
-			const $wrpText = $(`<div class="ui-modal__row"><span>Basic Text Box <i class="text-muted">(for a feature-rich editor, embed a Google Doc or similar)</i></span></div>`).appendTo($tab);
+			const $wrpText = $(`<div class="ui-modal__row"><span>基礎文字方塊 <i class="text-muted">(for a feature-rich editor, embed a Google Doc or similar)</i></span></div>`).appendTo($tab);
 			const $btnText = $(`<button class="btn btn-primary btn-sm">Add</button>`).appendTo($wrpText);
 			$btnText.on("click", () => {
 				this.menu.pnl.doPopulate_TextBox();
@@ -2726,15 +2726,15 @@ class AddMenuSpecialTab extends AddMenuTab {
 			});
 			$(`<hr class="ui-modal__row-sep"/>`).appendTo($tab);
 
-			const $wrpUnitConverter = $(`<div class="ui-modal__row"><span>Imperial-Metric Unit Converter</span></div>`).appendTo($tab);
-			const $btnUnitConverter = $(`<button class="btn btn-primary btn-sm">Add</button>`).appendTo($wrpUnitConverter);
+			const $wrpUnitConverter = $(`<div class="ui-modal__row"><span>英制-公制單位轉換器</span></div>`).appendTo($tab);
+			const $btnUnitConverter = $(`<button class="btn btn-primary btn-sm">加入</button>`).appendTo($wrpUnitConverter);
 			$btnUnitConverter.on("click", () => {
 				this.menu.pnl.doPopulate_UnitConverter();
 				this.menu.doClose();
 			});
 
-			const $wrpMoneyConverter = $(`<div class="ui-modal__row"><span>Coin Converter</span></div>`).appendTo($tab);
-			const $btnMoneyConverter = $(`<button class="btn btn-primary btn-sm">Add</button>`).appendTo($wrpMoneyConverter);
+			const $wrpMoneyConverter = $(`<div class="ui-modal__row"><span>貨幣轉換器</span></div>`).appendTo($tab);
+			const $btnMoneyConverter = $(`<button class="btn btn-primary btn-sm">加入</button>`).appendTo($wrpMoneyConverter);
 			$btnMoneyConverter.on("click", () => {
 				this.menu.pnl.doPopulate_MoneyConverter();
 				this.menu.doClose();
@@ -2774,9 +2774,9 @@ class AddMenuSpecialTab extends AddMenuTab {
 class AddMenuSearchTab extends AddMenuTab {
 	static _getTitle (subType) {
 		switch (subType) {
-			case "content": return "Content";
-			case "rule": return "Rules";
-			case "adventure": return "Adventures";
+			case "content": return "內容";
+			case "rule": return "規則";
+			case "adventure": return "冒險模組";
 			case "book": return "Books";
 			default: throw new Error(`Unhandled search tab subtype: "${subType}"`);
 		}
@@ -2856,10 +2856,10 @@ class AddMenuSearchTab extends AddMenuTab {
 
 	_getAllTitle () {
 		switch (this.subType) {
-			case "content": return "All Categories";
-			case "rule": return "All Categories";
-			case "adventure": return "All Adventures";
-			case "book": return "All Books";
+			case "content": return "所有類別";
+			case "rule": return "所有類別";
+			case "adventure": return "所有冒險模組";
+			case "book": return "所有書籍";
 			default: throw new Error(`Unhandled search tab subtype: "${this.subType}"`);
 		}
 	}
@@ -2980,7 +2980,7 @@ class AddMenuSearchTab extends AddMenuTab {
 				this.doSearch();
 			});
 
-			const $srch = $(`<input class="ui-search__ipt-search search form-control" autocomplete="off" placeholder="Search...">`).blurOnEsc().appendTo($wrpCtrls);
+			const $srch = $(`<input class="ui-search__ipt-search search form-control" autocomplete="off" placeholder="搜尋...(只能搜尋英文)">`).blurOnEsc().appendTo($wrpCtrls);
 			const $results = $(`<div class="ui-search__wrp-results"/>`).appendTo($tab);
 
 			SearchWidget.bindAutoSearch($srch, {
@@ -3167,11 +3167,11 @@ class NoteBox {
 class UnitConverter {
 	static make$Converter (board, state) {
 		const units = [
-			new UnitConverterUnit("Inches", "2.54", "Centimetres", "0.394"),
-			new UnitConverterUnit("Feet", "0.305", "Metres", "3.28"),
-			new UnitConverterUnit("Miles", "1.61", "Kilometres", "0.620"),
-			new UnitConverterUnit("Pounds", "0.454", "Kilograms", "2.20"),
-			new UnitConverterUnit("Gallons", "3.79", "Litres", "0.264"),
+			new UnitConverterUnit("吋", "2.54", "公分", "0.394"),
+			new UnitConverterUnit("呎", "0.305", "公尺", "3.28"),
+			new UnitConverterUnit("哩", "1.61", "公里", "0.620"),
+			new UnitConverterUnit("磅", "0.454", "公斤", "2.20"),
+			new UnitConverterUnit("加侖", "3.79", "公升", "0.264")
 		];
 
 		let ixConv = state.c || 0;

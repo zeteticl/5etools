@@ -1,7 +1,8 @@
 {
 	"monster": [
 		{
-			"name": "Avatar of Death",
+			"name": "死亡化身",
+			"ENG_name": "Avatar of Death",
 			"source": "DMG",
 			"page": 164,
 			"srd": true,
@@ -20,13 +21,13 @@
 				20
 			],
 			"hp": {
-				"special": "half the hit point maximum of its summoner"
+				"special": "其召喚者生命值最大值的一半"
 			},
 			"speed": {
 				"walk": 60,
 				"fly": {
 					"number": 60,
-					"condition": "(hover)"
+					"condition": "(浮空)"
 				},
 				"canHover": true
 			},
@@ -54,27 +55,31 @@
 				"unconscious"
 			],
 			"languages": [
-				"all languages known to its summoner"
+				"所有其召喚者所知的語言"
 			],
+			"cr": "Unknown",
 			"trait": [
 				{
-					"name": "Incorporeal Movement",
+					"name": "虛體移動",
+					"ENG_name": "Incorporeal Movement",
 					"entries": [
-						"The avatar can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
+						"死亡化身可以把其它生物和物體視作困難地形移動穿過它們。若它在一個物體內結束它的回合，則它將受到5 ({@damage 1d10})力場傷害。"
 					]
 				},
 				{
-					"name": "Turn Immunity",
+					"name": "驅散免疫",
+					"ENG_name": "Turn Immunity",
 					"entries": [
-						"The avatar is immune to features that turn undead."
+						"死亡化身免疫於驅散不死的效果。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Reaping Scythe",
+					"name": "收割之鐮",
+					"ENG_name": "Reaping Scythe",
 					"entries": [
-						"The avatar sweeps its spectral scythe through a creature within 5 feet of it, dealing 7 ({@damage 1d8 + 3}) slashing damage plus 4 ({@damage 1d8}) necrotic damage."
+						"死亡化身將它的靈體大鐮橫掃穿過一個距離它5呎內的生物，造成 7 ({@damage 1d8 + 3})劈砍傷害加上 4 ({@damage 1d8})死靈傷害。"
 					]
 				}
 			],
@@ -98,7 +103,8 @@
 			"hasFluff": true
 		},
 		{
-			"name": "Giant Fly",
+			"name": "巨蒼蠅",
+			"ENG_name": "Giant Fly",
 			"source": "DMG",
 			"page": 169,
 			"size": "L",
@@ -124,7 +130,7 @@
 			"wis": 10,
 			"cha": 3,
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗視覺60呎"
 			],
 			"passive": 10,
 			"hasToken": true,
@@ -133,7 +139,8 @@
 			]
 		},
 		{
-			"name": "Larva",
+			"name": "墮魂幼蟲",
+			"ENG_name": "Larva",
 			"source": "DMG",
 			"page": 63,
 			"otherSources": [
@@ -165,14 +172,15 @@
 			"cha": 2,
 			"passive": 10,
 			"languages": [
-				"understands the languages it knew in life but can't speak"
+				"理解它生前所知的語言，但不會說"
 			],
 			"cr": "0",
 			"action": [
 				{
-					"name": "Bite",
+					"name": "啃咬",
+					"ENG_name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 1} to hit, reach 5 ft., one target. {@h}1 ({@damage 1d4 - 1}) piercing damage."
+						"{@atk mw} 命中{@hit 1}，觸及5呎，單一目標。{@h}1 ({@damage 1d4 - 1})穿刺傷害。"
 					]
 				}
 			],

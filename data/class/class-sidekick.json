@@ -1282,17 +1282,17 @@
 										{
 											"type": "item",
 											"name": "Mage:",
-											"entry": "{@spell mage hand}, {@spell ray of frost}, {@spell thunderwave}"
+											"entry": "{@spell 法師之手}, {@spell 冷凍射線}, {@spell 雷鳴波}"
 										},
 										{
 											"type": "item",
 											"name": "Healer:",
-											"entry": "{@spell cure wounds}, {@spell guidance}, {@spell sacred flame}"
+											"entry": "{@spell 治療傷勢}, {@spell 指導術}, {@spell 聖焰}"
 										},
 										{
 											"type": "item",
 											"name": "Prodigy:",
-											"entry": "{@spell eldritch blast}, {@spell healing word}, {@spell light}"
+											"entry": "{@spell 魔能爆}, {@spell 治癒真言}, {@spell 光亮術}"
 										},
 										"The Cantrips Known and Spells Known columns of the Spellcaster table shows when the sidekick learns more spells of your choice. Each of the spells in the Spells Known column must be of a level for which the sidekick has spell slots, as shown on the table. For instance, when the sidekick reaches 5th level in this class, it can learn one new spell of 1st or 2nd level.",
 										"Additionally, when the sidekick gains a level in this class, you can choose one of the spells it knows from this class and replace it with another spell from its spell list. The new spell must be a cantrip or of a level for which the sidekick has spell slots."
@@ -1308,14 +1308,14 @@
 								"The sidekick uses its spellcasting ability whenever a spell refers to that ability. In addition, it uses its spellcasting ability modifier when setting the saving throw DC for a spell it casts and when making an attack roll with one.",
 								{
 									"type": "abilityDc",
-									"name": "Spell",
+									"name": "法術",
 									"attributes": [
 										"spellcasting"
 									]
 								},
 								{
 									"type": "abilityAttackMod",
-									"name": "Spell",
+									"name": "法術",
 									"attributes": [
 										"spellcasting"
 									]
@@ -1324,7 +1324,7 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spellcasting Focus",
+							"name": "施法法器",
 							"entries": [
 								"The sidekick can use a focus for its spells depending on the choice you made on the Spellcasting table. A Mage can use an arcane focus, a Priest can use a holy symbol, and a Prodigy can use an arcane focus or a {@item musical instrument|PHB}."
 							]
@@ -2110,7 +2110,7 @@
 				},
 				{
 					"type": "entries",
-					"name": "Cantrips",
+					"name": "戲法",
 					"entries": [
 						"At first level, the sidekick knows three cantrips of your choice from its spell list. The sidekick learns additional cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Spellcaster table."
 					]
@@ -2120,7 +2120,7 @@
 					"name": "Spell Slots",
 					"entries": [
 						"The Spellcaster table shows how many spell slots the sidekick has to cast its spellcaster spells of 1st level and higher. To cast one of these spells, the sidekick must expend a slot of the spell's level or higher. The spellcaster regains all expended spell slots when it finishes a long rest.",
-						"For example, if the sidekick knows the 1st-level spell {@spell cure wounds} and has a 1st-level and a 2nd-level spell slot available, it can cast the spell using either slot."
+						"For example, if the sidekick knows the 1st-level spell {@spell 治療傷勢} and has a 1st-level and a 2nd-level spell slot available, it can cast the spell using either slot."
 					]
 				},
 				{
@@ -2140,14 +2140,14 @@
 						"The sidekick uses its spellcasting ability whenever a spell refers to that ability. In addition, it uses its spellcasting ability modifier when setting the saving throw DC for a spell it casts and when making an attack roll with one.",
 						{
 							"type": "abilityDc",
-							"name": "Spell",
+							"name": "法術",
 							"attributes": [
 								"spellcasting"
 							]
 						},
 						{
 							"type": "abilityAttackMod",
-							"name": "Spell",
+							"name": "法術",
 							"attributes": [
 								"spellcasting"
 							]
@@ -2156,7 +2156,7 @@
 				},
 				{
 					"type": "entries",
-					"name": "Spellcasting Focus",
+					"name": "施法法器",
 					"entries": [
 						"The sidekick can use a focus for its spells depending on the choice you made on the Spellcasting table."
 					]

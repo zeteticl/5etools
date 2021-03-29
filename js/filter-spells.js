@@ -32,11 +32,11 @@ class PageFilterSpells extends PageFilter {
 	}
 
 	static getFilterAbilitySave (ability) {
-		return `${ability.uppercaseFirst().substring(0, 3)}. Save`;
+		return `${Parser.translateKeyToDisplay(ability.uppercaseFirst().substring(0, 3))}豁免`;
 	}
 
 	static getFilterAbilityCheck (ability) {
-		return `${ability.uppercaseFirst().substring(0, 3)}. Check`;
+		return `${Parser.translateKeyToDisplay(ability.uppercaseFirst().substring(0, 3))}檢定`;
 	}
 
 	static getMetaFilterObj (s) {
@@ -171,7 +171,7 @@ class PageFilterSpells extends PageFilter {
 	}
 
 	static getFltrSpellLevelStr (level) {
-		return level === 0 ? Parser.spLevelToFull(level) : `${Parser.spLevelToFull(level)} level`;
+		return level === 0 ? Parser.spLevelToFull(level) : `${Parser.spLevelToFull(level)}`;
 	}
 
 	static getRangeType (range) {
@@ -196,11 +196,11 @@ class PageFilterSpells extends PageFilter {
 
 	static getTblTimeStr (time) {
 		return (time.number === 1 && Parser.SP_TIME_SINGLETONS.includes(time.unit))
-			? `${time.unit.uppercaseFirst()}${time.unit === Parser.SP_TM_B_ACTION ? " acn." : ""}`
-			: `${time.number ? `${time.number} ` : ""}${time.unit === Parser.SP_TM_B_ACTION ? "Bonus acn." : time.unit.uppercaseFirst()}${time.number > 1 ? "s" : ""}`;
+			? `${Parser.spTimeUnitToFull(time.unit)}`
+			: `${time.number ? `${time.number} ` : ""}${time.unit === Parser.SP_TM_B_ACTION ? "附贈動作" : Parser.spTimeUnitToFull(time.unit)}${time.number > 1 ? "" : ""}`;
 	}
 
-	static getTblLevelStr (spell) { return `${Parser.spLevelToFull(spell.level)}${spell.meta && spell.meta.ritual ? " (rit.)" : ""}${spell.meta && spell.meta.technomagic ? " (tec.)" : ""}`; }
+	static getTblLevelStr (spell) { return `${Parser.spLevelToFull(spell.level)}${spell.meta && spell.meta.ritual ? " (儀.)" : ""}${spell.meta && spell.meta.technomagic ? " (科.)" : ""}`; }
 
 	static getClassFilterItem (c) {
 		return this._getClassFilterItem(c);
@@ -244,6 +244,7 @@ class PageFilterSpells extends PageFilter {
 
 		const levelFilter = new Filter({
 			header: "Level",
+			headerName: "環階",
 			items: [
 				0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
 			],
@@ -251,73 +252,87 @@ class PageFilterSpells extends PageFilter {
 		});
 		const classFilter = new Filter({
 			header: "Class",
+			headerName: "職業",
 			groupFn: it => it.userData,
+			displayFn:Parser.ClassToDisplay
 		});
 		const subclassFilter = new Filter({
-			header: "Subclass",
+			header: "Subclass", headerName: "子職業",
 			nests: {},
 			groupFn: (it) => SourceUtil.isSubclassReprinted(it.userData.class.name, it.userData.class.source, it.userData.subClass.name, it.userData.subClass.source) || Parser.sourceJsonToFull(it.userData.subClass.source).startsWith(UA_PREFIX) || Parser.sourceJsonToFull(it.userData.subClass.source).startsWith(PS_PREFIX),
+			displayFn: (str) =>
+			{
+				var its = str.split(':').map(x => x.trim());
+				return its.length > 1
+					? `${Parser.ClassToDisplay(its[0])}：${Parser.SubclassToDisplay(its[1])}`
+					: `${Parser.SubclassToDisplay(its[0]) + gg}`;
+			}
 		});
 		const variantClassFilter = new Filter({
 			header: "Optional/Variant Class",
+			headerName: "變體職業",
 			nests: {},
 			groupFn: it => it.userData,
 		});
-		const classAndSubclassFilter = new MultiFilter({header: "Classes", mode: "or", filters: [classFilter, subclassFilter, variantClassFilter]});
+		const classAndSubclassFilter = new MultiFilter({header: "Classes", headerName: "職業分類", mode: "or", filters: [classFilter, subclassFilter, variantClassFilter]});
 		const raceFilter = new Filter({
 			header: "Race",
+			headerName: "種族",
 			nests: {},
 			groupFn: it => it.userData,
+			displayFn: Parser.RaceToDisplay
 		});
-		const backgroundFilter = new Filter({header: "Background"});
+		const backgroundFilter = new Filter({header: "Background", headerName: "背景"});
 		const metaFilter = new Filter({
-			header: "Components & Miscellaneous",
+			header: "Components & Miscellaneous", headerName: "構材＆雜項",
 			items: [...PageFilterSpells._META_FILTER_BASE_ITEMS, "Ritual", "SRD", "Has Images", "Has Token"],
 			itemSortFn: PageFilterSpells.sortMetaFilter,
 			isSrdFilter: true,
 			displayFn: it => Parser.spMiscTagToFull(it),
 		});
 		const schoolFilter = new Filter({
-			header: "School",
+			header: "School", headerName: "學派",
 			items: [...Parser.SKL_ABVS],
 			displayFn: Parser.spSchoolAbvToFull,
 			itemSortFn: (a, b) => SortUtil.ascSortLower(Parser.spSchoolAbvToFull(a.item), Parser.spSchoolAbvToFull(b.item)),
 		});
 		const subSchoolFilter = new Filter({
 			header: "Subschool",
+			headerName: "子學派",
 			items: [],
 			displayFn: Parser.spSchoolAbvToFull,
 		});
 		const damageFilter = new Filter({
-			header: "Damage Type",
+			header: "Damage Type", headerName: "傷害類型",
 			items: MiscUtil.copy(Parser.DMG_TYPES),
-			displayFn: StrUtil.uppercaseFirst,
+			displayFn: Parser.DamageToDisplay,
 		});
 		const conditionFilter = new Filter({
-			header: "Conditions Inflicted",
+			header: "Conditions Inflicted", headerName: "造成狀態",
 			items: MiscUtil.copy(Parser.CONDITIONS),
-			displayFn: StrUtil.uppercaseFirst,
+			displayFn: Parser.ConditionToDisplay,
 		});
 		const spellAttackFilter = new Filter({
-			header: "Spell Attack",
+			header: "Spell Attack", headerName: "法術攻擊",
 			items: ["M", "R", "O"],
 			displayFn: Parser.spAttackTypeToFull,
 			itemSortFn: null,
 		});
 		const saveFilter = new Filter({
-			header: "Saving Throw",
+			header: "Saving Throw", headerName: "豁免",
 			items: ["strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma"],
 			displayFn: PageFilterSpells.getFilterAbilitySave,
 			itemSortFn: null,
 		});
 		const checkFilter = new Filter({
 			header: "Ability Check",
+			headerName: "能力檢定",
 			items: ["strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma"],
 			displayFn: PageFilterSpells.getFilterAbilityCheck,
 			itemSortFn: null,
 		});
 		const timeFilter = new Filter({
-			header: "Cast Time",
+			header: "Cast Time", headerName: "施法時間",
 			items: [
 				Parser.SP_TM_ACTION,
 				Parser.SP_TM_B_ACTION,
@@ -330,13 +345,14 @@ class PageFilterSpells extends PageFilter {
 			itemSortFn: null,
 		});
 		const durationFilter = new RangeFilter({
-			header: "Duration",
+			header: "Duration", headerName: "持續時間",
 			isLabelled: true,
 			labelSortFn: null,
 			labels: ["Instant", "1 Round", "1 Minute", "10 Minutes", "1 Hour", "8 Hours", "24+ Hours", "Permanent", "Special"],
 		});
 		const rangeFilter = new Filter({
 			header: "Range",
+			headerName: "射程",
 			items: [
 				PageFilterSpells.F_RNG_SELF,
 				PageFilterSpells.F_RNG_TOUCH,
@@ -360,7 +376,7 @@ class PageFilterSpells extends PageFilter {
 		this._classAndSubclassFilter = classAndSubclassFilter;
 		this._raceFilter = raceFilter;
 		this._backgroundFilter = backgroundFilter;
-		this._eldritchInvocationFilter = new Filter({header: "Eldritch Invocation"});
+		this._eldritchInvocationFilter = new Filter({header: "Eldritch Invocation", headerName:"魔能祈喚"});
 		this._metaFilter = metaFilter;
 		this._schoolFilter = schoolFilter;
 		this._subSchoolFilter = subSchoolFilter;
@@ -490,20 +506,20 @@ class PageFilterSpells extends PageFilter {
 	}
 }
 // toss these into the "Tags" section to save screen space
-PageFilterSpells._META_ADD_CONC = "Concentration";
-PageFilterSpells._META_ADD_V = "Verbal";
-PageFilterSpells._META_ADD_S = "Somatic";
-PageFilterSpells._META_ADD_M = "Material";
+PageFilterSpells._META_ADD_CONC = "專注";
+PageFilterSpells._META_ADD_V = "聲音";
+PageFilterSpells._META_ADD_S = "姿勢";
+PageFilterSpells._META_ADD_M = "材料";
 PageFilterSpells._META_ADD_R = "Royalty";
-PageFilterSpells._META_ADD_M_COST = "Material with Cost";
-PageFilterSpells._META_ADD_M_CONSUMED = "Material is Consumed";
+PageFilterSpells._META_ADD_M_COST = "價值材料";
+PageFilterSpells._META_ADD_M_CONSUMED = "消耗材料";
 PageFilterSpells._META_ADD_M_CONSUMED_OPTIONAL = "Material is Optionally Consumed";
 
-PageFilterSpells.F_RNG_POINT = "Point";
-PageFilterSpells.F_RNG_SELF_AREA = "Self (Area)";
-PageFilterSpells.F_RNG_SELF = "Self";
-PageFilterSpells.F_RNG_TOUCH = "Touch";
-PageFilterSpells.F_RNG_SPECIAL = "Special";
+PageFilterSpells.F_RNG_POINT = "點";
+PageFilterSpells.F_RNG_SELF_AREA = "自身(區域)";
+PageFilterSpells.F_RNG_SELF = "自身";
+PageFilterSpells.F_RNG_TOUCH = "觸碰";
+PageFilterSpells.F_RNG_SPECIAL = "特殊";
 
 PageFilterSpells._META_FILTER_BASE_ITEMS = [PageFilterSpells._META_ADD_CONC, PageFilterSpells._META_ADD_V, PageFilterSpells._META_ADD_S, PageFilterSpells._META_ADD_M, PageFilterSpells._META_ADD_R, PageFilterSpells._META_ADD_M_COST, PageFilterSpells._META_ADD_M_CONSUMED, PageFilterSpells._META_ADD_M_CONSUMED_OPTIONAL, ...Object.keys(Parser.SP_MISC_TAG_TO_FULL)];
 

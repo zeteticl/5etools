@@ -1,7 +1,8 @@
 {
 	"class": [
 		{
-			"name": "Sorcerer",
+			"name": "術士",
+			"ENG_name": "Sorcerer",
 			"source": "PHB",
 			"page": 99,
 			"srd": true,
@@ -61,11 +62,11 @@
 			],
 			"startingProficiencies": {
 				"weapons": [
-					"daggers",
-					"darts",
-					"slings",
-					"quarterstaffs",
-					"light crossbows"
+					"匕首",
+					"飛鏢",
+					"投石索",
+					"長棍",
+					"輕弩"
 				],
 				"skills": [
 					{
@@ -86,12 +87,12 @@
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
-					"(a) a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
-					"(a) a {@item component pouch|phb} or (b) an {@item arcane focus|phb}",
-					"(a) a {@item dungeoneer's pack|phb} or (b) an {@item explorer's pack|phb}",
-					"Two {@item dagger|phb|daggers}"
+					"(a)一把{@item 輕弩|phb}和{@item 弩矢(20)|phb|20支弩矢} 或 (b)任意一把{@filter 簡易武器|items|source=phb|category=basic|type=simple weapon}",
+					"(a)一個{@item 材料包|phb} 或 (b)一個{@item 奧術法器|phb}",
+					"(a)一套{@item 地城探險家套裝|phb} 或 (b)一套{@item 探索者套裝|phb}",
+					"二把{@item 匕首|phb}"
 				],
-				"goldAlternative": "{@dice 3d4 × 10|3d4 × 10|Starting Gold}",
+				"goldAlternative": "{@dice 3d4 × 10|3d4 × 10|起始金錢}",
 				"defaultData": [
 					{
 						"a": [
@@ -138,7 +139,7 @@
 			"classTableGroups": [
 				{
 					"colLabels": [
-						"Sorcery Points"
+						"術法點"
 					],
 					"rows": [
 						[
@@ -205,8 +206,8 @@
 				},
 				{
 					"colLabels": [
-						"{@filter Cantrips Known|spells|level=0|class=Sorcerer}",
-						"{@filter Spells Known|spells|class=Sorcerer}"
+						"{@filter 已知戲法|spells|level=0|class=Sorcerer}",
+						"{@filter 已知法術|spells|class=Sorcerer}"
 					],
 					"rows": [
 						[
@@ -292,17 +293,17 @@
 					]
 				},
 				{
-					"title": "Spell Slots per Spell Level",
+					"title": "法術位/每環",
 					"colLabels": [
-						"{@filter 1st|spells|level=1|class=Sorcerer}",
-						"{@filter 2nd|spells|level=2|class=Sorcerer}",
-						"{@filter 3rd|spells|level=3|class=Sorcerer}",
-						"{@filter 4th|spells|level=4|class=Sorcerer}",
-						"{@filter 5th|spells|level=5|class=Sorcerer}",
-						"{@filter 6th|spells|level=6|class=Sorcerer}",
-						"{@filter 7th|spells|level=7|class=Sorcerer}",
-						"{@filter 8th|spells|level=8|class=Sorcerer}",
-						"{@filter 9th|spells|level=9|class=Sorcerer}"
+						"{@filter 1環|spells|level=1|class=Sorcerer}",
+						"{@filter 2環|spells|level=2|class=Sorcerer}",
+						"{@filter 3環|spells|level=3|class=Sorcerer}",
+						"{@filter 4環|spells|level=4|class=Sorcerer}",
+						"{@filter 5環|spells|level=5|class=Sorcerer}",
+						"{@filter 6環|spells|level=6|class=Sorcerer}",
+						"{@filter 7環|spells|level=7|class=Sorcerer}",
+						"{@filter 8環|spells|level=8|class=Sorcerer}",
+						"{@filter 9環|spells|level=9|class=Sorcerer}"
 					],
 					"rows": [
 						[
@@ -529,70 +530,74 @@
 				}
 			],
 			"classFeatures": [
-				"Spellcasting|Sorcerer||1",
+				"施法|Sorcerer||1",
 				{
-					"classFeature": "Sorcerous Origin|Sorcerer||1",
+					"classFeature": "術法起源|Sorcerer||1",
 					"gainSubclassFeature": true
 				},
 				"Spell Versatility|Sorcerer||1|UAClassFeatureVariants",
-				"Font of Magic|Sorcerer||2",
+				"魔力泉湧|Sorcerer||2",
 				"Font of Magic Options|Sorcerer||2|UAClassFeatureVariants",
-				"Metamagic|Sorcerer||3",
+				"超魔法|Sorcerer||3",
 				"Metamagic Options|Sorcerer||3|UAClassFeatureVariants",
 				"Metamagic Options|Sorcerer||3|TCE",
-				"Ability Score Improvement|Sorcerer||4",
+				"屬性值提升|Sorcerer||4",
 				"Proficiency Versatility|Sorcerer||4|UAClassFeatureVariants",
 				"Sorcerous Versatility|Sorcerer||4|TCE",
 				"Magical Guidance|Sorcerer||5|TCE",
 				{
-					"classFeature": "Sorcerous Origin feature|Sorcerer||6",
+					"classFeature": "術法起源能力|Sorcerer||6",
 					"gainSubclassFeature": true
 				},
-				"Ability Score Improvement|Sorcerer||8",
+				"屬性值提升|Sorcerer||8",
 				"Proficiency Versatility|Sorcerer||8|UAClassFeatureVariants",
-				"Metamagic|Sorcerer||10",
-				"Ability Score Improvement|Sorcerer||12",
+				"超魔法|Sorcerer||10",
+				"屬性值提升|Sorcerer||12",
 				"Proficiency Versatility|Sorcerer||12|UAClassFeatureVariants",
 				{
-					"classFeature": "Sorcerous Origin feature|Sorcerer||14",
+					"classFeature": "術法起源能力|Sorcerer||14",
 					"gainSubclassFeature": true
 				},
-				"Ability Score Improvement|Sorcerer||16",
+				"屬性值提升|Sorcerer||16",
 				"Proficiency Versatility|Sorcerer||16|UAClassFeatureVariants",
-				"Metamagic|Sorcerer||17",
+				"超魔法|Sorcerer||17",
 				{
-					"classFeature": "Sorcerous Origin feature|Sorcerer||18",
+					"classFeature": "術法起源能力|Sorcerer||18",
 					"gainSubclassFeature": true
 				},
-				"Ability Score Improvement|Sorcerer||19",
+				"屬性值提升|Sorcerer||19",
 				"Proficiency Versatility|Sorcerer||19|UAClassFeatureVariants",
-				"Sorcerous Restoration|Sorcerer||20"
+				"術法復原|Sorcerer||20"
 			],
 			"subclassTitle": "Sorcerous Origin",
 			"subclasses": [
 				{
-					"name": "Draconic Bloodline",
-					"shortName": "Draconic",
+					"name": "龍族血脈",
+					"ENG_name": "Draconic Bloodline",
+					"shortName": "龍族血脈",
+					"ENG_shortName": "Draconic",
 					"source": "PHB",
 					"page": 102,
 					"srd": true,
 					"subclassFeatures": [
-						"Draconic Bloodline|Sorcerer||Draconic||1",
-						"Elemental Affinity|Sorcerer||Draconic||6",
-						"Dragon Wings|Sorcerer||Draconic||14",
-						"Draconic Presence|Sorcerer||Draconic||18"
+						"龍族血脈|Sorcerer||Draconic||1",
+						"元素親和|Sorcerer||Draconic||6",
+						"龍之翼|Sorcerer||Draconic||14",
+						"真龍威儀|Sorcerer||Draconic||18"
 					]
 				},
 				{
-					"name": "Wild Magic",
-					"shortName": "Wild",
+					"name": "狂野魔法",
+					"ENG_name": "Wild Magic",
+					"shortName": "狂野魔法",
+					"ENG_shortName": "Wild",
 					"source": "PHB",
 					"page": 103,
 					"subclassFeatures": [
-						"Wild Magic|Sorcerer||Wild||1",
-						"Bend Luck|Sorcerer||Wild||6",
-						"Controlled Chaos|Sorcerer||Wild||14",
-						"Spell Bombardment|Sorcerer||Wild||18"
+						"狂野魔法|Sorcerer||Wild||1",
+						"竄改運氣|Sorcerer||Wild||6",
+						"控制混沌|Sorcerer||Wild||14",
+						"法術轟擊|Sorcerer||Wild||18"
 					]
 				},
 				{
@@ -735,8 +740,10 @@
 					]
 				},
 				{
-					"name": "Divine Soul",
-					"shortName": "Divine Soul",
+					"name": "神聖之魂",
+					"ENG_name": "Divine Soul",
+					"shortName": "神聖之魂",
+					"ENG_shortName": "Divine",
 					"source": "XGE",
 					"page": 50,
 					"additionalSpells": [
@@ -777,15 +784,17 @@
 						}
 					],
 					"subclassFeatures": [
-						"Divine Soul|Sorcerer||Divine Soul|XGE|1",
-						"Empowered Healing|Sorcerer||Divine Soul|XGE|6",
-						"Otherworldly Wings|Sorcerer||Divine Soul|XGE|14",
-						"Unearthly Recovery|Sorcerer||Divine Soul|XGE|18"
+						"神聖之魂|Sorcerer||Divine Soul|XGE|1",
+						"強效治療|Sorcerer||Divine Soul|XGE|6",
+						"超凡之翼|Sorcerer||Divine Soul|XGE|14",
+						"神秘痊癒|Sorcerer||Divine Soul|XGE|18"
 					]
 				},
 				{
-					"name": "Shadow Magic",
-					"shortName": "Shadow",
+					"name": "幽影魔法",
+					"ENG_name": "Shadow Magic",
+					"shortName": "幽影魔法",
+					"ENG_shortName": "Shadow",
 					"source": "XGE",
 					"page": 50,
 					"additionalSpells": [
@@ -798,15 +807,17 @@
 						}
 					],
 					"subclassFeatures": [
-						"Shadow Magic|Sorcerer||Shadow|XGE|1",
-						"Hound of Ill Omen|Sorcerer||Shadow|XGE|6",
-						"Shadow Walk|Sorcerer||Shadow|XGE|14",
-						"Umbral Form|Sorcerer||Shadow|XGE|18"
+						"幽影魔法|Sorcerer||Shadow|XGE|1",
+						"凶兆獵犬|Sorcerer||Shadow|XGE|6",
+						"幽影漫步|Sorcerer||Shadow|XGE|14",
+						"暗影型態|Sorcerer||Shadow|XGE|18"
 					]
 				},
 				{
-					"name": "Storm Sorcery",
-					"shortName": "Storm",
+					"name": "暴風術法",
+					"ENG_name": "Storm Sorcery",
+					"shortName": "暴風術法",
+					"ENG_shortName": "Storm",
 					"source": "XGE",
 					"page": 51,
 					"otherSources": [
@@ -816,11 +827,11 @@
 						}
 					],
 					"subclassFeatures": [
-						"Storm Sorcery|Sorcerer||Storm|XGE|1",
-						"Heart of the Storm|Sorcerer||Storm|XGE|6",
-						"Storm Guide|Sorcerer||Storm|XGE|6",
-						"Storm's Fury|Sorcerer||Storm|XGE|14",
-						"Wind Soul|Sorcerer||Storm|XGE|18"
+						"暴風術法|Sorcerer||Storm|XGE|1",
+						"暴風之心|Sorcerer||Storm|XGE|6",
+						"暴風導向|Sorcerer||Storm|XGE|6",
+						"暴風狂怒|Sorcerer||Storm|XGE|14",
+						"清風之魂|Sorcerer||Storm|XGE|18"
 					]
 				},
 				{
@@ -1042,7 +1053,7 @@
 									"type": "entries",
 									"name": "Quick Build",
 									"entries": [
-										"You can make a sorcerer quickly by following these suggestions. First, Charisma should be your highest ability score, followed by Constitution. Second, choose the hermit background. Third, choose the {@spell light}, {@spell prestidigitation}, {@spell ray of frost}, and {@spell shocking grasp} cantrips, along with the 1st-level spells {@spell shield} and {@spell magic missile}."
+										"You can make a sorcerer quickly by following these suggestions. First, Charisma should be your highest ability score, followed by Constitution. Second, choose the hermit background. Third, choose the {@spell 光亮術}, {@spell 魔法技倆}, {@spell 冷凍射線}, and {@spell 電爪} cantrips, along with the 1st-level spells {@spell 護盾術} and {@spell 魔法飛彈}."
 									]
 								}
 							]
@@ -1378,7 +1389,8 @@
 	],
 	"classFeature": [
 		{
-			"name": "Sorcerous Origin",
+			"name": "術法起源",
+			"ENG_name": "Sorcerous Origin",
 			"source": "PHB",
 			"page": 99,
 			"srd": true,
@@ -1386,8 +1398,8 @@
 			"classSource": "PHB",
 			"level": 1,
 			"entries": [
-				"Choose a sorcerous origin, which describes the source of your innate magical power, from the list of available origins.",
-				"Your choice grants you features when you choose it at 1st level and again at 6th, 14th, and 18th level."
+				"從可選的起源列表中選擇一個術法起源，它代表著你天生魔法力量的來源。",
+				"你的選擇會在1級、6級、14級、和18級的時候賦予你新的能力。"
 			]
 		},
 		{
@@ -1404,7 +1416,8 @@
 			]
 		},
 		{
-			"name": "Spellcasting",
+			"name": "施法",
+			"ENG_name": "Spellcasting",
 			"source": "PHB",
 			"page": 99,
 			"srd": true,
@@ -1412,46 +1425,46 @@
 			"classSource": "PHB",
 			"level": 1,
 			"entries": [
-				"An event in your past, or in the life of a parent or ancestor, left an indelible mark on you, infusing you with arcane magic. This font of magic, whatever its origin, fuels your spells. See {@book chapter 10|PHB|10} for the general rules of spellcasting and {@book chapter 11|PHB|11} for the {@filter sorcerer spell list|spells|class=sorcerer}.",
+				"過去的一個事件、或者你雙親或先祖的血脈，在你身上留下了不可磨滅的印記，使你充滿了奧秘魔法。不論其起源如何，這種魔法泉源驅動著你的法術。請參閱{@book 第十章|PHB|10}以了解關於施法的規則，以及第十一章以查閱{@filter 術士法術列表|spells|class=sorcerer}。",
 				{
 					"type": "entries",
-					"name": "Cantrips",
+					"name": "戲法",
 					"entries": [
-						"At 1st level, you know four cantrips of your choice from the sorcerer spell list. You learn an additional sorcerer cantrip of your choice at 4th level and another at 10th level."
+						"在1級時，你知曉四個從{@filter 術士法術列表|spells|class=wizard}自選的戲法。你將在升至更高的術士等級時學會額外的術士戲法：在4級的時候學會第5個戲法，在10級的時候學會第6個。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Spell Slots",
+					"name": "法術位",
 					"entries": [
-						"The Sorcerer table shows how many spell slots you have to cast your {@filter sorcerer spells|spells|class=sorcerer} of 1st level and higher. To cast one of these sorcerer spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
-						"For example, if you know the 1st-level spell {@spell burning hands} and have a 1st-level and a 2nd-level spell slot available, you can cast {@spell burning hands} using either slot."
+						"術士表中顯示了你有多少個法術位可以用來施放你一環或更高環的{@filter 術士法術|spells|class=wizard}。要施放其中一個術士法術，你必須消耗一個與該法術環階相同或更高的法術位。你在完成一次長休後恢復所有你花費掉的法術位。",
+						"舉例來說，如果你知曉一個1環的{@spell 燃燒之手}法術，且你擁有一個1環和一個2環的法術位，則你可以使用其中任意一個法術位來施放{@spell 燃燒之手}。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Spells Known of 1st Level and Higher",
+					"name": "一環或更高環的已知法術",
 					"entries": [
-						"You know two 1st-level spells of your choice from the sorcerer spell list.",
-						"You learn an additional sorcerer spell of your choice at each level except 12th, 14th, 16th, 18th, 19th, and 20th. Each of these spells must be of a level for which you have spell slots. For instance, when you reach 3rd level in this class, you can learn one new spell of 1st or 2nd level.",
-						"Additionally, when you gain a level in this class, you can choose one of the sorcerer spells you know and replace it with another spell from the sorcerer spell list, which also must be of a level for which you have spell slots."
+						"你知曉二個從術士法術列表中自選的1環法術。",
+						"你將在提升至在每個除了第12,14,16,18,19,和20級的術士等級時，習得一個新的術士法術。每個這些法術的環階都必須符合你所擁有法術位的環階。舉例來說，當你在此職業升至3級時，你可以學習一個新的1環或2環法術。",
+						"此外，當你提升這個職業的等級時，你可以從術士的法術列表中挑選一個法術來取代一個你目前已知的法術，而它的環階也必須符合你所擁有法術位的環階。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Spellcasting Ability",
+					"name": "施法屬性",
 					"entries": [
-						"Charisma is your spellcasting ability for your sorcerer spells, since the power of your magic relies on your ability to project your will into the world. You use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a sorcerer spell you cast and when making an attack roll with one.",
+						"因為你魔法的力量依賴於你將自己的意志投射於世界的能力，魅力是你施展術士法術的施法屬性。每當法術提及你的施法屬性時，你將使用你的魅力。此外，當決定你術士法術的豁免DC、以及使用術士法術進行攻擊檢定時，你使用你的魅力調整值。",
 						{
 							"type": "abilityDc",
-							"name": "Spell",
+							"name": "法術",
 							"attributes": [
 								"cha"
 							]
 						},
 						{
 							"type": "abilityAttackMod",
-							"name": "Spell",
+							"name": "法術",
 							"attributes": [
 								"cha"
 							]
@@ -1460,15 +1473,16 @@
 				},
 				{
 					"type": "entries",
-					"name": "Spellcasting Focus",
+					"name": "施法法器",
 					"entries": [
-						"You can use an {@item arcane focus|phb} as a spellcasting focus for your sorcerer spells."
+						"你可以使用一個{@item 奧術法器|phb}（第五章），來做為你施放術士法術的法器。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Flexible Casting",
+			"name": "易變施法",
+			"ENG_name": "Flexible Casting",
 			"source": "PHB",
 			"page": 99,
 			"srd": true,
@@ -1477,18 +1491,18 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"You can use your sorcery points to gain additional spell slots, or sacrifice spell slots to gain additional sorcery points. You learn other ways to use your sorcery points as you reach higher levels.",
+				"你可以使用你的術法點以獲得額外的法術位，或犧牲法術位以獲得額外的術法點。隨著你升至更高的等級，你將學會其他使用你術法點的方式。",
 				{
 					"type": "entries",
-					"name": "Creating Spell Slots",
+					"name": "創造法術位",
 					"entries": [
-						"You can transform unexpended sorcery points into one spell slot as a bonus action on your turn. The created spell slots vanish at the end of a long rest. The Creating Spell Slots table shows the cost of creating a spell slot of a given level. You can create spell slots no higher in level than 5th.",
+						"你可以在你的回合以一個附贈動作將尚未消耗的術法點轉變成一個法術位。被創造出來的法術位將在長休結束時消失。創造法術位表中顯示了創造各環階的法術位所需要消耗的術法點。你可以創造出不超過5環的法術位。",
 						{
 							"type": "table",
-							"caption": "Creating Spell Slots",
+							"caption": "創造法術位",
 							"colLabels": [
-								"Spell Slot Level",
-								"Sorcery Point Cost"
+								"法術位環階",
+								"術法點消耗"
 							],
 							"colStyles": [
 								"col-6 text-center",
@@ -1496,23 +1510,23 @@
 							],
 							"rows": [
 								[
-									"1st",
+									"1環",
 									"2"
 								],
 								[
-									"2nd",
+									"2環",
 									"3"
 								],
 								[
-									"3rd",
+									"3環",
 									"5"
 								],
 								[
-									"4th",
+									"4環",
 									"6"
 								],
 								[
-									"5th",
+									"5環",
 									"7"
 								]
 							]
@@ -1521,15 +1535,16 @@
 				},
 				{
 					"type": "entries",
-					"name": "Converting a Spell Slot to Sorcery Points",
+					"name": "將法術位轉化為術法點",
 					"entries": [
-						"As a bonus action on your turn, you can expend one spell slot and gain a number of sorcery points equal to the slot's level."
+						"在你的回合以一個附贈動作，你可以消耗一個法術位以獲得等同於該法術位環階數量的術法點。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Font of Magic",
+			"name": "魔力泉湧",
+			"ENG_name": "Font of Magic",
 			"source": "PHB",
 			"page": 99,
 			"srd": true,
@@ -1537,17 +1552,18 @@
 			"classSource": "PHB",
 			"level": 2,
 			"entries": [
-				"At 2nd level, you tap into a deep wellspring of magic within yourself. This wellspring is represented by sorcery points, which allow you to create a variety of magical effects.",
+				"在2級時，你挖掘出深埋於你體內的魔力湧泉。這道魔力湧泉以術法點的形式呈現，讓你得以創造多種魔法效果。",
 				{
 					"type": "entries",
-					"name": "Sorcery Points",
+					"name": "術法點",
+					"ENG_name": "Sorcery Points",
 					"entries": [
-						"You have 2 sorcery points, and you gain one additional point every time you level up, to a maximum of 20 at level 20. You can never have more sorcery points than shown on the table for your level. You regain all spent sorcery points when you finish a long rest."
+						"你擁有2點術法點，且你每提升一級就能再額外獲得一點，並在20級時達到最大值20點。你所擁有的術法點永遠無法超過表格中對應你當前等級的數值。你在完成一次長休後恢復所有你花費掉的術法點。"
 					]
 				},
 				{
 					"type": "refClassFeature",
-					"classFeature": "Flexible Casting|Sorcerer||2"
+					"classFeature": "易變施法|Sorcerer||2"
 				}
 			]
 		},
@@ -1577,7 +1593,8 @@
 			]
 		},
 		{
-			"name": "Metamagic",
+			"name": "超魔法",
+			"ENG_name": "Metamagic",
 			"source": "PHB",
 			"page": 99,
 			"srd": true,
@@ -1585,43 +1602,43 @@
 			"classSource": "PHB",
 			"level": 3,
 			"entries": [
-				"At 3rd level, you gain the ability to twist your spells to suit your needs. You gain two of the following Metamagic options of your choice. You gain another one at 10th and 17th level.",
-				"You can use only one Metamagic option on a spell when you cast it, unless otherwise noted.",
+				"在3級時，你獲得扭曲你的法術以使其符合你需求的能力。你獲得下列超魔法選項中的二個。你將在10級和17級時再各獲得一個。",
+				"除非另有說明，否則你只能在你施放一個法術時對其使用一個超魔法選項。",
 				{
 					"type": "options",
 					"count": 2,
 					"entries": [
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Careful Spell"
+							"optionalfeature": "謹慎法術"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Distant Spell"
+							"optionalfeature": "遠程法術"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Empowered Spell"
+							"optionalfeature": "強效法術"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Extended Spell"
+							"optionalfeature": "延時法術"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Heightened Spell"
+							"optionalfeature": "升階法術"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Quickened Spell"
+							"optionalfeature": "瞬發法術"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Subtle Spell"
+							"optionalfeature": "精妙法術"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Twinned Spell"
+							"optionalfeature": "孿生法術"
 						}
 					]
 				}
@@ -1684,7 +1701,8 @@
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 99,
 			"srd": true,
@@ -1692,8 +1710,8 @@
 			"classSource": "PHB",
 			"level": 4,
 			"entries": [
-				"When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"當你在此職業升至4級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -1744,7 +1762,8 @@
 			]
 		},
 		{
-			"name": "Sorcerous Origin feature",
+			"name": "術法起源能力",
+			"ENG_name": "Sorcerous Origin feature",
 			"source": "PHB",
 			"page": 99,
 			"srd": true,
@@ -1752,11 +1771,12 @@
 			"classSource": "PHB",
 			"level": 6,
 			"entries": [
-				"At 6th level, you gain a feature granted by your Sorcerous Origin."
+				"在6級時，你獲得一個由你術法起源所賦予的能力。"
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 99,
 			"srd": true,
@@ -1764,8 +1784,8 @@
 			"classSource": "PHB",
 			"level": 8,
 			"entries": [
-				"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"當你在此職業升至8級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -1783,7 +1803,8 @@
 			]
 		},
 		{
-			"name": "Metamagic",
+			"name": "超魔法",
+			"ENG_name": "Metamagic",
 			"source": "PHB",
 			"page": 99,
 			"srd": true,
@@ -1791,11 +1812,12 @@
 			"classSource": "PHB",
 			"level": 10,
 			"entries": [
-				"At 10th level, you learn an additional metamagic option."
+				"在10級時，你習得一個額外的超魔法選項。"
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 99,
 			"srd": true,
@@ -1803,8 +1825,8 @@
 			"classSource": "PHB",
 			"level": 12,
 			"entries": [
-				"When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"當你在此職業升至12級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -1822,7 +1844,8 @@
 			]
 		},
 		{
-			"name": "Sorcerous Origin feature",
+			"name": "術法起源能力",
+			"ENG_name": "Sorcerous Origin feature",
 			"source": "PHB",
 			"page": 99,
 			"srd": true,
@@ -1830,11 +1853,12 @@
 			"classSource": "PHB",
 			"level": 14,
 			"entries": [
-				"At 14th level, you gain a feature granted by your Sorcerous Origin."
+				"在14級時，你獲得一個由你術法起源所賦予的能力。"
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 99,
 			"srd": true,
@@ -1842,8 +1866,8 @@
 			"classSource": "PHB",
 			"level": 16,
 			"entries": [
-				"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"當你在此職業升至16級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -1861,7 +1885,8 @@
 			]
 		},
 		{
-			"name": "Metamagic",
+			"name": "超魔法",
+			"ENG_name": "Metamagic",
 			"source": "PHB",
 			"page": 99,
 			"srd": true,
@@ -1869,11 +1894,12 @@
 			"classSource": "PHB",
 			"level": 17,
 			"entries": [
-				"At 17th level, you learn an additional metamagic option."
+				"在17級時，你習得一個額外的超魔法選項。"
 			]
 		},
 		{
-			"name": "Sorcerous Origin feature",
+			"name": "術法起源能力",
+			"ENG_name": "Sorcerous Origin feature",
 			"source": "PHB",
 			"page": 99,
 			"srd": true,
@@ -1881,11 +1907,12 @@
 			"classSource": "PHB",
 			"level": 18,
 			"entries": [
-				"At 18th level, you gain a feature granted by your Sorcerous Origin."
+				"在18級時，你獲得一個由你術法起源所賦予的能力。"
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 99,
 			"srd": true,
@@ -1893,8 +1920,8 @@
 			"classSource": "PHB",
 			"level": 19,
 			"entries": [
-				"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"當你在此職業升至19級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -1912,7 +1939,8 @@
 			]
 		},
 		{
-			"name": "Sorcerous Restoration",
+			"name": "術法復原",
+			"ENG_name": "Sorcerous Restoration",
 			"source": "PHB",
 			"page": 99,
 			"srd": true,
@@ -1920,7 +1948,7 @@
 			"classSource": "PHB",
 			"level": 20,
 			"entries": [
-				"At 20th level, you regain 4 expended sorcery points whenever you finish a short rest."
+				"在20級時，每當你完成一次短休，你將恢復4點花費掉的術法點。"
 			]
 		},
 		{
@@ -1962,7 +1990,8 @@
 	],
 	"subclassFeature": [
 		{
-			"name": "Draconic Bloodline",
+			"name": "龍族血脈",
+			"ENG_name": "Draconic Bloodline",
 			"source": "PHB",
 			"page": 102,
 			"srd": true,
@@ -1972,19 +2001,20 @@
 			"subclassSource": "PHB",
 			"level": 1,
 			"entries": [
-				"Your innate magic comes from draconic magic that was mingled with your blood or that of your ancestors. Most often, sorcerers with this origin trace their descent back to a mighty sorcerer of ancient times who made a bargain with a dragon or who might even have claimed a dragon parent. Some of these bloodlines are well established in the world, but most are obscure. Any given sorcerer could be the first of a new bloodline, as a result of a pact or some other exceptional circumstance.",
+				"你的天生魔法來自於與你或你祖先那與龍族魔法交纏的血脈。大多數情況下，這種起源的術士可以追溯其血統到久遠以前與龍族交易、或有著龍族雙親的強大術士。某些這類血脈在世界上相當知名，但絕大部分都不為人知。任何術士都可能因為契約或其他因素，而成為一條嶄新血脈的開端。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Dragon Ancestor|Sorcerer||Draconic||1"
+					"subclassFeature": "龍族血統|Sorcerer||Draconic||1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Draconic Resilience|Sorcerer||Draconic||1"
+					"subclassFeature": "龍族韌性|Sorcerer||Draconic||1"
 				}
 			]
 		},
 		{
-			"name": "Draconic Resilience",
+			"name": "龍族韌性",
+			"ENG_name": "Draconic Resilience",
 			"source": "PHB",
 			"page": 102,
 			"srd": true,
@@ -1995,12 +2025,13 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"As magic flows through your body, it causes physical traits of your dragon ancestors to emerge. At 1st level, your hit point maximum increases by 1 and increases by 1 again whenever you gain a level in this class.",
-				"Additionally, parts of your skin are covered by a thin sheen of dragon-like scales. When you aren't wearing armor, your AC equals 13 + your Dexterity modifier."
+				"因為魔法在你體內流動，你龍族血統的物理特徵開始浮現。在1級時，你的生命值最大值增加1點，且每當你在本職業提升等級時都會再增加1點。",
+				"此外，你一部份的肌膚將會被輕薄、龍族般的光滑鱗片給覆蓋。當你未穿戴護甲時，你的AC等於13 + 你的敏捷調整值。"
 			]
 		},
 		{
-			"name": "Dragon Ancestor",
+			"name": "龍族血統",
+			"ENG_name": "Dragon Ancestor",
 			"source": "PHB",
 			"page": 102,
 			"srd": true,
@@ -2011,13 +2042,13 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"At 1st level, you choose one type of dragon as your ancestor. The damage type associated with each dragon is used by features you gain later.",
+				"在1級時，你選擇一個龍種作為你的血統。各龍種對應的傷害類型將會在你往後獲得的能力中被使用。",
 				{
 					"type": "table",
-					"caption": "Draconic Ancestry",
+					"caption": "龍族血統",
 					"colLabels": [
-						"Dragon",
-						"Damage Type"
+						"龍種",
+						"傷害類型"
 					],
 					"colStyles": [
 						"col-6 text-center",
@@ -2025,52 +2056,53 @@
 					],
 					"rows": [
 						[
-							"Black",
-							"{@filter Acid|spells|damage type=acid|class=sorcerer}"
+							"黑龍",
+							"{@filter 酸蝕|spells|damage type=acid}"
 						],
 						[
-							"Blue",
-							"{@filter Lightning|spells|damage type=lightning|class=sorcerer}"
+							"藍龍",
+							"{@filter 閃電|spells|damage type=lightning}"
 						],
 						[
-							"Brass",
-							"{@filter Fire|spells|damage type=fire|class=sorcerer}"
+							"黃銅龍",
+							"{@filter 火焰|spells|damage type=fire}"
 						],
 						[
-							"Bronze",
-							"{@filter Lightning|spells|damage type=lightning|class=sorcerer}"
+							"青銅龍",
+							"{@filter 閃電|spells|damage type=lightning}"
 						],
 						[
-							"Copper",
-							"{@filter Acid|spells|damage type=acid|class=sorcerer}"
+							"赤銅龍",
+							"{@filter 酸蝕|spells|damage type=acid}"
 						],
 						[
-							"Gold",
-							"{@filter Fire|spells|damage type=fire|class=sorcerer}"
+							"金龍",
+							"{@filter 火焰|spells|damage type=fire}"
 						],
 						[
-							"Green",
-							"{@filter Poison|spells|damage type=poison|class=sorcerer}"
+							"綠龍",
+							"{@filter 毒素|spells|damage type=poison}"
 						],
 						[
-							"Red",
-							"{@filter Fire|spells|damage type=fire|class=sorcerer}"
+							"紅龍",
+							"{@filter 火焰|spells|damage type=fire}"
 						],
 						[
-							"Silver",
-							"{@filter Cold|spells|damage type=cold|class=sorcerer}"
+							"銀龍",
+							"{@filter 寒冰|spells|damage type=cold}"
 						],
 						[
-							"White",
-							"{@filter Cold|spells|damage type=cold|class=sorcerer}"
+							"白龍",
+							"{@filter 寒冰|spells|damage type=cold}"
 						]
 					]
 				},
-				"You can speak, read, and write {@language Draconic}. Additionally, whenever you make a Charisma check when interacting with dragons, your proficiency bonus is doubled if it applies to the check."
+				"你能夠說、讀、寫龍語。此外，每當你在與龍族互動時進行魅力檢定，若你的熟練加值能適用於該檢定，你的熟練加值變為二倍。"
 			]
 		},
 		{
-			"name": "Elemental Affinity",
+			"name": "元素親和",
+			"ENG_name": "Elemental Affinity",
 			"source": "PHB",
 			"page": 102,
 			"srd": true,
@@ -2081,11 +2113,12 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Starting at 6th level, when you cast a spell that deals damage of the type associated with your draconic ancestry, you can add your Charisma modifier to one damage roll of that spell. At the same time, you can spend 1 sorcery point to gain resistance to that damage type for 1 hour."
+				"從6級開始，當你施放一個會造成與你龍族血統對應傷害類型相同的傷害的法術時，你可以將你的魅力調整值加入該法術的其中一個傷害骰中。在此同時，你可以消耗1點術法點以獲得對該傷害類型的抗性長達1小時。"
 			]
 		},
 		{
-			"name": "Dragon Wings",
+			"name": "龍之翼",
+			"ENG_name": "Dragon Wings",
 			"source": "PHB",
 			"page": 102,
 			"srd": true,
@@ -2096,12 +2129,13 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"At 14th level, you gain the ability to sprout a pair of dragon wings from your back, gaining a flying speed equal to your current speed. You can create these wings as a bonus action on your turn. They last until you dismiss them as a bonus action on your turn.",
-				"You can't manifest your wings while wearing armor unless the armor is made to accommodate them, and clothing not made to accommodate your wings might be destroyed when you manifest them."
+				"在14級時，你獲得從你背後長出一對龍翼的能力，獲得等同於你當下速度的飛行速度。你可以在你的回合以一個附贈動作創造這對龍翼。它們會持續直到你在你的回合以一個附贈動作解消它們。",
+				"你無法在你穿戴護甲時操作這對龍翼，除非該護甲是為了容納它們而被打造。此外，未被設計於容納你龍翼的服裝將在你操作龍翼的時候被破壞。"
 			]
 		},
 		{
-			"name": "Draconic Presence",
+			"name": "真龍威儀",
+			"ENG_name": "Draconic Presence",
 			"source": "PHB",
 			"page": 102,
 			"srd": true,
@@ -2112,11 +2146,12 @@
 			"level": 18,
 			"header": 2,
 			"entries": [
-				"Beginning at 18th level, you can channel the dread presence of your dragon ancestor, causing those around you to become awestruck or {@condition frightened}. As an action, you can spend 5 sorcery points to draw on this power and exude an aura of awe or fear (your choice) to a distance of 60 feet. For 1 minute or until you lose your concentration (as if you were casting a concentration spell), each hostile creature that starts its turn in this aura must succeed on a Wisdom saving throw or be {@condition charmed} (if you chose awe) or {@condition frightened} (if you chose fear) until the aura ends. A creature that succeeds on this saving throw is immune to your aura for 24 hours."
+				"從18級開始，你可以引導來自你龍族血統的駭人威儀，使你周遭的人們因而被震撼或{@condition 恐懼}。以一個動作，你可以消耗5點術法點以汲取這種力量，並散發出一道距離60呎範圍，令人敬畏或恐懼的靈光（由你選擇）。持續1分鐘或直到你失去你的專注（如同你施放一個專注法術），每個在這道靈光中開始它回合的敵意生物必須成功通過一次睿知豁免，否則在這道靈光結束前被{@condition 魅惑}（若你選擇敬畏效果）或{@condition 恐懼}（若你選擇恐懼效果）。一個成功通過此豁免檢定的生物將在接下來的24小時內免疫你的靈光。"
 			]
 		},
 		{
-			"name": "Wild Magic",
+			"name": "狂野魔法",
+			"ENG_name": "Wild Magic",
 			"source": "PHB",
 			"page": 103,
 			"className": "Sorcerer",
@@ -2125,19 +2160,20 @@
 			"subclassSource": "PHB",
 			"level": 1,
 			"entries": [
-				"Your innate magic comes from the wild forces of chaos that underlie the order of creation. You might have endured exposure to some form of raw magic, perhaps through a planar portal leading to Limbo, the Elemental Planes, or the mysterious Far Realm. Perhaps you were blessed by a powerful fey creature or marked by a demon. Or your magic could be a fluke of your birth, with no apparent cause or reason. However it came to be, this chaotic magic churns within you, waiting for any outlet.",
+				"你的天生魔法來自於潛伏於創造秩序之下的狂野混沌之力。你也許曾暴露於某種形式的原初魔力之下，也許穿越了一扇位面傳送門到混沌海、元素位面、或者神秘的遙遠國度。也許你曾被一個強大的精類生物祝福、或被一名惡魔所標記。又或者你的魔法僅僅是你誕生時僥倖獲得，並沒有顯著的原因或理由。無論其來源為何，這道混亂魔力在你體內翻湧著，等待著被以任何方式釋放出來。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Wild Magic Surge|Sorcerer||Wild||1"
+					"subclassFeature": "狂野魔法浪湧|Sorcerer||Wild||1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Tides of Chaos|Sorcerer||Wild||1"
+					"subclassFeature": "混亂之潮|Sorcerer||Wild||1"
 				}
 			]
 		},
 		{
-			"name": "Tides of Chaos",
+			"name": "混亂之潮",
+			"ENG_name": "Tides of Chaos",
 			"source": "PHB",
 			"page": 103,
 			"className": "Sorcerer",
@@ -2147,12 +2183,13 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"Starting at 1st level, you can manipulate the forces of chance and chaos to gain advantage on one attack roll, ability check, or saving throw. Once you do so, you must finish a long rest before you can use this feature again.",
-				"Any time before you regain the use of this feature, the DM can have you roll on the {@table Wild Magic Surge|PHB} table immediately after you cast a sorcerer spell of 1st level or higher. You then regain the use of this feature."
+				"從1級開始，你可以操作機率和混亂之力以在一次攻擊檢定、屬性檢定、或豁免檢定中獲得優勢。一旦你這麼做，你必須在完成一次長休後才能再使用此能力。",
+				"在你重新獲得使用混亂之潮的能力之前，DM可以緊接你施放一個1環或更高環的術士法術後要求你擲骰使用狂野魔法浪湧表。接著你恢復使用混亂之潮的能力。"
 			]
 		},
 		{
-			"name": "Wild Magic Surge",
+			"name": "狂野魔法浪湧",
+			"ENG_name": "Wild Magic Surge",
 			"source": "PHB",
 			"page": 103,
 			"className": "Sorcerer",
@@ -2162,14 +2199,14 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"Starting when you choose this origin at 1st level, your spellcasting can unleash surges of untamed magic. Immediately after you cast a sorcerer spell of 1st level or higher, the DM can have you roll a {@dice d20}. If you roll a 1, roll on the Wild Magic Surge table to create a random magical effect. A Wild Magic Surge can happen once per turn.",
-				"If a Wild Magic effect is a spell, it's too wild to be affected by Metamagic. If it normally requires concentration, it doesn't require concentration in this case; the spell lasts for its full duration.",
+				"從你在1級時選擇此起源開始，你的施法可以釋放出未經馴服的魔法浪湧。緊接在你施放一個1環或更高環的術士法術，DM可以要求你骰一顆{@dice d20}。若你骰出了1，則擲骰使用狂野魔法浪湧表以創造出一個隨機的魔法效果。一道狂野魔法浪湧在每回合可以發生一次。",
+				"若狂野魔法效果為一個法術，則它太過狂野以至於它無法被超魔法影響。若它原本需要專注，則它在這個情況下也不需要專注；該法術將持續到它的完整持續時間。",
 				{
 					"type": "table",
-					"caption": "Wild Magic Surge",
+					"caption": "狂野魔法浪湧",
 					"colLabels": [
 						"{@dice d100}",
-						"Effect"
+						"效果"
 					],
 					"colStyles": [
 						"col-1 text-center",
@@ -2178,203 +2215,203 @@
 					"rows": [
 						[
 							"01-02",
-							"Roll on this table at the start of each of your turns for the next minute, ignoring this result on subsequent rolls."
+							"在接下來一分鐘內，你在你的每個回合開始時骰這張表，並在後續的擲骰中無視骰到這個項目的擲骰結果。"
 						],
 						[
 							"03-04",
-							"For the next minute, you can see any {@condition invisible} creature if you have line of sight to it."
+							"在接下來一分鐘內，若任何{@condition 隱形}生物處於你的視線範圍內，則你可以看見它。"
 						],
 						[
 							"05-06",
-							"A {@filter modron|bestiary|search=modron} chosen and controlled by the DM appears in an unoccupied space within 5 feet of you, then disappears 1 minute later."
+							"一個DM所選擇並控制的魔冢出現在距離你5呎內的一處未被佔據空間，並在1分鐘後消失。"
 						],
 						[
 							"07-08",
-							"You cast {@spell fireball} as a 3rd-level spell centered on yourself."
+							"你以3環法術，以你自己為中心施放{@spell 火球術}。"
 						],
 						[
 							"09-10",
-							"You cast {@spell magic missile} as a 5th-level spell."
+							"你以5環法術施放{@spell 魔法飛彈}。"
 						],
 						[
 							"11-12",
-							"Roll a {@dice d10}. Your height changes by a number of inches equal to the roll. If the roll is odd, you shrink. If the roll is even, you grow."
+							"骰一顆{@dice d10}。你的身高改變等同於擲骰結果的吋數。若擲骰結果為奇數，你的身高變矮。若擲骰結果為偶數，你的身高變高。"
 						],
 						[
 							"13-14",
-							"You cast {@spell confusion} centered on yourself."
+							"你以自己為中心施放{@spell 困惑術}。"
 						],
 						[
 							"15-16",
-							"For the next minute, you regain 5 hit points at the start of each of your turns."
+							"在接下來一分鐘內，你在你的每個回合開始時回復5點生命值。"
 						],
 						[
 							"17-18",
-							"You grow a long beard made of feathers that remains until you sneeze, at which point the feathers explode out from your face."
+							"你的臉上長出大把羽毛組成的長鬚。一旦你打了噴嚏，這些羽毛將從你臉上被炸飛出去。"
 						],
 						[
 							"19-20",
-							"You cast {@spell grease} centered on yourself."
+							"你以自己為中心施放{@spell 油膩術}。"
 						],
 						[
 							"21-22",
-							"Creatures have disadvantage on saving throws against the next spell you cast in the next minute that involves a saving throw."
+							"所有生物在對抗你在接下來一分鐘內所施放的下一個涉及豁免檢定的法術時，所進行的豁免檢定具有劣勢。"
 						],
 						[
 							"23-24",
-							"Your skin turns a vibrant shade of blue. A {@spell remove curse} spell can end this effect."
+							"你的肌膚變成有著鮮豔漸層的藍色。一個{@spell 移除詛咒}法術可以終止此效果。"
 						],
 						[
 							"25-26",
-							"An eye appears on your forehead for the next minute. During that time, you have advantage on Wisdom ({@skill Perception}) checks that rely on sight."
+							"一顆眼睛將在接下來一分鐘內出現在你的額頭上。"
 						],
 						[
 							"27-28",
-							"For the next minute, all your spells with a casting time of 1 action have a casting time of 1 bonus action."
+							"在接下來一分鐘內，你所有施法時間為1個動作的法術，其施法時間變成1個附贈動作。"
 						],
 						[
 							"29-30",
-							"You teleport up to 60 feet to an unoccupied space of your choice that you can see."
+							"你傳送最遠60呎距離到一處你所選且你能看見的一處未被佔據空間。"
 						],
 						[
 							"31-32",
-							"You are transported to the Astral Plane until the end of your next turn, after which time you return to the space you previously occupied or the nearest unoccupied space if that space is occupied."
+							"你被傳送到星界直到你的下個回合結束，在那之後你將回到你先前所佔據的空間，或若該空間被佔據，則回到離該處最近的一處未被佔據空間。"
 						],
 						[
 							"33-34",
-							"Maximize the damage of the next damaging spell you cast within the next minute."
+							"在接下來一分鐘內你所施放的下一個傷害法術的傷害取最大值。"
 						],
 						[
 							"35-36",
-							"Roll a {@dice d10}. Your age changes by a number of years equal to the roll. If the roll is odd, you get younger (minimum 1 year old). If the roll is even, you get older."
+							"骰一顆{@dice d10}。你的年齡改變等同於擲骰結果的年數。若擲骰結果為奇數，你變年輕（最小一歲）。若擲骰結果為偶數，你變得更老。"
 						],
 						[
 							"37-38",
-							"{@dice 1d6} {@creature flumph||flumphs} controlled by the DM appear in unoccupied spaces within 60 feet of you and are {@condition frightened} of you. They vanish after 1 minute."
+							"{@dice 1d6}個由DM控制的{@creature 呋嚕|MM}出現在距離你60呎內的未被佔據空間，且對你感到{@condition 恐懼}。它們將在1分鐘後消失。"
 						],
 						[
 							"39-40",
-							"You regain {@dice 2d10} hit points."
+							"你回復{@dice 2d10}點生命值。"
 						],
 						[
 							"41-42",
-							"You turn into a potted plant until the start of your next turn. While a plant, you are {@condition incapacitated} and have vulnerability to all damage. If you drop to 0 hit points, your pot breaks, and your form reverts."
+							"你變成一個盆栽植物直到你的下個回合開始。當變成盆栽植物時，你處於{@condition 無力}狀態且對所有傷害易傷。若你的生命值歸零，你的盆栽將被破壞，且你恢復原本的型態。"
 						],
 						[
 							"43-44",
-							"For the next minute, you can teleport up to 20 feet as a bonus action on each of your turns."
+							"在接下來一分鐘內，你可以在你的每個回合以一個附贈動作傳送最遠20呎距離。"
 						],
 						[
 							"45-46",
-							"You cast {@spell levitate} on yourself."
+							"你對你自己施放{@spell 浮空術}。"
 						],
 						[
 							"47-48",
-							"A {@creature unicorn} controlled by the DM appears in a space within 5 feet of you, then disappears 1 minute later."
+							"一個由DM控制的{@creature 獨角獸}出現在距離你5呎內的一個空間，並在1分鐘後消失。"
 						],
 						[
 							"49-50",
-							"You can't speak for the next minute. Whenever you try, pink bubbles float out of your mouth."
+							"你在接下來一分鐘內無法說話。每當你嘗試說話時，粉紅色的泡泡將從你口中飄出。"
 						],
 						[
 							"51-52",
-							"A spectral shield hovers near you for the next minute, granting you a +2 bonus to AC and immunity to {@spell magic missile}."
+							"一道靈體似的護盾在接下來一分鐘內漂浮於你附近，使你的AC獲得+2加值，並讓你免疫於{@spell 魔法飛彈}。"
 						],
 						[
 							"53-54",
-							"You are immune to being intoxicated by alcohol for the next {@dice 5d6} days."
+							"你在接下來的{@dice 5d6}天內免疫於酒精導致的酒醉狀態。"
 						],
 						[
 							"55-56",
-							"Your hair falls out but grows back within 24 hours."
+							"你的頭髮掉光，但在24小時內重新長回來。"
 						],
 						[
 							"57-58",
-							"For the next minute, any flammable object you touch that isn't being worn or carried by another creature bursts into flame."
+							"在接下來一分鐘內，任何你所碰觸，且未被其他生物穿戴或攜帶的可燃物體都將熊熊燃燒。"
 						],
 						[
 							"59-60",
-							"You regain your lowest-level expended spell slot."
+							"你恢復你花費掉最低環階的法術位。"
 						],
 						[
 							"61-62",
-							"For the next minute, you must shout when you speak."
+							"在接下來一分鐘內，你在說話時必須用吼的。"
 						],
 						[
 							"63-64",
-							"You cast {@spell fog cloud} centered on yourself."
+							"你以你自己為中心施放{@spell 雲霧術}。"
 						],
 						[
 							"65-66",
-							"Up to three creatures you choose within 30 feet of you take {@damage 4d10} lightning damage."
+							"最多三個你所選擇距離你30呎內的生物受到{@dice 4d10}閃電傷害。"
 						],
 						[
 							"67-68",
-							"You are {@condition frightened} by the nearest creature until the end of your next turn."
+							"你因離你最近的生物而陷入{@condition 恐懼}狀態，持續直到你的下個回合結束。"
 						],
 						[
 							"69-70",
-							"Each creature within 30 feet of you becomes {@condition invisible} for the next minute. The invisibility ends on a creature when it attacks or casts a spell."
+							"每個距離你30呎內的生物在接下來一分鐘內變得{@condition 隱形}。作用於一個生物的隱形狀態會在它攻擊或施放法術時結束。"
 						],
 						[
 							"71-72",
-							"You gain resistance to all damage for the next minute."
+							"你在接下來一分鐘內獲得對所有傷害的抗性。"
 						],
 						[
 							"73-74",
-							"A random creature within 60 feet of you becomes {@condition poisoned} for {@dice 1d4} hours."
+							"一個距離你60呎內的隨機生物將陷入{@condition 中毒}狀態長達{@dice 1d4}小時。"
 						],
 						[
 							"75-76",
-							"You glow with bright light in a 30-foot radius for the next minute. Any creature that ends its turn within 5 feet of you is {@condition blinded} until the end of its next turn."
+							"你在接下來一分鐘內發出30呎半徑的明亮光照。任何在距離你5呎內結束它回合的生物將陷入{@condition 目盲}狀態直到它的下個回合結束。"
 						],
 						[
 							"77-78",
-							"You cast {@spell polymorph} on yourself. If you fail the saving throw, you turn into a sheep for the spell's duration."
+							"你對你自己施放{@spell 變形術}。若你在該豁免檢定中失敗，你將在法術的持續時間內被變成一隻綿羊。"
 						],
 						[
 							"79-80",
-							"Illusory butterflies and flower petals flutter in the air within 10 feet of you for the next minute."
+							"幻影蝴蝶和花瓣在接下來一分鐘內於你10呎內翩翩飛舞於空中。"
 						],
 						[
 							"81-82",
-							"You can take one additional action immediately."
+							"你可以立刻採取一個額外的動作。"
 						],
 						[
 							"83-84",
-							"Each creature within 30 feet of you takes {@damage 1d10} necrotic damage. You regain hit points equal to the sum of the necrotic damage dealt."
+							"每個距離你30呎內的生物受到{@dice 1d10}死靈傷害。你回復等同於所造成死靈傷害總和的生命值。"
 						],
 						[
 							"85-86",
-							"You cast {@spell mirror image}."
+							"你施放{@spell 鏡影術}。"
 						],
 						[
 							"87-88",
-							"You cast {@spell fly} on a random creature within 60 feet of you."
+							"你對一個距離你60呎內的隨機生物施放{@spell 飛行術}。"
 						],
 						[
 							"89-90",
-							"You become {@condition invisible} for the next minute. During that time, other creatures can't hear you. The invisibility ends if you attack or cast a spell."
+							"你在接下來一分鐘內變得{@condition 隱形}。在這段時間內，其他生物無法聽見你。這個隱形狀態會在你攻擊或施放法術時結束。"
 						],
 						[
 							"91-92",
-							"If you die within the next minute, you immediately come back to life as if by the {@spell reincarnate} spell."
+							"若你在接下來一分鐘內死亡，你將立刻復活，如同被施放了{@spell 轉生術}法術。"
 						],
 						[
 							"93-94",
-							"Your size increases by one size category for the next minute."
+							"你的體型在接下來一分鐘內增加一級。"
 						],
 						[
 							"95-96",
-							"You and all creatures within 30 feet of you gain vulnerability to piercing damage for the next minute."
+							"你和所有距離你30呎內的生物在接下來一分鐘內獲得對穿刺傷害的易傷。"
 						],
 						[
 							"97-98",
-							"You are surrounded by faint, ethereal music for the next minute."
+							"你在接下來一分鐘內被模糊縹緲的音樂環繞。"
 						],
 						[
 							"99-00",
-							"You regain all expended sorcery points."
+							"你恢復所有你花費掉的術法點。"
 						]
 					],
 					"data": {
@@ -2384,7 +2421,8 @@
 			]
 		},
 		{
-			"name": "Bend Luck",
+			"name": "竄改運氣",
+			"ENG_name": "Bend Luck",
 			"source": "PHB",
 			"page": 103,
 			"className": "Sorcerer",
@@ -2394,11 +2432,12 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Starting at 6th level, you have the ability to twist fate using your wild magic. When another creature you can see makes an attack roll, an ability check, or a saving throw, you can use your reaction and spend 2 sorcery points to roll {@dice 1d4} and apply the number rolled as a bonus or penalty (your choice) to the creature's roll. You can do so after the creature rolls but before any effects of the roll occur."
+				"從6級開始，你擁有透過你狂野魔法來扭曲命運的能力。當另一個你所能看見的生物進行一次攻擊檢定、屬性檢定、或豁免檢定時，你可以使用你的反應並消耗2點術法點，骰{@dice 1d4}並將擲骰結果做為加值或減值（由你決定）加入該生物的檢定結果。你可以在該生物擲骰後，但在任何該檢定的效果生效之前這麼做。"
 			]
 		},
 		{
-			"name": "Controlled Chaos",
+			"name": "控制混沌",
+			"ENG_name": "Controlled Chaos",
 			"source": "PHB",
 			"page": 103,
 			"className": "Sorcerer",
@@ -2408,11 +2447,12 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"At 14th level, you gain a modicum of control over the surges of your wild magic. Whenever you roll on the {@table Wild Magic Surge|PHB} table, you can roll twice and use either number."
+				"在14級時，你獲得了對於你狂野魔法浪湧的些微控制。每當你擲骰使用狂野魔法浪湧表時，你可以重骰二次並使用其中一個擲骰結果。"
 			]
 		},
 		{
-			"name": "Spell Bombardment",
+			"name": "法術轟擊",
+			"ENG_name": "Spell Bombardment",
 			"source": "PHB",
 			"page": 103,
 			"className": "Sorcerer",
@@ -2422,7 +2462,7 @@
 			"level": 18,
 			"header": 2,
 			"entries": [
-				"Beginning at 18th level, the harmful energy of your spells intensifies. When you roll damage for a spell and roll the highest number possible on any of the dice, choose one of those dice, roll it again and add that roll to the damage. You can use the feature only once per turn."
+				"從18級開始，你法術的傷害性能量明顯加劇。當你會一個法術擲骰決定傷害，且其中任何一顆骰子骰出了最大的骰面，則從這些骰子中選擇一顆，重骰它並將其擲骰結果加到傷害中。你在每個回合只能使用此能力一次。"
 			]
 		},
 		{
@@ -2586,23 +2626,23 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell arms of Hadar}, {@spell dissonant whispers}, {@spell mind sliver|tce}"
+							"{@spell 哈達之臂}, {@spell 噪音暗語}, {@spell mind sliver|tce}"
 						],
 						[
 							"3rd",
-							"{@spell calm emotions}, {@spell detect thoughts}"
+							"{@spell 安定心神}, {@spell 偵測思想}"
 						],
 						[
 							"5th",
-							"{@spell hunger of Hadar}, {@spell sending}"
+							"{@spell 哈達之欲}, {@spell 短訊術}"
 						],
 						[
 							"7th",
-							"{@spell Evard's black tentacles}, {@spell summon aberration|TCE}"
+							"{@spell 艾伐黑觸手}, {@spell summon aberration|TCE}"
 						],
 						[
 							"9th",
-							"{@spell Rary's telepathic bond}, {@spell telekinesis}"
+							"{@spell 拉瑞心靈聯結}, {@spell 心靈遙控}"
 						]
 					]
 				}
@@ -2744,23 +2784,23 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell alarm}, {@spell protection from evil and good}"
+							"{@spell 警報術}, {@spell 防護善惡}"
 						],
 						[
 							"3rd",
-							"{@spell aid}, {@spell lesser restoration}"
+							"{@spell 援助術}, {@spell 次級復原術}"
 						],
 						[
 							"5th",
-							"{@spell dispel magic}, {@spell protection from energy}"
+							"{@spell 解除魔法}, {@spell 防護能量}"
 						],
 						[
 							"7th",
-							"{@spell freedom of movement}, {@spell summon construct|TCE}"
+							"{@spell 行動自如術}, {@spell summon construct|TCE}"
 						],
 						[
 							"9th",
-							"{@spell greater restoration}, {@spell wall of force}"
+							"{@spell 高等復原術}, {@spell 力牆術}"
 						]
 					]
 				},
@@ -3151,23 +3191,23 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell alarm}, {@spell protection from evil and good}"
+							"{@spell 警報術}, {@spell 防護善惡}"
 						],
 						[
 							"3rd",
-							"{@spell find traps}, {@spell heat metal}"
+							"{@spell 尋找陷阱}, {@spell 灼熱金屬}"
 						],
 						[
 							"5th",
-							"{@spell counterspell}, {@spell glyph of warding}"
+							"{@spell 反制法術}, {@spell 守衛銘文}"
 						],
 						[
 							"7th",
-							"{@spell arcane eye}, {@spell Otiluke's resilient sphere}"
+							"{@spell 祕法眼}, {@spell 歐提路克魔封法球}"
 						],
 						[
 							"9th",
-							"{@spell animate objects}, {@spell wall of force}"
+							"{@spell 活化物體}, {@spell 力牆術}"
 						]
 					]
 				}
@@ -3307,33 +3347,33 @@
 					"rows": [
 						[
 							"{@creature Cloud Giant}",
-							"{@spell fog cloud}, {@spell minor illusion}",
-							"{@spell invisibility}"
+							"{@spell 雲霧術}, {@spell 次級幻象}",
+							"{@spell 隱形術}"
 						],
 						[
 							"{@creature Fire Giant}",
-							"{@spell burning hands}, {@spell fire bolt}",
-							"{@spell flaming sphere}"
+							"{@spell 燃燒之手}, {@spell 火焰箭}",
+							"{@spell 熾焰法球}"
 						],
 						[
 							"{@creature Frost Giant}",
-							"{@spell armor of Agathys}, {@spell ray of frost}",
-							"{@spell hold person}"
+							"{@spell 艾嘉西斯之鎧}, {@spell 冷凍射線}",
+							"{@spell 人類定身術}"
 						],
 						[
 							"{@creature Hill Giant}",
-							"{@spell heroism}, {@spell shillelagh}",
-							"{@spell enlarge/reduce}"
+							"{@spell 英雄氣概}, {@spell 橡棍術}",
+							"{@spell 變巨/縮小術}"
 						],
 						[
 							"{@creature Stone Giant}",
-							"{@spell entangle}, {@spell resistance}",
-							"{@spell spike growth}"
+							"{@spell 糾纏術}, {@spell 提升抗力}",
+							"{@spell 荊棘叢生}"
 						],
 						[
 							"{@creature Storm Giant}",
-							"{@spell shocking grasp}, {@spell thunderwave}",
-							"{@spell gust of wind}"
+							"{@spell 電爪}, {@spell 雷鳴波}",
+							"{@spell 造風術}"
 						]
 					]
 				}
@@ -3369,7 +3409,7 @@
 					"type": "entries",
 					"name": "Frost Giant",
 					"entries": [
-						"Immediately after you cast any of your Mark of the Ordning spells, you gain temporary hit points equal to your Constitution modifier (minimum of 1). But if the spell is {@spell armor of Agathys}, you instead increase its temporary hit points by an amount equal to your Constitution modifier (minimum of 1)."
+						"Immediately after you cast any of your Mark of the Ordning spells, you gain temporary hit points equal to your Constitution modifier (minimum of 1). But if the spell is {@spell 艾嘉西斯之鎧}, you instead increase its temporary hit points by an amount equal to your Constitution modifier (minimum of 1)."
 					]
 				},
 				{
@@ -3507,7 +3547,7 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"From 1st level, you have {@sense darkvision} with a range of 60 feet. You can cast {@spell darkness} by spending 1 sorcery point. You can see through any {@spell darkness} spell you cast using this ability."
+				"From 1st level, you have {@sense darkvision} with a range of 60 feet. You can cast {@spell 黑暗術} by spending 1 sorcery point. You can see through any {@spell 黑暗術} spell you cast using this ability."
 			]
 		},
 		{
@@ -3702,7 +3742,7 @@
 			"header": 1,
 			"entries": [
 				"Your link to the divine allows you to learn spells normally associated with the cleric class. When your Spellcasting feature lets you learn a sorcerer cantrip or a sorcerer spell of 1st level or higher, you can choose the new spell from the cleric spell list, in addition to the sorcerer spell list. You must otherwise obey all the restrictions for selecting the spell, and it becomes a sorcerer spell for you.",
-				"You also learn the {@spell cure wounds} spell, which does not count against your number of sorcerer spells known."
+				"You also learn the {@spell 治療傷勢} spell, which does not count against your number of sorcerer spells known."
 			]
 		},
 		{
@@ -4243,19 +4283,19 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell compelled duel}, {@spell searing smite}, {@spell thunderous smite}, {@spell wrathful smite}"
+							"{@spell 強迫決鬥}, {@spell 熾炎斬}, {@spell 雷霆斬}, {@spell 激憤斬}"
 						],
 						[
 							"2nd",
-							"{@spell branding smite}, {@spell magic weapon}"
+							"{@spell 烙印斬}, {@spell 魔化武器}"
 						],
 						[
 							"3rd",
-							"{@spell blinding smite}, {@spell elemental weapon}"
+							"{@spell 致盲斬}, {@spell 元素武器}"
 						],
 						[
 							"4th",
-							"{@spell staggering smite}"
+							"{@spell 驚震斬}"
 						]
 					]
 				}
@@ -4376,23 +4416,23 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell arms of Hadar}, {@spell dissonant whispers}"
+							"{@spell 哈達之臂}, {@spell 噪音暗語}"
 						],
 						[
 							"3rd",
-							"{@spell calm emotions}, {@spell detect thoughts}"
+							"{@spell 安定心神}, {@spell 偵測思想}"
 						],
 						[
 							"5th",
-							"{@spell hunger of Hadar}, {@spell sending}"
+							"{@spell 哈達之欲}, {@spell 短訊術}"
 						],
 						[
 							"7th",
-							"{@spell compulsion}, {@spell Evard's black tentacles}"
+							"{@spell 強迫術}, {@spell 艾伐黑觸手}"
 						],
 						[
 							"9th",
-							"{@spell modify memory}, {@spell Rary's telepathic bond}"
+							"{@spell 修改記憶}, {@spell 拉瑞心靈聯結}"
 						]
 					]
 				}
@@ -4546,23 +4586,23 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell Fog cloud}, {@spell thunderwave}"
+							"{@spell 雲霧術}, {@spell 雷鳴波}"
 						],
 						[
 							"3rd",
-							"{@spell Gust of wind}, {@spell levitate}"
+							"{@spell 造風術}, {@spell 浮空術}"
 						],
 						[
 							"5th",
-							"{@spell Call lightning}, {@spell sleet storm}"
+							"{@spell 召雷術}, {@spell 雪雨暴}"
 						],
 						[
 							"7th",
-							"{@spell Conjure minor elementals}*, {@spell ice storm}"
+							"{@spell 召喚次級元素生物}*, {@spell 冰風暴}"
 						],
 						[
 							"9th",
-							"{@spell Conjure elemental}**"
+							"{@spell 召喚元素生物}**"
 						]
 					],
 					"footnotes": [
@@ -4645,7 +4685,8 @@
 			]
 		},
 		{
-			"name": "Divine Soul",
+			"name": "神聖之魂",
+			"ENG_name": "Divine Soul",
 			"source": "XGE",
 			"page": 50,
 			"className": "Sorcerer",
@@ -4654,22 +4695,23 @@
 			"subclassSource": "XGE",
 			"level": 1,
 			"entries": [
-				"Sometimes the spark of magic that fuels a sorcerer comes from a divine source that glimmers within the soul. Having such a blessed soul is a sign that your innate magic might come from a distant but powerful familial connection to a divine being. Perhaps your ancestor was an angel, transformed into a mortal and sent to fight in a god's name.",
-				"Or your birth might align with an ancient prophecy, marking you as a servant of the gods or a chosen vessel of divine magic.",
-				"A Divine Soul, with a natural magnetism, is seen as a threat by some religious hierarchies. As an outsider who commands sacred power, a Divine Soul can undermine an existing order by claiming a direct tie to the divine.",
-				"In some cultures, only those who can claim the power of a Divine Soul may command religious power. In these lands, ecclesiastical positions are dominated by a few bloodlines and preserved over generations.",
+				"有時候充斥於術士體內的魔力火花是來自於一種閃耀於靈魂中神性泉源。擁有著這種祝福靈魂，代表你的天生魔法可能來自一個與某種神性存在有所聯繫，遙遠而強大家族。也許你的祖先曾是一名天使，變成了凡人並奉神之名被遣來戰鬥。",
+				"或者，你的出生可能符合了一個古老的預言，表明你做為諸神的僕從或神聖魔法的器皿。",
+				"一個具有天生魅力的神聖之魂術士，會被某些宗教派系視為威脅。做為一個能行使神聖力量的局外人，一個神聖之魂術士可以透過聲稱與神之間的直接聯繫來顛覆現有的秩序。",
+				"在某些文化中，只有那些擁有神聖之魂力量的人們才能統御宗教勢力。在這些國度，教會的地位僅由少數血脈給支配，代代相傳。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Divine Magic|Sorcerer||Divine Soul|XGE|1"
+					"subclassFeature": "神聖魔法|Sorcerer||Divine Soul|XGE|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Favored by the Gods|Sorcerer||Divine Soul|XGE|1"
+					"subclassFeature": "諸神眷顧|Sorcerer||Divine Soul|XGE|1"
 				}
 			]
 		},
 		{
-			"name": "Divine Magic",
+			"name": "神聖魔法",
+			"ENG_name": "Divine Magic",
 			"source": "XGE",
 			"page": 50,
 			"className": "Sorcerer",
@@ -4679,13 +4721,13 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"Your link to the divine allows you to learn spells from the cleric class. When your Spellcasting feature lets you learn or replace a sorcerer cantrip or a sorcerer spell of 1st level or higher, you can choose the new spell from the cleric spell list or the sorcerer spell list. You must otherwise obey all the restrictions for selecting the spell, and it becomes a sorcerer spell for you.",
-				"In addition, choose an affinity for the source of your divine power: good, evil, law, chaos, or neutrality. You learn an additional spell based on that affinity, as shown below. It is a sorcerer spell for you, but it doesn't count against your number of sorcerer spells known. If you later replace this spell, you must replace it with a spell from the cleric spell list.",
+				"你與神性之間的聯繫讓你得以學習來自牧師職業的法術。當你的施法特性讓你學習或取代一個術士戲法、或一個1環或更高環的術士法術時，你可以從牧師法術列表或術士法術列表中選擇新的法術。你仍然必須遵從選擇法術的所有其它限制，且它對你而言視作術士法術。",
+				"此外，為你神聖能量的源頭選擇一種傾向：善良、邪惡、守序、混亂、中立。你基於該傾向學習一個額外的法術，如下表所示。它對你而言視作術士法術，但並不會計入你已知術士法術的數量中。若你之後想取代該法術，則你必須以一個來自牧師法術列表的法術取代它。",
 				{
 					"type": "table",
 					"colLabels": [
-						"Affinity",
-						"Spell"
+						"傾向",
+						"法術"
 					],
 					"colStyles": [
 						"col-5",
@@ -4693,31 +4735,32 @@
 					],
 					"rows": [
 						[
-							"Good",
-							"{@spell cure wounds}"
+							"善良",
+							"{@spell 治療傷勢}"
 						],
 						[
-							"Evil",
-							"{@spell inflict wounds}"
+							"邪惡",
+							"{@spell 造成傷勢}"
 						],
 						[
-							"Law",
-							"{@spell bless}"
+							"守序",
+							"{@spell 祝福術}"
 						],
 						[
-							"Chaos",
-							"{@spell bane}"
+							"混亂",
+							"{@spell 災禍術}"
 						],
 						[
-							"Neutrality",
-							"{@spell protection from evil and good}"
+							"中立",
+							"{@spell 防護善惡}"
 						]
 					]
 				}
 			]
 		},
 		{
-			"name": "Favored by the Gods",
+			"name": "諸神眷顧",
+			"ENG_name": "Favored by the Gods",
 			"source": "XGE",
 			"page": 50,
 			"className": "Sorcerer",
@@ -4727,11 +4770,12 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"Starting at 1st level, divine power guards your destiny. If you fail a saving throw or miss with an attack roll, you can roll {@dice 2d4} and add it to the total, possibly changing the outcome. Once you use this feature, you can't use it again until you finish a short or long rest."
+				"從1級開始，神聖能量守護著你的命運。若你在一次豁免檢定中失敗、或在一次攻擊檢定中失手，你可以骰{@dice 2d4}並將其擲骰結果加入檢定的總和中，並可能因此改變檢定結果。一旦你使用此能力，你直到完成一次短休或長休前都不能再使用它。"
 			]
 		},
 		{
-			"name": "Empowered Healing",
+			"name": "強效治療",
+			"ENG_name": "Empowered Healing",
 			"source": "XGE",
 			"page": 50,
 			"className": "Sorcerer",
@@ -4741,11 +4785,12 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Starting at 6th level, the divine energy coursing through you can empower healing spells. Whenever you or an ally within 5 feet of you rolls dice to determine the number of hit points a spell restores, you can spend 1 sorcery point to reroll any number of those dice once, provided you aren't {@condition incapacitated}. You can use this feature only once per turn."
+				"從6級開始，奔馳於你體內的神聖能量可以強化治療法術。每當你或一個距離你5呎內的盟友擲骰決定一個法術所回復的生命值數值時，只要你並非處於{@condition 無力}狀態，你就可以消耗1點術法點以重骰任意數量的這些骰子一次。你每個回合只能使用此能力一次。"
 			]
 		},
 		{
-			"name": "Otherworldly Wings",
+			"name": "超凡之翼",
+			"ENG_name": "Otherworldly Wings",
 			"source": "XGE",
 			"page": 50,
 			"className": "Sorcerer",
@@ -4755,12 +4800,13 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"Starting at 14th level, you can use a bonus action to manifest a pair of spectral wings from your back. While the wings are present, you have a flying speed of 30 feet. The wings last until you're {@condition incapacitated}, you die, or you dismiss them as a bonus action.",
-				"The affinity you chose for your Divine Magic feature determines the appearance of the spectral wings: eagle wings for good or law, bat wings for evil or chaos, and dragonfly wings for neutrality."
+				"從14級開始，你可以使用一個附贈動作以從你背後展現出一對靈體翅膀。當這對翅膀存在時，你擁有30呎的飛行速度。這對翅膀會持續存在直到你陷入{@condition 無力}狀態、死亡、或你以一個附贈動作解消它們。",
+				"你為你神聖魔法能力所選擇的傾向，將會決定這對靈體翅膀的外觀：善良或守序則為鷹翼、邪惡或混亂則為蝙蝠翅膀、中立則為蜻蜓翅膀。"
 			]
 		},
 		{
-			"name": "Unearthly Recovery",
+			"name": "神秘痊癒",
+			"ENG_name": "Unearthly Recovery",
 			"source": "XGE",
 			"page": 50,
 			"className": "Sorcerer",
@@ -4770,12 +4816,13 @@
 			"level": 18,
 			"header": 2,
 			"entries": [
-				"At 18th level, you gain the ability to overcome grievous injuries. As a bonus action when you have fewer than half of your hit points remaining, you can regain a number of hit points equal to half your hit point maximum.",
-				"Once you use this feature, you can't use it again until you finish a long rest."
+				"在18級時，你獲得克服嚴重傷勢的能力。當你只剩下少於一半的生命值時，以一個附贈動作，你可以回復等同於你生命值最大值一半的生命值。",
+				"一旦你使用此能力，直到你完成一次長休前都不能再使用它。"
 			]
 		},
 		{
-			"name": "Shadow Magic",
+			"name": "幽影魔法",
+			"ENG_name": "Shadow Magic",
 			"source": "XGE",
 			"page": 50,
 			"className": "Sorcerer",
@@ -4784,14 +4831,14 @@
 			"subclassSource": "XGE",
 			"level": 1,
 			"entries": [
-				"You are a creature of shadow, for your innate magic comes from the Shadowfell itself. You might trace your lineage to an entity from that place, or perhaps you were exposed to its fell energy and transformed by it.",
-				"The power of shadow magic casts a strange pall over your physical presence. The spark of life that sustains you is muffled, as if it struggles to remain viable against the dark energy that imbues your soul. At your option, you can pick from or roll on the Shadow Sorcerer Quirks table to create a quirk for your character.",
+				"身為影之造物，你的天生魔法來自墮影冥界本身。或許你能追溯你的家系到一個來自該處的存在，又或者你曾暴露於墮影冥界的可怕能量之下並被其轉化。",
+				"幽影魔法的力量在你的身體表徵上蒙上了一層怪異的帷幕。維持著你的生命火花因壓抑而模糊，彷彿它在與深入你靈魂的黑暗能量對抗而掙扎求生。根據你的選擇，你可以從幽影術士怪異特徵表中為你的角色挑選或擲骰決定一個怪異特徵。",
 				{
 					"type": "table",
-					"caption": "Shadow Sorcerer Quirks",
+					"caption": "幽影術士怪異特徵",
 					"colLabels": [
 						"d6",
-						"Quirk"
+						"怪異特徵"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -4800,42 +4847,43 @@
 					"rows": [
 						[
 							"1",
-							"You are always icy cold to the touch."
+							"你摸起來永遠如冰般寒冷。"
 						],
 						[
 							"2",
-							"When you are asleep, you don't appear to breathe (though you must still breathe to survive)."
+							"當你熟睡時，你像是沒有在呼吸（但你仍需要呼吸以維生）。"
 						],
 						[
 							"3",
-							"You barely bleed, even when badly injured."
+							"你鮮少流血，即使受到重傷也一樣。"
 						],
 						[
 							"4",
-							"Your heart beats once per minute. This event sometimes surprises you."
+							"你的心跳每一分鐘才脈動一下。這件事有時候也會讓你驚訝。"
 						],
 						[
 							"5",
-							"You have trouble remembering that living creatures and corpses should be treated differently."
+							"你難以記住活著的生物和屍體應該被差別待遇。"
 						],
 						[
 							"6",
-							"You blinked. Once. Last week."
+							"你上週，眨眼，只眨了一次。"
 						]
 					]
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Eyes of the Dark|Sorcerer||Shadow|XGE|1"
+					"subclassFeature": "幽暗之瞳|Sorcerer||Shadow|XGE|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Strength of the Grave|Sorcerer||Shadow|XGE|1"
+					"subclassFeature": "終焉之力|Sorcerer||Shadow|XGE|1"
 				}
 			]
 		},
 		{
-			"name": "Eyes of the Dark",
+			"name": "幽暗之瞳",
+			"ENG_name": "Eyes of the Dark",
 			"source": "XGE",
 			"page": 50,
 			"className": "Sorcerer",
@@ -4845,12 +4893,13 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"Starting at 1st level, you have {@sense darkvision} with a range of 120 feet.",
-				"When you reach 3rd level in this class, you learn the {@spell darkness} spell, which doesn't count against your number of sorcerer spells known. In addition, you can cast it by spending 2 sorcery points or by expending a spell slot. If you cast it with sorcery points, you can see through the {@spell darkness} created by the spell."
+				"從1級開始，你具有120呎範圍的黑暗視覺。",
+				"當你在本職業升至3級時，你習得{@spell 黑暗術}法術，且它不會計入你的已知術士法術數量中。此外，你可以藉由消耗2點術法點或一個法術位來施放它。若你透過術法點施放它，你可以看透由此法術創造出來的黑暗。"
 			]
 		},
 		{
-			"name": "Strength of the Grave",
+			"name": "終焉之力",
+			"ENG_name": "Strength of the Grave",
 			"source": "XGE",
 			"page": 50,
 			"className": "Sorcerer",
@@ -4860,12 +4909,13 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"Starting at 1st level, your existence in a twilight state between life and death makes you difficult to defeat. When damage reduces you to 0 hit points, you can make a Charisma saving throw (DC 5 + the damage taken). On a success, you instead drop to 1 hit point. You can't use this feature if you are reduced to 0 hit points by radiant damage or by a critical hit.",
-				"After the saving throw succeeds, you can't use this feature again until you finish a long rest."
+				"從1級開始，你處於生與死之間模糊狀態的存在使你難以被擊敗。當傷害將你的生命值歸零時，你可以進行一次魅力豁免（DC 5+所受到的傷害）。若豁免成功，你改為將你的生命值減少至1。若你是因為光耀傷害或暴擊而導致生命值歸零，則你不能使用此能力。",
+				"在該豁免檢定成功後，你直到完成一次長休之前都不能再使用此能力。"
 			]
 		},
 		{
-			"name": "Hound of Ill Omen",
+			"name": "凶兆獵犬",
+			"ENG_name": "Hound of Ill Omen",
 			"source": "XGE",
 			"page": 50,
 			"className": "Sorcerer",
@@ -4875,21 +4925,22 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"At 6th level, you gain the ability to call forth a howling creature of darkness to harass your foes. As a bonus action, you can spend 3 sorcery points to magically summon a hound of ill omen to target one creature you can see within 120 feet of you. The hound uses the {@creature dire wolf}'s statistics (see the Monster Manual or appendix C in the Player's Handbook), with the following changes:",
+				"在6級時，你獲得呼喚出一個咆嘯著的黑暗生物以侵擾你敵人的能力。以一個附贈動作，你可以消耗3點術法點以用魔法召喚出一個凶兆獵犬，並指定一個距離你120呎內且你所能看見的生物做為目標。這個獵犬使用{@creature 恐狼}的數據（參見《怪物圖鑑》或《玩家手冊》的附錄C），但有以下的改變：",
 				{
 					"type": "list",
 					"items": [
-						"The hound is size Medium, not Large, and it counts as a monstrosity, not a beast.",
-						"It appears with a number of temporary hit points equal to half your sorcerer level.",
-						"It can move through other creatures and objects as if they were difficult terrain. The hound takes 5 force damage if it ends its turn inside an object.",
-						"At the start of its turn, the hound automatically knows its target's location. If the target was hidden, it is no longer hidden from the hound."
+						"獵犬的體型為中型，而非大型；且它被視作怪獸，而非野獸。",
+						"它在出現時擁有等同於你術士等級一半的臨時生命值。",
+						"它可以如同穿過困難地形一樣移動穿過其他生物和物體。若獵犬在一個物體內結束它的回合，獵犬將受到5點力場傷害。",
+						"在它的回合開始時，獵犬將自動知曉它目標的所在位置。若該目標在躲藏中，則它對獵犬而言不再視為躲藏中。"
 					]
 				},
-				"The hound appears in an unoccupied space of your choice within 30 feet of the target. Roll initiative for the hound. On its turn, it can move only toward its target by the most direct route, and it can use its action only to attack its target. The hound can make opportunity attacks, but only against its target. Additionally, while the hound is within 5 feet of the target, the target has disadvantage on saving throws against any spell you cast. The hound disappears if it is reduced to 0 hit points, if its target is reduced to 0 hit points, or after 5 minutes."
+				"獵犬會出現在距離目標30呎內你所選擇的一處未被佔據空間。為獵犬骰先攻。在它的回合，它只能透過最直接的路徑移向它的目標，且它只能使用它的動作以攻擊它的目標。獵犬可以進行藉機攻擊，但只能以它的目標為攻擊對象。此外，當獵犬距離目標5呎內，目標在對抗你所施放的任何法術的豁免檢定中具有劣勢。獵犬會在它的生命值歸零、它目標的生命值歸零、或者5分鐘之後消失。"
 			]
 		},
 		{
-			"name": "Shadow Walk",
+			"name": "幽影漫步",
+			"ENG_name": "Shadow Walk",
 			"source": "XGE",
 			"page": 50,
 			"className": "Sorcerer",
@@ -4899,11 +4950,12 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"At 14th level, you gain the ability to step from one shadow into another. When you are in dim light or darkness, as a bonus action, you can magically teleport up to 120 feet to an unoccupied space you can see that is also in dim light or darkness."
+				"在14級時，你獲得從陰影間穿梭的能力。當你處於微光光照或黑暗環境中，以一個附贈動作，你可以用魔法傳送最多120呎距離到一處你所能看見，且同樣處於微光光照或黑暗環境中的未被佔據空間。"
 			]
 		},
 		{
-			"name": "Umbral Form",
+			"name": "暗影型態",
+			"ENG_name": "Umbral Form",
 			"source": "XGE",
 			"page": 50,
 			"className": "Sorcerer",
@@ -4913,12 +4965,13 @@
 			"level": 18,
 			"header": 2,
 			"entries": [
-				"Starting at 18th level, you can spend 6 sorcery points as a bonus action to magically transform yourself into a shadowy form. In this form, you have resistance to all damage except force and radiant damage, and you can move through other creatures and objects as if they were difficult terrain. You take 5 force damage if you end your turn inside an object.",
-				"You remain in this form for 1 minute. It ends early if you are {@condition incapacitated}, if you die, or if you dismiss it as a bonus action."
+				"從18級開始，你可以消耗6點術法點並以一個附贈動作魔法地將自己轉變為幽影型態。當處於此型態，你對除了力場和光耀傷害以外的所有傷害具有抗性，且你可以如同穿過困難地形一樣移動穿過其他生物和物體。若你在一個物體內結束它的回合，你將受到5點力場傷害。",
+				"你能維持此型態長達1分鐘。它會在你陷入{@condition 無力}狀態、你死亡、或你以一個附贈動作解消它時提早結束。"
 			]
 		},
 		{
-			"name": "Storm Sorcery",
+			"name": "暴風術法",
+			"ENG_name": "Storm Sorcery",
 			"source": "XGE",
 			"page": 51,
 			"className": "Sorcerer",
@@ -4927,20 +4980,21 @@
 			"subclassSource": "XGE",
 			"level": 1,
 			"entries": [
-				"Your innate magic comes from the power of elemental air. Many with this power can trace their magic back to a near-death experience caused by the Great Rain, but perhaps you were born during a howling gale so powerful that folk still tell stories of it, or your lineage might include the influence of potent air creatures such as djinn. Whatever the case, the magic of the storm permeates your being.",
-				"Storm sorcerers are invaluable members of a ship's crew. Their magic allows them to exert control over wind and weather in their immediate area. Their abilities also prove useful in repelling attacks by sahuagin, pirates, and other waterborne threats.",
+				"你的天生魔法來自於氣元素的力量。許多擁有這種力量的人可以追溯其魔法到一次暴雨導致的瀕死經驗、或可能你在一陣狂風呼嘯中誕生，而那狂風是如此強大以至於人們至今仍傳誦著它的故事，又或者，你的家系可能受到了像是氣巨靈之類的氣元素生物影響。無論是哪種情況，暴風魔法都已充斥於你體內。",
+				"暴風術士在船隊中是無價的成員。他們的魔法讓他們得以駕馭周遭區域風和氣象。他們的能力也被證明在對抗沙華魚人、海盜、或其他水生威脅時相當有效。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Wind Speaker|Sorcerer||Storm|XGE|1"
+					"subclassFeature": "風語者|Sorcerer||Storm|XGE|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Tempestuous Magic|Sorcerer||Storm|XGE|1"
+					"subclassFeature": "風暴魔法|Sorcerer||Storm|XGE|1"
 				}
 			]
 		},
 		{
-			"name": "Tempestuous Magic",
+			"name": "風暴魔法",
+			"ENG_name": "Tempestuous Magic",
 			"source": "XGE",
 			"page": 51,
 			"className": "Sorcerer",
@@ -4950,11 +5004,12 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"Starting at 1st level, you can use a bonus action on your turn to cause whirling gusts of elemental air to briefly surround you, immediately before or after you cast a spell of 1st level or higher. Doing so allows you to fly up to 10 feet without provoking opportunity attacks."
+				"從1級開始，緊接在你施放一個1環或更高環的法術之前或之後，你可以在你的回合使用一個附贈動作以使元素之氣形成的旋轉陣風短暫地環繞著你。這麼做讓你得以飛行最多10呎距離，而不會引發藉機攻擊。"
 			]
 		},
 		{
-			"name": "Wind Speaker",
+			"name": "風語者",
+			"ENG_name": "Wind Speaker",
 			"source": "XGE",
 			"page": 51,
 			"className": "Sorcerer",
@@ -4964,11 +5019,12 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"The arcane magic you command is infused with elemental air. You can speak, read, and write Primordial. Knowing this language allows you to understand and be understood by those who speak its dialects: Aquan, Auran, Ignan, and Terran."
+				"你所支配的奧法魔力充盈著氣之元素。你可以說、讀、寫原初語。知曉這個語言讓你得以理解使用其同源語系的生物，並讓它們理解你所說的話。其同源語系為：水族語、氣族語、火族語、和土族語。"
 			]
 		},
 		{
-			"name": "Heart of the Storm",
+			"name": "暴風之心",
+			"ENG_name": "Heart of the Storm",
 			"source": "XGE",
 			"page": 51,
 			"className": "Sorcerer",
@@ -4978,11 +5034,12 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"At 6th level, you gain resistance to lightning and thunder damage. In addition, whenever you start casting a spell of 1st level or higher that deals lightning or thunder damage, stormy magic erupts from you. This eruption causes creatures of your choice that you can see within 10 feet of you to take lightning or thunder damage (choose each time this ability activates) equal to half your sorcerer level."
+				"在6級時，你獲得對閃電和雷鳴傷害的抗性。此外，每當你開始施放一個1環或更高環，且會造成閃電或雷鳴傷害的法術時，暴風魔法將從你身上迸發而出。這陣迸發會使距離你10呎內你所選且你能看見的所有生物受到等同於你術士等級一半的閃電或雷鳴傷害（每次此能力發動時選擇）。"
 			]
 		},
 		{
-			"name": "Storm Guide",
+			"name": "暴風導向",
+			"ENG_name": "Storm Guide",
 			"source": "XGE",
 			"page": 51,
 			"className": "Sorcerer",
@@ -4992,13 +5049,14 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"At 6th level, you gain the ability to subtly control the weather around you.",
-				"If it is raining, you can use an action to cause the rain to stop falling in a 20-foot-radius sphere centered on you. You can end this effect as a bonus action.",
-				"If it is windy, you can use a bonus action each round to choose the direction that the wind blows in a 100-foot-radius sphere centered on you. The wind blows in that direction until the end of your next turn. This feature doesn't alter the speed of the wind."
+				"在6級時，你獲得巧妙控制你周遭天氣的能力。",
+				"若正在下雨，你可以使用一個動作，讓以你為中心20呎半徑球體內的空間停止降雨。你能夠以一個附贈動作中止這個效果。",
+				"若正在颳風，你可以在每輪以一個附贈動作選擇以你為中心100呎半徑球體內的陣風吹向你所選的方向。這陣風會向著該方向吹拂直到你的下個回合結束。此能力並不會改變風速。"
 			]
 		},
 		{
-			"name": "Storm's Fury",
+			"name": "暴風狂怒",
+			"ENG_name": "Storm's Fury",
 			"source": "XGE",
 			"page": 51,
 			"className": "Sorcerer",
@@ -5008,11 +5066,12 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"Starting at 14th level, when you are hit by a melee attack, you can use your reaction to deal lightning damage to the attacker. The damage equals your sorcerer level. The attacker must also make a Strength saving throw against your sorcerer spell save DC. On a failed save, the attacker is pushed in a straight line up to 20 feet away from you."
+				"從14級開始，當你被一次近戰攻擊命中時，你可以使用你的反應以對攻擊者造成閃電傷害。此傷害等同於你的術士等級。攻擊者同時必須進行一次對抗你術士法術豁免DC的力量豁免。若豁免失敗，攻擊者將被直線推離你最遠20呎的距離。"
 			]
 		},
 		{
-			"name": "Wind Soul",
+			"name": "清風之魂",
+			"ENG_name": "Wind Soul",
 			"source": "XGE",
 			"page": 51,
 			"className": "Sorcerer",
@@ -5022,8 +5081,8 @@
 			"level": 18,
 			"header": 2,
 			"entries": [
-				"At 18th level, you gain immunity to lightning and thunder damage.",
-				"You also gain a magical flying speed of 60 feet. As an action, you can reduce your flying speed to 30 feet for 1 hour and choose a number of creatures within 30 feet of you equal to 3 + your Charisma modifier. The chosen creatures gain a magical flying speed of 30 feet for 1 hour. Once you reduce your flying speed in this way, you can't do so again until you finish a short or long rest."
+				"在18級時，你獲得對閃電和雷鳴傷害的免疫。",
+				"你也獲得魔法性的60呎飛行速度。以一個動作，你可以降低你的飛行速度至30呎，持續1小時，並選擇數量最多等同於3+你魅力調整值的生物。所選生物將獲得魔法性的30呎飛行速度，持續1小時。一旦你透過這個方式降低你的飛行速度，你直到完成一次短休或長休之前都不能再這麼做。"
 			]
 		}
 	]

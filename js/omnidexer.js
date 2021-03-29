@@ -91,7 +91,10 @@ class Omnidexer {
 		const pHandleItem = async (it, i, name) => {
 			if (it.noDisplay) return;
 
-			const toAdd = getToAdd(it, {n: name}, i);
+			var obj = {};
+			if(it.ENG_name){ obj.cn = name; obj.n = it.ENG_name; }
+			else {			 obj.n = name;}
+			const toAdd = getToAdd(it, obj, i);
 
 			if ((options.isNoFilter || (!arbiter.include && !(arbiter.filter && arbiter.filter(it))) || (!arbiter.filter && (!arbiter.include || arbiter.include(it)))) && !arbiter.isOnlyDeep) index.push(toAdd);
 
@@ -775,9 +778,10 @@ class IndexableFileRaces extends IndexableFile {
 
 		const subs = Renderer.race._mergeSubraces(it);
 		out.push(...subs.map(r => ({
-			n: r.name,
+			n: r.ENG_name? r.ENG_name: r.name,
 			s: indexer.getMetaId("s", r.source),
 			u: UrlUtil.URL_TO_HASH_BUILDER["races.html"](r),
+			cn: r.ENG_name? r.name: null
 		})));
 
 		return out;

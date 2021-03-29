@@ -23,7 +23,7 @@ HASH_BLANK = "blankhash";
 HASH_SUB_NONE = "null";
 
 VeCt = {
-	STR_NONE: "None",
+	STR_NONE: "無",
 	STR_SEE_CONSOLE: "See the console (CTRL+SHIFT+J) for details.",
 
 	HASH_SCALED: "scaled",
@@ -1146,7 +1146,6 @@ MiscUtil = {
 
 		function invokeFunc (time) {
 			let args = lastArgs; let thisArg = lastThis;
-
 			lastArgs = lastThis = undefined;
 			lastInvokeTime = time;
 			result = func.apply(thisArg, args);
@@ -1166,7 +1165,6 @@ MiscUtil = {
 
 		function shouldInvoke (time) {
 			let timeSinceLastCall = time - lastCallTime; let timeSinceLastInvoke = time - lastInvokeTime;
-
 			return (lastCallTime === undefined || (timeSinceLastCall >= wait) || (timeSinceLastCall < 0) || (maxing && timeSinceLastInvoke >= maxWait));
 		}
 
@@ -1750,7 +1748,7 @@ UrlUtil = {
 		},
 	},
 
-	getStateKeySubclass (sc) { return Parser.stringToSlug(`sub ${sc.shortName || sc.name} ${Parser.sourceJsonToAbv(sc.source)}`); },
+	getStateKeySubclass (sc) { return Parser.stringToSlug(`sub ${sc.ENG_shortName || sc.ENG_name || sc.shortName || sc.name} ${Parser.sourceJsonToAbv(sc.source)}`); },
 
 	/**
 	 * @param opts Options object.
@@ -1812,7 +1810,7 @@ UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_BESTIARY] = (it) => UrlUtil.encodeForHash
 UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_SPELLS] = (it) => UrlUtil.encodeForHash([it.name, it.source]);
 UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_BACKGROUNDS] = (it) => UrlUtil.encodeForHash([it.name, it.source]);
 UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_ITEMS] = (it) => UrlUtil.encodeForHash([it.name, it.source]);
-UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_CLASSES] = (it) => UrlUtil.encodeForHash([it.name, it.source]);
+UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_CLASSES] = (it) => UrlUtil.encodeForHash([Parser.ClassToDisplay(it.name), it.source]);
 UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_CONDITIONS_DISEASES] = (it) => UrlUtil.encodeForHash([it.name, it.source]);
 UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_FEATS] = (it) => UrlUtil.encodeForHash([it.name, it.source]);
 UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_OPT_FEATURES] = (it) => UrlUtil.encodeForHash([it.name, it.source]);
@@ -2135,6 +2133,7 @@ DataUtil = {
 					DataUtil._loaded[url] = JSON.parse(this.response);
 					resolve();
 				} catch (e) {
+					console.log(url);
 					reject(new Error(`Could not parse JSON from ${url}: ${e.message}`));
 				}
 			};
@@ -2415,7 +2414,22 @@ DataUtil = {
 			return entryList.find(it => {
 				const hash = UrlUtil.URL_TO_HASH_BUILDER[page](it);
 				impl._mergeCache[hash] = it;
-				return hash === entryHash;
+				if (hash === entryHash)
+				{
+					return true;
+				}
+				else if (it.ENG_name != undefined) // for ENG_name
+				{
+					var it2 = Object.assign({}, it);
+					it2.name = it.ENG_name;
+					const eng_hash = UrlUtil.URL_TO_HASH_BUILDER[page](it2);
+					impl._mergeCache[eng_hash] = it;
+					return eng_hash === entryHash;
+				}
+				else
+				{
+					return false;
+				}
 			});
 		},
 
@@ -2457,13 +2471,18 @@ DataUtil = {
 
 			const copyToRootProps = new Set(Object.keys(copyTo));
 
+			if(!copyFrom){
+				console.warn("not found", copyTo._copy);
+				return ;
+			}
 			// copy over required values
 			Object.keys(copyFrom).forEach(k => {
 				if (copyTo[k] === null) return delete copyTo[k];
 				if (copyTo[k] == null) {
 					if (impl._MERGE_REQUIRES_PRESERVE[k]) {
 						if (copyTo._copy._preserve && copyTo._copy._preserve[k]) copyTo[k] = copyFrom[k];
-					} else copyTo[k] = copyFrom[k];
+					}
+					else copyTo[k] = copyFrom[k];
 				}
 			});
 
@@ -2528,7 +2547,14 @@ DataUtil = {
 			function doMod_appendIfNotExistsArr (modInfo, prop) {
 				doEnsureArray(modInfo, "items");
 				if (!copyTo[prop]) return copyTo[prop] = modInfo.items;
-				copyTo[prop] = copyTo[prop].concat(modInfo.items.filter(it => !copyTo[prop].some(x => CollectionUtil.deepEquals(it, x))));
+				// 	copyTo[prop] = copyTo[prop].concat(modInfo.items.filter(it => !copyTo[prop].some(x => CollectionUtil.deepEquals(it, x)))); 不懂原本的寫法為什麼會一直顯示錯誤...
+				copyTo[prop] = copyTo[prop].concat(modInfo.items.filter(it => {
+					for (var x in copyTo[prop])
+					{
+						if (CollectionUtil.deepEquals(it, x)) return false;
+					}
+					return true;
+				}));
 			}
 
 			function doMod_replaceArr (modInfo, prop, isThrow = true) {
@@ -2546,13 +2572,16 @@ DataUtil = {
 				} else if (modInfo.replace.index != null) {
 					ixOld = modInfo.replace.index;
 				} else {
-					ixOld = copyTo[prop].findIndex(it => it.name ? it.name === modInfo.replace : it === modInfo.replace);
+					ixOld = copyTo[prop].findIndex(it => it.name ? (it.name === modInfo.replace || it.ENG_name === modInfo.replace) : it === modInfo.replace);
 				}
 
 				if (~ixOld) {
 					copyTo[prop].splice(ixOld, 1, ...modInfo.items);
 					return true;
-				} else if (isThrow) throw new Error(`Could not find "${prop}" item with name "${modInfo.replace}" to replace`);
+				} else if (isThrow) {
+					console.warn("cannot find "+prop+" item with name "+modInfo.replace+" to replace");
+					//throw new Error(`Could not find "${prop}" item with name "${modInfo.replace}" to replace`);
+				}
 				return false;
 			}
 
@@ -2571,10 +2600,13 @@ DataUtil = {
 				if (modInfo.names) {
 					doEnsureArray(modInfo, "names");
 					modInfo.names.forEach(nameToRemove => {
-						const ixOld = copyTo[prop].findIndex(it => it.name === nameToRemove);
+						const ixOld = copyTo[prop].findIndex(it => it.name === nameToRemove || it.ENG_name === nameToRemove);
 						if (~ixOld) copyTo[prop].splice(ixOld, 1);
 						else {
-							if (!modInfo.force) throw new Error(`Could not find "${prop}" item with name "${nameToRemove}" to remove`);
+							if (!modInfo.force)
+							{
+								throw new Error(`Could not find "${prop}" item with name "${nameToRemove}" to remove`);
+							}
 						}
 					});
 				} else if (modInfo.items) {
@@ -2883,6 +2915,7 @@ DataUtil = {
 
 	monster: {
 		_MERGE_REQUIRES_PRESERVE: {
+			ENG_name: true,
 			legendaryGroup: true,
 			environment: true,
 			soundClip: true,
@@ -3544,7 +3577,7 @@ RollerUtil = {
 	},
 
 	addListRollButton (isCompact) {
-		const $btnRoll = $(`<button class="btn btn-default ${isCompact ? "px-2" : ""}" id="feelinglucky" title="Feeling Lucky?"><span class="glyphicon glyphicon-random"></span></button>`);
+		const $btnRoll = $(`<button class="btn btn-default ${isCompact ? "px-2" : ""}" id="feelinglucky" title="試試手氣？"><span class="glyphicon glyphicon-random"></span></button>`);
 		$btnRoll.on("click", () => {
 			const primaryLists = ListUtil.getPrimaryLists();
 			if (primaryLists && primaryLists.length) {
@@ -6077,3 +6110,549 @@ _Donate = {
 	},
 	// endregion
 };
+
+//==================
+// Haz code
+Parser.keyToDisplay = {};
+Parser.languageKeyToDisplay = {};
+Parser.itemKeyToDisplay = {};
+
+Parser.translateKeyInMapToDisplay = function(map, key){
+	if(typeof key === "string" || key instanceof String){
+		let lowercase_key = key.toLowerCase();
+		if(map[lowercase_key]!=null)	return map[lowercase_key];
+	}
+	return key;
+}
+Parser.translateKeyToDisplay = function(common_key){
+	return Parser.translateKeyInMapToDisplay(Parser.keyToDisplay, common_key);
+}
+Parser.translateItemKeyToDisplay = function(item_key){
+	return Parser.translateKeyInMapToDisplay(Parser.itemKeyToDisplay, item_key);
+}
+
+// Attribute
+Parser.keyToDisplay["str"] = "力量";
+Parser.keyToDisplay["dex"] = "敏捷";
+Parser.keyToDisplay["con"] = "體質";
+Parser.keyToDisplay["int"] = "智力";
+Parser.keyToDisplay["wis"] = "睿知";
+Parser.keyToDisplay["cha"] = "魅力";
+Parser.AtrAbvToDisplay = function(atr_abv){
+	return Parser.translateKeyToDisplay(atr_abv);
+}
+//Race
+Parser.raceKeyToDisplay = {};
+Parser.raceKeyToDisplay["aasimar"]  	= "阿斯莫";
+Parser.raceKeyToDisplay["dragonborn"]  	= "龍裔";
+Parser.raceKeyToDisplay["dwarf"]  		= "矮人";
+Parser.raceKeyToDisplay["elf"]  		= "精靈";
+Parser.raceKeyToDisplay["gnome"]  		= "地侏";
+Parser.raceKeyToDisplay["genasi"]  		= "元素裔";
+Parser.raceKeyToDisplay["triton"]  		= "梭螺魚人";
+Parser.raceKeyToDisplay["firbolg"]  	= "費爾伯格";
+Parser.raceKeyToDisplay["siren"]  		= "賽壬";
+Parser.raceKeyToDisplay["half-elf"]  	= "半精靈";
+Parser.raceKeyToDisplay["half-orc"]  	= "半獸人";
+Parser.raceKeyToDisplay["halfling"]  	= "半身人";
+Parser.raceKeyToDisplay["human"]  		= "人類";
+Parser.raceKeyToDisplay["tiefling"]  	= "提夫林";
+Parser.raceKeyToDisplay["gith"]  		= "吉斯人";
+Parser.raceKeyToDisplay["orc"] 			= "獸人";
+Parser.raceKeyToDisplay["kobold"] 		= "狗頭人";
+Parser.raceKeyToDisplay["a small race"]  	= "小體型種族";
+Parser.raceKeyToDisplay["small race"]  	= "小體型種族";
+Parser.raceKeyToDisplay["yuan-ti pureblood"]= "純血蛇人";
+Parser.raceKeyToDisplay["vampire (ixalan)"] = "吸血鬼(依夏蘭)";
+Parser.raceKeyToDisplay["elf (zendikar)"]	= "精靈(贊迪卡)";
+
+//Subrace
+Parser.subraceKeyToDisplay = {};
+Parser.subraceKeyToDisplay["earth"] = "土"; // 元素裔
+Parser.subraceKeyToDisplay["air"]   = "氣";
+Parser.subraceKeyToDisplay["water"] = "水";
+Parser.subraceKeyToDisplay["fire"]  = "火";
+Parser.subraceKeyToDisplay["drow"]  = "卓爾"; // 精靈
+Parser.subraceKeyToDisplay["eladrin"]= "雅靈";
+Parser.subraceKeyToDisplay["high"]  = "高等";
+Parser.subraceKeyToDisplay["wood"]  = "木";
+Parser.subraceKeyToDisplay["avariel"]   = "翼精靈";
+Parser.subraceKeyToDisplay["grugach"]   = "野精靈";
+Parser.subraceKeyToDisplay["sea"]       = "海";
+Parser.subraceKeyToDisplay["shadar-kai"]= "影靈";
+Parser.subraceKeyToDisplay["aereni"]    = "艾瑞尼";
+Parser.subraceKeyToDisplay["Valenar"]   = "維歐諾爾";
+Parser.subraceKeyToDisplay["mark of shadow"]= "影龍紋";
+Parser.subraceKeyToDisplay["mul daya nation"]  = "慕達雅族"; // 精靈贊迪卡
+Parser.subraceKeyToDisplay["forest"]= "林"; // 地侏
+Parser.subraceKeyToDisplay["rock"]  = "岩";
+Parser.subraceKeyToDisplay["deep"]  = "地底";
+Parser.subraceKeyToDisplay["fallen"]= "墮落"; // 阿斯莫
+Parser.subraceKeyToDisplay["scourge"]= "天譴";
+Parser.subraceKeyToDisplay["protector"]= "守護者";
+Parser.subraceKeyToDisplay["duergar"]= "灰"; // 矮人
+Parser.subraceKeyToDisplay["githyanki"]= "吉斯洋基"; // 吉斯人
+Parser.subraceKeyToDisplay["githzerai"]= "吉斯澤萊";
+Parser.subraceKeyToDisplay["drow descent"]= "卓爾血統"; // 半精靈
+Parser.subraceKeyToDisplay["variant"]= "變體"; // 提夫林
+Parser.subraceKeyToDisplay["asmodeus"]= "阿斯莫德";
+Parser.subraceKeyToDisplay["levistus"]= "萊維斯圖斯";
+Parser.subraceKeyToDisplay["fierna"]= "菲爾娜";
+Parser.subraceKeyToDisplay["mammon"]= "瑪門";
+Parser.subraceKeyToDisplay["dispater"]= "狄斯帕特";
+Parser.subraceKeyToDisplay["mephistopheles"]= "梅菲斯托費勒斯";
+Parser.subraceKeyToDisplay["glasya"]= "格萊希亞";
+Parser.subraceKeyToDisplay["zariel"]= "扎瑞爾";
+Parser.subraceKeyToDisplay["baalzebul"]= "巴力西卜";
+Parser.subraceKeyToDisplay[""]= "";
+
+Parser.RaceToDisplay = function(race){
+	let trans_race = Parser.translateKeyInMapToDisplay(Parser.raceKeyToDisplay, race);
+	if(race===trans_race){
+		let r_match = race.match(/(.*)( ?\(([^(]*)\))$/);
+		if(r_match && r_match[2]){
+			let main_race = Parser.translateKeyInMapToDisplay(Parser.raceKeyToDisplay, r_match[1].replace(/ *$/,""));
+			let sub_race  = Parser.translateKeyInMapToDisplay(Parser.subraceKeyToDisplay, r_match[3]);
+			return main_race + "(" + sub_race + ")";
+		}
+		return race;
+	}
+	else{
+		return trans_race;
+	}
+}
+Parser.SubraceToDisplay = function(sub_race){
+	return Parser.translateKeyInMapToDisplay(Parser.subraceKeyToDisplay, sub_race);
+}
+//classes
+Parser.classKeyToDisplay = {};
+Parser.classKeyToDisplay["wizard"]   = "法師";
+Parser.classKeyToDisplay["sorcerer"] = "術士";
+Parser.classKeyToDisplay["warlock"]  = "契術師";
+Parser.classKeyToDisplay["ranger"]   = "遊俠";
+Parser.classKeyToDisplay["paladin"]  = "聖騎士";
+Parser.classKeyToDisplay["druid"]    = "德魯伊";
+Parser.classKeyToDisplay["cleric"]   = "牧師";
+Parser.classKeyToDisplay["bard"]     = "吟遊詩人";
+Parser.classKeyToDisplay["barbarian"]= "野蠻人";
+Parser.classKeyToDisplay["fighter"]  = "戰士";
+Parser.classKeyToDisplay["rogue"]    = "遊蕩者";
+Parser.classKeyToDisplay["artificer"]= "奇械師";
+Parser.classKeyToDisplay["ranger (revised)"]   = "遊俠(修訂)";
+Parser.classKeyToDisplay["artificer revisited"]= "奇械師(再製)";
+Parser.ClassToDisplay = function(c){
+	let c_match = c.match(/([^()]*)( ?\((.*)\))?/);
+	if(c_match && c_match[2]){
+		let c_name = Parser.translateKeyInMapToDisplay(Parser.classKeyToDisplay, c_match[1].replace(/ *$/,""));
+		let source = c_match[3]=='Revised'? '(修訂)': c_match[2];
+		return c_name + " " + source;
+	}
+	return Parser.translateKeyInMapToDisplay(Parser.classKeyToDisplay, c);
+}
+//subclass
+Parser.subclassKeyToDisplay = {};
+Parser.subclassKeyToDisplay["arcane trickster"] = "詭術師";
+Parser.subclassKeyToDisplay["totem warrior"] = "圖騰勇士";
+Parser.subclassKeyToDisplay["eldritch knight"] = "魔能騎士";
+Parser.subclassKeyToDisplay["arcane archer"] = "魔射手";
+Parser.subclassKeyToDisplay["divine soul"] = "神聖之魂";
+Parser.subclassKeyToDisplay["celestial"] = "天界宗主";
+Parser.subclassKeyToDisplay["undying"] = "不朽者";
+Parser.subclassKeyToDisplay["fiend"] = "邪魔宗主";
+Parser.subclassKeyToDisplay["great old one"] = "舊日支配者";
+Parser.subclassKeyToDisplay["archfey"] = "至高妖精";
+Parser.subclassKeyToDisplay["hexblade"] = "咒劍士";
+Parser.subclassKeyToDisplay["kraken"] = "克拉肯";
+Parser.subclassKeyToDisplay["raven queen"] = "鴉后";
+Parser.subclassKeyToDisplay["seeker"] = "探求者";
+Parser.subclassKeyToDisplay["land"] = "大地結社";
+Parser.subclassKeyToDisplay["knowledge"]  = "知識";
+Parser.subclassKeyToDisplay["life"]       = "生命";
+Parser.subclassKeyToDisplay["light"]      = "光明";
+Parser.subclassKeyToDisplay["nature"]     = "自然";
+Parser.subclassKeyToDisplay["tempest"]    = "暴風";
+Parser.subclassKeyToDisplay["trickery"]   = "詭術";
+Parser.subclassKeyToDisplay["war"]        = "戰爭";
+Parser.subclassKeyToDisplay["death"]      = "死亡";
+Parser.subclassKeyToDisplay["arcana"]     = "奧秘";
+Parser.subclassKeyToDisplay["forge"]      = "鍛造";
+Parser.subclassKeyToDisplay["grave"]      = "墳墓";
+Parser.subclassKeyToDisplay["beauty"]     = "美麗";
+Parser.subclassKeyToDisplay["darkness"]   = "黑暗";
+Parser.subclassKeyToDisplay["destruction"]= "毀滅";
+Parser.subclassKeyToDisplay["order"]      = "秩序";
+Parser.subclassKeyToDisplay["gloom stalker"] = "幽域追蹤者";
+Parser.subclassKeyToDisplay["horizon walker"] = "境界行者";
+Parser.subclassKeyToDisplay["monster slayer"] = "怪物殺手";
+Parser.subclassKeyToDisplay["ancients"] = "遠古";
+Parser.subclassKeyToDisplay["devotion"] = "奉獻";
+Parser.subclassKeyToDisplay["vengeance"] = "復仇";
+Parser.subclassKeyToDisplay["oathbreaker"] = "破誓者";
+Parser.subclassKeyToDisplay["crown"] = "王冠";
+Parser.subclassKeyToDisplay["conquest"] = "征服";
+Parser.subclassKeyToDisplay["redemption"] = "救贖";
+Parser.SubclassToDisplay = function(sc){
+	let sc_match = sc.match(/([^()]*)( ?\((.*)\))?/);
+	if(sc_match && sc_match[2]){
+		let sc_name = Parser.translateKeyInMapToDisplay(Parser.subclassKeyToDisplay, sc_match[1].replace(/ *$/,""));
+		return sc_name + " " + sc_match[2];
+	}
+	return Parser.translateKeyInMapToDisplay(Parser.subclassKeyToDisplay, sc);
+}
+
+//Skill
+Parser.skillKeyToDisplay = {};
+Parser.skillKeyToDisplay["athletics"]  	   = "運動";
+Parser.skillKeyToDisplay["acrobatics"]     = "特技";
+Parser.skillKeyToDisplay["sleight of hand"]= "手上把戲";
+Parser.skillKeyToDisplay["stealth"]  	   = "隱匿";
+Parser.skillKeyToDisplay["arcana"]  	   = "奧秘";
+Parser.skillKeyToDisplay["history"]  	   = "歷史";
+Parser.skillKeyToDisplay["investigation"]  = "調查";
+Parser.skillKeyToDisplay["nature"]  	   = "自然";
+Parser.skillKeyToDisplay["religion"]  	   = "宗教";
+Parser.skillKeyToDisplay["animal handling"]= "動物馴養";
+Parser.skillKeyToDisplay["insight"]  	   = "察言觀色";
+Parser.skillKeyToDisplay["medicine"]  	   = "醫藥";
+Parser.skillKeyToDisplay["perception"]     = "感知";
+Parser.skillKeyToDisplay["survival"]  	   = "求生";
+Parser.skillKeyToDisplay["deception"]  	   = "欺瞞";
+Parser.skillKeyToDisplay["intimidation"]   = "威嚇";
+Parser.skillKeyToDisplay["performance"]    = "表演";
+Parser.skillKeyToDisplay["persuasion"]     = "說服";
+Parser.SkillToDisplay = function(sk){
+	return Parser.translateKeyInMapToDisplay(Parser.skillKeyToDisplay, sk);
+}
+//Speed
+Parser.speedKeyToDisplay = {};
+Parser.speedKeyToDisplay["climb"] = "攀爬";
+Parser.speedKeyToDisplay["burrow"]= "掘地";
+Parser.speedKeyToDisplay["fly"]   = "飛行";
+Parser.speedKeyToDisplay["swim"]  = "游泳";
+Parser.speedKeyToDisplay["walk"]  = "步行";
+Parser.speedKeyToDisplay["hover"] = "浮空";
+Parser.SpeedToDisplay = function(sp){
+	let sp_match = sp.match(/([^()]*)(\((.*)\))?/);
+	if(sp_match && sp_match[2]){
+		let main_sp = Parser.translateKeyInMapToDisplay(Parser.speedKeyToDisplay, sp_match[1].replace(/ *$/,""));
+		sp_match[3] = sp_match[3].toLowerCase();
+		let deco    = sp_match[3]=="fast"? "快": sp_match[3]=="slow"? "慢": sp_match[3];
+		return main_sp + "(" + deco + ")";
+	}
+	return Parser.translateKeyInMapToDisplay(Parser.speedKeyToDisplay, sp);
+}
+//Damage Type
+Parser.damageKeyToDisplay = {};
+Parser.damageKeyToDisplay["acid"]		= "酸蝕";
+Parser.damageKeyToDisplay["bludgeoning"]= "鈍擊";
+Parser.damageKeyToDisplay["cold"]		= "寒冰";
+Parser.damageKeyToDisplay["fire"]		= "火焰";
+Parser.damageKeyToDisplay["force"]		= "力場";
+Parser.damageKeyToDisplay["lightning"]	= "閃電";
+Parser.damageKeyToDisplay["necrotic"]	= "死靈";
+Parser.damageKeyToDisplay["piercing"]	= "穿刺";
+Parser.damageKeyToDisplay["poison"]		= "毒素";
+Parser.damageKeyToDisplay["psychic"]	= "精神";
+Parser.damageKeyToDisplay["radiant"]	= "光耀";
+Parser.damageKeyToDisplay["slashing"]	= "劈砍";
+Parser.damageKeyToDisplay["thunder"]	= "雷鳴";
+Parser.DamageToDisplay = function(d){
+	return Parser.translateKeyInMapToDisplay(Parser.damageKeyToDisplay, d);
+}
+//Condotions
+Parser.condKeyToDisplay = {};
+Parser.condKeyToDisplay["blinded"]		= "目盲";
+Parser.condKeyToDisplay["charmed"]		= "魅惑";
+Parser.condKeyToDisplay["deafened"]		= "耳聾";
+Parser.condKeyToDisplay["exhaustion"]	= "力竭";
+Parser.condKeyToDisplay["frightened"]	= "恐懼";
+Parser.condKeyToDisplay["grappled"]		= "被擒";
+Parser.condKeyToDisplay["incapacitated"]= "無力";
+Parser.condKeyToDisplay["invisible"]	= "隱形";
+Parser.condKeyToDisplay["paralyzed"]	= "麻痺";
+Parser.condKeyToDisplay["petrified"]	= "石化";
+Parser.condKeyToDisplay["poisoned"]		= "中毒";
+Parser.condKeyToDisplay["prone"]		= "伏地";
+Parser.condKeyToDisplay["restrained"]	= "束縛";
+Parser.condKeyToDisplay["stunned"]		= "震懾";
+Parser.condKeyToDisplay["unconscious"]	= "昏迷";
+Parser.ConditionToDisplay = function(c){
+	return Parser.translateKeyInMapToDisplay(Parser.condKeyToDisplay, c);
+}
+
+//Armor
+Parser.armorKeyToDisplay = {};
+Parser.armorKeyToDisplay["light"]  = "輕";
+Parser.armorKeyToDisplay["medium"] = "中";
+Parser.armorKeyToDisplay["heavy"]  = "重";
+Parser.armorKeyToDisplay["shields"]  = "盾牌";
+Parser.ArmorToDisplay = function(armor){
+	return Parser.translateKeyInMapToDisplay(Parser.armorKeyToDisplay, armor);
+}
+
+//Weapon
+Parser.keyToDisplay["simple"]  = "簡易";
+Parser.keyToDisplay["martial"] = "軍用";
+//Tools
+Parser.keyToDisplay["alchemist's supplies"] 	= "煉金師設備";
+Parser.keyToDisplay["artisan's tools"]  		= "工匠工具";
+Parser.keyToDisplay["brewer's supplies"]  		= "釀酒設備";
+Parser.keyToDisplay["calligrapher's supplies"]  = "書寫設備";
+Parser.keyToDisplay["cartographer's tools"]  	= "制圖工具";
+Parser.keyToDisplay["cook's utensils"]  = "廚師器具";
+Parser.keyToDisplay["disguise kit"]  	= "偽裝工具組";
+Parser.keyToDisplay["forgery kit"]  	= "文書偽造工具組";
+Parser.keyToDisplay["gaming set"]  		= "遊戲套組";
+Parser.keyToDisplay["herbalism kit"]  	= "草藥工具組";
+Parser.keyToDisplay["musical instrument"] = "樂器";
+Parser.keyToDisplay["navigator's tools"]  = "領航工具";
+Parser.keyToDisplay["poisoner's kit"]  = "製毒工具組";
+Parser.keyToDisplay["thieves' tools"]  = "盜賊工具";
+Parser.keyToDisplay["tinker's tools"]  = "修補工具";
+Parser.keyToDisplay["vehicles (air)"]  = "載具(空中)";
+Parser.keyToDisplay["vehicles (land)"] = "載具(陸上)";
+Parser.keyToDisplay["vehicles (sea)"]  = "載具(海洋)";
+Parser.keyToDisplay["vehicles (water)"]= "載具(水上)";
+//Spell
+Parser.keyToDisplay["line"]= "直線";
+Parser.keyToDisplay["cube"]= "立方";
+Parser.keyToDisplay["cone"]= "錐形";
+Parser.keyToDisplay["cylinder"]= "圓柱";
+Parser.keyToDisplay["radius"]= "半徑";
+
+//Spell
+Parser.keyToDisplay["action"] = "動作";
+Parser.keyToDisplay["bonus"] = "附贈";
+Parser.keyToDisplay["reaction"] = "反應";
+Parser.keyToDisplay["round"] = "輪";
+Parser.keyToDisplay["minute"] = "分鐘";
+Parser.keyToDisplay["hour"] = "小時";
+Parser.keyToDisplay["day"] = "天";
+
+//Item
+Parser.itemKeyToDisplay["none"] 	= "無";
+Parser.itemKeyToDisplay["common"] 	= "常見";
+Parser.itemKeyToDisplay["uncommon"] = "非常見";
+Parser.itemKeyToDisplay["rare"] 	= "珍稀";
+Parser.itemKeyToDisplay["very rare"]= "非常珍稀";
+Parser.itemKeyToDisplay["legendary"]= "傳說";
+Parser.itemKeyToDisplay["artifact"] = "神器";
+Parser.itemKeyToDisplay["unknown"] 	= "不明";
+Parser.itemKeyToDisplay["unknown (magic)"] 	= "不明(魔法)";
+Parser.itemKeyToDisplay["other"] 	= "其他";
+Parser.itemKeyToDisplay["varies"] 	= "可變";
+
+//Item Type
+Parser.itemTypeKeyToDisplay = {};
+Parser.itemTypeKeyToDisplay["adventuring gear"] = "冒險裝備";
+Parser.itemTypeKeyToDisplay["tools"] = "工具";
+Parser.itemTypeKeyToDisplay["artisan's tools"] = "工匠工具";
+Parser.itemTypeKeyToDisplay["gaming set"] = "遊戲套組";
+Parser.itemTypeKeyToDisplay["instrument"] = "樂器";
+Parser.itemTypeKeyToDisplay["heavy armor"] = "重甲";
+Parser.itemTypeKeyToDisplay["medium armor"]= "中甲";
+Parser.itemTypeKeyToDisplay["light armor"] = "輕甲";
+Parser.itemTypeKeyToDisplay["shield"] = "盾牌";
+Parser.itemTypeKeyToDisplay["simple weapon"] = "簡易武器";
+Parser.itemTypeKeyToDisplay["martial weapon"] = "軍用武器";
+Parser.itemTypeKeyToDisplay["melee weapon"] = "近戰武器";
+Parser.itemTypeKeyToDisplay["ranged weapon"] = "遠程武器";
+Parser.itemTypeKeyToDisplay["ammunition"]   = "彈藥";
+Parser.itemTypeKeyToDisplay["explosive"]    = "爆裂物";
+Parser.itemTypeKeyToDisplay["mount"] = "坐騎";
+Parser.itemTypeKeyToDisplay["spellcasting focus"] = "法器";
+Parser.itemTypeKeyToDisplay["rod"] = "權杖";
+Parser.itemTypeKeyToDisplay["wand"] = "魔杖";
+Parser.itemTypeKeyToDisplay["ring"] = "戒指";
+Parser.itemTypeKeyToDisplay["wondrous item"] = "奇物";
+Parser.itemTypeKeyToDisplay["wondrous item (tattoo)"] = "奇物(刺青)";
+Parser.itemTypeKeyToDisplay["tattoo"] = "刺青";
+Parser.itemTypeKeyToDisplay["scroll"] = "卷軸";
+Parser.itemTypeKeyToDisplay["potion"] = "藥水";
+Parser.itemTypeKeyToDisplay["vehicle"] = "載具";
+Parser.itemTypeKeyToDisplay["tack and harness"] = "鞍轡和馬具";
+Parser.itemTypeKeyToDisplay["trade good"] = "貿易商品";
+Parser.itemTypeKeyToDisplay["generic variant"] = "通用變體";
+Parser.itemTypeKeyToDisplay["other"] = "其他";
+Parser.itemTypeKeyToDisplay["poison"] = "毒藥";
+Parser.itemTypeKeyToDisplay["treasure"] = "$";
+Parser.itemTypeKeyToDisplay["food and drink"] = "食物和水";
+//Age
+Parser.itemTypeKeyToDisplay["renaissance"]= "文藝復興";
+Parser.itemTypeKeyToDisplay["modern"] 	  = "現代";
+Parser.itemTypeKeyToDisplay["futuristic"] = "未來";
+//Technology
+Parser.itemTypeKeyToDisplay["staff"] 	= "法杖";
+Parser.itemTypeKeyToDisplay["firearm"] 	= "槍械";
+Parser.ItemTypeToDisplay = function(i){
+	let item_match = i.match(/([^()]*) (\((.*)\))?/);
+	if(item_match && item_match[2]){
+		var type = Parser.translateKeyInMapToDisplay(Parser.itemTypeKeyToDisplay, item_match[1]);
+		return type+" "+item_match[2]
+	}
+	return Parser.translateKeyInMapToDisplay(Parser.itemTypeKeyToDisplay, i);
+}
+//Item Tier
+Parser.itemTierKeyToDisplay = {};
+Parser.itemTierKeyToDisplay["none"] = "無";
+Parser.itemTierKeyToDisplay["other"] = "其他";
+Parser.itemTierKeyToDisplay["minor"] = "弱效";
+Parser.itemTierKeyToDisplay["major"] = "強效";
+Parser.ItemTierToDisplay = function(t){
+	return Parser.translateKeyInMapToDisplay(Parser.itemTierKeyToDisplay, t);
+}
+
+//Language
+Parser.languageKeyToDisplay["any"] 	 = "任意";
+Parser.languageKeyToDisplay["any (choose)"]  = "任意(選擇)";
+Parser.languageKeyToDisplay["all"] 	 = "全部語言";
+Parser.languageKeyToDisplay["other"] = "其他";
+Parser.languageKeyToDisplay["choose"]= "自選";
+Parser.languageKeyToDisplay["can't speak known languages"]= "理解但不會說";
+Parser.languageKeyToDisplay["telepathy"]= "心靈感應";
+Parser.languageKeyToDisplay["thieves' cant"]= "竊賊黑話";
+Parser.languageKeyToDisplay["druidic"] 		= "德魯伊語";
+Parser.languageKeyToDisplay["common"] 	  = "通用語";
+Parser.languageKeyToDisplay["undercommon"]= "地底通用語";
+Parser.languageKeyToDisplay["draconic"] = "龍語";
+Parser.languageKeyToDisplay["dwarvish"] = "矮人語";
+Parser.languageKeyToDisplay["elvish"] 	= "精靈語";
+Parser.languageKeyToDisplay["giant"] 	= "巨人語";
+Parser.languageKeyToDisplay["gnomish"] 	= "地侏語";
+Parser.languageKeyToDisplay["goblin"] 	= "哥布林語";
+Parser.languageKeyToDisplay["halfling"] = "半身人語";
+Parser.languageKeyToDisplay["orc"] 		= "獸人語";
+Parser.languageKeyToDisplay["gith"]		= "吉斯人語";
+Parser.languageKeyToDisplay["abyssal"] 	   = "深淵語";
+Parser.languageKeyToDisplay["celestial"]   = "天界語";
+Parser.languageKeyToDisplay["deep speech"] = "深幽語";
+Parser.languageKeyToDisplay["infernal"]    = "煉獄語";
+Parser.languageKeyToDisplay["primordial"]= "原初語";
+Parser.languageKeyToDisplay["ignan"] 	 = "火族語";
+Parser.languageKeyToDisplay["sylvan"] 	 = "木族語";
+Parser.languageKeyToDisplay["terran"] 	 = "土族語";
+Parser.languageKeyToDisplay["aquan"] 	 = "水族語";
+Parser.languageKeyToDisplay["auran"] 	 = "氣族語";
+
+Parser.LanguageToDisplay = function(lang_key){
+	return Parser.translateKeyInMapToDisplay(Parser.languageKeyToDisplay, lang_key);
+}
+
+//MonsterType-tag
+Parser.monsterTagKeyToDisplay = {};
+Parser.monsterTagKeyToDisplay["any race"] = "任意種族";
+Parser.monsterTagKeyToDisplay["shapechanger"] = "變形者";
+Parser.monsterTagKeyToDisplay["swarm"] = "集群";
+Parser.monsterTagKeyToDisplay["angel"] = "天使";
+Parser.monsterTagKeyToDisplay["demon"] = "惡魔";
+Parser.monsterTagKeyToDisplay["devil"] = "魔鬼";
+Parser.monsterTagKeyToDisplay["titan"] = "泰坦";
+Parser.monsterTagKeyToDisplay["aarakocra"] = "阿蘭寇拉鷹人";
+Parser.monsterTagKeyToDisplay["gnoll"] = "豺狼人";
+Parser.monsterTagKeyToDisplay["goblinoid"] = "類哥布林";
+Parser.monsterTagKeyToDisplay["merfolk"] = "人魚";
+Parser.monsterTagKeyToDisplay["bullywug"] = "狂蛙人";
+Parser.monsterTagKeyToDisplay["kenku"] = "天狗";
+Parser.monsterTagKeyToDisplay["kuo-toa"] = "寇濤魚人";
+Parser.monsterTagKeyToDisplay["sahuagin"] = "沙華魚人";
+Parser.monsterTagKeyToDisplay["lizardfolk"] = "蜥蜴人"
+Parser.monsterTagKeyToDisplay["troglodyte"] = "戰蜴人"
+Parser.monsterTagKeyToDisplay["thri-kreen"] = "斯里克林螳螂人"
+Parser.monsterTagKeyToDisplay["quaggoth"] = "澤地熊人";
+Parser.monsterTagKeyToDisplay["grimlock"] = "石盲蠻族";
+Parser.monsterTagKeyToDisplay["yuan-ti"] = "蛇人";
+Parser.monsterTagKeyToDisplay["yugoloth"] = "尤格羅斯魔";
+Parser.monsterTagKeyToDisplay["simic hybrid"] = "析米克混合體";
+Parser.monsterTagKeyToDisplay["firenewt"] = "火蠑螈";
+Parser.monsterTagKeyToDisplay["grung"] = "格龍蛙人";
+Parser.monsterTagKeyToDisplay["xvart"] = "法特怪";
+Parser.monsterTagKeyToDisplay["shield dwarf"] = "盾矮人";
+Parser.monsterTagKeyToDisplay["cloud giant"] = "雲巨人";
+Parser.monsterTagKeyToDisplay["fire giant"] = "火巨人";
+Parser.monsterTagKeyToDisplay["frost giant"] = "霜巨人";
+Parser.monsterTagKeyToDisplay["hill giant"] = "山丘巨人";
+Parser.monsterTagKeyToDisplay["stone giant"] = "石巨人";
+Parser.monsterTagKeyToDisplay["storm giant"] = "風暴巨人";
+Parser.monsterTagKeyToDisplay["earth genasi"] = "土元素裔";
+Parser.monsterTagKeyToDisplay["fire genasi"] = "火元素裔";
+Parser.monsterTagKeyToDisplay["water genasi"] = "水元素裔";
+Parser.monsterTagKeyToDisplay["air genasi"] = "氣元素裔";
+Parser.MonsterTagToDisplay = function(e){
+	var race_e = Parser.RaceToDisplay(e)
+	return Parser.translateKeyInMapToDisplay(Parser.monsterTagKeyToDisplay, race_e);
+}
+
+//Environment
+Parser.environmentKeyToDisplay = {};
+Parser.environmentKeyToDisplay["arctic"]    = "極地";
+Parser.environmentKeyToDisplay["coastal"]   = "海岸";
+Parser.environmentKeyToDisplay["desert"]    = "沙漠";
+Parser.environmentKeyToDisplay["forest"]    = "森林";
+Parser.environmentKeyToDisplay["grassland"] = "草地";
+Parser.environmentKeyToDisplay["hill"]      = "丘陵";
+Parser.environmentKeyToDisplay["mountain"]  = "高山";
+Parser.environmentKeyToDisplay["swamp"]     = "沼澤";
+Parser.environmentKeyToDisplay["underdark"] = "幽暗地域";
+Parser.environmentKeyToDisplay["underwater"]= "水下";
+Parser.environmentKeyToDisplay["urban"]     = "城鎮";
+Parser.EnvironmentToDisplay = function(e){
+	return Parser.translateKeyInMapToDisplay(Parser.environmentKeyToDisplay, e);
+}
+
+//Pantheon
+Parser.pantheonKeyToDisplay = {};
+Parser.pantheonKeyToDisplay["celtic"] = "凱爾特";
+Parser.pantheonKeyToDisplay["egyptian"] = "埃及";
+Parser.pantheonKeyToDisplay["greek"] = "希臘";
+Parser.pantheonKeyToDisplay["norse"] = "北歐";
+Parser.pantheonKeyToDisplay["nonhuman"] = "非人類";
+Parser.pantheonKeyToDisplay["elven"] = "精靈";
+Parser.pantheonKeyToDisplay["drow"] = "卓爾";
+Parser.pantheonKeyToDisplay["dwarven"] = "矮人";
+Parser.pantheonKeyToDisplay["duergar"] = "灰矮人";
+Parser.pantheonKeyToDisplay["gnomish"] = "地侏";
+Parser.pantheonKeyToDisplay["halfling"] = "半身人";
+Parser.pantheonKeyToDisplay["orc"] = "獸人";
+Parser.pantheonKeyToDisplay["forgotten realms"] = "被遺忘的國度";
+Parser.pantheonKeyToDisplay["faerûnian"] = "費倫";
+Parser.pantheonKeyToDisplay["dawn war"] = "破曉之戰";
+Parser.pantheonKeyToDisplay["dragonlance"] = "龍槍";
+Parser.pantheonKeyToDisplay["eberron"] = "艾伯倫";
+Parser.pantheonKeyToDisplay["greyhawk"] = "灰鷹";
+Parser.PantheonToDisplay = function(p){
+	return Parser.translateKeyInMapToDisplay(Parser.pantheonKeyToDisplay, p);
+}
+Parser.pantheonCategoryKeyToDisplay = {};
+Parser.pantheonCategoryKeyToDisplay["the sovereign host"] = "天命諸神";
+Parser.pantheonCategoryKeyToDisplay["the dark six"] = "黑暗六邪";
+Parser.pantheonCategoryKeyToDisplay["other faiths of eberron"] = "艾伯倫的其他信仰";
+Parser.pantheonCategoryKeyToDisplay["the gods of good"] = "善良諸神";
+Parser.pantheonCategoryKeyToDisplay["the gods of neutrality"] = "中立諸神";
+Parser.pantheonCategoryKeyToDisplay["the gods of evil"] = "邪惡諸神";
+Parser.PantheonCategoryToDisplay = function(p){
+	return Parser.translateKeyInMapToDisplay(Parser.pantheonCategoryKeyToDisplay, p);
+}
+
+Parser.itemValueToDisplay = function(value){
+	if(!value) return value;
+	if(value=="Varies") return "不定";
+	return value.replace(/ *([pgesc])p/g, '$1幣').replace(/p(幣)/g, '鉑金$1').replace(/g(幣)/g, '金$1').replace(/e(幣)/g, '珀金$1').replace(/s(幣)/g, '銀$1').replace(/c(幣)/g, '銅$1');
+}
+
+
+function isStringMatch (a, b, case_sensitive) {
+	if ((typeof a) !== 'string' || (typeof b) !== 'string')	return false;
+	if (case_sensitive) return a === b;
+	else 				return a.toUpperCase() === b.toUpperCase();
+}
+
+Parser.ConditionsDiseasesKeyToDisplay = {};
+Parser.ConditionsDiseasesKeyToDisplay["condition"] = "狀態";
+Parser.ConditionsDiseasesKeyToDisplay["disease"] = "疾病";
+Parser.ConditionsDiseasesKeyToDisplay["status"] = "姿態";
+Parser.ConditionsDiseasesToDisplay = function(p){
+	return Parser.translateKeyInMapToDisplay(Parser.ConditionsDiseasesKeyToDisplay, p);
+}
+
+// Haz code
+// ==================

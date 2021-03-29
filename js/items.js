@@ -33,7 +33,7 @@ class ItemsPage {
 		eleLi.className = `lst__row flex-col ${isExcluded ? "lst__row--blacklisted" : ""}`;
 
 		const source = Parser.sourceJsonToAbv(item.source);
-		const type = item._typeListText.join(", ").toTitleCase();
+		const type = item._typeListText.map(Parser.ItemTypeToDisplay).join(", ").toTitleCase();
 
 		if (item._fIsMundane) {
 			eleLi.innerHTML = `<a href="#${hash}" class="lst--border lst__row-inner">
@@ -69,7 +69,7 @@ class ItemsPage {
 				<span class="col-4">${type}</span>
 				<span class="col-1-5 text-center">${Parser.itemWeightToFull(item, true) || "\u2014"}</span>
 				<span class="attunement col-0-6 text-center">${item._attunementCategory !== VeCt.STR_NO_ATTUNEMENT ? "×" : ""}</span>
-				<span class="rarity col-1-4">${(item.rarity || "").toTitleCase()}</span>
+				<span class="rarity col-1-4">${(Parser.translateItemKeyToDisplay(item.rarity) || "").toTitleCase()}</span>
 				<span class="source col-1 text-center ${Parser.sourceJsonToColor(item.source)} pr-0" title="${Parser.sourceJsonToFull(item.source)}" ${BrewUtil.sourceJsonToStyle(item.source)}>${source}</span>
 			</a>`;
 
@@ -158,17 +158,17 @@ class ItemsPage {
 
 		const tabMetas = [
 			new Renderer.utils.TabButton({
-				label: "Item",
+				label: "物品",
 				fnPopulate: buildStatsTab,
 				isVisible: true,
 			}),
 			new Renderer.utils.TabButton({
-				label: "Info",
+				label: "資訊",
 				fnPopulate: buildFluffTab,
 				isVisible: Renderer.utils.hasFluffText(item),
 			}),
 			new Renderer.utils.TabButton({
-				label: "Images",
+				label: "圖片",
 				fnPopulate: buildFluffTab.bind(null, true),
 				isVisible: Renderer.utils.hasFluffImages(item),
 			}),
@@ -206,7 +206,7 @@ class ItemsPage {
 			if (item.value) value += item.value * count;
 		});
 
-		this._$totalwWeight.text(`${weight.toLocaleString(undefined, {maximumFractionDigits: 5})} lb${weight !== 1 ? "s" : ""}.`);
+		this._$totalwWeight.text(`${weight.toLocaleString(undefined, {maximumFractionDigits: 5})} 磅${weight !== 1 ? "s" : ""}.`);
 		this._$totalItems.text(cntItems);
 
 		if (availConversions.size) {
@@ -422,8 +422,8 @@ class ItemsPage {
 		}
 
 		// populate table labels
-		$(`h3.ele-mundane span.side-label`).text("Mundane");
-		$(`h3.ele-magic span.side-label`).text("Magic");
+		$(`h3.ele-mundane span.side-label`).text("尋常物品");
+		$(`h3.ele-magic span.side-label`).text("魔法物品");
 
 		this._mundaneList.update();
 		this._magicList.update();

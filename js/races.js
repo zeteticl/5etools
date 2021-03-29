@@ -55,7 +55,7 @@ class RacesPage extends ListPage {
 		eleLi.className = `lst__row flex-col ${isExcluded ? "lst__row--blacklisted" : ""}`;
 
 		const hash = UrlUtil.autoEncodeHash(race);
-		const ability = race.ability ? Renderer.getAbilityData(race.ability) : {asTextShort: "None"};
+		const ability = race.ability ? Renderer.getAbilityData(race.ability) : {asTextShort: "無"};
 		const size = Parser.sizeAbvToFull(race.size || SZ_VARIES);
 		const source = Parser.sourceJsonToAbv(race.source);
 
@@ -64,6 +64,7 @@ class RacesPage extends ListPage {
 			<span class="col-4">${ability.asTextShort}</span>
 			<span class="col-2 text-center">${size}</span>
 			<span class="col-2 text-center ${Parser.sourceJsonToColor(race.source)} pr-0" title="${Parser.sourceJsonToFull(race.source)}" ${BrewUtil.sourceJsonToStyle(race.source)}>${source}</span>
+			<span class="eng_name hidden">${race.ENG_name ? race.ENG_name : race.name}</span>
 		</a>`;
 
 		const listItem = new ListItem(
@@ -77,6 +78,7 @@ class RacesPage extends ListPage {
 				source,
 				cleanName: PageFilterRaces.getInvertedName(race.name) || "",
 				alias: PageFilterRaces.getListAliases(race),
+				eng_name: race.ENG_name ? race.ENG_name : race.name,
 			},
 			{
 				uniqueId: race.uniqueId ? race.uniqueId : rcI,
@@ -143,17 +145,17 @@ class RacesPage extends ListPage {
 
 		const tabMetas = [
 			new Renderer.utils.TabButton({
-				label: "Traits",
+				label: "特性",
 				fnPopulate: buildStatsTab,
 				isVisible: true,
 			}),
 			new Renderer.utils.TabButton({
-				label: "Info",
+				label: "資訊",
 				fnPopulate: buildFluffTab,
 				isVisible: Renderer.utils.hasFluffText(race),
 			}),
 			new Renderer.utils.TabButton({
-				label: "Images",
+				label: "圖片",
 				fnPopulate: buildFluffTab.bind(null, true),
 				isVisible: Renderer.utils.hasFluffImages(race),
 			}),

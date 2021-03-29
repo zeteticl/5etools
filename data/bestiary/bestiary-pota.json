@@ -19,7 +19,7 @@
 	},
 	"monster": [
 		{
-			"name": "Aerisi Kalinoth",
+			"name": "阿莉希．卡蘿娜斯",
 			"isNpc": true,
 			"source": "PotA",
 			"page": 192,
@@ -38,7 +38,7 @@
 				13,
 				{
 					"ac": 16,
-					"condition": "with {@spell mage armor}",
+					"condition": "with {@spell 法師護甲}",
 					"braces": true
 				}
 			],
@@ -61,16 +61,16 @@
 				"perception": "+3"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗視覺60呎"
 			],
 			"passive": 13,
 			"resist": [
 				"lightning"
 			],
 			"languages": [
-				"Auran",
-				"Common",
-				"Elvish"
+				"氣族語",
+				"通用語",
+				"精靈語"
 			],
 			"cr": "7",
 			"spellcasting": [
@@ -83,56 +83,56 @@
 						"0": {
 							"spells": [
 								"{@spell gust|xge}",
-								"{@spell mage hand}",
-								"{@spell message}",
-								"{@spell prestidigitation}",
-								"{@spell ray of frost}",
-								"{@spell shocking grasp}"
+								"{@spell 法師之手}",
+								"{@spell 傳訊術}",
+								"{@spell 魔法技倆}",
+								"{@spell 冷凍射線}",
+								"{@spell 電爪}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell charm person}",
-								"{@spell feather fall}",
-								"{@spell mage armor}",
-								"{@spell thunderwave}"
+								"{@spell 魅惑人類}",
+								"{@spell 羽落術}",
+								"{@spell 法師護甲}",
+								"{@spell 雷鳴波}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
 								"{@spell dust devil|xge}",
-								"{@spell gust of wind}",
-								"{@spell invisibility}"
+								"{@spell 造風術}",
+								"{@spell 隱形術}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell fly}",
-								"{@spell gaseous form}",
-								"{@spell lightning bolt}"
+								"{@spell 飛行術}",
+								"{@spell 氣化形體}",
+								"{@spell 閃電束}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell ice storm}",
+								"{@spell 冰風暴}",
 								"{@spell storm sphere|xge}"
 							]
 						},
 						"5": {
 							"slots": 2,
 							"spells": [
-								"{@spell cloudkill}",
-								"{@spell seeming} (cast each day)"
+								"{@spell 死雲術}",
+								"{@spell 偽裝術} (cast each day)"
 							]
 						},
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell chain lightning}"
+								"{@spell 連環閃電}"
 							]
 						}
 					},
@@ -141,29 +141,32 @@
 			],
 			"trait": [
 				{
-					"name": "Fey Ancestry",
+					"name": "精類血統",
+					"ENG_name": "Fey Ancestry",
 					"entries": [
-						"Aerisi has advantage on saving throws against being {@condition charmed}, and magic can't put her to sleep."
+						"阿莉希在對抗{@condition 魅惑}的豁免檢定中具有優勢，且魔法無法使她入睡。"
 					]
 				},
 				{
-					"name": "Howling Defeat",
+					"name": "哀嚎敗亡",
+					"ENG_name": "Howling Defeat",
 					"entries": [
-						"When Aerisi drops to 0 hit points, her body disappears in a howling whirlwind that disperses quickly and harmlessly. Anything she is wearing or carrying is left behind."
+						"當阿莉希的生命值歸零時，她的身體將在一陣呼嘯著的旋風中消失，且這陣旋風將迅速而無害地消散。任何她所穿戴或攜帶的東西都將被留在原地。"
 					]
 				},
 				{
-					"name": "Legendary Resistance (2/Day)",
+					"name": "傳奇抗性 (2/日)",
 					"entries": [
-						"If Aerisi fails a saving throw, she can choose to succeed instead."
+						"若阿莉希在一次豁免檢定中失敗，她可以選擇改為使其成功。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Windvane",
+					"name": "風標",
+					"ENG_name": "Windvane",
 					"entries": [
-						"{@atk mw,rw} {@hit 9} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}9 ({@damage 1d6 + 6}) piercing damage, or 10 ({@damage 1d8 + 6}) piercing damage if used with two hands to make a melee attack, plus 3 ({@damage 1d6}) lightning damage."
+						"{@atk mw,rw} 命中{@hit 9}，觸及5呎 或 射程20/60呎，單一目標。{@h}9 ({@damage 1d6 + 6})穿刺傷害，或若雙手使用以進行一次近戰攻擊時則造成 10 ({@damage 1d8 + 6})穿刺傷害，再額外加上 3 ({@damage 1d6})閃電傷害。"
 					]
 				}
 			],
@@ -200,7 +203,8 @@
 				"invisible"
 			],
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"ENG_name": "Aerisi Kalinoth"
 		},
 		{
 			"name": "Aquatic Ghoul",
@@ -217,7 +221,7 @@
 			"hasToken": true
 		},
 		{
-			"name": "Bastian Thermandar",
+			"name": "巴斯汀．薩曼德",
 			"isNpc": true,
 			"source": "PotA",
 			"page": 201,
@@ -236,7 +240,7 @@
 				12,
 				{
 					"ac": 15,
-					"condition": "with {@spell mage armor}",
+					"condition": "with {@spell 法師護甲}",
 					"braces": true
 				}
 			],
@@ -258,15 +262,15 @@
 				"deception": "+7"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗視覺60呎"
 			],
 			"passive": 9,
 			"resist": [
 				"fire"
 			],
 			"languages": [
-				"Common",
-				"Ignan"
+				"通用語",
+				"火族語"
 			],
 			"cr": "8",
 			"spellcasting": [
@@ -276,11 +280,11 @@
 						"Bastian's innate spellcasting ability is Constitution (spell save {@dc 13}, {@hit 5} to hit with spell attacks). He can innately cast the following spells:"
 					],
 					"will": [
-						"{@spell produce flame}"
+						"{@spell 燃火術}"
 					],
 					"daily": {
 						"1": [
-							"{@spell burning hands}"
+							"{@spell 燃燒之手}"
 						]
 					},
 					"ability": "con"
@@ -293,46 +297,46 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell fire bolt}",
-								"{@spell mage hand}",
-								"{@spell message}",
-								"{@spell prestidigitation}",
-								"{@spell shocking grasp}"
+								"{@spell 火焰箭}",
+								"{@spell 法師之手}",
+								"{@spell 傳訊術}",
+								"{@spell 魔法技倆}",
+								"{@spell 電爪}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell mage armor}",
-								"{@spell magic missile}",
-								"{@spell shield}"
+								"{@spell 法師護甲}",
+								"{@spell 魔法飛彈}",
+								"{@spell 護盾術}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell misty step}",
-								"{@spell scorching ray}"
+								"{@spell 迷蹤步}",
+								"{@spell 灼熱射線}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell counterspell}",
-								"{@spell fireball}"
+								"{@spell 反制法術}",
+								"{@spell 火球術}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell dimension door}",
-								"{@spell wall of fire}"
+								"{@spell 次元門}",
+								"{@spell 火牆術}"
 							]
 						},
 						"5": {
 							"slots": 1,
 							"spells": [
-								"{@spell hold monster}"
+								"{@spell 怪物定身術}"
 							]
 						}
 					},
@@ -341,9 +345,9 @@
 			],
 			"action": [
 				{
-					"name": "Dagger",
+					"name": "匕首",
 					"entries": [
-						"{@atk mw,rw} {@hit 5} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}4 ({@damage 1d4 + 2}) piercing damage."
+						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或 射程20/60呎，單一目標。{@h}4 ({@damage 1d4 + 2}) 穿刺傷害。"
 					]
 				}
 			],
@@ -367,10 +371,11 @@
 				"RW",
 				"THW"
 			],
-			"hasFluff": true
+			"hasFluff": true,
+			"ENG_name": "Bastian Thermandar"
 		},
 		{
-			"name": "Black Earth Guard",
+			"name": "黑土守衛",
 			"source": "PotA",
 			"page": 195,
 			"size": "M",
@@ -411,20 +416,20 @@
 			},
 			"passive": 12,
 			"languages": [
-				"Common"
+				"通用語"
 			],
 			"cr": "2",
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊",
 					"entries": [
-						"The guard makes two melee attacks."
+						"守衛進行二次近戰攻擊。"
 					]
 				},
 				{
-					"name": "Morningstar",
+					"name": "釘頭錘",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) piercing damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。{@h}7 ({@damage 1d8 + 3}) 穿刺傷害。"
 					]
 				}
 			],
@@ -450,10 +455,11 @@
 				"MW"
 			],
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"ENG_name": "Black Earth Guard"
 		},
 		{
-			"name": "Black Earth Priest",
+			"name": "黑土祭司",
 			"source": "PotA",
 			"page": 195,
 			"size": "M",
@@ -495,8 +501,8 @@
 			},
 			"passive": 10,
 			"languages": [
-				"Common",
-				"Terran"
+				"通用語",
+				"土族語"
 			],
 			"cr": "3",
 			"spellcasting": [
@@ -508,10 +514,10 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell acid splash}",
-								"{@spell blade ward}",
-								"{@spell light}",
-								"{@spell mending}",
+								"{@spell 酸液濺爆}",
+								"{@spell 劍刃防護}",
+								"{@spell 光亮術}",
+								"{@spell 修復術}",
 								"{@spell mold earth|xge}"
 							]
 						},
@@ -519,21 +525,21 @@
 							"slots": 4,
 							"spells": [
 								"{@spell earth tremor|xge}",
-								"{@spell expeditious retreat}",
-								"{@spell shield}"
+								"{@spell 腳底抹油}",
+								"{@spell 護盾術}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell shatter}",
-								"{@spell spider climb}"
+								"{@spell 粉碎音波}",
+								"{@spell 蛛行術}"
 							]
 						},
 						"3": {
 							"slots": 2,
 							"spells": [
-								"{@spell slow}"
+								"{@spell 緩速術}"
 							]
 						}
 					},
@@ -542,15 +548,15 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊",
 					"entries": [
-						"The priest makes two melee attacks."
+						"黑土祭司進行二次近戰攻擊。"
 					]
 				},
 				{
-					"name": "Glaive",
+					"name": "長柄刀",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 10 ft., one target. {@h}7 ({@damage 1d10 + 2}) slashing damage."
+						"{@atk mw} 命中{@hit 4}，觸及10呎，單一目標。{@h}7 ({@damage 1d10 + 2}) 劈砍傷害。"
 					]
 				}
 			],
@@ -584,7 +590,8 @@
 				"prone"
 			],
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"ENG_name": "Black Earth Priest"
 		},
 		{
 			"name": "Braelen Hatherhand",
@@ -626,7 +633,7 @@
 			"hasToken": true
 		},
 		{
-			"name": "Burrowshark",
+			"name": "穴居鯊衛",
 			"source": "PotA",
 			"page": 196,
 			"size": "M",
@@ -669,28 +676,29 @@
 			},
 			"passive": 12,
 			"languages": [
-				"Common"
+				"通用語"
 			],
 			"cr": "4",
 			"trait": [
 				{
-					"name": "Bond of the Black Earth",
+					"name": "黑土之繫",
+					"ENG_name": "Bond of the Black Earth",
 					"entries": [
-						"The burrowshark is magically bound to a bulette trained to serve as its mount. While mounted on its bulette, the burrowshark shares the bulette's senses and can ride the bulette while it burrows. The bonded bulette obeys the burrowshark's commands. If its mount dies, the burrowshark can train a new bulette to serve as its bonded mount, a process requiring a month."
+						"穴居鯊衛藉著魔法與一只經過訓練的{@creature 鯊蜥獸}聯繫在一起，並將其做為坐騎。當騎乘於它的{@creature 鯊蜥獸}時，穴居鯊衛將共享鯊蜥獸的感官，並可以在其掘地的同時維持騎乘。該鯊蜥獸服從穴居鯊衛的命令。若它的坐騎死亡，穴居鯊衛可以訓練一只新的鯊蜥獸做為其相繫的坐騎，這個過程將花費一個月的時間。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊",
 					"entries": [
-						"The burrowshark makes three melee attacks."
+						"穴居鯊衛進行三次近戰攻擊。"
 					]
 				},
 				{
-					"name": "Spear",
+					"name": "矛",
 					"entries": [
-						"{@atk mw,rw} {@hit 6} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}7 ({@damage 1d6 + 4}) piercing damage, or 8 ({@damage 1d8 + 4}) piercing damage if used with two hands to make a melee attack."
+						"{@atk mw,rw} 命中{@hit 6}，觸及5呎 或射程20/60呎，單一目標。{@h}7 ({@damage 1d6 + 4}) 穿刺傷害，或若雙手使用以進行一次近戰攻擊時則造成 8 ({@damage 1d8 + 4}) 穿刺傷害。"
 					]
 				}
 			],
@@ -718,7 +726,8 @@
 				"THW"
 			],
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"ENG_name": "Burrowshark"
 		},
 		{
 			"name": "Cavil Zaltobar",
@@ -746,7 +755,7 @@
 			"hasToken": true
 		},
 		{
-			"name": "Crushing Wave Priest",
+			"name": "粉碎浪潮祭司",
 			"source": "PotA",
 			"page": 205,
 			"size": "M",
@@ -788,8 +797,8 @@
 			},
 			"passive": 10,
 			"languages": [
-				"Aquan",
-				"Common"
+				"水族語",
+				"通用語"
 			],
 			"cr": "2",
 			"spellcasting": [
@@ -801,33 +810,33 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell chill touch}",
-								"{@spell mage hand}",
-								"{@spell minor illusion}",
-								"{@spell prestidigitation}",
-								"{@spell ray of frost}"
+								"{@spell 寒顫之觸}",
+								"{@spell 法師之手}",
+								"{@spell 次級幻象}",
+								"{@spell 魔法技倆}",
+								"{@spell 冷凍射線}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell expeditious retreat}",
+								"{@spell 腳底抹油}",
 								"{@spell ice knife|xge}",
-								"{@spell magic missile}",
-								"{@spell shield}"
+								"{@spell 魔法飛彈}",
+								"{@spell 護盾術}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell blur}",
-								"{@spell hold person}"
+								"{@spell 朦朧術}",
+								"{@spell 人類定身術}"
 							]
 						},
 						"3": {
 							"slots": 2,
 							"spells": [
-								"{@spell sleet storm}"
+								"{@spell 雪雨暴}"
 							]
 						}
 					},
@@ -836,9 +845,10 @@
 			],
 			"action": [
 				{
-					"name": "Quarterstaff",
+					"name": "長棍",
+					"ENG_name": "Quarterstaff",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) bludgeoning damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。 {@h}6 ({@damage 1d8 + 2}) 鈍擊傷害。"
 					]
 				}
 			],
@@ -857,10 +867,11 @@
 				"MW"
 			],
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"ENG_name": "Crushing Wave Priest"
 		},
 		{
-			"name": "Crushing Wave Reaver",
+			"name": "粉碎浪潮掠奪者",
 			"source": "PotA",
 			"page": 205,
 			"size": "M",
@@ -901,20 +912,22 @@
 			},
 			"passive": 10,
 			"languages": [
-				"Common"
+				"通用語"
 			],
 			"cr": "1/2",
 			"action": [
 				{
-					"name": "Sharktoothed Longsword",
+					"name": "鯊齒長劍",
+					"ENG_name": "Sharktoothed Longsword",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) slashing damage, or 7 ({@damage 1d10 + 2}) slashing damage if used with two hands. Against a target is wearing no armor, the reaver deals an extra die of damage with this sword."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。 {@h}6 ({@damage 1d8 + 2}) 劈砍傷害，或若以雙手使用時則造成 7 ({@damage 1d10 + 2}) 劈砍傷害。若目標沒有穿戴護甲，則掠奪者將對其額外造成一顆這把劍的傷害骰的傷害。"
 					]
 				},
 				{
-					"name": "Javelin",
+					"name": "標槍",
+					"ENG_name": "Javelin",
 					"entries": [
-						"{@atk mw,rw} {@hit 4} to hit, reach 5 ft. or range 30/120 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage."
+						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或 射程30/120呎, 單一目標。{@h}5 ({@damage 1d6 + 2}) 穿刺傷害。"
 					]
 				}
 			],
@@ -932,7 +945,8 @@
 				"THW"
 			],
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"ENG_name": "Crushing Wave Reaver"
 		},
 		{
 			"name": "Darathra Shendrel",
@@ -960,7 +974,7 @@
 			"hasToken": true
 		},
 		{
-			"name": "Dark Tide Knight",
+			"name": "暗潮騎士",
 			"source": "PotA",
 			"page": 205,
 			"otherSources": [
@@ -1001,40 +1015,42 @@
 			},
 			"passive": 10,
 			"languages": [
-				"Common"
+				"通用語"
 			],
 			"cr": "3",
 			"trait": [
 				{
-					"name": "Bonded Mount",
+					"name": "聯結坐騎",
+					"ENG_name": "Bonded Mount",
 					"entries": [
-						"The knight is magically bound to a beast with an innate swimming speed trained to serve as its mount. While mounted on this beast, the knight gains the beast's senses and ability to breathe underwater. The bonded mount obeys the knight's commands. If its mount dies, the knight can train a new beast to serve as its bonded mount, a process requiring a month."
+						"暗潮騎士藉著魔法與一個具有天生游泳速度，且受過訓練的野獸聯繫在一起，並將其做為自己的坐騎。當騎乘於該野獸時，暗潮騎士將共享該野獸的感官，且獲得在水下呼吸的能力。這個被聯繫的坐騎服從暗潮騎士的命令。若它的坐騎死亡，暗潮騎士可以訓練一只新的野獸做為其相繫的坐騎，這個過程將花費一個月的時間。"
 					]
 				},
 				{
-					"name": "Sneak Attack",
+					"name": "偷襲",
+					"ENG_name": "Sneak Attack",
 					"entries": [
-						"The knight deals an extra 7 ({@dice 2d6}) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the knight that isn't {@condition incapacitated} and the knight doesn't have disadvantage on the attack roll."
+						"當暗潮騎士以武器攻擊命中一個目標時，若該攻擊檢定具有優勢，或者該攻擊檢定沒有劣勢且暗潮騎士有一個未{@condition 無力}的隊友距離目標5呎內，則暗潮騎士造成額外的7 ({@dice 2d6})傷害。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊",
 					"entries": [
-						"The knight makes two shortsword attacks."
+						"暗潮騎士進行二次短劍攻擊。"
 					]
 				},
 				{
-					"name": "Shortsword",
+					"name": "短劍",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) piercing damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。 {@h}6 ({@damage 1d6 + 3}) 穿刺傷害。"
 					]
 				},
 				{
 					"name": "Lance",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 10 ft., one target. {@h}9 ({@damage 1d12 + 3}) piercing damage."
+						"{@atk mw} 命中{@hit 5}，觸及10呎，單一目標。 {@h}9 ({@damage 1d12 + 3}) 穿刺傷害。"
 					]
 				}
 			],
@@ -1064,7 +1080,8 @@
 				"RCH"
 			],
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"ENG_name": "Dark Tide Knight"
 		},
 		{
 			"name": "Deseyna Majarra",
@@ -1094,7 +1111,7 @@
 			"miscTags": []
 		},
 		{
-			"name": "Drannin Splithelm",
+			"name": "德蘭尼．裂盔",
 			"isNpc": true,
 			"source": "PotA",
 			"page": 210,
@@ -1135,7 +1152,7 @@
 				"intimidation": "+4"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗視覺60呎"
 			],
 			"passive": 9,
 			"resist": [
@@ -1143,59 +1160,65 @@
 				"poison"
 			],
 			"languages": [
-				"Common",
-				"Dwarvish"
+				"通用語",
+				"矮人語"
 			],
 			"cr": "7",
 			"trait": [
 				{
-					"name": "Action Surge (Recharges after a Short or Long Rest)",
+					"name": "動作如潮 (短休或長休之後充能)",
+					"ENG_name": "Action Surge (Recharges after a Short or Long Rest)",
 					"entries": [
-						"Drannin takes an additional action on his turn."
+						"德蘭尼在他的回合採取一個額外的動作。"
 					]
 				},
 				{
-					"name": "Brute",
+					"name": "殘暴",
+					"ENG_name": "Brute",
 					"entries": [
-						"A melee weapon deals one extra die of its damage when Drannin hits with it (included in the attack)."
+						"德蘭尼在用一把近戰武器命中目標時會造成一顆額外的傷害骰（已包含在攻擊條目）。"
 					]
 				},
 				{
-					"name": "Dwarven Resilience",
+					"name": "矮人韌性",
+					"ENG_name": "Dwarven Resilience",
 					"entries": [
-						"Drannin has advantage on saving throws against poison."
+						"德蘭尼在對抗毒素的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Indomitable (Recharges after a Short or Long Rest)",
+					"name": "不屈 (短休或長休之後充能)",
+					"ENG_name": "Indomitable (Recharges after a Short or Long Rest)",
 					"entries": [
-						"Drannin can reroll a saving throw that he fails. He must use the new roll."
+						"德蘭尼可以重骰他失敗的豁免檢定。若他這麼做，則他必須使用新的擲骰結果。"
 					]
 				},
 				{
-					"name": "Second Wind (Recharges after a Short or Long Rest)",
+					"name": "回氣 (短休或長休之後充能)",
+					"ENG_name": "Second Wind (Recharges after a Short or Long Rest)",
 					"entries": [
-						"Drannin can use a bonus action to regain 16 ({@dice 1d10 + 11}) hit points."
+						"德蘭尼能夠以一個附贈動作回復16 ({@dice 1d10 + 11})點生命值。"
 					]
 				},
 				{
-					"name": "Special Equipment",
+					"name": "特殊裝備",
+					"ENG_name": "Special Equipment",
 					"entries": [
-						"Drannin wears a control amulet for his {@creature shield guardian} (see the Monster Manual) and a {@item ring of cold resistance}. He also carries a {@item potion of frost giant strength}."
+						"德蘭尼穿戴了一個用以控制他{@creature 構裝盾衛}的控制護符，以及一枚{@item 寒冰抗性戒指}。他同時攜帶了一瓶{@item 霜巨人之力藥水}。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊",
 					"entries": [
-						"Drannin makes three attacks with his greataxe."
+						"德蘭尼進行三次巨斧攻擊。"
 					]
 				},
 				{
-					"name": "Greataxe",
+					"name": "巨斧",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}17 ({@damage 2d12 + 4}) slashing damage."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。 {@h}17 ({@damage 2d12 + 4}) 劈砍傷害。"
 					]
 				}
 			],
@@ -1219,10 +1242,11 @@
 			"miscTags": [
 				"MW"
 			],
-			"hasFluff": true
+			"hasFluff": true,
+			"ENG_name": "Drannin Splithelm"
 		},
 		{
-			"name": "Elizar Dryflagon",
+			"name": "艾利札．乾壺",
 			"isNpc": true,
 			"source": "PotA",
 			"page": 202,
@@ -1264,8 +1288,8 @@
 			},
 			"passive": 14,
 			"languages": [
-				"Common",
-				"Druidic"
+				"通用語",
+				"德魯伊語"
 			],
 			"cr": "5",
 			"spellcasting": [
@@ -1277,41 +1301,41 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell druidcraft}",
-								"{@spell guidance}",
-								"{@spell poison spray}",
-								"{@spell produce flame}"
+								"{@spell 德魯伊伎倆}",
+								"{@spell 指導術}",
+								"{@spell 毒氣噴灑}",
+								"{@spell 燃火術}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell animal friendship}",
-								"{@spell faerie fire}",
-								"{@spell healing word}",
-								"{@spell jump}",
-								"{@spell thunderwave}"
+								"{@spell 化獸為友}",
+								"{@spell 妖火術}",
+								"{@spell 治癒真言}",
+								"{@spell 跳躍術}",
+								"{@spell 雷鳴波}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell flame blade}",
-								"{@spell spike growth}"
+								"{@spell 火焰刀}",
+								"{@spell 荊棘叢生}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell dispel magic}",
-								"{@spell stinking cloud}"
+								"{@spell 解除魔法}",
+								"{@spell 臭雲術}"
 							]
 						},
 						"4": {
 							"slots": 2,
 							"spells": [
-								"{@spell blight}",
-								"{@spell wall of fire}"
+								"{@spell 枯萎術}",
+								"{@spell 火牆術}"
 							]
 						}
 					},
@@ -1320,17 +1344,18 @@
 			],
 			"trait": [
 				{
-					"name": "Summon Mephits (Recharges after a Long Rest)",
+					"name": "召喚魔蝠 (長休之後充能)",
+					"ENG_name": "Summon Mephits (Recharges after a Long Rest)",
 					"entries": [
-						"By puffing on his pipe, Elizar can use an action to cast {@spell conjure minor elementals}. If he does so, he summons four smoke mephits."
+						"藉由從煙斗噴吐煙霧，艾利札可以使用一個動作來施放{@spell 召喚次級元素生物}。若他這麼做，則他將召喚出四個{@creature 煙魔蝠}。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Dagger +1",
+					"name": "匕首+1",
 					"entries": [
-						"{@atk mw,rw} {@hit 6} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}5 ({@damage 1d4 + 3}) piercing damage."
+						"{@atk mw,rw} 命中{@hit 6}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}5 ({@damage 1d4 + 3}) 穿刺傷害。"
 					]
 				}
 			],
@@ -1350,7 +1375,8 @@
 				"RW",
 				"THW"
 			],
-			"hasFluff": true
+			"hasFluff": true,
+			"ENG_name": "Elizar Dryflagon"
 		},
 		{
 			"name": "Emberhorn Minotaur",
@@ -1386,7 +1412,7 @@
 			]
 		},
 		{
-			"name": "Eternal Flame Guardian",
+			"name": "永焰守護者",
 			"source": "PotA",
 			"page": 200,
 			"size": "M",
@@ -1435,34 +1461,35 @@
 				"fire"
 			],
 			"languages": [
-				"Common"
+				"通用語"
 			],
 			"cr": "2",
 			"trait": [
 				{
-					"name": "Flaming Weapon (Recharges after a Short or Long Rest)",
+					"name": "烈焰武器 (短休或長休之後充能)",
+					"ENG_name": "Flaming Weapon (Recharges after a Short or Long Rest)",
 					"entries": [
-						"As a bonus action, the guard can wreath one melee weapon it is wielding in flame. The guard is unharmed by this fire, which lasts until the end of the guard's next turn. While wreathed in flame, the weapon deals an extra 3 ({@damage 1d6}) fire damage on a hit."
+						"以一個附贈動作，永焰守護者可以使它所持握的一把近戰武器被烈焰纏繞。永焰守護者並不會被這陣火焰所傷害，且這陣烈焰將持續直到該永焰守護者的下個回合結束。當被烈焰纏繞時，這把武器將在命中時額外造成 3 ({@damage 1d6})火焰傷害。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊",
 					"entries": [
-						"The guard makes two melee attacks."
+						"永焰守護者進行二次近戰攻擊。"
 					]
 				},
 				{
-					"name": "Longsword",
+					"name": "長劍",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) slashing damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。 {@h}6 ({@damage 1d8 + 2}) 劈砍傷害。"
 					]
 				},
 				{
-					"name": "Heavy Crossbow",
+					"name": "重弩",
 					"entries": [
-						"{@atk rw} {@hit 3} to hit, range 100/400 ft., one target. {@h}6 ({@damage 1d10 + 1}) piercing damage."
+						"{@atk rw} 命中{@hit 3}，射程 100/400 呎, 單一目標。 {@h}6 ({@damage 1d10 + 1}) 穿刺傷害。"
 					]
 				}
 			],
@@ -1483,10 +1510,11 @@
 				"RNG",
 				"RW"
 			],
-			"hasFluff": true
+			"hasFluff": true,
+			"ENG_name": "Eternal Flame Guardian"
 		},
 		{
-			"name": "Eternal Flame Priest",
+			"name": "永焰祭司",
 			"source": "PotA",
 			"page": 200,
 			"size": "M",
@@ -1504,7 +1532,7 @@
 				12,
 				{
 					"ac": 15,
-					"condition": "with {@spell mage armor}",
+					"condition": "with {@spell 法師護甲}",
 					"braces": true
 				}
 			],
@@ -1531,8 +1559,8 @@
 				"fire"
 			],
 			"languages": [
-				"Common",
-				"Ignan"
+				"通用語",
+				"火族語"
 			],
 			"cr": "3",
 			"spellcasting": [
@@ -1546,30 +1574,30 @@
 							"spells": [
 								"{@spell control flames|xge}",
 								"{@spell create bonfire|xge}",
-								"{@spell fire bolt}",
-								"{@spell light}",
-								"{@spell minor illusion}"
+								"{@spell 火焰箭}",
+								"{@spell 光亮術}",
+								"{@spell 次級幻象}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell burning hands}",
-								"{@spell expeditious retreat}",
-								"{@spell mage armor}"
+								"{@spell 燃燒之手}",
+								"{@spell 腳底抹油}",
+								"{@spell 法師護甲}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell blur}",
-								"{@spell scorching ray}"
+								"{@spell 朦朧術}",
+								"{@spell 灼熱射線}"
 							]
 						},
 						"3": {
 							"slots": 2,
 							"spells": [
-								"{@spell fireball}"
+								"{@spell 火球術}"
 							]
 						}
 					},
@@ -1578,9 +1606,9 @@
 			],
 			"action": [
 				{
-					"name": "Dagger",
+					"name": "匕首",
 					"entries": [
-						"{@atk mw,rw} {@hit 4} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}4 ({@damage 1d4 + 2}) piercing damage."
+						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}4 ({@damage 1d4 + 2}) 穿刺傷害。"
 					]
 				}
 			],
@@ -1601,10 +1629,11 @@
 				"THW"
 			],
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"ENG_name": "Eternal Flame Priest"
 		},
 		{
-			"name": "Fathomer",
+			"name": "深測者",
 			"source": "PotA",
 			"page": 207,
 			"otherSources": [
@@ -1627,7 +1656,7 @@
 				10,
 				{
 					"ac": 13,
-					"condition": "with {@spell mage armor}",
+					"condition": "with {@spell 法師護甲}",
 					"braces": true
 				}
 			],
@@ -1651,8 +1680,8 @@
 			},
 			"passive": 14,
 			"languages": [
-				"Aquan",
-				"Common"
+				"水族語",
+				"通用語"
 			],
 			"cr": "2",
 			"spellcasting": [
@@ -1664,20 +1693,20 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell chill touch}",
-								"{@spell eldritch blast}",
-								"{@spell mage hand}"
+								"{@spell 寒顫之觸}",
+								"{@spell 魔能爆}",
+								"{@spell 法師之手}"
 							]
 						},
 						"3": {
 							"lower": 1,
 							"slots": 2,
 							"spells": [
-								"{@spell armor of Agathys}",
-								"{@spell expeditious retreat}",
-								"{@spell hex}",
-								"{@spell invisibility}",
-								"{@spell Vampiric touch}"
+								"{@spell 艾嘉西斯之鎧}",
+								"{@spell 腳底抹油}",
+								"{@spell 脆弱詛咒}",
+								"{@spell 隱形術}",
+								"{@spell 吸血鬼之觸}"
 							]
 						}
 					},
@@ -1686,30 +1715,34 @@
 			],
 			"trait": [
 				{
-					"name": "Shapechanger (2/Day)",
+					"name": "變形者 (2/日)",
+					"ENG_name": "Shapechanger (2/Day)",
 					"entries": [
-						"The fathomer can use its action to polymorph into a Medium serpent composed of water, or back into its true form. Anything the fathomer is wearing or carrying is subsumed into the serpent form during the change, inaccessible until the fathomer returns to its true form. The fathomer reverts to its true form after 4 hours, unless it can expend another use of this trait. If the fathomer is knocked {@condition unconscious} or dies, it also reverts to its true form.",
-						"While in serpent form, the fathomer gains a swimming speed of 40 feet, the ability to breathe underwater, immunity to poison damage, as well as resistance to fire damage and bludgeoning, piercing, and slashing damage from nonmagical attacks. It also has immunity to the following conditions: {@condition exhaustion}, {@condition grappled}, {@condition paralyzed}, {@condition poisoned}, {@condition restrained}, {@condition prone}, {@condition unconscious}. The serpent form can enter a hostile creature's space and stop there. In addition, if water can pass through a space, the serpent can do so without squeezing."
+						"深測者可以使用它的動作以變形成一個中型，由水構成的蛇，或變回它的真實型態。任何深測者所穿戴或攜帶的裝備將會在變形期間融入蛇型態之中，且直到它變為真實型態之前都無法使用。深測者會在4小時之後變回它的真實型態，除非它在這之前再一次消耗這個特性的使用次數。當深測者被擊暈{@condition 昏迷}或死亡時，它也將變回它的真實型態。",
+						"當處於蛇型態時，深測者將獲得40呎的游泳速度，能夠在水下呼吸的能力，免疫於毒素傷害，且對於火焰傷害和非魔法攻擊所造成的鈍擊、穿刺、劈砍傷害具有抗性。它同時免疫於以下狀態：{@condition 力竭}、{@condition 被擒}、{@condition 麻痺}、{@condition 中毒}、{@condition 束縛}、{@condition 伏地}、{@condition 昏迷}。蛇型態可以進入敵對生物所在的空間，並停留在該處。此外，若某處空間足以讓水通過，則蛇型態就不用擠縮身體而能夠通過該空間。"
 					]
 				},
 				{
-					"name": "Olhydra's Armor (Human Form Only)",
+					"name": "奧莉德拉之護甲 (限定人類型態)",
+					"ENG_name": "Olhydra's Armor (Human Form Only)",
 					"entries": [
-						"The fathomer can cast {@spell mage armor} at will, without expending material components."
+						"深測者可以隨意施放{@spell 法師護甲}，且無須消耗任何材料構材。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Constrict (Serpent Form Only)",
+					"name": "絞纏 (限定蛇型態)",
+					"ENG_name": "Constrict (Serpent Form Only)",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}9 ({@damage 2d6 + 2}) bludgeoning damage. If the target is Medium or smaller, it is {@condition grappled} (escape {@dc 12}). Until the grapple ends, the target is {@condition restrained}, and the fathomer can't constrict another target."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。 {@h}9 ({@damage 2d6 + 2}) 鈍擊傷害。若目標的體型為中型或更小，則它將{@condition 被擒}(逃脫DC 12)。直到擒抱結束前，目標被{@condition 束縛}，且深測者不能絞纏另一個目標。"
 					]
 				},
 				{
-					"name": "Dagger (Human Form Only)",
+					"name": "匕首 (限定人類型態)",
+					"ENG_name": "Dagger (Human Form Only)",
 					"entries": [
-						"{@atk mw,rw} {@hit 4} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}4 ({@damage 1d4 + 2}) piercing damage."
+						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}4 ({@damage 1d4 + 2}) 穿刺傷害。"
 					]
 				}
 			],
@@ -1742,10 +1775,11 @@
 				"invisible"
 			],
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"ENG_name": "Fathomer"
 		},
 		{
-			"name": "Feathergale Knight",
+			"name": "羽風騎士",
 			"source": "PotA",
 			"page": 189,
 			"size": "M",
@@ -1786,8 +1820,8 @@
 			},
 			"passive": 10,
 			"languages": [
-				"Auran",
-				"Common"
+				"氣族語",
+				"通用語"
 			],
 			"cr": "1",
 			"spellcasting": [
@@ -1800,16 +1834,16 @@
 						"0": {
 							"spells": [
 								"{@spell gust|xge}",
-								"{@spell light}",
-								"{@spell message}",
-								"{@spell ray of frost}"
+								"{@spell 光亮術}",
+								"{@spell 傳訊術}",
+								"{@spell 冷凍射線}"
 							]
 						},
 						"1": {
 							"slots": 2,
 							"spells": [
-								"{@spell expeditious retreat}",
-								"{@spell feather fall}"
+								"{@spell 腳底抹油}",
+								"{@spell 羽落術}"
 							]
 						}
 					},
@@ -1818,21 +1852,21 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊",
 					"entries": [
-						"The knight makes two melee attacks."
+						"羽風騎士進行二次近戰攻擊。"
 					]
 				},
 				{
-					"name": "Longsword",
+					"name": "長劍",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) slashing damage, or 7 ({@damage 1d10 + 2}) slashing damage if used with two hands."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。 {@h}6 ({@damage 1d8 + 2})劈砍傷害，或若以雙手使用時則造成 7 ({@damage 1d10 + 2})劈砍傷害。"
 					]
 				},
 				{
-					"name": "Spear",
+					"name": "矛",
 					"entries": [
-						"{@atk mw,rw} {@hit 4} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage, or 6 ({@damage 1d8 + 2}) piercing damage if used with two hands to make a melee attack."
+						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}5 ({@damage 1d6 + 2})穿刺傷害，或若雙手使用以進行一次近戰攻擊時則造成 6 ({@damage 1d8 + 2})穿刺傷害。"
 					]
 				}
 			],
@@ -1857,7 +1891,8 @@
 				"THW"
 			],
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"ENG_name": "Feathergale Knight"
 		},
 		{
 			"name": "Fennor",
@@ -1911,7 +1946,7 @@
 			]
 		},
 		{
-			"name": "Flamewrath",
+			"name": "怒火者",
 			"source": "PotA",
 			"page": 201,
 			"size": "M",
@@ -1929,7 +1964,7 @@
 				12,
 				{
 					"ac": 15,
-					"condition": "with {@spell mage armor}",
+					"condition": "with {@spell 法師護甲}",
 					"braces": true
 				}
 			],
@@ -1955,8 +1990,8 @@
 				"fire"
 			],
 			"languages": [
-				"Common",
-				"Ignan"
+				"通用語",
+				"火族語"
 			],
 			"cr": "6",
 			"spellcasting": [
@@ -1969,38 +2004,38 @@
 						"0": {
 							"spells": [
 								"{@spell control flames|xge}",
-								"{@spell fire bolt}",
-								"{@spell friends}",
-								"{@spell light}",
-								"{@spell minor illusion}"
+								"{@spell 火焰箭}",
+								"{@spell 交友術}",
+								"{@spell 光亮術}",
+								"{@spell 次級幻象}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell burning hands}",
-								"{@spell color spray}",
-								"{@spell mage armor}"
+								"{@spell 燃燒之手}",
+								"{@spell 七彩噴射}",
+								"{@spell 法師護甲}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell scorching ray}",
-								"{@spell suggestion}"
+								"{@spell 灼熱射線}",
+								"{@spell 暗示術}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell fireball}",
-								"{@spell hypnotic pattern}"
+								"{@spell 火球術}",
+								"{@spell 催眠圖紋}"
 							]
 						},
 						"4": {
 							"slots": 1,
 							"spells": [
-								"{@spell fire shield} (see Wreathed in Flame)"
+								"{@spell 火焰護盾} (see Wreathed in Flame)"
 							]
 						}
 					},
@@ -2009,17 +2044,18 @@
 			],
 			"trait": [
 				{
-					"name": "Wreathed in Flame",
+					"name": "烈焰纏身",
+					"ENG_name": "Wreathed in Flame",
 					"entries": [
-						"For the flamewrath, the warm version of the {@spell fire shield} spell has a duration of \"until dispelled.\" The fire shield burns for 10 minutes after the flamewrath dies, consuming its body."
+						"對於怒火者而言，溫暖版本的{@spell 火焰護盾}法術的持續時間變更為「直到解消」。在怒火者死亡之後，該火焰護盾仍會持續燃燒長達10分鐘，將其軀體焚燒殆盡。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Dagger",
+					"name": "匕首",
 					"entries": [
-						"{@atk mw,rw} {@hit 5} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}4 ({@damage 1d4 + 2}) piercing damage."
+						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}4 ({@damage 1d4 + 2}) 穿刺傷害。"
 					]
 				}
 			],
@@ -2040,10 +2076,11 @@
 				"THW"
 			],
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"ENG_name": "Flamewrath"
 		},
 		{
-			"name": "Gar Shatterkeel",
+			"name": "加爾．碎骨",
 			"isNpc": true,
 			"source": "PotA",
 			"page": 208,
@@ -2089,8 +2126,8 @@
 				"cold"
 			],
 			"languages": [
-				"Aquan",
-				"Common"
+				"水族語",
+				"通用語"
 			],
 			"cr": "9",
 			"spellcasting": [
@@ -2102,47 +2139,47 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell mending}",
-								"{@spell resistance}",
+								"{@spell 修復術}",
+								"{@spell 提升抗力}",
 								"{@spell shape water|xge}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell create or destroy water}",
-								"{@spell cure wounds}",
-								"{@spell fog cloud}",
-								"{@spell thunderwave}"
+								"{@spell 造水/枯水術}",
+								"{@spell 治療傷勢}",
+								"{@spell 雲霧術}",
+								"{@spell 雷鳴波}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell darkvision}",
-								"{@spell hold person}",
-								"{@spell protection from poison}"
+								"{@spell 黑暗視覺}",
+								"{@spell 人類定身術}",
+								"{@spell 防護毒素}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell call lightning}",
-								"{@spell sleet storm}",
+								"{@spell 召雷術}",
+								"{@spell 雪雨暴}",
 								"{@spell tidal wave|xge}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell control water}",
-								"{@spell ice storm}"
+								"{@spell 操控水體}",
+								"{@spell 冰風暴}"
 							]
 						},
 						"5": {
 							"slots": 1,
 							"spells": [
-								"{@spell scrying}"
+								"{@spell 探知}"
 							]
 						}
 					},
@@ -2151,47 +2188,52 @@
 			],
 			"trait": [
 				{
-					"name": "Amphibious",
+					"name": "兩棲",
+					"ENG_name": "Amphibious",
 					"entries": [
-						"Gar can breathe air and water."
+						"加爾可以在空氣和水中呼吸。"
 					]
 				},
 				{
-					"name": "Legendary Resistance (2/Day)",
+					"name": "傳奇抗性 (2/日)",
 					"entries": [
-						"If Gar fails a saving throw, he can choose to succeed instead."
+						"若加爾在一次豁免檢定中失敗，他可以選擇改為使其成功。"
 					]
 				},
 				{
-					"name": "Water Walk",
+					"name": "水面行走",
+					"ENG_name": "Water Walk",
 					"entries": [
-						"Gar can stand and move on liquid surfaces as if they were solid ground."
+						"加爾可以在液態表面上站立並行走，就如同它們是固體表面一樣。"
 					]
 				},
 				{
-					"name": "Watery Fall",
+					"name": "化水落",
+					"ENG_name": "Watery Fall",
 					"entries": [
-						"When Gar drops to 0 hit points, his body collapses into a pool of inky water that rapidly disperses. Anything he was wearing or carrying is left behind."
+						"當加爾的生命值歸零時，他的身體將潰散成一池墨水，並迅速蒸發消散。任何他所穿戴或攜帶的東西都將被留在原地。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊",
 					"entries": [
-						"Gar makes two melee attacks, one with his claw and one with Drown."
+						"加爾進行二次近戰攻擊，一次爪抓、一次使用魔法武器{@item 水溺|pota}。"
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "鉗擊",
+					"ENG_name": "Claw",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}9 ({@damage 2d6 + 2}) bludgeoning damage, and the target is {@condition grappled} (escape {@dc 13}). Until the grapple ends, Gar can't attack other creatures with his claw."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。 {@h}9 ({@damage 2d6 + 2})鈍擊傷害，且目標{@condition 被擒}(逃脫DC 13)。直到擒抱結束前，加爾不能對另一個生物使用鉗擊。"
 					]
 				},
 				{
-					"name": "Drown",
+					"name": "水溺",
+					"ENG_name": "Drown",
 					"entries": [
-						"{@atk mw,rw} {@hit 7} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}6 ({@damage 1d6 + 3}) piercing damage plus 4 ({@damage 1d8}) cold damage."
+						"{@atk mw,rw} 命中{@hit 7}，觸及5呎 或射程20/60呎, 單一目標。 {@h}6 ({@damage 1d6 + 3})穿刺傷害加 4 ({@damage 1d8})寒冰傷害。"
 					]
 				}
 			],
@@ -2231,10 +2273,11 @@
 				"prone"
 			],
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"ENG_name": "Gar Shatterkeel"
 		},
 		{
-			"name": "Ghald",
+			"name": "葛哈德",
 			"isNpc": true,
 			"source": "PotA",
 			"page": 210,
@@ -2282,63 +2325,68 @@
 				"perception": "+7"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"黑暗視覺120呎"
 			],
 			"passive": 17,
 			"languages": [
-				"Common",
-				"Sahuagin"
+				"通用語",
+				"沙華魚人語"
 			],
 			"cr": "7",
 			"trait": [
 				{
-					"name": "Assassinate",
+					"name": "刺殺",
+					"ENG_name": "Assassinate",
 					"entries": [
-						"During its first turn, Ghald has advantage on attack rolls against any creature that hasn't taken a turn. Any hit Ghald scores against a surprised creature is a critical hit."
+						"在他的第一個回合期間，葛哈德對任何尚未採取過回合的生物所進行的攻擊檢定具有優勢。且葛哈德命中任何被突襲生物的攻擊都視為暴擊。"
 					]
 				},
 				{
-					"name": "Limited Amphibiousness",
+					"name": "有限兩棲",
+					"ENG_name": "Limited Amphibiousness",
 					"entries": [
-						"Ghald can breathe air and water, but he needs to be submerged at least once every 4 hours to avoid suffocating."
+						"葛哈德可以在空氣和水中呼吸，但他每4小時必須至少回到水中一次以避免窒息。"
 					]
 				},
 				{
-					"name": "Shark Telepathy",
+					"name": "鯊心感應",
+					"ENG_name": "Shark Telepathy",
 					"entries": [
-						"Ghald can magically command any shark within 120 feet of him, using a limited telepathy."
+						"藉由有限的心靈感應，葛哈德可以用魔法對任何距離它120呎內的鯊魚下達命令。"
 					]
 				},
 				{
-					"name": "Sneak Attack",
+					"name": "偷襲",
+					"ENG_name": "Sneak Attack",
 					"entries": [
-						"Ghald deals an extra 14 ({@dice 4d6}) damage when he hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of Ghald's that isn't {@condition incapacitated} and Ghald doesn't have disadvantage on the attack roll."
+						"當葛哈德以武器攻擊命中一個目標時，若該攻擊檢定具有優勢，或者該攻擊檢定沒有劣勢且葛哈德有一個未{@condition 無力}的隊友距離目標5呎內，則葛哈德造成額外的14 ({@dice 4d6})傷害。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊",
 					"entries": [
-						"Ghald makes three attacks, one with his bite and two with his shortswords."
+						"葛哈德進行三次攻擊，一次啃咬，二次短劍。"
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "啃咬",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one creature. {@h}9 ({@damage 2d4 + 4}) piercing damage."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一生物。 {@h}9 ({@damage 2d4 + 4}) 穿刺傷害。"
 					]
 				},
 				{
-					"name": "Shortsword",
+					"name": "短劍",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one creature. {@h}11 ({@damage 2d6 + 4}) piercing damage."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一生物。  {@h}11 ({@damage 2d6 + 4}) 穿刺傷害。"
 					]
 				},
 				{
-					"name": "Garrote",
+					"name": "絞繩",
+					"ENG_name": "Garrote",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one Medium or Small creature against which Ghald has advantage on the attack roll. {@h}9 ({@damage 2d4 + 4}) bludgeoning damage, and the target is {@condition grappled} (escape {@dc 15}). Until the grapple ends, the target can't breathe, and Ghald has advantage on attack rolls against it."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一體型為中型或小型且葛哈德對其攻擊檢定有優勢的生物。 {@h}9 ({@damage 2d4 + 4}) 鈍擊傷害，且目標{@condition 被擒}(逃脫DC 15)。直到擒抱結束前，目標將無法呼吸，且葛哈德對它所進行的攻擊檢定都將帶有優勢。"
 					]
 				}
 			],
@@ -2367,7 +2415,8 @@
 				"grappled"
 			],
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"ENG_name": "Ghald"
 		},
 		{
 			"name": "Grumink the Renegade",
@@ -2405,7 +2454,7 @@
 			]
 		},
 		{
-			"name": "Hellenrae",
+			"name": "海倫芮",
 			"isNpc": true,
 			"source": "PotA",
 			"page": 198,
@@ -2443,7 +2492,7 @@
 				"perception": "+5"
 			},
 			"senses": [
-				"blindsight 60 ft. (blind beyond this radius)"
+				"盲視60呎（超過半徑範圍則視作目盲）"
 			],
 			"passive": 15,
 			"immune": [
@@ -2454,47 +2503,51 @@
 				"poisoned"
 			],
 			"languages": [
-				"Common",
-				"Terran"
+				"通用語",
+				"土族語"
 			],
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Evasion",
+					"name": "反射閃避",
+					"ENG_name": "Evasion",
 					"entries": [
-						"If Hellenrae is subjected to an effect that allows her to make a Dexterity saving throw to take only half damage, she instead takes no damage if she succeeds on the saving throw, and only half damage if she fails."
+						"若海倫芮成為一個允許她進行敏捷豁免以僅承受一半傷害的效果的目標，則海倫芮可以改為在豁免成功時不受任何傷害，且在豁免失敗時僅承受一半傷害。"
 					]
 				},
 				{
-					"name": "Stunning Strike {@recharge 5}",
+					"name": "震懾擊{@recharge 5}",
+					"ENG_name": "Stunning Strike {@recharge 5}",
 					"entries": [
-						"When Hellenrae hits a target with a melee weapon attack, the target must succeed on a {@dc 13} Constitution saving throw or be {@condition stunned} until the end of Hellenrae's next turn."
+						"當海倫芮以一次近戰武器攻擊命中目標時，目標必須成功通過一次DC 13的體質豁免，否則將被{@condition 震懾}直到海倫芮的下個回合結束。"
 					]
 				},
 				{
-					"name": "Unarmored Defense",
+					"name": "無甲防禦",
+					"ENG_name": "Unarmored Defense",
 					"entries": [
-						"While Hellenrae is wearing no armor and wielding no shield, her AC includes her Wisdom modifier."
+						"當海倫芮未穿戴任何護甲且未持用盾牌時，她的AC將加上她的睿知調整值。"
 					]
 				},
 				{
-					"name": "Unarmored Movement",
+					"name": "無甲移動",
+					"ENG_name": "Unarmored Movement",
 					"entries": [
-						"While Hellenrae is wearing no armor and wielding no shield, her speed increases by 20 feet (included in her speed)."
+						"當海倫芮未穿戴任何護甲且未持用盾牌時，她的移動速度將增加20呎（已包含在移動速度）。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊",
 					"entries": [
-						"Hellenrae makes three melee attacks."
+						"海倫芮進行三次近戰攻擊。"
 					]
 				},
 				{
-					"name": "Unarmed Strike",
+					"name": "徒手打擊",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}9 ({@damage 1d10 + 4}) bludgeoning damage."
+						"{@atk mw} 命中{@hit 7}，觸及5呎，單一目標。 {@h}9 ({@damage 1d10 + 4}) 鈍擊傷害。"
 					]
 				}
 			],
@@ -2526,10 +2579,11 @@
 			"conditionInflict": [
 				"stunned"
 			],
-			"hasFluff": true
+			"hasFluff": true,
+			"ENG_name": "Hellenrae"
 		},
 		{
-			"name": "Howling Hatred Initiate",
+			"name": "嘯怨新晉者",
 			"source": "PotA",
 			"page": 190,
 			"size": "M",
@@ -2571,28 +2625,30 @@
 			},
 			"passive": 9,
 			"languages": [
-				"Common"
+				"通用語"
 			],
 			"cr": "1/8",
 			"trait": [
 				{
-					"name": "Guiding Wind (Recharges after a Short or Long Rest)",
+					"name": "導引之風 (短休或長休之後充能)",
+					"ENG_name": "Guiding Wind (Recharges after a Short or Long Rest)",
 					"entries": [
-						"As a bonus action, the initiate gains advantage on the next ranged attack roll it makes before the end of its next turn."
+						"以一個附贈動作，在它的下個回合結束，嘯怨新晉者將在它的下一次遠程攻擊檢定中獲得優勢。"
 					]
 				},
 				{
-					"name": "Hold Breath",
+					"name": "屏息",
+					"ENG_name": "Hold Breath",
 					"entries": [
-						"The initiate can hold its breath for 30 minutes."
+						"嘯怨新晉者可以屏住它的呼吸長達30分鐘。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Dagger",
+					"name": "匕首",
 					"entries": [
-						"{@atk mw,rw} {@hit 4} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}4 ({@damage 1d4 + 2}) piercing damage."
+						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}4 ({@damage 1d4 + 2}) 穿刺傷害。"
 					]
 				}
 			],
@@ -2611,10 +2667,11 @@
 				"RW",
 				"THW"
 			],
-			"hasFluff": true
+			"hasFluff": true,
+			"ENG_name": "Howling Hatred Initiate"
 		},
 		{
-			"name": "Howling Hatred Priest",
+			"name": "嘯怨祭司",
 			"source": "PotA",
 			"page": 190,
 			"size": "M",
@@ -2656,8 +2713,8 @@
 			},
 			"passive": 10,
 			"languages": [
-				"Auran",
-				"Common"
+				"氣族語",
+				"通用語"
 			],
 			"cr": "2",
 			"spellcasting": [
@@ -2669,32 +2726,32 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell blade ward}",
+								"{@spell 劍刃防護}",
 								"{@spell gust|xge}",
-								"{@spell light}",
-								"{@spell prestidigitation}",
-								"{@spell shocking grasp}"
+								"{@spell 光亮術}",
+								"{@spell 魔法技倆}",
+								"{@spell 電爪}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell feather fall}",
-								"{@spell shield}",
-								"{@spell witch bolt}"
+								"{@spell 羽落術}",
+								"{@spell 護盾術}",
+								"{@spell 巫術箭}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
 								"{@spell dust devil|xge}",
-								"{@spell gust of wind}"
+								"{@spell 造風術}"
 							]
 						},
 						"3": {
 							"slots": 2,
 							"spells": [
-								"{@spell gaseous form}"
+								"{@spell 氣化形體}"
 							]
 						}
 					},
@@ -2703,29 +2760,30 @@
 			],
 			"trait": [
 				{
-					"name": "Hold Breath",
+					"name": "屏息",
+					"ENG_name": "Hold Breath",
 					"entries": [
-						"The priest can hold its breath for 30 minutes."
+						"嘯怨祭司可以屏住它的呼吸長達30分鐘。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊",
 					"entries": [
-						"The priest makes two melee attacks or two ranged attacks."
+						"嘯怨祭司進行二次近戰攻擊、或是二次遠程攻擊."
 					]
 				},
 				{
-					"name": "Scimitar",
+					"name": "彎刀",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) slashing damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。 {@h}6 ({@damage 1d6 + 3}) 劈砍傷害。"
 					]
 				},
 				{
-					"name": "Dagger",
+					"name": "匕首",
 					"entries": [
-						"{@atk mw,rw} {@hit 5} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}5 ({@damage 1d4 + 3}) piercing damage."
+						"{@atk mw,rw} 命中{@hit 5}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}5 ({@damage 1d4 + 3}) 穿刺傷害。"
 					]
 				}
 			],
@@ -2753,10 +2811,11 @@
 				"THW"
 			],
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"ENG_name": "Howling Hatred Priest"
 		},
 		{
-			"name": "Hurricane",
+			"name": "颶風",
 			"source": "PotA",
 			"page": 191,
 			"size": "M",
@@ -2791,8 +2850,8 @@
 			},
 			"passive": 11,
 			"languages": [
-				"Auran",
-				"Common"
+				"氣族語",
+				"通用語"
 			],
 			"cr": "2",
 			"spellcasting": [
@@ -2804,24 +2863,24 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell blade ward}",
+								"{@spell 劍刃防護}",
 								"{@spell gust|xge}",
-								"{@spell light}",
-								"{@spell prestidigitation}"
+								"{@spell 光亮術}",
+								"{@spell 魔法技倆}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell feather fall}",
-								"{@spell jump}",
-								"{@spell thunderwave}"
+								"{@spell 羽落術}",
+								"{@spell 跳躍術}",
+								"{@spell 雷鳴波}"
 							]
 						},
 						"2": {
 							"slots": 2,
 							"spells": [
-								"{@spell gust of wind}"
+								"{@spell 造風術}"
 							]
 						}
 					},
@@ -2830,29 +2889,31 @@
 			],
 			"trait": [
 				{
-					"name": "Unarmored Defense",
+					"name": "無甲防禦",
+					"ENG_name": "Unarmored Defense",
 					"entries": [
-						"While the hurricane is wearing no armor and wielding no shield, its AC includes its Wisdom modifier."
+						"當颶風未穿戴任何護甲且未持用盾牌時，它的AC將加上它的睿知調整值。"
 					]
 				},
 				{
-					"name": "Unarmored Movement",
+					"name": "無甲移動",
+					"ENG_name": "Unarmored Movement",
 					"entries": [
-						"While the hurricane is wearing no armor and wielding no shield, its walking speed increases by 15 feet (included in its speed)."
+						"當颶風未穿戴任何護甲且未持用盾牌時，它的移動速度將增加15呎（已包含在移動速度）。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊",
 					"entries": [
-						"The hurricane makes two melee attacks."
+						"颶風進行兩次近戰攻擊。"
 					]
 				},
 				{
-					"name": "Unarmed Strike",
+					"name": "徒手打擊",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) bludgeoning damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。 {@h}6 ({@damage 1d6 + 3}) 鈍擊傷害。"
 					]
 				}
 			],
@@ -2881,10 +2942,11 @@
 			"miscTags": [
 				"MW"
 			],
-			"hasFluff": true
+			"hasFluff": true,
+			"ENG_name": "Hurricane"
 		},
 		{
-			"name": "Imix",
+			"name": "伊密克斯",
 			"isNpc": true,
 			"isNamedCreature": true,
 			"source": "PotA",
@@ -2918,7 +2980,7 @@
 				"cha": "+12"
 			},
 			"senses": [
-				"blindsight 120 ft."
+				"盲視120呎"
 			],
 			"passive": 13,
 			"resist": [
@@ -2928,7 +2990,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks",
+					"note": "非魔法攻擊所造成的",
 					"cond": true
 				}
 			],
@@ -2946,8 +3008,8 @@
 				"restrained"
 			],
 			"languages": [
-				"Common",
-				"Ignan"
+				"通用語",
+				"火族語"
 			],
 			"cr": "19",
 			"spellcasting": [
@@ -2957,14 +3019,14 @@
 						"Imix's innate spellcasting ability is Charisma (spell save {@dc 20}, {@hit 12} to hit with spell attacks). He can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell fireball}",
-						"{@spell wall of fire}"
+						"{@spell 火球術}",
+						"{@spell 火牆術}"
 					],
 					"daily": {
 						"3e": [
-							"{@spell fire storm}",
-							"{@spell haste}",
-							"{@spell teleport}"
+							"{@spell 火焰風暴}",
+							"{@spell 加速術}",
+							"{@spell 傳送術}"
 						]
 					},
 					"ability": "cha"
@@ -2972,85 +3034,96 @@
 			],
 			"trait": [
 				{
-					"name": "Empowered Attacks",
+					"name": "賦能攻擊",
+					"ENG_name": "Empowered Attacks",
 					"entries": [
-						"Imix's slam attacks are treated as magical for the purpose of bypassing resistance and immunity to nonmagical attacks."
+						"在克服對非魔法攻擊和傷害的抗性和免疫能力時，伊密克斯的猛擊攻擊被視作魔法攻擊。"
 					]
 				},
 				{
-					"name": "Fire Aura",
+					"name": "火焰靈光",
+					"ENG_name": "Fire Aura",
 					"entries": [
-						"At the start of each of Imix's turns, each creature within 10 feet of him takes 17 ({@damage 5d6}) fire damage, and flammable objects in the aura that aren't being worn or carried ignite. A creature also takes 17 ({@damage 5d6}) fire damage if it touches Imix or hits him with a melee attack while within 10 feet of him, and a creature takes that damage the first time on a turn that Imix moves into its space. Nonmagical weapons that hit Imix are destroyed by fire immediately after dealing damage to him"
+						"在伊密克斯的每個回合開始時，每個距離他10呎內的生物都將受到17 ({@damage 5d6})火焰傷害，且靈光範圍內所有未被穿戴或攜帶的可燃物體也都將被點燃。一個觸碰伊密克斯或在距離它10呎內以一次近戰攻擊命中它的生物將受到 17 ({@damage 5d6})火焰傷害，且在每個回合中當伊密克斯第一次進入其他生物所在的空間時，該生物也將受到這個傷害。命中伊密克斯的非魔法武器將在對他造成傷害之後立即被火焰摧毀。"
 					]
 				},
 				{
-					"name": "Fire Form",
+					"name": "火焰形體",
+					"ENG_name": "Fire Form",
 					"entries": [
-						"Imix can enter a hostile creature's space and stop there. He can move through a space as narrow as 1 inch without squeezing if fire could pass through that space."
+						"伊密克斯可以進入敵對生物所在的空間，並停留在該處。此外，他也可以移動穿越最窄1吋，且火焰得以通過的狹窄空間而不用擠縮身體。"
 					]
 				},
 				{
-					"name": "Illumination",
+					"name": "照明",
+					"ENG_name": "Illumination",
 					"entries": [
-						"Imix sheds bright light in a 60-foot radius and dim light for an additional 60 feet."
+						"伊密克斯會散發出60呎半徑的明亮光照和再延伸60呎的微光光照。"
 					]
 				},
 				{
-					"name": "Legendary Resistance (3/Day)",
+					"name": "傳奇抗性 (3/日)",
 					"entries": [
-						"If Imix fails a saving throw, he can choose to succeed instead."
+						"若伊密克斯在一次豁免檢定中失敗，它可以選擇改為使其成功。"
 					]
 				},
 				{
-					"name": "Magic Resistance",
+					"name": "魔法抗性",
+					"ENG_name": "Magic Resistance",
 					"entries": [
-						"Imix has advantage on saving throws against spells and other magical effects."
+						"伊密克斯在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊",
 					"entries": [
-						"Imix makes two slam attacks or two flame blast attacks."
+						"伊密克斯進行二次猛擊攻擊或二次烈焰爆破攻擊。"
 					]
 				},
 				{
-					"name": "Slam",
+					"name": "猛擊",
+					"ENG_name": "Slam",
 					"entries": [
-						"{@atk mw} {@hit 12} to hit, reach 10 ft., one target. {@h}18 ({@damage 2d10 + 7}) bludgeoning damage plus 18 ({@damage 5d6}) fire damage."
+						"{@atk mw} 命中{@hit 12}，觸及10呎，單一目標。 {@h}18 ({@damage 2d10 + 7}) 鈍擊傷害加 18 ({@damage 5d6}) 火焰傷害。"
 					]
 				},
 				{
-					"name": "Flame Blast",
+					"name": "烈焰爆破",
+					"ENG_name": "Flame Blast",
 					"entries": [
-						"{@atk rs} {@hit 12} to hit, range 250 ft., one target. {@h}35 ({@damage 10d6}) fire damage."
+						"{@atk rs} 命中{@hit 12}，射程250呎，單一目標。 {@h}35 ({@damage 10d6}) 火焰傷害。"
 					]
 				},
 				{
-					"name": "Summon Elementals (1/Day)",
+					"name": "召喚元素生物 (1/日)",
+					"ENG_name": "Summon Elementals (1/Day)",
 					"entries": [
-						"Imix summons up to three {@creature fire elemental||fire elementals} and loses 30 hit points for each elemental he summons. Summoned elementals have maximum hit points, appear within 100 feet of Imix, and disappear if Imix is reduced to 0 hit points."
+						"伊密克斯召喚出最多三個{@creature 火元素}，且他每召喚出一個元素生物便會失去30點生命值。被召喚的元素生物有著全滿的生命值，會出現在距離伊密克斯100呎內的位置，且會在伊密克斯的生命值歸零時消失不見。"
 					]
 				}
 			],
 			"legendary": [
 				{
-					"name": "Heat Wave",
+					"name": "熱浪",
+					"ENG_name": "Heat Wave",
 					"entries": [
-						"Imix creates a blast of heat within 300 feet of himself. Each creature in the area in physical contact with metal objects (for example, carrying metal weapons or wearing metal armor) takes 9 ({@damage 2d8}) fire damage. Each creature in the area that isn't resistant or immune to fire damage must make a {@dc 21} Constitution saving throw or gain one level of {@condition exhaustion}."
+						"伊密克斯在他周圍300呎內創造出一道高熱衝擊波。每個在範圍內，且與金屬物體有身體接觸的生物（例如，攜帶金屬武器或穿戴金屬護甲）都將受到9 ({@damage 2d8})火焰傷害。每個在範圍內，且對火焰傷害不具有抗性或免疫能力的生物都必須成功通過一次DC 21的體質豁免，否則將獲得一級{@condition 力竭}。"
 					]
 				},
 				{
-					"name": "Teleport (Costs 2 Actions)",
+					"name": "傳送 (消耗 2動作)",
+					"ENG_name": "Teleport (Costs 2 Actions)",
 					"entries": [
-						"Imix magically teleports up to 120 feet to an unoccupied space he can see. Anything Imix is wearing or carrying isn't teleported with him."
+						"伊密克斯用魔法傳送最多120呎距離到一處他所能看見的未被佔據空間。任何伊密克斯所穿戴或攜帶的裝備都不會跟著他一起被傳送。"
 					]
 				},
 				{
-					"name": "Combustion (Costs 3 Actions)",
+					"name": "燃燒作用 (消耗 3動作)",
+					"ENG_name": "Combustion (Costs 3 Actions)",
 					"entries": [
-						"Imix causes one creature he can see within 30 feet of him to burst into flames. The target must make a {@dc 21} Constitution saving throw. On a failed save, the target takes 70 ({@damage 20d6}) fire damage and catches fire. A target on fire takes 10 ({@damage 3d6}) fire damage when it starts its turn, and remains on fire until it or another creature takes an action to douse the flames. On a successful save, the target takes half as much damage and doesn't catch fire."
+						"伊密克斯使一個距離他30呎內且他所能看見的生物迸發出熊熊烈焰。目標必須進行一次DC 21的體質豁免。若豁免失敗，則目標將受到70 ({@damage 20d6})火焰傷害，並被點燃。著火的目標將在它的每個回合開始時受到10 ({@damage 3d6})火焰傷害，並維持著火狀態直到它或另一個生物採取一個動作以撲滅火焰。若豁免成功，則目標僅受到一半的傷害，且不會被點燃。"
 					]
 				}
 			],
@@ -3090,7 +3163,8 @@
 				"prone"
 			],
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"ENG_name": "Imix"
 		},
 		{
 			"name": "Lyzandra \"Lyzzie\" Calderos",
@@ -3124,41 +3198,41 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell fire bolt}",
-								"{@spell light}",
-								"{@spell mage hand}",
-								"{@spell prestidigitation}"
+								"{@spell 火焰箭}",
+								"{@spell 光亮術}",
+								"{@spell 法師之手}",
+								"{@spell 魔法技倆}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell detect magic}",
-								"{@spell mage armor}",
-								"{@spell magic missile}",
-								"{@spell shield}"
+								"{@spell 偵測魔法}",
+								"{@spell 法師護甲}",
+								"{@spell 魔法飛彈}",
+								"{@spell 護盾術}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell misty step}",
-								"{@spell suggestion}"
+								"{@spell 迷蹤步}",
+								"{@spell 暗示術}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell counterspell}",
-								"{@spell fireball}",
-								"{@spell fly}"
+								"{@spell 反制法術}",
+								"{@spell 火球術}",
+								"{@spell 飛行術}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell greater invisibility}",
-								"{@spell wall of fire}"
+								"{@spell 高等隱形術}",
+								"{@spell 火牆術}"
 							]
 						},
 						"5": {
@@ -3191,7 +3265,7 @@
 			"hasToken": true
 		},
 		{
-			"name": "Marlos Urnrayle",
+			"name": "馬洛斯．沃雷",
 			"isNpc": true,
 			"source": "PotA",
 			"page": 199,
@@ -3228,63 +3302,68 @@
 				"perception": "+4"
 			},
 			"senses": [
-				"darkvision 60 ft.",
-				"tremorsense 60 ft."
+				"黑暗視覺60呎",
+				"震顫感知60呎"
 			],
 			"passive": 14,
 			"resist": [
 				"acid"
 			],
 			"languages": [
-				"Common",
-				"Terran"
+				"通用語",
+				"土族語"
 			],
 			"cr": "8",
 			"trait": [
 				{
-					"name": "Earthen Defeat",
+					"name": "化土敗亡",
+					"ENG_name": "Earthen Defeat",
 					"entries": [
-						"When Marlos drops to 0 hit points, his body transforms into mud and collapses into a pool. Anything he is wearing or carrying is left behind."
+						"當馬洛斯的生命值歸零時，他的身體將轉變成一攤泥濘並潰散成池。任何他所穿戴或攜帶的東西都將被留在原地。"
 					]
 				},
 				{
-					"name": "Earth Passage",
+					"name": "地土穿行",
+					"ENG_name": "Earth Passage",
 					"entries": [
-						"Marlos can move in difficult terrain composed of anything made from earth or stone as if it were normal terrain. He can move through solid earth and rock as if it were difficult terrain. If he ends his turn there, he is shunted into the nearest space he last occupied."
+						"馬洛斯可以在任何由泥土或石頭構成的困難地形上移動時將其視為普通地形。他也可以移動穿過堅硬的土壤或岩石，就如同它們是困難地形一樣。若他在土壤或岩石內部結束他的回合，則他將被彈到距離他之前佔據空間最近的位置。"
 					]
 				},
 				{
-					"name": "Legendary Resistance (2/Day)",
+					"name": "傳奇抗性 (2/日)",
 					"entries": [
-						"If Marlos fails a saving throw, he can choose to succeed instead."
+						"若馬洛斯在一次豁免檢定中失敗，他可以選擇改為使其成功。"
 					]
 				},
 				{
-					"name": "Petrifying Gaze",
+					"name": "石化凝視",
+					"ENG_name": "Petrifying Gaze",
 					"entries": [
-						"When a creature that can see Marlos's eyes starts its turn within 30 feet of him, Marlos can force it to make a {@dc 14} Constitution saving throw if Marlos isn't {@condition incapacitated} and can see the creature. If the saving throw fails by 5 or more, the creature is instantly {@condition petrified}. Otherwise, a creature that fails the save begins to turn to stone and is {@condition restrained}. The {@condition restrained} creature must repeat the saving throw at the end of its next turn, becoming {@condition petrified} on a failure or ending the effect on a success. The petrification lasts until the creature is freed by the {@spell greater restoration} spell or other magic.",
-						"Unless surprised, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can't see Marlos until the start of its next turn, when it can decide to avert its eyes again. If the creature looks at Marlos in the meantime, it must immediately make the save.",
-						"If Marlos sees himself reflected on a polished surface within 30 feet of him and in an area of bright light, Marlos is, due to his curse, affected by his own gaze."
+						"當一個可以看見馬洛斯雙眼的生物在距離馬洛斯30呎內的位置開始它的回合，且若馬洛斯不處於{@condition 無力}並可以看見該生物，馬洛斯就可以強迫它進行一次DC 14的體質豁免。若此豁免失敗且檢定結果與目標值差距5點或更多，則該生物將瞬間被{@condition 石化}。除此之外，一個豁免失敗的生物將會開始轉變成石頭並因此被{@condition 束縛}。被{@condition 束縛}的生物必須在它的下個回合結束時重複進行這個豁免檢定。若豁免成功則此效果結束。若豁免失敗則該生物將被{@condition 石化}。這個石化狀態將持續直到該生物被{@spell 高等復原術}法術或其他魔法給解放。",
+						"除非被突襲，否則一個生物可以移開視線以避免在它的回合開始時進行豁免檢定。若該生物這麼做，則它直到它的下個回合開始前都將無法看見馬洛斯，且它可以在下個回合開始時再次選擇移開視線。在該生物看向馬洛斯的同時，它必須立刻進行該豁免檢定。",
+						"若馬洛斯在明亮光照的區域中看見距離他30呎內自己位於磨光表面的倒影，由於他所遭受的詛咒，他將被自己石化凝視的效果給影響。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊",
 					"entries": [
-						"Marlos makes three melee attacks, one with his snake hair and two with Ironfang."
+						"馬洛斯進行三次攻擊，一次蛇髮，二次使用魔法武器{@item 鐵牙|pota}。"
 					]
 				},
 				{
-					"name": "Snake Hair",
+					"name": "蛇髮",
+					"ENG_name": "Snake Hair",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) piercing damage plus 14 ({@damage 4d6}) poison damage."
+						"{@atk mw} 命中{@hit 6}，觸及5呎，單一目標。 {@h}7 ({@damage 1d8 + 3})穿刺傷害加 14 ({@damage 4d6}) 毒素傷害。"
 					]
 				},
 				{
-					"name": "Ironfang",
+					"name": "鐵牙",
+					"ENG_name": "Ironfang",
 					"entries": [
-						"{@atk mw} {@hit 9} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) piercing damage plus 4 ({@damage 1d8}) thunder damage."
+						"{@atk mw} 命中{@hit 9}，觸及5呎，單一目標。 {@h}7 ({@damage 1d8 + 3})穿刺傷害加 4 ({@damage 1d8}) 雷鳴傷害。"
 					]
 				}
 			],
@@ -3320,10 +3399,11 @@
 				"restrained"
 			],
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"ENG_name": "Marlos Urnrayle"
 		},
 		{
-			"name": "Miraj Vizann",
+			"name": "莫拉．維贊",
 			"isNpc": true,
 			"source": "PotA",
 			"page": 198,
@@ -3342,7 +3422,7 @@
 				10,
 				{
 					"ac": 13,
-					"condition": "with {@spell mage armor}",
+					"condition": "with {@spell 法師護甲}",
 					"braces": true
 				}
 			],
@@ -3365,8 +3445,8 @@
 			},
 			"passive": 10,
 			"languages": [
-				"Common",
-				"Primordial"
+				"通用語",
+				"原初語"
 			],
 			"cr": "6",
 			"spellcasting": [
@@ -3377,7 +3457,7 @@
 					],
 					"daily": {
 						"1": [
-							"{@spell pass without trace}"
+							"{@spell 行蹤無跡}"
 						]
 					},
 					"ability": "con"
@@ -3390,54 +3470,54 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell acid splash}",
-								"{@spell blade ward}",
-								"{@spell friends}",
-								"{@spell light}",
-								"{@spell message}",
+								"{@spell 酸液濺爆}",
+								"{@spell 劍刃防護}",
+								"{@spell 交友術}",
+								"{@spell 光亮術}",
+								"{@spell 傳訊術}",
 								"{@spell mold earth|xge}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell chromatic orb}",
-								"{@spell mage armor}",
-								"{@spell magic missile}"
+								"{@spell 幻色法球}",
+								"{@spell 法師護甲}",
+								"{@spell 魔法飛彈}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
 								"{@spell Maximilian's earthen grasp|xge}",
-								"{@spell shatter}",
-								"{@spell suggestion}"
+								"{@spell 粉碎音波}",
+								"{@spell 暗示術}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell counterspell}",
+								"{@spell 反制法術}",
 								"{@spell erupting earth|xge}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell polymorph}",
-								"{@spell stoneskin}"
+								"{@spell 變形術}",
+								"{@spell 石膚術}"
 							]
 						},
 						"5": {
 							"slots": 2,
 							"spells": [
-								"{@spell wall of stone}"
+								"{@spell 石牆術}"
 							]
 						},
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell move earth}"
+								"{@spell 地動術}"
 							]
 						}
 					},
@@ -3446,17 +3526,19 @@
 			],
 			"trait": [
 				{
-					"name": "Earth Walk",
+					"name": "地面行走",
+					"ENG_name": "Earth Walk",
 					"entries": [
-						"Moving through difficult terrain made of earth or stone costs Miraj no extra movement."
+						"移動穿過泥土或石頭構成的困難地形不會使莫拉消耗額外的移動速度。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Staff",
+					"name": "法杖",
+					"ENG_name": "Staff",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d6 + 1}) bludgeoning damage, or 5 ({@damage 1d8 + 1}) bludgeoning damage when used with two hands."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。 {@h}4 ({@damage 1d6 + 1})鈍擊傷害，或若以雙手使用時則造成 5 ({@damage 1d8 + 1}) 鈍擊傷害。"
 					]
 				}
 			],
@@ -3475,7 +3557,8 @@
 			"miscTags": [
 				"MW"
 			],
-			"hasFluff": true
+			"hasFluff": true,
+			"ENG_name": "Miraj Vizann"
 		},
 		{
 			"name": "Molten Magma Roper",
@@ -3556,7 +3639,7 @@
 			]
 		},
 		{
-			"name": "Ogrémoch",
+			"name": "歐格莫克",
 			"isNpc": true,
 			"isNamedCreature": true,
 			"source": "PotA",
@@ -3595,8 +3678,8 @@
 				"wis": "+8"
 			},
 			"senses": [
-				"blindsight 120 ft.",
-				"tremorsense 120 ft."
+				"盲視120呎",
+				"震顫感知120呎"
 			],
 			"passive": 12,
 			"resist": [
@@ -3606,7 +3689,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks",
+					"note": "非魔法攻擊所造成的",
 					"cond": true
 				}
 			],
@@ -3622,8 +3705,8 @@
 				"prone"
 			],
 			"languages": [
-				"Common",
-				"Terran"
+				"通用語",
+				"土族語"
 			],
 			"cr": "20",
 			"spellcasting": [
@@ -3633,82 +3716,91 @@
 						"Ogrémoch's innate spellcasting ability is Charisma (spell save {@dc 20}, {@hit 12} to hit with spell attacks). He can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell meld into stone}",
-						"{@spell move earth}",
-						"{@spell wall of stone}"
+						"{@spell 融身入石}",
+						"{@spell 地動術}",
+						"{@spell 石牆術}"
 					],
 					"ability": "cha"
 				}
 			],
 			"trait": [
 				{
-					"name": "Empowered Attacks",
+					"name": "賦能攻擊",
+					"ENG_name": "Empowered Attacks",
 					"entries": [
-						"Ogrémoch's slam attacks are treated as magical and adamantine for the purpose of bypassing resistance and immunity to nonmagical attacks."
+						"在克服對非魔法攻擊和傷害的抗性和免疫能力時，歐格莫克的猛擊攻擊被視作魔法攻擊。"
 					]
 				},
 				{
-					"name": "Legendary Resistance (3/Day)",
+					"name": "傳奇抗性 (3/日)",
 					"entries": [
-						"If Ogrémoch fails a saving throw, he can choose to succeed instead."
+						"若歐格莫克在一次豁免檢定中失敗，他可以選擇改為使其成功。"
 					]
 				},
 				{
-					"name": "Magic Resistance",
+					"name": "魔法抗性",
+					"ENG_name": "Magic Resistance",
 					"entries": [
-						"Ogrémoch has advantage on saving throws against spells and other magical effects."
+						"歐格莫克在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Siege Monster",
+					"name": "攻城怪物",
+					"ENG_name": "Siege Monster",
 					"entries": [
-						"Ogrémoch deals double damage to objects and structures with his melee and ranged weapon attacks."
+						"歐格莫克的近戰和遠程武器攻擊將對物體和建築物造成兩倍的傷害。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊",
 					"entries": [
-						"Ogrémoch makes two slam attacks."
+						"歐格莫克進行二次猛擊攻擊。"
 					]
 				},
 				{
-					"name": "Slam",
+					"name": "猛擊",
+					"ENG_name": "Slam",
 					"entries": [
-						"{@atk mw} {@hit 14} to hit, reach 15 ft., one target. {@h}30 ({@damage 4d10 + 8}) bludgeoning damage."
+						"{@atk mw} 命中{@hit 14}，觸及15呎，單一目標。 {@h}30 ({@damage 4d10 + 8}) 鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Boulder",
+					"name": "投石",
+					"ENG_name": "Boulder",
 					"entries": [
-						"{@atk rw} {@hit 6} to hit, range 500 ft., one target. {@h}46 ({@damage 7d10 + 8}) bludgeoning damage. If the target is a creature, it must succeed on a {@dc 23} Strength saving throw or be knocked {@condition prone}."
+						"{@atk rw} 命中{@hit 6}，射程500呎，單一目標。 {@h}46 ({@damage 7d10 + 8}) 鈍擊傷害。若目標為一個生物，則它必須成功通過一次DC 23的力量豁免，否則被擊倒{@condition 伏地}。"
 					]
 				},
 				{
-					"name": "Summon Elementals (1/Day)",
+					"name": "召喚元素生物 (1/日)",
+					"ENG_name": "Summon Elementals (1/Day)",
 					"entries": [
-						"Ogrémoch summons up to three {@creature earth elemental||earth elementals} and loses 30 hit points for each elemental he summons. Summoned elementals have maximum hit points, appear within 100 feet of Ogrémoch, and disappear if Ogrémoch is reduced to 0 hit points."
+						"歐格莫克召喚出最多三個{@creature 土元素}，且他每召喚出一個元素生物便會失去30點生命值。被召喚的元素生物有著全滿的生命值，會出現在距離歐格莫克100呎內的位置，且會在歐格莫克的生命值歸零時消失不見。"
 					]
 				}
 			],
 			"legendary": [
 				{
-					"name": "Illuminating Crystals",
+					"name": "璀璨水晶",
+					"ENG_name": "Illuminating Crystals",
 					"entries": [
-						"Ogrémoch's crystalline protrusions flare. Each creature within 30 feet of Ogrémoch becomes outlined in orange light, shedding dim light in a 10-foot radius. Any attack roll against an affected creature has advantage if the attacker can see it, and the affected creature can't benefit from being {@condition invisible}."
+						"歐格莫克身上突出的水晶部份猛然閃耀。每個距離歐格莫克30呎內的生物都將散發出橙色的光芒，產生出10呎半徑的微光光照。若攻擊者可以看見受影響的生物，則任何對受影響生物的攻擊檢定都將帶有優勢，且受影響生物將無法得益於{@condition 隱形}帶來的好處。"
 					]
 				},
 				{
-					"name": "Stomp (Costs 2 Actions)",
+					"name": "踩踏 (消耗 2動作)",
+					"ENG_name": "Stomp (Costs 2 Actions)",
 					"entries": [
-						"Ogrémoch stomps the ground, creating an earth tremor that extends in a 30-foot radius. Other creatures standing on the ground in that radius must succeed on a {@dc 23} Dexterity saving throw or fall {@condition prone}."
+						"歐格莫克重踏地表，創造出一陣擴散30呎半徑的地震。範圍內其他站在地面上的生物必須成功通過一次DC 23的敏捷豁免，否則將摔倒{@condition 伏地}。"
 					]
 				},
 				{
-					"name": "Create Gargoyle (Costs 3 Actions)",
+					"name": "創造石像鬼 (消耗 3動作)",
+					"ENG_name": "Create Gargoyle (Costs 3 Actions)",
 					"entries": [
-						"Ogrémoch's hit points are reduced by 50 as he breaks off a chunk of his body and places it on the ground in an unoccupied space within 15 feet of him. The chunk of rock instantly transforms into a {@creature gargoyle} and acts on the same initiative count as Ogrémoch. Ogrémoch can't use this action if he has 50 hit points or fewer. The gargoyle obeys Ogrémoch's commands and fights until destroyed."
+						"歐格莫克的生命值減少50點，將他岩石身體的一部分裂開，並放置在一處距離他15呎內未被佔據空間的地面上。這塊岩石將立刻轉變成一個{@creature 石像鬼}，且它會在與歐格莫克相同的先攻順序時行動。若歐格莫克的生命值為50或更低，則他無法使用這個動作。這個石像鬼會服從歐格莫克的命令，且會為其奮戰直到被摧毀。"
 					]
 				}
 			],
@@ -3755,10 +3847,11 @@
 				"prone"
 			],
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"ENG_name": "Ogrémoch"
 		},
 		{
-			"name": "Olhydra",
+			"name": "奧莉德拉",
 			"isNpc": true,
 			"isNamedCreature": true,
 			"source": "PotA",
@@ -3797,7 +3890,7 @@
 				"wis": "+10"
 			},
 			"senses": [
-				"blindsight 120 ft."
+				"盲視120呎"
 			],
 			"passive": 14,
 			"resist": [
@@ -3808,7 +3901,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks",
+					"note": "非魔法攻擊所造成的",
 					"cond": true
 				}
 			],
@@ -3837,14 +3930,14 @@
 						"Olhydra's innate spellcasting ability is Charisma (spell save {@dc 20}, {@hit 12} to hit with spell attacks). She can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell wall of ice}"
+						"{@spell 冰牆術}"
 					],
 					"daily": {
 						"1": [
-							"{@spell storm of vengeance}"
+							"{@spell 復仇風暴}"
 						],
 						"3": [
-							"{@spell ice storm}"
+							"{@spell 冰風暴}"
 						]
 					},
 					"ability": "cha"
@@ -3852,73 +3945,82 @@
 			],
 			"trait": [
 				{
-					"name": "Empowered Attacks",
+					"name": "賦能攻擊",
+					"ENG_name": "Empowered Attacks",
 					"entries": [
-						"Olhydra's slam attacks are treated as magical for the purpose of bypassing resistance and immunity to nonmagical attacks."
+						"在克服對非魔法攻擊和傷害的抗性和免疫能力時，奧莉德拉的猛擊攻擊被視作魔法攻擊。"
 					]
 				},
 				{
-					"name": "Legendary Resistance (3/Day)",
+					"name": "傳奇抗性 (3/日)",
 					"entries": [
-						"If Olhydra fails a saving throw, she can choose to succeed instead."
+						"若奧莉德拉在一次豁免檢定中失敗，她可以選擇改為使其成功。"
 					]
 				},
 				{
-					"name": "Magic Resistance",
+					"name": "魔法抗性",
+					"ENG_name": "Magic Resistance",
 					"entries": [
-						"Olhydra has advantage on saving throws against spells and other magical effects."
+						"奧莉德拉在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				},
 				{
-					"name": "Water Form",
+					"name": "流水形體",
+					"ENG_name": "Water Form",
 					"entries": [
-						"Olhydra can enter a hostile creature's space and stop there. She can move through a space as narrow as 1 inch wide without squeezing."
+						"奧莉德拉可以進入一個敵對生物所在的空間並在該處停下。她也可以移動穿越最窄1吋的狹窄空間而不用擠縮身體。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊",
 					"entries": [
-						"Olhydra makes two slam attacks or two water jet attacks."
+						"奧莉德拉進行二次猛擊攻擊或二次水流噴射攻擊。"
 					]
 				},
 				{
-					"name": "Slam",
+					"name": "猛擊",
+					"ENG_name": "Slam",
 					"entries": [
-						"{@atk mw} {@hit 11} to hit, reach 10 ft., one target. {@h}21 ({@damage 3d10 + 5}) bludgeoning damage, and the target is {@condition grappled} (escape {@dc 19}). Olhydra can grapple up to four targets. When Olhydra moves, all creatures she is grappling move with her."
+						"{@atk mw} 命中{@hit 11}，觸及10呎，單一目標。 {@h}21 ({@damage 3d10 + 5}) 鈍擊傷害，且目標{@condition 被擒}(逃脫DC 19)。奧莉德拉可以同時擒抱最多四個目標。當奧莉德拉移動時，所有被她擒抱的生物也都將跟著她移動。"
 					]
 				},
 				{
-					"name": "Water Jet",
+					"name": "水流噴射",
+					"ENG_name": "Water Jet",
 					"entries": [
-						"{@atk rw} {@hit 12} to hit, range 120 ft., one target. {@h}21 ({@damage 6d6}) bludgeoning damage, and the target is knocked {@condition prone} if it fails a {@dc 19} Strength saving throw."
+						"{@atk rw} 命中{@hit 12}，射程120呎，單一目標。 {@h}21 ({@damage 6d6})鈍擊傷害，且若目標沒能成功通過一次DC 19的力量豁免，則目標將被擊倒{@condition 伏地}。"
 					]
 				},
 				{
-					"name": "Summon Elementals (1/Day)",
+					"name": "召喚元素生物 (1/日)",
+					"ENG_name": "Summon Elementals (1/Day)",
 					"entries": [
-						"Olhydra summons up to three {@creature water elemental||water elementals} and loses 30 hit points for each elemental she summons. Summoned elementals have maximum hit points, appear within 100 feet of Olhydra, and disappear if Olhydra is reduced to 0 hit points."
+						"奧莉德拉召喚出最多三個{@creature 水元素}，且她每召喚出一個元素生物便會失去30點生命值。被召喚的元素生物有著全滿的生命值，會出現在距離奧莉德拉100呎內的位置，且會在奧莉德拉的生命值歸零時消失不見。"
 					]
 				}
 			],
 			"legendary": [
 				{
-					"name": "Crush",
+					"name": "碾壓",
+					"ENG_name": "Crush",
 					"entries": [
-						"One creature that Olhydra is grappling is crushed for 21 ({@damage 3d10 + 5}) bludgeoning damage."
+						"奧莉德拉所擒抱的一個生物將被碾壓，並受到 21 ({@damage 3d10 + 5}) 鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Fling (Costs 2 Actions)",
+					"name": "拋擲 (消耗 2動作)",
+					"ENG_name": "Fling (Costs 2 Actions)",
 					"entries": [
-						"Olhydra releases one creature she is grappling by flinging the creature up to 60 feet away from her, in a direction of her choice. If the flung creature comes into contact with a solid surface, such as a wall or floor, the creature takes {@dice 1d6} bludgeoning damage for every 10 feet it was flung."
+						"奧莉德拉釋放一個她所擒抱的生物，將它往任意奧莉德拉所選擇的方向拋擲到最遠60呎的距離。若被拋擲生物撞上了堅固的表面，像是牆壁或地面，則該生物將受到每被扔出10呎距離{@dice 1d6}的鈍擊傷害。"
 					]
 				},
 				{
-					"name": "Water to Acid (Costs 3 Actions)",
+					"name": "化水為酸 (消耗 3動作)",
+					"ENG_name": "Water to Acid (Costs 3 Actions)",
 					"entries": [
-						"Olhydra transforms her watery body into acid. This effect lasts until Olhydra's next turn. Any creature that comes into contact with Olhydra or hits her with a melee attack while standing within 5 feet of her takes 11 ({@damage 2d10}) acid damage. Any creature {@condition grappled} by Olhydra takes 22 ({@damage 4d10}) acid damage at the start of its turn."
+						"奧莉德拉將她的純水身驅轉變成強酸。這個效果將持續直到奧莉德拉的下個回合。任何接觸到奧莉德拉、或在距離她5呎內的位置時被她以一次近戰攻擊命中的生物都將受到 11 ({@damage 2d10}) 酸蝕傷害。任何{@condition 被擒}於奧莉德拉的生物都將在自己的回合開始蝕受到 22 ({@damage 4d10}) 酸蝕傷害。"
 					]
 				}
 			],
@@ -3964,10 +4066,11 @@
 				"deafened"
 			],
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"ENG_name": "Olhydra"
 		},
 		{
-			"name": "One-Eyed Shiver",
+			"name": "獨眼顫慄者",
 			"source": "PotA",
 			"page": 207,
 			"size": "M",
@@ -3985,7 +4088,7 @@
 				12,
 				{
 					"ac": 15,
-					"condition": "with {@spell mage armor}",
+					"condition": "with {@spell 法師護甲}",
 					"braces": true
 				}
 			],
@@ -4012,7 +4115,7 @@
 				"cold"
 			],
 			"languages": [
-				"Common"
+				"通用語"
 			],
 			"cr": "3",
 			"spellcasting": [
@@ -4024,29 +4127,29 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell chill touch}",
-								"{@spell mage hand}"
+								"{@spell 寒顫之觸}",
+								"{@spell 法師之手}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell fog cloud}",
-								"{@spell mage armor}",
-								"{@spell thunderwave}"
+								"{@spell 雲霧術}",
+								"{@spell 法師護甲}",
+								"{@spell 雷鳴波}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell mirror image}",
-								"{@spell misty step}"
+								"{@spell 鏡影術}",
+								"{@spell 迷蹤步}"
 							]
 						},
 						"3": {
 							"slots": 2,
 							"spells": [
-								"{@spell fear}"
+								"{@spell 恐懼術}"
 							]
 						}
 					},
@@ -4055,23 +4158,25 @@
 			],
 			"trait": [
 				{
-					"name": "Chilling Mist",
+					"name": "寒顫迷霧",
+					"ENG_name": "Chilling Mist",
 					"entries": [
-						"While it is alive, the one-eyed shiver projects an aura of cold mist within 10 feet of itself. If the one-eyed shiver deals damage to a creature in this area, the creature also takes 5 ({@damage 1d10}) cold damage."
+						"當它活著的時候，獨眼顫慄者會在它周圍10呎內的範圍內投射出一股寒冷的迷霧。如果獨眼顫慄者對該區域內的生物造成了傷害，則該生物將額外受到5 ({@damage 1d10})寒冰傷害。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Dagger",
+					"name": "匕首",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}4 ({@damage 1d4 + 2}) piercing damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}4 ({@damage 1d4 + 2}) 穿刺傷害。"
 					]
 				},
 				{
-					"name": "Eye of Frost",
+					"name": "霜凍之眼",
+					"ENG_name": "Eye of Frost",
 					"entries": [
-						"The one-eyed shiver casts ray of frost from its missing eye. If it hits, the target is also {@condition restrained}. A target {@condition restrained} in this way can end the condition by using an action, succeeding on a {@dc 13} Strength check."
+						"獨眼顫慄者從它空洞的眼眶中施放{@spell 冷凍射線}。若它命中，則目標將同時被{@condition 束縛}。被這個方式{@condition 束縛}的目標可以藉由採取一個動作，並成功通過一次DC 13的力量豁免以解除這個狀態。"
 					]
 				}
 			],
@@ -4096,10 +4201,11 @@
 				"frightened"
 			],
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"ENG_name": "One-Eyed Shiver"
 		},
 		{
-			"name": "Oreioth",
+			"name": "奧瑞歐斯",
 			"isNpc": true,
 			"source": "PotA",
 			"page": 212,
@@ -4118,7 +4224,7 @@
 				11,
 				{
 					"ac": 14,
-					"condition": "with {@spell mage armor}",
+					"condition": "with {@spell 法師護甲}",
 					"braces": true
 				}
 			],
@@ -4145,8 +4251,8 @@
 			},
 			"passive": 9,
 			"languages": [
-				"Abyssal",
-				"Common"
+				"深淵語",
+				"通用語"
 			],
 			"cr": "2",
 			"spellcasting": [
@@ -4158,33 +4264,33 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell chill touch}",
-								"{@spell minor illusion}",
-								"{@spell prestidigitation}",
-								"{@spell shocking grasp}"
+								"{@spell 寒顫之觸}",
+								"{@spell 次級幻象}",
+								"{@spell 魔法技倆}",
+								"{@spell 電爪}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell false life}",
-								"{@spell mage armor}",
-								"{@spell magic missile}",
-								"{@spell ray of sickness}"
+								"{@spell 摹造生命}",
+								"{@spell 法師護甲}",
+								"{@spell 魔法飛彈}",
+								"{@spell 致病射線}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell crown of madness}",
-								"{@spell misty step}"
+								"{@spell 瘋狂冠冕}",
+								"{@spell 迷蹤步}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell animate dead}",
-								"{@spell vampiric touch}"
+								"{@spell 活化死屍}",
+								"{@spell 吸血鬼之觸}"
 							]
 						}
 					},
@@ -4193,23 +4299,25 @@
 			],
 			"trait": [
 				{
-					"name": "Grim Harvest",
+					"name": "殘怖收割",
+					"ENG_name": "Grim Harvest",
 					"entries": [
-						"Once per turn when Oreioth kills one or more creatures with a spell of 1st level or higher, he regains hit points equal to twice the spell's level."
+						"每回合一次，當奧瑞歐斯以1環或更高環的法術殺死一個或更多的生物時，他將回復等同於該法術環階二倍的生命值。"
 					]
 				},
 				{
-					"name": "Swift Animation (Recharges after a Long Rest)",
+					"name": "迅捷活化 (長休之後充能)",
+					"ENG_name": "Swift Animation (Recharges after a Long Rest)",
 					"entries": [
-						"When a living Medium or Small humanoid within 30 feet of Oreioth dies, he can use an action on his next turn to cast {@spell animate dead} on that humanoid's corpse, instead of using the spell's normal casting time."
+						"當一個活著且體型為中型或小型的類人生物在距離奧瑞歐斯30呎內時死亡，則他將可以在他的下個回合以一個動作對該類人生物的屍體施放{@spell 活化死屍}，而非以該法術原本的施法時間施放。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Dagger",
+					"name": "匕首",
 					"entries": [
-						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}3 ({@damage 1d4 + 1}) piercing damage."
+						"{@atk mw} 命中{@hit 3}，觸及5呎，單一目標。 {@h}3 ({@damage 1d4 + 1}) 穿刺傷害。"
 					]
 				}
 			],
@@ -4228,7 +4336,8 @@
 				"MW"
 			],
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"ENG_name": "Oreioth"
 		},
 		{
 			"name": "Padraich",
@@ -4267,7 +4376,7 @@
 			]
 		},
 		{
-			"name": "Razerblast",
+			"name": "爆刃",
 			"source": "PotA",
 			"page": 201,
 			"size": "M",
@@ -4311,35 +4420,37 @@
 				"fire"
 			],
 			"languages": [
-				"Common",
-				"Ignan"
+				"通用語",
+				"火族語"
 			],
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Searing Armor",
+					"name": "熾灼盔甲",
+					"ENG_name": "Searing Armor",
 					"entries": [
-						"The razerblast's armor is hot. Any creature grappling the razerblast or {@condition grappled} by it takes 5 ({@damage 1d10}) fire damage at the end of that creature's turn."
+						"爆刃的護甲相當熾熱。任何擒抱爆刃、或{@condition 被擒}於爆刃的生物都將在該生物的回合結束時受到5 ({@damage 1d10})火焰傷害。"
 					]
 				},
 				{
-					"name": "Shrapnel Explosion",
+					"name": "碎鎧爆裂",
+					"ENG_name": "Shrapnel Explosion",
 					"entries": [
-						"When the razerblast drops to 0 hit points, a flaming orb in its chest explodes, destroying the razerblast's body and scattering its armor as shrapnel. Creatures within 10 feet of the razerblast when it explodes must succeed on a {@dc 12} Dexterity saving throw, taking 21 ({@damage 6d6}) piercing damage on a failed save, or half as much damage on a successful one."
+						"當爆刃的生命值歸零時，它胸中的熾焰法球將會爆炸，摧毀爆刃的身體並使它的盔甲爆裂成破片。每個在爆刃爆炸時距離它10呎內的生物都必須成功通過一次DC 12的敏捷豁免，豁免失敗將受到21 ({@damage 6d6})穿刺傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊",
 					"entries": [
-						"The razerblast makes three melee attacks."
+						"爆刃進行三次近戰攻擊。"
 					]
 				},
 				{
-					"name": "Spear",
+					"name": "矛",
 					"entries": [
-						"{@atk mw,rw} {@hit 6} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}6 ({@damage 1d6 + 3}) piercing damage, or 7 ({@damage 1d8 + 3}) piercing damage if used with two hands to make a melee attack, plus 3 ({@damage 1d6}) fire damage."
+						"{@atk mw,rw} 命中{@hit 6}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}6 ({@damage 1d6 + 3})穿刺傷害，或若雙手使用以進行一次近戰攻擊時則造成 7 ({@damage 1d8 + 3}) 穿刺傷害，再加上 3 ({@damage 1d6})火焰傷害。"
 					]
 				}
 			],
@@ -4361,7 +4472,8 @@
 				"THW"
 			],
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"ENG_name": "Razerblast"
 		},
 		{
 			"name": "Renwick",
@@ -4390,77 +4502,77 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell mage hand}",
-								"{@spell prestidigitation}",
-								"{@spell ray of frost}"
+								"{@spell 法師之手}",
+								"{@spell 魔法技倆}",
+								"{@spell 冷凍射線}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell detect magic}",
-								"{@spell magic missile}",
-								"{@spell shield}",
-								"{@spell thunderwave}"
+								"{@spell 偵測魔法}",
+								"{@spell 魔法飛彈}",
+								"{@spell 護盾術}",
+								"{@spell 雷鳴波}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell detect thoughts}",
-								"{@spell invisibility}",
-								"{@spell Melf's acid arrow}",
-								"{@spell mirror image}"
+								"{@spell 偵測思想}",
+								"{@spell 隱形術}",
+								"{@spell 馬友夫強酸箭}",
+								"{@spell 鏡影術}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell animate dead}",
-								"{@spell counterspell}",
-								"{@spell dispel magic}",
-								"{@spell fireball}"
+								"{@spell 活化死屍}",
+								"{@spell 反制法術}",
+								"{@spell 解除魔法}",
+								"{@spell 火球術}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell blight}",
-								"{@spell dimension door}"
+								"{@spell 枯萎術}",
+								"{@spell 次元門}"
 							]
 						},
 						"5": {
 							"slots": 3,
 							"spells": [
-								"{@spell cloudkill}",
-								"{@spell scrying}"
+								"{@spell 死雲術}",
+								"{@spell 探知}"
 							]
 						},
 						"6": {
 							"slots": 1,
 							"spells": [
-								"{@spell disintegrate}",
-								"{@spell globe of invulnerability}"
+								"{@spell 解離術}",
+								"{@spell 法術無效結界}"
 							]
 						},
 						"7": {
 							"slots": 1,
 							"spells": [
-								"{@spell finger of death}",
-								"{@spell plane shift}"
+								"{@spell 死亡一指}",
+								"{@spell 異界傳送}"
 							]
 						},
 						"8": {
 							"slots": 1,
 							"spells": [
-								"{@spell dominate monster}",
-								"{@spell power word stun}"
+								"{@spell 支配怪物}",
+								"{@spell 律令震懾}"
 							]
 						},
 						"9": {
 							"slots": 1,
 							"spells": [
-								"{@spell time stop}"
+								"{@spell 時間停止}"
 							]
 						}
 					},
@@ -4507,7 +4619,7 @@
 			]
 		},
 		{
-			"name": "Sacred Stone Monk",
+			"name": "聖石僧",
 			"source": "PotA",
 			"page": 196,
 			"size": "M",
@@ -4543,38 +4655,40 @@
 				"perception": "+4"
 			},
 			"senses": [
-				"tremorsense 10 ft."
+				"震顫感知10呎"
 			],
 			"passive": 14,
 			"languages": [
-				"Common"
+				"通用語"
 			],
 			"cr": "1/2",
 			"trait": [
 				{
-					"name": "Unarmored Defense",
+					"name": "無甲防禦",
+					"ENG_name": "Unarmored Defense",
 					"entries": [
-						"While the monk is wearing no armor and wielding no shield, its AC includes its Wisdom modifier."
+						"當聖石僧未穿戴任何護甲且未持用盾牌時，它的AC將加上它的睿知調整值。"
 					]
 				},
 				{
-					"name": "Unarmored Movement",
+					"name": "無甲移動",
+					"ENG_name": "Unarmored Movement",
 					"entries": [
-						"While the monk is wearing no armor and wielding no shield, its walking speed increases by 10 feet (included in its speed)."
+						"當聖石僧未穿戴任何護甲且未持用盾牌時，它的移動速度將增加10呎（已包含在移動速度）。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊",
 					"entries": [
-						"The monk makes two melee attacks."
+						"聖石僧進行二次近戰攻擊。"
 					]
 				},
 				{
-					"name": "Unarmed Strike",
+					"name": "徒手打擊",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) bludgeoning damage."
+						"{@atk mw} 命中{@hit 4}，觸及5呎，單一目標。 {@h}5 ({@damage 1d6 + 2}) 鈍擊傷害。"
 					]
 				}
 			],
@@ -4603,10 +4717,11 @@
 			"miscTags": [
 				"MW"
 			],
-			"hasFluff": true
+			"hasFluff": true,
+			"ENG_name": "Sacred Stone Monk"
 		},
 		{
-			"name": "Shoalar Quanderil",
+			"name": "索勒．剛卓",
 			"isNpc": true,
 			"source": "PotA",
 			"page": 208,
@@ -4625,7 +4740,7 @@
 				10,
 				{
 					"ac": 13,
-					"condition": "with {@spell mage armor}",
+					"condition": "with {@spell 法師護甲}",
 					"braces": true
 				}
 			],
@@ -4654,8 +4769,8 @@
 				"acid"
 			],
 			"languages": [
-				"Aquan",
-				"Common"
+				"水族語",
+				"通用語"
 			],
 			"cr": "4",
 			"spellcasting": [
@@ -4669,7 +4784,7 @@
 					],
 					"daily": {
 						"1": [
-							"{@spell create or destroy water}"
+							"{@spell 造水/枯水術}"
 						]
 					},
 					"ability": "con"
@@ -4682,26 +4797,26 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell acid splash}",
-								"{@spell chill touch}",
-								"{@spell friends}",
-								"{@spell prestidigitation}",
-								"{@spell ray of frost}"
+								"{@spell 酸液濺爆}",
+								"{@spell 寒顫之觸}",
+								"{@spell 交友術}",
+								"{@spell 魔法技倆}",
+								"{@spell 冷凍射線}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell disguise self}",
-								"{@spell mage armor}",
-								"{@spell magic missile}"
+								"{@spell 易容術}",
+								"{@spell 法師護甲}",
+								"{@spell 魔法飛彈}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell hold person}",
-								"{@spell misty step}"
+								"{@spell 人類定身術}",
+								"{@spell 迷蹤步}"
 							]
 						},
 						"3": {
@@ -4716,17 +4831,18 @@
 			],
 			"trait": [
 				{
-					"name": "Amphibious",
+					"name": "兩棲",
+					"ENG_name": "Amphibious",
 					"entries": [
-						"Shoalar can breathe air and water."
+						"索勒可以在空氣和水中呼吸。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Dagger",
+					"name": "匕首",
 					"entries": [
-						"{@atk mw,rw} {@hit 3} to hit, reach 5 ft. or ranged 20/60 ft., one target. {@h}3 ({@damage 1d4 + 1}) piercing damage."
+						"{@atk mw,rw} 命中{@hit 3}，觸及5呎 或射程d 20/60 呎, 單一目標。 {@h}3 ({@damage 1d4 + 1}) 穿刺傷害。"
 					]
 				}
 			],
@@ -4750,10 +4866,11 @@
 				"RW",
 				"THW"
 			],
-			"hasFluff": true
+			"hasFluff": true,
+			"ENG_name": "Shoalar Quanderil"
 		},
 		{
-			"name": "Skyweaver",
+			"name": "空織匠",
 			"source": "PotA",
 			"page": 191,
 			"size": "M",
@@ -4771,7 +4888,7 @@
 				12,
 				{
 					"ac": 15,
-					"condition": "with {@spell mage armor}",
+					"condition": "with {@spell 法師護甲}",
 					"braces": true
 				}
 			],
@@ -4794,8 +4911,8 @@
 			},
 			"passive": 10,
 			"languages": [
-				"Auran",
-				"Common"
+				"氣族語",
+				"通用語"
 			],
 			"cr": "3",
 			"spellcasting": [
@@ -4807,33 +4924,33 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell blade ward}",
-								"{@spell light}",
-								"{@spell message}",
-								"{@spell ray of frost}",
-								"{@spell shocking grasp}"
+								"{@spell 劍刃防護}",
+								"{@spell 光亮術}",
+								"{@spell 傳訊術}",
+								"{@spell 冷凍射線}",
+								"{@spell 電爪}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell feather fall}",
-								"{@spell mage armor}",
-								"{@spell witch bolt}"
+								"{@spell 羽落術}",
+								"{@spell 法師護甲}",
+								"{@spell 巫術箭}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell gust of wind}",
-								"{@spell invisibility}"
+								"{@spell 造風術}",
+								"{@spell 隱形術}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell fly}",
-								"{@spell lightning bolt}"
+								"{@spell 飛行術}",
+								"{@spell 閃電束}"
 							]
 						}
 					},
@@ -4842,9 +4959,9 @@
 			],
 			"action": [
 				{
-					"name": "Dagger",
+					"name": "匕首",
 					"entries": [
-						"{@atk mw,rw} {@hit 4} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}3 ({@damage 1d4 + 1}) piercing damage."
+						"{@atk mw,rw} 命中{@hit 4}，觸及5呎 或射程 20/60 呎, 單一目標。 {@h}3 ({@damage 1d4 + 1}) 穿刺傷害。"
 					]
 				}
 			],
@@ -4864,7 +4981,8 @@
 				"RW",
 				"THW"
 			],
-			"hasFluff": true
+			"hasFluff": true,
+			"ENG_name": "Skyweaver"
 		},
 		{
 			"name": "Stone Warrior",
@@ -4889,7 +5007,7 @@
 			"actionTags": []
 		},
 		{
-			"name": "Stonemelder",
+			"name": "融石者",
 			"source": "PotA",
 			"page": 197,
 			"size": "M",
@@ -4929,12 +5047,12 @@
 				"perception": "+2"
 			},
 			"senses": [
-				"tremorsense 30 ft."
+				"震顫感知30呎"
 			],
 			"passive": 12,
 			"languages": [
-				"Common",
-				"Terran"
+				"通用語",
+				"土族語"
 			],
 			"cr": "4",
 			"spellcasting": [
@@ -4946,39 +5064,39 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell acid splash}",
-								"{@spell blade ward}",
-								"{@spell light}",
-								"{@spell mending}",
+								"{@spell 酸液濺爆}",
+								"{@spell 劍刃防護}",
+								"{@spell 光亮術}",
+								"{@spell 修復術}",
 								"{@spell mold earth|xge}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell expeditious retreat}",
-								"{@spell false life}",
-								"{@spell shield}"
+								"{@spell 腳底抹油}",
+								"{@spell 摹造生命}",
+								"{@spell 護盾術}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
 								"{@spell Maximilian's earthen grasp|xge}",
-								"{@spell shatter}"
+								"{@spell 粉碎音波}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
 								"{@spell erupting earth|xge}",
-								"{@spell meld into stone}"
+								"{@spell 融身入石}"
 							]
 						},
 						"4": {
 							"slots": 1,
 							"spells": [
-								"{@spell stoneskin}"
+								"{@spell 石膚術}"
 							]
 						}
 					},
@@ -4987,17 +5105,19 @@
 			],
 			"trait": [
 				{
-					"name": "Death Burst",
+					"name": "死亡自爆",
+					"ENG_name": "Death Burst",
 					"entries": [
-						"When the Stonemelder dies, it turns to stone and explodes in a burst of rock shards, becoming a smoking pile of rubble. Each creature within 10 feet of the exploding Stonemelder must make a {@dc 14} Dexterity saving throw, taking 11 ({@damage 2d10}) bludgeoning damage on a failed save, or half as much damage on a successful one."
+						"當融石者死亡時，它將化作岩石並爆裂成碎塊，變成一堆冒著煙的石礫。每個在融石者爆炸時距離它10呎內的生物都必須進行一次DC 14的敏捷豁免，豁免失敗則受到11 ({@damage 2d10})鈍擊傷害，豁免成功則只受到一半的傷害。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Black Earth Rod",
+					"name": "黑土權杖",
+					"ENG_name": "Black Earth Rod",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) bludgeoning damage. The Stonemelder can also expend a spell slot to deal extra damage, dealing {@dice 2d8} bludgeoning damage for a 1st level slot, plus an additional {@dice 1d8} for each level of the slot above 1st."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。 {@h}5 ({@damage 1d6 + 2}) 鈍擊傷害。融石者也可以消耗一個法術位以造成額外傷害，1環法術位將造成{@dice 2d8}鈍擊傷害，每比1環高一環則再額外造成{@dice 1d8}點傷害。"
 					]
 				}
 			],
@@ -5021,10 +5141,11 @@
 			"miscTags": [
 				"MW"
 			],
-			"hasFluff": true
+			"hasFluff": true,
+			"ENG_name": "Stonemelder"
 		},
 		{
-			"name": "Thurl Merosska",
+			"name": "圖爾．莫羅斯卡",
 			"isNpc": true,
 			"source": "PotA",
 			"page": 192,
@@ -5068,8 +5189,8 @@
 			},
 			"passive": 10,
 			"languages": [
-				"Auran",
-				"Common"
+				"氣族語",
+				"通用語"
 			],
 			"cr": "3",
 			"spellcasting": [
@@ -5081,32 +5202,32 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell friends}",
+								"{@spell 交友術}",
 								"{@spell gust|xge}",
-								"{@spell light}",
-								"{@spell message}",
-								"{@spell ray of frost}"
+								"{@spell 光亮術}",
+								"{@spell 傳訊術}",
+								"{@spell 冷凍射線}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell expeditious retreat}",
-								"{@spell feather fall}",
-								"{@spell jump}"
+								"{@spell 腳底抹油}",
+								"{@spell 羽落術}",
+								"{@spell 跳躍術}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell levitate}",
-								"{@spell misty step}"
+								"{@spell 浮空術}",
+								"{@spell 迷蹤步}"
 							]
 						},
 						"3": {
 							"slots": 2,
 							"spells": [
-								"{@spell haste}"
+								"{@spell 加速術}"
 							]
 						}
 					},
@@ -5115,21 +5236,23 @@
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊",
 					"entries": [
-						"Thurl makes two melee attacks."
+						"圖爾進行二次近戰攻擊。"
 					]
 				},
 				{
-					"name": "Greatsword",
+					"name": "巨劍",
+					"ENG_name": "Greatsword",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}10 ({@damage 2d6 + 3}) slashing damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一目標。 {@h}10 ({@damage 2d6 + 3}) 劈砍傷害。"
 					]
 				},
 				{
-					"name": "Lance",
+					"name": "騎槍",
+					"ENG_name": "Lance",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 10 ft., one target. {@h}9 ({@damage 1d12 + 3}) piercing damage."
+						"{@atk mw} 命中{@hit 5}，觸及10呎，單一目標。 {@h}9 ({@damage 1d12 + 3}) 穿刺傷害。"
 					]
 				}
 			],
@@ -5161,7 +5284,8 @@
 				"MW",
 				"RCH"
 			],
-			"hasFluff": true
+			"hasFluff": true,
+			"ENG_name": "Thurl Merosska"
 		},
 		{
 			"name": "Tornscale",
@@ -5187,7 +5311,7 @@
 			"hasToken": true
 		},
 		{
-			"name": "Vanifer",
+			"name": "凡妮弗",
 			"isNpc": true,
 			"source": "PotA",
 			"page": 203,
@@ -5229,16 +5353,16 @@
 				"performance": "+8"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗視覺60呎"
 			],
 			"passive": 11,
 			"immune": [
 				"fire"
 			],
 			"languages": [
-				"Common",
-				"Ignan",
-				"Infernal"
+				"通用語",
+				"火族語",
+				"煉獄語"
 			],
 			"cr": "9",
 			"spellcasting": [
@@ -5250,51 +5374,51 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell chill touch}",
-								"{@spell fire bolt}",
-								"{@spell friends}",
-								"{@spell mage hand}",
-								"{@spell message}",
-								"{@spell produce flame}",
-								"{@spell thaumaturgy}"
+								"{@spell 寒顫之觸}",
+								"{@spell 火焰箭}",
+								"{@spell 交友術}",
+								"{@spell 法師之手}",
+								"{@spell 傳訊術}",
+								"{@spell 燃火術}",
+								"{@spell 奇術}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell burning hands}",
-								"{@spell chromatic orb}",
-								"{@spell hellish rebuke}",
-								"{@spell shield}"
+								"{@spell 燃燒之手}",
+								"{@spell 幻色法球}",
+								"{@spell 煉獄叱喝}",
+								"{@spell 護盾術}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell darkness}",
-								"{@spell detect thoughts}",
-								"{@spell misty step}",
-								"{@spell scorching ray}"
+								"{@spell 黑暗術}",
+								"{@spell 偵測思想}",
+								"{@spell 迷蹤步}",
+								"{@spell 灼熱射線}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell counterspell}",
-								"{@spell fireball}",
-								"{@spell hypnotic pattern}"
+								"{@spell 反制法術}",
+								"{@spell 火球術}",
+								"{@spell 催眠圖紋}"
 							]
 						},
 						"4": {
 							"slots": 3,
 							"spells": [
-								"{@spell wall of fire}"
+								"{@spell 火牆術}"
 							]
 						},
 						"5": {
 							"slots": 2,
 							"spells": [
-								"{@spell dominate person}"
+								"{@spell 支配人類}"
 							]
 						}
 					},
@@ -5303,29 +5427,30 @@
 			],
 			"trait": [
 				{
-					"name": "Funeral Pyre",
+					"name": "火葬",
+					"ENG_name": "Funeral Pyre",
 					"entries": [
-						"When Vanifer drops to 0 hit points, her body is consumed in a flash of fire and smoke. Anything she was wearing or carrying is left behind among ashes."
+						"當凡妮弗的生命值歸零時，她的身體將在瞬間被火焰和煙霧給吞噬殆盡。任何她所穿戴或攜帶的東西都將被留在原地。"
 					]
 				},
 				{
-					"name": "Legendary Resistance (2/Day)",
+					"name": "傳奇抗性 (2/日)",
 					"entries": [
-						"If Vanifer fails a saving throw, she can choose to succeed instead."
+						"若凡妮弗在一次豁免檢定中失敗，她可以選擇改為使其成功。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊",
 					"entries": [
-						"Vanifer makes two attacks."
+						"凡妮弗進行二次攻擊。"
 					]
 				},
 				{
-					"name": "Tinderstrike",
+					"name": "焰襲",
 					"entries": [
-						"{@atk mw,rw} {@hit 9} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}7 ({@damage 1d4 + 5}) piercing damage plus 7 ({@damage 2d6}) fire damage."
+						"{@atk mw,rw} 命中{@hit 9}，觸及5呎 或 射程20/60呎, 單一目標。 {@h}7 ({@damage 1d4 + 5})穿刺傷害加 7 ({@damage 2d6})火焰傷害。"
 					]
 				}
 			],
@@ -5360,10 +5485,11 @@
 				"RW"
 			],
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"ENG_name": "Vanifer"
 		},
 		{
-			"name": "Wiggan Nettlebee",
+			"name": "威甘．怒蜂",
 			"isNpc": true,
 			"source": "PotA",
 			"page": 212,
@@ -5382,7 +5508,7 @@
 				11,
 				{
 					"ac": 16,
-					"condition": "with {@spell barkskin}",
+					"condition": "with {@spell 樹膚術}",
 					"braces": true
 				}
 			],
@@ -5405,8 +5531,8 @@
 			},
 			"passive": 12,
 			"languages": [
-				"Common",
-				"Halfling"
+				"通用語",
+				"半身人語"
 			],
 			"cr": "2",
 			"spellcasting": [
@@ -5418,29 +5544,29 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell guidance}",
-								"{@spell light}",
-								"{@spell mending}",
-								"{@spell shillelagh}",
-								"{@spell thaumaturgy}"
+								"{@spell 指導術}",
+								"{@spell 光亮術}",
+								"{@spell 修復術}",
+								"{@spell 橡棍術}",
+								"{@spell 奇術}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell animal friendship}",
-								"{@spell cure wounds}",
-								"{@spell healing word}",
-								"{@spell inflict wounds}",
-								"{@spell speak with animals}"
+								"{@spell 化獸為友}",
+								"{@spell 治療傷勢}",
+								"{@spell 治癒真言}",
+								"{@spell 造成傷勢}",
+								"{@spell 動物交談術}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell barkskin}",
-								"{@spell spike growth}",
-								"{@spell spiritual weapon}"
+								"{@spell 樹膚術}",
+								"{@spell 荊棘叢生}",
+								"{@spell 靈體武器}"
 							]
 						}
 					},
@@ -5449,23 +5575,25 @@
 			],
 			"trait": [
 				{
-					"name": "Brave Devotion",
+					"name": "英勇奉獻",
+					"ENG_name": "Brave Devotion",
 					"entries": [
-						"Wiggan has advantage on saving throws against being {@condition charmed} or {@condition frightened}."
+						"威甘在對抗{@condition 魅惑}和{@condition 恐懼}的豁免檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊",
 					"entries": [
-						"Wiggan makes two attacks with his wooden cane."
+						"威甘使用他的木拐杖進行二次攻擊。"
 					]
 				},
 				{
-					"name": "Wooden Cane",
+					"name": "木拐杖",
+					"ENG_name": "Wooden Cane",
 					"entries": [
-						"{@atk mw} {@hit 0} to hit ({@hit 4} to hit with shillelagh), reach 5 ft., one target. {@h}1 ({@damage 1d4 - 1}) bludgeoning damage, or 6 ({@damage 1d8 + 2}) bludgeoning damage with shillelagh."
+						"{@atk mw} 命中{@hit 0} ({@spell 橡棍術}時命中{@hit 4})，觸及5呎，單一目標。 {@h}1 ({@damage 1d4 - 1})鈍擊傷害，或若使用橡棍術時 6 ({@damage 1d8 + 2}) 鈍擊傷害。"
 					]
 				}
 			],
@@ -5490,10 +5618,11 @@
 				"charmed"
 			],
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"ENG_name": "Wiggan Nettlebee"
 		},
 		{
-			"name": "Windharrow",
+			"name": "溫德哈羅",
 			"isNpc": true,
 			"source": "PotA",
 			"page": 192,
@@ -5537,13 +5666,13 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"黑暗視覺60呎"
 			],
 			"passive": 10,
 			"languages": [
-				"Auran",
-				"Common",
-				"Elvish"
+				"氣族語",
+				"通用語",
+				"精靈語"
 			],
 			"cr": "3",
 			"spellcasting": [
@@ -5555,40 +5684,40 @@
 					"spells": {
 						"0": {
 							"spells": [
-								"{@spell friends}",
-								"{@spell prestidigitation}",
-								"{@spell vicious mockery}"
+								"{@spell 交友術}",
+								"{@spell 魔法技倆}",
+								"{@spell 惡毒嘲笑}"
 							]
 						},
 						"1": {
 							"slots": 4,
 							"spells": [
-								"{@spell disguise self}",
-								"{@spell dissonant whispers}",
-								"{@spell thunderwave}"
+								"{@spell 易容術}",
+								"{@spell 噪音暗語}",
+								"{@spell 雷鳴波}"
 							]
 						},
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell invisibility}",
-								"{@spell shatter}",
-								"{@spell silence}"
+								"{@spell 隱形術}",
+								"{@spell 粉碎音波}",
+								"{@spell 沉默術}"
 							]
 						},
 						"3": {
 							"slots": 3,
 							"spells": [
-								"{@spell nondetection}",
-								"{@spell sending}",
-								"{@spell tongues}"
+								"{@spell 迴避偵測}",
+								"{@spell 短訊術}",
+								"{@spell 巧舌術}"
 							]
 						},
 						"4": {
 							"slots": 2,
 							"spells": [
-								"{@spell confusion}",
-								"{@spell dimension door}"
+								"{@spell 困惑術}",
+								"{@spell 次元門}"
 							]
 						}
 					},
@@ -5597,23 +5726,24 @@
 			],
 			"trait": [
 				{
-					"name": "Fey Ancestry",
+					"name": "精類血統",
+					"ENG_name": "Fey Ancestry",
 					"entries": [
-						"Windharrow has advantage on saving throws against being {@condition charmed}, and magic can't put him to sleep."
+						"溫德哈羅在對抗{@condition 魅惑}的豁免檢定中具有優勢，且魔法無法使她入睡。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊",
 					"entries": [
-						"Windharrow makes two melee attacks."
+						"溫德哈羅進行二次近戰攻擊。"
 					]
 				},
 				{
-					"name": "Rapier",
+					"name": "刺劍",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one creature. {@h}7 ({@damage 1d8 + 3}) piercing damage."
+						"{@atk mw} 命中{@hit 5}，觸及5呎，單一生物。 {@h}7 ({@damage 1d8 + 3}) 穿刺傷害。"
 					]
 				}
 			],
@@ -5645,10 +5775,11 @@
 				"deafened",
 				"invisible"
 			],
-			"hasFluff": true
+			"hasFluff": true,
+			"ENG_name": "Windharrow"
 		},
 		{
-			"name": "Yan-C-Bin",
+			"name": "延希賓",
 			"isNpc": true,
 			"isNamedCreature": true,
 			"source": "PotA",
@@ -5687,7 +5818,7 @@
 				"cha": "+12"
 			},
 			"senses": [
-				"blindsight 120 ft."
+				"盲視120呎"
 			],
 			"passive": 15,
 			"resist": [
@@ -5699,7 +5830,7 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks",
+					"note": "非魔法攻擊所造成的",
 					"cond": true
 				}
 			],
@@ -5718,7 +5849,7 @@
 				"restrained"
 			],
 			"languages": [
-				"Auran"
+				"氣族語"
 			],
 			"cr": "18",
 			"spellcasting": [
@@ -5728,15 +5859,15 @@
 						"Yan-C-Bin's innate spellcasting ability is Charisma (spell save {@dc 20}, {@hit 12} to hit with spell attacks). He can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell gust of wind}",
-						"{@spell invisibility}",
-						"{@spell lightning bolt}"
+						"{@spell 造風術}",
+						"{@spell 隱形術}",
+						"{@spell 閃電束}"
 					],
 					"daily": {
 						"2e": [
-							"{@spell chain lightning}",
-							"{@spell cloudkill}",
-							"{@spell haste}"
+							"{@spell 連環閃電}",
+							"{@spell 死雲術}",
+							"{@spell 加速術}"
 						]
 					},
 					"ability": "cha"
@@ -5744,79 +5875,89 @@
 			],
 			"trait": [
 				{
-					"name": "Air Form",
+					"name": "氣態形體",
+					"ENG_name": "Air Form",
 					"entries": [
-						"Yan-C-Bin can enter a hostile creature's space and stop there. He can move through a space as narrow as 1 inch wide without squeezing if air could pass through that space."
+						"延希賓可以進入一個敵對生物所在的空間並在該處停下。他也可以移動穿越最窄1吋，且空氣得以通過的的狹窄空間而不用擠縮身體。"
 					]
 				},
 				{
-					"name": "Empowered Attacks",
+					"name": "賦能攻擊",
+					"ENG_name": "Empowered Attacks",
 					"entries": [
-						"Yan-C-Bin's slam attacks are treated as magical for the purpose of bypassing resistance and immunity to nonmagical attacks."
+						"在克服對非魔法攻擊和傷害的抗性和免疫能力時，延希賓的猛擊攻擊被視作魔法攻擊。"
 					]
 				},
 				{
-					"name": "Legendary Resistance (3/Day)",
+					"name": "傳奇抗性 (3/日)",
 					"entries": [
-						"If Yan-C-Bin fails a saving throw, he can choose to succeed instead."
+						"若延希賓在一次豁免檢定中失敗，他可以選擇改為使其成功。"
 					]
 				},
 				{
-					"name": "Magic Resistance",
+					"name": "魔法抗性",
+					"ENG_name": "Magic Resistance",
 					"entries": [
-						"Yan-C-Bin has advantage on saving throws against spells and other magical effects."
+						"延希賓在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "多重攻擊",
 					"entries": [
-						"Yan-C-Bin makes two slam attacks."
+						"延希賓進行二次猛擊攻擊。"
 					]
 				},
 				{
-					"name": "Slam",
+					"name": "猛擊",
+					"ENG_name": "Slam",
 					"entries": [
-						"{@atk mw} {@hit 14} to hit, reach 10 ft., one target. {@h}20 ({@damage 3d8 + 7}) force damage plus 10 ({@damage 3d6}) lightning damage."
+						"{@atk mw} 命中{@hit 14}，觸及10呎，單一目標。 {@h}20 ({@damage 3d8 + 7}) 力場傷害加 10 ({@damage 3d6})閃電傷害。"
 					]
 				},
 				{
-					"name": "Thundercrack (Recharges after a Short or Long Rest)",
+					"name": "雷鳴霹靂 (短休或長休之後充能)",
+					"ENG_name": "Thundercrack (Recharges after a Short or Long Rest)",
 					"entries": [
-						"Yan-C-Bin unleashes a terrible thundercrack in a 100-foot-radius sphere centered on himself. All other creatures in the area must succeed on a {@dc 24} Constitution saving throw or take 31 ({@damage 9d6}) thunder damage and be {@condition deafened} for 1 minute. On a successful save, a creature takes half as much damage and is {@condition deafened} until the start of Yan-C-Bin's next turn."
+						"延希賓釋放出一道以他自己為中心，籠罩整個100呎半徑球體範圍內的可怕雷鳴。範圍內的所有其他生物都必須成功通過一次DC 24的體質豁免，否則將受到 31 ({@damage 9d6})雷鳴傷害，且陷入{@condition 耳聾}長達1分鐘。若豁免成功，則該生物只受到一半的傷害，且只會陷入{@condition 耳聾}狀態直到延希賓的下個回合開始。"
 					]
 				},
 				{
-					"name": "Change Shape",
+					"name": "改變形體",
+					"ENG_name": "Change Shape",
 					"entries": [
-						"Yan-C-Bin polymorphs into a Medium humanoid. While in polymorphed form, a swirling breeze surrounds him, his eyes are pale and cloudy, and he loses the Air Form trait. He can remain in polymorphed form for up to 1 hour. Reverting to his true form requires an action."
+						"延希賓可以變形成一個中型的類人生物。當處於變形型態時，他的身邊將環繞著微風，他的雙眼蒼白而混濁，且他將失去氣態形體特性。他可以維持這個變形型態最多長達1小時。變回他的真實型態需要採取一個動作。"
 					]
 				},
 				{
-					"name": "Summon Elementals (1/Day)",
+					"name": "召喚元素生物 (1/日)",
+					"ENG_name": "Summon Elementals (1/Day)",
 					"entries": [
-						"Yan-C-Bin summons up to three {@creature air elemental||air elementals} and loses 30 hit points for each elemental he summons. Summoned elementals have maximum hit points, appear within 100 feet of Yan-C-Bin, and disappear if Yan-C-Bin is reduced to 0 hit points."
+						"延希賓召喚出最多三個{@creature 氣元素}，且他每召喚出一個元素生物便會失去30點生命值。被召喚的元素生物有著全滿的生命值，會出現在距離延希賓100呎內的位置，且會在延希賓的生命值歸零時消失不見。"
 					]
 				}
 			],
 			"legendary": [
 				{
-					"name": "Peal of Thunder",
+					"name": "轟隆雷鳴",
+					"ENG_name": "Peal of Thunder",
 					"entries": [
-						"Yan-C-Bin unleashes a peal of thunder that can be heard out to a range of 300 feet. Each creature within 30 feet of Yan-C-Bin takes 5 ({@damage 1d10}) thunder damage."
+						"延希賓釋放出一道轟隆雷鳴，在距離300呎內的範圍內都能被聽見。每個距離延希賓30呎內的生物都將受到 5 ({@damage 1d10})雷鳴傷害。"
 					]
 				},
 				{
-					"name": "Teleport (Costs 2 Actions)",
+					"name": "傳送 (消耗 2動作)",
+					"ENG_name": "Teleport (Costs 2 Actions)",
 					"entries": [
-						"Yan-C-Bin magically teleports up to 120 feet to an unoccupied space he can see. Anything Yan-C-Bin is wearing or carrying is teleported with him."
+						"延希賓用魔法傳送最多120呎距離到一處他所能看見的未被佔據空間。任何延希賓所穿戴或攜帶的裝備都會跟著他一起被傳送。"
 					]
 				},
 				{
-					"name": "Suffocate (Costs 3 Actions)",
+					"name": "窒息 (消耗 3動作)",
+					"ENG_name": "Suffocate (Costs 3 Actions)",
 					"entries": [
-						"Yan-C-Bin steals the air of one breathing creature he can see within 60 feet of him. The target must make a {@dc 21} Constitution saving throw. On a failed save, the target drops to 0 hit points and is dying. On a successful save, the target can't breathe or speak until the start of its next turn."
+						"延希賓竊走一個距離他60呎內，他所能看見，且需要呼吸的生物身邊的空氣。目標必須進行一次DC 21的體質豁免。若豁免失敗，則目標的生命值歸零並陷入瀕死。若豁免成功，則目標直到它的下個回合開始之前都無法呼吸或說話。"
 					]
 				}
 			],
@@ -5861,7 +6002,8 @@
 				"invisible"
 			],
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"ENG_name": "Yan-C-Bin"
 		},
 		{
 			"name": "Young Bulette",

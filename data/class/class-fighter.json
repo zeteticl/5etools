@@ -1,7 +1,8 @@
 {
 	"class": [
 		{
-			"name": "Fighter",
+			"name": "戰士",
+			"ENG_name": "Fighter",
 			"source": "PHB",
 			"page": 70,
 			"srd": true,
@@ -45,12 +46,12 @@
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
-					"(a) {@item chain mail|phb} or (b) {@item leather armor|phb}, {@item longbow|phb}, and {@item arrows (20)|phb|20 arrows}",
-					"(a) a {@filter martial weapon|items|source=phb|category=basic|type=martial weapon} and a {@item shield|phb} or (b) two {@filter martial weapons|items|source=phb|category=basic|type=martial weapon}",
-					"(a) a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts} or (b) two {@item handaxe|phb|handaxes}",
-					"(a) a {@item dungeoneer's pack|phb} or (b) an {@item explorer's pack|phb}"
+					"(a)一件{@item 鎖子甲|phb} 或 (b)一件{@item 皮甲|phb}、一把{@item 長弓|phb}和{@item 箭(20)|phb|20支箭}",
+					"(a)一把{@filter 軍用武器|items|source=phb|category=basic|type=martial weapon}和一面{@item 盾牌|phb} 或 (b)兩把{@filter 軍用武器|items|source=phb|category=basic|type=martial weapon}",
+					"(a)一把{@item 輕弩|phb}和{@item 弩矢(20)|phb|20支弩矢} 或 (b)二把{@item 手斧|phb}",
+					"(a)一套{@item 地城探險家套裝|phb} 或 (b)一套{@item 探索者套裝|phb}"
 				],
-				"goldAlternative": "{@dice 5d4 × 10|5d4 × 10|Starting Gold}",
+				"goldAlternative": "{@dice 5d4 × 10|5d4 × 10|起始金錢}",
 				"defaultData": [
 					{
 						"a": [
@@ -120,91 +121,97 @@
 				}
 			},
 			"classFeatures": [
-				"Fighting Style|Fighter||1",
+				"戰鬥風格|Fighter||1",
 				"Martial Versatility|Fighter||1|UAClassFeatureVariants",
-				"Second Wind|Fighter||1",
+				"回氣|Fighter||1",
 				"Maneuver Versatility|Fighter||1|UAClassFeatureVariants",
-				"Action Surge|Fighter||2",
+				"動作如潮|Fighter||2",
 				{
-					"classFeature": "Martial Archetype|Fighter||3",
+					"classFeature": "武術範型|Fighter||3",
 					"gainSubclassFeature": true
 				},
-				"Ability Score Improvement|Fighter||4",
+				"屬性值提升|Fighter||4",
 				"Proficiency Versatility|Fighter||4|UAClassFeatureVariants",
 				"Martial Versatility|Fighter||4|TCE",
-				"Extra Attack|Fighter||5",
-				"Ability Score Improvement|Fighter||6",
+				"額外攻擊|Fighter||5",
+				"屬性值提升|Fighter||6",
 				"Proficiency Versatility|Fighter||6|UAClassFeatureVariants",
 				{
-					"classFeature": "Martial Archetype feature|Fighter||7",
+					"classFeature": "武術範型能力|Fighter||7",
 					"gainSubclassFeature": true
 				},
-				"Ability Score Improvement|Fighter||8",
+				"屬性值提升|Fighter||8",
 				"Proficiency Versatility|Fighter||8|UAClassFeatureVariants",
-				"Indomitable|Fighter||9",
+				"不屈|Fighter||9",
 				{
-					"classFeature": "Martial Archetype feature|Fighter||10",
+					"classFeature": "武術範型能力|Fighter||10",
 					"gainSubclassFeature": true
 				},
-				"Extra Attack (2)|Fighter||11",
-				"Ability Score Improvement|Fighter||12",
+				"額外攻擊(2)|Fighter||11",
+				"屬性值提升|Fighter||12",
 				"Proficiency Versatility|Fighter||12|UAClassFeatureVariants",
-				"Indomitable (two uses)|Fighter||13",
-				"Ability Score Improvement|Fighter||14",
+				"不屈(2次)|Fighter||13",
+				"屬性值提升|Fighter||14",
 				"Proficiency Versatility|Fighter||14|UAClassFeatureVariants",
 				{
-					"classFeature": "Martial Archetype feature|Fighter||15",
+					"classFeature": "武術範型能力|Fighter||15",
 					"gainSubclassFeature": true
 				},
-				"Ability Score Improvement|Fighter||16",
+				"屬性值提升|Fighter||16",
 				"Proficiency Versatility|Fighter||16|UAClassFeatureVariants",
-				"Action Surge (two uses)|Fighter||17",
-				"Indomitable (three uses)|Fighter||17",
+				"動作如潮(2次)|Fighter||17",
+				"不屈(3次)|Fighter||17",
 				{
-					"classFeature": "Martial Archetype feature|Fighter||18",
+					"classFeature": "武術範型能力|Fighter||18",
 					"gainSubclassFeature": true
 				},
-				"Ability Score Improvement|Fighter||19",
+				"屬性值提升|Fighter||19",
 				"Proficiency Versatility|Fighter||19|UAClassFeatureVariants",
-				"Extra Attack (3)|Fighter||20"
+				"額外攻擊(3)|Fighter||20"
 			],
 			"subclassTitle": "Martial Archetype",
 			"subclasses": [
 				{
-					"name": "Battle Master",
-					"shortName": "Battle Master",
+					"name": "戰鬥大師",
+					"ENG_name": "Battle Master",
+					"shortName": "戰鬥大師",
+					"ENG_shortName": "Battle Master",
 					"source": "PHB",
 					"page": 73,
 					"subclassFeatures": [
-						"Battle Master|Fighter||Battle Master||3",
-						"Additional Maneuvers|Fighter||Battle Master||7",
-						"Additional Superiority Die|Fighter||Battle Master||7",
-						"Know Your Enemy|Fighter||Battle Master||7",
-						"Additional Maneuvers|Fighter||Battle Master||10",
-						"Improved Combat Superiority (d10)|Fighter||Battle Master||10",
-						"Additional Maneuvers|Fighter||Battle Master||15",
-						"Additional Superiority Die|Fighter||Battle Master||15",
-						"Relentless|Fighter||Battle Master||15",
-						"Improved Combat Superiority (d12)|Fighter||Battle Master||18"
+						"戰鬥大師|Fighter||Battle Master||3",
+						"額外戰技|Fighter||Battle Master||7",
+						"額外卓越骰|Fighter||Battle Master||7",
+						"知己知彼|Fighter||Battle Master||7",
+						"額外戰技|Fighter||Battle Master||10",
+						"精通戰鬥卓越(d10)|Fighter||Battle Master||10",
+						"額外戰技|Fighter||Battle Master||15",
+						"額外卓越骰|Fighter||Battle Master||15",
+						"頑強|Fighter||Battle Master||15",
+						"精通戰鬥卓越(d12)|Fighter||Battle Master||18"
 					]
 				},
 				{
-					"name": "Champion",
-					"shortName": "Champion",
+					"name": "勇士",
+					"ENG_name": "Champion",
+					"shortName": "勇士",
+					"ENG_shortName": "Champion",
 					"source": "PHB",
 					"page": 72,
 					"srd": true,
 					"subclassFeatures": [
-						"Champion|Fighter||Champion||3",
-						"Remarkable Athlete|Fighter||Champion||7",
-						"Additional Fighting Style|Fighter||Champion||10",
-						"Superior Critical|Fighter||Champion||15",
-						"Survivor|Fighter||Champion||18"
+						"勇士|Fighter||Champion||3",
+						"運動健將|Fighter||Champion||7",
+						"額外戰鬥風格|Fighter||Champion||10",
+						"卓越重擊|Fighter||Champion||15",
+						"生還者|Fighter||Champion||18"
 					]
 				},
 				{
-					"name": "Eldritch Knight",
-					"shortName": "Eldritch Knight",
+					"name": "魔能騎士",
+					"ENG_name": "Eldritch Knight",
+					"shortName": "魔能騎士",
+					"ENG_shortName": "Eldritch Knight",
 					"source": "PHB",
 					"page": 74,
 					"spellcastingAbility": "int",
@@ -257,13 +264,14 @@
 						{
 							"subclasses": [
 								{
-									"name": "Eldritch Knight",
+									"name": "魔能騎士",
+									"ENG_name": "Eldritch Knight",
 									"source": "PHB"
 								}
 							],
 							"colLabels": [
-								"{@filter Cantrips Known|spells|level=0|subclass=Fighter: Eldritch Knight}",
-								"{@filter Spells Known|spells|subclass=Fighter: Eldritch Knight}"
+								"{@filter 已知戲法|spells|level=0|subclass=Fighter: Eldritch Knight}",
+								"{@filter 已知法術|spells|subclass=Fighter: Eldritch Knight}"
 							],
 							"rows": [
 								[
@@ -349,18 +357,19 @@
 							]
 						},
 						{
-							"title": "Spell Slots per Spell Level",
+							"title": "法術位/每環",
 							"subclasses": [
 								{
-									"name": "Eldritch Knight",
+									"name": "魔能騎士",
+									"ENG_name": "Eldritch Knight",
 									"source": "PHB"
 								}
 							],
 							"colLabels": [
-								"{@filter 1st|spells|level=1|subclass=Fighter: Eldritch Knight}",
-								"{@filter 2nd|spells|level=2|subclass=Fighter: Eldritch Knight}",
-								"{@filter 3rd|spells|level=3|subclass=Fighter: Eldritch Knight}",
-								"{@filter 4th|spells|level=4|subclass=Fighter: Eldritch Knight}"
+								"{@filter 1環|spells|level=1|subclass=Fighter: Eldritch Knight}",
+								"{@filter 2環|spells|level=2|subclass=Fighter: Eldritch Knight}",
+								"{@filter 3環|spells|level=3|subclass=Fighter: Eldritch Knight}",
+								"{@filter 4環|spells|level=4|subclass=Fighter: Eldritch Knight}"
 							],
 							"rows": [
 								[
@@ -487,24 +496,26 @@
 						}
 					],
 					"subclassFeatures": [
-						"Eldritch Knight|Fighter||Eldritch Knight||3",
-						"War Magic|Fighter||Eldritch Knight||7",
-						"Eldritch Strike|Fighter||Eldritch Knight||10",
-						"Arcane Charge|Fighter||Eldritch Knight||15",
-						"Improved War Magic|Fighter||Eldritch Knight||18"
+						"魔能騎士|Fighter||Eldritch Knight||3",
+						"戰爭魔法|Fighter||Eldritch Knight||7",
+						"魔能打擊|Fighter||Eldritch Knight||10",
+						"祕法衝鋒|Fighter||Eldritch Knight||15",
+						"精通戰爭魔法|Fighter||Eldritch Knight||18"
 					]
 				},
 				{
-					"name": "Purple Dragon Knight (Banneret)",
-					"shortName": "Purple Dragon Knight (Banneret)",
+					"name": "紫龍騎士(旗將)",
+					"ENG_name": "Purple Dragon Knight (Banneret)",
+					"shortName": "紫龍騎士(旗將)",
+					"ENG_shortName": "Purple Dragon Knight (Banneret)",
 					"source": "SCAG",
 					"page": 128,
 					"subclassFeatures": [
-						"Purple Dragon Knight (Banneret)|Fighter||Purple Dragon Knight (Banneret)|SCAG|3",
-						"Royal Envoy|Fighter||Purple Dragon Knight (Banneret)|SCAG|7",
-						"Inspiring Surge|Fighter||Purple Dragon Knight (Banneret)|SCAG|10",
-						"Bulwark|Fighter||Purple Dragon Knight (Banneret)|SCAG|15",
-						"Inspiring Surge|Fighter||Purple Dragon Knight (Banneret)|SCAG|18"
+						"紫龍騎士(旗將)Fighter||Purple Dragon Knight (Banneret)|SCAG|3",
+						"皇家特使|Fighter||Purple Dragon Knight (Banneret)|SCAG|7",
+						"振奮之潮|Fighter||Purple Dragon Knight (Banneret)|SCAG|10",
+						"意志壁壘|Fighter||Purple Dragon Knight (Banneret)|SCAG|15",
+						"振奮之潮|Fighter||Purple Dragon Knight (Banneret)|SCAG|18"
 					]
 				},
 				{
@@ -637,45 +648,51 @@
 					]
 				},
 				{
-					"name": "Arcane Archer",
-					"shortName": "Arcane Archer",
+					"name": "魔射手",
+					"ENG_name": "Arcane Archer",
+					"shortName": "魔射手",
+					"ENG_shortName": "Arcane Archer",
 					"source": "XGE",
 					"page": 28,
 					"subclassFeatures": [
-						"Arcane Archer|Fighter||Arcane Archer|XGE|3",
-						"Magic Arrow|Fighter||Arcane Archer|XGE|7",
-						"Curving Shot|Fighter||Arcane Archer|XGE|7",
-						"Additional Arcane Shot Option|Fighter||Arcane Archer|XGE|7",
-						"Additional Arcane Shot Option|Fighter||Arcane Archer|XGE|10",
-						"Ever-Ready Shot|Fighter||Arcane Archer|XGE|15",
-						"Additional Arcane Shot Option|Fighter||Arcane Archer|XGE|15",
-						"Additional Arcane Shot Option|Fighter||Arcane Archer|XGE|18"
+						"魔射手|Fighter||Arcane Archer|XGE|3",
+						"魔法箭矢|Fighter||Arcane Archer|XGE|7",
+						"曲射||Arcane Archer|XGE|7",
+						"額外祕法射擊選項|Fighter||Arcane Archer|XGE|7",
+						"額外祕法射擊選項|Fighter||Arcane Archer|XGE|10",
+						"常備射擊|Fighter||Arcane Archer|XGE|15",
+						"額外祕法射擊選項|Fighter||Arcane Archer|XGE|15",
+						"額外祕法射擊選項|Fighter||Arcane Archer|XGE|18"
 					]
 				},
 				{
-					"name": "Cavalier",
-					"shortName": "Cavalier",
+					"name": "騎兵",
+					"ENG_name": "Cavalier",
+					"shortName": "騎兵",
+					"ENG_shortName": "Cavalier",
 					"source": "XGE",
 					"page": 30,
 					"subclassFeatures": [
-						"Cavalier|Fighter||Cavalier|XGE|3",
-						"Warding Maneuver|Fighter||Cavalier|XGE|7",
-						"Hold the Line|Fighter||Cavalier|XGE|10",
-						"Ferocious Charger|Fighter||Cavalier|XGE|15",
-						"Vigilant Defender|Fighter||Cavalier|XGE|18"
+						"騎兵|Fighter||Cavalier|XGE|3",
+						"防護戰術|Fighter||Cavalier|XGE|7",
+						"堅守戰線|Fighter||Cavalier|XGE|10",
+						"勇猛衝鋒|Fighter||Cavalier|XGE|15",
+						"警戒防衛者|Fighter||Cavalier|XGE|18"
 					]
 				},
 				{
-					"name": "Samurai",
-					"shortName": "Samurai",
+					"name": "武士",
+					"ENG_name": "Samurai",
+					"shortName": "武士",
+					"ENG_shortName": "Samurai",
 					"source": "XGE",
 					"page": 31,
 					"subclassFeatures": [
-						"Samurai|Fighter||Samurai|XGE|3",
-						"Elegant Courtier|Fighter||Samurai|XGE|7",
-						"Tireless Spirit|Fighter||Samurai|XGE|10",
-						"Rapid Strike|Fighter||Samurai|XGE|15",
-						"Strength before Death|Fighter||Samurai|XGE|18"
+						"武士|Fighter||Samurai|XGE|3",
+						"典雅侍臣|Fighter||Samurai|XGE|7",
+						"不懈戰魂|Fighter||Samurai|XGE|10",
+						"迅捷打擊|Fighter||Samurai|XGE|15",
+						"迴光返照|Fighter||Samurai|XGE|18"
 					]
 				},
 				{
@@ -1068,7 +1085,8 @@
 	],
 	"classFeature": [
 		{
-			"name": "Fighting Style",
+			"name": "戰鬥風格",
+			"ENG_name": "Fighting Style",
 			"source": "PHB",
 			"page": 72,
 			"srd": true,
@@ -1076,46 +1094,46 @@
 			"classSource": "PHB",
 			"level": 1,
 			"entries": [
-				"You adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take the same Fighting Style option more than once, even if you get to choose again.",
+				"你採用一種特殊的戰鬥風格以做為你的專業。從下列選項中選擇一種。你不能獲得相同的戰鬥風格選項超過一次，即使你有機會再選擇它也一樣。",
 				{
 					"type": "options",
 					"count": 1,
 					"entries": [
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Archery"
+							"optionalfeature": "弓道"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Close Quarters Shooter|UALightDarkUnderdark"
+							"optionalfeature": "近身射手|UALightDarkUnderdark"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Defense"
+							"optionalfeature": "防禦"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Dueling"
+							"optionalfeature": "決鬥"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Great Weapon Fighting"
+							"optionalfeature": "巨武戰鬥"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Mariner|UAWaterborneAdventures"
+							"optionalfeature": "水手|UAWaterborneAdventures"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Protection"
+							"optionalfeature": "守護"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Tunnel Fighter|UALightDarkUnderdark"
+							"optionalfeature": "坑道鬥士|UALightDarkUnderdark"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Two-Weapon Fighting"
+							"optionalfeature": "雙武器戰鬥"
 						},
 						{
 							"type": "refOptionalfeature",
@@ -1188,7 +1206,8 @@
 			]
 		},
 		{
-			"name": "Second Wind",
+			"name": "回氣",
+			"ENG_name": "Second Wind",
 			"source": "PHB",
 			"page": 72,
 			"srd": true,
@@ -1196,12 +1215,13 @@
 			"classSource": "PHB",
 			"level": 1,
 			"entries": [
-				"You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to {@dice 1d10} + your fighter level.",
-				"Once you use this feature, you must finish a short or long rest before you can use it again."
+				"你擁有有限的充沛精力讓你得以利用於保護自己不受傷害。在你的回合，你可以使用一個附贈動作以回復等同於{@dice 1d10}+你的戰士等級的生命值。",
+				"一旦你使用此能力，你必須完成一次短休或長休後才能再使用它。"
 			]
 		},
 		{
-			"name": "Action Surge",
+			"name": "動作如潮",
+			"ENG_name": "Action Surge",
 			"source": "PHB",
 			"page": 72,
 			"srd": true,
@@ -1209,12 +1229,13 @@
 			"classSource": "PHB",
 			"level": 2,
 			"entries": [
-				"Starting at 2nd level, you can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action.",
-				"Once you use this feature, you must finish a short or long rest before you can use it again. Starting at 17th level, you can use it twice before a rest, but only once on the same turn."
+				"從2級開始，你可以短暫地驅策自己超越你的極限。在你的回合，你可以在你原本的動作和可能的附贈動作之後，另外再採取一次額外的動作。",
+				"一旦你使用此能力，你必須完成一次短休或長休後才能再使用它。從17級開始，你可以在一次休息前使用它二次，但同個回合只能使用一次。"
 			]
 		},
 		{
-			"name": "Martial Archetype",
+			"name": "武術範型",
+			"ENG_name": "Martial Archetype",
 			"source": "PHB",
 			"page": 72,
 			"srd": true,
@@ -1222,11 +1243,12 @@
 			"classSource": "PHB",
 			"level": 3,
 			"entries": [
-				"At 3rd level, you choose an archetype from the list available that you strive to emulate in your combat styles and techniques. The archetype you choose grants you features at 3rd level and again at 7th, 10th, 15th, and 18th level."
+				"在3級時，你從可選列表中選擇一種你致力在你戰鬥風格和技巧中達成的範型。你所選擇的範型將在3級、7級、10級、15級、和18級時賦予你新的能力。"
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 72,
 			"srd": true,
@@ -1234,8 +1256,8 @@
 			"classSource": "PHB",
 			"level": 4,
 			"entries": [
-				"When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"當你在此職業升至4級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -1273,7 +1295,8 @@
 			]
 		},
 		{
-			"name": "Extra Attack",
+			"name": "額外攻擊",
+			"ENG_name": "Extra Attack",
 			"source": "PHB",
 			"page": 72,
 			"srd": true,
@@ -1281,12 +1304,13 @@
 			"classSource": "PHB",
 			"level": 5,
 			"entries": [
-				"Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn.",
-				"The number of attacks increases to three when you reach 11th level in this class and to four when you reach 20th level in this class."
+				"從5級開始，每當你在你的回合採取{@action 攻擊}動作，你可以攻擊二次，而非一次。",
+				"當你在此職業升至11級時，攻擊的次數增加到三，且當你在此職業升至20級時，攻擊的次數增加到四。"
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 72,
 			"srd": true,
@@ -1294,8 +1318,8 @@
 			"classSource": "PHB",
 			"level": 6,
 			"entries": [
-				"When you reach 6th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"當你在此職業升至6級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -1313,7 +1337,8 @@
 			]
 		},
 		{
-			"name": "Martial Archetype feature",
+			"name": "武術範型能力",
+			"ENG_name": "Martial Archetype feature",
 			"source": "PHB",
 			"page": 72,
 			"srd": true,
@@ -1321,11 +1346,12 @@
 			"classSource": "PHB",
 			"level": 7,
 			"entries": [
-				"At 7th level, you gain a feature granted by your Martial Archetype."
+				"在7級時，你獲得一個由你武術範型所賦予的能力。"
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 72,
 			"srd": true,
@@ -1333,8 +1359,8 @@
 			"classSource": "PHB",
 			"level": 8,
 			"entries": [
-				"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"當你在此職業升至8級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -1352,7 +1378,8 @@
 			]
 		},
 		{
-			"name": "Indomitable",
+			"name": "不屈",
+			"ENG_name": "Indomitable",
 			"source": "PHB",
 			"page": 72,
 			"srd": true,
@@ -1360,12 +1387,13 @@
 			"classSource": "PHB",
 			"level": 9,
 			"entries": [
-				"Beginning at 9th level, you can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can't use this feature again until you finish a long rest.",
-				"You can use this feature twice between long rests starting at 13th level and three times between long rests starting at 17th level."
+				"從9級開始，你可以在你一次失敗的豁免檢定中重骰。若你這麼做，你必須使用新的擲骰結果，且你直到完成一次長休之前都不能再使用此能力。",
+				"從13級開始，你可以在長休之間使用此能力二次，且從17級開始，你可以在長休之間使用此能力三次。"
 			]
 		},
 		{
-			"name": "Martial Archetype feature",
+			"name": "武術範型能力",
+			"ENG_name": "Martial Archetype feature",
 			"source": "PHB",
 			"page": 72,
 			"srd": true,
@@ -1373,11 +1401,12 @@
 			"classSource": "PHB",
 			"level": 10,
 			"entries": [
-				"At 10th level, you gain a feature granted by your Martial Archetype."
+				"在10級時，你獲得一個由你武術範型所賦予的能力。"
 			]
 		},
 		{
-			"name": "Extra Attack (2)",
+			"name": "額外攻擊(2)",
+			"ENG_name": "Extra Attack (2)",
 			"source": "PHB",
 			"page": 72,
 			"srd": true,
@@ -1385,11 +1414,12 @@
 			"classSource": "PHB",
 			"level": 11,
 			"entries": [
-				"At 11th level, you can attack three times whenever you take the {@action Attack} action on your turn."
+				"從11級開始，每當你在你的回合採取{@action 攻擊}動作，你可以攻擊三次。"
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 72,
 			"srd": true,
@@ -1397,8 +1427,8 @@
 			"classSource": "PHB",
 			"level": 12,
 			"entries": [
-				"When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"當你在此職業升至12級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -1416,7 +1446,8 @@
 			]
 		},
 		{
-			"name": "Indomitable (two uses)",
+			"name": "不屈(2次)",
+			"ENG_name": "Indomitable (two uses)",
 			"source": "PHB",
 			"page": 72,
 			"srd": true,
@@ -1424,11 +1455,12 @@
 			"classSource": "PHB",
 			"level": 13,
 			"entries": [
-				"At 13th level, you can use Indomitable twice between long rests."
+				"在13級時，你可以在長休之間使用不屈二次。"
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 72,
 			"srd": true,
@@ -1436,8 +1468,8 @@
 			"classSource": "PHB",
 			"level": 14,
 			"entries": [
-				"When you reach 14th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"當你在此職業升至14級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -1455,7 +1487,8 @@
 			]
 		},
 		{
-			"name": "Martial Archetype feature",
+			"name": "武術範型能力",
+			"ENG_name": "Martial Archetype feature",
 			"source": "PHB",
 			"page": 72,
 			"srd": true,
@@ -1463,11 +1496,12 @@
 			"classSource": "PHB",
 			"level": 15,
 			"entries": [
-				"At 15th level, you gain a feature granted by your Martial Archetype."
+				"在15級時，你獲得一個由你武術範型所賦予的能力。"
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 72,
 			"srd": true,
@@ -1475,8 +1509,8 @@
 			"classSource": "PHB",
 			"level": 16,
 			"entries": [
-				"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"當你在此職業升至16級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -1494,7 +1528,8 @@
 			]
 		},
 		{
-			"name": "Action Surge (two uses)",
+			"name": "動作如潮(2次)",
+			"ENG_name": "Action Surge (two uses)",
 			"source": "PHB",
 			"page": 72,
 			"srd": true,
@@ -1502,11 +1537,12 @@
 			"classSource": "PHB",
 			"level": 17,
 			"entries": [
-				"At 17th level, you can use Action Surge twice before a rest, but only once on the same turn."
+				"在17級時，你可以在一次休息前使用動作如潮二次，但同個回合只能使用一次。"
 			]
 		},
 		{
-			"name": "Indomitable (three uses)",
+			"name": "不屈(3次)",
+			"ENG_name": "Indomitable (three uses)",
 			"source": "PHB",
 			"page": 72,
 			"srd": true,
@@ -1514,11 +1550,12 @@
 			"classSource": "PHB",
 			"level": 17,
 			"entries": [
-				"At 17th level, you can use Indomitable three times between long rests."
+				"在17級時，你可以在長休之間使用不屈三次。"
 			]
 		},
 		{
-			"name": "Martial Archetype feature",
+			"name": "武術範型能力",
+			"ENG_name": "Martial Archetype feature",
 			"source": "PHB",
 			"page": 72,
 			"srd": true,
@@ -1526,11 +1563,12 @@
 			"classSource": "PHB",
 			"level": 18,
 			"entries": [
-				"At 18th level, you gain a feature granted by your Martial Archetype."
+				"在18級時，你獲得一個由你武術範型所賦予的能力。"
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 72,
 			"srd": true,
@@ -1538,8 +1576,8 @@
 			"classSource": "PHB",
 			"level": 19,
 			"entries": [
-				"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"當你在此職業升至19級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -1557,7 +1595,8 @@
 			]
 		},
 		{
-			"name": "Extra Attack (3)",
+			"name": "額外攻擊(3)",
+			"ENG_name": "Extra Attack (3)",
 			"source": "PHB",
 			"page": 72,
 			"srd": true,
@@ -1565,7 +1604,7 @@
 			"classSource": "PHB",
 			"level": 20,
 			"entries": [
-				"At 20th level, you can attack four times whenever you take the {@action Attack} action on your turn."
+				"從20級開始，每當你在你的回合採取{@action 攻擊}動作，你可以攻擊四次。"
 			]
 		}
 	],
@@ -1696,7 +1735,8 @@
 			]
 		},
 		{
-			"name": "Battle Master",
+			"name": "戰鬥大師",
+			"ENG_name": "Battle Master",
 			"source": "PHB",
 			"page": 73,
 			"className": "Fighter",
@@ -1705,14 +1745,14 @@
 			"subclassSource": "PHB",
 			"level": 3,
 			"entries": [
-				"Those who emulate the archetypal Battle Master employ martial techniques passed down through generations. To a Battle Master, combat is an academic field, sometimes including subjects beyond battle such as weaponsmithing and calligraphy. Not every fighter absorbs the lessons of history, theory, and artistry that are reflected in the Battle Master archetype, but those who do are well-rounded fighters of great skill and knowledge.",
+				"那些致力達成戰鬥大師範型的人們磨練著代代相傳的武術技巧。對於戰鬥大師而言，戰鬥是一門學問，有時甚至囊括了戰鬥以外的專業，像是武器鍛造和書法等等。並非所有戰士都能吸收那些反映在戰鬥大師範型中的歷史、理論、和藝術等學問，但那些能做到的都是擁有出色技巧和知識的全方位戰士。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Student of War|Fighter||Battle Master||3"
+					"subclassFeature": "戰爭學徒|Fighter||Battle Master||3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Combat Superiority|Fighter||Battle Master||3"
+					"subclassFeature": "戰鬥卓越|Fighter||Battle Master||3"
 				},
 				{
 					"type": "refSubclassFeature",
@@ -1729,7 +1769,8 @@
 			]
 		},
 		{
-			"name": "Combat Superiority",
+			"name": "戰鬥卓越",
+			"ENG_name": "Combat Superiority",
 			"source": "PHB",
 			"page": 73,
 			"className": "Fighter",
@@ -1739,16 +1780,17 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"When you choose this archetype at 3rd level, you learn maneuvers that are fueled by special dice called superiority dice.",
+				"當你在3級時選擇此範型時，你學會各種戰技，並藉由被稱作卓越骰的特殊骰子驅動它們。",
 				{
 					"type": "entries",
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Maneuvers",
+							"name": "戰技",
+							"ENG_name": "Maneuvers",
 							"entries": [
-								"You learn three maneuvers of your choice, which are listed under \"Maneuvers\" below. Many maneuvers enhance an attack in some way. You can use only one maneuver per attack.",
-								"You learn two additional maneuvers of your choice at 7th, 10th, and 15th level. Each time you learn new maneuvers, you can also replace one maneuver you know with a different one."
+								"你學會三個自選戰技，參見下列「戰技」條目。許多戰技將以某些方式強化一次攻擊。你只能為每次攻擊使用一種戰技。",
+								"你將在7級、10級、和15級時學會二個額外的戰技。每次你學會新的戰技時，你也可以將一個你已知的戰技取代成另一個不同的戰技。"
 							]
 						}
 					]
@@ -1758,10 +1800,11 @@
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Superiority Dice",
+							"name": "卓越骰",
+							"ENG_name": "Superiority Dice",
 							"entries": [
-								"You have four superiority dice, which are {@dice d8}s. A superiority die is expended when you use it. You regain all of your expended superiority dice when you finish a short or long rest.",
-								"You gain another superiority die at 7th level and one more at 15th level."
+								"你擁有四顆卓越骰，這四顆卓越骰為{@dice d8}。卓越骰將在你使用戰技時被花費。你在完成一次短休或長休後恢復你花費掉的卓越骰。",
+								"你將在7級、和15級時再獲得一顆卓越骰。"
 							]
 						}
 					]
@@ -1771,12 +1814,14 @@
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Saving Throws",
+							"name": "豁免檢定",
+							"ENG_name": "Saving Throws",
 							"entries": [
-								"Some of your maneuvers require your target to make a saving throw to resist the maneuver's effects. The saving throw DC is calculated as follows:",
+								"你的部分戰技會要求你的目標進行一次豁免檢定以對抗戰技的效果。這個豁免檢定DC的計算方式如下：",
 								{
 									"type": "abilityDc",
-									"name": "Maneuver",
+									"name": "戰技",
+									"ENG_name": "Maneuver",
 									"attributes": [
 										"str",
 										"dex"
@@ -1914,74 +1959,75 @@
 					"entries": [
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Commander's Strike"
+							"optionalfeature": "指揮官奇襲"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Disarming Attack"
+							"optionalfeature": "繳械擊"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Distracting Strike"
+							"optionalfeature": "擾亂擊"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Evasive Footwork"
+							"optionalfeature": "躲閃步伐"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Feinting Attack"
+							"optionalfeature": "詭詐擊"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Goading Attack"
+							"optionalfeature": "挑釁擊"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Lunging Attack"
+							"optionalfeature": "突刺擊"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Maneuvering Attack"
+							"optionalfeature": "靈動擊"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Menacing Attack"
+							"optionalfeature": "恐嚇擊"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Parry"
+							"optionalfeature": "格擋"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Precision Attack"
+							"optionalfeature": "精準擊"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Pushing Attack"
+							"optionalfeature": "推撞擊"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Rally"
+							"optionalfeature": "鼓舞"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Riposte"
+							"optionalfeature": "反擊"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Sweeping Attack"
+							"optionalfeature": "橫掃擊"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Trip Attack"
+							"optionalfeature": "絆摔擊"
 						}
 					]
 				}
 			]
 		},
 		{
-			"name": "Student of War",
+			"name": "戰爭學徒",
+			"ENG_name": "Student of War",
 			"source": "PHB",
 			"page": 73,
 			"className": "Fighter",
@@ -1991,11 +2037,12 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"At 3rd level, you gain proficiency with one type of {@filter artisan's tools|items|source=phb|miscellaneous=mundane|type=artisan's tools} of your choice."
+				"在3級時，你獲得一種你所選的{@filter 工匠工具|items|source=phb|category=basic|type=artisan tool}的熟練。"
 			]
 		},
 		{
-			"name": "Additional Maneuvers",
+			"name": "額外戰技",
+			"ENG_name": "Additional Maneuvers",
 			"source": "PHB",
 			"page": 73,
 			"className": "Fighter",
@@ -2005,11 +2052,12 @@
 			"level": 7,
 			"header": 2,
 			"entries": [
-				"At 7th level, you learn two additional maneuvers of your choice."
+				"在7級時，你學會二個你所選擇的額外戰技。"
 			]
 		},
 		{
-			"name": "Additional Superiority Die",
+			"name": "額外卓越骰",
+			"ENG_name": "Additional Superiority Die",
 			"source": "PHB",
 			"page": 73,
 			"className": "Fighter",
@@ -2019,11 +2067,12 @@
 			"level": 7,
 			"header": 2,
 			"entries": [
-				"You gain another superiority die at 7th level."
+				"你在7級時獲得一顆額外的卓越骰。"
 			]
 		},
 		{
-			"name": "Know Your Enemy",
+			"name": "知己知彼",
+			"ENG_name": "Know Your Enemy",
 			"source": "PHB",
 			"page": 73,
 			"className": "Fighter",
@@ -2033,23 +2082,24 @@
 			"level": 7,
 			"header": 2,
 			"entries": [
-				"If you spend at least 1 minute observing or interacting with another creature outside combat, you can learn certain information about its capabilities compared to your own. The DM tells you if the creature is your equal, superior, or inferior in regard to two of the following characteristics of your choice:",
+				"若你花費至少1分鐘的時間在戰鬥外觀察另一個生物或與之互動，則你可以得知某些關於它能力的情報。DM將會告訴你在下列兩個你所選擇的項目中，該生物的能力是與你相同、強於你、或是弱於你：",
 				{
 					"type": "list",
 					"items": [
-						"Strength score",
-						"Dexterity score",
-						"Constitution score",
-						"Armor Class",
-						"Current hit points",
-						"Total class levels (if any)",
-						"Fighter class levels (if any)"
+						"力量屬性值",
+						"敏捷屬性值",
+						"體質屬性值",
+						"護甲等級",
+						"當前生命值",
+						"總職業等級（若有）",
+						"戰士職業等級（若有）"
 					]
 				}
 			]
 		},
 		{
-			"name": "Additional Maneuvers",
+			"name": "額外戰技",
+			"ENG_name": "Additional Maneuvers",
 			"source": "PHB",
 			"page": 73,
 			"className": "Fighter",
@@ -2059,11 +2109,12 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"At 10th level, you learn two additional maneuvers of your choice."
+				"在10級時，你學會二個你所選擇的額外戰技。"
 			]
 		},
 		{
-			"name": "Improved Combat Superiority (d10)",
+			"name": "精通戰鬥卓越(d10)",
+			"ENG_name": "Improved Combat Superiority (d10)",
 			"source": "PHB",
 			"page": 73,
 			"className": "Fighter",
@@ -2073,11 +2124,12 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"At 10th level, your superiority dice turn into {@dice d10}s."
+				"在10級時，你的卓越骰變更為{@dice d10}。"
 			]
 		},
 		{
-			"name": "Additional Maneuvers",
+			"name": "額外戰技",
+			"ENG_name": "Additional Maneuvers",
 			"source": "PHB",
 			"page": 73,
 			"className": "Fighter",
@@ -2087,11 +2139,12 @@
 			"level": 15,
 			"header": 2,
 			"entries": [
-				"At 15th level, you learn two additional maneuvers of your choice."
+				"在15級時，你學會二個你所選擇的額外戰技。"
 			]
 		},
 		{
-			"name": "Additional Superiority Die",
+			"name": "額外卓越骰",
+			"ENG_name": "Additional Superiority Die",
 			"source": "PHB",
 			"page": 73,
 			"className": "Fighter",
@@ -2101,11 +2154,12 @@
 			"level": 15,
 			"header": 2,
 			"entries": [
-				"You gain another superiority die at 15th level."
+				"你在15級時獲得一顆額外的卓越骰。"
 			]
 		},
 		{
-			"name": "Relentless",
+			"name": "頑強",
+			"ENG_name": "Relentless",
 			"source": "PHB",
 			"page": 73,
 			"className": "Fighter",
@@ -2115,11 +2169,12 @@
 			"level": 15,
 			"header": 2,
 			"entries": [
-				"Starting at 15th level, when you roll initiative and have no superiority dice remaining, you regain 1 superiority die."
+				"從15級開始，當你骰先攻時且已經沒有剩下的卓越骰時，你獲得一顆卓越骰。"
 			]
 		},
 		{
-			"name": "Improved Combat Superiority (d12)",
+			"name": "精通戰鬥卓越(d12)",
+			"ENG_name": "Improved Combat Superiority (d12)",
 			"source": "PHB",
 			"page": 73,
 			"className": "Fighter",
@@ -2129,11 +2184,12 @@
 			"level": 18,
 			"header": 2,
 			"entries": [
-				"At 18th level, your superiority dice turn into {@dice d12}s."
+				"在18級時，你的卓越骰變更為{@dice d12}。"
 			]
 		},
 		{
-			"name": "Champion",
+			"name": "勇士",
+			"ENG_name": "Champion",
 			"source": "PHB",
 			"page": 72,
 			"srd": true,
@@ -2143,15 +2199,16 @@
 			"subclassSource": "PHB",
 			"level": 3,
 			"entries": [
-				"The archetypal Champion focuses on the development of raw physical power honed to deadly perfection. Those who model themselves on this archetype combine rigorous training with physical excellence to deal devastating blows.",
+				"勇士範型專注於發展純粹的身體能力，將其磨練到完美。那些仿效於此範型的人們結合嚴格的訓練和卓越的身體素質以造成最致命的打擊。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Improved Critical|Fighter||Champion||3"
+					"subclassFeature": "強化重擊|Fighter||Champion||3"
 				}
 			]
 		},
 		{
-			"name": "Improved Critical",
+			"name": "強化重擊",
+			"ENG_name": "Improved Critical",
 			"source": "PHB",
 			"page": 72,
 			"srd": true,
@@ -2162,11 +2219,12 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"Beginning when you choose this archetype at 3rd level, your weapon attacks score a critical hit on a roll of 19 or 20."
+				"從你在3級選擇此範型開始，你的武器攻擊將在骰出19或20時造成重擊。"
 			]
 		},
 		{
-			"name": "Remarkable Athlete",
+			"name": "運動健將",
+			"ENG_name": "Remarkable Athlete",
 			"source": "PHB",
 			"page": 72,
 			"srd": true,
@@ -2177,12 +2235,13 @@
 			"level": 7,
 			"header": 2,
 			"entries": [
-				"Starting at 7th level, you can add half your proficiency bonus (round up) to any Strength, Dexterity, or Constitution check you make that doesn't already use your proficiency bonus.",
-				"In addition, when you make a running long jump, the distance you can cover increases by a number of feet equal to your Strength modifier."
+				"從7級開始，你可以將你熟練加值的一半（向上取整）加入任何你尚未加入熟練加值的力量、敏捷、或體質檢定中。",
+				"此外，當你進行助跑跳遠時，你可以跨越的距離將增加等同於你力量調整值的呎數。"
 			]
 		},
 		{
-			"name": "Additional Fighting Style",
+			"name": "額外戰鬥風格",
+			"ENG_name": "Additional Fighting Style",
 			"source": "PHB",
 			"page": 72,
 			"srd": true,
@@ -2193,11 +2252,12 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"At 10th level, you can choose a second option from the Fighting Style class feature."
+				"在10級時，你可以從戰鬥風格的職業能力中選擇第二個選項。"
 			]
 		},
 		{
-			"name": "Superior Critical",
+			"name": "卓越重擊",
+			"ENG_name": "Superior Critical",
 			"source": "PHB",
 			"page": 72,
 			"srd": true,
@@ -2208,11 +2268,12 @@
 			"level": 15,
 			"header": 2,
 			"entries": [
-				"Starting at 15th level, your weapon attacks score a critical hit on a roll of 18-20."
+				"從15級開始，你的武器攻擊將在骰出18~20時造成重擊。"
 			]
 		},
 		{
-			"name": "Survivor",
+			"name": "生還者",
+			"ENG_name": "Survivor",
 			"source": "PHB",
 			"page": 72,
 			"srd": true,
@@ -2223,11 +2284,12 @@
 			"level": 18,
 			"header": 2,
 			"entries": [
-				"At 18th level, you attain the pinnacle of resilience in battle. At the start of each of your turns, you regain hit points equal to 5 + your Constitution modifier if you have no more than half of your hit points left. You don't gain this benefit if you have 0 hit points."
+				"在18級時，你領悟了戰鬥中的強韌的巔峰。在你的每個回合開始時，若你剩餘的生命值不超過最大值的一半，則你回復等同於5+你的體質調整值的生命值。你並不會在生命值為零時獲得這個好處。"
 			]
 		},
 		{
-			"name": "Eldritch Knight",
+			"name": "魔能騎士",
+			"ENG_name": "Eldritch Knight",
 			"source": "PHB",
 			"page": 74,
 			"className": "Fighter",
@@ -2239,16 +2301,17 @@
 				"The archetypal Eldritch Knight combines the martial mastery common to all fighters with a careful study of magic. Eldritch Knights use magical techniques similar to those practiced by wizards. They focus their study on two of the eight schools of magic\u2014abjuration and evocation. Abjuration spells grant an Eldritch Knight additional protection in battle, and evocation spells deal damage to many foes at once, extending the fighter's reach in combat. These knights learn a comparatively small number of spells, committing them to memory instead of keeping them in a spellbook.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Spellcasting|Fighter||Eldritch Knight||3"
+					"subclassFeature": "施法|Fighter||Eldritch Knight||3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Weapon Bond|Fighter||Eldritch Knight||3"
+					"subclassFeature": "武器聯結|Fighter||Eldritch Knight||3"
 				}
 			]
 		},
 		{
-			"name": "Spellcasting",
+			"name": "施法",
+			"ENG_name": "Spellcasting",
 			"source": "PHB",
 			"page": 74,
 			"className": "Fighter",
@@ -2258,12 +2321,12 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"When you reach 3rd level, you augment your martial prowess with the ability to cast spells. See {@book chapter 10|PHB|10} for the general rules of spellcasting and {@book chapter 11|PHB|11} for the {@filter wizard spell list|spells|class=wizard}.",
+				"當你升至3級時，你以施放法術的能力增進了你的戰鬥實力。請參閱{@book 第十章|PHB|10}以了解關於施法的規則，以及第十一章以查閱{@filter 法師法術列表|spells|class=wizard}。",
 				{
 					"type": "entries",
-					"name": "Cantrips",
+					"name": "戲法",
 					"entries": [
-						"You learn two cantrips of your choice from the {@filter wizard spell list|spells|class=wizard}. You learn an additional wizard cantrip of your choice at 10th level."
+						"你學會二個從{@filter 法師法術列表|spells|class=wizard}自選的戲法。你將在10級時學會一個額外的法師戲法。"
 					]
 				},
 				{
@@ -2271,10 +2334,10 @@
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Spell Slots",
+							"name": "法術位",
 							"entries": [
-								"The Eldritch Knight Spellcasting table shows how many spell slots you have to cast your {@filter wizard spells|spells|class=wizard} of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
-								"For example, if you know the 1st-level spell {@spell shield} and have a 1st-level and a 2nd-level spell slot available, you can cast {@spell shield} using either slot."
+								"魔能騎士施法表中顯示了你有多少個法術位可以用來施放你一環或更高環的{@filter 法師法術|spells|class=wizard}。要施放其中一個法術，你必須消耗一個與該法術環階相同或更高的法術位。你在完成一次長休後恢復所有你花費掉的法術位。",
+								"舉例來說，如果你知曉一個1環法術{@spell 護盾術}，且你擁有一個1環和一個2環的法術位，則你可以使用其中任意一個法術位來施放{@spell 護盾術}。"
 							]
 						}
 					]
@@ -2284,12 +2347,12 @@
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Spells Known of 1st-Level and Higher",
+							"name": "一環或更高環的已知法術",
 							"entries": [
-								"You know three 1st-level wizard spells of your choice, two of which you must choose from the abjuration and evocation spells on the wizard spell list.",
-								"The Spells Known column of the Eldritch Knight Spellcasting table shows when you learn more wizard spells of 1st level or higher. Each of these spells must be an abjuration or evocation spell of your choice, and must be of a level for which you have spell slots. For instance, when you reach 7th level in this class, you can learn one new spell of 1st or 2nd level.",
-								"The spells you learn at 8th, 14th, and 20th level can come from any school of magic.",
-								"Whenever you gain a level in this class, you can replace one of the wizard spells you know with another spell of your choice from the wizard spell list. The new spell must be of a level for which you have spell slots, and it must be an abjuration or evocation spell, unless you're replacing the spell you gained at 3rd, 8th, 14th, or 20th level from any school of magic."
+								"你知曉三個從法師法術列表中自選的1環法術，其中二個必須從法師法術列表中的防護系和塑能系法術中選擇。",
+								"魔能騎士施法表中的已知法術欄位顯示了你會在何時學習到新的1環或更高環的法師法術。每個這些法術都必須是一個防護系或塑能系法術，且環階也必須符合你所擁有法術位的環階。舉例來說，當你在此職業升至7級時，你可以學習一個新的1環或2環法術。",
+								"你在8級、14級、和20級時所學會的法術可以來自任何魔法學派。",
+								"每當你提升這個職業的等級時，你可以從法師法術列表中挑選一個法術來取代一個你目前已知的法師法術。新法術的環階必須符合你所擁有法術位的環階，且它必須是一個防護系或塑能系法術，除非你取代的法術是你在3級、8級、14級、或20級時所獲得的來自任意魔法學派的法術。"
 							]
 						}
 					]
@@ -2299,19 +2362,19 @@
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Spellcasting Ability",
+							"name": "施法屬性",
 							"entries": [
 								"Intelligence is your spellcasting ability for your wizard spells, since you learn your spells through study and memorization. You use your Intelligence whenever a spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for a wizard spell you cast and when making an attack roll with one.",
 								{
 									"type": "abilityDc",
-									"name": "Spell",
+									"name": "法術",
 									"attributes": [
 										"int"
 									]
 								},
 								{
 									"type": "abilityAttackMod",
-									"name": "Spell",
+									"name": "法術",
 									"attributes": [
 										"int"
 									]
@@ -2323,7 +2386,8 @@
 			]
 		},
 		{
-			"name": "Weapon Bond",
+			"name": "武器聯結",
+			"ENG_name": "Weapon Bond",
 			"source": "PHB",
 			"page": 74,
 			"className": "Fighter",
@@ -2333,13 +2397,14 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"At 3rd level, you learn a ritual that creates a magical bond between yourself and one weapon. You perform the ritual over the course of 1 hour, which can be done during a short rest. The weapon must be within your reach throughout the ritual, at the conclusion of which you touch the weapon and forge the bond.",
-				"Once you have bonded a weapon to yourself, you can't be disarmed of that weapon unless you are {@condition incapacitated}. If it is on the same plane of existence, you can summon that weapon as a bonus action on your turn, causing it to teleport instantly to your hand.",
-				"You can have up to two bonded weapons, but can summon only one at a time with your bonus action. If you attempt to bond with a third weapon, you must break the bond with one of the other two."
+				"在3級時，你學會一個用以在你和一把武器間創造出魔法聯結的儀式。施展這個儀式的過程需要1小時，且可以在短休期間被施展。這把武器必須在整個儀式的過程中處於你的觸及範圍內，且在儀式結束時，你觸碰該武器並創造出聯結。",
+				"一旦你與一把武器建立聯結，則除非你處於{@condition 無力}狀態，否則你的聯結武器不會被繳械。若該武器與你處於相同的存在位面，你可以在你的回合以一個附贈動作召喚該武器，使它瞬間被傳送到你手中。",
+				"你可以有最多二把聯結武器，但在只能以附贈動作一次召喚一把。若你嘗試與第三把武器建立聯結，則你必須打破與另外兩把其中之一的聯結。"
 			]
 		},
 		{
-			"name": "War Magic",
+			"name": "戰爭魔法",
+			"ENG_name": "War Magic",
 			"source": "PHB",
 			"page": 74,
 			"className": "Fighter",
@@ -2349,11 +2414,12 @@
 			"level": 7,
 			"header": 2,
 			"entries": [
-				"Beginning at 7th level, when you use your action to cast a cantrip, you can make one weapon attack as a bonus action."
+				"從7級開始，當你使用你的動作以施放一個戲法，你能夠以一個附贈動作進行一次武器攻擊。"
 			]
 		},
 		{
-			"name": "Eldritch Strike",
+			"name": "魔能打擊",
+			"ENG_name": "Eldritch Strike",
 			"source": "PHB",
 			"page": 74,
 			"className": "Fighter",
@@ -2363,11 +2429,12 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"At 10th level, you learn how to make your weapon strikes undercut a creature's resistance to your spells. When you hit a creature with a weapon attack, that creature has disadvantage on the next saving throw it makes against a spell you cast before the end of your next turn."
+				"在10級時，你學會如何讓你的武器打擊削弱一個生物對你法術的抗性。當你以一次武器攻擊命中一個生物，直到你的下個回合結束之前，該生物在下一次對抗你所施放法術時所進行的豁免檢定將具有劣勢。"
 			]
 		},
 		{
-			"name": "Arcane Charge",
+			"name": "祕法衝鋒",
+			"ENG_name": "Arcane Charge",
 			"source": "PHB",
 			"page": 74,
 			"className": "Fighter",
@@ -2377,11 +2444,12 @@
 			"level": 15,
 			"header": 2,
 			"entries": [
-				"At 15th level, you gain the ability to teleport up to 30 feet to an unoccupied space you can see when you use your Action Surge. You can teleport before or after the additional action."
+				"在15級時，你可以在使用你的動作如潮能力時，傳送最多30呎距離到一處你所能看見的未被佔據空間。你可以在進行額外動作之前或之後傳送。"
 			]
 		},
 		{
-			"name": "Improved War Magic",
+			"name": "精通戰爭魔法",
+			"ENG_name": "Improved War Magic",
 			"source": "PHB",
 			"page": 74,
 			"className": "Fighter",
@@ -2391,11 +2459,12 @@
 			"level": 18,
 			"header": 2,
 			"entries": [
-				"Starting at 18th level, when you use your action to cast a spell, you can make one weapon attack as a bonus action."
+				"從18級開始，當你使用你的動作以施放一個法術，你能夠以一個附贈動作進行一次武器攻擊。"
 			]
 		},
 		{
-			"name": "Purple Dragon Knight (Banneret)",
+			"name": "紫龍騎士(旗將)",
+			"ENG_name": "Purple Dragon Knight (Banneret)",
 			"source": "SCAG",
 			"page": 128,
 			"className": "Fighter",
@@ -2409,16 +2478,17 @@
 				"A knight prefers to lead through deeds, not words. As a knight spearheads an attack, the knight's actions can awaken reserves of courage and conviction in allies that they never suspected they had.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Restriction: Knighthood|Fighter||Purple Dragon Knight (Banneret)|SCAG|3"
+					"subclassFeature": "限制：騎士爵位|Fighter||Purple Dragon Knight (Banneret)|SCAG|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Rallying Cry|Fighter||Purple Dragon Knight (Banneret)|SCAG|3"
+					"subclassFeature": "鼓舞戰吼|Fighter||Purple Dragon Knight (Banneret)|SCAG|3"
 				}
 			]
 		},
 		{
-			"name": "Rallying Cry",
+			"name": "鼓舞戰吼",
+			"ENG_name": "Rallying Cry",
 			"source": "SCAG",
 			"page": 128,
 			"className": "Fighter",
@@ -2428,12 +2498,13 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"When you choose this archetype at 3rd level, you learn how to inspire your allies to fight on past their injuries.",
-				"When you use your Second Wind feature, you can choose up to three creatures within 60 feet of you that are allied with you. Each one regains hit points equal to your fighter level, provided that the creature can see or hear you."
+				"當你在3級時選擇此範型，你將學會如何激勵你的盟友們戰勝他們過去的傷害。",
+				"當你使用你的回氣能力，你可以選擇最多三個距離你60呎內且與你同盟的生物。只要他們可以看見或聽見你，他們將各自回復等同於你戰士等級的生命值。"
 			]
 		},
 		{
-			"name": "Restriction: Knighthood",
+			"name": "限制：騎士爵位",
+			"ENG_name": "Restriction: Knighthood",
 			"source": "SCAG",
 			"page": 128,
 			"className": "Fighter",
@@ -2443,12 +2514,13 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"Purple Dragon Knights are tied to a specific order of Cormyrean knighthood.",
-				"Banneret serves as the generic name for this archetype if you use it in other campaign settings or to model warlords other than the Purple Dragon Knights."
+				"紫龍騎士綁定於科米爾騎士爵位中的一個特別階級。",
+				"若你想在其他戰役設定或想塑造一個不同於紫龍騎士的軍閥，「旗將」將做為這個範型的通用稱呼。"
 			]
 		},
 		{
-			"name": "Royal Envoy",
+			"name": "皇家特使",
+			"ENG_name": "Royal Envoy",
 			"source": "SCAG",
 			"page": 128,
 			"className": "Fighter",
@@ -2458,13 +2530,14 @@
 			"level": 7,
 			"header": 2,
 			"entries": [
-				"A Purple Dragon Knight serves as an envoy of the Cormyrean crown. Knights of high standing are expected to conduct themselves with grace.",
-				"At 7th level, you gain proficiency in the {@skill Persuasion} skill. If you are already proficient in it, you gain proficiency in one of the following skills of your choice: {@skill Animal Handling}, {@skill Insight}, {@skill Intimidation}, or {@skill Performance}.",
-				"Your proficiency bonus is doubled for any ability check you make that uses {@skill Persuasion}. You receive this benefit regardless of the skill proficiency you gain from this feature."
+				"紫龍騎士做為科米爾王室的外交特使。地位顯赫的騎士們被認為其舉止應當優雅。",
+				"在7級時，你獲得{@skill 說服}技能的熟練。若你已經熟練於它，則你可以選擇獲得下列其中一個技能的熟練：{@skill 動物馴養}、{@skill 察言觀色}、{@skill 威嚇}、或{@skill 表演}。",
+				"你的熟練加值在你進行任何使用{@skill 說服}技能的屬性檢定時變為兩倍。無論你是否透過此能力獲得該技能的熟練，你都能享有這個好處。"
 			]
 		},
 		{
-			"name": "Inspiring Surge",
+			"name": "振奮之潮",
+			"ENG_name": "Inspiring Surge",
 			"source": "SCAG",
 			"page": 128,
 			"className": "Fighter",
@@ -2474,12 +2547,13 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"Starting at 10th level, when you use your Action Surge feature, you can choose one creature within 60 feet of you that is allied with you. That creature can make one melee or ranged weapon attack with its reaction, provided that it can see or hear you.",
-				"Starting at 18th level, you can choose two allies within 60 feet of you, rather than one."
+				"從10級開始，當你使用你的動作如潮能力，你可以選擇一個距離你60呎內且與你同盟的生物。只要它可以看見或聽見你，該生物就能夠以它的反應進行一次近戰或遠程武器攻擊。",
+				"從18級開始．你可以選擇二個距離你60呎內且與你同盟的生物，而非一個。"
 			]
 		},
 		{
-			"name": "Bulwark",
+			"name": "意志壁壘",
+			"ENG_name": "Bulwark",
 			"source": "SCAG",
 			"page": 128,
 			"className": "Fighter",
@@ -2489,11 +2563,12 @@
 			"level": 15,
 			"header": 2,
 			"entries": [
-				"Beginning at 15th level, you can extend the benefit of your Indomitable feature to an ally. When you decide to use Indomitable to reroll an Intelligence, a Wisdom, or a Charisma saving throw and you aren't {@condition incapacitated}, you can choose one ally within 60 feet of you that also failed its saving throw against the same effect. If that creature can see or hear you, it can reroll its saving throw and must use the new roll."
+				"從15級開始，你可以將你不屈能力的好處擴展到一個盟友身上。當你決定使用不屈能力以重骰一次智力、睿知、或魅力豁免檢定，且你不處於{@condition 無力}狀態時，你可以選擇一個距離你60呎內，且在對抗相同效果的豁免檢定中失敗的盟友。若該生物可以看見或聽見你，則它也可以重骰它的豁免檢定，且必須使用新的擲骰結果。"
 			]
 		},
 		{
-			"name": "Inspiring Surge",
+			"name": "振奮之潮",
+			"ENG_name": "Inspiring Surge",
 			"source": "SCAG",
 			"page": 128,
 			"className": "Fighter",
@@ -2503,7 +2578,7 @@
 			"level": 18,
 			"header": 2,
 			"entries": [
-				"Starting at 18th level, you can choose two allies within 60 feet of you, rather than one."
+				"從18級開始．你可以選擇二個距離你60呎內且與你同盟的生物，而非一個。"
 			]
 		},
 		{
@@ -2632,7 +2707,7 @@
 			"header": 2,
 			"entries": [
 				"{@i 18th-level Psi Warrior feature}",
-				"Your ability to move creatures and objects with your mind is matched by few. You can cast the {@spell telekinesis} spell, requiring no components, and your spellcasting ability for the spell is Intelligence. On each of your turns while you concentrate on the spell, including the turn when you cast it, you can make one attack with a weapon as a bonus action.",
+				"Your ability to move creatures and objects with your mind is matched by few. You can cast the {@spell 心靈遙控} spell, requiring no components, and your spellcasting ability for the spell is Intelligence. On each of your turns while you concentrate on the spell, including the turn when you cast it, you can make one attack with a weapon as a bonus action.",
 				"Once you cast the spell with this feature, you can't do so again until you finish a long rest, unless you expend a Psionic Energy die to cast it again."
 			]
 		},
@@ -3040,7 +3115,7 @@
 			"header": 2,
 			"entries": [
 				"{@i 18th-level Psi Knight feature}",
-				"Your ability to move creatures and objects with your mind is matched by few. If your Psionic Talent die is available, you can cast the {@spell telekinesis} spell, requiring no components. Your spellcasting ability for the spell is Intelligence. When you cast this spell, your Psionic Talent die decreases by one die size."
+				"Your ability to move creatures and objects with your mind is matched by few. If your Psionic Talent die is available, you can cast the {@spell 心靈遙控} spell, requiring no components. Your spellcasting ability for the spell is Intelligence. When you cast this spell, your Psionic Talent die decreases by one die size."
 			]
 		},
 		{
@@ -3825,7 +3900,7 @@
 			"header": 1,
 			"entries": [
 				"{@i 3rd-level Psychic Warrior feature}",
-				"You learn the {@spell mage hand} cantrip. You can cast it without components, and you can make the spectral hand {@condition invisible}. Intelligence is your spellcasting ability for this spell."
+				"You learn the {@spell 法師之手} cantrip. You can cast it without components, and you can make the spectral hand {@condition invisible}. Intelligence is your spellcasting ability for this spell."
 			]
 		},
 		{
@@ -4012,7 +4087,7 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"At 3rd level, your study of the supernatural gives you a limited ability to use magic. You can cast {@spell detect magic} as a ritual. You can cast {@spell protection from evil and good}, but you cannot cast it again with this feature until you finish a long rest. Wisdom is your spellcasting ability for these spells.",
+				"At 3rd level, your study of the supernatural gives you a limited ability to use magic. You can cast {@spell 偵測魔法} as a ritual. You can cast {@spell 防護善惡}, but you cannot cast it again with this feature until you finish a long rest. Wisdom is your spellcasting ability for these spells.",
 				"In addition, you gain the ability to speak one of the following languages of your choice: Abyssal, Celestial, or Infernal."
 			]
 		},
@@ -4928,7 +5003,8 @@
 			]
 		},
 		{
-			"name": "Arcane Archer",
+			"name": "魔射手",
+			"ENG_name": "Arcane Archer",
 			"source": "XGE",
 			"page": 28,
 			"className": "Fighter",
@@ -4937,23 +5013,24 @@
 			"subclassSource": "XGE",
 			"level": 3,
 			"entries": [
-				"An Arcane Archer studies a unique elven method of archery that weaves magic into attacks to produce supernatural effects. Arcane Archers are some of the most elite warriors among the elves. They stand watch over the fringes of elven domains, keeping a keen eye out for trespassers and using magic-infused arrows to defeat monsters and invaders before they can reach elven settlements. Over the centuries, the methods of these elf archers have been learned by members of other races who can also balance arcane aptitude with archery.",
+				"魔射手鑽研著那將魔法編入攻擊以產生超自然效果的獨特精靈箭技。魔射手是精靈中最精銳的戰士。他們會駐足守望著精靈領域的疆界，銳眼緊盯著入侵者，並射出灌注魔法的箭矢以在怪物和入侵者闖入精靈的居住地之前擊潰它們。在幾個世紀以來，這種精靈箭技也已經被其他能夠在祕法才能和弓道中找到平衡的種族所習得。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Arcane Archer Lore|Fighter||Arcane Archer|XGE|3"
+					"subclassFeature": "魔射手學識|Fighter||Arcane Archer|XGE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Arcane Shot|Fighter||Arcane Archer|XGE|3"
+					"subclassFeature": "祕法射擊|Fighter||Arcane Archer|XGE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Arcane Shot Options|Fighter||Arcane Archer|XGE|3"
+					"subclassFeature": "祕法射擊|Fighter||Arcane Archer|XGE|3"
 				}
 			]
 		},
 		{
-			"name": "Arcane Archer Lore",
+			"name": "魔射手學識",
+			"ENG_name": "Arcane Archer Lore",
 			"source": "XGE",
 			"page": 28,
 			"className": "Fighter",
@@ -4963,11 +5040,12 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"At 3rd level, you learn magical theory or some of the secrets of nature\u2014typical for practitioners of this elven martial tradition. You choose to gain proficiency in either the {@skill Arcana} or the {@skill Nature} skill, and you choose to learn either the {@spell prestidigitation} or the {@spell druidcraft} cantrip."
+				"在3級時，通常為了成為這個精靈軍事傳統的實踐者，你習得魔法理論或一部分的自然奧秘\u2014。你選擇獲得{@skill 奧秘}或{@skill 自然}技能的熟練，且你選擇習得{@spell 魔法技倆}或{@spell 德魯伊伎倆}戲法。"
 			]
 		},
 		{
-			"name": "Arcane Shot",
+			"name": "祕法射擊",
+			"ENG_name": "Arcane Shot",
 			"source": "XGE",
 			"page": 28,
 			"className": "Fighter",
@@ -4977,13 +5055,14 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"At 3rd level, you learn to unleash special magical effects with some of your shots. When you gain this feature, you learn two Arcane Shot options of your choice (see \"Arcane Shot Options\" below).",
-				"Once per turn when you fire an arrow from a shortbow or longbow as part of the {@action Attack} action, you can apply one of your Arcane Shot options to that arrow. You decide to use the option when the arrow hits a creature, unless the option doesn't involve an attack roll. You have two uses of this ability, and you regain all expended uses of it when you finish a short or long rest.",
-				"You gain an additional Arcane Shot option of your choice when you reach certain levels in this class: 7th, 10th, 15th, and 18th level. Each option also improves when you become an 18th-level fighter."
+				"在3級時，你習得在你其中一些射擊中釋放出特別的魔法效果。當你獲得此能力時，你習得二個由你選擇的祕法射擊選項（參見下列的「秘法射擊選項」）。",
+				"每個回合一次，當你使用{@item 短弓|phb}或{@item 長弓|phb}並做為{@action 攻擊}動作的一部份射出一發箭矢，你可以將你的其中一個祕法射擊選項應用於該箭矢。除非該選項不涉及攻擊檢定，否則你可以在箭矢命中一個生物時才決定是否使用該選項。你可以使用這個能力二次，且你在完成一次短休或長休後恢復所有你花費掉的次數。",
+				"你將在升至7級、10級、15級、和18級時獲得一個額外的祕法射擊選項。每個選項也都會在你成為一名18級戰士時獲得強化。"
 			]
 		},
 		{
-			"name": "Arcane Shot Options",
+			"name": "祕法射擊選項",
+			"ENG_name": "Arcane Shot Options",
 			"source": "XGE",
 			"page": 28,
 			"className": "Fighter",
@@ -4993,11 +5072,11 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"The Arcane Shot feature lets you choose options for it at certain levels. The options are presented here in alphabetical order. They are all magical effects, and each one is associated with one of the schools of magic.",
-				"If an option requires a saving throw, your Arcane Shot save DC is calculated as follows:",
+				"祕法射擊能力讓你得以在特定等級時選擇選項。這些選項將在以下按照字母順序排列呈現。它們全都是魔法效果，且每個選項都各自對應著一個魔法學派。",
+				"若某個選項要求進行一次豁免檢定，則你的祕法射擊豁免檢定DC的計算方式如下：",
 				{
 					"type": "abilityDc",
-					"name": "Arcane Shot",
+					"name": "祕法射擊",
 					"attributes": [
 						"int"
 					]
@@ -5008,42 +5087,43 @@
 					"entries": [
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Banishing Arrow|XGE"
+							"optionalfeature": "放逐箭|XGE"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Beguiling Arrow|XGE"
+							"optionalfeature": "迷惑箭|XGE"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Bursting Arrow|XGE"
+							"optionalfeature": "爆裂箭|XGE"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Enfeebling Arrow|XGE"
+							"optionalfeature": "衰弱箭|XGE"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Grasping Arrow|XGE"
+							"optionalfeature": "糾纏箭|XGE"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Piercing Arrow|XGE"
+							"optionalfeature": "穿透箭|XGE"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Seeking Arrow|XGE"
+							"optionalfeature": "追蹤箭|XGE"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Shadow Arrow|XGE"
+							"optionalfeature": "暗影箭|XGE"
 						}
 					]
 				}
 			]
 		},
 		{
-			"name": "Additional Arcane Shot Option",
+			"name": "額外祕法射擊選項",
+			"ENG_name": "Additional Arcane Shot Option",
 			"source": "XGE",
 			"page": 28,
 			"className": "Fighter",
@@ -5053,11 +5133,12 @@
 			"level": 7,
 			"header": 2,
 			"entries": [
-				"You gain an additional Arcane Shot option of your choice when you reach 7th level."
+				"當你升至7級時，你獲得一個你所選擇的祕法射擊選項。"
 			]
 		},
 		{
-			"name": "Curving Shot",
+			"name": "曲射",
+			"ENG_name": "Curving Shot",
 			"source": "XGE",
 			"page": 28,
 			"className": "Fighter",
@@ -5067,11 +5148,12 @@
 			"level": 7,
 			"header": 2,
 			"entries": [
-				"At 7th level, you learn how to direct an errant arrow toward a new target. When you make an attack roll with a magic arrow and miss, you can use a bonus action to reroll the attack roll against a different target within 60 feet of the original target."
+				"在7級時，你學會如何將偏離的箭矢導向一個新的目標。當你使用魔法箭矢進行一次攻擊檢定並失手時，你可以使用一個附贈動作以對一個距離原本目標60呎內的不同目標重骰該攻擊檢定。"
 			]
 		},
 		{
-			"name": "Magic Arrow",
+			"name": "魔法箭矢",
+			"ENG_name": "Magic Arrow",
 			"source": "XGE",
 			"page": 28,
 			"className": "Fighter",
@@ -5081,11 +5163,12 @@
 			"level": 7,
 			"header": 2,
 			"entries": [
-				"At 7th level, you gain the ability to infuse arrows with magic. Whenever you fire a nonmagical arrow from a shortbow or longbow, you can make it magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage. The magic fades from the arrow immediately after it hits or misses its target."
+				"在7級時，你獲得將魔法注入箭矢的能力。每當你使用{@item 短弓|phb}或{@item 長弓|phb}射出一發非魔法箭矢，你可以使其在克服對非魔法攻擊和傷害的抗性和免疫時被視作魔法箭矢。這個魔法將在它命中目標或失手時立刻從箭矢上消退。"
 			]
 		},
 		{
-			"name": "Additional Arcane Shot Option",
+			"name": "額外祕法射擊選項",
+			"ENG_name": "Additional Arcane Shot Option",
 			"source": "XGE",
 			"page": 28,
 			"className": "Fighter",
@@ -5095,11 +5178,12 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"You gain an additional Arcane Shot option of your choice when you reach 10th level."
+				"當你升至10級時，你獲得一個你所選擇的祕法射擊選項。"
 			]
 		},
 		{
-			"name": "Additional Arcane Shot Option",
+			"name": "額外祕法射擊選項",
+			"ENG_name": "Additional Arcane Shot Option",
 			"source": "XGE",
 			"page": 28,
 			"className": "Fighter",
@@ -5109,11 +5193,12 @@
 			"level": 15,
 			"header": 2,
 			"entries": [
-				"You gain an additional Arcane Shot option of your choice when you reach 15th level."
+				"當你升至15級時，你獲得一個你所選擇的祕法射擊選項。"
 			]
 		},
 		{
-			"name": "Ever-Ready Shot",
+			"name": "常備射擊",
+			"ENG_name": "Ever-Ready Shot",
 			"source": "XGE",
 			"page": 28,
 			"className": "Fighter",
@@ -5123,11 +5208,12 @@
 			"level": 15,
 			"header": 2,
 			"entries": [
-				"Starting at 15th level, your magical archery is available whenever battle starts. If you roll initiative and have no uses of Arcane Shot remaining, you regain one use of it."
+				"從15級開始，每當戰鬥開始時，你都可以使用你的魔法箭術。當你骰先攻時且祕法射擊已經沒有剩下的使用次數，則你恢復一次使用次數。"
 			]
 		},
 		{
-			"name": "Additional Arcane Shot Option",
+			"name": "額外祕法射擊選項",
+			"ENG_name": "Additional Arcane Shot Option",
 			"source": "XGE",
 			"page": 28,
 			"className": "Fighter",
@@ -5137,11 +5223,12 @@
 			"level": 18,
 			"header": 2,
 			"entries": [
-				"You gain an additional Arcane Shot option of your choice when you reach 18th level. Each option also improves when you become an 18th-level fighter."
+				"當你升至18級時，你獲得一個你所選擇的祕法射擊選項。每個祕法射擊選項也都會在你成為一名18級戰士時獲得強化。"
 			]
 		},
 		{
-			"name": "Cavalier",
+			"name": "騎兵",
+			"ENG_name": "Cavalier",
 			"source": "XGE",
 			"page": 30,
 			"className": "Fighter",
@@ -5150,23 +5237,24 @@
 			"subclassSource": "XGE",
 			"level": 3,
 			"entries": [
-				"The archetypal Cavalier excels at mounted combat. Usually born among the nobility and raised at court, a Cavalier is equally at home leading a cavalry charge or exchanging repartee at a state dinner. Cavaliers also learn how to guard those in their charge from harm, often serving as the protectors of their superiors and of the weak. Compelled to right wrongs or earn prestige, many of these fighters leave their lives of comfort to embark on glorious adventure.",
+				"這種範型擅長於騎乘作戰。通常出身貴族，並在宮廷成長，騎兵既能在家鄉領導騎兵隊衝鋒陷陣，也能在國宴中侃侃而談。騎兵們也學習如何保護那些他們負責的人們不受傷害，並經常做為他們長官或弱者的保護者。被迫於懲奸除惡或贏取榮耀，許多這些戰士選擇離開他們安逸的生活，展開他們的光榮冒險。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Proficiency|Fighter||Cavalier|XGE|3"
+					"subclassFeature": "額外熟練|Fighter||Cavalier|XGE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Born to the Saddle|Fighter||Cavalier|XGE|3"
+					"subclassFeature": "生而為騎|Fighter||Cavalier|XGE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Unwavering Mark|Fighter||Cavalier|XGE|3"
+					"subclassFeature": "堅定印記|Fighter||Cavalier|XGE|3"
 				}
 			]
 		},
 		{
-			"name": "Bonus Proficiency",
+			"name": "額外熟練",
+			"ENG_name": "Bonus Proficiency",
 			"source": "XGE",
 			"page": 30,
 			"className": "Fighter",
@@ -5176,11 +5264,12 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"When you choose this archetype at 3rd level, you gain proficiency in one of the following skills of your choice: {@skill Animal Handling}, {@skill History}, {@skill Insight}, {@skill Performance}, or {@skill Persuasion}. Alternatively, you learn one language of your choice."
+				"當你在3級時選擇此範型時，你獲得下列其中一個你所選擇技能的熟練：{@skill 動物馴養}、{@skill 歷史}、{@skill 察言觀色}、{@skill 表演}、或{@skill 說服}。或者，你學會一個你所選擇的語言。"
 			]
 		},
 		{
-			"name": "Born to the Saddle",
+			"name": "生而為騎",
+			"ENG_name": "Born to the Saddle",
 			"source": "XGE",
 			"page": 30,
 			"className": "Fighter",
@@ -5190,12 +5279,13 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"Starting at 3rd level, your mastery as a rider becomes apparent. You have advantage on saving throws made to avoid falling off your mount. If you fall off your mount and descend no more than 10 feet, you can land on your feet if you're not {@condition incapacitated}.",
-				"Finally, mounting or dismounting a creature costs you only 5 feet of movement, rather than half your speed."
+				"從3級開始，你做為騎兵的專業變得顯而易見。你在進行避免從你的坐騎摔落的豁免檢定中具有優勢。若你從你的坐騎摔落且落下不超過10呎距離，只要你不處於{@condition 無力}狀態，你就可以雙腳著地。",
+				"最後，乘上或騎下一個生物只花費你5呎的移動速度，而非你移動速度的一半。"
 			]
 		},
 		{
-			"name": "Unwavering Mark",
+			"name": "堅定印記",
+			"ENG_name": "Unwavering Mark",
 			"source": "XGE",
 			"page": 30,
 			"className": "Fighter",
@@ -5205,14 +5295,15 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"Starting at 3rd level, you can menace your foes, foiling their attacks and punishing them for harming others. When you hit a creature with a melee weapon attack, you can mark the creature until the end of your next turn. This effect ends early if you are {@condition incapacitated} or you die, or if someone else marks the creature.",
-				"While it is within 5 feet of you, a creature marked by you has disadvantage on any attack roll that doesn't target you.",
-				"In addition, if a creature marked by you deals damage to anyone other than you, you can make a special melee weapon attack against the marked creature as a bonus action on your next turn. You have advantage on the attack roll, and if it hits, the attack's weapon deals extra damage to the target equal to half your fighter level.",
-				"Regardless of the number of creatures you mark, you can make this special attack a number of times equal to your Strength modifier (minimum of once), and you regain all expended uses of it when you finish a long rest."
+				"從3級開始，你可以威脅你的敵人，挫敗它們的攻擊並為傷害他人而懲罰它們。當你以一次近戰武器攻擊命中一個生物，你可以標記該生物直到你的下個回合結束。這個效果會在你陷入{@condition 無力}狀態、你死亡、或者其他人標記該生物時提早結束。",
+				"當一個被標記的生物距離你5呎內，它將在任何不以你為目標的攻擊檢定中具有劣勢。",
+				"此外，若一個被你標記的生物對你以外的任何對象造成傷害，你可以在你的下個回合以一個附贈動作對該被標記的生物進行一次特殊的近戰武器攻擊。你在該攻擊檢定中具有優勢，且若命中，該攻擊的武器將對目標造成等同於你戰士等級一半的額外傷害。",
+				"無論你標記了多少生物，你能夠進行這個特殊攻擊的次數等同於你的力量調整值（最少一次），且你在完成一次長休後恢復所有你花費掉的次數。"
 			]
 		},
 		{
-			"name": "Warding Maneuver",
+			"name": "防護戰術",
+			"ENG_name": "Warding Maneuver",
 			"source": "XGE",
 			"page": 30,
 			"className": "Fighter",
@@ -5222,12 +5313,13 @@
 			"level": 7,
 			"header": 2,
 			"entries": [
-				"At 7th level, you learn to fend off strikes directed at you, your mount, or other creatures nearby. If you or a creature you can see within 5 feet of you is hit by an attack, you can roll {@dice 1d8} as a reaction if you're wielding a melee weapon or a shield. Roll the die, and add the number rolled to the target's AC against that attack. If the attack still hits, the target has resistance against the attack's damage.",
-				"You can use this feature a number of times equal to your Constitution modifier (minimum of once), and you regain all expended uses of it when you finish a long rest."
+				"在7級時，你學會抵禦對你、你的坐騎、或其他附近生物直接進行的攻擊。若你或一個距離你5呎內且你所能看見的生物被一次攻擊命中，且若你正持用一把近戰武器或盾牌，則你能夠以一個反應骰一顆{@dice 1d8}。骰這顆骰子，並將骰出來的數字加入目標對該次攻擊的AC中。若該攻擊仍然命中，則目標對該次攻擊的傷害將具有抗性。",
+				"你可以使用這個能力的次數等同於你的體質調整值（最少一次），且你在完成一次長休後恢復所有你花費掉的次數。"
 			]
 		},
 		{
-			"name": "Hold the Line",
+			"name": "堅守戰線",
+			"ENG_name": "Hold the Line",
 			"source": "XGE",
 			"page": 30,
 			"className": "Fighter",
@@ -5237,11 +5329,12 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"At 10th level, you become a master of locking down your enemies. Creatures provoke an opportunity attack from you when they move 5 feet or more while within your reach, and if you hit a creature with an opportunity attack, the target's speed is reduced to 0 until the end of the current turn."
+				"在10級時，你成為了封鎖你敵人行動的專家。處於你觸及範圍內的生物將在移動5呎或以上距離時引發來自你的藉機攻擊，且若你以一次藉機攻擊命中一個生物，目標的移動速度將被歸零直到該回合結束。"
 			]
 		},
 		{
-			"name": "Ferocious Charger",
+			"name": "勇猛衝鋒",
+			"ENG_name": "Ferocious Charger",
 			"source": "XGE",
 			"page": 30,
 			"className": "Fighter",
@@ -5251,11 +5344,12 @@
 			"level": 15,
 			"header": 2,
 			"entries": [
-				"Starting at 15th level, you can run down your foes, whether you're mounted or not. If you move at least 10 feet in a straight line right before attacking a creature and you hit it with the attack, that target must succeed on a Strength saving throw (DC 8 + your proficiency bonus + your Strength modifier) or be knocked {@condition prone}. You can use this feature only once on each of your turns."
+				"從15級開始，無論你是否乘騎，你都可以撞倒你的敵人。若你在攻擊一個生物之前直線移動至少10呎，且該攻擊命中，則目標必須成功通過一次力量豁免（DC為8+你的熟練加值+你的力量調整值），否則被擊倒{@condition 伏地}你在每個你的回合只能使用這個能力一次。"
 			]
 		},
 		{
-			"name": "Vigilant Defender",
+			"name": "警戒防衛者",
+			"ENG_name": "Vigilant Defender",
 			"source": "XGE",
 			"page": 30,
 			"className": "Fighter",
@@ -5265,11 +5359,12 @@
 			"level": 18,
 			"header": 2,
 			"entries": [
-				"Starting at 18th level, you respond to danger with extraordinary vigilance. In combat, you get a special reaction that you can take once on every creature's turn, except your turn. You can use this special reaction only to make an opportunity attack, and you can't use it on the same turn that you take your normal reaction."
+				"從18級開始，你能以超凡警戒回應危險。在戰鬥中，你得到一個你可以在每個生物的回合（除了你的回合以外）採取一次的特殊反應。你只能使用這個特殊反應以進行一次藉機攻擊，且你不能在你採取你正常反應的同個回合使用它。"
 			]
 		},
 		{
-			"name": "Samurai",
+			"name": "武士",
+			"ENG_name": "Samurai",
 			"source": "XGE",
 			"page": 31,
 			"className": "Fighter",
@@ -5278,19 +5373,20 @@
 			"subclassSource": "XGE",
 			"level": 3,
 			"entries": [
-				"The Samurai is a fighter who draws on an implacable fighting spirit to overcome enemies. A Samurai's resolve is nearly unbreakable, and the enemies in a Samurai's path have two choices: yield or die fighting.",
+				"武士是一種以堅決戰鬥意志擊潰敵人的戰士。武士的信念幾乎堅不可摧，且擋在武士道路前的敵人只有兩種選擇：投降，或者死戰方休。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Proficiency|Fighter||Samurai|XGE|3"
+					"subclassFeature": "額外熟練|Fighter||Samurai|XGE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Fighting Spirit|Fighter||Samurai|XGE|3"
+					"subclassFeature": "戰鬥之魂|Fighter||Samurai|XGE|3"
 				}
 			]
 		},
 		{
-			"name": "Bonus Proficiency",
+			"name": "額外熟練",
+			"ENG_name": "Bonus Proficiency",
 			"source": "XGE",
 			"page": 31,
 			"className": "Fighter",
@@ -5300,11 +5396,12 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"When you choose this archetype at 3rd level, you gain proficiency in one of the following skills of your choice: {@skill History}, {@skill Insight}, {@skill Performance}, or {@skill Persuasion}. Alternatively, you learn one language of your choice."
+				"當你在3級時選擇此範型時，你獲得下列其中一個你所選擇技能的熟練：{@skill 歷史}、{@skill 察言觀色}、{@skill 表演}、或{@skill 說服}。或者，你學會一個你所選擇的語言。"
 			]
 		},
 		{
-			"name": "Fighting Spirit",
+			"name": "戰鬥之魂",
+			"ENG_name": "Fighting Spirit",
 			"source": "XGE",
 			"page": 31,
 			"className": "Fighter",
@@ -5314,12 +5411,13 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"Starting at 3rd level, your intensity in battle can shield you and help you strike true. As a bonus action on your turn, you can give yourself advantage on weapon attack rolls until the end of the current turn. When you do so, you also gain 5 temporary hit points. The number of temporary hit points increases when you reach certain levels in this class, increasing to 10 at 10th level and 15 at 15th level.",
-				"You can use this feature three times, and you regain all expended uses of it when you finish a long rest."
+				"從3級開始，你在戰鬥中的強烈氣勢可以保護你並助你一擊必中。在你的回合以一個附贈動作，你可以讓你自己在該回合結束前的武器攻擊檢定都具有優勢。當你這麼做時，你同時獲得5點臨時生命值。這個臨時生命值的數量將會在你本職業升至特定等級時增加，10級時增加至10點，15級時增加至15。",
+				"你可以使用這個能力三次，且你在完成一次長休後恢復所有你花費掉的次數。"
 			]
 		},
 		{
-			"name": "Elegant Courtier",
+			"name": "典雅侍臣",
+			"ENG_name": "Elegant Courtier",
 			"source": "XGE",
 			"page": 31,
 			"className": "Fighter",
@@ -5329,12 +5427,13 @@
 			"level": 7,
 			"header": 2,
 			"entries": [
-				"Starting at 7th level, your discipline and attention to detail allow you to excel in social situations. Whenever you make a Charisma ({@skill Persuasion}) check, you gain a bonus to the check equal to your Wisdom modifier.",
-				"Your self-control also causes you to gain proficiency in Wisdom saving throws. If you already have this proficiency, you instead gain proficiency in Intelligence or Charisma saving throws (your choice)."
+				"從7級開始，你的修養和對細節的專注讓你得以在社交場合嶄露頭角。每當你進行一次魅力（{@skill 說服}）檢定時，你將在該檢定中獲得等同於你睿知調整值的加值。",
+				"你的自我控制能力同時也讓你獲得了睿知豁免的熟練。若你已經擁有此熟練，則你可以改為獲得智力豁免或魅力豁免的熟練（由你選擇）。"
 			]
 		},
 		{
-			"name": "Tireless Spirit",
+			"name": "不懈戰魂",
+			"ENG_name": "Tireless Spirit",
 			"source": "XGE",
 			"page": 31,
 			"className": "Fighter",
@@ -5344,11 +5443,12 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"Starting at 10th level, when you roll initiative and have no uses of Fighting Spirit remaining, you regain one use."
+				"從10級開始，當你骰先攻時且戰鬥之魂已經沒有剩下的使用次數，則你恢復一次使用次數。"
 			]
 		},
 		{
-			"name": "Rapid Strike",
+			"name": "迅捷打擊",
+			"ENG_name": "Rapid Strike",
 			"source": "XGE",
 			"page": 31,
 			"className": "Fighter",
@@ -5358,11 +5458,12 @@
 			"level": 15,
 			"header": 2,
 			"entries": [
-				"Starting at 15th level, you learn to trade accuracy for swift strikes. If you take the {@action Attack} action on your turn and have advantage on an attack roll against one of the targets, you can forgo the advantage for that roll to make an additional weapon attack against that target, as part of the same action. You can do so no more than once per turn."
+				"從15級開始，你學會以準確度換取快速打擊的方式。若你在你的回合採取{@action 攻擊}動作，且在對其中一個目標所進行的一次攻擊檢定中具有優勢，你可以放棄該檢定的優勢，並做為同個動作的一部份對該目標進行一次額外的武器攻擊。你每回合可以這麼做不超過一次。"
 			]
 		},
 		{
-			"name": "Strength before Death",
+			"name": "迴光返照",
+			"ENG_name": "Strength before Death",
 			"source": "XGE",
 			"page": 31,
 			"className": "Fighter",
@@ -5372,8 +5473,8 @@
 			"level": 18,
 			"header": 2,
 			"entries": [
-				"Starting at 18th level, your fighting spirit can delay the grasp of death. If you take damage that reduces you to 0 hit points and doesn't kill you outright, you can use your reaction to delay falling {@condition unconscious}, and you can immediately take an extra turn, interrupting the current turn. While you have 0 hit points during that extra turn, taking damage causes death saving throw failures as normal, and three death saving throw failures can still kill you. When the extra turn ends, you fall {@condition unconscious} if you still have 0 hit points.",
-				"Once you use this feature, you can't use it again until you finish a long rest."
+				"從18級開始，你的戰鬥意志可以延後死亡的支配。若你受到將你生命值歸零但沒有當場殺死你的傷害，你可以使用你的反應以延後陷入{@condition 昏迷}的時機，且你可以中斷當前的回合並立刻進行一個額外的回合。當你在這個額外回合期間的擁有0點生命值，受到傷害仍然會如往常一樣導致一次失敗的死亡豁免，且三次死亡豁免失敗仍然會殺死你。當這個額外回合結束時，若你的生命值依舊為0點，你將陷入{@condition 昏迷}。",
+				"一旦你使用此能力，直到你完成一次長休之前你都不能再使用它。"
 			]
 		},
 		{

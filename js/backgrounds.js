@@ -107,12 +107,12 @@ class BackgroundPage extends ListPage {
 
 		const tabMetas = [
 			new Renderer.utils.TabButton({
-				label: "Traits",
+				label: "特性",
 				fnPopulate: buildStatsTab,
 				isVisible: true,
 			}),
 			new Renderer.utils.TabButton({
-				label: "Info",
+				label: "資訊",
 				fnPopulate: buildFluffTab,
 				isVisible: Renderer.utils.hasFluffText(bg),
 			}),

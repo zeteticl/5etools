@@ -8,14 +8,14 @@ class RenderRaces {
 		${Renderer.utils.getBorderTr()}
 		${Renderer.utils.getExcludedTr(race, "race")}
 		${Renderer.utils.getNameTr(race, {controlRhs: race.soundClip ? RenderRaces._getPronunciationButton(race) : "", page: UrlUtil.PG_RACES})}
-		<tr><td colspan="6"><b>Ability Scores:</b> ${(race.ability ? Renderer.getAbilityData(race.ability) : {asText: "None"}).asText}</td></tr>
-		<tr><td colspan="6"><b>Size:</b> ${Parser.sizeAbvToFull(race.size || SZ_VARIES)}</td></tr>
-		<tr><td colspan="6"><b>Speed:</b> ${Parser.getSpeedString(race)}</td></tr>
+		<tr><td colspan="6"><b>屬性值：</b> ${(race.ability ? Renderer.getAbilityData(race.ability) : {asText: "無"}).asText}</td></tr>
+		<tr><td colspan="6"><b>體型：</b> ${Parser.sizeAbvToFull(race.size || SZ_VARIES)}</td></tr>
+		<tr><td colspan="6"><b>速度：</b> ${Parser.getSpeedString(race)}</td></tr>
 		<tr><td class="divider" colspan="6"><div></div></td></tr>
 		${race._isBaseRace ? `<tr class="text"><td colspan="6">${renderer.render({type: "entries", entries: race._baseRaceEntries}, 1)}</td></tr>` : `<tr class="text"><td colspan="6">${renderer.render({type: "entries", entries: race.entries}, 1)}</td></tr>`}
 
 		${race.traitTags && race.traitTags.includes("NPC Race") ? `<tr class="text"><td colspan="6"><section class="text-muted">
-			${renderer.render(`{@i Note: This race is listed in the {@i Dungeon Master's Guide} as an option for creating NPCs. It is not designed for use as a playable race.}`, 2)}
+			${renderer.render(`{@i 註記： 這個種族被記載於{@i 《地下城主指南》}以做為創造非玩家角色的選項。它並非被設計做為玩家可用的種族。}`, 2)}
 		 </section></td></tr>` : ""}
 
 		${$ptHeightWeight ? $$`<tr class="text"><td colspan="6"><hr class="rd__hr">${$ptHeightWeight}</td></tr>` : ""}

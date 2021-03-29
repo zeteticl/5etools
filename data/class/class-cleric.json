@@ -1,7 +1,8 @@
 {
 	"class": [
 		{
-			"name": "Cleric",
+			"name": "牧師",
+			"ENG_name": "Cleric",
 			"source": "PHB",
 			"page": 36,
 			"srd": true,
@@ -65,13 +66,13 @@
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
-					"(a) a {@item mace|phb} or (b) a {@item warhammer|phb} (if proficient)",
-					"(a) {@item scale mail|phb}, (b) {@item leather armor|phb}, or (c) {@item chain mail|phb} (if proficient)",
-					"(a) a {@item light crossbow|phb} and {@item Crossbow Bolts (20)|phb|20 bolts} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
-					"(a) a {@item priest's pack|phb} or (b) an {@item explorer's pack|phb}",
-					"A {@item shield|phb} and a {@item holy symbol|phb}"
+					"(a)一把{@item 硬頭錘|phb} 或 (b)一把{@item 戰錘|phb}(若熟練)",
+					"(a)一件{@item 鱗甲|phb}, (b)一件{@item 皮甲|phb}, 或 (c)一件{@item 鎖子甲|phb}(若熟練)",
+					"(a)一把{@item 輕弩|phb}和{@item 弩矢(20)|phb|20支弩矢} 或 (b)任意一把{@filter 簡易武器|items|source=phb|category=basic|type=simple weapon}",
+					"(a)一套{@item 祭司套裝|phb} 或 (b)一套{@item 探索者套裝|phb}",
+					"一面{@item 盾牌|phb}和一個{@item 聖徽|phb}"
 				],
-				"goldAlternative": "{@dice 5d4 × 10|5d4 × 10|Starting Gold}",
+				"goldAlternative": "{@dice 5d4 × 10|5d4 × 10|起始金錢}",
 				"defaultData": [
 					{
 						"a": [
@@ -134,7 +135,7 @@
 			"classTableGroups": [
 				{
 					"colLabels": [
-						"{@filter Cantrips Known|spells|level=0|class=Cleric}"
+						"{@filter 已知戲法|spells|level=0|class=Cleric}"
 					],
 					"rows": [
 						[
@@ -200,17 +201,17 @@
 					]
 				},
 				{
-					"title": "Spell Slots per Spell Level",
+					"title": "法術位/每環",
 					"colLabels": [
-						"{@filter 1st|spells|level=1|class=Cleric}",
-						"{@filter 2nd|spells|level=2|class=Cleric}",
-						"{@filter 3rd|spells|level=3|class=Cleric}",
-						"{@filter 4th|spells|level=4|class=Cleric}",
-						"{@filter 5th|spells|level=5|class=Cleric}",
-						"{@filter 6th|spells|level=6|class=Cleric}",
-						"{@filter 7th|spells|level=7|class=Cleric}",
-						"{@filter 8th|spells|level=8|class=Cleric}",
-						"{@filter 9th|spells|level=9|class=Cleric}"
+						"{@filter 1環|spells|level=1|class=Cleric}",
+						"{@filter 2環|spells|level=2|class=Cleric}",
+						"{@filter 3環|spells|level=3|class=Cleric}",
+						"{@filter 4環|spells|level=4|class=Cleric}",
+						"{@filter 5環|spells|level=5|class=Cleric}",
+						"{@filter 6環|spells|level=6|class=Cleric}",
+						"{@filter 7環|spells|level=7|class=Cleric}",
+						"{@filter 8環|spells|level=8|class=Cleric}",
+						"{@filter 9環|spells|level=9|class=Cleric}"
 					],
 					"rows": [
 						[
@@ -437,57 +438,59 @@
 				}
 			],
 			"classFeatures": [
-				"Spellcasting|Cleric||1",
+				"施法|Cleric||1",
 				"Cantrip Versatility|Cleric||1|UAClassFeatureVariants",
 				{
-					"classFeature": "Divine Domain|Cleric||1",
+					"classFeature": "神聖領域|Cleric||1",
 					"gainSubclassFeature": true
 				},
-				"Channel Divinity (1/rest)|Cleric||2",
+				"引導神力(1/休息)|Cleric||2",
 				"Channel Divinity: Harness Divine Power|Cleric||2|UAClassFeatureVariants",
 				"Channel Divinity: Harness Divine Power|Cleric||2|TCE",
 				{
-					"classFeature": "Divine Domain feature|Cleric||2",
+					"classFeature": "神聖領域能力|Cleric||2",
 					"gainSubclassFeature": true
 				},
-				"Ability Score Improvement|Cleric||4",
+				"屬性值提升|Cleric||4",
 				"Proficiency Versatility|Cleric||4|UAClassFeatureVariants",
 				"Cantrip Versatility|Cleric||4|TCE",
-				"Destroy Undead (CR 1/2)|Cleric||5",
-				"Channel Divinity (2/rest)|Cleric||6",
+				"摧毀不死 (CR 1/2)|Cleric||5",
+				"引導神力(2/休息)|Cleric||6",
 				{
-					"classFeature": "Divine Domain feature|Cleric||6",
+					"classFeature": "神聖領域能力|Cleric||6",
 					"gainSubclassFeature": true
 				},
-				"Ability Score Improvement|Cleric||8",
+				"屬性值提升|Cleric||8",
 				"Proficiency Versatility|Cleric||8|UAClassFeatureVariants",
-				"Destroy Undead (CR 1)|Cleric||8",
+				"摧毀不死 (CR 1)|Cleric||8",
 				{
-					"classFeature": "Divine Domain feature|Cleric||8",
+					"classFeature": "神聖領域能力|Cleric||8",
 					"gainSubclassFeature": true
 				},
-				"Divine Intervention|Cleric||10",
-				"Destroy Undead (CR 2)|Cleric||11",
-				"Ability Score Improvement|Cleric||12",
+				"神力干預|Cleric||10",
+				"摧毀不死 (CR 2)|Cleric||11",
+				"屬性值提升|Cleric||12",
 				"Proficiency Versatility|Cleric||12|UAClassFeatureVariants",
-				"Destroy Undead (CR 3)|Cleric||14",
-				"Ability Score Improvement|Cleric||16",
+				"摧毀不死 (CR 3)|Cleric||14",
+				"屬性值提升|Cleric||16",
 				"Proficiency Versatility|Cleric||16|UAClassFeatureVariants",
-				"Destroy Undead (CR 4)|Cleric||17",
+				"摧毀不死 (CR 4)|Cleric||17",
 				{
-					"classFeature": "Divine Domain feature|Cleric||17",
+					"classFeature": "神聖領域能力|Cleric||17",
 					"gainSubclassFeature": true
 				},
-				"Channel Divinity (3/rest)|Cleric||18",
-				"Ability Score Improvement|Cleric||19",
+				"引導神力(3/休息)|Cleric||18",
+				"屬性值提升|Cleric||19",
 				"Proficiency Versatility|Cleric||19|UAClassFeatureVariants",
-				"Divine Intervention Improvement|Cleric||20"
+				"神力干預強化|Cleric||20"
 			],
 			"subclassTitle": "Divine Domain",
 			"subclasses": [
 				{
-					"name": "Knowledge Domain",
-					"shortName": "Knowledge",
+					"name": "奧秘領域",
+					"ENG_name": "Knowledge Domain",
+					"shortName": "奧秘",
+					"ENG_shortName": "Knowledge",
 					"source": "PHB",
 					"page": 59,
 					"additionalSpells": [
@@ -517,18 +520,20 @@
 						}
 					],
 					"subclassFeatures": [
-						"Knowledge Domain|Cleric||Knowledge||1",
-						"Channel Divinity: Knowledge of the Ages|Cleric||Knowledge||2",
-						"Channel Divinity: Read Thoughts|Cleric||Knowledge||6",
-						"Potent Spellcasting|Cleric||Knowledge||8",
+						"知識領域|Cleric||Knowledge||1",
+						"引導神力：歲月知識|Cleric||Knowledge||2",
+						"引導神力：閱讀思想|Cleric||Knowledge||6",
+						"強力施法|Cleric||Knowledge||8",
 						"Blessed Strikes|Cleric||Knowledge||8|UAClassFeatureVariants",
 						"Blessed Strikes|Cleric||Knowledge||8|TCE",
-						"Visions of the Past|Cleric||Knowledge||17"
+						"過去之景|Cleric||Knowledge||17"
 					]
 				},
 				{
-					"name": "Life Domain",
-					"shortName": "Life",
+					"name": "生命領域",
+					"ENG_name": "Knowledge",
+					"shortName": "生命",
+					"ENG_shortName": "Life",
 					"source": "PHB",
 					"page": 60,
 					"srd": true,
@@ -559,18 +564,20 @@
 						}
 					],
 					"subclassFeatures": [
-						"Life Domain|Cleric||Life||1",
-						"Channel Divinity: Preserve Life|Cleric||Life||2",
-						"Blessed Healer|Cleric||Life||6",
-						"Divine Strike|Cleric||Life||8",
+						"生命領域|Cleric||Life||1",
+						"引導神力：維繫生命|Cleric||Life||2",
+						"祝聖醫者|Cleric||Life||6",
+						"神聖打擊|Cleric||Life||8",
 						"Blessed Strikes|Cleric||Life||8|UAClassFeatureVariants",
 						"Blessed Strikes|Cleric||Life||8|TCE",
-						"Supreme Healing|Cleric||Life||17"
+						"極效治療|Cleric||Life||17"
 					]
 				},
 				{
-					"name": "Light Domain",
-					"shortName": "Light",
+					"name": "光明",
+					"ENG_name": "Light Domain",
+					"shortName": "光明",
+					"ENG_shortName": "Light",
 					"source": "PHB",
 					"page": 60,
 					"additionalSpells": [
@@ -605,18 +612,20 @@
 						}
 					],
 					"subclassFeatures": [
-						"Light Domain|Cleric||Light||1",
-						"Channel Divinity: Radiance of the Dawn|Cleric||Light||2",
-						"Improved Flare|Cleric||Light||6",
-						"Potent Spellcasting|Cleric||Light||8",
+						"光明領域|Cleric||Light||1",
+						"引導神力：黎明曙光|Cleric||Light||2",
+						"強化閃耀|Cleric||Light||6",
+						"強力施法|Cleric||Light||8",
 						"Blessed Strikes|Cleric||Light||8|UAClassFeatureVariants",
 						"Blessed Strikes|Cleric||Light||8|TCE",
-						"Corona of Light|Cleric||Light||17"
+						"日冕光輝|Cleric||Light||17"
 					]
 				},
 				{
-					"name": "Nature Domain",
-					"shortName": "Nature",
+					"name": "自然領域",
+					"ENG_name": "Nature Domain",
+					"shortName": "自然",
+					"ENG_shortName": "Nature",
 					"source": "PHB",
 					"page": 61,
 					"additionalSpells": [
@@ -646,13 +655,13 @@
 						}
 					],
 					"subclassFeatures": [
-						"Nature Domain|Cleric||Nature||1",
-						"Channel Divinity: Charm Animals and Plants|Cleric||Nature||2",
-						"Dampen Elements|Cleric||Nature||6",
-						"Divine Strike|Cleric||Nature||8",
+						"自然領域|Cleric||Nature||1",
+						"引導神力：魅惑動植物|Cleric||Nature||2",
+						"抑制元素|Cleric||Nature||6",
+						"神聖打擊|Cleric||Nature||8",
 						"Blessed Strikes|Cleric||Nature||8|UAClassFeatureVariants",
 						"Blessed Strikes|Cleric||Nature||8|TCE",
-						"Master of Nature|Cleric||Nature||17"
+						"自然之主|Cleric||Nature||17"
 					]
 				},
 				{
@@ -687,18 +696,20 @@
 						}
 					],
 					"subclassFeatures": [
-						"Tempest Domain|Cleric||Tempest||1",
-						"Channel Divinity: Destructive Wrath|Cleric||Tempest||2",
-						"Thunderbolt Strike|Cleric||Tempest||6",
-						"Divine Strike|Cleric||Tempest||8",
+						"暴風領域|Cleric||Tempest||1",
+						"引導神力：毀滅狂怒|Cleric||Tempest||2",
+						"雷電猛擊|Cleric||Tempest||6",
+						"神聖打擊|Cleric||Tempest||8",
 						"Blessed Strikes|Cleric||Tempest||8|UAClassFeatureVariants",
 						"Blessed Strikes|Cleric||Tempest||8|TCE",
-						"Stormborn|Cleric||Tempest||17"
+						"風暴之子||Tempest||17"
 					]
 				},
 				{
-					"name": "Trickery Domain",
-					"shortName": "Trickery",
+					"name": "詭術領域",
+					"ENG_name": "Trickery Domain",
+					"shortName": "詭術",
+					"ENG_shortName": "Trickery",
 					"source": "PHB",
 					"page": 62,
 					"additionalSpells": [
@@ -728,18 +739,20 @@
 						}
 					],
 					"subclassFeatures": [
-						"Trickery Domain|Cleric||Trickery||1",
-						"Channel Divinity: Invoke Duplicity|Cleric||Trickery||2",
-						"Channel Divinity: Cloak of Shadows|Cleric||Trickery||6",
-						"Divine Strike|Cleric||Trickery||8",
+						"詭術領域|Cleric||Trickery||1",
+						"引導神力：召喚假體|Cleric||Trickery||2",
+						"引導神力：陰影斗篷|Cleric||Trickery||6",
+						"神聖打擊|Cleric||Trickery||8",
 						"Blessed Strikes|Cleric||Trickery||8|UAClassFeatureVariants",
 						"Blessed Strikes|Cleric||Trickery||8|TCE",
-						"Improved Duplicity|Cleric||Trickery||17"
+						"強化假體|Cleric||Trickery||17"
 					]
 				},
 				{
-					"name": "War Domain",
-					"shortName": "War",
+					"name": "戰爭領域",
+					"ENG_name": "War Domain",
+					"shortName": "戰爭",
+					"ENG_shortName": "War",
 					"source": "PHB",
 					"page": 63,
 					"additionalSpells": [
@@ -769,18 +782,20 @@
 						}
 					],
 					"subclassFeatures": [
-						"War Domain|Cleric||War||1",
-						"Channel Divinity: Guided Strike|Cleric||War||2",
-						"Channel Divinity: War God's Blessing|Cleric||War||6",
-						"Divine Strike|Cleric||War||8",
+						"戰爭領域|Cleric||War||1",
+						"引導神力：神導打擊|Cleric||War||2",
+						"引導神力：戰神祝福|Cleric||War||6",
+						"神聖打擊|Cleric||War||8",
 						"Blessed Strikes|Cleric||War||8|UAClassFeatureVariants",
 						"Blessed Strikes|Cleric||War||8|TCE",
-						"Avatar of Battle|Cleric||War||17"
+						"戰鬥化身|Cleric||War||17"
 					]
 				},
 				{
-					"name": "Death Domain",
-					"shortName": "Death",
+					"name": "死亡領域",
+					"ENG_name": "Death Domain",
+					"shortName": "死亡",
+					"ENG_shortName": "Death",
 					"source": "DMG",
 					"page": 96,
 					"additionalSpells": [
@@ -810,13 +825,13 @@
 						}
 					],
 					"subclassFeatures": [
-						"Death Domain|Cleric||Death|DMG|1",
-						"Channel Divinity: Touch of Death|Cleric||Death|DMG|2",
-						"Inescapable Destruction|Cleric||Death|DMG|6",
-						"Divine Strike|Cleric||Death|DMG|8",
+						"死亡領域|Cleric||Death|DMG|1",
+						"引導神力:死亡之觸|Cleric||Death|DMG|2",
+						"命定毀傷|Cleric||Death|DMG|6",
+						"神聖打擊|Cleric||Death|DMG|8",
 						"Blessed Strikes|Cleric||Death|DMG|8|UAClassFeatureVariants",
 						"Blessed Strikes|Cleric||Death|DMG|8|TCE",
-						"Improved Reaper|Cleric||Death|DMG|17"
+						"精通收割者|Cleric||Death|DMG|17"
 					]
 				},
 				{
@@ -861,8 +876,10 @@
 					]
 				},
 				{
-					"name": "Arcana Domain",
-					"shortName": "Arcana",
+					"name": "奧秘領域",
+					"ENG_name": "Arcana Domain",
+					"shortName": "奧秘",
+					"ENG_shortName": "Arcana",
 					"source": "SCAG",
 					"page": 125,
 					"additionalSpells": [
@@ -892,13 +909,13 @@
 						}
 					],
 					"subclassFeatures": [
-						"Arcana Domain|Cleric||Arcana|SCAG|1",
-						"Channel Divinity: Arcane Abjuration|Cleric||Arcana|SCAG|2",
-						"Spell Breaker|Cleric||Arcana|SCAG|6",
-						"Potent Spellcasting|Cleric||Arcana|SCAG|8",
+						"奧秘領域|Cleric||Arcana|SCAG|1",
+						"引導神力：奧秘阻絕|Cleric||Arcana|SCAG|2",
+						"法術破壞者|Cleric||Arcana|SCAG|6",
+						"強力施法|Cleric||Arcana|SCAG|8",
 						"Blessed Strikes|Cleric||Arcana|SCAG|8|UAClassFeatureVariants",
 						"Blessed Strikes|Cleric||Arcana|SCAG|8|TCE",
-						"Arcane Mastery|Cleric||Arcana|SCAG|17"
+						"奧術宗師|Cleric||Arcana|SCAG|17"
 					]
 				},
 				{
@@ -1074,11 +1091,11 @@
 					"page": 25,
 					"isReprinted": true,
 					"subclassFeatures": [
-						"Knowledge Domain (PSA)|Cleric||Knowledge (PSA)|PSA|1",
-						"Subclass Feature|Cleric||Knowledge (PSA)|PSA|2",
-						"Subclass Feature|Cleric||Knowledge (PSA)|PSA|6",
-						"Subclass Feature|Cleric||Knowledge (PSA)|PSA|8",
-						"Subclass Feature|Cleric||Knowledge (PSA)|PSA|17"
+						"知識領域(PSA)|Cleric||Knowledge (PSA)|PSA|1",
+						"子職業能力|Cleric||Knowledge (PSA)|PSA|2",
+						"子職業能力|Cleric||Knowledge (PSA)|PSA|6",
+						"子職業能力|Cleric||Knowledge (PSA)|PSA|8",
+						"子職業能力|Cleric||Knowledge (PSA)|PSA|17"
 					]
 				},
 				{
@@ -1205,8 +1222,10 @@
 					]
 				},
 				{
-					"name": "Forge Domain",
-					"shortName": "Forge",
+					"name": "鍛造領域",
+					"ENG_name": "Forge Domain",
+					"shortName": "鍛造",
+					"ENG_shortName": "Forge",
 					"source": "XGE",
 					"page": 18,
 					"additionalSpells": [
@@ -1236,18 +1255,20 @@
 						}
 					],
 					"subclassFeatures": [
-						"Forge Domain|Cleric||Forge|XGE|1",
-						"Channel Divinity: Artisan's Blessing|Cleric||Forge|XGE|2",
-						"Soul of the Forge|Cleric||Forge|XGE|6",
-						"Divine Strike|Cleric||Forge|XGE|8",
+						"鍛造領域|Cleric||Forge|XGE|1",
+						"引導神力：工匠祝福|Cleric||Forge|XGE|2",
+						"鍛造之魂|Cleric||Forge|XGE|6",
+						"神聖打擊|Cleric||Forge|XGE|8",
 						"Blessed Strikes|Cleric||Forge|XGE|8|UAClassFeatureVariants",
 						"Blessed Strikes|Cleric||Forge|XGE|8|TCE",
-						"Saint of Forge and Fire|Cleric||Forge|XGE|17"
+						"火與鋼的聖徒|Cleric||Forge|XGE|17"
 					]
 				},
 				{
-					"name": "Grave Domain",
-					"shortName": "Grave",
+					"name": "墳墓領域",
+					"ENG_name": "Grave Domain",
+					"shortName": "墳墓",
+					"ENG_shortName": "Grave",
 					"source": "XGE",
 					"page": 19,
 					"additionalSpells": [
@@ -1282,13 +1303,13 @@
 						}
 					],
 					"subclassFeatures": [
-						"Grave Domain|Cleric||Grave|XGE|1",
-						"Channel Divinity: Path to the Grave|Cleric||Grave|XGE|2",
-						"Sentinel at Death's Door|Cleric||Grave|XGE|6",
-						"Potent Spellcasting|Cleric||Grave|XGE|8",
+						"墳墓領域|Cleric||Grave|XGE|1",
+						"引導神力：歸墓之途|Cleric||Grave|XGE|2",
+						"死之門的哨衛|Cleric||Grave|XGE|6",
+						"強力施法|Cleric||Grave|XGE|8",
 						"Blessed Strikes|Cleric||Grave|XGE|8|UAClassFeatureVariants",
 						"Blessed Strikes|Cleric||Grave|XGE|8|TCE",
-						"Keeper of Souls|Cleric||Grave|XGE|17"
+						"守魂者|Cleric||Grave|XGE|17"
 					]
 				},
 				{
@@ -1460,8 +1481,10 @@
 					]
 				},
 				{
-					"name": "Order Domain",
-					"shortName": "Order",
+					"name": "秩序領域",
+					"ENG_name": "Order Domain",
+					"shortName": "秩序",
+					"ENG_shortName": "Order",
 					"source": "TCE",
 					"page": 31,
 					"otherSources": [
@@ -1497,13 +1520,13 @@
 						}
 					],
 					"subclassFeatures": [
-						"Order Domain|Cleric||Order|TCE|1",
-						"Channel Divinity: Order's Demand|Cleric||Order|TCE|2",
-						"Embodiment of the Law|Cleric||Order|TCE|6",
-						"Divine Strike|Cleric||Order|TCE|8",
+						"權威之音|Cleric||Order|TCE|1",
+						"引導神力：秩序之令|Cleric||Order|TCE|2",
+						"律法化身|Cleric||Order|TCE|6",
+						"神聖打擊|Cleric||Order|TCE|8",
 						"Blessed Strikes|Cleric||Order|TCE|8|UAClassFeatureVariants",
-						"Blessed Strikes|Cleric||Order|TCE|8|TCE",
-						"Order's Wrath|Cleric||Order|TCE|17"
+						"神聖打擊|Cleric||Order|TCE|8|TCE",
+						"秩序之怒|Cleric||Order|TCE|17"
 					]
 				},
 				{
@@ -1905,7 +1928,8 @@
 			]
 		},
 		{
-			"name": "Divine Domain",
+			"name": "神聖領域",
+			"ENG_name": "Divine Domain",
 			"source": "PHB",
 			"page": 36,
 			"srd": true,
@@ -1913,19 +1937,21 @@
 			"classSource": "PHB",
 			"level": 1,
 			"entries": [
-				"Choose one domain related to your deity from the list of available domains. Each domain is detailed in their own feature, and each one provides examples of gods associated with it. Your choice grants you domain spells and other features when you choose it at 1st level. It also grants you additional ways to use Channel Divinity when you gain that feature at 2nd level, and additional benefits at 6th, 8th, and 17th levels.",
+				"從可用領域列表中選擇一個你所信仰神祇的關聯領域。每個領域在它們的能力說明中被詳述，且各自提供了與其相關的範例神祇。你的選擇將在1級時賦予你領域法術以及其他能力。它也將在2級時賦予你另一種使用引導神力能力的方式，並在6級、8級、和17級時賦予你其他額外好處。",
 				{
 					"type": "entries",
-					"name": "Domain Spells",
+					"name": "領域法術",
+					"ENG_name": "Domain Spells",
 					"entries": [
-						"Each domain has a list of spells\u2014its domain spells\u2014that you gain at the cleric levels noted in the domain description. Once you gain a domain spell, you always have it prepared, and it doesn't count against the number of spells you can prepare each day.",
-						"If you have a domain spell that doesn't appear on the cleric spell list, the spell is nonetheless a cleric spell for you."
+						"每個領域都擁有一張法術列表\u2014亦即領域法術\u2014且你將在升至領域說明中指定的牧師等級時獲得這些法術。一旦你獲得領域法術，你將永遠視作已經準備了它，且它不會計入你每日可準備的法術數量中。",
+						"若你擁有一個不在牧師法術列表上的領域法術，則該法術對你而言仍然視作牧師法術。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Spellcasting",
+			"name": "施法",
+			"ENG_name": "Spellcasting",
 			"source": "PHB",
 			"page": 36,
 			"srd": true,
@@ -1933,39 +1959,39 @@
 			"classSource": "PHB",
 			"level": 1,
 			"entries": [
-				"As a conduit for divine power, you can cast cleric spells. See {@book chapter 10|PHB|10} for the general rules of spellcasting and {@book chapter 11|PHB|11} for a selection of {@filter cleric spells|spells|class=cleric}.",
+				"作為神性力量的通道，你可以施放牧師法術。請參閱{@book 第十章|PHB|10}以了解關於施法的規則，以及第十一章以查閱{@filter 牧師法術列表|spells|class=cleric}。",
 				{
 					"type": "entries",
-					"name": "Cantrips",
+					"name": "戲法",
 					"entries": [
-						"At 1st level, you know three cantrips of your choice from the cleric spell list. You learn additional cleric cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Cleric table."
+						"在1級時，你知曉三個從{@filter 牧師法術列表|spells|class=cleric}自選的戲法。你將在升至更高的牧師等級時學會額外的牧師戲法，見牧師表格中的已知戲法欄位。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Preparing and Casting Spells",
+					"name": "準備及施放法術",
 					"entries": [
-						"The Cleric table shows how many spell slots you have to cast your {@filter cleric spells|spells|class=cleric} of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
-						"You prepare the list of cleric spells that are available for you to cast, choosing from the cleric spell list. When you do so, choose a number of cleric spells equal to your Wisdom modifier + your cleric level (minimum of one spell). The spells must be of a level for which you have spell slots.",
-						"For example, if you are a 3rd-level cleric, you have four 1st-level and two 2nd-level spell slots. With a Wisdom of 16, your list of prepared spells can include six spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell {@spell cure wounds}, you can cast it using a 1st-level or 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.",
-						"You can change your list of prepared spells when you finish a long rest. Preparing a new list of cleric spells requires time spent in prayer and meditation: at least 1 minute per spell level for each spell on your list."
+						"牧師表中顯示了你有多少個法術位可以用來施放你一環或更高環的{@filter 牧師法術|spells|class=cleric}。要施放其中一個這些法術，你必須消耗一個與該法術環階相同或更高的法術位。你在完成一次長休後恢復所有你花費掉的法術位。",
+						"你準備一份你所能施放的牧師法術列表，從牧師法術列表中選擇。當你這麼做時，選擇數量等同於你睿知調整值 + 你牧師等級的牧師法術（最少一個法術）。這些法術的環階都必須符合你所擁有法術位的環階。",
+						"舉例來說，如果你是一個3級的牧師，你擁有四個1環和二個2環的法術位。你的睿知為16，則你已準備法術的列表中可以包含總共六個1環或2環的法術。若你準備了1環法術{@spell 治療傷勢}，你可以使用1環和2環的法術位來施放它。施放法術並不會將它從你的準備法術列表中移除。",
+						"你可以在你完成一次長休時改變你的準備法術列表。準備一份新的牧師法術列表需要花費時間於祈禱和冥想：你需要為你列表上每個法術的每個環階都花費至少1分鐘的時間。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Spellcasting Ability",
+					"name": "施法屬性",
 					"entries": [
-						"Wisdom is your spellcasting ability for your cleric spells. The power of your spells comes from your devotion to your deity. You use your Wisdom whenever a cleric spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a cleric spell you cast and when making an attack roll with one.",
+						"睿知是你施展牧師法術的施法屬性。你法術的力量來自於你對於你信仰的奉獻。每當一個牧師法術提及你的施法屬性時，你將使用你的睿知。此外，當決定你牧師法術的豁免DC、以及使用牧師法術進行攻擊檢定時，你使用你的睿知調整值。",
 						{
 							"type": "abilityDc",
-							"name": "Spell",
+							"name": "法術",
 							"attributes": [
 								"wis"
 							]
 						},
 						{
 							"type": "abilityAttackMod",
-							"name": "Spell",
+							"name": "法術",
 							"attributes": [
 								"wis"
 							]
@@ -1974,22 +2000,23 @@
 				},
 				{
 					"type": "entries",
-					"name": "Ritual Casting",
+					"name": "儀式施法",
 					"entries": [
-						"You can cast a cleric spell as a ritual if that spell has the ritual tag and you have the spell prepared."
+						"若一個牧師法術具有儀式標籤，且你已準備了該法術，則你可以將它做為儀式法術施放。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Spellcasting Focus",
+					"name": "施法法器",
 					"entries": [
-						"You can use a {@item holy symbol|phb} as a spellcasting focus for your cleric spells."
+						"你可以使用一個{@item 聖徽|phb}（第五章），來做為你施放牧師法術的法器。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Channel Divinity (1/rest)",
+			"name": "引導神力(1/休息)",
+			"ENG_name": "Channel Divinity (1/rest)",
 			"source": "PHB",
 			"page": 36,
 			"srd": true,
@@ -1997,13 +2024,13 @@
 			"classSource": "PHB",
 			"level": 2,
 			"entries": [
-				"At 2nd level, you gain the ability to channel divine energy directly from your deity, using that energy to fuel magical effects. You start with two such effects: Turn Undead and an effect determined by your domain. Some domains grant you additional effects as you advance in levels, as noted in the domain description.",
-				"When you use your Channel Divinity, you choose which effect to create. You must then finish a short or long rest to use your Channel Divinity again.",
-				"Some Channel Divinity effects require saving throws. When you use such an effect from this class, the DC equals your cleric spell save DC.",
-				"Beginning at 6th level, you can use your Channel Divinity twice between rests, and beginning at 18th level, you can use it three times between rests. When you finish a short or long rest, you regain your expended uses.",
+				"在2級時，你獲得引導直接來自你神祇的神聖能量，並用其能量驅動魔法效果的能力。你起始擁有二個這種效果：驅散不死，以及一個由你神聖領域決定的效果。某些領域會在你升至更高等級時賦予你額外的效果，參見各領域的說明。",
+				"當你使用你的引導神力時，你選擇要創造出哪一個效果。你接著必須完成一次短休或長休後才能再使用你的引導神力。",
+				"某些引導神力的效果會需要豁免檢定。當你使用本職業的這類效果時，其DC等同於你的牧師法術豁免DC。",
+				"從6級開始，你可以在休息之間使用引導神力二次。且從18級開始，你可以在休息之間使用引導神力三次。你在完成一次短休或長休後恢復所有你花費掉的次數。",
 				{
 					"type": "refClassFeature",
-					"classFeature": "Turn Undead|Cleric||2"
+					"classFeature": "驅散不死|Cleric||2"
 				}
 			]
 		},
@@ -2034,7 +2061,8 @@
 			]
 		},
 		{
-			"name": "Divine Domain feature",
+			"name": "神聖領域能力",
+			"ENG_name": "Divine Domain feature",
 			"source": "PHB",
 			"page": 36,
 			"srd": true,
@@ -2042,11 +2070,12 @@
 			"classSource": "PHB",
 			"level": 2,
 			"entries": [
-				"At 2nd level, you gain a feature from your Divine Domain."
+				"在2級時，你獲得一個由你神聖領域所賦予的能力。"
 			]
 		},
 		{
-			"name": "Turn Undead",
+			"name": "驅散不死",
+			"ENG_name": "Turn Undead",
 			"source": "PHB",
 			"page": 36,
 			"srd": true,
@@ -2055,12 +2084,13 @@
 			"level": 2,
 			"header": 2,
 			"entries": [
-				"As an action, you present your holy symbol and speak a prayer censuring the undead. Each undead that can see or hear you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage.",
-				"A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the {@action Dash} action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the {@action Dodge} action."
+				"以一個動作，你展現你的聖徽並說出斥責不死生物的禱詞。每個距離你30呎內且可以看見或聽見你的不死生物必須進行一次睿知豁免。若該生物豁免失敗，則它將被驅散長達1分鐘或直到它受到傷害。",
+				"一個被驅散的不死生物必須用它的回合嘗試盡可能的遠離你，且它無法自願的移動到距離你30呎內的空間。它無法採取反應。它的動作只能使用{@action 疾走}動作或嘗試掙脫阻止它移動的效果。若它無法移動，則該生物將使用{@action 閃避}動作。"
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 36,
 			"srd": true,
@@ -2068,8 +2098,8 @@
 			"classSource": "PHB",
 			"level": 4,
 			"entries": [
-				"When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"當你在此職業升至4級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -2100,7 +2130,8 @@
 			]
 		},
 		{
-			"name": "Destroy Undead (CR 1/2)",
+			"name": "摧毀不死 (CR 1/2)",
+			"ENG_name": "Destroy Undead",
 			"source": "PHB",
 			"page": 36,
 			"srd": true,
@@ -2108,11 +2139,12 @@
 			"classSource": "PHB",
 			"level": 5,
 			"entries": [
-				"Starting at 5th level, when an {@filter undead of CR 1/2 or lower|bestiary|challenge rating=[&0;&1/2]|type=undead|miscellaneous=!swarm} fails its saving throw against your Turn Undead feature, the creature is instantly destroyed."
+				"從5級開始，當一個{@filter 挑戰等級為1/2或更低的不死生物|bestiary|challenge rating=0;1/8;1/4;1/2|type=undead|miscellaneous=!swarm}在對抗你驅散不死能力的豁免檢定中失敗，該生物將立即被摧毀。"
 			]
 		},
 		{
-			"name": "Channel Divinity (2/rest)",
+			"name": "引導神力(2/休息)",
+			"ENG_name": "Channel Divinity (2/rest)",
 			"source": "PHB",
 			"page": 36,
 			"srd": true,
@@ -2120,11 +2152,12 @@
 			"classSource": "PHB",
 			"level": 6,
 			"entries": [
-				"Beginning at 6th level, you can use your Channel Divinity twice between rests."
+				"從6級開始，你可以在休息之間使用引導神力二次。"
 			]
 		},
 		{
-			"name": "Divine Domain feature",
+			"name": "神聖領域能力",
+			"ENG_name": "Divine Domain feature",
 			"source": "PHB",
 			"page": 36,
 			"srd": true,
@@ -2132,11 +2165,12 @@
 			"classSource": "PHB",
 			"level": 6,
 			"entries": [
-				"At 6th level, you gain a feature from your Divine Domain."
+				"在6級時，你獲得一個由你神聖領域所賦予的能力。"
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 36,
 			"srd": true,
@@ -2144,12 +2178,13 @@
 			"classSource": "PHB",
 			"level": 8,
 			"entries": [
-				"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"當你在此職業升至8級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
-			"name": "Destroy Undead (CR 1)",
+			"name": "摧毀不死 (CR 1)",
+			"ENG_name": "Destroy Undead",
 			"source": "PHB",
 			"page": 36,
 			"srd": true,
@@ -2157,11 +2192,12 @@
 			"classSource": "PHB",
 			"level": 8,
 			"entries": [
-				"Starting at 8th level, when an {@filter undead of CR 1 or lower|bestiary|challenge rating=[&0;&1]|type=undead|miscellaneous=!swarm} fails its saving throw against your Turn Undead feature, the creature is instantly destroyed."
+				"從8級開始，當一個{@filter 挑戰等級為1或更低的不死生物|bestiary|challenge rating=0;1/8;1/4;1/2;1|type=undead|miscellaneous=!swarm}在對抗你驅散不死能力的豁免檢定中失敗，該生物將立即被摧毀。"
 			]
 		},
 		{
-			"name": "Divine Domain feature",
+			"name": "神聖領域能力",
+			"ENG_name": "Divine Domain feature",
 			"source": "PHB",
 			"page": 36,
 			"srd": true,
@@ -2169,7 +2205,7 @@
 			"classSource": "PHB",
 			"level": 8,
 			"entries": [
-				"At 8th level, you gain a feature from your Divine Domain."
+				"在8級時，你獲得一個由你神聖領域所賦予的能力。"
 			]
 		},
 		{
@@ -2187,7 +2223,8 @@
 			]
 		},
 		{
-			"name": "Divine Intervention",
+			"name": "神力干預",
+			"ENG_name": "Divine Intervention",
 			"source": "PHB",
 			"page": 36,
 			"srd": true,
@@ -2195,13 +2232,14 @@
 			"classSource": "PHB",
 			"level": 10,
 			"entries": [
-				"Beginning at 10th level, you can call on your deity to intervene on your behalf when your need is great.",
-				"Imploring your deity's aid requires you to use your action. Describe the assistance you seek, and roll percentile dice. If you roll a number equal to or lower than your cleric level, your deity intervenes. The DM chooses the nature of the intervention; the effect of any cleric spell or cleric domain spell would be appropriate. If your deity intervenes, you can't use this feature again for 7 days. Otherwise, you can use it again after you finish a long rest.",
-				"At 20th level, your call for intervention succeeds automatically, no roll required."
+				"從10級開始，你可以在你迫切需要的時候呼求你的神祇為你插手介入。",
+				"懇求你神祇的幫助需要你使用你的動作。描述你所尋求的協助，並骰一顆百面骰。若你骰出的數字等於或低於你的牧師等級，則你的神祇將出手干預。由DM決定這次干預的性質；任何牧師法術或牧師領域法術都會是適合的例子。若你的神祇出手干預，則你在7天內都不能再使用此能力。否則你可以在你完成一次長休後再次使用它。",
+				"在20級時，你呼求干預的動作將自動成功，不再需要擲骰。"
 			]
 		},
 		{
-			"name": "Destroy Undead (CR 2)",
+			"name": "摧毀不死 (CR 2)",
+			"ENG_name": "Destroy Undead (CR 2)",
 			"source": "PHB",
 			"page": 36,
 			"srd": true,
@@ -2209,11 +2247,12 @@
 			"classSource": "PHB",
 			"level": 11,
 			"entries": [
-				"Starting at 11th level, when an {@filter undead of CR 2 or lower|bestiary|challenge rating=[&0;&2]|type=undead|miscellaneous=!swarm} fails its saving throw against your Turn Undead feature, the creature is instantly destroyed."
+				"從11級開始，當一個{@filter 挑戰等級為2或更低的不死生物|bestiary|challenge rating=0;1/8;1/4;1/2;1;2|type=undead|miscellaneous=!swarm}在對抗你驅散不死能力的豁免檢定中失敗，該生物將立即被摧毀。"
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 36,
 			"srd": true,
@@ -2221,8 +2260,8 @@
 			"classSource": "PHB",
 			"level": 12,
 			"entries": [
-				"When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"當你在此職業升至12級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -2240,7 +2279,8 @@
 			]
 		},
 		{
-			"name": "Destroy Undead (CR 3)",
+			"name": "摧毀不死 (CR 3)",
+			"ENG_name": "Destroy Undead (CR 3)",
 			"source": "PHB",
 			"page": 36,
 			"srd": true,
@@ -2248,11 +2288,12 @@
 			"classSource": "PHB",
 			"level": 14,
 			"entries": [
-				"Starting at 14th level, when an {@filter undead of CR 3 or lower|bestiary|challenge rating=[&0;&3]|type=undead|miscellaneous=!swarm} fails its saving throw against your Turn Undead feature, the creature is instantly destroyed."
+				"從14級開始，當一個{@filter 挑戰等級為3或更低的不死生物|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3|type=undead|miscellaneous=!swarm}在對抗你驅散不死能力的豁免檢定中失敗，該生物將立即被摧毀。"
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 36,
 			"srd": true,
@@ -2260,8 +2301,8 @@
 			"classSource": "PHB",
 			"level": 16,
 			"entries": [
-				"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"當你在此職業升至16級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -2279,7 +2320,8 @@
 			]
 		},
 		{
-			"name": "Destroy Undead (CR 4)",
+			"name": "摧毀不死 (CR 4)",
+			"ENG_name": "Destroy Undead (CR 4)",
 			"source": "PHB",
 			"page": 36,
 			"srd": true,
@@ -2287,11 +2329,12 @@
 			"classSource": "PHB",
 			"level": 17,
 			"entries": [
-				"Starting at 17th level, when an {@filter undead of CR 4 or lower|bestiary|challenge rating=[&0;&4]|type=undead|miscellaneous=!swarm} fails its saving throw against your Turn Undead feature, the creature is instantly destroyed."
+				"從17級開始，當一個{@filter 挑戰等級為4或更低的不死生物|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3;4|type=undead|miscellaneous=!swarm}在對抗你驅散不死能力的豁免檢定中失敗，該生物將立即被摧毀。"
 			]
 		},
 		{
-			"name": "Divine Domain feature",
+			"name": "神聖領域能力",
+			"ENG_name": "Divine Domain feature",
 			"source": "PHB",
 			"page": 36,
 			"srd": true,
@@ -2299,11 +2342,12 @@
 			"classSource": "PHB",
 			"level": 17,
 			"entries": [
-				"At 17th level, you gain a feature from your Divine Domain."
+				"在17級時，你獲得一個由你神聖領域所賦予的能力。"
 			]
 		},
 		{
-			"name": "Channel Divinity (3/rest)",
+			"name": "引導神力(3/休息)",
+			"ENG_name": "Channel Divinity (3/rest)",
 			"source": "PHB",
 			"page": 36,
 			"srd": true,
@@ -2311,11 +2355,12 @@
 			"classSource": "PHB",
 			"level": 18,
 			"entries": [
-				"Beginning at 18th level, you can use your Channel Divinity three times between rests."
+				"從18級開始，你可以在休息之間使用引導神力三次。"
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 36,
 			"srd": true,
@@ -2323,8 +2368,8 @@
 			"classSource": "PHB",
 			"level": 19,
 			"entries": [
-				"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"當你在此職業升至19級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -2342,7 +2387,8 @@
 			]
 		},
 		{
-			"name": "Divine Intervention Improvement",
+			"name": "神力干預強化",
+			"ENG_name": "Divine Intervention Improvement",
 			"source": "PHB",
 			"page": 36,
 			"srd": true,
@@ -2350,13 +2396,14 @@
 			"classSource": "PHB",
 			"level": 20,
 			"entries": [
-				"At 20th level, your call for intervention succeeds automatically, no roll required."
+				"在20級時，你呼求干預的動作將自動成功，不再需要擲骰。"
 			]
 		}
 	],
 	"subclassFeature": [
 		{
-			"name": "Death Domain",
+			"name": "死亡領域",
+			"ENG_name": "Death Domain",
 			"source": "DMG",
 			"page": 96,
 			"className": "Cleric",
@@ -2365,14 +2412,14 @@
 			"subclassSource": "DMG",
 			"level": 1,
 			"entries": [
-				"The Death domain is concerned with the forces that cause death, as well as the negative energy that gives rise to undead creatures. Deities such as Chemosh, Myrkul, and WeeJas are patrons of necromancers, death knights, liches, mummy lords, and vampires. Gods of the Death domain also embody murder (Anubis, Bhaal, and Pyremius), pain (Iuz or Loviatar), disease or poison (Incabulos, Talona, or Morgion), and the underworld (Hades and Hel).",
+				"死亡領域關注的是導致死亡的原力，以及喚起不死生物的負能量。其神只諸如奇魔須Chemosh、米爾寇Myrkul 和維婕絲 Wee Jas等，都是死靈法師、死亡騎士、巫妖、木乃伊領主和吸血鬼的守護神。死亡領域的神靈還具現為謀殺(阿努比斯Anubis、巴爾Bhaal 和匹裡麻斯Pyremius)，痛苦(魯茲luz 或勞薇塔Loviatar)，疾病或毒藥(英凱布居羅斯Incabulos、塔洛娜Talona 或魔吉安Morgion)，和冥界underworld(哈迪斯Hades 和赫爾Hel).",
 				"At each indicated cleric level, add the listed spells to your spells prepared. They do not count towards your limit.",
 				{
 					"type": "table",
-					"caption": "Death Domain Spells",
+					"caption": "死亡領域法術",
 					"colLabels": [
-						"Cleric Level",
-						"Spells"
+						"牧師等級",
+						"法術"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -2381,38 +2428,39 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell false life}, {@spell ray of sickness}"
+							"{@spell 摹造生命}, {@spell 致病射線}"
 						],
 						[
 							"3rd",
-							"{@spell blindness/deafness}, {@spell ray of enfeeblement}"
+							"{@spell 目盲/耳聾術}, {@spell 衰弱射線}"
 						],
 						[
 							"5th",
-							"{@spell animate dead}, {@spell vampiric touch}"
+							"{@spell 活化死屍}, {@spell 吸血鬼之觸}"
 						],
 						[
 							"7th",
-							"{@spell blight}, {@spell death ward}"
+							"{@spell 枯萎術}, {@spell 防死護咒}"
 						],
 						[
 							"9th",
-							"{@spell antilife shell}, {@spell cloudkill}"
+							"{@spell 反活物護罩}, {@spell 死雲術}"
 						]
 					]
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Proficiency|Cleric||Death|DMG|1"
+					"subclassFeature": "額外熟練項|Cleric||Death|DMG|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Reaper|Cleric||Death|DMG|1"
+					"subclassFeature": "收割者|Cleric||Death|DMG|1"
 				}
 			]
 		},
 		{
-			"name": "Bonus Proficiency",
+			"name": "額外熟練項",
+			"ENG_name": "Bonus Proficiency",
 			"source": "DMG",
 			"page": 96,
 			"className": "Cleric",
@@ -2422,11 +2470,12 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"When the cleric chooses this domain at 1st level, he or she gains proficiency with martial weapons."
+				"該牧師在第 1 級選擇此領域時將獲得軍用武器熟練項。"
 			]
 		},
 		{
-			"name": "Reaper",
+			"name": "收割者",
+			"ENG_name": "Reaper",
 			"source": "DMG",
 			"page": 96,
 			"className": "Cleric",
@@ -2436,11 +2485,12 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"At 1st level, the cleric learns one {@filter necromancy cantrip|spells|level=0|school=N} of his or her choice from any spell list. When the cleric casts a necromancy cantrip that normally targets only one creature, the spell can instead target two creatures within range and within 5 feet of each other."
+				"第1級時，該牧師可以從任意法術列表中選擇學習一個死靈戲法。該牧師施展一個通常指定一個生物為目標的死靈戲法時，則該法術現在可以指定施法距離內兩個相互之間距離不超過5尺的生物。"
 			]
 		},
 		{
-			"name": "Channel Divinity: Touch of Death",
+			"name": "引導神力:死亡之觸",
+			"ENG_name": "Channel Divinity: Touch of Death",
 			"source": "DMG",
 			"page": 96,
 			"className": "Cleric",
@@ -2450,12 +2500,13 @@
 			"level": 2,
 			"header": 2,
 			"entries": [
-				"Starting at 2nd level, the cleric can use Channel Divinity to destroy another creature's life force by touch.",
-				"When the cleric hits a creature with a melee attack, the cleric can use Channel Divinity to deal extra necrotic damage to the target. The damage equals 5 + twice his or her cleric level."
+				"第2級起，該牧師可以用引導神力特性並通過觸碰來摧毀另一生物的生命力。",
+				"該牧師以近戰攻擊命中一個生物時，可以使用引導神力對該目標造成額外的黯蝕傷害。該傷害值等於 5 + 其牧師等級兩倍的數值。"
 			]
 		},
 		{
-			"name": "Inescapable Destruction",
+			"name": "命定毀傷",
+			"ENG_name": "Inescapable Destruction",
 			"source": "DMG",
 			"page": 96,
 			"className": "Cleric",
@@ -2465,7 +2516,7 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Starting at 6th level, the cleric's ability to channel negative energy becomes more potent. Necrotic damage dealt by the character's cleric spells and Channel Divinity options ignores resistance to necrotic damage."
+				"第6級起，該牧師引導負能量的能力更為有效。該角色的牧師法術與引導神力選項所造成的黯蝕傷害將無視對黯蝕傷害抗性。"
 			]
 		},
 		{
@@ -2501,7 +2552,8 @@
 			]
 		},
 		{
-			"name": "Divine Strike",
+			"name": "神聖打擊",
+			"ENG_name": "Divine Strike",
 			"source": "DMG",
 			"page": 96,
 			"className": "Cleric",
@@ -2511,11 +2563,12 @@
 			"level": 8,
 			"header": 2,
 			"entries": [
-				"At 8th level, the cleric gains the ability to infuse his or her weapon strikes with necrotic energy. Once on each of the cleric's turns when he or she hits a creature with a weapon attack, the cleric can cause the attack to deal an extra {@damage 1d8} necrotic damage to the target. When the cleric reaches 14th level, the extra damage increases to {@dice 2d8}."
+				"第8級時，該牧師可以使其武器打擊充滿負能量。該牧師在每個其自己回合裡有一次機會，可以在用武器攻擊命中某生物時額外造成{@damage 1d8}的黯蝕傷害。第14級時，該傷害提升到 2d8。"
 			]
 		},
 		{
-			"name": "Improved Reaper",
+			"name": "精通收割者",
+			"ENG_name": "Improved Reaper",
 			"source": "DMG",
 			"page": 96,
 			"className": "Cleric",
@@ -2525,11 +2578,12 @@
 			"level": 17,
 			"header": 2,
 			"entries": [
-				"Starting at 17th level, when the cleric casts a Necromancy spell of 1st through 5th-level that targets only one creature, the spell can instead target two creatures within range and within 5 feet of each other. If the spell consumes its material components, the cleric must provide them for each target."
+				"第17級起，該牧師施展一個1至5環的死靈法術時，若該法術只指定一個生物為目標，則將其改為指定施法距離內相互之間距離不超過5尺的兩個生物。如果該法術消耗其材料構材，則該牧師必須為每個目標提供一份耗材。"
 			]
 		},
 		{
-			"name": "Knowledge Domain",
+			"name": "知識領域",
+			"ENG_name": "Knowledge Domain",
 			"source": "PHB",
 			"page": 59,
 			"className": "Cleric",
@@ -2538,14 +2592,14 @@
 			"subclassSource": "PHB",
 			"level": 1,
 			"entries": [
-				"The gods of knowledge\u2014including Oghma, Boccob, Gilean, Aureon, and Thoth\u2014value learning and understanding above all. Some teach that knowledge is to be gathered and shared in libraries and universities, or promote the practical knowledge of craft and invention. Some deities hoard knowledge and keep its secrets to themselves. And some promise their followers that they will gain tremendous power if they unlock the secrets of the multiverse. Followers of these gods study esoteric lore, collect old tomes, delve into the secret places of the earth, and learn all they can. Some gods of knowledge promote the practical knowledge of craft and invention, including smith deities like Gond, Reorx, Onatar, Moradin, Hephaestus, and Goibhniu.",
-				"At each indicated cleric level, you add the listed spells to your spells prepared.",
+				"知識之神\u2014包括{@deity 歐格瑪|faerûnian|scag}、{@deity 博卡布|greyhawk}、{@deity 吉立安|dragonlance}、{@deity 奥林|eberron}、和{@deity 托特|egyptian}\u2014祂們重視學習和理解勝過一切。有些神的教訓是知識應該被收集和分享於圖書館和大學，或將實用知識推廣於製造和發現。有些神祇則將知識密藏起來，不讓其他人所知。而有些則承諾祂們的追隨者，若他們能解開多元宇宙中的秘密，就將獲得無比的權力。這些神祇的追隨者研讀深奧的學識、收集古老的典籍、挖掘地球上的秘境、並盡他們可能的不斷學習。有些知識之神會推廣實用知識於製造和發明中，包括鍛造神祇，像是{@deity 貢德|faerûnian|scag}、{@deity 李奧克斯|dragonlance}、{@deity 昂那塔|eberron}、{@deity 摩拉丁|dwarven|mtf}、{@deity 赫菲斯托斯|greek}、和{@deity 格布紐|celtic}。",
+				"在每個下記的牧師等級，將列出的法術加入你的準備法術中。",
 				{
 					"type": "table",
-					"caption": "Knowledge Domain Spells",
+					"caption": "知識領域法術",
 					"colLabels": [
-						"Cleric Level",
-						"Spells"
+						"牧師等級",
+						"法術"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -2553,35 +2607,36 @@
 					],
 					"rows": [
 						[
-							"1st",
-							"{@spell command}, {@spell identify}"
+							"1級",
+							"{@spell 命令術}, {@spell 鑑定術}"
 						],
 						[
-							"3rd",
-							"{@spell augury}, {@spell suggestion}"
+							"3級",
+							"{@spell 卜筮}, {@spell 暗示術}"
 						],
 						[
-							"5th",
-							"{@spell nondetection}, {@spell speak with dead}"
+							"5級",
+							"{@spell 迴避偵測}, {@spell 死者交談術}"
 						],
 						[
-							"7th",
-							"{@spell arcane eye}, {@spell confusion}"
+							"7級",
+							"{@spell 祕法眼}, {@spell 困惑術}"
 						],
 						[
-							"9th",
-							"{@spell legend lore}, {@spell scrying}"
+							"9級",
+							"{@spell 通曉傳奇}, {@spell 探知}"
 						]
 					]
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Blessings of Knowledge|Cleric||Knowledge||1"
+					"subclassFeature": "知識祝福|Cleric||Knowledge||1"
 				}
 			]
 		},
 		{
-			"name": "Blessings of Knowledge",
+			"name": "知識祝福",
+			"ENG_name": "Blessings of Knowledge",
 			"source": "PHB",
 			"page": 59,
 			"className": "Cleric",
@@ -2591,12 +2646,13 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"At 1st level, you learn two languages of your choice. You also become proficient in your choice of two of the following skills: {@skill Arcana}, {@skill History}, {@skill Nature}, or {@skill Religion}.",
-				"Your proficiency bonus is doubled for any ability check you make that uses either of those skills."
+				"在1級時，你學會二種自選的語言。你也變得熟練於二個從下列選項中自選的技能：{@skill 奧秘}、{@skill 歷史}、{@skill 自然}、或{@skill 宗教}。",
+				"你的熟練加值在使用這些技能所進行的任何屬性檢定中變為兩倍。"
 			]
 		},
 		{
-			"name": "Channel Divinity: Knowledge of the Ages",
+			"name": "引導神力：歲月知識",
+			"ENG_name": "Channel Divinity: Knowledge of the Ages",
 			"source": "PHB",
 			"page": 59,
 			"className": "Cleric",
@@ -2606,11 +2662,12 @@
 			"level": 2,
 			"header": 2,
 			"entries": [
-				"Starting at 2nd level, you can use your Channel Divinity to tap into a divine well of knowledge. As an action, you choose one skill or tool. For 10 minutes, you have proficiency with the chosen skill or tool."
+				"從2級開始，你可以使用你的引導神力以進入知識的神聖之井。以一個動作，你選擇一項技能或工具。在10分鐘內，你將熟練於所選的技能或工具。"
 			]
 		},
 		{
-			"name": "Channel Divinity: Read Thoughts",
+			"name": "引導神力：閱讀思想",
+			"ENG_name": "Channel Divinity: Read Thoughts",
 			"source": "PHB",
 			"page": 59,
 			"className": "Cleric",
@@ -2620,10 +2677,10 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"At 6th level, you can use your Channel Divinity to read a creature's thoughts. You can then use your access to the creature's mind to command it.",
-				"As an action, choose one creature that you can see within 60 feet of you. That creature must make a Wisdom saving throw. If the creature succeeds on the saving throw, you can't use this feature on it again until you finish a long rest.",
-				"If the creature fails its save, you can read its surface thoughts (those foremost in its mind, reflecting its current emotions and what it is actively thinking about) when it is within 60 feet of you. This effect lasts for 1 minute.",
-				"During that time, you can use your action to end this effect and cast the {@spell suggestion} spell on the creature without expending a spell slot. The target automatically fails its saving throw against the spell."
+				"在6級時，你可以使用你的引導神力以閱讀一個生物的思想。你可以接著利用你對該生物的心靈通道以命令它。",
+				"以一個動作，選擇一個距離你60呎內且你所能看見的生物。該生物必須進行一次睿知豁免。若該生物成功通過此豁免，則直到你完成一次長休之前都不能再對它使用此能力。",
+				"若該生物豁免失敗，你可以在它距離你60呎內時讀取它的表層思想（那些它腦中最主要的思想，反映著它當下的情緒和它主動思考的事物）。這個效果將持續1分鐘。",
+				"在這段期間，你可以使用你的動作以結束此效果，並對該生物施放{@skill 暗示術}法術而無需消耗法術位。目標將在對抗此法術的豁免檢定中自動失敗。"
 			]
 		},
 		{
@@ -2659,7 +2716,8 @@
 			]
 		},
 		{
-			"name": "Potent Spellcasting",
+			"name": "強力施法",
+			"ENG_name": "Potent Spellcasting",
 			"source": "PHB",
 			"page": 59,
 			"className": "Cleric",
@@ -2669,11 +2727,12 @@
 			"level": 8,
 			"header": 2,
 			"entries": [
-				"Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
+				"從8級開始，你將你的睿知調整值加入任何你使用牧師戲法所造成的傷害中。"
 			]
 		},
 		{
-			"name": "Visions of the Past",
+			"name": "過去之景",
+			"ENG_name": "Visions of the Past",
 			"source": "PHB",
 			"page": 59,
 			"className": "Cleric",
@@ -2683,16 +2742,16 @@
 			"level": 17,
 			"header": 2,
 			"entries": [
-				"Starting at 17th level, you can call up visions of the past that relate to an object you hold or your immediate surroundings. You spend at least 1 minute in meditation and prayer, then receive dreamlike, shadowy glimpses of recent events. You can meditate in this way for a number of minutes equal to your Wisdom score and must maintain concentration during that time, as if you were casting a spell.",
-				"Once you use this feature, you can't use it again until you finish a short or long rest.",
+				"從17級開始，你可以呼喚出與你所持握的一個物體或你當下環境有關的過去景象。你花費至少1分鐘的時間冥想與祈禱，然後接收到有如夢境般，近期事件的朦朧一瞥。你可以透過這個方式冥想長達等同於你睿知數值的分鐘時間，且必須在這段期間保持專注，就如同你施放專注法術一樣。",
+				"一旦你使用此能力，直到你完成一次短休或長休之前，都不能再使用它。",
 				{
 					"type": "entries",
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Object Reading",
+							"name": "物體讀見",
 							"entries": [
-								"Holding an object as you meditate, you can see visions of the object's previous owner. After meditating for 1 minute, you learn how the owner acquired and lost the object, as well as the most recent significant event involving the object and that owner. If the object was owned by another creature in the recent past (within a number of days equal to your Wisdom score), you can spend 1 additional minute for each owner to learn the same information about that creature."
+								"在你冥想時持握一個物體，你可以看見該物體前一個擁有者的影像。在冥想1分鐘之後，你理解到如何該擁有者是如何獲得和遺失這個物體，以及最近一件涉及該物體和擁有者的重大事件。若該物體在近期曾被另一個生物所擁有（等同於你睿知數值的天數內），你可以為每個擁有者額外各花費1分鐘以理解關於該生物的相同情報。"
 							]
 						}
 					]
@@ -2702,9 +2761,9 @@
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Area Reading",
+							"name": "區域讀見",
 							"entries": [
-								"As you meditate, you see visions of recent events in your immediate vicinity (a room, street, tunnel, clearing, or the like, up to a 50-foot cube), going back a number of days equal to your Wisdom score. For each minute you meditate, you learn about one significant event, beginning with the most recent. Significant events typically involve powerful emotions, such as battles and betrayals, marriages and murders, births and funerals. However, they might also include more mundane events that are nevertheless important in your current situation."
+								"在你冥想時，你看見在你當下周遭環境（一個房間、街道、隧道、空地、或最大50呎立方體空間的類似區域）所發生最近事件的影像，回到等同於你睿知數值的天數的過去。你每冥想一分鐘，你就能知曉一個重大的事件，從最近發生的事件開始。重大事件通常涉及了強烈的情緒，像是鬥爭和背叛、結婚與謀殺、誕生和葬禮等等。然而，它們也可能包括一些更加尋常但對你當下情況而言相當重要的事件。"
 							]
 						}
 					]
@@ -2712,7 +2771,8 @@
 			]
 		},
 		{
-			"name": "Life Domain",
+			"name": "生命領域",
+			"ENG_name": "Life Domain",
 			"source": "PHB",
 			"page": 60,
 			"srd": true,
@@ -2722,14 +2782,14 @@
 			"subclassSource": "PHB",
 			"level": 1,
 			"entries": [
-				"The Life domain focuses on the vibrant positive energy\u2014one of the fundamental forces of the universe\u2014that sustains all life. The gods of life promote vitality and health through healing the sick and wounded, caring for those in need, and driving away the forces of death and undeath. Almost any non-evil deity can claim influence over this domain, particularly agricultural deities (such as Chauntea, Arawai, and Demeter), sun gods (such as Lathander, Pelor, and Re-Horakhty), gods of healing or endurance (such as Ilmater, Mishakal, Apollo, and Diancecht), and gods of home and community (such as Hestia, Hathor, and Boldrei).",
-				"At each indicated cleric level, you add the listed spells to your spells prepared.",
+				"生命領域專注於精力充沛的正能量\u2014構成宇宙的其中一種基本力量\u2014維持所有生命的延續。掌管生命領域的神祇傳播活力與健康，藉由醫治疾病與創傷、照料需要的人們、並驅趕死亡和亡靈的勢力。幾乎所有非邪惡的神祇都可以宣稱其在這個領域中具有影響力，特別是農業神（例如{@deity 裳禔亞|faerûnian|scag}、{@deity 阿拉瓦依|eberron}、和{@deity 狄蜜特|greek}）、太陽神（例如{@deity 洛山達|faerûnian|scag}、{@deity 培羅|greyhawk}、和{@deity 拉．哈拉胡提|egyptian}）、醫治或受難之神（例如{@deity 伊爾瑪特|faerûnian|scag}、{@deity 米莎凱|dragonlance}、{@deity 阿波羅|greek}、和{@deity 迪安斯徹特|celtic}）、以及家庭和社會之神（例如{@deity 赫斯緹雅|greek}、{@deity 哈托爾|egyptian}、和{@deity 博得雷|eberron}）。",
+				"在每個下記的牧師等級，將列出的法術加入你的準備法術中。",
 				{
 					"type": "table",
-					"caption": "Life Domain Spells",
+					"caption": "生命領域法術",
 					"colLabels": [
-						"Cleric Level",
-						"Spells"
+						"牧師等級",
+						"法術"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -2738,38 +2798,39 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell bless}, {@spell cure wounds}"
+							"{@spell 祝福術}, {@spell 治療傷勢}"
 						],
 						[
 							"3rd",
-							"{@spell lesser restoration}, {@spell spiritual weapon}"
+							"{@spell 次級復原術}, {@spell 靈體武器}"
 						],
 						[
 							"5th",
-							"{@spell beacon of hope}, {@spell revivify}"
+							"{@spell 希望信標}, {@spell 回生術}"
 						],
 						[
 							"7th",
-							"{@spell death ward}, {@spell guardian of faith}"
+							"{@spell 防死護咒}, {@spell 虔誠守衛}"
 						],
 						[
 							"9th",
-							"{@spell mass cure wounds}, {@spell raise dead}"
+							"{@spell 群體治療傷勢} {@spell 喚醒死者}"
 						]
 					]
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Proficiency|Cleric||Life||1"
+					"subclassFeature": "額外熟練|Cleric||Life||1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Disciple of Life|Cleric||Life||1"
+					"subclassFeature": "生命門徒|Cleric||Life||1"
 				}
 			]
 		},
 		{
-			"name": "Bonus Proficiency",
+			"name": "額外熟練",
+			"ENG_name": "Bonus Proficiency",
 			"source": "PHB",
 			"page": 60,
 			"srd": true,
@@ -2780,11 +2841,12 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"When you choose this domain at 1st level, you gain proficiency with heavy armor."
+				"當你在1級時選擇此領域，你獲得重甲的熟練。"
 			]
 		},
 		{
-			"name": "Disciple of Life",
+			"name": "生命門徒",
+			"ENG_name": "Disciple of Life",
 			"source": "PHB",
 			"page": 60,
 			"srd": true,
@@ -2795,11 +2857,12 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"Also starting at 1st level, your healing spells are more effective. Whenever you use a spell of 1st level or higher to restore hit points to a creature, the creature regains additional hit points equal to 2 + the spell's level."
+				"同樣從1級開始，你的治療法術變得更加有效。每當你使用一個1環或更高環的法術以回復一個生物的生命值時，該生物額外回復等同於2 + 該法術環階的生命值。"
 			]
 		},
 		{
-			"name": "Channel Divinity: Preserve Life",
+			"name": "引導神力：維繫生命",
+			"ENG_name": "Channel Divinity: Preserve Life",
 			"source": "PHB",
 			"page": 60,
 			"srd": true,
@@ -2810,12 +2873,13 @@
 			"level": 2,
 			"header": 2,
 			"entries": [
-				"Starting at 2nd level, you can use your Channel Divinity to heal the badly injured.",
-				"As an action, you present your holy symbol and evoke healing energy that can restore a number of hit points equal to five times your cleric level. Choose any creatures within 30 feet of you, and divide those hit points among them. This feature can restore a creature to no more than half of its hit point maximum. You can't use this feature on an undead or a construct."
+				"從2級開始，你可以使用你的引導神力以治療嚴重的傷勢。",
+				"以一個動作，你展現你的聖徽並喚起可以回復等同於你牧師等級五倍生命值的治療能量。選擇任何距離你30呎內的生物，並將這些生命值分配給它們回復。這個能力無法讓一個生物回復到超過它生命值最大值的一半。你不能對不死生物或構裝體使用此能力。"
 			]
 		},
 		{
-			"name": "Blessed Healer",
+			"name": "祝聖醫者",
+			"ENG_name": "Blessed Healer",
 			"source": "PHB",
 			"page": 60,
 			"srd": true,
@@ -2826,7 +2890,7 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Beginning at 6th level, the healing spells you cast on others heal you as well. When you cast a spell of 1st level or higher that restores hit points to a creature other than you, you regain hit points equal to 2 + the spell's level."
+				"從6級開始，你施放於他人的治療法術也將治療你自己。當你施放一個1環或更高環的法術以回復除了你以外一個生物的生命值時，你將回復等同於2 + 該法術環階的生命值。"
 			]
 		},
 		{
@@ -2862,7 +2926,8 @@
 			]
 		},
 		{
-			"name": "Divine Strike",
+			"name": "神聖打擊",
+			"ENG_name": "Divine Strike",
 			"source": "PHB",
 			"page": 60,
 			"srd": true,
@@ -2873,11 +2938,12 @@
 			"level": 8,
 			"header": 2,
 			"entries": [
-				"At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra {@damage 1d8} radiant damage to the target. When you reach 14th level, the extra damage increases to {@dice 2d8}."
+				"在8級時，你獲得將神聖能量注入你武器打擊的能力。在你的每個回合一次，當你使用一次武器攻擊命中一個生物時，你可以使該攻擊對目標造成額外的{@damage 1d8}光耀傷害。當你升至14級時，這個額外傷害增加至{@dice 2d8}。"
 			]
 		},
 		{
-			"name": "Supreme Healing",
+			"name": "極效治療",
+			"ENG_name": "Supreme Healing",
 			"source": "PHB",
 			"page": 60,
 			"srd": true,
@@ -2888,11 +2954,12 @@
 			"level": 17,
 			"header": 2,
 			"entries": [
-				"Starting at 17th level, when you would normally roll one or more dice to restore hit points with a spell, you instead use the highest number possible for each die. For example, instead of restoring {@dice 2d6} hit points to a creature, you restore 12."
+				"從17級開始，當你需要骰一顆或以上的骰子以決定使用法術回復的生命值時，你改為使用每顆骰子的最大值。舉例來說，當你要回復一個生物{@dice 2d6}點生命值時，你改為直接回復它12點生命值。"
 			]
 		},
 		{
-			"name": "Light Domain",
+			"name": "光明領域",
+			"ENG_name": "Light Domain",
 			"source": "PHB",
 			"page": 60,
 			"className": "Cleric",
@@ -2901,14 +2968,14 @@
 			"subclassSource": "PHB",
 			"level": 1,
 			"entries": [
-				"Gods of light\u2014including Helm, Lathander, Pholtus, Branchala, the Silver Flame, Belenus, Apollo, and Re-Horakhty\u2014promote the ideals of rebirth and renewal, truth, vigilance, and beauty, often using the symbol of the sun. Some of these gods are portrayed as the sun itself or as a charioteer who guides the sun across the sky. Others are tireless sentinels whose eyes pierce every shadow and see through every deception. Some are deities of beauty and artistry, who teach that art is a vehicle for the soul's improvement. Clerics of a god of light are enlightened souls infused with radiance and the power of their gods' discerning vision, charged with chasing away lies and burning away darkness.",
-				"At each indicated cleric level, you add the listed spells to your spells prepared.",
+				"光明之神\u2014包括{@deity 海姆}、{@deity 洛山達}、{@deity 佛塔斯|greyhawk}、{@deity 布蘭查拉|dragonlance}、{@deity 銀焰|eberron}、{@deity 巴萊納斯|celtic}、{@deity 阿波羅|greek}、和{@deity 拉．哈拉胡提|egyptian}\u2014提倡重生和更新、真實、警醒、和美的理想，且經常使用太陽做為徽記。其中一些神祗被視為太陽本身，或做為引導太陽橫跨天際的駕馭者。其他人則是不知疲倦的哨衛，祂們的眼睛能穿透每一片陰影，並看破每一個謊言。祂們有些是掌管美麗和藝術的神祇，教導人們把藝術做為提升靈魂層次的工具。光明之神的牧師有著被啟蒙的靈魂，被他們神明的光輝和洞察力給充滿，負責驅趕謊言並燃盡黑暗。",
+				"在每個下記的牧師等級，將列出的法術加入你的準備法術中。",
 				{
 					"type": "table",
-					"caption": "Light Domain Spells",
+					"caption": "光明領域法術",
 					"colLabels": [
-						"Cleric Level",
-						"Spells"
+						"牧師等級",
+						"法術"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -2917,38 +2984,39 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell burning hands}, {@spell faerie fire}"
+							"{@spell 燃燒之手}, {@spell 妖火術}"
 						],
 						[
 							"3rd",
-							"{@spell flaming sphere}, {@spell scorching ray}"
+							"{@spell 熾焰法球}, {@spell 灼熱射線}"
 						],
 						[
 							"5th",
-							"{@spell daylight}, {@spell fireball}"
+							"{@spell 晝明術}, {@spell 火球術}"
 						],
 						[
 							"7th",
-							"{@spell guardian of faith}, {@spell wall of fire}"
+							"{@spell 虔誠守衛}, {@spell 火牆術}"
 						],
 						[
 							"9th",
-							"{@spell flame strike}, {@spell scrying}"
+							"{@spell 焰擊術}, {@spell 探知}"
 						]
 					]
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Cantrip|Cleric||Light||1"
+					"subclassFeature": "額外戲法|Cleric||Light||1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Warding Flare|Cleric||Light||1"
+					"subclassFeature": "閃耀防護|Cleric||Light||1"
 				}
 			]
 		},
 		{
-			"name": "Bonus Cantrip",
+			"name": "額外戲法",
+			"ENG_name": "Bonus Cantrip",
 			"source": "PHB",
 			"page": 60,
 			"className": "Cleric",
@@ -2958,11 +3026,12 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"When you choose this domain at 1st level, you gain the {@spell light} cantrip if you don't already know it."
+				"當你在1級時選擇此領域，若你尚未學會{@spell 光亮術}戲法，則你學會它。"
 			]
 		},
 		{
-			"name": "Warding Flare",
+			"name": "閃耀防護",
+			"ENG_name": "Warding Flare",
 			"source": "PHB",
 			"page": 60,
 			"className": "Cleric",
@@ -2972,12 +3041,13 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"Also at 1st level, you can interpose divine light between yourself and an attacking enemy. When you are attacked by a creature within 30 feet of you that you can see, you can use your reaction to impose disadvantage on the attack roll, causing light to flare before the attacker before it hits or misses. An attacker that can't be {@condition blinded} is immune to this feature.",
-				"You can use this feature a number of times equal to your Wisdom modifier (a minimum of once). You regain all expended uses when you finish a long rest."
+				"同樣在1級時，你可以使神聖光芒介入你與進行攻擊的敵人之間。當你被一個距離你30呎內且你能看見的生物攻擊時，你可以在它命中或失手之前使用你的反應讓強光在攻擊者面前閃耀，以使該次攻擊檢定承受劣勢。一個不會陷入{@condition 目盲}狀態的攻擊者將免疫於此能力。",
+				"你可以使用這個能力的次數等同於你的睿知調整值（最少一次）。你在完成一次長休後恢復所有你花費掉的次數。"
 			]
 		},
 		{
-			"name": "Channel Divinity: Radiance of the Dawn",
+			"name": "引導神力：黎明曙光",
+			"ENG_name": "Channel Divinity: Radiance of the Dawn",
 			"source": "PHB",
 			"page": 60,
 			"className": "Cleric",
@@ -2987,12 +3057,13 @@
 			"level": 2,
 			"header": 2,
 			"entries": [
-				"Starting at 2nd level, you can use your Channel Divinity to harness sunlight, banishing darkness and dealing radiant damage to your foes.",
-				"As an action, you present your holy symbol, and any magical darkness within 30 feet of you is dispelled. Additionally, each hostile creature within 30 feet of you must make a Constitution saving throw. A creature takes radiant damage equal to {@dice 2d10} + your cleric level on a failed saving throw, and half as much damage on a successful one. A creature that has total cover from you is not affected."
+				"從2級開始，你可以使用你的引導神力以控制陽光，驅散黑暗，並對你的敵人們造成光耀傷害。",
+				"以一個動作，你展現你的聖徽，且任何距離你30呎內的魔法黑暗將被解消。此外，每個距離你30呎內的敵對生物必須進行一次體質豁免。豁免失敗的生物將受到等同於{@dice 2d10}+你的牧師等級的光耀傷害，豁免成功則只受到一半的傷害。一個對你有全掩護的生物不會受到影響。"
 			]
 		},
 		{
-			"name": "Improved Flare",
+			"name": "強化閃耀",
+			"ENG_name": "Improved Flare",
 			"source": "PHB",
 			"page": 60,
 			"className": "Cleric",
@@ -3002,7 +3073,7 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Starting at 6th level, you can also use your Warding Flare feature when a creature that you can see within 30 feet of you attacks a creature other than you."
+				"從6級開始，你也可以在一個距離你30呎內且你能看見的生物攻擊除了你以外的目標時使用你的閃耀防護能力。"
 			]
 		},
 		{
@@ -3038,7 +3109,8 @@
 			]
 		},
 		{
-			"name": "Potent Spellcasting",
+			"name": "強力施法",
+			"ENG_name": "Potent Spellcasting",
 			"source": "PHB",
 			"page": 60,
 			"className": "Cleric",
@@ -3048,11 +3120,12 @@
 			"level": 8,
 			"header": 2,
 			"entries": [
-				"Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
+				"從8級開始，你將你的睿知調整值加入任何你使用牧師戲法所造成的傷害中。"
 			]
 		},
 		{
-			"name": "Corona of Light",
+			"name": "日冕光輝",
+			"ENG_name": "Corona of Light",
 			"source": "PHB",
 			"page": 60,
 			"className": "Cleric",
@@ -3062,11 +3135,12 @@
 			"level": 17,
 			"header": 2,
 			"entries": [
-				"Starting at 17th level, you can use your action to activate an aura of sunlight that lasts for 1 minute or until you dismiss it using another action. You emit bright light in a 60-foot radius and dim light 30 feet beyond that. Your enemies in the bright light have disadvantage on saving throws against any spell that deals fire or radiant damage."
+				"從17級開始，你可以使用你的動作以啟動一道太陽靈光，持續1分鐘或直到你使用一個動作解消它。你將散發出60呎半徑的明亮光照和再延伸30呎的微光光照。你的敵人若處於此明亮光照內，則它在對抗任何法術所造成的火焰或光耀傷害時所進行的豁免檢定中具有劣勢。"
 			]
 		},
 		{
-			"name": "Nature Domain",
+			"name": "自然領域",
+			"ENG_name": "Nature Domain",
 			"source": "PHB",
 			"page": 61,
 			"className": "Cleric",
@@ -3075,14 +3149,14 @@
 			"subclassSource": "PHB",
 			"level": 1,
 			"entries": [
-				"Gods of nature are as varied as the natural world itself, from inscrutable gods of the deep forests (such as Silvanus, Obad-Hai, Chislev, Balinor, and Pan) to friendly deities associated with particular springs and groves (such as Eldath). Druids revere nature as a whole and might serve one of these deities, practicing mysterious rites and reciting all-but-forgotten prayers in their own secret tongue. But many of these gods have clerics as well, champions who take a more active role in advancing the interests of a particular nature god. These clerics might hunt the evil monstrosities that despoil the woodlands, bless the harvest of the faithful, or wither the crops of those who anger their gods.",
-				"At each indicated cleric level, you add the listed spells to your spells prepared.",
+				"自然之神就如同自然界本身一樣變化多端，從密林中那神祕莫測的諸神（像是{@deity 西凡那斯}、{@deity 歐拜．亥|greyhawk}、{@deity 奇思洛夫|dragonlance}、{@deity 巴力諾|eberron}、和{@deity 潘|greek}），到與特定溪水和樹林關聯的友善神明（像是{@deity 埃達絲}）。崇敬著整個大自然本身的德魯伊也可能會侍奉於其中一個神祇，並用他們獨特的秘密語言實踐神秘儀式、背誦那些早已被遺忘的禱詞。許多這些神祇同樣擁有自己的牧師，這些勇士會在增進特定自然之神的利益上扮演更加積極的角色。這些牧師可能會前去狩獵破壞林地的邪惡怪物、祝福忠實信徒們的收穫、或使那些惹怒他們神明的莊稼受詛咒枯萎。",
+				"在每個下記的牧師等級，將列出的法術加入你的準備法術中。",
 				{
 					"type": "table",
-					"caption": "Nature Domain Spells",
+					"caption": "自然領域法術",
 					"colLabels": [
-						"Cleric Level",
-						"Spells"
+						"牧師等級",
+						"法術"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -3091,38 +3165,39 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell animal friendship}, {@spell speak with animals}"
+							"{@spell 化獸為友}, {@spell 動物交談術}"
 						],
 						[
 							"3rd",
-							"{@spell barkskin}, {@spell spike growth}"
+							"{@spell 樹膚術}, {@spell 荊棘叢生}"
 						],
 						[
 							"5th",
-							"{@spell plant growth}, {@spell wind wall}"
+							"{@spell 植物滋長}, {@spell 風牆術}"
 						],
 						[
 							"7th",
-							"{@spell dominate beast}, {@spell grasping vine}"
+							"{@spell 支配野獸}, {@spell 抓攫藤蔓}"
 						],
 						[
 							"9th",
-							"{@spell insect plague}, {@spell tree stride}"
+							"{@spell 疫病蟲群}, {@spell 樹躍術}"
 						]
 					]
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Acolyte of Nature|Cleric||Nature||1"
+					"subclassFeature": "自然侍祭|Cleric||Nature||1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Proficiency|Cleric||Nature||1"
+					"subclassFeature": "額外熟練|Cleric||Nature||1"
 				}
 			]
 		},
 		{
-			"name": "Acolyte of Nature",
+			"name": "自然侍祭",
+			"ENG_name": "Acolyte of Nature",
 			"source": "PHB",
 			"page": 61,
 			"className": "Cleric",
@@ -3132,11 +3207,12 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"At 1st level, you learn one druid cantrip of your choice. You also gain proficiency in one of the following skills of your choice: {@skill Animal Handling}, {@skill Nature}, or {@skill Survival}."
+				"在1級時，你學會一個自選的德魯伊戲法。你同時選擇並獲得下列其中一個技能的熟練：{@skill 動物馴養}、{@skill 自然}、或{@skill 求生}。"
 			]
 		},
 		{
-			"name": "Bonus Proficiency",
+			"name": "額外熟練",
+			"ENG_name": "Bonus Proficiency",
 			"source": "PHB",
 			"page": 61,
 			"className": "Cleric",
@@ -3146,11 +3222,12 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"Also at 1st level, you gain proficiency with heavy armor."
+				"同樣在1級時，你獲得重甲的熟練。"
 			]
 		},
 		{
-			"name": "Channel Divinity: Charm Animals and Plants",
+			"name": "引導神力：魅惑動植物",
+			"ENG_name": "Channel Divinity: Charm Animals and Plants",
 			"source": "PHB",
 			"page": 61,
 			"className": "Cleric",
@@ -3160,12 +3237,13 @@
 			"level": 2,
 			"header": 2,
 			"entries": [
-				"Starting at 2nd level, you can use your Channel Divinity to charm animals and plants.",
-				"As an action, you present your holy symbol and invoke the name of your deity. Each beast or plant creature that can see you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is {@condition charmed} by you for 1 minute or until it takes damage. While it is {@condition charmed} by you, it is friendly to you and other creatures you designate."
+				"從2級開始，你可以使用你的引導神力以魅惑動物和植物。",
+				"以一個動作，你展現你的聖徽並呼喚你神明的名諱。每個距離你30呎內且能看見你的野獸和植物生物必須進行一次睿知豁免。若該生物豁免失敗，則它將被你{@condition 魅惑}持續1分鐘或直到受到傷害。當被你{@condition 魅惑}時，它將對你和你所指定的其他生物友善。"
 			]
 		},
 		{
-			"name": "Dampen Elements",
+			"name": "抑制元素",
+			"ENG_name": "Dampen Elements",
 			"source": "PHB",
 			"page": 61,
 			"className": "Cleric",
@@ -3175,7 +3253,7 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Starting at 6th level, when you or a creature within 30 feet of you takes acid, cold, fire, lightning, or thunder damage, you can use your reaction to grant resistance to the creature against that instance of the damage."
+				"從6級開始，當你或一個距離你30呎內的生物受到酸蝕、寒冰、火焰、閃電、或雷鳴傷害時，你可以使用你的反應以讓該生物在那瞬間獲得對該傷害的抗性。"
 			]
 		},
 		{
@@ -3211,7 +3289,8 @@
 			]
 		},
 		{
-			"name": "Divine Strike",
+			"name": "神聖打擊",
+			"ENG_name": "Divine Strike",
 			"source": "PHB",
 			"page": 61,
 			"className": "Cleric",
@@ -3221,11 +3300,12 @@
 			"level": 8,
 			"header": 2,
 			"entries": [
-				"At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra {@damage 1d8} cold, fire, or lightning damage (your choice) to the target. When you reach 14th level, the extra damage increases to {@dice 2d8}."
+				"在8級時，你獲得將神聖能量注入你武器打擊的能力。在你的每個回合一次，當你使用一次武器攻擊命中一個生物時，你可以使該攻擊對目標造成額外的{@damage 1d8}點寒冰、火焰、或閃電傷害（由你選擇）。當你升至14級時，這個額外傷害增加至{@dice 2d8}。"
 			]
 		},
 		{
-			"name": "Master of Nature",
+			"name": "自然之主",
+			"ENG_name": "Master of Nature",
 			"source": "PHB",
 			"page": 61,
 			"className": "Cleric",
@@ -3235,11 +3315,12 @@
 			"level": 17,
 			"header": 2,
 			"entries": [
-				"At 17th level, you gain the ability to command animals and plant creatures. While creatures are {@condition charmed} by your Charm Animals and Plants feature, you can take a bonus action on your turn to verbally command what each of those creatures will do on its next turn."
+				"在17級時，你獲得命令動物和植物生物的能力。當一個生物被你透過魅惑動植物能力給{@condition 魅惑}時，你可以在你的回合採取一個附贈動作，以口頭命令每個這些生物在它們各自的下個回合中將要做什麼。"
 			]
 		},
 		{
-			"name": "Tempest Domain",
+			"name": "暴風領域",
+			"ENG_name": "Tempest Domain",
 			"source": "PHB",
 			"page": 62,
 			"className": "Cleric",
@@ -3248,14 +3329,14 @@
 			"subclassSource": "PHB",
 			"level": 1,
 			"entries": [
-				"Gods whose portfolios include the Tempest domain\u2014including Talos, Umberlee, Kord, Zeboim, the Devourer, Zeus, and Thor\u2014govern storms, sea, and sky. They include gods of lightning and thunder, gods of earthquakes, some fire gods, and certain gods of violence, physical strength, and courage. In some pantheons, a god of this domain rules over other deities and is known for swift justice delivered by thunderbolts. In the pantheons of seafaring people, gods of this domain are ocean deities and the patrons of sailors. Tempest gods send their clerics to inspire fear in the common folk, either to keep those folk on the path of righteousness or to encourage them to offer sacrifices of propitiation to ward off divine wrath.",
-				"At each indicated cleric level, you add the listed spells to your spells prepared.",
+				"神職囊括了暴風領域的神祗\u2014包括{@deity 塔洛斯}、{@deity 安博里}、{@deity 寇德|greyhawk}、{@deity 賽波音|dragonlance}、{@deity 吞噬|eberron}、{@deity 宙斯|greek}、和{@deity 索爾|norse}\u2014掌管著風暴、海洋、和天空。祂們之中包括了閃電和雷霆之神、地震之神、一些火神、和某些暴力、身體力量、和勇氣之神。在某些神系中，這個領域的神祇統治著其他諸神，並以透過閃電執行的迅捷正義聞名。在航海民族的神系中，這個領域的諸神則會是海洋神祇和水手們的庇護者。暴風之神往往差遣祂們的牧師在尋常民眾中引發畏懼，從而確保這些人持守於正直的道路上，或鼓勵他們獻上贖罪的祭品以免觸犯神怒。",
+				"在每個下記的牧師等級，將列出的法術加入你的準備法術中。",
 				{
 					"type": "table",
-					"caption": "Tempest Domain Spells",
+					"caption": "暴風領域法術",
 					"colLabels": [
-						"Cleric Level",
-						"Spells"
+						"牧師等級",
+						"法術"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -3264,38 +3345,39 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell fog cloud}, {@spell thunderwave}"
+							"{@spell 雲霧術}, {@spell 雷鳴波}"
 						],
 						[
 							"3rd",
-							"{@spell gust of wind}, {@spell shatter}"
+							"{@spell 造風術}, {@spell 粉碎音波}"
 						],
 						[
 							"5th",
-							"{@spell call lightning}, {@spell sleet storm}"
+							"{@spell 召雷術}, {@spell 雪雨暴}"
 						],
 						[
 							"7th",
-							"{@spell control water}, {@spell ice storm}"
+							"{@spell 操控水體}, {@spell 冰風暴}"
 						],
 						[
 							"9th",
-							"{@spell destructive wave}, {@spell insect plague}"
+							"{@spell 湮滅波}, {@spell 疫病蟲群}"
 						]
 					]
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Proficiencies|Cleric||Tempest||1"
+					"subclassFeature": "額外熟練|Cleric||Tempest||1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Wrath of the Storm|Cleric||Tempest||1"
+					"subclassFeature": "風暴狂怒|Cleric||Tempest||1"
 				}
 			]
 		},
 		{
-			"name": "Bonus Proficiencies",
+			"name": "額外熟練",
+			"ENG_name": "Bonus Proficiency",
 			"source": "PHB",
 			"page": 62,
 			"className": "Cleric",
@@ -3305,11 +3387,12 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"At 1st level, you gain proficiency with martial weapons and heavy armor."
+				"在1級時，你獲得軍用武器和重甲的熟練。"
 			]
 		},
 		{
-			"name": "Wrath of the Storm",
+			"name": "風暴狂怒",
+			"ENG_name": "Wrath of the Storm",
 			"source": "PHB",
 			"page": 62,
 			"className": "Cleric",
@@ -3319,12 +3402,13 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"Also at 1st level, you can thunderously rebuke attackers. When a creature within 5 feet of you that you can see hits you with an attack, you can use your reaction to cause the creature to make a Dexterity saving throw. The creature takes {@damage 2d8} lightning or thunder damage (your choice) on a failed saving throw, and half as much damage on a successful one.",
-				"You can use this feature a number of times equal to your Wisdom modifier (a minimum of once). You regain all expended uses when you finish a long rest."
+				"同樣在1級時，你可以如雷鳴般斥退攻擊者。當一個距離你5呎內且你能看見的生物以一次攻擊命中你，你可以使用你的反應使該生物進行一次敏捷豁免。該生物若豁免失敗將受到{@dice 2d8}閃電或雷鳴傷害（由你選擇），豁免成功則只受到一半的傷害。",
+				"你可以使用這個能力的次數等同於你的睿知調整值（最少一次）。你在完成一次長休後恢復所有你花費掉的次數。"
 			]
 		},
 		{
-			"name": "Channel Divinity: Destructive Wrath",
+			"name": "引導神力：毀滅狂怒",
+			"ENG_name": "Channel Divinity: Destructive Wrath",
 			"source": "PHB",
 			"page": 62,
 			"className": "Cleric",
@@ -3334,12 +3418,13 @@
 			"level": 2,
 			"header": 2,
 			"entries": [
-				"Starting at 2nd level, you can use your Channel Divinity to wield the power of the storm with unchecked ferocity.",
-				"When you roll lightning or thunder damage, you can use your Channel Divinity to deal maximum damage, instead of rolling."
+				"從2級開始，你可以使用你的引導神力以施加不受控的兇猛暴風之力。",
+				"當你擲骰決定閃電或雷鳴傷害時，你可以使用你的引導神力，不擲骰而改為直接造成最大傷害。"
 			]
 		},
 		{
-			"name": "Thunderbolt Strike",
+			"name": "雷電猛擊",
+			"ENG_name": "Thunderbolt Strike",
 			"source": "PHB",
 			"page": 62,
 			"className": "Cleric",
@@ -3349,7 +3434,7 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"At 6th level, when you deal lightning damage to a Large or smaller creature, you can also push it up to 10 feet away from you."
+				"在6級時，當你對一個體型為大型或更小的生物造成閃電傷害時，你也可以將它推離你最多10呎距離。"
 			]
 		},
 		{
@@ -3385,7 +3470,8 @@
 			]
 		},
 		{
-			"name": "Divine Strike",
+			"name": "神聖打擊",
+			"ENG_name": "Divine Strike",
 			"source": "PHB",
 			"page": 62,
 			"className": "Cleric",
@@ -3395,11 +3481,12 @@
 			"level": 8,
 			"header": 2,
 			"entries": [
-				"At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra {@damage 1d8} thunder damage to the target. When you reach 14th level, the extra damage increases to {@dice 2d8}."
+				"在8級時，你獲得將神聖能量注入你武器打擊的能力。在你的每個回合一次，當你使用一次武器攻擊命中一個生物時，你可以使該攻擊對目標造成額外的{@damage 1d8}雷鳴傷害。當你升至14級時，這個額外傷害增加至{@dice 2d8}。"
 			]
 		},
 		{
-			"name": "Stormborn",
+			"name": "風暴之子",
+			"ENG_name": "Stormborn",
 			"source": "PHB",
 			"page": 62,
 			"className": "Cleric",
@@ -3409,11 +3496,12 @@
 			"level": 17,
 			"header": 2,
 			"entries": [
-				"At 17th level, you have a flying speed equal to your current walking speed whenever you are not underground or indoors."
+				"在17級時，每當你不在地下或室內時，你獲得等同於你當下步行速度的飛行速度。"
 			]
 		},
 		{
-			"name": "Trickery Domain",
+			"name": "詭術領域",
+			"ENG_name": "Trickery Domain",
 			"source": "PHB",
 			"page": 62,
 			"className": "Cleric",
@@ -3422,14 +3510,14 @@
 			"subclassSource": "PHB",
 			"level": 1,
 			"entries": [
-				"Gods of trickery\u2014such as Tymora, Beshaba, Olidammara, the Traveler, Garl Glittergold, and Loki\u2014are mischief-makers and instigators who stand as a constant challenge to the accepted order among both gods and mortals. They're patrons of thieves, scoundrels, gamblers, rebels, and liberators. Their clerics are a disruptive force in the world, puncturing pride, mocking tyrants, stealing from the rich, freeing captives, and flouting hollow traditions. They prefer subterfuge, pranks, deception, and theft rather than direct confrontation.",
-				"At each indicated cleric level, you add the listed spells to your spells prepared.",
+				"詭術之神\u2014像是{@deity 泰摩拉}、{@deity 本莎芭}、{@deity 渥利達馬拉|greyhawk}、{@deity 旅者|eberron}、{@deity 加爾．閃金|nonhuman}、和{@deity 洛基|norse}\u2014都是惡作劇高手，也是不斷挑戰凡人和神明共有秩序的煽動者。祂們是竊賊、惡棍、賭徒、叛亂者、和解放者的守護神。祂們的牧師是顛覆世界的力量，他們打級驕傲者的自尊、嘲弄暴君、竊取富者、釋放俘虜，並蔑視空洞的傳統。他們偏好花言巧語、惡作劇、欺瞞、和竊盜更勝於正面對抗。",
+				"在每個下記的牧師等級，將列出的法術加入你的準備法術中。",
 				{
 					"type": "table",
-					"caption": "Trickery Domain Spells",
+					"caption": "詭術領域法術",
 					"colLabels": [
-						"Cleric Level",
-						"Spells"
+						"牧師等級",
+						"法術"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -3438,34 +3526,35 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell charm person}, {@spell disguise self}"
+							"{@spell 魅惑人類}, {@spell 易容術}"
 						],
 						[
 							"3rd",
-							"{@spell mirror image}, {@spell pass without trace}"
+							"{@spell 鏡影術}, {@spell 行蹤無跡}"
 						],
 						[
 							"5th",
-							"{@spell blink}, {@spell dispel magic}"
+							"{@spell 閃現術}, {@spell 解除魔法}"
 						],
 						[
 							"7th",
-							"{@spell dimension door}, {@spell polymorph}"
+							"{@spell 次元門}, {@spell 變形術}"
 						],
 						[
 							"9th",
-							"{@spell dominate person}, {@spell modify memory}"
+							"{@spell 支配人類}, {@spell 修改記憶}"
 						]
 					]
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Blessing of the Trickster|Cleric||Trickery||1"
+					"subclassFeature": "詭術祝福|Cleric||Trickery||1"
 				}
 			]
 		},
 		{
-			"name": "Blessing of the Trickster",
+			"name": "詭術祝福",
+			"ENG_name": "Blessing of the Trickster",
 			"source": "PHB",
 			"page": 62,
 			"className": "Cleric",
@@ -3475,11 +3564,12 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"Starting when you choose this domain at 1st level, you can use your action to touch a willing creature other than yourself to give it advantage on Dexterity ({@skill Stealth}) checks. This blessing lasts for 1 hour or until you use this feature again."
+				"從你在1級時選擇此領域起，你可以使用你的動作觸碰一個除了你以外的自願生物，讓它在敏捷（{@skill 隱匿}）檢定中獲得優勢。這個祝福會持續1小時或直到你再次使用此能力。"
 			]
 		},
 		{
-			"name": "Channel Divinity: Invoke Duplicity",
+			"name": "引導神力：召喚假體",
+			"ENG_name": "Channel Divinity: Invoke Duplicity",
 			"source": "PHB",
 			"page": 62,
 			"className": "Cleric",
@@ -3489,13 +3579,14 @@
 			"level": 2,
 			"header": 2,
 			"entries": [
-				"Starting at 2nd level, you can use your Channel Divinity to create an illusory duplicate of yourself.",
-				"As an action, you create a perfect illusion of yourself that lasts for 1 minute, or until you lose your concentration (as if you were concentrating on a spell). The illusion appears in an unoccupied space that you can see within 30 feet of you. As a bonus action on your turn, you can move the illusion up to 30 feet to a space you can see, but it must remain within 120 feet of you.",
-				"For the duration, you can cast spells as though you were in the illusion's space, but you must use your own senses. Additionally, when both you and your illusion are within 5 feet of a creature that can see the illusion, you have advantage on attack rolls against that creature, given how distracting the illusion is to the target."
+				"從2級開始，你可以使用你的引導神力以創造一個你自己的幻象假體。",
+				"以一個動作，你創造一個你自己的完美幻象，持續1分鐘，或直到你失去你的專注（就如同你專注於法術一樣）。這個幻象會出現在一個距離你30呎內你所能看見的未被佔據空間。在你的回合以一個附贈動作，你可以使幻象移動最多30呎到一處你所能看見的空間，但它必須維持在距離你120呎內的位置。",
+				"在持續期間，你可以如同你處於幻象的位置來施放法術，但你必須使用你自己的感官。此外，當你和你的幻象都位於一個可以看見幻象的生物5呎範圍內，由於幻象對目標所造成的干擾，你在對該生物進行的攻擊檢定中具有優勢。"
 			]
 		},
 		{
-			"name": "Channel Divinity: Cloak of Shadows",
+			"name": "引導神力：陰影斗篷",
+			"ENG_name": "Channel Divinity: Cloak of Shadows",
 			"source": "PHB",
 			"page": 62,
 			"className": "Cleric",
@@ -3505,8 +3596,8 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Starting at 6th level, you can use your Channel Divinity to vanish.",
-				"As an action, you become {@condition invisible} until the end of your next turn. You become visible if you attack or cast a spell."
+				"從6級開始，你可以使用你的引導神力以憑空消失。",
+				"以一個動作，你將變得{@condition 隱形}直到你的下個回合結束。若你攻擊或施放法術，你將變得可見。"
 			]
 		},
 		{
@@ -3542,7 +3633,8 @@
 			]
 		},
 		{
-			"name": "Divine Strike",
+			"name": "神聖打擊",
+			"ENG_name": "Divine Strike",
 			"source": "PHB",
 			"page": 62,
 			"className": "Cleric",
@@ -3552,11 +3644,12 @@
 			"level": 8,
 			"header": 2,
 			"entries": [
-				"At 8th level, you gain the ability to infuse your weapon strikes with poison\u2014a gift from your deity. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra {@damage 1d8} poison damage to the target. When you reach 14th level, the extra damage increases to {@dice 2d8}."
+				"在8級時，你獲得將毒素\u2014一個來自你神祇的贈禮\u2014注入你武器打擊的能力。在你的每個回合一次，當你使用一次武器攻擊命中一個生物時，你可以使該攻擊對目標造成額外的{@dice 1d8}毒素傷害。當你升至14級時，這個額外傷害增加至{@dice 2d8}。"
 			]
 		},
 		{
-			"name": "Improved Duplicity",
+			"name": "強化假體",
+			"ENG_name": "Improved Duplicity",
 			"source": "PHB",
 			"page": 62,
 			"className": "Cleric",
@@ -3566,11 +3659,12 @@
 			"level": 17,
 			"header": 2,
 			"entries": [
-				"At 17th level, you can create up to four duplicates of yourself, instead of one, when you use Invoke Duplicity. As a bonus action on your turn, you can move any number of them up to 30 feet, to a maximum range of 120 feet."
+				"在17級時，當你使用召喚假體時，你可以創造出最多四個你自己的幻象假體，而非一個。在你的回合以一個附贈動作，你可以讓任意數量的假體移動最多30呎距離，到最遠120呎的範圍內。"
 			]
 		},
 		{
-			"name": "War Domain",
+			"name": "戰爭領域",
+			"ENG_name": "War Domain",
 			"source": "PHB",
 			"page": 63,
 			"className": "Cleric",
@@ -3579,14 +3673,14 @@
 			"subclassSource": "PHB",
 			"level": 1,
 			"entries": [
-				"War has many manifestations. It can make heroes of ordinary people. It can be desperate and horrific, with acts of cruelty and cowardice eclipsing instances of excellence and courage. In either case, the gods of war watch over warriors and reward them for their great deeds. The clerics of such gods excel in battle, inspiring others to fight the good fight or offering acts of violence as prayers. Gods of war include champions of honor and chivalry (such as Torm, Heironeous, and Kiri-Jolith) as well as gods of destruction and pillage (such as Erythnul, the Fury, Gruumsh, and Ares) and gods of conquest and domination (such as Bane, Hextor, and Maglubiyet). Other war gods (such as Tempus, Nike, and Nuada) take a more neutral stance, promoting war in all its manifestations and supporting warriors in any circumstance.",
-				"At each indicated cleric level, add the listed spells to your spells prepared.",
+				"戰爭有很多表現形式。它可以使平凡人變成英雄。它也可以是絕望而可怕的，使殘酷而懦弱的行動遮蓋了勇氣和卓越的光輝。無論如何，戰爭之神都守望著戰士們，按他們的功績行賞。這些神的牧師善於戰鬥、激勵他人在戰鬥中打一場好仗、或獻上暴力行為做為祈禱。戰爭之神包括充滿榮譽和騎士精神的勇士（例如{@deity 扥姆}、{@deity 海若尼斯|dragonlance}、和{@deity 奇力．喬里思|dragonlance}），以及毀滅和掠奪之神（像是{@deity 厄瑞斯努|greyhawk}、{@deity 憤恨|greyhawk}、{@deity 格烏什|nonhuman}、{@deity 阿瑞斯|greek}），以及征服和統治之神（像是{@deity 班恩}、{@deity 海克斯托|greyhawk}、和{@deity 瑪格魯比耶|nonhuman}）。其他戰爭諸神（例如{@deity 坦帕斯}、{@deity 尼姬|greek}、和{@deity 努亞達|celtic}）則採取更中立的立場，推動各種表現形式的戰爭，並支援處於任何狀況下的戰士。",
+				"在每個下記的牧師等級，將列出的法術加入你的準備法術中。",
 				{
 					"type": "table",
-					"caption": "War Domain Spells",
+					"caption": "戰爭領域法術",
 					"colLabels": [
-						"Cleric Level",
-						"Spells"
+						"牧師等級",
+						"法術"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -3595,38 +3689,39 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell divine favor}, {@spell shield of faith}"
+							"{@spell 神恩術}, {@spell 虔誠護盾}"
 						],
 						[
 							"3rd",
-							"{@spell magic weapon}, {@spell spiritual weapon}"
+							"{@spell 魔化武器}, {@spell 靈體武器}"
 						],
 						[
 							"5th",
-							"{@spell crusader's mantle}, {@spell spirit guardians}"
+							"{@spell 十字軍斗篷}, {@spell 靈體守衛}"
 						],
 						[
 							"7th",
-							"{@spell freedom of movement}, {@spell stoneskin}"
+							"{@spell 行動自如術}, {@spell 石膚術}"
 						],
 						[
 							"9th",
-							"{@spell flame strike}, {@spell hold monster}"
+							"{@spell 焰擊術}, {@spell 怪物定身術}"
 						]
 					]
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Proficiencies|Cleric||War||1"
+					"subclassFeature": "額外熟練|Cleric||War||1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "War Priest|Cleric||War||1"
+					"subclassFeature": "戰爭祭司|Cleric||War||1"
 				}
 			]
 		},
 		{
-			"name": "Bonus Proficiencies",
+			"name": "額外熟練",
+			"ENG_name": "Bonus Proficiencies",
 			"source": "PHB",
 			"page": 63,
 			"className": "Cleric",
@@ -3636,11 +3731,12 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"At 1st level, you gain proficiency with martial weapons and heavy armor."
+				"當你在1級時選擇此領域，你獲得軍用武器和重甲的熟練。"
 			]
 		},
 		{
-			"name": "War Priest",
+			"name": "戰爭祭司",
+			"ENG_name": "War Priest",
 			"source": "PHB",
 			"page": 63,
 			"className": "Cleric",
@@ -3650,11 +3746,12 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"From 1st level, your god delivers bolts of inspiration to you while you are engaged in battle. When you use the {@action Attack} action, you can make one weapon attack as a bonus action. You can use this feature a number of times equal to your Wisdom modifier (a minimum of once). You regain all expended uses when you finish a long rest."
+				"從1級起，你的神在你投身於戰鬥時賦予你激勵。當你使用{@action 攻擊}動作時，你能夠以一個附贈動作進行一次武器攻擊。你可以使用此能力等同於你睿知調整值的次數（最少一次）。你在完成一次長休後恢復所有你花費掉的次數。"
 			]
 		},
 		{
-			"name": "Channel Divinity: Guided Strike",
+			"name": "引導神力：神導打擊",
+			"ENG_name": "Channel Divinity: Guided Strike",
 			"source": "PHB",
 			"page": 63,
 			"className": "Cleric",
@@ -3664,11 +3761,12 @@
 			"level": 2,
 			"header": 2,
 			"entries": [
-				"Starting at 2nd level, you can use your Channel Divinity to strike with supernatural accuracy. When you make an attack roll, you can use your Channel Divinity to gain a +10 bonus to the roll. You make this choice after you see the roll, but before the DM says whether the attack hits or misses."
+				"從2級開始，你可以使用你的引導神力以不可思議的準確度猛擊。當你進行一次攻擊檢定時，你可以使用你的引導神力以在該檢定中獲得+10的加值。你在看見擲骰結果之後，但DM說出攻擊是否命中之前決定是否使用此能力。"
 			]
 		},
 		{
-			"name": "Channel Divinity: War God's Blessing",
+			"name": "引導神力：戰神祝福",
+			"ENG_name": "Channel Divinity: War God's Blessing",
 			"source": "PHB",
 			"page": 63,
 			"className": "Cleric",
@@ -3678,7 +3776,7 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"At 6th level, when a creature within 30 feet of you makes an attack roll, you can use your reaction to grant that creature a +10 bonus to the roll, using your Channel Divinity. You make this choice after you see the roll, but before the DM says whether the attack hits or misses."
+				"在6級時，當一個距離你30呎內的生物進行一次攻擊檢定，你可以使用你的反應以使用你的引導神力，賦予該生物在該攻擊檢定中+10的加值。你在看見擲骰結果之後，但DM說出攻擊是否命中之前決定是否使用此能力。"
 			]
 		},
 		{
@@ -3714,7 +3812,8 @@
 			]
 		},
 		{
-			"name": "Divine Strike",
+			"name": "神聖打擊",
+			"ENG_name": "Divine Strike",
 			"source": "PHB",
 			"page": 63,
 			"className": "Cleric",
@@ -3724,11 +3823,12 @@
 			"level": 8,
 			"header": 2,
 			"entries": [
-				"At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra {@damage 1d8} damage of the same type dealt by the weapon to the target. When you reach 14th level, the extra damage increases to {@dice 2d8}."
+				"在8級時，你獲得將神聖能量注入你武器打擊的能力。在你的每個回合一次，當你使用一次武器攻擊命中一個生物時，你可以使該攻擊對目標造成額外的{@damage 1d8}光耀傷害。當你升至14級時，這個額外傷害增加至{@dice 2d8}。"
 			]
 		},
 		{
-			"name": "Avatar of Battle",
+			"name": "戰鬥化身",
+			"ENG_name": "Avatar of Battle",
 			"source": "PHB",
 			"page": 63,
 			"className": "Cleric",
@@ -3738,7 +3838,7 @@
 			"level": 17,
 			"header": 2,
 			"entries": [
-				"At 17th level, you gain resistance to bludgeoning, piercing, and slashing damage from nonmagical weapons."
+				"在17級時，你獲得對來自非魔法武器所造成的鈍擊、穿刺、和劈砍傷害的抗性。"
 			]
 		},
 		{
@@ -3768,23 +3868,23 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell bane}, {@spell disguise self}"
+							"{@spell 災禍術}, {@spell 易容術}"
 						],
 						[
 							"3rd",
-							"{@spell mirror image}, {@spell ray of enfeeblement}"
+							"{@spell 鏡影術}, {@spell 衰弱射線}"
 						],
 						[
 							"5th",
-							"{@spell bestow curse}, {@spell vampiric touch}"
+							"{@spell 降咒}, {@spell 吸血鬼之觸}"
 						],
 						[
 							"7th",
-							"{@spell death ward}, {@spell dimension door}"
+							"{@spell 防死護咒}, {@spell 次元門}"
 						],
 						[
 							"9th",
-							"{@spell dominate person}, {@spell modify memory}"
+							"{@spell 支配人類}, {@spell 修改記憶}"
 						]
 					]
 				},
@@ -3900,7 +4000,8 @@
 			]
 		},
 		{
-			"name": "Knowledge Domain (PSA)",
+			"name": "知識領域(PSA)",
+			"ENG_name": "Knowledge Domain (PSA)",
 			"source": "PSA",
 			"page": 25,
 			"className": "Cleric",
@@ -3915,7 +4016,8 @@
 			]
 		},
 		{
-			"name": "Subclass Feature",
+			"name": "子職業能力",
+			"ENG_name": "Subclass Feature",
 			"source": "PSA",
 			"page": 25,
 			"className": "Cleric",
@@ -3925,11 +4027,12 @@
 			"level": 2,
 			"header": 2,
 			"entries": [
-				"See the Knowledge domain."
+				"參見知識領域。"
 			]
 		},
 		{
-			"name": "Subclass Feature",
+			"name": "子職業能力",
+			"ENG_name": "Subclass Feature",
 			"source": "PSA",
 			"page": 25,
 			"className": "Cleric",
@@ -3939,11 +4042,12 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"See the Knowledge domain."
+				"參見知識領域。"
 			]
 		},
 		{
-			"name": "Subclass Feature",
+			"name": "子職業能力",
+			"ENG_name": "Subclass Feature",
 			"source": "PSA",
 			"page": 25,
 			"className": "Cleric",
@@ -3953,11 +4057,12 @@
 			"level": 8,
 			"header": 2,
 			"entries": [
-				"See the Knowledge domain."
+				"參見知識領域。"
 			]
 		},
 		{
-			"name": "Subclass Feature",
+			"name": "子職業能力",
+			"ENG_name": "Subclass Feature",
 			"source": "PSA",
 			"page": 25,
 			"className": "Cleric",
@@ -3967,7 +4072,7 @@
 			"level": 17,
 			"header": 2,
 			"entries": [
-				"See the Knowledge domain."
+				"參見知識領域。"
 			]
 		},
 		{
@@ -3987,8 +4092,8 @@
 					"type": "table",
 					"caption": "Solidarity Domain Spells",
 					"colLabels": [
-						"Cleric Level",
-						"Spells"
+						"牧師等級",
+						"法術"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -3997,23 +4102,23 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell bless}, {@spell guiding bolt}"
+							"{@spell 祝福術}, {@spell 光導箭}"
 						],
 						[
 							"3rd",
-							"{@spell aid}, {@spell warding bond}"
+							"{@spell 援助術}, {@spell 守護聯結}"
 						],
 						[
 							"5th",
-							"{@spell beacon of hope}, {@spell crusader's mantle}"
+							"{@spell 希望信標}, {@spell 十字軍斗篷}"
 						],
 						[
 							"7th",
-							"{@spell aura of life}, {@spell guardian of faith}"
+							"{@spell 生命靈光}, {@spell 虔誠守衛}"
 						],
 						[
 							"9th",
-							"{@spell circle of power}, {@spell mass cure wounds}"
+							"{@spell 威能法環}, {@spell 群體治療傷勢}"
 						]
 					]
 				},
@@ -4171,23 +4276,23 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell divine favor}, {@spell shield of faith}"
+							"{@spell 神恩術}, {@spell 虔誠護盾}"
 						],
 						[
 							"3rd",
-							"{@spell enhance ability}, {@spell protection from poison}"
+							"{@spell 強化屬性}, {@spell 防護毒素}"
 						],
 						[
 							"5th",
-							"{@spell haste}, {@spell protection from energy}"
+							"{@spell 加速術}, {@spell 防護能量}"
 						],
 						[
 							"7th",
-							"{@spell dominate beast}, {@spell stoneskin}"
+							"{@spell 支配野獸}, {@spell 石膚術}"
 						],
 						[
 							"9th",
-							"{@spell destructive wave}, {@spell insect plague}"
+							"{@spell 湮滅波}, {@spell 疫病蟲群}"
 						]
 					]
 				},
@@ -4334,8 +4439,8 @@
 					"type": "table",
 					"caption": "Zeal Domain Spells",
 					"colLabels": [
-						"Cleric Level",
-						"Spells"
+						"牧師等級",
+						"法術"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -4344,23 +4449,23 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell searing smite}, {@spell thunderous smite}"
+							"{@spell 熾炎斬}, {@spell 雷霆斬}"
 						],
 						[
 							"3rd",
-							"{@spell magic weapon}, {@spell shatter}"
+							"{@spell 魔化武器}, {@spell 粉碎音波}"
 						],
 						[
 							"5th",
-							"{@spell haste}, {@spell fireball}"
+							"{@spell 加速術}, {@spell 火球術}"
 						],
 						[
 							"7th",
-							"{@spell fire shield||fire shield (warm shield only)}, {@spell freedom of movement}"
+							"{@spell 火焰護盾|PHB|火焰護盾(限定溫暖護盾)}, {@spell 行動自如術}"
 						],
 						[
 							"9th",
-							"{@spell destructive wave}, {@spell flame strike}"
+							"{@spell 湮滅波}, {@spell 焰擊術}"
 						]
 					]
 				},
@@ -4495,7 +4600,8 @@
 			]
 		},
 		{
-			"name": "Arcana Domain",
+			"name": "奧秘領域",
+			"ENG_name": "Arcana Domain",
 			"source": "SCAG",
 			"page": 125,
 			"className": "Cleric",
@@ -4504,15 +4610,15 @@
 			"subclassSource": "SCAG",
 			"level": 1,
 			"entries": [
-				"Magic is an energy that suffuses the multiverse and that fuels both destruction and creation. Gods of the Arcana domain know the secrets and potential of magic intimately. For some of these gods, magical knowledge is a great responsibility that comes with a special understanding of the nature of reality. Other gods of Arcana see magic as pure power, to be used as its wielder sees fit.",
-				"The gods of this domain are often associated with knowledge, as learning and arcane power tend to go hand-in-hand. In the Realms, deities of this domain include Azuth and Mystra, as well as Corellon Larethian of the elven pantheon. In other worlds, this domain includes Hecate, Math Mathonwy, and Isis; the triple moon gods of Solinari, Lunitari, and Nuitari of Krynn; and Boccob, Vecna, and WeeJas of Greyhawk.",
-				"At each indicated cleric level, add the listed spells to your spells prepared. They do not count towards your limit.",
+				"魔法是一種能量遍布在多元宇宙各處的能量，激起毀滅與創造。掌管奧秘領域的神祗詳盡知曉魔法的秘密和潛能。對於其中一些神祗而言，魔法知識是一項偉大的責任，伴隨著對於現實本質的特殊理解；而其他奧秘之神則將魔法視為純粹的能量，並在其使用者認為合適時使用它。",
+				"因為學習和奧秘能量往往關係密切，這個領域的神祗通常和知識領域有關聯。在被遺忘的國度，掌管這個領域的神祗包括{@deity 阿祖斯|faerûnian|scag}、{@deity 密斯特拉|faerûnian|scag}、以及精靈之神{@deity 柯瑞隆．拉瑞斯安|elven|scag}。在其他世界，這個領域的神祇包括了{@deity 黑卡蒂|greek}、{@deity 馬斯．馬索努伊|celtic}、還有{@deity 伊西斯|egyptian}；克萊恩世界的三月之神{@deity 索林那瑞|dragonlance}、{@deity 努林塔瑞|dragonlance}、和{@deity 努塔瑞|dragonlance}；灰鷹世界的{@deity 博卡布|greyhawk}、{@deity 維克那|greyhawk}、和{@deity 維婕絲|greyhawk}。",
+				"在每個下記的牧師等級，將列出的法術加入你的準備法術中。它們並不會計入你每日可準備的法術上限。",
 				{
 					"type": "table",
-					"caption": "Arcana Domain Spells",
+					"caption": "奧秘領域法術",
 					"colLabels": [
-						"Cleric Level",
-						"Spells"
+						"牧師等級",
+						"法術"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -4520,35 +4626,36 @@
 					],
 					"rows": [
 						[
-							"1st",
-							"{@spell detect magic}, {@spell magic missile}"
+							"1級",
+							"{@spell 偵測魔法}, {@spell 魔法飛彈}"
 						],
 						[
-							"3rd",
-							"{@spell magic weapon}, {@spell Nystul's magic aura}"
+							"3級",
+							"{@spell 魔化武器}, {@spell 涅斯圖魔法靈光}"
 						],
 						[
-							"5th",
-							"{@spell dispel magic}, {@spell magic circle}"
+							"5級",
+							"{@spell 解除魔法}, {@spell 防護法陣}"
 						],
 						[
-							"7th",
-							"{@spell arcane eye}, {@spell Leomund's secret chest}"
+							"7級",
+							"{@spell 祕法眼}, {@spell 李歐蒙秘藏箱}"
 						],
 						[
-							"9th",
-							"{@spell planar binding}, {@spell teleportation circle}"
+							"9級",
+							"{@spell 異界誓縛}, {@spell 傳送法陣}"
 						]
 					]
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Arcane Initiate|Cleric||Arcana|SCAG|1"
+					"subclassFeature": "奧法學徒|Cleric||Arcana|SCAG|1"
 				}
 			]
 		},
 		{
-			"name": "Arcane Initiate",
+			"name": "奧法學徒",
+			"ENG_name": "Arcane Initiate",
 			"source": "SCAG",
 			"page": 125,
 			"className": "Cleric",
@@ -4558,11 +4665,12 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"When you choose this domain at 1st level, you gain proficiency in the {@skill Arcana} skill, and you gain two cantrips of your choice from the wizard spell list. For you, these cantrips count as cleric cantrips."
+				"當你在1級時選擇此領域，你將獲得{@skill 奧秘}技能的熟練，且你獲得二個從{@filter 法師法術列表|spells|class=wizard}中自選的戲法。對你而言，這些戲法被視作牧師戲法。"
 			]
 		},
 		{
-			"name": "Channel Divinity: Arcane Abjuration",
+			"name": "引導神力：奧秘阻絕",
+			"ENG_name": "Channel Divinity: Arcane Abjuration",
 			"source": "SCAG",
 			"page": 125,
 			"className": "Cleric",
@@ -4572,16 +4680,16 @@
 			"level": 2,
 			"header": 2,
 			"entries": [
-				"Starting at 2nd level, you can use your Channel Divinity to abjure otherworldly creatures.",
-				"As an action, you present your holy symbol, and one celestial, elemental, fey, or fiend of your choice that is within 30 feet of you must make a Wisdom saving throw, provided that the creature can see or hear you. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage.",
-				"A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly end its move in a space within 30 feet of you. It also can't take reactions. For its action, it can use only the {@action Dash} action or try to escape from an effect that prevents it from moving. If there's nowhere to move, then the creature can use the {@action Dodge} action.",
-				"After you reach 5th level, when a creature fails its saving throw against your Arcane Abjuration feature, the creature is banished for 1 minute (as in the {@spell banishment} spell, no concentration required) if it isn't on its plane of origin, and its challenge rating is at or below a certain threshold, as shown below.",
+				"從2級開始，你可以使用你的引導神力來抵禦異界生物。",
+				"以一個動作，你展現你的聖徽，且只要距離你30呎內你所選擇的一個天界生物、元素、精類、或邪魔可以看間或聽見你，它就必須進行一次睿知豁免。若該生物豁免失敗，則它將被驅散長達1分鐘或直到它受到傷害。",
+				"一個被驅散的不死生物必須用它的回合嘗試盡可能的遠離你，且它無法自願的移動到距離你30呎內的空間。它無法採取反應。它的動作只能使用{@action 疾走}動作或嘗試掙脫阻止它移動的效果。若它無法移動，則該生物將使用{@action 閃避}動作。",
+				"在你升至5級後，當一個生物在對抗你奧秘阻絕能力的豁免檢定中失敗，若該生物並不在它的原生位面，且它的挑戰等級為特定數值或更低（見下表），則該生物將被放逐長達1分鐘（如同{@spell 放逐術}，無須專注）。",
 				{
 					"type": "table",
-					"caption": "Arcane Banishment",
+					"caption": "奧秘阻絕",
 					"colLabels": [
-						"Cleric level",
-						"Banishes Creatures of CR..."
+						"牧師等級",
+						"被放逐生物的CR..."
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -4589,31 +4697,32 @@
 					],
 					"rows": [
 						[
-							"5th",
-							"1/2 or lower"
+							"5級",
+							"1/2或更低"
 						],
 						[
-							"8th",
-							"1 or lower"
+							"8級",
+							"1或更低"
 						],
 						[
-							"11th",
-							"2 or lower"
+							"11級",
+							"2或更低"
 						],
 						[
-							"14th",
-							"3 or lower"
+							"14級",
+							"3或更低"
 						],
 						[
-							"17th",
-							"4 or lower"
+							"17級",
+							"4或更低"
 						]
 					]
 				}
 			]
 		},
 		{
-			"name": "Spell Breaker",
+			"name": "法術破壞者",
+			"ENG_name": "Spell Breaker",
 			"source": "SCAG",
 			"page": 125,
 			"className": "Cleric",
@@ -4623,7 +4732,7 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Starting at 6th level, when you restore hit points to an ally with a spell of 1st level or higher, you can also end one spell of your choice on that creature. The level of the spell you end must be equal to or lower than the level of the spell slot you use to cast the healing spell."
+				"從6級開始，當你使用1環或更高環的法術回復一個盟友的生命值，你也可以選擇結束一個作用於該生物上的法術。你所結束法術的環衛必須等於或低於你用以施放該治療法術所使用的法術位環階。"
 			]
 		},
 		{
@@ -4659,7 +4768,8 @@
 			]
 		},
 		{
-			"name": "Potent Spellcasting",
+			"name": "強力施法",
+			"ENG_name": "Potent Spellcasting",
 			"source": "SCAG",
 			"page": 125,
 			"className": "Cleric",
@@ -4669,11 +4779,12 @@
 			"level": 8,
 			"header": 2,
 			"entries": [
-				"Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
+				"從8級開始，你將你的睿知調整值加入任何你使用牧師戲法所造成的傷害中。"
 			]
 		},
 		{
-			"name": "Arcane Mastery",
+			"name": "奧術宗師",
+			"ENG_name": "Arcane Mastery",
 			"source": "SCAG",
 			"page": 125,
 			"className": "Cleric",
@@ -4683,11 +4794,12 @@
 			"level": 17,
 			"header": 2,
 			"entries": [
-				"At 17th level, you choose four spells from the Wizard spell list, one from each of the following levels: 6th, 7th, 8th, and 9th. You add them to your list of domain spells. Like your other domain spells, they are always prepared and count as cleric spells for you."
+				"在17級時，你從{@filter 法師法術列表|spells|class=wizard}中選擇四個法術，其環階分別如下：6環、7環、8環、9環。你將它們加入你的領域法術列表中。如同你其他的領域法術，它們永遠視作被準備，且對你而言視作牧師法術。"
 			]
 		},
 		{
-			"name": "Order Domain",
+			"name": "秩序領域",
+			"ENG_name": "Order Domain",
 			"source": "TCE",
 			"page": 31,
 			"otherSources": [
@@ -4702,16 +4814,16 @@
 			"subclassSource": "TCE",
 			"level": 1,
 			"entries": [
-				"The Order Domain represents discipline, as well as devotion to a society or an institution and strict obedience to the laws governing it. On Ravnica, the domain is favored by clerics of the Azorius Senate, who use it to maintain and enforce the law, and of the Orzhov Syndicate, who exploit law and order for their personal gain. On other worlds, gods who grant access to this domain include Bane, Tyr, Majere, Erathis, Pholtus, Wee Jas, Aureon, Maglubiyet, Nuada, Athena, Anubis, Forseti, and Asmodeus.",
-				"The ideal of order is obedience to the law above all else, rather than to a specific individual or the passing influence of emotion or popular rule. Clerics of order are typically concerned with how things are done, rather than whether an action's results are just. Following the law and obeying its edicts is critical, especially when it benefits these clerics and their guilds or deities.",
-				"Law establishes hierarchies. Those selected by the law to lead must be obeyed. Those who obey must do so to the best of their ability. In this manner, law creates an intricate web of obligations that allows society to forge order and security in a chaotic multiverse.",
-				"At each indicated cleric level, you add the listed spells to your spells prepared.",
+				"秩序領域代表著紀律，對一個社會或制度的忠誠、以及對其統治法律的嚴格服從。在拉尼卡，這個領域被俄佐立參議會和歐佐夫集團的牧師所青睞，前者用它來維持並執行律法，後者則利用律法和秩序以謀取私利。在其他的世界，掌管這個領域的神祇包括了{@deity 班恩}、{@deity 提爾}、{@deity 馬哲理|dragonlance}、{@deity Erathis|dawn war|dmg}、{@deity 佛塔斯|greyhawk}、{@deity 維婕絲|greyhawk}、{@deity 奥林|eberron}、{@deity 瑪格魯比耶|nonhuman}、{@deity 努亞達|celtic}、{@deity 雅典娜|greek}、{@deity 阿努比斯|egyptian}、{@deity 凡賽堤|norse}、和{@deity Asmodeus|faerûnian|scag}。",
+				"秩序的理想是將法律的服從視作高於一切，而非服從於特定個人、情感的暫時影響、或是民眾的統治。秩序領域的牧師通常較關心事情是如何被完成，而非一個行動的結果是否公正。遵循律法並服從其法令相當重要，尤其是當它能使這些牧師和他們的公會或神祇受益時更是如此。",
+				"法律建立了階級。那些透過法律被揀選於領導大眾的人們必須被服從。藉由這個方式，法律創造出了一道錯綜複雜的責任之網，讓社會得以在混亂的多元宇宙中建立秩序與安全。",
+				"在每個下記的牧師等級，將列出的法術加入你的準備法術中。",
 				{
 					"type": "table",
-					"caption": "Order Domain Spells",
+					"caption": "秩序領域法術",
 					"colLabels": [
-						"Cleric Level",
-						"Spells"
+						"牧師等級",
+						"法術"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -4720,38 +4832,39 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell command}, {@spell heroism}"
+							"{@spell 命令術}, {@spell 英雄氣概}"
 						],
 						[
 							"3rd",
-							"{@spell hold person}, {@spell zone of truth}"
+							"{@spell 人類定身術}, {@spell 誠實之域}"
 						],
 						[
 							"5th",
-							"{@spell mass healing word}, {@spell slow}"
+							"{@spell 群體治癒真言}, {@spell 緩速術}"
 						],
 						[
 							"7th",
-							"{@spell compulsion}, {@spell locate creature}"
+							"{@spell 強迫術}, {@spell 生物定位術}"
 						],
 						[
 							"9th",
-							"{@spell commune}, {@spell dominate person}"
+							"{@spell 通神術}, {@spell 支配人類}"
 						]
 					]
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Proficiencies|Cleric||Order|TCE|1"
+					"subclassFeature": "額外熟練|Cleric||Order|TCE|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Voice of Authority|Cleric||Order|TCE|1"
+					"subclassFeature": "權威之音|Cleric||Order|TCE|1"
 				}
 			]
 		},
 		{
-			"name": "Bonus Proficiencies",
+			"name": "額外熟練",
+			"ENG_name": "Bonus Proficiencies",
 			"source": "TCE",
 			"page": 31,
 			"otherSources": [
@@ -4767,11 +4880,12 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"When you choose this domain at 1st level, you gain proficiency with heavy armor. You also gain proficiency in the {@skill Intimidation} or {@skill Persuasion} skill (your choice)."
+				"當你在1級時選擇此領域，你獲得重甲的熟練。你也獲得{@skill 威嚇}或{@skill 說服}技能的熟練（由你選擇）。"
 			]
 		},
 		{
-			"name": "Voice of Authority",
+			"name": "權威之音",
+			"ENG_name": "Voice of Authority",
 			"source": "TCE",
 			"page": 31,
 			"otherSources": [
@@ -4787,12 +4901,13 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"Starting at 1st level, you can invoke the power of law to drive an ally to attack. If you cast a spell with a spell slot of 1st level or higher and target an ally with the spell, that ally can use their reaction immediately after the spell to make one weapon attack against a creature of your choice that you can see.",
-				"If the spell targets more than one ally, you choose the ally who can make the attack."
+				"從1級開始，你可以呼喚律法的力量以驅使一個盟友進行攻擊。若你以一個1環或更高環的法術位施放一個法術，並指定一個盟友做為該法術的目標，則該盟友可以在法術後立即使用它的反應，對一個你所選且你能看見的生物進行一次武器攻擊。",
+				"若該法術指定了多於一個盟友做為目標，則你選擇一個可以進行攻擊的盟友。"
 			]
 		},
 		{
-			"name": "Channel Divinity: Order's Demand",
+			"name": "引導神力：秩序之令",
+			"ENG_name": "Channel Divinity: Order's Demand",
 			"source": "TCE",
 			"page": 31,
 			"otherSources": [
@@ -4808,12 +4923,13 @@
 			"level": 2,
 			"header": 2,
 			"entries": [
-				"Starting at 2nd level, you can use your Channel Divinity to exert an intimidating presence over others.",
-				"As an action, you present your holy symbol, and each creature of your choice that can see or hear you within 30 feet of you must succeed on a Wisdom saving throw or be {@condition charmed} by you until the end of your next turn or until the {@condition charmed} creature takes any damage. You can also cause any of the {@condition charmed} creatures to drop what they are holding when they fail the saving throw."
+				"從2級開始，你可以使用你的引導神力以對他人展現令人生畏的姿態。",
+				"以一個動作，你展現你的聖徽，且每個距離你30呎內，你所選且能看見或聽見你的生物必須成功通過一次睿知豁免，否則將被你{@condition 魅惑}直到你的下個回合結束，或直到被{@condition 魅惑}的生物受到任何傷害。你也可以讓任何被{@condition 魅惑}的生物在此豁免失敗時脫手掉落任何它們正持握的東西。"
 			]
 		},
 		{
-			"name": "Embodiment of the Law",
+			"name": "律法化身",
+			"ENG_name": "Embodiment of the Law",
 			"source": "TCE",
 			"page": 31,
 			"otherSources": [
@@ -4829,9 +4945,9 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"At 6th level, you become remarkably adept at channeling magical energy to compel others.",
-				"If you cast a spell of the enchantment school using a spell slot of 1st level or higher, you can change the spell's casting time to 1 bonus action for this casting, provided the spell's casting time is normally 1 action.",
-				"You can use this feature a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses of it when you finish a long rest."
+				"在6級時，你變得相當熟練於引導魔法能量以強迫他人。",
+				"若你使用一個1環或更高環的法術位施放一個惑控學派的法術，只要該法術原本的施法時間為1個動作，你就可以將該法術的施法時間變為1個附贈動作。",
+				"你可以使用這個能力的次數等同於你的睿知調整值（最少一次），且你在完成一次長休後恢復所有你花費掉的次數。"
 			]
 		},
 		{
@@ -4867,7 +4983,8 @@
 			]
 		},
 		{
-			"name": "Divine Strike",
+			"name": "神聖打擊",
+			"ENG_name": "Divine Strike",
 			"source": "TCE",
 			"page": 31,
 			"otherSources": [
@@ -4883,11 +5000,12 @@
 			"level": 8,
 			"header": 2,
 			"entries": [
-				"At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra {@damage 1d8} psychic damage to the target. When you reach 14th level, the extra damage increases to {@dice 2d8}."
+				"在8級時，你獲得將神聖能量注入你武器打擊的能力。在你的每個回合一次，當你使用一次武器攻擊命中一個生物時，你可以使該攻擊對目標造成額外的{@damage 1d8}精神傷害。當你升至14級時，這個額外傷害增加至{@dice 2d8}。"
 			]
 		},
 		{
-			"name": "Order's Wrath",
+			"name": "秩序之怒",
+			"ENG_name": "Order's Wrath",
 			"source": "TCE",
 			"page": 31,
 			"otherSources": [
@@ -4903,7 +5021,7 @@
 			"level": 17,
 			"header": 2,
 			"entries": [
-				"Starting at 17th level, enemies you designate for destruction wilt under the combined efforts of you and your allies. If you deal your Divine Strike damage to a creature on your turn, you can curse that creature until the start of your next turn. The next time one of your allies hits the cursed creature with an attack, the target also takes {@damage 2d8} psychic damage, and the curse ends. You can curse a creature in this way only once per turn."
+				"從17級開始，你所指定要毀滅的敵人將在你和你盟友的共同努力下凋零殆盡。若你在你的回合對一個生物造成你神聖打擊的傷害，你可以詛咒該生物，持續直到你的下個回合開始。下一次你的盟友以一次攻擊命中受詛咒生物時，目標將同時受到{@dice 2d8}精神傷害，接著此詛咒將結束。你在每個回合用這個方式只能詛咒一個生物。"
 			]
 		},
 		{
@@ -4984,23 +5102,23 @@
 							"rows": [
 								[
 									"1st",
-									"{@spell heroism}, {@spell sanctuary}"
+									"{@spell 英雄氣概}, {@spell 聖域術}"
 								],
 								[
 									"3rd",
-									"{@spell aid}, {@spell warding bond}"
+									"{@spell 援助術}, {@spell 守護聯結}"
 								],
 								[
 									"5th",
-									"{@spell beacon of hope}, {@spell sending}"
+									"{@spell 希望信標}, {@spell 短訊術}"
 								],
 								[
 									"7th",
-									"{@spell aura of purity}, {@spell Otiluke's resilient sphere}"
+									"{@spell 淨化靈光}, {@spell 歐提路克魔封法球}"
 								],
 								[
 									"9th",
-									"{@spell greater restoration}, {@spell Rary's telepathic bond}"
+									"{@spell 高等復原術}, {@spell 拉瑞心靈聯結}"
 								]
 							]
 						}
@@ -5201,23 +5319,23 @@
 							"rows": [
 								[
 									"1st",
-									"{@spell faerie fire}, {@spell sleep}"
+									"{@spell 妖火術}, {@spell 睡眠術}"
 								],
 								[
 									"3rd",
-									"{@spell moonbeam}, {@spell see invisibility}"
+									"{@spell 月華之光}, {@spell 識破隱形}"
 								],
 								[
 									"5th",
-									"{@spell aura of vitality}, {@spell Leomund's tiny hut}"
+									"{@spell 活力靈光}, {@spell 李歐蒙小屋}"
 								],
 								[
 									"7th",
-									"{@spell aura of life}, {@spell greater invisibility}"
+									"{@spell 生命靈光}, {@spell 高等隱形術}"
 								],
 								[
 									"9th",
-									"{@spell circle of power}, {@spell mislead}"
+									"{@spell 威能法環}, {@spell 假象術}"
 								]
 							]
 						}
@@ -5464,23 +5582,23 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell charm person}, {@spell heroism}"
+							"{@spell 魅惑人類}, {@spell 英雄氣概}"
 						],
 						[
 							"3rd",
-							"{@spell enthrall}, {@spell warding bond}"
+							"{@spell 注目術}, {@spell 守護聯結}"
 						],
 						[
 							"5th",
-							"{@spell beacon of hope}, {@spell hypnotic pattern}"
+							"{@spell 希望信標}, {@spell 催眠圖紋}"
 						],
 						[
 							"7th",
-							"{@spell aura of purity}, {@spell confusion}"
+							"{@spell 淨化靈光}, {@spell 困惑術}"
 						],
 						[
 							"9th",
-							"{@spell greater restoration}, {@spell hold monster}"
+							"{@spell 高等復原術}, {@spell 怪物定身術}"
 						]
 					]
 				},
@@ -5688,23 +5806,23 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell heroism}, {@spell shield of faith}"
+							"{@spell 英雄氣概}, {@spell 虔誠護盾}"
 						],
 						[
 							"3rd",
-							"{@spell aid}, {@spell warding bond}"
+							"{@spell 援助術}, {@spell 守護聯結}"
 						],
 						[
 							"5th",
-							"{@spell beacon of hope}, {@spell sending}"
+							"{@spell 希望信標}, {@spell 短訊術}"
 						],
 						[
 							"7th",
-							"{@spell aura of purity}, {@spell guardian of faith}"
+							"{@spell 淨化靈光}, {@spell 虔誠守衛}"
 						],
 						[
 							"9th",
-							"{@spell greater restoration}, {@spell Rary's telepathic bond}"
+							"{@spell 高等復原術}, {@spell 拉瑞心靈聯結}"
 						]
 					]
 				},
@@ -5848,8 +5966,8 @@
 					"type": "table",
 					"caption": "Forge Domain Spells",
 					"colLabels": [
-						"Cleric Level",
-						"Spells"
+						"牧師等級",
+						"法術"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -5858,23 +5976,23 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell searing smite}, {@spell shield}"
+							"{@spell 熾炎斬}, {@spell 護盾術}"
 						],
 						[
 							"3rd",
-							"{@spell heat metal}, {@spell magic weapon}"
+							"{@spell 灼熱金屬}, {@spell 魔化武器}"
 						],
 						[
 							"5th",
-							"{@spell elemental weapon}, {@spell protection from energy}"
+							"{@spell 元素武器}, {@spell 防護能量}"
 						],
 						[
 							"7th",
-							"{@spell fabricate}, {@spell wall of fire}"
+							"{@spell 鬼斧神工}, {@spell 火牆術}"
 						],
 						[
 							"9th",
-							"{@spell animate objects}, {@spell creation}"
+							"{@spell 活化物體}, {@spell 造物術}"
 						]
 					]
 				},
@@ -6031,8 +6149,8 @@
 					"type": "table",
 					"caption": "Grave Domain Spells",
 					"colLabels": [
-						"Cleric Level",
-						"Spells"
+						"牧師等級",
+						"法術"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -6041,23 +6159,23 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell bane}, {@spell false life}"
+							"{@spell 災禍術}, {@spell 摹造生命}"
 						],
 						[
 							"3rd",
-							"{@spell gentle repose}, {@spell ray of enfeeblement}"
+							"{@spell 遺體防腐}, {@spell 衰弱射線}"
 						],
 						[
 							"5th",
-							"{@spell revivify}, {@spell vampiric touch}"
+							"{@spell 回生術}, {@spell 吸血鬼之觸}"
 						],
 						[
 							"7th",
-							"{@spell blight}, {@spell death ward}"
+							"{@spell 枯萎術}, {@spell 防死護咒}"
 						],
 						[
 							"9th",
-							"{@spell antilife shell}, {@spell raise dead}"
+							"{@spell 反活物護罩}, {@spell 喚醒死者}"
 						]
 					]
 				},
@@ -6100,7 +6218,7 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"At 1st level, you gain the ability to manipulate the line between life and death. When you cast a spell that restores hit points to a living creature currently at 0, treat any dice rolled to determine the spell's healing as having rolled their maximum result. In addition, if you have the {@spell spare the dying} cantrip, you can cast it as a bonus action."
+				"At 1st level, you gain the ability to manipulate the line between life and death. When you cast a spell that restores hit points to a living creature currently at 0, treat any dice rolled to determine the spell's healing as having rolled their maximum result. In addition, if you have the {@spell 拯救瀕死} cantrip, you can cast it as a bonus action."
 			]
 		},
 		{
@@ -6225,8 +6343,8 @@
 					"type": "table",
 					"caption": "Protection Domain Spells",
 					"colLabels": [
-						"Cleric Level",
-						"Spells"
+						"牧師等級",
+						"法術"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -6235,23 +6353,23 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell compelled duel}, {@spell protection from evil and good}"
+							"{@spell 強迫決鬥}, {@spell 防護善惡}"
 						],
 						[
 							"3rd",
-							"{@spell aid}, {@spell protection from poison}"
+							"{@spell 援助術}, {@spell 防護毒素}"
 						],
 						[
 							"5th",
-							"{@spell protection from energy}, {@spell slow}"
+							"{@spell 防護能量}, {@spell 緩速術}"
 						],
 						[
 							"7th",
-							"{@spell guardian of faith}, {@spell Otiluke's resilient sphere}"
+							"{@spell 虔誠守衛}, {@spell 歐提路克魔封法球}"
 						],
 						[
 							"9th",
-							"{@spell antilife shell}, {@spell wall of force}"
+							"{@spell 反活物護罩}, {@spell 力牆術}"
 						]
 					]
 				},
@@ -6409,23 +6527,23 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell faerie fire}, {@spell sleep}"
+							"{@spell 妖火術}, {@spell 睡眠術}"
 						],
 						[
 							"3rd",
-							"{@spell darkness}, {@spell invisibility}"
+							"{@spell 黑暗術}, {@spell 隱形術}"
 						],
 						[
 							"5th",
-							"{@spell aura of vitality}, {@spell Leomund's tiny hut}"
+							"{@spell 活力靈光}, {@spell 李歐蒙小屋}"
 						],
 						[
 							"7th",
-							"{@spell aura of life}, {@spell greater invisibility}"
+							"{@spell 生命靈光}, {@spell 高等隱形術}"
 						],
 						[
 							"9th",
-							"{@spell circle of power}, {@spell dream}"
+							"{@spell 威能法環}, {@spell 託夢術}"
 						]
 					]
 				},
@@ -6593,7 +6711,7 @@
 			"header": 2,
 			"entries": [
 				"{@i 17th-level Twilight Domain feature}",
-				"You can harness the shrouding power of night to protect your allies and stymie your foes. Whenever you cast the {@spell darkness} spell using a spell slot, you can choose a number of creatures that you can see (including yourself) equal to your Wisdom modifier (minimum of one). The chosen creatures can see through the darkness."
+				"You can harness the shrouding power of night to protect your allies and stymie your foes. Whenever you cast the {@spell 黑暗術} spell using a spell slot, you can choose a number of creatures that you can see (including yourself) equal to your Wisdom modifier (minimum of one). The chosen creatures can see through the darkness."
 			]
 		},
 		{
@@ -6613,8 +6731,8 @@
 					"type": "table",
 					"caption": "City Domain Spells",
 					"colLabels": [
-						"Cleric Level",
-						"Spells"
+						"牧師等級",
+						"法術"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -6623,19 +6741,19 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell comprehend languages}, {@spell remote access (UA)|UAModernMagic|remote access}*"
+							"{@spell 通曉語言}, {@spell remote access (UA)|UAModernMagic|remote access}*"
 						],
 						[
 							"3rd",
-							"{@spell find vehicle (UA)|UAModernMagic|find vehicle}*, {@spell heat metal}"
+							"{@spell find vehicle (UA)|UAModernMagic|find vehicle}*, {@spell 灼熱金屬}"
 						],
 						[
 							"5th",
-							"{@spell lightning bolt}, {@spell protection from ballistics (UA)|UAModernMagic|protection from ballistics}*"
+							"{@spell 閃電束}, {@spell protection from ballistics (UA)|UAModernMagic|protection from ballistics}*"
 						],
 						[
 							"7th",
-							"{@spell locate creature}, {@spell synchronicity (UA)|UAModernMagic|synchronicity}*"
+							"{@spell 生物定位術}, {@spell synchronicity (UA)|UAModernMagic|synchronicity}*"
 						],
 						[
 							"9th",
@@ -6786,7 +6904,7 @@
 			"level": 17,
 			"header": 2,
 			"entries": [
-				"At 17th level, you can use mass transit routes to transport instantaneously to other points in the city. Starting from a bus stop, train station, subway stop, or other suitable mass transit site within the city, you can teleport to any other similar transit stop within the city, as if you had cast a {@spell teleport} spell whose destination is a permanent {@spell teleportation circle} you know. Once you use this feature, you must finish a short or long rest before using it again."
+				"At 17th level, you can use mass transit routes to transport instantaneously to other points in the city. Starting from a bus stop, train station, subway stop, or other suitable mass transit site within the city, you can teleport to any other similar transit stop within the city, as if you had cast a {@spell 傳送術} spell whose destination is a permanent {@spell 傳送法陣} you know. Once you use this feature, you must finish a short or long rest before using it again."
 			]
 		},
 		{
@@ -6802,13 +6920,13 @@
 				"The Order domain represents discipline, as well as service to a society or an institution, whether that service is rendered in obedience to or enforcement of the law\u2014civil, religious, or both. Gods on many worlds grant access to this domain, including Bane, Tyr, Majere, Erathis, Pholtus, Wee Jas, Aureon, Maglubiyet, Nuada, Athena, Anubis, Forseti, and Asmodeus.",
 				"The ideal of order is obedience to the law above all else, rather than to a specific individual or the passing influence of emotion or popular rule. Clerics of order are typically concerned with how things are done, rather than whether an action's results are just. Following the law and obeying its edicts is critical, especially when it benefits these clerics and their deities.",
 				"More importantly, law establishes hierarchies. Those selected by the law to lead must be obeyed. Those who obey must do so to the best of their ability. In this manner, law creates an intricate web of obligations that allows society to forge order and security in a chaotic multiverse.",
-				"At each indicated cleric level, you add the listed spells to your spells prepared.",
+				"在每個下記的牧師等級，將列出的法術加入你的準備法術中。",
 				{
 					"type": "table",
 					"caption": "Order Domain Spells",
 					"colLabels": [
-						"Cleric Level",
-						"Spells"
+						"牧師等級",
+						"法術"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -6817,23 +6935,23 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell command}, {@spell heroism}"
+							"{@spell 命令術}, {@spell 英雄氣概}"
 						],
 						[
 							"3rd",
-							"{@spell enhance ability}, {@spell hold person}"
+							"{@spell 強化屬性}, {@spell 人類定身術}"
 						],
 						[
 							"5th",
-							"{@spell mass healing word}, {@spell slow}"
+							"{@spell 群體治癒真言}, {@spell 緩速術}"
 						],
 						[
 							"7th",
-							"{@spell compulsion}, {@spell locate creature}"
+							"{@spell 強迫術}, {@spell 生物定位術}"
 						],
 						[
 							"9th",
-							"{@spell commune}, {@spell dominate person}"
+							"{@spell 通神術}, {@spell 支配人類}"
 						]
 					]
 				},
@@ -6966,7 +7084,8 @@
 			]
 		},
 		{
-			"name": "Forge Domain",
+			"name": "鍛造領域",
+			"ENG_name": "Forge Domain",
 			"source": "XGE",
 			"page": 18,
 			"className": "Cleric",
@@ -6975,14 +7094,14 @@
 			"subclassSource": "XGE",
 			"level": 1,
 			"entries": [
-				"The gods of the forge are patrons of artisans who work with metal, from a humble blacksmith who keeps a village in horseshoes and plow blades to the mighty elf artisan whose diamond-tipped arrows of mithral have felled demon lords. The gods of the forge teach that, with patience and hard work, even the most intractable metal can be transformed from a lump of ore to a beautifully wrought object. Clerics of these deities search for objects lost to the forces of darkness, liberate mines overrun by orcs, and uncover rare and wondrous materials necessary to create potent magic items. Followers of these gods take great pride in their work, and they are willing to craft and use heavy armor and powerful weapons to protect them. Deities of this domain include Gond, Reorx, Onatar, Moradin, Hephaestus, and Goibhniu.",
-				"At each indicated cleric level, add the listed spells to your spells prepared.",
+				"鍛造之神是那些與鐵為伍的工匠們的庇護者，守護著從村莊裡打造馬蹄鐵和犁的粗鄙鐵匠，到製作過曾擊敗惡魔領主的鑽石尖秘銀箭的強大精靈工匠。鍛造之神教導人們：即使是最頑劣的金屬，在耐心和努力之下也能被從一團原礦轉變成做工精美的物品。這些神祇的牧師們尋找著因黑暗力量而失落的物品、解放被獸人佔領的礦山、並發掘製造強力魔法物品所必須的奇妙稀有材料。這些神祇的追隨者們以自己的工作自豪，且樂於製造並使用重甲和強力的武器以保護自己。這個領域的神祇包括了{@deity 貢德}、{@deity 李奧克斯|dragonlance}、{@deity 昂那塔|eberron}、{@deity 摩拉丁|nonhuman}、{@deity 赫菲斯托斯|greek}、和{@deity 格布紐|celtic}。",
+				"在每個下記的牧師等級，將列出的法術加入你的準備法術中。",
 				{
 					"type": "table",
-					"caption": "Forge Domain Spells",
+					"caption": "鍛造領域法術",
 					"colLabels": [
-						"Cleric Level",
-						"Spells"
+						"牧師等級",
+						"法術"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -6991,38 +7110,39 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell identify}, {@spell searing smite}"
+							"{@spell 鑑定術}, {@spell 熾炎斬}"
 						],
 						[
 							"3rd",
-							"{@spell heat metal}, {@spell magic weapon}"
+							"{@spell 灼熱金屬}, {@spell 魔化武器}"
 						],
 						[
 							"5th",
-							"{@spell elemental weapon}, {@spell protection from energy}"
+							"{@spell 元素武器}, {@spell 防護能量}"
 						],
 						[
 							"7th",
-							"{@spell fabricate}, {@spell wall of fire}"
+							"{@spell 鬼斧神工}, {@spell 火牆術}"
 						],
 						[
 							"9th",
-							"{@spell animate objects}, {@spell creation}"
+							"{@spell 活化物體}, {@spell 造物術}"
 						]
 					]
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Proficiency|Cleric||Forge|XGE|1"
+					"subclassFeature": "額外熟練|Cleric||Forge|XGE|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Blessing of the Forge|Cleric||Forge|XGE|1"
+					"subclassFeature": "鍛造祝福|Cleric||Forge|XGE|1"
 				}
 			]
 		},
 		{
-			"name": "Blessing of the Forge",
+			"name": "鍛造祝福",
+			"ENG_name": "Blessing of the Forge",
 			"source": "XGE",
 			"page": 18,
 			"className": "Cleric",
@@ -7032,12 +7152,13 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"At 1st level, you gain the ability to imbue magic into a weapon or armor. At the end of a long rest, you can touch one nonmagical object that is a suit of armor or a simple or martial weapon. Until the end of your next long rest or until you die, the object becomes a magic item, granting a +1 bonus to AC if it's armor or a +1 bonus to attack and damage rolls if it's a weapon.",
-				"Once you use this feature, you can't use it again until you finish a long rest."
+				"在1級時，你獲得將魔法注入一把武器或護甲的能力。在一次長休結束時，你可以觸碰一件非魔法護甲或一把非魔法簡易或軍用武器。直到你下一次長休結束或直到你死亡之前，該物品將變成魔法物品，若它是護甲的話則AC獲得+1的加值，或是武器的話則在攻擊檢定和傷害骰中獲得+1的加值。",
+				"一旦你使用此能力，直到你完成一次長休之前你都不能再使用它。"
 			]
 		},
 		{
-			"name": "Bonus Proficiency",
+			"name": "額外熟練",
+			"ENG_name": "Bonus Proficiency",
 			"source": "XGE",
 			"page": 18,
 			"className": "Cleric",
@@ -7047,11 +7168,12 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"When you choose this domain at 1st level, you gain proficiency with heavy armor and {@item smith's tools|phb}."
+				"當你在1級時選擇此領域，你獲得重甲和{@item 鐵匠工具|phb}的熟練。"
 			]
 		},
 		{
-			"name": "Channel Divinity: Artisan's Blessing",
+			"name": "引導神力：工匠祝福",
+			"ENG_name": "Channel Divinity: Artisan's Blessing",
 			"source": "XGE",
 			"page": 18,
 			"className": "Cleric",
@@ -7061,13 +7183,14 @@
 			"level": 2,
 			"header": 2,
 			"entries": [
-				"Starting at 2nd level, you can use your Channel Divinity to create simple items.",
-				"You conduct an hour-long ritual that crafts a nonmagical item that must include some metal: a simple or martial weapon, a suit of armor, ten pieces of ammunition, a set of tools, or another metal object (see chapter 5, \"Equipment,\" in the Player's Handbook for examples of these items). The creation is completed at the end of the hour, coalescing in an unoccupied space of your choice on a surface within 5 feet of you.",
-				"The thing you create can be something that is worth no more than 100 gp. As part of this ritual, you must lay out metal, which can include coins, with a value equal to the creation. The metal irretrievably coalesces and transforms into the creation at the ritual's end, magically forming even nonmetal parts of the creation. The ritual can create a duplicate of a nonmagical item that contains metal, such as a key, if you possess the original during the ritual."
+				"從2級開始，你可以使用你的引導神力以創造簡單的物品。",
+				"你進行一個長達一小時的儀式，用以創造一件必須含有部分金屬的非魔法物品：一把簡易或軍用武器、一件護甲、十發彈藥、一套工具、或是其他金屬物體（參見《玩家手冊》的第五章「裝備」以查閱這些物品的範例）。這個創造過程會在這一小時結束時完成，出現並接合在距離你5呎內一處你所選擇的未被佔據空間的表面上。",
+				"你所創造的物品可以是任何價值不超過100金幣的物品。做為這個儀式的一部份，你必須提供價值等同於創造物的金屬，比如錢幣。這些金屬將在儀式結束時不可逆的接合並轉變融入創造物中，魔法性的形成該創造物的非金屬部分。若你在儀式期間持有一件含有金屬的非魔法物品，則這個儀式可以創造出它的複製品，像是一把鑰匙。"
 			]
 		},
 		{
-			"name": "Soul of the Forge",
+			"name": "鍛造之魂",
+			"ENG_name": "Soul of the Forge",
 			"source": "XGE",
 			"page": 18,
 			"className": "Cleric",
@@ -7077,12 +7200,12 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Starting at 6th level, your mastery of the forge grants you special abilities:",
+				"從6級開始，你對鍛造的掌握賦予你特殊的能力：",
 				{
 					"type": "list",
 					"items": [
-						"You gain resistance to fire damage.",
-						"While wearing heavy armor, you gain a +1 bonus to AC."
+						"你獲得對火焰傷害的抗性。",
+						"當穿戴重甲時，你的AC獲得+1的加值。"
 					]
 				}
 			]
@@ -7120,7 +7243,8 @@
 			]
 		},
 		{
-			"name": "Divine Strike",
+			"name": "神聖打擊",
+			"ENG_name": "Divine Strike",
 			"source": "XGE",
 			"page": 18,
 			"className": "Cleric",
@@ -7130,11 +7254,12 @@
 			"level": 8,
 			"header": 2,
 			"entries": [
-				"At 8th level, you gain the ability to infuse your weapon strikes with the fiery power of the forge. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra {@damage 1d8} fire damage to the target. When you reach 14th level, the extra damage increases to {@dice 2d8}."
+				"在8級時，你獲得將鍛造的猛烈力量注入你武器打擊的能力。在你的每個回合一次，當你使用一次武器攻擊命中一個生物時，你可以使該攻擊對目標造成額外的{@dice 1d8}火焰傷害。當你升至14級時，這個額外傷害增加至{@dice 2d8}。"
 			]
 		},
 		{
-			"name": "Saint of Forge and Fire",
+			"name": "火與鋼的聖徒",
+			"ENG_name": "Saint of Forge and Fire",
 			"source": "XGE",
 			"page": 18,
 			"className": "Cleric",
@@ -7144,18 +7269,19 @@
 			"level": 17,
 			"header": 2,
 			"entries": [
-				"At 17th level, your blessed affinity with fire and metal becomes more powerful:",
+				"在17級時，你與火和鋼鐵那受祝福的親和性變得更加強大：",
 				{
 					"type": "list",
 					"items": [
-						"You gain immunity to fire damage",
-						"While wearing heavy armor, you have resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks."
+						"你免疫於火焰傷害。",
+						"當穿戴重甲時，你獲得對來自非魔法攻擊的鈍擊、穿刺、和劈砍傷害的抗性。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Grave Domain",
+			"name": "墳墓領域",
+			"ENG_name": "Grave Domain",
 			"source": "XGE",
 			"page": 19,
 			"className": "Cleric",
@@ -7164,13 +7290,13 @@
 			"subclassSource": "XGE",
 			"level": 1,
 			"entries": [
-				"Gods of the grave watch over the line between life and death. To these deities, death and the afterlife are a foundational part of the multiverse. To desecrate the peace of the dead is an abomination. Deities of the grave include Kelemvor, Wee Jas, the ancestral spirits of the Undying Court, Hades, Anubis, and Osiris. Followers of these deities seek to put wandering spirits to rest, destroy the undead, and ease the suffering of the dying. Their magic also allows them to stave off death for a time, particularly for a person who still has some great work to accomplish in the world. This is a delay of death, not a denial of it, for death will eventually get its due.",
+				"墳墓領域的諸神俯瞰生死之間的界線。對這些神祇而言，死亡和來生是構成多元宇宙的一部分。褻瀆亡者死後的寧靜是不可饒恕的重罪。墳墓領域的神祇包括了{@deity 凱蘭沃}、{@deity 維婕絲|greyhawk}、{@deity 不朽評議會|eberron}的先祖諸靈、{@deity 哈帝斯|greek}、{@deity 阿努比斯|egyptian}、和{@deity 歐西里斯|egyptian}。這些神祇的追隨者追求著讓徬徨的靈魂安息、摧毀不死生物、安撫垂死之人的痛苦。他們的魔法也讓他們得以在一段時間內避免死亡，特別是那些在世界上仍有重大偉業等待他們完成的人們。這僅僅是延遲死亡，而非否定它，因為死亡終將來到。",
 				{
 					"type": "table",
-					"caption": "Grave Domain Spells",
+					"caption": "墳墓領域法術",
 					"colLabels": [
-						"Cleric Level",
-						"Spells"
+						"牧師等級",
+						"法術"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -7179,38 +7305,39 @@
 					"rows": [
 						[
 							"1st",
-							"{@spell bane}, {@spell false life}"
+							"{@spell 災禍術}, {@spell 摹造生命}"
 						],
 						[
 							"3rd",
-							"{@spell gentle repose}, {@spell ray of enfeeblement}"
+							"{@spell 遺體防腐}, {@spell 衰弱射線}"
 						],
 						[
 							"5th",
-							"{@spell revivify}, {@spell vampiric touch}"
+							"{@spell 回生術}, {@spell 吸血鬼之觸}"
 						],
 						[
 							"7th",
-							"{@spell blight}, {@spell death ward}"
+							"{@spell 枯萎術}, {@spell 防死護咒}"
 						],
 						[
 							"9th",
-							"{@spell antilife shell}, {@spell raise dead}"
+							"{@spell 反活物護罩}, {@spell 喚醒死者}"
 						]
 					]
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Circle of Mortality|Cleric||Grave|XGE|1"
+					"subclassFeature": "凡命循環|Cleric||Grave|XGE|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Eyes of the Grave|Cleric||Grave|XGE|1"
+					"subclassFeature": "墳墓之眼|Cleric||Grave|XGE|1"
 				}
 			]
 		},
 		{
-			"name": "Circle of Mortality",
+			"name": "凡命循環",
+			"ENG_name": "Circle of Mortality",
 			"source": "XGE",
 			"page": 19,
 			"className": "Cleric",
@@ -7220,12 +7347,13 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"At 1st level, you gain the ability to manipulate the line between life and death. When you would normally roll one or more dice to restore hit points with a spell to a creature at 0 hit points, you instead use the highest number possible for each die.",
-				"In addition, you learn the {@spell spare the dying} cantrip, which doesn't count against the number of cleric cantrips you know. For you, it has a range of 30 feet, and you can cast it as a bonus action."
+				"在1級時，你獲得操縱生死間界線的能力。當你原本需要骰一顆或以上的骰子以決定使用法術回復一個生命值為0的生物的生命值時，你改為使用每顆骰子的最大值。",
+				"此外，你學會{@spell 拯救瀕死}戲法，它並不會計入你已知的牧師戲法數量中。對你而言，它具有30呎的射程，且你能夠以一個附贈動作施放它。"
 			]
 		},
 		{
-			"name": "Eyes of the Grave",
+			"name": "墳墓之眼",
+			"ENG_name": "Eyes of the Grave",
 			"source": "XGE",
 			"page": 19,
 			"className": "Cleric",
@@ -7235,12 +7363,13 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"At 1st level, you gain the ability to occasionally sense the presence of the undead, whose existence is an insult to the natural cycle of life. As an action, you can open your awareness to magically detect undead. Until the end of your next turn, you know the location of any undead within 60 feet of you that isn't behind total cover and that isn't protected from divination magic. This sense doesn't tell you anything about a creature's capabilities or identity.",
-				"You can use this feature a number of times equal to your Wisdom modifier (minimum of once). You regain all expended uses when you finish a long rest."
+				"在1級時，你獲得能偶爾感知到不死生物存在的能力，它們的存在本身即為對自然生命循環的褻瀆。以一個動作，你可以擴張你的意識以用魔法偵測不死生物。直到你的下個回合結束前，你知曉任何距離你60呎內，未處於全掩護，且不被保護於受預言系法術作用的不死生物的位置。這個感知不會告訴你任何關於該生物能力或身分的情報。",
+				"你可以使用這個能力的次數等同於你的睿知調整值（最少一次）。你在完成一次長休後恢復所有你花費掉的次數。"
 			]
 		},
 		{
-			"name": "Channel Divinity: Path to the Grave",
+			"name": "引導神力：歸墓之途",
+			"ENG_name": "Channel Divinity: Path to the Grave",
 			"source": "XGE",
 			"page": 19,
 			"className": "Cleric",
@@ -7250,12 +7379,13 @@
 			"level": 2,
 			"header": 2,
 			"entries": [
-				"Starting at 2nd level, you can use your Channel Divinity to mark another creature's life force for termination.",
-				"As an action, you choose one creature you can see within 30 feet of you, cursing it until the end of your next turn. The next time you or an ally of yours hits the cursed creature with an attack, the creature has vulnerability to all of that attack's damage, and then the curse ends."
+				"從2級開始，你可以使用你的引導神力以對另一個生物標記使其生命終止的力量。",
+				"以一個動作，你選擇一個距離你30呎內且你所能看見的生物，詛咒它直到你的下個回合結束。下一次你或你的一個盟友以一次攻擊命中受詛咒生物時，該生物將對該攻擊的所有傷害具有易傷，接著此詛咒將結束。"
 			]
 		},
 		{
-			"name": "Sentinel at Death's Door",
+			"name": "死之門的哨衛",
+			"ENG_name": "Sentinel at Death's Door",
 			"source": "XGE",
 			"page": 19,
 			"className": "Cleric",
@@ -7265,8 +7395,8 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"At 6th level, you gain the ability to impede death's progress. As a reaction when you or a creature you can see within 30 feet of you suffers a critical hit, you can turn that hit into a normal hit. Any effects triggered by a critical hit are canceled.",
-				"You can use this feature a number of times equal to your Wisdom modifier (minimum of once). You regain all expended uses when you finish a long rest."
+				"在6級時，你獲得阻礙死亡進展的能力。當你或一個距離你30呎內你所能看見的生物受到一次重擊，以一個反應，你可以將該重擊變為普通命中。任何因重擊而觸發的效果都將被取消。",
+				"你可以使用這個能力的次數等同於你的睿知調整值（最少一次）。你在完成一次長休後恢復所有你花費掉的次數。"
 			]
 		},
 		{
@@ -7302,7 +7432,8 @@
 			]
 		},
 		{
-			"name": "Potent Spellcasting",
+			"name": "強力施法",
+			"ENG_name": "Potent Spellcasting",
 			"source": "XGE",
 			"page": 19,
 			"className": "Cleric",
@@ -7312,11 +7443,12 @@
 			"level": 8,
 			"header": 2,
 			"entries": [
-				"Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
+				"從8級開始，你將你的睿知調整值加入任何你使用牧師戲法所造成的傷害中。"
 			]
 		},
 		{
-			"name": "Keeper of Souls",
+			"name": "守魂者",
+			"ENG_name": "Keeper of Souls",
 			"source": "XGE",
 			"page": 19,
 			"className": "Cleric",
@@ -7326,7 +7458,7 @@
 			"level": 17,
 			"header": 2,
 			"entries": [
-				"Starting at 17th level, you can seize a trace of vitality from a parting soul and use it to heal the living. When an enemy you can see dies within 60 feet of you, you or one creature of your choice that is within 60 feet of you regains hit points equal to the enemy's number of Hit Dice. You can use this feature only if you aren't {@condition incapacitated}. Once you use it, you can't do so again until the start of your next turn."
+				"從17級開始，你可以抓住來自亡魂中的一絲生命力來治癒生者。當一個距離你60呎內且你所能看見的敵人死亡，你或一個你所選且距離你60呎內的生物將回復等同於該敵人的生命骰數量的生命值。你只能在你不處於{@condition 無力}狀態時使用這個能力。一旦你使用它，直到你的下的回合開始之前你都不能再這麼做。"
 			]
 		}
 	]

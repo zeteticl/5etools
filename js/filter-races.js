@@ -73,13 +73,13 @@ class PageFilterRaces extends PageFilter {
 		b = b.item;
 
 		if (a === "Player Choice") return -1;
-		else if (a.startsWith("Any") && b.startsWith("Any")) {
-			const aAbil = a.replace("Any", "").replace("Increase", "").trim();
-			const bAbil = b.replace("Any", "").replace("Increase", "").trim();
+		else if (a.startsWith("任意") && b.startsWith("任意")) {
+			const aAbil = a.replace("任意", "").replace("增加", "").trim();
+			const bAbil = b.replace("任意", "").replace("增加", "").trim();
 			return PageFilterRaces.ASI_SORT_POS[aAbil] - PageFilterRaces.ASI_SORT_POS[bAbil];
-		} else if (a.startsWith("Any")) {
+		} else if (a.startsWith("任意")) {
 			return -1;
-		} else if (b.startsWith("Any")) {
+		} else if (b.startsWith("任意")) {
 			return 1;
 		} else {
 			const [aAbil, aScore] = a.split(" ");
@@ -92,36 +92,43 @@ class PageFilterRaces extends PageFilter {
 	constructor () {
 		super();
 
-		this._sizeFilter = new Filter({header: "Size", displayFn: Parser.sizeAbvToFull, itemSortFn: PageFilterRaces.filterAscSortSize});
+		this._sizeFilter = new Filter({header: "Size", headerName: "體型", displayFn: Parser.sizeAbvToFull, itemSortFn: PageFilterRaces.filterAscSortSize});
 		this._asiFilter = new Filter({
-			header: "Ability Bonus (Including Subrace)",
+			header: "Ability Bonus (Including Subrace)", headerName: "屬性加值 (包括亞種)",
 			items: [
 				"Player Choice",
-				"Any Strength Increase",
-				"Any Dexterity Increase",
-				"Any Constitution Increase",
-				"Any Intelligence Increase",
-				"Any Wisdom Increase",
-				"Any Charisma Increase",
-				"Strength +2",
-				"Strength +1",
-				"Dexterity +2",
-				"Dexterity +1",
-				"Constitution +2",
-				"Constitution +1",
-				"Intelligence +2",
-				"Intelligence +1",
-				"Wisdom +2",
-				"Wisdom +1",
-				"Charisma +2",
-				"Charisma +1",
+				"任意力量增加",
+				"任意敏捷增加",
+				"任意體質增加",
+				"任意智力增加",
+				"任意睿知增加",
+				"任意魅力增加",
+				"力量+2",
+				"力量+1",
+				"敏捷+2",
+				"敏捷+1",
+				"體質+2",
+				"體質+1",
+				"智力+2",
+				"智力+1",
+				"睿知+2",
+				"睿知+1",
+				"魅力+2",
+				"魅力+1"
 			],
 			itemSortFn: PageFilterRaces.filterAscSortAsi,
 		});
-		this._baseRaceFilter = new Filter({header: "Base Race"});
-		this._speedFilter = new Filter({header: "Speed", items: ["Climb", "Fly", "Swim", "Walk (Fast)", "Walk", "Walk (Slow)"]});
+		this._baseRaceFilter = new Filter({header: "Base Race", header: "基本種族"});
+		this._speedFilter = new Filter(
+			{
+				header: "Speed",
+				headerName: "速度",
+				displayFn:Parser.SpeedToDisplay,
+				items: ["Climb", "Fly", "Swim", "Walk (Fast)", "Walk", "Walk (Slow)"]
+			});
 		this._traitFilter = new Filter({
 			header: "Traits",
+			headerName: "特性",
 			items: [
 				"Amphibious",
 				"Armor Proficiency",
@@ -144,12 +151,35 @@ class PageFilterRaces extends PageFilter {
 				"Uncommon Race",
 				"Weapon Proficiency",
 			],
+			displayFn: function(t){
+				switch(t){
+					case "NPC Race": 		return "NPC種族";
+					case "Monstrous Race":	return "怪物種族";
+					case "Armor Proficiency": 	return "護甲熟練";
+					case "Skill Proficiency": 	return "技能熟練";
+					case "Tool Proficiency": 	return "工具熟練";
+					case "Weapon Proficiency": 	return "武器熟練";
+					case "Darkvision": 			return "黑暗視覺";
+					case "Superior Darkvision": return "高級黑暗視覺";
+					case "Natural Armor": 		return "天生護甲";
+					case "Damage Resistance": 	return "傷害抗性";
+					case "Spellcasting": 		return "施法";
+					case "Unarmed Strike": 		return "徒手打擊";
+					case "Amphibious": 			return "兩棲";
+					case "Powerful Build": 		return "強健體格";
+					case "Dragonmark": 			return "龍紋";
+					case "Improved Resting": 	return "修整強化";
+					default: return t;
+				}
+			},
 			deselFn: (it) => {
 				return it === "NPC Race";
 			},
 		});
 		this._languageFilter = new Filter({
 			header: "Languages",
+			headerName: "語言",
+			displayFn: Parser.LanguageToDisplay,
 			items: [
 				"Abyssal",
 				"Celestial",
@@ -186,7 +216,7 @@ class PageFilterRaces extends PageFilter {
 			race._fAbility = abils.map(a => PageFilterRaces.mapAbilityObjToFull(a));
 			const increases = {};
 			abils.filter(it => it.amount > 0).forEach(it => increases[it.asi] = true);
-			Object.keys(increases).forEach(it => race._fAbility.push(`Any ${Parser.attAbvToFull(it)} Increase`));
+			Object.keys(increases).forEach(it => race._fAbility.push(`任意${Parser.attAbvToFull(it)}增加`));
 			if (race.ability.some(it => it.choose)) race._fAbility.push("Player Choice");
 		} else race._fAbility = [];
 		race._fSpeed = race.speed ? race.speed.walk ? [race.speed.climb ? "Climb" : null, race.speed.fly ? "Fly" : null, race.speed.swim ? "Swim" : null, PageFilterRaces.getSpeedRating(race.speed.walk)].filter(it => it) : [PageFilterRaces.getSpeedRating(race.speed)] : [];
@@ -208,7 +238,7 @@ class PageFilterRaces extends PageFilter {
 		if (race.hasFluff) race._fMisc.push("Has Info");
 		if (race.hasFluffImages) race._fMisc.push("Has Images");
 
-		const ability = race.ability ? Renderer.getAbilityData(race.ability) : {asTextShort: "None"};
+		const ability = race.ability ? Renderer.getAbilityData(race.ability) : {asTextShort: "無"};
 		race._slAbility = ability.asTextShort;
 	}
 

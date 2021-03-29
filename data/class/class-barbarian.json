@@ -1,7 +1,8 @@
 {
 	"class": [
 		{
-			"name": "Barbarian",
+			"name": "野蠻人",
+			"ENG_name": "Barbarian",
 			"source": "PHB",
 			"page": 46,
 			"srd": true,
@@ -42,11 +43,11 @@
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
-					"(a) a {@item greataxe|phb} or (b) any {@filter martial melee weapon|items|source=phb|category=basic|type=martial weapon;melee weapon=sand}",
-					"(a) two {@item handaxe|phb|handaxes} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
-					"An {@item explorer's pack|phb}, and four {@item javelin|phb|javelins}"
+					"(a)一把{@item 巨斧|phb} 或 (b)任意一把{@filter 軍用近戰武器|items|source=phb|category=basic|type=martial weapon;melee weapon=sand}",
+					"(a)二把{@item 手斧|phb} 或 (b)任意一把{@filter 簡易武器|items|source=phb|category=basic|type=simple weapon}",
+					"一套{@item 探索者套裝|phb}，和四把{@item 標槍|phb|javelins}"
 				],
-				"goldAlternative": "{@dice 2d4 × 10|2d4 × 10|Starting Gold}",
+				"goldAlternative": "{@dice 2d4 × 10|2d4 × 10|起始金錢}",
 				"defaultData": [
 					{
 						"a": [
@@ -99,8 +100,8 @@
 			"classTableGroups": [
 				{
 					"colLabels": [
-						"Rages",
-						"Rage Damage"
+						"狂暴次數",
+						"狂暴傷害"
 					],
 					"rows": [
 						[
@@ -237,7 +238,7 @@
 							}
 						],
 						[
-							"Unlimited",
+							"無限",
 							{
 								"type": "bonus",
 								"value": 4
@@ -247,69 +248,73 @@
 				}
 			],
 			"classFeatures": [
-				"Rage|Barbarian||1",
-				"Unarmored Defense|Barbarian||1",
-				"Danger Sense|Barbarian||2",
+				"狂暴|Barbarian||1",
+				"無甲防禦|Barbarian||1",
+				"險境感知|Barbarian||2",
 				"Survival Instincts|Barbarian||2|UAClassFeatureVariants",
-				"Reckless Attack|Barbarian||2",
+				"魯莽攻擊|Barbarian||2",
 				{
-					"classFeature": "Primal Path|Barbarian||3",
+					"classFeature": "原初道途|Barbarian||3",
 					"gainSubclassFeature": true
 				},
 				"Primal Knowledge|Barbarian||3|TCE",
-				"Ability Score Improvement|Barbarian||4",
+				"屬性值提升|Barbarian||4",
 				"Proficiency Versatility|Barbarian||4|UAClassFeatureVariants",
-				"Extra Attack|Barbarian||5",
-				"Fast Movement|Barbarian||5",
+				"額外攻擊|Barbarian||5",
+				"快速移動|Barbarian||5",
 				"Instinctive Pounce|Barbarian||5|UAClassFeatureVariants",
 				{
-					"classFeature": "Path Feature|Barbarian||6",
+					"classFeature": "道途能力|Barbarian||6",
 					"gainSubclassFeature": true
 				},
-				"Feral Instinct|Barbarian||7",
+				"野性直覺|Barbarian||7",
 				"Instinctive Pounce|Barbarian||7|TCE",
-				"Ability Score Improvement|Barbarian||8",
+				"屬性值提升|Barbarian||8",
 				"Proficiency Versatility|Barbarian||8|UAClassFeatureVariants",
-				"Brutal Critical (1 die)|Barbarian||9",
+				"凶蠻重擊(1顆骰)|Barbarian||9",
 				{
-					"classFeature": "Path feature|Barbarian||10",
+					"classFeature": "道途能力|Barbarian||10",
 					"gainSubclassFeature": true
 				},
-				"Relentless Rage|Barbarian||11",
-				"Ability Score Improvement|Barbarian||12",
+				"頑強狂暴|Barbarian||11",
+				"屬性值提升|Barbarian||12",
 				"Proficiency Versatility|Barbarian||12|UAClassFeatureVariants",
-				"Brutal Critical (2 dice)|Barbarian||13",
+				"凶蠻重擊(2顆骰)|Barbarian||13",
 				{
-					"classFeature": "Path feature|Barbarian||14",
+					"classFeature": "道途能力|Barbarian||14",
 					"gainSubclassFeature": true
 				},
-				"Persistent Rage|Barbarian||15",
-				"Ability Score Improvement|Barbarian||16",
+				"持久狂暴|Barbarian||15",
+				"屬性值提升|Barbarian||16",
 				"Proficiency Versatility|Barbarian||16|UAClassFeatureVariants",
-				"Brutal Critical (3 dice)|Barbarian||17",
-				"Indomitable Might|Barbarian||18",
-				"Ability Score Improvement|Barbarian||19",
+				"凶蠻重擊(3顆骰)|Barbarian||17",
+				"不屈勇武|Barbarian||18",
+				"屬性值提升|Barbarian||19",
 				"Proficiency Versatility|Barbarian||19|UAClassFeatureVariants",
-				"Primal Champion|Barbarian||20"
+				"原初勇士|Barbarian||20"
 			],
 			"subclassTitle": "Primal Path",
 			"subclasses": [
 				{
-					"name": "Path of the Berserker",
-					"shortName": "Berserker",
+					"name": "狂戰士道途",
+					"ENG_name": "Path of the Berserker",
+					"shortName": "狂戰士",
+					"ENG_shortName": "Berserker",
 					"source": "PHB",
 					"page": 49,
 					"srd": true,
 					"subclassFeatures": [
-						"Path of the Berserker|Barbarian||Berserker||3",
-						"Mindless Rage|Barbarian||Berserker||6",
-						"Intimidating Presence|Barbarian||Berserker||10",
-						"Retaliation|Barbarian||Berserker||14"
+						"狂戰士道途|Barbarian||Berserker||3",
+						"無我狂暴|Barbarian||Berserker||6",
+						"威懾之姿|Barbarian||Berserker||10",
+						"復仇|Barbarian||Berserker||14"
 					]
 				},
 				{
-					"name": "Path of the Totem Warrior",
-					"shortName": "Totem Warrior",
+					"name": "圖騰勇士道途",
+					"ENG_name": "Path of the Totem Warrior",
+					"shortName": "圖騰勇士",
+					"ENG_shortName": "Totem Warrior",
 					"source": "PHB",
 					"page": 50,
 					"additionalSpells": [
@@ -326,22 +331,24 @@
 						}
 					],
 					"subclassFeatures": [
-						"Path of the Totem Warrior|Barbarian||Totem Warrior||3",
-						"Aspect of the Beast|Barbarian||Totem Warrior||6",
-						"Spirit Walker|Barbarian||Totem Warrior||10",
+						"圖騰勇士道途|Barbarian||Totem Warrior||3",
+						"獸之形|Barbarian||Totem Warrior||6",
+						"精魂行者|Barbarian||Totem Warrior||10",
 						"Totemic Attunement|Barbarian||Totem Warrior||14"
 					]
 				},
 				{
-					"name": "Path of the Battlerager",
-					"shortName": "Battlerager",
+					"name": "戰狂道途",
+					"ENG_name": "Path of the Battlerager",
+					"shortName": "狂戰",
+					"ENG_shortName": "Battlerager",
 					"source": "SCAG",
 					"page": 121,
 					"subclassFeatures": [
-						"Path of the Battlerager|Barbarian||Battlerager|SCAG|3",
-						"Reckless Abandon|Barbarian||Battlerager|SCAG|6",
-						"Battlerager Charge|Barbarian||Battlerager|SCAG|10",
-						"Spiked Retribution|Barbarian||Battlerager|SCAG|14"
+						"戰狂道途|Barbarian||Battlerager|SCAG|3",
+						"魯莽放蕩|Barbarian||Battlerager|SCAG|6",
+						"戰狂衝鋒|Barbarian||Battlerager|SCAG|10",
+						"尖刺反擊|Barbarian||Battlerager|SCAG|14"
 					]
 				},
 				{
@@ -398,8 +405,9 @@
 					]
 				},
 				{
-					"name": "Path of the Ancestral Guardian",
-					"shortName": "Ancestral Guardian",
+					"name": "先祖守衛道途",
+					"ENG_name": "Path of the Ancestral Guardian",
+					"shortName": "先祖守衛",
 					"source": "XGE",
 					"page": 9,
 					"spellcastingAbility": "wis",
@@ -414,34 +422,38 @@
 						}
 					],
 					"subclassFeatures": [
-						"Path of the Ancestral Guardian|Barbarian||Ancestral Guardian|XGE|3",
-						"Spirit Shield|Barbarian||Ancestral Guardian|XGE|6",
-						"Consult the Spirits|Barbarian||Ancestral Guardian|XGE|10",
-						"Vengeful Ancestors|Barbarian||Ancestral Guardian|XGE|14"
+						"先祖守衛道途|Barbarian||Ancestral Guardian|XGE|3",
+						"精魂之盾|Barbarian||Ancestral Guardian|XGE|6",
+						"問道精魂|Barbarian||Ancestral Guardian|XGE|10",
+						"復仇先祖|Barbarian||Ancestral Guardian|XGE|14"
 					]
 				},
 				{
-					"name": "Path of the Storm Herald",
-					"shortName": "Storm Herald",
+					"name": "風暴先驅道途",
+					"ENG_name": "Path of the Storm Herald",
+					"shortName": "風暴先驅",
+					"ENG_shortName": "Storm Herald",
 					"source": "XGE",
 					"page": 10,
 					"subclassFeatures": [
-						"Path of the Storm Herald|Barbarian||Storm Herald|XGE|3",
-						"Storm Soul|Barbarian||Storm Herald|XGE|6",
-						"Shielding Storm|Barbarian||Storm Herald|XGE|10",
-						"Raging Storm|Barbarian||Storm Herald|XGE|14"
+						"風暴先驅道途|Barbarian||Storm Herald|XGE|3",
+						"風暴之魂|Barbarian||Storm Herald|XGE|6",
+						"護盾風暴|Barbarian||Storm Herald|XGE|10",
+						"狂怒風暴|Barbarian||Storm Herald|XGE|14"
 					]
 				},
 				{
-					"name": "Path of the Zealot",
-					"shortName": "Zealot",
+					"name": "狂熱者道途",
+					"ENG_name": "Path of the Zealot",
+					"shortName": "狂熱者",
+					"ENG_shortName": "Zealot",
 					"source": "XGE",
 					"page": 11,
 					"subclassFeatures": [
-						"Path of the Zealot|Barbarian||Zealot|XGE|3",
-						"Fanatical Focus|Barbarian||Zealot|XGE|6",
-						"Zealous Presence|Barbarian||Zealot|XGE|10",
-						"Rage beyond Death|Barbarian||Zealot|XGE|14"
+						"狂熱者道途|Barbarian||Zealot|XGE|3",
+						"狂熱專注|Barbarian||Zealot|XGE|6",
+						"狂熱之姿|Barbarian||Zealot|XGE|10",
+						"怒不畏死|Barbarian||Zealot|XGE|14"
 					]
 				},
 				{
@@ -793,7 +805,8 @@
 	],
 	"classFeature": [
 		{
-			"name": "Rage",
+			"name": "狂暴",
+			"ENG_name": "Rage",
 			"source": "PHB",
 			"page": 46,
 			"srd": true,
@@ -801,23 +814,24 @@
 			"classSource": "PHB",
 			"level": 1,
 			"entries": [
-				"In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action.",
-				"While raging, you gain the following benefits if you aren't wearing heavy armor:",
+				"在戰鬥中，你帶著原初的狂怒作戰。在你的回合，你能夠以一個附贈動作進入狂暴。",
+				"當處於狂暴時，若你未穿戴重甲，你獲得下列好處：",
 				{
 					"type": "list",
 					"items": [
-						"You have advantage on Strength checks and Strength saving throws.",
-						"When you make a melee weapon attack using Strength, you gain a +2 bonus to the damage roll. This bonus increases as you level.",
-						"You have resistance to bludgeoning, piercing, and slashing damage."
+						"你在力量檢定和力量豁免中具有優勢。",
+						"當你進行一次使用力量的近戰武器攻擊時，你在傷害骰上獲得+2加值。這個加值會隨著你的等級而增加。",
+						"你對鈍擊、穿刺、和劈砍傷害具有抗性。"
 					]
 				},
-				"If you are able to cast spells, you can't cast them or concentrate on them while raging.",
-				"Your rage lasts for 1 minute. It ends early if you are knocked {@condition unconscious} or if your turn ends and you haven't attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on your turn as a bonus action.",
-				"Once you have raged the maximum number of times for your barbarian level, you must finish a long rest before you can rage again. You may rage 2 times at 1st level, 3 at 3rd, 4 at 6th, 5 at 12th, and 6 at 17th."
+				"若你能夠施放法術，則你在狂暴期間無法施放它們或維持法術上的專注。",
+				"你的狂暴持續1分鐘。它會在你被擊倒{@condition 昏迷}時提前結束，或若你從上回合到這回合結束時都沒有攻擊一個敵意生物或受到傷害，則狂暴也將提前結束。你也可以在你的回合以一個附贈動作結束你的狂暴﹐",
+				"一旦你狂暴的次數達到你當前野蠻人等級所能狂暴的最大次數，你就必須要完成一次長休才能夠再次狂暴。你在1級時可以狂暴二次，3級時三次，6級時四次，12級時五次，以及17級時六次。"
 			]
 		},
 		{
-			"name": "Unarmored Defense",
+			"name": "無甲防禦",
+			"ENG_name": "Unarmored Defense",
 			"source": "PHB",
 			"page": 46,
 			"srd": true,
@@ -825,11 +839,12 @@
 			"classSource": "PHB",
 			"level": 1,
 			"entries": [
-				"While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit."
+				"當你未穿戴護甲時，你的AC等於10 + 你的敏捷調整值 + 你的體質調整值。你可以使用盾牌而仍獲得這個好處。"
 			]
 		},
 		{
-			"name": "Danger Sense",
+			"name": "險境感知",
+			"ENG_name": "Danger Sense",
 			"source": "PHB",
 			"page": 46,
 			"srd": true,
@@ -837,11 +852,12 @@
 			"classSource": "PHB",
 			"level": 2,
 			"entries": [
-				"At 2nd level, you gain an uncanny sense of when things nearby aren't as they should be, giving you an edge when you dodge away from danger. You have advantage on Dexterity saving throws against effects that you can see, such as traps and spells. To gain this benefit, you can't be {@condition blinded}, {@condition deafened}, or {@condition incapacitated}."
+				"在2級時，你獲得一種能查覺到周遭異狀的超常感知能力，讓你在躲避危險時掌握先機。你在對抗你所能見的效果時所進行的敏捷豁免中具有優勢，像是陷阱和法術。要獲得此好處，你不能處於{@condition 目盲}、{@condition 耳聾}、或{@condition 無力}狀態。"
 			]
 		},
 		{
-			"name": "Reckless Attack",
+			"name": "魯莽攻擊",
+			"ENG_name": "Reckless Attack",
 			"source": "PHB",
 			"page": 46,
 			"srd": true,
@@ -849,7 +865,7 @@
 			"classSource": "PHB",
 			"level": 2,
 			"entries": [
-				"Starting at 2nd level, you can throw aside all concern for defense to attack with fierce desperation. When you make your first attack on your turn, you can decide to attack recklessly. Doing so gives you advantage on melee weapon attack rolls using Strength during this turn, but attack rolls against you have advantage until your next turn."
+				"從2級開始，你可以拋下防禦以展開不顧一切的猛烈攻擊。當你在你的回合進行你的第一次攻擊時，你可以選擇魯莽地攻擊。這麼做會讓你在該回合間所有使用力量的近戰武器攻擊檢定具有優勢，但直到你的下個回合，所有對你進行的攻擊檢定也將具有優勢。"
 			]
 		},
 		{
@@ -880,7 +896,8 @@
 			]
 		},
 		{
-			"name": "Primal Path",
+			"name": "原初道途",
+			"ENG_name": "Primal Path",
 			"source": "PHB",
 			"page": 46,
 			"srd": true,
@@ -888,11 +905,12 @@
 			"classSource": "PHB",
 			"level": 3,
 			"entries": [
-				"At 3rd level, you choose a path that shapes the nature of your rage from the list of available paths. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels."
+				"在3級時，你從可選道途列表中選擇一種形塑你憤怒本質的道途。你的選擇將在3級、6級、10級、和14級時賦予你新的能力。"
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 46,
 			"srd": true,
@@ -900,8 +918,8 @@
 			"classSource": "PHB",
 			"level": 4,
 			"entries": [
-				"When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"當你在此職業升至4級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -919,7 +937,8 @@
 			]
 		},
 		{
-			"name": "Extra Attack",
+			"name": "額外攻擊",
+			"ENG_name": "Extra Attack",
 			"source": "PHB",
 			"page": 46,
 			"srd": true,
@@ -927,11 +946,12 @@
 			"classSource": "PHB",
 			"level": 5,
 			"entries": [
-				"Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
+				"從5級開始，每當你在你的回合採取{@action 攻擊}動作，你可以攻擊二次，而非一次。"
 			]
 		},
 		{
-			"name": "Fast Movement",
+			"name": "快速移動",
+			"ENG_name": "Fast Movement",
 			"source": "PHB",
 			"page": 46,
 			"srd": true,
@@ -939,7 +959,7 @@
 			"classSource": "PHB",
 			"level": 5,
 			"entries": [
-				"Starting at 5th level, your speed increases by 10 feet while you aren't wearing heavy armor."
+				"從5級開始，當你未穿戴重甲時，你的移動速度增加10呎。"
 			]
 		},
 		{
@@ -956,7 +976,8 @@
 			]
 		},
 		{
-			"name": "Path Feature",
+			"name": "道途能力",
+			"ENG_name": "Path Feature",
 			"source": "PHB",
 			"page": 46,
 			"srd": true,
@@ -964,11 +985,12 @@
 			"classSource": "PHB",
 			"level": 6,
 			"entries": [
-				"At 6th level, you gain a feature from your Primal Path."
+				"在6級時，你獲得一個來自你原初道途的能力。"
 			]
 		},
 		{
-			"name": "Feral Instinct",
+			"name": "野性直覺",
+			"ENG_name": "Feral Instinct",
 			"source": "PHB",
 			"page": 46,
 			"srd": true,
@@ -976,8 +998,8 @@
 			"classSource": "PHB",
 			"level": 7,
 			"entries": [
-				"By 7th level, your instincts are so honed that you have advantage on initiative rolls.",
-				"Additionally, if you are surprised at the beginning of combat and aren't {@condition incapacitated}, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn."
+				"從7級起，你的直覺是如此犀利，你在先攻骰中具有優勢。",
+				"此外，若你在戰鬥開始時被突襲且未陷入{@condition 無力}狀態，則你可以在你的第一個回合中如常行動。若你這麼做，你必須在該回合進行任何行動前進入狂暴。"
 			]
 		},
 		{
@@ -994,7 +1016,8 @@
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 46,
 			"srd": true,
@@ -1002,8 +1025,8 @@
 			"classSource": "PHB",
 			"level": 8,
 			"entries": [
-				"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM uses the optional Feats, you can instead take a feat."
+				"當你在此職業升至8級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -1021,7 +1044,8 @@
 			]
 		},
 		{
-			"name": "Brutal Critical (1 die)",
+			"name": "凶蠻重擊(1顆骰)",
+			"ENG_name": "Brutal Critical (1 die)",
 			"source": "PHB",
 			"page": 46,
 			"srd": true,
@@ -1029,12 +1053,13 @@
 			"classSource": "PHB",
 			"level": 9,
 			"entries": [
-				"Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack.",
-				"This increases to two additional dice at 13th level and three additional dice at 17th level."
+				"從9級開始，你可以在決定近戰攻擊的重擊所造成的額外傷害時額外骰一顆武器傷害骰。",
+				"這個能力會在13級時增加至二顆額外的傷害骰，在17級時增加至三顆額外的傷害骰。"
 			]
 		},
 		{
-			"name": "Path feature",
+			"name": "道途能力",
+			"ENG_name": "Path Feature",
 			"source": "PHB",
 			"page": 46,
 			"srd": true,
@@ -1042,11 +1067,12 @@
 			"classSource": "PHB",
 			"level": 10,
 			"entries": [
-				"At 10th level, you gain a feature from your Primal Path."
+				"在10級時，你獲得一個來自你原初道途的能力。"
 			]
 		},
 		{
-			"name": "Relentless Rage",
+			"name": "頑強狂暴",
+			"ENG_name": "Relentless Rage",
 			"source": "PHB",
 			"page": 46,
 			"srd": true,
@@ -1054,12 +1080,13 @@
 			"classSource": "PHB",
 			"level": 11,
 			"entries": [
-				"Starting at 11th level, your rage can keep you fighting despite grievous wounds. If you drop to 0 hit points while you're raging and don't die outright, you can make a DC 10 Constitution saving throw. If you succeed, you drop to 1 hit point instead.",
-				"Each time you use this feature after the first, the DC increases by 5. When you finish a short or long rest, the DC resets to 10."
+				"從11級開始，你的狂暴讓你即使身受重傷也可以持續戰鬥。若你在狂暴中生命值歸零而沒有立即死亡，則你可以進行一次DC 10的體質豁免。若豁免成功，則改為將你的生命值減少至1。",
+				"在你首次使用此能力後的每次，這個豁免檢定的DC都會增加5。當你完成一次短休或長休後，這個豁免檢定的DC將會重置為10。"
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 46,
 			"srd": true,
@@ -1067,8 +1094,8 @@
 			"classSource": "PHB",
 			"level": 12,
 			"entries": [
-				"When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM uses the optional Feats, you can instead take a feat."
+				"當你在此職業升至12級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -1086,7 +1113,8 @@
 			]
 		},
 		{
-			"name": "Brutal Critical (2 dice)",
+			"name": "凶蠻重擊(2顆骰)",
+			"ENG_name": "Brutal Critical (2 dice)",
 			"source": "PHB",
 			"page": 46,
 			"srd": true,
@@ -1094,12 +1122,13 @@
 			"classSource": "PHB",
 			"level": 13,
 			"entries": [
-				"At 13th level, you can roll two additional weapon damage dice when determining the extra damage for a critical hit with a melee attack.",
-				"This increases to three additional dice at 17th level."
+				"在13級時，你可以在決定近戰攻擊的重擊所造成的額外傷害時額外骰二顆武器傷害骰。",
+				"這個能力會在17級時增加至三顆額外的傷害骰。"
 			]
 		},
 		{
-			"name": "Path feature",
+			"name": "道途能力",
+			"ENG_name": "Path Feature",
 			"source": "PHB",
 			"page": 46,
 			"srd": true,
@@ -1107,11 +1136,12 @@
 			"classSource": "PHB",
 			"level": 14,
 			"entries": [
-				"At 14th level, you gain a feature from your Primal Path."
+				"在14級時，你獲得一個來自你原初道途的能力。"
 			]
 		},
 		{
-			"name": "Persistent Rage",
+			"name": "持久狂暴",
+			"ENG_name": "Persistent Rage",
 			"source": "PHB",
 			"page": 46,
 			"srd": true,
@@ -1119,11 +1149,12 @@
 			"classSource": "PHB",
 			"level": 15,
 			"entries": [
-				"Beginning at 15th level, your rage is so fierce that it ends early only if you fall {@condition unconscious} or if you choose to end it."
+				"從15級開始，你的狂暴是如此猛烈，以至於它只會在你陷入{@condition 昏迷}或你選擇結束它時提早結束。"
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 46,
 			"srd": true,
@@ -1131,8 +1162,8 @@
 			"classSource": "PHB",
 			"level": 16,
 			"entries": [
-				"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM uses the optional Feats, you can instead take a feat."
+				"當你在此職業升至16級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -1150,7 +1181,8 @@
 			]
 		},
 		{
-			"name": "Brutal Critical (3 dice)",
+			"name": "凶蠻重擊(3顆骰)",
+			"ENG_name": "Brutal Critical (3 dice)",
 			"source": "PHB",
 			"page": 46,
 			"srd": true,
@@ -1158,11 +1190,12 @@
 			"classSource": "PHB",
 			"level": 17,
 			"entries": [
-				"At 17th level, you can roll three additional weapon damage dice when determining the extra damage for a critical hit with a melee attack."
+				"在17級時，你可以在決定近戰攻擊的重擊所造成的額外傷害時額外骰三顆武器傷害骰。"
 			]
 		},
 		{
-			"name": "Indomitable Might",
+			"name": "不屈勇武",
+			"ENG_name": "Indomitable Might",
 			"source": "PHB",
 			"page": 46,
 			"srd": true,
@@ -1170,11 +1203,12 @@
 			"classSource": "PHB",
 			"level": 18,
 			"entries": [
-				"Beginning at 18th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total."
+				"從18級開始，若你力量檢定的總值低於你的力量值，則你可以使用該數值以取代該力量檢定的總值。"
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 46,
 			"srd": true,
@@ -1182,8 +1216,8 @@
 			"classSource": "PHB",
 			"level": 19,
 			"entries": [
-				"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM uses the optional Feats, you can instead take a feat."
+				"當你在此職業升至19級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -1201,7 +1235,8 @@
 			]
 		},
 		{
-			"name": "Primal Champion",
+			"name": "原初勇士",
+			"ENG_name": "Primal Champion",
 			"source": "PHB",
 			"page": 46,
 			"srd": true,
@@ -1209,13 +1244,14 @@
 			"classSource": "PHB",
 			"level": 20,
 			"entries": [
-				"At 20th level, you embody the power of the wilds. Your Strength and Constitution scores increase by 4. Your maximum for those scores is now 24."
+				"在20級時，你本身的存在就體現了荒野的力量。你的力量和體質增加4點。你這些數值的上限現在變更為24。"
 			]
 		}
 	],
 	"subclassFeature": [
 		{
-			"name": "Path of the Berserker",
+			"name": "狂戰士道途",
+			"ENG_name": "Path of the Berserker",
 			"source": "PHB",
 			"page": 49,
 			"srd": true,
@@ -1225,15 +1261,16 @@
 			"subclassSource": "PHB",
 			"level": 3,
 			"entries": [
-				"For some barbarians, rage is a means to an end\u2014that end being violence. The Path of the Berserker is a path of untrammeled fury, slick with blood. As you enter the berserker's rage, you thrill in the chaos of battle, heedless of your own health or well-being.",
+				"對某些野蠻人來說，狂暴是一種達到極致的方式\u2014暴力的極致。狂戰士道途是一條追求鮮血與無拘狂怒的道路。隨著你進入狂戰士的狂暴時，你將在戰鬥的混亂快感中顫慄，捨身忘懷自己的安危。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Frenzy|Barbarian||Berserker||3"
+					"subclassFeature": "狂怒|Barbarian||Berserker||3"
 				}
 			]
 		},
 		{
-			"name": "Frenzy",
+			"name": "狂怒",
+			"ENG_name": "Frenzy",
 			"source": "PHB",
 			"page": 49,
 			"srd": true,
@@ -1244,11 +1281,12 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"Starting when you choose this path at 3rd level, you can go into a frenzy when you rage. If you do so, for the duration of your rage you can make a single melee weapon attack as a bonus action on each of your turns after this one. When your rage ends, you suffer one level of {@condition exhaustion}."
+				"從你在3級時選擇此道途開始，你可以在狂暴時進入狂怒。若你這麼做，則在你狂暴期間，你可以在這之後的你的每個回合以一個附贈動作進行一次近戰武器攻擊。當你的狂暴結束時，你將承受一級的{@condition 力竭}狀態。"
 			]
 		},
 		{
-			"name": "Mindless Rage",
+			"name": "無我狂暴",
+			"ENG_name": "Mindless Rage",
 			"source": "PHB",
 			"page": 49,
 			"srd": true,
@@ -1259,11 +1297,12 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Beginning at 6th level, you can't be {@condition charmed} or {@condition frightened} while raging. If you are {@condition charmed} or {@condition frightened} when you enter your rage, the effect is suspended for the duration of the rage."
+				"從6級開始，你在狂暴期間不會被{@condition 魅惑}或{@condition 恐懼}。若你在進入狂暴時已經被{@condition 魅惑}或{@condition 恐懼}，則該效果將在狂暴期間被壓制。"
 			]
 		},
 		{
-			"name": "Intimidating Presence",
+			"name": "威懾之姿",
+			"ENG_name": "Intimidating Presence",
 			"source": "PHB",
 			"page": 49,
 			"srd": true,
@@ -1274,12 +1313,13 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"Beginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose one creature that you can see within 30 feet of you. If the creature can see or hear you, it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Charisma modifier) or be {@condition frightened} of you until the end of your next turn. On subsequent turns, you can use your action to extend the duration of this effect on the {@condition frightened} creature until the end of your next turn. This effect ends if the creature ends its turn out of line of sight or more than 60 feet away from you.",
-				"If the creature succeeds on its saving throw, you can't use this feature on that creature again for 24 hours."
+				"從10級開始，你可以使用你的動作以用你那可怖的姿態恐嚇他人。當你這麼做時，選擇一個距離你30呎內且你所能看見的生物。若該生物可以看見或聽見你，則它必須成功通過一次睿知豁免（DC等同於8+你的熟練加值+你的魅力調整值），否則將被你{@condition 恐懼}直到你的下個回合結束。在後續的回合，你可以使用你的動作使這個效果對被{@condition 恐懼}生物的影響延長到你的下個回合結束。這個效果會在該生物離開你的視野，或離開你超過60呎距離時結束。",
+				"若該生物成功通過該豁免檢定，則你在接下來的24小時內都不能再對該生物使用此能力。"
 			]
 		},
 		{
-			"name": "Retaliation",
+			"name": "復仇",
+			"ENG_name": "Retaliation",
 			"source": "PHB",
 			"page": 49,
 			"srd": true,
@@ -1290,11 +1330,12 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"Starting at 14th level, when you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon attack against that creature."
+				"從14級開始，當你受到來自一個距離你５呎內生物的傷害時，你可以使用你的反應以對該生物進行一次近戰武器攻擊。"
 			]
 		},
 		{
-			"name": "Bear",
+			"name": "熊",
+			"ENG_name": "Bear",
 			"source": "PHB",
 			"page": 50,
 			"className": "Barbarian",
@@ -1303,11 +1344,12 @@
 			"subclassSource": "PHB",
 			"level": 3,
 			"entries": [
-				"While raging, you have resistance to all damage except psychic damage. The spirit of the bear makes you tough enough to stand up to any punishment."
+				"當狂暴時，你對除了精神傷害以外的所有傷害具有抗性。熊之精魂將使你堅韌無匹，無懼於任何打擊。"
 			]
 		},
 		{
-			"name": "Eagle",
+			"name": "鷹",
+			"ENG_name": "Eagle",
 			"source": "PHB",
 			"page": 50,
 			"className": "Barbarian",
@@ -1316,11 +1358,12 @@
 			"subclassSource": "PHB",
 			"level": 3,
 			"entries": [
-				"While you're raging and aren't wearing heavy armor, other creatures have disadvantage on opportunity attack rolls against you, and you can use the {@action Dash} action as a bonus action on your turn. The spirit of the eagle makes you into a predator who can weave through the fray with ease."
+				"當你狂暴且未穿著重甲時，其他生物對你所進行的藉機攻擊將具有劣勢，且你可以在你的回合以一個附贈動作使用{@action 疾走}動作。鷹之精魂將使你成為能在戰場中自由穿梭的獵殺者。"
 			]
 		},
 		{
-			"name": "Path of the Totem Warrior",
+			"name": "圖騰勇士道途",
+			"ENG_name": "Path of the Totem Warrior",
 			"source": "PHB",
 			"page": 50,
 			"className": "Barbarian",
@@ -1329,20 +1372,21 @@
 			"subclassSource": "PHB",
 			"level": 3,
 			"entries": [
-				"The Path of the Totem Warrior is a spiritual journey, as the barbarian accepts a spirit animal as guide, protector, and inspiration. In battle, your totem spirit fills you with supernatural might, adding magical fuel to your barbarian rage.",
-				"Most barbarian tribes consider a totem animal to be kin to a particular clan. In such cases, it is unusual for an individual to have more than one totem animal spirit, though exceptions exist.",
+				"圖騰勇士的道途是一趟靈魂修煉的旅程，野蠻人將接受一種精魂野獸做為嚮導、保護者、和啟發者。在戰鬥中，你的圖騰精魂將超自然的力量灌輸於你，為你的狂暴注入魔法力量。",
+				"大部分的野蠻人部落都將圖騰動物視作氏族的一員，因此很少會有人同時擁有兩種或以上的圖騰精魂，盡管仍然存在這樣的特例。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Spirit Seeker|Barbarian||Totem Warrior||3"
+					"subclassFeature": "精魂尋訪者|Barbarian||Totem Warrior||3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Totem Spirit|Barbarian||Totem Warrior||3"
+					"subclassFeature": "圖騰精魂|Barbarian||Totem Warrior||3"
 				}
 			]
 		},
 		{
-			"name": "Wolf",
+			"name": "狼",
+			"ENG_name": "Wolf",
 			"source": "PHB",
 			"page": 50,
 			"className": "Barbarian",
@@ -1351,11 +1395,12 @@
 			"subclassSource": "PHB",
 			"level": 3,
 			"entries": [
-				"While you're raging, your friends have advantage on melee attack rolls against any creature within 5 feet of you that is hostile to you. The spirit of the wolf makes you a leader of hunters."
+				"當你狂暴時，你的盟友在對任何距離你5呎內且對你有敵意的生物所進行的近戰攻擊檢定具有優勢。狼之精魂將使你成為獵手中的領袖。"
 			]
 		},
 		{
-			"name": "Spirit Seeker",
+			"name": "精魂尋訪者",
+			"ENG_name": "Spirit Seeker",
 			"source": "PHB",
 			"page": 50,
 			"className": "Barbarian",
@@ -1365,11 +1410,12 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"Yours is a path that seeks attunement with the natural world, giving you a kinship with beasts. At 3rd level when you adopt this path, you gain the ability to cast the {@spell beast sense} and {@spell speak with animals} spells, but only as rituals, as described in {@book chapter 10|PHB|10|rituals}."
+				"你追求於與大自然調和知道，使你與動物建立了親密的關係。從你在3級選擇此道途開始，你獲得施放{@spell 野獸知覺}和{@spell 動物交談術}法術的能力，但只能透過儀式施展，參見{@book 第十章|PHB|10|rituals}的描述。"
 			]
 		},
 		{
-			"name": "Totem Spirit",
+			"name": "圖騰精魂",
+			"ENG_name": "Totem Spirit",
 			"source": "PHB",
 			"page": 50,
 			"className": "Barbarian",
@@ -1379,38 +1425,39 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"At 3rd level, when you adopt this path, you choose a totem spirit and gain its feature. You must make or acquire a physical totem object\u2014an amulet or similar adornment\u2014that incorporates fur or feathers, claws, teeth, or bones of the totem animal. At your option, you also gain minor physical attributes that are reminiscent of your totem spirit. For example, if you have a bear totem spirit, you might be unusually hairy and thick-skinned, or if your totem is the eagle, your eyes turn bright yellow.",
-				"Your totem animal might be an animal related to those listed here but more appropriate to your homeland. For example, you could choose a hawk or vulture in place of an eagle.",
+				"在3級時，當你選擇此道途時，你選擇一種圖騰精魂並獲得它的能力。你必須製造或獲得一個象徵圖騰野獸的獸毛、翼羽、利爪、牙齒、或骨頭的圖騰物體\u2014例如護身符或其他類似的飾品。根據你的選擇，你也可以獲得一些讓人聯想到你圖騰精魂的細微身體特徵。舉例而言，若你擁有熊的圖騰精魂，你可能會有著特別茂盛的毛髮和厚實的肌膚。若你的圖騰為鷹，則你的瞳孔可能變成明亮的黃色。",
+				"你的圖騰動物可能會是一個與下列這些有關，但更適合你家鄉的動物。舉例來說，你可以選擇隼鳥或鷲來代替鷹。",
 				{
 					"type": "options",
 					"count": 1,
 					"entries": [
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Bear|Barbarian||Totem Warrior||3"
+							"subclassFeature": "熊|Barbarian||Totem Warrior||3"
 						},
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Eagle|Barbarian||Totem Warrior||3"
+							"subclassFeature": "鷹|Barbarian||Totem Warrior||3"
 						},
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Elk|Barbarian|SCAG|Totem Warrior||3|SCAG"
+							"subclassFeature": "鹿|Barbarian|SCAG|Totem Warrior||3|SCAG"
 						},
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Tiger|Barbarian|SCAG|Totem Warrior||3|SCAG"
+							"subclassFeature": "虎|Barbarian|SCAG|Totem Warrior||3|SCAG"
 						},
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Wolf|Barbarian||Totem Warrior||3"
+							"subclassFeature": "狼|Barbarian||Totem Warrior||3"
 						}
 					]
 				}
 			]
 		},
 		{
-			"name": "Bear",
+			"name": "熊",
+			"ENG_name": "Bear",
 			"source": "PHB",
 			"page": 50,
 			"className": "Barbarian",
@@ -1419,11 +1466,12 @@
 			"subclassSource": "PHB",
 			"level": 6,
 			"entries": [
-				"You gain the might of a bear. Your carrying capacity (including maximum load and maximum lift) is doubled, and you have advantage on Strength checks made to push, pull, lift, or break objects."
+				"你獲得熊之力量。你的負載能力（包括最大負重和最大舉重）變為兩倍，且你在拖曳、推動、提舉、或破壞物體時所進行的力量檢定將具有優勢。"
 			]
 		},
 		{
-			"name": "Eagle",
+			"name": "鷹",
+			"ENG_name": "Eagle",
 			"source": "PHB",
 			"page": 50,
 			"className": "Barbarian",
@@ -1432,11 +1480,12 @@
 			"subclassSource": "PHB",
 			"level": 6,
 			"entries": [
-				"You gain the eyesight of an eagle. You can see up to 1 mile away with no difficulty, able to discern even fine details as though looking at something no more than 100 feet away from you. Additionally, dim light doesn't impose disadvantage on your Wisdom ({@skill Perception}) checks."
+				"你獲得鷹之銳目。你可以毫無困難地看見最遠1哩的距離，甚至能辨別出最細微的細節，就如同在檢視距離你不超過100呎的事物一樣。此外，微光光照並不會使你的睿知（{@skill 感知}）檢定承受劣勢。"
 			]
 		},
 		{
-			"name": "Wolf",
+			"name": "狼",
+			"ENG_name": "Wolf",
 			"source": "PHB",
 			"page": 50,
 			"className": "Barbarian",
@@ -1445,11 +1494,12 @@
 			"subclassSource": "PHB",
 			"level": 6,
 			"entries": [
-				"You gain the hunting sensibilities of a wolf. You can track other creatures while traveling at a fast pace, and you can move stealthily while traveling at a normal pace."
+				"你獲得狼的狩獵敏銳。你能夠以快速步速追蹤其他生物，且你能夠以正常步速隱匿移動。"
 			]
 		},
 		{
-			"name": "Aspect of the Beast",
+			"name": "獸之形",
+			"ENG_name": "Aspect of the Beast",
 			"source": "PHB",
 			"page": 50,
 			"className": "Barbarian",
@@ -1459,37 +1509,38 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"At 6th level, you gain a magical benefit based on the totem animal of your choice. You can choose the same animal you selected at 3rd level or a different one.",
+				"在6級時，你獲得一個基於你所選圖騰動物的魔法益處。你可以選擇一個與你在3級時所選相同或不同的動物。",
 				{
 					"type": "options",
 					"count": 1,
 					"entries": [
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Bear|Barbarian||Totem Warrior||6"
+							"subclassFeature": "熊|Barbarian||Totem Warrior||6"
 						},
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Eagle|Barbarian||Totem Warrior||6"
+							"subclassFeature": "鷹|Barbarian||Totem Warrior||6"
 						},
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Elk|Barbarian|SCAG|Totem Warrior||6|SCAG"
+							"subclassFeature": "鹿|Barbarian|SCAG|Totem Warrior||6|SCAG"
 						},
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Tiger|Barbarian|SCAG|Totem Warrior||6|SCAG"
+							"subclassFeature": "虎|Barbarian|SCAG|Totem Warrior||6|SCAG"
 						},
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Wolf|Barbarian||Totem Warrior||6"
+							"subclassFeature": "狼|Barbarian||Totem Warrior||6"
 						}
 					]
 				}
 			]
 		},
 		{
-			"name": "Spirit Walker",
+			"name": "精魂行者",
+			"ENG_name": "Spirit Walker",
 			"source": "PHB",
 			"page": 50,
 			"className": "Barbarian",
@@ -1499,11 +1550,12 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"At 10th level, you can cast the {@spell commune with nature} spell, but only as a ritual. When you do so, a spiritual version of one of the animals you chose for Totem Spirit or Aspect of the Beast appears to you to convey the information you seek."
+				"在10級時，你可以施放{@spell 問道自然}法術，但只能透過儀式施展。當你這麼做時，你在圖騰精魂或獸之形所選擇的其中一種動物的靈體版本將會出現並傳達你所尋求的資訊。"
 			]
 		},
 		{
-			"name": "Bear",
+			"name": "熊",
+			"ENG_name": "Bear",
 			"source": "PHB",
 			"page": 50,
 			"className": "Barbarian",
@@ -1512,11 +1564,12 @@
 			"subclassSource": "PHB",
 			"level": 14,
 			"entries": [
-				"While you're raging, any creature within 5 feet of you that's hostile to you has disadvantage on attack rolls against targets other than you or another character with this feature. An enemy is immune to this effect if it can't see or hear you or if it can't be {@condition frightened}."
+				"當你狂暴時，任何距離你5呎內且對你有敵意的生物，將在對你或其他擁有此能力生物以外的目標所進行的攻擊檢定中具有劣勢。若一個敵人無法看見或聽見你、或它不會被{@condition 恐懼}，則它將免疫於這個效果。"
 			]
 		},
 		{
-			"name": "Eagle",
+			"name": "鷹",
+			"ENG_name": "Eagle",
 			"source": "PHB",
 			"page": 50,
 			"className": "Barbarian",
@@ -1525,11 +1578,12 @@
 			"subclassSource": "PHB",
 			"level": 14,
 			"entries": [
-				"While raging, you have a flying speed equal to your current walking speed. This benefit works only in short bursts; you fall if you end your turn in the air and nothing else is holding you aloft."
+				"當狂暴時，你將具有等同於你步行速度的飛行速度。這個好處只會在短時間作用；若你在空中結束你的回合且沒有其他東西讓你維持浮空，則你將墜落。"
 			]
 		},
 		{
-			"name": "Wolf",
+			"name": "狼",
+			"ENG_name": "Wolf",
 			"source": "PHB",
 			"page": 50,
 			"className": "Barbarian",
@@ -1538,7 +1592,7 @@
 			"subclassSource": "PHB",
 			"level": 14,
 			"entries": [
-				"While you're raging, you can use a bonus action on your turn to knock a Large or smaller creature {@condition prone} when you hit it with melee weapon attack."
+				"當你狂暴時，當你在你的回合以一次近戰武器攻擊命中一個體型為大型或更小的生物時，你可以使用一個附贈動作以將它擊倒{@condition 伏地}。"
 			]
 		},
 		{
@@ -1559,30 +1613,31 @@
 					"entries": [
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Bear|Barbarian||Totem Warrior||14"
+							"subclassFeature": "熊|Barbarian||Totem Warrior||14"
 						},
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Eagle|Barbarian||Totem Warrior||14"
+							"subclassFeature": "鷹|Barbarian||Totem Warrior||14"
 						},
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Elk|Barbarian|SCAG|Totem Warrior||14|SCAG"
+							"subclassFeature": "鹿|Barbarian|SCAG|Totem Warrior||14|SCAG"
 						},
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Tiger|Barbarian|SCAG|Totem Warrior||14|SCAG"
+							"subclassFeature": "虎|Barbarian|SCAG|Totem Warrior||14|SCAG"
 						},
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Wolf|Barbarian||Totem Warrior||14"
+							"subclassFeature": "狼|Barbarian||Totem Warrior||14"
 						}
 					]
 				}
 			]
 		},
 		{
-			"name": "Path of the Battlerager",
+			"name": "戰狂道途",
+			"ENG_name": "Path of the Battlerager",
 			"source": "SCAG",
 			"page": 121,
 			"className": "Barbarian",
@@ -1591,19 +1646,20 @@
 			"subclassSource": "SCAG",
 			"level": 3,
 			"entries": [
-				"Known as Kuldjargh (literally \"axe idiot\") in Dwarvish, battleragers are dwarf followers of the gods of war and take the Path of the Battlerager. They specialize in wearing bulky, {@item spiked armor|scag} and throwing themselves into combat, striking with their body itself and giving themselves over to the fury of battle.",
+				"在矮人語中以「庫紮爾夫」聞名（意為「斧頭笨蛋」），戰狂是一群追隨著戰爭之神，並選擇了戰狂道途的矮人們。他們特化於穿著笨重的{@item 釘刺甲|scag}投身戰鬥中，用他們的軀體本身打擊敵人，讓自己揮灑戰鬥的狂怒。",
 				{
 					"type": "refSubclassFeature",
 					"subclassFeature": "Restriction - Dwarves Only|Barbarian||Battlerager|SCAG|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Battlerager Armor|Barbarian||Battlerager|SCAG|3"
+					"subclassFeature": "戰狂護甲|Barbarian||Battlerager|SCAG|3"
 				}
 			]
 		},
 		{
-			"name": "Battlerager Armor",
+			"name": "戰狂護甲",
+			"ENG_name": "Battlerager Armor",
 			"source": "SCAG",
 			"page": 121,
 			"className": "Barbarian",
@@ -1613,9 +1669,9 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"When you choose this path at 3rd level, you gain the ability to use {@item spiked armor|scag} as a weapon.",
-				"While you are wearing {@item spiked armor|scag} and are raging, you can use a bonus action to make one melee weapon attack with your armor spikes at a target within 5 feet of you. If the attack hits, the spikes deal {@damage 1d4} piercing damage. You use your Strength modifier for the attack and damage rolls.",
-				"Additionally, when you use the {@action Attack} action to grapple a creature, the target takes 3 piercing damage if your grapple check succeeds."
+				"當你在3級時選擇此道途，你將獲得把{@item 釘刺甲|scag}做為武器使用的能力。",
+				"當你穿著{@item 釘刺甲|scag}並處於狂暴時，你可以使用一個附贈動作以你護甲上的尖刺對一個距離你5呎內的目標進行一次近戰武器攻擊。若該攻擊命中，該尖刺將造成{@dice 1d4}穿刺傷害。你將力量調整值用於該攻擊的攻擊檢定和傷害骰中。",
+				"此外，當你使用{@action 攻擊}動作以擒抱一個生物時，若你的擒抱檢定成功，目標將受到3點穿刺傷害。"
 			]
 		},
 		{
@@ -1629,12 +1685,13 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"Only dwarves can follow the Path of the Battlerager. The battlerager fills a particular niche in dwarven society and culture.",
-				"Your DM can lift this restriction to better suit the campaign. The restriction exists for the Forgotten Realms. It might not apply to your DM's setting or your DM's version of the Realms."
+				"只有矮人可以追隨戰狂道途。戰狂在矮人的社會和文化中占據了特殊的地位。",
+				"你的DM可以拔除這個限制以使之更符合戰役設定。這個限制是為了被遺忘的國度而存在，但這也許並不適用於你DM的設定，或他那個版本的國度。"
 			]
 		},
 		{
-			"name": "Reckless Abandon",
+			"name": "魯莽放蕩",
+			"ENG_name": "Reckless Abandon",
 			"source": "SCAG",
 			"page": 121,
 			"className": "Barbarian",
@@ -1644,11 +1701,12 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Beginning at 6th level, when you use Reckless Attack while raging, you also gain temporary hit points equal to your Constitution modifier (minimum of 1). They vanish if any of them are left when your rage ends."
+				"從6級開始，當你在狂暴時使用魯莽攻擊，你也將獲得等同於你體質調整值（最少為1）的臨時生命值。若你在狂暴結束時有任何剩餘的這些臨時生命值，則它們將會消失。"
 			]
 		},
 		{
-			"name": "Battlerager Charge",
+			"name": "戰狂衝鋒",
+			"ENG_name": "Battlerager Charge",
 			"source": "SCAG",
 			"page": 121,
 			"className": "Barbarian",
@@ -1658,11 +1716,12 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"Beginning at 10th level, you can take the {@action Dash} action as a bonus action while you are raging."
+				"從10級開始，當你處於狂暴時，你能夠以一個附贈動作採取{@action 疾走}動作。"
 			]
 		},
 		{
-			"name": "Spiked Retribution",
+			"name": "尖刺反擊",
+			"ENG_name": "Spiked Retribution",
 			"source": "SCAG",
 			"page": 121,
 			"className": "Barbarian",
@@ -1672,7 +1731,7 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"Starting at 14th level, when a creature within 5 feet of you hits you with a melee attack, the attacker takes 3 piercing damage if you are raging, aren't {@condition incapacitated}, and are wearing {@item spiked armor|scag}."
+				"從14級開始，當一個距離你5呎內的生物以一次近戰攻擊命中你時，若你處於狂暴，未陷入{@condition 無力}狀態，且正穿著{@item 釘刺甲|scag}，則攻擊者將受到3點穿刺傷害。"
 			]
 		},
 		{
@@ -2155,7 +2214,7 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"At 3rd level, your body reacts to the presence of magic. You can cast the {@spell detect magic} spell without using a spell slot or components. Constitution is your spellcasting ability for this spell. You faintly glow a color corresponding to the school of magic you detect (you choose the colors).",
+				"At 3rd level, your body reacts to the presence of magic. You can cast the {@spell 偵測魔法} spell without using a spell slot or components. Constitution is your spellcasting ability for this spell. You faintly glow a color corresponding to the school of magic you detect (you choose the colors).",
 				"You can use this feature a number of times equal to your Constitution modifier (minimum of once). You regain all expended uses when you finish a long rest."
 			]
 		},
@@ -2642,7 +2701,7 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"At 10th level, you gain the ability to consult with your ancestral spirits and use them to scout far-off lands. When you do so, you cast the {@spell clairvoyance} spell, without needing a spell slot. Rather than creating a spherical sensor, the spell invisibly summons one of your ancestral spirits to the chosen location. Wisdom is your spellcasting ability for the spell. After you cast the spell in this way, you can't do so again until you finish a short or long rest."
+				"At 10th level, you gain the ability to consult with your ancestral spirits and use them to scout far-off lands. When you do so, you cast the {@spell 銳眼術} spell, without needing a spell slot. Rather than creating a spherical sensor, the spell invisibly summons one of your ancestral spirits to the chosen location. Wisdom is your spellcasting ability for the spell. After you cast the spell in this way, you can't do so again until you finish a short or long rest."
 			]
 		},
 		{
@@ -2660,7 +2719,8 @@
 			]
 		},
 		{
-			"name": "Path of the Ancestral Guardian",
+			"name": "先祖守衛道途",
+			"ENG_name": "Path of the Ancestral Guardian",
 			"source": "XGE",
 			"page": 9,
 			"className": "Barbarian",
@@ -2669,16 +2729,17 @@
 			"subclassSource": "XGE",
 			"level": 3,
 			"entries": [
-				"Some barbarians hail from cultures that revere their ancestors. These tribes teach that the warriors of the past linger in the world as mighty spirits, who can guide and protect the living. When a barbarian who follows this path rages, the barbarian contacts the spirit world and calls on these guardian spirits for aid.",
-				"Barbarians who draw on their ancestral guardians can better fight to protect their tribes and their allies. In order to cement ties to their ancestral guardians, barbarians who follow this path cover themselves in elaborate tattoos that celebrate their ancestors' deeds. These tattoos tell sagas of victories against terrible monsters and other fearsome rivals.",
+				"有些野蠻人來自有著崇敬祖先文化的部落。這些部落教導著，過往的戰士們將做為強大的精魂徘徊於世，引導並保護著活著的人們。當一個追隨這條道途的野蠻人進入狂暴，他將連繫上精魂靈界，並呼求這些守衛精魂的協助。",
+				"那些借用他們先祖守衛的野蠻人們能夠更好地奮戰以守衛他們的部落和盟友。為了牢固他們與先祖守衛的聯繫，追隨這條道途的野蠻人會以歌頌他們先祖事蹟的精巧紋身覆蓋他們的身體。這些紋身描述著他們對抗可怕怪物其他可怖敵人的傳奇勝利。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Ancestral Protectors|Barbarian||Ancestral Guardian|XGE|3"
+					"subclassFeature": "先祖守護|Barbarian||Ancestral Guardian|XGE|3"
 				}
 			]
 		},
 		{
-			"name": "Ancestral Protectors",
+			"name": "先祖守護",
+			"ENG_name": "Ancestral Protectors",
 			"source": "XGE",
 			"page": 9,
 			"className": "Barbarian",
@@ -2688,11 +2749,12 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"Starting when you choose this path at 3rd level, spectral warriors appear when you enter your rage. While you're raging, the first creature you hit with an attack on your turn becomes the target of the warriors, which hinder its attacks. Until the start of your next turn, that target has disadvantage on any attack roll that isn't against you, and when the target hits a creature other than you with an attack, that creature has resistance to the damage dealt by the attack. The effect on the target ends early if your rage ends."
+				"從你在3級時選擇此道途開始，靈體勇士將在你進入狂暴時出現。當你狂暴時，你在你回合以一次攻擊命中的第一個生物將成為這些勇士的目標，這些勇士將阻礙該生物的攻擊。直到你的下個回合開始前，目標在任何對你以外的目標所進行的攻擊檢定中具有劣勢，且當目標以一次攻擊命中一個你以外的生物，該生物將對該攻擊所造成的傷害具有抗性。這個效果對目標的影響將在你結束狂暴時提早結束。"
 			]
 		},
 		{
-			"name": "Spirit Shield",
+			"name": "精魂之盾",
+			"ENG_name": "Spirit Shield",
 			"source": "XGE",
 			"page": 9,
 			"className": "Barbarian",
@@ -2702,12 +2764,13 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Beginning at 6th level, the guardian spirits that aid you can provide supernatural protection to those you defend. If you are raging and another creature you can see within 30 feet of you takes damage, you can use your reaction to reduce that damage by {@dice 2d6}.",
-				"When you reach certain levels in this class, you can reduce the damage by more: by {@dice 3d6} at 10th level and by {@dice 4d6} at 14th level."
+				"從6級開始，援助你的守衛精魂可以為那些你所守護的人們提供超自然防護。若你在狂暴中且另一個距離你30呎內且你所能看見的生物受到傷害，你可以使用你的反應以將該傷害減少{@dice 2d6}。",
+				"當你在此職業升至特定等級時，你可以減少更多的傷害：10級時改為減少{@dice 3d6}，以及14級時{@dice 4d6}。"
 			]
 		},
 		{
-			"name": "Consult the Spirits",
+			"name": "問道精魂",
+			"ENG_name": "Consult the Spirits",
 			"source": "XGE",
 			"page": 9,
 			"className": "Barbarian",
@@ -2717,12 +2780,13 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"At 10th level, you gain the ability to consult with your ancestral spirits. When you do so, you cast the {@spell augury} or {@spell clairvoyance} spell, without using a spell slot or material components. Rather than creating a spherical sensor, this use of {@spell clairvoyance} invisibly summons one of your ancestral spirits to the chosen location. Wisdom is your spellcasting ability for these spells.",
-				"After you cast either spell in this way, you can't use this feature again until you finish a short or long rest."
+				"在10級時，你獲得與你先祖精魂交流的能力。當你這麼做時，你可以施放{@spell 卜筮}或{@spell 銳眼術}法術，而無需使用法術位或材料構材。透過這個方式使用{@spell 銳眼術}並不會創造出靈體感應器，而是在所選區域召喚出你的其中一個先祖精魂。你施展這些法術的施法屬性為睿知。",
+				"當你透過這個方式施放其中任意一個法術，直到你完成一次短休或長休之前你都不能再使用此能力。"
 			]
 		},
 		{
-			"name": "Vengeful Ancestors",
+			"name": "復仇先祖",
+			"ENG_name": "Vengeful Ancestors",
 			"source": "XGE",
 			"page": 9,
 			"className": "Barbarian",
@@ -2732,11 +2796,12 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"At 14th level, your ancestral spirits grow powerful enough to retaliate. When you use your Spirit Shield to reduce the damage of an attack, the attacker takes an amount of force damage equal to the damage that your Spirit Shield prevents."
+				"在14級時，你的先祖精魂變得強大到足以反擊敵人。當你使用你的精魂之盾能力以減少一次攻擊的傷害時，攻擊者將受到與你精魂之盾所減少的傷害相同數值的力場傷害。"
 			]
 		},
 		{
-			"name": "Path of the Storm Herald",
+			"name": "風暴先驅道途",
+			"ENG_name": "Path of the Storm Herald",
 			"source": "XGE",
 			"page": 10,
 			"className": "Barbarian",
@@ -2745,16 +2810,17 @@
 			"subclassSource": "XGE",
 			"level": 3,
 			"entries": [
-				"All barbarians harbor a fury within. Their rage grants them superior strength, durability, and speed. Barbarians who follow the Path of the Storm Herald learn to transform that rage into a mantle of primal magic, which swirls around them. When in a fury, a barbarian of this path taps into the forces of nature to create powerful magical effects.",
-				"Storm heralds are typically elite champions who train alongside druids, rangers, and others sworn to protect nature. Other storm heralds hone their craft in lodges in regions wracked by storms, in the frozen reaches at the world's end, or deep in the hottest deserts.",
+				"所有野蠻人的體內都懷著狂怒。他們的狂暴將賦予他們卓越的力量、耐力、以及速度。追隨著風暴先驅道途的野蠻人們學會將這狂暴轉變成環繞在他們周遭的原初魔法。當處於這種狂怒中，這個道途的野蠻人將發掘出大自然的力量以創造強大的魔法效果。",
+				"風暴先驅通常是那些和德魯伊、遊俠、和其他誓言守護自然之人一同鍛鍊的菁英勇士。而其他風暴先驅則會暫居風暴肆虐之地以磨練他們的技藝，例如世界盡頭的極寒地帶，或最酷熱沙漠的深處。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Storm Aura|Barbarian||Storm Herald|XGE|3"
+					"subclassFeature": "風暴靈光|Barbarian||Storm Herald|XGE|3"
 				}
 			]
 		},
 		{
-			"name": "Storm Aura",
+			"name": "風暴靈光",
+			"ENG_name": "Storm Aura",
 			"source": "XGE",
 			"page": 10,
 			"className": "Barbarian",
@@ -2764,30 +2830,31 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"Starting at 3rd level, you emanate a stormy, magical aura while you rage. The aura extends 10 feet from you in every direction, but not through total cover.",
-				"Your aura has an effect that activates when you enter your rage, and you can activate the effect again on each of your turns as a bonus action. Choose desert, sea, or tundra. Your aura's effect depends on that chosen environment, as detailed below. You can change your environment choice whenever you gain a level in this class.",
-				"If your aura's effects require a saving throw, the DC equals 8 + your proficiency bonus + your Constitution modifier.",
+				"從3級開始，你將在處於狂暴時散發出一道風暴般的魔法靈光。這道靈光將從你身上向全方位延伸10呎，但並無法穿透全掩護。",
+				"你的靈光具有一個會在你進入狂暴時被激發的效果，且你可以在你的每個回合以一個附贈動作再次激發這個效果。從沙漠、海洋、和凍原中選擇一種環境。你的靈光效果將根據你所選的環境而有所不同，詳述如下。每當你提升此職業的等級，你都可以變更你所選擇的環境。",
+				"若你的靈光效果要求一次豁免檢定，則DC等同於8+你的熟練加值+你的體質調整值。",
 				{
 					"type": "options",
 					"entries": [
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Desert|Barbarian|XGE|Storm Herald|XGE|3"
+							"subclassFeature": "沙漠|Barbarian|XGE|Storm Herald|XGE|3"
 						},
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Sea|Barbarian|XGE|Storm Herald|XGE|3"
+							"subclassFeature": "海洋|Barbarian|XGE|Storm Herald|XGE|3"
 						},
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Tundra|Barbarian|XGE|Storm Herald|XGE|3"
+							"subclassFeature": "凍原|Barbarian|XGE|Storm Herald|XGE|3"
 						}
 					]
 				}
 			]
 		},
 		{
-			"name": "Storm Soul",
+			"name": "風暴之魂",
+			"ENG_name": "Storm Soul",
 			"source": "XGE",
 			"page": 10,
 			"className": "Barbarian",
@@ -2803,22 +2870,23 @@
 					"entries": [
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Desert|Barbarian|XGE|Storm Herald|XGE|6"
+							"subclassFeature": "沙漠|Barbarian|XGE|Storm Herald|XGE|6"
 						},
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Sea|Barbarian|XGE|Storm Herald|XGE|6"
+							"subclassFeature": "海洋|Barbarian|XGE|Storm Herald|XGE|6"
 						},
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Tundra|Barbarian|XGE|Storm Herald|XGE|6"
+							"subclassFeature": "凍原|Barbarian|XGE|Storm Herald|XGE|6"
 						}
 					]
 				}
 			]
 		},
 		{
-			"name": "Shielding Storm",
+			"name": "護盾風暴",
+			"ENG_name": "Shielding Storm",
 			"source": "XGE",
 			"page": 10,
 			"className": "Barbarian",
@@ -2828,11 +2896,12 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"At 10th level, you learn to use your mastery of the storm to protect others. Each creature of your choice has the damage resistance you gained from the Storm Soul feature while the creature is in your Storm Aura."
+				"在10級時，你學會如何運用你對風暴的掌控以保護他人。當每個你所選擇的生物處於你的風暴靈光中時，該生物將獲得你在風暴之魂能力中所獲得的傷害抗性。"
 			]
 		},
 		{
-			"name": "Raging Storm",
+			"name": "狂怒風暴",
+			"ENG_name": "Raging Storm",
 			"source": "XGE",
 			"page": 10,
 			"className": "Barbarian",
@@ -2848,22 +2917,23 @@
 					"entries": [
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Desert|Barbarian|XGE|Storm Herald|XGE|14"
+							"subclassFeature": "沙漠|Barbarian|XGE|Storm Herald|XGE|14"
 						},
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Sea|Barbarian|XGE|Storm Herald|XGE|14"
+							"subclassFeature": "海洋|Barbarian|XGE|Storm Herald|XGE|14"
 						},
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Tundra|Barbarian|XGE|Storm Herald|XGE|14"
+							"subclassFeature": "凍原|Barbarian|XGE|Storm Herald|XGE|14"
 						}
 					]
 				}
 			]
 		},
 		{
-			"name": "Path of the Zealot",
+			"name": "狂熱者道途",
+			"ENG_name": "Path of the Zealot",
 			"source": "XGE",
 			"page": 11,
 			"className": "Barbarian",
@@ -2872,20 +2942,21 @@
 			"subclassSource": "XGE",
 			"level": 3,
 			"entries": [
-				"Some deities inspire their followers to pitch themselves into a ferocious battle fury. These barbarians are zealots\u2014warriors who channel their rage into powerful displays of divine power.",
-				"A variety of gods across the worlds of D&D inspire their followers to embrace this path. Tempus from the Forgotten Realms and Hextor and Erythnul of Greyhawk are all prime examples. In general, the gods who inspire zealots are deities of combat, destruction, and violence. Not all are evil, but few are good.",
+				"某些神祇激勵他們的追隨者投身於殘酷的戰鬥狂怒中。這些野蠻人被稱作狂熱者\u2014他們是一群將自己的狂暴引導轉變為強大神性力量的戰士們。",
+				"在D&D的眾多世界中，有許多神祇都會鼓勵自己的追隨者擁抱狂熱者道途。最著名的幾個例子包括費倫世界的{@deity 坦帕斯}、以及灰鷹世界的{@deity 海克斯托|greyhawk}和{@deity 厄瑞斯努|greyhawk}。一般來說，這些煽動狂熱者的神祇往往掌有戰鬥、破壞、和暴力相關的神職。他們並不全都是邪惡的，但很少是善良的。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Divine Fury|Barbarian||Zealot|XGE|3"
+					"subclassFeature": "神性狂怒|Barbarian||Zealot|XGE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Warrior of the Gods|Barbarian||Zealot|XGE|3"
+					"subclassFeature": "諸神勇士|Barbarian||Zealot|XGE|3"
 				}
 			]
 		},
 		{
-			"name": "Divine Fury",
+			"name": "神性狂怒",
+			"ENG_name": "Divine Fury",
 			"source": "XGE",
 			"page": 11,
 			"className": "Barbarian",
@@ -2895,11 +2966,12 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"Starting when you choose this path at 3rd level, you can channel divine fury into your weapon strikes. While you're raging, the first creature you hit on each of your turns with a weapon attack takes extra damage equal to {@dice 1d6} + half your barbarian level. The extra damage is necrotic or radiant; you choose the type of damage when you gain this feature."
+				"從你在3級時選擇此道途開始，你可以引導神性狂怒注入你的武器打擊中。當你處於狂暴時，你在你的每個回合以武器攻擊命中的第一個生物將受到等同於{@dice 1d6}+你野蠻人等級的一半的額外傷害。這個額外傷害的傷害類型為死靈或光耀；你在獲得此能力時選擇其中一個傷害類型。"
 			]
 		},
 		{
-			"name": "Warrior of the Gods",
+			"name": "諸神勇士",
+			"ENG_name": "Warrior of the Gods",
 			"source": "XGE",
 			"page": 11,
 			"className": "Barbarian",
@@ -2909,11 +2981,12 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"At 3rd level, your soul is marked for endless battle. If a spell, such as {@spell raise dead}, has the sole effect of restoring you to life (but not undeath), the caster doesn't need material components to cast the spell on you."
+				"在3級時，你的靈魂被印記於加入無盡的戰鬥。若一個法術，像是{@spell 喚醒死者}，只具有能將你從死裡復活的效果（但不能是做為不死生物復活），則施法者在對你施放該法術時並不需要材料構材。"
 			]
 		},
 		{
-			"name": "Fanatical Focus",
+			"name": "狂熱專注",
+			"ENG_name": "Fanatical Focus",
 			"source": "XGE",
 			"page": 11,
 			"className": "Barbarian",
@@ -2923,11 +2996,12 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Starting at 6th level, the divine power that fuels your rage can protect you. If you fail a saving throw while you're raging, you can reroll it, and you must use the new roll. You can use this ability only once per rage."
+				"從6級開始，那驅使你狂暴的神性力量將能夠保護你。若你在狂暴時於一次豁免檢定中失敗，你可以重骰該豁免檢定，且你必須使用新的擲骰結果。你只能在每次狂暴使用此能力一次。"
 			]
 		},
 		{
-			"name": "Zealous Presence",
+			"name": "狂熱之姿",
+			"ENG_name": "Zealous Presence",
 			"source": "XGE",
 			"page": 11,
 			"className": "Barbarian",
@@ -2937,12 +3011,13 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"At 10th level, you learn to channel divine power to inspire zealotry in others. As a bonus action, you unleash a battle cry infused with divine energy. Up to ten other creatures of your choice within 60 feet of you that can hear you gain advantage on attack rolls and saving throws until the start of your next turn.",
-				"Once you use this feature, you can't use it again until you finish a long rest."
+				"在10級時，你學會如何引導神性力量以激發他人心中的狂熱。以一個附贈動作，你釋放出一陣充滿神性能量的戰吼。你選擇最多十個距離你60呎內且能聽見你的其他生物，直到你的下個回合開始前，他們在攻擊檢定和豁免檢定中具有優勢。",
+				"一旦你使用此能力，直到你完成一次長休之前你都不能再使用它。"
 			]
 		},
 		{
-			"name": "Rage beyond Death",
+			"name": "怒不畏死",
+			"ENG_name": "Rage beyond Death",
 			"source": "XGE",
 			"page": 11,
 			"className": "Barbarian",
@@ -2952,12 +3027,13 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"Beginning at 14th level, the divine power that fuels your rage allows you to shrug off fatal blows.",
-				"While you're raging, having 0 hit points doesn't knock you {@condition unconscious}. You still must make death saving throws, and you suffer the normal effects of taking damage while at 0 hit points. However, if you would die due to failing death saving throws, you don't die until your rage ends, and you die then only if you still have 0 hit points."
+				"從14級開始，那驅使你狂暴的神性力量將讓你得以無視最致命的打擊。",
+				"當你狂暴時，生命值被歸零並不會將你擊倒{@condition 昏迷}。你仍然必須進行死亡豁免，你在生命值為零的情況下受到傷害時仍會承受正常的效果。然而，若你因為死亡豁免失敗而將要死亡，則你直到狂暴結束前都不會死亡，且你只有在那個時候生命值仍然為零時才會死亡。"
 			]
 		},
 		{
-			"name": "Elk",
+			"name": "鹿",
+			"ENG_name": "Elk",
 			"source": "SCAG",
 			"page": 122,
 			"className": "Barbarian",
@@ -2966,11 +3042,12 @@
 			"subclassSource": "PHB",
 			"level": 3,
 			"entries": [
-				"While you're raging and aren't wearing heavy armor, your walking speed increases by 15 feet. The spirit of the elk makes you extraordinarily swift."
+				"當你狂暴且未穿著重甲時，你的步行速度增加15呎。鹿之精魂將使你格外迅捷。"
 			]
 		},
 		{
-			"name": "Tiger",
+			"name": "虎",
+			"ENG_name": "Tiger",
 			"source": "SCAG",
 			"page": 122,
 			"className": "Barbarian",
@@ -2979,11 +3056,12 @@
 			"subclassSource": "PHB",
 			"level": 3,
 			"entries": [
-				"While raging, you can add 10 feet to your long jump distance and 3 feet to your high jump distance. The spirit of the tiger empowers your leaps."
+				"當狂暴時，你可以使你的跳遠距離增加10呎，並使你的跳高距離增加3呎。虎之精魂將強化你的跳躍能力。"
 			]
 		},
 		{
-			"name": "Elk",
+			"name": "鹿",
+			"ENG_name": "Elk",
 			"source": "SCAG",
 			"page": 122,
 			"className": "Barbarian",
@@ -2992,11 +3070,12 @@
 			"subclassSource": "PHB",
 			"level": 6,
 			"entries": [
-				"Whether mounted or on foot, your travel pace is doubled, as is the travel pace of up to ten companions while they're within 60 feet of you and you're not {@condition incapacitated}. The elk spirit helps you roam far and fast."
+				"無論是騎乘或徒步，你的旅行步調將變為二倍。只要你未處於{@condition 無力}狀態，則最多十個距離你60呎內的同伴的旅行步調也將變為二倍。鹿之精魂將幫助你行得更快更遠。"
 			]
 		},
 		{
-			"name": "Tiger",
+			"name": "虎",
+			"ENG_name": "Tiger",
 			"source": "SCAG",
 			"page": 122,
 			"className": "Barbarian",
@@ -3005,11 +3084,12 @@
 			"subclassSource": "PHB",
 			"level": 6,
 			"entries": [
-				"You gain proficiency in two skills from the following list: {@skill Athletics}, {@skill Acrobatics}, {@skill Stealth}, and {@skill Survival}. The cat spirit hones your survival instincts."
+				"你獲得下列其中二個技能的熟練：{@skill 運動}、{@skill 特技}、{@skill 隱匿}、和{@skill 求生}。貓科精魂將磨練你的求生本能。"
 			]
 		},
 		{
-			"name": "Elk",
+			"name": "鹿",
+			"ENG_name": "Elk",
 			"source": "SCAG",
 			"page": 122,
 			"className": "Barbarian",
@@ -3018,11 +3098,12 @@
 			"subclassSource": "PHB",
 			"level": 14,
 			"entries": [
-				"While raging, you can use a bonus action during your move to pass through the space of a Large or smaller creature. That creature must succeed on a Strength saving throw (DC 8 + your Strength bonus + your proficiency bonus) or be knocked {@condition prone} and take bludgeoning damage equal to {@dice 1d12} + your Strength modifier."
+				"當狂暴時，你可以在你的移動期間使用一個附贈動作，以穿過一個體型為大型或更小的生物所佔據的空間。該生物必須成功通過一次力量豁免（DC為8+你的力量調整值+你的熟練加值），否則被擊倒{@condition 伏地}，並受到等同於{@dice 1d12}+你的力量調整值的鈍擊傷害。"
 			]
 		},
 		{
-			"name": "Tiger",
+			"name": "虎",
+			"ENG_name": "Tiger",
 			"source": "SCAG",
 			"page": 122,
 			"className": "Barbarian",
@@ -3031,11 +3112,12 @@
 			"subclassSource": "PHB",
 			"level": 14,
 			"entries": [
-				"While you're raging, if you move at least 20 feet in a straight line toward a Large or smaller target right before making a melee weapon attack against it, you can use a bonus action to make an additional melee weapon attack against it."
+				"當你狂暴時，若你向一個體型為大型或更小的生物直線移動至少20呎並接著立即對它進行一次近戰武器攻擊，則你可以使用一個附贈動作以對它進行一次額外的近戰武器攻擊。"
 			]
 		},
 		{
-			"name": "Desert",
+			"name": "沙漠",
+			"ENG_name": "Desert",
 			"source": "XGE",
 			"page": 10,
 			"className": "Barbarian",
@@ -3044,11 +3126,12 @@
 			"subclassSource": "XGE",
 			"level": 3,
 			"entries": [
-				"When this effect is activated, all other creatures in your aura take 2 fire damage each. The damage increases when you reach certain levels in this class, increasing to 3 at 5th level, 4 at 10th level, 5 at 15th level, and 6 at 20th level."
+				"當這個效果被激發時，所有其他處於你靈光中的生物都將各自受到2點火焰傷害。這個傷害將在你本職業升至特定等級時增加，5級時增加至3點，10級時4點，15級時5點，和20級時6點。"
 			]
 		},
 		{
-			"name": "Sea",
+			"name": "海洋",
+			"ENG_name": "Sea",
 			"source": "XGE",
 			"page": 10,
 			"className": "Barbarian",
@@ -3057,11 +3140,12 @@
 			"subclassSource": "XGE",
 			"level": 3,
 			"entries": [
-				"When this effect is activated, you can choose one other creature you can see in your aura. The target must make a Dexterity saving throw. The target takes {@damage 1d6} lightning damage on a failed save, or half as much damage on a successful one. The damage increases when you reach certain levels in this class, increasing to {@dice 2d6} at 10th level, {@dice 3d6} at 15th level, and {@dice 4d6} at 20th level."
+				"當這個效果被激發時，你可以選擇處於你靈光中一個你所能看見的其他生物。目標必須進行一次敏捷豁免。豁免失敗的目標將受到{@dice 1d6}閃電傷害，豁免成功則只受到一半的傷害。這個傷害將在你本職業升至特定等級時增加，10級時增加至{@dice 2d6}，15級時{@dice 3d6}，和20級時{@dice 4d6}。"
 			]
 		},
 		{
-			"name": "Tundra",
+			"name": "凍原",
+			"ENG_name": "Tundra",
 			"source": "XGE",
 			"page": 10,
 			"className": "Barbarian",
@@ -3070,11 +3154,12 @@
 			"subclassSource": "XGE",
 			"level": 3,
 			"entries": [
-				"When this effect is activated, each creature of your choice in your aura gains 2 temporary hit points, as icy spirits inure it to suffering. The temporary hit points increase when you reach certain levels in this class, increasing to 3 at 5th level, 4 at 10th level, 5 at 15th level, and 6 at 20th level."
+				"當這個效果被激發時，由於寒冰驚魂將使人適應於苦難，每個處於你靈光中你所選擇的生物將獲得2點臨時生命值。這個臨時生命值將在你本職業升至特定等級時增加，5級時增加至3點，10級時4點，15級時5點，和20級時6點。"
 			]
 		},
 		{
-			"name": "Desert",
+			"name": "沙漠",
+			"ENG_name": "Desert",
 			"source": "XGE",
 			"page": 10,
 			"className": "Barbarian",
@@ -3083,11 +3168,12 @@
 			"subclassSource": "XGE",
 			"level": 6,
 			"entries": [
-				"You gain resistance to fire damage, and you don't suffer the effects of extreme heat, as described in the Dungeon Master's Guide. Moreover, as an action, you can touch a flammable object that isn't being worn or carried by anyone else and set it on fire."
+				"你獲得對火焰傷害的抗性，且你不會受到極端高溫環境的影響（參見地下城主指南的描述）。此外，以一個動作，你可以觸碰一個未被其他人穿戴或攜帶的可燃物體，並使之起火燃燒。"
 			]
 		},
 		{
-			"name": "Sea",
+			"name": "海洋",
+			"ENG_name": "Sea",
 			"source": "XGE",
 			"page": 10,
 			"className": "Barbarian",
@@ -3096,11 +3182,12 @@
 			"subclassSource": "XGE",
 			"level": 6,
 			"entries": [
-				"You gain resistance to lightning damage, and you can breathe underwater. You also gain a swimming speed of 30 feet."
+				"你獲得對閃電傷害的抗性，且你可以在水下呼吸。你也獲得30呎的游泳速度。"
 			]
 		},
 		{
-			"name": "Tundra",
+			"name": "凍原",
+			"ENG_name": "Tundra",
 			"source": "XGE",
 			"page": 10,
 			"className": "Barbarian",
@@ -3109,11 +3196,12 @@
 			"subclassSource": "XGE",
 			"level": 6,
 			"entries": [
-				"You gain resistance to cold damage, and you don't suffer the effects of extreme cold, as described in the Dungeon Master's Guide. Moreover, as an action, you can touch water and turn a 5-foot cube of it into ice, which melts after 1 minute. This action fails if a creature is in the cube."
+				"你獲得對寒冰傷害的抗性，且你不會受到極端寒冷環境的影響（參見地下城主指南的描述）。此外，以一個動作，你可以觸碰水並將其中5呎邊長立方體的區域轉變成冰，這塊冰將在1分鐘之後融化。若有生物在這個立方體區域內，則這個動作將失敗。"
 			]
 		},
 		{
-			"name": "Desert",
+			"name": "沙漠",
+			"ENG_name": "Desert",
 			"source": "XGE",
 			"page": 10,
 			"className": "Barbarian",
@@ -3122,11 +3210,12 @@
 			"subclassSource": "XGE",
 			"level": 14,
 			"entries": [
-				"Immediately after a creature in your aura hits you with an attack, you can use your reaction to force that creature to make a Dexterity saving throw. On a failed save, the creature takes fire damage equal to half your barbarian level."
+				"緊接在一個處於你靈光中生物以一次攻擊命中你之後，你可以使用你的反應以強迫該生物進行一次敏捷豁免。若豁免失敗，該生物將受到等同於你野蠻人等級一半的火焰傷害。"
 			]
 		},
 		{
-			"name": "Sea",
+			"name": "海洋",
+			"ENG_name": "Sea",
 			"source": "XGE",
 			"page": 10,
 			"className": "Barbarian",
@@ -3135,11 +3224,12 @@
 			"subclassSource": "XGE",
 			"level": 14,
 			"entries": [
-				"When you hit a creature in your aura with an attack, you can use your reaction to force that creature to make a Strength saving throw. On a failed save, the creature is knocked {@condition prone}, as if struck by a wave."
+				"當你以一次攻擊命中一個處於你靈光中的生物，你可以使用你的反應以強迫該生物進行一次力量豁免。若豁免失敗，該生物將被擊倒{@condition 伏地}，就好像被海浪沖倒。"
 			]
 		},
 		{
-			"name": "Tundra",
+			"name": "凍原",
+			"ENG_name": "Tundra",
 			"source": "XGE",
 			"page": 10,
 			"className": "Barbarian",
@@ -3148,7 +3238,7 @@
 			"subclassSource": "XGE",
 			"level": 14,
 			"entries": [
-				"Whenever the effect of your Storm Aura is activated, you can choose one creature you can see in the aura. That creature must succeed on a Strength saving throw, or its speed is reduced to 0 until the start of your next turn, as magical frost covers it."
+				"每當你風暴靈光的效果被啟動，你可以選擇一個靈光中你所能看見的生物。該生物必須成功通過一次力量豁免，否則隨著他被魔法寒霜給覆蓋，他的移動速度將被歸零直到你的下個回合開始。"
 			]
 		}
 	]

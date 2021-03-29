@@ -1,7 +1,8 @@
 {
 	"class": [
 		{
-			"name": "Druid",
+			"name": "德魯伊",
+			"ENG_name": "Druid",
 			"source": "PHB",
 			"page": 64,
 			"srd": true,
@@ -43,24 +44,24 @@
 					"light",
 					"medium",
 					{
-						"proficiency": "shields",
-						"full": "shields (druids will not wear armor or use shields made of metal)"
+						"proficiency": "盾牌",
+						"full": "盾牌（德魯伊不能穿戴或使用金屬製成的護甲和盾牌）"
 					}
 				],
 				"weapons": [
-					"clubs",
-					"daggers",
-					"darts",
-					"javelins",
-					"maces",
-					"quarterstaffs",
-					"scimitars",
-					"sickles",
-					"slings",
-					"spears"
+					"棍棒",
+					"匕首",
+					"飛鏢",
+					"標槍",
+					"硬頭錘",
+					"長棍",
+					"彎刀",
+					"鐮刀",
+					"投石索",
+					"矛"
 				],
 				"tools": [
-					"{@item Herbalism kit|PHB}"
+					"{@item 藥草師工具組|PHB}"
 				],
 				"skills": [
 					{
@@ -88,11 +89,11 @@
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
-					"(a) a wooden {@item shield|phb} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
-					"(a) a {@item scimitar|phb} or (b) any {@filter simple melee weapon|items|source=phb|category=basic|type=simple weapon;melee weapon=sand}",
-					"{@item Leather armor|phb}, an {@item explorer's pack|phb}, and a {@item druidic focus|phb}"
+					"(a)一個木製{@item 盾牌|phb} 或 (b)任意一把{@filter 簡易武器|items|source=phb|category=basic|type=simple weapon}",
+					"(a)一把{@item 彎刀|phb} 或 (b)任意一把{@filter 簡易近戰武器|items|source=phb|category=basic|type=simple weapon;melee weapon=&}",
+					"一件{@item 皮甲|phb}、一套{@item 探索者套裝|phb}、和一個{@item 德魯伊法器|phb}"
 				],
-				"goldAlternative": "{@dice 2d4 × 10|2d4 × 10|Starting Gold}",
+				"goldAlternative": "{@dice 2d4 × 10|2d4 × 10|起始金錢}",
 				"defaultData": [
 					{
 						"a": [
@@ -133,7 +134,7 @@
 						"medium",
 						{
 							"proficiency": "shields",
-							"full": "shields (druids will not wear armor or use shields made of metal)"
+							"full": "盾牌（德魯伊不能穿戴或使用金屬製成的護甲和盾牌）"
 						}
 					]
 				}
@@ -141,7 +142,7 @@
 			"classTableGroups": [
 				{
 					"colLabels": [
-						"{@filter Cantrips Known|spells|level=0|class=Druid}"
+						"{@filter 已知戲法|spells|level=0|class=Druid}"
 					],
 					"rows": [
 						[
@@ -207,17 +208,17 @@
 					]
 				},
 				{
-					"title": "Spell Slots per Spell Level",
+					"title": "法術位/每環",
 					"colLabels": [
-						"{@filter 1st|spells|level=1|class=Druid}",
-						"{@filter 2nd|spells|level=2|class=Druid}",
-						"{@filter 3rd|spells|level=3|class=Druid}",
-						"{@filter 4th|spells|level=4|class=Druid}",
-						"{@filter 5th|spells|level=5|class=Druid}",
-						"{@filter 6th|spells|level=6|class=Druid}",
-						"{@filter 7th|spells|level=7|class=Druid}",
-						"{@filter 8th|spells|level=8|class=Druid}",
-						"{@filter 9th|spells|level=9|class=Druid}"
+						"{@filter 1環|spells|level=1|class=Druid}",
+						"{@filter 2環|spells|level=2|class=Druid}",
+						"{@filter 3環|spells|level=3|class=Druid}",
+						"{@filter 4環|spells|level=4|class=Druid}",
+						"{@filter 5環|spells|level=5|class=Druid}",
+						"{@filter 6環|spells|level=6|class=Druid}",
+						"{@filter 7環|spells|level=7|class=Druid}",
+						"{@filter 8環|spells|level=8|class=Druid}",
+						"{@filter 9環|spells|level=9|class=Druid}"
 					],
 					"rows": [
 						[
@@ -444,50 +445,52 @@
 				}
 			],
 			"classFeatures": [
-				"Druidic|Druid||1",
-				"Spellcasting|Druid||1",
+				"德魯伊語|Druid||1",
+				"施法|Druid||1",
 				"Cantrip Versatility|Druid||1|UAClassFeatureVariants",
-				"Wild Shape|Druid||2",
+				"荒野形態|Druid||2",
 				"Wild Companion|Druid||2|UAClassFeatureVariants",
 				"Wild Companion|Druid||2|TCE",
 				{
-					"classFeature": "Druid Circle|Druid||2",
+					"classFeature": "德魯伊結社|Druid||2",
 					"gainSubclassFeature": true
 				},
-				"Wild Shape Improvement|Druid||4",
-				"Ability Score Improvement|Druid||4",
+				"荒野形態強化|Druid||4",
+				"屬性值提升|Druid||4",
 				"Proficiency Versatility|Druid||4|UAClassFeatureVariants",
 				"Cantrip Versatility|Druid||4|TCE",
 				{
-					"classFeature": "Druid Circle feature|Druid||6",
+					"classFeature": "德魯伊結社能力|Druid||6",
 					"gainSubclassFeature": true
 				},
-				"Wild Shape Improvement|Druid||8",
-				"Ability Score Improvement|Druid||8",
+				"荒野形態強化|Druid||8",
+				"屬性值提升|Druid||8",
 				"Proficiency Versatility|Druid||8|UAClassFeatureVariants",
 				{
-					"classFeature": "Druid Circle feature|Druid||10",
+					"classFeature": "德魯伊結社能力|Druid||10",
 					"gainSubclassFeature": true
 				},
-				"Ability Score Improvement|Druid||12",
+				"屬性值提升|Druid||12",
 				"Proficiency Versatility|Druid||12|UAClassFeatureVariants",
 				{
-					"classFeature": "Druid Circle feature|Druid||14",
+					"classFeature": "德魯伊結社能力|Druid||14",
 					"gainSubclassFeature": true
 				},
-				"Ability Score Improvement|Druid||16",
+				"屬性值提升|Druid||16",
 				"Proficiency Versatility|Druid||16|UAClassFeatureVariants",
-				"Timeless Body|Druid||18",
-				"Beast Spells|Druid||18",
-				"Ability Score Improvement|Druid||19",
+				"不老身軀|Druid||18",
+				"野獸施法|Druid||18",
+				"屬性值提升|Druid||19",
 				"Proficiency Versatility|Druid||19|UAClassFeatureVariants",
-				"Archdruid|Druid||20"
+				"大德魯伊|Druid||20"
 			],
 			"subclassTitle": "Druid Circle",
 			"subclasses": [
 				{
-					"name": "Circle of the Land",
-					"shortName": "Land",
+					"name": "大地結社",
+					"ENG_name": "Circle of the Land",
+					"shortName": "大地",
+					"ENG_shortName": "Circle of the Land",
 					"source": "PHB",
 					"page": 68,
 					"srd": true,
@@ -654,15 +657,17 @@
 						}
 					],
 					"subclassFeatures": [
-						"Circle of the Land|Druid||Land||2",
-						"Land's Stride|Druid||Land||6",
-						"Nature's Ward|Druid||Land||10",
-						"Nature's Sanctuary|Druid||Land||14"
+						"大地結社|Druid||Land||2",
+						"大地行者|Druid||Land||6",
+						"自然之護|Druid||Land||10",
+						"自然庇護|Druid||Land||14"
 					]
 				},
 				{
-					"name": "Circle of the Moon",
-					"shortName": "Moon",
+					"name": "月亮結社",
+					"ENG_name": "Circle of the Moon",
+					"shortName": "月亮",
+					"ENG_shortName": "Circle of the Moon",
 					"source": "PHB",
 					"page": 69,
 					"additionalSpells": [
@@ -675,10 +680,10 @@
 						}
 					],
 					"subclassFeatures": [
-						"Circle of the Moon|Druid||Moon||2",
-						"Primal Strike|Druid||Moon||6",
-						"Elemental Wild Shape|Druid||Moon||10",
-						"Thousand Forms|Druid||Moon||14"
+						"月亮結社|Druid||Moon||2",
+						"原初打擊|Druid||Moon||6",
+						"元素荒野形態|Druid||Moon||10",
+						"千面相|Druid||Moon||14"
 					]
 				},
 				{
@@ -733,27 +738,31 @@
 					]
 				},
 				{
-					"name": "Circle of Dreams",
-					"shortName": "Dreams",
+					"name": "夢境結社",
+					"ENG_name": "Circle of the Dreams",
+					"shortName": "夢境",
+					"ENG_shortName": "Circle of the Dreams",
 					"source": "XGE",
 					"page": 22,
 					"subclassFeatures": [
-						"Circle of Dreams|Druid||Dreams|XGE|2",
-						"Hearth of Moonlight and Shadow|Druid||Dreams|XGE|6",
-						"Hidden Paths|Druid||Dreams|XGE|10",
-						"Walker in Dreams|Druid||Dreams|XGE|14"
+						"夢境結社|Druid||Dreams|XGE|2",
+						"月光與陰影之家|Druid||Dreams|XGE|6",
+						"隱匿通途|Druid||Dreams|XGE|10",
+						"夢境行者|Druid||Dreams|XGE|14"
 					]
 				},
 				{
-					"name": "Circle of the Shepherd",
-					"shortName": "Shepherd",
+					"name": "牧人結社",
+					"ENG_name": "Circle of the Shepherd",
+					"shortName": "牧人",
+					"ENG_shortName": "Shepherd",
 					"source": "XGE",
 					"page": 23,
 					"subclassFeatures": [
-						"Circle of the Shepherd|Druid||Shepherd|XGE|2",
-						"Mighty Summoner|Druid||Shepherd|XGE|6",
-						"Guardian Spirit|Druid||Shepherd|XGE|10",
-						"Faithful Summons|Druid||Shepherd|XGE|14"
+						"牧人結社|Druid||Shepherd|XGE|2",
+						"強力召喚者|Druid||Shepherd|XGE|6",
+						"守護精魂|Druid||Shepherd|XGE|10",
+						"忠誠召喚|Druid||Shepherd|XGE|14"
 					]
 				},
 				{
@@ -840,8 +849,10 @@
 					]
 				},
 				{
-					"name": "Circle of Spores",
-					"shortName": "Spores",
+					"name": "孢子結社",
+					"ENG_name": "Circle of Spores",
+					"shortName": "孢子",
+					"ENG_shortName": "Circle Spores",
 					"source": "TCE",
 					"page": 36,
 					"otherSources": [
@@ -873,10 +884,10 @@
 						}
 					],
 					"subclassFeatures": [
-						"Circle of Spores|Druid||Spores|TCE|2",
-						"Fungal Infestation|Druid||Spores|TCE|6",
-						"Spreading Spores|Druid||Spores|TCE|10",
-						"Fungal Body|Druid||Spores|TCE|14"
+						"孢子結社|Druid||Spores|TCE|2",
+						"真菌感染|Druid||Spores|TCE|6",
+						"散佈孢子|Druid||Spores|TCE|10",
+						"真菌身軀|Druid||Spores|TCE|14"
 					]
 				},
 				{
@@ -2344,7 +2355,8 @@
 			]
 		},
 		{
-			"name": "Druidic",
+			"name": "德魯伊語",
+			"ENG_name": "Druidic",
 			"source": "PHB",
 			"page": 64,
 			"srd": true,
@@ -2352,11 +2364,12 @@
 			"classSource": "PHB",
 			"level": 1,
 			"entries": [
-				"You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom ({@skill Perception}) check but can't decipher it without magic."
+				"你知曉德魯伊語，一種屬於德魯伊的秘密語言。你可以說這種語言，並用它來留下隱藏的信息。你和其他知曉這種語言的人將會自動注意到這類信息。其他人則可以透過成功通過一次DC 15的睿知（{@skill 感知}）檢定以察覺這個信息的存在，但不使用魔法就無法解讀它。"
 			]
 		},
 		{
-			"name": "Spellcasting",
+			"name": "施法",
+			"ENG_name": "Spellcasting",
 			"source": "PHB",
 			"page": 64,
 			"srd": true,
@@ -2364,39 +2377,39 @@
 			"classSource": "PHB",
 			"level": 1,
 			"entries": [
-				"Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will. See {@book chapter 10|PHB|10} for the general rules of spellcasting and {@book chapter 11|PHB|11} for the {@filter druid spell list|spells|class=druid}.",
+				"借助大自然本身的天授精粹，你可以施放法術以按照你的意願形塑它。請參閱{@book 第十章|PHB|10}以了解關於施法的規則，以及第十一章以查閱{@filter 德魯伊法術列表|spells|class=druid}。",
 				{
 					"type": "entries",
-					"name": "Cantrips",
+					"name": "戲法",
 					"entries": [
-						"At 1st level, you know two cantrips of your choice from the {@filter druid spell list|spells|level=0|class=druid}. You learn additional druid cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Druid table."
+						"在1級時，你知曉兩個從{@filter 德魯伊法術列表|spells|class=druid}自選的戲法。你將在升至更高的德魯伊等級時學會額外的德魯伊戲法，見德魯伊表格中的已知戲法欄位。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Preparing and Casting Spells",
+					"name": "準備及施放法術",
 					"entries": [
-						"The Druid table shows how many spell slots you have to cast your {@filter druid spells|spells|class=druid} of 1st level and higher. To cast one of these druid spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
-						"You prepare the list of druid spells that are available for you to cast, choosing from the druid spell list. When you do so, choose a number of druid spells equal to your Wisdom modifier + your druid level (minimum of one spell). The spells must be of a level for which you have spell slots.",
-						"For example, if you are a 3rd-level druid, you have four 1st-level and two 2nd-level spell slots. With a Wisdom of 16, your list of prepared spells can include six spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell {@spell cure wounds}, you can cast it using a 1st-level or 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.",
-						"You can also change your list of prepared spells when you finish a long rest. Preparing a new list of druid spells requires time spent in prayer and meditation: at least 1 minute per spell level for each spell on your list."
+						"德魯伊表中顯示了你有多少個法術位可以用來施放你一環或更高環的{@filter 德魯伊法術|spells|class=druid}。要施放其中一個這些德魯伊法術，你必須消耗一個與該法術環階相同或更高的法術位。你在完成一次長休後恢復所有你花費掉的法術位。",
+						"你準備一份你所能施放的德魯伊法術列表，從德魯伊法術列表中選擇。當你這麼做時，選擇數量等同於你睿知調整值 + 你德魯伊等級的德魯伊法術（最少一個法術）。這些法術的環階都必須符合你所擁有法術位的環階。",
+						"舉例來說，如果你是一個3級的德魯伊，你擁有四個1環和二個2環的法術位。你的睿知為16，則你已準備法術的列表中可以包含總共六個1環或2環的法術。若你準備了1環法術{@spell 治療傷勢}，你可以使用1環和2環的法術位來施放它。施放法術並不會將它從你的準備法術列表中移除。",
+						"你也可以在你完成一次長休時改變你的準備法術列表。準備一份新的德魯伊法術列表需要花費時間於祈禱和冥想：你需要為你列表上每個法術的每個環階都花費至少1分鐘的時間。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Spellcasting Ability",
+					"name": "施法屬性",
 					"entries": [
-						"Wisdom is your spellcasting ability for your druid spells, since your magic draws upon your devotion and attunement to nature. You use your Wisdom whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a druid spell you cast and when making an attack roll with one.",
+						"由於你的魔法是源自你對大自然的奉獻與協調，睿知是你施展德魯伊法術的施法屬性。每當法術提及你的施法屬性時，你將使用你的睿知。此外，當決定你德魯伊法術的豁免DC、以及使用德魯伊法術進行攻擊檢定時，你使用你的睿知調整值。",
 						{
 							"type": "abilityDc",
-							"name": "Spell",
+							"name": "法術",
 							"attributes": [
 								"wis"
 							]
 						},
 						{
 							"type": "abilityAttackMod",
-							"name": "Spell",
+							"name": "法術",
 							"attributes": [
 								"wis"
 							]
@@ -2405,22 +2418,23 @@
 				},
 				{
 					"type": "entries",
-					"name": "Ritual Casting",
+					"name": "儀式施法",
 					"entries": [
 						"You can cast a druid spell as a ritual if that spell has the ritual tag and you have the spell prepared."
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Spellcasting Focus",
+					"name": "施法法器",
 					"entries": [
-						"You can use a {@item druidic focus|phb} as a spellcasting focus for your druid spells"
+						"你可以使用一個{@item 德魯伊法器|phb}（第五章），來做為你施放德魯伊法術的法器。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Druid Circle",
+			"name": "德魯伊結社",
+			"ENG_name": "Druid Circle",
 			"source": "PHB",
 			"page": 64,
 			"srd": true,
@@ -2428,7 +2442,7 @@
 			"classSource": "PHB",
 			"level": 2,
 			"entries": [
-				"At 2nd level, you choose to identify with a circle of druids from the list of available circles. Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level."
+				"在2級時，你從可選結社列表中選擇並參與一個德魯伊結社。你的選擇將在2級、6級、10級、和14級時賦予你新的能力。"
 			]
 		},
 		{
@@ -2441,7 +2455,7 @@
 			"isClassFeatureVariant": true,
 			"entries": [
 				"{@i 2nd-level druid {@variantrule optional class features|tce|optional feature}}",
-				"You gain the ability to summon a spirit that assumes an animal form: as an action, you can expend a use of your Wild Shape feature to cast the {@spell find familiar} spell, without material components.",
+				"You gain the ability to summon a spirit that assumes an animal form: as an action, you can expend a use of your Wild Shape feature to cast the {@spell 尋獲魔寵} spell, without material components.",
 				"When you cast the spell in this way, the familiar is a fey instead of a beast, and the familiar disappears after a number of hours equal to half your druid level."
 			]
 		},
@@ -2455,12 +2469,13 @@
 			"isClassFeatureVariant": true,
 			"entries": [
 				"{@i 2nd-level druid feature (enhances Wild Shape)}",
-				"You gain the ability to summon a spirit that assumes an animal form: as an action, you can expend a use of your Wild Shape feature to cast the {@spell find familiar} spell, without material components.",
+				"You gain the ability to summon a spirit that assumes an animal form: as an action, you can expend a use of your Wild Shape feature to cast the {@spell 尋獲魔寵} spell, without material components.",
 				"When you cast the spell in this way, the familiar is a fey instead of a beast, and the familiar disappears after a number of hours equal to half your druid level."
 			]
 		},
 		{
-			"name": "Wild Shape",
+			"name": "荒野形態",
+			"ENG_name": "Wild Shape",
 			"source": "PHB",
 			"page": 64,
 			"srd": true,
@@ -2468,11 +2483,11 @@
 			"classSource": "PHB",
 			"level": 2,
 			"entries": [
-				"Starting at 2nd level, you can use your action to magically assume the shape of a beast that you have seen before. You can use this feature twice. You regain expended uses when you finish a short or long rest.",
-				"Your druid level determines the beasts you can transform into, as shown in the Beast Shapes table. At 2nd level, for example, you can transform into any beast that has a challenge rating of 1/4 or lower that doesn't have a flying or swimming speed.",
+				"從2級開始，你可以使用你的動作以魔法變成一個你曾經見過野獸的型態。你可以使用這個能力二次。你在完成一次短休或長休後恢復所有你花費掉的次數。",
+				"你的德魯伊等級決定了你可以變化成的野獸，參見野獸型態表。舉例來說，在2級時，你可以轉變成任何挑戰等級為1/4或更低，且不具有飛行或游泳速度的野獸。",
 				{
 					"type": "table",
-					"caption": "Beast Shapes",
+					"caption": "野獸型態",
 					"colLabels": [
 						"Level",
 						"Max. CR",
@@ -2487,41 +2502,42 @@
 					],
 					"rows": [
 						[
-							"2nd",
+							"2級",
 							"{@filter 1/4|bestiary|challenge rating=[&0;&1/4]|type=beast|speed type=!fly;!swim|miscellaneous=!swarm}",
-							"No flying or swimming speed",
-							"Wolf"
+							"沒有飛行或游泳速度",
+							"狼"
 						],
 						[
-							"4th",
+							"4級",
 							"{@filter 1/2|bestiary|challenge rating=[&0;&1/2]|type=beast|speed type=!fly|miscellaneous=!swarm}",
-							"No flying speed",
-							"Crocodile"
+							"沒有飛行速度",
+							"鱷魚"
 						],
 						[
-							"8th",
+							"8級",
 							"{@filter 1|bestiary|challenge rating=[&0;&1]|type=beast|miscellaneous=!swarm}",
 							"\u2014",
-							"Giant eagle"
+							"巨鷹"
 						]
 					]
 				},
-				"You can stay in a beast shape for a number of hours equal to half your druid level (rounded down). You then revert to your normal form unless you expend another use of this feature. You can revert to your normal form earlier by using a bonus action on your turn. You automatically revert if you fall {@condition unconscious}, drop to 0 hit points, or die.",
-				"While you are transformed, the following rules apply:",
+				"你可以保持野獸型態長達等同於你德魯伊等級一半的小時數。你接著將回復你原本的型態，除非你再花費此能力的一個次數。你可以透過在你的回合使用一個附贈動作以提早回復你原本的型態。你將在你陷入{@condition 昏迷}、生命值歸零、或死亡時自動回復原本的型態。",
+				"當你變形後，適用以下規則：",
 				{
 					"type": "list",
 					"items": [
-						"Your game statistics are replaced by the statistics of the beast, but you retain your alignment, personality, and Intelligence, Wisdom, and Charisma scores. You also retain all of your skill and saving throw proficiencies, in addition to gaining those of the creature. If the creature has the same proficiency as you and the bonus in its stat block is higher than yours, use the creature's bonus instead of yours. If the creature has any legendary or lair actions, you can't use them.",
-						"When you transform, you assume the beast's hit points and Hit Dice. When you revert to your normal form, you return to the number of hit points you had before you transformed. However, if you revert as a result of dropping to 0 hit points, any excess damage carries over to your normal form. For example, if you take 10 damage in animal form and have only 1 hit point left, you revert and take 9 damage. As long as the excess damage doesn't reduce your normal form to 0 hit points, you aren't knocked {@condition unconscious}.",
-						"You can't cast spells, and your ability to speak or take any action that requires hands is limited to the capabilities of your beast form. Transforming doesn't break your concentration on a spell you've already cast, however, or prevent you from taking actions that are part of a spell, such as {@spell call lightning}, that you've already cast.",
-						"You retain the benefit of any features from your class, race, or other source and can use them if the new form is physically capable of doing so. However, you can't use any of your special senses, such as {@sense darkvision}, unless your new form also has that sense.",
-						"You choose whether your equipment falls to the ground in your space, merges into your new form, or is worn by it. Worn equipment functions as normal, but the DM decides whether it is practical for the new form to wear a piece of equipment, based on the creature's shape and size. Your equipment doesn't change size or shape to match the new form, and any equipment that the new form can't wear must either fall to the ground or merge with it. Equipment that merges with the form has no effect until you leave the form."
+						"你的遊戲數據被該野獸的數據給取代，但你保留你的陣營、個性，和智力、睿知、和魅力值。你同時也保留你的所有技能和豁免熟練，並額外獲得該生物所具有的熟練。若該生物具有與你相同的熟練項，且它數據資料中列出的加值比你的還要高，則你使用該生物的加值取代你自己的。若該生物具有任何傳奇動作或巢穴動作，你不能使用它們。",
+						"當你變形時，你取用該野獸的生命值和生命骰。當你回復你原本的型態時，你將取回你變形之前的生命值。若你是因為生命值歸零而回復原本型態，則任何溢出傷害都將被帶到你原本的型態，扣減你原本的生命值。舉例來說，若你在處於動物型態時受到10點傷害，且只剩下1點生命值，你將回復原本的型態並承受9點傷害。只要這個溢出傷害沒有讓你原本型態的生命值歸零，你就不會被擊倒{@condition 昏迷}。",
+						"你不能施放法術，且你說話或採取任何需要雙手的動作的能力將受限於你的野獸型態。然而，變形並不會中斷你對已施放法術的專注，也不會讓你無法採取你已經施放法術所提供的動作，像是{@spell 召雷術}。",
+						"你保留任何來自你職業、種族、或其他來源的能力，且若新型態物理上有能力這麼做，你就能夠使用它們。然而，你無法使用你的特殊感官，像是黑暗視覺，除非你的新型態也具有該感官。",
+						"你選擇你的裝備是會掉在地上、融入新型態、或是被新型態穿戴。被穿戴的裝備將正常生效，但DM將根據該生物的體型和形狀以決定新型態是否可以正常穿戴你的每個裝備。你的裝備並不會改變形狀或尺寸以符合你的新形態，且任何新型態無法穿戴的裝備將會掉在地上或融入新型態。直到你解除該型態前，融入新型態的裝備將不會產生任何效果。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 64,
 			"srd": true,
@@ -2529,8 +2545,8 @@
 			"classSource": "PHB",
 			"level": 4,
 			"entries": [
-				"When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"當你在此職業升至8級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -2561,7 +2577,8 @@
 			]
 		},
 		{
-			"name": "Wild Shape Improvement",
+			"name": "荒野形態強化",
+			"ENG_name": "Wild Shape Improvement",
 			"source": "PHB",
 			"page": 64,
 			"srd": true,
@@ -2569,11 +2586,12 @@
 			"classSource": "PHB",
 			"level": 4,
 			"entries": [
-				"At 4th level, your Wild Shape improves as shown on the Beast Shapes table."
+				"在4級時，你的荒野形態獲得強化，參見野獸型態表。"
 			]
 		},
 		{
-			"name": "Druid Circle feature",
+			"name": "德魯伊結社能力",
+			"ENG_name": "Druid Circle feature",
 			"source": "PHB",
 			"page": 64,
 			"srd": true,
@@ -2581,11 +2599,12 @@
 			"classSource": "PHB",
 			"level": 6,
 			"entries": [
-				"At 6th level, you gain a feature granted by your Druid Circle."
+				"在6級時，你獲得一個由你德魯伊結社所賦予的能力。"
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 64,
 			"srd": true,
@@ -2593,8 +2612,8 @@
 			"classSource": "PHB",
 			"level": 8,
 			"entries": [
-				"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"當你在此職業升至8級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -2612,7 +2631,8 @@
 			]
 		},
 		{
-			"name": "Wild Shape Improvement",
+			"name": "荒野形態強化",
+			"ENG_name": "Wild Shape Improvement",
 			"source": "PHB",
 			"page": 64,
 			"srd": true,
@@ -2620,11 +2640,12 @@
 			"classSource": "PHB",
 			"level": 8,
 			"entries": [
-				"At 8th level, your Wild Shape improves as shown on the Beast Shapes table."
+				"在8級時，你的荒野形態獲得強化，參見野獸型態表。"
 			]
 		},
 		{
-			"name": "Druid Circle feature",
+			"name": "德魯伊結社能力",
+			"ENG_name": "Druid Circle feature",
 			"source": "PHB",
 			"page": 64,
 			"srd": true,
@@ -2632,11 +2653,12 @@
 			"classSource": "PHB",
 			"level": 10,
 			"entries": [
-				"At 10th level, you gain a feature granted by your Druid Circle feature."
+				"在10級時，你獲得一個由你德魯伊結社所賦予的能力。"
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 64,
 			"srd": true,
@@ -2644,8 +2666,8 @@
 			"classSource": "PHB",
 			"level": 12,
 			"entries": [
-				"When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"當你在此職業升至8級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -2663,7 +2685,8 @@
 			]
 		},
 		{
-			"name": "Druid Circle feature",
+			"name": "德魯伊結社能力",
+			"ENG_name": "Druid Circle feature",
 			"source": "PHB",
 			"page": 64,
 			"srd": true,
@@ -2671,11 +2694,12 @@
 			"classSource": "PHB",
 			"level": 14,
 			"entries": [
-				"At 14th level, you gain a feature granted by your Druid Circle feature."
+				"在14級時，你獲得一個由你德魯伊結社所賦予的能力。"
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 64,
 			"srd": true,
@@ -2683,8 +2707,8 @@
 			"classSource": "PHB",
 			"level": 16,
 			"entries": [
-				"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"當你在此職業升至16級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -2702,7 +2726,8 @@
 			]
 		},
 		{
-			"name": "Beast Spells",
+			"name": "野獸施法",
+			"ENG_name": "Beast Spells",
 			"source": "PHB",
 			"page": 64,
 			"srd": true,
@@ -2710,11 +2735,12 @@
 			"classSource": "PHB",
 			"level": 18,
 			"entries": [
-				"Beginning at 18th level, you can cast many of your druid spells in any shape you assume using Wild Shape. You can perform the somatic and verbal components of a druid spell while in a beast shape, but you aren't able to provide material components."
+				"從18級開始，你可以在處於荒野形態所變成的任何型態時施放你的許多德魯伊法術。你可以在處於野獸型態時執行德魯伊法術的姿勢和聲音構材，但你無法提供材料構材。"
 			]
 		},
 		{
-			"name": "Timeless Body",
+			"name": "不老身軀",
+			"ENG_name": "Timeless Body",
 			"source": "PHB",
 			"page": 64,
 			"srd": true,
@@ -2722,11 +2748,12 @@
 			"classSource": "PHB",
 			"level": 18,
 			"entries": [
-				"Starting at 18th level, the primal magic that you wield causes you to age more slowly. For every 10 years that pass, your body ages only 1 year."
+				"從18級開始，你使用的原初魔法讓你老化的更加緩慢。每10年過去，你的身體只會老化1年。"
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 64,
 			"srd": true,
@@ -2734,8 +2761,8 @@
 			"classSource": "PHB",
 			"level": 19,
 			"entries": [
-				"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"當你在此職業升至19級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -2753,7 +2780,8 @@
 			]
 		},
 		{
-			"name": "Archdruid",
+			"name": "大德魯伊",
+			"ENG_name": "Archdruid",
 			"source": "PHB",
 			"page": 64,
 			"srd": true,
@@ -2761,14 +2789,15 @@
 			"classSource": "PHB",
 			"level": 20,
 			"entries": [
-				"At 20th level, you can use your Wild Shape an unlimited number of times.",
-				"Additionally, you can ignore the verbal and somatic components of your druid spells, as well as any material components that lack a cost and aren't consumed by a spell. You gain this benefit in both your normal shape and your beast shape from Wild Shape."
+				"在20級時，你可以無限次的使用你的荒野形態。",
+				"此外，你可以忽略你德魯伊法術的姿勢和聲音構材、以及任何沒有價值且不會被法術消耗的材料構材。你在你的原本型態和來自荒野形態的野獸型態中都獲得這個好處。"
 			]
 		}
 	],
 	"subclassFeature": [
 		{
-			"name": "Circle of the Land",
+			"name": "大地結社",
+			"ENG_name": "Circle of the Land",
 			"source": "PHB",
 			"page": 68,
 			"srd": true,
@@ -2778,23 +2807,24 @@
 			"subclassSource": "PHB",
 			"level": 2,
 			"entries": [
-				"The Circle of the Land is made up of mystics and sages who safeguard ancient knowledge and rites through a vast oral tradition. These druids meet within sacred circles of trees or standing stones to whisper primal secrets in Druidic. The circle's wisest members preside as the chief priests of communities that hold to the Old Faith and serve as advisors to the rulers of those folk. As a member of this circle, your magic is influenced by the land where you were initiated into the circle's mysterious rites.",
+				"大地結社是由神祕主義者和賢者所組成，透過廣泛的口述傳承來守護古老知識和儀式。這些德魯伊會在樹木或立石環繞而成的神聖圓環內相聚，用德魯伊語低語述說著原初的秘密。結社中最具智慧的成員會做為團體中掌握著上古誓約的祭司長，並擔當這群人的顧問和管理者。做為結社中的一員，你的魔法將被你在入會時所施展神秘結社儀式的大地環境所影響。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Cantrip|Druid||Land||2"
+					"subclassFeature": "額外戲法|Druid||Land||2"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Natural Recovery|Druid||Land||2"
+					"subclassFeature": "自然恢復|Druid||Land||2"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Circle Spells|Druid||Land||2"
+					"subclassFeature": "結社法術|Druid||Land||2"
 				}
 			]
 		},
 		{
-			"name": "Bonus Cantrip",
+			"name": "額外戲法",
+			"ENG_name": "Bonus Cantrip",
 			"source": "PHB",
 			"page": 68,
 			"srd": true,
@@ -2805,11 +2835,12 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"You learn one additional druid cantrip of your choice."
+				"你習得一個自選的額外德魯伊戲法。"
 			]
 		},
 		{
-			"name": "Circle Spells",
+			"name": "結社法術",
+			"ENG_name": "Circle Spells",
 			"source": "PHB",
 			"page": 68,
 			"srd": true,
@@ -2820,14 +2851,14 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"Your mystical connection to the land infuses you with the ability to cast certain spells. At 3rd, 5th, 7th, and 9th level you gain access to circle spells connected to the land where you became a druid. Choose that land - arctic, coast, desert, forest, grassland, mountain, swamp, or Underdark - and consult the associated list of spells.",
-				"Once you gain access to a circle spell, you always have it prepared, and it doesn't count against the number of spells you can prepare each day. If you gain access to a spell that doesn't appear on the druid spell list, the spell is nonetheless a druid spell for you.",
+				"你與大地之間的神祕聯繫使你獲得能施放特定法術的能力。在3級、5級、7級、和9級時，你將獲得與你成為德魯伊時所在大地相連的結社法術。選擇一種環境：極地、海岸、沙漠、森林、草地、高山、沼澤、或幽暗地域，並查閱對應的法術列表",
+				"一旦你獲得結社法術，你將永遠視作已經準備了它，且它不會計入你每日可準備的法術數量中。若你獲得一個不在德魯伊法術列表上的法術，則該法術對你而言仍然視作德魯伊法術。",
 				{
 					"type": "table",
-					"caption": "Arctic",
+					"caption": "極地",
 					"colLabels": [
-						"Druid Level",
-						"Circle Spells"
+						"德魯伊等級",
+						"結社法術"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -2835,29 +2866,29 @@
 					],
 					"rows": [
 						[
-							"3rd",
-							"{@spell hold person}, {@spell spike growth}"
+							"3級",
+							"{@spell 人類定身術}, {@spell 荊棘叢生}"
 						],
 						[
-							"5th",
-							"{@spell sleet storm}, {@spell slow}"
+							"5級",
+							"{@spell 雪雨暴}, {@spell 緩速術}"
 						],
 						[
-							"7th",
-							"{@spell freedom of movement}, {@spell ice storm}"
+							"7級",
+							"{@spell 行動自如術}, {@spell 冰風暴}"
 						],
 						[
-							"9th",
-							"{@spell commune with nature}, {@spell cone of cold}"
+							"9級",
+							"{@spell 問道自然}, {@spell 寒冰錐}"
 						]
 					]
 				},
 				{
 					"type": "table",
-					"caption": "Coast",
+					"caption": "海岸",
 					"colLabels": [
 						"Druid Level",
-						"Circle Spells"
+						"結社法術"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -2865,29 +2896,29 @@
 					],
 					"rows": [
 						[
-							"3rd",
-							"{@spell mirror image}, {@spell misty step}"
+							"3級",
+							"{@spell 鏡影術}, {@spell 迷蹤步}"
 						],
 						[
-							"5th",
-							"{@spell water breathing}, {@spell water walk}"
+							"5級",
+							"{@spell 水下呼吸}, {@spell 水面行走}"
 						],
 						[
-							"7th",
-							"{@spell control water}, {@spell freedom of movement}"
+							"7級",
+							"{@spell 操控水體}, {@spell 行動自如術}"
 						],
 						[
-							"9th",
-							"{@spell conjure elemental}, {@spell scrying}"
+							"9級",
+							"{@spell 召喚元素生物}, {@spell 探知}"
 						]
 					]
 				},
 				{
 					"type": "table",
-					"caption": "Desert",
+					"caption": "沙漠",
 					"colLabels": [
-						"Druid Level",
-						"Circle Spells"
+						"德魯伊等級",
+						"結社法術"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -2895,29 +2926,29 @@
 					],
 					"rows": [
 						[
-							"3rd",
-							"{@spell blur}, {@spell silence}"
+							"3級",
+							"{@spell 朦朧術}, {@spell 沉默術}"
 						],
 						[
-							"5th",
-							"{@spell create food and water}, {@spell protection from energy}"
+							"5級",
+							"{@spell 創造飲食}, {@spell 防護能量}"
 						],
 						[
-							"7th",
-							"{@spell blight}, {@spell hallucinatory terrain}"
+							"7級",
+							"{@spell 枯萎術}, {@spell 幻景}"
 						],
 						[
-							"9th",
-							"{@spell insect plague}, {@spell wall of stone}"
+							"9級",
+							"{@spell 疫病蟲群}, {@spell 石牆術}"
 						]
 					]
 				},
 				{
 					"type": "table",
-					"caption": "Forest",
+					"caption": "森林",
 					"colLabels": [
-						"Druid Level",
-						"Circle Spells"
+						"德魯伊等級",
+						"結社法術"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -2925,29 +2956,29 @@
 					],
 					"rows": [
 						[
-							"3rd",
-							"{@spell barkskin}, {@spell spider climb}"
+							"3級",
+							"{@spell 樹膚術}, {@spell 蛛行術}"
 						],
 						[
-							"5th",
-							"{@spell call lightning}, {@spell plant growth}"
+							"5級",
+							"{@spell 召雷術}, {@spell 植物滋長}"
 						],
 						[
-							"7th",
-							"{@spell divination}, {@spell freedom of movement}"
+							"7級",
+							"{@spell 預言術}, {@spell 行動自如術}"
 						],
 						[
-							"9th",
-							"{@spell commune with nature}, {@spell tree stride}"
+							"9級",
+							"{@spell 問道自然}, {@spell 疫病蟲群}"
 						]
 					]
 				},
 				{
 					"type": "table",
-					"caption": "Grassland",
+					"caption": "草地",
 					"colLabels": [
-						"Druid Level",
-						"Circle Spells"
+						"德魯伊等級",
+						"結社法術"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -2955,29 +2986,29 @@
 					],
 					"rows": [
 						[
-							"3rd",
-							"{@spell invisibility}, {@spell pass without trace}"
+							"3級",
+							"{@spell 隱形術}, {@spell 行蹤無跡}"
 						],
 						[
-							"5th",
-							"{@spell daylight}, {@spell haste}"
+							"5級",
+							"{@spell 晝明術}, {@spell 加速術}"
 						],
 						[
-							"7th",
-							"{@spell divination}, {@spell freedom of movement}"
+							"7級",
+							"{@spell 預言術}, {@spell 行動自如術}"
 						],
 						[
-							"9th",
-							"{@spell dream}, {@spell insect plague}"
+							"9級",
+							"{@spell 託夢術}, {@spell 疫病蟲群}"
 						]
 					]
 				},
 				{
 					"type": "table",
-					"caption": "Mountain",
+					"caption": "高山",
 					"colLabels": [
-						"Druid Level",
-						"Circle Spells"
+						"德魯伊等級",
+						"結社法術"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -2985,29 +3016,29 @@
 					],
 					"rows": [
 						[
-							"3rd",
-							"{@spell spider climb}, {@spell spike growth}"
+							"3級",
+							"{@spell 蛛行術}, {@spell 荊棘叢生}"
 						],
 						[
-							"5th",
-							"{@spell lightning bolt}, {@spell meld into stone}"
+							"5級",
+							"{@spell 閃電束}, {@spell 融身入石}"
 						],
 						[
-							"7th",
-							"{@spell stone shape}, {@spell stoneskin}"
+							"7級",
+							"{@spell 塑石術}, {@spell 石膚術}"
 						],
 						[
-							"9th",
-							"{@spell passwall}, {@spell wall of stone}"
+							"9級",
+							"{@spell 穿牆術}, {@spell 石牆術}"
 						]
 					]
 				},
 				{
 					"type": "table",
-					"caption": "Swamp",
+					"caption": "沼澤",
 					"colLabels": [
-						"Druid Level",
-						"Circle Spells"
+						"德魯伊等級",
+						"結社法術"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -3015,29 +3046,29 @@
 					],
 					"rows": [
 						[
-							"3rd",
-							"{@spell darkness}, {@spell Melf's acid arrow}"
+							"3級",
+							"{@spell 黑暗術}, {@spell 馬友夫強酸箭}"
 						],
 						[
-							"5th",
-							"{@spell water walk}, {@spell stinking cloud}"
+							"5級",
+							"{@spell 水面行走}, {@spell 臭雲術}"
 						],
 						[
-							"7th",
-							"{@spell freedom of movement}, {@spell locate creature}"
+							"7級",
+							"{@spell 行動自如術}, {@spell 生物定位術}"
 						],
 						[
-							"9th",
-							"{@spell insect plague}, {@spell scrying}"
+							"9級",
+							"{@spell 疫病蟲群}, {@spell 探知}"
 						]
 					]
 				},
 				{
 					"type": "table",
-					"caption": "Underdark",
+					"caption": "幽暗地域",
 					"colLabels": [
-						"Druid Level",
-						"Circle Spells"
+						"德魯伊等級",
+						"結社法術"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -3045,27 +3076,28 @@
 					],
 					"rows": [
 						[
-							"3rd",
-							"{@spell spider climb}, {@spell web}"
+							"3級",
+							"{@spell 蛛行術}, {@spell 蛛網術}"
 						],
 						[
-							"5th",
-							"{@spell gaseous form}, {@spell stinking cloud}"
+							"5級",
+							"{@spell 氣化形體}, {@spell 臭雲術}"
 						],
 						[
-							"7th",
-							"{@spell greater invisibility}, {@spell stone shape}"
+							"7級",
+							"{@spell 高等隱形術}, {@spell 塑石術}"
 						],
 						[
-							"9th",
-							"{@spell cloudkill}, {@spell insect plague}"
+							"9級",
+							"{@spell 死雲術}, {@spell 疫病蟲群}"
 						]
 					]
 				}
 			]
 		},
 		{
-			"name": "Natural Recovery",
+			"name": "自然恢復",
+			"ENG_name": "Natural Recovery",
 			"source": "PHB",
 			"page": 68,
 			"srd": true,
@@ -3076,12 +3108,13 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"Starting at 2nd level, you can regain some of your magical energy by sitting in meditation and communing with nature. During a short rest, you choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your druid level (rounded up), and none of the slots can be 6th level or higher. You can't use this feature again until you finish a long rest.",
-				"For example, when you are a 4th-level druid, you can recover up to two levels worth of spell slots. You can recover either a 2nd-level slot or two 1st-level slots."
+				"從2級開始，你可以藉由靜坐冥想並與自然溝通來回復你一部份的魔法能量。在短休期間，你選擇並恢復已消耗的法術位。這些法術位可以是環階總和等於或低於你一半德魯伊等級（向上取整）的複數法術位，且這些法術位個別的環階不能是6環或更高。直到你完成一次長休之前你都不能再使用此能力。",
+				"舉例來說，如果你是一個4級的德魯伊，你可以恢復最多總共二個環階的法術位。你可以恢復一個2環的法術位、或二個1環的法術位。"
 			]
 		},
 		{
-			"name": "Land's Stride",
+			"name": "大地行者",
+			"ENG_name": "Land's Stride",
 			"source": "PHB",
 			"page": 68,
 			"srd": true,
@@ -3092,12 +3125,13 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Starting at 6th level, moving through nonmagical difficult terrain costs you no extra movement. You can also pass through nonmagical plants without being slowed by them and without taking damage from them if they have thorns, spines, or a similar hazard.",
-				"In addition, you have advantage on saving throws against plants that are magically created or manipulated to impede movement, such those created by the {@spell entangle} spell."
+				"從6級開始，移動穿過非魔法的困難地形並不會花費你額外的移動速度。你也可以穿越非魔法植物而不會被它們減緩速度，若它們是荊棘、棘刺、或其他類似危險，你也不會被它們的傷害。",
+				"此外，在對抗由魔法創造或控制的植物所造成的阻礙移動效果時（像是{@spell 糾纏術}法術創造出的植物），你所進行的豁免檢定具有優勢。"
 			]
 		},
 		{
-			"name": "Nature's Ward",
+			"name": "自然之護",
+			"ENG_name": "Nature's Ward",
 			"source": "PHB",
 			"page": 68,
 			"srd": true,
@@ -3108,11 +3142,12 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"When you reach 10th level, you can't be {@condition charmed} or {@condition frightened} by elementals or fey, and you are immune to poison and disease."
+				"當你升至10級時，你將不會被元素或精類生物給{@condition 魅惑}或{@condition 恐懼}，且你將免疫於疾病和毒素（包含中毒狀態）。"
 			]
 		},
 		{
-			"name": "Nature's Sanctuary",
+			"name": "自然庇護",
+			"ENG_name": "Nature's Sanctuary",
 			"source": "PHB",
 			"page": 68,
 			"srd": true,
@@ -3123,12 +3158,13 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"When you reach 14th level, creatures of the natural world sense your connection to nature and become hesitant to attack you. When a beast or plant creature attacks you, that creature must make a Wisdom saving throw against your druid spell save DC. On a failed save, the creature must choose a different target, or the attack automatically misses. On a successful save, the creature is immune to this effect for 24 hours.",
-				"The creature is aware of this effect before it makes its attack against you."
+				"當你升至14級時，自然界的生物們將察覺到你與大自然之間的聯繫，而猶豫於攻擊你。當一個野獸或植物生物攻擊你時，該生物必須進行一次對抗你德魯伊法術豁免DC的睿知豁免。若豁免失敗，該生物必須選擇一個不同的目標，否則該攻擊將自動失手。若豁免成功，該生物將在藉下來24小時內免疫於此效果。",
+				"該生物將在它對你進行攻擊前察覺這個效果。"
 			]
 		},
 		{
-			"name": "Circle of the Moon",
+			"name": "月亮結社",
+			"ENG_name": "Circle of the Moon",
 			"source": "PHB",
 			"page": 69,
 			"className": "Druid",
@@ -3137,20 +3173,21 @@
 			"subclassSource": "PHB",
 			"level": 2,
 			"entries": [
-				"Druids of the Circle of the Moon are fierce guardians of the wilds. Their order gathers under the full moon to share news and trade warnings. They haunt the deepest parts of the wilderness, where they might go for weeks on end before crossing paths with another humanoid creature, let alone another druid.",
-				"Changeable as the moon, a druid of this circle might prowl as a great cat one night, soar over the treetops as an eagle the next day, and crash through the undergrowth in bear form to drive off a trespassing monster. The wild is in the druid's blood.",
+				"月亮結社的德魯伊都是凶猛的荒野衛士。他們的教團聚集在滿月之下，彼此分享新聞並交換警示。他們出沒於荒野最深處的所在，並可能在該處迴盪數周的時間，直到偶然遭遇另一個類人生物、或甚至另一個德魯伊。",
+				"如月亮一樣善變，這個結社的德魯伊可能會在夜晚如大貓徘徊，在隔日如鷹隼盤旋於樹頂，並以熊型態橫掃灌木，趕走入侵的怪物。荒野之力流淌於德魯伊的血液中。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Combat Wild Shape|Druid||Moon||2"
+					"subclassFeature": "戰鬥荒野形態|Druid||Moon||2"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Circle Forms|Druid||Moon||2"
+					"subclassFeature": "結社型態|Druid||Moon||2"
 				}
 			]
 		},
 		{
-			"name": "Circle Forms",
+			"name": "結社型態",
+			"ENG_name": "Circle Forms",
 			"source": "PHB",
 			"page": 69,
 			"className": "Druid",
@@ -3160,15 +3197,15 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"The rites of your circle grant you the ability to transform into more dangerous animal forms. Starting at 2nd level, you can use your Wild Shape to transform into a {@filter beast with a challenge rating as high as 1|bestiary|challenge rating=[&0;&1]|type=beast|speed type=!fly;!swim|miscellaneous=!swarm} (you ignore the Max. CR column of the Beast Shapes table, but must abide by the other limitations there).",
-				"Starting at 6th level, you can transform into a beast with a challenge rating as high as your druid level divided by 3, rounded down.",
+				"你結社的儀式賦予你轉變成更加危險動物型態的能力。從2級開始，你可以使用你的荒野形態以轉變成一個{@filter 挑戰等級最高為1的野獸|bestiary|challenge rating=0;1/8;1/4;1/2;1|type=beast|speed=!fly;!swim|miscellaneous=!swarm}（你忽視原本野獸型態表中的最高挑戰等級欄位，但仍受限於該表中的其它限制）。",
+				"從6級開始，你可以轉變成一個挑戰等級最高等同於你德魯伊等級除以3（向下取整）的野獸。",
 				{
 					"type": "table",
-					"caption": "Circle of the Moon Beast Shapes",
+					"caption": "月亮結社野獸型態",
 					"colLabels": [
-						"Level",
-						"Max. CR",
-						"Limitations"
+						"等級",
+						"最高挑戰等級",
+						"限制"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -3177,43 +3214,43 @@
 					],
 					"rows": [
 						[
-							"2nd",
-							"{@filter 1|bestiary|challenge rating=[&0;&1]|type=beast|speed type=!fly;!swim|miscellaneous=!swarm}",
-							"No flying or swimming speed"
+							"2級",
+							"{@filter 1|bestiary|challenge rating=0;1/8;1/4;1/2;1|type=beast|speed type=!fly;!swim|miscellaneous=!swarm}",
+							"沒有飛行或游泳速度"
 						],
 						[
-							"4th",
-							"{@filter 1|bestiary|challenge rating=[&0;&1]|type=beast|speed type=!fly|miscellaneous=!swarm}",
-							"No flying speed"
+							"4級",
+							"{@filter 1|bestiary|challenge rating=0;1/8;1/4;1/2;1|type=beast|speed type=!fly|miscellaneous=!swarm}",
+							"沒有飛行速度"
 						],
 						[
-							"6th",
-							"{@filter 2|bestiary|challenge rating=[&0;&2]|type=beast|speed type=!fly|miscellaneous=!swarm}",
-							"No flying speed"
+							"6級",
+							"{@filter 2|bestiary|challenge rating=0;1/8;1/4;1/2;1;2|type=beast|speed type=!fly|miscellaneous=!swarm}",
+							"沒有飛行速度"
 						],
 						[
-							"8th",
-							"{@filter 2|bestiary|challenge rating=[&0;&2]|type=beast|miscellaneous=!swarm}",
+							"8級",
+							"{@filter 2|bestiary|challenge rating=0;1/8;1/4;1/2;1;2|type=beast|miscellaneous=!swarm}",
 							"\u2014"
 						],
 						[
-							"9th",
-							"{@filter 3|bestiary|challenge rating=[&0;&3]|type=beast|miscellaneous=!swarm}",
+							"9級",
+							"{@filter 3|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3|type=beast|miscellaneous=!swarm}",
 							"\u2014"
 						],
 						[
-							"12th",
-							"{@filter 4|bestiary|challenge rating=[&0;&4]|type=beast|miscellaneous=!swarm}",
+							"12級",
+							"{@filter 4|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3;4|type=beast|miscellaneous=!swarm}",
 							"\u2014"
 						],
 						[
-							"15th",
-							"{@filter 5|bestiary|challenge rating=[&0;&5]|type=beast|miscellaneous=!swarm}",
+							"15級",
+							"{@filter 5|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3;4;5|type=beast|miscellaneous=!swarm}",
 							"\u2014"
 						],
 						[
-							"18th",
-							"{@filter 6|bestiary|challenge rating=[&0;&6]|type=beast|miscellaneous=!swarm}",
+							"18級",
+							"{@filter 6|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3;4;5;6|type=beast|miscellaneous=!swarm}",
 							"\u2014"
 						]
 					]
@@ -3221,7 +3258,8 @@
 			]
 		},
 		{
-			"name": "Combat Wild Shape",
+			"name": "戰鬥荒野形態",
+			"ENG_name": "Combat Wild Shape",
 			"source": "PHB",
 			"page": 69,
 			"className": "Druid",
@@ -3231,12 +3269,13 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"You gain the ability to use Wild Shape on your turn as a bonus action, rather than as an action.",
-				"Additionally, while you are transformed by Wild Shape, you can use a bonus action to expend one spell slot to regain {@dice 1d8} hit points per level of the spell slot expended."
+				"你獲得在你的回合以一個附贈動作，而非一個動作來使用荒野形態型態的能力。",
+				"此外，當你透過荒野型態而處於變形狀態時，你可以使用一個附贈動作以消耗一個法術位，回復等同於被消耗法術位的每環階{@dice 1d8}點的生命值。"
 			]
 		},
 		{
-			"name": "Primal Strike",
+			"name": "原初打擊",
+			"ENG_name": "Primal Strike",
 			"source": "PHB",
 			"page": 69,
 			"className": "Druid",
@@ -3246,11 +3285,12 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Starting at 6th level, your attacks in beast form count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage."
+				"從6級開始，在克服對非魔法攻擊和傷害的抗性和免疫能力時，你在野獸型態下的攻擊被視作魔法攻擊。"
 			]
 		},
 		{
-			"name": "Elemental Wild Shape",
+			"name": "元素荒野形態",
+			"ENG_name": "Elemental Wild Shape",
 			"source": "PHB",
 			"page": 69,
 			"className": "Druid",
@@ -3260,11 +3300,12 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"At 10th level, you can expend two uses of Wild Shape at the same time to transform into an {@creature air elemental}, an {@creature earth elemental}, a {@creature fire elemental}, or a {@creature water elemental}."
+				"在10級時，你可以同時花費二次荒野形態的使用次數，以轉變成一個{@creature 氣元素}、{@creature 土元素}、{@creature 火元素}、或{@creature 水元素}。"
 			]
 		},
 		{
-			"name": "Thousand Forms",
+			"name": "千面相",
+			"ENG_name": "Thousand Forms",
 			"source": "PHB",
 			"page": 69,
 			"className": "Druid",
@@ -3274,11 +3315,12 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"By 14th level, you have learned to use magic to alter your physical form in more subtle ways. You can cast the {@spell alter self} spell at will."
+				"在14級時，你學會以更精細的方式用魔法改變自己的身體型態。你可以隨意施放{@spell 變造自身}法術。"
 			]
 		},
 		{
-			"name": "Circle of Spores",
+			"name": "孢子結社",
+			"ENG_name": "Circle of Spores",
 			"source": "TCE",
 			"page": 36,
 			"otherSources": [
@@ -3293,25 +3335,26 @@
 			"subclassSource": "TCE",
 			"level": 2,
 			"entries": [
-				"Druids of the Circle of Spores find beauty in decay. They see within mold and other fungi the ability to transform lifeless material into abundant, albeit somewhat strange, life.",
-				"These druids believe that life and death are parts of a grand cycle, with one leading to the other and then back again. Death isn't the end of life, but instead a change of state that sees life shift into a new form.",
-				"Druids of this circle have a complex relationship with the undead. Unlike most other druids, they see nothing inherently wrong with undeath, which they consider to be a companion to life and death. But these druids believe that the natural cycle is healthiest when each segment of it is vibrant and changing. Undead that seek to replace all life with undeath, or that try to avoid passing to a final rest, violate the cycle and must be thwarted.",
+				"孢子結社的德魯伊們能在腐朽中發現美。他們在黴菌和其他真菌中發現，那能將無生命物質轉變成儘管有些奇怪，卻有著豐富生命的能力。",
+				"這些德魯伊相信生和死只不過是大循環中的一部分，一個接續著另一個，周而復始。死亡並不是生命的結束，而是轉變成另一種生命型態的狀態變化。",
+				"這個結社的德魯伊與不死生物間有著相當複雜的關係。不像其他大多數的德魯伊，他們並認為不死生物並沒有什麼本質上的問題，而是將它們視做生與死共存的狀態。然而，由於這些德魯伊們相信自然循環只有在它每個階段都充滿活力和變化時才最為健全，因此那些希望讓亡靈取代所有活物的不死生物，或那些嘗試避免陷入永眠的不死生物都違反了生死循環，而必須被阻止。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Circle Spells|Druid||Spores|TCE|2"
+					"subclassFeature": "結社法術|Druid||Spores|TCE|2"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Halo of Spores|Druid||Spores|TCE|2"
+					"subclassFeature": "孢子光環|Druid||Spores|TCE|2"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Symbiotic Entity|Druid||Spores|TCE|2"
+					"subclassFeature": "共生實體|Druid||Spores|TCE|2"
 				}
 			]
 		},
 		{
-			"name": "Circle Spells",
+			"name": "結社法術",
+			"ENG_name": "Circle Spells",
 			"source": "TCE",
 			"page": 36,
 			"otherSources": [
@@ -3327,14 +3370,14 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"Your symbiotic link to fungus and your ability to tap into the cycle of life and death grants you access to certain spells. At 2nd level, you learn the {@spell chill touch} cantrip. At 3rd, 5th, 7th, and 9th level you gain access to the spells listed for that level in the Circle of Spores Spells table.",
-				"Once you gain access to one of these spells, you always have it prepared, and it doesn't count against the number of spells you can prepare each day. If you gain access to a spell that doesn't appear on the druid spell list, the spell is nonetheless a druid spell for you.",
+				"你與真菌之間形成了共生連結，且你踏入生死循環的能力使你獲得特定的法術。在2級時，你學會{@spell 寒顫之觸}戲法。在3級、5級、7級、和9級時，你將獲得孢子結社法術表中在該等級所對應的法術。",
+				"一旦你獲得其中一個這些法術，你將永遠視作已經準備了它，且它不會計入你每日可準備的法術數量中。若你獲得一個不在德魯伊法術列表上的法術，則該法術對你而言仍然視作德魯伊法術。",
 				{
 					"type": "table",
-					"caption": "Circle of Spores Spells",
+					"caption": "孢子結社法術",
 					"colLabels": [
-						"Druid Level",
-						"Circle Spells"
+						"德魯伊等級",
+						"結社法術"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -3342,27 +3385,28 @@
 					],
 					"rows": [
 						[
-							"3rd",
-							"{@spell blindness/deafness}, {@spell gentle repose}"
+							"3級",
+							"{@spell 目盲/耳聾術}, {@spell 遺體防腐}"
 						],
 						[
-							"5th",
-							"{@spell animate dead}, {@spell gaseous form}"
+							"5級",
+							"{@spell 活化死屍}, {@spell 氣化形體}"
 						],
 						[
-							"7th",
-							"{@spell blight}, {@spell confusion}"
+							"7級",
+							"{@spell 枯萎術}, {@spell 困惑術}"
 						],
 						[
-							"9th",
-							"{@spell cloudkill}, {@spell contagion}"
+							"9級",
+							"{@spell 死雲術}, {@spell 疫病術}"
 						]
 					]
 				}
 			]
 		},
 		{
-			"name": "Halo of Spores",
+			"name": "孢子光環",
+			"ENG_name": "Halo of Spores",
 			"source": "TCE",
 			"page": 36,
 			"otherSources": [
@@ -3378,11 +3422,12 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"Starting at 2nd level, you are surrounded by invisible, necrotic spores that are harmless until you unleash them on a creature nearby. When a creature you can see moves into a space within 10 feet of you or starts its turn there, you can use your reaction to deal {@damage 1d4} necrotic damage to that creature unless it succeeds on a Constitution saving throw against your spell save DC. The necrotic damage increases to {@dice 1d6} at 6th level, {@dice 1d8} at 10th level, and {@dice 1d10} at 14th level."
+				"從2級開始，你被不可見的壞死孢子給環繞，它們是無害的，直到你將它們釋放到附近的一個生物上。當一個你所能看見的生物移動到距離你10呎內的空間，或在該處開始它的回合，你可以使用你的反應，除非該生物成功通過一次對抗你法術豁免DC的體質豁免，否則該生物將受到{@dice 1d4}死靈傷害。這個死靈傷害將在6級時增加至{@dice 1d6}，10級時{@dice 1d8}，14級時{@dice 1d10}。"
 			]
 		},
 		{
-			"name": "Symbiotic Entity",
+			"name": "共生實體",
+			"ENG_name": "Symbiotic Entity",
 			"source": "TCE",
 			"page": 36,
 			"otherSources": [
@@ -3398,19 +3443,20 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"At 2nd level, you gain the ability to channel magic into your spores. As an action, you can expend a use of your Wild Shape feature to awaken those spores, rather than transforming into a beast form, and you gain 4 temporary hit points for each level you have in this class. While this feature is active, you gain the following benefits:",
+				"在2級時，你獲得了將魔法能量引導到你孢子的能力。以一個動作，你可以消耗一次你荒野形態能力的使用次數以喚醒這些孢子，而非轉變成野獸型態。當你這麼做時，你獲得每個此職業等級4點的臨時生命值。當這個能力被啟動時，你獲得下列好處：",
 				{
 					"type": "list",
 					"items": [
-						"When you deal your Halo of Spores damage, roll the damage die a second time and add it to the total.",
-						"Your melee weapon attacks deal an extra {@damage 1d6} necrotic damage to any target they hit."
+						"當你的孢子光環能力造成傷害時，骰第二次傷害骰，並將之加入傷害總和。",
+						"你的近戰武器攻擊將對任何它命中的目標造成額外的{@dice 1d6}毒素傷害。"
 					]
 				},
-				"These benefits last for 10 minutes, until you lose all these temporary hit points, or until you use your Wild Shape again."
+				"這些好處將會持續10分鐘，或直到你失去所有這些臨時生命值、或直到你再次使用你的荒野形態。"
 			]
 		},
 		{
-			"name": "Fungal Infestation",
+			"name": "真菌感染",
+			"ENG_name": "Fungal Infestation",
 			"source": "TCE",
 			"page": 36,
 			"otherSources": [
@@ -3426,13 +3472,14 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"At 6th level, your spores gain the ability to infest a corpse and animate it. If a beast or a humanoid that is Small or Medium dies within 10 feet of you, you can use your reaction to animate it, causing it to stand up immediately with 1 hit point. The creature uses the {@creature zombie} stat block in the {@book Monster Manual|MM}. It remains animate for 1 hour, after which time it collapses and dies.",
-				"In combat, the zombie's turn comes immediately after yours. It obeys your mental commands, and the only action it can take is the {@action Attack} action, making one melee attack.",
-				"You can use this feature a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses of it when you finish a long rest."
+				"在6級時，你的孢子獲得感染屍體並活化它的能力。若一個體型為小型或中型的野獸或類人生物在距離你10呎內死亡，你可以使用你的反應以活化它，使它以1點生命值的狀態立刻起身。該生物使用記載於《{@book 怪物圖鑑|MM}》的{@creature 殭屍}的數據資料。它將持續活化長達1小時，在這之後它將瓦解並死亡。",
+				"在戰鬥中，這個殭屍的回合將緊接在你之後進行。它服從你的心靈命令，且它唯一能採取的動作是{@action 攻擊}動作，進行一次近戰攻擊。",
+				"你可以使用此能力的次數等同於你的睿知調整值（最少一次），且你在完成一次長休後恢復所有你花費掉的次數。"
 			]
 		},
 		{
-			"name": "Spreading Spores",
+			"name": "散佈孢子",
+			"ENG_name": "Spreading Spores",
 			"source": "TCE",
 			"page": 36,
 			"otherSources": [
@@ -3448,13 +3495,14 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"At 10th level, you gain the ability to seed an area with deadly spores. As a bonus action while your Symbiotic Entity feature is active, you can hurl spores up to 30 feet away, where they swirl in a 10-foot cube for 1 minute. The spores disappear early if you use this feature again, if you dismiss them as a bonus action, or if your Symbiotic Entity feature is no longer active.",
-				"Whenever a creature moves into the cube or starts its turn there, that creature takes your Halo of Spores damage, unless the creature succeeds on a Constitution saving throw against your spell save DC. A creature can take this damage no more than once per turn.",
-				"While the cube of spores persists, you can't use your Halo of Spores reaction."
+				"在10級時，你獲得在一片區域內散佈致命胞子的能力。當你的共生實體能力在作用時，以一個附贈動作，你可以將孢子投至最多30呎距離，並使它們在該處10呎邊長立方體的範圍內盤繞持續1分鐘。若你再次使用此能力、你以一個附贈動作解消它們、或你的共生實體能力不再作用時，這團孢子將會提早消失。",
+				"每當一個生物移動進入該立方體區域或在該處開始它的回合，則除非該生物成功通過一次對抗你法術豁免DC的體質豁免，否則它將受到你孢子光環的傷害。一個生物每回合只會受到此傷害一次。",
+				"當這個孢子立方體範圍存在時，你將不能使用你孢子光環的反應。"
 			]
 		},
 		{
-			"name": "Fungal Body",
+			"name": "真菌身軀",
+			"ENG_name": "Fungal Body",
 			"source": "TCE",
 			"page": 36,
 			"otherSources": [
@@ -3470,7 +3518,7 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"At 14th level, the fungal spores in your body alter you: you can't be {@condition blinded}, {@condition deafened}, {@condition frightened}, or {@condition poisoned}, and any critical hit against you counts as a normal hit instead, unless you're {@condition incapacitated}."
+				"在14級時，你體內的真菌孢子改變了你：你不會陷入{@condition 目盲}、{@condition 耳聾}、{@condition 恐懼}、或{@condition 中毒}狀態，且除非你陷入{@condition 無力}狀態，否則任何對你的重擊都將改為被視作普通命中。"
 			]
 		},
 		{
@@ -3550,9 +3598,9 @@
 				{
 					"type": "list",
 					"items": [
-						"You know the {@spell guidance} cantrip.",
-						"You have the {@spell guiding bolt} spell prepared. It counts as a druid spell for you, and it doesn't count against the number of spells you can have prepared.",
-						"You can cast {@spell guiding bolt} without expending a spell slot. You can do so a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+						"You know the {@spell 指導術} cantrip.",
+						"You have the {@spell 光導箭} spell prepared. It counts as a druid spell for you, and it doesn't count against the number of spells you can have prepared.",
+						"You can cast {@spell 光導箭} without expending a spell slot. You can do so a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
 					]
 				},
 				"If you lose the map, you can perform a 1-hour ceremony to magically create a replacement. This ceremony can be performed during a short or long rest, and it destroys the previous map."
@@ -3708,23 +3756,23 @@
 					"rows": [
 						[
 							"2nd",
-							"{@spell burning hands}, {@spell cure wounds}"
+							"{@spell 燃燒之手}, {@spell 治療傷勢}"
 						],
 						[
 							"3rd",
-							"{@spell flaming sphere}, {@spell scorching ray}"
+							"{@spell 熾焰法球}, {@spell 灼熱射線}"
 						],
 						[
 							"5th",
-							"{@spell plant growth}, {@spell revivify}"
+							"{@spell 植物滋長}, {@spell 回生術}"
 						],
 						[
 							"7th",
-							"{@spell aura of life}, {@spell fire shield}"
+							"{@spell 生命靈光}, {@spell 火焰護盾}"
 						],
 						[
 							"9th",
-							"{@spell flame strike}, {@spell mass cure wounds}"
+							"{@spell 焰擊術}, {@spell 群體治療傷勢}"
 						]
 					]
 				}
@@ -3871,7 +3919,7 @@
 					]
 				},
 				"If you lose your map, you can perform a 1-hour ceremony to magically create a replacement. This ceremony can be performed during a short or long rest, and it destroys the previous map.",
-				"You can cast the {@spell augury} and {@spell guiding bolt} spells without expending a spell slot and without preparing the spell, provided you use the star map as the spellcasting focus. You can cast a spell from the map in this way a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses when you finish a long rest."
+				"You can cast the {@spell 卜筮} and {@spell 光導箭} spells without expending a spell slot and without preparing the spell, provided you use the star map as the spellcasting focus. You can cast a spell from the map in this way a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses when you finish a long rest."
 			]
 		},
 		{
@@ -4024,19 +4072,19 @@
 					"rows": [
 						[
 							"3rd",
-							"{@spell locate animals or plants}, {@spell scorching ray}"
+							"{@spell 動植物定位術}, {@spell 灼熱射線}"
 						],
 						[
 							"5th",
-							"{@spell fireball}, {@spell plant growth}"
+							"{@spell 火球術}, {@spell 植物滋長}"
 						],
 						[
 							"7th",
-							"{@spell aura of life}, {@spell fire shield}"
+							"{@spell 生命靈光}, {@spell 火焰護盾}"
 						],
 						[
 							"9th",
-							"{@spell flame strike}, {@spell raise dead}"
+							"{@spell 焰擊術}, {@spell 喚醒死者}"
 						]
 					]
 				}
@@ -4298,7 +4346,7 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"At 10th level, you gain the services of a spirit that watches over you and protects you from harm. Whenever you finish a long rest, you gain the benefits of a {@spell death ward} spell. The spell's duration is extended to 24 hours."
+				"At 10th level, you gain the services of a spirit that watches over you and protects you from harm. Whenever you finish a long rest, you gain the benefits of a {@spell 防死護咒} spell. The spell's duration is extended to 24 hours."
 			]
 		},
 		{
@@ -4312,7 +4360,7 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"Starting at 14th level, the bestial spirits you commune with protect you when you are vulnerable. If you are reduced to 0 hit points or are {@condition incapacitated} against your will, you can immediately gain the benefits of {@spell conjure animals} as if it was cast with a 9th-level spell slot. It summons four beasts of your choice that are challenge rating 2 or lower. The conjured beasts appear within 20 feet of you. If they receive no commands from you, they protect you from harm and attack your foes. The spell lasts for 1 hour.",
+				"Starting at 14th level, the bestial spirits you commune with protect you when you are vulnerable. If you are reduced to 0 hit points or are {@condition incapacitated} against your will, you can immediately gain the benefits of {@spell 召喚動物} as if it was cast with a 9th-level spell slot. It summons four beasts of your choice that are challenge rating 2 or lower. The conjured beasts appear within 20 feet of you. If they receive no commands from you, they protect you from harm and attack your foes. The spell lasts for 1 hour.",
 				"Once you use this feature, you can't use it again until you finish a long rest."
 			]
 		},
@@ -4361,7 +4409,7 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"At 6th level, you gain the ability to reach beyond death's veil in search of knowledge. Using this feature, you can cast {@spell speak with dead} without material components, and you understand what the target of this casting says. It can understand your questions, even if you don't share a language or it is not intelligent enough to speak.",
+				"At 6th level, you gain the ability to reach beyond death's veil in search of knowledge. Using this feature, you can cast {@spell 死者交談術} without material components, and you understand what the target of this casting says. It can understand your questions, even if you don't share a language or it is not intelligent enough to speak.",
 				"Once you use this feature, you can't use it again until you finish a short or long rest."
 			]
 		},
@@ -4390,7 +4438,7 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"At 14th level, your mastery of death allows you to tread the paths used by ghosts and other spirits. Using this feature, you can cast {@spell etherealness}. Once the spell ends, you can't cast it with this feature again until you finish a short or long rest."
+				"At 14th level, your mastery of death allows you to tread the paths used by ghosts and other spirits. Using this feature, you can cast {@spell 跨入乙太界}. Once the spell ends, you can't cast it with this feature again until you finish a short or long rest."
 			]
 		},
 		{
@@ -4529,7 +4577,7 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"Starting at 14th level, the nature spirits you commune with protect you when you are the most defenseless. If you are reduced to 0 hit points or are {@condition incapacitated} against your will, you can immediately gain the benefits of {@spell conjure animals} as if it were cast with a 9th-level spell slot. It summons four beasts of your choice that are challenge rating 2 or lower. The conjured beasts appear within 20 feet of you. If they receive no commands from you, they protect you from harm and attack your foes. The spell lasts for 1 hour, requiring no concentration, or until you dismiss it (no action required).",
+				"Starting at 14th level, the nature spirits you commune with protect you when you are the most defenseless. If you are reduced to 0 hit points or are {@condition incapacitated} against your will, you can immediately gain the benefits of {@spell 召喚動物} as if it were cast with a 9th-level spell slot. It summons four beasts of your choice that are challenge rating 2 or lower. The conjured beasts appear within 20 feet of you. If they receive no commands from you, they protect you from harm and attack your foes. The spell lasts for 1 hour, requiring no concentration, or until you dismiss it (no action required).",
 				"Once you use this feature, you can't use it again until you finish a long rest."
 			]
 		},
@@ -4569,7 +4617,7 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"Your symbiotic link to fungus and your ability to tap into the cycle of life and death grants you access to certain spells. At 1st level, you learn the {@spell chill touch} cantrip. At 3rd, 5th, 7th, and 9th level you gain access to the spells listed for that level in the Circle of Spores Spells table.",
+				"Your symbiotic link to fungus and your ability to tap into the cycle of life and death grants you access to certain spells. At 1st level, you learn the {@spell 寒顫之觸} cantrip. At 3rd, 5th, 7th, and 9th level you gain access to the spells listed for that level in the Circle of Spores Spells table.",
 				"Once you gain access to one of these spells, you always have it prepared, and it doesn't count against the number of spells you can prepare each day. If you gain access to a spell that doesn't appear on the druid spell list, the spell is nonetheless a druid spell for you.",
 				{
 					"type": "table",
@@ -4585,19 +4633,19 @@
 					"rows": [
 						[
 							"3rd",
-							"{@spell gentle repose}, {@spell ray of enfeeblement}"
+							"{@spell 遺體防腐}, {@spell 衰弱射線}"
 						],
 						[
 							"5th",
-							"{@spell animate dead}, {@spell gaseous form}"
+							"{@spell 活化死屍}, {@spell 氣化形體}"
 						],
 						[
 							"7th",
-							"{@spell blight}, {@spell confusion}"
+							"{@spell 枯萎術}, {@spell 困惑術}"
 						],
 						[
 							"9th",
-							"{@spell cloudkill}, {@spell contagion}"
+							"{@spell 死雲術}, {@spell 疫病術}"
 						]
 					]
 				}
@@ -4676,7 +4724,8 @@
 			]
 		},
 		{
-			"name": "Circle of Dreams",
+			"name": "夢境結社",
+			"ENG_name": "Circle of Dreams",
 			"source": "XGE",
 			"page": 22,
 			"className": "Druid",
@@ -4685,15 +4734,16 @@
 			"subclassSource": "XGE",
 			"level": 2,
 			"entries": [
-				"Druids who are members of the Circle of Dreams hail from regions that have strong ties to the Feywild and its dreamlike realms. The druids' guardianship of the natural world makes for a natural alliance between them and good-aligned fey. These druids seek to fill the world with dreamy wonder. Their magic mends wounds and brings joy to downcast hearts, and the realms they protect are gleaming, fruitful places, where dream and reality blur together and where the weary can find rest.",
+				"身為夢境結社成員的德魯伊們來自那些與妖精荒野與那夢境般國度有著強烈聯繫的地區。這些德魯伊們對自然世界的守護使他們與善良陣營的精類生物自然而然的組成了聯盟。這些德魯伊冀望讓這世界充滿夢幻奇事。他們的魔法能修復傷口、為沮喪的心帶來歡樂、並讓他們所守護的國度永遠熠熠發光、豐碩富饒，夢境和現實的邊界將變得模糊，任何疲憊的人都能找到休憩的場所。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Balm of the Summer Court|Druid||Dreams|XGE|2"
+					"subclassFeature": "仲夏庭院的芬馥|Druid||Dreams|XGE|2"
 				}
 			]
 		},
 		{
-			"name": "Balm of the Summer Court",
+			"name": "仲夏庭院的芬馥",
+			"ENG_name": "Balm of the Summer Court",
 			"source": "XGE",
 			"page": 22,
 			"className": "Druid",
@@ -4703,13 +4753,14 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"At 2nd level, you become imbued with the blessings of the Summer Court. You are a font of energy that offers respite from injuries. You have a pool of fey energy represented by a number of {@dice d6}s equal to your druid level.",
-				"As a bonus action, you can choose one creature you can see within 120 feet of you and spend a number of those dice equal to half your druid level or less. Roll the spent dice and add them together. The target regains a number of hit points equal to the total. The target also gains 1 temporary hit point per die spent.",
-				"You regain all expended dice when you finish a long rest."
+				"在2級時，你將被來自仲夏庭院的祝福給充滿，你成為了能緩解傷勢的能量泉源。你獲得一個精類能量池，呈現為數量等同於你德魯伊等級的{@dice d6}骰。",
+				"以一個附贈動作，你可以選擇距離你120呎內你所能看見的一個生物，並消耗數量等於你一半德魯伊等級或更少的這些骰子。投擲你所消耗的骰子並將它們加在一起。目標將回復等同於其總和的生命值。目標同時獲得等同於消耗骰數的臨時生命值。",
+				"你將在完成一次長休時恢復所有花費掉的骰子。"
 			]
 		},
 		{
-			"name": "Hearth of Moonlight and Shadow",
+			"name": "月光與陰影之家",
+			"ENG_name": "Hearth of Moonlight and Shadow",
 			"source": "XGE",
 			"page": 22,
 			"className": "Druid",
@@ -4719,13 +4770,14 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"At 6th level, home can be wherever you are. During a short or long rest, you can invoke the shadowy power of the Gloaming Court to help guard your respite. At the start of the rest, you touch a point in space, and an invisible, 30-foot-radius sphere of magic appears, centered on that point. Total cover blocks the sphere.",
-				"While within the sphere, you and your allies gain a +5 bonus to Dexterity ({@skill Stealth}) and Wisdom ({@skill Perception}) checks, and any light from open flames in the sphere (a campfire, torches, or the like) isn't visible outside it.",
-				"The sphere vanishes at the end of the rest or when you leave the sphere."
+				"在6級時，任何你所在的地方都可以是你的家。在短休或長休期間，你可以呼喚來自薄暮庭院的幽影力量以協助你守護你暫時的歇息。在休息開始時，你觸碰空間內的一點，且一個隱形，30呎半徑球體的魔法能量將會以該點為中心出現。將球體區域籠罩在全掩護之下。",
+				"當處於球體區域內，你和你的盟友將在敏捷（{@skill 隱匿}）檢定和睿知（{@skill 感知}）檢定中獲得+5加值，且任何球體內明火所散發出的光照都無法被從外側看見。",
+				"這個球體將在休息結束或你離開球體時消失。"
 			]
 		},
 		{
-			"name": "Hidden Paths",
+			"name": "隱匿通途",
+			"ENG_name": "Hidden Paths",
 			"source": "XGE",
 			"page": 22,
 			"className": "Druid",
@@ -4735,12 +4787,13 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"Starting at 10th level, you can use the hidden, magical pathways that some fey use to traverse space in the blink of an eye. As a bonus action on your turn, you can teleport up to 60 feet to an unoccupied space you can see. Alternatively, you can use your action to teleport one willing creature you touch up to 30 feet to an unoccupied space you can see.",
-				"You can use this feature a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses of it when you finish a long rest."
+				"從10級開始，你可以使用那些妖精用以在眨眼間穿梭空間的隱藏魔法通道。在你的回合以一個附贈動作，你可以傳送最多60呎距離到一處你所能看見的未被佔據空間。或者，你可以使用你的動作使一個你所觸碰的自願生物傳送到最多30呎距離到一處你所能看見的未被佔據空間。",
+				"你可以使用這個能力的次數等同於你的睿知調整值（最少一次）。你在完成一次長休後恢復所有你花費掉的次數。"
 			]
 		},
 		{
-			"name": "Walker in Dreams",
+			"name": "夢境行者",
+			"ENG_name": "Walker in Dreams",
 			"source": "XGE",
 			"page": 22,
 			"className": "Druid",
@@ -4750,14 +4803,15 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"At 14th level, the magic of the Feywild grants you the ability to travel mentally or physically through dreamlands.",
-				"When you finish a short rest, you can cast one of the following spells, without expending a spell slot or requiring material components: {@spell dream} (with you as the messenger), {@spell scrying}, or {@spell teleportation circle}.",
-				"This use of {@spell teleportation circle} is special. Rather than opening a portal to a permanent {@spell teleportation circle}, it opens a portal to the last location where you finished a long rest on your current plane of existence. If you haven't taken a long rest on your current plane, the spell fails but isn't wasted.",
-				"Once you use this feature, you can't use it again until you finish a long rest."
+				"在14級時，妖精荒野的魔法賦予你以心靈或身體穿梭夢境的能力。",
+				"當你完成一次短休，你可以施放下列其中一個法術，無須消耗法術位或需求材料構材：{@spell 託夢術}（以你做為信使）、{@spell 探知}、或{@spell 傳送法陣}。",
+				"這個{@spell 傳送法陣}的使用方式是特別的。它所開啟的傳送門並非通往一個永久傳送法陣，而是通往你在當前存在位面中最後一次完成長休的地點。若你在當前位面中尚未進行過長休，則此法術將失敗，但使用次數並不會被浪費。",
+				"一旦你使用此能力，直到你完成一次長休之前你都不能再使用它。"
 			]
 		},
 		{
-			"name": "Circle of the Shepherd",
+			"name": "牧人結社",
+			"ENG_name": "Circle of the Shepherd",
 			"source": "XGE",
 			"page": 23,
 			"className": "Druid",
@@ -4766,20 +4820,21 @@
 			"subclassSource": "XGE",
 			"level": 2,
 			"entries": [
-				"Druids of the Circle of the Shepherd commune with the spirits of nature, especially the spirits of beasts and the fey, and call to those spirits for aid. These druids recognize that all living things play a role in the natural world, yet they focus on protecting animals and fey creatures that have difficulty defending themselves. Shepherds, as they are known, see such creatures as their charges. They ward off monsters that threaten them, rebuke hunters who kill more prey than necessary, and prevent civilization from encroaching on rare animal habitats and on sites sacred to the fey. Many of these druids are happiest far from cities and towns, content to spend their days in the company of animals and the fey creatures of the wilds.",
-				"Members of this circle become adventurers to oppose forces that threaten their charges or to seek knowledge and power that will help them safeguard their charges better. Wherever these druids go, the spirits of the wilderness are with them.",
+				"牧人結社的德魯伊與大自然的精魂交融，尤其是那些野獸和妖精的精魂。他們也會呼喚這些精魂援助自己。這些德魯伊認為所有的活物都在自然界中扮演著各自的角色，因此他們專注於保護難以自保的動物和精類生物。牧人們，就如他們所為人知的，將這類生物視為自己的責任。他們抵禦那些會威脅他們的怪物、斥退進行不必要殺戮的獵人、並防止文明侵犯那些稀有動物的棲息地和精類的神聖場所。許多牧人結社的德魯伊們在遠離城市和城鎮的地方最為快樂，並滿足於在荒野中的動物和精類生物陪伴下度過他們的時光。",
+				"這個結社的成員會因為許多原因而成為冒險者，像是為了抵禦威脅他們照護對象的力量、或是為了尋求知識和力量以幫助他們更好的保護他們的照護對象。每當這些德魯伊們踏上旅程，荒野中的精魂都會與他們同行。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Speech of the Woods|Druid||Shepherd|XGE|2"
+					"subclassFeature": "林地之語|Druid||Shepherd|XGE|2"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Spirit Totem|Druid||Shepherd|XGE|2"
+					"subclassFeature": "精魂圖騰|Druid||Shepherd|XGE|2"
 				}
 			]
 		},
 		{
-			"name": "Speech of the Woods",
+			"name": "林地之語",
+			"ENG_name": "Speech of the Woods",
 			"source": "XGE",
 			"page": 23,
 			"className": "Druid",
@@ -4789,12 +4844,13 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"At 2nd level, you gain the ability to converse with beasts and many fey.",
-				"You learn to speak, read, and write Sylvan. In addition, beasts can understand your speech, and you gain the ability to decipher their noises and motions. Most beasts lack the intelligence to convey or understand sophisticated concepts, but a friendly beast could relay what it has seen or heard in the recent past. This ability doesn't grant you friendship with beasts, though you can combine this ability with gifts to curry favor with them as you would with any nonplayer character."
+				"在2級時，你獲得與野獸和多數精類生物交談的能力。",
+				"你學會說、讀、寫木族語。此外，野獸可以理解你的話語，且你獲得解析牠們聲音和動作的含意。大部分的野獸缺乏足夠的智能以傳達或理解複雜的概念，但一個友善的野獸可以復述牠在最近聽過或看到的事物。此能力並不會讓你和野獸成為朋友，但你可以將此能力與禮物結合以討好牠們，就如同你對待任何其他非玩家角色一樣。"
 			]
 		},
 		{
-			"name": "Spirit Totem",
+			"name": "精魂圖騰",
+			"ENG_name": "Spirit Totem",
 			"source": "XGE",
 			"page": 23,
 			"className": "Druid",
@@ -4804,35 +4860,39 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"Starting at 2nd level, you can call forth nature spirits to influence the world around you. As a bonus action, you can magically summon an incorporeal spirit to a point you can see within 60 feet of you. The spirit creates an aura in a 30-foot radius around that point. It counts as neither a creature nor an object, though it has the spectral appearance of the creature it represents.",
-				"As a bonus action, you can move the spirit up to 60 feet to a point you can see.",
-				"The spirit persists for 1 minute or until you're {@condition incapacitated}. Once you use this feature, you can't use it again until you finish a short or long rest.",
-				"The effect of the spirit's aura depends on the type of spirit you summon from the options below.",
+				"從2級開始，你可以喚出自然精魂以影響你周遭的世界。以一個附贈動作，你可以用魔法在距離你60呎內你所能看見的一點召喚出一個沒有實體的精魂。這個精魂將在該點周圍創造出一個30呎半徑的靈光。它不會被視作生物或物體，儘管它呈現著對應生物的靈體外觀。",
+				"以一個附贈動作，你可以移動該精魂最多60呎距離到你所能看見的一點。",
+				"這個精魂會持續存在1分鐘或直到你陷入{@condition 無力}狀態。一旦你使用此能力，直到你完成一次短休或長休之前你都不能再使用它。",
+				"這個精魂的靈光效果將根據你所召喚的精魂類型而有所不同，如下列選項所示。",
 				{
 					"type": "entries",
-					"name": "Bear Spirit",
+					"name": "熊之精魂",
+					"ENG_name": "Bear Spirit",
 					"entries": [
-						"The bear spirit grants you and your allies its might and endurance. Each creature of your choice in the aura when the spirit appears gains temporary hit points equal to 5 + your druid level. In addition, you and your allies gain advantage on Strength checks and Strength saving throws while in the aura."
+						"熊精魂將賦予你和你的盟友它的力量和耐性。每個在此精魂出現時處於靈光中且你所選擇的生物，將獲得等同於5+你的德魯伊等級的臨時生命值。此外，你和你的盟友在處於靈光中時，在力量檢定和力量豁免中具有優勢。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Hawk Spirit",
+					"name": "鷹之精魂",
+					"ENG_name": "Hawk Spirit",
 					"entries": [
-						"The hawk spirit is a consummate hunter, aiding you and your allies with its keen sight. When a creature makes an attack roll against a target in the spirit's aura, you can use your reaction to grant advantage to that attack roll. In addition, you and your allies have advantage on Wisdom ({@skill Perception}) checks while in the aura."
+						"鷹之精魂是一個完美的獵手，用它敏銳的視線協助你和你的盟友。當一個生物在對一個處於此精魂靈光中的目標進行攻擊檢定時，你可以使用你的反應以使該攻擊檢定獲得優勢。此外，你和你的盟友在處於靈光中時，在睿知（{@skill 感知}）檢定中具有優勢。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Unicorn Spirit",
+					"name": "獨角獸精魂",
+					"ENG_name": "Unicorn Spirit",
 					"entries": [
-						"The unicorn spirit lends its protection to those nearby. You and your allies gain advantage on all ability checks made to detect creatures in the spirit's aura. In addition, if you cast a spell using a spell slot that restores hit points to any creature inside or outside the aura, each creature of your choice in the aura also regains hit points equal to your druid level."
+						"獨角獸精魂為那些周遭的人們提供保護。你和你的盟友在所有用於偵測處於靈光中的生物時所作的檢定具有優勢。此外，若你消耗法術位以施放一個為任何處於靈光範圍內或外的生物回復生命值的法術，則每個處於靈光中且你所選擇的生物，也將回復等同於你德魯伊等級的生命值。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Mighty Summoner",
+			"name": "強力召喚者",
+			"ENG_name": "Mighty Summoner",
 			"source": "XGE",
 			"page": 23,
 			"className": "Druid",
@@ -4842,18 +4902,19 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Starting at 6th level, beasts and fey that you conjure are more resilient than normal. Any beast or fey summoned or created by a spell that you cast gains the following benefits:",
+				"從6級開始，你所召喚的野獸和精類生物將比原本更加強韌。任何你透過施放法術召喚出的野獸和精類生物將獲得下列好處：",
 				{
 					"type": "list",
 					"items": [
-						"The creature appears with more hit points than normal: 2 extra hit points per Hit Die it has.",
-						"The damage from its natural weapons is considered magical for the purpose of overcoming immunity and resistance to nonmagical attacks and damage."
+						"該生物將擁有比原本更多的生命值：它的每顆生命骰都將讓它額外擁有2點生命值。",
+						"在克服對非魔法攻擊和傷害的抗性和免疫能力時，它天生武器所造成的傷害被視作魔法傷害。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Guardian Spirit",
+			"name": "守護精魂",
+			"ENG_name": "Guardian Spirit",
 			"source": "XGE",
 			"page": 23,
 			"className": "Druid",
@@ -4863,11 +4924,12 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"Beginning at 10th level, your Spirit Totem safeguards the beasts and fey that you call forth with your magic. When a beast or fey that you summoned or created with a spell ends its turn in your Spirit Totem aura, that creature regains a number of hit points equal to half your druid level."
+				"從10級開始，你的精魂圖騰將會守護你用你魔法喚來的野獸和精類生物。當一個你用法術所召喚或創造的野獸或精類生物在你精魂圖騰的靈光中結束它的回合，該生物將回復等同於你德魯伊等級一半的生命值。"
 			]
 		},
 		{
-			"name": "Faithful Summons",
+			"name": "忠誠召喚",
+			"ENG_name": "Faithful Summons",
 			"source": "XGE",
 			"page": 23,
 			"className": "Druid",
@@ -4877,8 +4939,8 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"Starting at 14th level, the nature spirits you commune with protect you when you are the most defenseless. If you are reduced to 0 hit points or are {@condition incapacitated} against your will, you can immediately gain the benefits of {@spell conjure animals} as if it were cast using a 9th-level spell slot. It summons four beasts of your choice that are challenge rating 2 or lower. The conjured beasts appear within 20 feet of you. If they receive no commands from you, they protect you from harm and attack your foes. The spell lasts for 1 hour, requiring no concentration, or until you dismiss it (no action required).",
-				"Once you use this feature, you can't use it again until you finish a long rest."
+				"從14級開始，你所交融的自然精魂將在你最無助的時刻保護你。若你的生命值被歸零，或非自願地陷入{@condition 無力}狀態時，你可以立刻獲得如同以9環法術位施放{@spell 召喚動物}的好處。它將召喚出四隻你所選擇的挑戰等級為2或以下的野獸。被召喚的野獸將出現在距離你20呎內的位置。若它們沒有接受到來自你的命令，則它們將保護你不受傷害，並攻擊你的敵人。此法術不需要專注，且將持續1小時，或直到你解消它（不需要花費動作）。",
+				"一旦你使用此能力，直到你完成一次長休前你都不能再使用它。"
 			]
 		}
 	]

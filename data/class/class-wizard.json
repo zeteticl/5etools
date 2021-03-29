@@ -1,7 +1,8 @@
 {
 	"class": [
 		{
-			"name": "Wizard",
+			"name": "法師",
+			"ENG_name": "Wizard",
 			"source": "PHB",
 			"page": 112,
 			"srd": true,
@@ -63,11 +64,11 @@
 			"spellsKnownProgressionFixedAllowLowerLevel": true,
 			"startingProficiencies": {
 				"weapons": [
-					"daggers",
-					"darts",
-					"slings",
-					"quarterstaffs",
-					"light crossbows"
+					"匕首",
+					"飛鏢",
+					"投石索",
+					"長棍",
+					"輕弩"
 				],
 				"skills": [
 					{
@@ -88,12 +89,12 @@
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
-					"(a) a {@item quarterstaff|phb} or (b) a {@item dagger|phb}",
-					"(a) a {@item component pouch|phb} or (b) an {@item arcane focus|phb}",
-					"(a) a {@item scholar's pack|phb} or (b) an {@item explorer's pack|phb}",
-					"A {@item spellbook|phb}"
+					"(a)一把{@item 長棍|phb} 或 (b)一把{@item 匕首|phb}",
+					"(a)一個{@item 材料包|phb} 或 (b)一個{@item 奧術法器|phb}",
+					"(a)一套{@item 學者套裝|phb} 或 (b)一套{@item 探索者套裝|phb}",
+					"一本{@item 法術書|phb}"
 				],
-				"goldAlternative": "{@dice 4d4 × 10|4d4 × 10|Starting Gold}",
+				"goldAlternative": "{@dice 4d4×10|4d4 × 10|起始金錢}",
 				"defaultData": [
 					{
 						"a": [
@@ -134,7 +135,7 @@
 			"classTableGroups": [
 				{
 					"colLabels": [
-						"{@filter Cantrips Known|spells|level=0|class=Wizard}"
+						"{@filter 已知戲法|spells|level=0|class=Wizard}"
 					],
 					"rows": [
 						[
@@ -200,17 +201,17 @@
 					]
 				},
 				{
-					"title": "Spell Slots per Spell Level",
+					"title": "法術位/每環",
 					"colLabels": [
-						"{@filter 1st|spells|level=1|class=Wizard}",
-						"{@filter 2nd|spells|level=2|class=Wizard}",
-						"{@filter 3rd|spells|level=3|class=Wizard}",
-						"{@filter 4th|spells|level=4|class=Wizard}",
-						"{@filter 5th|spells|level=5|class=Wizard}",
-						"{@filter 6th|spells|level=6|class=Wizard}",
-						"{@filter 7th|spells|level=7|class=Wizard}",
-						"{@filter 8th|spells|level=8|class=Wizard}",
-						"{@filter 9th|spells|level=9|class=Wizard}"
+						"{@filter 1環|spells|level=1|class=Wizard}",
+						"{@filter 2環|spells|level=2|class=Wizard}",
+						"{@filter 3環|spells|level=3|class=Wizard}",
+						"{@filter 4環|spells|level=4|class=Wizard}",
+						"{@filter 5環|spells|level=5|class=Wizard}",
+						"{@filter 6環|spells|level=6|class=Wizard}",
+						"{@filter 7環|spells|level=7|class=Wizard}",
+						"{@filter 8環|spells|level=8|class=Wizard}",
+						"{@filter 9環|spells|level=9|class=Wizard}"
 					],
 					"rows": [
 						[
@@ -437,105 +438,117 @@
 				}
 			],
 			"classFeatures": [
-				"Arcane Recovery|Wizard||1",
-				"Spellcasting|Wizard||1",
+				"奧術恢復|Wizard||1",
+				"施法|Wizard||1",
 				"Cantrip Versatility|Wizard||1|UAClassFeatureVariants",
 				{
-					"classFeature": "Arcane Tradition|Wizard||2",
+					"classFeature": "奥法學派|Wizard||2",
 					"gainSubclassFeature": true
 				},
 				"Cantrip Formulas|Wizard||3|TCE",
-				"Ability Score Improvement|Wizard||4",
+				"屬性值提升|Wizard||4",
 				"Proficiency Versatility|Wizard||4|UAClassFeatureVariants",
 				{
-					"classFeature": "Arcane Tradition feature|Wizard||6",
+					"classFeature": "奥法學派能力|Wizard||6",
 					"gainSubclassFeature": true
 				},
-				"Ability Score Improvement|Wizard||8",
+				"屬性值提升|Wizard||8",
 				"Proficiency Versatility|Wizard||8|UAClassFeatureVariants",
 				{
-					"classFeature": "Arcane Tradition feature|Wizard||10",
+					"classFeature": "奥法學派能力|Wizard||10",
 					"gainSubclassFeature": true
 				},
-				"Ability Score Improvement|Wizard||12",
+				"屬性值提升|Wizard||12",
 				"Proficiency Versatility|Wizard||12|UAClassFeatureVariants",
 				{
-					"classFeature": "Arcane Tradition feature|Wizard||14",
+					"classFeature": "奥法學派能力|Wizard||14",
 					"gainSubclassFeature": true
 				},
-				"Ability Score Improvement|Wizard||16",
+				"屬性值提升|Wizard||16",
 				"Proficiency Versatility|Wizard||16|UAClassFeatureVariants",
-				"Spell Mastery|Wizard||18",
-				"Ability Score Improvement|Wizard||19",
+				"法術精通|Wizard||18",
+				"屬性值提升|Wizard||19",
 				"Proficiency Versatility|Wizard||19|UAClassFeatureVariants",
-				"Signature Spells|Wizard||20"
+				"招牌法術|Wizard||20"
 			],
 			"subclassTitle": "Arcane Tradition",
 			"subclasses": [
 				{
-					"name": "School of Abjuration",
-					"shortName": "Abjuration",
+					"name": "防護學派",
+					"ENG_name": "School of Abjuration",
+					"shortName": "防護",
+					"ENG_shortName": "School of Abjuration",
 					"source": "PHB",
 					"page": 115,
 					"subclassFeatures": [
-						"School of Abjuration|Wizard||Abjuration||2",
-						"Projected Ward|Wizard||Abjuration||6",
-						"Improved Abjuration|Wizard||Abjuration||10",
-						"Spell Resistance|Wizard||Abjuration||14"
+						"防護學派|Wizard||Abjuration||2",
+						"投射防護|Wizard||Abjuration||6",
+						"精通防護|Wizard||Abjuration||10",
+						"法術抗性|Wizard||Abjuration||14"
 					]
 				},
 				{
-					"name": "School of Conjuration",
-					"shortName": "Conjuration",
+					"name": "咒法學派",
+					"ENG_name": "School of Conjuration",
+					"shortName": "咒法",
+					"ENG_shortName": "School of Conjuration",
 					"source": "PHB",
 					"page": 116,
 					"subclassFeatures": [
-						"School of Conjuration|Wizard||Conjuration||2",
-						"Benign Transposition|Wizard||Conjuration||6",
-						"Focused Conjuration|Wizard||Conjuration||10",
-						"Durable Summons|Wizard||Conjuration||14"
+						"咒法學派|Wizard||Conjuration||2",
+						"移形換位|Wizard||Conjuration||6",
+						"咒法專注|Wizard||Conjuration||10",
+						"強韌召喚|Wizard||Conjuration||14"
 					]
 				},
 				{
-					"name": "School of Divination",
-					"shortName": "Divination",
+					"name": "預言學派",
+					"ENG_name": "School of Divination",
+					"shortName": "預言",
+					"ENG_shortName": "School of Divination",
 					"source": "PHB",
 					"page": 116,
 					"subclassFeatures": [
-						"School of Divination|Wizard||Divination||2",
-						"Expert Divination|Wizard||Divination||6",
-						"The Third Eye|Wizard||Divination||10",
-						"Greater Portent|Wizard||Divination||14"
+						"預言學派|Wizard||Divination||2",
+						"預言專家|Wizard||Divination||6",
+						"天眼通|Wizard||Divination||10",
+						"高等預兆|Wizard||Divination||14"
 					]
 				},
 				{
-					"name": "School of Enchantment",
-					"shortName": "Enchantment",
+					"name": "惑控學派",
+					"ENG_name": "School of Enchantment",
+					"shortName": "惑控",
+					"ENG_shortName": "School of Enchantment",
 					"source": "PHB",
 					"page": 117,
 					"subclassFeatures": [
-						"School of Enchantment|Wizard||Enchantment||2",
-						"Instinctive Charm|Wizard||Enchantment||6",
-						"Split Enchantment|Wizard||Enchantment||10",
-						"Alter Memories|Wizard||Enchantment||14"
+						"惑控學派|Wizard||Enchantment||2",
+						"本能魅惑|Wizard||Enchantment||6",
+						"分散惑控|Wizard||Enchantment||10",
+						"改動記憶|Wizard||Enchantment||14"
 					]
 				},
 				{
-					"name": "School of Evocation",
-					"shortName": "Evocation",
+					"name": "塑能學派",
+					"ENG_name": "School of Evocation",
+					"shortName": "塑能",
+					"ENG_shortName": "School of Evocation",
 					"source": "PHB",
 					"page": 117,
 					"srd": true,
 					"subclassFeatures": [
-						"School of Evocation|Wizard||Evocation||2",
-						"Potent Cantrip|Wizard||Evocation||6",
-						"Empowered Evocation|Wizard||Evocation||10",
-						"Overchannel|Wizard||Evocation||14"
+						"塑能學派|Wizard||Evocation||2",
+						"強力戲法|Wizard||Evocation||6",
+						"強效塑能|Wizard||Evocation||10",
+						"過載導魔|Wizard||Evocation||14"
 					]
 				},
 				{
-					"name": "School of Illusion",
-					"shortName": "Illusion",
+					"name": "幻術學派",
+					"ENG_name": "School of Illusion",
+					"shortName": "幻術",
+					"ENG_shortName": "School of Illusion",
 					"source": "PHB",
 					"page": 118,
 					"additionalSpells": [
@@ -548,34 +561,38 @@
 						}
 					],
 					"subclassFeatures": [
-						"School of Illusion|Wizard||Illusion||2",
-						"Malleable Illusions|Wizard||Illusion||6",
-						"Illusory Step|Wizard||Illusion||10",
-						"Illusory Reality|Wizard||Illusion||14"
+						"幻術學派|Wizard||Illusion||2",
+						"可塑幻象|Wizard||Illusion||6",
+						"幻象步|Wizard||Illusion||10",
+						"亦真亦幻|Wizard||Illusion||14"
 					]
 				},
 				{
-					"name": "School of Necromancy",
-					"shortName": "Necromancy",
+					"name": "死靈學派",
+					"ENG_name": "School of Necromancy",
+					"shortName": "死靈",
+					"ENG_shortName": "School of Necromancy",
 					"source": "PHB",
 					"page": 118,
 					"subclassFeatures": [
-						"School of Necromancy|Wizard||Necromancy||2",
-						"Undead Thralls|Wizard||Necromancy||6",
-						"Inured to Undeath|Wizard||Necromancy||10",
-						"Command Undead|Wizard||Necromancy||14"
+						"死靈學派|Wizard||Necromancy||2",
+						"不死奴僕|Wizard||Necromancy||6",
+						"不死適應|Wizard||Necromancy||10",
+						"命令不死生物|Wizard||Necromancy||14"
 					]
 				},
 				{
-					"name": "School of Transmutation",
-					"shortName": "Transmutation",
+					"name": "變化學派",
+					"ENG_name": "School of Transmutation",
+					"shortName": "變化",
+					"ENG_shortName": "School of Transmutation",
 					"source": "PHB",
 					"page": 119,
 					"subclassFeatures": [
-						"School of Transmutation|Wizard||Transmutation||2",
-						"Transmuter's Stone|Wizard||Transmutation||6",
-						"Shapechanger|Wizard||Transmutation||10",
-						"Master Transmuter|Wizard||Transmutation||14"
+						"變化學派|Wizard||Transmutation||2",
+						"變化師之石|Wizard||Transmutation||6",
+						"變形者|Wizard||Transmutation||10",
+						"變化宗師|Wizard||Transmutation||14"
 					]
 				},
 				{
@@ -640,15 +657,17 @@
 					]
 				},
 				{
-					"name": "War Magic",
-					"shortName": "War",
+					"name": "戰爭魔法",
+					"ENG_name": "War Magic",
+					"shortName": "戰爭",
+					"ENG_shortName": "War",
 					"source": "XGE",
 					"page": 59,
 					"subclassFeatures": [
-						"War Magic|Wizard||War|XGE|2",
-						"Power Surge|Wizard||War|XGE|6",
-						"Durable Magic|Wizard||War|XGE|10",
-						"Deflecting Shroud|Wizard||War|XGE|14"
+						"戰爭魔法|Wizard||War|XGE|2",
+						"力量湧動|Wizard||War|XGE|6",
+						"耐久魔法|Wizard||War|XGE|10",
+						"偏斜罩幕|Wizard||War|XGE|14"
 					]
 				},
 				{
@@ -726,8 +745,10 @@
 					]
 				},
 				{
-					"name": "Bladesinging",
-					"shortName": "Bladesinging",
+					"name": "劍詠傳承",
+					"ENG_name": "Bladesinging",
+					"shortName": "劍詠",
+					"ENG_shortName": "Bladesinging",
 					"source": "TCE",
 					"page": 76,
 					"otherSources": [
@@ -737,10 +758,10 @@
 						}
 					],
 					"subclassFeatures": [
-						"Bladesinging|Wizard||Bladesinging|TCE|2",
-						"Extra Attack|Wizard||Bladesinging|TCE|6",
-						"Song of Defense|Wizard||Bladesinging|TCE|10",
-						"Song of Victory|Wizard||Bladesinging|TCE|14"
+						"劍詠傳承|Wizard||Bladesinging|TCE|2",
+						"額外攻擊|Wizard||Bladesinging|TCE|6",
+						"防禦之歌|Wizard||Bladesinging|TCE|10",
+						"勝利之歌|Wizard||Bladesinging|TCE|14"
 					]
 				},
 				{
@@ -791,7 +812,7 @@
 									"type": "entries",
 									"name": "Quick Build",
 									"entries": [
-										"You can make a wizard quickly by following these suggestions. First, Intelligence should be your highest ability score, followed by Constitution or Dexterity. If you plan to join the School of Enchantment, make Charisma your next-best score. Second, choose the {@background sage} background. Third, choose the {@spell mage hand}, {@spell light}, and {@spell ray of frost} cantrips, along with the following 1st-level spells for your spellbook: {@spell burning hands}, {@spell charm person}, {@spell feather fall}, {@spell mage armor}, {@spell magic missile}, and {@spell sleep}."
+										"You can make a wizard quickly by following these suggestions. First, Intelligence should be your highest ability score, followed by Constitution or Dexterity. If you plan to join the School of Enchantment, make Charisma your next-best score. Second, choose the {@background sage} background. Third, choose the {@spell 法師之手}, {@spell 光亮術}, and {@spell 冷凍射線} cantrips, along with the following 1st-level spells for your spellbook: {@spell 燃燒之手}, {@spell 魅惑人類}, {@spell 羽落術}, {@spell 法師護甲}, {@spell 魔法飛彈}, and {@spell 睡眠術}."
 									]
 								}
 							]
@@ -1049,7 +1070,8 @@
 	],
 	"classFeature": [
 		{
-			"name": "Arcane Recovery",
+			"name": "奧術恢復",
+			"ENG_name": "Arcane Recovery",
 			"source": "PHB",
 			"page": 112,
 			"srd": true,
@@ -1057,9 +1079,9 @@
 			"classSource": "PHB",
 			"level": 1,
 			"entries": [
-				"You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher.",
-				"For example, if you're a 4th-level wizard, you can recover up to two levels worth of spell slots.",
-				"You can recover either a 2nd-level spell slot or two 1st-level spell slots."
+				"你學會了通過研讀法術書來恢復失去魔法能量的方法。每天一次，當你完成一次短休時，你可以選擇已消耗的法術位來恢復。這些法術位的環階總和必須小於或等於你法師等級的一半（小數點進位），且每個法術位都不能為6環或更高。",
+				"舉例來說，若你是個4級法師，你可以恢復最多共計2個環階的法術位。",
+				"你可以恢復一個2環法術位，或選擇恢復二個1環法術位。"
 			]
 		},
 		{
@@ -1076,7 +1098,8 @@
 			]
 		},
 		{
-			"name": "Spellcasting",
+			"name": "施法",
+			"ENG_name": "Spellcasting",
 			"source": "PHB",
 			"page": 112,
 			"srd": true,
@@ -1084,46 +1107,46 @@
 			"classSource": "PHB",
 			"level": 1,
 			"entries": [
-				"As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power. See {@book chapter 10|PHB|10} for the general rules of spellcasting and {@book chapter 11|PHB|11} for the {@filter wizard spell list|spells|class=wizard}.",
+				"作為一介奧術魔法的學生，你擁有一本記載著法術的法術書，展示著你的真正力量的閃耀先兆。請參閱{@book 第十章|PHB|10}以了解關於施法的規則，以及第十一章以查閱{@filter 法師法術列表|spells|class=wizard}。",
 				{
 					"type": "entries",
-					"name": "Cantrips",
+					"name": "戲法",
 					"entries": [
-						"At 1st level, you know three cantrips of your choice from the wizard spell list. You learn additional wizard cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Wizard table."
+						"在1級時，你知曉三個從{@filter 法師法術列表|spells|class=wizard}自選的戲法。你將在升至更高的法師等級時學會額外的法師戲法，見法師表格中的已知戲法欄位。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Spellbook",
+					"name": "法術書",
 					"entries": [
-						"At 1st level, you have a spellbook containing six 1st-level {@filter wizard spells|spells|class=wizard} of your choice. Your spellbook is the repository of the wizard spells you know, except your cantrips, which are fixed in your mind."
+						"在1級時，你擁有一本載有六個自選的1環{@filter 法師法術|spells|class=wizard}的法術書。你的法術書是儲存著你已知法師法術的容器；除了你的戲法之外，戲法則直接被記憶在你的心中。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Preparing and Casting Spells",
+					"name": "準備及施放法術",
 					"entries": [
-						"The Wizard table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
-						"You prepare the list of wizard spells that are available for you to cast. To do so, choose a number of wizard spells from your spellbook equal to your Intelligence modifier + your wizard level (minimum of one spell). The spells must be of a level for which you have spell slots.",
-						"For example, if you're a 3rd-level wizard, you have four 1st-level and two 2nd-level spell slots. With an Intelligence of 16, your list of prepared spells can include six spells of 1st or 2nd level, in any combination, chosen from your spellbook. If you prepare the 1st-level spell {@spell magic missile}, you can cast it using a 1st-level or a 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.",
-						"You can change your list of prepared spells when you finish a long rest. Preparing a new list of wizard spells requires time spent studying your spellbook and memorizing the incantations and gestures you must make to cast the spell: at least 1 minute per spell level for each spell on your list."
+						"法師表中顯示了你有多少個法術位可以用來施放你一環或更高環的法師法術。要施放其中一個這些法術，你必須消耗一個與該法術環階相同或更高的法術位。你在完成一次長休後恢復所有你花費掉的法術位。",
+						"你準備一份你所能施放法師法術的列表。當你這麼做時，從你的法術書中選擇數量等同於你智力調整值 + 你法師等級的法師法術（最少一個法術）。這些法術的環階都必須符合你所擁有法術位的環階。",
+						"舉例來說，如果你是一個3級的法師，你擁有四個1環和二個2環的法術位。你的智力為16，則你已準備法術的列表中可以包含總共六個1環或2環的法術。若你準備了1環法術{@spell 魔法飛彈}，你可以使用1環和2環的法術位來施放它。施放法術並不會將它從你的準備法術列表中移除。",
+						"你可以在你完成一次長休時改變你的準備法術列表。準備一份新的法師法術列表需要花費時間於研讀你的法術書並記憶你施放該法術所必須的咒語和姿勢：你需要為你列表上每個法術的每個環階都花費至少1分鐘的時間。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Spellcasting Ability",
+					"name": "施法屬性",
 					"entries": [
-						"Intelligence is your spellcasting ability for your wizard spells, since you learn your wizard spells through dedicated study and memorization. You use your Intelligence whenever a spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for a wizard spell you cast and when making an attack roll with one.",
+						"因為你是透過致力研讀與記憶習得你的法師法術，智力是你施展法師法術的施法屬性。每當法術提及你的施法屬性時，你將使用你的智力。此外，當決定你法師法術的豁免DC、以及使用法師法術進行攻擊檢定時，你使用你的智力調整值。",
 						{
 							"type": "abilityDc",
-							"name": "Spell",
+							"name": "法術",
 							"attributes": [
 								"int"
 							]
 						},
 						{
 							"type": "abilityAttackMod",
-							"name": "Spell",
+							"name": "法術",
 							"attributes": [
 								"int"
 							]
@@ -1132,42 +1155,42 @@
 				},
 				{
 					"type": "entries",
-					"name": "Ritual Casting",
+					"name": "儀式施法",
 					"entries": [
-						"You can cast a wizard spell as a ritual if that spell has the ritual tag and you have the spell in your spellbook. You don't need to have the spell prepared."
+						"若一個法師法術具有儀式標籤且你的法術書中有記載該法術，則你可以將它做為儀式法術施放。你並不需要準備該法術。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Spellcasting Focus",
+					"name": "施法法器",
 					"entries": [
-						"You can use an {@item arcane focus|phb} as a spellcasting focus for your wizard spells."
+						"你可以使用一個{@item 奧術法器|phb}（第五章），來做為你施放法師法術的法器。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Learning Spells of 1st Level and Higher",
+					"name": "習得一環或更高環的法術",
 					"entries": [
-						"Each time you gain a wizard level, you can add two wizard spells of your choice to your spellbook. Each of these spells must be of a level for which you have spell slots, as shown on the Wizard table. On your adventures, you might find other spells that you can add to your spellbook (see \"Your Spellbook\")."
+						"每當你提升法師等級時，你可以將二個自選的法師法術加入你的法術書。每個這些法術的環階都必須符合你所擁有法術位的環階，如法師表所示。舉例來說，當你在此職業升至3級時，你可以學習一個新的1環或2環法術。在你的冒險中，你可能會找到其他可以被加入你法術書的法術（參見「你的法術書」條目）。"
 					]
 				},
 				{
 					"type": "inset",
-					"name": "Your Spellbook",
+					"name": "你的法術書",
 					"entries": [
-						"The spells that you add to your spellbook as you gain levels reflect the arcane research you conduct on your own, as well as intellectual breakthroughs you have had about the nature of the multiverse. You might find other spells during your adventures. You could discover a spell recorded on a scroll in an evil wizard's chest, for example, or in a dusty tome in an ancient library.",
-						"A spellbook doesn't contain cantrips.",
+						"你在升級時加入法術書中的法術反映著你的自發研究、以及你在理解宇宙奥秘上的突破。你可能會在冒險過程中找到其他法術。舉例來說，你可能會發掘一個法術被抄寫在一個邪惡法師寶箱中的卷軸，或被記載於遠古書庫中滿布灰塵的典籍。",
+						"法術書中並不包含戲法。",
 						{
 							"type": "entries",
 							"entries": [
 								{
 									"type": "entries",
-									"name": "Copying a Spell into the Book",
+									"name": "抄寫法術至法術書",
 									"entries": [
-										"When you find a wizard spell of 1st level or higher, you can add it to your spellbook if it is of a spell level you can prepare and if you can spare the time to decipher and copy it.",
-										"Copying a spell into your spellbook involves reproducing the basic form of the spell, then deciphering the unique system of notation used by the wizard who wrote it. You must practice the spell until you understand the sounds or gestures required, then transcribe it into your spellbook using your own notation.",
-										"For each level of the spell, the process takes 2 hours and costs 50 gp. The cost represents material components you expend as you experiment with the spell to master it, as well as the fine inks you need to record it. Once you have spent this time and money, you can prepare the spell just like your other spells.",
-										"A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When you copy a spell from a spell scroll, you must succeed on an Intelligence ({@skill Arcana}) check with a DC equal to 10 + the spell's level. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed."
+										"當你發現一個1環或更高環的法師法術，若該法術的環階是你可以準備，且你有時間可以破譯並抄寫它，則你將可以把它加入你的法術書中。",
+										"將一個法術抄寫到你法術書的過程包括了重構法術的基礎形式，並破譯撰寫該法術的法師所使用的獨特符號系統。你必須不斷練習該法術直到你理解施展它所需的聲音或姿勢，最後才能使用你自己的符號系統將它抄寫到你的法術書中。",
+										"這個過程會需要花費該法術每環階2個小時的時間和每環階50金幣的開銷。這個開銷代表著你在實驗於掌控該法術時所消耗的材料構才、以及你紀錄它時所需要的上好墨水。一旦你消耗了這些時間和金錢，你就可以如同你準備其它法術一樣準備該法術。",
+										"一個記載於法術卷軸中的法師法術可以被如同法術書中的法術一樣被抄寫。當你從法術卷軸中抄寫法術時，你必須成功通過一次智力（{@skill 奧秘}）檢定，DC等同於10 + 該法術的環階。若檢定成功，該法術將被成功抄寫。無論檢定成功或失敗，該法術卷軸都將被摧毀。"
 									]
 								}
 							]
@@ -1177,10 +1200,10 @@
 							"entries": [
 								{
 									"type": "entries",
-									"name": "Replacing the Book",
+									"name": "替換法術書",
 									"entries": [
-										"You can copy a spell from your own spellbook into another book\u2014for example, if you want to make a backup copy of your spellbook. This is just like copying a new spell into your spellbook, but faster and easier, since you understand your own notation and already know how to cast the spell. You need spend only 1 hour and 10 gp for each level of the copied spell.",
-										"If you lose your spellbook, you can use the same procedure to transcribe the spells that you have prepared into a new spellbook. Filling out the remainder of your spellbook requires you to find new spells to do so, as normal. For this reason, many wizards keep backup spellbooks in a safe place."
+										"你可以將法術從你自己的法術書抄錄到另一本書中\u2014舉例來說，你可能會想要製作一本你的法術書備份。這就如同將新法術抄寫到你的法術書中，但因為你理解自己所用的符號系統，且已經知曉如何施放該法術，因此這個過程會更快，也更簡單。你需要為抄寫法術的每個環階花費1個小時的時間和10金幣的開銷。",
+										"若你遺失你的法術書，你可以使用相同的流程以將你已準備的法術抄寫到一本新的法術書中。你必須如常找到新的法術才能夠填補你法術書剩餘的部分。因為這個原因，許多法師會將法術書備份藏在安全的地方。"
 									]
 								}
 							]
@@ -1190,9 +1213,9 @@
 							"entries": [
 								{
 									"type": "entries",
-									"name": "The Book's Appearance",
+									"name": "法術書的外觀",
 									"entries": [
-										"Your spellbook is a unique compilation of spells, with its own decorative flourishes and margin notes. It might be a plain, functional leather volume that you received as a gift from your master, a finely bound gilt-edged tome you found in an ancient library, or even a loose collection of notes scrounged together after you lost your previous spellbook in a mishap."
+										"你的法術書是一本獨一無二的法術總集，有著屬於它自己的裝飾紋路和邊註。它可能會是一本導師贈送給你，簡樸實用的皮冊、可能會是一本從遠古書庫中發現的精緻金邊典籍，甚至可能是你在一次事故中遺失你上一本法術書後匆匆湊起的一疊筆記。"
 									]
 								}
 							]
@@ -1202,7 +1225,8 @@
 			]
 		},
 		{
-			"name": "Arcane Tradition",
+			"name": "奥法學派",
+			"ENG_name": "Arcane Tradition",
 			"source": "PHB",
 			"page": 112,
 			"srd": true,
@@ -1210,7 +1234,7 @@
 			"classSource": "PHB",
 			"level": 2,
 			"entries": [
-				"When you reach 2nd level, you choose an arcane tradition from the list of available traditions, shaping your practice of magic. Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level."
+				"當你升至2級時，你從可選的學派列表中選擇一個奥法學派，發展你的魔法實踐。你的選擇會在2級、6級、10級、和14級的時候賦予你新的能力。"
 			]
 		},
 		{
@@ -1227,7 +1251,8 @@
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 112,
 			"srd": true,
@@ -1235,8 +1260,8 @@
 			"classSource": "PHB",
 			"level": 4,
 			"entries": [
-				"When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"當你在此職業升至4級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -1254,7 +1279,8 @@
 			]
 		},
 		{
-			"name": "Arcane Tradition feature",
+			"name": "奥法學派能力",
+			"ENG_name": "Arcane Tradition feature",
 			"source": "PHB",
 			"page": 112,
 			"srd": true,
@@ -1262,11 +1288,12 @@
 			"classSource": "PHB",
 			"level": 6,
 			"entries": [
-				"At 6th level, you gain a feature granted by your Arcane Tradition."
+				"在6級時，你獲得一個由你奧法學派所賦予的能力。"
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 112,
 			"srd": true,
@@ -1274,8 +1301,8 @@
 			"classSource": "PHB",
 			"level": 8,
 			"entries": [
-				"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"當你在此職業升至8級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -1293,7 +1320,8 @@
 			]
 		},
 		{
-			"name": "Arcane Tradition feature",
+			"name": "奥法學派能力",
+			"ENG_name": "Arcane Tradition feature",
 			"source": "PHB",
 			"page": 112,
 			"srd": true,
@@ -1301,11 +1329,12 @@
 			"classSource": "PHB",
 			"level": 10,
 			"entries": [
-				"At 10th level, you gain a feature granted by your Arcane Tradition."
+				"在10級時，你獲得一個由你奧法學派所賦予的能力。"
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 112,
 			"srd": true,
@@ -1313,8 +1342,8 @@
 			"classSource": "PHB",
 			"level": 12,
 			"entries": [
-				"When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"當你在此職業升至12級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -1332,7 +1361,8 @@
 			]
 		},
 		{
-			"name": "Arcane Tradition feature",
+			"name": "奥法學派能力",
+			"ENG_name": "Arcane Tradition feature",
 			"source": "PHB",
 			"page": 112,
 			"srd": true,
@@ -1340,11 +1370,12 @@
 			"classSource": "PHB",
 			"level": 14,
 			"entries": [
-				"At 14th level, you gain a feature granted by your Arcane Tradition."
+				"在14級時，你獲得一個由你奧法學派所賦予的能力。"
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 112,
 			"srd": true,
@@ -1352,8 +1383,8 @@
 			"classSource": "PHB",
 			"level": 16,
 			"entries": [
-				"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"當你在此職業升至16級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -1371,7 +1402,8 @@
 			]
 		},
 		{
-			"name": "Spell Mastery",
+			"name": "法術精通",
+			"ENG_name": "Spell Mastery",
 			"source": "PHB",
 			"page": 112,
 			"srd": true,
@@ -1379,12 +1411,13 @@
 			"classSource": "PHB",
 			"level": 18,
 			"entries": [
-				"At 18th level, you have achieved such mastery over certain spells that you can cast them at will. Choose a 1st-level wizard spell and a 2nd-level wizard spell that are in your spellbook. You can cast those spells at their lowest level without expending a spell slot when you have them prepared. If you want to cast either spell at a higher level, you must expend a spell slot as normal.",
-				"By spending 8 hours in study, you can exchange one or both of the spells you chose for different spells of the same levels."
+				"在18級時，你對特定法術已經如此精通，以至於你可以隨意施放它們。選擇你法術書中的一個1環法術和一個2環法術。若你已經準備這些法術，則你能夠以它們的最低環階施放這些法術而無需消耗法術位。若你想要以更高環階施放這些法術，則你必須如常消耗法術位。",
+				"藉由花費8小時的研讀，你可以改變其中一個或這兩個所選法術為其他相同環階的不同法術。"
 			]
 		},
 		{
-			"name": "Ability Score Improvement",
+			"name": "屬性值提升",
+			"ENG_name": "Ability Score Improvement",
 			"source": "PHB",
 			"page": 112,
 			"srd": true,
@@ -1392,8 +1425,8 @@
 			"classSource": "PHB",
 			"level": 19,
 			"entries": [
-				"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"當你在此職業升至19級時，你可以增加一項自選屬性值2點，或著你可以增加二項自選屬性值各1點。如同平常一樣，你不能透過這個能力將一個屬性值提升至超過20。",
+				"如果你的DM允許使用專長的話，你也可以改為獲得一個{@5etools 專長|feats.html}。"
 			]
 		},
 		{
@@ -1411,7 +1444,8 @@
 			]
 		},
 		{
-			"name": "Signature Spells",
+			"name": "招牌法術",
+			"ENG_name": "Signature Spells",
 			"source": "PHB",
 			"page": 112,
 			"srd": true,
@@ -1419,8 +1453,8 @@
 			"classSource": "PHB",
 			"level": 20,
 			"entries": [
-				"When you reach 20th level, you gain mastery over two powerful spells and can cast them with little effort. Choose two 3rd-level wizard spells in your spellbook as your signature spells. You always have these spells prepared, they don't count against the number of spells you have prepared, and you can cast each of them once at 3rd level without expending a spell slot. When you do so, you can't do so again until you finish a short or long rest.",
-				"If you want to cast either spell at a higher level, you must expend a spell slot as normal."
+				"當你升至20級時，你精通於二個強力法術而可以不費吹灰之力施放它們。選擇你法術書中的二個3環法術做為你的招牌法術。你永遠視作已經準備了這些法術，它們不會計入你已準備的法術數量中，且你可以各自施放它們一次而無需消耗法術位。當你這麼做後，你直到完成一次短休或長休之前都不能再使用此能力。",
+				"若你想要以更高環階施放這些法術，則你必須如常消耗法術位。"
 			]
 		}
 	],
@@ -1609,7 +1643,8 @@
 			]
 		},
 		{
-			"name": "School of Abjuration",
+			"name": "防護學派",
+			"ENG_name": "School of Abjuration",
 			"source": "PHB",
 			"page": 115,
 			"className": "Wizard",
@@ -1618,20 +1653,21 @@
 			"subclassSource": "PHB",
 			"level": 2,
 			"entries": [
-				"The School of Abjuration emphasizes magic that blocks, banishes, or protects. Detractors of this school say that its tradition is about denial, negation rather than positive assertion. You understand, however, that ending harmful effects, protecting the weak, and banishing evil influences is anything but a philosophical void. It is a proud and respected vocation.",
-				"Called abjurers, members of this school are sought when baleful spirits require exorcism, when important locations must be guarded against magical spying, and when portals to other planes of existence must be closed.",
+				"防護學派強調著阻擋、驅逐、或守護的魔法。詆毀這個學派的人們宣稱它的傳統充滿著否認和拒絕，而非肯定。然而，你明白終止有害效果、守護弱小、並驅逐邪惡的影響絕非虛無的哲學。這是一份值得驕傲且受人尊敬的使命。",
+				"這個學派的成員又被稱作防護師，且當邪靈需要被祛除、當重要場所需要被杜絕魔法探測、以及當通向其他存在位面的傳送門需要被關閉時，人們總會找上他們。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Abjuration Savant|Wizard||Abjuration||2"
+					"subclassFeature": "防護學者|Wizard||Abjuration||2"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Arcane Ward|Wizard||Abjuration||2"
+					"subclassFeature": "奧法防護|Wizard||Abjuration||2"
 				}
 			]
 		},
 		{
-			"name": "Abjuration Savant",
+			"name": "防護學者",
+			"ENG_name": "Abjuration Savant",
 			"source": "PHB",
 			"page": 115,
 			"className": "Wizard",
@@ -1641,11 +1677,12 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"Beginning when you select this school at 2nd level, the gold and time you must spend to copy an abjuration spell into your spellbook is halved."
+				"從你在2級時選擇此學派開始，你在將防護系法術抄寫進你的法術書時所必須花費的金錢和時間減半。"
 			]
 		},
 		{
-			"name": "Arcane Ward",
+			"name": "奧法防護",
+			"ENG_name": "Arcane Ward",
 			"source": "PHB",
 			"page": 115,
 			"className": "Wizard",
@@ -1655,13 +1692,14 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"Starting at 2nd level, you can weave magic around yourself for protection. When you cast an {@filter abjuration spell of 1st level or higher|spells|school=A|level=!0}, you can simultaneously use a strand of the spell's magic to create a magical ward on yourself that lasts until you finish a long rest. The ward has a hit point maximum equal to twice your wizard level + your Intelligence modifier. Whenever you take damage, the ward takes the damage instead. If this damage reduces the ward to 0 hit points, you take any remaining damage.",
-				"While the ward has 0 hit points, it can't absorb damage, but its magic remains. Whenever you cast an {@filter abjuration spell of 1st level or higher|spells|school=A|level=!0}, the ward regains a number of hit points equal to twice the level of the spell.",
-				"Once you create the ward, you can't create it again until you finish a long rest."
+				"從2級開始，你可以在你周遭編織魔法以守護自己。當你施放一個{@filter 1環或更高環的防護系法術|spells|school=A|level=!0}時，你可以同時利用該法術的一縷魔法在你身上創造出一道魔法防護結界，持續直到你完成一次長休。這道防護結界具有等同於你法師等級二倍+你的智力調整值的生命值。每當你受到傷害時，這道防護結界將代替你承受傷害。若該傷害將這道防護結界的生命值歸零，則你將受到任何剩餘的傷害。",
+				"當這道防護結界的生命值為0，它將不能再吸收傷害，但它的魔法仍然保留。每當你再施放一個{@filter 1環或更高環的防護系法術|spells|school=A|level=!0}，防護結界將會回復等同於該法術環階二倍的生命值。",
+				"一旦你創造出防護結界，直到你完成一次長休之前你都不能再創造它。"
 			]
 		},
 		{
-			"name": "Projected Ward",
+			"name": "投射防護",
+			"ENG_name": "Projected Ward",
 			"source": "PHB",
 			"page": 115,
 			"className": "Wizard",
@@ -1671,11 +1709,12 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Starting at 6th level, when a creature that you can see within 30 feet of you takes damage, you can use your reaction to cause your Arcane Ward to absorb that damage. If this damage reduces the ward to 0 hit points, the warded creature takes any remaining damage."
+				"從6級開始，當一個距離你30呎內且你所能看見的生物受到傷害，你可以使用你的反應以讓你的奧法防護吸收該傷害。若該傷害將防護結界的生命值歸零，則被防護的生物將受到任何剩餘的傷害。"
 			]
 		},
 		{
-			"name": "Improved Abjuration",
+			"name": "精通防護",
+			"ENG_name": "Improved Abjuration",
 			"source": "PHB",
 			"page": 115,
 			"className": "Wizard",
@@ -1685,11 +1724,12 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"Beginning at 10th level, when you cast an abjuration spell that requires you to make an ability check as a part of casting that spell (as in {@spell counterspell} and {@spell dispel magic}), you add your proficiency bonus to that ability check."
+				"從10級開始，當你施放一個在施放過程中需要你進行屬性檢定的防護系法術時（例如{@spell 反制法術}和{@spell 解除魔法}），你可以將你的熟練加值加入該屬性檢定中。"
 			]
 		},
 		{
-			"name": "Spell Resistance",
+			"name": "法術抗性",
+			"ENG_name": "Spell Resistance",
 			"source": "PHB",
 			"page": 115,
 			"className": "Wizard",
@@ -1699,12 +1739,13 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"Starting at 14th level, you have advantage on saving throws against spells.",
-				"Furthermore, you have resistance against the damage of spells."
+				"從14級開始，你在對抗法術的豁免檢定中具有優勢。",
+				"此外，你對法術傷害具有抗性。"
 			]
 		},
 		{
-			"name": "School of Conjuration",
+			"name": "咒法學派",
+			"ENG_ame": "School of Conjuration",
 			"source": "PHB",
 			"page": 116,
 			"className": "Wizard",
@@ -1713,19 +1754,20 @@
 			"subclassSource": "PHB",
 			"level": 2,
 			"entries": [
-				"As a conjurer, you favor spells that produce objects and creatures out of thin air. You can conjure billowing clouds of killing fog or summon creatures from elsewhere to fight on your behalf. As your mastery grows, you learn spells of transportation and can teleport yourself across vast distances, even to other planes of existence, in an instant.",
+				"做為一名咒法師，你偏好於憑空產生出物體和生物的法術。你可以喚來翻騰的致死雲霧、或召喚出來自別處的生物為你作戰。隨著你的技藝漸趨精熟，你將學會傳送法術，並可以將你自己瞬間傳送跨越極遠的距離，甚至傳送到另一個存在位面。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Conjuration Savant|Wizard||Conjuration||2"
+					"subclassFeature": "咒法學者|Wizard||Conjuration||2"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Minor Conjuration|Wizard||Conjuration||2"
+					"subclassFeature": "次級咒喚|Wizard||Conjuration||2"
 				}
 			]
 		},
 		{
-			"name": "Conjuration Savant",
+			"name": "咒法學者",
+			"ENG_name": "Conjuration Savant",
 			"source": "PHB",
 			"page": 116,
 			"className": "Wizard",
@@ -1735,11 +1777,12 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"Beginning when you select this school at 2nd level, the gold and time you must spend to copy a conjuration spell into your spellbook is halved."
+				"從你在2級時選擇此學派開始，你在將咒法系法術抄寫進你的法術書時所必須花費的金錢和時間減半。"
 			]
 		},
 		{
-			"name": "Minor Conjuration",
+			"name": "次級咒喚",
+			"ENG_name": "Minor Conjuration",
 			"source": "PHB",
 			"page": 116,
 			"className": "Wizard",
@@ -1749,12 +1792,13 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"Starting at 2nd level when you select this school, you can use your action to conjure up an inanimate object in your hand or on the ground in an unoccupied space that you can see within 10 feet of you. This object can be no larger than 3 feet on a side and weigh no more than 10 pounds, and its form must be that of a nonmagical object that you have seen. The object is visibly magical, radiating dim light out to 5 feet.",
-				"The object disappears after 1 hour, when you use this feature again, if it takes any damage, or if it deals any damage."
+				"從你在2級時選擇此學派開始，你可以使用你的動作以喚出一個無生命物體，讓其出現在你手上、或出現在距離你10呎內你所能看見的一處未被佔據空間的地面上。這個物體的大小在各邊不能超過3呎，重量不能超過10磅，且它的外形必須是一個你曾經見過的非魔法物體。這個物體可以明顯被看出是帶有魔法的，且它將散發出5呎的微光光照。",
+				"這個物體將在1小時之後，或當你再此使用此能力、它受到任何傷害、或它造成任何傷害時消失。"
 			]
 		},
 		{
-			"name": "Benign Transposition",
+			"name": "移形換位",
+			"ENG_name": "Benign Transposition",
 			"source": "PHB",
 			"page": 116,
 			"className": "Wizard",
@@ -1764,12 +1808,13 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Starting at 6th level, you can use your action to teleport up to 30 feet to an unoccupied space that you can see. Alternatively, you can choose a space within range that is occupied by a Small or Medium creature. If that creature is willing, you both teleport, swapping places.",
-				"Once you use this feature, you can't use it again until you finish a long rest or you cast a conjuration spell of 1st level or higher."
+				"從6級開始，你可以使用你的動作以傳送最多30呎距離到一處你所能看見的未被佔據空間。或者，你可以選擇範圍內一處被一個中型或小型生物給佔據的空間。若該生物願意，你們兩個可以同時傳送，交換位置。",
+				"一旦你使用此能力，則直到你完成一次長休或施放一個1環或更高環的咒法系法術之前，你都不能再使用此能力。"
 			]
 		},
 		{
-			"name": "Focused Conjuration",
+			"name": "咒法專注",
+			"ENG_name": "Focused Conjuration",
 			"source": "PHB",
 			"page": 116,
 			"className": "Wizard",
@@ -1779,11 +1824,12 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"Beginning at 10th level, while you are concentrating on a conjuration spell, your concentration can't be broken as a result of taking damage."
+				"從10級開始，當你專注於一個咒法系法術時，你的專注並不會因為受到傷害而被中斷。"
 			]
 		},
 		{
-			"name": "Durable Summons",
+			"name": "強韌召喚",
+			"ENG_name": "Durable Summons",
 			"source": "PHB",
 			"page": 116,
 			"className": "Wizard",
@@ -1793,11 +1839,12 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"Starting at 14th level, any creature that you summon or create with a conjuration spell has 30 temporary hit points."
+				"從14級開始，任何你以咒法系法術召喚或創造出的生物都將擁有30點臨時生命值。"
 			]
 		},
 		{
-			"name": "School of Divination",
+			"name": "預言學派",
+			"ENG_name": "School of Divination",
 			"source": "PHB",
 			"page": 116,
 			"className": "Wizard",
@@ -1806,19 +1853,20 @@
 			"subclassSource": "PHB",
 			"level": 2,
 			"entries": [
-				"The counsel of a diviner is sought by royalty and commoners alike, for all seek a clearer understanding of the past, present, and future. As a diviner, you strive to part the veils of space, time, and consciousness so that you can see clearly. You work to master spells of discernment, remote viewing, supernatural knowledge, and foresight.",
+				"不管是王室或平凡人家，大家都在尋求來自預言師的建議，因為所有人都冀望能對過去、現在、和未來有更加深入的理解。做為一名預言師，你致力於揭開時間、空間、和意識的神秘面紗以讓你能看得更清楚。你努力掌握那些與識別、遠視、超自然知識，和預知未來有關的法術。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Divination Savant|Wizard||Divination||2"
+					"subclassFeature": "預言學者|Wizard||Divination||2"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Portent|Wizard||Divination||2"
+					"subclassFeature": "預兆|Wizard||Divination||2"
 				}
 			]
 		},
 		{
-			"name": "Divination Savant",
+			"name": "預言學者",
+			"ENG_name": "Divination Savant",
 			"source": "PHB",
 			"page": 116,
 			"className": "Wizard",
@@ -1828,11 +1876,12 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"Beginning when you select this school at 2nd level, the gold and time you must spend to copy a divination spell into your spellbook is halved."
+				"從你在2級時選擇此學派開始，你在將預言系法術抄寫進你的法術書時所必須花費的金錢和時間減半。"
 			]
 		},
 		{
-			"name": "Portent",
+			"name": "預兆",
+			"ENG_name": "Portent",
 			"source": "PHB",
 			"page": 116,
 			"className": "Wizard",
@@ -1842,12 +1891,13 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"Starting at 2nd level when you choose this school, glimpses of the future begin to press in on your awareness. When you finish a long rest, roll two {@dice d20}s and record the numbers rolled. You can replace any attack roll, saving throw, or ability check made by you or a creature that you can see with one of these foretelling rolls. You must choose to do so before the roll, and you can replace a roll in this way only once per turn.",
-				"Each foretelling roll can be used only once. When you finish a long rest, you lose any unused foretelling rolls."
+				"從你在2級時選擇此學派開始，未來一瞬的景象開始出現在你的意識中。當你完成一次長休時，骰二顆{@dice d20}，並將它們骰出來的數字記錄下來。你可以將你或一個你所能看見的生物所進行的任意攻擊檢定、豁免檢定、或屬性檢定的結果替換成其中一顆這些預言骰的結果。你必須在擲骰前選擇是否這麼做，且你每回合只能用這個方式替換擲骰結果一次。",
+				"每個預言骰只能被使用一次。當你完成一次長休時，你失去所有尚未被使用的預言骰。"
 			]
 		},
 		{
-			"name": "Expert Divination",
+			"name": "預言專家",
+			"ENG_name": "Expert Divination",
 			"source": "PHB",
 			"page": 116,
 			"className": "Wizard",
@@ -1857,11 +1907,12 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Beginning at 6th level, casting divination spells comes so easily to you that it expends only a fraction of your spellcasting efforts. When you cast a {@filter divination spell of 2nd level or higher|spells|school=D} using a spell slot, you regain one expended spell slot. The slot you regain must be of a level lower than the spell you cast and can't be higher than 5th level."
+				"從6級開始，施放預言系法術對你而言是那麼容易，以至於你只需要花費你一部份的施法能力。當你使用法術位施放一個2環或更高環的預言系法術，你將恢復一個已消耗的法術位。你所恢復法術位的環階必須低於你所施放的法術，且該法術位的環階不能超過5環。"
 			]
 		},
 		{
-			"name": "The Third Eye",
+			"name": "天眼通",
+			"ENG_name": "The Third Eye",
 			"source": "PHB",
 			"page": 116,
 			"className": "Wizard",
@@ -1871,36 +1922,36 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"Starting at 10th level, you can use your action to increase your powers of perception. When you do so, choose one of the following benefits, which lasts until you are {@condition incapacitated} or you take a short or long rest. You can't use the feature again until you finish a rest.",
+				"從10級開始，你可以使用你的動作以增強你感知周遭的能力。當你這麼做時，從下列好處中選擇一項，它將持續直到你陷入{@condition 無力}狀態，或直到你進行一次短休或長休。直到你完成一次短休或長休之前你都不能再使用此能力。",
 				{
 					"type": "options",
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Darkvision",
+							"name": "黑暗視覺",
 							"entries": [
-								"You gain {@sense darkvision} out to a range of 60 feet."
+								"你獲得60呎距離的 {@sense 黑暗視覺}"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Ethereal Sight",
+							"name": "乙太視界",
 							"entries": [
-								"You can see into the Ethereal Plane within 60 feet of you."
+								"你可以看穿距離你60呎內的乙太位面。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Greater Comprehension",
+							"name": "高等理解能力",
 							"entries": [
-								"You can read any language."
+								"你可以閱讀任何語言。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "See Invisibility",
+							"name": "識破隱形",
 							"entries": [
-								"You can see {@condition invisible} creatures and objects within 10 feet of you that are within line of sight."
+								"你可以看見距離你10呎內且在視野內的{@condition 隱形}生物和物體。"
 							]
 						}
 					]
@@ -1908,7 +1959,8 @@
 			]
 		},
 		{
-			"name": "Greater Portent",
+			"name": "高等預兆",
+			"ENG_name": "Greater Portent",
 			"source": "PHB",
 			"page": 116,
 			"className": "Wizard",
@@ -1918,11 +1970,12 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"Starting at 14th level, the visions in your dreams intensify and paint a more accurate picture in your mind of what is to come. You roll three {@dice d20}s for your Portent feature, rather than two."
+				"從14級開始，你夢中的景象變得更加清晰，更精確地在你的意識中描繪出了將要發生的一切。你為你的預兆能力骰三顆骰，而非原本的二顆。"
 			]
 		},
 		{
-			"name": "School of Enchantment",
+			"name": "惑控學派",
+			"ENG_name": "School of Enchantment",
 			"source": "PHB",
 			"page": 117,
 			"className": "Wizard",
@@ -1931,19 +1984,20 @@
 			"subclassSource": "PHB",
 			"level": 2,
 			"entries": [
-				"As a member of the School of Enchantment, you have honed your ability to magically entrance and beguile other people and monsters. Some enchanters are peacemakers who bewitch the violent to lay down their arms and charm the cruel into showing mercy. Others are tyrants who magically bind the unwilling into their service. Most enchanters fall somewhere in between.",
+				"做為惑控學派的成員，你磨練你的能力於藉由魔法迷惑並欺騙其他人和怪物。一部份的惑控師是和平主義者，致力於蠱惑暴力者使之放下武器，並魅惑殘忍者使之展現慈悲。另一些惑控師則是暴君，利用魔法強迫不情願的人們為他工作。而絕大多數的惑控師則介於兩者之間。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Enchantment Savant|Wizard||Enchantment||2"
+					"subclassFeature": "惑控學者|Wizard||Enchantment||2"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Hypnotic Gaze|Wizard||Enchantment||2"
+					"subclassFeature": "催眠凝視|Wizard||Enchantment||2"
 				}
 			]
 		},
 		{
-			"name": "Enchantment Savant",
+			"name": "惑控學者",
+			"ENG_name": "Enchantment Savant",
 			"source": "PHB",
 			"page": 117,
 			"className": "Wizard",
@@ -1953,11 +2007,12 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"Beginning when you select this school at 2nd level, the gold and time you must spend to copy an enchantment spell into your spellbook is halved."
+				"從你在2級時選擇此學派開始，你在將惑控系法術抄寫進你的法術書時所必須花費的金錢和時間減半。"
 			]
 		},
 		{
-			"name": "Hypnotic Gaze",
+			"name": "催眠凝視",
+			"ENG_name": "Hypnotic Gaze",
 			"source": "PHB",
 			"page": 117,
 			"className": "Wizard",
@@ -1967,13 +2022,14 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"Starting at 2nd level when you choose this school, your soft words and enchanting gaze can magically enthrall another creature. As an action, choose one creature that you can see within 5 feet of you. If the target can see or hear you, it must succeed on a Wisdom saving throw against your wizard spell save DC or be {@condition charmed} by you until the end of your next turn. The {@condition charmed} creature's speed drops to 0, and the creature is {@condition incapacitated} and visibly dazed.",
-				"On subsequent turns, you can use your action to maintain this effect, extending its duration until the end of your next turn. However, the effect ends if you move more than 5 feet away from the creature, if the creature can neither see nor hear you, or if the creature takes damage.",
-				"Once the effect ends, or if the creature succeeds on its initial saving throw against this effect, you can't use this feature on that creature again until you finish a long rest."
+				"從你在2級時選擇此學派開始，你的柔和言語和魅惑凝視可以用魔法迷住另一個生物。以一個動作，選擇一個距離你5呎內且你能看見的生物。若目標可以看見或聽見你，則它必須成功通過一次對抗你法師法術豁免DC的睿知豁免，否則被你{@condition 魅惑}直到你的下個回合結束。被{@condition 魅惑}生物的移動速度歸零，該生物陷入{@condition 無力}狀態，且明顯茫然的樣子。",
+				"在接下來的回合，你可以使用你的動作以維持這個效果，將它的持續時間延到你的下個回合結束。然而，若你移離該生物超過5呎距離、該生物無法看見或聽見你、或該生物受到傷害時，則這個效果將會結束。",
+				"一旦這個效果結束，或若該生物成功通過它最初對抗這個效果的豁免檢定，則直到你完成一次長休之前，你都無法再對該生物使用此能力。"
 			]
 		},
 		{
-			"name": "Instinctive Charm",
+			"name": "本能魅惑",
+			"ENG_name": "Instinctive Charm",
 			"source": "PHB",
 			"page": 117,
 			"className": "Wizard",
@@ -1983,12 +2039,13 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Beginning at 6th level, when a creature you can see within 30 feet of you makes an attack roll against you, you can use your reaction to divert the attack, provided that another creature is within the attack's range. The attacker must make a Wisdom saving throw against your wizard spell save DC. On a failed save, the attacker must target the creature that is closest to it, not including you or itself. If multiple creatures are closest, the attacker chooses which one to target. On a successful save, you can't use this feature on the attacker again until you finish a long rest.",
-				"You must choose to use this feature before knowing whether the attack hits or misses. Creatures that can't be {@condition charmed} are immune to this effect."
+				"從6級開始，當一個距離你30呎內且你所能看見的生物對你進行一次攻擊檢定，只要有另一個生物處於該攻擊的射程內，你就可以使用你的反應以將該攻擊轉向。攻擊者必須進行一次對抗你法師法術豁免DC的睿知豁免。若豁免失敗，則攻擊者必須指定距離它最近的一個生物（不包括你和它自己）做為目標。若距離它最近的生物有複數個，則由攻擊者選擇要指定哪一個做為目標。若豁免成功，則直到你完成一次長休之前，你都無法再對該攻擊者使用此能力。",
+				"你必須在知道該攻擊命中與否之前選擇是否使用這個能力。不會被{@condition 魅惑}的生物免疫於這個效果。"
 			]
 		},
 		{
-			"name": "Split Enchantment",
+			"name": "分散惑控",
+			"ENG_name": "Split Enchantment",
 			"source": "PHB",
 			"page": 117,
 			"className": "Wizard",
@@ -1998,11 +2055,12 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"Starting at 10th level, when you cast an enchantment spell of 1st level or higher that targets only one creature, you can have it target a second creature."
+				"從10級開始，當你施放一個只以一個生物做為目標的1環或更高環的惑控系法術時，你可以讓該法術指定第二個生物做為目標。"
 			]
 		},
 		{
-			"name": "Alter Memories",
+			"name": "改動記憶",
+			"ENG_name": "Alter Memories",
 			"source": "PHB",
 			"page": 117,
 			"className": "Wizard",
@@ -2012,12 +2070,13 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"At 14th level, you gain the ability to make a creature unaware of your magical influence on it. When you cast an enchantment spell to charm one or more creatures, you can alter one creature's understanding so that it remains unaware of being {@condition charmed}.",
-				"Additionally, once before the spell expires, you can use your action to try to make the chosen creature forget some of the time it spent {@condition charmed}. The creature must succeed on an Intelligence saving throw against your wizard spell save DC or lose a number of hours of its memories equal to 1 + your Charisma modifier (minimum of 1). You can make the creature forget less time, and the amount of time can't exceed the duration of your enchantment spell."
+				"在14級時，你獲得讓一個生物無法察覺你用魔法影響它的能力。當你施放一個可以魅惑一個或更多生物的惑控系法術時，你可以改動其中一個生物的理解以讓它無法查覺自己被{@condition 魅惑}。",
+				"此外，在法術結束之前一次，你可以使用你的動作以嘗試讓所選生物忘記一段它在被{@condition 魅惑}期間的記憶。該生物必須成功通過一次對抗你法師法術豁免DC的智力豁免，否則將失去等同於1+你的魅力調整值（最少為1）的小時數的記憶。你可以讓該生物忘記更短時間內的記憶，且這段時間的長度不能超過你惑控法術的持續時間。"
 			]
 		},
 		{
-			"name": "School of Evocation",
+			"name": "塑能學派",
+			"ENG_name": "School of Evocation",
 			"source": "PHB",
 			"page": 117,
 			"srd": true,
@@ -2027,19 +2086,20 @@
 			"subclassSource": "PHB",
 			"level": 2,
 			"entries": [
-				"You focus your study on magic that creates powerful elemental effects such as bitter cold, searing flame, rolling thunder, crackling lightning, and burning acid. Some evokers find employment in military forces, serving as artillery to blast enemy armies from afar. Others use their spectacular power to protect the weak, while some seek their own gain as bandits, adventurers, or aspiring tyrants.",
+				"你專注於研究能創造出強大元素效果的魔法，諸如刺骨寒冷、熾熱火焰、轟隆雷鳴、躍動閃電、和燒灼強酸。有些塑能師會受雇於軍隊，成為從遠方轟炸敵軍的砲台。有些會用他們的壯闊法術保護弱者，也有些會為了自己的利益而成為盜匪、冒險者、或胸懷抱負的暴君。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Evocation Savant|Wizard||Evocation||2"
+					"subclassFeature": "塑能學者|Wizard||Evocation||2"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Sculpt Spells|Wizard||Evocation||2"
+					"subclassFeature": "形塑法術|Wizard||Evocation||2"
 				}
 			]
 		},
 		{
-			"name": "Evocation Savant",
+			"name": "塑能學者",
+			"ENG_name": "Evocation Savant",
 			"source": "PHB",
 			"page": 117,
 			"srd": true,
@@ -2050,11 +2110,12 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"Beginning when you select this school at 2nd level, the gold and time you must spend to copy an evocation spell into your spellbook is halved."
+				"從你在2級時選擇此學派開始，你在將塑能系法術抄寫進你的法術書時所必須花費的金錢和時間減半。"
 			]
 		},
 		{
-			"name": "Sculpt Spells",
+			"name": "形塑法術",
+			"ENG_name": "Sculpt Spells",
 			"source": "PHB",
 			"page": 117,
 			"srd": true,
@@ -2065,11 +2126,12 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"Beginning at 2nd level, you can create pockets of relative safety within the effects of your evocation spells. When you cast an evocation spell that affects other creatures that you can see, you can choose a number of them equal to 1 + the spell's level. The chosen creatures automatically succeed on their saving throws against the spell, and they take no damage if they would normally take half damage on a successful save."
+				"從2級開始，你可以在你塑能系法術的效果範圍內創造出相對安全的區域。當你施放一個會影響你所能看見的其他生物的塑能系法術時，你可以從中選擇數量等同1+該法術環階的生物。所選生物將自動成功通過對抗該法術的豁免檢定，且若它們原本在豁免成功時會受到一半的傷害，則它們改為不受任何傷害。"
 			]
 		},
 		{
-			"name": "Potent Cantrip",
+			"name": "強力戲法",
+			"ENG_name": "Potent Cantrip",
 			"source": "PHB",
 			"page": 117,
 			"srd": true,
@@ -2080,11 +2142,12 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Starting at 6th level, your damaging cantrips affect even creatures that avoid the brunt of the effect. When a creature succeeds on a saving throw against your cantrip, the creature takes half the cantrip's damage (if any) but suffers no additional effect from the cantrip."
+				"從6級開始，即使生物避開了你傷害類戲法效果中最主要的衝擊，你仍能影響它們。當一個生物成功通過一次對抗你戲法的豁免檢定，該生物仍會受到該戲法的傷害（若有）的一半，但並不會承受來自該戲法的額外效果。"
 			]
 		},
 		{
-			"name": "Empowered Evocation",
+			"name": "強效塑能",
+			"ENG_name": "Empowered Evocation",
 			"source": "PHB",
 			"page": 117,
 			"srd": true,
@@ -2095,11 +2158,12 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"Beginning at 10th level, you can add your Intelligence modifier to one damage roll of any wizard evocation spell you cast."
+				"從10級開始，你可以將你的智力調整值加入任何你所施放的塑能系法師法術的其中一次傷害骰中。"
 			]
 		},
 		{
-			"name": "Overchannel",
+			"name": "過載導魔",
+			"ENG_name": "Overchannel",
 			"source": "PHB",
 			"page": 117,
 			"srd": true,
@@ -2110,12 +2174,13 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"Starting at 14th level, you can increase the power of your simpler spells. When you cast a wizard spell of 1st through 5th-level that deals damage, you can deal maximum damage with that spell.",
-				"The first time you do so, you suffer no adverse effect. If you use this feature again before you finish a long rest, you take {@damage 2d12} necrotic damage for each level of the spell, immediately after you cast it. Each time you use this feature again before finishing a long rest, the necrotic damage per spell level increases by {@dice 1d12}. This damage ignores resistance and immunity."
+				"從14級開始，你可以提升你那些較簡單法術的威力。當你施放一個環階在1環到5環之間，且會造成傷害的法師法術時，你可以讓該法術造成最大傷害。",
+				"當你第一次這麼做時，你不會承受任何負面效果。若你在完成一次長休之前再次使用此能力，你將在施放該法術後立刻受到該法術每環階{@dice 2d12}的死靈傷害。每次你在完成一次長休之前再次使用此能力，每法術環階的死靈傷害將會再提升{@dice 1d12}。這個傷害無視抗性和免疫。"
 			]
 		},
 		{
-			"name": "School of Illusion",
+			"name": "幻術學派",
+			"ENG_name": "School of Illusion",
 			"source": "PHB",
 			"page": 118,
 			"className": "Wizard",
@@ -2124,19 +2189,20 @@
 			"subclassSource": "PHB",
 			"level": 2,
 			"entries": [
-				"You focus your studies on magic that dazzles the senses, befuddles the mind, and tricks even the wisest folk. Your magic is subtle, but the illusions crafted by your keen mind make the impossible seem real. Some illusionists\u2014including many gnome wizards\u2014are benign tricksters who use their spells to entertain. Others are more sinister masters of deception, using their illusions to frighten and fool others for their personal gain.",
+				"你專注於研究那些能夠擾亂感官、迷惑意識、甚至能欺騙最有智慧之人的魔法。你的魔法看似細微，但這些用你敏銳思維創造出來的幻象卻能夠以假亂真。某些幻術師\u2014包括許多地侏幻術師\u2014是和善的戲法師，使用他們的法術來娛樂他人。而其他幻術師則是更加邪惡的欺詐大師，為了它們的個人利益而利用幻術恐嚇或愚弄他人。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Illusion Savant|Wizard||Illusion||2"
+					"subclassFeature": "幻術學者|Wizard||Illusion||2"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Improved Minor Illusion|Wizard||Illusion||2"
+					"subclassFeature": "精通次級幻象|Wizard||Illusion||2"
 				}
 			]
 		},
 		{
-			"name": "Illusion Savant",
+			"name": "幻術學者",
+			"ENG_name": "Illusion Savant",
 			"source": "PHB",
 			"page": 118,
 			"className": "Wizard",
@@ -2146,11 +2212,12 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"Beginning when you select this school at 2nd level, the gold and time you must spend to copy an illusion spell into your spellbook is halved."
+				"從你在2級時選擇此學派開始，你在將幻術系法術抄寫進你的法術書時所必須花費的金錢和時間減半。"
 			]
 		},
 		{
-			"name": "Improved Minor Illusion",
+			"name": "精通次級幻象",
+			"ENG_name": "Improved Minor Illusion",
 			"source": "PHB",
 			"page": 118,
 			"className": "Wizard",
@@ -2160,12 +2227,13 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"When you choose this school at 2nd level, you learn the {@spell minor illusion} cantrip. If you already know this cantrip, you learn a different wizard cantrip of your choice. The cantrip doesn't count against your number of cantrips known.",
-				"When you cast {@spell minor illusion}, you can create both a sound and an image with a single casting of the spell."
+				"當你在2級時選擇此學派時，你習得{@spell 次級幻象}戲法。若你已經知曉此戲法，則你習得另一個自選的法師戲法。這個戲法並不會計入你的已知戲法數量。",
+				"當你施放{@spell 次級幻象}，你可以在一次施法中同時創造出聲音和影像。"
 			]
 		},
 		{
-			"name": "Malleable Illusions",
+			"name": "可塑幻象",
+			"ENG_name": "Malleable Illusions",
 			"source": "PHB",
 			"page": 118,
 			"className": "Wizard",
@@ -2175,11 +2243,12 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Starting at 6th level, when you cast an illusion spell that has a duration of 1 minute or longer, you can use your action to change the nature of that illusion (using the spell's normal parameters for the illusion), provided that you can see the illusion."
+				"從6級開始，當你施放一個持續時間為1分鐘或更久的幻術系法術時，只要你可以看見該幻象，你就可以使用你的動作以改變該幻象的性質（仍需遵守該法術對該幻象的基本屬性描述）。"
 			]
 		},
 		{
-			"name": "Illusory Step",
+			"name": "幻象步",
+			"ENG_name": "Illusory Step",
 			"source": "PHB",
 			"page": 118,
 			"className": "Wizard",
@@ -2189,12 +2258,13 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"Beginning at 10th level, you can create an illusory duplicate of yourself as an instant, almost instinctual reaction to danger. When a creature makes an attack roll against you, you can use your reaction to interpose the illusory duplicate between the attacker and yourself. The attack automatically misses you, then the illusion dissipates.",
-				"Once you use this feature, you can't use it again until you finish a short or long rest."
+				"從10級開始，幾乎等同你對危險的本能反應，你可以在瞬間創造出一個你的幻象複製體。當一個生物對你進行一次攻擊檢定，你可以使用你的反應以在你和攻擊者之間插入該幻象複製體。該攻擊將自動失手，且該幻象將接著消散。",
+				"一旦你使用此能力，直到你完成一次短休或長休之前你都不能再使用它。"
 			]
 		},
 		{
-			"name": "Illusory Reality",
+			"name": "亦真亦幻",
+			"ENG_name": "Illusory Reality",
 			"source": "PHB",
 			"page": 118,
 			"className": "Wizard",
@@ -2204,12 +2274,13 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"By 14th level, you have learned the secret of weaving shadow magic into your illusions to give them a semireality. When you cast an illusion spell of 1st level or higher, you can choose one inanimate, nonmagical object that is part of the illusion and make that object real. You can do this on your turn as a bonus action while the spell is ongoing. The object remains real for 1 minute. For example, you can create an illusion of a bridge over a chasm and then make it real long enough for your allies to cross.",
-				"The object can't deal damage or otherwise directly harm anyone."
+				"從14級起，你學會幽影魔法的奧秘，並能將之編入你的幻象中以賦予它們半真實的特性。當你施放一個1環或更高環的幻術系法術時，你可以選擇一個屬於幻象一部份的不可動且非魔法的物體，並讓該物體變為真實。你可以在法術持續期間在你的回合以一個附贈動作這麼做。該物體將保持真實存在並持續1分鐘。舉例來說，你可以創造出一道橫跨峽谷的幻象橋梁，並使它變為真實以讓你的隊友們通過。",
+				"該物體無法造成傷害、或以任何方式直接傷害任何人。"
 			]
 		},
 		{
-			"name": "School of Necromancy",
+			"name": "死靈學派",
+			"ENG_name": "School of Necromancy",
 			"source": "PHB",
 			"page": 118,
 			"className": "Wizard",
@@ -2218,20 +2289,21 @@
 			"subclassSource": "PHB",
 			"level": 2,
 			"entries": [
-				"The School of Necromancy explores the cosmic forces of life, death, and undeath. As you focus your studies in this tradition, you learn to manipulate the energy that animates all living things. As you progress, you learn to sap the life force from a creature as your magic destroys its body, transforming that vital energy into magical power you can manipulate.",
-				"Most people see necromancers as menacing, or even villainous, due to the close association with death. Not all necromancers are evil, but the forces they manipulate are considered taboo by many societies.",
+				"死靈學派探索著生命、死亡、與不死之間的宇宙力量。隨著你專注你的研究於這個傳統，你學會了操縱那驅動所有活物的能量。隨著你的研究深入，你學會在用魔法摧毀一個生物身體的同時削弱它的生命力，並將這股生命能量化作你可以驅使的魔法之力。",
+				"由於死靈學派與死亡的緊密聯繫，大多數人都認為死靈師是恐怖的，或甚至是邪惡的。並非所有死靈師都是邪惡的，然而他們所操縱的力量在許多社會中都被視作禁忌。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Necromancy Savant|Wizard||Necromancy||2"
+					"subclassFeature": "死靈學者|Wizard||Necromancy||2"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Grim Harvest|Wizard||Necromancy||2"
+					"subclassFeature": "殘怖收割|Wizard||Necromancy||2"
 				}
 			]
 		},
 		{
-			"name": "Grim Harvest",
+			"name": "殘怖收割",
+			"ENG_name": "Grim Harvest",
 			"source": "PHB",
 			"page": 118,
 			"className": "Wizard",
@@ -2241,11 +2313,12 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"At 2nd level, you gain the ability to reap life energy from creatures you kill with your spells. Once per turn when you kill one or more creatures with a spell of 1st level or higher, you regain hit points equal to twice the spell's level, or three times its level if the spell belongs to the {@filter School of Necromancy|spells|school=N}. You don't gain this benefit for killing constructs or undead."
+				"在2級時，你獲得從你以法術殺死的生物那裡收割生命能量的能力。每回合一次，當你以1環或更高環的法術殺死一個或更多的生物時，你將獲得等同於該法術環階二倍的生命值，或若該法術屬於{@filter 死靈學派|spells|school=N}，則改為回復該法術環階三倍的生命值。你不會因為殺死構裝體或不死生物而獲得這個好處。"
 			]
 		},
 		{
-			"name": "Necromancy Savant",
+			"name": "死靈學者",
+			"ENG_name": "Necromancy Savant",
 			"source": "PHB",
 			"page": 118,
 			"className": "Wizard",
@@ -2255,11 +2328,12 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"Beginning when you select this school at 2nd level, the gold and time you must spend to copy a necromancy spell into your spellbook is halved."
+				"從你在2級時選擇此學派開始，你在將死靈系法術抄寫進你的法術書時所必須花費的金錢和時間減半。"
 			]
 		},
 		{
-			"name": "Undead Thralls",
+			"name": "不死奴僕",
+			"ENG_name": "Undead Thralls",
 			"source": "PHB",
 			"page": 118,
 			"className": "Wizard",
@@ -2269,19 +2343,20 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"At 6th level, you add the {@spell animate dead} spell to your spellbook if it is not there already. When you cast {@spell animate dead}, you can target one additional corpse or pile of bones, creating another zombie or skeleton, as appropriate.",
-				"Whenever you create an undead using a necromancy spell, it has additional benefits:",
+				"在6級時，若你的法術書中沒有{@spell 活化死屍}法術，則你將它加入你的法術書中。當你施放{@spell 活化死屍}時，你可以指定一具額外的屍體或骨骸，創造出另一個相應的殭屍或骷髏。",
+				"每當你使用一個死靈系法術創造出一個不死生物時，它將獲得下列好處：",
 				{
 					"type": "list",
 					"items": [
-						"The creature's hit point maximum is increased by an amount equal to your wizard level.",
-						"The creature adds your proficiency bonus to its weapon damage rolls."
+						"該生物的生命值最大值增加等同於你法師等級的數值。",
+						"該生物將你的熟練加值加入它的武器傷害骰中。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Inured to Undeath",
+			"name": "不死適應",
+			"ENG_name": "Inured to Undeath",
 			"source": "PHB",
 			"page": 118,
 			"className": "Wizard",
@@ -2291,11 +2366,12 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"Beginning at 10th level, you have resistance to necrotic damage, and your hit point maximum can't be reduced. You have spent so much time dealing with undead and the forces that animate them that you have become inured to some of their worst effects."
+				"從10級開始，你擁有對死靈傷害的抗性，且你的生命值最大值不會被減少。你已經耗費了相當長的時間與不死生物和驅使它們的力量打交道，以至於你已經適應了它們其中一些最壞的影響。"
 			]
 		},
 		{
-			"name": "Command Undead",
+			"name": "命令不死生物",
+			"ENG_name": "Command Undead",
 			"source": "PHB",
 			"page": 118,
 			"className": "Wizard",
@@ -2305,12 +2381,13 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"Starting at 14th level, you can use magic to bring undead under your control, even those created by other wizards. As an action, you can choose one undead that you can see within 60 feet of you. That creature must make a Charisma saving throw against your wizard spell save DC. If it succeeds, you can't use this feature on it again. If it fails, it becomes friendly to you and obeys your commands until you use this feature again.",
-				"Intelligent undead are harder to control in this way. If the target has an Intelligence of 8 or higher, it has advantage on the saving throw. If it fails the saving throw and has an Intelligence of 12 or higher, it can repeat the saving throw at the end of every hour until it succeeds and breaks free."
+				"從14級開始，你可以使用魔法讓不死生物處於你的控制下，即使這些生物是由另一個法師創造的也一樣。以一個動作，你可以選擇一個距離你60呎內且你所能看見的不死生物。該生物必須進行一次對抗你法師法術豁免DC的魅力豁免。若它豁免成功，則你無法再對它使用此能力。若它豁免失敗，則它將變得對你友善並服從你的命令直到你再次使用此能力。",
+				"具有智能的不死生物會較難以這個方式控制。若目標的智力值為8或更高，它將在此豁免檢定中具有優勢。若它在此豁免檢定中失敗且智力值為12或更高，則它可以在每小時結束時重複進行此豁免檢定，直到它豁免成功並掙脫你的控制。"
 			]
 		},
 		{
-			"name": "School of Transmutation",
+			"name": "變化學派",
+			"ENG_name": "School of Transmutation",
 			"source": "PHB",
 			"page": 119,
 			"className": "Wizard",
@@ -2319,20 +2396,21 @@
 			"subclassSource": "PHB",
 			"level": 2,
 			"entries": [
-				"You are a student of spells that modify energy and matter. To you, the world is not a fixed thing, but eminently mutable, and you delight in being an agent of change. You wield the raw stuff of creation and learn to alter both physical forms and mental qualities. Your magic gives you the tools to become a smith on reality's forge.",
-				"Some transmuters are tinkerers and pranksters, turning people into toads and transforming copper into silver for fun and occasional profit. Others pursue their magical studies with deadly seriousness, seeking the power of the gods to make and destroy worlds.",
+				"你是一名研究著那些改變物質和能量法術的學徒。對你而言，世界並非一成不變，而是具有相當可塑性的東西，且你非常樂意做為推動改變的使者。你駕馭著創造的原始材料，並學習如何改變物理形態和精神性質。你的魔法賦予你工具，使你得以成為現實世界這座鍛造場的鐵匠。",
+				"有些變化師是惡作劇者和搗蛋鬼，喜歡把人變成蟾蜍、或把銅轉變銀，以此來取樂或賺點小錢。其他變化師則以極度嚴肅的態度追求他們的魔法研究，尋求著諸神用以創造或毀滅世界的強大力量。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Transmutation Savant|Wizard||Transmutation||2"
+					"subclassFeature": "變化學者|Wizard||Transmutation||2"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Minor Alchemy|Wizard||Transmutation||2"
+					"subclassFeature": "次級煉金|Wizard||Transmutation||2"
 				}
 			]
 		},
 		{
-			"name": "Minor Alchemy",
+			"name": "次級煉金",
+			"ENG_name": "Minor Alchemy",
 			"source": "PHB",
 			"page": 119,
 			"className": "Wizard",
@@ -2342,11 +2420,12 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"Starting at 2nd level when you select this school, you can temporarily alter the physical properties of one nonmagical object, changing it from one substance into another. You perform a special alchemical procedure on one object composed entirely of wood, stone (but not a gemstone), iron, copper, or silver, transforming it into a different one of those materials. For each 10 minutes you spend performing the procedure, you can transform up to 1 cubic foot of material. After 1 hour, or until you lose your concentration (as if you were concentrating on a spell), the material reverts to its original substance."
+				"從你在2級時選擇此學派開始，你可以暫時地改變一個非魔法物體的物理性質，將它變成另一種物質。你可以對一個完全由木、石（但非寶石）、鐵、銅、或銀所構成的物體施展一項特殊的煉金程序，將它轉變成上述的另一種材質。你每花費10分鐘施展這個煉金程序，你就可以轉變最多1立方呎的材質。在1小時之後，或直到你失去你的專注（如同你專注於一個法術），該材質將會變回它原本的物質。"
 			]
 		},
 		{
-			"name": "Transmutation Savant",
+			"name": "變化學者",
+			"ENG_name": "Transmutation Savant",
 			"source": "PHB",
 			"page": 119,
 			"className": "Wizard",
@@ -2356,11 +2435,12 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"Beginning when you select this school at 2nd level, the gold and time you must spend to copy a transmutation spell into your spellbook is halved."
+				"從你在2級時選擇此學派開始，你在將變化系法術抄寫進你的法術書時所必須花費的金錢和時間減半。"
 			]
 		},
 		{
-			"name": "Transmuter's Stone",
+			"name": "變化師之石",
+			"ENG_name": "Transmuter's Stone",
 			"source": "PHB",
 			"page": 119,
 			"className": "Wizard",
@@ -2370,22 +2450,23 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Starting at 6th level, you can spend 8 hours creating a transmuter's stone that stores transmutation magic. You can benefit from the stone yourself or give it to another creature. A creature gains a benefit of your choice as long as the stone is in the creature's possession. When you create the stone, choose the benefit from the following options:",
+				"從6級開始，你可以花費8小時製造一顆儲存著變化系魔法的變化師之石。你可以自己獲得這顆石頭帶來的好處，或將它給予另一個生物。只要這顆石頭被一個生物所持有，該生物就能獲得你所選的好處。當你創造這顆石頭時，從下列選項中選擇一項好處：",
 				{
 					"type": "list",
 					"items": [
-						"Darkvision out to a range of 60 feet, as described in chapter 8.",
-						"An increase to speed of 10 feet while the creature is unencumbered.",
-						"Proficiency in Constitution saving throws.",
-						"Resistance to acid, cold, fire, lightning, or thunder damage (your choice whenever you choose this benefit)."
+						"60呎距離的黑暗視覺，參照第八章的敘述。",
+						"當該生物未處於負載狀態時，移動速度增加10呎。",
+						"熟練於體質豁免。",
+						"對酸蝕、寒冰、火焰、閃電、或雷鳴傷害（每當你選擇這個好處時選擇一個）的抗性。"
 					]
 				},
-				"Each time you cast a transmutation spell of 1st level or higher, you can change the effect of your stone if the stone is on your person.",
-				"If you create a new transmuter's stone, the previous one ceases to function."
+				"每次你施放一個1環或更高環的變化系法術時，若這顆石頭在你身上，則你可以改變你的變化師之石的效果。",
+				"若你製造了一顆新的變化師之石，之前那顆將會停止作用。"
 			]
 		},
 		{
-			"name": "Shapechanger",
+			"name": "變形者",
+			"ENG_name": "Shapechanger",
 			"source": "PHB",
 			"page": 119,
 			"className": "Wizard",
@@ -2395,12 +2476,13 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"At 10th level, you add the {@spell polymorph} spell to your spellbook, if it is not there already. You can cast {@spell polymorph} without expending a spell slot. When you do so, you can target only yourself and transform into a {@filter beast whose challenge rating is 1 or lower|bestiary|challenge rating=[&0;&1]|type=beast|miscellaneous=!swarm}.",
-				"Once you cast {@spell polymorph} in this way, you can't do so again until you finish a short or long rest, though you can still cast it normally using an available spell slot."
+				"在10級時，若你的法術書中沒有{@spell 變形術}法術，則你將它加入你的法術書中。你可以施放{@spell 變形術}而無須消耗法術位。當你這麼做時，你只能以自己為目標，且只能轉變為一個{@filter 挑戰等級為1或更低的野獸|bestiary|challenge rating=0;1/8;1/4;1/2;1|type=beast|miscellaneous=!swarm}。",
+				"一旦你用這個方式施放{@spell 變形術}，則直到你完成一次短休或長休之前你都不能再這麼做。不過你仍然可以藉由消耗可用的法術位來正常地施放它。"
 			]
 		},
 		{
-			"name": "Master Transmuter",
+			"name": "變化宗師",
+			"ENG_name": "Master Transmuter",
 			"source": "PHB",
 			"page": 119,
 			"className": "Wizard",
@@ -2410,36 +2492,40 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"Starting at 14th level, you can use your action to consume the reserve of transmutation magic stored within your transmuter's stone in a single burst. When you do so, choose one of the following effects. Your transmuter's stone is destroyed and can't be remade until you finish a long rest.",
+				"從14級開始，你可以使用你的動作將儲存在變化師之石內的變化系魔法一次耗盡。當你這麼做時，從下列效果中選擇一項。你的變化師之石將被摧毀，且直到你完成一次長休之前都不能再被重新製造。",
 				{
 					"type": "options",
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Major Transformation",
+							"name": "強效變化",
+							"ENG_name": "Major Transformation",
 							"entries": [
-								"You can transmute one nonmagical object\u2014no larger than a 5-foot cube\u2014into another nonmagical object of similar size and mass and of equal or lesser value. You must spend 10 minutes handling the object to transform it."
+								"你可以將一個非魔法物體\u2014體積不大於5呎邊長立方體\u2014轉變成另一個體積和質量相似，且價值相同或更低的非魔法物體。你必須花費10分鐘持握住該物體以轉變它。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Panacea",
+							"name": "萬靈密藥",
+							"ENG_name": "Panacea",
 							"entries": [
-								"You remove all curses, diseases, and poisons affecting a creature that you touch with the transmuter's stone. The creature also regains all its hit points."
+								"你移除一個你以變化師之石觸碰的生物身上所有的詛咒、疾病、和毒素。該生物同時回復它所有的生命值。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Restore Life",
+							"name": "起死回生",
+							"ENG_name": "Restore Life",
 							"entries": [
-								"You cast the {@spell raise dead} spell on a creature you touch with the transmuter's stone, without expending a spell slot or needing to have the spell in your spellbook."
+								"你對一個你以變化師之石觸碰的生物施放{@spell 喚醒死者}，無須消耗法術位、且該法術不需要在你的法術書中。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Restore Youth",
+							"name": "返老還童",
+							"ENG_name": "Restore Youth",
 							"entries": [
-								"You touch the transmuter's stone to a willing creature, and that creature's apparent age is reduced by {@dice 3d10} years, to a minimum of 13 years. This effect doesn't extend the creature's lifespan."
+								"你以變化師之石觸碰一個自願生物，且該生物的表面年齡將被減少{@dice 3d10}年，到最小13歲。這個效果並不會延長該生物的壽命。"
 							]
 						}
 					]
@@ -2447,7 +2533,8 @@
 			]
 		},
 		{
-			"name": "Bladesinging",
+			"name": "劍詠傳承",
+			"ENG_name": "Bladesinging",
 			"source": "TCE",
 			"page": 76,
 			"otherSources": [
@@ -2462,23 +2549,24 @@
 			"subclassSource": "TCE",
 			"level": 2,
 			"entries": [
-				"Bladesingers are elves who bravely defend their people and lands. They are elf wizards who master a school of sword fighting grounded in a tradition of arcane magic. In combat, a bladesinger uses a series of intricate, elegant maneuvers that fend off harm and allow the bladesinger to channel magic into devastating attacks and a cunning defense.",
+				"劍詠者是一群勇猛的防衛他們人民和土地的精靈。他們是精通於一種建基於奧術魔法傳統的劍鬥技藝的精靈法師。在戰鬥中，一名劍詠者會使用一系列複雜而優雅的武技，以此抵禦傷害並讓劍歌者得以導引魔法化作致命的打擊與精巧的防禦。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Training in War and Song (Bladesinging)|Wizard||Bladesinging|TCE|2"
+					"subclassFeature": "戰歌兼修 (劍詠)|Wizard||Bladesinging|TCE|2"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Bladesong|Wizard||Bladesinging|TCE|2"
+					"subclassFeature": "劍歌|Wizard||Bladesinging|TCE|2"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Bladesinger Styles|Wizard||Bladesinging|TCE|2"
+					"subclassFeature": "劍詠者風格|Wizard||Bladesinging|TCE|2"
 				}
 			]
 		},
 		{
-			"name": "Bladesinger Styles",
+			"name": "劍詠者風格",
+			"ENG_name": "Bladesinger Styles",
 			"source": "TCE",
 			"page": 76,
 			"otherSources": [
@@ -2495,33 +2583,34 @@
 			"header": 1,
 			"type": "inset",
 			"entries": [
-				"From its inception as a martial and magical art, Bladesinging has been tied to the sword, more specifically the longsword. Yet many generations of study gave rise to various styles of Bladesinging based on the melee weapon employed. The techniques of these styles are passed from master to students in small schools, some of which have a building dedicated to instruction. Even the newest styles are hundreds of years old, but are still taught by their original creators due to the long lives of elves. Most schools of Bladesinging are in Evermeet or Evereska. One was started in Myth Drannor, but the city's destruction has scattered those students who survived.",
-				"Styles of Bladesinging are broadly categorized based on the type of weapon employed, and each is associated with a category of animal. Within that style are specializations named after specific animal types, based on the types of spells employed, the techniques of the master, and the particular weapon used. Bladesingers who apprentice to a master typically get a tattoo of their chosen style's animal. Some bladesingers learn multiple styles and bear many tattoos, wearing a warning on their skin of their deadly skills.",
+				"從最初做為武術和魔法結合的技藝以來，劍詠與劍，或更準確來說是長劍，之間的關聯便密不可分。然而數個世代的研究也因此發展出了多種以近戰武器做為基礎的不同劍詠風格。這些風格的技術在各個小學派中透過導師代代傳承給學徒，其中一些甚至有著專門用於教學的建築。即使是最新式的風格也有著數百年的歷史，但因為精靈漫長的壽命，其創始者仍可以親自傳承他們所創造的風格。大部分的劍詠學派坐落於永聚島(Evermeet)或者埃弗拉斯卡(Evereska)。曾經有一個學派發跡於迷斯卓諾(Myth Drannor)，但城市的毀滅也讓那些倖存下來的學徒們分散在世界各地。",
+				"基於所使用武器種類的不同，劍詠風格被大致區別成數個類別，且每一個類別都有著一個對應的動物類型。在這些類別之中，特定的風格又會基於使用的法術類型、導師的技術、以及特定武器的使用而被以特定的動物類型命名。從師於一名導師的劍詠者學徒通常會得到一個象徵他們所選風格的動物紋身。有些劍詠者會學習多種風格並帶有多種紋身，透過他們肌膚上那致命技藝的象徵警告那些不懷好意的人們。",
 				{
 					"type": "entries",
-					"name": "Cat",
+					"name": "貓型",
 					"entries": [
-						"Styles that employ a sword belong to this family. The lion style, the eldest, trains practitioners in the use of the longsword and doesn't favor any particular type of spells. Leopard style focuses on the shortsword and spells of illusion and stealth. Red tiger, a style just three centuries old, has its bladesingers using the scimitar in a whirling dance of defense from which they launch into sudden leaps and attacks."
+						"應用了刀劍的風格屬於這個類別。最古老的獅子學派，訓練修行者使用長劍且不偏好任何特定類型的法術。豹學派專注於短劍以及幻象和隱匿的法術。赤虎學派，一個僅三個世紀歷史的風格，則讓他們的劍詠者使用彎刀，從旋轉著的防禦性劍舞中突然跳起並發動攻擊。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Bird",
+					"name": "鳥型",
 					"entries": [
-						"Styles that focus on the use of a hafted weapon, such as an axe or hammer, have been grouped together as bird styles, yet they vary wildly. All relatively new styles, they use weapons not typically favored by elves. Eagle-style bladesingers use small handaxes, and many maneuvers in the style focus on fluid ways to throw the weapon and draw a new one. Raven style uses a war pick, and spells associated with it grant the bladesinger more agility in combat."
+						"儘管種類繁多，那些專注於使用長柄武器的風格，例如斧頭或槌子，都會被歸類為鳥型風格。它們全都是相對新式的風格，且使用通常不為精靈所好的武器。山鷹學派的劍詠者使用小型手斧，這個風格中的許多武技都專注於流暢地丟出武器並抽出一把新的。渡鴉學派則使用戰鎬，且它們所使用的法術讓劍詠者在戰鬥中的動作能夠更加靈巧。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Snake",
+					"name": "蛇型",
 					"entries": [
-						"Practitioners of these styles use a flail, chain, or whip. Viper style uses a whip, despite its inelegance as a weapon, and has almost as long a history as the lion style. Its masters punctuate their bladesong with a stunningly rapid rhythm of whip cracks, which can keep many foes at bay and allow the bladesinger space to cast the cruel spells of poison and disease favored by the style."
+						"這些風格的修行者使用連枷、鎖鏈、或是鞭子。蝮蛇學派所用的武器是長鞭，盡管其做為武器而言有些粗俗，但它卻有著與獅子學派同樣悠久的歷史。這個學派的宗師會在他們的劍歌中以一連串絕妙而迅速的鞭擊伴奏，在牽制住眾多敵人的同時，讓劍詠者得以施放這個風格所偏好，能夠造成中毒和疾病的殘忍法術。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Bladesong",
+			"name": "劍歌",
+			"ENG_name": "Bladesong",
 			"source": "TCE",
 			"page": 76,
 			"otherSources": [
@@ -2537,23 +2626,24 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"Starting at 2nd level, you can invoke a secret elven magic called the Bladesong, provided you aren't wearing medium or heavy armor or using a shield. It graces you with supernatural speed, agility, and focus.",
-				"You can use a bonus action to start the Bladesong, which lasts for 1 minute. It ends early if you are {@condition incapacitated}, if you don medium or heavy armor or a shield, or if you use two hands to make an attack with a weapon. You can also dismiss Bladesong at any time you choose (no action required).",
-				"While your bladesong is active, you gain the following benefits:",
+				"從2級開始，只要你未穿著中甲、重甲、或使用盾牌，你就可以喚起一股被稱作劍詠之歌的神秘精靈魔法。它將賜予你超凡的速度、靈巧、以及專注。",
+				"你可以使用一個附贈動作來開始劍詠之歌，持續1分鐘。若你陷入{@condition 無力}狀態、若你穿上中甲、重甲、或盾牌、或若你使用雙手以一把武器進行一次攻擊時，則它將提前結束。你也可以在任何你所選擇的時機解消劍詠之歌（無須動作）。",
+				"在你的劍詠之歌生效期間，你獲得下列好處：",
 				{
 					"type": "list",
 					"items": [
-						"You gain a bonus to your AC equal to your Intelligence modifier (minimum of +1).",
-						"Your walking speed increases by 10 feet.",
-						"You have advantage on Dexterity ({@skill Acrobatics}) checks.",
-						"You gain a bonus to any Constitution saving throws you make to maintain concentration on a spell. The bonus equals your Intelligence modifier (minimum of +1)."
+						"你的AC獲得等同於你智力調整值的加值（最少+1）。",
+						"你的步行速度增加10呎。",
+						"你在敏捷（{@skill 特技}）檢定上具有優勢。",
+						"你在用以維持法術專注時所進行的任何體質豁免中獲得加值。這個加值等同於你的智力調整值（最少+1）。"
 					]
 				},
-				"You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses of it when you finish a long rest."
+				"你可以使用這個能力二次。你在完成一次短休或長休後恢復所有你花費掉的次數。"
 			]
 		},
 		{
-			"name": "Training in War and Song (Bladesinging)",
+			"name": "戰歌兼修 (劍詠)",
+			"ENG_name": "Training in War and Song (Bladesinging)",
 			"source": "TCE",
 			"page": 76,
 			"otherSources": [
@@ -2569,12 +2659,13 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"When you adopt this tradition at 2nd level, you gain proficiency with light armor, and you gain proficiency with one type of one-handed melee weapon of your choice.",
-				"You also gain proficiency in the {@skill Performance} skill if you don't already have it."
+				"當你在2級時選擇這個傳承時，你獲得輕甲的熟練，且你獲得一種你所選擇的單手近戰武器的熟練。",
+				"若你尚未熟練於{@skill 表演}技能，你也將獲得它的熟練。"
 			]
 		},
 		{
-			"name": "Extra Attack",
+			"name": "額外攻擊",
+			"ENG_name": "Extra Attack",
 			"source": "TCE",
 			"page": 76,
 			"otherSources": [
@@ -2590,11 +2681,12 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Starting at 6th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn. Moreover, you can cast one of your cantrips in place of one of those attacks."
+				"從6級開始，每當你在你的回合採取{@action 攻擊}動作，你可以攻擊二次，而非一次。"
 			]
 		},
 		{
-			"name": "Song of Defense",
+			"name": "防禦之歌",
+			"ENG_name": "Song of Defense",
 			"source": "TCE",
 			"page": 76,
 			"otherSources": [
@@ -2610,11 +2702,12 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"Beginning at 10th level, you can direct your magic to absorb damage while your bladesong is active. When you take damage, you can use your reaction to expend one spell slot and reduce that damage to you by an amount equal to five times the spell's slot level."
+				"從10級開始，在你的劍歌生效期間，你可以引導你的魔法以吸收傷害。當你受到傷害時，你可以使用你的反應以消耗一個法術位，並使對你的傷害減少等同於該法術位環階五倍的數值。"
 			]
 		},
 		{
-			"name": "Song of Victory",
+			"name": "勝利之歌",
+			"ENG_name": "Song of Victory",
 			"source": "TCE",
 			"page": 76,
 			"otherSources": [
@@ -2630,7 +2723,7 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"Starting at 14th level, you add your Intelligence modifier (minimum of +1) to the damage of your melee weapon attacks while your Bladesong is active."
+				"從14級開始，在你的劍歌生效期間，你將你的智力調整值（最少+1）加入你近戰武器攻擊的傷害中。"
 			]
 		},
 		{
@@ -2879,7 +2972,7 @@
 				"{@i 14th-level Order of Scribes feature}",
 				"Your connection to your Awakened Spellbook has become so profound that your soul has become entwined with it. While you are holding the book and its spectral mind is manifest, you can take an action to cause the two of you to teleport, swapping places. You can teleport in this way a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.",
 				"Moreover, if you die but at least one spell remains in your Awakened Spellbook, you can return to life 1 minute later within 5 feet of the book. You revive with 1 hit point. Then roll {@dice 3d6}. The book loses spells of your choice that have a combined spell level equal to that roll or higher. For example, if the roll's total is 9, spells vanish from the book that have a combined level of at least 9, which could mean one 9th-level spell, three 3rd-level spells, or some other combination.",
-				"Thereafter, you are incapable of casting the lost spells, even if you find them on a scroll or in another spellbook. The only way to restore your ability to cast one of the lost spells is through the {@spell wish} spell, which can restore one spell to the book per casting."
+				"Thereafter, you are incapable of casting the lost spells, even if you find them on a scroll or in another spellbook. The only way to restore your ability to cast one of the lost spells is through the {@spell 祈願術} spell, which can restore one spell to the book per casting."
 			]
 		},
 		{
@@ -2955,7 +3048,7 @@
 			"header": 1,
 			"entries": [
 				"{@i 2nd-level Onomancy feature}",
-				"You can bend magic to assist or hinder creatures through the power of their true names, and even use those names as an anchor to affect others around them. The {@spell bane} and {@spell bless} spells are wizard spells for you, and you add them to your spellbook. You always have them prepared, yet they don't count against the number of spells you can prepare.",
+				"You can bend magic to assist or hinder creatures through the power of their true names, and even use those names as an anchor to affect others around them. The {@spell 災禍術} and {@spell 祝福術} spells are wizard spells for you, and you add them to your spellbook. You always have them prepared, yet they don't count against the number of spells you can prepare.",
 				"You can cast either spell without expending a spell slot if you speak the true name of one target of the spell as part of casting it. You can cast the spells in this way a number of times equal to your Intelligence modifier (a minimum of once), and you regain all expended uses when you finish a long rest."
 			]
 		},
@@ -3628,7 +3721,7 @@
 			"header": 2,
 			"entries": [
 				"{@i 10th-level Psionics feature}",
-				"Your mind's power expands to greater heights. When you gain this feature, choose one of the following spells: {@spell dominate person}, {@spell scrying}, or {@spell telekinesis}. You can add the spell to your spellbook, and you can cast it without components.",
+				"Your mind's power expands to greater heights. When you gain this feature, choose one of the following spells: {@spell 支配人類}, {@spell 探知}, or {@spell 心靈遙控}. You can add the spell to your spellbook, and you can cast it without components.",
 				"You can also cast the chosen spell once without expending a spell slot. After you do so, you regain the ability to cast the spell without a slot when you finish a long rest."
 			]
 		},
@@ -3823,39 +3916,39 @@
 					"rows": [
 						[
 							"1",
-							"{@spell acid splash}"
+							"{@spell 酸液濺爆}"
 						],
 						[
 							"2",
-							"{@spell chill touch}"
+							"{@spell 寒顫之觸}"
 						],
 						[
 							"3",
-							"{@spell fire bolt}"
+							"{@spell 火焰箭}"
 						],
 						[
 							"4",
-							"{@spell light}"
+							"{@spell 光亮術}"
 						],
 						[
 							"5",
-							"{@spell poison spray}"
+							"{@spell 毒氣噴灑}"
 						],
 						[
 							"6",
-							"{@spell ray of frost}"
+							"{@spell 冷凍射線}"
 						],
 						[
 							"7",
-							"{@spell shocking grasp}"
+							"{@spell 電爪}"
 						],
 						[
 							"8",
-							"{@spell sacred flame}"
+							"{@spell 聖焰}"
 						],
 						[
 							"9",
-							"{@spell thorn whip}"
+							"{@spell 荊棘之鞭}"
 						],
 						[
 							"10",
@@ -3876,39 +3969,39 @@
 					"rows": [
 						[
 							"1",
-							"{@spell burning hands}"
+							"{@spell 燃燒之手}"
 						],
 						[
 							"2",
-							"{@spell chromatic orb}"
+							"{@spell 幻色法球}"
 						],
 						[
 							"3",
-							"{@spell color spray}"
+							"{@spell 七彩噴射}"
 						],
 						[
 							"4",
-							"{@spell faerie fire}"
+							"{@spell 妖火術}"
 						],
 						[
 							"5",
-							"{@spell false life}"
+							"{@spell 摹造生命}"
 						],
 						[
 							"6",
-							"{@spell fog cloud}"
+							"{@spell 雲霧術}"
 						],
 						[
 							"7",
-							"{@spell jump}"
+							"{@spell 跳躍術}"
 						],
 						[
 							"8",
-							"{@spell magic missile}"
+							"{@spell 魔法飛彈}"
 						],
 						[
 							"9",
-							"{@spell thunderwave}"
+							"{@spell 雷鳴波}"
 						],
 						[
 							"10",
@@ -3929,39 +4022,39 @@
 					"rows": [
 						[
 							"1",
-							"{@spell blur}"
+							"{@spell 朦朧術}"
 						],
 						[
 							"2",
-							"{@spell darkness}"
+							"{@spell 黑暗術}"
 						],
 						[
 							"3",
-							"{@spell enlarge/reduce}"
+							"{@spell 變巨/縮小術}"
 						],
 						[
 							"4",
-							"{@spell gust of wind}"
+							"{@spell 造風術}"
 						],
 						[
 							"5",
-							"{@spell invisibility}"
+							"{@spell 隱形術}"
 						],
 						[
 							"6",
-							"{@spell levitate}"
+							"{@spell 浮空術}"
 						],
 						[
 							"7",
-							"{@spell Melf's acid arrow}"
+							"{@spell 馬友夫強酸箭}"
 						],
 						[
 							"8",
-							"{@spell scorching ray}"
+							"{@spell 灼熱射線}"
 						],
 						[
 							"9",
-							"{@spell shatter}"
+							"{@spell 粉碎音波}"
 						],
 						[
 							"10",
@@ -3982,39 +4075,39 @@
 					"rows": [
 						[
 							"1",
-							"{@spell blink}"
+							"{@spell 閃現術}"
 						],
 						[
 							"2",
-							"{@spell fear}"
+							"{@spell 恐懼術}"
 						],
 						[
 							"3",
-							"{@spell feign death}"
+							"{@spell 假死術}"
 						],
 						[
 							"4",
-							"{@spell fireball}"
+							"{@spell 火球術}"
 						],
 						[
 							"5",
-							"{@spell fly}"
+							"{@spell 飛行術}"
 						],
 						[
 							"6",
-							"{@spell gaseous form}"
+							"{@spell 氣化形體}"
 						],
 						[
 							"7",
-							"{@spell lightning bolt}"
+							"{@spell 閃電束}"
 						],
 						[
 							"8",
-							"{@spell sleet storm}"
+							"{@spell 雪雨暴}"
 						],
 						[
 							"9",
-							"{@spell stinking cloud}"
+							"{@spell 臭雲術}"
 						],
 						[
 							"10",
@@ -4035,39 +4128,39 @@
 					"rows": [
 						[
 							"1",
-							"{@spell blight}"
+							"{@spell 枯萎術}"
 						],
 						[
 							"2",
-							"{@spell confusion}"
+							"{@spell 困惑術}"
 						],
 						[
 							"3",
-							"{@spell Evard's black tentacles}"
+							"{@spell 艾伐黑觸手}"
 						],
 						[
 							"4",
-							"{@spell fire shield}"
+							"{@spell 火焰護盾}"
 						],
 						[
 							"5",
-							"{@spell greater invisibility}"
+							"{@spell 高等隱形術}"
 						],
 						[
 							"6",
-							"{@spell ice storm}"
+							"{@spell 冰風暴}"
 						],
 						[
 							"7",
-							"{@spell phantasmal killer}"
+							"{@spell 魅影殺手}"
 						],
 						[
 							"8",
-							"{@spell stoneskin}"
+							"{@spell 石膚術}"
 						],
 						[
 							"9",
-							"{@spell wall of fire}"
+							"{@spell 火牆術}"
 						],
 						[
 							"10",
@@ -4088,39 +4181,39 @@
 					"rows": [
 						[
 							"1",
-							"{@spell cloudkill}"
+							"{@spell 死雲術}"
 						],
 						[
 							"2",
-							"{@spell cone of cold}"
+							"{@spell 寒冰錐}"
 						],
 						[
 							"3",
-							"{@spell destructive wave}"
+							"{@spell 湮滅波}"
 						],
 						[
 							"4",
-							"{@spell flame strike}"
+							"{@spell 焰擊術}"
 						],
 						[
 							"5",
-							"{@spell hold monster}"
+							"{@spell 怪物定身術}"
 						],
 						[
 							"6",
-							"{@spell insect plague}"
+							"{@spell 疫病蟲群}"
 						],
 						[
 							"7",
-							"{@spell mass cure wounds}"
+							"{@spell 群體治療傷勢}"
 						],
 						[
 							"8",
-							"{@spell wall of force}"
+							"{@spell 力牆術}"
 						],
 						[
 							"9",
-							"{@spell wall of stone}"
+							"{@spell 石牆術}"
 						],
 						[
 							"10",
@@ -4225,7 +4318,7 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"While the Spell Secrets feature offers increased versatility, at the table its effects can be difficult to spot by the other players. If you're playing a savant, take a moment to describe how you alter your spells. Think of a signature change your character is particularly proud of. Be inventive, and make the game more fun for everyone by playing up the sudden, unexpected tricks you character can employ. For example, a {@spell fireball} transformed to require a Strength save might become a sphere of burning rock that shatters and slams into its target. A {@spell charm person} that requires a Constitution save might take the form of a vaporous narcotic that alters the target's mood."
+				"While the Spell Secrets feature offers increased versatility, at the table its effects can be difficult to spot by the other players. If you're playing a savant, take a moment to describe how you alter your spells. Think of a signature change your character is particularly proud of. Be inventive, and make the game more fun for everyone by playing up the sudden, unexpected tricks you character can employ. For example, a {@spell 火球術} transformed to require a Strength save might become a sphere of burning rock that shatters and slams into its target. A {@spell 魅惑人類} that requires a Constitution save might take the form of a vaporous narcotic that alters the target's mood."
 			]
 		},
 		{
@@ -4534,7 +4627,8 @@
 			]
 		},
 		{
-			"name": "War Magic",
+			"name": "戰爭魔法",
+			"ENG_name": "War Magic",
 			"source": "XGE",
 			"page": 59,
 			"className": "Wizard",
@@ -4543,21 +4637,22 @@
 			"subclassSource": "XGE",
 			"level": 2,
 			"entries": [
-				"A variety of arcane colleges specialize in training wizards for war. The tradition of War Magic blends principles of evocation and abjuration, rather than specializing in either of those schools. It teaches techniques that empower a caster's spells, while also providing methods for wizards to bolster their own defenses.",
-				"Followers of this tradition are known as war mages. They see their magic as both a weapon and armor, a resource superior to any piece of steel. War mages act fast in battle, using their spells to seize tactical control of a situation. Their spells strike hard, while their defensive skills foil their opponents' attempts to counterattack. War mages are also adept at turning other spellcasters' magical energy against them.",
-				"In great battles, a war mage often works with evokers, abjurers, and other types of wizards. Evokers, in particular, sometimes tease war mages for splitting their attention between offense and defense. A war mage's typical response: \"What good is being able to throw a mighty {@spell fireball} if I die before I can cast it?\"",
+				"許多奧術學院專門培育用於戰爭的法師。戰爭魔法的傳承融合了塑能與防護學派的理念，而非專精於單一學派。它既傳授施法者增強法術威力的技巧，也為法師提供了改良防禦能力的手段。",
+				"這個傳承的追隨著們被稱作戰法師。他們將他們的魔法視作武器以及盔甲，一種比任何鋼鐵都更加優越的資源。戰法師在戰鬥中行動迅速，用他們的法術奪取對戰況的控制。他們的法術迅猛非常，他們的防守技巧挫敗了對手的反擊勢頭。戰法師也擅長將其他施法者的魔法能量轉為對付他們自己。",
+				"在大戰中，戰法師經常與塑能師、防護師、以及其他類型的法師一同共事。塑能師最常嗤笑戰法師必須分心於攻守之間，而戰法師的典型回應是：「死人可丟不了火球。」",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Arcane Deflection|Wizard||War|XGE|2"
+					"subclassFeature": "祕法偏斜|Wizard||War|XGE|2"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Tactical Wit|Wizard||War|XGE|2"
+					"subclassFeature": "戰術思維|Wizard||War|XGE|2"
 				}
 			]
 		},
 		{
-			"name": "Arcane Deflection",
+			"name": "祕法偏斜",
+			"ENG_name": "Arcane Deflection",
 			"source": "XGE",
 			"page": 59,
 			"className": "Wizard",
@@ -4567,12 +4662,13 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"At 2nd level, you have learned to weave your magic to fortify yourself against harm. When you are hit by an attack or you fail a saving throw, you can use your reaction to gain a +2 bonus to your AC against that attack or a +4 bonus to that saving throw.",
-				"When you use this feature, you can't cast spells other than cantrips until the end of your next turn."
+				"在2級時，你學會編制你的魔法以讓你自己在對抗傷害時更加堅韌。當你被一次攻擊命中、或在一次豁免檢定中失敗時，你可以使用你的反應以使你的AC對該次攻擊獲得+2加值，或在該豁免檢定中獲得+4加值。",
+				"當你使用此能力，則直到你的下個回合結束前，你都無法施放戲法以外的法術。"
 			]
 		},
 		{
-			"name": "Tactical Wit",
+			"name": "戰術思維",
+			"ENG_name": "Tactical Wit",
 			"source": "XGE",
 			"page": 59,
 			"className": "Wizard",
@@ -4582,11 +4678,12 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"Starting at 2nd level, your keen ability to assess tactical situations allows you to act quickly in battle. You can give yourself a bonus to your initiative rolls equal to your Intelligence modifier."
+				"從2級開始，你對於戰局的敏銳掌控讓你得以在戰鬥中迅速行動。你可以讓你自己在先攻檢定中獲得等同於你智力調整值的加值。"
 			]
 		},
 		{
-			"name": "Power Surge",
+			"name": "力量湧動",
+			"ENG_name": "Power Surge",
 			"source": "XGE",
 			"page": 59,
 			"className": "Wizard",
@@ -4596,13 +4693,14 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Starting at 6th level, you can store magical energy within yourself to later empower your damaging spells. In its stored form, this energy is called a power surge.",
-				"You can store a maximum number of power surges equal to your Intelligence modifier (minimum of one). Whenever you finish a long rest, your number of power surges resets to one. Whenever you successfully end a spell with {@spell dispel magic} or {@spell counterspell}, you gain one power surge, as you steal magic from the spell you foiled. If you end a short rest with no power surges, you gain one power surge.",
-				"Once per turn when you deal damage to a creature or object with a wizard spell, you can spend one power surge to deal extra force damage to that target. The extra damage equals half your wizard level."
+				"從6級開始，你可以將魔法能量儲存在你體內以增強你往後施放的傷害性法術。這個能量儲存的形式被稱作力量湧動。",
+				"你可以儲存最多等同於你智力調整值數量的力量湧動（最少1點）。每當你完成一次長休，你所儲存的力量湧動數量將被重置為一點。每當你成功以{@spell 解除魔法}或{@spell 反制法術}結束一個法術，隨著你從你所破壞的法術中竊取魔法，你將獲得一點力量湧動。若你在結束一次短休時沒有任何力量湧動，你將獲得一點力量湧動。",
+				"每回合一次，當你以一個法師法術對一個生物造成傷害時，你可以消耗一點力量湧動以對目標造成額外的力場傷害。這個額外傷害等同於你法師等級的一半。"
 			]
 		},
 		{
-			"name": "Durable Magic",
+			"name": "耐久魔法",
+			"ENG_name": "Durable Magic",
 			"source": "XGE",
 			"page": 59,
 			"className": "Wizard",
@@ -4612,11 +4710,12 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"Beginning at 10th level, the magic you channel helps ward off harm. While you maintain concentration on a spell, you have a +2 bonus to AC and all saving throws."
+				"從10級開始，你所導引的魔法能夠協助阻絕傷害。當你專注於一個法術時，你的AC和所有豁免檢定都獲得+2加值。"
 			]
 		},
 		{
-			"name": "Deflecting Shroud",
+			"name": "偏斜罩幕",
+			"ENG_name": "Deflecting Shroud",
 			"source": "XGE",
 			"page": 59,
 			"className": "Wizard",
@@ -4626,7 +4725,7 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"At 14th level, your Arcane Deflection becomes infused with deadly magic. When you use your Arcane Deflection feature, you can cause magical energy to arc from you. Up to three creatures of your choice that you can see within 60 feet of you each take force damage equal to half your wizard level."
+				"在14級時，你的祕法偏斜變得充斥著致命魔法。當你使用你的祕法偏斜能力時，你可以使魔法能量從你身上弧射而出。最多三個距離你60呎內，你所選擇且你能看見的生物將各自受到等同於你法師等級一半的力場傷害。"
 			]
 		}
 	]

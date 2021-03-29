@@ -1,20 +1,21 @@
-const fs = require("fs");
+const path = require('path');
+const fs = require('fs');
 const utB = require("./util-book-reference");
 
 const index = utB.UtilBookReference.getIndex(
 	{
-		name: "Quick Reference",
+		name: "快速參照",
 		id: "bookref-quick",
 		tag: "quickref",
 	},
 	{
-		name: "DM Reference",
+		name: "DM參照",
 		id: "bookref-dmscreen",
 		tag: "dmref",
 	},
 );
 
-fs.writeFileSync("data/generated/bookref-dmscreen.json", JSON.stringify(index).replace(/\s+\u2014\s+?/g, "\\u2014"), "utf8");
+fs.writeFileSync(path.join("./data/generated", "bookref-dmscreen.json") , JSON.stringify(index).replace(/\s+\u2014\s+?/g, "\\u2014"), "utf8");
 
 function flattenReferenceIndex (ref, skipHeaders) {
 	const outMeta = {
@@ -73,5 +74,5 @@ function flattenReferenceIndex (ref, skipHeaders) {
 	};
 }
 
-fs.writeFileSync("data/generated/bookref-dmscreen-index.json", JSON.stringify(flattenReferenceIndex(index.reference)), "utf8");
+fs.writeFileSync(path.join("./data/generated", "bookref-dmscreen-index.json"), JSON.stringify(flattenReferenceIndex(index.reference)), "utf8");
 console.log("Updated DM Screen references.");

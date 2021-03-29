@@ -83,7 +83,7 @@ class ModalFilter {
 		const $ovlLoading = $(`<div class="w-100 h-100 flex-vh-center"><i class="dnd-font ve-muted">Loading...</i></div>`).appendTo($wrp);
 
 		const $iptSearch = opts.$iptSearch || $(`<input class="form-control" type="search" placeholder="Search...">`);
-		const $btnReset = opts.$btnReset || $(`<button class="btn btn-default">Reset</button>`);
+		const $btnReset = opts.$btnReset || $(`<button class="btn btn-default">重置</button>`);
 		const $wrpFormTop = $$`<div class="flex input-group btn-group w-100 lst__form-top">${$iptSearch}${$btnReset}</div>`;
 
 		const $wrpFormBottom = opts.$wrpMiniPills || $(`<div class="w-100"></div>`);
@@ -438,7 +438,7 @@ class FilterBox extends ProxyBase {
 		summaryHiddenHook();
 
 		if (!this._$btnOpen) {
-			this._$btnOpen = $(`<button class="btn btn-default ${this._isCompact ? "px-2" : ""}">Filter</button>`)
+			this._$btnOpen = $(`<button class="btn btn-default ${this._isCompact ? "px-2" : ""}">篩選</button>`)
 				.prependTo(this._$wrpFormTop);
 		} else if (!this._$btnOpen.parent().length) {
 			this._$btnOpen.prependTo(this._$wrpFormTop);
@@ -484,12 +484,12 @@ class FilterBox extends ProxyBase {
 			this._filters.forEach(f => f.handleSearch(searchTerm));
 		});
 
-		const $btnShowAllFilters = $(`<button class="btn btn-xs btn-default">Show All</button>`)
+		const $btnShowAllFilters = $(`<button class="btn btn-xs btn-default">顯示全部</button>`)
 			.click(() => this.showAllFilters());
-		const $btnHideAllFilters = $(`<button class="btn btn-xs btn-default">Hide All</button>`)
+		const $btnHideAllFilters = $(`<button class="btn btn-xs btn-default">隱藏全部</button>`)
 			.click(() => this.hideAllFilters());
 
-		const $btnReset = $(`<button class="btn btn-xs btn-default mr-3" title="Reset filters. SHIFT to reset everything.">Reset</button>`)
+		const $btnReset = $(`<button class="btn btn-xs btn-default mr-3" title="Reset filters. SHIFT to reset everything.">重置</button>`)
 			.click(evt => this.reset(evt.shiftKey));
 
 		const $btnSettings = $(`<button class="btn btn-xs btn-default mr-3"><span class="glyphicon glyphicon-cog"></span></button>`)
@@ -514,15 +514,15 @@ class FilterBox extends ProxyBase {
 		this._addHook("meta", "modeCombineFilters", hook);
 		hook();
 
-		const $btnSave = $(`<button class="btn btn-primary fltr__btn-close mr-2">Save</button>`)
+		const $btnSave = $(`<button class="btn btn-primary fltr__btn-close mr-2">儲存</button>`)
 			.click(() => this._modalMeta.doClose(true));
 
-		const $btnCancel = $(`<button class="btn btn-default fltr__btn-close">Cancel</button>`)
+		const $btnCancel = $(`<button class="btn btn-default fltr__btn-close">取消</button>`)
 			.click(() => this._modalMeta.doClose(false));
 
 		$$(this._modalMeta.$modal)`<div class="split mb-2 mt-2 flex-v-center mobile__flex-col">
 			<div class="flex-v-baseline mobile__flex-col">
-				<h4 class="m-0 mr-2 mobile__mb-2">Filters</h4>
+				<h4 class="m-0 mr-2 mobile__mb-2">篩選</h4>
 				${metaIptSearch.$wrp.addClass("mobile__mb-2")}
 			</div>
 			<div class="flex-v-center mobile__flex-col">
@@ -894,6 +894,7 @@ class FilterBox extends ProxyBase {
 }
 FilterBox.EVNT_VALCHANGE = "valchange";
 FilterBox.SOURCE_HEADER = "Source";
+FilterBox.SOURCE_HEADER_NAME = "資源";
 FilterBox._PILL_STATES = ["ignore", "yes", "no"];
 FilterBox._COMBINE_MODES = ["and", "or", "custom"];
 FilterBox._STORAGE_KEY = "filterBoxState";
@@ -952,6 +953,7 @@ class FilterBase extends BaseComponent {
 		this._filterBox = null;
 
 		this.header = opts.header;
+		this.headerName = opts.headerName;
 		this._headerHelp = opts.headerHelp;
 
 		this.__meta = {...this.getDefaultMeta()};
@@ -959,7 +961,7 @@ class FilterBase extends BaseComponent {
 	}
 
 	_getRenderedHeader () {
-		return `<span ${this._headerHelp ? `title="${this._headerHelp.escapeQuotes()}" class="help--subtle"` : ""}>${this.header}</span>`;
+		return `<span ${this._headerHelp ? `title="${this._headerHelp.escapeQuotes()}" class="help--subtle"` : ""}>${this.headerName? this.headerName: this.header}</span>`;
 	}
 
 	set filterBox (it) { this._filterBox = it; }
@@ -1334,7 +1336,6 @@ class Filter extends FilterBase {
 		};
 		this._addHook("state", item.item, hook);
 		hook();
-
 		item.searchText = displayText.toLowerCase();
 
 		return btnPill;
@@ -1406,25 +1407,25 @@ class Filter extends FilterBase {
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} fltr__h-btn--all w-100`,
 			click: () => this._doSetPillsAll(),
-			html: "All",
+			html: "全選",
 		});
 		const btnClear = e_({
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} fltr__h-btn--clear w-100`,
 			click: () => this._doSetPillsClear(),
-			html: "Clear",
+			html: "清除",
 		});
 		const btnNone = e_({
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} fltr__h-btn--none w-100`,
 			click: () => this._doSetPillsNone(),
-			html: "None",
+			html: "全無",
 		});
 		const btnDefault = e_({
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} w-100`,
 			click: () => this._doSetPinsDefault(),
-			html: "Default",
+			html: "預設",
 		});
 
 		const wrpStateBtnsOuter = e_({
@@ -1471,7 +1472,7 @@ class Filter extends FilterBase {
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} ml-2`,
 			click: () => this._meta.isHidden = !this._meta.isHidden,
-			html: "Hide",
+			html: "隱藏",
 		});
 		const hookShowHide = () => {
 			e_({ele: btnShowHide}).toggleClass("active", this._meta.isHidden);
@@ -2011,6 +2012,7 @@ class SourceFilter extends Filter {
 		opts = opts || {};
 
 		opts.header = opts.header === undefined ? FilterBox.SOURCE_HEADER : opts.header;
+		opts.headerName = opts.headerName === undefined ? FilterBox.SOURCE_HEADER_NAME : opts.headerName;
 		opts.displayFn = opts.displayFn === undefined ? item => Parser.sourceJsonToFullCompactPrefix(item.item || item) : opts.displayFn;
 		opts.itemSortFn = opts.itemSortFn === undefined ? (a, b) => SortUtil.ascSortLower(Parser.sourceJsonToFull(a.item), Parser.sourceJsonToFull(b.item)) : opts.itemSortFn;
 		opts.groupFn = opts.groupFn === undefined ? SourceUtil.getFilterGroup : opts.groupFn;
@@ -3082,12 +3084,12 @@ class OptionsFilter extends FilterBase {
 	}
 
 	_$getHeaderControls () {
-		const $btnReset = $(`<button class="btn btn-default btn-xs">Reset</button>`).click(() => this.reset());
+		const $btnReset = $(`<button class="btn btn-default btn-xs">重置</button>`).click(() => this.reset());
 		const $wrpBtns = $$`<div class="flex-v-center">${$btnReset}</div>`;
 
 		const $wrpSummary = $(`<div class="flex-v-center fltr__summary_item fltr__summary_item--include"></div>`).hideVe();
 
-		const $btnShowHide = $(`<button class="btn btn-default btn-xs ml-2 ${this._meta.isHidden ? "active" : ""}">Hide</button>`)
+		const $btnShowHide = $(`<button class="btn btn-default btn-xs ml-2 ${this._meta.isHidden ? "active" : ""}">隱藏</button>`)
 			.click(() => this._meta.isHidden = !this._meta.isHidden);
 		const hkIsHidden = () => {
 			$btnShowHide.toggleClass("active", this._meta.isHidden);

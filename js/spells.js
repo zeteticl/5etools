@@ -114,8 +114,8 @@ class SpellsPage {
 				concentration,
 				range,
 				normalisedTime: spell._normalisedTime,
-				normalisedRange: spell._normalisedRange,
-			},
+				normalisedRange: spell._normalisedRange
+			}
 		);
 		return listItem;
 	}
@@ -306,7 +306,7 @@ async function pPageInit (loadedSources) {
 	spellBookView = new BookModeView({
 		hashKey: "bookview",
 		$openBtn: $(`#btn-spellbook`),
-		$eleNoneVisible: $(`<span class="initial-message">If you wish to view multiple spells, please first make a list</span>`),
+		$eleNoneVisible: $(`<span class="initial-message">如果你想要一次檢視多個法術，請先創造一份清單</span>`),
 		pageTitle: "Spells Book View",
 		popTblGetNumShown: ($wrpContent, $dispName, $wrpControls) => {
 			const toShow = ListUtil.getSublistedIds().map(id => spellList[id])

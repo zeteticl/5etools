@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tw">
 
 <head>
 	<!--5ETOOLS_CMP-->
@@ -11,7 +11,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 
-	<title>Other Options and Features - 5etools</title>
+	<title>可選能力 - 5etools</title>
 
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/jquery-ui.css">
@@ -71,9 +71,8 @@
 
 	<header class="hidden-xs hidden-sm page__header">
 		<div class="container">
-
-			<h1 class="page__title">Other Options and Features</h1>
-			<p class="page__subtitle">Search by name on the left, click to display on the right.</p>
+			<h1 class="page__title">職業能力選項</h1>
+			<p class="page__subtitle">使用左側的名稱搜尋，點擊項目名稱以在右側顯示。</p>
 		</div>
 	</header>
 
@@ -90,15 +89,15 @@
 						<div id="lst__search-glass" class="lst__wrp-search-glass no-events flex-vh-center"><span class="glyphicon glyphicon-search"></span></div>
 						<div class="lst__wrp-search-visible no-events flex-vh-center"></div>
 					</div>
-					<button class="btn btn-default" id="reset">Reset</button>
+					<button class="btn btn-default" id="reset">重置</button>
 				</div>
 				<div id="filtertools" class="input-group input-group--bottom flex no-shrink">
 					<button class="col-0-3 btn btn-default btn-xs" disabled></button>
-					<button class="col-3 sort btn btn-default btn-xs" data-sort="name">Name <span class="caret_wrp"></span></button>
-					<button class="col-1-5 sort btn btn-default btn-xs" data-sort="type">Type <span class="caret_wrp"></span></button>
-					<button class="col-4-7 sort btn btn-default btn-xs" data-sort="prerequisite">Prerequisite <span class="caret_wrp"></span></button>
-					<button class="col-1 sort btn btn-default btn-xs" data-sort="level">Level <span class="caret_wrp"></span></button>
-					<button class="sort btn btn-default btn-xs ve-grow" data-sort="source">Source <span class="caret_wrp"></span></button>
+					<button class="col-3 sort btn btn-default btn-xs" data-sort="name">名稱<span class="caret_wrp"></span></button>
+					<button class="col-1-5 sort btn btn-default btn-xs" data-sort="type">類型<span class="caret_wrp"></span></button>
+					<button class="col-4-7 sort btn btn-default btn-xs" data-sort="prerequisite">先決條件<span class="caret_wrp"></span></button>
+					<button class="col-1 sort btn btn-default btn-xs" data-sort="level">等級<span class="caret_wrp"></span></button>
+					<button class="sort btn btn-default btn-xs ve-grow" data-sort="source">資源<span class="caret_wrp"></span></button>
 				</div>
 
 				<div id="optfeaturesList" class="list list--stats lst__list optfeatures">
@@ -109,10 +108,10 @@
 			<div id="contentwrapper" class="view-col" style="flex: 4;">
 				<div id="sublistcontainer" class="sublist sublist--resizable">
 					<div id="sublistsort" class="btn-group sublist__wrp-cols">
-						<button class="col-4 sort btn btn-default btn-xs" data-sort="name">Name <span class="caret_wrp"></span></button>
-						<button class="col-2 sort btn btn-default btn-xs" data-sort="type">Type <span class="caret_wrp"></span></button>
-						<button class="col-4-5 sort btn btn-default btn-xs" data-sort="prerequisite">Prerequisite <span class="caret_wrp"></span></button>
-						<button class="col-1-5 sort btn btn-default btn-xs" data-sort="level">Level <span class="caret_wrp"></span></button>
+						<button class="col-4 sort btn btn-default btn-xs" data-sort="name">名稱<span class="caret_wrp"></span></button>
+						<button class="col-2 sort btn btn-default btn-xs" data-sort="type">類型<span class="caret_wrp"></span></button>
+						<button class="col-4-5 sort btn btn-default btn-xs" data-sort="prerequisite">先決條件 <span class="caret_wrp"></span></button>
+						<button class="col-1-5 sort btn btn-default btn-xs" data-sort="level">等級<span class="caret_wrp"></span></button>
 					</div>
 					<div class="list suboptfeatures lst__list">
 						<!-- populate with JS -->
@@ -126,13 +125,13 @@
 				<div class="wrp-stats-table">
 					<table id="pagecontent" class="stats">
 						<tr><th class="border" colspan="6"></th></tr>
-						<tr><td colspan="6" class="initial-message">Select an entry from the list to view it here</td></tr>
+						<tr><td colspan="6" class="initial-message">從列表中選擇一個可選能力以在此處檢視</td></tr>
 						<tr><th class="border" colspan="6"></th></tr>
 					</table>
 				</div>
 
 				<div class="text-center mt-2 no-print">
-					<button class="btn btn-xs btn-info" id="manage-brew">Manage Homebrew</button>
+					<button class="btn btn-xs btn-info" id="manage-brew">管理自製內容</button>
 				</div>
 			</div>
 		</div>

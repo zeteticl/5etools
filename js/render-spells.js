@@ -10,10 +10,10 @@ class RenderSpells {
 			${Renderer.utils.getExcludedTr(sp, "spell", UrlUtil.PG_SPELLS)}
 			${Renderer.utils.getNameTr(sp, {page: UrlUtil.PG_SPELLS})}
 			<tr><td class="rd-spell__level-school-ritual" colspan="6"><span>${Parser.spLevelSchoolMetaToFull(sp.level, sp.school, sp.meta, sp.subschools)}</span></td></tr>
-			<tr><td colspan="6"><span class="bold">Casting Time: </span>${Parser.spTimeListToFull(sp.time)}</td></tr>
-			<tr><td colspan="6"><span class="bold">Range: </span>${Parser.spRangeToFull(sp.range)}</td></tr>
-			<tr><td colspan="6"><span class="bold">Components: </span>${Parser.spComponentsToFull(sp.components, sp.level)}</td></tr>
-			<tr><td colspan="6"><span class="bold">Duration: </span>${Parser.spDurationToFull(sp.duration)}</td></tr>
+			<tr><td colspan="6"><span class="bold">施法時間：</span>${Parser.spTimeListToFull(sp.time)}</td></tr>
+			<tr><td colspan="6"><span class="bold">射程：</span>${Parser.spRangeToFull(sp.range)}</td></tr>
+			<tr><td colspan="6"><span class="bold">構材：</span>${Parser.spComponentsToFull(sp.components, sp.level)}</td></tr>
+			<tr><td colspan="6"><span class="bold">持續時間：</span>${Parser.spDurationToFull(sp.duration)}</td></tr>
 			${Renderer.utils.getDividerTr()}
 		`);
 
@@ -31,16 +31,16 @@ class RenderSpells {
 		const fromClassList = Renderer.spell.getCombinedClasses(sp, "fromClassList");
 		if (fromClassList.length) {
 			const [current, legacy] = Parser.spClassesToCurrentAndLegacy(fromClassList);
-			stackFroms.push(`<div><span class="bold">Classes: </span>${Parser.spMainClassesToFull(current)}</div>`);
-			if (legacy.length) stackFroms.push(`<div class="text-muted"><span class="bold">Classes (legacy): </span>${Parser.spMainClassesToFull(legacy)}</div>`);
+			stackFroms.push(`<div><span class="bold">職業：</span>${Parser.spMainClassesToFull(current)}</div>`);
+			if (legacy.length) stackFroms.push(`<div class="text-muted"><span class="bold">職業： (舊版): </span>${Parser.spMainClassesToFull(legacy)}</div>`);
 		}
 
 		const fromSubclass = Renderer.spell.getCombinedClasses(sp, "fromSubclass");
 		if (fromSubclass.length) {
 			const [current, legacy] = Parser.spSubclassesToCurrentAndLegacyFull(sp, subclassLookup);
-			stackFroms.push(`<div><span class="bold">Subclasses: </span>${current}</div>`);
+			stackFroms.push(`<div><span class="bold">子職業：</span>${current}</div>`);
 			if (legacy.length) {
-				stackFroms.push(`<div class="text-muted"><span class="bold">Subclasses (legacy): </span>${legacy}</div>`);
+				stackFroms.push(`<div class="text-muted"><span class="bold">子職業： (舊版): </span>${legacy}</div>`);
 			}
 		}
 
@@ -48,28 +48,28 @@ class RenderSpells {
 		if (fromClassListVariant.length) {
 			const [current, legacy] = Parser.spVariantClassesToCurrentAndLegacy(fromClassListVariant);
 			if (current.length) {
-				stackFroms.push(`<div><span class="bold">Optional/Variant Classes: </span>${Parser.spMainClassesToFull(current)}</div>`);
+				stackFroms.push(`<div><span class="bold">可選/變體 職業: </span>${Parser.spMainClassesToFull(current)}</div>`);
 			}
 			if (legacy.length) {
-				stackFroms.push(`<div class="text-muted"><span class="bold">Optional/Variant Classes (legacy): </span>${Parser.spMainClassesToFull(legacy)}</div>`);
+				stackFroms.push(`<div class="text-muted"><span class="bold">可選/變體 職業 (舊版): </span>${Parser.spMainClassesToFull(legacy)}</div>`);
 			}
 		}
 
 		const fromRaces = Renderer.spell.getCombinedRaces(sp);
 		if (fromRaces.length) {
 			fromRaces.sort((a, b) => SortUtil.ascSortLower(a.name, b.name) || SortUtil.ascSortLower(a.source, b.source));
-			stackFroms.push(`<div><span class="bold">Races: </span>${fromRaces.map(r => `${SourceUtil.isNonstandardSource(r.source) ? `<span class="text-muted">` : ``}${renderer.render(`{@race ${r.name}|${r.source}}`)}${SourceUtil.isNonstandardSource(r.source) ? `</span>` : ``}`).join(", ")}</div>`);
+			stackFroms.push(`<div><span class="bold">種族：</span>${fromRaces.map(r => `${SourceUtil.isNonstandardSource(r.source) ? `<span class="text-muted">` : ``}${renderer.render(`{@race ${Parser.RaceToDisplay(r.name)}|${r.source}}`)}${SourceUtil.isNonstandardSource(r.source) ? `</span>` : ``}`).join(", ")}</div>`);
 		}
 
 		const fromBackgrounds = Renderer.spell.getCombinedBackgrounds(sp);
 		if (fromBackgrounds.length) {
 			fromBackgrounds.sort((a, b) => SortUtil.ascSortLower(a.name, b.name) || SortUtil.ascSortLower(a.source, b.source));
-			stackFroms.push(`<div><span class="bold">Backgrounds: </span>${fromBackgrounds.map(r => `${SourceUtil.isNonstandardSource(r.source) ? `<span class="text-muted">` : ``}${renderer.render(`{@background ${r.name}|${r.source}}`)}${SourceUtil.isNonstandardSource(r.source) ? `</span>` : ``}`).join(", ")}</div>`);
+			stackFroms.push(`<div><span class="bold">背景：</span>${fromBackgrounds.map(r => `${SourceUtil.isNonstandardSource(r.source) ? `<span class="text-muted">` : ``}${renderer.render(`{@background ${r.name}|${r.source}}`)}${SourceUtil.isNonstandardSource(r.source) ? `</span>` : ``}`).join(", ")}</div>`);
 		}
 
 		if (sp.eldritchInvocations) {
 			sp.eldritchInvocations.sort((a, b) => SortUtil.ascSortLower(a.name, b.name) || SortUtil.ascSortLower(a.source, b.source));
-			stackFroms.push(`<div><span class="bold">Eldritch Invocations: </span>${sp.eldritchInvocations.map(r => `${SourceUtil.isNonstandardSource(r.source) ? `<span class="text-muted">` : ``}${renderer.render(`{@optfeature ${r.name}|${r.source}}`)}${SourceUtil.isNonstandardSource(r.source) ? `</span>` : ``}`).join(", ")}</div>`);
+			stackFroms.push(`<div><span class="bold">魔能祈喚：</span>${sp.eldritchInvocations.map(r => `${SourceUtil.isNonstandardSource(r.source) ? `<span class="text-muted">` : ``}${renderer.render(`{@optfeature ${r.name}|${r.source}}`)}${SourceUtil.isNonstandardSource(r.source) ? `</span>` : ``}`).join(", ")}</div>`);
 		}
 
 		if (stackFroms.length) {

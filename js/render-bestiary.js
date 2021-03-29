@@ -83,7 +83,7 @@ class RenderBestiary {
 
 			const pageTrInner = Renderer.utils.getSourceAndPageTrHtml(srcCpy);
 			if (mon.environment && mon.environment.length) {
-				return [pageTrInner, `<div class="mb-1 mt-2"><b>Environment:</b> ${mon.environment.sort(SortUtil.ascSortLower).map(it => it.toTitleCase()).join(", ")}</div>`];
+				return [pageTrInner, `<div class="mb-1 mt-2"><b>環境：</b> ${mon.environment.sort(SortUtil.ascSortLower).map(it => Parser.EnvironmentToDisplay(it)).join(", ")}</div>`];
 			} else {
 				return [pageTrInner];
 			}
@@ -101,30 +101,30 @@ class RenderBestiary {
 		</td></tr>
 		<tr><td class="divider" colspan="6"><div></div></td></tr>
 
-		<tr><td colspan="6"><div ${hasToken ? `class="mon__wrp-avoid-token"` : ""}><strong>Armor Class</strong> ${Parser.acToFull(mon.ac)}</div></td></tr>
-		<tr><td colspan="6"><div ${hasToken ? `class="mon__wrp-avoid-token"` : ""}><strong>Hit Points</strong> ${Renderer.monster.getRenderedHp(mon.hp)}</div></td></tr>
-		<tr><td colspan="6"><strong>Speed</strong> ${Parser.getSpeedString(mon)}</td></tr>
+		<tr><td colspan="6"><div ${hasToken ? `class="mon__wrp-avoid-token"` : ""}><strong>護甲等級：</strong> ${Parser.acToFull(mon.ac)}</div></td></tr>
+		<tr><td colspan="6"><div ${hasToken ? `class="mon__wrp-avoid-token"` : ""}><strong>生命值：</strong> ${Renderer.monster.getRenderedHp(mon.hp)}</div></td></tr>
+		<tr><td colspan="6"><strong>速度：</strong> ${Parser.getSpeedString(mon)}</td></tr>
 		<tr><td class="divider" colspan="6"><div></div></td></tr>
 
 		<tr class="mon__ability-names">
-			<th>STR</th><th>DEX</th><th>CON</th><th>INT</th><th>WIS</th><th>CHA</th>
+			<th>力量</th><th>敏捷</th><th>體質</th><th>智力</th><th>睿知</th><th>魅力</th>
 		</tr>
 		<tr class="mon__ability-scores">
 			${Parser.ABIL_ABVS.map(ab => `<td>${Renderer.utils.getAbilityRoller(mon, ab)}</td>`).join("")}
 		</tr>
 		<tr><td class="divider" colspan="6"><div></div></td></tr>
 
-		${mon.save ? `<tr><td colspan="6"><strong>Saving Throws</strong> ${Renderer.monster.getSavesPart(mon)}</td></tr>` : ""}
-		${mon.skill ? `<tr><td colspan="6"><strong>Skills</strong> ${Renderer.monster.getSkillsString(renderer, mon)}</td></tr>` : ""}
-		${mon.vulnerable ? `<tr><td colspan="6"><strong>Damage Vulnerabilities</strong> ${Parser.getFullImmRes(mon.vulnerable)}</td></tr>` : ""}
-		${mon.resist ? `<tr><td colspan="6"><strong>Damage Resistances</strong> ${Parser.getFullImmRes(mon.resist)}</td></tr>` : ""}
-		${mon.immune ? `<tr><td colspan="6"><strong>Damage Immunities</strong> ${Parser.getFullImmRes(mon.immune)}</td></tr>` : ""}
-		${mon.conditionImmune ? `<tr><td colspan="6"><strong>Condition Immunities</strong> ${Parser.getFullCondImm(mon.conditionImmune)}</td></tr>` : ""}
-		<tr><td colspan="6"><strong>Senses</strong> ${Renderer.monster.getSensesPart(mon)}</td></tr>
-		<tr><td colspan="6"><strong>Languages</strong> ${Renderer.monster.getRenderedLanguages(mon.languages)}</td></tr>
+		${mon.save ? `<tr><td colspan="6"><strong>豁免：</strong> ${Renderer.monster.getSavesPart(mon)}</td></tr>` : ""}
+		${mon.skill ? `<tr><td colspan="6"><strong>技能：</strong> ${Renderer.monster.getSkillsString(renderer, mon)}</td></tr>` : ""}
+		${mon.vulnerable ? `<tr><td colspan="6"><strong>傷害易傷：</strong> ${Parser.getFullImmRes(mon.vulnerable)}</td></tr>` : ""}
+		${mon.resist ? `<tr><td colspan="6"><strong>傷害抗性：</strong> ${Parser.getFullImmRes(mon.resist)}</td></tr>` : ""}
+		${mon.immune ? `<tr><td colspan="6"><strong>傷害免疫：</strong> ${Parser.getFullImmRes(mon.immune)}</td></tr>` : ""}
+		${mon.conditionImmune ? `<tr><td colspan="6"><strong>狀態免疫：</strong> ${Parser.getFullCondImm(mon.conditionImmune)}</td></tr>` : ""}
+		<tr><td colspan="6"><strong>感官：</strong> ${Renderer.monster.getSensesPart(mon)}</td></tr>
+		<tr><td colspan="6"><strong>語言：</strong> ${Renderer.monster.getRenderedLanguages(mon.languages)}</td></tr>
 
 		<tr>${Parser.crToNumber(mon.cr) < VeCt.CR_UNKNOWN ? $$`
-		<td colspan="6" style="position: relative;"><strong>Challenge</strong>
+		<td colspan="6" style="position: relative;"><strong>挑戰等級：</strong>
 			<span>${Parser.monCrToFull(mon.cr, {isMythic: !!mon.mythic})}</span>
 			${options.$btnScaleCr || ""}
 			${options.$btnResetScaleCr || ""}
@@ -134,22 +134,22 @@ class RenderBestiary {
 		${mon.pbNote ? `<tr><td colspan="6"><strong>Proficiency Bonus (PB)</strong> ${mon.pbNote}</td></tr>` : ""}
 
 		${allTraits ? `<tr><td class="divider" colspan="6"><div></div></td></tr>${RenderBestiary._getRenderedSection("trait", allTraits, 1)}` : ""}
-		${mon.action ? `<tr><td colspan="6" class="mon__stat-header-underline"><span class="mon__sect-header-inner">Actions${mon.actionNote ? ` (<span class="small">${mon.actionNote}</span>)` : ""}</span></td></tr>
+		${mon.action ? `<tr><td colspan="6" class="mon__stat-header-underline"><span class="mon__sect-header-inner">動作${mon.actionNote ? ` (<span class="small">${mon.actionNote}</span>)` : ""}</span></td></tr>
 		${RenderBestiary._getRenderedSection("action", mon.action, 1)}` : ""}
-		${mon.bonus ? `<tr><td colspan="6" class="mon__stat-header-underline"><span class="mon__sect-header-inner">Bonus Actions</span></td></tr>
+		${mon.bonus ? `<tr><td colspan="6" class="mon__stat-header-underline"><span class="mon__sect-header-inner">動作</span></td></tr>
 		${RenderBestiary._getRenderedSection("bonus", mon.bonus, 1)}` : ""}
-		${mon.reaction ? `<tr><td colspan="6" class="mon__stat-header-underline"><span class="mon__sect-header-inner">Reactions</span></td></tr>
+		${mon.reaction ? `<tr><td colspan="6" class="mon__stat-header-underline"><span class="mon__sect-header-inner">反應</span></td></tr>
 		${RenderBestiary._getRenderedSection("reaction", mon.reaction, 1)}` : ""}
-		${mon.legendary ? `<tr><td colspan="6" class="mon__stat-header-underline"><span class="mon__sect-header-inner">Legendary Actions</span></td></tr>
+		${mon.legendary ? `<tr><td colspan="6" class="mon__stat-header-underline"><span class="mon__sect-header-inner">傳奇動作</span></td></tr>
 		<tr class="legendary"><td colspan="6"><span class="name"></span> <span>${Renderer.monster.getLegendaryActionIntro(mon)}</span></td></tr>
 		${RenderBestiary._getRenderedSection("legendary", mon.legendary, 1)}` : ""}
 		${mon.mythic ? `<tr><td colspan="6" class="mon__stat-header-underline"><span class="mon__sect-header-inner">Mythic Actions</span></td></tr>
 		<tr class="mythic"><td colspan="6"><span class="name"></span> <span>${Renderer.monster.getMythicActionIntro(mon)}</span></td></tr>
 		${RenderBestiary._getRenderedSection("mythic", mon.mythic, 1)}` : ""}
 
-		${legGroup && legGroup.lairActions ? `<tr><td colspan="6" class="mon__stat-header-underline"><span class="mon__sect-header-inner">Lair Actions</span></td></tr>
+		${legGroup && legGroup.lairActions ? `<tr><td colspan="6" class="mon__stat-header-underline"><span class="mon__sect-header-inner">巢穴動作</span></td></tr>
 		${RenderBestiary._getRenderedSection("lairaction", legGroup.lairActions, -1)}` : ""}
-		${legGroup && legGroup.regionalEffects ? `<tr><td colspan="6" class="mon__stat-header-underline"><span class="mon__sect-header-inner">Regional Effects</span></td></tr>
+		${legGroup && legGroup.regionalEffects ? `<tr><td colspan="6" class="mon__stat-header-underline"><span class="mon__sect-header-inner">區域效應</span></td></tr>
 		${RenderBestiary._getRenderedSection("regionaleffect", legGroup.regionalEffects, -1)}` : ""}
 
 		${renderedVariants ? `<tr>${renderedVariants}</tr>` : ""}

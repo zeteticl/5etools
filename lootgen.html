@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tw">
 
 <head>
 	<!--5ETOOLS_CMP-->
@@ -11,7 +11,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 
-	<title>Lootgen - 5etools</title>
+	<title>戰利品生成器 - 5etools</title>
 
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/jquery-ui.css">
@@ -71,8 +71,8 @@
 
 <header class="hidden-xs hidden-sm page__header">
 	<div class="container">
-		<h1 class="page__title">Loot Generator</h1>
-		<p class="page__subtitle">Choose Challenge Rating, if it's a hoard or not, then Roll Loot!</p>
+		<h1 class="page__title">戰利品生成器</h1>
+		<p class="page__subtitle">選擇挑戰等級、是否為積藏寶藏，然後擲骰生成戰利品！</p>
 	</div>
 </header>
 
@@ -86,15 +86,15 @@
 	<div class="row">
 		<div class="col-sm-5">
 			<div class="btn-group w-100 mb-2">
-				<span class="btn btn-default col-4" id="btn-lootgen">Find Treasure</span>
-				<span class="btn btn-default col-4" id="btn-loot-table">Loot Tables</span>
-				<span class="btn btn-default col-4" id="btn-random-magic-item">Party Loot</span>
+				<span class="btn btn-default col-4" id="btn-lootgen">尋找財寶</span>
+				<span class="btn btn-default col-4" id="btn-loot-table">戰利品表</span>
+				<span class="btn btn-default col-4" id="btn-random-magic-item">隊伍戰利品</span>
 			</div>
 
 			<div id="container-lootgen" class="hidden">
 				<div id="controls">
 					<div class="input-group mb-2">
-						<span class="input-group-addon">Challenge Rating</span>
+						<span class="input-group-addon">挑戰等級</span>
 						<select class="form-control clickable" id="cr">
 							<option value="0" selected>1-4</option>
 							<option value="5">5-10</option>
@@ -103,16 +103,15 @@
 						</select>
 						<span class="input-group-addon" style="padding: 0;">
 							<label for="hoard" class="clickable" style="margin-bottom: 0; padding: 6px 12px; user-select: none;">
-								Hoard? <input type="checkbox" id="hoard" value="0" class="clickable" style="vertical-align: bottom;">
+								積藏寶藏? <input type="checkbox" id="hoard" value="0" class="clickable" style="vertical-align: bottom;">
 							</label>
 						</span>
 					</div>
-
-					<button class="col-9 btn btn-default" id="genloot">Roll Loot!</button>
-					<button class="col-2-9 btn btn-default pull-right id-clear">Clear</button>
+					<button class="col-9 btn btn-default" id="genloot">骰戰利品！</button>
+					<button class="col-2-9 btn btn-default pull-right id-clear">清除</button>
 					<p>
-						<small>Based on the tables and rules in the
-							<a href="book.html#DMG,7,treasure%20tables,0"><em>Dungeon Master's Guide</em>, pages 133-149.</a>
+						<small>基於
+							<a href="book.html#DMG,7,treasure%20tables,0"><em>《地下城主指南》</em>,第133-149頁</a>中記載的表格與規則。
 						</small>
 					</p>
 				</div>
@@ -126,42 +125,42 @@
 
 				<div id="container-dmg-loot-table">
 					<div class="input-group w-100 mb-2">
-						<span class="input-group-addon">Select Table </span>
+						<span class="input-group-addon">選擇表格 </span>
 						<select class="form-control clickable" id="table-sel">
-							<option value="" selected>View individual tables...</option>
+							<option value="" selected>檢視各表格...</option>
 						</select>
 						<span class="input-group-addon" style="padding: 0;">
 							<label class="clickable" style="margin-bottom: 0; padding: 6px 12px; user-select: none;">
-								Show Table <input checked type="checkbox" class="id-showLootTable clickable" style="vertical-align: bottom;">
+								顯示表格 <input checked type="checkbox" class="id-showLootTable clickable" style="vertical-align: bottom;">
 							</label>
 						</span>
 					</div>
-					<button class="col-9 btn btn-default" id="rollAgaintTable">Roll Loot!</button>
-					<button class="col-2-9 btn btn-default pull-right id-clear">Clear</button>
-					<small>Based on the tables and rules in the
-						<a href="book.html#DMG,7,random%20treasure"><em>Dungeon Master's Guide</em>, pages 133-149.</a>
+					<button class="col-9 btn btn-default" id="rollAgaintTable">骰戰利品！</button>
+					<button class="col-2-9 btn btn-default pull-right id-clear">清除</button>
+					<small>基於
+						<a href="book.html#DMG,7,random%20treasure"><em>《地下城主指南》</em>,第133-149頁</a>中記載的表格與規則。
 					</small>
 				</div>
 
 				<div id="container-xge-loot-table">
 					<div class="input-group mb-2">
-						<span class="input-group-addon">Select Category</span>
+						<span class="input-group-addon">選擇分類</span>
 						<select class="form-control clickable" id="random-from-loot-table">
-							<option value="" selected>View Loot Category...</option>
+							<option value="" selected>檢視戰利品分類...</option>
 						</select>
 						<span class="input-group-addon" style="padding: 0;">
 							<label class="clickable" style="margin-bottom: 0; padding: 6px 12px; user-select: none;">
-								Show Table <input checked type="checkbox" class="id-showLootTable clickable" style="vertical-align: bottom;">
+								顯示表格 <input checked type="checkbox" class="id-showLootTable clickable" style="vertical-align: bottom;">
 							</label>
 						</span>
 					</div>
 					<div class="split-v-center">
-						<button class="col-9 btn btn-default" id="get-random-item-from-table">Pick Random Item</button>
-						<button class="col-2-9 btn btn-default pull-right id-clear">Clear</button>
+						<button class="col-9 btn btn-default" id="get-random-item-from-table">挑選隨機物品</button>
+						<button class="col-2-9 btn btn-default pull-right id-clear">清除</button>
 					</div>
 					<p>
-						<small>Based on the rules in the
-							<a href="book.html#XGE,2,choosing%20items%20piecemeal"><em>Xanathar's Guide to Everything</em>, pages 135-136</a>.
+						<small>基於
+							<a href="book.html#XGE,2,choosing%20items%20piecemeal"><em>《姍納薩的萬事指南》</em>,第135-136頁</a>中記載的表格與規則。
 						</small>
 					</p>
 				</div>
@@ -169,19 +168,19 @@
 
 			<div id="container-random-magic-item" class="hidden">
 				<p>
-					Generates a set of magical items for a party, based on the tables and rules in <a href="book.html#XGE,2,awarding%20magic%20items"><em>Xanathar's Guide to Everything</em>, pages 135-136</a>.
+為隊伍生成一組魔法物品，基於<a href="book.html#XGE,2,awarding%20magic%20items"><em>《姍納薩的萬事指南》</em>,第135-136頁</a>中記載的表格與規則。
 				</p>
 				<p><i>
-					If the "Exact Level" option is selected, the output will include a proportional number of items for any partially-completed tier.
+					若「確切等級」選項被勾起，則生成器將為每層階的等級產生一組合適比例數量的物品。
 				</i></p>
 
 				<div class="mb-2">
 					<div class="mb-3">
 						<div class="input-group">
-							<span class="input-group-addon" style="width: 10%" id="selectCharLevel">Character Level</span>
+							<span class="input-group-addon" style="width: 10%" id="selectCharLevel">角色等級</span>
 							<span class="input-group-addon loot__wrp-exact-level">
 								<label class="clickable" style="margin-bottom: 0; padding: 6px 12px; user-select: none;">
-									Exact Level? <input type="checkbox" checked id="closest-tier" class="clickable" style="vertical-align: bottom;">
+									確切等級? <input type="checkbox" checked id="closest-tier" class="clickable" style="vertical-align: bottom;">
 								</label>
 							</span>
 						</div>
@@ -205,8 +204,8 @@
 				</div>
 
 				<div class="split-v-center">
-					<button class="col-9 btn btn-default" id="get-group-of-items-for-character">Generate Items for a Party</button>
-					<button class="col-2-9 btn btn-default pull-right id-clear">Clear</button>
+					<button class="col-9 btn btn-default" id="get-group-of-items-for-character">為隊伍生成物品</button>
+					<button class="col-2-9 btn btn-default pull-right id-clear">清除</button>
 				</div>
 			</div>
 			<div id="classtable"></div>

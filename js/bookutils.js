@@ -432,7 +432,8 @@ class BookUtil {
 		});
 		$body.on(`click`, `.entry-title-inner`, async function (evt) {
 			const $this = $(this);
-			const text = $this.text().trim().replace(/\.$/, "");
+			const mod_text = $this.html().replace(/<st .+>/,"");
+			const text = mod_text.trim().replace(/\.$/, "");
 
 			if (evt.shiftKey) {
 				await MiscUtil.pCopyTextToClipboard(text);
@@ -530,7 +531,7 @@ class BookUtil {
 	static async _booksHashChange_pHandleFound ({fromIndex, homebrewData, bookId, hashParts, $contents}) {
 		document.title = `${fromIndex.name} - 5etools`;
 		$(`.book-head-header`).html(this._booksHashChange_getCleanName(fromIndex.name));
-		$(`.book-head-message`).html("Browse content. Press F to find, and G to go to page.");
+		$(`.book-head-message`).html("瀏覽內容。按下F以搜尋，按下G以前往指定頁數。");
 		await this._pLoadChapter(fromIndex, bookId, hashParts, homebrewData, $contents);
 		NavBar.highlightCurrentPage();
 	}

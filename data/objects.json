@@ -1,7 +1,8 @@
 {
 	"object": [
 		{
-			"name": "Ballista",
+			"name": "弩砲",
+			"ENG_name": "Ballista",
 			"source": "DMG",
 			"page": 255,
 			"size": "L",
@@ -13,21 +14,21 @@
 				"psychic"
 			],
 			"entries": [
-				"A ballista is a massive crossbow that fires heavy bolts. Before it can be fired, it must be loaded and aimed. It takes one action to load the weapon, one action to aim it, and one action to fire it."
+				"弩砲是一副發射重型弩矢的巨型十字弩。其攻擊發射前必須先進行裝填和瞄準作業。使用該武器時，進行裝填、瞄準以及攻擊發射三項作業需要分別花費一個動作。"
 			],
 			"actionEntries": [
 				{
 					"type": "actions",
-					"name": "Bolt",
+					"name": "弩矢",
 					"entries": [
 						{
 							"type": "attack",
 							"attackType": "RW",
 							"attackEntries": [
-								"{@hit +6} to hit, range 120/480 ft., one target."
+								"命中 {@hit +6} , 射程 120/480 呎., 單一目標。"
 							],
 							"hitEntries": [
-								"16 ({@damage 3d10}) piercing damage."
+								"16 ({@dice 3d10}) 穿刺傷害。"
 							]
 						}
 					]
@@ -36,7 +37,8 @@
 			"hasToken": true
 		},
 		{
-			"name": "Cannon",
+			"name": "火砲",
+			"ENG_name": "Cannon",
 			"source": "DMG",
 			"page": 255,
 			"size": "L",
@@ -48,22 +50,22 @@
 				"psychic"
 			],
 			"entries": [
-				"A cannon uses gunpowder to propel heavy balls of cast iron through the air at destructive speeds. In a campaign without gunpowder, a cannon might be an arcane device built by clever gnomes or wizardly engineers.",
-				"A cannon is usually supported in a wooden frame with wheels. Before it can be fired, the cannon must be loaded and aimed. It takes one action to load the weapon, one action to aim it, and one action to fire it."
+				"火砲使用火藥推動重型鐵球，使其以毀滅性的速度從空中劃過進行政擊。在沒有火藥設定的戰役中，火砲可以設定為由聰明的侏儒或是工程法師所設計的奧法驅動設備。",
+				"火砲通常安裝在帶輪的木質砲台上。其攻擊發射前必須先進行裝填和瞄準作業。使用該武器時，進行裝填、瞄準以及攻擊發射三項作業需要分別花費一個動作。"
 			],
 			"actionEntries": [
 				{
 					"type": "actions",
-					"name": "Cannon Ball",
+					"name": "砲彈",
 					"entries": [
 						{
 							"type": "attack",
 							"attackType": "RW",
 							"attackEntries": [
-								"{@hit +6} to hit, range 600/2,400 ft., one target."
+								"命中 {@hit +6} , 射程 600/2,400 呎., 單一目標。"
 							],
 							"hitEntries": [
-								"44 ({@damage 8d10}) bludgeoning damage."
+								"44 ({@dice 8d10}) 鈍擊傷害。"
 							]
 						}
 					]
@@ -102,10 +104,10 @@
 							"type": "attack",
 							"attackType": "RW",
 							"attackEntries": [
-								"{@hit +5} to hit, range 30 ft., one target."
+								"命中 {@hit +5} , 射程 200/800 呎. (無法命中 60 呎內目標), 單一目標。"
 							],
 							"hitEntries": [
-								"3 ({@damage 1d6}) bludgeoning damage."
+								"27 ({@dice 5d10}) 鈍擊傷害。"
 							]
 						}
 					]
@@ -114,7 +116,8 @@
 			"hasToken": true
 		},
 		{
-			"name": "Cauldron, Suspended",
+			"name": "吊掛大鍋",
+			"ENG_name": "Cauldron, Suspended",
 			"source": "DMG",
 			"page": 255,
 			"size": "L",
@@ -126,21 +129,22 @@
 				"psychic"
 			],
 			"entries": [
-				"A cauldron is an iron pot suspended so that it can be tipped easily, spilling its contents. Once emptied, a cauldron must be refilled-and its contents must usually be reheated-before it can be used again. It takes three actions to fill a cauldron and one action to tip it.",
-				"Cauldrons can be filled with other liquids, such as acid or {@hazard green slime}, with different effects."
+				"大鍋的主體是一口吊掛起來的鋼鐵鍋，以方便使之側翻並倒出內裡所裝載物質。大鍋一日倒空，則必須重新裝填物質進鍋內，通常還需要對新加入物質進行加熱才可再次使用。裝填大鍋需要花費三個動作，傾倒大鍋需要花費一個動作。",
+				"大鍋可以裝填其他液體，比如強酸或者{@hazard 綠軟泥}，並依不同物質具有不同效應。"
 			],
 			"actionEntries": [
 				{
 					"type": "entries",
-					"name": "Boiling Oil",
+					"name": "滾油",
 					"entries": [
-						"The cauldron pours boiling oil onto a 10-foot-square area directly below it. Any creature in the area must make a DC 15 Dexterity saving throw, taking 10 ({@damage 3d6}) fire damage on a failed save, or half as much damage on a successful one."
+						"大鍋向其正下方10尺方形區域倒出滾油。在區域內的生物必須進行一次DC15的敏捷豁免，豁免失敗者將受到10({@dice 3d6})的火焰傷害，豁免成功則傷害減半。"
 					]
 				}
 			]
 		},
 		{
 			"name": "Generic Object",
+			"ENG_name": "Generic Object",
 			"source": "DMG",
 			"page": 246,
 			"srd": true,
@@ -363,7 +367,7 @@
 							"type": "list",
 							"items": [
 								"A creature that eats the heart gains the ability to regenerate for the next 24 hours, regaining 5 hit points at the start of each of its turns. If the creature takes acid or fire damage, this trait doesn't function at the start of its next turn. The creature dies only if it starts its turn with 0 hit points and doesn't regenerate.",
-								"If buried in the ground under a foot or more of earth, the heart melts away and summons a blizzard like that created by the {@spell control weather} spell. It takes 10 minutes for the heart to melt and the blizzard to form. The blizzard lasts for 8 hours.",
+								"If buried in the ground under a foot or more of earth, the heart melts away and summons a blizzard like that created by the {@spell 操控天氣} spell. It takes 10 minutes for the heart to melt and the blizzard to form. The blizzard lasts for 8 hours.",
 								"A hag or similar creature can perform a ritual that turns the heart into a magical talisman that acts like a patch of brown mold (see \"{@hazard Brown Mold}\" in the {@book Dungeon Master's Guide|DMG}). This effect lasts until the heart is destroyed.",
 								"A creature proficient with alchemist's supplies can squeeze enough residual fluid out of the heart to mix with other alchemical ingredients, creating one {@item Potion of Cold Resistance||potion of resistance (cold)}. It takes 1 hour to create this potion. "
 							]
@@ -373,7 +377,8 @@
 			]
 		},
 		{
-			"name": "Mangonel",
+			"name": "彈射投石機",
+			"ENG_name": "Mangonel",
 			"source": "DMG",
 			"page": 255,
 			"size": "L",
@@ -385,22 +390,23 @@
 				"psychic"
 			],
 			"entries": [
-				"A mangonel is a type of catapult that hurls heavy projectiles in a high arc. This payload can hit targets behind cover. Before the mangonel can be fired, it must be loaded and aimed. It takes two actions to load the weapon, two actions to aim it, and one action to fire it.",
-				"A mangonel typically hurls a heavy stone, although it can hurl other kinds of projectiles, with different effects."
+				"彈射投石機是一種以弧線拋射重型投石的彈道武器，其投出的石彈可以擊中身處掩護的目標。彈射投石機進行攻擊前必須先進行裝填和瞄準作業。裝填該武器需要花費兩個動作，瞄準需要花費兩個動作，而發射則需要花費一個動作。",
+				"彈射投石機可以投擲標準的重型石彈，它也可以投擲其他彈藥並依不同種類而產生不同的效果。"
 			],
 			"actionEntries": [
 				{
 					"type": "actions",
-					"name": "Mangonel Stone",
+					"name": "彈射投石",
+					"ENG_name": "Mangonel Stone",
 					"entries": [
 						{
 							"type": "attack",
 							"attackType": "RW",
 							"attackEntries": [
-								"{@hit +5} to hit, range 200/800 ft. (can't hit targets within 60 feet of it), one target."
+								"命中 {@hit +5} , 射程 200/800 呎. (無法命中 60 呎內目標), 單一目標。"
 							],
 							"hitEntries": [
-								"27 ({@damage 5d10}) bludgeoning damage."
+								"27 ({@dice 5d10}) 鈍擊傷害。"
 							]
 						}
 					]
@@ -409,7 +415,8 @@
 			"hasToken": true
 		},
 		{
-			"name": "Ram",
+			"name": "攻城槌",
+			"ENG_name": "Ram",
 			"source": "DMG",
 			"page": 255,
 			"size": "L",
@@ -421,23 +428,22 @@
 				"psychic"
 			],
 			"entries": [
-				"A ram consists of a movable gallery equipped with a heavy log suspended from two roof beams by chains.",
-				"The log is shod in iron and used to batter through doors and barricades.",
-				"It takes a minimum of four Medium creatures to operate a ram. Because of the gallery roof, these operators have total cover against attacks from above."
+				"攻城槌的底座是一個可移動的框架，一根粗圓木作為其主體，用鐵鍊裝架在兩個帶蓋頂的橫樑上。圓木前端鑲裱著鐵皮外殼，用以擊穿大門與路障。",
+				"攻城槌需要至少四名中型體型的生物進行操作。由於兩邊的橫梁帶有蓋頂，操作者對來自前方的攻擊處於全身掩護。"
 			],
 			"actionEntries": [
 				{
 					"type": "actions",
-					"name": "Ram",
+					"name": "攻城槌",
 					"entries": [
 						{
 							"type": "attack",
 							"attackType": "MW",
 							"attackEntries": [
-								"{@hit +8} to hit, reach 5 ft., one object."
+								"命中 {@hit +8} , 觸及 5 呎., 單一目標。"
 							],
 							"hitEntries": [
-								"16 ({@damage 3d10}) bludgeoning damage."
+								"16 ({@dice 3d10}) 鈍擊傷害。"
 							]
 						}
 					]
@@ -446,7 +452,8 @@
 			"hasToken": true
 		},
 		{
-			"name": "Siege Tower",
+			"name": "攻城塔",
+			"ENG_name": "Siege Tower",
 			"source": "DMG",
 			"page": 256,
 			"size": "G",
@@ -458,12 +465,13 @@
 				"psychic"
 			],
 			"entries": [
-				"A siege tower is a mobile wooden structure with a beam frame and slats in its walls. Large wooden wheels or rollers allow the tower to be pushed or pulled by soldiers or beasts of burden. Medium or smaller creatures can use the siege tower to reach the top of walls up to 40 feet high. A creature in the tower has total cover from attacks outside the tower."
+				"攻城塔是一個可移動的木質建築，其主體由框架結構組成牆身上設置著百葉窗孔。塔底設置了大型的木輪或滾軸，讓其可被士兵或負重牲畜進行推拉進而進行移動。中型或更小體型的生物可以使用攻城塔直接到達40尺高的城墻上。攻城塔內的生物對來自塔外的攻擊處於全身掩護。"
 			],
 			"hasToken": true
 		},
 		{
-			"name": "Trebuchet",
+			"name": "配重投石機",
+			"ENG_name": "Trebuchet",
 			"source": "DMG",
 			"page": 256,
 			"size": "H",
@@ -475,23 +483,23 @@
 				"psychic"
 			],
 			"entries": [
-				"A trebuchet is a powerful catapult that throws its payload in a high arc, so it can hit targets behind cover.",
-				"Before the trebuchet can be fired, it must be loaded and aimed. It takes two actions to load the weapon, two actions to aim it, and one action to fire it.",
-				"A trebuchet typically hurls a heavy stone. However, it can launch other kinds of projectiles, such as barrels of oil or sewage, with different effects."
+				"配重投石機是一種以弧線投擲重載石彈的彈道武器，其投出的石彈可以擊中身處掩護的目標。配重投石機進行攻擊前必須先進行裝填和瞄準作業。裝填該武器需要花費兩個動作，瞄準需要花費兩個動作，而發射則需要花費一個動作。",
+				"配重投石機可以投擲標準的重型石彈，它也可以投擲其他彈藥，比如油桶或者污物，並依不同彈藥而產生不同的效果。"
 			],
 			"actionEntries": [
 				{
 					"type": "actions",
-					"name": "Trebuchet Stone",
+					"ENG_name": "Trebuchet Stone",
+					"name": "配重投石",
 					"entries": [
 						{
 							"type": "attack",
 							"attackType": "RW",
 							"attackEntries": [
-								"{@hit +5} to hit, range 300/1,200 ft. (can't hit targets within 60 feet of it), one target."
+								"命中 {@hit +5} , 射程 300/1,200 呎. (無法命中 60 呎內目標), 單一目標。"
 							],
 							"hitEntries": [
-								"44 ({@damage 8d10}) bludgeoning damage."
+								"44 ({@dice 8d10}) 鈍擊傷害。"
 							]
 						}
 					]

@@ -317,6 +317,7 @@ async function pPageInit (loadedSources) {
 	SortUtil.initBtnSortHandlers($(`#filtertools`), list);
 
 	const $outVisibleResults = $(`.lst__wrp-search-visible`);
+
 	list.on("updated", () => {
 		$outVisibleResults.html(`${list.visibleItems.length}/${list.items.length}`);
 	});
@@ -930,7 +931,7 @@ function renderStatblock (mon, isScaled) {
 					}
 				} catch (e) {
 					setTimeout(() => {
-						throw new Error(`Invalid save or skill roller! Bonus was ${bonus >= 0 ? "+" : ""}${bonus}, but creature's PB was +${expectedPB} and relevant ability score (${ability}) was ${fromAbility >= 0 ? "+" : ""}${fromAbility} (should have been ${expectedPB + fromAbility >= 0 ? "+" : ""}${expectedPB + fromAbility} total)`);
+						throw new Error(`Invalid save or skill roller! Bonus was ${bonus >= 0 ? "+" : ""}${bonus}, but creature s PB was +${expectedPB} and relevant ability score (${ability}) was ${fromAbility >= 0 ? "+" : ""}${fromAbility} (should have been ${expectedPB + fromAbility >= 0 ? "+" : ""}${expectedPB + fromAbility} total)`);
 					}, 0);
 				}
 			});
@@ -1008,7 +1009,7 @@ function renderStatblock (mon, isScaled) {
 	// reset tabs
 	const tabMetas = [
 		new Renderer.utils.TabButton({
-			label: "Statblock",
+			label: "資料卡",
 			fnChange: () => {
 				$wrpBtnProf.append($btnProf);
 				$(`#float-token`).show();
@@ -1017,7 +1018,7 @@ function renderStatblock (mon, isScaled) {
 			isVisible: true,
 		}),
 		new Renderer.utils.TabButton({
-			label: "Info",
+			label: "資訊",
 			fnChange: () => {
 				$btnProf = $wrpBtnProf.children().length ? $wrpBtnProf.children().detach() : $btnProf;
 				$(`#float-token`).hide();
@@ -1026,7 +1027,7 @@ function renderStatblock (mon, isScaled) {
 			isVisible: Renderer.utils.hasFluffText(mon),
 		}),
 		new Renderer.utils.TabButton({
-			label: "Images",
+			label: "圖片",
 			fnChange: () => {
 				$btnProf = $wrpBtnProf.children().length ? $wrpBtnProf.children().detach() : $btnProf;
 				$(`#float-token`).hide();
