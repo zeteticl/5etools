@@ -1431,8 +1431,8 @@ function Renderer () {
 					type: "dice",
 					rollable: true,
 					subType: "d20",
-					displayText: "your spell attack modifier",
-					toRoll: `1d20 + #$prompt_number:title=Enter your Spell Attack Modifier$#`,
+					displayText: "你的法术攻击调整值",
+					toRoll: `1d20 + #$prompt_number:title=输入你的法术攻击调整值$#`,
 				};
 				this._recursiveRender(fauxEntry, textStack, meta);
 				break;
@@ -8477,7 +8477,7 @@ Renderer._stripTagLayer = function (str) {
 						throw new Error(`Unhandled tag: ${tag}`);
 					}
 
-					case "@hitYourSpellAttack": return "your spell attack modifier";
+					case "@hitYourSpellAttack": return "你的法术攻击调整值";
 
 					case "@comic":
 					case "@comicH1":
