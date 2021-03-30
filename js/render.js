@@ -2658,7 +2658,7 @@ Renderer.utils = {
 
 		return `${introText} ${it[prop].map(as => {
 			if (as.entry) return Renderer.get().render(isText ? Renderer.stripTags(as.entry) : as.entry);
-			return `${isText ? "" : `<i title="${Parser.sourceJsonToFull(as.source)}">`}${Parser.sourceJsonToAbv(as.source)}${isText ? "" : `</i>`}${Renderer.utils.isDisplayPage(as.page) ? `, 第 ${as.page}页` : ""}`;
+			return `${isText ? "" : `<i title="${Parser.sourceJsonToFull(as.source)}">`}${Parser.sourceJsonToAbv(as.source)}${isText ? "" : `</i>`}${Renderer.utils.isDisplayPage(as.page) ? `, 第${as.page}页` : ""}`;
 		}).join("; ")}`;
 	},
 
@@ -2667,7 +2667,7 @@ Renderer.utils = {
 
 	_getSourceAndPageHtmlOrText (it, isText) {
 		const sourceSub = Renderer.utils.getSourceSubText(it);
-		const baseText = `${isText ? `` : `<i title="${Parser.sourceJsonToFull(it.source)}${sourceSub}">`}${Parser.sourceJsonToAbv(it.source)}${sourceSub}${isText ? "" : `</i>`}${Renderer.utils.isDisplayPage(it.page) ? `, 第  ${it.page}页` : ""}`;
+		const baseText = `${isText ? `` : `<i title="${Parser.sourceJsonToFull(it.source)}${sourceSub}">`}${Parser.sourceJsonToAbv(it.source)}${sourceSub}${isText ? "" : `</i>`}${Renderer.utils.isDisplayPage(it.page) ? `, 第${it.page}页` : ""}`;
 		const addSourceText = Renderer.utils._getAltSourceHtmlOrText(it, "additionalSources", "额外情报记载于", isText);
 		const otherSourceText = Renderer.utils._getAltSourceHtmlOrText(it, "otherSources", "同时记载于", isText);
 		const srdText = it.srd ? `Available in the ${isText ? "" : `<span title="Systems Reference Document">`}SRD${isText ? "" : `</span>`}${typeof it.srd === "string" ? ` (as &quot;${it.srd}&quot;)` : ""}` : "";
