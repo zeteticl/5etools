@@ -450,7 +450,7 @@
 				"Cantrip Versatility|Druid||1|UAClassFeatureVariants",
 				"荒野形态|Druid||2",
 				"Wild Companion|Druid||2|UAClassFeatureVariants",
-				"Wild Companion|Druid||2|TCE",
+				"荒野伙伴|Druid||2|TCE",
 				{
 					"classFeature": "德鲁伊结社|Druid||2",
 					"gainSubclassFeature": true
@@ -458,7 +458,7 @@
 				"荒野形态强化|Druid||4",
 				"属性值提升|Druid||4",
 				"Proficiency Versatility|Druid||4|UAClassFeatureVariants",
-				"Cantrip Versatility|Druid||4|TCE",
+				"替换戏法|Druid||4|TCE",
 				{
 					"classFeature": "德鲁伊结社能力|Druid||6",
 					"gainSubclassFeature": true
@@ -2446,7 +2446,8 @@
 			]
 		},
 		{
-			"name": "Wild Companion",
+			"name": "荒野伙伴",
+			"ENG_name": "Wild Companion",
 			"source": "TCE",
 			"page": 35,
 			"className": "Druid",
@@ -2454,9 +2455,9 @@
 			"level": 2,
 			"isClassFeatureVariant": true,
 			"entries": [
-				"{@i 2nd-level druid {@variantrule optional class features|tce|optional feature}}",
-				"You gain the ability to summon a spirit that assumes an animal form: as an action, you can expend a use of your Wild Shape feature to cast the {@spell 寻获魔宠} spell, without material components.",
-				"When you cast the spell in this way, the familiar is a fey instead of a beast, and the familiar disappears after a number of hours equal to half your druid level."
+				"{@i 2级德鲁伊 {@variantrule optional class features|tce|可选特性}}",
+				"你获得召唤呈现动物形态的精魂的能力，以一个动作，你能够消耗一次荒野变形使用次数来施放一次无需材料的{@spell 寻获魔宠}法术。",
+				"你以此方法施放该法术时，魔宠的类型是精类而不是野兽，魔宠会在等同于你德鲁伊等级一半的小时数后消失。"
 			]
 		},
 		{
@@ -2550,7 +2551,8 @@
 			]
 		},
 		{
-			"name": "Cantrip Versatility",
+			"name": "替换戏法",
+			"ENG_name": "Cantrip Versatility",
 			"source": "TCE",
 			"page": 35,
 			"className": "Druid",
@@ -2558,8 +2560,8 @@
 			"level": 4,
 			"isClassFeatureVariant": true,
 			"entries": [
-				"{@i 4th-level druid {@variantrule optional class features|tce|optional feature}}",
-				"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the {@filter druid spell list|spells|level=0|class=Druid}."
+				"{@i 4级德鲁伊 {@variantrule optional class features|tce|可选特性}}",
+				"每当你达到该职业提升属性值的等级时，你就可以用{@filter 德鲁伊法术列表|spells|level=0|class=Druid}中的另一个戏法来替换你从该职业的施法特性中学到的一个戏法。"
 			]
 		},
 		{
