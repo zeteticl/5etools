@@ -153,7 +153,8 @@
 			"ENG_name": "Archery"
 		},
 		{
-			"name": "Armor of Magical Strength",
+			"name": "魔法力量盔甲",
+			"ENG_name": "Armor of Magical Strength",
 			"source": "TCE",
 			"page": 20,
 			"featureType": [
@@ -162,20 +163,20 @@
 			"prerequisite": [
 				{
 					"item": [
-						"A suit of armor (requires attunement)"
+						"一套盔甲（需调谐）"
 					]
 				}
 			],
 			"entries": [
-				"This armor has 6 charges. The wearer can expend the armor's charges in the following ways:",
+				"此盔甲拥有6发充能。穿戴者能以下列方式消耗充能：",
 				{
 					"type": "list",
 					"items": [
-						"When the wearer makes a Strength check or a Strength saving throw, it can expend 1 charge to add a bonus to the roll equal to its Intelligence modifier.",
-						"If the creature would be knocked {@condition prone}, it can use its reaction to expend 1 charge to avoid being knocked prone."
+						"进行力量检定或力量豁免检定时，你能消耗1发充能来获得等于你智力调整值的加值。",
+						"当穿着者将被击倒{@condition 伏地}时，以一个反应消耗1发充能，就能避免被击倒。"
 					]
 				},
-				"The armor regains {@dice 1d6} expended charges daily at dawn."
+				"此盔甲在每天的黎明时会恢复{@dice 1d6}发充能。"
 			]
 		},
 		{
