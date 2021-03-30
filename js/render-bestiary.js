@@ -131,7 +131,7 @@ class RenderBestiary {
 		</td>
 		` : ""}</tr>
 
-		${mon.pbNote ? `<tr><td colspan="6"><strong>Proficiency Bonus (PB)</strong> ${mon.pbNote}</td></tr>` : ""}
+		${mon.pbNote ? `<tr><td colspan="6"><strong>熟练加值 (PB)</strong> ${mon.pbNote}</td></tr>` : ""}
 
 		${allTraits ? `<tr><td class="divider" colspan="6"><div></div></td></tr>${RenderBestiary._getRenderedSection("trait", allTraits, 1)}` : ""}
 		${mon.action ? `<tr><td colspan="6" class="mon__stat-header-underline"><span class="mon__sect-header-inner">动作${mon.actionNote ? ` (<span class="small">${mon.actionNote}</span>)` : ""}</span></td></tr>
