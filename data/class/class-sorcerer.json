@@ -540,11 +540,11 @@
 				"Font of Magic Options|Sorcerer||2|UAClassFeatureVariants",
 				"超魔法|Sorcerer||3",
 				"Metamagic Options|Sorcerer||3|UAClassFeatureVariants",
-				"Metamagic Options|Sorcerer||3|TCE",
+				"超魔法选项|Sorcerer||3|TCE",
 				"属性值提升|Sorcerer||4",
 				"Proficiency Versatility|Sorcerer||4|UAClassFeatureVariants",
-				"Sorcerous Versatility|Sorcerer||4|TCE",
-				"Magical Guidance|Sorcerer||5|TCE",
+				"术法变换|Sorcerer||4|TCE",
+				"魔法指引|Sorcerer||5|TCE",
 				{
 					"classFeature": "术法起源能力|Sorcerer||6",
 					"gainSubclassFeature": true
@@ -939,8 +939,10 @@
 					]
 				},
 				{
-					"name": "Aberrant Mind",
-					"shortName": "Aberrant Mind",
+					"name": "畸变心智",
+					"ENG_name":"Aberrant Mind",
+					"shortName": "畸变心智",
+					"ENG_shortName":"Aberrant Mind",
 					"source": "TCE",
 					"page": 66,
 					"additionalSpells": [
@@ -971,16 +973,18 @@
 						}
 					],
 					"subclassFeatures": [
-						"Aberrant Mind|Sorcerer||Aberrant Mind|TCE|1",
-						"Psionic Sorcery|Sorcerer||Aberrant Mind|TCE|6",
-						"Psychic Defenses|Sorcerer||Aberrant Mind|TCE|6",
-						"Revelation in Flesh|Sorcerer||Aberrant Mind|TCE|14",
-						"Warping Implosion|Sorcerer||Aberrant Mind|TCE|18"
+						"畸变心智|Sorcerer||Aberrant Mind|TCE|1",
+						"灵能术法|Sorcerer||Aberrant Mind|TCE|6",
+						"心灵防御|Sorcerer||Aberrant Mind|TCE|6",
+						"血肉启示|Sorcerer||Aberrant Mind|TCE|14",
+						"扭曲爆裂|Sorcerer||Aberrant Mind|TCE|18"
 					]
 				},
 				{
-					"name": "Clockwork Soul",
-					"shortName": "Clockwork Soul",
+					"name": "时械之魂",
+					"ENG_name":"Clockwork Soul",
+					"shortName": "时械之魂",
+					"ENG_shortName":"Clockwork Soul",
 					"source": "TCE",
 					"page": 68,
 					"additionalSpells": [
@@ -1010,10 +1014,10 @@
 						}
 					],
 					"subclassFeatures": [
-						"Clockwork Soul|Sorcerer||Clockwork Soul|TCE|1",
-						"Bastion of Law|Sorcerer||Clockwork Soul|TCE|6",
-						"Trance of Order|Sorcerer||Clockwork Soul|TCE|14",
-						"Clockwork Cavalcade|Sorcerer||Clockwork Soul|TCE|18"
+						"时械之魂|Sorcerer||Clockwork Soul|TCE|1",
+						"律令之壁|Sorcerer||Clockwork Soul|TCE|6",
+						"序列意识|Sorcerer||Clockwork Soul|TCE|14",
+						"时械矩阵|Sorcerer||Clockwork Soul|TCE|18"
 					]
 				}
 			],
@@ -1645,7 +1649,8 @@
 			]
 		},
 		{
-			"name": "Metamagic Options",
+			"name": "超魔法选项",
+			"ENG_name":"Metamagic Options",
 			"source": "TCE",
 			"page": 65,
 			"className": "Sorcerer",
@@ -1653,8 +1658,8 @@
 			"level": 3,
 			"isClassFeatureVariant": true,
 			"entries": [
-				"{@i 3rd-level sorcerer {@variantrule optional class features|tce|optional feature}}",
-				"When you choose Metamagic options, you have access to the following additional options.",
+				"{@i 3级术士 {@variantrule optional class features|tce|可选特性}}",
+				"当你选择超魔法选项时，你能够选择以下超魔法选项。",
 				{
 					"type": "options",
 					"entries": [
@@ -1729,7 +1734,8 @@
 			]
 		},
 		{
-			"name": "Sorcerous Versatility",
+			"name": "术法变换",
+            "ENG_name":"Sorcerous Versatility",
 			"source": "TCE",
 			"page": 65,
 			"className": "Sorcerer",
@@ -1737,19 +1743,20 @@
 			"level": 4,
 			"isClassFeatureVariant": true,
 			"entries": [
-				"{@i 4th-level sorcerer {@variantrule optional class features|tce|optional feature}}",
-				"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing the magic within you flowing in new ways:",
+				"{@i 4级术士{@variantrule optional class features|tce|可选特性}}",
+				"每当你通过提升术士等级获得属性值提升时，你可以进行以下一种行为，代表着你内在的法力流向了新的途径：",
 				{
 					"type": "list",
 					"items": [
-						"Replace one of the options you chose for the Metamagic feature with a different {@filter Metamagic option|optionalfeatures|Feature Type=MM} available to you.",
-						"Replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the {@filter sorcerer spell list|spells|level=0|class=Sorcerer}."
+						"用另一个你能够选择的{@filter 超魔法选项|optionalfeatures|Feature Type=MM}替换你当前的一个超魔法选项。",
+						"用另一个你能够从{@filter 术士法术列表|spells|level=0|class=Sorcerer}中选择的戏法替换你当前已知的一个术士戏法。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Magical Guidance",
+			"name": "魔法指引",
+            "ENG_name":"Magical Guidance",
 			"source": "TCE",
 			"page": 65,
 			"className": "Sorcerer",
@@ -1757,8 +1764,8 @@
 			"level": 5,
 			"isClassFeatureVariant": true,
 			"entries": [
-				"{@i 5th-level sorcerer {@variantrule optional class features|tce|optional feature}}",
-				"You can tap into your inner wellspring of magic to try to conjure success from failure. When you make an ability check that fails, you can spend 1 sorcery point to reroll the {@dice d20}, and you must use the new roll, potentially turning the failure into a success."
+				"{@i 5级术士 {@variantrule optional class features|tce|可选特性}}",
+				"你能够挖掘内在的魔力源泉，从失败中召唤成功。当你进行一次属性检定并失败时，你可以使用1术法点重投{@dice d20}。你必须使用重投的结果。此举可能使该检定改为成功。"
 			]
 		},
 		{
@@ -2539,7 +2546,8 @@
 			]
 		},
 		{
-			"name": "Aberrant Mind",
+			"name": "畸变心智",
+            "ENG_name":"Aberrant Mind",
 			"source": "TCE",
 			"page": 66,
 			"className": "Sorcerer",
@@ -2548,11 +2556,11 @@
 			"subclassSource": "TCE",
 			"level": 1,
 			"entries": [
-				"An alien influence has wrapped its tendrils around your mind, giving you psionic power. You can now touch other minds with that power and alter the world around you by using it to control the magical energy of the multiverse. Will this power shine from you as a hopeful beacon to others? Or will you be a source of terror to those who feel the stab of your mind and witness the strange manifestations of your might?",
-				"As an Aberrant Mind sorcerer, you decide how you acquired your powers. Were you born with them? Or did an event later in life leave you shining with psionic awareness? Consult the Aberrant Origins table for a possible origin of your power.",
+				"某种外来的影响曾经用它的卷须将你的意识缠绕裹拢，给予了你灵能之力。如今，你能够使用这股力量触碰他人的内心，或是用它操控多元宇宙的魔法能量颠复你周遭的世界。这种力量会从你身上如希望的灯塔一般照耀着旁人吗？抑或是使你成为恐惧之源，使他人得见你怪异的力量，受你的心灵所伤害呢？",
+				"作为一名畸变心智术士，你能决定如何获得你的能力。这是你与生俱来的吗？还是后来发生的某件事使你展现出卓越的灵能？参考异常起源表以了解你可能的力量来源。",
 				{
 					"type": "table",
-					"caption": "Aberrant Origins",
+					"caption": "畸变起源",
 					"colLabels": [
 						"d6",
 						"Origin"
@@ -2564,42 +2572,43 @@
 					"rows": [
 						[
 							"1",
-							"You were exposed to the Far Realm's warping influence. You are convinced that a tentacle is now growing on you, but no one else can see it."
+							"你曾暴露在遥远国度扭曲的影响之下。你坚信着有触须在你身上生长，但其他人都看不到。"
 						],
 						[
 							"2",
-							"A psychic wind from the Astral Plane carried psionic energy to you. When you use your powers, faint motes of light sparkle around you."
+							"一阵来自星界的灵能之风将心灵异能灌入你的体内。现在，当你使用这股力量时，你的身边会有微弱的光点闪烁。"
 						],
 						[
 							"3",
-							"You once suffered the dominating powers of an aboleth, leaving a psychic splinter in your mind."
+							"你曾受到底栖魔鱼的支配，它的力量在你的脑海中留下了一个精神碎片。"
 						],
 						[
 							"4",
-							"You were implanted with a mind flayer tadpole, but the ceremorphosis never completed. And now its psionic power is yours. When you use it, your flesh shines with a strange mucus."
+							"你被植入了一只夺心魔蝌蚪，但蜕变一直没能完成。现在，其灵能力已经被你占为已有。当你使用灵能时，你的身体里会冒出奇怪的粘液。"
 						],
 						[
 							"5",
-							"As a child, you had an imaginary friend that looked like a flumph or a strange platypus-like creature. One day, it gifted you with psionic powers, which have ended up being not so imaginary."
+							"小时候，你有一个想象中的朋友，它看上去像是呋噜或是一只奇怪的鸭嘴兽形生物。某天，它赠与你灵能的力量，但它最终不再止步于想象。"
 						],
 						[
 							"6",
-							"Your nightmares whisper the truth to you: your psionic powers are not your own. You draw them from your parasitic twin!"
+							"你的噩梦向你透露了真相：你的灵能不是来源于自身，而是从你未能成功出世的孪生兄弟/姐妹处抽取来的！"
 						]
 					]
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Psionic Spells|Sorcerer||Aberrant Mind|TCE|1"
+					"subclassFeature": "灵能法术|Sorcerer||Aberrant Mind|TCE|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Telepathic Speech|Sorcerer||Aberrant Mind|TCE|1"
+					"subclassFeature": "传心谈话|Sorcerer||Aberrant Mind|TCE|1"
 				}
 			]
 		},
 		{
-			"name": "Psionic Spells",
+			"name": "灵能法术",
+            "ENG_name":"Psionic Spells",
 			"source": "TCE",
 			"page": 66,
 			"className": "Sorcerer",
@@ -2609,15 +2618,15 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"{@i 1st-level Aberrant Mind feature}",
-				"You learn additional spells when you reach certain levels in this class, as shown on the Psionic Spells table. Each of these spells counts as a sorcerer spell for you, but it doesn't count against the number of sorcerer spells you know.",
-				"Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be a {@filter divination or an enchantment spell from the sorcerer, warlock, or wizard spell list|spells|class=sorcerer;warlock;wizard|school=D;E|level=1;2;3;4;5}.",
+				"{@i 1级畸变心智特性}",
+				"当你达到相应的术士等级时，你习得下表中的额外法术。这些法术对你而言视为术士法术，且不受术士表上已知法术一栏的数量限制。",
+				"每当你提升术士等级时，你可以选择一个环数相同的新法术来替换你因此特性习得的一个法术。该法术必须为{@filter 术士、邪术师或法师法术列表中的一个预言系或惑控系法术|spells|class=sorcerer;warlock;wizard|school=D;E|level=1;2;3;4;5}。",
 				{
 					"type": "table",
-					"caption": "Psionic Spells",
+					"caption": "灵能法术",
 					"colLabels": [
-						"Sorcerer Level",
-						"Spells"
+						"术士等级",
+						"法术"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -2649,7 +2658,8 @@
 			]
 		},
 		{
-			"name": "Telepathic Speech",
+			"name": "传心谈话",
+            "ENG_name":"Telepathic Speech",
 			"source": "TCE",
 			"page": 66,
 			"className": "Sorcerer",
@@ -2659,13 +2669,14 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"{@i 1st-level Aberrant Mind feature}",
-				"You can form a telepathic connection between your mind and the mind of another. As a bonus action, choose one creature you can see within 30 feet of you. You and the chosen creature can speak telepathically with each other while the two of you are within a number of miles of each other equal to your Charisma modifier (minimum of 1 mile). To understand each other, you each must speak mentally in a language the other knows.",
-				"The telepathic connection lasts for a number of minutes equal to your sorcerer level. It ends early if you are {@condition incapacitated} or die or if you use this ability to form a connection with a different creature."
+				"{@i 1级畸变心智特性}",
+				"1级起，你能够在自己与他人的意识中构建一道心灵感应的链接。以一个附赠动作，你可以选择30尺内一个你可见的生物，只要你与其距离的里数不超过你的魅力调整值（至少1里），你与其能够通过心灵感应方式进行交流。你们必须使用对方知晓的语言进行心灵交流才能使其理解你通过心灵感应传达的话语。",
+				"心灵感应的链接持续等同于你术士等级的分钟数。当你{@condition 无力}或死亡，或你使用此能力与其他生物构建链接时，其提前结束。"
 			]
 		},
 		{
-			"name": "Psionic Sorcery",
+			"name": "灵能术法",
+            "ENG_name":"Psionic Sorcery",
 			"source": "TCE",
 			"page": 66,
 			"className": "Sorcerer",
@@ -2675,13 +2686,14 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"{@i 6th-level Aberrant Mind feature}",
-				"When you cast any spell of 1st level or higher from your Psionic Spells feature, you can cast it by expending a spell slot as normal or by spending a number of sorcery points equal to the spell's level.",
-				"If you cast the spell using sorcery points, it requires no verbal or somatic components, and it requires no material components, unless they are consumed by the spell."
+				"{@i 6级畸变心智特性}",
+				"6级起，当你施放一个你通过灵能法术特性知晓的法术时，你可以改为使用等同于该法术环数数量的术法点而非消耗法术位施放该法术。你依然可以用法术位正常施放这些法术。",
+				"当你通过此能力施放法术时，你无视该法术施法需要的语言成分或姿势成分。你同时无视该法术需要的不会消耗的材料成分。"
 			]
 		},
 		{
-			"name": "Psychic Defenses",
+			"name": "心灵防御",
+            "ENG_name":"Psychic Defenses",
 			"source": "TCE",
 			"page": 66,
 			"className": "Sorcerer",
@@ -2691,12 +2703,13 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"{@i 6th-level Aberrant Mind feature}",
-				"You gain resistance to psychic damage, and you have advantage on saving throws against being {@condition charmed} or {@condition frightened}."
+				"{@i 6级畸变心智特性}",
+				"6级起，你对心灵伤害获得抗力。此外，你在对抗{@condition 魅惑}或{@condition 恐惧}的豁免检定上获得优势。"
 			]
 		},
 		{
-			"name": "Revelation in Flesh",
+			"name": "血肉启示",
+            "ENG_name":"Revelation in Flesh",
 			"source": "TCE",
 			"page": 66,
 			"className": "Sorcerer",
@@ -2706,21 +2719,22 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"{@i 14th-level Aberrant Mind feature}",
-				"You can unleash the aberrant truth hidden within yourself. As a bonus action, you can spend 1 or more sorcery points to magically transform your body for 10 minutes. For each sorcery point you spend, you can gain one of the following benefits of your choice, the effects of which last until the transformation ends:",
+				"{@i 14级畸变心智特性}",
+				"14级起，你能够释放出潜藏在你内部扭曲的真实形态。以一个附赠动作，你使用至少1术法点以魔法性地转变形态，持续10分钟。你每因此使用了1术法点，你便可以在转变形态期间选择并获得以下一种增益：",
 				{
 					"type": "list",
 					"items": [
-						"You can see any {@condition invisible} creature within 60 feet of you, provided it isn't behind total cover. Your eyes also turn black or become writhing sensory tendrils.",
-						"You gain a flying speed equal to your walking speed, and you can hover. As you fly, your skin glistens with mucus or shines with an otherworldly light.",
-						"You gain a swimming speed equal to twice your walking speed, and you can breathe underwater. Moreover, gills grow from your neck or fan out from behind your ears, your fingers become webbed, or you grow writhing cilia that extend through your clothing.",
-						"Your body, along with any equipment you are wearing or carrying, becomes slimy and pliable. You can move through any space as narrow as 1 inch without squeezing, and you can spend 5 feet of movement to escape from nonmagical restraints or being {@condition 被擒}."
+						"你能看见60尺内的{@condition 隐形}生物，前提是其对你不为全遮蔽。",
+						"你获得等同于你行走速度的飞行速度，并能停留在空中。当你飞行时，你的皮肤表面流出发光的粘液或是散发出超凡脱俗的光芒。",
+						"你获得等同于你两倍行走速度的游泳速度，且你能在水下呼吸。此外，腮从你的脖子上长出来，或从耳后呈扇状翻出，你的手指变成蹼趾，或有卷曲的细毛从你的衣服底下翻腾而出。",
+						"你的身体和你携带的装备都变得柔韧粘滑。你能够轻松穿过最窄1寸宽的狭窄空间而不用挤进去，且你可以消耗5尺移动速度以逃离非魔法的{@condition 束缚}或{@condition 被擒}。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Warping Implosion",
+			"name": "扭曲爆裂",
+            "ENG_name":"Warping Implosion",
 			"source": "TCE",
 			"page": 66,
 			"className": "Sorcerer",
@@ -2730,13 +2744,14 @@
 			"level": 18,
 			"header": 2,
 			"entries": [
-				"{@i 18th-level Aberrant Mind feature}",
-				"You can unleash your aberrant power as a space-warping anomaly. As an action, you can teleport to an unoccupied space you can see within 120 feet of you. Immediately after you disappear, each creature within 30 feet of the space you left must make a Strength saving throw. On a failed save, a creature takes {@damage 3d10} force damage and is pulled straight toward the space you left, ending in an unoccupied space as close to your former space as possible. On a successful save, the creature takes half as much damage and isn't pulled.",
-				"Once you use this feature, you can't do so again until you finish a long rest, unless you spend 5 sorcery points to use it again."
+				"{@i 18级畸变心智特性}",
+				"18级起，你能够解放你异质的力量，从而制造扭曲空间的异常现象。以一个动作，你可以传送到120尺内你可见的一个未被占据的位置，然后你消失位置30尺内的生物必须进行一次力量豁免，失败受{@damage 3d10}力场伤害并被立即拉向你原本的位置或最近的一个未被占据的位置，成功半伤且不受拉扯。",
+				"一旦你使用了此能力，你在完成一次长休息之前必须消耗5术法点以再次使用此能力。"
 			]
 		},
 		{
-			"name": "Clockwork Soul",
+			"name": "时械之魂",
+            "ENG_name":"Clockwork Soul",
 			"source": "TCE",
 			"page": 68,
 			"className": "Sorcerer",
@@ -2745,19 +2760,20 @@
 			"subclassSource": "TCE",
 			"level": 1,
 			"entries": [
-				"The cosmic force of order has suffused you with magic. That power arises from Mechanus or a realm like it-a plane of existence shaped entirely by clockwork efficiency. You, or someone from your lineage, might have become entangled in the machinations of the modrons, the orderly beings who inhabit Mechanus. Perhaps your ancestor even took part in the Great Modron March. Whatever its origin within you, the power of order can seem strange to others, but for you, it is part of a vast and glorious system.",
+				"一股力量，一股源自宇宙本身的秩序力量，从机械境————或其他类似的位面之中产生，并扩散到你的灵魂之中，使你充满了魔力。你或你宗族中的某个人也许已经卷入到魔冢这种居住在机械境的秩序生命的阴谋之中。又或许，你的先祖甚至参与过魔冢长征。无论是何种起源，秩序的力量也许对旁人来说有些奇怪，但于你而言，它是一个宏伟而璀璨的系统的一部分。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Clockwork Magic|Sorcerer||Clockwork Soul|TCE|1"
+					"subclassFeature": "时械法术|Sorcerer||Clockwork Soul|TCE|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Restore Balance|Sorcerer||Clockwork Soul|TCE|1"
+					"subclassFeature": "归复平衡|Sorcerer||Clockwork Soul|TCE|1"
 				}
 			]
 		},
 		{
-			"name": "Clockwork Magic",
+			"name": "时械法术",
+			"ENG_name": "Clockwork Magic",
 			"source": "TCE",
 			"page": 68,
 			"className": "Sorcerer",
@@ -2767,15 +2783,15 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"{@i 1st-level Clockwork Soul feature}",
-				"You learn additional spells when you reach certain levels in this class, as shown on the Clockwork Spells table. Each of these spells counts as a sorcerer spell for you, but it doesn't count against the number of sorcerer spells you know.",
-				"Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an {@filter abjuration or a transmutation spell from the sorcerer, warlock, or wizard spell list|spells|class=sorcerer;warlock;wizard|school=A;T|level=1;2;3;4;5}.",
+				"{@i 1级时械之魂特性}",
+				"当你达到相应的术士等级时，你习得下表中的额外法术。这些法术对你而言视为术士法术，且不受术士表上已知法术一栏的数量限制。",
+				"每当你提升术士等级时，你可以选择一个环数相同的新法术来替换你因此特性习得的一个法术。该法术必须为{@filter 术士、邪术师或法师法术列表中的一个防护系或变化系法术|spells|class=sorcerer;warlock;wizard|school=A;T|level=1;2;3;4;5}。",
 				{
 					"type": "table",
-					"caption": "Clockwork Spells",
+					"caption": "时械法术",
 					"colLabels": [
-						"Sorcerer Level",
-						"Spells"
+						"术士等级",
+						"法术"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -2804,13 +2820,13 @@
 						]
 					]
 				},
-				"In addition, consult the Manifestations of Order table and choose or randomly determine a way your connection to order manifests while you are casting any of your sorcerer spells.",
+				"此外，你可以从秩序显迹表格中选择或掷骰决定一种你在施法时显现出与秩序之联系的方式。",
 				{
 					"type": "table",
-					"caption": "Manifestations of Order",
+					"caption": "秩序显迹",
 					"colLabels": [
 						"d6",
-						"Manifestation"
+						"显迹"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -2819,34 +2835,35 @@
 					"rows": [
 						[
 							"1",
-							"Spectral cogwheels hover behind you."
+							"幽灵般的虚幻齿轮在你身后旋转。"
 						],
 						[
 							"2",
-							"The hands of a clock spin in your eyes."
+							"时钟的指针出现在你的眼中。"
 						],
 						[
 							"3",
-							"Your skin glows with a brassy sheen."
+							"你的皮肤发出如黄铜般的金属光泽。"
 						],
 						[
 							"4",
-							"Floating equations and geometric objects overlay your body."
+							"你的体表浮动着方程式和几何图形。"
 						],
 						[
 							"5",
-							"Your spellcasting focus temporarily takes the form of a Tiny clockwork mechanism."
+							"你的法器短暂地变化成小巧的机械装置。"
 						],
 						[
 							"6",
-							"The ticking of gears or ringing of a clock can be heard by you and those affected by your magic."
+							"你和那些受到你法术影响的生物都会听到齿轮的滴答声或是钟表的响铃。"
 						]
 					]
 				}
 			]
 		},
 		{
-			"name": "Restore Balance",
+			"name": "归复平衡",
+            "ENG_name":"Restore Balance",
 			"source": "TCE",
 			"page": 68,
 			"className": "Sorcerer",
@@ -2856,13 +2873,14 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"{@i 1st-level Clockwork Soul feature}",
-				"Your connection to the plane of absolute order allows you to equalize chaotic moments. When a creature you can see within 60 feet of you is about to roll a {@dice d20} with advantage or disadvantage, you can use your reaction to prevent the roll from being affected by advantage and disadvantage.",
-				"You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+				"{@i 1级时械之魂特性}",
+				"1级起，你与绝对秩序之位面的联系使你能重整混沌的时刻。当你60尺内一个你可见的生物即将进行一次具有优势或劣势的{@dice d20}检定时，你可以用反应使其免受优势或劣势的影响。",
+				"你可以使用此能力的次数等同于你的熟练加值。每当你完成一次长休息，你重新获得已消耗的使用次数。                "
 			]
 		},
 		{
-			"name": "Bastion of Law",
+			"name": "律令之壁",
+            "ENG_name":"Bastion of Law",
 			"source": "TCE",
 			"page": 68,
 			"className": "Sorcerer",
@@ -2872,13 +2890,14 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"{@i 6th-level Clockwork Soul feature}",
-				"You can tap into the grand equation of existence to imbue a creature with a shimmering shield of order. As an action, you can expend 1 to 5 sorcery points to create a magical ward around yourself or another creature you can see within 30 feet of you. The ward lasts until you finish a long rest or until you use this feature again.",
-				"The ward is represented by a number of {@dice d8}s equal to the number of sorcery points spent to create it. When the warded creature takes damage, it can expend a number of those dice, roll them, and reduce the damage taken by the total rolled on those dice."
+				"{@i 6级时械之魂特性}",
+				"6级起，你可以利用事物的壮丽联系为一个生物激发闪烁的秩序之盾。以一个动作，你可以使用1至5术法点创造出一个环绕你或30尺内一个你可见的生物的魔法屏障。此屏障持续存在直到你完成一次长休息或直至你再次使用此能力。",
+				"屏障具有等同于你所消耗术法点数量的{@dice d8}骰。当被守护的生物受到伤害时，其可以消耗任意数量的这些d8骰，并使该伤害减少掷出结果的数值。"
 			]
 		},
 		{
-			"name": "Trance of Order",
+			"name": "序列意识",
+            "ENG_name":"Trance of Order",
 			"source": "TCE",
 			"page": 68,
 			"className": "Sorcerer",
@@ -2888,13 +2907,14 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"{@i 14th-level Clockwork Soul feature}",
-				"You gain the ability to align your consciousness to the endless calculations of Mechanus. As a bonus action, you can enter this state for 1 minute. For the duration, attack rolls against you can't benefit from advantage, and whenever you make an attack roll, an ability check, or a saving throw, you can treat a roll of 9 or lower on the {@dice d20} as a 10.",
-				"Once you use this bonus action, you can't use it again until you finish a long rest, unless you spend 5 sorcery points to use it again."
+				"{@i 14级时械之魂特性}",
+				"14级起，你获得了将你的意识和机械境无尽的计算达成同步的能力。以一个附赠动作，你可以在1分钟内进入此种状态。在此期间，对你进行的攻击免受优势的影响，且每当你进行一次攻击检定、属性检定或豁免检定时，你可以将{@dice d20}掷出的9或以下的数值视为10。",
+				"一旦你使用了此能力，你在完成一次长休息之前必须消耗5术法点以再次使用此能力。"
 			]
 		},
 		{
-			"name": "Clockwork Cavalcade",
+			"name": "时械矩阵",
+            "ENG_name":"Clockwork Cavalcade",
 			"source": "TCE",
 			"page": 68,
 			"className": "Sorcerer",
@@ -2904,17 +2924,17 @@
 			"level": 18,
 			"header": 2,
 			"entries": [
-				"{@i 18th-level Clockwork Soul feature}",
-				"You summon spirits of order to expunge disorder around you. As an action, you summon the spirits in a 30-foot cube originating from you. The spirits look like modrons or other constructs of your choice. The spirits are intangible and invulnerable, and they create the following effects within the cube before vanishing:",
+				"{@i 18级时械之魂特性}",
+				"18级起，你召唤出秩序的精魂以抹除周遭的混乱。以一个动作，你在以你为中心30尺立方空间的范围内召唤出精魂。这些精魂看起来像是魔冢或你选择的其他构装体，没有实体也不能摧毁，并在消失前使立方范围内产生以下效应：",
 				{
 					"type": "list",
 					"items": [
-						"The spirits restore up to 100 hit points, divided as you choose among any number of creatures of your choice in the cube.",
-						"Any damaged objects entirely in the cube are repaired instantly.",
-						"Every spell of 6th level or lower ends on creatures and objects of your choice in the cube."
+						"精魂合计提供至多回复100生命值，由你随意分配给范围内任意数量的生物。",
+						"范围内受到伤害的物件被立即修复。",
+						"你选择范围内任意数量的生物或物件，其承受的任何6环或以下的法术结束。"
 					]
 				},
-				"Once you use this action, you can't use it again until you finish a long rest, unless you spend 7 sorcery points to use it again."
+				"　一旦你使用了此能力，你在完成一次长休息之前必须消耗7术法点以再次使用此能力。"
 			]
 		},
 		{
@@ -3083,7 +3103,7 @@
 						"You can see any {@condition invisible} creature within 60 feet of you, provided it isn't behind total cover.",
 						"You gain a flying speed equal to your walking speed, and you can hover.",
 						"You gain a swimming speed equal to twice your walking speed, and you can breathe underwater.",
-						"Your body, along with any equipment you are wearing or carrying, becomes pliable. You can move through any space as narrow as 1 inch without squeezing, and you can spend 5 feet of movement to escape from nonmagical restraints or being {@condition 被擒}."
+						"Your body, along with any equipment you are wearing or carrying, becomes pliable. You can move through any space as narrow as 1 inch without squeezing, and you can spend 5 feet of movement to escape from nonmagical restraints or being {@condition grappled}."
 					]
 				}
 			]
@@ -4516,7 +4536,7 @@
 					"items": [
 						"You gain a swimming speed equal to your walking speed and the ability to breathe water. Gills grow from your neck or fan out from behind your ears, your fingers become webbed, or you grow lashing cilia that extend through your clothing.",
 						"You gain a flying speed equal to your walking speed and can hover. As you fly, your skin glistens with mucus.",
-						"Your body, along with any equipment you are wearing or carrying, becomes slimy and pliable. You can move through any space as narrow as 1 inch without squeezing, and you can spend 5 feet of movement to escape from nonmagical restraints or being {@condition 被擒}.",
+						"Your body, along with any equipment you are wearing or carrying, becomes slimy and pliable. You can move through any space as narrow as 1 inch without squeezing, and you can spend 5 feet of movement to escape from nonmagical restraints or being {@condition grappled}.",
 						"Your eyes turn black or become writhing sensory tendrils. You are aware of the location of any hidden or {@condition invisible} creature within 60 feet of you."
 					]
 				}
