@@ -484,15 +484,17 @@
 					]
 				},
 				{
-					"name": "Path of the Beast",
-					"shortName": "Beast",
+					"name": "野兽道途",
+					"ENG_name": "Path of the Beast",
+					"shortName": "野兽",
+					"ENG_shortName": "Beast",
 					"source": "TCE",
 					"page": 24,
 					"subclassFeatures": [
-						"Path of the Beast|Barbarian||Beast|TCE|3",
-						"Bestial Soul|Barbarian||Beast|TCE|6",
-						"Infectious Fury|Barbarian||Beast|TCE|10",
-						"Call the Hunt|Barbarian||Beast|TCE|14"
+						"野兽道途|Barbarian||Beast|TCE|3",
+						"兽性之魂|Barbarian||Beast|TCE|6",
+						"怒火侵蚀|Barbarian||Beast|TCE|10",
+						"狩猎呼唤|Barbarian||Beast|TCE|14"
 					]
 				},
 				{
@@ -1737,7 +1739,8 @@
 			]
 		},
 		{
-			"name": "Path of the Beast",
+			"name": "野兽道途",
+			"ENG_name": "Path of the Beast",
 			"source": "TCE",
 			"page": 24,
 			"className": "Barbarian",
@@ -1746,14 +1749,14 @@
 			"subclassSource": "TCE",
 			"level": 3,
 			"entries": [
-				"Barbarians who walk the Path of the Beast draw their rage from a bestial spark burning within their souls. That beast bursts forth in the throes of rage, physically transforming the barbarian.",
-				"Such a barbarian might be inhabited by a primal spirit or be descended from shape-shifters. You can choose the origin of your feral might or determine it by rolling on the Origin of the Beast table.",
+				"走上了野兽道途的野蛮人从他们灵魂中熊熊燃烧的野兽汲取怒火与力量。随着进入狂暴的阵痛，他们灵魂中的野兽爆发出来，让这些野蛮人的身体形态发生变化。",
+				"这样的野蛮人可能在身体里寄宿了一个原初精魂，或者是一个变形者的后代。你可以从以下的兽性之源列表中选择或者掷骰决定一个自己野兽能力的来源。",
 				{
 					"type": "table",
-					"caption": "Origin of the Beast",
+					"caption": "兽性起源",
 					"colLabels": [
 						"d4",
-						"Origin"
+						"起源"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -1762,30 +1765,31 @@
 					"rows": [
 						[
 							"1",
-							"One of your parents is a lycanthrope, and you've inherited some of their curse."
+							"你的双亲中有一位狼人，其诅咒顺着血脉延续到了你身上。"
 						],
 						[
 							"2",
-							"You are descended from an archdruid and inherited the ability to partially change shape."
+							"你是一个大德鲁伊的后裔，并且继承了一些局部的变形能力。"
 						],
 						[
 							"3",
-							"A fey spirit gifted you with the ability to adopt different bestial aspects."
+							"一个精类灵体赐予了你获得各种野兽体态的能力。"
 						],
 						[
 							"4",
-							"An ancient animal spirit dwells within you, allowing you to walk this path."
+							"一个远古野兽的灵魂栖息在你体内，这让你走上了野兽的道途。"
 						]
 					]
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Form of the Beast|Barbarian||Beast|TCE|3"
+					"subclassFeature": "野兽之形|Barbarian||Beast|TCE|3"
 				}
 			]
 		},
 		{
-			"name": "Form of the Beast",
+			"name": "野兽之形",
+			"ENG_name": "Form of the Beast",
 			"source": "TCE",
 			"page": 24,
 			"className": "Barbarian",
@@ -1795,34 +1799,38 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"{@i 3rd-level Path of the Beast feature}",
-				"When you enter your rage, you can transform, revealing the bestial power within you. Until the rage ends, you manifest a natural weapon. It counts as a simple melee weapon for you, and you add your Strength modifier to the attack and damage rolls when you attack with it, as normal.",
-				"You choose the weapon's form each time you rage:",
+				"{@i 3级野兽道途特性}",
+				"当你进入狂暴时，你可以变形，显现出你体内的野兽之力。直到你的狂暴结束，你获得一件天生武器。它对你视作简易近战武器。和普通的简易近战武器一样，你在你的攻击骰和伤害骰上加上你的力量调整值。",
+				"在你进入狂暴时，你可以在以下几种天生武器中选择一种：",
 				{
 					"type": "list",
 					"style": "list-hang-notitle",
 					"items": [
 						{
 							"type": "item",
-							"name": "Bite.",
-							"entry": "Your mouth transforms into a bestial muzzle or great mandibles (your choice). It deals {@damage 1d8} piercing damage on a hit. Once on each of your turns when you damage a creature with this bite, you regain a number of hit points equal to your proficiency bonus, provided you have less than half your hit points when you hit."
+							"name": "噬咬。",
+							"ENG_name": "Bite.",
+							"entry": "你的嘴变形成一个野兽的血盆大口或者巨大的昆虫大颚（由你选择）。它的一次攻击能造成{@damage 1d8}穿刺伤害。每回合一次，当你用它命中一个生物并造成伤害时，你回复等同于你的熟练等级的生命值。你只能在生命值低于一半的时候使用此方式回复生命值。"
 						},
 						{
 							"type": "item",
-							"name": "Claws.",
-							"entry": "Each of your hands transforms into a claw, which you can use as a weapon if it's empty. It deals {@damage 1d6} slashing damage on a hit. Once on each of your turns when you attack with a claw using the {@action Attack} action, you can make one additional claw attack as part of the same action."
+							"name": "利爪。",
+							"ENG_name": "Claws.",
+							"entry": "你的双手变成了一对利爪，当他没有持握东西时，可以把它当作作武器使用。利爪命中后能够造成{@damage 1d6}挥砍伤害。每回合一次，当你用利爪以{@action Attack}动作进行攻击时，你可以额外攻击一次，作为同一个攻击动作的一部分。"
 						},
 						{
 							"type": "item",
-							"name": "Tail.",
-							"entry": "You grow a lashing, spiny tail, which deals {@damage 1d8} piercing damage on a hit and has the reach property. If a creature you can see within 10 feet of you hits you with an attack roll, you can use your reaction to swipe your tail and roll a {@dice d8}, applying a bonus to your AC equal to the number rolled, potentially causing the attack to miss you."
+							"name": "尾击。",
+							"ENG_name": "Tail.",
+							"entry": "你长出一条绳索一般的，多刺的长尾巴。它攻击命中能造成{@damage 1d8}的穿刺伤害，并且拥有触及属性。如果一个10尺以内的，你能看见的生物通过攻击检定的方式攻击并击中你，你可以消耗你的反应动作来挥舞你的尾巴进行挡避，你投一个{@dice d8}的骰子，并将它加入到你的AC中。这个反应可能可以让这次攻击转而无法命中你。"
 						}
 					]
 				}
 			]
 		},
 		{
-			"name": "Bestial Soul",
+			"name": "兽性之魂",
+			"ENG_name": "Bestial Soul",
 			"source": "TCE",
 			"page": 24,
 			"className": "Barbarian",
@@ -1832,21 +1840,22 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"{@i 6th-level Path of the Beast feature}",
-				"The feral power within you increases, causing the natural weapons of your Form of the Beast to count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.",
-				"You can also alter your form to help you adapt to your surroundings. When you finish a short or long rest, choose one of the following benefits, which lasts until you finish your next short or long rest:",
+				"{@i 6级野兽道途特性}",
+				"你体内的野性力量不断增长，让你通过野兽之形获得的天生武器被视作魔法武器，以穿透对非魔法伤害的抗性或者免疫。",
+				"你也可以改变你身体的形态以更好的适应不同环境。每当你完成一次短休或者长休，你可以选择其中一项能力，你拥有该能力持续到你完成下一次短休或者长休：",
 				{
 					"type": "list",
 					"items": [
-						"You gain a swimming speed equal to your walking speed, and you can breathe underwater.",
-						"You gain a climbing speed equal to your walking speed, and you can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
-						"When you jump, you can make a Strength ({@skill 运动}) check and extend your jump by a number of feet equal to the check's total. You can make this special check only once per turn."
+						"你获得与你行走速度相同的的游泳速度，并且可以在水下呼吸。",
+						"你获得与你行走速度相同的攀爬速度，你可以攀爬困难表面吗，包括倒挂在天花板上。你做这些攀爬时不需要进行检定。",
+						"当你跳跃时，你进行一次力量（{@skill 运动}）检定，并把该检定的数值加到你本次跳跃的极限距离上。你每回合只能用这个方式加强跳跃一次。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Infectious Fury",
+			"name": "怒火侵蚀",
+			"ENG_name": "Infectious Fury",
 			"source": "TCE",
 			"page": 24,
 			"className": "Barbarian",
@@ -1856,20 +1865,21 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"{@i 10th-level Path of the Beast feature}",
-				"When you hit a creature with your natural weapons while you are raging, the beast within you can curse your target with rabid fury. The target must succeed on a Wisdom saving throw (DC equal to 8 + your Constitution modifier + your proficiency bonus) or suffer one of the following effects (your choice):",
+				"{@i 10级野兽道途特性}",
+				"当你在狂暴时用你的天生武器击中一个生物时，你内在的野兽可以诅咒你的目标变得如狂犬病似得病态癫狂。该生物需进行一次感知豁免（DC为8 + 你的熟练加值 + 你的体质调整值），如果失败，将必须承受以下的一种效果（由你决定）：",
 				{
 					"type": "list",
 					"items": [
-						"The target must use its reaction to make a melee attack against another creature of your choice that you can see.",
-						"The target takes {@damage 2d12} psychic damage."
+						"目标必须消耗他的反应动作对你所选择的一个能看到的目标的进行一次近战攻击。",
+						"目标受到{@damage 2d12}的心灵伤害。"
 					]
 				},
-				"You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+				"你可以使用该能力的次数等于你的熟练加值。每完成一次长休之后你恢复所有已消耗的使用次数。"
 			]
 		},
 		{
-			"name": "Call the Hunt",
+			"name": "狩猎呼唤",
+			"ENG_name": "Call the Hunt",
 			"source": "TCE",
 			"page": 24,
 			"className": "Barbarian",
@@ -1879,10 +1889,10 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"{@i 14th-level Path of the Beast feature}",
-				"The beast within you grows so powerful that you can spread its ferocity to others and gain resilience from them joining your hunt. When you enter your rage, you can choose a number of other willing creatures you can see within 30 feet of you equal to your Constitution modifier (minimum of one creature).",
-				"You gain 5 temporary hit points for each creature that accepts this feature. Until the rage ends, the chosen creatures can each use the following benefit once on each of their turns: when the creature hits a target with an attack roll and deals damage to it, the creature can roll a {@dice d6} and gain a bonus to the damage equal to the number rolled.",
-				"You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+				"{@i 14级野兽道途特性}",
+				"你内在的野兽已经成长的如此强大，你可以把你的其狂暴的战意散播到他人身上，并且这些加入你狩猎的人也会让你更加的强韧。当你进入狂暴时，你可以选择你可以看见的30尺以内的一定数量（等于你的体质调整值，至少为1）的其他自愿生物。",
+				"每个加入你狩猎的生物会给你5点临时生命值。直到你的狂暴终止前，加入你狩猎的生物每回合一次，进行攻击检定并造成伤害时，可以增加{@dice d6}的伤害骰。",
+				"你可以使用该能力的次数等于你的熟练加值。每完成一次长休之后你补充齐所有已消耗的使用次数。"
 			]
 		},
 		{
@@ -2096,7 +2106,7 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"{@i 3rd-level Path of the Beast feature}",
+				"{@i 3级野兽道途特性}",
 				"When you enter your rage, you can transform, revealing the bestial power within you. Until your rage ends, you manifest a natural melee weapon, choosing one of the following options each time you rage:",
 				{
 					"type": "list",
@@ -2132,7 +2142,7 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"{@i 6th-level Path of the Beast feature}",
+				"{@i 6级野兽道途特性}",
 				"The feral spirit within you grows in power, causing the natural weapons of your Form of the Beast to count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.",
 				"You can also call on the feral spirit to help you adapt to your surroundings. When you finish a short or long rest, choose one of the following benefits, which lasts until you finish a short or long rest:",
 				{
@@ -2156,7 +2166,7 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"{@i 10th-level Path of the Beast feature}",
+				"{@i 10级野兽道途特性}",
 				"When you hit a creature with your natural weapons while you are raging, the spirit within you can curse your target with rabid fury. The target must succeed on a Wisdom saving throw (DC equal to 8 + your Constitution modifier + your proficiency bonus) or suffer one of the following effects (your choice):",
 				{
 					"type": "list",
@@ -2179,7 +2189,7 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"{@i 14th-level Path of the Beast feature}",
+				"{@i 14级野兽道途特性}",
 				"The beast within grows so powerful that you can spread its ferocity to your allies. When you enter your rage, you can choose a number of willing creatures you can see within 30 feet of you equal to your Constitution modifier (minimum of one creature). Until your rage ends, the chosen creatures gain the Reckless {@action Attack} feature and you have advantage on saving throws against being {@condition frightened}. You also gain 5 temporary hit points for each creature that accepts the benefit. You can use this feature a number of times equal to your Constitution modifier (a minimum of once). You regain all expended uses when you finish a long rest."
 			]
 		},
