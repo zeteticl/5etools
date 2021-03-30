@@ -14,7 +14,7 @@ class ClassesPage extends BaseComponent {
 	static getBtnTitleSubclass (sc) {
 		const titlePartReprint = sc.isReprinted ? " (this subclass has been reprinted in a more recent source)" : "";
 		const sourcePart = Renderer.utils.getSourceAndPageText(sc);
-		return `${sc.name}; Source: ${sourcePart}${titlePartReprint}`;
+		return `${sc.name}; 来源: ${sourcePart}${titlePartReprint}`;
 	}
 
 	static getBaseShortName (sc) {

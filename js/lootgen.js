@@ -94,7 +94,7 @@ class LootGen {
 					</tr>
 					</tbody>
 				</table>
-				<small><strong>资源:</strong> <em>${Parser.sourceJsonToFull(itemsTable.source)}</em>, 第 ${itemsTable.page}页</small>
+				<small><strong>资源:</strong> <em>${Parser.sourceJsonToFull(itemsTable.source)}</em>, 第${itemsTable.page}页</small>
 			`);
 
 			const $tbody = $table.find("tbody");
