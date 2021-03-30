@@ -21,7 +21,7 @@ class PageFilterOptionalFeatures extends PageFilter {
 
 		this._typeFilter = new Filter({
 			header: "Feature Type",
-			header: "能力类型",
+			headerName: "能力类型",
 			items: [],
 			displayFn: Parser.optFeatureTypeToFull,
 			itemSortFn: PageFilterOptionalFeatures._filterFeatureTypeSort,
