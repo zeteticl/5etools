@@ -445,7 +445,7 @@
 					"classFeature": "奥法学派|Wizard||2",
 					"gainSubclassFeature": true
 				},
-				"Cantrip Formulas|Wizard||3|TCE",
+				"戏法公式|Wizard||3|TCE",
 				"属性值提升|Wizard||4",
 				"Proficiency Versatility|Wizard||4|UAClassFeatureVariants",
 				{
@@ -765,15 +765,17 @@
 					]
 				},
 				{
-					"name": "Order of Scribes",
-					"shortName": "Scribes",
+					"name": "书士会",
+					"ENG_name": "Order of Scribes",
+					"shortName": "书士",
+					"ENG_shortName": "Scribes",
 					"source": "TCE",
 					"page": 77,
 					"subclassFeatures": [
-						"Order of Scribes|Wizard||Scribes|TCE|2",
-						"Manifest Mind|Wizard||Scribes|TCE|6",
-						"Master Scrivener|Wizard||Scribes|TCE|10",
-						"One with the Word|Wizard||Scribes|TCE|14"
+						"书士会|Wizard||Scribes|TCE|2",
+						"神识显现|Wizard||Scribes|TCE|6",
+						"书士宗师|Wizard||Scribes|TCE|10",
+						"书人合一 |Wizard||Scribes|TCE|14"
 					]
 				}
 			],
@@ -1238,7 +1240,8 @@
 			]
 		},
 		{
-			"name": "Cantrip Formulas",
+			"name": "戏法公式",
+			"ENG_name": "Cantrip Formulas",
 			"source": "TCE",
 			"page": 75,
 			"className": "Wizard",
@@ -1246,8 +1249,8 @@
 			"level": 3,
 			"isClassFeatureVariant": true,
 			"entries": [
-				"{@i 3rd-level wizard {@variantrule optional class features|tce|optional feature}}",
-				"You have scribed a set of arcane formulas in your spellbook that you can use to formulate a cantrip in your mind. Whenever you finish a long rest and consult those formulas in your spellbook, you can replace one wizard cantrip you know with another cantrip from the wizard spell list."
+				"{@i 3级法师{@variantrule optional class features|tce|可选特性}}",
+				"你在法术书中写下了一套奥法公式，并能借此在心中推演出一个戏法。每当你完成一次长休，你可以查阅法术书中所记的公式，以将你的一个已知法师戏法替换为另一个来自法师法术列表的戏法。"
 			]
 		},
 		{
@@ -2727,7 +2730,8 @@
 			]
 		},
 		{
-			"name": "Order of Scribes",
+			"name": "书士会",
+			"ENG_name": "Order of Scribes",
 			"source": "TCE",
 			"page": 77,
 			"className": "Wizard",
@@ -2736,20 +2740,21 @@
 			"subclassSource": "TCE",
 			"level": 2,
 			"entries": [
-				"Magic of the book-that's what many folk call wizardry. The name is apt, given how much time wizards spend poring over tomes and penning theories about the nature of magic. It's rare to see wizards traveling without books and scrolls sprouting from their bags, and a wizard would go to great lengths to plumb an archive of ancient knowledge.",
-				"Among wizards, the Order of Scribes is the most bookish. It takes many forms in different worlds, but its primary mission is the same everywhere: recording magical discoveries so that wizardry can flourish. And while all wizards value spellbooks, a wizard in the Order of Scribes magically awakens their book, turning it into a trusted companion. All wizards study books, but a wizardly scribe talks to theirs!",
+				"许多人将法师魔法称为“书之魔法”，想想法师为研读卷宗与书写魔法理论花费了多少时间，这称呼也是名副其实。旅行中的法师包里，总是撑满书本卷宗；若能一探远古知识，法师愿意赴汤蹈火。",
+				"书士会是法师之间与书卷的联系最为紧密的群体。尽管书士会在不同的世界之间有着不同的形态，但无论位于何处，其主要任务都是同一的：将魔法上的发现记载下来，令法师魔法繁荣昌盛。尽管所有法师都将法术书视为珍宝，书士会的法师却能用魔法唤醒他们的法术书，将其变为值得信赖的伙伴；所有法师都会研习书本，但书士却能与书本对话！",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Wizardly Quill|Wizard||Scribes|TCE|2"
+					"subclassFeature": "法师之笔|Wizard||Scribes|TCE|2"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Awakened Spellbook|Wizard||Scribes|TCE|2"
+					"subclassFeature": "觉醒魔典|Wizard||Scribes|TCE|2"
 				}
 			]
 		},
 		{
-			"name": "Awakened Spellbook",
+			"name": "觉醒魔典",
+			"ENG_name": "Awakened Spellbook",
 			"source": "TCE",
 			"page": 77,
 			"className": "Wizard",
@@ -2759,22 +2764,23 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"{@i 2nd-level Order of Scribes feature}",
-				"Using specially prepared inks and ancient incantations passed down by your wizardly order, you have awakened an arcane sentience within your spellbook.",
-				"While you are holding the book, it grants you the following benefits:",
+				"{@i 2级书士会特性}",
+				"通过特别准备的墨水和书士会所传承的咒语，你唤醒了法术书中具有智能的奥法存在。",
+				"当你持握法术时，它将为你提供以下增益：",
 				{
 					"type": "list",
 					"items": [
-						"You can use the book as a spellcasting focus for your wizard spells.",
-						"When you cast a wizard spell with a spell slot, you can temporarily replace its damage type with a type that appears in another spell in your spellbook, which magically alters the spell's formula for this casting only. The latter spell must be of the same level as the spell slot you expend.",
-						"When you cast a wizard spell as a ritual, you can use the spell's normal casting time, rather than adding 10 minutes to it. Once you use this benefit, you can't do so again until you finish a long rest."
+						"你可以将本书用作施展法师法术的法器。",
+						"当你消耗法术位施展一个法师法术时，你可以将它的伤害类型替换为你法术书内另一个法术的伤害类型：你的法术书用魔法改变了此次施法所用的奥法公式。后一个法术的等级必须与你花费的法术位等级相同。",
+						"当你用仪式施法施展一个法术时，你可以使用法术的正常施法时间，而不用额外增加10分钟。你必须完成一次长休才能再次使用此增益。"
 					]
 				},
-				"If necessary, you can replace the book over the course of a short rest by using your Wizardly Quill to write arcane sigils in a blank book or a magic spellbook to which you're attuned. At the end of the rest, your spellbook's consciousness is summoned into the new book, which the consciousness transforms into your spellbook, along with all its spells. If the previous book still existed somewhere, all the spells vanish from its pages."
+				"如有必要，你可以在一次短休时用你的法师之笔，在空白书本或是你与之同调的魔法法术书上画下奥术魔印。短休结束时，你原本法术书内的意识将会带着旧书它所记载的所有法术转移到新书之中、将其变为你的法术书。如果旧书依旧在某处存在，它上面所记载的所有法术将消失。"
 			]
 		},
 		{
-			"name": "Wizardly Quill",
+			"name": "法师之笔",
+			"ENG_name": "Wizardly Quill",
 			"source": "TCE",
 			"page": 77,
 			"className": "Wizard",
@@ -2784,21 +2790,22 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"{@i 2nd-level Order of Scribes feature}",
-				"As a bonus action, you can magically create a Tiny quill in your free hand. The magic quill has the following properties:",
+				"{@i 2级书士会特性}",
+				"以一个附赠动作，你能用魔法创造一支微型羽毛笔。这支魔法羽毛笔具有以下特性：",
 				{
 					"type": "list",
 					"items": [
-						"The quill doesn't require ink. When you write with it, it produces ink in a color of your choice on the writing surface.",
-						"The time you must spend to copy a spell into your spellbook equals 2 minutes per spell level if you use the quill for the transcription.",
-						"You can erase anything you write with the quill if you wave the feather over the text as a bonus action, provided the text is within 5 feet of you."
+						"这支毛笔不需要墨水。当你用它书写时，它会在用于书写的表面上自行生成墨水，颜色由你选择。",
+						"若你使用这根羽毛笔来将法术抄入法术书，你只需花费每个法术等级2分钟的时间。",
+						"若你用羽毛笔书写的文本在你身边5尺范围之内，你可以用一个附赠动作在文字上方晃动羽毛将其消除。"
 					]
 				},
-				"This quill disappears if you create another one or if you die."
+				"这根羽毛笔将在你创造另一支笔或是死亡时消失。"
 			]
 		},
 		{
-			"name": "Manifest Mind",
+			"name": "神识显现",
+			"ENG_name": "Manifest Mind",
 			"source": "TCE",
 			"page": 77,
 			"className": "Wizard",
@@ -2808,17 +2815,18 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"{@i 6th-level Order of Scribes feature}",
-				"You can conjure forth the mind of your Awakened Spellbook. As a bonus action while the book is on your person, you can cause the mind to manifest as a Tiny spectral object, hovering in an unoccupied space of your choice within 60 feet of you. The spectral mind is intangible and doesn't occupy its space, and it sheds dim light in a 10-foot radius. It looks like a ghostly tome, a cascade of text, or a scholar from the past (your choice).",
-				"While manifested, the spectral mind can hear and see, and it has {@sense darkvision} with a range of 60 feet. The mind can telepathically share with you what it sees and hears (no action required).",
-				"Whenever you cast a wizard spell on your turn, you can cast it as if you were in the spectral mind's space, instead of your own, using its senses. You can do so a number of times per day equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.",
-				"As a bonus action, you can cause the spectral mind to hover up to 30 feet to an unoccupied space that you or it can see. It can pass through creatures but not objects.",
-				"The spectral mind stops manifesting if it is ever more than 300 feet away from you, if someone casts dispel magic on it, if the Awakened Spellbook is destroyed, if you die, or if you dismiss the spectral mind as a bonus action.",
-				"Once you conjure the mind, you can't do so again until you finish a long rest, unless you expend a spell slot of any level to conjure it again."
+				"{@i 6级书士会特性}",
+				"你能将你觉醒法术书中的意识召唤出来。当你持有该法术书时，你可以以一个附赠动作令书中的意识显现为一个微型的灵体物件，使其悬浮于距离你60尺以内且未被占据的、由你选择的空间中。这一灵体意识是无形的，不会占据其空间，并会在其周围半径10尺范围内发出微光光照。它看上去如同一本灵体卷宗、一摞文字、或是一位历史中的学者（由你选择）。",
+				"显现时，该灵体意识能够听音视物，并具有60尺的黑暗视觉。它能用心灵感应将它所看见和听到的信息分享给你（无需动作）。",
+				"每当你在自己的回合内施放法师法术时，你可以使用灵体意识的感官、如同身处它所在的空间一样释放该法术。你能使用该能力的次数等于你的熟练价值，完成一次长休后，你将重获所有消耗掉的使用次数。",
+				"以一个附赠动作，你可以令灵体意识飘浮到其周围30尺内、你或它可见且未被占据的空间。灵体意识可以穿过生物但不能穿过物件。",
+				"若遇到以下情况之一，灵体意识的显现将会停止：与你的距离超过300尺，成为解除魔法的目标，觉醒魔法书被摧毁，你死亡时，或是你以一个附赠动作将其驱散。",
+				"召唤过灵体意识后，你必须完成一次长休、或是消耗一枚任意环位的法术位，才能再次召唤。"
 			]
 		},
 		{
-			"name": "Master Scrivener",
+			"name": "书士宗师",
+			"ENG_name": "Master Scrivener",
 			"source": "TCE",
 			"page": 78,
 			"className": "Wizard",
@@ -2828,14 +2836,15 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"{@i 10th-level Order of Scribes feature}",
-				"Whenever you finish a long rest, you can create one magic scroll by touching your Wizardly Quill to a blank piece of paper or parchment and causing one spell from your Awakened Spellbook to be copied onto the scroll. The spellbook must be within 5 feet of you when you make the scroll.",
-				"The chosen spell must be of 1st or 2nd level and must have a casting time of 1 action. Once in the scroll, the spell's power is enhanced, counting as one level higher than normal. You can cast the spell from the scroll by reading it as an action. The scroll is unintelligible to anyone else, and the spell vanishes from the scroll when you cast it or when you finish your next long rest.",
-				"You are also adept at crafting spell scrolls, which are described in the treasure chapter of the Dungeon Master's Guide. The gold and time you must spend to make such a scroll are halved if you use your Wizardly Quill."
+				"{@i 10级书士会特性}",
+				"每当你完成一次长休，你可以令你的法师笔触碰一张空白的纸张或是羊皮纸，以将你觉醒魔典中的一个法术并复制到这张纸上、并制造一个魔法卷轴。你制造卷轴时，魔典必须在你5尺之内。",
+				"被复制的法术必须是1环或2环法术，且施法时间必须为1个动作。卷轴将增强法术的力量，令其视为比平常高1环阶的法术。你可以以一个动作阅读卷轴来施展其中的法术。卷轴对其他任何人都不可理解，且当你施展其中法术、或是完成下次长休后，卷轴上记载的法术将会消失。",
+				"你同样熟练于制造城主指南第七章中所描述的法术卷轴。若你使用你的法术笔制造卷轴，所需要花费的金币和时间减半。"
 			]
 		},
 		{
-			"name": "One with the Word",
+			"name": "书人合一",
+			"ENG_name": "One with the Word",
 			"source": "TCE",
 			"page": 77,
 			"className": "Wizard",
@@ -2845,11 +2854,11 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"{@i 14th-level Order of Scribes feature}",
-				"Your connection to your Awakened Spellbook has become so profound that your soul has become entwined with it. While the book is on your person, you have advantage on all Intelligence ({@skill 奥秘}) checks, as the spellbook helps you remember magical lore.",
-				"Moreover, if you take damage while your spellbook's mind is manifested, you can prevent all of that damage to you by using your reaction to dismiss the spectral mind, using its magic to save yourself. Then roll {@dice 3d6}. The spellbook temporarily loses spells of your choice that have a combined spell level equal to that roll or higher. For example, if the roll's total is 9, spells vanish from the book that have a combined level of at least 9, which could mean one 9th-level spell, three 3rd-level spells, or some other combination. If there aren't enough spells in the book to cover this cost, you drop to 0 hit points.",
-				"Until you finish {@dice 1d6} long rests, you are incapable of casting the lost spells, even if you find them on a scroll or in another spellbook. After you finish the required number of rests, the spells reappear in the spellbook.",
-				"Once you use this reaction, you can't do so again until you finish a long rest."
+				"{@i 14级书士会特性}",
+				"你和你的觉醒魔法书的联系已经变得如此深刻，以至于你的灵魂已经和它缠结在一起。携带这本书时，你在所有智力（{@skill 奥秘}）检定中具有优势，因为法术书能够帮助你记住魔法学识。",
+				"此外，如果你在法术书的意识处于显现状态时受到伤害，你可以利用你的反应驱散灵体意识、利用其中的魔法来拯救自己，从而避免所有对你的伤害。之后，掷{@dice 3d6}。法术书暂时失去由你自选的法术，其环阶之和必须大于或等于骰值。例如，如果骰值是9，则从书中消失的法术环阶之和至少为9——或许是一个9环法术，或是三个3环法术，或其他组合方式。如果书中没有足够的法术来支付这个代价，你就会降到0点生命。",
+				"你必须完成{@dice 1d6}次长休，才能再次施放失去的法术；在此期间，即使你在卷轴上或其他法术书中找到这些法术，也不能施展它们。完成所需的长休次数后，法术会重新出现在法术书中。",
+				"用过这个反应之后，你必须完成一次长休才能再次使用。"
 			]
 		},
 		{
