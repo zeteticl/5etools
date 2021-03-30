@@ -891,20 +891,24 @@
 					]
 				},
 				{
-					"name": "Circle of Stars",
-					"shortName": "Stars",
+					"name": "星辰结社",
+					"ENG_name":"Circle of Stars",
+					"shortName": "星辰",
+					"ENG_shortName":"Stars",
 					"source": "TCE",
 					"page": 38,
 					"subclassFeatures": [
-						"Circle of Stars|Druid||Stars|TCE|2",
-						"Cosmic Omen|Druid||Stars|TCE|6",
-						"Twinkling Constellations|Druid||Stars|TCE|10",
-						"Full of Stars|Druid||Stars|TCE|14"
+						"星辰结社|Druid||Stars|TCE|2",
+						"宇宙预兆|Druid||Stars|TCE|6",
+						"闪耀星座|Druid||Stars|TCE|10",
+						"灿若繁星|Druid||Stars|TCE|14"
 					]
 				},
 				{
-					"name": "Circle of Wildfire",
-					"shortName": "Wildfire",
+					"name": "野火结社",
+					"ENG_name":"Circle of Wildfire",
+					"shortName": "野火",
+					"ENG_shortName":"Wildfire",
 					"source": "TCE",
 					"page": 39,
 					"additionalSpells": [
@@ -934,10 +938,10 @@
 						}
 					],
 					"subclassFeatures": [
-						"Circle of Wildfire|Druid||Wildfire|TCE|2",
-						"Enhanced Bond|Druid||Wildfire|TCE|6",
-						"Cauterizing Flames|Druid||Wildfire|TCE|10",
-						"Blazing Revival|Druid||Wildfire|TCE|14"
+						"野火结社|Druid||Wildfire|TCE|2",
+						"强化链接|Druid||Wildfire|TCE|6",
+						"灼烧烈焰|Druid||Wildfire|TCE|10",
+						"炽烈回生|Druid||Wildfire|TCE|14"
 					]
 				}
 			],
@@ -2420,7 +2424,7 @@
 					"type": "entries",
 					"name": "仪式施法",
 					"entries": [
-						"You can cast a druid spell as a ritual if that spell has the ritual tag and you have the spell prepared."
+						"若一个德鲁伊法术具有仪式标签，且你已准备了该法术，则你可以将它做为仪式法术施放。"
 					]
 				},
 				{
@@ -2485,15 +2489,15 @@
 			"level": 2,
 			"entries": [
 				"从2级开始，你可以使用你的动作以魔法变成一个你曾经见过野兽的型态。你可以使用这个能力二次。你在完成一次短休或长休后恢复所有你花费掉的次数。",
-				"你的德鲁伊等级决定了你可以变化成的野兽，参见野兽型态表。举例来说，在2级时，你可以转变成任何挑战等级为1/4或更低，且不具有飞行或游泳速度的野兽。",
+				"你的德鲁伊等级决定了你可以变化成的野兽，参见“野兽形态表”。举例来说，在2级时，你可以转变成任何挑战等级为1/4或更低，且不具有飞行或游泳速度的野兽。",
 				{
 					"type": "table",
-					"caption": "野兽型态",
+					"caption": "野兽形态",
 					"colLabels": [
-						"Level",
-						"Max. CR",
-						"Limitations",
-						"Example"
+						"等级",
+						"最高 CR",
+						"限制",
+						"例子"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -3524,7 +3528,8 @@
 			]
 		},
 		{
-			"name": "Circle of Stars",
+			"name": "星辰结社",
+			"ENG_name":"Circle of Stars",
 			"source": "TCE",
 			"page": 38,
 			"className": "Druid",
@@ -3533,20 +3538,21 @@
 			"subclassSource": "TCE",
 			"level": 2,
 			"entries": [
-				"The Circle of Stars allows druids to draw on the power of starlight. These druids have tracked heavenly patterns since time immemorial, discovering secrets hidden amid the constellations. By revealing and understanding these secrets, the Circle of the Stars seeks to harness the powers of the cosmos.",
-				"Many druids of this circle keep records of the constellations and the stars' effects on the world. Some groups document these observations at megalithic sites, which serve as enigmatic libraries of lore. These repositories might take the form of stone circles, pyramids, petroglyphs, and underground temples-any construction durable enough to protect the circle's sacred knowledge even against a great cataclysm.",
+				"星辰结社使德鲁伊能够借助星光的能量。这些德鲁伊自远古时期便开始记载星象并探索星座中隐藏的秘密。通过揭示并理解群星之奥妙，星辰结社试图借助宇宙能量。",
+				"这个结社中的许多德鲁伊记载着星座与群星对世界的影响。一些团体将这些观察记录在巨石遗址上，作为神秘传说图书馆。这些知识库的形式可能采取巨石阵、金字塔、岩刻与地下神殿——乃至任何坚实到甚至足以使此结社神圣知识幸存于大灾变的结构。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Star Map|Druid||Stars|TCE|2"
+					"subclassFeature": "星图|Druid||Stars|TCE|2"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Starry Form|Druid||Stars|TCE|2"
+					"subclassFeature": "星耀形态|Druid||Stars|TCE|2"
 				}
 			]
 		},
 		{
-			"name": "Star Map",
+			"name": "星图",
+			"ENG_name":"Star Map",
 			"source": "TCE",
 			"page": 38,
 			"className": "Druid",
@@ -3556,14 +3562,14 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"{@i 2nd-level Circle of the Stars feature}",
-				"You've created a star chart as part of your heavenly studies. It is a Tiny object and can serve as a spellcasting focus for your druid spells. You determine its form by rolling on the Star Map table or by choosing one.",
+				"{@i 2级星辰结社特性}",
+				"作为你天文学研究的一部分，你创造了一个星图。它是一个微型物体，可以作为你德鲁伊法术的法器。你通过在星图列表上掷骰或选择一个来确定它的形态。",
 				{
 					"type": "table",
-					"caption": "Star Map",
+					"caption": "星图形态",
 					"colLabels": [
 						"d6",
-						"Map Form"
+						"星图样式"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -3572,44 +3578,45 @@
 					"rows": [
 						[
 							"1",
-							"A scroll covered with depictions of constellations"
+							"一幅布满星座图列的卷轴"
 						],
 						[
 							"2",
-							"A stone tablet with fine holes drilled through it"
+							"一块钻有细孔的石板"
 						],
 						[
 							"3",
-							"A speckled owlbear hide, tooled with raised marks"
+							"一张斑点枭熊皮，标有凸痕记号"
 						],
 						[
 							"4",
-							"A collection of maps bound in an ebony cover"
+							"一套黑檀木封皮地图集"
 						],
 						[
 							"5",
-							"A crystal that projects starry patterns when placed before a light"
+							"一块遇光会投射出星辰轨迹的水晶"
 						],
 						[
 							"6",
-							"Glass disks that depict constellations"
+							"描绘星座排列的玻璃圆盘"
 						]
 					]
 				},
-				"While holding this map, you have these benefits:",
+				"当你持握这件星图时，你获得这些好处：",
 				{
 					"type": "list",
 					"items": [
-						"You know the {@spell 指导术} cantrip.",
-						"You have the {@spell 光导箭} spell prepared. It counts as a druid spell for you, and it doesn't count against the number of spells you can have prepared.",
-						"You can cast {@spell 光导箭} without expending a spell slot. You can do so a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+						"你已知{@spell 指导术}戏法。",
+						"你获得准备{@spell 光导箭}。它对你来说视作德鲁伊法术，且不计入你的每日准备法术上限。",
+						"你可以施放{@spell 光导箭}而无需消耗法术位。你可以这样做的次数等同于你的熟练加值，且在你完成一次长休后会恢复所有已消耗使用次数。"
 					]
 				},
-				"If you lose the map, you can perform a 1-hour ceremony to magically create a replacement. This ceremony can be performed during a short or long rest, and it destroys the previous map."
+				"如果你丢失了星图，你可以举行一场为时一小时的仪式来使用魔法创造一个替代品。这一仪式可以在一场短休或长休时举行，并会摧毁先前的星图。"
 			]
 		},
 		{
-			"name": "Starry Form",
+			"name": "星耀形态",
+			"ENG_name":"Starry Form",
 			"source": "TCE",
 			"page": 38,
 			"className": "Druid",
@@ -3619,35 +3626,36 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"{@i 2nd-level Circle of the Stars feature}",
-				"As a bonus action, you can expend a use of your Wild Shape feature to take on a starry form, rather than transforming into a beast.",
-				"While in your starry form, you retain your game statistics, but your body becomes luminous; your joints glimmer like stars, and glowing lines connect them as on a star chart. This form sheds bright light in a 10-foot radius and dim light for an additional 10 feet. The form lasts for 10 minutes. It ends early if you dismiss it (no action required), are {@condition incapacitated}, die, or use this feature again.",
-				"Whenever you assume your starry form, choose which of the following constellations glimmers on your body; your choice gives you certain benefits while in the form:",
+				"{@i 2级星辰结社特性}",
+				"作为一个附赠动作，你可以消耗一次荒野形态使用次数以呈现一个星耀形态，而不是变化为野兽形态。",
+				"当处于星耀形态时，你保留你的游戏数据，但你的身体变得明亮；你的关节星光熠熠并有如星图一般由亮线连接。这一形态散发出10尺范围明亮光照以及其外10尺范围昏暗光照。这一形态持续10分钟。如果你解除它（无需动作）、{@condition 无力}、死亡或再次使用此特性，它就会提前结束。",
+				"每当你化身星耀形态，选择以下哪个星座在你身上闪耀；你的选择为你在形态中获得特定好处：",
 				{
 					"type": "entries",
-					"name": "Archer",
+					"name": "射手座",
 					"entries": [
-						"A constellation of an archer appears on you. When you activate this form, and as a bonus action on your subsequent turns while it lasts, you can make a ranged spell attack, hurling a luminous arrow that targets one creature within 60 feet of you. On a hit, the attack deals radiant damage equal to {@dice 1d8} + your Wisdom modifier."
+						"一个弓箭手星座于你身上浮现。当你激活这个形态时，你可以在它持续的后续回合使用一个附赠动作进行一次远程法术攻击，对你60尺内的一个生物射出一发光箭。命中时，此次攻击造成的光耀伤害等同于{@dice 1d8} + 你的感知调整值。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Chalice",
+					"name": "圣杯座",
 					"entries": [
-						"A constellation of a life-giving goblet appears on you. Whenever you cast a spell using a spell slot that restores hit points to a creature, you or another creature within 30 feet of you can regain hit points equal to {@dice 1d8} + your Wisdom modifier."
+						"一个予命圣杯星座于你身上浮现。每当你使用法术位施展生物生命值的法术，你或你30尺内的另一生物可以回复等同于{@dice 1d8} + 你的感知调整值的生命值。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Dragon",
+					"name": "巨龙座",
 					"entries": [
-						"A constellation of a wise dragon appears on you. When you make an Intelligence or a Wisdom check or a Constitution saving throw to maintain concentration on a spell, you can treat a roll of 9 or lower on the {@dice d20} as a 10."
+						"一个智龙星座于你身上浮现。当你进行一次智力或感知检定或是进行一次体质豁免来维持法术专注时，你可以将{@dice d20}中9或以下的骰值视为10。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Cosmic Omen",
+			"name": "宇宙预兆",
+			"ENG_name":"Cosmic Omen",
 			"source": "TCE",
 			"page": 38,
 			"className": "Druid",
@@ -3657,29 +3665,30 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"{@i 6th-level Circle of the Stars feature}",
-				"Whenever you finish a long rest, you can consult your Star Map for omens. When you do so, roll a die. Until you finish your next long rest, you gain access to a special reaction based on whether you rolled an even or an odd number on the die:",
+				"{@i 6级星辰结社特性}",
+				"每当你完成一次长休，你可以参照你的星图来寻找预兆。当你这样做是，掷一个骰子。直到你完成下一次长休，你获得一个基于此掷骰结果奇偶性的特殊反应。",
 				{
 					"type": "list",
 					"style": "list-hang-notitle",
 					"items": [
 						{
 							"type": "item",
-							"name": "Weal (even).",
-							"entry": "Whenever a creature you can see within 30 feet of you is about to make an attack roll, a saving throw, or an ability check, you can use your reaction to roll a {@dice d6} and add the number rolled to the total."
+							"name": "吉兆（奇数）。",
+							"entry": "每当你 30 尺内可见的一个生物进行一次攻击检定，豁免检定或属性检定，你可以使用你的反应来骰一个{@dice d6}并将骰值加到检定结果中。"
 						},
 						{
 							"type": "item",
-							"name": "Woe (odd).",
-							"entry": "Whenever a creature you can see within 30 feet of you is about to make an attack roll, a saving throw, or an ability check, you can use your reaction to roll a {@dice d6} and subtract the number rolled from the total."
+							"name": "凶兆（偶数）.",
+							"entry": "每当你 30 尺内可见的一个生物进行一次攻击检定，豁免检定或属性检定，你可以使用你的反应来骰一个{@dice d6}并将骰值从检定结果中减去。"
 						}
 					]
 				},
-				"You can use this reaction a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+				"你可以使用你的反应次数等于你的熟练加值，且在你完成一次长休后会恢复所有已消耗使用次数。"
 			]
 		},
 		{
-			"name": "Twinkling Constellations",
+			"name": "闪耀星座",
+			"ENG_name":"Twinkling Constellations",
 			"source": "TCE",
 			"page": 38,
 			"className": "Druid",
@@ -3689,13 +3698,14 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"{@i 10th-level Circle of the Stars feature}",
-				"The constellations of your Starry Form improve. The {@dice 1d8} of the Archer and the Chalice becomes {@dice 2d8}, and while the Dragon is active, you have a flying speed of 20 feet and can hover.",
-				"Moreover, at the start of each of your turns while in your Starry Form, you can change which constellation glimmers on your body."
+				"{@i 10级星辰结社特性}",
+				"你的星耀形态星座增强了。射手座和圣杯座的{@dice d8}变成了{@dice 2d8}，而且在巨龙座激活时，你获得20尺飞行速度并且可以悬浮。",
+				"此外，在星耀形态下的每回合开始时，你可以改变身上闪耀的星座。"
 			]
 		},
 		{
-			"name": "Full of Stars",
+			"name": "灿若繁星",
+			"ENG_name":"Full of Stars",
 			"source": "TCE",
 			"page": 38,
 			"className": "Druid",
@@ -3705,12 +3715,13 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"{@i 14th-level Circle of the Stars feature}",
-				"While in your Starry Form, you become partially incorporeal, giving you resistance to bludgeoning, piercing, and slashing damage."
+				"{@i 14级星辰结社特性}",
+				"当你处于星耀形态时，你的身体部分无实质化，使你对钝击，穿刺和劈砍伤害具有抗性。"
 			]
 		},
 		{
-			"name": "Circle of Wildfire",
+			"name": "野火结社",
+			"ENG_name":"Circle of Wildfire",
 			"source": "TCE",
 			"page": 39,
 			"className": "Druid",
@@ -3719,19 +3730,20 @@
 			"subclassSource": "TCE",
 			"level": 2,
 			"entries": [
-				"Druids within the Circle of Wildfire understand that destruction is sometimes the precursor of creation, such as when a forest fire promotes later growth. These druids bond with a primal spirit that harbors both destructive and creative power, allowing the druids to create controlled flames that burn away one thing but give life to another.",
+				"野火结社的德鲁伊们知晓破坏有时是创造的先驱，就如森林大火促进之后的生长。这些德鲁伊们与具有破坏力与创造力的原始精魄连接在一起，使德鲁伊能够创造出可控的火焰，焚烧某样事物却又给予它者生命。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Circle Spells|Druid||Wildfire|TCE|2"
+					"subclassFeature": "结社法术|Druid||Wildfire|TCE|2"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Summon Wildfire Spirit|Druid||Wildfire|TCE|2"
+					"subclassFeature": "召唤野火精魄|Druid||Wildfire|TCE|2"
 				}
 			]
 		},
 		{
-			"name": "Circle Spells",
+			"name": "结社法术",
+			"ENG_name":"Circle Spells",
 			"source": "TCE",
 			"page": 39,
 			"className": "Druid",
@@ -3741,15 +3753,15 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"{@i 2nd-level Circle of Wildfire feature}",
-				"You have formed a bond with a wildfire spirit, a primal being of creation and destruction. Your link with this spirit grants you access to some spells when you reach certain levels in this class, as shown on the Circle of Wildfire Spells table.",
-				"Once you gain access to one of these spells, you always have it prepared, and it doesn't count against the number of spells you can prepare each day. If you gain access to a spell that doesn't appear on the druid spell list, the spell is nonetheless a druid spell for you.",
+				"{@i 2级野火结社特性}",
+				"你与野火精魄——一位兼具创生和毁灭的原初存在——之间的神秘连接业已形成。当你在此职业到达特定等级时，你与精魄的连接使你获取了一些特定法术的使用权，就如野火结社法术列表所示。",
+				"　一旦你获得了其中某个法术的使用权，你就会一直准备着它，且不计入你的每日准备法术上限。如果你学会一个不在德鲁伊法术列表中的法术，该法术对你来说视作德鲁伊法术。",
 				{
 					"type": "table",
-					"caption": "Circle of Wildfire Spells",
+					"caption": "野火结社法术",
 					"colLabels": [
-						"Druid Level",
-						"Circle Spells"
+						"等级",
+						"扩展法术"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -3781,7 +3793,8 @@
 			]
 		},
 		{
-			"name": "Summon Wildfire Spirit",
+			"name": "召唤野火精魄",
+			"ENG_name":"Summon Wildfire Spirit",
 			"source": "TCE",
 			"page": 39,
 			"className": "Druid",
@@ -3791,16 +3804,17 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"{@i 2nd-level Circle of Wildfire feature}",
-				"You can summon the primal spirit bound to your soul. As an action, you can expend one use of your Wild Shape feature to summon your wildfire spirit, rather than assuming a beast form.",
-				"The spirit appears in an unoccupied space of your choice that you can see within 30 feet of you. Each creature within 10 feet of the spirit (other than you) when it appears must succeed on a Dexterity saving throw against your spell save DC or take {@damage 2d6} fire damage.",
-				"The spirit is friendly to you and your companions and obeys your commands. See this creature's game statistics in the {@creature Wildfire Spirit|TCE} stat block, which uses your proficiency bonus (PB) in several places. You determine the spirit's appearance. Some spirits take the form of a humanoid figure made of gnarled branches covered in flame, while others look like beasts wreathed in fire.",
-				"In combat, the spirit shares your initiative count, but it takes its turn immediately after yours. The only action it takes on its turn is the {@action Dodge} action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. If you are {@condition incapacitated}, the spirit can take any action of its choice, not just {@action Dodge}.",
-				"The spirit manifests for 1 hour, until it is reduced to 0 hit points, until you use this feature to summon the spirit again, or until you die."
+				"{@i 2级野火结社特性}",
+				"你能召唤出与你灵魂连接的原初精魄。以一个动作，你可以消耗一次荒野形态使用次数召唤你的野火精魄，而不是变化为野兽形态。",
+				"精魄出现在你所选择的距离你30尺内未被占据的可见空间内。每个精魄10尺内的生物（除你之外）在它出现时都必须成功一次对抗你法术豁免DC的敏捷豁免否则受到{@damage 2d6}火焰伤害。",
+				"野火精魄对你与你的同伴保持友善并遵从你的命令。在{@creature 野火精魄|TCE}资料表中可以看到这只生物的游戏数据，其中几处采用了你的熟练加值（PB）。由你来决定精魄的外形。一些精魄是熊熊燃烧的枝条虬结而成的人形，而另一些则像是被火焰包裹的野兽。",
+				"在战斗中，野火精魄与你使用同一先攻，但在你的回合之后紧接着行动。它仅能使用{@action Dodge}，除非你使用一个附赠动作命令它采取其他动作。那个动作可以是其资料表上的一个，也可以是其他动作。如果你陷入{@condition 无力}，精魄可以采取任何它选择的动作，不只是{@action Dodge}。",
+				"野火精魄持续存在1小时，直到其生命值降低至0，或直到你再次使用此特性召唤此精魄，或直到你死亡。"
 			]
 		},
 		{
-			"name": "Enhanced Bond",
+			"name": "强化链接",
+			"ENG_name":"Enhanced Bond",
 			"source": "TCE",
 			"page": 39,
 			"className": "Druid",
@@ -3810,13 +3824,14 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"{@i 6th-level Circle of Wildfire feature}",
-				"The bond with your wildfire spirit enhances your destructive and restorative spells. Whenever you cast a spell that deals fire damage or restores hit points while your wildfire spirit is summoned, roll a {@dice d8}, and you gain a bonus equal to the number rolled to one damage or healing roll of the spell.",
-				"In addition, when you cast a spell with a range other than self, the spell can originate from you or your wildfire spirit."
+				"{@i 6级野火结社特性}",
+				"你与野火精魄的连接增强了你的破坏与恢复法术。当你在野火精魄处于召唤状态下施展一个造成火焰伤害或回复生命值的法术时，骰一个{@dice d8}，你在该法术的一次掷骰时获得等同于骰出数值的加值。",
+				"此外，当你施展一个射程非自身的法术时，该法术可以源自你或你的野火精魄。"
 			]
 		},
 		{
-			"name": "Cauterizing Flames",
+			"name": "灼烧烈焰",
+			"ENG_name":"Cauterizing Flames",
 			"source": "TCE",
 			"page": 39,
 			"className": "Druid",
@@ -3826,13 +3841,14 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"{@i 10th-level Circle of Wildfire feature}",
-				"You gain the ability to turn death into magical flames that can heal or incinerate. When a Small or larger creature dies within 30 feet of you or your wildfire spirit, a harmless spectral flame springs forth in the dead creature's space and flickers there for 1 minute. When a creature you can see enters that space, you can use your reaction to extinguish the spectral flame there and either heal the creature or deal fire damage to it. The healing or damage equals {@dice 2d10} + your Wisdom modifier.",
-				"You can use this reaction a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+				"{@i 10级野火结社特性}",
+				"你获得将死亡转化为可以用于治疗或焚烧的魔法火焰的能力。当一个小型或更大生物在你或你的野火精魄30尺内死亡时，无害幽火从其死亡生物空间中涌现并在此处摇曳1分钟。当一个你可见的生物进入该空间时，你可以用反应扑灭那里的幽火并对该生物进行治疗或火焰伤害。伤害或治疗数值等于{@dice 2d10} + 你的感知调整值。",
+				"你能使用该特性的次数等于你熟练加值，你在完成一次长休后会恢复所有已消耗使用次数。"
 			]
 		},
 		{
-			"name": "Blazing Revival",
+			"name": "炽烈回生",
+			"ENG_name":"Blazing Revival",
 			"source": "TCE",
 			"page": 39,
 			"className": "Druid",
@@ -3842,9 +3858,9 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"{@i 14th-level Circle of Wildfire feature}",
-				"The bond with your wildfire spirit can save you from death. If the spirit is within 120 feet of you when you are reduced to 0 hit points and thereby fall {@condition unconscious}, you can cause the spirit to drop to 0 hit points. You then regain half your hit points and immediately rise to your feet.",
-				"Once you use this feature, you can't use it again until you finish a long rest."
+				"{@i 14级野火结社特性}",
+				"你与野火精魄的连接可以使你免于死亡。当你生命值降至0从而{@condition 昏迷}时，如果精魄在你的120尺之内，你可以使精魄降至0生命值。之后你就会恢复一半生命值，并立刻站起来。",
+				"一旦你使用这一特性，直到你结束一次长休前你不能再次使用。"
 			]
 		},
 		{
