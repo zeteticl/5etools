@@ -1129,7 +1129,7 @@ Parser.spDurationToFull = function (dur) {
 			case "instant":
 				return `即效${d.condition ? ` (${d.condition})` : ""}`;
 			case "timed":
-				return `${d.concentration ? "专注，" : ""}${d.concentration ? "" : d.duration.upTo ? "" : ""}${d.concentration || d.duration.upTo ? "至多" : ""}${d.duration.amount} ${d.duration.amount === 1 ? Parser.translateKeyToDisplay(d.duration.type) : Parser.translateKeyToDisplay(d.duration.type)}`;
+				return `${d.concentration ? "专注，" : ""}${d.concentration ? "" : d.duration.upTo ? "" : ""}${d.concentration || d.duration.upTo ? "至多 " : ""}${d.duration.amount} ${d.duration.amount === 1 ? Parser.translateKeyToDisplay(d.duration.type) : Parser.translateKeyToDisplay(d.duration.type)}`;
 			case "permanent": {
 				if (d.ends) {
 					const endsToJoin = d.ends.map(m => Parser.spEndTypeToFull(m));
