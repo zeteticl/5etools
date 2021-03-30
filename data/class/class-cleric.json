@@ -1529,8 +1529,10 @@
 					]
 				},
 				{
-					"name": "Peace Domain",
-					"shortName": "Peace",
+					"name": "和平领域",
+					"ENG_name": "Peace Domain",
+					"shortName": "和平",
+					"ENG_shortName": "Peace",
 					"source": "TCE",
 					"page": 32,
 					"additionalSpells": [
@@ -1560,17 +1562,19 @@
 						}
 					],
 					"subclassFeatures": [
-						"Peace Domain|Cleric||Peace|TCE|1",
-						"Channel Divinity: Balm of Peace|Cleric||Peace|TCE|2",
-						"Protective Bond|Cleric||Peace|TCE|6",
-						"Potent Spellcasting|Cleric||Peace|TCE|8",
+						"和平领域|Cleric||Peace|TCE|1",
+						"引导神力：和平抚慰|Cleric||Peace|TCE|2",
+						"保护联结|Cleric||Peace|TCE|6",
+						"强力施法|Cleric||Peace|TCE|8",
 						"受祝击|Cleric||Peace|TCE|8|TCE",
-						"Expansive Bond|Cleric||Peace|TCE|17"
+						"增强联结|Cleric||Peace|TCE|17"
 					]
 				},
 				{
-					"name": "Twilight Domain",
-					"shortName": "Twilight",
+					"name": "暮光领域",
+					"ENG_name": "Twilight Domain",
+					"shortName": "暮光",
+					"ENG_shortName": "Twilight",
 					"source": "TCE",
 					"page": 34,
 					"additionalSpells": [
@@ -1600,12 +1604,12 @@
 						}
 					],
 					"subclassFeatures": [
-						"Twilight Domain|Cleric||Twilight|TCE|1",
-						"Channel Divinity: Twilight Sanctuary|Cleric||Twilight|TCE|2",
-						"Steps of Night|Cleric||Twilight|TCE|6",
-						"Divine Strike|Cleric||Twilight|TCE|8",
+						"暮光领域|Cleric||Twilight|TCE|1",
+						"引导神力：暮光圣域|Cleric||Twilight|TCE|2",
+						"午夜飞步|Cleric||Twilight|TCE|6",
+						"神圣打击|Cleric||Twilight|TCE|8",
 						"受祝击|Cleric||Twilight|TCE|8|TCE",
-						"Twilight Shroud|Cleric||Twilight|TCE|17"
+						"暮光守护|Cleric||Twilight|TCE|17"
 					]
 				}
 			],
@@ -5040,7 +5044,8 @@
 			]
 		},
 		{
-			"name": "Peace Domain",
+			"name": "和平领域",
+			"ENG_name": "Peace Domain",
 			"source": "TCE",
 			"page": 32,
 			"className": "Cleric",
@@ -5049,14 +5054,14 @@
 			"subclassSource": "TCE",
 			"level": 1,
 			"entries": [
-				"The balm of peace thrives at the heart of healthy communities, between friendly nations, and in the souls of the kindhearted. The gods of peace inspire people of all sorts to resolve conflict and to stand up against those forces that try to prevent peace from flourishing. See the Peace Deities table for a list of some of the gods associated with this domain.",
-				"Clerics of the Peace Domain preside over the signing of treaties, and they are often asked to arbitrate in disputes. These clerics' blessings draw people together and help them shoulder one another's burdens, and the clerics' magic aids those who are driven to fight for the way of peace.",
+				"在每个健康的社群，友好的诸国，以及善良的灵魂心中，永远存在着对和平的向往。和平之神们激励着所有人平息冲突，并对试图打破和平的力量奋起反抗。和平神祗表格中包含了一部分拥有该领域的神明。",
+				"平领域的牧师会主持条约的签订仪式，同时还常常被请求秉公裁断，解决争端。这些牧师的祝福让人们众志成城，同舟共济。而这些牧师的魔法对于那些为和平而战之人则如同雪中送炭。",
 				{
 					"type": "table",
-					"caption": "Peace Deities",
+					"caption": "和平神祗",
 					"colLabels": [
-						"Example Deity",
-						"Pantheon"
+						"神祗范例",
+						"神系"
 					],
 					"colStyles": [
 						"col-6 text-center",
@@ -5064,51 +5069,51 @@
 					],
 					"rows": [
 						[
-							"Angharradh",
-							"Elven"
+							"安格芮丝 Angharradh",
+							"精灵"
 						],
 						[
-							"Berronar Truesilver",
-							"Dwarven"
+							"蓓伦妮·真银 Berronar Truesilver",
+							"矮人"
 						],
 						[
-							"Boldrei",
-							"Eberron"
+							"博得雷 Boldrei",
+							"艾伯伦"
 						],
 						[
-							"Cyrrollalee",
-							"Halfling"
+							"希劳拉妮 Cyrrollalee",
+							"半身人"
 						],
 						[
-							"Eldath",
-							"Forgotten Realms"
+							"埃达丝 Eldath",
+							"被遗忘的国度"
 						],
 						[
-							"Gaerdal",
-							"Ironhand Gnomish"
+							"盖尔达尔·铁手 Gaerdal",
+							"侏儒"
 						],
 						[
-							"Paladine",
-							"Dragonlance"
+							"帕拉丁 Paladine",
+							"龙枪"
 						],
 						[
-							"Rao",
-							"Greyhawk"
+							"拉奥 Rao",
+							"灰鹰"
 						]
 					]
 				},
 				{
-					"name": "Domain Spells",
+					"name": "领域法术",
 					"type": "entries",
 					"entries": [
-						"{@i 1st-level Peace Domain feature}",
-						"You gain domain spells at the cleric levels listed in the Peace Domain Spells table. See the Divine Domain class feature for how domain spells work.",
+						"{@i 1级和平领域特性}",
+						"当你获得和平领域法术表中所对应的牧师等级时，你将同时习得这些法术。查看玩家手册中的神圣领域职业特性来了解什么是领域法术。",
 						{
 							"type": "table",
-							"caption": "Peace Domain Spells",
+							"caption": "和平领域法术",
 							"colLabels": [
-								"Cleric Level",
-								"Spells"
+								"牧师等级",
+								"法术"
 							],
 							"colStyles": [
 								"col-2 text-center",
@@ -5141,16 +5146,17 @@
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Implement of Peace|Cleric||Peace|TCE|1"
+					"subclassFeature": "和平执行|Cleric||Peace|TCE|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Emboldening Bond|Cleric||Peace|TCE|1"
+					"subclassFeature": "勇气联结|Cleric||Peace|TCE|1"
 				}
 			]
 		},
 		{
-			"name": "Emboldening Bond",
+			"name": "勇气联结",
+			"ENG_name": "Emboldening Bond",
 			"source": "TCE",
 			"page": 32,
 			"className": "Cleric",
@@ -5160,13 +5166,14 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"{@i 1st-level Peace Domain feature}",
-				"You can forge an empowering bond among people who are at peace with one another. As an action, you choose a number of willing creatures within 30 feet of you (this can include yourself) equal to your proficiency bonus. You create a magical bond among them for 10 minutes or until you use this feature again. While any bonded creature is within 30 feet of another, the creature can roll a {@dice d4} and add the number rolled to an attack roll, an ability check, or a saving throw it makes. Each creature can add the {@dice d4} no more than once per turn.",
-				"You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+				"{@i 1级和平领域特性}",
+				"你创造出一条联结，赋予彼此之间和平相处的人以力量。以一个动作，你可以选择30尺内等同于你熟练加值数量的自愿生物（可以包括你自己）。你在他们之间创造出一条持续10分钟或直到你再次使用该特性的魔法联结。当任意两个联结生物在彼此30尺内，其进行攻击检定，属性检定或豁免检定时，可以额外掷一次{@dice d4}并加在其结果上。每个生物每回合只能加一次{@dice d4}。",
+				"你可以使用此特性的次数等同于你的熟练加值，当你完成一次长休时恢复所有使用次数。"
 			]
 		},
 		{
-			"name": "Implement of Peace",
+			"name": "和平执行",
+			"ENG_name": "Implement of Peace",
 			"source": "TCE",
 			"page": 32,
 			"className": "Cleric",
@@ -5176,12 +5183,13 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"{@i 1st-level Peace Domain feature}",
-				"You gain proficiency in the {@skill 洞悉}, {@skill 表演}, or {@skill 说服} skill (your choice)."
+				"{@i 1级和平领域特性}",
+				"你获得{@skill 洞悉}、{@skill 表演}或{@skill 说服}的熟练项（由你选择）。"
 			]
 		},
 		{
-			"name": "Channel Divinity: Balm of Peace",
+			"name": "引导神力：和平抚慰",
+			"ENG_name": "Channel Divinity: Balm of Peace",
 			"source": "TCE",
 			"page": 32,
 			"className": "Cleric",
@@ -5191,12 +5199,13 @@
 			"level": 2,
 			"header": 2,
 			"entries": [
-				"{@i 2nd-level Peace Domain feature}",
-				"You can use your Channel Divinity to make your very presence a soothing balm. As an action, you can move up to your speed, without provoking opportunity attacks, and when you move within 5 feet of any other creature during this action, you can restore a number of hit points to that creature equal to {@dice 2d6} + your Wisdom modifier (minimum of 1 hit point). A creature can receive this healing only once whenever you take this action."
+				"{@i 2级和平领域特性}",
+				"你可以用引导神力来减轻痛苦，慰籍心灵。以一个动作，你可以移动等同于你速度的距离，此次移动不会引发借机攻击。当你在此动作期间移动到了任何其他生物5尺内时，你可以恢复其{@dice 2d6} + 你的感知调整值（最低为1）的生命值。你采取此动作时，一个生物只能被治疗一次。"
 			]
 		},
 		{
-			"name": "Protective Bond",
+			"name": "保护联结",
+			"ENG_name": "Protective Bond",
 			"source": "TCE",
 			"page": 32,
 			"className": "Cleric",
@@ -5206,8 +5215,8 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"{@i 6th-level Peace Domain feature}",
-				"The bond you forge between people helps them protect each other. When a creature affected by your Emboldening Bond feature is about to take damage, a second bonded creature within 30 feet of the first can use its reaction to teleport to an unoccupied space within 5 feet of the first creature. The second creature then takes all the damage instead."
+				"{@i 6级和平领域特性}",
+				"你创造的联结帮助人们同甘共苦。当一个受到你勇气联结影响的生物即将受到伤害时，30尺内的另一个联结生物可以用它的反应来传送到第一个生物的5尺内，并为其承受所有伤害。"
 			]
 		},
 		{
@@ -5228,7 +5237,8 @@
 			]
 		},
 		{
-			"name": "Potent Spellcasting",
+			"name": "强力施法",
+			"ENG_name": "Potent Spellcasting",
 			"source": "TCE",
 			"page": 32,
 			"className": "Cleric",
@@ -5238,12 +5248,13 @@
 			"level": 8,
 			"header": 2,
 			"entries": [
-				"{@i 8th-level Peace Domain feature}",
-				"You add your Wisdom modifier to the damage you deal with any cleric cantrip."
+				"{@i 8级和平领域特性}",
+				"你施展牧师戏法造成伤害时，可以再加上你的感知调整值。"
 			]
 		},
 		{
-			"name": "Expansive Bond",
+			"name": "增强联结",
+			"ENG_name": "Expansive Bond",
 			"source": "TCE",
 			"page": 32,
 			"className": "Cleric",
@@ -5253,12 +5264,13 @@
 			"level": 17,
 			"header": 2,
 			"entries": [
-				"{@i 17th-level Peace Domain feature}",
-				"The benefits of your Emboldening Bond and Protective Bond features now work when the creatures are within 60 feet of each other. Moreover, when a creature uses Protective Bond to take someone else's damage, the creature has resistance to that damage."
+				"{@i 17级和平领域特性}",
+				"你的勇气联结和保护联结的生效范围变为联结生物在彼此60尺内。此外，当生物使用保护联结来为其他人承受伤害时，该生物对那次伤害具有抗性。"
 			]
 		},
 		{
-			"name": "Twilight Domain",
+			"name": "暮光领域",
+			"ENG_name": "Twilight Domain",
 			"source": "TCE",
 			"page": 34,
 			"className": "Cleric",
@@ -5267,14 +5279,14 @@
 			"subclassSource": "TCE",
 			"level": 1,
 			"entries": [
-				"The twilit transition from light into darkness often brings calm and even joy, as the day's labors end and the hours of rest begin. The darkness can also bring terrors, but the gods of twilight guard against the horrors of the night.",
-				"Clerics who serve these deities-examples of which appear on the Twilight Deities table-bring comfort to those who seek rest and protect them by venturing into the encroaching darkness to ensure that the dark is a comfort, not a terror.",
+				"在光明隐没，黑暗显现的迷离境界中，人们结束了白天的工作并开始休息。这是平静之时，这是欢愉之时，这是暮光之时。尽管令人恐惧之物潜伏于黑暗之中，但莫要惊慌，因暮光之神们将抵挡这些夜之恐怖。",
+				"侍奉于暮光之神们——暮光神祗表格中给了例子——的牧师为渴望安睡之人带来慰籍，并将为保护他们而前往迫近的黑暗。他们将保证夜晚不再令人恐惧，而会令人舒适。",
 				{
 					"type": "table",
-					"caption": "Twilight Deities",
+					"caption": "暮光神祗",
 					"colLabels": [
-						"Example Deity",
-						"Pantheon"
+						"神祗范例",
+						"神系"
 					],
 					"colStyles": [
 						"col-6 text-center",
@@ -5282,51 +5294,51 @@
 					],
 					"rows": [
 						[
-							"Boldrei",
-							"Eberron"
+							"博得雷 Boldrei",
+							"艾伯伦"
 						],
 						[
-							"Celestian",
-							"Greyhawk"
+							"塞莱斯坦 Celestian",
+							"灰鹰"
 						],
 						[
-							"Dol Arrah",
-							"Eberron"
+							"杜哈拉 Dol Arrah",
+							"艾伯伦"
 						],
 						[
-							"Helm",
-							"Forgotten Realms"
+							"海姆 Helm",
+							"被遗忘的国度"
 						],
 						[
-							"Ilmater",
-							"Forgotten Realms"
+							"伊尔梅特 Ilmater",
+							"被遗忘的国度"
 						],
 						[
-							"Mishakal",
-							"Dragonlance"
+							"米莎凯 Mishakal",
+							"龙枪"
 						],
 						[
-							"Selûne",
-							"Forgotten Realms"
+							"塞伦涅 Selûne",
+							"被遗忘的国度"
 						],
 						[
-							"Yondalla",
-							"Halfling"
+							"悠妲拉 Yondalla",
+							"半身人"
 						]
 					]
 				},
 				{
-					"name": "Domain Spells",
+					"name": "领域法术",
 					"type": "entries",
 					"entries": [
-						"{@i 1st-level Twilight Domain feature}",
-						"You gain domain spells at the cleric levels listed in the Twilight Domain Spells table. See the Divine Domain class feature for how domain spells work.",
+						"{@i 1级暮光领域特性}",
+						"当你获得暮光领域法术表中所对应的牧师等级时，你将同时习得这些法术。查看玩家手册中的神圣领域职业特性来了解什么是领域法术。",
 						{
 							"type": "table",
-							"caption": "Twilight Domain Spells",
+							"caption": "暮光领域法术",
 							"colLabels": [
-								"Cleric Level",
-								"Spells"
+								"牧师等级",
+								"法术"
 							],
 							"colStyles": [
 								"col-2 text-center",
@@ -5359,20 +5371,21 @@
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Proficiencies|Cleric||Twilight|TCE|1"
+					"subclassFeature": "附赠熟练项|Cleric||Twilight|TCE|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Eyes of Night|Cleric||Twilight|TCE|1"
+					"subclassFeature": "黑夜明目|Cleric||Twilight|TCE|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Vigilant Blessing|Cleric||Twilight|TCE|1"
+					"subclassFeature": "警觉赐福|Cleric||Twilight|TCE|1"
 				}
 			]
 		},
 		{
-			"name": "Bonus Proficiencies",
+			"name": "附赠熟练项",
+			"ENG_name": "Bonus Proficiencies",
 			"source": "TCE",
 			"page": 34,
 			"className": "Cleric",
@@ -5382,12 +5395,13 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"{@i 1st-level Twilight Domain feature}",
-				"You gain proficiency with martial weapons and heavy armor."
+				"{@i 1级暮光领域特性}",
+				"你获得军用武器和重甲的熟练项。"
 			]
 		},
 		{
-			"name": "Eyes of Night",
+			"name": "黑夜明目",
+			"ENG_name": "Eyes of Night",
 			"source": "TCE",
 			"page": 34,
 			"className": "Cleric",
@@ -5397,13 +5411,14 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"{@i 1st-level Twilight Domain feature}",
-				"You can see through the deepest gloom. You have {@sense 黑暗视觉} out to a range of 300 feet. In that radius, you can see in dim light as if it were bright light and in darkness as if it were dim light.",
-				"As an action, you can magically share the {@sense 黑暗视觉} of this feature with willing creatures you can see within 10 feet of you, up to a number of creatures equal to your Wisdom modifier (minimum of one creature). The shared {@sense 黑暗视觉} lasts for 1 hour. Once you share it, you can't do so again until you finish a long rest, unless you expend a spell slot of any level to share it again."
+				"{@i 1级暮光领域特性}",
+				"你的双眼可以洞穿最深沉的黑暗。你获得300尺的{@sense 黑暗视觉}，而你的视力在微光光照下视为等同于明亮光照，而在黑暗中则视为等同于微光光照。",
+				"以一个动作，你可以用魔法将{@sense 黑暗视觉}分享给你10尺内最多等同于你感知调整值数量（最少1名生物）的可见自愿生物。共享的{@sense 黑暗视觉}持续1小时。一旦如此做，直到你完成一次长休或消耗一个任意环阶的法术位，你无法再次分享此特性。"
 			]
 		},
 		{
-			"name": "Vigilant Blessing",
+			"name": "警觉赐福",
+			"ENG_name": "Vigilant Blessing",
 			"source": "TCE",
 			"page": 34,
 			"className": "Cleric",
@@ -5413,12 +5428,13 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"{@i 1st-level Twilight Domain feature}",
-				"The night has taught you to be vigilant. As an action, you give one creature you touch (including possibly yourself) advantage on the next initiative roll the creature makes. This benefit ends immediately after the roll or if you use this feature again."
+				"{@i 1级暮光领域特性}",
+				"夜晚教会了你时刻保持警惕。你能用一个动作触碰一个生物（包括你自己），并赋予该生物下次先攻检定优势。此增益在该生物骰先攻检定或你再次使用此特性后立刻结束。"
 			]
 		},
 		{
-			"name": "Channel Divinity: Twilight Sanctuary",
+			"name": "引导神力：暮光圣域",
+			"ENG_name": "Channel Divinity: Twilight Sanctuary",
 			"source": "TCE",
 			"page": 34,
 			"className": "Cleric",
@@ -5428,20 +5444,21 @@
 			"level": 2,
 			"header": 2,
 			"entries": [
-				"{@i 2nd-level Twilight Domain feature}",
-				"You can use your Channel Divinity to refresh your allies with soothing twilight.",
-				"As an action, you present your holy symbol, and a sphere of twilight emanates from you. The sphere is centered on you, has a 30-foot radius, and is filled with dim light. The sphere moves with you, and it lasts for 1 minute or until you are {@condition incapacitated} or die. Whenever a creature (including you) ends its turn in the sphere, you can grant that creature one of these benefits:",
+				"{@i 2级暮光领域特性}",
+				"你可以引导神力，用柔和的暮光来振作你盟友的精神。",
+				"你用一个动作展示圣徽并使自身散发球体范围的暮光。球体以你为源心，具有30尺半径，其范围内被微光光照充斥。除非你{@condition 无力}或死亡，否则球体跟随你移动并持续存在1分钟。当一个生物（包括你）在球体内结束自己回合时，你能给予它以下好处之一：",
 				{
 					"type": "list",
 					"items": [
-						"You grant it temporary hit points equal to {@dice 1d6} plus your cleric level.",
-						"You end one effect on it causing it to be {@condition charmed} or {@condition frightened}."
+						"使目标获得{@dice 1d6}加你牧师等级的临时生命。",
+						"使目标结束一个正使他{@condition 魅惑}或{@condition 恐惧}的效果。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Steps of Night",
+			"name": "午夜飞步",
+			"ENG_name": "Steps of Night",
 			"source": "TCE",
 			"page": 34,
 			"className": "Cleric",
@@ -5451,8 +5468,8 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"{@i 6th-level Twilight Domain feature}",
-				"You can draw on the mystical power of night to rise into the air. As a bonus action when you are in dim light or darkness, you can magically give yourself a flying speed equal to your walking speed for 1 minute. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+				"{@i 6级暮光领域特性}",
+				"你使用夜晚的神秘力量来飞上空中。当你处于微光光照或黑暗时，你能以一个附赠动作用魔法使自己获得等于自身步行速度的飞行速度，持续1分钟。你可以使用此特性的次数等同于你的熟练加值，当你完成一次长休时恢复所有使用次数。"
 			]
 		},
 		{
@@ -5473,7 +5490,8 @@
 			]
 		},
 		{
-			"name": "Divine Strike",
+			"name": "神圣打击",
+			"ENG_name": "Divine Strike",
 			"source": "TCE",
 			"page": 34,
 			"className": "Cleric",
@@ -5483,12 +5501,13 @@
 			"level": 8,
 			"header": 2,
 			"entries": [
-				"{@i 8th-level Twilight Domain feature}",
-				"You gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra {@damage 1d8} radiant damage. When you reach 14th level, the extra damage increases to {@dice 2d8}."
+				"{@i 8级暮光领域特性}",
+				"你可以使你的武器充满神圣能量。你在每个自己回合里有一次机会，可以在用武器攻击命中某生物时，使该攻击额外造成{@dice 1d8}光耀伤害。14级时，该伤害提升到{@dice 2d8}。"
 			]
 		},
 		{
-			"name": "Twilight Shroud",
+			"name": "暮光守护",
+			"ENG_name": "Twilight Shroud",
 			"source": "TCE",
 			"page": 34,
 			"className": "Cleric",
@@ -5498,8 +5517,8 @@
 			"level": 17,
 			"header": 2,
 			"entries": [
-				"{@i 17th-level Twilight Domain feature}",
-				"The twilight that you summon offers a protective embrace: you and your allies have half cover while in the sphere created by your Twilight Sanctuary."
+				"{@i 17级暮光领域特性}",
+				"暮光拥抱着你并提供保护：处于你暮光圣域的球体内的你和你的盟友处于半掩蔽。"
 			]
 		},
 		{
