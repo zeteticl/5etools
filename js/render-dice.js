@@ -546,7 +546,7 @@ Renderer.dice = {
 			const userPb = await InputUiUtil.pGetUserNumber({
 				min: 0,
 				int: true,
-				title: "Enter Proficiency Bonus",
+				title: "输入熟练加值",
 				default: 2,
 				storageKey_default: "dice.playerProficiencyBonus",
 				isGlobal_default: true,
