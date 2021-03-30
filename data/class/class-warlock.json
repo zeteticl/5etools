@@ -354,7 +354,7 @@
 				"契约恩赐|Warlock||3",
 				"属性值提升|Warlock||4",
 				"Proficiency Versatility|Warlock||4|UAClassFeatureVariants",
-				"Eldritch Versatility|Warlock||4|TCE",
+				"魔能选项|Warlock||4|TCE",
 				{
 					"classFeature": "异界宗主能力|Warlock||6",
 					"gainSubclassFeature": true
@@ -1103,8 +1103,10 @@
 					]
 				},
 				{
-					"name": "The Fathomless",
-					"shortName": "Fathomless",
+					"name": "深海意志",
+					"ENG_name": "The Fathomless",
+					"shortName": "深海意志",
+					"ENG_shortName":"Fathomless",
 					"source": "TCE",
 					"page": 72,
 					"additionalSpells": [
@@ -1134,16 +1136,18 @@
 						}
 					],
 					"subclassFeatures": [
-						"The Fathomless|Warlock||Fathomless|TCE|1",
-						"Oceanic Soul|Warlock||Fathomless|TCE|6",
-						"Guardian Coil|Warlock||Fathomless|TCE|6",
-						"Grasping Tentacles|Warlock||Fathomless|TCE|10",
-						"Fathomless Plunge|Warlock||Fathomless|TCE|14"
+						"深海意志|Warlock||Fathomless|TCE|1",
+						"海渊魂灵|Warlock||Fathomless|TCE|6",
+						"守卫缠绕|Warlock||Fathomless|TCE|6",
+						"擒握触手|Warlock||Fathomless|TCE|10",
+						"海渊传送|Warlock||Fathomless|TCE|14"
 					]
 				},
 				{
-					"name": "The Genie",
-					"shortName": "Genie",
+					"name": "巨灵宗主",
+					"ENG_name": "The Genie",
+					"shortName": "巨灵宗主",
+					"ENG_shortName": "Genie",
 					"source": "TCE",
 					"page": 73,
 					"additionalSpells": [
@@ -1257,10 +1261,10 @@
 						}
 					],
 					"subclassFeatures": [
-						"The Genie|Warlock||Genie|TCE|1",
-						"Elemental Gift|Warlock||Genie|TCE|6",
-						"Sanctuary Vessel|Warlock||Genie|TCE|10",
-						"Limited Wish|Warlock||Genie|TCE|14"
+						"巨灵宗主|Warlock||Genie|TCE|1",
+						"元素赐福|Warlock||Genie|TCE|6",
+						"器皿庇护所 |Warlock||Genie|TCE|10",
+						"有限许愿术|Warlock||Genie|TCE|14"
 					]
 				}
 			],
@@ -1695,7 +1699,8 @@
 			]
 		},
 		{
-			"name": "Eldritch Versatility",
+			"name": "魔能选项",
+			"ENG_name": "Eldritch Versatility",
 			"source": "TCE",
 			"page": 70,
 			"className": "Warlock",
@@ -1703,17 +1708,17 @@
 			"level": 4,
 			"isClassFeatureVariant": true,
 			"entries": [
-				"{@i 4th-level warlock {@variantrule optional class features|tce|optional feature}}",
-				"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing a change of focus in your occult studies:",
+				"{@i 4级契术师{@variantrule optional class features|tce|可选特性}}",
+				"每当你的契术师达到了可以获得属性值提升的等级，你可以做以下的一件事来代表你在奥秘研究当中重点的转变。",
 				{
 					"type": "list",
 					"items": [
-						"Replace one cantrip you learned from this class's Pact Magic feature with another cantrip from the {@filter warlock spell list|spells|level=0|class=Warlock}.",
-						"Replace the option you chose for the Pact Boon feature with one of that feature's other options.",
-						"If you're 12th level or higher, replace one spell from your Mystic Arcanum feature with another warlock spell of the same level."
+						"可以将你从该职业契约法术中学到的戏法替换为另一个{@filter 契术师法术列表|spells|level=0|class=Warlock}中的戏法。",
+						"可以将你从魔契恩泽中选择的一个选项替换为此魔契的另一选项。",
+						"如果你的角色已经12级或者更高，你可以将一个玄奥秘法的法术替换为另一个同环契术师法术。"
 					]
 				},
-				"If this change makes you ineligible for any of your Eldritch Invocations, you must also replace them now, choosing invocations for which you qualify."
+				"如果这些改变让你不再符合某些魔能祈唤的条件，你必须现在选择那些符合你条件的祈唤来替换它们。"
 			]
 		},
 		{
@@ -2453,7 +2458,8 @@
 			]
 		},
 		{
-			"name": "The Fathomless",
+			"name": "深海意志",
+			"ENG_name": "The Fathomless",
 			"source": "TCE",
 			"page": 72,
 			"className": "Warlock",
@@ -2462,21 +2468,22 @@
 			"subclassSource": "TCE",
 			"level": 1,
 			"entries": [
-				"You have plunged into a pact with the deeps. An entity of the ocean, the Elemental Plane of Water, or another otherworldly sea now allows you to draw on its thalassic power. Is it merely using you to learn about terrestrial realms, or does it want you to open cosmic floodgates and drown the world?",
-				"Perhaps you were born into a generational cult that venerates the Fathomless and its spawn. Or you might have been shipwrecked and on the brink of drowning when your patron's grasp offered you a chance at life. Whatever the reason for your pact, the sea and its unknown depths call to you.",
-				"Entities of the deep that might empower a warlock include krakens, ancient water elementals, godlike hallucinations dreamed into being by kuo-toa, merfolk demigods, and sea hag covens.",
+				"你已经浸没于和深渊的契约。你现在可以汲取整个大洋，水元素位面或者其他的异界海洋的无尽力量。你的宗主仅仅是想利用你去了解陆地，或者它希望你打开深海的阀门去淹没整个世界？",
+				"也许你生为祂的信徒，你的家族世代崇拜深海宗主和祂眷族。或者你曾经遭遇海难，在溺死的边缘被你的宗主所拯救，祂给了你生存的机会。不管你为何和祂缔结契约，大海和它那未知的深渊听从你的召唤。",
+				"能够赋予契术师力量的深渊存在包括克拉肯们（泛指神话中的海妖），古老的元素生物，寇涛鱼人神话幻想中的存在，人鱼半神和海鬼婆集会。",
 				{
 					"type": "entries",
-					"name": "Expanded Spell List",
+					"name": "扩展法术列表",
+					"ENG_name": "Expanded Spell List",
 					"entries": [
-						"{@i 1st-level Fathomless feature}",
-						"The Fathomless lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
+						"{@i 1级深海意志特性}",
+						"当你学习一个契术师法术时，你的深海宗主赐予你将以下法术加入契术师法术列表进行选择的权力。",
 						{
 							"type": "table",
-							"caption": "Fathomless Expanded Spells",
+							"caption": "深海意志扩展法术",
 							"colLabels": [
-								"Spell Level",
-								"Spells"
+								"法术环位",
+								"法术"
 							],
 							"colStyles": [
 								"col-2 text-center",
@@ -2484,24 +2491,24 @@
 							],
 							"rows": [
 								[
-									"1st",
+									"1环",
 									"{@spell 造水/枯水术}, {@spell 雷鸣波}"
 								],
 								[
-									"2nd",
+									"2环",
 									"{@spell 造风术}, {@spell 沉默术}"
 								],
 								[
-									"3rd",
+									"3环",
 									"{@spell 闪电束}, {@spell 雪雨暴}"
 								],
 								[
-									"4th",
-									"{@spell 操控水体}, {@spell summon elemental|tce} (water only)"
+									"4环",
+									"{@spell 操控水体}, {@spell summon elemental|tce} （仅限水元素）"
 								],
 								[
-									"5th",
-									"{@spell 毕格比之掌} (appears as a tentacle), {@spell 寒冰锥}"
+									"5环",
+									"{@spell 毕格比之掌} （以触手形式显现）, {@spell 寒冰锥}"
 								]
 							]
 						}
@@ -2509,16 +2516,17 @@
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Tentacle of the Deeps|Warlock||Fathomless|TCE|1"
+					"subclassFeature": "深海触手|Warlock||Fathomless|TCE|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Gift of the Sea|Warlock||Fathomless|TCE|1"
+					"subclassFeature": "海洋馈赠|Warlock||Fathomless|TCE|1"
 				}
 			]
 		},
 		{
-			"name": "Gift of the Sea",
+			"name": "海洋馈赠",
+			"ENG_name": "Gift of the Sea",
 			"source": "TCE",
 			"page": 72,
 			"className": "Warlock",
@@ -2528,12 +2536,13 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"{@i 1st-level Fathomless feature}",
-				"You gain a swimming speed of 40 feet, and you can breathe underwater."
+				"{@i 1级深海意志特性}",
+				"你游泳速度为40尺，且可以在水下呼吸。"
 			]
 		},
 		{
-			"name": "Tentacle of the Deeps",
+			"name": "深海触手",
+			"ENG_name": "Tentacle of the Deeps",
 			"source": "TCE",
 			"page": 72,
 			"className": "Warlock",
@@ -2543,15 +2552,16 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"{@i 1st-level Fathomless feature}",
-				"You can magically summon a spectral tentacle that strikes at your foes. As a bonus action, you create a 10-foot-long tentacle at a point you can see within 60 feet of you. The tentacle lasts for 1 minute or until you use this feature to create another tentacle.",
-				"When you create the tentacle, you can make a melee spell attack against one creature within 10 feet of it. On a hit, the target takes {@damage 1d8} cold damage, and its speed is reduced by 10 feet until the start of your next turn. When you reach 10th level in this class, the damage increases to {@dice 2d8}.",
-				"As a bonus action on your turn, you can move the tentacle up to 30 feet and repeat the attack.",
-				"You can summon the tentacle a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+				"{@i 1级深海意志特性}",
+				"你可以以魔法的形式召唤一根幽灵触手攻击你的敌人。在你60尺的可视范围内，你可以以一个附赠动作创造一根10尺长的触手。这根触手可以持续一分钟，或于你使用该能力创造另一根触手时终止。",
+				"当你创造触手后，你可以对其10尺内的目标进行一次近战法术攻击。目标受到{@damage 1d8}冷冻伤害，且直到你的下一回合，目标速度降低10尺。当你达到契术师10级时，造成的伤害提高至{@dice 2d8}。",
+				"在你的回合中，你可以使用一个附赠动作将触手移动至多30尺并重复以上攻击。",
+				"你可召唤的触手的次数等于你的熟练加值，且可以在结束长休之后恢复所有使用次数。"
 			]
 		},
 		{
-			"name": "Guardian Coil",
+			"name": "守卫缠绕",
+			"ENG_name": "Guardian Coil",
 			"source": "TCE",
 			"page": 72,
 			"className": "Warlock",
@@ -2561,12 +2571,13 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"{@i 6th-level Fathomless feature}",
-				"Your Tentacle of the Deeps can defend you and others, interposing itself between them and harm. When you or a creature you can see takes damage while within 10 feet of the tentacle, you can use your reaction to choose one of those creatures and reduce the damage to that creature by {@dice 1d8}. When you reach 10th level in this class, the damage reduced by the tentacle increases to {@dice 2d8}."
+				"{@i 6级深海意志特性}",
+				"你的深海触手可以保护你和其他人，用自己将你们和危险隔开。当你或你可以看见的一个位于触手10尺内的生物承受伤害时，你可以使用反应选择这些生物中的一个并使该生物遭受的伤害减少{@dice 1d8}。当你达到契术师10级时，触手可以抵消的伤害增加到{@dice 2d8}。"
 			]
 		},
 		{
-			"name": "Oceanic Soul",
+			"name": "海渊魂灵",
+			"ENG_name": "Oceanic Soul",
 			"source": "TCE",
 			"page": 72,
 			"className": "Warlock",
@@ -2576,12 +2587,13 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"{@i 6th-level Fathomless feature}",
-				"You are now even more at home in the depths. You gain resistance to cold damage. In addition, when you are fully submerged, any creature that is also fully submerged can understand your speech, and you can understand theirs."
+				"{@i 6级深海意志特性}",
+				"深海对你来说如家一般熟悉。你获得对于冷冻伤害的抗性。此外，当你被浸没时，任何完全被浸没的生物都能听懂你的语言，你也能听懂他们的。"
 			]
 		},
 		{
-			"name": "Grasping Tentacles",
+			"name": "擒握触手",
+			"ENG_name": "Grasping Tentacles",
 			"source": "TCE",
 			"page": 72,
 			"className": "Warlock",
@@ -2591,13 +2603,14 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"{@i 10th-level Fathomless feature}",
-				"You learn the spell {@spell 艾伐黑触手}. It counts as a warlock spell for you, but it doesn't count against the number of spells you know. You can also cast it once without a spell slot, and you regain the ability to do so when you finish a long rest.",
-				"Whenever you cast this spell, your patron's magic bolsters you, granting you a number of temporary hit points equal to your warlock level. Moreover, damage can't break your concentration on this spell."
+				"{@i 10级深海意志特性}",
+				"你获得法术{@spell 艾伐黑触手}。它对你来说是一个契术师法术，但是它并不算作你已知的法术数量。你可以在不消耗法术位的情况下使用该法术一次，且该能力于你完成一次长休后恢复。",
+				"每当你使用这个法术，祂的魔力鼓舞着你，并且赐予你和你契术师等级一致的临时生命值。此外，对你的伤害并不会破坏你对于该法术的专注。"
 			]
 		},
 		{
-			"name": "Fathomless Plunge",
+			"name": "海渊传送",
+			"ENG_name": "Fathomless Plunge",
 			"source": "TCE",
 			"page": 72,
 			"className": "Warlock",
@@ -2607,13 +2620,14 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"{@i 14th-level Fathomless feature}",
-				"You can magically open temporary conduits to watery destinations. As an action, you can teleport yourself and up to five other willing creatures that you can see within 30 feet of you. Amid a whirl of tentacles, you all vanish and then reappear up to 1 mile away in a body of water you've seen (pond size or larger) or within 30 feet of it, each of you appearing in an unoccupied space within 30 feet of the others.",
-				"Once you use this feature, you can't use it again until you finish a short or long rest."
+				"{@i 14级深海意志特性}",
+				"你可以魔法性地打开一个前往水域目的地的临时通道。你可以使用一个标准动作传送自己和最多五个自愿、且在30尺可视范围内的生物。在一团触须的漩涡中，你们全部消失，然后在至多1英里以内的你曾见过的水域（至少为池塘大小）或者它的30尺范围内。你们当中的每一个人都出现在距离其他人30尺以内的一个空的空间内。",
+				"一旦你使用了这一特性，你不能再次使用它，直到你完成一次短休或长休。"
 			]
 		},
 		{
-			"name": "The Genie",
+			"name": "巨灵宗主",
+			"ENG_name": "The Genie",
 			"source": "TCE",
 			"page": 73,
 			"className": "Warlock",
@@ -2622,15 +2636,15 @@
 			"subclassSource": "TCE",
 			"level": 1,
 			"entries": [
-				"You have made a pact with one of the rarest kinds of genie, a noble genie. Such entities rule vast fiefs on the Elemental Planes and have great influence over lesser genies and elemental creatures. Noble genies are varied in their motivations, but most are arrogant and wield power that rivals that of lesser deities. They delight in turning the table on mortals, who often bind genies into servitude, and readily enter into pacts that expand their reach.",
-				"You choose your patron's kind or determine it randomly, using the Genie Kind table.",
+				"你与巨灵中的稀有群体，巨灵贵族缔结了契约。巨灵贵族乃是广阔的元素位面的统治者，并对其他次等巨灵与次等元素生物具有莫大的影响力。巨灵贵族们的动机各不相同，但都傲慢自大且有着匹敌次等神明的强大伟力。他们喜好让热衷于缚誓巨灵的凡人们反过来服侍他们，并对于缔结能扩张他们在多元宇宙中势力的契约有着巨大的热情。",
+				"你可以选择你宗主是哪种巨灵也可以通过巨灵种类表让骰子决定。如表所示，每种巨灵都与一种元素相对应。",
 				{
 					"type": "table",
-					"caption": "Genie Kind",
+					"caption": "巨灵种类",
 					"colLabels": [
 						"d4",
-						"Kind",
-						"Element"
+						"种类",
+						"元素"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -2640,42 +2654,43 @@
 					"rows": [
 						[
 							1,
-							"{@creature Dao}",
-							"Earth"
+							"{@creature 土巨灵(达奥)}",
+							"土"
 						],
 						[
 							2,
-							"{@creature Djinni}",
-							"Air"
+							"{@creature 气巨灵(镇尼)}",
+							"气"
 						],
 						[
 							3,
-							"{@creature Efreeti}",
-							"Fire"
+							"{@creature 火巨灵(伊夫利特)}",
+							"火"
 						],
 						[
 							4,
-							"{@creature Marid}",
-							"Water"
+							"{@creature 水巨灵(玛利德)}",
+							"水"
 						]
 					]
 				},
 				{
-					"name": "Expanded Spell List",
+					"name": "扩展法术列表",
+					"ENG_name": "Expanded Spell List",
 					"type": "entries",
 					"entries": [
-						"{@i 1st-level Genie feature}",
-						"The Genie lets you choose from an expanded list of spells when you learn a warlock spell. The Genie Expanded Spells table shows the genie spells that are added to the warlock spell list for you, along with the spells associated in the table with your patron's kind: dao, djinni, efreeti, or marid.",
+						"{@i 1级巨灵宗主特性}",
+						"当你学习一个契术师法术时，你的巨灵宗主扩宽了你的可学习法术范围。巨灵扩展法术表包含加入到了契术师法术列表中的巨灵法术和与你的巨灵宗主类型相关的法术。",
 						{
 							"type": "table",
-							"caption": "Genie Expanded Spells",
+							"caption": "巨灵宗主扩展法术",
 							"colLabels": [
-								"Spell Level",
-								"Genie Spells",
-								"Dao Spells",
-								"Djinni Spells",
-								"Efreeti Spells",
-								"Marid Spells"
+								"法术环位",
+								"全巨灵",
+								"土巨灵",
+								"气巨灵",
+								"火巨灵",
+								"水巨灵"
 							],
 							"colStyles": [
 								"col-1 text-center",
@@ -2687,7 +2702,7 @@
 							],
 							"rows": [
 								[
-									"1st",
+									"1环",
 									"{@spell 侦测善恶}",
 									"{@spell 圣域术}",
 									"{@spell 雷鸣波}",
@@ -2695,7 +2710,7 @@
 									"{@spell 云雾术}"
 								],
 								[
-									"2nd",
+									"2环",
 									"{@spell 魅影之力}",
 									"{@spell 荆棘丛生}",
 									"{@spell 造风术}",
@@ -2703,7 +2718,7 @@
 									"{@spell 朦胧术}"
 								],
 								[
-									"3rd",
+									"3环",
 									"{@spell 创造饮食}",
 									"{@spell 融身入石}",
 									"{@spell 风墙术}",
@@ -2711,7 +2726,7 @@
 									"{@spell 雪雨暴}"
 								],
 								[
-									"4th",
+									"4环",
 									"{@spell 魅影杀手}",
 									"{@spell 塑石术}",
 									"{@spell 高等隐形术}",
@@ -2719,7 +2734,7 @@
 									"{@spell 操控水体}"
 								],
 								[
-									"5th",
+									"5环",
 									"{@spell 造物术}",
 									"{@spell 石墙术}",
 									"{@spell 伪装术}",
@@ -2727,7 +2742,7 @@
 									"{@spell 寒冰锥}"
 								],
 								[
-									"9th",
+									"9环",
 									"{@spell 祈愿术}",
 									"\u2014",
 									"\u2014",
@@ -2740,12 +2755,13 @@
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Genie's Vessel|Warlock||Genie|TCE|1"
+					"subclassFeature": "巨灵器皿|Warlock||Genie|TCE|1"
 				}
 			]
 		},
 		{
-			"name": "Genie's Vessel",
+			"name": "巨灵器皿",
+			"ENG_name": "Genie's Vessel",
 			"source": "TCE",
 			"page": 73,
 			"className": "Warlock",
@@ -2755,14 +2771,14 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"{@i 1st-level Genie feature}",
-				"Your patron gifts you a magical vessel that grants you a measure of the genie's power. The vessel is a Tiny object, and you can use it as a spellcasting focus for your warlock spells. You decide what the object is, or you can determine what it is randomly by rolling on the Genie's Vessel table.",
+				"{@i 1级巨灵宗主特性}",
+				"你的宗主赐予你一个包含巨灵之力的魔法器皿。该器皿是一个微型物件，你可以将其作为施展你契术师法术的法器。你决定物件的类别，或者你可以通过巨灵器皿表来决定。",
 				{
 					"type": "table",
-					"caption": "Genie's Vessel",
+					"caption": "巨灵器皿",
 					"colLabels": [
 						"d6",
-						"Vessel"
+						"器皿种类"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -2771,51 +2787,52 @@
 					"rows": [
 						[
 							"1",
-							"Oil lamp"
+							"油灯"
 						],
 						[
 							"2",
-							"Urn"
+							"瓮"
 						],
 						[
 							"3",
-							"Ring with a compartment"
+							"可装东西的戒指"
 						],
 						[
 							"4",
-							"Stoppered bottle"
+							"被塞住的瓶子"
 						],
 						[
 							"5",
-							"Hollow statuette"
+							"空心小雕像"
 						],
 						[
 							"6",
-							"Ornate lantern"
+							"华丽提灯"
 						]
 					]
 				},
-				"While you are touching the vessel, you can use it in the following ways:",
+				"当你触碰器皿时，你可以用以下方式使用它：",
 				{
 					"type": "options",
 					"style": "list-hang-notitle",
 					"entries": [
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Bottled Respite|Warlock|TCE|Genie|TCE|1"
+							"subclassFeature": "瓶中小憩|Warlock|TCE|Genie|TCE|1"
 						},
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Genie's Wrath|Warlock|TCE|Genie|TCE|1"
+							"subclassFeature": "巨灵之怒|Warlock|TCE|Genie|TCE|1"
 						}
 					]
 				},
-				"The vessel's AC equals your spell save DC. Its hit points equal your warlock level plus your proficiency bonus, and it is immune to poison and psychic damage.",
-				"If the vessel is destroyed or you lose it, you can perform a 1-hour ceremony to receive a replacement from your patron. This ceremony can be performed during a short or long rest, and the previous vessel is destroyed if it still exists. The vessel vanishes in a flare of elemental power when you die."
+				"器皿的AC等同于你的法术豁免DC。它的生命值等于你的契术师等级加熟练加值，并免疫于毒素和心灵伤害。",
+				"倘若器皿被摧毁或是丢失，你可以进行一场持续1小时的仪式来从你的宗主处获得一个替代品。这一仪式可于短休或长休时进行，并会摧毁之前仍存在的器皿。当你死亡时，器皿在一阵元素能量的闪耀中消失。"
 			]
 		},
 		{
-			"name": "Elemental Gift",
+			"name": "元素赐福",
+			"ENG_name": "Elemental Gift",
 			"source": "TCE",
 			"page": 73,
 			"className": "Warlock",
@@ -2825,13 +2842,14 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"{@i 6th-level Genie feature}",
-				"You begin to take on characteristics of your patron's kind. You now have resistance to a damage type determined by your patron's kind: bludgeoning (dao), thunder (djinni), fire (efreeti), or cold (marid).",
-				"In addition, as a bonus action, you can give yourself a flying speed of 30 feet that lasts for 10 minutes, during which you can hover. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+				"{@i 6级巨灵宗主特性}",
+				"你逐渐显露出你的巨灵宗主的特质。你对由你的宗主类型决定的一种伤害类型具有抗性：钝击（土巨灵），雷鸣（气巨灵），火焰（火巨灵），冷冻（水巨灵）。 ",
+				"同时，以一个附赠动作，你可以获得一个持续10分钟的30尺飞行速度，并且在飞行时你可以悬浮。你可以使用此附赠动作的次数等同于你的熟练加值，并在完成一次长休后恢复所有使用次数。"
 			]
 		},
 		{
-			"name": "Sanctuary Vessel",
+			"name": "器皿庇护所",
+            "ENG_name": "Sanctuary Vessel",
 			"source": "TCE",
 			"page": 73,
 			"className": "Warlock",
@@ -2841,14 +2859,15 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"{@i 10th-level Genie feature}",
-				"When you enter your Genie's Vessel via the Bottled Respite feature, you can now choose up to five willing creatures that you can see within 30 feet of you, and the chosen creatures are drawn into the vessel with you.",
-				"As a bonus action, you can eject any number of creatures from the vessel, and everyone is ejected if you leave or die or if the vessel is destroyed.",
-				"In addition, anyone (including you) who remains within the vessel for at least 10 minutes gains the benefit of finishing a short rest, and anyone can add your proficiency bonus to the number of hit points they regain if they spend any Hit Dice as part of a short rest there."
+				"{@i 10级巨灵宗主特性}",
+				"当你使用瓶中小憩特性进入你的巨灵器皿时，你可以选择30尺内最多5个可见自愿生物与你一同进入器皿。",
+				"以一个附赠动作，你可以将任意数目的生物从器皿中逐出，且如果你离开器皿或是其被摧毁，所有生物都将被逐出。",
+				"同时，在器皿中停留至少10分钟的任何生物（包括你自己）可视为完成了一次短休，且使用生命骰恢复生命值时的恢复量可以加上你的熟练加值。"
 			]
 		},
 		{
-			"name": "Limited Wish",
+			"name": "有限许愿术",
+            "ENG_name": "Limited Wish",
 			"source": "TCE",
 			"page": 73,
 			"className": "Warlock",
@@ -2858,9 +2877,9 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"{@i 14th-level Genie feature}",
-				"You entreat your patron to grant you a small wish. As an action, you can speak your desire to your Genie's Vessel, requesting the effect of one spell that is 6th level or lower and has a casting time of 1 action. The spell can be from any class's spell list, and you don't need to meet the requirements in that spell, including costly components; the spell simply takes effect as part of this action.",
-				"Once you use this feature, you can't use it again until you finish {@dice 1d4} long rests."
+				"{@i 14级巨灵宗主特性}",
+				"你祈求你的宗主，并实现你的小小愿望。以一个动作，你可以向你的巨灵器皿说出你的愿望，并请求实现一个6环或更低环阶的，且施法时间为1动作的法术效应。这一法术可以来自任何职业的法术列表，且你不需要满足法术材料需求，法术仅仅是作为此动作的一部分生效。",
+				"你使用此特性后，你直到完成{@dice 1d4}次长休后才能再次使用它。"
 			]
 		},
 		{
@@ -4762,7 +4781,8 @@
 			]
 		},
 		{
-			"name": "Bottled Respite",
+			"name": "瓶中小憩",
+            "ENG_name": "Bottled Respite",
 			"source": "TCE",
 			"page": 73,
 			"className": "Warlock",
@@ -4771,11 +4791,12 @@
 			"subclassSource": "TCE",
 			"level": 1,
 			"entries": [
-				"As an action, you can magically vanish and enter your vessel, which remains in the space you left. The interior of the vessel is an extradimensional space in the shape of a 20-foot-radius cylinder, 20 feet high, and resembles your vessel. The interior is appointed with cushions and low tables and is a comfortable temperature. While inside, you can hear the area around your vessel as if you were in its space. You can remain inside the vessel up to a number of hours equal to twice your proficiency bonus. You exit the vessel early if you use a bonus action to leave, if you die, or if the vessel is destroyed. When you exit the vessel, you appear in the unoccupied space closest to it. Any objects left in the vessel remain there until carried out, and if the vessel is destroyed, every object stored there harmlessly appears in the unoccupied spaces closest to the vessel's former space. Once you enter the vessel, you can't enter again until you finish a long rest."
+				"以一个动作，你可以用魔法消失并进到你的器皿内，器皿将留在你所在的原地。器皿内是与其本身相似的20尺半径，20尺高的圆柱形超维度空间。器皿内部温度适宜，并安放有舒适的垫子和茶几。在器皿之中时，你可以如同身在器皿所在之处一般听到外界的声音。你在器皿内可停留的时间等同于你熟练加值双倍数目的小时。如果你死亡，或是器皿被摧毁，抑或是使用一个附赠动作离开，你将提前从器皿中出来。当你离开器皿时，你出现在距离它最近的不被占据的空间中。在器皿内的一切物件将被留在其中直到被取出，而倘若器皿被摧毁，其中的物品则会完好无损地出现在距离它最近的不被占据的空间中。一旦你进入器皿，直到你完成一次长休后你不能再度进入。"
 			]
 		},
 		{
-			"name": "Genie's Wrath",
+			"name": "巨灵之怒",
+            "ENG_name": "Genie's Wrath",
 			"source": "TCE",
 			"page": 73,
 			"className": "Warlock",
@@ -4784,7 +4805,7 @@
 			"subclassSource": "TCE",
 			"level": 1,
 			"entries": [
-				"Once during each of your turns when you hit with an attack roll, you can deal extra damage to the target equal to your proficiency bonus. The type of this damage is determined by your patron: bludgeoning (dao), thunder (djinni), fire (efreeti), or cold (marid)."
+				"在你的每个回合仅限一次，你可以在你攻击骰命中时对目标造成等同于你熟练加值的额外伤害。伤害类型取决于你的宗主类型：钝击（土巨灵），雷鸣（气巨灵），火焰（火巨灵），冷冻（水巨灵）。"
 			]
 		}
 	]
