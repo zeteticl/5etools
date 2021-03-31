@@ -40,7 +40,7 @@ class NavBar {
 		addLi(ulRules, "tables.html", "表格");
 		addDivider(ulRules);
 		const ulBooks = addDropdown(ulRules, "出版书籍", true);
-		addLi(ulBooks, "books.html", "View All/Homebrew");
+		addLi(ulBooks, "books.html", "查看所有/自制内容");
 		addDivider(ulBooks);
 		addLi(ulBooks, "book.html", "玩家手册", {aHash: "PHB", date: "2014"});
 		addLi(ulBooks, "book.html", "怪物图鉴", {aHash: "MM", date: null});
