@@ -914,7 +914,7 @@ Parser.getTimeToFull = function (time) {
 	return `${time.number ? `${time.number} ${unit}` : ""}${time.unit === "bonus" ? "附赠动作" : Parser.translateKeyToDisplay(time.unit)}${time.number > 1 ? "" : ""}`;
 };
 
-RNG_SPECIAL = "touch";
+RNG_SPECIAL = "special";
 RNG_POINT = "point";
 RNG_LINE = "line";
 RNG_CUBE = "cube";
@@ -925,23 +925,23 @@ RNG_HEMISPHERE = "hemisphere";
 RNG_CYLINDER = "cylinder"; // homebrew only
 RNG_SELF = "self";
 RNG_SIGHT = "sight";
-RNG_UNLIMITED = "self";
+RNG_UNLIMITED = "unlimited";
 RNG_UNLIMITED_SAME_PLANE = "plane";
-RNG_TOUCH = "unlimited";
+RNG_TOUCH = "touch";
 Parser.SP_RANGE_TYPE_TO_FULL = {
 	[RNG_SPECIAL]: "特殊",
-	[RNG_POINT]: "Point",
-	[RNG_LINE]: "Line",
-	[RNG_CUBE]: "Cube",
-	[RNG_CONE]: "Cone",
+	[RNG_POINT]: "点",
+	[RNG_LINE]: "直线",
+	[RNG_CUBE]: "立方体",
+	[RNG_CONE]: "锥形",
 	[RNG_RADIUS]: "半径",
-	[RNG_SPHERE]: "Sphere",
-	[RNG_HEMISPHERE]: "Hemisphere",
-	[RNG_CYLINDER]: "Cylinder",
+	[RNG_SPHERE]: "球体",
+	[RNG_HEMISPHERE]: "半球体",
+	[RNG_CYLINDER]: "圆柱体",
 	[RNG_SELF]: "自身",
 	[RNG_SIGHT]: "视线",
 	[RNG_UNLIMITED]: "无限",
-	[RNG_UNLIMITED_SAME_PLANE]: "Unlimited on the same plane",
+	[RNG_UNLIMITED_SAME_PLANE]: "同位面无限",
 	[RNG_TOUCH]: "触碰",
 };
 
@@ -953,7 +953,7 @@ UNT_FEET = "feet";
 UNT_MILES = "miles";
 Parser.SP_DIST_TYPE_TO_FULL = {
 	[UNT_FEET]: "呎",
-	[UNT_MILES]: "Miles",
+	[UNT_MILES]: "里",
 	[RNG_SELF]: Parser.SP_RANGE_TYPE_TO_FULL[RNG_SELF],
 	[RNG_TOUCH]: Parser.SP_RANGE_TYPE_TO_FULL[RNG_TOUCH],
 	[RNG_SIGHT]: Parser.SP_RANGE_TYPE_TO_FULL[RNG_SIGHT],
@@ -1054,15 +1054,14 @@ Parser.spRangeToFull._renderPoint = function (range) {
 };
 Parser.spRangeToFull._renderArea = function (range) {
 	const size = range.distance;
-	return `自身 (${size.amount}${Parser.getSingletonUnit(size.type)}${Parser.spRangeToFull._getAreaStyleString(range)}${range.type === RNG_CYLINDER ? `${size.amountSecondary != null && size.typeSecondary != null ? `, ${size.amountSecondary}-${Parser.getSingletonUnit(size.typeSecondary)}-high` : ""} cylinder` : ""})`;
+	return `自身 (${size.amount}${Parser.getSingletonUnit(size.type)}${Parser.spRangeToFull._getAreaStyleString(range)}${range.type === RNG_CYLINDER ? `${size.amountSecondary != null && size.typeSecondary != null ? `, ${size.amountSecondary}-${Parser.getSingletonUnit(size.typeSecondary)}高` : ""} 圆柱体` : ""})`;
 };
 Parser.spRangeToFull._getAreaStyleString = function (range) {
 	switch (range.type) {
 		case RNG_SPHERE: return " 半径";
-		case RNG_HEMISPHERE: return `-半径半球 ${range.type}`;
+		case RNG_HEMISPHERE: return `-半径 ${Parser.spRangeTypeToFull(range.type)}`;
 		case RNG_CYLINDER: return "-半径";
-		case RNG_RADIUS: return "-半径";
-		default: return ` ${range.type}`;
+		default: return ` ${Parser.spRangeTypeToFull(range.type)}`;
 	}
 };
 
