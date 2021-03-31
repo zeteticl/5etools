@@ -425,21 +425,21 @@
 				"气|Monk||2",
 				"Ki-Fueled Strike|Monk||2|UAClassFeatureVariants",
 				"Ki Features|Monk||2|UAClassFeatureVariants",
-				"Dedicated Weapon|Monk||2|TCE",
+				"专用武器|Monk||2|TCE",
 				"无甲移动|Monk||2",
 				"拨挡飞弹|Monk||3",
 				{
 					"classFeature": "宗派传承|Monk||3",
 					"gainSubclassFeature": true
 				},
-				"Ki-Fueled Attack|Monk||3|TCE",
+				"驭气以击|Monk||3|TCE",
 				"属性值提升|Monk||4",
 				"Proficiency Versatility|Monk||4|UAClassFeatureVariants",
 				"轻身坠|Monk||4",
-				"Quickened Healing|Monk||4|TCE",
+				"加速愈合|Monk||4|TCE",
 				"额外攻击|Monk||5",
 				"震慑拳|Monk||5",
-				"Focused Aim|Monk||5|TCE",
+				"凝神聚气|Monk||5|TCE",
 				"真气驻拳|Monk||6",
 				{
 					"classFeature": "宗派传承能力|Monk||6",
@@ -671,27 +671,31 @@
 					]
 				},
 				{
-					"name": "Way of Mercy",
-					"shortName": "Mercy",
+					"name": "命流宗",
+					"ENG_name": "Way of Mercy",
+					"shortName": "命流宗",
+					"ENG_shortName": "Mercy",
 					"source": "TCE",
 					"page": 49,
 					"subclassFeatures": [
-						"Way of Mercy|Monk||Mercy|TCE|3",
-						"Physician's Touch|Monk||Mercy|TCE|6",
-						"Flurry of Healing and Harm|Monk||Mercy|TCE|11",
-						"Hand of Ultimate Mercy|Monk||Mercy|TCE|17"
+						"命流宗|Monk||Mercy|TCE|3",
+						"生死之触|Monk||Mercy|TCE|6",
+						"活杀自在|Monk||Mercy|TCE|11",
+						"命极之手|Monk||Mercy|TCE|17"
 					]
 				},
 				{
-					"name": "Way of the Astral Self",
-					"shortName": "Astral Self",
+					"name": "星我宗",
+					"ENG_name": "Way of the Astral Self",
+					"shortName": "星我宗",
+					"ENG_shortName": "Astral Self",
 					"source": "TCE",
 					"page": 50,
 					"subclassFeatures": [
-						"Way of the Astral Self|Monk||Astral Self|TCE|3",
-						"Visage of the Astral Self|Monk||Astral Self|TCE|6",
-						"Body of the Astral Self|Monk||Astral Self|TCE|11",
-						"Awakened Astral Self|Monk||Astral Self|TCE|17"
+						"星我宗|Monk||Astral Self|TCE|3",
+						"星我之容|Monk||Astral Self|TCE|6",
+						"星我之躯|Monk||Astral Self|TCE|11",
+						"星我觉醒|Monk||Astral Self|TCE|17"
 					]
 				}
 			],
@@ -1048,7 +1052,8 @@
 			]
 		},
 		{
-			"name": "Dedicated Weapon",
+			"name": "专用武器",
+			"ENG_name": "Dedicated Weapon",
 			"source": "TCE",
 			"page": 48,
 			"className": "Monk",
@@ -1056,15 +1061,15 @@
 			"level": 2,
 			"isClassFeatureVariant": true,
 			"entries": [
-				"{@i 2nd-level monk {@variantrule 可选职业特性|tce|optional feature}}",
-				"You train yourself to use a variety of weapons as monk weapons, not just simple melee weapons and shortswords. Whenever you finish a short or long rest, you can touch one weapon, focus your ki on it, and then count that weapon as a monk weapon until you use this feature again.",
-				"The chosen weapon must meet these criteria:",
+				"{@i 2级武僧 {@variantrule 可选职业特性|tce|可选特性}}",
+				"你训练自己使用各种武器作为武僧武器，而不仅仅是简易近战武器和短剑。每当你完成短休或长休时，可以碰触一件武器，将气集中在它之中，然后该武器就视为武僧武器，直到你再次使用这个能力。",
+				"所选武器必须符合以下标准：",
 				{
 					"type": "list",
 					"items": [
-						"The weapon must be a simple or martial weapon.",
-						"You must be proficient with it.",
-						"It must lack the heavy and special properties."
+						"武器必须是简易武器或军用武器。",
+						"你必须拥有其熟练项。",
+						"不能拥有重型或特殊属性。"
 					]
 				}
 			]
@@ -1185,7 +1190,8 @@
 			]
 		},
 		{
-			"name": "Ki-Fueled Attack",
+			"name": "驭气以击",
+			"ENG_name": "Ki-Fueled Attack",
 			"source": "TCE",
 			"page": 48,
 			"className": "Monk",
@@ -1193,8 +1199,8 @@
 			"level": 3,
 			"isClassFeatureVariant": true,
 			"entries": [
-				"{@i 3rd-level monk {@variantrule 可选职业特性|tce|optional feature}}",
-				"If you spend 1 ki point or more as part of your action on your turn, you can make one attack with an unarmed strike or a monk weapon as a bonus action before the end of the turn."
+				"{@i 3级武僧 {@variantrule 可选职业特性|tce|可选特性}}",
+				"如果你在你的回合中执行动作时花费了1点或更多的气，则你可以在回合结束前用1附赠动作以徒手打击或武僧武器进行一次攻击。"
 			]
 		},
 		{
@@ -1239,7 +1245,8 @@
 			]
 		},
 		{
-			"name": "Quickened Healing",
+			"name": "加速愈合",
+			"ENG_name": "Quickened Healing",
 			"source": "TCE",
 			"page": 48,
 			"className": "Monk",
@@ -1247,8 +1254,8 @@
 			"level": 4,
 			"isClassFeatureVariant": true,
 			"entries": [
-				"{@i 4th-level monk {@variantrule 可选职业特性|tce|optional feature}}",
-				"As an action, you can spend 2 ki points and roll a Martial Arts die. You regain a number of hit points equal to the number rolled plus your proficiency bonus."
+				"{@i 4级武僧 {@variantrule 可选职业特性|tce|可选特性}}",
+				"以一个动作，你能消耗2点气并且掷一粒武艺骰，你恢复等同于掷骰结果加上你的熟练加值的生命值。"
 			]
 		},
 		{
@@ -1278,7 +1285,8 @@
 			]
 		},
 		{
-			"name": "Focused Aim",
+			"name": "凝神聚气",
+			"ENG_name": "Focused Aim",
 			"source": "TCE",
 			"page": 48,
 			"className": "Monk",
@@ -1286,8 +1294,8 @@
 			"level": 5,
 			"isClassFeatureVariant": true,
 			"entries": [
-				"{@i 5th-level monk {@variantrule 可选职业特性|tce|optional feature}}",
-				"When you miss with an attack roll, you can spend 1 to 3 ki points to increase your attack roll by 2 for each of these ki points you spend, potentially turning the miss into a hit."
+				"{@i 5级武僧 {@variantrule 可选职业特性|tce|可选特性}}",
+				"当你攻击检定未命中时，你可以花费1到3点气来使该次攻击检定获得加值，每点气的消耗能获得+2加值，这可能会使原本的未命中改为命中。"
 			]
 		},
 		{
@@ -2068,7 +2076,8 @@
 			]
 		},
 		{
-			"name": "Way of the Astral Self",
+			"name": "星我宗",
+			"ENG_name": "Way of the Astral Self",
 			"source": "TCE",
 			"page": 50,
 			"className": "Monk",
@@ -2077,19 +2086,20 @@
 			"subclassSource": "TCE",
 			"level": 3,
 			"entries": [
-				"A monk who follows the Way of the Astral Self believes their body is an illusion. They see their ki as a representation of their true form, an astral self. This astral self has the capacity to be a force of order or disorder, with some monasteries training students to use their power to protect the weak and other instructing aspirants in how to manifest their true selves in service to the mighty.",
+				"一个遵循星我宗的武僧相信他们的身体是一种幻觉，他们把气视为他们真实形态的代表，即为星我。星我这个形态，用之以善则正，用之以恶则邪，一些宗派训练学徒使用他们的力量来保护弱者，还有的宗派则教导那些欲追名逐利的学徒在为上位者服务时，能展现他们的真我。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Forms of Your Astral Self|Monk||Astral Self|TCE|3"
+					"subclassFeature": "你的星我形态|Monk||Astral Self|TCE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Arms of the Astral Self|Monk||Astral Self|TCE|3"
+					"subclassFeature": "星我之臂|Monk||Astral Self|TCE|3"
 				}
 			]
 		},
 		{
-			"name": "Arms of the Astral Self",
+			"name": "星我之臂",
+			"ENG_name": "Arms of the Astral Self",
 			"source": "TCE",
 			"page": 50,
 			"className": "Monk",
@@ -2099,23 +2109,24 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"{@i 3rd-level Way of the Astral Self feature}",
-				"Your mastery of your ki allows you to summon a portion of your astral self. As a bonus action, you can spend 1 ki point to summon the arms of your astral self. When you do so, each creature of your choice that you can see within 10 feet of you must succeed on a Dexterity saving throw or take force damage equal to two rolls of your Martial Arts die.",
-				"For 10 minutes, these spectral arms hover near your shoulders or surround your arms (your choice). You determine the arms' appearance, and they vanish early if you are {@condition incapacitated} or die.",
-				"While the spectral arms are present, you gain the following benefits:",
+				"{@i 3级星我宗特性}",
+				"你对气的掌握允许你召唤出星我的一部分。以一个附赠动作，你可以花费1点气来召唤你的星我之臂，当你这么做时，你选择的每一个你所见的10尺范围内的生物必须进行一次敏捷豁免检定，如果失败则受到相当于你两倍武艺骰的力场伤害。",
+				"在10分钟内，这些幽光般的手臂会盘旋在你的肩膀附近或环绕着你的手臂（由你选择），你来决定手臂们的外观，如果你{@condition 无力}或死亡，它们就会立即消失。",
+				"当星我之臂出现时，你将获得如下增益：",
 				{
 					"type": "list",
 					"items": [
-						"You can use your Wisdom modifier in place of your Strength modifier when making Strength checks and Strength saving throws.",
-						"You can use the spectral arms to make unarmed strikes.",
-						"When you make an unarmed strike with the arms on your turn, your reach for it is 5 feet greater than normal.",
-						"The unarmed strikes you make with the arms can use your Wisdom modifier in place of your Strength or Dexterity modifier for the attack and damage rolls, and their damage type is force."
+						"你进行力量检定和力量豁免检定时，可以用你的感知调整值来代替力量力量调整值。",
+						"你可以用星我之臂进行徒手攻击。",
+						"当你在自己回合用星我之臂进行徒手攻击时，你的触及范围增加5尺。",
+						"当你用星我之臂进行徒手攻击时，可以用感知调整值代替力量或敏捷调整值来进行攻击检定和伤害检定，它们的伤害类型是力场。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Forms of Your Astral Self",
+			"name": "你的星我形态",
+			"ENG_name": "Forms of Your Astral Self",
 			"source": "TCE",
 			"page": 50,
 			"className": "Monk",
@@ -2126,12 +2137,13 @@
 			"header": 1,
 			"type": "inset",
 			"entries": [
-				"The astral self is a translucent embodiment of the monk's soul. As a result, an astral self can reflect aspects of a monk's background, ideals, flaws, and bonds, and an astral self doesn't necessarily look anything like the monk. For example, the astral self of a lanky human might be reminiscent of a minotaur-the strength of which the monk feels within. Similarly, an orc monk might manifest gossamer arms and a delicate visage, representing the gentle beauty of the orc's soul. Each astral self is unique, and some of the monks of this monastic tradition are known more for the appearance of their astral self than for their physical appearance.",
-				"When choosing this path, consider the quirks that define your monk. Are you obsessed with something? Are you driven by justice or a selfish desire? Any of these motivations could manifest in the form of your astral self."
+				"星我是武僧精神与灵魂的半透明化身。因此，星我的形态会展现出武僧的背景、理想、牵绊和缺点，而且星我并不一定看起来像武僧一样。例如，一个瘦长的人的星我可能会让人联想到牛头人——这代表着武僧内心所感受到的力量；同样，一个兽人武僧可能会表现出丝般嫩滑的手臂和精致的面容——这代表着兽人内心深处的温柔。每一个星我都是独一无二的，而这一宗派的武僧们更为人所知的是他们的星我外表，而非他们自己的外表。",
+				"当你选择这一宗派时，仔细考虑一下能定义你武僧特质的怪癖。他们是否对某种东西充满迷恋？驱使你的动力是正义还是私欲？所有这些特质都可以在你的星我形态上有所体现。"
 			]
 		},
 		{
-			"name": "Visage of the Astral Self",
+			"name": "星我之容",
+			"ENG_name": "Visage of the Astral Self",
 			"source": "TCE",
 			"page": 50,
 			"className": "Monk",
@@ -2141,35 +2153,39 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"{@i 6th-level Way of the Astral Self feature}",
-				"You can summon the visage of your astral self. As a bonus action, or as part of the bonus action you take to activate Arms of the Astral Self, you can spend 1 ki point to summon this visage for 10 minutes. It vanishes early if you are {@condition incapacitated} or die.",
-				"The spectral visage covers your face like a helmet or mask. You determine its appearance.",
-				"While the spectral visage is present, you gain the following benefits.",
+				"{@i 6级星我宗特性}",
+				"你可以召唤你的星我之容，以一个附赠动作，或者作为你召唤星我之臂时的附赠动作中的一部分，你可以花费1点气来召唤星我之容，持续10分钟，如果你失能或死亡，则它会立即消失。",
+				"幽光般的头盔或面具遮挡着你的脸，你来决定它的外观。",
+				" 当星我之容存在时，你将获得如下增益：",
 				{
 					"type": "entries",
-					"name": "Astral Sight",
+					"name": "星之视觉",
+					"ENG_name": "Astral Sight",
 					"entries": [
-						"You can see normally in darkness, both magical and nonmagical, to a distance of 120 feet."
+						"你在黑暗中拥有120尺的可视距离，而无论其属于魔法黑暗还是非魔法黑暗。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Wisdom of the Spirit",
+					"name": "灵魂感知",
+					"ENG_name": "Wisdom of the Spirit",
 					"entries": [
-						"You have advantage on Wisdom ({@skill 洞悉}) and Charisma ({@skill 威吓}) checks."
+						"你的感知（{@skill 洞悉}）和魅力（{@skill 威吓}）检定具有优势。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Word of the Spirit",
+					"name": "灵魂之语",
+					"ENG_name": "Word of the Spirit",
 					"entries": [
-						"When you speak, you can direct your words to a creature of your choice that you can see within 60 feet of you, making it so only that creature can hear you. Alternatively, you can amplify your voice so that all creatures within 600 feet can hear you."
+						"当你说话时，你可以将你的话语指向你选择的一个60尺范围内的可视生物，这种情况下只有这个生物才能听到你的声音。 或者你可以放大你的声音，这种情况下600尺内的所有生物都能听到你的声音。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Body of the Astral Self",
+			"name": "星我之躯",
+			"ENG_name": "Body of the Astral Self",
 			"source": "TCE",
 			"page": 50,
 			"className": "Monk",
@@ -2179,27 +2195,28 @@
 			"level": 11,
 			"header": 2,
 			"entries": [
-				"{@i 11th-level Way of the Astral Self feature}",
-				"When you have both your astral arms and visage summoned, you can cause the body of your astral self to appear (no action required). This spectral body covers your physical form like a suit of armor, connecting with the arms and visage. You determine its appearance.",
-				"While the spectral body is present, you gain the following benefits.",
+				"{@i 11级星我宗特性}",
+				"当你同时召唤星我之臂和星我之容时，你可以让你的星我之躯出现（不需要任何动作），这个幽光般的躯体如同一件盔甲般复盖着你的身体，与星我之臂和星我之容相连。你来决定它的外观。",
+				"当星我之躯出现时，你将获得如下增益：",
 				{
 					"type": "entries",
-					"name": "Deflect Energy",
+					"name": "拨挡能量",
 					"entries": [
-						"When you take acid, cold, fire, force, lightning, or thunder damage, you can use your reaction to deflect it. When you do so, the damage you take is reduced by {@dice 1d10} + your Wisdom modifier (minimum reduction of 1)."
+						"当你受到强酸、冷冻、火焰、力场、闪电或雷鸣伤害时，你可以用你的反应来偏转它，如果你这么做，则你所受的该次伤害减少{@dice 1d10} + 你的感知调整值（最小减少1）。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Empowered Arms",
+					"name": "注能之臂",
 					"entries": [
-						"Once on each of your turns when you hit a target with the Arms of the Astral Self, you can deal extra damage to the target equal to your Martial Arts die."
+						"你的每回合中有一次机会，当你用星我之臂攻击命中目标时，你可以对目标造成等同于你的武艺骰的额外伤害。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Awakened Astral Self",
+			"name": "星我觉醒",
+			"ENG_name": "Awakened Astral Self",
 			"source": "TCE",
 			"page": 50,
 			"className": "Monk",
@@ -2209,27 +2226,28 @@
 			"level": 17,
 			"header": 2,
 			"entries": [
-				"{@i 17th-level Way of the Astral Self feature}",
-				"Your connection to your astral self is complete, allowing you to unleash its full potential. As a bonus action, you can spend 5 ki points to summon the arms, visage, and body of your astral self and awaken it for 10 minutes. This awakening ends early if you are {@condition incapacitated} or die.",
-				"While your astral self is awakened, you gain the following benefits.",
+				"{@i 17级星我宗特性}",
+				"你与星我之间的连接趋近完美，你能够释放它的全部潜能。以一个附赠动作，你可以花费5点气召唤你的星我之臂、星我之容和星我之躯，这种星我觉醒状态持续10分钟，如果你{@condition 无力}或死亡，这种觉醒状态会提前结束。",
+				"当你处于星我觉醒时，你将获得如下增益：",
 				{
 					"type": "entries",
-					"name": "Armor of the Spirit",
+					"name": "灵魂盔甲",
 					"entries": [
-						"You gain a +2 bonus to Armor Class."
+						"你的AC获得+2加值。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Astral Barrage",
+					"name": "星之连击",
 					"entries": [
-						"Whenever you use the Extra Attack feature to attack twice, you can instead attack three times if all the attacks are made with your astral arms."
+						"当你使用额外攻击特性进行两次攻击时，可以改为三次攻击，所有的攻击必须都是星我之臂进行的。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Way of Mercy",
+			"name": "命流宗",
+			"ENG_name": "Way of Mercy",
 			"source": "TCE",
 			"page": 49,
 			"className": "Monk",
@@ -2238,25 +2256,26 @@
 			"subclassSource": "TCE",
 			"level": 3,
 			"entries": [
-				"Monks of the Way of Mercy learn to manipulate the life force of others to bring aid to those in need. They are wandering physicians to the poor and hurt. However, to those beyond their help, they bring a swift end as an act of mercy.",
-				"Those who follow the Way of Mercy might be members of a religious order, administering to the needy and making grim choices rooted in reality rather than idealism. Some might be gentle-voiced healers, beloved by their communities, while others might be masked bringers of macabre mercies.",
-				"The walkers of this way usually don robes with deep cowls, and they often conceal their faces with masks, presenting themselves as the faceless bringers of life and death.",
+				"命流宗的武僧们习得了如何操纵他人的生命能量来帮助那些需要帮助的人。他们四处流浪，为穷人和伤员提供医疗。然而，对于那些无可救药之人——无论是生性邪恶，还是病入膏肓——他们施予仁慈的方式会改变为给个痛快。",
+				"那些遵循命流之道的人可能是一名谦卑的教会成员，施予他人最需要的帮助，做出植根于现实而非理想的严峻抉择。一些T人可能是和颜悦色的治疗师，受到所住社区的喜爱，而另一些可能是带来痛快之死的蒙面人。",
+				"命流宗的人通常穿着简单的长袍，戴着厚厚的头巾，常常用面具遮住自己的脸，把自己表现成一名无貌的生死判官。如果你戴着面具，请选择它的外观，或利用命流面具表格通过掷骰来决定。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Implements of Mercy|Monk||Mercy|TCE|3"
+					"subclassFeature": "命流之器|Monk||Mercy|TCE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Hand of Healing|Monk||Mercy|TCE|3"
+					"subclassFeature": "予命之手|Monk||Mercy|TCE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Hand of Harm|Monk||Mercy|TCE|3"
+					"subclassFeature": "夺命之手|Monk||Mercy|TCE|3"
 				}
 			]
 		},
 		{
-			"name": "Hand of Harm",
+			"name": "夺命之手",
+			"ENG_name": "Hand of Harm",
 			"source": "TCE",
 			"page": 49,
 			"className": "Monk",
@@ -2266,12 +2285,13 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"{@i 3rd-level Way of Mercy feature}",
-				"You use your ki to inflict wounds. When you hit a creature with an unarmed strike, you can spend 1 ki point to deal extra necrotic damage equal to one roll of your Martial Arts die + your Wisdom modifier. You can use this feature only once per turn."
+				"{@i 3级命流宗特性}",
+				"你能用气来造成伤害。当你用徒手攻击命中一个生物时，可以花费1点气来额外造成等于1个你的武艺骰 + 你的感知调整值的黯蚀伤害。每回合你能使用该特性一次。"
 			]
 		},
 		{
-			"name": "Hand of Healing",
+			"name": "予命之手",
+			"ENG_name": "Hand of Healing",
 			"source": "TCE",
 			"page": 49,
 			"className": "Monk",
@@ -2281,13 +2301,14 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"{@i 3rd-level Way of Mercy feature}",
-				"Your mystical touch can mend wounds. As an action, you can spend 1 ki point to touch a creature and restore a number of hit points equal to a roll of your Martial Arts die + your Wisdom modifier.",
-				"When you use your Flurry of Blows, you can replace one of the unarmed strikes with a use of this feature without spending a ki point for the healing."
+				"{@i 3级命流宗特性}",
+				"你的玄秘之触能够愈合伤口。以一个动作，你能花费1点气来接触一个生物，恢复目标1个你的武艺骰 + 你的感知调整值数量的生命值。",
+				"当你使用疾风连击时，你能在不消耗气的情况下用此特性替换一次徒手攻击。"
 			]
 		},
 		{
-			"name": "Implements of Mercy",
+			"name": "命流之器",
+			"ENG_name": "Implements of Mercy",
 			"source": "TCE",
 			"page": 49,
 			"className": "Monk",
@@ -2297,15 +2318,15 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"{@i 3rd-level Way of Mercy feature}",
-				"You gain proficiency in the {@skill 洞悉} and {@skill 医疗} skills, and you gain proficiency with the {@item 草药工具|PHB}.",
-				"You also gain a special mask, which you often wear when using the features of this subclass. You determine its appearance, or generate it randomly by rolling on the Merciful Mask table.",
+				"{@i 3级命流宗特性}",
+				"你获得{@skill 洞悉}和{@skill 医药}技能熟练项，以及你获得{@item 草药工具|PHB}的熟练项。",
+				"你还可以获得一个特殊的面具，当你使用这个子职的特性时，你通常会戴着它。你可以自由决定它的外观，或者通过命流面具表来投骰随机决定。",
 				{
 					"type": "table",
-					"caption": "Merciful Mask",
+					"caption": "命流面具",
 					"colLabels": [
 						"d6",
-						"Mask Appearance"
+						"面具外形"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -2314,34 +2335,35 @@
 					"rows": [
 						[
 							"1",
-							"Raven"
+							"渡鸦"
 						],
 						[
 							"2",
-							"Blank and white"
+							"黑白"
 						],
 						[
 							"3",
-							"Crying visage"
+							"哭脸"
 						],
 						[
 							"4",
-							"Laughing visage"
+							"笑脸"
 						],
 						[
 							"5",
-							"Skull"
+							"骷髅"
 						],
 						[
 							"6",
-							"Butterfly"
+							"蝴蝶"
 						]
 					]
 				}
 			]
 		},
 		{
-			"name": "Physician's Touch",
+			"name": "生死之触",
+			"ENG_name": "Physician's Touch",
 			"source": "TCE",
 			"page": 49,
 			"className": "Monk",
@@ -2351,14 +2373,15 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"{@i 6th-level Way of Mercy feature}",
-				"You can administer even greater cures with a touch, and if you feel it's necessary, you can use your knowledge to cause harm.",
-				"When you use Hand of Healing on a creature, you can also end one disease or one of the following conditions affecting the creature: {@condition blinded}, {@condition deafened}, {@condition paralyzed}, {@condition poisoned}, or {@condition stunned}.",
-				"When you use Hand of Harm on a creature, you can subject that creature to the {@condition poisoned} condition until the end of your next turn."
+				"{@i 6级命流宗特性}",
+				"你可以通过接触来进行更有效的治疗，你也可以利用你的知识来造成伤害。",
+				"当你对一个生物使用予命之手时，你还可以结束一种疾病或影响该生物的下列状态之一： {@condition 目盲}，{@condition 耳聋}，{@condition 麻痹}，{@condition 中毒}或{@condition 震慑}。",
+				"当你对一个生物使用夺命之手时，你可以使该生物处于{@condition 中毒}状态，直到你的下一回合结束。"
 			]
 		},
 		{
-			"name": "Flurry of Healing and Harm",
+			"name": "活杀自在",
+			"ENG_name": "Flurry of Healing and Harm",
 			"source": "TCE",
 			"page": 49,
 			"className": "Monk",
@@ -2368,13 +2391,14 @@
 			"level": 11,
 			"header": 2,
 			"entries": [
-				"{@i 11th-level Way of Mercy feature}",
-				"You can now mete out a flurry of comfort and hurt. When you use Flurry of Blows, you can now replace each of the unarmed strikes with a use of your Hand of Healing, without spending ki points for the healing.",
-				"In addition, when you make an unarmed strike with Flurry of Blows, you can use Hand of Harm with that strike without spending the ki point for Hand of Harm. You can still use Hand of Harm only once per turn."
+				"{@i 11级命流宗特性}",
+				"你现在能施以疾风般的治疗与伤害。当你使用疾风连击时，你现在可以用你的予命之手代替每一次徒手打击，而不用花费气来治疗。",
+				"另外，当你用疾风连击进行徒手攻击时，你可以使用夺命之手进行攻击，而不必花费夺命之手所须的气，你仍然在每回合只能使用夺命之手一次。"
 			]
 		},
 		{
-			"name": "Hand of Ultimate Mercy",
+			"name": "命极之手",
+			"ENG_name": "Hand of Ultimate Mercy",
 			"source": "TCE",
 			"page": 49,
 			"className": "Monk",
@@ -2384,9 +2408,9 @@
 			"level": 17,
 			"header": 2,
 			"entries": [
-				"{@i 17th-level Way of Mercy feature}",
-				"Your mastery of life energy opens the door to the ultimate mercy. As an action, you can touch the corpse of a creature that died within the past 24 hours and expend 5 ki points. The creature then returns to life, regaining a number of hit points equal to {@dice 4d10} + your Wisdom modifier. If the creature died while subject to any of the following conditions, it revives with them removed: {@condition blinded}, {@condition deafened}, {@condition paralyzed}, {@condition poisoned}, and {@condition stunned}.",
-				"Once you use this feature, you can't use it again until you finish a long rest."
+				"{@i 17级命流宗特性}",
+				" 你对生命能量的掌握打开了通往命流奥义的大门，以一个动作，你可以接触一个在过去24小时内死亡生物的尸体并消耗5点气，该生物则会复活，恢复相当于{@dice 4d10} + 你的感知调整值的生命值。如果该生物是在以下这些状态时死亡，它会在移除这些状态后复活：{@condition 目盲}，{@condition 耳聋}，{@condition 麻痹}，{@condition 中毒}和{@condition 震慑}。",
+				"一旦你使用了这个特性，你就不能再使用它，直至你完成一次长休。"
 			]
 		},
 		{
@@ -2496,7 +2520,7 @@
 			"header": 1,
 			"entries": [
 				"{@i 3rd-level Way of Mercy feature}",
-				"You gain proficiency in the {@skill 洞悉} or {@skill 医疗} skill (your choice), and you gain proficiency with the {@item 草药工具|phb} and the {@item 制毒工具|phb}."
+				"You gain proficiency in the {@skill 洞悉} or {@skill 医疗} skill (your choice), and you gain proficiency with the {@item herbalism kit|phb} and the {@item poisoner's kit|phb}."
 			]
 		},
 		{
@@ -2641,7 +2665,7 @@
 					"items": [
 						"When you damage a target with an unarmed strike, you can change the damage type to acid, cold, fire, lightning, or poison.",
 						"If you can't already, you learn to speak, read, and write {@language Draconic}.",
-						"If you fail a Charisma ({@skill 威吓}) or Charisma ({@skill 说服}) check, you can use your reaction to reroll the check, as you tap into the mighty presence of dragons. Once this feature turns a failure into a success, you can't use it again until you finish a long rest."
+						"If you fail a Charisma ({@skill 威吓}) or Charisma ({@skill Persuasion}) check, you can use your reaction to reroll the check, as you tap into the mighty presence of dragons. Once this feature turns a failure into a success, you can't use it again until you finish a long rest."
 					]
 				}
 			]
@@ -2701,7 +2725,7 @@
 				{
 					"type": "list",
 					"items": [
-						"You gain {@sense 盲视} out to 30 feet. Within that range, you can effectively see anything that isn't behind total cover, even if you're {@condition blinded} or in darkness. Moreover, you can see an {@condition invisible} creature within that range, unless the creature successfully hides from you.",
+						"You gain {@sense blindsight} out to 30 feet. Within that range, you can effectively see anything that isn't behind total cover, even if you're {@condition blinded} or in darkness. Moreover, you can see an {@condition invisible} creature within that range, unless the creature successfully hides from you.",
 						"When you damage a creature with your Breath of the Dragon, the energy clings to the target. At the start of each of the creature's turns, it takes damage of the type your breath dealt equal to one roll of your Martial Arts die. At the end of its turn, the creature can repeat the save, ending the effect on itself on a success.",
 						"When you activate your Aspect of the Wyrm, draconic fury explodes from you. Choose any number of creatures you can see within your aura. Those creatures each take {@damage 4d10} acid, cold, fire, lightning, or poison damage (your choice)."
 					]
@@ -3142,7 +3166,7 @@
 			"header": 2,
 			"entries": [
 				"At 6th level, you gain the ability to diffuse violent situations. Whenever you make a Charisma check to calm violent emotions or to counsel peace, you have advantage on the roll. You must make this entreaty in good faith; it doesn't apply if proficiency in the {@skill 欺瞒} or {@skill 威吓} skill applies to your check.",
-				"You also gain proficiency in the {@skill 表演} or {@skill 说服} skill (choose one)."
+				"You also gain proficiency in the {@skill 表演} or {@skill Persuasion} skill (choose one)."
 			]
 		},
 		{
@@ -3316,7 +3340,7 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"当你在3级时选择此宗派时，若你尚未熟练于{@skill 表演}技能，你将获得它的熟练。你的武术技巧将战斗训练混合了舞者的精确和小丑的滑稽。同时，若你尚未熟练于{@item 酿酒工具|phb}，你也将获得它的熟练。"
+				"当你在3级时选择此宗派时，若你尚未熟练于{@skill 表演}技能，你将获得它的熟练。你的武术技巧将战斗训练混合了舞者的精确和小丑的滑稽。同时，若你尚未熟练于{@item 酿酒师设备|phb}，你也将获得它的熟练。"
 			]
 		},
 		{
@@ -3449,7 +3473,7 @@
 					"type": "entries",
 					"name": "书画之道",
 					"entries": [
-						"你从{@item 书法工具|phb}或{@item 画家工具|phb}中选择并获得其中一项的熟练。"
+						"你从{@item 书法家设备|phb}或{@item 画家设备|phb}中选择并获得其中一项的熟练。"
 					]
 				}
 			]
