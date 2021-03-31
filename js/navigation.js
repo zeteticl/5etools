@@ -88,7 +88,7 @@ class NavBar {
 		addLi(ulAdventures, "adventure.html", "毁灭亲王", {isSide: true, aHash: "PotA", date: "2015"});
 		addLi(ulAdventures, "adventure.html", "逃离深渊", {isSide: true, aHash: "OotA", date: null});
 		addLi(ulAdventures, "adventure.html", "斯特拉的的诅咒", {isSide: true, aHash: "CoS", date: "2016"});
-		addLi(ulAdventures, "adventure.html", "风暴王之雷霆", {isSide: true, aHash: "SKT", date: null});
+		addLi(ulAdventures, "adventure.html", "风暴君王之雷霆", {isSide: true, aHash: "SKT", date: null});
 		addLi(ulAdventures, "adventure.html", "深水龙门阵：暗无天日", {isSide: true, aHash: "TftYP-TSC", date: "2017"});
 		addLi(ulAdventures, "adventure.html", "深水龙门阵：愤怒熔炉", {isSide: true, aHash: "TftYP-TFoF", date: null});
 		addLi(ulAdventures, "adventure.html", "深水龙门阵：隐秘圣坛", {isSide: true, aHash: "TftYP-THSoT", date: null});
