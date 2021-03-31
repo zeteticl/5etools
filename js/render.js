@@ -3168,7 +3168,7 @@ Renderer.feat = {
 		function abilityObjToListItem (abilityObj) {
 			const abbArr = [];
 			if (!abilityObj.choose) {
-				Object.keys(abilityObj).forEach(ab => abbArr.push(`你的${Parser.attAbvToFull(ab)} 增加${abilityObj[ab]}点，上限为20点`));
+				Object.keys(abilityObj).forEach(ab => abbArr.push(`你的 ${Parser.attAbvToFull(ab)} 增加${abilityObj[ab]}点，上限为20点`));
 			} else {
 				const choose = abilityObj.choose;
 				if (choose.from.length === 6) {
@@ -3185,7 +3185,7 @@ Renderer.feat = {
 						abbChoices.push(Parser.attAbvToFull(from[j]));
 					}
 					const abbChoicesText = abbChoices.joinConjunct(", ", " 或 ");
-					abbArr.push(`你的 ${abbChoicesText} 增加 ${amount}点，上限为20。`);
+					abbArr.push(`你的 ${abbChoicesText} 增加${amount}点，上限为20。`);
 				}
 			}
 			return abbArr.join(" ");
