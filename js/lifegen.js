@@ -494,7 +494,7 @@ const SUPP_CLASS = [
 	{min: 30, max: 36, result: "德鲁伊"},
 	{min: 37, max: 52, result: "战士"},
 	{min: 53, max: 58, result: "武僧"},
-	{min: 59, max: 64, result: "圣骑士"},
+	{min: 59, max: 64, result: "圣武士"},
 	{min: 65, max: 70, result: "游侠"},
 	{min: 71, max: 84, result: "盗贼"},
 	{min: 85, max: 89, result: "术士"},

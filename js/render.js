@@ -5802,7 +5802,7 @@ Renderer.item = {
 				if (item.scfType === "holy") {
 					Renderer.item._initFullEntries(item);
 					item._fullEntries.push("圣徽是代表着一尊神明或诸神的图像雕纹。");
-					item._fullEntries.push("牧师或圣骑士可以将圣徽作为法器使用，用它来取代任何没有列出价值的材料构材。若要用这个方式使用圣徽，施法者必须将它持握在手中、显眼地穿戴它、或将它佩带在盾牌上。");
+					item._fullEntries.push("牧师或圣武士可以将圣徽作为法器使用，用它来取代任何没有列出价值的材料构材。若要用这个方式使用圣徽，施法者必须将它持握在手中、显眼地穿戴它、或将它佩带在盾牌上。");
 				}
 			}
 		}
