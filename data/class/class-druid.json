@@ -3203,7 +3203,7 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"你结社的仪式赋予你转变成更加危险动物型态的能力。从2级开始，你可以使用你的荒野形态以转变成一个{@filter 挑战等级最高为1的野兽|bestiary|challenge rating=0;1/8;1/4;1/2;1|type=beast|speed=!fly;!swim|miscellaneous=!swarm}（你忽视原本野兽型态表中的最高挑战等级字段，但仍受限于该表中的其它限制）。",
+				"你结社的仪式赋予你转变成更加危险动物型态的能力。从2级开始，你可以使用你的荒野形态以转变成一个{@filter 挑战等级最高为1的野兽|bestiary|challenge rating=[&0;&1]|type=beast|speed=!fly;!swim|miscellaneous=!swarm}（你忽视原本野兽型态表中的最高挑战等级字段，但仍受限于该表中的其它限制）。",
 				"从6级开始，你可以转变成一个挑战等级最高等同于你德鲁伊等级除以3（向下取整）的野兽。",
 				{
 					"type": "table",
@@ -3221,42 +3221,42 @@
 					"rows": [
 						[
 							"2级",
-							"{@filter 1|bestiary|challenge rating=0;1/8;1/4;1/2;1|type=beast|speed type=!fly;!swim|miscellaneous=!swarm}",
+							"{@filter 1|bestiary|challenge rating=[&0;&1]|type=beast|speed type=!fly;!swim|miscellaneous=!swarm}",
 							"没有飞行或游泳速度"
 						],
 						[
 							"4级",
-							"{@filter 1|bestiary|challenge rating=0;1/8;1/4;1/2;1|type=beast|speed type=!fly|miscellaneous=!swarm}",
+							"{@filter 1|bestiary|challenge rating=[&0;&1]|type=beast|speed type=!fly|miscellaneous=!swarm}",
 							"没有飞行速度"
 						],
 						[
 							"6级",
-							"{@filter 2|bestiary|challenge rating=0;1/8;1/4;1/2;1;2|type=beast|speed type=!fly|miscellaneous=!swarm}",
+							"{@filter 2|bestiary|challenge rating=[&0;&2]|type=beast|speed type=!fly|miscellaneous=!swarm}",
 							"没有飞行速度"
 						],
 						[
 							"8级",
-							"{@filter 2|bestiary|challenge rating=0;1/8;1/4;1/2;1;2|type=beast|miscellaneous=!swarm}",
+							"{@filter 2|bestiary|challenge rating=[&0;&2]|type=beast|miscellaneous=!swarm}",
 							"\u2014"
 						],
 						[
 							"9级",
-							"{@filter 3|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3|type=beast|miscellaneous=!swarm}",
+							"{@filter 3|bestiary|challenge rating=[&0;&3]|type=beast|miscellaneous=!swarm}",
 							"\u2014"
 						],
 						[
 							"12级",
-							"{@filter 4|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3;4|type=beast|miscellaneous=!swarm}",
+							"{@filter 4|bestiary|challenge rating=[&0;&4]|type=beast|miscellaneous=!swarm}",
 							"\u2014"
 						],
 						[
 							"15级",
-							"{@filter 5|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3;4;5|type=beast|miscellaneous=!swarm}",
+							"{@filter 5|bestiary|challenge rating=[&0;&5]|type=beast|miscellaneous=!swarm}",
 							"\u2014"
 						],
 						[
 							"18级",
-							"{@filter 6|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3;4;5;6|type=beast|miscellaneous=!swarm}",
+							"{@filter 6|bestiary|challenge rating=[&0;&6]|type=beast|miscellaneous=!swarm}",
 							"\u2014"
 						]
 					]

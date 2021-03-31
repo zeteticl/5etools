@@ -4744,10 +4744,10 @@
 				{
 					"type": "list",
 					"items": [
-						"一只{@filter 挑战等级2或以下的野兽|bestiary|challenge rating=2|type=beast|miscellaneous=!swarm}",
-						"二只{@filter 挑战等级1或以下的野兽|bestiary|challenge rating=1|type=beast|miscellaneous=!swarm}",
-						"四只{@filter 挑战等级1/2或以下的野兽|bestiary|challenge rating=1/2|type=beast|miscellaneous=!swarm}",
-						"八只{@filter 挑战等级1/4或以下的野兽|bestiary|challenge rating=0;1/8;1/4|type=beast|miscellaneous=!swarm}"
+						"一只{@filter 挑战等级2或以下的野兽|bestiary|challenge rating=[&0;&2]|type=beast|miscellaneous=!swarm}",
+						"二只{@filter 挑战等级1或以下的野兽|bestiary|challenge rating=[&0;&1]|type=beast|miscellaneous=!swarm}",
+						"四只{@filter 挑战等级1/2或以下的野兽|bestiary|challenge rating=[&0;&1/2]|type=beast|miscellaneous=!swarm}",
+						"八只{@filter 挑战等级1/4或以下的野兽|bestiary|challenge rating=[&0;&1/4]|type=beast|miscellaneous=!swarm}"
 					]
 				},
 				"这些野兽将会从牠们当前所在的场所接近你，并会与你并肩作战，攻击任何与你敌对的生物。牠们对你和你的同伴友善，且牠们在骰先攻时作为一组掷骰，但有着各自的回合。这些生物的数据数据由DM掌控。",
@@ -5512,7 +5512,7 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"在3级时，你获得一个动物伙伴，牠将陪伴你一起冒险，并受过训练以与你一起战斗。选择一个{@filter 体型不超过中型，且挑战等级为1/4或更低的野兽|bestiary|challenge rating=0;1/8;1/4|type=beast|size=f;d;t;s;m|miscellaneous=!swarm}。将你的熟练加值加入该野兽的AC、攻击检定、伤害骰，以及任何牠所熟练的豁免检定和技能中。牠的生命值最大值等同于牠正常的生命值最大值或你游侠等级的四倍，两者取高。",
+				"在3级时，你获得一个动物伙伴，牠将陪伴你一起冒险，并受过训练以与你一起战斗。选择一个{@filter 体型不超过中型，且挑战等级为1/4或更低的野兽|bestiary|challenge rating=[&0;&1/4]|type=beast|size=f;d;t;s;m|miscellaneous=!swarm}。将你的熟练加值加入该野兽的AC、攻击检定、伤害骰，以及任何牠所熟练的豁免检定和技能中。牠的生命值最大值等同于牠正常的生命值最大值或你游侠等级的四倍，两者取高。",
 				"该野兽将尽其所能的服从你的命令。牠会在你的先攻顺序采取牠的行动。在你的回合，你可以口头命令该野兽移动到某处（你不需要花费动作）。你也可以使用你的动作以口头命令牠采取{@action 攻击}、{@action 疾走}、{@action 撤离}、{@action 闪避}、或{@action 协助}动作。如果你没有命令，牠将采取{@action 闪避}动作。一旦你获得额外攻击能力，则当你命令该野兽采取{@action 攻击}动作时，你可以自己进行一次武器攻击。",
 				"若你处于{@condition 无力}状态或不在现场，你的动物伙伴将会自主行动，专注于保护你或牠自己。牠使用牠的反应时不需要你的命令，例如进行一次借机攻击。",
 				"跟其他生物一样，野兽可以在短休期间消耗生命骰。",
@@ -7908,7 +7908,7 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"在3级时，你获得一个动物伙伴，牠将陪伴你一起冒险，并受过训练以与你一起战斗。选择一个{@filter 体型不超过中型，且挑战等级为1/4或更低的野兽|bestiary|challenge rating=0;1/8;1/4|type=beast|size=f;d;t;s;m|miscellaneous=!swarm}。将你的熟练加值加入该野兽的AC、攻击检定、伤害骰，以及任何牠所熟练的豁免检定和技能中。牠的生命值最大值等同于牠正常的生命值最大值或你游侠等级的四倍，两者取高。",
+				"在3级时，你获得一个动物伙伴，牠将陪伴你一起冒险，并受过训练以与你一起战斗。选择一个{@filter 体型不超过中型，且挑战等级为1/4或更低的野兽|bestiary|challenge rating=[&0;&1/4]|type=beast|size=f;d;t;s;m|miscellaneous=!swarm}。将你的熟练加值加入该野兽的AC、攻击检定、伤害骰，以及任何牠所熟练的豁免检定和技能中。牠的生命值最大值等同于牠正常的生命值最大值或你游侠等级的四倍，两者取高。",
 				"该野兽将尽其所能的服从你的命令。牠会在你的先攻顺序采取牠的行动，尽管除非你命令牠，否则牠不会采取任何动作。在你的回合，你可以口头命令该野兽移动到某处（你不需要花费动作）。你也可以使用你的动作以口头命令牠采取{@action 攻击}、{@action 疾走}、{@action 撤离}、{@action 闪避}、或{@action 协助}动作。一旦你获得额外攻击能力，则当你命令该野兽采取{@action 攻击}动作时，你可以自己进行一次武器攻击。",
 				"若你处于{@condition 无力}状态或不在现场，你的动物伙伴将会自主行动，专注于保护你或牠自己。牠使用牠的反应时不需要你的命令，例如进行一次借机攻击。",
 				"跟其他生物一样，野兽可以在短休期间消耗生命骰。",

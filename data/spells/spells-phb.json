@@ -7554,10 +7554,10 @@
 				{
 					"type": "list",
 					"items": [
-						"一只{@filter 挑战等级2或以下的野兽|bestiary|challenge rating=2|type=beast|miscellaneous=!swarm}",
-						"二只{@filter 挑战等级1或以下的野兽|bestiary|challenge rating=1|type=beast|miscellaneous=!swarm}",
-						"四只{@filter 挑战等级1/2或以下的野兽|bestiary|challenge rating=1/2|type=beast|miscellaneous=!swarm}",
-						"八只{@filter 挑战等级1/4或以下的野兽|bestiary|challenge rating=0;1/8;1/4|type=beast|miscellaneous=!swarm}"
+						"一只{@filter 挑战等级2或以下的野兽|bestiary|challenge rating=[&0;&2]|type=beast|miscellaneous=!swarm}",
+						"二只{@filter 挑战等级1或以下的野兽|bestiary|challenge rating=[&0;&1]|type=beast|miscellaneous=!swarm}",
+						"四只{@filter 挑战等级1/2或以下的野兽|bestiary|challenge rating=[&0;&1/2]|type=beast|miscellaneous=!swarm}",
+						"八只{@filter 挑战等级1/4或以下的野兽|bestiary|challenge rating=[&0;&1/4]|type=beast|miscellaneous=!swarm}"
 					]
 				},
 				"每只野兽同时也被视作精类生物，且它会在它生命值归零或此法术结束时消失。",
@@ -7736,7 +7736,7 @@
 				}
 			],
 			"entries": [
-				"你召唤出一个{@filter 挑战等级4或以下的天界生物|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3;4|type=celestial|miscellaneous=!swarm}，且它将出现在射程内一处你所能看见的未被占据空间。该天界生物会在它生命值归零或此法术结束时消失。",
+				"你召唤出一个{@filter 挑战等级4或以下的天界生物|bestiary|challenge rating=[&0;&4]|type=celestial|miscellaneous=!swarm}，且它将出现在射程内一处你所能看见的未被占据空间。该天界生物会在它生命值归零或此法术结束时消失。",
 				"该天界生物在法术持续期间对你和你的同伴友善。为该天界生物骰先攻，且它拥有自己的回合。它会服从任何你交代它的口头指令（你不需要花费动作），只要这不会因此违反它的阵营。若你不对该生物交代任何指令，则它将在面对敌对生物时自我防卫，除此之外不采取其他动作。",
 				"这个天界生物的数据数据由DM掌控。"
 			],
@@ -7745,7 +7745,7 @@
 					"type": "entries",
 					"name": "升环效果",
 					"entries": [
-						"当你使用9环法术位施放此法术时，你可以改为召唤一个{@filter 挑战等级5或以下的天界生物|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3;4;5|type=celestial|miscellaneous=!swarm}."
+						"当你使用9环法术位施放此法术时，你可以改为召唤一个{@filter 挑战等级5或以下的天界生物|bestiary|challenge rating=[&0;&5]|type=celestial|miscellaneous=!swarm}."
 					]
 				}
 			],
@@ -7799,7 +7799,7 @@
 				}
 			],
 			"entries": [
-				"你呼唤出一个元素仆役。选择射程内一处在10呎边长立方体内充满气、土、火、或水的区域。一个对应你所选区域的{@filter 挑战等级5或以下的元素生物|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3;4;5|type=elemental|miscellaneous=!swarm}将会出现在距离该处10呎内的一处未被占据空间。举例来说，一个{@creature 火元素}会从一团篝火中浮现，而一个{@creature 土元素}会从大地中升起。该元素生物会在它生命值归零或此法术结束时消失。",
+				"你呼唤出一个元素仆役。选择射程内一处在10呎边长立方体内充满气、土、火、或水的区域。一个对应你所选区域的{@filter 挑战等级5或以下的元素生物|bestiary|challenge rating=[&0;&5]|type=elemental|miscellaneous=!swarm}将会出现在距离该处10呎内的一处未被占据空间。举例来说，一个{@creature 火元素}会从一团篝火中浮现，而一个{@creature 土元素}会从大地中升起。该元素生物会在它生命值归零或此法术结束时消失。",
 				"该元素生物对你和你的同伴友善。为该元素生物骰先攻，且它拥有自己的回合。它会服从任何你交代它的口头指令（你不需要花费动作）。若你不对该生物交代任何指令，则它将在面对敌对生物时自我防卫，除此之外不采取其他动作。",
 				"若你的专注被中断，该元素生物并不会消失。取而代之，你将失去对该元素生物的控制，它将会对你和你的同伴具有敌意，且可能会展开攻击。一个失去控制的元素生物无法被你解消，且它会在你召唤它之后1小时后消失。",
 				"这个元素生物的数据数据由DM掌控。"
@@ -7918,7 +7918,7 @@
 				}
 			],
 			"entries": [
-				"你召唤出一个{@filter 挑战等级6或以下的精类生物|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3;4;5;6|type=fey|miscellaneous=!swarm}、或一个呈现{@filter 挑战等级6或以下的野兽|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3;4;5;6|type=beast|miscellaneous=!swarm}型态的精类精魂。它将出现在射程内一处你所能看见的未被占据空间。该精类生物会在它生命值归零或此法术结束时消失。",
+				"你召唤出一个{@filter 挑战等级6或以下的精类生物|bestiary|challenge rating=[&0;&6]|type=fey|miscellaneous=!swarm}、或一个呈现{@filter 挑战等级6或以下的野兽|bestiary|challenge rating=[&0;&6]|type=beast|miscellaneous=!swarm}型态的精类精魂。它将出现在射程内一处你所能看见的未被占据空间。该精类生物会在它生命值归零或此法术结束时消失。",
 				"该精类生物在法术持续期间对你和你的同伴友善。为该精类生物骰先攻，且它拥有自己的回合。它会服从任何你交代它的口头指令（你不需要花费动作），只要这不会因此违反它的阵营。若你不对该生物交代任何指令，则它将在面对敌对生物时自我防卫，除此之外不采取其他动作。",
 				"若你的专注被中断，该精类生物并不会消失。取而代之，你将失去对该精类生物的控制，它将会对你和你的同伴具有敌意，且可能会展开攻击。一个失去控制的精类生物无法被你解消，且它会在你召唤它之后1小时后消失。",
 				"这个精类生物的数据数据由DM掌控。"
@@ -7989,10 +7989,10 @@
 				{
 					"type": "list",
 					"items": [
-						"一个{@filter 挑战等级2或以下的元素生物|bestiary|challenge rating=2|type=elemental|miscellaneous=!swarm}",
-						"二个{@filter 挑战等级1或以下的元素生物|bestiary|challenge rating=1|type=elemental|miscellaneous=!swarm}",
-						"四个{@filter 挑战等级1/2或以下的元素生物|bestiary|challenge rating=1/2|type=elemental|miscellaneous=!swarm}",
-						"八个{@filter 挑战等级1/4或以下的元素生物|bestiary|challenge rating=0;1/8;1/4|type=elemental|miscellaneous=!swarm}."
+						"一个{@filter 挑战等级2或以下的元素生物|bestiary|challenge rating=[&0;&2]|type=elemental|miscellaneous=!swarm}",
+						"二个{@filter 挑战等级1或以下的元素生物|bestiary|challenge rating=[&0;&1]|type=elemental|miscellaneous=!swarm}",
+						"四个{@filter 挑战等级1/2或以下的元素生物|bestiary|challenge rating=[&0;&1/2]|type=elemental|miscellaneous=!swarm}",
+						"八个{@filter 挑战等级1/4或以下的元素生物|bestiary|challenge rating=[&0;&1/4]|type=elemental|miscellaneous=!swarm}."
 					]
 				},
 				"一个被此法术召唤的元素生物会在它生命值归零或此法术结束时消失。",
@@ -8156,10 +8156,10 @@
 				{
 					"type": "list",
 					"items": [
-						"一个{@filter 挑战等级2或以下的精类生物|bestiary|challenge rating=2|type=fey|miscellaneous=!swarm}",
-						"二个{@filter 挑战等级1或以下的精类生物|bestiary|challenge rating=1|type=fey|miscellaneous=!swarm}",
-						"四个{@filter 挑战等级1/2或以下的精类生物|bestiary|challenge rating=1/2|type=fey|miscellaneous=!swarm}",
-						"八个{@filter 挑战等级1/4或以下的精类生物|bestiary|challenge rating=0;1/8;1/4|type=fey|miscellaneous=!swarm}"
+						"一个{@filter 挑战等级2或以下的精类生物|bestiary|challenge rating=[&0;&2]|type=fey|miscellaneous=!swarm}",
+						"二个{@filter 挑战等级1或以下的精类生物|bestiary|challenge rating=[&0;&1]|type=fey|miscellaneous=!swarm}",
+						"四个{@filter 挑战等级1/2或以下的精类生物|bestiary|challenge rating=[&0;&1/2]|type=fey|miscellaneous=!swarm}",
+						"八个{@filter 挑战等级1/4或以下的精类生物|bestiary|challenge rating=[&0;&1/4]|type=fey|miscellaneous=!swarm}"
 					]
 				},
 				"一个被召唤的生物会在它生命值归零或此法术结束时消失。",
@@ -37741,7 +37741,7 @@
 					"type": "entries",
 					"name": "物体变成生物",
 					"entries": [
-						"你可以将一个物体变成一个任意种类的生物，只要该生物的体型不超过该物体的尺寸，且该生物的{@filter 挑战等级不大于9或更低|bestiary|challenge rating=0;1/8;1/4;1/2;1;2;3;4;5;67;8;9|miscellaneous=!swarm}。该生物对你和你的同伴友善。它在每个你的回合行动。你决定它将采取什么动作以及它如何移动。这个生物的数据数据由DM掌控，且由DM处理它所有的动作和移动。"
+						"你可以将一个物体变成一个任意种类的生物，只要该生物的体型不超过该物体的尺寸，且该生物的{@filter 挑战等级不大于9或更低|bestiary|challenge rating=[&0;&9]|miscellaneous=!swarm}。该生物对你和你的同伴友善。它在每个你的回合行动。你决定它将采取什么动作以及它如何移动。这个生物的数据数据由DM掌控，且由DM处理它所有的动作和移动。"
 					]
 				},
 				"若此法术变为永久有效，你将不再能控制该生物。根据你对待它的方式，它可能会维持对你的友善态度。",
