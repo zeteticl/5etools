@@ -8,6 +8,7 @@ class ClassesPage extends BaseComponent {
 	static _fnSortSubclassFilterItems (a, b) {
 		if (a.values.isAlwaysVisible) return 1;
 		else if (b.values.isAlwaysVisible) return -1;
+		else if (a.data.entity.ENG_shortName && b.data.entity.ENG_shortName) return SortUtil.ascSort(a.data.entity["ENG_shortName"], b.data.entity["ENG_shortName"]);
 		else return SortUtil.listSort(a, b, {sortBy: "shortName"});
 	}
 

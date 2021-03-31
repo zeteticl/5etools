@@ -2011,6 +2011,7 @@ SortUtil = {
 	},
 
 	_ascSort: (a, b) => {
+		if (typeof a === "string" && typeof b === "string") return a.localeCompare(b);
 		if (b === a) return 0;
 		return b < a ? 1 : -1;
 	},
@@ -2023,7 +2024,10 @@ SortUtil = {
 		return SortUtil.ascSortDate(new Date(a || "1970-01-0"), new Date(b || "1970-01-0"));
 	},
 
-	compareListNames (a, b) { return SortUtil._ascSort(a.name.toLowerCase(), b.name.toLowerCase()); },
+	compareListNames (a, b) {
+		if (!!a.data?.entity?.ENG_name && !!b.data?.entity?.ENG_name) return SortUtil._ascSort(a.data.entity.ENG_name.toLowerCase(), b.data.entity.ENG_name.toLowerCase());
+		return SortUtil._ascSort(a.name.toLowerCase(), b.name.toLowerCase());
+	},
 
 	listSort (a, b, opts) {
 		opts = opts || {sortBy: "name"};
