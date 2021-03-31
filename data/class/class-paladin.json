@@ -282,7 +282,7 @@
 				},
 				"属性值提升|Paladin||4",
 				"Proficiency Versatility|Paladin||4|UAClassFeatureVariants",
-				"Martial Versatility|Paladin||4|TCE",
+				"替换武术|Paladin||4|TCE",
 				"额外攻击|Paladin||5",
 				"守护灵光|Paladin||6",
 				{
@@ -827,8 +827,10 @@
 					]
 				},
 				{
-					"name": "Oath of Glory",
-					"shortName": "Glory",
+					"name": "荣耀之誓",
+					"ENG_name": "Oath of Glory",
+					"shortName": "荣耀",
+					"ENG_shortName": "Glory",
 					"source": "TCE",
 					"page": 53,
 					"otherSources": [
@@ -864,15 +866,17 @@
 						}
 					],
 					"subclassFeatures": [
-						"Oath of Glory|Paladin||Glory|TCE|3",
-						"Aura of Alacrity|Paladin||Glory|TCE|7",
-						"Glorious Defense|Paladin||Glory|TCE|15",
-						"Living Legend|Paladin||Glory|TCE|20"
+						"荣耀之誓|Paladin||Glory|TCE|3",
+						"迅捷灵光|Paladin||Glory|TCE|7",
+						"辉煌防御|Paladin||Glory|TCE|15",
+						"现世传说|Paladin||Glory|TCE|20"
 					]
 				},
 				{
-					"name": "Oath of the Watchers",
-					"shortName": "Watchers",
+					"name": "守望之誓",
+					"ENG_name": "Oath of the Watchers",
+					"shortName": "守望",
+					"ENG_shortName": "Watchers",
 					"source": "TCE",
 					"page": 54,
 					"additionalSpells": [
@@ -902,10 +906,10 @@
 						}
 					],
 					"subclassFeatures": [
-						"Oath of the Watchers|Paladin||Watchers|TCE|3",
-						"Aura of the Sentinel|Paladin||Watchers|TCE|7",
-						"Vigilant Rebuke|Paladin||Watchers|TCE|15",
-						"Mortal Bulwark|Paladin||Watchers|TCE|20"
+						"守望之誓|Paladin||Watchers|TCE|3",
+						"哨卫灵光|Paladin||Watchers|TCE|7",
+						"警戒呵斥|Paladin||Watchers|TCE|15",
+						"尘世壁垒|Paladin||Watchers|TCE|20"
 					]
 				}
 			],
@@ -1466,7 +1470,8 @@
 			]
 		},
 		{
-			"name": "Channel Divinity: Harness Divine Power",
+			"name": "引导神力：神力掌控",
+			"ENG_name": "Channel Divinity: Harness Divine Power",
 			"source": "TCE",
 			"page": 52,
 			"className": "Paladin",
@@ -1474,8 +1479,8 @@
 			"level": 3,
 			"isClassFeatureVariant": true,
 			"entries": [
-				"{@i 3rd-level paladin {@variantrule 可选职业特性|tce|optional feature}}",
-				"You can expend a use of your Channel Divinity to fuel your spells. As a bonus action, you touch your holy symbol, utter a prayer, and regain one expended spell slot, the level of which can be no higher than half your proficiency bonus (rounded up). The number of times you can use this feature is based on the level you've reached in this class: 3rd level, once; 7th level, twice; and 15th level, thrice. You regain all expended uses when you finish a long rest."
+				"{@i 3级圣骑士 {@variantrule 可选职业特性|tce|可选特性}}",
+				"你可以花费一次你的引导神力次数来充能你的法术。你可以用一个附赠动作触碰你的圣徽并祈祷，你恢复一个环阶不超过你熟练加值的一半（向上取整）的法术位。你能使用此特性的次数取决于你此职业的等级：3级一次；7级两次；15级三次。完成一次长休后，你将恢复所有已消耗的次数。"
 			]
 		},
 		{
@@ -1541,7 +1546,7 @@
 				},
 				{
 					"type": "refClassFeature",
-					"classFeature": "Channel Divinity: Harness Divine Power|Paladin||3|TCE"
+					"classFeature": "引导神力：神力掌控|Paladin||3|TCE"
 				},
 				{
 					"name": "背弃誓言",
@@ -1570,7 +1575,8 @@
 			]
 		},
 		{
-			"name": "Martial Versatility",
+			"name": "替换武术",
+			"ENG_name": "Martial Versatility",
 			"source": "TCE",
 			"page": 52,
 			"className": "Paladin",
@@ -1578,8 +1584,8 @@
 			"level": 4,
 			"isClassFeatureVariant": true,
 			"entries": [
-				"{@i 4th-level paladin {@variantrule 可选职业特性|tce|optional feature}}",
-				"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace a {@filter fighting style|optionalfeatures|feature type=FS:P} you know with another fighting style available to paladins. This replacement represents a shift of focus in your martial practice."
+				"{@i 4级圣骑士 {@variantrule 可选职业特性|tce|可选特性}}",
+				"当你的战士职业等级到达能让你获得属性值提升的特性时，你能够替换一项你已知的{@filter 战斗风格|optionalfeatures|feature type=FS:P}为另一项圣骑士可用的战斗风格。这一变化代表着你在战斗训练上重心的转移。"
 			]
 		},
 		{
@@ -2709,7 +2715,7 @@
 			"subclassSource": "SCAG",
 			"level": 3,
 			"entries": [
-				"王冠之誓是一种对于文明理想的宣誓，无论是对国家精神的认同、对君王的效忠、或是对律法和统治之神的奉侍。立下王冠之誓的圣武士们致力于服务社会，尤其是那维系着社会的法律。这些圣骑士们是城墙上警醒的守卫，挺身对抗那威胁于摧毁文明世界的野蛮混乱浪潮；他们通常被称作守护者、典范者、或是哨卫。通常，立下这个誓言的圣骑士会是效忠于国家或者君王的骑士团中的成员，而接受这个誓言也是他们加入骑士团阶级的一部分条件。",
+				"王冠之誓是一种对于文明理想的宣誓，无论是对国家精神的认同、对君王的效忠、或是对律法和统治之神的奉侍。立下王冠之誓的圣骑士们致力于服务社会，尤其是那维系着社会的法律。这些圣骑士们是城墙上警醒的守卫，挺身对抗那威胁于摧毁文明世界的野蛮混乱浪潮；他们通常被称作守护者、典范者、或是哨卫。通常，立下这个誓言的圣骑士会是效忠于国家或者君王的骑士团中的成员，而接受这个誓言也是他们加入骑士团阶级的一部分条件。",
 				{
 					"type": "refSubclassFeature",
 					"subclassFeature": "王冠之信条|Paladin||Crown|SCAG|3"
@@ -2929,7 +2935,8 @@
 			]
 		},
 		{
-			"name": "Oath of Glory",
+			"name": "荣耀之誓",
+			"ENG_name": "Oath of Glory",
 			"source": "TCE",
 			"page": 53,
 			"otherSources": [
@@ -2944,23 +2951,24 @@
 			"subclassSource": "TCE",
 			"level": 3,
 			"entries": [
-				"Paladins who take the Oath of Glory believe they and their companions are destined to achieve glory through deeds of heroism. They train diligently and encourage their companions so they're all ready when destiny calls.",
+				"对荣耀宣誓的圣骑士坚信他们将与同伴一起达成英勇的伟业，并命中注定以此取得荣耀。他们将刻苦训练，砥砺前行，从而确保当命运决定的时刻到来之际，他们都已有所准备。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Tenets of Glory|Paladin||Glory|TCE|3"
+					"subclassFeature": "荣耀之信条|Paladin||Glory|TCE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Oath Spells|Paladin||Glory|TCE|3"
+					"subclassFeature": "圣誓法术|Paladin||Glory|TCE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Channel Divinity|Paladin||Glory|TCE|3"
+					"subclassFeature": "引导神力|Paladin||Glory|TCE|3"
 				}
 			]
 		},
 		{
-			"name": "Channel Divinity",
+			"name": "引导神力",
+			"ENG_name": "Channel Divinity",
 			"source": "TCE",
 			"page": 53,
 			"otherSources": [
@@ -2976,20 +2984,21 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"{@i 3rd-level Oath of Glory feature}",
-				"You gain the following two Channel Divinity options. See the Sacred Oath class feature for how Channel Divinity works.",
+				"{@i 3级荣耀之誓特性}",
+				"你获得以下引导神力选项。参考神圣誓言职业能力来了解如何使用引导神力。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Peerless Athlete|Paladin||Glory|TCE|3"
+					"subclassFeature": "绝伦健将|Paladin||Glory|TCE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Inspiring Smite|Paladin||Glory|TCE|3"
+					"subclassFeature": "鼓舞一击|Paladin||Glory|TCE|3"
 				}
 			]
 		},
 		{
-			"name": "Oath Spells",
+			"name": "圣誓法术",
+			"ENG_name": "Oath Spells",
 			"source": "TCE",
 			"page": 53,
 			"otherSources": [
@@ -3005,14 +3014,14 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"{@i 3rd-level Oath of Glory feature}",
-				"You gain oath spells at the paladin levels listed in the Oath of Glory Spells table. See the Sacred Oath class feature for how oath spells work.",
+				"{@i 3级荣耀之誓特性}",
+				"你在下列圣骑士等级时获得相应的圣誓法术。",
 				{
 					"type": "table",
-					"caption": "Oath of Glory Spells",
+					"caption": "荣耀之誓法术",
 					"colLabels": [
-						"Paladin Level",
-						"Spells"
+						"圣骑士等级",
+						"法术"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -3044,7 +3053,8 @@
 			]
 		},
 		{
-			"name": "Tenets of Glory",
+			"name": "荣耀之信条",
+			"ENG_name": "Tenets of Glory",
 			"source": "TCE",
 			"page": 53,
 			"otherSources": [
@@ -3060,39 +3070,40 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"The tenets of the Oath of Glory drive a paladin to attempt heroics that might one day shine in legend.",
+				"荣耀之誓的信条驱使着圣骑士英勇地追求终将闪耀的传奇之道。",
 				{
 					"type": "entries",
-					"name": "Actions over Words",
+					"name": "行胜于言",
 					"entries": [
-						"Strive to be known by glorious deeds, not words."
+						"力争以辉煌的功绩成名，而非只凭空谈。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Challenges Are but Tests",
+					"name": "无惧挑战",
 					"entries": [
-						"Face hardships with courage, and encourage your allies to face them with you."
+						"面对困难的鞭挞，也鼓励你的伙伴和你共同面对。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Hone the Body",
+					"name": "磨练其身",
 					"entries": [
-						"Like raw stone, your body must be worked so its potential can be realized."
+						"犹如原石荒料，潜能只在你的身体得到磨炼时展现。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Discipline the Soul",
+					"name": "坚毅其魂",
 					"entries": [
-						"You must marshal the discipline to overcome failings within yourself that threaten to dim the glory of you and your friends."
+						"整顿纪律，克服弱点，若非如此，有损荣耀。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Inspiring Smite",
+			"name": "鼓舞一击",
+			"ENG_name": "Inspiring Smite",
 			"source": "TCE",
 			"page": 53,
 			"otherSources": [
@@ -3108,11 +3119,12 @@
 			"level": 3,
 			"header": 2,
 			"entries": [
-				"Immediately after you deal damage to a creature with your Divine Smite feature, you can use your Channel Divinity as a bonus action and distribute temporary hit points to creatures of your choice within 30 feet of you, which can include you. The total number of temporary hit points equals {@dice 2d8} + your level in this class, divided among the chosen creatures however you like."
+				"当你以至圣斩特性造成一次伤害时，你可以立即用附赠动作使用你的引导神力，使30尺内由你选择的生物或你自身获得临时生命值。这些生物共获得的临时生命值等同于你的圣骑士等级加上{@dice 2d8}，你可以为其随意分配这些临时生命值。"
 			]
 		},
 		{
-			"name": "Peerless Athlete",
+			"name": "绝伦健将",
+			"ENG_name": "Peerless Athlete",
 			"source": "TCE",
 			"page": 53,
 			"otherSources": [
@@ -3128,11 +3140,12 @@
 			"level": 3,
 			"header": 2,
 			"entries": [
-				"As a bonus action, you can use your Channel Divinity to augment your athleticism. For the next 10 minutes, you have advantage on Strength ({@skill 运动}) and Dexterity ({@skill 体操}) checks; you can carry, push, drag, and lift twice as much weight as normal; and the distance of your long and high jumps increases by 10 feet (this extra distance costs movement as normal)."
+				"以一个附赠动作，你可以使用你的引导神力以增强运动能力。10分钟内，你在力量（{@skill 运动}）和敏捷（{@skill 体操}）检定上获得优势，你的负重及能够拖、拉、拽的重量翻倍，且你跳远和跳高的距离增加10尺（你依然为此正常消耗移动速度）。"
 			]
 		},
 		{
-			"name": "Aura of Alacrity",
+			"name": "迅捷灵光",
+			"ENG_name": "Aura of Alacrity",
 			"source": "TCE",
 			"page": 53,
 			"otherSources": [
@@ -3148,13 +3161,14 @@
 			"level": 7,
 			"header": 2,
 			"entries": [
-				"{@i 7th-level Oath of Glory feature}",
-				"You emanate an aura that fills you and your companions with supernatural speed, allowing you to race across a battlefield in formation. Your walking speed increases by 10 feet. In addition, if you aren't {@condition incapacitated}, the walking speed of any ally who starts their turn within 5 feet of you increases by 10 feet until the end of that turn.",
-				"When you reach 18th level in this class, the range of the aura increases to 10 feet."
+				"{@i 7级荣耀之誓特性}",
+				"7级起，你散发出一道能使你和你的盟友获得超自然速度的灵光，从而能够列队穿越战场。你获得10尺的额外移动速度。此外，若你未失能，在你5尺内开始其回合的友善生物获得10尺的额外移动速度，直至该回合结束。",
+				"18级起，灵光的范围增长至10尺。"
 			]
 		},
 		{
-			"name": "Glorious Defense",
+			"name": "辉煌防御",
+			"ENG_name": "Glorious Defense",
 			"source": "TCE",
 			"page": 53,
 			"otherSources": [
@@ -3170,13 +3184,14 @@
 			"level": 15,
 			"header": 2,
 			"entries": [
-				"{@i 15th-level Oath of Glory feature}",
-				"You can turn defense into a sudden strike. When you or another creature you can see within 10 feet of you is hit by an attack roll, you can use your reaction to grant a bonus to the target's AC against that attack, potentially causing it to miss. The bonus equals your Charisma modifier (minimum of +1). If the attack misses, you can make one weapon attack against the attacker as part of this reaction, provided the attacker is within your weapon's range.",
-				"You can use this feature a number of times equal to your Charisma modifier (minimum of once), and you regain all expended uses when you finish a long rest."
+				"{@i 15级荣耀之誓特性}",
+				"15级起，你能够抵御突然的袭击。当你或你10尺内一个你可见的生物成为一次攻击的目标并被击中时，你可以用反应使其获得AC加值，此举可能使该次攻击改为击失。此加值等同于你的魅力调整值（至少为+1）。若该次攻击的结果为击失，且攻击者在你的触及范围内，你可以对其进行一次武器攻击，视为此反应的一部分。",
+				"你可以使用此能力的次数等同于你的魅力调整值（至少1次）。每当你完成一次长休息，你重新获得已消耗的使用次数。"
 			]
 		},
 		{
-			"name": "Living Legend",
+			"name": "现世传说",
+			"ENG_name": "Living Legend",
 			"source": "TCE",
 			"page": 53,
 			"otherSources": [
@@ -3192,21 +3207,22 @@
 			"level": 20,
 			"header": 2,
 			"entries": [
-				"{@i 20th-level Oath of Glory feature}",
-				"You can empower yourself with the legends\u2014whether true or exaggerated\u2014of your great deeds. As a bonus action, you gain the following benefits for 1 minute:",
+				"{@i 20级荣耀之誓特性}",
+				"20级起，你能够使自己有能力实现传奇的壮举——无论是确有此事，抑或夸大其词。以一个附赠动作，你在1分钟内获得以下增益：",
 				{
 					"type": "list",
 					"items": [
-						"You are blessed with an otherworldly presence, gaining advantage on all Charisma checks.",
-						"Once on each of your turns when you make a weapon attack and miss, you can cause that attack to hit instead.",
-						"If you fail a saving throw, you can use your reaction to reroll it. You must use this new roll."
+						"一个超凡脱俗的存在赐福与你，你在与魅力相关的检定上获得优势。",
+						"每自己回合一次，当你进行一次武器攻击并击失，你可以使其改为击中。",
+						"当你进行一次豁免检定并失败时，你可以用反应重投之。你必须使用重投的结果。"
 					]
 				},
-				"Once you use this feature, you can't use it again until you finish a long rest, unless you expend a 5th-level spell slot to use it again."
+				"一旦你使用了此能力，你在完成一次长休息之前必须消耗一个5环法术位以再次使用此能力。"
 			]
 		},
 		{
-			"name": "Oath of the Watchers",
+			"name": "守望之誓",
+			"ENG_name": "Oath of the Watchers",
 			"source": "TCE",
 			"page": 54,
 			"className": "Paladin",
@@ -3215,24 +3231,25 @@
 			"subclassSource": "TCE",
 			"level": 3,
 			"entries": [
-				"The Oath of the Watchers binds paladins to protect mortal realms from the predations of extraplanar creatures, many of which can lay waste to mortal soldiers. Thus, the Watchers hone their minds, spirits, and bodies to be the ultimate weapons against such threats.",
-				"Paladins who follow the Watchers' oath are ever vigilant in spotting the influence of extraplanar forces, often establishing a network of spies and informants to gather information on suspected cults. To a Watcher, keeping a healthy suspicion and awareness about one's surroundings is as natural as wearing armor in battle.",
+				"守望之誓使圣骑士们承担着保护凡人国度免受异界生物掠夺与捕食的责任，而这之中有许多是凡俗的兵卒所难以匹敌的。因此，守望者们磨炼自己的心智、灵魂和肉体，以成为对抗此类威胁的终极武器。",
+				"遵循着守望之誓的圣骑士们总是警戒着异界力量的影响，他们时常会通过建立间谍和线人的情报网络来收集可疑邪教的信息。对于一个守望者来说，对周围环境保持一种积极态度的怀疑和警戒就像在战斗中穿着盔甲一样自然。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Tenets of the Watchers|Paladin||Watchers|TCE|3"
+					"subclassFeature": "守望之信条|Paladin||Watchers|TCE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Oath Spells|Paladin||Watchers|TCE|3"
+					"subclassFeature": "圣誓法术|Paladin||Watchers|TCE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Channel Divinity|Paladin||Watchers|TCE|3"
+					"subclassFeature": "引导神力|Paladin||Watchers|TCE|3"
 				}
 			]
 		},
 		{
-			"name": "Channel Divinity",
+			"name": "引导神力",
+			"ENG_name": "Channel Divinity",
 			"source": "TCE",
 			"page": 54,
 			"className": "Paladin",
@@ -3242,27 +3259,30 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"{@i 3rd-level Oath of the Watchers feature}",
-				"You gain the following Channel Divinity options. See the Sacred Oath class feature for how Channel Divinity works.",
+				"{@i 3级守望之誓特性}",
+				"你获得以下引导神力选项。参考神圣誓言职业能力来了解如何使用引导神力。",
 				{
 					"type": "entries",
-					"name": "Watcher's Will",
+					"name": "守望意志",
+					"ENG_name": "Watcher's Will",
 					"entries": [
-						"You can use your Channel Divinity to invest your presence with the warding power of your faith. As an action, you can choose a number of creatures you can see within 30 feet of you, up to a number equal to your Charisma modifier (minimum of one creature). For 1 minute, you and the chosen creatures have advantage on Intelligence, Wisdom, and Charisma saving throws."
+						"你可以使用你的引导神力，将信仰的守护力量融入你的存在之中。以一个动作，你可以选择30尺内你可见的生物，数量至多等同于你的魅力调整值（至少为1）。在1分钟内，你和所有被选择的生物在智力、感知和魅力豁免上都获得优势。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Abjure the Extraplanar",
+					"name": "驱散异域",
+					"ENG_name": "Abjure the Extraplanar",
 					"entries": [
-						"You can use your Channel Divinity to castigate unworldly beings. As an action, you present your holy symbol and each aberration, celestial, elemental, fey, or fiend within 30 feet of you that can hear you must make a Wisdom saving throw. On a failed save, the creature is turned for 1 minute or until it takes damage.",
-						"A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly end its move in a space within 30 feet of you. For its action, it can use only the {@action Dash} action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can take the {@action Dodge} action."
+						"你可以使用你的引导神力惩罚来自异界的存在。以一个动作，你展示你的圣徽，你30尺范围内能够听到你祷言的异怪、天界生物、元素、精类或邪魔都必须进行一次感知豁免，豁免失败者将受到驱散，其效应持续1分钟或直至其受到任何伤害。",
+						"以此方式被驱散的生物必须花费其回合内的所有移动速度尽量远离你，且无法主动靠近你30尺内。被驱散的生物无法执行反应，只能使用既有的{@action Dash}动作或从任何妨碍其移动的效应中挣脱。该生物无路可走时将执行{@action Dodge}动作。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Oath Spells",
+			"name": "圣誓法术",
+			"ENG_name": "Oath Spells",
 			"source": "TCE",
 			"page": 54,
 			"className": "Paladin",
@@ -3272,14 +3292,14 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"{@i 3rd-level Oath of the Watchers feature}",
-				"You gain oath spells at the paladin levels listed in the Oath of the Watchers table. See the Sacred Oath class feature for how oath spells work.",
+				"{@i 3级守望之誓特性}",
+				"你获得以下圣誓法术，如表。",
 				{
 					"type": "table",
-					"caption": "Oath of the Watchers Spells  Spells",
+					"caption": "守望之誓法术列表",
 					"colLabels": [
-						"Paladin Level",
-						"Spells"
+						"圣骑士等级",
+						"法术"
 					],
 					"colStyles": [
 						"col-2 text-center",
@@ -3311,7 +3331,8 @@
 			]
 		},
 		{
-			"name": "Tenets of the Watchers",
+			"name": "守望之信条",
+			"ENG_name": "Tenets of the Watchers",
 			"source": "TCE",
 			"page": 54,
 			"className": "Paladin",
@@ -3321,32 +3342,33 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"A paladin who assumes the Oath of the Watchers swears to safeguard mortal realms from otherworldly threats.",
+				"接受守望之誓的圣骑士发誓要保护凡人国度不受来自其他位面的威胁。",
 				{
-					"type": "entries",
+					"type": "警惕",
 					"name": "Vigilance",
 					"entries": [
-						"The threats you face are cunning, powerful, and subversive. Be ever alert for their corruption."
+						"你所面临的威胁狡猾、强大而又超乎常理。时刻警惕他们的腐化。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Loyalty",
+					"name": "忠诚",
 					"entries": [
-						"Never accept gifts or favors from fiends or those who truck with them. Stay true to your order, your comrades, and your duty."
+						"永远不要接受来自邪魔或其同伙的礼物或恩惠。忠于你的使命，忠于你的同志，忠于你的职责。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Discipline",
+					"name": "纪律",
 					"entries": [
-						"You are the shield against the endless terrors that lie beyond the stars. Your blade must be forever sharp and your mind keen to survive what lies beyond."
+						"你是抵御星辰之外无尽恐怖的盾牌。你的剑刃必须永远锋利，你的头脑必须永远清晰。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Aura of the Sentinel",
+			"name": "哨卫灵光",
+			"ENG_name": "Aura of the Sentinel",
 			"source": "TCE",
 			"page": 54,
 			"className": "Paladin",
@@ -3356,13 +3378,14 @@
 			"level": 7,
 			"header": 2,
 			"entries": [
-				"{@i 7th-level Oath of the Watchers feature}",
-				"You emit an aura of alertness while you aren't {@condition incapacitated}. When you and any creatures of your choice within 10 feet of you roll initiative, you all gain a bonus to initiative equal to your proficiency bonus.",
-				"At 18th level, the range of this aura increases to 30 feet."
+				"{@i 7级守望之誓特性}",
+				"7级起，若你未失能，你散发出一道令人保持警觉的灵光。当你和你10尺内由你选择的生物进行一次先攻检定时，获得等同于你熟练加值的加值。",
+				"18级起，灵光的范围增长至30尺。"
 			]
 		},
 		{
-			"name": "Vigilant Rebuke",
+			"name": "警戒呵斥",
+			"ENG_name": "Vigilant Rebuke",
 			"source": "TCE",
 			"page": 54,
 			"className": "Paladin",
@@ -3372,12 +3395,13 @@
 			"level": 15,
 			"header": 2,
 			"entries": [
-				"{@i 15th-level Oath of the Watchers feature}",
-				"You've learned how to chastise anyone who dares wield beguilements against you and your wards. Whenever you or a creature you can see within 30 feet of you succeeds on an Intelligence, a Wisdom, or a Charisma saving throw, you can use your reaction to deal {@damage 2d8} + your Charisma modifier force damage to the creature that forced the saving throw."
+				"{@i 15级守望之誓特性}",
+				"你学会了如何惩罚那些对你与受你守护之人施行欺瞒的家伙。当你或你30尺内一个你可见的生物在一次智力、感知或魅力豁免上成功时，你可以用反应对迫使你或该生物进行豁免检定的生物造成力场伤害，数值等同于你的魅力调整值加上{@dice 2d8}。"
 			]
 		},
 		{
-			"name": "Mortal Bulwark",
+			"name": "尘世壁垒",
+			"ENG_name": "Mortal Bulwark",
 			"source": "TCE",
 			"page": 54,
 			"className": "Paladin",
@@ -3387,17 +3411,17 @@
 			"level": 20,
 			"header": 2,
 			"entries": [
-				"{@i 20th-level Oath of the Watchers feature}",
-				"You manifest a spark of divine power in defense of the mortal realms. As a bonus action, you gain the following benefits for 1 minute:",
+				"{@i 20级守望之誓特性}",
+				"你展现出神圣力量的火花，以捍卫凡人的世界。以一个附赠动作，你在1分钟内获得以下增益：",
 				{
 					"type": "list",
 					"items": [
-						"You gain {@sense truesight} with a range of 120 feet.",
-						"You have advantage on attack rolls against aberrations, celestials, elementals, fey, and fiends.",
-						"When you hit a creature with an attack roll and deal damage to it, you can also force it to make a Charisma saving throw against your spell save DC. On a failed save, the creature is magically banished to its native plane of existence if it's currently not there. On a successful save, the creature can't be banished by this feature for 24 hours."
+						"你获得120尺的{@sense 真实视觉}。",
+						"当你对异怪、天界生物、元素、精类或邪魔进行攻击检定时，你获得优势。",
+						"对一个生物进行攻击并击中，并对其造成伤害时，你可以使其进行一次魅力豁免。若其失败且其不属于此位面，其将被魔法性地放逐到其原本的位面。若目标豁免成功，其在24小时内不能再被此能力放逐。"
 					]
 				},
-				"Once you use this bonus action, you can't use it again until you finish a long rest, unless you expend a 5th-level spell slot to use it again."
+				"一旦你使用了此能力，你在完成一次长休息之前必须消耗一个5环法术位以再次使用此能力。"
 			]
 		},
 		{
@@ -4833,7 +4857,7 @@
 			"header": 2,
 			"entries": [
 				"从7级开始，你将在不处于{@condition 无力}状态时持续散发出威吓灵光。这道灵光从你身上向各个方向延伸10呎，但并不会穿透全掩护。",
-				"若一个生物{@condition 恐惧}于你，则它的移动速度将在处于这道灵光时被归零，且该生物将在它于该处开始它的回合时受到等同于你圣骑士等级一半的心灵伤害。",
+				"若一个生物{@condition 恐惧}于你，则它的移动速度将在处于这道灵光时被归零，且该生物将在它于该处开始它的回合时受到等同于你圣骑士等级一半的精神伤害。",
 				"在18级时，这个灵光的范围将增加至30呎。"
 			]
 		},
@@ -4849,7 +4873,7 @@
 			"level": 15,
 			"header": 2,
 			"entries": [
-				"从15级开始，那些胆敢攻击你的人们将因他们的放肆而遭受精神上的惩罚。每当一个生物以一次攻击命中你时，若你并未{@condition 无力}，则该生物将受到等同于你魅力调整值（最少为1）的心灵伤害。"
+				"从15级开始，那些胆敢攻击你的人们将因他们的放肆而遭受精神上的惩罚。每当一个生物以一次攻击命中你时，若你并未{@condition 无力}，则该生物将受到等同于你魅力调整值（最少为1）的精神伤害。"
 			]
 		},
 		{
