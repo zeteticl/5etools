@@ -2631,7 +2631,7 @@ Renderer.utils = {
 			<th class="rnd-name ${opts.extraThClasses ? opts.extraThClasses.join(" ") : ""}" colspan="6" ${dataPart}>
 				<div class="name-inner">
 					<div class="flex-v-center">
-					    <span class="stats-name copyable" onmousedown="event.preventDefault()" onclick="Renderer.utils._pHandleNameClick(this)"><b>${opts.prefix || ""}${it._displayName || it.name}${opts.suffix || ""}</b> <st style='font-size:80%;'> ${it.ENG_name ? it.ENG_name: ""} </st></span>
+					    <span class="stats-name copyable" onmousedown="event.preventDefault()" onclick="Renderer.utils._pHandleNameClick(this)"><b>${opts.prefix || ""}${it._displayName || it.name}${opts.suffix || ""}</b> <st style='font-size:80%;'> ${it.ENG_name ? it.ENG_name : ""} </st></span>
 						${opts.controlRhs || ""}
 						${ExtensionUtil.ACTIVE && opts.page ? `<button title="Send to Foundry (SHIFT for Temporary Import)" class="btn btn-xs btn-default btn-stats-name ml-2" onclick="ExtensionUtil.pDoSendStats(event, this)"><span class="glyphicon glyphicon-send"></span></button>` : ""}
 					</div>
@@ -2782,7 +2782,7 @@ Renderer.utils = {
 		// Otherwise, click the highest tab
 		const ixMetaMax = ixsAvailableMetas.last();
 		(tabButtons.find(it => it.label === ixMetaMax.label) || tabButtons[0]).fnActivateTab();
-},
+	},
 
 	_pronounceButtonsBound: false,
 	bindPronounceButtons () {
@@ -4287,7 +4287,7 @@ Renderer.deity = {
 		},
 		"领域": {
 			prop: "domains",
-			displayFn: (it) => it.map(d => Parser.SubclassToDisplay(d)).join(", ")
+			displayFn: (it) => it.map(d => Parser.SubclassToDisplay(d)).join(", "),
 		},
 		"Province": {
 			prop: "province",
@@ -4941,7 +4941,7 @@ Renderer.monster = {
 	},
 
 	getTokenUrl (mon) {
-		return mon.tokenUrl || UrlUtil.link(`${Renderer.get().baseMediaUrls["img"] || Renderer.get().baseUrl}img/${Parser.sourceJsonToAbv(mon.source)}/${Parser.nameToTokenName(mon.ENG_name? mon.ENG_name.replace(/"/g, ""): mon.name.replace(/"/g, ""))}.png`);
+		return mon.tokenUrl || UrlUtil.link(`${Renderer.get().baseMediaUrls["img"] || Renderer.get().baseUrl}img/${Parser.sourceJsonToAbv(mon.source)}/${Parser.nameToTokenName(mon.ENG_name ? mon.ENG_name.replace(/"/g, "") : mon.name.replace(/"/g, ""))}.png`);
 	},
 
 	postProcessFluff (mon, fluff) {
@@ -5162,8 +5162,7 @@ Renderer.item = {
 	getTypeRarityAndAttunementText (item) {
 		const typeRarity = [
 			item._typeHtml === "Other" ? "" : item._typeHtml,
-			[item.tier ? `${Parser.ItemTierToDisplay(item.tier)}` : "", (item.rarity && Renderer.item.doRenderRarity(item.rarity) ? Parser.translateItemKeyToDisplay(item.rarity) : "")].map(it => (it || "").trim()).filter(it => it).join(", "),
-			].filter(Boolean).join(", ");
+			[item.tier ? `${Parser.ItemTierToDisplay(item.tier)}` : "", (item.rarity && Renderer.item.doRenderRarity(item.rarity) ? Parser.translateItemKeyToDisplay(item.rarity) : "")].map(it => (it || "").trim()).filter(it => it).join(", ")].filter(Boolean).join(", ");
 		return item.reqAttune ? `${typeRarity} ${item._attunement}` : typeRarity
 	},
 
@@ -5575,16 +5574,18 @@ Renderer.item = {
 				case "namePrefix": specificVariant.name = `${inherits.namePrefix}${specificVariant.name}`; break;
 				case "nameSuffix": specificVariant.name = `${specificVariant.name}${inherits.nameSuffix}`; break;
 				case "ENG_namePrefix":
-						if(specificVariant.ENG_name)
-							specificVariant.ENG_name = `${inherits.ENG_namePrefix}${specificVariant.ENG_name}`;
-						else
-							specificVariant.name = `${inherits.ENG_namePrefix}${specificVariant.name}`;
-						break;
+					if (specificVariant.ENG_name) {
+						specificVariant.ENG_name = `${inherits.ENG_namePrefix}${specificVariant.ENG_name}`;
+					} else {
+						specificVariant.name = `${inherits.ENG_namePrefix}${specificVariant.name}`;
+					}
+					break;
 				case "ENG_nameSuffix":
-					if(specificVariant.ENG_name)
+					if (specificVariant.ENG_name) {
 						specificVariant.ENG_name = `${specificVariant.ENG_name}${inherits.ENG_nameSuffix}`;
-					else
+					} else {
 						specificVariant.name = `${specificVariant.name}${inherits.ENG_nameSuffix}`;
+					}
 					break;
 				case "entries": {
 					Renderer.item._initFullEntries(specificVariant);
@@ -7675,7 +7676,7 @@ Renderer.hover = {
 						allItems.forEach(item => {
 							const itemHash = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_ITEMS](item);
 							Renderer.hover._addToCache(page, item.source, itemHash, item);
-							if(item.ENG_name){
+							if (item.ENG_name) {
 								const itemEngHash = UrlUtil.encodeForHash([item.ENG_name, item.source]);
 								Renderer.hover._addToCache(page, item.source, itemEngHash, item);
 							}
