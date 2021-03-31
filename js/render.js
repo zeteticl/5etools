@@ -3065,10 +3065,10 @@ Renderer.utils = {
 								return Object.entries(obj).map(([profType, prof]) => {
 									switch (profType) {
 										case "armor": {
-											return isListMode ? `熟练${Parser.ArmorToDisplay(prof)}甲` : `熟练于 ${Parser.ArmorToDisplay(prof)}甲`;
+											return isListMode ? `熟练${Parser.ArmorToDisplay(prof)}甲` : `熟练于${Parser.ArmorToDisplay(prof)}甲`;
 										}
 										case "weapon": {
-											return isListMode ? `熟练${Parser.weaponFullToAbv(prof)}武器` : `熟练${prof}武器`;
+											return isListMode ? `熟练${Parser.weaponFullToAbv(prof)}武器` : `熟练于${Parser.weaponFullToAbv(prof)}武器`;
 										}
 										default: throw new Error(`Unhandled proficiency type: "${profType}"`);
 									}
@@ -3168,14 +3168,14 @@ Renderer.feat = {
 		function abilityObjToListItem (abilityObj) {
 			const abbArr = [];
 			if (!abilityObj.choose) {
-				Object.keys(abilityObj).forEach(ab => abbArr.push(`你的 ${Parser.attAbvToFull(ab)} 增加${abilityObj[ab]}点，上限为20点`));
+				Object.keys(abilityObj).forEach(ab => abbArr.push(`你的 ${Parser.attAbvToFull(ab)} 增加 ${abilityObj[ab]} 点，上限为 20。`));
 			} else {
 				const choose = abilityObj.choose;
 				if (choose.from.length === 6) {
 					if (choose.entry) { // only used in "Resilient"
 						abbArr.push(Renderer.get().render(choose.entry));
 					} else {
-						abbArr.push(`你所选的一个属性值增加${choose.amount}点，上限为20。`);
+						abbArr.push(`你所选的一个属性值增加 ${choose.amount} 点，上限为 20。`);
 					}
 				} else {
 					const from = choose.from;
@@ -3185,7 +3185,7 @@ Renderer.feat = {
 						abbChoices.push(Parser.attAbvToFull(from[j]));
 					}
 					const abbChoicesText = abbChoices.joinConjunct(", ", " 或 ");
-					abbArr.push(`你的 ${abbChoicesText} 增加${amount}点，上限为20。`);
+					abbArr.push(`你的 ${abbChoicesText} 增加 ${amount} 点，上限为 20。`);
 				}
 			}
 			return abbArr.join(" ");

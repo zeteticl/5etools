@@ -273,7 +273,8 @@
 			]
 		},
 		{
-			"name": "Artificer Initiate",
+			"name": "奇械学徒",
+			"ENG_name": "Artificer Initiate",
 			"source": "TCE",
 			"page": 79,
 			"toolProficiencies": [
@@ -303,13 +304,13 @@
 				}
 			],
 			"entries": [
-				"You've learned some of an artificer's inventiveness:",
+				"你已习得些许奇械师的创造力：",
 				{
 					"type": "list",
 					"items": [
-						"You learn one cantrip of your choice from the {@filter artificer spell list|spells|level=0;1|class=artificer}, and you learn one 1st-level spell of your choice from {@filter that list|spells|level=0;1|class=artificer}. Intelligence is your spellcasting ability for these spells.",
-						"You can cast this feat's 1st-level spell without a spell slot, and you must finish a long rest before you can cast it in this way again. You can also cast the spell using any spell slots you have.",
-						"You gain proficiency with one type of {@filter artisan's tools|items|type=artisan's tools} of your choice, and you can use that type of tool as a spellcasting focus for any spell you cast that uses Intelligence as its spellcasting ability."
+						"你从{@filter 奇械师法术列表|spells|level=0;1|class=artificer}中选择并习得一个戏法。此外，你从该法术列表中选择并习得一个一环法术。智力是你施展这些法术的施法关键属性。",
+						"你可以在不消耗法术位的情况下施展一次来自此专长的一环法术。你必须在完成一次长休后才能再次这样做。你也可以正常消耗法术位来施展该法术。",
+						"你获得你所选的一项{@filter 工匠工具|items|type=artisan's tools}熟练，并且你可以将该工具作为施展任何以智力为施法关键属性的法术的法器。"
 					]
 				}
 			]
@@ -540,7 +541,8 @@
 			"ENG_name": "Charger"
 		},
 		{
-			"name": "Chef",
+			"name": "大厨",
+			"ENG_name": "Chef",
 			"source": "TCE",
 			"page": 79,
 			"ability": [
@@ -560,13 +562,13 @@
 				}
 			],
 			"entries": [
-				"Time spent mastering the culinary arts has paid off, granting you the following benefits:",
+				"花费在专研厨艺上的工夫已然有了回报，使你获得了以下增益：",
 				{
 					"type": "list",
 					"items": [
-						"You gain proficiency with {@item 厨师工具|phb} if you don't already have it.",
-						"As part of a short rest, you can cook special food, provided you have ingredients and {@item 厨师工具|phb} on hand. You can prepare enough of this food for a number of creatures equal to 4 + your proficiency bonus. At the end of the short rest, any creature who eats the food and spends one or more Hit Dice to regain hit points regains an extra {@dice 1d8} hit points.",
-						"With one hour of work or when you finish a long rest, you can cook a number of treats equal to your proficiency bonus. These special treats last 8 hours after being made. A creature can use a bonus action to eat one of those treats to gain temporary hit points equal to your proficiency bonus."
+						"如果你还没有获得{@item 厨师工具|phb}的熟练项，获得之。",
+						"作为短休的一部分，只要你手上有原料和{@item 厨师工具|phb}，你便可以烹饪特制料理。你可以为特定数量的生物准备这种食物，其数量等同于4 + 你的熟练加值。在本次短休结束时，任何食用了料理并且花费了一个或更多生命骰来恢复生命值的生物恢复额外{@dice 1d8}点生命值。",
+						"在花费一小时精心制作后，或者在完成一次长休时，你可以制作等同于你熟练加值个数的餐点。这些餐点在制作完成后持续八小时。任何食用餐点的生物都能获得等同于你熟练加值的临时生命值。"
 					]
 				}
 			]
@@ -668,7 +670,8 @@
 			"ENG_name": "Crossbow Expert"
 		},
 		{
-			"name": "Crusher",
+			"name": "粉碎者",
+			"ENG_name": "Crusher",
 			"source": "TCE",
 			"page": 79,
 			"ability": [
@@ -683,12 +686,12 @@
 				}
 			],
 			"entries": [
-				"You are practiced in the art of crushing your enemies, granting you the following benefits:",
+				"你擅长于碾碎敌人的技艺，你获得了以下增益：",
 				{
 					"type": "list",
 					"items": [
-						"Once per turn, when you hit a creature with an attack that deals bludgeoning damage, you can move it 5 feet to an unoccupied space, provided the target is no more than one size larger than you.",
-						"When you score a critical hit that deals bludgeoning damage to a creature, attack rolls against that creature are made with advantage until the start of your next turn."
+						"每回合一次，当你用造成钝击伤害的攻击命中一个生物时，只要目标的体型并未比你大一级以上，你就可以将目标移动五尺至一个未被占据的空间。",
+						"当你用造成钝击伤害的攻击命中一个生物并造成重击时，直至你的下一回合开始，所有针对该生物的攻击检定具有优势。"
 					]
 				}
 			]
@@ -1954,7 +1957,8 @@
 			"ENG_name": "Dwarven Fortitude"
 		},
 		{
-			"name": "Eldritch Adept",
+			"name": "魔能导师",
+			"ENG_name": "Eldritch Adept",
 			"source": "TCE",
 			"page": 79,
 			"prerequisite": [
@@ -1963,8 +1967,8 @@
 				}
 			],
 			"entries": [
-				"Studying occult lore, you have unlocked eldritch power within yourself: you learn one {@filter Eldritch Invocation|optionalfeatures|Feature Type=EI} option of your choice from the warlock class. If the invocation has a prerequisite of any kind, you can choose that invocation only if you're a warlock who meets the prerequisite.",
-				"Whenever you gain a level, you can replace the invocation with another one from the warlock class."
+				"对神秘学的研究使你解锁了体内的秘法能量。你从契术师职业中选择并获得一项{@filter 魔能祈唤|optionalfeatures|Feature Type=EI}。如果该祈唤具有任何先决条件，则仅当你是一位满足该条件的契术师时才能选择该祈唤。",
+				"当你升级时，你可以将该祈唤更换为契术师职业中的另一个魔能祈唤。"
 			]
 		},
 		{
@@ -2311,7 +2315,8 @@
 			"ENG_name": "Fey Teleportation"
 		},
 		{
-			"name": "Fey Touched",
+			"name": "精类触碰",
+			"ENG_name": "Fey Touched",
 			"source": "TCE",
 			"page": 79,
 			"ability": [
@@ -2344,11 +2349,11 @@
 				}
 			],
 			"entries": [
-				"Your exposure to the Feywild's magic has changed you, granting you the following benefits:",
+				"暴露在妖精荒野的魔法之下的经历已经改变了你，使你获得了以下增益：",
 				{
 					"type": "list",
 					"items": [
-						"You learn the {@spell 迷踪步} spell and one {@filter 1st-level spell|spells|level=1|school=E;D} of your choice. The 1st-level spell must be from the divination or enchantment school of magic. You can cast each of these spells without expending a spell slot. Once you cast either of these spells in this way, you can't cast that spell in this way again until you finish a long rest. You can also cast these spells using spell slots you have of the appropriate level. The spells' spellcasting ability is the ability increased by this feat."
+						"你习得{@spell 迷踪步}以及一个由你选择的{@filter 一环法术|spells|level=1|school=E;D}。该一环法术必须是预言系或者惑控系法术。你可以在不消耗法术位的情况下施展这些法术各一次。当你以此法施展某个法术后，你不能再次以此法施展该法术，直至你完成一次长休。你也可以消耗合适的法术位来施展这些法术。这些法术的施法关键属性是你由此专长提升的属性。"
 					]
 				}
 			]
@@ -2397,7 +2402,8 @@
 			]
 		},
 		{
-			"name": "Fighting Initiate",
+			"name": "战斗学徒",
+			"ENG_name": "Fighting Initiate",
 			"source": "TCE",
 			"page": 80,
 			"prerequisite": [
@@ -2410,8 +2416,8 @@
 				}
 			],
 			"entries": [
-				"Your martial training has helped you develop a particular style of fighting. As a result, you learn one {@filter Fighting Style|optionalfeatures|Feature Type=FS:F} option of your choice from the fighter class. If you already have a style, the one you choose must be different.",
-				"Whenever you reach a level that grants the Ability Score Improvement feature, you can replace this feat's fighting style with another one from the fighter class that you don't have."
+				"你的军事训练帮助你养成了一种特定的战术风格。因此，你可以从战士职业中选择并习得一项{@filter 战斗风格|optionalfeatures|Feature Type=FS:F}。如果你已经有一项战斗风格，你不能选择相同的战斗风格。",
+				"每当你升级并达到获得属性值提升特性的等级时，你可以来自此专长的战斗风格替换为战士职业中的另一项你未习得的战斗风格。"
 			]
 		},
 		{
@@ -2626,7 +2632,8 @@
 			]
 		},
 		{
-			"name": "Gunner",
+			"name": "枪手",
+			"ENG_name": "Gunner",
 			"source": "TCE",
 			"page": 80,
 			"ability": [
@@ -2640,13 +2647,13 @@
 				}
 			],
 			"entries": [
-				"You have a quick hand and keen eye when employing firearms, granting you the following benefits:",
+				"你持枪时的手快眼明使你获得了以下增益：",
 				{
 					"type": "list",
 					"items": [
-						"You gain proficiency with firearms (see \"{@variantrule Firearms|DMG}\" in the Dungeon Master's Guide).",
-						"You ignore the loading property of firearms.",
-						"Being within 5 feet of a hostile creature doesn't impose disadvantage on your ranged attack rolls."
+						"你获得枪械的熟练项（见城主指南的\"{@variantrule Firearms|DMG}\"栏目）。",
+						"你忽略枪械的装填属性。",
+						"你在敌对生物５尺范围内发动远程攻击检定时，不会因此而具有劣势。"
 					]
 				}
 			]
@@ -3312,7 +3319,8 @@
 			]
 		},
 		{
-			"name": "Metamagic Adept",
+			"name": "超魔法导师",
+			"ENG_name": "Metamagic Adept",
 			"source": "TCE",
 			"page": 80,
 			"prerequisite": [
@@ -3321,12 +3329,12 @@
 				}
 			],
 			"entries": [
-				"You've learned how to exert your will on your spells to alter how they function:",
+				"你习得如何往你的法术上施加你的意志，从而改变它们的功能：",
 				{
 					"type": "list",
 					"items": [
-						"You learn two {@filter Metamagic|optionalfeatures|Feature Type=MM} options of your choice from the sorcerer class. You can use only one Metamagic option on a spell when you cast it, unless the option says otherwise. Whenever you reach a level that grants the Ability Score Improvement feature, you can replace one of these Metamagic options with another one from the sorcerer class.",
-						"You gain 2 sorcery points to spend on Metamagic (these points are added to any sorcery points you have from another source but can be used only on Metamagic). You regain all spent sorcery points when you finish a long rest."
+						"你从术士职业中选择并习得两项{@filter 超魔法|optionalfeatures|Feature Type=MM}选项。除非特别说明，否则一个法术施展时只能应用一种超魔法选项。当你升级并达到获得属性值提升特性的等级时，你可以将其中一项超魔法选项替换为术士职业中的另一项超魔法选项。",
+						"你获得2点术法点，用于施展超魔法（这些术法点和任何其他来源的术法点叠加，但只能用于超魔法）。你在完成长休后重获所有已消耗的术法点。"
 					]
 				}
 			]
@@ -3634,7 +3642,8 @@
 			]
 		},
 		{
-			"name": "Piercer",
+			"name": "穿刺者",
+			"ENG_name": "Piercer",
 			"source": "TCE",
 			"page": 80,
 			"ability": [
@@ -3649,12 +3658,12 @@
 				}
 			],
 			"entries": [
-				"You have achieved a penetrating precision in combat, granting you the following benefits:",
+				"你已经可以在战斗中造成精准的穿刺。你获得以下好处:",
 				{
 					"type": "list",
 					"items": [
-						"Once per turn, when you hit a creature with an attack that deals piercing damage, you can reroll one of the attack's damage dice, and you must use the new roll.",
-						"When you score a critical hit that deals piercing damage to a creature, you can roll one additional damage die when determining the extra piercing damage the target takes."
+						"每回合一次，当你用造成穿刺伤害的攻击命中一个生物时，你可以重掷其中一个伤害骰，并且你必须使用重投的结果。",
+						"当你用造成穿刺伤害的攻击命中一个生物并且造成重击时，你可以在计算重击伤害时投一个额外的伤害骰。"
 					]
 				}
 			]
@@ -3686,7 +3695,8 @@
 			]
 		},
 		{
-			"name": "Poisoner",
+			"name": "毒师",
+			"ENG_name": "Poisoner",
 			"source": "TCE",
 			"page": 80,
 			"toolProficiencies": [
@@ -3695,13 +3705,13 @@
 				}
 			],
 			"entries": [
-				"You can prepare and deliver deadly poisons, granting you the following benefits:",
+				"你可以准备并使用致命的毒药。你获得以下好处：",
 				{
 					"type": "list",
 					"items": [
-						"When you make a damage roll that deals poison damage, it ignores resistance to poison damage.",
-						"You can apply poison to a weapon or piece of ammunition as a bonus action, instead of an action.",
-						"You gain proficiency with the {@item 制毒工具|phb} if you don't already have it. With one hour of work using a {@item 制毒工具|phb} and expending 50 gp worth of materials, you can create a number of doses of potent poison equal to your proficiency bonus. Once applied to a weapon or piece of ammunition, the poison retains its potency for 1 minute or until you hit with the weapon or ammunition. When a creature takes damage from the coated weapon or ammunition, that creature must succeed on a DC 14 Constitution saving throw or take {@damage 2d8} poison damage and become {@condition poisoned} until the end of your next turn."
+						"当你投造成毒素伤害的伤害骰时，无视目标的伤害抗性。",
+						"你可以以一个附赠动作为一把武器或一枚弹药涂毒，而不是一个动作。",
+						"你获得{@item 制毒工具|phb}的熟练项，如果你还没有的话。花费一小时使用{@item 制毒工具|phb}进行制作，并且消耗价值 50gp 的材料后，你可以制造一定数量的猛毒，其数量等同于你的熟练加值。当被用于一把武器或一枚弹药后，猛毒的毒性持续一分钟或直至你用该武器或弹药攻击命中后。当一个生物受到来自涂毒武器或弹药的伤害后，该生物必须成功通过DC14的体质豁免，否则将受到{@damage 2d8}毒素伤害并陷入{@condition 中毒}状态，直至你的下回合结束。"
 					]
 				}
 			]
@@ -4334,7 +4344,8 @@
 			]
 		},
 		{
-			"name": "Shadow Touched",
+			"name": "影界触碰",
+			"ENG_name": "Shadow Touched",
 			"source": "TCE",
 			"page": 80,
 			"ability": [
@@ -4367,11 +4378,11 @@
 				}
 			],
 			"entries": [
-				"Your exposure to the Shadowfell's magic has changed you, granting you the following benefits:",
+				"暴露在堕影冥界的魔法之下的经历已经改变了你，使你获得了以下增益：",
 				{
 					"type": "list",
 					"items": [
-						"You learn the {@spell 隐形术} spell and one 1st-level spell of your choice. The {@filter 1st-level spell|spells|level=1|school=I;N} must be from the illusion or necromancy school of magic. You can cast each of these spells without expending a spell slot. Once you cast either of these spells in this way, you can't cast that spell in this way again until you finish a long rest. You can also cast these spells using spell slots you have of the appropriate level. The spells' spellcasting ability is the ability increased by this feat."
+						"你习得{@spell 隐形术}以及一个由你选择的{@filter 一环法术|spells|level=1|school=I;N}。该一环法术必须是幻术系或死灵系法术。你可以在不消耗法术位的情况下施展这些法术各一次。当你以此法施展某个法术后，你不能再次以此法施展该法术，直至你完成一次长休。你也可以消耗合适的法术位来施展这些法术。这些法术的施法关键属性是你由此专长提升的属性。"
 					]
 				}
 			]
@@ -4512,7 +4523,8 @@
 			]
 		},
 		{
-			"name": "Skill Expert",
+			"name": "技艺专家",
+			"ENG_name": "Skill Expert",
 			"source": "TCE",
 			"page": 80,
 			"ability": [
@@ -4557,12 +4569,12 @@
 				}
 			],
 			"entries": [
-				"You have honed your proficiency with particular skills, granting you the following benefits:",
+				"你已磨练了自身的特定技艺，并获得了以下好处：",
 				{
 					"type": "list",
 					"items": [
-						"You gain proficiency in one skill of your choice.",
-						"Choose one skill in which you have proficiency. You gain expertise with that skill, which means your proficiency bonus is doubled for any ability check you make with it. The skill you choose must be one that isn't already benefiting from a feature, such as Expertise, that doubles your proficiency bonus."
+						"你选择并获得一项技能的熟练项。",
+						"选择一项你熟练的技能，你获得该技能的专精，可以将两倍的熟练加值加到使用该技能进行的属性检定上。你选择的技能必须未受益于其他使熟练加值翻倍的特性，例如专精特性。"
 					]
 				}
 			]
@@ -4633,7 +4645,8 @@
 			"ENG_name": "Skulker"
 		},
 		{
-			"name": "Slasher",
+			"name": "劈砍者",
+			"ENG_name": "Slasher",
 			"source": "TCE",
 			"page": 81,
 			"ability": [
@@ -4648,12 +4661,12 @@
 				}
 			],
 			"entries": [
-				"You've learned where to cut to have the greatest results, granting you the following benefits:",
+				"你已熟知该砍向何处以造成最重的伤害。你获得以下好处：",
 				{
 					"type": "list",
 					"items": [
-						"Once per turn when you hit a creature with an attack that deals slashing damage, you can reduce the speed of the target by 10 feet until the start of your next turn.",
-						"When you score a critical hit that deals slashing damage to a creature, you grievously wound it. Until the start of your next turn, the target has disadvantage on all attack rolls."
+						"每回合一次，当你用造成挥砍伤害的攻击命中一个生物时，你可以使其速度降低10尺，直到你的下回合开始。",
+						"当你用造成挥砍伤害的攻击命中一个生物并造成重击时，你将其重伤，使其所作的攻击检定具有劣势，直至你的下回合开始。"
 					]
 				}
 			]
@@ -5051,7 +5064,8 @@
 			"ENG_name": "Tavern Brawler"
 		},
 		{
-			"name": "Telekinetic",
+			"name": "念动力",
+			"ENG_name": "Telekinetic",
 			"source": "TCE",
 			"page": 81,
 			"ability": [
@@ -5077,12 +5091,12 @@
 				}
 			],
 			"entries": [
-				"You learn to move things with your mind, granting you the following benefits:",
+				"你习得用你的意念移动物体的能力。你获得以下好处：",
 				{
 					"type": "list",
 					"items": [
-						"You learn the {@spell 法师之手} cantrip. You can cast it without verbal or somatic components, and you can make the spectral hand {@condition invisible}. If you already know this spell, its range increases by 30 feet when you cast it. Its spellcasting ability is the ability increased by this feat.",
-						"As a bonus action, you can try to telekinetically shove one creature you can see within 30 feet of you. When you do so, the target must succeed on a Strength saving throw (DC 8 + your proficiency bonus + the ability modifier of the score increased by this feat) or be moved 5 feet toward you or away from you. A creature can willingly fail this save."
+						"你习得{@spell 法师之手}戏法，你施展它无需语言构材或材料构材，并且你可以让该幽灵手{@condition 隐形}。如果你已经习得该戏法，你施展该戏法时其施法距离提升30尺。该戏法的施法关键属性是你由此专长提升的属性。",
+						"以一个附赠动作，你可以尝试以念动力推撞30尺内的一个你可见的生物。当你这样做时，目标必须成功通过一次力量豁免（DC为8 + 你的熟练加值 + 你由此专长提升的属性的属性调整值），否则将被你拉近或推离五尺。目标生物可以自愿放弃豁免。"
 					]
 				}
 			]
@@ -5159,7 +5173,8 @@
 			]
 		},
 		{
-			"name": "Telepathic",
+			"name": "心电感应",
+			"ENG_name": "Telepathic",
 			"source": "TCE",
 			"page": 81,
 			"ability": [
@@ -5189,12 +5204,12 @@
 				}
 			],
 			"entries": [
-				"You awaken the ability to mentally connect with others, granting you the following benefits:",
+				"你觉醒了用意念与其他生物交流的能力。你获得以下好处：",
 				{
 					"type": "list",
 					"items": [
-						"You can speak telepathically to any creature you can see within 60 feet of you. Your telepathic utterances are in a language you know, and the creature understands you only if it knows that language. Your communication doesn't give the creature the ability to respond to you telepathically.",
-						"You can cast the {@spell 侦测思想} spell, requiring no spell slot or components, and you must finish a long rest before you can cast it this way again. Your spellcasting ability for the spell is the ability increased by this feat. If you have spell slots of 2nd level or higher, you can cast this spell with them."
+						"你可以和60尺内任何你可见的生物用心灵感应进行交流。你的心电沟通以一种你已知的语言的形式进行，该生物必须懂得该语言才能理解你。你的主动沟通并未给予该生物以心灵感应的形式回复你的能力。",
+						"你可以施展{@spell 侦测思想}法术，无需法术位和构材。以此法施法后，你在完成一次长休前不能再这样做。该法术的施法关键属性是你由此专长提升的属性。如果你拥有二环或更高的法术位，你可以消耗这些法术位施展该法术。"
 					]
 				}
 			]
