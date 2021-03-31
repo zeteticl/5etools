@@ -6505,12 +6505,24 @@ Parser.ArmorToDisplay = function (armor) {
 Parser.keyToDisplay["simple"] = "简易";
 Parser.keyToDisplay["martial"] = "军用";
 // Tools
-Parser.keyToDisplay["alchemist's supplies"] = "炼金工具";
 Parser.keyToDisplay["artisan's tools"] = "工匠工具";
+Parser.keyToDisplay["alchemist's supplies"] = "炼金工具";
 Parser.keyToDisplay["brewer's supplies"] = "酿酒工具";
-Parser.keyToDisplay["calligrapher's supplies"] = "书法工具";
+Parser.keyToDisplay["carpenter's tools"] = "木匠工具";
 Parser.keyToDisplay["cartographer's tools"] = "制图工具";
+Parser.keyToDisplay["cobbler's tools"] = "鞋匠工具";
 Parser.keyToDisplay["cook's utensils"] = "厨师工具";
+Parser.keyToDisplay["glassblower's tools"] = "玻璃匠工具";
+Parser.keyToDisplay["jeweler's tools"] = "珠宝匠工具";
+Parser.keyToDisplay["leatherworker's tools"] = "皮匠工具";
+Parser.keyToDisplay["mason's tools"] = "泥瓦匠工具";
+Parser.keyToDisplay["painter's supplies"] = "画家工具";
+Parser.keyToDisplay["potter's tools"] = "陶匠工具";
+Parser.keyToDisplay["smith's tools"] = "铁匠工具";
+Parser.keyToDisplay["tinker's tools"] = "修理工具";
+Parser.keyToDisplay["weaver's tools"] = "织布工具";
+Parser.keyToDisplay["woodcarver's tools"] = "木雕工具";
+
 Parser.keyToDisplay["disguise kit"] = "易容工具";
 Parser.keyToDisplay["forgery kit"] = "文书伪造工具";
 Parser.keyToDisplay["gaming set"] = "赌具";
