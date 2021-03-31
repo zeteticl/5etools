@@ -57,6 +57,7 @@ class ItemsPage extends ListPage {
 					type,
 					cost: item.value || 0,
 					weight: Parser.weightValueToNumber(item.weight),
+					ENG_name: item.ENG_name,
 				},
 				{
 					uniqueId: item.uniqueId ? item.uniqueId : itI,
@@ -87,6 +88,7 @@ class ItemsPage extends ListPage {
 					rarity: item.rarity,
 					attunement: item._attunementCategory !== VeCt.STR_NO_ATTUNEMENT,
 					weight: Parser.weightValueToNumber(item.weight),
+					ENG_name: item.ENG_name,
 				},
 				{uniqueId: item.uniqueId ? item.uniqueId : itI},
 			);

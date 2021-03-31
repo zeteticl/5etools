@@ -41,6 +41,7 @@ class RewardsPage extends ListPage {
 				hash,
 				source,
 				type: reward.type,
+				ENG_name: reward.ENG_name,
 			},
 			{
 				uniqueId: reward.uniqueId ? reward.uniqueId : rwI,
@@ -79,6 +80,7 @@ class RewardsPage extends ListPage {
 			{
 				hash,
 				type: reward.type,
+				ENG_name: reward.ENG_name,
 			},
 		);
 		return listItem;

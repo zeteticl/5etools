@@ -610,6 +610,7 @@ class ModalFilterSpells extends ModalFilter {
 				concentration,
 				normalisedTime: spell._normalisedTime,
 				normalisedRange: spell._normalisedRange,
+				ENG_name: spell.ENG_name,
 			},
 			{
 				cbSel: eleRow.firstElementChild.firstElementChild.firstElementChild,

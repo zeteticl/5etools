@@ -340,6 +340,7 @@ class ModalFilterItems extends ModalFilter {
 				source,
 				sourceJson: item.source,
 				type,
+				ENG_name: item.ENG_name,
 			},
 			{
 				cbSel: eleRow.firstElementChild.firstElementChild.firstElementChild,

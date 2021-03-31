@@ -42,6 +42,7 @@ class LanguagesPage extends ListPage {
 				dialects: it.dialects || [],
 				type: it.type || "",
 				script: it.script || "",
+				ENG_name: it.ENG_name,
 			},
 			{
 				uniqueId: it.uniqueId ? it.uniqueId : anI,
@@ -82,6 +83,7 @@ class LanguagesPage extends ListPage {
 				hash,
 				type: it.type || "",
 				script: it.script || "",
+				ENG_name: it.ENG_name,
 			},
 		);
 		return listItem;

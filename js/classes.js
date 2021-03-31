@@ -433,6 +433,7 @@ class ClassesPage extends BaseComponent {
 			{
 				hash,
 				source,
+				ENG_name: cls.ENG_name,
 			},
 			{
 				$lnk,
@@ -1242,6 +1243,7 @@ class ClassesPage extends BaseComponent {
 				shortName: sc.shortName,
 				stateKey,
 				mod,
+				ENG_name: sc.ENG_name,
 			},
 			{
 				isExcluded,

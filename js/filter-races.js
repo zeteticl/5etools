@@ -1024,6 +1024,7 @@ class ModalFilterRaces extends ModalFilter {
 				size,
 				cleanName: PageFilterRaces.getInvertedName(race.name) || "",
 				alias: PageFilterRaces.getListAliases(race),
+				ENG_name: race.ENG_name,
 			},
 			{
 				cbSel: eleRow.firstElementChild.firstElementChild.firstElementChild,

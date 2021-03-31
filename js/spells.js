@@ -65,6 +65,7 @@ class SpellsPage extends ListPage {
 				concentration,
 				normalisedTime: spell._normalisedTime,
 				normalisedRange: spell._normalisedRange,
+				ENG_name: spell.ENG_name,
 			},
 			{
 				uniqueId: spell.uniqueId ? spell.uniqueId : spI,
@@ -119,8 +120,9 @@ class SpellsPage extends ListPage {
 				concentration,
 				range,
 				normalisedTime: spell._normalisedTime,
-				normalisedRange: spell._normalisedRange
-			}
+				normalisedRange: spell._normalisedRange,
+				ENG_name: spell.ENG_name,
+			},
 		);
 		return listItem;
 	}

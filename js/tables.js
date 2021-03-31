@@ -43,6 +43,7 @@ class TablesPage extends ListPage {
 				hash,
 				sortName,
 				source,
+				ENG_name: it.ENG_name,
 			},
 			{
 				uniqueId: it.uniqueId ? it.uniqueId : tbI,
@@ -75,6 +76,7 @@ class TablesPage extends ListPage {
 			it.name,
 			{
 				hash,
+				ENG_name: it.ENG_name,
 			},
 		);
 		return listItem;

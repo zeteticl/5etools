@@ -543,6 +543,7 @@ class ModalFilterBestiary extends ModalFilter {
 				sourceJson: mon.source,
 				type,
 				cr,
+				ENG_name: mon.ENG_name,
 			},
 			{
 				cbSel: eleRow.firstElementChild.firstElementChild.firstElementChild,

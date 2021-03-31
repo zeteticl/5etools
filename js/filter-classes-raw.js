@@ -751,6 +751,7 @@ class ModalFilterClasses extends ModalFilter {
 			`${cls.name} -- ${cls.source}`,
 			{
 				source: `${source} -- ${cls.name}`,
+				ENG_name: cls.ENG_name,
 			},
 			{
 				ixClass: clsI,
@@ -775,6 +776,7 @@ class ModalFilterClasses extends ModalFilter {
 			`${cls.name} -- ${cls.source} -- ${sc.name} -- ${sc.source}`,
 			{
 				source: `${cls.source} -- ${cls.name} -- ${source} -- ${sc.name}`,
+				ENG_name: cls.ENG_name,
 			},
 			{
 				ixClass: clsI,

@@ -45,6 +45,7 @@ class TrapsHazardsPage extends ListPage {
 				hash,
 				source,
 				trapType,
+				ENG_name: it.ENG_name,
 			},
 			{
 				uniqueId: it.uniqueId ? it.uniqueId : thI,
@@ -85,6 +86,7 @@ class TrapsHazardsPage extends ListPage {
 			{
 				hash,
 				trapType,
+				ENG_name: it.ENG_name,
 			},
 		);
 		return listItem;

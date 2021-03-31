@@ -78,7 +78,7 @@ class RacesPage extends ListPage {
 				source,
 				cleanName: PageFilterRaces.getInvertedName(race.name) || "",
 				alias: PageFilterRaces.getListAliases(race),
-				eng_name: race.ENG_name ? race.ENG_name : race.name,
+				ENG_name: race.ENG_name,
 			},
 			{
 				uniqueId: race.uniqueId ? race.uniqueId : rcI,
@@ -119,6 +119,7 @@ class RacesPage extends ListPage {
 			{
 				hash,
 				ability: race._slAbility,
+				ENG_name: race.ENG_name,
 			},
 		);
 		return listItem;

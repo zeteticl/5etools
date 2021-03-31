@@ -60,7 +60,7 @@ class OptionalFeaturesPage extends ListPage {
 				prerequisite,
 				level,
 				type: it._lFeatureType,
-				ENG_name: it.ENG_name ? it.ENG_name : it.name
+				ENG_name: it.ENG_name,
 			},
 			{
 				uniqueId: it.uniqueId ? it.uniqueId : ivI,
@@ -105,6 +105,7 @@ class OptionalFeaturesPage extends ListPage {
 				type: it._lFeatureType,
 				prerequisite,
 				level,
+				ENG_name: it.ENG_name,
 			},
 		);
 		return listItem;

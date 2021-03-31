@@ -47,6 +47,7 @@ class DeitiesPage extends ListPage {
 				pantheon: g.pantheon,
 				alignment,
 				domains,
+				ENG_name: g.ENG_name,
 			},
 			{
 				uniqueId: g.uniqueId ? g.uniqueId : dtI,
@@ -92,6 +93,7 @@ class DeitiesPage extends ListPage {
 				pantheon: g.pantheon,
 				alignment,
 				domains,
+				ENG_name: g.ENG_name,
 			},
 		);
 		return listItem;

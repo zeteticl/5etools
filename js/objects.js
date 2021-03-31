@@ -40,6 +40,7 @@ class ObjectsPage extends ListPage {
 				hash,
 				source,
 				size,
+				ENG_name: obj.ENG_name,
 			},
 			{
 				uniqueId: obj.uniqueId ? obj.uniqueId : obI,
@@ -79,6 +80,7 @@ class ObjectsPage extends ListPage {
 			{
 				hash,
 				size,
+				ENG_name: obj.ENG_name,
 			},
 		);
 		return listItem;

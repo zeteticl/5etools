@@ -109,6 +109,7 @@ class PsionicsPage extends ListPage {
 				type: typeMeta.full,
 				order: p._fOrder,
 				searchModeList: getHiddenModeList(p),
+				ENG_name: p.ENG_name,
 			},
 			{
 				uniqueId: p.uniqueId ? p.uniqueId : psI,
@@ -150,6 +151,7 @@ class PsionicsPage extends ListPage {
 				hash,
 				type: typeMeta.full,
 				order: p._fOrder,
+				ENG_name: p.ENG_name,
 			},
 		);
 		return listItem;

@@ -41,6 +41,7 @@ class VehiclesPage extends ListPage {
 				source,
 				vehicleType: it.vehicleType,
 				upgradeType: it.upgradeType,
+				ENG_name: it.ENG_name,
 			},
 			{
 				uniqueId: it.uniqueId ? it.uniqueId : vhI,
@@ -78,6 +79,7 @@ class VehiclesPage extends ListPage {
 				hash,
 				vehicleType: it.vehicleType,
 				upgradeType: it.upgradeType,
+				ENG_name: it.ENG_name,
 			},
 		);
 		return listItem;

@@ -40,6 +40,7 @@ class CharCreationOptionsPage extends ListPage {
 				hash,
 				source,
 				type: it._dOptionType,
+				ENG_name: it.ENG_name,
 			},
 			{
 				uniqueId: it.uniqueId || itI,
@@ -79,6 +80,7 @@ class CharCreationOptionsPage extends ListPage {
 				hash,
 				source: Parser.sourceJsonToAbv(it.source),
 				type: it._dOptionType,
+				ENG_name: it.ENG_name,
 			},
 		);
 		return listItem;
