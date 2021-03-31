@@ -2158,14 +2158,14 @@ Parser.XP_CHART_ALT = {
 };
 
 Parser.ARMOR_ABV_TO_FULL = {
-	"l.": "light",
-	"m.": "medium",
-	"h.": "heavy",
+	"轻": "light",
+	"中": "medium",
+	"重": "heavy",
 };
 
 Parser.WEAPON_ABV_TO_FULL = {
-	"s.": "simple",
-	"m.": "martial",
+	"简易": "simple",
+	"军用": "martial",
 };
 
 Parser.CONDITION_TO_COLOR = {

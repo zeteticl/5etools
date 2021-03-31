@@ -2986,7 +2986,7 @@ Renderer.utils = {
 							return isListMode ? v.map(x => x.toTitleCase()).join("/") : v.joinConjunct(", ", " 或 ");
 						case "otherSummary":
 							return isListMode ? (v.entrySummary || Renderer.stripTags(v.entry)) : Renderer.get().render(v.entry);
-						case "other": return isListMode ? "Special" : Renderer.get().render(v);
+						case "other": return isListMode ? "特殊" : Renderer.get().render(v);
 						case "race": {
 							const parts = v.map((it, i) => {
 								if (isListMode) {
@@ -3068,7 +3068,7 @@ Renderer.utils = {
 											return isListMode ? `熟练${Parser.ArmorToDisplay(prof)}甲` : `熟练于 ${Parser.ArmorToDisplay(prof)}甲`;
 										}
 										case "weapon": {
-											return isListMode ? `熟练${Parser.weaponFullToAbv(prof)} 武器` : `Proficiency with a ${prof} weapon`;
+											return isListMode ? `熟练${Parser.weaponFullToAbv(prof)}武器` : `熟练${prof}武器`;
 										}
 										default: throw new Error(`Unhandled proficiency type: "${profType}"`);
 									}
@@ -3077,8 +3077,8 @@ Renderer.utils = {
 							return isListMode ? parts.join("/") : parts.joinConjunct(", ", " 或 ");
 						}
 						case "spellcasting": return isListMode ? "施法能力" : "具有施展至少一种法术的能力";
-						case "spellcasting2020": return isListMode ? "Spellcasting" : "Spellcasting or Pact Magic feature";
-						case "psionics": return isListMode ? "Psionics" : Renderer.get().render("Psionic Talent feature or {@feat Wild Talent|UA2020PsionicOptionsRevisited} feat");
+						case "spellcasting2020": return isListMode ? "施法能力" : "施法能力或契约魔法特性";
+						case "psionics": return isListMode ? "灵能" : Renderer.get().render("灵能天赋特性或{@feat Wild Talent|UA2020PsionicOptionsRevisited}特性");
 						default: throw new Error(`Unhandled key: ${k}`);
 					}
 				})
