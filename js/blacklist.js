@@ -46,6 +46,7 @@ class Blacklist {
 			"objects.json",
 			"psionics.json",
 			"races.json",
+			"recipes.json",
 			"rewards.json",
 			"trapshazards.json",
 			"variantrules.json",

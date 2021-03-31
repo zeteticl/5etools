@@ -117,7 +117,7 @@
 				{
 					"name": "Ram",
 					"entries": [
-						"{@atk mw} +6, reach 5 ft., one target. {@h}13 ({@damage 2d8 + 4}) bludgeoning damage."
+						"{@atk mw} {@hit 6}, reach 5 ft., one target. {@h}13 ({@damage 2d8 + 4}) bludgeoning damage."
 					]
 				}
 			],
@@ -2308,13 +2308,13 @@
 				{
 					"name": "Scimitar",
 					"entries": [
-						"{@atk mw} +4, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage."
+						"{@atk mw} {@hit 4}, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage."
 					]
 				},
 				{
 					"name": "Shortbow",
 					"entries": [
-						"{@atk rw} +4, range 80/320 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage."
+						"{@atk rw} {@hit 4}, range 80/320 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage."
 					]
 				}
 			],
@@ -3345,9 +3345,29 @@
 			"page": 224,
 			"_copy": {
 				"name": "Mummy Lord",
-				"source": "MM"
+				"source": "MM",
+				"_mod": {
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Special Equipment",
+							"entries": [
+								"The mummy wears a {@item ring of fire resistance}."
+							]
+						}
+					}
+				}
+			},
+			"resist": [
+				"fire"
+			],
+			"vulnerable": null,
+			"cr": {
+				"cr": "15",
+				"xp": 6500
 			},
 			"spellcasting": null,
+			"legendary": null,
 			"hasToken": true,
 			"spellcastingTags": []
 		},
@@ -4931,7 +4951,7 @@
 				{
 					"name": "Dagger",
 					"entries": [
-						"{@atk mw} +4, reach 5 ft., one target. {@h}4 ({@damage 1d4 + 2}) piercing damage."
+						"{@atk mw} {@hit 4}, reach 5 ft., one target. {@h}4 ({@damage 1d4 + 2}) piercing damage."
 					]
 				}
 			],

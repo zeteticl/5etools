@@ -120,7 +120,8 @@ class NavBar {
 		addLi(ulAdventures, "adventure.html", "Wildemount: Unwelcome Spirits", {isSide: true, aHash: "US", date: null});
 		addLi(ulAdventures, "adventure.html", "Theros: No Silent Secret", {isSide: true, aHash: "MOT-NSS", date: null});
 		addLi(ulAdventures, "adventure.html", "Icewind Dale: Rime of the Frostmaiden", {isSide: true, aHash: "IDRotF", date: null});
-		addLi(ulDms, "cultsboons.html", "异教&恶魔恩惠");
+		addLi(ulAdventures, "adventure.html", "烛堡秘辛", {isSide: true, aHash: "CM", date: "2021"});
+		addLi(ulDms, "cultsboons.html", "异教&超自然恩惠");
 		addLi(ulDms, "objects.html", "对象");
 		addLi(ulDms, "trapshazards.html", "陷阱&危险");
 		addDivider(ulDms);

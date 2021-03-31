@@ -109,6 +109,14 @@ class ObjectsPage extends ListPage {
 		sub = this._filterBox.setFromSubHashes(sub);
 		await ListUtil.pSetFromSubHashes(sub);
 	}
+
+	_getSearchCache (entity) {
+		if (!entity.entries && !entity.actionEntries) return "";
+		const ptrOut = {_: ""};
+		this._getSearchCache_handleEntryProp(entity, "entries", ptrOut);
+		this._getSearchCache_handleEntryProp(entity, "actionEntries", ptrOut);
+		return ptrOut._;
+	}
 }
 
 const objectsPage = new ObjectsPage();

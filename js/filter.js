@@ -63,7 +63,7 @@ class ModalFilter {
 
 	get pageFilter () { return this._pageFilter; }
 
-	_$getWrpList () { return $(`<div class="list ui-list__wrp overflow-x-hidden overflow-y-auto mb-2 h-100 min-h-0"></div>`); }
+	_$getWrpList () { return $(`<div class="list ui-list__wrp overflow-x-hidden overflow-y-auto h-100 min-h-0"></div>`); }
 
 	/**
 	 * @param $wrp
@@ -93,8 +93,9 @@ class ModalFilter {
 		const $btnSendAllToRight = opts.isBuildUi ? $(`<button class="btn btn-xxs btn-default col-1" title="Add All"><span class="glyphicon glyphicon-arrow-right"></span></button>`) : null;
 
 		if (!opts.isBuildUi) {
-			if (this._isRadio) $wrpFormHeaders.append(`<label class="btn btn-default col-1 flex-vh-center" disabled></label>`);
-			else $$`<label class="btn btn-default col-1 flex-vh-center">${$cbSelAll}</label>`.appendTo($wrpFormHeaders);
+			if (this._isRadio) $wrpFormHeaders.append(`<label class="btn btn-default col-0-5 flex-vh-center" disabled></label>`);
+			else $$`<label class="btn btn-default col-0-5 flex-vh-center">${$cbSelAll}</label>`.appendTo($wrpFormHeaders);
+			$wrpFormHeaders.append(`<button class="btn btn-default col-0-5" disabled></button>`);
 		}
 		this._$getColumnHeaders().forEach($ele => $wrpFormHeaders.append($ele));
 		if (opts.isBuildUi) $btnSendAllToRight.appendTo($wrpFormHeaders);
@@ -154,6 +155,7 @@ class ModalFilter {
 		const $wrpInner = $$`<div class="flex-col h-100">
 			${$wrpForm}
 			${$wrpList}
+			<hr class="hr-1">
 			${opts.isBuildUi ? null : $$`<div class="flex-vh-center">${$btnConfirm}</div>`}
 		</div>`.appendTo($wrp.empty());
 
@@ -172,28 +174,14 @@ class ModalFilter {
 	 * @param [opts]
 	 * @param [opts.filterExpression] A filter expression, as usually found in @filter tags, which will be applied.
 	 */
-	async pGetUserSelection (opts) {
-		opts = opts || {};
-
+	async pGetUserSelection ({filterExpression = null} = {}) {
 		// eslint-disable-next-line no-async-promise-executor
 		return new Promise(async resolve => {
-			const {$modalInner, doClose} = UiUtil.getShowModal({
-				isHeight100: true,
-				title: `Filter/Search for ${this._modalTitle}`,
-				cbClose: (isDataEntered) => {
-					this._filterCache.$wrpModalInner.detach();
-					if (!isDataEntered) resolve([]);
-				},
-				isUncappedHeight: true,
-			});
+			const {$modalInner, doClose} = this._getShowModal(resolve);
 
 			await this.pPreloadHidden($modalInner);
 
-			if (opts.filterExpression) {
-				const filterSubhashMeta = Renderer.getFilterSubhashes(Renderer.splitTagByPipe(opts.filterExpression), this._namespace);
-				const subhashes = filterSubhashMeta.subhashes.map(it => `${it.key}${HASH_SUB_KV_SEP}${it.value}`);
-				this.pageFilter.filterBox.setFromSubHashes(subhashes, true);
-			}
+			this._doApplyFilterExpression(filterExpression);
 
 			this._filterCache.$btnConfirm.off("click").click(async () => {
 				const checked = this._filterCache.list.visibleItems.filter(it => it.data.cbSel.checked);
@@ -213,6 +201,31 @@ class ModalFilter {
 			this._filterCache.$iptSearch.focus();
 		});
 	}
+
+	_getShowModal (resolve) {
+		const {$modalInner, doClose} = UiUtil.getShowModal({
+			isHeight100: true,
+			isWidth100: true,
+			title: `Filter/Search for ${this._modalTitle}`,
+			cbClose: (isDataEntered) => {
+				this._filterCache.$wrpModalInner.detach();
+				if (!isDataEntered) resolve([]);
+			},
+			isUncappedHeight: true,
+		});
+
+		return {$modalInner, doClose};
+	}
+
+	_doApplyFilterExpression (filterExpression) {
+		if (!filterExpression) return;
+
+		const filterSubhashMeta = Renderer.getFilterSubhashes(Renderer.splitTagByPipe(filterExpression), this._namespace);
+		const subhashes = filterSubhashMeta.subhashes.map(it => `${it.key}${HASH_SUB_KV_SEP}${it.value}`);
+		this.pageFilter.filterBox.setFromSubHashes(subhashes, true);
+	}
+
+	_getNameStyle () { return `bold`; }
 
 	/**
 	 * Pre-heat the modal, thus allowing access to the filter box underneath.
@@ -287,7 +300,7 @@ class FilterBox extends ProxyBase {
 		this._isCompact = opts.isCompact;
 		this._namespace = opts.namespace;
 
-		this._doSaveStateDebounced = MiscUtil.debounce(() => this._pDoSaveState(), 50);
+		this._doSaveStateThrottled = MiscUtil.throttle(() => this._pDoSaveState(), 50);
 		this.__meta = this._getDefaultMeta();
 		if (this._isCompact) this.__meta.isSummaryHidden = true;
 
@@ -330,7 +343,7 @@ class FilterBox extends ProxyBase {
 	}
 
 	fireChangeEvent () {
-		this._doSaveStateDebounced();
+		this._doSaveStateThrottled();
 		this.fireEvent(FilterBox.EVNT_VALCHANGE);
 	}
 
@@ -428,7 +441,7 @@ class FilterBox extends ProxyBase {
 		this._$btnToggleSummaryHidden
 			.click(() => {
 				this._meta.isSummaryHidden = !this._meta.isSummaryHidden;
-				this._doSaveStateDebounced();
+				this._doSaveStateThrottled();
 			});
 		const summaryHiddenHook = () => {
 			this._$btnToggleSummaryHidden.toggleClass("active", !!this._meta.isSummaryHidden);
@@ -509,7 +522,7 @@ class FilterBox extends ProxyBase {
 			$btnCombineFiltersAs.text(this._meta.modeCombineFilters === "custom" ? this._meta.modeCombineFilters.uppercaseFirst() : this._meta.modeCombineFilters.toUpperCase());
 			if (this._meta.modeCombineFilters === "custom") $wrpBtnCombineFilters.append($btnCombineFilterSettings);
 			else $btnCombineFilterSettings.detach();
-			this._doSaveStateDebounced();
+			this._doSaveStateThrottled();
 		};
 		this._addHook("meta", "modeCombineFilters", hook);
 		hook();
@@ -1898,7 +1911,7 @@ class Filter extends FilterBase {
 				break;
 			}
 			case "xor": {
-				// if exactl one is 2 (red) exclude if it matches
+				// if exactly one is 2 (red) exclude if it matches
 				hide = hide || entryVal.filter(fi => !fi.isIgnoreRed).filter(fi => filterState[fi.item] === 2).length === 1;
 
 				break;

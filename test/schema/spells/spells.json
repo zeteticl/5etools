@@ -1,7 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"$id": "spells.json",
-	"version": "1.6.4",
+	"version": "1.6.5",
 	"title": "Spells",
 	"type": "object",
 
@@ -382,11 +382,11 @@
 				},
 				"miscTags": {
 					"type": "array",
-					"description": "PRM = permanentEffects = 'Used to flag spells that can/will have permanent effects, but are not listed as having permanent duration'; SCL = scalingEffects; HL = isHeal; SMN = isSummon; SGT = requiresSight; THP = isTempHp; MAC = isModifiesAc; TP = isTeleport",
+					"description": "PRM = permanentEffects = 'Used to flag spells that can/will have permanent effects, but are not listed as having permanent duration'; SCL = scalingEffects; HL = isHeal; SMN = isSummon; SGT = requiresSight; THP = isTempHp; MAC = isModifiesAc; TP = isTeleport; FMV = isForcedMovement",
 					"uniqueItems": true,
 					"items": {
 						"type": "string",
-						"enum": ["PRM", "SCL", "HL", "SMN", "SGT", "THP", "MAC", "TP"]
+						"enum": ["PRM", "SCL", "HL", "SMN", "SGT", "THP", "MAC", "TP", "FMV"]
 					}
 				},
 				"srd": {

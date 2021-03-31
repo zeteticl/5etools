@@ -615,6 +615,12 @@ PropOrder._FEAT = [
 	"prerequisite",
 	"ability",
 
+	"skillProficiencies",
+	"languageProficiencies",
+	"toolProficiencies",
+	"weaponProficiencies",
+	"armorProficiencies",
+
 	"additionalSpells",
 
 	"entries",
@@ -792,6 +798,7 @@ PropOrder._ITEM = [
 	"bonusSpellSaveDc",
 	"bonusAc",
 	"bonusSavingThrow",
+	"bonusAbilityCheck",
 	"bonusProficiencyBonus",
 
 	"recharge",
@@ -984,9 +991,11 @@ PropOrder._RACE = [
 	"darkvision",
 	"feats",
 
-	"traitTags",
-	"languageProficiencies",
+	new PropOrder._ArrayKey("traitTags", {fnSort: SortUtil.ascSortLower}),
 	"skillProficiencies",
+	"languageProficiencies",
+	"weaponProficiencies",
+	"armorProficiencies",
 
 	"resist",
 	"immune",
@@ -1032,6 +1041,7 @@ PropOrder._TRAP = [
 
 	"source",
 	"page",
+	"srd",
 
 	"trapHazType",
 
@@ -1057,6 +1067,7 @@ PropOrder._HAZARD = [
 
 	"source",
 	"page",
+	"srd",
 
 	"trapHazType",
 

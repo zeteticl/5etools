@@ -102,6 +102,7 @@ $rgb-inset-border: #656565;
 		}
 
 		&image {
+			// N.b. this width/height should be reflected in the renderer image styling
 			max-width: 100%;
 			max-height: 60vh;
 			cursor: zoom-in;
@@ -491,14 +492,32 @@ $rgb-inset-border: #656565;
 	&-item__ {
 		&type-rarity-attunement {
 			font-style: italic;
-			color: black;
+			color: $rgb-off-black;
 		}
 	}
 
 	&-spell__ {
 		&level-school-ritual {
 			font-style: italic;
-			color: black;
+			color: $rgb-off-black;
+		}
+	}
+
+	&-ability-icon {
+		max-width: 100px;
+
+		&__ {
+			&fill-primary {
+				fill: $rgb-off-black;
+			}
+
+			&fill-bg {
+				fill: $rgb-bg;
+			}
+
+			&stroke-bg {
+				stroke: $rgb-bg;
+			}
 		}
 	}
 }

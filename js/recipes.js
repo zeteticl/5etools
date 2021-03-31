@@ -203,6 +203,14 @@ class RecipesPage extends ListPage {
 			this._renderStats(r, scaleTo);
 		}
 	}
+
+	_getSearchCache (entity) {
+		if (!entity.ingredients && !entity.instructions) return "";
+		const ptrOut = {_: ""};
+		this._getSearchCache_handleEntryProp(entity, "ingredients", ptrOut);
+		this._getSearchCache_handleEntryProp(entity, "instructions", ptrOut);
+		return ptrOut._;
+	}
 }
 
 const recipesPage = new RecipesPage();

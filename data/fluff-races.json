@@ -1759,6 +1759,60 @@
 			}
 		},
 		{
+			"name": "Fairy",
+			"source": "UA2021FolkOfTheFeywild",
+			"entries": [
+				"The Feywild is home to many fantastic peoples, including fairies. Fairies are a wee folk, but not nearly as much so as their pixie and sprite friends.",
+				"Infused with the magic of the Feywild, fairies share a few commonalities with one another but can differ widely in appearance, behavior, and attitude. Many fairies have a special physical characteristic that sets them apart from other creatures of their kind. For your fairy, roll on the Fey Characteristic table or choose an option from it. The Feywild is a wild place, so come up with your own characteristic if none of these fit your character.",
+				{
+					"type": "table",
+					"caption": "Fey Characteristics",
+					"colLabels": [
+						"d8",
+						"Characteristic"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1",
+							"You have small wings like those of an insect."
+						],
+						[
+							"2",
+							"You have shimmering, multicolored skin."
+						],
+						[
+							"3",
+							"You have exceptionally large ears."
+						],
+						[
+							"4",
+							"A constant, glittering mist surrounds you."
+						],
+						[
+							"5",
+							"You have a small spectral horn on your forehead, like a little unicorn horn."
+						],
+						[
+							"6",
+							"Your hands never look dirty."
+						],
+						[
+							"7",
+							"You smell like fresh brownies."
+						],
+						[
+							"8",
+							"A noticeable, harmless chill surrounds you."
+						]
+					]
+				}
+			]
+		},
+		{
 			"name": "Firbolg",
 			"source": "VGM",
 			"entries": [
@@ -2090,6 +2144,21 @@
 			]
 		},
 		{
+			"name": "Gith",
+			"source": "MTF",
+			"entries": [
+				{
+					"type": "section",
+					"entries": [
+						"The story of the gith is rooted in a cruel twist of cosmic fate. Inspired by the great leader for whom the race is named, the gith rose up to overthrow the mind flayers that held them in servitude. But after they won their freedom, two factions among the gith disagreed on what kind of civilization they would forge. That disagreement quickly flared into open hostility, and the two groups distanced themselves from one another to pursue their separate agendas. They remain bitter enemies today, each side willing to fight to the death whenever they cross paths.",
+						"The githyanki were motivated by revenge and convinced that they deserved to take whatever they wanted from the worlds they traveled. Ranging out from the titanic city of Tu'narath on the Astral Plane, they send raiders out to plunder the Material Plane and other worlds, bringing treasures and slaves back to their ageless realm. At the same time, they hunt down and kill mind flayers whenever possible, as recompense for what the illithids did to them.",
+						"The githzerai believed that the path to an enlightened civilization lay in seclusion, not conflict. Their dedication to the principles of order is so strong that they can manipulate the stuff of chaos and use it to their benefit; thus, they have carved out a stronghold for themselves on the plane of Limbo that is virtually impervious. Though the githzerai are pacifists by nature, they share the githyanki's racial hatred for mind flayers, and from time to time they send out squads to destroy illithid outposts.",
+						"If the two races were ever to team up against the illithids, a combined force of gith could conceivably tip the balance in their favor. But as long as the githyanki and githzerai stay at each other's throats, their goal of ultimate victory over their original common enemy will likely remain unachieved."
+					]
+				}
+			]
+		},
+		{
 			"name": "Gith (Githyanki)",
 			"source": "MTF",
 			"_copy": {
@@ -2160,39 +2229,32 @@
 							"type": "entries",
 							"name": "活泼表现",
 							"entries": [
-								"侏儒的生活热情和精力奔流于他或她那娇小身躯的每一吋中。侏儒的平均身高略高于3呎，重约40到45磅。他们棕黄或褐色的脸庞常常挂着灿烂的笑容（就在他们那巨大鼻子的正下方），他们明亮的眼睛总闪烁着兴奋的光芒。他们美丽的头发向着几乎所有方向生长，就像是在表现侏儒那种对周遭事物永不满足的兴趣一般。",
-								"侏儒的个性大大体现在他们的外观上。男性侏儒的胡子，相比他们那狂野的头发，总是被细心打理，但也经常被做出如古怪分岔或整齐须端的款式。侏儒的服装，尽管通常呈现温和的泥土色调，但却精心装饰着刺绣、压花、或是闪亮的珠宝。"
-							]
-						},
-						{
-							"type": "entries",
-							"name": "热衷喜悦",
-							"entries": [
-								"对侏儒而言，活着是一件美妙的事，且他们会从那长达三到五个世纪的人生中榨取每一分快乐。人类可能会在这么冗长的生命中感到厌倦，精灵则可能会在他们生命的长河中花费大量时间品尝世间的美，而尽管有那么多的时间，侏儒却似乎仍会担心他们没有足够的时间去见识或完成他们想要的一切。",
-								"侏儒在说话时，总像是无法很快地把脑中的思绪给表达出来。即使他们要对一系列话题提出想法和建议时，他们仍会先仔细倾听他人的想法，并在过程中适当地加入惊讶或赞赏的叫喊。",
-								"尽管侏儒热爱是双关语和恶作剧等各样笑话，他们也同样专注于从事更加认真严肃的事情。许多侏儒是经验丰富的工程师、炼金术士、修补匠、和发明家。在完善自己工作的过程中，他们勇于犯错，以此自嘲，并敢于冒险（有时近乎鲁莽）和追求更大的梦想。"
-							]
-						},
-						{
-							"type": "entries",
-							"name": "明亮地穴",
-							"entries": [
-								"侏儒们会在崎岖丘陵、或林木繁盛的地带创建他们的家园。他们生活在地下，但却拥有比矮人更清新的空气，并可以随时享受地表上那自然、生意盎然的世界。他们的家园被巧妙的隐密在精巧建筑设计和简单幻术之后。受邀请的访客会被迅速地招待到那明亮而温暖的地洞中。而那些不速之客则很难在第一时间发现这些地洞的存在。",
-								"居住在人类国家中的侏儒们通常会是宝石切割师、工程师、学者、或修补匠。有些人类家庭会雇用侏儒做为家庭教师，确保其子女能像侏儒一样在认真学习的同时享受快乐。一名侏儒在他漫长的寿命中，可能会持续在一个人类家族中担当好几个世代的家庭教师。"
-							]
-						},
-						{
-							"type": "entries",
-							"name": "放眼世界",
-							"entries": [
-								"侏儒好奇而冲动，他们可能会为了见识这个世界、或为了满足探索的热爱而踏上冒险的旅途。做为宝石和其他精致事物的爱好者，有些侏儒会将冒险视为一个尽管危险，但却能快速获得财富的捷径。无论促使他们踏上冒险的原因如何，适应于这种生活方式的侏儒们所能获得的乐趣就跟他们从事任何其他活动所能获得的一样多，而这有时也会给他们的冒险同伴造成很大的困扰。"
-							]
-						},
-						{
-							"type": "entries",
-							"name": "侏儒姓名",
-							"entries": [
-								"侏儒们喜欢取名字，且他们大部分都拥有半打左右的名字。一名侏儒的母亲、父亲、氏族长老和叔叔阿姨都会为他各取一个名字，而各种几乎每个人所取的暱称则可能也可能不会着时间的推移而保留下来。侏儒的名字往往是从其祖先或远亲的名字稍作改变而来，但其中也有些是完全新创的名字。当与人类和其他对于取名较为「保守」的种族打交道时，侏儒早已学会使用不超过三种名字与之交流：本名，氏族名，和一个暱称，并从他们这三种类别的各种名字中各挑一个听起来最有趣的名字使用。",
+								"A constant hum of busy activity pervades the warrens and neighborhoods where gnomes form their close-knit communities. Louder sounds punctuate the hum: a crunch of grinding gears here, a minor explosion there, a yelp of surprise or triumph, and especially bursts of laughter. Gnomes take delight in life, enjoying every moment of invention, exploration, investigation, creation, and play.",
+								{
+									"type": "entries",
+									"name": "Vibrant Expression",
+									"entries": [
+										"A gnome's energy and enthusiasm for living shines through every inch his or her tiny body. Gnomes average slightly over 3 feet tall and weigh 40 to 45 pounds. Their tan or brown faces are usually adorned with broad smiles (beneath their prodigious noses), and their bright eyes shine with excitement. Their fair hair has a tendency to stick out in every direction, as if expressing the gnome's insatiable interest in everything around.",
+										"A gnome's personality is writ large in his or her appearance. A male gnome's beard, in contrast to his wild hair, is kept carefully trimmed but often styled into curious forks or neat points. A gnome's clothing, though usually made in modest earth tones, is elaborately decorated with embroidery, embossing, or gleaming jewels."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Delighted Dedication",
+									"entries": [
+										"As far as gnomes are concerned, being alive is a wonderful thing, and they squeeze every ounce of enjoyment out of their three to five centuries of life. Humans might wonder about getting bored over the course of such a long life, and elves take plenty of time to savor the beauties of the world in their long years, but gnomes seem to worry that even with all that time, they can't get in enough of the things they want to do and see.",
+										"Gnomes speak as if they can't get the thoughts out of their heads fast enough. Even as they offer ideas and opinions on a range of subjects, they manage to listen carefully to others, adding the appropriate exclamations of surprise and appreciation along the way.",
+										"Though gnomes love jokes of all kinds, particularly puns and pranks, they're just as dedicated to the more serious tasks they undertake. Many gnomes are skilled engineers, alchemists, tinkerers, and inventors. They're willing to make mistakes and laugh at themselves in the process of perfecting what they do, taking bold (sometimes foolhardy) risks and dreaming large."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Bright Burrows",
+									"entries": [
+										"Gnomes makes their homes in hilly, wooded lands. They live underground but get more fresh air than dwarves do, enjoying the natural, living world on the surface where ever they can. Their homes are well hidden by both clever construction and simple illusions. Welcome visitors are quickly ushered into the bright, warm burrows. Those who are not welcome are unlikely to find the burrows in the first place.",
+										"Gnomes who settle in human lands are commonly gemcutters, engineers, sages, or tinkerers. Some human families retained gnome tutors, ensuring that their pupils enjoy a mix of serious learning and delighted enjoyment. A gnome might tutor several generations of a single human family over the course of his or her long life."
+									]
+								},
 								{
 									"type": "list",
 									"style": "list-hang-notitle",
@@ -3249,6 +3311,15 @@
 						}
 					]
 				}
+			]
+		},
+		{
+			"name": "Hobgoblin",
+			"source": "UA2021FolkOfTheFeywild",
+			"entries": [
+				"Hobgoblins trace their origins to the Feywild, where they first appeared with their goblin and bugbear kin. That history has left its mark, for though hobgoblins are found throughout the Material Plane, they continue to channel an aspect of the Feywild's rule of reciprocity, which creates a mystical bond between the giver and the receiver of a gift.",
+				"On some worlds, such bonds lead hobgoblins to form communities with deep ties to each other. In the Forgotten Realms, vast hobgoblin legions have emerged, with ranks upon ranks of devoted soldiers noteworthy for how effective they are at fighting as a unit.",
+				"Hobgoblins are generally taller than their goblin cousins but not quite as big as bugbears. They have curved, pointed ears and noses that turn red or blue during displays of emotion."
 			]
 		},
 		{
@@ -4491,6 +4562,23 @@
 			]
 		},
 		{
+			"name": "Owlfolk",
+			"source": "UA2021FolkOfTheFeywild",
+			"entries": [
+				"Distant kin of giant owls, owlfolk come in many shapes and sizes, from petite and fluffy to widewinged and majestic. Owlfolk have arms and legs like other Humanoids, as well as wings that extend from their back and shoulders.",
+				"Because of their ancestral tie to the Feywild, owlfolk can innately see the magic of their surroundings. Like owls, owlfolk are graced with feathers that make no sound when they move or fly, making it easy for them to sneak up on you in the library.",
+				"Your owlfolk character might be nocturnal. Or perhaps your character is simply prone to rise later, embodying the common nickname of night owl."
+			]
+		},
+		{
+			"name": "Rabbitfolk",
+			"source": "UA2021FolkOfTheFeywild",
+			"entries": [
+				"Bounding across the wilds, rabbitfolk from the Feywild embody a spirit of freedom and travel.",
+				"Rabbitfolk are bipedal, with the characteristic long feet of the animal they resemble and fur in a variety of colors. They share the keen senses and powerful legs of leporine creatures and are full of energy, like a wound-up spring. Rabbitfolk are blessed with a little fey luck, and they often find themselves a few fortunate feet away from dangers during adventures."
+			]
+		},
+		{
 			"name": "Reborn",
 			"source": "UA2021GothicLineages",
 			"entries": [
@@ -4591,7 +4679,7 @@
 										],
 										[
 											"6",
-											"You were released after being petrified for generations. Your memories have faded, though, and your body is no  what it once was."
+											"You were released after being petrified for generations. Your memories have faded, though, and your body is not what it once was."
 										],
 										[
 											"7",

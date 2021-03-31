@@ -4,16 +4,27 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.4.0",
+	"version": "1.4.3",
 
 	"definitions" : {
-		"_arrayOfString": {
+		"_arrayOfSpell": {
 			"type": "array",
 			"uniqueItems": true,
 			"items": {
-				"type": "string"
+				"oneOf": [
+					{"type": "string"},
+					{
+						"type": "object",
+						"properties": {
+							"entry": {"type": "string"},
+							"hidden": {"type": "boolean"}
+						},
+						"required": ["entry", "hidden"]
+					}
+				]
 			}
 		},
+
 		"mediaHref": {
 			"oneOf": [
 				{
@@ -768,7 +779,8 @@
 						},
 						"id": {
 							"type": "string"
-						}
+						},
+						"style": {"type": "string"}
 					},
 					"required": ["entries"],
 					"additionalProperties": false
@@ -796,7 +808,8 @@
 						},
 						"id": {
 							"type": "string"
-						}
+						},
+						"style": {"type": "string"}
 					},
 					"required": ["entries"]
 				}
@@ -1281,9 +1294,8 @@
 			"type": "object",
 			"properties": {
 				"type": {"const": "refOptionalfeature"},
-				"optionalfeature": {
-					"type": "string"
-				}
+				"optionalfeature": {"type": "string"},
+				"name": {"type": "string"}
 			},
 			"required": [
 				"type",
@@ -1316,13 +1328,13 @@
 							}
 						},
 						"constant": {
-							"$ref": "#/definitions/_arrayOfString"
+							"$ref": "#/definitions/_arrayOfSpell"
 						},
 						"will": {
-							"$ref": "#/definitions/_arrayOfString"
+							"$ref": "#/definitions/_arrayOfSpell"
 						},
 						"ritual": {
-							"$ref": "#/definitions/_arrayOfString"
+							"$ref": "#/definitions/_arrayOfSpell"
 						},
 						"rest": {
 							"$ref": "#/definitions/entrySpellcasting_frequency"
@@ -1407,6 +1419,11 @@
 						"ability": {
 							"type": "string",
 							"enum": ["str", "dex", "con", "int", "wis", "cha"]
+						},
+						"displayAs": {
+							"description": "Implicitly \"trait\"",
+							"type": "string",
+							"enum": ["trait", "action"]
 						}
 					},
 					"required": [
@@ -1442,58 +1459,58 @@
 			"type": "object",
 			"properties": {
 				"9e": {
-					"$ref": "#/definitions/_arrayOfString"
+					"$ref": "#/definitions/_arrayOfSpell"
 				},
 				"9": {
-					"$ref": "#/definitions/_arrayOfString"
+					"$ref": "#/definitions/_arrayOfSpell"
 				},
 				"8e": {
-					"$ref": "#/definitions/_arrayOfString"
+					"$ref": "#/definitions/_arrayOfSpell"
 				},
 				"8": {
-					"$ref": "#/definitions/_arrayOfString"
+					"$ref": "#/definitions/_arrayOfSpell"
 				},
 				"7e": {
-					"$ref": "#/definitions/_arrayOfString"
+					"$ref": "#/definitions/_arrayOfSpell"
 				},
 				"7": {
-					"$ref": "#/definitions/_arrayOfString"
+					"$ref": "#/definitions/_arrayOfSpell"
 				},
 				"6e": {
-					"$ref": "#/definitions/_arrayOfString"
+					"$ref": "#/definitions/_arrayOfSpell"
 				},
 				"6": {
-					"$ref": "#/definitions/_arrayOfString"
+					"$ref": "#/definitions/_arrayOfSpell"
 				},
 				"5e": {
-					"$ref": "#/definitions/_arrayOfString"
+					"$ref": "#/definitions/_arrayOfSpell"
 				},
 				"5": {
-					"$ref": "#/definitions/_arrayOfString"
+					"$ref": "#/definitions/_arrayOfSpell"
 				},
 				"4e": {
-					"$ref": "#/definitions/_arrayOfString"
+					"$ref": "#/definitions/_arrayOfSpell"
 				},
 				"4": {
-					"$ref": "#/definitions/_arrayOfString"
+					"$ref": "#/definitions/_arrayOfSpell"
 				},
 				"3e": {
-					"$ref": "#/definitions/_arrayOfString"
+					"$ref": "#/definitions/_arrayOfSpell"
 				},
 				"3": {
-					"$ref": "#/definitions/_arrayOfString"
+					"$ref": "#/definitions/_arrayOfSpell"
 				},
 				"2e": {
-					"$ref": "#/definitions/_arrayOfString"
+					"$ref": "#/definitions/_arrayOfSpell"
 				},
 				"2": {
-					"$ref": "#/definitions/_arrayOfString"
+					"$ref": "#/definitions/_arrayOfSpell"
 				},
 				"1e": {
-					"$ref": "#/definitions/_arrayOfString"
+					"$ref": "#/definitions/_arrayOfSpell"
 				},
 				"1": {
-					"$ref": "#/definitions/_arrayOfString"
+					"$ref": "#/definitions/_arrayOfSpell"
 				}
 			},
 			"additionalProperties": false

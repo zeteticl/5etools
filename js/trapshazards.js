@@ -103,6 +103,16 @@ class TrapsHazardsPage extends ListPage {
 		sub = this._filterBox.setFromSubHashes(sub);
 		await ListUtil.pSetFromSubHashes(sub);
 	}
+
+	_getSearchCache (entity) {
+		if (!entity.effect && !entity.trigger && !entity.countermeasures && !entity.entries) return "";
+		const ptrOut = {_: ""};
+		this._getSearchCache_handleEntryProp(entity, "effect", ptrOut);
+		this._getSearchCache_handleEntryProp(entity, "trigger", ptrOut);
+		this._getSearchCache_handleEntryProp(entity, "countermeasures", ptrOut);
+		this._getSearchCache_handleEntryProp(entity, "entries", ptrOut);
+		return ptrOut._;
+	}
 }
 
 const trapsHazardsPage = new TrapsHazardsPage();

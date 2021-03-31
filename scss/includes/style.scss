@@ -958,7 +958,7 @@ input[type=checkbox].sidemenu__row__label__cb {
 .stats {
 	font-family: 'Convergence', Arial, sans-serif;
 	width: 100%;
-	font-size: 0.9em;
+	font-size: 12.6px;
 	table-layout: fixed;
 	overflow-wrap: break-word;
 
@@ -1069,17 +1069,13 @@ div#lootoutput {
 		border: 1px solid $rgb-border-grey;
 		width: calc(100% - 30px);
 		margin: 0 10px;
-		padding: 5px 7px 10px;
+		padding: 5px 7px 0;
 		border-radius: 4px;
 		box-shadow: 0 0 3px 0 black;
 
 		&--compact {
 			top: 41px;
 		}
-	}
-
-	&cr_slider {
-		width: 100%;
 	}
 
 	&ability-names th {
@@ -2764,15 +2760,15 @@ th.border {
 .form-control--error,
 .form-control--error[readonly],
 .form-control--error[disabled] {
-	background-color: #ff000018;
-	border: 1px solid #843534;
+	background-color: #ff000018 !important;
+	border: 1px solid #843534 !important;
 }
 
 .form-control--error:focus,
 .form-control--error[readonly]:focus,
 .form-control--error[disabled]:focus {
-	border-color: #843534;
-	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #ce8483;
+	border-color: #843534 !important;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #ce8483 !important;
 }
 
 .form-control--warning,
@@ -3105,15 +3101,15 @@ th.border {
 	.form-control--error,
 	.form-control--error[readonly],
 	.form-control--error[disabled] {
-		background-color: #3e0000;
-		border: 1px solid #843534;
+		background-color: #3e0000 !important;
+		border: 1px solid #843534 !important;
 	}
 
 	.form-control--error:focus,
 	.form-control--error[readonly]:focus,
 	.form-control--error[disabled]:focus {
-		border-color: #843534;
-		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #ce8483;
+		border-color: #843534 !important;
+		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #ce8483 !important;
 	}
 
 	.form-control--warning,
@@ -3413,37 +3409,6 @@ th.border {
 	}
 
 	/**** Search and filter bar ****/
-	.ui-slider {
-		background: $rgb-bg--night;
-	}
-
-	.ui-slider .ui-slider-tip {
-		background: $rgb-off-black;
-		color: $rgb-font--night;
-	}
-
-	.ui-slider-pips .ui-slider-pip {
-		color: $rgb-border-grey;
-	}
-
-	.ui-slider-pips:not(.ui-slider-disabled) .ui-slider-pip:hover .ui-slider-label,
-	.ui-slider .ui-slider-label {
-		color: $rgb-link-blue--night;
-	}
-
-	.ui-slider-pips .ui-slider-line {
-		background-color: $rgb-link-blue;
-	}
-
-	.ui-slider .ui-slider-handle,
-	.ui-slider .ui-slider-range {
-		background: rgba(128, 128, 128, 0.5);
-	}
-
-	.ui-slider .ui-slider-handle.ui-state-active {
-		border: 1px solid white;
-	}
-
 	.mon__cr_slider_wrp {
 		background: $rgb-bg--night;
 		color: #bbb;

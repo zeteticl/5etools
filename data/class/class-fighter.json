@@ -19,7 +19,7 @@
 					"light",
 					"medium",
 					"heavy",
-					"shields"
+					"{@item shield|phb|shields}"
 				],
 				"weapons": [
 					"simple",
@@ -112,7 +112,7 @@
 					"armor": [
 						"light",
 						"medium",
-						"shields"
+						"{@item shield|phb|shields}"
 					],
 					"weapons": [
 						"simple",
@@ -654,6 +654,22 @@
 					"ENG_shortName": "Arcane Archer",
 					"source": "XGE",
 					"page": 28,
+					"additionalSpells": [
+						{
+							"innate": {
+								"3": [
+									"prestidigitation"
+								]
+							}
+						},
+						{
+							"innate": {
+								"3": [
+									"druidcraft"
+								]
+							}
+						}
+					],
 					"subclassFeatures": [
 						"魔射手|Fighter||Arcane Archer|XGE|3",
 						"魔法箭矢|Fighter||Arcane Archer|XGE|7",
@@ -789,8 +805,11 @@
 					"subclassFeatures": [
 						"符文骑士|Fighter||Rune Knight|TCE|3",
 						"符文之盾|Fighter||Rune Knight|TCE|7",
+						"额外符文已知|Fighter||Rune Knight|TCE|7",
 						"奇伟身躯|Fighter||Rune Knight|TCE|10",
+						"额外符文已知|Fighter||Rune Knight|TCE|10",
 						"符文大师|Fighter||Rune Knight|TCE|15",
+						"额外符文已知|Fighter||Rune Knight|TCE|15",
 						"符文主宰|Fighter||Rune Knight|TCE|18"
 					]
 				}
@@ -2839,28 +2858,52 @@
 				"当你研习符文时，下列的符文成为了你的可选项。如果一个符文具有等级需求，你的战士等级必须达到相应等级才能研习该符文。如果一个符文需要通过豁免检定，你的符文魔法的豁免DC等于8 + 你的熟练加值 + 你的体质调整值。",
 				{
 					"type": "refOptionalfeature",
-					"optionalfeature": "云之符文|TCE"
-				},
-				{
-					"type": "refOptionalfeature",
-					"optionalfeature": "火之符文|TCE"
-				},
-				{
-					"type": "refOptionalfeature",
-					"optionalfeature": "霜之符文|TCE"
-				},
-				{
-					"type": "refOptionalfeature",
-					"optionalfeature": "石之符文|TCE"
-				},
-				{
-					"type": "refOptionalfeature",
-					"optionalfeature": "山丘符文|TCE"
-				},
-				{
-					"type": "refOptionalfeature",
-					"optionalfeature": "风暴符文|TCE"
+					"count": 2,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "云之符文|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "火之符文|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "霜之符文|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "石之符文|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "山丘符文|TCE",
+							"name": "山丘符文（7级或更高）"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "风暴符文|TCE",
+							"name": "风暴符文（7级或更高）"
+						}
+					]
 				}
+			]
+		},
+		{
+			"name": "额外符文已知",
+			"ENG_name": "Additional Rune Known",
+			"source": "TCE",
+			"page": 44,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Rune Knight",
+			"subclassSource": "TCE",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"{@i 7级符文骑士特性}",
+				"你习得一个额外的符文。"
 			]
 		},
 		{
@@ -2881,6 +2924,22 @@
 			]
 		},
 		{
+			"name": "额外符文已知",
+			"ENG_name": "Additional Rune Known",
+			"source": "TCE",
+			"page": 44,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Rune Knight",
+			"subclassSource": "TCE",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10级符文骑士特性}",
+				"你习得一个额外的符文。"
+			]
+		},
+		{
 			"name": "奇伟身躯",
 			"ENG_name": "Great Stature",
 			"source": "TCE",
@@ -2895,6 +2954,22 @@
 				"{@i 10级符文骑士特性}",
 				"符文的魔力永久性的改变了你。当你获得该特性时，掷{@dice 3d4}。你的身高增加该骰结果的英寸数。",
 				"此外，你的巨人之力特性造成的额外伤害提高至{@dice 1d8}。"
+			]
+		},
+		{
+			"name": "额外符文已知",
+			"ENG_name": "Additional Rune Known",
+			"source": "TCE",
+			"page": 44,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Rune Knight",
+			"subclassSource": "TCE",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"{@i 15级符文骑士特性}",
+				"你习得一个额外的符文。"
 			]
 		},
 		{

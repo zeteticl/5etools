@@ -128,8 +128,12 @@ Parser.numberToVulgar = function (number) {
 		default: {
 			// Handle recursive
 			const asNum = Number(`0.${spl[1]}`);
+
 			if (asNum.toFixed(2) === (1 / 3).toFixed(2)) return `${preDot}⅓`;
 			if (asNum.toFixed(2) === (2 / 3).toFixed(2)) return `${preDot}⅔`;
+
+			if (asNum.toFixed(2) === (1 / 6).toFixed(2)) return `${preDot}⅙`;
+			if (asNum.toFixed(2) === (5 / 6).toFixed(2)) return `${preDot}⅚`;
 		}
 	}
 
@@ -137,7 +141,7 @@ Parser.numberToVulgar = function (number) {
 };
 
 Parser.vulgarToNumber = function (str) {
-	const [, leading = "0", vulgar = ""] = /^(\d+)?([⅛¼⅜½⅝¾⅞⅓⅔])?$/.exec(str) || [];
+	const [, leading = "0", vulgar = ""] = /^(\d+)?([⅛¼⅜½⅝¾⅞⅓⅔⅙⅚])?$/.exec(str) || [];
 	let out = Number(leading);
 	switch (vulgar) {
 		case "⅛": out += 0.125; break;
@@ -149,6 +153,8 @@ Parser.vulgarToNumber = function (str) {
 		case "⅞": out += 0.875; break;
 		case "⅓": out += 1 / 3; break;
 		case "⅔": out += 2 / 3; break;
+		case "⅙": out += 1 / 6; break;
+		case "⅚": out += 5 / 6; break;
 		case "": break;
 		default: throw new Error(`Unhandled vulgar part "${vulgar}"`);
 	}
@@ -904,7 +910,7 @@ Parser.spTimeListToFull = function (times, isStripTags) {
 };
 
 Parser.getTimeToFull = function (time) {
-	let unit = (time.unit=="action"||time.unit=="bonus"||time.unit=="reaction")? "个" : "";
+	let unit = (time.unit === "action" || time.unit === "bonus" || time.unit === "reaction") ? "个" : "";
 	return `${time.number ? `${time.number} ${unit}` : ""}${time.unit === "bonus" ? "附赠动作" : Parser.translateKeyToDisplay(time.unit)}${time.number > 1 ? "" : ""}`;
 };
 
@@ -1246,6 +1252,7 @@ Parser.SP_MISC_TAG_TO_FULL = {
 	SMN: "Summons Creature",
 	MAC: "Modifies AC",
 	TP: "Teleportation",
+	FMV: "Forced Movement",
 };
 Parser.spMiscTagToFull = function (type) {
 	return Parser._parse_aToB(Parser.SP_MISC_TAG_TO_FULL, type);
@@ -1383,7 +1390,7 @@ Parser.MON_SENSE_TAG_TO_FULL = {
 	"D": "黑暗视觉",
 	"SD": "高级黑暗视觉",
 	"T": "震颤感知",
-	"U": "真实视觉"
+	"U": "真实视觉",
 };
 Parser.monSenseTagToFull = function (tag) {
 	return Parser._parse_aToB(Parser.MON_SENSE_TAG_TO_FULL, tag);
@@ -1955,9 +1962,7 @@ Parser.bookOrdinalToAbv = (ordinal, preNoSuff) => {
 
 Parser.nameToTokenName = function (name) {
 	return name
-		.normalize("NFD") // replace diactrics with their individual graphemes
-		.replace(/[\u0300-\u036f]/g, "") // remove accent graphemes
-		.replace(/Æ/g, "AE").replace(/æ/g, "ae")
+		.toAscii()
 		.replace(/"/g, "");
 };
 
@@ -2058,7 +2063,7 @@ Parser.ATB_ABV_TO_FULL = {
 	"con": "体质",
 	"int": "智力",
 	"wis": "感知",
-	"cha": "魅力"
+	"cha": "魅力",
 };
 
 TP_ABERRATION = "aberration";
@@ -2282,6 +2287,7 @@ SRC_TCE = "TCE";
 SRC_SCREEN = "Screen";
 SRC_SCREEN_WILDERNESS_KIT = "ScreenWildernessKit";
 SRC_HEROES_FEAST = "HF";
+SRC_CM = "CM";
 
 SRC_AL_PREFIX = "AL";
 
@@ -2366,6 +2372,7 @@ SRC_UA2020POR = `${SRC_UA_PREFIX}2020PsionicOptionsRevisited`;
 SRC_UA2020SCR = `${SRC_UA_PREFIX}2020SubclassesRevisited`;
 SRC_UA2020F = `${SRC_UA_PREFIX}2020Feats`;
 SRC_UA2021GL = `${SRC_UA_PREFIX}2021GothicLineages`;
+SRC_UA2021FF = `${SRC_UA_PREFIX}2021FolkOfTheFeywild`;
 
 SRC_3PP_SUFFIX = " 3pp";
 
@@ -2445,16 +2452,17 @@ Parser.SOURCE_JSON_TO_FULL[SRC_TCE] = "塔莎的万象坩锅";
 Parser.SOURCE_JSON_TO_FULL[SRC_SCREEN] = "地下城主屏幕";
 Parser.SOURCE_JSON_TO_FULL[SRC_SCREEN_WILDERNESS_KIT] = "Dungeon Master's Screen: Wilderness Kit";
 Parser.SOURCE_JSON_TO_FULL[SRC_HEROES_FEAST] = "Heroes' Feast";
-Parser.SOURCE_JSON_TO_FULL[SRC_ALCoS] = AL_PREFIX + "斯特拉德的诅咒";
-Parser.SOURCE_JSON_TO_FULL[SRC_ALEE] = AL_PREFIX + "邪恶元素";
-Parser.SOURCE_JSON_TO_FULL[SRC_ALRoD] = AL_PREFIX + "恶魔狂怒";
-Parser.SOURCE_JSON_TO_FULL[SRC_PSA] = PS_PREFIX + "阿芒凯";
-Parser.SOURCE_JSON_TO_FULL[SRC_PSI] = PS_PREFIX + "依尼翠";
-Parser.SOURCE_JSON_TO_FULL[SRC_PSK] = PS_PREFIX + "卡拉德许";
-Parser.SOURCE_JSON_TO_FULL[SRC_PSZ] = PS_PREFIX + "赞迪卡";
-Parser.SOURCE_JSON_TO_FULL[SRC_PSX] = PS_PREFIX + "依夏兰";
-Parser.SOURCE_JSON_TO_FULL[SRC_PSD] = PS_PREFIX + "多明纳里亚";
-Parser.SOURCE_JSON_TO_FULL[SRC_UAA] = UA_PREFIX + "奇械师";
+Parser.SOURCE_JSON_TO_FULL[SRC_CM] = "烛堡秘辛";
+Parser.SOURCE_JSON_TO_FULL[SRC_ALCoS] = `${AL_PREFIX}斯特拉德的诅咒`;
+Parser.SOURCE_JSON_TO_FULL[SRC_ALEE] = `${AL_PREFIX}邪恶元素`;
+Parser.SOURCE_JSON_TO_FULL[SRC_ALRoD] = `${AL_PREFIX}恶魔狂怒`;
+Parser.SOURCE_JSON_TO_FULL[SRC_PSA] = `${PS_PREFIX}阿芒凯`;
+Parser.SOURCE_JSON_TO_FULL[SRC_PSI] = `${PS_PREFIX}依尼翠`;
+Parser.SOURCE_JSON_TO_FULL[SRC_PSK] = `${PS_PREFIX}卡拉德许`;
+Parser.SOURCE_JSON_TO_FULL[SRC_PSZ] = `${PS_PREFIX}赞迪卡`;
+Parser.SOURCE_JSON_TO_FULL[SRC_PSX] = `${PS_PREFIX}依夏兰`;
+Parser.SOURCE_JSON_TO_FULL[SRC_PSD] = `${PS_PREFIX}多明纳里亚`;
+Parser.SOURCE_JSON_TO_FULL[SRC_UAA] = `${UA_PREFIX}奇械师`;
 Parser.SOURCE_JSON_TO_FULL[SRC_UAEAG] = `${UA_PREFIX}Eladrin and Gith`;
 Parser.SOURCE_JSON_TO_FULL[SRC_UAEBB] = `${UA_PREFIX}Eberron`;
 Parser.SOURCE_JSON_TO_FULL[SRC_UAFFR] = `${UA_PREFIX}Feats for Races`;
@@ -2520,6 +2528,7 @@ Parser.SOURCE_JSON_TO_FULL[SRC_UA2020POR] = `${UA_PREFIX}2020 Psionic Options Re
 Parser.SOURCE_JSON_TO_FULL[SRC_UA2020SCR] = `${UA_PREFIX}2020 Subclasses Revisited`;
 Parser.SOURCE_JSON_TO_FULL[SRC_UA2020F] = `${UA_PREFIX}2020 Feats`;
 Parser.SOURCE_JSON_TO_FULL[SRC_UA2021GL] = `${UA_PREFIX}2021 Gothic Lineages`;
+Parser.SOURCE_JSON_TO_FULL[SRC_UA2021FF] = `${UA_PREFIX}2021 Folk of the Feywild`;
 
 Parser.SOURCE_JSON_TO_ABV = {};
 Parser.SOURCE_JSON_TO_ABV[SRC_CoS] = "CoS";
@@ -2589,6 +2598,7 @@ Parser.SOURCE_JSON_TO_ABV[SRC_TCE] = "TCE";
 Parser.SOURCE_JSON_TO_ABV[SRC_SCREEN] = "Screen";
 Parser.SOURCE_JSON_TO_ABV[SRC_SCREEN_WILDERNESS_KIT] = "Wild";
 Parser.SOURCE_JSON_TO_ABV[SRC_HEROES_FEAST] = "HF";
+Parser.SOURCE_JSON_TO_ABV[SRC_CM] = "CM";
 Parser.SOURCE_JSON_TO_ABV[SRC_ALCoS] = "ALCoS";
 Parser.SOURCE_JSON_TO_ABV[SRC_ALEE] = "ALEE";
 Parser.SOURCE_JSON_TO_ABV[SRC_ALRoD] = "ALRoD";
@@ -2664,6 +2674,7 @@ Parser.SOURCE_JSON_TO_ABV[SRC_UA2020POR] = "UA20POR";
 Parser.SOURCE_JSON_TO_ABV[SRC_UA2020SCR] = "UA20SCR";
 Parser.SOURCE_JSON_TO_ABV[SRC_UA2020F] = "UA20F";
 Parser.SOURCE_JSON_TO_ABV[SRC_UA2021GL] = "UA21GL";
+Parser.SOURCE_JSON_TO_ABV[SRC_UA2021FF] = "UA21FF";
 
 Parser.SOURCE_JSON_TO_DATE = {};
 Parser.SOURCE_JSON_TO_DATE[SRC_CoS] = "2016-03-15";
@@ -2731,6 +2742,7 @@ Parser.SOURCE_JSON_TO_DATE[SRC_TCE] = "2020-11-17";
 Parser.SOURCE_JSON_TO_DATE[SRC_SCREEN] = "2015-01-20";
 Parser.SOURCE_JSON_TO_DATE[SRC_SCREEN_WILDERNESS_KIT] = "2020-11-17";
 Parser.SOURCE_JSON_TO_DATE[SRC_HEROES_FEAST] = "2020-10-27";
+Parser.SOURCE_JSON_TO_DATE[SRC_CM] = "2021-03-16";
 Parser.SOURCE_JSON_TO_DATE[SRC_ALCoS] = "2016-03-15";
 Parser.SOURCE_JSON_TO_DATE[SRC_ALEE] = "2015-04-07";
 Parser.SOURCE_JSON_TO_DATE[SRC_ALRoD] = "2015-09-15";
@@ -2781,7 +2793,7 @@ Parser.SOURCE_JSON_TO_DATE[SRC_UATSC] = "2018-01-08";
 Parser.SOURCE_JSON_TO_DATE[SRC_UAOD] = "2018-04-09";
 Parser.SOURCE_JSON_TO_DATE[SRC_UACAM] = "2018-05-14";
 Parser.SOURCE_JSON_TO_DATE[SRC_UAGSS] = "2018-06-11";
-Parser.SOURCE_JSON_TO_DATE[SRC_UARoE] = "5018-07-23";
+Parser.SOURCE_JSON_TO_DATE[SRC_UARoE] = "2018-07-23";
 Parser.SOURCE_JSON_TO_DATE[SRC_UARoR] = "2018-08-13";
 Parser.SOURCE_JSON_TO_DATE[SRC_UAWGE] = "2018-07-23";
 Parser.SOURCE_JSON_TO_DATE[SRC_UAOSS] = "2018-11-12";
@@ -2806,6 +2818,7 @@ Parser.SOURCE_JSON_TO_DATE[SRC_UA2020POR] = "2020-04-14";
 Parser.SOURCE_JSON_TO_DATE[SRC_UA2020SCR] = "2020-05-12";
 Parser.SOURCE_JSON_TO_DATE[SRC_UA2020F] = "2020-07-13";
 Parser.SOURCE_JSON_TO_DATE[SRC_UA2021GL] = "2020-01-26";
+Parser.SOURCE_JSON_TO_DATE[SRC_UA2021FF] = "2020-03-12";
 
 Parser.SOURCES_ADVENTURES = new Set([
 	SRC_LMoP,
@@ -2847,6 +2860,7 @@ Parser.SOURCES_ADVENTURES = new Set([
 	SRC_EGW_FS,
 	SRC_EGW_US,
 	SRC_IDRotF,
+	SRC_CM,
 
 	SRC_AWM,
 ]);
@@ -3031,7 +3045,7 @@ Parser.DMGTYPE_JSON_TO_FULL = {
 	"Y": "心灵",
 	"R": "光耀",
 	"S": "挥砍",
-	"T": "雷鸣"
+	"T": "雷鸣",
 };
 
 Parser.DMG_TYPES = ["acid", "bludgeoning", "cold", "fire", "force", "lightning", "necrotic", "piercing", "poison", "psychic", "radiant", "slashing", "thunder"];
@@ -3039,13 +3053,13 @@ Parser.CONDITIONS = ["blinded", "charmed", "deafened", "exhaustion", "frightened
 
 Parser.SKILL_JSON_TO_FULL = {
 	"体操": [
-		"你的敏捷（体操）检定涵盖了你在各种棘手情况下站稳的企图，例如在冰面上奔跑、在拉紧的绳索上保持平衡、或在剧烈摇晃的甲板上维持直立。DM也可能会要求一次敏捷（体操）检定以决定你能否做出体操体操，包括前翻、侧翻、空翻、后翻等等。"
+		"你的敏捷（体操）检定涵盖了你在各种棘手情况下站稳的企图，例如在冰面上奔跑、在拉紧的绳索上保持平衡、或在剧烈摇晃的甲板上维持直立。DM也可能会要求一次敏捷（体操）检定以决定你能否做出体操体操，包括前翻、侧翻、空翻、后翻等等。",
 	],
 	"驯兽": [
-		"每当不确定你是否能够安抚家畜、使坐骑不受惊吓、或推断出动物的意图时，DM可能会要求一次感知（驯兽）检定。当你尝试控制你的坐骑进行一些危险动作时，你也需要进行一次感知（驯兽）检定。"
+		"每当不确定你是否能够安抚家畜、使坐骑不受惊吓、或推断出动物的意图时，DM可能会要求一次感知（驯兽）检定。当你尝试控制你的坐骑进行一些危险动作时，你也需要进行一次感知（驯兽）检定。",
 	],
 	"奥秘": [
-		"你的智力（奥秘）检定被用以衡量你回忆关于法术、魔法物品、奥秘符文、魔法传统、位面存在、以及位面居民等相关知识的能力。"
+		"你的智力（奥秘）检定被用以衡量你回忆关于法术、魔法物品、奥秘符文、魔法传统、位面存在、以及位面居民等相关知识的能力。",
 	],
 	"运动": [
 		"你的力量（运动）检定涵盖了各种当你在攀爬、跳跃、或游泳时会遭遇的困难情况。例子包括以下行动：",
@@ -3054,7 +3068,7 @@ Parser.SKILL_JSON_TO_FULL = {
 			"items": [
 				"你尝试攀爬一座陡峭或光滑的峭壁、在攀登墙壁时避开危险、或在有东西想把你击落的情况下抓紧壁面。",
 				"你尝试跳出一段超远的距离、或在跳跃途中展现一段特技动作。",
-				"你拼命尝试在凶险激流、风暴浪涛、或长满层层海草的水域中游泳或维持漂浮。或者另一个生物试着将你推或拉入水中、或做出其他任何影响你游泳的行动。"
+				"你拼命尝试在凶险激流、风暴浪涛、或长满层层海草的水域中游泳或维持漂浮。或者另一个生物试着将你推或拉入水中、或做出其他任何影响你游泳的行动。",
 			],
 		},
 	],
@@ -3065,58 +3079,58 @@ Parser.SKILL_JSON_TO_FULL = {
 		"你的智力（历史）检定被用以衡量你回忆关于历史事件、传奇人物、古老王国、昔日纠纷、近代战争、以及失落文明等相关知识的能力。",
 	],
 	"洞悉": [
-		"你的感知（洞悉）检定决定你是否能办别另一个生物真正的意图，例如辨别谎言或是预测某人的下一步。这样做涉及了从对方的身体语言、说话习惯、以及态度转变等行为中搜集线索。"
+		"你的感知（洞悉）检定决定你是否能办别另一个生物真正的意图，例如辨别谎言或是预测某人的下一步。这样做涉及了从对方的身体语言、说话习惯、以及态度转变等行为中搜集线索。",
 	],
 	"威吓": [
-		"当你尝试通过威胁、敌意行为、肉体暴力来影响他人时，DM可能会要求你进行一次魅力（威吓）检定。例子包括从囚犯口中逼供情报、迫使街头混混从冲突中退让、或者使用破瓶的利口让某个正轻蔑冷笑着的大臣相信自己该重新考虑一下。"
+		"当你尝试通过威胁、敌意行为、肉体暴力来影响他人时，DM可能会要求你进行一次魅力（威吓）检定。例子包括从囚犯口中逼供情报、迫使街头混混从冲突中退让、或者使用破瓶的利口让某个正轻蔑冷笑着的大臣相信自己该重新考虑一下。",
 	],
 	"调查": [
-		"当你四处查探线索并基于这些线索进行推理时，你进行一次智力（调查）检定。你可能会因此推断出某个隐藏物体的位置、从伤口的外观判断它是什么武器造成的、或找出某个隧道中可能导致坍方的结构性弱点。为了寻找隐藏的知识片段而钻研古卷也可能会需要一次智力（调查）检定。"
+		"当你四处查探线索并基于这些线索进行推理时，你进行一次智力（调查）检定。你可能会因此推断出某个隐藏物体的位置、从伤口的外观判断它是什么武器造成的、或找出某个隧道中可能导致坍方的结构性弱点。为了寻找隐藏的知识片段而钻研古卷也可能会需要一次智力（调查）检定。",
 	],
 	"医疗": [
-		"一次感知（医疗）检定能让你尝试稳定一个濒死同伴的伤势或者诊断疾病。"
+		"一次感知（医疗）检定能让你尝试稳定一个濒死同伴的伤势或者诊断疾病。",
 	],
 	"自然": [
-		"你的智力（自然）检定被用以衡量你回忆关于地势、动植物、气候、以及自然周期等相关知识的能力。"
+		"你的智力（自然）检定被用以衡量你回忆关于地势、动植物、气候、以及自然周期等相关知识的能力。",
 	],
 	"察觉": [
-		"你的感知（察觉）检定让你能够通过看、听、或其他方式来发现某些东西的存在。它代表着你对周围环境的总体意识以及你感官的敏锐度。", "举例来说，你可以会尝试聆听门后的对话、在敞开的窗户下窃听、或听见在森林中悄声移动的怪物。或者，你可能会试着看见被屏蔽或容易看走眼的东西，无论它们是在前路埋伏的兽人、躲在暗巷里的混混、还是从紧闭的暗门门鏠中透出的烛光。"
+		"你的感知（察觉）检定让你能够通过看、听、或其他方式来发现某些东西的存在。它代表着你对周围环境的总体意识以及你感官的敏锐度。", "举例来说，你可以会尝试聆听门后的对话、在敞开的窗户下窃听、或听见在森林中悄声移动的怪物。或者，你可能会试着看见被屏蔽或容易看走眼的东西，无论它们是在前路埋伏的兽人、躲在暗巷里的混混、还是从紧闭的暗门门鏠中透出的烛光。",
 	],
 	"表演": [
-		"你的魅力（表演）检定决定你能多好地用音乐、舞蹈、演剧、说书、或其他方式来娱乐观众。"
+		"你的魅力（表演）检定决定你能多好地用音乐、舞蹈、演剧、说书、或其他方式来娱乐观众。",
 	],
 	"说服": [
-		"当你尝试圆滑地、优雅地、或善意地影响某人或某群人时，DM可能会要求你进行一次魅力（说服）检定。通常来说，你会在真诚地行事时使用说服以培养友谊，做出真挚的请求，或展示恰当的礼仪。说服他人的例子包括说服宫廷大臣让你的队伍晋见国王、协谈敌对部族之间的和平、或者鼓舞激励村民群众。"
+		"当你尝试圆滑地、优雅地、或善意地影响某人或某群人时，DM可能会要求你进行一次魅力（说服）检定。通常来说，你会在真诚地行事时使用说服以培养友谊，做出真挚的请求，或展示恰当的礼仪。说服他人的例子包括说服宫廷大臣让你的队伍晋见国王、协谈敌对部族之间的和平、或者鼓舞激励村民群众。",
 	],
 	"宗教": [
-		"你的智力（宗教）检定被用以衡量你回忆关于神祇、仪式和祈祷、宗教阶级、圣徽、以及秘密异教的惯例等相关知识的能力。"
+		"你的智力（宗教）检定被用以衡量你回忆关于神祇、仪式和祈祷、宗教阶级、圣徽、以及秘密异教的惯例等相关知识的能力。",
 	],
 	"巧手": [
-		"每当你尝试表演晃眼花招或巧手，像是把某个东西放在他人身上或将一件东西藏在自已身上，进行一次敏捷（巧手）检定。DM可能也会要求你进行敏捷（巧手）检定以决定你是否能从他人的钱包中偷出钱币、或从他人的口袋摸出某个东西。"
+		"每当你尝试表演晃眼花招或巧手，像是把某个东西放在他人身上或将一件东西藏在自已身上，进行一次敏捷（巧手）检定。DM可能也会要求你进行敏捷（巧手）检定以决定你是否能从他人的钱包中偷出钱币、或从他人的口袋摸出某个东西。",
 	],
 	"隐匿": [
-		"当你尝试隐藏自己以躲避敌人、从守卫身边溜过去、不被注意的潜逃、或无声无息地偷偷接近某人时，进行一次敏捷（隐匿）检定。"
+		"当你尝试隐藏自己以躲避敌人、从守卫身边溜过去、不被注意的潜逃、或无声无息地偷偷接近某人时，进行一次敏捷（隐匿）检定。",
 	],
 	"生存": [
-		"DM可能会要求你进行一次感知（生存）检定以追寻踪迹、狩猎野味、带领你的队伍穿越冰原、辨识枭头熊生活于附近的征兆、预测天气、或者避开流沙以及其他自然危险。"
-	]
+		"DM可能会要求你进行一次感知（生存）检定以追寻踪迹、狩猎野味、带领你的队伍穿越冰原、辨识枭头熊生活于附近的征兆、预测天气、或者避开流沙以及其他自然危险。",
+	],
 };
 
 Parser.SENSE_JSON_TO_FULL = {
 	"盲视": [
-		"具有盲视的生物即使不依赖视觉也可以感知其周遭特定半径范围内的环境。没有眼睛的生物（像是泥怪）、以及具有回声定位或高敏感官的生物（像是蝙蝠和真龙）都具有这种感官。"
+		"具有盲视的生物即使不依赖视觉也可以感知其周遭特定半径范围内的环境。没有眼睛的生物（像是泥怪）、以及具有回声定位或高敏感官的生物（像是蝙蝠和真龙）都具有这种感官。",
 	],
 	"黑暗视觉": [
-		"奇幻游戏世界中的许多生物，特别是那些居住于地底的生物，都具有黑暗视觉。在特定半径范围内，具有黑暗视觉的生物可以将微光光照视作明亮光照，并将黑暗环境视作微光光照，因此黑暗环境对于这些生物而言仅会被轻度屏蔽。然而，这些生物无法辨别黑暗中的颜色，而只能看到灰黑的轮廓。"
+		"奇幻游戏世界中的许多生物，特别是那些居住于地底的生物，都具有黑暗视觉。在特定半径范围内，具有黑暗视觉的生物可以将微光光照视作明亮光照，并将黑暗环境视作微光光照，因此黑暗环境对于这些生物而言仅会被轻度屏蔽。然而，这些生物无法辨别黑暗中的颜色，而只能看到灰黑的轮廓。",
 	],
 	"震颤感知": [
-		"只要具有震颤感知的生物与震动来源都接触着相同的地表或物质，该生物可以感知并精准定位其特定半径范围内的震动来源。震颤感知并不能被用以侦测飞行或虚体生物。许多掘穴生物，像是掘地虫和土巨怪，都具有这种特殊的感官。"
+		"只要具有震颤感知的生物与震动来源都接触着相同的地表或物质，该生物可以感知并精准定位其特定半径范围内的震动来源。震颤感知并不能被用以侦测飞行或虚体生物。许多掘穴生物，像是掘地虫和土巨怪，都具有这种特殊的感官。",
 	],
 	"真实视觉": [
-		"具有真实视觉的生物在特定半径范围内，可以看透普通或魔法黑暗、看见隐形的生物和物体、自动侦测出视觉幻象并成功通过对抗它们的豁免检定、并看穿变形者或被魔法变形的生物的原始型态。此外，这些生物也可以看见位于乙太位面的事物。"
-	]
+		"具有真实视觉的生物在特定半径范围内，可以看透普通或魔法黑暗、看见隐形的生物和物体、自动侦测出视觉幻象并成功通过对抗它们的豁免检定、并看穿变形者或被魔法变形的生物的原始型态。此外，这些生物也可以看见位于乙太位面的事物。",
+	],
 };
 
-Parser.NUMBERS_ONES = ['', '一', '二', '三', '四', '五', '六', '七', '八', '九'];
-Parser.NUMBERS_TENS = ['', '', '二十', '三十', '四十', '五十', '六十', '七十', '八十', '九十'];
-Parser.NUMBERS_TEENS = ['十', '十一', '十二', '十三', '十四', '十五', '十六', '十七', '十八', '十九'];
+Parser.NUMBERS_ONES = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九"];
+Parser.NUMBERS_TENS = ["", "", "二十", "三十", "四十", "五十", "六十", "七十", "八十", "九十"];
+Parser.NUMBERS_TEENS = ["十", "十一", "十二", "十三", "十四", "十五", "十六", "十七", "十八", "十九"];

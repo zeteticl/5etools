@@ -116,6 +116,8 @@ class TestTagsUtil {
 										case "rest":
 											Object.values(val).forEach(spellList => spellList.forEach(sp => this._testAdditionalSpells_testSpellExists(file, msgProp, sp)));
 											break;
+										case "will":
+										case "ritual":
 										case "_":
 											val.forEach(sp => this._testAdditionalSpells_testSpellExists(file, msgProp, sp))
 											break;
@@ -882,6 +884,13 @@ class DuplicateEntityCheck {
 						case "subclassFeature": {
 							if (name && source) {
 								const key = `${source} :: ${ent.level} :: ${ent.classSource} :: ${ent.className} :: ${ent.subclassSource} :: ${ent.subclassShortName} :: ${name}`;
+								(positions[key] = positions[key] || []).push(i);
+							}
+							break;
+						}
+						case "raceFeature": {
+							if (name && source) {
+								const key = `${source} :: ${ent.raceSource} :: ${ent.raceName} :: ${name}`;
 								(positions[key] = positions[key] || []).push(i);
 							}
 							break;

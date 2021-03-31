@@ -267,7 +267,7 @@ $flt-ignore--hover: #e6e6e6;
 			&[state=yes] {
 				background: $rgb-active-blue;
 				color: white;
-				border: 1px solid darken($rgb-active-blue, $pct-darken-border);
+				border-color: darken($rgb-active-blue, $pct-darken-border);
 
 				&:hover {
 					background: darken($rgb-active-blue, $pct-darken-hover);
@@ -277,10 +277,31 @@ $flt-ignore--hover: #e6e6e6;
 			&[state=no] {
 				background: $rgb-active-red;
 				color: white;
-				border: 1px solid darken($rgb-active-red, $pct-darken-border);
+				border-color: darken($rgb-active-red, $pct-darken-border);
 
 				&:hover {
 					background: darken($rgb-active-red, $pct-darken-hover);
+				}
+			}
+
+			&--ability-bonus {
+				min-width: 26px;
+				border-right-width: 0;
+				margin: 0;
+				flex: 1; // This is more aesthetic, but worse UX. Consider removing?
+
+				&:last-of-type {
+					border-right-width: 1px;
+				}
+			}
+
+			&--muted {
+				background-color: darken($flt-ignore, 7%);
+				color: lighten($rgb-font--muted, 7%);
+
+				&[state=yes],
+				&[state=no] {
+					color: white;
 				}
 			}
 		}
@@ -399,6 +420,10 @@ $flt-ignore--hover: #e6e6e6;
 			cursor: pointer;
 			letter-spacing: -1px;
 			user-select: none;
+		}
+
+		&label-ability-score {
+			width: 80px;
 		}
 
 		&hidden--search {

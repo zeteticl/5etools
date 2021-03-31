@@ -93,6 +93,14 @@ class TablesPage extends ListPage {
 		sub = this._filterBox.setFromSubHashes(sub);
 		await ListUtil.pSetFromSubHashes(sub);
 	}
+
+	_getSearchCache (entity) {
+		if (!entity.rows && !entity.tables) return "";
+		const ptrOut = {_: ""};
+		this._getSearchCache_handleEntryProp(entity, "rows", ptrOut);
+		this._getSearchCache_handleEntryProp(entity, "tables", ptrOut);
+		return ptrOut._;
+	}
 }
 
 const tablesPage = new TablesPage();

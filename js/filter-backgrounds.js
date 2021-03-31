@@ -84,20 +84,27 @@ class ModalFilterBackgrounds extends ModalFilter {
 	}
 
 	_getListItem (pageFilter, bg, bgI) {
-		const eleLabel = document.createElement("label");
-		eleLabel.className = "w-100 flex-vh-center lst--border no-select lst__wrp-cells";
+		const eleRow = document.createElement("div");
+		eleRow.className = "px-0 w-100 flex-col no-shrink";
 
 		const hash = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_BACKGROUNDS](bg);
 		const source = Parser.sourceJsonToAbv(bg.source);
 
-		eleLabel.innerHTML = `<div class="col-1 pl-0 flex-vh-center">${this._isRadio ? `<input type="radio" name="radio" class="no-events">` : `<input type="checkbox" class="no-events">`}</div>
-		<div class="bold col-4">${bg.name}</div>
-		<div class="col-6">${bg._skillDisplay}</div>
-		<div class="col-1 pr-0 text-center ${Parser.sourceJsonToColor(bg.source)}" title="${Parser.sourceJsonToFull(bg.source)}" ${BrewUtil.sourceJsonToStyle(bg.source)}>${source}</div>`;
+		eleRow.innerHTML = `<div class="w-100 flex-vh-center lst--border no-select lst__wrp-cells">
+			<div class="col-0-5 pl-0 flex-vh-center">${this._isRadio ? `<input type="radio" name="radio" class="no-events">` : `<input type="checkbox" class="no-events">`}</div>
 
-		return new ListItem(
+			<div class="col-0-5 px-1 flex-vh-center">
+				<div class="ui-list__btn-inline px-2" title="Toggle Preview">[+]</div>
+			</div>
+
+			<div class="col-4 ${this._getNameStyle()}">${bg.name}</div>
+			<div class="col-6">${bg._skillDisplay}</div>
+			<div class="col-1 pr-0 text-center ${Parser.sourceJsonToColor(bg.source)}" title="${Parser.sourceJsonToFull(bg.source)}" ${BrewUtil.sourceJsonToStyle(bg.source)}>${source}</div>
+		</div>`;
+
+		const listItem = new ListItem(
 			bgI,
-			eleLabel,
+			eleRow,
 			bg.name,
 			{
 				hash,
@@ -106,8 +113,13 @@ class ModalFilterBackgrounds extends ModalFilter {
 				skills: bg._skillDisplay,
 			},
 			{
-				cbSel: eleLabel.firstElementChild.firstElementChild,
+				cbSel: eleRow.firstElementChild.firstElementChild.firstElementChild,
 			},
 		);
+
+		const btnShowHidePreview = eleRow.firstElementChild.children[1].firstElementChild;
+		ListUiUtil.bindPreviewButton(UrlUtil.PG_BACKGROUNDS, this._allData, listItem, btnShowHidePreview);
+
+		return listItem;
 	}
 }

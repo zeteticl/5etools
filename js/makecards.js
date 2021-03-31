@@ -432,7 +432,9 @@ class MakeCards extends BaseComponent {
 
 	static _getCardContents_creature (mon) {
 		const renderer = RendererCard.get();
-		const allTraits = Renderer.monster.getOrderedTraits(mon, renderer);
+		const fnGetSpellTraits = Renderer.monster.getSpellcastingRenderedTraits.bind(Renderer.monster, renderer);
+		const allTraits = Renderer.monster.getOrderedTraits(mon, {fnGetSpellTraits});
+		const allActions = Renderer.monster.getOrderedActions(mon, {fnGetSpellTraits});
 
 		return [
 			this._ct_subtitle(Renderer.monster.getTypeAlignmentPart(mon)),
@@ -454,8 +456,8 @@ class MakeCards extends BaseComponent {
 			this._ct_property("Challenge", this._ct_htmlToText(Parser.monCrToFull(mon.cr, {isMythic: !!mon.mythic}))),
 			this._ct_rule(),
 			...(allTraits ? this._ct_renderEntries(allTraits, 2) : []),
-			mon.action ? this._ct_section("Actions") : null,
-			...(mon.action ? this._ct_renderEntries(mon.action, 2) : []),
+			allActions ? this._ct_section("Actions") : null,
+			...(allActions ? this._ct_renderEntries(allActions, 2) : []),
 			mon.bonus ? this._ct_section("Bonus Actions") : null,
 			...(mon.bonus ? this._ct_renderEntries(mon.bonus, 2) : []),
 			mon.reaction ? this._ct_section("Reactions") : null,
@@ -524,7 +526,7 @@ class MakeCards extends BaseComponent {
 	static _getCardContents_race (race) {
 		return [
 			this._ct_property("属性值", Renderer.getAbilityData(race.ability).asText),
-			this._ct_property("体型", Parser.sizeAbvToFull(race.size)),
+			this._ct_property("体型", (race.size || [SZ_VARIES]).map(sz => Parser.sizeAbvToFull(sz))).join("/"),
 			this._ct_property("速度", Parser.getSpeedString(race)),
 			this._ct_rule(),
 			...this._ct_renderEntries(race.entries, 2),

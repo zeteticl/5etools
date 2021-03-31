@@ -1,7 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"$id": "items.json",
-	"version": "1.10.0",
+	"version": "1.10.2",
 	"type": "object",
 	"definitions": {
 		"itemData": {
@@ -244,7 +244,7 @@
 					"type": ["string", "integer"]
 				},
 				"recharge": {
-					"enum": ["round", "restShort", "restLong", "dawn", "dusk", "midnight"]
+					"enum": ["round", "restShort", "restLong", "dawn", "dusk", "midnight", "special"]
 				},
 				"attachedSpells": {
 					"type": "array",
@@ -333,6 +333,9 @@
 					"type": "string"
 				},
 				"bonusSavingThrow": {
+					"type": "string"
+				},
+				"bonusAbilityCheck": {
 					"type": "string"
 				},
 				"bonusProficiencyBonus": {

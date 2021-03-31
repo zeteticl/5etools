@@ -67,13 +67,13 @@ class ClassesPage extends BaseComponent {
 		Omnisearch.addScrollTopFloat();
 		const data = await DataUtil.class.loadJSON();
 
-		this._list = ListUtil.initList({listClass: "classes", isUseJquery: true});
+		this._list = ListUtil.initList({listClass: "classes", isUseJquery: true, isBindFindHotkey: true});
 		ListUtil.setOptions({primaryLists: [this._list]});
 		SortUtil.initBtnSortHandlers($("#filtertools"), this._list);
 
 		await this._pageFilter.pInitFilterBox({
 			$iptSearch: $(`#lst__search`),
-			$wrpFormTop: $(`#filter-search-group`).title("Hotkey: f"),
+			$wrpFormTop: $(`#filter-search-group`),
 			$btnReset: $(`#reset`),
 		});
 
@@ -476,7 +476,7 @@ class ClassesPage extends BaseComponent {
 						) ? obj : null;
 					},
 					array: (arr) => {
-						return arr.filter(Boolean);
+						return arr.filter(it => it != null);
 					},
 				},
 			);
@@ -503,7 +503,7 @@ class ClassesPage extends BaseComponent {
 							) ? obj : null;
 						},
 						array: (arr) => {
-							return arr.filter(Boolean);
+							return arr.filter(it => it != null);
 						},
 					},
 				);
@@ -886,25 +886,20 @@ class ClassesPage extends BaseComponent {
 		// region HP/hit dice
 		let $ptHp = null;
 		if (cls.hd) {
-			const hdEntry = {toRoll: `${cls.hd.number}d${cls.hd.faces}`, rollable: true};
+			const hdEntry = Renderer.class.getHitDiceEntry(cls.hd);
 
 			$ptHp = `<tr class="cls-side__show-hide">
 				<td colspan="6" class="cls-side__section">
-					<h5 class="cls-side__section-head">生命值</h5>
-					<div><strong>生命骰：</strong> ${Renderer.getEntryDice(hdEntry, "Hit die")}</div>
-					<div><strong>首级生命值：</strong> ${cls.hd.number * cls.hd.faces} + 你的体质调整值</div>
-					<div><strong>其后生命值：</strong> ${Renderer.getEntryDice(hdEntry, "Hit die")} (or ${((cls.hd.number * cls.hd.faces) / 2 + 1)}) + 你的体质调整值， 一级之后每 ${cls.name} 等级</div>
+					<h5 class="cls-side__section-head">Hit Points</h5>
+					<div><strong>生命骰</strong> ${Renderer.getEntryDice(hdEntry, "Hit die")}</div>
+					<div><strong>首级生命值：</strong> ${Renderer.class.getHitPointsAtFirstLevel(cls.hd)}</div>
+					<div><strong>其后生命值：</strong> ${Renderer.class.getHitPointsAtHigherLevels(cls.name, cls.hd, hdEntry)}</div>
 				</td>
 			</tr>`
 		}
 		// endregion
 
 		// region Starting proficiencies
-		const renderArmorProfs = armorProfs => armorProfs.map(a => a.full ? a.full : a === "light" || a === "medium" || a === "heavy" ? `${Parser.ArmorToDisplay(a)}甲` : Parser.ArmorToDisplay(a)).join(", ");
-		const renderWeaponsProfs = weaponProfs => weaponProfs.map(w => w === "simple" || w === "martial" ? `${Parser.translateKeyToDisplay(w)}武器` : w).join(", ");
-		const renderToolProfs = toolProfs => toolProfs.map(it => Renderer.get().render(it)).join(", ")
-		const renderSkillsProfs = skills => `${Parser.skillProficienciesToFull(skills).uppercaseFirst()}.`;
-
 		const profs = cls.startingProficiencies || {};
 		// endregion
 
@@ -956,13 +951,13 @@ class ClassesPage extends BaseComponent {
 			if (mc.proficienciesGained) {
 				$ptMcProfsIntro = $(`<div ${mc.requirements || mc.requirementsSpecial ? `class="cls-side__mc-prof-intro--requirements"` : ""}>当你不是以起始等级获得新职业的等级，你只会获得该职业一部分的起始熟练项目。</div>`);
 
-				if (mc.proficienciesGained.armor) $ptMcProfsArmor = $(`<div><b>护甲：</b> ${Parser.ItemTypeToDisplay(renderArmorProfs(mc.proficienciesGained.armor))}</div>`);
+				if (mc.proficienciesGained.armor) $ptMcProfsArmor = $(`<div><b>护甲：</b> ${Renderer.class.getRenderedArmorProfs(mc.proficienciesGained.armor)}</div>`);
 
-				if (mc.proficienciesGained.weapons) $ptMcProfsWeapons = $(`<div><b>武器：</b> ${renderWeaponsProfs(mc.proficienciesGained.weapons)}</div>`);
+				if (mc.proficienciesGained.weapons) $ptMcProfsWeapons = $(`<div><b>武器：</b> ${Renderer.class.getRenderedWeaponProfs(mc.proficienciesGained.weapons)}</div>`);
 
-				if (mc.proficienciesGained.tools) $ptMcProfsTools = $(`<div><b>工具：</b> ${renderToolProfs(mc.proficienciesGained.tools)}</div>`);
+				if (mc.proficienciesGained.tools) $ptMcProfsTools = $(`<div><b>工具：</b> ${Renderer.class.getRenderedToolProfs(mc.proficienciesGained.tools)}</div>`);
 
-				if (mc.proficienciesGained.skills) $ptMcProfsSkills = $(`<div><b>技能：</b> ${renderSkillsProfs(mc.proficienciesGained.skills)}</div>`);
+				if (mc.proficienciesGained.skills) $ptMcProfsSkills = $(`<div><b>技能：</b> ${Renderer.class.getRenderedSkillProfs(mc.proficienciesGained.skills)}</div>`);
 			}
 
 			let $ptMcEntries = null;
@@ -998,11 +993,11 @@ class ClassesPage extends BaseComponent {
 			<tr class="cls-side__show-hide">
 				<td colspan="6" class="cls-side__section">
 					<h5 class="cls-side__section-head">熟练</h5>
-					<div><b>护甲：</b> <span>${profs.armor ? renderArmorProfs(profs.armor) : "无"}</span></div>
-					<div><b>武器： </b> <span>${profs.weapons ? renderWeaponsProfs(profs.weapons) : "无"}</span></div>
-					<div><b>工具：</b> <span>${profs.tools ? renderToolProfs(profs.tools) : "无"}</span></div>
+					<div><b>护甲：</b> <span>${profs.armor ? Renderer.class.getRenderedArmorProfs(profs.armor) : "none"}</span></div>
+					<div><b>武器：</b> <span>${profs.weapons ? Renderer.class.getRenderedWeaponProfs(profs.weapons) : "none"}</span></div>
+					<div><b>工具：</b> <span>${profs.tools ? Renderer.class.getRenderedToolProfs(profs.tools) : "none"}</span></div>
 					<div><b>豁免：</b> <span>${cls.proficiency ? cls.proficiency.map(p => Parser.attAbvToFull(p)).join(", ") : "无"}</span></div>
-					<div><b>技能：</b> <span>${profs.skills ? renderSkillsProfs(profs.skills) : "无"}</span></div>
+					<div><b>技能：:</b> <span>${profs.skills ? Renderer.class.getRenderedSkillProfs(profs.skills) : "无"}</span></div>
 				</td>
 			</tr>
 

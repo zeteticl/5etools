@@ -428,9 +428,6 @@
 			"damageVulnerable": [
 				"psychic"
 			],
-			"savingThrow": [
-				"charisma"
-			],
 			"miscTags": [
 				"SGT"
 			],
@@ -520,6 +517,7 @@
 				"strength"
 			],
 			"miscTags": [
+				"FMV",
 				"SCL",
 				"SGT"
 			],
@@ -699,9 +697,14 @@
 					"name": "升环施法效应",
 					"ENG_name": "At Higher Levels",
 					"entries": [
-						"使用四环或更高法术位施展该法术时，你使用的法术位每比三环高2环，其伤害就增加{@dice 1d8}。"
+						"使用四环或更高法术位施展该法术时，你使用的法术位每比三环高2环，其伤害就增加{@scaledamage 1d8|3,5,7,9|1d8}。"
 					]
 				}
+			],
+			"damageInflict": [
+				"radiant",
+				"necrotic",
+				"cold"
 			],
 			"miscTags": [
 				"SGT"
@@ -938,7 +941,8 @@
 				}
 			],
 			"miscTags": [
-				"SGT"
+				"SGT",
+				"SMN"
 			],
 			"classes": {
 				"fromClassListVariant": [

@@ -92,7 +92,7 @@ Avoid binding ALT-modified events, as these are not available under MacOS or var
 
 ### Dev Server
 
-Do `npm run serve:dev` to launch a local dev server that serves the project files on [`http://localhost:8080/5etools.html`](http://localhost:8080/5etools.html).
+Do `npm run serve:dev` to launch a local dev server that serves the project files on [`http://localhost:5000/5etools.html`](http://localhost:8080/5etools.html).
 
 ### Version bump
 

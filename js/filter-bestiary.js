@@ -68,20 +68,20 @@ class PageFilterBestiary extends PageFilter {
 		});
 		this._speedFilter = new RangeFilter({header: "Speed", headerName: "速度", min: 30, max: 30});
 		this._speedTypeFilter = new Filter({header: "Speed Type", headerName: "速度类型", items: ["walk", "burrow", "climb", "fly", "hover", "swim"], displayFn: Parser.SpeedToDisplay});
-		this._strengthFilter = new RangeFilter({header: "Strength",headerName:"力量", min: 1, max: 30});
-		this._dexterityFilter = new RangeFilter({header: "Dexterity",headerName:"敏捷", min: 1, max: 30});
-		this._constitutionFilter = new RangeFilter({header: "Constitution",headerName:"体质", min: 1, max: 30});
-		this._intelligenceFilter = new RangeFilter({header: "Intelligence",headerName:"智力", min: 1, max: 30});
-		this._wisdomFilter = new RangeFilter({header: "Wisdom",headerName:"感知", min: 1, max: 30});
-		this._charismaFilter = new RangeFilter({header: "Charisma",headerName:"魅力",min: 1, max: 30});
+		this._strengthFilter = new RangeFilter({header: "Strength", headerName: "力量", min: 1, max: 30});
+		this._dexterityFilter = new RangeFilter({header: "Dexterity", headerName: "敏捷", min: 1, max: 30});
+		this._constitutionFilter = new RangeFilter({header: "Constitution", headerName: "体质", min: 1, max: 30});
+		this._intelligenceFilter = new RangeFilter({header: "Intelligence", headerName: "智力", min: 1, max: 30});
+		this._wisdomFilter = new RangeFilter({header: "Wisdom", headerName: "感知", min: 1, max: 30});
+		this._charismaFilter = new RangeFilter({header: "Charisma", headerName: "魅力", min: 1, max: 30});
 		this._abilityScoreFilter = new MultiFilter({
 			header: "Ability Scores",
 			headerName: "属性值",
 			filters: [this._strengthFilter, this._dexterityFilter, this._constitutionFilter, this._intelligenceFilter, this._wisdomFilter, this._charismaFilter],
 			isAddDropdownToggle: true,
 		});
-		this._acFilter = new RangeFilter({header: "Armor Class", headerName:"护甲等级"});
-		this._averageHpFilter = new RangeFilter({header: "Average Hit Points", headerName:"平均生命值"});
+		this._acFilter = new RangeFilter({header: "Armor Class", headerName: "护甲等级"});
+		this._averageHpFilter = new RangeFilter({header: "Average Hit Points", headerName: "平均生命值"});
 		this._typeFilter = new Filter({
 			header: "Type",
 			headerName: "生物类型",
@@ -93,7 +93,7 @@ class PageFilterBestiary extends PageFilter {
 		this._alignmentFilter = new Filter({
 			header: "Alignment",
 			headerName: "阵营",
-			items: ["L", "NX", "C", "G", "NY", "E", "N", "U", "A"],
+			items: ["L", "NX", "C", "G", "NY", "E", "N", "U", "A", "No Alignment"],
 			displayFn: alignment => Parser.alignmentAbvToFull(alignment).toTitleCase(),
 			itemSortFn: null,
 		});
@@ -132,6 +132,7 @@ class PageFilterBestiary extends PageFilter {
 			headerName: "感官能力",
 			displayFn: (it) => Parser.monSenseTagToFull(it).toTitleCase(),
 			items: ["B", "D", "SD", "T", "U"],
+			itemSortFn: SortUtil.ascSortLower,
 		});
 		this._skillFilter = new Filter({
 			header: "Skills",
@@ -184,8 +185,8 @@ class PageFilterBestiary extends PageFilter {
 			items: [
 				"Aggressive", "Ambusher", "Amorphous", "Amphibious", "Antimagic Susceptibility", "Brute", "Charge", "Damage Absorption", "Death Burst", "Devil's Sight", "False Appearance", "Fey Ancestry", "Flyby", "Hold Breath", "Illumination", "Immutable Form", "Incorporeal Movement", "Keen Senses", "Legendary Resistances", "Light Sensitivity", "Magic Resistance", "Magic Weapons", "Pack Tactics", "Pounce", "Rampage", "Reckless", "Regeneration", "Rejuvenation", "Shapechanger", "Siege Monster", "Sneak Attack", "Spider Climb", "Sunlight Sensitivity", "Turn Immunity", "Turn Resistance", "Undead Fortitude", "Water Breathing", "Web Sense", "Web Walker",
 			],
-			displayFn: function(t){
-				switch(t){
+			displayFn: function (t) {
+				switch (t) {
 					case "Aggressive": return "侵略性";
 					case "Ambusher": return "伏击者";
 					case "Amorphous": return "无定形";
@@ -226,7 +227,8 @@ class PageFilterBestiary extends PageFilter {
 					case "Web Sense": return "蛛网感知";
 					case "Web Walker": return "蛛网行者";
 					default: return t;
-			};},
+				}
+			},
 		});
 		this._actionReactionFilter = new Filter({
 			header: "Actions & Reactions",
@@ -234,8 +236,8 @@ class PageFilterBestiary extends PageFilter {
 			items: [
 				"Frightful Presence", "Multiattack", "Parry", "Swallow", "Teleport", "Tentacles",
 			],
-			displayFn: function(a){
-				switch(a){
+			displayFn: function (a) {
+				switch (a) {
 					case "Frightful Presence": return "骇人威仪";
 					case "Multiattack": return "多重攻击";
 					case "Parry": return "格挡";
@@ -243,14 +245,15 @@ class PageFilterBestiary extends PageFilter {
 					case "Teleport": return "发送";
 					case "Tentacles": return "触手";
 					default: return a;
-			};}
+				}
+			},
 		});
 		this._miscFilter = new Filter({
 			header: "Miscellaneous",
 			headerName: "杂项",
 			items: ["Familiar", ...Object.keys(Parser.MON_MISC_TAG_TO_FULL), "Bonus Actions", "Lair Actions", "Legendary", "Mythic", "Adventure NPC", "Spellcaster", ...Object.values(Parser.ATB_ABV_TO_FULL).map(it => `${PageFilterBestiary.MISC_FILTER_SPELLCASTER}${it}`), "Regional Effects", "Reactions", "Swarm", "Has Variants", "Modified Copy", "Has Alternate Token", "Has Info", "Has Images", "Has Token", "SRD", "AC from Item(s)", "AC from Natural Armor", "AC from Unarmored Defense"],
-			displayFn: function(m){
-				switch(m){
+			displayFn: function (m) {
+				switch (m) {
 					case "Familiar": return "魔宠";
 					case "Lair Actions": return "巢穴动作";
 					case "Legendary": return "传奇";
@@ -264,7 +267,8 @@ class PageFilterBestiary extends PageFilter {
 					case "Has Variants": return "拥有变体";
 					case "Reactions": return "反应";
 					default: return m;
-				};},
+				}
+			},
 			deselFn: (it) => it === "Adventure NPC",
 			itemSortFn: PageFilterBestiary.ascSortMiscFilter,
 			isSrdFilter: true,
@@ -301,7 +305,7 @@ class PageFilterBestiary extends PageFilter {
 			else if (tempAlign.length === 1 && tempAlign.includes("N")) Array.prototype.push.apply(tempAlign, PageFilterBestiary._NEUT_ALIGNS);
 			mon._fAlign = tempAlign;
 		} else {
-			mon._fAlign = null;
+			mon._fAlign = ["No Alignment"];
 		}
 		mon._fVuln = mon.vulnerable ? PageFilterBestiary.getAllImmRest(mon.vulnerable, "vulnerable") : [];
 		mon._fRes = mon.resist ? PageFilterBestiary.getAllImmRest(mon.resist, "resist") : [];
@@ -366,6 +370,7 @@ class PageFilterBestiary extends PageFilter {
 		this._vulnerableFilter.addItem(mon._fVuln);
 		this._resistFilter.addItem(mon._fRes);
 		this._immuneFilter.addItem(mon._fImm);
+		this._senseFilter.addItem(mon.senseTags);
 	}
 
 	async _pPopulateBoxOptions (opts) {
@@ -480,7 +485,7 @@ class ModalFilterBestiary extends ModalFilter {
 		opts = opts || {};
 		super({
 			...opts,
-			modalTitle: "Creatures",
+			modalTitle: `Creature${opts.isRadio ? "" : "s"}`,
 			pageFilter: new PageFilterBestiary(),
 			fnSort: PageFilterBestiary.sortMonsters,
 		})
@@ -507,23 +512,30 @@ class ModalFilterBestiary extends ModalFilter {
 		Renderer.monster.initParsed(mon);
 		pageFilter.mutateAndAddToFilters(mon);
 
-		const eleLabel = document.createElement("label");
-		eleLabel.className = "w-100 flex-vh-center lst--border no-select lst__wrp-cells";
+		const eleRow = document.createElement("div");
+		eleRow.className = "px-0 w-100 flex-col no-shrink";
 
 		const hash = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_BESTIARY](mon);
 		const source = Parser.sourceJsonToAbv(mon.source);
 		const type = mon._pTypes.asText.uppercaseFirst();
 		const cr = mon._pCr;
 
-		eleLabel.innerHTML = `<div class="col-1 pl-0 flex-vh-center"><input type="checkbox" class="no-events"></div>
-		<div class="col-4 bold">${mon.name}</div>
-		<div class="col-4">${type}</div>
-		<div class="col-2 text-center">${cr}</div>
-		<div class="col-1 text-center ${Parser.sourceJsonToColor(mon.source)} pr-0" title="${Parser.sourceJsonToFull(mon.source)}" ${BrewUtil.sourceJsonToStyle(mon.source)}>${source}</div>`;
+		eleRow.innerHTML = `<div class="w-100 flex-vh-center lst--border no-select lst__wrp-cells">
+			<div class="col-0-5 pl-0 flex-vh-center">${this._isRadio ? `<input type="radio" name="radio" class="no-events">` : `<input type="checkbox" class="no-events">`}</div>
 
-		return new ListItem(
+			<div class="col-0-5 px-1 flex-vh-center">
+				<div class="ui-list__btn-inline px-2" title="Toggle Preview">[+]</div>
+			</div>
+
+			<div class="col-4 ${this._getNameStyle()}">${mon.name}</div>
+			<div class="col-4">${type}</div>
+			<div class="col-2 text-center">${cr}</div>
+			<div class="col-1 text-center ${Parser.sourceJsonToColor(mon.source)} pr-0" title="${Parser.sourceJsonToFull(mon.source)}" ${BrewUtil.sourceJsonToStyle(mon.source)}>${source}</div>
+		</div>`;
+
+		const listItem = new ListItem(
 			itI,
-			eleLabel,
+			eleRow,
 			mon.name,
 			{
 				hash,
@@ -533,8 +545,13 @@ class ModalFilterBestiary extends ModalFilter {
 				cr,
 			},
 			{
-				cbSel: eleLabel.firstElementChild.firstElementChild,
+				cbSel: eleRow.firstElementChild.firstElementChild.firstElementChild,
 			},
 		);
+
+		const btnShowHidePreview = eleRow.firstElementChild.children[1].firstElementChild;
+		ListUiUtil.bindPreviewButton(UrlUtil.PG_BESTIARY, this._allData, listItem, btnShowHidePreview);
+
+		return listItem;
 	}
 }

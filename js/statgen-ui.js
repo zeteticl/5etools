@@ -10,6 +10,7 @@ class StatGenUi extends BaseComponent {
 	 * @param [opts.isFvttMode]
 	 * @param [opts.modalFilterRaces]
 	 * @param [opts.modalFilterFeats]
+	 * @param [opts.existingScores]
 	 */
 	constructor (opts) {
 		super();
@@ -30,6 +31,9 @@ class StatGenUi extends BaseComponent {
 
 		this._modalFilterRaces = opts.modalFilterRaces || new ModalFilterRaces({namespace: "statgen.races", isRadio: true, allData: this._races});
 		this._modalFilterFeats = opts.modalFilterFeats || new ModalFilterFeats({namespace: "statgen.feats", isRadio: true, allData: this._feats});
+
+		this._isLevelUp = !!opts.existingScores;
+		this._existingScores = opts.existingScores;
 
 		// region Rolled
 		this._$rollIptFormula = null;
@@ -76,6 +80,15 @@ class StatGenUi extends BaseComponent {
 	// endregion
 
 	getTotals () {
+		if (this._isLevelUp) {
+			return {
+				mode: "levelUp",
+				totals: {
+					levelUp: this._getTotals_levelUp(),
+				},
+			};
+		}
+
 		return {
 			mode: StatGenUi.MODES[this._meta.ixActiveTab || 0],
 			totals: {
@@ -91,6 +104,7 @@ class StatGenUi extends BaseComponent {
 	_getTotals_array () { return Parser.ABIL_ABVS.mergeMap(ab => ({[ab]: this._array_getTotalScore(ab)})); }
 	_getTotals_pb () { return Parser.ABIL_ABVS.mergeMap(ab => ({[ab]: this._pb_getTotalScore(ab)})); }
 	_getTotals_manual () { return Parser.ABIL_ABVS.mergeMap(ab => ({[ab]: this._manual_getTotalScore(ab)})); }
+	_getTotals_levelUp () { return Parser.ABIL_ABVS.mergeMap(ab => ({[ab]: this._levelUp_getTotalScore(ab)})); }
 
 	addHook (hookProp, prop, hook) { return this._addHook(hookProp, prop, hook); }
 	addHookAll (hookProp, hook) {
@@ -133,10 +147,15 @@ class StatGenUi extends BaseComponent {
 	render ($parent) {
 		$parent.empty().addClass("statgen");
 
-		const tabMetas = this._renderTabs(
-			$parent,
-			"meta",
-			[
+		const iptTabMetas = this._isLevelUp
+			? [
+				{
+					name: "Existing",
+					icon: this._isFvttMode ? `fas fa-user` : `far fa-user`,
+				},
+				...this._tabMetasAdditional || [],
+			]
+			: [
 				{
 					name: "Roll",
 					icon: this._isFvttMode ? `fas fa-dice` : `far fa-dice`,
@@ -153,12 +172,13 @@ class StatGenUi extends BaseComponent {
 					name: "Manual",
 					icon: this._isFvttMode ? `fas fa-tools` : `far fa-tools`,
 				},
-				...(this._tabMetasAdditional || []),
-			],
-		);
+				...this._tabMetasAdditional || [],
+			]
+
+		const tabMetas = this._renderTabs($parent, "meta", iptTabMetas);
 
 		const $wrpAll = $(`<div class="flex-col w-100 h-100"></div>`);
-		this._render_pointBuy($wrpAll);
+		this._render_all($wrpAll);
 
 		const hkTab = () => {
 			tabMetas[this._meta.ixActiveTab || 0].$wrpTab.append($wrpAll);
@@ -190,13 +210,27 @@ class StatGenUi extends BaseComponent {
 				this._state.rolled_rolls = this._roll_getRolledStats();
 			});
 
+		const $btnRandom = $(`<button class="btn btn-xs btn-default mt-2">Randomly Assign</button>`)
+			.hideVe()
+			.click(() => {
+				const abs = [...Parser.ABIL_ABVS].shuffle();
+				abs.forEach((ab, i) => {
+					const {propAbilSelectedRollIx} = this.constructor._rolled_getProps(ab);
+					this._state[propAbilSelectedRollIx] = i;
+				});
+			});
+
 		const $wrpRolled = $(`<div class="flex-v-center mr-auto statgen-rolled__wrp-results py-1"></div>`);
 		const $wrpRolledOuter = $$`<div class="flex-v-center"><div class="mr-2">=</div>${$wrpRolled}</div>`;
 
 		const hkRolled = () => {
 			$wrpRolledOuter.toggleVe(this._state.rolled_rolls.length);
+			$btnRandom.toggleVe(this._state.rolled_rolls.length);
 
-			$wrpRolled.html(this._state.rolled_rolls.map(r => `<div class="px-3 py-1 help--subtle flex-vh-center" title="${r.text}"><div class="ve-muted">[</div><div class="flex-vh-center statgen-rolled__disp-result">${r.total}</div><div class="ve-muted">]</div></div>`));
+			$wrpRolled.html(this._state.rolled_rolls.map((it, i) => {
+				const cntPrevRolls = this._state.rolled_rolls.slice(0, i).filter(r => r.total === it.total).length;
+				return `<div class="px-3 py-1 help--subtle flex-vh-center" title="${it.text}"><div class="ve-muted">[</div><div class="flex-vh-center statgen-rolled__disp-result">${it.total}${cntPrevRolls ? Parser.numberToSubscript(cntPrevRolls) : ""}</div><div class="ve-muted">]</div></div>`;
+			}));
 		};
 		this._addHookBase("rolled_rolls", hkRolled);
 		hkRolled();
@@ -212,13 +246,25 @@ class StatGenUi extends BaseComponent {
 			</div>
 
 			${$wrpRolledOuter}
+
+			<div class="flex-v-center">${$btnRandom}</div>
 		</div>`;
 	}
 
 	_render_$getStgArrayHeader () {
+		const $btnRandom = $(`<button class="btn btn-xs btn-default">Randomly Assign</button>`)
+			.click(() => {
+				const abs = [...Parser.ABIL_ABVS].shuffle();
+				abs.forEach((ab, i) => {
+					const {propAbilSelectedScoreIx} = this.constructor._array_getProps(ab);
+					this._state[propAbilSelectedScoreIx] = i;
+				});
+			});
+
 		return $$`<div class="flex-col mb-3 mr-auto">
 			<div class="mb-2">Assign these numbers to your abilities as desired:</div>
-			<div class="bold">${StatGenUi._STANDARD_ARRAY.join(", ")}</div>
+			<div class="bold mb-2">${StatGenUi._STANDARD_ARRAY.join(", ")}</div>
+			<div class="flex">${$btnRandom}</div>
 		</div>`;
 	}
 
@@ -229,6 +275,8 @@ class StatGenUi extends BaseComponent {
 	}
 
 	_doReset () {
+		if (this._isLevelUp) return; // Should never occur
+
 		const nxtState = this._getDefaultStateCommonResettable();
 
 		switch (this._meta.ixActiveTab) {
@@ -431,7 +479,12 @@ class StatGenUi extends BaseComponent {
 		</div>`;
 	}
 
-	_render_pointBuy ($wrpTab) {
+	_render_all ($wrpTab) {
+		if (this._isLevelUp) return this._render_isLevelUp($wrpTab);
+		this._render_isLevelOne($wrpTab);
+	}
+
+	_render_isLevelOne ($wrpTab) {
 		const $elesRolled = [];
 		const $elesArray = [];
 		const $elesPb = [];
@@ -612,51 +665,9 @@ class StatGenUi extends BaseComponent {
 			</label>`
 		});
 
-		const $wrpsUser = Parser.ABIL_ABVS.map(ab => {
-			const {propUserBonus} = this.constructor._common_getProps(ab);
-			const $ipt = ComponentUiUtil.$getIptInt(
-				this,
-				propUserBonus,
-				0,
-				{
-					fallbackOnNaN: 0,
-					html: `<input class="form-control form-control--minimal statgen-shared__ipt text-right" type="number">`,
-				},
-			);
-			return $$`<label class="my-1 statgen-pb__cell">${$ipt}</label>`
-		});
+		const $wrpsUser = this._render_$getWrpsUser();
 
-		const metasTotalAndMod = Parser.ABIL_ABVS.map(ab => {
-			const $iptTotal = $(`<input class="form-control form-control--minimal statgen-shared__ipt text-center" type="text" readonly>`);
-			const $iptMod = $(`<input class="form-control form-control--minimal statgen-shared__ipt text-center" type="text" readonly>`);
-
-			const $wrpIptTotal = $$`<label class="my-1 statgen-pb__cell">${$iptTotal}</label>`;
-			const $wrpIptMod = $$`<label class="my-1 statgen-pb__cell">${$iptMod}</label>`;
-
-			const exportedStateProp = `common_export_${ab}`;
-
-			const hk = () => {
-				const totalScore = this._meta.ixActiveTab === StatGenUi._IX_TAB_ROLLED
-					? this._rolled_getTotalScore(ab)
-					: this._meta.ixActiveTab === StatGenUi._IX_TAB_ARRAY
-						? this._array_getTotalScore(ab)
-						: this._meta.ixActiveTab === StatGenUi._IX_TAB_PB
-							? this._pb_getTotalScore(ab)
-							: this._manual_getTotalScore(ab);
-				$iptTotal.val(totalScore);
-				$iptMod.val(Parser.getAbilityModifier(totalScore));
-
-				this._state[exportedStateProp] = totalScore;
-			};
-			this._addHookAll("state", hk);
-			this._addHook("meta", "ixActiveTab", hk);
-			hk();
-
-			return {
-				$wrpIptTotal,
-				$wrpIptMod,
-			}
-		});
+		const metasTotalAndMod = this._render_getMetasTotalAndMod();
 
 		const $wrpRace = $(`<div class="flex"></div>`);
 		const $wrpRaceOuter = $$`<div class="flex-col">
@@ -701,7 +712,7 @@ class StatGenUi extends BaseComponent {
 		this._modalFilterRaces.pageFilter.filterBox.on(FilterBox.EVNT_VALCHANGE, () => doApplyFilterToSelRace());
 		doApplyFilterToSelRace();
 
-		const $btnFilterForRace = $(`<button class="btn btn-xs btn-default bl-0" title="Filter for Race"><span class="glyphicon glyphicon-filter"></span></button>`)
+		const $btnFilterForRace = $(`<button class="btn btn-xs btn-default br-0 pr-2" title="Filter for Race"><span class="glyphicon glyphicon-filter"></span> Filter</button>`)
 			.click(async () => {
 				const selected = await this._modalFilterRaces.pGetUserSelection();
 				if (selected == null || !selected.length) return;
@@ -711,6 +722,30 @@ class StatGenUi extends BaseComponent {
 				if (!~ixRace) throw new Error(`Could not find selected race: ${JSON.stringify(selectedRace)}`); // Should never occur
 				this._state.common_ixRace = ixRace;
 			});
+
+		const $btnPreviewRace = ComponentUiUtil.$getBtnBool(
+			this,
+			"common_isPreviewRace",
+			{
+				html: `<button class="btn btn-xs btn-default" title="Toggle Race Preview"><span class="glyphicon glyphicon-eye-open"></span></button>`,
+			},
+		);
+		const hkBtnPreviewRace = () => $btnPreviewRace.toggleVe(this._state.common_ixRace != null);
+		this._addHookBase("common_ixRace", hkBtnPreviewRace)
+		hkBtnPreviewRace();
+
+		const $dispPreviewRace = $(`<div class="flex-col mb-2"></div>`);
+		const hkPreviewRace = () => {
+			if (!this._state.common_isPreviewRace) return $dispPreviewRace.hideVe();
+
+			const race = this._state.common_ixRace != null ? this._races[this._state.common_ixRace] : null;
+			if (!race) return $dispPreviewRace.hideVe();
+
+			$dispPreviewRace.empty().showVe().append(Renderer.hover.$getHoverContent_stats(UrlUtil.PG_RACES, race));
+		};
+		this._addHookBase("common_ixRace", hkPreviewRace);
+		this._addHookBase("common_isPreviewRace", hkPreviewRace);
+		hkPreviewRace();
 
 		const $btnToggleTashasPin = ComponentUiUtil.$getBtnBool(
 			this,
@@ -728,13 +763,16 @@ class StatGenUi extends BaseComponent {
 		const hkIsShowTashas = () => {
 			$dispTashas.toggleVe(this._state.common_isShowTashasRules);
 		};
-		this._addHookBase("common_isShowTashasRules", hkIsShowTashas)
+		this._addHookBase("common_isShowTashasRules", hkIsShowTashas);
 		hkIsShowTashas();
 
-		// region ASIs
-		const $wrpAsi = $(`<div class="flex-col w-100"></div>`);
-		this._compAsi.render($wrpAsi)
-		// endregion
+		const $hrPreviewRaceTashas = $(`<hr class="hr-3">`);
+		const hkPreviewAndTashas = () => $hrPreviewRaceTashas.toggleVe(this._state.common_isPreviewRace && this._state.common_isShowTashasRules);
+		this._addHookBase("common_isPreviewRace", hkPreviewAndTashas);
+		this._addHookBase("common_isShowTashasRules", hkPreviewAndTashas);
+		hkPreviewAndTashas();
+
+		const $wrpAsi = this._render_$getWrpAsi();
 
 		hkElesMode();
 
@@ -747,7 +785,7 @@ class StatGenUi extends BaseComponent {
 				<div class="flex-col">
 					${$stgPbHeader}
 
-					<div class="flex mb-4">
+					<div class="flex">
 						<div class="flex-col mr-3">
 							<div class="my-1 statgen-pb__header"></div>
 							<div class="my-1 statgen-pb__header flex-h-right">${$btnResetRolledOrArrayOrManual}</div>
@@ -784,7 +822,10 @@ class StatGenUi extends BaseComponent {
 
 					<div class="flex-col">
 						<div class="mb-1">Select a Race</div>
-						<div class="flex-v-center btn-group w-100 mb-2">${$selRace}${$btnFilterForRace}</div>
+						<div class="flex-v-center mb-2">
+							<div class="flex-v-center btn-group w-100 mr-2">${$btnFilterForRace}${$selRace}</div>
+							<div>${$btnPreviewRace}</div>
+						</div>
 						<label class="flex-v-center mb-1">
 							<div class="mr-1">Allow Origin Customization</div>
 							${ComponentUiUtil.$getCbBool(this, "common_isTashas")}
@@ -805,10 +846,130 @@ class StatGenUi extends BaseComponent {
 
 			<hr class="hr-3">
 
+			${$dispPreviewRace}
+			${$hrPreviewRaceTashas}
 			${$dispTashas}
 
 			${$wrpAsi}
 		`;
+	}
+
+	_render_isLevelUp ($wrpTab) {
+		const $wrpsExisting = Parser.ABIL_ABVS.map(ab => {
+			const $iptExisting = $(`<input class="form-control form-control--minimal statgen-shared__ipt text-right" type="number" readonly>`)
+				.val(this._existingScores[ab]);
+
+			return $$`<label class="my-1 statgen-pb__cell">
+				${$iptExisting}
+			</label>`
+		});
+
+		const $wrpsUser = this._render_$getWrpsUser();
+
+		const metasTotalAndMod = this._render_getMetasTotalAndMod();
+
+		const $wrpAsi = this._render_$getWrpAsi();
+
+		$$($wrpTab)`
+			<div class="flex mobile-ish__flex-col w-100 px-3">
+				<div class="flex-col">
+					<div class="flex">
+						<div class="flex-col mr-3">
+							<div class="my-1 statgen-pb__header"></div>
+
+							${Parser.ABIL_ABVS.map(it => `<div class="my-1 bold statgen-pb__cell flex-v-center flex-h-right" title="${Parser.attAbvToFull(it)}">${it.toUpperCase()}</div>`)}
+						</div>
+
+						<div class="flex-col mr-3">
+							<div class="my-1 bold statgen-pb__header flex-vh-center" title="Current">Curr.</div>
+							${$wrpsExisting}
+						</div>
+
+						<div class="flex-col mr-3">
+							<div class="my-1 statgen-pb__header flex-vh-center help text-muted" title="Input any additional/custom bonuses here">User</div>
+							${$wrpsUser}
+						</div>
+
+						<div class="flex-col mr-3">
+							<div class="my-1 statgen-pb__header flex-vh-center">Total</div>
+							${metasTotalAndMod.map(it => it.$wrpIptTotal)}
+						</div>
+
+						<div class="flex-col mr-3">
+							<div class="my-1 statgen-pb__header flex-vh-center" title="Modifier">Mod.</div>
+							${metasTotalAndMod.map(it => it.$wrpIptMod)}
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<hr class="hr-3">
+
+			${$wrpAsi}
+		`;
+	}
+
+	_render_$getWrpsUser () {
+		return Parser.ABIL_ABVS.map(ab => {
+			const {propUserBonus} = this.constructor._common_getProps(ab);
+			const $ipt = ComponentUiUtil.$getIptInt(
+				this,
+				propUserBonus,
+				0,
+				{
+					fallbackOnNaN: 0,
+					html: `<input class="form-control form-control--minimal statgen-shared__ipt text-right" type="number">`,
+				},
+			);
+			return $$`<label class="my-1 statgen-pb__cell">${$ipt}</label>`
+		});
+	}
+
+	_render_getMetasTotalAndMod () {
+		return Parser.ABIL_ABVS.map(ab => {
+			const $iptTotal = $(`<input class="form-control form-control--minimal statgen-shared__ipt text-center" type="text" readonly>`);
+			const $iptMod = $(`<input class="form-control form-control--minimal statgen-shared__ipt text-center" type="text" readonly>`);
+
+			const $wrpIptTotal = $$`<label class="my-1 statgen-pb__cell">${$iptTotal}</label>`;
+			const $wrpIptMod = $$`<label class="my-1 statgen-pb__cell">${$iptMod}</label>`;
+
+			const exportedStateProp = `common_export_${ab}`;
+
+			const hk = () => {
+				const totalScore = this._isLevelUp
+					? this._levelUp_getTotalScore(ab)
+					: this._meta.ixActiveTab === StatGenUi._IX_TAB_ROLLED
+						? this._rolled_getTotalScore(ab)
+						: this._meta.ixActiveTab === StatGenUi._IX_TAB_ARRAY
+							? this._array_getTotalScore(ab)
+							: this._meta.ixActiveTab === StatGenUi._IX_TAB_PB
+								? this._pb_getTotalScore(ab)
+								: this._manual_getTotalScore(ab);
+
+				const isOverLimit = totalScore > 20;
+				$iptTotal
+					.val(totalScore)
+					.toggleClass("form-control--error", isOverLimit)
+					.title(isOverLimit ? `In general, you can't increase an ability score above 20.` : "");
+				$iptMod.val(Parser.getAbilityModifier(totalScore));
+
+				this._state[exportedStateProp] = totalScore;
+			};
+			this._addHookAll("state", hk);
+			this._addHook("meta", "ixActiveTab", hk);
+			hk();
+
+			return {
+				$wrpIptTotal,
+				$wrpIptMod,
+			}
+		});
+	}
+
+	_render_$getWrpAsi () {
+		const $wrpAsi = $(`<div class="flex-col w-100"></div>`);
+		this._compAsi.render($wrpAsi);
+		return $wrpAsi;
 	}
 
 	static _common_getProps (ab) {
@@ -1032,25 +1193,32 @@ class StatGenUi extends BaseComponent {
 		return (this._state[propAbilValue] || 0) + this._state[propUserBonus] + this._getTotalScore_getBonuses(ab);
 	}
 
+	_levelUp_getTotalScore (ab) {
+		const {propUserBonus} = this.constructor._common_getProps(ab);
+		return (this._existingScores[ab] || 0) + this._state[propUserBonus] + this._getTotalScore_getBonuses(ab);
+	}
+
 	_getTotalScore_getBonuses (ab) {
 		let total = 0;
 
-		const fromRace = this._pb_getRacialAbility();
-		if (fromRace) {
-			if (fromRace[ab]) total += fromRace[ab];
+		if (!this._isLevelUp) {
+			const fromRace = this._pb_getRacialAbility();
+			if (fromRace) {
+				if (fromRace[ab]) total += fromRace[ab];
 
-			if (fromRace.choose && fromRace.choose.from) {
-				total += this._state.common_raceChoiceMetasFrom
-					.filter(it => it.ability === ab)
-					.map(it => it.amount)
-					.reduce((a, b) => a + b, 0);
-			}
+				if (fromRace.choose && fromRace.choose.from) {
+					total += this._state.common_raceChoiceMetasFrom
+						.filter(it => it.ability === ab)
+						.map(it => it.amount)
+						.reduce((a, b) => a + b, 0);
+				}
 
-			if (fromRace.choose && fromRace.choose.weighted && fromRace.choose.weighted.weights) {
-				total += this._state.common_raceChoiceMetasWeighted
-					.filter(it => it.ability === ab)
-					.map(it => it.amount)
-					.reduce((a, b) => a + b, 0);
+				if (fromRace.choose && fromRace.choose.weighted && fromRace.choose.weighted.weights) {
+					total += this._state.common_raceChoiceMetasWeighted
+						.filter(it => it.ability === ab)
+						.map(it => it.amount)
+						.reduce((a, b) => a + b, 0);
+				}
 			}
 		}
 
@@ -1187,6 +1355,7 @@ class StatGenUi extends BaseComponent {
 	_getDefaultState () {
 		return {
 			// region Common
+			common_isPreviewRace: false,
 			common_isTashas: false,
 			common_isShowTashasRules: false,
 			common_ixRace: null,
@@ -1685,7 +1854,7 @@ StatGenUi.RenderableCollectionPbRules = class extends RenderableCollectionBase {
 		comp._addHookBase("cost", hkCost);
 		hkCost();
 
-		const $iptCost = ComponentUiUtil.$getIptInt(comp, "cost", 0, {html: `<input class="form-control input-xs form-control--minimal text-center">`, fallbackOnNaN: 0, min: 0});
+		const $iptCost = ComponentUiUtil.$getIptInt(comp, "cost", 0, {html: `<input class="form-control input-xs form-control--minimal text-center">`, fallbackOnNaN: 0});
 
 		const hkIsCustom = () => {
 			$dispCost.toggleVe(!parentComp.state.pb_isCustom);

@@ -6412,6 +6412,12 @@
 					"entries": [
 						"以一个附赠动作，四臂猩猩可以向一个它所能看见的敌意生物移动最多等同它移动速度的距离。"
 					]
+				},
+				{
+					"name": "Keen Smell",
+					"entries": [
+						"The girallon has advantage on Wisdom (Perception) checks that rely on smell."
+					]
 				}
 			],
 			"action": [
@@ -6443,7 +6449,8 @@
 			],
 			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/219/girallon.mp3",
 			"traitTags": [
-				"Aggressive"
+				"Aggressive",
+				"Keen Senses"
 			],
 			"actionTags": [
 				"Multiattack"
@@ -9372,9 +9379,15 @@
 		{
 			"name": "凌弱精怪",
 			"ENG_name": "Meenlock",
+			"source": "VGM",
+			"page": 170,
+			"otherSources": [
+				{
+					"source": "CM"
+				}
+			],
 			"size": "S",
 			"type": "fey",
-			"source": "VGM",
 			"alignment": [
 				"N",
 				"E"
@@ -9444,7 +9457,6 @@
 					]
 				}
 			],
-			"page": 170,
 			"environment": [
 				"forest",
 				"swamp",
@@ -13355,6 +13367,12 @@
 					"entries": [
 						"荆棘兽在它的回合开始时回复5点生命值。若它受到冷冻、火焰、或黯蚀伤害，则这个特性在荆棘兽下个回合开始时并不会发挥作用。荆棘兽只会在它以0点生命值开始它回合，且再生并未发挥效果时死亡。"
 					]
+				},
+				{
+					"name": "Thorny Body",
+					"entries": [
+						"At the start of its turn, the thorny deals 2 ({@damage 1d4}) piercing damage to any creature grappling it."
+					]
 				}
 			],
 			"action": [
@@ -15815,13 +15833,17 @@
 				"Magic Resistance",
 				"Shapechanger"
 			],
+			"senseTags": [
+				"B",
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
 			"languageTags": [
 				"AB",
 				"C",
 				"DR"
-			],
-			"senseTags": [
-				"D"
 			],
 			"spellcastingTags": [
 				"I",
@@ -16266,7 +16288,14 @@
 				"P",
 				"I",
 				"S"
-			]
+			],
+			"miscTags": [
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "蛇人．心灵呢喃者",

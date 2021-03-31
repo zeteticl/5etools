@@ -5,12 +5,37 @@ const ListUtil = {
 
 	_firstInit: true,
 	_isPreviewable: false,
+	_isFindHotkeyBound: false,
 	initList (listOpts) {
 		const $iptSearch = $("#lst__search");
 		const $wrpList = $(`.list.${listOpts.listClass}`);
 		const list = new List({$iptSearch, $wrpList, ...listOpts});
 
 		if (listOpts.isPreviewable) ListUtil._isPreviewable = true;
+
+		const helpText = [];
+
+		if (listOpts.isBindFindHotkey && !ListUtil._isFindHotkeyBound) {
+			helpText.push(`Hotkey: f.`);
+
+			$(document.body).on("keypress", (e) => {
+				if (!EventUtil.noModifierKeys(e) || EventUtil.isInInput(e)) return;
+				if (e.key === "f") {
+					e.preventDefault();
+					$iptSearch.select().focus();
+				}
+			});
+		}
+
+		if (listOpts.syntax) {
+			Object.values(listOpts.syntax)
+				.filter(({help}) => help)
+				.forEach(({help}) => {
+					helpText.push(help);
+				});
+		}
+
+		if (helpText.length) $iptSearch.title(helpText.join(" "));
 
 		$("#reset").click(function () {
 			$iptSearch.val("");

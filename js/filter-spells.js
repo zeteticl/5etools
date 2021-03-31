@@ -568,8 +568,8 @@ class ModalFilterSpells extends ModalFilter {
 	}
 
 	_getListItem (pageFilter, spell, spI) {
-		const eleLabel = document.createElement("label");
-		eleLabel.className = "w-100 flex-vh-center lst--border no-select lst__wrp-cells";
+		const eleRow = document.createElement("div");
+		eleRow.className = "px-0 w-100 flex-col no-shrink";
 
 		const hash = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_SPELLS](spell);
 		const source = Parser.sourceJsonToAbv(spell.source);
@@ -579,18 +579,25 @@ class ModalFilterSpells extends ModalFilter {
 		const concentration = spell._isConc ? "×" : "";
 		const range = Parser.spRangeToFull(spell.range);
 
-		eleLabel.innerHTML = `<div class="col-1 pl-0 flex-vh-center">${this._isRadio ? `<input type="radio" name="radio" class="no-events">` : `<input type="checkbox" class="no-events">`}</div>
-		<div class="bold col-3">${spell.name}</div>
-		<div class="col-1-5 text-center">${levelText}</div>
-		<div class="col-2 text-center">${time}</div>
-		<div class="col-1 sp__school-${spell.school} text-center" title="${Parser.spSchoolAndSubschoolsAbvsToFull(spell.school, spell.subschools)}" ${Parser.spSchoolAbvToStyle(spell.school)}>${school}</div>
-		<div class="col-0-5 text-center" title="Concentration">${concentration}</div>
-		<div class="col-2 text-right">${range}</div>
-		<div class="col-1 pr-0 text-center ${Parser.sourceJsonToColor(spell.source)}" title="${Parser.sourceJsonToFull(spell.source)}" ${BrewUtil.sourceJsonToStyle(spell.source)}>${source}</div>`;
+		eleRow.innerHTML = `<div class="w-100 flex-vh-center lst--border no-select lst__wrp-cells">
+			<div class="col-0-5 pl-0 flex-vh-center">${this._isRadio ? `<input type="radio" name="radio" class="no-events">` : `<input type="checkbox" class="no-events">`}</div>
 
-		return new ListItem(
+			<div class="col-0-5 px-1 flex-vh-center">
+				<div class="ui-list__btn-inline px-2" title="Toggle Preview">[+]</div>
+			</div>
+
+			<div class="col-3 ${this._getNameStyle()}">${spell.name}</div>
+			<div class="col-1-5 text-center">${levelText}</div>
+			<div class="col-2 text-center">${time}</div>
+			<div class="col-1 sp__school-${spell.school} text-center" title="${Parser.spSchoolAndSubschoolsAbvsToFull(spell.school, spell.subschools)}" ${Parser.spSchoolAbvToStyle(spell.school)}>${school}</div>
+			<div class="col-0-5 text-center" title="Concentration">${concentration}</div>
+			<div class="col-2 text-right">${range}</div>
+			<div class="col-1 pr-0 text-center ${Parser.sourceJsonToColor(spell.source)}" title="${Parser.sourceJsonToFull(spell.source)}" ${BrewUtil.sourceJsonToStyle(spell.source)}>${source}</div>
+		</div>`;
+
+		const listItem = new ListItem(
 			spI,
-			eleLabel,
+			eleRow,
 			spell.name,
 			{
 				hash,
@@ -605,9 +612,14 @@ class ModalFilterSpells extends ModalFilter {
 				normalisedRange: spell._normalisedRange,
 			},
 			{
-				cbSel: eleLabel.firstElementChild.firstElementChild,
+				cbSel: eleRow.firstElementChild.firstElementChild.firstElementChild,
 			},
 		);
+
+		const btnShowHidePreview = eleRow.firstElementChild.children[1].firstElementChild;
+		ListUiUtil.bindPreviewButton(UrlUtil.PG_SPELLS, this._allData, listItem, btnShowHidePreview);
+
+		return listItem;
 	}
 }
 

@@ -56,7 +56,7 @@ class RacesPage extends ListPage {
 
 		const hash = UrlUtil.autoEncodeHash(race);
 		const ability = race.ability ? Renderer.getAbilityData(race.ability) : {asTextShort: "无"};
-		const size = Parser.sizeAbvToFull(race.size || SZ_VARIES);
+		const size = (race.size || [SZ_VARIES]).map(sz => Parser.sizeAbvToFull(sz)).join("/");
 		const source = Parser.sourceJsonToAbv(race.source);
 
 		eleLi.innerHTML = `<a href="#${hash}" class="lst--border lst__row-inner">
@@ -105,7 +105,7 @@ class RacesPage extends ListPage {
 				<a href="#${UrlUtil.autoEncodeHash(race)}" class="lst--border lst__row-inner">
 					<span class="bold col-5 pl-0">${race.name}</span>
 					<span class="col-5">${race._slAbility}</span>
-					<span class="col-2 text-center pr-0">${Parser.sizeAbvToFull(race.size || SZ_VARIES)}</span>
+					<span class="col-2 text-center pr-0">${(race.size || [SZ_VARIES]).map(sz => Parser.sizeAbvToFull(sz)).join("/")}</span>
 				</a>
 			</div>
 		`)

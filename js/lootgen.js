@@ -290,7 +290,7 @@ class LootGen {
 		const $ulOut = $(`<ul/>`);
 		let current = null;
 		let count = 0;
-		const addToOutput = () => $(`<li><span>${current}${count > 1 ? `, ${MULT_SIGN}${count} ` : ""}</span></li>`)
+		const addToOutput = () => $(`<li><span>${Renderer.get().render(current)}${count > 1 ? `, ${MULT_SIGN}${count} ` : ""}</span></li>`)
 			.appendTo($ulOut);
 		sorted.forEach(r => {
 			if (current == null || r !== current) {
@@ -440,7 +440,7 @@ class LootGen {
 					.flat()
 					.map(it => it.items.map(x => {
 						const [name, source] = [...x.split("|")];
-						return Renderer.hover._getFromCache(UrlUtil.PG_ITEMS, source || SRC_DMG, UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_ITEMS]({name, source: source || SRC_DMG}));
+						return Renderer.hover.getFromCache(UrlUtil.PG_ITEMS, source || SRC_DMG, UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_ITEMS]({name, source: source || SRC_DMG}));
 					}))
 					.flat());
 			}
@@ -622,7 +622,7 @@ const randomLootTables = {
 			isBlacklistVariants: true,
 		});
 		const homebrew = await BrewUtil.pAddBrewData();
-		const brewItems = await Renderer.item.getItemsFromHomebrew(homebrew);
+		const brewItems = await Renderer.item.pGetItemsFromHomebrew(homebrew);
 		const allItems = stockItems.concat(brewItems);
 
 		for (const item of allItems) {
@@ -664,11 +664,20 @@ const randomLootTables = {
 		const $charLevel = $(`#charLevel`);
 		const $randomFromLootTable = $("#random-from-loot-table");
 
-		$(".slider")
-			.toggle($closestTier.prop("checked"))
-			.slider({min: 1, max: 20})
-			.slider("pips", {rest: "label"})
-			.slider("float");
+		const comp = BaseComponent.fromObject({
+			min: 1,
+			max: 20,
+			cur: 1,
+		})
+		const $slider = ComponentUiUtil.$getSliderRange(
+			comp,
+			{
+				propMin: "min",
+				propMax: "max",
+				propCurMin: "cur",
+			},
+		).appendTo($(`.slider`));
+		$slider.toggleVe($closestTier.prop("checked"));
 
 		$cumulative.change((evt) => {
 			const toggled = evt.currentTarget.checked;
@@ -677,7 +686,7 @@ const randomLootTables = {
 
 		$closestTier.change((evt) => {
 			const toggled = evt.currentTarget.checked;
-			$(".slider").toggle(toggled);
+			$slider.toggleVe(toggled);
 			$("#random-magic-item-select-tier").toggle(!toggled);
 			SessionStorageUtil.set(STORAGE_PARTY_CLOSEST_TIER, toggled);
 		});
@@ -730,7 +739,7 @@ const randomLootTables = {
 			const useClosestTier = $("#closest-tier").prop("checked");
 			const accumulateTiers = $("#char-cumulative").prop("checked") && !useClosestTier; // ignored if slider is used
 
-			if (useClosestTier) level = $(".slider").slider("value");
+			if (useClosestTier) level = comp._state.cur;
 			else level = $("#charLevel").val();
 
 			const text = useClosestTier ? `${level}级` : `${$(`#charLevel option[value=${level}]`).text()}级`;

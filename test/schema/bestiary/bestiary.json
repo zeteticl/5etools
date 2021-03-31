@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"version": "1.16.3",
+	"version": "1.16.5",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -449,6 +449,9 @@
 								},
 								"coven": {
 									"type": "string"
+								},
+								"xp": {
+									"type": "integer"
 								}
 							},
 							"additionalProperties": false,
@@ -615,25 +618,32 @@
 					}
 				},
 				"legendary": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"properties": {
-							"name": {
-								"type": "string"
-							},
-							"entries": {
-								"type": "array",
-								"items": {
-									"$ref": "entry.json"
-								}
+					"oneOf": [
+						{
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"name": {
+										"type": "string"
+									},
+									"entries": {
+										"type": "array",
+										"items": {
+											"$ref": "entry.json"
+										}
+									}
+								},
+								"required": [
+									"entries"
+								],
+								"additionalProperties": false
 							}
 						},
-						"required": [
-							"entries"
-						],
-						"additionalProperties": false
-					}
+						{
+							"type": "null"
+						}
+					]
 				},
 				"mythicHeader": {
 					"type": "array",
@@ -869,6 +879,7 @@
 							"Frightful Presence",
 							"Multiattack",
 							"Parry",
+							"Shapechanger",
 							"Swallow",
 							"Teleport",
 							"Tentacles"

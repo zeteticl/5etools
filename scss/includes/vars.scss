@@ -290,6 +290,15 @@ $fltr-2stripe: 22px;
 	&.active {
 		background: $rgb-cb-grey;
 		border-color: lighten($rgb-cb-grey, 15%);
+
+		&.disabled {
+			background-color: lighten($rgb-cb-grey, 25%);
+		}
+	}
+
+	&.disabled {
+		cursor: default;
+		box-shadow: none;
 	}
 }
 
@@ -304,6 +313,14 @@ $fltr-2stripe: 22px;
 	&.active {
 		background: $rgb-border-grey--night;
 		border-color: lighten($rgb-border-grey--night, 10%);
+
+		&.disabled {
+			background-color: lighten($rgb-border-grey--night, 20%);
+		}
+	}
+
+	&.disabled {
+		box-shadow: none;
 	}
 }
 // endregion

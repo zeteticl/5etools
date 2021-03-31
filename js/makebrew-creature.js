@@ -2792,8 +2792,9 @@ class CreatureBuilder extends Builder {
 	}
 
 	_buildLegendaryGroupCache () {
+		DataUtil.monster.populateMetaReference({legendaryGroup: BrewUtil.homebrew.legendaryGroup || []});
 		const baseLegendaryGroups = Object.values(DataUtil.monster.metaGroupMap).map(obj => Object.values(obj)).flat();
-		this._legendaryGroups = [...baseLegendaryGroups, ...(BrewUtil.homebrew.legendaryGroup || [])];
+		this._legendaryGroups = [...baseLegendaryGroups];
 
 		this._legendaryGroupCache = this._legendaryGroups
 			.map(({name, source}) => ({name, source}))

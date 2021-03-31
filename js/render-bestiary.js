@@ -43,7 +43,9 @@ class RenderBestiary {
 		const renderer = Renderer.get();
 		Renderer.monster.initParsed(mon);
 
-		const allTraits = Renderer.monster.getOrderedTraits(mon, renderer);
+		const fnGetSpellTraits = Renderer.monster.getSpellcastingRenderedTraits.bind(Renderer.monster, renderer);
+		const allTraits = Renderer.monster.getOrderedTraits(mon, {fnGetSpellTraits});
+		const allActions = Renderer.monster.getOrderedActions(mon, {fnGetSpellTraits});
 		const legGroup = DataUtil.monster.getMetaGroup(mon);
 
 		const renderedVariants = (() => {
@@ -134,9 +136,9 @@ class RenderBestiary {
 		${mon.pbNote ? `<tr><td colspan="6"><strong>熟练加值 (PB)</strong> ${mon.pbNote}</td></tr>` : ""}
 
 		${allTraits ? `<tr><td class="divider" colspan="6"><div></div></td></tr>${RenderBestiary._getRenderedSection("trait", allTraits, 1)}` : ""}
-		${mon.action ? `<tr><td colspan="6" class="mon__stat-header-underline"><span class="mon__sect-header-inner">动作${mon.actionNote ? ` (<span class="small">${mon.actionNote}</span>)` : ""}</span></td></tr>
-		${RenderBestiary._getRenderedSection("action", mon.action, 1)}` : ""}
-		${mon.bonus ? `<tr><td colspan="6" class="mon__stat-header-underline"><span class="mon__sect-header-inner">动作</span></td></tr>
+		${allActions ? `<tr><td colspan="6" class="mon__stat-header-underline"><span class="mon__sect-header-inner">动作${mon.actionNote ? ` (<span class="small">${mon.actionNote}</span>)` : ""}</span></td></tr>
+		${RenderBestiary._getRenderedSection("action", allActions, 1)}` : ""}
+		${mon.bonus ? `<tr><td colspan="6" class="mon__stat-header-underline"><span class="mon__sect-header-inner">附赠动作</span></td></tr>
 		${RenderBestiary._getRenderedSection("bonus", mon.bonus, 1)}` : ""}
 		${mon.reaction ? `<tr><td colspan="6" class="mon__stat-header-underline"><span class="mon__sect-header-inner">反应</span></td></tr>
 		${RenderBestiary._getRenderedSection("reaction", mon.reaction, 1)}` : ""}

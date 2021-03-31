@@ -1,6 +1,6 @@
 "use strict";
 
-class BackgroundPage extends ListPage {
+class CharCreationOptionsPage extends ListPage {
 	constructor () {
 		const pageFilter = new PageFilterCharCreationOptions();
 		super({
@@ -133,5 +133,5 @@ class BackgroundPage extends ListPage {
 	}
 }
 
-const backgroundsPage = new BackgroundPage();
-window.addEventListener("load", () => backgroundsPage.pOnLoad());
+const charCreationOptionsPage = new CharCreationOptionsPage();
+window.addEventListener("load", () => charCreationOptionsPage.pOnLoad());

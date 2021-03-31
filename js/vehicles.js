@@ -145,7 +145,27 @@ class VehiclesPage extends ListPage {
 		sub = this._filterBox.setFromSubHashes(sub);
 		await ListUtil.pSetFromSubHashes(sub);
 	}
+
+	_getSearchCache (entity) {
+		if (this.constructor._INDEXABLE_PROPS.every(it => !entity[it])) return "";
+		const ptrOut = {_: ""};
+		this.constructor._INDEXABLE_PROPS.forEach(it => this._getSearchCache_handleEntryProp(entity, it, ptrOut));
+		return ptrOut._;
+	}
 }
+VehiclesPage._INDEXABLE_PROPS = [
+	"control",
+	"movement",
+	"weapon",
+	"other",
+	"entries",
+
+	"actionStation",
+
+	"action",
+	"trait",
+	"reaction",
+];
 
 const vehiclesPage = new VehiclesPage();
 window.addEventListener("load", () => vehiclesPage.pOnLoad());

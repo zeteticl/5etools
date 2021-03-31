@@ -90,6 +90,7 @@ class Omnidexer {
 
 		const pHandleItem = async (it, i, name) => {
 			if (it.noDisplay) return;
+			if (name) name = name.toAscii();
 
 			var obj = {};
 			if(it.ENG_name){ obj.cn = name; obj.n = it.ENG_name; }
@@ -376,6 +377,7 @@ class IndexableFile {
 	 * @param [opts.postLoad] a function which takes the data set, does some post-processing, and runs a callback when done (synchronously)
 	 * @param opts.isOnlyDeep
 	 * @param opts.additionalIndexes
+	 * @param opts.isSkipBrew
 	 */
 	constructor (opts) {
 		this.category = opts.category;
@@ -393,6 +395,7 @@ class IndexableFile {
 		this.postLoad = opts.postLoad;
 		this.isOnlyDeep = opts.isOnlyDeep;
 		this.additionalIndexes = opts.additionalIndexes;
+		this.isSkipBrew = opts.isSkipBrew;
 	}
 
 	/**
@@ -820,6 +823,7 @@ class IndexableFileVariantRulesGenerated extends IndexableFile {
 			listProp: "variantrule",
 			baseUrl: "variantrules.html",
 			isHover: true,
+			isSkipBrew: true,
 		});
 	}
 }

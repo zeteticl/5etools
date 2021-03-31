@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.2.0",
+	"version": "1.2.3",
 
 	"definitions" : {
 		"metaBlock": {
@@ -153,42 +153,18 @@
 			"items": {
 				"type": "object",
 				"properties": {
-					"artisan's tools": {
-						"type": "boolean"
-					},
-					"cartographer's tools": {
-						"type": "boolean"
-					},
-					"disguise kit": {
-						"type": "boolean"
-					},
-					"forgery kit": {
-						"type": "boolean"
-					},
-					"gaming set": {
-						"type": "boolean"
-					},
-					"herbalism kit": {
-						"type": "boolean"
-					},
-					"musical instrument": {
-						"type": "boolean"
-					},
-					"navigator's tools": {
-						"type": "boolean"
-					},
-					"thieves' tools": {
-						"type": "boolean"
-					},
-					"vehicles (land)": {
-						"type": "boolean"
-					},
-					"vehicles (water)": {
-						"type": "boolean"
-					},
-					"any": {
-						"type": "integer"
-					},
+					"artisan's tools": {"type": "boolean"},
+					"cartographer's tools": {"type": "boolean"},
+					"disguise kit": {"type": "boolean"},
+					"forgery kit": {"type": "boolean"},
+					"gaming set": {"type": "boolean"},
+					"herbalism kit": {"type": "boolean"},
+					"musical instrument": {"type": "boolean"},
+					"navigator's tools": {"type": "boolean"},
+					"thieves' tools": {"type": "boolean"},
+					"vehicles (land)": {"type": "boolean"},
+					"vehicles (water)": {"type": "boolean"},
+					"any": {"type": "integer"},
 					"choose": {
 						"type": "object",
 						"properties": {
@@ -221,86 +197,169 @@
 		},
 
 		"skillProficiencies": {
-			"type": "object",
-			"properties": {
-				"athletics": {"type": "boolean"},
-				"acrobatics":{"type": "boolean"},
-				"sleight of hand": {"type": "boolean"},
-				"stealth":{"type": "boolean"},
-				"arcana": {"type": "boolean"},
-				"history":{"type": "boolean"},
-				"investigation": {"type": "boolean"},
-				"nature":{"type": "boolean"},
-				"religion": {"type": "boolean"},
-				"animal handling":{"type": "boolean"},
-				"insight": {"type": "boolean"},
-				"medicine":{"type": "boolean"},
-				"perception": {"type": "boolean"},
-				"survival":{"type": "boolean"},
-				"deception": {"type": "boolean"},
-				"intimidation":{"type": "boolean"},
-				"performance": {"type": "boolean"},
-				"persuasion":{"type": "boolean"},
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"athletics": {"type": "boolean"},
+					"acrobatics":{"type": "boolean"},
+					"sleight of hand": {"type": "boolean"},
+					"stealth":{"type": "boolean"},
+					"arcana": {"type": "boolean"},
+					"history":{"type": "boolean"},
+					"investigation": {"type": "boolean"},
+					"nature":{"type": "boolean"},
+					"religion": {"type": "boolean"},
+					"animal handling":{"type": "boolean"},
+					"insight": {"type": "boolean"},
+					"medicine":{"type": "boolean"},
+					"perception": {"type": "boolean"},
+					"survival":{"type": "boolean"},
+					"deception": {"type": "boolean"},
+					"intimidation":{"type": "boolean"},
+					"performance": {"type": "boolean"},
+					"persuasion":{"type": "boolean"},
 
-				"tool": {"type": "boolean"},
+					"tool": {"type": "boolean"},
 
-				"choose": {
-					"type": "object",
-					"properties": {
-						"from": {
-							"type": "array",
-							"items": {
-								"oneOf": [
-									{
-										"enum": [
-											"athletics",
-											"acrobatics",
-											"sleight of hand",
-											"stealth",
-											"arcana",
-											"history",
-											"investigation",
-											"nature",
-											"religion",
-											"animal handling",
-											"insight",
-											"medicine",
-											"perception",
-											"survival",
-											"deception",
-											"intimidation",
-											"performance",
-											"persuasion"
-										]
-									},
-									{
-										"type": "object",
-										"properties": {
-											"tool": {
-												"type": "array",
-												"items": {
-													"type": "string"
+					"choose": {
+						"type": "object",
+						"properties": {
+							"from": {
+								"type": "array",
+								"items": {
+									"oneOf": [
+										{
+											"enum": [
+												"athletics",
+												"acrobatics",
+												"sleight of hand",
+												"stealth",
+												"arcana",
+												"history",
+												"investigation",
+												"nature",
+												"religion",
+												"animal handling",
+												"insight",
+												"medicine",
+												"perception",
+												"survival",
+												"deception",
+												"intimidation",
+												"performance",
+												"persuasion"
+											]
+										},
+										{
+											"type": "object",
+											"properties": {
+												"tool": {
+													"type": "array",
+													"items": {
+														"type": "string"
+													}
+												}
+											}
+										},
+										{
+											"type": "object",
+											"properties": {
+												"tool": {
+													"type": "boolean"
 												}
 											}
 										}
-									},
-									{
-										"type": "object",
-										"properties": {
-											"tool": {
-												"type": "boolean"
-											}
-										}
-									}
-								]
+									]
+								}
 							}
 						}
-					}
 
-				}
-			},
-			"additionalProperties": false
+					}
+				},
+				"additionalProperties": false
+			}
 		},
+
+		"weaponProficiencies": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"simple": {"type": "boolean"},
+					"martial": {"type": "boolean"},
+					"firearms": {"type": "boolean"},
+
+					"battleaxe|phb": {"type": "boolean"},
+					"club|phb": {"type": "boolean"},
+					"dagger|phb":  {"type": "boolean"},
+					"flail|phb": {"type": "boolean"},
+					"glaive|phb":  {"type": "boolean"},
+					"greataxe|phb": {"type": "boolean"},
+					"greatclub|phb":  {"type": "boolean"},
+					"greatsword|phb": {"type": "boolean"},
+					"halberd|phb":  {"type": "boolean"},
+					"handaxe|phb": {"type": "boolean"},
+					"javelin|phb":  {"type": "boolean"},
+					"lance|phb": {"type": "boolean"},
+					"light hammer|phb":  {"type": "boolean"},
+					"longsword|phb": {"type": "boolean"},
+					"mace|phb":  {"type": "boolean"},
+					"maul|phb": {"type": "boolean"},
+					"morningstar|phb":  {"type": "boolean"},
+					"pike|phb": {"type": "boolean"},
+					"quarterstaff|phb":  {"type": "boolean"},
+					"rapier|phb": {"type": "boolean"},
+					"scimitar|phb":  {"type": "boolean"},
+					"shortsword|phb": {"type": "boolean"},
+					"sickle|phb":  {"type": "boolean"},
+					"spear|phb": {"type": "boolean"},
+					"staff|phb":  {"type": "boolean"},
+					"trident|phb": {"type": "boolean"},
+					"war pick|phb":  {"type": "boolean"},
+					"warhammer|phb": {"type": "boolean"},
+					"whip|phb":  {"type": "boolean"},
+					"blowgun|phb": {"type": "boolean"},
+					"dart|phb":  {"type": "boolean"},
+					"hand crossbow|phb": {"type": "boolean"},
+					"heavy crossbow|phb":  {"type": "boolean"},
+					"light crossbow|phb": {"type": "boolean"},
+					"longbow|phb":  {"type": "boolean"},
+					"net|phb": {"type": "boolean"},
+					"shortbow|phb":  {"type": "boolean"},
+					"sling|phb": {"type": "boolean"},
+					"double-bladed scimitar|erlw":  {"type": "boolean"},
+
+					"choose": {
+						"type": "object",
+						"properties": {
+							"from": {
+								"description": "A filter string, e.g. \"type=martial weapon|miscellaneous=mundane\"",
+								"type": "string"
+							},
+							"count": {"type": "integer"}
+						},
+						"additionalProperties": false
+					}
+				},
+				"additionalProperties": false
+			}
+		},
+
+		"armorProficiencies": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"light":  {"type": "boolean"},
+					"medium": {"type": "boolean"},
+					"heavy":  {"type": "boolean"},
+					"shield|phb": {"type": "boolean"}
+				},
+				"additionalProperties": false
+			}
+		},
+
 		"_speedVal": {
 			"oneOf": [
 				{
@@ -1413,6 +1472,8 @@
 												"weaponMartialMelee",
 												"instrumentMusical",
 												"armorLight",
+												"armorMedium",
+												"armorHeavy",
 												"weaponMelee",
 												"weaponRanged",
 												"focusSpellcasting",

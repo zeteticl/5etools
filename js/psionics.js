@@ -169,6 +169,15 @@ class PsionicsPage extends ListPage {
 
 		await this._bookView.pHandleSub(sub);
 	}
+
+	_getSearchCache (entity) {
+		if (!entity.entries && !entity.modes && !entity.focus) return "";
+		const ptrOut = {_: ""};
+		this._getSearchCache_handleEntryProp(entity, "entries", ptrOut);
+		this._getSearchCache_handleEntryProp(entity, "modes", ptrOut);
+		this._getSearchCache_handleEntryProp(entity, "focus", ptrOut);
+		return ptrOut._;
+	}
 }
 
 const psionicsPage = new PsionicsPage();

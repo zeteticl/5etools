@@ -1,7 +1,7 @@
 {
 	"name": "5etools",
 	"author": "TheGiddyLimit",
-	"version": "1.122.8",
+	"version": "1.125.2",
 	"license": "MIT",
 	"description": "A site dedicated to making playing games with your friends as easy as possible.",
 	"scripts": {
@@ -24,7 +24,7 @@
 		"preversion": "npm test",
 		"replace-chinese": "node node/replace-spells-chinese-tagging.js",
 		"version": "node node/version-bump.js",
-		"serve:dev": "http-server -c-1 --cors"
+		"serve:dev": "http-server -c-1 --cors --port 5000"
 	},
 	"repository": {
 		"type": "git",

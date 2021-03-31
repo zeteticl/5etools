@@ -96,7 +96,7 @@
 			"page": 232,
 			"type": "Boon",
 			"entries": [
-				"当一个距离你60呎内你所能看见的生物进行一次属性检定、攻击检定、或豁免检定时，你可以骰一颗d10，并将骰出来的数字作为加值或减值加到对方的检定结果中。一旦你使用此恩惠，直到完成一次短休之前你都不能再使用它。"
+				"当一个距离你60呎内你所能看见的生物进行一次属性检定、攻击检定、或豁免检定时，你可以骰{@dice d10}，并将骰出来的数字作为加值或减值加到对方的检定结果中。一旦你使用此恩惠，直到完成一次短休之前你都不能再使用它。"
 			]
 		},
 		{
@@ -150,7 +150,7 @@
 			"page": 232,
 			"type": "Boon",
 			"entries": [
-				"你可以将一颗d10骰加入任何你所进行的一次属性检定、攻击检定、或豁免检定中。一旦你使用此恩惠，直到完成一次短休之前你都不能再使用它。"
+				"你可以将一颗{@dice d10}骰加入任何你所进行的一次属性检定、攻击检定、或豁免检定中。一旦你使用此恩惠，直到完成一次短休之前你都不能再使用它。"
 			]
 		},
 		{
@@ -231,7 +231,7 @@
 			"page": 232,
 			"type": "Boon",
 			"entries": [
-				"你的步行速度提升30呎。此外，你可以使用一个附赠动作以采取{@action 疾走}或{@action 撤离}动作。一旦你这么做，直到完成一次短休之前你都不能再使用它。"
+				"你的步行速度提升30呎。此外，你可以使用一个附赠动作以采取{@action Dash}或{@action Disengage}动作。一旦你这么做，直到完成一次短休之前你都不能再使用它。"
 			]
 		},
 		{
@@ -267,7 +267,7 @@
 			"page": 232,
 			"type": "Boon",
 			"entries": [
-				"当你完全处于微光光照或黑暗环境时，你可以使用一个动作变得{@condition 隐形}。你将维持隐形直到你采取一个动作或反应。"
+				"当你完全处于微光光照或黑暗环境时，你可以使用一个动作变得{@condition 隐形}。你将维持{@condition 隐形}直到你采取一个动作或反应。"
 			]
 		},
 		{
@@ -294,7 +294,7 @@
 			"page": 232,
 			"type": "Boon",
 			"entries": [
-				"你获得范围60呎的真实视觉。"
+				"你获得范围60呎的{@sense 真实视觉}。"
 			]
 		},
 		{
@@ -331,7 +331,7 @@
 			"type": "Charm",
 			"entries": [
 				"{@note This charm can be bestowed by a {@creature chwinga|ToA} living in Icewind Dale or other cold regions by using their Magical Gift action.}",
-				"This charm has 3 charges. As a bonus action, you can expend 1 of the charm's charges to wreathe your weapon attacks with biting cold for 1 minute. Until this effect ends, you deal an extra {@dice 1d6} cold damage when you hit with a melee or ranged weapon attack. Once all its charges have been expended, this charm vanishes from you."
+				"This charm has 3 charges. As a bonus action, you can expend 1 of the charm's charges to wreathe your weapon attacks with biting cold for 1 minute. Until this effect ends, you deal an extra {@damage 1d6} cold damage when you hit with a melee or ranged weapon attack. Once all its charges have been expended, this charm vanishes from you."
 			]
 		},
 		{
@@ -406,7 +406,7 @@
 			"type": "Charm",
 			"entries": [
 				"{@note This charm can be bestowed by a {@creature chwinga|ToA} living in Icewind Dale or other cold regions by using their Magical Gift action.}",
-				"This charm has 5 charges. As a bonus action, you can expend 1 of the charm's charges to create a magical snowball in your hand and throw it. You must have a hand free to hold the snowball, or the charge is wasted. The snowball is a magic ranged weapon with which you are proficient. It has a normal range of 20 feet and a long range of 60 feet, it deals {@dice 1d4} cold damage on a hit, and it scores a critical hit on a roll of 19 or 20. If you score a critical hit with the snowball, the target is {@condition blinded} until the end of its next turn. The snowball vanishes immediately after you hit or miss with it, or at the end of your turn if you don't throw it. Once all its charges have been expended, this charm vanishes from you."
+				"This charm has 5 charges. As a bonus action, you can expend 1 of the charm's charges to create a magical snowball in your hand and throw it. You must have a hand free to hold the snowball, or the charge is wasted. The snowball is a magic ranged weapon with which you are proficient. It has a normal range of 20 feet and a long range of 60 feet, it deals {@damage 1d4} cold damage on a hit, and it scores a critical hit on a roll of 19 or 20. If you score a critical hit with the snowball, the target is {@condition blinded} until the end of its next turn. The snowball vanishes immediately after you hit or miss with it, or at the end of your turn if you don't throw it. Once all its charges have been expended, this charm vanishes from you."
 			]
 		},
 		{
@@ -424,7 +424,7 @@
 			"page": 167,
 			"type": "Charm",
 			"entries": [
-				"This charm allows you to use an action to eat a mouthful of flesh from a humanoid that has been dead no longer than 1 day. When you do, you regain 3d8+3 hit points. Once used three times, the charm goes away."
+				"This charm allows you to use an action to eat a mouthful of flesh from a humanoid that has been dead no longer than 1 day. When you do, you regain {@dice 3d8 + 3} hit points. Once used three times, the charm goes away."
 			]
 		},
 		{
@@ -447,7 +447,17 @@
 			]
 		},
 		{
+			"name": "Charm of the Mirage",
+			"source": "CM",
+			"type": "Charm",
+			"entries": [
+				"{@note This charm can be bestowed by a {@creature chwinga|CM} living a desert by using their Magical Gift action.}",
+				"This charm allows you to cast the {@spell hallucinatory terrain} spell (save DC 15) as an action. Once used, this charm vanishes from you."
+			]
+		},
+		{
 			"name": "杀戮护咒",
+			"ENG_name": "Charm of the Slayer",
 			"source": "DMG",
 			"page": 228,
 			"type": "Charm",
@@ -500,6 +510,15 @@
 			"entries": [
 				"{@note This charm can be bestowed by a {@creature chwinga|ToA} living in Icewind Dale or other cold regions by using their Magical Gift action.}",
 				"This charm has 3 charges. As an action, you can expend 1 of the charm's charges to cast the {@spell 李欧蒙小屋} spell, no components required. Once all its charges have been expended, this charm vanishes from you."
+			]
+		},
+		{
+			"name": "Charm of the Water Bearer",
+			"source": "CM",
+			"type": "Charm",
+			"entries": [
+				"{@note This charm can be bestowed by a {@creature chwinga|CM} living a desert by using their Magical Gift action.}",
+				"This charm allows you to create up to 1 gallon of fresh water, which fills one or more empty containers in your possession. You can do this up to thrice per day for 10 days, after which this charm vanishes from you."
 			]
 		},
 		{
@@ -698,7 +717,7 @@
 			"page": 193,
 			"type": "Charm",
 			"entries": [
-				"Yrrga's gift is the power of true seeing. This dark gift grants its beneficiary the benefits of truesight out to a range of 60 feet. These benefits last for 30 days, after which the dark gift vanishes.",
+				"Yrrga's gift is the power of true seeing. This dark gift grants its beneficiary the benefits of {@sense truesight} out to a range of 60 feet. These benefits last for 30 days, after which the dark gift vanishes.",
 				"The eyes of the beneficiary become starry voids until the dark gift vanishes. The beneficiary of this dark gift also gains the following flaw: \"I believe that all life is pointless and look forward to death when it finally comes.\""
 			]
 		},
@@ -916,7 +935,7 @@
 						{
 							"type": "item",
 							"name": "Power:",
-							"entry": "The host can use an action to turn invisible. Anything the host is wearing or carrying is invisible as long as it is on the host's person. The effect ends if the host attacks, casts a spell, forces a saving throw, or deals damage."
+							"entry": "The host can use an action to turn {@condition invisible}. Anything the host is wearing or carrying is {@condition invisible} as long as it is on the host's person. The effect ends if the host attacks, casts a spell, forces a saving throw, or deals damage."
 						}
 					]
 				}
@@ -1119,7 +1138,7 @@
 						{
 							"type": "item",
 							"name": "Power:",
-							"entry": "The host can make one extra attack when taking the Attack action on its turn."
+							"entry": "The host can make one extra attack when taking the {@action Attack} action on its turn."
 						}
 					]
 				}
@@ -1267,7 +1286,7 @@
 						{
 							"type": "item",
 							"name": "Power:",
-							"entry": "The host can use an action to unleash a psionic assault on a creature it can see within 60 feet of it. The target must succeed on a DC 16 Wisdom saving throw or be stunned until the end of the target's next turn."
+							"entry": "The host can use an action to unleash a psionic assault on a creature it can see within 60 feet of it. The target must succeed on a DC 16 Wisdom saving throw or be {@condition stunned} until the end of the target's next turn."
 						}
 					]
 				}
@@ -1305,7 +1324,7 @@
 					"type": "entries",
 					"name": "Poison Immunity",
 					"entries": [
-						"You are immune to poison damage and the poisoned condition."
+						"You are immune to poison damage and the {@condition poisoned} condition."
 					]
 				}
 			]

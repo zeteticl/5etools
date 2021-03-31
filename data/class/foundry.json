@@ -243,50 +243,7 @@
 			"className": "Artificer",
 			"classSource": "TCE",
 			"level": 2,
-			"entries": [
-				{
-					"type": "options",
-					"count": 4,
-					"entries": [
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Armor of Magical Strength|TCE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Enhanced Arcane Focus|TCE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Enhanced Defense|TCE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Enhanced Weapon|TCE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Homunculus Servant|TCE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Mind Sharpener|TCE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Repeating Shot|TCE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Replicate Magic Item|TCE"
-						},
-						{
-							"type": "refOptionalfeature",
-							"optionalfeature": "Returning Weapon|TCE"
-						}
-					]
-				}
-			]
+			"isIgnored": true
 		},
 		{
 			"name": "Eldritch Invocations",
@@ -2782,6 +2739,676 @@
 				"range.value": 30,
 				"range.units": "ft"
 			}
+		},
+		{
+			"name": "Unleash Incarnation",
+			"source": "EGW",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Echo Knight",
+			"subclassSource": "EGW",
+			"level": 3,
+			"data": {
+				"activation.type": "special",
+				"activation.condition": "Whenever you take the Attack action",
+				"activation.cost": 1
+			}
+		},
+		{
+			"name": "Additional Arcane Shot Option",
+			"source": "XGE",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Arcane Archer",
+			"subclassSource": "XGE",
+			"level": 7,
+			"entries": [
+				{
+					"type": "options",
+					"count": 2,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Banishing Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Beguiling Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Bursting Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Enfeebling Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Grasping Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Piercing Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Seeking Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Shadow Arrow|XGE"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Additional Arcane Shot Option",
+			"source": "XGE",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Arcane Archer",
+			"subclassSource": "XGE",
+			"level": 10,
+			"entries": [
+				{
+					"type": "options",
+					"count": 2,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Banishing Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Beguiling Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Bursting Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Enfeebling Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Grasping Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Piercing Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Seeking Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Shadow Arrow|XGE"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Additional Arcane Shot Option",
+			"source": "XGE",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Arcane Archer",
+			"subclassSource": "XGE",
+			"level": 15,
+			"entries": [
+				{
+					"type": "options",
+					"count": 2,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Banishing Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Beguiling Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Bursting Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Enfeebling Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Grasping Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Piercing Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Seeking Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Shadow Arrow|XGE"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Additional Arcane Shot Option",
+			"source": "XGE",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Arcane Archer",
+			"subclassSource": "XGE",
+			"level": 18,
+			"entries": [
+				{
+					"type": "options",
+					"count": 2,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Banishing Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Beguiling Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Bursting Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Enfeebling Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Grasping Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Piercing Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Seeking Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Shadow Arrow|XGE"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Rune Carver",
+			"source": "TCE",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Rune Knight",
+			"subclassSource": "TCE",
+			"level": 3,
+			"entries": [
+				"{@i 3rd-level Rune Knight feature}",
+				"You can use magic runes to enhance your gear. You learn two runes of your choice, from among the runes described below, and each time you gain a level in this class, you can replace one rune you know with a different one from this feature. When you reach certain levels in this class, you learn additional runes, as shown in the Runes Known table.",
+				"Whenever you finish a long rest, you can touch a number of objects equal to the number of runes you know, and you inscribe a different rune onto each of the objects. To be eligible, an object must be a weapon, a suit of armor, a shield, a piece of jewelry, or something else you can wear or hold in a hand. Your rune remains on an object until you finish a long rest, and an object can bear only one of your runes at a time.",
+				{
+					"type": "table",
+					"caption": "Runes Known",
+					"colLabels": [
+						"Fighter Level",
+						"Number of Runes"
+					],
+					"colStyles": [
+						"col-6 text-center",
+						"col-6 text-center"
+					],
+					"rows": [
+						[
+							"3rd",
+							"2"
+						],
+						[
+							"7th",
+							"3"
+						],
+						[
+							"10th",
+							"4"
+						],
+						[
+							"15th",
+							"5"
+						]
+					]
+				},
+				"The following runes are available to you when you learn a rune. If a rune has a level requirement, you must be at least that level in this class to learn the rune. If a rune requires a saving throw, your Rune Magic save DC equals 8 + your proficiency bonus + your Constitution modifier.",
+				{
+					"type": "options",
+					"count": 2,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Cloud Rune|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Fire Rune|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Frost Rune|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Stone Rune|TCE"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Additional Rune Known",
+			"source": "TCE",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Rune Knight",
+			"subclassSource": "TCE",
+			"level": 7,
+			"entries": [
+				{
+					"type": "options",
+					"count": 1,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Cloud Rune|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Fire Rune|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Frost Rune|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Stone Rune|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Hill Rune|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Storm Rune|TCE"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Additional Rune Known",
+			"source": "TCE",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Rune Knight",
+			"subclassSource": "TCE",
+			"level": 10,
+			"entries": [
+				{
+					"type": "options",
+					"count": 1,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Cloud Rune|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Fire Rune|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Frost Rune|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Stone Rune|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Hill Rune|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Storm Rune|TCE"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Additional Rune Known",
+			"source": "TCE",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Rune Knight",
+			"subclassSource": "TCE",
+			"level": 15,
+			"entries": [
+				{
+					"type": "options",
+					"count": 1,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Cloud Rune|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Fire Rune|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Frost Rune|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Stone Rune|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Hill Rune|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Storm Rune|TCE"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Extra Elemental Discipline",
+			"source": "PHB",
+			"className": "Monk",
+			"classSource": "PHB",
+			"subclassShortName": "Four Elements",
+			"subclassSource": "PHB",
+			"level": 6,
+			"entries": [
+				{
+					"type": "options",
+					"count": 1,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Breath of Winter",
+							"name": "Breath of Winter (17th Level Required)"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Clench of the North Wind",
+							"name": "Clench of the North Wind (6th Level Required)"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Eternal Mountain Defense",
+							"name": "Eternal Mountain Defense (17th Level Required)"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Fangs of the Fire Snake"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Fist of Four Thunders"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Unbroken Air"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Flames of the Phoenix",
+							"name": "Flames of the Phoenix (11th Level Required)"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Gong of the Summit",
+							"name": "Gong of the Summit (6th Level Required)"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Mist Stance",
+							"name": "Mist Stance (11th Level Required)"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Ride the Wind",
+							"name": "Ride the Wind (11th Level Required)"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "River of Hungry Flame",
+							"name": "River of Hungry Flame (17th Level Required)"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Rush of the Gale Spirits"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Shape the Flowing River"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Sweeping Cinder Strike"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Water Whip"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Wave of Rolling Earth",
+							"name": "Wave of Rolling Earth (17th Level Required)"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Extra Elemental Discipline",
+			"source": "PHB",
+			"className": "Monk",
+			"classSource": "PHB",
+			"subclassShortName": "Four Elements",
+			"subclassSource": "PHB",
+			"level": 11,
+			"entries": [
+				{
+					"type": "options",
+					"count": 1,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Breath of Winter",
+							"name": "Breath of Winter (17th Level Required)"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Clench of the North Wind",
+							"name": "Clench of the North Wind (6th Level Required)"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Eternal Mountain Defense",
+							"name": "Eternal Mountain Defense (17th Level Required)"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Fangs of the Fire Snake"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Fist of Four Thunders"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Unbroken Air"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Flames of the Phoenix",
+							"name": "Flames of the Phoenix (11th Level Required)"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Gong of the Summit",
+							"name": "Gong of the Summit (6th Level Required)"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Mist Stance",
+							"name": "Mist Stance (11th Level Required)"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Ride the Wind",
+							"name": "Ride the Wind (11th Level Required)"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "River of Hungry Flame",
+							"name": "River of Hungry Flame (17th Level Required)"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Rush of the Gale Spirits"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Shape the Flowing River"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Sweeping Cinder Strike"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Water Whip"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Wave of Rolling Earth",
+							"name": "Wave of Rolling Earth (17th Level Required)"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Extra Elemental Discipline",
+			"source": "PHB",
+			"className": "Monk",
+			"classSource": "PHB",
+			"subclassShortName": "Four Elements",
+			"subclassSource": "PHB",
+			"level": 17,
+			"entries": [
+				{
+					"type": "options",
+					"count": 1,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Breath of Winter",
+							"name": "Breath of Winter (17th Level Required)"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Clench of the North Wind",
+							"name": "Clench of the North Wind (6th Level Required)"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Eternal Mountain Defense",
+							"name": "Eternal Mountain Defense (17th Level Required)"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Fangs of the Fire Snake"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Fist of Four Thunders"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Unbroken Air"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Flames of the Phoenix",
+							"name": "Flames of the Phoenix (11th Level Required)"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Gong of the Summit",
+							"name": "Gong of the Summit (6th Level Required)"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Mist Stance",
+							"name": "Mist Stance (11th Level Required)"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Ride the Wind",
+							"name": "Ride the Wind (11th Level Required)"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "River of Hungry Flame",
+							"name": "River of Hungry Flame (17th Level Required)"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Rush of the Gale Spirits"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Shape the Flowing River"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Sweeping Cinder Strike"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Water Whip"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Wave of Rolling Earth",
+							"name": "Wave of Rolling Earth (17th Level Required)"
+						}
+					]
+				}
+			]
 		}
 	]
 }

@@ -274,7 +274,7 @@ class EncounterBuilder extends ProxyBase {
 		if (this._cache == null) {
 			this._cache = (() => {
 				const out = {};
-				list.visibleItems.map(it => monsters[it.ix]).filter(m => !m.isNpc).forEach(m => {
+				bestiaryPage._list.visibleItems.map(it => bestiaryPage._dataList[it.ix]).filter(m => !m.isNpc).forEach(m => {
 					const mXp = Parser.crToXpNumber(m.cr);
 					if (mXp) (out[mXp] = out[mXp] || []).push(m);
 				});
@@ -664,7 +664,7 @@ class EncounterBuilder extends ProxyBase {
 		await this._lock.pLock();
 
 		try {
-			const mon = monsters[ix];
+			const mon = bestiaryPage._dataList[ix];
 			const xp = Parser.crToXpNumber(mon.cr);
 			if (!xp) return; // if Unknown/etc
 
@@ -911,7 +911,7 @@ class EncounterBuilder extends ProxyBase {
 	}
 
 	static async doStatblockMouseOver (evt, ele, ixMon, scaledTo) {
-		const mon = monsters[ixMon];
+		const mon = bestiaryPage._dataList[ixMon];
 
 		const hash = UrlUtil.autoEncodeHash(mon);
 		const preloadId = scaledTo != null ? `${VeCt.HASH_SCALED}:${scaledTo}` : null;
@@ -938,7 +938,7 @@ class EncounterBuilder extends ProxyBase {
 		// We'll rebuild the mouseover handler with whatever we load
 		$ele.off("mouseover");
 
-		const mon = monsters[ixMon];
+		const mon = bestiaryPage._dataList[ixMon];
 
 		const handleNoImages = () => {
 			const hoverMeta = Renderer.hover.getMakePredefinedHover(
@@ -990,7 +990,7 @@ class EncounterBuilder extends ProxyBase {
 		if (!$iptCr) return; // Should never occur, but if the creature has a non-adjustable CR, this field will not exist
 
 		try {
-			const mon = monsters[ixMon];
+			const mon = bestiaryPage._dataList[ixMon];
 			const baseCr = mon.cr.cr || mon.cr;
 			if (baseCr == null) return;
 			const baseCrNum = Parser.crToNumber(baseCr);

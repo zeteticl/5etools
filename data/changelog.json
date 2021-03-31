@@ -1582,5 +1582,39 @@
 		"ver": "1.122.8",
 		"date": "2021-02-16",
 		"txt": "- (Fixed typos/added tags)"
+	},
+	{
+		"ver": "1.123.0",
+		"date": "2021-02-27",
+		"title": "Not Racis', Just Don't Like Custom Lineages",
+		"txt": "- Reworked Races page Ability Score filter, giving it unique logic which hopefully better matches user expectations. The old filter has been moved to the bottom of the filter window, and given a \"Legacy\" suffix (as it fulfills some use cases the new filter does not).\n- Added \"Forced Movement\" filter to Spells page \n- (Brew) Added Bestiary filter support for custom senses\n- (Brew) Added support for homebrew race spell sources (that is, spells which are gained by choosing a certain race), by using the `raceSpells` property on a race\n- (Brew) Fixed Omnisearch double-indexing rules\n- (Fixed typos/added tags)"
+	},
+	{
+		"ver": "1.124.0",
+		"date": "2021-03-12",
+		"title": "Folk Tales",
+		"titleAlt": "Me → 💀🍷 ← That Fey Shit",
+		"txt": "- Added UA 2021 Folk of the Feywild\n- Added rudimentary text indexing to list pages; this can be used by searching `text:<text>`. Note that this only searches the body text of entities, and so will not search creature types, spell durations, etc. (generally, anything covered by a filter will not be searchable as text, and vice versa).\n- Added \"Randomly Assign\" button to Statgen Roll and Standard Array tabs\n- Added Blacklist support for recipes\n- Added Sunlight Sensitivity filter to Races page\n- (Brew) Fixed custom image max sizing breaking layout\n- (Fixed typos/added tags)"
+	},
+	{
+		"ver": "1.124.1",
+		"date": "2021-03-14",
+		"txt": "- Statgen now allows your selected race to be previewed in-line\n- Tweaked caching to (hopefully) prevent \"page doesn't load\" issues\n- (Fixed typos/added tags)"
+	},
+	{
+		"ver": "1.125.0",
+		"date": "2021-03-17",
+		"title": "Keeping On",
+		"txt": "- Added Candlekeep Mysteries\n- (Homebrew) Fixed homebrew Legendary Groups failing to appear in Creature Builder\n- (Fixed typos/added tags)"
+	},
+	{
+		"ver": "1.125.1",
+		"date": "2021-03-20",
+		"txt": "- (Fixed typos/added tags)"
+	},
+	{
+		"ver": "1.125.2",
+		"date": "2021-03-28",
+		"txt": "- Added Base Item filter to Items page\n- Improved search tooltips to include new `text:<text>` info\n- Fixed Omnisearch and list page search failing to tolerate diacritics\n- Tweaked CR Calculator HP rounding to avoid missing steps\n- Fixed Statgen custom Point Buy scores disallowing negative costs\n- (Fixed typos/added tags)\n"
 	}
 ]

@@ -36,6 +36,24 @@ Shared UI components
 		transform: translateZ(0);
 		font-size: 11.2px;
 	}
+
+	&wrp-preview {
+		background: $rgb-bg-orange;
+		font-size: 90%;
+		border-top-left-radius: 5px;
+		margin-top: 1px;
+		margin-bottom: 4px;
+	}
+
+	&btn-inline {
+		cursor: pointer;
+		color: $rgb-font--muted;
+
+		&:hover {
+			background: darken($rgb-shadow-grey, 20%);
+			color: darken($rgb-font--muted, 25%);
+		}
+	}
 }
 /* endregion */
 
@@ -166,6 +184,11 @@ Shared UI components
 		min-width: 600px;
 		max-height: 400px;
 		min-height: 400px;
+		font-size: 14px;
+		background: $rgb-bg;
+		border: 1px solid $rgb-border-grey;
+		border-radius: 4px;
+		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
 
 		@media (max-width: 767px) {
 			min-width: 0;
@@ -406,6 +429,10 @@ Shared UI components
 		background: $rgb-bg;
 		border: 1px solid $rgb-border-grey--trans;
 		border-bottom: 0;
+
+		&--single {
+			border: 0;
+		}
 	}
 }
 /* endregion */
@@ -873,6 +900,7 @@ Shared UI components
 
 		&wrp-track {
 			padding-top: $sz-top-row-pad;
+			padding-bottom: 7px;
 		}
 
 		&track-outer {
@@ -888,11 +916,11 @@ Shared UI components
 		&disp-value {
 			width: 80px;
 			height: 26px;
-			margin-top: $sz-top-row-pad;
 			border-radius: 4px;
 
-			&--border {
+			&--visible {
 				border: 1px solid $rgb-border-grey;
+				background: $rgb-bg;
 			}
 
 			&--left {
@@ -907,7 +935,7 @@ Shared UI components
 		}
 
 		&wrp-bottom {
-			height: 60px; // Padded so our `absolute` elements have space
+			height: 3em; // Padded so our `absolute` elements have space
 		}
 
 		&wrp-pips {

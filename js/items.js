@@ -1,8 +1,16 @@
 "use strict";
 
-class ItemsPage {
+class ItemsPage extends ListPage {
 	constructor () {
-		this._pageFilter = new PageFilterItems();
+		super({
+			dataSource: Renderer.item.pBuildList({isAddGroups: true, isBlacklistVariants: true}),
+
+			pageFilter: new PageFilterItems(),
+
+			sublistClass: "subitems",
+
+			dataProps: ["item"],
+		})
 
 		this._sublistCurrencyConversion = null;
 		this._sublistCurrencyDisplayMode = null;
@@ -13,11 +21,6 @@ class ItemsPage {
 
 		this._mundaneList = null;
 		this._magicList = null;
-
-		this._itemList = [];
-		this._itI = 0;
-
-		this._subList = null;
 	}
 
 	getListItem (item, itI, isExcluded) {
@@ -96,12 +99,12 @@ class ItemsPage {
 	handleFilterChange () {
 		const f = this._pageFilter.filterBox.getValues();
 		function listFilter (li) {
-			const it = this._itemList[li.ix];
+			const it = this._dataList[li.ix];
 			return this._pageFilter.toDisplay(f, it);
 		}
 		this._mundaneList.filter(listFilter.bind(this));
 		this._magicList.filter(listFilter.bind(this));
-		FilterBox.selectFirstVisible(this._itemList);
+		FilterBox.selectFirstVisible(this._dataList);
 	}
 
 	getSublistItem (item, pinId, addCount) {
@@ -141,7 +144,7 @@ class ItemsPage {
 	doLoadHash (id) {
 		Renderer.get().setFirstSection(true);
 		const $content = $(`#pagecontent`).empty();
-		const item = this._itemList[id];
+		const item = this._dataList[id];
 
 		function buildStatsTab () {
 			$content.append(RenderItems.$getRenderedItem(item));
@@ -198,7 +201,7 @@ class ItemsPage {
 
 		const availConversions = new Set();
 		ListUtil.sublist.items.forEach(it => {
-			const item = this._itemList[it.ix];
+			const item = this._dataList[it.ix];
 			if (item.currencyConversion) availConversions.add(item.currencyConversion);
 			const count = it.values.count;
 			cntItems += it.values.count;
@@ -274,7 +277,7 @@ class ItemsPage {
 		await ExcludeUtil.pInitialise();
 		await this._pageFilter.pInitFilterBox({
 			$iptSearch: $(`#lst__search`),
-			$wrpFormTop: $(`#filter-search-group`).title("Hotkey: f"),
+			$wrpFormTop: $(`#filter-search-group`),
 			$btnReset: $(`#reset`),
 		});
 
@@ -285,10 +288,13 @@ class ItemsPage {
 		this._mundaneList = ListUtil.initList({
 			listClass: "mundane",
 			fnSort: PageFilterItems.sortItems,
+			syntax: this._listSyntax,
+			isBindFindHotkey: true,
 		});
 		this._magicList = ListUtil.initList({
 			listClass: "magic",
 			fnSort: PageFilterItems.sortItems,
+			syntax: this._listSyntax,
 		});
 		this._mundaneList.nextList = this._magicList;
 		this._magicList.prevList = this._mundaneList;
@@ -352,13 +358,13 @@ class ItemsPage {
 		SortUtil.initBtnSortHandlers($("#filtertools-mundane"), this._mundaneList);
 		SortUtil.initBtnSortHandlers($("#filtertools-magic"), this._magicList);
 
-		this._subList = ListUtil.initSublist({
+		this._listSub = ListUtil.initSublist({
 			listClass: "subitems",
 			fnSort: PageFilterItems.sortItems,
 			getSublistRow: itemsPage.getSublistItem.bind(itemsPage),
 			onUpdate: itemsPage.onSublistChange.bind(itemsPage),
 		});
-		SortUtil.initBtnSortHandlers($("#sublistsort"), this._subList);
+		SortUtil.initBtnSortHandlers($("#sublistsort"), this._listSub);
 		ListUtil.initGenericAddable();
 
 		this._addItems(data);
@@ -376,7 +382,7 @@ class ItemsPage {
 				ListUtil.bindShowTableButton(
 					"btn-show-table",
 					"Items",
-					this._itemList,
+					this._dataList,
 					{
 						name: {name: "Name", transform: true},
 						source: {name: "Source", transform: (it) => `<span class="${Parser.sourceJsonToColor(it)}" title="${Parser.sourceJsonToFull(it)}" ${BrewUtil.sourceJsonToStyle(it.source)}>${Parser.sourceJsonToAbv(it)}</span>`},
@@ -394,28 +400,28 @@ class ItemsPage {
 
 				this._mundaneList.init();
 				this._magicList.init();
-				this._subList.init();
+				this._listSub.init();
 
 				Hist.init(true);
-				ExcludeUtil.checkShowAllExcluded(this._itemList, $(`#pagecontent`));
+				ExcludeUtil.checkShowAllExcluded(this._dataList, $(`#pagecontent`));
 
 				window.dispatchEvent(new Event("toolsLoaded"));
 			});
 	}
 
 	async _pHandleBrew (homebrew) {
-		const itemList = await Renderer.item.getItemsFromHomebrew(homebrew);
+		const itemList = await Renderer.item.pGetItemsFromHomebrew(homebrew);
 		this._addItems({item: itemList});
 	}
 
 	_addItems (data) {
 		if (!data.item || !data.item.length) return;
 
-		this._itemList.push(...data.item);
+		this._dataList.push(...data.item);
 
-		for (; this._itI < this._itemList.length; this._itI++) {
-			const item = this._itemList[this._itI];
-			const listItem = itemsPage.getListItem(item, this._itI);
+		for (; this._ixData < this._dataList.length; this._ixData++) {
+			const item = this._dataList[this._ixData];
+			const listItem = itemsPage.getListItem(item, this._ixData);
 			if (!listItem) continue;
 			if (listItem.mundane) this._mundaneList.addItem(listItem.mundane);
 			if (listItem.magic) this._magicList.addItem(listItem.magic);
@@ -432,14 +438,14 @@ class ItemsPage {
 		itemsPage.handleFilterChange();
 
 		ListUtil.setOptions({
-			itemList: this._itemList,
+			itemList: this._dataList,
 			getSublistRow: itemsPage.getSublistItem.bind(itemsPage),
 			primaryLists: [this._mundaneList, this._magicList],
 		});
 		ListUtil.bindAddButton();
 		ListUtil.bindSubtractButton();
 		const $btnPop = ListUtil.getOrTabRightButton(`btn-popout`, `new-window`);
-		Renderer.hover.bindPopoutButton($btnPop, this._itemList);
+		Renderer.hover.bindPopoutButton($btnPop, this._dataList);
 		UrlUtil.bindLinkExportButton(itemsPage._pageFilter.filterBox);
 		ListUtil.bindOtherButtons({
 			download: true,

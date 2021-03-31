@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"version": "2.2.0",
+	"version": "2.4.0",
 	"$id": "class.json",
 
 	"type": "object",
@@ -132,7 +132,7 @@
 							{
 								"type": "string",
 								"enum": [
-									"light", "medium", "heavy", "shields"
+									"light", "medium", "heavy", "{@item shield|phb|shields}"
 								]
 							},
 							{
@@ -141,7 +141,7 @@
 									"proficiency": {
 										"type": "string",
 										"enum": [
-											"light", "medium", "heavy", "shields", "special"
+											"light", "medium", "heavy", "{@item shield|phb|shields}", "special"
 										]
 									},
 									"full": {
@@ -157,7 +157,20 @@
 				"weapons": {
 					"type": "array",
 					"items": {
-						"type": "string"
+						"oneOf": [
+							{
+								"type": "string"
+							},
+							{
+								"type": "object",
+								"properties": {
+									"proficiency": {"type": "string"},
+									"optional": {"type": "boolean"}
+								},
+								"additionalProperties": false,
+								"required": ["proficiency", "optional"]
+							}
+						]
 					}
 				},
 				"tools": {
@@ -167,10 +180,7 @@
 					}
 				},
 				"skills": {
-					"type": "array",
-					"items": {
-						"$ref": "util.json#/definitions/skillProficiencies"
-					}
+					"$ref": "util.json#/definitions/skillProficiencies"
 				}
 			}
 		},

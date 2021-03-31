@@ -234,11 +234,12 @@ class ItemParser extends BaseParser {
 				continue;
 			}
 
-			const mBaseWeapon = /^weapon \(([^)]+)\)$/i.exec(part);
+			const mBaseWeapon = /^(weapon|staff) \(([^)]+)\)$/i.exec(part);
 			const mBaseArmor = /^armor \(([^)]+)\)$/i.exec(part);
 			if (mBaseWeapon) {
-				baseItem = ItemParser.getItem(mBaseWeapon[1]);
-				if (!baseItem) throw new Error(`Could not find base item "${mBaseWeapon[1]}"`);
+				if (mBaseWeapon[1].toLowerCase() === "staff") stats.staff = true;
+				baseItem = ItemParser.getItem(mBaseWeapon[2]);
+				if (!baseItem) throw new Error(`Could not find base item "${mBaseWeapon[2]}"`);
 				continue;
 			} else if (mBaseArmor) {
 				baseItem = ItemParser.getItem(mBaseArmor[1]);

@@ -783,7 +783,9 @@ class BookUtil {
 
 	static getContentsSectionHeader (header) {
 		// handle entries with depth
-		return header.header ? `<span class="bk-contents__sub_spacer--1">\u2013</span>${header.header}` : header;
+		if (header.depth) return `<span class="bk-contents__sub_spacer--1">\u2013</span>${header.header}`;
+		if (header.header) return header.header;
+		return header;
 	}
 
 	static $getContentsChapterBlock (bookId, ixChapter, chapter, addPrefix) {
@@ -798,11 +800,14 @@ class BookUtil {
 			const headerPos = headerCounts[headerTextClean] || 0;
 			headerCounts[headerTextClean] = (headerCounts[headerTextClean] || 0) + 1;
 
+			// (Prefer the user-specified `h.index` over the auto-calculated headerPos)
+			const headerIndex = h.index ?? headerPos;
+
 			const displayText = this.getContentsSectionHeader(h);
 
-			const $lnk = $$`<a href="${addPrefix || ""}#${UrlUtil.encodeForHash(bookId)},${ixChapter},${UrlUtil.encodeForHash(headerText)}${headerPos > 0 ? `,${headerPos}` : ""}" data-book="${bookId}" data-chapter="${ixChapter}" data-header="${headerText.escapeQuotes()}" class="lst__row lst--border lst__row-inner lst__wrp-cells">${displayText}</a>`
+			const $lnk = $$`<a href="${addPrefix || ""}#${UrlUtil.encodeForHash(bookId)},${ixChapter},${UrlUtil.encodeForHash(headerText)}${headerIndex > 0 ? `,${headerIndex}` : ""}" data-book="${bookId}" data-chapter="${ixChapter}" data-header="${headerText.escapeQuotes()}" class="lst__row lst--border lst__row-inner lst__wrp-cells">${displayText}</a>`
 				.click(() => {
-					BookUtil.scrollClick(ixChapter, headerText, headerPos);
+					BookUtil.scrollClick(ixChapter, headerText, headerIndex);
 				});
 
 			const $ele = $$`<div class="flex-col">

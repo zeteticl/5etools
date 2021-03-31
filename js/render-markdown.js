@@ -435,10 +435,13 @@ class RendererMarkdown {
 		const damImmPart = mon.immune ? `\n>- **Damage Immunities** ${Parser.getFullImmRes(mon.immune)}` : "";
 		const condImmPart = mon.conditionImmune ? `\n>- **Condition Immunities** ${Parser.getFullCondImm(mon.conditionImmune, true)}` : "";
 
-		const traitArray = RendererMarkdown.monster.getOrderedTraits(mon, meta);
-		const traitsPart = traitArray && traitArray.length ? `\n${RendererMarkdown.monster._getRenderedSection(traitArray, 1, meta)}` : "";
+		const fnGetSpellTraits = RendererMarkdown.monster.getSpellcastingRenderedTraits.bind(RendererMarkdown.monster, meta);
+		const traitArray = Renderer.monster.getOrderedTraits(mon, {fnGetSpellTraits});
+		const actionArray = Renderer.monster.getOrderedActions(mon, {fnGetSpellTraits});
 
-		const actionsPart = mon.action ? `\n>### Actions\n${RendererMarkdown.monster._getRenderedSection(mon.action, 1, meta)}` : "";
+		const traitsPart = traitArray?.length ? `\n${RendererMarkdown.monster._getRenderedSection(traitArray, 1, meta)}` : "";
+
+		const actionsPart = actionArray?.length ? `\n>### Actions\n${RendererMarkdown.monster._getRenderedSection(actionArray, 1, meta)}` : "";
 		const bonusActionsPart = mon.bonus ? `\n>### Bonus Actions\n${RendererMarkdown.monster._getRenderedSection(mon.bonus, 1, meta)}` : "";
 		const reactionsPart = mon.reaction ? `\n>### Reactions\n${RendererMarkdown.monster._getRenderedSection(mon.reaction, 1, meta)}` : "";
 		const legendaryActionsPart = mon.legendary ? `\n>### Legendary Actions\n>${Renderer.monster.getLegendaryActionIntro(mon, RendererMarkdown.get())}\n>\n${RendererMarkdown.monster._getRenderedLegendarySection(mon.legendary, 1, meta)}` : "";
@@ -895,18 +898,12 @@ RendererMarkdown.monster = class {
 		return renderStack.join("");
 	}
 
-	static getOrderedTraits (mon, meta) {
-		let traits = mon.trait ? MiscUtil.copy(mon.trait) : null;
-		if (mon.spellcasting) traits = (traits || []).concat(RendererMarkdown.monster.getSpellcastingRenderedTraits(mon, meta));
-		if (traits) return traits.sort((a, b) => SortUtil.monTraitSort(a, b));
-	}
-
-	static getSpellcastingRenderedTraits (mon, meta) {
+	static getSpellcastingRenderedTraits (meta, mon, displayAsProp = "trait") {
 		const renderer = RendererMarkdown.get();
 		const out = [];
 		const cacheDepth = meta.depth;
 		meta.depth = 2;
-		mon.spellcasting.forEach(entry => {
+		(mon.spellcasting || []).filter(it => (it.displayAs || "trait") === displayAsProp).forEach(entry => {
 			entry.type = entry.type || "spellcasting";
 			const renderStack = [""];
 			renderer._recursiveRender(entry, renderStack, meta, {prefix: ">"});

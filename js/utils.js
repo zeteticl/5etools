@@ -7,7 +7,7 @@ if (IS_NODE) require("./parser.js");
 
 // in deployment, `IS_DEPLOYED = "<version number>";` should be set below.
 IS_DEPLOYED = undefined;
-VERSION_NUMBER = /* 5ETOOLS_VERSION__OPEN */"1.122.8"/* 5ETOOLS_VERSION__CLOSE */;
+VERSION_NUMBER = /* 5ETOOLS_VERSION__OPEN */"1.125.2"/* 5ETOOLS_VERSION__CLOSE */;
 DEPLOYED_STATIC_ROOT = ""; // "https://static.5etools.com/"; // FIXME re-enable this when we have a CDN again
 // for the roll20 script to set
 IS_VTT = false;
@@ -204,6 +204,13 @@ String.prototype.toChunks = String.prototype.toChunks || function (size) {
 	return chunks
 };
 
+String.prototype.toAscii = String.prototype.toAscii || function () {
+	return this
+		.normalize("NFD") // replace diacritics with their individual graphemes
+		.replace(/[\u0300-\u036f]/g, "") // remove accent graphemes
+		.replace(/Æ/g, "AE").replace(/æ/g, "ae");
+};
+
 Array.prototype.joinConjunct = Array.prototype.joinConjunct || function (joiner, lastJoiner, nonOxford) {
 	if (this.length === 0) return "";
 	if (this.length === 1) return this[0];
@@ -285,6 +292,7 @@ CleanUtil = {
 };
 CleanUtil.SHARED_REPLACEMENTS = {
 	"’": "'",
+	"": "'",
 	"…": "...",
 	" ": " ", // non-breaking space
 	"ﬀ": "ff",
@@ -328,6 +336,9 @@ SourceUtil = {
 		const fromLookup = MiscUtil.get(SourceUtil._subclassReprintLookup, classSource, className, subclassSource, subclassShortName);
 		return fromLookup ? fromLookup.isReprinted : false;
 	},
+
+	/** I.e., not homebrew. */
+	isSiteSource (source) { return !!Parser.SOURCE_JSON_TO_FULL[source]; },
 
 	isAdventure (source) {
 		if (source instanceof FilterItem) source = source.item;
@@ -723,9 +734,9 @@ ElementUtil = {
 		if (mousedown) ele.addEventListener("mousedown", mousedown);
 		if (mouseup) ele.addEventListener("mouseup", mouseup);
 		if (mousemove) ele.addEventListener("mousemove", mousemove);
-		if (html) ele.innerHTML = html;
-		if (text) ele.innerHTML = `${text}`.qq();
-		if (title) ele.setAttribute("title", title);
+		if (html != null) ele.innerHTML = html;
+		if (text != null) ele.innerHTML = `${text}`.qq();
+		if (title != null) ele.setAttribute("title", title);
 		if (children) for (let i = 0, len = children.length; i < len; ++i) ele.append(children[i]);
 
 		ele.appends = ele.appends || ElementUtil._appends.bind(ele);
@@ -2197,9 +2208,11 @@ DataUtil = {
 				await Promise.all(Object.entries(data._meta.dependencies).map(async ([dataProp, sourceIds]) => {
 					if (!data[dataProp]) return; // if e.g. monster dependencies are declared, but there are no monsters to merge with, bail out
 
+					const isHasInternalCopies = (data._meta.internalCopies || []).includes(dataProp);
+
 					const dependencyData = await Promise.all(sourceIds.map(sourceId => DataUtil.pLoadByMeta(dataProp, sourceId)));
 					const flatDependencyData = dependencyData.map(dd => dd[dataProp]).flat();
-					await Promise.all(data[dataProp].map(entry => DataUtil._pDoMetaMerge_handleCopyProp(dataProp, flatDependencyData, entry, options)));
+					await Promise.all(data[dataProp].map(entry => DataUtil._pDoMetaMerge_handleCopyProp(dataProp, flatDependencyData, entry, {...options, isErrorOnMissing: !isHasInternalCopies})));
 				}));
 				delete data._meta.dependencies;
 			}
@@ -2208,7 +2221,7 @@ DataUtil = {
 				for (const prop of data._meta.internalCopies) {
 					if (!data[prop]) continue;
 					for (const entry of data[prop]) {
-						await DataUtil._pDoMetaMerge_handleCopyProp(prop, data[prop], entry, options);
+						await DataUtil._pDoMetaMerge_handleCopyProp(prop, data[prop], entry, {...options, isErrorOnMissing: true});
 					}
 				}
 				delete data._meta.internalCopies;
@@ -2308,21 +2321,21 @@ DataUtil = {
 		}
 	},
 
-	async pLoadByMeta (key, value) {
+	async pLoadByMeta (prop, source) {
 		// TODO(future) allow value to be e.g. a string (assumed to be an official data's source); an object e.g. `{type: external, url: <>}`,...
 		// TODO(future) expand support
 
-		switch (key) {
+		switch (prop) {
 			// region Multi-source
 			case "monster":
 			case "spell":
 			case "monsterFluff":
 			case "spellFluff": {
-				const baseUrlPart = `${Renderer.get().baseUrl}data/${(key === "monster" || key === "monsterFluff") ? "bestiary" : "spells"}`;
-				const index = await DataUtil.loadJSON(`${baseUrlPart}/${key === "monster" || key === "spell" ? "index.json" : "fluff-index.json"}`);
-				if (index[value]) return DataUtil.loadJSON(`${baseUrlPart}/${index[value]}`);
+				const baseUrlPart = `${Renderer.get().baseUrl}data/${(prop === "monster" || prop === "monsterFluff") ? "bestiary" : "spells"}`;
+				const index = await DataUtil.loadJSON(`${baseUrlPart}/${prop === "monster" || prop === "spell" ? "index.json" : "fluff-index.json"}`);
+				if (index[source]) return DataUtil.loadJSON(`${baseUrlPart}/${index[source]}`);
 
-				return DataUtil._pLoadByMeta_pGetFromBrew(key, value);
+				return DataUtil._pLoadBrewBySource(source);
 			}
 			// endregion
 
@@ -2332,15 +2345,15 @@ DataUtil = {
 			case "background":
 			case "raceFluff": {
 				let url;
-				switch (key) {
+				switch (prop) {
 					case "background": url = `${Renderer.get().baseUrl}data/backgrounds.json`; break;
 					case "raceFluff": url = `${Renderer.get().baseUrl}data/fluff-races.json`; break;
 				}
 
 				const data = await DataUtil.loadJSON(url);
-				if (data[key] && data[key].some(it => it.source === value)) return data;
+				if (data[prop] && data[prop].some(it => it.source === source)) return data;
 
-				return DataUtil._pLoadByMeta_pGetFromBrew(key, value);
+				return DataUtil._pLoadBrewBySource(source);
 			}
 			// endregion
 
@@ -2348,20 +2361,20 @@ DataUtil = {
 			// case "item":
 			case "race": {
 				const data = await DataUtil.race.loadJSON({isAddBaseRaces: true});
-				if (data[key] && data[key].some(it => it.source === value)) return data;
-				return DataUtil._pLoadByMeta_pGetFromBrew(key, value);
+				if (data[prop] && data[prop].some(it => it.source === source)) return data;
+				return DataUtil._pLoadBrewBySource(source);
 			}
 			// endregion
 
-			default: throw new Error(`Could not get loadable URL for \`${JSON.stringify({key, value})}\``);
+			default: throw new Error(`Could not get loadable URL for \`${JSON.stringify({key: prop, value: source})}\``);
 		}
 	},
 
-	async _pLoadByMeta_pGetFromBrew (key, value) {
+	async _pLoadBrewBySource (source) {
 		const brewIndex = await DataUtil.brew.pLoadSourceIndex();
-		if (!brewIndex[value]) throw new Error(`Neither base nor brew index contained source "${value}"`);
+		if (!brewIndex[source]) throw new Error(`Neither base nor brew index contained source "${source}"`);
 		const urlRoot = await StorageUtil.pGet(`HOMEBREW_CUSTOM_REPO_URL`);
-		const brewUrl = DataUtil.brew.getFileUrl(brewIndex[value], urlRoot);
+		const brewUrl = DataUtil.brew.getFileUrl(brewIndex[source], urlRoot);
 		await BrewUtil.pDoHandleBrewJson((await DataUtil.loadJSON(brewUrl)), UrlUtil.getCurrentPage());
 		return DataUtil.loadJSON(brewUrl);
 	},
@@ -2401,7 +2414,15 @@ DataUtil = {
 			if (entry._copy) {
 				const hash = UrlUtil.URL_TO_HASH_BUILDER[page](entry._copy);
 				const it = impl._mergeCache[hash] || DataUtil.generic._pMergeCopy_search(impl, page, entryList, entry, options);
-				if (!it) return;
+
+				if (!it) {
+					if (options.isErrorOnMissing) {
+						// In development/script mode, throw an exception
+						if (!IS_DEPLOYED && !IS_VTT) throw new Error(`Could not find ${page} entity ${entry._copy.name} (${entry._copy.source}) to copy in copier ${entry.name} (${entry.source})`);
+					}
+					return;
+				}
+
 				if (DataUtil.dbg.isTrackCopied) it.dbg_isCopied = true;
 				// Handle recursive copy
 				if (it._copy) await DataUtil.generic._pMergeCopy(impl, page, entryList, it, options);
@@ -2414,20 +2435,15 @@ DataUtil = {
 			return entryList.find(it => {
 				const hash = UrlUtil.URL_TO_HASH_BUILDER[page](it);
 				impl._mergeCache[hash] = it;
-				if (hash === entryHash)
-				{
+				if (hash === entryHash) {
 					return true;
-				}
-				else if (it.ENG_name != undefined) // for ENG_name
-				{
-					var it2 = Object.assign({}, it);
+				} else if (it.ENG_name !== undefined) {
+					const it2 = Object.assign({}, it);
 					it2.name = it.ENG_name;
 					const eng_hash = UrlUtil.URL_TO_HASH_BUILDER[page](it2);
 					impl._mergeCache[eng_hash] = it;
 					return eng_hash === entryHash;
-				}
-				else
-				{
+				} else {
 					return false;
 				}
 			});
@@ -2471,9 +2487,9 @@ DataUtil = {
 
 			const copyToRootProps = new Set(Object.keys(copyTo));
 
-			if(!copyFrom){
+			if (!copyFrom) {
 				console.warn("not found", copyTo._copy);
-				return ;
+				return;
 			}
 			// copy over required values
 			Object.keys(copyFrom).forEach(k => {
@@ -2549,8 +2565,7 @@ DataUtil = {
 				if (!copyTo[prop]) return copyTo[prop] = modInfo.items;
 				// 	copyTo[prop] = copyTo[prop].concat(modInfo.items.filter(it => !copyTo[prop].some(x => CollectionUtil.deepEquals(it, x)))); 不懂原本的写法为什么会一直显示错误...
 				copyTo[prop] = copyTo[prop].concat(modInfo.items.filter(it => {
-					for (var x in copyTo[prop])
-					{
+					for (let x in copyTo[prop]) {
 						if (CollectionUtil.deepEquals(it, x)) return false;
 					}
 					return true;
@@ -2579,8 +2594,8 @@ DataUtil = {
 					copyTo[prop].splice(ixOld, 1, ...modInfo.items);
 					return true;
 				} else if (isThrow) {
-					console.warn("cannot find "+prop+" item with name "+modInfo.replace+" to replace");
-					//throw new Error(`Could not find "${prop}" item with name "${modInfo.replace}" to replace`);
+					console.warn(`Could not find "${prop}" item with name "${modInfo.replace}" to replace`);
+					// throw new Error(`Could not find "${prop}" item with name "${modInfo.replace}" to replace`);
 				}
 				return false;
 			}
@@ -2603,8 +2618,7 @@ DataUtil = {
 						const ixOld = copyTo[prop].findIndex(it => it.name === nameToRemove || it.ENG_name === nameToRemove);
 						if (~ixOld) copyTo[prop].splice(ixOld, 1);
 						else {
-							if (!modInfo.force)
-							{
+							if (!modInfo.force) {
 								throw new Error(`Could not find "${prop}" item with name "${nameToRemove}" to remove`);
 							}
 						}
@@ -2964,8 +2978,7 @@ DataUtil = {
 		populateMetaReference (data) {
 			(data.legendaryGroup || []).forEach(it => {
 				(DataUtil.monster.metaGroupMap[it.source] =
-					DataUtil.monster.metaGroupMap[it.source] || {})[it.name] =
-					DataUtil.monster.metaGroupMap[it.source][it.name] || it;
+					DataUtil.monster.metaGroupMap[it.source] || {})[it.name] = it;
 			});
 		},
 	},
@@ -4220,7 +4233,13 @@ BrewUtil = {
 
 		list.init();
 
-		$btnAll.prop("disabled", false).click(() => list.visibleItems.filter(it => !it.data.isSample).forEach(it => it.data.$btnAdd.click()));
+		$btnAll
+			.prop("disabled", false)
+			.click(async () => {
+				const toAdd = list.visibleItems.filter(it => !it.data.isSample);
+				if (toAdd.length > 10 && !await InputUiUtil.pGetUserBoolean({title: "Are you sure?", htmlDescription: `<div>You area about to load ${toAdd.length} homebrew files.<br>Loading large quantities of homebrew can lead to performance and stability issues.</div>`, textYes: "Continue"})) return;
+				toAdd.forEach(it => it.data.$btnAdd.click());
+			});
 
 		if ($btnToggleDisplayNonPageBrews) {
 			$btnToggleDisplayNonPageBrews
@@ -5127,6 +5146,7 @@ BrewUtil = {
 			// Run these in serial, to prevent any ID race condition antics
 			for (const IX_DEF of INDEX_DEFINITIONS) {
 				for (const arbiter of IX_DEF) {
+					if (arbiter.isSkipBrew) continue;
 					if (!(BrewUtil.homebrew[arbiter.brewProp || arbiter.listProp] || []).length) continue;
 
 					if (arbiter.pFnPreProcBrew) {
@@ -5520,11 +5540,17 @@ Array.prototype.mergeMap = Array.prototype.mergeMap || function (fnMap) {
 	return this.map((...args) => fnMap(...args)).reduce((a, b) => Object.assign(a, b), {});
 };
 
+Array.prototype.first = Array.prototype.first || function (fnMapFind) {
+	for (let i = 0, len = this.length; i < len; ++i) {
+		const result = fnMapFind(this[i], i, this);
+		if (result) return result;
+	}
+};
+
 /** Map each item via an async function, awaiting for each to complete before starting the next. */
 Array.prototype.pSerialAwaitMap = Array.prototype.pSerialAwaitMap || async function (fnMap) {
 	const out = [];
-	const len = this.length;
-	for (let i = 0; i < len; ++i) out.push(await fnMap(this[i], i));
+	for (let i = 0, len = this.length; i < len; ++i) out.push(await fnMap(this[i], i, this));
 	return out;
 };
 

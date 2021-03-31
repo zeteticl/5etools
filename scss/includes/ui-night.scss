@@ -5,10 +5,27 @@ Shared UI components
 @import 'vars';
 
 /* region Misc/Shared */
-.ui__ {
+.night-mode .ui__ {
 	&ipt-color {
 		&::-webkit-color-swatch {
 			border: 0;
+		}
+	}
+}
+/* endregion */
+
+/* region List */
+.night-mode .ui-list__ {
+	&wrp-preview {
+		background: $rgb-bg--night;
+	}
+
+	&btn-inline {
+		color: $rgb-font--night;
+
+		&:hover {
+			color: lighten($rgb-font--night, 10%);
+			background: #ffffff30;
 		}
 	}
 }
@@ -42,8 +59,14 @@ Shared UI components
 		border-color: $rgb-border-grey--night;
 	}
 
-	&inner--mode-fullscreen {
-		box-shadow: none;
+	&inner {
+		background: $rgb-bg--night;
+		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.56);
+		border-color: $rgb-border-grey--trans-night;
+
+		&--mode-fullscreen {
+			box-shadow: none;
+		}
 	}
 
 	&row--cb:hover {
@@ -272,8 +295,9 @@ Shared UI components
 		}
 
 		&disp-value {
-			&--border {
+			&--visible {
 				border-color: $rgb-border-grey--night;
+				background: $rgb-bg--night;
 			}
 		}
 
