@@ -765,29 +765,33 @@
 					]
 				},
 				{
-					"name": "Psi Warrior",
-					"shortName": "Psi Warrior",
+					"name": "灵能武士",
+					"ENG_name": "Psi Warrior",
+					"shortName": "灵能武士",
+					"ENG_shortName": "Psi Warrior",
 					"source": "TCE",
 					"page": 42,
 					"subclassFeatures": [
-						"Psi Warrior|Fighter||Psi Warrior|TCE|3",
-						"Telekinetic Adept|Fighter||Psi Warrior|TCE|7",
-						"Guarded Mind|Fighter||Psi Warrior|TCE|10",
-						"Bulwark of Force|Fighter||Psi Warrior|TCE|15",
-						"Telekinetic Master|Fighter||Psi Warrior|TCE|18"
+						"灵能武士|Fighter||Psi Warrior|TCE|3",
+						"念力擅长|Fighter||Psi Warrior|TCE|7",
+						"意念守护|Fighter||Psi Warrior|TCE|10",
+						"壁垒之力|Fighter||Psi Warrior|TCE|15",
+						"念力宗师|Fighter||Psi Warrior|TCE|18"
 					]
 				},
 				{
-					"name": "Rune Knight",
-					"shortName": "Rune Knight",
+					"name": "符文骑士",
+					"ENG_name": "Rune Knight",
+					"shortName": "符文骑士",
+					"ENG_shortName": "Rune Knight",
 					"source": "TCE",
 					"page": 44,
 					"subclassFeatures": [
-						"Rune Knight|Fighter||Rune Knight|TCE|3",
-						"Runic Shield|Fighter||Rune Knight|TCE|7",
-						"Great Stature|Fighter||Rune Knight|TCE|10",
-						"Master of Runes|Fighter||Rune Knight|TCE|15",
-						"Runic Juggernaut|Fighter||Rune Knight|TCE|18"
+						"符文骑士|Fighter||Rune Knight|TCE|3",
+						"符文之盾|Fighter||Rune Knight|TCE|7",
+						"奇伟身躯|Fighter||Rune Knight|TCE|10",
+						"符文大师|Fighter||Rune Knight|TCE|15",
+						"符文主宰|Fighter||Rune Knight|TCE|18"
 					]
 				}
 			],
@@ -2585,7 +2589,8 @@
 			]
 		},
 		{
-			"name": "Psi Warrior",
+			"name": "灵能武士",
+			"ENG_name": "Psi Warrior",
 			"source": "TCE",
 			"page": 42,
 			"className": "Fighter",
@@ -2594,16 +2599,17 @@
 			"subclassSource": "TCE",
 			"level": 3,
 			"entries": [
-				"Awake to the psionic power within, a Psi Warrior is a fighter who augments their physical might with psi-infused weapon strikes, telekinetic lashes, and barriers of mental force. Many githyanki train to become such warriors, as do some of the most disciplined high elves. In the world of Eberron, many young kalashtar dream of becoming Psi Warriors.",
-				"As a Psi Warrior, you might have honed your psionic abilities through solo discipline, unlocked it under the tutelage of a master, or refined it at an academy dedicated to wielding the mind's power as both weapon and shield.",
+				"觉醒了内在心灵力量的灵能战士使用灌注灵能力量的武器攻击、念力鞭挞和灵能屏障来强化自己肉体力量的战士。很多吉斯洋基人受训成为这样的战士，一些极度自律的高等精灵也会这么做。在艾伯伦的世界中，许多年轻的离梦人（kalashtar）梦想着成为灵能武士。",
+				"作为一个灵能武士，你必须通过极度的自律来磨砺灵能力量，在一个大师的指导下觉醒，或在一个学院中精进对于灵能粉尘化为武器或盾牌力量的掌握。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Psionic Power|Fighter||Psi Warrior|TCE|3"
+					"subclassFeature": "灵能力量|Fighter||Psi Warrior|TCE|3"
 				}
 			]
 		},
 		{
-			"name": "Psionic Power",
+			"name": "灵能力量",
+			"ENG_name": "Psionic Power",
 			"source": "TCE",
 			"page": 42,
 			"className": "Fighter",
@@ -2613,33 +2619,34 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"{@i 3rd-level Psi Warrior feature}",
-				"You harbor a wellspring of psionic energy within yourself. This energy is represented by your Psionic Energy dice, which are each a {@dice d6}. You have a number of these dice equal to twice your proficiency bonus, and they fuel various psionic powers you have, which are detailed below.",
-				"Some of your powers expend the Psionic Energy die they use, as specified in a power's description, and you can't use a power if it requires you to use a die when your dice are all expended. You regain all your expended Psionic Energy dice when you finish a long rest. In addition, as a bonus action, you can regain one expended Psionic Energy die, but you can't do so again until you finish a short or long rest.",
-				"When you reach certain levels in this class, the size of your Psionic Energy dice increases: at 5th level ({@dice d8}), 11th level ({@dice d10}), and 17th level ({@dice d12}).",
-				"The powers below use your Psionic Energy dice.",
+				"{@i 3级灵能武士特性}",
+				"你内心拥有一个灵能力量的源泉。这股能量表现为每个{@dice d6}的灵能骰。你拥有两倍熟练加值的灵能骰数量，且它们为你所拥有的各种心灵异能提供能量，详情如下。",
+				"你在使用一些能力时需要消耗灵能骰，如异能描述中所述，如果一些异能在你的灵能骰全部掷完后还需要你使用一个灵能骰，你就不能使用该异能。你可以在完成一次长休后恢复所有已使用的灵能骰。此外，你可以使用一个附赠动作重新获得一个已使用的灵能骰，但你在完成一次短休或长休之前不能再次获得。",
+				"当你在此职业升级到特定等级时，你的灵能骰大小有所增长：第5级（{@dice d8}），第11级（{@dice d10}），第17级（{@dice d12}）。",
+				"可以在以下异能使用你的灵能骰。",
 				{
 					"type": "options",
 					"style": "list-hang-notitle",
 					"entries": [
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Protective Field|Fighter|TCE|Psi Warrior|TCE|3"
+							"subclassFeature": "庇护力场|Fighter|TCE|Psi Warrior|TCE|3"
 						},
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Psionic Strike|Fighter|TCE|Psi Warrior|TCE|3"
+							"subclassFeature": "灵能击打|Fighter|TCE|Psi Warrior|TCE|3"
 						},
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Telekinetic Movement|Fighter|TCE|Psi Warrior|TCE|3"
+							"subclassFeature": "念力控物|Fighter|TCE|Psi Warrior|TCE|3"
 						}
 					]
 				}
 			]
 		},
 		{
-			"name": "Telekinetic Adept",
+			"name": "念力擅长",
+			"ENG_name": "Telekinetic Adept",
 			"source": "TCE",
 			"page": 42,
 			"className": "Fighter",
@@ -2649,26 +2656,27 @@
 			"level": 7,
 			"header": 2,
 			"entries": [
-				"{@i 7th-level Psi Warrior feature}",
-				"You have mastered new ways to use your telekinetic abilities, detailed below.",
+				"{@i 7级灵能武士特性}",
+				"你已经掌握了使用念力异能的新方式，细节如下。",
 				{
 					"type": "options",
 					"style": "list-hang-notitle",
 					"entries": [
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Psi-Powered Leap.|Fighter|TCE|Psi Warrior|TCE|7"
+							"subclassFeature": "灵力跃动|Fighter|TCE|Psi Warrior|TCE|7"
 						},
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Telekinetic Thrust.|Fighter|TCE|Psi Warrior|TCE|7"
+							"subclassFeature": "念力突刺|Fighter|TCE|Psi Warrior|TCE|7"
 						}
 					]
 				}
 			]
 		},
 		{
-			"name": "Guarded Mind",
+			"name": "意念守护",
+			"ENG_name": "Guarded Mind",
 			"source": "TCE",
 			"page": 42,
 			"className": "Fighter",
@@ -2678,12 +2686,13 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"{@i 10th-level Psi Warrior feature}",
-				"The psionic energy flowing through you has bolstered your mind. You have resistance to psychic damage. Moreover, if you start your turn {@condition charmed} or {@condition frightened}, you can expend a Psionic Energy die and end every effect on yourself subjecting you to those conditions."
+				"{@i 10级灵能武士特性}",
+				"被灵能力量沐浴的你，意念得到增强。你对于心灵伤害有抗性。此外，如果你在你的回合开始时处于{@condition 魅惑}或{@condition 恐惧}的状态，你可以消耗一个灵能骰并结束这些状态对你的影响。"
 			]
 		},
 		{
-			"name": "Bulwark of Force",
+			"name": "壁垒之力",
+			"ENG_name": "Bulwark of Force",
 			"source": "TCE",
 			"page": 42,
 			"className": "Fighter",
@@ -2693,13 +2702,14 @@
 			"level": 15,
 			"header": 2,
 			"entries": [
-				"{@i 15th-level Psi Warrior feature}",
-				"You can shield yourself and others with telekinetic force. As a bonus action, you can choose creatures, which can include you, that you can see within 30 feet of you, up to a number of creatures equal to your Intelligence modifier (minimum of one creature). Each of the chosen creatures is protected by half cover for 1 minute or until you're {@condition incapacitated}.",
-				"Once you take this bonus action, you can't do so again until you finish a long rest, unless you expend a Psionic Energy die to take it again."
+				"{@i 15级灵能武士特性}",
+				"你可以使用念力庇护你自己和其他人。你可以使用一个附赠动作选择一些可包括你在内且30尺对你可见生物，数量等于你的智力调整值（最少为1）。每个被选中的生物获得一分钟的半掩蔽状态，该状态将会在你{@condition 无力}时提前结束。",
+				"每当你使用这个附赠动作，你无法再次使用该特性直到你完成一次长休，除非你消耗一个灵能骰来再次使用该特性。"
 			]
 		},
 		{
-			"name": "Telekinetic Master",
+			"name": "念力宗师",
+			"ENG_name": "Telekinetic Master",
 			"source": "TCE",
 			"page": 42,
 			"className": "Fighter",
@@ -2709,13 +2719,14 @@
 			"level": 18,
 			"header": 2,
 			"entries": [
-				"{@i 18th-level Psi Warrior feature}",
-				"Your ability to move creatures and objects with your mind is matched by few. You can cast the {@spell 心灵遥控} spell, requiring no components, and your spellcasting ability for the spell is Intelligence. On each of your turns while you concentrate on the spell, including the turn when you cast it, you can make one attack with a weapon as a bonus action.",
-				"Once you cast the spell with this feature, you can't do so again until you finish a long rest, unless you expend a Psionic Energy die to cast it again."
+				"{@i 18级灵能武士特性}",
+				"你用意念移动生物和物体的能力无人能及。你可以在无需施法材料的情况下施展{@spell 心灵遥控}，此时你的施法关键属性为智力。在你的每一个对该法术维持专注的回合，包括你使用它的回合，你可以使用一个附赠动作进行一次武器攻击。",
+				"每当你使用以特性施放此法术，你无法再次使用该特性直到你完成一次长休，除非你消耗一个灵能骰来再次使用该特性。"
 			]
 		},
 		{
-			"name": "Rune Knight",
+			"name": "符文骑士",
+			"ENG_name": "Rune Knight",
 			"source": "TCE",
 			"page": 44,
 			"className": "Fighter",
@@ -2724,23 +2735,24 @@
 			"subclassSource": "TCE",
 			"level": 3,
 			"entries": [
-				"Rune Knights enhance their martial prowess using the supernatural power of runes, an ancient practice that originated with giants. Rune cutters can be found among any family of giants, and you likely learned your methods first or second hand from such a mystical artisan. Whether you found the giant's work carved into a hill or cave, learned of the runes from a sage, or met the giant in person, you studied the giant's craft and learned how to apply magic runes to empower your equipment.",
+				"符文骑士使用超自然符文和沿袭于远古巨人传统的力量来增强他们的威能。在任何一个巨人家族中，符文切割者随处可见，并且你很可能直接或间接地从这样一个神秘的工匠那里学到了你的方法。无论你是在山丘或洞穴中发现了巨人的雕刻艺术；跟从贤者研习符文；或是亲自和巨人会面，你研究巨人的工艺并学会了如何使用魔法符文来增强你的装备。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Proficiencies|Fighter||Rune Knight|TCE|3"
+					"subclassFeature": "额外熟练项|Fighter||Rune Knight|TCE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Rune Carver|Fighter||Rune Knight|TCE|3"
+					"subclassFeature": "符文雕刻者|Fighter||Rune Knight|TCE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Giant's Might|Fighter||Rune Knight|TCE|3"
+					"subclassFeature": "巨人之力|Fighter||Rune Knight|TCE|3"
 				}
 			]
 		},
 		{
-			"name": "Bonus Proficiencies",
+			"name": "额外熟练项",
+			"ENG_name": "Bonus Proficiencies",
 			"source": "TCE",
 			"page": 44,
 			"className": "Fighter",
@@ -2750,12 +2762,13 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"{@i 3rd-level Rune Knight feature}",
-				"You gain proficiency with {@item 铁匠工具|PHB}, and you learn to speak, read, and write Giant."
+				"{@i 3级符文骑士特性}",
+				"你获得对于{@item 铁匠工具|PHB}的熟练项，并且你学会了说、读和写{@language Giant}。"
 			]
 		},
 		{
-			"name": "Giant's Might",
+			"name": "巨人之力",
+			"ENG_name": "Giant's Might",
 			"source": "TCE",
 			"page": 44,
 			"className": "Fighter",
@@ -2765,21 +2778,22 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"{@i 3rd-level Rune Knight feature}",
-				"You have learned how to imbue yourself with the might of giants. As a bonus action, you magically gain the following benefits, which last for 1 minute:",
+				"{@i 3级符文骑士特性}",
+				"你已经学会了如何使用巨人之力灌注自身。你可以使用一个附赠动作，魔法性地获得以下能力，持续一分钟：",
 				{
 					"type": "list",
 					"items": [
-						"If you are smaller than Large, you become Large, along with anything you are wearing. If you lack the room to become Large, your size doesn't change.",
-						"You have advantage on Strength checks and Strength saving throws.",
-						"Once on each of your turns, one of your attacks with a weapon or an unarmed strike can deal an extra {@damage 1d6} damage to a target on a hit."
+						"如果你的体型小于大型，你和你所穿戴的所有物品一起变为大型。如果你缺少变为大型的空间，则你的体型无法发生变化。",
+						"你在力量检定和力量豁免检定上获得优势。",
+						"你的每回合内一次，你的武器攻击或徒手打击可以在击中后对目标造成额外{@damage 1d6}的伤害。"
 					]
 				},
-				"You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses of it when you finish a long rest."
+				"该特性的可使用次数等于你的熟练加值，且你可以在完成一次长休之后恢复所有已使用的次数。"
 			]
 		},
 		{
-			"name": "Rune Carver",
+			"name": "符文雕刻者",
+			"ENG_name": "Rune Carver",
 			"source": "TCE",
 			"page": 44,
 			"className": "Fighter",
@@ -2789,15 +2803,15 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"{@i 3rd-level Rune Knight feature}",
-				"You can use magic runes to enhance your gear. You learn two runes of your choice, from among the runes described below, and each time you gain a level in this class, you can replace one rune you know with a different one from this feature. When you reach certain levels in this class, you learn additional runes, as shown in the Runes Known table.",
-				"Whenever you finish a long rest, you can touch a number of objects equal to the number of runes you know, and you inscribe a different rune onto each of the objects. To be eligible, an object must be a weapon, a suit of armor, a shield, a piece of jewelry, or something else you can wear or hold in a hand. Your rune remains on an object until you finish a long rest, and an object can bear only one of your runes at a time.",
+				"{@i 3级符文骑士特性}",
+				"你可以使用魔法符文来增强你的装备。你可以从下列的被描述的符文当中，选择并学会两个符文，且每当你在此职业中升一级，你可以从此特性中选择一个不同的符文来替换一个你已知的符文。当你达到特定的职业等级，你可以学会更多的符文，具体数量如“符文已知表”所示。",
+				"每当你完成了一次长休，你可以接触数量等于你已知符文数物品，并在每个物品上铭刻不同的符文。符合条件的物品必须为一把武器、一套盔甲、一面盾牌、一件首饰或者任何其他你可以穿着或手持的物品。你的符文会保留在物品上直到你完成一次长休，且一件物品同时只能承载你的一个符文。",
 				{
 					"type": "table",
-					"caption": "Runes Known",
+					"caption": "符文已知",
 					"colLabels": [
-						"Fighter Level",
-						"Number of Runes"
+						"战士等级",
+						"符文数量"
 					],
 					"colStyles": [
 						"col-6 text-center",
@@ -2822,59 +2836,36 @@
 						]
 					]
 				},
-				"The following runes are available to you when you learn a rune. If a rune has a level requirement, you must be at least that level in this class to learn the rune. If a rune requires a saving throw, your Rune Magic save DC equals 8 + your proficiency bonus + your Constitution modifier.",
+				"当你研习符文时，下列的符文成为了你的可选项。如果一个符文具有等级需求，你的战士等级必须达到相应等级才能研习该符文。如果一个符文需要通过豁免检定，你的符文魔法的豁免DC等于8 + 你的熟练加值 + 你的体质调整值。",
 				{
-					"type": "entries",
-					"name": "Cloud Rune",
-					"entries": [
-						"This rune emulates the deceptive magic used by some cloud giants. While wearing or carrying an object inscribed with this rune, you have advantage on Dexterity ({@skill 巧手}) checks and Charisma ({@skill 欺瞒}) checks.",
-						"In addition, when you or a creature you can see within 30 feet of you is hit by an attack roll, you can use your reaction to invoke the rune and choose a different creature within 30 feet of you, other than the attacker. The chosen creature becomes the target of the attack, using the same roll. This magic can transfer the attack's effects regardless of the attack's range. Once you invoke this rune, you can't do so again until you finish a short or long rest."
-					]
+					"type": "refOptionalfeature",
+					"optionalfeature": "云之符文|TCE"
 				},
 				{
-					"type": "entries",
-					"name": "Fire Rune",
-					"entries": [
-						"This rune's magic channels the masterful craftsmanship of great smiths. While wearing or carrying an object inscribed with this rune, your proficiency bonus is doubled for any ability check you make that uses your proficiency with a tool.",
-						"In addition, when you hit a creature with an attack using a weapon, you can invoke the rune to summon fiery shackles: the target takes an extra {@damage 2d6} fire damage, and it must succeed on a Strength saving throw or be {@condition restrained} for 1 minute. While {@condition restrained} by the shackles, the target takes {@damage 2d6} fire damage at the start of each of its turns. The target can repeat the saving throw at the end of each of its turns, banishing the shackles on a success. Once you invoke this rune, you can't do so again until you finish a short or long rest."
-					]
+					"type": "refOptionalfeature",
+					"optionalfeature": "火之符文|TCE"
 				},
 				{
-					"type": "entries",
-					"name": "Frost Rune",
-					"entries": [
-						"This rune's magic evokes the might of those who survive in the wintry wilderness, such as frost giants. While wearing or carrying an object inscribed with this rune, you have advantage on Wisdom ({@skill 驯兽}) checks and Charisma ({@skill 威吓}) checks.",
-						"In addition, you can invoke the rune as a bonus action to increase your sturdiness. For 10 minutes, you gain a +2 bonus to all ability checks and saving throws that use Strength or Constitution. Once you invoke this rune, you can't do so again until you finish a short or long rest."
-					]
+					"type": "refOptionalfeature",
+					"optionalfeature": "霜之符文|TCE"
 				},
 				{
-					"type": "entries",
-					"name": "Stone Rune",
-					"entries": [
-						"This rune's magic channels the judiciousness associated with stone giants. While wearing or carrying an object inscribed with this rune, you have advantage on Wisdom ({@skill 洞悉}) checks, and you have {@sense 黑暗视觉} out to a range of 120 feet.",
-						"In addition, when a creature you can see ends its turn within 30 feet of you, you can use your reaction to invoke the rune and force the creature to make a Wisdom saving throw. Unless the save succeeds, the creature is {@condition charmed} by you for 1 minute. While {@condition charmed} in this way, the creature has a speed of 0 and is {@condition incapacitated}, descending into a dreamy stupor. The creature repeats the saving throw at the end of each of its turns, ending the effect on a success. Once you invoke this rune, you can't do so again until you finish a short or long rest."
-					]
+					"type": "refOptionalfeature",
+					"optionalfeature": "石之符文|TCE"
 				},
 				{
-					"type": "entries",
-					"name": "Hill Rune (7th Level or Higher)",
-					"entries": [
-						"This rune's magic bestows a resilience reminiscent of a hill giant. While wearing or carrying an object that bears this rune, you have advantage on saving throws against being {@condition poisoned}, and you have resistance against poison damage.",
-						"In addition, you can invoke the rune as a bonus action, gaining resistance to bludgeoning, piercing, and slashing damage for 1 minute. Once you invoke this rune, you can't do so again until you finish a short or long rest."
-					]
+					"type": "refOptionalfeature",
+					"optionalfeature": "山丘符文|TCE"
 				},
 				{
-					"type": "entries",
-					"name": "Storm Rune (7th Level or Higher)",
-					"entries": [
-						"Using this rune, you can glimpse the future like a storm giant seer. While wearing or carrying an object inscribed with this rune, you have advantage on Intelligence ({@skill 奥秘}) checks, and you can't be surprised as long as you aren't {@condition incapacitated}.",
-						"In addition, you can invoke the rune as a bonus action to enter a prophetic state for 1 minute or until you're {@condition incapacitated}. Until the state ends, when you or another creature you can see within 60 feet of you makes an attack roll, a saving throw, or an ability check, you can use your reaction to cause the roll to have advantage or disadvantage. Once you invoke this rune, you can't do so again until you finish a short or long rest."
-					]
+					"type": "refOptionalfeature",
+					"optionalfeature": "风暴符文|TCE"
 				}
 			]
 		},
 		{
-			"name": "Runic Shield",
+			"name": "符文之盾",
+			"ENG_name": "Runic Shield",
 			"source": "TCE",
 			"page": 44,
 			"className": "Fighter",
@@ -2884,13 +2875,14 @@
 			"level": 7,
 			"header": 2,
 			"entries": [
-				"{@i 7th-level Rune Knight feature}",
-				"You learn to invoke your rune magic to protect your allies. When another creature you can see within 60 feet of you is hit by an attack roll, you can use your reaction to force the attacker to reroll the {@dice d20} and use the new roll.",
-				"You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+				"{@i 7级符文骑士特性}",
+				"你学会了激活你的符文魔法来保护你的盟友。当另一个60尺内且对你可见的生物被一次攻击检定命中，你可以使用一个反应动作来强迫攻击者重新掷{@dice d20}并采用新的攻击检定结果。",
+				"该特性的可使用次数等于你的熟练加值，且你可以在完成一次长休之后恢复所有已使用的次数。"
 			]
 		},
 		{
-			"name": "Great Stature",
+			"name": "奇伟身躯",
+			"ENG_name": "Great Stature",
 			"source": "TCE",
 			"page": 44,
 			"className": "Fighter",
@@ -2900,13 +2892,14 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"{@i 10th-level Rune Knight feature}",
-				"The magic of your runes permanently alters you. When you gain this feature, roll {@dice 3d4}. You grow a number of inches in height equal to the roll.",
-				"Moreover, the extra damage you deal with your Giant's Might feature increases to {@dice 1d8}."
+				"{@i 10级符文骑士特性}",
+				"符文的魔力永久性的改变了你。当你获得该特性时，掷{@dice 3d4}。你的身高增加该骰结果的英寸数。",
+				"此外，你的巨人之力特性造成的额外伤害提高至{@dice 1d8}。"
 			]
 		},
 		{
-			"name": "Master of Runes",
+			"name": "符文大师",
+			"ENG_name": "Master of Runes",
 			"source": "TCE",
 			"page": 44,
 			"className": "Fighter",
@@ -2916,12 +2909,13 @@
 			"level": 15,
 			"header": 2,
 			"entries": [
-				"{@i 15th-level Rune Knight feature}",
-				"You can invoke each rune you know from your Rune Carver feature twice, rather than once, and you regain all expended uses when you finish a short or long rest."
+				"{@i 15级符文骑士特性}",
+				"你可以对每个你在符文雕刻者特性中已知的符文激活两次，而不是一次，且你可以在完成一次短休或长休之后恢复所有已使用的次数。"
 			]
 		},
 		{
-			"name": "Runic Juggernaut",
+			"name": "符文主宰",
+			"ENG_name": "Runic Juggernaut",
 			"source": "TCE",
 			"page": 44,
 			"className": "Fighter",
@@ -2931,8 +2925,8 @@
 			"level": 18,
 			"header": 2,
 			"entries": [
-				"{@i 18th-level Rune Knight feature}",
-				"You learn how to amplify your rune-powered transformation. As a result, the extra damage you deal with the Giant's Might feature increases to {@dice 1d10}. Moreover, when you use that feature, your size can increase to Huge, and while you are that size, your reach increases by 5 feet."
+				"{@i 18级符文骑士特性}",
+				"你学会增强你对于符文力量的转换。因此，你的巨人之力特性造成的额外伤害提高至{@dice 1d10}。此外，当你使用该特性时，你的体型变为巨型，且当你保持该尺寸时，你的触及提高5尺。"
 			]
 		},
 		{
@@ -5481,7 +5475,8 @@
 			]
 		},
 		{
-			"name": "Protective Field",
+			"name": "庇护力场",
+			"ENG_name": "Protective Field",
 			"source": "TCE",
 			"page": 42,
 			"className": "Fighter",
@@ -5490,11 +5485,12 @@
 			"subclassSource": "TCE",
 			"level": 3,
 			"entries": [
-				"When you or another creature you can see within 30 feet of you takes damage, you can use your reaction to expend one Psionic Energy die, roll the die, and reduce the damage taken by the number rolled plus your Intelligence modifier (minimum reduction of 1), as you create a momentary shield of telekinetic force."
+				"当你或者另一个对你30尺内可见的生物受到伤害，你可以使用一个反应动作消耗一枚灵能骰，对其降低等同于灵能骰骰出的数值加你的智力调整值的伤害（最小为1），如同你创造了一面瞬间的念力盾牌。"
 			]
 		},
 		{
-			"name": "Psionic Strike",
+			"name": "灵能击打",
+			"ENG_name": "Psionic Strike",
 			"source": "TCE",
 			"page": 42,
 			"className": "Fighter",
@@ -5503,11 +5499,12 @@
 			"subclassSource": "TCE",
 			"level": 3,
 			"entries": [
-				"You can propel your weapons with psionic force. Once on each of your turns, immediately after you hit a target within 30 feet of you with an attack and deal damage to it with a weapon, you can expend one Psionic Energy die, rolling it and dealing force damage to the target equal to the number rolled plus your Intelligence modifier."
+				"你可以用灵能驱动你的武器。你的每回合一次，当你击中并对30尺以内的目标造成武器伤害，你可以立即消耗一个灵能骰，对目标造成等同于灵能骰骰出的数值加你的智力调整值的力场伤害。"
 			]
 		},
 		{
-			"name": "Telekinetic Movement",
+			"name": "念力控物",
+			"ENG_name": "Telekinetic Movement",
 			"source": "TCE",
 			"page": 42,
 			"className": "Fighter",
@@ -5516,11 +5513,12 @@
 			"subclassSource": "TCE",
 			"level": 3,
 			"entries": [
-				"You can move an object or a creature with your mind. As an action, you target one loose object that is Large or smaller or one willing creature, other than yourself. If you can see the target and it is within 30 feet of you, you can move it up to 30 feet to an unoccupied space you can see. Alternatively, if it is a Tiny object, you can move it to or from your hand. Either way, you can move the target horizontally, vertically, or both. Once you take this action, you can't do so again until you finish a short or long rest, unless you expend a Psionic Energy die to take it again."
+				"你可以用意念移动一个物体或生物。你可以使用一个动作选中一个最多大型的物体或一个除你以外的自愿生物。如果目标在对你30尺内且可视，你可以将其移动至多30尺至一个对你可见的空地。另外，如果目标是一个小物件，你可以从你的手中给出或收回。无论采取哪种方式，你都可以或水平、或垂直、或两者都使用地移动它。当你使用该异能时，你无法再使用该能力直到你完成一次短休或长休，除非你消耗一个灵能骰来再次使用该异能。"
 			]
 		},
 		{
-			"name": "Psi-Powered Leap.",
+			"name": "灵力跃动",
+			"ENG_name": "Psi-Powered Leap.",
 			"source": "TCE",
 			"page": 42,
 			"className": "Fighter",
@@ -5529,11 +5527,12 @@
 			"subclassSource": "TCE",
 			"level": 7,
 			"entries": [
-				"As a bonus action, you can propel your body with your mind. You gain a flying speed equal to twice your walking speed until the end of the current turn. Once you take this bonus action, you can't do so again until you finish a short or long rest, unless you expend a Psionic Energy die to take it again."
+				"你可以使用一个附赠动作用你的意志来驱使你的身体。你获得等同于两倍步行速度的飞行速度直到该回合结束。每当你使用这个附赠动作，你无法再次使用该异能直到你完成一次短休或长休，除非你消耗一个灵能骰来再次使用该异能。"
 			]
 		},
 		{
-			"name": "Telekinetic Thrust.",
+			"name": "念力突刺",
+			"ENG_name": "Telekinetic Thrust.",
 			"source": "TCE",
 			"page": 42,
 			"className": "Fighter",
@@ -5542,7 +5541,7 @@
 			"subclassSource": "TCE",
 			"level": 7,
 			"entries": [
-				"When you deal damage to a target with your Psionic Strike, you can force the target to make a Strength saving throw against a DC equal to 8 + your proficiency bonus + your Intelligence modifier. If the save fails, you can knock the target {@condition prone} or move it up to 10 feet in any direction horizontally."
+				"当你使用灵能击打对一个目标造成伤害时，你可以使目标进行一次力量豁免来对抗DC等于8 + 你的熟练加值 + 你的智力调整值。如果豁免失败，你可以将目标击倒{@condition 伏地}或者将其在任意方向水平移动至多10尺。"
 			]
 		}
 	]
