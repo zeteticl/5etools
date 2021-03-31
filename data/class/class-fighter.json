@@ -1757,7 +1757,7 @@
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Maneuvers|Fighter||Battle Master||3"
+					"subclassFeature": "战技|Fighter||Battle Master||3"
 				},
 				{
 					"type": "refSubclassFeature",
@@ -1765,7 +1765,7 @@
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Maneuver Options|Fighter||Battle Master||3|TCE"
+					"subclassFeature": "战技选项|Fighter||Battle Master||3|TCE"
 				}
 			]
 		},
@@ -1835,7 +1835,8 @@
 			]
 		},
 		{
-			"name": "Maneuver Options",
+			"name": "战技选项",
+			"ENG_name": "Maneuver Options",
 			"source": "TCE",
 			"page": 41,
 			"className": "Fighter",
@@ -1846,8 +1847,8 @@
 			"isClassFeatureVariant": true,
 			"header": 1,
 			"entries": [
-				"{@i 3rd-level fighter {@variantrule 可选职业特性|tce|optional feature}}",
-				"If you have access to maneuvers, the following maneuvers are added to the list of options available to you. Maneuvers are available to Battle Masters but also to characters who have a special feature like the Superior Technique fighting style or the Martial Adept feat.",
+				"{@i 3级战士 {@variantrule 可选职业特性|tce|可选特性}}",
+				"如果你能够使用战技，以下战技将加入可选列表。使用战技的能力可以通过战斗大师武术范型、卓越技巧战斗风格或战技专家专长来获得。",
 				{
 					"type": "entries",
 					"entries": [
@@ -1943,7 +1944,8 @@
 			]
 		},
 		{
-			"name": "Maneuvers",
+			"name": "战技",
+			"ENG_name": "Maneuvers",
 			"source": "PHB",
 			"page": 73,
 			"className": "Fighter",
@@ -1953,7 +1955,7 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"The maneuvers are presented in alphabetical order.",
+				"以下战技按英文字母顺序排列。",
 				{
 					"type": "options",
 					"count": 3,
