@@ -6145,7 +6145,7 @@ Parser.itemKeyToDisplay = {};
 Parser.translateKeyInMapToDisplay = function (map, key) {
 	if (typeof key === "string" || key instanceof String) {
 		let lowercase_key = key.toLowerCase();
-		if (map[lowercase_key] !== null) {
+		if (map[lowercase_key]) {
 			return map[lowercase_key];
 		}
 	}

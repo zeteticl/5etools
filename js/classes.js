@@ -890,8 +890,8 @@ class ClassesPage extends BaseComponent {
 
 			$ptHp = `<tr class="cls-side__show-hide">
 				<td colspan="6" class="cls-side__section">
-					<h5 class="cls-side__section-head">Hit Points</h5>
-					<div><strong>生命骰</strong> ${Renderer.getEntryDice(hdEntry, "Hit die")}</div>
+					<h5 class="cls-side__section-head">生命值</h5>
+					<div><strong>生命骰：</strong> ${Renderer.getEntryDice(hdEntry, "Hit die")}</div>
 					<div><strong>首级生命值：</strong> ${Renderer.class.getHitPointsAtFirstLevel(cls.hd)}</div>
 					<div><strong>其后生命值：</strong> ${Renderer.class.getHitPointsAtHigherLevels(cls.name, cls.hd, hdEntry)}</div>
 				</td>
@@ -997,7 +997,7 @@ class ClassesPage extends BaseComponent {
 					<div><b>武器：</b> <span>${profs.weapons ? Renderer.class.getRenderedWeaponProfs(profs.weapons) : "none"}</span></div>
 					<div><b>工具：</b> <span>${profs.tools ? Renderer.class.getRenderedToolProfs(profs.tools) : "none"}</span></div>
 					<div><b>豁免：</b> <span>${cls.proficiency ? cls.proficiency.map(p => Parser.attAbvToFull(p)).join(", ") : "无"}</span></div>
-					<div><b>技能：:</b> <span>${profs.skills ? Renderer.class.getRenderedSkillProfs(profs.skills) : "无"}</span></div>
+					<div><b>技能：</b> <span>${profs.skills ? Renderer.class.getRenderedSkillProfs(profs.skills) : "无"}</span></div>
 				</td>
 			</tr>
 

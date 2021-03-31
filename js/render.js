@@ -3225,11 +3225,11 @@ Renderer.get = () => {
 
 Renderer.class = {
 	getHitDiceEntry (clsHd) { return clsHd ? {toRoll: `${clsHd.number}d${clsHd.faces}`, rollable: true} : null; },
-	getHitPointsAtFirstLevel (clsHd) { return clsHd ? `${clsHd.number * clsHd.faces} + your Constitution modifier` : null; },
-	getHitPointsAtHigherLevels (className, clsHd, hdEntry) { return className && clsHd && hdEntry ? `${Renderer.getEntryDice(hdEntry, "Hit die")} (or ${((clsHd.number * clsHd.faces) / 2 + 1)}) + your Constitution modifier per ${className} level after 1st` : null; },
+	getHitPointsAtFirstLevel (clsHd) { return clsHd ? `${clsHd.number * clsHd.faces} + 你的体质调整值` : null; },
+	getHitPointsAtHigherLevels (className, clsHd, hdEntry) { return className && clsHd && hdEntry ? `一级之后每${className}等级 ${Renderer.getEntryDice(hdEntry, "Hit die")} (或 ${((clsHd.number * clsHd.faces) / 2 + 1)}) + 你的体质调整值` : null; },
 
 	getRenderedArmorProfs (armorProfs) { return armorProfs.map(a => Renderer.get().render(a.full ? a.full : a === "light" || a === "medium" || a === "heavy" ? `{@filter ${Parser.ArmorToDisplay(a)}甲|items|type=${a} armor}` : a)).join(", "); },
-	getRenderedWeaponProfs (weaponProfs) { return weaponProfs.map(w => Renderer.get().render(w === "simple" || w === "martial" ? `{@filter ${Parser.translateKeyToDisplay(w)}武器|items|type=${w} weapon}` : w.optional ? `<span class="help--hover" title="Optional Proficiency">${w.proficiency}</span>` : w)).join(", "); },
+	getRenderedWeaponProfs (weaponProfs) { return weaponProfs.map(w => Renderer.get().render(w === "simple" || w === "martial" ? `{@filter ${Parser.translateKeyToDisplay(w)}武器|items|type=${w} weapon}` : w.optional ? `<span class="help--hover" title="可选熟练">${w.proficiency}</span>` : w)).join(", "); },
 	getRenderedToolProfs (toolProfs) { return toolProfs.map(it => Renderer.get().render(it)).join(", "); },
 	getRenderedSkillProfs (skills) { return `${Parser.skillProficienciesToFull(skills).uppercaseFirst()}.`; },
 };
