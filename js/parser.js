@@ -2384,7 +2384,7 @@ UA_PREFIX_SHORT = "UA: ";
 TftYP_NAME = "深水龙门阵";
 
 Parser.SOURCE_JSON_TO_FULL = {};
-Parser.SOURCE_JSON_TO_FULL[SRC_CoS] = "斯特拉德的诅咒";
+Parser.SOURCE_JSON_TO_FULL[SRC_CoS] = "施特拉德的诅咒";
 Parser.SOURCE_JSON_TO_FULL[SRC_DMG] = "地下城主指南";
 Parser.SOURCE_JSON_TO_FULL[SRC_EEPC] = "邪恶元素玩家指南";
 Parser.SOURCE_JSON_TO_FULL[SRC_EET] = "邪恶元素：饰品";
@@ -2452,7 +2452,7 @@ Parser.SOURCE_JSON_TO_FULL[SRC_SCREEN] = "地下城主屏幕";
 Parser.SOURCE_JSON_TO_FULL[SRC_SCREEN_WILDERNESS_KIT] = "DM屏风：荒野套件";
 Parser.SOURCE_JSON_TO_FULL[SRC_HEROES_FEAST] = "英雄盛宴";
 Parser.SOURCE_JSON_TO_FULL[SRC_CM] = "烛堡秘辛";
-Parser.SOURCE_JSON_TO_FULL[SRC_ALCoS] = `${AL_PREFIX}斯特拉德的诅咒`;
+Parser.SOURCE_JSON_TO_FULL[SRC_ALCoS] = `${AL_PREFIX}施特拉德的诅咒`;
 Parser.SOURCE_JSON_TO_FULL[SRC_ALEE] = `${AL_PREFIX}邪恶元素`;
 Parser.SOURCE_JSON_TO_FULL[SRC_ALRoD] = `${AL_PREFIX}恶魔狂怒`;
 Parser.SOURCE_JSON_TO_FULL[SRC_PSA] = `${PS_PREFIX}阿芒凯`;
