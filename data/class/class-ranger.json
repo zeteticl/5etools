@@ -3289,7 +3289,7 @@
 			"isClassFeatureVariant": true,
 			"entries": [
 				"As an action, you can give yourself a number of temporary hit points equal to {@dice 1d10} + your Wisdom modifier. You can use this special action a number of times equal to your Wisdom modifier (a minimum of once), and you regain all expended uses when you finish a long rest.",
-				"In addition, whenever you finish a short rest, your {@condition exhaustion} level, if any, is decreased by 1."
+				"In addition, whenever you finish a short rest, your {@condition 力竭} level, if any, is decreased by 1."
 			]
 		},
 		{
@@ -3776,7 +3776,7 @@
 			"isClassFeatureVariant": true,
 			"entries": [
 				"{@i 10th-level ranger feature (replaces Hide in Plain Sight)}",
-				"You can use a bonus action to magically become {@condition invisible}, along with any equipment you are wearing or carrying, until the start of your next turn.",
+				"You can use a bonus action to magically become {@condition 隐形}, along with any equipment you are wearing or carrying, until the start of your next turn.",
 				"Once you use this feature, you can't use it again until you finish a short or long rest."
 			]
 		},
@@ -4148,7 +4148,7 @@
 			"isClassFeatureVariant": true,
 			"entries": [
 				"As an action, you can give yourself a number of temporary hit points equal to {@dice 1d10} + your Wisdom modifier. You can use this special action a number of times equal to your Wisdom modifier (a minimum of once), and you regain all expended uses when you finish a long rest.",
-				"In addition, whenever you finish a short rest, your {@condition exhaustion} level, if any, is decreased by 1."
+				"In addition, whenever you finish a short rest, your {@condition 力竭} level, if any, is decreased by 1."
 			]
 		},
 		{
@@ -4634,7 +4634,7 @@
 			"entries": [
 				"{@i 10th-level ranger feature (replaces Hide in Plain Sight)}",
 				"{@note Note that this feature is intended for use with the Ranger class presented in the Player's Handbook. It is presented here for convenience, and may be unsuitable for use as a Spell-less Ranger feature.}",
-				"You can use a bonus action to magically become {@condition invisible}, along with any equipment you are wearing or carrying, until the start of your next turn.",
+				"You can use a bonus action to magically become {@condition 隐形}, along with any equipment you are wearing or carrying, until the start of your next turn.",
 				"Once you use this feature, you can't use it again until you finish a short or long rest."
 			]
 		},
@@ -4934,7 +4934,7 @@
 						"All rangers gain a spirit companion and the ability to invoke its magical power. (Your spirit companion grants you one benefit you can call on in this playtest version of the revised ranger, with more benefits gained at higher levels.) You regain your ability to call on your spirit companion in this way when you finish a short or long rest.",
 						"Once per day as a bonus action, you can command your spirit companion to materialize as a living creature, determined by the ranger path you choose. Your spirit companion manifests as an animal for 1 minute or until your concentration is broken (as if you are concentrating on a spell). You can also dismiss it as a bonus action.",
 						"The manifested creature gains a bonus to attack rolls and saving throws equal to your Wisdom modifier. It uses the hit points in the animal's stat block or half your hit point maximum, whichever is higher.",
-						"The manifested creature takes its turn on your initiative and acts immediately after you. You control its actions, even if you are {@condition unconscious} or otherwise unable to act."
+						"The manifested creature takes its turn on your initiative and acts immediately after you. You control its actions, even if you are {@condition 昏迷} or otherwise unable to act."
 					]
 				}
 			]
@@ -6362,7 +6362,7 @@
 			"header": 1,
 			"entries": [
 				"{@i 3rd-level Fey Wanderer feature}",
-				"Your experience with the fey has guarded your mind and sharpened your tongue. You have advantage on saving throws against being {@condition charmed} or {@condition frightened}.",
+				"Your experience with the fey has guarded your mind and sharpened your tongue. You have advantage on saving throws against being {@condition 魅惑} or {@condition 恐惧}.",
 				"In addition, you gain proficiency in one of the following skills of your choice: {@skill 欺瞒}, {@skill 表演}, or {@skill 说服}."
 			]
 		},
@@ -6443,7 +6443,7 @@
 			"header": 2,
 			"entries": [
 				"{@i 7th-level Fey Wanderer feature}",
-				"You have learned eerie techniques from both the Gloaming Court and the Summer Court of the Feywild. Once during each of your turns, when you hit a creature with a weapon attack, you can expend a spell slot to deal extra psychic damage. The extra damage is {@damage 3d6} psychic damage and the creature must succeed on a Wisdom saving throw against your spell save DC or be {@condition frightened} of you until the end of your next turn.",
+				"You have learned eerie techniques from both the Gloaming Court and the Summer Court of the Feywild. Once during each of your turns, when you hit a creature with a weapon attack, you can expend a spell slot to deal extra psychic damage. The extra damage is {@damage 3d6} psychic damage and the creature must succeed on a Wisdom saving throw against your spell save DC or be {@condition 恐惧} of you until the end of your next turn.",
 				"In addition, whenever you make a Charisma check, you gain a bonus to the check equal to your Wisdom modifier."
 			]
 		},
@@ -6459,11 +6459,11 @@
 			"header": 2,
 			"entries": [
 				"{@i 11th-level Fey Wanderer feature}",
-				"You learn how to manipulate mind-altering magic, channeling it from your allies toward others. Whenever a creature you can see within 120 feet of you succeeds on a saving throw against being {@condition charmed} or {@condition frightened}, you can use your reaction to force a different creature you can see within 120 feet of you to succeed on a Wisdom saving throw against your spell save DC or suffer your choice of one of the following effects:",
+				"You learn how to manipulate mind-altering magic, channeling it from your allies toward others. Whenever a creature you can see within 120 feet of you succeeds on a saving throw against being {@condition 魅惑} or {@condition 恐惧}, you can use your reaction to force a different creature you can see within 120 feet of you to succeed on a Wisdom saving throw against your spell save DC or suffer your choice of one of the following effects:",
 				{
 					"type": "list",
 					"items": [
-						"The creature is {@condition charmed} or {@condition frightened} by you (your choice) for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a successful save.",
+						"The creature is {@condition 魅惑} or {@condition 恐惧} by you (your choice) for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a successful save.",
 						"The creature takes {@damage 3d10} psychic damage."
 					]
 				}
@@ -6580,7 +6580,7 @@
 				"{@i 3rd-level Drakewarden feature}",
 				"You can magically summon the drake bound to you. As an action, you can summon the drake, which appears in an unoccupied space of your choice that you can see within 30 feet of you.",
 				"The drake is friendly to you and your companions and obeys your commands. See its game statistics in the {@creature Drake Companion|UA2020SubclassesPt5} stat block, which uses your proficiency bonus (PB) in several places. When you summon the drake, choose a damage type listed in its Draconic Essence trait. You can determine the cosmetic characteristics of the drake such as its color, scale texture, or any visible effect of its Draconic Essence; your choice has no effect on its game statistics.",
-				"In combat, the drake shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the {@action 闪避} action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. If you are {@condition incapacitated}, the drake can take any action of its choice, not just {@action 闪避}.",
+				"In combat, the drake shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the {@action 闪避} action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. If you are {@condition 无力}, the drake can take any action of its choice, not just {@action 闪避}.",
 				"Once you summon the drake, you can't do so again until you finish a long rest, unless you expend a spell slot of 1st level or higher to summon it.",
 				"The drake remains for a number of hours equal to your proficiency bonus, until it is reduced to 0 hit points, until you use this feature to summon the drake again, or until you die. Anything the drake was wearing or carrying is left behind when the drake vanishes."
 			]
@@ -6932,7 +6932,7 @@
 			"header": 2,
 			"entries": [
 				"{@i 15th-level Swarmkeeper feature}",
-				"Your swarm can expel a seething storm of spirits that drains life from others. As an action, you create a magical sphere filled with an enraged swarm centered on a point you can see within 120 feet of you. The sphere has a 10-foot-radius and lasts for 1 minute. The sphere is difficult terrain for creatures other than you. A creature other than you that starts its turn in the sphere's area must make a Constitution saving throw against your spell save DC. On a failed save, the creature takes {@damage 2d8} necrotic damage and is {@condition blinded} until the start of its next turn. On a successful save, it takes half as much damage and isn't {@condition blinded}. At the start of your turn, if any number of Small or larger creatures took necrotic damage from the swarm, you regain {@dice 1d8} hit points. On subsequent turns, you can use a bonus action to move the sphere up to 30 feet.",
+				"Your swarm can expel a seething storm of spirits that drains life from others. As an action, you create a magical sphere filled with an enraged swarm centered on a point you can see within 120 feet of you. The sphere has a 10-foot-radius and lasts for 1 minute. The sphere is difficult terrain for creatures other than you. A creature other than you that starts its turn in the sphere's area must make a Constitution saving throw against your spell save DC. On a failed save, the creature takes {@damage 2d8} necrotic damage and is {@condition 目盲} until the start of its next turn. On a successful save, it takes half as much damage and isn't {@condition 目盲}. At the start of your turn, if any number of Small or larger creatures took necrotic damage from the swarm, you regain {@dice 1d8} hit points. On subsequent turns, you can use a bonus action to move the sphere up to 30 feet.",
 				"When you activate this feature, you can choose any number of creatures you can see to be unaffected by it.",
 				"Once you use this feature, you can't do so again until you finish a long rest. You can also use it again by expending a spell slot of 4th level or higher."
 			]
@@ -7301,7 +7301,7 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"Starting at 3rd level, you gain the ability to temporarily grow and take on the appearance of a treelike person, covered with leaves and bark. As a bonus action, you assume this guardian form, which lasts until you end it as a bonus action or until you are {@condition incapacitated}.",
+				"Starting at 3rd level, you gain the ability to temporarily grow and take on the appearance of a treelike person, covered with leaves and bark. As a bonus action, you assume this guardian form, which lasts until you end it as a bonus action or until you are {@condition 无力}.",
 				"You undergo the following changes while in your guardian form:",
 				{
 					"type": "list",
@@ -8444,8 +8444,8 @@
 			"header": 2,
 			"entries": [
 				"{@i 7th-level Fey Wanderer feature}",
-				"The magic of the Feywild guards your mind. You have advantage on saving throws against being {@condition charmed} or {@condition frightened}.",
-				"In addition, whenever you or a creature you can see within 120 feet of you succeeds on a saving throw against being {@condition charmed} or {@condition frightened}, you can use your reaction to force a different creature you can see within 120 feet of you to make a Wisdom saving throw against your spell save DC. If the save fails, the target is {@condition charmed} or {@condition frightened} by you (your choice) for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a successful save."
+				"The magic of the Feywild guards your mind. You have advantage on saving throws against being {@condition 魅惑} or {@condition 恐惧}.",
+				"In addition, whenever you or a creature you can see within 120 feet of you succeeds on a saving throw against being {@condition 魅惑} or {@condition 恐惧}, you can use your reaction to force a different creature you can see within 120 feet of you to make a Wisdom saving throw against your spell save DC. If the save fails, the target is {@condition 魅惑} or {@condition 恐惧} by you (your choice) for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a successful save."
 			]
 		},
 		{
@@ -8625,7 +8625,7 @@
 			"header": 2,
 			"entries": [
 				"{@i 7th-level Swarmkeeper feature}",
-				"You can condense part of your swarm into a focused mass that lifts you up. As a bonus action, you gain a flying speed of 10 feet and can hover. This effect lasts for 1 minute or until you are {@condition incapacitated}.",
+				"You can condense part of your swarm into a focused mass that lifts you up. As a bonus action, you gain a flying speed of 10 feet and can hover. This effect lasts for 1 minute or until you are {@condition 无力}.",
 				"You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
 			]
 		},
@@ -8646,7 +8646,7 @@
 					"type": "list",
 					"items": [
 						"The damage of Gathered Swarm increases to {@dice 1d8}.",
-						"If a creature fails its saving throw against being moved by Gathered Swarm, you can also cause the swarm to knock the creature {@condition prone}.",
+						"If a creature fails its saving throw against being moved by Gathered Swarm, you can also cause the swarm to knock the creature {@condition 伏地}.",
 						"When you are moved by Gathered Swarm, it gives you half cover until the start of your next turn."
 					]
 				}
@@ -8741,7 +8741,7 @@
 			"header": 1,
 			"entries": [
 				"{@i 3rd-level Fey Wanderer feature}",
-				"Your experience with the fey has guarded your mind and sharpened your tongue. You have advantage on saving throws against being {@condition charmed} or {@condition frightened}.",
+				"Your experience with the fey has guarded your mind and sharpened your tongue. You have advantage on saving throws against being {@condition 魅惑} or {@condition 恐惧}.",
 				"In addition, you gain proficiency in one of the following skills of your choice: {@skill 欺瞒}, {@skill 表演}, or {@skill 说服}."
 			]
 		},
@@ -8773,7 +8773,7 @@
 			"header": 2,
 			"entries": [
 				"{@i 7th-level Fey Wanderer feature}",
-				"You have learned eerie techniques from both the Gloaming Court and the Summer Court of the Feywild. Once during each of your turns, when you hit a creature with a weapon attack, you can expend a spell slot to deal extra psychic damage. The extra damage is {@damage 3d6} psychic damage and the creature must succeed on a Wisdom saving throw against your spell save DC or be {@condition frightened} of you until the end of your next turn.",
+				"You have learned eerie techniques from both the Gloaming Court and the Summer Court of the Feywild. Once during each of your turns, when you hit a creature with a weapon attack, you can expend a spell slot to deal extra psychic damage. The extra damage is {@damage 3d6} psychic damage and the creature must succeed on a Wisdom saving throw against your spell save DC or be {@condition 恐惧} of you until the end of your next turn.",
 				"In addition, whenever you make a Charisma check, you gain a bonus to the check equal to your Wisdom modifier."
 			]
 		},
@@ -8789,11 +8789,11 @@
 			"header": 2,
 			"entries": [
 				"{@i 11th-level Fey Wanderer feature}",
-				"You learn how to manipulate mind-altering magic, channeling it from your allies toward others. Whenever a creature you can see within 120 feet of you succeeds on a saving throw against being {@condition charmed} or {@condition frightened}, you can use your reaction to force a different creature you can see within 120 feet of you to succeed on a Wisdom saving throw against your spell save DC or suffer your choice of one of the following effects:",
+				"You learn how to manipulate mind-altering magic, channeling it from your allies toward others. Whenever a creature you can see within 120 feet of you succeeds on a saving throw against being {@condition 魅惑} or {@condition 恐惧}, you can use your reaction to force a different creature you can see within 120 feet of you to succeed on a Wisdom saving throw against your spell save DC or suffer your choice of one of the following effects:",
 				{
 					"type": "list",
 					"items": [
-						"The creature is {@condition charmed} or {@condition frightened} by you (your choice) for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a successful save.",
+						"The creature is {@condition 魅惑} or {@condition 恐惧} by you (your choice) for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a successful save.",
 						"The creature takes {@damage 3d10} psychic damage."
 					]
 				}
@@ -8911,7 +8911,7 @@
 				"{@i 3rd-level Drakewarden feature}",
 				"You can magically summon the drake bound to you. As an action, you can summon the drake, which appears in an unoccupied space of your choice that you can see within 30 feet of you.",
 				"The drake is friendly to you and your companions and obeys your commands. See its game statistics in the {@creature Drake Companion|UA2020SubclassesPt5} stat block, which uses your proficiency bonus (PB) in several places. When you summon the drake, choose a damage type listed in its Draconic Essence trait. You can determine the cosmetic characteristics of the drake such as its color, scale texture, or any visible effect of its Draconic Essence; your choice has no effect on its game statistics.",
-				"In combat, the drake shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the {@action 闪避} action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. If you are {@condition incapacitated}, the drake can take any action of its choice, not just {@action 闪避}.",
+				"In combat, the drake shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the {@action 闪避} action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. If you are {@condition 无力}, the drake can take any action of its choice, not just {@action 闪避}.",
 				"Once you summon the drake, you can't do so again until you finish a long rest, unless you expend a spell slot of 1st level or higher to summon it.",
 				"The drake remains for a number of hours equal to your proficiency bonus, until it is reduced to 0 hit points, until you use this feature to summon the drake again, or until you die. Anything the drake was wearing or carrying is left behind when the drake vanishes."
 			]
@@ -9160,7 +9160,7 @@
 			"header": 2,
 			"entries": [
 				"{@i 15th-level Swarmkeeper feature}",
-				"Your swarm can expel a seething storm of spirits that drains life from others. As an action, you create a magical sphere filled with an enraged swarm centered on a point you can see within 120 feet of you. The sphere has a 10-foot-radius and lasts for 1 minute. The sphere is difficult terrain for creatures other than you. A creature other than you that starts its turn in the sphere's area must make a Constitution saving throw against your spell save DC. On a failed save, the creature takes {@damage 2d8} necrotic damage and is {@condition blinded} until the start of its next turn. On a successful save, it takes half as much damage and isn't {@condition blinded}. At the start of your turn, if any number of Small or larger creatures took necrotic damage from the swarm, you regain {@dice 1d8} hit points. On subsequent turns, you can use a bonus action to move the sphere up to 30 feet.",
+				"Your swarm can expel a seething storm of spirits that drains life from others. As an action, you create a magical sphere filled with an enraged swarm centered on a point you can see within 120 feet of you. The sphere has a 10-foot-radius and lasts for 1 minute. The sphere is difficult terrain for creatures other than you. A creature other than you that starts its turn in the sphere's area must make a Constitution saving throw against your spell save DC. On a failed save, the creature takes {@damage 2d8} necrotic damage and is {@condition 目盲} until the start of its next turn. On a successful save, it takes half as much damage and isn't {@condition 目盲}. At the start of your turn, if any number of Small or larger creatures took necrotic damage from the swarm, you regain {@dice 1d8} hit points. On subsequent turns, you can use a bonus action to move the sphere up to 30 feet.",
 				"When you activate this feature, you can choose any number of creatures you can see to be unaffected by it.",
 				"Once you use this feature, you can't do so again until you finish a long rest. You can also use it again by expending a spell slot of 4th level or higher."
 			]
@@ -9377,7 +9377,7 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"Starting at 3rd level, you gain the ability to temporarily grow and take on the appearance of a treelike person, covered with leaves and bark. As a bonus action, you assume this guardian form, which lasts until you end it as a bonus action or until you are {@condition incapacitated}.",
+				"Starting at 3rd level, you gain the ability to temporarily grow and take on the appearance of a treelike person, covered with leaves and bark. As a bonus action, you assume this guardian form, which lasts until you end it as a bonus action or until you are {@condition 无力}.",
 				"You undergo the following changes while in your guardian form:",
 				{
 					"type": "list",
@@ -10019,8 +10019,8 @@
 			"header": 2,
 			"entries": [
 				"{@i 7th-level Fey Wanderer feature}",
-				"The magic of the Feywild guards your mind. You have advantage on saving throws against being {@condition charmed} or {@condition frightened}.",
-				"In addition, whenever you or a creature you can see within 120 feet of you succeeds on a saving throw against being {@condition charmed} or {@condition frightened}, you can use your reaction to force a different creature you can see within 120 feet of you to make a Wisdom saving throw against your spell save DC. If the save fails, the target is {@condition charmed} or {@condition frightened} by you (your choice) for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a successful save."
+				"The magic of the Feywild guards your mind. You have advantage on saving throws against being {@condition 魅惑} or {@condition 恐惧}.",
+				"In addition, whenever you or a creature you can see within 120 feet of you succeeds on a saving throw against being {@condition 魅惑} or {@condition 恐惧}, you can use your reaction to force a different creature you can see within 120 feet of you to make a Wisdom saving throw against your spell save DC. If the save fails, the target is {@condition 魅惑} or {@condition 恐惧} by you (your choice) for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a successful save."
 			]
 		},
 		{
@@ -10216,7 +10216,7 @@
 			"header": 2,
 			"entries": [
 				"{@i 7th-level Swarmkeeper feature}",
-				"You can condense part of your swarm into a focused mass that lifts you up. As a bonus action, you gain a flying speed of 10 feet and can hover. This effect lasts for 1 minute or until you are {@condition incapacitated}.",
+				"You can condense part of your swarm into a focused mass that lifts you up. As a bonus action, you gain a flying speed of 10 feet and can hover. This effect lasts for 1 minute or until you are {@condition 无力}.",
 				"You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
 			]
 		},
@@ -10237,7 +10237,7 @@
 					"type": "list",
 					"items": [
 						"The damage of Gathered Swarm increases to {@dice 1d8}.",
-						"If a creature fails its saving throw against being moved by Gathered Swarm, you can also cause the swarm to knock the creature {@condition prone}.",
+						"If a creature fails its saving throw against being moved by Gathered Swarm, you can also cause the swarm to knock the creature {@condition 伏地}.",
 						"When you are moved by Gathered Swarm, it gives you half cover until the start of your next turn."
 					]
 				}
@@ -10336,7 +10336,7 @@
 			"header": 1,
 			"entries": [
 				"{@i 3rd-level Fey Wanderer feature}",
-				"Your experience with the fey has guarded your mind and sharpened your tongue. You have advantage on saving throws against being {@condition charmed} or {@condition frightened}.",
+				"Your experience with the fey has guarded your mind and sharpened your tongue. You have advantage on saving throws against being {@condition 魅惑} or {@condition 恐惧}.",
 				"In addition, you gain proficiency in one of the following skills of your choice: {@skill 欺瞒}, {@skill 表演}, or {@skill 说服}."
 			]
 		},
@@ -10432,7 +10432,7 @@
 			"header": 2,
 			"entries": [
 				"{@i 7th-level Fey Wanderer feature}",
-				"You have learned eerie techniques from both the Gloaming Court and the Summer Court of the Feywild. Once during each of your turns, when you hit a creature with a weapon attack, you can expend a spell slot to deal extra psychic damage. The extra damage is {@damage 3d6} psychic damage and the creature must succeed on a Wisdom saving throw against your spell save DC or be {@condition frightened} of you until the end of your next turn.",
+				"You have learned eerie techniques from both the Gloaming Court and the Summer Court of the Feywild. Once during each of your turns, when you hit a creature with a weapon attack, you can expend a spell slot to deal extra psychic damage. The extra damage is {@damage 3d6} psychic damage and the creature must succeed on a Wisdom saving throw against your spell save DC or be {@condition 恐惧} of you until the end of your next turn.",
 				"In addition, whenever you make a Charisma check, you gain a bonus to the check equal to your Wisdom modifier."
 			]
 		},
@@ -10448,11 +10448,11 @@
 			"header": 2,
 			"entries": [
 				"{@i 11th-level Fey Wanderer feature}",
-				"You learn how to manipulate mind-altering magic, channeling it from your allies toward others. Whenever a creature you can see within 120 feet of you succeeds on a saving throw against being {@condition charmed} or {@condition frightened}, you can use your reaction to force a different creature you can see within 120 feet of you to succeed on a Wisdom saving throw against your spell save DC or suffer your choice of one of the following effects:",
+				"You learn how to manipulate mind-altering magic, channeling it from your allies toward others. Whenever a creature you can see within 120 feet of you succeeds on a saving throw against being {@condition 魅惑} or {@condition 恐惧}, you can use your reaction to force a different creature you can see within 120 feet of you to succeed on a Wisdom saving throw against your spell save DC or suffer your choice of one of the following effects:",
 				{
 					"type": "list",
 					"items": [
-						"The creature is {@condition charmed} or {@condition frightened} by you (your choice) for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a successful save.",
+						"The creature is {@condition 魅惑} or {@condition 恐惧} by you (your choice) for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a successful save.",
 						"The creature takes {@damage 3d10} psychic damage."
 					]
 				}
@@ -10571,7 +10571,7 @@
 				"{@i 3rd-level Drakewarden feature}",
 				"You can magically summon the drake bound to you. As an action, you can summon the drake, which appears in an unoccupied space of your choice that you can see within 30 feet of you.",
 				"The drake is friendly to you and your companions and obeys your commands. See its game statistics in the {@creature Drake Companion|UA2020SubclassesPt5} stat block, which uses your proficiency bonus (PB) in several places. When you summon the drake, choose a damage type listed in its Draconic Essence trait. You can determine the cosmetic characteristics of the drake such as its color, scale texture, or any visible effect of its Draconic Essence; your choice has no effect on its game statistics.",
-				"In combat, the drake shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the {@action 闪避} action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. If you are {@condition incapacitated}, the drake can take any action of its choice, not just {@action 闪避}.",
+				"In combat, the drake shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the {@action 闪避} action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. If you are {@condition 无力}, the drake can take any action of its choice, not just {@action 闪避}.",
 				"Once you summon the drake, you can't do so again until you finish a long rest, unless you expend a spell slot of 1st level or higher to summon it.",
 				"The drake remains for a number of hours equal to your proficiency bonus, until it is reduced to 0 hit points, until you use this feature to summon the drake again, or until you die. Anything the drake was wearing or carrying is left behind when the drake vanishes."
 			]
@@ -10970,7 +10970,7 @@
 			"header": 2,
 			"entries": [
 				"{@i 15th-level Swarmkeeper feature}",
-				"Your swarm can expel a seething storm of spirits that drains life from others. As an action, you create a magical sphere filled with an enraged swarm centered on a point you can see within 120 feet of you. The sphere has a 10-foot-radius and lasts for 1 minute. The sphere is difficult terrain for creatures other than you. A creature other than you that starts its turn in the sphere's area must make a Constitution saving throw against your spell save DC. On a failed save, the creature takes {@damage 2d8} necrotic damage and is {@condition blinded} until the start of its next turn. On a successful save, it takes half as much damage and isn't {@condition blinded}. At the start of your turn, if any number of Small or larger creatures took necrotic damage from the swarm, you regain {@dice 1d8} hit points. On subsequent turns, you can use a bonus action to move the sphere up to 30 feet.",
+				"Your swarm can expel a seething storm of spirits that drains life from others. As an action, you create a magical sphere filled with an enraged swarm centered on a point you can see within 120 feet of you. The sphere has a 10-foot-radius and lasts for 1 minute. The sphere is difficult terrain for creatures other than you. A creature other than you that starts its turn in the sphere's area must make a Constitution saving throw against your spell save DC. On a failed save, the creature takes {@damage 2d8} necrotic damage and is {@condition 目盲} until the start of its next turn. On a successful save, it takes half as much damage and isn't {@condition 目盲}. At the start of your turn, if any number of Small or larger creatures took necrotic damage from the swarm, you regain {@dice 1d8} hit points. On subsequent turns, you can use a bonus action to move the sphere up to 30 feet.",
 				"When you activate this feature, you can choose any number of creatures you can see to be unaffected by it.",
 				"Once you use this feature, you can't do so again until you finish a long rest. You can also use it again by expending a spell slot of 4th level or higher."
 			]
@@ -11228,7 +11228,7 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"Starting at 3rd level, you gain the ability to temporarily grow and take on the appearance of a treelike person, covered with leaves and bark. As a bonus action, you assume this guardian form, which lasts until you end it as a bonus action or until you are {@condition incapacitated}.",
+				"Starting at 3rd level, you gain the ability to temporarily grow and take on the appearance of a treelike person, covered with leaves and bark. As a bonus action, you assume this guardian form, which lasts until you end it as a bonus action or until you are {@condition 无力}.",
 				"You undergo the following changes while in your guardian form:",
 				{
 					"type": "list",
@@ -12090,7 +12090,7 @@
 			"header": 1,
 			"entries": [
 				"At 3rd level, you gain {@sense 黑暗视觉} out to a range of 60 feet. If you already have {@sense 黑暗视觉} from your race, its range increases by 30 feet.",
-				"You are also adept at evading creatures that rely on {@sense 黑暗视觉}. While in darkness, you are {@condition invisible} to any creature that relies on {@sense 黑暗视觉} to see you in that darkness."
+				"You are also adept at evading creatures that rely on {@sense 黑暗视觉}. While in darkness, you are {@condition 隐形} to any creature that relies on {@sense 黑暗视觉} to see you in that darkness."
 			]
 		},
 		{

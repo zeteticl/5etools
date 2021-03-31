@@ -389,7 +389,7 @@
 							"id": "01e",
 							"entries": [
 								"Rising from the marsh mere yards from Leilon, Idol Island contains the remains of crumbled statues of forgotten human nobles. The settlers claim to hear voices whispering from the island at night, inviting them to view their destinies. If the characters walk by the island at night, they hear these whispers as well.",
-								"A character who spends the night on the island taking a long rest has vague, prophetic dreams of adventures to come. For instance, the character might view the face of an ancient green dragon, a horde of zombies, or a sahuagin attack. At the end of the rest, the character must make a DC 13 Wisdom saving throw. On a success, the character is bolstered by the strange dreams and gains inspiration. On a failure, the character gains a level of {@condition exhaustion}."
+								"A character who spends the night on the island taking a long rest has vague, prophetic dreams of adventures to come. For instance, the character might view the face of an ancient green dragon, a horde of zombies, or a sahuagin attack. At the end of the rest, the character must make a DC 13 Wisdom saving throw. On a success, the character is bolstered by the strange dreams and gains inspiration. On a failure, the character gains a level of {@condition 力竭}."
 							]
 						},
 						{
@@ -851,7 +851,7 @@
 											"name": "Stair Trap",
 											"id": "048",
 											"entries": [
-												"A {@spell 侦测魔法} spell reveals that the stairs radiate an aura of enchantment magic. A creature that is not a metallic dragon that touches the stairs must succeed on a DC 15 Charisma saving throw or be {@condition charmed} for 1 hour. While {@condition charmed} in this way, the creature feels an overwhelming urge to drown itself and does everything in its power to do so. A creature that succeeds on the saving throw or speaks aloud the nickname \"Mother Wyrm\" in Draconic while in this chamber is immune to the effect of the stairs for 24 hours."
+												"A {@spell 侦测魔法} spell reveals that the stairs radiate an aura of enchantment magic. A creature that is not a metallic dragon that touches the stairs must succeed on a DC 15 Charisma saving throw or be {@condition 魅惑} for 1 hour. While {@condition 魅惑} in this way, the creature feels an overwhelming urge to drown itself and does everything in its power to do so. A creature that succeeds on the saving throw or speaks aloud the nickname \"Mother Wyrm\" in Draconic while in this chamber is immune to the effect of the stairs for 24 hours."
 											]
 										}
 									]
@@ -907,7 +907,7 @@
 												},
 												"When the dragon notices the characters, she begins muttering out loud to herself, wondering if the characters are intruders or friends. Each round, a character must speak with Lhammaruntosz as an action, and succeed on a DC 18 Charisma ({@skill 说服}) check to keep her from attacking. If the characters fail a check, attack the dragon or the alkilith, or the initiative count reaches 0 and no character has successfully made the check that round, Lhammaruntosz attacks.",
 												"A character who succeeds on a DC 20 Intelligence ({@skill 奥秘}) check knows the barnacles are a madness-inducing demon called an alkilith.",
-												"The characters can alleviate Lhammaruntosz of her madness temporarily by casting {@spell 安定心神}, which suppresses it. However, a greater restoration spell is required to cure her permanently unless the characters manage to destroy the alkilith, which also cures the dragon's madness. When Lhammaruntosz's madness is cured, she immediately falls {@condition unconscious} for 5 minutes while her mind heals.",
+												"The characters can alleviate Lhammaruntosz of her madness temporarily by casting {@spell 安定心神}, which suppresses it. However, a greater restoration spell is required to cure her permanently unless the characters manage to destroy the alkilith, which also cures the dragon's madness. When Lhammaruntosz's madness is cured, she immediately falls {@condition 昏迷} for 5 minutes while her mind heals.",
 												"If the characters cure Lhammaruntosz and the alkilith is still alive, it attacks, fighting to the death."
 											]
 										}
@@ -1196,7 +1196,7 @@
 									"id": "06b",
 									"entries": [
 										"The remains of ghouls, skeletons, zombies, and some other undead lay scattered across this cavern, torn to pieces by Claugiyliamatar. A creature with a passive Wisdom ({@skill 察觉}) score of 17 of higher notices that the surfaces of the chamber are covered with a very fine green dust. This dust is made of tiny, hallucinogenic spores created by moss in the chamber. A {@spell 侦测魔法} spell reveals that the moss and spores radiate auras of enchantment magic.",
-										"Whenever a creature enters this cavern, it must make a DC 15 Constitution saving throw. On a success, the creature is immune to the effect of the spores for 24 hours. On a failed save, the creature is {@condition poisoned} for 1 minute. While {@condition poisoned}, the creature is delirious and feels the need to frolic. At the start of its turn, the {@condition poisoned} creature rolls on the Frolic Direction table and moves its full speed in a direction indicated by the roll. The creature moves in a straight line that direction without regard for its own safety, stumbling into hazards and obstacles or over ledges. If a creature runs into a statue, stalagmite, or wall and still has movement left, the creature takes {@dice 1d6} bludgeoning damage per 10 feet of remaining movement (rounded down). The creature can repeat the saving throw at the end of its turns, ending the effect on a success.",
+										"Whenever a creature enters this cavern, it must make a DC 15 Constitution saving throw. On a success, the creature is immune to the effect of the spores for 24 hours. On a failed save, the creature is {@condition 中毒} for 1 minute. While {@condition 中毒}, the creature is delirious and feels the need to frolic. At the start of its turn, the {@condition 中毒} creature rolls on the Frolic Direction table and moves its full speed in a direction indicated by the roll. The creature moves in a straight line that direction without regard for its own safety, stumbling into hazards and obstacles or over ledges. If a creature runs into a statue, stalagmite, or wall and still has movement left, the creature takes {@dice 1d6} bludgeoning damage per 10 feet of remaining movement (rounded down). The creature can repeat the saving throw at the end of its turns, ending the effect on a success.",
 										{
 											"type": "table",
 											"caption": "Frolic Direction",
@@ -1272,7 +1272,7 @@
 									"entries": [
 										"Webs cover the walls and ceilings of this chamber. Sajia Hurwi and Zuri Kimyak (see the \"{@area Gnawbones Druids|062|x}\" sidebar) feed ghoul remains to the {@creature Phase Spider||phase spiders} living in this cavern. There is one phase spider plus one additional phase spider per member of the party, not including sidekicks. The spiders and druids attack when they notice the characters. The druids command the spiders to push the characters into the webs.",
 										"If the characters defeat Sajia and Zuri and the phase spiders are not in the presence of Claugiyliamatar or other Gnawbones druids, a character who uses an action to make a successful DC 15 Wisdom ({@skill 驯兽}) convinces the spider to stop attacking. The spider resumes its attack if it is damaged, threatened, or commanded to do so by Claugiyliamatar or a Gnawbones druid.",
-										"A creature that touches the webs on the walls must succeed on a DC 12 Dexterity saving throw or become {@condition restrained}. A {@condition restrained} creature can use its action to try to escape, freeing itself with a successful DC 12 Strength ({@skill 运动}) or Dexterity ({@skill 体操}) check. A creature that can reach the {@condition restrained} creature can also make this check as an action, freeing the {@condition restrained} creature on a success."
+										"A creature that touches the webs on the walls must succeed on a DC 12 Dexterity saving throw or become {@condition 束缚}. A {@condition 束缚} creature can use its action to try to escape, freeing itself with a successful DC 12 Strength ({@skill 运动}) or Dexterity ({@skill 体操}) check. A creature that can reach the {@condition 束缚} creature can also make this check as an action, freeing the {@condition 束缚} creature on a success."
 									]
 								},
 								{
@@ -1288,7 +1288,7 @@
 									"name": "C8. Slime Pools",
 									"id": "070",
 									"entries": [
-										"These pools bubble with a dark green slime and are 15 feet deep. Swimming through the viscous slime requires a successful DC 12 Strength ({@skill 运动}) check. A creature that fails this check is {@condition restrained} by the slime and sinks {@dice 1d4 + 1} feet into the pool. At the start of the creature's turns, it sinks another {@dice 1d4} feet. As long as the creature isn't completely submerged in the slime, it can escape by using its action and succeeding on a Strength ({@skill 运动}) check. The DC is 12 plus the number of feet the creature has sunk into the slime. A creature fully submerged in slime can't breathe (see \"{@book Suffocating|PHB|8|Suffocating}\" in chapter 8 of the {@book Player's Handbook|PHB}).",
+										"These pools bubble with a dark green slime and are 15 feet deep. Swimming through the viscous slime requires a successful DC 12 Strength ({@skill 运动}) check. A creature that fails this check is {@condition 束缚} by the slime and sinks {@dice 1d4 + 1} feet into the pool. At the start of the creature's turns, it sinks another {@dice 1d4} feet. As long as the creature isn't completely submerged in the slime, it can escape by using its action and succeeding on a Strength ({@skill 运动}) check. The DC is 12 plus the number of feet the creature has sunk into the slime. A creature fully submerged in slime can't breathe (see \"{@book Suffocating|PHB|8|Suffocating}\" in chapter 8 of the {@book Player's Handbook|PHB}).",
 										"A creature can pull another creature within its reach out of a slime pool by using its action and succeeding on a Strength ({@skill 运动}) check. The DC is 7 plus the number of feet the target creature has sunk into the slime.",
 										"A creature that comes into contact with the slime takes 11 ({@dice 2d10}) acid damage. The creature takes this damage again at the start of each of its turns until the slime is scraped off or destroyed.",
 										{
@@ -1326,7 +1326,7 @@
 									"name": "C9. Zuri's Hidden Hoard",
 									"id": "074",
 									"entries": [
-										"A 5-foot-square patch of moss in the center of this area hides a spiked pit trap. A creature notices the moss is not actually attached to the ground with a successful DC 15 Wisdom ({@skill 察觉}) check. A Medium or smaller creature that steps on the moss falls 10 feet onto the {@condition poisoned} spikes at the pit's bottom, taking 3 ({@dice 1d6}) bludgeoning damage and 11 ({@dice 2d10}) piercing damage, and it must make a DC 13 Constitution saving throw, taking 22 ({@dice 4d10}) poison damage on a failed save, or half as much damage on a successful one.",
+										"A 5-foot-square patch of moss in the center of this area hides a spiked pit trap. A creature notices the moss is not actually attached to the ground with a successful DC 15 Wisdom ({@skill 察觉}) check. A Medium or smaller creature that steps on the moss falls 10 feet onto the {@condition 中毒} spikes at the pit's bottom, taking 3 ({@dice 1d6}) bludgeoning damage and 11 ({@dice 2d10}) piercing damage, and it must make a DC 13 Constitution saving throw, taking 22 ({@dice 4d10}) poison damage on a failed save, or half as much damage on a successful one.",
 										{
 											"type": "entries",
 											"name": "Treasure",
@@ -1716,7 +1716,7 @@
 									"name": "D1. Coastal Rocks",
 									"id": "09a",
 									"entries": [
-										"The dreadnaught rests on slippery sea rocks that are regularly dashed by waves. These rocks count as difficult terrain. During combat, any creature that ends its turn on the rocks must roll a die: on an odd result, a wave smashes into them and they must succeed on a DC 15 Strength saving throw or fall {@condition prone}."
+										"The dreadnaught rests on slippery sea rocks that are regularly dashed by waves. These rocks count as difficult terrain. During combat, any creature that ends its turn on the rocks must roll a die: on an odd result, a wave smashes into them and they must succeed on a DC 15 Strength saving throw or fall {@condition 伏地}."
 									]
 								},
 								{
@@ -1842,7 +1842,7 @@
 									"name": "D12. Badwind's Cabin",
 									"id": "0a9",
 									"entries": [
-										"This cabin is occupied by Fheralai's second-in-command, Gol Badwind, a grossly fat, grumpy half-orc male {@creature blackguard|VGM}. Badwind is the cultists' quartermaster.If the characters slay him, all anchorites left onboard become {@condition frightened} of them.",
+										"This cabin is occupied by Fheralai's second-in-command, Gol Badwind, a grossly fat, grumpy half-orc male {@creature blackguard|VGM}. Badwind is the cultists' quartermaster.If the characters slay him, all anchorites left onboard become {@condition 恐惧} of them.",
 										{
 											"type": "entries",
 											"name": "Treasure",
@@ -2132,7 +2132,7 @@
 									"id": "0c8",
 									"entries": [
 										"The Chimera Crew dug a 10-foot-deep pit trap with a 10-foot-square opening in the ground along the hole in the north wall. The pit is covered by a large tarp anchored on the pit's edge and camouflaged with dirt and debris. A creature with a passive Wisdom ({@skill 察觉}) score of 14 or higher notices the pit.",
-										"Any creature that steps on the tarp falls into the pit and pulls the tarp with it, taking 3 ({@dice 1d6}) bludgeoning damage and landing {@condition prone}. The bottom of the pit contains a {@creature swarm of poisonous snakes}. Climbing the walls of the pit without equipment requires a successful DC 15 Strength ({@skill 运动}) check."
+										"Any creature that steps on the tarp falls into the pit and pulls the tarp with it, taking 3 ({@dice 1d6}) bludgeoning damage and landing {@condition 伏地}. The bottom of the pit contains a {@creature swarm of poisonous snakes}. Climbing the walls of the pit without equipment requires a successful DC 15 Strength ({@skill 运动}) check."
 									]
 								},
 								{
@@ -2181,7 +2181,7 @@
 											"name": "Slippery Mud",
 											"id": "0ce",
 											"entries": [
-												"When a creature standing in the courtyard is hit by an attack that is a critical hit, the target must succeed on a DC 15 Dexterity saving throw or fall {@condition prone}."
+												"When a creature standing in the courtyard is hit by an attack that is a critical hit, the target must succeed on a DC 15 Dexterity saving throw or fall {@condition 伏地}."
 											]
 										}
 									]
@@ -2502,7 +2502,7 @@
 											"type": "list",
 											"items": [
 												"The shark is undead and doesn't require air, food, drink, or sleep.",
-												"The shark is vulnerable to bludgeoning damage, immune to poison damage and the {@condition poisoned} condition, and cannot gain levels of {@condition exhaustion}.",
+												"The shark is vulnerable to bludgeoning damage, immune to poison damage and the {@condition 中毒} condition, and cannot gain levels of {@condition 力竭}.",
 												"The shark has had skeletal feet attached by some demented necromancer and gains a walking speed of 20 feet."
 											]
 										}

@@ -53,7 +53,7 @@
 				{
 					"name": "Whispering Aura (Star Spawn Only)",
 					"entries": [
-						"At the start of each of the aberration's turns, each creature within 5 feet of it must succeed on a Wisdom saving throw against your spell save DC or take {@damage 3d6} psychic damage, provided that the aberration isn't {@condition incapacitated}."
+						"At the start of each of the aberration's turns, each creature within 5 feet of it must succeed on a Wisdom saving throw against your spell save DC or take {@damage 3d6} psychic damage, provided that the aberration isn't {@condition 无力}."
 					]
 				}
 			],
@@ -164,7 +164,7 @@
 				{
 					"name": "Pack Tactics (Land and Water Only)",
 					"entries": [
-						"The beast has advantage on an attack roll against a creature if at least one of the beast's allies is within 5 feet of the creature and the ally isn't {@condition incapacitated}."
+						"The beast has advantage on an attack roll against a creature if at least one of the beast's allies is within 5 feet of the creature and the ally isn't {@condition 无力}."
 					]
 				}
 			],
@@ -467,7 +467,7 @@
 				{
 					"name": "Ecstatic Step (Joyful Only)",
 					"entries": [
-						"Immediately after using its Fey Step, the fey can choose a creature it can see within 10 feet of it and force it to succeed on a Wisdom saving throw against your spell save DC or be {@condition charmed} by the fey for 1 minute. The charm ends if the fey or any of its companions deals any damage to the target."
+						"Immediately after using its Fey Step, the fey can choose a creature it can see within 10 feet of it and force it to succeed on a Wisdom saving throw against your spell save DC or be {@condition 魅惑} by the fey for 1 minute. The charm ends if the fey or any of its companions deals any damage to the target."
 					]
 				},
 				{
@@ -700,7 +700,7 @@
 				{
 					"name": "Bloodthirsty Frenzy (Fury Only)",
 					"entries": [
-						"The spirit has advantage on attack rolls against {@condition frightened} creatures."
+						"The spirit has advantage on attack rolls against {@condition 恐惧} creatures."
 					]
 				},
 				{
@@ -732,7 +732,7 @@
 				{
 					"name": "Dreadful Scream (1/Day)",
 					"entries": [
-						"The spirit screams. Each creature within 30 feet of it must succeed on a Wisdom saving throw against your spell save DC or be {@condition frightened} of the spirit for 1 minute. The {@condition frightened} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"The spirit screams. Each creature within 30 feet of it must succeed on a Wisdom saving throw against your spell save DC or be {@condition 恐惧} of the spirit for 1 minute. The {@condition 恐惧} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				}
 			],
@@ -815,7 +815,7 @@
 				{
 					"name": "Festering Aura (Putrid Only)",
 					"entries": [
-						"Any creature, other than you, that starts its turn within 5 feet of the undead must succeed on a Constitution saving throw against your spell save DC or be {@condition poisoned} until the start of its next turn."
+						"Any creature, other than you, that starts its turn within 5 feet of the undead must succeed on a Constitution saving throw against your spell save DC or be {@condition 中毒} until the start of its next turn."
 					]
 				}
 			],
@@ -829,7 +829,7 @@
 				{
 					"name": "Deathly Touch (Ghostly Only)",
 					"entries": [
-						"{@atk mw} +3 + the spell's level to hit, reach 5 ft., one creature. {@h}{@damage 1d8 + 3} + the spell's level necrotic damage, and the creature must succeed on a Wisdom saving throw against your spell save DC or be {@condition frightened} of the undead until the end of the target's next turn."
+						"{@atk mw} +3 + the spell's level to hit, reach 5 ft., one creature. {@h}{@damage 1d8 + 3} + the spell's level necrotic damage, and the creature must succeed on a Wisdom saving throw against your spell save DC or be {@condition 恐惧} of the undead until the end of the target's next turn."
 					]
 				},
 				{
@@ -841,7 +841,7 @@
 				{
 					"name": "Rotting Claw (Putrid Only)",
 					"entries": [
-						"{@atk mw} +3 + the spell's level to hit, reach 5 ft., one target. {@h}{@damage 1d6 + 3} + the spell's level slashing damage. If the target is {@condition poisoned}, it must succeed on a Constitution saving throw against your spell save DC or be {@condition paralyzed} until the end of its next turn."
+						"{@atk mw} +3 + the spell's level to hit, reach 5 ft., one target. {@h}{@damage 1d6 + 3} + the spell's level slashing damage. If the target is {@condition 中毒}, it must succeed on a Constitution saving throw against your spell save DC or be {@condition 麻痹} until the end of its next turn."
 					]
 				}
 			],

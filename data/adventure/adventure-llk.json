@@ -947,7 +947,7 @@
 									"type": "insetReadaloud",
 									"id": "05e",
 									"entries": [
-										"This massive chamber is filled with the deafening hum and roar of machinery. Piles of rough rock ore are spread throughout the area, around which a prisoner work gang toils in the sweltering heat. Smooth metallic columns rise to the ceiling, with open hatches set into their sides at ground level. Haggard prisoners frantically shovel ore into these hatches, which pulse with a deep-red glow. As you watch, a prisoner collapses from {@condition exhaustion}. Under orders from the overseeing monks, other workers toss his body out of the way into a corner for a quick and callous disposal."
+										"This massive chamber is filled with the deafening hum and roar of machinery. Piles of rough rock ore are spread throughout the area, around which a prisoner work gang toils in the sweltering heat. Smooth metallic columns rise to the ceiling, with open hatches set into their sides at ground level. Haggard prisoners frantically shovel ore into these hatches, which pulse with a deep-red glow. As you watch, a prisoner collapses from {@condition 力竭}. Under orders from the overseeing monks, other workers toss his body out of the way into a corner for a quick and callous disposal."
 									]
 								},
 								"The fuel originally carried by the planar craft has long been exhausted, and prisoners now shovel low-grade ore mined from the surrounding mountains into the furnaces beneath this area. The powerful fires of those furnaces keep the monastery in the air, and instantly destroy anything thrown into their open vents.",
@@ -1111,7 +1111,7 @@
 											"name": "Negotiating with the Brains",
 											"id": "072",
 											"entries": [
-												"The brains in their jars are currently engaged in running the monastery, and each deactivates the floating disks it controls in response to any attempt by the characters to enter the treasury. However, the brains can be {@condition charmed}, intimidated, cajoled, or negotiated with to keep their floating disks active. If the characters negotiate poorly, or if any brains are destroyed, certain disks deactivate\u2014and reaching the treasury becomes a greater challenge.",
+												"The brains in their jars are currently engaged in running the monastery, and each deactivates the floating disks it controls in response to any attempt by the characters to enter the treasury. However, the brains can be {@condition 魅惑}, intimidated, cajoled, or negotiated with to keep their floating disks active. If the characters negotiate poorly, or if any brains are destroyed, certain disks deactivate\u2014and reaching the treasury becomes a greater challenge.",
 												"In order to persuade the brains to keep all the floating disks active, the characters must succeed on five DC 15 Charisma ({@skill 欺瞒}, {@skill 威吓}, or {@skill 说服}) checks. Any character proficient in these skills can attempt a check or use the {@action 协助} action to provide advantage on another character's check. For each failure, one brain deactivates both its disks.",
 												"If the players enjoy extended dialog and more social encounters, you can have them interact with each brain separately. With a successful DC 12 Intelligence ({@skill 调查}) or Wisdom ({@skill 洞悉}) check, a character talking to a brain discovers its specific knowledge (see the table below), including which skill has the best chance to convince a brain to keep its disks active. If that check is subsequently failed, both of that specific brain's disks are deactivated.",
 												"If brain number 2 or any three other brains are destroyed or disconnected, the monastery's systems begin to fail over a 24-hour period. When those systems fail completely after that point, the monastery plunges into the valley to be destroyed, along with any creatures still inside it."
@@ -1399,7 +1399,7 @@
 											"name": "Horrid Statues",
 											"id": "08a",
 											"entries": [
-												"The glass statues that fill Daoine Gloine are the city's sacrificial victims, forced into intricate poses and {@condition petrified} (or, rather, vitrified) by the cult of the medusa. Many of the statues above the ooze show chips and cracks from long years of weathering. But below the ooze, most of the well-protected statues are perfectly intact and appear uncannily lifelike. Many are kenku (the last inhabitants of the city before Kwalish and the ooze arrived), but explorers and mountain folk of many other races have also been trapped forever in glass."
+												"The glass statues that fill Daoine Gloine are the city's sacrificial victims, forced into intricate poses and {@condition 石化} (or, rather, vitrified) by the cult of the medusa. Many of the statues above the ooze show chips and cracks from long years of weathering. But below the ooze, most of the well-protected statues are perfectly intact and appear uncannily lifelike. Many are kenku (the last inhabitants of the city before Kwalish and the ooze arrived), but explorers and mountain folk of many other races have also been trapped forever in glass."
 											]
 										},
 										{
@@ -1509,8 +1509,8 @@
 													"items": [
 														"It is undead.",
 														"It is immune to necrotic and poison damage.",
-														"It is immune to {@condition exhaustion} and the {@condition poisoned} condition.",
-														"Its Petrifying Gaze feature turns {@condition petrified} creatures to glass instead of stone."
+														"It is immune to {@condition 力竭} and the {@condition 中毒} condition.",
+														"Its Petrifying Gaze feature turns {@condition 石化} creatures to glass instead of stone."
 													]
 												}
 											]
@@ -1812,7 +1812,7 @@
 												[
 													"12",
 													"A crystal ball held by a statue of a medusa",
-													"The characters appear in a version of the tomb of the medusa ({@area area O4|08f|x}), in which Gloine Nathair-Nathair is still alive. (The {@creature Medusa} uses normal statistics, but its Petrifying Gaze feature transforms {@condition petrified} victims to glass.) A ceremony is underway as the characters arrive, with phantom victims being led before the medusa. If the creature is allowed to vitrify those victims, the extradimensional gateway is breached and the illusory surroundings are flooded by ooze, with effects as you determine."
+													"The characters appear in a version of the tomb of the medusa ({@area area O4|08f|x}), in which Gloine Nathair-Nathair is still alive. (The {@creature Medusa} uses normal statistics, but its Petrifying Gaze feature transforms {@condition 石化} victims to glass.) A ceremony is underway as the characters arrive, with phantom victims being led before the medusa. If the creature is allowed to vitrify those victims, the extradimensional gateway is breached and the illusory surroundings are flooded by ooze, with effects as you determine."
 												]
 											]
 										}
@@ -2829,7 +2829,7 @@
 						],
 						[
 							"96",
-							"A deranged transmuter had a secret lab somewhere in the Barrier Peaks, folk say. No one's found it yet\u2014but adventurers have spotted a creature in the mountains partway between a sloth and a porcupine, attacking with razor sharp claws and {@condition poisoned} quills."
+							"A deranged transmuter had a secret lab somewhere in the Barrier Peaks, folk say. No one's found it yet\u2014but adventurers have spotted a creature in the mountains partway between a sloth and a porcupine, attacking with razor sharp claws and {@condition 中毒} quills."
 						],
 						[
 							"97",
@@ -2837,7 +2837,7 @@
 						],
 						[
 							"98",
-							"A hidden glade of {@condition petrified} trees in the Barrier Peaks is tended by a stone giant dreamwalker."
+							"A hidden glade of {@condition 石化} trees in the Barrier Peaks is tended by a stone giant dreamwalker."
 						],
 						[
 							"99",

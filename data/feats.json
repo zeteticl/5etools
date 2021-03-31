@@ -760,7 +760,7 @@
 					"type": "list",
 					"items": [
 						"You gain proficiency in the {@skill 说服} skill. If you are already proficient in the skill, you add double your proficiency bonus to checks you make with it.",
-						"If you spend 1 minute talking to someone who can understand what you say, you can make a Charisma ({@skill 说服}) check contested by the creature's Wisdom ({@skill 洞悉}) check. If you or your companions are fighting the creature, your check automatically fails. If your check succeeds, the target is {@condition charmed} by you as long as it remains within 60 feet of you and for 1 minute thereafter."
+						"If you spend 1 minute talking to someone who can understand what you say, you can make a Charisma ({@skill 说服}) check contested by the creature's Wisdom ({@skill 洞悉}) check. If you or your companions are fighting the creature, your check automatically fails. If your check succeeds, the target is {@condition 魅惑} by you as long as it remains within 60 feet of you and for 1 minute thereafter."
 					]
 				}
 			]
@@ -2206,7 +2206,7 @@
 					"type": "list",
 					"items": [
 						"You gain a +1 bonus to attack rolls you make with the weapon.",
-						"Whenever you have advantage on a melee attack roll you make with the weapon and hit, you can knock the target {@condition prone} if the lower of the two {@dice d20} rolls would also hit the target.",
+						"Whenever you have advantage on a melee attack roll you make with the weapon and hit, you can knock the target {@condition 伏地} if the lower of the two {@dice d20} rolls would also hit the target.",
 						"Whenever you have disadvantage on a melee attack roll you make with the weapon, the target takes bludgeoning damage equal to your Strength modifier (minimum of 0) if the attack misses but the higher of the two {@dice d20} rolls would have hit.",
 						"If you use the {@action 协助} action to aid an ally's melee attack while you're wielding the weapon, you knock the target's shield aside momentarily. In addition to the ally gaining advantage on the attack roll, the ally gains a +2 bonus to the roll if the target is using a shield."
 					]
@@ -2449,7 +2449,7 @@
 					"items": [
 						"You gain a +1 bonus to attack rolls you make with a flail.",
 						"As a bonus action on your turn, you can prepare yourself to extend your flail to sweep over targets' {@item shield|phb|shields}. Until the end of this turn, your attack rolls with a flail gain a +2 bonus against any target using a {@item shield|phb}.",
-						"When you hit with an opportunity attack using a flail, the target must succeed on a Strength saving throw (DC 8 + your proficiency bonus + your Strength modifier) or be knocked {@condition prone}."
+						"When you hit with an opportunity attack using a flail, the target must succeed on a Strength saving throw (DC 8 + your proficiency bonus + your Strength modifier) or be knocked {@condition 伏地}."
 					]
 				}
 			]
@@ -2546,7 +2546,7 @@
 					"type": "list",
 					"items": [
 						"You gain proficiency with {@item 厨师工具|phb}. If you are already proficient with them, you add double your proficiency bonus to checks you make with them.",
-						"As an action, you can inspect a drink or plate of food within 5 feet of you and determine whether it is {@condition poisoned}, provided that you can see and smell it.",
+						"As an action, you can inspect a drink or plate of food within 5 feet of you and determine whether it is {@condition 中毒}, provided that you can see and smell it.",
 						"During a long rest, you can prepare and serve a meal that helps you and your allies recover from the rigors of adventuring, provided you have suitable food, {@item 厨师工具|phb}, and other supplies on hand. The meal serves up to six people, and each person who eats it regains two additional Hit Dice at the end of the long rest. In addition, those who partake of the meal have advantage on Constitution saving throws against disease for the next 24 hours."
 					]
 				}
@@ -3281,7 +3281,7 @@
 					"type": "list",
 					"items": [
 						"You gain proficiency in the {@skill 威吓} skill. If you are already proficient in the skill, you add double your proficiency bonus to checks you make with it.",
-						"When you take the {@action 攻击} action on your turn, you can replace one attack with an attempt to demoralize one humanoid you can see within 30 feet of you that can see and hear you. Make a Charisma ({@skill 威吓}) check contested by the target's Wisdom ({@skill 洞悉}) check. If your check succeeds, the target is {@condition frightened} until the end of your next turn. If your check fails, the target can't be {@condition frightened} by you in this way for 1 hour."
+						"When you take the {@action 攻击} action on your turn, you can replace one attack with an attempt to demoralize one humanoid you can see within 30 feet of you that can see and hear you. Make a Charisma ({@skill 威吓}) check contested by the target's Wisdom ({@skill 洞悉}) check. If your check succeeds, the target is {@condition 恐惧} until the end of your next turn. If your check fails, the target can't be {@condition 恐惧} by you in this way for 1 hour."
 					]
 				}
 			]
@@ -3732,7 +3732,7 @@
 					"items": [
 						"When you make a damage roll, you ignore resistance to poison damage.",
 						"You can coat a weapon in poison as a bonus action, instead of an action.",
-						"You gain proficiency with the {@item 制毒工具|phb} if you don't already have it. With one hour of work using a {@item 制毒工具|PHB} and expending 50 gp worth of materials, you can create a number of doses of potent poison equal to your proficiency bonus. Once applied, the poison retains potency for 1 minute, or until you hit with the weapon. When a weapon coated in this poison deals damage to a creature, that creature must succeed on a DC 14 Constitution saving throw or take {@damage 2d8} poison damage and become {@condition poisoned} until the end of your next turn."
+						"You gain proficiency with the {@item 制毒工具|phb} if you don't already have it. With one hour of work using a {@item 制毒工具|PHB} and expending 50 gp worth of materials, you can create a number of doses of potent poison equal to your proficiency bonus. Once applied, the poison retains potency for 1 minute, or until you hit with the weapon. When a weapon coated in this poison deals damage to a creature, that creature must succeed on a DC 14 Constitution saving throw or take {@damage 2d8} poison damage and become {@condition 中毒} until the end of your next turn."
 					]
 				}
 			]
@@ -5137,7 +5137,7 @@
 				{
 					"type": "list",
 					"items": [
-						"You learn the {@spell 法师之手} cantrip. You can cast it without verbal or somatic components, and you can make the spectral hand {@condition invisible}. If you already know this spell, its range increases by 30 feet when you cast it. Its spellcasting ability is the ability increased by this feat.",
+						"You learn the {@spell 法师之手} cantrip. You can cast it without verbal or somatic components, and you can make the spectral hand {@condition 隐形}. If you already know this spell, its range increases by 30 feet when you cast it. Its spellcasting ability is the ability increased by this feat.",
 						"As a bonus action, you can try to telekinetically shove one creature you can see within 30 feet of you. When you do so, roll your Psionic Talent die, and the target must succeed on a Strength saving throw (DC 8 + your proficiency bonus + the ability modifier of the score increased by this feat) or be moved toward you or away from you a number of feet equal to 5 times the number you rolled. A creature can willingly fail this save."
 					]
 				}
@@ -5434,7 +5434,7 @@
 			"page": 2,
 			"entries": [
 				"{@note This feat is presented as an illustrative example of a poorly-designed feat, and is not intended to be used in play. The {@feat Fell Handed|UAFeats} feat is presented as a well-designed implementation of the same ideas, and should be used instead.}",
-				"When you hit a creature with a {@item warhammer|phb}, the  creature must succeed on a Strength saving  throw (DC 8 + your proficiency bonus + your  Strength modifier) or be knocked {@condition prone}.",
+				"When you hit a creature with a {@item warhammer|phb}, the  creature must succeed on a Strength saving  throw (DC 8 + your proficiency bonus + your  Strength modifier) or be knocked {@condition 伏地}.",
 				"In addition, you can use your warhammer to  knock away a foe's shield. If you hit a creature  that's using a shield, you can have the attack deal  no damage and force the creature to drop its  shield."
 			]
 		},

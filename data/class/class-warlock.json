@@ -3041,7 +3041,7 @@
 			"header": 2,
 			"entries": [
 				"{@i 10th-level Noble Genie feature}",
-				"As an action, you attempt to send a creature you can see within 90 feet to your patron's court. The target must succeed on a Charisma saving throw against your warlock spell save DC or be magically drawn into your vessel and teleported to your patron's court in the Elemental Planes. While there, the target is {@condition stunned} and your patron marvels at the target with amusement but brings no harm to it. The target can repeat the saving throw at the end of each of its turns, reappearing in the space it left or in the nearest unoccupied space if that space is occupied on a success.",
+				"As an action, you attempt to send a creature you can see within 90 feet to your patron's court. The target must succeed on a Charisma saving throw against your warlock spell save DC or be magically drawn into your vessel and teleported to your patron's court in the Elemental Planes. While there, the target is {@condition 震慑} and your patron marvels at the target with amusement but brings no harm to it. The target can repeat the saving throw at the end of each of its turns, reappearing in the space it left or in the nearest unoccupied space if that space is occupied on a success.",
 				"Once you use this feature, you can't use it again until you finish a long rest. If the target remains in your patron's court for 1 minute, the genie sends the target back at the end of its turn as if it successfully saved, and you regain the use of this feature."
 			]
 		},
@@ -3076,7 +3076,7 @@
 				{
 					"type": "list",
 					"items": [
-						"A creature you can see within 60 feet of you regains {@dice 8d6} hit points and ends one disease or condition afflicting it: {@condition blinded}, {@condition charmed}, {@condition deafened}, {@condition frightened}, {@condition paralyzed}, or {@condition poisoned}.",
+						"A creature you can see within 60 feet of you regains {@dice 8d6} hit points and ends one disease or condition afflicting it: {@condition 目盲}, {@condition 魅惑}, {@condition 耳聋}, {@condition 恐惧}, {@condition 麻痹}, or {@condition 中毒}.",
 						"A creature you can see within 60 feet of you has disadvantage on attack rolls and saving throws until the start of your next turn.",
 						"You cast the {@spell 通晓传奇} spell without material components."
 					]
@@ -3160,8 +3160,8 @@
 					"type": "list",
 					"items": [
 						"You gain temporary hit points equal to {@dice 1d10} + your warlock level.",
-						"Once during each of your turns, when you hit a creature with an attack, you can force it to make a Wisdom saving throw, and if the saving throw fails, the target is {@condition frightened} of you until the end of your next turn.",
-						"You are immune to the {@condition frightened} condition."
+						"Once during each of your turns, when you hit a creature with an attack, you can force it to make a Wisdom saving throw, and if the saving throw fails, the target is {@condition 恐惧} of you until the end of your next turn.",
+						"You are immune to the {@condition 恐惧} condition."
 					]
 				},
 				"You can transform a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.",
@@ -3197,7 +3197,7 @@
 			"entries": [
 				"{@i 10th-level Undead feature}",
 				"Your connection to undeath and necrotic energy now saturates your body. You have resistance to necrotic damage. If you are transformed using your Form of Dread, you instead become immune to necrotic damage.",
-				"In addition, when you are reduced to 0 hit points, you can cause your body to explode. Each creature within 30 feet of you takes necrotic damage equal to {@dice 2d10} + your warlock level. You then revive with 1 hit point in your previous space, along with your gear, and you gain 1 level of {@condition exhaustion}. Once you revive this way, you can't do so again until you finish {@dice 1d4} long rests."
+				"In addition, when you are reduced to 0 hit points, you can cause your body to explode. Each creature within 30 feet of you takes necrotic damage equal to {@dice 2d10} + your warlock level. You then revive with 1 hit point in your previous space, along with your gear, and you gain 1 level of {@condition 力竭}. Once you revive this way, you can't do so again until you finish {@dice 1d4} long rests."
 			]
 		},
 		{
@@ -3212,7 +3212,7 @@
 			"header": 2,
 			"entries": [
 				"{@i 14th-level Undead feature}",
-				"Your body is now simply a vessel for your spirit. As an action, you can project your spirit from your body. The body you leave behind is {@condition unconscious} and in a state of suspended animation.",
+				"Your body is now simply a vessel for your spirit. As an action, you can project your spirit from your body. The body you leave behind is {@condition 昏迷} and in a state of suspended animation.",
 				"Your spirit can remain outside your body for up to 1 hour or until your concentration is broken (as if concentrating on a spell). When your projection ends, your spirit returns to your body or your body magically teleports to your spirit's space (your choice).",
 				"While projecting your spirit, you gain the following benefits:",
 				{
@@ -3603,7 +3603,7 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Starting at 6th level, the radiant energy you channel allows you to overcome grievous injuries. When you would make a death saving throw, you can instead spring back to your feet with a burst of radiant energy. You immediately stand up (if you so choose), and you regain hit points equal to half your hit point maximum. All hostile creatures within 30 feet of you take 10 + your Charisma modifier radiant damage and are {@condition blinded} until the end of your turn.",
+				"Starting at 6th level, the radiant energy you channel allows you to overcome grievous injuries. When you would make a death saving throw, you can instead spring back to your feet with a burst of radiant energy. You immediately stand up (if you so choose), and you regain hit points equal to half your hit point maximum. All hostile creatures within 30 feet of you take 10 + your Charisma modifier radiant damage and are {@condition 目盲} until the end of your turn.",
 				"Once you use this feature, you can't use it again until you finish a long rest."
 			]
 		},
@@ -3904,7 +3904,7 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"Starting at 14th level, the radiant energy you channel allows you to overcome grievous injuries. When you have to make a death saving throw at the start of your turn, you can instead spring back to your feet with a burst of radiant energy. You regain hit points equal to half your hit point maximum, and then you stand up, if you so choose. Each creature of your choice that is within 30 feet of you takes radiant damage equal to {@dice 2d8} + your Charisma modifier, and it is {@condition blinded} until the end of the current turn.",
+				"Starting at 14th level, the radiant energy you channel allows you to overcome grievous injuries. When you have to make a death saving throw at the start of your turn, you can instead spring back to your feet with a burst of radiant energy. You regain hit points equal to half your hit point maximum, and then you stand up, if you so choose. Each creature of your choice that is within 30 feet of you takes radiant damage equal to {@dice 2d8} + your Charisma modifier, and it is {@condition 目盲} until the end of the current turn.",
 				"Once you use this feature, you can't use it again until you finish a long rest."
 			]
 		},
@@ -4072,7 +4072,7 @@
 			"header": 2,
 			"entries": [
 				"{@i 10th-level Lurker in the Deep feature}",
-				"Starting at 10th level, you can magically draw forth a manifestation of your patron's insatiable hunger. As an action, choose a point you can see within 60 feet of you. For 1 minute, a translucent maw manifests in a 10-foot radius centered on that point. Each creature in that area when the maw appears must succeed on a Strength saving throw against your spell save DC or be {@condition restrained}. Any creature that starts its turn in the maw's area takes {@damage 3d6} cold or lightning damage (your choice when it takes the damage). As an action, a {@condition restrained} creature can repeat the saving throw, ending the restraint on a success. At the start of your turn, if there is a creature in the maw's area, you gain temporary hit points equal to your warlock level.",
+				"Starting at 10th level, you can magically draw forth a manifestation of your patron's insatiable hunger. As an action, choose a point you can see within 60 feet of you. For 1 minute, a translucent maw manifests in a 10-foot radius centered on that point. Each creature in that area when the maw appears must succeed on a Strength saving throw against your spell save DC or be {@condition 束缚}. Any creature that starts its turn in the maw's area takes {@damage 3d6} cold or lightning damage (your choice when it takes the damage). As an action, a {@condition 束缚} creature can repeat the saving throw, ending the restraint on a success. At the start of your turn, if there is a creature in the maw's area, you gain temporary hit points equal to your warlock level.",
 				"Once you use this feature, you can't do so again until you finish a short or long rest."
 			]
 		},
@@ -4100,7 +4100,7 @@
 					"type": "entries",
 					"name": "Fury",
 					"entries": [
-						"You can direct a barrage of spectral tentacles to issue forth and strike up to five creatures you can see within 30 feet of the manifestation point. Each target must make a Dexterity saving throw against your spell save DC. On a failed save, the creature takes {@damage 6d10} cold or lightning damage (your choice) and is knocked {@condition prone}. On a successful save, it takes half as much damage and is not knocked {@condition prone}. The tentacles then vanish."
+						"You can direct a barrage of spectral tentacles to issue forth and strike up to five creatures you can see within 30 feet of the manifestation point. Each target must make a Dexterity saving throw against your spell save DC. On a failed save, the creature takes {@damage 6d10} cold or lightning damage (your choice) and is knocked {@condition 伏地}. On a successful save, it takes half as much damage and is not knocked {@condition 伏地}. The tentacles then vanish."
 					]
 				}
 			]
@@ -4335,7 +4335,7 @@
 			"header": 2,
 			"entries": [
 				"Starting at 6th level, your shadow can split from you and transform into a hound of pure darkness. Most of the time, your shadow hound masquerades as your normal shadow. As a bonus action, you can command it to magically slip into the shadow of a creature you can see within 60 feet of you. While the shadow hound is merged in this manner, the target can't gain the benefits of half cover or three-quarters cover against your attack rolls, and you know the distance and direction to the target even if it is hidden. The hound can't be seen by anyone but you and those with {@sense 真实视觉}, and it is unaffected by light. The target has a vague feeling of dread while the hound is present.",
-				"As a bonus action, you can command your shadow hound to return to you. It also automatically returns to you if you and the target are on different planes of existence, if you're {@condition incapacitated}, or if dispel magic, {@spell 移除诅咒}, or similar magic is used on the target."
+				"As a bonus action, you can command your shadow hound to return to you. It also automatically returns to you if you and the target are on different planes of existence, if you're {@condition 无力}, or if dispel magic, {@spell 移除诅咒}, or similar magic is used on the target."
 			]
 		},
 		{
@@ -4437,7 +4437,7 @@
 			"header": 1,
 			"entries": [
 				"Starting at 1st level, you gain the service of a spirit sent by the Raven Queen to watch over you. The spirit assumes the form and game statistics of a {@creature raven}, and it always obeys your commands, which you can give telepathically while it is within 100 feet of you.",
-				"While the raven is perched on your shoulder, you gain {@sense 黑暗视觉} with a range of 30 feet and a bonus to your passive Wisdom ({@skill 察觉}) score and to Wisdom ({@skill 察觉}) checks. The bonus equals your Charisma modifier. While perched on your shoulder, the raven can't be targeted by any attack or other harmful effect; only you can cast spells on it; it can't take damage; and it is {@condition incapacitated}.",
+				"While the raven is perched on your shoulder, you gain {@sense 黑暗视觉} with a range of 30 feet and a bonus to your passive Wisdom ({@skill 察觉}) score and to Wisdom ({@skill 察觉}) checks. The bonus equals your Charisma modifier. While perched on your shoulder, the raven can't be targeted by any attack or other harmful effect; only you can cast spells on it; it can't take damage; and it is {@condition 无力}.",
 				"You can see through the raven's eyes and hear what it hears while it is within 100 feet of you. In combat, you roll initiative for the raven and control how it acts. If it is slain by a creature, you gain advantage on all attack rolls against the killer for the next 24 hours.",
 				"The raven doesn't require sleep. While it is within 100 feet of you, it can awaken you from sleep as a bonus action. The raven vanishes when it dies, if you die, or if the two of you are separated by more than 5 miles.",
 				"At the end of a short or long rest, you can call the raven back to you\u2014no matter where it is or whether it died\u2014and it reappears within 5 feet of you."
@@ -4468,7 +4468,7 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"At 10th level, the Raven Queen grants you a protective blessing. You gain advantage on death saving throws, immunity to the {@condition frightened} condition, and resistance to necrotic damage."
+				"At 10th level, the Raven Queen grants you a protective blessing. You gain advantage on death saving throws, immunity to the {@condition 恐惧} condition, and resistance to necrotic damage."
 			]
 		},
 		{

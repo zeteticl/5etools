@@ -715,7 +715,7 @@
 					"type": "entries",
 					"name": "Reforged",
 					"entries": [
-						"While holding the hammer, you have resistance to fire damage and are immune to {@condition exhaustion}. Additionally, you have proficiency with smith's tools and have advantage on all ability checks made using them."
+						"While holding the hammer, you have resistance to fire damage and are immune to {@condition 力竭}. Additionally, you have proficiency with smith's tools and have advantage on all ability checks made using them."
 					]
 				},
 				{
@@ -1247,11 +1247,11 @@
 						],
 						[
 							"71-95",
-							"You are {@condition paralyzed} for 1 minute or until this effect is ended with a {@spell 次级复原术} spell or similar magic."
+							"You are {@condition 麻痹} for 1 minute or until this effect is ended with a {@spell 次级复原术} spell or similar magic."
 						],
 						[
 							"96-00",
-							"You become {@condition petrified}. This effect can be ended only with a {@spell 高等复原术} spell or similar magic."
+							"You become {@condition 石化}. This effect can be ended only with a {@spell 高等复原术} spell or similar magic."
 						]
 					]
 				}
@@ -1499,7 +1499,7 @@
 					"type": "entries",
 					"name": "Poison Spray",
 					"entries": [
-						"The cannon expels poison gas in a 60-foot cone. Each creature in that area must make a DC 15 Constitution saving throw. On a failed save, the creature takes 22 ({@damage 4d10}) poison damage and is {@condition poisoned} for 1 minute. On a successful save, the creature takes half as much damage and isn't {@condition poisoned}. A creature {@condition poisoned} in this way can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"The cannon expels poison gas in a 60-foot cone. Each creature in that area must make a DC 15 Constitution saving throw. On a failed save, the creature takes 22 ({@damage 4d10}) poison damage and is {@condition 中毒} for 1 minute. On a successful save, the creature takes half as much damage and isn't {@condition 中毒}. A creature {@condition 中毒} in this way can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				}
 			]
@@ -2759,7 +2759,7 @@
 						],
 						[
 							"21\u201322",
-							"The {@condition petrified} cocoon of an unknown insect"
+							"The {@condition 石化} cocoon of an unknown insect"
 						],
 						[
 							"23\u201324",
@@ -2779,7 +2779,7 @@
 						],
 						[
 							"31\u201332",
-							"A bead that suppresses your hearing when secreted inside either ear, causing you to be {@condition deafened}"
+							"A bead that suppresses your hearing when secreted inside either ear, causing you to be {@condition 耳聋}"
 						],
 						[
 							"33\u201334",
@@ -3119,7 +3119,7 @@
 			"charges": 3,
 			"entries": [
 				"While holding this iron tower shield, you gain a +1 bonus to AC. This bonus is in addition to the shield's normal bonus to AC.",
-				"Additionally, the shield has 3 charges, and it regains {@dice 1d3} expended charges daily at dawn. If you are holding the shield and push a creature within your reach at least 5 feet away, you can expend 1 charge to push that creature an additional 10 feet, knock it {@condition prone}, or both."
+				"Additionally, the shield has 3 charges, and it regains {@dice 1d3} expended charges daily at dawn. If you are holding the shield and push a creature within your reach at least 5 feet away, you can expend 1 charge to push that creature an additional 10 feet, knock it {@condition 伏地}, or both."
 			]
 		},
 		{
@@ -3130,7 +3130,7 @@
 			"reqAttune": true,
 			"wondrous": true,
 			"entries": [
-				"This hell-forged battle standard is made of infernal iron and fitted with a small, unopenable cage containing a {@creature quasit}. The trapped {@creature quasit} is {@condition incapacitated}, and its cage has AC 19, 10 hit points, and immunity to all types of damage except force damage. If killed or somehow released, the {@creature quasit} disappears in a cloud of smoke, and a new one appears in the cage, provided the cage is intact.",
+				"This hell-forged battle standard is made of infernal iron and fitted with a small, unopenable cage containing a {@creature quasit}. The trapped {@creature quasit} is {@condition 无力}, and its cage has AC 19, 10 hit points, and immunity to all types of damage except force damage. If killed or somehow released, the {@creature quasit} disappears in a cloud of smoke, and a new one appears in the cage, provided the cage is intact.",
 				"While you hold the banner, your weapon attacks and those of all allied creatures within 300 feet of you count as magical for the purposes of overcoming damage immunities and resistances."
 			],
 			"hasFluffImages": true
@@ -3620,8 +3620,8 @@
 			"rarity": "none",
 			"value": 30000,
 			"entries": [
-				"This tarry substance harvested from the dark boughs of the death's head willow is a powerful intoxicant. It can be smoked as a concentrate or injected directly into the bloodstream. A creature subjected to a dose of black sap cannot be {@condition charmed} or {@condition frightened} for {@dice 1d6} hours.",
-				"For each dose of black sap consumed, a creature must succeed on a DC 15 Constitution saving throw or become {@condition poisoned} for {@dice 2d4} hours\u2014an effect that is cumulative with multiple doses."
+				"This tarry substance harvested from the dark boughs of the death's head willow is a powerful intoxicant. It can be smoked as a concentrate or injected directly into the bloodstream. A creature subjected to a dose of black sap cannot be {@condition 魅惑} or {@condition 恐惧} for {@dice 1d6} hours.",
+				"For each dose of black sap consumed, a creature must succeed on a DC 15 Constitution saving throw or become {@condition 中毒} for {@dice 2d4} hours\u2014an effect that is cumulative with multiple doses."
 			]
 		},
 		{
@@ -3888,7 +3888,7 @@
 					"type": "entries",
 					"name": "Ruler of Avernus",
 					"entries": [
-						"As an action, you can point this sword at one devil you can see within 60 feet of you. That devil must succeed on a DC 22 Charisma saving throw or be {@condition charmed} by you for 1 hour. While {@condition charmed} in this way, the devil follows your orders to the best of its ability. If you command the devil to do something it perceives as suicidal, the effect ends and you can no longer use this power of the sword against that devil."
+						"As an action, you can point this sword at one devil you can see within 60 feet of you. That devil must succeed on a DC 22 Charisma saving throw or be {@condition 魅惑} by you for 1 hour. While {@condition 魅惑} in this way, the devil follows your orders to the best of its ability. If you command the devil to do something it perceives as suicidal, the effect ends and you can no longer use this power of the sword against that devil."
 					]
 				},
 				{
@@ -3987,7 +3987,7 @@
 							"items": [
 								"The weapon's bonus to attack and damage rolls increases to +3.",
 								"The saving throw DC for spells cast from the dagger increases to 17.",
-								"While holding the dagger, you can turn {@condition invisible} as an action. Anything you are wearing or carrying is {@condition invisible} with you. You remain {@condition invisible} until you stop holding the dagger, until you attack or cast a spell that forces a creature to make a saving throw, or until you use a bonus action to become visible again."
+								"While holding the dagger, you can turn {@condition 隐形} as an action. Anything you are wearing or carrying is {@condition 隐形} with you. You remain {@condition 隐形} until you stop holding the dagger, until you attack or cast a spell that forces a creature to make a saving throw, or until you use a bonus action to become visible again."
 							]
 						}
 					]
@@ -4058,7 +4058,7 @@
 			"rarity": "none",
 			"value": 20000,
 			"entries": [
-				"This bitter chartreuse concoction is distilled from a fungus native to the Blightshore badlands. The sickly green liqueur harbors potent psychedelic properties. Provided it is neither a construct nor undead, a creature subjected to a dose of blight ichor gains advantage on Intelligence and Wisdom checks, as well as vulnerability to psychic damage, for 1 hour. For each dose of blight ichor consumed, the creature must succeed on a DC 15 Constitution saving throw or become {@condition poisoned} for {@dice 1d6} hours and suffer the effects of a confusion spell for 1 minute. An undead creature subjected to a dose of blight ichor gains advantage on all Dexterity checks and is immune to the {@condition frightened} condition for 1 hour."
+				"This bitter chartreuse concoction is distilled from a fungus native to the Blightshore badlands. The sickly green liqueur harbors potent psychedelic properties. Provided it is neither a construct nor undead, a creature subjected to a dose of blight ichor gains advantage on Intelligence and Wisdom checks, as well as vulnerability to psychic damage, for 1 hour. For each dose of blight ichor consumed, the creature must succeed on a DC 15 Constitution saving throw or become {@condition 中毒} for {@dice 1d6} hours and suffer the effects of a confusion spell for 1 minute. An undead creature subjected to a dose of blight ichor gains advantage on all Dexterity checks and is immune to the {@condition 恐惧} condition for 1 hour."
 			]
 		},
 		{
@@ -4161,7 +4161,7 @@
 			"rarity": "none",
 			"poison": true,
 			"entries": [
-				"This poison is created from blood harvested from a dead or {@condition incapacitated} lycanthrope in its animal or hybrid form. A creature subjected to this poison must succeed on a DC 12 Constitution saving throw or be cursed with lycanthropy (see the Monster Manual). The curse lasts until removed by the {@spell 移除诅咒} spell or similar magic.",
+				"This poison is created from blood harvested from a dead or {@condition 无力} lycanthrope in its animal or hybrid form. A creature subjected to this poison must succeed on a DC 12 Constitution saving throw or be cursed with lycanthropy (see the Monster Manual). The curse lasts until removed by the {@spell 移除诅咒} spell or similar magic.",
 				"The type of lycanthropy depends on the lycanthrope used to create the poison. To determine the type of lycanthropy randomly, roll a d6:",
 				{
 					"type": "table",
@@ -4860,12 +4860,12 @@
 			"curse": true,
 			"weight": 1,
 			"entries": [
-				"While you wear this gold bracelet, it grants you immunity to being {@condition petrified}, and it allows you to cast {@spell 石化术} (save DC 15) as an action. Once the spell has been cast three times, the bracelet can no longer cast it. Thereafter, you can cast {@spell 塑石术} as an action. After you have done this thirteen times, the bracelet loses its magic and turns from gold to lead.",
+				"While you wear this gold bracelet, it grants you immunity to being {@condition 石化}, and it allows you to cast {@spell 石化术} (save DC 15) as an action. Once the spell has been cast three times, the bracelet can no longer cast it. Thereafter, you can cast {@spell 塑石术} as an action. After you have done this thirteen times, the bracelet loses its magic and turns from gold to lead.",
 				{
 					"type": "entries",
 					"name": "Curse",
 					"entries": [
-						"The bracelet's affinity with earth manifests as an unusual curse. Creatures of flesh that are strongly related to earth and stone, such as stone giants and dwarves, have advantage on the saving throw against {@spell 石化术} cast from the bracelet. If such a creature's save is successful, the bracelet breaks your attunement to it and casts the spell on you. You make your saving throw with disadvantage, and on a failed save you are {@condition petrified} instantly."
+						"The bracelet's affinity with earth manifests as an unusual curse. Creatures of flesh that are strongly related to earth and stone, such as stone giants and dwarves, have advantage on the saving throw against {@spell 石化术} cast from the bracelet. If such a creature's save is successful, the bracelet breaks your attunement to it and casts the spell on you. You make your saving throw with disadvantage, and on a failed save you are {@condition 石化} instantly."
 					]
 				}
 			],
@@ -6715,7 +6715,7 @@
 					"type": "entries",
 					"name": "Maintain Shoes",
 					"entries": [
-						"As part of a long rest, you can repair your companions' shoes. For the next 24 hours, up to six creatures of your choice who wear shoes you worked on can travel up to 10 hours a day without making saving throws to avoid {@condition exhaustion}."
+						"As part of a long rest, you can repair your companions' shoes. For the next 24 hours, up to six creatures of your choice who wear shoes you worked on can travel up to 10 hours a day without making saving throws to avoid {@condition 力竭}."
 					]
 				},
 				{
@@ -6935,7 +6935,7 @@
 				"A concertina is a less charming kind of accordion.",
 				"In addition to knocking out a killer polka, a creature playing the concertina can use an action to cause an area of mist or water up to 30 feet in diameter and 6 inches deep to freeze solid.",
 				"Once used, this feature of the concertina can't be used again until the next dawn.",
-				"Any creatures touching the floor must succeed on a DC 20 Dexterity saving throw or be restrained by the ice. As an action, a {@condition restrained} creature can attempt to free itself or another creature within its reach from the ice, doing so with a successful DC 20 Strength ({@skill 运动}) check. A character freed from the ice is no longer restrained by it. The ice melts in an hour."
+				"Any creatures touching the floor must succeed on a DC 20 Dexterity saving throw or be restrained by the ice. As an action, a {@condition 束缚} creature can attempt to free itself or another creature within its reach from the ice, doing so with a successful DC 20 Strength ({@skill 运动}) check. A character freed from the ice is no longer restrained by it. The ice melts in an hour."
 			]
 		},
 		{
@@ -7203,7 +7203,7 @@
 			"weight": 0.25,
 			"value": 200,
 			"entries": [
-				"A crampon is a metal plate with spikes that is strapped to the sole of a boot. A creature wearing crampons can't fall {@condition prone} while moving across {@hazard slippery ice}."
+				"A crampon is a metal plate with spikes that is strapped to the sole of a boot. A creature wearing crampons can't fall {@condition 伏地} while moving across {@hazard slippery ice}."
 			]
 		},
 		{
@@ -7751,8 +7751,8 @@
 			"rarity": "unknown (magic)",
 			"value": 500,
 			"entries": [
-				"This rare magical fruit produces enough juice to fill a vial. Any humanoid that eats a dancing monkey fruit or drinks its juice must succeed on a DC 14 Constitution saving throw or begin a comic dance that lasts for 1 minute. Humanoids that can't be {@condition poisoned} are immune to this magical effect.",
-				"The dancer must use all its movement to dance without leaving its space and has disadvantage on attack rolls and Dexterity saving throws, and other creatures have advantage on attack rolls against it. Each time it takes damage, the dancer can repeat the saving throw, ending the effect on itself on a success. When the dancing effect ends, the humanoid suffers the {@condition poisoned} condition for 1 hour."
+				"This rare magical fruit produces enough juice to fill a vial. Any humanoid that eats a dancing monkey fruit or drinks its juice must succeed on a DC 14 Constitution saving throw or begin a comic dance that lasts for 1 minute. Humanoids that can't be {@condition 中毒} are immune to this magical effect.",
+				"The dancer must use all its movement to dance without leaving its space and has disadvantage on attack rolls and Dexterity saving throws, and other creatures have advantage on attack rolls against it. Each time it takes damage, the dancer can repeat the saving throw, ending the effect on itself on a success. When the dancing effect ends, the humanoid suffers the {@condition 中毒} condition for 1 hour."
 			]
 		},
 		{
@@ -7763,7 +7763,7 @@
 			"reqAttune": true,
 			"wondrous": true,
 			"entries": [
-				"These mithral-frame goggles with clear diamond lenses were used by the evoker Danoth Oro to spot {@condition invisible} enemies and scout areas from afar.",
+				"These mithral-frame goggles with clear diamond lenses were used by the evoker Danoth Oro to spot {@condition 隐形} enemies and scout areas from afar.",
 				{
 					"type": "entries",
 					"name": "Dormant",
@@ -7779,7 +7779,7 @@
 						{
 							"type": "list",
 							"items": [
-								"You see {@condition invisible} creatures and objects within 60 feet of you as if they were visible, and you can see into the Ethereal Plane. Ethereal creatures and objects appear ghostly and translucent.",
+								"You see {@condition 隐形} creatures and objects within 60 feet of you as if they were visible, and you can see into the Ethereal Plane. Ethereal creatures and objects appear ghostly and translucent.",
 								"As a bonus action, you can speak a command word and use the goggles to see into and through solid matter. This vision has a radius of 60 feet and lasts for 1 minute. To you, solid objects within that radius appear transparent. The vision can penetrate 1 foot of stone, 1 inch of common metal, or up to 3 feet of wood or dirt. Thicker substances block the vision, as does a thin sheet of lead. This property can't be used again until the next dawn.",
 								"As a bonus action, you can speak a command word to switch the goggles into spyglass mode. While in this mode, creatures and objects viewed through the goggles are magnified to twice their size. Speaking the command word again reverts the goggles to their normal operation."
 							]
@@ -8975,7 +8975,7 @@
 					"type": "entries",
 					"name": "The Void",
 					"entries": [
-						"This black card spells disaster. Your soul is drawn from your body and held within machinery in either the control room of the Monastery of the Distressed Body (area M8) or Kwalish's lab in Daoine Gloine (area O7), whichever comes later in the adventure. While your soul is trapped in this way, your body is {@condition incapacitated}. {@spell 预言术}, {@spell 异界探知}, or a similar spell of 4th level or higher reveals the location of the machinery that holds your soul. You draw no more cards."
+						"This black card spells disaster. Your soul is drawn from your body and held within machinery in either the control room of the Monastery of the Distressed Body (area M8) or Kwalish's lab in Daoine Gloine (area O7), whichever comes later in the adventure. While your soul is trapped in this way, your body is {@condition 无力}. {@spell 预言术}, {@spell 异界探知}, or a similar spell of 4th level or higher reveals the location of the machinery that holds your soul. You draw no more cards."
 					]
 				},
 				{
@@ -9750,8 +9750,8 @@
 				"The low, moaning drone of the Draakhorn discomfits normal animals within a few miles, and it alerts all dragons within two thousand miles to rise and be wary, for great danger is at hand. Coded blasts were once used to signal specific messages. Knowledge of those codes has been lost to the ages.",
 				"Those with knowledge of the Draakhorn's history know that it was first built to signal danger to chromatic dragons\u2014a purpose the Cult of the Dragon has corrupted to call chromatic dragons to the Well of Dragons from across the North.",
 				"Within 50 feet of any enclosed space where the horn is blown, the air begins to shimmer from the sound. Any character within 20 feet of the entry to the enclosed space must succeed on a DC 12 Strength check to continue pushing against the pressure of the sound. A failure indicates the character can advance no farther toward the entry.",
-				"For any character entering the enclosed space, the sound fades to silence\u2014because any creature that enters the enclosed space is temporarily {@condition deafened} and must make a DC 12 Constitution saving throw. Success indicates the deafness ends 2 minutes after the Draakhorn ceases to sound. Failure indicates the character remains {@condition deafened} for 1 hour after the Draakhorn ceases to sound.",
-				"While the horn is sounding, a creature must make a DC 15 Constitution saving throw the first time on a turn the creature enters a 150-foot cone in front of the horn or starts its turn there. On a failed save, the creature takes 27 ({@dice 6d8}) thunder damage and is knocked {@condition prone}. On a successful save, the creature takes half damage and isn't knocked {@condition prone}."
+				"For any character entering the enclosed space, the sound fades to silence\u2014because any creature that enters the enclosed space is temporarily {@condition 耳聋} and must make a DC 12 Constitution saving throw. Success indicates the deafness ends 2 minutes after the Draakhorn ceases to sound. Failure indicates the character remains {@condition 耳聋} for 1 hour after the Draakhorn ceases to sound.",
+				"While the horn is sounding, a creature must make a DC 15 Constitution saving throw the first time on a turn the creature enters a 150-foot cone in front of the horn or starts its turn there. On a failed save, the creature takes 27 ({@dice 6d8}) thunder damage and is knocked {@condition 伏地}. On a successful save, the creature takes half damage and isn't knocked {@condition 伏地}."
 			],
 			"hasFluffImages": true
 		},
@@ -9981,7 +9981,7 @@
 			"type": "OTH",
 			"rarity": "none",
 			"entries": [
-				"A psychoactive liquid that smells and tastes like your favorite beverage, essence of dreamlily is a Sarlonan opiate. First imported to help manage pain during the Last War, it's now the most commonly abused substance in Sharn. Though dreamlily isn't illegal if used for medicinal purposes, it's heavily taxed, and thus most dreamlily is smuggled in and sold on the black market. Dreamlily dens can be found across the lower wards. Consuming dreamlily causes disorienting euphoria and brings about remarkable resistance to pain. A creature under the effects of dreamlily is {@condition poisoned} for 1 hour. While {@condition poisoned} in this way, the creature is immune to fear, and the first time it drops to 0 hit points without being killed outright, it drops to 1 hit point instead. A dose of dreamlily costs around 1 gp, or up to ten times that if purchased through legal channels. There are many varieties of the drug, however, and the duration or the price might vary accordingly."
+				"A psychoactive liquid that smells and tastes like your favorite beverage, essence of dreamlily is a Sarlonan opiate. First imported to help manage pain during the Last War, it's now the most commonly abused substance in Sharn. Though dreamlily isn't illegal if used for medicinal purposes, it's heavily taxed, and thus most dreamlily is smuggled in and sold on the black market. Dreamlily dens can be found across the lower wards. Consuming dreamlily causes disorienting euphoria and brings about remarkable resistance to pain. A creature under the effects of dreamlily is {@condition 中毒} for 1 hour. While {@condition 中毒} in this way, the creature is immune to fear, and the first time it drops to 0 hit points without being killed outright, it drops to 1 hit point instead. A dose of dreamlily costs around 1 gp, or up to ten times that if purchased through legal channels. There are many varieties of the drug, however, and the duration or the price might vary accordingly."
 			]
 		},
 		{
@@ -10384,7 +10384,7 @@
 			"weapon": true,
 			"entries": [
 				"This long, whip-like strand of tough muscle bears a sharp stinger at one end. To attune to this symbiotic weapon, you wrap the whip around your wrist for the entire attunement period, during which time the whip painfully embeds its tendrils into your arm.",
-				"You gain a +2 bonus to attack and damage rolls made with this magic whip, but attack rolls made against aberrations with this weapon have disadvantage. A creature hit by this weapon takes an extra {@dice 1d6} psychic damage. When you roll a 20 on the {@dice d20} for an attack roll with this weapon, the target is {@condition stunned} until the end of its next turn.",
+				"You gain a +2 bonus to attack and damage rolls made with this magic whip, but attack rolls made against aberrations with this weapon have disadvantage. A creature hit by this weapon takes an extra {@dice 1d6} psychic damage. When you roll a 20 on the {@dice d20} for an attack roll with this weapon, the target is {@condition 震慑} until the end of its next turn.",
 				"As a bonus action, you can sheathe the whip by causing it to retract into your arm, or draw the whip out of your arm again.",
 				{
 					"type": "entries",
@@ -11361,8 +11361,8 @@
 							"type": "list",
 							"items": [
 								"You are immune to disease and poison.",
-								"Using the eye's X-ray vision never causes you to suffer {@condition exhaustion}.",
-								"You experience premonitions of danger and, unless you are {@condition incapacitated}, can't be surprised.",
+								"Using the eye's X-ray vision never causes you to suffer {@condition 力竭}.",
+								"You experience premonitions of danger and, unless you are {@condition 无力}, can't be surprised.",
 								"If you start your turn with at least 1 hit point, you regain {@dice 1d10} hit points.",
 								"If a creature has a skeleton, you can attempt to turn its bones to jelly with a touch of the {@item Hand of Vecna}. You can do so by using an action to make a melee attack against a creature you can reach, using your choice of your melee attack bonus for weapons or spells. On a hit, the target must succeed on a DC 18 Constitution saving throw or drop to 0 hit points.",
 								"You can use an action to cast {@spell 祈愿术}. This property can't be used again until 30 days have passed."
@@ -12274,7 +12274,7 @@
 					"type": "list",
 					"items": [
 						"如果你花费1分钟时间研究这本书，你可以消耗1发充能来将你的一道已准备法术替换为书中的另一道法术。新法术必须是塑能学派的法术。",
-						"当一个你可见的生物被你所施展的塑能系法术伤害时，你可以用一个反应并消耗1发充能对该生物造成一次额外的 {@damage 2d6} 力场伤害，如果该生物为大型或更小，还会使其 {@condition prone} 。"
+						"当一个你可见的生物被你所施展的塑能系法术伤害时，你可以用一个反应并消耗1发充能对该生物造成一次额外的 {@damage 2d6} 力场伤害，如果该生物为大型或更小，还会使其 {@condition 伏地} 。"
 					]
 				}
 			],
@@ -12464,7 +12464,7 @@
 			"entries": [
 				"A restless spirit is trapped inside this lantern. While holding the lantern, you can command the spirit as a bonus action to shed bright light in a 30-foot radius and dim light for an additional 30 feet.",
 				"While holding the lantern, you can use an action to order the spirit to leave the lantern and duplicate the effect of the {@spell 法师之手} spell. The spirit returns to the lantern when the spell ends.",
-				"If you fall {@condition unconscious} within 10 feet of the lantern, the spirit emerges from it, magically stabilizes you with a touch, and then quickly returns to the lantern.",
+				"If you fall {@condition 昏迷} within 10 feet of the lantern, the spirit emerges from it, magically stabilizes you with a touch, and then quickly returns to the lantern.",
 				"The spirit is bound to the lantern and can't be harmed, turned, or raised from the dead.",
 				"Casting a {@spell 反制善恶} spell on the lantern releases the spirit to the afterlife and renders the lantern nonmagical."
 			],
@@ -12529,7 +12529,7 @@
 					"type": "list",
 					"items": [
 						"You have resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks.",
-						"You can't be {@condition 被擒} or {@condition restrained}.",
+						"You can't be {@condition 被擒} or {@condition 束缚}.",
 						"You can move through creatures and solid objects as if they were difficult terrain. If you end your turn in a solid object, you take {@damage 1d10} force damage. If the effect ends while you are inside a solid object, you instead are shunted to the nearest unoccupied space, and you take {@damage 1d10} force damage for every 5 feet traveled."
 					]
 				},
@@ -12746,7 +12746,7 @@
 					"type": "list",
 					"items": [
 						"Each creature must make a DC 15 Dexterity saving throw, taking 28 (8d6) fire damage on a failed save, or half as much fire damage on a successful one.",
-						"Each creature must make a DC 15 Constitution saving throw. On a failed save, it takes 28 (8d6) thunder damage and is {@condition stunned} until the end of its next turn. On a successful save, it takes half as much thunder damage and is not {@condition stunned}.",
+						"Each creature must make a DC 15 Constitution saving throw. On a failed save, it takes 28 (8d6) thunder damage and is {@condition 震慑} until the end of its next turn. On a successful save, it takes half as much thunder damage and is not {@condition 震慑}.",
 						"The wielder rolls on the chart* for the {@item wand of wonder|dmg} three times, rerolling any duplicate results. Any effects that specify a target affect all creatures in range of the grenade when it explodes. Any effects that would affect the wielder of the wand instead affect the closest creature to the grenade when it goes off."
 					]
 				},
@@ -13513,8 +13513,8 @@
 			"type": "OTH",
 			"rarity": "unknown (magic)",
 			"entries": [
-				"A hag coven can craft a magic item called a hag eye, which is made from a real eye coated in varnish and often fitted to a pendant or other wearable item. The hag eye is usually entrusted to a minion for safekeeping and transport. A hag in the coven can take an action to see what the hag eye sees if the hag eye is on the same plane of existence. A hag eye has AC 10, 1 hit point, and darkvision with a radius of 60 feet. If it is destroyed, each coven member takes {@dice 3d10} psychic damage and is {@condition blinded} for 24 hours.",
-				"A hag coven can have only one hag eye at a time, and creating a new one requires all three members of the coven to perform a ritual. The ritual takes 1 hour, and the hags can't perform it while {@condition blinded}. During the ritual, if the hags take any action other than performing the ritual, they must start over."
+				"A hag coven can craft a magic item called a hag eye, which is made from a real eye coated in varnish and often fitted to a pendant or other wearable item. The hag eye is usually entrusted to a minion for safekeeping and transport. A hag in the coven can take an action to see what the hag eye sees if the hag eye is on the same plane of existence. A hag eye has AC 10, 1 hit point, and darkvision with a radius of 60 feet. If it is destroyed, each coven member takes {@dice 3d10} psychic damage and is {@condition 目盲} for 24 hours.",
+				"A hag coven can have only one hag eye at a time, and creating a new one requires all three members of the coven to perform a ritual. The ritual takes 1 hour, and the hags can't perform it while {@condition 目盲}. During the ritual, if the hags take any action other than performing the ritual, they must start over."
 			]
 		},
 		{
@@ -13639,8 +13639,8 @@
 							"type": "list",
 							"items": [
 								"You are immune to disease and poison.",
-								"Using the eye's X-ray vision never causes you to suffer {@condition exhaustion}.",
-								"You experience premonitions of danger and, unless you are {@condition incapacitated}, can't be surprised.",
+								"Using the eye's X-ray vision never causes you to suffer {@condition 力竭}.",
+								"You experience premonitions of danger and, unless you are {@condition 无力}, can't be surprised.",
 								"If you start your turn with at least 1 hit point, you regain {@dice 1d10} hit points.",
 								"If a creature has a skeleton, you can attempt to turn its bones to jelly with a touch of the Hand of Vecna. You can do so by using an action to make a melee attack against a creature you can reach, using your choice of your melee attack bonus for weapons or spells. On a hit, the target must succeed on a DC 18 Constitution saving throw or drop to 0 hit points.",
 								"You can use an action to cast {@spell 祈愿术}. This property can't be used again until 30 days have passed."
@@ -14453,7 +14453,7 @@
 					"name": "Hold Vampires",
 					"type": "entries",
 					"entries": [
-						"As an action, you can expend 1 charge and present the holy symbol to make it flare with holy power. Vampires and {@creature vampire spawn} within 30 feet of the holy symbol when it flares must make a DC 15 Wisdom saving throw. On a failed save, a target is {@condition paralyzed} for 1 minute. It can repeat the saving throw at the end of its turns to end the effect on itself."
+						"As an action, you can expend 1 charge and present the holy symbol to make it flare with holy power. Vampires and {@creature vampire spawn} within 30 feet of the holy symbol when it flares must make a DC 15 Wisdom saving throw. On a failed save, a target is {@condition 麻痹} for 1 minute. It can repeat the saving throw at the end of its turns to end the effect on itself."
 					]
 				},
 				{
@@ -14532,7 +14532,7 @@
 						[
 							"11-14",
 							"Yellow with black stripes",
-							"Once removed from the hook, this awful-tasting fish can be thrown up to 120 feet, targeting a creature the thrower can see. The target must succeed on a DC 15 Strength saving throw or be knocked {@condition prone}. The fish then disappears."
+							"Once removed from the hook, this awful-tasting fish can be thrown up to 120 feet, targeting a creature the thrower can see. The target must succeed on a DC 15 Strength saving throw or be knocked {@condition 伏地}. The fish then disappears."
 						],
 						[
 							"15-18",
@@ -14982,7 +14982,7 @@
 			"tattoo": true,
 			"entries": [
 				"This tattoo contains beautiful calligraphy, images of writing implements, and the like. While this tattoo is on your skin, you can write with your fingertip as if it were an ink pen that never runs out of ink.",
-				"As an action, you can touch a piece of writing up to one page in length and speak a creature's name. The writing becomes {@condition invisible} to everyone other than you and the named creature for the next 24 hours. Either of you can dismiss the invisibility by touching the script (no action required). Once used, this action can't be used again until the next dawn.",
+				"As an action, you can touch a piece of writing up to one page in length and speak a creature's name. The writing becomes {@condition 隐形} to everyone other than you and the named creature for the next 24 hours. Either of you can dismiss the invisibility by touching the script (no action required). Once used, this action can't be used again until the next dawn.",
 				{
 					"type": "entries",
 					"name": "Tattoo Attunement",
@@ -16288,7 +16288,7 @@
 					"type": "list",
 					"items": [
 						"The serpent is a construct that understands and obeys whoever was holding the staff when it transformed.",
-						"It has immunity to poison damage and the {@condition poisoned} condition. It doesn't require air, food, drink, or sleep.",
+						"It has immunity to poison damage and the {@condition 中毒} condition. It doesn't require air, food, drink, or sleep.",
 						"When it drops to 0 hit points, roll a {@dice d6}. On a roll of 1, the snake turns to dust and is destroyed. On any other roll, it changes back into a staff and breaks into {@dice 1d4 + 1} pieces that must be magically mended before the staff can be used again."
 					]
 				}
@@ -16679,7 +16679,7 @@
 					"type": "entries",
 					"name": "Sun's Retaliation",
 					"entries": [
-						"When you take damage from a creature within 5 feet of you, you can use your reaction to make a melee attack with the spear against that creature. On a hit, the spear deals damage as normal, and the creature is {@condition blinded} until the start of its next turn. This property of the spear can't be used again until the next dawn."
+						"When you take damage from a creature within 5 feet of you, you can use your reaction to make a melee attack with the spear against that creature. On a hit, the spear deals damage as normal, and the creature is {@condition 目盲} until the start of its next turn. This property of the spear can't be used again until the next dawn."
 					]
 				},
 				{
@@ -16780,7 +16780,7 @@
 					"type": "entries",
 					"name": "Resistant",
 					"entries": [
-						"While attuned to Kyrzin's ooze, you have resistance to poison and acid damage, and you're immune to the {@condition poisoned} condition."
+						"While attuned to Kyrzin's ooze, you have resistance to poison and acid damage, and you're immune to the {@condition 中毒} condition."
 					]
 				},
 				{
@@ -17026,7 +17026,7 @@
 										{
 											"type": "item",
 											"name": "Dead Eyes.",
-											"entry": "A creature that fails the saving throw against this poison is {@condition poisoned} for 1 hour. While {@condition poisoned} in this way, the creature is {@condition blinded}."
+											"entry": "A creature that fails the saving throw against this poison is {@condition 中毒} for 1 hour. While {@condition 中毒} in this way, the creature is {@condition 目盲}."
 										},
 										{
 											"type": "item",
@@ -17049,7 +17049,7 @@
 							"items": [
 								"The weapon's bonus to attack and damage rolls increases to +2.",
 								"The saving throw DC for the weapon's poisons increases to 15.",
-								"The weapon gains a new poison option called Ghoul's Blood. A creature that fails the saving throw against this poison is {@condition poisoned} for 1 minute. While {@condition poisoned} in this way, the creature is {@condition paralyzed}. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+								"The weapon gains a new poison option called Ghoul's Blood. A creature that fails the saving throw against this poison is {@condition 中毒} for 1 minute. While {@condition 中毒} in this way, the creature is {@condition 麻痹}. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 							]
 						}
 					]
@@ -17064,7 +17064,7 @@
 							"items": [
 								"The weapon's bonus to attack and damage rolls increases to +3.",
 								"The saving throw DC for the weapon's poisons increases to 17.",
-								"The weapon gains a new poison option called Cockatrice Tears. A creature that fails the saving throw against this poison begins to turn to stone and is {@condition restrained}. It must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is {@condition petrified} for 24 hours."
+								"The weapon gains a new poison option called Cockatrice Tears. A creature that fails the saving throw against this poison begins to turn to stone and is {@condition 束缚}. It must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is {@condition 石化} for 24 hours."
 							]
 						}
 					]
@@ -18725,7 +18725,7 @@
 			"weight": 0.0625,
 			"value": 200,
 			"entries": [
-				"The dried leaves of a menga bush can be ground, dissolved in a liquid, heated, and ingested. A creature that ingests 1 ounce of menga leaves in this fashion regains 1 hit point. A creature that ingests more than 5 ounces of menga leaves in a 24-hour period gains no additional benefit and must succeed on a DC 11 Constitution saving throw or fall {@condition unconscious} for 1 hour. The {@condition unconscious} creature awakens if it takes at least 5 damage on one turn.",
+				"The dried leaves of a menga bush can be ground, dissolved in a liquid, heated, and ingested. A creature that ingests 1 ounce of menga leaves in this fashion regains 1 hit point. A creature that ingests more than 5 ounces of menga leaves in a 24-hour period gains no additional benefit and must succeed on a DC 11 Constitution saving throw or fall {@condition 昏迷} for 1 hour. The {@condition 昏迷} creature awakens if it takes at least 5 damage on one turn.",
 				"A healthy menga bush usually has {@dice 2d6} ounces of leaves. Once picked, the leaves require 1 day to dry out before they can confer any benefit."
 			]
 		},
@@ -18869,7 +18869,7 @@
 			"type": "OTH",
 			"rarity": "unknown (magic)",
 			"entries": [
-				"While you have the skull in your possession, you are {@condition invisible} to mind flayers, as is anything you are wearing or carrying."
+				"While you have the skull in your possession, you are {@condition 隐形} to mind flayers, as is anything you are wearing or carrying."
 			]
 		},
 		{
@@ -20131,7 +20131,7 @@
 			"rarity": "none",
 			"value": 5000,
 			"entries": [
-				"These dried leaves of the Olisuba tree, when steeped to make a tea, can help a body recover from strenuous activity. If you drink a dose of Olisuba tea during a long rest, your {@condition exhaustion} level is reduced by 2 instead of 1 at the end of that long rest."
+				"These dried leaves of the Olisuba tree, when steeped to make a tea, can help a body recover from strenuous activity. If you drink a dose of Olisuba tea during a long rest, your {@condition 力竭} level is reduced by 2 instead of 1 at the end of that long rest."
 			]
 		},
 		{
@@ -20303,8 +20303,8 @@
 				"As the Towers of High Sorcery fell in later ages, the orbs were destroyed or faded into legend, and only three are thought to survive. Their magic has been warped and twisted over the centuries, so although their primary purpose of calling dragons still functions, they also allow some measure of control over dragons.",
 				"Each orb contains the essence of an evil dragon, a presence that resents any attempt to coax magic from it. Those lacking in force of personality might find themselves enslaved to an orb.",
 				"An orb is an etched crystal globe about 10 inches in diameter. When used, it grows to about 20 inches in diameter, and mist swirls inside it.",
-				"While attuned to an orb, you can use an action to peer into the orb's depths and speak its command word. You must then make a DC 15 Charisma check. On a successful check, you control the orb for as long as you remain attuned to it. On a failed check, you become {@condition charmed} by the orb for as long as you remain attuned to it.",
-				"While you are {@condition charmed} by the orb, you can't voluntarily end your attunement to it, and the orb casts {@spell 暗示术} on you at will (save DC 18), urging you to work toward the evil ends it desires. The dragon essence within the orb might want many things: the annihilation of a particular people, freedom from the orb, to spread suffering in the world, to advance the worship of Takhisis ({@creature Tiamat|RoT|Tiamat's} name on Krynn), or something else the DM decides.",
+				"While attuned to an orb, you can use an action to peer into the orb's depths and speak its command word. You must then make a DC 15 Charisma check. On a successful check, you control the orb for as long as you remain attuned to it. On a failed check, you become {@condition 魅惑} by the orb for as long as you remain attuned to it.",
+				"While you are {@condition 魅惑} by the orb, you can't voluntarily end your attunement to it, and the orb casts {@spell 暗示术} on you at will (save DC 18), urging you to work toward the evil ends it desires. The dragon essence within the orb might want many things: the annihilation of a particular people, freedom from the orb, to spread suffering in the world, to advance the worship of Takhisis ({@creature Tiamat|RoT|Tiamat's} name on Krynn), or something else the DM decides.",
 				{
 					"type": "entries",
 					"name": "Random Properties",
@@ -20383,7 +20383,7 @@
 					"type": "entries",
 					"name": "Stone Soul",
 					"entries": [
-						"You can't be {@condition petrified}."
+						"You can't be {@condition 石化}."
 					]
 				},
 				{
@@ -20410,7 +20410,7 @@
 								{
 									"type": "item",
 									"name": "Boots.",
-									"entry": "The pair of boots is now an uncommon magic item that requires attunement. While you wear the boots, you have advantage on Strength saving throws, and you can use your reaction to avoid being knocked {@condition prone}."
+									"entry": "The pair of boots is now an uncommon magic item that requires attunement. While you wear the boots, you have advantage on Strength saving throws, and you can use your reaction to avoid being knocked {@condition 伏地}."
 								}
 							]
 						}
@@ -20441,7 +20441,7 @@
 					"type": "entries",
 					"name": "Stone Soul (Simple Property)",
 					"entries": [
-						"While you are attuned to this rune, you cannot be {@condition petrified}."
+						"While you are attuned to this rune, you cannot be {@condition 石化}."
 					]
 				},
 				{
@@ -20455,7 +20455,7 @@
 					"type": "entries",
 					"name": "Crushing Brand (Complex Property)",
 					"entries": [
-						"Over the course of a short rest, you inscribe this rune using dirt or crushed stone onto one weapon that deals bludgeoning damage. The weapon gains a ghostly brown aura, and bludgeoning damage dealt by the weapon ignores resistance and immunity. If you roll the maximum on the weapon's damage die or dice, the target of your attack is knocked {@condition prone} if it is a creature.",
+						"Over the course of a short rest, you inscribe this rune using dirt or crushed stone onto one weapon that deals bludgeoning damage. The weapon gains a ghostly brown aura, and bludgeoning damage dealt by the weapon ignores resistance and immunity. If you roll the maximum on the weapon's damage die or dice, the target of your attack is knocked {@condition 伏地} if it is a creature.",
 						"In addition, you can expend a spell slot to grant the weapon a bonus to attack rolls and damage rolls equal to the spell slot's level divided by three.",
 						"These effects last for 24 hours or until you use this property again."
 					]
@@ -20471,7 +20471,7 @@
 					"type": "entries",
 					"name": "Overwhelming Bolt (Complex Property)",
 					"entries": [
-						"As an action, you scribe this rune using dirt or crushed rock onto a creature within your reach as you expend a spell slot. The creature must succeed on a Strength saving throw (DC 12 + the level of the expended spell slot). On a failure, the creature takes {@damage 2d8} bludgeoning damage plus {@damage 1d8} bludgeoning damage per level of the expended spell slot and is knocked {@condition prone}. On a successful saving throw, the creature takes half as much damage and is not knocked {@condition prone}."
+						"As an action, you scribe this rune using dirt or crushed rock onto a creature within your reach as you expend a spell slot. The creature must succeed on a Strength saving throw (DC 12 + the level of the expended spell slot). On a failure, the creature takes {@damage 2d8} bludgeoning damage plus {@damage 1d8} bludgeoning damage per level of the expended spell slot and is knocked {@condition 伏地}. On a successful saving throw, the creature takes half as much damage and is not knocked {@condition 伏地}."
 					]
 				}
 			]
@@ -20589,7 +20589,7 @@
 			"rarity": "unknown (magic)",
 			"wondrous": true,
 			"entries": [
-				"Carved from an ogre's {@condition petrified} heart, the gray figurine depicts the Demon Prince of Undeath in ghastly detail, clutching his skull-topped wand in one hand and three severed heads by the hair in the other. The figurine smells like decaying flesh, and this scent is detectable out to a range of 5 feet.",
+				"Carved from an ogre's {@condition 石化} heart, the gray figurine depicts the Demon Prince of Undeath in ghastly detail, clutching his skull-topped wand in one hand and three severed heads by the hair in the other. The figurine smells like decaying flesh, and this scent is detectable out to a range of 5 feet.",
 				"The figurine is a Tiny object with AC 17, 3 hit points, and immunity to all types of damage except radiant damage. A {@spell detect evil and good} spell or similar magic reveals that the figurine has been desecrated. As long as it has at least 1 hit point, the figurine has the following magical properties:",
 				{
 					"type": "list",
@@ -21472,7 +21472,7 @@
 			"bonusWeapon": "+1",
 			"entries": [
 				"You have a +1 bonus to attack and damage rolls made with this magic weapon.",
-				"A character attuned to the sword regains the maximum possible number of hit points from expended Hit Dice. However, the attuned character must eat twice as much food each day (a minimum of 2 pounds) to avoid {@condition exhaustion} (see \"The Environment\" in chapter 8 of the Player's Handbook.)"
+				"A character attuned to the sword regains the maximum possible number of hit points from expended Hit Dice. However, the attuned character must eat twice as much food each day (a minimum of 2 pounds) to avoid {@condition 力竭} (see \"The Environment\" in chapter 8 of the Player's Handbook.)"
 			]
 		},
 		{
@@ -21636,7 +21636,7 @@
 						],
 						[
 							"91-00",
-							"The creature sprinkled with dust becomes {@condition invisible} for 1 hour. Any equipment it is wearing or carrying is {@condition invisible} as long as it is on the creature's person. The effect on the creature ends if it attacks, deals any damage, or casts a spell."
+							"The creature sprinkled with dust becomes {@condition 隐形} for 1 hour. Any equipment it is wearing or carrying is {@condition 隐形} as long as it is on the creature's person. The effect on the creature ends if it attacks, deals any damage, or casts a spell."
 						]
 					]
 				}
@@ -21848,7 +21848,7 @@
 					"type": "entries",
 					"name": "Investigation, Perception",
 					"entries": [
-						"Your knowledge of poisons has taught you to handle those substances carefully, giving you an edge when you inspect {@condition poisoned} objects or try to extract clues from events that involve poison."
+						"Your knowledge of poisons has taught you to handle those substances carefully, giving you an edge when you inspect {@condition 中毒} objects or try to extract clues from events that involve poison."
 					]
 				},
 				{
@@ -21885,7 +21885,7 @@
 					],
 					"rows": [
 						[
-							"Spot a {@condition poisoned} object",
+							"Spot a {@condition 中毒} object",
 							"10"
 						],
 						[
@@ -22067,7 +22067,7 @@
 			"type": "P",
 			"rarity": "rare",
 			"entries": [
-				"When you drink this potion, you transform into a pool of water. You return to your true form after 10 minutes or if you are {@condition incapacitated} or die.",
+				"When you drink this potion, you transform into a pool of water. You return to your true form after 10 minutes or if you are {@condition 无力} or die.",
 				"You're under the following effects while in this form:",
 				{
 					"type": "list",
@@ -22521,7 +22521,7 @@
 			"rarity": "rare",
 			"entries": [
 				"When you drink a potion of mind control, you can cast a dominate spell (save DC 15) on a specific creature if you do so before the end of your next turn. If you don't, the potion is wasted.",
-				"A potion of mind control produces the effect of a {@spell 支配野兽} spell. If the target's initial saving throw fails, the effect lasts for 1 hour, with no concentration required on your part. The {@condition charmed} creature has disadvantage on new saving throws to break the effect during this time."
+				"A potion of mind control produces the effect of a {@spell 支配野兽} spell. If the target's initial saving throw fails, the effect lasts for 1 hour, with no concentration required on your part. The {@condition 魅惑} creature has disadvantage on new saving throws to break the effect during this time."
 			],
 			"attachedSpells": [
 				"dominate beast"
@@ -22535,7 +22535,7 @@
 			"rarity": "rare",
 			"entries": [
 				"When you drink a potion of mind control, you can cast a dominate spell (save DC 15) on a specific creature if you do so before the end of your next turn. If you don't, the potion is wasted.",
-				"A potion of mind control produces the effect of a {@spell 支配人类} spell. If the target's initial saving throw fails, the effect lasts for 1 hour, with no concentration required on your part. The {@condition charmed} creature has disadvantage on new saving throws to break the effect during this time."
+				"A potion of mind control produces the effect of a {@spell 支配人类} spell. If the target's initial saving throw fails, the effect lasts for 1 hour, with no concentration required on your part. The {@condition 魅惑} creature has disadvantage on new saving throws to break the effect during this time."
 			],
 			"attachedSpells": [
 				"dominate person"
@@ -22549,7 +22549,7 @@
 			"rarity": "very rare",
 			"entries": [
 				"When you drink a potion of mind control, you can cast a dominate spell (save DC 15) on a specific creature if you do so before the end of your next turn. If you don't, the potion is wasted.",
-				"A potion of mind control produces the effect of a {@spell 支配怪物} spell. If the target's initial saving throw fails, the effect lasts for 1 hour, with no concentration required on your part. The {@condition charmed} creature has disadvantage on new saving throws to break the effect during this time."
+				"A potion of mind control produces the effect of a {@spell 支配怪物} spell. If the target's initial saving throw fails, the effect lasts for 1 hour, with no concentration required on your part. The {@condition 魅惑} creature has disadvantage on new saving throws to break the effect during this time."
 			],
 			"attachedSpells": [
 				"dominate monster"
@@ -22966,7 +22966,7 @@
 							"type": "entries",
 							"name": "Battle of Wills",
 							"entries": [
-								"When donned by a new user, the armor deems itself superior and attempts to take possession of that user. The user must succeed on a DC 13 Charisma saving throw or be possessed by the armor. While possessed, the user is {@condition incapacitated} and loses control of its body but retains its awareness. The armor uses the possessed user's statistics (as adjusted by the armor), but doesn't gain access to the user's knowledge, features, or proficiencies.",
+								"When donned by a new user, the armor deems itself superior and attempts to take possession of that user. The user must succeed on a DC 13 Charisma saving throw or be possessed by the armor. While possessed, the user is {@condition 无力} and loses control of its body but retains its awareness. The armor uses the possessed user's statistics (as adjusted by the armor), but doesn't gain access to the user's knowledge, features, or proficiencies.",
 								"Freeing a creature trapped inside the armor first requires defeating the armor's automatic defenses (as above). The trapped creature can also attempt a DC 20 Charisma saving throw each day at dawn. On a successful save, the armor no longer controls the creature and can be safely donned by that creature at any time."
 							]
 						},
@@ -23296,7 +23296,7 @@
 					"type": "entries",
 					"name": "Curse",
 					"entries": [
-						"Any creature that gains the benefit of a short rest from the vessel hears cloying telepathic whispers emanating from it. That creature must make a DC 17 Wisdom saving throw. On a failed save, the creature is {@condition charmed} by the vessel for 1 hour. The {@condition charmed} creature does everything it can to open the vessel as soon as possible. On a successful save, the creature is immune to the vessel's whispers for 24 hours."
+						"Any creature that gains the benefit of a short rest from the vessel hears cloying telepathic whispers emanating from it. That creature must make a DC 17 Wisdom saving throw. On a failed save, the creature is {@condition 魅惑} by the vessel for 1 hour. The {@condition 魅惑} creature does everything it can to open the vessel as soon as possible. On a successful save, the creature is immune to the vessel's whispers for 24 hours."
 					]
 				},
 				{
@@ -24481,7 +24481,7 @@
 			"rarity": "rare",
 			"reqAttune": true,
 			"entries": [
-				"If you die while wearing this gray crystal ring, you vanish and reappear in an unoccupied space within 5 feet of the space you left (or the nearest unoccupied space). You have a number of hit points equal to {@dice 3d6} + your Constitution modifier. If your hit point maximum is lower than the number of hit points you regain, your hit point maximum rises to a similar amount. If you have any levels of {@condition exhaustion}, reduce your level of {@condition exhaustion} by 1. Once the ring is used, it turns to dust and is destroyed."
+				"If you die while wearing this gray crystal ring, you vanish and reappear in an unoccupied space within 5 feet of the space you left (or the nearest unoccupied space). You have a number of hit points equal to {@dice 3d6} + your Constitution modifier. If your hit point maximum is lower than the number of hit points you regain, your hit point maximum rises to a similar amount. If you have any levels of {@condition 力竭}, reduce your level of {@condition 力竭} by 1. Once the ring is used, it turns to dust and is destroyed."
 			]
 		},
 		{
@@ -24680,7 +24680,7 @@
 							"items": [
 								"You can expend 1 charge as an action and use the ring to lower the temperature in a 120-foot-radius sphere centered on a point you can see within 300 feet of you. The temperature in that area drops 20 degrees per minute, to a minimum of -30 degrees Fahrenheit. Frost and ice begin to form on surfaces once the temperature drops below 32 degrees. This effect is permanent unless you use the ring to end it as an action, at which point the temperature in the area returns to normal at a rate of 10 degrees per minute.",
 								"You can cast one of the following spells from the ring (spell save DC 17) by expending the necessary number of charges: {@spell 毕格比之掌} (2 charges; the hand is made of ice, is immune to cold damage, and deals bludgeoning damage instead of force damage as a clenched fist), {@spell 寒冰锥} (2 charges), flesh to ice (3 charges; as {@spell 石化术} except that the target turns to solid ice with the density and durability of stone), {@spell 冰风暴} (2 charges), {@spell 欧提路克冰冻法球} (3 charges), {@spell 雪雨暴} (1 charge), {@spell 荆棘丛生} (1 charge; the spikes are made of ice), or {@spell 冰墙术} (2 charges).",
-								"You can expend the necessary number of charges as an action and use the ring to create either an inanimate ice object (2 charges) or an animated ice creature (4 charges). The ice object can't have any moving parts, must be able to fit inside a 10-foot cube, and has the density and durability of metal or stone (your choice). The ice creature must be modeled after a beast with a challenge rating of 2 or less. The ice creature has the same statistics as the beast it models, with the following changes: the creature is a construct with vulnerability to fire damage, immunity to cold and poison damage, and immunity to the following conditions: {@condition charmed}, {@condition exhaustion}, {@condition frightened}, {@condition paralyzed}, {@condition petrified}, and {@condition poisoned}. The ice creature obeys only its creator's commands. The ice object or creature appears in an unoccupied space within 60 feet of you. It melts into a pool of normal water after 24 hours or when it drops to 0 hit points. In extreme heat, it loses 5 ({@dice 1d10}) hit points per minute as it melts. Use the guidelines in chapter 8 of the Dungeon Master's Guide to determine the hit points of an inanimate object if they become necessary."
+								"You can expend the necessary number of charges as an action and use the ring to create either an inanimate ice object (2 charges) or an animated ice creature (4 charges). The ice object can't have any moving parts, must be able to fit inside a 10-foot cube, and has the density and durability of metal or stone (your choice). The ice creature must be modeled after a beast with a challenge rating of 2 or less. The ice creature has the same statistics as the beast it models, with the following changes: the creature is a construct with vulnerability to fire damage, immunity to cold and poison damage, and immunity to the following conditions: {@condition 魅惑}, {@condition 力竭}, {@condition 恐惧}, {@condition 麻痹}, {@condition 石化}, and {@condition 中毒}. The ice creature obeys only its creator's commands. The ice object or creature appears in an unoccupied space within 60 feet of you. It melts into a pool of normal water after 24 hours or when it drops to 0 hit points. In extreme heat, it loses 5 ({@dice 1d10}) hit points per minute as it melts. Use the guidelines in chapter 8 of the Dungeon Master's Guide to determine the hit points of an inanimate object if they become necessary."
 							]
 						}
 					]
@@ -25510,7 +25510,7 @@
 			"rarity": "unknown",
 			"value": 5000,
 			"entries": [
-				"Any creature that ingests a ryath root gains {@dice 2d4} temporary hit points. A creature that consumes more than one ryath root in a 24-hour period must succeed on a DC 13 Constitution saving throw or suffer the {@condition poisoned} condition for 1 hour."
+				"Any creature that ingests a ryath root gains {@dice 2d4} temporary hit points. A creature that consumes more than one ryath root in a 24-hour period must succeed on a DC 13 Constitution saving throw or suffer the {@condition 中毒} condition for 1 hour."
 			]
 		},
 		{
@@ -25601,7 +25601,7 @@
 				"Markovia had long considered Strahd a mad tyrant, but only after his transformation into a {@creature vampire} did she dare to challenge him. As she rallied her followers and prepared to march on Castle Ravenloft, Strahd sent a group of {@creature vampire spawn} to her abbey. They confronted Markovia and were destroyed to a one.",
 				"Suffused with confidence born of a righteous victory, Markovia advanced on Castle Ravenloft. A great battle raged from the catacombs to the parapets. In the end, Markovia never returned to Barovia, and Strahd long afterward walked with a limp and a grimace of pain. It is said that he trapped Markovia in a crypt beneath his castle, and her remains linger there yet.",
 				"The essence of Markovia's saintliness passed partly into her bones as the rest of her body decomposed. Her remaining thighbone is imbued with power that inflicts grievous injury on the undead.",
-				"{@item Mace of Disruption}. When you hit a fiend or an undead with this magic weapon, that creature takes an extra {@dice 2d6} radiant damage. If the target has 25 hit points or fewer after taking this damage, it must succeed on a DC 15 Wisdom saving throw or be destroyed. On a successful save, the creature becomes {@condition frightened} of you until the end of your next turn.",
+				"{@item Mace of Disruption}. When you hit a fiend or an undead with this magic weapon, that creature takes an extra {@dice 2d6} radiant damage. If the target has 25 hit points or fewer after taking this damage, it must succeed on a DC 15 Wisdom saving throw or be destroyed. On a successful save, the creature becomes {@condition 恐惧} of you until the end of your next turn.",
 				"While you hold this weapon, it sheds bright light in a 20-foot radius and dim light for an additional 20 feet."
 			],
 			"hasFluffImages": true
@@ -25737,7 +25737,7 @@
 				{
 					"type": "list",
 					"items": [
-						"The armor improves your combat readiness, granting you a +5 bonus to initiative as long as you aren't {@condition incapacitated}.",
+						"The armor improves your combat readiness, granting you a +5 bonus to initiative as long as you aren't {@condition 无力}.",
 						"The armor doesn't impose disadvantage on your Dexterity ({@skill 隐匿}) checks.",
 						"The armor doesn't impose disadvantage on saving throws made to resist the effects of extreme heat (see chapter 5 of the Dungeon Master's Guide)."
 					]
@@ -25765,8 +25765,8 @@
 			"reqAttune": "by a creature with the Mark of Scribing",
 			"wondrous": true,
 			"entries": [
-				"You can use this pen to write on any surface. You decide whether the writing is visible or {@condition invisible}, but the writing is always visible to a person with the Mark of Scribing.",
-				"Any creature with the Mark of Scribing can use an action to touch the {@condition invisible} writing, making it visible to all.",
+				"You can use this pen to write on any surface. You decide whether the writing is visible or {@condition 隐形}, but the writing is always visible to a person with the Mark of Scribing.",
+				"Any creature with the Mark of Scribing can use an action to touch the {@condition 隐形} writing, making it visible to all.",
 				"If you use the pen to write on a creature that isn't a construct, the writing fades after 7 days."
 			]
 		},
@@ -26413,7 +26413,7 @@
 			"wondrous": true,
 			"entries": [
 				"The amulet is a 4-inch-wide disk composed of silver-framed wood, with a rune carved into its face. A {@spell 侦测魔法} spell reveals a magical aura of enchantment around the amulet.",
-				"Every {@creature shield guardian} has an amulet magically linked to it. A shield guardian can have only one corresponding amulet, and if that amulet is destroyed, the shield guardian is {@condition incapacitated} until a replacement amulet is created.",
+				"Every {@creature shield guardian} has an amulet magically linked to it. A shield guardian can have only one corresponding amulet, and if that amulet is destroyed, the shield guardian is {@condition 无力} until a replacement amulet is created.",
 				"A shield guardian's amulet is subject to direct attack if it isn't being worn or carried. It has AC 10, 10 hit points, and immunity to poison and psychic damage. Crafting an amulet requires 1 week and costs 1,000 gp in components.",
 				"A shield guardian's solitary focus is to protect the amulet's wearer. The amulet's wearer can command the guardian to attack its enemies or to guard the wielder against attack. If an attack threatens to injure the wearer, the construct can magically absorb the blow into its own body, even at a distance.",
 				"A humanoid that attunes to this amulet knows the distance and direction of the shield guardian, provided the amulet and the guardian are on the same plane of existence. As an action, the amulet's attuned wearer can try to reactivate the shield guardian, doing so with a successful DC 20 Intelligence ({@skill 奥秘}) check. Reactivation can only be attempted while the amulet and guardian are within 10 feet of each other."
@@ -26504,7 +26504,7 @@
 								"The shield has an Intelligence of 22, a Wisdom of 18, and a Charisma of 24, as well as hearing and {@sense 真实视觉} out to a range of 120 feet.",
 								"The shield can speak, read, and understand Common and Infernal, and it can communicate telepathically with any creature it can sense within 120 feet of it. Its voice is a deep, hollow whisper.",
 								"The shield has 3 charges. You can use an action to expend 1 charge to cast {@spell 火球术} or 2 charges to cast {@spell 火墙术} from the shield (save DC 21 for each). The {@spell 火墙术} spell lasts for 1 minute (no concentration required). The shield regains all expended charges daily at dawn.",
-								"Anytime during your turn, the shield can choose to radiate an aura of dread for 1 minute. (This is not a power of the shield that you control.) Any creature hostile to you that starts its turn within 20 feet of the shield must make a DC 18 Wisdom saving throw. On a failed save, the creature is {@condition frightened} until the start of its next turn. On a successful save, the creature is immune to this power of the shield for the next 24 hours. Once the shield uses this power, it can't use it again until the next dawn."
+								"Anytime during your turn, the shield can choose to radiate an aura of dread for 1 minute. (This is not a power of the shield that you control.) Any creature hostile to you that starts its turn within 20 feet of the shield must make a DC 18 Wisdom saving throw. On a failed save, the creature is {@condition 恐惧} until the start of its next turn. On a successful save, the creature is immune to this power of the shield for the next 24 hours. Once the shield uses this power, it can't use it again until the next dawn."
 							]
 						}
 					]
@@ -26708,7 +26708,7 @@
 								"You can speak, read, and write Abyssal, Elvish, and Undercommon.",
 								"You have {@sense 黑暗视觉} out to a range of 60 feet. If you already have {@sense 黑暗视觉}, being attuned to the rapier increases the range of your {@sense 黑暗视觉} by 60 feet.",
 								"You gain a +1 bonus to attack and damage rolls made with this magic weapon.",
-								"You can use an action to cause poison to coat the rapier's blade. The poison remains for 1 minute or until an attack using this weapon hits a creature. That creature must succeed on a DC 13 Constitution saving throw or become {@condition poisoned} for 1 hour. If the saving throw fails by 5 or more, the creature is also {@condition unconscious} while {@condition poisoned} in this way. The creature wakes up if it takes damage or if another creature uses its action to shake the creature awake.",
+								"You can use an action to cause poison to coat the rapier's blade. The poison remains for 1 minute or until an attack using this weapon hits a creature. That creature must succeed on a DC 13 Constitution saving throw or become {@condition 中毒} for 1 hour. If the saving throw fails by 5 or more, the creature is also {@condition 昏迷} while {@condition 中毒} in this way. The creature wakes up if it takes damage or if another creature uses its action to shake the creature awake.",
 								"While carrying the rapier, you can move up, down, and across vertical surfaces and upside down along ceilings, while leaving your hands free. You have a climbing speed equal to your walking speed. Additionally, you can't be caught in webs of any sort and can move through webs as if they were difficult terrain."
 							]
 						}
@@ -27002,7 +27002,7 @@
 			"staff": true,
 			"entries": [
 				"You gain a +1 bonus to attack and damage rolls made with this magic quarterstaff. While holding it, you gain a +1 bonus to spell attack rolls.",
-				"If a flying creature you can see within 30 feet of you makes an attack roll against you, you can use your reaction to hold the staff aloft and cause it to flare with light. The attacker has disadvantage on the attack roll, and it must succeed on a DC 15 Constitution saving throw or be {@condition blinded} until the start of its next turn."
+				"If a flying creature you can see within 30 feet of you makes an attack roll against you, you can use your reaction to hold the staff aloft and cause it to flare with light. The attacker has disadvantage on the attack roll, and it must succeed on a DC 15 Constitution saving throw or be {@condition 目盲} until the start of its next turn."
 			],
 			"hasFluffImages": true
 		},
@@ -27041,7 +27041,7 @@
 			"value": 5000,
 			"entries": [
 				"A sled dog (use the {@creature wolf} stat block in appendix A of the Monster Manual) costs 50 gp and can pull 360 pounds.",
-				"Sled dogs must take a short rest after pulling a sled for 1 hour; otherwise, they gain one level of {@condition exhaustion}."
+				"Sled dogs must take a short rest after pulling a sled for 1 hour; otherwise, they gain one level of {@condition 力竭}."
 			]
 		},
 		{
@@ -27087,7 +27087,7 @@
 						],
 						[
 							"3",
-							"{@b Stunning.} On a hit, this bullet deals an extra {@damage 1d10} force damage, and the target is {@condition stunned} until the end of your next turn."
+							"{@b Stunning.} On a hit, this bullet deals an extra {@damage 1d10} force damage, and the target is {@condition 震慑} until the end of your next turn."
 						],
 						[
 							"4",
@@ -27292,7 +27292,7 @@
 			"value": 15000,
 			"entries": [
 				"Soothsalts are derived from a naturally occurring crystalline substance discovered throughout the wilds of the Miskath Strand. The crimson crystals have been mined from cavernous veins like those in the mouth of the Miskath Pit and found within smaller geode formations near sites ravaged by the Calamity. Soothsalts are consumed orally in lozenge-sized doses, and frequent users can be identified by the telltale crimson stain around their mouths. A creature subjected to a dose of soothsalts gains advantage on all Intelligence checks for {@dice 1d4} hours.",
-				"For each dose of soothsalts consumed, the creature must succeed on a DC 15 Constitution saving throw or gain one level of {@condition exhaustion}\u2014an effect which is cumulative with multiple doses."
+				"For each dose of soothsalts consumed, the creature must succeed on a DC 15 Constitution saving throw or gain one level of {@condition 力竭}\u2014an effect which is cumulative with multiple doses."
 			]
 		},
 		{
@@ -28140,7 +28140,7 @@
 			"reqAttune": true,
 			"wondrous": true,
 			"entries": [
-				"This headpiece, crafted from dark metal, is worn curved around the ear. If you know a creature wearing another Spies' Murmur and that creature is within 1 mile of you, you can communicate telepathically with each other. As a bonus action, you can allow that creature to hear everything you hear for 1 hour. You can end this effect as a bonus action, and it ends if you're {@condition incapacitated}."
+				"This headpiece, crafted from dark metal, is worn curved around the ear. If you know a creature wearing another Spies' Murmur and that creature is within 1 mile of you, you can communicate telepathically with each other. As a bonus action, you can allow that creature to hear everything you hear for 1 hour. You can end this effect as a bonus action, and it ends if you're {@condition 无力}."
 			]
 		},
 		{
@@ -28734,7 +28734,7 @@
 							"type": "list",
 							"items": [
 								"Your proficiency bonus to Intelligence ({@skill 奥秘}) and Intelligence ({@skill 历史}) checks is doubled.",
-								"You can't be {@condition blinded}, {@condition charmed}, {@condition deafened}, {@condition frightened}, {@condition petrified}, or {@condition stunned}.",
+								"You can't be {@condition 目盲}, {@condition 魅惑}, {@condition 耳聋}, {@condition 恐惧}, {@condition 石化}, or {@condition 震慑}.",
 								"Undead with a challenge rating of 2 or lower will neither threaten nor attack you unless you harm them.",
 								"You can wield the staff as a +3 quarterstaff that deals an extra 10 ({@dice 3d6}) necrotic damage on a hit."
 							]
@@ -29914,7 +29914,7 @@
 								{
 									"type": "item",
 									"name": "Truesight",
-									"entry": "Your eyes become luminous pools of silver. You can see in normal and magical darkness, see {@condition invisible} creatures and objects, automatically detect visual illusions and succeed on saving throws against them, perceive the original form of a shapechanger or a creature that is transformed by magic, and see into the Ethereal Plane, all within a range of 60 feet."
+									"entry": "Your eyes become luminous pools of silver. You can see in normal and magical darkness, see {@condition 隐形} creatures and objects, automatically detect visual illusions and succeed on saving throws against them, perceive the original form of a shapechanger or a creature that is transformed by magic, and see into the Ethereal Plane, all within a range of 60 feet."
 								},
 								{
 									"type": "item",
@@ -30106,7 +30106,7 @@
 					"type": "entries",
 					"name": "Searing Radiance",
 					"entries": [
-						"The sword deals an extra 9 ({@dice 2d8}) radiant damage to any creature it hits, or 16 ({@dice 3d10}) radiant damage if you're wielding the weapon with two hands. An evil creature that takes this radiant damage must succeed on a DC 17 Constitution saving throw or be {@condition blinded} until the end of its next turn."
+						"The sword deals an extra 9 ({@dice 2d8}) radiant damage to any creature it hits, or 16 ({@dice 3d10}) radiant damage if you're wielding the weapon with two hands. An evil creature that takes this radiant damage must succeed on a DC 17 Constitution saving throw or be {@condition 目盲} until the end of its next turn."
 					]
 				},
 				{
@@ -30219,7 +30219,7 @@
 			"type": "OTH",
 			"rarity": "none",
 			"entries": [
-				"A tangler grenade is an alchemical, nonmagical item with an ovoid resin shell that shatters on impact. An as action, a creature can throw a tangler grenade at a point up to 60 feet away. Each creature within 10 feet of a shattered tangler grenade must succeed on a DC 15 Dexterity saving throw or be {@condition restrained} by sticky white webs. As an action, a creature can try to free itself or another creature within its reach from the webs, doing so with a successful DC 20 Strength ({@skill 运动}) check. A gallon of alcohol dissolves the webs produced by a single tangler grenade. Otherwise, the webs dissolve on their own after 1 hour, freeing any creatures {@condition restrained} by them."
+				"A tangler grenade is an alchemical, nonmagical item with an ovoid resin shell that shatters on impact. An as action, a creature can throw a tangler grenade at a point up to 60 feet away. Each creature within 10 feet of a shattered tangler grenade must succeed on a DC 15 Dexterity saving throw or be {@condition 束缚} by sticky white webs. As an action, a creature can try to free itself or another creature within its reach from the webs, doing so with a successful DC 20 Strength ({@skill 运动}) check. A gallon of alcohol dissolves the webs produced by a single tangler grenade. Otherwise, the webs dissolve on their own after 1 hour, freeing any creatures {@condition 束缚} by them."
 			]
 		},
 		{
@@ -30626,7 +30626,7 @@
 							"items": [
 								"The weapon's bonus to attack and damage rolls increases to +2.",
 								"The saving throw DC for spells cast from the morningstar increases to 15.",
-								"When you reduce a creature to 0 hit points with an attack using The Bloody End, you can cause the following effect: each creature of your choice within 15 feet of you must succeed on a DC 15 Wisdom saving throw or be {@condition frightened} of you until the end of your next turn. This property can't be used again until the next dawn.",
+								"When you reduce a creature to 0 hit points with an attack using The Bloody End, you can cause the following effect: each creature of your choice within 15 feet of you must succeed on a DC 15 Wisdom saving throw or be {@condition 恐惧} of you until the end of your next turn. This property can't be used again until the next dawn.",
 								"When a creature hits you with a melee attack, you can use your reaction to deal {@damage 1d6} psychic damage to the attacker."
 							]
 						}
@@ -30642,7 +30642,7 @@
 							"items": [
 								"The weapon's bonus to attack and damage rolls increases to +3.",
 								"Add {@spell 支配怪物} to the list of spells that can be cast from the morningstar.",
-								"The saving throw DC for spells cast from the morningstar, as well as for creatures to avoid being {@condition frightened} by it, increases to 17.",
+								"The saving throw DC for spells cast from the morningstar, as well as for creatures to avoid being {@condition 恐惧} by it, increases to 17.",
 								"When you use your reaction to deal psychic damage to a creature that hits you with a melee attack, the amount of psychic damage increases to {@dice 2d6}."
 							]
 						}
@@ -30719,7 +30719,7 @@
 					"type": "entries",
 					"name": "Silver Wire",
 					"entries": [
-						"The Infernal Machine's great size makes it largely immobile. To make ongoing use of the machine (such as while adventuring), it can be connected to its attuned user by a silver wire, a supply of which can always be produced from the machine's inner workings. This silver wire shares the same general nature as the silvery cord of an {@spell 星界投影} spell, connecting to the body of the user and trailing behind them. When so attached, the wire becomes {@condition invisible}, astral, and extends to virtually infinite length.",
+						"The Infernal Machine's great size makes it largely immobile. To make ongoing use of the machine (such as while adventuring), it can be connected to its attuned user by a silver wire, a supply of which can always be produced from the machine's inner workings. This silver wire shares the same general nature as the silvery cord of an {@spell 星界投影} spell, connecting to the body of the user and trailing behind them. When so attached, the wire becomes {@condition 隐形}, astral, and extends to virtually infinite length.",
 						"As long as the wire remains intact, the attuned user can make full use of the Infernal Machine's powers, with their effects centered around the user. If the wire is cut\u2014something that can happen only when an effect specifically states that it can cut an {@spell 星界投影}'s silvery cord\u2014the user suffers a sudden burst of feedback from the machine that kills them instantly.",
 						"Any effect of the Infernal Machine that requires concentration can be concentrated on by a remote user. The Infernal Machine's effects have a spell save DC of 14 or the attuned user's spell save DC, whichever is higher."
 					]
@@ -30780,7 +30780,7 @@
 						[
 							"01",
 							"You have a flying speed of 150 feet but lose all other movement.",
-							"You are {@condition blinded}."
+							"You are {@condition 目盲}."
 						],
 						[
 							"02",
@@ -30830,7 +30830,7 @@
 						[
 							"11",
 							"Your clothes are wrapped in illusion that makes them appear to be the very latest style, drawing praise and attention. You have a +1 bonus to Charisma checks.",
-							"Any food and drink you eat spoils as you swallow it. Each time you eat or drink, you are {@condition poisoned} for 1 hour."
+							"Any food and drink you eat spoils as you swallow it. Each time you eat or drink, you are {@condition 中毒} for 1 hour."
 						],
 						[
 							"12",
@@ -30845,7 +30845,7 @@
 						[
 							"14",
 							"You constantly see afterimages of all events that occurred within 30 feet of you over the previous hour.",
-							"You are distracted by voices and visions, forcing you to succeed on a Wisdom saving throw every 4 hours or gain one level of {@condition exhaustion}."
+							"You are distracted by voices and visions, forcing you to succeed on a Wisdom saving throw every 4 hours or gain one level of {@condition 力竭}."
 						],
 						[
 							"15",
@@ -30864,8 +30864,8 @@
 						],
 						[
 							"18",
-							"While you are afflicted by a disease or suffering the {@condition poisoned} or {@condition frightened} condition, whenever you hit a humanoid with a melee attack, the target must succeed on a DC 15 Constitution saving throw. On a failed save, you transfer the disease or the condition to the target, and the disease or condition ends for you.",
-							"Water becomes intensely acidic to you. If you are submerged in water, you take {@dice 1d6} acid damage at the start of each of your turns, and drinking pure water causes you to be {@condition poisoned} for 1 hour."
+							"While you are afflicted by a disease or suffering the {@condition 中毒} or {@condition 恐惧} condition, whenever you hit a humanoid with a melee attack, the target must succeed on a DC 15 Constitution saving throw. On a failed save, you transfer the disease or the condition to the target, and the disease or condition ends for you.",
+							"Water becomes intensely acidic to you. If you are submerged in water, you take {@dice 1d6} acid damage at the start of each of your turns, and drinking pure water causes you to be {@condition 中毒} for 1 hour."
 						],
 						[
 							"19",
@@ -31020,7 +31020,7 @@
 						[
 							"49",
 							"You can cast the {@spell 昼明术} spell three times.",
-							"An evil undead creature that comes within 30 feet of you for the first time is {@condition charmed} by you until the end of your next turn."
+							"An evil undead creature that comes within 30 feet of you for the first time is {@condition 魅惑} by you until the end of your next turn."
 						],
 						[
 							"50",
@@ -31064,7 +31064,7 @@
 						],
 						[
 							"58",
-							"You can cast {@spell 动物交谈术} at will, but you can use it to communicate only with goats. Any goat you speak with becomes {@condition charmed} by you for 1 hour.",
+							"You can cast {@spell 动物交谈术} at will, but you can use it to communicate only with goats. Any goat you speak with becomes {@condition 魅惑} by you for 1 hour.",
 							"You become distraught unless your clothing is all the same color, imposing disadvantage on Intelligence, Wisdom, and Charisma checks and saving throws."
 						],
 						[
@@ -31074,7 +31074,7 @@
 						],
 						[
 							"60",
-							"You have immunity to the {@condition charmed} and {@condition frightened} conditions.",
+							"You have immunity to the {@condition 魅惑} and {@condition 恐惧} conditions.",
 							"You can speak only in a monotone voice, imposing disadvantage on Charisma checks."
 						],
 						[
@@ -31085,7 +31085,7 @@
 						[
 							"62",
 							"The first creature you hit with a weapon attack on each of your turns takes {@dice 1d4} fire damage at the start of its next turn.",
-							"You are {@condition blinded} while in bright light, and your shadow takes on a monstrous appearance."
+							"You are {@condition 目盲} while in bright light, and your shadow takes on a monstrous appearance."
 						],
 						[
 							"63",
@@ -31114,7 +31114,7 @@
 						],
 						[
 							"68",
-							"As an action while you are in dim light or darkness, you can become {@condition invisible}, as if targeted by the {@spell 隐形术} spell. In addition to becoming visible if you attack or cast a spell, you become visible if you move into bright light. You can use this property three times.",
+							"As an action while you are in dim light or darkness, you can become {@condition 隐形}, as if targeted by the {@spell 隐形术} spell. In addition to becoming visible if you attack or cast a spell, you become visible if you move into bright light. You can use this property three times.",
 							"While in bright light, you have disadvantage on initiative rolls."
 						],
 						[
@@ -31130,7 +31130,7 @@
 						[
 							"71",
 							"Whenever you roll a 20 on a {@dice d20}, you can immediately end one effect on you.",
-							"Whenever you roll a 1 on a {@dice d20}, you are {@condition blinded} until the end of your next turn."
+							"Whenever you roll a 1 on a {@dice d20}, you are {@condition 目盲} until the end of your next turn."
 						],
 						[
 							"72",
@@ -31179,7 +31179,7 @@
 						],
 						[
 							"81",
-							"Your blood is venomous, granting you immunity to poison and to the {@condition poisoned} condition. You can cast the {@spell 动物交谈术} spell at will, but you can use it to communicate only with snakes.",
+							"Your blood is venomous, granting you immunity to poison and to the {@condition 中毒} condition. You can cast the {@spell 动物交谈术} spell at will, but you can use it to communicate only with snakes.",
 							"Your tongue is long and forked, causing you to speak in a hiss. You have disadvantage on Charisma checks involving speech, and you must succeed on a DC 15 Constitution check to cast a spell with a verbal component."
 						],
 						[
@@ -31244,7 +31244,7 @@
 						],
 						[
 							"94",
-							"As an action, you cause a swirling storm of rocks and dust to surround you in a 10-foot radius for 1 minute. Each creature hostile to you that enters the area must succeed on a DC 12 Constitution saving throw or take {@dice 1d6} bludgeoning damage and be {@condition blinded} for 1 round. You can use this property three times.",
+							"As an action, you cause a swirling storm of rocks and dust to surround you in a 10-foot radius for 1 minute. Each creature hostile to you that enters the area must succeed on a DC 12 Constitution saving throw or take {@dice 1d6} bludgeoning damage and be {@condition 目盲} for 1 round. You can use this property three times.",
 							"{@creature fire elemental||Fire elementals}, {@creature water elemental||water elementals}, and other creatures of fire and water (as determined by the DM) regard you as their enemy, and focus their attacks against you to the exclusion of all else."
 						],
 						[
@@ -32430,7 +32430,7 @@
 						],
 						[
 							"19-20",
-							"A bottle of {@condition invisible} ink that can only be read at sunset"
+							"A bottle of {@condition 隐形} ink that can only be read at sunset"
 						],
 						[
 							"21-22",
@@ -33651,7 +33651,7 @@
 							"type": "list",
 							"items": [
 								"You gain a climbing speed equal to your walking speed.",
-								"Your teeth become razor-sharp natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal piercing damage equal to {@dice 1d6} + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike. You can make this attack as a bonus action. When you bite a creature and deal damage to it, the creature must succeed on a DC 17 Constitution saving throw or be {@condition poisoned} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the condition on itself on a success.",
+								"Your teeth become razor-sharp natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal piercing damage equal to {@dice 1d6} + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike. You can make this attack as a bonus action. When you bite a creature and deal damage to it, the creature must succeed on a DC 17 Constitution saving throw or be {@condition 中毒} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the condition on itself on a success.",
 								"When you cast the {@spell 变形术} spell using the Verminshroud, you can transform into a {@creature giant scorpion}."
 							]
 						}
@@ -34227,8 +34227,8 @@
 			"recharge": "midnight",
 			"charges": 7,
 			"entries": [
-				"Crafted by the {@creature drow}, this slim black wand has 7 charges. While holding it, you can use an action to expend 1 of its charges to cause a small glob of viscous material to launch from the tip at one creature within 60 feet of you. Make a ranged attack roll against the target, with a bonus equal to your spellcasting modifier (or your Intelligence modifier, if you don't have a spellcasting modifier) plus your proficiency bonus. On a hit, the glob expands and dries on the target, which is {@condition restrained} for 1 hour. After that time, the viscous material cracks and falls away.",
-				"Applying a pint or more of alcohol to the {@condition restrained} creature dissolves the glob instantly, as does the application of {@item oil of etherealness} or {@item universal solvent}. The glob also dissolves instantly if exposed to sunlight. No other nonmagical process can remove the viscous material until it deteriorates on its own.",
+				"Crafted by the {@creature drow}, this slim black wand has 7 charges. While holding it, you can use an action to expend 1 of its charges to cause a small glob of viscous material to launch from the tip at one creature within 60 feet of you. Make a ranged attack roll against the target, with a bonus equal to your spellcasting modifier (or your Intelligence modifier, if you don't have a spellcasting modifier) plus your proficiency bonus. On a hit, the glob expands and dries on the target, which is {@condition 束缚} for 1 hour. After that time, the viscous material cracks and falls away.",
+				"Applying a pint or more of alcohol to the {@condition 束缚} creature dissolves the glob instantly, as does the application of {@item oil of etherealness} or {@item universal solvent}. The glob also dissolves instantly if exposed to sunlight. No other nonmagical process can remove the viscous material until it deteriorates on its own.",
 				"The wand regains {@dice 1d6 + 1} expended charges daily at midnight. If you expend the wands last charge, roll a {@dice d20}. On a 1, the wand melts into harmless slime and is destroyed.",
 				"A wand of viscous globs is destroyed if exposed to sunlight for 1 hour without interruption."
 			]
@@ -34580,7 +34580,7 @@
 			"bonusWeapon": "+1",
 			"entries": [
 				"Waythe is a unique greatsword most recently in the possession of a high-ranking {@creature cloud giant} ambassador.",
-				"You gain a +1 bonus to attack and damage rolls made with this magic weapon. When you hit a creature of the giant type with it, the giant takes an extra {@dice 2d6} slashing damage, and it must succeed on a DC 15 Strength saving throw or fall {@condition prone}.",
+				"You gain a +1 bonus to attack and damage rolls made with this magic weapon. When you hit a creature of the giant type with it, the giant takes an extra {@dice 2d6} slashing damage, and it must succeed on a DC 15 Strength saving throw or fall {@condition 伏地}.",
 				"The sword also functions as a {@item wand of enemy detection}. It regains all of its expended charges at dawn and isn't at risk of crumbling if its last charge is used.",
 				{
 					"name": "Sentience",
@@ -35057,7 +35057,7 @@
 			"rarity": "unknown",
 			"value": 2500,
 			"entries": [
-				"Introducing the juice of a wildroot into a {@condition poisoned} creature's bloodstream (for example, by rubbing it on an open wound) rids the creature of the {@condition poisoned} condition. Once used in this way, a wildroot loses this property."
+				"Introducing the juice of a wildroot into a {@condition 中毒} creature's bloodstream (for example, by rubbing it on an open wound) rids the creature of the {@condition 中毒} condition. Once used in this way, a wildroot loses this property."
 			]
 		},
 		{
@@ -35109,7 +35109,7 @@
 							"items": [
 								"You can speak, read, and write Draconic and Infernal.",
 								"You gain a +1 bonus to attack and damage rolls made with this magic weapon.",
-								"As a bonus action while holding the war pick, you can cause the following effect: each creature of your choice that is within 30 feet of you and is aware of you must succeed on a DC 13 Wisdom saving throw or become {@condition frightened} of you for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to your Frightful Presence for the next 24 hours. This property can't be used again until the next dawn.",
+								"As a bonus action while holding the war pick, you can cause the following effect: each creature of your choice that is within 30 feet of you and is aware of you must succeed on a DC 13 Wisdom saving throw or become {@condition 恐惧} of you for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to your Frightful Presence for the next 24 hours. This property can't be used again until the next dawn.",
 								"While holding the war pick, you can use your action to exhale destructive energy. Pick a damage type from the Will of the Talon Breath Weapons table. Each creature in the area of the exhalation must make a DC 13 saving throw, the type of which is specified in the table. A creature takes {@damage 3d6} damage on a failed save, or half as much damage on a successful one."
 							]
 						},
@@ -35205,7 +35205,7 @@
 			"rarity": "none",
 			"value": 3000,
 			"entries": [
-				"A dark blue oil can be extracted from the rare fruit of the willowshade plant. A creature can use its action to apply the oil to another creature that has been {@condition petrified} for less than 1 minute, causing the {@condition petrified} condition on that creature to end at the start of what would be that creature's next turn."
+				"A dark blue oil can be extracted from the rare fruit of the willowshade plant. A creature can use its action to apply the oil to another creature that has been {@condition 石化} for less than 1 minute, causing the {@condition 石化} condition on that creature to end at the start of what would be that creature's next turn."
 			]
 		},
 		{
@@ -35476,7 +35476,7 @@
 					"name": "Dormant",
 					"entries": [
 						"While wearing the wreath in its dormant state, you have {@sense 黑暗视觉} out to a range of 60 feet. If you already have {@sense 黑暗视觉}, wearing the wreath increases the range of your {@sense 黑暗视觉} by 60 feet.",
-						"When you hit a beast, dragon, or monstrosity of challenge rating 5 or lower with an attack, or when you grapple it, you can use the wreath to cast {@spell 支配怪物} on the creature (save DC 13). On a successful save, the target is immune to the power of the wreath for 24 hours. On a failure, a shimmering, golden image of the wreath appears as a collar around the target's neck or as a crown on its head (your choice) until it is no longer {@condition charmed} by the spell. If you use the wreath to charm a second creature, the first spell immediately ends. When the spell ends, the target knows it was {@condition charmed} by you."
+						"When you hit a beast, dragon, or monstrosity of challenge rating 5 or lower with an attack, or when you grapple it, you can use the wreath to cast {@spell 支配怪物} on the creature (save DC 13). On a successful save, the target is immune to the power of the wreath for 24 hours. On a failure, a shimmering, golden image of the wreath appears as a collar around the target's neck or as a crown on its head (your choice) until it is no longer {@condition 魅惑} by the spell. If you use the wreath to charm a second creature, the first spell immediately ends. When the spell ends, the target knows it was {@condition 魅惑} by you."
 					]
 				},
 				{
@@ -35551,7 +35551,7 @@
 			"entries": [
 				"Built by dwarven gods and entrusted to the rulers of Shanatar, an ancient dwarven empire. The Wyrmskull Throne was a symbol of dwarven power and pride for ages untold. The throne hovers a foot off the ground and is a massive thing made of polished obsidian with oversized feet\u2014the impaled skulls of four ancient blue dragons. Runes glisten in the carved obsidian winking to life with blue energy when the throne's powers are activated.",
 				"After the fall of Shanatar, the Wyrmskull Throne fell into the clutches of less honorable creatures. A band of adventurers wrested the throne from the aquatic elf tyrant Gantar Kraok and sold it to the {@creature storm giant} Neri for a considerable fortune. Neri had the throne magically enlarged and gave it to her husband, King Hekaton, as a gift, along with one of the Ruling Scepters of Shanatar, which she had found in a wreck at the bottom of the Trackless Sea. Only a creature attuned to a Ruling Scepter and in possession of it can harness the powers of the Wyrmskull Throne, which has become the centerpiece of King Hekaton's throne room in the undersea citadel of Maelstrom. Fear of the throne's power has helped prevent evil giants from challenging or threatening Hekaton's leadership.",
-				"Any creature not attuned to a Ruling Scepter who sits on the throne is {@condition paralyzed} and encased in a magical force field. While encased, the creature can't be touched or moved from the throne. Touching a Ruling Scepter to the force field dispels the field, though the creature remains {@condition paralyzed} until it is separated from the throne.",
+				"Any creature not attuned to a Ruling Scepter who sits on the throne is {@condition 麻痹} and encased in a magical force field. While encased, the creature can't be touched or moved from the throne. Touching a Ruling Scepter to the force field dispels the field, though the creature remains {@condition 麻痹} until it is separated from the throne.",
 				"Any creature seated on the throne can hear faint Whispers in Draconic\u2014the whisperings of four blue dragons whose skulls adorn the throne. Although powerless, these spirits try to influence the decisions of the throne's master",
 				{
 					"name": "Properties of the Throne",
@@ -35680,7 +35680,7 @@
 			"rarity": "none",
 			"value": 1000,
 			"entries": [
-				"Zabou mushrooms feed on offal and the rotting wood of dead trees. If handled carefully, a zabou can be picked or uprooted without causing it to release its spores. If crushed or struck, a zabou releases its spores in a 10-foot-radius sphere. A zabou can also be hurled up to 30 feet away or dropped like a grenade, releasing its cloud of spores on impact. Any creature in that area must succeed on a DC 10 Constitution saving throw or be {@condition poisoned} for 1 minute. The {@condition poisoned} creature's skin itches for the duration. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+				"Zabou mushrooms feed on offal and the rotting wood of dead trees. If handled carefully, a zabou can be picked or uprooted without causing it to release its spores. If crushed or struck, a zabou releases its spores in a 10-foot-radius sphere. A zabou can also be hurled up to 30 feet away or dropped like a grenade, releasing its cloud of spores on impact. Any creature in that area must succeed on a DC 10 Constitution saving throw or be {@condition 中毒} for 1 minute. The {@condition 中毒} creature's skin itches for the duration. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 			]
 		},
 		{

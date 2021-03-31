@@ -170,8 +170,8 @@
 				{
 					"name": "Wielder Domination",
 					"entries": [
-						"A creature can grab the staff out of the air with a successful grapple check against the staff, and grappling the staff does not reduce the creature's speed. Any creature that successfully grapples the staff must succeed on a {@dc 12} Charisma saving throw or be {@condition charmed} by the staff until the staff is no longer in its grasp. While the creature is {@condition charmed}, the staff can issue commands to it, which the creature does its best to obey. The creature can repeat the saving throw each time it takes damage, ending the effect on itself on a success. A creature that successfully resists the staff's control can't be {@condition charmed} by it for 24 hours.",
-						"A creature holding the staff that isn't {@condition charmed} by it can use an action to attempt to break the staff over a knee or against a solid surface, doing so with a successful {@dc 17} Strength ({@skill 运动}) check. Breaking the staff in this manner destroys it."
+						"A creature can grab the staff out of the air with a successful grapple check against the staff, and grappling the staff does not reduce the creature's speed. Any creature that successfully grapples the staff must succeed on a {@dc 12} Charisma saving throw or be {@condition 魅惑} by the staff until the staff is no longer in its grasp. While the creature is {@condition 魅惑}, the staff can issue commands to it, which the creature does its best to obey. The creature can repeat the saving throw each time it takes damage, ending the effect on itself on a success. A creature that successfully resists the staff's control can't be {@condition 魅惑} by it for 24 hours.",
+						"A creature holding the staff that isn't {@condition 魅惑} by it can use an action to attempt to break the staff over a knee or against a solid surface, doing so with a successful {@dc 17} Strength ({@skill 运动}) check. Breaking the staff in this manner destroys it."
 					]
 				}
 			],
@@ -875,7 +875,7 @@
 							"type": "entries",
 							"name": "Tied Down",
 							"entries": [
-								"While lashed to the floor, the creature is {@condition prone} and {@condition restrained}. It also suffers from two levels of {@condition exhaustion}."
+								"While lashed to the floor, the creature is {@condition 伏地} and {@condition 束缚}. It also suffers from two levels of {@condition 力竭}."
 							]
 						}
 					}
@@ -892,7 +892,7 @@
 				{
 					"name": "Tentacles",
 					"entries": [
-						"{@atk mw} {@hit 8} to hit, reach 10 ft., one creature. {@h}4 ({@damage 1d4 + 2}) poison damage, and the target must succeed on a {@dc 13} Constitution saving throw or be {@condition poisoned} for 1 minute. Until this poison ends, the target is {@condition paralyzed}. The target can repeat the saving throw at the end of each of its turns, ending the poison on itself on a success."
+						"{@atk mw} {@hit 8} to hit, reach 10 ft., one creature. {@h}4 ({@damage 1d4 + 2}) poison damage, and the target must succeed on a {@dc 13} Constitution saving throw or be {@condition 中毒} for 1 minute. Until this poison ends, the target is {@condition 麻痹}. The target can repeat the saving throw at the end of each of its turns, ending the poison on itself on a success."
 					]
 				},
 				{
@@ -1173,7 +1173,7 @@
 							{
 								"name": "Light Intensity",
 								"entries": [
-									"Any creature that starts its turn within 10 feet of the illuminated golem and can see the golem must succeed on a DC 17 Wisdom saving throw or be {@condition blinded} until the start of the creature's next turn.",
+									"Any creature that starts its turn within 10 feet of the illuminated golem and can see the golem must succeed on a DC 17 Wisdom saving throw or be {@condition 目盲} until the start of the creature's next turn.",
 									"A creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can't see the golem until the start of its next turn, when it can avert its eyes again. If the creature looks at the golem in the meantime, it must immediately make the save."
 								]
 							}
@@ -1215,7 +1215,7 @@
 							{
 								"name": "Merged Heads",
 								"entries": [
-									"The duergar has advantage on Wisdom ({@skill 察觉}) checks and on saving throws against being {@condition charmed}, {@condition frightened}, {@condition stunned}, and knocked {@condition unconscious}."
+									"The duergar has advantage on Wisdom ({@skill 察觉}) checks and on saving throws against being {@condition 魅惑}, {@condition 恐惧}, {@condition 震慑}, and knocked {@condition 昏迷}."
 								]
 							}
 						]
@@ -1750,7 +1750,7 @@
 							{
 								"name": "Invisibility (Recharges after a Short or Long Rest)",
 								"entries": [
-									"The mummy lord magically turns {@condition invisible} for up to 1 hour or until it attacks, it casts a spell, it uses its Enlarge, or its concentration is broken (as if concentrating on a spell). Any equipment the mummy lord wears or carries is {@condition invisible} with it.",
+									"The mummy lord magically turns {@condition 隐形} for up to 1 hour or until it attacks, it casts a spell, it uses its Enlarge, or its concentration is broken (as if concentrating on a spell). Any equipment the mummy lord wears or carries is {@condition 隐形} with it.",
 									"The stalagmite in the northwest alcove is hollow and serves as Gorka Tharn's sarcophagus. The mummy lord is lodged inside the stalagmite's funnel-shaped interior. When it awakens, the mummy lord uses a {@spell 塑石术} spell to create an opening large enough for it to emerge. It destroys any intruders in its lair, then returns to its sarcophagus and its slumber.",
 									"At the bottom of the stalagmite's hollow cavity, four 1-foot-tall clay urns contain Gorka Tharn's preserved internal organs, including the mummy lord's shriveled heart. Only by destroying the heart can the characters prevent the mummy lord from rejuvenating. The heart is a Tiny object with AC 5, 25 hit points, and immunity to all damage except fire."
 								]
@@ -2060,7 +2060,7 @@
 				{
 					"name": "Special Equipment",
 					"entries": [
-						"Halaster wears a robe of eyes that lets him see in all directions, gives him darkvision out to a range of 120 feet, grants advantage on Wisdom (Perception) checks that rely on sight, and allows him to see {@condition invisible} creatures and objects, as well as into the Ethereal Plane, out to a range of 120 feet.",
+						"Halaster wears a robe of eyes that lets him see in all directions, gives him darkvision out to a range of 120 feet, grants advantage on Wisdom (Perception) checks that rely on sight, and allows him to see {@condition 隐形} creatures and objects, as well as into the Ethereal Plane, out to a range of 120 feet.",
 						"Halaster wields a blast scepter (a very rare magic item that requires attunement). It can be used as an arcane focus. Whoever is attuned to the blast scepter gains resistance to fire and lightning damage and can, as an action, use it to cast thunderwave as a 4th-level spell (save {@dc 16}) without expending a spell slot.",
 						"Halaster also wears a horned ring (a very rare magic item that requires attunement), which allows an attuned wearer to ignore Undermountain's magical restrictions (see \"Alterations to Magic\")."
 					]
@@ -2382,7 +2382,7 @@
 				{
 					"name": "Invisibility (Recharges after a Short or Long Rest)",
 					"entries": [
-						"The ooze magically turns {@condition invisible} for up to 1 hour until it attacks, it uses its Enlarge, or its concentration is broken (as if concentrating on a spell)."
+						"The ooze magically turns {@condition 隐形} for up to 1 hour until it attacks, it uses its Enlarge, or its concentration is broken (as if concentrating on a spell)."
 					]
 				}
 			],
@@ -2884,7 +2884,7 @@
 				{
 					"name": "Invisibility",
 					"entries": [
-						"The unseen servant is {@condition invisible}."
+						"The unseen servant is {@condition 隐形}."
 					]
 				}
 			],
@@ -2979,7 +2979,7 @@
 						"items": {
 							"name": "Bite",
 							"entries": [
-								"{@atk mw} {@hit 4} to hit, reach 5 ft., one creature. {@h}{@damage 2d6 + 2} piercing damage, and the target must succeed on a DC 10 Constitution saving throw or be {@condition poisoned} for 1 minute. If the saving throw fails by 5 or more, the target is instead {@condition poisoned} for 5 ({@dice 1d10}) minutes and {@condition unconscious} while {@condition poisoned} in this way."
+								"{@atk mw} {@hit 4} to hit, reach 5 ft., one creature. {@h}{@damage 2d6 + 2} piercing damage, and the target must succeed on a DC 10 Constitution saving throw or be {@condition 中毒} for 1 minute. If the saving throw fails by 5 or more, the target is instead {@condition 中毒} for 5 ({@dice 1d10}) minutes and {@condition 昏迷} while {@condition 中毒} in this way."
 							]
 						}
 					}
@@ -3044,7 +3044,7 @@
 						"items": {
 							"name": "Fey Ancestry",
 							"entries": [
-								"Marta has advantage on saving throws against being {@condition charmed}, and magic can't put her to sleep."
+								"Marta has advantage on saving throws against being {@condition 魅惑}, and magic can't put her to sleep."
 							]
 						}
 					}
@@ -3431,13 +3431,13 @@
 											"type": "item",
 											"name": "1. Paralyzing Ray.",
 											"style": "italic",
-											"entry": "The targeted creature must succeed on a {@dc 14} Constitution saving throw or be {@condition paralyzed} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+											"entry": "The targeted creature must succeed on a {@dc 14} Constitution saving throw or be {@condition 麻痹} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 										},
 										{
 											"type": "item",
 											"name": "2. Fear Ray.",
 											"style": "italic",
-											"entry": "The targeted creature must succeed on a {@dc 14} Wisdom saving throw or be {@condition frightened} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+											"entry": "The targeted creature must succeed on a {@dc 14} Wisdom saving throw or be {@condition 恐惧} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 										},
 										{
 											"type": "item",
@@ -3676,7 +3676,7 @@
 				{
 					"name": "Invisible in Water",
 					"entries": [
-						"The weird is {@condition invisible} while fully immersed in toxic brew."
+						"The weird is {@condition 隐形} while fully immersed in toxic brew."
 					]
 				},
 				{
@@ -3786,12 +3786,12 @@
 								{
 									"type": "item",
 									"name": "Fear Ray.",
-									"entry": "The target must succeed on a {@dc 15} Wisdom saving throw or be {@condition frightened} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+									"entry": "The target must succeed on a {@dc 15} Wisdom saving throw or be {@condition 恐惧} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 								},
 								{
 									"type": "item",
 									"name": "Paralyzing Ray.",
-									"entry": "The target must succeed on a {@dc 15} Constitution saving throw or be {@condition paralyzed} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+									"entry": "The target must succeed on a {@dc 15} Constitution saving throw or be {@condition 麻痹} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 								}
 							]
 						}
@@ -4378,7 +4378,7 @@
 										{
 											"type": "item",
 											"name": "Paralyzing Breath.",
-											"entry": "The dragon exhales paralyzing gas in a 60-foot cone. Each creature in that area must succeed on a DC 20 Constitution saving throw or be {@condition paralyzed} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+											"entry": "The dragon exhales paralyzing gas in a 60-foot cone. Each creature in that area must succeed on a DC 20 Constitution saving throw or be {@condition 麻痹} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 										}
 									]
 								}
@@ -5084,7 +5084,7 @@
 				{
 					"name": "Echolocation (Bat or Hybrid Form Only)",
 					"entries": [
-						"The werebat has blindsight out to a range of 60 feet as long as it's not {@condition deafened}."
+						"The werebat has blindsight out to a range of 60 feet as long as it's not {@condition 耳聋}."
 					]
 				},
 				{
@@ -5393,8 +5393,8 @@
 				{
 					"name": "Misty Escape",
 					"entries": [
-						"When he drops to 0 hit points outside his resting place, Zorak transforms into a cloud of mist (as in the Shapechanger trait) instead of falling {@condition unconscious}, provided that he isn't in sunlight or running water. If he can't transform, he is destroyed.",
-						"While he has 0 hit points in mist form, he can't revert to his vampire form, and he must reach his resting place within 2 hours or be destroyed. Once in his resting place, he reverts to his vampire form. He is then {@condition paralyzed} until he regains at least 1 hit point. After spending 1 hour in his resting place with 0 hit points, he regains 1 hit point."
+						"When he drops to 0 hit points outside his resting place, Zorak transforms into a cloud of mist (as in the Shapechanger trait) instead of falling {@condition 昏迷}, provided that he isn't in sunlight or running water. If he can't transform, he is destroyed.",
+						"While he has 0 hit points in mist form, he can't revert to his vampire form, and he must reach his resting place within 2 hours or be destroyed. Once in his resting place, he reverts to his vampire form. He is then {@condition 麻痹} until he regains at least 1 hit point. After spending 1 hour in his resting place with 0 hit points, he regains 1 hit point."
 					]
 				},
 				{
@@ -5415,7 +5415,7 @@
 						"Zorak has the following flaws:",
 						"{@i Forbiddance.} Zorak can't enter a residence without an invitation from one of the occupants.",
 						"{@i Harmed by Running Water.} Zorak takes 20 acid damage if he ends his turn in running water.",
-						"{@i Stake to the Heart.} If a piercing weapon made of wood is driven into Zorak's heart while Zorak is {@condition incapacitated} in his resting place, Zorak is {@condition paralyzed} until the stake is removed.",
+						"{@i Stake to the Heart.} If a piercing weapon made of wood is driven into Zorak's heart while Zorak is {@condition 无力} in his resting place, Zorak is {@condition 麻痹} until the stake is removed.",
 						"{@i Sunlight Hypersensitivity.} Zorak takes 20 radiant damage when he starts his turn in sunlight. While in sunlight, he has disadvantage on attack rolls and ability checks."
 					]
 				}
@@ -5448,13 +5448,13 @@
 				{
 					"name": "Bite (Bat or Vampire Form Only)",
 					"entries": [
-						"{@atk mw} {@hit 9} to hit, reach 5 ft., one willing creature, or a creature that is {@condition 被擒} by Zorak, {@condition incapacitated}, or {@condition restrained}. {@h}7 ({@damage 1d6 + 4}) piercing damage plus 10 ({@damage 3d6}) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and Zorak regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if this effect reduces his hit point maximum to 0. A humanoid slain in this way and then buried in the ground rises the following night as a {@creature vampire spawn} under Zorak's control."
+						"{@atk mw} {@hit 9} to hit, reach 5 ft., one willing creature, or a creature that is {@condition 被擒} by Zorak, {@condition 无力}, or {@condition 束缚}. {@h}7 ({@damage 1d6 + 4}) piercing damage plus 10 ({@damage 3d6}) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and Zorak regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if this effect reduces his hit point maximum to 0. A humanoid slain in this way and then buried in the ground rises the following night as a {@creature vampire spawn} under Zorak's control."
 					]
 				},
 				{
 					"name": "Charm",
 					"entries": [
-						"Zorak targets one humanoid he can see within 30 feet of it. If the target can see Zorak, the target must succeed on a {@dc 17} Wisdom saving throw against this magic or be {@condition charmed} by Zorak. The {@condition charmed} target regards Zorak as a trusted friend to be heeded and protected. Although the target isn't under Zorak's control, it takes Zorak's requests or actions in the most favorable way it can, and it is a willing target for Zorak's bite attack.",
+						"Zorak targets one humanoid he can see within 30 feet of it. If the target can see Zorak, the target must succeed on a {@dc 17} Wisdom saving throw against this magic or be {@condition 魅惑} by Zorak. The {@condition 魅惑} target regards Zorak as a trusted friend to be heeded and protected. Although the target isn't under Zorak's control, it takes Zorak's requests or actions in the most favorable way it can, and it is a willing target for Zorak's bite attack.",
 						"Each time Zorak or Zorak's companions do anything harmful to the target, it can repeat the saving throw, ending the effect on itself on a success. Otherwise, the effect lasts 24 hours or until Zorak is destroyed, is on a different plane of existence than the target, or takes a bonus action to end the effect."
 					]
 				},

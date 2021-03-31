@@ -781,7 +781,7 @@
 					"entries": [
 						"Pit traps throughout the tomb, except where otherwise noted, are constructed as covered pits. Each one is 10 feet deep and concealed by a counterweighted trapdoor that looks like the floor and opens as soon as any person steps on it.",
 						"A character who succeeds on a DC 15 Wisdom ({@skill 察觉}) check discerns the edges of a pit's lid. In addition, someone who prods a pit lid can force the lid to open with a successful DC 10 Strength check. The lid can be wedged shut with a piton or a similar object. A character must succeed on a DC 15 Strength check to place the shim properly. On a failed check, the shim fails if someone treads on the lid.",
-						"Each pit is spiked at the bottom, so someone who falls in takes falling damage plus 11 ({@damage 2d10}) piercing damage from the spikes. The spikes are also {@condition poisoned}, so someone injured by them must make a DC 15 Constitution saving throw, taking 22 ({@damage 4d10}) poison damage on a failed save, or half as much damage on a successful one."
+						"Each pit is spiked at the bottom, so someone who falls in takes falling damage plus 11 ({@damage 2d10}) piercing damage from the spikes. The spikes are also {@condition 中毒}, so someone injured by them must make a DC 15 Constitution saving throw, taking 22 ({@damage 4d10}) poison damage on a failed save, or half as much damage on a successful one."
 					]
 				},
 				{
@@ -802,7 +802,7 @@
 							"id": "032",
 							"entries": [
 								"If the chest is examined closely, the viewer will note that it is hinged on the bottom so as to allow the lid to swing down if a catch on the top is pressed. The catch has an easily seen poison needle trap\u2014the needle sticks 3 inches out of the wall\u2014and the needle can be avoided easily by pressing the catch with the pommel of a dagger. Disabling the trap by taking the needle out of the mechanism requires the use of {@item 盗贼工具|phb} and a successful DC 10 Dexterity check.",
-								"The needle deals 1 piercing damage and 11 ({@damage 2d10}) poison damage if it hits someone. Someone who takes this poison damage must succeed on a DC 15 Constitution saving throw or become {@condition poisoned} for 1 hour."
+								"The needle deals 1 piercing damage and 11 ({@damage 2d10}) poison damage if it hits someone. Someone who takes this poison damage must succeed on a DC 15 Constitution saving throw or become {@condition 中毒} for 1 hour."
 							]
 						},
 						{
@@ -1219,7 +1219,7 @@
 							"name": "Gas Trap",
 							"id": "056",
 							"entries": [
-								"The hinges on the front pews are larger and stronger because they include rods that are connected to valves inside the pew. If the seat on either of the front pews is lifted up, a cloud of poison gas fills the whole room in 2 rounds. A character caught in the gas must succeed on a DC 15 Constitution saving throw or become {@condition poisoned} for 48 hours.",
+								"The hinges on the front pews are larger and stronger because they include rods that are connected to valves inside the pew. If the seat on either of the front pews is lifted up, a cloud of poison gas fills the whole room in 2 rounds. A character caught in the gas must succeed on a DC 15 Constitution saving throw or become {@condition 中毒} for 48 hours.",
 								"If the hinges are noticed and then disassembled, requiring 1 minute and a successful DC 15 Dexterity check using {@item 盗贼工具|phb} for each hinge, the trap can't trigger. A failed check results in no progress at the task, but if the check fails by 5 or more, the trap goes off explosively, blowing the lid open."
 							]
 						},
@@ -1653,7 +1653,7 @@
 					"name": "23A. Knockout Corridor",
 					"id": "07f",
 					"entries": [
-						"If the characters don't find the tunnel or choose not to follow it, they move through a door that leads east and then come upon a set of double doors in the north wall. When the doors to the north are opened, sleep gas billows forth from the other side. Each creature in the eastwest passage must succeed on a DC 15 Constitution saving throw or fall {@condition unconscious} for {@dice 2d4 × 10} minutes.",
+						"If the characters don't find the tunnel or choose not to follow it, they move through a door that leads east and then come upon a set of double doors in the north wall. When the doors to the north are opened, sleep gas billows forth from the other side. Each creature in the eastwest passage must succeed on a DC 15 Constitution saving throw or fall {@condition 昏迷} for {@dice 2d4 × 10} minutes.",
 						{
 							"type": "entries",
 							"name": "Rolling Stone",
@@ -1784,7 +1784,7 @@
 							"name": "Crown and Scepter",
 							"id": "08d",
 							"entries": [
-								"The crown negates the pillars' levitation effect for anyone who dons it and enables the wearer to see within the hall as if in normal daylight\u2014but outside this place the wearer is {@condition blinded|phb|blind}. As soon as a creature puts on the crown, the wearer knows that the crown can be removed only by touching the scepter to it, but doesn't find out the exact procedure.",
+								"The crown negates the pillars' levitation effect for anyone who dons it and enables the wearer to see within the hall as if in normal daylight\u2014but outside this place the wearer is {@condition 目盲|phb|blind}. As soon as a creature puts on the crown, the wearer knows that the crown can be removed only by touching the scepter to it, but doesn't find out the exact procedure.",
 								"If the golden knob is touched to the crown, the wearer can remove the headgear. If the silver end of the scepter is touched to the crown, the wearer is instantly snuffed out, turning to a fetid powder that can't be brought back to life no matter what ({@spell 祈愿术} spells notwithstanding)."
 							]
 						},
@@ -1962,7 +1962,7 @@
 										"{@spell 解离术} destroys all the blood.",
 										"{@spell 浮空术} coagulates the blood and causes it to rise up as a Huge red {@creature ochre jelly}.",
 										"{@spell 变形术} changes the blood into seven {@creature wight||wights}, which attack immediately.",
-										"{@spell 净化饮食} turns all the blood to poison gas. A character caught in the gas must succeed on a DC 15 Constitution saving throw or become {@condition poisoned} for 48 hours.",
+										"{@spell 净化饮食} turns all the blood to poison gas. A character caught in the gas must succeed on a DC 15 Constitution saving throw or become {@condition 中毒} for 48 hours.",
 										"{@spell 唤醒死者} or {@spell 复活术} destroys all the blood and causes a shade to appear on the top stair. The shade blesses the characters so that they benefit as if they had just finished a long rest."
 									]
 								}

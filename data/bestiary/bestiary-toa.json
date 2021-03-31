@@ -216,7 +216,7 @@
 				{
 					"name": "Paralyzing Touch",
 					"entries": [
-						"{@atk ms} {@hit 15} to hit, reach 5 ft., one creature. {@h}10 ({@damage 3d6}) cold damage, and the target must succeed on a {@dc 20} Constitution saving throw or be {@condition paralyzed} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk ms} {@hit 15} to hit, reach 5 ft., one creature. {@h}10 ({@damage 3d6}) cold damage, and the target must succeed on a {@dc 20} Constitution saving throw or be {@condition 麻痹} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				},
 				{
@@ -248,7 +248,7 @@
 				{
 					"name": "Frightening Gaze (Costs 2 Actions)",
 					"entries": [
-						"Acererak fixes his gaze on one creature he can see within 10 feet of him. The target must succeed on a {@dc 20} Wisdom saving throw against this magic or become {@condition frightened} for 1 minute. The {@condition frightened} target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a target's saving throw is successful or the effect ends for it, the target its immune to Acererak's gaze for the next 24 hours."
+						"Acererak fixes his gaze on one creature he can see within 10 feet of him. The target must succeed on a {@dc 20} Wisdom saving throw against this magic or become {@condition 恐惧} for 1 minute. The {@condition 恐惧} target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a target's saving throw is successful or the effect ends for it, the target its immune to Acererak's gaze for the next 24 hours."
 					]
 				},
 				{
@@ -720,7 +720,7 @@
 				{
 					"name": "Tail",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 10 ft., one target {@h}18 ({@damage 4d6 + 4}) bludgeoning damage. If the target is a creature, it must succeed on a {@dc 14} Strength saving throw or be knocked {@condition prone}."
+						"{@atk mw} {@hit 6} to hit, reach 10 ft., one target {@h}18 ({@damage 4d6 + 4}) bludgeoning damage. If the target is a creature, it must succeed on a {@dc 14} Strength saving throw or be knocked {@condition 伏地}."
 					]
 				}
 			],
@@ -852,7 +852,7 @@
 							"items": [
 								"Artus can expend 1 charge and use the ring to lower the temperature in a 120-foot-radius sphere centered on a point he can see within 300 feet of him. The temperature in that area drops 20 degrees per minute, to a minimum of \u221230 degrees Fahrenheit. Frost and ice begin to form on surfaces once the temperature drops below 32 degrees. This effect is permanent unless Artus uses the ring to end the effect as an action, at which point the temperature in the area returns to normal at a rate of 10 degrees per minute.",
 								"Artus can cast one of the following spells from the ring (spell save {@dc 17}) by expending the necessary number of charges: {@spell 毕格比之掌} (2 charges) the hand is made of ice, is immune to cold damage, and deals bludgeoning damage instead of force damage as a clenched fist, {@spell 寒冰锥} (2 charges), {@spell flesh to stone||flesh to ice} (3 charges); as flesh to stone except that the target turns to solid ice with the density and durability of stone, {@spell 冰风暴} (2 charges), {@spell 欧提路克冰冻法球} (3 charges), {@spell 雪雨暴} (1 charge), {@spell 荆棘丛生} (1 charge) the spikes are made of ice, or {@spell 冰墙术} (2 charges).",
-								"Artus can expend the necessary number of charges and use the ring to create either an inanimate ice object (2 charges) or an animated ice creature (4 charges). The ice object can't have any moving parts, must be able to fit inside a 10-foot cube, and has the density and durability of metal or stone (Artus's choice). The ice creature must be modeled after a beast with a challenge rating of 2 or less. The ice creature has the same statistics as the beast it models, with the following changes: the creature is a construct with vulnerability to fire damage, immunity to cold and poison damage, and immunity to the following conditions: {@condition charmed}, {@condition exhaustion}, {@condition frightened}, {@condition paralyzed}, {@condition petrified}, and {@condition poisoned}. The ice creature obeys only its creator's commands. The object or creature appears in an unoccupied space within 60 feet of Artus. It melts into a pool of normal water after 24 hours or when it drops to 0 hit points. In extreme heat, it loses 5 ({@dice 1d10}) hit points per minute as it melts. Use the guidelines in chapter 8 of the Dungeon Master's Guide to determine the hit points of an inanimate object if they become necessary."
+								"Artus can expend the necessary number of charges and use the ring to create either an inanimate ice object (2 charges) or an animated ice creature (4 charges). The ice object can't have any moving parts, must be able to fit inside a 10-foot cube, and has the density and durability of metal or stone (Artus's choice). The ice creature must be modeled after a beast with a challenge rating of 2 or less. The ice creature has the same statistics as the beast it models, with the following changes: the creature is a construct with vulnerability to fire damage, immunity to cold and poison damage, and immunity to the following conditions: {@condition 魅惑}, {@condition 力竭}, {@condition 恐惧}, {@condition 麻痹}, {@condition 石化}, and {@condition 中毒}. The ice creature obeys only its creator's commands. The object or creature appears in an unoccupied space within 60 feet of Artus. It melts into a pool of normal water after 24 hours or when it drops to 0 hit points. In extreme heat, it loses 5 ({@dice 1d10}) hit points per minute as it melts. Use the guidelines in chapter 8 of the Dungeon Master's Guide to determine the hit points of an inanimate object if they become necessary."
 							]
 						}
 					]
@@ -1087,13 +1087,13 @@
 				{
 					"name": "Constrict",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 20 ft., one creature. {@h}The target takes 11 ({@damage 2d6 + 4}) bludgeoning damage, and it is {@condition 被擒} (escape {@dc 14}). Until this grapple ends, the target is {@condition restrained}, and it takes 21 ({@damage 6d6}) poison damage at the start of each of its turns. The vine can constrict only one target at a time."
+						"{@atk mw} {@hit 6} to hit, reach 20 ft., one creature. {@h}The target takes 11 ({@damage 2d6 + 4}) bludgeoning damage, and it is {@condition 被擒} (escape {@dc 14}). Until this grapple ends, the target is {@condition 束缚}, and it takes 21 ({@damage 6d6}) poison damage at the start of each of its turns. The vine can constrict only one target at a time."
 					]
 				},
 				{
 					"name": "Entangling Vines",
 					"entries": [
-						"The assassin vine can animate normal vines and roots on the ground in a 15-foot square within 30 feet of it. These plants turn the ground in that area into difficult terrain. A creature in that area when the effect begins must succeed on a {@dc 13} Strength saving throw or be {@condition restrained} by entangling vines and roots. A creature {@condition restrained} by the plants can use its action to make a {@dc 13} Strength (Athletics) check, freeing itself on a successful check. The effect ends after 1 minute or when the assassin vine dies or uses Entangling Vines again."
+						"The assassin vine can animate normal vines and roots on the ground in a 15-foot square within 30 feet of it. These plants turn the ground in that area into difficult terrain. A creature in that area when the effect begins must succeed on a {@dc 13} Strength saving throw or be {@condition 束缚} by entangling vines and roots. A creature {@condition 束缚} by the plants can use its action to make a {@dc 13} Strength (Athletics) check, freeing itself on a successful check. The effect ends after 1 minute or when the assassin vine dies or uses Entangling Vines again."
 					]
 				}
 			],
@@ -1251,7 +1251,7 @@
 				{
 					"name": "Wail (Costs 3 Actions)",
 					"entries": [
-						"The atropal lets out a withering wail. Any creature within 120 feet of the atropal that can hear the wail must succeed on a {@dc 19} Constitution saving throw or gain 1 level of {@condition exhaustion}."
+						"The atropal lets out a withering wail. Any creature within 120 feet of the atropal that can hear the wail must succeed on a {@dc 19} Constitution saving throw or gain 1 level of {@condition 力竭}."
 					]
 				}
 			],
@@ -1386,7 +1386,7 @@
 				{
 					"name": "Sneak Attack (1/Turn)",
 					"entries": [
-						"Bag of Nails deals an extra 14 ({@dice 4d6}) damage when he hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of his that isn't {@condition incapacitated} and Bag of Nails doesn't have disadvantage on the attack roll."
+						"Bag of Nails deals an extra 14 ({@dice 4d6}) damage when he hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of his that isn't {@condition 无力} and Bag of Nails doesn't have disadvantage on the attack roll."
 					]
 				}
 			],
@@ -1689,7 +1689,7 @@
 				{
 					"name": "Shield Bash",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one creature. {@h}9 ({@damage 2d4 + 4}) bludgeoning damage. If the target is a Medium or smaller creature, it must succeed on a {@dc 15} Strength saving throw or be knocked {@condition prone}."
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one creature. {@h}9 ({@damage 2d4 + 4}) bludgeoning damage. If the target is a Medium or smaller creature, it must succeed on a {@dc 15} Strength saving throw or be knocked {@condition 伏地}."
 					]
 				}
 			],
@@ -2110,7 +2110,7 @@
 				{
 					"name": "Pack Tactics",
 					"entries": [
-						"The flying monkey has advantage on an attack roll against a creature if at least one of the monkey's allies is within 5 feet of the creature and the ally isn't {@condition incapacitated}."
+						"The flying monkey has advantage on an attack roll against a creature if at least one of the monkey's allies is within 5 feet of the creature and the ally isn't {@condition 无力}."
 					]
 				},
 				{
@@ -2309,7 +2309,7 @@
 				{
 					"name": "Stable",
 					"entries": [
-						"Whenever an effect knocks the turtle {@condition prone}, it can make a {@dc 10} Constitution saving throw to avoid being knocked {@condition prone}. A {@condition prone} turtle is upside down. To stand up, it must succeed on a {@dc 10} Dexterity check on its turn and then use all its movement for that turn."
+						"Whenever an effect knocks the turtle {@condition 伏地}, it can make a {@dc 10} Constitution saving throw to avoid being knocked {@condition 伏地}. A {@condition 伏地} turtle is upside down. To stand up, it must succeed on a {@dc 10} Dexterity check on its turn and then use all its movement for that turn."
 					]
 				}
 			],
@@ -2573,7 +2573,7 @@
 				{
 					"name": "Dwarven Resilience",
 					"entries": [
-						"Hew has resistance to poison damage and advantage on saving throws against being {@condition poisoned}."
+						"Hew has resistance to poison damage and advantage on saving throws against being {@condition 中毒}."
 					]
 				},
 				{
@@ -2828,7 +2828,7 @@
 				{
 					"name": "Pounce",
 					"entries": [
-						"If the kamadan moves at least 20 feet straight toward a creature and then hits it with a claw attack on the same turn that target must succeed on a {@dc 13} Strength saving throw or be knocked {@condition prone}. If the target is knocked {@condition prone}, the kamadan can make two attacks\u2014one with its bite and one with its snakes\u2014against it as a bonus action."
+						"If the kamadan moves at least 20 feet straight toward a creature and then hits it with a claw attack on the same turn that target must succeed on a {@dc 13} Strength saving throw or be knocked {@condition 伏地}. If the target is knocked {@condition 伏地}, the kamadan can make two attacks\u2014one with its bite and one with its snakes\u2014against it as a bonus action."
 					]
 				}
 			],
@@ -2860,7 +2860,7 @@
 				{
 					"name": "Sleep Breath (Recharges after a Short or Long Rest)",
 					"entries": [
-						"The kamadan exhales sleep gas in a 30-foot cone. Each creature in that area must succeed on a {@dc 12} Constitution saving throw or fall {@condition unconscious} for 10 minutes. This effect ends for a creature if it takes damage or someone uses an action to wake it."
+						"The kamadan exhales sleep gas in a 30-foot cone. Each creature in that area must succeed on a {@dc 12} Constitution saving throw or fall {@condition 昏迷} for 10 minutes. This effect ends for a creature if it takes damage or someone uses an action to wake it."
 					]
 				}
 			],
@@ -2940,7 +2940,7 @@
 				{
 					"name": "Detect Invisibility",
 					"entries": [
-						"The King of Feathers can see {@condition invisible} creatures and objects as if they were visible."
+						"The King of Feathers can see {@condition 隐形} creatures and objects as if they were visible."
 					]
 				},
 				{
@@ -2960,7 +2960,7 @@
 				{
 					"name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 10} to hit, reach 10 ft., one target. {@h}33 ({@damage 4d12 + 7}) piercing damage. If the target is a Medium or smaller creature, it is {@condition 被擒} (escape {@dc 17}). Until this grapple ends, the target is {@condition restrained}, and the tyrannosaurus can't bite another target."
+						"{@atk mw} {@hit 10} to hit, reach 10 ft., one target. {@h}33 ({@damage 4d12 + 7}) piercing damage. If the target is a Medium or smaller creature, it is {@condition 被擒} (escape {@dc 17}). Until this grapple ends, the target is {@condition 束缚}, and the tyrannosaurus can't bite another target."
 					]
 				},
 				{
@@ -3148,7 +3148,7 @@
 				{
 					"name": "Brave",
 					"entries": [
-						"Liara has advantage on saving throws against being {@condition frightened}."
+						"Liara has advantage on saving throws against being {@condition 恐惧}."
 					]
 				},
 				{
@@ -3258,7 +3258,7 @@
 				{
 					"name": "Engulf",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one Medium or smaller creature. {@h}The target is trapped inside the mantrap's leafy jaws. While trapped in this way, the target is {@condition blinded} and {@condition restrained}, has total cover from an attacks and other effects outside the mantrap, and takes 14 ({@damage 4d6}) acid damage at the start of each of the target's turns. If the mantrap dies, the creature inside it is no longer {@condition restrained} by it. A mantrap can engulf only one creature at a time."
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one Medium or smaller creature. {@h}The target is trapped inside the mantrap's leafy jaws. While trapped in this way, the target is {@condition 目盲} and {@condition 束缚}, has total cover from an attacks and other effects outside the mantrap, and takes 14 ({@damage 4d6}) acid damage at the start of each of the target's turns. If the mantrap dies, the creature inside it is no longer {@condition 束缚} by it. A mantrap can engulf only one creature at a time."
 					]
 				}
 			],
@@ -3653,7 +3653,7 @@
 				{
 					"name": "Terror Dive",
 					"entries": [
-						"If the pterafolk is flying and dives at least 30 feet straight toward a target, and then hits that target with a melee weapon attack, the target is {@condition frightened} until the end of its next turn."
+						"If the pterafolk is flying and dives at least 30 feet straight toward a target, and then hits that target with a melee weapon attack, the target is {@condition 恐惧} until the end of its next turn."
 					]
 				}
 			],
@@ -3915,7 +3915,7 @@
 				{
 					"name": "Constrict",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one creature. {@h}10 ({@damage 2d6 + 3}) bludgeoning damage, and the target is {@condition 被擒} (escape {@dc 14}). Until this grapple ends, the target is {@condition restrained}, and Ras Nsi can't constrict another target."
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one creature. {@h}10 ({@damage 2d6 + 3}) bludgeoning damage, and the target is {@condition 被擒} (escape {@dc 14}). Until this grapple ends, the target is {@condition 束缚}, and Ras Nsi can't constrict another target."
 					]
 				},
 				{
@@ -4391,7 +4391,7 @@
 				{
 					"name": "Devastating Roll",
 					"entries": [
-						"The juggernaut can move through the space of a {@condition prone} creature. A creature whose space the juggernaut enters for the first time on a turn must make a {@dc 17} Dexterity saving throw, taking 55 ({@damage 10d10}) bludgeoning damage on a failed save, or half as much damage on a successful one."
+						"The juggernaut can move through the space of a {@condition 伏地} creature. A creature whose space the juggernaut enters for the first time on a turn must make a {@dc 17} Dexterity saving throw, taking 55 ({@damage 10d10}) bludgeoning damage on a failed save, or half as much damage on a successful one."
 					]
 				},
 				{
@@ -4417,7 +4417,7 @@
 				{
 					"name": "Slam",
 					"entries": [
-						"{@atk mw} {@hit 10} to hit, reach 5 ft., one target. {@h}25 ({@damage 3d12 + 6}) bludgeoning damage. If the target is a Large or smaller creature, it must succeed on a {@dc 17} Strength saving throw or be knocked {@condition prone}."
+						"{@atk mw} {@hit 10} to hit, reach 5 ft., one target. {@h}25 ({@damage 3d12 + 6}) bludgeoning damage. If the target is a Large or smaller creature, it must succeed on a {@dc 17} Strength saving throw or be knocked {@condition 伏地}."
 					]
 				}
 			],
@@ -4497,7 +4497,7 @@
 				{
 					"name": "Psychic Crush {@recharge 5}",
 					"entries": [
-						"The su-monster targets one creature it can see within 30 feet of it. The target must succeed on a {@dc 11} Wisdom saving throw or take 17 ({@damage 5d6}) psychic damage and be {@condition stunned} for 1 minute. The {@condition stunned} target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"The su-monster targets one creature it can see within 30 feet of it. The target must succeed on a {@dc 11} Wisdom saving throw or take 17 ({@damage 5d6}) psychic damage and be {@condition 震慑} for 1 minute. The {@condition 震慑} target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				}
 			],
@@ -5119,7 +5119,7 @@
 				{
 					"name": "Orange Blossom",
 					"entries": [
-						"The tri-flower frond chooses one creature it can see within 5 feet of it. The target must succeed on a {@dc 11} Constitution saving throw or be {@condition poisoned} for 1 hour. While {@condition poisoned} in this way, the target is {@condition unconscious}. At the end of each minute, the {@condition poisoned} target can repeat the saving throw, ending the effect on itself on a success."
+						"The tri-flower frond chooses one creature it can see within 5 feet of it. The target must succeed on a {@dc 11} Constitution saving throw or be {@condition 中毒} for 1 hour. While {@condition 中毒} in this way, the target is {@condition 昏迷}. At the end of each minute, the {@condition 中毒} target can repeat the saving throw, ending the effect on itself on a success."
 					]
 				},
 				{
@@ -5223,7 +5223,7 @@
 				{
 					"name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 10} to hit, reach 10 ft., one target. {@h}33 ({@damage 4d12 + 7}) piercing damage. If the target is a Medium or smaller creature, it is {@condition 被擒} (escape {@dc 17}). Until this grapple ends, the target is {@condition restrained} and the tyrannosaurus zombie can't bite another target or disgorge zombies."
+						"{@atk mw} {@hit 10} to hit, reach 10 ft., one target. {@h}33 ({@damage 4d12 + 7}) piercing damage. If the target is a Medium or smaller creature, it is {@condition 被擒} (escape {@dc 17}). Until this grapple ends, the target is {@condition 束缚} and the tyrannosaurus zombie can't bite another target or disgorge zombies."
 					]
 				},
 				{
@@ -5461,7 +5461,7 @@
 				{
 					"name": "Paralyzing Touch",
 					"entries": [
-						"{@atk ms} {@hit 12} to hit, reach 5 ft., one creature. {@h}10 ({@damage 3d6}) cold damage. The target must succeed on a {@dc 18} Constitution saving throw or be {@condition paralyzed} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk ms} {@hit 12} to hit, reach 5 ft., one creature. {@h}10 ({@damage 3d6}) cold damage. The target must succeed on a {@dc 18} Constitution saving throw or be {@condition 麻痹} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				}
 			],
@@ -5481,7 +5481,7 @@
 				{
 					"name": "Frightening Gaze (Costs 2 Actions)",
 					"entries": [
-						"Valindra fixes her gaze on one creature she can see within 10 feet of her. The target must succeed on a {@dc 18} Wisdom saving throw against this magic or become {@condition frightened} for 1 minute. The {@condition frightened} target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to the Valindra's gaze for the next 24 hours."
+						"Valindra fixes her gaze on one creature she can see within 10 feet of her. The target must succeed on a {@dc 18} Wisdom saving throw against this magic or become {@condition 恐惧} for 1 minute. The {@condition 恐惧} target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to the Valindra's gaze for the next 24 hours."
 					]
 				},
 				{
@@ -6094,7 +6094,7 @@
 				{
 					"name": "Yellow Musk (3/Day)",
 					"entries": [
-						"The creeper's flowers release a strong musk that targets all humanoids within 30 feet of it. Each target must succeed on a {@dc 11} Wisdom saving throw or be {@condition charmed} by the creeper for 1 minute. A creature {@condition charmed} in this way does nothing on its turn except move as close as it can to the creeper. A creature {@condition charmed} by the creeper can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"The creeper's flowers release a strong musk that targets all humanoids within 30 feet of it. Each target must succeed on a {@dc 11} Wisdom saving throw or be {@condition 魅惑} by the creeper for 1 minute. A creature {@condition 魅惑} in this way does nothing on its turn except move as close as it can to the creeper. A creature {@condition 魅惑} by the creeper can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				}
 			],

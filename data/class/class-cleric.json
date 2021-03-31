@@ -3920,7 +3920,7 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"When you choose this domain at 1st level, you can interpose divine light between yourself and an attacking enemy. When you are attacked by a creature within 30 feet of you that you can see, you can use your reaction to impose disadvantage on the attack roll, causing light to flare before the attacker before it hits or misses. An attacker that can't be {@condition blinded} is immune to this feature.",
+				"When you choose this domain at 1st level, you can interpose divine light between yourself and an attacking enemy. When you are attacked by a creature within 30 feet of you that you can see, you can use your reaction to impose disadvantage on the attack roll, causing light to flare before the attacker before it hits or misses. An attacker that can't be {@condition 目盲} is immune to this feature.",
 				"You can use this feature a number of times equal to your Wisdom modifier (a minimum of once). You regain all expended uses when you finish a long rest."
 			]
 		},
@@ -3951,7 +3951,7 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Starting at 6th level, you can use your Channel Divinity to vanish. As an action, you become {@condition invisible} until the end of your next turn. You become visible if you attack or cast a spell."
+				"Starting at 6th level, you can use your Channel Divinity to vanish. As an action, you become {@condition 隐形} until the end of your next turn. You become visible if you attack or cast a spell."
 			]
 		},
 		{
@@ -4614,7 +4614,7 @@
 			"header": 2,
 			"entries": [
 				"Starting at 17th level, you can delay death for an instant to perform a final heroic act.",
-				"When you are reduced to 0 hit points by an attacker you can see, even if you would be killed outright, you can use your reaction to move up to your speed toward the attacker and make one melee weapon attack against it, as long as the movement brings it within your reach. You make this attack with advantage. If the attack hits, the creature takes an extra {@damage 5d10} fire damage and an extra {@damage 5d10} damage of the weapon's type. You then fall {@condition unconscious} and begin making death saving throws as normal, or you die if the damage you took would have killed you outright.",
+				"When you are reduced to 0 hit points by an attacker you can see, even if you would be killed outright, you can use your reaction to move up to your speed toward the attacker and make one melee weapon attack against it, as long as the movement brings it within your reach. You make this attack with advantage. If the attack hits, the creature takes an extra {@damage 5d10} fire damage and an extra {@damage 5d10} damage of the weapon's type. You then fall {@condition 昏迷} and begin making death saving throws as normal, or you die if the damage you took would have killed you outright.",
 				"Once you use this feature, you can't use it again until you finish a long rest."
 			]
 		},
@@ -5675,7 +5675,7 @@
 			"entries": [
 				"{@i 2nd-level Love Domain feature}",
 				"You can use your Channel Divinity to overwhelm a creature with a flash of short-lived but intense admiration for you, driving them to rash action in your defense.",
-				"As an action, you present your holy symbol and choose one creature you can see within 30 feet of you. That creature must make a Wisdom saving throw; a creature can choose to fail this saving throw if it wishes. On a success, the creature is unaffected. On a failure, the creature is {@condition charmed} by you until the start of your next turn, and it must immediately use its reaction to make a weapon attack against a target you designate. If there are no valid targets, it uses its reaction to admire you."
+				"As an action, you present your holy symbol and choose one creature you can see within 30 feet of you. That creature must make a Wisdom saving throw; a creature can choose to fail this saving throw if it wishes. On a success, the creature is unaffected. On a failure, the creature is {@condition 魅惑} by you until the start of your next turn, and it must immediately use its reaction to make a weapon attack against a target you designate. If there are no valid targets, it uses its reaction to admire you."
 			]
 		},
 		{
@@ -6366,7 +6366,7 @@
 			"level": 17,
 			"header": 2,
 			"entries": [
-				"At 17th level, you gain the ability to manipulate the boundary between life and death. When an enemy you can see dies within 30 feet of you, you or one ally of your choice that is within 30 feet of you regains hit points equal to the enemy's number of Hit Dice. You can use this feature as long as you aren't {@condition incapacitated}, but no more than once per round."
+				"At 17th level, you gain the ability to manipulate the boundary between life and death. When an enemy you can see dies within 30 feet of you, you or one ally of your choice that is within 30 feet of you regains hit points equal to the enemy's number of Hit Dice. You can use this feature as long as you aren't {@condition 无力}, but no more than once per round."
 			]
 		},
 		{
@@ -6663,12 +6663,12 @@
 			"entries": [
 				"{@i 2nd-level Twilight Domain feature}",
 				"You can use your Channel Divinity to refresh your allies with soothing twilight.",
-				"As an action, you present your holy symbol, and a sphere of twilight emanates from you. The sphere is centered on you, has a 30-foot radius, and is filled with dim light. The sphere moves with you, and it lasts for 1 minute or until you are {@condition incapacitated} or die. Whenever a creature (including you) ends its turn in the sphere, you can grant that creature one of these benefits:",
+				"As an action, you present your holy symbol, and a sphere of twilight emanates from you. The sphere is centered on you, has a 30-foot radius, and is filled with dim light. The sphere moves with you, and it lasts for 1 minute or until you are {@condition 无力} or die. Whenever a creature (including you) ends its turn in the sphere, you can grant that creature one of these benefits:",
 				{
 					"type": "list",
 					"items": [
 						"Give it {@dice 1d8} temporary hit points.",
-						"End one effect causing it to be {@condition charmed} or {@condition frightened}."
+						"End one effect causing it to be {@condition 魅惑} or {@condition 恐惧}."
 					]
 				}
 			]
@@ -6689,7 +6689,7 @@
 				{
 					"type": "list",
 					"items": [
-						"You have advantage on saving throws against being {@condition frightened}.",
+						"You have advantage on saving throws against being {@condition 恐惧}.",
 						"If you are in dim light or darkness, you can use a bonus action to magically give yourself a flying speed equal to your walking speed until the end of your next turn."
 					]
 				}
@@ -6873,7 +6873,7 @@
 			"header": 2,
 			"entries": [
 				"Starting at 2nd level, you can use your Channel Divinity to call on the city for aid. As an action, you present your holy symbol, and any city utility within 30 feet of you either works perfectly or shuts down entirely for 1 minute (your choice).",
-				"Additionally, each hostile creature within 30 feet of you must make a Charisma saving throw. On a failed save, the creature is knocked {@condition prone} or {@condition restrained} (your choice) by hazards such as entangling wires, high-pressure water erupting from fire hydrants, pavement collapsing to unseen potholes, and so on. A {@condition restrained} creature can escape by making a successful Strength ({@skill 运动}) or Dexterity ({@skill 体操}) check against your spell save DC.",
+				"Additionally, each hostile creature within 30 feet of you must make a Charisma saving throw. On a failed save, the creature is knocked {@condition 伏地} or {@condition 束缚} (your choice) by hazards such as entangling wires, high-pressure water erupting from fire hydrants, pavement collapsing to unseen potholes, and so on. A {@condition 束缚} creature can escape by making a successful Strength ({@skill 运动}) or Dexterity ({@skill 体操}) check against your spell save DC.",
 				"This effect is entirely local and affects only utilities within 30 feet of you. Determination of what utilities are available within range and how the physical effects of those utilities manifest are left to the DM."
 			]
 		},
@@ -7050,7 +7050,7 @@
 			"header": 2,
 			"entries": [
 				"Starting at 2nd level, you can use your Channel Divinity to exert an intimidating presence over others.",
-				"As an action, you present your holy symbol, and each creature of your choice that can see or hear you within 30 feet of you must succeed on a Wisdom saving throw or be {@condition charmed} by you until the end of your next turn or until the {@condition charmed} creature takes any damage. You can also cause any of the {@condition charmed} creatures to fall {@condition prone} when they fail the saving throw."
+				"As an action, you present your holy symbol, and each creature of your choice that can see or hear you within 30 feet of you must succeed on a Wisdom saving throw or be {@condition 魅惑} by you until the end of your next turn or until the {@condition 魅惑} creature takes any damage. You can also cause any of the {@condition 魅惑} creatures to fall {@condition 伏地} when they fail the saving throw."
 			]
 		},
 		{

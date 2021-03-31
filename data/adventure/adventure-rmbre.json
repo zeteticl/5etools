@@ -617,7 +617,7 @@
 									"name": "Malleable Space",
 									"id": "037",
 									"entries": [
-										"The room's normal form is reflected on the map. It reverts to that form if the writer is {@condition unconscious} or leaves the room. But until that happens, the room looks nothing like what the map shows. The writer can use her inkwell and parchment to make the room any size she wants, up to 100 feet by 100 feet, but she defaults to transforming it into a 40-foot-wide-by-100-foot-long tunnel to keep distractions away from her while she's working. She can also make the room's doors disappear or reappear at her whim.",
+										"The room's normal form is reflected on the map. It reverts to that form if the writer is {@condition 昏迷} or leaves the room. But until that happens, the room looks nothing like what the map shows. The writer can use her inkwell and parchment to make the room any size she wants, up to 100 feet by 100 feet, but she defaults to transforming it into a 40-foot-wide-by-100-foot-long tunnel to keep distractions away from her while she's working. She can also make the room's doors disappear or reappear at her whim.",
 										"This could all probably be way simpler, but we're waiting until the writer's done with the adventure before telling her she has to redraw the whole damn map. How's she going to draw an area that changes sizes? Maybe it's all an illusion. Whatever. That's her problem."
 									]
 								},
@@ -734,7 +734,7 @@
 											"name": "Like Being Drunk Trap",
 											"id": "03e",
 											"entries": [
-												"For {@dice 1d4} rounds, the whole floor heaves like when you're completely hammered. For as long as the floor pitches, each creature that starts its turn standing on the floor must succeed on a DC 18 Dexterity ({@skill 体操}) check or fall on its ass, {@condition prone}."
+												"For {@dice 1d4} rounds, the whole floor heaves like when you're completely hammered. For as long as the floor pitches, each creature that starts its turn standing on the floor must succeed on a DC 18 Dexterity ({@skill 体操}) check or fall on its ass, {@condition 伏地}."
 											]
 										},
 										{
@@ -791,19 +791,19 @@
 											"rows": [
 												[
 													"1",
-													"{@b Sleep}. The creature falls {@condition unconscious} for {@dice 1d4} rounds, as if under the effect of a {@spell 睡眠术} spell."
+													"{@b Sleep}. The creature falls {@condition 昏迷} for {@dice 1d4} rounds, as if under the effect of a {@spell 睡眠术} spell."
 												],
 												[
 													"2",
-													"{@b Retching}. The creature is {@condition poisoned} for {@dice 1d4} rounds."
+													"{@b Retching}. The creature is {@condition 中毒} for {@dice 1d4} rounds."
 												],
 												[
 													"3",
-													"{@b Laughter}. The creature is overcome by a fit of giggles (because farts are f***ing funny) and is {@condition incapacitated} for {@dice 1d4} rounds."
+													"{@b Laughter}. The creature is overcome by a fit of giggles (because farts are f***ing funny) and is {@condition 无力} for {@dice 1d4} rounds."
 												],
 												[
 													"4",
-													"{@b Blindness}. Something spicy in that fart leaves the creature {@condition blinded} for {@dice 1d4} rounds."
+													"{@b Blindness}. Something spicy in that fart leaves the creature {@condition 目盲} for {@dice 1d4} rounds."
 												]
 											]
 										},
@@ -1364,7 +1364,7 @@
 									]
 								},
 								"The {@creature evil mage|LMoP} (see \"Attacking the Mage\" below for his unusual defenses) cackles with glee and taunts the party. He looks like a cartoon fantasy wizard: long white beard, pointy blue hat, stars on his robe, that kind of s***. He declares himself invulnerable to any attack and tells the characters they can't pass unless they defeat him. He's real braggy about it, too. It's super obnoxious.",
-								"If the characters attempt to talk to the evil mage, he just gloats about his inability to be harmed. He can't be {@condition charmed}, influenced, or reasoned with.",
+								"If the characters attempt to talk to the evil mage, he just gloats about his inability to be harmed. He can't be {@condition 魅惑}, influenced, or reasoned with.",
 								{
 									"type": "entries",
 									"name": "Attacking the Mage",
@@ -1613,7 +1613,7 @@
 									"entries": [
 										"With the churd cannon assembled, Tommy asks the party to help him destroy the evil butt trap in {@area area 10|051|x}. Not only has the trap stolen countless butts, it's also brainwashed Tommy's friends, who joined the Order of the Buttless.",
 										"If the characters agree to accompany Tommy, Greeble, and Flerp to complete their mission, Tommy entrusts the churd cannon to one party member with a solemn reminder: \"Remember. It's one shot for all the butts.\" It's unclear exactly what this means.",
-										"When the characters arrive at the butt room ({@area area 10|051|x}), there's a 75 percent chance that they encounter the Order of the Buttless there unless that group has been {@condition incapacitated} in some way (see {@area area 32|0c5|x}). The buttless have caught wind of Tommy Two-Butts's plan and intend to stop his blasphemy. The characters might well have to choose sides between Tommy Two-Butts or the Buttless.",
+										"When the characters arrive at the butt room ({@area area 10|051|x}), there's a 75 percent chance that they encounter the Order of the Buttless there unless that group has been {@condition 无力} in some way (see {@area area 32|0c5|x}). The buttless have caught wind of Tommy Two-Butts's plan and intend to stop his blasphemy. The characters might well have to choose sides between Tommy Two-Butts or the Buttless.",
 										{
 											"type": "entries",
 											"name": "Firing the Churd Cannon",
@@ -1781,7 +1781,7 @@
 											"width": 634,
 											"height": 800
 										},
-										"The goo is an {@creature ochre jelly}, backed by five {@creature Cultist||cultists}. Once they notice the characters, they all attack. However, the cultists are still recovering from vomiting, so they're {@condition incapacitated}. At the start of each of its turns, a cultist must succeed on a DC 12 Constitution saving throw or remain {@condition incapacitated}.",
+										"The goo is an {@creature ochre jelly}, backed by five {@creature Cultist||cultists}. Once they notice the characters, they all attack. However, the cultists are still recovering from vomiting, so they're {@condition 无力}. At the start of each of its turns, a cultist must succeed on a DC 12 Constitution saving throw or remain {@condition 无力}.",
 										"If Borkibok is still alive, he attacks the party from behind. He's a cultist after all, and duping rubes is kind of his jam."
 									]
 								},
@@ -1799,7 +1799,7 @@
 									"name": "Treasure",
 									"id": "09d",
 									"entries": [
-										"A half-empty cask sits on the balcony in the room, containing the oily, yellowish ipecac syrup that inspires the cultists to... make their offerings. A sticker portraying a green cartoon face smiles from the cask's side. There are ten full swigs of \"medicine\" remaining within. Anyone who drinks from the cask spends the next {@dice 1d4} rounds {@condition prone} and unable to stand as they heave up the contents of their stomachs. Why anyone would want to do this is beyond me, but if you're drinking the leftovers of a whole mob of ooze cultists, you sort of get what you deserve."
+										"A half-empty cask sits on the balcony in the room, containing the oily, yellowish ipecac syrup that inspires the cultists to... make their offerings. A sticker portraying a green cartoon face smiles from the cask's side. There are ten full swigs of \"medicine\" remaining within. Anyone who drinks from the cask spends the next {@dice 1d4} rounds {@condition 伏地} and unable to stand as they heave up the contents of their stomachs. Why anyone would want to do this is beyond me, but if you're drinking the leftovers of a whole mob of ooze cultists, you sort of get what you deserve."
 									]
 								}
 							]
@@ -2311,7 +2311,7 @@
 								},
 								"A {@creature nothic} with a {@item concertina|RMBRE} (a less charming kind of accordion) waits here, concealed behind an overturned torture chair. The creature has been drinking heavily and is already pretty wrecked. When the party interrupts its stupor by showing up, the unseen nothic plays a tune\u2014something like, \"Naaaa na na na na na na naaaa nana.\" I'm not Mozart, but you get the gist.",
 								"The concertina is a rare magic item. In addition to knocking out a killer polka, a creature playing the concertina can use an action to cause an area of mist or water up to 30 feet in diameter and 6 inches deep to freeze solid. Once used, this feature of the concertina can't be used again until the next dawn.",
-								"At the end of the tune and before any characters move too close, the nothic uses the magic concertina to cause the mist on the floor to turn to solid ice. Any creatures touching the floor must succeed on a DC 20 Dexterity saving throw or be {@condition restrained} by the ice. (The nothic hops up at just the right time.) As an action, a character can attempt to free itself or another creature within its reach from the ice, doing so with a successful DC 20 Strength ({@skill 运动}) check. A character freed from the ice is no longer {@condition restrained} by it. The ice melts in an hour if everyone in the party turns out to be helpless baby birds.",
+								"At the end of the tune and before any characters move too close, the nothic uses the magic concertina to cause the mist on the floor to turn to solid ice. Any creatures touching the floor must succeed on a DC 20 Dexterity saving throw or be {@condition 束缚} by the ice. (The nothic hops up at just the right time.) As an action, a character can attempt to free itself or another creature within its reach from the ice, doing so with a successful DC 20 Strength ({@skill 运动}) check. A character freed from the ice is no longer {@condition 束缚} by it. The ice melts in an hour if everyone in the party turns out to be helpless baby birds.",
 								{
 									"type": "entries",
 									"name": "The Weirdest Insights",
@@ -2598,7 +2598,7 @@
 											"width": 641,
 											"height": 800
 										},
-										"The five automatons that serve as the tavern's wait staff all speak and understand Common. They are immune to poison and psychic damage as well as the following conditions: {@condition blinded}, {@condition charmed}, {@condition deafened}, {@condition exhaustion}, {@condition frightened}, {@condition paralyzed}, {@condition petrified}, and {@condition poisoned}.",
+										"The five automatons that serve as the tavern's wait staff all speak and understand Common. They are immune to poison and psychic damage as well as the following conditions: {@condition 目盲}, {@condition 魅惑}, {@condition 耳聋}, {@condition 力竭}, {@condition 恐惧}, {@condition 麻痹}, {@condition 石化}, and {@condition 中毒}.",
 										"Each automaton has a name tag, is super friendly to the patrons, and attends to everyone's needs until it comes time for the Slaughterfest. If an automaton is attacked before the Slaughterfest, it giggles and repeats folksy homilies until it is destroyed. The next round, it magically pops back to life fully healed, then asks, \"What can I do for ya?\"",
 										"As the characters spend time in the tavern, they'll eventually encounter each of the following automatons, which use the indicated stat blocks:",
 										"{@creature Billy Beaver|RMBRE} ({@creature owlbear}) is a goofy, owlbear-sized beaver with a raccoon-skin cap, playing a washboard and spoons. He has 34 hit points and has neither the Multiattack nor Claws action option.",
@@ -3026,7 +3026,7 @@
 											"width": 648,
 											"height": 800
 										},
-										"The green stones around the characters begin to shake, ripping themselves out of the floor and walls. Each creature in the room must succeed on a DC 13 Dexterity saving throw or be knocked {@condition prone}. The stones regroup themselves into the form of a snarling {@creature young green dragon}. It's initiative time, b**ches. Curiously, if Jerry is playing, his character is completely immune to the dragon's attacks."
+										"The green stones around the characters begin to shake, ripping themselves out of the floor and walls. Each creature in the room must succeed on a DC 13 Dexterity saving throw or be knocked {@condition 伏地}. The stones regroup themselves into the form of a snarling {@creature young green dragon}. It's initiative time, b**ches. Curiously, if Jerry is playing, his character is completely immune to the dragon's attacks."
 									]
 								},
 								{
@@ -3034,7 +3034,7 @@
 									"name": "Rousing Rick",
 									"id": "102",
 									"entries": [
-										"As the stones fly up from the floor, they reveal a 20-foot-deep pit with a humanoid lying at the bottom. A successful DC 10 Wisdom ({@skill 察觉}) check allows a character to recognize the form as Rick Sanchez himself, dressed in wizardly garb and clearly {@condition unconscious}.",
+										"As the stones fly up from the floor, they reveal a 20-foot-deep pit with a humanoid lying at the bottom. A successful DC 10 Wisdom ({@skill 察觉}) check allows a character to recognize the form as Rick Sanchez himself, dressed in wizardly garb and clearly {@condition 昏迷}.",
 										"For the first round of combat, getting Rick to wake up or pay attention is impossible. It's like he's not even in his body at all. At the start of the second round of combat, his eyes snap open and focus on the green dragon. \"RICK HAS REGAINED CONTROL, B**CHES!\" he yells triumphantly. Roll Rick's initiative. Just wing his modifier. It'll be fine."
 									]
 								},
@@ -3304,7 +3304,7 @@
 											"name": "Fly",
 											"id": "120",
 											"entries": [
-												"A creature that has a flying speed can use all or part of its movement to fly. If the creature is {@condition incapacitated} or knocked {@condition prone} while flying, it falls unless it can hover."
+												"A creature that has a flying speed can use all or part of its movement to fly. If the creature is {@condition 无力} or knocked {@condition 伏地} while flying, it falls unless it can hover."
 											]
 										},
 										{
@@ -3391,7 +3391,7 @@
 											"name": "Truesight",
 											"id": "12b",
 											"entries": [
-												"A creature with {@sense 真实视觉} can see in normal and magic darkness, see {@condition invisible} creatures and objects, automatically detect visual illusions and succeed on saving throws against them, and perceive the original form of a shapechanger or a creature that is transformed by magic. Furthermore, the creature can see into the Ethereal Plane."
+												"A creature with {@sense 真实视觉} can see in normal and magic darkness, see {@condition 隐形} creatures and objects, automatically detect visual illusions and succeed on saving throws against them, and perceive the original form of a shapechanger or a creature that is transformed by magic. Furthermore, the creature can see into the Ethereal Plane."
 											]
 										}
 									]

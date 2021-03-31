@@ -246,11 +246,11 @@
 						],
 						[
 							"17",
-							"Field of {@condition petrified} soldiers or other creatures"
+							"Field of {@condition 石化} soldiers or other creatures"
 						],
 						[
 							"18",
-							"Forest of {@condition petrified} or {@creature awakened tree||awakened trees}"
+							"Forest of {@condition 石化} or {@creature awakened tree||awakened trees}"
 						],
 						[
 							"19",
@@ -348,7 +348,7 @@
 							"name": "Tracking Supplies",
 							"entries": [
 								"Use the accompanying Supply Tracker to note whether you are tracking a short or long cycle journey and how many units of food and water you are carrying. At the Supply step of each cycle, mark off a box for each unit of food or water consumed.",
-								"A character unable to eat or drink gains 1 level of {@condition exhaustion} for each requirement they fail to meet. Exhaustion gained in this way can't be removed until the character is able to consume sufficient food and water."
+								"A character unable to eat or drink gains 1 level of {@condition 力竭} for each requirement they fail to meet. Exhaustion gained in this way can't be removed until the character is able to consume sufficient food and water."
 							]
 						},
 						{
@@ -434,15 +434,15 @@
 								],
 								[
 									5,
-									"Make a DC 10 Constitution saving throw. Ona failed save, you are {@condition blinded} by blowing sand,dirt, ash, snow,or pollen until the end of your turn. While {@condition blinded} in this way, your speed is halved."
+									"Make a DC 10 Constitution saving throw. Ona failed save, you are {@condition 目盲} by blowing sand,dirt, ash, snow,or pollen until the end of your turn. While {@condition 目盲} in this way, your speed is halved."
 								],
 								[
 									6,
-									"A sudden drop catches you by surprise. Make a DC 10 Dexterity saving throw to navigate the impediment. On failed save, you fall {@dice 1d4 x 5} feet, taking {@damage 1d6} bludgeoning damage per 10 feet fallen as normal, and land {@condition prone}."
+									"A sudden drop catches you by surprise. Make a DC 10 Dexterity saving throw to navigate the impediment. On failed save, you fall {@dice 1d4 x 5} feet, taking {@damage 1d6} bludgeoning damage per 10 feet fallen as normal, and land {@condition 伏地}."
 								],
 								[
 									7,
-									"You blunder into a snare. Make a DC 15 Dexterity saving throw. On failed save, you are caught in the snare and {@condition restrained}. As an action, you or someone within 5 feet of you can make a DC 10 Strength check, freeing you on a success. The snare can also be destroyed; it has an AC of 10 and 5 hit points, and it is immune to poison and psychic damage. Complication"
+									"You blunder into a snare. Make a DC 15 Dexterity saving throw. On failed save, you are caught in the snare and {@condition 束缚}. As an action, you or someone within 5 feet of you can make a DC 10 Strength check, freeing you on a success. The snare can also be destroyed; it has an AC of 10 and 5 hit points, and it is immune to poison and psychic damage. Complication"
 								],
 								[
 									8,
@@ -466,8 +466,8 @@
 							"type": "entries",
 							"name": "Dashing",
 							"entries": [
-								"Over the course of a chase, you can take the {@action 疾走} action a limited number of times before you risk {@condition exhaustion}. That number equals 3 + your Constitution modifier. Each additional {@action 疾走} action you take after that number during the chase requires you to succeed on a DC 10 Constitution check at the end of your turn or gain | level of {@condition exhaustion}.",
-								"You drop out of the chase if your {@condition exhaustion} reaches level 5, since your speed becomes0. By finishing a short or long rest, you can remove all the levels of {@condition exhaustion} you gained by taking the {@action 疾走} action additional times during the chase."
+								"Over the course of a chase, you can take the {@action 疾走} action a limited number of times before you risk {@condition 力竭}. That number equals 3 + your Constitution modifier. Each additional {@action 疾走} action you take after that number during the chase requires you to succeed on a DC 10 Constitution check at the end of your turn or gain | level of {@condition 力竭}.",
+								"You drop out of the chase if your {@condition 力竭} reaches level 5, since your speed becomes0. By finishing a short or long rest, you can remove all the levels of {@condition 力竭} you gained by taking the {@action 疾走} action additional times during the chase."
 							]
 						},
 						{
@@ -484,7 +484,7 @@
 					"name": "Ending a Chase",
 					"entries": [
 						"A chase ends when one side or the other stops, when the quarry escapes, or when at least one pursuer is within 5 feet of a quarry.",
-						"If neither side gives up the chase, the quarry can make a Dexterity ({@skill 隐匿}) check at the end of each round, after every participant in the chase has taken a turn. An {@condition incapacitated} quarry can't make this check, nor can a quarry without anything to hide behind. The check's total is compared to the passive Wisdom ({@skill 察觉}) scores of the pursuers. If the quarry consists of multiple creatures, they all make the check. If the total of a quarry's check is greater than the highest passive score, that quarry escapes and is no longer in the chase.",
+						"If neither side gives up the chase, the quarry can make a Dexterity ({@skill 隐匿}) check at the end of each round, after every participant in the chase has taken a turn. An {@condition 无力} quarry can't make this check, nor can a quarry without anything to hide behind. The check's total is compared to the passive Wisdom ({@skill 察觉}) scores of the pursuers. If the quarry consists of multiple creatures, they all make the check. If the total of a quarry's check is greater than the highest passive score, that quarry escapes and is no longer in the chase.",
 						"The quarry gains advantage or disadvantage on the check based on prevailing circumstances, as shown in the Escape Factors table. If one or more factors give the quarry both advantage and disadvantage on its check, the quarry has neither, as usual.",
 						{
 							"type": "table",
