@@ -807,40 +807,44 @@
 			"weight": 8,
 			"value": 5000,
 			"additionalEntries": [
-				"Alchemist's supplies enable a character to produce useful concoctions, such as acid or alchemist's fire.",
+				"炼金工具可以用来制作有用的化合物，如强酸或炽火胶。",
 				{
 					"type": "entries",
-					"name": "Components",
+					"name": "组件",
+					"ENG_name": "Components",
 					"entries": [
-						"Alchemist's supplies include two glass beakers, a metal frame to hold a beaker in place over an open flame, a glass stirring rod, a small mortar and pestle, and a pouch of common alchemical ingredients, including salt, powdered iron, and purified water."
+						"炼金工具包括两只玻璃烧杯、一个铁架台、一根玻璃搅拌棒、一个小研钵和药杵，以及一袋常用炼金术材料，包括盐、铁粉、纯净水。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Arcana",
+					"name": "奥秘",
+					"ENG_name": "Arcana",
 					"entries": [
-						"Proficiency with alchemist's supplies allows you to unlock more information on {@skill 奥秘} checks involving potions and similar materials."
+						"炼金工具熟练项可以让你在进行鉴定药水或类似物质的{@skill 奥秘}检定中获得更多信息。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Investigation",
+					"name": "调查",
+					"ENG_name": "Investigation",
 					"entries": [
-						"When you inspect an area for clues, proficiency with alchemist's supplies grants additional insight into any chemicals or other substances that might have been used in the area."
+						"当你调查一个区域的线索时，如果该区域曾使用过任何化合物或其他物质，炼金工具熟练项将使你对此具有额外的洞察力。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Alchemical Crafting",
+					"name": "道具制作",
+					"ENG_name": "Alchemical Crafting",
 					"entries": [
-						"You can use this tool proficiency to create alchemical items. A character can spend money to collect raw materials, which weigh 1 pound for every 50 gp spent. The DM can allow a character to make a check using the indicated skill with advantage. As part of a long rest, you can use alchemist's supplies to make one dose of acid, alchemist's fire, antitoxin, oil, perfume, or soap. Subtract half the value of the created item from the total gp worth of raw materials you are carrying."
+						"你可以使用这套工具熟练制作炼金道具。角色可以花钱收集原材料，每磅材料花费50金币。DM可以允许角色使用指定技能进行检定时具有优势。"
 					]
 				},
 				{
 					"type": "table",
-					"caption": "Alchemist's Supplies",
+					"caption": "炼金工具",
 					"colLabels": [
-						"Activity",
+						"用途",
 						"DC"
 					],
 					"colStyles": [
@@ -849,23 +853,23 @@
 					],
 					"rows": [
 						[
-							"Create a puff of thick smoke",
+							"制造一股浓烟",
 							"10"
 						],
 						[
-							"Identify a poison",
+							"鉴定一瓶药水",
 							"10"
 						],
 						[
-							"Identify a substance",
+							"鉴定一种物质",
 							"15"
 						],
 						[
-							"Start a fire",
+							"点火",
 							"15"
 						],
 						[
-							"Neutralize acid",
+							"中和强酸",
 							"20"
 						]
 					]
