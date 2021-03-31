@@ -722,7 +722,13 @@ function Renderer () {
 
 	this._renderOptions = function (entry, textStack, meta, options) {
 		if (!entry.entries) return;
-		entry.entries = entry.entries.sort((a, b) => a.name && b.name ? SortUtil.ascSort(a.name, b.name) : a.name ? -1 : b.name ? 1 : 0);
+		entry.entries = entry.entries.sort((a, b) => {
+			if (a.ENG_name && b.ENG_name) return SortUtil.ascSort(a.ENG_name, b.ENG_name);
+			else if (a.name && b.name) return SortUtil.ascSort(a.name, b.name);
+			else if (a.name) return -1;
+			else if (b.name) return 1;
+			else return 0;
+		});
 
 		if (entry.style && entry.style === "list-hang-notitle") {
 			const fauxEntry = {
