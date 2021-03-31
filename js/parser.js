@@ -1490,7 +1490,7 @@ Parser.prereqPactToFull = function (pact) {
 	if (pact === "Chain") return "锁链魔契";
 	if (pact === "Tome") return "书卷魔契";
 	if (pact === "Blade") return "锋刃魔契";
-	if (pact === "Talisman") return "Pact of the Talisman";
+	if (pact === "Talisman") return "符之魔契";
 	return pact;
 };
 
