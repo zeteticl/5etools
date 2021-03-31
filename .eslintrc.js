@@ -175,9 +175,9 @@ module.exports = {
 		"yoda": ["error", "never"],
 		"no-prototype-builtins": "off",
 		"require-atomic-updates": "off",
-		"no-console": "error",
+		// "no-console": "error",
 		"prefer-template": "error",
 		"quotes": ["error", "double", {"allowTemplateLiterals": true}],
-		"no-var": "error"
-	}
+		"no-var": "error",
+	},
 };
