@@ -885,7 +885,7 @@ function Renderer () {
 		if (entry.constant || entry.will || entry.rest || entry.daily || entry.weekly || entry.ritual) {
 			const tempList = {type: "list", style: "list-hang-notitle", items: [], data: {isSpellList: true}};
 			if (entry.constant && !hidden.has("constant")) tempList.items.push({type: "itemSpell", name: `Constant:`, entry: this._renderSpellcasting_getRenderableList(entry.constant).join(", ")});
-			if (entry.will && !hidden.has("will")) tempList.items.push({type: "itemSpell", name: `随意:`, entry: this._renderSpellcasting_getRenderableList(entry.will).join(", ")});
+			if (entry.will && !hidden.has("will")) tempList.items.push({type: "itemSpell", name: `随意：`, entry: this._renderSpellcasting_getRenderableList(entry.will).join("、")});
 			if (entry.rest && !hidden.has("rest")) {
 				for (let lvl = 9; lvl > 0; lvl--) {
 					const rest = entry.rest;
@@ -919,15 +919,15 @@ function Renderer () {
 			for (let lvl = 0; lvl < 10; ++lvl) {
 				const spells = entry.spells[lvl];
 				if (spells) {
-					let levelCantrip = `${Parser.spLevelToFull(lvl)}${(lvl === 0 ? "s" : " level")}`;
-					let slotsAtWill = ` (随意)`;
+					let levelCantrip = Parser.spLevelToFull(lvl);
+					let slotsAtWill = `（随意）`;
 					const slots = spells.slots;
-					if (slots >= 0) slotsAtWill = slots > 0 ? ` (${slots} slot${slots > 1 ? "s" : ""})` : ``;
+					if (slots >= 0) slotsAtWill = slots > 0 ? `（${slots}个）` : ``;
 					if (spells.lower && spells.lower !== lvl) {
 						levelCantrip = `${Parser.spLevelToFull(spells.lower)}-${levelCantrip}`;
-						if (slots >= 0) slotsAtWill = slots > 0 ? ` (${slots}个 ${Parser.spLevelToFull(lvl)}法术位${slots > 1 ? "s" : ""})` : ``;
+						if (slots >= 0) slotsAtWill = slots > 0 ? `（${slots}个 ${Parser.spLevelToFull(lvl)}法术位）` : "";
 					}
-					tempList.items.push({type: "itemSpell", name: `${levelCantrip}${slotsAtWill}:`, entry: this._renderSpellcasting_getRenderableList(spells.spells).join(", ") || "\u2014"})
+					tempList.items.push({type: "itemSpell", name: `${levelCantrip}${slotsAtWill}:`, entry: this._renderSpellcasting_getRenderableList(spells.spells).join("、") || "\u2014"})
 				}
 			}
 			toRender[0].entries.push(tempList);
