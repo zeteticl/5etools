@@ -6388,7 +6388,7 @@ Parser.subclassKeyToDisplay["fathomless"] = "深海意志";
 Parser.subclassKeyToDisplay["fiend"] = "邪魔";
 Parser.subclassKeyToDisplay["genie"] = "巨灵";
 Parser.subclassKeyToDisplay["great old one"] = "旧日支配者";
-Parser.subclassKeyToDisplay["hexblade"] = "咒剑士";
+Parser.subclassKeyToDisplay["hexblade"] = "咒剑";
 Parser.subclassKeyToDisplay["undying"] = "不朽者";
 
 Parser.subclassKeyToDisplay["abjuration"] = "防护";
