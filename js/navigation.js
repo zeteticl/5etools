@@ -25,7 +25,7 @@ class NavBar {
 		// create mobile "Menu" button
 		const btnShowHide = document.createElement("button");
 		btnShowHide.className = "btn btn-default page__btn-toggle-nav";
-		btnShowHide.innerHTML = "Menu";
+		btnShowHide.innerHTML = "菜单";
 		btnShowHide.onclick = () => {
 			$(btnShowHide).toggleClass("active");
 			$(`.page__nav-hidden-mobile`).toggleClass("block", $(btnShowHide).hasClass("active"));
