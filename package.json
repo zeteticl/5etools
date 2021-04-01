@@ -22,7 +22,6 @@
 		"build:sw": "node node/generate-service-worker.js",
 		"build": "npm run clean-jsons && npm run gen-all && npm run build:css && npm run build:sw",
 		"preversion": "npm test",
-		"replace-chinese": "node node/replace-spells-chinese-tagging.js",
 		"version": "node node/version-bump.js",
 		"serve:dev": "http-server -c-1 --cors --port 5000"
 	},
