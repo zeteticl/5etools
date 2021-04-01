@@ -4046,7 +4046,7 @@ BrewUtil = {
 			let cached;
 			if ($ele) {
 				cached = $ele.html();
-				$ele.text("Loading...");
+				$ele.text("加载中...");
 			}
 			if (doUnescape) jsonUrl = jsonUrl.unescapeQuotes();
 			const data = await DataUtil.loadJSON(`${jsonUrl}?${(new Date()).getTime()}`);
@@ -4063,7 +4063,7 @@ BrewUtil = {
 
 		const $btnAll = $(`<button class="btn btn-default btn-xs" disabled title="(Excluding samples)">Add All</button>`);
 
-		const $wrpRows = $$`<div class="list"><div class="lst__row flex-col"><div class="lst__wrp-cells lst--border lst__row-inner flex w-100"><span style="font-style: italic;">Loading...</span></div></div></div>`;
+		const $wrpRows = $$`<div class="list"><div class="lst__row flex-col"><div class="lst__wrp-cells lst--border lst__row-inner flex w-100"><span style="font-style: italic;">加载中...</span></div></div></div>`;
 
 		const $iptSearch = $(`<input type="search" class="search manbrew__search form-control w-100" placeholder="Find homebrew...">`)
 			.keydown(evt => {

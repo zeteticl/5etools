@@ -80,7 +80,7 @@ class ModalFilter {
 
 		await this._pInit();
 
-		const $ovlLoading = $(`<div class="w-100 h-100 flex-vh-center"><i class="dnd-font ve-muted">Loading...</i></div>`).appendTo($wrp);
+		const $ovlLoading = $(`<div class="w-100 h-100 flex-vh-center"><i class="dnd-font ve-muted">加载中...</i></div>`).appendTo($wrp);
 
 		const $iptSearch = opts.$iptSearch || $(`<input class="form-control" type="search" placeholder="Search...">`);
 		const $btnReset = opts.$btnReset || $(`<button class="btn btn-default">重置</button>`);

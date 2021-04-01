@@ -518,7 +518,7 @@ class LootGen {
 		};
 
 		if (!this.hasLoadedSpells()) {
-			$ele.html(`[loading...]`);
+			$ele.html(`[加载中...]`);
 			this.loadSpells(() => output());
 		} else {
 			output();

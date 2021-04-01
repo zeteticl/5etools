@@ -1070,7 +1070,7 @@ Parser.getSingletonUnit = function (unit, isShort) {
 		case UNT_FEET:
 			return isShort ? "ft." : "尺";
 		case UNT_MILES:
-			return isShort ? "mi." : "里";
+			return isShort ? "mi." : "哩";
 		default: {
 			const fromBrew = MiscUtil.get(BrewUtil.homebrewMeta, "spellDistanceUnits", unit, "singular");
 			if (fromBrew) return fromBrew;
@@ -1178,7 +1178,7 @@ Parser.spMainClassesToFull = function (fromClassList, textOnly = false) {
 		.map(c => ({hash: UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_CLASSES](c), c}))
 		.filter(it => !ExcludeUtil.isInitialised || !ExcludeUtil.isExcluded(it.hash, "class", it.c.source))
 		.sort((a, b) => SortUtil.ascSort(a.c.name, b.c.name))
-		.map(it => textOnly ? Parser.ClassToDisplay(it.c.name) : `<a title="${it.c.definedInSource ? `Class source` : "Source"}: ${Parser.sourceJsonToFull(it.c.source)}${it.c.definedInSource ? `. Spell list defined in: ${Parser.sourceJsonToFull(it.c.definedInSource)}.` : ""}" href="${UrlUtil.PG_CLASSES}#${it.hash}">${Parser.ClassToDisplay(it.c.name)}</a>`)
+		.map(it => textOnly ? Parser.ClassToDisplay(it.c.name) : `<a title="${it.c.definedInSource ? `职业来源` : "来源"}: ${Parser.sourceJsonToFull(it.c.source)}${it.c.definedInSource ? `. Spell list defined in: ${Parser.sourceJsonToFull(it.c.definedInSource)}.` : ""}" href="${UrlUtil.PG_CLASSES}#${it.hash}">${Parser.ClassToDisplay(it.c.name)}</a>`)
 		.join("、") || "";
 };
 

@@ -567,7 +567,7 @@ class ModalFilterClasses extends ModalFilter {
 		} else {
 			await this._pInit();
 
-			const $ovlLoading = $(`<div class="w-100 h-100 flex-vh-center"><i class="dnd-font ve-muted">Loading...</i></div>`).appendTo($modalInner);
+			const $ovlLoading = $(`<div class="w-100 h-100 flex-vh-center"><i class="dnd-font ve-muted">加载中...</i></div>`).appendTo($modalInner);
 
 			const $iptSearch = $(`<input class="form-control" type="search" placeholder="Search...">`);
 			const $btnReset = $(`<button class="btn btn-default">Reset</button>`);

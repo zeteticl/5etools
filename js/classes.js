@@ -1069,9 +1069,9 @@ class ClassesPage extends BaseComponent {
 			$dispCount.off("click");
 			if (this._listSubclass.visibleItems.length) {
 				const cntNotShown = this._listSubclass.items.length - this._listSubclass.visibleItems.length;
-				$dispCount.html(cntNotShown ? `<i class="clickable" title="Adjust your filters to see more.">(${cntNotShown} more not shown)</i>` : "").click(() => this._doSelectAllSubclasses());
+				$dispCount.html(cntNotShown ? `<i class="clickable" title="调整筛选器以查看更多。">(${cntNotShown}个条目未显示)</i>` : "").click(() => this._doSelectAllSubclasses());
 			} else if (this._listSubclass.items.length > 1) {
-				$dispCount.html(`<i class="clickable" title="Adjust your filters to see more.">(${this._listSubclass.items.length - 1} subclasses not shown)</i>`).click(() => this._doSelectAllSubclasses());
+				$dispCount.html(`<i class="clickable" title="调整筛选器以查看更多。">(${this._listSubclass.items.length - 1}个子职未显示)</i>`).click(() => this._doSelectAllSubclasses());
 			} else $dispCount.html("");
 		});
 
@@ -1116,9 +1116,9 @@ class ClassesPage extends BaseComponent {
 			});
 
 		const filterSets = [
-			{name: "View Official", subHashes: [], isClearSources: false},
-			{name: "View Most Recent", subHashes: [], isClearSources: true},
-			{name: "View All", subHashes: ["flstmiscellaneous:reprinted=0"], isClearSources: true},
+			{name: "查看官方", subHashes: [], isClearSources: false},
+			{name: "查看最新", subHashes: [], isClearSources: true},
+			{name: "查看全部", subHashes: ["flstmiscellaneous:reprinted=0"], isClearSources: true},
 		];
 		const setFilterSet = ix => {
 			const filterSet = filterSets[ix];
@@ -1140,7 +1140,7 @@ class ClassesPage extends BaseComponent {
 			].filter(Boolean), true);
 			$selFilterPreset.val("-1");
 		};
-		const $selFilterPreset = $(`<select class="input-xs form-control cls-tabs__sel-preset"><option value="-1" disabled>Filter...</option></select>`)
+		const $selFilterPreset = $(`<select class="input-xs form-control cls-tabs__sel-preset"><option value="-1" disabled>筛选...</option></select>`)
 			.change(() => {
 				const val = Number($selFilterPreset.val());
 				if (val == null) return;
@@ -1691,7 +1691,7 @@ class ClassesPage extends BaseComponent {
 		if (cls.otherSources) {
 			const text = Renderer.utils.getSourceAndPageHtml(cls);
 			const $trClassFeature = $(`<tr data-feature-type="class"><td colspan="6"/></tr>`)
-				.fastSetHtml(`<hr class="hr-1"><b>Class source:</b> ${text}`)
+				.fastSetHtml(`<hr class="hr-1"><b>职业来源：</b> ${text}`)
 				.appendTo($content);
 		}
 

@@ -65,7 +65,7 @@ class SearchPage {
 		const $btnExpandAll = $(`<button class="btn btn-default" title="Expand All Results"><span class="glyphicon glyphicon-plus"></span></button>`)
 			.click(() => handleMassExpandCollapse(true));
 
-		SearchPage._$wrpResults = $(`<div class="flex-col w-100">${this._getWrpResult_message("Loading...")}</div>`);
+		SearchPage._$wrpResults = $(`<div class="flex-col w-100">${this._getWrpResult_message("加载中...")}</div>`);
 
 		$$(SearchPage._$wrp)`<div class="flex-col w-100 pg-search__wrp">
 			<div class="flex-v-center mb-2 mobile__flex-col">
