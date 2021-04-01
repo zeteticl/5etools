@@ -800,21 +800,21 @@ Parser.skillProficienciesToFull = function (skillProficiencies) {
 		if (~ixChoose) {
 			const chObj = skProf.choose;
 			if (chObj.from.length === 18) {
-				chooseStack.push(`选择任意${!chObj.count || chObj.count === 1 ? "个技能" : chObj.count}`);
+				chooseStack.push(`选择任意${chObj.count ? chObj.count : "1"}个技能`);
 			} else {
-				chooseStack.push(`从${chObj.from.map(it => Renderer.get().render(`{@skill ${Parser.SkillToDisplay(it)}}`)).joinConjunct(", ", " 和 ")}中选择${chObj.count || 1}个`);
+				chooseStack.push(`从${chObj.from.map(it => Renderer.get().render(`{@skill ${Parser.SkillToDisplay(it)}}`)).joinConjunct("、", "和")}中选择${chObj.count || 1}个`);
 			}
 		}
 
-		const base = baseStack.joinConjunct(", ", " and ");
+		const base = baseStack.joinConjunct("、", "和");
 		const choose = chooseStack.join(""); // this should currently only ever be 1-length
 
-		if (baseStack.length && chooseStack.length) return `${base}; and ${choose}`;
+		if (baseStack.length && chooseStack.length) return `${base}；以及 ${choose}`;
 		else if (baseStack.length) return base;
 		else if (chooseStack.length) return choose;
 	}
 
-	return skillProficiencies.map(renderSingle).join(" <i>or</i> ");
+	return skillProficiencies.map(renderSingle).join(" <i>或</i> ");
 };
 
 // sp-prefix functions are for parsing spell data, and shared with the roll20 script
@@ -1345,7 +1345,7 @@ Parser.getFullImmRes = function (toParse) {
 			const prop = it.immune ? "immune" : it.resist ? "resist" : it.vulnerable ? "vulnerable" : null;
 			if (prop) {
 				const toJoin = it[prop].map(nxt => toString(nxt, depth + 1));
-				stack.push(depth ? toJoin.join(maxDepth ? "; " : ", ") : toJoin.joinConjunct(", ", " 和 "));
+				stack.push(depth ? toJoin.join(maxDepth ? "; " : ", ") : toJoin.joinConjunct("、", "和"));
 			}
 
 			if (it.note) stack.push(it.note);

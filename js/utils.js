@@ -211,7 +211,7 @@ String.prototype.toAscii = String.prototype.toAscii || function () {
 		.replace(/Æ/g, "AE").replace(/æ/g, "ae");
 };
 
-Array.prototype.joinConjunct = Array.prototype.joinConjunct || function (joiner, lastJoiner, nonOxford) {
+Array.prototype.joinConjunct = Array.prototype.joinConjunct || function (joiner, lastJoiner, nonOxford = true) {
 	if (this.length === 0) return "";
 	if (this.length === 1) return this[0];
 	if (this.length === 2) return this.join(lastJoiner);
