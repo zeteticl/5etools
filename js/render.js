@@ -4286,10 +4286,12 @@ Renderer.deity = {
 		},
 		"神系": {
 			prop: "pantheon",
+			displayFn: (it) => typeof it === "string" ? Parser.PantheonToDisplay(it) : it,
 		},
 		"类别": {
 			prop: "category",
-			displayFn: it => typeof it === "string" ? it : it.join("、"),
+			displayFn: it => typeof it === "string"
+				? Parser.PantheonCategoryToDisplay(it) : it.map(a => Parser.PantheonCategoryToDisplay(a)).join("、"),
 		},
 		"领域": {
 			prop: "domains",
@@ -4318,7 +4320,7 @@ Renderer.deity = {
 		});
 		if (deity.customProperties) Object.entries(deity.customProperties).forEach(([k, v]) => parts[k] = v);
 		const allKeys = Object.keys(parts).sort(SortUtil.ascSortLower);
-		return allKeys.map(k => `${prefix}<b>${k}: </b>${Renderer.get().render(parts[k])}${suffix}`).join("");
+		return allKeys.map(k => `${prefix}<b>${k}：</b>${Renderer.get().render(parts[k])}${suffix}`).join("");
 	},
 
 	getCompactRenderedString (deity) {
