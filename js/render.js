@@ -5809,7 +5809,7 @@ Renderer.item = {
 		// add additional entries based on type (e.g. XGE variants)
 		if (item.type === "T" || item.type === "AT" || item.type === "INS" || item.type === "GS") { // tools, artisan's tools, instruments, gaming sets
 			Renderer.item._initFullAdditionalEntries(item);
-			item._fullAdditionalEntries.push({type: "hr"}, `{@note See the {@variantrule Tool Proficiencies|XGE} entry for more information.}`);
+			item._fullAdditionalEntries.push({type: "hr"}, `{@note 参见{@variantrule 工具熟练项|XGE}条目获取更多信息。}`);
 		}
 
 		// Add additional sources for all instruments and gaming sets
