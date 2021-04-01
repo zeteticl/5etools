@@ -1670,7 +1670,7 @@ class ClassesPage extends BaseComponent {
 							const ptDate = ixScLvl === 0 && SourceUtil.isNonstandardSource(sc.source) && Parser.sourceJsonToDate(sc.source)
 								? Renderer.get().render(`{@note This subclass was published on ${MiscUtil.dateToStr(new Date(Parser.sourceJsonToDate(sc.source)))}.}`)
 								: "";
-							const ptSources = ixScLvl === 0 && sc.otherSources ? `{@note {@b Subclass source:} ${Renderer.utils.getSourceAndPageHtml(sc)}}` : "";
+							const ptSources = ixScLvl === 0 && sc.otherSources ? `{@note {@b 子职来源：} ${Renderer.utils.getSourceAndPageHtml(sc)}}` : "";
 							const toRender = (ptDate || ptSources) && scFeature.entries ? MiscUtil.copy(scFeature) : scFeature;
 							if (ptDate && toRender.entries) toRender.entries.unshift(ptDate);
 							if (ptSources && toRender.entries) toRender.entries.push(ptSources);
