@@ -186,21 +186,21 @@ const PARENTS_HALF_ELF = [
 	{min: 1, max: 5, result: () => { const p = RNG(2); return `父母其中一方是精灵 ${fmtChoice(p === 1 ? "母亲" : "父亲")}，另一方是人类 ${fmtChoice(p === 1 ? "父亲" : "母亲")}。` }, display: "父母其中一方是精灵，另一方是人类。", _races: ["Elf", "Human"]},
 	{min: 6, result: () => { const p = RNG(2); return `父母其中一方是精灵 ${fmtChoice(p === 1 ? "母亲" : "父亲")}，另一方是半精灵 ${fmtChoice(p === 1 ? "父亲" : "母亲")}。` }, display: "父母其中一方是精灵，另一方是半精灵。", _races: ["Elf", "Half-Elf"]},
 	{min: 7, result: () => { const p = RNG(2); return `父母其中一方是人类 ${fmtChoice(p === 1 ? "母亲" : "父亲")}，另一方是半精灵 ${fmtChoice(p === 1 ? "父亲" : "母亲")}。` }, display: "父母其中一方是人类，另一方是半精灵。", _races: ["Half-Elf", "Human"]},
-	{min: 8, result: "双亲都是半精灵。"}
+	{min: 8, result: "双亲都是半精灵。"},
 ];
 
 const PARENTS_HALF_ORC = [
 	{min: 1, max: 3, result: () => { const p = RNG(2); return `父母其中一方是兽人 ${fmtChoice(p === 1 ? "母亲" : "父亲")}，另一方是人类 ${fmtChoice(p === 1 ? "父亲" : "母亲")}。` }, display: "父母其中一方是兽人，另一方是人类。", _races: ["Orc", "Human"]},
 	{min: 4, max: 5, result: () => { const p = RNG(2); return `父母其中一方是兽人 ${fmtChoice(p === 1 ? "母亲" : "父亲")}，另一方是半兽人 ${fmtChoice(p === 1 ? "父亲" : "母亲")}。` }, display: "父母其中一方是兽人，另一方是半兽人。", _races: ["Orc", "Half-Orc"]},
 	{min: 6, max: 7, result: () => { const p = RNG(2); return `父母其中一方是人类 ${fmtChoice(p === 1 ? "母亲" : "父亲")}，另一方是半兽人 ${fmtChoice(p === 1 ? "父亲" : "母亲")}。` }, display: "父母其中一方是人类，另一方是半兽人。", _races: ["Human", "Half-Orc"]},
-	{min: 8, display: "双亲都是半兽人。"}
+	{min: 8, display: "双亲都是半兽人。"},
 ];
 
 const PARENTS_TIEFLING = [
 	{min: 1, max: 4, display: "双亲都是人类，他们体内沉睡的炼狱血脉在你身上显现。"},
-	{min: 5, max: 6, result: () => { const p = RNG(2); return `父母其中一方是提夫林 ${fmtChoice(p === 1 ? "母亲" : "父亲")}，另一方是人类 ${fmtChoice(p === 1 ? "父亲" : "母亲")}。` }, display: "父母其中一方是提夫林，另一方是人类。"}, _races: ["Human", "Tiefling"],
+	{min: 5, max: 6, result: () => { const p = RNG(2); return `父母其中一方是提夫林 ${fmtChoice(p === 1 ? "母亲" : "父亲")}，另一方是人类 ${fmtChoice(p === 1 ? "父亲" : "母亲")}。` }, display: "父母其中一方是提夫林，另一方是人类。", _races: ["Human", "Tiefling"]},
 	{min: 7, result: () => { const p = RNG(2); return `父母其中一方是提夫林 ${fmtChoice(p === 1 ? "母亲" : "父亲")}，另一方是魔鬼 ${fmtChoice(p === 1 ? "父亲" : "母亲")}。` }, display: "父母其中一方是提夫林，另一方是魔鬼。", _races: ["Devil", "Tiefling"]},
-	{min: 8, result: () => { const p = RNG(2); return `父母其中一方是人类 ${fmtChoice(p === 1 ? "母亲" : "父亲")}，另一方是魔鬼 ${fmtChoice(p === 1 ? "父亲" : "母亲")}。` }, display: "父母其中一方是人类，另一方是魔鬼。", _races: ["Human", "Devil"]}
+	{min: 8, result: () => { const p = RNG(2); return `父母其中一方是人类 ${fmtChoice(p === 1 ? "母亲" : "父亲")}，另一方是魔鬼 ${fmtChoice(p === 1 ? "父亲" : "母亲")}。` }, display: "父母其中一方是人类，另一方是魔鬼。", _races: ["Human", "Devil"]},
 ];
 
 const BIRTHPLACES = [
@@ -226,7 +226,7 @@ const BIRTHPLACES = [
 	{min: 97, result: "在堕影冥界"},
 	{min: 98, result: () => `在星界位面或乙太位面 ${choose("星界位面", "乙太位面")}`, display: "在星界位面或乙太位面"},
 	{min: 99, result: "在一个你所选择的内层位面"},
-	{min: 100, result: "在一个你所选择的外层位面"}
+	{min: 100, result: "在一个你所选择的外层位面"},
 ];
 
 function absentParent (parent) {
@@ -258,14 +258,14 @@ const FAMILY = [
 	{min: 26, max: 35, result: () => `领养家庭 (相同或不同种族) ${choose("相同种族", "不同种族")}. ${absentBothParents()}`, display: "领养家庭 (相同或不同种族)"},
 	{min: 36, max: 55, result: () => singleParentOrStep("父亲"), display: "单亲父亲 或 继父"},
 	{min: 56, max: 75, result: () => singleParentOrStep("母亲"), display: "单亲母亲 或 继母"},
-	{min: 76, max: 100, result: "父母亲"}
+	{min: 76, max: 100, result: "父母亲"},
 ];
 
 const ABSENT_PARENT = [
 	{min: 1, result: () => `你父母双亡 (${rollSuppDeath().result.lowercaseFirst()})。`, display: "你父母双亡 (roll on the {@table Supplemental Tables; Cause of Death|XGE|Cause of Death} supplemental table)."},
 	{min: 2, result: () => `你的父母被监禁、奴役、或因为其他原因而被带走 ${choose("监禁", "奴役", "其他原因")}。`, display: "你的父母被监禁、奴役、或因为其他原因而被带走。"},
 	{min: 3, result: "你的父母遗弃了你。"},
-	{min: 4, result: "你的父母不知去向。"}
+	{min: 4, result: "你的父母不知去向。"},
 ];
 
 const FAMILY_LIFESTYLE = [
@@ -275,7 +275,7 @@ const FAMILY_LIFESTYLE = [
 	{min: 9, max: 12, result: "简朴 (+0)", "modifier": 0},
 	{min: 13, max: 15, result: "舒适 (+10)", "modifier": 10},
 	{min: 16, max: 17, result: "富裕 (+20)", "modifier": 20},
-	{min: 18, result: "奢华 (+40)", "modifier": 40}
+	{min: 18, result: "奢华 (+40)", "modifier": 40},
 ];
 
 const CHILDHOOD_HOME = [
@@ -287,7 +287,7 @@ const CHILDHOOD_HOME = [
 	{min: 51, max: 70, result: "Small house"},
 	{min: 71, max: 90, result: "Large house"},
 	{min: 91, max: 110, result: "豪宅"},
-	{min: 111, result: () => `宫殿或城堡 ${choose("宫殿", "城堡")}`, display: "宫殿或城堡"}
+	{min: 111, result: () => `宫殿或城堡 ${choose("宫殿", "城堡")}`, display: "宫殿或城堡"},
 ];
 
 const CHILDHOOD_MEMORIES = [
@@ -306,7 +306,7 @@ const LIFE_EVENTS_AGE = [
 	{min: 60, max: 69, "age": () => RNG(10) + 30, result: "31\u201440岁", "events": () => RNG(6)},
 	{min: 70, max: 89, "age": () => RNG(10) + 40, result: "41\u201450岁", "events": () => RNG(8)},
 	{min: 90, max: 99, "age": () => RNG(10) + 50, result: "51\u201460岁", "events": () => RNG(10)},
-	{min: 100, "age": () => RNG(690) + 60, result: "61岁或更老", "events": () => RNG(12)} // max age = 750; max elven age
+	{min: 100, "age": () => RNG(690) + 60, result: "61岁或更老", "events": () => RNG(12)}, // max age = 750; max elven age
 ];
 
 function _lifeEvtResult (title, rollResult) {
@@ -470,7 +470,7 @@ const SUPP_ALIGNMENT = [
 	{min: 9, max: 12, result: "绝对中立"},
 	{min: 13, max: 15, result: "中立善良"},
 	{min: 16, max: 17, result: () => rollOnArray(["守序善良", "守序中立"]), display: "守序善良(50%) 或 守序中立(50%)"},
-	{min: 18, result: () => rollOnArray(["混乱善良", "混乱中立"]), display: "混乱善良(50%) 或 混乱中立(50%)"}
+	{min: 18, result: () => rollOnArray(["混乱善良", "混乱中立"]), display: "混乱善良(50%) 或 混乱中立(50%)"},
 ];
 
 const SUPP_DEATH = [
@@ -499,7 +499,7 @@ const SUPP_CLASS = [
 	{min: 71, max: 84, result: "游荡者"},
 	{min: 85, max: 89, result: "术士"},
 	{min: 90, max: 94, result: "契术师"},
-	{min: 95, max: 100, result: "法师"}
+	{min: 95, max: 100, result: "法师"},
 ];
 
 const SUPP_OCCUPATION = [
@@ -518,7 +518,7 @@ const SUPP_OCCUPATION = [
 	{min: 81, max: 85, result: () => `政治家 或 官僚 ${choose("政治家", "官僚")}`, display: "政治家 或 官僚"},
 	{min: 86, max: 90, result: "祭司"},
 	{min: 91, max: 95, result: "水手"},
-	{min: 96, max: 100, result: "士兵"}
+	{min: 96, max: 100, result: "士兵"},
 ];
 
 const SUPP_RACE = [
@@ -531,13 +531,13 @@ const SUPP_RACE = [
 	{min: 81, max: 85, result: "半精灵"},
 	{min: 86, max: 90, result: "半兽人"},
 	{min: 91, max: 95, result: "提夫林"},
-	{min: 96, max: 100, result: "由DM决定"}
+	{min: 96, max: 100, result: "由DM决定"},
 ];
 
 const SUPP_RELATIONSHIP = [
 	{min: 3, max: 4, result: "敌对"},
 	{min: 5, max: 10, result: "友善"},
-	{min: 11, max: 12, result: "冷淡"}
+	{min: 11, max: 12, result: "冷淡"},
 ];
 
 const SUPP_STATUS = [
@@ -547,7 +547,7 @@ const SUPP_STATUS = [
 	{min: 9, max: 12, result: "活着，且过得不错"},
 	{min: 13, max: 15, result: "活着，且颇有成就"},
 	{min: 16, max: 17, result: "活着，且恶名昭彰"},
-	{min: 18, result: "活着，且享誉盛名"}
+	{min: 18, result: "活着，且享誉盛名"},
 ];
 
 let classList;
