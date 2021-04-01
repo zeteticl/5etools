@@ -5275,7 +5275,7 @@ Renderer.item = {
 		}
 
 		if (!isCompact && item.lootTables) {
-			renderStack.push(`<div><span class="bold">Found On: </span>${item.lootTables.sort(SortUtil.ascSortLower).map(tbl => renderer.render(`{@table ${tbl}}`)).join(", ")}</div>`);
+			renderStack.push(`<div><span class="bold">发现于：</span>${item.lootTables.sort(SortUtil.ascSortLower).map(tbl => renderer.render(`{@table ${tbl}}`)).join(", ")}</div>`);
 		}
 
 		return renderStack.join("").trim();
