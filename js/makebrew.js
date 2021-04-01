@@ -1120,7 +1120,7 @@ class BuilderUi {
 						else if (~ixB) return -1;
 						else return SortUtil.ascSortLower(a, b);
 					} else return SortUtil.ascSortLower(a, b);
-				}).join(", "));
+				}).join("、"));
 				cb();
 			});
 	}

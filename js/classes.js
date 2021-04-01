@@ -998,7 +998,7 @@ class ClassesPage extends BaseComponent {
 					<div><b>护甲：</b> <span>${profs.armor ? Renderer.class.getRenderedArmorProfs(profs.armor) : "无"}</span></div>
 					<div><b>武器：</b> <span>${profs.weapons ? Renderer.class.getRenderedWeaponProfs(profs.weapons) : "无"}</span></div>
 					<div><b>工具：</b> <span>${profs.tools ? Renderer.class.getRenderedToolProfs(profs.tools) : "无"}</span></div>
-					<div><b>豁免：</b> <span>${cls.proficiency ? cls.proficiency.map(p => Parser.attAbvToFull(p)).join(", ") : "无"}</span></div>
+					<div><b>豁免：</b> <span>${cls.proficiency ? cls.proficiency.map(p => Parser.attAbvToFull(p)).join("、") : "无"}</span></div>
 					<div><b>技能：</b> <span>${profs.skills ? Renderer.class.getRenderedSkillProfs(profs.skills) : "无"}</span></div>
 				</td>
 			</tr>

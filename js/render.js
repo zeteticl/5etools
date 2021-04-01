@@ -2419,12 +2419,12 @@ Renderer.getAbilityData = function (abArr) {
 					});
 
 					const startText = isAny
-						? `Choose `
-						: `From ${froms.joinConjunct(", ", " 和 ")} choose `;
+						? `选择 `
+						: `从 ${froms.joinConjunct("、", "和")} 中选择 `;
 
 					const ptAreaIncrease = isAny
 						? areIncrease.concat(areReduce).join("; ")
-						: areIncrease.concat(areReduce).joinConjunct(", ", isAny ? "; " : " 和 ");
+						: areIncrease.concat(areReduce).joinConjunct("、", isAny ? "；" : "和");
 					toConvertToText.push(`${startText}${ptAreaIncrease}`);
 					toConvertToShortText.push(`${isAny ? "Any combination " : ""}${areIncreaseShort.concat(areReduceShort).join("/")}${isAny ? "" : ` from ${froms.join("/")}`}`);
 				} else {
@@ -2983,13 +2983,13 @@ Renderer.utils = {
 						case "spell":
 							return isListMode
 								? v.map(x => x.split("#")[0].split("|")[0].toTitleCase()).join("/")
-								: v.map(sp => Parser.prereqSpellToFull(sp)).joinConjunct(", ", " 或 ");
+								: v.map(sp => Parser.prereqSpellToFull(sp)).joinConjunct("、", "或");
 						case "feature":
 							return isListMode
 								? v.map(x => Renderer.stripTags(x).toTitleCase()).join("/")
-								: v.map(it => Renderer.get().render(it)).joinConjunct(", ", " 或 ");
+								: v.map(it => Renderer.get().render(it)).joinConjunct("、", "或");
 						case "item":
-							return isListMode ? v.map(x => x.toTitleCase()).join("/") : v.joinConjunct(", ", " 或 ");
+							return isListMode ? v.map(x => x.toTitleCase()).join("/") : v.joinConjunct("、", "或");
 						case "otherSummary":
 							return isListMode ? (v.entrySummary || Renderer.stripTags(v.entry)) : Renderer.get().render(v.entry);
 						case "other": return isListMode ? "特殊" : Renderer.get().render(v);
@@ -3002,7 +3002,7 @@ Renderer.utils = {
 									return `${Parser.RaceToDisplay(raceName)}${it.subrace != null ? ` (${Parser.SubraceToDisplay(it.subrace)})` : ""}`;
 								}
 							});
-							return isListMode ? parts.join("/") : parts.joinConjunct(", ", " 或 ");
+							return isListMode ? parts.join("/") : parts.joinConjunct("、", "或");
 						}
 						case "ability": {
 							// `v` is an array or objects with str/dex/... properties; array is "OR"'d togther, object is "AND"'d together
@@ -3027,7 +3027,7 @@ Renderer.utils = {
 								if (allValuesEqual) {
 									const abList = Object.keys(abMeta);
 									hadMultipleInner = hadMultipleInner || abList.length > 1;
-									return isListMode ? abList.map(ab => Parser.AtrAbvToDisplay(ab)).join(", ") : abList.map(ab => Parser.attAbvToFull(ab)).joinConjunct(", ", " 和 ");
+									return isListMode ? abList.map(ab => Parser.AtrAbvToDisplay(ab)).join(", ") : abList.map(ab => Parser.attAbvToFull(ab)).joinConjunct("、", "和");
 								} else {
 									const groups = {};
 
@@ -3045,12 +3045,12 @@ Renderer.utils = {
 											abs = abs.sort(SortUtil.ascSortAtts);
 											return isListMode
 												? `${abs.map(ab => Parser.AtrAbvToDisplay(ab)).join(", ")} ${req}+`
-												: `${abs.map(ab => Parser.AtrAbvToDisplay(ab)).joinConjunct(", ", " 和 ")} ${req} 或以上`;
+												: `${abs.map(ab => Parser.AtrAbvToDisplay(ab)).joinConjunct("、", "和")} ${req} 或以上`;
 										});
 
 									return isListMode
 										? `${isMulti || byScore.length > 1 ? "(" : ""}${byScore.join(" & ")}${isMulti || byScore.length > 1 ? ")" : ""}`
-										: isMulti ? byScore.joinConjunct("; ", " 和 ") : byScore.joinConjunct(", ", " 和 ");
+										: isMulti ? byScore.joinConjunct("；", "和") : byScore.joinConjunct("、", "和");
 								}
 							});
 
@@ -3061,7 +3061,7 @@ Renderer.utils = {
 								const isComplex = hadMultiMultipleInner || hadMultipleInner || allValuesEqual == null;
 								const joined = abilityOptions.joinConjunct(
 									hadMultiMultipleInner ? " - " : hadMultipleInner ? "; " : ", ",
-									isComplex ? ` <i>or</i> ` : " 或 ",
+									isComplex ? ` <i>或</i> ` : " 或 ",
 								);
 								return `${joined}${allValuesEqual != null ? ` ${allValuesEqual} 或以上` : ""}`
 							}
@@ -3080,7 +3080,7 @@ Renderer.utils = {
 									}
 								})
 							});
-							return isListMode ? parts.join("/") : parts.joinConjunct(", ", " 或 ");
+							return isListMode ? parts.join("/") : parts.joinConjunct("、", "或");
 						}
 						case "spellcasting": return isListMode ? "施法能力" : "具有施展至少一种法术的能力";
 						case "spellcasting2020": return isListMode ? "施法能力" : "施法能力或契约魔法特性";
@@ -3089,11 +3089,11 @@ Renderer.utils = {
 					}
 				})
 				.filter(Boolean)
-				.join(", ");
+				.join("、");
 		}).filter(Boolean);
 
 		if (!listOfChoices.length) return isListMode ? "\u2014" : "";
-		return isListMode ? listOfChoices.join("/") : `先决条件： ${listOfChoices.joinConjunct("; ", " 或 ")}`;
+		return isListMode ? listOfChoices.join("/") : `先决条件： ${listOfChoices.joinConjunct("；", "或")}`;
 	},
 
 	getMediaUrl (entry, prop, mediaDir) {
@@ -3190,7 +3190,7 @@ Renderer.feat = {
 					for (let j = 0; j < from.length; ++j) {
 						abbChoices.push(Parser.attAbvToFull(from[j]));
 					}
-					const abbChoicesText = abbChoices.joinConjunct(", ", " 或 ");
+					const abbChoicesText = abbChoices.joinConjunct("、", "或");
 					abbArr.push(`你的 ${abbChoicesText} 增加 ${amount} 点，上限为 20。`);
 				}
 			}
@@ -3234,9 +3234,9 @@ Renderer.class = {
 	getHitPointsAtFirstLevel (clsHd) { return clsHd ? `${clsHd.number * clsHd.faces} + 你的体质调整值` : null; },
 	getHitPointsAtHigherLevels (className, clsHd, hdEntry) { return className && clsHd && hdEntry ? `一级之后每${className}等级 ${Renderer.getEntryDice(hdEntry, "Hit die")} (或 ${((clsHd.number * clsHd.faces) / 2 + 1)}) + 你的体质调整值` : null; },
 
-	getRenderedArmorProfs (armorProfs) { return armorProfs.map(a => Renderer.get().render(a.full ? a.full : a === "light" || a === "medium" || a === "heavy" ? `{@filter ${Parser.ArmorToDisplay(a)}甲|items|type=${a} armor}` : a)).join(", "); },
-	getRenderedWeaponProfs (weaponProfs) { return weaponProfs.map(w => Renderer.get().render(w === "simple" || w === "martial" ? `{@filter ${Parser.translateKeyToDisplay(w)}武器|items|type=${w} weapon}` : w.optional ? `<span class="help--hover" title="可选熟练">${w.proficiency}</span>` : w)).join(", "); },
-	getRenderedToolProfs (toolProfs) { return toolProfs.map(it => Renderer.get().render(it)).join(", "); },
+	getRenderedArmorProfs (armorProfs) { return armorProfs.map(a => Renderer.get().render(a.full ? a.full : a === "light" || a === "medium" || a === "heavy" ? `{@filter ${Parser.ArmorToDisplay(a)}甲|items|type=${a} armor}` : a)).join("、"); },
+	getRenderedWeaponProfs (weaponProfs) { return weaponProfs.map(w => Renderer.get().render(w === "simple" || w === "martial" ? `{@filter ${Parser.translateKeyToDisplay(w)}武器|items|type=${w} weapon}` : w.optional ? `<span class="help--hover" title="可选熟练">${w.proficiency}</span>` : w)).join("、"); },
+	getRenderedToolProfs (toolProfs) { return toolProfs.map(it => Renderer.get().render(it)).join("、"); },
 	getRenderedSkillProfs (skills) { return `${Parser.skillProficienciesToFull(skills).uppercaseFirst()}.`; },
 };
 
@@ -3879,7 +3879,7 @@ Renderer.background = {
 						collectIn && !collectIn.includes(s) && collectIn.push(s);
 						return getEntry(s);
 					});
-					return `从${chooseProfs.joinConjunct(", ", " 或 ")} ${short ? `${i === 0 ? "" : ""}中选择 ` : ""}${choose.count || 1} ${short ? `` : ``}个`;
+					return `从${chooseProfs.joinConjunct("、", "或")} ${short ? `${i === 0 ? "" : ""}中选择 ` : ""}${choose.count || 1} ${short ? `` : ``}个`;
 				} else {
 					collectIn && !collectIn.includes(k) && collectIn.push(k);
 					return getEntry(k);
@@ -4289,18 +4289,18 @@ Renderer.deity = {
 		},
 		"类别": {
 			prop: "category",
-			displayFn: it => typeof it === "string" ? it : it.join(", "),
+			displayFn: it => typeof it === "string" ? it : it.join("、"),
 		},
 		"领域": {
 			prop: "domains",
-			displayFn: (it) => it.map(d => Parser.SubclassToDisplay(d)).join(", "),
+			displayFn: (it) => it.map(d => Parser.SubclassToDisplay(d)).join("、"),
 		},
 		"Province": {
 			prop: "province",
 		},
 		"其他名称": {
 			prop: "altNames",
-			displayFn: (it) => it.join(", "),
+			displayFn: (it) => it.join("、"),
 		},
 		"圣徽": {
 			prop: "symbol",
@@ -4739,8 +4739,8 @@ Renderer.monster = {
 	},
 
 	getTypeAlignmentPart (mon) { return `${mon.level ? `${Parser.getOrdinalForm(mon.level)}-level ` : ""}${Parser.sizeAbvToFull(mon.size)}${mon.sizeNote ? ` ${mon.sizeNote}` : ""} ${Parser.monTypeToFullObj(mon.type).asText}${mon.alignment ? `, ${Parser.alignmentListToFull(mon.alignment)}` : ""}`; },
-	getSavesPart (mon) { return `${Object.keys(mon.save).sort(SortUtil.ascSortAtts).map(s => Renderer.monster.getSave(Renderer.get(), s, mon.save[s])).join(", ")}` },
-	getSensesPart (mon) { return `${mon.senses ? `${Renderer.monster.getRenderedSenses(mon.senses)}, ` : ""}被动感知 ${mon.passive || "\u2014"}`; },
+	getSavesPart (mon) { return `${Object.keys(mon.save).sort(SortUtil.ascSortAtts).map(s => Renderer.monster.getSave(Renderer.get(), s, mon.save[s])).join("、")}` },
+	getSensesPart (mon) { return `${mon.senses ? `${Renderer.monster.getRenderedSenses(mon.senses)}，` : ""}被动感知 ${mon.passive || "\u2014"}`; },
 
 	/**
 	 * @param mon
@@ -4930,7 +4930,7 @@ Renderer.monster = {
 
 		function doSortMapJoinSkillKeys (obj, keys, joinWithOr) {
 			const toJoin = keys.sort(SortUtil.ascSort).map(s => `<span data-mon-skill="${Parser.SkillToDisplay(s)}|${obj[s]}">${renderer.render(`{@skill ${Parser.SkillToDisplay(s)}}`)}${makeSkillRoller(Parser.SkillToDisplay(s), obj[s])}</span>`);
-			return joinWithOr ? toJoin.joinConjunct(", ", " 或 ") : toJoin.join(", ")
+			return joinWithOr ? toJoin.joinConjunct("、", "或") : toJoin.join("、")
 		}
 
 		const skills = doSortMapJoinSkillKeys(mon.skill, Object.keys(mon.skill).filter(k => k !== "other" && k !== "special"));
@@ -4942,7 +4942,7 @@ Renderer.monster = {
 				throw new Error(`Unhandled monster "other" skill properties!`)
 			});
 			const special = mon.skill.special && Renderer.get().render(mon.skill.special);
-			return [skills, others, special].filter(Boolean).join(", ");
+			return [skills, others, special].filter(Boolean).join("、");
 		} else return skills;
 	},
 
@@ -4981,10 +4981,10 @@ Renderer.monster = {
 
 	getRenderedSenses (senses, isPlainText) {
 		if (typeof senses === "string") senses = [senses]; // handle legacy format
-		if (isPlainText) return senses.join(", ");
-		const reSenses = new RegExp(`(^| |\\()(${["震颤感知", "盲视", "真实视觉", "黑暗视觉", ...Object.keys(BrewUtil.homebrewMeta?.senses || []).map(it => it.escapeRegexp())].join("|")})(\\)| |$)`, "gi");
+		if (isPlainText) return senses.join("、");
+		const reSenses = new RegExp(`(^| |、|\\()(${["震颤感知", "盲视", "真实视觉", "黑暗视觉", ...Object.keys(BrewUtil.homebrewMeta?.senses || []).map(it => it.escapeRegexp())].join("|")})(\\)| |$)`, "gi");
 		const senseStr = senses
-			.join(", ")
+			.join("、")
 			.replace(reSenses, (...m) => `${m[1]}{@sense ${m[2]}}${m[3]}`)
 			.replace(/(^| |\()(blind|blinded|目盲)(\)| |$)/gi, (...m) => `${m[1]}{@condition 目盲||${m[2]}}${m[3]}`)
 		;
@@ -4993,7 +4993,7 @@ Renderer.monster = {
 
 	getRenderedLanguages (languages) {
 		if (typeof languages === "string") languages = [languages]; // handle legacy format
-		return languages ? languages.map(it => Renderer.get().render(it)).join(", ") : "\u2014";
+		return languages ? languages.map(it => Renderer.get().render(it)).join("、") : "\u2014";
 	},
 
 	initParsed (mon) {
@@ -5091,12 +5091,12 @@ Renderer.item = {
 
 			if (!renderedDmg2 && item.dmg2) renderedProperties.unshift(`alt. ${Renderer.item._renderDamage(item.dmg2)}`);
 
-			return `${item.dmg1 && renderedProperties.length ? " - " : ""}${renderedProperties.join(", ")}`
+			return `${item.dmg1 && renderedProperties.length ? " - " : ""}${renderedProperties.join("、")}`
 		} else {
 			const parts = [];
 			if (item.dmg2) parts.push(`alt. ${Renderer.item._renderDamage(item.dmg2)}`);
-			if (item.range) parts.push(`range ${item.range} ft.`);
-			return `${item.dmg1 && parts.length ? " - " : ""}${parts.join(", ")}`;
+			if (item.range) parts.push(`射程 ${item.range} ft.`);
+			return `${item.dmg1 && parts.length ? " - " : ""}${parts.join("、")}`;
 		}
 	},
 
@@ -5133,17 +5133,17 @@ Renderer.item = {
 		if (item.vehSpeed || item.capCargo || item.capPassenger || item.crew || item.crewMin || item.crewMax || item.vehAc || item.vehHp || item.vehDmgThresh || item.travelCost || item.shippingCost) {
 			const vehPartUpper = item.vehSpeed ? `速度：${Parser.numberToVulgar(item.vehSpeed)} mph` : null;
 
-			const vehPartMiddle = item.capCargo || item.capPassenger ? `Carrying Capacity: ${[item.capCargo ? `${Parser.numberToFractional(item.capCargo)} ton${item.capCargo === 0 || item.capCargo > 1 ? "s" : ""} cargo` : null, item.capPassenger ? `${item.capPassenger} passenger${item.capPassenger === 1 ? "" : "s"}` : null].filter(Boolean).join(", ")}` : null;
+			const vehPartMiddle = item.capCargo || item.capPassenger ? `Carrying Capacity: ${[item.capCargo ? `${Parser.numberToFractional(item.capCargo)} ton${item.capCargo === 0 || item.capCargo > 1 ? "s" : ""} cargo` : null, item.capPassenger ? `${item.capPassenger} passenger${item.capPassenger === 1 ? "" : "s"}` : null].filter(Boolean).join("、")}` : null;
 
 			const {travelCostFull, shippingCostFull} = Parser.itemVehicleCostsToFull(item);
 
 			// These may not be present in homebrew
 			const vehPartLower = [
-				item.crew ? `船员${item.crew}` : null,
-				item.crewMin && item.crewMax ? `船员${item.crewMin}-${item.crewMax}` : null,
+				item.crew ? `乘员${item.crew}` : null,
+				item.crewMin && item.crewMax ? `乘员${item.crewMin}-${item.crewMax}` : null,
 				item.vehAc ? `AC ${item.vehAc}` : null,
-				item.vehHp ? `HP ${item.vehHp}${item.vehDmgThresh ? `, 伤害阈值 ${item.vehDmgThresh}` : ""}` : null,
-			].filter(Boolean).join(", ");
+				item.vehHp ? `HP ${item.vehHp}${item.vehDmgThresh ? `，伤害阈值 ${item.vehDmgThresh}` : ""}` : null,
+			].filter(Boolean).join("、");
 
 			damageParts.push([
 				vehPartUpper,
@@ -5158,7 +5158,7 @@ Renderer.item = {
 			].filter(Boolean).join("<br>"));
 		}
 
-		const damage = damageParts.join(", ");
+		const damage = damageParts.join("、");
 		const damageType = item.dmgType ? Parser.dmgTypeToFull(item.dmgType) : "";
 		const propertiesTxt = Renderer.item._getPropertiesText(item);
 
@@ -5168,7 +5168,7 @@ Renderer.item = {
 	getTypeRarityAndAttunementText (item) {
 		const typeRarity = [
 			item._typeHtml === "Other" ? "" : item._typeHtml,
-			[item.tier ? `${Parser.ItemTierToDisplay(item.tier)}` : "", (item.rarity && Renderer.item.doRenderRarity(item.rarity) ? Parser.translateItemKeyToDisplay(item.rarity) : "")].map(it => (it || "").trim()).filter(it => it).join(", ")].filter(Boolean).join(", ");
+			[item.tier ? `${Parser.ItemTierToDisplay(item.tier)}` : "", (item.rarity && Renderer.item.doRenderRarity(item.rarity) ? Parser.translateItemKeyToDisplay(item.rarity) : "")].map(it => (it || "").trim()).filter(it => it).join("、")].filter(Boolean).join("、");
 		return item.reqAttune ? `${typeRarity} ${item._attunement}` : typeRarity
 	},
 
@@ -5239,11 +5239,11 @@ Renderer.item = {
 			typeListText.push(fullType);
 		}
 		if (item.poison) {
-			typeListHtml.push(`poison${item.poisonTypes ? ` (${item.poisonTypes.joinConjunct(", ", " 或 ")})` : ""}`);
+			typeListHtml.push(`poison${item.poisonTypes ? ` (${item.poisonTypes.joinConjunct("、", "或")})` : ""}`);
 			typeListText.push("poison");
 		}
 
-		return [typeListText, typeListHtml.join(", ")];
+		return [typeListText, typeListHtml.join("、")];
 	},
 
 	getRenderedEntries (item, isCompact) {
@@ -5342,7 +5342,7 @@ Renderer.item = {
 		${Renderer.utils.getNameTr(item, {page: UrlUtil.PG_ITEMS, isEmbeddedEntity: opts.isEmbeddedEntity})}
 		<tr><td class="rd-item__type-rarity-attunement" colspan="6">${Renderer.item.getTypeRarityAndAttunementText(item).uppercaseFirst()}</td></tr>
 		<tr>
-			<td colspan="2">${[Parser.itemValueToFullMultiCurrency(item), Parser.itemWeightToFull(item)].filter(Boolean).join(", ").uppercaseFirst()}</td>
+			<td colspan="2">${[Parser.itemValueToFullMultiCurrency(item), Parser.itemWeightToFull(item)].filter(Boolean).join("、").uppercaseFirst()}</td>
 			<td class="text-right" colspan="4">${damage} ${damageType} ${propertiesTxt}</td>
 		</tr>
 		${hasEntries ? `${Renderer.utils.getDividerTr()}<tr class="text"><td colspan="6" class="text">${Renderer.item.getRenderedEntries(item, true)}</td></tr>` : ""}`;

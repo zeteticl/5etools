@@ -845,7 +845,7 @@ RendererMarkdown.monster = class {
 	static getSkillsString (mon) {
 		function doSortMapJoinSkillKeys (obj, keys, joinWithOr) {
 			const toJoin = keys.sort(SortUtil.ascSort).map(s => `${s.toTitleCase()} ${obj[s]}`);
-			return joinWithOr ? toJoin.joinConjunct(", ", " or ") : toJoin.join(", ")
+			return joinWithOr ? toJoin.joinConjunct("、", "或") : toJoin.join(", ")
 		}
 
 		const skills = doSortMapJoinSkillKeys(mon.skill, Object.keys(mon.skill).filter(k => k !== "other" && k !== "special"));

@@ -97,7 +97,7 @@ class EncounterBuilder extends ProxyBase {
 					xpTotal += Parser.crToXpNumber(it.cr) * it.count;
 					return `${it.count}× ${it.name}`;
 				})
-				.join(", ");
+				.join("、");
 			MiscUtil.pCopyTextToClipboard(`${toCopyCreatures} (${xpTotal.toLocaleString()} XP)`);
 			JqueryUtil.showCopiedEffect($btnSvTxt);
 		});

@@ -240,7 +240,7 @@ Parser.getSpeedString = (it) => {
 		procSpeed("swim");
 		if (it.speed.choose) {
 			joiner = "; ";
-			stack.push(`${it.speed.choose.from.sort().joinConjunct(", ", " or ")} ${it.speed.choose.amount} ft.${it.speed.choose.note ? ` ${it.speed.choose.note}` : ""}`);
+			stack.push(`${it.speed.choose.from.sort().joinConjunct("、", "或")} ${it.speed.choose.amount} ft.${it.speed.choose.note ? ` ${it.speed.choose.note}` : ""}`);
 		}
 		return stack.join(joiner);
 	} else {
@@ -474,7 +474,7 @@ Parser.acToFull = function (ac, renderer) {
 
 				inBraces = true;
 
-				stack += cur.from.map(it => renderer.render(it)).join(", ");
+				stack += cur.from.map(it => renderer.render(it)).join("、");
 
 				if (cur.braces) {
 					stack += ")";
@@ -635,7 +635,7 @@ Parser._moneyToFullMultiCurrency = function (it, prop, propMult, {isShortForm, m
 			.reverse()
 			.filter(meta => simplified[meta.coin])
 			.map(meta => `${simplified[meta.coin].toLocaleString(undefined, {maximumFractionDigits: 5})} ${meta.coin}`)
-			.join(", ");
+			.join("、");
 	} else if (it[propMult]) return isShortForm ? `×${it[propMult]}` : `base value ×${it[propMult]}`;
 	return "";
 };
@@ -820,7 +820,7 @@ Parser.skillProficienciesToFull = function (skillProficiencies) {
 // sp-prefix functions are for parsing spell data, and shared with the roll20 script
 Parser.spSchoolAndSubschoolsAbvsToFull = function (school, subschools) {
 	if (!subschools || !subschools.length) return Parser.spSchoolAbvToFull(school);
-	else return `${Parser.spSchoolAbvToFull(school)} (${subschools.map(sub => Parser.spSchoolAbvToFull(sub)).join(", ")})`;
+	else return `${Parser.spSchoolAbvToFull(school)} (${subschools.map(sub => Parser.spSchoolAbvToFull(sub)).join("、")})`;
 };
 
 Parser.spSchoolAbvToFull = function (schoolOrSubschool) {
@@ -897,16 +897,16 @@ Parser.spLevelSchoolMetaToFull = function (level, school, meta, subschools) {
 	const metaArr = Parser.spMetaToArr(meta);
 	if (metaArr.length || (subschools && subschools.length)) {
 		const metaAndSubschoolPart = [
-			(subschools || []).map(sub => Parser.spSchoolAbvToFull(sub)).join(", "),
-			metaArr.join(", "),
-		].filter(Boolean).join("; ").toLowerCase();
+			(subschools || []).map(sub => Parser.spSchoolAbvToFull(sub)).join("、"),
+			metaArr.join("、"),
+		].filter(Boolean).join("；").toLowerCase();
 		return `${levelSchoolStr} (${metaAndSubschoolPart})`;
 	}
 	return levelSchoolStr;
 };
 
 Parser.spTimeListToFull = function (times, isStripTags) {
-	return times.map(t => `${Parser.getTimeToFull(t)}${t.condition ? `, ${isStripTags ? Renderer.stripTags(t.condition) : Renderer.get().render(t.condition)}` : ""}`).join(" 或 ");
+	return times.map(t => `${Parser.getTimeToFull(t)}${t.condition ? `, ${isStripTags ? Renderer.stripTags(t.condition) : Renderer.get().render(t.condition)}` : ""}`).join("或");
 };
 
 Parser.getTimeToFull = function (time) {
@@ -1113,7 +1113,7 @@ Parser.spComponentsToFull = function (comp, level) {
 	if (comp.s) out.push("姿势");
 	if (comp.m != null) out.push(`材料${comp.m !== true ? ` (${comp.m.text != null ? comp.m.text : comp.m})` : ""}`);
 	if (comp.r) out.push(`R (${level} gp)`);
-	return out.join(", ") || "None";
+	return out.join("、") || "无";
 };
 
 Parser.SP_END_TYPE_TO_FULL = {
@@ -1139,14 +1139,14 @@ Parser.spDurationToFull = function (dur) {
 				if (d.ends) {
 					const endsToJoin = d.ends.map(m => Parser.spEndTypeToFull(m));
 					hasSubOr = hasSubOr || endsToJoin.length > 1;
-					return `直到 ${endsToJoin.joinConjunct(", ", " 或 ")}`;
+					return `直到 ${endsToJoin.joinConjunct("、", "或")}`;
 				} else {
 					return "永久";
 				}
 			}
 		}
 	});
-	return `${outParts.joinConjunct(hasSubOr ? "; " : ", ", " 或 ")}${dur.length > 1 ? " （见下文）" : ""}`;
+	return `${outParts.joinConjunct(hasSubOr ? "；" : "、", "或")}${dur.length > 1 ? " （见下文）" : ""}`;
 };
 
 Parser.DURATION_TYPES = [
@@ -1179,7 +1179,7 @@ Parser.spMainClassesToFull = function (fromClassList, textOnly = false) {
 		.filter(it => !ExcludeUtil.isInitialised || !ExcludeUtil.isExcluded(it.hash, "class", it.c.source))
 		.sort((a, b) => SortUtil.ascSort(a.c.name, b.c.name))
 		.map(it => textOnly ? Parser.ClassToDisplay(it.c.name) : `<a title="${it.c.definedInSource ? `Class source` : "Source"}: ${Parser.sourceJsonToFull(it.c.source)}${it.c.definedInSource ? `. Spell list defined in: ${Parser.sourceJsonToFull(it.c.definedInSource)}.` : ""}" href="${UrlUtil.PG_CLASSES}#${it.hash}">${Parser.ClassToDisplay(it.c.name)}</a>`)
-		.join(", ") || "";
+		.join("、") || "";
 };
 
 Parser.spSubclassesToFull = function (fromSubclassList, textOnly, subclassLookup = {}) {
@@ -1202,7 +1202,7 @@ Parser.spSubclassesToFull = function (fromSubclassList, textOnly, subclassLookup
 			return byName || SortUtil.ascSort(a.subclass.name, b.subclass.name);
 		})
 		.map(c => Parser._spSubclassItem(c, textOnly, subclassLookup))
-		.join(", ") || "";
+		.join("、") || "";
 };
 
 Parser._spSubclassItem = function (fromSubclass, textOnly, subclassLookup) {
@@ -1299,7 +1299,7 @@ Parser.monTypeToFullObj = function (type) {
 	} else {
 		out.asText = `${Parser.monTypeToPlural(type.type)}`;
 	}
-	if (tempTags.length) out.asText += ` (${tempTags.join(", ")})`;
+	if (tempTags.length) out.asText += ` (${tempTags.join("、")})`;
 	return out;
 };
 
@@ -1322,7 +1322,7 @@ Parser.monCrToFull = function (cr, {xp = null, isMythic = false} = {}) {
 		const stack = [Parser.monCrToFull(cr.cr, {xp: cr.xp, isMythic})];
 		if (cr.lair) stack.push(`当遭遇于巢穴时 ${Parser.monCrToFull(cr.lair)}`);
 		if (cr.coven) stack.push(`当做为鬼婆集会一员时 ${Parser.monCrToFull(cr.coven)}`);
-		return stack.joinConjunct(", ", " 或 ");
+		return stack.joinConjunct("、", "或");
 	}
 };
 
@@ -1345,7 +1345,7 @@ Parser.getFullImmRes = function (toParse) {
 			const prop = it.immune ? "immune" : it.resist ? "resist" : it.vulnerable ? "vulnerable" : null;
 			if (prop) {
 				const toJoin = it[prop].map(nxt => toString(nxt, depth + 1));
-				stack.push(depth ? toJoin.join(maxDepth ? "; " : ", ") : toJoin.joinConjunct("、", "和"));
+				stack.push(depth ? toJoin.join(maxDepth ? "；" : "，") : toJoin.joinConjunct("、", "和"));
 			}
 
 			if (it.note) stack.push(it.note);
@@ -1367,7 +1367,7 @@ Parser.getFullImmRes = function (toParse) {
 		const origNxt = toParse[i + 1];
 
 		out += it;
-		out += (it.includes(",") || nxt.includes(",") || (orig && orig.cond) || (origNxt && origNxt.cond)) ? "; " : ", ";
+		out += (it.includes(",") || nxt.includes(",") || (orig && orig.cond) || (origNxt && origNxt.cond)) ? "；" : "、";
 	}
 	out += arr.last();
 	return out;
@@ -1379,9 +1379,9 @@ Parser.getFullCondImm = function (condImm, isPlainText) {
 	}
 	return condImm.map(it => {
 		if (it.special) return it.special;
-		if (it.conditionImmune) return `${it.preNote ? `${it.preNote} ` : ""}${it.conditionImmune.map(render).join(", ")}${it.note ? ` ${it.note}` : ""}`;
+		if (it.conditionImmune) return `${it.preNote ? `${it.preNote} ` : ""}${it.conditionImmune.map(render).join("、")}${it.note ? ` ${it.note}` : ""}`;
 		return render(it);
-	}).sort(SortUtil.ascSortLower).join(", ");
+	}).sort(SortUtil.ascSortLower).join("、");
 };
 
 Parser.MON_SENSE_TAG_TO_FULL = {
@@ -1589,7 +1589,7 @@ Parser.alignmentListToFull = function (alignList) {
 		if (alignList.some(it => typeof it === "string")) throw new Error(`Mixed alignment types: ${JSON.stringify(alignList)}`);
 		// filter out any nonexistent alignments, as we don't care about "alignment does not exist" if there are other alignments
 		alignList = alignList.filter(it => it.alignment === undefined || it.alignment != null);
-		return alignList.map(it => it.special != null || it.chance != null || it.note != null ? Parser.alignmentAbvToFull(it) : Parser.alignmentListToFull(it.alignment)).join(" or ");
+		return alignList.map(it => it.special != null || it.chance != null || it.note != null ? Parser.alignmentAbvToFull(it) : Parser.alignmentListToFull(it.alignment)).join(" 或 ");
 	} else {
 		// assume all single-length arrays can be simply parsed
 		if (alignList.length === 1) return Parser.alignmentAbvToFull(alignList[0]);
@@ -1623,7 +1623,7 @@ Parser.weightToFull = function (lbs, isSmallUnit) {
 	return [
 		tons ? `${tons}${isSmallUnit ? `<span class="ve-small ml-1">` : " "}ton${tons === 1 ? "" : "s"}${isSmallUnit ? `</span>` : ""}` : null,
 		lbs ? `${lbs}${isSmallUnit ? `<span class="ve-small ml-1">` : " "}lb.${isSmallUnit ? `</span>` : ""}` : null,
-	].filter(Boolean).join(", ");
+	].filter(Boolean).join("、");
 };
 
 Parser.ITEM_RARITIES = ["none", "common", "uncommon", "rare", "very rare", "legendary", "artifact", "unknown", "unknown (magic)", "other"];
@@ -1866,7 +1866,7 @@ Parser.spSubclassesToCurrentAndLegacyFull = function (sp, subclassLookup) {
 			out[0].push(n.ele);
 		}
 	});
-	return [out[0].join(", "), out[1].join(", ")];
+	return [out[0].join("、"), out[1].join("、")];
 
 	/**
 	 * Get the most recent iteration of a subclass name
