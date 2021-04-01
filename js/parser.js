@@ -215,7 +215,7 @@ Parser.getSpeedString = (it) => {
 
 	function procSpeed (propName) {
 		function addSpeed (s) {
-			stack.push(`${propName === "walk" ? "" : `${Parser.SpeedToDisplay(propName)} `}${getVal(s)} 呎${getCond(s)}`);
+			stack.push(`${propName === "walk" ? "" : `${Parser.SpeedToDisplay(propName)} `}${getVal(s)} 尺${getCond(s)}`);
 		}
 
 		if (it.speed[propName] || propName === "walk") addSpeed(it.speed[propName] || 0);
@@ -244,7 +244,7 @@ Parser.getSpeedString = (it) => {
 		}
 		return stack.join(joiner);
 	} else {
-		return it.speed + (it.speed === "Varies" ? "" : " 呎. ");
+		return it.speed + (it.speed === "Varies" ? "" : " 尺. ");
 	}
 };
 
@@ -952,7 +952,7 @@ Parser.spRangeTypeToFull = function (range) {
 UNT_FEET = "feet";
 UNT_MILES = "miles";
 Parser.SP_DIST_TYPE_TO_FULL = {
-	[UNT_FEET]: "呎",
+	[UNT_FEET]: "尺",
 	[UNT_MILES]: "里",
 	[RNG_SELF]: Parser.SP_RANGE_TYPE_TO_FULL[RNG_SELF],
 	[RNG_TOUCH]: Parser.SP_RANGE_TYPE_TO_FULL[RNG_TOUCH],
@@ -1068,9 +1068,9 @@ Parser.spRangeToFull._getAreaStyleString = function (range) {
 Parser.getSingletonUnit = function (unit, isShort) {
 	switch (unit) {
 		case UNT_FEET:
-			return isShort ? "ft." : "呎";
+			return isShort ? "ft." : "尺";
 		case UNT_MILES:
-			return isShort ? "mi." : "哩";
+			return isShort ? "mi." : "里";
 		default: {
 			const fromBrew = MiscUtil.get(BrewUtil.homebrewMeta, "spellDistanceUnits", unit, "singular");
 			if (fromBrew) return fromBrew;

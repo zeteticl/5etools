@@ -3168,8 +3168,8 @@ class UnitConverter {
 	static make$Converter (board, state) {
 		const units = [
 			new UnitConverterUnit("吋", "2.54", "公分", "0.394"),
-			new UnitConverterUnit("呎", "0.305", "公尺", "3.28"),
-			new UnitConverterUnit("哩", "1.61", "公里", "0.620"),
+			new UnitConverterUnit("尺", "0.305", "公尺", "3.28"),
+			new UnitConverterUnit("里", "1.61", "公里", "0.620"),
 			new UnitConverterUnit("磅", "0.454", "公斤", "2.20"),
 			new UnitConverterUnit("加仑", "3.79", "公升", "0.264")
 		];

@@ -5775,7 +5775,7 @@ Renderer.item = {
 			}
 			if (item.type === "HA" && item.strength) {
 				Renderer.item._initFullEntries(item);
-				item._fullEntries.push(`如果穿戴者的力量属性不到 ${item.strength}，他们的移动速度减少10呎。`);
+				item._fullEntries.push(`如果穿戴者的力量属性不到 ${item.strength}，他们的移动速度减少10尺。`);
 			}
 		}
 		if (item.type === "SCF") {
@@ -6295,7 +6295,7 @@ Renderer.vehicle = {
 			<tr class="text"><td colspan="6">
 				<div><b>运载量</b> ${Renderer.vehicle.getShipCreatureCapacity(veh)}</div>
 				${veh.capCargo ? `<div><b>载货量</b> ${typeof veh.capCargo === "string" ? veh.capCargo : `${veh.capCargo} 吨${veh.capCargo === 1 ? "" : "s"}`}</div>` : ""}
-				<div><b>旅行步调</b> ${veh.pace} 哩/小时 (${veh.pace * 24} 哩/日)</div>
+				<div><b>旅行步调</b> ${veh.pace} 里/小时 (${veh.pace * 24} 里/日)</div>
 				<div class="ve-muted ve-small help--subtle ml-2" title="Based on &quot;Special Travel Pace,&quot; DMG p242">[<b>Speed</b> ${veh.pace * 10} ft.]</div>
 			</td></tr>
 			${Parser.ABIL_ABVS.some(it => veh[it] != null) ? `<tr><td colspan="6">
