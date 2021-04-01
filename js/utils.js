@@ -6298,7 +6298,7 @@ Parser.subclassKeyToDisplay["zealot"] = "狂热者";
 Parser.subclassKeyToDisplay["creation"] = "创造";
 Parser.subclassKeyToDisplay["eloquence"] = "雄辩";
 Parser.subclassKeyToDisplay["glamour"] = "迷惑";
-Parser.subclassKeyToDisplay["lore"] = "知识";
+Parser.subclassKeyToDisplay["lore"] = "轶闻";
 Parser.subclassKeyToDisplay["swords"] = "剑舞";
 Parser.subclassKeyToDisplay["valor"] = "勇气";
 Parser.subclassKeyToDisplay["whispers"] = "低语";
@@ -6332,7 +6332,7 @@ Parser.subclassKeyToDisplay["cavalier"] = "骑兵";
 Parser.subclassKeyToDisplay["champion"] = "勇士";
 Parser.subclassKeyToDisplay["eldritch knight"] = "魔能骑士";
 Parser.subclassKeyToDisplay["psi warrior"] = "灵能武士";
-Parser.subclassKeyToDisplay["purple dragon knight (banneret)"] = "紫龙骑士(旗将)";
+Parser.subclassKeyToDisplay["purple dragon knight (banneret)"] = "紫龙骑士（旗将）";
 Parser.subclassKeyToDisplay["rune knight"] = "符文骑士";
 Parser.subclassKeyToDisplay["samurai"] = "武士";
 
