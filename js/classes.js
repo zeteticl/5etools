@@ -1276,7 +1276,7 @@ class ClassesPage extends BaseComponent {
 
 		const $dispShowHide = $(`<div class="cls-nav__disp-toggle"/>`);
 		const $wrpHeadInner = $$`<div class="cls-nav__head-inner split">
-			<div>Outline</div>
+			<div>概要</div>
 			${$dispShowHide}
 		</div>`
 			.click(() => this._state.isHideOutline = !this._state.isHideOutline);
