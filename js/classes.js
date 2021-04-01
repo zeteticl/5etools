@@ -1025,9 +1025,9 @@ class ClassesPage extends BaseComponent {
 		const cls = this.activeClass;
 
 		// region features/fluff
-		const $btnToggleFeatures = ComponentUiUtil.$getBtnBool(this, "isHideFeatures", {text: "Features", activeClass: "cls__btn-cf--active", isInverted: true}).title("Toggle Class Features");
+		const $btnToggleFeatures = ComponentUiUtil.$getBtnBool(this, "isHideFeatures", {text: "特性", activeClass: "cls__btn-cf--active", isInverted: true}).title("切换职业特性");
 
-		const $btnToggleFeatureVariants = $(`<button class="btn btn-xs btn-default" title="Toggle Class Feature Options/Variants">Variants</button>`)
+		const $btnToggleFeatureVariants = $(`<button class="btn btn-xs btn-default" title="切换职业特性选项/变体">变体</button>`)
 			.click(() => {
 				const f = this.filterBox.getValues();
 				const isClassFeatureVariantsDisplayed = f[this._pageFilter.optionsFilter.header].isClassFeatureVariant;
@@ -1042,7 +1042,7 @@ class ClassesPage extends BaseComponent {
 		this.filterBox.on(FilterBox.EVNT_VALCHANGE, () => hkUpdateBtnFeatureVariants());
 		hkUpdateBtnFeatureVariants();
 
-		const $btnToggleFluff = ComponentUiUtil.$getBtnBool(this, "isShowFluff", {text: "Info"}).title("Toggle Class Info");
+		const $btnToggleFluff = ComponentUiUtil.$getBtnBool(this, "isShowFluff", {text: "信息"}).title("切换职业信息");
 
 		$$`<div class="flex-v-center m-1 btn-group mr-3 no-shrink">${$btnToggleFeatures}${$btnToggleFeatureVariants}${$btnToggleFluff}</div>`.appendTo($wrp);
 		// endregion
