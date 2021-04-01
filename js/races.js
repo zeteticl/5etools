@@ -64,7 +64,6 @@ class RacesPage extends ListPage {
 			<span class="col-4">${ability.asTextShort}</span>
 			<span class="col-2 text-center">${size}</span>
 			<span class="col-2 text-center ${Parser.sourceJsonToColor(race.source)} pr-0" title="${Parser.sourceJsonToFull(race.source)}" ${BrewUtil.sourceJsonToStyle(race.source)}>${source}</span>
-			<span class="eng_name hidden">${race.ENG_name ? race.ENG_name : race.name}</span>
 		</a>`;
 
 		const listItem = new ListItem(

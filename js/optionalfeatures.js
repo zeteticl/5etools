@@ -43,7 +43,6 @@ class OptionalFeaturesPage extends ListPage {
 			<span class="col-4-7 text-center">${prerequisite}</span>
 			<span class="col-1 text-center">${level}</span>
 			<span class="col-1-5 ${Parser.sourceJsonToColor(it.source)} text-center pr-0" title="${Parser.sourceJsonToFull(it.source)}" ${BrewUtil.sourceJsonToStyle(it.source)}>${source}</span>
-			<span class="eng_name hidden">${it.ENG_name ? it.ENG_name : it.name}</span>
 		</a>
 		<div class="flex ve-hidden relative lst__wrp-preview">
 			<div class="vr-0 absolute lst__vr-preview"></div>

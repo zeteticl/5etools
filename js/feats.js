@@ -33,7 +33,6 @@ class FeatsPage extends ListPage {
 			<span class="col-3-5 ${feat._slAbility === VeCt.STR_NONE ? "list-entry-none " : ""}">${feat._slAbility}</span>
 			<span class="col-3 ${feat._slPrereq === VeCt.STR_NONE ? "list-entry-none " : ""}">${feat._slPrereq}</span>
 			<span class="source col-1-7 text-center ${Parser.sourceJsonToColor(feat.source)} pr-0" title="${Parser.sourceJsonToFull(feat.source)}" ${BrewUtil.sourceJsonToStyle(feat.source)}>${source}</span>
-			<span class="eng_name hidden">${feat.ENG_name ? feat.ENG_name : feat.name}</span>
 		</a>
 		<div class="flex ve-hidden relative lst__wrp-preview">
 			<div class="vr-0 absolute lst__vr-preview"></div>

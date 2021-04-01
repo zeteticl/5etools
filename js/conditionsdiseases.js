@@ -33,7 +33,6 @@ class ConditionsDiseasesPage extends ListPage {
 			<span class="col-3 text-center pl-0">${Parser.ConditionsDiseasesToDisplay(it.__prop)}</span>
 			<span class="bold col-6-7">${it.name}</span>
 			<span class="col-2 text-center ${Parser.sourceJsonToColor(it.source)} pr-0" title="${Parser.sourceJsonToFull(it.source)}" ${BrewUtil.sourceJsonToStyle(it.source)}>${source}</span>
-			<span class="eng_name hidden">${it.ENG_name ? it.ENG_name : it.name}</span>
 		</a>
 		<div class="flex ve-hidden relative lst__wrp-preview">
 			<div class="vr-0 absolute lst__vr-preview"></div>

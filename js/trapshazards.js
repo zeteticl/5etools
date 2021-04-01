@@ -34,7 +34,6 @@ class TrapsHazardsPage extends ListPage {
 			<span class="col-3 pl-0 text-center">${trapType}</span>
 			<span class="bold col-7">${it.name}</span>
 			<span class="col-2 text-center ${Parser.sourceJsonToColor(it.source)} pr-0" title="${Parser.sourceJsonToFull(it.source)}" ${BrewUtil.sourceJsonToStyle(it.source)}>${source}</span>
-			<span class="eng_name hidden">${it.ENG_name ? it.ENG_name : it.name}</span>
 		</a>`;
 
 		const listItem = new ListItem(
