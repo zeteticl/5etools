@@ -4297,7 +4297,7 @@ Renderer.deity = {
 			prop: "domains",
 			displayFn: (it) => it.map(d => Parser.SubclassToDisplay(d)).join("、"),
 		},
-		"Province": {
+		"神职": {
 			prop: "province",
 		},
 		"其他名称": {
