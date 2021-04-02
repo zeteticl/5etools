@@ -4759,7 +4759,7 @@ BrewUtil = {
 		const {$modalInner} = UiUtil.getShowModal({
 			isHeight100: true,
 			isWidth100: true,
-			title: `Manage Homebrew`,
+			title: `管理自制内容`,
 			isUncappedHeight: true,
 			$titleSplit: BrewUtil._$getBtnDeleteAll(true),
 			isHeaderBorder: true,

@@ -58,7 +58,7 @@ const ListUtil = {
 		if (ListUtil._firstInit) {
 			ListUtil._firstInit = false;
 			const $headDesc = $(`.page__subtitle`);
-			$headDesc.html(`${$headDesc.html()} 按下J/K以巡览列${ListUtil._isPreviewable ? `, M to expand` : ""}.`);
+			$headDesc.html(`${$headDesc.html()}按下J/K以巡览列${ListUtil._isPreviewable ? `，按下M以扩展显示` : ""}。`);
 			ListUtil._initList_bindWindowHandlers();
 		}
 

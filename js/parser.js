@@ -1196,7 +1196,7 @@ Parser.spMainClassesToFull = function (fromClassList, textOnly = false) {
 		.map(c => ({hash: UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_CLASSES](c), c}))
 		.filter(it => !ExcludeUtil.isInitialised || !ExcludeUtil.isExcluded(it.hash, "class", it.c.source))
 		.sort((a, b) => SortUtil.ascSort(a.c.name, b.c.name))
-		.map(it => textOnly ? Parser.ClassToDisplay(it.c.name) : `<a title="${it.c.definedInSource ? `职业来源` : "来源"}: ${Parser.sourceJsonToFull(it.c.source)}${it.c.definedInSource ? `. Spell list defined in: ${Parser.sourceJsonToFull(it.c.definedInSource)}.` : ""}" href="${UrlUtil.PG_CLASSES}#${it.hash}">${Parser.ClassToDisplay(it.c.name)}</a>`)
+		.map(it => textOnly ? Parser.ClassToDisplay(it.c.name) : `<a title="${it.c.definedInSource ? `职业资源` : "资源"}: ${Parser.sourceJsonToFull(it.c.source)}${it.c.definedInSource ? `. Spell list defined in: ${Parser.sourceJsonToFull(it.c.definedInSource)}.` : ""}" href="${UrlUtil.PG_CLASSES}#${it.hash}">${Parser.ClassToDisplay(it.c.name)}</a>`)
 		.join("、") || "";
 };
 

@@ -15,7 +15,7 @@ class ClassesPage extends BaseComponent {
 	static getBtnTitleSubclass (sc) {
 		const titlePartReprint = sc.isReprinted ? " (this subclass has been reprinted in a more recent source)" : "";
 		const sourcePart = Renderer.utils.getSourceAndPageText(sc);
-		return `${sc.name}; 来源: ${sourcePart}${titlePartReprint}`;
+		return `${sc.name}; 资源：${sourcePart}${titlePartReprint}`;
 	}
 
 	static getBaseShortName (sc) {
@@ -1670,7 +1670,7 @@ class ClassesPage extends BaseComponent {
 							const ptDate = ixScLvl === 0 && SourceUtil.isNonstandardSource(sc.source) && Parser.sourceJsonToDate(sc.source)
 								? Renderer.get().render(`{@note This subclass was published on ${MiscUtil.dateToStr(new Date(Parser.sourceJsonToDate(sc.source)))}.}`)
 								: "";
-							const ptSources = ixScLvl === 0 && sc.otherSources ? `{@note {@b 子职来源：} ${Renderer.utils.getSourceAndPageHtml(sc)}}` : "";
+							const ptSources = ixScLvl === 0 && sc.otherSources ? `{@note {@b 子职资源：} ${Renderer.utils.getSourceAndPageHtml(sc)}}` : "";
 							const toRender = (ptDate || ptSources) && scFeature.entries ? MiscUtil.copy(scFeature) : scFeature;
 							if (ptDate && toRender.entries) toRender.entries.unshift(ptDate);
 							if (ptSources && toRender.entries) toRender.entries.push(ptSources);
@@ -1691,7 +1691,7 @@ class ClassesPage extends BaseComponent {
 		if (cls.otherSources) {
 			const text = Renderer.utils.getSourceAndPageHtml(cls);
 			const $trClassFeature = $(`<tr data-feature-type="class"><td colspan="6"/></tr>`)
-				.fastSetHtml(`<hr class="hr-1"><b>职业来源：</b> ${text}`)
+				.fastSetHtml(`<hr class="hr-1"><b>职业资源：</b> ${text}`)
 				.appendTo($content);
 		}
 

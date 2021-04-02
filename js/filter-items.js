@@ -177,7 +177,7 @@ class PageFilterItems extends PageFilterEquipment {
 		});
 		this._bonusFilter = new Filter({header: "Bonus", headerName: "加值", items: ["Armor Class", "Proficiency Bonus", "Spell Attacks", "Spell Save DC", "Saving Throws", "Weapon Attack and Damage Rolls", "Weapon Attack Rolls", "Weapon Damage Rolls"]});
 		this._miscFilter = new Filter({header: "Miscellaneous", headerName: "杂项", items: ["Ability Score Adjustment", "Charges", "Cursed", "Grants Proficiency", "Has Images", "Has Info", "Item Group", "Magic", "Mundane", "Sentient", "SRD"], isSrdFilter: true});
-		this._baseSourceFilter = new SourceFilter({header: "Base Source", headerName: "基础来源", selFn: null});
+		this._baseSourceFilter = new SourceFilter({header: "Base Source", headerName: "基础资源", selFn: null});
 		this._baseItemFilter = new Filter({header: "Base Item", headerName: "基础物品", displayFn: this.constructor._getBaseItemDisplay.bind(this.constructor)});
 	}
 
