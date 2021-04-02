@@ -5772,7 +5772,7 @@ Renderer.item = {
 		if (item.type === "LA" || item.type === "MA" || item.type === "HA") {
 			if (item.stealth) {
 				Renderer.item._initFullEntries(item);
-				item._fullEntries.push("The wearer has disadvantage on Dexterity ({@skill 隐匿}) checks.");
+				item._fullEntries.push("穿戴者在敏捷（{@skill 隐匿}）鉴定上具有劣势。");
 			}
 			if (item.type === "HA" && item.strength) {
 				Renderer.item._initFullEntries(item);
