@@ -443,7 +443,7 @@ class BestiaryPage extends ListPage {
 		profBonusDiceBtn.click(function () {
 			if (window.PROF_DICE_MODE === PROF_MODE_DICE) {
 				window.PROF_DICE_MODE = PROF_MODE_BONUS;
-				this.innerHTML = "Use Proficiency Dice";
+				this.innerHTML = "使用熟练骰";
 				$("#pagecontent").find(`span.render-roller, span.dc-roller`).each(function () {
 					const $this = $(this);
 					$this.attr("mode", "");
@@ -451,7 +451,7 @@ class BestiaryPage extends ListPage {
 				});
 			} else {
 				window.PROF_DICE_MODE = PROF_MODE_DICE;
-				this.innerHTML = "Use Proficiency Bonus";
+				this.innerHTML = "使用熟练加值";
 				$("#pagecontent").find(`span.render-roller, span.dc-roller`).each(function () {
 					const $this = $(this);
 					$this.attr("mode", "dice");

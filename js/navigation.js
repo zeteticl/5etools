@@ -77,7 +77,7 @@ class NavBar {
 		addLi(ulPlayers, "names.html", "名称");
 
 		const ulDms = addDropdown(navBar, "DM工具");
-		addLi(ulDms, "dmscreen.html", "DM屏幕");
+		addLi(ulDms, "dmscreen.html", "DM 屏风");
 		addDivider(ulDms);
 		const ulAdventures = addDropdown(ulDms, "冒险模组", true);
 		addLi(ulAdventures, "adventures.html", "查看所有/自制内容");

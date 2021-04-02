@@ -1148,7 +1148,7 @@ class Panel {
 			PANEL_TYP_ROLLBOX,
 			null,
 			$(`<div class="panel-content-wrapper-inner"/>`).append(Renderer.dice.get$Roller().addClass("rollbox-panel")),
-			title || "Dice Roller",
+			title || "掷骰",
 			true,
 			!!title,
 		);
@@ -1159,7 +1159,7 @@ class Panel {
 			PANEL_TYP_INITIATIVE_TRACKER,
 			state,
 			$(`<div class="panel-content-wrapper-inner"/>`).append(InitiativeTracker.make$Tracker(this.board, state)),
-			title || "Initiative Tracker",
+			title || "先攻追踪器",
 			true,
 		);
 	}
@@ -1169,7 +1169,7 @@ class Panel {
 			PANEL_TYP_INITIATIVE_TRACKER_PLAYER,
 			state,
 			$(`<div class="panel-content-wrapper-inner"/>`).append(InitiativeTrackerPlayer.make$tracker(this.board, state)),
-			title || "Initiative Tracker",
+			title || "先攻追踪器",
 			true,
 		);
 	}
@@ -1179,7 +1179,7 @@ class Panel {
 			PANEL_TYP_COUNTER,
 			state,
 			$(`<div class="panel-content-wrapper-inner"/>`).append(Counter.$getCounter(this.board, state)),
-			title || "Counter",
+			title || "计数器",
 			true,
 		);
 	}
@@ -1189,7 +1189,7 @@ class Panel {
 			PANEL_TYP_UNIT_CONVERTER,
 			state,
 			$(`<div class="panel-content-wrapper-inner"/>`).append(UnitConverter.make$Converter(this.board, state)),
-			title || "Unit Converter",
+			title || "单位转换器",
 			true,
 		);
 	}
@@ -1199,7 +1199,7 @@ class Panel {
 			PANEL_TYP_MONEY_CONVERTER,
 			state,
 			$(`<div class="panel-content-wrapper-inner"/>`).append(MoneyConverter.make$Converter(this.board, state)),
-			title || "Money Converter",
+			title || "货币转换器",
 			true,
 		);
 	}
@@ -1209,7 +1209,7 @@ class Panel {
 			PANEL_TYP_TIME_TRACKER,
 			state,
 			$(`<div class="panel-content-wrapper-inner"/>`).append(TimeTracker.$getTracker(this.board, state)),
-			title || "Time Tracker",
+			title || "时间追踪器",
 			true,
 		);
 	}
@@ -3167,11 +3167,11 @@ class NoteBox {
 class UnitConverter {
 	static make$Converter (board, state) {
 		const units = [
-			new UnitConverterUnit("吋", "2.54", "公分", "0.394"),
-			new UnitConverterUnit("尺", "0.305", "公尺", "3.28"),
+			new UnitConverterUnit("寸", "2.54", "厘米", "0.394"),
+			new UnitConverterUnit("尺", "0.305", "米", "3.28"),
 			new UnitConverterUnit("里", "1.61", "公里", "0.620"),
 			new UnitConverterUnit("磅", "0.454", "公斤", "2.20"),
-			new UnitConverterUnit("加仑", "3.79", "公升", "0.264")
+			new UnitConverterUnit("加仑", "3.79", "公升", "0.264"),
 		];
 
 		let ixConv = state.c || 0;

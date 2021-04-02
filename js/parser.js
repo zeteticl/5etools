@@ -244,7 +244,7 @@ Parser.getSpeedString = (it) => {
 		}
 		return stack.join(joiner);
 	} else {
-		return it.speed + (it.speed === "Varies" ? "" : " 尺. ");
+		return it.speed + (it.speed === "Varies" ? "" : " 尺");
 	}
 };
 
@@ -354,6 +354,24 @@ Parser.SKILL_TO_ATB_ABV = {
 	"intimidation": "cha",
 	"performance": "cha",
 	"persuasion": "cha",
+	"运动": "str",
+	"体操": "dex",
+	"巧手": "dex",
+	"隐匿": "dex",
+	"奥秘": "int",
+	"历史": "int",
+	"调查": "int",
+	"自然": "int",
+	"宗教": "int",
+	"驯兽": "wis",
+	"洞悉": "wis",
+	"医疗": "wis",
+	"察觉": "wis",
+	"生存": "wis",
+	"欺瞒": "cha",
+	"威吓": "cha",
+	"表演": "cha",
+	"说服": "cha",
 };
 
 Parser.skillToAbilityAbv = function (skill) {

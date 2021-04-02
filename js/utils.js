@@ -6195,7 +6195,7 @@ Parser.raceKeyToDisplay["a small race"] = "小体型种族";
 Parser.raceKeyToDisplay["small race"] = "小体型种族";
 Parser.raceKeyToDisplay["yuan-ti pureblood"] = "纯血蛇人";
 Parser.raceKeyToDisplay["vampire (ixalan)"] = "吸血鬼(依夏兰)";
-Parser.raceKeyToDisplay["elf (zendikar)"]	= "精灵(赞迪卡)";
+Parser.raceKeyToDisplay["elf (zendikar)"]	= "精灵 (赞迪卡)";
 
 // Subrace
 Parser.subraceKeyToDisplay = {};

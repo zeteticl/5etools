@@ -119,7 +119,7 @@ class BackgroundPage extends ListPage {
 				isVisible: Renderer.utils.hasFluffText(bg),
 			}),
 			new Renderer.utils.TabButton({
-				label: "Images",
+				label: "图片",
 				fnPopulate: buildFluffTab.bind(null, true),
 				isVisible: Renderer.utils.hasFluffImages(bg),
 			}),

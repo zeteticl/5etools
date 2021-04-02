@@ -2284,7 +2284,7 @@ Renderer.getRollableEntryDice = function (entry, name, isAddHandlers = true, toD
 };
 
 Renderer.getEntryDiceTitle = function (subType) {
-	return `Click to roll. ${subType === "damage" ? "SHIFT to roll a critical hit, CTRL to half damage (rounding down)." : subType === "d20" ? "SHIFT to roll with advantage, CTRL to roll with disadvantage." : "SHIFT/CTRL to roll twice."}`
+	return `点击掷骰。${subType === "damage" ? "按住 SHIFT 掷暴击，CTRL 半伤（向下取整）。" : subType === "d20" ? "按住 SHIFT 掷优势，CTRL 劣势。" : "SHIFT/CTRL 掷两次。"}`
 };
 
 Renderer.legacyDiceToString = function (array) {
@@ -4055,7 +4055,7 @@ Renderer.race = {
 				const isAnyNoName = r.subraces.some(it => !it.name);
 				if (isAnyNoName) {
 					baseRace._rawName = baseRace.name;
-					baseRace.name = `${baseRace.name} (Base)`;
+					baseRace.name = `${baseRace.name} (本相)`;
 				}
 
 				const nameCounts = {};
@@ -4075,7 +4075,7 @@ Renderer.race = {
 					{
 						type: "section",
 						entries: [
-							"This race has multiple subraces, as listed below:",
+							"该种族有多个亚种，如下所示：",
 							lst,
 						],
 					},
@@ -4087,7 +4087,8 @@ Renderer.race = {
 								entries: [
 									{
 										type: "entries",
-										name: "Traits",
+										name: "特征",
+										ENG_name: "Traits",
 										entries: [
 											...MiscUtil.copy(baseRace.entries),
 										],
@@ -4320,7 +4321,7 @@ Renderer.deity = {
 		});
 		if (deity.customProperties) Object.entries(deity.customProperties).forEach(([k, v]) => parts[k] = v);
 		const allKeys = Object.keys(parts).sort(SortUtil.ascSortLower);
-		return allKeys.map(k => `${prefix}<b>${k}：</b>${Renderer.get().render(parts[k])}${suffix}`).join("");
+		return allKeys.map(k => `${prefix}<b>${k}：</b> ${Renderer.get().render(parts[k])}${suffix}`).join("");
 	},
 
 	getCompactRenderedString (deity) {
@@ -4348,10 +4349,10 @@ Renderer.object = {
 			<tr><td colspan="6">
 				<table class="summary stripe-even-table">
 					<tr>
-						<th colspan="2" class="text-center">Type</th>
+						<th colspan="2" class="text-center">类型</th>
 						<th colspan="2" class="text-center">护甲等级</th>
 						<th colspan="2" class="text-center">生命值</th>
-						<th colspan="2" class="text-center">Speed</th>
+						<th colspan="2" class="text-center">速度</th>
 						<th colspan="4" class="text-center">伤害免疫</th>
 					</tr>
 					<tr>
@@ -4369,7 +4370,7 @@ Renderer.object = {
 					<tr>
 						${obj.resist ? `<th colspan="${row2Width}" class="text-center">伤害抗性</th>` : ""}
 						${obj.vulnerable ? `<th colspan="${row2Width}" class="text-center"伤害易伤</th>` : ""}
-						${obj.conditionImmune ? `<th colspan="${row2Width}" class="text-center">Condition Imm.</th>` : ""}
+						${obj.conditionImmune ? `<th colspan="${row2Width}" class="text-center">状态免疫</th>` : ""}
 					</tr>
 					<tr>
 						${obj.resist ? `<td colspan="${row2Width}" class="text-center">${Parser.getFullImmRes(obj.resist)}</td>` : ""}

@@ -44,11 +44,11 @@ class RenderRaces {
 		};
 
 		const entries = [
-			"You may roll for your character's height and weight on the Random Height and Weight table. The roll in the Height Modifier column adds a number (in inches) to the character's base height. To get a weight, multiply the number you rolled for height by the roll in the Weight Modifier column and add the result (in pounds) to the base weight.",
+			"你可以在“随机身高与体重表”上掷骰来决定你的角色的身高与体重。“身高调整值列”的掷骰结果（寸）将会加在角色基础身高上。随机体重则是用在“体重调整值列”的掷骰结果乘上掷骰得到的身高值，并将结果（磅）加在基础体重上。",
 			{
 				type: "table",
-				caption: "Random Height and Weight",
-				colLabels: ["Base Height", "Base Weight", "Height Modifier", "Weight Modifier", ""],
+				caption: "随机身高与体重",
+				colLabels: ["基础身高", "基础体重", "身高调整值", "体重调整值", ""],
 				colStyles: ["col-2-3 text-center", "col-2-3 text-center", "col-2-3 text-center", "col-2 text-center", "col-3-1 text-center"],
 				rows: [
 					[
@@ -64,7 +64,7 @@ class RenderRaces {
 								<div class="race__disp-result-weight mr-1"></div>
 								<div class="small">lb.</div>
 							</div>
-							<button class="btn btn-default btn-xs my-1 race__btn-roll-height-weight">Roll</button>
+							<button class="btn btn-default btn-xs my-1 race__btn-roll-height-weight">掷骰</button>
 						</div>`,
 					],
 				],
@@ -126,7 +126,8 @@ class RenderRaces {
 		const pRollHeight = async () => {
 			const mResultHeight = await Renderer.dice.pRoll2(race.heightAndWeight.heightMod, {
 				isUser: false,
-				label: "Height Modifier",
+				label: "身高调整值",
+				ENG_label: "Height Modifier",
 				name: race.name,
 			});
 			if (mResultHeight == null) return;
@@ -137,7 +138,8 @@ class RenderRaces {
 			const weightModRaw = race.heightAndWeight.weightMod || "1";
 			const mResultWeightMod = isNaN(weightModRaw) ? await Renderer.dice.pRoll2(weightModRaw, {
 				isUser: false,
-				label: "Weight Modifier",
+				label: "体重调整值",
+				ENG_label: "Weight Modifier",
 				name: race.name,
 			}) : Number(weightModRaw);
 			if (mResultWeightMod == null) return;
