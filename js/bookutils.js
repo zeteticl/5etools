@@ -286,7 +286,7 @@ class BookUtil {
 			const href = ~BookUtil.curRender.chapter
 				? this._getHrefShowAll(bookId)
 				: `#${UrlUtil.encodeForHash(bookId)}`;
-			const $btnEntireBook = $(`<a href="${href}" class="btn btn-xs btn-default no-print ${~BookUtil.curRender.chapter ? "" : "active"}" title="Warning: Slow">View Entire ${BookUtil.contentType.uppercaseFirst()}</a>`);
+			const $btnEntireBook = $(`<a href="${href}" class="btn btn-xs btn-default no-print ${~BookUtil.curRender.chapter ? "" : "active"}" title="警告：速度较慢">查看整本${this._getTypeTitleInCn(BookUtil.contentType)}</a>`);
 
 			if (BookUtil._isNarrow == null) {
 				const saved = StorageUtil.syncGetForPage("narrowMode");
@@ -432,7 +432,7 @@ class BookUtil {
 		});
 		$body.on(`click`, `.entry-title-inner`, async function (evt) {
 			const $this = $(this);
-			const mod_text = $this.html().replace(/<st .+>/,"");
+			const mod_text = $this.html().replace(/<st .+>/, "");
 			const text = mod_text.trim().replace(/\.$/, "");
 
 			if (evt.shiftKey) {
@@ -583,6 +583,15 @@ class BookUtil {
 		switch (BookUtil.contentType) {
 			case "adventure": return "All Adventures";
 			case "book": return "All Books";
+			default: throw new Error(`Unhandled book content type: "${BookUtil.contentType}"`);
+		}
+	}
+
+	static _getTypeTitleInCn () {
+		switch (BookUtil.contentType) {
+			case "adventure": return "冒险";
+			case "book": return "书籍";
+			case "document": return "文档";
 			default: throw new Error(`Unhandled book content type: "${BookUtil.contentType}"`);
 		}
 	}
@@ -769,7 +778,7 @@ class BookUtil {
 					<span class="name">${book.name}</span>
 				</a>
 				<div class="flex-v-center">
-					<a href="${this._getHrefShowAll(book.id)}" class="bk__contents_show_all px-2 py-1px flex-v-center lst__wrp-cells lst__row-inner" title="View Entire ${BookUtil.contentType.uppercaseFirst()} (Warning: Slow)">
+					<a href="${this._getHrefShowAll(book.id)}" class="bk__contents_show_all px-2 py-1px flex-v-center lst__wrp-cells lst__row-inner" title="查看整本${this._getTypeTitleInCn(BookUtil.contentType)} （警告：速度较慢）">
 						<span class="glyphicon glyphicon glyphicon-book" style="top: 0;"/>
 					</a>
 					${BookUtil.curRender.$btnToggleExpandAll}
