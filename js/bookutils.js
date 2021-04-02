@@ -266,10 +266,10 @@ class BookUtil {
 		BookUtil.curRender.controls.$btnsPrv = BookUtil.curRender.controls.$btnsPrv || [];
 		let $btnPrev;
 		if (BookUtil.referenceId) {
-			$btnPrev = $(`<button class="btn btn-xs btn-default bk__nav-head-foot-item"><span class="glyphicon glyphicon-chevron-left"/>Previous</button>`)
+			$btnPrev = $(`<button class="btn btn-xs btn-default bk__nav-head-foot-item"><span class="glyphicon glyphicon-chevron-left"/>上一章</button>`)
 				.click(() => this._showBookContent_goToPage({mod: -1, bookId, ixChapter}));
 		} else {
-			$btnPrev = $(`<a href="#${this._showBookContent_goToPage({mod: -1, isGetHref: true, bookId, ixChapter})}" class="btn btn-xs btn-default bk__nav-head-foot-item"><span class="glyphicon glyphicon-chevron-left"/>Previous</a>`)
+			$btnPrev = $(`<a href="#${this._showBookContent_goToPage({mod: -1, isGetHref: true, bookId, ixChapter})}" class="btn btn-xs btn-default bk__nav-head-foot-item"><span class="glyphicon glyphicon-chevron-left"/>上一章</a>`)
 				.click(() => MiscUtil.scrollPageTop());
 		}
 		$btnPrev
@@ -298,7 +298,7 @@ class BookUtil {
 				$btnToggleNarrow.toggleClass("active", BookUtil._isNarrow);
 				$(`#pagecontent`).toggleClass(`bk__stats--narrow`, BookUtil._isNarrow);
 			};
-			const $btnToggleNarrow = $(`<button class="btn btn-xs btn-default" title="Toggle Narrow Reading Width"><span class="glyphicon glyphicon-resize-small"/></button>`)
+			const $btnToggleNarrow = $(`<button class="btn btn-xs btn-default" title="切换窄框阅读宽度"><span class="glyphicon glyphicon-resize-small"/></button>`)
 				.click(() => {
 					BookUtil._isNarrow = !BookUtil._isNarrow;
 					hdlNarrowUpdate();
@@ -307,16 +307,16 @@ class BookUtil {
 			hdlNarrowUpdate();
 
 			$$`<div class="no-print flex-v-center btn-group">${$btnEntireBook}${$btnToggleNarrow}</div>`.appendTo($wrpControls);
-		} else $(`<button class="btn btn-xs btn-default no-print">Back to Top</button>`).click(() => MiscUtil.scrollPageTop()).appendTo($wrpControls);
+		} else $(`<button class="btn btn-xs btn-default no-print">回到顶端</button>`).click(() => MiscUtil.scrollPageTop()).appendTo($wrpControls);
 
 		const showNxt = ~ixChapter && ixChapter < data.length - 1;
 		BookUtil.curRender.controls.$btnsNxt = BookUtil.curRender.controls.$btnsNxt || [];
 		let $btnNext;
 		if (BookUtil.referenceId) {
-			$btnNext = $(`<button class="btn btn-xs btn-default bk__nav-head-foot-item">Next<span class="glyphicon glyphicon-chevron-right"/></button>`)
+			$btnNext = $(`<button class="btn btn-xs btn-default bk__nav-head-foot-item">下一章<span class="glyphicon glyphicon-chevron-right"/></button>`)
 				.click(() => this._showBookContent_goToPage({mod: 1, bookId, ixChapter}))
 		} else {
-			$btnNext = $(`<a href="#${this._showBookContent_goToPage({mod: 1, isGetHref: true, bookId, ixChapter})}" class="btn btn-xs btn-default bk__nav-head-foot-item">Next<span class="glyphicon glyphicon-chevron-right"/></a>`)
+			$btnNext = $(`<a href="#${this._showBookContent_goToPage({mod: 1, isGetHref: true, bookId, ixChapter})}" class="btn btn-xs btn-default bk__nav-head-foot-item">下一章<span class="glyphicon glyphicon-chevron-right"/></a>`)
 				.click(() => MiscUtil.scrollPageTop());
 		}
 		$btnNext
@@ -343,7 +343,7 @@ class BookUtil {
 			$btnPrev
 				.toggle(showPrev)
 				.appendTo(BookUtil.$wrpFloatControls)
-				.title("Previous Chapter");
+				.title("上一张");
 			BookUtil.curRender.controls.$btnsPrv.push($btnPrev);
 
 			let $btnNext;
@@ -357,7 +357,7 @@ class BookUtil {
 			$btnNext
 				.toggle(showNxt)
 				.appendTo(BookUtil.$wrpFloatControls)
-				.title("Next Chapter");
+				.title("下一章");
 			BookUtil.curRender.controls.$btnsNxt.push($btnNext);
 
 			BookUtil.$wrpFloatControls.toggleClass("btn-group", showPrev && showNxt);
