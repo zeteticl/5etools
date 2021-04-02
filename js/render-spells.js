@@ -78,7 +78,7 @@ class RenderSpells {
 
 		if (sp._scrollNote) {
 			renderStack.push(`<tr class="text"><td colspan="6"><section class="text-muted">`);
-			renderer.recursiveRender(`{@italic Note: Both the {@class fighter||${Renderer.spell.STR_FIGHTER} (${Renderer.spell.STR_ELD_KNIGHT})|eldritch knight} and the {@class rogue||${Renderer.spell.STR_ROGUE} (${Renderer.spell.STR_ARC_TCKER})|arcane trickster} spell lists include all {@class ${Renderer.spell.STR_WIZARD}} spells. Spells of 5th level or higher may be cast with the aid of a spell scroll or similar.}`, renderStack, {depth: 2});
+			renderer.recursiveRender(`{@italic 注意：{@class 战士||战士（魔能骑士）|Eldritch Knight}和{@class 游荡者||游荡者（诡术师）|Arcane Trickster} 的法术列表包含了所有{@class 法师}法术。5环或更高环位法术可以在法术卷轴或者类似物品的帮助下施放。}`, renderStack, {depth: 2});
 			renderStack.push(`</section></td></tr>`);
 		}
 
