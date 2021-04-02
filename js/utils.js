@@ -6242,7 +6242,7 @@ Parser.raceKeyToDisplay["kobold"] 		= "狗头人";
 Parser.raceKeyToDisplay["a small race"] = "小体型种族";
 Parser.raceKeyToDisplay["small race"] = "小体型种族";
 Parser.raceKeyToDisplay["yuan-ti pureblood"] = "纯血蛇人";
-Parser.raceKeyToDisplay["vampire (ixalan)"] = "吸血鬼(依夏兰)";
+Parser.raceKeyToDisplay["vampire (ixalan)"] = "吸血鬼 (依夏兰)";
 Parser.raceKeyToDisplay["elf (zendikar)"]	= "精灵 (赞迪卡)";
 
 // Subrace
@@ -6317,7 +6317,7 @@ Parser.classKeyToDisplay["fighter"] = "战士";
 Parser.classKeyToDisplay["rogue"] = "游荡者";
 Parser.classKeyToDisplay["artificer"] = "奇械师";
 Parser.classKeyToDisplay["ranger (revised)"] = "游侠 (修订)";
-Parser.classKeyToDisplay["artificer revisited"] = "奇械师(再制)";
+Parser.classKeyToDisplay["artificer revisited"] = "奇械师 (再制)";
 Parser.ClassToDisplay = function (c) {
 	let c_match = c.match(/([^()]*)( ?\((.*)\))?/);
 	if (c_match && c_match[2]) {
@@ -6502,39 +6502,39 @@ Parser.SpeedToDisplay = function (sp) {
 }
 // Damage Type
 Parser.damageKeyToDisplay = {};
-Parser.damageKeyToDisplay["acid"]		= "强酸";
+Parser.damageKeyToDisplay["acid"]		 = "强酸";
 Parser.damageKeyToDisplay["bludgeoning"] = "钝击";
-Parser.damageKeyToDisplay["cold"]		= "冷冻";
-Parser.damageKeyToDisplay["fire"]		= "火焰";
-Parser.damageKeyToDisplay["force"]		= "力场";
-Parser.damageKeyToDisplay["lightning"]	= "闪电";
-Parser.damageKeyToDisplay["necrotic"]	= "黯蚀";
-Parser.damageKeyToDisplay["piercing"]	= "穿刺";
-Parser.damageKeyToDisplay["poison"]		= "毒素";
-Parser.damageKeyToDisplay["psychic"]	= "心灵";
-Parser.damageKeyToDisplay["radiant"]	= "光耀";
-Parser.damageKeyToDisplay["slashing"]	= "挥砍";
-Parser.damageKeyToDisplay["thunder"]	= "雷鸣";
+Parser.damageKeyToDisplay["cold"]		 = "冷冻";
+Parser.damageKeyToDisplay["fire"]		 = "火焰";
+Parser.damageKeyToDisplay["force"]		 = "力场";
+Parser.damageKeyToDisplay["lightning"]	 = "闪电";
+Parser.damageKeyToDisplay["necrotic"]	 = "黯蚀";
+Parser.damageKeyToDisplay["piercing"]	 = "穿刺";
+Parser.damageKeyToDisplay["poison"]		 = "毒素";
+Parser.damageKeyToDisplay["psychic"]	 = "心灵";
+Parser.damageKeyToDisplay["radiant"]	 = "光耀";
+Parser.damageKeyToDisplay["slashing"]	 = "挥砍";
+Parser.damageKeyToDisplay["thunder"]	 = "雷鸣";
 Parser.DamageToDisplay = function (d) {
 	return Parser.translateKeyInMapToDisplay(Parser.damageKeyToDisplay, d);
 }
 // Conditions
 Parser.condKeyToDisplay = {};
-Parser.condKeyToDisplay["blinded"]		= "目盲";
-Parser.condKeyToDisplay["charmed"]		= "魅惑";
-Parser.condKeyToDisplay["deafened"]		= "耳聋";
-Parser.condKeyToDisplay["exhaustion"]	= "力竭";
-Parser.condKeyToDisplay["frightened"]	= "恐惧";
-Parser.condKeyToDisplay["grappled"]		= "被擒";
+Parser.condKeyToDisplay["blinded"]		 = "目盲";
+Parser.condKeyToDisplay["charmed"]		 = "魅惑";
+Parser.condKeyToDisplay["deafened"]		 = "耳聋";
+Parser.condKeyToDisplay["exhaustion"]	 = "力竭";
+Parser.condKeyToDisplay["frightened"]	 = "恐惧";
+Parser.condKeyToDisplay["grappled"]		 = "被擒";
 Parser.condKeyToDisplay["incapacitated"] = "无力";
-Parser.condKeyToDisplay["invisible"]	= "隐形";
-Parser.condKeyToDisplay["paralyzed"]	= "麻痹";
-Parser.condKeyToDisplay["petrified"]	= "石化";
-Parser.condKeyToDisplay["poisoned"]		= "中毒";
-Parser.condKeyToDisplay["prone"]		= "伏地";
-Parser.condKeyToDisplay["restrained"]	= "束缚";
-Parser.condKeyToDisplay["stunned"]		= "震慑";
-Parser.condKeyToDisplay["unconscious"]	= "昏迷";
+Parser.condKeyToDisplay["invisible"]	 = "隐形";
+Parser.condKeyToDisplay["paralyzed"]	 = "麻痹";
+Parser.condKeyToDisplay["petrified"]	 = "石化";
+Parser.condKeyToDisplay["poisoned"]		 = "中毒";
+Parser.condKeyToDisplay["prone"]		 = "伏地";
+Parser.condKeyToDisplay["restrained"]	 = "束缚";
+Parser.condKeyToDisplay["stunned"]		 = "震慑";
+Parser.condKeyToDisplay["unconscious"]	 = "昏迷";
 Parser.ConditionToDisplay = function (c) {
 	return Parser.translateKeyInMapToDisplay(Parser.condKeyToDisplay, c);
 }
@@ -6609,7 +6609,7 @@ Parser.itemKeyToDisplay["very rare"] = "非常珍稀";
 Parser.itemKeyToDisplay["legendary"] = "传说";
 Parser.itemKeyToDisplay["artifact"] = "神器";
 Parser.itemKeyToDisplay["unknown"] 	= "不明";
-Parser.itemKeyToDisplay["unknown (magic)"] 	= "不明(魔法)";
+Parser.itemKeyToDisplay["unknown (magic)"] 	= "不明 (魔法)";
 Parser.itemKeyToDisplay["other"] 	= "其他";
 Parser.itemKeyToDisplay["varies"] 	= "可变";
 
