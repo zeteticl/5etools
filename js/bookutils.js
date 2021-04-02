@@ -638,7 +638,7 @@ class BookUtil {
 			});
 
 		const $results = $(`<div class="f-all-out">`);
-		const $srch = $(`<input class="form-control" placeholder="${isPageMode ? "Go to page number..." : "Find text..."}">`)
+		const $srch = $(`<input class="form-control" placeholder="${isPageMode ? "跳转到页码..." : "搜寻文本..."}">`)
 			.on("keydown", (e) => {
 				e.stopPropagation();
 

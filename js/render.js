@@ -5791,16 +5791,16 @@ Renderer.item = {
 				}
 				if (item.scfType === "holy") {
 					Renderer.item._initFullEntries(item);
-					item._fullEntries.push("圣徽是代表着一尊神明或诸神的图像雕纹。 It might be an amulet depicting a symbol representing a deity, the same symbol carefully engraved or inlaid as an emblem on a shield, or a tiny box holding a fragment of a sacred relic. A cleric or paladin can use a holy symbol as a spellcasting focus. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield.");
+					item._fullEntries.push("圣徽是代表着一尊神明或诸神的图像雕纹。它可能会是一个描绘有神祇代表符号的护身符、一个仔细地雕刻或镶嵌有该符号的盾牌、或是一个装有圣遗物残片的小匣子。牧师或圣武士可以将圣徽作为法器使用，用它来取代任何没有列出价值的材料构材。若要用这个方式使用圣徽，施法者必须将它持握在手中、显眼地穿戴它、或将它佩带在盾牌上。");
 				}
 			} else {
 				if (item.scfType === "arcane") {
 					Renderer.item._initFullEntries(item);
-					item._fullEntries.push("An arcane focus is a special item designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus.");
+					item._fullEntries.push("奥术法器是一种被设计成能用以引导奥秘法术能量的特殊物品。术士、契术师、或法师可以将这类物品作为法器使用，用它来取代任何没有列出价值的材料构材。");
 				}
 				if (item.scfType === "druid") {
 					Renderer.item._initFullEntries(item);
-					item._fullEntries.push("A druid can use this object as a spellcasting focus.");
+					item._fullEntries.push("德鲁伊可以将这样物品作为法器使用。");
 				}
 				if (item.scfType === "holy") {
 					Renderer.item._initFullEntries(item);
