@@ -127,7 +127,7 @@ class BooksList {
 				this._dataIx,
 				$eleLi,
 				it.name,
-				{source: it.id, ENG_name: it.ENG_name},
+				{source: it.id, ENG_name: it.ENG_name, ENG_hash: UrlUtil.autoEncodeEngHash(it)},
 				{uniqueId: it.uniqueId, $btnToggleExpand},
 			);
 
@@ -142,7 +142,7 @@ class BooksList {
 				this._dataIx,
 				eleLiAlt,
 				it.name,
-				{source: it.id, ENG_name: it.ENG_name},
+				{source: it.id, ENG_name: it.ENG_name, ENG_hash: UrlUtil.autoEncodeEngHash(it)},
 				{uniqueId: it.uniqueId},
 			);
 			this._listAlt.addItem(listItemAlt);

@@ -60,6 +60,7 @@ class OptionalFeaturesPage extends ListPage {
 				level,
 				type: it._lFeatureType,
 				ENG_name: it.ENG_name,
+				ENG_hash: UrlUtil.autoEncodeEngHash(it),
 			},
 			{
 				uniqueId: it.uniqueId ? it.uniqueId : ivI,
@@ -105,6 +106,7 @@ class OptionalFeaturesPage extends ListPage {
 				prerequisite,
 				level,
 				ENG_name: it.ENG_name,
+				ENG_hash: UrlUtil.autoEncodeEngHash(it),
 			},
 		);
 		return listItem;

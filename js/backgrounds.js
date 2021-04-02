@@ -42,6 +42,7 @@ class BackgroundPage extends ListPage {
 				source,
 				skills: bg._skillDisplay,
 				ENG_name: bg.ENG_name,
+				ENG_hash: UrlUtil.autoEncodeEngHash(bg),
 			},
 			{
 				uniqueId: bg.uniqueId || bgI,
@@ -84,6 +85,7 @@ class BackgroundPage extends ListPage {
 				source: Parser.sourceJsonToAbv(bg.source),
 				skills,
 				ENG_name: bg.ENG_name,
+				ENG_hash: UrlUtil.autoEncodeEngHash(bg),
 			},
 		);
 		return listItem;

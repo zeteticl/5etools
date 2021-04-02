@@ -66,6 +66,7 @@ class SpellsPage extends ListPage {
 				normalisedTime: spell._normalisedTime,
 				normalisedRange: spell._normalisedRange,
 				ENG_name: spell.ENG_name,
+				ENG_hash: UrlUtil.autoEncodeEngHash(spell),
 			},
 			{
 				uniqueId: spell.uniqueId ? spell.uniqueId : spI,
@@ -122,6 +123,7 @@ class SpellsPage extends ListPage {
 				normalisedTime: spell._normalisedTime,
 				normalisedRange: spell._normalisedRange,
 				ENG_name: spell.ENG_name,
+				ENG_hash: UrlUtil.autoEncodeEngHash(spell),
 			},
 		);
 		return listItem;

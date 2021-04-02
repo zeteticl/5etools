@@ -49,6 +49,7 @@ class FeatsPage extends ListPage {
 				ability: feat._slAbility,
 				prerequisite: feat._slPrereq,
 				ENG_name: feat.ENG_name,
+				ENG_hash: UrlUtil.autoEncodeEngHash(feat),
 			},
 			{
 				uniqueId: feat.uniqueId ? feat.uniqueId : ftI,
@@ -90,6 +91,7 @@ class FeatsPage extends ListPage {
 				ability: feat._slAbility,
 				prerequisite: feat._slPrereq,
 				ENG_name: feat.ENG_name,
+				ENG_hash: UrlUtil.autoEncodeEngHash(feat),
 			},
 		);
 		return listItem;

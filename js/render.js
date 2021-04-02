@@ -7856,6 +7856,10 @@ Renderer.hover = {
 			const itHash = (opts.fnGetHash || UrlUtil.URL_TO_HASH_BUILDER[page])(it);
 			if (opts.fnMutateItem) opts.fnMutateItem(listProp, it);
 			Renderer.hover._addToCache(page, it.source, itHash, it);
+			if (it.ENG_name) {
+				const itEngHash = UrlUtil.URL_TO_ENG_HASH_BUILDER[page](it);
+				Renderer.hover._addToCache(page, it.source, itEngHash, it);
+			}
 		});
 	},
 

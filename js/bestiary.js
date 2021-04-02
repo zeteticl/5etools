@@ -67,6 +67,7 @@ class BestiaryPage extends ListPage {
 				group: mon.group || "",
 				alias: (mon.alias || []).map(it => `"${it}"`).join(","),
 				ENG_name: mon.ENG_name,
+				ENG_hash: UrlUtil.autoEncodeEngHash(mon),
 			},
 			{
 				uniqueId: mon.uniqueId ? mon.uniqueId : mI,
@@ -161,6 +162,7 @@ class BestiaryPage extends ListPage {
 				cr,
 				count,
 				ENG_name: mon.ENG_name,
+				ENG_hash: UrlUtil.autoEncodeEngHash(mon),
 			},
 			{
 				uniqueId: data.uniqueId || "",

@@ -40,6 +40,7 @@ class RewardsPage extends ListPage {
 				source,
 				type: reward.type,
 				ENG_name: reward.ENG_name,
+				ENG_hash: UrlUtil.autoEncodeEngHash(reward),
 			},
 			{
 				uniqueId: reward.uniqueId ? reward.uniqueId : rwI,
@@ -79,6 +80,7 @@ class RewardsPage extends ListPage {
 				hash,
 				type: reward.type,
 				ENG_name: reward.ENG_name,
+				ENG_hash: UrlUtil.autoEncodeEngHash(reward),
 			},
 		);
 		return listItem;

@@ -82,6 +82,7 @@ class RecipesPage extends ListPage {
 				source,
 				type: it.type,
 				ENG_name: it.ENG_name,
+				ENG_hash: UrlUtil.autoEncodeEngHash(it),
 			},
 			{
 				uniqueId: it.uniqueId ? it.uniqueId : rpI,
@@ -124,6 +125,7 @@ class RecipesPage extends ListPage {
 				hash,
 				type: it.type,
 				ENG_name: it.ENG_name,
+				ENG_hash: UrlUtil.autoEncodeEngHash(it),
 			},
 			{
 				uniqueId: data.uniqueId || "",

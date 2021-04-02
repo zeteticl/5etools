@@ -48,6 +48,7 @@ class ConditionsDiseasesPage extends ListPage {
 				source,
 				type: it.__prop,
 				ENG_name: it.ENG_name,
+				ENG_hash: UrlUtil.autoEncodeEngHash(it),
 			},
 			{
 				uniqueId: it.uniqueId ? it.uniqueId : cdI,
@@ -87,6 +88,7 @@ class ConditionsDiseasesPage extends ListPage {
 				hash,
 				type: it.__prop,
 				ENG_name: it.ENG_name,
+				ENG_hash: UrlUtil.autoEncodeEngHash(it),
 			},
 		);
 		return listItem;

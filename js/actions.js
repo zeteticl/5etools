@@ -52,6 +52,7 @@ class ActionsPage extends ListPage {
 				source,
 				time,
 				ENG_name: it.ENG_name,
+				ENG_hash: UrlUtil.autoEncodeEngHash(it),
 			},
 			{
 				uniqueId: it.uniqueId ? it.uniqueId : anI,
@@ -93,6 +94,7 @@ class ActionsPage extends ListPage {
 				hash,
 				time,
 				ENG_name: it.ENG_name,
+				ENG_hash: UrlUtil.autoEncodeEngHash(it),
 			},
 		);
 		return listItem;

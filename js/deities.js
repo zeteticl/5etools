@@ -47,6 +47,7 @@ class DeitiesPage extends ListPage {
 				alignment,
 				domains,
 				ENG_name: g.ENG_name,
+				ENG_hash: UrlUtil.autoEncodeEngHash(g),
 			},
 			{
 				uniqueId: g.uniqueId ? g.uniqueId : dtI,
@@ -93,6 +94,7 @@ class DeitiesPage extends ListPage {
 				alignment,
 				domains,
 				ENG_name: g.ENG_name,
+				ENG_hash: UrlUtil.autoEncodeEngHash(g),
 			},
 		);
 		return listItem;

@@ -42,6 +42,7 @@ class VehiclesPage extends ListPage {
 				vehicleType: it.vehicleType,
 				upgradeType: it.upgradeType,
 				ENG_name: it.ENG_name,
+				ENG_hash: UrlUtil.autoEncodeEngHash(it),
 			},
 			{
 				uniqueId: it.uniqueId ? it.uniqueId : vhI,
@@ -80,6 +81,7 @@ class VehiclesPage extends ListPage {
 				vehicleType: it.vehicleType,
 				upgradeType: it.upgradeType,
 				ENG_name: it.ENG_name,
+				ENG_hash: UrlUtil.autoEncodeEngHash(it),
 			},
 		);
 		return listItem;

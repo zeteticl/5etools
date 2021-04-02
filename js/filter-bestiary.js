@@ -544,6 +544,7 @@ class ModalFilterBestiary extends ModalFilter {
 				type,
 				cr,
 				ENG_name: mon.ENG_name,
+				ENG_hash: UrlUtil.autoEncodeEngHash(mon),
 			},
 			{
 				cbSel: eleRow.firstElementChild.firstElementChild.firstElementChild,

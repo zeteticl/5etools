@@ -1572,6 +1572,14 @@ UrlUtil = {
 		return encoder(obj);
 	},
 
+	autoEncodeEngHash (obj) {
+		if (!obj.ENG_name) return null;
+		const curPage = UrlUtil.getCurrentPage();
+		const encoder = UrlUtil.URL_TO_ENG_HASH_BUILDER[curPage];
+		if (!encoder) throw new Error(`No encoder found for page ${curPage}`);
+		return encoder(obj);
+	},
+
 	getCurrentPage () {
 		if (typeof window === "undefined") return VeCt.PG_NONE;
 		const pSplit = window.location.pathname.split("/");
@@ -1855,6 +1863,46 @@ UrlUtil.URL_TO_HASH_BUILDER["legendaryGroup"] = (it) => UrlUtil.encodeForHash([i
 UrlUtil.URL_TO_HASH_BUILDER["legendarygroup"] = UrlUtil.URL_TO_HASH_BUILDER["legendaryGroup"];
 UrlUtil.URL_TO_HASH_BUILDER["itemEntry"] = (it) => UrlUtil.encodeForHash([it.name, it.source]);
 UrlUtil.URL_TO_HASH_BUILDER["itementry"] = UrlUtil.URL_TO_HASH_BUILDER["itemEntry"];
+
+UrlUtil.URL_TO_ENG_HASH_BUILDER = {};
+UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_BESTIARY] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.source]);
+UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_SPELLS] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.source]);
+UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_BACKGROUNDS] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.source]);
+UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_ITEMS] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.source]);
+UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_CLASSES] = (it) => UrlUtil.encodeForHash([Parser.ClassToDisplay(it.ENG_name), it.source]);
+UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_CONDITIONS_DISEASES] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.source]);
+UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_FEATS] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.source]);
+UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_OPT_FEATURES] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.source]);
+UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_PSIONICS] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.source]);
+UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_RACES] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.source]);
+UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_REWARDS] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.source]);
+UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_VARIANTRULES] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.source]);
+UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_ADVENTURE] = (it) => UrlUtil.encodeForHash(it.id);
+UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_BOOK] = (it) => UrlUtil.encodeForHash(it.id);
+UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_DEITIES] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.pantheon, it.source]);
+UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_CULTS_BOONS] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.source]);
+UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_OBJECTS] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.source]);
+UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_TRAPS_HAZARDS] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.source]);
+UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_TABLES] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.source]);
+UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_VEHICLES] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.source]);
+UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_ACTIONS] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.source]);
+UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_LANGUAGES] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.source]);
+UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_CHAR_CREATION_OPTIONS] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.source]);
+UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_RECIPES] = (it) => `${UrlUtil.encodeForHash([it.ENG_name, it.source])}${it._scaleFactor ? `${HASH_PART_SEP}${VeCt.HASH_SCALED}${HASH_SUB_KV_SEP}${it._scaleFactor}` : ""}`;
+// region Fake pages (props)
+UrlUtil.URL_TO_ENG_HASH_BUILDER["subclass"] = it => {
+	const hashParts = [
+		UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_CLASSES]({name: it.className, source: it.classSource}),
+		UrlUtil.packSubHash("state", [`${UrlUtil.getStateKeySubclass(it)}=${UrlUtil.mini.compress(true)}`]),
+	].filter(Boolean);
+	return Hist.util.getCleanHash(hashParts.join(HASH_PART_SEP));
+};
+UrlUtil.URL_TO_ENG_HASH_BUILDER["classFeature"] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.className, it.classSource, it.level, it.source]);
+UrlUtil.URL_TO_ENG_HASH_BUILDER["subclassFeature"] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.className, it.classSource, it.subclassShortName, it.subclassSource, it.level, it.source]);
+UrlUtil.URL_TO_ENG_HASH_BUILDER["legendaryGroup"] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.source]);
+UrlUtil.URL_TO_ENG_HASH_BUILDER["legendarygroup"] = UrlUtil.URL_TO_ENG_HASH_BUILDER["legendaryGroup"];
+UrlUtil.URL_TO_ENG_HASH_BUILDER["itemEntry"] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.source]);
+UrlUtil.URL_TO_ENG_HASH_BUILDER["itementry"] = UrlUtil.URL_TO_ENG_HASH_BUILDER["itemEntry"];
 // endregion
 
 UrlUtil.PG_TO_NAME = {};

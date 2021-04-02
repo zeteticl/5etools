@@ -435,6 +435,7 @@ class ClassesPage extends BaseComponent {
 				hash,
 				source,
 				ENG_name: cls.ENG_name,
+				ENG_hash: UrlUtil.autoEncodeEngHash(cls),
 			},
 			{
 				$lnk,
@@ -1245,6 +1246,7 @@ class ClassesPage extends BaseComponent {
 				stateKey,
 				mod,
 				ENG_name: sc.ENG_name,
+				ENG_hash: UrlUtil.autoEncodeEngHash(sc),
 			},
 			{
 				isExcluded,

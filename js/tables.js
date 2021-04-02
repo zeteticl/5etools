@@ -44,6 +44,7 @@ class TablesPage extends ListPage {
 				sortName,
 				source,
 				ENG_name: it.ENG_name,
+				ENG_hash: UrlUtil.autoEncodeEngHash(it),
 			},
 			{
 				uniqueId: it.uniqueId ? it.uniqueId : tbI,
@@ -77,6 +78,7 @@ class TablesPage extends ListPage {
 			{
 				hash,
 				ENG_name: it.ENG_name,
+				ENG_hash: UrlUtil.autoEncodeEngHash(it),
 			},
 		);
 		return listItem;

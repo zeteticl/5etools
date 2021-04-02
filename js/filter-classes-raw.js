@@ -752,6 +752,7 @@ class ModalFilterClasses extends ModalFilter {
 			{
 				source: `${source} -- ${cls.name}`,
 				ENG_name: cls.ENG_name,
+				ENG_hash: UrlUtil.autoEncodeEngHash(cls),
 			},
 			{
 				ixClass: clsI,
@@ -777,6 +778,7 @@ class ModalFilterClasses extends ModalFilter {
 			{
 				source: `${cls.source} -- ${cls.name} -- ${source} -- ${sc.name}`,
 				ENG_name: cls.ENG_name,
+				ENG_hash: UrlUtil.autoEncodeEngHash(cls),
 			},
 			{
 				ixClass: clsI,
