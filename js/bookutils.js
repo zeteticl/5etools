@@ -581,8 +581,8 @@ class BookUtil {
 
 	static _getAllTitle () {
 		switch (BookUtil.contentType) {
-			case "adventure": return "All Adventures";
-			case "book": return "All Books";
+			case "adventure": return "所有冒险";
+			case "book": return "所有书籍";
 			default: throw new Error(`Unhandled book content type: "${BookUtil.contentType}"`);
 		}
 	}
