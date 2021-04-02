@@ -916,7 +916,7 @@ Parser.spLevelSchoolMetaToFull = function (level, school, meta, subschools) {
 	if (metaArr.length || (subschools && subschools.length)) {
 		const metaAndSubschoolPart = [
 			(subschools || []).map(sub => Parser.spSchoolAbvToFull(sub)).join("、"),
-			metaArr.join("、"),
+			metaArr.map(meta => meta === "ritual" ? "仪式" : meta).join("、"),
 		].filter(Boolean).join("；").toLowerCase();
 		return `${levelSchoolStr} (${metaAndSubschoolPart})`;
 	}
