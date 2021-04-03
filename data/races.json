@@ -6669,51 +6669,58 @@
 			},
 			"entries": [
 				{
-					"name": "Age",
+					"name": "年龄",
+					"ENG_name": "Age",
 					"type": "entries",
 					"entries": [
-						"Half-elves mature at the same rate humans do and reach adulthood around the age of 20. They live much longer than humans, however, often exceeding 180 years."
+						"半精灵的成熟速度和人类相同，并在20岁左右成年。然而，他们的寿命远长于人类，经常能活超过180岁。"
 					]
 				},
 				{
-					"name": "Alignment",
+					"name": "阵营",
+					"ENG_name": "Alignment",
 					"type": "entries",
 					"entries": [
-						"Half-elves share the chaotic bent of their elven heritage. They value both personal freedom and creative expression, demonstrating neither love of leaders nor desire for followers. They chafe at rules, resent others' demands, and sometimes prove unreliable, or at least unpredictable."
+						"半精灵分享了来自他们精灵血统的混乱天性。他们重视个人自由和创造性表达，既不展现出对领导者的喜爱、也不渴望受人追随。他们厌恶规则、讨厌被别人命令、且有时会显得不太可靠，或至少难以预测。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Size",
+					"name": "体型",
+					"ENG_name": "Size",
 					"entries": [
-						"Half-elves are about the same size as humans, ranging from 5 to 6 feet tall. Your size is Medium."
+						"半精灵有着和人类相近的体型，身高介于5尺至6尺之间。你的体型为中型。"
 					]
 				},
 				{
-					"name": "Darkvision",
+					"name": "黑暗视觉",
+					"ENG_name": "Darkvision",
 					"entries": [
-						"Thanks to your elf blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+						"多亏于你的精灵血统，你在黑暗与微光环境下仍能保持卓越视觉。你在看距离你60尺范围内的事物时，微光的照明程度对你而言视作明亮，黑暗则视作微光。你无法辨别黑暗中的颜色，而只能看到灰黑的轮廓。"
 					],
 					"type": "entries"
 				},
 				{
-					"name": "Fey Ancestry",
+					"name": "精类血统",
+					"ENG_name": "Fey Ancestry",
 					"entries": [
-						"You have advantage on saving throws against being {@condition 魅惑}, and magic can't put you to sleep."
+						"你在对抗{@condition 魅惑}的豁免检定中具有优势，且魔法无法让你入睡。"
 					],
 					"type": "entries"
 				},
 				{
-					"name": "Skill Versatility",
+					"name": "多才多艺",
+					"ENG_name": "Skill Versatility",
 					"entries": [
-						"You gain proficiency in two skills of your choice."
+						"你熟练于二个你所选择的技能。"
 					],
 					"type": "entries"
 				},
 				{
-					"name": "Languages",
+					"name": "语言",
+					"ENG_name": "Languages",
 					"entries": [
-						"You can speak, read, and write Common, Elvish, and one extra language of your choice."
+						"你能够说、读、写通用语、精灵语和另一种你所选择的语言。"
 					],
 					"type": "entries"
 				}
@@ -6780,7 +6787,7 @@
 								}
 							],
 							"data": {
-								"overwrite": "Skill Versatility"
+								"overwrite": "多才多艺"
 							}
 						}
 					],
@@ -6847,32 +6854,36 @@
 					"entries": [
 						{
 							"type": "inset",
-							"name": "Variant Feature (Choose 1)",
+							"name": "变体特性（选择1种）",
+							"ENG_name": "Variant Feature (Choose 1)",
 							"entries": [
 								{
-									"name": "Skill Versatility",
+									"name": "多才多艺",
+									"ENG_name": "Skill Versatility",
 									"entries": [
-										"You gain proficiency in two skills of your choice."
+										"你熟练于二个你所选择的技能。"
 									],
 									"type": "entries"
 								},
 								{
-									"name": "Keen Senses",
+									"name": "敏锐感官",
+									"ENG_name": "Keen Senses",
 									"entries": [
-										"You have proficiency in the {@skill 察觉} skill."
+										"你熟练于{@skill 察觉}技能。"
 									],
 									"type": "entries"
 								},
 								{
-									"name": "Drow Magic",
+									"name": "卓尔魔法",
+									"ENG_name": "Drow Magic",
 									"entries": [
-										"You know the {@spell 舞光术} cantrip. When you reach 3rd level, you can cast the {@spell 妖火术} spell once per day; you must finish a long rest in order to cast the spell again using this trait. When you reach 5th level, you can also cast the {@spell 黑暗术} spell once per day; you must finish a long rest in order to cast the spell again using this trait. Charisma is your spellcasting ability for these spells."
+										"你知晓{@spell 舞光术}戏法。当你升至3级，你每天可以施放一次{@spell 妖火术}，你必须完成一次长休才能再次使用此特性施放该法术。当你升至5级，你每天可以施放一次{@spell 黑暗术}，你必须完成一次长休才能再次使用此特性施放该法术。你施展这些法术的施法属性为魅力。"
 									],
 									"type": "entries"
 								}
 							],
 							"data": {
-								"overwrite": "Skill Versatility"
+								"overwrite": "多才多艺"
 							}
 						}
 					],
@@ -6956,7 +6967,7 @@
 								"When you make an Intelligence ({@skill 调查}) or a Wisdom ({@skill 洞悉}) check, you can roll a {@dice d4} and add the number rolled to the ability check."
 							],
 							"data": {
-								"overwrite": "Skill Versatility"
+								"overwrite": "多才多艺"
 							}
 						},
 						{
@@ -7074,7 +7085,7 @@
 								"When you make a Dexterity ({@skill 体操}) check or any ability check involving {@item 领航工具|PHB}, you can roll a {@dice d4} and add the number rolled to the ability check."
 							],
 							"data": {
-								"overwrite": "Skill Versatility"
+								"overwrite": "多才多艺"
 							}
 						},
 						{
@@ -7226,7 +7237,7 @@
 								}
 							],
 							"data": {
-								"overwrite": "Skill Versatility"
+								"overwrite": "多才多艺"
 							}
 						}
 					],
@@ -7316,7 +7327,7 @@
 								}
 							],
 							"data": {
-								"overwrite": "Skill Versatility"
+								"overwrite": "多才多艺"
 							}
 						}
 					],
