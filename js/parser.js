@@ -1088,7 +1088,7 @@ Parser.getSingletonUnit = function (unit, isShort) {
 		case UNT_FEET:
 			return isShort ? "ft." : "尺";
 		case UNT_MILES:
-			return isShort ? "mi." : "哩";
+			return isShort ? "mi." : "里";
 		default: {
 			const fromBrew = MiscUtil.get(BrewUtil.homebrewMeta, "spellDistanceUnits", unit, "singular");
 			if (fromBrew) return fromBrew;
