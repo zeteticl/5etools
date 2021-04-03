@@ -257,18 +257,29 @@ class PageFilterBestiary extends PageFilter {
 			displayFn: function (m) {
 				switch (m) {
 					case "Familiar": return "魔宠";
+					case "Bonus Actions": return "附赠动作";
 					case "Lair Actions": return "巢穴动作";
 					case "Legendary": return "传奇";
 					case "Named NPC": return "具名NPC";
 					case "Spellcaster": return "施法者";
-					case "Spellcaster, int": return "施法者，智力";
-					case "Spellcaster, wis": return "施法者，感知";
-					case "Spellcaster, cha": return "施法者，魅力";
+					case "Spellcaster, 力量": return "施法者，力量";
+					case "Spellcaster, 敏捷": return "施法者，敏捷";
+					case "Spellcaster, 体质": return "施法者，体质";
+					case "Spellcaster, 智力": return "施法者，智力";
+					case "Spellcaster, 感知": return "施法者，感知";
+					case "Spellcaster, 魅力": return "施法者，魅力";
 					case "Regional Effects": return "区域效应";
 					case "Swarm": return "集群";
 					case "Has Variants": return "拥有变体";
+					case "Has Images": return "拥有图片";
+					case "Has Info": return "拥有信息";
+					case "Has Token": return "拥有指示物";
+					case "Has Alternate Token": return "拥有差分指示物";
 					case "Reactions": return "反应";
 					case "Adventure NPC": return "冒险NPC";
+					case "AC from Unarmored Defense": return "无甲防御";
+					case "AC from Natural Armor": return "天生护甲";
+					case "AC from Item(s)": return "物品提供AC";
 					default: return m;
 				}
 			},
@@ -347,9 +358,9 @@ class PageFilterBestiary extends PageFilter {
 		if (mon.hasFluffImages) mon._fMisc.push("Has Images");
 		(mon.ac || []).forEach(it => {
 			if (!it.from) return;
-			if (it.from.includes("natural armor")) mon._fMisc.push("AC from Natural Armor");
+			if (it.from.includes("natural armor") || it.from.includes("天生护甲")) mon._fMisc.push("AC from Natural Armor");
 			if (it.from.some(x => x.startsWith("{@item "))) mon._fMisc.push("AC from Item(s)");
-			if (it.from.includes("Unarmored Defense")) mon._fMisc.push("AC from Unarmored Defense");
+			if (it.from.includes("Unarmored Defense") || it.from.includes("无甲防御")) mon._fMisc.push("AC from Unarmored Defense");
 		});
 	}
 

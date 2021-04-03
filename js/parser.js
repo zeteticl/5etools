@@ -476,7 +476,7 @@ Parser.acToFull = function (ac, renderer) {
 			const isNxtBraces = nxt && nxt.braces;
 
 			if (!inBraces && cur.braces) {
-				stack += "(";
+				stack += "（";
 				inBraces = true;
 			}
 
@@ -485,9 +485,9 @@ Parser.acToFull = function (ac, renderer) {
 			if (cur.from) {
 				// always brace nested braces
 				if (cur.braces) {
-					stack += " (";
+					stack += "（";
 				} else {
-					stack += inBraces ? "; " : " (";
+					stack += inBraces ? "；" : "（";
 				}
 
 				inBraces = true;
@@ -495,9 +495,9 @@ Parser.acToFull = function (ac, renderer) {
 				stack += cur.from.map(it => renderer.render(it)).join("、");
 
 				if (cur.braces) {
-					stack += ")";
+					stack += "）";
 				} else if (!isNxtBraces) {
-					stack += ")";
+					stack += "）";
 					inBraces = false;
 				}
 			}
@@ -505,7 +505,7 @@ Parser.acToFull = function (ac, renderer) {
 			if (cur.condition) stack += ` ${renderer.render(cur.condition)}`;
 
 			if (inBraces && !isNxtBraces) {
-				stack += ")";
+				stack += "）";
 				inBraces = false;
 			}
 		} else {
@@ -514,12 +514,12 @@ Parser.acToFull = function (ac, renderer) {
 
 		if (nxt) {
 			if (nxt.braces) {
-				stack += inBraces ? "; " : " (";
+				stack += inBraces ? "；" : "（";
 				inBraces = true;
-			} else stack += ", ";
+			} else stack += "，";
 		}
 	}
-	if (inBraces) stack += ")";
+	if (inBraces) stack += "）";
 
 	return stack.trim();
 };
@@ -1597,7 +1597,7 @@ Parser.alignmentAbvToFull = function (alignment) {
 				return "无阵营";
 			case "A":
 				return "任意阵营";
-			case "No Alignment":
+			case "NO ALIGNMENT":
 				return "无阵营";
 		}
 		return alignment;
