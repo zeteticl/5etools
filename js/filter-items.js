@@ -152,10 +152,10 @@ class PageFilterItems extends PageFilterEquipment {
 			itemSortFn: null,
 			displayFn: function (str) {
 				switch (str) {
-					case "Requires Attunement": return "需要";
-					case "Requires Attunement By...": return "限定...";
-					case "Attunement Optional": return "可选";
-					case VeCt.STR_NO_ATTUNEMENT: return "不须";
+					case "Requires Attunement": return "需要同调";
+					case "Requires Attunement By...": return "需...同调";
+					case "Attunement Optional": return "可同调";
+					case VeCt.STR_NO_ATTUNEMENT: return "无须同调";
 					default: return str;
 				}
 			}});

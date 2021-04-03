@@ -5180,17 +5180,17 @@ Renderer.item = {
 		let attunementCat = VeCt.STR_NO_ATTUNEMENT;
 		if (item[prop] != null && item[prop] !== false) {
 			if (item[prop] === true) {
-				attunementCat = "需同调";
-				attunement = "(需同调)"
+				attunementCat = "Requires Attunement";
+				attunement = "（需同调）"
 			} else if (item[prop] === "optional") {
-				attunementCat = "可同调";
-				attunement = "(可同调)"
-			} else if (item[prop].toLowerCase().startsWith("by")) {
-				attunementCat = "By...";
-				attunement = `(需${item[prop]}同调)`;
+				attunementCat = "Attunement Optional";
+				attunement = "（可同调）"
+			} else if (item[prop].toLowerCase().startsWith("by") || item[prop].startsWith("由")) {
+				attunementCat = "Requires Attunement By...";
+				attunement = `（需${item[prop]}同调）`;
 			} else {
 				attunementCat = "Yes"; // throw any weird ones in the "Yes" category (e.g. "outdoors at night")
-				attunement = `(需${item[prop]}同调)`;
+				attunement = `（需${item[prop]}同调）`;
 			}
 		}
 		return [attunement, attunementCat]
