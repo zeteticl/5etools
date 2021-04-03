@@ -149,17 +149,17 @@ class SpellsPage extends ListPage {
 
 		const tabMetas = [
 			new Renderer.utils.TabButton({
-				label: "Spell",
+				label: "法术",
 				fnPopulate: buildStatsTab,
 				isVisible: true,
 			}),
 			new Renderer.utils.TabButton({
-				label: "Info",
+				label: "信息",
 				fnPopulate: buildFluffTab,
 				isVisible: Renderer.utils.hasFluffText(spell),
 			}),
 			new Renderer.utils.TabButton({
-				label: "Images",
+				label: "图片",
 				fnPopulate: buildFluffTab.bind(null, true),
 				isVisible: Renderer.utils.hasFluffImages(spell),
 			}),

@@ -118,19 +118,19 @@ class VehiclesPage extends ListPage {
 
 		const tabMetas = [
 			new Renderer.utils.TabButton({
-				label: "Item",
+				label: "物件",
 				fnChange: () => $floatToken.show(),
 				fnPopulate: buildStatsTab,
 				isVisible: true,
 			}),
 			new Renderer.utils.TabButton({
-				label: "Info",
+				label: "信息",
 				fnChange: () => $floatToken.hide(),
 				fnPopulate: buildFluffTab,
 				isVisible: Renderer.utils.hasFluffText(veh),
 			}),
 			new Renderer.utils.TabButton({
-				label: "Images",
+				label: "图片",
 				fnChange: () => $floatToken.hide(),
 				fnPopulate: buildFluffTab.bind(null, true),
 				isVisible: Renderer.utils.hasFluffImages(veh),

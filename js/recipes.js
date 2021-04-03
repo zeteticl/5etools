@@ -142,17 +142,17 @@ class RecipesPage extends ListPage {
 
 		const tabMetas = [
 			new Renderer.utils.TabButton({
-				label: "Traits",
+				label: "特征",
 				fnPopulate: this._renderStats.bind(this, it),
 				isVisible: true,
 			}),
 			new Renderer.utils.TabButton({
-				label: "Info",
+				label: "信息",
 				fnPopulate: this._renderFluff.bind(this, it),
 				isVisible: Renderer.utils.hasFluffText(it),
 			}),
 			new Renderer.utils.TabButton({
-				label: "Images",
+				label: "图片",
 				fnPopulate: this._renderFluff.bind(this, it, true),
 				isVisible: Renderer.utils.hasFluffImages(it),
 			}),
