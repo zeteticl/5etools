@@ -6785,22 +6785,30 @@ Parser.pantheonKeyToDisplay["duergar"] = "灰矮人";
 Parser.pantheonKeyToDisplay["gnomish"] = "侏儒";
 Parser.pantheonKeyToDisplay["halfling"] = "半身人";
 Parser.pantheonKeyToDisplay["orc"] = "兽人";
+Parser.pantheonKeyToDisplay["gnome"] = "侏儒";
 Parser.pantheonKeyToDisplay["forgotten realms"] = "被遗忘的国度";
 Parser.pantheonKeyToDisplay["faerûnian"] = "费伦";
 Parser.pantheonKeyToDisplay["dawn war"] = "破晓之战";
 Parser.pantheonKeyToDisplay["dragonlance"] = "龙枪";
 Parser.pantheonKeyToDisplay["eberron"] = "艾伯伦";
 Parser.pantheonKeyToDisplay["greyhawk"] = "灰鹰";
+Parser.pantheonKeyToDisplay["exandria"] = "伊克桑椎亚";
+Parser.pantheonKeyToDisplay["theros"] = "塞洛斯";
 Parser.PantheonToDisplay = function (p) {
 	return Parser.translateKeyInMapToDisplay(Parser.pantheonKeyToDisplay, p);
 }
 Parser.pantheonCategoryKeyToDisplay = {};
+Parser.pantheonCategoryKeyToDisplay["the mordinsamman"] = "摩丁萨曼诸神";
+Parser.pantheonCategoryKeyToDisplay["the seldarine"] = "席尔德琳诸神";
 Parser.pantheonCategoryKeyToDisplay["the sovereign host"] = "天命诸神";
 Parser.pantheonCategoryKeyToDisplay["the dark six"] = "黑暗六邪";
 Parser.pantheonCategoryKeyToDisplay["other faiths of eberron"] = "艾伯伦的其他信仰";
 Parser.pantheonCategoryKeyToDisplay["the gods of good"] = "善良诸神";
 Parser.pantheonCategoryKeyToDisplay["the gods of neutrality"] = "中立诸神";
 Parser.pantheonCategoryKeyToDisplay["the gods of evil"] = "邪恶诸神";
+Parser.pantheonCategoryKeyToDisplay["prime deities"] = "正神";
+Parser.pantheonCategoryKeyToDisplay["prime deities"] = "叛神";
+Parser.pantheonCategoryKeyToDisplay["lesser idols"] = "次等崇拜";
 Parser.PantheonCategoryToDisplay = function (p) {
 	return Parser.translateKeyInMapToDisplay(Parser.pantheonCategoryKeyToDisplay, p);
 }
