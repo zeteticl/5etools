@@ -6800,6 +6800,7 @@ Parser.PantheonToDisplay = function (p) {
 Parser.pantheonCategoryKeyToDisplay = {};
 Parser.pantheonCategoryKeyToDisplay["the mordinsamman"] = "摩丁萨曼诸神";
 Parser.pantheonCategoryKeyToDisplay["the seldarine"] = "席尔德琳诸神";
+Parser.pantheonCategoryKeyToDisplay["the dark seldarine"] = "黑暗席尔德琳诸神";
 Parser.pantheonCategoryKeyToDisplay["the sovereign host"] = "天命诸神";
 Parser.pantheonCategoryKeyToDisplay["the dark six"] = "黑暗六邪";
 Parser.pantheonCategoryKeyToDisplay["other faiths of eberron"] = "艾伯伦的其他信仰";
@@ -6807,7 +6808,7 @@ Parser.pantheonCategoryKeyToDisplay["the gods of good"] = "善良诸神";
 Parser.pantheonCategoryKeyToDisplay["the gods of neutrality"] = "中立诸神";
 Parser.pantheonCategoryKeyToDisplay["the gods of evil"] = "邪恶诸神";
 Parser.pantheonCategoryKeyToDisplay["prime deities"] = "正神";
-Parser.pantheonCategoryKeyToDisplay["prime deities"] = "叛神";
+Parser.pantheonCategoryKeyToDisplay["betrayer gods"] = "叛神";
 Parser.pantheonCategoryKeyToDisplay["lesser idols"] = "次等崇拜";
 Parser.PantheonCategoryToDisplay = function (p) {
 	return Parser.translateKeyInMapToDisplay(Parser.pantheonCategoryKeyToDisplay, p);

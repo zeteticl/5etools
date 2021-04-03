@@ -15,8 +15,18 @@ class PageFilterDeities extends PageFilter {
 	constructor () {
 		super();
 		this._sourceFilter = new SourceFilter();
-		this._pantheonFilter = new Filter({header: "Pantheon", headerName: "神系", items: []});
-		this._categoryFilter = new Filter({header: "Category", items: [VeCt.STR_NONE]});
+		this._pantheonFilter = new Filter({
+			header: "Pantheon",
+			headerName: "神系",
+			items: [],
+			displayFn: Parser.PantheonToDisplay,
+		});
+		this._categoryFilter = new Filter({
+			header: "Category",
+			headerName: "类别",
+			items: [VeCt.STR_NONE],
+			displayFn: Parser.PantheonCategoryToDisplay,
+		});
 		this._alignmentFilter = new Filter({
 			header: "Alignment",
 			headerName: "阵营",
@@ -28,6 +38,7 @@ class PageFilterDeities extends PageFilter {
 			header: "Domain",
 			headerName: "领域",
 			items: ["Death", "Knowledge", "Life", "Light", "Nature", VeCt.STR_NONE, "Tempest", "Trickery", "War"],
+			displayFn: Parser.SubclassToDisplay,
 		});
 		this._miscFilter = new Filter({
 			header: "Miscellaneous",
