@@ -16,7 +16,7 @@ const ListUtil = {
 		const helpText = [];
 
 		if (listOpts.isBindFindHotkey && !ListUtil._isFindHotkeyBound) {
-			helpText.push(`Hotkey: f.`);
+			helpText.push(`快捷键：f.`);
 
 			$(document.body).on("keypress", (e) => {
 				if (!EventUtil.noModifierKeys(e) || EventUtil.isInInput(e)) return;
