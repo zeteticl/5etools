@@ -479,12 +479,12 @@ class Omnisearch {
 
 	static doShowHelp () {
 		const {$modalInner} = UiUtil.getShowModal({
-			title: "Help",
+			title: "帮助",
 			isMinHeight0: true,
 		});
 
 		$modalInner.append(`
-			<p>The following search syntax is available:</p>
+			<p>支持以下搜索语法：</p>
 			<ul>
 				<li><code>in:&lt;category&gt;</code> where <code>&lt;category&gt;</code> can be &quot;spell&quot;, &quot;item&quot;, &quot;bestiary&quot;, etc.</li>
 				<li><code>source:&lt;abbreviation&gt;</code> where <code>&lt;abbreviation&gt;</code> is an abbreviated source/book name (&quot;PHB&quot;, &quot;MM&quot;, etc.)</li>
