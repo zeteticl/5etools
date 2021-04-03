@@ -569,7 +569,7 @@ class ModalFilterClasses extends ModalFilter {
 
 			const $ovlLoading = $(`<div class="w-100 h-100 flex-vh-center"><i class="dnd-font ve-muted">加载中...</i></div>`).appendTo($modalInner);
 
-			const $iptSearch = $(`<input class="form-control" type="search" placeholder="Search...">`);
+			const $iptSearch = $(`<input class="form-control" type="search" placeholder="搜索...">`);
 			const $btnReset = $(`<button class="btn btn-default">Reset</button>`);
 			const $wrpFormTop = $$`<div class="flex input-group btn-group w-100 lst__form-top">${$iptSearch}${$btnReset}</div>`;
 

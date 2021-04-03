@@ -44,7 +44,15 @@ class PageFilterDeities extends PageFilter {
 			header: "Miscellaneous",
 			headerName: "杂项",
 			items: ["Grants Piety Features", "Has Info", PageFilterDeities._STR_REPRINTED, "SRD"],
-			displayFn: StrUtil.uppercaseFirst,
+			displayFn: (it) => {
+				switch (it) {
+					case "Grants Piety Features": return "提供虔诚特性";
+					case "Has Info": return "包含信息";
+					case PageFilterDeities._STR_REPRINTED: return "重印";
+					case "SRD": return "SRD";
+					default: return it;
+				}
+			},
 			deselFn: (it) => { return it === PageFilterDeities._STR_REPRINTED },
 			isSrdFilter: true,
 		});

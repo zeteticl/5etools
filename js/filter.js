@@ -82,7 +82,7 @@ class ModalFilter {
 
 		const $ovlLoading = $(`<div class="w-100 h-100 flex-vh-center"><i class="dnd-font ve-muted">加载中...</i></div>`).appendTo($wrp);
 
-		const $iptSearch = opts.$iptSearch || $(`<input class="form-control" type="search" placeholder="Search...">`);
+		const $iptSearch = opts.$iptSearch || $(`<input class="form-control" type="search" placeholder="搜索...">`);
 		const $btnReset = opts.$btnReset || $(`<button class="btn btn-default">重置</button>`);
 		const $wrpFormTop = $$`<div class="flex input-group btn-group w-100 lst__form-top">${$iptSearch}${$btnReset}</div>`;
 
@@ -490,7 +490,7 @@ class FilterBox extends ProxyBase {
 
 		const metaIptSearch = ComponentUiUtil.$getIptStr(
 			this._compSearch, "search",
-			{decorationRight: "clear", asMeta: true, html: `<input class="form-control input-xs" placeholder="Search...">`},
+			{decorationRight: "clear", asMeta: true, html: `<input class="form-control input-xs" placeholder="搜索...">`},
 		);
 		this._compSearch._addHookBase("search", () => {
 			const searchTerm = this._compSearch._state.search.toLowerCase();
@@ -519,7 +519,7 @@ class FilterBox extends ProxyBase {
 			.appendTo($wrpBtnCombineFilters)
 			.click(() => this._meta.modeCombineFilters = FilterBox._COMBINE_MODES.getNext(this._meta.modeCombineFilters));
 		const hook = () => {
-			$btnCombineFiltersAs.text(this._meta.modeCombineFilters === "custom" ? this._meta.modeCombineFilters.uppercaseFirst() : this._meta.modeCombineFilters.toUpperCase());
+			$btnCombineFiltersAs.text(this._meta.modeCombineFilters === "custom" ? "自定义" : this._meta.modeCombineFilters.toUpperCase());
 			if (this._meta.modeCombineFilters === "custom") $wrpBtnCombineFilters.append($btnCombineFilterSettings);
 			else $btnCombineFilterSettings.detach();
 			this._doSaveStateThrottled();
@@ -535,12 +535,12 @@ class FilterBox extends ProxyBase {
 
 		$$(this._modalMeta.$modal)`<div class="split mb-2 mt-2 flex-v-center mobile__flex-col">
 			<div class="flex-v-baseline mobile__flex-col">
-				<h4 class="m-0 mr-2 mobile__mb-2">筛选</h4>
+				<h4 class="m-0 mr-2 mobile__mb-2" style="white-space:nowrap;">筛选</h4>
 				${metaIptSearch.$wrp.addClass("mobile__mb-2")}
 			</div>
 			<div class="flex-v-center mobile__flex-col">
 				<div class="flex-v-center mobile__m-1">
-					<div class="mr-2">Combine as</div>
+					<div class="mr-2">合并方式</div>
 					${$wrpBtnCombineFilters}
 				</div>
 				<div class="flex-v-center mobile__m-1">
@@ -565,36 +565,36 @@ class FilterBox extends ProxyBase {
 	}
 
 	_openSettingsModal () {
-		const {$modalInner} = UiUtil.getShowModal({title: "Settings"});
+		const {$modalInner} = UiUtil.getShowModal({title: "设置"});
 
-		UiUtil.$getAddModalRowCb($modalInner, "Deselect Homebrew Sources by Default", this._meta, "isBrewDefaultHidden");
+		UiUtil.$getAddModalRowCb($modalInner, "默认反选自制资源", this._meta, "isBrewDefaultHidden");
 
 		UiUtil.addModalSep($modalInner);
 
-		UiUtil.$getAddModalRowHeader($modalInner, "Hide summary for filter...", {helpText: "The summary is the small red and blue button panel which appear below the search bar."});
-		this._filters.forEach(f => UiUtil.$getAddModalRowCb($modalInner, f.header, this._minisHidden, f.header));
+		UiUtil.$getAddModalRowHeader($modalInner, "概览隐藏筛选器...", {helpText: "概览是在搜索框下显示的小的蓝色、红色按钮板。"});
+		this._filters.forEach(f => UiUtil.$getAddModalRowCb($modalInner, f.headerName ?? f.header, this._minisHidden, f.header));
 
 		UiUtil.addModalSep($modalInner);
 
 		const $rowResetAlwaysSave = UiUtil.$getAddModalRow($modalInner, "div").addClass("pr-2");
-		$rowResetAlwaysSave.append(`<span>Always Save on Close</span>`);
-		$(`<button class="btn btn-xs btn-default">Reset</button>`)
+		$rowResetAlwaysSave.append(`<span>始终在关闭时保存</span>`);
+		$(`<button class="btn btn-xs btn-default">重置</button>`)
 			.appendTo($rowResetAlwaysSave)
 			.click(async () => {
 				await StorageUtil.pRemove(FilterBox._STORAGE_KEY_ALWAYS_SAVE_UNCHANGED);
-				JqueryUtil.doToast("Saved!");
+				JqueryUtil.doToast("已保存！");
 			});
 	}
 
 	_openCombineAsModal () {
-		const {$modalInner} = UiUtil.getShowModal({title: "Filter Combination Logic"});
-		const $btnReset = $(`<button class="btn btn-xs btn-default">Reset</button>`)
+		const {$modalInner} = UiUtil.getShowModal({title: "筛选器合并逻辑"});
+		const $btnReset = $(`<button class="btn btn-xs btn-default">重置</button>`)
 			.click(() => {
 				Object.keys(this._combineAs).forEach(k => this._combineAs[k] = "and");
 				$sels.forEach($sel => $sel.val("0"));
 			});
-		UiUtil.$getAddModalRowHeader($modalInner, "Combine filters as...", {$eleRhs: $btnReset});
-		const $sels = this._filters.map(f => UiUtil.$getAddModalRowSel($modalInner, f.header, this._combineAs, f.header, ["and", "or"], {fnDisplay: (it) => it.toUpperCase()}));
+		UiUtil.$getAddModalRowHeader($modalInner, "合并筛选器方式...", {$eleRhs: $btnReset});
+		const $sels = this._filters.map(f => UiUtil.$getAddModalRowSel($modalInner, f.headerName ?? f.header, this._combineAs, f.header, ["and", "or"], {fnDisplay: (it) => it.toUpperCase()}));
 	}
 
 	getValues () {
@@ -643,10 +643,10 @@ class FilterBox extends ProxyBase {
 
 			if (hasChanges) {
 				const isSave = await InputUiUtil.pGetUserBoolean({
-					title: "Unsaved Changes",
-					textYesRemember: "Always Save",
-					textYes: "Save",
-					textNo: "Discard",
+					title: "未保存更改",
+					textYesRemember: "始终保存",
+					textYes: "保存",
+					textNo: "放弃",
 					storageKey: FilterBox._STORAGE_KEY_ALWAYS_SAVE_UNCHANGED,
 					isGlobal: true,
 				});
@@ -1465,7 +1465,7 @@ class Filter extends FilterBase {
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} fltr__h-btn-logic--blue fltr__h-btn-logic w-100`,
 			click: () => this._meta.combineBlue = Filter._getNextCombineMode(this._meta.combineBlue),
-			title: `Positive matches mode for this filter. AND requires all blues to match, OR requires at least one blue to match, XOR requires exactly one blue to match.`,
+			title: `使该筛选器使用正向匹配模式。AND 要求所有蓝色选项都匹配，OR 要求至少有一条蓝色选项匹配，XOR 要求有且仅有一条蓝色选项匹配。`,
 		});
 		const hookCombineBlue = () => e_({ele: btnCombineBlue, text: `${this._meta.combineBlue}`.toUpperCase()});
 		this._addHook("meta", "combineBlue", hookCombineBlue);
@@ -1475,7 +1475,7 @@ class Filter extends FilterBase {
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} fltr__h-btn-logic--red fltr__h-btn-logic w-100`,
 			click: () => this._meta.combineRed = Filter._getNextCombineMode(this._meta.combineRed),
-			title: `Negative match mode for this filter. AND requires all reds to match, OR requires at least one red to match, XOR requires exactly one red to match.`,
+			title: `使该筛选器使用反向匹配模式。AND 要求所有红色选项都匹配，OR 要求至少有一条红色选项匹配，XOR 要求有且仅有一条红色选项匹配。`,
 		});
 		const hookCombineRed = () => e_({ele: btnCombineRed, text: `${this._meta.combineRed}`.toUpperCase()});
 		this._addHook("meta", "combineRed", hookCombineRed);
@@ -2055,23 +2055,23 @@ class SourceFilter extends Filter {
 		const btnSupplements = e_({
 			tag: "button",
 			clazz: `btn btn-default w-100 ${opts.isMulti ? "btn-xxs" : "btn-xs"}`,
-			title: `SHIFT to include UA/etc.`,
-			html: `Core/Supplements`,
+			title: `按住 SHIFT 包含 UA 等内容。`,
+			html: `核心/资源`,
 			click: evt => this._doSetPinsSupplements(evt.shiftKey),
 		});
 
 		const btnAdventures = e_({
 			tag: "button",
 			clazz: `btn btn-default w-100 ${opts.isMulti ? "btn-xxs" : "btn-xs"}`,
-			title: `SHIFT to include UA/etc.`,
-			html: `Adventures`,
+			title: `按住 SHIFT 包含 UA 等内容。`,
+			html: `冒险`,
 			click: evt => this._doSetPinsAdventures(evt.shiftKey),
 		});
 
 		const btnHomebrew = e_({
 			tag: "button",
 			clazz: `btn btn-default w-100 ${opts.isMulti ? "btn-xxs" : "btn-xs"}`,
-			html: `Homebrew`,
+			html: `自制`,
 			click: () => this._doSetPinsHomebrew(),
 		});
 
@@ -2084,31 +2084,31 @@ class SourceFilter extends Filter {
 
 		const menu = ContextUtil.getMenu([
 			new ContextUtil.Action(
-				"Select All Standard Sources",
+				"选择所有标准资源",
 				() => this._doSetPinsStandard(),
 			),
 			new ContextUtil.Action(
-				"Select All Non-Standard Sources",
+				"选择所有非标准资源",
 				() => this._doSetPinsNonStandard(),
 			),
 			new ContextUtil.Action(
-				"Select All Homebrew Sources",
+				"选择所有自制资源",
 				() => this._doSetPinsHomebrew(),
 			),
 			null,
 			new ContextUtil.Action(
-				`Select "Vanilla" Sources`,
+				`选择“寻常”资源`,
 				() => this._doSetPinsVanilla(),
-				{title: `Select a baseline set of sources suitable for any campaign.`},
+				{title: `选择适用于任何战役的标准资源集。`},
 			),
 			null,
 			new ContextUtil.Action(
-				"Select SRD Sources",
+				"选择 SRD 资源",
 				() => this._doSetPinsSrd(),
 			),
 			null,
 			new ContextUtil.Action(
-				"Invert Selection",
+				"反转选择",
 				() => this._doInvertPins(),
 			),
 		]);
@@ -2122,8 +2122,8 @@ class SourceFilter extends Filter {
 		const btnOnlyPrimary = e_({
 			tag: "button",
 			clazz: `btn btn-default w-100 ${opts.isMulti ? "btn-xxs" : "btn-xs"}`,
-			html: `Include References`,
-			title: `Consider entities as belonging to every source they appear in (i.e. reprints) as well as their primary source`,
+			html: `包含引用`,
+			title: `除条目所在的主要资源以外，条目出现过的资源都算作被其包含在内（比如重印）`,
 			click: () => this._meta.isIncludeOtherSources = !this._meta.isIncludeOtherSources,
 		});
 		const hkIsIncludeOtherSources = () => {

@@ -1466,7 +1466,7 @@ class SearchWidget {
 					this.__doSearch();
 				});
 
-			this._$iptSearch = $(`<input class="ui-search__ipt-search search form-control" autocomplete="off" placeholder="Search...">`).appendTo($wrpControls);
+			this._$iptSearch = $(`<input class="ui-search__ipt-search search form-control" autocomplete="off" placeholder="搜索...">`).appendTo($wrpControls);
 			this._$wrpResults = $(`<div class="ui-search__wrp-results"></div>`).appendTo(this._$rendered);
 
 			let lastSearchTerm = "";
