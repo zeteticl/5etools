@@ -2251,7 +2251,7 @@ class SourceFilter extends Filter {
 		const btnShowSlider = e_({
 			tag: "button",
 			clazz: `btn btn-xxs btn-default px-1`,
-			html: "Select by Date",
+			html: "按日期选择",
 			click: () => {
 				grpBtnsInactive.hideVe();
 				wrpWrpSlider.showVe();
@@ -2281,7 +2281,7 @@ class SourceFilter extends Filter {
 		const btnClear = e_({
 			tag: "button",
 			clazz: `btn btn-xxs btn-default px-1`,
-			html: "Clear",
+			html: "清除",
 			click: () => {
 				const nxtState = {};
 				Object.keys(this._state)
@@ -2543,17 +2543,17 @@ class RangeFilter extends FilterBase {
 			this,
 			"isUseDropdowns",
 			{
-				$ele: $(`<button class="btn btn-default btn-xs mr-2">Show as Dropdowns</button>`),
+				$ele: $(`<button class="btn btn-default btn-xs mr-2">以下拉菜单形式显示</button>`),
 				stateName: "meta",
 				stateProp: "_meta",
 			},
 		);
-		const $btnReset = $(`<button class="btn btn-default btn-xs">Reset</button>`).click(() => this.reset());
+		const $btnReset = $(`<button class="btn btn-default btn-xs">重置</button>`).click(() => this.reset());
 		const $wrpBtns = $$`<div>${$btnForceMobile}${$btnReset}</div>`;
 
 		const $wrpSummary = $(`<div class="flex-v-center fltr__summary_item fltr__summary_item--include"></div>`).hideVe();
 
-		const $btnShowHide = $(`<button class="btn btn-default btn-xs ml-2 ${this._meta.isHidden ? "active" : ""}">Hide</button>`)
+		const $btnShowHide = $(`<button class="btn btn-default btn-xs ml-2 ${this._meta.isHidden ? "active" : ""}">隐藏</button>`)
 			.click(() => this._meta.isHidden = !this._meta.isHidden);
 		const hkIsHidden = () => {
 			$btnShowHide.toggleClass("active", this._meta.isHidden);
@@ -3258,7 +3258,7 @@ class MultiFilter extends FilterBase {
 	$render (opts) {
 		const $btnAndOr = $(`<div class="fltr__group-comb-toggle ve-muted"></div>`)
 			.click(() => this._state.mode = this._state.mode === "and" ? "or" : "and");
-		const hookAndOr = () => $btnAndOr.text(`(group ${this._state.mode.toUpperCase()})`);
+		const hookAndOr = () => $btnAndOr.text(`（组合 ${this._state.mode.toUpperCase()}）`);
 		this._addHook("state", "mode", hookAndOr);
 		hookAndOr();
 
@@ -3271,7 +3271,7 @@ class MultiFilter extends FilterBase {
 			this,
 			"isUseDropdowns",
 			{
-				$ele: $(`<button class="btn btn-default btn-xs ml-2">Show as Dropdowns</button>`),
+				$ele: $(`<button class="btn btn-default btn-xs ml-2">以下拉菜单形式显示</button>`),
 				stateName: "meta",
 				stateProp: "_meta",
 			},
@@ -3285,11 +3285,11 @@ class MultiFilter extends FilterBase {
 		this._addHook("meta", "isUseDropdowns", hkChildrenDropdowns);
 		hkChildrenDropdowns();
 
-		const $btnResetAll = $(`<button class="btn btn-default btn-xs ml-2">Reset All</button>`)
+		const $btnResetAll = $(`<button class="btn btn-default btn-xs ml-2">重置全部</button>`)
 			.click(() => this._filters.forEach(it => it.reset()));
 		const $wrpBtns = $$`<div>${$btnForceMobile}${$btnResetAll}</div>`;
 
-		const $btnShowHide = $(`<button class="btn btn-default btn-xs ml-2 ${this._meta.isHidden ? "active" : ""}">Hide</button>`)
+		const $btnShowHide = $(`<button class="btn btn-default btn-xs ml-2 ${this._meta.isHidden ? "active" : ""}">隐藏</button>`)
 			.click(() => this._meta.isHidden = !this._meta.isHidden);
 		const $wrpControls = $$`<div class="flex-v-center">
 			${$wrpSummary}${$wrpBtns}${$btnShowHide}

@@ -1418,15 +1418,15 @@ Parser.MON_SPELLCASTING_TAG_TO_FULL = {
 	"I": "天生",
 	"F": "限定型态",
 	"S": "共享",
-	"CA": "Class, Artificer",
-	"CB": "职业, 吟游诗人",
-	"CC": "职业, 牧师",
-	"CD": "职业, 德鲁伊",
-	"CP": "职业, 圣武士",
-	"CR": "职业, 游侠",
-	"CS": "职业, 术士",
-	"CL": "职业, 契术师",
-	"CW": "职业, 法师",
+	"CA": "职业，奇械师",
+	"CB": "职业，吟游诗人",
+	"CC": "职业，牧师",
+	"CD": "职业，德鲁伊",
+	"CP": "职业，圣武士",
+	"CR": "职业，游侠",
+	"CS": "职业，术士",
+	"CL": "职业，契术师",
+	"CW": "职业，法师",
 };
 Parser.monSpellcastingTagToFull = function (tag) {
 	return Parser._parse_aToB(Parser.MON_SPELLCASTING_TAG_TO_FULL, tag);
@@ -1597,6 +1597,8 @@ Parser.alignmentAbvToFull = function (alignment) {
 				return "无阵营";
 			case "A":
 				return "任意阵营";
+			case "No Alignment":
+				return "无阵营";
 		}
 		return alignment;
 	}

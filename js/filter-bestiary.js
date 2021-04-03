@@ -54,6 +54,7 @@ class PageFilterBestiary extends PageFilter {
 		});
 		this._sizeFilter = new Filter({
 			header: "Size",
+			headerName: "体型",
 			items: [
 				SZ_TINY,
 				SZ_SMALL,
@@ -106,27 +107,28 @@ class PageFilterBestiary extends PageFilter {
 		});
 		this._damageTypeFilter = new Filter({
 			header: "Damage Inflicted",
-			headerName: "语言",
+			headerName: "造成伤害",
 			displayFn: (it) => Parser.dmgTypeToFull(it).toTitleCase(),
 			items: Object.keys(Parser.DMGTYPE_JSON_TO_FULL),
 		});
 		this._conditionsInflictedFilterBase = new Filter({
 			header: "By Traits/Actions",
-			displayFn: StrUtil.toTitleCase,
+			headerName: "通过特性/动作",
+			displayFn: Parser.ConditionToDisplay,
 			items: [...Parser.CONDITIONS],
 		});
 		this._conditionsInflictedFilterLegendary = new Filter({
-			header: "By Lair Actions/Regional Effects",
-			displayFn: StrUtil.toTitleCase,
+			header: "通过巢穴动作/区域效应",
+			displayFn: Parser.ConditionToDisplay,
 			items: [...Parser.CONDITIONS],
 		});
 		this._conditionsInflictedFilterSpells = new Filter({
 			header: "By Spells",
-			headerName: "施法类性",
-			displayFn: StrUtil.toTitleCase,
+			headerName: "通过法术",
+			displayFn: Parser.ConditionToDisplay,
 			items: [...Parser.CONDITIONS],
 		});
-		this._conditionsInflictedFilter = new MultiFilter({header: "Conditions Inflicted", filters: [this._conditionsInflictedFilterBase, this._conditionsInflictedFilterLegendary, this._conditionsInflictedFilterSpells]});
+		this._conditionsInflictedFilter = new MultiFilter({header: "Conditions Inflicted", headerName: "造成状态", filters: [this._conditionsInflictedFilterBase, this._conditionsInflictedFilterLegendary, this._conditionsInflictedFilterSpells]});
 		this._senseFilter = new Filter({
 			header: "Senses",
 			headerName: "感官能力",
@@ -259,13 +261,14 @@ class PageFilterBestiary extends PageFilter {
 					case "Legendary": return "传奇";
 					case "Named NPC": return "具名NPC";
 					case "Spellcaster": return "施法者";
-					case "Spellcaster, int": return "施法者,智力";
-					case "Spellcaster, wis": return "施法者,感知";
-					case "Spellcaster, cha": return "施法者,魅力";
+					case "Spellcaster, int": return "施法者，智力";
+					case "Spellcaster, wis": return "施法者，感知";
+					case "Spellcaster, cha": return "施法者，魅力";
 					case "Regional Effects": return "区域效应";
 					case "Swarm": return "集群";
 					case "Has Variants": return "拥有变体";
 					case "Reactions": return "反应";
+					case "Adventure NPC": return "冒险NPC";
 					default: return m;
 				}
 			},
@@ -275,6 +278,7 @@ class PageFilterBestiary extends PageFilter {
 		});
 		this._spellcastingTypeFilter = new Filter({
 			header: "Spellcasting Type",
+			headerName: "施法类型",
 			items: ["F", "I", "P", "S", "CA", "CB", "CC", "CD", "CP", "CR", "CS", "CL", "CW"],
 			displayFn: Parser.monSpellcastingTagToFull,
 		});
