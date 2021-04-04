@@ -754,16 +754,18 @@
 					]
 				},
 				{
-					"name": "Echo Knight",
-					"shortName": "Echo Knight",
+					"name": "回音骑士",
+					"ENG_name": "Echo Knight",
+					"shortName": "回音骑士",
+					"ENG_shortName": "Echo Knight",
 					"source": "EGW",
 					"page": 183,
 					"subclassFeatures": [
-						"Echo Knight|Fighter||Echo Knight|EGW|3",
-						"Echo Avatar|Fighter||Echo Knight|EGW|7",
-						"Shadow Martyr|Fighter||Echo Knight|EGW|10",
-						"Reclaim Potential|Fighter||Echo Knight|EGW|15",
-						"Legion of One|Fighter||Echo Knight|EGW|18"
+						"回音骑士|Fighter||Echo Knight|EGW|3",
+						"回音化身|Fighter||Echo Knight|EGW|7",
+						"阴影殉道者|Fighter||Echo Knight|EGW|10",
+						"回收潜能|Fighter||Echo Knight|EGW|15",
+						"一人成军|Fighter||Echo Knight|EGW|18"
 					]
 				},
 				{
@@ -1634,7 +1636,8 @@
 	],
 	"subclassFeature": [
 		{
-			"name": "Echo Knight",
+			"name": "回音骑士",
+			"ENG_name": "Echo Knight",
 			"source": "EGW",
 			"page": 183,
 			"className": "Fighter",
@@ -1643,19 +1646,20 @@
 			"subclassSource": "EGW",
 			"level": 3,
 			"entries": [
-				"A mysterious and feared frontline warrior of the Kryn Dynasty, the Echo Knight has mastered the art of using dunamis to summon the fading shades of unrealized timelines to aid them in battle. Surrounded by echoes of their own might, they charge into the fray as a cycling swarm of shadows and strikes.",
+				"作为克灵王朝 Kryn Dynasty 的一种神秘并且令人忌惮的前线斗士，回音骑士掌握并运用秘迹 dunamis 的技艺，召唤未能成为现实的众多时间线里的消逝之影，来在协助他们战斗。在自身力量的回音的围绕下，他们冲锋陷阵姿态宛如凶猛来袭的阴影集群。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Manifest Echo|Fighter||Echo Knight|EGW|3"
+					"subclassFeature": "显现回音|Fighter||Echo Knight|EGW|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Unleash Incarnation|Fighter||Echo Knight|EGW|3"
+					"subclassFeature": "释放化身|Fighter||Echo Knight|EGW|3"
 				}
 			]
 		},
 		{
-			"name": "Manifest Echo",
+			"name": "显现回音",
+			"ENG_name": "Manifest Echo",
 			"source": "EGW",
 			"page": 183,
 			"className": "Fighter",
@@ -1665,22 +1669,23 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"{@i 3rd-level Echo Knight feature}",
-				"You can use a bonus action to magically manifest an echo of yourself in an unoccupied space you can see within 15 feet of you. This echo is a magical, translucent, gray image of you that lasts until it is destroyed, until you dismiss it as a bonus action, until you manifest another echo, or until you're {@condition 无力}.",
-				"Your echo has AC 14 + your proficiency bonus, 1 hit point, and immunity to all conditions. If it has to make a saving throw, it uses your saving throw bonus for the roll. It is the same size as you, and it occupies its space. On your turn, you can mentally command the echo to move up to 30 feet in any direction (no action required). If your echo is ever more than 30 feet from you at the end of your turn, it is destroyed.",
-				"You can use the echo in the following ways:",
+				"{@i 3级回音骑士特性}",
+				"你能使用一个附赠动作来在你可见的15尺内，一处尚未被占据的空间处，魔法地显现一个你自身的回音。该回音是魔法的，半透明的，形如你的黑白形象，回音持续直到被摧毁、你用一个附赠动作消解、显现另一个回音，或你处于{@condition 无力}状态。",
+				"你的回音的AC值为 14 + 你的熟练加值，生命值为1，并免疫所有状态。回音需要进行豁免时，使用你的相应豁免的调整值。它的体型和你一样，并且会占据空间。在你的回合时，你能精神性地命令回音朝任意方向移动至多30尺（无需动作）。如果你的回音在你的回合结束时远离你超过30尺，那么它会被摧毁。",
+				"你能按照以下方法使用回音：",
 				{
 					"type": "list",
 					"items": [
-						"As a bonus action, you can teleport, magically swapping places with your echo at a cost of 15 feet of your movement, regardless of the distance between the two of you.",
-						"When you take the {@action 攻击} action on your turn, any attack you make with that action can originate from your space or the echo's space. You make this choice for each attack.",
-						"When a creature that you can see within 5 feet of your echo moves at least 5 feet away from it, you can use your reaction to make an opportunity attack against that creature as if you were in the echo's space."
+						"使用一个附赠动作，你能消耗15尺的速度进行传送，魔法性地与你的回音交换位置，无论回音与你之间的距离如何。",
+						"当你在你的回合里进行{@action 攻击}动作时，你用该动作进行的任何攻击可以用你或回音的空间作为源点。每一次攻击的源点都由你决定。",
+						"当一个位于你的回音5尺内且你可见的生物尝试远离回音至少5尺时，你能用你的反应动作来对该生物进行一次借机攻击，就如同你位于回音的空间上一样。"
 					]
 				}
 			]
 		},
 		{
-			"name": "Unleash Incarnation",
+			"name": "释放化身",
+			"ENG_name": "Unleash Incarnation",
 			"source": "EGW",
 			"page": 183,
 			"className": "Fighter",
@@ -1690,13 +1695,14 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"{@i 3rd-level Echo Knight feature}",
-				"You can heighten your echo's fury. Whenever you take the {@action 攻击} action, you can make one additional melee attack from the echo's position.",
-				"You can use this feature a number of times equal to your Constitution modifier (a minimum of once). You regain all expended uses when you finish a long rest."
+				"{@i 3级回音骑士特性}",
+				"你能增强你回音的狂怒。无论何时你进行{@action 攻击}动作，你能在回音的位置上进行一次额外的近战攻击。",
+				"你能使用本特性的次数等于你的体质调整值（最少1次）。当你完成一次长休后，你恢复所有已消耗的使用次数。"
 			]
 		},
 		{
-			"name": "Echo Avatar",
+			"name": "回音化身",
+			"ENG_name": "Echo Avatar",
 			"source": "EGW",
 			"page": 183,
 			"className": "Fighter",
@@ -1706,12 +1712,13 @@
 			"level": 7,
 			"header": 2,
 			"entries": [
-				"{@i 7th-level Echo Knight feature}",
-				"You can temporarily transfer your consciousness to your echo. As an action, you can see through your echo's eyes and hear through its ears. During this time, you are {@condition 耳聋} and {@condition 目盲}. You can sustain this effect for up to 10 minutes, and you can end it at any time (requires no action). While your echo is being used in this way, it can be up to 1,000 feet away from you without being destroyed."
+				"{@i 7级回音骑士特性}",
+				"你能暂时地将你的意识转移到回音上。使用一个动作，你能用你的回音的双眼和双耳来视物与聆听。在这期间，你的本体处于{@condition 耳聋}和{@condition 目盲}。你能维持这种效果至多10分钟，并且你能随时终止该效果（无需动作）。当你用这种方法操纵回音时，它能远离你至多1000尺而不被摧毁。你能维持这种效果至多10分钟，并且你能随时终止该效果（无需动作）。当你用这种方法操纵回音时，它能远离你至多1000尺而不被摧毁。"
 			]
 		},
 		{
-			"name": "Shadow Martyr",
+			"name": "阴影殉道者",
+			"ENG_name": "Shadow Martyr",
 			"source": "EGW",
 			"page": 183,
 			"className": "Fighter",
@@ -1721,13 +1728,14 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"{@i 10th-level Echo Knight feature}",
-				"You can make your echo throw itself in front of an attack directed at another creature that you can see. Before the attack roll is made, you can use your reaction to teleport the echo to an unoccupied space within 5 feet of the targeted creature. The attack roll that triggered the reaction is instead made against your echo.",
-				"Once you use this feature, you can't use it again until you finish a short or long rest."
+				"{@i 10级回音骑士特性}",
+				"在一个除你以外的，且你可见的生物受到攻击前，你能让你的回音冲向该生物。在攻击检定投掷前，你能用你的反应动作来传送回音到目标生物周围5尺内，尚未被占据的空间。触发该反应的攻击检定将由你的回音代为承受。",
+				"一旦你使用本特性，直到你完成一次短休或长休前，你不能再次使用。"
 			]
 		},
 		{
-			"name": "Reclaim Potential",
+			"name": "回收潜能",
+			"ENG_name": "Reclaim Potential",
 			"source": "EGW",
 			"page": 183,
 			"className": "Fighter",
@@ -1737,13 +1745,14 @@
 			"level": 15,
 			"header": 2,
 			"entries": [
-				"{@i 15th-level Echo Knight feature}",
-				"You've learned to absorb the fleeting magic of your echo. When an echo of yours is destroyed by taking damage, you can gain a number of temporary hit points equal to {@dice 2d6} + your Constitution modifier, provided you don't already have temporary hit points.",
-				"You can use this feature a number of times equal to your Constitution modifier (a minimum of once). You regain all expended uses when you finish a long rest."
+				"{@i 15级回音骑士特性}",
+				"你已经学会吸收你回音上转瞬即逝的魔力。当你的一个回音因承受伤害而被摧毁，而你也没有临时生命值时，你能够获得等量于{@dice 2d6} + 你的体质调整值的临时生命值。",
+				"你能使用本特性的次数等于你的体质调整值（最少1次）。当你完成一次长休后，你恢复所有已消耗的使用次数。"
 			]
 		},
 		{
-			"name": "Legion of One",
+			"name": "一人成军",
+			"ENG_name": "Legion of One",
 			"source": "EGW",
 			"page": 183,
 			"className": "Fighter",
@@ -1753,9 +1762,9 @@
 			"level": 18,
 			"header": 2,
 			"entries": [
-				"{@i 18th-level Echo Knight feature}",
-				"You can use a bonus action to create two echoes with your Manifest Echo feature, and these echoes can coexist. If you try to create a third echo, the previous two echoes are destroyed. Anything you can do from one echo's position can be done from the other's instead.",
-				"In addition, when you roll initiative and have no uses of your Unleash Incarnation feature left, you regain one use of that feature."
+				"{@i 18级回音骑士特性}",
+				"当你用一个附赠动作使用显现回音时，你能创造两个回音，并且这些回音能够共存。如果你尝试创造第三个回音，那么前面的两个回音就会被摧毁。你能够在其中一个回音的位置上进行的所有事情都能用另一个回音进行替换。",
+				"此外，当你投掷先攻时，如果你的释放化身特性没有剩余可用次数，那么你重获一次释放化身的使用次数。"
 			]
 		},
 		{

@@ -708,27 +708,31 @@
 					]
 				},
 				{
-					"name": "Chronurgy Magic",
-					"shortName": "Chronurgy",
+					"name": "时间魔法",
+					"ENG_name": "Chronurgy Magic",
+					"shortName": "时间",
+					"ENG_shortName": "Chronurgy",
 					"source": "EGW",
 					"page": 184,
 					"subclassFeatures": [
-						"Chronurgy Magic|Wizard||Chronurgy|EGW|2",
-						"Momentary Stasis|Wizard||Chronurgy|EGW|6",
-						"Arcane Abeyance|Wizard||Chronurgy|EGW|10",
-						"Convergent Future|Wizard||Chronurgy|EGW|14"
+						"时间魔法|Wizard||Chronurgy|EGW|2",
+						"瞬时静止|Wizard||Chronurgy|EGW|6",
+						"奥法暂滞|Wizard||Chronurgy|EGW|10",
+						"收束未来|Wizard||Chronurgy|EGW|14"
 					]
 				},
 				{
-					"name": "Graviturgy Magic",
-					"shortName": "Graviturgy",
+					"name": "重力魔法",
+					"ENG_name": "Graviturgy Magic",
+					"shortName": "重力",
+					"ENG_shortName": "Graviturgy",
 					"source": "EGW",
 					"page": 185,
 					"subclassFeatures": [
-						"Graviturgy Magic|Wizard||Graviturgy|EGW|2",
-						"Gravity Well|Wizard||Graviturgy|EGW|6",
-						"Violent Attraction|Wizard||Graviturgy|EGW|10",
-						"Event Horizon|Wizard||Graviturgy|EGW|14"
+						"重力魔法|Wizard||Graviturgy|EGW|2",
+						"重力井|Wizard||Graviturgy|EGW|6",
+						"狂暴牵引|Wizard||Graviturgy|EGW|10",
+						"事件视界|Wizard||Graviturgy|EGW|14"
 					]
 				},
 				{
@@ -1472,7 +1476,8 @@
 	],
 	"subclassFeature": [
 		{
-			"name": "Chronurgy Magic",
+			"name": "时间魔法",
+			"ENG_name": "Chronurgy Magic",
 			"source": "EGW",
 			"page": 184,
 			"className": "Wizard",
@@ -1481,19 +1486,20 @@
 			"subclassSource": "EGW",
 			"level": 2,
 			"entries": [
-				"Focusing on the manipulation of time, those who follow the Chronurgy tradition learn to alter the pace of reality to their liking. Using the ramping of anticipatory dunamis energy, these mages can bend the flow of time as adroitly as a skilled musician plays an instrument, lending themselves and their allies an advantage in the blink of an eye.",
+				"追随时间使传承的法师们专注于操纵时间，他们学会了如何按照自己的想法来改写现实的流动。利用可预期的秘迹 dunamis 能量，这些法师可以像熟练的乐师演奏乐器那样扭曲时间的流动，在眨眼间赋予他们自己以及他们的盟友战斗优势。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Chronal Shift|Wizard||Chronurgy|EGW|2"
+					"subclassFeature": "时间变幻|Wizard||Chronurgy|EGW|2"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Temporal Awareness|Wizard||Chronurgy|EGW|2"
+					"subclassFeature": "现世感知|Wizard||Chronurgy|EGW|2"
 				}
 			]
 		},
 		{
-			"name": "Chronal Shift",
+			"name": "时间变幻",
+			"ENG_name": "Chronal Shift",
 			"source": "EGW",
 			"page": 184,
 			"className": "Wizard",
@@ -1503,13 +1509,14 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"{@i 2nd-level Chronurgy Magic feature}",
-				"You can magically exert limited control over the flow of time around a creature. As a reaction, after you or a creature you can see within 30 feet of you makes an attack roll, an ability check, or a saving throw, you can force the creature to reroll. You make this decision after you see whether the roll succeeds or fails. The target must use the result of the second roll.",
-				"You can use this ability twice, and you regain any expended uses when you finish a long rest."
+				"{@i 2级时间魔法特性}",
+				"你可以魔法地获取对单一生物周围的时间流动的有限控制。在你或者30尺内你可以看见的一个生物进行一次攻击检定，属性检定或者豁免检定后，你可以以一个反应迫使该生物重投。你可以在得知该检定是否成功后做出这一反应。该生物必须使用第二次的结果。",
+				"你可以使用这一特性两次。你在完成一次长休后恢复所有已消耗的使用次数。"
 			]
 		},
 		{
-			"name": "Temporal Awareness",
+			"name": "现世感知",
+			"ENG_name": "Temporal Awareness",
 			"source": "EGW",
 			"page": 184,
 			"className": "Wizard",
@@ -1519,12 +1526,13 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"{@i 2nd-level Chronurgy Magic feature}",
-				"You can add your Intelligence modifier to your initiative rolls."
+				"{@i 2级时间魔法特性}",
+				"你的先攻检定获得等同于你的智力调整值的加值。"
 			]
 		},
 		{
-			"name": "Momentary Stasis",
+			"name": "瞬时静止",
+			"ENG_name": "Momentary Stasis",
 			"source": "EGW",
 			"page": 184,
 			"className": "Wizard",
@@ -1534,13 +1542,14 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"{@i 6th-level Chronurgy Magic feature}",
-				"As an action, you can magically force a Large or smaller creature you can see within 60 feet of you to make a Constitution saving throw against your spell save DC. Unless the saving throw is a success, the creature is encased in a field of magical energy until the end of your next turn or until the creature takes any damage. While encased in this way, the creature is {@condition 无力} and has a speed of 0.",
-				"You can use this feature a number of times equal to your Intelligence modifier (a minimum of once). You regain all expended uses when you finish a long rest."
+				"{@i 6级时间魔法特性}",
+				"以一个动作，你可以魔法性地迫使60尺内你可以看见的一个大型或更小的生物进行一次对抗等于你法术豁免DC的体质豁免检定。若失败，该生物将被禁锢于一个魔法力场中，直至你的下回合结束或者该生物受到任何伤害。当以此法被禁锢时，该生物陷入{@condition 无力}，并且速度被降至0。",
+				"你可以使用这一特性等同于你智力调整值的次数（至少1次）。你在完成一次长休后恢复所有已消耗的使用次数。"
 			]
 		},
 		{
-			"name": "Arcane Abeyance",
+			"name": "奥法暂滞",
+			"ENG_name": "Arcane Abeyance",
 			"source": "EGW",
 			"page": 184,
 			"className": "Wizard",
@@ -1550,14 +1559,15 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"{@i 10th-level Chronurgy Magic feature}",
-				"When you cast a spell using a spell slot of 4th level or lower, you can condense the spell's magic into a mote. The spell is frozen in time at the moment of casting and held within a gray bead for 1 hour. This bead is a Tiny object with AC 15 and 1 hit point, and it is immune to poison and psychic damage. When the duration ends, or if the bead is destroyed, it vanishes in a flash of light, and the spell is lost.",
-				"A creature holding the bead can use its action to release the spell within, whereupon the bead disappears. The spell uses your spell attack bonus and save DC, and the spell treats the creature who released it as the caster for all other purposes.",
-				"Once you create a bead with this feature, you can't do so again until you finish a short or long rest."
+				"{@i 10级时间魔法特性}",
+				"当你消耗一个四环或更低的法术位来施展法术时，你可以将该法术的法力浓缩至一抹微尘中。该法术将冻结在施展的那一刻，并被保存在一个灰色的小珠中，持续一小时。这个小珠是一个拥有15 AC和1点生命值的物件，并免疫毒素和心灵伤害。在持续时间结束或者珠子被摧毁时，它会在光芒一闪中消失，而法术将会失去。",
+				"持握着小珠的生物可以使用他的动作来释放其内的法术，随后小珠将会消失。该法术使用你的法术攻击加值和豁免DC，而在其他方面视为由释放它的生物施展。",
+				"在你以此特性创造一个小珠后，你在完成一次短休或长休前不能再次这样做。"
 			]
 		},
 		{
-			"name": "Convergent Future",
+			"name": "收束未来",
+			"ENG_name": "Convergent Future",
 			"source": "EGW",
 			"page": 184,
 			"className": "Wizard",
@@ -1567,13 +1577,14 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"{@i 14th-level Chronurgy Magic feature}",
-				"You can peer through possible futures and magically pull one of them into events around you, ensuring a particular outcome. When you or a creature you can see within 60 feet of you makes an attack roll, an ability check, or a saving throw, you can use your reaction to ignore the die roll and decide whether the number rolled is the minimum needed to succeed or one less than that number (your choice).",
-				"When you use this feature, you gain one level of {@condition 力竭}. Only by finishing a long rest can you remove a level of {@condition 力竭} gained in this way."
+				"{@i 14级时间魔法特性}",
+				"你可以透视可能的未来，并魔法地将其中一个未来引导至你周遭发生的事物上，以确保特定的结果发生。当你或60尺内一个你可以看见的生物进行一次攻击检定，属性检定或者豁免检定时，你可以以你的反应动作来无视掷骰，直接决定骰子结果将会是使检定成功的最低骰值，或者比该骰值低出一点（由你选择）。",
+				"当你使用该特性时，你获得一级{@condition 力竭}。你只能通过长休来移除以此法获取的力竭。"
 			]
 		},
 		{
-			"name": "Graviturgy Magic",
+			"name": "重力魔法",
+			"ENG_name": "Graviturgy Magic",
 			"source": "EGW",
 			"page": 185,
 			"className": "Wizard",
@@ -1582,15 +1593,16 @@
 			"subclassSource": "EGW",
 			"level": 2,
 			"entries": [
-				"Understanding and mastering the forces that draw bodies of matter together or drive them apart, the students of the Graviturgy arcane tradition learn to further bend and manipulate the violent energy of gravity to their benefit, and the terrible detriment of their enemies.",
+				"理解并掌控着将物体的物质聚合或分离的力量，重力奥术传承的学生们通过学习来更进一步掌控扭曲并操纵重力的狂暴能量来增益自己，或是为他们的敌人带来恐怖的伤害。",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Adjust Density|Wizard||Graviturgy|EGW|2"
+					"subclassFeature": "调节密度|Wizard||Graviturgy|EGW|2"
 				}
 			]
 		},
 		{
-			"name": "Adjust Density",
+			"name": "调节密度",
+			"ENG_name": "Adjust Density",
 			"source": "EGW",
 			"page": 185,
 			"className": "Wizard",
@@ -1600,14 +1612,15 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"{@i 2nd-level Graviturgy Magic feature}",
-				"As an action, you can magically alter the weight of one object or creature you can see within 30 feet of you. The object or creature must be Large or smaller. The target's weight is halved or doubled for up to 1 minute or until your concentration ends (as if you were concentrating on a spell).",
-				"While the weight of a creature is halved by this effect, the creature's speed increases by 10 feet, it can jump twice as far as normal, and it has disadvantage on Strength checks and Strength saving throws. While the weight of a creature is doubled by this effect, the creature's speed is reduced by 10 feet, and it has advantage on Strength checks and Strength saving throws.",
-				"Upon reaching 10th level in this class, you can target an object or a creature that is Huge or smaller."
+				"{@i 2级重力魔法特性}",
+				"以一个动作，你能魔法性地改一个你可见的位于你30尺内的物件或生物的重量。物件和生物的体型不得大于大型。目标的重量减半或者翻倍，持续至多一分钟，或在你的专注终止（如同你专注法术一样）时提前结束。",
+				"当一个生物的重量通过该效果减半时，该生物的移动速度增加10尺，跳跃距离变为正常的两倍，并且在进行力量检定或者力量豁免时具有劣势。当一个生物的重量通过该效果翻倍时，该生物的移动速度减少10尺，并且在进行力量检定或者力量豁免时具有优势。",
+				"当在该职业升至10级时，你能对一个巨型或更小的物件或生物使用本特性。"
 			]
 		},
 		{
-			"name": "Gravity Well",
+			"name": "重力井",
+			"ENG_name": "Gravity Well",
 			"source": "EGW",
 			"page": 185,
 			"className": "Wizard",
@@ -1617,12 +1630,13 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"{@i 6th-level Graviturgy Magic feature}",
-				"You've learned how to manipulate gravity around a living being: whenever you cast a spell on a creature, you can move the target 5 feet to an unoccupied space of your choice if the target is willing to move, the spell hits it with an attack, or it fails a saving throw against the spell."
+				"{@i 6级重力魔法特性}",
+				"你学会了如何在一个活体上操纵重力：无论何时你对一个生物施展法术，只要该目标自愿被移动，或是法术攻击命中了该目标，亦或是该目标在对抗这道法术的豁免时失败，你就能让该目标朝着一个由你选择且未被占据的空间移动5尺。"
 			]
 		},
 		{
-			"name": "Violent Attraction",
+			"name": "狂暴牵引",
+			"ENG_name": "Violent Attraction",
 			"source": "EGW",
 			"page": 185,
 			"className": "Wizard",
@@ -1632,14 +1646,15 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"{@i 10th-level Graviturgy Magic feature}",
-				"When another creature that you can see within 60 feet of you hits with a weapon attack, you can use your reaction to increase the attack's velocity, causing the attack's target to take an extra {@damage 1d10} damage of the weapon's type.",
-				"Alternatively, if a creature within 60 feet of you takes damage from a fall, you can use your reaction to increase the fall's damage by {@dice 2d10}.",
-				"You can use this feature a number of times equal to your Intelligence modifier (a minimum of once). You regain all expended uses when you finish a long rest."
+				"{@i 10级重力魔法特性}",
+				"当一个除你以外，位于你60尺内且你可见的生物被武器攻击命中时，你能用你的反应加快这次攻击的速度，使得被攻击的目标额外受到{@damage 1d10}的该武器类型所造成的伤害。",
+				"此外，如果一个位于你60尺内的生物遭受了坠落伤害，你能用你的反应动作来增加这次坠落所造成的伤害，增加值为{@dice 2d10}。",
+				"你能使用本特性的次数等于你的智力调整值（最少1次）。当你完成一次长休后，你恢复所有已消耗的使用次数。"
 			]
 		},
 		{
-			"name": "Event Horizon",
+			"name": "事件视界",
+			"ENG_name": "Event Horizon",
 			"source": "EGW",
 			"page": 185,
 			"className": "Wizard",
@@ -1649,9 +1664,9 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"{@i 14th-level Graviturgy Magic feature}",
-				"As an action, you can magically emit a powerful field of gravitational energy that tugs at other creatures for up to 1 minute or until your concentration ends (as if you were concentrating on a spell). For the duration, whenever a creature hostile to you starts its turn within 30 feet of you, it must make a Strength saving throw against your spell save DC. On a failed save, it takes {@damage 2d10} force damage, and its speed is reduced to 0 until the start of its next turn. On a successful save, it takes half as much damage, and every foot it moves this turn costs 2 extra feet of movement.",
-				"Once you use this feature, you can't do so again until you finish a long rest or until you expend a spell slot of 3rd level or higher on it."
+				"{@i 14级重力魔法特性}",
+				"以一个动作，你能魔法地发散出由重力能量引起的强大力场，力场能把其他生物拖拽至多1分钟，或在你的专注终止（如同你专注法术一样）时结束。在持续时间内，当一个位于你30尺内，且与你敌对的生物开始回合时，该生物必须进行一次力量豁免对抗你的法术DC。当豁免失败时，该生物受到{@damage 2d10}力场伤害，并且移动速度降低至0尺，减速持续直到该生物的下一个回合开始。当豁免成功时，该生物受到一半的伤害，并且每移动一尺就需要额外花费2尺的移动力。",
+				"一旦你使用了本特性，你不能再次使用，直到你完成了一次长休，或花费一个3环或更高的法术位来再次使用。"
 			]
 		},
 		{
