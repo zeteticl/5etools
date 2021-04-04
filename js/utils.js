@@ -6261,7 +6261,7 @@ Parser.subraceKeyToDisplay["sea"] = "海";
 Parser.subraceKeyToDisplay["shadar-kai"] = "影灵";
 Parser.subraceKeyToDisplay["aereni"] = "艾瑞尼";
 Parser.subraceKeyToDisplay["Valenar"] = "维欧诺尔";
-Parser.subraceKeyToDisplay["mark of shadow"] = "影龙纹";
+Parser.subraceKeyToDisplay["mark of shadow"] = "阴影龙纹";
 Parser.subraceKeyToDisplay["mul daya nation"] = "慕达雅族"; // 精灵赞迪卡
 Parser.subraceKeyToDisplay["forest"] = "林"; // 侏儒
 Parser.subraceKeyToDisplay["rock"] = "岩";
@@ -6283,7 +6283,6 @@ Parser.subraceKeyToDisplay["mephistopheles"] = "梅菲斯托费勒斯";
 Parser.subraceKeyToDisplay["glasya"] = "格莱希亚";
 Parser.subraceKeyToDisplay["zariel"] = "扎瑞尔";
 Parser.subraceKeyToDisplay["baalzebul"] = "巴力西卜";
-Parser.subraceKeyToDisplay[""] = "";
 
 Parser.RaceToDisplay = function (race) {
 	let trans_race = Parser.translateKeyInMapToDisplay(Parser.raceKeyToDisplay, race);

@@ -32,7 +32,7 @@ class RenderSpells {
 		if (fromClassList.length) {
 			const [current, legacy] = Parser.spClassesToCurrentAndLegacy(fromClassList);
 			stackFroms.push(`<div><span class="bold">职业：</span>${Parser.spMainClassesToFull(current)}</div>`);
-			if (legacy.length) stackFroms.push(`<div class="text-muted"><span class="bold">职业： (旧版): </span>${Parser.spMainClassesToFull(legacy)}</div>`);
+			if (legacy.length) stackFroms.push(`<div class="text-muted"><span class="bold">职业（旧版）：</span>${Parser.spMainClassesToFull(legacy)}</div>`);
 		}
 
 		const fromSubclass = Renderer.spell.getCombinedClasses(sp, "fromSubclass");
@@ -40,7 +40,7 @@ class RenderSpells {
 			const [current, legacy] = Parser.spSubclassesToCurrentAndLegacyFull(sp, subclassLookup);
 			stackFroms.push(`<div><span class="bold">子职业：</span>${current}</div>`);
 			if (legacy.length) {
-				stackFroms.push(`<div class="text-muted"><span class="bold">子职业： (旧版): </span>${legacy}</div>`);
+				stackFroms.push(`<div class="text-muted"><span class="bold">子职业（旧版）：</span>${legacy}</div>`);
 			}
 		}
 
@@ -48,28 +48,28 @@ class RenderSpells {
 		if (fromClassListVariant.length) {
 			const [current, legacy] = Parser.spVariantClassesToCurrentAndLegacy(fromClassListVariant);
 			if (current.length) {
-				stackFroms.push(`<div><span class="bold">可选/变体 职业: </span>${Parser.spMainClassesToFull(current)}</div>`);
+				stackFroms.push(`<div><span class="bold">可选/变体职业：</span>${Parser.spMainClassesToFull(current)}</div>`);
 			}
 			if (legacy.length) {
-				stackFroms.push(`<div class="text-muted"><span class="bold">可选/变体 职业 (旧版): </span>${Parser.spMainClassesToFull(legacy)}</div>`);
+				stackFroms.push(`<div class="text-muted"><span class="bold">可选/变体职业（旧版）：</span>${Parser.spMainClassesToFull(legacy)}</div>`);
 			}
 		}
 
 		const fromRaces = Renderer.spell.getCombinedRaces(sp);
 		if (fromRaces.length) {
 			fromRaces.sort((a, b) => SortUtil.ascSortLower(a.name, b.name) || SortUtil.ascSortLower(a.source, b.source));
-			stackFroms.push(`<div><span class="bold">种族：</span>${fromRaces.map(r => `${SourceUtil.isNonstandardSource(r.source) ? `<span class="text-muted">` : ``}${renderer.render(`{@race ${Parser.RaceToDisplay(r.name)}|${r.source}}`)}${SourceUtil.isNonstandardSource(r.source) ? `</span>` : ``}`).join(", ")}</div>`);
+			stackFroms.push(`<div><span class="bold">种族：</span>${fromRaces.map(r => `${SourceUtil.isNonstandardSource(r.source) ? `<span class="text-muted">` : ``}${renderer.render(`{@race ${Parser.RaceToDisplay(r.name)}|${r.source}}`)}${SourceUtil.isNonstandardSource(r.source) ? `</span>` : ``}`).join("、")}</div>`);
 		}
 
 		const fromBackgrounds = Renderer.spell.getCombinedBackgrounds(sp);
 		if (fromBackgrounds.length) {
 			fromBackgrounds.sort((a, b) => SortUtil.ascSortLower(a.name, b.name) || SortUtil.ascSortLower(a.source, b.source));
-			stackFroms.push(`<div><span class="bold">背景：</span>${fromBackgrounds.map(r => `${SourceUtil.isNonstandardSource(r.source) ? `<span class="text-muted">` : ``}${renderer.render(`{@background ${r.name}|${r.source}}`)}${SourceUtil.isNonstandardSource(r.source) ? `</span>` : ``}`).join(", ")}</div>`);
+			stackFroms.push(`<div><span class="bold">背景：</span>${fromBackgrounds.map(r => `${SourceUtil.isNonstandardSource(r.source) ? `<span class="text-muted">` : ``}${renderer.render(`{@background ${r.name}|${r.source}}`)}${SourceUtil.isNonstandardSource(r.source) ? `</span>` : ``}`).join("、")}</div>`);
 		}
 
 		if (sp.eldritchInvocations) {
 			sp.eldritchInvocations.sort((a, b) => SortUtil.ascSortLower(a.name, b.name) || SortUtil.ascSortLower(a.source, b.source));
-			stackFroms.push(`<div><span class="bold">魔能祈唤：</span>${sp.eldritchInvocations.map(r => `${SourceUtil.isNonstandardSource(r.source) ? `<span class="text-muted">` : ``}${renderer.render(`{@optfeature ${r.name}|${r.source}}`)}${SourceUtil.isNonstandardSource(r.source) ? `</span>` : ``}`).join(", ")}</div>`);
+			stackFroms.push(`<div><span class="bold">魔能祈唤：</span>${sp.eldritchInvocations.map(r => `${SourceUtil.isNonstandardSource(r.source) ? `<span class="text-muted">` : ``}${renderer.render(`{@optfeature ${r.name}|${r.source}}`)}${SourceUtil.isNonstandardSource(r.source) ? `</span>` : ``}`).join("、")}</div>`);
 		}
 
 		if (stackFroms.length) {
