@@ -1231,10 +1231,10 @@ Parser._spSubclassItem = function (fromSubclass, textOnly, subclassLookup) {
 		? Parser.SubclassToDisplay(`${sc.name}_${c.name}${sc.subSubclass ? ` (${sc.subSubclass})` : ""}`)
 		: Parser.SubclassToDisplay(`${sc.name}${sc.subSubclass ? ` (${sc.subSubclass})` : ""}`);
 	if (textOnly) return text;
-	const classPart = `<a href="${UrlUtil.PG_CLASSES}#${UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_CLASSES](c)}" title="Source: ${Parser.sourceJsonToFull(c.source)}">${Parser.ClassToDisplay(c.name)}</a>`;
+	const classPart = `<a href="${UrlUtil.PG_CLASSES}#${UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_CLASSES](c)}" title="资源：${Parser.sourceJsonToFull(c.source)}">${Parser.ClassToDisplay(c.name)}</a>`;
 	const fromLookup = subclassLookup ? MiscUtil.get(subclassLookup, c.source, c.name, sc.source, sc.name) : null;
-	if (fromLookup) return `<a class="italic" href="${UrlUtil.PG_CLASSES}#${UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_CLASSES](c)}${HASH_PART_SEP}${UrlUtil.getClassesPageStatePart({subclass: {shortName: sc.name, source: sc.source}})}" title="Source: ${Parser.sourceJsonToFull(fromSubclass.subclass.source)}">${text}</a> ${classPart}`;
-	else return `<span class="italic" title="Source: ${Parser.sourceJsonToFull(fromSubclass.subclass.source)}">${text}</span> ${classPart}`;
+	if (fromLookup) return `<a class="italic" href="${UrlUtil.PG_CLASSES}#${UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_CLASSES](c)}${HASH_PART_SEP}${UrlUtil.getClassesPageStatePart({subclass: {shortName: sc.name, source: sc.source}})}" title="资源：${Parser.sourceJsonToFull(fromSubclass.subclass.source)}">${text}</a> ${classPart}`;
+	else return `<span class="italic" title="资源：${Parser.sourceJsonToFull(fromSubclass.subclass.source)}">${text}</span> ${classPart}`;
 };
 
 Parser.SPELL_ATTACK_TYPE_TO_FULL = {};
