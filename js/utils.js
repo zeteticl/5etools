@@ -6314,6 +6314,7 @@ Parser.classKeyToDisplay["cleric"] = "牧师";
 Parser.classKeyToDisplay["bard"] = "吟游诗人";
 Parser.classKeyToDisplay["barbarian"] = "野蛮人";
 Parser.classKeyToDisplay["fighter"] = "战士";
+Parser.classKeyToDisplay["monk"] = "武僧";
 Parser.classKeyToDisplay["rogue"] = "游荡者";
 Parser.classKeyToDisplay["artificer"] = "奇械师";
 Parser.classKeyToDisplay["ranger (revised)"] = "游侠 (修订)";
@@ -6391,7 +6392,7 @@ Parser.subclassKeyToDisplay["kensei"] = "剑圣宗";
 Parser.subclassKeyToDisplay["long death"] = "永亡宗";
 Parser.subclassKeyToDisplay["mercy"] = "命流宗";
 Parser.subclassKeyToDisplay["open hand"] = "散打宗";
-Parser.subclassKeyToDisplay["shadow"] = "暗影宗";
+Parser.subclassKeyToDisplay["shadow_monk"] = "暗影宗";
 Parser.subclassKeyToDisplay["sun soul"] = "日魂宗";
 
 Parser.subclassKeyToDisplay["ancients"] = "远古";

@@ -1226,7 +1226,10 @@ Parser.spSubclassesToFull = function (fromSubclassList, textOnly, subclassLookup
 Parser._spSubclassItem = function (fromSubclass, textOnly, subclassLookup) {
 	const c = fromSubclass.class;
 	const sc = fromSubclass.subclass;
-	const text = Parser.SubclassToDisplay(`${sc.name}${sc.subSubclass ? ` (${sc.subSubclass})` : ""}`);
+	// For shadow monk.
+	const text = c.name.toLowerCase() === "monk" && sc.name.toLowerCase() === "shadow"
+		? Parser.SubclassToDisplay(`${sc.name}_${c.name}${sc.subSubclass ? ` (${sc.subSubclass})` : ""}`)
+		: Parser.SubclassToDisplay(`${sc.name}${sc.subSubclass ? ` (${sc.subSubclass})` : ""}`);
 	if (textOnly) return text;
 	const classPart = `<a href="${UrlUtil.PG_CLASSES}#${UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_CLASSES](c)}" title="Source: ${Parser.sourceJsonToFull(c.source)}">${Parser.ClassToDisplay(c.name)}</a>`;
 	const fromLookup = subclassLookup ? MiscUtil.get(subclassLookup, c.source, c.name, sc.source, sc.name) : null;
