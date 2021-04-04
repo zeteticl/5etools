@@ -1279,7 +1279,7 @@
 			"wondrous": true,
 			"weight": 1,
 			"entries": [
-				"当穿戴此护符时，你可以使用一个动作并指名一个你所熟悉，且位于另一个存在位面的地点。接着，进行一次DC 15的智力检定。若检定成功，则你将施放出{@spell 异界发送}法术。若检定失败，你和距离你15尺内的每个生物和物体将发送到一个随机的目的地。骰一颗{@dice d100}。若结果为1-60，你们将发送到一个位于你所指名位面的随机地点。若结果为61-100，你们将随机发送到一个存在位面。"
+				"当穿戴此护符时，你可以使用一个动作并指名一个你所熟悉，且位于另一个存在位面的地点。接着，进行一次DC 15的智力检定。若检定成功，则你将施放出{@spell 异界传送}法术。若检定失败，你和距离你15尺内的每个生物和物体将传送到一个随机的目的地。骰一颗{@dice d100}。若结果为1-60，你们将传送到一个位于你所指名位面的随机地点。若结果为61-100，你们将随机传送到一个存在位面。"
 			],
 			"attachedSpells": [
 				"plane shift"
@@ -1761,7 +1761,7 @@
 				"Wizard"
 			],
 			"entries": [
-				"这本厚重的书被包在暗色的皮革中，皮革上纹有描绘了一张地图或海图的交错银线。这本书在被找到时，包含了以下法术，且在你与其同调后对你视为法师法术： {@spell 秘法之门}, {@spell 次元门}, {@spell 异界之门}, {@spell 迷踪步}, {@spell 异界发送}, {@spell 发送法阵} 和 {@spell 回返真言}。你可以将其作为法术书。",
+				"这本厚重的书被包在暗色的皮革中，皮革上纹有描绘了一张地图或海图的交错银线。这本书在被找到时，包含了以下法术，且在你与其同调后对你视为法师法术： {@spell 秘法之门}, {@spell 次元门}, {@spell 异界之门}, {@spell 迷踪步}, {@spell 异界传送}, {@spell 传送法阵} 和 {@spell 回返真言}。你可以将其作为法术书。",
 				"当你持握这本书时，你可以将其作为你法师法术的法器。",
 				"该书具有3发充能，且每天黎明时恢复 {@dice 1d3} 发已消耗的充能。你持握它时，可以通过以下方式消耗充能：",
 				{
@@ -1871,7 +1871,7 @@
 					"type": "entries",
 					"name": "Travel the Depths",
 					"entries": [
-						"You can use an action to touch the axe to a fixed piece of dwarven stonework and cast the {@spell 发送术} spell from the axe. If your intended destination is underground, there is no chance of a mishap or arriving somewhere unexpected. You can't use this property again until 3 days have passed."
+						"You can use an action to touch the axe to a fixed piece of dwarven stonework and cast the {@spell 传送术} spell from the axe. If your intended destination is underground, there is no chance of a mishap or arriving somewhere unexpected. You can't use this property again until 3 days have passed."
 					]
 				},
 				{
@@ -2300,7 +2300,7 @@
 				"这个袋子表现上与{@item 次元袋}极为相似，但它实际上是某个超巨型异次元生物的进食孔。将这个袋子里外翻转将会关闭这个进食孔。",
 				"这个吞噬袋所依附的异次元生物可以传感到任何被放入这个袋子内的事物。被整个放入袋中的动物或植物将被吞噬并永久遗失。当活体生物的一部份被放入袋中时（例如当某人将手伸进袋中时），该生物会有{@chance 50}的几率被拖入袋中。一个进入袋中的生物可以使用一个动作以尝试通过成功通过一次DC 15的力量检定以从中逃脱。另一个生物也可以使用它的动作伸进袋中，通过成功通过一次DC 20的力量检定以将一个生物拉出（只要它没有先被拖入袋中）。任何在这个袋子中开始它回合的生物将被吞噬，且它的身体将被摧毁。",
 				"无生命的物体可以被保存在这个袋子中，且这个袋子袋子可以容纳最多1尺立方的物质。然而，每天一次，这个袋子将会吞下任何存放在其中的物体，并将它们吐到另一个存在位面。DM将决定其吞咽的时间和物体被吐至的位面。",
-				"若这个袋子被戳破或撕裂，则它将因此被摧毁，且任何它装载的东西都将被发送到星界位面的一处随机位置。"
+				"若这个袋子被戳破或撕裂，则它将因此被摧毁，且任何它装载的东西都将被传送到星界位面的一处随机位置。"
 			],
 			"lootTables": [
 				"魔法物品表D"
@@ -2320,7 +2320,7 @@
 			"entries": [
 				"这个袋子具有一个比它外部尺寸要大上许多的内部空间，它的袋口直径约莫2尺，且深约4尺。这个袋子可以容纳最多500磅的重量，且体积不能超过64立方尺。无论它装了什么，这个袋子的重量皆为15磅。将一个物品从袋中取出需要花费一个动作。",
 				"若这个袋子超载、被戳破、或撕裂，则它将因此破裂并被摧毁，且它装载的东西将散落在星界位面。若这个袋子被里外翻转，则它装载的东西将无伤地掉落而出，但这个袋子必须被恢复原状才能够被再次使用。需要呼吸的生物在袋中可以存活的时间最多等同于10除以生物数量的分钟数（最少1分钟），在这之后它们将开始窒息。",
-				"将次元袋放入由{@item 霍华德的便利袋}、{@item 便携式次元洞}或类似物品所创造的异次元空间中，将会立刻摧毁这两件物品，并打开一道通往星界位面的发送门。这道发送门将产生载这两件物品被放入彼此的位置。任何距离这道发送门10尺内的生物将被吸进门内，并被送往星界位面中的一处随机地点。这道发送门接着将会关闭。这道发送门仅限单向发送，且无法再次被打开。"
+				"将次元袋放入由{@item 霍华德的便利袋}、{@item 便携式次元洞}或类似物品所创造的异次元空间中，将会立刻摧毁这两件物品，并打开一道通往星界位面的传送门。这道传送门将产生载这两件物品被放入彼此的位置。任何距离这道传送门10尺内的生物将被吸进门内，并被送往星界位面中的一处随机地点。这道传送门接着将会关闭。这道传送门仅限单向传送，且无法再次被打开。"
 			],
 			"containerCapacity": {
 				"weight": [
@@ -6976,7 +6976,7 @@
 			]
 		},
 		{
-			"name": "发送海螺",
+			"name": "传送海螺",
 			"source": "SKT",
 			"page": 234,
 			"rarity": "very rare",
@@ -6984,7 +6984,7 @@
 			"wondrous": true,
 			"entries": [
 				"这是一个普通，但是相当大的海螺壳 ，上面镌刻着尤瓦(风暴)符文。 海螺有 2½ 尺长，重达 20 磅。",
-				"以一个动作，你可以通过向外壳吹气来施展 {@spell 发送术} 。 目标是固定的， 并且没有发生事故或法术偏离目标的机会。 任何通过海螺发送的人都将出现在该物品的创造者刻上尤瓦(风暴)符文时所指定的特定位置。 它不允许发送到任何其他目的地。 一旦它的法术被释放，海螺就不能再使用，直到第二天黎明。"
+				"以一个动作，你可以通过向外壳吹气来施展 {@spell 传送术} 。 目标是固定的， 并且没有发生事故或法术偏离目标的机会。 任何通过海螺传送的人都将出现在该物品的创造者刻上尤瓦(风暴)符文时所指定的特定位置。 它不允许传送到任何其他目的地。 一旦它的法术被释放，海螺就不能再使用，直到第二天黎明。"
 			],
 			"attachedSpells": [
 				"teleport"
@@ -7647,7 +7647,7 @@
 			"charges": 3,
 			"entries": [
 				"这个魔方的直径为3寸，且散发着明显可见的魔法能量。这个魔方的六个面都各自对应着一个不同的存在位面，其中一个是物质位面，而其他各面所联系的位面则由DM决定。",
-				"你可以使用一个动作以按下这个魔方的其中一面，以使用它施放{@spell 异界之门}法术，打开一扇通往该面对应位面的发送门。或者，若你使用一个动作以按下同一面两次，则你可以使用这个魔方施放{@spell 异界发送}法术（豁免DC 17），并将目标发送到该面所对应的位面。",
+				"你可以使用一个动作以按下这个魔方的其中一面，以使用它施放{@spell 异界之门}法术，打开一扇通往该面对应位面的传送门。或者，若你使用一个动作以按下同一面两次，则你可以使用这个魔方施放{@spell 异界传送}法术（豁免DC 17），并将目标传送到该面所对应的位面。",
 				"这个魔方含有3发充能。每次使用这个魔方都会消耗1发充能。这个魔方会在每天日出时恢复{@dice 1d3}发已消耗的充能。"
 			],
 			"attachedSpells": [
@@ -9173,7 +9173,7 @@
 					"name": "法术",
 					"ENG_name": "Spells",
 					"entries": [
-						"这本书具有8发充能，且每天黎明时恢复 {@dice 1d8} 发已消耗的充能。当你持握它时，你可以用一个动作随意施展 {@spell 塔莎狂笑术} 或消耗1发或更多的充能施展以下法术（DC 20）： {@spell 防护法阵} (1 充能), {@spell 魔魂壶} (3 充能), {@spell 异界盟友} (3 充能), {@spell 异界誓缚} (2 充能), {@spell 异界发送} （仅限深渊层级；3发充能）, {@spell 精类召唤术|TCE} (3 充能)."
+						"这本书具有8发充能，且每天黎明时恢复 {@dice 1d8} 发已消耗的充能。当你持握它时，你可以用一个动作随意施展 {@spell 塔莎狂笑术} 或消耗1发或更多的充能施展以下法术（DC 20）： {@spell 防护法阵} (1 充能), {@spell 魔魂壶} (3 充能), {@spell 异界盟友} (3 充能), {@spell 异界誓缚} (2 充能), {@spell 异界传送} （仅限深渊层级；3发充能）, {@spell 精类召唤术|TCE} (3 充能)."
 					]
 				},
 				{
@@ -9414,7 +9414,7 @@
 			"rarity": "rare",
 			"wondrous": true,
 			"entries": [
-				"你可以使用一个动作以将这对镣铐铐住一个陷入{@condition 无力}的生物。这对镣铐会自行调整以适应一个体型在小型至大型范围的生物的尺寸。除了寻常镣铐的功能外，这对镣铐可以防止被其束缚的生物使用任何异次元移动手段，包括发送或异位面旅行。然而它们无法阻止生物穿过连接异次元位面的发送门。",
+				"你可以使用一个动作以将这对镣铐铐住一个陷入{@condition 无力}的生物。这对镣铐会自行调整以适应一个体型在小型至大型范围的生物的尺寸。除了寻常镣铐的功能外，这对镣铐可以防止被其束缚的生物使用任何异次元移动手段，包括传送或异位面旅行。然而它们无法阻止生物穿过连接异次元位面的传送门。",
 				"你和任何你在使用这对镣铐时所指定的生物可以使用一个动作将其移除。每30天一次，被铐住的生物可以进行一次DC 30的力量（{@skill 运动}）检定。若检定成功，则该生物从中逃脱并摧毁这对镣铐。"
 			],
 			"lootTables": [
@@ -11799,7 +11799,7 @@
 				"该生物存在的持续时间根据塑像类型而有所不同。在其持续时间结束时，该生物将变回它的塑像型态。它会在生命值归零、或你在触碰它的同时使用一个动作再次说出它的命令语时提前恢复塑像型态。当该生物重新变回塑像时，它的这个特性直到特定时间经过之前都不能再被使用。其重置时间根据塑像类型而有所不同。",
 				"{@creature 梦魇|mm|黑曜石驹}.",
 				"这尊光滑的黑曜石马可以变成一个{@creature 梦魇}最多长达24小时。这个{@creature 梦魇}只会为了自我防卫而战斗。一旦被使用，则它直到经过5天之前都不能再被使用。",
-				"若你为善良阵营，则这尊塑像在你每次使用它的时候都有{@chance 10}％的几率会无视你的命令，包括变回它的塑像型态。若你在这个{@creature 梦魇}无视你命令的时候骑乘牠，你和{@creature 梦魇}都将在瞬间被发送到哈迪斯(Hades)位面中的一个随机位置，而{@creature 梦魇}也将在该处变回塑像型态。"
+				"若你为善良阵营，则这尊塑像在你每次使用它的时候都有{@chance 10}％的几率会无视你的命令，包括变回它的塑像型态。若你在这个{@creature 梦魇}无视你命令的时候骑乘牠，你和{@creature 梦魇}都将在瞬间被传送到哈迪斯(Hades)位面中的一个随机位置，而{@creature 梦魇}也将在该处变回塑像型态。"
 			],
 			"lootTables": [
 				"魔法物品表H"
@@ -13267,7 +13267,7 @@
 					"type": "entries",
 					"name": "Dormant",
 					"entries": [
-						"Most of the book is blank, but the following spells are recorded in the first pages of the tome: {@spell 警报术}, {@spell 反魔法结界}, {@spell 毕格比之掌}, {@spell 枯萎术}, {@spell 魅惑人类}, {@spell 困惑术}, {@spell 操控天气}, {@spell 创造不死生物}, {@spell 侦测思想}, {@spell 变巨/缩小术}, {@spell 恐惧术}, {@spell 预视术}, {@spell 气化形体}, {@spell 守卫铭文}, {@spell 通晓传奇}, {@spell 李欧蒙小屋}, {@spell 群体暗示术}, {@spell 假象术}, {@spell 迷踪步}, {@spell 魔邓肯忠犬}, {@spell 虹光喷射}, {@spell 衰弱射线}, {@spell 无声幻影}, {@spell 发送术}, and {@spell 雷鸣波}.",
+						"Most of the book is blank, but the following spells are recorded in the first pages of the tome: {@spell 警报术}, {@spell 反魔法结界}, {@spell 毕格比之掌}, {@spell 枯萎术}, {@spell 魅惑人类}, {@spell 困惑术}, {@spell 操控天气}, {@spell 创造不死生物}, {@spell 侦测思想}, {@spell 变巨/缩小术}, {@spell 恐惧术}, {@spell 预视术}, {@spell 气化形体}, {@spell 守卫铭文}, {@spell 通晓传奇}, {@spell 李欧蒙小屋}, {@spell 群体暗示术}, {@spell 假象术}, {@spell 迷踪步}, {@spell 魔邓肯忠犬}, {@spell 虹光喷射}, {@spell 衰弱射线}, {@spell 无声幻影}, {@spell 传送术}, and {@spell 雷鸣波}.",
 						"You can use the grimoire as your spellbook, and you can scribe new spells into it as normal. When you prepare wizard spells using the grimoire, the number of wizard spells you can prepare increases by 1."
 					]
 				},
@@ -13675,7 +13675,7 @@
 					"items": [
 						"Your Strength score becomes 20, unless it is already 20 or higher.",
 						"Any melee spell attack you make with the hand, and any melee weapon attack made with a weapon held by it, deals an extra {@dice 2d8} cold damage on a hit.",
-						"The hand has 8 charges. You can use an action and expend 1 or more charges to cast one of the following spells (save DC 18) from it: {@spell 死亡一指} (5 charges), {@spell 睡眠术} (1 charge), {@spell 缓速术} (2 charges), or {@spell 发送术} (3 charges). The hand regains {@dice 1d4 + 4} expended charges daily at dawn. Each time you cast a spell from the hand, it casts the {@spell 暗示术} spell on you (save DC 18), demanding that you commit an evil act. The hand might have a specific act in mind or leave it up to you."
+						"The hand has 8 charges. You can use an action and expend 1 or more charges to cast one of the following spells (save DC 18) from it: {@spell 死亡一指} (5 charges), {@spell 睡眠术} (1 charge), {@spell 缓速术} (2 charges), or {@spell 传送术} (3 charges). The hand regains {@dice 1d4 + 4} expended charges daily at dawn. Each time you cast a spell from the hand, it casts the {@spell 暗示术} spell on you (save DC 18), demanding that you commit an evil act. The hand might have a specific act in mind or leave it up to you."
 					]
 				},
 				{
@@ -14027,7 +14027,7 @@
 			"reqAttune": true,
 			"wondrous": true,
 			"entries": [
-				"当穿戴此头盔时，你可以使用一个动作以从它施放{@spell 侦测思想}法术（豁免DC 13）。只要你仍专注于这个法术，你就可以使用一个附赠动作以对你正专注的该生物发送一个心灵消息。当你持续专注于它的期间，它也可以使用一个附赠动作进行回复。",
+				"当穿戴此头盔时，你可以使用一个动作以从它施放{@spell 侦测思想}法术（豁免DC 13）。只要你仍专注于这个法术，你就可以使用一个附赠动作以对你正专注的该生物传送一个心灵消息。当你持续专注于它的期间，它也可以使用一个附赠动作进行回复。",
 				"当以{@spell 侦测思想}专注于一个生物时，你可以使用一个动作以从此头盔对该生物施放{@spell 暗示术}法术（豁免DC 13）。一旦你这么使用，这个暗示能力直到下次日出之前都不能再被使用。"
 			],
 			"attachedSpells": [
@@ -14041,7 +14041,7 @@
 			"ENG_name": "Helm of Telepathy"
 		},
 		{
-			"name": "发送头盔",
+			"name": "传送头盔",
 			"source": "DMG",
 			"page": 174,
 			"srd": true,
@@ -14052,7 +14052,7 @@
 			"recharge": "dawn",
 			"charges": 3,
 			"entries": [
-				"这个头盔含有3发充能。当穿戴它时，你可以使用一个动作并消耗1发充能以从它施放{@spell 发送术}法术。这个头盔会在每天日出时恢复{@dice 1d3}发已消耗的充能。"
+				"这个头盔含有3发充能。当穿戴它时，你可以使用一个动作并消耗1发充能以从它施放{@spell 传送术}法术。这个头盔会在每天日出时恢复{@dice 1d3}发已消耗的充能。"
 			],
 			"attachedSpells": [
 				"teleport"
@@ -14368,7 +14368,7 @@
 				"这个背包有着一个中央囊袋和二个侧袋，各自连接着一个异次元空间。每个侧袋各自可以容纳最多20磅重的物质，且体积不能超过2立方尺。中间的大囊袋则可以容纳最多8立方尺，或最多80磅重的物质。无论它装了什么，这个背包的重量永远为5磅。",
 				"将一个物体放入便利袋时使用与对象交互的规则。从便利袋中取出一件物品则需要你使用一个动作。当你伸入便利袋以找寻某个特定物品时，该物品将永远神奇的位于最上层。",
 				"这个便利袋拥有几个限制。若它超载、或若一个尖锐的物体将它戳破或把它撕裂，则这个便利袋将因此破裂并被摧毁。若便利袋被摧毁，则它装载的东西将永远遗失，尽管遗失的神器永远会再次出现于某处。若这个便利袋被里外翻转，则它装载的东西将无伤地掉落而出，且这个便利袋必须被恢复原状才能够被再次使用。若一个需要呼吸的生物被放入便利袋内，该生物可以存活最多10分钟，在这之后它将开始窒息。",
-				"将便利袋放入由{@item 次元袋}、{@item 便携式次元洞}或类似物品所创造的异次元空间中，将会立刻摧毁这两件物品，并打开一道通往星界位面的发送门。这道发送门将产生载这两件物品被放入彼此的位置。任何距离这道发送门10尺内的生物将被吸进门内，并被送往星界位面中的一处随机地点。这道发送门接着将会关闭。这道发送门仅限单向发送，且无法再次被打开。"
+				"将便利袋放入由{@item 次元袋}、{@item 便携式次元洞}或类似物品所创造的异次元空间中，将会立刻摧毁这两件物品，并打开一道通往星界位面的传送门。这道传送门将产生载这两件物品被放入彼此的位置。任何距离这道传送门10尺内的生物将被吸进门内，并被送往星界位面中的一处随机地点。这道传送门接着将会关闭。这道传送门仅限单向传送，且无法再次被打开。"
 			],
 			"containerCapacity": {
 				"weight": [
@@ -16809,7 +16809,7 @@
 					"items": [
 						"If you are underground or underwater, you can use an action to expend 1 charge to determine the distance to the surface.",
 						"As an action: you can expend 2 charges to cast the {@spell 短讯术} spell from the scepter.",
-						"As an action: you can expend 3 charges to cast the {@spell 发送术} spell from the scepter. If the destination is within 60 feet of the {@item Wyrmskull Throne|SKT}, there is no chance of a teleport error or mishap occurring."
+						"As an action: you can expend 3 charges to cast the {@spell 传送术} spell from the scepter. If the destination is within 60 feet of the {@item Wyrmskull Throne|SKT}, there is no chance of a teleport error or mishap occurring."
 					]
 				}
 			],
@@ -19434,7 +19434,7 @@
 					"type": "entries",
 					"entries": [
 						"月刃是一把中立善良的智能魔法武器，它具有12点智力、10点感知、和12点魅力值。它具有听觉和120尺范围的黑暗视觉。",
-						"当它想要传达某个它所感觉到的事物时，这把武器会通过传递情绪、并通过持用者的手发送一阵刺痛般的感觉来进行交流。当持用者处于冥想或睡眠时，它也可以通过梦境或影像以进行更细致的交流。"
+						"当它想要传达某个它所感觉到的事物时，这把武器会通过传递情绪、并通过持用者的手传送一阵刺痛般的感觉来进行交流。当持用者处于冥想或睡眠时，它也可以通过梦境或影像以进行更细致的交流。"
 					]
 				},
 				{
@@ -20751,7 +20751,7 @@
 					"type": "entries",
 					"name": "Master of Travel",
 					"entries": [
-						"While all six components of the Orrery of the Wanderer are installed, the artifact has 7 charges. While touching the orrery, you can use an action and expend 1 or more charges to cast one of the following spells (save DC 17): {@spell 异界探知} (3 charges), {@spell 创造半位面} (6 charges), {@spell 异界之门} (7 charges), {@spell 异界发送} (5 charges), or {@spell 发送法阵} (3 charges). The orrery regains {@dice 1d4 + 4} expended charges daily at dawn."
+						"While all six components of the Orrery of the Wanderer are installed, the artifact has 7 charges. While touching the orrery, you can use an action and expend 1 or more charges to cast one of the following spells (save DC 17): {@spell 异界探知} (3 charges), {@spell 创造半位面} (6 charges), {@spell 异界之门} (7 charges), {@spell 异界传送} (5 charges), or {@spell 传送法阵} (3 charges). The orrery regains {@dice 1d4 + 4} expended charges daily at dawn."
 					]
 				}
 			],
@@ -22037,7 +22037,7 @@
 				"你可以使用一个动作将便携式次元洞展开，并将它放置或靠在一个固态表面上，这个便携式次元洞将随即创造出一个10尺深的异次元孔洞。这个孔洞内的圆柱状空间存在于一个不同的位面，因此它无法被用以创造一个开放式的信道。在便携式次元洞打开时，任何在其内部的生物都可以从中攀爬而出。",
 				"你可以使用一个动作，借由抓住布料的边缘并将之折叠以关闭便携式次元洞。将这块布料折起将会关闭次元洞，且任何在内部的生物和物体仍会留存在异次元空间。无论装了什么，次元洞的重量都可以忽略不计。",
 				"若次元洞被折起，次元洞中的生物可以使用一个动作以进行一次DC 10的力量检定。如果检定成功，则该生物将强行从中钻出，并出现在距离次元洞或携带它的人5尺内的位置。在关闭的便携式次元洞中，一名需要呼吸的生物可以存活最多10分钟，在这之后它将开始窒息。",
-				"将便携式次元洞放入由{@item 次元袋}、{@item 霍华德的便利袋}或类似物品所创造的异次元空间中，将会立刻摧毁这两件物品，并打开一道通往星界位面的发送门。这道发送门将产生载这两件物品被放入彼此的位置。任何距离这道发送门10尺内的生物将被吸进门内，并被送往星界位面中的一处随机地点。这道发送门接着将会关闭。这道发送门仅限单向发送，且无法再次被打开。"
+				"将便携式次元洞放入由{@item 次元袋}、{@item 霍华德的便利袋}或类似物品所创造的异次元空间中，将会立刻摧毁这两件物品，并打开一道通往星界位面的传送门。这道传送门将产生载这两件物品被放入彼此的位置。任何距离这道传送门10尺内的生物将被吸进门内，并被送往星界位面中的一处随机地点。这道传送门接着将会关闭。这道传送门仅限单向传送，且无法再次被打开。"
 			],
 			"lootTables": [
 				"魔法物品表D"
@@ -25259,7 +25259,7 @@
 			"rarity": "very rare",
 			"weight": 2,
 			"entries": [
-				"当持握这把权杖时，你可以使用一个动作去启动它。这把权杖接着将立刻把你和其他最多199个你所能看见的自愿生物发送到一个位于异位面空间的乐园福地。由你决定这个乐园呈现的样貌，它可以是宁静的花园、迷人的林间空地、热闹的酒馆、无垠的宫殿、热带海岛、幻想嘉年华会、或任何你所能想像到的美景。无论其环境性质如何，这座乐园都含有足够其访问者维生所需的水和食物。除此之外，所有乐园内可交互的事物都只能在这个异位面空间中存在。举例来说，在乐园的花园中摘下的花朵将在被带出异位面空间时消失。",
+				"当持握这把权杖时，你可以使用一个动作去启动它。这把权杖接着将立刻把你和其他最多199个你所能看见的自愿生物传送到一个位于异位面空间的乐园福地。由你决定这个乐园呈现的样貌，它可以是宁静的花园、迷人的林间空地、热闹的酒馆、无垠的宫殿、热带海岛、幻想嘉年华会、或任何你所能想像到的美景。无论其环境性质如何，这座乐园都含有足够其访问者维生所需的水和食物。除此之外，所有乐园内可交互的事物都只能在这个异位面空间中存在。举例来说，在乐园的花园中摘下的花朵将在被带出异位面空间时消失。",
 				"访问者在乐园中每度过一小时，就会如同它消耗了1颗生命骰一样回复生命值。同时，尽管乐园中的时间会如常流动，但在乐园中的生物并不会因此老化。访问者们可以待在乐园中的时间等同于200天除以在场生物的数量（向下取整）。",
 				"当停留时间用尽，或你使用一个动作结束它时，所有访问者将重新出现它们在你启动这把权杖时所占据的位置，或另一处距离该位置最近的未被占据空间。这把权杖直到经过10天之前都不能再被使用。"
 			],
@@ -28160,7 +28160,7 @@
 				"这个法球会毁灭所有它所穿过和穿过它的物质。只有神器例外。除非神器注明其会被来自湮灭法球的伤害影响，否则它将可以不受影响的穿过湮灭法球。任何其他碰触这个球体，但并未整个被它吞噬或毁灭的事物都将受到{@dice 4d10}力场伤害。",
 				"除非被某人控制，否则这个球体总是静止不动。若一个未受控制的法球距离你60内，则你可以使用一个动作以进行一次DC 25的智力（{@skill 奥秘}）检定。若检定成功，则这个法球将往一个你所选择的方向漂移，移动最多等同5x你的智力调整值的尺数（最少5尺）。若检定失败，该法球将向着你移动10尺距离。一个所在空间被法球闯入的生物必须成功通过一次DC 13的敏捷豁免，否则将被它触碰，并受到{@dice 4d10}力场伤害。",
 				"若你尝试控制一个处于其他生物控制下的湮灭法球，则你进行一次智力（{@skill 奥秘}）检定以对抗该生物的智力（{@skill 奥秘}）检定。这场对抗的获胜者将获得湮灭法球的控制权，且可以如常让它飘移。",
-				"若这个法球接触到一个位面发送门，例如被{@spell 异界之门}法术创造出的发送门、或是一个像是{@item 便携式次元洞}内部的异次元空间，则DM将使用下表随机决定发生什么事情。",
+				"若这个法球接触到一个位面传送门，例如被{@spell 异界之门}法术创造出的传送门、或是一个像是{@item 便携式次元洞}内部的异次元空间，则DM将使用下表随机决定发生什么事情。",
 				{
 					"type": "table",
 					"colLabels": [
@@ -28178,11 +28178,11 @@
 						],
 						[
 							"51-85",
-							"这个法球穿过该发送门、或进入该异次元空间。"
+							"这个法球穿过该传送门、或进入该异次元空间。"
 						],
 						[
 							"86-00",
-							"一个空间裂缝出现，并将湮灭法球和距离它180尺内的每个生物和物体发送到一个随机的存在位面。"
+							"一个空间裂缝出现，并将湮灭法球和距离它180尺内的每个生物和物体传送到一个随机的存在位面。"
 						]
 					]
 				}
@@ -28643,7 +28643,7 @@
 					"type": "entries",
 					"entries": [
 						"你可以使用一个动作将这把法杖在你的膝盖或坚固表面上折断，释放出一阵反馈冲击。这把法杖将因此被摧毁，并产生一阵以它为中心30尺半径的爆炸，释放出它剩余的魔法能量。",
-						"你有{@chance 50}的几率会在瞬间被发送到一个随机的存在位面以避开爆炸。若你没能成功避开这个效果，则你将受到等同于16 x 法杖剩余充能数的力场伤害。爆炸范围内的每个其他生物都必须进行一次DC 17的敏捷豁免。若豁免失败，该生物所受到的伤害量将基于它与爆炸中心的距离决定，如下表所示。若豁免成功，则该生物只受到一半的伤害。",
+						"你有{@chance 50}的几率会在瞬间被传送到一个随机的存在位面以避开爆炸。若你没能成功避开这个效果，则你将受到等同于16 x 法杖剩余充能数的力场伤害。爆炸范围内的每个其他生物都必须进行一次DC 17的敏捷豁免。若豁免失败，该生物所受到的伤害量将基于它与爆炸中心的距离决定，如下表所示。若豁免成功，则该生物只受到一半的伤害。",
 						{
 							"type": "table",
 							"colLabels": [
@@ -28909,7 +28909,7 @@
 					"ENG_name": "Spells",
 					"type": "entries",
 					"entries": [
-						"当持握这把法杖时，你可以使用一个动作以消耗它的其中一些充能，并从它施放下列其中一个法术，使用你的法术豁免DC和施法属性：{@spell 召唤元素生物}(7发充能)、{@spell 解除魔法}(3发充能)、{@spell 火球术}(7环版本，7发充能)、{@spell 炽焰法球}(2发充能)、{@spell 冰风暴}(4发充能)、{@spell 隐形术}(2发充能)、{@spell 敲击术}(2发充能)、{@spell 闪电束}(7环版本，7发充能)、{@spell 穿墙术}(5发充能)、{@spell 异界发送}(7发充能)、{@spell 心灵遥控}(5发充能)、{@spell 火墙术}(4发充能)、或{@spell 蛛网术}(2发充能)。",
+						"当持握这把法杖时，你可以使用一个动作以消耗它的其中一些充能，并从它施放下列其中一个法术，使用你的法术豁免DC和施法属性：{@spell 召唤元素生物}(7发充能)、{@spell 解除魔法}(3发充能)、{@spell 火球术}(7环版本，7发充能)、{@spell 炽焰法球}(2发充能)、{@spell 冰风暴}(4发充能)、{@spell 隐形术}(2发充能)、{@spell 敲击术}(2发充能)、{@spell 闪电束}(7环版本，7发充能)、{@spell 穿墙术}(5发充能)、{@spell 异界传送}(7发充能)、{@spell 心灵遥控}(5发充能)、{@spell 火墙术}(4发充能)、或{@spell 蛛网术}(2发充能)。",
 						"你也可以使用一个动作并从这把法杖施放下列其中一个法术，而无需消耗任何充能：{@spell 秘法锁}、{@spell 侦测魔法}、{@spell 变巨/缩小术}、{@spell 光亮术}、{@spell 法师之手}或{@spell 防护善恶}。"
 					]
 				},
@@ -28919,7 +28919,7 @@
 					"type": "entries",
 					"entries": [
 						"你可以使用一个动作将这把法杖在你的膝盖或坚固表面上折断，释放出一阵反馈冲击。这把法杖将因此被摧毁，并产生一阵以它为中心30尺半径的爆炸，释放出它剩余的魔法能量。",
-						"你有{@chance 50}的几率会在瞬间被发送到一个随机的存在位面以避开爆炸。若你没能成功避开这个效果，则你将受到等同于16 x 法杖剩余充能数的力场伤害。爆炸范围内的每个其他生物都必须进行一次DC 17的敏捷豁免。若豁免失败，该生物所受到的伤害量将基于它与爆炸中心的距离决定，如下表所示。若豁免成功，则该生物只受到一半的伤害。"
+						"你有{@chance 50}的几率会在瞬间被传送到一个随机的存在位面以避开爆炸。若你没能成功避开这个效果，则你将受到等同于16 x 法杖剩余充能数的力场伤害。爆炸范围内的每个其他生物都必须进行一次DC 17的敏捷豁免。若豁免失败，该生物所受到的伤害量将基于它与爆炸中心的距离决定，如下表所示。若豁免成功，则该生物只受到一半的伤害。"
 					]
 				},
 				{
@@ -30783,7 +30783,7 @@
 						"4th level: {@spell 秘法眼}, {@spell 放逐术}, {@spell 枯萎术}, {@spell 次元门}, {@spell 艾伐黑触手}, {@spell 魅影杀手}",
 						"5th level: {@spell 毕格比之掌}, {@spell 死云术}, {@spell 支配人类}, {@spell 异界誓缚}, {@spell 探知}, {@spell 心灵遥控}",
 						"6th level: {@spell 创造不死生物}, {@spell 解离术}, {@spell 法术无效结界}, {@spell 地动术}, {@spell 奥图狂舞术}",
-						"7th level: {@spell create magen|IDRotF}, {@spell 死亡一指}, {@spell 虹光喷射}, {@spell 发送术}",
+						"7th level: {@spell create magen|IDRotF}, {@spell 死亡一指}, {@spell 虹光喷射}, {@spell 传送术}",
 						"8th level: {@spell 创造半位面}, {@spell 支配怪物}, {@spell 心灵屏障}, {@spell 律令震慑}",
 						"9th level: {@spell 灾厄之刃|TCE}, {@spell 律令死亡}"
 					]
@@ -31252,7 +31252,7 @@
 						],
 						[
 							"78",
-							"You can cast the {@spell 发送术} spell, always arriving on target when you do. You can use this property once.",
+							"You can cast the {@spell 传送术} spell, always arriving on target when you do. You can use this property once.",
 							"Each time you walk through a doorway or similar portal, you must succeed on a DC 10 Intelligence check or step into a skewed timeline. On a failure, you and all allies within 10 feet of you skip ahead {@dice 1d4} minutes. To other creatures, it appears that you and other affected creatures disappear for that length of time, then appear again in the doorway."
 						],
 						[
@@ -31327,7 +31327,7 @@
 						],
 						[
 							"93",
-							"While standing in a doorway, you can cast the {@spell 发送术} spell. Your destination must be another doorway you know. You can use this property once.",
+							"While standing in a doorway, you can cast the {@spell 传送术} spell. Your destination must be another doorway you know. You can use this property once.",
 							"Each time you finish a short rest, you forget one of your allies (of the DM's choice) and no longer trust that character. You lose this distrust at the end of your next short rest."
 						],
 						[
@@ -31606,7 +31606,7 @@
 					"type": "entries",
 					"name": "Get Away From It All",
 					"entries": [
-						"As an action, you can cast the {@spell 发送术} spell. Once you use this feature of the timepiece of travel, it cannot be used again until the next dawn."
+						"As an action, you can cast the {@spell 传送术} spell. Once you use this feature of the timepiece of travel, it cannot be used again until the next dawn."
 					]
 				},
 				{
@@ -33853,7 +33853,7 @@
 			"staff": true,
 			"entries": [
 				"You gain a +1 bonus to attack and damage rolls made with this magic quarterstaff. While you hold it, you gain a +1 bonus to spell attack rolls.",
-				"This staff has 10 charges. While holding it, you can use an action to expend 1 or more of the staff's charges to cast one of the following spells from it, using your spell save DC: {@spell 放逐术} (4 charges), {@spell 闪现术} (3 charges), {@spell 迷踪步} (2 charges), {@spell 穿墙术} (5 charges), or {@spell 发送术} (7 charges).",
+				"This staff has 10 charges. While holding it, you can use an action to expend 1 or more of the staff's charges to cast one of the following spells from it, using your spell save DC: {@spell 放逐术} (4 charges), {@spell 闪现术} (3 charges), {@spell 迷踪步} (2 charges), {@spell 穿墙术} (5 charges), or {@spell 传送术} (7 charges).",
 				"The staff regains {@dice 1d6 + 4} expended charges daily at dawn. If you expend the last charge, roll a {@dice d20}. On a 1, the staff vanishes forever."
 			]
 		},
@@ -34806,7 +34806,7 @@
 			"wondrous": true,
 			"entries": [
 				"这件黑色如丝绸般柔顺的精致布料被折叠成了手帕的大小。它可以被展开呈一块直径6尺的圆形薄片。",
-				"你可以使用一个动作将诸界之井展开并放置在一个固体表面上，它将随之创造出一个通往另一个世界或存在位面的双向发送门。每次这个物品打开一扇发送门时，DM将决定它通往的场所。你可以使用一个动作，借由抓住布料的边缘并将之折叠以关闭一扇打开的发送门。一但诸界之井打开了一扇发送门，则它在接下来{@dice 1d8}小时内都不能再这么做。"
+				"你可以使用一个动作将诸界之井展开并放置在一个固体表面上，它将随之创造出一个通往另一个世界或存在位面的双向传送门。每次这个物品打开一扇传送门时，DM将决定它通往的场所。你可以使用一个动作，借由抓住布料的边缘并将之折叠以关闭一扇打开的传送门。一但诸界之井打开了一扇传送门，则它在接下来{@dice 1d8}小时内都不能再这么做。"
 			],
 			"lootTables": [
 				"魔法物品表I"

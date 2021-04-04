@@ -244,7 +244,7 @@ class PageFilterBestiary extends PageFilter {
 					case "Multiattack": return "多重攻击";
 					case "Parry": return "格挡";
 					case "Swallow": return "吞咽";
-					case "Teleport": return "发送";
+					case "Teleport": return "传送";
 					case "Tentacles": return "触手";
 					default: return a;
 				}
