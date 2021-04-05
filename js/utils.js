@@ -6383,6 +6383,7 @@ Parser.subclassKeyToDisplay["psi warrior"] = "灵能武士";
 Parser.subclassKeyToDisplay["purple dragon knight (banneret)"] = "紫龙骑士（旗将）";
 Parser.subclassKeyToDisplay["rune knight"] = "符文骑士";
 Parser.subclassKeyToDisplay["samurai"] = "武士";
+Parser.subclassKeyToDisplay["echo knight"] = "回音骑士";
 
 Parser.subclassKeyToDisplay["astral self"] = "星我宗";
 Parser.subclassKeyToDisplay["drunken master"] = "醉拳宗";
@@ -6450,6 +6451,8 @@ Parser.subclassKeyToDisplay["necromancy"] = "死灵";
 Parser.subclassKeyToDisplay["scribes"] = "书士会";
 Parser.subclassKeyToDisplay["transmutation"] = "变化";
 Parser.subclassKeyToDisplay["war"] = "战争";
+Parser.subclassKeyToDisplay["graviturgy"] = "重力";
+Parser.subclassKeyToDisplay["chronurgy"] = "时间";
 Parser.SubclassToDisplay = function (sc) {
 	let sc_match = sc.match(/([^()]*)( ?\((.*)\))?/);
 	if (sc_match && sc_match[2]) {
