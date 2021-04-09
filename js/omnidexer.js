@@ -99,7 +99,7 @@ class Omnidexer {
 
 			if ((options.isNoFilter || (!arbiter.include && !(arbiter.filter && arbiter.filter(it))) || (!arbiter.filter && (!arbiter.include || arbiter.include(it)))) && !arbiter.isOnlyDeep) index.push(toAdd);
 
-			const primary = {it: it, ix: i, parentName: name};
+			const primary = {it: it, ix: i, parentName: name, parentName_ENG: it.ENG_name};
 			const deepItems = await arbiter.pGetDeepIndex(this, primary, it);
 			deepItems.forEach(item => {
 				const toAdd = getToAdd(it, item);
@@ -246,7 +246,8 @@ class IndexableDirectorySubclass extends IndexableDirectory {
 		if (!it.subclasses) return [];
 		return it.subclasses.map(sc => ({
 			b: sc.name,
-			n: `${sc.name} (${primary.parentName})`,
+			cn: `${sc.name} (${primary.parentName})`,
+			n: `${sc.ENG_name ?? sc.name} (${primary.parentName_ENG ?? primary.parentName})`,
 			s: indexer.getMetaId("s", sc.source),
 			u: `${UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_CLASSES](it)}${HASH_PART_SEP}${UrlUtil.getClassesPageStatePart({subclass: sc})}`,
 			p: sc.page,
@@ -307,7 +308,8 @@ class IndexableDirectoryClassFeature extends IndexableDirectory {
 		const classPageHash = `${UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_CLASSES]({name: it.className, source: it.classSource})}${HASH_PART_SEP}${UrlUtil.getClassesPageStatePart({feature: {ixLevel: it.level - 1, ixFeature}})}`;
 		return [
 			{
-				n: `${it.className} ${it.level}; ${it.name}`,
+				cn: `${Parser.ClassToDisplay(it.className)} ${it.level}; ${it.name}`,
+				n: `${it.className} ${it.level}; ${it.ENG_name ?? it.name}`,
 				s: it.source,
 				u: UrlUtil.URL_TO_HASH_BUILDER["classFeature"](it),
 				uh: classPageHash,
@@ -340,7 +342,8 @@ class IndexableDirectorySubclassFeature extends IndexableDirectory {
 		const classPageHash = `${UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_CLASSES]({name: it.className, source: it.classSource})}${HASH_PART_SEP}${UrlUtil.getClassesPageStatePart(pageStateOpts)}`;
 		return [
 			{
-				n: `${it.subclassShortName} ${it.className} ${it.level}; ${it.name}`,
+				cn: `${Parser.SubclassToDisplay(it.subclassShortName.toLowerCase() === "shadow" && it.className.toLowerCase() === "monk" ? "shadow_monk" : it.subclassShortName)} ${Parser.ClassToDisplay(it.className)} ${it.level}; ${it.name}`,
+				n: `${it.subclassShortName} ${it.className} ${it.level}; ${it.ENG_name ?? it.name}`,
 				s: it.source,
 				u: UrlUtil.URL_TO_HASH_BUILDER["subclassFeature"](it),
 				uh: classPageHash,

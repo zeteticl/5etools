@@ -6318,6 +6318,9 @@ Parser.classKeyToDisplay["rogue"] = "游荡者";
 Parser.classKeyToDisplay["artificer"] = "奇械师";
 Parser.classKeyToDisplay["ranger (revised)"] = "游侠 (修订)";
 Parser.classKeyToDisplay["artificer revisited"] = "奇械师 (再制)";
+Parser.classKeyToDisplay["expert sidekick"] = "专家协力者";
+Parser.classKeyToDisplay["spellcaster sidekick"] = "施法协力者";
+Parser.classKeyToDisplay["warrior sidekick"] = "武者协力者";
 Parser.ClassToDisplay = function (c) {
 	let c_match = c.match(/([^()]*)( ?\((.*)\))?/);
 	if (c_match && c_match[2]) {

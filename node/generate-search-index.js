@@ -1,5 +1,5 @@
 const path = require("path");
-const fs = require("readline-syncfs");
+const fs = require("fs");
 const utS = require("./util-search-index");
 
 async function main () {
