@@ -225,7 +225,7 @@ class Omnisearch {
 
 	static $getResultLink (r) {
 		const href = r.c === Parser.CAT_ID_PAGE ? r.u : `${Renderer.get().baseUrl}${UrlUtil.categoryToPage(r.c)}#${r.uh || r.u}`;
-		return $(`<a href="${href}" ${r.h ? this._renderLink_getHoverString(r.c, r.u, r.s) : ""} class="omni__lnk-name">${r.cf}: ${r.n}</a>`);
+		return $(`<a href="${href}" ${r.h ? this._renderLink_getHoverString(r.c, r.u, r.s) : ""} class="omni__lnk-name">${r.cf}: ${r.cn ?? r.n}</a>`);
 	}
 
 	static _pDoSearch_renderLinks (results, page = 0) {
@@ -360,6 +360,7 @@ class Omnisearch {
 
 		elasticlunr.clearStopWords();
 		this._searchIndex = elasticlunr(function () {
+			this.use(elasticlunr.zh);
 			this.addField("n");
 			this.addField("cf");
 			this.addField("s");

@@ -92,9 +92,9 @@ class Omnidexer {
 			if (it.noDisplay) return;
 			if (name) name = name.toAscii();
 
-			var obj = {};
-			if(it.ENG_name){ obj.cn = name; obj.n = it.ENG_name; }
-			else {			 obj.n = name;}
+			let obj = {};
+			obj.n = it.ENG_name ? `${name} (${it.ENG_name})` : name;
+			obj.cn = name;
 			const toAdd = getToAdd(it, obj, i);
 
 			if ((options.isNoFilter || (!arbiter.include && !(arbiter.filter && arbiter.filter(it))) || (!arbiter.filter && (!arbiter.include || arbiter.include(it)))) && !arbiter.isOnlyDeep) index.push(toAdd);
