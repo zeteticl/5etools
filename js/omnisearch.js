@@ -261,7 +261,7 @@ class Omnisearch {
 
 		this._$searchOut.empty();
 
-		const $btnHelp = $(`<button class="btn btn-default btn-xs" title="Help"><span class="glyphicon glyphicon-info-sign"></span></button>`)
+		const $btnHelp = $(`<button class="btn btn-default btn-xs" title="帮助"><span class="glyphicon glyphicon-info-sign"></span></button>`)
 			.click(() => this.doShowHelp());
 
 		this._$searchOut.append($(`<div class="text-right"/>`).append([this._$btnToggleUa, this._$btnToggleBlacklisted, $btnHelp]));
@@ -304,7 +304,7 @@ class Omnisearch {
 				});
 				$pgControls.append($prv);
 			} else ($pgControls.append(`<span class="omni__paginate-left">`));
-			$pgControls.append(`<span class="paginate-count">Page ${page + 1}/${Math.ceil(results.length / this._MAX_RESULTS)} (${results.length} results)</span>`);
+			$pgControls.append(`<span class="paginate-count">${page + 1}/${Math.ceil(results.length / this._MAX_RESULTS)} 页 （${results.length} 条结果）</span>`);
 			if (results.length - (page * this._MAX_RESULTS) > this._MAX_RESULTS) {
 				const $nxt = $(`<span class="omni__paginate-right has-results-right omni__paginate-ctrl"><span class="glyphicon glyphicon-chevron-right"></span></span>`).on("click", () => {
 					page++;
