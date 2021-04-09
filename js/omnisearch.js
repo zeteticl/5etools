@@ -184,6 +184,7 @@ class Omnisearch {
 				{
 					fields: {
 						n: {boost: 5, expand: true},
+						cn: {boost: 5, expand: true},
 						s: {expand: true},
 					},
 					bool: "AND",
@@ -233,7 +234,7 @@ class Omnisearch {
 
 		if (this._$btnToggleUa) this._$btnToggleUa.detach();
 		else {
-			this._$btnToggleUa = $(`<button class="btn btn-default btn-xs mr-2" title="Filter Unearthed Arcana and other unofficial source results" tabindex="-1">Include UA/etc.</button>`)
+			this._$btnToggleUa = $(`<button class="btn btn-default btn-xs mr-2" title="筛选 UA 及其他非官方资源结果" tabindex="-1">包括 UA 等资源。</button>`)
 				.on("click", () => this._state.isShowUa = !this._state.isShowUa);
 
 			const hkIsUa = () => {
@@ -246,7 +247,7 @@ class Omnisearch {
 
 		if (this._$btnToggleBlacklisted) this._$btnToggleBlacklisted.detach();
 		else {
-			this._$btnToggleBlacklisted = $(`<button class="btn btn-default btn-xs mr-2" title="Filter blacklisted content results" tabindex="-1">Include Blacklisted</button>`)
+			this._$btnToggleBlacklisted = $(`<button class="btn btn-default btn-xs mr-2" title="筛选已被拉入黑名单的内容结果" tabindex="-1">包含黑名单资源。</button>`)
 				.on("click", async () => this._state.isShowBlacklisted = !this._state.isShowBlacklisted);
 
 			const hkIsBlacklisted = () => {
@@ -360,8 +361,9 @@ class Omnisearch {
 
 		elasticlunr.clearStopWords();
 		this._searchIndex = elasticlunr(function () {
-			this.use(elasticlunr.zh);
+			this.use(lunr.ja);
 			this.addField("n");
+			this.addField("cn");
 			this.addField("cf");
 			this.addField("s");
 			this.setRef("id");

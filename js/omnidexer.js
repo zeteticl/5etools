@@ -93,7 +93,7 @@ class Omnidexer {
 			if (name) name = name.toAscii();
 
 			let obj = {};
-			obj.n = it.ENG_name ? `${name} (${it.ENG_name})` : name;
+			obj.n = it.ENG_name ?? name;
 			obj.cn = name;
 			const toAdd = getToAdd(it, obj, i);
 
@@ -781,10 +781,10 @@ class IndexableFileRaces extends IndexableFile {
 
 		const subs = Renderer.race._mergeSubraces(it);
 		out.push(...subs.map(r => ({
-			n: r.ENG_name? r.ENG_name: r.name,
+			n: r.ENG_name ?? r.name,
 			s: indexer.getMetaId("s", r.source),
 			u: UrlUtil.URL_TO_HASH_BUILDER["races.html"](r),
-			cn: r.ENG_name? r.name: null
+			cn: r.name,
 		})));
 
 		return out;
