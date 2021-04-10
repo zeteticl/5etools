@@ -5236,7 +5236,7 @@ Renderer.item = {
 			const fullType = Renderer.item.getItemTypeName(item.type);
 
 			if (!showingBase && !!item.baseItem) typeListHtml.push(`${Parser.ItemTypeToDisplay(fullType)} (${Renderer.get().render(`{@item ${item.baseItem}}`)})`);
-			else if (item.type === "S") typeListHtml.push(Renderer.get().render(`armor ({@item shield|phb})`));
+			else if (item.type === "S") typeListHtml.push(Renderer.get().render(`护甲（{@item 盾牌|phb}）`));
 			else typeListHtml.push(Parser.ItemTypeToDisplay(fullType));
 
 			typeListText.push(fullType);
@@ -5391,7 +5391,7 @@ Renderer.item = {
 		(brew.itemEntry || []).forEach(t => Renderer.item._addEntry(t));
 	},
 	_addBasePropertiesAndTypes (baseItemData) {
-		Object.entries(Parser.ITEM_TYPE_JSON_TO_ABV).forEach(([abv, name]) => Renderer.item._addType({abbreviation: abv, name}));
+		Object.entries(Parser.ITEM_TYPE_JSON_TO_ABV).forEach(([abv, name]) => Renderer.item._addType({abbreviation: abv, name, CHN_name: Parser.ItemTypeToDisplay(name)}));
 		// Convert the property and type list JSONs into look-ups, i.e. use the abbreviation as a JSON property name
 		baseItemData.itemProperty.forEach(p => Renderer.item._addProperty(p));
 		baseItemData.itemType.forEach(t => {
@@ -5745,7 +5745,7 @@ Renderer.item = {
 	getItemTypeName (t) {
 		const fullType = Renderer.item.typeMap[t];
 		if (!fullType) throw new Error(`Item type ${t} not found. You probably meant to load the property/type reference first; see \`Renderer.item.populatePropertyAndTypeReference()\`.`);
-		return fullType.name || t;
+		return fullType.CHN_name || fullType.name || t;
 	},
 
 	enhanceItem (item) {
