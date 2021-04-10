@@ -247,7 +247,7 @@ class Omnisearch {
 
 		if (this._$btnToggleBlacklisted) this._$btnToggleBlacklisted.detach();
 		else {
-			this._$btnToggleBlacklisted = $(`<button class="btn btn-default btn-xs mr-2" title="筛选已被拉入黑名单的内容结果" tabindex="-1">包含黑名单资源。</button>`)
+			this._$btnToggleBlacklisted = $(`<button class="btn btn-default btn-xs mr-2" title="筛选已被拉入黑名单的内容结果" tabindex="-1">包括黑名单资源。</button>`)
 				.on("click", async () => this._state.isShowBlacklisted = !this._state.isShowBlacklisted);
 
 			const hkIsBlacklisted = () => {
