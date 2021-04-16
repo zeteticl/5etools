@@ -1886,6 +1886,7 @@ UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_TRAPS_HAZARDS] = (it) => UrlUtil.enco
 UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_TABLES] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.source]);
 UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_VEHICLES] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.source]);
 UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_ACTIONS] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.source]);
+UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_STATGEN] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.source]);
 UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_LANGUAGES] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.source]);
 UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_CHAR_CREATION_OPTIONS] = (it) => UrlUtil.encodeForHash([it.ENG_name, it.source]);
 UrlUtil.URL_TO_ENG_HASH_BUILDER[UrlUtil.PG_RECIPES] = (it) => `${UrlUtil.encodeForHash([it.ENG_name, it.source])}${it._scaleFactor ? `${HASH_PART_SEP}${VeCt.HASH_SCALED}${HASH_SUB_KV_SEP}${it._scaleFactor}` : ""}`;
