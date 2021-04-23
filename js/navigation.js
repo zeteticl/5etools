@@ -58,7 +58,7 @@ class NavBar {
 		addLi(ulBooks, "book.html", "塞洛斯的神话奥德赛", {aHash: "MOT", date: null});
 		addLi(ulBooks, "book.html", "塔莎的万象坩锅", {aHash: "TCE", date: null});
 		addDivider(ulBooks);
-		addLi(ulBooks, "book.html", "DM屏风：荒野套件", {aHash: "ScreenWildernessKit", date: "2020"});
+		addLi(ulBooks, "book.html", "DM帷幕：荒野套件", {aHash: "ScreenWildernessKit", date: "2020"});
 		addDivider(ulBooks);
 		addLi(ulBooks, "book.html", "冒险者联盟", {aHash: "AL", date: "2016"});
 		addLi(ulBooks, "book.html", "智者建言手册", {aHash: "SAC", date: "2019"});
@@ -77,7 +77,7 @@ class NavBar {
 		addLi(ulPlayers, "names.html", "名称");
 
 		const ulDms = addDropdown(navBar, "DM工具");
-		addLi(ulDms, "dmscreen.html", "DM 屏风");
+		addLi(ulDms, "dmscreen.html", "DM 帷幕");
 		addDivider(ulDms);
 		const ulAdventures = addDropdown(ulDms, "冒险模组", true);
 		addLi(ulAdventures, "adventures.html", "查看所有/自制内容");
