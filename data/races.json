@@ -1161,37 +1161,37 @@
 					"entries": [
 						{
 							"mode": "replaceArr",
-							"replace": "Alignment",
+							"replace": "阵营",
 							"items": {
 								"name": "阵营",
 								"ENG_name": "Alignment",
 								"type": "entries",
 								"entries": [
-									"Centaurs are inclined toward neutrality. Lagonna centaurs tend to be more lawful, while Pheres centaurs are more often chaotic."
+									"半人马倾向中立。拉苟那族半人马倾向守序，斐力兹族半人马则倾向混乱。"
 								]
 							}
 						},
 						{
 							"mode": "replaceArr",
-							"replace": "Size",
+							"replace": "体型",
 							"items": {
 								"name": "体型",
 								"ENG_name": "Size",
 								"type": "entries",
 								"entries": [
-									"Centaurs stand between 6 and 7 feet tall, with their equine bodies reaching about 4 feet at the withers. Pheres centaurs tend to be slightly larger than Lagonna centaurs. Your size is Medium."
+									"半人马站立的高度介于6尺到7尺之间，他们马身的高度则约为4尺。斐力兹族的半人马身形通常比拉苟那族半人马稍大一些。你的体型为中型。"
 								]
 							}
 						},
 						{
 							"mode": "replaceArr",
-							"replace": "Languages",
+							"replace": "语言",
 							"items": {
 								"name": "语言",
 								"ENG_name": "Languages",
 								"type": "entries",
 								"entries": [
-									"You can speak, read, and write Common and Sylvan."
+									"你可以说、读、写通用语和木族语。"
 								]
 							}
 						}
@@ -2355,7 +2355,7 @@
 								"你能够说、读、写通用语、矮人语和地底通用语。"
 							],
 							"data": {
-								"overwrite": "Languages"
+								"overwrite": "语言"
 							},
 							"type": "entries"
 						},
@@ -2464,29 +2464,32 @@
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Warder's Intuition",
+							"name": "守卫直觉",
+							"ENG_name": "Warder's Intuition",
 							"entries": [
-								"When you make an Intelligence（{@skill 调查}）check or an ability check using {@item 盗贼工具|phb}, you can roll a {@dice d4} and add the number rolled to the ability check."
+								"当你进行智力({@skill 调查})检定或使用{@item 盗贼工具|phb}进行属性检定时，你能掷一个{@dice d4}，并把结果加到属性检定的结果上。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Wards and Seals",
+							"name": "保护与封锁",
+							"ENG_name": "Wards and Seals",
 							"entries": [
-								"You can cast the {@spell 警报术} and {@spell 法师护甲} spells with this trait. Starting at 3rd level, you can also cast the {@spell 秘法锁} spell with it. Once you cast any of these spells with this trait, you can't cast that spell with it again until you finish a long rest. Intelligence is your spellcasting ability for these spells, and you don't need material components for them when you cast them with this trait."
+								"你能够施展{@spell 警报术}和{@spell 法师护甲}法术，从3级起，你还能施展{@spell 秘法锁}。一旦你使用此特性施展了前述法术，你将无法再次使用此特性，直到完成一次长休。智力是你在施展这些法术时的关键属性，你无需为这些法术提供材料成分。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Spells of the Mark",
+							"name": "龙纹法术",
+							"ENG_name": "Spells of the Mark",
 							"entries": [
-								"If you have the Spellcasting or the Pact Magic class feature, the spells on the Mark of Warding Spells table are added to the spell list of your spellcasting class.",
+								"如果你拥有施法或契约魔法职业能力，警戒龙纹表中的法术将加入你施法职业的法术列表中。",
 								{
 									"type": "table",
-									"caption": "Mark of Warding Spells",
+									"caption": "警戒龙纹法术",
 									"colLabels": [
-										"Spell Level",
-										"Spells"
+										"法术环位",
+										"法术"
 									],
 									"colStyles": [
 										"col-2 text-center",
@@ -3396,28 +3399,31 @@
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Cunning Intuition",
+							"name": "狡诈直觉",
+							"ENG_name": "Cunning Intuition",
 							"entries": [
-								"When you make a Charisma（{@skill 表演}）or Dexterity（{@skill 隐匿}）check, you can roll a {@dice d4} and add the number rolled to the ability check."
+								"当你进行魅力（{@skill 表演}）或敏捷（{@skill 隐匿}）检定时，你能掷一个{@dice d4}，并把结果加到属性检定的结果上。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Shape Shadows",
+							"name": "阴影塑形",
+							"ENG_name": "Shape Shadows",
 							"entries": [
-								"You know the {@spell 次级幻象} cantrip. Starting at 3rd level, you can cast the {@spell 隐形术} spell once with this trait, and you regain the ability to cast it when you finish a long rest. Charisma is your spellcasting ability for these spells."
+								"你能够施展{@spell 次级幻象}戏法。从第3级起，你能够通过此特性施展{@spell 隐形术}。一旦你使用此特性施展了前述法术，你将无法再次使用此特性，直到完成一次长休。魅力是你在施展这些法术时的关键属性。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Spells of the Mark",
+							"name": "龙纹法术",
+							"ENG_name": "Spells of the Mark",
 							"entries": [
-								"If you have the Spellcasting or the Pact Magic class feature, the spells on the Mark of Shadow Spells table are added to the spell list of your spellcasting class.",
+								"如果你拥有施法或契约魔法职业能力，阴影龙纹表中的法术将加入你施法职业的法术列表中。",
 								{
 									"type": "table",
-									"caption": "Mark of Shadow Spells",
+									"caption": "阴影龙纹法术",
 									"colLabels": [
-										"Spell Level",
+										"法术环位",
 										"Spells"
 									],
 									"colStyles": [
@@ -5421,7 +5427,7 @@
 							"name": "高级黑暗视觉",
 							"ENG_name": "Superior Darkvision",
 							"entries": [
-								"习惯了地底的生活，你在黑暗与微光环境下仍能保持卓越视觉。你在看距离你120呎范围内的事物时，微光的照明程度对你而言视作明亮，黑暗则视作微光。你无法辨别黑暗中的颜色，而只能看到灰黑的轮廓。"
+								"习惯了地底的生活，你在黑暗与微光环境下仍能保持卓越视觉。你在看距离你120尺范围内的事物时，微光的照明程度对你而言视作明亮，黑暗则视作微光。你无法辨别黑暗中的颜色，而只能看到灰黑的轮廓。"
 							],
 							"data": {
 								"overwrite": "黑暗视觉"
@@ -5504,7 +5510,7 @@
 							"name": "体型",
 							"ENG_name": "Size",
 							"entries": [
-								"一个典型斯奈布力的身高大约为3到3½呎高，且体重为80到120磅。你的体型为小型。"
+								"一个典型斯奈布力的身高大约为3到3½尺高，且体重为80到120磅。你的体型为小型。"
 							],
 							"data": {
 								"overwrite": "体型"
@@ -5514,7 +5520,7 @@
 							"name": "高级黑暗视觉",
 							"ENG_name": "Superior Darkvision",
 							"entries": [
-								"习惯了地底的生活，你在黑暗与微光环境下仍能保持卓越视觉。你在看距离你120呎范围内的事物时，微光的照明程度对你而言视作明亮，黑暗则视作微光。你无法辨别黑暗中的颜色，而只能看到灰黑的轮廓。"
+								"习惯了地底的生活，你在黑暗与微光环境下仍能保持卓越视觉。你在看距离你120尺范围内的事物时，微光的照明程度对你而言视作明亮，黑暗则视作微光。你无法辨别黑暗中的颜色，而只能看到灰黑的轮廓。"
 							],
 							"data": {
 								"overwrite": "黑暗视觉"
@@ -5653,29 +5659,32 @@
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Gifted Scribe",
+							"name": "天才抄写员",
+							"ENG_name": "Gifted Scribe",
 							"entries": [
-								"When you make an Intelligence（{@skill 历史}）check or an ability check using {@item 书法工具|PHB}, you can roll a {@dice d4} and add the number rolled to the ability check."
+								"你当你进行智力（{@skill 历史}）检定或使用{@item 书法工具|PHB}进行属性检定时，你能掷一个d4，并把结果加到属性检定的结果上。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Scribe's Insight",
+							"name": "抄写员的领悟",
+							"ENG_name": "Scribe's Insight",
 							"entries": [
-								"You know the {@spell 传讯术} cantrip. You can also cast {@spell 通晓语言} once with this trait, and you regain the ability to cast it when you finish a short or long rest. Starting at 3rd level, you can cast the {@spell 魔嘴术} spell with this trait, and you regain the ability to cast it when you finish a long rest. Intelligence is your spellcasting ability for these spells."
+								"你习得戏法{@spell 传讯术}。同时，你能够通过此特性施展{@spell 通晓语言}，在完成一次短休或长休后，你能再次施展此法术。从第3级起，你还能通过此特性施展{@spell 魔嘴术}，在完成一次长休后，你能再次施展此法术。智力是你在施展这些法术时的关键属性。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Spells of the Mark",
+							"name": "龙纹法术",
+							"ENG_name": "Spells of the Mark",
 							"entries": [
-								"If you have the Spellcasting or the Pact Magic class feature, the spells on the Mark of Scribing Spells table are added to the spell list of your spellcasting class.",
+								"如果你拥有施法或契约魔法职业能力，抄录龙纹表中的法术将加入你施法职业的法术列表中。",
 								{
 									"type": "table",
-									"caption": "Mark of Scribing Spells",
+									"caption": "抄录龙纹法术",
 									"colLabels": [
-										"Spell Level",
-										"Spells"
+										"法术环位",
+										"法术"
 									],
 									"colStyles": [
 										"col-2 text-center",
@@ -5741,7 +5750,7 @@
 									"name": "发条玩具",
 									"ENG_name": "Clockwork Toy",
 									"entries": [
-										"这个玩具是一个发条动物、怪物、或小人，像是青蛙、老鼠、小鸟、龙、或是士兵。当被摆放在地上，这个玩具将会在你的每个回合内沿着地面向随机方向移动5呎。它会发出与其生物外型相符的声音。"
+										"这个玩具是一个发条动物、怪物、或小人，像是青蛙、老鼠、小鸟、龙、或是士兵。当被摆放在地上，这个玩具将会在你的每个回合内沿着地面向随机方向移动5尺。它会发出与其生物外型相符的声音。"
 									]
 								},
 								{
@@ -7187,9 +7196,10 @@
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Deductive Intuition",
+							"name": "推理直觉",
+							"ENG_name": "Deductive Intuition",
 							"entries": [
-								"When you make an Intelligence（{@skill 调查}）or a Wisdom（{@skill 洞悉}）check, you can roll a {@dice d4} and add the number rolled to the ability check."
+								"当你进行智力（{@skill 调查}）或感知（{@skill 洞悉}）检定时，你能够掷一个{@dice d4}，将结果加到你的属性检定结果中。"
 							],
 							"data": {
 								"overwrite": "多才多艺"
@@ -7197,22 +7207,24 @@
 						},
 						{
 							"type": "entries",
-							"name": "Magical Detection",
+							"name": "魔法侦测",
+							"ENG_name": "Magical Detection",
 							"entries": [
-								"You can cast the {@spell 侦测魔法} and {@spell 侦测毒素或疾病} spells with this trait. Starting at 3rd level, you can also cast the {@spell 识破隐形} spell with it. Once you cast any of these spells with this trait, you can't cast that spell with it again until you finish a long rest. Wisdom is your spellcasting ability for these spells, and you don't require material components for them."
+								"你能够施展{@spell 侦测魔法}和{@spell 侦测毒素或疾病}法术，从3级起，你还能施展{@spell 识破隐形}。一旦你使用此特性施展了前述法术，你将无法再次使用此特性，直到完成一次长休。智力是你在施展这些法术时的关键属性，你无需为这些法术提供材料成分。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Spells of the Mark",
+							"name": "龙纹法术",
+							"ENG_name": "Spells of the Mark",
 							"entries": [
-								"If you have the Spellcasting or the Pact Magic class feature, the spells on the Mark of Detection Spells table are added to the spell list of your spellcasting class.",
+								"如果你拥有施法或契约魔法职业能力，侦测龙纹表中的法术将加入你施法职业的法术列表中。",
 								{
 									"type": "table",
-									"caption": "Mark of Detection Spells",
+									"caption": "侦测龙纹法术",
 									"colLabels": [
-										"Spell Level",
-										"Spells"
+										"法术环位",
+										"法术"
 									],
 									"colStyles": [
 										"col-2 text-center",
@@ -7305,9 +7317,10 @@
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Windwright's Intuition",
+							"name": "驭风者直觉",
+							"ENG_name": "Windwright's Intuition",
 							"entries": [
-								"When you make a Dexterity（{@skill 体操}）check or any ability check involving {@item 领航工具|PHB}, you can roll a {@dice d4} and add the number rolled to the ability check."
+								"当你进行敏捷（{@skill 体操}）检定或任何使用{@item 领航工具|PHB}的属性检定时，你能掷一个{@dice d4}，并把结果加到属性检定的结果上。"
 							],
 							"data": {
 								"overwrite": "多才多艺"
@@ -7315,29 +7328,32 @@
 						},
 						{
 							"type": "entries",
-							"name": "Storm's Boon",
+							"name": "暴风之祝福",
+							"ENG_name": "Storm's Boon",
 							"entries": [
-								"You have resistance to lightning damage."
+								"你对闪电伤害有抗性。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Headwinds",
+							"name": "逆风行事",
+							"ENG_name": "Headwinds",
 							"entries": [
-								"You know the {@spell gust|XGE} cantrip. Starting at 3rd level, you can cast the {@spell 造风术} spell once with this trait, and you regain the ability to cast it when you finish a long rest. Charisma is your spellcasting ability for these spells."
+								"你能够施展{@spell gust|XGE}戏法。从第3级起，你能够通过此特性施展{@spell 造风术}。一旦你使用此特性施展了前述法术，你将无法再次使用此特性，直到完成一次长休。魅力是你在施展这些法术时的关键属性。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Spells of the Mark",
+							"name": "龙纹法术",
+							"ENG_name": "Spells of the Mark",
 							"entries": [
-								"If you have the Spellcasting or the Pact Magic class feature, the spells on the Mark of Storm Spells table are added to the spell list of your spellcasting class.",
+								"如果你拥有施法或契约魔法职业能力，暴风龙纹表中的法术将加入你施法职业的法术列表中。",
 								{
 									"type": "table",
-									"caption": "Mark of Storm Spells",
+									"caption": "暴风龙纹法术",
 									"colLabels": [
-										"Spell Level",
-										"Spells"
+										"法术环位",
+										"法术"
 									],
 									"colStyles": [
 										"col-2 text-center",
@@ -7765,7 +7781,7 @@
 					"ENG_name": "Age",
 					"type": "entries",
 					"entries": [
-						"Half-orcs mature a little faster than humans, reaching adulthood around age 14. They age noticeably faster and rarely live longer than 75 years."
+						"半兽人的成熟速度比人类略快一些，并在14岁左右便成年。他们的衰老速度明显更快，且很少能活超过75岁。"
 					]
 				},
 				{
@@ -7773,7 +7789,7 @@
 					"ENG_name": "Alignment",
 					"type": "entries",
 					"entries": [
-						"Half-orcs inherit a tendency toward chaos from their orc parents and are not strongly inclined toward good. Half-orcs raised among orcs and willing to live out their lives among them are usually evil."
+						"兽人从其兽人先祖继承了混乱以及非善良的阵营倾向。通常在兽人族群中成长，并自愿生活在其中的半兽人都倾向于邪恶。"
 					]
 				},
 				{
@@ -7781,28 +7797,31 @@
 					"name": "体型",
 					"ENG_name": "Size",
 					"entries": [
-						"Half-orcs are somewhat larger and bulkier than humans, and they range from 5 to well over 6 feet tall. Your size is Medium."
+						"半兽人比人类更魁梧更强壮。他们身高5尺到6尺以上。属于中型体型。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Darkvision",
+					"name": "黑暗视觉",
+					"ENG_name": "Darkvision",
 					"entries": [
-						"You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+						"你在黑暗和微光光照中有着超出常人的视力。在微光光照下，你身边60尺内可以视为等同于明亮光照。而在黑暗中，该范围内可视为等同于微光光照。你无法在黑暗中分辨颜色，只能看到有灰度的黑白画面。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Hunter's Intuition",
+					"name": "猎人直觉",
+					"ENG_name": "Hunter's Intuition",
 					"entries": [
-						"When you make a Wisdom（{@skill 察觉}）or Wisdom（{@skill 生存}）check, you can roll a {@dice d4} and add the number rolled to the ability check."
+						"龙纹让你的感官变得敏锐，并能帮助你找到猎物。当你进行感知（{@skill 察觉}）或感知（{@skill 生存}）检定时，你能掷一个{@dice d4}，并把结果加到属性检定的结果上。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Finder's Magic",
+					"name": "寻者魔法",
+					"ENG_name": "Finder's Magic",
 					"entries": [
-						"You can cast the {@spell 猎人印记} spell with this trait. Starting at 3rd level, you can also cast the {@spell 物品定位术} spell with it. Once you cast either spell with this trait, you can't cast that spell with it again until you finish a long rest. Wisdom is your spellcasting ability for these spells."
+						"你能通过此特性施展{@spell 猎人印记}法术。从第3级起，你还能施展{@spell 物品定位术}。一旦你使用此特性施展了前述法术，你将无法再次使用此特性，直到完成一次长休。感知是你在施展这些法术时的关键属性。"
 					]
 				},
 				{
@@ -7810,20 +7829,21 @@
 					"name": "语言",
 					"ENG_name": "Languages",
 					"entries": [
-						"You can speak, read, and write Common and Goblin."
+						"你能够说、读、写通用语和地精语。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Spells of the Mark",
+					"name": "龙纹法术",
+					"ENG_name": "Spells of the Mark",
 					"entries": [
-						"If you have the Spellcasting or the Pact Magic class feature, the spells on the Mark of Finding Spells table are added to the spell list of your spellcasting class.",
+						"如果你拥有施法或契约魔法职业能力，探索龙纹表中的法术将加入你施法职业的法术列表中。",
 						{
 							"type": "table",
-							"caption": "Mark of Finding Spells",
+							"caption": "探索龙纹法术",
 							"colLabels": [
-								"Spell Level",
-								"Spells"
+								"法术环位",
+								"法术"
 							],
 							"colStyles": [
 								"col-2 text-center",
@@ -8024,16 +8044,18 @@
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Child of the Wood",
+							"name": "树林之子",
+							"ENG_name": "Child of the Wood",
 							"entries": [
-								"You know the {@spell 德鲁伊伎俩} cantrip. When you reach 3rd level, you can cast the {@spell 纠缠术} spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the {@spell 荆棘丛生} spell once with this trait and regain the ability to do so when you finish a long rest. Casting these spells with this trait doesn't require material components. Wisdom is your spellcasting ability for these spells."
+								"你知晓{@spell 德鲁伊伎俩}戏法。当你抵达3级时，你能通过本特质释放一次{@spell 纠缠术}，当你完成一次长休后可重获释放次数。当你抵达5级时，你能释放一次{@spell 荆棘丛生} ，当你完成一次长休后可重获释放次数。通过本特质释放的这些法术不需要材料成分。感知是你释放这些法术的施法属性。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Timberwalk",
+							"name": "木行",
+							"ENG_name": "Timberwalk",
 							"entries": [
-								"Ability checks made to track you have disadvantage, and you can move across difficult terrain made of nonmagical plants and undergrowth without expending extra movement."
+								"对你进行追踪的属性检定具有劣势，并且你在通过由非魔法的植物和灌木丛形成的困难地形时，不需要花费额外移动力。"
 							]
 						}
 					],
@@ -8100,29 +8122,32 @@
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Medical Intuition",
+							"name": "医疗直觉",
+							"ENG_name": "Medical Intuition",
 							"entries": [
-								"When you make a Wisdom（{@skill 医疗}）check or an ability check using an {@item 草药工具|phb}, you can roll a {@dice d4} and add the number rolled to the ability check."
+								"当你进行感知（{@skill 医疗}）检定或用{@item 草药工具|phb}进行属性检定时，你能掷一个{@dice d4}，并把结果加到属性检定的结果上。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Healing Touch",
+							"name": "医疗之触",
+							"ENG_name": "Healing Touch",
 							"entries": [
-								"You can cast the {@spell 治疗伤势} spell with this trait. Starting at 3rd level, you can also cast {@spell 次级复原术} with it. Once you cast either spell with this trait, you can't cast that spell with it again until you finish a long rest. Wisdom is your spellcasting ability for these spells."
+								"你能够通过此特性施展{@spell 治疗伤势}，从第3级起，你还能施展{@spell 次级复原术}。一旦你使用此特性施展了前述法术，你将无法再次使用此特性，直到完成一次长休。感知是你在施展这些法术时的关键属性。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Spells of the Mark",
+							"name": "龙纹法术",
+							"ENG_name": "Spells of the Mark",
 							"entries": [
-								"If you have the Spellcasting or the Pact Magic class feature, the spells on the Mark of Healing Spells table are added to the spell list of your spellcasting class.",
+								"如果你拥有施法或契约魔法职业能力，医疗龙纹表中的法术将加入你施法职业的法术列表中。",
 								{
 									"type": "table",
-									"caption": "Mark of Healing Spells",
+									"caption": "医疗龙纹法术",
 									"colLabels": [
-										"Spell Level",
-										"Spells"
+										"法术环位",
+										"法术"
 									],
 									"colStyles": [
 										"col-2 text-center",
@@ -8210,29 +8235,32 @@
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Ever Hospitable",
+							"name": "永远热情好客",
+							"ENG_name": "Ever Hospitable",
 							"entries": [
-								"When you make a Charisma（{@skill 说服}）check or an ability check involving {@item 酿酒工具|PHB} or {@item 厨师工具|PHB}, you can roll a {@dice d4} and add the number rolled to the ability check."
+								"当你进行魅力（{@skill 说服}）检定或者使用{@item 酿酒工具|PHB}或{@item 厨师工具|PHB}进行属性检定时，你能掷一个{@dice d4}，并把结果加到属性检定的结果上。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Innkeeper's Magic",
+							"name": "旅店老板的魔法",
+							"ENG_name": "Innkeeper's Magic",
 							"entries": [
-								"You know the {@spell 魔法技俩} cantrip. You can also cast the {@spell 净化饮食} and {@spell 隐形仆役} spells with this trait. Once you cast either spell with this trait, you can't cast that spell with it again until you finish long rest. Charisma is your spellcasting ability for these spells."
+								"你习得戏法{@spell 魔法技俩}。同时，你能够通过此特性施展{@spell 净化饮食}和{@spell 隐形仆役}。一旦你使用此特性施展了前述法术，你将无法再次使用此特性，直到完成一次长休。魅力是你在施展这些法术时的关键属性。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Spells of the Mark",
+							"name": "龙纹法术",
+							"ENG_name": "Spells of the Mark",
 							"entries": [
-								"If you have the Spellcasting or the Pact Magic class feature, the spells on the Mark of Hospitality Spells table are added to the spell list of your spellcasting class.",
+								"如果你拥有施法或契约魔法职业能力，招待龙纹表中的法术将加入你施法职业的法术列表中。",
 								{
 									"type": "table",
-									"caption": "Mark of Hospitality Spells",
+									"caption": "招待龙纹法术",
 									"colLabels": [
-										"Spell Level",
-										"Spells"
+										"法术环位",
+										"法术"
 									],
 									"colStyles": [
 										"col-2 text-center",
@@ -8868,23 +8896,26 @@
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Darkvision",
+							"name": "黑暗视觉",
+							"ENG_name": "Darkvision",
 							"entries": [
-								"You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+								"你在黑暗和微光光照中有着超出常人的视力。在微光光照下，你身边60尺内可以视为等同于明亮光照。而在黑暗中，该范围内可视为等同于微光光照。你无法在黑暗中分辨颜色，只能看到有灰度的黑白画面。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Hunter's Intuition",
+							"name": "猎人直觉",
+							"ENG_name": "Hunter's Intuition",
 							"entries": [
-								"When you make a Wisdom（{@skill 察觉}）or Wisdom（{@skill 生存}）check, you can roll a {@dice d4} and add the number rolled to the ability check."
+								"龙纹让你的感官变得敏锐，并能帮助你找到猎物。当你进行感知（{@skill 察觉}）或感知（{@skill 生存}）检定时，你能掷一个{@dice d4}，并把结果加到属性检定的结果上。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Finder's Magic",
+							"name": "寻者魔法",
+							"ENG_name": "Finder's Magic",
 							"entries": [
-								"You can cast the {@spell 猎人印记} spell with this trait. Starting at 3rd level, you can also cast the {@spell 物品定位术} spell with it. Once you cast either spell with this trait, you can't cast that spell with it again until you finish a long rest. Wisdom is your spellcasting ability for these spells."
+								"你能通过此特性施展{@spell 猎人印记}法术。从第3级起，你还能施展{@spell 物品定位术}。一旦你使用此特性施展了前述法术，你将无法再次使用此特性，直到完成一次长休。感知是你在施展这些法术时的关键属性。"
 							]
 						},
 						{
@@ -8892,7 +8923,7 @@
 							"name": "语言",
 							"ENG_name": "Languages",
 							"entries": [
-								"You can speak, read, and write Common and Goblin."
+								"你能够说、读、写通用语和地精语。"
 							],
 							"data": {
 								"overwrite": "语言"
@@ -8900,15 +8931,16 @@
 						},
 						{
 							"type": "entries",
-							"name": "Spells of the Mark",
+							"name": "龙纹法术",
+							"ENG_name": "Spells of the Mark",
 							"entries": [
-								"If you have the Spellcasting or the Pact Magic class feature, the spells on the Mark of Finding Spells table are added to the spell list of your spellcasting class.",
+								"如果你拥有施法或契约魔法职业能力，探索龙纹表中的法术将加入你施法职业的法术列表中。",
 								{
 									"type": "table",
-									"caption": "Mark of Finding Spells",
+									"caption": "探索龙纹法术",
 									"colLabels": [
-										"Spell Level",
-										"Spells"
+										"法术环位",
+										"法术"
 									],
 									"colStyles": [
 										"col-2 text-center",
@@ -9013,36 +9045,40 @@
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Wild Intuition",
+							"name": "野性直觉",
+							"ENG_name": "Wild Intuition",
 							"entries": [
-								"When you make a Wisdom（{@skill 驯兽}）or Intelligence（{@skill 自然}）check, you can roll a {@dice d4} and add the number rolled to the ability check."
+								"当你进行感知（{@skill 驯兽}）或智力（{@skill 自然}）检定时，你能掷一个{@dice d4}，并把结果加到属性检定的结果上。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Primal Connection",
+							"name": "原始链接",
+							"ENG_name": "Primal Connection",
 							"entries": [
-								"You can cast the {@spell 化兽为友} and {@spell 动物交谈术} spells with this trait, requiring no material component. Once you cast either spell with this trait, you can't cast that spell with it again until you finish a short or long rest. Wisdom is your spellcasting ability for these spells."
+								"你能够通过此特性施展{@spell 化兽为友}和{@spell 动物交谈术}，且无需材料成分。一旦你使用此特性施展了前述法术，你将无法再次使用此特性，直到完成一次长休。感知是你在施展这些法术时的关键属性。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "The Bigger They Are",
+							"name": "它们不过是大了点",
+							"ENG_name": "The Bigger They Are",
 							"entries": [
-								"Starting at 3rd level, you can target a beast or monstrosity when you cast {@spell 化兽为友} or {@spell 动物交谈术}, provided the creature's Intelligence score is 3 or lower."
+								"你施展{@spell 化兽为友}或{@spell 动物交谈术}时可以指定野兽或怪兽为目标，前提是目标智力为3或以下。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Spells of the Mark",
+							"name": "龙纹法术",
+							"ENG_name": "Spells of the Mark",
 							"entries": [
-								"If you have the Spellcasting or the Pact Magic class feature, the spells on the Mark of Handling Spells table are added to the spell list of your spellcasting class.",
+								"如果你拥有施法或契约魔法职业能力，畜牧龙纹表中的法术将加入你施法职业的法术列表中。",
 								{
 									"type": "table",
-									"caption": "Mark of Handling Spells",
+									"caption": "畜牧龙纹法术",
 									"colLabels": [
-										"Spell Level",
-										"Spells"
+										"法术环位",
+										"法术"
 									],
 									"colStyles": [
 										"col-2 text-center",
@@ -9144,36 +9180,40 @@
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Artisan's Intuition",
+							"name": "工匠直觉",
+							"ENG_name": "Artisan's Intuition",
 							"entries": [
-								"When you make an {@skill 奥秘} check or an ability check involving artisan's tools, you can roll a {@dice d4} and add the number rolled to the ability check."
+								"当你进行{@skill 奥秘}检定或用工匠工具进行属性检定时，你能掷一个{@dice d4}，并把结果加到属性检定的结果上。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Maker's Gift",
+							"name": "匠师天赋",
+							"ENG_name": "Maker's Gift",
 							"entries": [
-								"You gain proficiency with one type of artisan's tools of your choice."
+								"你选择一种工匠工具，获得其熟练。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Spellsmith",
+							"name": "魔力制造",
+							"ENG_name": "Spellsmith",
 							"entries": [
-								"You know the {@spell 修复术} cantrip. You can also cast the {@spell 魔化武器} spell with this trait. When you do so, the spell lasts for 1 hour and doesn't require concentration. Once you cast the spell with this trait, you can't do so again until you finish a long rest. Intelligence is your spellcasting ability for these spells."
+								"你习得戏法{@spell 修复术}。同时，你能够通过此特性施展{@spell 魔化武器}，当你这么做时，该法术持续1小时，无需专注。一旦你使用此特性施展了前述法术，你将无法再次使用此特性，直到完成一次长休。智力是你在施展这些法术时的关键属性。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Spells of the Mark",
+							"name": "龙纹法术",
+							"ENG_name": "Spells of the Mark",
 							"entries": [
-								"If you have the Spellcasting or the Pact Magic class feature, the spells on the Mark of Making Spells table are added to the spell list of your spellcasting class.",
+								"如果你拥有施法或契约魔法职业能力，创造龙纹表中的法术将加入你施法职业的法术列表中。",
 								{
 									"type": "table",
-									"caption": "Mark of Making Spells",
+									"caption": "创造龙纹法术",
 									"colLabels": [
-										"Spell Level",
-										"Spells"
+										"法术环位",
+										"法术"
 									],
 									"colStyles": [
 										"col-2 text-center",
@@ -9270,36 +9310,40 @@
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Courier's Speed",
+							"name": "邮差之速",
+							"ENG_name": "Courier's Speed",
 							"entries": [
-								"Your base walking speed increases to 35 feet."
+								"你的基础步行速度为35尺。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Intuitive Motion",
+							"name": "运动直觉",
+							"ENG_name": "Intuitive Motion",
 							"entries": [
-								"When you make a Dexterity（{@skill 体操}）check or any ability check to operate or maintain a land vehicle, you can roll a {@dice d4} and add the number rolled to the ability check."
+								"当你进行敏捷（{@skill 体操}）检定或者为了操作或维护陆运载具而进行属性检定时，你能掷一个{@dice d4}，并把结果加到属性检定的结果上。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Magical Passage",
+							"name": "魔法通道",
+							"ENG_name": "Magical Passage",
 							"entries": [
-								"You can cast the {@spell 迷踪步} spell once with this trait, and you regain the ability to cast it when you finish a long rest. Dexterity is your spellcasting ability for this spell."
+								"你能够通过此特性施展{@spell 迷踪步}。一旦你使用此特性施展了前述法术，你将无法再次使用此特性，直到完成一次长休。敏捷是你在施展这些法术时的关键属性。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Spells of the Mark",
+							"name": "龙纹法术",
+							"ENG_name": "Spells of the Mark",
 							"entries": [
-								"If you have the Spellcasting or the Pact Magic class feature, the spells on the Mark of Passage Spells table are added to the spell list of your spellcasting class.",
+								"如果你拥有施法或契约魔法职业能力，通行龙纹表中的法术将加入你施法职业的法术列表中。",
 								{
 									"type": "table",
-									"caption": "Mark of Passage Spells",
+									"caption": "通行龙纹法术",
 									"colLabels": [
-										"Spell Level",
-										"Spells"
+										"法术环位",
+										"法术"
 									],
 									"colStyles": [
 										"col-2 text-center",
@@ -9386,36 +9430,40 @@
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Sentinel's Intuition",
+							"name": "哨兵直觉",
+							"ENG_name": "Sentinel's Intuition",
 							"entries": [
-								"When you make a Wisdom（{@skill 洞悉}）or Wisdom（{@skill 察觉}）check, you can roll a {@dice d4} and add the number rolled to the ability check."
+								"当你进行感知（{@skill 洞悉}）或感知（{@skill 察觉}）检定时，你能掷一个{@dice d4}，并把结果加到属性检定的结果上。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Guardian's Shield",
+							"name": "哨兵之盾",
+							"ENG_name": "Guardian's Shield",
 							"entries": [
-								"You can cast the {@spell 护盾术} spell once with this trait, and you regain the ability to cast it after you finish a long rest. Wisdom is your spellcasting ability for this spell."
+								"你能够通过此特性施展{@spell 护盾术}，在完成一次长休后，你能再次施展此法术。感知是你在施展这些法术时的关键属性。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Vigilant Guardian",
+							"name": "警觉卫士",
+							"ENG_name": "Vigilant Guardian",
 							"entries": [
-								"When a creature you can see within 5 feet of you is hit by an attack roll, you can use your reaction to swap places with that creature, and you are hit by the attack instead. Once you use this trait, you can't do so again until you finish a long rest."
+								"当距离你5尺内的可见生物被攻击命中时，你能以一个反应动作与该生物交换位置，同时你代替该生物被击中。这么做后，你将无法再次使用此特性，直到完成一次长休。"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Spells of the Mark",
+							"name": "龙纹法术",
+							"ENG_name": "Spells of the Mark",
 							"entries": [
-								"If you have the Spellcasting or the Pact Magic class feature, the spells on the Mark of Sentinel Spells table are added to the spell list of your spellcasting class.",
+								"如果你拥有施法或契约魔法职业能力，守护龙纹表中的法术将加入你施法职业的法术列表中。",
 								{
 									"type": "table",
-									"caption": "Mark of Sentinel Spells",
+									"caption": "守护龙纹法术",
 									"colLabels": [
-										"Spell Level",
-										"Spells"
+										"法术环位",
+										"法术"
 									],
 									"colStyles": [
 										"col-2 text-center",
