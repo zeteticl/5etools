@@ -1063,7 +1063,7 @@ function onSublistChange () {
 	_$totalCr = _$totalCr || $(`#totalcr`);
 	const xp = EncounterBuilderUtils.calculateListEncounterXp(encounterBuilder.lastPartyMeta);
 	const monCount = ListUtil.sublist.items.map(it => it.values.count).reduce((a, b) => a + b, 0);
-	_$totalCr.html(`${monCount} creature${monCount === 1 ? "" : "s"}; ${xp.baseXp.toLocaleString()} XP (<span class="help" title="Adjusted Encounter XP">Enc</span>: ${(xp.adjustedXp).toLocaleString()} XP)`);
+	_$totalCr.html(`${monCount} 个生物；${xp.baseXp.toLocaleString()} XP (<span class="help" title="调整后的遭遇经验值">遭遇</span>：${(xp.adjustedXp).toLocaleString()} XP)`);
 	if (encounterBuilder.isActive()) encounterBuilder.updateDifficulty();
 	else encounterBuilder.doSaveState();
 }

@@ -706,14 +706,14 @@ const ListUtil = {
 
 		const subActions = [
 			new ContextUtil.Action(
-				"Popout",
+				"弹窗",
 				(evt, userData) => {
 					const {ele, selection} = userData;
 					ListUtil._handleGenericContextMenuClick_pDoMassPopout(evt, ele, selection)
 				},
 			),
 			new ContextUtil.Action(
-				"Remove",
+				"移除",
 				(evt, userData) => {
 					const {selection} = userData;
 					selection.forEach(item => {
@@ -723,28 +723,28 @@ const ListUtil = {
 				},
 			),
 			new ContextUtil.Action(
-				"Clear List",
+				"清空列表",
 				() => ListUtil.pDoSublistRemoveAll(),
 			),
 			null,
 			new ContextUtil.Action(
-				"Roll on List",
+				"列表掷骰",
 				() => ListUtil._rollSubListed(),
 			),
 			null,
 			new ContextUtil.Action(
-				"Send to DM Screen",
+				"发送到 DM 帷幕",
 				() => ListUtil._pDoSendSublistToDmScreen(),
 			),
 			ExtensionUtil.ACTIVE
 				? new ContextUtil.Action(
-					"Send to Foundry",
+					"发送到 Foundry",
 					() => ListUtil._pDoSendSublistToFoundry(),
 				)
 				: undefined,
 			null,
 			new ContextUtil.Action(
-				"Download JSON Data",
+				"下载 JSON 数据",
 				() => ListUtil._handleJsonDownload(),
 			),
 		].filter(it => it !== undefined);
@@ -756,9 +756,9 @@ const ListUtil = {
 			const list = ListUtil.getExportableSublist();
 			const len = list.items.length;
 			await StorageUtil.pSet(VeCt.STORAGE_DMSCREEN_TEMP_SUBLIST, {page: UrlUtil.getCurrentPage(), list});
-			JqueryUtil.doToast(`${len} pin${len === 1 ? "" : "s"} will be loaded into the DM Screen on your next visit.`)
+			JqueryUtil.doToast(`${len} 个标注内容将在你下次访问时载入 DM 帷幕。`)
 		} catch (e) {
-			JqueryUtil.doToast(`Failed! ${VeCt.STR_SEE_CONSOLE}`);
+			JqueryUtil.doToast(`失败！ ${VeCt.STR_SEE_CONSOLE}`);
 			setTimeout(() => { throw e; })
 		}
 	},
@@ -784,7 +784,7 @@ const ListUtil = {
 			await ExtensionUtil._doSend("entity", {page, entity: toSend});
 		}
 
-		JqueryUtil.doToast(`Attepmted to send ${len} item${len === 1 ? "" : "s"} to Foundry.`);
+		JqueryUtil.doToast(`尝试发送 ${len} 条项目到 Foundry 之中。`);
 	},
 
 	async _handleGenericContextMenuClick_pDoMassPopout (evt, ele, selection) {
@@ -843,7 +843,7 @@ const ListUtil = {
 
 			if ($eles.length <= 1) {
 				JqueryUtil.doToast({
-					content: "Not enough entries to roll!",
+					content: "条目数量不足以掷骰！",
 					type: "danger",
 				});
 				return ListUtil._isRolling = false;
@@ -945,10 +945,10 @@ const ListUtil = {
 			});
 			return DataUtil.getCsv(headers, rows);
 		}
-		const $btnCsv = $(`<button class="btn btn-primary mr-3">Download CSV</button>`).click(() => {
+		const $btnCsv = $(`<button class="btn btn-primary mr-3">下载 CSV</button>`).click(() => {
 			DataUtil.userDownloadText(`${title}.csv`, getAsCsv());
 		}).appendTo($pnlBtns);
-		const $btnCopy = $(`<button class="btn btn-primary">Copy CSV to Clipboard</button>`).click(async () => {
+		const $btnCopy = $(`<button class="btn btn-primary">复制 CSV 到剪贴板</button>`).click(async () => {
 			await MiscUtil.pCopyTextToClipboard(getAsCsv());
 			JqueryUtil.showCopiedEffect($btnCopy);
 		}).appendTo($pnlBtns);
@@ -973,12 +973,12 @@ const ListUtil = {
 
 	addListShowHide () {
 		$(`#filter-search-group`).find(`#reset`).before(`<button class="btn btn-default" id="hidesearch">隐藏</button>`);
-		$(`#contentwrapper`).prepend(`<div class="col-12" id="showsearch"><button class="btn btn-block btn-default btn-xs" type="button">Show Filter</button><br></div>`);
+		$(`#contentwrapper`).prepend(`<div class="col-12" id="showsearch"><button class="btn btn-block btn-default btn-xs" type="button">显示筛选器</button><br></div>`);
 
 		const $wrpList = $(`#listcontainer`);
 		const $wrpBtnShowSearch = $("div#showsearch");
 		const $btnHideSearch = $("button#hidesearch");
-		$btnHideSearch.title("Hide Search Bar and Entry List");
+		$btnHideSearch.title("隐藏搜索栏和条目列表");
 		// collapse/expand search button
 		$btnHideSearch.click(function () {
 			$wrpList.hide();
