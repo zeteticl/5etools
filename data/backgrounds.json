@@ -19640,10 +19640,11 @@
 						"mode": "replaceArr",
 						"replace": "Feature: Criminal Contact",
 						"items": {
-							"name": "Feature: Spy Contact",
+							"name": "特性：间谍人脉",
+							"ENG_name": "Feature: Criminal Contact",
 							"type": "entries",
 							"entries": [
-								"You have a reliable and trustworthy contact who acts as your liaison to a network of other spies. You know how to get messages to and from your contact, even over great distances; specifically, you know the local messengers, corrupt caravan masters, and seedy sailors who can deliver messages for you."
+								"你有着一个可靠且可以信赖的联系人，能做为你与其他间谍联系的桥梁。你知道如何接收或传递消息给你的联系人，即使你们之间相隔甚远也一样；具体来说，你可能认识当地的信使、贪腐的商队长、以及能够为你传递消息的肮脏水手。"
 							],
 							"data": {
 								"isFeature": true
@@ -19653,41 +19654,7 @@
 				}
 			},
 			"hasFluff": true,
-			"ENG_name": "Variant Criminal (Spy)",
-			"entries": [
-				{
-					"type": "list",
-					"style": "list-hang-notitle",
-					"items": [
-						{
-							"type": "item",
-							"name": "技能熟练",
-							"entry": "{@skill 欺瞒}, {@skill 隐匿}"
-						},
-						{
-							"type": "item",
-							"name": "工具熟练",
-							"entry": "一种{@filter 赌具|items|miscellaneous=mundane|type=gaming set}、{@item 盗贼工具|phb}"
-						},
-						{
-							"type": "item",
-							"name": "装备",
-							"entry": "一根{@item 撬棍|phb}、一套包含兜帽的暗色{@item 寻常服装|phb}、和一个装有15金币的缠腰{@item 囊袋|phb}"
-						}
-					]
-				},
-				{
-					"name": "特性：间谍人脉",
-					"ENG_name": "Feature: Criminal Contact",
-					"type": "entries",
-					"entries": [
-						"你有着一个可靠且可以信赖的联系人，能做为你与其他间谍联系的桥梁。你知道如何接收或传递消息给你的联系人，即使你们之间相隔甚远也一样；具体来说，你可能认识当地的信使、贪腐的商队长、以及能够为你传递消息的肮脏水手。"
-					],
-					"data": {
-						"isFeature": true
-					}
-				}
-			]
+			"ENG_name": "Variant Criminal (Spy)"
 		},
 		{
 			"name": "变体艺人 (角斗士)",
@@ -19715,12 +19682,12 @@
 									{
 										"type": "item",
 										"name": "工具熟练",
-										"entry": "{@item 易容工具|phb}, one type of {@filter musical instrument|items|source=phb|miscellaneous=mundane|type=instrument}"
+										"entry": "{@item 易容工具|phb}、一种{@filter 乐器|items|miscellaneous=mundane|type=instrument}"
 									},
 									{
 										"type": "item",
 										"name": "装备",
-										"entry": "An inexpensive but unusual weapon, such as a {@item trident|phb} or {@item net|phb} (one of your choice), the favor of an admirer (love letter, lock of hair, or trinket), {@item costume clothes|phb}, and a belt {@item pouch|phb} containing 15 gp"
+										"entry": "一把低廉但不寻常的武器，像是{@item 三叉戟|phb}或{@item 捕网|phb}（自选一种）、一个仰慕者送的小礼物（情书、一缕秀发、或小饰品）、{@item 戏服|phb}、和一个装有15金币的缠腰{@item 囊袋|phb}"
 									}
 								]
 							}
@@ -19731,10 +19698,11 @@
 								"index": 1
 							},
 							"items": {
-								"name": "Feature: By Popular Demand",
+								"name": "特性：人见人爱",
+								"ENG_name": "Feature: By Popular Demand",
 								"type": "entries",
 								"entries": [
-									"You can always find a place to perform in any place that features combat for entertainment\u2014perhaps a gladiatorial arena or secret pit fighting club. At such a place, you receive free lodging and food of a modest or comfortable standard (depending on the quality of the establishment), as long as you perform each night. In addition, your performance makes you something of a local figure. When strangers recognize you in a town where you have performed, they typically take a liking to you."
+									"你能找到视战斗为娱乐的表演场地，像是角斗场或秘密的战斗俱乐部。在这类场所，只要你每晚演出，你就能获得简朴或舒适标准的免费食宿（取决于该场所的品质）。此外，你的表演将让你成为当地的名人。若你在曾经表演过的城镇中被陌生人认出，他们通常会对你抱有好感。"
 								],
 								"data": {
 									"isFeature": true
@@ -19745,41 +19713,7 @@
 				}
 			},
 			"hasFluff": true,
-			"ENG_name": "Variant Entertainer (Gladiator)",
-			"entries": [
-				{
-					"type": "list",
-					"style": "list-hang-notitle",
-					"items": [
-						{
-							"type": "item",
-							"name": "技能熟练",
-							"entry": "{@skill 体操}, {@skill 表演}"
-						},
-						{
-							"type": "item",
-							"name": "工具熟练",
-							"entry": "{@item 易容工具|phb}、一种{@filter 乐器|items|miscellaneous=mundane|type=instrument}"
-						},
-						{
-							"type": "item",
-							"name": "装备",
-							"entry": "一把低廉但不寻常的武器，像是{@item 三叉戟|phb}或{@item 捕网|phb}（自选一种）、一个仰慕者送的小礼物（情书、一缕秀发、或小饰品）、{@item 戏服|phb}、和一个装有15金币的缠腰{@item 囊袋|phb}"
-						}
-					]
-				},
-				{
-					"name": "特性：人见人爱",
-					"ENG_name": "Feature: By Popular Demand",
-					"type": "entries",
-					"entries": [
-						"你能找到视战斗为娱乐的表演场地，像是角斗场或秘密的战斗俱乐部。在这类场所，只要你每晚演出，你就能获得简朴或舒适标准的免费食宿（取决于该场所的品质）。此外，你的表演将让你成为当地的名人。若你在曾经表演过的城镇中被陌生人认出，他们通常会对你抱有好感。"
-					],
-					"data": {
-						"isFeature": true
-					}
-				}
-			]
+			"ENG_name": "Variant Entertainer (Gladiator)"
 		},
 		{
 			"name": "变体公会工匠 (公会商人)",
@@ -19789,38 +19723,57 @@
 				"name": "Guild Artisan",
 				"source": "PHB",
 				"_mod": {
-					"entries": {
-						"mode": "replaceArr",
-						"replace": {
-							"index": 0
-						},
-						"items": {
-							"type": "list",
-							"style": "list-hang-notitle",
-							"items": [
-								{
-									"type": "item",
-									"name": "技能熟练",
-									"entry": "{@skill 洞悉}, {@skill 说服}"
-								},
-								{
-									"type": "item",
-									"name": "工具熟练",
-									"entry": "One type of {@filter artisan's tools|items|source=phb|miscellaneous=mundane|type=artisan's tools}, or {@item 领航工具|phb}, or an additional language"
-								},
-								{
-									"type": "item",
-									"name": "语言",
-									"entry": "One of your choice"
-								},
-								{
-									"type": "item",
-									"name": "装备",
-									"entry": "A set of {@filter artisan's tools|items|source=phb|miscellaneous=mundane|type=artisan's tools} (one of your choice) or a {@item mule|phb} and {@item cart|phb}, a letter of introduction from your guild, a set of {@item traveler's clothes|phb}, and a belt {@item pouch|phb} containing 15 gp"
+					"entries": [
+						{
+							"mode": "replaceArr",
+							"replace": "Feature: Guild Membership",
+							"items": {
+								"name": "特性：公会成员",
+								"ENG_name": "Feature: Guild Membership",
+								"type": "entries",
+								"entries": [
+									"做为一名正式且受人尊敬的公会或大型商人财团的成员，你可以享有会员身分所提供给你的某些好处。若有必要，你的公会成员同事会提供你所需的住宿与食物，且在必要的时候支付你的丧葬费用。在某些市镇，公会会馆能提供一个会见你其他同行的场所，这里也是个找到潜在雇主、盟友、或雇工的好地方。",
+									"公会和财团通常拥有庞大的政治权力。当你被指控犯罪时，若你可以被证明是无辜的、或者这个罪行是正当的，则你的公会将会支持你，站在你这一边。如果你在公会中有着不错的地位，你也可以通过公会去接触那些有权有势的政治人物。这类联系可能会需要你向公会的金库捐献一些金钱或魔法物品。",
+									"你每个月必须向公会支付5金币的会费。如果你拖欠了缴款，则你必须补交会费才能维持你在公会中的名声。"
+								],
+								"data": {
+									"isFeature": true
 								}
-							]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": {
+								"index": 0
+							},
+							"items": {
+								"type": "list",
+								"style": "list-hang-notitle",
+								"items": [
+									{
+										"type": "item",
+										"name": "技能熟练",
+										"entry": "{@skill 洞悉}, {@skill 说服}"
+									},
+									{
+										"type": "item",
+										"name": "工具熟练",
+										"entry": "一种{@filter 工匠工具|items|source=phb|miscellaneous=mundane|type=artisan tool}或{@item 领航工具|phb}或一个额外的语言"
+									},
+									{
+										"type": "item",
+										"name": "语言",
+										"entry": "自选一种"
+									},
+									{
+										"type": "item",
+										"name": "装备",
+										"entry": "一套{@filter 工匠工具|items|source=phb|miscellaneous=mundane|type=artisan tool}（自选一种）或一头{@item 骡子|phb}和{@item 运货车|phb}、一封来自你公会的介绍信、一套{@item 旅行者服装|phb}、和一个装有15金币的缠腰囊袋"
+									}
+								]
+							}
 						}
-					}
+					]
 				}
 			},
 			"skillProficiencies": [
@@ -19840,43 +19793,7 @@
 				}
 			],
 			"hasFluff": true,
-			"ENG_name": "Variant Guild Artisan (Guild Merchant)",
-			"entries": [
-				{
-					"type": "list",
-					"style": "list-hang-notitle",
-					"items": [
-						{
-							"type": "item",
-							"name": "技能熟练",
-							"entry": "{@skill 洞悉}, {@skill 说服}"
-						},
-						{
-							"type": "item",
-							"name": "工具熟练",
-							"entry": "一种{@filter 工匠工具|items|source=phb|miscellaneous=mundane|type=artisan tool}或{@item 领航工具|phb}或一个额外的语言"
-						},
-						{
-							"type": "item",
-							"name": "装备",
-							"entry": "一套{@filter 工匠工具|items|source=phb|miscellaneous=mundane|type=artisan tool}（自选一种）或一头{@item 骡子|phb}和{@item 运货车|phb}、一封来自你公会的介绍信、一套{@item 旅行者服装|phb}、和一个装有15金币的缠腰囊袋"
-						}
-					]
-				},
-				{
-					"name": "特性：公会成员",
-					"ENG_name": "Feature: Guild Membership",
-					"type": "entries",
-					"entries": [
-						"做为一名正式且受人尊敬的公会或大型商人财团的成员，你可以享有会员身分所提供给你的某些好处。若有必要，你的公会成员同事会提供你所需的住宿与食物，且在必要的时候支付你的丧葬费用。在某些市镇，公会会馆能提供一个会见你其他同行的场所，这里也是个找到潜在雇主、盟友、或雇工的好地方。",
-						"公会和财团通常拥有庞大的政治权力。当你被指控犯罪时，若你可以被证明是无辜的、或者这个罪行是正当的，则你的公会将会支持你，站在你这一边。如果你在公会中有着不错的地位，你也可以通过公会去接触那些有权有势的政治人物。这类联系可能会需要你向公会的金库捐献一些金钱或魔法物品。",
-						"你每个月必须向公会支付5金币的会费。如果你拖欠了缴款，则你必须补交会费才能维持你在公会中的名声。"
-					],
-					"data": {
-						"isFeature": true
-					}
-				}
-			]
+			"ENG_name": "Variant Guild Artisan (Guild Merchant)"
 		},
 		{
 			"name": "变体贵族 (骑士)",
