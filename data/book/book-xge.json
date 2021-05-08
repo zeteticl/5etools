@@ -3150,7 +3150,8 @@
 		},
 		{
 			"type": "section",
-			"name": "Dungeon Master's Tools",
+			"name": "地下城主工具",
+			"ENG_name": "Dungeon Master's Tools",
 			"page": 77,
 			"entries": [
 				"As the Dungeon Master, you oversee the game and weave together the story experienced by your players. You're the one who keeps it all going, and this chapter is for you. It gives you new rules options, as well as some refined tools for creating and running adventures and campaigns. It is a supplement to the tools and advice offered in the dungeon master's guide.",
@@ -3158,10 +3159,11 @@
 				"The material in this chapter is meant to make your life easier. Ignore anything you find here that doesn't help you, and don't hesitate to customize the things that you do use. The game's rules exist to serve you and the games you run. As always, make them your own.",
 				{
 					"type": "section",
-					"name": "Simultaneous Effects",
+					"name": "同时效应",
+					"ENG_name": "Simultaneous Effects",
 					"page": 77,
 					"entries": [
-						"Most effects in the game happen in succession, following an order set by the rules or the DM. In rare cases, effects can happen at the same time, especially at the start or end of a creature's turn. If two or more things happen at the same time on a character or monster's turn, the person at the game table-whether player or DM-who controls that creature decides the order in which those things happen. For example, if two effects occur at the end of a player character's turn, the player decides which of the two effects happens first."
+						"游戏中的大部分效应都是按照规则或DM安排的顺序依次发生的。在罕见的情况下，尤其是在某个生物的回合开始或结束时，可能会出现同时发生的效应。如果复数事件同时发生在角色或怪物的回合中，那么将由控制该生物的人——玩家或DM——来决定这些事件发生的顺序。例如，在某位玩家角色的回合结束时同时存在两个效应，则该玩家决定两个效应中的哪一个先生效。"
 					],
 					"data": {
 						"quickref": 3
@@ -3170,28 +3172,31 @@
 				},
 				{
 					"type": "section",
-					"name": "Falling",
+					"name": "坠落",
+					"ENG_name": "Falling",
 					"page": 77,
 					"entries": [
-						"Falling from a great height is a significant risk for adventurers and their foes. The rule given in the player's handbook is simple: at the end of a fall, you take {@dice 1d6} bludgeoning damage for every 10 feet you fell, to a maximum of {@dice 20d6}. You also land {@condition 伏地}, unless you somehow avoid taking damage from the fall. Here are two optional rules that expand on that simple rule.",
+						"从高处坠落无论对于冒险者还是其敌人来说都有重大的风险。在《玩家手册》给出的规则很简单：在一次坠落结束时，你每坠落10尺就会受到{@dice 1d6}钝击伤害，最大值为{@dice 20d6}。同时你会以{@condition 伏地}状态着陆，除非你以某种方式避免了坠落伤害。这里有两个可选项，用以扩展这条简单的规则。",
 						{
 							"type": "entries",
-							"name": "Rate of Falling",
+							"name": "坠落速度",
+							"ENG_name": "Rate of Falling",
 							"page": 77,
 							"entries": [
-								"The rule for falling assumes that a creature immediately drops the entire distance when it falls. But what if a creature is at a high altitude when it falls, perhaps on the back of a {@creature griffon} or on board an {@item airship}? Realistically, a fall from such a height can take more than a few seconds, extending past the end of the turn when the fall occurred. If you'd like high-altitude falls to be properly time-consuming, use the following optional rule.",
-								"When you fall from a great height, you instantly descend up to 500 feet. If you're still falling on your next turn, you descend up to 500 feet at the end of that turn. This process continues until the fall ends, either because you hit the ground or the fall is otherwise halted."
+								"原本的坠落规则假定一个生物坠落时会立即落下整段距离。但如果一个生物在坠落时处于一个相当高的高度，比如{@creature 狮鹫}的背上或{@item 飞艇}的甲板呢？事实上，从这样的高度坠落，区区几秒钟可到不了地面，这样的高空坠落会持续到下个回合。如果你认为高空坠落要花费足够的时间，那么使用下面的可选规则。",
+								"当你从极高处坠落时，你会立即下降500尺。如果你下一回合仍将继续坠落，那么那一回合结束时你会再下降500尺。这个过程一直持续到坠落结束，要么是因为你撞到地面，要么是以别的方式终止坠落。"
 							],
 							"id": "030"
 						},
 						{
 							"type": "entries",
-							"name": "Flying Creatures and Falling",
+							"name": "飞行生物与坠落",
+							"ENG_name": "Flying Creatures and Falling",
 							"page": 77,
 							"entries": [
-								"A flying creature in flight falls if it is knocked {@condition 伏地}, if its speed is reduced to 0 feet, or if it otherwise loses the ability to move, unless it can hover or it is being held aloft by magic, such as the {@spell 飞行术} spell.",
-								"If you'd like a flying creature to have a better chance of surviving a fall than a non-flying creature does, use this rule: subtract the creature's current flying speed from the distance it fell before calculating falling damage. This rule is helpful to a flier that is knocked {@condition 伏地} but is still conscious and has a current flying speed that is greater than 0 feet. The rule is designed to simulate the creature flapping its wings furiously or taking similar measures to slow the velocity of its fall.",
-								"If you use the rule for rate of falling in the previous section, a flying creature descends 500 feet on the turn when it falls, just as other creatures do. But if that creature starts any of its later turns still falling and is {@condition 伏地}, it can halt the fall on its turn by spending half its flying speed to counter the {@condition 伏地} condition (as if it were standing up in midair)."
+								"飞行中的生物将会在陷入{@condition 伏地}状态、速度降到0尺或者以别的方式失去移动能力的时候坠落，除非它能盘旋（悬停）或被魔法托举在空中，例如法术{@spell 飞行术}。",
+								"如果你想让飞行生物比非飞行生物有更高的生存几率，那么使用这个规则：在计算坠落伤害之前，先从它的坠落距离中减去该生物的当前飞行速度。这条规则适用于陷入{@condition 伏地}状态但仍然保持清醒，且当前飞行速度大于0尺的飞行者。这个规则模拟的是生物猛烈地拍打翅膀，或者采取类似的措施来减缓坠落速度的情形。",
+								"如果你使用了上一节中的坠落速度规则，那么一个飞行生物同样会在发生坠落的回合下降500尺，就像其他生物一样。但如果该生物在其后的回合中仍在坠落并处于{@condition 伏地}状态，那么它可以通过花费一半的飞行速度解除{@condition 伏地}状态并终止坠落（规则上来说，相当于在半空中起身）。"
 							],
 							"id": "031"
 						}
@@ -3203,38 +3208,42 @@
 				},
 				{
 					"type": "section",
-					"name": "Sleep",
+					"name": "睡眠",
+					"ENG_name": "Sleep",
 					"page": 77,
 					"entries": [
-						"Just as in the real world, D&D characters spend many hours sleeping, most often as part of a long rest. Most monsters also need to sleep. While a creature sleeps, it is subjected to the {@condition 昏迷} condition. Here are a few rules that expand on that basic fact.",
+						"和现实世界一样，D&D 的角色们也需要花费数个小时用于睡眠，通常是长休息的一部分。大多数怪物也需要睡眠。当一个生物睡着时，它受到{@condition 昏迷}状态的影响。下面是一些关于这一基本事实的规则。",
 						{
 							"type": "entries",
-							"name": "Waking Someone",
+							"name": "唤醒某人",
+							"ENG_name": "Waking Someone",
 							"page": 77,
 							"entries": [
-								"A creature that is naturally sleeping, as opposed to being in a magically or chemically induced sleep, wakes up if it takes any damage or if someone else uses an action to shake or slap the creature awake. A sudden loud noise-such as yelling, thunder, or a ringing bell-also awakens someone that is sleeping naturally.",
-								"Whispers don't disturb sleep, unless a sleeper's passive Wisdom ({@skill 察觉}) score is 20 or higher and the whispers are within 10 feet of the sleeper. Speech at a normal volume awakens a sleeper if the environment is otherwise silent (no wind, birdsong, crickets, street sounds, or the like) and the sleeper has a passive Wisdom ({@skill 察觉}) score of 15 or higher."
+								"当一个生物处于自然睡眠，而不是受魔法或药剂影响的睡眠中，如果它受到任何伤害，或者其他人用一个动作摇晃或拍打这个生物，它就会醒来。一声突如其来的巨响，如叫喊、雷鸣或铃声，也会唤醒自然睡眠中的某人。",
+								"耳语不会影响睡眠，除非睡眠者的被动感知（@skill 察觉}）值为 20 或更高，并且耳语者就在睡眠者周围 10 尺以内。当周围环境比较安静（没有风声、鸟鸣、蟋蟀、闹市，或者类似的杂音）且睡眠者的被动感知（{@skill 察觉}）值为 15 或更高时，正常音量的谈话便可以吵醒它。"
 							],
 							"id": "033"
 						},
 						{
 							"type": "entries",
-							"name": "Sleeping in Armor",
+							"name": "睡不解甲",
+							"ENG_name": "Sleeping in Armor",
 							"page": 77,
 							"entries": [
-								"Sleeping in light armor has no adverse effect on the wearer, but sleeping in medium or heavy armor makes it difficult to recover fully during a long rest.",
-								"When you finish a long rest during which you slept in medium or heavy armor, you regain only one quarter of your spent Hit Dice (minimum of one die). If you have any levels of {@condition 力竭}, the rest doesn't reduce your {@condition 力竭} level."
+								"穿着轻甲睡觉对穿戴者没有不利影响，但穿着中甲或重甲睡觉则很难在长休息中完全恢复。",
+								"当你穿着中甲或重甲睡觉并完成一次长休后，你只能恢复已消耗的生命骰数量的四分之一（但最少一个）。如果你处于任何程度的{@condition 力竭}状态中，则休息不会降低你的{@condition 力竭}等级。"
 							],
 							"id": "034"
 						},
 						{
 							"type": "entries",
-							"name": "Going without a Long Rest",
+							"name": "不眠不休",
+							"ENG_name": "Going without a Long Rest",
 							"page": 78,
 							"entries": [
-								"A long rest is never mandatory, but going without sleep does have its consequences. If you want to account for the effects of sleep deprivation on characters and creatures, use these rules.",
-								"Whenever you end a 24-hour period without finishing a long rest, you must succeed on a DC 10 Constitution saving throw or suffer one level of {@condition 力竭}.",
-								"It becomes harder to fight off {@condition 力竭} if you stay awake for multiple days. After the first 24 hours, the DC increases by 5 for each consecutive 24-hour period without a long rest. The DC resets to 10 when you finish a long rest."
+								"虽然长休并非强制性的，但是不睡觉的确会导致一些后果。如果你想体现缺乏睡眠对角色和生物的影响，可以使用这些规则。",
+								"无论从什么时间算起，当你结束了一个 24 小时的时段却没有完成一次长休的话，你必须通过一次 DC 10 的体质检定，失败则增加一级{@condition 力竭}状态。",
+								"如果你连续几天不眠不休，将很难解除{@condition 力竭}状态。在第一个24小时时段后，每过一个未完成长休的 24 小时时段，体质检定 DC 便增加 5。当你完成长休时，DC重置为10。"
 							],
 							"id": "035"
 						}
@@ -3246,23 +3255,25 @@
 				},
 				{
 					"type": "section",
-					"name": "Adamantine Weapons",
+					"name": "精金武器",
+					"ENG_name": "Adamantine Weapons",
 					"page": 78,
 					"entries": [
-						"Adamantine is an ultrahard metal found in meteorites and extraordinary mineral veins. In addition to being used to craft adamantine armor, the metal is also used for weapons.",
-						"Melee weapons and ammunition made of or coated with adamantine are unusually effective when used to break objects. Whenever an adamantine weapon or piece of ammunition hits an object, the hit is a critical hit.",
-						"The adamantine version of a melee weapon or of ten pieces of ammunition costs 500 gp more than the normal version, whether the weapon or ammunition is made of the metal or coated with it."
+						"精金是从陨石和特殊矿脉中发现的超硬金属。除了被用来制作精金护甲，该金属也用于锻造武器。",
+						"精金锻造或有精金镀层的近战武器和弹药具有极强的破坏能力。每当一件精金武器或一发精金弹药命中一个物件时，这次攻击会造成重击。",
+						"精金制成的近战武器或每十发弹药会比普通货色额外花费 500 金币，无论该武器或弹药是通体由精金打造还是仅仅镀了一层。"
 					],
 					"id": "036"
 				},
 				{
 					"type": "section",
-					"name": "Tying Knots",
+					"name": "打结",
+					"ENG_name": "Tying Knots",
 					"page": 78,
 					"entries": [
-						"The rules are purposely open-ended concerning mundane tasks like tying knots, but sometimes knowing how well a knot was fashioned is important in a dramatic scene when someone is trying to untie a knot or slip out of one. Here's an optional rule for determining the effectiveness of a knot.",
-						"The creature who ties the knot makes an Intelligence ({@skill 巧手}) check when doing so. The total of the check becomes the DC for an attempt to untie the knot with an Intelligence ({@skill 巧手}) check or to slip out of it with a Dexterity ({@skill 体操}) check.",
-						"This rule intentionally links {@skill 巧手} with Intelligence, rather than Dexterity. This is an example of how to apply the rule in the {@variantrule Skills with Different Abilities|phb|\"Variant: Skills with Different Abilities\"} section in chapter 7 of the player's handbook."
+						"像打结这类琐碎的小事原本没必要专门制定一套规则。但有时为了营造戏剧性的效果，当某人试图解开一或挣脱一个绳结时，我们需要知道这个结是否足够复杂。这里有一个可选规则来确定绳结的有效性。",
+						"当某人打结时，进行一次智力（{@skill 巧手}）检定，以检定最终结果作为DC。试图解开这个结须通过一次智力（{@skill 巧手}）检定，而想要挣脱这个结则须通过一次敏捷（{@skill 体操}）检定。",
+						"这一规则故意将{@skill 巧手}技能与智力属性搭配，而不是通常的敏捷。这是一个应用《玩家手册》第7章中{@variantrule Skills with Different Abilities|phb|“变体：技能搭配其他属性”}规则的例子。"
 					],
 					"data": {
 						"quickref": 3
