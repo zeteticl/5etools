@@ -4841,13 +4841,13 @@ Renderer.monster = {
 			<tr class="text compact"><td colspan="6">
 			${allTraits.map(it => it.rendered || renderer.render(it, 2)).join("")}
 			</td></tr>` : ""}
-			${Renderer.monster.getCompactRenderedStringSection({action: allActions}, renderer, "Actions", "action", 2)}
-			${Renderer.monster.getCompactRenderedStringSection(mon, renderer, "Bonus Actions", "bonus", 2)}
-			${Renderer.monster.getCompactRenderedStringSection(mon, renderer, "Reactions", "reaction", 2)}
-			${Renderer.monster.getCompactRenderedStringSection(mon, renderer, "Legendary Actions", "legendary", 2)}
+			${Renderer.monster.getCompactRenderedStringSection({action: allActions}, renderer, "动作", "action", 2)}
+			${Renderer.monster.getCompactRenderedStringSection(mon, renderer, "附赠动作", "bonus", 2)}
+			${Renderer.monster.getCompactRenderedStringSection(mon, renderer, "反应", "reaction", 2)}
+			${Renderer.monster.getCompactRenderedStringSection(mon, renderer, "传奇动作", "legendary", 2)}
 			${Renderer.monster.getCompactRenderedStringSection(mon, renderer, "Mythic Actions", "mythic", 2)}
-			${legGroup && legGroup.lairActions ? Renderer.monster.getCompactRenderedStringSection(legGroup, renderer, "Lair Actions", "lairActions", 1) : ""}
-			${legGroup && legGroup.regionalEffects ? Renderer.monster.getCompactRenderedStringSection(legGroup, renderer, "Regional Effects", "regionalEffects", 1) : ""}
+			${legGroup && legGroup.lairActions ? Renderer.monster.getCompactRenderedStringSection(legGroup, renderer, "巢穴动作", "lairActions", 1) : ""}
+			${legGroup && legGroup.regionalEffects ? Renderer.monster.getCompactRenderedStringSection(legGroup, renderer, "区域效应", "regionalEffects", 1) : ""}
 			${mon.variant || (mon.dragonCastingColor && !mon.spellcasting) ? `
 			<tr class="text compact"><td colspan="6">
 			${mon.variant ? mon.variant.map(it => it.rendered || renderer.render(it)).join("") : ""}

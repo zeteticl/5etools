@@ -810,7 +810,7 @@ class BestiaryPage extends ListPage {
 			const $headerControls = isImageTab ? null : (() => {
 				const actions = [
 					new ContextUtil.Action(
-						"Copy as JSON",
+						"以 JSON 格式复制",
 						async () => {
 							const fluffEntries = await pGetFluffEntries();
 							MiscUtil.pCopyTextToClipboard(JSON.stringify(fluffEntries, null, "\t"));
@@ -818,7 +818,7 @@ class BestiaryPage extends ListPage {
 						},
 					),
 					new ContextUtil.Action(
-						"Copy as Markdown",
+						"以 Markdown 格式复制",
 						async () => {
 							const fluffEntries = await pGetFluffEntries();
 							const rendererMd = RendererMarkdown.get().setFirstSection(true);
