@@ -209,11 +209,14 @@ class BookUtil {
 
 		if (sectionHeader && ~BookUtil.curRender.chapter) {
 			const $allSects = $(`.${Renderer.HEAD_NEG_1}`);
+			const cleanSectionHead = sectionHeader.trim().toLowerCase();
 			const $toShow = $allSects.filter((i, e) => {
 				const $e = $(e);
-				const cleanSectionHead = sectionHeader.trim().toLowerCase();
 				const $match = $e.children(`.rd__h`).find(`span.entry-title-inner`).filter(`:textEquals("${cleanSectionHead}")`);
-				return $match.length;
+				const $matchChnOnly = $e.children(`.rd__h`).find(`span.entry-title-inner`).filter(function () {
+					return $(this).contents().get(0).nodeValue.toLowerCase().trim() === cleanSectionHead;
+				});
+				return $match.length + $matchChnOnly.length;
 			});
 
 			if ($toShow.length) {
@@ -432,8 +435,7 @@ class BookUtil {
 		});
 		$body.on(`click`, `.entry-title-inner`, async function (evt) {
 			const $this = $(this);
-			const mod_text = $this.html().replace(/<st .+>/, "");
-			const text = mod_text.trim().replace(/\.$/, "");
+			const text = $this.text().trim().replace(/\.$/, "");
 
 			if (evt.shiftKey) {
 				await MiscUtil.pCopyTextToClipboard(text);
