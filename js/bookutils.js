@@ -343,7 +343,7 @@ class BookUtil {
 			$btnPrev
 				.toggle(showPrev)
 				.appendTo(BookUtil.$wrpFloatControls)
-				.title("上一张");
+				.title("上一章");
 			BookUtil.curRender.controls.$btnsPrv.push($btnPrev);
 
 			let $btnNext;
