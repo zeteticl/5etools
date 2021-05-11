@@ -1725,7 +1725,7 @@ class ClassesPage extends BaseComponent {
 	}
 
 	static _render_$getTrNoContent () {
-		return $(`<tr class="cls-main__msg-no-content"><td colspan="6">Toggle a button to view class and subclass information</td></tr>`);
+		return $(`<tr class="cls-main__msg-no-content"><td colspan="6">切换任一按钮来查看职业和子职信息</td></tr>`);
 	}
 
 	_getDefaultState () { return MiscUtil.copy(ClassesPage._DEFAULT_STATE); }
