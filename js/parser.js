@@ -1342,7 +1342,7 @@ Parser.monCrToFull = function (cr, {xp = null, isMythic = false} = {}) {
 	} else {
 		const stack = [Parser.monCrToFull(cr.cr, {xp: cr.xp, isMythic})];
 		if (cr.lair) stack.push(`当遭遇于巢穴时 ${Parser.monCrToFull(cr.lair)}`);
-		if (cr.coven) stack.push(`当做为鬼婆集会一员时 ${Parser.monCrToFull(cr.coven)}`);
+		if (cr.coven) stack.push(`当作为鬼婆集会一员时 ${Parser.monCrToFull(cr.coven)}`);
 		return stack.joinConjunct("、", "或");
 	}
 };

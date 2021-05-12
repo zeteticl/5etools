@@ -15,7 +15,7 @@ class RenderRaces {
 		${race._isBaseRace ? `<tr class="text"><td colspan="6">${renderer.render({type: "entries", entries: race._baseRaceEntries}, 1)}</td></tr>` : `<tr class="text"><td colspan="6">${renderer.render({type: "entries", entries: race.entries}, 1)}</td></tr>`}
 
 		${race.traitTags && race.traitTags.includes("NPC Race") ? `<tr class="text"><td colspan="6"><section class="text-muted">
-			${renderer.render(`{@i 注记： 这个种族被记载于{@i 《地下城主指南》}以做为创造非玩家角色的选项。它并非被设计做为玩家可用的种族。}`, 2)}
+			${renderer.render(`{@i 注记： 这个种族被记载于{@i 《地下城主指南》}以作为创造非玩家角色的选项。它并非被设计作为玩家可用的种族。}`, 2)}
 		 </section></td></tr>` : ""}
 
 		${$ptHeightWeight ? $$`<tr class="text"><td colspan="6"><hr class="rd__hr">${$ptHeightWeight}</td></tr>` : ""}
