@@ -240,10 +240,12 @@ class Board {
 		await (async () => {
 			const data = await DataUtil.loadJSON("data/generated/bookref-dmscreen-index.json");
 			this.availRules.ALL = elasticlunr(function () {
+				this.use(lunr.ja);
 				this.addField("b");
 				this.addField("s");
 				this.addField("p");
 				this.addField("n");
+				this.addField("cn");
 				this.addField("h");
 				this.setRef("id");
 			});
@@ -268,8 +270,10 @@ class Board {
 			adventureOrBookIdToSource[dataProp] = adventureOrBookIdToSource[dataProp] || {};
 
 			indexStorage.ALL = elasticlunr(function () {
+				this.use(lunr.ja);
 				this.addField(indexIdField);
 				this.addField("c");
+				this.addField("cn");
 				this.addField("n");
 				this.addField("p");
 				this.addField("o");
@@ -282,9 +286,11 @@ class Board {
 				adventureOrBookIdToSource[dataProp][adventureOrBook.id] = adventureOrBook.source;
 
 				indexStorage[adventureOrBook.id] = elasticlunr(function () {
+					this.use(lunr.ja);
 					this.addField(indexIdField);
 					this.addField("c");
 					this.addField("n");
+					this.addField("cn");
 					this.addField("p");
 					this.addField("o");
 					this.setRef("id");
@@ -902,7 +908,7 @@ class Panel {
 		return p;
 	}
 
-	static _get$eleLoading (message = "Loading") {
+	static _get$eleLoading (message = "加载中") {
 		return $(`<div class="panel-content-wrapper-inner"><div class="ui-search__message loading-spinner"><i>${message}...</i></div></div>`);
 	}
 
@@ -2590,7 +2596,7 @@ class AddMenuImageTab extends AddMenuTab {
 
 			// region Imgur
 			const $wrpImgur = $(`<div class="ui-modal__row"/>`).appendTo($tab);
-			$(`<span>Imgur (Anonymous Upload) <i class="text-muted">(accepts <a href="https://help.imgur.com/hc/articles/115000083326" target="_blank" rel="noopener noreferrer">imgur-friendly formats</a>)</i></span>`).appendTo($wrpImgur);
+			$(`<span>Imgur （匿名上传） <i class="text-muted">（接受 <a href="https://help.imgur.com/hc/articles/115000083326" target="_blank" rel="noopener noreferrer">imgur 友好格式</a>）</i></span>`).appendTo($wrpImgur);
 			const $iptFile = $(`<input type="file" class="hidden">`).on("change", (evt) => {
 				const input = evt.target;
 				const reader = new FileReader();
@@ -2635,7 +2641,7 @@ class AddMenuImageTab extends AddMenuTab {
 				const ix = this.menu.pnl.doPopulate_Loading("Uploading"); // will be null if not in tabbed mode
 				this.menu.doClose();
 			}).appendTo($tab);
-			const $btnAdd = $(`<button class="btn btn-primary btn-sm">Upload</button>`).appendTo($wrpImgur);
+			const $btnAdd = $(`<button class="btn btn-primary btn-sm">上传</button>`).appendTo($wrpImgur);
 			$btnAdd.on("click", () => {
 				$iptFile.click();
 			});
@@ -2643,12 +2649,12 @@ class AddMenuImageTab extends AddMenuTab {
 
 			// region URL
 			const $wrpUtl = $(`<div class="ui-modal__row"/>`).appendTo($tab);
-			const $iptUrl = $(`<input class="form-control" placeholder="Paste image URL">`)
+			const $iptUrl = $(`<input class="form-control" placeholder="粘贴图片 URL">`)
 				.on("keydown", (e) => {
 					if (e.which === 13) $btnAddUrl.click();
 				})
 				.appendTo($wrpUtl);
-			const $btnAddUrl = $(`<button class="btn btn-primary btn-sm">加入</button>`).appendTo($wrpUtl);
+			const $btnAddUrl = $(`<button class="btn btn-primary btn-sm">添加</button>`).appendTo($wrpUtl);
 			$btnAddUrl.on("click", () => {
 				let url = $iptUrl.val().trim();
 				if (url) {
@@ -2656,7 +2662,7 @@ class AddMenuImageTab extends AddMenuTab {
 					this.menu.doClose();
 				} else {
 					JqueryUtil.doToast({
-						content: `请输入URL！`,
+						content: `请输入 URL！`,
 						type: "danger",
 					});
 				}
@@ -2666,11 +2672,11 @@ class AddMenuImageTab extends AddMenuTab {
 			$(`<hr class="ui-modal__row-sep"/>`).appendTo($tab);
 
 			// region Adventure dynamic viewer
-			const $btnSelectAdventure = $(`<button class="btn btn-primary btn-sm">Add</button>`)
+			const $btnSelectAdventure = $(`<button class="btn btn-primary btn-sm">添加</button>`)
 				.click(() => DmMapper.pHandleMenuButtonClick(this.menu));
 
 			$$`<div class="ui-modal__row">
-				<div>Adventure Map Dynamic Viewer</div>
+				<div>冒险地图动态查看器</div>
 				${$btnSelectAdventure}
 			</div>`.appendTo($tab)
 			// endregion
@@ -2690,8 +2696,8 @@ class AddMenuSpecialTab extends AddMenuTab {
 		if (!this.$tab) {
 			const $tab = $(`<div class="ui-search__wrp-output underline-tabs overflow-y-auto pr-1" id="${this.tabId}"/>`);
 
-			const $wrpRoller = $(`<div class="ui-modal__row"><span>掷骰工具<i class="text-muted">(将掷骰工具钉到皮肤上)</i></span></div>`).appendTo($tab);
-			const $btnRoller = $(`<button class="btn btn-primary btn-sm">Pin</button>`).appendTo($wrpRoller);
+			const $wrpRoller = $(`<div class="ui-modal__row"><span>掷骰工具<i class="text-muted">（将掷骰工具钉到帷幕上）</i></span></div>`).appendTo($tab);
+			const $btnRoller = $(`<button class="btn btn-primary btn-sm">钉</button>`).appendTo($wrpRoller);
 			$btnRoller.on("click", () => {
 				Renderer.dice.bindDmScreenPanel(this.menu.pnl);
 				this.menu.doClose();
@@ -2699,27 +2705,27 @@ class AddMenuSpecialTab extends AddMenuTab {
 			$(`<hr class="ui-modal__row-sep"/>`).appendTo($tab);
 
 			const $wrpTracker = $(`<div class="ui-modal__row"><span>先攻追踪器</span></div>`).appendTo($tab);
-			const $btnTracker = $(`<button class="btn btn-primary btn-sm">加入</button>`).appendTo($wrpTracker);
+			const $btnTracker = $(`<button class="btn btn-primary btn-sm">添加</button>`).appendTo($wrpTracker);
 			$btnTracker.on("click", () => {
 				this.menu.pnl.doPopulate_InitiativeTracker();
 				this.menu.doClose();
 			});
 
-			const $btnPlayertracker = $(`<button class="btn btn-primary btn-sm">Add</button>`)
+			const $btnPlayertracker = $(`<button class="btn btn-primary btn-sm">添加</button>`)
 				.click(() => {
 					this.menu.pnl.doPopulate_InitiativeTrackerPlayer();
 					this.menu.doClose();
 				});
 
 			$$`<div class="ui-modal__row">
-			<span>先攻追踪器:玩家查看页</span>
+			<span>先攻追踪器：玩家查看页</span>
 			${$btnPlayertracker}
 			</div>`.appendTo($tab);
 
 			$(`<hr class="ui-modal__row-sep"/>`).appendTo($tab);
 
-			const $wrpText = $(`<div class="ui-modal__row"><span>基础文本方块 <i class="text-muted">(for a feature-rich editor, embed a Google Doc or similar)</i></span></div>`).appendTo($tab);
-			const $btnText = $(`<button class="btn btn-primary btn-sm">Add</button>`).appendTo($wrpText);
+			const $wrpText = $(`<div class="ui-modal__row"><span>基础文本块 <i class="text-muted">（如需功能齐全编辑器，可嵌入 Google Doc 或类似编辑器）</i></span></div>`).appendTo($tab);
+			const $btnText = $(`<button class="btn btn-primary btn-sm">添加</button>`).appendTo($wrpText);
 			$btnText.on("click", () => {
 				this.menu.pnl.doPopulate_TextBox();
 				this.menu.doClose();
@@ -2727,21 +2733,21 @@ class AddMenuSpecialTab extends AddMenuTab {
 			$(`<hr class="ui-modal__row-sep"/>`).appendTo($tab);
 
 			const $wrpUnitConverter = $(`<div class="ui-modal__row"><span>英制-公制单位转换器</span></div>`).appendTo($tab);
-			const $btnUnitConverter = $(`<button class="btn btn-primary btn-sm">加入</button>`).appendTo($wrpUnitConverter);
+			const $btnUnitConverter = $(`<button class="btn btn-primary btn-sm">添加</button>`).appendTo($wrpUnitConverter);
 			$btnUnitConverter.on("click", () => {
 				this.menu.pnl.doPopulate_UnitConverter();
 				this.menu.doClose();
 			});
 
 			const $wrpMoneyConverter = $(`<div class="ui-modal__row"><span>货币转换器</span></div>`).appendTo($tab);
-			const $btnMoneyConverter = $(`<button class="btn btn-primary btn-sm">加入</button>`).appendTo($wrpMoneyConverter);
+			const $btnMoneyConverter = $(`<button class="btn btn-primary btn-sm">添加</button>`).appendTo($wrpMoneyConverter);
 			$btnMoneyConverter.on("click", () => {
 				this.menu.pnl.doPopulate_MoneyConverter();
 				this.menu.doClose();
 			});
 
-			const $wrpCounter = $(`<div class="ui-modal__row"><span>Counter</span></div>`).appendTo($tab);
-			const $btnCounter = $(`<button class="btn btn-primary btn-sm">Add</button>`).appendTo($wrpCounter);
+			const $wrpCounter = $(`<div class="ui-modal__row"><span>计数器</span></div>`).appendTo($tab);
+			const $btnCounter = $(`<button class="btn btn-primary btn-sm">添加</button>`).appendTo($wrpCounter);
 			$btnCounter.on("click", () => {
 				this.menu.pnl.doPopulate_Counter();
 				this.menu.doClose();
@@ -2749,8 +2755,8 @@ class AddMenuSpecialTab extends AddMenuTab {
 
 			$(`<hr class="ui-modal__row-sep"/>`).appendTo($tab);
 
-			const $wrpTimeTracker = $(`<div class="ui-modal__row"><span>In-Game Clock/Calendar</span></div>`).appendTo($tab);
-			const $btnTimeTracker = $(`<button class="btn btn-primary btn-sm">Add</button>`).appendTo($wrpTimeTracker);
+			const $wrpTimeTracker = $(`<div class="ui-modal__row"><span>游戏内时钟/日历</span></div>`).appendTo($tab);
+			const $btnTimeTracker = $(`<button class="btn btn-primary btn-sm">添加</button>`).appendTo($wrpTimeTracker);
 			$btnTimeTracker.on("click", () => {
 				this.menu.pnl.doPopulate_TimeTracker();
 				this.menu.doClose();
@@ -2758,8 +2764,8 @@ class AddMenuSpecialTab extends AddMenuTab {
 
 			$(`<hr class="ui-modal__row-sep"/>`).appendTo($tab);
 
-			const $wrpBlank = $(`<div class="ui-modal__row"><span class="help" title="For those who don't like plus signs.">Blank Space</span></div>`).appendTo($tab);
-			$(`<button class="btn btn-primary btn-sm">Add</button>`)
+			const $wrpBlank = $(`<div class="ui-modal__row"><span class="help" title="为不喜欢加号标志的人提供。">空格</span></div>`).appendTo($tab);
+			$(`<button class="btn btn-primary btn-sm">添加</button>`)
 				.on("click", () => {
 					this.menu.pnl.doPopulate_Blank();
 					this.menu.doClose();
@@ -2777,7 +2783,7 @@ class AddMenuSearchTab extends AddMenuTab {
 			case "content": return "内容";
 			case "rule": return "规则";
 			case "adventure": return "冒险模组";
-			case "book": return "Books";
+			case "book": return "书籍";
 			default: throw new Error(`Unhandled search tab subtype: "${subType}"`);
 		}
 	}
@@ -2804,6 +2810,7 @@ class AddMenuSearchTab extends AddMenuTab {
 				fields: {
 					n: {boost: 5, expand: true},
 					s: {expand: true},
+					cn: {boost: 5, expand: true},
 				},
 				bool: "AND",
 				expand: true,
@@ -2812,6 +2819,7 @@ class AddMenuSearchTab extends AddMenuTab {
 				fields: {
 					h: {boost: 5, expand: true},
 					s: {expand: true},
+					cn: {boost: 5, expand: true},
 				},
 				bool: "AND",
 				expand: true,
@@ -2821,6 +2829,7 @@ class AddMenuSearchTab extends AddMenuTab {
 				fields: {
 					c: {boost: 5, expand: true},
 					n: {expand: true},
+					cn: {boost: 5, expand: true},
 				},
 				bool: "AND",
 				expand: true,
@@ -2833,7 +2842,7 @@ class AddMenuSearchTab extends AddMenuTab {
 		switch (this.subType) {
 			case "content": return $(`
 				<div class="ui-search__row" tabindex="0">
-					<span>${r.doc.n}</span>
+					<span>${r.doc.cn || r.doc.n}</span>
 					<span>${r.doc.s ? `<i title="${Parser.sourceJsonToFull(r.doc.s)}">${Parser.sourceJsonToAbv(r.doc.s)}${r.doc.p ? ` p${r.doc.p}` : ""}</i>` : ""}</span>
 				</div>
 			`);
@@ -2955,7 +2964,7 @@ class AddMenuSearchTab extends AddMenuTab {
 
 				if (resultCount > UiUtil.SEARCH_RESULTS_CAP) {
 					const diff = resultCount - UiUtil.SEARCH_RESULTS_CAP;
-					this.$results.append(`<div class="ui-search__row ui-search__row--readonly">...${diff} more result${diff === 1 ? " was" : "s were"} hidden. Refine your search!</div>`);
+					this.$results.append(`<div class="ui-search__row ui-search__row--readonly">...${diff} 条结果被隐藏。完善你的搜索！</div>`);
 				}
 			} else {
 				if (!srch.trim()) this.showMsgIpt();
@@ -2980,7 +2989,7 @@ class AddMenuSearchTab extends AddMenuTab {
 				this.doSearch();
 			});
 
-			const $srch = $(`<input class="ui-search__ipt-search search form-control" autocomplete="off" placeholder="搜索...(只能搜索英文)">`).blurOnEsc().appendTo($wrpCtrls);
+			const $srch = $(`<input class="ui-search__ipt-search search form-control" autocomplete="off" placeholder="搜索...">`).blurOnEsc().appendTo($wrpCtrls);
 			const $results = $(`<div class="ui-search__wrp-results"/>`).appendTo($tab);
 
 			SearchWidget.bindAutoSearch($srch, {

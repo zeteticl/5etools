@@ -143,11 +143,11 @@ class MoneyConverter {
 			board.doSaveStateDebounced();
 		};
 
-		const buildCurrency$Select = (isOutput) => $(`<select class="form-control input-sm" style="padding: 5px">${isOutput ? `<option value="-1">(No conversion)</option>` : ""}${CURRENCY.map((c, i) => `<option value="${i}">${c.n}</option>`).join("")}</select>`);
+		const buildCurrency$Select = (isOutput) => $(`<select class="form-control input-sm" style="padding: 5px">${isOutput ? `<option value="-1">（无转换）</option>` : ""}${CURRENCY.map((c, i) => `<option value="${i}">${c.n}</option>`).join("")}</select>`);
 
 		const addRow = (currency, count) => {
 			const $row = $(`<div class="dm-money__row"/>`).appendTo($wrpRows);
-			const $iptCount = $(`<input type="number" step="1" placeholder="Coins" class="form-control input-sm">`).appendTo($row).change(doUpdate);
+			const $iptCount = $(`<input type="number" step="1" placeholder="钱币" class="form-control input-sm">`).appendTo($row).change(doUpdate);
 			if (count != null) $iptCount.val(count);
 			const $selCurrency = buildCurrency$Select().appendTo($row).change(doUpdate);
 			$selCurrency.val(currency == null ? DEFAULT_CURRENCY : currency);
@@ -187,7 +187,7 @@ class MoneyConverter {
 			});
 
 		const $wrpCtrlRhs = $(`<div class="dm-money__ctrl__rhs split-child" style="width: 33%;"/>`).appendTo($wrpCtrl);
-		const $iptSplit = $(`<input type="number" min="1" step="1" placeholder="Split Between..." class="form-control input-sm">`).appendTo($wrpCtrlRhs).change(doUpdate);
+		const $iptSplit = $(`<input type="number" min="1" step="1" placeholder="分拆..." class="form-control input-sm">`).appendTo($wrpCtrlRhs).change(doUpdate);
 		const $selOut = buildCurrency$Select(true).appendTo($wrpCtrlRhs).change(doUpdate);
 
 		$wrpConverter.data("getState", () => {

@@ -134,6 +134,7 @@ class CreatureBuilder extends Builder {
 
 		this._jsonCreatureTraits = [...jsonCreature.makebrewCreatureTrait, ...(BrewUtil.homebrew.makebrewCreatureTrait || [])];
 		this._indexedTraits = elasticlunr(function () {
+			this.use(lunr.ja);
 			this.addField("n");
 			this.setRef("id");
 		});

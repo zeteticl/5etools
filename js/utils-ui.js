@@ -656,7 +656,6 @@ class ListUiUtil {
 		} else {
 			// on a normal click, or if there's been no initial selection, just toggle the checkbox
 
-
 			const cbMaster = this._getCb(item, opts);
 			if (cbMaster) {
 				cbMaster.checked = !cbMaster.checked;
@@ -1127,7 +1126,9 @@ class SearchUiUtil {
 		const fromDeepIndex = (d) => d.d; // flag for "deep indexed" content that refers to the same item
 
 		availContent.ALL = elasticlunr(function () {
+			this.use(lunr.ja);
 			this.addField("n");
+			this.addField("cn");
 			this.addField("s");
 			this.setRef("id");
 		});
@@ -1139,7 +1140,9 @@ class SearchUiUtil {
 		const initIndexForFullCat = (doc) => {
 			if (!availContent[doc.cf]) {
 				availContent[doc.cf] = elasticlunr(function () {
+					this.use(lunr.ja);
 					this.addField("n");
+					this.addField("cn");
 					this.addField("s");
 					this.setRef("id");
 				});
@@ -1149,7 +1152,7 @@ class SearchUiUtil {
 
 		const handleDataItem = (d, isAlternate) => {
 			if (SearchUiUtil._isNoHoverCat(d.c) || fromDeepIndex(d)) return;
-			d.cf = d.c === Parser.CAT_ID_CREATURE ? "生物(Creature)" : Parser.pageCategoryToFull(d.c);
+			d.cf = d.c === Parser.CAT_ID_CREATURE ? "生物" : Parser.pageCategoryToFull(d.c);
 			if (isAlternate) d.cf = `alt_${d.cf}`;
 			initIndexForFullCat(d);
 			if (!isAlternate) availContent.ALL.addDoc(d);
@@ -1169,7 +1172,7 @@ class SearchUiUtil {
 		brewIndex.forEach(d => {
 			if (SearchUiUtil._isNoHoverCat(d.c) || fromDeepIndex(d)) return;
 			d.cf = Parser.pageCategoryToFull(d.c);
-			d.cf = d.c === Parser.CAT_ID_CREATURE ? "生物(Creature)" : Parser.pageCategoryToFull(d.c);
+			d.cf = d.c === Parser.CAT_ID_CREATURE ? "生物" : Parser.pageCategoryToFull(d.c);
 			initIndexForFullCat(d);
 			availContent.ALL.addDoc(d);
 			availContent[d.cf].addDoc(d);
@@ -1332,6 +1335,7 @@ class SearchWidget {
 		return this._searchOptions || {
 			fields: {
 				n: {boost: 5, expand: true},
+				cn: {boost: 5, expand: true},
 				s: {expand: true},
 			},
 			bool: "AND",
@@ -1341,7 +1345,7 @@ class SearchWidget {
 
 	__$getRow (r) {
 		return $(`<div class="ui-search__row" tabindex="0">
-			<span>${r.doc.n}</span>
+			<span>${r.doc.cn || r.doc.n}</span>
 			<span>${r.doc.s ? `<i title="${Parser.sourceJsonToFull(r.doc.s)}">${Parser.sourceJsonToAbv(r.doc.s)}${r.doc.p ? ` p${r.doc.p}` : ""}</i>` : ""}</span>
 		</div>`);
 	}
@@ -1633,7 +1637,7 @@ class SearchWidget {
 
 	static async pGetUserAdventureSearch (opts) {
 		await SearchWidget.pLoadCustomIndex("entity_Adventures", `${Renderer.get().baseUrl}data/adventures.json`, "adventure", Parser.CAT_ID_ADVENTURE, UrlUtil.PG_ADVENTURE, "adventures");
-		return SearchWidget.pGetUserEntitySearch("Select Adventure", "entity_Adventures", opts);
+		return SearchWidget.pGetUserEntitySearch("选择冒险", "entity_Adventures", opts);
 	}
 
 	static async pGetUserCreatureSearch () {
@@ -1759,6 +1763,7 @@ class SearchWidget {
 
 	static async _pGetIndex (dataSource, prop, catId, page) {
 		const index = elasticlunr(function () {
+			this.use(lunr.ja);
 			this.addField("n");
 			this.addField("s");
 			this.setRef("id");
