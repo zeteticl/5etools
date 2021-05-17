@@ -671,7 +671,7 @@ class StatGenUi extends BaseComponent {
 
 		const $wrpRace = $(`<div class="flex"></div>`);
 		const $wrpRaceOuter = $$`<div class="flex-col">
-			<div class="my-1 statgen-pb__header statgen-pb__header--group mr-3 text-center italic">Race</div>
+			<div class="my-1 statgen-pb__header statgen-pb__header--group mr-3 text-center italic">种族</div>
 
 			${$wrpRace}
 		</div>`;
@@ -1068,7 +1068,7 @@ class StatGenUi extends BaseComponent {
 			});
 
 			$ptBase = $$`<div class="flex-col mr-3">
-				<div class="my-1 statgen-pb__header flex-vh-center">Static</div>
+				<div class="my-1 statgen-pb__header flex-vh-center">静态</div>
 				${$wrpsRace}
 			</div>`
 		}
