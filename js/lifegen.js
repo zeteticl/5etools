@@ -89,7 +89,7 @@ function getPersonDetails (opts) {
 				return resultLast ? resultLast.result : "";
 			})();
 
-			out.unshift(`<i><b title="Generated using the random name tables found in Xanathar's Guide to Everything">Name:</b> ${resultFirst.result}${lastName ? ` ${lastName}` : ""}</i>`);
+			out.unshift(`<i><b title="使用姗娜萨的万事指南中的随机姓名表生成">名字：</b> ${resultFirst.result}${lastName ? ` ${lastName}` : ""}</i>`);
 		}
 	}
 
@@ -100,7 +100,7 @@ function getPersonDetails (opts) {
 	const relate = rollSuppRelationship().result;
 	const out = [
 		`<b>阵营：</b> ${align}`,
-		opts.isAdventurer ? `<b>工作职业：</b> ${cls}` : `<b>Occupation:</b> ${occ}`,
+		opts.isAdventurer ? `<b>工作职业：</b> ${cls}` : `<b>职业：</b> ${occ}`,
 		`<b>关系：</b> ${relate}`,
 	];
 	if (!opts.isParent) {
@@ -114,13 +114,13 @@ function getPersonDetails (opts) {
 			else return rollSuppRace().result;
 		})() : rollSuppRace().result;
 
-		out.unshift(`<i><b>Race:</b> ${race}</i>`);
+		out.unshift(`<i><b>种族：</b> ${race}</i>`);
 		const gender = opts.gender ? opts.gender : rollUnofficialGender().result;
-		out.unshift(`<i><b>Gender:</b> ${gender}</i>`);
+		out.unshift(`<i><b>性别：</b> ${gender}</i>`);
 
 		addName(race, gender);
 	} else if (opts.race) {
-		addName(opts.race, opts.gender || "Other");
+		addName(opts.race, opts.gender || "其他");
 	}
 	return out;
 }
@@ -262,7 +262,7 @@ const FAMILY = [
 ];
 
 const ABSENT_PARENT = [
-	{min: 1, result: () => `你父母双亡 (${rollSuppDeath().result.lowercaseFirst()})。`, display: "你父母双亡 (roll on the {@table Supplemental Tables; Cause of Death|XGE|Cause of Death} supplemental table)."},
+	{min: 1, result: () => `你父母双亡 (${rollSuppDeath().result.lowercaseFirst()})。`, display: "你父母双亡（使用{@table Supplemental Tables; Cause of Death|XGE|死因}补充表掷骰）。"},
 	{min: 2, result: () => `你的父母被监禁、奴役、或因为其他原因而被带走 ${choose("监禁", "奴役", "其他原因")}。`, display: "你的父母被监禁、奴役、或因为其他原因而被带走。"},
 	{min: 3, result: "你的父母遗弃了你。"},
 	{min: 4, result: "你的父母不知去向。"},
@@ -579,7 +579,7 @@ function onJsonLoad (lifeData, nameData) {
 	$selRace.append(`<option value="Other">其他</option>`);
 	RACES_SELECTABLE.forEach(r => $selRace.append(`<option value="${r}">${r}</option>`));
 	RACES_UNSELECTABLE.forEach(r => $selRace.append(`<option class="italic" value="${r}">${Parser.RaceToDisplay(r)}</option>`));
-	$selCha.append(`<option value="Random">Random</option>`);
+	$selCha.append(`<option value="Random">随机</option>`);
 	for (let i = -5; i <= 5; ++i) {
 		$selCha.append(`<option value="${i}" ${i === 0 ? "selected" : ""}>${i >= 0 ? "+" : ""}${i}</option>`)
 	}
@@ -589,13 +589,13 @@ function onJsonLoad (lifeData, nameData) {
 	classList.forEach((c, i) => $selClass.append(`<option value="${i}">${c.name}</option>`));
 
 	[
-		{val: "", text: "Random", style: "font-style: normal;"},
-		{val: "1", text: "20 years or younger", class: "italic"},
-		{val: "21", text: "21&mdash;30 years", class: "italic"},
-		{val: "60", text: "31&mdash;40 years", class: "italic"},
-		{val: "70", text: "41&mdash;50 years", class: "italic"},
-		{val: "90", text: "51&mdash;60 years", class: "italic"},
-		{val: "100", text: "61 years or older", class: "italic"},
+		{val: "", text: "随机", style: "font-style: normal;"},
+		{val: "1", text: "20 岁或更小", class: "italic"},
+		{val: "21", text: "21&mdash;30 岁", class: "italic"},
+		{val: "60", text: "31&mdash;40 岁", class: "italic"},
+		{val: "70", text: "41&mdash;50 岁", class: "italic"},
+		{val: "90", text: "51&mdash;60 岁", class: "italic"},
+		{val: "100", text: "61 岁或更老", class: "italic"},
 	].forEach(age => $selAge.append(`<option value="${age.val}" ${age.style ? `style="${age.style}"` : ""} ${age.class ? `class="${age.class}"` : ""}>${age.text}</option>`));
 
 	nameTables = {};
@@ -694,9 +694,9 @@ function sectParents () {
 	}
 
 	if (selRace === "Other") {
-		$parents.html(concatSentences(`<b>种族：</b> 其他 ${fmtChoice(`${Parser.RaceToDisplay(race)}; 使用{@table Supplemental Tables; Race|XGE|Supplemental Race}表生成`, true)}`, knowParentsStr, parentage));
+		$parents.html(concatSentences(`<b>种族：</b> 其他 ${fmtChoice(`${Parser.RaceToDisplay(race)}; 使用{@table Supplemental Tables; Race|XGE|补充种族}表生成`, true)}`, knowParentsStr, parentage));
 	} else {
-		$parents.html(concatSentences(`<b>种族：</b> ${Parser.RaceToDisplay(race)}${selRace === "Random" ? ` ${fmtChoice("使用{@table Supplemental Tables; Race|XGE|Supplemental Race}表生成", true)}` : ""}`, knowParentsStr, parentage));
+		$parents.html(concatSentences(`<b>种族：</b> ${Parser.RaceToDisplay(race)}${selRace === "Random" ? ` ${fmtChoice("使用{@table Supplemental Tables; Race|XGE|补充种族}表生成", true)}` : ""}`, knowParentsStr, parentage));
 	}
 
 	if (knowParents) {
@@ -775,10 +775,10 @@ function sectSiblings () {
 		$siblings.empty();
 		$siblings.append(`<p>你有 ${sibCount} 个兄弟姊妹。</p>`);
 		for (let i = 0; i < sibCount; ++i) {
-			const siblingType = rollOnArray(["brother", "sister"]);
-			$siblings.append(`<h5>${getBirthOrder()} sibling ${fmtChoice(siblingType, true)}</h5>`);
+			const siblingType = rollOnArray(["兄弟", "姐妹"]);
+			$siblings.append(`<h5>${getBirthOrder()} 平辈 ${fmtChoice(siblingType, true)}</h5>`);
 			$siblings.append(joinParaList(getPersonDetails({
-				gender: siblingType === "brother" ? "Male" : "Female",
+				gender: siblingType === "兄弟" ? "男性" : "女性",
 				parentRaces: parentRaces,
 				isSibling: true,
 			})));
