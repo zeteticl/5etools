@@ -1514,7 +1514,7 @@ class SearchWidget {
 
 		const toAdd = Omnidexer.decompressIndex(indexer.getIndex());
 		toAdd.forEach(d => {
-			d.cf = d.c === Parser.CAT_ID_CREATURE ? "生物(Creature)" : Parser.pageCategoryToFull(d.c);
+			d.cf = d.c === Parser.CAT_ID_CREATURE ? "生物" : Parser.pageCategoryToFull(d.c);
 			SearchWidget.CONTENT_INDICES.ALL.addDoc(d);
 			SearchWidget.CONTENT_INDICES[d.cf].addDoc(d);
 		});

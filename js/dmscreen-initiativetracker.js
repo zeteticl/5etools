@@ -503,10 +503,10 @@ class InitiativeTracker {
 			const {$modalInner, doClose} = UiUtil.getShowModal();
 
 			const $controls = $(`<div class="split" style="flex-shrink: 0"/>`).appendTo($modalInner);
-			const $iptSearch = $(`<input class="ui-search__ipt-search search form-control" autocomplete="off" placeholder="搜索...(只能搜索英文)">`).blurOnEsc().appendTo($controls);
+			const $iptSearch = $(`<input class="ui-search__ipt-search search form-control" autocomplete="off" placeholder="搜索...">`).blurOnEsc().appendTo($controls);
 			const $wrpCount = $(`
 				<div class="ui-search__ipt-search-sub-wrp" style="padding-right: 0;">
-					<div style="margin-right: 7px;">Add</div>
+					<div style="margin-right: 7px;">添加</div>
 					<label class="ui-search__ipt-search-sub-lbl"><input type="radio" name="mon-count" class="ui-search__ipt-search-sub-ipt" value="1" checked> 1</label>
 					<label class="ui-search__ipt-search-sub-lbl"><input type="radio" name="mon-count" class="ui-search__ipt-search-sub-ipt" value="2"> 2</label>
 					<label class="ui-search__ipt-search-sub-lbl"><input type="radio" name="mon-count" class="ui-search__ipt-search-sub-ipt" value="3"> 3</label>
@@ -547,10 +547,11 @@ class InitiativeTracker {
 				const srch = $iptSearch.val().trim();
 				const MAX_RESULTS = 75; // hard cap results
 
-				const index = board.availContent["生物(Creature)"];
+				const index = board.availContent["生物"];
 				const results = index.search(srch, {
 					fields: {
 						n: {boost: 5, expand: true},
+						cn: {boost: 5, expand: true},
 						s: {expand: true},
 					},
 					bool: "AND",
@@ -591,7 +592,7 @@ class InitiativeTracker {
 					const $getRow = (r) => {
 						return $(`
 							<div class="ui-search__row" tabindex="0">
-								<span>${r.doc.n}</span>
+								<span>${r.doc.cn || r.doc.n}</span>
 								<span>${r.doc.s ? `<i title="${Parser.sourceJsonToFull(r.doc.s)}">${Parser.sourceJsonToAbv(r.doc.s)}${r.doc.p ? ` p${r.doc.p}` : ""}</i>` : ""}</span>
 							</div>
 						`);
@@ -613,7 +614,7 @@ class InitiativeTracker {
 
 					if (resultCount > MAX_RESULTS) {
 						const diff = resultCount - MAX_RESULTS;
-						$results.append(`<div class="ui-search__row ui-search__row--readonly">...${diff} more result${diff === 1 ? " was" : "s were"} hidden. Refine your search!</div>`);
+						$results.append(`<div class="ui-search__row ui-search__row--readonly">...${diff} 条结果被隐藏。完善你的搜索！</div>`);
 					}
 				} else {
 					if (!srch.trim()) showMsgIpt();
