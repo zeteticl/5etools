@@ -160,8 +160,8 @@ class NavBar {
 		addDivider(ulUtils);
 		addLi(ulUtils, "roll20.html", "Roll20 脚本小帮手");
 		addDivider(ulUtils);
-		addLi(ulUtils, "changelog.html", "Changelog");
-		addLi(ulUtils, `https://wiki.5e.tools/index.php/Page:_${NavBar.getCurrentPage().replace(/.html$/i, "")}`, "Help", {isExternal: true});
+		addLi(ulUtils, "changelog.html", "更新日志");
+		addLi(ulUtils, `https://wiki.5e.tools/index.php/Page:_${NavBar.getCurrentPage().replace(/.html$/i, "")}`, "帮助", {isExternal: true});
 		addDivider(ulUtils);
 		addLi(ulUtils, "privacy-policy.html", "隐私政策");
 
@@ -186,7 +186,7 @@ class NavBar {
 		addButton(
 			ulSettings,
 			{
-				html: styleSwitcher.getActiveWide() === true ? "Disable Wide Mode" : "Enable Wide Mode (Experimental)",
+				html: styleSwitcher.getActiveWide() === true ? "禁用宽幅模式" : "启用宽幅模式 (实验功能)",
 				click: (evt) => {
 					evt.preventDefault();
 					styleSwitcher.toggleWide();
@@ -229,7 +229,7 @@ class NavBar {
 		addButton(
 			ulSettings,
 			{
-				html: "Add as App",
+				html: "添加为 App",
 				click: async (evt) => {
 					evt.preventDefault();
 					try {
@@ -244,7 +244,7 @@ class NavBar {
 		addButton(
 			ulSettings,
 			{
-				html: "Preload Offline Data",
+				html: "预载离线数据",
 				click: async (evt) => {
 					evt.preventDefault();
 

@@ -122,7 +122,7 @@ class StyleSwitcher {
 				document.documentElement.appendChild(eleScript);
 			}
 		}
-		StyleSwitcher._setButtonText("wideModeToggle", isActive ? "Disable Wide Mode" : "Enable Wide Mode (Experimental)");
+		StyleSwitcher._setButtonText("wideModeToggle", isActive ? "禁用宽幅模式" : "启用宽幅模式 (实验功能)");
 		StyleSwitcher.storage.setItem(StyleSwitcher._STORAGE_WIDE, isActive);
 	}
 
