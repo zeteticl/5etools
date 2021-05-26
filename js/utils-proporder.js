@@ -668,6 +668,7 @@ PropOrder._VEHICLE = [
 	"weapon",
 	"other",
 
+	"entries",
 	"trait",
 	"actionThresholds",
 	"action",
@@ -772,6 +773,7 @@ PropOrder._ITEM = [
 
 	"ac",
 	"strength",
+	"dexterityMax",
 
 	"crew",
 	"crewMin",
@@ -917,6 +919,14 @@ PropOrder._OPTIONALFEATURE = [
 	"featureType",
 
 	"prerequisite",
+
+	"skillProficiencies",
+	"languageProficiencies",
+	"toolProficiencies",
+	"weaponProficiencies",
+	"armorProficiencies",
+
+	"additionalSpells",
 
 	"entries",
 ];

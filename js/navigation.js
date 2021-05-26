@@ -57,6 +57,7 @@ class NavBar {
 		addLi(ulBooks, "book.html", "荒洲探险家指南", {aHash: "EGW", date: "2020"});
 		addLi(ulBooks, "book.html", "塞洛斯的神话奥德赛", {aHash: "MOT", date: null});
 		addLi(ulBooks, "book.html", "塔莎的万象坩锅", {aHash: "TCE", date: null});
+		addLi(ulBooks, "book.html", "Van Richten's Guide to Ravenloft", {aHash: "VRGR", date: "2021"});
 		addDivider(ulBooks);
 		addLi(ulBooks, "book.html", "DM帷幕：荒野套件", {aHash: "ScreenWildernessKit", date: "2020"});
 		addDivider(ulBooks);
@@ -121,6 +122,7 @@ class NavBar {
 		addLi(ulAdventures, "adventure.html", "塞洛斯：无声之密", {isSide: true, aHash: "MOT-NSS", date: null});
 		addLi(ulAdventures, "adventure.html", "冰风谷：冰霜少女的雾凇", {isSide: true, aHash: "IDRotF", date: null});
 		addLi(ulAdventures, "adventure.html", "烛堡秘辛", {isSide: true, aHash: "CM", date: "2021"});
+		addLi(ulAdventures, "adventure.html", "Ravenloft: The House of Lament", {isSide: true, aHash: "HoL", date: null});
 		addLi(ulDms, "cultsboons.html", "异教&超自然恩惠");
 		addLi(ulDms, "objects.html", "物件");
 		addLi(ulDms, "trapshazards.html", "陷阱&危险");
@@ -205,7 +207,7 @@ class NavBar {
 					const sync = StorageUtil.syncGetDump();
 					const async = await StorageUtil.pGetDump();
 					const dump = {sync, async};
-					DataUtil.userDownload("5etools", dump);
+					DataUtil.userDownload("5etools", dump, {fileType: "5etools"});
 				},
 				title: "Save any locally-stored data (loaded homebrew, active blacklists, DM Screen configuration,...) to a file.",
 			},
@@ -216,11 +218,18 @@ class NavBar {
 				html: "从文件读取状态",
 				click: async (evt) => {
 					evt.preventDefault();
-					const dump = await DataUtil.pUserUpload();
+					const jsons = await DataUtil.pUserUpload({expectedFileType: "5etools"});
+					if (!jsons?.length) return;
+					const dump = jsons[0];
 
-					StorageUtil.syncSetFromDump(dump.sync);
-					await StorageUtil.pSetFromDump(dump.async);
-					location.reload();
+					try {
+						StorageUtil.syncSetFromDump(dump.sync);
+						await StorageUtil.pSetFromDump(dump.async);
+						location.reload();
+					} catch (e) {
+						JqueryUtil.doToast({type: "danger", content: `Failed to load state! ${VeCt.STR_SEE_CONSOLE}`});
+						throw e;
+					}
 				},
 				title: "Load previously-saved data (loaded homebrew, active blacklists, DM Screen configuration,...) from a file.",
 			},

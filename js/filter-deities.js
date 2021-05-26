@@ -31,7 +31,7 @@ class PageFilterDeities extends PageFilter {
 			header: "Alignment",
 			headerName: "阵营",
 			items: ["L", "NX", "C", "G", "NY", "E", "N"],
-			displayFn: Parser.alignmentAbvToFull,
+			displayFn: it => Parser.alignmentAbvToFull(it).toTitleCase(),
 			itemSortFn: null,
 		});
 		this._domainFilter = new Filter({

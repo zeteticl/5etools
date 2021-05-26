@@ -5,15 +5,90 @@ if (typeof module !== "undefined") {
 	Object.assign(global, imports);
 }
 
+class VariantClassFilter extends Filter {
+	constructor (opts) {
+		super({
+			header: "Optional/Variant Class",
+			headerName: "变体职业",
+			nests: {},
+			groupFn: it => it.userData.group,
+			...opts,
+		});
+
+		this._parent = null;
+	}
+
+	set parent (multiFilterClasses) { this._parent = multiFilterClasses; }
+
+	handleVariantSplit (isVariantSplit) {
+		this.__$wrpFilter.toggleVe(isVariantSplit)
+	}
+}
+
+class MultiFilterClasses extends MultiFilter {
+	constructor (opts) {
+		super({header: "Classes", headerName: "职业分类", mode: "or", filters: [opts.classFilter, opts.subclassFilter, opts.variantClassFilter], ...opts});
+
+		this._classFilter = opts.classFilter;
+		this._subclassFilter = opts.subclassFilter;
+		this._variantClassFilter = opts.variantClassFilter;
+
+		this._variantClassFilter.parent = this;
+	}
+
+	get classFilter_ () { return this._classFilter; }
+	get isVariantSplit () { return this._meta.isVariantSplit; }
+
+	$render (opts) {
+		const $out = super.$render(opts);
+
+		const hkVariantSplit = () => this._variantClassFilter.handleVariantSplit(this._meta.isVariantSplit);
+		this._addHook("meta", "isVariantSplit", hkVariantSplit)
+		hkVariantSplit();
+
+		return $out;
+	}
+
+	_getHeaderControls_addExtraStateBtns (opts, wrpStateBtnsOuter) {
+		const btnToggleVariantSplit = ComponentUiUtil.getBtnBool(
+			this,
+			"isVariantSplit",
+			{
+				ele: e_({tag: "button", clazz: "btn btn-default btn-xs", text: "Include Variants"}),
+				isInverted: true,
+				stateName: "meta",
+				stateProp: "_meta",
+				title: `If "Optional/Variant Class" spell lists should be treated as part of the "Class" filter.`,
+			},
+		)
+
+		e_({
+			tag: "div",
+			clazz: `btn-group w-100 flex-v-center mobile__m-1 mobile__mb-2`,
+			children: [
+				btnToggleVariantSplit,
+			],
+		}).prependTo(wrpStateBtnsOuter);
+	}
+
+	getDefaultMeta () {
+		return {...MultiFilterClasses._DEFAULT_META, ...super.getDefaultMeta()};
+	}
+}
+MultiFilterClasses._DEFAULT_META = {
+	isVariantSplit: false,
+};
+
 class PageFilterSpells extends PageFilter {
 	// region static
 	static sortSpells (a, b, o) {
 		switch (o.sortBy) {
 			case "name": return SortUtil.compareListNames(a, b);
-			case "source": return SortUtil.ascSort(a.values.source, b.values.source) || SortUtil.compareListNames(a, b);
-			case "level": return SortUtil.ascSort(a.values.level, b.values.level) || SortUtil.compareListNames(a, b);
-			case "school": return SortUtil.ascSort(a.values.school, b.values.school) || SortUtil.compareListNames(a, b);
-			case "concentration": return SortUtil.ascSort(a.values.concentration, b.values.concentration) || SortUtil.compareListNames(a, b);
+			case "source":
+			case "level":
+			case "school":
+			case "concentration":
+			case "ritual": return SortUtil.ascSort(a.values[o.sortBy], b.values[o.sortBy]) || SortUtil.compareListNames(a, b);
 			case "time": return SortUtil.ascSort(a.values.normalisedTime, b.values.normalisedTime) || SortUtil.compareListNames(a, b);
 			case "range": return SortUtil.ascSort(a.values.normalisedRange, b.values.normalisedRange) || SortUtil.compareListNames(a, b);
 		}
@@ -202,36 +277,14 @@ class PageFilterSpells extends PageFilter {
 
 	static getTblLevelStr (spell) { return `${Parser.spLevelToFull(spell.level)}${spell.meta && spell.meta.ritual ? " (仪.)" : ""}${spell.meta && spell.meta.technomagic ? " (科.)" : ""}`; }
 
-	static getClassFilterItem (c) {
-		return this._getClassFilterItem(c);
-	}
-
-	static getOptionalVariantClassFilterItem (c) {
-		return this._getClassFilterItem(c, true);
-	}
-
-	static _getClassFilterItem (c, isVariantClass) {
-		const nm = c.name.split("(")[0].trim();
-		const variantSuffix = isVariantClass ? ` (${c.definedInSource ? Parser.sourceJsonToAbv(c.definedInSource) : "Unknown"})` : ""
-		const addSuffix = SourceUtil.isNonstandardSource(c.source || SRC_PHB) || BrewUtil.hasSourceJson(c.source || SRC_PHB);
-		const name = `${nm}${variantSuffix}${addSuffix ? ` (${Parser.sourceJsonToAbv(c.source)})` : ""}`;
-
-		const opts = {
-			item: name,
-			userData: SourceUtil.getFilterGroup(c.source || SRC_PHB),
-		};
-
-		if (isVariantClass) opts.nest = c.definedInSource ? Parser.sourceJsonToFull(c.definedInSource) : "Unknown";
-
-		return new FilterItem(opts);
-	}
-
 	static getRaceFilterItem (r) {
 		const addSuffix = (r.source === SRC_DMG || SourceUtil.isNonstandardSource(r.source || SRC_PHB) || BrewUtil.hasSourceJson(r.source || SRC_PHB)) && !r.name.includes(Parser.sourceJsonToAbv(r.source));
 		const name = `${r.name}${addSuffix ? ` (${Parser.sourceJsonToAbv(r.source)})` : ""}`;
 		const opts = {
 			item: name,
-			userData: SourceUtil.getFilterGroup(r.source || SRC_PHB),
+			userData: {
+				group: SourceUtil.getFilterGroup(r.source || SRC_PHB),
+			},
 		};
 		if (r.baseName) opts.nest = r.baseName;
 		else opts.nest = "(No Subraces)"
@@ -253,45 +306,42 @@ class PageFilterSpells extends PageFilter {
 		const classFilter = new Filter({
 			header: "Class",
 			headerName: "职业",
-			groupFn: it => it.userData,
-			displayFn:Parser.ClassToDisplay
+			groupFn: it => it.userData.group,
+			displayFn: Parser.ClassToDisplay,
 		});
 		const subclassFilter = new Filter({
-			header: "Subclass", headerName: "子职业",
+			header: "Subclass",
+			headerName: "子职业",
 			nests: {},
-			groupFn: (it) => SourceUtil.isSubclassReprinted(it.userData.class.name, it.userData.class.source, it.userData.subClass.name, it.userData.subClass.source) || Parser.sourceJsonToFull(it.userData.subClass.source).startsWith(UA_PREFIX) || Parser.sourceJsonToFull(it.userData.subClass.source).startsWith(PS_PREFIX),
-			displayFn: (str) =>
-			{
-				var its = str.split(':').map(x => x.trim());
+			groupFn: it => it.userData.group,
+			displayFn: (str) => {
+				const its = str.split(":").map(x => x.trim());
 				return its.length > 1
 					? `${Parser.ClassToDisplay(its[0])}：${Parser.SubclassToDisplay(its[1])}`
 					: `${Parser.SubclassToDisplay(its[0]) + gg}`;
-			}
+			},
 		});
-		const variantClassFilter = new Filter({
-			header: "Optional/Variant Class",
-			headerName: "变体职业",
-			nests: {},
-			groupFn: it => it.userData,
-		});
-		const classAndSubclassFilter = new MultiFilter({header: "Classes", headerName: "职业分类", mode: "or", filters: [classFilter, subclassFilter, variantClassFilter]});
+		const variantClassFilter = new VariantClassFilter();
+		const classAndSubclassFilter = new MultiFilterClasses({classFilter, subclassFilter, variantClassFilter});
 		const raceFilter = new Filter({
 			header: "Race",
 			headerName: "种族",
 			nests: {},
-			groupFn: it => it.userData,
-			displayFn: Parser.RaceToDisplay
+			groupFn: it => it.userData.group,
+			displayFn: Parser.RaceToDisplay,
 		});
 		const backgroundFilter = new Filter({header: "Background", headerName: "背景"});
 		const metaFilter = new Filter({
-			header: "Components & Miscellaneous", headerName: "构材＆杂项",
+			header: "Components & Miscellaneous",
+			headerName: "构材＆杂项",
 			items: [...PageFilterSpells._META_FILTER_BASE_ITEMS, "Ritual", "SRD", "Has Images", "Has Token"],
 			itemSortFn: PageFilterSpells.sortMetaFilter,
 			isSrdFilter: true,
 			displayFn: it => Parser.spMiscTagToFull(it),
 		});
 		const schoolFilter = new Filter({
-			header: "School", headerName: "学派",
+			header: "School",
+			headerName: "学派",
 			items: [...Parser.SKL_ABVS],
 			displayFn: Parser.spSchoolAbvToFull,
 			itemSortFn: (a, b) => SortUtil.ascSortLower(Parser.spSchoolAbvToFull(a.item), Parser.spSchoolAbvToFull(b.item)),
@@ -303,23 +353,27 @@ class PageFilterSpells extends PageFilter {
 			displayFn: Parser.spSchoolAbvToFull,
 		});
 		const damageFilter = new Filter({
-			header: "Damage Type", headerName: "伤害类型",
+			header: "Damage Type",
+			headerName: "伤害类型",
 			items: MiscUtil.copy(Parser.DMG_TYPES),
 			displayFn: Parser.DamageToDisplay,
 		});
 		const conditionFilter = new Filter({
-			header: "Conditions Inflicted", headerName: "造成状态",
+			header: "Conditions Inflicted",
+			headerName: "造成状态",
 			items: MiscUtil.copy(Parser.CONDITIONS),
 			displayFn: Parser.ConditionToDisplay,
 		});
 		const spellAttackFilter = new Filter({
-			header: "Spell Attack", headerName: "法术攻击",
+			header: "Spell Attack",
+			headerName: "法术攻击",
 			items: ["M", "R", "O"],
 			displayFn: Parser.spAttackTypeToFull,
 			itemSortFn: null,
 		});
 		const saveFilter = new Filter({
-			header: "Saving Throw", headerName: "豁免",
+			header: "Saving Throw",
+			headerName: "豁免",
 			items: ["strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma"],
 			displayFn: PageFilterSpells.getFilterAbilitySave,
 			itemSortFn: null,
@@ -332,7 +386,8 @@ class PageFilterSpells extends PageFilter {
 			itemSortFn: null,
 		});
 		const timeFilter = new Filter({
-			header: "Cast Time", headerName: "施法时间",
+			header: "Cast Time",
+			headerName: "施法时间",
 			items: [
 				Parser.SP_TM_ACTION,
 				Parser.SP_TM_B_ACTION,
@@ -345,7 +400,8 @@ class PageFilterSpells extends PageFilter {
 			itemSortFn: null,
 		});
 		const durationFilter = new RangeFilter({
-			header: "Duration", headerName: "持续时间",
+			header: "Duration",
+			headerName: "持续时间",
 			isLabelled: true,
 			labelSortFn: null,
 			labels: ["Instant", "1 Round", "1 Minute", "10 Minutes", "1 Hour", "8 Hours", "24+ Hours", "Permanent", "Special"],
@@ -376,7 +432,10 @@ class PageFilterSpells extends PageFilter {
 		this._classAndSubclassFilter = classAndSubclassFilter;
 		this._raceFilter = raceFilter;
 		this._backgroundFilter = backgroundFilter;
-		this._eldritchInvocationFilter = new Filter({header: "Eldritch Invocation", headerName:"魔能祈唤"});
+		this._eldritchInvocationFilter = new Filter({
+			header: "Eldritch Invocation",
+			headerName: "魔能祈唤",
+		});
 		this._metaFilter = metaFilter;
 		this._schoolFilter = schoolFilter;
 		this._subSchoolFilter = subSchoolFilter;
@@ -401,25 +460,38 @@ class PageFilterSpells extends PageFilter {
 		// used for filtering
 		spell._fSources = SourceFilter.getCompleteFilterSources(spell);
 		spell._fMeta = PageFilterSpells.getMetaFilterObj(spell);
-		spell._fClasses = Renderer.spell.getCombinedClasses(spell, "fromClassList").map(PageFilterSpells.getClassFilterItem.bind(this));
+		spell._fClasses = Renderer.spell.getCombinedClasses(spell, "fromClassList").map(c => {
+			return this._getClassFilterItem({
+				className: c.name,
+				definedInSource: c.definedInSource,
+				classSource: c.source,
+				isVariantClass: false,
+			});
+		});
 		spell._fSubclasses = Renderer.spell.getCombinedClasses(spell, "fromSubclass")
 			.map(c => {
-				return new FilterItem({
-					item: `${c.class.name}: ${PageFilterSpells.getClassFilterItem(c.subclass).item}${c.subclass.subSubclass ? `, ${c.subclass.subSubclass}` : ""}`,
-					nest: c.class.name,
-					userData: {
-						subClass: {
-							name: c.subclass.name,
-							source: c.subclass.source,
-						},
-						class: {
-							name: c.class.name,
-							source: c.class.source,
-						},
-					},
-				});
+				return this._getSubclassFilterItem({
+					className: c.class.name,
+					classSource: c.class.source,
+					subclassShortName: c.subclass.name,
+					subclassSource: c.subclass.source,
+					subSubclassName: c.subclass.subSubclass,
+				})
 			});
-		spell._fVariantClasses = Renderer.spell.getCombinedClasses(spell, "fromClassListVariant").map(PageFilterSpells.getOptionalVariantClassFilterItem.bind(this));
+		spell._fVariantClasses = Renderer.spell.getCombinedClasses(spell, "fromClassListVariant").map(c => {
+			return this._getClassFilterItem({
+				className: c.name,
+				definedInSource: c.definedInSource,
+				classSource: c.source,
+				isVariantClass: true,
+			});
+		});
+		spell._fClassesAndVariantClasses = [
+			...spell._fClasses,
+			...spell._fVariantClasses
+				.map(it => (it.userData.definedInSource && !SourceUtil.isNonstandardSource(it.userData.definedInSource)) ? new FilterItem({item: it.userData.equivalentClassName}) : null)
+				.filter(Boolean),
+		];
 		spell._fRaces = Renderer.spell.getCombinedRaces(spell).map(PageFilterSpells.getRaceFilterItem);
 		spell._fBackgrounds = Renderer.spell.getCombinedBackgrounds(spell).map(bg => bg.name);
 		spell._fEldritchInvocations = spell.eldritchInvocations ? spell.eldritchInvocations.map(ei => ei.name) : [];
@@ -486,7 +558,11 @@ class PageFilterSpells extends PageFilter {
 			values,
 			s._fSources,
 			s.level,
-			[s._fClasses, s._fSubclasses, s._fVariantClasses],
+			[
+				this._classAndSubclassFilter.isVariantSplit ? s._fClasses : s._fClassesAndVariantClasses,
+				s._fSubclasses,
+				this._classAndSubclassFilter.isVariantSplit ? s._fVariantClasses : null,
+			],
 			s._fRaces,
 			s._fBackgrounds,
 			s._fEldritchInvocations,
@@ -595,6 +671,8 @@ class ModalFilterSpells extends ModalFilter {
 			<div class="col-1 pr-0 text-center ${Parser.sourceJsonToColor(spell.source)}" title="${Parser.sourceJsonToFull(spell.source)}" ${BrewUtil.sourceJsonToStyle(spell.source)}>${source}</div>
 		</div>`;
 
+		const btnShowHidePreview = eleRow.firstElementChild.children[1].firstElementChild;
+
 		const listItem = new ListItem(
 			spI,
 			eleRow,
@@ -615,10 +693,10 @@ class ModalFilterSpells extends ModalFilter {
 			},
 			{
 				cbSel: eleRow.firstElementChild.firstElementChild.firstElementChild,
+				btnShowHidePreview,
 			},
 		);
 
-		const btnShowHidePreview = eleRow.firstElementChild.children[1].firstElementChild;
 		ListUiUtil.bindPreviewButton(UrlUtil.PG_SPELLS, this._allData, listItem, btnShowHidePreview);
 
 		return listItem;

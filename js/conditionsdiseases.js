@@ -30,8 +30,8 @@ class ConditionsDiseasesPage extends ListPage {
 
 		eleLi.innerHTML = `<a href="#${hash}" class="lst--border lst__row-inner">
 			<span class="col-0-3 px-0 flex-vh-center lst__btn-toggle-expand self-flex-stretch">[+]</span>
-			<span class="col-3 text-center pl-0">${Parser.ConditionsDiseasesToDisplay(it.__prop)}</span>
-			<span class="bold col-6-7">${it.name}</span>
+			<span class="col-3 text-center">${Parser.ConditionsDiseasesToDisplay(it.__prop)}</span>
+			<span class="bold col-6-7 px-1">${it.name}</span>
 			<span class="col-2 text-center ${Parser.sourceJsonToColor(it.source)} pr-0" title="${Parser.sourceJsonToFull(it.source)}" ${BrewUtil.sourceJsonToStyle(it.source)}>${source}</span>
 		</a>
 		<div class="flex ve-hidden relative lst__wrp-preview">
@@ -111,6 +111,8 @@ class ConditionsDiseasesPage extends ListPage {
 			});
 		}
 
+		const fluffProp = it.__prop === "condition" ? "conditionFluff" : "diseaseFluff";
+
 		const tabMetas = [
 			new Renderer.utils.TabButton({
 				label: "特征",
@@ -120,12 +122,12 @@ class ConditionsDiseasesPage extends ListPage {
 			new Renderer.utils.TabButton({
 				label: "信息",
 				fnPopulate: buildFluffTab,
-				isVisible: Renderer.utils.hasFluffText(it),
+				isVisible: Renderer.utils.hasFluffText(it, fluffProp),
 			}),
 			new Renderer.utils.TabButton({
 				label: "图片",
 				fnPopulate: buildFluffTab.bind(null, true),
-				isVisible: Renderer.utils.hasFluffImages(it),
+				isVisible: Renderer.utils.hasFluffImages(it, fluffProp),
 			}),
 		];
 

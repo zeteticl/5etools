@@ -234,7 +234,7 @@ class Omnisearch {
 
 		if (this._$btnToggleUa) this._$btnToggleUa.detach();
 		else {
-			this._$btnToggleUa = $(`<button class="btn btn-default btn-xs mr-2" title="筛选 UA 及其他非官方资源结果" tabindex="-1">包括 UA 等资源。</button>`)
+			this._$btnToggleUa = $(`<button class="btn btn-default btn-xs mr-2" title="筛选 UA 及其他非官方资源结果" tabindex="-1">包括 UA 等资源</button>`)
 				.on("click", () => this._state.isShowUa = !this._state.isShowUa);
 
 			const hkIsUa = () => {
@@ -247,7 +247,7 @@ class Omnisearch {
 
 		if (this._$btnToggleBlacklisted) this._$btnToggleBlacklisted.detach();
 		else {
-			this._$btnToggleBlacklisted = $(`<button class="btn btn-default btn-xs mr-2" title="筛选已被拉入黑名单的内容结果" tabindex="-1">包括黑名单资源。</button>`)
+			this._$btnToggleBlacklisted = $(`<button class="btn btn-default btn-xs mr-2" title="筛选已被拉入黑名单的内容结果" tabindex="-1">包括黑名单资源</button>`)
 				.on("click", async () => this._state.isShowBlacklisted = !this._state.isShowBlacklisted);
 
 			const hkIsBlacklisted = () => {

@@ -338,7 +338,8 @@ const ListUtil = {
 						await MiscUtil.pCopyTextToClipboard(parts.join(HASH_PART_SEP));
 						JqueryUtil.showCopiedEffect($btnOptions);
 					} else {
-						DataUtil.userDownload(ListUtil._getDownloadName(), JSON.stringify(ListUtil.getExportableSublist(), null, "\t"));
+						const fileType = ListUtil._getDownloadName();
+						DataUtil.userDownload(fileType, ListUtil.getExportableSublist(), {fileType});
 					}
 				},
 			);
@@ -348,26 +349,14 @@ const ListUtil = {
 		if (opts.upload) {
 			const action = new ContextUtil.Action(
 				"Upload Pinned List (SHIFT for Add Only)",
-				evt => {
-					function pHandleIptChange (event, additive) {
-						const input = event.target;
+				async evt => {
+					const files = await DataUtil.pUserUpload({expectedFileType: ListUtil._getDownloadName()});
+					if (!files?.length) return;
 
-						const reader = new FileReader();
-						reader.onload = async () => {
-							const text = reader.result;
-							const json = JSON.parse(text);
-							$iptAdd.remove();
-							if (typeof opts.upload === "object" && opts.upload.pFnPreLoad) await opts.upload.pFnPreLoad(json);
-							await ListUtil.pDoJsonLoad(json, additive);
-						};
-						reader.readAsText(input.files[0]);
-					}
+					const json = files[0];
 
-					const additive = evt.shiftKey;
-					const $iptAdd = $(`<input type="file" accept=".json" style="position: fixed; top: -100px; left: -100px; display: none;">`)
-						.on("change", (evt) => pHandleIptChange(evt, additive))
-						.appendTo($(`body`));
-					$iptAdd.click();
+					if (typeof opts.upload === "object" && opts.upload.pFnPreLoad) await opts.upload.pFnPreLoad(json);
+					await ListUtil.pDoJsonLoad(json, evt.shiftKey);
 				},
 			);
 			contextOptions.push(action);

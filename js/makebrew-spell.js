@@ -49,7 +49,7 @@ class SpellBuilder extends Builder {
 	}
 
 	async pInit () {
-		this._subclassLookup = await RenderSpells.pGetSubclassLookup();
+		this._subclassLookup = await DataUtil.class.pGetSubclassLookup();
 	}
 
 	_getInitialState () {

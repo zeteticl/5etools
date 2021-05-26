@@ -103,18 +103,18 @@ class BestiaryPage extends ListPage {
 		const count = addCount || 1;
 		const cr = mon._pCr;
 
-		const $hovStatblock = $(`<span class="col-1-4 help--hover ecgen__visible">Statblock</span>`)
+		const $hovStatblock = $(`<span class="col-1-4 help help--hover ecgen__visible">Statblock</span>`)
 			.mouseover(evt => EncounterBuilder.doStatblockMouseOver(evt, $hovStatblock[0], pinId, mon._isScaledCr))
 			.mousemove(evt => Renderer.hover.handleLinkMouseMove(evt, $hovStatblock[0]))
 			.mouseleave(evt => Renderer.hover.handleLinkMouseLeave(evt, $hovStatblock[0]));
 
 		const hovTokenMeta = EncounterBuilder.getTokenHoverMeta(mon);
-		const $hovToken = $(`<span class="col-1-2 ecgen__visible help--hover">Token</span>`)
+		const $hovToken = $(`<span class="col-1-2 ecgen__visible help help--hover">Token</span>`)
 			.mouseover(evt => hovTokenMeta.mouseOver(evt, $hovToken[0]))
 			.mousemove(evt => hovTokenMeta.mouseMove(evt, $hovToken[0]))
 			.mouseleave(evt => hovTokenMeta.mouseLeave(evt, $hovToken[0]));
 
-		const $hovImage = $(`<span class="col-1-2 ecgen__visible help--hover">Image</span>`)
+		const $hovImage = $(`<span class="col-1-2 ecgen__visible help help--hover">Image</span>`)
 			.mouseover(evt => EncounterBuilder.handleImageMouseOver(evt, $hovImage, pinId));
 
 		const $ptCr = (() => {
@@ -544,7 +544,7 @@ class BestiaryPage extends ListPage {
 				fnGetMeta: () => ({
 					page: UrlUtil.getCurrentPage(),
 					source: Hist.getHashSource(),
-					hash: Hist.getHashParts()[0],
+					hash: `${UrlUtil.autoEncodeHash(lastRendered.mon)}${lastRendered.mon._isScaledCr ? `${HASH_PART_SEP}${VeCt.HASH_SCALED}${HASH_SUB_KV_SEP}${lastRendered.mon._isScaledCr}` : ""}`,
 				}),
 			},
 		});
@@ -862,7 +862,7 @@ class BestiaryPage extends ListPage {
 					$(`#float-token`).hide();
 				},
 				fnPopulate: buildFluffTab,
-				isVisible: Renderer.utils.hasFluffText(mon),
+				isVisible: Renderer.utils.hasFluffText(mon, "monsterFluff"),
 			}),
 			new Renderer.utils.TabButton({
 				label: "图片",
@@ -871,7 +871,7 @@ class BestiaryPage extends ListPage {
 					$(`#float-token`).hide();
 				},
 				fnPopulate: () => buildFluffTab(true),
-				isVisible: Renderer.utils.hasFluffImages(mon),
+				isVisible: Renderer.utils.hasFluffImages(mon, "monsterFluff"),
 			}),
 		];
 
@@ -898,6 +898,7 @@ BestiaryPage._INDEXABLE_PROPS = [
 	"reaction",
 	"legendary",
 	"mythic",
+	"variant",
 ];
 BestiaryPage._INDEXABLE_PROPS_LEG_GROUP = [
 	"lairActions",
@@ -1103,7 +1104,7 @@ async function pPreloadSublistSources (json) {
 
 async function pHandleUnknownHash (link, sub) {
 	const src = Object.keys(bestiaryPage._multiSource.loadedSources)
-		.find(src => src.toLowerCase() === decodeURIComponent(link.split(HASH_LIST_SEP)[1]).toLowerCase());
+		.find(src => src.toLowerCase() === (UrlUtil.decodeHash(link)[1] || "").toLowerCase());
 	if (src) {
 		await bestiaryPage._multiSource.pLoadSource(src, "yes");
 		Hist.hashChange();

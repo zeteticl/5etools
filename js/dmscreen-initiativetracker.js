@@ -100,8 +100,8 @@ class InitiativeTracker {
 			new ContextUtil.Action(
 				"From Bestiary Encounter File",
 				async () => {
-					const json = await DataUtil.pUserUpload();
-					if (json) await pConvertAndLoadBestiaryList(json);
+					const jsons = await DataUtil.pUserUpload();
+					if (jsons?.length) await pConvertAndLoadBestiaryList(jsons[0]);
 				},
 			),
 			null,
@@ -1428,7 +1428,8 @@ class InitiativeTracker {
 							} else return null;
 						} else return null;
 					})();
-					const source = decodeURIComponent(hash.split(HASH_LIST_SEP)[1]);
+					const source = UrlUtil.decodeHash(hash)[1];
+					if (!source) return null;
 					return new Promise(resolve => {
 						Renderer.hover.pCacheAndGet(UrlUtil.PG_BESTIARY, source, hash)
 							.then(mon => {
@@ -1448,7 +1449,7 @@ class InitiativeTracker {
 							});
 					})
 				}));
-				await Promise.all(toAdd.map(async it => {
+				await Promise.all(toAdd.filter(Boolean).map(async it => {
 					const groupInit = cfg.importIsRollGroups && cfg.isRollInit ? await pRollInitiative(it.monster) : null;
 					const groupHp = cfg.importIsRollGroups ? await pGetOrRollHp(it.monster) : null;
 

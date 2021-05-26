@@ -34,6 +34,48 @@ class PageFilter {
 		await this._filterBox.pDoLoadState();
 		return this._filterBox;
 	}
+
+	// region Helpers
+	static _getClassFilterItem ({className, classSource, isVariantClass, definedInSource}) {
+		const nm = className.split("(")[0].trim();
+		const variantSuffix = isVariantClass ? ` [${definedInSource ? Parser.sourceJsonToAbv(definedInSource) : "Unknown"}]` : ""
+		const sourceSuffix = (SourceUtil.isNonstandardSource(classSource || SRC_PHB) || BrewUtil.hasSourceJson(classSource || SRC_PHB))
+			? ` (${Parser.sourceJsonToAbv(classSource)})` : ""
+		const name = `${nm}${variantSuffix}${sourceSuffix}`;
+
+		const opts = {
+			item: name,
+			userData: {
+				group: SourceUtil.getFilterGroup(classSource || SRC_PHB),
+			},
+		};
+
+		if (isVariantClass) {
+			opts.nest = definedInSource ? Parser.sourceJsonToFull(definedInSource) : "Unknown";
+			opts.userData.equivalentClassName = `${nm}${sourceSuffix}`
+			opts.userData.definedInSource = definedInSource;
+		}
+
+		return new FilterItem(opts);
+	}
+
+	static _getSubclassFilterItem ({className, classSource, subclassShortName, subclassSource, subSubclassName, isVariantClass, definedInSource}) {
+		const group = SourceUtil.isSubclassReprinted(className, classSource, subclassShortName, subclassSource) || Parser.sourceJsonToFull(subclassSource).startsWith(UA_PREFIX) || Parser.sourceJsonToFull(subclassSource).startsWith(PS_PREFIX);
+
+		const classFilterItem = this._getClassFilterItem({
+			className: subclassShortName,
+			classSource: subclassSource,
+		});
+
+		return new FilterItem({
+			item: `${className}: ${classFilterItem.item}${subSubclassName ? `, ${subSubclassName}` : ""}`,
+			nest: className,
+			userData: {
+				group,
+			},
+		});
+	}
+	// endregion
 }
 
 class ModalFilter {
@@ -65,6 +107,10 @@ class ModalFilter {
 
 	_$getWrpList () { return $(`<div class="list ui-list__wrp overflow-x-hidden overflow-y-auto h-100 min-h-0"></div>`); }
 
+	_$getColumnHeaderPreviewAll (opts) {
+		return $(`<button class="btn btn-default btn-xs ${opts.isBuildUi ? "col-1" : "col-0-5"}">${ListUiUtil.HTML_GLYPHICON_EXPAND}</button>`);
+	}
+
 	/**
 	 * @param $wrp
 	 * @param opts
@@ -93,10 +139,13 @@ class ModalFilter {
 		const $btnSendAllToRight = opts.isBuildUi ? $(`<button class="btn btn-xxs btn-default col-1" title="Add All"><span class="glyphicon glyphicon-arrow-right"></span></button>`) : null;
 
 		if (!opts.isBuildUi) {
-			if (this._isRadio) $wrpFormHeaders.append(`<label class="btn btn-default col-0-5 flex-vh-center" disabled></label>`);
-			else $$`<label class="btn btn-default col-0-5 flex-vh-center">${$cbSelAll}</label>`.appendTo($wrpFormHeaders);
-			$wrpFormHeaders.append(`<button class="btn btn-default col-0-5" disabled></button>`);
+			if (this._isRadio) $wrpFormHeaders.append(`<label class="btn btn-default btn-xs col-0-5 flex-vh-center" disabled></label>`);
+			else $$`<label class="btn btn-default btn-xs col-0-5 flex-vh-center">${$cbSelAll}</label>`.appendTo($wrpFormHeaders);
 		}
+
+		const $btnTogglePreviewAll = this._$getColumnHeaderPreviewAll(opts)
+			.appendTo($wrpFormHeaders);
+
 		this._$getColumnHeaders().forEach($ele => $wrpFormHeaders.append($ele));
 		if (opts.isBuildUi) $btnSendAllToRight.appendTo($wrpFormHeaders);
 
@@ -112,6 +161,7 @@ class ModalFilter {
 		});
 
 		if (!opts.isBuildUi && !this._isRadio) ListUiUtil.bindSelectAllCheckbox($cbSelAll, this._list);
+		ListUiUtil.bindPreviewAllButton($btnTogglePreviewAll, this._list);
 		SortUtil.initBtnSortHandlers($wrpFormHeaders, this._list);
 
 		this._allData = this._allData || await this._pLoadAllData();
@@ -974,7 +1024,7 @@ class FilterBase extends BaseComponent {
 	}
 
 	_getRenderedHeader () {
-		return `<span ${this._headerHelp ? `title="${this._headerHelp.escapeQuotes()}" class="help--subtle"` : ""}>${this.headerName ? this.headerName : this.header}</span>`;
+		return `<span ${this._headerHelp ? `title="${this._headerHelp.escapeQuotes()}" class="help-subtle"` : ""}>${this.headerName ? this.headerName : this.header}</span>`;
 	}
 
 	set filterBox (it) { this._filterBox = it; }
@@ -1320,7 +1370,7 @@ class Filter extends FilterBase {
 	_getDefaultState (k) { return this._deselFn && this._deselFn(k) ? 2 : this._selFn && this._selFn(k) ? 1 : 0; }
 
 	_getPill (item) {
-		const displayText = this._displayFn ? this._displayFn(item.item) : item.item;
+		const displayText = this._displayFn ? this._displayFn(item.item, item) : item.item;
 
 		const btnPill = e_({
 			tag: "div",
@@ -1371,13 +1421,13 @@ class Filter extends FilterBase {
 	}
 
 	_getBtnMini (item) {
-		const toDisplay = this._displayFnMini ? this._displayFnMini(item.item) : this._displayFn ? this._displayFn(item.item) : item.item;
+		const toDisplay = this._displayFnMini ? this._displayFnMini(item.item, item) : this._displayFn ? this._displayFn(item.item, item) : item.item;
 
 		const btnMini = e_({
 			tag: "div",
 			clazz: `fltr__mini-pill ${this._filterBox.isMinisHidden(this.header) ? "ve-hidden" : ""} ${this._deselFn && this._deselFn(item.item) ? "fltr__mini-pill--default-desel" : ""} ${this._selFn && this._selFn(item.item) ? "fltr__mini-pill--default-sel" : ""}`,
 			html: toDisplay,
-			title: `${this._displayFnTitle ? `${this._displayFnTitle(item.item)} (` : ""}Filter: ${this.header}${this._displayFnTitle ? ")" : ""}`,
+			title: `${this._displayFnTitle ? `${this._displayFnTitle(item.item, item)} (` : ""}Filter: ${this.header}${this._displayFnTitle ? ")" : ""}`,
 			click: () => {
 				this._state[item.item] = 0;
 				this._filterBox.fireChangeEvent();
@@ -1637,6 +1687,9 @@ class Filter extends FilterBase {
 		if (isResetAll) {
 			this.resetBase();
 			this._resetNestsHidden();
+		} else {
+			// Always reset "AND/OR" states
+			Object.assign(this._meta, {combineBlue: Filter._DEFAULT_META.combineBlue, combineRed: Filter._DEFAULT_META.combineRed});
 		}
 		Object.keys(this._state).forEach(k => delete this._state[k]);
 		this._items.forEach(it => this._defaultItemState(it));
@@ -1645,7 +1698,7 @@ class Filter extends FilterBase {
 	resetShallow () { return this.reset(); }
 
 	_doRenderPills () {
-		if (this._itemSortFn) this._items.sort(this._isSortByDisplayItems && this._displayFn ? (a, b) => this._itemSortFn(this._displayFn(a.item), this._displayFn(b.item)) : this._itemSortFn);
+		if (this._itemSortFn) this._items.sort(this._isSortByDisplayItems && this._displayFn ? (a, b) => this._itemSortFn(this._displayFn(a.item, a), this._displayFn(b.item, b)) : this._itemSortFn);
 
 		this._items.forEach(it => {
 			if (!it.rendered) {
@@ -1684,15 +1737,13 @@ class Filter extends FilterBase {
 			.sort((a, b) => SortUtil.ascSortLower(a[0], b[0]))
 			.forEach(([groupKey, groupMeta], i) => {
 				groupMeta.hrDivider.appendTo(this.__wrpPills);
-				groupMeta.hrDivider.toggleVe(!(i === 0 && this._nests == null));
+				groupMeta.hrDivider.toggleVe(!this._isGroupDividerHidden(groupKey, i));
 				groupMeta.wrpPills.appendTo(this.__wrpPills);
 			});
 
 		if (this._nests) {
 			this._pillGroupsMeta[group].toggleDividerFromNestVisibility = () => {
-				const groupItems = this._items.filter(it => this._groupFn(it) === group);
-				const hiddenGroupItems = groupItems.filter(it => this._nestsHidden[it.nest]);
-				this._pillGroupsMeta[group].hrDivider.toggleVe(groupItems.length !== hiddenGroupItems.length);
+				this._pillGroupsMeta[group].hrDivider.toggleVe(!this._isGroupDividerHidden(group));
 			};
 
 			// bind group dividers to show/hide depending on nest visibility state
@@ -1705,6 +1756,18 @@ class Filter extends FilterBase {
 		}
 	}
 
+	_isGroupDividerHidden (group, ixSortedGroups) {
+		if (!this._nests) {
+			// When not nested, always hide the first divider
+			if (ixSortedGroups === undefined) return `${group}` === `${Object.keys(this._pillGroupsMeta).sort((a, b) => SortUtil.ascSortLower(a, b))[0]}`;
+			return ixSortedGroups === 0;
+		}
+
+		const groupItems = this._items.filter(it => this._groupFn(it) === group);
+		const hiddenGroupItems = groupItems.filter(it => this._nestsHidden[it.nest]);
+		return groupItems.length === hiddenGroupItems.length;
+	}
+
 	_doRenderPills_doRenderWrpGroup_getHrDivider () { return e_({tag: "hr", clazz: `fltr__dropdown-divider--sub hr-2 mx-3`}); }
 	_doRenderPills_doRenderWrpGroup_getWrpPillsSub () { return e_({tag: "div", clazz: `fltr__wrp-pills--sub`}); }
 
@@ -1713,7 +1776,7 @@ class Filter extends FilterBase {
 		const view = this._items.slice(0);
 		if (this._itemSortFnMini || this._itemSortFn) {
 			const fnSort = this._itemSortFnMini || this._itemSortFn;
-			view.sort(this._isSortByDisplayItems && this._displayFn ? (a, b) => fnSort(this._displayFn(a.item), this._displayFn(b.item)) : fnSort);
+			view.sort(this._isSortByDisplayItems && this._displayFn ? (a, b) => fnSort(this._displayFn(a.item, a), this._displayFn(b.item, b)) : fnSort);
 		}
 
 		view.forEach(it => {
@@ -1853,8 +1916,10 @@ class Filter extends FilterBase {
 		return entryVal;
 	}
 
+	_toDisplay_getFilterState (boxState) { return boxState[this.header]; }
+
 	toDisplay (boxState, entryVal) {
-		const filterState = boxState[this.header];
+		const filterState = this._toDisplay_getFilterState(boxState);
 		if (!filterState) return true;
 
 		const totals = filterState._totals;
@@ -3190,6 +3255,7 @@ class MultiFilter extends FilterBase {
 		this._state = this._getProxy("state", this.__state);
 
 		this.__$wrpFilter = null;
+		this._$wrpChildren = null;
 	}
 
 	getChildFilters () {
@@ -3255,19 +3321,13 @@ class MultiFilter extends FilterBase {
 		this._filters.forEach(it => it.setFromValues(values));
 	}
 
-	$render (opts) {
-		const $btnAndOr = $(`<div class="fltr__group-comb-toggle ve-muted"></div>`)
-			.click(() => this._state.mode = this._state.mode === "and" ? "or" : "and");
-		const hookAndOr = () => $btnAndOr.text(`（组合 ${this._state.mode.toUpperCase()}）`);
-		this._addHook("state", "mode", hookAndOr);
-		hookAndOr();
+	_getHeaderControls (opts) {
+		const wrpSummary = e_({
+			tag: "div",
+			clazz: "fltr__summary_item",
+		}).hideVe();
 
-		const $children = this._filters.map((it, i) => it.$render({...opts, isMulti: true, isFirst: i === 0}));
-		const $wrpChildren = $$`<div>${$children}</div>`;
-
-		const $wrpSummary = $(`<div class="fltr__summary_item"></div>`).hideVe();
-
-		const $btnForceMobile = this._isAddDropdownToggle ? ComponentUiUtil.$getBtnBool(
+		const btnForceMobile = this._isAddDropdownToggle ? ComponentUiUtil.getBtnBool(
 			this,
 			"isUseDropdowns",
 			{
@@ -3285,31 +3345,54 @@ class MultiFilter extends FilterBase {
 		this._addHook("meta", "isUseDropdowns", hkChildrenDropdowns);
 		hkChildrenDropdowns();
 
-		const $btnResetAll = $(`<button class="btn btn-default btn-xs ml-2">重置全部</button>`)
-			.click(() => this._filters.forEach(it => it.reset()));
-		const $wrpBtns = $$`<div>${$btnForceMobile}${$btnResetAll}</div>`;
+		const btnResetAll = e_({
+			tag: "button",
+			clazz: "btn btn-default btn-xs ml-2",
+			text: "重置全部",
+			click: () => this._filters.forEach(it => it.reset()),
+		});
 
-		const $btnShowHide = $(`<button class="btn btn-default btn-xs ml-2 ${this._meta.isHidden ? "active" : ""}">隐藏</button>`)
-			.click(() => this._meta.isHidden = !this._meta.isHidden);
-		const $wrpControls = $$`<div class="flex-v-center">
-			${$wrpSummary}${$wrpBtns}${$btnShowHide}
-		</div>`;
+		const wrpBtns = e_({tag: "div", clazz: "flex", children: [btnForceMobile, btnResetAll].filter(Boolean)});
+		this._getHeaderControls_addExtraStateBtns(opts, wrpBtns);
+
+		const btnShowHide = e_({
+			tag: "button",
+			clazz: `btn btn-default btn-xs ml-2 ${this._meta.isHidden ? "active" : ""}`,
+			text: "隐藏",
+			click: () => this._meta.isHidden = !this._meta.isHidden,
+		});
+		const wrpControls = e_({tag: "div", clazz: "flex-v-center", children: [wrpSummary, wrpBtns, btnShowHide]});
 
 		const hookShowHide = () => {
-			$wrpBtns.toggleVe(!this._meta.isHidden);
-			$btnShowHide.toggleClass("active", this._meta.isHidden);
-			$wrpChildren.toggleVe(!this._meta.isHidden);
-			$wrpSummary.toggleVe(this._meta.isHidden);
+			wrpBtns.toggleVe(!this._meta.isHidden);
+			btnShowHide.toggleClass("active", this._meta.isHidden);
+			this._$wrpChildren.toggleVe(!this._meta.isHidden);
+			wrpSummary.toggleVe(this._meta.isHidden);
 
 			const numActive = this._filters.map(it => it.getValues()[it.header]._isActive).filter(Boolean).length;
 			if (numActive) {
-				$wrpSummary
-					.title(`${numActive} hidden active filter${numActive === 1 ? "" : "s"}`)
-					.text(`(${numActive})`);
+				e_({ele: wrpSummary, title: `${numActive} hidden active filter${numActive === 1 ? "" : "s"}`, text: `(${numActive})`});
 			}
 		};
 		this._addHook("meta", "isHidden", hookShowHide);
 		hookShowHide();
+
+		return wrpControls;
+	}
+
+	_getHeaderControls_addExtraStateBtns (opts, wrpStateBtnsOuter) {}
+
+	$render (opts) {
+		const $btnAndOr = $(`<div class="fltr__group-comb-toggle ve-muted"></div>`)
+			.click(() => this._state.mode = this._state.mode === "and" ? "or" : "and");
+		const hookAndOr = () => $btnAndOr.text(`（组合 ${this._state.mode.toUpperCase()}）`);
+		this._addHook("state", "mode", hookAndOr);
+		hookAndOr();
+
+		const $children = this._filters.map((it, i) => it.$render({...opts, isMulti: true, isFirst: i === 0}));
+		this._$wrpChildren = $$`<div>${$children}</div>`;
+
+		const wrpControls = this._getHeaderControls(opts);
 
 		return this.__$wrpFilter = $$`<div class="flex-col">
 			${opts.isFirst ? "" : `<div class="fltr__dropdown-divider mb-1"></div>`}
@@ -3318,9 +3401,9 @@ class MultiFilter extends FilterBase {
 					<div class="mr-2">${this._getRenderedHeader()}</div>
 					${$btnAndOr}
 				</div>
-				${$wrpControls}
+				${wrpControls}
 			</div>
-			${$wrpChildren}
+			${this._$wrpChildren}
 		</div>`;
 	}
 

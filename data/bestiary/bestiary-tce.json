@@ -62,7 +62,7 @@
 			"trait": [
 				{
 					"name": "再生（仅限史拉蟾）",
-					"ENG_name": "Regeneration (Slaadi Only)",
+					"ENG_name": "Regeneration (Slaad Only)",
 					"entries": [
 						"异怪在其自己的回合开始时恢复5点生命值，前提是它至少有1点生命值。"
 					]
@@ -92,7 +92,7 @@
 				},
 				{
 					"name": "爪击Claws（仅限史拉蟾）",
-					"ENG_name": "Claws (Slaadi Only)",
+					"ENG_name": "Claws (Slaad Only)",
 					"entries": [
 						"{@atk mw} 命中+{@hitYourSpellAttack}，触及5尺，单一目标。{@h}{@damage 1d10 + 3} + 法术环位的挥砍伤害。如果目标是生物，其直到异怪下回合开始不能恢复生命值。"
 					]
@@ -177,6 +177,7 @@
 			"languages": [
 				"understands the languages you speak"
 			],
+			"pbNote": "等于你的熟练加值",
 			"trait": [
 				{
 					"name": "冲锋",
@@ -256,6 +257,7 @@
 			"languages": [
 				"understands the languages you speak"
 			],
+			"pbNote": "等于你的熟练加值",
 			"trait": [
 				{
 					"name": "水陆两栖",
@@ -336,6 +338,7 @@
 			"languages": [
 				"understands the languages you speak"
 			],
+			"pbNote": "等于你的熟练加值",
 			"trait": [
 				{
 					"name": "飞掠",
@@ -1213,13 +1216,6 @@
 					"ENG_name": "Evasion",
 					"entries": [
 						"当需要通过敏捷豁免来使伤害减半时，若豁免成功则不受伤害，豁免失败则伤害减半。此特性在{@condition 无力}时无效。"
-					]
-				},
-				{
-					"name": "主人之力",
-					"ENG_name": "Might of the Master",
-					"entries": [
-						"下列数值会和你的熟练加值一同提升：人工生命的技能与豁免加值，以及攻击加值和伤害。"
 					]
 				}
 			],

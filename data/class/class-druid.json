@@ -81,11 +81,6 @@
 					}
 				]
 			},
-			"languageProficiencies": [
-				{
-					"druidic": true
-				}
-			],
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
@@ -496,6 +491,7 @@
 					"srd": true,
 					"additionalSpells": [
 						{
+							"name": "Arctic",
 							"prepared": {
 								"3": [
 									"hold person",
@@ -516,6 +512,7 @@
 							}
 						},
 						{
+							"name": "Coast",
 							"prepared": {
 								"3": [
 									"mirror image",
@@ -536,6 +533,7 @@
 							}
 						},
 						{
+							"name": "Desert",
 							"prepared": {
 								"3": [
 									"blur",
@@ -556,6 +554,7 @@
 							}
 						},
 						{
+							"name": "Forest",
 							"prepared": {
 								"3": [
 									"barkskin",
@@ -576,6 +575,7 @@
 							}
 						},
 						{
+							"name": "Grassland",
 							"prepared": {
 								"3": [
 									"invisibility",
@@ -596,6 +596,7 @@
 							}
 						},
 						{
+							"name": "Mountain",
 							"prepared": {
 								"3": [
 									"spider climb",
@@ -616,6 +617,7 @@
 							}
 						},
 						{
+							"name": "Swamp",
 							"prepared": {
 								"3": [
 									"darkness",
@@ -636,6 +638,7 @@
 							}
 						},
 						{
+							"name": "Underdark",
 							"prepared": {
 								"3": [
 									"spider climb",
@@ -2368,7 +2371,7 @@
 			"classSource": "PHB",
 			"level": 1,
 			"entries": [
-				"你知晓德鲁伊语，一种属于德鲁伊的秘密语言。你可以说这种语言，并用它来留下隐藏的信息。你和其他知晓这种语言的人将会自动注意到这类信息。其他人则可以通过成功通过一次DC 15的感知（{@skill 察觉}）检定以察觉这个信息的存在，但不使用魔法就无法解读它。"
+				"你知晓{@language Druidic}，一种属于德鲁伊的秘密语言。你可以说这种语言，并用它来留下隐藏的信息。你和其他知晓这种语言的人将会自动注意到这类信息。其他人则可以通过成功通过一次DC 15的感知（{@skill 察觉}）检定以察觉这个信息的存在，但不使用魔法就无法解读它。"
 			]
 		},
 		{
@@ -2813,7 +2816,7 @@
 			"subclassSource": "PHB",
 			"level": 2,
 			"entries": [
-				"大地结社是由神秘主义者和贤者所组成，通过广泛的口述传承来守护古老知识和仪式。这些德鲁伊会在树木或立石环绕而成的神圣圆环内相聚，用德鲁伊语低语述说着原初的秘密。结社中最具智能的成员会作为团体中掌握着上古誓约的祭司长，并担当这群人的顾问和管理者。作为结社中的一员，你的魔法将被你在入会时所施展神秘结社仪式的大地环境所影响。",
+				"大地结社是由神秘主义者和贤者所组成，通过广泛的口述传承来守护古老知识和仪式。这些德鲁伊会在树木或立石环绕而成的神圣圆环内相聚，用{@language Druidic}低语述说着原初的秘密。结社中最具智能的成员会作为团体中掌握着上古誓约的祭司长，并担当这群人的顾问和管理者。作为结社中的一员，你的魔法将被你在入会时所施展神秘结社仪式的大地环境所影响。",
 				{
 					"type": "refSubclassFeature",
 					"subclassFeature": "额外戏法|Druid||Land||2"
@@ -4510,7 +4513,7 @@
 			"header": 1,
 			"entries": [
 				"At 2nd level, you gain the ability to converse with beasts and many fey.",
-				"You learn to speak, read, and write Sylvan. In addition, beasts can understand your speech, and you gain the ability to decipher their noises and motions. Most beasts lack the intelligence to convey or understand sophisticated concepts, but a friendly beast could relay what it has seen or heard in the recent past. This ability doesn't grant you any special friendship with beasts, though you can combine this ability with gifts to curry favor with them as you would with any nonplayer character."
+				"You learn to speak, read, and write {@language Sylvan}. In addition, beasts can understand your speech, and you gain the ability to decipher their noises and motions. Most beasts lack the intelligence to convey or understand sophisticated concepts, but a friendly beast could relay what it has seen or heard in the recent past. This ability doesn't grant you any special friendship with beasts, though you can combine this ability with gifts to curry favor with them as you would with any nonplayer character."
 			]
 		},
 		{
@@ -4885,7 +4888,7 @@
 			"entries": [
 				"{@i 2级牧人结社特性}",
 				"你获得与野兽和多数精类生物交谈的能力。",
-				"你学会说、读、写木族语。此外，野兽可以理解你的话语，且你获得解析牠们声音和动作的含意。大部分的野兽缺乏足够的智能以传达或理解复杂的概念，但一个友善的野兽可以复述牠在最近听过或看到的事物。此能力并不会让你和野兽成为朋友，但你可以将此能力与礼物结合以讨好牠们，就如同你对待任何其他非玩家角色一样。"
+				"你学会说、读、写{@language Sylvan}。此外，野兽可以理解你的话语，且你获得解析牠们声音和动作的含意。大部分的野兽缺乏足够的智能以传达或理解复杂的概念，但一个友善的野兽可以复述牠在最近听过或看到的事物。此能力并不会让你和野兽成为朋友，但你可以将此能力与礼物结合以讨好牠们，就如同你对待任何其他非玩家角色一样。"
 			]
 		},
 		{

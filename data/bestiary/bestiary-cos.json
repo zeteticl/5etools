@@ -1230,7 +1230,8 @@
 			"conditionInflictSpell": [
 				"invisible"
 			],
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Gadof Blinsky",
@@ -3170,14 +3171,13 @@
 				{
 					"name": "Spellcasting",
 					"headerEntries": [
-						"Sir Godfrey is a 16th-level spellcaster. His spellcasting ability is Charisma (spell save {@dc 15}, {@hit 7} to hit with spell attacks). He has the following paladin spells prepared:"
+						"Sir Godfrey is a 16th-level spellcaster. His spellcasting ability is Wisdom (spell save {@dc 14}, {@hit 6} to hit with spell attacks). He has the following paladin spells prepared:"
 					],
 					"spells": {
 						"1": {
 							"slots": 4,
 							"spells": [
 								"{@spell 命令术}",
-								"{@spell 侦测魔法}",
 								"{@spell 神恩术}",
 								"{@spell 雷霆斩}"
 							]
@@ -3185,7 +3185,6 @@
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell 援助术}",
 								"{@spell 烙印斩}",
 								"{@spell 魔化武器}"
 							]
@@ -3194,19 +3193,17 @@
 							"slots": 3,
 							"spells": [
 								"{@spell 致盲斩}",
-								"{@spell 解除魔法}",
-								"{@spell 移除诅咒}"
+								"{@spell 解除魔法}"
 							]
 						},
 						"4": {
 							"slots": 2,
 							"spells": [
-								"{@spell 净化灵光}",
 								"{@spell 惊震斩}"
 							]
 						}
 					},
-					"ability": "cha"
+					"ability": "wis"
 				}
 			],
 			"hasToken": true,
@@ -4417,6 +4414,35 @@
 			"hasToken": true
 		},
 		{
+			"name": "Walking Corpse",
+			"source": "CoS",
+			"page": 165,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM",
+				"_mod": {
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "Violent Death",
+								"entries": [
+									"When a corpse is reduced to 0 hit points, it splits open, disgorging a {@creature swarm of poisonous snakes}. The snakes are hungry and fight until slain."
+								]
+							}
+						]
+					}
+				}
+			},
+			"speed": {
+				"walk": 20
+			},
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			]
+		},
+		{
 			"name": "Wereraven",
 			"group": "Lycanthropes",
 			"source": "CoS",
@@ -4424,6 +4450,9 @@
 			"otherSources": [
 				{
 					"source": "CM"
+				},
+				{
+					"source": "VRGR"
 				}
 			],
 			"size": "M",
@@ -4532,7 +4561,8 @@
 				"RNG",
 				"RW"
 			],
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Yevgeni Krushkin",

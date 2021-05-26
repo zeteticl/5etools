@@ -154,12 +154,12 @@ class RacesPage extends ListPage {
 			new Renderer.utils.TabButton({
 				label: "信息",
 				fnPopulate: buildFluffTab,
-				isVisible: Renderer.utils.hasFluffText(race),
+				isVisible: Renderer.utils.hasFluffText(race, "raceFluff"),
 			}),
 			new Renderer.utils.TabButton({
 				label: "图片",
 				fnPopulate: buildFluffTab.bind(null, true),
-				isVisible: Renderer.utils.hasFluffImages(race),
+				isVisible: Renderer.utils.hasFluffImages(race, "raceFluff"),
 			}),
 		];
 

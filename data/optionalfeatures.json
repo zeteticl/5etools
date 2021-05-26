@@ -212,6 +212,15 @@
 			"featureType": [
 				"EI"
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"mage armor"
+						]
+					}
+				}
+			],
 			"entries": [
 				"你可以对你自己随意施放{@spell 法师护甲}，无需消耗法术位或材料构材。"
 			],
@@ -251,6 +260,15 @@
 						"class": {
 							"name": "Warlock"
 						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"levitate"
+						]
 					}
 				}
 			],
@@ -374,6 +392,15 @@
 			"featureType": [
 				"EI"
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"speak with animals"
+						]
+					}
+				}
+			],
 			"entries": [
 				"你可以随意施放{@spell 动物交谈术}，无需消耗法术位。"
 			],
@@ -411,6 +438,12 @@
 			"featureType": [
 				"EI"
 			],
+			"skillProficiencies": [
+				{
+					"deception": true,
+					"persuasion": true
+				}
+			],
 			"entries": [
 				"你获得对{@skill 欺瞒}和{@skill 说服}的技能熟练。"
 			],
@@ -434,6 +467,19 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"compulsion"
+								]
+							}
+						}
+					}
+				}
+			],
 			"entries": [
 				"你可以使用契术师法术位施放一次{@spell 强迫术}。直到你完成一次长休之前你都不能再这么做。"
 			],
@@ -448,6 +494,19 @@
 			"featureType": [
 				"FS:P"
 			],
+			"additionalSpells": [
+				{
+					"ability": "cha",
+					"innate": {
+						"_": [
+							{
+								"choose": "level=0|class=cleric",
+								"count": 2
+							}
+						]
+					}
+				}
+			],
 			"entries": [
 				"你从{@filter 牧师法术列表|spells|level=0|class=Cleric}中习得两项戏法。这些戏法对你来说是圣武士法术，施法关键属性是魅力。每当你提升此职业的等级时，你能够将一个已知戏法替换为牧师法术列表中的另一个戏法。"
 			]
@@ -459,6 +518,19 @@
 			"isClassFeatureVariant": true,
 			"featureType": [
 				"FS:P"
+			],
+			"additionalSpells": [
+				{
+					"ability": "cha",
+					"innate": {
+						"_": [
+							{
+								"choose": "level=0|class=cleric",
+								"count": 2
+							}
+						]
+					}
+				}
 			],
 			"entries": [
 				"You learn two cantrips of your choice from the {@filter cleric spell list|spells|level=0|class=Cleric}. They count as paladin spells for you, and Charisma is your spellcasting ability for them. Whenever you gain a level in this class, you can replace one of these cantrips with another cantrip from the cleric spell list."
@@ -551,6 +623,21 @@
 			"prerequisite": [
 				{
 					"pact": "Tome"
+				}
+			],
+			"additionalSpells": [
+				{
+					"ability": "cha",
+					"innate": {
+						"_": {
+							"ritual": [
+								{
+									"choose": "Components & Miscellaneous=ritual|level=1",
+									"count": 2
+								}
+							]
+						}
+					}
 				}
 			],
 			"entries": [
@@ -660,6 +747,20 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"6": [
+									"cone of cold"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki"
+				}
+			],
 			"entries": [
 				"你可以消耗6点气以施放{@spell 寒冰锥}。"
 			],
@@ -753,6 +854,12 @@
 					"patron": "The Great Old One"
 				}
 			],
+			"skillProficiencies": [
+				{
+					"deception": true,
+					"stealth": true
+				}
+			],
 			"entries": [
 				"The purple star Caiphon is the doom of inexperienced mariners. Those who use its deceptive light to guide their travels invariably come to ruin. You gain proficiency in the {@skill 欺瞒} and {@skill 隐匿} skills, and you have advantage on attack rolls against {@condition 魅惑} creatures."
 			]
@@ -808,6 +915,19 @@
 						"level": 15,
 						"class": {
 							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"hold monster"
+								]
+							}
 						}
 					}
 				}
@@ -885,6 +1005,20 @@
 							"name": "Four Elements"
 						}
 					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"3": [
+									"hold person"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki"
 				}
 			],
 			"entries": [
@@ -1171,6 +1305,19 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"confusion"
+								]
+							}
+						}
+					}
+				}
+			],
 			"entries": [
 				"你可以使用契术师法术位施放一次{@spell 困惑术}。直到你完成一次长休之前你都不能再这么做。"
 			],
@@ -1185,6 +1332,19 @@
 			"featureType": [
 				"FS:R"
 			],
+			"additionalSpells": [
+				{
+					"ability": "wis",
+					"innate": {
+						"_": [
+							{
+								"choose": "level=0|class=druid",
+								"count": 2
+							}
+						]
+					}
+				}
+			],
 			"entries": [
 				"你习得两个来自{@filter 德鲁伊法术列表|spells|level=0|class=druid}的你自选的戏法。它们对你视作游侠法术，感知是你施展他们的施法关键属性。当你升级时，你可以将其中一个戏法替换为德鲁伊法术列表中的另一个戏法。"
 			]
@@ -1196,6 +1356,19 @@
 			"isClassFeatureVariant": true,
 			"featureType": [
 				"FS:R"
+			],
+			"additionalSpells": [
+				{
+					"ability": "wis",
+					"innate": {
+						"_": [
+							{
+								"choose": "level=0|class=druid",
+								"count": 2
+							}
+						]
+					}
+				}
 			],
 			"entries": [
 				"You learn two cantrips of your choice from the {@filter druid spell list|spells|level=0|class=druid}. They count as druid spells for you, and Wisdom is your spellcasting ability for them. Whenever you gain a level in this class, you can replace one of these cantrips with another cantrip from the druid spell list."
@@ -1293,6 +1466,15 @@
 			"srd": true,
 			"featureType": [
 				"EI"
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"detect magic"
+						]
+					}
+				}
 			],
 			"entries": [
 				"你可以随意施放{@spell 侦测魔法}，无需消耗法术位。"
@@ -1586,6 +1768,20 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"5": [
+									"stoneskin"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki"
+				}
+			],
 			"entries": [
 				"你可以消耗5点气以施放{@spell 石肤术}，以你自己为目标。"
 			],
@@ -1661,6 +1857,15 @@
 					"pact": "Tome"
 				}
 			],
+			"additionalSpells": [
+				{
+					"prepared": {
+						"_": [
+							"sending"
+						]
+					}
+				}
+			],
 			"entries": [
 				"一张新的书页出现在你的影之书中。在你许可下，一个生物可以用动作来将它的名字写在这一页上，这一页能容纳的名字数量等于你的熟练加值。",
 				"你可以对名字在这一页上的生物施展{@spell 短讯术}，而不需要消耗法术位和材料成分。你必须将传讯写在这一页上来完成此行为。目标将在他们的心中听到这个传讯，如果目标回复了传讯，他们的回复将会出现在书页上而不是在你的心中。这些文字将会在一分钟后消失。",
@@ -1684,6 +1889,15 @@
 						}
 					},
 					"pact": "Tome"
+				}
+			],
+			"additionalSpells": [
+				{
+					"prepared": {
+						"_": [
+							"sending"
+						]
+					}
 				}
 			],
 			"entries": [
@@ -1713,6 +1927,15 @@
 			"featureType": [
 				"EI"
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"false life"
+						]
+					}
+				}
+			],
 			"entries": [
 				"你可以对你自己以1环法术随意施放{@spell 摹造生命}，无需消耗法术位或材料构材。"
 			],
@@ -1738,6 +1961,20 @@
 			"featureType": [
 				"ED"
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"2": [
+									"thunderwave"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki"
+				}
+			],
 			"entries": [
 				"你可以消耗2点气以施放{@spell 雷鸣波}。"
 			],
@@ -1761,6 +1998,20 @@
 							"name": "Four Elements"
 						}
 					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"4": [
+									"fireball"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki"
 				}
 			],
 			"entries": [
@@ -1927,6 +2178,19 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"water breathing"
+								]
+							}
+						}
+					}
+				}
+			],
 			"entries": [
 				"你可以在水下呼吸，且你获得等同于你步行速度的游泳速度。你也可以施放{@spell 水下呼吸}一次而无需消耗法术位。一旦你使用此祈唤施放它，直到你完成一次长休之前你都不能再这么做。"
 			],
@@ -1945,6 +2209,19 @@
 						"level": 5,
 						"class": {
 							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"water breathing"
+								]
+							}
 						}
 					}
 				}
@@ -2074,6 +2351,20 @@
 							"name": "Four Elements"
 						}
 					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"3": [
+									"shatter"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki"
 				}
 			],
 			"entries": [
@@ -2772,6 +3063,15 @@
 			"featureType": [
 				"EI"
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"disguise self"
+						]
+					}
+				}
+			],
 			"entries": [
 				"你可以随意施放{@spell 易容术}，无需消耗法术位。"
 			],
@@ -2792,6 +3092,15 @@
 						"class": {
 							"name": "Warlock"
 						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"alter self"
+						]
 					}
 				}
 			],
@@ -2879,6 +3188,19 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"conjure elemental"
+								]
+							}
+						}
+					}
+				}
+			],
 			"entries": [
 				"你可以使用契术师法术位施放一次{@spell 召唤元素生物}。直到你完成一次长休之前你都不能再这么做。"
 			],
@@ -2898,6 +3220,19 @@
 						"level": 5,
 						"class": {
 							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"slow"
+								]
+							}
 						}
 					}
 				}
@@ -2927,6 +3262,20 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"4": [
+									"gaseous form"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki"
+				}
+			],
 			"entries": [
 				"你可以消耗4点气以施放{@spell 气化形体}，以你自己为目标。"
 			],
@@ -2939,6 +3288,15 @@
 			"srd": true,
 			"featureType": [
 				"EI"
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"silent image"
+						]
+					}
+				}
 			],
 			"entries": [
 				"你可以随意施放{@spell 无声幻影}，无需消耗法术位或材料构材。"
@@ -3014,6 +3372,15 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"jump"
+						]
+					}
+				}
+			],
 			"entries": [
 				"你可以对你自己随意施放{@spell 跳跃术}，无需消耗法术位或材料构材。"
 			],
@@ -3042,6 +3409,18 @@
 			"featureType": [
 				"PB"
 			],
+			"additionalSpells": [
+				{
+					"ability": "cha",
+					"innate": {
+						"_": {
+							"ritual": [
+								"find familiar"
+							]
+						}
+					}
+				}
+			],
 			"entries": [
 				"你习得{@spell 寻获魔宠}法术，并可以将之作为仪式施放。此法术不会计入你的已知法术数量中。",
 				"当你施放此法术时，你可以为你的魔宠选择一个正常的型态，或选择下列其中一个特殊的型态：{@creature 小魔鬼}、{@creature 伪龙}、{@creature 夸塞魔}或{@creature 小妖精}。",
@@ -3055,6 +3434,18 @@
 			"page": 1,
 			"featureType": [
 				"PB"
+			],
+			"additionalSpells": [
+				{
+					"ability": "cha",
+					"innate": {
+						"_": {
+							"ritual": [
+								"augury"
+							]
+						}
+					}
+				}
 			],
 			"entries": [
 				"在3级时，一个献身于{@class Warlock|phb|Seeker|the Seeker (UA)|UATheFaithful}的角色可以选择这个选项，而非契术师既存的契约恩赐选项。",
@@ -3100,6 +3491,19 @@
 			"srd": true,
 			"featureType": [
 				"PB"
+			],
+			"additionalSpells": [
+				{
+					"ability": "cha",
+					"innate": {
+						"_": [
+							{
+								"choose": "level=0",
+								"count": 3
+							}
+						]
+					}
+				}
 			],
 			"entries": [
 				"你的宗主赐予你一本被称作「影之书」的魔法书。当你获得这个能力时，从任何职业的法术列表中选择三个戏法。这些戏法不需要来自同一个法术列表。当这本书在你身上时，你可以随意施放这些戏法。它们不会计入你的已知戏法数量。任何你通过此能力施放的戏法对你而言都视作契术师戏法。若你失去了你的影之书，你可以施展一个长达1小时的仪式以从你的宗主那里获得一个替代品。这个仪式可以在短休或长休期间被施展，且它将摧毁前一本书卷。这本书会在你死亡的时候化作灰烬。"
@@ -4294,6 +4698,20 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"4": [
+									"fly"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki"
+				}
+			],
 			"entries": [
 				"你可以消耗4点气以施放{@spell 飞行术}，以你自己为目标。"
 			],
@@ -4331,6 +4749,20 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"5": [
+									"wall of fire"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki"
+				}
+			],
 			"entries": [
 				"你可以消耗5点气以施放{@spell 火墙术}。"
 			],
@@ -4342,6 +4774,20 @@
 			"page": 81,
 			"featureType": [
 				"ED"
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"2": [
+									"gust of wind"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki"
+				}
 			],
 			"entries": [
 				"你可以消耗2点气以施放{@spell 造风术}。"
@@ -4366,6 +4812,19 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"polymorph"
+								]
+							}
+						}
+					}
+				}
+			],
 			"entries": [
 				"你可以使用契术师法术位施放一次{@spell 变形术}。直到你完成一次长休之前你都不能再这么做。"
 			],
@@ -4381,6 +4840,19 @@
 			"prerequisite": [
 				{
 					"patron": "The Archfey"
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"water breathing"
+								]
+							}
+						}
+					}
 				}
 			],
 			"entries": [
@@ -4535,6 +5007,15 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"invisibility"
+						]
+					}
+				}
+			],
 			"entries": [
 				"你可以随意施放{@spell 隐形术}，无需消耗法术位。"
 			],
@@ -4554,6 +5035,15 @@
 						"class": {
 							"name": "Warlock"
 						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"invisibility"
+						]
 					}
 				}
 			],
@@ -4598,6 +5088,19 @@
 						"level": 5,
 						"class": {
 							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"bestow curse"
+								]
+							}
 						}
 					}
 				}
@@ -4847,6 +5350,20 @@
 			"featureType": [
 				"ED"
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"2": [
+									"burning hands"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki"
+				}
+			],
 			"entries": [
 				"你可以消耗2点气以施放{@spell 燃烧之手}。"
 			],
@@ -4905,6 +5422,19 @@
 			"srd": true,
 			"featureType": [
 				"EI"
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"bane"
+								]
+							}
+						}
+					}
+				}
 			],
 			"entries": [
 				"你可以使用契术师法术位施放一次{@spell 灾祸术}。直到你完成一次长休之前你都不能再这么做。"
@@ -5078,6 +5608,19 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"freedom of movement"
+								]
+							}
+						}
+					}
+				}
+			],
 			"entries": [
 				"你可以对你自己施放一次{@spell 行动自如术}而无需消耗法术位。你在完成一次长休后恢复这么做的能力。"
 			],
@@ -5096,6 +5639,19 @@
 						"level": 7,
 						"class": {
 							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"freedom of movement"
+								]
+							}
 						}
 					}
 				}
@@ -5271,6 +5827,19 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"animate dead"
+								]
+							}
+						}
+					}
+				}
+			],
 			"entries": [
 				"你可以不消耗法术位施展{@spell 活化死尸}。若如此做，则你无法再以此方式施展该法术直到你完成一次长休。"
 			]
@@ -5315,6 +5884,15 @@
 						"class": {
 							"name": "Warlock"
 						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"arcane eye"
+						]
 					}
 				}
 			],
@@ -5384,6 +5962,20 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"6": [
+									"wall of stone"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki"
+				}
+			],
 			"entries": [
 				"你可以消耗6点气以施放{@spell 石墙术}。"
 			],
@@ -5404,6 +5996,15 @@
 						"class": {
 							"name": "Warlock"
 						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"speak with dead"
+						]
 					}
 				}
 			],

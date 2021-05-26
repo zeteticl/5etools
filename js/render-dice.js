@@ -301,18 +301,19 @@ Renderer.dice = {
 		return wrpTree.tree.evl({});
 	},
 
-	_pRollerClick_getMsgBug (total) { return `<span class="message">No result found matching roll ${total}?! <span class="help--subtle" title="Bug!">🐛</span></span>`; },
+	_pRollerClick_getMsgBug (total) { return `<span class="message">No result found matching roll ${total}?! <span class="help-subtle" title="Bug!">🐛</span></span>`; },
 
 	async pRollerClick (evtMock, ele, packed, name) {
 		const $ele = $(ele);
 		const entry = JSON.parse(packed);
+		// Aka "getTableName", probably
 		function attemptToGetNameOfRoll () {
 			// try use table caption
 			let titleMaybe = $(ele).closest(`table:not(.stats)`).children(`caption`).text();
 			if (titleMaybe) return titleMaybe.trim();
 
 			// try use list item title
-			titleMaybe = $(ele).parent().children(`.list-item-title`).text();
+			titleMaybe = $(ele).parent().children(`.rd__list-item-name`).text();
 			if (titleMaybe) return titleMaybe.trim();
 
 			// use the section title, where applicable

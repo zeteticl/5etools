@@ -126,12 +126,12 @@ class RenderBestiary {
 		<tr><td colspan="6"><strong>语言：</strong> ${Renderer.monster.getRenderedLanguages(mon.languages)}</td></tr>
 
 		<tr>${Parser.crToNumber(mon.cr) < VeCt.CR_UNKNOWN ? $$`
-		<td colspan="6" style="position: relative;"><strong>挑战等级：</strong>
+		<td colspan="6" class="relative"><strong>挑战等级</strong>
 			<span>${Parser.monCrToFull(mon.cr, {isMythic: !!mon.mythic})}</span>
 			${options.$btnScaleCr || ""}
 			${options.$btnResetScaleCr || ""}
 		</td>
-		` : ""}</tr>
+		` : `<td colspan="6" class="relative"><strong>Challenge</strong> <span>\u2014</span></td>`}</tr>
 
 		${mon.pbNote ? `<tr><td colspan="6"><strong>熟练加值 (PB)</strong> ${mon.pbNote}</td></tr>` : ""}
 
@@ -168,7 +168,7 @@ class RenderBestiary {
 		<tr class="text"><td colspan="6" class="text">
 			${legGroup.lairActions && legGroup.lairActions.length ? Renderer.get().render({type: "entries", entries: [{type: "entries", name: "Lair Actions", entries: legGroup.lairActions}]}) : ""}
 			${legGroup.regionalEffects && legGroup.regionalEffects.length ? Renderer.get().render({type: "entries", entries: [{type: "entries", name: "Regional Effects", entries: legGroup.regionalEffects}]}) : ""}
-			${legGroup.mythicEncounter && legGroup.mythicEncounter.length ? Renderer.get().render({type: "entries", entries: [{type: "entries", name: `<i title="This will display the creature's name when this legendary group is referenced from a creature statblock." class="help--subtle">&lt;Creature Name&gt;</i> as a Mythic Encounter`, entries: legGroup.mythicEncounter}]}) : ""}
+			${legGroup.mythicEncounter && legGroup.mythicEncounter.length ? Renderer.get().render({type: "entries", entries: [{type: "entries", name: `<i title="This will display the creature's name when this legendary group is referenced from a creature statblock." class="help-subtle">&lt;Creature Name&gt;</i> as a Mythic Encounter`, entries: legGroup.mythicEncounter}]}) : ""}
 		</td></tr>
 		${Renderer.utils.getBorderTr()}`;
 	}

@@ -149,12 +149,12 @@ class RecipesPage extends ListPage {
 			new Renderer.utils.TabButton({
 				label: "信息",
 				fnPopulate: this._renderFluff.bind(this, it),
-				isVisible: Renderer.utils.hasFluffText(it),
+				isVisible: Renderer.utils.hasFluffText(it, "recipeFluff"),
 			}),
 			new Renderer.utils.TabButton({
 				label: "图片",
 				fnPopulate: this._renderFluff.bind(this, it, true),
-				isVisible: Renderer.utils.hasFluffImages(it),
+				isVisible: Renderer.utils.hasFluffImages(it, "recipeFluff"),
 			}),
 		];
 

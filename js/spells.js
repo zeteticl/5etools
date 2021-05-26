@@ -156,12 +156,12 @@ class SpellsPage extends ListPage {
 			new Renderer.utils.TabButton({
 				label: "信息",
 				fnPopulate: buildFluffTab,
-				isVisible: Renderer.utils.hasFluffText(spell),
+				isVisible: Renderer.utils.hasFluffText(spell, "spellFluff"),
 			}),
 			new Renderer.utils.TabButton({
 				label: "图片",
 				fnPopulate: buildFluffTab.bind(null, true),
-				isVisible: Renderer.utils.hasFluffImages(spell),
+				isVisible: Renderer.utils.hasFluffImages(spell, "spellFluff"),
 			}),
 		];
 
@@ -191,7 +191,7 @@ class SpellsPage extends ListPage {
 		});
 
 		const [subclassLookup] = await Promise.all([
-			RenderSpells.pGetSubclassLookup(),
+			DataUtil.class.pGetSubclassLookup(),
 			ExcludeUtil.pInitialise(),
 		]);
 		Object.assign(SUBCLASS_LOOKUP, subclassLookup);
@@ -283,7 +283,7 @@ class SpellsPage extends ListPage {
 	}
 
 	_handleBrew (homebrew) {
-		RenderSpells.mergeHomebrewSubclassLookup(SUBCLASS_LOOKUP, homebrew);
+		DataUtil.class.mergeHomebrewSubclassLookup(SUBCLASS_LOOKUP, homebrew);
 		this._addSpells(homebrew.spell);
 		return Promise.resolve();
 	}
@@ -525,7 +525,7 @@ async function pPreloadSublistSources (json) {
 
 async function pHandleUnknownHash (link, sub) {
 	const src = Object.keys(spellsPage._multiSource.loadedSources)
-		.find(src => src.toLowerCase() === decodeURIComponent(link.split(HASH_LIST_SEP)[1]).toLowerCase());
+		.find(src => src.toLowerCase() === (UrlUtil.decodeHash(link)[1] || "").toLowerCase());
 	if (src) {
 		await spellsPage._multiSource.pLoadSource(src, "yes");
 		Hist.hashChange();

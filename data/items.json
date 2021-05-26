@@ -1373,7 +1373,9 @@
 						"向下"
 					],
 					"colStyles": [
-						"text-align-center"
+						"col-1 text-center",
+						"col-5-5",
+						"col-5-5"
 					],
 					"rows": [
 						[
@@ -1398,8 +1400,8 @@
 						],
 						[
 							"5",
-							"伸出的钳爪各自进行一次下述的近战武器攻击：命中+8，触及5尺，单一目标。{@italic 若命中：} 7 ({@dice 2d6})钝击伤害。",
-							"伸出的钳爪各自进行一次下述的近战武器攻击：命中+8，触及5尺，单一目标。{@italic 若命中：}目标{@condition 被擒}(逃脱DC 15)。"
+							"伸出的钳爪各自进行一次下述的近战武器攻击：命中{@hit 8}，触及5尺，单一目标。{@h} 7 ({@dice 2d6})钝击伤害。",
+							"伸出的钳爪各自进行一次下述的近战武器攻击：命中{@hit 8}，触及5尺，单一目标。{@h} 目标{@condition 被擒}(逃脱{@dc 15})。"
 						],
 						[
 							"6",
@@ -3855,7 +3857,7 @@
 			"page": 150,
 			"baseItem": "longsword|phb",
 			"type": "M",
-			"rarity": "legendary",
+			"rarity": "artifact",
 			"reqAttune": true,
 			"weight": 3,
 			"weaponCategory": "martial",
@@ -3914,7 +3916,7 @@
 			"name": "Blade of Broken Mirrors",
 			"source": "EGW",
 			"page": 275,
-			"baseItem": "dagger|PHB",
+			"baseItem": "dagger|phb",
 			"type": "M",
 			"rarity": "artifact",
 			"reqAttune": "by a humanoid",
@@ -4418,7 +4420,7 @@
 			"value": 15000,
 			"age": "renaissance",
 			"entries": [
-				"以一个动作，一个角色可以点燃炸弹并将它投掷到最多60尺远的一点。每个距离该点5尺内的生物都必须成功通过一次DC 12的敏捷豁免，否则受到{@dice 3d6}火焰伤害。"
+				"以一个动作，一个角色可以点燃炸弹并将它投掷到最多60尺远的一点。每个距离该点5尺内的生物都必须成功通过一次DC 12的敏捷豁免，否则受到{@damage 3d6}火焰伤害。"
 			],
 			"ENG_name": "Bomb"
 		},
@@ -7313,27 +7315,27 @@
 								],
 								[
 									"26-45",
-									"出现{@dice 2d4} 只小魔鬼Imps 和 {@dice 2d4} 只夸塞魔Quasits。"
+									"出现 {@dice 2d4} 只{@creature 小魔鬼} 和 {@dice 2d4} 只{@creature 夸塞魔}。"
 								],
 								[
 									"46-60",
-									"出现{@dice 1d8} 只魅魔Succubi/梦魔incubi。"
+									"出现 {@dice 1d8} 只{@creature 魅魔}/{@creature 梦魔}。"
 								],
 								[
 									"61-70",
-									"出现{@dice 1d10} 只猬魔Barbed devils与{@dice 1d10} 只弗洛魔Vrocks"
+									"出现 {@dice 1d10} 只{@creature 猬魔}与 {@dice 1d10} 只{@creature 弗洛魔}"
 								],
 								[
 									"71-80",
-									"出现一只只奥登罗斯魔Arcanaloth，1只夜鬼婆Night Hag，与1只罗刹Rakshasa。"
+									"出现一只奥登罗斯魔 Arcanaloth，1只{@creature 夜鬼婆}，与1只{@creature 罗刹}。"
 								],
 								[
 									"81-85",
-									"出现1只冰魔Ice devil与1只六臂蛇魔Marilith。"
+									"出现1只{@creature 冰魔}与1只{@creature 六臂蛇魔}。"
 								],
 								[
 									"86-90",
-									"出现1只巴洛炎魔Balor与1只深狱炼魔Pit Fiend。取决于DM的意愿，可以用打开一扇通往某一位大魔鬼或恶魔领主所在的传送门作为替代，传送门会在5分钟内关闭。"
+									"出现1只{@creature 巴洛炎魔}与1只{@creature 深狱炼魔}。取决于DM的意愿，可以用打开一扇通往某一位大魔鬼或恶魔领主所在的传送门作为替代，传送门会在5分钟内关闭。"
 								],
 								[
 									"91-00",
@@ -10244,7 +10246,7 @@
 				"V"
 			],
 			"dmg1": "1d8",
-			"dmgType": "B",
+			"dmgType": "R",
 			"dmg2": "1d10",
 			"bonusWeapon": "+2",
 			"weapon": true,
@@ -10397,7 +10399,7 @@
 			"age": "modern",
 			"entries": [
 				"以一个动作，一个生物可以点燃一根炸药并将它投掷到最多60尺远的一点。每个距离该点5尺内的生物都必须进行一次DC 12的敏捷豁免，豁免失败将受到{@dice 3d6}钝击伤害，豁免成功则只受到一半的伤害。",
-				"角色可以将好几根炸药捆在一起以让它们在同时爆炸。每根额外的炸药都会使伤害增加{@dice 1d6}点（最多至{@dice 10d6}），并使爆炸半径增加5尺（最远至20尺）。",
+				"角色可以将好几根炸药捆在一起以让它们在同时爆炸。每根额外的炸药都会使伤害增加{@damage 1d6}点（最多至{@damage 10d6}），并使爆炸半径增加5尺（最远至20尺）。",
 				"炸药可以通过使用更长的导火线以在一段时间之后引爆，通常延迟1到6轮。为该炸药骰先攻。在设置的轮数经过之后，该炸药会在其先攻顺序爆炸。"
 			]
 		},
@@ -11037,7 +11039,8 @@
 						"items": "One card in this deck is enchanted to appear as whatever specific card its owner commands. This magic works only 25 percent of the time, but the deck is worth 500 gp to any serious gambler who doesn't mind the risk\u2014or who isn't told about it."
 					}
 				}
-			}
+			},
+			"value": null
 		},
 		{
 			"name": "不朽法术书",
@@ -12292,7 +12295,7 @@
 			"age": "modern",
 			"entries": [
 				"以一个动作，一个角色可以将榴弹投掷到最多60尺远的一点。若使用榴弹发射器，该角色可以将榴弹投射到最多120尺远的位置。",
-				"每个距离破片榴弹20尺内的生物都必须进行一次DC 15的敏捷豁免，豁免失败将受到{@dice 5d6}穿刺伤害，豁免成功则只受到一半的伤害。"
+				"每个距离破片榴弹20尺内的生物都必须进行一次DC 15的敏捷豁免，豁免失败将受到{@damage 5d6}穿刺伤害，豁免成功则只受到一半的伤害。"
 			],
 			"ENG_name": "Fragmentation Grenade"
 		},
@@ -13244,7 +13247,7 @@
 			"name": "榴弹发射器",
 			"source": "DMG",
 			"page": 268,
-			"type": "EXP",
+			"type": "G",
 			"rarity": "none",
 			"weight": 7,
 			"age": "modern",
@@ -13496,7 +13499,7 @@
 			"age": "renaissance",
 			"entries": [
 				"火药主要用于将子弹推出手枪或步枪的枪管，或用以制造炸弹。火药通常装在小型木桶或防水的角瓶中出售。",
-				"点火引燃装满火药的容器将会使之爆炸，对距离它10尺内的生物造成火焰伤害(角瓶火药{@dice 3d6}；小桶火药{@dice 7d6})。借由成功通过一次DC 12的敏捷豁免可以将这个伤害减半。点燃一盎司的火药会使它剧烈燃烧持续1轮，散发出30尺半径的明亮光照和再延伸30尺的微光光照。"
+				"点火引燃装满火药的容器将会使之爆炸，对距离它10尺内的生物造成火焰伤害(角瓶火药{@damage 3d6})。借由成功通过一次DC 12的敏捷豁免可以将这个伤害减半。点燃一盎司的火药会使它剧烈燃烧持续1轮，散发出30尺半径的明亮光照和再延伸30尺的微光光照。"
 			],
 			"ENG_name": "Gunpowder Horn"
 		},
@@ -13511,7 +13514,7 @@
 			"age": "renaissance",
 			"entries": [
 				"火药主要用于将子弹推出手枪或步枪的枪管，或用以制造炸弹。火药通常装在小型木桶或防水的角瓶中出售。",
-				"点火引燃装满火药的容器将会使之爆炸，对距离它10尺内的生物造成火焰伤害(角瓶火药{@dice 3d6}；小桶火药{@dice 7d6})。借由成功通过一次DC 12的敏捷豁免可以将这个伤害减半。点燃一盎司的火药会使它剧烈燃烧持续1轮，散发出30尺半径的明亮光照和再延伸30尺的微光光照。"
+				"点火引燃装满火药的容器将会使之爆炸，对距离它10尺内的生物造成火焰伤害(小桶火药{@dice 7d6})。借由成功通过一次DC 12的敏捷豁免可以将这个伤害减半。点燃一盎司的火药会使它剧烈燃烧持续1轮，散发出30尺半径的明亮光照和再延伸30尺的微光光照。"
 			],
 			"ENG_name": "Gunpowder Keg"
 		},
@@ -13725,7 +13728,29 @@
 			]
 		},
 		{
+			"name": "Harkon's Bite",
+			"source": "VRGR",
+			"page": 137,
+			"rarity": "uncommon",
+			"reqAttune": true,
+			"wondrous": true,
+			"curse": true,
+			"bonusSavingThrow": "+1",
+			"entries": [
+				"A dire wolf tooth dangles from this simple cord necklace. While you wear it, the necklace grants you a +1 bonus to ability checks and saving throws.",
+				{
+					"type": "entries",
+					"name": "Curse",
+					"entries": [
+						"Attuning to Harkon's Bite curses you until either Harkon Lukas removes the necklace from you or you are targeted by a {@spell remove curse} spell or similar magic. As long as you remain cursed, you cannot remove the necklace.",
+						"Upon donning or removing the necklace, whether you are attuned to it or not, you are afflicted with {@variantrule Player Characters as Lycanthropes|mm|werewolf lycanthropy} as detailed in the Monster Manual. The curse lasts until the dawn after the next full moon. If you are still wearing the necklace at this time, you are afflicted with the lycanthropy again."
+					]
+				}
+			]
+		},
+		{
 			"name": "易容帽",
+			"ENG_name": "Hat of Disguise",
 			"source": "DMG",
 			"page": 173,
 			"srd": true,
@@ -13741,8 +13766,7 @@
 			],
 			"lootTables": [
 				"魔法物品表F"
-			],
-			"ENG_name": "Hat of Disguise"
+			]
 		},
 		{
 			"name": "害虫之帽",
@@ -14748,7 +14772,432 @@
 			]
 		},
 		{
+			"name": "Horror Trinket",
+			"source": "VRGR",
+			"page": 36,
+			"type": "G",
+			"rarity": "none",
+			"entries": [
+				"Before you finish making a character, roll once on the Horror Trinkets table for a unique object your character has with them at the start of their adventuring career. These trinkets hint toward various horrific tales and might lead to dreadful revelations or be nothing more than grim keepsakes. At the DM's discretion any of these trinkets might also be a Mist talisman (detailed in {@book chapter 3|VRGR|3|Mist Talismans}), a focal item that can lead the bearer through the Mists to a particular Domain of Dread.",
+				{
+					"type": "table",
+					"caption": "Horror Trinkets",
+					"colLabels": [
+						"d100",
+						"Trinket"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"01",
+							"A picture you drew as a child of your imaginary friend"
+						],
+						[
+							"02",
+							"A lock that opens when blood is dripped in its keyhole"
+						],
+						[
+							"03",
+							"Clothes stolen from a scarecrow"
+						],
+						[
+							"04",
+							"A spinning top carved with four faces: happy, sad, wrathful, and dead"
+						],
+						[
+							"05",
+							"The necklace of a sibling who died on the day you were born"
+						],
+						[
+							"06",
+							"A wig from someone executed by beheading"
+						],
+						[
+							"07",
+							"The unopened letter to you from your dying father"
+						],
+						[
+							"08",
+							"A pocket watch that runs backward for an hour every midnight"
+						],
+						[
+							"09",
+							"A winter coat stolen from a dying soldier"
+						],
+						[
+							"10",
+							"A bottle of invisible ink that can only be read at sunset"
+						],
+						[
+							"11",
+							"A wineskin that refills when interred with a dead person for a night"
+						],
+						[
+							"12",
+							"A set of silverware used by a king for his last meal"
+						],
+						[
+							"13",
+							"A spyglass that always shows the world suffering a terrible storm"
+						],
+						[
+							"14",
+							"A cameo with the profile's face scratched away"
+						],
+						[
+							"15",
+							"A lantern with a black candle that never runs out and that burns with green flame"
+						],
+						[
+							"16",
+							"A teacup from a child's tea set, stained with blood"
+						],
+						[
+							"17",
+							"A little black book that records your dreams, and yours alone, when you sleep"
+						],
+						[
+							"18",
+							"A necklace formed of the interlinked holy symbols of a dozen deities"
+						],
+						[
+							"19",
+							"A noose that feels heavier than it should"
+						],
+						[
+							"20",
+							"A birdcage into which small birds fly but once inside never eat or leave"
+						],
+						[
+							"21",
+							"A lepidopterist's box filled with dead moths with skull-like patterns on their wings"
+						],
+						[
+							"22",
+							"A jar of pickled ghouls' tongues"
+						],
+						[
+							"23",
+							"The wooden hand of a notorious pirate"
+						],
+						[
+							"24",
+							"A urn with the ashes of a dead relative"
+						],
+						[
+							"25",
+							"A hand mirror backed with a bronze depiction of a medusa"
+						],
+						[
+							"26",
+							"Pallid leather gloves crafted with ivory fingernails"
+						],
+						[
+							"27",
+							"Dice made from the knuckles of a notorious charlatan"
+						],
+						[
+							"28",
+							"A ring of keys for forgotten locks"
+						],
+						[
+							"29",
+							"Nails from the coffin of a murderer"
+						],
+						[
+							"30",
+							"A key to the family crypt"
+						],
+						[
+							"31",
+							"A bouquet of funerary flowers that always looks and smells fresh"
+						],
+						[
+							"32",
+							"A switch used to discipline you as a child"
+						],
+						[
+							"33",
+							"A music box that plays by itself whenever someone holding it dances"
+						],
+						[
+							"34",
+							"A walking cane with an iron ferrule that strikes sparks on stone"
+						],
+						[
+							"35",
+							"A flag from a ship lost at sea"
+						],
+						[
+							"36",
+							"A porcelain doll's head that always seems to be looking at you"
+						],
+						[
+							"37",
+							"A wolf's head wrought in silver that is also a whistle"
+						],
+						[
+							"38",
+							"A small mirror that shows a much older version of the viewer"
+						],
+						[
+							"39",
+							"A small, worn book of children's nursery rhymes"
+						],
+						[
+							"40",
+							"A mummified raven claw"
+						],
+						[
+							"41",
+							"A broken pendant of a silver dragon that's always cold to the touch"
+						],
+						[
+							"42",
+							"A small locked box that quietly hums a lovely melody at night, but you always forget it in the morning"
+						],
+						[
+							"43",
+							"An inkwell that makes one a little nauseous when staring at it"
+						],
+						[
+							"44",
+							"An old doll made from a dark, dense wood and missing a hand and a foot"
+						],
+						[
+							"45",
+							"A black executioner's hood"
+						],
+						[
+							"46",
+							"A pouch made of flesh, with a sinew drawstring"
+						],
+						[
+							"47",
+							"A tiny spool of black thread that never runs out"
+						],
+						[
+							"48",
+							"A tiny clockwork figurine of a dancer that's missing a gear and doesn't work"
+						],
+						[
+							"49",
+							"A black wooden pipe that creates puffs of smoke that look like skulls"
+						],
+						[
+							"50",
+							"A vial of perfume, the scent of which only certain creatures can detect"
+						],
+						[
+							"51",
+							"A stone that emits a single endless sigh"
+						],
+						[
+							"52",
+							"A rag doll with two red dots on its neck"
+						],
+						[
+							"53",
+							"A spring-loaded toy with a missing crank"
+						],
+						[
+							"54",
+							"A mason jar containing a harmless but agitated, animate ooze"
+						],
+						[
+							"55",
+							"A black wooden die with 1's on all the faces"
+						],
+						[
+							"56",
+							"A child's portrait with \"born\" written on the back, along with next year's date"
+						],
+						[
+							"57",
+							"A dagger-sized shark tooth"
+						],
+						[
+							"58",
+							"A finger that's taken root in a small pot"
+						],
+						[
+							"59",
+							"A toolbox containing the remains of a dangerous but broken clockwork arachnid"
+						],
+						[
+							"60",
+							"A pitcher-sized, opalescent snail shell that occasionally, inexplicably shudders or tips over"
+						],
+						[
+							"61",
+							"The logbook of an ice-breaking ship called The Haifisch"
+						],
+						[
+							"62",
+							"A small portrait of you as a child, alongside your identically dressed twin"
+						],
+						[
+							"63",
+							"A silver pocket watch with thirteen hours marked on the face"
+						],
+						[
+							"64",
+							"A woodcut of a wolf devouring its own hind leg"
+						],
+						[
+							"65",
+							"A planchette etched with raven skulls"
+						],
+						[
+							"66",
+							"A moist coral figurine of a lamprey with arms, legs, and a bipedal stance"
+						],
+						[
+							"67",
+							"A bronze fingertrap sculpted with roaring tigers"
+						],
+						[
+							"68",
+							"A pearl necklace that turns red under the full moon"
+						],
+						[
+							"69",
+							"A fossil of a fish with humanoid features"
+						],
+						[
+							"70",
+							"A plague doctor's mask"
+						],
+						[
+							"71",
+							"A paper talisman with smudged ink"
+						],
+						[
+							"72",
+							"A locket containing the smeared image of an eyeless figure"
+						],
+						[
+							"73",
+							"A canopic jar with a lid sculpted like a goat"
+						],
+						[
+							"74",
+							"A jack-o'-lantern made from a small, pale gourd"
+						],
+						[
+							"75",
+							"A single high-heeled, iron shoe"
+						],
+						[
+							"76",
+							"A candle made from a severed hand"
+						],
+						[
+							"77",
+							"A clockwork device that beats like a heart"
+						],
+						[
+							"78",
+							"A blank masquerade mask"
+						],
+						[
+							"79",
+							"A glass eye with a live worm inside"
+						],
+						[
+							"80",
+							"A sheet with two eyeholes cut in it"
+						],
+						[
+							"81",
+							"The deed to someplace called Tergeron Manor"
+						],
+						[
+							"82",
+							"An ornate, wax-sealed crimson envelope that resists all attempts to open it"
+						],
+						[
+							"83",
+							"A mourning veil trimmed in black lace"
+						],
+						[
+							"84",
+							"A straitjacket covered in charcoal runes"
+						],
+						[
+							"85",
+							"A tattered, burlap mask with a crooked smile painted on it"
+						],
+						[
+							"86",
+							"A green ribbon designed to be worn as a choker"
+						],
+						[
+							"87",
+							"Dentures with mismatched, sharpened teeth"
+						],
+						[
+							"88",
+							"A warm, fist-sized egg case"
+						],
+						[
+							"89",
+							"A copper ring with \"mine\" engraved on the inside"
+						],
+						[
+							"90",
+							"A glass ampoule containing a neon green fluid"
+						],
+						[
+							"91",
+							"An eye patch embroidered with a holy symbol"
+						],
+						[
+							"92",
+							"A severed big toe with a nail that continues to grow"
+						],
+						[
+							"93",
+							"A journal that has been heavily redacted"
+						],
+						[
+							"94",
+							"A glove with a mouth-like design stitched on the palm"
+						],
+						[
+							"95",
+							"An ornate but empty reliquary made of silver and fractured glass"
+						],
+						[
+							"96",
+							"A ceramic figure of a cat with too many eyes"
+						],
+						[
+							"97",
+							"A crumpled paper ticket bearing the words \"admit none\""
+						],
+						[
+							"98",
+							"An electrum coin with your face on one side"
+						],
+						[
+							"99",
+							"A shrunken gremishka head that twitches when anyone casts magic nearby"
+						],
+						[
+							"100",
+							"A sunburst amulet with a red stone at the center"
+						]
+					]
+				}
+			]
+		},
+		{
 			"name": "西风马蹄铁",
+			"ENG_name": "Horseshoes of a Zephyr",
 			"source": "DMG",
 			"page": 175,
 			"srd": true,
@@ -14760,8 +15209,7 @@
 			],
 			"lootTables": [
 				"魔法物品表D"
-			],
-			"ENG_name": "Horseshoes of a Zephyr"
+			]
 		},
 		{
 			"name": "加速马蹄铁",
@@ -16239,6 +16687,23 @@
 			],
 			"hasFluffImages": true,
 			"ENG_name": "Ironfang"
+		},
+		{
+			"name": "Ivana's Whisper",
+			"source": "VRGR",
+			"page": 83,
+			"type": "G",
+			"rarity": "unknown",
+			"poison": true,
+			"entries": [
+				"This poison bears a distinct scent and chemical message from Ivana Boritsi. A creature subjected to this poison must succeed on a DC 18 Constitution saving throw or experience the effects of a {@spell dream} spell created by Ivana the next time they sleep. This poison is nonmagical, and Ivana doesn't directly communicate with those affected during the dream. Rather, she creates the illusion of speaking with her intended target by alchemically crafting her message, predicting her target's reactions, and chemically encoding in her responses. She wears this poison as a perfume or hides it within gift bouquets, allowing it to convey her message later."
+			],
+			"poisonTypes": [
+				"inhaled"
+			],
+			"attachedSpells": [
+				"dream"
+			]
 		},
 		{
 			"name": "Izzet Guild Signet",
@@ -18629,6 +19094,18 @@
 			]
 		},
 		{
+			"name": "Master's Amulet",
+			"source": "MM",
+			"page": 271,
+			"type": "OTH",
+			"rarity": "unknown (magic)",
+			"entries": [
+				"Every {@creature shield guardian} has an amulet magically linked to it. A shield guardian can have only one corresponding amulet, and if that amulet is destroyed, the shield guardian is {@condition incapacitated} until a replacement amulet is created. A shield guardian's amulet is subject to direct attack if it isn't being worn or carried. It has AC 10, 10 hit points, and immunity to poison and psychic damage. Crafting an amulet requires 1 week and costs 1,000 gp in components.",
+				"A shield guardian's solitary focus is to protect the amulet's wearer. The amulet's wearer can command the guardian to attack its enemies or to guard the wielder against attack. If an attack threatens to injure the wearer, the construct can magically absorb the blow into its own body, even at a distance.",
+				"A spellcaster can store a single spell within a shield guardian, which can then cast the spell on command or under specific conditions. Many a wizard has been rendered helpless by enemies, only to surprise those foes when its shield guardian unleashes potent magical power."
+			]
+		},
+		{
 			"name": "Masterpiece painting in mahogany frame with gold inlay (Legion of Dusk)",
 			"source": "PSX",
 			"page": 25,
@@ -19286,6 +19763,12 @@
 			"name": "Monster Hunter's Pack",
 			"source": "CoS",
 			"page": 209,
+			"otherSources": [
+				{
+					"source": "VRGR",
+					"page": 34
+				}
+			],
 			"type": "G",
 			"rarity": "none",
 			"weight": 48.5,
@@ -19825,6 +20308,46 @@
 			"attachedSpells": [
 				"mending"
 			]
+		},
+		{
+			"name": "Nepenthe",
+			"source": "VRGR",
+			"page": 86,
+			"baseItem": "longsword|PHB",
+			"type": "M",
+			"rarity": "legendary",
+			"reqAttune": "by a paladin",
+			"sentient": true,
+			"weight": 3,
+			"weaponCategory": "martial",
+			"property": [
+				"V"
+			],
+			"dmg1": "1d8",
+			"dmgType": "S",
+			"dmg2": "1d10",
+			"bonusWeapon": "+3",
+			"sword": true,
+			"weapon": true,
+			"entries": [
+				"You gain a +3 bonus to attack and damage rolls made with this magic weapon. When you hit a fiend or an undead with it, that creature takes an extra {@damage 2d10} radiant damage.",
+				"While you hold the drawn sword, it creates an aura in a 10-foot radius around you. You and all creatures friendly to you in the aura have advantage on saving throws against spells and other magical effects. If you have 17 or more levels in the paladin class, the radius of the aura increases to 30 feet.",
+				{
+					"type": "entries",
+					"name": "Sentience",
+					"entries": [
+						"Nepenthe is a sentient, neutral evil weapon with an Intelligence of 10, a Wisdom of 8, and a Charisma of 18. It has hearing and {@sense darkvision} out to a range of 60 feet. It can read and understand Elvish. It can also speak Elvish, but only through the voice of its wielder, with whom the sword can communicate telepathically."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Personality",
+					"entries": [
+						"In its lifetime, the sword has beheaded thousands of criminals, not all of whom were guilty of the crimes for which they were convicted. The sword cannot distinguish the guilty from the innocent. With each beheading, it hungers for more justice and blood. The sword is corrupt and irredeemable."
+					]
+				}
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Nether Scroll of Azumar",
@@ -20379,7 +20902,7 @@
 					"type": "entries",
 					"name": "Random Properties",
 					"entries": [
-						"An Orb of Dragon kind has the following random properties:",
+						"An Orb of Dragonkind has the following random properties:",
 						{
 							"type": "list",
 							"items": [
@@ -26195,6 +26718,7 @@
 			"rarity": "uncommon",
 			"weight": 45,
 			"ac": 14,
+			"dexterityMax": null,
 			"entries": [
 				"This suit of magic armor is made from shimmering scales. While wearing it, you can apply your full Dexterity modifier (instead of a maximum of +2) when determining your Armor Class. In addition, this armor does not impose disadvantage on your Dexterity ({@skill Stealth}) checks."
 			]
@@ -29936,7 +30460,6 @@
 				}
 			],
 			"attachedSpells": [
-				"wish",
 				"call lightning",
 				"divine word",
 				"finger of death"

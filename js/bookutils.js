@@ -613,9 +613,8 @@ class BookUtil {
 		});
 
 		$(document.body)
-			.off("keypress")
 			.on("keypress", (e) => {
-				if (!((e.key === "f" || e.key === "g") && EventUtil.noModifierKeys(e))) return;
+				if ((e.key !== "f" && e.key !== "g") || !EventUtil.noModifierKeys(e)) return;
 				if (EventUtil.isInInput(e)) return;
 				e.preventDefault();
 				BookUtil._showSearchBox(indexData, bookId, e.key === "g");
@@ -739,7 +738,7 @@ class BookUtil {
 		BookUtil.curRender.$lnksChapter = [];
 		BookUtil.curRender.$lnksHeader = {};
 
-		BookUtil.curRender.$btnToggleExpandAll = $(`<span title="Expand All" class="px-2 bold py-1px no-select clickable">${BookUtil.isDefaultExpandedContents ? `[\u2012]` : `[+]`}</span>`)
+		BookUtil.curRender.$btnToggleExpandAll = $(`<span title="Expand All" class="px-2 bold py-1p no-select clickable">${BookUtil.isDefaultExpandedContents ? `[\u2012]` : `[+]`}</span>`)
 			.click(() => {
 				const isExpanded = BookUtil.curRender.$btnToggleExpandAll.text() !== `[+]`;
 				BookUtil.curRender.$btnToggleExpandAll.text(isExpanded ? `[+]` : `[\u2012]`).title(isExpanded ? `Collapse All` : `Expand All`);
@@ -780,7 +779,7 @@ class BookUtil {
 					<span class="name">${book.name}</span>
 				</a>
 				<div class="flex-v-center">
-					<a href="${this._getHrefShowAll(book.id)}" class="bk__contents_show_all px-2 py-1px flex-v-center lst__wrp-cells lst__row-inner" title="查看整本${this._getTypeTitleInCn(BookUtil.contentType)} （警告：速度较慢）">
+					<a href="${this._getHrefShowAll(book.id)}" class="bk__contents_show_all px-2 py-1p flex-v-center lst__wrp-cells lst__row-inner" title="查看整本${this._getTypeTitleInCn(BookUtil.contentType)} （警告：速度较慢）">
 						<span class="glyphicon glyphicon glyphicon-book" style="top: 0;"/>
 					</a>
 					${BookUtil.curRender.$btnToggleExpandAll}
