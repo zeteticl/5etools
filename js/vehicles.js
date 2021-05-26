@@ -123,13 +123,13 @@ class VehiclesPage extends ListPage {
 				label: "Info",
 				fnChange: () => $floatToken.hide(),
 				fnPopulate: buildFluffTab,
-				isVisible: Renderer.utils.hasFluffText(veh),
+				isVisible: Renderer.utils.hasFluffText(veh, "vehicleFluff"),
 			}),
 			new Renderer.utils.TabButton({
 				label: "Images",
 				fnChange: () => $floatToken.hide(),
 				fnPopulate: buildFluffTab.bind(null, true),
-				isVisible: Renderer.utils.hasFluffImages(veh),
+				isVisible: Renderer.utils.hasFluffImages(veh, "vehicleFluff"),
 			}),
 		];
 

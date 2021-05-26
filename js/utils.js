@@ -7,7 +7,7 @@ if (IS_NODE) require("./parser.js");
 
 // in deployment, `IS_DEPLOYED = "<version number>";` should be set below.
 IS_DEPLOYED = undefined;
-VERSION_NUMBER = /* 5ETOOLS_VERSION__OPEN */"1.125.2"/* 5ETOOLS_VERSION__CLOSE */;
+VERSION_NUMBER = /* 5ETOOLS_VERSION__OPEN */"1.129.0"/* 5ETOOLS_VERSION__CLOSE */;
 DEPLOYED_STATIC_ROOT = ""; // "https://static.5etools.com/"; // FIXME re-enable this when we have a CDN again
 // for the roll20 script to set
 IS_VTT = false;
@@ -723,8 +723,9 @@ ElementUtil = {
 		ele,
 		title,
 		children,
+		outer,
 	}) {
-		ele = ele || document.createElement(tag);
+		ele = ele || (outer ? (new DOMParser()).parseFromString(outer, "text/html").body.childNodes[0] : document.createElement(tag));
 
 		if (clazz) ele.className = clazz;
 		if (style) ele.setAttribute("style", style);
@@ -753,6 +754,8 @@ ElementUtil = {
 		ele.attr = ele.attr || ElementUtil._attr.bind(ele);
 		ele.val = ele.val || ElementUtil._val.bind(ele);
 		ele.html = ele.html || ElementUtil._html.bind(ele);
+		ele.onClick = ele.onClick || ElementUtil._onClick.bind(ele);
+		ele.onContextmenu = ele.onContextmenu || ElementUtil._onContextmenu.bind(ele);
 
 		return ele;
 	},
@@ -823,6 +826,11 @@ ElementUtil = {
 		this.innerHTML = html;
 		return this;
 	},
+
+	_onClick (fn) { return ElementUtil._onX(this, "click", fn); },
+	_onContextmenu (fn) { return ElementUtil._onX(this, "contextmenu", fn); },
+
+	_onX (ele, evtName, fn) { ele.addEventListener(evtName, fn); return ele; },
 
 	_val (val) {
 		if (val !== undefined) {
@@ -1253,7 +1261,7 @@ MiscUtil = {
 	 * @param [opts]
 	 * @param [opts.keyBlacklist]
 	 * @param [opts.isAllowDeleteObjects] If returning `undefined` from an object handler should be treated as a delete.
-	 * @param [opts.isAllowDeleteArrays] (Unimplemented) // TODO
+	 * @param [opts.isAllowDeleteArrays] If returning `undefined` from an array handler should be treated as a delete.
 	 * @param [opts.isAllowDeleteBooleans] (Unimplemented) // TODO
 	 * @param [opts.isAllowDeleteNumbers] (Unimplemented) // TODO
 	 * @param [opts.isAllowDeleteStrings] (Unimplemented) // TODO
@@ -1264,23 +1272,9 @@ MiscUtil = {
 		opts = opts || {};
 		const keyBlacklist = opts.keyBlacklist || new Set();
 
-		function applyHandlers (handlers, obj, lastKey, stack) {
-			if (!(handlers instanceof Array)) handlers = [handlers];
-			handlers.forEach(h => {
-				const out = h(obj, lastKey, stack);
-				if (!opts.isNoModification) obj = out;
-			});
-			return obj;
-		}
-
-		function runHandlers (handlers, obj, lastKey, stack) {
-			if (!(handlers instanceof Array)) handlers = [handlers];
-			handlers.forEach(h => h(obj, lastKey, stack));
-		}
-
 		const fn = (obj, primitiveHandlers, lastKey, stack) => {
 			if (obj == null) {
-				if (primitiveHandlers.null) return applyHandlers(primitiveHandlers.null, obj, lastKey, stack);
+				if (primitiveHandlers.null) return MiscUtil._getWalker_applyHandlers({opts, handlers: primitiveHandlers.null, obj, lastKey, stack});
 				return obj;
 			}
 
@@ -1297,40 +1291,40 @@ MiscUtil = {
 			const to = typeof obj;
 			switch (to) {
 				case undefined:
-					if (primitiveHandlers.preUndefined) runHandlers(primitiveHandlers.preUndefined, obj, lastKey, stack);
+					if (primitiveHandlers.preUndefined) MiscUtil._getWalker_runHandlers({handlers: primitiveHandlers.preUndefined, obj, lastKey, stack});
 					if (primitiveHandlers.undefined) {
-						const out = applyHandlers(primitiveHandlers.undefined, obj, lastKey, stack);
+						const out = MiscUtil._getWalker_applyHandlers({opts, handlers: primitiveHandlers.undefined, obj, lastKey, stack});
 						if (!opts.isNoModification) obj = out;
 					}
-					if (primitiveHandlers.postUndefined) runHandlers(primitiveHandlers.postUndefined, obj, lastKey, stack);
+					if (primitiveHandlers.postUndefined) MiscUtil._getWalker_runHandlers({handlers: primitiveHandlers.postUndefined, obj, lastKey, stack});
 					return obj;
 				case "boolean":
-					if (primitiveHandlers.preBoolean) runHandlers(primitiveHandlers.preBoolean, obj, lastKey, stack);
+					if (primitiveHandlers.preBoolean) MiscUtil._getWalker_runHandlers({handlers: primitiveHandlers.preBoolean, obj, lastKey, stack});
 					if (primitiveHandlers.boolean) {
-						const out = applyHandlers(primitiveHandlers.boolean, obj, lastKey, stack);
+						const out = MiscUtil._getWalker_applyHandlers({opts, handlers: primitiveHandlers.boolean, obj, lastKey, stack});
 						if (!opts.isNoModification) obj = out;
 					}
-					if (primitiveHandlers.postBoolean) runHandlers(primitiveHandlers.postBoolean, obj, lastKey, stack);
+					if (primitiveHandlers.postBoolean) MiscUtil._getWalker_runHandlers({handlers: primitiveHandlers.postBoolean, obj, lastKey, stack});
 					return obj;
 				case "number":
-					if (primitiveHandlers.preNumber) runHandlers(primitiveHandlers.preNumber, obj, lastKey, stack);
+					if (primitiveHandlers.preNumber) MiscUtil._getWalker_runHandlers({handlers: primitiveHandlers.preNumber, obj, lastKey, stack});
 					if (primitiveHandlers.number) {
-						const out = applyHandlers(primitiveHandlers.number, obj, lastKey, stack);
+						const out = MiscUtil._getWalker_applyHandlers({opts, handlers: primitiveHandlers.number, obj, lastKey, stack});
 						if (!opts.isNoModification) obj = out;
 					}
-					if (primitiveHandlers.postNumber) runHandlers(primitiveHandlers.postNumber, obj, lastKey, stack);
+					if (primitiveHandlers.postNumber) MiscUtil._getWalker_runHandlers({handlers: primitiveHandlers.postNumber, obj, lastKey, stack});
 					return obj;
 				case "string":
-					if (primitiveHandlers.preString) runHandlers(primitiveHandlers.preString, obj, lastKey, stack);
+					if (primitiveHandlers.preString) MiscUtil._getWalker_runHandlers({handlers: primitiveHandlers.preString, obj, lastKey, stack});
 					if (primitiveHandlers.string) {
-						const out = applyHandlers(primitiveHandlers.string, obj, lastKey, stack);
+						const out = MiscUtil._getWalker_applyHandlers({opts, handlers: primitiveHandlers.string, obj, lastKey, stack});
 						if (!opts.isNoModification) obj = out;
 					}
-					if (primitiveHandlers.postString) runHandlers(primitiveHandlers.postString, obj, lastKey, stack);
+					if (primitiveHandlers.postString) MiscUtil._getWalker_runHandlers({handlers: primitiveHandlers.postString, obj, lastKey, stack});
 					return obj;
 				case "object": {
 					if (obj instanceof Array) {
-						if (primitiveHandlers.preArray) runHandlers(primitiveHandlers.preArray, obj, lastKey, stack);
+						if (primitiveHandlers.preArray) MiscUtil._getWalker_runHandlers({handlers: primitiveHandlers.preArray, obj, lastKey, stack});
 						if (opts.isDepthFirst) {
 							if (stack) stack.push(obj);
 							const out = obj.map(it => fn(it, primitiveHandlers, lastKey, stack));
@@ -1338,28 +1332,35 @@ MiscUtil = {
 							if (stack) stack.pop();
 
 							if (primitiveHandlers.array) {
-								const out = applyHandlers(primitiveHandlers.array, obj, lastKey, stack);
+								const out = MiscUtil._getWalker_applyHandlers({opts, handlers: primitiveHandlers.array, obj, lastKey, stack});
 								if (!opts.isNoModification) obj = out;
+							}
+							if (obj == null) {
+								if (!opts.isAllowDeleteArrays) throw new Error(`Array handler(s) returned null!`);
 							}
 						} else {
 							if (primitiveHandlers.array) {
-								const out = applyHandlers(primitiveHandlers.array, obj, lastKey, stack);
+								const out = MiscUtil._getWalker_applyHandlers({opts, handlers: primitiveHandlers.array, obj, lastKey, stack});
 								if (!opts.isNoModification) obj = out;
 							}
-							const out = obj.map(it => fn(it, primitiveHandlers, lastKey, stack));
-							if (!opts.isNoModification) obj = out;
+							if (obj != null) {
+								const out = obj.map(it => fn(it, primitiveHandlers, lastKey, stack));
+								if (!opts.isNoModification) obj = out;
+							} else {
+								if (!opts.isAllowDeleteArrays) throw new Error(`Array handler(s) returned null!`);
+							}
 						}
-						if (primitiveHandlers.postArray) runHandlers(primitiveHandlers.postArray, obj, lastKey, stack);
+						if (primitiveHandlers.postArray) MiscUtil._getWalker_runHandlers({handlers: primitiveHandlers.postArray, obj, lastKey, stack});
 						return obj;
 					} else {
-						if (primitiveHandlers.preObject) runHandlers(primitiveHandlers.preObject, obj, lastKey, stack);
+						if (primitiveHandlers.preObject) MiscUtil._getWalker_runHandlers({handlers: primitiveHandlers.preObject, obj, lastKey, stack});
 						if (opts.isDepthFirst) {
 							if (stack) stack.push(obj);
 							doObjectRecurse();
 							if (stack) stack.pop();
 
 							if (primitiveHandlers.object) {
-								const out = applyHandlers(primitiveHandlers.object, obj, lastKey, stack);
+								const out = MiscUtil._getWalker_applyHandlers({opts, handlers: primitiveHandlers.object, obj, lastKey, stack});
 								if (!opts.isNoModification) obj = out;
 							}
 							if (obj == null) {
@@ -1367,7 +1368,7 @@ MiscUtil = {
 							}
 						} else {
 							if (primitiveHandlers.object) {
-								const out = applyHandlers(primitiveHandlers.object, obj, lastKey, stack);
+								const out = MiscUtil._getWalker_applyHandlers({opts, handlers: primitiveHandlers.object, obj, lastKey, stack});
 								if (!opts.isNoModification) obj = out;
 							}
 							if (obj == null) {
@@ -1376,7 +1377,7 @@ MiscUtil = {
 								doObjectRecurse();
 							}
 						}
-						if (primitiveHandlers.postObject) runHandlers(primitiveHandlers.postObject, obj, lastKey, stack);
+						if (primitiveHandlers.postObject) MiscUtil._getWalker_runHandlers({handlers: primitiveHandlers.postObject, obj, lastKey, stack});
 						return obj;
 					}
 				}
@@ -1385,6 +1386,164 @@ MiscUtil = {
 		};
 
 		return {walk: fn};
+	},
+
+	_getWalker_applyHandlers ({opts, handlers, obj, lastKey, stack}) {
+		handlers = handlers instanceof Array ? handlers : [handlers];
+		handlers.forEach(h => {
+			const out = h(obj, lastKey, stack);
+			if (!opts.isNoModification) obj = out;
+		});
+		return obj;
+	},
+
+	_getWalker_runHandlers ({handlers, obj, lastKey, stack}) {
+		handlers = handlers instanceof Array ? handlers : [handlers];
+		handlers.forEach(h => h(obj, lastKey, stack));
+	},
+
+	/**
+	 * @param [opts]
+	 * @param [opts.keyBlacklist]
+	 * @param [opts.isAllowDeleteObjects] If returning `undefined` from an object handler should be treated as a delete.
+	 * @param [opts.isAllowDeleteArrays] If returning `undefined` from an array handler should be treated as a delete.
+	 * @param [opts.isAllowDeleteBooleans] (Unimplemented) // TODO
+	 * @param [opts.isAllowDeleteNumbers] (Unimplemented) // TODO
+	 * @param [opts.isAllowDeleteStrings] (Unimplemented) // TODO
+	 * @param [opts.isDepthFirst] If array/object recursion should occur before array/object primitive handling.
+	 * @param [opts.isNoModification] If the walker should not attempt to modify the data.
+	 */
+	getAsyncWalker (opts) {
+		opts = opts || {};
+		const keyBlacklist = opts.keyBlacklist || new Set();
+
+		const pFn = async (obj, primitiveHandlers, lastKey, stack) => {
+			if (obj == null) {
+				if (primitiveHandlers.null) return MiscUtil._getAsyncWalker_pApplyHandlers({opts, handlers: primitiveHandlers.null, obj, lastKey, stack});
+				return obj;
+			}
+
+			const pDoObjectRecurse = async () => {
+				await Object.keys(obj).pSerialAwaitMap(async k => {
+					const v = obj[k];
+					if (keyBlacklist.has(k)) return;
+					const out = await pFn(v, primitiveHandlers, k, stack);
+					if (!opts.isNoModification) obj[k] = out;
+				});
+			};
+
+			const to = typeof obj;
+			switch (to) {
+				case undefined:
+					if (primitiveHandlers.preUndefined) await MiscUtil._getAsyncWalker_pRunHandlers({handlers: primitiveHandlers.preUndefined, obj, lastKey, stack});
+					if (primitiveHandlers.undefined) {
+						const out = await MiscUtil._getAsyncWalker_pApplyHandlers({opts, handlers: primitiveHandlers.undefined, obj, lastKey, stack});
+						if (!opts.isNoModification) obj = out;
+					}
+					if (primitiveHandlers.postUndefined) await MiscUtil._getAsyncWalker_pRunHandlers({handlers: primitiveHandlers.postUndefined, obj, lastKey, stack});
+					return obj;
+				case "boolean":
+					if (primitiveHandlers.preBoolean) await MiscUtil._getAsyncWalker_pRunHandlers({handlers: primitiveHandlers.preBoolean, obj, lastKey, stack});
+					if (primitiveHandlers.boolean) {
+						const out = await MiscUtil._getAsyncWalker_pApplyHandlers({opts, handlers: primitiveHandlers.boolean, obj, lastKey, stack});
+						if (!opts.isNoModification) obj = out;
+					}
+					if (primitiveHandlers.postBoolean) await MiscUtil._getAsyncWalker_pRunHandlers({handlers: primitiveHandlers.postBoolean, obj, lastKey, stack});
+					return obj;
+				case "number":
+					if (primitiveHandlers.preNumber) await MiscUtil._getAsyncWalker_pRunHandlers({handlers: primitiveHandlers.preNumber, obj, lastKey, stack});
+					if (primitiveHandlers.number) {
+						const out = await MiscUtil._getAsyncWalker_pApplyHandlers({opts, handlers: primitiveHandlers.number, obj, lastKey, stack});
+						if (!opts.isNoModification) obj = out;
+					}
+					if (primitiveHandlers.postNumber) await MiscUtil._getAsyncWalker_pRunHandlers({handlers: primitiveHandlers.postNumber, obj, lastKey, stack});
+					return obj;
+				case "string":
+					if (primitiveHandlers.preString) await MiscUtil._getAsyncWalker_pRunHandlers({handlers: primitiveHandlers.preString, obj, lastKey, stack});
+					if (primitiveHandlers.string) {
+						const out = await MiscUtil._getAsyncWalker_pApplyHandlers({opts, handlers: primitiveHandlers.string, obj, lastKey, stack});
+						if (!opts.isNoModification) obj = out;
+					}
+					if (primitiveHandlers.postString) await MiscUtil._getAsyncWalker_pRunHandlers({handlers: primitiveHandlers.postString, obj, lastKey, stack});
+					return obj;
+				case "object": {
+					if (obj instanceof Array) {
+						if (primitiveHandlers.preArray) await MiscUtil._getAsyncWalker_pRunHandlers({handlers: primitiveHandlers.preArray, obj, lastKey, stack});
+						if (opts.isDepthFirst) {
+							if (stack) stack.push(obj);
+							const out = await obj.pSerialAwaitMap(it => pFn(it, primitiveHandlers, lastKey, stack));
+							if (!opts.isNoModification) obj = out;
+							if (stack) stack.pop();
+
+							if (primitiveHandlers.array) {
+								const out = await MiscUtil._getAsyncWalker_pApplyHandlers({opts, handlers: primitiveHandlers.array, obj, lastKey, stack});
+								if (!opts.isNoModification) obj = out;
+							}
+							if (obj == null) {
+								if (!opts.isAllowDeleteArrays) throw new Error(`Array handler(s) returned null!`);
+							}
+						} else {
+							if (primitiveHandlers.array) {
+								const out = await MiscUtil._getAsyncWalker_pApplyHandlers({opts, handlers: primitiveHandlers.array, obj, lastKey, stack});
+								if (!opts.isNoModification) obj = out;
+							}
+							if (obj != null) {
+								const out = await obj.pSerialAwaitMap(it => pFn(it, primitiveHandlers, lastKey, stack));
+								if (!opts.isNoModification) obj = out;
+							} else {
+								if (!opts.isAllowDeleteArrays) throw new Error(`Array handler(s) returned null!`);
+							}
+						}
+						if (primitiveHandlers.postArray) await MiscUtil._getAsyncWalker_pRunHandlers({handlers: primitiveHandlers.postArray, obj, lastKey, stack});
+						return obj;
+					} else {
+						if (primitiveHandlers.preObject) await MiscUtil._getAsyncWalker_pRunHandlers({handlers: primitiveHandlers.preObject, obj, lastKey, stack});
+						if (opts.isDepthFirst) {
+							if (stack) stack.push(obj);
+							await pDoObjectRecurse();
+							if (stack) stack.pop();
+
+							if (primitiveHandlers.object) {
+								const out = await MiscUtil._getAsyncWalker_pApplyHandlers({opts, handlers: primitiveHandlers.object, obj, lastKey, stack});
+								if (!opts.isNoModification) obj = out;
+							}
+							if (obj == null) {
+								if (!opts.isAllowDeleteObjects) throw new Error(`Object handler(s) returned null!`);
+							}
+						} else {
+							if (primitiveHandlers.object) {
+								const out = await MiscUtil._getAsyncWalker_pApplyHandlers({opts, handlers: primitiveHandlers.object, obj, lastKey, stack});
+								if (!opts.isNoModification) obj = out;
+							}
+							if (obj == null) {
+								if (!opts.isAllowDeleteObjects) throw new Error(`Object handler(s) returned null!`);
+							} else {
+								await pDoObjectRecurse();
+							}
+						}
+						if (primitiveHandlers.postObject) await MiscUtil._getAsyncWalker_pRunHandlers({handlers: primitiveHandlers.postObject, obj, lastKey, stack});
+						return obj;
+					}
+				}
+				default: throw new Error(`Unhandled type "${to}"`);
+			}
+		};
+
+		return {pWalk: pFn};
+	},
+
+	async _getAsyncWalker_pApplyHandlers ({opts, handlers, obj, lastKey, stack}) {
+		handlers = handlers instanceof Array ? handlers : [handlers];
+		await handlers.pSerialAwaitMap(async pH => {
+			const out = await pH(obj, lastKey, stack);
+			if (!opts.isNoModification) obj = out;
+		});
+		return obj;
+	},
+
+	async _getAsyncWalker_pRunHandlers ({handlers, obj, lastKey, stack}) {
+		handlers = handlers instanceof Array ? handlers : [handlers];
+		await handlers.pSerialAwaitMap(pH => pH(obj, lastKey, stack));
 	},
 
 	pDefer (fn) {
@@ -1572,6 +1731,10 @@ UrlUtil = {
 		const encoder = UrlUtil.URL_TO_HASH_BUILDER[curPage];
 		if (!encoder) throw new Error(`No encoder found for page ${curPage}`);
 		return encoder(obj);
+	},
+
+	decodeHash (hash) {
+		return hash.split(HASH_LIST_SEP).map(it => decodeURIComponent(it));
 	},
 
 	getCurrentPage () {
@@ -1817,6 +1980,7 @@ UrlUtil.PG_TEXT_CONVERTER = "converter.html";
 UrlUtil.PG_CHANGELOG = "changelog.html";
 UrlUtil.PG_CHAR_CREATION_OPTIONS = "charcreationoptions.html";
 UrlUtil.PG_RECIPES = "recipes.html";
+UrlUtil.PG_CLASS_SUBCLASS_FEATURES = "classfeatures.html";
 
 UrlUtil.URL_TO_HASH_BUILDER = {};
 UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_BESTIARY] = (it) => UrlUtil.encodeForHash([it.name, it.source]);
@@ -1843,6 +2007,7 @@ UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_ACTIONS] = (it) => UrlUtil.encodeForHash(
 UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_LANGUAGES] = (it) => UrlUtil.encodeForHash([it.name, it.source]);
 UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_CHAR_CREATION_OPTIONS] = (it) => UrlUtil.encodeForHash([it.name, it.source]);
 UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_RECIPES] = (it) => `${UrlUtil.encodeForHash([it.name, it.source])}${it._scaleFactor ? `${HASH_PART_SEP}${VeCt.HASH_SCALED}${HASH_SUB_KV_SEP}${it._scaleFactor}` : ""}`;
+UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_CLASS_SUBCLASS_FEATURES] = (it) => (it.__prop === "subclassFeature" || it.subclassSource) ? UrlUtil.URL_TO_HASH_BUILDER["subclassFeature"](it) : UrlUtil.URL_TO_HASH_BUILDER["classFeature"](it);
 // region Fake pages (props)
 UrlUtil.URL_TO_HASH_BUILDER["subclass"] = it => {
 	const hashParts = [
@@ -1898,6 +2063,7 @@ UrlUtil.PG_TO_NAME[UrlUtil.PG_TEXT_CONVERTER] = "Text Converter";
 UrlUtil.PG_TO_NAME[UrlUtil.PG_CHANGELOG] = "Changelog";
 UrlUtil.PG_TO_NAME[UrlUtil.PG_CHAR_CREATION_OPTIONS] = "Other Character Creation Options";
 UrlUtil.PG_TO_NAME[UrlUtil.PG_RECIPES] = "Recipes";
+UrlUtil.PG_TO_NAME[UrlUtil.PG_CLASS_SUBCLASS_FEATURES] = "Class & Subclass Features";
 
 UrlUtil.CAT_TO_PAGE = {};
 UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_CREATURE] = UrlUtil.PG_BESTIARY;
@@ -2205,13 +2371,18 @@ DataUtil = {
 
 	async _pDoMetaMerge (ident, data, options) {
 		if (data._meta) {
+			const loadedSourceIds = new Set();
+
 			if (data._meta.dependencies) {
 				await Promise.all(Object.entries(data._meta.dependencies).map(async ([dataProp, sourceIds]) => {
+					sourceIds.forEach(sourceId => loadedSourceIds.add(sourceId));
+
 					if (!data[dataProp]) return; // if e.g. monster dependencies are declared, but there are no monsters to merge with, bail out
 
 					const isHasInternalCopies = (data._meta.internalCopies || []).includes(dataProp);
 
 					const dependencyData = await Promise.all(sourceIds.map(sourceId => DataUtil.pLoadByMeta(dataProp, sourceId)));
+
 					const flatDependencyData = dependencyData.map(dd => dd[dataProp]).flat();
 					await Promise.all(data[dataProp].map(entry => DataUtil._pDoMetaMerge_handleCopyProp(dataProp, flatDependencyData, entry, {...options, isErrorOnMissing: !isHasInternalCopies})));
 				}));
@@ -2226,6 +2397,28 @@ DataUtil = {
 					}
 				}
 				delete data._meta.internalCopies;
+			}
+
+			// Load any other included data
+			if (data._meta.includes) {
+				const includesData = await Promise.all(Object.entries(data._meta.includes).map(async ([dataProp, sourceIds]) => {
+					// Avoid re-loading any sources we already loaded as dependencies
+					sourceIds = sourceIds.filter(it => !loadedSourceIds.has(it));
+
+					sourceIds.forEach(sourceId => loadedSourceIds.add(sourceId));
+
+					// This loads the brew as a side-effect
+					const includesData = await Promise.all(sourceIds.map(sourceId => DataUtil.pLoadByMeta(dataProp, sourceId)));
+
+					const flatIncludesData = includesData.map(dd => dd[dataProp]).flat();
+					return {dataProp, flatIncludesData};
+				}));
+				delete data._meta.includes;
+
+				// Add the includes data to our current data
+				includesData.forEach(({dataProp, flatIncludesData}) => {
+					data[dataProp] = [...data[dataProp] || [], ...flatIncludesData];
+				});
 			}
 		}
 
@@ -2262,9 +2455,13 @@ DataUtil = {
 		return `${toCsv(headers)}\n${rows.map(r => toCsv(r)).join("\n")}`;
 	},
 
-	userDownload (filename, data) {
-		if (typeof data !== "string") data = JSON.stringify(data, null, "\t");
-		return DataUtil._userDownload(`${filename}.json`, data, "text/json");
+	userDownload (filename, data, {fileType = null, isSipAdditionalMetadata = false} = {}) {
+		filename = `${filename}.json`
+		if (isSipAdditionalMetadata || data instanceof Array) return DataUtil._userDownload(filename, JSON.stringify(data, null, "\t"), "text/json");
+
+		data = {siteVersion: VERSION_NUMBER, ...data};
+		if (fileType != null) data = {fileType, ...data};
+		return DataUtil._userDownload(filename, JSON.stringify(data, null, "\t"), "text/json");
 	},
 
 	userDownloadText (filename, string) {
@@ -2283,20 +2480,41 @@ DataUtil = {
 		document.body.removeChild(a);
 	},
 
-	pUserUpload () {
+	/** Always returns an array of files, even in "single" mode. */
+	pUserUpload ({isMultiple = false, expectedFileType = null} = {}) {
 		return new Promise(resolve => {
-			const $iptAdd = $(`<input type="file" accept=".json" style="position: fixed; top: -100px; left: -100px; display: none;">`).on("change", (evt) => {
+			const $iptAdd = $(`<input type="file" ${isMultiple ? "multiple" : ""} accept=".json" style="position: fixed; top: -100px; left: -100px; display: none;">`).on("change", (evt) => {
 				const input = evt.target;
 
 				const reader = new FileReader();
-				reader.onload = () => {
+				let readIndex = 0;
+				const out = [];
+				reader.onload = async () => {
+					const name = input.files[readIndex - 1].name;
+
 					const text = reader.result;
 					const json = JSON.parse(text);
-					resolve(json);
+
+					const isSkipFile = expectedFileType != null && json.fileType && json.fileType !== expectedFileType && !(await InputUiUtil.pGetUserBoolean({
+						textYes: "Yes",
+						textNo: "Cancel",
+						title: "File Type Mismatch",
+						htmlDescription: `The file "${name}" has the type "${json.fileType}" when the expected file type was "${expectedFileType}".<br>Are you sure you want to upload this file?`,
+					}));
+
+					if (!isSkipFile) {
+						delete json.fileType;
+						delete json.siteVersion;
+
+						out.push(json);
+					}
+
+					if (input.files[readIndex]) reader.readAsText(input.files[readIndex++]);
+					else resolve(out);
 				};
 
-				reader.readAsText(input.files[0]);
-			}).appendTo($(`body`));
+				reader.readAsText(input.files[readIndex++]);
+			}).appendTo(document.body);
 			$iptAdd.click();
 		});
 	},
@@ -2336,7 +2554,7 @@ DataUtil = {
 				const index = await DataUtil.loadJSON(`${baseUrlPart}/${prop === "monster" || prop === "spell" ? "index.json" : "fluff-index.json"}`);
 				if (index[source]) return DataUtil.loadJSON(`${baseUrlPart}/${index[source]}`);
 
-				return DataUtil._pLoadBrewBySource(source);
+				return DataUtil.pLoadBrewBySource(source);
 			}
 			// endregion
 
@@ -2344,17 +2562,19 @@ DataUtil = {
 			// case "itemFluff":
 			// case "deity":
 			case "background":
+			case "optionalfeature":
 			case "raceFluff": {
 				let url;
 				switch (prop) {
 					case "background": url = `${Renderer.get().baseUrl}data/backgrounds.json`; break;
+					case "optionalfeature": url = `${Renderer.get().baseUrl}data/optionalfeatures.json`; break;
 					case "raceFluff": url = `${Renderer.get().baseUrl}data/fluff-races.json`; break;
 				}
 
 				const data = await DataUtil.loadJSON(url);
 				if (data[prop] && data[prop].some(it => it.source === source)) return data;
 
-				return DataUtil._pLoadBrewBySource(source);
+				return DataUtil.pLoadBrewBySource(source);
 			}
 			// endregion
 
@@ -2363,7 +2583,7 @@ DataUtil = {
 			case "race": {
 				const data = await DataUtil.race.loadJSON({isAddBaseRaces: true});
 				if (data[prop] && data[prop].some(it => it.source === source)) return data;
-				return DataUtil._pLoadBrewBySource(source);
+				return DataUtil.pLoadBrewBySource(source);
 			}
 			// endregion
 
@@ -2371,9 +2591,15 @@ DataUtil = {
 		}
 	},
 
-	async _pLoadBrewBySource (source) {
+	// TODO(Future) Note that a case-insensitive variant of this is built into the renderer, which could be factored out
+	//   to this level if required.
+	async pLoadBrewBySource (source, {isSilent = true} = {}) {
 		const brewIndex = await DataUtil.brew.pLoadSourceIndex();
-		if (!brewIndex[source]) throw new Error(`Neither base nor brew index contained source "${source}"`);
+		if (!brewIndex[source]) {
+			if (isSilent) return null;
+			throw new Error(`Neither base nor brew index contained source "${source}"`);
+		}
+
 		const urlRoot = await StorageUtil.pGet(`HOMEBREW_CUSTOM_REPO_URL`);
 		const brewUrl = DataUtil.brew.getFileUrl(brewIndex[source], urlRoot);
 		await BrewUtil.pDoHandleBrewJson((await DataUtil.loadJSON(brewUrl)), UrlUtil.getCurrentPage());
@@ -3138,6 +3364,22 @@ DataUtil = {
 			};
 		},
 
+		isValidClassFeatureUid (uid) {
+			const {name, className, level} = DataUtil.class.unpackUidClassFeature(uid);
+			return !(!name || !className || isNaN(level));
+		},
+
+		packUidClassFeature (f) {
+			// <name>|<className>|<classSource>|<level>|<source>
+			return [
+				f.name,
+				f.className,
+				f.classSource === SRC_PHB ? "" : f.classSource, // assume the class has PHB source
+				f.level,
+				f.source === f.classSource ? "" : f.source, // assume the class feature has the class source
+			].join("|").replace(/\|+$/, ""); // Trim trailing pipes
+		},
+
 		/**
 		 * @param uid
 		 * @param [opts]
@@ -3161,6 +3403,24 @@ DataUtil = {
 				source,
 				displayText,
 			};
+		},
+
+		isValidSubclassFeatureUid (uid) {
+			const {name, className, subclassShortName, level} = DataUtil.class.unpackUidSubclassFeature(uid);
+			return !(!name || !className || !subclassShortName || isNaN(level));
+		},
+
+		packUidSubclassFeature (f) {
+			// <name>|<className>|<classSource>|<subclassShortName>|<subclassSource>|<level>|<source>
+			return [
+				f.name,
+				f.className,
+				f.classSource === SRC_PHB ? "" : f.classSource, // assume the class has the PHB source
+				f.subclassShortName,
+				f.subclassSource === SRC_PHB ? "" : f.subclassSource, // assume the subclass has the PHB source
+				f.level,
+				f.source === f.subclassSource ? "" : f.source, // assume the feature has the same source as the subclass
+			].join("|").replace(/\|+$/, ""); // Trim trailing pipes
 		},
 
 		_mutEntryNestLevel (feature) {
@@ -3268,6 +3528,43 @@ DataUtil = {
 
 			return sc;
 		},
+
+		// region Subclass lookup
+		_CACHE_SUBCLASS_LOOKUP_PROMISE: null,
+		_CACHE_SUBCLASS_LOOKUP: null,
+		async pGetSubclassLookup () {
+			DataUtil.class._CACHE_SUBCLASS_LOOKUP_PROMISE = DataUtil.class._CACHE_SUBCLASS_LOOKUP_PROMISE || (async () => {
+				const subclassLookup = {};
+				Object.assign(subclassLookup, await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/generated/gendata-subclass-lookup.json`));
+				const homebrew = await BrewUtil.pAddBrewData();
+				DataUtil.class.mergeHomebrewSubclassLookup(subclassLookup, homebrew);
+				DataUtil.class._CACHE_SUBCLASS_LOOKUP = subclassLookup;
+			})();
+			await DataUtil.class._CACHE_SUBCLASS_LOOKUP_PROMISE;
+			return DataUtil.class._CACHE_SUBCLASS_LOOKUP;
+		},
+
+		mergeHomebrewSubclassLookup (subclassLookup, homebrew) {
+			(homebrew.class || [])
+				.filter(it => it.subclasses)
+				.forEach(c => {
+					const target = MiscUtil.getOrSet(subclassLookup, c.source, c.name, {});
+					c.subclasses.forEach(sc => {
+						sc.source = sc.source || c.source;
+						sc.shortName = sc.shortName || sc.name;
+						MiscUtil.getOrSet(target, sc.source, sc.shortName, {name: sc.name});
+					});
+				});
+
+			(homebrew.subclass || [])
+				.forEach(sc => {
+					const clSrc = sc.classSource || SRC_PHB;
+					sc.shortName = sc.shortName || sc.name;
+					const target = MiscUtil.getOrSet(subclassLookup, clSrc, sc.className, {});
+					MiscUtil.set(target, sc.source, sc.shortName, {name: sc.name});
+				});
+		},
+		// endregion
 	},
 
 	deity: {
@@ -3387,7 +3684,10 @@ DataUtil = {
 					"col-2 text-center",
 					"col-10",
 				],
-				rows: tableRaw.table.map(it => [`${it.min}${it.max && it.max !== it.min ? `-${it.max}` : ""}`, it.result]),
+				rows: tableRaw.table.map(it => [
+					`${it.min}${it.max && it.max !== it.min ? `-${it.max}` : ""}`,
+					it.result.replace(RollerUtil.DICE_REGEX, (...m) => `{@dice ${m[0]}}`),
+				]),
 			};
 		},
 	},
@@ -3927,23 +4227,15 @@ BrewUtil = {
 
 		await BrewUtil._pRenderBrewScreen_pRefreshBrewList($brewList);
 
-		const $iptAdd = $(`<input multiple type="file" accept=".json" style="display: none;">`)
-			.change(evt => {
-				const input = evt.target;
-
-				let readIndex = 0;
-				const reader = new FileReader();
-				reader.onload = async () => {
-					const json = JSON.parse(reader.result);
-
+		const $btnLoadFromFile = $(`<button class="btn btn-default btn-sm mr-2">Upload File</button>`)
+			.click(async () => {
+				const files = await DataUtil.pUserUpload({isMultiple: true});
+				if (!files) return;
+				for (const json of files) {
 					await DataUtil.pDoMetaMerge(CryptUtil.uid(), json);
 
 					await BrewUtil.pDoHandleBrewJson(json, page, BrewUtil._pRenderBrewScreen_pRefreshBrewList.bind(this, $brewList));
-
-					if (input.files[readIndex]) reader.readAsText(input.files[readIndex++]);
-					else $(evt.target).val(""); // reset the input
-				};
-				reader.readAsText(input.files[readIndex++]);
+				}
 			});
 
 		const $btnLoadFromUrl = $(`<button class="btn btn-default btn-sm mr-2">Load from URL</button>`)
@@ -3994,7 +4286,7 @@ BrewUtil = {
 					${$btnGet}
 					${$btnCustomUrl}
 				</div>
-				<label role="button" class="btn btn-default btn-sm mr-2">Upload File${$iptAdd}</label>
+				${$btnLoadFromFile}
 				${$btnLoadFromUrl}
 			</div>
 			<div class="flex-v-center">
@@ -4545,6 +4837,7 @@ BrewUtil = {
 			case UrlUtil.PG_LANGUAGES: return ["language", "languageScript"];
 			case UrlUtil.PG_CHAR_CREATION_OPTIONS: return ["charoption"];
 			case UrlUtil.PG_RECIPES: return ["recipe"];
+			case UrlUtil.PG_CLASS_SUBCLASS_FEATURES: return ["classFeature", "subclassFeature"];
 			default: throw new Error(`No homebrew properties defined for category ${page}`);
 		}
 	},
@@ -4925,6 +5218,7 @@ BrewUtil = {
 			case UrlUtil.PG_LANGUAGES:
 			case UrlUtil.PG_CHAR_CREATION_OPTIONS:
 			case UrlUtil.PG_RECIPES:
+			case UrlUtil.PG_CLASS_SUBCLASS_FEATURES:
 				await (BrewUtil._pHandleBrew || handleBrew)(MiscUtil.copy(toAdd));
 				break;
 			case UrlUtil.PG_MAKE_BREW:
@@ -5725,7 +6019,7 @@ function BookModeView (opts) {
 			$selColumns.change();
 
 			$wrpControlsToPass = $$`<div class="w-100 flex">
-				<div class="flex-vh-center"><div class="mr-2 no-wrap help--subtle" title="Applied when printing the page.">Print columns:</div>${$selColumns}</div>
+				<div class="flex-vh-center"><div class="mr-2 no-wrap help-subtle" title="Applied when printing the page.">Print columns:</div>${$selColumns}</div>
 			</div>`.appendTo($wrpControls);
 		}
 		// endregion
@@ -5922,7 +6216,7 @@ EncounterUtil = {
 	getEncounterName (encounter) {
 		if (encounter.l && encounter.l.items && encounter.l.items.length) {
 			const largestCount = encounter.l.items.sort((a, b) => SortUtil.ascSort(Number(b.c), Number(a.c)))[0];
-			const name = decodeURIComponent(largestCount.h.split(HASH_LIST_SEP)[0]).toTitleCase();
+			const name = (UrlUtil.decodeHash(largestCount.h)[0] || "(Unnamed)").toTitleCase();
 			return `Encounter with ${name} ×${largestCount.c}`;
 		} else return "(Unnamed Encounter)"
 	},

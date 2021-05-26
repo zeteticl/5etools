@@ -53,8 +53,19 @@ class StatGenUi extends BaseComponent {
 	addHookPulseAsi (hook) { this._addHookBase("common_pulseAsi", hook); }
 	getFormDataAsi () { return this._compAsi.getFormData(); }
 
+	getMode (ix, namespace) {
+		const {propMode} = this.getPropsAsi(ix, namespace);
+		return this._state[propMode];
+	}
+
 	setIxFeat (ix, namespace, ixFeat) {
 		const {propMode, propIxFeat} = this.getPropsAsi(ix, namespace);
+
+		if (ixFeat == null && (this._state[propMode] === "asi" || this._state[propMode] == null)) {
+			this._state[propIxFeat] = null;
+			return;
+		}
+
 		this._state[propMode] = "feat";
 		this._state[propIxFeat] = ixFeat;
 	}
@@ -229,7 +240,7 @@ class StatGenUi extends BaseComponent {
 
 			$wrpRolled.html(this._state.rolled_rolls.map((it, i) => {
 				const cntPrevRolls = this._state.rolled_rolls.slice(0, i).filter(r => r.total === it.total).length;
-				return `<div class="px-3 py-1 help--subtle flex-vh-center" title="${it.text}"><div class="ve-muted">[</div><div class="flex-vh-center statgen-rolled__disp-result">${it.total}${cntPrevRolls ? Parser.numberToSubscript(cntPrevRolls) : ""}</div><div class="ve-muted">]</div></div>`;
+				return `<div class="px-3 py-1 help-subtle flex-vh-center" title="${it.text}"><div class="ve-muted">[</div><div class="flex-vh-center statgen-rolled__disp-result">${it.total}${cntPrevRolls ? Parser.numberToSubscript(cntPrevRolls) : ""}</div><div class="ve-muted">]</div></div>`;
 			}));
 		};
 		this._addHookBase("rolled_rolls", hkRolled);
@@ -1435,12 +1446,13 @@ StatGenUi.CompAsi = class extends BaseComponent {
 
 	_render_renderAsiFeatSection (propCnt, namespace, $wrpRows) {
 		const hk = () => {
-			let i = 0;
+			let ix = 0;
 
-			for (; i < this._parent.state[propCnt]; ++i) {
-				const {propMode, propIxFeat, propIxAsiPointOne, propIxAsiPointTwo, propIxFeatAbility, propFeatAbilityChooseFrom} = this._parent.getPropsAsi(i, namespace);
+			for (; ix < this._parent.state[propCnt]; ++ix) {
+				const ix_ = ix;
+				const {propMode, propIxFeat, propIxAsiPointOne, propIxAsiPointTwo, propIxFeatAbility, propFeatAbilityChooseFrom} = this._parent.getPropsAsi(ix_, namespace);
 
-				if (!this._metasAsi[namespace][i]) {
+				if (!this._metasAsi[namespace][ix_]) {
 					this._parent.state[propMode] = this._parent.state[propMode] || (namespace === "ability" ? "asi" : "feat");
 
 					const $btnAsi = namespace !== "ability" ? null : $(`<button class="btn btn-xs btn-default w-50p">ASI</button>`)
@@ -1547,7 +1559,7 @@ StatGenUi.CompAsi = class extends BaseComponent {
 					const $dispFeat = $(`<div class="flex-v-center mr-2"></div>`)
 					const $stgSelectAbilitySet = $$`<div class="flex-v-center mr-2"></div>`
 					const $stgFeatNoChoice = $$`<div class="flex-v-center mr-2"></div>`
-					const $stgFeatChooseAsiFrom = $$`<div class="flex-v-bottom"></div>`;
+					const $stgFeatChooseAsiFrom = $$`<div class="flex-v-end"></div>`;
 					const $stgFeatChooseAsiWeighted = $$`<div class="flex-v-center"></div>`;
 
 					const $stgFeat = $$`<div class="flex-v-center">
@@ -1565,21 +1577,21 @@ StatGenUi.CompAsi = class extends BaseComponent {
 
 						const feat = this._parent.feats[this._parent.state[propIxFeat]];
 
-						$stgFeat.removeClass("flex-v-bottom").addClass("flex-v-center");
+						$stgFeat.removeClass("flex-v-end").addClass("flex-v-center");
 						$dispFeat.toggleClass("italic ve-muted", !feat);
 						$dispFeat.html(feat ? Renderer.get().render(`{@feat ${feat.name.toLowerCase()}|${feat.source}}`) : `(Choose a feat)`);
 
-						if (this._lastMetasFeatsFnsCleanup[namespace][i]) this._lastMetasFeatsFnsCleanup[namespace][i].forEach(fn => fn());
-						this._lastMetasFeatsFnsCleanup[namespace][i] = null;
+						if (this._lastMetasFeatsFnsCleanup[namespace][ix_]) this._lastMetasFeatsFnsCleanup[namespace][ix_].forEach(fn => fn());
+						this._lastMetasFeatsFnsCleanup[namespace][ix_] = null;
 
-						if (this._lastMetasFeatsAsiChooseFrom[namespace][i]) this._lastMetasFeatsAsiChooseFrom[namespace][i].cleanup();
-						this._lastMetasFeatsAsiChooseFrom[namespace][i] = null;
+						if (this._lastMetasFeatsAsiChooseFrom[namespace][ix_]) this._lastMetasFeatsAsiChooseFrom[namespace][ix_].cleanup();
+						this._lastMetasFeatsAsiChooseFrom[namespace][ix_] = null;
 
 						this._parent.state[propIxFeatAbility] = 0;
 
 						$stgSelectAbilitySet.hideVe();
 						if (feat) {
-							this._lastMetasFeatsFnsCleanup[namespace][i] = [];
+							this._lastMetasFeatsFnsCleanup[namespace][ix_] = [];
 
 							if (feat.ability && feat.ability.length > 1) {
 								const metaChooseAbilitySet = ComponentUiUtil.$getSelEnum(
@@ -1594,12 +1606,12 @@ StatGenUi.CompAsi = class extends BaseComponent {
 
 								$stgSelectAbilitySet.showVe().append(metaChooseAbilitySet.$sel);
 								metaChooseAbilitySet.$sel.change(() => this._doPulse());
-								this._lastMetasFeatsFnsCleanup[namespace][i].push(() => metaChooseAbilitySet.unhook());
+								this._lastMetasFeatsFnsCleanup[namespace][ix_].push(() => metaChooseAbilitySet.unhook());
 							}
 
 							const hkAbilitySet = () => {
-								if (this._lastMetasFeatsAsiChooseFrom[namespace][i]) this._lastMetasFeatsAsiChooseFrom[namespace][i].cleanup();
-								this._lastMetasFeatsAsiChooseFrom[namespace][i] = null;
+								if (this._lastMetasFeatsAsiChooseFrom[namespace][ix_]) this._lastMetasFeatsAsiChooseFrom[namespace][ix_].cleanup();
+								this._lastMetasFeatsAsiChooseFrom[namespace][ix_] = null;
 
 								if (!feat.ability) {
 									$stgFeatNoChoice.empty().hideVe();
@@ -1616,13 +1628,14 @@ StatGenUi.CompAsi = class extends BaseComponent {
 
 								// region Choices
 								if (abilitySet.choose && abilitySet.choose.from) {
-									$stgFeat.removeClass("flex-v-center").addClass("flex-v-bottom")
+									$stgFeat.removeClass("flex-v-center").addClass("flex-v-end")
 									$stgFeatChooseAsiFrom.showVe().empty();
+									$stgFeatChooseAsiWeighted.empty().hideVe();
 
 									const count = abilitySet.choose.count || 1;
 									const amount = abilitySet.choose.amount || 1;
 
-									this._lastMetasFeatsAsiChooseFrom[namespace][i] = ComponentUiUtil.getMetaWrpMultipleChoice(
+									this._lastMetasFeatsAsiChooseFrom[namespace][ix_] = ComponentUiUtil.getMetaWrpMultipleChoice(
 										this._parent,
 										propFeatAbilityChooseFrom,
 										{
@@ -1634,7 +1647,7 @@ StatGenUi.CompAsi = class extends BaseComponent {
 
 									$stgFeatChooseAsiFrom.append(`<div><span class="mr-2">\u2014</span>choose ${count > 1 ? `${count} ` : ""}${UiUtil.intToBonus(amount)}</div>`);
 
-									this._lastMetasFeatsAsiChooseFrom[namespace][i].rowMetas.forEach(meta => {
+									this._lastMetasFeatsAsiChooseFrom[namespace][ix_].rowMetas.forEach(meta => {
 										meta.$cb.change(() => this._doPulse());
 
 										$$`<label class="flex-col no-select">
@@ -1644,15 +1657,21 @@ StatGenUi.CompAsi = class extends BaseComponent {
 									});
 								} else if (abilitySet.choose && abilitySet.choose.weighted) {
 									// TODO(Future) unsupported, for now
-									$stgFeatChooseAsiFrom.showVe().html(`<i class="ve-muted">The selected ability score format is currently unsupported. Please check back later!</i>`);
+									$stgFeatChooseAsiFrom.empty().hideVe();
+									$stgFeatChooseAsiWeighted.showVe().html(`<i class="ve-muted">The selected ability score format is currently unsupported. Please check back later!</i>`);
 								} else {
 									$stgFeatChooseAsiFrom.empty().hideVe();
+									$stgFeatChooseAsiWeighted.empty().hideVe();
 								}
 								// endregion
 							};
-							this._lastMetasFeatsFnsCleanup[namespace][i].push(() => this._parent.removeHookBase(propIxFeatAbility, hkAbilitySet));
+							this._lastMetasFeatsFnsCleanup[namespace][ix_].push(() => this._parent.removeHookBase(propIxFeatAbility, hkAbilitySet));
 							this._parent.addHookBase(propIxFeatAbility, hkAbilitySet);
 							hkAbilitySet();
+						} else {
+							$stgFeatNoChoice.empty().hideVe();
+							$stgFeatChooseAsiFrom.empty().hideVe();
+							$stgFeatChooseAsiWeighted.empty().hideVe();
 						}
 					};
 					this._parent.addHookBase(propIxFeat, hkIxFeat);
@@ -1674,27 +1693,27 @@ StatGenUi.CompAsi = class extends BaseComponent {
 					this._parent.addHookBase(propMode, hkMode);
 					hkMode();
 
-					const $row = $$`<div class="flex-v-bottom py-3 px-1">
+					const $row = $$`<div class="flex-v-end py-3 px-1">
 						<div class="btn-group">${$btnAsi}${$btnFeat}</div>
 						<div class="vr-4"></div>
 						${$stgAsi}
 						${$stgFeat}
 					</div>`.appendTo($wrpRows);
 
-					this._metasAsi[namespace][i] = {
+					this._metasAsi[namespace][ix_] = {
 						$row,
 					};
 				}
 
-				this._metasAsi[namespace][i].$row.showVe().addClass("statgen-asi__row");
+				this._metasAsi[namespace][ix_].$row.showVe().addClass("statgen-asi__row");
 			}
 
 			// Remove border styling from the last visible row
-			if (this._metasAsi[namespace][i - 1]) this._metasAsi[namespace][i - 1].$row.removeClass("statgen-asi__row");
+			if (this._metasAsi[namespace][ix - 1]) this._metasAsi[namespace][ix - 1].$row.removeClass("statgen-asi__row");
 
-			for (; i < this._metasAsi[namespace].length; ++i) {
-				if (!this._metasAsi[namespace][i]) continue;
-				this._metasAsi[namespace][i].$row.hideVe().removeClass("statgen-asi__row");
+			for (; ix < this._metasAsi[namespace].length; ++ix) {
+				if (!this._metasAsi[namespace][ix]) continue;
+				this._metasAsi[namespace][ix].$row.hideVe().removeClass("statgen-asi__row");
 			}
 		};
 		this._parent.addHookBase(propCnt, hk);

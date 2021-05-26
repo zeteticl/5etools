@@ -443,6 +443,8 @@ class ModalFilterBestiary extends ModalFilter {
 			<div class="col-1 text-center ${Parser.sourceJsonToColor(mon.source)} pr-0" title="${Parser.sourceJsonToFull(mon.source)}" ${BrewUtil.sourceJsonToStyle(mon.source)}>${source}</div>
 		</div>`;
 
+		const btnShowHidePreview = eleRow.firstElementChild.children[1].firstElementChild;
+
 		const listItem = new ListItem(
 			itI,
 			eleRow,
@@ -456,10 +458,10 @@ class ModalFilterBestiary extends ModalFilter {
 			},
 			{
 				cbSel: eleRow.firstElementChild.firstElementChild.firstElementChild,
+				btnShowHidePreview,
 			},
 		);
 
-		const btnShowHidePreview = eleRow.firstElementChild.children[1].firstElementChild;
 		ListUiUtil.bindPreviewButton(UrlUtil.PG_BESTIARY, this._allData, listItem, btnShowHidePreview);
 
 		return listItem;

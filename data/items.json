@@ -1316,7 +1316,7 @@
 					]
 				},
 				"To be used as a vehicle, the apparatus requires one pilot. While the apparatus's hatch is closed, the compartment is airtight and watertight. The compartment holds enough air for 10 hours of breathing, divided by the number of breathing creatures inside.",
-				"The apparatus floats on water. It can also go underwater to a depth of 900 feet. Below that, the vehicle takes {@dice 2d6} bludgeoning damage per minute from pressure.",
+				"The apparatus floats on water. It can also go underwater to a depth of 900 feet. Below that, the vehicle takes {@damage 2d6} bludgeoning damage per minute from pressure.",
 				"A creature in the compartment can use an action to move as many as two of the apparatus's levers up or down. After each use, a lever goes back to its neutral position. Each lever, from left to right, functions as shown in the Apparatus of Kwalish Levers table.",
 				{
 					"type": "table",
@@ -1327,7 +1327,9 @@
 						"Down"
 					],
 					"colStyles": [
-						"text-center"
+						"col-1 text-center",
+						"col-5-5",
+						"col-5-5"
 					],
 					"rows": [
 						[
@@ -1352,8 +1354,8 @@
 						],
 						[
 							"5",
-							"Each extended claw makes the following melee weapon attack: {@hit 8} to hit, reach 5 ft., one target. {@italic Hit:} 7 ({@dice 2d6}) bludgeoning damage.",
-							"Each extended claw makes the following melee weapon attack: {@hit 8} to hit, reach 5 ft., one target. {@italic Hit:} The target is {@condition grappled} (escape DC 15)."
+							"Each extended claw makes the following melee weapon attack: {@hit 8} to hit, reach 5 ft., one target. {@h} 7 ({@damage 2d6}) bludgeoning damage.",
+							"Each extended claw makes the following melee weapon attack: {@hit 8} to hit, reach 5 ft., one target. {@h} The target is {@condition grappled} (escape {@dc 15})."
 						],
 						[
 							"6",
@@ -3734,7 +3736,7 @@
 			"page": 150,
 			"baseItem": "longsword|phb",
 			"type": "M",
-			"rarity": "legendary",
+			"rarity": "artifact",
 			"reqAttune": true,
 			"weight": 3,
 			"weaponCategory": "martial",
@@ -3793,7 +3795,7 @@
 			"name": "Blade of Broken Mirrors",
 			"source": "EGW",
 			"page": 275,
-			"baseItem": "dagger|PHB",
+			"baseItem": "dagger|phb",
 			"type": "M",
 			"rarity": "artifact",
 			"reqAttune": "by a humanoid",
@@ -4287,7 +4289,7 @@
 			"value": 15000,
 			"age": "renaissance",
 			"entries": [
-				"As an action, a character can light this bomb and throw it at a point up to 60 feet away. Each creature within 5 feet of that point must succeed on a DC 12 Dexterity saving throw or take {@dice 3d6} fire damage."
+				"As an action, a character can light this bomb and throw it at a point up to 60 feet away. Each creature within 5 feet of that point must succeed on a DC 12 Dexterity saving throw or take {@damage 3d6} fire damage."
 			]
 		},
 		{
@@ -7049,27 +7051,27 @@
 								],
 								[
 									"26-45",
-									"{@dice 2d4} imps and {@dice 2d4} quasits appear."
+									"{@dice 2d4} {@creature imp||imps} and {@dice 2d4} {@creature quasit||quasits} appear."
 								],
 								[
 									"46-60",
-									"{@dice 1d8} succubi/incubi appear."
+									"{@dice 1d8} {@creature succubus||succubi}/{@creature incubus||incubi} appear."
 								],
 								[
 									"61-70",
-									"{@dice 1d10} barbed devils and {@dice 1d10} vrocks appear."
+									"{@dice 1d10} {@creature barbed devil||barbed devils} and {@dice 1d10} {@creature vrock||vrocks} appear."
 								],
 								[
 									"71-80",
-									"1 arcanoloth, 1 night hag, and 1 rakshasa appear."
+									"1 arcanoloth, 1 {@creature night hag}, and 1 {@creature rakshasa} appear."
 								],
 								[
 									"81-85",
-									"1 ice devil and 1 marilith appear."
+									"1 {@creature ice devil} and 1 {@creature marilith} appear."
 								],
 								[
 									"86-90",
-									"1 balor and 1 pit fiend appear. At the DM's discretion, a portal opens into the presence of an archdevil or demon lord instead, then closes after 5 minutes."
+									"1 {@creature balor} and 1 {@creature pit fiend} appear. At the DM's discretion, a portal opens into the presence of an archdevil or demon lord instead, then closes after 5 minutes."
 								],
 								[
 									"91-00",
@@ -10056,7 +10058,7 @@
 				"V"
 			],
 			"dmg1": "1d8",
-			"dmgType": "B",
+			"dmgType": "R",
 			"dmg2": "1d10",
 			"bonusWeapon": "+2",
 			"weapon": true,
@@ -10203,7 +10205,7 @@
 			"age": "modern",
 			"entries": [
 				"As an action, a creature can light a stick of dynamite and throw it at a point up to 60 feet away. Each creature within 5 feet of that point must make a DC 12 Dexterity saving throw, taking {@dice 3d6} bludgeoning damage on a failed save, or half as much damage on a successful one.",
-				"A character can bind sticks of dynamite together so they explode at the same time. Each additional stick increases the damage by {@dice 1d6} (to a maximum of {@dice 10d6}) and the burst radius by 5 feet (to a maximum of 20 feet).",
+				"A character can bind sticks of dynamite together so they explode at the same time. Each additional stick increases the damage by {@damage 1d6} (to a maximum of {@damage 10d6}) and the burst radius by 5 feet (to a maximum of 20 feet).",
 				"Dynamite can be rigged with a longer fuse to explode after a set amount of time, usually 1 to 6 rounds. Roll initiative for the dynamite. After the set number of rounds goes by, the dynamite explodes on that initiative."
 			]
 		},
@@ -10819,7 +10821,8 @@
 						"items": "One card in this deck is enchanted to appear as whatever specific card its owner commands. This magic works only 25 percent of the time, but the deck is worth 500 gp to any serious gambler who doesn't mind the risk\u2014or who isn't told about it."
 					}
 				}
-			}
+			},
+			"value": null
 		},
 		{
 			"name": "Enduring Spellbook",
@@ -12031,7 +12034,7 @@
 			"age": "modern",
 			"entries": [
 				"As an action, a character can throw a grenade at a point up to 60 feet away. With a grenade launcher, the character can propel the grenade up to 120 feet away.",
-				"Each creature with 20 feet of an exploding fragmentation grenade must make a DC 15 Dexterity saving throw, taking {@dice 5d6} piercing damage on a failed save, or half as much damage on a successful one."
+				"Each creature with 20 feet of an exploding fragmentation grenade must make a DC 15 Dexterity saving throw, taking {@damage 5d6} piercing damage on a failed save, or half as much damage on a successful one."
 			]
 		},
 		{
@@ -12947,7 +12950,7 @@
 			"name": "Grenade Launcher",
 			"source": "DMG",
 			"page": 268,
-			"type": "EXP",
+			"type": "G",
 			"rarity": "none",
 			"weight": 7,
 			"age": "modern",
@@ -13197,7 +13200,7 @@
 			"age": "renaissance",
 			"entries": [
 				"Gunpowder is chiefly used to propel a bullet out of the barrel of a pistol or rifle, or it is formed into a bomb. Gunpowder is sold in small wooden kegs or in water-resistant powder horns.",
-				"Setting fire to a container full of gunpowder can cause it to explode, dealing fire damage to creatures within 10 feet of it ({@dice 3d6} for a powder horn, {@dice 7d6} for a keg). A successful DC 12 Dexterity saving throw halves the damage. Setting fire to an ounce of gunpowder causes it to flare for 1 round, shedding bright light in a 30-foot radius and dim light for an additional 30 feet."
+				"Setting fire to a container full of gunpowder can cause it to explode, dealing fire damage to creatures within 10 feet of it ({@damage 3d6} for a powder horn). A successful DC 12 Dexterity saving throw halves the damage. Setting fire to an ounce of gunpowder causes it to flare for 1 round, shedding bright light in a 30-foot radius and dim light for an additional 30 feet."
 			]
 		},
 		{
@@ -13211,7 +13214,7 @@
 			"age": "renaissance",
 			"entries": [
 				"Gunpowder is chiefly used to propel a bullet out of the barrel of a pistol or rifle, or it is formed into a bomb. Gunpowder is sold in small wooden kegs or in water-resistant powder horns.",
-				"Setting fire to a container full of gunpowder can cause it to explode, dealing fire damage to creatures within 10 feet of it ({@dice 3d6} for a powder horn, {@dice 7d6} for a keg). A successful DC 12 Dexterity saving throw halves the damage. Setting fire to an ounce of gunpowder causes it to flare for 1 round, shedding bright light in a 30-foot radius and dim light for an additional 30 feet."
+				"Setting fire to a container full of gunpowder can cause it to explode, dealing fire damage to creatures within 10 feet of it ({@damage 7d6} for a keg). A successful DC 12 Dexterity saving throw halves the damage. Setting fire to an ounce of gunpowder causes it to flare for 1 round, shedding bright light in a 30-foot radius and dim light for an additional 30 feet."
 			]
 		},
 		{
@@ -13417,6 +13420,27 @@
 			"value": 5000,
 			"entries": [
 				"Platinum crescent inset with electrum, about three inches long with a hole large enough for a {@item nib|wdh} to fit in (1 harbor moon = 5,000 {@item nib|wdh|nibs})"
+			]
+		},
+		{
+			"name": "Harkon's Bite",
+			"source": "VRGR",
+			"page": 137,
+			"rarity": "uncommon",
+			"reqAttune": true,
+			"wondrous": true,
+			"curse": true,
+			"bonusSavingThrow": "+1",
+			"entries": [
+				"A dire wolf tooth dangles from this simple cord necklace. While you wear it, the necklace grants you a +1 bonus to ability checks and saving throws.",
+				{
+					"type": "entries",
+					"name": "Curse",
+					"entries": [
+						"Attuning to Harkon's Bite curses you until either Harkon Lukas removes the necklace from you or you are targeted by a {@spell remove curse} spell or similar magic. As long as you remain cursed, you cannot remove the necklace.",
+						"Upon donning or removing the necklace, whether you are attuned to it or not, you are afflicted with {@variantrule Player Characters as Lycanthropes|mm|werewolf lycanthropy} as detailed in the Monster Manual. The curse lasts until the dawn after the next full moon. If you are still wearing the necklace at this time, you are afflicted with the lycanthropy again."
+					]
+				}
 			]
 		},
 		{
@@ -14410,6 +14434,430 @@
 			"reqAttune": true,
 			"entries": [
 				"Allows an attuned wearer to ignore Undermountain's magical restrictions (see \"Alterations to Magic\")."
+			]
+		},
+		{
+			"name": "Horror Trinket",
+			"source": "VRGR",
+			"page": 36,
+			"type": "G",
+			"rarity": "none",
+			"entries": [
+				"Before you finish making a character, roll once on the Horror Trinkets table for a unique object your character has with them at the start of their adventuring career. These trinkets hint toward various horrific tales and might lead to dreadful revelations or be nothing more than grim keepsakes. At the DM's discretion any of these trinkets might also be a Mist talisman (detailed in {@book chapter 3|VRGR|3|Mist Talismans}), a focal item that can lead the bearer through the Mists to a particular Domain of Dread.",
+				{
+					"type": "table",
+					"caption": "Horror Trinkets",
+					"colLabels": [
+						"d100",
+						"Trinket"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"01",
+							"A picture you drew as a child of your imaginary friend"
+						],
+						[
+							"02",
+							"A lock that opens when blood is dripped in its keyhole"
+						],
+						[
+							"03",
+							"Clothes stolen from a scarecrow"
+						],
+						[
+							"04",
+							"A spinning top carved with four faces: happy, sad, wrathful, and dead"
+						],
+						[
+							"05",
+							"The necklace of a sibling who died on the day you were born"
+						],
+						[
+							"06",
+							"A wig from someone executed by beheading"
+						],
+						[
+							"07",
+							"The unopened letter to you from your dying father"
+						],
+						[
+							"08",
+							"A pocket watch that runs backward for an hour every midnight"
+						],
+						[
+							"09",
+							"A winter coat stolen from a dying soldier"
+						],
+						[
+							"10",
+							"A bottle of invisible ink that can only be read at sunset"
+						],
+						[
+							"11",
+							"A wineskin that refills when interred with a dead person for a night"
+						],
+						[
+							"12",
+							"A set of silverware used by a king for his last meal"
+						],
+						[
+							"13",
+							"A spyglass that always shows the world suffering a terrible storm"
+						],
+						[
+							"14",
+							"A cameo with the profile's face scratched away"
+						],
+						[
+							"15",
+							"A lantern with a black candle that never runs out and that burns with green flame"
+						],
+						[
+							"16",
+							"A teacup from a child's tea set, stained with blood"
+						],
+						[
+							"17",
+							"A little black book that records your dreams, and yours alone, when you sleep"
+						],
+						[
+							"18",
+							"A necklace formed of the interlinked holy symbols of a dozen deities"
+						],
+						[
+							"19",
+							"A noose that feels heavier than it should"
+						],
+						[
+							"20",
+							"A birdcage into which small birds fly but once inside never eat or leave"
+						],
+						[
+							"21",
+							"A lepidopterist's box filled with dead moths with skull-like patterns on their wings"
+						],
+						[
+							"22",
+							"A jar of pickled ghouls' tongues"
+						],
+						[
+							"23",
+							"The wooden hand of a notorious pirate"
+						],
+						[
+							"24",
+							"A urn with the ashes of a dead relative"
+						],
+						[
+							"25",
+							"A hand mirror backed with a bronze depiction of a medusa"
+						],
+						[
+							"26",
+							"Pallid leather gloves crafted with ivory fingernails"
+						],
+						[
+							"27",
+							"Dice made from the knuckles of a notorious charlatan"
+						],
+						[
+							"28",
+							"A ring of keys for forgotten locks"
+						],
+						[
+							"29",
+							"Nails from the coffin of a murderer"
+						],
+						[
+							"30",
+							"A key to the family crypt"
+						],
+						[
+							"31",
+							"A bouquet of funerary flowers that always looks and smells fresh"
+						],
+						[
+							"32",
+							"A switch used to discipline you as a child"
+						],
+						[
+							"33",
+							"A music box that plays by itself whenever someone holding it dances"
+						],
+						[
+							"34",
+							"A walking cane with an iron ferrule that strikes sparks on stone"
+						],
+						[
+							"35",
+							"A flag from a ship lost at sea"
+						],
+						[
+							"36",
+							"A porcelain doll's head that always seems to be looking at you"
+						],
+						[
+							"37",
+							"A wolf's head wrought in silver that is also a whistle"
+						],
+						[
+							"38",
+							"A small mirror that shows a much older version of the viewer"
+						],
+						[
+							"39",
+							"A small, worn book of children's nursery rhymes"
+						],
+						[
+							"40",
+							"A mummified raven claw"
+						],
+						[
+							"41",
+							"A broken pendant of a silver dragon that's always cold to the touch"
+						],
+						[
+							"42",
+							"A small locked box that quietly hums a lovely melody at night, but you always forget it in the morning"
+						],
+						[
+							"43",
+							"An inkwell that makes one a little nauseous when staring at it"
+						],
+						[
+							"44",
+							"An old doll made from a dark, dense wood and missing a hand and a foot"
+						],
+						[
+							"45",
+							"A black executioner's hood"
+						],
+						[
+							"46",
+							"A pouch made of flesh, with a sinew drawstring"
+						],
+						[
+							"47",
+							"A tiny spool of black thread that never runs out"
+						],
+						[
+							"48",
+							"A tiny clockwork figurine of a dancer that's missing a gear and doesn't work"
+						],
+						[
+							"49",
+							"A black wooden pipe that creates puffs of smoke that look like skulls"
+						],
+						[
+							"50",
+							"A vial of perfume, the scent of which only certain creatures can detect"
+						],
+						[
+							"51",
+							"A stone that emits a single endless sigh"
+						],
+						[
+							"52",
+							"A rag doll with two red dots on its neck"
+						],
+						[
+							"53",
+							"A spring-loaded toy with a missing crank"
+						],
+						[
+							"54",
+							"A mason jar containing a harmless but agitated, animate ooze"
+						],
+						[
+							"55",
+							"A black wooden die with 1's on all the faces"
+						],
+						[
+							"56",
+							"A child's portrait with \"born\" written on the back, along with next year's date"
+						],
+						[
+							"57",
+							"A dagger-sized shark tooth"
+						],
+						[
+							"58",
+							"A finger that's taken root in a small pot"
+						],
+						[
+							"59",
+							"A toolbox containing the remains of a dangerous but broken clockwork arachnid"
+						],
+						[
+							"60",
+							"A pitcher-sized, opalescent snail shell that occasionally, inexplicably shudders or tips over"
+						],
+						[
+							"61",
+							"The logbook of an ice-breaking ship called The Haifisch"
+						],
+						[
+							"62",
+							"A small portrait of you as a child, alongside your identically dressed twin"
+						],
+						[
+							"63",
+							"A silver pocket watch with thirteen hours marked on the face"
+						],
+						[
+							"64",
+							"A woodcut of a wolf devouring its own hind leg"
+						],
+						[
+							"65",
+							"A planchette etched with raven skulls"
+						],
+						[
+							"66",
+							"A moist coral figurine of a lamprey with arms, legs, and a bipedal stance"
+						],
+						[
+							"67",
+							"A bronze fingertrap sculpted with roaring tigers"
+						],
+						[
+							"68",
+							"A pearl necklace that turns red under the full moon"
+						],
+						[
+							"69",
+							"A fossil of a fish with humanoid features"
+						],
+						[
+							"70",
+							"A plague doctor's mask"
+						],
+						[
+							"71",
+							"A paper talisman with smudged ink"
+						],
+						[
+							"72",
+							"A locket containing the smeared image of an eyeless figure"
+						],
+						[
+							"73",
+							"A canopic jar with a lid sculpted like a goat"
+						],
+						[
+							"74",
+							"A jack-o'-lantern made from a small, pale gourd"
+						],
+						[
+							"75",
+							"A single high-heeled, iron shoe"
+						],
+						[
+							"76",
+							"A candle made from a severed hand"
+						],
+						[
+							"77",
+							"A clockwork device that beats like a heart"
+						],
+						[
+							"78",
+							"A blank masquerade mask"
+						],
+						[
+							"79",
+							"A glass eye with a live worm inside"
+						],
+						[
+							"80",
+							"A sheet with two eyeholes cut in it"
+						],
+						[
+							"81",
+							"The deed to someplace called Tergeron Manor"
+						],
+						[
+							"82",
+							"An ornate, wax-sealed crimson envelope that resists all attempts to open it"
+						],
+						[
+							"83",
+							"A mourning veil trimmed in black lace"
+						],
+						[
+							"84",
+							"A straitjacket covered in charcoal runes"
+						],
+						[
+							"85",
+							"A tattered, burlap mask with a crooked smile painted on it"
+						],
+						[
+							"86",
+							"A green ribbon designed to be worn as a choker"
+						],
+						[
+							"87",
+							"Dentures with mismatched, sharpened teeth"
+						],
+						[
+							"88",
+							"A warm, fist-sized egg case"
+						],
+						[
+							"89",
+							"A copper ring with \"mine\" engraved on the inside"
+						],
+						[
+							"90",
+							"A glass ampoule containing a neon green fluid"
+						],
+						[
+							"91",
+							"An eye patch embroidered with a holy symbol"
+						],
+						[
+							"92",
+							"A severed big toe with a nail that continues to grow"
+						],
+						[
+							"93",
+							"A journal that has been heavily redacted"
+						],
+						[
+							"94",
+							"A glove with a mouth-like design stitched on the palm"
+						],
+						[
+							"95",
+							"An ornate but empty reliquary made of silver and fractured glass"
+						],
+						[
+							"96",
+							"A ceramic figure of a cat with too many eyes"
+						],
+						[
+							"97",
+							"A crumpled paper ticket bearing the words \"admit none\""
+						],
+						[
+							"98",
+							"An electrum coin with your face on one side"
+						],
+						[
+							"99",
+							"A shrunken gremishka head that twitches when anyone casts magic nearby"
+						],
+						[
+							"100",
+							"A sunburst amulet with a red stone at the center"
+						]
+					]
+				}
 			]
 		},
 		{
@@ -15866,6 +16314,23 @@
 				"shatter"
 			],
 			"hasFluffImages": true
+		},
+		{
+			"name": "Ivana's Whisper",
+			"source": "VRGR",
+			"page": 83,
+			"type": "G",
+			"rarity": "unknown",
+			"poison": true,
+			"entries": [
+				"This poison bears a distinct scent and chemical message from Ivana Boritsi. A creature subjected to this poison must succeed on a DC 18 Constitution saving throw or experience the effects of a {@spell dream} spell created by Ivana the next time they sleep. This poison is nonmagical, and Ivana doesn't directly communicate with those affected during the dream. Rather, she creates the illusion of speaking with her intended target by alchemically crafting her message, predicting her target's reactions, and chemically encoding in her responses. She wears this poison as a perfume or hides it within gift bouquets, allowing it to convey her message later."
+			],
+			"poisonTypes": [
+				"inhaled"
+			],
+			"attachedSpells": [
+				"dream"
+			]
 		},
 		{
 			"name": "Izzet Guild Signet",
@@ -18180,6 +18645,18 @@
 			]
 		},
 		{
+			"name": "Master's Amulet",
+			"source": "MM",
+			"page": 271,
+			"type": "OTH",
+			"rarity": "unknown (magic)",
+			"entries": [
+				"Every {@creature shield guardian} has an amulet magically linked to it. A shield guardian can have only one corresponding amulet, and if that amulet is destroyed, the shield guardian is {@condition incapacitated} until a replacement amulet is created. A shield guardian's amulet is subject to direct attack if it isn't being worn or carried. It has AC 10, 10 hit points, and immunity to poison and psychic damage. Crafting an amulet requires 1 week and costs 1,000 gp in components.",
+				"A shield guardian's solitary focus is to protect the amulet's wearer. The amulet's wearer can command the guardian to attack its enemies or to guard the wielder against attack. If an attack threatens to injure the wearer, the construct can magically absorb the blow into its own body, even at a distance.",
+				"A spellcaster can store a single spell within a shield guardian, which can then cast the spell on command or under specific conditions. Many a wizard has been rendered helpless by enemies, only to surprise those foes when its shield guardian unleashes potent magical power."
+			]
+		},
+		{
 			"name": "Masterpiece painting in mahogany frame with gold inlay (Legion of Dusk)",
 			"source": "PSX",
 			"page": 25,
@@ -18822,6 +19299,12 @@
 			"name": "Monster Hunter's Pack",
 			"source": "CoS",
 			"page": 209,
+			"otherSources": [
+				{
+					"source": "VRGR",
+					"page": 34
+				}
+			],
 			"type": "G",
 			"rarity": "none",
 			"weight": 48.5,
@@ -19344,6 +19827,46 @@
 			"attachedSpells": [
 				"mending"
 			]
+		},
+		{
+			"name": "Nepenthe",
+			"source": "VRGR",
+			"page": 86,
+			"baseItem": "longsword|PHB",
+			"type": "M",
+			"rarity": "legendary",
+			"reqAttune": "by a paladin",
+			"sentient": true,
+			"weight": 3,
+			"weaponCategory": "martial",
+			"property": [
+				"V"
+			],
+			"dmg1": "1d8",
+			"dmgType": "S",
+			"dmg2": "1d10",
+			"bonusWeapon": "+3",
+			"sword": true,
+			"weapon": true,
+			"entries": [
+				"You gain a +3 bonus to attack and damage rolls made with this magic weapon. When you hit a fiend or an undead with it, that creature takes an extra {@damage 2d10} radiant damage.",
+				"While you hold the drawn sword, it creates an aura in a 10-foot radius around you. You and all creatures friendly to you in the aura have advantage on saving throws against spells and other magical effects. If you have 17 or more levels in the paladin class, the radius of the aura increases to 30 feet.",
+				{
+					"type": "entries",
+					"name": "Sentience",
+					"entries": [
+						"Nepenthe is a sentient, neutral evil weapon with an Intelligence of 10, a Wisdom of 8, and a Charisma of 18. It has hearing and {@sense darkvision} out to a range of 60 feet. It can read and understand Elvish. It can also speak Elvish, but only through the voice of its wielder, with whom the sword can communicate telepathically."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Personality",
+					"entries": [
+						"In its lifetime, the sword has beheaded thousands of criminals, not all of whom were guilty of the crimes for which they were convicted. The sword cannot distinguish the guilty from the innocent. With each beheading, it hungers for more justice and blood. The sword is corrupt and irredeemable."
+					]
+				}
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Nether Scroll of Azumar",
@@ -19885,7 +20408,7 @@
 					"type": "entries",
 					"name": "Random Properties",
 					"entries": [
-						"An Orb of Dragon kind has the following random properties:",
+						"An Orb of Dragonkind has the following random properties:",
 						{
 							"type": "list",
 							"items": [
@@ -25504,6 +26027,7 @@
 			"rarity": "uncommon",
 			"weight": 45,
 			"ac": 14,
+			"dexterityMax": null,
 			"entries": [
 				"This suit of magic armor is made from shimmering scales. While wearing it, you can apply your full Dexterity modifier (instead of a maximum of +2) when determining your Armor Class. In addition, this armor does not impose disadvantage on your Dexterity ({@skill Stealth}) checks."
 			]
@@ -29127,7 +29651,6 @@
 				}
 			],
 			"attachedSpells": [
-				"wish",
 				"call lightning",
 				"divine word",
 				"finger of death"

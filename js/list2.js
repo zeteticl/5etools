@@ -66,6 +66,8 @@ class List {
 		this._searchTerm = List._DEFAULTS.searchTerm;
 		this._sortBy = opts.sortByInitial || List._DEFAULTS.sortBy;
 		this._sortDir = opts.sortDirInitial || List._DEFAULTS.sortDir;
+		this._sortByInitial = this._sortBy;
+		this._sortDirInitial = this._sortDir;
 		this._fnFilter = null;
 		this._isUseJquery = opts.isUseJquery;
 
@@ -235,9 +237,9 @@ class List {
 		if (this._searchTerm !== List._DEFAULTS.searchTerm) {
 			this._searchTerm = List._DEFAULTS.searchTerm;
 			this._doSearch();
-		} else if (this._sortBy !== List._DEFAULTS.sortBy || this._sortDir !== List._DEFAULTS.sortDir) {
-			this._sortBy = List._DEFAULTS.sortBy;
-			this._sortDir = List._DEFAULTS.sortDir
+		} else if (this._sortBy !== this._sortByInitial || this._sortDir !== this._sortDirInitial) {
+			this._sortBy = this._sortByInitial;
+			this._sortDir = this._sortDirInitial;
 		}
 	}
 

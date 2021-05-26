@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.2.3",
+	"version": "1.4.0",
 
 	"definitions" : {
 		"metaBlock": {
@@ -154,7 +154,25 @@
 				"type": "object",
 				"properties": {
 					"artisan's tools": {"type": "boolean"},
+
+					"alchemist's supplies": {"type": "boolean"},
+					"brewer's supplies":{"type": "boolean"},
+					"calligrapher's supplies": {"type": "boolean"},
+					"carpenter's tools":{"type": "boolean"},
 					"cartographer's tools": {"type": "boolean"},
+					"cobbler's tools":{"type": "boolean"},
+					"cook's utensils": {"type": "boolean"},
+					"glassblower's tools":{"type": "boolean"},
+					"jeweler's tools": {"type": "boolean"},
+					"leatherworker's tools":{"type": "boolean"},
+					"mason's tools": {"type": "boolean"},
+					"painter's supplies":{"type": "boolean"},
+					"potter's tools": {"type": "boolean"},
+					"smith's tools":{"type": "boolean"},
+					"tinker's tools": {"type": "boolean"},
+					"weaver's tools":{"type": "boolean"},
+					"woodcarver's tools": {"type": "boolean"},
+
 					"disguise kit": {"type": "boolean"},
 					"forgery kit": {"type": "boolean"},
 					"gaming set": {"type": "boolean"},
@@ -164,6 +182,7 @@
 					"thieves' tools": {"type": "boolean"},
 					"vehicles (land)": {"type": "boolean"},
 					"vehicles (water)": {"type": "boolean"},
+					"poisoner's kit": {"type": "boolean"},
 					"any": {"type": "integer"},
 					"choose": {
 						"type": "object",
@@ -173,7 +192,25 @@
 								"items": {
 									"enum": [
 										"artisan's tools",
+
+										"alchemist's supplies",
+										"brewer's supplies",
+										"calligrapher's supplies",
+										"carpenter's tools",
 										"cartographer's tools",
+										"cobbler's tools",
+										"cook's utensils",
+										"glassblower's tools",
+										"jeweler's tools",
+										"leatherworker's tools",
+										"mason's tools",
+										"painter's supplies",
+										"potter's tools",
+										"smith's tools",
+										"tinker's tools",
+										"weaver's tools",
+										"woodcarver's tools",
+
 										"disguise kit",
 										"forgery kit",
 										"gaming set",
@@ -182,8 +219,7 @@
 										"navigator's tools",
 										"thieves' tools",
 										"vehicles (land)",
-										"vehicles (water)",
-										"alchemist's supplies"
+										"vehicles (water)"
 									]
 								}
 							},
@@ -358,6 +394,48 @@
 				},
 				"additionalProperties": false
 			}
+		},
+
+		"savingThrowProficiencies": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"str":  {"type": "boolean"},
+					"dex":  {"type": "boolean"},
+					"con":  {"type": "boolean"},
+					"int":  {"type": "boolean"},
+					"wis":  {"type": "boolean"},
+					"cha":  {"type": "boolean"},
+
+					"choose": {
+						"type": "object",
+						"properties": {
+							"from": {
+								"type": "array",
+								"items": {
+									"enum": [
+										"str",
+										"dex",
+										"con",
+										"int",
+										"wis",
+										"cha"
+									]
+								}
+							},
+							"count": {"type": "integer"}
+						},
+						"required": ["from"],
+						"additionalProperties": false
+					}
+				},
+				"additionalProperties": false
+			}
+		},
+
+		"expertise": {
+			"type": "array"
 		},
 
 		"_speedVal": {
@@ -774,6 +852,31 @@
 				}
 			]
 		},
+		"damageImmunityArrayPlayer": {
+			"type": "array",
+			"items": {
+				"oneOf": [
+					{
+						"$ref": "#/definitions/dataDamageType"
+					},
+					{
+						"type": "object",
+						"properties": {
+							"choose": {
+								"type": "object",
+								"properties": {
+									"from": {
+										"$ref": "#/definitions/damageImmunityArrayPlayer"
+									}
+								},
+								"additionalProperties": false,
+								"required": ["from"]
+							}
+						}
+					}
+				]
+			}
+		},
 
 		"damageResistArray": {
 			"oneOf": [
@@ -820,6 +923,31 @@
 					"type": "null"
 				}
 			]
+		},
+		"damageResistArrayPlayer": {
+			"type": "array",
+			"items": {
+				"oneOf": [
+					{
+						"$ref": "#/definitions/dataDamageType"
+					},
+					{
+						"type": "object",
+						"properties": {
+							"choose": {
+								"type": "object",
+								"properties": {
+									"from": {
+										"$ref": "#/definitions/damageResistArrayPlayer"
+									}
+								},
+								"additionalProperties": false,
+								"required": ["from"]
+							}
+						}
+					}
+				]
+			}
 		},
 
 		"damageVulnerabilityArray":  {
@@ -868,6 +996,31 @@
 				}
 			]
 		},
+		"damageVulnerabilityArrayPlayer": {
+			"type": "array",
+			"items": {
+				"oneOf": [
+					{
+						"$ref": "#/definitions/dataDamageType"
+					},
+					{
+						"type": "object",
+						"properties": {
+							"choose": {
+								"type": "object",
+								"properties": {
+									"from": {
+										"$ref": "#/definitions/damageVulnerabilityArrayPlayer"
+									}
+								},
+								"additionalProperties": false,
+								"required": ["from"]
+							}
+						}
+					}
+				]
+			}
+		},
 
 		"conditionImmunityArray": {
 			"oneOf": [
@@ -911,6 +1064,31 @@
 					"type": "null"
 				}
 			]
+		},
+		"conditionImmunityArrayPlayer": {
+			"type": "array",
+			"items": {
+				"oneOf": [
+					{
+						"$ref": "#/definitions/dataCondition"
+					},
+					{
+						"type": "object",
+						"properties": {
+							"choose": {
+								"type": "object",
+								"properties": {
+									"from": {
+										"$ref": "#/definitions/conditionImmunityArrayPlayer"
+									}
+								},
+								"additionalProperties": false,
+								"required": ["from"]
+							}
+						}
+					}
+				]
+			}
 		},
 
 		"genericFluffArrayItemData": {
@@ -1303,6 +1481,19 @@
 						}
 					]
 				}
+			},
+			"properties": {
+				"_": {
+					"description": "Spells gained when gaining a particular feature, regardless of level or caster level",
+					"oneOf": [
+						{
+							"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"
+						},
+						{
+							"$ref": "#/definitions/_additionalSpellLevelObject"
+						}
+					]
+				}
 			}
 		},
 
@@ -1324,6 +1515,10 @@
 				"ritual": {
 					"description": "Ritual-only spells",
 					"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"
+				},
+				"resource": {
+					"description": "Spells which cost a specific resource to use (such as Ki), but otherwise have no restrictions",
+					"$ref": "#/definitions/_additionalSpellRechargeObject"
 				},
 				"_": {
 					"description": "Spells which do not fall into the above categories (i.e. have no specific recharge, and are simply known)",
@@ -1385,6 +1580,10 @@
 			"items": {
 				"type": "object",
 				"properties": {
+					"name": {
+						"description": "Optional display name for the group",
+						"type": "string"
+					},
 					"ability": {
 						"description": "Optionally specify the ability score used for e.g. racial spellcasting",
 						"oneOf": [
@@ -1408,6 +1607,10 @@
 								"enum": ["str", "dex", "con", "int", "wis", "cha", "inherit"]
 							}
 						]
+					},
+					"resourceName": {
+						"description": "Optional resource name for resource-cast spells in this group",
+						"type": "string"
 					},
 					"innate": {
 						"$ref": "#/definitions/_additionalSpellObject"

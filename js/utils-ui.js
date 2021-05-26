@@ -741,10 +741,10 @@ class ListUiUtil {
 		});
 	}
 
-	static handleClickBtnShowHideListPreview (evt, page, entity, btnShowHidePreview, elePreviewWrp) {
+	static handleClickBtnShowHideListPreview (evt, page, entity, btnShowHidePreview, elePreviewWrp, nxtText = null) {
 		evt.stopPropagation();
 
-		const nxtText = btnShowHidePreview.innerHTML.trim() === this.HTML_GLYPHICON_EXPAND ? this.HTML_GLYPHICON_CONTRACT : this.HTML_GLYPHICON_EXPAND;
+		nxtText = nxtText ?? btnShowHidePreview.innerHTML.trim() === this.HTML_GLYPHICON_EXPAND ? this.HTML_GLYPHICON_CONTRACT : this.HTML_GLYPHICON_EXPAND;
 
 		elePreviewWrp.classList.toggle("ve-hidden", nxtText === this.HTML_GLYPHICON_EXPAND);
 		btnShowHidePreview.innerHTML = nxtText;
@@ -772,6 +772,29 @@ class ListUiUtil {
 			}).appendTo(item.ele);
 		} else elePreviewWrp = item.ele.lastElementChild;
 		return elePreviewWrp;
+	}
+
+	static bindPreviewAllButton ($btnAll, list) {
+		$btnAll
+			.click(async () => {
+				const nxtHtml = $btnAll.html() === ListUiUtil.HTML_GLYPHICON_EXPAND
+					? ListUiUtil.HTML_GLYPHICON_CONTRACT
+					: ListUiUtil.HTML_GLYPHICON_EXPAND;
+
+				if (nxtHtml === ListUiUtil.HTML_GLYPHICON_CONTRACT && list.visibleItems.length > 500) {
+					const isSure = await InputUiUtil.pGetUserBoolean({
+						title: "Are You Sure?",
+						htmlDescription: `You are about to expand ${list.visibleItems.length} rows. This may seriously degrade performance.<br>Are you sure you want to continue?`,
+					})
+					if (!isSure) return;
+				}
+
+				$btnAll.html(nxtHtml);
+
+				list.visibleItems.forEach(listItem => {
+					if (listItem.data.btnShowHidePreview.innerHTML !== nxtHtml) listItem.data.btnShowHidePreview.click();
+				});
+			});
 	}
 }
 ListUiUtil.HTML_GLYPHICON_EXPAND = `[+]`;
@@ -2677,8 +2700,8 @@ class SourceUiUtil {
 
 		const $btnUseExisting = $(`<button class="btn btn-default">Use an Existing Source</button>`)
 			.click(() => {
-				$stageInitial.hide();
-				$stageExisting.show();
+				$stageInitial.hideVe();
+				$stageExisting.showVe();
 
 				// cleanup
 				[$iptName, $iptAbv, $iptJson].forEach($ipt => $ipt.removeClass("form-control--error"));
@@ -2731,19 +2754,19 @@ class SourceUiUtil {
 
 					// cleanup
 					$selExisting[0].selectedIndex = 0;
-					$stageExisting.hide();
-					$stageInitial.show();
+					$stageExisting.hideVe();
+					$stageInitial.showVe();
 				} else $selExisting.addClass("form-control--error");
 			});
 
 		const $btnBackExisting = $(`<button class="btn btn-default btn-sm mr-2">Back</button>`)
 			.click(() => {
 				$selExisting[0].selectedIndex = 0;
-				$stageExisting.hide();
-				$stageInitial.show();
+				$stageExisting.hideVe();
+				$stageInitial.showVe();
 			});
 
-		const $stageExisting = $$`<div class="h-100 w-100 flex-vh-center" style="display: none;"><div>
+		const $stageExisting = $$`<div class="h-100 w-100 flex-vh-center ve-hidden"><div>
 			<h3 class="text-center">Select a Homebrew Source</h3>
 			<div class="mb-2"><div class="col-12 flex-vh-center">${$selExisting}</div></div>
 			<div class="col-12 flex-vh-center">${$btnBackExisting}${$btnConfirmExisting}</div>
@@ -3625,6 +3648,56 @@ class ComponentUiUtil {
 	 * @param component An instance of a class which extends BaseComponent.
 	 * @param prop Component to hook on.
 	 * @param [opts] Options Object.
+	 * @param [opts.ele] Element to use.
+	 * @param [opts.html] HTML to convert to element to use.
+	 * @param [opts.text] Button text, if element is not specified.
+	 * @param [opts.fnHookPost] Function to run after primary hook.
+	 * @param [opts.stateName] State name.
+	 * @param [opts.stateProp] State prop.
+	 * @param [opts.isInverted] If the toggle display should be inverted.
+	 * @param [opts.activeClass] CSS class to use when setting the button as "active."
+	 * @param [opts.title]
+	 * @param [opts.activeTitle] Title to use when setting the button as "active."
+	 * @param [opts.inactiveTitle] Title to use when setting the button as "active."
+	 * @return *
+	 */
+	static getBtnBool (component, prop, opts) {
+		opts = opts || {};
+
+		let ele = opts.ele;
+		if (opts.html) ele = e_({outer: opts.html});
+
+		const activeClass = opts.activeClass || "active";
+		const stateName = opts.stateName || "state";
+		const stateProp = opts.stateProp || "_state";
+
+		const btn = (ele ? e_({ele}) : e_({
+			ele: ele,
+			tag: "button",
+			clazz: "btn btn-xs btn-default",
+			text: opts.text || "Toggle",
+		}))
+			.onClick(() => component[stateProp][prop] = !component[stateProp][prop])
+			.onContextmenu(evt => {
+				evt.preventDefault();
+				component[stateProp][prop] = !component[stateProp][prop];
+			});
+
+		const hk = () => {
+			btn.toggleClass(activeClass, opts.isInverted ? !component[stateProp][prop] : !!component[stateProp][prop]);
+			if (opts.activeTitle || opts.inactiveTitle) btn.title(component[stateProp][prop] ? (opts.activeTitle || opts.title || "") : (opts.inactiveTitle || opts.title || ""));
+			if (opts.fnHookPost) opts.fnHookPost(component[stateProp][prop]);
+		};
+		component._addHook(stateName, prop, hk);
+		hk();
+
+		return btn
+	}
+
+	/**
+	 * @param component An instance of a class which extends BaseComponent.
+	 * @param prop Component to hook on.
+	 * @param [opts] Options Object.
 	 * @param [opts.$ele] Element to use.
 	 * @param [opts.html] HTML to convert to element to use.
 	 * @param [opts.text] Button text, if element is not specified.
@@ -3633,33 +3706,18 @@ class ComponentUiUtil {
 	 * @param [opts.stateProp] State prop.
 	 * @param [opts.isInverted] If the toggle display should be inverted.
 	 * @param [opts.activeClass] CSS class to use when setting the button as "active."
+	 * @param [opts.title]
 	 * @param [opts.activeTitle] Title to use when setting the button as "active."
 	 * @param [opts.inactiveTitle] Title to use when setting the button as "active."
 	 * @return {JQuery}
 	 */
 	static $getBtnBool (component, prop, opts) {
-		opts = opts || {};
-
-		if (opts.html) opts.$ele = $(opts.html);
-
-		const activeClass = opts.activeClass || "active";
-		const stateName = opts.stateName || "state";
-		const stateProp = opts.stateProp || "_state";
-
-		const $btn = (opts.$ele || $(`<button class="btn btn-xs btn-default">${opts.text || "Toggle"}</button>`))
-			.click(() => component[stateProp][prop] = !component[stateProp][prop])
-			.contextmenu(evt => {
-				evt.preventDefault();
-				component[stateProp][prop] = !component[stateProp][prop];
-			});
-		const hook = () => {
-			$btn.toggleClass(activeClass, opts.isInverted ? !component[stateProp][prop] : !!component[stateProp][prop]);
-			if (opts.activeTitle || opts.inactiveTitle) $btn.title(component[stateProp][prop] ? (opts.activeTitle || "") : (opts.inactiveTitle || ""));
-			if (opts.fnHookPost) opts.fnHookPost(component[stateProp][prop]);
-		};
-		component._addHook(stateName, prop, hook);
-		hook();
-		return $btn
+		const nxtOpts = {...opts};
+		if (nxtOpts.$ele) {
+			nxtOpts.ele = nxtOpts.$ele[0];
+			delete nxtOpts.$ele;
+		}
+		return $(this.getBtnBool(component, prop, nxtOpts));
 	}
 
 	/**
@@ -3961,9 +4019,10 @@ class ComponentUiUtil {
 		opts = opts || {};
 
 		const initialValuesArray = (opts.values || []).concat(opts.isFreeText ? MiscUtil.copy((component._state[prop] || [])) : []);
+		const initialValsCompWith = opts.isCaseInsensitive ? component._state[prop].map(it => it.toLowerCase()) : component._state[prop];
 		const initialVals = initialValuesArray
 			.map(v => opts.isCaseInsensitive ? v.toLowerCase() : v)
-			.mergeMap(v => ({[v]: component._state[prop] && component._state[prop].includes(v)}));
+			.mergeMap(v => ({[v]: component._state[prop] && initialValsCompWith.includes(v)}));
 
 		let $btnAdd;
 		if (opts.isFreeText) {
@@ -4060,6 +4119,7 @@ class ComponentUiUtil {
 	 * @param opts Options.
 	 * @param [opts.values] Array of values. Mutually incompatible with "valueGroups".
 	 * @param [opts.valueGroups] Array of value groups (of the form `{name: "Group Name", values: [...]}`). Mutually incompatible with "values".
+	 * @param [opts.valueGroupSplitControlsLookup] A lookup of `<value group name> -> header controls` to embed in the UI.
 	 * @param [opts.count] Number of choices the user can make (cannot be used with min/max).
 	 * @param [opts.min] Minimum number of choices the user can make (cannot be used with count).
 	 * @param [opts.max] Maximum number of choices the user can make (cannot be used with count).
@@ -4091,7 +4151,13 @@ class ComponentUiUtil {
 		valueGroups.forEach((group, i) => {
 			if (i !== 0) $eles.push($(`<hr class="w-100 hr-1 hr--dotted">`));
 
-			if (group.name) $eles.push($(`<div class="flex-v-center py-1"><span class="mr-2">‒</span><span>${group.name}</span></div>`));
+			if (group.name) {
+				const $wrpName = $$`<div class="split-v-center py-1">
+					<div class="flex-v-center"><span class="mr-2">‒</span><span>${group.name}</span></div>
+					${opts.valueGroupSplitControlsLookup?.[group.name]}
+				</div>`
+				$eles.push($wrpName);
+			}
 
 			if (group.text) $eles.push($(`<div class="flex-v-center py-1"><div class="ml-1 mr-3"></div><i>${group.text}</i></div>`));
 

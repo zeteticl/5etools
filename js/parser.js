@@ -242,7 +242,7 @@ Parser.getSpeedString = (it) => {
 			joiner = "; ";
 			stack.push(`${it.speed.choose.from.sort().joinConjunct(", ", " or ")} ${it.speed.choose.amount} ft.${it.speed.choose.note ? ` ${it.speed.choose.note}` : ""}`);
 		}
-		return stack.join(joiner);
+		return stack.join(joiner) + (it.speed.note ? ` ${it.speed.note}` : "");
 	} else {
 		return it.speed + (it.speed === "Varies" ? "" : " ft. ");
 	}
@@ -875,6 +875,12 @@ Parser.spLevelToFullLevelText = function (level, dash) {
 	return `${Parser.spLevelToFull(level)}${(level === 0 ? "s" : `${dash ? "-" : " "}level`)}`;
 };
 
+Parser.spLevelToSpellPoints = function (lvl) {
+	lvl = Number(lvl);
+	if (isNaN(lvl) || lvl === 0) return 0;
+	return Math.ceil(1.34 * lvl);
+};
+
 Parser.spMetaToArr = function (meta) {
 	if (!meta) return [];
 	return Object.entries(meta)
@@ -987,7 +993,7 @@ Parser.spRangeTypeToIcon = function (range) {
 
 Parser.spRangeToShortHtml = function (range) {
 	switch (range.type) {
-		case RNG_SPECIAL: return `<span class="fas ${Parser.spRangeTypeToIcon(range.type)} help--subtle" title="Special"></span>`;
+		case RNG_SPECIAL: return `<span class="fas ${Parser.spRangeTypeToIcon(range.type)} help-subtle" title="Special"></span>`;
 		case RNG_POINT: return Parser.spRangeToShortHtml._renderPoint(range);
 		case RNG_LINE:
 		case RNG_CUBE:
@@ -1007,7 +1013,7 @@ Parser.spRangeToShortHtml._renderPoint = function (range) {
 		case RNG_UNLIMITED:
 		case RNG_UNLIMITED_SAME_PLANE:
 		case RNG_SPECIAL:
-		case RNG_TOUCH: return `<span class="fas ${Parser.spRangeTypeToIcon(dist.type)} help--subtle" title="${Parser.spRangeTypeToFull(dist.type)}"></span>`;
+		case RNG_TOUCH: return `<span class="fas ${Parser.spRangeTypeToIcon(dist.type)} help-subtle" title="${Parser.spRangeTypeToFull(dist.type)}"></span>`;
 		case UNT_FEET:
 		case UNT_MILES:
 		default:
@@ -1016,10 +1022,10 @@ Parser.spRangeToShortHtml._renderPoint = function (range) {
 };
 Parser.spRangeToShortHtml._renderArea = function (range) {
 	const size = range.distance;
-	return `<span class="fas ${Parser.spRangeTypeToIcon(RNG_SELF)} help--subtle" title="Self"></span> ${size.amount}<span class="ve-small">-${Parser.getSingletonUnit(size.type, true)}</span> ${Parser.spRangeToShortHtml._getAreaStyleString(range)}`;
+	return `<span class="fas ${Parser.spRangeTypeToIcon(RNG_SELF)} help-subtle" title="Self"></span> ${size.amount}<span class="ve-small">-${Parser.getSingletonUnit(size.type, true)}</span> ${Parser.spRangeToShortHtml._getAreaStyleString(range)}`;
 };
 Parser.spRangeToShortHtml._getAreaStyleString = function (range) {
-	return `<span class="fas ${Parser.spRangeTypeToIcon(range.type)} help--subtle" title="${Parser.spRangeTypeToFull(range.type)}"></span>`
+	return `<span class="fas ${Parser.spRangeTypeToIcon(range.type)} help-subtle" title="${Parser.spRangeTypeToFull(range.type)}"></span>`
 };
 
 Parser.spRangeToFull = function (range) {
@@ -1295,6 +1301,7 @@ Parser.monTypeToFullObj = function (type) {
 	if (type.swarmSize) {
 		out.tags.push("swarm");
 		out.asText = `swarm of ${Parser.sizeAbvToFull(type.swarmSize).toLowerCase()} ${Parser.monTypeToPlural(type.type)}`;
+		out.swarmSize = type.swarmSize;
 	} else {
 		out.asText = `${type.type}`;
 	}
@@ -1539,6 +1546,7 @@ Parser.optFeatureTypeToFull = function (type) {
 Parser.CHAR_OPTIONAL_FEATURE_TYPE_TO_FULL = {
 	SG: "Supernatural Gift",
 	OF: "Optional Feature",
+	DG: "Dark Gift",
 };
 
 Parser.charCreationOptionTypeToFull = function (type) {
@@ -1953,7 +1961,7 @@ Parser.bookOrdinalToAbv = (ordinal, preNoSuff) => {
 		case "part": return `${preNoSuff ? " " : ""}Part ${ordinal.identifier}${preNoSuff ? "" : " \u2014 "}`;
 		case "chapter": return `${preNoSuff ? " " : ""}Ch. ${ordinal.identifier}${preNoSuff ? "" : ": "}`;
 		case "episode": return `${preNoSuff ? " " : ""}Ep. ${ordinal.identifier}${preNoSuff ? "" : ": "}`;
-		case "appendix": return `${preNoSuff ? " " : ""}App. ${ordinal.identifier}${preNoSuff ? "" : ": "}`;
+		case "appendix": return `${preNoSuff ? " " : ""}App.${ordinal.identifier != null ? ` ${ordinal.identifier}` : ""}${preNoSuff ? "" : ": "}`;
 		case "level": return `${preNoSuff ? " " : ""}Level ${ordinal.identifier}${preNoSuff ? "" : ": "}`;
 		default: throw new Error(`Unhandled ordinal type "${ordinal.type}"`);
 	}
@@ -1963,6 +1971,13 @@ Parser.nameToTokenName = function (name) {
 	return name
 		.toAscii()
 		.replace(/"/g, "");
+};
+
+Parser.bytesToHumanReadable = function (bytes, {fixedDigits = 2} = {}) {
+	if (bytes == null) return "";
+	if (!bytes) return "0 B";
+	const e = Math.floor(Math.log(bytes) / Math.log(1024));
+	return `${(bytes / Math.pow(1024, e)).toFixed(fixedDigits)} ${`\u200bKMGTP`.charAt(e)}B`;
 };
 
 SKL_ABV_ABJ = "A";
@@ -2203,6 +2218,7 @@ Parser.VEHICLE_TYPE_TO_FULL = {
 	"SHIP": "Ship",
 	"INFWAR": "Infernal War Machine",
 	"CREATURE": "Creature",
+	"OBJECT": "Object",
 	"SHP:H": "Ship Upgrade, Hull",
 	"SHP:M": "Ship Upgrade, Movement",
 	"SHP:W": "Ship Upgrade, Weapon",
@@ -2283,6 +2299,8 @@ SRC_EGW_US = "US";
 SRC_MOT = "MOT";
 SRC_IDRotF = "IDRotF";
 SRC_TCE = "TCE";
+SRC_VRGR = "VRGR";
+SRC_HoL = "HoL";
 SRC_SCREEN = "Screen";
 SRC_SCREEN_WILDERNESS_KIT = "ScreenWildernessKit";
 SRC_HEROES_FEAST = "HF";
@@ -2372,6 +2390,7 @@ SRC_UA2020SCR = `${SRC_UA_PREFIX}2020SubclassesRevisited`;
 SRC_UA2020F = `${SRC_UA_PREFIX}2020Feats`;
 SRC_UA2021GL = `${SRC_UA_PREFIX}2021GothicLineages`;
 SRC_UA2021FF = `${SRC_UA_PREFIX}2021FolkOfTheFeywild`;
+SRC_UA2021DO = `${SRC_UA_PREFIX}2021DraconicOptions`;
 
 SRC_3PP_SUFFIX = " 3pp";
 
@@ -2448,6 +2467,8 @@ Parser.SOURCE_JSON_TO_FULL[SRC_EGW_US] = "Unwelcome Spirits";
 Parser.SOURCE_JSON_TO_FULL[SRC_MOT] = "Mythic Odysseys of Theros";
 Parser.SOURCE_JSON_TO_FULL[SRC_IDRotF] = "Icewind Dale: Rime of the Frostmaiden";
 Parser.SOURCE_JSON_TO_FULL[SRC_TCE] = "Tasha's Cauldron of Everything";
+Parser.SOURCE_JSON_TO_FULL[SRC_VRGR] = "Van Richten's Guide to Ravenloft";
+Parser.SOURCE_JSON_TO_FULL[SRC_HoL] = "The House of Lament";
 Parser.SOURCE_JSON_TO_FULL[SRC_SCREEN] = "Dungeon Master's Screen";
 Parser.SOURCE_JSON_TO_FULL[SRC_SCREEN_WILDERNESS_KIT] = "Dungeon Master's Screen: Wilderness Kit";
 Parser.SOURCE_JSON_TO_FULL[SRC_HEROES_FEAST] = "Heroes' Feast";
@@ -2528,6 +2549,7 @@ Parser.SOURCE_JSON_TO_FULL[SRC_UA2020SCR] = `${UA_PREFIX}2020 Subclasses Revisit
 Parser.SOURCE_JSON_TO_FULL[SRC_UA2020F] = `${UA_PREFIX}2020 Feats`;
 Parser.SOURCE_JSON_TO_FULL[SRC_UA2021GL] = `${UA_PREFIX}2021 Gothic Lineages`;
 Parser.SOURCE_JSON_TO_FULL[SRC_UA2021FF] = `${UA_PREFIX}2021 Folk of the Feywild`;
+Parser.SOURCE_JSON_TO_FULL[SRC_UA2021DO] = `${UA_PREFIX}2021 Draconic Options`;
 
 Parser.SOURCE_JSON_TO_ABV = {};
 Parser.SOURCE_JSON_TO_ABV[SRC_CoS] = "CoS";
@@ -2594,6 +2616,8 @@ Parser.SOURCE_JSON_TO_ABV[SRC_EGW_US] = "US";
 Parser.SOURCE_JSON_TO_ABV[SRC_MOT] = "MOT";
 Parser.SOURCE_JSON_TO_ABV[SRC_IDRotF] = "IDRotF";
 Parser.SOURCE_JSON_TO_ABV[SRC_TCE] = "TCE";
+Parser.SOURCE_JSON_TO_ABV[SRC_VRGR] = "VRGR";
+Parser.SOURCE_JSON_TO_ABV[SRC_HoL] = "HoL";
 Parser.SOURCE_JSON_TO_ABV[SRC_SCREEN] = "Screen";
 Parser.SOURCE_JSON_TO_ABV[SRC_SCREEN_WILDERNESS_KIT] = "Wild";
 Parser.SOURCE_JSON_TO_ABV[SRC_HEROES_FEAST] = "HF";
@@ -2674,6 +2698,7 @@ Parser.SOURCE_JSON_TO_ABV[SRC_UA2020SCR] = "UA20SCR";
 Parser.SOURCE_JSON_TO_ABV[SRC_UA2020F] = "UA20F";
 Parser.SOURCE_JSON_TO_ABV[SRC_UA2021GL] = "UA21GL";
 Parser.SOURCE_JSON_TO_ABV[SRC_UA2021FF] = "UA21FF";
+Parser.SOURCE_JSON_TO_ABV[SRC_UA2021DO] = "UA21DO";
 
 Parser.SOURCE_JSON_TO_DATE = {};
 Parser.SOURCE_JSON_TO_DATE[SRC_CoS] = "2016-03-15";
@@ -2738,6 +2763,8 @@ Parser.SOURCE_JSON_TO_DATE[SRC_EGW_US] = "2020-03-17";
 Parser.SOURCE_JSON_TO_DATE[SRC_MOT] = "2020-06-02";
 Parser.SOURCE_JSON_TO_DATE[SRC_IDRotF] = "2020-09-15";
 Parser.SOURCE_JSON_TO_DATE[SRC_TCE] = "2020-11-17";
+Parser.SOURCE_JSON_TO_DATE[SRC_VRGR] = "2021-05-18";
+Parser.SOURCE_JSON_TO_DATE[SRC_HoL] = "2021-05-18";
 Parser.SOURCE_JSON_TO_DATE[SRC_SCREEN] = "2015-01-20";
 Parser.SOURCE_JSON_TO_DATE[SRC_SCREEN_WILDERNESS_KIT] = "2020-11-17";
 Parser.SOURCE_JSON_TO_DATE[SRC_HEROES_FEAST] = "2020-10-27";
@@ -2818,6 +2845,7 @@ Parser.SOURCE_JSON_TO_DATE[SRC_UA2020SCR] = "2020-05-12";
 Parser.SOURCE_JSON_TO_DATE[SRC_UA2020F] = "2020-07-13";
 Parser.SOURCE_JSON_TO_DATE[SRC_UA2021GL] = "2020-01-26";
 Parser.SOURCE_JSON_TO_DATE[SRC_UA2021FF] = "2020-03-12";
+Parser.SOURCE_JSON_TO_DATE[SRC_UA2021DO] = "2020-04-14";
 
 Parser.SOURCES_ADVENTURES = new Set([
 	SRC_LMoP,
@@ -2860,6 +2888,7 @@ Parser.SOURCES_ADVENTURES = new Set([
 	SRC_EGW_US,
 	SRC_IDRotF,
 	SRC_CM,
+	SRC_HoL,
 
 	SRC_AWM,
 ]);
@@ -2907,6 +2936,7 @@ Parser.SOURCES_AVAILABLE_DOCS_BOOK = {};
 	SRC_EGW,
 	SRC_MOT,
 	SRC_TCE,
+	SRC_VRGR,
 ].forEach(src => {
 	Parser.SOURCES_AVAILABLE_DOCS_BOOK[src] = src;
 	Parser.SOURCES_AVAILABLE_DOCS_BOOK[src.toLowerCase()] = src;
@@ -2950,6 +2980,8 @@ Parser.SOURCES_AVAILABLE_DOCS_ADVENTURE = {};
 	SRC_EGW_FS,
 	SRC_EGW_US,
 	SRC_IDRotF,
+	SRC_CM,
+	SRC_HoL,
 ].forEach(src => {
 	Parser.SOURCES_AVAILABLE_DOCS_ADVENTURE[src] = src;
 	Parser.SOURCES_AVAILABLE_DOCS_ADVENTURE[src.toLowerCase()] = src;

@@ -139,6 +139,11 @@ $rgb-inset-border: #656565;
 			}
 		}
 
+		&p-list-item {
+			// This prevents e.g. "italic" on the list item name from affecting the list item's text.
+			font-style: initial;
+		}
+
 		&p-cont-indent {
 			display: block;
 			text-indent: 1em;

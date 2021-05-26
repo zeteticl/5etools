@@ -26,6 +26,7 @@ const MSG = {
 	DuplicateEntityCheck: "",
 	ClassDataCheck: "",
 	RaceDataCheck: "",
+	FeatDataCheck: "",
 	RefTagCheck: "",
 };
 
@@ -102,7 +103,7 @@ class TestTagsUtil {
 			.forEach(additionalSpellOption => {
 				Object.entries(additionalSpellOption)
 					.forEach(([k, levelToSpells]) => {
-						if (k === "ability") return;
+						if (k === "ability" || k === "name") return;
 
 						Object.values(levelToSpells).forEach(spellListOrMeta => {
 							if (spellListOrMeta instanceof Array) {
@@ -832,6 +833,19 @@ class RaceDataCheck {
 	}
 }
 
+class FeatDataCheck {
+	static _handleFeat (file, feat) {
+		// if (feat.additionalSpells?.length > 1 && feat.additionalSpells.some(it => !it.name)) console.log(feat.name)
+		TestTagsUtil.testAdditionalSpells(file, "FeatDataCheck", feat);
+	}
+
+	static run () {
+		const file = `data/feats.json`;
+		const featJson = require(`../${file}`);
+		featJson.feat.forEach(r => this._handleFeat(file, r));
+	}
+}
+
 class EscapeCharacterCheck {
 	static checkString (file, str) {
 		let re = /([\n\t\r])/g;
@@ -1026,6 +1040,7 @@ async function main () {
 	SpellDataCheck.run();
 	ClassDataCheck.run();
 	RaceDataCheck.run();
+	FeatDataCheck.run();
 
 	let outMessage = "";
 	Object.entries(MSG).forEach(([k, v]) => {

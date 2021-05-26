@@ -45,7 +45,7 @@ class StatGenPage {
 						html: `<span class="glyphicon glyphicon-download"></span>`,
 						title: "Save to File",
 						pFnClick: () => {
-							DataUtil.userDownload("statgen", this._statGenUi.getSaveableState());
+							DataUtil.userDownload("statgen", this._statGenUi.getSaveableState(), {fileType: "statgen"});
 						},
 					},
 				],
@@ -57,8 +57,9 @@ class StatGenPage {
 						html: `<span class="glyphicon glyphicon-upload"></span>`,
 						title: "Load from File",
 						pFnClick: async () => {
-							const json = await DataUtil.pUserUpload();
-							this._statGenUi.setStateFrom(json);
+							const jsons = await DataUtil.pUserUpload({fileType: "statgen"});
+							if (!jsons?.length) return;
+							this._statGenUi.setStateFrom(jsons[0]);
 						},
 					},
 				],

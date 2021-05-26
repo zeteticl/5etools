@@ -233,7 +233,7 @@ class Omnisearch {
 
 		if (this._$btnToggleUa) this._$btnToggleUa.detach();
 		else {
-			this._$btnToggleUa = $(`<button class="btn btn-default btn-xs mr-2" title="Filter Unearthed Arcana and other unofficial source results" tabindex="-1">Include UA/etc.</button>`)
+			this._$btnToggleUa = $(`<button class="btn btn-default btn-xs mr-2" title="Include Unearthed Arcana and other unofficial source results" tabindex="-1">Include UA/etc.</button>`)
 				.on("click", () => this._state.isShowUa = !this._state.isShowUa);
 
 			const hkIsUa = () => {
@@ -246,7 +246,7 @@ class Omnisearch {
 
 		if (this._$btnToggleBlacklisted) this._$btnToggleBlacklisted.detach();
 		else {
-			this._$btnToggleBlacklisted = $(`<button class="btn btn-default btn-xs mr-2" title="Filter blacklisted content results" tabindex="-1">Include Blacklisted</button>`)
+			this._$btnToggleBlacklisted = $(`<button class="btn btn-default btn-xs mr-2" title="Include blacklisted content results" tabindex="-1">Include Blacklisted</button>`)
 				.on("click", async () => this._state.isShowBlacklisted = !this._state.isShowBlacklisted);
 
 			const hkIsBlacklisted = () => {

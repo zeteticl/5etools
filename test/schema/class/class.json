@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"version": "2.4.0",
+	"version": "2.5.0",
 	"$id": "class.json",
 
 	"type": "object",
@@ -573,9 +573,6 @@
 					"description": "Homebrew use only",
 					"type": "array",
 					"items": {"$ref": "#/definitions/spellRef"}
-				},
-				"languageProficiencies": {
-					"$ref": "util.json#/definitions/languageProficiencies"
 				}
 			},
 			"required": [
@@ -590,6 +587,7 @@
 			"description": "A reference to a spell, linked by name and source. Assumes PHB as the source, if none is provided.",
 			"oneOf": [
 				{
+					"description": "A spell with a non-PHB source",
 					"type": "object",
 					"properties": {
 						"name": {
@@ -601,7 +599,24 @@
 					},
 					"required": [
 						"name", "source"
-					]
+					],
+					"additionalProperties": false
+				},
+				{
+					"description": "Another class/subclass/subsubclass's spell list",
+					"type": "object",
+					"properties": {
+						"className": {"type": "string"},
+						"classSource": {"type": "string"},
+						"subclassName": {"type": "string"},
+						"subclassSource": {"type": "string"},
+						"subSubclassName": {"type": "string"},
+						"subSubclassSource": {"type": "string"}
+					},
+					"required": [
+						"className", "classSource"
+					],
+					"additionalProperties": false
 				},
 				{
 					"type": "string"

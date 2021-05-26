@@ -107,7 +107,7 @@ class BooksList {
 				<div class="flex-col w-100 bklist__wrp-rows-inner">${$elesContents}</div>
 			</div>`.hideVe();
 
-			const $btnToggleExpand = $(`<span class="px-2 py-1px bold">[+]</span>`)
+			const $btnToggleExpand = $(`<span class="px-2 py-1p bold">[+]</span>`)
 				.click(evt => {
 					evt.stopPropagation();
 					evt.preventDefault();
@@ -117,7 +117,7 @@ class BooksList {
 
 			const $eleLi = $$`<div class="flex-col w-100">
 				<a href="${this._rootPage}#${UrlUtil.encodeForHash(it.id)}" class="split-v-center lst--border lst__row-inner lst__row">
-					<span class="w-100">${this._rowBuilderFn(it)}</span>
+					<span class="w-100 flex">${this._rowBuilderFn(it)}</span>
 					${$btnToggleExpand}
 				</a>
 				${$wrpContents}

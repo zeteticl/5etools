@@ -316,40 +316,26 @@ class Blacklist {
 	}
 
 	static export () {
-		const filename = `content-blacklist`;
-		DataUtil.userDownload(filename, JSON.stringify({blacklist: ExcludeUtil.getList()}, null, "\t"));
+		DataUtil.userDownload(`content-blacklist`, {fileType: "content-blacklist", blacklist: ExcludeUtil.getList()});
 	}
 
-	static import (evt) {
-		function loadSaved (event, additive) {
-			const input = event.target;
+	static async pImport (evt) {
+		const files = await DataUtil.pUserUpload({expectedFileType: "content-blacklist"});
 
-			const reader = new FileReader();
-			reader.onload = async () => {
-				const text = reader.result;
-				const json = JSON.parse(text);
+		if (!files?.length) return;
 
-				// clear list display
-				Blacklist._list.removeAllItems();
-				Blacklist._list.update();
+		// clear list display
+		Blacklist._list.removeAllItems();
+		Blacklist._list.update();
 
-				// update storage
-				if (!additive) await ExcludeUtil.pSetList(json.blacklist || []);
-				else await ExcludeUtil.pSetList(ExcludeUtil.getList().concat(json.blacklist || []));
+		const json = files[0];
 
-				// render list display
-				Blacklist._renderList();
+		// update storage
+		if (!evt.shiftKey) await ExcludeUtil.pSetList(json.blacklist || []);
+		else await ExcludeUtil.pSetList(ExcludeUtil.getList().concat(json.blacklist || []));
 
-				$iptAdd.remove();
-			};
-			reader.readAsText(input.files[0]);
-		}
-
-		const additive = evt.shiftKey;
-		const $iptAdd = $(`<input type="file" accept=".json" style="position: fixed; top: -100px; left: -100px; display: none;">`).on("change", (evt) => {
-			loadSaved(evt, additive);
-		}).appendTo($(`body`));
-		$iptAdd.click();
+		// render list display
+		Blacklist._renderList();
 	}
 
 	static reset () {

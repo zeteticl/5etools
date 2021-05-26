@@ -94,6 +94,7 @@ class CreatureBuilder extends Builder {
 
 		delete creature.otherSources;
 		delete creature.srd;
+		delete creature.altArt;
 		delete creature.hasToken;
 		delete creature.uniqueId;
 
@@ -115,6 +116,23 @@ class CreatureBuilder extends Builder {
 
 		this.renderInput();
 		this.renderOutput();
+	}
+
+	async _pHashChange_pHandleSubHashes (sub, toLoad) {
+		if (sub.length <= 1) return toLoad;
+
+		let nxtSub = sub[1];
+		if (nxtSub.startsWith(`${VeCt.HASH_SCALED}${HASH_SUB_KV_SEP}`)) {
+			nxtSub = nxtSub.substring(`${VeCt.HASH_SCALED}${HASH_SUB_KV_SEP}`.length).trim();
+			try {
+				toLoad = await ScaleCreature.scale(toLoad, Number(nxtSub));
+				delete toLoad._displayName;
+			} catch (e) {
+				setTimeout(() => { throw e; })
+			}
+		}
+
+		return toLoad;
 	}
 
 	async pInit () {
@@ -1397,7 +1415,7 @@ class CreatureBuilder extends Builder {
 
 			return $$`<div class="flex-v-center mb-2">
 			<span class="mr-2 mkbru__sub-name--33">${name}</span>
-			<div class="text-muted mkbru_mon__skill-attrib-label mr-2 help--subtle" title="This skill is affected by the creature's ${Parser.attAbvToFull((Parser.skillToAbilityAbv(prop)))} score">(${Parser.skillToAbilityAbv(prop).toUpperCase()})</div>
+			<div class="text-muted mkbru_mon__skill-attrib-label mr-2 help-subtle" title="This skill is affected by the creature's ${Parser.attAbvToFull((Parser.skillToAbilityAbv(prop)))} score">(${Parser.skillToAbilityAbv(prop).toUpperCase()})</div>
 			${$iptVal}${$btnProf}${$btnExpert}
 			</div>`;
 		};
@@ -2865,59 +2883,6 @@ class CreatureBuilder extends Builder {
 		$$`<div class="flex">${$iptUrl}${$btnPreview}</div>`.appendTo($rowInner);
 
 		return $row;
-	}
-
-	static __$getFluffInput__getImageRow (doUpdateState, doUpdateOrder, options, imageRows, image) {
-		const out = {};
-
-		const getState = () => {
-			const rawUrl = $iptUrl.val().trim();
-			return rawUrl ? {type: "image", href: {type: "external", url: rawUrl}} : null;
-		};
-
-		const $iptUrl = $(`<input class="form-control form-control--minimal input-xs mr-2">`)
-			.change(() => doUpdateState());
-		if (image) {
-			const href = ((image || {}).href || {});
-			if (href.url) $iptUrl.val(href.url);
-			else if (href.path) {
-				$iptUrl.val(`${window.location.origin.replace(/\/+$/, "")}/img/${href.path}`);
-			}
-		}
-
-		const $btnPreview = $(`<button class="btn btn-xs btn-default mr-2" title="Preview Image"><span class="glyphicon glyphicon-fullscreen"/></button>`)
-			.click((evt) => {
-				const toRender = getState();
-				if (!toRender) return JqueryUtil.doToast({content: "Please enter an image URL", type: "warning"});
-
-				const $content = Renderer.hover.$getHoverContent_generic(toRender, {isBookContent: true});
-				Renderer.hover.getShowWindow(
-					$content,
-					Renderer.hover.getWindowPositionFromEvent(evt),
-					{
-						isPermanent: true,
-						title: "Image Preview",
-						isBookContent: true,
-					},
-				);
-			});
-
-		const $btnRemove = $(`<button class="btn btn-xs btn-danger" title="Remove Image"><span class="glyphicon glyphicon-trash"/></button>`)
-			.click(() => {
-				imageRows.splice(imageRows.indexOf(out), 1);
-				out.$ele.empty().remove();
-				doUpdateState();
-			});
-
-		const $dragOrder = BuilderUi.$getDragPad(doUpdateOrder, imageRows, out, {
-			$wrpRowsOuter: options.$wrpRowsOuter,
-		});
-
-		out.$ele = $$`<div class="flex-v-center mb-2 mkbru__wrp-rows--removable">${$iptUrl}${$btnPreview}${$btnRemove}${$dragOrder}</div>`;
-		out.getState = getState;
-		imageRows.push(out);
-
-		return out;
 	}
 
 	__$getEnvironmentInput (cb) {

@@ -168,12 +168,12 @@ class ItemsPage extends ListPage {
 			new Renderer.utils.TabButton({
 				label: "Info",
 				fnPopulate: buildFluffTab,
-				isVisible: Renderer.utils.hasFluffText(item),
+				isVisible: Renderer.utils.hasFluffText(item, "itemFluff"),
 			}),
 			new Renderer.utils.TabButton({
 				label: "Images",
 				fnPopulate: buildFluffTab.bind(null, true),
-				isVisible: Renderer.utils.hasFluffImages(item),
+				isVisible: Renderer.utils.hasFluffImages(item, "itemFluff"),
 			}),
 		];
 

@@ -75,16 +75,16 @@ class EncounterBuilder extends ProxyBase {
 			await MiscUtil.pCopyTextToClipboard(parts.join(HASH_PART_SEP));
 			JqueryUtil.showCopiedEffect($btnSvUrl);
 		});
-		$(`.ecgen__sv_file`).click(() => DataUtil.userDownload(`encounter`, this.getSaveableState()));
+		$(`.ecgen__sv_file`).click(() => DataUtil.userDownload(`encounter`, this.getSaveableState(), {fileType: "encounter"}));
 		$(`.ecgen__ld_file`).click(async () => {
-			const json = await DataUtil.pUserUpload();
-			if (json.items && json.sources) { // if it's a bestiary sublist
-				json.l = {
-					items: json.items,
-					sources: json.sources,
+			const jsons = await DataUtil.pUserUpload({expectedFileType: "encounter"});
+			if (jsons?.length && jsons[0].items && jsons[0].sources) { // if it's a bestiary sublist
+				jsons.l = {
+					items: jsons.items,
+					sources: jsons.sources,
 				}
 			}
-			this.pDoLoadState(json);
+			this.pDoLoadState(jsons[0]);
 		});
 		$(`.ecgen__reset`).title(`SHIFT-click to reset players`).click(evt => confirm("Are you sure?") && encounterBuilder.pReset({isNotResetPlayers: !evt.shiftKey, isNotAddInitialPlayers: !evt.shiftKey}));
 
@@ -637,7 +637,7 @@ class EncounterBuilder extends ProxyBase {
 		return Hist.getSubHash(EncounterBuilder.HASH_KEY) === "true";
 	}
 
-	show () {
+	showBuilder () {
 		this._cachedTitle = this._cachedTitle || document.title;
 		document.title = "Encounter Builder - 5etools";
 		$(`body`).addClass("ecgen_active");
@@ -646,7 +646,7 @@ class EncounterBuilder extends ProxyBase {
 		ListUtil.doSublistDeselectAll();
 	}
 
-	hide () {
+	hideBuilder () {
 		if (this._cachedTitle) {
 			document.title = this._cachedTitle;
 			this._cachedTitle = null;
@@ -711,8 +711,8 @@ class EncounterBuilder extends ProxyBase {
 
 	handleSubhash () {
 		// loading state from the URL is instead handled as part of EncounterUtil.pGetInitialState
-		if (Hist.getSubHash(EncounterBuilder.HASH_KEY) === "true") this.show();
-		else this.hide();
+		if (Hist.getSubHash(EncounterBuilder.HASH_KEY) === "true") this.showBuilder();
+		else this.hideBuilder();
 	}
 
 	removeAdvancedPlayerRow (ele) {
@@ -765,15 +765,15 @@ class EncounterBuilder extends ProxyBase {
 	updateDifficulty () {
 		const {partyMeta, encounter} = this.calculateXp();
 
-		const $elEasy = $(`.ecgen__easy`).removeClass("bold").html(`<span class="help--subtle" title="${EncounterBuilder._TITLE_EASY}">Easy:</span> ${partyMeta.easy.toLocaleString()} XP`);
-		const $elmed = $(`.ecgen__medium`).removeClass("bold").html(`<span class="help--subtle" title="${EncounterBuilder._TITLE_MEDIUM}">Medium:</span> ${partyMeta.medium.toLocaleString()} XP`);
-		const $elHard = $(`.ecgen__hard`).removeClass("bold").html(`<span class="help--subtle" title="${EncounterBuilder._TITLE_HARD}">Hard:</span> ${partyMeta.hard.toLocaleString()} XP`);
-		const $elDeadly = $(`.ecgen__deadly`).removeClass("bold").html(`<span class="help--subtle" title="${EncounterBuilder._TITLE_DEADLY}">Deadly:</span> ${partyMeta.deadly.toLocaleString()} XP`);
+		const $elEasy = $(`.ecgen__easy`).removeClass("bold").html(`<span class="help-subtle" title="${EncounterBuilder._TITLE_EASY}">Easy:</span> ${partyMeta.easy.toLocaleString()} XP`);
+		const $elmed = $(`.ecgen__medium`).removeClass("bold").html(`<span class="help-subtle" title="${EncounterBuilder._TITLE_MEDIUM}">Medium:</span> ${partyMeta.medium.toLocaleString()} XP`);
+		const $elHard = $(`.ecgen__hard`).removeClass("bold").html(`<span class="help-subtle" title="${EncounterBuilder._TITLE_HARD}">Hard:</span> ${partyMeta.hard.toLocaleString()} XP`);
+		const $elDeadly = $(`.ecgen__deadly`).removeClass("bold").html(`<span class="help-subtle" title="${EncounterBuilder._TITLE_DEADLY}">Deadly:</span> ${partyMeta.deadly.toLocaleString()} XP`);
 		const $elAbsurd = $(`.ecgen__absurd`).removeClass("bold").html(`<span class="help" title="${EncounterBuilder._TITLE_ABSURD}">Absurd:</span> ${partyMeta.absurd.toLocaleString()} XP`);
 
 		$(`.ecgen__ttk`).html(`<span class="help" title="${EncounterBuilder._TITLE_TTK}">TTK:</span> ${this._getApproxTurnsToKill().toFixed(2)}`);
 
-		$(`.ecgen__daily_budget`).removeClass("bold").html(`<span class="help--subtle" title="${EncounterBuilder._TITLE_BUDGET_DAILY}">Daily Budget:</span> ${partyMeta.dailyBudget.toLocaleString()} XP`);
+		$(`.ecgen__daily_budget`).removeClass("bold").html(`<span class="help-subtle" title="${EncounterBuilder._TITLE_BUDGET_DAILY}">Daily Budget:</span> ${partyMeta.dailyBudget.toLocaleString()} XP`);
 
 		let difficulty = "Trivial";
 		if (encounter.adjustedXp >= partyMeta.absurd) {

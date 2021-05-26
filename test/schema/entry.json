@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.4.3",
+	"version": "1.4.4",
 
 	"definitions" : {
 		"_arrayOfSpell": {
@@ -214,6 +214,9 @@
 						},
 						"skipMarks": {
 							"description": "If the automatically-inserted quotation marks should be skipped.",
+							"type": "boolean"
+						},
+						"skipItalics": {
 							"type": "boolean"
 						}
 					},

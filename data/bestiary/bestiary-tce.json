@@ -57,7 +57,7 @@
 			],
 			"trait": [
 				{
-					"name": "Regeneration (Slaadi Only)",
+					"name": "Regeneration (Slaad Only)",
 					"entries": [
 						"The aberration regains 5 hit points at the start of its turn if it has at least 1 hit point."
 					]
@@ -83,7 +83,7 @@
 					]
 				},
 				{
-					"name": "Claws (Slaadi Only)",
+					"name": "Claws (Slaad Only)",
 					"entries": [
 						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d10 + 3} + the spell's level slashing damage. If the target is a creature, it can't regain hit points until the start of the aberration's next turn."
 					]
@@ -162,6 +162,7 @@
 			"languages": [
 				"understands the languages you speak"
 			],
+			"pbNote": "equals your bonus",
 			"trait": [
 				{
 					"name": "Charge",
@@ -234,6 +235,7 @@
 			"languages": [
 				"understands the languages you speak"
 			],
+			"pbNote": "equals your bonus",
 			"trait": [
 				{
 					"name": "Amphibious",
@@ -307,6 +309,7 @@
 			"languages": [
 				"understands the languages you speak"
 			],
+			"pbNote": "equals your bonus",
 			"trait": [
 				{
 					"name": "Flyby",
@@ -1122,12 +1125,6 @@
 					"entries": [
 						"If the homunculus is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails. It can't use this trait if it's {@condition incapacitated}."
 					]
-				},
-				{
-					"name": "Might of the Master",
-					"entries": [
-						"The following numbers increase by 1 when your proficiency bonus increases by 1: the homunculus's skill and saving throw bonuses (above) and the bonuses to hit and damage of its attack (below)."
-					]
 				}
 			],
 			"actionNote": "Requires Your Bonus Action",
@@ -1716,7 +1713,7 @@
 				{
 					"name": "Rotting Claw (Putrid Only)",
 					"entries": [
-						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d6 + 3} + the spell's level slashing damage. If the target is {@condition poisoned}, it must succeed on a Constitution saving throw against your spell save DC be {@condition paralyzed} until the end of its next turn."
+						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d6 + 3} + the spell's level slashing damage. If the target is {@condition poisoned}, it must succeed on a Constitution saving throw against your spell save DC or be {@condition paralyzed} until the end of its next turn."
 					]
 				}
 			],

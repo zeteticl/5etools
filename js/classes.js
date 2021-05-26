@@ -617,7 +617,7 @@ class ClassesPage extends BaseComponent {
 		this._addHookBase("feature", hkScrollToFeature);
 		hkScrollToFeature();
 
-		const hkDisplayFluff = () => $(`.cls-main__cls-fluff`).toggleClass("hidden", !this._state.isShowFluff);
+		const hkDisplayFluff = () => $(`.cls-main__cls-fluff`).toggleVe(!!this._state.isShowFluff);
 		this._addHookBase("isShowFluff", hkDisplayFluff);
 		MiscUtil.pDefer(hkDisplayFluff);
 
@@ -627,38 +627,55 @@ class ClassesPage extends BaseComponent {
 
 			if (this._state.isHideFeatures) {
 				if (this._isAnySubclassActive()) {
-					this._$wrpOutline.toggleClass("hidden", false);
-					this._$trNoContent.toggleClass("hidden", true);
-					$dispClassFeatures.toggleClass("hidden", true);
-					$dispFeaturesSubclassHeader.toggleClass("hidden", false);
+					this._$wrpOutline.toggleVe(true);
+					this._$trNoContent.toggleVe(false);
+					$dispClassFeatures.toggleVe(false);
+					$dispFeaturesSubclassHeader.toggleVe(true);
 				} else {
-					this._$wrpOutline.toggleClass("hidden", true);
-					this._$trNoContent.toggleClass("hidden", false);
-					$dispClassFeatures.toggleClass("hidden", true);
-					$dispFeaturesSubclassHeader.toggleClass("hidden", true);
+					this._$wrpOutline.toggleVe(false);
+					this._$trNoContent.toggleVe(true);
+					$dispClassFeatures.toggleVe(false);
+					$dispFeaturesSubclassHeader.toggleVe(false);
 				}
 			} else {
-				this._$wrpOutline.toggleClass("hidden", false);
-				this._$trNoContent.toggleClass("hidden", true);
-				$dispClassFeatures.toggleClass("hidden", false);
-				$dispFeaturesSubclassHeader.toggleClass("hidden", false);
+				this._$wrpOutline.toggleVe(true);
+				this._$trNoContent.toggleVe(false);
+				$dispClassFeatures.toggleVe(true);
+				$dispFeaturesSubclassHeader.toggleVe(true);
 			}
 		};
 		this._addHookBase("isHideFeatures", hkDisplayFeatures);
 		MiscUtil.pDefer(hkDisplayFeatures);
 
 		const cls = this.activeClass;
-		cls.subclasses.forEach(sc => {
-			const stateKey = UrlUtil.getStateKeySubclass(sc);
-			const hkDisplaySubclass = () => {
-				const isVisible = this._state[stateKey];
-				$(`[data-subclass-id="${stateKey}"]`).toggleClass("hidden", !isVisible);
-			};
-			this._addHookBase(stateKey, hkDisplaySubclass);
-			// Check/update main feature display here, as if there are no subclasses active we can hide more
-			this._addHookBase(stateKey, hkDisplayFeatures);
-			MiscUtil.pDefer(hkDisplaySubclass);
-		});
+
+		// If multiple subclasses are displayed, show name prefixes
+		const hkIsShowNamePrefixes = () => {
+			const cntDisplayedSubclasses = cls.subclasses.map(sc => Number(this._state[UrlUtil.getStateKeySubclass(sc)] || false)).sum();
+			$(`[data-subclass-name-prefix]`).toggleVe(cntDisplayedSubclasses > 1);
+		};
+		const hkIsShowNamePrefixesThrottled = MiscUtil.throttle(hkIsShowNamePrefixes, 50);
+		MiscUtil.pDefer(() => hkIsShowNamePrefixesThrottled);
+
+		cls.subclasses
+			.map(sc => {
+				let isFirstRun = true;
+				const stateKey = UrlUtil.getStateKeySubclass(sc);
+
+				const hkDisplaySubclass = () => {
+					isFirstRun = false;
+
+					const isVisible = this._state[stateKey];
+					$(`[data-subclass-id="${stateKey}"]`).toggleVe(!!isVisible);
+
+					if (!isFirstRun) hkIsShowNamePrefixes();
+				};
+				this._addHookBase(stateKey, hkDisplaySubclass);
+
+				// Check/update main feature display here, as if there are no subclasses active we can hide more
+				this._addHookBase(stateKey, hkDisplayFeatures);
+				MiscUtil.pDefer(hkDisplaySubclass);
+			});
 		// endregion
 
 		this._handleFilterChange(false);
@@ -705,8 +722,8 @@ class ClassesPage extends BaseComponent {
 			// If there is a state key, this is a subclass table group, and may therefore need to be hidden
 			if (!stateKey) return;
 			const hkShowHide = () => {
-				$thGroupHeader.toggleClass("hidden", !this._state[stateKey]);
-				$tblHeadersGroup.forEach($tblHeader => $tblHeader.toggleClass("hidden", !this._state[stateKey]))
+				$thGroupHeader.toggleVe(!!this._state[stateKey]);
+				$tblHeadersGroup.forEach($tblHeader => $tblHeader.toggleVe(!!this._state[stateKey]))
 			};
 			this._addHookBase(stateKey, hkShowHide);
 			MiscUtil.pDefer(hkShowHide);
@@ -770,7 +787,7 @@ class ClassesPage extends BaseComponent {
 
 				// If there is a state key, this is a subclass table group, and may therefore need to be hidden
 				if (!stateKey) return;
-				const hkShowHide = () => $cells.forEach($cell => $cell.toggleClass("hidden", !this._state[stateKey]));
+				const hkShowHide = () => $cells.forEach($cell => $cell.toggleVe(!!this._state[stateKey]));
 				this._addHookBase(stateKey, hkShowHide);
 				MiscUtil.pDefer(hkShowHide); // saves ~10ms
 			};
@@ -811,13 +828,13 @@ class ClassesPage extends BaseComponent {
 							},
 						);
 						metaFeatureLink.isHidden = isHidden;
-						metaFeatureLink.$wrpLink.toggleClass("hidden", isHidden);
+						metaFeatureLink.$wrpLink.toggleVe(!isHidden);
 					}
 				});
 
-				metaTblRow.metasFeatureLinks.forEach(metaFeatureLink => metaFeatureLink.$dispComma.toggleClass("hidden", false));
+				metaTblRow.metasFeatureLinks.forEach(metaFeatureLink => metaFeatureLink.$dispComma.toggleVe(true));
 				const lastVisible = metaTblRow.metasFeatureLinks.filter(metaFeatureLink => !metaFeatureLink.isHidden).last();
-				if (lastVisible) lastVisible.$dispComma.addClass("hidden");
+				if (lastVisible) lastVisible.$dispComma.hideVe();
 			});
 		};
 
@@ -839,7 +856,7 @@ class ClassesPage extends BaseComponent {
 			<tr><th class="border" colspan="15"></th></tr>
 			</tbody>
 		</table>`.appendTo($wrpTblClass);
-		$wrpTblClass.show();
+		$wrpTblClass.showVe();
 	}
 
 	_render_renderSidebar () {
@@ -1007,7 +1024,7 @@ class ClassesPage extends BaseComponent {
 
 			<tr><th class="border" colspan="6"></th></tr>
 		</table>`.appendTo($wrpSidebar);
-		$wrpSidebar.show();
+		$wrpSidebar.showVe();
 
 		MiscUtil.pDefer(hkSidebarHidden);
 	}
@@ -1155,7 +1172,7 @@ class ClassesPage extends BaseComponent {
 		this.filterBox.on(FilterBox.EVNT_VALCHANGE, this._handleSubclassFilterChange.bind(this));
 		this._handleSubclassFilterChange();
 		// Remove the temporary "hidden" class used to prevent popping
-		this._listSubclass.items.forEach(it => it.ele.removeClass("hidden"));
+		this._listSubclass.items.forEach(it => it.ele.showVe());
 
 		const $btnToggleSources = ComponentUiUtil.$getBtnBool(this, "isShowScSources", {$ele: $(`<button class="btn btn-xs btn-default flex-1" title="Show Subclass Sources"><span class="glyphicon glyphicon-book"/></button>`)});
 
@@ -1214,13 +1231,13 @@ class ClassesPage extends BaseComponent {
 		const $dispSource = $(`<div class="ml-1" title="${Parser.sourceJsonToFull(sc.source)}">(${Parser.sourceJsonToAbv(sc.source)})</div>`);
 		const hkSourcesVisible = () => {
 			$dispName.text(this._state.isShowScSources ? ClassesPage.getBaseShortName(sc) : sc.shortName);
-			$dispSource.toggleClass("hidden", !this._state.isShowScSources);
+			$dispSource.toggleVe(!!this._state.isShowScSources);
 		};
 		this._addHookBase("isShowScSources", hkSourcesVisible);
 		MiscUtil.pDefer(hkSourcesVisible);
 
 		// Initially have these "hidden," to prevent them popping out when we filter them
-		const $btn = $$`<button class="btn btn-default btn-xs flex-v-center m-1 hidden ${sc.isReprinted ? "cls__btn-sc--reprinted" : ""}">
+		const $btn = $$`<button class="btn btn-default btn-xs flex-v-center m-1 ve-hidden ${sc.isReprinted ? "cls__btn-sc--reprinted" : ""}">
 				${$dispName}
 				${$dispSource}
 			</button>`
@@ -1286,7 +1303,7 @@ class ClassesPage extends BaseComponent {
 
 		const hkShowHide = () => {
 			$wrpHead.toggleClass("cls-nav__head--active", !this._state.isHideOutline);
-			$wrpBody.toggleClass("hidden", !!this._state.isHideOutline);
+			$wrpBody.toggleVe(!this._state.isHideOutline);
 			$dispShowHide.toggleClass("cls-nav__disp-toggle--active", !this._state.isHideOutline);
 		};
 		this._addHookBase("isHideOutline", hkShowHide);
@@ -1480,11 +1497,11 @@ class ClassesPage extends BaseComponent {
 						const key = UrlUtil.getStateKeySubclass(sc);
 
 						if (!this._state[key]) {
-							$wrpContent.find(`[data-cls-comp-sc-ix="${i}"]`).hide();
+							$wrpContent.find(`[data-cls-comp-sc-ix="${i}"]`).hideVe();
 						} else numShown++;
 					});
 
-				if (!numShown) $wrpContent.find(".cls-comp__hr-level").addClass("hidden");
+				if (!numShown) $wrpContent.find(".cls-comp__hr-level").hideVe();
 
 				return numShown;
 			},
@@ -1608,17 +1625,18 @@ class ClassesPage extends BaseComponent {
 	}
 
 	_render_renderClassContent () {
-		const $content = $(`#pagecontent`).empty();
+		const $content = $(document.getElementById("pagecontent")).empty();
 		const cls = this.activeClass;
 		this._outlineData = {};
 
 		// Add extra classses to our features as we render them
-		Renderer.get().setFnGetStyleClasses(UrlUtil.PG_CLASSES, (entry) => {
-			if (!entry.source) return null;
-			if (!entry.isClassFeatureVariant) return null;
-			if (!SourceUtil.isNonstandardSource(entry.source) && entry.isClassFeatureVariant) return ["cls__variant-feature"];
-			return null;
-		});
+		Renderer.get()
+			.setFnGetStyleClasses(UrlUtil.PG_CLASSES, (entry) => {
+				if (!entry.source) return null;
+				if (!entry.isClassFeatureVariant) return null;
+				if (!SourceUtil.isNonstandardSource(entry.source) && entry.isClassFeatureVariant) return ["cls__variant-feature"];
+				return null;
+			});
 
 		$content.append(Renderer.utils.getBorderTr());
 
@@ -1672,9 +1690,26 @@ class ClassesPage extends BaseComponent {
 							if (ptDate && toRender.entries) toRender.entries.unshift(ptDate);
 							if (ptSources && toRender.entries) toRender.entries.push(ptSources);
 
+							// region Prefix subclass feature names with the subclass name, which can be shown if multiple
+							//   subclasses are shown.
+							let hasNamePluginRun = false;
+							Renderer.get()
+								.addPlugin("entries", "namePrefix", function (entry) {
+									if (ixScLvl === 0 || !entry.name) return;
+
+									if (hasNamePluginRun) return;
+									hasNamePluginRun = true;
+
+									Renderer.get().removePlugins("entries", "namePrefix")
+									return `<span class="ve-hidden" data-subclass-name-prefix="true">${sc.name.qq()}:</span> `;
+								});
+							// endregion
+
 							const $trSubclassFeature = $(`<tr class="cls-main__sc-feature ${cssMod}" data-subclass-id="${UrlUtil.getStateKeySubclass(sc)}"><td colspan="6"/></tr>`)
 								.fastSetHtml(Renderer.get().setDepthTracker(depthArr, {additionalPropsInherited: ["isClassFeatureVariant"]}).render(toRender))
 								.appendTo($content);
+
+							Renderer.get().removePlugins("entries", "namePrefix");
 
 							this._trackOutlineScData(stateKey, ixScLvl, ixScFeature, depthArr);
 						});
@@ -1695,6 +1730,10 @@ class ClassesPage extends BaseComponent {
 		this._$trNoContent = ClassesPage._render_$getTrNoContent().appendTo($content);
 
 		$content.append(Renderer.utils.getBorderTr());
+
+		Renderer.get()
+			.setFnGetStyleClasses(UrlUtil.PG_CLASSES, null)
+			.removePlugins("entries", "namePrefix");
 	}
 
 	async pDeleteSubclassBrew (uniqueId, sc) {
@@ -1850,13 +1889,13 @@ ClassesPage.ClassBookView = class {
 				const $btnToggleSc = $(`<span class="cls-bkmv__btn-tab ${sc.isReprinted ? "cls__btn-sc--reprinted" : ""}" title="${ClassesPage.getBtnTitleSubclass(sc)}">${name}</span>`)
 					.on("click", () => this._parent.set(stateKey, !this._parent.get(stateKey)));
 				const isVisible = this._classPage.filterBox.toDisplay(filterValues, sc.source, sc._fMisc, null);
-				if (!isVisible) $btnToggleSc.addClass("hidden");
+				if (!isVisible) $btnToggleSc.hideVe();
 
 				const hkShowHide = () => {
 					const $dispFeatures = this._$wrpBook.find(`[data-cls-book-sc-ix="${i}"]`);
 					const isActive = !!this._parent.get(stateKey);
 					$btnToggleSc.toggleClass(`cls__btn-sc--active-${mod}`, isActive);
-					$dispFeatures.toggleClass("hidden", !isActive);
+					$dispFeatures.toggleVe(!!isActive);
 				};
 				(this._hooks[stateKey] = this._hooks[stateKey] || []).push(hkShowHide);
 				this._parent.addHook(stateKey, hkShowHide);
@@ -1869,7 +1908,7 @@ ClassesPage.ClassBookView = class {
 			const $dispFeatures = this._$wrpBook.find(`[data-cls-book-cf="true"]`);
 			const isActive = !this._parent.get("isHideFeatures");
 			$btnToggleCf.toggleClass("cls__btn-cf--active", isActive);
-			$dispFeatures.toggleClass("hidden", !isActive);
+			$dispFeatures.toggleVe(!!isActive);
 		};
 		(this._hooks["isHideFeatures"] = this._hooks["isHideFeatures"] || []).push(hkFeatures);
 		this._parent.addHook("isHideFeatures", hkFeatures);
@@ -1878,8 +1917,8 @@ ClassesPage.ClassBookView = class {
 		const hkFluff = () => {
 			const $dispFluff = this._$wrpBook.find(`[data-cls-book-fluff="true"]`);
 			const isHidden = !this._parent.get("isShowFluff");
-			$btnToggleInfo.toggleClass("active", !isHidden);
-			$dispFluff.toggleClass("hidden", !!isHidden);
+			$btnToggleInfo.toggleVe(!!isHidden);
+			$dispFluff.toggleVe(!isHidden);
 		};
 		(this._hooks["isShowFluff"] = this._hooks["isShowFluff"] || []).push(hkFluff);
 		this._parent.addHook("isShowFluff", hkFluff);
