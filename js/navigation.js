@@ -57,7 +57,7 @@ class NavBar {
 		addLi(ulBooks, "book.html", "荒洲探险家指南", {aHash: "EGW", date: "2020"});
 		addLi(ulBooks, "book.html", "塞洛斯的神话奥德赛", {aHash: "MOT", date: null});
 		addLi(ulBooks, "book.html", "塔莎的万象坩锅", {aHash: "TCE", date: null});
-		addLi(ulBooks, "book.html", "Van Richten's Guide to Ravenloft", {aHash: "VRGR", date: "2021"});
+		addLi(ulBooks, "book.html", "范·里希腾的鸦阁指南", {aHash: "VRGR", date: "2021"});
 		addDivider(ulBooks);
 		addLi(ulBooks, "book.html", "DM帷幕：荒野套件", {aHash: "ScreenWildernessKit", date: "2020"});
 		addDivider(ulBooks);
