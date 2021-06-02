@@ -2437,26 +2437,26 @@ Renderer.getAbilityData = function (abArr) {
 					const areIncreaseShort = [];
 					const areIncrease = w.weights.filter(it => it >= 0).sort(SortUtil.ascSort).reverse().map(it => {
 						areIncreaseShort.push(`+${it}`);
-						if (isAny) return `${cntProcessed ? "choose " : ""}any ${cntProcessed++ ? `other ` : ""}+${it}`
-						return `one ${cntProcessed++ ? `other ` : ""}ability to increase by ${it}`;
+						if (isAny) return `${cntProcessed ? "选择" : ""}任意${cntProcessed++ ? `其他` : ""}+${it}`
+						return `一项${cntProcessed++ ? `其他 ` : ""}属性值增加 ${it}`;
 					});
 
 					const areReduceShort = [];
 					const areReduce = w.weights.filter(it => it < 0).map(it => -it).sort(SortUtil.ascSort).map(it => {
 						areReduceShort.push(`-${it}`);
-						if (isAny) return `${cntProcessed ? "choose " : ""}any ${cntProcessed++ ? `other ` : ""}-${it}`
-						return `one ${cntProcessed++ ? `other ` : ""}ability to decrease by ${it}`;
+						if (isAny) return `${cntProcessed ? "选择" : ""}任意${cntProcessed++ ? `其他` : ""}-${it}`
+						return `一项${cntProcessed++ ? `其他 ` : ""}属性值减少 ${it}`;
 					});
 
 					const startText = isAny
-						? `选择 `
+						? `选择`
 						: `从 ${froms.joinConjunct("、", "和")} 中选择 `;
 
 					const ptAreaIncrease = isAny
 						? areIncrease.concat(areReduce).join("; ")
 						: areIncrease.concat(areReduce).joinConjunct("、", isAny ? "；" : "和");
 					toConvertToText.push(`${startText}${ptAreaIncrease}`);
-					toConvertToShortText.push(`${isAny ? "Any combination " : ""}${areIncreaseShort.concat(areReduceShort).join("/")}${isAny ? "" : ` from ${froms.join("/")}`}`);
+					toConvertToShortText.push(`${isAny ? "任意组合 " : ""}${areIncreaseShort.concat(areReduceShort).join("/")}${isAny ? "" : ` 从 ${froms.join("/")} 中选择`}`);
 				} else {
 					const allAbilities = ch.from.length === 6;
 					const allAbilitiesWithParent = isAllAbilitiesWithParent(ch);
@@ -2517,7 +2517,7 @@ Renderer.getAbilityData = function (abArr) {
 	const outerStack = (abArr || [null]).map(it => doRenderOuter(it));
 	if (outerStack.length <= 1) return outerStack[0];
 	return new Renderer._AbilityData(
-		`Choose one of: ${outerStack.map((it, i) => `(${Parser.ALPHABET[i].toLowerCase()}) ${it.asText}`).join(" ")}`,
+		`选择其中一项：${outerStack.map((it, i) => `(${Parser.ALPHABET[i].toLowerCase()}) ${it.asText}`).join(" ")}`,
 		`${outerStack.map((it, i) => `(${Parser.ALPHABET[i].toLowerCase()}) ${it.asTextShort}`).join(" ")}`,
 		[...new Set(outerStack.map(it => it.asCollection).flat())],
 		[...new Set(outerStack.map(it => it.areNegative).flat())],
@@ -4064,8 +4064,9 @@ Renderer.race = {
 				r.entries = r.entries || [];
 				r.entries.push({
 					type: "entries",
-					name: "Languages",
-					entries: ["You can speak, read, and write Common and one other language that you and your DM agree is appropriate for your character."],
+					name: "语言",
+					ENG_name: "Languages",
+					entries: ["你可以说、读、写通用语，以及你和你的 DM 同意的一门其他的适合你角色的语言。"],
 				});
 
 				r.languageProficiencies = r.languageProficiencies || [{"common": true, "anyStandard": 1}];
