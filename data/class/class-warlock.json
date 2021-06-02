@@ -1273,8 +1273,10 @@
 					]
 				},
 				{
-					"name": "The Undead",
-					"shortName": "Undead",
+					"name": "死灵宗主",
+					"ENG_name": "The Undead",
+					"shortName": "死灵",
+					"ENG_shortName": "Undead",
 					"source": "VRGR",
 					"page": 30,
 					"additionalSpells": [
@@ -1304,10 +1306,10 @@
 						}
 					],
 					"subclassFeatures": [
-						"The Undead|Warlock||Undead|VRGR|1",
-						"Grave Touched|Warlock||Undead|VRGR|6",
-						"Necrotic Husk|Warlock||Undead|VRGR|10",
-						"Spirit Projection|Warlock||Undead|VRGR|14"
+						"死灵宗主|Warlock||Undead|VRGR|1",
+						"坟冢之触|Warlock||Undead|VRGR|6",
+						"死疽躯壳|Warlock||Undead|VRGR|10",
+						"灵魂投射|Warlock||Undead|VRGR|14"
 					]
 				}
 			],
@@ -4545,7 +4547,8 @@
 			]
 		},
 		{
-			"name": "The Undead",
+			"name": "死灵宗主",
+			"ENG_name": "The Undead",
 			"source": "VRGR",
 			"page": 30,
 			"className": "Warlock",
@@ -4554,20 +4557,21 @@
 			"subclassSource": "VRGR",
 			"level": 1,
 			"entries": [
-				"You've made a pact with a deathless being, a creature that defies the cycle and life and death, forsaking its mortal shell so it might eternally pursue its unfathomable ambitions. For such beings, time and morality are fleeting things, the concerns of those for whom grains of sand still rush through life's hourglass. Having once been mortal themselves, these ancient undead know firsthand the paths of ambition and the routes past the doors of death. They eagerly share this profane knowledge, along with other secrets, with those who work their will among the living.",
-				"Beings of this type include the demilich Acererak, the vampire tyrant Kas the Bloody-Handed, the githyanki lich-queen Vlaakith, the dracolich Dragotha, the undead pharaoh Ankhtepot, and the elusive Darklord, Azalin Rex.",
+				"你与不死的存在结下契约，这些生物藐视生与死的循环，抛弃凡躯，永恒地追求无尽的野心。对于这些存在来说，时间和道德都是转瞬即逝的东西，只有生命的沙漏匆匆流逝的人才会在意。这些古老的不死之身曾是凡人，对于如何实现野心，跨过死亡之门有着切身体会。他们迫切地与在生灵间履行他们意志的侍从，分享亵渎生命的知识和秘密。",
+				"这般存在有：半巫妖阿瑟瑞拉克（demilich Acererak），吸血鬼暴君血手凯斯（the vampire tyrant Kas the Bloody-Handed），吉斯洋基巫妖女王维拉基斯（the githyanki lich-queen Vlaakith），龙巫妖卓公煞（the dracolich Dragotha），不死法老安卡特珀特（the undead pharaoh Ankhtepot），以及逃离的黑暗领主亚扎林·雷克斯（the elusive Darklord, Azalin Rex）。",
 				{
 					"type": "entries",
-					"name": "Expanded Spell List",
+					"name": "扩展法术列表",
+					"ENG_name": "Expanded Spell List",
 					"entries": [
-						"{@i 1st-level Undead feature}",
-						"The Undead lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
+						"{@i 1级死灵宗主特性}",
+						"死灵宗主让你在学习契术师法术时，可以从扩大的法术列表中选择，将以下法术为你添加到契术师法术列表中。",
 						{
 							"type": "table",
-							"caption": "Undead Expanded Spells",
+							"caption": "死灵宗主扩展法术",
 							"colLabels": [
-								"Spell Level",
-								"Spells"
+								"法术环位",
+								"法术"
 							],
 							"colStyles": [
 								"col-2 text-center",
@@ -4576,23 +4580,23 @@
 							"rows": [
 								[
 									"1st",
-									"{@spell bane}, {@spell false life}"
+									"{@spell 灾祸术}, {@spell 易容术}"
 								],
 								[
 									"2nd",
-									"{@spell blindness/deafness}, {@spell phantasmal force}"
+									"{@spell 目盲/耳聋术}, {@spell 魅影之力}"
 								],
 								[
 									"3rd",
-									"{@spell phantom steed}, {@spell speak with dead}"
+									"{@spell 魅影驹}, {@spell 死者交谈术}"
 								],
 								[
 									"4th",
-									"{@spell death ward}, {@spell greater invisibility}"
+									"{@spell 防死护咒}, {@spell 高等隐形术}"
 								],
 								[
 									"5th",
-									"{@spell antilife shell}, {@spell cloudkill}"
+									"{@spell 反活物护罩}, {@spell 死云术}"
 								]
 							]
 						}
@@ -4600,12 +4604,13 @@
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Form of Dread|Warlock||Undead|VRGR|1"
+					"subclassFeature": "战栗形态|Warlock||Undead|VRGR|1"
 				}
 			]
 		},
 		{
-			"name": "Form of Dread",
+			"name": "战栗形态",
+			"ENG_name": "Form of Dread",
 			"source": "VRGR",
 			"page": 30,
 			"className": "Warlock",
@@ -4615,22 +4620,23 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"{@i 1st-level Undead feature}",
-				"You manifest an aspect of your patron's dreadful power. As a bonus action, you transform for 1 minute. You gain the following benefits while transformed:",
+				"{@i 1级死灵宗主特性}",
+				"你显现出你宗主可怕力量的一个侧面。作为附赠动作，你变身持续1分钟。变身时你获得以下好处：",
 				{
 					"type": "list",
 					"items": [
-						"You gain temporary hit points equal to {@dice 1d10} + your warlock level.",
-						"Once during each of your turns, when you hit a creature with an attack roll, you can force it to make a Wisdom saving throw, and if the saving throw fails, the target is {@condition frightened} of you until the end of your next turn.",
-						"You are immune to the {@condition frightened} condition."
+						"你获得相当于{@dice 1d10} + 你的契术师等级的临时生命",
+						"在你的每个回合中只有一次，当你攻击检定命中一个生物时，你可以强迫它进行一次感知豁免。若失败，目标会对你{@condition 恐惧}，直到你的下一个回合结束。 ",
+						"你对{@condition 恐惧}状态免疫。"
 					]
 				},
-				"You can transform a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.",
-				"The appearance of your Form of Dread reflects some aspect of your patron. For example, your form could be a shroud of shadows forming the crown and robes of your lich patron, or your body might glow with glyphs from ancient funerary rites and be surrounded by desert winds, suggesting your mummy patron."
+				"你可以变身的次数等于你的熟练值，当你完成长休时，你会恢复所有消耗的次数。",
+				"你战栗形态的外观反映了你宗主的某些方面。例如，你的形态可能是一张阴影纱幕，形成你巫妖宗主的王冠和长袍，或者你的身体开始发光，显现出古代葬礼仪式的符印，并被沙尘旋风所环绕，暗示着你的木乃伊宗主。"
 			]
 		},
 		{
-			"name": "Grave Touched",
+			"name": "坟冢之触",
+			"ENG_name": "Grave Touched",
 			"source": "VRGR",
 			"page": 30,
 			"className": "Warlock",
@@ -4640,13 +4646,14 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"{@i 6th-level Undead feature}",
-				"Your patron's powers have a profound effect on your body and magic. You don't need to eat, drink, or breathe.",
-				"In addition, once during each of your turns, when you hit a creature with an attack roll and roll damage against the creature, you can replace the damage type with necrotic damage. While you are using your Form of Dread, you can roll one additional damage die when determining the necrotic damage the target takes."
+				"{@i 6级死灵宗主特性}",
+				"你宗主的力量对你的身体和魔法产生了深远的影响。你不需要吃、喝、呼吸。",
+				"此外，每你的回合一次，当你用攻击检定命中一个生物并对该生物投掷伤害骰时，你可以将伤害类型替换为黯蚀伤害。当你使用战栗形态时，你可以在确定目标受到该黯蚀伤害的数值时，额外投掷一枚伤害骰。"
 			]
 		},
 		{
-			"name": "Necrotic Husk",
+			"name": "死疽躯壳",
+			"ENG_name": "Necrotic Husk",
 			"source": "VRGR",
 			"page": 30,
 			"className": "Warlock",
@@ -4656,13 +4663,14 @@
 			"level": 10,
 			"header": 2,
 			"entries": [
-				"{@i 10th-level Undead feature}",
-				"Your connection to undeath and necrotic energy now saturates your body. You have resistance to necrotic damage. If you are transformed using your Form of Dread, you instead become immune to necrotic damage.",
-				"In addition, when you would be reduced to 0 hit points, you can use your reaction to drop to 1 hit point instead and cause your body to erupt with deathly energy. Each creature of your choice that is within 30 feet of you takes necrotic damage equal to {@dice 2d10} + your warlock level. You then gain 1 level of {@condition exhaustion}. Once you use this reaction, you can't do so again until you finish {@dice 1d4} long rests."
+				"{@i 10级死灵宗主特性}",
+				"你与亡灵和黯蚀能量的联系现在充斥着你的身体。你对黯蚀伤害具有抗性。如果你使用战栗形态变身，你转而会对黯蚀伤害免疫。",
+				"此外，当你的生命值要降低到0时，你可以使用反应，改为将生命值降低到1，并使你的身体爆发出死亡能量。你周围30尺内的由你选择的生物都会受到相当于{@dice 2d10} +你的契术师等级的黯蚀伤害。你获得1级的{@condition 力竭}。一旦你使用该反应，你就不能再这样做，直到你完成{@dice 1d4}次长休。"
 			]
 		},
 		{
-			"name": "Spirit Projection",
+			"name": "灵魂投射",
+			"ENG_name": "Spirit Projection",
 			"source": "VRGR",
 			"page": 30,
 			"className": "Warlock",
@@ -4672,20 +4680,20 @@
 			"level": 14,
 			"header": 2,
 			"entries": [
-				"{@i 14th-level Undead feature}",
-				"Your spirit can become untethered from your physical form. As an action, you can project your spirit from your body. The body you leave behind is {@condition unconscious} and in a state of suspended animation.",
-				"Your spirit resembles your mortal form in almost every way, replicating your game statistics but not your possessions. Any damage or other effects that apply to your spirit or physical body affects the other. Your spirit can remain outside your body for up to 1 hour or until your concentration is broken (as if concentrating on a spell). When your projection ends, your spirit returns to your body or your body magically teleports to your spirit's space (your choice).",
-				"While projecting your spirit, you gain the following benefits:",
+				"{@i 14级死灵宗主特性}",
+				"你的灵魂能脱离你物理形态的约束。作为一个动作，你可以从你的身体投射出你的灵魂。你脱离的身体陷入{@condition 昏迷}，并处于假死状态。",
+				"你的灵魂与你的常人形态各个方面高度相似，复制你的游戏数据，但不包括你的携带物。任何对你的灵魂或物理身体造成的伤害或其他效果会传递到另一方。你的灵魂可以在你的身体之外停留长达1小时，或者直到你的专注中断（就像专注于一个法术）。当你的投射结束时，你的灵魂会回到你的身体，或者你的身体会魔法地的传送到你灵魂所在的空间（取决于你的选择）。",
+				"当投射你的灵魂时，你获得以下好处：",
 				{
 					"type": "list",
 					"items": [
-						"Your spirit and body gain resistance to bludgeoning, piercing, and slashing damage.",
-						"When you cast a spell of the conjuration or necromancy school, the spell doesn't require verbal or somatic components or material components that lack a gold cost.",
-						"You have a flying speed equal to your walking speed and can hover. You can move through creatures and objects as if they were difficult terrain, but you take {@dice 1d10} force damage if you end your turn inside a creature or an object.",
-						"While you are using your Form of Dread, once during each of your turns when you deal necrotic damage to a creature, you regain hit points equal to half the amount of necrotic damage dealt."
+						"你的灵魂和身体获得对钝击、穿刺和挥砍伤害的抗性。",
+						"当你施放一个咒法学派或死灵学派的法术时，该法术不需要语言、姿势或不消耗金币的材料成分。",
+						"你获得等于你步行速度的飞行速度，并且可以盘旋。你可以穿过生物和物体，就像它们是困难地形一样，但如果你在生物或物件内结束自己回合，你会受到{@dice 1d10}的力场伤害。",
+						"当你使用战栗形态时，在你的每个回合中只有一次，当你对一个生物造成黯蚀伤害时，你会恢复相当于黯蚀伤害量一半的生命值。"
 					]
 				},
-				"Once you use this feature, you can't do so again until you finish a long rest."
+				"一旦你使用了这个特性，你就不能再这样做，直到你完成了一次长休。"
 			]
 		},
 		{
