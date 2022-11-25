@@ -197,6 +197,21 @@ class NavBar {
 				title: "This feature is unsupported. Expect bugs.",
 			},
 		);
+		addButton(
+			ulSettings,
+			{
+				html: styleSwitcher.getZh(),
+				click: (evt) => {
+					evt.preventDefault();
+					styleSwitcher.switchZh();
+				},
+				context: (evt) => {
+					evt.preventDefault();
+					styleSwitcher.switchZh();
+				},
+				className: "ZhToggle",
+			},
+		);
 		addDivider(ulSettings);
 		addButton(
 			ulSettings,

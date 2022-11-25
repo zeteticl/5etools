@@ -74,6 +74,28 @@ class StyleSwitcher {
 		this._setActiveDayNight(newStyle);
 		StyleSwitcher.storage.setItem(StyleSwitcher._STORAGE_IS_MANUAL_MODE, true);
 	}
+	switchZh () {
+		let language = StyleSwitcher.storage.getItem(StyleSwitcher._STORAGE_ZH);
+		console.log('language', language)
+		switch (language) {
+			case '_ZH_S': {
+				zh_tran('t')
+				StyleSwitcher.storage.setItem(StyleSwitcher._STORAGE_ZH, '_ZH_T');
+				break;
+			}
+			case '_ZH_T': {
+				zh_tran('s');	
+				StyleSwitcher.storage.setItem(StyleSwitcher._STORAGE_ZH, '_ZH_S');
+				break;
+				}	
+			default: {
+				zh_tran('t')
+				StyleSwitcher.storage.setItem(StyleSwitcher._STORAGE_ZH, '_ZH_T');
+				break;
+			}
+		}
+		
+	}
 	// endregion
 
 	// region Wide Mode
@@ -133,6 +155,25 @@ class StyleSwitcher {
 
 	getActiveWide () { return document.getElementById(StyleSwitcher._WIDE_ID) != null; }
 	// endregion
+	getZh(){
+		const langauge = StyleSwitcher.storage.getItem(StyleSwitcher._STORAGE_ZH);
+		switch (langauge) {
+			case '_ZH_S': {
+			//	zh_tran('s')
+				break;
+			}
+			case '_ZH_T': {
+				zh_tran('t');	
+				break;
+				}	
+			default: {
+				StyleSwitcher.storage.setItem(StyleSwitcher._STORAGE_ZH, '_ZH_S');
+				break;
+			}
+		}
+		return '繁簡轉換'
+	
+	}
 }
 StyleSwitcher._STORAGE_DAY_NIGHT = "StyleSwitcher_style";
 StyleSwitcher._STORAGE_IS_MANUAL_MODE = "StyleSwitcher_style-is-manual-mode";
